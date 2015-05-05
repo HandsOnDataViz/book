@@ -3,8 +3,11 @@
         "youtube",
         "exercises",
         "quizzes",
-        "ga",
-        "anchors"
+        "ga"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "ga": {
+            "token": "UA-5488840-27"
+        }
+    }
 }

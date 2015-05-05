@@ -2,7 +2,8 @@
     "plugins": [
         "youtube",
         "exercises",
-        "quizzes"
+        "quizzes",
+        "ga"
     ],
     "pluginsConfig": {}
 }

@@ -4,7 +4,11 @@
 
 If your digital project includes HTML code (or JavaScript, CSS, etc.) that needs to be hosted on a live website, one solution is to upload your work to a [free GitHub account](https://github.com/) and publish to the open web using its [GitHub Pages](https://help.github.com/articles/what-are-github-pages) feature. Hosting your code is free is you make it public, while private code requires a monthly payment. The GitHub platform is widely used by the open-source coding community to share and collaborate on digital projects, because other users can easily view your work, make a copy, and even suggest improvements. GitHub Pages works well for demonstrating work on a live public website, but if your project involves private data or draws high-volume web traffic, you should host your code on a secure dedicated web server.
 
-Newcomers can host their code on GitHub, and publish to the web using the GitHub Pages feature, by following step-by-step instructions or this [YouTube video screencast](http://youtu.be/ZVejLE8qtOI). This basic tutorial demonstrates how to work with GitHub entirely through the browser. More advanced GitHub users may use other tools and methods to work more efficiently.
+Newcomers can host their code on GitHub, and publish to the web using the GitHub Pages feature, by following step-by-step instructions or this [YouTube video screencast](http://youtu.be/ZVejLE8qtOI). 
+
+{% youtube %}https://www.youtube.com/watch?v=ZVejLE8qtOI{% endyoutube %}
+
+This basic tutorial demonstrates how to work with GitHub entirely through the browser. More advanced GitHub users may download other free tools (such as [GitHub for Mac](https://mac.github.com) or [GitHub for Windows](https://windows.github.com)) or use other methods (such as the terminal command line) to work more efficiently.
 
 1) Inside your free GitHub account, create a new repository (also known as a repo) to host your project's code (such as an index.html file and more).
 
@@ -76,9 +80,6 @@ Merge pull request (another green button)
 Confirm merge (and another green button!)
 Always double-check your repository branch names to do editing and live web testing in the gh-pages branch, then make sync a copy to public share in the master branch.
 
-To embed an interactive data visualization from a GitHub Pages host site into a secondary website (such as an organization's WordPress.org site), see the Embed iframe with WordPress tutorial.
+To embed an interactive data visualization from a GitHub Pages host site into a secondary website (such as an organization's WordPress.org site), see the Embed iframe with WordPress tutorial (TO COME).
 
 See my sample repositories, with links to live demo sites, at https://github.com/JackDougherty?tab=repositories. Learn more about GitHub general features to share and collaborate on other users' public code repositories.
-
-Video screencast of this tutorial:
-http://youtu.be/ZVejLE8qtOI

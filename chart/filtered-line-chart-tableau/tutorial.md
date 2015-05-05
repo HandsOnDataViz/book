@@ -15,15 +15,15 @@ Sample data files:
 - [LineChartDataAY.xlsx - with academic years](LineChartDataAY.xlsx)
 - [SchoolSnapshotSampleData.xlsx - sample school for Achieve Hartford](SchoolSnapshotSampleData.xlsx)
 
-TPublicLineChart1
+![](TPublicLineChart1.png)
 
 Step 2: Download a free copy of Tableau Public, open the application, and click the Open Data button. (Note that users may pay to upgrade to Tableau Professional to access live server data across a wide range of business platforms.)
 
-TPublicLineChart2
+![](TPublicLineChart2.png)
 
 Step 3: Connect your Microsoft Excel data file to Tableau Public, search through your drive, and select it.
 
-TPublicLineChart3
+![](TPublicLineChart3.png)
 
 Step 4: The sheets of your data file will automatically appear in Tableau Public and allow you to rename them if you wish. Any blanks will automatically convert to “null.” Click the Go to Worksheet button.
 
@@ -75,4 +75,4 @@ TPublicLineChart15
 
 Step 16: After saving your workbook, Tableau will generate a general view of how your visualization appears on the web, with an option to email the link. To embed the visualization in your website, copy the HTML code and paste it into a web page that can host this code. We use GitHub Pages to freely host HTML code, then we paste the URL as an iframe into our WordPress.org posts and pages. See link to GitHub Pages tutorial.)
 
-This book is shared under a [Creative Commons Attribution-Non-Commerical 4.0 International license](http://creativecommons.org/licenses/by-nc/4.0/). You may freely redistribute and modify the content for non-commercial purposes, with source credit to the author in the byline and http://DataVizBook.org.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Data Visualization for All</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.datavizbook.org/content/introduction/contact.html" property="cc:attributionName" rel="cc:attributionURL">Jack Dougherty and contributors</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>. You may freely share and modify this content for non-commercial purposes, with a source credit to the author(s) listed in the byline and this link: http://DataVizBook.org.

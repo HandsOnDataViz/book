@@ -1,10 +1,10 @@
 # Filtered line chart with Tableau Public
 
-By [Veronica X. Armendariz](introduction/contact.md), last updated May 5, 2015
+*By [Veronica X. Armendariz](introduction/contact.md), last updated May 5, 2015*
 
-Explore this [interactive chart](http://jackdougherty.github.io/tableau-public-sample/linechart.html):
+Explore this [interactive filtered line chart](http://jackdougherty.github.io/tableau-public-sample/linechart.html):
 
-<iframe src='http://jackdougherty.github.io/tableau-public-sample/linechart.html'></iframe>
+<iframe src='http://jackdougherty.github.io/tableau-public-sample/linechart.html' width="100%" height="600"></iframe>
 
 With Tableau Public (currently version 9), both Mac and Windows users now have another free and easy-to-use tool for creating interactive data visualizations that tell stories on the web. This tutorial demonstrates how to build a filtered line chart, with checkboxes to display selected school data, using screenshots from the Mac version (with similar steps in Windows). We created this visualization for a non-profit education advocacy group that wants web visitors to compare achievement by student cohorts across forty schools. Since displaying all of the lines at once is too complex, the filter box adds only the desired schools to the line chart, and users can float the cursor over each line to identify the school and data points.
 
@@ -27,7 +27,7 @@ Step 3: Connect your Microsoft Excel data file to Tableau Public, search through
 
 Step 4: The sheets of your data file will automatically appear in Tableau Public and allow you to rename them if you wish. Any blanks will automatically convert to “null.” Click the Go to Worksheet button.
 
-TPublicLineChart4
+![](TPublicLineChart4.png)
 
 Step 5: Tableau Public encourages users to select dimensions and measures, then drag-and-drop them into a grid of rows and columns, which serves as a framework for the interactive chart you wish to build. Dimensions are any information that is qualitative or categorical, while measures are quantitative information about the dimensions (see more here).  In this example, we are creating a line chart with two dimensions (year and school) and one measure (test scores). Drag and drop Year into the Column area of the grid, which places our unit of time across the horizontal axis.
 

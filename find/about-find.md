@@ -1,3 +1,3 @@
-# Find More Data
+# Find Open Data
 
-- Open Data sources 
+- Open Data sources

@@ -1,3 +1,0 @@
-# Gallery
-
-- examples to come

@@ -16,4 +16,5 @@
     * [Shaded polygon map with Google Fusion Tables](map/polygon-gft.md)
     * [Searchable map template with Google Fusion Tables and GitHub Pages](map/searchable-gft-ghpages.md)
 * [Publish to the Web](publish/about-publish.md)
+    * [Host HMTL code on the web with GitHub Pages](publish/host-html-code-ghpages.md)
 * [Share Your Work](share/about-share.md)

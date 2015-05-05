@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
     * [Why this book?](introduction/why-this-book.md)
-    * [Which tools to use?](introduction/which-tools/md)
+    * [Which tools to use?](introduction/which-tools.md)
     * [Contribute to the book](introduction/contribute.md)
     * [Contact the Authors](introduction/contact.md)
 * [What's Your Data Story?](story/about-story.md)

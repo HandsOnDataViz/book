@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-   * [How To Read and Contribute to the Book](introduction/contribute.md)
+   * [How To Read This Book](introduction/contribute.md)
    * [Why this book?](introduction/why-this-book.md)
    * [Which tools to use?](introduction/which-tools.md)
    * [Contact the Authors](introduction/contact.md)

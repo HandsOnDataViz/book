@@ -6,6 +6,7 @@
    * [How To Read This Book](introduction/how-to-read.md)
    * [Contact the Authors](introduction/contact.md)
 * [What's Your Data Story?](story/about-story.md)
+    * to come
 * [Organize Your Data](organize/about-organize.md)
     * Prepare your Data in a Spreadsheet
     * Arrange Data with Spreadsheet Formulas

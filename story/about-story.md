@@ -1,3 +1,3 @@
 # Tell Your Data Story
 
-To come
+Book-in-progress: more to come. . .

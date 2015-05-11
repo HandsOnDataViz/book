@@ -7,7 +7,10 @@
    * [Contact the Authors](introduction/contact.md)
 * [What's Your Data Story?](story/about-story.md)
 * [Organize Your Data](organize/about-organize.md)
-* [Refine Your Data](refine/about-refine.md)
+    * Prepare your Data in a Spreadsheet
+    * Arrange Data with Spreadsheet Formulas
+    * Aggregate Data with Spreadsheet Pivot Tables
+    * Clean Up Messy Data with Open Refine
 * [Find Open Data](find/about-find.md)
 * [Chart Your Data](chart/about-chart.md)
    * [Filtered line chart with Tableau Public](chart/filtered-line-chart-tableau/tutorial.md)

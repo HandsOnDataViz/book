@@ -1,1 +1,1 @@
-# Geocoded point map with Google Fusion Tables
+# Expandable geocoded point map with Google Fusion Tables

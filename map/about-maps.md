@@ -1,2 +1,6 @@
-# datavizforall
-An open-access GitBook: Tell stories about your data with free and friendly tools, tutorials, and templates
+# Map Your Data
+
+Before mapping your data, ask these questions:
+
+- Does my data allow me to create a point map (data for individual locations) or a polygon map (data that matches boundary areas, such as towns or states)?
+

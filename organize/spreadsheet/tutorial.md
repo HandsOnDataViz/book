@@ -20,29 +20,23 @@ Add a *source* tab, after the data, with notes to remind you and others about it
 
 If your data needs to be formatted, select a spreadsheet column by clicking at the top. Or select the entire spreadsheet by clicking the top-left corner icon. Right-click your selection to reformat data (or use menu commands). For example, reformat the data to change the number of decimal points displayed. Or reformat a zip code from a number (because 06106 will not display the first zero) into a text or zip code field.
 
-Add GIF to select column and reformat decimals
+![](SpreadsheetFormatZipAsText.png)
 
-Add screenshot of zip code format?
+## Sort data rows
 
-## Sort or Filter data columns as needed
+To sort data rows by a column, select the entire spreadsheet (top-left corner icon), then right-click or look for the sort menu. Be sure to select the entire sheet to avoid accidentally sorting one column without the adjacent ones.
 
-To sort a data column from its lowest to highest values, select the entire spreadsheet (top-left corner icon), then right-click or look for the sort menu. It's important to select the entire sheet to avoid accidentally sorting one column without the adjacent columns.
+![](SpreadsheetSort640w.gif]
 
-Add GIF sort data
+## Write calculation formulas
 
-The Filter command allows users to sort data, and also to display only rows with selected data.
-
-Add GIF filter data
-
-## Write simple formulas to calculate
-
-In most spreadsheets, begin writing a simple calculation with an equal sign, and refer to specific cells and functions, such as:
+In most spreadsheets, begin writing a simple formula with an equal sign, and refer to specific cells and functions, such as:
 
 - = A2 + B2 + C2
 - = Sum(A2:C2)
 - = Average(A2:C2)
 
-Add GIF write simple average formula
+![](SpreadsheetFormula640w.gif)
 
 ## Combine address terms to geocode in Google Maps
 

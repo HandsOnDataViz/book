@@ -2,6 +2,11 @@
 
 Increasing numbers of governmental and non-governmental organizations are publicly sharing *open data* on the web. Explore these different open data sources, evaluate their strengths and limitations, and learn how to download and/or integrate them with your own data to add value to your visualizations.
 
+When hunting for open data, focus your search by asking questions such as:
+- Who might have collected or organized this data?
+- Which organization might have published this data in a public repository?
+- What level of data is publicly available? Is it aggregated into larger groups, or disaggregated down to the individual?
+
 Several useful open data repositories for the US, Connecticut, and the Hartford region in particular:
 
 - Census.gov (http://census.gov) from the US federal government offers data through portals such as [American FactFinder](http://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml), and also provides some data mapping tools on their website. One of the most commonly used datasets is the [American Community Survey (ACS)](http://factfinder.census.gov/faces/nav/jsf/pages/programs.xhtml?program=acs), which provides 1-year estimates of large areas and 5-year estimates of smaller census areas, such as tracts, block groups, and blocks. 

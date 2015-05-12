@@ -1,1 +1,1 @@
-# Colored polygon map with Google Fusion Tables
+# Expandable colored polygon map with Google Fusion Tables

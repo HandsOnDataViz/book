@@ -4,21 +4,17 @@ Prepare your data in a spreadsheet (or a database) to make it easier to visualiz
 
 Some people prefer to pay for the Microsoft Excel spreadsheet application due to its familiarity or advanced features. But everything in this tutorial can be achieved with other spreadsheet applications such as LibreOffice (free open-source, donation requested) or Google Sheets (requires a free Google Drive account). All steps below are nearly the same across these common spreadsheet applications.
 
-Across the top row, insert short meaningful headers for each column. Avoid unusual or special characters that not be recognized properly by other applications.
+Across the top row, insert short meaningful headers for each column. Avoid special characters that may not be recognized properly by other applications. Make the data in the column consistent within itself.
 
-ADD screenshot raw vs clean header
-
-Make the data in the column consistent within itself and the header.
-
-ADD screenshot raw vs clean data column
+![](SpreadsheetBetterColumnHeaders.png)
 
 If you have doubts when cleaning up columns, click (or right-click) on the spreadsheet tab to copy the sheet to another tab as a backup, to avoid destroying any data.
 
-ADD GIF copy sheet to new tab
+![](SpreadsheetCopySheet640w.gif)
 
 Add a *source* tab, after the data, with notes to remind you and others about its origins and when it was last updated.
 
-Add screenshot of source tab
+![](SpreadsheetSourceTab.png)
 
 ## Format data columns as needed
 

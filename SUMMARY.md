@@ -20,7 +20,7 @@
    * [Quick geocoded point map with BatchGeo](map/batchgeo/tutorial.md)
    * [Expandable geocoded point map with Google Fusion Tables](map/point-gft/tutorial.md)
    * [Expandable colored polygon map with Google Fusion Tables](map/polygon-gft/tutorial.md)
-   * [Layer maps with Google Fusion Tables Layer Wizard](map/gft-layer-wizard/tutorial.md)
+   * [Overlay maps with Fusion Tables Layer Wizard](map/gft-layer-wizard/tutorial.md)
    * [Searchable map template with Google Fusion Tables and GitHub Pages](map/searchable-gft-ghpages/tutorial.md)
 * [Publish to the Web](publish/about-publish.md)
    * [Host HMTL code on the web with GitHub Pages](publish/host-html-code-ghpages/tutorial.md)

@@ -36,25 +36,21 @@ In most spreadsheets, begin writing a simple formula with an equal sign, and ref
 - = Sum(A2:C2)
 - = Average(A2:C2)
 
+## Copy and Paste or Drag formulas to calculate automatically
+
+Spreadsheets can magically automate calculations across rows or columns. In most cases, you can copy and paste a formula into new cells. Sometimes you can click-and-drag the lower-right corner of a formula cell (which may appear as a cross-hair) to automate calculations.
+
 ![](SpreadsheetFormula640w.gif)
 
 ## Combine address terms to geocode in Google Maps
 
 When preparing address data for a map, some geocoding tools prefer to separate columns (address, city, state, zip) while other tools (such as Google Maps) needs these terms combined into one location column.
 
-To combine (or concatenate) terms, write a simple formula using ampersands as connectors, and quotation marks around any spaces. No commas are necessary. For example, if the spreadsheet appears as follows:
+To combine (or concatenate) terms, write a simple formula using ampersands (&) as connectors, and quotation marks around blank spaces as separators. No commas are necessary. For example, if a spreadsheet contained four columns, *Address, City, State, Zip* (A-D), then in column E insert a new header named *Location* and a formula in this format:
 
-INSERT TABLE with A, B, C, D as Address, City, State, Zip
+- =A2 &" " & B2 &" " &C2 &" " &D2
 
-In Column E, create a new column header named *Location* and insert this formula:
-
-
-
-## Copy and Paste or Drag formulas to calculate automatically
-
-The magic of spreadsheets is automate calculations across all rows or columns. In most cases, you can copy and paste a formula into new cells. Sometimes you can click-and-drag the lower-right corner of a formula cell (which may appear as a cross-hair) to automate calculations.
-
-ADD GIF drag formula calculations
+![](SpreadsheetCombineTerms.png)
 
 ## Copy and Paste > Special > Values to replace formulas with data
 

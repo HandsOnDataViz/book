@@ -16,7 +16,7 @@
 * [Chart Your Data](chart/about-chart.md)
    * [Filtered line chart with Tableau Public](chart/filtered-line-chart-tableau/tutorial.md)
 * [Map Your Data](map/about-maps.md)
-   * [Quick geocoded point map with BatchGeo](map/batchgeo/tutorial.md)
+   * [Geocoded point map with BatchGeo](map/batchgeo/tutorial.md)
    * [Expandable geocoded point map with Google Fusion Tables](map/point-gft/tutorial.md)
    * [Expandable colored polygon map with Google Fusion Tables](map/polygon-gft/tutorial.md)
    * [Overlay maps with Fusion Tables Layer Wizard](map/gft-layer-wizard/tutorial.md)

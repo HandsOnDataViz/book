@@ -1,6 +1,6 @@
 # Filtered line chart with Tableau Public
 
-*By [Veronica X. Armendariz](introduction/contact.md), last updated May 5, 2015*
+*by [Veronica X. Armendariz, Trinity College Class of 2016](introduction/contact.md), last updated May 5, 2015*
 
 Explore this [interactive filtered line chart](http://jackdougherty.github.io/tableau-public-sample/linechart.html):
 

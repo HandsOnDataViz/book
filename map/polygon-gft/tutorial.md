@@ -1,4 +1,4 @@
-# Expandable colored polygon map with Google Fusion Tables
+# Colored polygon map with Google Fusion Tables
 
 Goal: Upload and merge two tables (spreadsheet data and geographic boundaries), create an interactive thematic polygon map with an automatic legend, and embed it in a web page, like this:
 

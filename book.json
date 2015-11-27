@@ -6,11 +6,15 @@
         "anchors",
         "expandable-chapters",
         "toggle-chapters",
-        "ga"
+        "ga",
+        "github"
     ],
     "pluginsConfig": {
         "ga": {
             "token": "UA-5488840-29"
+        },
+        "github": {
+            "url": "https://github.com/jackdougherty/datavizbook"
         }
     }
 }

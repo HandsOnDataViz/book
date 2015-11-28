@@ -17,7 +17,7 @@
    * [Filtered line chart with Tableau Public](chart/filtered-line-chart-tableau/tutorial.md)
 * [Map](map/about-maps.md)
    * [BatchGeo point map](map/batchgeo/tutorial.md)
-   * [Geocoded point map with Google Fusion Tables](map/point-gft/tutorial.md)
+   * [Google Fusion point map](map/point-gft/tutorial.md)
    * [Colored polygon map with Google Fusion Tables](map/polygon-gft/tutorial.md)
    * [Overlay maps with Fusion Tables Layer Wizard](map/gft-layer-wizard/tutorial.md)
    * [Searchable map template with Google Fusion Tables and GitHub Pages](map/searchable-gft-ghpages/tutorial.md)

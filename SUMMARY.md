@@ -20,7 +20,7 @@
    * [Google Fusion point map](map/point-gft/tutorial.md)
    * [Google Fusion polygon map](map/polygon-gft/tutorial.md)
    * [Google Fusion Layer Wizard](map/gft-layer-wizard/tutorial.md)
-   * [Searchable map template with Google Fusion Tables and GitHub Pages](map/searchable-gft-ghpages/tutorial.md)
+   * [Searchable map template](map/searchable-gft-ghpages/tutorial.md)
 * [Publish to the Web](publish/about-publish.md)
    * [Host HMTL code on the web with GitHub Pages](publish/host-html-code-ghpages/tutorial.md)
 * [Share Your Work](share/about-share.md)

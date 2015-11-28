@@ -13,7 +13,7 @@
    * [Merge Spreadsheets with the VLookup Formula](organize/vlookup/tutorial/md)
    * [Clean Up Messy Data with Open Refine](organize/open-refine/tutorial.md)
 * [Find Open Data](find/about-find.md)
-* [Chart](chart/about-chart.md)
+* [Chart your data](chart/about-chart.md)
    * [Filtered line chart - Tableau](chart/filtered-line-chart-tableau/tutorial.md)
 * [Map](map/about-maps.md)
    * [Point map - BatchGeo](map/batchgeo/tutorial.md)

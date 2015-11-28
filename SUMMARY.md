@@ -15,7 +15,7 @@
 * [Find Open Data](find/about-find.md)
 * [Chart Data](chart/about-chart.md)
    * [Filtered line chart - Tableau](chart/filtered-line-chart-tableau/tutorial.md)
-* [Map your data](map/about-maps.md)
+* [Map Data](map/about-maps.md)
    * [Point map - BatchGeo](map/batchgeo/tutorial.md)
    * [Point map - Google Fusion](map/point-gft/tutorial.md)
    * [Polygon map - Google Fusion](map/polygon-gft/tutorial.md)

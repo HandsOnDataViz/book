@@ -94,3 +94,10 @@ If Fusion Tables is not listed, go to Create &gt; Connect More Apps, search for 
 16) Go to WordPress and create a new post. In the editor, switch from the Visual to the Text tab, which allows users to insert and modify HMTL code. Paste the long string that you copied from the step above. Add square brackets at beginning and end, and edit a few characters to match this format (called a "shortcode"), then publish to view your post.
 
 <a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png"><img class="aligncenter size-full wp-image-1700" alt="GFT_iFrameEmbedCode" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png" width="599" height="449" /></a>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+[Data Visualization for All](http://datavizbook.org)
+by [Jack Dougherty](http://bit.ly/jackdougherty)
+and contributors is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
+You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.

@@ -9,7 +9,7 @@
 * [Organize Your Data](organize/about-organize.md)
    * [Public or Private Data?](organize/public-private/tutorial.md)
    * [Spreadsheet basics](organize/spreadsheet/tutorial.md)
-   * [Aggregate Data Rows with Spreadsheet Pivot Tables](organize/pivot-tables/tutorial.md)
+   * [Spreadsheet Pivot Tables](organize/pivot-tables/tutorial.md)
    * [Merge Spreadsheets with the VLookup Formula](organize/vlookup/tutorial/md)
    * [Clean Up Messy Data with Open Refine](organize/open-refine/tutorial.md)
 * [Find Open Data](find/about-find.md)

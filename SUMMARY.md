@@ -16,7 +16,7 @@
 * [Chart](chart/about-chart.md)
    * [Filtered line chart with Tableau Public](chart/filtered-line-chart-tableau/tutorial.md)
 * [Map](map/about-maps.md)
-   * [BatchGeo point map](map/batchgeo/tutorial.md)
+   * [Point map BatchGeo](map/batchgeo/tutorial.md)
    * [Google Fusion point map](map/point-gft/tutorial.md)
    * [Google Fusion polygon map](map/polygon-gft/tutorial.md)
    * [Google Fusion Layer Wizard](map/gft-layer-wizard/tutorial.md)

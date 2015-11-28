@@ -5,7 +5,7 @@
    * [Which tools to use?](introduction/which-tools.md)
    * [How To Read This Book](introduction/how-to-read.md)
    * [Contact the Authors](introduction/contact.md)
-* [What's Your Data Story?](story/about-story.md)
+* [Tell Your Data Story](story/about-story.md)
 * [Organize Data](organize/about-organize.md)
    * [Public or Private Data?](organize/public-private/tutorial.md)
    * [Spreadsheet formatting](organize/spreadsheet/tutorial.md)

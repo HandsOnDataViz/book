@@ -22,6 +22,6 @@
    * [Overlay maps - Google Fusion](map/gft-layer-wizard/tutorial.md)
    * [Searchable map template](map/searchable-gft-ghpages/tutorial.md)
 * [Publish to the Web](publish/about-publish.md)
-   * [Host HMTL code on the web with GitHub Pages](publish/host-html-code-ghpages/tutorial.md)
+   * [Host code - GitHub Pages](publish/host-html-code-ghpages/tutorial.md)
 * [Share Your Work](share/about-share.md)
 

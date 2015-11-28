@@ -15,7 +15,7 @@
 * [Find Open Data](find/about-find.md)
 * [Chart](chart/about-chart.md)
    * [Filtered line chart with Tableau Public](chart/filtered-line-chart-tableau/tutorial.md)
-* [Map Your Data](map/about-maps.md)
+* [Map](map/about-maps.md)
    * [Geocoded point map with BatchGeo](map/batchgeo/tutorial.md)
    * [Geocoded point map with Google Fusion Tables](map/point-gft/tutorial.md)
    * [Colored polygon map with Google Fusion Tables](map/polygon-gft/tutorial.md)

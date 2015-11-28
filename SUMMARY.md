@@ -19,7 +19,7 @@
    * [Point map BatchGeo](map/batchgeo/tutorial.md)
    * [Point map Google Fusion](map/point-gft/tutorial.md)
    * [Polygon map Google Fusion](map/polygon-gft/tutorial.md)
-   * [Google Fusion Layer Wizard](map/gft-layer-wizard/tutorial.md)
+   * [Overlay maps Google Fusion](map/gft-layer-wizard/tutorial.md)
    * [Searchable map template](map/searchable-gft-ghpages/tutorial.md)
 * [Publish to the Web](publish/about-publish.md)
    * [Host HMTL code on the web with GitHub Pages](publish/host-html-code-ghpages/tutorial.md)

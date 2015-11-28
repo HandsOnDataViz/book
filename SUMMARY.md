@@ -13,7 +13,7 @@
    * [Spreadsheet Mergers - VLookup](organize/vlookup/tutorial/md)
    * [Clean Up Data - Open Refine](organize/open-refine/tutorial.md)
 * [Find Open Data](find/about-find.md)
-* [Chart your data](chart/about-chart.md)
+* [Chart Data](chart/about-chart.md)
    * [Filtered line chart - Tableau](chart/filtered-line-chart-tableau/tutorial.md)
 * [Map your data](map/about-maps.md)
    * [Point map - BatchGeo](map/batchgeo/tutorial.md)

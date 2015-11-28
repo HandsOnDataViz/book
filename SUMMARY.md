@@ -8,7 +8,7 @@
 * [What's Your Data Story?](story/about-story.md)
 * [Organize Your Data](organize/about-organize.md)
    * [Public or Private Data?](organize/public-private/tutorial.md)
-   * [Prepare Data with Spreadsheet Formats and Formulas](organize/spreadsheet/tutorial.md)
+   * [Spreadsheet basics](organize/spreadsheet/tutorial.md)
    * [Aggregate Data Rows with Spreadsheet Pivot Tables](organize/pivot-tables/tutorial.md)
    * [Merge Spreadsheets with the VLookup Formula](organize/vlookup/tutorial/md)
    * [Clean Up Messy Data with Open Refine](organize/open-refine/tutorial.md)

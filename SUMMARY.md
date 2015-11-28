@@ -11,7 +11,7 @@
    * [Spreadsheet basics](organize/spreadsheet/tutorial.md)
    * [Spreadsheet Pivot Tables](organize/pivot-tables/tutorial.md)
    * [Spreadsheet Mergers - VLookup](organize/vlookup/tutorial/md)
-   * [Clean up Data - Open Refine](organize/open-refine/tutorial.md)
+   * [Clean Up Data - Open Refine](organize/open-refine/tutorial.md)
 * [Find Open Data](find/about-find.md)
 * [Chart your data](chart/about-chart.md)
    * [Filtered line chart - Tableau](chart/filtered-line-chart-tableau/tutorial.md)

@@ -6,7 +6,7 @@
    * [How To Read This Book](introduction/how-to-read.md)
    * [Contact the Authors](introduction/contact.md)
 * [What's Your Data Story?](story/about-story.md)
-* [Organize Your Data](organize/about-organize.md)
+* [Organize Data](organize/about-organize.md)
    * [Public or Private Data?](organize/public-private/tutorial.md)
    * [Spreadsheet formatting](organize/spreadsheet/tutorial.md)
    * [Spreadsheet Pivot Tables](organize/pivot-tables/tutorial.md)

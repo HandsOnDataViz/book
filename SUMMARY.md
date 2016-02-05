@@ -22,7 +22,7 @@
    * [Polygon map - Google Fusion](map/polygon-gft/tutorial.md)
    * [Overlay maps - Google Fusion](map/gft-layer-wizard/tutorial.md)
    * [Searchable map template](map/searchable-gft-ghpages/tutorial.md)
-   * [Point map - Socrata](map/filtered-point-map-socrata/tutorial.md)
+   * [Filtered Point map - Socrata](map/filtered-point-map-socrata/tutorial.md)
 * [Publish to the Web](publish/about-publish.md)
    * [Embed dataviz with iframe on a web page](publish/embed-iframe/tutorial.md)
    * [Host code - GitHub Pages](publish/host-html-code-ghpages/tutorial.md)

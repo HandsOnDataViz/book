@@ -1,10 +1,51 @@
-When you create a data visualization with a web tool (such as BatchGeo or Google Fusion Tables), a common goal is to make the interactive element appear inside a second web page (such as your WordPress.org site, or a website that belongs to the partner organization). Rather than simply creating a link to your data viz, a more elegant solution is to embed it inside the second site using an iFrame, a simple HTML code that allows one web page to be displayed within a second web page. (Read more about the <a href="http://www.w3schools.com/tags/tag_iframe.asp" target="_blank">ifram</a><a href="http://www.w3schools.com/tags/tag_iframe.asp" target="_blank">e tag at W3Schools</a>.)
+# Embed Dataviz with iframe on the web
 
-In WordPress.org sites like this one, the <a href="http://wordpress.org/plugins/iframe/" target="_blank">iframe plugin</a> allows authors to embed an external web element inside a post/page using a simple "short code" in square brackets. (I have already activated the plugin on Trinity College WordPress.org sites for me and my students, but you may need to install and/or activate it on your WordPress.org site.) Without the plugin, WordPress usually will "strip out" iframe codes for all users except the site administrator. Beware that inserting an iframe will NOT work for most WordPress.com sites. If your website runs on a different platform, ask your provider if it supports iframe tags.
+When creating data visualizations on a web service, a common goal is to display your interactive chart or map inside a webpage on a different site. For example, if you created an interactive chart in Google Sheets, you could simply **link** to it from an organization's website. Or you could insert a static picture of your visualization, such as a screenshot, on an organization's website. But a better solution is to **embed the live visualization** inside the organization's webpage.
+
+*TODO: bullet and illustrate link vs static vs embed concept above*
+
+To embed one web page (the data visualization) inside a second web page (the organization's website), we use a simple HTML code known as **iframe**. (Read more about the <a href="http://www.w3schools.com/tags/tag_iframe.asp" target="_blank">ifram</a><a href="http://www.w3schools.com/tags/tag_iframe.asp" target="_blank">e tag at W3Schools</a>.)
+
+The **general iframe concept** works across many data visualization tools and many websites:
+- Copy the embed code or URL from your dataviz website
+- Paste (and modify) the code as an iframe in your destination website
+
+But details vary, so read and experiment following the examples below.
+
+### Embed a Google Sheet dataviz in a WordPress.org site
+
+- In Google Sheets, select data and insert > chart.
+- Click right-corner of the interactive chart and select Publish chart
+![](GoogleSheets-publish-chart.png)
+
+- Select the Embed tab, with Interactive version of your dataviz. Copy the iframe code that appears.
+![](GoogleSheets-embed-chart.png)
+
+- On a self-hosted Wordpress.org site (such as the Trinity College DataViz site at http://commons.trincoll.edu/dataviz), I have already installed and activated the [iframe plugin](http://wordpress.org/plugins/iframe/), which  
+allows authors to embed iframe codes inside posts/pages using a simple "shortcode" in square brackets. Without this plugin, self-hosted WordPress.org sites usually will "strip out" iframe codes for all users except the site administrator. Beware that inserting an iframe will NOT work for most WordPress.com sites.
 
 <a href="http://commons.trincoll.edu/jackdougherty/files/2012/11/PluginActiveIFrame.jpg"><img alt="" src="http://commons.trincoll.edu/jackdougherty/files/2012/11/PluginActiveIFrame.jpg" width="360" height="86" /></a>
 
-Go to WordPress.org and create a new post/page. In the editor, switch from the Visual to the Text tab, which allows users to insert and modify HMTL code. Paste the long string that you copied from the step above. Add square brackets at beginning and end of the iframe tag, and edit a few characters to match this format (called a "shortcode"), then publish to view your post. See specific examples below.
+- Go to your WordPress.org site, log in, and create a new post. In the editor window, switch from the Visual to the Text tab, which allows users to insert and modify HMTL code. 
+- Paste the iframe embed code that you copied above, which initially should look like this:
+
+```
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1oZPU_aIvpU2apI0OQ5detnADqgDQf0v7a4OJvl6LKQw/pubchart?oid=1931672306&amp;format=interactive"></iframe>
+```
+- Modify the front end of the iframe code by inserting a square bracket in place of the first caret symbol. At the back end, insert a square bracket in place of the last caret symbol and the iframe closing tag. The result should look like this:
+
+```
+[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1oZPU_aIvpU2apI0OQ5detnADqgDQf0v7a4OJvl6LKQw/pubchart?oid=1931672306&amp;format=interactive"]
+```
+
+- Publish your post, and view it on the public web to test your embedded dataviz. You may need to modify settings.
+
+
+
+
+**TODO: Revise other embed directions below**
+
+
 
 If you're hosting your data visualization on a live website (such as <a href="http://epress.trincoll.edu/dataviz/chapter/host-html-github/" target="_blank">GitHub Pages</a>), copy the web address, like this:
 

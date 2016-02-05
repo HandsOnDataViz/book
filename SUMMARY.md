@@ -8,7 +8,7 @@
 * [Tell Stories with Data](story/about-story.md)
 * [Organize Data](organize/about-organize.md)
    * [Public or Private Data?](organize/public-private/tutorial.md)
-   * [Formatting Spreadsheets](organize/spreadsheet/tutorial.md)
+   * [Format spreadsheets](organize/spreadsheet/tutorial.md)
    * [Spreadsheet Pivot Tables](organize/pivot-tables/tutorial.md)
    * [Calculate Data](organize/calculate_data.md)
    * [Spreadsheet Mergers - VLookup](organize/vlookup/tutorial/md)

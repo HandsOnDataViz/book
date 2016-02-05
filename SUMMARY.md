@@ -23,7 +23,7 @@
    * [Overlay maps - Google Fusion](map/gft-layer-wizard/tutorial.md)
    * [Searchable map template](map/searchable-gft-ghpages/tutorial.md)
 * [Publish to the Web](publish/about-publish.md)
+   * [Embed dataviz with iframe on a web page](publish/embed-iframe/tutorial.md)
    * [Host code - GitHub Pages](publish/host-html-code-ghpages/tutorial.md)
-* [Embed dataviz with iframe on a web page](publish/embed-iframe/tutorial.md)
 * [Share Your Work](share/about-share.md)
 

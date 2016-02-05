@@ -24,5 +24,6 @@
    * [Searchable map template](map/searchable-gft-ghpages/tutorial.md)
 * [Publish to the Web](publish/about-publish.md)
    * [Host code - GitHub Pages](publish/host-html-code-ghpages/tutorial.md)
+   * Embed dataviz with iframe on a web page
 * [Share Your Work](share/about-share.md)
 

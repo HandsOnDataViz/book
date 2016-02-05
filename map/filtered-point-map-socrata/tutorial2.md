@@ -1,2 +1,0 @@
-# Point map - Socrata
-

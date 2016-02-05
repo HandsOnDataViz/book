@@ -1,3 +1,7 @@
+# Filtered Point Map with Socrata Open Data
+
+*By [Veronica Armendar](introduction/contact.md), last updated May 5, 2015*
+
 Both the State of Connecticut (<a href="http://data.ct.gov">http://data.ct.gov</a>) and the City of Hartford (<a href="http://data.hartford.gov">http://data.hartford.gov</a>) have launched open data portals on the <a href="http://www.socrata.com/" target="_blank">Socrata</a> platform, which creates user-friendly ways to view, export, and create visualizations on the web. Since "live" data on the Socrata site can be continuously updated by an administrator, new information in the data table will automatically appear in your map, which may be preferable to exporting "static" data into an external spreadsheet for a disconnected mapping tool. In this tutorial, we will create an interactive point map of selected schools from the Connecticut Education Directory in the state data portal, to demonstrate filtering, conditional formatting, visualization, and embedding features in Socrata. The final product will look like this:
 <div class="web-only">[iframe width="625px" title="CT Schools Map" height="625px" src="https://data.ct.gov/w/shww-dhc6/wqz6-rhce?cur=vkPCQP4VYUQ&amp;from=root" frameborder="0" scrolling="no"&gt;&lt;a href="https://data.ct.gov/Education/CT-Schools-Map/shww-dhc6" title="CT Schools Map" target="_blank"&gt;CT Schools Map&lt;/a&gt;&lt;p&gt;&lt;a href="http://www.socrata.com/" target="_blank"&gt;Powered by Socrata&lt;/a&gt;&lt;/p&gt;]</div>
 <div class="not-web">

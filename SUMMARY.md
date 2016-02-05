@@ -9,6 +9,7 @@
 * [Organize Data](organize/about-organize.md)
    * [Public or Private Data?](organize/public-private/tutorial.md)
    * [Formatting Spreadsheets](organize/spreadsheet/tutorial.md)
+       * Calculate Data
    * [Spreadsheet Pivot Tables](organize/pivot-tables/tutorial.md)
    * [Spreadsheet Mergers - VLookup](organize/vlookup/tutorial/md)
    * [Clean Up Data - Open Refine](organize/open-refine/tutorial.md)

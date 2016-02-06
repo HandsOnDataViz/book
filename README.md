@@ -1,10 +1,14 @@
-# Data Visualization for All
-
 ![](cover_400.jpg)
 
-Visualize your data with free tools and user-friendly tutorials in this open-access introductory book. Create interactive charts, maps, and simple web apps to tell data-driven stories on the web. Features step-by-step instructions and video screencasts for Google Sheets, Google Fusion Tables, Tableau Public, GitHub Pages and more. Freely available at http://DataVizBook.org.
+Tell your story and show it with data.
 
-Contribute updates and add tutorials to this book-in-progress. Send a pull request to the book's [GitHub repository](https://github.com/jackdougherty/datavizbook)
+***Data Visualization for All*** explains how to create interactive charts, maps, and simple web apps, with easy-to-learn free tools and open data. This introductory open-access book features step-by-step tutorials and videos, so that everyday people with minimal coding skills can create and embed data visualizations on their own websites. Learn more about tools such as Google Sheets, Google Fusion Tables, Tableau Public, GitHub Pages, and more. 
+
+By Jack Dougherty (Trinity College, CT) and contributors.
+
+This book-in-progress is freely available at http://DataVizBook.org.
+
+Improve this book by suggesting additions/edits on the [GitHub repository](https://github.com/jackdougherty/datavizbook).
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 

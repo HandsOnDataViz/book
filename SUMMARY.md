@@ -6,8 +6,8 @@
    * [Which tools to use?](introduction/which.md)
    * [Share and Improve this Book](introduction/share.md)
    * [Contact the Authors](introduction/contact.md)
-<!-- * [Tell Stories with Data](story/about-story.md) -->
-* [Organize Data](organize/about-organize.md)
+<!-- * [Tell Stories with Data](story/README.md) -->
+* [Organize Data](organize/about.md)
    * [Public or Private Data?](organize/public-private/tutorial.md)
    * [Format Spreadsheets](organize/spreadsheet/tutorial.md)
    * [Calculate with Spreadsheets](organize/calculate/tutorial.md)

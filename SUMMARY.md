@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * [Contents](introduction/contents.md)
    <!-- * [What is a dataviz?](introduction/what.md) -->
    * [Why this book?](introduction/why.md)
    * [Which tools to use?](introduction/which.md)

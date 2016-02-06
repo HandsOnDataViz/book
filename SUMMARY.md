@@ -1,10 +1,11 @@
 # Summary
 
 * [Introduction](README.md)
+   * [Contents](introduction/contents.md)
+   <!-- * [What is a dataviz?](introduction/what.md) -->
    * [Why this book?](introduction/why.md)
    * [Which tools to use?](introduction/which.md)
-   * [How To Read This Book](introduction/how.md)
-   * [Share Examples and Code](introduction/share.md)
+   * [Share and Improve this Book](introduction/share.md)
    * [Contact the Authors](introduction/contact.md)
 <!-- * [Tell Stories with Data](story/about-story.md) -->
 * [Organize Data](organize/about-organize.md)

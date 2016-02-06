@@ -1,6 +1,6 @@
-# Simple formulas save time
+# Calculate Formulas in Spreadsheets
 
-The big advantage of spreadsheet tools is the ability to insert simple formulas to calculate numbers, or combine columns of text.
+Simple formulas can save you lots of time. The big advantage of spreadsheet tools is the ability to insert simple formulas to calculate numbers, or combine columns of text, for entire rows and columns.
 
 ## Write a simple formula
 

@@ -7,24 +7,39 @@
    * [Share and Improve this Book](introduction/share.md)
    * [Contact the Authors](introduction/contact.md)
 <!-- * [Tell Stories with Data](story/README.md) -->
-* [Organize Data](organize/about.md)
-   * [Public or Private Data?](organize/public-private/tutorial.md)
-   * [Format Spreadsheets](organize/spreadsheet/tutorial.md)
-   * [Calculate with Spreadsheets](organize/calculate/tutorial.md)
-   * [Aggregate with Pivot Tables](organize/pivot-tables/tutorial.md)
-   * [Merge Tables with VLookup](organize/vlookup/tutorial/md)
-   * [Clean Data with Open Refine](organize/open-refine/tutorial.md)
+* [Prepare Your Data](prepare/about.md)
+   * [Public or Private Data?](prepare/public-private/README.md)
+   * [Format with Spreadsheets](prepare/spreadsheet/README.md)
+   * [Calculate with Spreadsheets](prepare/calculate/README.md)
+   <!-- * [Split Spreadsheet Columns](prepare/split/README.md) -->
+   <!-- * [Clean Data with Open Refine](prepare/open-refine/README.md) -->
+* [Transform Your Data](transform/about.md)
+   * [Aggregate with Pivot Tables](transform/pivot-tables/README.md)
+   <!-- * [Join Tables with VLookup](organize/vlookup/README.md) -->
+   <!-- * [Geocode Addresses with Census](transform/geocode/README.md) -->
 * [Find Open Data](find/about-find.md)
-* [Chart Data](chart/about-chart.md)
-   * [Filtered chart with Tableau](chart/filtered-line-chart-tableau/tutorial.md)
-* [Map Data](map/about-maps.md)
-   * [Point map with BatchGeo](map/batchgeo/tutorial.md)
-   * [Point map with Socrata](map/filtered-point-map-socrata/tutorial.md)
-   * [Point map with Google Fusion](map/point-gft/tutorial.md)
-   * [Polygon map with Google Fusion](map/polygon-gft/tutorial.md)
-   * [Layer maps with Google Fusion](map/gft-layer-wizard/tutorial.md)
-   * [Searchable map template](map/searchable-gft-ghpages/tutorial.md)
-* [Publish to the Web](publish/about-publish.md)
-   * [Embed dataviz with iframe](publish/embed-iframe/tutorial.md)
-   * [Host code with GitHub Pages](publish/host-html-code-ghpages/tutorial.md)
-* [About this GitBook](gitbook/README.md)
+   <!-- * [Open Data about U.S.](find/us.README.md) -->
+   <!-- * [Open Data about Connecticut](find/ct.README.md)  -->
+   * [Filtered map with Socrata](find/filtered-map-socrata/README.md)
+   <!-- * [Maps with SocialExplorer] -->
+* [Chart the Data](chart/about.md)
+   <!-- * [Scatter Chart with Tableau] -->
+   * [Filtered chart with Tableau](chart/filtered-line-chart-tableau/README.md)
+* [Map the Data](map/about.md)
+   <!-- * [Point map with BatchGeo](map/batchgeo/README.md) -->
+   * [Point map with Google Fusion](map/point-gft/README.md)
+   * [Polygon map with Google Fusion](map/polygon-gft/README.md)
+   * [Layer maps with Google Fusion](map/gft-layer-wizard/README.md)
+* [Publish on the Web](publish/about.md)
+   <!-- * [Publish with WordPress](publish/wordpress/README.md) -->
+   * [Embed dataviz with iframe](publish/embed-iframe/README.md)
+   <!-- * [Share code with GitHub] -->
+   * [Host code with GitHub Pages](publish/ghpages/README.md)
+* [Web App Templates](web-app/about.md)
+   <!-- * [Polygon map with Leaflet] -->
+   <!-- * [Storymap with Leaflet] -->
+   * [Searchable Map with Google Fusion](web-app/searchable-map-template/README.md)
+
+
+
+* [About This GitBook](gitbook/README.md)

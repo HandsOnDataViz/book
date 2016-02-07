@@ -7,7 +7,8 @@
         "expandable-chapters",
         "toggle-chapters",
         "ga",
-        "github"
+        "github",
+        "thumbnail"
     ],
     "pluginsConfig": {
         "ga": {
@@ -15,6 +16,10 @@
         },
         "github": {
             "url": "https://github.com/jackdougherty/datavizbook"
+        },
+        {
+        "thumbnail": {
+        "path": "http://www.datavizbook.org/content/cover_small.jpg"
         }
     }
 }

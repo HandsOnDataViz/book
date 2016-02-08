@@ -1,8 +1,8 @@
-# Embed Dataviz with iframe on the web
+# Embed a Dataviz with iFrame on the web
 
 When creating data visualizations on a web service, a common goal is to display your interactive chart or map inside a webpage on a different site. For example, if you created an interactive chart in Google Sheets, you could simply **link** to it from an organization's website. Or you could insert a static picture of your visualization, such as a screenshot, on an organization's website. But a better solution is to **embed the live visualization** inside the organization's webpage.
 
-*TODO: bullet and illustrate link vs static vs embed concept above*
+<!--TO DO: bullet and illustrate link vs static vs embed concept above-->
 
 To embed one web page (the data visualization) inside a second web page (the organization's website), we use a simple HTML code known as **iframe**. (Read more about the <a href="http://www.w3schools.com/tags/tag_iframe.asp" target="_blank">ifram</a><a href="http://www.w3schools.com/tags/tag_iframe.asp" target="_blank">e tag at W3Schools</a>.)
 
@@ -29,10 +29,10 @@ allows authors to embed iframe codes inside posts/pages using a simple "shortcod
 - Go to your WordPress.org site, log in, and create a new post. In the editor window, switch from the Visual to the Text tab, which allows users to insert and modify HMTL code. 
 - Paste the iframe embed code that you copied above, which initially should look like this:
 
-```
+```javascript
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1oZPU_aIvpU2apI0OQ5detnADqgDQf0v7a4OJvl6LKQw/pubchart?oid=1931672306&amp;format=interactive"></iframe>
-
 ```
+
 - Modify the front end of the iframe code by inserting a square bracket in place of the first caret symbol. At the back end, insert a square bracket in place of the last caret symbol and the iframe closing tag. The result should look like this:
 
 ```

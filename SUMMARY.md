@@ -17,7 +17,7 @@
    * [Aggregate with Pivot Tables](transform/pivot-tables/README.md)
    <!-- * [Join Tables with VLookup](organize/vlookup/README.md) -->
    <!-- * [Geocode Addresses with Census](transform/geocode/README.md) -->
-* [Find Open Data](find/about-find.md)
+* [Find Open Data](find/about.md)
    <!-- * [Open Data on U.S.](find/us.README.md) -->
    <!-- * [Open Data on Connecticut](find/ct.README.md)  -->
    * [Filtered Map with Socrata](find/filtered-map-socrata/README.md)

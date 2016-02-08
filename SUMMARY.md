@@ -20,7 +20,7 @@
 * [Find Open Data](find/about.md)
    <!-- * [Open Data on U.S.](find/us.README.md) -->
    <!-- * [Open Data on Connecticut](find/ct.README.md)  -->
-   * [Filtered Map with Socrata](find/filtered-map-socrata/README.md)
+   * [Filtered Map with Socrata](find/filtered-point-map-socrata/README.md)
    <!-- * [Maps with SocialExplorer] -->
 * [Chart the Data](chart/about.md)
    <!-- * [Scatter Chart with Tableau] -->

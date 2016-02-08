@@ -31,6 +31,7 @@ allows authors to embed iframe codes inside posts/pages using a simple "shortcod
 
 ```
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1oZPU_aIvpU2apI0OQ5detnADqgDQf0v7a4OJvl6LKQw/pubchart?oid=1931672306&amp;format=interactive"></iframe>
+
 ```
 - Modify the front end of the iframe code by inserting a square bracket in place of the first caret symbol. At the back end, insert a square bracket in place of the last caret symbol and the iframe closing tag. The result should look like this:
 

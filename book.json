@@ -8,7 +8,6 @@
         "toggle-chapters",
         "ga",
         "github",
-        "thumbnail",
         "word-count",
         "splitter"
     ],
@@ -18,10 +17,6 @@
         },
         "github": {
             "url": "https://github.com/jackdougherty/datavizbook"
-        },
-        {
-        "thumbnail": {
-        "path": "http://www.datavizbook.org/content/cover_small.jpg"
         }
     }
 }

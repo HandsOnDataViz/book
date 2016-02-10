@@ -1,6 +1,7 @@
 {
     "plugins": [
         "anchors",
+        "edit-link",
         "exercises",
         "expandable-chapters",
         "ga",
@@ -13,11 +14,15 @@
 
     ],
     "pluginsConfig": {
+        "edit-link": {
+                "base": "https://github.com/jackdougherty/datavizbook/tree/dev/",
+                "label": "Edit on GitHub"
+        },
         "ga": {
             "token": "UA-5488840-29"
         },
         "github": {
-            "url": "https://github.com/jackdougherty/datavizbook"
+            "url": "https://github.com/JackDougherty?tab=repositories"
         }
     }
 }

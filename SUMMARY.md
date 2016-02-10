@@ -39,7 +39,4 @@
    <!-- * [Polygon Map with Leaflet] -->
    <!-- * [Storymap with Leaflet] -->
    * [Searchable Map with Google Fusion](web-app/searchable-map-template/README.md)
-
-
-
 * [About This GitBook](gitbook/README.md)

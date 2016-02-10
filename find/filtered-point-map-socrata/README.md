@@ -10,6 +10,9 @@ One advantage of creating data visualizations on the Socrata platform is that th
 
 But there are limitations to creating your chart or map on an open data repository platform. First, if the agency stops using the platform, or changes the structure of the underlying data, your online chart or map may stop functioning. Second, you are usually limited to using data tables and geographic boundaries that already exist on that platform, since importing your own may not be an option. 
 
+If these limitations concern you, a simple alternative is to export data from the open repository (which means that any "live" data would become "static" data), and import it into your preferred dataviz tool, such as those described in other chapters of this book. A second, more advanced alternative, is to learn how to pull live data from the repository directly into your dataviz, using an Application Programming Interface (API), which requires coding skills that are beyond the scope of this tutorial. (To learn more about the Socrata API: https://dev.socrata.com/.) 
+
+
 If these limitations concern you, a simple alternative is to export data from the open repository (which turns any "live" data into "static" data), and import it into your preferred dataviz tool, such as those described in other chapters of this book. A second, more advanced alternative is to learn how to pull live data out of the platform using an Application Programming Interface (API), which requires coding skills that are beyond the scope of this tutorial. (Learn more about the Socrata API:  
 
 ## Steps to create a Socrata filtered point map

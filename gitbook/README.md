@@ -57,6 +57,8 @@ Since the GitBook YouTube plugin is installed in this book. . . TO DO: show step
 
 - For editing or major file/folder restructuring by owner with Atom Editor (no preview):
   - check online repo to make sure that dev branch is current with master branch (if not, pull request)
-     use GitHub Desktop to sync repo to my local computer, where dev branch is default view
-     use Atom editor to edit/upload/restructure files (no GitBook preview available)
-     use GitHub Desktop to commit changes to online repo dev branch, send pull request to master branch, and confirm it online
+  - use GitHub Desktop to sync repo to my local computer, where dev branch is default view
+  - use Atom editor to edit/upload/restructure files (no GitBook preview available)
+  - use GitHub Desktop to commit changes to online repo dev branch, send pull request to master branch, and confirm it online
+
+- At present, I avoid using the GitBook Editor App since this tool supports only one-way import, and does not play nicely with edits made using the other methods above,  

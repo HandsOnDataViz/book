@@ -1,14 +1,17 @@
 ![](cover_400.jpg)
 
-Tell your story and show it with data.
-
-***Data Visualization for All*** explains how to create interactive charts, maps, and simple web apps, with easy-to-learn free tools and open data. This introductory open-access book features step-by-step tutorials and videos, so that everyday people with minimal coding skills can create and embed data visualizations on their own websites. Learn more about tools such as Google Sheets, Google Fusion Tables, Tableau Public, GitHub Pages, and more. 
+### Tell your story ***and*** show it with data.
 
 By Jack Dougherty (Trinity College, CT) and contributors.
 
-This book-in-progress is freely available at http://DataVizBook.org.
+***Data Visualization for All*** explains how to create interactive charts, maps, and simple web apps, with easy-to-learn free tools and open data. This introductory textbook features step-by-step tutorials and videos, so that everyday people with minimal coding skills can create and embed data visualizations on their own websites. Learn more about tools such as Google Sheets, Google Fusion Tables, Tableau Public, GitHub Pages, and more. 
 
-Improve this book by suggesting additions/edits on the [GitHub repository](https://github.com/jackdougherty/datavizbook).
+This open-access book is **freely available** on the web, with downloadable PDF/ePUB/Mobi formats, at http://DataVizBook.org.
+
+#####Help improve this book-in-progress:
+- To publicly comment on any paragraph inside this book, select the text and click the plus symbol (+) in the margin. 
+- To suggest revisions for the book, click the "Edit in GitHub" button at the top of any page to view its development branch on the [GitHub repository for this book](https://github.com/jackdougherty/datavizbook/tree/dev/).
+- Learn how to submit additional chapters for possible inclusion in [About This GitBook](gitbook/README.md) 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 

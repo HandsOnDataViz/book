@@ -1,13 +1,16 @@
 {
     "plugins": [
-        "youtube",
-        "exercises",
-        "quizzes",
         "anchors",
+        "exercises",
         "expandable-chapters",
-        "toggle-chapters",
         "ga",
-        "github"
+        "github",
+        "quizzes",
+        "splitter",
+        "toggle-chapters",
+        "word-count",
+        "youtube"
+
     ],
     "pluginsConfig": {
         "ga": {

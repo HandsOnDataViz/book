@@ -1,9 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
-   <!-- * [What is a dataviz?](introduction/what.md) -->
-   * [Why this book?](introduction/why.md)
-   * [Which tools to use?](introduction/which.md)
+   <!-- * [What is a Dataviz?](introduction/what.md) -->
+   * [Why this Book?](introduction/why.md)
+   * [Which Tools?](introduction/which.md)
    * [Share and Improve this Book](introduction/share.md)
    * [Contact the Authors](introduction/contact.md)
 <!-- * [Tell Stories with Data](story/README.md) -->
@@ -17,26 +17,26 @@
    * [Aggregate with Pivot Tables](transform/pivot-tables/README.md)
    <!-- * [Join Tables with VLookup](organize/vlookup/README.md) -->
    <!-- * [Geocode Addresses with Census](transform/geocode/README.md) -->
-* [Find Open Data](find/about-find.md)
-   <!-- * [Open Data about U.S.](find/us.README.md) -->
-   <!-- * [Open Data about Connecticut](find/ct.README.md)  -->
-   * [Filtered map with Socrata](find/filtered-map-socrata/README.md)
+* [Find Open Data](find/about.md)
+   <!-- * [Open Data on U.S.](find/us.README.md) -->
+   <!-- * [Open Data on Connecticut](find/ct.README.md)  -->
+   * [Filtered Map with Socrata](find/filtered-point-map-socrata/README.md)
    <!-- * [Maps with SocialExplorer] -->
 * [Chart the Data](chart/about.md)
    <!-- * [Scatter Chart with Tableau] -->
-   * [Filtered chart with Tableau](chart/filtered-line-chart-tableau/README.md)
+   * [Filtered Chart with Tableau](chart/filtered-line-chart-tableau/README.md)
 * [Map the Data](map/about.md)
-   <!-- * [Point map with BatchGeo](map/batchgeo/README.md) -->
-   * [Point map with Google Fusion](map/point-gft/README.md)
-   * [Polygon map with Google Fusion](map/polygon-gft/README.md)
-   * [Layer maps with Google Fusion](map/gft-layer-wizard/README.md)
+   <!-- * [Point Map with BatchGeo](map/batchgeo/README.md) -->
+   * [Point Map with Google Fusion](map/point-gft/README.md)
+   * [Polygon Map with Google Fusion](map/polygon-gft/README.md)
+   * [Layer Maps with Google Fusion](map/gft-layer-wizard/README.md)
 * [Publish on the Web](publish/about.md)
    <!-- * [Publish with WordPress](publish/wordpress/README.md) -->
-   * [Embed dataviz with iframe](publish/embed-iframe/README.md)
+   * [Embed Dataviz with iFrame](publish/embed-iframe/README.md)
    <!-- * [Share code with GitHub] -->
-   * [Host code with GitHub Pages](publish/ghpages/README.md)
+   * [Host Code with GitHub Pages](publish/ghpages/README.md)
 * [Web App Templates](web-app/about.md)
-   <!-- * [Polygon map with Leaflet] -->
+   <!-- * [Polygon Map with Leaflet] -->
    <!-- * [Storymap with Leaflet] -->
    * [Searchable Map with Google Fusion](web-app/searchable-map-template/README.md)
 

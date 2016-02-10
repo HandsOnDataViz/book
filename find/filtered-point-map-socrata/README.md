@@ -3,18 +3,16 @@
 *By [Veronica Armendar](introduction/contact.md), last updated May 5, 2015*
 
 Both the State of Connecticut (<a href="http://data.ct.gov">http://data.ct.gov</a>) and the City of Hartford (<a href="http://data.hartford.gov">http://data.hartford.gov</a>) have launched open data portals on the <a href="http://www.socrata.com/" target="_blank">Socrata</a> platform, which creates user-friendly ways to view, export, and create visualizations on the web. Since "live" data on the Socrata site can be continuously updated by an administrator, new information in the data table will automatically appear in your map, which may be preferable to exporting "static" data into an external spreadsheet for a disconnected mapping tool. In this tutorial, we will create an interactive point map of selected schools from the Connecticut Education Directory in the state data portal, to demonstrate filtering, conditional formatting, visualization, and embedding features in Socrata. The final product will look like this:
-<div class="web-only">[iframe width="625px" title="CT Schools Map" height="625px" src="https://data.ct.gov/w/shww-dhc6/wqz6-rhce?cur=vkPCQP4VYUQ&amp;from=root" frameborder="0" scrolling="no"&gt;&lt;a href="https://data.ct.gov/Education/CT-Schools-Map/shww-dhc6" title="CT Schools Map" target="_blank"&gt;CT Schools Map&lt;/a&gt;&lt;p&gt;&lt;a href="http://www.socrata.com/" target="_blank"&gt;Powered by Socrata&lt;/a&gt;&lt;/p&gt;]</div>
-<div class="not-web">
 
-[caption id="attachment_363" align="alignnone" width="632"]<a href="https://data.ct.gov/Education/CT-Schools-Map/shww-dhc6"><img src="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2014/11/FilteredPointMapSocrata.png" alt="Click screenshot to view  interactive map." width="632" height="530" class="size-full wp-image-363" /></a> Click screenshot to view <a href="https://data.ct.gov/Education/CT-Schools-Map/shww-dhc6"> interactive map</a>.[/caption]
+<div><iframe width="500px" title="CT Schools Map" height="425px" src="https://data.ct.gov/w/shww-dhc6/wqz6-rhce?cur=wg0AOYsW1XR&from=root" frameborder="0"scrolling="no"><a href="https://data.ct.gov/Education/CT-Schools-Map/shww-dhc6" title="CT Schools Map" target="_blank">CT Schools Map</a></iframe><p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p></div>
 
-</div>
 Create a free account on any Socrata platform. One account will work on all Socrata sites.
 
-<a href="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2014/07/SocrataMap1.png"><img class="aligncenter size-full wp-image-302" alt="SocrataMap1" src="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2014/07/SocrataMap1.png" width="599" height="557" /></a>
+![](SocrataMap1.png)
 
 Select your desired dataset in Socrata. In this tutorial, we will use CT Open Data &gt; Education &gt; CT Education Directory (<a href="https://data.ct.gov/Education/Education-Directory/9k2y-kqxn" target="_blank">https://data.ct.gov/Education/Education-Directory/9k2y-kqxn</a>). The data table must include a location column that includes geocoordinates. If there is address data but no geocoordinates, then post a suggestion to the Socrata site administrator to add a geocoded column.
-<a href="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2014/07/SocrataMap2.png"><img class="aligncenter size-full wp-image-303" alt="SocrataMap2" src="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2014/07/SocrataMap2.png" width="624" height="538" /></a>
+
+[](SocrataMap2.png)
 
 Filter the data to display only the desired rows. The CT Education Directory lists both district offices and school addresses, but for this map we only wish to display the latter. On the top-right corner of the table, click the Filter tab.
 <a href="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2014/07/SocrataMap3.png"><img class="aligncenter size-full wp-image-304" alt="SocrataMap3" src="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2014/07/SocrataMap3.png" width="563" height="609" /></a>

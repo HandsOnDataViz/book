@@ -14,7 +14,6 @@ If these limitations concern you, a simple alternative is to export data from th
 
 
 If these limitations concern you, a simple alternative is to export data from the open repository (which turns any "live" data into "static" data), and import it into your preferred dataviz tool, such as those described in other chapters of this book. A second, more advanced alternative is to learn how to pull live data out of the platform using an Application Programming Interface (API), which requires coding skills that are beyond the scope of this tutorial. (Learn more about the Socrata API:  
-
 ## Steps to create a Socrata filtered point map
 Create a free account on any Socrata platform. One account will work on all Socrata sites.
 

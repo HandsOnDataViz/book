@@ -4,7 +4,7 @@
 
 Open data repositories recently launched by the State of Connecticut (http://data.ct.gov) and the City of Hartford (http://data.hartford.gov) both use the Socrata platform (http://www.socrata.com), which offer user-friendly ways to view, filter, and export data. Also, the Socrata platform includes built-in support to create interactive charts and maps, and to embed them on your own websites. This tutorial demonstrates these features by creating an interactive point map of selected schools from the Connecticut Education Directory in the state data portal. The final product looks like this:
 
-<div><iframe width="500px" title="CT Schools Map" height="425px" src="https://data.ct.gov/w/shww-dhc6/wqz6-rhce?cur=wg0AOYsW1XR&from=root" frameborder="0"scrolling="no"><a href="https://data.ct.gov/Education/CT-Schools-Map/shww-dhc6" title="CT Schools Map" target="_blank">CT Schools Map</a></iframe><p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p></div>
+<div><iframe width="100%" title="CT Schools Map" height="425px" src="https://data.ct.gov/w/shww-dhc6/wqz6-rhce?cur=wg0AOYsW1XR&from=root" frameborder="0"scrolling="no"><a href="https://data.ct.gov/Education/CT-Schools-Map/shww-dhc6" title="CT Schools Map" target="_blank">CT Schools Map</a></iframe><p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p></div>
 
 One advantage of creating data visualizations directly on an open data platform is that the chart or map is linked to the data repository. For example, if the Socrata platform administrator updates the data table, then a Socrata dataviz based on that data will be automatically updated, too. This may be especially useful for "live" data that is continuously updated by agency administrators, such as fire, crime, and property data repositories. 
 
@@ -12,7 +12,7 @@ But there are limitations to creating your chart or map on an open data reposito
 
 If these limitations concern you, a simple alternative is to export data from the open repository (which means that any "live" data would become "static" data), and import it into your preferred dataviz tool, such as those described in other chapters of this book. A second, more advanced alternative, is to learn how to pull live data from the repository directly into your dataviz, using an Application Programming Interface (API), which requires coding skills that are beyond the scope of this tutorial. (To learn more about the Socrata API: https://dev.socrata.com/.)
 
-## Steps to create a Socrata filtered point map
+## NOTE: Steps below are being updated
 Create a free account on any Socrata platform. One account will work on all Socrata sites.
 
 ![](SocrataMap1.png)

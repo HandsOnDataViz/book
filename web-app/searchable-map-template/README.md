@@ -28,7 +28,7 @@ See also [Additional MapsLib options](#options)
 
 1. Create a Fusion Table ([here's a great tutorial](https://support.google.com/fusiontables/answer/2527132?hl=en&topic=2573107&ctx=topic))
 1. Make sure at least one column is set to a type of Location and that Fusion Tables has geocoded it
-1. Your Fusion Table may include at least one column of data about the points on your map, such as numbers (1, 2, 3, etc.) to represent different types. In the map tab, select "change feature styles" to group marker icons into color-coded categories. 
+1. Your Fusion Table may include at least one column of data about the points on your map, such as numbers (1, 2, 3, etc.) to represent different types. In the map tab, select "change feature styles" to group marker icons into color-coded categories.
 1. Set the Fusion Table to be publicly visible (via the Share button in the upper right) and make sure 'Allow Download' is enabled.
 
 ## B. Fork a copy of the template to your GitHub account <a id="B"></a>
@@ -40,14 +40,14 @@ The free GitHub platform hosts the Searchable Map Template code repository. User
 1. Click "fork" to copy Derek's code repository to your own GitHub account.
 
 ## C. Create a new GitHub Pages branch to publish to the web <a id="C"></a>
-When you forked Derek's template into your GitHub account, it created two branches: master and gh-pages (abbreviation for GitHub Pages). Keep the master branch, but delete Derek's old gh-pages branch, because it will not work with your account. When you create a new gh-pages branch, it will publish a working demo of the template code to the public web. 
+When you forked Derek's template into your GitHub account, it created two branches: master and gh-pages (abbreviation for GitHub Pages). Keep the master branch, but delete Derek's old gh-pages branch, because it will not work with your account. When you create a new gh-pages branch, it will publish a working demo of the template code to the public web.
 
 1. To delete Derek's old gh-pages branch, select the "branches" tab in your GitHub repo, and click the trash can icon to remove it.
 1. Click the "FusionTable-Map-Template" title to go to the top level of the repository
 1. Select the *branch:master* drop-down menu, type the *exact* phrase "gh-pages" into the textbox, and press enter to create and publish your own GitHub Pages branch to the web.
-1. The first time you create the GitHub Pages branch, it may take up to 10 minutes to appear on the public web. To view it online, follow this address format in your browser: https://USERNAME.github.io/REPO_NAME. 
+1. The first time you create the GitHub Pages branch, it may take up to 10 minutes to appear on the public web. To view it online, follow this address format in your browser: https://USERNAME.github.io/REPO_NAME.
 
-For example, the map template demo in Derek's gh-pages branch is visible at https://derekeder.github.io/FusionTable-Map-Template. 
+For example, the map template demo in Derek's gh-pages branch is visible at https://derekeder.github.io/FusionTable-Map-Template.
 
 At this point, when your map template demo becomes visible, it will look identical to Derek's, until you edit the code. While waiting for your demo to appear online, go ahead and edit the map options in your gh-pages branch.
 
@@ -63,7 +63,7 @@ The Searchable Map Template contains several files, but the most essential is in
    1. **locationColumn** - The name of your location column in your Fusion Table, such as "geometry" or "address" or other.
    1. **map_center** - The lat/long where you want to center your map. ([Find yours here](http://www.itouchmap.com/latlong.html)).
    1. **locationScope** - The area where you want to limit searches (set to 'chicago' by default).
-1. After making these edits, scroll down to the bottom of the page and click "commit changes" to save to your gh-pages branch. Optional, but recommended: Insert a brief description of your code edits. 
+1. After making these edits, scroll down to the bottom of the page and click "commit changes" to save to your gh-pages branch. Optional, but recommended: Insert a brief description of your code edits.
 1. Edit the README.MD file to remove the link to Derek's working map demo, and create a link to your own demo in your published GitHub Pages branch, using this browser address format: https://USERNAME.github.io/REPO_NAME
 1. Click your demo link to view the most recent changes in your GitHub Pages demo map. Be sure to refresh your browser or [bypass the cache](http://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache#Bypassing_cache).
 
@@ -85,7 +85,7 @@ The Searchable Map Template code can be customized to include a filter, which di
 
 Adding a basic filter requires three steps:
 - Set up Fusion Table data column and map point colors
-- Insert filter display code into index.html 
+- Insert filter display code into index.html
 - Insert filter logic code into maps_lib.js file
 
 This tutorial demonstrates how to insert a basic checkbox filter, using the [sample Google Fusion Table data from Derek's template](https://www.google.com/fusiontables/DataSource?docid=1m4Ez9xyTGfY2CU6O-UgEcPzlS0rnzLU93e4Faa0#rows:id=1). This filter refers to numerical values (1, 2, 3) in the "type" data column of the Fusion Table, which match three color codes (blue, green, and red) in the Fusion Table Map, which correspond to three labels (City, Private, Hazardous) for types of Chicago recycling stations. Of course, your data will be different, but create a table like the one below to organize your design.
@@ -134,7 +134,7 @@ This tutorial demonstrates how to insert a basic checkbox filter, using the [sam
 ####Insert filter logic code into maps_lib.js file
 The maps_lib.js file (which appears in the js, or JavaScript folder) contains the core code that operates the Searchable Map template. Adding a filter with logical statements (matching those in the index.html and the Fusion Table) allows users to turn on/off selected point maps. Numerical filters work best, but see the [wiki filter page](https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples) for examples with text strings.
 
-1. In your gh-pages branch, edit the maps_lib.js file, located in the js folder. 
+1. In your gh-pages branch, edit the maps_lib.js file, located in the js folder.
 2. Copy and paste the filter logic shown below into the "custom filters" section of the code, usually between lines 165-166 of the template. Note that "cbType1" and its numerical value (1) should match your index.html file and Fusion Table. Scroll down to commit changes to your gh-pages branch.
 
 ```javascript
@@ -145,15 +145,15 @@ if ( $("#cbType2").is(':checked')) searchType += "2,";
 if ( $("#cbType3").is(':checked')) searchType += "3,";
 self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 ```
-Hints: 
+Hints:
 - The data column in the template is named "type." But if your Fusion Table column name has spaces in it, make sure to surround it with single quotes as shown.
 - The number of filter colors/labels/types can be expanded beyond the 3 shown above by adding lines of code. Fusion Tables and the Searchable Map Template support 5 large markers (blue, red, green, yellow, purple), and Fusion Tables supports 5 additional small markers with the same colors.
 - Modify additional text and links in the index.html file to tell the story of your map and its sources to viewers.
-- Modify your README.md file in your gh-pages branch to insert a link to your published demo site, following this web address format: https://USERNAME.github.io/REPO_NAME 
+- Modify your README.md file in your gh-pages branch to insert a link to your published demo site, following this web address format: https://USERNAME.github.io/REPO_NAME
 
 ## G. Save code edits from gh-pages to master branch<a id="G"></a>
 
-After making edits to your GitHub Pages branch and viewing your published map on the web, save a copy of the entire template with a "pull request" to your master branch. Use the gh-pages branch for testing new features on your live web demo site, and use the master branch for safekeeping a good copy of your working code. 
+After making edits to your GitHub Pages branch and viewing your published map on the web, save a copy of the entire template with a "pull request" to your master branch. Use the gh-pages branch for testing new features on your live web demo site, and use the master branch for safekeeping a good copy of your working code.
 
 1. In the right-hand column of the top-level of your GitHub repository, click "Pull Request"
 2. Click the green "New Pull Request" button.
@@ -166,10 +166,10 @@ After making edits to your GitHub Pages branch and viewing your published map on
 
 ## H. Clone and sync additional templates with GitHub for Mac/Win <a id="H"></a>
 
-GitHub allows users to create one fork of the basic Searchable Map template repository. To create a second template, or to move and edit multiple files for more advanced versions, download the GitHub for Mac/Windows tool. 
+GitHub allows users to create one fork of the basic Searchable Map template repository. To create a second template, or to move and edit multiple files for more advanced versions, download the GitHub for Mac/Windows tool.
 1. Download the free tool: [GitHub for Mac](https://mac.github.com/) or [GitHub for Windows](https://windows.github.com/)
 1. In the Searchable Map Template in GitHub, click __Clone__ and save to your hard drive
-1. In your GitHub browser, create a new repository for your second template, and select options to create a README.MD and license (recommended: MIT). 
+1. In your GitHub browser, create a new repository for your second template, and select options to create a README.MD and license (recommended: MIT).
 1. Clone your second template repository to your hard drive
 1. In your hard drive, copy and paste the files from the cloned Searchable Map Template to your cloned second template. Replace the existing README.MD and license files.
 1. In your GitHub for Mac/Windows tool, __Commit and Sync__ your second template to your GitHub online account. Title the commit before clicking the button.
@@ -205,6 +205,6 @@ var myMap = new MapsLib({
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 
 [Data Visualization for All](http://datavizbook.org)
-by [Jack Dougherty](http://bit.ly/jackdougherty)
-and contributors is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
+by [Jack Dougherty and contributors](introduction/contributors.md)
+is published under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
 You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.

@@ -73,7 +73,7 @@ Step 15: Before saving your workbook, create a free Tableau Public account in yo
 
 ![](TPublicLineChart15.png)
 
-Step 16: After saving your workbook, Tableau will generate a general view of how your visualization appears on the web, with an option to email the link. To embed the visualization in your website, copy the HTML embed code and paste it into a web page that can host this code. 
+Step 16: After saving your workbook, Tableau will generate a general view of how your visualization appears on the web, with an option to email the link. To embed the visualization in your website, copy the HTML embed code and paste it into a web page that can host this code.
 
 In some websites, the HTML embed code can be pasted directly into a web page.
 
@@ -87,6 +87,6 @@ For more details, see the Host HTML code on the web with GitHub Pages tutorial i
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 
 [Data Visualization for All](http://datavizbook.org)
-by [Jack Dougherty](http://bit.ly/jackdougherty)
-and contributors is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
+by [Jack Dougherty and contributors](introduction/contributors.md)
+is published under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
 You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.

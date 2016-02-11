@@ -35,3 +35,11 @@ If your data needs to be formatted, select a spreadsheet column by clicking at t
 To sort data rows by a column, select the entire spreadsheet (top-left corner icon), then right-click or look for the sort menu. Be sure to select the entire sheet to avoid accidentally sorting one column without the adjacent ones.
 
 ![](SpreadsheetSort640w.gif)
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+[Data Visualization for All](http://datavizbook.org)
+by [Jack Dougherty and contributors](introduction/contributors.md)
+is published under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
+You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.

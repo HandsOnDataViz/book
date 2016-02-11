@@ -4,7 +4,7 @@
 
 If your digital project includes HTML code (or JavaScript, CSS, etc.) that needs to be hosted on a live website, one solution is to upload your work to a [free GitHub account](https://github.com/) and publish to the open web using its [GitHub Pages](https://help.github.com/articles/what-are-github-pages) feature. Hosting your code is free is you make it public, while private code requires a monthly payment. The GitHub platform is widely used by the open-source coding community to share and collaborate on digital projects, because other users can easily view your work, make a copy, and even suggest improvements. GitHub Pages works well for demonstrating work on a live public website, but if your project involves private data or draws high-volume web traffic, you should host your code on a secure dedicated web server.
 
-Newcomers can host their code on GitHub, and publish to the web using the GitHub Pages feature, by following step-by-step instructions or this [YouTube video screencast](http://youtu.be/ZVejLE8qtOI). 
+Newcomers can host their code on GitHub, and publish to the web using the GitHub Pages feature, by following step-by-step instructions or this [YouTube video screencast](http://youtu.be/ZVejLE8qtOI).
 
 {% youtube %}https://www.youtube.com/watch?v=ZVejLE8qtOI{% endyoutube %}
 
@@ -84,4 +84,10 @@ To embed an interactive data visualization from a GitHub Pages host site into a 
 
 See my sample repositories, with links to live demo sites, at https://github.com/JackDougherty?tab=repositories. Learn more about GitHub general features to share and collaborate on other users' public code repositories.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Data Visualization for All</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.datavizbook.org/content/introduction/contact.html" property="cc:attributionName" rel="cc:attributionURL">Jack Dougherty and contributors</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>. You may freely share and modify this content for non-commercial purposes, with a source credit to the author(s) listed in the byline and this link: http://DataVizBook.org.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+[Data Visualization for All](http://datavizbook.org)
+by [Jack Dougherty and contributors](introduction/contributors.md)
+is published under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
+You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.

@@ -101,9 +101,10 @@ TO DO: Add video screencast.
 
 TO DO: To display textual data, rather than numerical, in a GFT legend, see this solution: https://github.com/JackDougherty/FusionTable-Map-custom-legend
 
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 
 [Data Visualization for All](http://datavizbook.org)
-by [Jack Dougherty](http://bit.ly/jackdougherty)
-and contributors is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
+by [Jack Dougherty and contributors](introduction/contributors.md)
+is published under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
 You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.

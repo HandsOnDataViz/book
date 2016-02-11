@@ -1,4 +1,4 @@
-# Embed a Dataviz with iFrame on the web
+# Embed a Dataviz iFrame in Your Website
 
 When creating data visualizations on a web service, a common goal is to display your interactive chart or map inside a webpage on a different site. For example, if you created an interactive chart in Google Sheets, you could simply **link** to it from an organization's website. Or you could insert a static picture of your visualization, such as a screenshot, on an organization's website. But a better solution is to **embed the live visualization** inside the organization's webpage.
 
@@ -12,41 +12,49 @@ The **general iframe concept** works across many data visualization tools and ma
 
 But details vary, so read and experiment following the examples below.
 
-### Embed a Google Sheet dataviz in a WordPress.org site
+## Embed a simple Google Sheet chart in a WordPress.org site
 
-- In Google Sheets, select data and insert > chart.
-- Click right-corner of the interactive chart and select Publish chart
+The goal is to embed a simple interactive chart inside your website, so that users may engage with the data. The end result will look like this:
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>
+
+1) In Google Sheets, select the desired data and Insert > Chart. Select the best type for your interactive chart and add any titles, labels, etc.
+
+2) Click right-corner of the interactive chart and select Publish chart. Click OK on next screen.
 ![](GoogleSheets-publish-chart.png)
 
-- Select the Embed tab, with Interactive version of your dataviz. Copy the iframe code that appears.
-![](GoogleSheets-embed-chart.png)
+3) Select the Embed tab, select the Interactive version of your dataviz, and click the blue Publish button.
+![](GoogleSheets-embed-tab-publish-button.png)
 
-- On a self-hosted Wordpress.org site (such as the Trinity College DataViz site at http://commons.trincoll.edu/dataviz), I have already installed and activated the [iframe plugin](http://wordpress.org/plugins/iframe/), which  
-allows authors to embed iframe codes inside posts/pages using a simple "shortcode" in square brackets. Without this plugin, self-hosted WordPress.org sites usually will "strip out" iframe codes for all users except the site administrator. Beware that inserting an iframe will NOT work for most WordPress.com sites.
+4) Copy the iframe embed code that appears, which you will paste and modify to match your website.
+![](GoogleSheets-copy-iframe-code.png)
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2012/11/PluginActiveIFrame.jpg"><img alt="" src="http://commons.trincoll.edu/jackdougherty/files/2012/11/PluginActiveIFrame.jpg" width="360" height="86" /></a>
+5) To embed your dataviz in a self-hosted Wordpress.org site, the [iframe plugin] (http://wordpress.org/plugins/iframe/) must be installed and activated. This plugin allows authors to embed iframe codes inside posts/pages, in a modified "shortcode" format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually "strip out" iframe codes for all users except the site administrator. **I have already installed and activated** the iframe plugin on my site, and the Dashboard view looks like this:
 
-- Go to your WordPress.org site, log in, and create a new post. In the editor window, switch from the Visual to the Text tab, which allows users to insert and modify HMTL code. 
-- Paste the iframe embed code that you copied above, which initially should look like this:
+![](WordPressOrg-iframe-plugin-activate.png)
 
+Note that most WordPress.com sites do NOT support an iframe embed code.
+
+6) Go to your WordPress.org site, log in, and create a new post. In the editor window, switch from the Visual to the Text tab, which allows users to modify the code behind your post. Paste the iframe code from your interactive dataviz.
+![](WordPressOrg-text-tab-paste-iframe.png)
+
+7) Initially, the code you pasted includes HTML iframe tags at the front (<iframe...) and the end (...></iframe>), which looks like this:
 ```javascript
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1oZPU_aIvpU2apI0OQ5detnADqgDQf0v7a4OJvl6LKQw/pubchart?oid=1931672306&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>
 ```
 
-- Modify the front end of the iframe code by inserting a square bracket in place of the first caret symbol. At the back end, insert a square bracket in place of the last caret symbol and the iframe closing tag. The result should look like this:
+8) Modify the front end of the iframe code by replacing the less-than symbol (<) with a square opening bracket ([). Modify the back end by erasing the greater-than symbol (>) and the end tag (</iframe>), and inserting a square closing bracket (]).
+![](WordPressOrg-replace-with-bracket.png)
 
+Your modified code should look like this:
 ```
-[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1oZPU_aIvpU2apI0OQ5detnADqgDQf0v7a4OJvl6LKQw/pubchart?oid=1931672306&amp;format=interactive"]
+[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"]
 ```
+9) Click Preview or Publish/View Post to see how it appears on the web.
 
-- Publish your post, and view it on the public web to test your embedded dataviz. You may need to modify settings.
+10) If desired, continue to modify the iframe code to improve the display of your dataviz on your website. For example, the initial code was 600 pixels wide (width="600"). To display the dataviz across the full width of your website, change this part of the code to 100% (width="100%").
 
-
-
-
-**TODO: Revise other embed directions below**
-
-
+## NOTE: Other embed examples below need to be updated
 
 If you're hosting your data visualization on a live website (such as <a href="http://epress.trincoll.edu/dataviz/chapter/host-html-github/" target="_blank">GitHub Pages</a>), copy the web address, like this:
 

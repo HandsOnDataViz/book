@@ -1,5 +1,7 @@
 # Embed a Dataviz iFrame in Your Website
 
+*Last updated by [Jack Dougherty](introduction/contributors.md) on February 11, 2016*
+
 When creating data visualizations on a web service, a common goal is to display your interactive chart or map inside a webpage on a different site. For example, if you created an interactive chart in Google Sheets, you could simply **link** to it from an organization's website. Or you could insert a static picture of your visualization, such as a screenshot, on an organization's website. But a better solution is to **embed the live visualization** inside the organization's webpage.
 
 <!--TO DO: bullet and illustrate link vs static vs embed concept above-->
@@ -12,9 +14,9 @@ The **general iframe concept** works across many data visualization tools and ma
 
 But details vary, so read and experiment following the examples below.
 
-## Embed a simple Google Sheet chart in a WordPress.org site
+## Embed a Google Sheet chart in a WordPress.org site
 
-The goal is to embed a simple interactive chart inside your website, so that users may engage with the data. The end result will look like this:
+The goal is to embed an interactive chart inside your website, so that users can explore the data. This tutorial displays a *very basic chart* to simplify the process, and the end result will appear like the one below. Try it.
 
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>
 
@@ -31,7 +33,7 @@ The goal is to embed a simple interactive chart inside your website, so that use
 
 5) To embed your dataviz in a self-hosted Wordpress.org site, the [iframe plugin] (http://wordpress.org/plugins/iframe/) must be installed and activated. This plugin allows authors to embed iframe codes inside posts/pages, in a modified "shortcode" format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually "strip out" iframe codes for all users except the site administrator. **I have already installed and activated** the iframe plugin on my site, and the Dashboard view looks like this:
 
-![](WordPressOrg-iframe-plugin-activate.png)
+![](WordPressOrg-iframe-plugin-activate.jpg)
 
 Note that most WordPress.com sites do NOT support an iframe embed code.
 
@@ -43,7 +45,7 @@ Note that most WordPress.com sites do NOT support an iframe embed code.
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>
 ```
 
-8) Modify the front end of the iframe code by replacing the less-than symbol (<) with a square opening bracket ([). Modify the back end by erasing the greater-than symbol (>) and the end tag (</iframe>), and inserting a square closing bracket (]).
+8) Modify the front end of the iframe code by replacing the less-than symbol ( < ) with a square opening bracket ( [ ). Modify the back end by erasing the greater-than symbol ( > ) and the end tag ( </iframe> ). Replace the back end with a square closing bracket ( ] ).
 ![](WordPressOrg-replace-with-bracket.png)
 
 Your modified code should look like this:
@@ -54,7 +56,7 @@ Your modified code should look like this:
 
 10) If desired, continue to modify the iframe code to improve the display of your dataviz on your website. For example, the initial code was 600 pixels wide (width="600"). To display the dataviz across the full width of your website, change this part of the code to 100% (width="100%").
 
-## NOTE: Other embed examples below need to be updated
+### TO DO: Other embed examples below need to be updated
 
 If you're hosting your data visualization on a live website (such as <a href="http://epress.trincoll.edu/dataviz/chapter/host-html-github/" target="_blank">GitHub Pages</a>), copy the web address, like this:
 

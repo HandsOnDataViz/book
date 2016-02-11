@@ -61,4 +61,12 @@ Since the GitBook YouTube plugin is installed in this book. . . TO DO: show step
   - use Atom editor to edit/upload/restructure files (no GitBook preview available)
   - use GitHub Desktop to commit changes to online repo dev branch, send pull request to master branch, and confirm it online
 
-- At present, I avoid using the GitBook Editor App since this tool supports only one-way import, and does not play nicely with edits made using the other methods above,  
+- At present, I avoid using the GitBook Editor App since this tool supports only one-way import, and does not play nicely with edits made using the other methods above.
+
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+[Data Visualization for All](http://datavizbook.org)
+by [Jack Dougherty and contributors](introduction/contributors.md)
+is published under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
+You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.

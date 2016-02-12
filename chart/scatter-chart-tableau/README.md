@@ -49,7 +49,7 @@ Go to File > Save to Tableau Public As. The next step requires signing up for a 
 
 Save your Tableau Public workbook, with a meaningful name. Your interactive chart and underlying data will be published on the Tableau server and become publicly available.
 
-After your workbook is saved on the server, Tableau Public will automatically open it in your default web browser. Click the Edit Details button to modify the title or add a brief description. Click the Share button to copy the embed code. Learn how to embed the interactive chart in your own website with iframe, in the [Publish section of this book](publish/about.md).
+After your workbook is saved on the server, Tableau Public will automatically open it in your default web browser. Click the Edit Details button to modify the title or add a brief description. Click the Share button to copy the embed code. Learn how to embed the interactive chart in your own website with iframe, in the [Publish section of this book](publish/README.md).
 
 ### TO DO
 Redo the tutorial screenshots and steps by inserting simpler labels (Districts. . .; Poverty...; Test Scores...) in the Excel sheet, which will appear at front of the variable names.

@@ -23,7 +23,7 @@
    * [Filtered Map with Socrata](find/filtered-point-map-socrata/README.md)
    <!-- * [Maps with SocialExplorer] -->
 * [Chart the Data](chart/about.md)
-   <!-- * [Scatter Chart with Tableau] -->
+   * [Scatter Chart with Tableau](chart/scatter-chart-tableau/README.md)
    * [Filtered Chart with Tableau](chart/filtered-line-chart-tableau/README.md)
 * [Map the Data](map/about.md)
    <!-- * [Point Map with BatchGeo](map/batchgeo/README.md) -->

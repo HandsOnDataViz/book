@@ -17,23 +17,29 @@ Several tools can create scatter charts, but Tableau Public offers a relatively 
 Download and install Tableau Public (https://public.tableau.com/), currently available for Mac or Windows. The free Tableau Public app requires your data to become public, as the name suggests, and is designed for academics, journalists, and non-profit organizations that wish to publish data visualizations on the open web. If you wish to keep your visualizations and the underlying data private, the company sells a similar app called Tableau Desktop. (This tutorial displays screens from version 9.2 for Mac.)
 
 Start up Tableau Public. Click connect to link to the data you prepared above, in an Excel spreadsheet, a generic text file (CSV, comma separated values), or a statistical file (for applications such as SAS, SPSS, and R.)
+
 ![](TableauPublic-connect.png)
 
 Tableau Public opens a new workbook and shows the data source tab, to confirm that your spreadsheet has been uploaded correctly. To create your visualization, go to the worksheet by clicking "Sheet 1" in the bottom-left corner.
-![](TableauPublic-data-source-go-to-worksheet)
+
+![](TableauPublic-data-source-go-to-worksheet.png)
 
 At first glance, the Tableau Public worksheet can feel overwhelming. Don't let it scare you. We're going to do an easy one, together. On the left side, see the three columns of data. Tableau Public has automatically identified our first column (CT School District) as a "Dimension," and our second and third columns (test score and student poverty data) as "Measures."
+
 ![](TableauPublic-worksheet.png)
 
 The key to Tableau Public is learning where to drag items from the data tab into the main worksheet.
 
 Drag one measure (such as student poverty) into the Columns field, where it will turn green. Drag the other measure (test scores) into the Rows field, where it also will turn green. The initial chart will appear as one dot, with all of your data clumped together, but don't worry. We're not done yet.
+
 ![](TableauPublic-drag-each-measure.png)
 
 Drag the dimension (school districts) into the bottom of the Marks tab. Your scatter chart will appear. Float over each point to reveal its label and underlying data.
+
 ![](TableauPublic-drag-dimension.png)
 
 To reinforce the concept, here's a short animated loop of the two dragging steps above.
+
 ![](TableauPublic-scatter-chart-640.gif)
 
 ## Sharing your Tableau Public on the web

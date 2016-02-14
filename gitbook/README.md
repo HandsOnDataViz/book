@@ -27,19 +27,38 @@ Markdown is an easy-to-read syntax that is simpler than HMTL and growing in popu
 
 See also GitBook Markdown guide: https://help.gitbook.com/format/markdown.html
 
+Inside each chapter folder, the main text is stored in the README.md file, to simplify the GitBook web addresses. Example:
+- A chapter in the GitHub repository: https://github.com/JackDougherty/datavizbook/blob/master/map/point-gft/README.md
+- The same chapter on GitBook (which converts README.md to index.html): http://www.datavizbook.org/content/map/point-gft/index.html
+- Abbreviated web address to same chapter (since "index.html" is not required): 
+- http://www.datavizbook.org/content/map/point-gft
+
+
+### Embed links in GitBook Markdown
+Insert brackets around the words to be underlined, followed by parentheses for the embedded link, like this:
+
+```
+Regular text [with underlined hotlink](http://anywhere.com)
+```
+### Embed images in GitBook Markdown
+Upload images into the chapter folder. In the 
+
+
 ## GitBook Plugins
 Plugins extend the features of basic GitBook, and can be configured in the book.json file. View the entire repository of GitBook plugins: https://plugins.gitbook.com/
 
 View the specific plugins and configurations for this book at: https://github.com/JackDougherty/datavizbook/blob/master/book.json
 
-## Embed YouTube Video with GitBook Plugin
-Since the youtube plugin is installed in this Gitbook, embed videos in the text like this:
+### Embed YouTube Video with GitBook Plugin
+Since the [youtube plugin](https://plugins.gitbook.com/plugin/youtube) is installed in this Gitbook, embed videos in the text this way:
 
 ```
+{% youtube %}https://youtu.be/b73LBXYrbng{% endyoutube %}
+```
+The YouTube video will appear as an embedded iframe in the online web version of the GitBook, and as a link in the ebook versions. 
 
 
-
-## HTML elements supported by GitBook Markdown
+## Insert HTML comments in GitBook Markdown
 - Insert HTML comments for notes that are not visible to GitBook readers (but are visible on the GitHub public repo)
 
 ```html

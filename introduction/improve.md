@@ -1,5 +1,7 @@
 # Improve This Book-in-Progress
 
+I had inserted a bunch of changes here...
+
 #####Help improve this book-in-progress:
 - To publicly comment on any paragraph inside this book, select the text and click the plus symbol (+) in the margin.
 - To suggest revisions for the book, click the "Edit in GitHub" button at the top of any page to view its development branch on the [GitHub repository for this book](https://github.com/jackdougherty/datavizbook/tree/dev/).

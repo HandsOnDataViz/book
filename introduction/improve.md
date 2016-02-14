@@ -16,7 +16,7 @@ To suggest revisions for the book, click the "Edit in GitHub" link at the top of
 
 To submit an additional chapter for potential inclusion in the book, follow the Markdown format, the existing file/image/folder structure (explanation to come) and submit the change to the dev branch of the repository. Email any questions to the lead author: jack.dougherty@trincoll.edu.
 
-I had inserted a bunch of changes here...
+I had inserted a bunch of changes here... tiny change
 
 #####Help improve this book-in-progress:
 - To publicly comment on any paragraph inside this book, select the text and click the plus symbol (+) in the margin.

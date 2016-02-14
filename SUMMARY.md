@@ -3,7 +3,6 @@
 * [Introduction](README.md)
    * [Why this Book?](introduction/why.md)
    * [Which Tools?](introduction/which.md)
-   * [Improve this Book](introduction/improve.md)
    * [Contact the Authors](introduction/contact.md)
 * [Prepare Your Data](prepare/README.md)
    * [Public or Private Data?](prepare/public-private/README.md)
@@ -26,4 +25,5 @@
 * [Web App Templates](web-app/README.md)
    * [Searchable Map with Google Fusion](web-app/searchable-map-template/README.md)
 * [About This GitBook](gitbook/README.md)
+* [Improve this Book](introduction/improve.md)
 

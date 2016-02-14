@@ -1,28 +1,32 @@
 # Improve This Book-in-Progress
 
 ####Comment on any paragraph
-- Select text and click on plus symbol (+) in margin
-- Requires free account on: **TO DO fill in**
-- Constructive criticism and suggestions welcome.
-- View all comments in [Discussions](https://www.gitbook.com/book/jackdougherty/datavizbook/discussions).
+- Select text and click the plus symbol (+) in margin.
+- Requires a free GitHub or GitBook account.
+- View other comments in margin, or all in [Discussions](https://www.gitbook.com/book/jackdougherty/datavizbook/discussions).
+- Constructive criticism and suggestions are welcome.
+
+![](GitBook-comments-2016-02.gif)
 
 ####Suggest revisions on any page
-- Click "Edit in GitHub" at top of any page.
-- Editing requires [free GitHub account]
-## Improve the book with comments, revisions, additions
-To share a public comment on any paragraph inside this book, select the text and click the plus symbol (+) in the margin. Constructive criticism is welcome, but inappropriate comments will be removed. <!-- TO DO: insert commenting GIF -->
+- Click "Edit in GitHub" at top of any page, which opens new tab.
+    ![](GitBook-edit-on-github.png)
+- To view the code behind the page, click Raw button.
+- To suggest revisions, click Editor button (the pencil symbol), which requires a [free GitHub account](http://github.com).
+    ![](GitHub-edit-file.png)
+- After entering revisions, scroll down to click Propose File Change.
+- On next screen, click Create Pull Request to send changes to the book master branch.
+- On next screen, click Create Pull Request again to confirm.
+- The book owner will review your suggested revisions, and you will receive automatic notification on any changes.
 
-To suggest revisions for the book, click the "Edit in GitHub" link at the top of any page, which opens the relevant page in the development branch (dev) on the GitHub repository. You will need a free GitHub account to proceed further. Click the editing button (looks like a pencil), enter your suggested revisions, and commit the change (similar to save). <!--TO DO: Test this with Veronica's account -->
+####Submit additional chapters to the book
+- Recommended: [Contact the lead author](introduction/contributors.md) with a summary of your proposed chapter.
+- On the [book GitHub repository](https://github.com/JackDougherty/datavizbook), fork a copy, and create your proposed chapter.
+- Follow the existing folder/file structure
+- Compose the chapter in GitHub-flavored Markdown
+- See more details about embedding video, iframes, etc. in [About This GitBook](gitbook/README.md)
 
-To submit an additional chapter for potential inclusion in the book, follow the Markdown format, the existing file/image/folder structure (explanation to come) and submit the change to the dev branch of the repository. Email any questions to the lead author: jack.dougherty@trincoll.edu.
-
-I had inserted a bunch of changes here...
-
-#####Help improve this book-in-progress:
-- To publicly comment on any paragraph inside this book, select the text and click the plus symbol (+) in the margin.
-- To suggest revisions for the book, click the "Edit in GitHub" button at the top of any page to view its development branch on the [GitHub repository for this book](https://github.com/jackdougherty/datavizbook/tree/dev/).
-- Learn how to submit additional chapters for possible inclusion in [About This GitBook](gitbook/README.md)
-
+***
 
 This book-in-progress is freely available at http://DataVizBook.org.
 

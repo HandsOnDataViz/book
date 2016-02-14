@@ -1,10 +1,12 @@
 # Improve This Book-in-Progress
 
 ####Comment on any paragraph
-- Select text and click on plus symbol (+) in margin
-- Requires free account on: **TO DO fill in**
-- Constructive criticism and suggestions welcome.
-- View all comments in [Discussions](https://www.gitbook.com/book/jackdougherty/datavizbook/discussions).
+- Select text and click the plus symbol (+) in margin.
+- Requires a free GitHub or GitBook account.
+- View other comments in margin, or all in [Discussions](https://www.gitbook.com/book/jackdougherty/datavizbook/discussions).
+- Constructive criticism and suggestions are welcome.
+
+![](GitBook-comments-2016-02.gif)
 
 ####Suggest revisions on any page
 - Click "Edit in GitHub" at top of any page, which opens new tab.

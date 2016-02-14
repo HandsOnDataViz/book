@@ -29,32 +29,39 @@ Commented-out code that is not viewed by readers:
 Code-fencing to display non-executed code:
 TO DO: Describe and illustrate three backticks (`), followed by the language (typically html, javascript), and closing backticks.
 
+```
+```javascript
+here's some javascript
+```                         (example)
+```
+
 Embed iframe:
 TO DO: Explain how to do in HTML in markdown
 
 Embed YouTube video for multiple book formats:
 Since the GitBook YouTube plugin is installed in this book. . . TO DO: show steps
 
-## My GitBook Workflow (rough notes)
+## My GitBook Workflow
 
 - The public book is generated from the MASTER branch of this online repo: https://github.com/JackDougherty/datavizbook
 
-- Make all edits to a duplicate DEV branch, then merge into the master branch
-- Keep a current duplicate DEV branch available and encourage others to submit pull requests to that branch, not master
 
-- To compose/edit GitBook, by owner, using BROWSER Editor:
-  - check online repo to make sure that dev branch is current with master branch (if not, pull request)
-  - use online GitBook browser editor https://www.gitbook.com/book/jackdougherty/datavizbook/details
-  - set online browser editor to edit the dev branch, NOT the master branch
-  - when done, merge branches (which means merge dev into master branch)
+####For simple edits by owner to GitBook using BROWSER Editor (with preview screen):
+- check book repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
+- start up online GitBook browser editor https://www.gitbook.com/book/jackdougherty/datavizbook/details
+- in online browser editor, create a new branch (dev) for edits
+- when done, merge branches (push dev branch into master branch)
+- delete the dev branch to avoid confusion 
 
-- For editing or major file/folder restructuring by owner with Atom Editor (no preview):
-  - check online repo to make sure that dev branch is current with master branch (if not, pull request)
-  - use GitHub Desktop to sync repo to my local computer, where dev branch is default view
-  - use Atom editor to edit/upload/restructure files (no GitBook preview available)
-  - use GitHub Desktop to commit changes to online repo dev branch, send pull request to master branch, and confirm it online
+####For major revisions and structural file/folder changes by owner with Atom Editor (no preview):
+- check book repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
+- create dev branch
+- use GitHub Desktop to sync repo to my local computer, where dev branch is default view
+- use Atom editor to edit/upload/restructure files
+- use GitHub Desktop to commit changes to online repo dev branch, send pull request to master branch, and confirm it online
 
-- At present, I avoid using the GitBook Editor App since this tool supports only one-way import, and does not play nicely with edits made using the other methods above.
+####Avoid GitBook Editor App
+At present, I avoid using the GitBook Editor App since this tool supports only one-way import, and does not play nicely with edits made using the other methods above. Maybe this will change in the future.
 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>

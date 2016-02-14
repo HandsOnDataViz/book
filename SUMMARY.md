@@ -25,5 +25,6 @@
 * [Web App Templates](web-app/README.md)
    * [Searchable Map with Google Fusion](web-app/searchable-map-template/README.md)
 * [About This GitBook](gitbook/README.md)
-* [Improve this Book](introduction/improve.md)
-
+  * [Improve this Book](gitbook/improve.md)
+  * [Structure, Plugins, Syntax](gitbook/structure.md)
+  * [My GitBook Workflow](gitbook/workflow.md)

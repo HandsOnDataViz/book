@@ -8,7 +8,7 @@ This book is hosted on the free GitBook.com platform. Updates are automatically 
 
 Since this open-access book is shared under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0), anyone may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.
 
-####Comment on any paragraph
+##Comment on any paragraph
 - Select text and click the plus symbol (+) in margin.
 - Requires a free GitHub or GitBook account.
 - View other comments in margin, or all in [Discussions](https://www.gitbook.com/book/jackdougherty/datavizbook/discussions).
@@ -16,7 +16,7 @@ Since this open-access book is shared under a [Creative Commons Attribution-NonC
 
 ![](GitBook-comments-2016-02.gif)
 
-####Suggest revisions on any page
+##Suggest revisions on any page
 - Click "Edit in GitHub" at top of any page, which opens new tab.
     ![](GitBook-edit-on-github.png)
 - To view the code behind the page, click Raw button.
@@ -29,10 +29,9 @@ Since this open-access book is shared under a [Creative Commons Attribution-NonC
 
 ##Submit additional chapters to the book
 - Recommended: [Contact the lead author](introduction/contributors.md) with a summary of your proposed chapter.
-- On the [book GitHub repository](https://github.com/JackDougherty/datavizbook), fork a copy, and create your proposed chapter.
-- Follow the existing folder/file structure - see below
-- Compose the chapter in GitHub-flavored Markdown - see below
-- See more details below about embedding video, iframes, etc.
+- On the [book GitHub repository](https://github.com/JackDougherty/datavizbook), fork a copy to your own GitHub account (requires free signup).
+- Create your proposed chapter following the book's existing folder/file structure, in GitHub/GitBook Markdown format, as explained below.
+- 
 
 ## Folder/file structure for this GitBook:
 - Part folder (example: map)

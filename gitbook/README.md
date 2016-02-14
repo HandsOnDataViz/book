@@ -6,40 +6,50 @@ The contents of the book are freely accessible on this GitHub code repository: h
 
 Since this open-access book is shared under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0), anyone may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.
 
-## GitBook structure for files/folders/images
-To come: explain and illustrate how my system works. . .
+## Folder/file structure for this GitBook:
+- Part folder (example: map)
+- Chapter subfolder (example: map/point-gft)
+- Chapter text (example: map/point-gft/README.md)
+- Chapter images (example: map/point-gft/visual.png) .
 
 ## GitBook Plugins
 View the GitBook repository of plugins to extend features at: https://plugins.gitbook.com/
 
-To view the plugins for this book on its GitHub repository:  https://github.com/JackDougherty/datavizbook/blog/dev/book.json
+View the plugins used in this book in this repo file:  https://github.com/JackDougherty/datavizbook/blob/master/book.json
 
-## Writing with Markdown for GitHub/GitBook
+## Compose in Markdown for GitHub/GitBook
 Markdown is an easy-to-read syntax that is simpler than HMTL, and becoming popular across a number of digital platforms. GitBook follows most of GitHub Flavored Markdown syntax: https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/
 
-Also see the GitBook Markdown guide (https://help.gitbook.com/format/markdown.html) for some specific differences: TO COME: LIST; but check if all are supported in book exports
+Also see the GitBook Markdown guide (https://help.gitbook.com/format/markdown.html) for some specific differences
 
-GitHub Markdown also supports HTML syntax for specific items, such as:
+## GitHub Markdown supports HTML elements
+- Insert HTML comments for TO DO notes that are not visible to GitBook readers (but are visible on the GitHub public repo)
 
-Commented-out code that is not viewed by readers:
 ```html
      <!-- TO DO: Revise this page -->
 ```
+- Insert HTML iframe for interactive elements (which are visible on GitBook web edition, but not in ebook editions; perhaps in future)
 
-Code-fencing to display non-executed code:
-TO DO: Describe and illustrate three backticks (`), followed by the language (typically html, javascript), and closing backticks.
-
-```
-```javascript
-here's some javascript
-```                         (example)
+```html
+<iframe src="https://assets-cdn.github.com/images/modules/contact/heartocat.png">
 ```
 
-Embed iframe:
-TO DO: Explain how to do in HTML in markdown
+- 
+- 
+
+
 
 Embed YouTube video for multiple book formats:
 Since the GitBook YouTube plugin is installed in this book. . . TO DO: show steps
+
+## Markdown code-fencing to display non-executed code:
+To display non-executed code within Markdown, insert three backticks (`) followed by the language (typically html or javascript), the code, and three closing backticks. Example:
+
+```
+```html
+<iframe src="https://assets-cdn.github.com/images/modules/contact/heartocat.png">
+```                         (end of example)
+```
 
 ## My GitBook Workflow
 

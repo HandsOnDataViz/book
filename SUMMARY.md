@@ -24,6 +24,6 @@
    * [Host Code with GitHub Pages](publish/ghpages/README.md)
 * [Web App Templates](web-app/README.md)
    * [Searchable Map with Google Fusion](web-app/searchable-map-template/README.md)
-* [Improve this Book](introduction/improve.md)
 * [About This GitBook](gitbook/README.md)
+* [Improve this Book](introduction/improve.md)
 

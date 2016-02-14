@@ -13,7 +13,7 @@
 - After entering revisions, scroll down to Propose File Change. **TO DO: more steps**
 
 ####Submit additional chapters to the book
-- [Contact the lead author](introduction/contributors.md) with a summary of your proposed chapter.
+- Recommended: [Contact the lead author](introduction/contributors.md) with a summary of your proposed chapter.
 - On the [book GitHub repository](https://github.com/JackDougherty/datavizbook), fork a copy, and create your proposed chapter.
 - Follow the existing folder/file structure
 - Compose the chapter in GitHub-flavored Markdown

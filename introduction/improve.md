@@ -15,14 +15,9 @@
 ####Submit additional chapters to the book
 - [Contact the lead author](introduction/contributors.md) with a summary of your proposed chapter.
 - On the [book GitHub repository](https://github.com/JackDougherty/datavizbook), fork a copy, and create your proposed chapter.
-- Follow the existing file/folder structure:
-  - Part folder (example: map)
-  - Chapter subfolder (example: map/point-gft)
-  - Chapter text (example: map/point-gft/README.md)
-  - Chapter images (example: map/point-gft/visual.png)
+- Follow the existing folder/file structure
 - Compose the chapter in GitHub-flavored Markdown
-- Markdown also supports HTML, such as interactive iframes
-- Read more details in [About This GitBook](gitbook/README.md)
+- See more details about embedding video, iframes, etc. in [About This GitBook](gitbook/README.md)
 
 ***
 

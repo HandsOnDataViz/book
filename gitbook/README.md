@@ -6,13 +6,6 @@ The contents of the book are freely accessible on this GitHub code repository: h
 
 Since this open-access book is shared under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0), anyone may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.
 
-## Improve the book with comments, revisions, additions
-To share a public comment on any paragraph inside this book, select the text and click the plus symbol (+) in the margin. Constructive criticism is welcome, but inappropriate comments will be removed. <!-- TO DO: insert commenting GIF -->
-
-To suggest revisions for the book, click the "Edit in GitHub" link at the top of any page, which opens the relevant page in the development branch (dev) on the GitHub repository. You will need a free GitHub account to proceed further. Click the editing button (looks like a pencil), enter your suggested revisions, and commit the change (similar to save). <!--TO DO: Test this with Veronica's account -->
-
-To submit an additional chapter for potential inclusion in the book, follow the Markdown format, the existing file/image/folder structure (explanation to come) and submit the change to the dev branch of the repository. Email any questions to the lead author: jack.dougherty@trincoll.edu.
-
 ## GitBook structure for files/folders/images
 To come: explain and illustrate how my system works. . .
 

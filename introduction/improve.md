@@ -10,6 +10,7 @@
 
 ####Suggest revisions on any page
 - Click "Edit in GitHub" at top of any page, which opens new tab.
+![]
 - To view the code behind the page, click Raw button.
 - To suggest revisions, click Editor button (the pencil symbol), which requires a [free GitHub account](http://github.com).
 - After entering revisions, scroll down to Propose File Change. **TO DO: more steps**

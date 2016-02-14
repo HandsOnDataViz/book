@@ -5,6 +5,7 @@
 - To suggest revisions for the book, click the "Edit in GitHub" button at the top of any page to view its development branch on the [GitHub repository for this book](https://github.com/jackdougherty/datavizbook/tree/dev/).
 - Learn how to submit additional chapters for possible inclusion in [About This GitBook](gitbook/README.md)
 
+where did all of the changes go?
 
 This book-in-progress is freely available at http://DataVizBook.org.
 

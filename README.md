@@ -10,9 +10,15 @@ By Jack Dougherty (Trinity College, CT) and contributors.
 
 **[Read online](https://www.gitbook.com/read/book/jackdougherty/datavizbook)** (recommended) or download the [PDF](https://www.gitbook.com/download/pdf/book/jackdougherty/datavizbook) or [ePUB](https://www.gitbook.com/download/epub/book/jackdougherty/datavizbook) or [Mobi/Kindle](https://www.gitbook.com/download/mobi/book/jackdougherty/datavizbook) versions.
 
-**[Improve this book-in-progress](gitbook/improve.md)** with comments, revisions, additions.
+**[Improve this book-in-progress](gitbook/improve.md)** by adding comments.
 
-**[Learn how GitBook works](gitbook.README.md)** and create your own book. 
+![](gitbook/GitBook-comments-2016-02.gif)
+
+**[Suggest revisions or additions](gitbook/improve.md)** with edits on GitHub.
+
+![](gitbook/GitBook-edit-on-github.png)
+
+**[Learn how GitBook works](gitbook.README.md)** and publish your own book. 
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 

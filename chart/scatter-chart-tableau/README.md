@@ -1,15 +1,17 @@
 # Create an XY Scatter Chart with Tableau Public
 
-A scatter chart shows the relationship between two variables by displaying a series of XY coordinate points. For example, if you want to view the relationship between a school district's test scores and its student poverty levels, place both of these variables inside an XY scatter chart, as shown below. With an online interactive version, viewers can explore the data and float over or click any point to see its label.
+*by [Jack Dougherty](introduction/contributors.md), last updated February 16, 2016*
 
-<!-- TO DO insert iframe of test and poverty here -->
+A scatter chart shows the relationship between two variables by displaying a series of XY coordinate points. For example, if you want to view the relationship between a school district's test scores and its student poverty levels, place both of these variables inside an XY scatter chart, as shown below. With an online interactive version, viewers can explore the data and float over or click any point to see its label. Try this sample:
+
+<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 981px; height: 741px;'><noscript><a href='http:&#47;&#47;www.datavizbook.org&#47;content&#47;chart&#47;scatter-chart-tableau&#47;index.html'><img alt='Sheet1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataVizBook-simple-scatterchart&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='981' height='741' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DataVizBook-simple-scatterchart&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataVizBook-simple-scatterchart&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
 
 ## Prepare your XY data
-For a simple XY scatter chart, create a spreadsheet that contains three columns: data labels, variable 1, and variable 2. For example, to compare how Connecticut school districts vary by student poverty and standardized test scores, I created this 3-column spreadsheet from two different tables that I found in the [Connecticut Open Data repository, Education section](https://data.ct.gov/Education).
+For a simple XY scatter chart, create a spreadsheet that contains three columns: data labels, variable 1, and variable 2. For example, to compare how Connecticut school districts vary by student poverty and test scores, this 3-column spreadsheet was created from two different tables in the [Connecticut Open Data repository, Education section](https://data.ct.gov/Education). [Download the sample data](CT-Districts-StudentPoverty-TestScore-2012-13.csv) in CSV format, which opens in any spreadsheet tool.
 
 ![](TableauPublic-prepare-data.png)
 
-TO DO: To learn how to join two different tables that share a similar column, see the VLookup instructions in this book, *to come*)
+Learn how to join two different tables that share a similar column, with the VLookup spreadsheet tutorial in this book, **to do**
 
 ## The Tableau Public tool
 Several tools can create scatter charts, but Tableau Public offers a relatively quick way to produce a highly interactive version that can easily be embedded on your site, with links to the data source.
@@ -44,15 +46,17 @@ To reinforce the concept, here's a short animated loop of the two dragging steps
 
 ## Sharing your Tableau Public on the web
 
-Go to File > Save to Tableau Public As. The next step requires signing up for a free Tableau account.
+Go to File > Save to Tableau Public As. The next step requires signing up for a free Tableau account and profile.
+
 ![](TableauPublic-save-as.png)
 
-Save your Tableau Public workbook, with a meaningful name. Your interactive chart and underlying data will be published on the Tableau server and become publicly available.
+Save your Tableau Public workbook, and give it a meaningful name. Your interactive chart and underlying data will be published on the Tableau server and become publicly available.
 
-After your workbook is saved on the server, Tableau Public will automatically open it in your default web browser. Click the Edit Details button to modify the title or add a brief description. Click the Share button to copy the embed code. Learn how to embed the interactive chart in your own website with iframe, in the [Publish section of this book](publish/README.md).
+After your workbook is saved on the server, Tableau Public should automatically open it in your default web browser. But if no workbook appears, look in your Tableau Public profile, which follows this format: https://public.tableau.com/profile/USERNAME
 
-### TO DO
-Redo the tutorial screenshots and steps by inserting simpler labels (Districts. . .; Poverty...; Test Scores...) in the Excel sheet, which will appear at front of the variable names.
+Click the Edit Details button to modify the title or add a brief description. Click the Share button to copy the embed code. Learn how to embed the interactive chart in your own website, in the [Publish section of this book](publish/README.md).
+
+![](TableauPublic-edit-embed.png)
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 

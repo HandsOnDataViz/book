@@ -20,7 +20,7 @@
    * [Polygon Map with Google Fusion](map/polygon-gft/README.md)
    * [Layer Maps with Google Fusion](map/gft-layer-wizard/README.md)
 * [Embed on Your Website](embed/README.md)
-   * [Embed with iFrame on WordPress](embed/iframe-wordpress/README.md)
+   * [Embed iFrame on WordPress](embed/iframe-wordpress/README.md)
    * [Embed Google Sheets Chart](embed/google-sheets/README.md)
    * [Embed Tableau Public](embed/tableau/README.md)
 * [Publish on the Web](publish/README.md)

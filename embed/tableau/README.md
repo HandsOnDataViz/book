@@ -2,7 +2,7 @@
 
 To embed a Tableau Public data visualization as an iframe, like this:
 
-<iframe src="https://public.tableau.com/views/DataVizBook-simple-scatterchart/Sheet1?:showVizHome=no&:embed=true"></iframe>
+<iframe src="https://public.tableau.com/views/DataVizBook-simple-scatterchart/Sheet1?:showVizHome=no&:embed=true" width="100%" height="500"></iframe>
 
 1) In the Tableau Public server page, click the Share button and copy the source link (not the embed code).
 
@@ -11,7 +11,7 @@ To embed a Tableau Public data visualization as an iframe, like this:
 2) For this example, the source link for the embedded visualization above is:
 
 ```html
-https://public.tableau.com/views/DataVizBook-simple-scatterchart/Sheet1?:embed=y&amp;:display_count=yes&amp;:showTabs=y
+https://public.tableau.com/views/DataVizBook-simple-scatterchart/Sheet1?:embed=y&:display_count=yes&:showTabs=y
 ```
 
 3) Delete the code after the question mark, to make it look like this:

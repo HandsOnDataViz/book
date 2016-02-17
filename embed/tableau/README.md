@@ -1,8 +1,8 @@
 # Embed a Tableau Public visualization
 
-To embed a Tableau Public data visualization as an iframe, like this:
+A Tableau Public visualization can be embedded in your own website as an iframe, like the interactive example below. Try it by floating your cursor over the data points.
 
-<iframe src="https://public.tableau.com/views/DataVizBook-simple-scatterchart/Sheet1?:showVizHome=no&:embed=true" width="100%" height="500"></iframe>
+<iframe src="https://public.tableau.com/views/DataVizBook-simple-scatterchart/Sheet1?:showVizHome=no&:embed=true" width="500" height="500"></iframe>
 
 1) In the Tableau Public server page, click the Share button and copy the source link (not the embed code).
 

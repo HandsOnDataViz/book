@@ -11,6 +11,7 @@
    * [Calculate with Spreadsheets](prepare/calculate/README.md)
 * [Transform Your Data](transform/README.md)
    * [Aggregate with Pivot Tables](transform/pivot-tables/README.md)
+   * [Geocode Addresses with Census](transform/geocode-census/README.md)
 * [Find Open Data](find/README.md)
    * [Filtered Map with Socrata](find/filtered-point-map-socrata/README.md)
 * [Chart the Data](chart/README.md)

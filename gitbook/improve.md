@@ -20,6 +20,6 @@
 - The book owner will review your suggested revisions, and you will receive automatic notification on any changes.
 
 ##Submit additional chapters to the book
-- Recommended: [Contact the lead author](introduction/contributors.md) with a summary of your proposed chapter.
+- Recommended: [Contact the lead author](introduction/who.md) with a summary of your proposed chapter.
 - On the [book GitHub repository](https://github.com/JackDougherty/datavizbook), fork a copy to your own GitHub account (requires free signup).
 - Create your proposed chapter following the book's existing folder/file structure, in GitHub/GitBook Markdown format, as explained in the following pages.

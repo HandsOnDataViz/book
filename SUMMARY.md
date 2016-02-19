@@ -1,9 +1,10 @@
 # Summary
 
 * [Introduction](README.md)
-   * [Why this Book?](introduction/why.md)
-   * [Which Tools?](introduction/which.md)
-   * [Contact the Authors](introduction/contact.md)
+   * [What are data visualizations?](introduction.what.md)
+   * [How do we create them?](introduction/how.md)
+   * [Why this book?](introduction/why.md)
+   * [Who wrote it?](introduction/who.md)
 * [Prepare Your Data](prepare/README.md)
    * [Public or Private Data?](prepare/public-private/README.md)
    * [Format with Spreadsheets](prepare/spreadsheet/README.md)

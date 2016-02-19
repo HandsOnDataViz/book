@@ -1,6 +1,6 @@
 # GitHub: One Tool for (Nearly) Everything
 
-*By [Jack Dougherty](introduction/contact.md), last updated February 18, 2016*
+*By [Jack Dougherty](introduction/who.md), last updated February 18, 2016*
 
 Sign up for a [free GitHub account](http://github.com), a free multi-purpose tool that allows you to:
 - View and fork a copy of open-source code from other users
@@ -104,6 +104,6 @@ See my sample repositories, with links to live demo sites, at https://github.com
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 
 [Data Visualization for All](http://datavizbook.org)
-by [Jack Dougherty and contributors](introduction/contributors.md)
+by [Jack Dougherty and contributors](introduction/who.md)
 is published under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
 You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.

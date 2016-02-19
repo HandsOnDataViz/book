@@ -1,6 +1,6 @@
 # Searchable Map Template with Google Fusion Tables and GitHub Pages
 
-*By [Derek Eder and Jack Dougherty](introduction/contact.md), last updated May 5, 2015*
+*By [Derek Eder and Jack Dougherty](introduction/who.md), last updated May 5, 2015*
 
 This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages. Explore a [working demo with a simple checkbox filter](http://jackdougherty.github.io/FusionTable-Map-Template/).
 
@@ -205,6 +205,6 @@ var myMap = new MapsLib({
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 
 [Data Visualization for All](http://datavizbook.org)
-by [Jack Dougherty and contributors](introduction/contributors.md)
+by [Jack Dougherty and contributors](introduction/who.md)
 is published under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
 You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.

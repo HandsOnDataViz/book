@@ -1,6 +1,6 @@
 # Embed with iFrame on WordPress.org
 
-*Last updated by [Jack Dougherty](introduction/contributors.md) on February 11, 2016*
+*Last updated by [Jack Dougherty](introduction/who.md) on February 11, 2016*
 
 **TO DO: revise this opening**
 

@@ -1,6 +1,6 @@
 # Overlay Maps with Fusion Tables Layer Wizard
 
-*by [Jack Dougherty](introduction/contact.md), last updated May 2015*
+*by [Jack Dougherty](introduction/who.md), last updated May 2015*
 
 One reason to create maps with Google Fusion Tables is the ability to overlay them on top of one another to view patterns in your data. A simple tool to overlay maps is the [Fusion Tables Layer Wizard](http://fusion-tables-api-samples.googlecode.com/svn/trunk/FusionTablesLayerWizard/src/index.html).
 

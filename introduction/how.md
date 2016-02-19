@@ -1,4 +1,24 @@
-# Which Tools To Use?
+# How do we make visualizations?
+
+***Data Visualization for All*** is guided by these principles:
+
+- Simplicity: tools should be easy-to-learn for everyday users who follow these introductory-level tutorials
+
+- Compatibility: tools should operate on multiple platforms (especially Mac/Windows/Chromebook), and should create visualizations that work (or are viewable, at minimum) across multiple devices (laptops, mobile devices, even smartphones), without platform-specific plugins
+
+- Sustainability: when working with partner organizations, build data visualizations that they can reasonably maintain on their own
+
+- Portability: don't import data into a platform unless you can export it, and favor those that allow you to easily migrate your work into future technologies
+
+- Public and private: lean open and share your work with others, but respect privacy (especially for legally-protected individual data)
+
+The central challenge is to identify data visualization tools and techniques that best fit with the principles above. We face trade-offs when choosing between those that are easy-to-learn versus ones that require advanced skills, or limited design versus extensive features. The goal is to find the elusive sweet spot: friendly and flexible.
+
+![](ToolTradeoffs.png)
+
+
+
+**TO DO** rewrite old text below to fit with above
 
 To create sustainable data visualizations in partnership with local community organizations, we will choose appropriate technology that fits our criteria. Ideally, our web tools should be:
 

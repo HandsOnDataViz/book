@@ -9,3 +9,14 @@ If you're using Google Fusion Tables, modify your Sharing Settings to make your 
 Then paste your Google Fusion Tables embed iframe code into a WordPress.org post/page, with the iframe plugin installed, and modify the shortcode, like this:
 
 <a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png"><img alt="GFT_iFrameEmbedCode" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png" width="599" height="449" /></a>
+
+
+---
+[Improve this book:](gitbook/improve.md) select text to insert comment, or suggest edits.
+
+[Data Visualization for All](http://datavizbook.org)
+copyrighted by [Jack Dougherty and contributors](introduction/who.md)
+is distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
+You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>

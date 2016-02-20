@@ -1,8 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-   * [What are data visualizations?](introduction.what.md)
-   * [How do we create them?](introduction/how.md)
+   * [What are data visualizations?](introduction/what.md)
+   * [How to choose dataviz tools?](introduction/how.md)
    * [Why this book?](introduction/why.md)
    * [Who wrote it?](introduction/who.md)
 * [Prepare Your Data](prepare/README.md)
@@ -13,6 +13,8 @@
    * [Aggregate with Pivot Tables](transform/pivot-tables/README.md)
    * [Geocode Addresses with Census](transform/geocode-census/README.md)
 * [Find Open Data](find/README.md)
+   * [U.S. and Census Open Data](find/us/README.md)
+   * [Connecticut Open Data](find/ct/README.md)
    * [Filtered Map with Socrata](find/filtered-point-map-socrata/README.md)
 * [Chart the Data](chart/README.md)
    * [Scatter Chart with Tableau](chart/scatter-chart-tableau/README.md)

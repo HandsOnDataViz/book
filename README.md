@@ -2,9 +2,9 @@
 
 ### Tell your story ***and*** show it with data.
 
-***Data Visualization for All*** explains how to create interactive charts, maps, and simple web apps, with easy-to-learn free tools and open data. This introductory textbook features step-by-step tutorials and videos, so that everyday people with minimal coding skills can create and embed data visualizations on their own websites. Learn more about tools such as Google Sheets, Google Fusion Tables, Tableau Public, GitHub Pages, and more.
+***Data Visualization for All*** illustrates how to create interactive charts and maps with easy-to-learn free tools and open data sources. This introductory textbook includes step-by-step tutorials, videos, and examples, so that everyday readers can design and embed data visualizations on their own websites, with no coding skills required. Featured tools include Google Fusion Tables, Tableau Public, and GitHub Pages.
 
-**[Contact](introduction/who.md)**: by Jack Dougherty (Trinity College, CT) and contributors.
+**[Authors:](introduction/who.md)**: Jack Dougherty (Trinity College, CT), Veronica X. Armendariz, Derek Eder, and other contributors.
 
 **Free to read** this open-access book at http://DataVizBook.org.
 

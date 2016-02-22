@@ -4,21 +4,21 @@
 
 ***Data Visualization for All*** illustrates how to create interactive charts and maps with easy-to-learn free tools and open data sources. This introductory textbook includes step-by-step tutorials, videos, and examples, so that everyday readers can design and embed data visualizations on their own websites, with no coding skills required. Featured tools include Google Fusion Tables, Tableau Public, and GitHub Pages.
 
-**[Authors:](introduction/who.md)**: Jack Dougherty (Trinity College, CT), Veronica X. Armendariz, Derek Eder, and other contributors.
+[About the authors:](introduction/who.md) Jack Dougherty (Trinity College, CT), Veronica X. Armendariz, Derek Eder, and other contributors.
 
 **Free to read** this open-access book at http://DataVizBook.org.
 
-**[Read online](https://www.gitbook.com/read/book/jackdougherty/datavizbook)** (recommended) or download the [PDF](https://www.gitbook.com/download/pdf/book/jackdougherty/datavizbook) or [ePUB](https://www.gitbook.com/download/epub/book/jackdougherty/datavizbook) or [Mobi/Kindle](https://www.gitbook.com/download/mobi/book/jackdougherty/datavizbook) versions.
+[Read online](https://www.gitbook.com/read/book/jackdougherty/datavizbook) (recommended) or download the [PDF](https://www.gitbook.com/download/pdf/book/jackdougherty/datavizbook) or [ePUB](https://www.gitbook.com/download/epub/book/jackdougherty/datavizbook) or [Mobi/Kindle](https://www.gitbook.com/download/mobi/book/jackdougherty/datavizbook) versions.
 
-**[Improve this book-in-progress](gitbook/improve.md)** by adding comments.
+[Improve this book-in-progress](gitbook/improve.md) by adding comments.
 
 ![](gitbook/GitBook-comments-2016-02.gif)
 
-**[Suggest revisions or additions](gitbook/improve.md)** with edits on GitHub.
+[Suggest revisions or additions](gitbook/improve.md) with edits on GitHub.
 
 ![](gitbook/GitBook-edit-on-github.png)
 
-**[Learn how GitBook works](gitbook.README.md)** and publish your own book.
+[Learn how GitBook works](gitbook.README.md) and publish your own book.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
 

@@ -29,12 +29,16 @@ See also in this book: [Find census geography for street addresses with Census G
 **National Center for Education Statistics (NCES)** (http://nces.ed.gov/) is the primary federal agency for collecting and reporting education data.
 - Elementary/Secondary Information System (ELSi) (http://nces.ed.gov/ccd/elsi) - create custom tables and charts from the Common Core of Data (CCD) and Private School Survey
 
+
+
 ---
-[Improve this book:](gitbook/improve.md) select text to insert comment, or suggest edits.
 
-[Data Visualization for All](http://datavizbook.org)
-copyrighted by [Jack Dougherty and contributors](introduction/who.md)
-is distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0).
-You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+
+[Improve this book:](../../gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
+
+[The DataViz Book](http://datavizbook.org)
+is copyrighted by [Jack Dougherty and contributors](../../introduction/who.md)
+and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.
+
+![Creative Commons by-nc image](../../cc-by-nc.png)

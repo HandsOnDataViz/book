@@ -13,12 +13,15 @@ In other cases, individual data is not private. For example:
 - When individuals contribute to political campaigns, most US and state laws require that the donor name, address, and amount is public data.
 - When an individual buys home in Connecticut, the owner's name, address, purchase amount, and other details about the home are public data.
 
-***
 
-[Improve this book:](gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
+---
+
+
+
+[Improve this book:](../gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
 
 [The DataViz Book](http://datavizbook.org)
-is copyrighted by [Jack Dougherty and contributors](introduction/who.md)
+is copyrighted by [Jack Dougherty and contributors](../introduction/who.md)
 and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.
 
 ![Creative Commons by-nc image](../../cc-by-nc.png)

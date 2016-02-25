@@ -1,10 +1,10 @@
 # Embed with iFrame on WordPress.org
 
-*Last updated by [Jack Dougherty](introduction/who.md) on February 11, 2016*
+*Last updated by [Jack Dougherty](../../introduction/who.md) on February 11, 2016*
 
 **TO DO: revise this opening**
 
-To embed one web page (the data visualization) inside a second web page (the organization's website), we use a simple HTML code known as **iframe**. (Read more about the <a href="http://www.w3schools.com/tags/tag_iframe.asp" target="_blank">ifram</a><a href="http://www.w3schools.com/tags/tag_iframe.asp" target="_blank">e tag at W3Schools</a>.)
+To embed one web page (the data visualization) inside a second web page (the organization's website), we use a simple HTML code known as **iframe**. (Read more about the <a href="http://www.w3schools.com/tags/tag_iframe.asp">iframe</a><a href="http://www.w3schools.com/tags/tag_iframe.asp">tag at W3Schools</a>.)
 
 The **general iframe concept** works across many data visualization tools and many websites:
 - Copy the embed code or URL from your dataviz website

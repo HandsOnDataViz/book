@@ -1,6 +1,6 @@
 # GitHub: One Tool for (Nearly) Everything
 
-*By [Jack Dougherty](introduction/who.md), last updated February 18, 2016*
+*By [Jack Dougherty](../../introduction/who.md), last updated February 18, 2016*
 
 Sign up for a [free GitHub account](http://github.com), a free multi-purpose tool that allows you to:
 - View and fork a copy of open-source code from other users

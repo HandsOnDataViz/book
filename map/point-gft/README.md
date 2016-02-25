@@ -1,6 +1,6 @@
 # Geocoded point map with Google Fusion Tables
 
-*by [Jack Dougherty](introduction/who.md), last updated May 2015*
+*by [Jack Dougherty](../../introduction/who.md), last updated May 2015*
 
 Google Fusion Tables (GFT) is a free tool that allows users to upload and geocode a spreadsheet of location data, create an interactive point map with a numerical legend, and embed the product in a web page, like this:
 

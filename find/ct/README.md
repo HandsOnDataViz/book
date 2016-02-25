@@ -8,9 +8,9 @@ Since this book was created in Hartford, Connecticut, it lists state and municip
 - Office of Policy and Management (http://ct.gov/opm/cwp/view.asp?a=3006&Q=383258&opmNav_GID=1386)
 - link to all CT state government agencies (http://portal.ct.gov/Department-and-Agencies/)
 
-**Connecticut State Data Center** (http://ctsdc.uconn.edu/), the lead agency for US Census data and other socioeconomic data for Connecticut and local municipalities, is based at the University of Connecticut Libraries. The site also features data visualizations created on the Tableau platform.
+**Connecticut State Data Center** (http://ctsdc.uconn.edu/), part of the U.S. Census Data Center Network, is the lead agency for US Census data and other socioeconomic data for Connecticut, and is based at the University of Connecticut Libraries. The site also features data visualizations created on the Tableau platform and provides population projections for the state of Connecticut.
 
-**MAGIC: The Map and Geographic Information Center** (http://magic.lib.uconn.edu), based at the University of Connecticut Libraries, specializes in providing geographic boundary data and map images for the state, past and present. The site also features interactive maps.
+**MAGIC: The Map and Geographic Information Center** (http://magic.lib.uconn.edu), based at the University of Connecticut Libraries, specializes in providing geographic, aerial photography, and map images for the state, past and present. The site also features interactive maps.
 
 **DataHaven** (http://ctdatahaven.org/), a non-profit organization, collects and interprets information about Connecticut neighborhoods, such as its Community Wellbeing Survey. Data resources feature neighborhood profiles for densely-populated areas (New Haven and Hartford-West Hartford), and town profiles for other areas across the state.
 

@@ -1,6 +1,6 @@
 # Searchable Map Template with Google Fusion Tables and GitHub Pages
 
-*By [Derek Eder and Jack Dougherty](introduction/who.md), last updated May 5, 2015*
+*By [Derek Eder and Jack Dougherty](../../introduction/who.md), last updated May 5, 2015*
 
 This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages. Explore a [working demo with a simple checkbox filter](http://jackdougherty.github.io/FusionTable-Map-Template/).
 

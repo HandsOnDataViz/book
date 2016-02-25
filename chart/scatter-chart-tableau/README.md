@@ -1,6 +1,6 @@
 # Create an XY Scatter Chart with Tableau Public
 
-*by [Jack Dougherty](introduction/who.md), last updated February 16, 2016*
+*by [Jack Dougherty](../../introduction/who.md), last updated February 16, 2016*
 
 A scatter chart shows the relationship between two variables by displaying a series of XY coordinate points. For example, if you want to view the relationship between a school district's test scores and its student poverty levels, place both of these variables inside an XY scatter chart, as shown below. With an online interactive version, viewers can explore the data and float over or click any point to see its label. Try this sample:
 
@@ -54,7 +54,7 @@ Save your Tableau Public workbook, and give it a meaningful name. Your interacti
 
 After your workbook is saved on the server, Tableau Public should automatically open it in your default web browser. But if no workbook appears, look in your Tableau Public profile, which follows this format: https://public.tableau.com/profile/USERNAME
 
-Click the Edit Details button to modify the title or add a brief description. Click the Share button to copy the embed code. Learn how to embed the interactive chart in your own website, in the [Publish section of this book](publish/README.md).
+Click the Edit Details button to modify the title or add a brief description. Click the Share button to copy the embed code. Learn how to embed the interactive chart in your own website, in the [Publish section of this book](../../publish/README.md).
 
 ![](TableauPublic-edit-embed.png)
 

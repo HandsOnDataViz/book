@@ -16,7 +16,7 @@
 
 ![](gitbook/GitBook-edit-on-github.png)
 
-[Learn how GitBook works](gitbook.README.md) and publish your own book.
+[Learn how GitBook works](gitbook/README.md) and publish your own book.
 
 ***
 

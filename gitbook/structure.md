@@ -76,7 +76,7 @@ Example:
 
 
 
-[Improve this book:](gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
+[Improve this book:](improve.md) Select text to insert comments, or suggest edits on GitHub.
 
 [The DataViz Book](http://datavizbook.org)
 is copyrighted by [Jack Dougherty and contributors](../introduction/who.md)

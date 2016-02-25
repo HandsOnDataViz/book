@@ -1,6 +1,6 @@
 # Filtered Point Map with Socrata Open Data
 
-*By [Veronica X. Armendariz](introduction/who.md) and [Jack Dougherty](introduction/who.md), last updated February 11, 2016*
+*By [Veronica X. Armendariz and Jack Dougherty](../../introduction/who.md), last updated February 11, 2016*
 
 Open data repositories recently launched by [the State of Connecticut](http://data.ct.gov) and [the City of Hartford](http://data.hartford.gov) both use [the Socrata platform](http://www.socrata.com), which offer user-friendly ways to view, filter, and export data. Also, the Socrata platform includes built-in support to create interactive charts and maps, and to embed them on your own websites. This tutorial demonstrates these features by creating an interactive point map of selected schools from the Connecticut Education Directory in the state data portal. The final product looks like this:
 

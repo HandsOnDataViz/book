@@ -54,7 +54,7 @@ Save your Tableau Public workbook, and give it a meaningful name. Your interacti
 
 After your workbook is saved on the server, Tableau Public should automatically open it in your default web browser. But if no workbook appears, look in your Tableau Public profile, which follows this format: https://public.tableau.com/profile/USERNAME
 
-Click the Edit Details button to modify the title or add a brief description. Click the Share button to copy the embed code. Learn how to embed the interactive chart in your own website, in the [Publish section of this book](../../publish/README.md).
+Click the Edit Details button to modify the title or add a brief description. Click the Share button to copy the embed code. Learn how to embed the interactive chart in your own website, in the [Embed section of this book](../../embed/README.md).
 
 ![](TableauPublic-edit-embed.png)
 

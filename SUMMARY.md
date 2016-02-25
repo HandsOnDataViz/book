@@ -21,6 +21,7 @@
    * [Filtered Chart with Tableau](chart/filtered-line-chart-tableau/README.md)
 * [Map the Data](map/README.md)
    * [Point Map with Google Fusion](map/point-gft/README.md)
+   * [Polygon Map with Social Explorer](map/polygon-se/README.md)
    * [Polygon Map with Google Fusion](map/polygon-gft/README.md)
    * [Layer Maps with Google Fusion](map/gft-layer-wizard/README.md)
 * [Embed on Your Web](embed/README.md)

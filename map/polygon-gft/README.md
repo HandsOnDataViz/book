@@ -2,34 +2,54 @@
 
 A thematic polygon map (also called a choropleth map) displays a colored pattern on each region to express its numerical value. In the interactive version embedded below, click on any region to view its info window with additional data.
 
-<iframe width="600" height="400" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col2%3E%3E1+from+1MeyX2ICg1uIiAQUOChkUtbnZqfFE-3Kke3SkXnur&amp;viz=MAP&amp;h=false&amp;lat=41.51442003948278&amp;lng=-72.62841864453128&amp;t=1&amp;z=9&amp;l=col2%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
+<iframe width="100%" height="500" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col2%3E%3E1+from+1MeyX2ICg1uIiAQUOChkUtbnZqfFE-3Kke3SkXnur&amp;viz=MAP&amp;h=false&amp;lat=41.51442003948278&amp;lng=-72.62841864453128&amp;t=1&amp;z=9&amp;l=col2%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
 
 *Median Household Income in Connecticut Towns, 2009-14, American Community Survey 5-Year Estimates, US Census/Social Explorer.*
 
 To create a thematic polygon map, we need to merge two types of files:
-- data table: the numerical values for each polygon
-- geographic borders: a series of points that draws each polygon
+- **data table:** the numerical values for each polygon
+- **geographic borders:** a series of points that draws each polygon
 
-To merge the data table and geographic borders, the two files must share a common column of information, usually the name or ID of each polygon.
+To merge the data table and geographic borders, the two files **must share a common column** of information, usually the name or ID of each polygon. In the tutorial below, we will merge together:
+- Connecticut town demographic data
+- Connecticut town geographic borders
 
+![](GFT-merge-data-and-borders.png)
 
+##Google Fusion Tables
+This free and easy-to-learn tool looks similar to Google Sheets, but is more powerful than a spreadsheet tool. Google Fusion Tables (GFT) allows you to merge or "fuse together" two or more data tables -- including geographic border tables -- which allows you to visualize spreadsheet data on a map. GFT requires a [free Google Drive account](http://drive.google.com) (use a regular Google username; avoid limited-access Google Apps for Education accounts). For general information, see Google documentation "<a href="https://support.google.com/fusiontables/answer/2571232" target="_blank">About Fusion Tables</a>" and also the <a href="http://www.google.com/support/fusiontables/" target="_blank">GFT Help Page</a>.
 
+###Strengths of GFT
+- Free, easy-to-learn, and familiar interface for Google Drive users
+- Operates entirely within the browser, across all platforms
+- Upload geographic border files to create nearly any polygon map
+- Publish and embed the interactive map on your own website
+- Flexible GFT point and polygon maps can be inserted into [Searchable Map Template, in this book](../../modify/searchable-map-gft/)
 
+###Limitations of GFT
+- Google Fusion Tables has been listed as *experimental* for several years
+- Legend displays only numeric values. To display text labels in the legend, see https://github.com/JackDougherty/FusionTable-Map-custom-legend **TO DO**: Create chapter in modify section
+- Not ideal for very large geography files (such as census tracts for several states)
 
-One of the easiest ways to create thematic data maps (geographic areas shaded by data values) is to use Google Fusion Tables (GFT), a freely accessible tool for managing, merging, and visualizing data on the web. GFT requires a [free Google Drive account](http://drive.google.com) (use a regular Google username; avoid limited-access Google Apps for Education accounts). For general information, see Google documentation "<a href="https://support.google.com/fusiontables/answer/2571232" target="_blank">About Fusion Tables</a>" and also the <a href="http://www.google.com/support/fusiontables/" target="_blank">GFT Help Page</a>. This tutorial was updated in Fall 2013 to incorporate <a href="https://support.google.com/fusiontables/answer/1656859" target="_blank">new GFT features</a>, such as automatic map legends. See also <a href="http://youtu.be/ReUAlZsJxP4" target="_blank">video tutorial</a> at the bottom of the page.
+##Install Google Fusion Tables
 
-view this video screencast</a>:
+Sign into Google Drive (http://drive.google.com) and install GFT by clicking on New > More > Connect More Apps.
 
-https://www.youtube.com/watch?v=ReUAlZsJxP4
+![](GFT-connect-more-apps.png)
 
-http://youtu.be/ReUAlZsJxP4
+Search for "fusion" to find the free app, and click Connect to add it to your Google Drive.
 
-<span><strong>To Do **:</strong> If you need to display textual data in your legend, rather than numerical data, see this solution: </span><span></span><a href="https://github.com/JackDougherty/FusionTable-Map-custom-legend" target="_blank">https://github.com/JackDougherty/FusionTable-Map-custom-legend</a>
+![](GFT-connect-fusion.png)
 
-<strong>Acknowledgement:</strong> Tutorial adapted from <a href="http://kh-samples.googlecode.com/svn/trunk/talks/hackhackers/workshop.html" target="_blank">Create A Map, kh-samples, Google Code</a>.
+In Google Drive, click New > More > Google Fusion Tables to start up.
 
-<strong>Download and understand your data</strong>
-Before starting to map, closely examine your data files to understand their meaning, sources of origin, and limitations.
+![](GFT-new-more-gft.png)
+
+##Download sample data
+
+To follow this thematic polygon map tutorial, download two sample data files, and open them to learn about their structure:
+- Connecticut town demographic data in CSV format (CT-town-data-2014-ACS-5YearEstimates.csv). Includes columns of economic and racial data for each municipal town in Connecticut, drawn from the American Community Survey 5-year estimates for 2009-14, from the US Census/Social Explorer. **Open and explore this file with any spreadsheet tool.**
+- Connecticut town geographic borders in KML format (CT-town-borders-2010-MAGIC.kml). Includes many series of coordinate points to draw the polygon for each municipal town, similar to "connect the dots." **Open and explore this file by with http://geojson.io **
 
 1) Click on the sample spreadsheet data to download to your desktop, open the file, and examine it.
 <p style="padding-left: 30px;"><a title="dropbox" href="https://dl.dropbox.com/u/14023305/CT_SchoolDist_HartfordArea_Race_2009_10.xls" target="_blank">spreadsheet data</a> (in Excel .xls format) Racial composition of Hartford-area school districts, 2009-10, from the <a title="CEDAR" href="http://sdeportal.ct.gov/Cedar/WEB/ct_report/CedarHome.aspx" target="_blank">Connecticut Department of Education, CEDaR data site</a></p>
@@ -37,12 +57,8 @@ Before starting to map, closely examine your data files to understand their mean
 <p style="padding-left: 30px;"><a title="dropbox" href="https://dl.dropbox.com/u/14023305/CT_TownBoundaries_Census2010.kml" target="_blank">boundary data</a> (.kml format) Connecticut town boundaries, Census 2010, from <a title="MAGIC" href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries" target="_blank">MAGIC UConn Libraries, boundary data page</a></p>
 <p style="padding-left: 30px;"><em>Additional resource:</em> For related data projects, you may download this <a href="https://dl.dropboxusercontent.com/u/14023305/CT_CensusTractBoundaries2010_UConnMAGIC_wgs84.kml" target="_blank">CT Census Tracts 2010 boundary file</a> (.kml format), from <a title="MAGIC" href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries" target="_blank">MAGIC UConn Libraries, boundary data page</a>. Also, you can download census tract spreadsheet data to merge with it from <a href="http://www.census.gov" target="_blank">Census.gov</a> or <a href="http://www.socialexplorer.com" target="_blank">SocialExplorer.com</a> (export in CSV format, and multiply 6-digit tract number by 0.01 to add decimals to match).</p>
 <p style="padding-left: 30px;"><em>Advanced tip:</em> These sample boundary files in KML (Keyhole Markup Language) format initially were downloaded from MAGIC in compressed KMZ format, which is not compatible with Google Fusion Tables. To learn how to modify files with free tools, see this <a href="http://epress.trincoll.edu/dataviz/chapter/convert-kml-filter" target="_blank">tutorial to convert from KMZ to KML in Google Earth and filter results in Google Fusion Tables</a>.</p>
-<strong>Upload spreadsheet and boundary data to Google Fusion Tables (GFT)</strong>
-1) Sign in to your <a title="gdrive" href="http://drive.google.com" target="_blank">Google Drive account</a> and go to Create &gt; Fusion Table (experimental).
 
-If Fusion Tables is not listed, go to Create &gt; Connect More Apps, search for "Fusion" and Connect the Fusion Tables app to your Google Drive account, as shown below:
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_AddFusionAppMarked.png"><img class="aligncenter size-full wp-image-1687" alt="GFT_AddFusionAppMarked" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_AddFusionAppMarked.png" width="600" height="285" /></a>
 
 2) In GFT, import the spreadsheet table you downloaded above. Select "From this computer" &gt; Browse and navigate to the file. Click Next to confirm data, click Next again to add any source info (such as "CT Dept of Ed" or "UConn MAGIC", then click Finish.
 
@@ -105,7 +121,10 @@ If Fusion Tables is not listed, go to Create &gt; Connect More Apps, search for 
 
 <a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png"><img class="aligncenter size-full wp-image-1700" alt="GFT_iFrameEmbedCode" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png" width="599" height="449" /></a>
 
+**TO DO**
 
+Redo video screencast
+https://www.youtube.com/watch?v=ReUAlZsJxP4
 
 ---
 

@@ -18,9 +18,28 @@ Since this book was created in Hartford, Connecticut, it lists state and municip
 
 **Hartford Data** (http://data.hartford.gov), the official portal of the City of Hartford municipal government, is hosted on the Socrata platform, which features built-in visualizations and APIs. Also, the site links to the City's ArcGIS Online geographic data (http://gisdata.hartford.gov/) and the City's financial data (http://checkbook.hartford.gov/).
 
+**TO DO** Rethink placement; better to place KML samples in polygon-GFT chapter, and simplied GeoJSON in Leaflet chapter?
 
+## Common data files for Hartford and Connecticut
 
----
+### Geographic boundaries
+- download and drag into http://geojson.io to view and edit
+- see [polygon maps in this book](../../map/polygon-gft/)
+
+![](CT-towns-mini.png)
+
+CT town borders 2010 [from MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)
+- [KML](CT-town-borders-2010-MAGIC.kml)
+- [GeoJSON](CT-town-borders-2010-MAGIC.geojson)
+
+CT census tracts 2010 [from MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)
+- [KML](CT-census-tracts-2010-MAGIC.kml)
+
+![](Hartford-neighborhoods-mini.png)
+
+Hartford neighborhood borders 2015 [from HartfordData](http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5)
+- [KML](Hartford-neighborhoods-2015-HartGov.kml)
+- [GeoJSON](Hartford-neighborhoods-2015-HartGov.geojson)
 
 
 

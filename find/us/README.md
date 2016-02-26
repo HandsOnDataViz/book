@@ -16,11 +16,15 @@ Census areas are geographic divisions in this *general format*:
 - Block groups (sub-unit of tract, roughly 600 to 3,000 people)
 - Census blocks (sub-unit of block group, but not always a city block)
 
+Common census areas, as shown in [American FactFinder download tool](http://factfinder.census.gov/faces/nav/jsf/pages/download_center.xhtml).
+
+![](Census-geographies.png)
+
 **TO DO** Create interactive map of hierarchical census areas in the Hartford region, with buttons to display colors as panes with z-levels
 
 Learn more: Explore this visual interactive of US Census geographic areas and definitions (http://www.census.gov/geo/reference/webatlas/)
 
-See also in this book: [Find census geography for street addresses with Census Geocoder](transform/geocode-census/)
+See also in this book: [Find census geography for street addresses with Census Geocoder](../../transform/geocode-census/)
 
 **Social Explorer** public version (http://socialexplorer.com) is another reputable source for census and related demographic data, past and present. The platform allows users to create data maps that may be exported as static images or presentation slides. Several academic institutions subscribe to the professional version with additional features.  
 

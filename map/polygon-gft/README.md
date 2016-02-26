@@ -1,10 +1,20 @@
-# Colored polygon map with Google Fusion Tables
+# Thematic polygon map with Google Fusion Tables
 
-Goal: Upload and merge two tables (spreadsheet data and geographic boundaries), create an interactive thematic polygon map with an automatic legend, and embed it in a web page, like this:
+A thematic polygon map (also called a choropleth map) displays a colored pattern on each region to express its numerical value. In the interactive version embedded below, click on any region to view its info window with additional data.
 
-<iframe width="500" height="400" src="https://www.google.com/fusiontables/embedviz?q=select+col2%3E%3E0+from+1VopQGBhRKyyk25EIA5ptScvULxR68d43RhZ1ycM+where+col9%3E%3E1+%3E%3D+0.08+and+col9%3E%3E1+%3C%3D+0.93&viz=MAP&h=false&lat=41.83164189112012&lng=-72.64146490917972&t=1&z=10&l=col2%3E%3E0&y=2&tmplt=2&hml=KML"></iframe>
+<iframe width="600" height="400" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col2%3E%3E1+from+1MeyX2ICg1uIiAQUOChkUtbnZqfFE-3Kke3SkXnur&amp;viz=MAP&amp;h=false&amp;lat=41.51442003948278&amp;lng=-72.62841864453128&amp;t=1&amp;z=9&amp;l=col2%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
 
-*Click to explore: Percent minority students in Hartford-area school districts, 2009-10. Sources: CT Dept of Ed, MAGIC UConn Libraries*
+*Median Household Income in Connecticut Towns, 2009-14, American Community Survey 5-Year Estimates, US Census/Social Explorer.*
+
+To create a thematic polygon map, we need to merge two types of files:
+- data table: the numerical values for each polygon
+- geographic borders: a series of points that draws each polygon
+
+To merge the data table and geographic borders, the two files must share a common column of information, usually the name or ID of each polygon.
+
+
+
+
 
 One of the easiest ways to create thematic data maps (geographic areas shaded by data values) is to use Google Fusion Tables (GFT), a freely accessible tool for managing, merging, and visualizing data on the web. GFT requires a [free Google Drive account](http://drive.google.com) (use a regular Google username; avoid limited-access Google Apps for Education accounts). For general information, see Google documentation "<a href="https://support.google.com/fusiontables/answer/2571232" target="_blank">About Fusion Tables</a>" and also the <a href="http://www.google.com/support/fusiontables/" target="_blank">GFT Help Page</a>. This tutorial was updated in Fall 2013 to incorporate <a href="https://support.google.com/fusiontables/answer/1656859" target="_blank">new GFT features</a>, such as automatic map legends. See also <a href="http://youtu.be/ReUAlZsJxP4" target="_blank">video tutorial</a> at the bottom of the page.
 

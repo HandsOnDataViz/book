@@ -12,6 +12,7 @@
 * [Transform Your Data](transform/README.md)
    * [Aggregate with Pivot Tables](transform/pivot-tables/README.md)
    * [Geocode Addresses with Census](transform/geocode-census/README.md)
+   * [Convert Geodata with GeoJson.io](transform/convert-geojson/README.md)
 * [Find Open Data](find/README.md)
    * [U.S. and Census Open Data](find/us/README.md)
    * [Connecticut Open Data](find/ct/README.md)

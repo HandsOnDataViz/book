@@ -49,74 +49,89 @@ In Google Drive, click New > More > Google Fusion Tables to start up.
 
 To follow this thematic polygon map tutorial, download two sample data files, and open them to learn about their structure:
 - [Connecticut town demographic data in CSV format](CT-town-data-2014-ACS-5YearEstimates.csv). Includes columns of economic and racial data for each municipal town in Connecticut, drawn from the American Community Survey 5-year estimates for 2009-14, from the US Census/Social Explorer. Open and explore this file with any spreadsheet tool.
-- [Connecticut town geographic borders in KML format] (CT-town-borders-2010-MAGIC.kml). Includes many series of coordinate points to draw the polygon for each municipal town, similar to "connect the dots," from MAGIC UConn Libraries. Open and explore this file by with the http://geojson.io tool.
+- [Connecticut town geographic borders in KML format](CT-town-borders-2010-MAGIC.kml). Includes many series of coordinate points to draw the polygon for each municipal town, similar to "connect the dots," from MAGIC UConn Libraries. Open and explore this file by with the http://geojson.io tool.
 
+Since both of these sample data files share a common column -- the Connecticut town names, spelled the same way -- we can merge them in the next few steps.
 
+##Upload Data into Google Fusion Tables
 
+In Google Drive, click New > Google Fusion Tables. Import each sample file, one at a time, by selecting "From this computer" and navigating to the file. Click Next to confirm the data upload. Click Next to add any source information (such as "American Community Survey 2009-14" and "MAGIC UConn Libraries"), then Finish.
 
+![](GFT-import-new-table.png)
 
-2) In GFT, import the spreadsheet table you downloaded above. Select "From this computer" &gt; Browse and navigate to the file. Click Next to confirm data, click Next again to add any source info (such as "CT Dept of Ed" or "UConn MAGIC", then click Finish.
+When you upload the CT town data CSV table, Google Fusion Tables displays yellow highlights because it is attempting to recognize and geocode the town names as locations, and place them as points on a map. But geocoding is unnecessary here, because our CT town borders KML file already includes the exact geography for each town.
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2012/11/ImportNewGFT.png"><img class="aligncenter size-full wp-image-876" alt="" src="http://commons.trincoll.edu/jackdougherty/files/2012/11/ImportNewGFT.png" width="510" height="124" /></a>
+To turn off the yellow highlighting, in the town name column drop-down menu, select Change, and switch the column type description from "Location" to "Text" as shown below.
 
-3) Repeat the steps above to upload the .kml boundary data. (The first town name may appear as "County subdivisions not defined," which you can ignore for this exercise.)
-<p style="padding-left: 30px;">Advanced tip: Any columns highlighted in yellow means that GFT is attempting to <a href="https://support.google.com/fusiontables/answer/1012281" target="_blank">geocode location data</a> by placing a point on a map. For this exercise, geocoding is unnecessary because our KML boundary file already contains location data. To turn off the yellow highlighting, in the GFT column drop-down menu, select Change, and select "Text" instead of "Location" for the Description, as shown below:</p>
-<p style="padding-left: 30px;"><a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_ChangeColumn.png"><img class="aligncenter size-full wp-image-1688" alt="GFT_ChangeColumn" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_ChangeColumn.png" width="339" height="306" /></a></p>
-<strong>The "Fusion" part: Merge the spreadsheet table with the boundary table </strong>
-4) In your web browser, go to the GFT spreadsheet tab (which should already be open; if not, click on it in your Google Drive tab). In the menu, select File &gt; Merge:
+![](GFT-change-location.png)
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2012/11/GFTMergeMenu.png"><img class="aligncenter size-full wp-image-877" alt="" src="http://commons.trincoll.edu/jackdougherty/files/2012/11/GFTMergeMenu.png" width="230" height="240" /></a>
+##The Fusion: Merge data with borders
 
-5) Select the table you wish to merge with your spreadsheet table. (In this example, choose the geographic bound
+In your web browser, you should have two GFT tabs open: the CT town data and the CT town borders.
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2012/11/SelectTableToMerge.png"><img class="aligncenter size-full wp-image-879" alt="" src="http://commons.trincoll.edu/jackdougherty/files/2012/11/SelectTableToMerge.png" width="468" height="175" /></a>6) Before you merge, confirm the source of the match, which means to select the correct data columns that are common to both tables. In this exercise, go to the right-hand CT Town Boundaries table and select "Name" to match it up with the "District" column of the CT School District spreadsheet data, as shown below. (Match the TYPE of data, meaning Districts and Town names, even if they do not appear in the same order.)
+Start with the CT town data tab. Select File > Merge, and click on the listing for the  border file, which should be second in the list.
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2012/11/ConfirmMerge.png"><img class="aligncenter size-full wp-image-880" alt="" src="http://commons.trincoll.edu/jackdougherty/files/2012/11/ConfirmMerge.png" width="422" height="315" /></a>
+![](GFT-merge-table.png)
 
-7) Click Next, merge all columns, and View the newly merged table, as shown below:
+On the next screen, select the matching column types to merge. In this tutorial, the CT town borders should appear on the right-hand side, and you should select the "Name" column in the drop-down header. The goal is to **match the correct column type**, even if the list of town names does not appear in the same order.
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_MergedTableCreated.png"><img class="aligncenter size-full wp-image-1690" alt="GFT_MergedTableCreated" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_MergedTableCreated.png" width="417" height="202" /></a>
+![](GFT-merge-types.png)
 
-<strong>Create and Style a Thematic Map with Info Windows
-</strong>8) In your new Merged table, see the Map tab and select Change feature styles.
+Click the Next button, Merge all columns, and View the newly merged table.
 
-<a href="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2013/11/GFTpolygon-ChangeMapStyles.png"><img class="aligncenter size-full wp-image-98" alt="GFTpolygon-ChangeMapStyles" src="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2013/11/GFTpolygon-ChangeMapStyles.png" width="533" height="401" /></a>
+![](GFT-merge-table-created.png)
 
-9) To modify the thematic map, select Polygons &gt; Fill Color, and experiment with Buckets and Gradients to modify the thematic map shading. <em>Reminder: if you choose to map a percentage column (rather than raw numbers), adjust the range (from 0-100 to an appropriate range, such as 0 - 1.0).</em>
+##Create and Style the Thematic Map with Info Windows
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFTChangeMapFeatureStyles2.png"><img class="aligncenter size-full wp-image-1693" alt="GFTChangeMapFeatureStyles2" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFTChangeMapFeatureStyles2.png" width="494" height="517" /></a>
-<p style="padding-left: 30px;"><em>Advanced tip:</em> See Mark Monmonier, <em>How to Lie with Maps, Second Edition </em>(University of Chicago Press, 1996), <a title="excerpt" href="http://commons.trincoll.edu/cssp/files/2011/09/Monmonier1996excerpt.pdf" target="_blank">pp. 39-42 excerpt</a> on how same data can be spatially represented in very different ways, by modifying thematic map categories and cut-offs, in the Buckets or Gradients section of GFT. See also <a title="colorbrewer" href="http://colorbrewer2.org/" target="_blank">ColorBrewer</a> for advice on selecting appropriate map colors and categories. (*To do: look for ColorBrewer with HTML color output.)</p>
-10) Select Automatic Legend. Check the box to show a legend, choose a title and position, and include a link to the source data.
+Open your newly merged Google Fusion Table, which should include columns from CT town data and CT town borders. Select the Map tab, and an all-red polygon map will appear by default. Click on Change Feature Styles.
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_AutomaticLegend.png"><img class="aligncenter size-full wp-image-1697" alt="GFT_AutomaticLegend" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_AutomaticLegend.png" width="544" height="520" /></a>
+![](GFT-map-change-feature-styles.png)
 
-11) To modify how data appears in the map pop-up info windows, go to Map tab &gt; Feature Map &gt; Change info window. Select boxes in the Automatic tab and/or modify code in the Custom tab.
+To style your thematic map, select Polygons > Fill Color, and experiment with Buckets and Gradients to adjust the range and colors. **Hint:** if you map a column of percentages (rather than raw numbers), choose an appropriate range (such as 0 - 1.0). a percentage column (rather than raw numbers), adjust the range (from 0-100 to an appropriate range, such as 0 - 1.0).
 
-<a href="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2013/11/GFTpolygon-ChangeInfoLayout.png"><img class="aligncenter size-full wp-image-99" alt="GFTpolygon-ChangeInfoLayout" src="http://epress.trincoll.edu/dataviz/wp-content/uploads/sites/11/2013/11/GFTpolygon-ChangeInfoLayout.png" width="353" height="429" /></a>
-<p style="padding-left: 30px;">Advanced tip: To limit the data that appears in your map, go to the Merged Table and select Filter to exclude selected rows, as shown below:</p>
-<p style="padding-left: 30px;"><a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFTFilter.png"><img class="aligncenter size-full wp-image-1695" alt="GFTFilter" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFTFilter.png" width="261" height="298" /></a></p>
-<strong>Embed the interactive map in a WordPress.org post (or most web pages)</strong>
-12) In the GFT Merged Table, click the Share button in upper-right corner to change the visibility settings of the default (Private) to Anyone with the Link, or Public:
+![](GFT-polygons-fill-color.png)
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2012/11/SharingSettings2012.png"><img class="aligncenter size-full wp-image-891" alt="" src="http://commons.trincoll.edu/jackdougherty/files/2012/11/SharingSettings2012.png" width="480" height="296" /></a>
+Select Automatic Legend, and check the box for its display position, insert a title, and link to the source data.
 
-13) Modify the map zoom level and position, then select Map of Geometry &gt; Publish.
+![](GFT-automatic-legend.png)
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2012/11/PublishMenu.png"><img class="aligncenter size-full wp-image-892" alt="" src="http://commons.trincoll.edu/jackdougherty/files/2012/11/PublishMenu.png" width="440" height="352" /></a>
+To modify how data appears in the map info windows, go to Map > Feature Map > Change info window.
 
-14) Modify the map width and height to fit the space allowed by the WordPress theme. (For many WordPress pages, 600 x 400 pixels looks best.) Copy the long string of code code from the "Paste HTML to embed" field.
+![](GFT-change-info-window.png)
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_PublishHTML.png"><img class="aligncenter size-full wp-image-1696" alt="GFT_PublishHTML" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_PublishHTML.png" width="436" height="306" /></a>
+In the Automatic tab, select data to be displayed. Or click on the Custom tab and learn how to edit code for info windows. **TO DO** link to learn more.
 
-15) In the Trinity Commons WordPress v3.5 site for my seminars, I have already activated <a href="http://wordpress.org/plugins/iframe/" target="_blank">a special plugin ("iframe")</a> to correctly process the HMTL embedded map code for students with regular authoring privileges. (If you have administrative privileges or your own self-hosted WordPress.org site, this step may not be necessary. Currently, iframes do NOT work in most WordPress.com sites.)
+![](GFT-info-window-automatic.png)
+
+View the map to check appearance of your info windows.
+
+![](GFT-info-window-sample.png)
+
+##Share, Publish, and Embed the Polygon Map
+
+In the GFT Merged Table, click the Share button in upper-right corner to change the visibility settings of the default (Private) to Anyone with the Link, or Public:
+
+![](GFT-share-settings.png)
+
+Modify the map zoom level and position, then select Map tab > Publish.
+
+![](GFT-map-publish.png)
+
+Google Fusion Tables displays an iframe embed code. Modify the map width and height to fit your destination website. Copy the long string of code code from the "Paste HTML to embed" field.
+
+![](GFTPoly14.png)
+
+In the Trinity self-hosted WordPress site for my classes, I have already activated <a href="http://wordpress.org/plugins/iframe/" target="_blank">a special plugin ("iframe")</a> to correctly process the HMTL embedded map code for students with regular authoring privileges. (If you have administrative privileges or your own self-hosted WordPress.org site, this step may not be necessary. Currently, iframes do NOT work in most WordPress.com sites.)
 
 <a href="http://commons.trincoll.edu/jackdougherty/files/2012/11/PluginActiveIFrame.jpg"><img class="aligncenter size-full wp-image-896" alt="" src="http://commons.trincoll.edu/jackdougherty/files/2012/11/PluginActiveIFrame.jpg" width="360" height="86" /></a>
 
-16) Go to WordPress and create a new post. In the editor, switch from the Visual to the Text tab, which allows users to insert and modify HMTL code. Paste the long string that you copied from the step above. Add square brackets at beginning and end, and edit a few characters to match this format (called a "shortcode"), then publish to view your post.
+Go to WordPress and create a new post. In the editor, switch from the Visual to the Text tab, which allows users to insert and modify HMTL code. Paste the long string that you copied from the step above. Add square brackets at beginning and end, and edit a few characters to match this format (called a "shortcode"), then publish to view your post.
 
 <a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png"><img class="aligncenter size-full wp-image-1700" alt="GFT_iFrameEmbedCode" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png" width="599" height="449" /></a>
 
 **TO DO LIST**
+
+<em>Advanced tip:</em> See Mark Monmonier, <em>How to Lie with Maps, Second Edition </em>(University of Chicago Press, 1996), <a title="excerpt" href="http://commons.trincoll.edu/cssp/files/2011/09/Monmonier1996excerpt.pdf" target="_blank">pp. 39-42 excerpt</a> on how same data can be spatially represented in very different ways, by modifying thematic map categories and cut-offs, in the Buckets or Gradients section of GFT. See also <a title="colorbrewer" href="http://colorbrewer2.org/" target="_blank">ColorBrewer</a> for advice on selecting appropriate map colors and categories. (*To do: look for ColorBrewer with HTML color output.)
 
 Also, you can download census tract spreadsheet data to merge with it from <a href="http://www.census.gov" target="_blank">Census.gov</a> or <a href="http://www.socialexplorer.com" target="_blank">SocialExplorer.com</a> (export in CSV format, and multiply 6-digit tract number by 0.01 to add decimals to match).</p>
 
@@ -125,6 +140,8 @@ These sample boundary files in KML (Keyhole Markup Language) format initially we
 for the MAGIC border files above, note that I also removed the County Subdivisions that did not correspond to any spreadsheet datavizbook
 
 decide where to put commonly used geographic files: here or in Find CT chapter?
+
+Advanced tip: To limit the data that appears in your map, go to the Merged Table and select Filter to exclude selected rows, as shown below:</p>
 
 When downloading census data for county subdivisions (municipal governments; aka towns in CT), long names may not match your data. for CT use my name converter table with VLookup. Beware that Windsor and Windsor Locks are flipped in alphabetically sorted long-name census lists versus short name lists.
 

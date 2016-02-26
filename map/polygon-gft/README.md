@@ -2,7 +2,7 @@
 
 A thematic polygon map (also called a choropleth map) displays a colored pattern on each region to express its numerical value. In the interactive version embedded below, click on any region to view its info window with additional data.
 
-<iframe width="100%" height="500" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col2%3E%3E1+from+1MeyX2ICg1uIiAQUOChkUtbnZqfFE-3Kke3SkXnur&amp;viz=MAP&amp;h=false&amp;lat=41.51442003948278&amp;lng=-72.62841864453128&amp;t=1&amp;z=9&amp;l=col2%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
+<iframe width="600" height="500" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col2%3E%3E1+from+1MeyX2ICg1uIiAQUOChkUtbnZqfFE-3Kke3SkXnur&amp;viz=MAP&amp;h=false&amp;lat=41.51442003948278&amp;lng=-72.62841864453128&amp;t=1&amp;z=9&amp;l=col2%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
 
 *Median Household Income in Connecticut Towns, 2009-14, American Community Survey 5-Year Estimates, US Census/Social Explorer.*
 
@@ -45,18 +45,13 @@ In Google Drive, click New > More > Google Fusion Tables to start up.
 
 ![](GFT-new-more-gft.png)
 
-##Download sample data
+##Download and Explore Sample Data
 
 To follow this thematic polygon map tutorial, download two sample data files, and open them to learn about their structure:
-- Connecticut town demographic data in CSV format (CT-town-data-2014-ACS-5YearEstimates.csv). Includes columns of economic and racial data for each municipal town in Connecticut, drawn from the American Community Survey 5-year estimates for 2009-14, from the US Census/Social Explorer. **Open and explore this file with any spreadsheet tool.**
-- Connecticut town geographic borders in KML format (CT-town-borders-2010-MAGIC.kml). Includes many series of coordinate points to draw the polygon for each municipal town, similar to "connect the dots." **Open and explore this file by with http://geojson.io **
+- [Connecticut town demographic data in CSV format](CT-town-data-2014-ACS-5YearEstimates.csv). Includes columns of economic and racial data for each municipal town in Connecticut, drawn from the American Community Survey 5-year estimates for 2009-14, from the US Census/Social Explorer. Open and explore this file with any spreadsheet tool.
+- [Connecticut town geographic borders in KML format] (CT-town-borders-2010-MAGIC.kml). Includes many series of coordinate points to draw the polygon for each municipal town, similar to "connect the dots," from MAGIC UConn Libraries. Open and explore this file by with the http://geojson.io tool.
 
-1) Click on the sample spreadsheet data to download to your desktop, open the file, and examine it.
-<p style="padding-left: 30px;"><a title="dropbox" href="https://dl.dropbox.com/u/14023305/CT_SchoolDist_HartfordArea_Race_2009_10.xls" target="_blank">spreadsheet data</a> (in Excel .xls format) Racial composition of Hartford-area school districts, 2009-10, from the <a title="CEDAR" href="http://sdeportal.ct.gov/Cedar/WEB/ct_report/CedarHome.aspx" target="_blank">Connecticut Department of Education, CEDaR data site</a></p>
-2) Click on the sample map boundary data to download to your desktop, open the file (using the free <a href="http://www.google.com/earth" target="_blank">Google Earth</a> application), and examine it.
-<p style="padding-left: 30px;"><a title="dropbox" href="https://dl.dropbox.com/u/14023305/CT_TownBoundaries_Census2010.kml" target="_blank">boundary data</a> (.kml format) Connecticut town boundaries, Census 2010, from <a title="MAGIC" href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries" target="_blank">MAGIC UConn Libraries, boundary data page</a></p>
-<p style="padding-left: 30px;"><em>Additional resource:</em> For related data projects, you may download this <a href="https://dl.dropboxusercontent.com/u/14023305/CT_CensusTractBoundaries2010_UConnMAGIC_wgs84.kml" target="_blank">CT Census Tracts 2010 boundary file</a> (.kml format), from <a title="MAGIC" href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries" target="_blank">MAGIC UConn Libraries, boundary data page</a>. Also, you can download census tract spreadsheet data to merge with it from <a href="http://www.census.gov" target="_blank">Census.gov</a> or <a href="http://www.socialexplorer.com" target="_blank">SocialExplorer.com</a> (export in CSV format, and multiply 6-digit tract number by 0.01 to add decimals to match).</p>
-<p style="padding-left: 30px;"><em>Advanced tip:</em> These sample boundary files in KML (Keyhole Markup Language) format initially were downloaded from MAGIC in compressed KMZ format, which is not compatible with Google Fusion Tables. To learn how to modify files with free tools, see this <a href="http://epress.trincoll.edu/dataviz/chapter/convert-kml-filter" target="_blank">tutorial to convert from KMZ to KML in Google Earth and filter results in Google Fusion Tables</a>.</p>
+
 
 
 
@@ -121,7 +116,17 @@ To follow this thematic polygon map tutorial, download two sample data files, an
 
 <a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png"><img class="aligncenter size-full wp-image-1700" alt="GFT_iFrameEmbedCode" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png" width="599" height="449" /></a>
 
-**TO DO**
+**TO DO LIST**
+
+Also, you can download census tract spreadsheet data to merge with it from <a href="http://www.census.gov" target="_blank">Census.gov</a> or <a href="http://www.socialexplorer.com" target="_blank">SocialExplorer.com</a> (export in CSV format, and multiply 6-digit tract number by 0.01 to add decimals to match).</p>
+
+These sample boundary files in KML (Keyhole Markup Language) format initially were downloaded from MAGIC in compressed KMZ format, which is not compatible with Google Fusion Tables. To learn how to modify files with free tools, see this <a href="http://epress.trincoll.edu/dataviz/chapter/convert-kml-filter" target="_blank">tutorial to convert from KMZ to KML in Google Earth and filter results in Google Fusion Tables</a>.</p>
+
+for the MAGIC border files above, note that I also removed the County Subdivisions that did not correspond to any spreadsheet datavizbook
+
+decide where to put commonly used geographic files: here or in Find CT chapter?
+
+When downloading census data for county subdivisions (municipal governments; aka towns in CT), long names may not match your data. for CT use my name converter table with VLookup. Beware that Windsor and Windsor Locks are flipped in alphabetically sorted long-name census lists versus short name lists.
 
 Redo video screencast
 https://www.youtube.com/watch?v=ReUAlZsJxP4

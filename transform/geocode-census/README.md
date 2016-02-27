@@ -1,6 +1,6 @@
 # Geocode address data with US Census Geocoder
 
-**TO DO**: Write more detailed instructions for below
+**TO DO**: Convert rough notes into tutorial
 
 ** TO DO** Create Hartford-area diagram of this relationship:
 - State

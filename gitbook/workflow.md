@@ -3,13 +3,26 @@
 ## My Settings
 - TO DO: explain GitBook-GitHub link; custom domain
 
-## Simple edits with GitBook BROWSER Editor:
-The GitHub Browser editor provides WYSIWYG preview, with works with most edits.
+## Compose with GitBook DESKTOP Editor
+Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, branch and sync control
+- Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
+- Startup Desktop Editor app and CLONE current book from GitHub to local computer
+- Create a new branch (dev)
+- Compose and save edits 
+- When done, merge branches (push dev into master) and sync
+- Delete the dev branch to avoid confusion
+- Delete the CLONE of the book from my local computer to avoid confusion
+
+
+## Compose with GitBook BROWSER Editor:
+Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, sync control
 - check book repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
 - start up online GitBook browser editor https://www.gitbook.com/book/jackdougherty/datavizbook/details
 - in online browser editor, create a new branch (dev) for edits
 - when done, merge branches (push dev branch into master branch)
-- delete the dev branch to avoid confusion
+- delete the dev branch when done to avoid confusion
+
+
 
 ## Structural changes with GitHub Desktop and Atom Editor
 When making major changes to the book, especially folder/file structure, copy a branch to a local computer with GitHub Desktop, and modify with Atom Editor (or your preferred text editor).
@@ -19,8 +32,7 @@ When making major changes to the book, especially folder/file structure, copy a 
 - use Atom editor to edit/upload/restructure files
 - use GitHub Desktop to commit changes to online repo dev branch, send pull request to master branch, and confirm it online
 
-##Why not the GitBook Editor Desktop App?
-At present, I avoid using the GitBook Editor App since this tool supports only one-way import, and in my persona experience, does not play nicely with edits made using the other methods above. Maybe this will change in the future.
+
 
 
 

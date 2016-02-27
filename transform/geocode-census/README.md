@@ -1,6 +1,6 @@
 # Geocode address data with US Census Geocoder
 
-**TO DO**: Convert rough notes into tutorial with visuals
+**TO DO**: Convert rough notes into tutorial with visuals, including header for data results
 
 ** TO DO** Create Hartford-area diagram of this relationship:
 - State

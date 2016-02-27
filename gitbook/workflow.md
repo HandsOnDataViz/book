@@ -16,7 +16,8 @@ Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, branch and sync 
 
 ## Write with GitBook BROWSER Editor:
 Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, branch control
-- check book repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
+Disadvantages: 
+- Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
 - start up online GitBook browser editor https://www.gitbook.com/book/jackdougherty/datavizbook/details
 - in online browser editor, create a new branch (dev) for edits
 - when done, merge branches (push dev branch into master branch)

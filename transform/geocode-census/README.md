@@ -16,7 +16,7 @@ Overview of key steps:
 4. Sort geocoded results (match exact, match non-exact, tie, no-match), and clean and regeocode as needed
 5. In spreadsheet, use the VLOOKUP function to join census block groups to demographic data
 
-[Download 50 Sample Addresses in CSV format](/geocode-census/sample-addresses-50.csv)
+[Download 50 Sample Addresses in CSV format](sample-addresses-50.csv)
 
 Detailed steps:
 

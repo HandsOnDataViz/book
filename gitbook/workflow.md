@@ -3,7 +3,7 @@
 ## My Settings
 - TO DO: explain GitBook-GitHub link; custom domain
 
-## Compose with GitBook DESKTOP Editor
+## Write with GitBook DESKTOP Editor
 Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, branch and sync control
 - Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
 - Startup Desktop Editor app and CLONE current book from GitHub to local computer
@@ -14,8 +14,8 @@ Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, branch and sync 
 - Delete the CLONE of the book from my local computer to avoid confusion
 
 
-## Compose with GitBook BROWSER Editor:
-Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, sync control
+## Write with GitBook BROWSER Editor:
+Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, branch control
 - check book repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
 - start up online GitBook browser editor https://www.gitbook.com/book/jackdougherty/datavizbook/details
 - in online browser editor, create a new branch (dev) for edits

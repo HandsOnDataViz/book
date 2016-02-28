@@ -1,4 +1,4 @@
-# Searchable Map Template with Google Fusion Tables and GitHub Pages
+# Searchable Point Map Template with Google Fusion Tables and GitHub Pages
 
 *By [Derek Eder and Jack Dougherty](../../introduction/who.md), last updated May 5, 2015*
 

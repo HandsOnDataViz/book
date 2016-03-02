@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-   * [What are data visualizations?](introduction/what.md)
+   * [What is dataviz?](introduction/what.md)
    * [How to choose dataviz tools?](introduction/how.md)
    * [Why this book?](introduction/why.md)
    * [Who wrote it?](introduction/who.md)

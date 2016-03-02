@@ -7,7 +7,7 @@
 
 Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, branch control
 
-1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
+1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizforall
 2. Startup browser editor, create a new branch (dev) to avoid continually building master branch
 3. Write and save edits on each page
 4. When done, merge branches (push dev branch into master branch)
@@ -19,7 +19,7 @@ Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, branch and sync 
 
 Mixed opinion: links and images appear, but requires clicking on Markdown version to edit
 
-1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
+1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizforall
 2. Startup Desktop Editor app and CLONE current book from GitHub to local computer
 3. Create a new branch (dev)
 4. Write and save edits on each page
@@ -30,7 +30,7 @@ Mixed opinion: links and images appear, but requires clicking on Markdown versio
 
 ## Structural changes with GitHub Desktop and Atom Editor
 When making major changes to the book, especially folder/file structure, copy a branch to a local computer with GitHub Desktop, and modify with Atom Editor (or your preferred text editor).
-1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbook
+1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbookforall
 2. Create dev branch for current edits
 3. Use GitHub Desktop to sync repo to my local computer, where dev branch is default view
 4. Use Atom editor to edit/upload/restructure files
@@ -44,11 +44,10 @@ When making major changes to the book, especially folder/file structure, copy a 
 
 
 
+[Improve this book:](../gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
 
-[Improve this book:](improve.md) Select text to insert comments, or suggest edits on GitHub.
-
-[The DataViz Book](http://datavizbook.org)
+[Data Visualization for All](http://datavizforall.org)
 is copyrighted by [Jack Dougherty and contributors](../introduction/who.md)
-and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizBook.org.
+and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizForAll.org.
 
 ![Creative Commons by-nc image](../cc-by-nc.png)

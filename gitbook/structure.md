@@ -27,9 +27,29 @@ Insert brackets around the words to be underlined, followed by parentheses for t
 ```
 Regular text [with underlined hotlink](http://anywhere.com)
 ```
-### Embed images in GitBook Markdown
-Upload images into the chapter folder. In the
 
+For internal links to other chapters of this GitBook, which is organized into parts, go up one or more folder levels at the start of the pathname. In this example, the pathname goes up two folder levels to locate the chapter and file:
+
+```
+[Improve this book:](../../gitbook/improve.md)
+```
+
+For internal links to downloadable sample files, upload them into the GitBook and insert a link.
+
+```
+[Download this sample file](sample.csv)
+```
+
+*In my experience*, avoid inserting file suffixes (example: .csv) into the viewable main text above.
+
+### Embed images in GitBook Markdown
+Upload images into the chapter folder, and insert the reference in this format:
+
+```
+![](image.png)
+```
+
+*TO DO*: Insert image descriptions between the square brackets to make book accessible to visually impaired readers.
 
 ## GitBook Plugins
 Plugins extend the features of basic GitBook, and are configured in the book.json file. View the entire repository of GitBook plugins: https://plugins.gitbook.com/

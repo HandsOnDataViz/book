@@ -1,4 +1,4 @@
-# How do we make visualizations?
+# Which tools should we use?
 
 ***Data Visualization for All*** is guided by these principles:
 

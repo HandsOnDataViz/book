@@ -1,3 +1,3 @@
-# What is dataviz?
+# What is data visualization?
 
-To come. . . (define with an interactive gallery)
+To come. . . a conceptual definition. . . with an interactive gallery of examples to illustrate key points.

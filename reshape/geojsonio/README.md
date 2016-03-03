@@ -8,43 +8,51 @@ GeoJSON is a relatively new and increasingly popular open format for map data, w
 - additional info (such as names and labels, expressed as properties of any feature above)
 and more.
 
-One big advantage of GeoJSON map data is portability across many tools. GeoJSON files can be used with Leaflet map code, Google Maps JS API code, CartoDB map tools, and more. Also, when you upload GeoJSON files into a GitHub repository, they are automatically displayed on a map.
+One big advantage of GeoJSON map data is portability across many tools. GeoJSON files can be used with Leaflet map code, Google Maps JS API code, CartoDB map tools, and more.
 
-Click to view the code of this simple GeoJSON file in a GitHub repo:
+Also, your GitHub repository will automatically display any GeoJSON files in a map view. Click to view this [simple GeoJSON point data file:](https://github.com/JackDougherty/datavizforall/blob/master/reshape/geojsonio/name-latitude-longitude-info.geojson)
 
-Click to view the map of the same GeoJSON file on GitHub:
+GeoJSON data must follow a specific format, and the file name may end with either .geojson or .json.
 
-GeoJSON files must follow a specific format, which must include coordinate data. The file name may end with .geojson or .json.
-
-GeoJSON stores coordinates in *longitude-latitude* format, the same order as X-Y points in mathematics, which is the opposite of Google Maps, which uses *latitude-longitude* format. For example, Hartford Connecticut is located at (-72.67, 41.76) in GeoJSON, but (41.76, -72.67) in Google Maps.
+GeoJSON stores coordinates in *longitude-latitude* format, the same order as X-Y points in mathematics. This is the opposite of Google Maps and several other web map tools, which stores points in *latitude-longitude* format. For example, Hartford Connecticut is located at (-72.67, 41.76) in GeoJSON, but (41.76, -72.67) in Google Maps.
 
 ## What is GeoJSON.io?
 
-Go to http://geojson.io to try this open-source web tool for creating and converting GeoJSON map data. The tool was originally developed by Tom MacWright, and is supported by Mapbox.com.
+Go to http://geojson.io to explore this open-source web tool to convert, edit, and create GeoJSON map data. The tool was originally developed by Tom MacWright, and is supported by Mapbox.com.
 
 ### Convert a CSV spreadsheet of points into GeoJSON
 
+Use any spreadsheet tool and prepare a list of coordinate points (known as features). In the column header, you must include the labels **longitude** and **latitude**, in either order. Also, you can add more headers to name each point and provide additional information (known as the properties of the features).
+
+Save your spreadsheet in CSV format (known as comma separated values, a generic format).
+
+Download this sample CSV file:(name-longitude-latitude-info.csv)
+
+Drag the CSV file into the GeoJSON.io map window. Flip between the JSON and Table tabs to view or edit the data.
+
+![](dataviz-geojsonio-640.gif)
+
+Select the Save menu and export into GeoJSON format.
+
+Optional: Login to GeoJSON.io with your GitHub account and save directly to your repository.
 
 
 ### Convert Shapefile or KML polygons into GeoJSON
-Drag any of these common geography file formats into the map browser:
-- Shapefile
-- KML
-- CSV
-- GeoJSON
-- and others
 
-Save to convert from one format above to another
+Polygon boundary data is often shared as ArcGIS Shapefiles (.shp) or Keyhole Markup Language (.kml) files. Drag any of these (and other) files into the http://GeoJSON.io map window. Flip between the JSON and Table tabs to view or edit the data.
+
+Select the Save menu and export into GeoJSON format.
 
 ![](geojson-save-as.png)
 
 
+### Create GeoJSON data with drawing tools
 
-Click between the JSON and Table tabs to view and modify the geographic info.
+Use the http://GeoJSON.io drawing tools to create points, polygons, and polylines. Flip between the JSON and Table tabs to view or edit the data.
 
-Use the drawing tools to create points, polygons, and polylines, and the Table tab to insert data properties.
+### Learn more about GeoJSON.io
 
-*TO DO* Show more
+Read about more advanced features and view the code at https://github.com/mapbox/geojson.io
 
 
 

@@ -24,7 +24,7 @@ This free and easy-to-learn tool looks similar to Google Sheets, but is more pow
 - Operates entirely within the browser, across all platforms
 - Upload geographic border files to create nearly any polygon map
 - Publish and embed the interactive map on your own website
-- Flexible GFT point and polygon maps can be inserted into [Searchable Map Template, in this book](../../modify/searchable-map-gft/)
+- Flexible GFT point and polygon maps can be inserted into [Searchable Map Template, in this book](../../modify/searchable-map-gft/index.html)
 
 ###Limitations of GFT
 - Google Fusion Tables has been listed as *experimental* for several years
@@ -137,7 +137,7 @@ Also, you can download census tract spreadsheet data to merge with it from <a hr
 
 These sample boundary files in KML (Keyhole Markup Language) format initially were downloaded from MAGIC in compressed KMZ format, which is not compatible with Google Fusion Tables. To learn how to modify files with free tools, see this <a href="http://epress.trincoll.edu/dataviz/chapter/convert-kml-filter" target="_blank">tutorial to convert from KMZ to KML in Google Earth and filter results in Google Fusion Tables</a>.</p>
 
-for the MAGIC border files above, note that I also removed the County Subdivisions that did not correspond to any spreadsheet datavizbook
+for the MAGIC border files above, note that I also removed the County Subdivisions that did not correspond to any spreadsheet
 
 decide where to put commonly used geographic files: here or in Find CT chapter?
 

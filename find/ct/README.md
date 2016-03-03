@@ -24,7 +24,7 @@ Since this book was created in Hartford, Connecticut, it lists state and municip
 
 ### Geographic boundaries
 - download and drag into http://geojson.io to view and edit
-- see [polygon maps in this book](../../map/polygon-gft/)
+- see [polygon maps in this book](../../map/polygon-gft/index.html)
 
 ![](CT-towns-mini.png)
 

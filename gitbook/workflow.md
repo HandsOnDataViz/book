@@ -30,7 +30,7 @@ Mixed opinion: links and images appear, but requires clicking on Markdown versio
 
 ## Structural changes with GitHub Desktop and Atom Editor
 When making major changes to the book, especially folder/file structure, copy a branch to a local computer with GitHub Desktop, and modify with Atom Editor (or your preferred text editor).
-1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizbookforall
+1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizforall
 2. Create dev branch for current edits
 3. Use GitHub Desktop to sync repo to my local computer, where dev branch is default view
 4. Use Atom editor to edit/upload/restructure files

@@ -26,9 +26,9 @@ Use any spreadsheet tool and prepare a list of coordinate points (known as featu
 
 ![](name-lat-lon-info.png)
 
-Save your spreadsheet in generic CSV format. *Hint:* see [Save Spreadsheet as CSV chapter](../../transform/csv/) in this book.
+Save your spreadsheet in generic CSV format. *Hint:* see [Save Spreadsheet as CSV chapter](../../transform/csv/index.html) in this book.
 
-Example: download this [sample CSV file](name-lat-long-info.csv)
+Example: download this [sample CSV file](name-lat-lon-info.csv)
 
 Drag the CSV file into the GeoJSON.io map window. Flip between the JSON and Table tabs to view or edit the data.
 

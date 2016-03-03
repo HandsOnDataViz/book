@@ -3,7 +3,7 @@
 ##Comment on any paragraph
 - Select text and click the plus symbol (+) in margin.
 - Requires a free GitHub or GitBook account.
-- View other comments in the margins, or all in [Discussions](https://www.gitbook.com/book/jackdougherty/datavizbook/discussions).
+- View other comments in the margins, or all in [Discussions](https://www.gitbook.com/book/jackdougherty/datavizforall/discussions).
 - Constructive criticism and suggestions are welcome.
 
 ![](GitBook-comments-2016-02.gif)

@@ -10,7 +10,7 @@ and more.
 
 One big advantage of GeoJSON map data is portability across many tools. GeoJSON files can be used with Leaflet map code, Google Maps JS API code, CartoDB map tools, and more.
 
-Also, your GitHub repository will automatically display any GeoJSON files in a map view. Click to view this [simple GeoJSON point data file:](https://github.com/JackDougherty/datavizforall/blob/master/reshape/geojsonio/name-latitude-longitude-info.geojson)
+Also, your GitHub repository will automatically display any GeoJSON files in a map view. Click to view this [simple GeoJSON point data file on GitHub](https://github.com/JackDougherty/datavizforall/blob/master/shape/geojsonio/name-latitude-longitude-info.geojson).
 
 GeoJSON data must follow a specific format, and the file name may end with either .geojson or .json.
 
@@ -20,13 +20,15 @@ GeoJSON stores coordinates in *longitude-latitude* format, the same order as X-Y
 
 Go to http://geojson.io to explore this open-source web tool to convert, edit, and create GeoJSON map data. The tool was originally developed by Tom MacWright, and is supported by Mapbox.com.
 
-### Convert a CSV spreadsheet of points into GeoJSON
+### Convert a CSV spreadsheet of point data into GeoJSON
 
 Use any spreadsheet tool and prepare a list of coordinate points (known as features). In the column header, you must include the labels **longitude** and **latitude**, in either order. Also, you can add more headers to name each point and provide additional information (known as the properties of the features).
 
-Save your spreadsheet in CSV format (known as comma separated values, a generic format).
+![](sample-csv-table-screenshot.png)
 
-Download this sample CSV file:(name-longitude-latitude-info.csv)
+Save your spreadsheet in generic CSV format. *Hint: see [Save Spreadsheet as CSV chapter](/../../transform/csv/) in this book.*
+
+Download this sample CSV file: [name-longitude-latitude-info.csv](name-longitude-latitude-info.csv)
 
 Drag the CSV file into the GeoJSON.io map window. Flip between the JSON and Table tabs to view or edit the data.
 

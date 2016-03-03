@@ -1,4 +1,4 @@
-# Reshape Your Map Data
+# Shape Your Map Data
 
 To do: Explain and show different types of map data files
 

@@ -96,7 +96,7 @@ TO master branch FROM gh-pages branch
 - Confirm merge (and another green button!)
 - Always double-check your repository branch names to do editing and live web testing in the gh-pages branch, then make sync a copy to public share in the master branch.
 
-To embed an interactive data visualization from a GitHub Pages host site into a secondary website (such as an organization's WordPress.org site), see the [Embed iframe with WordPress tutorial in this book](embed/iframe-wordpress/).
+To embed an interactive data visualization from a GitHub Pages host site into a secondary website (such as an organization's WordPress.org site), see the [Embed iframe with WordPress tutorial in this book](embed/iframe-wordpress/index.html).
 
 See my sample repositories, with links to live demo sites, at https://github.com/JackDougherty?tab=repositories. Learn more about GitHub general features to share and collaborate on other users' public code repositories.
 

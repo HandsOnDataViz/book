@@ -10,11 +10,11 @@ and more.
 
 One big advantage of GeoJSON map data is portability across many tools. GeoJSON files can be used with Leaflet map code, Google Maps JS API code, CartoDB map tools, and more.
 
-Also, your GitHub repository will automatically display any GeoJSON files in a map view. Click to view this [simple GeoJSON point data file on GitHub](https://github.com/JackDougherty/datavizforall/blob/master/shape/geojsonio/name-latitude-longitude-info.geojson).
+Also, your GitHub repository will automatically display any GeoJSON files in a map view. Click to view this [simple GeoJSON point data file on GitHub](https://github.com/JackDougherty/datavizforall/blob/master/shape/geojsonio/name-lat-lon-info.geojson).
 
-GeoJSON data must follow a specific format, and the file name may end with either .geojson or .json.
+GeoJSON data must follow a [structured format](http://geojson.org/), but the file name may end with either .geojson or .json.
 
-GeoJSON stores coordinates in *longitude-latitude* format, the same order as X-Y points in mathematics. This is the opposite of Google Maps and several other web map tools, which stores points in *latitude-longitude* format. For example, Hartford Connecticut is located at (-72.67, 41.76) in GeoJSON, but (41.76, -72.67) in Google Maps.
+The GeoJSON structured format orders coordinates in *longitude-latitude* format, the same as X-Y coordinates in mathematics. This is the opposite of Google Maps and several other web map tools, which order points in *latitude-longitude* format. For example, Hartford Connecticut is located at (-72.67, 41.76) in GeoJSON, but (41.76, -72.67) in Google Maps.
 
 ## What is GeoJSON.io?
 
@@ -22,13 +22,13 @@ Go to http://geojson.io to explore this open-source web tool to convert, edit, a
 
 ### Convert a CSV spreadsheet of point data into GeoJSON
 
-Use any spreadsheet tool and prepare a list of coordinate points (known as features). You must include column headers **longitude** and **latitude**, or abbreviations such as *lon* and *lat*. The order of the columns does not matter. Also, you can add more headers to identify each point (example: name) and include more details (known as the properties of the features).
+Use any spreadsheet tool and prepare a list of coordinate points (known as features). You must include column headers **lat** and **lon**, or a fuller spelling, such as *latitude* and *longitude*. The order of the columns does not matter. Also, you can add more headers to identify each point (example: name) and include more details (known as the properties of the features).
 
-![](sample-csv-table-screenshot.png)
+![](name-lat-lon-info.png)
 
 Save your spreadsheet in generic CSV format. *Hint:* see [Save Spreadsheet as CSV chapter](../../transform/csv/) in this book.
 
-Example: download this [sample CSV file](name-longitude-latitude-info.csv)
+Example: download this [sample CSV file](name-lat-long-info.csv)
 
 Drag the CSV file into the GeoJSON.io map window. Flip between the JSON and Table tabs to view or edit the data.
 
@@ -46,7 +46,6 @@ Polygon boundary data is often shared as ArcGIS Shapefiles (.shp) or Keyhole Mar
 Select the Save menu and export into GeoJSON format.
 
 ![](geojson-save-as.png)
-
 
 ### Create GeoJSON data with drawing tools
 

@@ -34,9 +34,9 @@ Complete the process by clicking Simplify once again. Export your file in the pr
 
 ![](mapshaper-simplify.png)
 
-## Dissolve a small number of polygons inside a boundary map
+## Dissolve a few polygons inside a boundary map
 
-MapShaper.org also includes a Console button to type in commands for common map editing scenarios. Imagine that you need to create regional "clusters" of polygons from a statewide municipal boundary map. In Connecticut, for instance, the towns of Bloomfield and West Hartford have separate municipal government boundaries, but the [CT Department of Public Health](http://www.ct.gov/dph/cwp/view.asp?a=3123&q=397740) has grouped them together into the Bloomfield-West Hartford health district. Your task is to merge their boundaries in the statewide town map, using the "dissolve" command in the MapShaper.org console window. (If you need to dissolve many polygons, look at the next section below.)
+MapShaper.org also includes a Console button to type in commands for common map editing scenarios. Imagine that you need to create regional "clusters" of polygons from a statewide municipal boundary map. In Connecticut, for instance, the towns of Bloomfield and West Hartford have separate municipal government boundaries, but the [CT Department of Public Health](http://www.ct.gov/dph/cwp/view.asp?a=3123&q=397740) has grouped them together into the Bloomfield-West Hartford health district. Your task is to merge their boundaries in the statewide town map, using the "dissolve" command in the MapShaper.org console window. (If you need to dissolve many polygons, see the next section below.)
 
 To follow this example, [download this simplified Connecticut town boundary GeoJSON map file](CT-towns-simplified.geojson)
 
@@ -50,30 +50,31 @@ Copy and paste this two-part command into the Console, and press return:
 -each 'town = "Bloomfield-West Hartford District"' where='town=="Bloomfield" || town=="West Hartford"' \
 -dissolve town \
 ```
-
 How to understand the command above:
 - The first part creates a merged town, which consists of two existing towns
 - The second line dissolves the boundary between each of those towns
 - The pipe symbols (||) separate terms, and are usually located above the return key on US keyboards.
-- The backslash symbol (\) separates lines of instructions in this console.
+- The backslash symbol ( \ ) separates lines of instructions in this console.
+
+![](mapshaper-dissolve-640.gif)
 
 If entered correctly, the command will dissolve only the boundary between two (or more) designated polygons, and the remainder of the map will remain intact. Make additional edits, or close the Console window and Export your file.
 
-## Efficiently dissolve multiple polygons within a map
+## Dissolve multiple polygons more efficiently
 
-To merge multiple polygons more efficiently, use this multi-step strategy. Export the data attributes to a csv file, edit this file in a spreadsheet, then use mapshaper to join your edited data to the original attributes and dissolve.
+To merge multiple polygons in a map, follow this multi-step strategy to save time. Overall, the goal is to export the map data in CSV format, edit this file to insert a list of polygons to be merged, then use Mapshaper to join the original map to the CSV and dissolve selected boundaries.
 
 1. Download the simplified Connecticut town boundary GeoJSON map file](CT-towns-simplified.geojson) and import into http://MapShaper.org.
 
-2. Export in CSV format, which will create table of data about each polygon, without the boundaries.
+2. Export in CSV format, which will create table of data about each polygon, without boundaries.
 
-![](towns-export-csv.png)
+  ![](towns-export-csv.png)
 
-3. Open the CSV file with any spreadsheet tool. Copy the contents of the "towns" column, paste it into a second column, and change the header of this second column to "merge".
+3. Open the CSV file with any spreadsheet tool. Copy the contents of the "towns" column, paste it into a second column, and change the header of this second column to "merge-towns".
 
-4. In this new "merge" column, create new group entries for towns to be merged together. Leave other towns unchanged.
+4. In this new "merge-towns" column, create new group entries for towns you wish to merge together. Leave other towns unchanged.
 
-![](CT-towns-merge-csv.png)
+  ![](CT-towns-merge-csv.png)
 
 5. Save this new spreadsheet in CSV format with a new file name, such as: CT-towns-merge.csv.
 
@@ -84,7 +85,7 @@ To merge multiple polygons more efficiently, use this multi-step strategy. Expor
 
 7. When importing two or more layers at the same time, use the drop-down menu to display one of them in the viewer. The CSV file will appear as a series of boxes, so display the GeoJSON map file instead.
 
-![](mapshaper-two-layers.png)
+  ![](mapshaper-two-layers.png)
 
 8. Click on the Console button, then copy and paste in this two-part command, and press return:
 
@@ -93,11 +94,11 @@ To merge multiple polygons more efficiently, use this multi-step strategy. Expor
 -dissolve merge-towns \
 ```
 
-How to understand the command above:
-- The first line "joins" the active layer (the map boundary file) to the CSV spreadsheet, with "keys" to match their shared column: town.
-- The second line dissolves the map boundaries of towns listed in the merge-towns column of the CSV file.
+  How to understand the command above:
+  - The first line "joins" the active layer (the map boundary file) to the CSV spreadsheet, with "keys" to match their shared column: town.
+  - The second line dissolves the map boundaries of towns listed in the merge-towns column of the CSV file.
 
-![](mapshaper-towns-merged.png)
+  ![](mapshaper-towns-merged.png)
 
 9. Click the Console button to close its window, and Export the map in your preferred format.
 

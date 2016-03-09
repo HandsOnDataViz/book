@@ -18,11 +18,21 @@ Spreadsheets can magically automate calculations across rows or columns. In most
 
 ## Combine address terms to geocode in Google Maps
 
-When preparing address data for a map, some geocoding tools prefer to separate columns (address, city, state, zip) while other tools (such as Google Maps) needs these terms combined into one location column.
+When preparing to geocode street addresses, some geocoding tools (such as Census Geocoder API) require that the data appear in separate columns:
 
-To combine (or concatenate) terms, write a simple formula using ampersands (&) as connectors, and quotation marks around blank spaces as separators. No commas are necessary. For example, if a spreadsheet contained four columns, *Address, City, State, Zip* (A-D), then in column E insert a new header named *Location* and a formula in this format:
+| Street      | City        | State      | Zip        |
+| :---------- | :---------- | :--------- | :--------- |
+| 100 Main St | Hartford    | CT         | 06106      |
 
-- =A2 &" " & B2 &" " &C2 &" " &D2
+while other tools (such as Google Maps) require that these terms combined into one location column, in this format: Address, City, State Zip.
+
+| Location                          |
+| :-------------------------------- |
+| 100 Main St, Hartford, CT 06119   | 
+
+To combine (or concatenate) terms, write a simple formula using ampersands (&) as connectors, and quotation marks around blank spaces as separators. No commas are necessary. For example, if a spreadsheet contained four columns, *Address, City, State Zip* (A-D), then in column E insert a new header named *Location* and a formula in this format:
+
+- =A2 &", " & B2 &", " &C2 &" " &D2
 
 ![](SpreadsheetCombineTerms.png)
 

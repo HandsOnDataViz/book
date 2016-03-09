@@ -1,4 +1,4 @@
-# Save your spreadsheet in CSV format
+# Save your Spreadsheet in CSV format
 
 Comma Separated Values (abbreviated as CSV) is a generic spreadsheet format that is very portable across nearly all data and visualization tools. In some cases, a tool may require you to convert spreadsheet data from Microsoft Excel or other applications into generic CSV format.
 

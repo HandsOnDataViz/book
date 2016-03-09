@@ -1,60 +1,42 @@
 # Geocode address data with US Census Geocoder
 
-**TO DO**: Convert rough notes into tutorial with visuals, including header for data results
+**TO DO**
+- Introduce this tool: https://www.census.gov/geo/maps-data/data/geocoder.html
+- Read the intro and documentation: http://www.census.gov/geo/maps-data/data/geocoder.html
+- Refer to vocab in the Find-Census section
+- Refer to CSV section
 
-** TO DO** Create Hartford-area diagram of this relationship:
-- State
-- County
-- County Subdivision
-- Tract
-- Block Group
+To follow this tutorial, [download 50 sample addresses in CSV format](sample-addresses-50.csv).
 
-Overview of key steps:
-1. Organize address data with spreadsheet tool, such as Excel, and clean up unnecessary commas
-2. Save data into 5 columns (id, address, city, state, zip) in .CSV format, without column headers
-3. Upload data into US Census Geocoder: https://www.census.gov/geo/maps-data/data/geocoder.html, in batches of 1,000 addresses at a time
-4. Sort geocoded results (match exact, match non-exact, tie, no-match), and clean and regeocode as needed
-5. In spreadsheet, use the VLOOKUP function to join census block groups to demographic data
+Steps:
 
-[Download 50 Sample Addresses in CSV format](sample-addresses-50.csv)
+1. Use a spreadsheet tool to organize your address data into five columns: any ID number, street, city, state, zip code. **Remove all column headers**.
 
-Detailed steps:
+| :---------- | :---------- | :---------- | :--------- | :--------- |
+| 1           | 100 Main St | Hartford    | CT         | 06106      |
 
-Explain census tracts and census-block groups, and ACS 5-year data.
+2. Save the file in CSV format, in batches of no more than 1,0000 rows per file.
 
-1. In spreadsheet tool (such as MS Excel), copy data and organize into 5 columns, with NO column headings:
-- Unique ID number
-- Address (number and street, such as 100 Main Street)
-- City
-- State
-- Zipcode
+3. Go to US Census Geocoder (https://www.census.gov/geo/maps-data/data/geocoder.html) and upload the CSV file.
 
-Note: If the data does not include the state, then insert it as a new column
+4. To obtain latitude-longitude coordinates and census areas (tracts and block groups) for multiple addresses, select Find Geographies Using...Address Batch, and click Get Results. Be patient if using the service during busy weekday hours.
 
-Note: If the Address column includes extra commas, like this:
-100 Main St, Apt 2, Hartford, CT, 06112
+  ![](census-geocoder-batch.png)
 
-Then create blank columns after the Address column; select Address column; Data > Text to Column
-https://support.office.com/en-us/article/Split-text-into-different-cells-30b14928-5550-41f5-97ca-7a3e9c363ed7
+5. The web browser will download the output in a file named: GeocodeResults.csv. The results do not contain column headers, but see the screenshot below for guidance, or [read the documentation](http://www.census.gov/geo/maps-data/data/geocoder.html).
 
-2. When spreadsheet data is in 5 specific columns, save in .CSV format, which means comma-separated values. The output will appear as follows in a text editor:
-```
-1, 100 Main St, Hartford, CT, 06112
-```
+![](geocode-results.png)
 
-3. Upload in batches of 1,000 rows or less.
+6. Use a spreadsheet tool to open the CSV file. Sort results by the match quality (columns C and D), with these entries: match exact, match non-exact, tie, no-match.
 
-4. Geocoded results will be downloaded by the site in this format:
-[insert]
+7. For results without an exact match, clean up the address and try to re-geocode. Or look up individual addresses in another geocoding service, such as Google Maps (https://www.google.com/maps).
 
-Note: To re-run unmatched or tie data. . .
+**TO DO**
+- Explain how to use related tools for common next steps:
+- use VLOOKUP function to join census areas (tracts or block groups) to ACS demographic data
+- use pivot tables to aggregate locations by census area
 
-Note: If you wish to share de-identified data with others, remove the individual home addresses and share only the census block groups.
 
-5. To census tracts or block groups with existing data, use VLookup function. . .
-
-Read more about geocoding services
-http://dlab.berkeley.edu/blog/address-geocoding-options-uc-berkeley-community
 
 
 

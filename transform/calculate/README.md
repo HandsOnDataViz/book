@@ -16,26 +16,6 @@ Spreadsheets can magically automate calculations across rows or columns. In most
 
 ![](SpreadsheetFormula640w.gif)
 
-## Combine address terms to geocode in Google Maps
-
-When preparing to geocode street addresses, some geocoding tools (such as Census Geocoder API) require that the data appear in separate columns:
-
-| Street      | City        | State      | Zip        |
-| :---------- | :---------- | :--------- | :--------- |
-| 100 Main St | Hartford    | CT         | 06106      |
-
-while other tools (such as Google Maps) require that these terms combined into one location column, in this format: Address, City, State Zip.
-
-| Location                          |
-| :-------------------------------- |
-| 100 Main St, Hartford, CT 06119   | 
-
-To combine (or concatenate) terms, write a simple formula using ampersands (&) as connectors, and quotation marks around blank spaces as separators. No commas are necessary. For example, if a spreadsheet contained four columns, *Address, City, State Zip* (A-D), then in column E insert a new header named *Location* and a formula in this format:
-
-- =A2 &", " & B2 &", " &C2 &" " &D2
-
-![](SpreadsheetCombineTerms.png)
-
 ## Copy and Paste > Special > Values to replace formulas with data
 
 After inserting calculations in a spreadsheet, sometimes dynamic formulas must be replaced with static data before the results can be visualized. One solution is to select and copy a column (or the entire sheet), then paste > special > values to replace the formula with numerical results.

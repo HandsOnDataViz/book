@@ -18,7 +18,15 @@ Since this book was created in Hartford, Connecticut, it lists state and municip
 
 **Hartford Data** (http://data.hartford.gov), the official portal of the City of Hartford municipal government, is hosted on the Socrata platform, which features built-in visualizations and APIs. Also, the site links to the City's ArcGIS Online geographic data (http://gisdata.hartford.gov/) and the City's financial data (http://checkbook.hartford.gov/) and budget (http://budget.hartford.gov/).
 
-**TO DO** reorganize this with more details about scale and projection
+
+In addition to the official repositories above, Connecticut news organizations that create data visualizations often include links to download data files.
+
+**Connecticut Mirror / Trend CT ** (http://ctmirror.org/) and (http://trendct.org/) are publications of the Connecticut News Project, an independent, nonpartisan, nonprofit organization that focuses on state policy issues. Most of their data visualizations are built with open-source code, with publicly accessible data files. See also their GitHub repository (https://github.com/trendct).
+
+**Hartford Courant Data Desk** (http://www.courant.com/data-desk) produces digital visualizations for the *Hartford Courant*, the largest daily newspaper in Connecticut, owned by Tribune Publishing. Many of these data visualizations are published on the Tableau platform, which allows readers to download the underlying data.
+
+**TO DO** describe Freedom of Information Act (FOIA) data requests in Connecticut
+
 
 ## Common data files for Hartford and Connecticut
 
@@ -41,6 +49,13 @@ Hartford neighborhood borders 2015 [from HartfordData](http://gisdata.hartford.g
 - [KML](Hartford-neighborhoods-2015-HartGov.kml)
 - [GeoJSON](Hartford-neighborhoods-2015-HartGov.geojson)
 
+**TO DO**
+- reorganize with more details about scale and projection
+- add census areas (tracts; block groups) for City of Hartford; Hartford County; State
+- add Capitol Region Council of Governments (CRCOG) http://www.crcog.org/
+- add school districts (and clarify elementary-secondary)
+- add Capitol Region Education Council (CREC) http://www.crec.org/
+- add school attendance areas from federal site
 
 ---
 

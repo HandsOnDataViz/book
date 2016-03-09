@@ -15,6 +15,8 @@
    * [Filtered Map with Socrata](find/filtered-point-map-socrata/README.md)
 * [Transform Your Tables](transform/README.md)
    * [Calculate with Formulas](transform/calculate/README.md)
+   * [Match Columns with VLookup](transform/vlookup/README.md)
+   * [Clean Up Disorganized Data](transform/clean/README.md)
    * [Aggregate with Pivot Tables](transform/pivot-tables/README.md)
    * [Geocode Addresses with Census](transform/geocode-census/README.md)
    * [Save as CSV Format](transform/csv/README.md)

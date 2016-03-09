@@ -1,4 +1,4 @@
-# Format Data in a Spreadsheet
+# Format Data with Spreadsheet Tools
 
 Organize your data into a spreadsheet table with columns and rows (or for more complex projects, a database tool). Three common spreadsheet tools are:
 
@@ -13,16 +13,6 @@ All steps illustrated below are nearly the same across these three spreadsheet t
 Across the top row, insert short meaningful headers for each column. Avoid special characters that may not be recognized properly by other applications. Make the data in the column consistent within itself.
 
 ![](SpreadsheetBetterColumnHeaders.png)
-
-## Save source data in separate sheet
-
-If you have doubts when cleaning up columns, click (or right-click) on the spreadsheet tab to copy the sheet to another tab as a backup, to avoid destroying any data.
-
-![](SpreadsheetCopySheet640w.gif)
-
-Add a *source* tab, after the data, with notes to remind you and others about its origins and when it was last updated.
-
-![](SpreadsheetSourceTab.png)
 
 ## Format data columns as needed
 

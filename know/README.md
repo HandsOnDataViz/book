@@ -1,14 +1,10 @@
-# Prepare your Data
+# Know Your Data
 
-**TO DO** Revise to: Know Your Data, with sections on
-- What does your data really mean? (examples of bad data)
-- Public vs private data
-- Source your data
+Before starting to create charts or maps, get to know your data.
+- Where did it come from?
+- Who compiled the data, and for what purpose?
+- What do the data labels really mean?
+- Ask yourself: Am I working with the *most* recent version, in the *best* available format?
 
-Before starting a chart or map, get to know your data.
-
-Closely examine your data files to understand their meaning, sources of origin, and limitations. **TO DO** expand on this theme with examples of bad and misleading data
-
-Also, you may need prepare your data, and maybe clean it up a bit, before uploading it into a visualization tool.
-
-More to come. . .
+Closely examine your data files to understand their meaning, sources of origin, and limitations.
+**TO DO** expand on this theme with examples of bad and misleading data

@@ -2,6 +2,22 @@
 
 Sometimes we receive a spreadsheet with problem entries that need to be cleaned up before we can successfully upload it into a visualization tool.
 
+## Find and Replace with a blank
+
+A common problem with census data is that geographic names contain extra words that we wish to remove. For example, when downloading Connecticut county subdivisions (towns), each row appears as: Andover town, Ansonia town, etc.
+
+In any spreadsheet tool, use the Find and Replace command to remove unnecessary words. To follow this example, [download this sample spreadsheet](find-replace-town-geonames.csv). This tutorial shows screens from Excel, but other tools are very similar.
+
+1. Open the Find and Replace command.
+
+2. In the Find field, type " town", leaving a space before the word, since we wish to remove only that word when by itself. (Otherwise, we would accidentally remove the "town" in Newtown.)
+
+3. In the Replace field, leave it blank, to represent a blank space.
+
+4. Press the Replace All button. Since this sample file lists 169 towns, the screen will states that 169 instances of "town" have been replaced.
+
+![](find-replace-blank.png)
+
 ## Split one column into two with Excel
 
 One common problem is when multiple pieces of data appear in one column, and your goal is to split them into separate columns. If those data pieces are separated by commas (or similar punctuation), you might be able to fix this with a simple spreadsheet command: split text into columns.

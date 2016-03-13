@@ -86,7 +86,7 @@ A common mapping task is to join (or merge) new data columns into a polygon boun
 
 Your goal is to unite these files, so that you can later display them in a thematic polygon map. Since these two files share a common column of data -- the town names -- you can join them together into one merged file.
 
-![](join-polygon-table-concept.png)
+![](mapshaper-join-table-concept.png)
 
 To follow this example, download two files:
 - [Connecticut towns simplified map in GeoJSON format](CT-towns-simple.geojson)

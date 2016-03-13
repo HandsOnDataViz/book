@@ -102,8 +102,6 @@ Refresh the browser to start a new session in http://MapShaper.org.
 
 3. Drag the CT-towns-popdensity.csv file into MapShaper.org, and select the Import button to add it as a second layer. This table layer will appear as rectangular cells, because it does not contain geographic information.
 
-  ![](mapshaper-import-csv-layer.png)
-
 4. Click the drop-down menu and select the map to display it as the active layer.
 
   ![](mapshaper-join-select-map-layer.png)

@@ -1,4 +1,4 @@
-# Edit, Join, and Convert Geographic Layers with MapShaper.org
+#Edit, Dissolve, and Join Layers with MapShaper.org
 
 MapShaper (http://MapShaper.org) is another versatile open-source mapping tool, developed and maintained by [Matthew Bloch on GitHub](https://github.com/mbloch/mapshaper). Using the web interface, users can:
 - Import and export map layers in multiple formats: Shapefile, GeoJSON, CSV, and more
@@ -7,11 +7,13 @@ MapShaper (http://MapShaper.org) is another versatile open-source mapping tool, 
 
 This free and easy-to-learn MapShaper.org web tool has replaced *many* of my map preparation tasks that previously required expensive and hard-to-learn ArcGIS software, or its free but still-challenging-to-learn cousin, QGIS. Even advanced GIS users may discover MapShaper.org to be a quick alternative for some common time-consuming tasks.
 
-These examples focus on polygon boundary data to illustrate common map editing tasks. But MapShaper.org also works with other data layers, such as points, lines, and tables.
+The examples below focus on polygon boundary data to illustrate common map editing tasks. But MapShaper.org also works with other data layers, such as tables, points, and lines.
 
-## Import and convert map boundary files
+##Import and convert map boundary files
 
-1. Drag a map boundary file into the http://MapShaper.org browser window.
+To follow the next few examples below, download the [Connecticut town boundary map in GeoJSON format](CT-towns.geojson).
+
+1. Drag any map layer into the http://MapShaper.org browser window.
   - Import GeoJSON (.geojson or .json), TopoJSON, CSV, or Shapefile formats
   - For Shapefiles, import the .shp extension; WGS84 projection is most portable
 
@@ -19,20 +21,20 @@ These examples focus on polygon boundary data to illustrate common map editing t
 
   ![](mapshaper-convert-640.gif)
 
-## Edit data for specific polygons
+##Edit data for specific polygons
 
-To edit data for any polygon inside MapShaper.org:
-- Click the Info button
+To edit data for any polygon in MapShaper.org:
+- Click the "i" information button
 - Select the polygon
 - Click inside its pop-up info window to directly edit the data
 
   ![](mapshaper-edit-info.png)
 
-## Simplify map boundaries to reduce file size
+##Simplify map boundaries to reduce file size
 
-Some projects call for a national or statewide map view to be zoomed out, meaning that small geographic details are not visible or unnecessary. In these cases, use the MapShaper.org Simplify command to reduce the file size, so that your interactive web map will load faster for users. The example below began with a detailed map of Connecticut town boundaries (1:100,000 scale) at 2MB, which was reduced (without visibly sacrificing statewide geographic detail) to around 200KB.
+If your data visualization project displays a zoomed-out state or national or world map, small geographic details that are invisible at these zoom levels may not be necessary. Consider using the Simplify command to reduce the file size, which may help your interactive web map to load faster for web visitors. The example below began with a detailed map of Connecticut town boundaries (1:100,000 scale) at 2MB, which MapShaper simplified -- without visibly sacrificing details at the statewide zoom level -- to a reduced size of about 200KB.
 
-1. Import the map boundary as described above. Click the Simplify button to review options. In this case, I usually accept the default settings. Click Next.
+1. Import the map layer as described above. Click the Simplify button to review options, and in most cases, accept the default settings. Click Next.
 
 2. Slide the Simplify button from 100 percent down to an appropriate number for your map zoom level. If important geographic details disappear, you may have gone too far.
 
@@ -42,7 +44,7 @@ Some projects call for a national or statewide map view to be zoomed out, meanin
 
 ![](mapshaper-simplify.png)
 
-## Dissolve all internal polygons to create an outline map
+##Dissolve all internal polygons to create an outline map
 MapShaper.org also includes a Console button to type in commands for common map editing tasks. Imagine that you begin with a boundary map that includes internal polygons, but your goal is to remove all of them to create an outline map.
 
 Click the Console button, which opens a window to type in commands. Enter the command below, then press return. Close the Console window and Export your outline map.
@@ -53,104 +55,128 @@ Click the Console button, which opens a window to type in commands. Enter the co
 
 ![](mapshaper-dissolve-simple-640.gif)
 
-## Clip one map layer to match the outline of a second layer
+##Clip one map layer to match the outline of a second layer
 Imagine that you start with a polygon map of all towns in Connecticut, and an outline map of Hartford County, a larger region that includes some (but not all) of those smaller towns. Your goal is to create a polygon map of all towns inside Hartford County. In other words, we will "clip" the statewide town map using the county outline map.
 
-1. To follow this example, download the [Connecticut towns map](CT-towns.geojson) and the [Hartford County outline map](HartfordCounty.geojson), both in GeoJSON format. (If necessary, right-click or control-click on each link to save each file.)
+To follow this example, download the [Connecticut towns map](CT-towns.geojson) and the [Hartford County outline map](HartfordCounty.geojson), both in GeoJSON format. (If necessary, right-click or control-click on each link to save each file.)
 
-2. Drag the CT-towns.geojson map to import to MapShaper.
+Refresh the browser to start a new session in http://MapShaper.org.
 
-3. Drag the HartfordCounty.geojson map to MapShaper, and click Import to add this second layer.
+1. Drag the CT-towns.geojson map to import to MapShaper.
 
-4. In the drop-down menu, select the first map (CT-towns).
+2. Drag the HartfordCounty.geojson map to MapShaper, and click Import to add this second layer.
 
-5. Click the Console button, type or paste in the command below, and press enter.
+3. In the drop-down menu, select the first map (CT-towns) to display it as the active layer.
+
+4. Click the Console button, type or paste in the command below, and press enter.
 ```
 -clip HartfordCounty.geojson
 ```
 
-6. The command above instructs MapShaper to clip the first map (CT Towns) using the second map (Hartford County outline).
+5. The command above instructs MapShaper to clip the active map layer (CT Towns) using the second layer (the outline of Hartford County).
 
 ![](mapshaper-clip-640.gif)
 
-## Join a polygon map with a data table
 
-** TO DO **
+##Join data columns with a polygon map
 
+A common mapping task is to join (or merge) new data columns into a polygon boundary map, and MapShaper.org makes this very easy. Imagine that you have two files:
+- Connecticut town boundary map
+- a spreadsheet of town population data
+Your goal is to unite these files, so that you can later display them in a thematic polygon map. Since these two files share a common column of data -- the town names -- you can join them together into one merged file.
 
-## Dissolve a few polygons inside a boundary map
+![](join-polygon-table-concept.png)
 
- Imagine that you need to create regional "clusters" of polygons from a statewide municipal boundary map. In Connecticut, for instance, the towns of Bloomfield and West Hartford have separate municipal government boundaries, but the [CT Department of Public Health](http://www.ct.gov/dph/cwp/view.asp?a=3123&q=397740) has grouped them together into the Bloomfield-West Hartford health district. Your task is to merge their boundaries in the statewide town map, using the "dissolve" command in the MapShaper.org console window. (If you need to dissolve many polygons, see the next section below.)
+To follow this example, download two files:
+- [Connecticut towns simplified map in GeoJSON format](CT-towns-simple.geojson)
+- [Connecticut towns population data in CSV format](CT-towns-popdensity.csv)
+If necessary, right-click or control-click on the links to save each file.
 
-1. To follow this example, [download this simplified Connecticut town boundary GeoJSON map file](CT-towns-simplified.geojson). (If necessary, right-click or control-click on the link to save the file.)
+Refresh the browser to start a new session in http://MapShaper.org.
 
-2. Import the map into http://MapShaper.org. Click the Information "i" button in the right-hand sidebar, and select any polygon to view the naming structure. In this example, "town" is the column header.
+1. Drag the CT-towns-simple.geojson boundary file into MapShaper. Select the "i" info button and click on any polygon to confirm that the column header is "town".
 
-3. Click the Console button and enter commands to exactly match terms inside your map boundary file. I recommend typing into a plain text file, then copy and paste into the console.
+2. Open the CT-towns-popdensity.csv file with any spreadsheet tool and confirm that first column header also is "town". Close this file.
 
-4. To follow this example, copy and paste this two-part command into the Console, and press return:
+3. Drag the CT-towns-popdensity.csv file into MapShaper.org, and select the Import button to add it as a second layer. This table layer will appear as rectangular cells, because it does not contain geographic information.
 
+  ![](mapshaper-import-csv-layer.png)
+
+4. Click the drop-down menu and select the map to display it as the active layer.
+
+  ![](mapshaper-join-select-map-layer.png)
+
+5. Click the Console button, type this command, and press return:
 ```
--each 'town = "Bloomfield-West Hartford District"' where='town=="Bloomfield" || town=="West Hartford"' \
--dissolve town \
+-join CT-towns-popdensity.csv keys=town,town
+```
+This command instructs MapShaper to join the active map layer to the CSV table layer, based on their shared column of data, labeled as "town" in both files. In this example, 169 rows are merged together.
+
+  ![](mapshaper-join-console.png)
+
+6. Click the Console button to close the command window. Select the "i" info button and click any polygon to confirm that it now contains the new table data. Export the file in your preferred format.
+
+  ![](mapshaper-join-confirm.png)
+
+###More about joins
+
+1. If you don't have a CSV table that matches the columns in your boundary map data, you can easily create one. Upload the boundary map to MapShaper.org, and export in CSV format, and open with any spreadsheet tool. To efficiently match data columns in the CSV spreadsheet, use the [VLOOKUP method in this book](../../transform/vlookup/index.html).
+
+2. The simple join example above uses identical keys (town, town) because the two columns headers are the same. But if you need to join data where the headers are not the same, enter the first key (the polygon map) and the second key (the CSV table).
+
+3. When joining data, keep track of the number of matching rows. For example, if the polygon map contains 169 rows (one for each town in Connecticut), but the CSV table contains only 168 rows of population data, MapShaper will join all of those with matching names, and then display this message:
+```
+Joined 168 data records
+1/169 target records received no data
 ```
 
-5. How to understand the command above:
-  - The first part creates a merged town, which consists of two existing towns
-  - The second line dissolves the boundary between each of those towns
-  - The pipe symbols ( || ) separate terms, and are usually located above the return key on US keyboards.
-  - The backslash symbol ( \ ) separates lines of instructions in this console.
+##Merge selected polygons with join and dissolve commands
 
-  ![](mapshaper-dissolve-selected-640.gif)
+ Another common task is to merge selected polygons in a boundary map, which you can do in MapShaper with the join and dissolve commands you learned above. Imagine that you wish to create regional "cluster" boundaries from smaller polygon areas. For example, the [Connecticut Department of Public Health](http://www.ct.gov/dph/cwp/view.asp?a=3123&q=397740) has grouped individual towns, such as Bloomfield and West Hartford, into regional health districts. Your task is to begin with a statewide polygon map of all town boundaries, and to create a new polygon map that displays these regional clusters.
 
-If entered correctly, the command will dissolve only the boundary between two (or more) designated polygons, and the remainder of the map will remain intact. Make additional edits, or close the Console window and Export your file.
+ To follow this example, [download the Connecticut towns simplfied GeoJSON map file](CT-towns-simple.geojson). (If necessary, right-click or control-click on the link to save the file.)
 
-## Dissolve multiple polygons more efficiently
+ Refresh the browser to start a new session in http://MapShaper.org.
 
-To dissolve (or merge) multiple polygons in a map, follow this multi-step strategy to save time. Overall, the goal is to export the map data in CSV format, edit this file to insert a list of polygons to be merged, then use Mapshaper to join the original map to the CSV and dissolve selected boundaries.
+1. Import the CT-towns-simple.geojson map file into http://MapShaper.org.
 
-1. Download the simplified Connecticut town boundary GeoJSON map file](CT-towns-simplified.geojson) and import into http://MapShaper.org.
-
-2. Export in CSV format, which will create table of data about each polygon, without boundaries.
+2. Export in CSV format. This steps creates a spreadsheet that lists all of the polygon town names, without geographic details.
 
   ![](towns-export-csv.png)
 
-3. Open the CSV file with any spreadsheet tool. Copy the contents of the "towns" column, paste it into a second column, and change the header of this second column to "merge-towns".
+3. Open the CSV file with any spreadsheet tool. Copy the contents of the "towns" column, paste it into a second column, and change the header of this second column to "merged".
 
-4. In this new "merge-towns" column, create new group entries for towns you wish to merge together. Leave other towns unchanged.
+4. In the new "merged" column, create new listings for towns you wish to merge together. In this example, Bloomfield and West Hartford are merged into Bloomfield-West Hartford. Leave other towns unchanged.
 
-  ![](CT-towns-merge-csv.png)
+  ![](CT-towns-merged-csv.png)
 
-5. Save this new spreadsheet in CSV format with a new file name, such as: CT-towns-merge.csv.
+5. Save this spreadsheet in CSV format with a new file name, such as: CT-towns-merged.csv.
 
-6. Import two files to http://MapShaper.org
+6. Drag this new CT-towns-merged.csv file into MapShaper, and click Import.
 
-  - the CT town boundary GeoJSON map file: CT-towns-simplified.geojson
-  - the new CSV file of towns to be merged: CT-towns-merge.csv
-
-7. When importing two or more layers at the same time, use the drop-down menu to display one of them in the viewer. The CSV file will appear as a series of boxes, so display the GeoJSON map file instead.
+7. Use the drop-down menu to manage multiple layers in MapShaper. Since the CSV file has no geography, it appears as a series of rectangular cells. Instead, select the CT-towns-simple.geojson map to display it as the active layer.
 
   ![](mapshaper-two-layers.png)
 
-8. Click on the Console button, then copy and paste in this two-part command, and press return:
+8. Click on the Console button, type in both of the commands below, and press Return at the end of each line:
 
 ```
--join CT-towns-merge.csv keys=town,town \
--dissolve merge-towns \
+-join CT-towns-merged.csv keys=town,town
+-dissolve merged
 ```
 
-  How to understand the command above:
-  - The first line "joins" the active layer (the map boundary file) to the CSV spreadsheet, with "keys" to match their shared column: town.
-  - The second line dissolves the map boundaries of towns listed in the merge-towns column of the CSV file.
+  How to understand the commands above:
+  - The first line "joins" the active layer (the polygon map) to the CSV spreadsheet, with "keys" to match their shared data columns, which are both labeled as "town".
+  - The second line dissolves the polygons of towns listed in the "merged" column of the CSV file. In this simple example, only Bloomfield and West Hartford are dissolved into a combined "Bloomfield-West Hartford" regional health district, and all of the other polygons remain the same.
 
   ![](mapshaper-towns-merged.png)
 
-Click the Console button to close its window, and Export the map in your preferred format.
+Click the Console button to close its window. Select the "i" information button to inspect your merged polygons. Export the map in your preferred format.
 
 
-## Learn more advanced features in MapShaper.org
+##Learn more advanced MapShaper methods
 
-- See the GitHub project wiki (https://github.com/mbloch/mapshaper/wiki/) for more command references and tips about map simplification
+- See the MapShaper GitHub project wiki (https://github.com/mbloch/mapshaper/wiki/) for more command references and tips about map simplification
 
 
 

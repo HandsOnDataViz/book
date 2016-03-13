@@ -1,4 +1,4 @@
-#Edit, Dissolve, and Join Layers with MapShaper.org
+#Edit, Dissolve, and Join with MapShaper.org
 
 MapShaper (http://MapShaper.org) is another versatile open-source mapping tool, developed and maintained by [Matthew Bloch on GitHub](https://github.com/mbloch/mapshaper). Using the web interface, users can:
 - Import and export map layers in multiple formats: Shapefile, GeoJSON, CSV, and more

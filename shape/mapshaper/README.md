@@ -1,4 +1,4 @@
-#Edit, Dissolve, and Join Layers with MapShaper.org
+#Edit, Dissolve, and Join with MapShaper.org
 
 MapShaper (http://MapShaper.org) is another versatile open-source mapping tool, developed and maintained by [Matthew Bloch on GitHub](https://github.com/mbloch/mapshaper). Using the web interface, users can:
 - Import and export map layers in multiple formats: Shapefile, GeoJSON, CSV, and more
@@ -44,7 +44,7 @@ If your data visualization project displays a zoomed-out state or national or wo
 
 ![](mapshaper-simplify.png)
 
-##Dissolve all internal polygons to create an outline map
+##Dissolve internal polygons to create an outline map
 MapShaper.org also includes a Console button to type in commands for common map editing tasks. Imagine that you begin with a boundary map that includes internal polygons, but your goal is to remove all of them to create an outline map.
 
 Click the Console button, which opens a window to type in commands. Enter the command below, then press return. Close the Console window and Export your outline map.
@@ -55,7 +55,7 @@ Click the Console button, which opens a window to type in commands. Enter the co
 
 ![](mapshaper-dissolve-simple-640.gif)
 
-##Clip one map layer to match the outline of a second layer
+##Clip a map to match an outline layer
 Imagine that you start with a polygon map of all towns in Connecticut, and an outline map of Hartford County, a larger region that includes some (but not all) of those smaller towns. Your goal is to create a polygon map of all towns inside Hartford County. In other words, we will "clip" the statewide town map using the county outline map.
 
 To follow this example, download the [Connecticut towns map](CT-towns.geojson) and the [Hartford County outline map](HartfordCounty.geojson), both in GeoJSON format. (If necessary, right-click or control-click on each link to save each file.)
@@ -83,6 +83,7 @@ Refresh the browser to start a new session in http://MapShaper.org.
 A common mapping task is to join (or merge) new data columns into a polygon boundary map, and MapShaper.org makes this very easy. Imagine that you have two files:
 - Connecticut town boundary map
 - a spreadsheet of town population data
+
 Your goal is to unite these files, so that you can later display them in a thematic polygon map. Since these two files share a common column of data -- the town names -- you can join them together into one merged file.
 
 ![](join-polygon-table-concept.png)
@@ -90,6 +91,7 @@ Your goal is to unite these files, so that you can later display them in a thema
 To follow this example, download two files:
 - [Connecticut towns simplified map in GeoJSON format](CT-towns-simple.geojson)
 - [Connecticut towns population data in CSV format](CT-towns-popdensity.csv)
+
 If necessary, right-click or control-click on the links to save each file.
 
 Refresh the browser to start a new session in http://MapShaper.org.

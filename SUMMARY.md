@@ -37,7 +37,7 @@
    * [Layer Maps with Google Fusion](map/gft-layer-wizard/README.md)
 * [Shape Your Map Data](shape/README.md)
    * [Convert with GeoJson.io](shape/geojsonio/README.md)
-   * [Edit and Join with Mapshaper](shape/mapshaper/README.md)
+   * [Edit and Join with Mapshaper.org](shape/mapshaper/README.md)
 * [Modify Code Templates](modify/README.md)
    * [GitHub: One Tool for Everything](modify/github/README.md)
    * [GitHub Desktop & Atom Editor](modify/ghdesktop/README.md)

@@ -36,6 +36,7 @@
    * [Design Maps with ColorBrewer](map/colorbrewer/README.md)
    * [Layer Maps with Google Fusion](map/gft-layer-wizard/README.md)
 * [Shape Your Map Data](shape/README.md)
+   * [Convert KMZ to KML](shape/convert-kmz/README.md)
    * [Convert with GeoJson.io](shape/geojsonio/README.md)
    * [Edit and Join with Mapshaper.org](shape/mapshaper/README.md)
 * [Modify Code Templates](modify/README.md)

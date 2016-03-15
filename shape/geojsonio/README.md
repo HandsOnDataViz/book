@@ -1,23 +1,5 @@
 # Convert and Create Map Data with GeoJson.io
 
-## What is GeoJSON?
-GeoJSON is a relatively new and increasingly popular open format for map data, which can include:
-- points (such as address locations, expressed in longitude-latitude coordinates)
-- polygons (such boundary lines, expressed as a series of coordinate points)
-- polylines (such as streets, expressed as a series of coordinate points)
-- additional info (such as names and labels, expressed as properties of any feature above)
-and more.
-
-One big advantage of GeoJSON map data is portability across many tools. GeoJSON files can be used with Leaflet map code, Google Maps JS API code, CartoDB map tools, and more.
-
-Also, your GitHub repository will automatically display any GeoJSON files in a map view. Click to view this [simple GeoJSON point data file on GitHub](https://github.com/JackDougherty/datavizforall/blob/master/shape/geojsonio/name-lat-lon-info.geojson).
-
-GeoJSON data must follow a [structured format](http://geojson.org/), but the file name may end with either .geojson or .json.
-
-The GeoJSON structured format orders coordinates in *longitude-latitude* format, the same as X-Y coordinates in mathematics. This is the opposite of Google Maps and several other web map tools, which order points in *latitude-longitude* format. For example, Hartford Connecticut is located at (-72.67, 41.76) in GeoJSON, but (41.76, -72.67) in Google Maps.
-
-## What is GeoJSON.io?
-
 Go to http://geojson.io to explore this open-source web tool to convert, edit, and create GeoJSON map data. The tool was originally developed by Tom MacWright, and is supported by Mapbox.com.
 
 ### Convert a CSV spreadsheet of point data into GeoJSON

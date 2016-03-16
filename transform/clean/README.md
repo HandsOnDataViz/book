@@ -1,5 +1,7 @@
 # Clean Up Dirty and Disorganized Data
 
+*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
+
 Sometimes we receive a spreadsheet with problem entries that need to be cleaned up before we can successfully upload it into a visualization tool.
 
 ## Find and Replace with a blank
@@ -37,6 +39,8 @@ To follow this example, [download this sample spreadsheet](split-coordinate-pair
 The coordinate pairs column is now split into two separate columns. Relabel the headers: longitude and latitude.
 
 **TO DO** insert GIF animation above?
+
+**TO DO** write directions to split a single address cell "300 Summit St, Hartford CT 06106" into separate columns for address, city, state, zip
 
 ## Combine separate data columns into one
 

@@ -1,4 +1,4 @@
-# Geocode Addresses and Extract Coordinates with the US Census
+# Geocode Addresses and Extract Coordinates with the US Census Geocoder
 
 *By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
 

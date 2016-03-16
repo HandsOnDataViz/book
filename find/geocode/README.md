@@ -33,14 +33,14 @@ To follow this tutorial, [download 50 sample addresses in CSV format](sample-add
 
   ![](address-no-column-headers.png)
 
-*Hints:*
-  - If your data lacks ID numbers, quickly [create a column of consecutive numbers](../../transform/calculate/index.html), as shown in this book.
-  - If your address data includes apartment numbers, leave them in.
-  - Only the ID and address fields are required. City, state, and zip code may be blank if you lack any of this information, but fewer matches will be exact.
-  - If your address data is combined into one cell, such as:
-    - 300 Summit St, Hartford, CT 06106
-    - then try to [clean your data with the split column method](../../transform/clean/index.html) in this book.
-  - If you need to temporarily move other non-address data columns into a second spreadsheet, remember to paste the column of ID numbers into the second sheet. After geocoding, sort both sheets by the ID column, then paste to rematch the data.
+  *Hints:*
+    - If your data lacks ID numbers, quickly [create a column of consecutive numbers](../../transform/calculate/index.html), as shown in this book.
+    - If your address data includes apartment numbers, leave them in.
+    - Only the ID and address fields are required. City, state, and zip code may be blank if you lack any of this information, but fewer matches will be exact.
+    - If your address data is combined into one cell, such as:
+      - 300 Summit St, Hartford, CT 06106
+      - then try to [clean your data with the split column method](../../transform/clean/index.html) in this book.
+    - If you need to temporarily move other non-address data columns into a second spreadsheet, remember to paste the column of ID numbers into the second sheet. After geocoding, sort both sheets by the ID column, then paste to rematch the data.
 
 2. Save the file in CSV generic spreadsheet format, in batches of no more than 1,0000 rows per file. Learn more about [saving in CSV format](../../transform/csv/index.html), in this book.
 

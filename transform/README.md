@@ -4,7 +4,6 @@ This section demonstrates ways to restructure your spreadsheet data and make it 
 
 - Aggregate (or group together) rows of data with similar entries
 - Join (or merge) data from two tables that share a similar column
-- Geocode (or locate the map coordinates) of street address data
 
 **TO DO**
 - Clean up data that contains stray commas, or mistyped entries

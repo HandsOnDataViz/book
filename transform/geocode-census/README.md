@@ -1,5 +1,9 @@
 # Geocode address data with US Census Geocoder
 
+Geocoding means to convert the description of a specific place, such as a street address, into a location on a map. When 
+
+Although many free web tools 
+
 **TO DO**
 - Introduce this tool: https://www.census.gov/geo/maps-data/data/geocoder.html
 - Read the intro and documentation: http://www.census.gov/geo/maps-data/data/geocoder.html

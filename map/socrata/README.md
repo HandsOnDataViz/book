@@ -1,6 +1,6 @@
 # Filtered Point Map with Socrata Open Data
 
-*By [Veronica X. Armendariz and Jack Dougherty](../../introduction/who.md), last updated February 11, 2016*
+*By [Veronica X. Armendariz and Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
 
 Open data repositories recently launched by [the State of Connecticut](http://data.ct.gov) and [the City of Hartford](http://data.hartford.gov) both use [the Socrata platform](http://www.socrata.com), which offer user-friendly ways to view, filter, and export data. Also, the Socrata platform includes built-in support to create interactive charts and maps, and to embed them on your own websites. This tutorial demonstrates these features by creating an interactive point map of selected schools from the Connecticut Education Directory in the state data portal. The final product looks like this:
 
@@ -57,7 +57,7 @@ Continue to add Conditional Formatting by defining the data columns. In this exa
 
 ![](SocrataMap11.png)
 
-After setting all of your Conditional Formatting, press Apply at the bottom of the tab. Double-check that your visualization appears exactly as you wish, then Save As under an appropriate name. Note that your visualization will become <strong>publicly visible</strong> to other users on the Socrata open data platform, though you have the option to remove it via your individual profile view.
+After setting all of your Conditional Formatting, press Apply at the bottom of the tab. Double-check that your visualization appears exactly as you wish, then Save As under an appropriate name. Note that your visualization will become **publicly visible** to other users on the Socrata open data platform, though you have the option to remove it via your individual profile view.
 
 ![](SocrataMap12.png)
 

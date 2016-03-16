@@ -24,9 +24,11 @@ Common census areas, as shown in [American FactFinder download tool](http://fact
 
 Learn more: Explore this visual interactive of US Census geographic areas and definitions (http://www.census.gov/geo/reference/webatlas/)
 
-See also in this book: [Find census geography for street addresses with Census Geocoder](../../transform/geocode-census/index.html)
+See also in this book: [Find census geography for street addresses with Census Geocoder](../../transform/geocode/index.html)
 
 **Social Explorer** public version (http://socialexplorer.com) is another reputable source for census and related demographic data, past and present. The platform allows users to create data maps that may be exported as static images or presentation slides. Several academic institutions subscribe to the professional version with additional features.  
+
+**TO DO** create tutorial on how to cleanly download census data from Social Explorer and Census.gov to join with geography, especially census tract numbers
 
 **Data.gov** (https://www.data.gov/) is the official open data repository for US federal government agencies, managed by the US General Services Administration, and powered by an open-source CKAN and WordPress platform.
 

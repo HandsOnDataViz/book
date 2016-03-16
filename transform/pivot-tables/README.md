@@ -1,5 +1,7 @@
 # Aggregate Data with Pivot Tables
 
+*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
+
 Sometimes your goal is to aggregate individual rows of data into larger groups by the same type. For example, one organization compiled a spreadsheet of its contacts. Each row included a city, and when sorted, it appeared like this:
 
 ![](PivotTablesPrep.png)

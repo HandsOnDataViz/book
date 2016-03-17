@@ -28,7 +28,9 @@ Insert brackets around the words to be underlined, followed by parentheses for t
 Regular text [with underlined hotlink](http://anywhere.com)
 ```
 
-For internal links to other chapters of this GitBook, which is organized into parts, go up one or more folder levels at the start of the pathname. In this example, the pathname goes up two folder levels to locate the chapter and file:
+For internal links to other chapters of this GitBook, which is organized into parts, go up one or more folder levels at the start of the pathname. Also, add the phrase **in this book** to the main text to assist when searching for internal book links to revise, using the Find in Project menu in Atom Editor.
+
+In this example, the pathname goes up two folder levels to locate the chapter and file:
 
 ```
 [Improve this book:](../../gitbook/improve.md)

@@ -26,7 +26,7 @@ This free and easy-to-learn tool looks similar to Google Sheets, but is more pow
 - Operates entirely within the browser, across all platforms
 - Upload geographic border files to create nearly any polygon map
 - Publish and embed the interactive map on your own website
-- Flexible GFT point and polygon maps can be inserted into [Searchable Map Template, in this book](../../modify/searchable-map-gft/index.html)
+- Flexible GFT point and polygon maps can be inserted into [Searchable Map Template, in this book](../../fusion/searchable-point-map/index.html)
 
 ###Limitations of GFT
 - Google Fusion Tables has been listed as *experimental* for several years

@@ -1,5 +1,7 @@
 # Convert a Compressed KMZ file to KML format
 
+*By [Jack Dougherty](../../introduction/who.md), last updated March 17, 2016*
+
 Sometimes KML files are distributed in compressed KMZ format. One easy conversion method:
 
 - Install the free [Google Earth tool](https://www.google.com/earth/)

@@ -1,5 +1,7 @@
 #Edit, Dissolve, and Join with MapShaper.org
 
+*By [Jack Dougherty](../../introduction/who.md), last updated March 17, 2016*
+
 MapShaper (http://MapShaper.org) is another versatile open-source mapping tool, developed and maintained by [Matthew Bloch on GitHub](https://github.com/mbloch/mapshaper). Using the web interface, users can:
 - Import and export map layers in multiple formats: Shapefile, GeoJSON, CSV, and more
 - Simplify (or smooth out) geographic details to reduce map file size
@@ -77,6 +79,14 @@ Refresh the browser to start a new session in http://MapShaper.org.
 
 ![](mapshaper-clip-640.gif)
 
+
+##Remove unwanted data columns
+
+If your polygon map contains unwanted data columns, enter the "-filter-fields" Console command to keep only the columns you list. The example below deletes all columns *except* "town":
+
+```
+-filter-fields town
+```
 
 ##Join data columns with a polygon map
 
@@ -177,6 +187,7 @@ Click the Console button to close its window. Select the "i" information button 
 ##Learn more advanced MapShaper methods
 
 - See the MapShaper GitHub project wiki (https://github.com/mbloch/mapshaper/wiki/) for more command references and tips about map simplification
+- *TO DO*: illustrate concept of a point-to-polygon spatial join. When using the join command, "If the keys= option is missing, Mapshaper will perform a point-to-polygon or polygon-to-point spatial join."
 
 
 

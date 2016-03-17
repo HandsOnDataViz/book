@@ -1,6 +1,6 @@
-# Modify Code Templates
+# Edit Open-Source Code Templates and Host on the Web
 
-This section demonstrates how to modify a template of data visualization code and host it on the web. This book does not attempt to teach coding from scratch. However, by learning some basic principles and tools, you can easily change a few lines of code and insert your own data into a data visualization template that someone else has already created.
+This section demonstrates how to edit free and open-source templates of data visualization code and host them on the web. This book does not attempt to teach coding from scratch. However, by learning some basic principles and tools, you can easily change a few lines of code and insert your own data into an existing template to make it your own.
 
 The easy-to-modify data visualization templates in this book contain code that is hosted on a website and runs inside the user's web browser.
 

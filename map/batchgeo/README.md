@@ -1,5 +1,7 @@
 # Quickly Create a Geocoded Point Map with BatchGeo
 
+*By [Jack Dougherty](../../introduction/who.md), last updated March 17, 2016*
+
 The free version of the BatchGeo mapping tool (http://batchgeo.com) is so quick and easy that it barely needs a tutorial.
 
 - Copy and paste (or drag and drop) address data into the tool.

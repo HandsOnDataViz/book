@@ -100,7 +100,8 @@ To embed an interactive data visualization from a GitHub Pages host site into a 
 
 See my sample repositories, with links to live demo sites, at https://github.com/JackDougherty?tab=repositories. Learn more about GitHub general features to share and collaborate on other users' public code repositories.
 
-
+**TO DO**
+- Remember, if you have already forked one copy, go to your GitHub repository Settings to rename it, or create a new GitHub repo and use GitHub Desktop to upload template Files
 
 ---
 

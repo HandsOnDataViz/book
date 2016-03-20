@@ -15,5 +15,6 @@
 - Derek Eder http://derekeder.com/searchable_map_template/
 
 ## To Do
+- insert live iframe demo on this page
 - update the repo from Derek Eder's most current template
 - insert step-by-step tutorial to for readers to edit template, based on basic searchable point map chapter

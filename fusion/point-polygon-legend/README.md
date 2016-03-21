@@ -1,6 +1,6 @@
 # Searchable Point and Polygon Map Template with Dynamic Legend using Google Maps and Fusion Tables
 
-*By Jack Dougherty(../../introduction/who.md), last updated March 20, 2016*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 20, 2016*
 
 ## Demo
 - http://jackdougherty.github.io/fusion-point-polygon-legend/

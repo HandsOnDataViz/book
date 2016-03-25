@@ -36,20 +36,28 @@ In addition to the official repositories above, Connecticut news organizations t
 - Download and drag into http://geojson.io to view and edit
 - See also the [Map Your Data](../../map/index.html) and [Shape Your Map Data](../../shape/index.html) sections of this book.
 
+CT county borders 2010 [from MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)
+- [KML](CT-counties-2010-MAGIC.kml)
+- [GeoJSON](CT-counties-2010-MAGIC.geojson)
+
 ![](CT-towns-mini.png)
 
 CT town borders 2010 [from MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)
-- [KML](CT-town-borders-2010-MAGIC.kml)
-- [GeoJSON](CT-town-borders-2010-MAGIC.geojson)
+- [KML](CT-towns-2010-MAGIC.kml)
+- [GeoJSON](CT-towns-2010-MAGIC.geojson)
 
-CT census tracts 2010 [from MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)
+CT census tract borders 2010 [from MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)
 - [KML](CT-census-tracts-2010-MAGIC.kml)
+
+Hartford County outline 2010 [from MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)
+- [KML](HartfordCounty-outline-2010-MAGIC.kml)
+- [GeoJSON](HartfordCounty-outline-2010-MAGIC.geojson)
 
 ![](Hartford-neighborhoods-mini.png)
 
 Hartford neighborhood borders 2015 [from HartfordData](http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5)
-- [KML](Hartford-neighborhoods-2015-HartGov.kml)
-- [GeoJSON](Hartford-neighborhoods-2015-HartGov.geojson)
+- [KML](Hartford-neighborhoods-2015-HartData.kml)
+- [GeoJSON](Hartford-neighborhoods-2015-HartData.geojson)
 
 **TO DO**
 - reorganize with more details about scale and projection

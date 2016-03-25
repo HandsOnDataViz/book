@@ -1,4 +1,5 @@
 # Connecticut open data
+*By [Jack Dougherty](../../introduction/who.md), last updated March 25, 2016*
 
 Since this book was created in Hartford, Connecticut, it lists state and municipal open data repositories for the benefit of local readers:
 

@@ -36,6 +36,13 @@ In addition to the official repositories above, Connecticut news organizations t
 - Download and drag into http://geojson.io to view and edit
 - See also the [Map Your Data](../../map/index.html) and [Shape Your Map Data](../../shape/index.html) sections of this book.
 
+| Geography      | Source         | GeoJSON   | KML       |
+| :------------- | :------------- | :-------- | :-------- |
+| CT counties    | [MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)]    | [GeoJSON](CT-counties-2010-MAGIC.geojson)      | [KML](CT-counties-2010-MAGIC.kml)     |
+| CT towns       | [from MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)       | [GeoJSON](CT-towns-2010-MAGIC.geojson)      | [KML](CT-towns-2010-MAGIC.kml)      |
+| Item One       | Item Two       | item      | item      |
+
+
 CT county borders 2010 [from MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)
 - [KML](CT-counties-2010-MAGIC.kml)
 - [GeoJSON](CT-counties-2010-MAGIC.geojson)

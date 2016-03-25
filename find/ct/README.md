@@ -41,12 +41,12 @@ In addition to the official repositories above, Connecticut news organizations t
 | CT counties            | [MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)| [Preview](http://magic.lib.uconn.edu/preview.html#layers=40) | [GeoJSON](CT-counties-2010-MAGIC.geojson) | [KML](CT-counties-2010-MAGIC.kml) |
 | CT towns               | [MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)| [Preview](http://magic.lib.uconn.edu/preview.html#layers=54) | [GeoJSON](CT-towns-2010-MAGIC.geojson) | [KML](CT-towns-2010-MAGIC.kml) |
 | CT tracts 2010         | [MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)| [Preview](http://magic.lib.uconn.edu/preview.html#layers=66) | [GeoJSON](CT-tracts-2010-MAGIC.geojson) | [KML](CT-tracts-2010-MAGIC.kml) |
-| Hartford County        | [MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | no preview | [GeoJSON](HartfordCounty-outline-2010-MAGIC.geojson) | [KML](HartfordCounty-outline-2010-MAGIC.kml) |
-| Hartford neighborhoods | [Hartford](http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5)] | [Preview](http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5) [GeoJSON](Hartford-neighborhoods-2015-HartData.geojson) | [KML](Hartford-neighborhoods-2015-HartData.kml) |
+| Hartford County        | [MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | not yet | [GeoJSON](HartfordCounty-outline-2010-MAGIC.geojson) | [KML](HartfordCounty-outline-2010-MAGIC.kml) |
+| Hartford neighborhoods | [Hartford](http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5) | [Preview](http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5) | [GeoJSON](Hartford-neighborhoods-2015-HartData.geojson) | [KML](Hartford-neighborhoods-2015-HartData.kml) |
 
 **TO DO**
 - reorganize with more details about scale and projection
-- add census areas (tracts; block groups) for City of Hartford; Hartford County; State
+- add census areas (tracts; block groups) for City of Hartford; Hartford County;
 - add Capitol Region Council of Governments (CRCOG) http://www.crcog.org/
 - add school districts (and clarify elementary-secondary)
 - add Capitol Region Education Council (CREC) http://www.crec.org/

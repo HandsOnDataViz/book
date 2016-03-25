@@ -30,11 +30,11 @@ In addition to the official repositories above, Connecticut news organizations t
 **TO DO** describe Freedom of Information Act (FOIA) data requests in Connecticut
 
 
-## Common data files for Hartford and Connecticut
+## Common geographic boundary files for Hartford and Connecticut
 
-### Geographic boundaries
-- Download and drag into http://geojson.io to view and edit
-- See also the [Map Your Data](../../map/index.html) and [Shape Your Map Data](../../shape/index.html) sections of this book.
+- Click link to download file. If necessary, right-click to Save As...
+- To view or edit, drag files into http://geojson.io or http://mapshaper.org
+- Learn more in the [Map Your Data](../../map/index.html) and [Shape Your Map Data](../../shape/index.html) sections of this book
 
 | Geography              | Source    | Preview | GeoJSON | KML |
 | :--------------------- | :---------| :------ | :------ |:--- |

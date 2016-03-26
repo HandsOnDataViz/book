@@ -2,7 +2,9 @@
 
 *By [Derek Eder and Jack Dougherty](../../introduction/who.md), last updated March 26, 2016*
 
-This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages. Explore this live demo (http://jackdougherty.github.io/fusion-map-point) of a searchable point map with checkboxes.
+This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages. 
+
+Explore this live demo (http://jackdougherty.github.io/fusion-map-point) of a searchable point map with checkboxes.
 
 ![](searchable-map-screenshot.png)
 
@@ -12,8 +14,10 @@ Strengths:
 - Searchable location with filters (checkboxes, sliders, etc.)
 - Optional template to embed as an iframe on your own site
 - All data (up to 100,000 map points) resides in Google Fusion Table
-- No coding skills required, but must edit existing template
 - Post questions on [Google Group Forum for this template](https://groups.google.com/forum/#!forum/fusion-table-map-template)
+
+Limitations:
+- No coding skills required, but several steps required to edit existing code template
 
 Before you begin, review other tutorials in this book:
 - [Point map with Google Fusion Tables](../../map/point-gft/)
@@ -192,7 +196,7 @@ See Derek's iframe instructions: https://github.com/derekeder/FusionTable-Map-Te
 ## Questions and Common Problems
 Post questions on the Google Group Forum for this template: https://groups.google.com/forum/#!forum/fusion-table-map-template
 
-First, see Derek's troubleshooting advice to avoid common problems: https://github.com/derekeder/FusionTable-Map-Template#common-issuestroubleshooting
+Before posting a question, see Derek's troubleshooting advice to avoid common problems: https://github.com/derekeder/FusionTable-Map-Template#common-issuestroubleshooting
 
 ## Video tutorial <a id="#video"></a>
 

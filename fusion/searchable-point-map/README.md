@@ -1,33 +1,30 @@
 # Searchable Point Map Template with Google Fusion Tables and GitHub Pages
 
-*By [Derek Eder and Jack Dougherty](../../introduction/who.md), last updated May 5, 2015*
+*By [Derek Eder and Jack Dougherty](../../introduction/who.md), last updated March 26, 2016*
 
-## Demo with simple checkbox filter
-- http://jackdougherty.github.io/fusion-map-point
+Explore this live demo (http://jackdougherty.github.io/fusion-map-point) of a searchable point map with checkboxes.
 
-**TO DO**
-- insert live iframe demo on this page
-- review and update tutorial to simplify steps and refer to prior chapters
+![](searchable-map-screenshot.png)
+
 
 This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages.
 
-Watch the [YouTube video tutorial](https://youtu.be/b73LBXYrbng):
+Before you begin, read other tutorials in this book:
+- [Point map with Google Fusion Tables](../../map/point-gft/)
+- Edit and host code with GitHub Pages
 
-{% youtube %}https://youtu.be/b73LBXYrbng{% endyoutube %}
-
-The seven basic steps can be completed in your browser:
+Overview of key steps:
 
 - [A. Create a point map in Google Fusion Tables](#A)
 - [B. Fork a copy of the template to your GitHub account](#B)
 - [C. Create a new GitHub Pages branch to publish to the web](#C)
 - [D. Edit map options in index.html of your gh-pages branch](#D)
-- [E. Create and insert your own Google Fusion Tables API key](#E)
+- [E. Get and paste your own Google Developers API key](#E)
 - [F. Add filter to show legend and selected map points](#F)
 - [G. Save code edits from gh-pages to master branch](#G)
-
-GitHub allows users to create one fork of the basic Searchable Map template to your account. To create a second template, or to move and edit multiple files for more advanced versions, download the free GitHub for Mac/Windows tool to clone and sync to your GitHub repositories.
-
 - [H. Clone and sync additional templates with GitHub for Mac/Win](#H)
+
+Follow detailed steps below or watch the [YouTube video tutorial](https://youtu.be/b73LBXYrbng).
 
 See also [Additional MapsLib options](#options)
 
@@ -66,7 +63,7 @@ The Searchable Map Template contains several files, but the most essential is in
 1. Select the "soft-wrap" drop-down menu option for a better view of long lines of code.
 1. Scroll down to around line 120 of index.html to edit these essential map options ([see the full list of options](#options))
    1. **fusionTableId** - The ID of your Google Fusion Table point map that you created above, located in *File => About this table*. Select your long TableId and use keyboard commands to copy and paste into the code.)
-   1. **googleApiKey** - Your personal Google Application Programming Interface (API) key for Fusion Tables. See below how to create your own free key from your [Google API Console](https://code.google.com/apis/console/), then copy and paste in place of Derek's key.
+   1. **googleApiKey** - Get your own [Google Developers Application Programming Interface (API) key](https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key), then copy and paste it in place of the default key in the template
    1. **locationColumn** - The name of your location column in your Fusion Table, such as "geometry" or "address" or other.
    1. **map_center** - The lat/long where you want to center your map. ([Find yours here](http://www.itouchmap.com/latlong.html)).
    1. **locationScope** - The area where you want to limit searches (set to 'chicago' by default).
@@ -76,16 +73,14 @@ The Searchable Map Template contains several files, but the most essential is in
 
 See more details on MapsLib options below.
 
-## E. Create and insert your own Google Fusion Tables API key <a id="E"></a>
-Create your own API key to replace Derek's in the Map Options section of the index.html file above. By inserting your own key, Google will allow 25,000 requests per day to your Searchable Map.
+## E. Get and paste your own Google Developers API key <a id="E"></a>
+Create your own Google Maps JavaScript API key to replace the default in the Map Options section of the index.html file above. By inserting your own key, Google will allow 25,000 requests per day to your Searchable Map.
 
-1. Go to the [Google APIs Console](https://console.developers.google.com)
-1. Create a Project and name it "API Project"
-1. To Enable an API, click APIs > Fusion Table APIs (under "Other popular APIs"
-1. In the Credentials tab, create a new __Public API access__ key
-1. Select __Browser key__
-1. Leave the __Accept Requests from these HTTP referers__ section __blank__ and click __Create__
-1. Find the API KEY, which should look something like `AIzaSyA3FQFrNr5W2OEVmuENqhb2MBB2JabdaOY`. Copy and paste into the map options section of the index.html file as shown above.
+1. Go to the [Google Developers Maps JavaScript API page](https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key) and click the Get a Key button
+2. On the [Google Developers Console page](https://console.developers.google.com/projectselector/apis/credentials), select Create a New Project and press Continue
+3. On the Credentials page, create a key, which should look something like `AIzaSyBNVkiNzErPTEGpxWp0cvdqDMd2BxD-S50`.
+4. Copy and paste your key into the Map Options section of the index.html file as described above.
+5. To find or edit your key in the future, go back to the  [Google Developers Console page](https://console.developers.google.com/projectselector/apis/credentials) 
 
 ## F. Add filter to show legend and selected points <a id="F"></a>
 The Searchable Map Template code can be customized to include a filter, which displays a color-coded interactive legend that allows users to display selected points on the Google Fusion Table map. See the [Searchable map template wiki](https://github.com/derekeder/FusionTable-Map-Template/wiki) to see several [filter examples](https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples).
@@ -173,6 +168,8 @@ After making edits to your GitHub Pages branch and viewing your published map on
 
 ## H. Clone and sync additional templates with GitHub for Mac/Win <a id="H"></a>
 
+**REDO**
+GitHub allows users to create one fork (or copy) of the template repository to your account. To create a second copy, go to the GitHub browser of your first repo and select Settings to rename it. Or download the GitHub Desktop tool to create additional GitHub repos on your local Mac or Windows computer.
 GitHub allows users to create one fork of the basic Searchable Map template repository. To create a second template, or to move and edit multiple files for more advanced versions, download the GitHub for Mac/Windows tool.
 1. Download the free tool: [GitHub for Mac](https://mac.github.com/) or [GitHub for Windows](https://windows.github.com/)
 1. In the Searchable Map Template in GitHub, click __Clone__ and save to your hard drive
@@ -181,6 +178,11 @@ GitHub allows users to create one fork of the basic Searchable Map template repo
 1. In your hard drive, copy and paste the files from the cloned Searchable Map Template to your cloned second template. Replace the existing README.MD and license files.
 1. In your GitHub for Mac/Windows tool, __Commit and Sync__ your second template to your GitHub online account. Title the commit before clicking the button.
 1. Refresh your browser to view the synced files in your GitHub account. Start at the top of these directions to remove an old gh-pages branch, create a new gh-pages branch, and edit files.
+
+## Video tutorial <a id="#video"></a>
+
+
+{% youtube %}https://youtu.be/b73LBXYrbng{% endyoutube %}
 
 ## Additional MapsLib options <a id="#options"></a>
 

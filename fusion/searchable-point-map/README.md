@@ -2,22 +2,11 @@
 
 *By [Derek Eder and Jack Dougherty](../../introduction/who.md), last updated March 26, 2016*
 
-This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages. 
+This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages.
 
 Explore this live demo (http://jackdougherty.github.io/fusion-map-point) of a searchable point map with checkboxes.
 
 ![](searchable-map-screenshot.png)
-
-Strengths:
-- All steps can be done inside your browser
-- Full-screen responsive web design works on most devices
-- Searchable location with filters (checkboxes, sliders, etc.)
-- Optional template to embed as an iframe on your own site
-- All data (up to 100,000 map points) resides in Google Fusion Table
-- Post questions on [Google Group Forum for this template](https://groups.google.com/forum/#!forum/fusion-table-map-template)
-
-Limitations:
-- No coding skills required, but several steps required to edit existing code template
 
 Before you begin, review other tutorials in this book:
 - [Point map with Google Fusion Tables](../../map/point-gft/)
@@ -33,7 +22,7 @@ Overview of key steps:
 - [F. Add filter to show legend and selected map points](#F)
 - [G. Save code edits from gh-pages to your master branch](#G)
 
-See also the [YouTube video tutorial](#video) and additional [MapsLib Options](#options) below, and the more advanced [GitHub Desktop workflow](../../edit/ghdesktop) in this book. 
+See also the [YouTube video tutorial](#video) and additional [MapsLib Options](#options) below, and the more advanced [GitHub Desktop workflow](../../edit/ghdesktop) in this book.
 
 ## A. Create a point map in Google Fusion Tables <a id="A"></a>
 
@@ -50,9 +39,7 @@ The Searchable Map Template code is a free repository on the GitHub platform. Us
 2. Go to the Searchable Map Template repository on Derek's GitHub account (https://github.com/derekeder/FusionTable-Map-Template) and click the Fork button to copy it to your own GitHub account.
 3. OR, fork a similar template on Jack's GitHub account (https://github.com/jackdougherty/fusion-map-point) that already includes the checkbox code describe in step F.
 
-Reminder: GitHub allows users to create **one fork** of a repo to your account. To create a second copy, go to the repo of your first copy, click Settings, and rename it. But if you rename your repo, you also will need to change any links you created to its live version in the next section. 
-
-![](github-settings-rename.png)
+Reminder: GitHub allows users to create **one fork** of a repo to your account. To create a second copy, go to the repo of your first copy, click Settings, and rename it. But if you rename your repo, you also will need to change any links you created to its live version in the next section.
 
 ## C. Create a new GitHub Pages branch to publish to the web <a id="C"></a>
 When you forked the template into your GitHub account, it created two branches: master and gh-pages (abbreviation for GitHub Pages). Keep the master branch, but delete the old gh-pages branch, because it will not work with your account. When you create a new gh-pages branch, it will publish a working demo of the template code to the public web.
@@ -91,7 +78,7 @@ $(function() {
    - map_center - The lat/long coordinate where you want to center your map. ([Find yours here](http://www.itouchmap.com/latlong.html)).
    - locationScope - The area where you want to limit searches (set to 'chicago' by default).
 
-6. After making these edits, scroll down to the bottom of the page and click Commit Changes to save to your gh-pages branch. 
+6. After making these edits, scroll down to the bottom of the page and click Commit Changes to save to your gh-pages branch.
 7. On the README.md page, click the link you inserted to your live site to view the most recent changes. Click the browser refresh button to update the display, or [bypass the cache](http://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache#Bypassing_cache).
 
 See more details in the [MapsLib options](#options) section.
@@ -103,7 +90,7 @@ Create your own Google Maps JavaScript API key to replace the default in the Map
 2. On the [Google Developers Console page](https://console.developers.google.com/projectselector/apis/credentials), select Create a New Project and press Continue
 3. On the Credentials page, create a key, which should look something like `AIzaSyBNVkiNzErPTEGpxWp0cvdqDMd2BxD-S50`.
 4. Copy and paste your key into the Map Options section of the index.html file as described above.
-5. To find or edit your key in the future, go back to the [Google Developers Console page](https://console.developers.google.com/projectselector/apis/credentials) 
+5. To find or edit your key in the future, go back to the [Google Developers Console page](https://console.developers.google.com/projectselector/apis/credentials)
 
 ## F. Add filter to show legend and selected points <a id="F"></a>
 The Searchable Map Template code can be customized to include a filter, which displays a color-coded interactive legend that allows users to display selected points on the Google Fusion Table map. See Derek's [Searchable map template project wiki](https://github.com/derekeder/FusionTable-Map-Template/wiki) to learn about several [filter examples](https://github.com/derekeder/FusionTable-Map-Template/wiki/Filter-examples).
@@ -175,7 +162,7 @@ self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
 Hints:
 - The data column in the template is named "type." But if your Fusion Table column name has spaces in it, make sure to surround it with single quotes as shown.
 - The number of filter colors/labels/types can be expanded beyond the 3 shown above by adding lines of code. Fusion Tables and the Searchable Map Template support 5 large markers (blue, red, green, yellow, purple), and Fusion Tables supports 5 additional small markers with the same colors.
-- In the index.html file, edit the titles, text, and source info to tell the story of your map and credit others. 
+- In the index.html file, edit the titles, text, and source info to tell the story of your map and credit others.
 
 ## G. Save code edits from gh-pages to master branch<a id="G"></a>
 

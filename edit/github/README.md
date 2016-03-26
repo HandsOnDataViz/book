@@ -101,7 +101,9 @@ To embed an interactive data visualization from a GitHub Pages host site into a 
 See my sample repositories, with links to live demo sites, at https://github.com/JackDougherty?tab=repositories. Learn more about GitHub general features to share and collaborate on other users' public code repositories.
 
 **TO DO**
-- Remember, if you have already forked one copy, go to your GitHub repository Settings to rename it, or create a new GitHub repo and use GitHub Desktop to upload template Files
+Reminder: GitHub allows users to create **one fork** of a repo to your account. To create a second copy, go to the repo of your first copy, click Settings, and rename it. But if you rename your repo, you also will need to change any links you created to its live version in the next section.
+
+![](Github-settings-rename.png)
 
 ---
 

@@ -2,11 +2,18 @@
 
 *By [Derek Eder and Jack Dougherty](../../introduction/who.md), last updated March 26, 2016*
 
-Explore this live demo (http://jackdougherty.github.io/fusion-map-point) of a searchable point map with checkboxes.
+This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages. Explore this live demo (http://jackdougherty.github.io/fusion-map-point) of a searchable point map with checkboxes.
 
 ![](searchable-map-screenshot.png)
 
-This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages. All of the basic steps can be done inside your browser.
+Strengths:
+- All steps can be done inside your browser
+- Full-screen responsive web design works on most devices
+- Searchable location with filters (checkboxes, sliders, etc.)
+- Optional template to embed as an iframe on your own site
+- All data (up to 100,000 map points) resides in Google Fusion Table
+- No coding skills required, but must edit existing template
+- Post questions on [Google Group Forum for this template](https://groups.google.com/forum/#!forum/fusion-table-map-template)
 
 Before you begin, review other tutorials in this book:
 - [Point map with Google Fusion Tables](../../map/point-gft/)
@@ -22,7 +29,7 @@ Overview of key steps:
 - [F. Add filter to show legend and selected map points](#F)
 - [G. Save code edits from gh-pages to your master branch](#G)
 
-See also the [YouTube video tutorial](#video), a more advanced [GitHub Desktop workflow](#workflow), and additional [MapsLib Options](#options) below.
+See also the [YouTube video tutorial](#video) and additional [MapsLib Options](#options) below, and the more advanced [GitHub Desktop workflow](../../edit/ghdesktop) in this book. 
 
 ## A. Create a point map in Google Fusion Tables <a id="A"></a>
 
@@ -42,7 +49,6 @@ The Searchable Map Template code is a free repository on the GitHub platform. Us
 Reminder: GitHub allows users to create **one fork** of a repo to your account. To create a second copy, go to the repo of your first copy, click Settings, and rename it. But if you rename your repo, you also will need to change any links you created to its live version in the next section. 
 
 ![](github-settings-rename.png)
-
 
 ## C. Create a new GitHub Pages branch to publish to the web <a id="C"></a>
 When you forked the template into your GitHub account, it created two branches: master and gh-pages (abbreviation for GitHub Pages). Keep the master branch, but delete the old gh-pages branch, because it will not work with your account. When you create a new gh-pages branch, it will publish a working demo of the template code to the public web.
@@ -180,9 +186,13 @@ After you complete these edits to your gh-pages branch and view the live web ver
 7. Click the green Confirm Merge button.
 8. Your Pull Request should be successfully completed. Do NOT delete the gh-pages branch unless you really wish to do so.
 
-## GitHub Desktop workflow <a id="workflow"></a>
+## Embed as an iframe
+See Derek's iframe instructions: https://github.com/derekeder/FusionTable-Map-Template#iframe-template
 
+## Questions and Common Problems
+Post questions on the Google Group Forum for this template: https://groups.google.com/forum/#!forum/fusion-table-map-template
 
+First, see Derek's troubleshooting advice to avoid common problems: https://github.com/derekeder/FusionTable-Map-Template#common-issuestroubleshooting
 
 ## Video tutorial <a id="#video"></a>
 
@@ -216,7 +226,6 @@ var myMap = new MapsLib({
 | locationScope    |                  | Appended to all address searches to keep results within a geographic area.                                                                                    |
 | defaultZoom      | 11                      | Default zoom level when map is loaded (bigger is more zoomed in).                                                                                             |
 | addrMarkerImage  | images/blue-pushpin.png | Image used to identify your address search on the map. Setting it to blank (`""`) will hide the marker.                                                              |
-
 
 
 ---

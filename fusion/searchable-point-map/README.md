@@ -6,12 +6,11 @@ Explore this live demo (http://jackdougherty.github.io/fusion-map-point) of a se
 
 ![](searchable-map-screenshot.png)
 
-
-This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages.
+This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Template for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages. All of the basic steps can be done inside your browser.
 
 Before you begin, read other tutorials in this book:
 - [Point map with Google Fusion Tables](../../map/point-gft/)
-- Edit and host code with GitHub Pages
+- [Edit and Host Code with GitHub Pages](../../edit/github)
 
 Overview of key steps:
 
@@ -19,61 +18,62 @@ Overview of key steps:
 - [B. Fork a copy of the template to your GitHub account](#B)
 - [C. Create a new GitHub Pages branch to publish to the web](#C)
 - [D. Edit map options in index.html of your gh-pages branch](#D)
-- [E. Get and paste your own Google Developers API key](#E)
+- [E. Insert your own Google Developers API key](#E)
 - [F. Add filter to show legend and selected map points](#F)
 - [G. Save code edits from gh-pages to master branch](#G)
 - [H. Clone and sync additional templates with GitHub for Mac/Win](#H)
 
-Follow detailed steps below or watch the [YouTube video tutorial](https://youtu.be/b73LBXYrbng).
+See also the [YouTube video tutorial](#video).
 
 See also [Additional MapsLib options](#options)
 
 ## A. Create a point map in Google Fusion Tables <a id="A"></a>
 
-1. Create a Fusion Table ([here's a great tutorial](https://support.google.com/fusiontables/answer/2527132?hl=en&topic=2573107&ctx=topic))
+1. Upload a spreadsheet with address data into Google Fusion Tables and create a point map. See the [tutorial in this book](../../map/point-gft).
 1. Make sure at least one column is set to a type of Location and that Fusion Tables has geocoded it
-1. Your Fusion Table may include at least one column of data about the points on your map, such as numbers (1, 2, 3, etc.) to represent different types. In the map tab, select "change feature styles" to group marker icons into color-coded categories.
+1. Your Fusion Table may include at least one column of data about the points on your map, such as numbers (1, 2, 3, etc.) to represent different types. In the Map tab, select Change Feature Styles to group marker icons into color-coded categories.
 1. Set the Fusion Table to be publicly visible (via the Share button in the upper right) and make sure 'Allow Download' is enabled.
 
 ## B. Fork a copy of the template to your GitHub account <a id="B"></a>
 
-The free GitHub platform hosts the Searchable Map Template code repository. Users may "fork" a copy to their own GitHub account to edit and share, and later, to publish a working demo to the web.
+The Searchable Map Template code is a free repository on the GitHub platform. Users may "fork" a copy to their own GitHub account to edit, and then host a live web version on GitHub Pages.
 
 1. Create a free account on [GitHub](http://github.com)
-1. Go to the [Searchable Map Template repository](https://github.com/derekeder/FusionTable-Map-Template) on Derek's GitHub account.
-1. Click "fork" to copy Derek's code repository to your own GitHub account.
+1. Go to the Searchable Map Template repository on Derek's GitHub account (https://github.com/derekeder/FusionTable-Map-Template) and click the Fork button to copy it to your own GitHub account.
+1. OR, fork a similar template on Jack's GitHub account (https://github.com/jackdougherty/fusion-map-point) that already includes the checkbox code describe in step F.
 
 ## C. Create a new GitHub Pages branch to publish to the web <a id="C"></a>
-When you forked Derek's template into your GitHub account, it created two branches: master and gh-pages (abbreviation for GitHub Pages). Keep the master branch, but delete Derek's old gh-pages branch, because it will not work with your account. When you create a new gh-pages branch, it will publish a working demo of the template code to the public web.
+When you forked the template into your GitHub account, it created two branches: master and gh-pages (abbreviation for GitHub Pages). Keep the master branch, but delete the old gh-pages branch, because it will not work with your account. When you create a new gh-pages branch, it will publish a working demo of the template code to the public web.
 
-1. To delete Derek's old gh-pages branch, select the "branches" tab in your GitHub repo, and click the trash can icon to remove it.
-1. Click the "FusionTable-Map-Template" title to go to the top level of the repository
-1. Select the *branch:master* drop-down menu, type the *exact* phrase "gh-pages" into the textbox, and press enter to create and publish your own GitHub Pages branch to the web.
-1. The first time you create the GitHub Pages branch, it may take up to 10 minutes to appear on the public web. To view it online, follow this address format in your browser: https://USERNAME.github.io/REPO_NAME.
+1. To delete the old gh-pages branch, select the "branches" tab in your GitHub repo, and click the trash can icon to remove it.
+2. Click the repo title to go to the top level.
+3. Select the *branch:master* drop-down menu, type the *exact* phrase "gh-pages" into the textbox, and press enter to create and publish your own GitHub Pages branch to the web.
+4. The first time you create the GitHub Pages branch, it *may take up to 10 minutes* to appear on the public web. To view it online, follow this address format in your browser: `http://USERNAME.github.io/REPO_NAME`. For example, Derek's GitHub Pages branch is visible at: http://derekeder.github.io/FusionTable-Map-Template
+5. Add your live web link to the top of your README.md file. Make sure that you are viewing your gh-pages branch. (If  
+3. 
+4. 
+5. edit the README.MD file to insert link to your own demo in your published GitHub Pages branch, using this browser address format: https://USERNAME.github.io/REPO_NAME
 
-For example, the map template demo in Derek's gh-pages branch is visible at https://derekeder.github.io/FusionTable-Map-Template.
-
-At this point, when your map template demo becomes visible, it will look identical to Derek's, until you edit the code. While waiting for your demo to appear online, go ahead and edit the map options in your gh-pages branch.
+When your map template demo becomes visible, it will look identical to the template version, until you edit the code. While waiting for your demo to appear online, go ahead and edit the map options in your gh-pages branch.
 
 ## D. Edit map options in index.html of your gh-pages branch <a id="D"></a>
-The Searchable Map Template contains several files, but the most essential is index.html, since web browsers will open it by default when they view your GitHub Pages branch. Edit the file to display your Google Fusion Tables map, rather than Derek's, and to modify your map options. All of these steps may be done in your browser.
+The Searchable Map Template contains several files, but the most essential is index.html, since web browsers will open it by default when they view your GitHub Pages branch. Edit the file to show your map data, rather than data that came with the template, and to modify your map options. All of these steps may be done in your browser.
 
 1. Be sure to edit the gh-pages branch of your GitHub repo, rather than the master branch. To switch branches, use the drop-down menu.
-1. To edit the index.html file, select its name, then click on pencil icon to enter editing mode.
+1. To edit the index.html file, select its name, then click the pencil icon to enter editing mode.
 1. Select the "soft-wrap" drop-down menu option for a better view of long lines of code.
 1. Scroll down to around line 120 of index.html to edit these essential map options ([see the full list of options](#options))
-   1. **fusionTableId** - The ID of your Google Fusion Table point map that you created above, located in *File => About this table*. Select your long TableId and use keyboard commands to copy and paste into the code.)
-   1. **googleApiKey** - Get your own [Google Developers Application Programming Interface (API) key](https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key), then copy and paste it in place of the default key in the template
-   1. **locationColumn** - The name of your location column in your Fusion Table, such as "geometry" or "address" or other.
-   1. **map_center** - The lat/long where you want to center your map. ([Find yours here](http://www.itouchmap.com/latlong.html)).
-   1. **locationScope** - The area where you want to limit searches (set to 'chicago' by default).
-1. After making these edits, scroll down to the bottom of the page and click "commit changes" to save to your gh-pages branch. Optional, but recommended: Insert a brief description of your code edits.
-1. Edit the README.MD file to remove the link to Derek's working map demo, and create a link to your own demo in your published GitHub Pages branch, using this browser address format: https://USERNAME.github.io/REPO_NAME
+   - **fusionTableId** - The ID of your Google Fusion Table point map that you created above, located in *File => About this table*. Select your long TableId and use keyboard commands to copy and paste into the code.)
+   - **googleApiKey** - Get your own [Google Developers Application Programming Interface (API) key](https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key), as shown in the next section, then copy and paste it in place of the default key in the template
+   - **locationColumn** - The name of your location column in your Fusion Table, such as "geometry" or "address" or other.
+   - **map_center** - The lat/long coordinate where you want to center your map. ([Find yours here](http://www.itouchmap.com/latlong.html)).
+   - **locationScope** - The area where you want to limit searches (set to 'chicago' by default).
+1. After making these edits, scroll down to the bottom of the page and click Commit Changes to save to your gh-pages branch. Recommended: Insert a brief description of your code edits.
 1. Click your demo link to view the most recent changes in your GitHub Pages demo map. Be sure to refresh your browser or [bypass the cache](http://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache#Bypassing_cache).
 
-See more details on MapsLib options below.
+See more details in the [MapsLib options](#options) section.
 
-## E. Get and paste your own Google Developers API key <a id="E"></a>
+## E. Insert your own Google Developers API key <a id="E"></a>
 Create your own Google Maps JavaScript API key to replace the default in the Map Options section of the index.html file above. By inserting your own key, Google will allow 25,000 requests per day to your Searchable Map.
 
 1. Go to the [Google Developers Maps JavaScript API page](https://developers.google.com/maps/documentation/javascript/get-api-key#get-an-api-key) and click the Get a Key button
@@ -151,7 +151,7 @@ Hints:
 - The data column in the template is named "type." But if your Fusion Table column name has spaces in it, make sure to surround it with single quotes as shown.
 - The number of filter colors/labels/types can be expanded beyond the 3 shown above by adding lines of code. Fusion Tables and the Searchable Map Template support 5 large markers (blue, red, green, yellow, purple), and Fusion Tables supports 5 additional small markers with the same colors.
 - Modify additional text and links in the index.html file to tell the story of your map and its sources to viewers.
-- Modify your README.md file in your gh-pages branch to insert a link to your published demo site, following this web address format: https://USERNAME.github.io/REPO_NAME
+- Modify your README.md file in your gh-pages branch to insert a link to your published demo site, following this web address format: `http://USERNAME.github.io/REPO_NAME`
 
 ## G. Save code edits from gh-pages to master branch<a id="G"></a>
 
@@ -181,8 +181,9 @@ GitHub allows users to create one fork of the basic Searchable Map template repo
 
 ## Video tutorial <a id="#video"></a>
 
-
 {% youtube %}https://youtu.be/b73LBXYrbng{% endyoutube %}
+
+**TO DO** Update video to reflect edits above, such as inserting URL in the README.MD, or Get an API key
 
 ## Additional MapsLib options <a id="#options"></a>
 

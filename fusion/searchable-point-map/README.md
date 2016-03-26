@@ -20,11 +20,9 @@ Overview of key steps:
 - [D. Edit map options in index.html of your gh-pages branch](#D)
 - [E. Insert your own Google Developers API key](#E)
 - [F. Add filter to show legend and selected map points](#F)
-- [G. Save code edits from gh-pages to master branch](#G)
+- [G. Save code edits from gh-pages to your master branch](#G)
 
-See also the [YouTube video tutorial](#video).
-
-See also [Additional MapsLib options](#options)
+See also the [YouTube video tutorial](#video), a more advanced [GitHub Desktop workflow](#workflow), and additional [MapsLib Options](#options) below.
 
 ## A. Create a point map in Google Fusion Tables <a id="A"></a>
 
@@ -35,11 +33,16 @@ See also [Additional MapsLib options](#options)
 
 ## B. Fork a copy of the template to your GitHub account <a id="B"></a>
 
-The Searchable Map Template code is a free repository on the GitHub platform. Users may "fork" a copy to their own GitHub account to edit, and then host a live web version on GitHub Pages.
+The Searchable Map Template code is a free repository on the GitHub platform. Users may "fork" one copy to their own GitHub account to edit, and then host a live web version on GitHub Pages.
 
 1. Create a free account on [GitHub](http://github.com)
 2. Go to the Searchable Map Template repository on Derek's GitHub account (https://github.com/derekeder/FusionTable-Map-Template) and click the Fork button to copy it to your own GitHub account.
 3. OR, fork a similar template on Jack's GitHub account (https://github.com/jackdougherty/fusion-map-point) that already includes the checkbox code describe in step F.
+
+Reminder: GitHub allows users to create **one fork** of a repo to your account. To create a second copy, go to the repo of your first copy, click Settings, and rename it. But if you rename your repo, you also will need to change any links you created to its live version in the next section. 
+
+![](github-settings-rename.png)
+
 
 ## C. Create a new GitHub Pages branch to publish to the web <a id="C"></a>
 When you forked the template into your GitHub account, it created two branches: master and gh-pages (abbreviation for GitHub Pages). Keep the master branch, but delete the old gh-pages branch, because it will not work with your account. When you create a new gh-pages branch, it will publish a working demo of the template code to the public web.
@@ -166,7 +169,7 @@ Hints:
 
 ## G. Save code edits from gh-pages to master branch<a id="G"></a>
 
-After you complete these edits to your gh-pages branch and view the live web version, save a copy of your work with a "pull request" to your master branch. Use the gh-pages branch for testing new features on your live web demo site, and use the master branch to preserve a safe copy of your working code. (More advanced users can use [GitHub Desktop and other tools to manage your workflow](../../edit/tools), as described in this book.)
+After you complete these edits to your gh-pages branch and view the live web version, save a copy of your work with a "pull request" to your master branch. Use the gh-pages branch for testing new features on your live web demo site, and use the master branch to preserve a safe copy of your working code. (More advanced users can use the [GitHub Desktop workflow](#workflow).)
 
 1. In the right-hand column of the top-level of your GitHub repository, click "Pull Request"
 2. Click the green "New Pull Request" button.
@@ -177,18 +180,9 @@ After you complete these edits to your gh-pages branch and view the live web ver
 7. Click the green Confirm Merge button.
 8. Your Pull Request should be successfully completed. Do NOT delete the gh-pages branch unless you really wish to do so.
 
-## H. Clone and sync additional templates with GitHub for Mac/Win <a id="H"></a>
+## GitHub Desktop workflow <a id="workflow"></a>
 
-**REDO**
-GitHub allows users to create one fork (or copy) of the template repository to your account. To create a second copy, go to the GitHub browser of your first repo and select Settings to rename it. Or download the GitHub Desktop tool to create additional GitHub repos on your local Mac or Windows computer.
-GitHub allows users to create one fork of the basic Searchable Map template repository. To create a second template, or to move and edit multiple files for more advanced versions, download the GitHub for Mac/Windows tool.
-1. Download the free tool: [GitHub for Mac](https://mac.github.com/) or [GitHub for Windows](https://windows.github.com/)
-1. In the Searchable Map Template in GitHub, click __Clone__ and save to your hard drive
-1. In your GitHub browser, create a new repository for your second template, and select options to create a README.MD and license (recommended: MIT).
-1. Clone your second template repository to your hard drive
-1. In your hard drive, copy and paste the files from the cloned Searchable Map Template to your cloned second template. Replace the existing README.MD and license files.
-1. In your GitHub for Mac/Windows tool, __Commit and Sync__ your second template to your GitHub online account. Title the commit before clicking the button.
-1. Refresh your browser to view the synced files in your GitHub account. Start at the top of these directions to remove an old gh-pages branch, create a new gh-pages branch, and edit files.
+
 
 ## Video tutorial <a id="#video"></a>
 

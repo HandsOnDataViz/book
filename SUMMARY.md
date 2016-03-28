@@ -51,7 +51,7 @@
    * [Point-Polygon-List Map](fusion/point-polygon-list/README.md)
 * [Leaflet Map Templates](leaflet/README.md)
    * [Simple Map](leaflet/simple/README.md)
-   * [Scrolling Point Storymap](leaflet/storymap/README.md)
+   * [Point Storymap with Scroll](leaflet/storymap/README.md)
    * [Polygon Map with Click Info](leaflet/polygon-click/README.md)
    * [Polygon Map with Hover Info](leaflet/polygon-hover/README.md)
    * [Polygon Map Multi-Year Tabs](leaflet/polygon-tabs/README.md)

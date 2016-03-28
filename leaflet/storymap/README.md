@@ -38,8 +38,8 @@ Before you begin, review previous tutorials in this book:
 9. Host your storymap code on the live web with GitHub Pages. At the top level of your repo on GitHub.com, select the master branch drop-down menu, and type in this new branch name: `gh-pages`. When you first create this branch, it contents may take several minutes to appear the first time on the public web, but updates will take only seconds to appear. Your public URL follows this format: `http://USERNAME.github.io/REPO_NAME`.
 10. Learn more about how to edit your GitHub branches and make 'pull requests' to save changes from one branch to the other in the [GitHub section in this book](../../edit/github/).
 
-##Expand on this template
-See how other users have expanded on this Leaflet Storymap template and added more features:
+##More examples
+See how other readers have used this template to tell their own map stories, and added more features with flexible Leaflet code.  
 - Explore at http://pembrokesoundscapes.ca/map, view code at https://github.com/rblades/rblades.github.io -- Added audio playback in the narrative, historical map layers.
 
 ---

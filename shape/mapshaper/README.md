@@ -1,6 +1,6 @@
 #Edit, Dissolve, and Join with MapShaper.org
 
-*By [Jack Dougherty](../../introduction/who.md), last updated March 17, 2016*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 30, 2016*
 
 MapShaper (http://MapShaper.org) is another versatile open-source mapping tool, developed and maintained by [Matthew Bloch on GitHub](https://github.com/mbloch/mapshaper). Using the web interface, users can:
 - Import and export map layers in multiple formats: Shapefile, GeoJSON, CSV, and more
@@ -17,9 +17,15 @@ To follow the next few examples below, download the [Connecticut town boundary m
 
 1. Drag any map layer into the http://MapShaper.org browser window.
   - Import GeoJSON (.geojson or .json), TopoJSON, CSV, or Shapefile formats
-  - For Shapefiles, import the .shp extension; WGS84 projection is most portable
+  - For Shapefiles, import the .shp (features), .dbf (attribute data), and .prj (projection) files. Reminder: the WGS84 projection is most portable across multiple platforms.
+  - KML/KMZ files are not compatible. To convert these into a format that Mapshaper can import, see the [Convert KMZ to KML](../convert-kmz) and [Geojson.io](../geojsonio) chapters in this book.
 
-2. Click the Export button and select Shapefile, GeoJSON, TopoJSON, or CSV
+2. Click the Export button and select your preferred format:
+  - Shapefile (best for ArcGIS/QGIS software)
+  - GeoJSON (best for Leaflet and GitHub tools in this book)
+  - TopoJSON (similar to GeoJSON, with topographical data)
+  - SVG (Scalable Vector Graphics, for print or online)
+  - CSV (Comma Separated Values, generic spreadsheet format)
 
   ![](mapshaper-convert-640.gif)
 
@@ -120,7 +126,7 @@ Refresh the browser to start a new session in http://MapShaper.org.
 ```
 -join CT-towns-popdensity.csv keys=town,town
 ```
-This command instructs MapShaper to join the active map layer to the CSV table layer, based on their shared column of data, labeled as "town" in both files. In this example, 169 rows are merged together.
+Type this precisely, with **no spaces** between the words in your keys. This command instructs MapShaper to join the active map layer to the CSV table layer, based on their shared column of data, labeled as "town" in both files. In this example, 169 rows are merged together.
 
   ![](mapshaper-join-console.png)
 
@@ -130,15 +136,16 @@ This command instructs MapShaper to join the active map layer to the CSV table l
 
 ###More about joins
 
-1. If you don't have a CSV table that matches the columns in your boundary map data, you can easily create one. Upload the boundary map to MapShaper.org, and export in CSV format, and open with any spreadsheet tool. To efficiently match data columns in the CSV spreadsheet, use the [VLOOKUP method in this book](../../transform/vlookup/index.html).
+1. If you don't have a CSV table that matches the columns in your boundary map data, you can easily create one. Upload the boundary map to MapShaper.org, and export in CSV format, and open with any spreadsheet tool. To match data columns in the CSV spreadsheet, use the [VLOOKUP method in this book](../../transform/vlookup/index.html).
 
-2. The simple join example above uses identical keys (town, town) because the two columns headers are the same. But if you need to join data where the headers are not the same, enter the first key (the polygon map) and the second key (the CSV table).
+2. The simple join example above uses identical keys (town,town) because the two columns headers are the same. But if you need to join data where the headers are not the same, enter the first key (the polygon map) and the second key (the CSV table).
 
 3. When joining data, keep track of the number of matching rows. For example, if the polygon map contains 169 rows (one for each town in Connecticut), but the CSV table contains only 168 rows of population data, MapShaper will join all of those with matching names, and then display this message:
 ```
 Joined 168 data records
 1/169 target records received no data
 ```
+4. **TO DO: clarify with developer** If you add the "unjoined" flag, Mapshaper saves a copy of each unjoined record from the source table to a layer named "unjoined." If you add the "unmatched" flag, Mapshaper saves a copy of each unmatched record from the target table to a layer named "unmatched."
 
 ##Merge selected polygons with join and dissolve commands
 
@@ -187,7 +194,7 @@ Click the Console button to close its window. Select the "i" information button 
 ##Learn more advanced MapShaper methods
 
 - See the MapShaper GitHub project wiki (https://github.com/mbloch/mapshaper/wiki/) for more command references and tips about map simplification
-- *TO DO*: illustrate concept of a point-to-polygon spatial join. When using the join command, "If the keys= option is missing, Mapshaper will perform a point-to-polygon or polygon-to-point spatial join."
+- **TO DO**: illustrate concept of a point-to-polygon spatial join. When using the join command, "If the keys= option is missing, Mapshaper will perform a point-to-polygon or polygon-to-point spatial join."
 
 
 

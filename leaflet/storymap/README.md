@@ -4,7 +4,7 @@
 
 ## Try this demo
 
-<iframe src="http://jackdougherty.github.io/leaflet-storymap/index.html" width="100%" height=550></iframe>
+<iframe src="http://jackdougherty.github.io/leaflet-storymap" width="100%" height=550></iframe>
 
 ## View demo in new page
 - http://jackdougherty.github.io/leaflet-storymap/

@@ -138,14 +138,14 @@ Type this precisely, with **no spaces** between the words in your keys. This com
 
 1. If you don't have a CSV table that matches the columns in your boundary map data, you can easily create one. Upload the boundary map to MapShaper.org, and export in CSV format, and open with any spreadsheet tool. To match data columns in the CSV spreadsheet, use the [VLOOKUP method in this book](../../transform/vlookup/index.html).
 
-2. The simple join example above uses identical keys (town, town) because the two columns headers are the same. But if you need to join data where the headers are not the same, enter the first key (the polygon map) and the second key (the CSV table).
+2. The simple join example above uses identical keys (town,town) because the two columns headers are the same. But if you need to join data where the headers are not the same, enter the first key (the polygon map) and the second key (the CSV table).
 
 3. When joining data, keep track of the number of matching rows. For example, if the polygon map contains 169 rows (one for each town in Connecticut), but the CSV table contains only 168 rows of population data, MapShaper will join all of those with matching names, and then display this message:
 ```
 Joined 168 data records
 1/169 target records received no data
 ```
-4. If you add the "unjoined" flag, Mapshaper saves a copy of each unjoined record from the source table to a layer named "unjoined." If you add the "unmatched" flag, Mapshaper saves a copy of each unmatched record from the target table to a layer named "unmatched."
+4. **TO DO: clarify with developer** If you add the "unjoined" flag, Mapshaper saves a copy of each unjoined record from the source table to a layer named "unjoined." If you add the "unmatched" flag, Mapshaper saves a copy of each unmatched record from the target table to a layer named "unmatched."
 
 ##Merge selected polygons with join and dissolve commands
 
@@ -194,7 +194,7 @@ Click the Console button to close its window. Select the "i" information button 
 ##Learn more advanced MapShaper methods
 
 - See the MapShaper GitHub project wiki (https://github.com/mbloch/mapshaper/wiki/) for more command references and tips about map simplification
-- *TO DO*: illustrate concept of a point-to-polygon spatial join. When using the join command, "If the keys= option is missing, Mapshaper will perform a point-to-polygon or polygon-to-point spatial join."
+- **TO DO**: illustrate concept of a point-to-polygon spatial join. When using the join command, "If the keys= option is missing, Mapshaper will perform a point-to-polygon or polygon-to-point spatial join."
 
 
 

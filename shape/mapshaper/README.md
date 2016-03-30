@@ -83,12 +83,18 @@ Refresh the browser to start a new session in http://MapShaper.org.
 
 5. The command above instructs MapShaper to clip the active map layer (CT Towns) using the second layer (the outline of Hartford County).
 
+6. Sometimes the boundaries of the clip layer do not precisely match up with your active layer, due to differences in the source data. If necessary, add the cleanup command to remove any empty polygons or "slivers" that remain after the clip.
+```
+- clip HartfordCounty.geojson cleanup
+Removed 3 null features and 5 slivers
+```
+
 ![](mapshaper-clip-640.gif)
 
 
 ##Remove unwanted data columns
 
-If your polygon map contains unwanted data columns, enter the "-filter-fields" Console command to keep only the columns you list. The example below deletes all columns *except* "town":
+Sometimes your polygon map contains several columns of unwanted data. To quickly remove them, enter the "-filter-fields" Console command to keep only the columns you list. The example below deletes all columns *except* "town":
 
 ```
 -filter-fields town
@@ -140,12 +146,21 @@ Type this precisely, with **no spaces** between the words in your keys. This com
 
 2. The simple join example above uses identical keys (town,town) because the two columns headers are the same. But if you need to join data where the headers are not the same, enter the first key (the polygon map) and the second key (the CSV table).
 
-3. When joining data, keep track of the number of matching rows. For example, if the polygon map contains 169 rows (one for each town in Connecticut), but the CSV table contains only 168 rows of population data, MapShaper will join all of those with matching names, and then display this message:
+3. Mapshaper also helps you to keep track of data that are not properly joined or matched. For example, if the polygon map contains 169 rows (one for each town in Connecticut), but the CSV table contains only 168 rows of data, Mapshaper will join all of those with matching keys, and then display this message:
 ```
 Joined 168 data records
 1/169 target records received no data
 ```
-4. **TO DO: clarify with developer** If you add the "unjoined" flag, Mapshaper saves a copy of each unjoined record from the source table to a layer named "unjoined." If you add the "unmatched" flag, Mapshaper saves a copy of each unmatched record from the target table to a layer named "unmatched."
+To capture data records that are not properly joined, add these terms at the end of your join command: `unjoined unmatched -info`. The first term saves a copy of each unmatched record from the target table to a new layer named "unmatched," and the second term saves a copy of each unjoined record from the source table into another layer named "unjoined." In the example below, see the console command and results, and a screenshot of the two new layers.
+
+```
+$ -join towns-data.csv keys=town,town unmatched unjoined -info
+Joined 27 data records
+2/29 target records received no data
+2/29 source records could not be joined
+Layer 1 ...
+```
+![](mapshaper-unmatched-unjoined.png)
 
 ##Merge selected polygons with join and dissolve commands
 

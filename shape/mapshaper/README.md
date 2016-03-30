@@ -1,6 +1,6 @@
 #Edit, Dissolve, and Join with MapShaper.org
 
-*By [Jack Dougherty](../../introduction/who.md), last updated March 17, 2016*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 30, 2016*
 
 MapShaper (http://MapShaper.org) is another versatile open-source mapping tool, developed and maintained by [Matthew Bloch on GitHub](https://github.com/mbloch/mapshaper). Using the web interface, users can:
 - Import and export map layers in multiple formats: Shapefile, GeoJSON, CSV, and more
@@ -17,7 +17,7 @@ To follow the next few examples below, download the [Connecticut town boundary m
 
 1. Drag any map layer into the http://MapShaper.org browser window.
   - Import GeoJSON (.geojson or .json), TopoJSON, CSV, or Shapefile formats
-  - For Shapefiles, import the .shp extension; WGS84 projection is most portable
+  - For Shapefiles, import the .shp (features), .dbf (attribute data), and .prj (projection) files. Reminder: the WGS84 projection is most portable across multiple platforms.
 
 2. Click the Export button and select Shapefile, GeoJSON, TopoJSON, or CSV
 

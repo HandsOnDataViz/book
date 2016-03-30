@@ -1,8 +1,9 @@
 # Leaflet Point Storymap with Scrolling Narrative
 
-*By [Jack Dougherty](../../introduction/who.md), last updated March 28, 2016*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 30, 2016*
 
 ## Try this demo
+**please [view demo in new page]**(http://jackdougherty.github.io/leaflet-storymap/) while we fix the non-working iframe problem below
 
 <iframe src="http://jackdougherty.github.io/leaflet-storymap" width="100%" height=550></iframe>
 

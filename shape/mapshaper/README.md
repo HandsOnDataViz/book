@@ -83,7 +83,8 @@ Refresh the browser to start a new session in http://MapShaper.org.
 
 5. The command above instructs MapShaper to clip the active map layer (CT Towns) using the second layer (the outline of Hartford County).
 
-6. Sometimes the boundaries of the clip layer do not precisely match up with your active layer, due to differences in the source data. If necessary, add the cleanup command to remove any empty polygons or "slivers" that remain after the clip.
+6. Sometimes the boundaries of the clip layer do not precisely match up with your active layer, due to differences between their sources. If necessary, add the `cleanup` command to remove any null features or small "slivers" that remain after the clip.
+
 ```
 - clip HartfordCounty.geojson cleanup
 Removed 3 null features and 5 slivers
@@ -209,7 +210,8 @@ Click the Console button to close its window. Select the "i" information button 
 ##Learn more advanced MapShaper methods
 
 - See the MapShaper GitHub project wiki (https://github.com/mbloch/mapshaper/wiki/) for more command references and tips about map simplification
-- **TO DO**: illustrate concept of a point-to-polygon spatial join. When using the join command, "If the keys= option is missing, Mapshaper will perform a point-to-polygon or polygon-to-point spatial join."
+
+**TO DO**: illustrate concept of a point-to-polygon spatial join. When using the join command, "If the keys= option is missing, Mapshaper will perform a point-to-polygon or polygon-to-point spatial join."
 
 
 

@@ -3,9 +3,9 @@
 *By [Jack Dougherty](../../introduction/who.md), last updated March 30, 2016*
 
 ## Try this demo
-**please [view demo in new page]**(http://jackdougherty.github.io/leaflet-storymap/) while we fix the non-working iframe problem below
+**please** [view demo in new page](http://jackdougherty.github.io/leaflet-storymap/) while we fix the non-working iframe problem below
 
-<iframe src="http://jackdougherty.github.io/leaflet-storymap" width="100%" height=550></iframe>
+<iframe src='http://jackdougherty.github.io/leaflet-storymap' width='100%' height='550'></iframe>
 
 ## View demo in new page
 - http://jackdougherty.github.io/leaflet-storymap/
@@ -42,6 +42,22 @@ Before you begin, review previous tutorials in this book:
 ##Examples and Extended Features
 See how other readers have used this template to tell their own map stories, and added more features with flexible Leaflet code.  
 - Explore at http://pembrokesoundscapes.ca/map, view code at https://github.com/rblades/rblades.github.io -- Added audio playback in the narrative, historical map layers.
+
+
+##Testing other iframes
+
+Question: do browsers display iframes with a default "focus" value, and could that be causing our problem? See bottom of http://www.w3schools.com/tags/tag_iframe.asp
+
+Testing other iframes with similar code:
+
+Muxlab scrolling navigation iframe:
+
+<iframe src='http://muxlab.github.io/map-effects-100/Leaflet/11_scroll-driven-map-navigation.html' width='100%' height='550'></iframe>
+
+
+Pembrokesoundscapes scrolling navigation iframe:
+
+<iframe src='http://pembrokesoundscapes.ca/map' width='100%' height='550'></iframe>
 
 ---
 

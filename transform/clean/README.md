@@ -86,9 +86,7 @@ To solve this problem, the data experts at TrendCT/CT Mirror have openly shared 
 2. Upload a CSV generic spreadsheet. Learn more [about CSV format](../csv/) in this book.
 3. Select the data column to be converted into town names, and download the results.
 
-
-
-Learn more about [CTNamecleaner on GitHub](https://github.com/trendct/ctnamecleaner), and view the underlying list of Connecticut place names in a public Google sheet](https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0). 
+Learn more about [CTNamecleaner on GitHub](https://github.com/trendct/ctnamecleaner), and view the [underlying list of Connecticut place names in a public Google sheet](https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0). 
 
 ## Advanced data cleaning
 

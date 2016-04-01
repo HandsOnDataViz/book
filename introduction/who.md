@@ -6,4 +6,4 @@
 
 [Derek Eder](http://derekeder.com) is an entrepreneur, developer and one of the leaders of the civic technology community in Chicago. He is a partner at [DataMade](http://datamade.us), a civic technology company, which builds open source technology using data to empower journalists, researchers, governments and advocacy organizations. He also makes civic apps with [Open City](http://opencityapps.org/) and runs [Open Gov Hack Night](http://opengovhacknight.org/), Chicago's weekly event to build, share, and learn about civic tech. Follow him [@DerekEder on Twitter](https://twitter.com/derekeder) and contribute to his open-source code repositories at [DerekEder on GitHub](https://github.com/derekeder).
 
-Ilya Ilyankou...
+Ilya Ilyankou is a sophomore studying Computer Science and Studio Arts at Trinity College, CT.

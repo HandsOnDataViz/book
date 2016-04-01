@@ -1,14 +1,22 @@
 # Clean Up Dirty and Disorganized Data
 
-*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
+*By [Jack Dougherty](../../introduction/who.md), last updated April 1, 2016*
 
-Sometimes we receive a spreadsheet with problem entries that need to be cleaned up before we can successfully upload it into a visualization tool.
+Sometimes we receive a spreadsheet with problematic data that needs to be cleaned up before we can successfully upload it into a visualization tool.
 
 ## Find and Replace with a blank
 
-A common problem with census data is that geographic names contain extra words that we wish to remove. For example, when downloading Connecticut county subdivisions (towns), each row appears as: Andover town, Ansonia town, etc.
+A common problem with census data is that geographic names contain unnecessary words. For example, when downloading Connecticut county subdivisions (towns), each row appears as: 
+- Andover town
+- Ansonia town
+- Ashford town
 
-In any spreadsheet tool, use the Find and Replace command to remove unnecessary words. To follow this example, [download this sample spreadsheet](find-replace-town-geonames.csv). This tutorial shows screens from Excel, but other tools are very similar.
+Our goal is to remove the word "town" from each row, to produce a clean spreadsheet that we can match with other data, like this:
+- Andover
+- Ansonia
+- Ashford
+
+Here's one quick solution: In any spreadsheet tool, use the Find and Replace command to remove unwanted characters. To follow this example, [download this sample spreadsheet](find-replace-town-geonames.csv). This tutorial shows screens from Excel, but other tools are very similar.
 
 1. Open the Find and Replace command.
 
@@ -66,18 +74,21 @@ One easy solution is to write a simple spreadsheet formula to combine (or concat
 - Confirm that Google Fusion Tables geocoder does not require commas between terms
 - Clarify what happens with zip code in the example above
 
-## Clean up Connecticut city/town names with VLOOKUP
+## Convert Connecticut town names with CTNamecleaner
 
-In Connecticut, residents often write their local village, post office station, or borough name into the city field of an address. But these local names do not necessarily match up with the official list of 169 Connecticut town municipality names.
+In Connecticut, residents often list their village or neighborhood names in their address, but these do not necessarily match the official list of 169 Connecticut town governments (called county subdivisions by the US Census). For example, the Elmwood neighborhood is located in the town of West Hartford, and the Rockville village is located in the town of Vernon.
 
-The Connecticut Mirror/TrendCT staff have openly shared a wonderful spreadsheet, ctnamecleaner, to help unify these mismatched names.
+To solve this problem, the data experts at TrendCT/CT Mirror have openly shared a wonderful tool to convert village/neighborhood names into official towns, called CTNamecleaner.
 
-Click to view [ctnamecleaner in a public Google sheet](https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0). For advanced users, see also https://github.com/trendct/ctnamecleaner
+![](CTNamecleaner.png)
 
-Use the VLOOKUP tool, described in this book, to match up official town names in your data.
+1. Open CTNamecleaner with your browser at http://shiny.trendct.org/ctnamecleaner/
+2. Upload a CSV generic spreadsheet. Learn more [about CSV format](../csv/) in this book.
+3. Select the data column to be converted into town names, and download the results.
 
-**TO DO** illustrate the concept and steps above
 
+
+Learn more about [CTNamecleaner on GitHub](https://github.com/trendct/ctnamecleaner), and view the underlying list of Connecticut place names in a public Google sheet](https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0). 
 
 ## Advanced data cleaning
 

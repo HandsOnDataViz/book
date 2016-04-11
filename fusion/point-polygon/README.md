@@ -1,21 +1,14 @@
-# Searchable Map Template with Sortable Results List
+# Searchable Map Template with Point and Polygon Layers
 
 *By [Jack Dougherty](../../introduction/who.md), last updated April 11, 2016*
 
-![](fusion-point-polygon-list-demo.gif)
+![](fusion-point-polygon.png)
 
-## Demo to toggle between map and list
-- http://jackdougherty.github.io/fusion-point-polygon-list/index.html
+## Demo
+- http://jackdougherty.github.io/fusion-point-polygon/
 
-## Demo to view both map and list
-- http://jackdougherty.github.io/fusion-point-polygon-list/index_both.html
-
-## Example: school search tool
-- demo: http://jackdougherty.github.io/school-search-tool/
-- code: http://github.com/JackDougherty/school-search-tool/
-
-## Create Your Own: Fork the code from this GitHub repository
-- http://github.com/jackdougherty/fusion-point-polygon-list/
+## Fork the code from this GitHub repository
+- http://github.com/jackdougherty/fusion-point-polygon-legend/
 
 Note that this code uses Derek's Template v1.3, with different code instructions than v1.4
 
@@ -25,6 +18,8 @@ Note that this code uses Derek's Template v1.3, with different code instructions
 ## To Do
 - insert step-by-step tutorial to for readers to edit template, based on basic searchable point map chapter
 - update to Derek's template v1.4
+- add iframe version
+
 
 
 

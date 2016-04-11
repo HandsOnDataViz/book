@@ -1,9 +1,11 @@
-# Searchable Point and Polygon Map Template with Dynamic Legend using Google Maps and Fusion Tables
+# Searchable Map Template with Dynamic Polygon Legend
 
-*By [Jack Dougherty](../../introduction/who.md), last updated March 20, 2016*
+*By [Jack Dougherty](../../introduction/who.md), last updated April 11, 2016*
+
+![](fusion-point-polygon-legend.png)
 
 ## Demo
-- http://jackdougherty.github.io/fusion-point-polygon-legend/
+- http://jackdougherty.github.io/fusion-point-polygon-legend/index.html
 
 ## iframe example
 - http://jackdougherty.github.io/fusion-point-polygon-legend/iframe_test.html
@@ -11,14 +13,14 @@
 ## Fork the code from this GitHub repository
 - http://github.com/jackdougherty/fusion-point-polygon-legend/
 
+Note that this code uses Derek's Template v1.3, with different code instructions than v1.4
+
 ## Credit
 - Derek Eder http://derekeder.com/searchable_map_template/
 
 ## To Do
-- insert live iframe demo on this page
-- update the repo from Derek Eder's most current template
 - insert step-by-step tutorial to for readers to edit template, based on basic searchable point map chapter
-
+- update to Derek's template v1.4
 
 
 ---

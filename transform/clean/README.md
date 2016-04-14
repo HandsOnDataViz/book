@@ -46,7 +46,7 @@ To follow this example, [download this sample spreadsheet](split-coordinate-pair
 
 The coordinate pairs column is now split into two separate columns. Relabel the headers: longitude and latitude.
 
-**TO DO** insert GIF animation above?
+![](split_one_column_into_two.gif)
 
 **TO DO** write directions to split a single address cell "300 Summit St, Hartford CT 06106" into separate columns for address, city, state, zip
 

@@ -6,7 +6,7 @@ Sometimes we receive a spreadsheet with problematic data that needs to be cleane
 
 ## Find and Replace with a blank
 
-A common problem with census data is that geographic names contain unnecessary words. For example, when downloading Connecticut county subdivisions (towns), each row appears as: 
+A common problem with census data is that geographic names contain unnecessary words. For example, when downloading Connecticut county subdivisions (towns), each row appears as:
 - Andover town
 - Ansonia town
 - Ashford town
@@ -46,7 +46,9 @@ To follow this example, [download this sample spreadsheet](split-coordinate-pair
 
 The coordinate pairs column is now split into two separate columns. Relabel the headers: longitude and latitude.
 
-![](split_one_column_into_two.gif)
+Animated example from Excel for Windows (thanks @devitude):
+
+![](excel-win-data-text-to-columns.gif)
 
 **TO DO** write directions to split a single address cell "300 Summit St, Hartford CT 06106" into separate columns for address, city, state, zip
 
@@ -86,7 +88,7 @@ To solve this problem, the data experts at TrendCT/CT Mirror have openly shared 
 2. Upload a CSV generic spreadsheet. Learn more [about CSV format](../csv/) in this book.
 3. Select the data column to be converted into town names, and download the results.
 
-Learn more about [CTNamecleaner on GitHub](https://github.com/trendct/ctnamecleaner), and view the [underlying list of Connecticut place names in a public Google sheet](https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0). 
+Learn more about [CTNamecleaner on GitHub](https://github.com/trendct/ctnamecleaner), and view the [underlying list of Connecticut place names in a public Google sheet](https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0).
 
 ## Advanced data cleaning
 

@@ -46,7 +46,7 @@ To follow this example, [download this sample spreadsheet](split-coordinate-pair
 
 The coordinate pairs column is now split into two separate columns. Relabel the headers: longitude and latitude.
 
-Animated example from Excel for Windows (thanks @devitude):
+Animated example from Excel for Windows (thanks @f3mlat):
 
 ![](excel-win-data-text-to-columns.gif)
 

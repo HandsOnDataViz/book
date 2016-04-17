@@ -1,6 +1,6 @@
 # Clean Up Dirty and Disorganized Data
 
-*By [Jack Dougherty](../../introduction/who.md), last updated April 1, 2016*
+*By [Jack Dougherty](../../introduction/who.md), last updated April 16, 2016*
 
 Sometimes we receive a spreadsheet with problematic data that needs to be cleaned up before we can successfully upload it into a visualization tool.
 

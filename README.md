@@ -4,7 +4,7 @@
 
 ***Data Visualization for All*** illustrates how to create interactive charts and maps with easy-to-learn free tools and open data sources. This introductory textbook includes step-by-step tutorials and vivid examples to design and embed data visualizations in your own website. No coding skills required. Featured tools include Tableau Public, Google Fusion Tables, and GitHub Pages in the browser. Read or download this open-access book-in-progress at http://DataVizForAll.org.
 
-[About the authors:](introduction/who.md) Jack Dougherty (Trinity College, CT) with contributors Veronica X. Armendariz, Derek Eder, and others.
+[About the authors:](introduction/who.md) Jack Dougherty (Trinity College, CT) with contributors Veronica X. Armendariz, Derek Eder, Ilya Ilyankou, and others.
 
 [Freely read online](https://www.gitbook.com/read/book/jackdougherty/datavizforall) (recommended) or download the [PDF](https://www.gitbook.com/download/pdf/book/jackdougherty/datavizforall) or [ePUB](https://www.gitbook.com/download/epub/book/jackdougherty/datavizforall) or [Mobi/Kindle](https://www.gitbook.com/download/mobi/book/jackdougherty/datavizforall) editions.
 

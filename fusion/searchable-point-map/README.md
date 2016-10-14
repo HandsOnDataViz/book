@@ -6,7 +6,7 @@ This tutorial demonstrates how to create your own Searchable Map, using [Derek E
 
 ![](searchable-map-screenshot.png)
 
-Explore this live demo (http://jackdougherty.github.io/fusion-map-point/index.html) of a searchable point map with checkboxes. See also the iframe version (http://jackdougherty.github.io/fusion-map-point/index_iframe.html)
+Explore this live demo (https://jackdougherty.github.io/fusion-map-point/index.html) of a searchable point map with checkboxes. See also the iframe version (https://jackdougherty.github.io/fusion-map-point/index_iframe.html)
 
 Before you begin, review other tutorials in this book:
 - [Point map with Google Fusion Tables](../../map/point-gft/)

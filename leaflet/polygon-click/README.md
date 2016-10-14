@@ -4,16 +4,16 @@
 
 ## Try this demo
 
-<iframe src="http://jackdougherty.github.io/leaflet-map-polygon-click/" width="100%" height=550></iframe>
+<iframe src="https://jackdougherty.github.io/leaflet-map-polygon-click/" width="100%" height=550></iframe>
 
 ## View demo in new page
-- http://jackdougherty.github.io/leaflet-map-polygon-click/
+- https://jackdougherty.github.io/leaflet-map-polygon-click/
 
 ## To Do
 Insert internal references to prior steps in this book. See the Edit and Host Code Templates section in this book. Requires a free GitHub account to host your own version on the web.
 
 ## Create Your Own: Fork a copy of the code template on GitHub
-- http://github.com/jackdougherty/leaflet-map-polygon-click
+- https://github.com/jackdougherty/leaflet-map-polygon-click
 - Remember, if you have already forked one copy, go to your GitHub repository Settings to rename it, or create a new GitHub repo and use GitHub Desktop to upload template Files
 
 ## Obtain a polygon boundary map in GeoJSON format
@@ -54,7 +54,7 @@ Insert internal references to prior steps in this book. See the Edit and Host Co
 - In GitHub, go to drop-down menu for Master branch, and type "gh-pages" to create new branch
 - Content in the gh-pages branch will be hosted on the live web
 - Edit the README.md link to point to your own gh-pages branch, in this format:
-  - http://USERNAME.github.io/REPO-NAME/
+  - https://USERNAME.github.io/REPO-NAME/
 
 
   

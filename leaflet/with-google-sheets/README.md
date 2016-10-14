@@ -4,7 +4,7 @@
 
 ## Explore this demo
 
-<iframe src="https://jackdougherty.github.io/leaflet-maps-with-google-sheets/" width="100%" height=550></iframe>
+<iframe src="https://jackdougherty.github.io/leaflet-maps-with-google-sheets/" width="100%" height=500></iframe>
 
 ## View demo in new page
 - http://jackdougherty.github.io/leaflet-maps-with-google-sheets/

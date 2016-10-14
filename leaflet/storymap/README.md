@@ -4,10 +4,10 @@
 
 ## Try this demo
 
-<iframe src='http://jackdougherty.github.io/leaflet-storymap' width='100%' height='550'></iframe>
+<iframe src='https://jackdougherty.github.io/leaflet-storymap' width='100%' height='550'></iframe>
 
 ## View demo in new page
-- http://jackdougherty.github.io/leaflet-storymap/
+- https://jackdougherty.github.io/leaflet-storymap/
 
 ## Create Your Own Storymap
 
@@ -16,7 +16,7 @@ Before you begin, review previous tutorials in this book:
 - [Create and Convert Map Data with GeoJson.io](../../shape/geojsonio)
 
 
-1. Go to the GitHub repository template (http://github.com/jackdougherty/leaflet-storymap) and fork a copy of this repo to your own GitHub account. Requires signup for a [free GitHub account](http://github.com). Reminder: if you have already forked one copy, go to your GitHub repository Settings to rename or delete the first copy, so that you may create a second copy.
+1. Go to the GitHub repository template (https://github.com/jackdougherty/leaflet-storymap) and fork a copy of this repo to your own GitHub account. Requires signup for a [free GitHub account](http://github.com). Reminder: if you have already forked one copy, go to your GitHub repository Settings to rename or delete the first copy, so that you may create a second copy.
 2. Go to your copy on GitHub and click the "download" button to create a zipped (compressed) copy on your local computer. On most computers, double-click to unzip the folder.
 3. The map.csv file contains the map data in an easy-to-edit format. Open map.csv with any spreadsheet tool and replace the existing data with your own.
   - id -- Assign numbers 1, 2, 3. . to each point, in desired order of appearance.

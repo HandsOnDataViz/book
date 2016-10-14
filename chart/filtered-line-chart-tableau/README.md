@@ -4,7 +4,7 @@
 
 Explore this [interactive filtered line chart](http://jackdougherty.github.io/tableau-public-sample/linechart.html):
 
-<iframe src='http://jackdougherty.github.io/tableau-public-sample/linechart.html' width="100%" height="530"></iframe>
+<iframe src='https://jackdougherty.github.io/tableau-public-sample/linechart.html' width="100%" height="530"></iframe>
 
 With [Tableau Public](https://public.tableau.com), both Mac and Windows users now have another free and easy-to-use tool for creating interactive data visualizations that tell stories on the web. This tutorial demonstrates how to build a filtered line chart, with checkboxes to display selected school data, using screenshots from the Mac version (with similar steps in Windows). We created this visualization for a non-profit education advocacy group that wants web visitors to compare achievement by student cohorts across forty schools. Since displaying all of the lines at once is too complex, the filter box adds only the desired schools to the line chart, and users can float the cursor over each line to identify the school and data points.
 

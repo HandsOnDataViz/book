@@ -5,17 +5,17 @@
 ![](fusion-point-polygon-list-demo.gif)
 
 ## Demo to toggle between map and list
-- http://jackdougherty.github.io/fusion-point-polygon-list/index.html
+- https://jackdougherty.github.io/fusion-point-polygon-list/index.html
 
 ## Demo to view both map and list
-- http://jackdougherty.github.io/fusion-point-polygon-list/index_both.html
+- https://jackdougherty.github.io/fusion-point-polygon-list/index_both.html
 
 ## Example: school search tool
-- demo: http://jackdougherty.github.io/school-search-tool/
-- code: http://github.com/JackDougherty/school-search-tool/
+- demo: https://jackdougherty.github.io/school-search-tool/
+- code: https://github.com/JackDougherty/school-search-tool/
 
 ## Create Your Own: Fork the code from this GitHub repository
-- http://github.com/jackdougherty/fusion-point-polygon-list/
+- https://github.com/jackdougherty/fusion-point-polygon-list/
 
 Note that this code uses Derek's Template v1.3, with different code instructions than v1.4
 

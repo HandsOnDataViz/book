@@ -5,10 +5,10 @@
 ![](fusion-point-polygon.png)
 
 ## Demo
-- http://jackdougherty.github.io/fusion-point-polygon/
+- https://jackdougherty.github.io/fusion-point-polygon/
 
 ## Fork the code from this GitHub repository
-- http://github.com/jackdougherty/fusion-point-polygon-legend/
+- https://github.com/jackdougherty/fusion-point-polygon-legend/
 
 Note that this code uses Derek's Template v1.3, with different code instructions than v1.4
 

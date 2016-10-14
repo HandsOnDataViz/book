@@ -52,6 +52,7 @@
    * [Point-Polygon Results List](fusion/point-polygon-list/README.md)
 * [Leaflet Map Templates](leaflet/README.md)
    * [Simple Map](leaflet/simple/README.md)
+   * [Map with Google Sheets](leaflet/with-google-sheets/README.md)
    * [Point Storymap with Scroll](leaflet/storymap/README.md)
    * [Polygon Map with Click Info](leaflet/polygon-click/README.md)
    * [Polygon Map with Hover Info](leaflet/polygon-hover/README.md)

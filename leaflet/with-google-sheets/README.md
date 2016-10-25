@@ -1,20 +1,37 @@
-# Leaflet Maps with Google Sheets template
+# Leaflet Maps with Google Sheets
 
-*By [Jack Dougherty](../../introduction/who.md), **still in-progress** last updated October 14, 2016*
+*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated October 24, 2016*
 
-## Explore this demo
+### Explore live demo map
 
 <iframe src="https://jackdougherty.github.io/leaflet-maps-with-google-sheets/" width="100%" height=500></iframe>
 
-## View demo in new page
-- https://jackdougherty.github.io/leaflet-maps-with-google-sheets/
+Open map in a [new page](https://jackdougherty.github.io/leaflet-maps-with-google-sheets/)
 
-## Features
-Create Leaflet maps with a linked Google Sheets template.
+### Fork the code and publish on GitHub
+
+### Make a Copy and Publish your Google Sheet
+
+### Paste Google ID into GoogleDocID.js 
+
+### Set map options in your Google Sheet
+
+### Geocode address points in Google Sheet
+
+### Upload polygon data to GitHub
+
+
+TO DO more details below
+
+
+- Set map options in a Google Sheet template
+- 
+- upload and geocode addresses, and set map options, in the Google Sheet template
+- Create Leaflet maps with a linked Google Sheets template.
 - friendly and easy-to-learn searchable map tool with flexibility for advanced users
 - clickable point data layers with custom marker icons and pop-up images
 - color-coded polygon data layers with numeric or text legends
-- upload and geocode addresses, and set map options, in the Google Sheet template
+
 - host your live web map and polygon data with GitHub Pages
 - responsive web design for both small and large devices
 - built entirely with open-source code, and no usage limits

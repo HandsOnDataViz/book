@@ -10,13 +10,23 @@ Open map in a [new page](https://jackdougherty.github.io/leaflet-maps-with-googl
 
 ### Fork the code and publish on GitHub
 
+  ![](lmwgs-1-fork-640.gif)
+
 ### Make a Copy and Publish your Google Sheet
 
-### Paste Google ID into GoogleDocID.js 
+  ![](lmwgs-2-make-copy-640.gif)
+
+### Paste Google ID into GoogleDocID.js
+
+    ![](lmwgs-3-paste-id-640.gif)
 
 ### Set map options in your Google Sheet
 
+    ![](lmwgs-4-options-640.gif)
+
 ### Geocode address points in Google Sheet
+
+    ![](lmwgs-5-geocode-640.gif)
 
 ### Upload polygon data to GitHub
 
@@ -25,7 +35,7 @@ TO DO more details below
 
 
 - Set map options in a Google Sheet template
-- 
+-
 - upload and geocode addresses, and set map options, in the Google Sheet template
 - Create Leaflet maps with a linked Google Sheets template.
 - friendly and easy-to-learn searchable map tool with flexibility for advanced users

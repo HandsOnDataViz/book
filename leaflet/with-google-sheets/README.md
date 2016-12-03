@@ -2,6 +2,8 @@
 
 *By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated October 24, 2016*
 
+<!-- toc -->
+
 ### Explore live demo map
 
 <iframe src="https://jackdougherty.github.io/leaflet-maps-with-google-sheets/" width="100%" height=500></iframe>

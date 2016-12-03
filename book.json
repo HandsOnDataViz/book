@@ -3,20 +3,20 @@
         "anchors",
         "edit-link",
         "exercises",
-        "expandable-chapters",
+        "expandable-chapters-small",
         "ga",
         "github",
-        "quizzes",
+        "image-captions",
+        "quiz",
         "splitter",
-        "toggle-chapters",
         "word-count",
-        "youtube"
+        "youtubex"
 
     ],
     "pluginsConfig": {
         "edit-link": {
                 "base": "https://github.com/jackdougherty/datavizforall/tree/master",
-                "label": "Edit on GitHub"
+                "label": "Edit page"
         },
         "ga": {
             "token": "UA-5488840-29"

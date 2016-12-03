@@ -2,7 +2,7 @@
 
 *by [Veronica X. Armendariz, Trinity College Class of 2016](../../introduction/who.md), last updated May 5, 2015*
 
-Explore this [interactive filtered line chart](http://jackdougherty.github.io/tableau-public-sample/linechart.html):
+Explore this [interactive filtered line chart](https://jackdougherty.github.io/tableau-public-sample/linechart.html):
 
 <iframe src='https://jackdougherty.github.io/tableau-public-sample/linechart.html' width="100%" height="530"></iframe>
 

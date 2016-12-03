@@ -4,7 +4,7 @@
 
 Go to http://geojson.io to explore this open-source web tool to convert, edit, and create GeoJSON map data. The tool was originally developed by Tom MacWright, and is supported by Mapbox.com.
 
-### Convert a CSV spreadsheet of point data into GeoJSON
+## Convert a CSV spreadsheet of point data into GeoJSON
 
 Use any spreadsheet tool and prepare a list of coordinate points (known as features). You must include column headers **lat** and **lon**, or a fuller spelling, such as *latitude* and *longitude*. The order of the columns does not matter. Also, you can add more headers to identify each point (example: name) and include more details (known as the properties of the features).
 
@@ -23,7 +23,7 @@ Select the Save menu and export into GeoJSON format.
 Optional: Login to GeoJSON.io with your GitHub account and save directly to your repository.
 
 
-### Convert Shapefile or KML polygons into GeoJSON
+## Convert Shapefile or KML polygons into GeoJSON
 
 Polygon boundary data is often shared as ArcGIS Shapefiles (.shp) or Keyhole Markup Language (.kml) files. Drag any of these (and other) files into the http://GeoJSON.io map window. Flip between the JSON and Table tabs to view or edit the data.
 
@@ -31,11 +31,11 @@ Select the Save menu and export into GeoJSON format.
 
 ![](geojson-save-as.png)
 
-### Create GeoJSON data with drawing tools
+## Create GeoJSON data with drawing tools
 
 Use the http://GeoJSON.io drawing tools to create points, polygons, and polylines. Flip between the JSON and Table tabs to view or edit the data.
 
-### Learn more about GeoJSON.io
+## Learn more about GeoJSON.io
 
 Read about more advanced features and view the code at https://github.com/mapbox/geojson.io
 

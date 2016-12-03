@@ -187,7 +187,7 @@ Before posting a question, see Derek's troubleshooting advice to avoid common pr
 
 ## Video tutorial <a id="#video"></a>
 
-{% youtube %}https://youtu.be/b73LBXYrbng{% endyoutube %}
+{%youtube%}b73LBXYrbng{%endyoutube%}
 
 **TO DO** Update video to reflect edits above, such as inserting URL in the README.MD, or Get an API key
 

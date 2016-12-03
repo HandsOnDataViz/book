@@ -1,5 +1,7 @@
 # Structure, Plugins, and Syntax
 
+<!-- toc -->
+
 ## Folder/file structure for this GitBook:
 - Part folder (example: map)
 - Chapter subfolder (example: map/point-gft)
@@ -65,10 +67,10 @@ Plugins extend the features of basic GitBook, and are configured in the book.jso
 View the plugins and configurations used in this book at: https://github.com/JackDougherty/datavizforall/blob/master/book.json
 
 ### Embed YouTube Video with GitBook Plugin
-Since the [youtube plugin](https://plugins.gitbook.com/plugin/youtube) is installed in this Gitbook, embed videos in the text this way:
+Since the [youtubex plugin](https://plugins.gitbook.com/plugin/youtubex) is installed in this Gitbook, embed videos in the text this way:
 
 ```
-{% youtube %}https://youtu.be/b73LBXYrbng{% endyoutube %}
+{%youtube%}ZVejLE8qtOI{%endyoutube%}
 ```
 The YouTube video will appear as an embedded iframe in the online web version of the GitBook, and as a link in the ebook versions.
 

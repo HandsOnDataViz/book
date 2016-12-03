@@ -8,7 +8,7 @@ Sometimes your goal is to aggregate individual rows of data into larger groups b
 
 Most spreadsheet tools include a *pivot table* feature to reorganize and regroup the data. While the buttons and appearances may differ across tools, the concept is the same.
 
-### Simple Pivot Table in Excel for Mac
+## Simple Pivot Table in Excel for Mac
 1. Select the entire sheet (click top-left box)
 2. Data > Pivot Tables
 3. Choose where to place the pivot table (default is a new sheet)
@@ -18,7 +18,7 @@ Most spreadsheet tools include a *pivot table* feature to reorganize and regroup
 
 ![](SpreadsheetPivotTables640w.gif)
 
-### Simple Pivot Table in Google Sheets
+## Simple Pivot Table in Google Sheets
 1. Select the entire sheet (click top-left box)
 2. Data > Pivot Tables
 3. In Report Editor > Rows > add a field (to list all of the entries)

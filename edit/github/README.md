@@ -16,7 +16,7 @@ This chapter shows the basic steps to use GitHub **entirely in your browser**, w
 
 Newcomers can host their code on GitHub, and publish to the web using the GitHub Pages feature, by following step-by-step instructions or this [YouTube video screencast](http://youtu.be/ZVejLE8qtOI).
 
-{% youtube %}https://www.youtube.com/watch?v=ZVejLE8qtOI{% endyoutube %}
+{%youtube%}ZVejLE8qtOI{%endyoutube%}
 
 This basic tutorial demonstrates how to work with GitHub entirely through the browser. More advanced GitHub users may download other free tools (such as [GitHub for Mac](https://mac.github.com) or [GitHub for Windows](https://windows.github.com)) or use other methods (such as the terminal command line) to work more efficiently.
 

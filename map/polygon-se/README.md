@@ -4,21 +4,21 @@
 
 The Social Explorer free edition (http://socialexplorer.com) offers one solution to creating colored polygon maps with US Census demographic data. Explore the embedded sample map below.
 
-<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.socialexplorer.com/0889800f4d/embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.socialexplorer.com/0889800f4d/embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
 
-###Advantages:
+## Advantages:
 - Quick and easy-to-learn
 - Free edition includes basic census data
 - Export your static maps into presentation slides
 - Share link or embed iframe to your interactive map
 
-###Limitations:
+## Limitations:
 - Maps are limited to the demographic data inside the tool.
 - Polygon map boundaries are limited to state, county, census tract. The tool does not display municipal data for cities, towns, etc.
 - Full census and historical data requires professional subscription.
 - Pro subscription available through several academic libraries, but few public libraries.
 
-###Quick overview of features
+## Quick overview of features
 
 Start at the Social Explorer website (http://socialexplorer.com) and click on Maps. This tutorial demonstrates features available on the free edition.
 

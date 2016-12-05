@@ -2,7 +2,7 @@
 
 Tutorials and variations of Searchable Map Template with Google Maps and Fusion Tables, created by Derek Eder http://derekeder.com/searchable_map_template/
 
-**TO DO** add a richer intro
+**TO DO - explain that this chapter will no longer be updated** 
 
 Strengths:
 - All steps can be done inside your browser
@@ -25,3 +25,6 @@ Limitations:
 
 ## Discussion forum
 - For questions about the Searchable Map template, see https://groups.google.com/forum/#!forum/fusion-table-map-template
+
+{% footer %}
+{% endfooter %}

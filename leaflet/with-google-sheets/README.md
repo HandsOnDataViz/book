@@ -2,6 +2,8 @@
 
 *By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated October 24, 2016*
 
+** TO DO - revise and finish this incomplete tutorial **
+
 <!-- toc -->
 
 ### Explore live demo map
@@ -115,16 +117,5 @@ https://USERNAME.github.io/leaflet-maps-with-google-sheets/
   - if needed, convert polygon data from shapefile or KML format into GeoJSON format with http://geojson.io
   - if needed, edit polygon data and join/merge tables of new data with http://mapshaper.org
 
-
-
----
-
-
-
-[Improve this book:](../../gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
-
-[Data Visualization for All](http://datavizforall.org)
-is copyrighted by [Jack Dougherty and contributors](../../introduction/who.md)
-and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizForAll.org.
-
-![Creative Commons by-nc image](../../cc-by-nc.png)
+{% footer %}
+{% endfooter %}

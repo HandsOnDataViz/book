@@ -2,6 +2,8 @@
 
 *By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
 
+** TO DO - move this tutorial to separate section, will no longer be supported **
+
 A thematic polygon map (also called a choropleth map) displays a colored pattern on each region to express its numerical value. In the interactive version embedded below, click on any region to view its info window with additional data.
 
 <iframe width="600" height="500" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?q=select+col2%3E%3E1+from+1MeyX2ICg1uIiAQUOChkUtbnZqfFE-3Kke3SkXnur&amp;viz=MAP&amp;h=false&amp;lat=41.51442003948278&amp;lng=-72.62841864453128&amp;t=1&amp;z=9&amp;l=col2%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
@@ -150,14 +152,5 @@ When downloading census data for county subdivisions (municipal governments; aka
 Redo video screencast
 https://www.youtube.com/watch?v=ReUAlZsJxP4
 
----
-
-
-
-[Improve this book:](../../gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
-
-[Data Visualization for All](http://datavizforall.org)
-is copyrighted by [Jack Dougherty and contributors](../../introduction/who.md)
-and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizForAll.org.
-
-![Creative Commons by-nc image](../../cc-by-nc.png)
+{% footer %}
+{% endfooter %}

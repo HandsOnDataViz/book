@@ -94,3 +94,6 @@ Learn more about [CTNamecleaner on GitHub](https://github.com/trendct/ctnameclea
 
 For more advanced data cleaning, see Alvin Chang's excellent tutorial to Open Refine in TrendCT/CT Mirror:
 http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/
+
+{% footer %}
+{% endfooter %}

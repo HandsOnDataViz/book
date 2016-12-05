@@ -6,7 +6,7 @@ While you can do **nearly** everything in this book with GitHub in your browser,
 
 - [download Atom Editor](https://atom.io/) from GitHub
 
-**TO DO** clean this up
+**TO DO** rewrite this page
 
 Download the free GitHub Desktop tool to sync and  additional GitHub repos on your local Mac or Windows computer.
 GitHub allows users to create one fork of the basic Searchable Map template repository. To create a second template, or to move and edit multiple files for more advanced versions, download the GitHub for Mac/Windows tool.
@@ -18,16 +18,5 @@ GitHub allows users to create one fork of the basic Searchable Map template repo
 1. In your GitHub for Mac/Windows tool, __Commit and Sync__ your second template to your GitHub online account. Title the commit before clicking the button.
 1. Refresh your browser to view the synced files in your GitHub account. Start at the top of these directions to remove an old gh-pages branch, create a new gh-pages branch, and edit files.
 
-
-
----
-
-
-
-[Improve this book:](../../gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
-
-[Data Visualization for All](http://datavizforall.org)
-is copyrighted by [Jack Dougherty and contributors](../../introduction/who.md)
-and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizForAll.org.
-
-![Creative Commons by-nc image](../../cc-by-nc.png)
+{% footer %}
+{% endfooter %}

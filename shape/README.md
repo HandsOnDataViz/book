@@ -29,3 +29,6 @@ The GeoJSON structured format orders coordinates in *longitude-latitude* format,
 - polylines (such as streets, expressed as a series of coordinate points)
 - additional info (such as names and labels, expressed as properties of any feature above)
 and more.
+
+{% footer %}
+{% endfooter %}

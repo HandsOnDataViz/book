@@ -2,6 +2,8 @@
 
 *by [Jack Dougherty](../../introduction/who.md), last updated May 2015*
 
+** TO DO - move this outdated tutorial to separate section, will no longer be supported **
+
 Google Fusion Tables (GFT) is a free tool that allows users to upload and geocode a spreadsheet of location data, create an interactive point map with a numerical legend, and embed the product in a web page, like this:
 
 <iframe width="100%" height="400" src="https://www.google.com/fusiontables/embedviz?q=select+col2+from+1OenqPrEAJVZDQrUe5fSeElMMVjrUbHTN9JoN0KU&viz=MAP&h=false&lat=44.517390498730755&lng=-89.70086420624999&t=1&z=6&l=col2&y=2&tmplt=2&hml=GEOCODABLE"></iframe>
@@ -101,16 +103,5 @@ TO DO: Add video screencast.
 
 TO DO: To display textual data, rather than numerical, in a GFT legend, see this solution: https://github.com/JackDougherty/FusionTable-Map-custom-legend
 
-
-
----
-
-
-
-[Improve this book:](../../gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
-
-[Data Visualization for All](http://datavizforall.org)
-is copyrighted by [Jack Dougherty and contributors](../../introduction/who.md)
-and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizForAll.org.
-
-![Creative Commons by-nc image](../../cc-by-nc.png)
+{% footer %}
+{% endfooter %}

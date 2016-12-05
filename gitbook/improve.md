@@ -24,13 +24,5 @@
 - On the [book GitHub repository](https://github.com/JackDougherty/datavizforall), fork a copy to your own GitHub account (requires free signup).
 - Create your proposed chapter following the book's existing folder/file structure, in GitHub/GitBook Markdown format, as explained in the following pages.
 
-
-
----
-
-
-[Data Visualization for All](http://datavizforall.org)
-is copyrighted by [Jack Dougherty and contributors](../introduction/who.md)
-and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizForAll.org.
-
-![Creative Commons by-nc image](../cc-by-nc.png)
+{% footer %}
+{% endfooter %}

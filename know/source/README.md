@@ -21,3 +21,6 @@ If you have doubts when cleaning up columns, click (or right-click) on the sprea
 Add a *source* tab, after the data, with notes to remind you and others about its origins and when it was last updated.
 
 ![](SpreadsheetSourceTab.png)
+
+{% footer %}
+{% endfooter %}

@@ -28,3 +28,6 @@ If your data tables lacks spatial information, it may not be possible to map it.
 -
 - Insert quick iframe examples of each?
 - Refer to other types of maps and data, such as heat maps, line maps, etc.
+
+{% footer %}
+{% endfooter %}

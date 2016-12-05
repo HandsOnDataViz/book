@@ -3,3 +3,6 @@
 **TO DO** write tutorial for this wonderful tool
 
 http://colorbrewer2.org/
+
+{% footer %}
+{% endfooter %}

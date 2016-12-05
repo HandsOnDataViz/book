@@ -24,18 +24,7 @@ If your data needs to be formatted, select a spreadsheet column by clicking at t
 
 To sort data rows by a column, select the entire spreadsheet (top-left corner icon), then right-click or look for the sort menu. Be sure to select the entire sheet to avoid accidentally sorting one column without the adjacent ones.
 
-![Animation of sorting data in Google Sheets](SpreadsheetSort640w.gif)
+![](SpreadsheetSort640w.gif)
 
-
-
----
-
-
-
-[Improve this book:](../../gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
-
-[Data Visualization for All](http://datavizforall.org)
-is copyrighted by [Jack Dougherty and contributors](../../introduction/who.md)
-and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizForAll.org.
-
-![](../../cc-by-nc.png)
+{% footer %}
+{% endfooter %}

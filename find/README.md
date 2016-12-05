@@ -13,3 +13,6 @@ Increasing numbers of governmental agencies and non-profit organizations are pub
 - Built-in visualization tools: Some repositories offer built-in tools for users to create interactive charts or maps on the platform site. Some also provide code snippets for users to embed these built-in visualizations into their own websites.
 - Static and Live data: Most repositories offer static datasets for a specific time period, but some also provide "live" data that is continuously updated.
 - Application Programming Interface (APIs): Some repositories provide endpoints with code instructions that allow users to pull data directly from the platform into an external sites or online visualization, which is ideal for continuously updated data.
+
+{% footer %}
+{% endfooter %}

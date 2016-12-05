@@ -2,6 +2,8 @@
 
 *By [Jack Dougherty](../../introduction/who.md), last updated February 18, 2016*
 
+** TO DO - rewrite this out-of-date page **
+
 Sign up for a [free GitHub account](http://github.com), a free multi-purpose tool that allows you to:
 - View and fork a copy of open-source code from other users
 - Make simple edits to your code directly in the browser
@@ -105,14 +107,5 @@ Reminder: GitHub allows users to create **one fork** of a repo to your account. 
 
 ![](Github-settings-rename.png)
 
----
-
-
-
-[Improve this book:](../../gitbook/improve.md) Select text to insert comments, or suggest edits on GitHub.
-
-[Data Visualization for All](http://datavizforall.org)
-is copyrighted by [Jack Dougherty and contributors](../../introduction/who.md)
-and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizForAll.org.
-
-![Creative Commons by-nc image](../../cc-by-nc.png)
+{% footer %}
+{% endfooter %}

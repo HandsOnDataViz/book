@@ -24,7 +24,7 @@ If your data needs to be formatted, select a spreadsheet column by clicking at t
 
 To sort data rows by a column, select the entire spreadsheet (top-left corner icon), then right-click or look for the sort menu. Be sure to select the entire sheet to avoid accidentally sorting one column without the adjacent ones.
 
-![](SpreadsheetSort640w.gif)
+![Animation of sorting data in Google Sheets](SpreadsheetSort640w.gif)
 
 
 
@@ -38,4 +38,4 @@ To sort data rows by a column, select the entire spreadsheet (top-left corner ic
 is copyrighted by [Jack Dougherty and contributors](../../introduction/who.md)
 and distributed under a [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0). You may freely share and modify this content for non-commercial purposes, with a source credit to http://DataVizForAll.org.
 
-![Creative Commons by-nc image](../../cc-by-nc.png)
+![](../../cc-by-nc.png)

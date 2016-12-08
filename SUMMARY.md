@@ -57,6 +57,6 @@
    * [Point-Polygon Dynamic Legend](fusion/point-polygon-legend/README.md)
    * [Point-Polygon Results List](fusion/point-polygon-list/README.md)
 * [About This GitBook](gitbook/README.md)
-   * [Improve this Book](gitbook/improve.md)
-   * [Structure, Plugins, Syntax](gitbook/structure.md)
    * [My GitBook Workflow](gitbook/workflow.md)
+   * [Structure, Plugins, Syntax](gitbook/structure.md)
+   * [Improve this Book](gitbook/improve.md)

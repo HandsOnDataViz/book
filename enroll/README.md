@@ -1,9 +1,8 @@
-# Enroll in our free online course
+# Enroll in free online course: *Data Visualization for All*
 
-### *Data Visualization for All* from Trinity College on edX 
+Tell your story *and* show it with data, by designing interactive charts and customized maps for your website. This free introductory course in data visualization begins with the basics. No prior experience is required. Sponsored by Trinity College on edX.
+
 ![](trinity-edx-logos.png)
-
-Tell your story *and* show it with data, by designing interactive charts and customized maps for your website. This free introductory course in data visualization begins with the basics. No prior experience is required.
 
 ## Video preview
 {%youtube%}M3_TWyva5yc{%endyoutube%}

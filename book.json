@@ -1,7 +1,7 @@
 {
   "plugins": [
     "anchors",
-    "creativecommons@git+https://github.com/JackDougherty/gitbook-plugin-dataviz-footer.git",
+    "dataviz-footer@git+https://github.com/JackDougherty/gitbook-plugin-dataviz-footer.git",
     "edit-link",
     "etoc",
     "exercises",

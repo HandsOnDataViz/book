@@ -3,12 +3,14 @@
     "anchors",
     "creativecommons@git+https://github.com/JackDougherty/gitbook-plugin-dataviz-footer.git",
     "edit-link",
+    "etoc",
     "exercises",
     "expandable-chapters-small",
     "ga",
     "github",
     "image-captions",
     "quiz",
+    "sitemap",
     "splitter",
     "toggle-chapters",
     "word-count",
@@ -17,13 +19,21 @@
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/jackdougherty/datavizforall/tree/master",
-      "label": "Edit page"
+      "label": "Edit on GitHub"
+    },
+    "etoc": {
+      "mindepth": 2,
+      "maxdepth": 4,
+      "notoc": false
     },
     "ga": {
       "token": "UA-5488840-29"
     },
     "github": {
       "url": "https://github.com/JackDougherty?tab=repositories"
+    },
+    "sitemap": {
+      "hostname": "https://www.datavizforall.org/"
     }
   }
 }

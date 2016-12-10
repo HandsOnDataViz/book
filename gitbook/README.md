@@ -1,7 +1,6 @@
 # About This GitBook
 *By [Jack Dougherty](../../introduction/who.md), last updated December 8, 2016*
 
-
 ***Data Visualization for All*** is created with [GitBook](http://gitbook.com), an open-source publishing platform that creates multiple editions (Web, PDF, ePUB, Mobi/Kindle), written in the easy-to-read Markdown format. See GitBook documentation (still a work-in-progress):
 - GitBook features - http://gitbook.com
 - GitBook.com platform Help Page - https://help.gitbook.com/

@@ -2,7 +2,7 @@
 
 *By [Jack Dougherty](../../introduction/who.md), last updated December 21, 2016*
 
-**TO DO** insert sample map iframe 
+**TO DO** insert sample map iframe
 
 ## Why pair Leaflet maps with Socrata data?
 
@@ -40,6 +40,7 @@ If your Socrata endpoint only supports JSON format, but includes data columns wi
 
 ### GeoJSON endpoint with default markers and pop-up info window
 - map https://jackdougherty.github.io/leaflet-socrata/index.html
+- code https://github.com/jackdoughety/leaflet-socrata/index.html
 - data https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8
 - note: location data appears as latitude and longitude coordinates in the ```geom``` column
 
@@ -53,13 +54,16 @@ If your Socrata endpoint only supports JSON format, but includes data columns wi
 
 ### GeoJSON endpoint with simple data filter, circle marker styling and pop-up info
 - map https://jackdougherty.github.io/leaflet-socrata/index-geojson-filter-circle.html
+- code https://github.com/jackdoughety/leaflet-socrata/
 - data https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98
 
 ### Multiple Socrata datasets with Leaflet control layers legend
 - map https://jackdougherty.github.io/leaflet-socrata/index-control-layers.html
+- code https://github.com/jackdoughety/leaflet-socrata/index-control-layers.html
 
 ### Older JSON-only endpoint, with separate columns for latitude, longitude
 - map https://jackdougherty.github.io/leaflet-socrata/index-json.html
+- code https://github.com/jackdoughety/leaflet-socrata/index-json.html
 - data https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7
 
 ## Learn more

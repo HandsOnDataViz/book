@@ -36,6 +36,9 @@ Or if you receive the following error, you probably are viewing an older Socrata
 
 If your Socrata endpoint only supports JSON format, but includes data columns with latitude and longitude, see other Leaflet examples further below.
 
+## Register for Socrata App Token
+- Socrata requires developers to register for a free app token at https://dev.socrata.com/register
+
 ## Demonstration Maps
 
 ### GeoJSON endpoint with default markers and pop-up info window

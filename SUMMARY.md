@@ -47,6 +47,7 @@
 * [Leaflet Map Templates](leaflet/README.md)
    * [Simple Map](leaflet/simple/README.md)
    * [Leaflet Maps with Google Sheets](leaflet/with-google-sheets/README.md)
+   * [Leaflet with Socrata Data](leaflet/with-socrata/README.md)
    * [Point Storymap with Scroll](leaflet/storymap/README.md)
    * [Polygon Map with Click Info](leaflet/polygon-click/README.md)
    * [Polygon Map with Hover Info](leaflet/polygon-hover/README.md)

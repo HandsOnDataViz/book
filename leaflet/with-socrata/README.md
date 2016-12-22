@@ -73,3 +73,6 @@ If your Socrata endpoint only supports JSON format, but includes data columns wi
 ## Thanks to
 - Chris Metcalf https://github.com/chrismetcalf
 - Tyler Klyeklamp https://data.ct.gov/
+
+{% footer %}
+{% endfooter %}

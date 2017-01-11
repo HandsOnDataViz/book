@@ -1,52 +1,33 @@
-# Choose Your Tools Wisely
+# Choose Tools to Tell Your Data Story
 
-***Data Visualization for All*** is guided by these principles:
+In recent years, we've seen a growing number of data visualization tools. In fact, there's such an overwhelming number of tools, even counting only those mentioned in this book, that anyone would have a hard time deciding which ones to use.
 
-- Simplicity: tools should be easy-to-learn for everyday users who follow these introductory-level tutorials
+Before testing out a new tool, try listing the criteria that matter in your decision-making process. Which factors matter when deciding whether to add another item to your digital tool kit? Here's the list that comes to our minds, which may differ from yours.  
 
-- Compatibility: tools should operate on multiple platforms (especially Mac/Windows/Chromebook), and should create visualizations that work (or are viewable, at minimum) across multiple devices (laptops, mobile devices, even smartphones), without platform-specific plugins
+- Price: Is the tool free, or is there a “freemium” model to pay for more features or higher usage?
+- Easy-to-learn: Is the tool relatively simple for new users without coding skills?
+- Power: Does the tool support large amounts of data, and various types of visualizations?
 
-- Sustainability: when working with partner organizations, build data visualizations that they can reasonably maintain on their own
+- Customization: Can I modify details about how my work appears?
+- Data Migration: Can I easily move my data in and out, in case I switch to a different tool?
+- Hosting: Can I decide exactly where my data and visualizations will be stored online?
 
-- Portability: don't import data into a platform unless you can export it, and favor those that allow you to easily migrate your work into future technologies
+- Support: Is the tool actively maintained by its creators, and do they answer questions?
+- Open Source: Is the tool’s software visible, can it be modified, and redistributed?
+- Security: Is the tool and my data protected from malicious hackers and malware?
 
-- Public and private: lean open and share your work with others, but respect privacy (especially for legally-protected individual data)
+- Collaborative: Does the tool allow several people to work together on one shared product?
+- Privacy: Under the terms of service, is my data and work private or public?
+- Error-friendly: When something fails, does the tool point out possible problems and solutions?
 
-The central challenge is to identify data visualization tools and techniques that best fit with the principles above. We face trade-offs when choosing between those that are easy-to-learn versus ones that require advanced skills, or limited design versus extensive features. The goal is to find the elusive sweet spot: friendly and flexible.
+- Cross-platform: Does this tool work across different computer operating systems?
+- Mobile-friendly: Will it correctly display my work on various mobile devices and browsers?
+
+Wow, that’s quite a long list! We’re going to have to make some trade-offs. For example, many of the drag-and-drop tools featured in this book are easy-to-learn, but they often lack the power and customization found in more advanced tools that require coding skills. We often find ourselves searching for the elusive "sweet spot" where tools are friendly, flexible, and free.
 
 ![](ToolTradeoffs.png)
 
-
-
-**TO DO** rewrite old text below to fit with above
-
-To create sustainable data visualizations in partnership with local community organizations, we will choose appropriate technology that fits our criteria. Ideally, our web tools should be:
-
-- adaptable to fit the most common data visualization needs of community partners, such as transforming existing tables into interactive charts and maps
-
-- freely-accessible web services or applications (or at minimum, low cost)
-
-- easy-to-learn with initial hands-on support and guidance from online tutorials and screencasts (and in some cases, customized templates created by Trinity for use by multiple Hartford organizations)
-
-- collaborative so that partners can simultaneously work on co-creating visualization products, with ability to share or restrict viewing/editing access to individuals
-
-- compatible for creating visualization products across popular operating systems (Mac or Windows), which ideally can be created or maintained in the browser (thereby expanding access to users with the free Chrome operating system)
-
-- viewable for seeing and interacting with visualization products across multiple devices (desktops, laptops, most tablets & mobile devices), and across popular modern browsers (such as Chrome or Firefox), without third-party extensions (such as Flash or Silverlight)
-
-- embeddable for easily inserting visualization products on most organization’s websites (such as WordPress and similar platforms)
-
-- import and exportable so that organizations can easily upload new data into a visualization, or easily export data from a visualization when migrating to a new tool
-
-- allow data sharing so that the public may easily access data underlying visualizations through an openly accessible web server, when desired, and preferably with an application programming interface (API)
-
-- archivable so that the data (and tools, when feasible) can be stored for long-term use
-
-- sustainable without significant new investments of time and money
-
-- open source so that the underlying code may be freely shared and modified
-
-Those are the ideals. The tools featured in this book fit *most* but not necessarily all of the criteria above. Our primary web technologies in this book are Google Sheets (for collaborative spreadsheets) and Google Fusion Tables (with web app templates by Derek Eder), Tableau Public, Socrate Open Data, and GitHub Pages. The book also explores the feasibility of other data visualization tools and services, such as OpenStreetMap and several application programming interfaces (aka APIs, to be listed) that may fit our criteria with pre-designed templates to be as user-friendly as possible.
+But don't forget the most important (yet overlooked) items of your toolkit: your *story*, as described in the next chapter.
 
 {% footer %}
 {% endfooter %}

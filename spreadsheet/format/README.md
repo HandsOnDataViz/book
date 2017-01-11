@@ -1,4 +1,4 @@
-# Format Data with Spreadsheet Tools
+# Format Your Data
 
 Organize your data into a spreadsheet table with columns and rows (or for more complex projects, a database tool). Three common spreadsheet tools are:
 

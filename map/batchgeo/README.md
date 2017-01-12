@@ -1,26 +1,33 @@
-# Quickly Create a Geocoded Point Map with BatchGeo
+# Simple Point Map with BatchGeo
 
-*By [Jack Dougherty](../../introduction/who.md), last updated March 17, 2016*
+*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated January 12, 2017*
 
-The free version of the BatchGeo mapping tool (http://batchgeo.com) is so quick and easy that it barely needs a tutorial.
+## Demo
 
-- Copy and paste (or drag and drop) address data into the tool.
-- Click the Validate & Set Options button to check, or the Map Now button.
-- BatchGeo will try to geocode your address data, and display your map.
-- Click the Save and Continue button. Your email is required.
-- BatchGeo emails you a link to edit the map, or embed it in your website.
+<p><iframe src="//batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40" frameborder="0" width="100%" height="550" style="border:1px solid #aaa;"></iframe></p><p><small>View <a href="https://batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40">BatchGeo demo point map</a> in a full screen map</small></p>
 
-<p><iframe src="//batchgeo.com/map/2538e375b28664e62d61e384b02442bb" frameborder="0" width="100%" height="550" style="border:1px solid #aaa;"></iframe></p><p><small>View <a href="https://batchgeo.com/map/2538e375b28664e62d61e384b02442bb">Jack's lunch sample map</a> in a full screen map</small></p>
+## Tool Review
+- BatchGeo point map tool: http://batchgeo.com
+- Advantages:
+  - Very easy-to-learn free mapping tool for beginners.
+  - Copy and paste data directly into the web interface, or upload with the spreadsheet template.
+  - Many data column labels are automatically recognized, and values are grouped into colored map markers.
 
-Pros:
-- A very quick and easy mapping tool for new learners
-- Automatically recognizes and inserts color markers for textual data categories, such as "type" for each location
+- Limitations:
+  - Free version limited to simple point maps, with few editing tools.
+  - Free version cannot process more than 250 rows of data.
+  - Must manually disable advertisements on your free maps.
+  - Cannot extract geocoded data to migrate to another tool.
+  - More advanced mapping features requires an expensive license.
 
-Cons (unless you pay for the expensive pro license):
-- Upload only 250 rows of data
-- Limited map editing tools
-- Must manually disable advertisements
-- Cannot overlay your point map with other maps
+## Tutorial
+
+The free BatchGeo simple point map tool (http://batchgeo.com) is so easy that it barely needs a tutorial.
+- Copy and paste address data into the web interface, or drag-and-drop a spreadsheet file. Use the tool template if needed.
+- Click the Validate & Set Options button to review your data, or the Map Now button.
+- BatchGeo will attempt to geocode your address data and display an interactive point map. Colored markers include pop-up data windows.
+- Click the Save and Continue button. Add map title, select Public or Unlisted, and insert your email address.
+- BatchGeo emails you a link to edit your map, or embed the iframe code in your own website. To learn more, go to book chapter [Embed on Your Web](https://www.datavizforall.org/embed/).
 
 {% footer %}
 {% endfooter %}

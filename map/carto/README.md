@@ -1,4 +1,4 @@
-# Simple Point Map with MapMe
+# Point Map with Carto Builder
 
 *By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated January 12, 2017*
 
@@ -7,7 +7,7 @@
 ...to come
 
 ## Tool Review
-- MapMe map tool: LINK
+- Carto Builder map tool: LINK
 - Advantages:
   - to come
 

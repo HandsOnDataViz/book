@@ -1,8 +1,8 @@
-# Google Fusion Tables Templates
+# Google Fusion Tables
+
+**TO DO - explain how Fusion Tables is no longer an actively-developed tool, in the opinion of the author and several other former users. As a result, this part of the book will be archived and no longer updated** 
 
 Tutorials and variations of Searchable Map Template with Google Maps and Fusion Tables, created by Derek Eder http://derekeder.com/searchable_map_template/
-
-**TO DO - explain that this chapter will no longer be updated** 
 
 Strengths:
 - All steps can be done inside your browser

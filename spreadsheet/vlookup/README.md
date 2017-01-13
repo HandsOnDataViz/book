@@ -1,8 +1,10 @@
-# Match Columns with the VLOOKUP Formula
+# Match Data with the VLOOKUP Function
 
 *By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
 
-Most spreadsheet tools include a VLOOKUP formula function to automatically "look up" missing data for a column in the first table, and fill it with matching data from a vertical column in a second table. If the two tables share a common data column, you can use VLOOKUP to save time.
+**TO DO** rewrite to pose the problem: how can you easily match data between two different spreadsheets? Show picture. Yes, while you could manually copy and paste, that would take forever and you could make errors. A better strategy is to see how the VLOOKUP function on most spreadsheet tools can automate this task for you. Also, emphasize Google Sheets examples
+
+Most spreadsheet tools include a VLOOKUP function to automatically "look up" missing data for a column in the first table, and fill it with matching data from a vertical column in a second table. If the two tables share a common data column, you can use VLOOKUP to save time.
 
 ![](vlookup-concept.png)
 

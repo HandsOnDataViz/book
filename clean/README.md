@@ -1,6 +1,8 @@
-# Clean Up Dirty and Disorganized Data
+# Clean Up Messy Data
 
 *By [Jack Dougherty](../../introduction/who.md), last updated April 16, 2016*
+
+**TO DO** reorganize by splitting up into individual pages, including one for Open Refine
 
 Sometimes we receive a spreadsheet with problematic data that needs to be cleaned up before we can successfully upload it into a visualization tool.
 

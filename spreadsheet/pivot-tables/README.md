@@ -1,6 +1,9 @@
-# Aggregate Data with Pivot Tables
+# Group Data with Pivot Tables
 
 *By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
+
+**TO DO** rewrite to start with "here's a common problem/question" and show rows of data and an unanswered question. Then show how pivot tables can group (or aggregate) data to show a more meaningful story. 
+
 
 Sometimes your goal is to aggregate individual rows of data into larger groups by the same type. For example, one organization compiled a spreadsheet of its contacts. Each row included a city, and when sorted, it appeared like this:
 

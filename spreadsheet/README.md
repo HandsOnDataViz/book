@@ -1,5 +1,7 @@
 # Improve Your Spreadsheet Skills
 
+**TO DO** expand this section
+
 This section demonstrates ways to restructure your spreadsheet data and make it more meaningful for your data visualization. For example, you may wish to:
 
 - Aggregate (or group together) rows of data with similar entries

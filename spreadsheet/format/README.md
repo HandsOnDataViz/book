@@ -1,10 +1,11 @@
 # Format Your Data
+*By [Jack Dougherty](../../introduction/who.md), last updated January 13, 2017*
 
-Organize your data into a spreadsheet table with columns and rows (or for more complex projects, a database tool). Three common spreadsheet tools are:
-
+Organize your data into spreadsheet tables with columns and rows (or for more complex projects, a database tool). Three common spreadsheet tools are:
+- [Google Sheets](https://www.google.com/sheets/about/): free spreadsheet tool on the Google Drive platform, works in modern browsers, requires free account.
 - Microsoft Excel: many people are familiar with this tool, which also has advanced features, but it is not free
 - [LibreOffice](http://www.libreoffice.org/): a powerful open-source alternative to Microsoft Office, which anyone can [freely download](http://www.libreoffice.org/download) for Mac/Windows/Linux, with donation requested
-- [Google Sheets](https://www.google.com/sheets/about/): free spreadsheet tool on the Google Drive platform, works in modern browsers, requires free account.
+
 
 All steps illustrated below are nearly the same across these three spreadsheet tools.
 

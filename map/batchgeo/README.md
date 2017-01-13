@@ -1,10 +1,11 @@
 # Simple Point Map with BatchGeo
 
-*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated January 12, 2017*
+*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated January 13, 2017*
 
 ## Demo
+Explore this interactive point map, created with the free version of BatchGeo (http://batchgeo.com).
 
-<p><iframe src="//batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40" frameborder="0" width="100%" height="550" style="border:1px solid #aaa;"></iframe></p><p><small>View <a href="https://batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40">BatchGeo demo point map</a> in a full screen map</small></p>
+<p><iframe src="https://batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40" frameborder="0" width="90%" height="550" style="border:1px solid #aaa;"></iframe></p><p><small>View <a href="https://batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40">BatchGeo demo point map</a> in a full screen map</small></p>
 
 ## Tool Review
 - BatchGeo point map tool: http://batchgeo.com
@@ -27,7 +28,7 @@ The free BatchGeo simple point map tool (http://batchgeo.com) is so easy that it
 - Click the Validate & Set Options button to review your data, or the Map Now button.
 - BatchGeo will attempt to geocode your address data and display an interactive point map. Colored markers include pop-up data windows.
 - Click the Save and Continue button. Add map title, select Public or Unlisted, and insert your email address.
-- BatchGeo emails you a link to edit your map, or embed the iframe code in your own website. To learn more, go to book chapter [Embed on Your Web](https://www.datavizforall.org/embed/).
+- BatchGeo emails you a link to edit your map, or embed the iframe code in your own website. To learn more, go to [Embed on Your Web](https://www.datavizforall.org/embed/), in this book.
 
 {% footer %}
 {% endfooter %}

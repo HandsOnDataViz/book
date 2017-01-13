@@ -31,7 +31,7 @@
 * [Map Your Data](map/README.md)
    * [Ask Before You Map](map/ask/README.md)
    * [Point Map with BatchGeo](map/batchgeo/README.md)
-   * [Point Map with Google MyMaps](map/mymaps/README.md)
+   * [Point Map with Google My Maps](map/mymaps/README.md)
    * [Point Map with Carto Builder](map/carto/README.md)
    * [Filtered Point Map in Socrata](map/socrata/README.md)
    * [Polygon Map in Social Explorer](map/socialexplorer/README.md)

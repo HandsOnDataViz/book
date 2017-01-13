@@ -1,4 +1,4 @@
-# Simple Point Map with Google MyMaps
+# Simple Point Map with Google My Maps
 
 *By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated January 12, 2017*
 
@@ -7,7 +7,7 @@
 ...to come
 
 ## Tool Review
-- Google MyMaps tool: LINK
+- Google My Maps tool: LINK
 - Advantages:
   - to come
 

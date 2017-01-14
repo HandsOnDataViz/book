@@ -1,6 +1,8 @@
-# Geocode Addresses and Extract Coordinates with the US Census Geocoder
+# Geocode Addresses and Save Coordinates with a Google Sheets script 
 
 *By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
+
+**TO DO** revise this to start with the problem (address data), with many tools can transform into coordinates, but they do not let you extract the coordinates, then feature our Google Sheet geocoder tool as an all-purpose solution; all of the c
 
 Geocoding means to convert the description of a specific place, such as a street address, into a location on a map. Lots of free web tools geocode addresses for us. When you type my work address "300 Summit St, Hartford, CT 06106" into Google Maps, it displays the location as a red point on a map. Right-click that point, select the "What's Here?" option, and the latitude-longitude coordinates will appear: 41.748, -72.692.
 

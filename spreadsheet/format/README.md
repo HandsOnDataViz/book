@@ -1,21 +1,7 @@
 # Format and Sort Data
 *By [Jack Dougherty](../../introduction/who.md), last updated January 13, 2017*
 
-**TO DO** reorganize and emphasize the two title concepts, highlight Google Sheets, redo visuals
-
-** TO DO** Restart by posing a common problem. You have
-
-Spreadsheets are wonderful tools to organize data into tables of rows and columns. This chapter introduces some of the basic skills in working with spreadsheet tools, including these very popular ones:
-
-**TO DO** revise into a table
-
-- [Google Sheets](https://www.google.com/sheets/about/): free spreadsheet tool on the Google Drive platform, works in modern browsers, requires free account.
-- Microsoft Excel: many people are familiar with this tool, which also has advanced features, but it is not free
-- [LibreOffice](http://www.libreoffice.org/): a powerful open-source alternative to Microsoft Office, which anyone can [freely download](http://www.libreoffice.org/download) for Mac/Windows/Linux, with donation requested
-
-Although there are differences between these tools, this book will focus on basic tasks that are nearly the same across all three.
-
-Of course, there are more complex tools to manage large databases (or collections of tables with relationships between them). In this introductory book, we'll focus on simpler spreadsheet tools.
+**TO DO** reorganize and emphasize the two title concepts, highlight Google Sheets, redo visuals; whenever possible, start text by posing a common data problem, and point out how the tool can help solve it
 
 ## Clean column headers and data cells
 

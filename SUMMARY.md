@@ -4,6 +4,7 @@
    * [Why this book?](introduction/why.md)
    * [What is dataviz?](introduction/what.md)
    * [Who wrote this book?](introduction/who.md)
+   * [How to read this book](introduction/how.md)
 * [Enroll in Free edX Course](enroll/README.md)
 * [Choose Tools to Tell Story](choose/README.md)
    * [Write and Draw Your Story](choose/write/README.md)

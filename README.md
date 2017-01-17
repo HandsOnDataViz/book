@@ -1,8 +1,8 @@
-![](cover_small.jpg)
+![](cover_300wide.jpg)
 
 ### Tell your story with free and easy-to-learn tools.
 
-***Data Visualization for All*** shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This introductory open-access textbook includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Carto, Highcharts, Leaflet, and GitHub in the browser.
+***Data Visualization for All***, an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Carto, Highcharts, Leaflet, GitHub, and more.
 
 [About the authors:](introduction/who.md) Jack Dougherty (Trinity College, CT) with Veronica X. Armendariz, Derek Eder, Ilya Ilyankou, Stacy Lam, David Tatem, and others.
 

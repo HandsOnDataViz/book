@@ -20,6 +20,7 @@
    * [Source Your Files](find/source/README.md)
    * [Public or Private?](find/public-private/README.md)
    * [Connecticut Open Data](find/ct/README.md)
+   * [Good versus Bad Data](find/good-bad/README.md)
 * [Clean Up Messy Data](clean/README.md))
   * [Clean with Spreadsheets](clean/spreadsheets/README.md)
   * [Clean with Open Refine](clean/open-refine/README.md)

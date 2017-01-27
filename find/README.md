@@ -1,6 +1,6 @@
 # Find and Know Your Data
 
-## Searching for Open Data 
+## Searching for Open Data
 Increasing numbers of governmental agencies and non-profit organizations are publicly sharing *open data* on the web. When starting a new data visualization project, ask yourself these questions:
 
 - Do I have the most relevant data for my project?
@@ -21,6 +21,8 @@ Before starting to create charts or maps, get to know your data.
 - Who compiled the data, and for what purpose?
 - What do the data labels really mean?
 - Ask yourself: Am I working with the *most* recent version, in the *best* available format?
+
+**TO DO** add resource https://github.com/Quartz/bad-data-guide
 
 Closely examine your data files to understand their meaning, sources of origin, and limitations.
 **TO DO** expand on this theme with examples of bad and misleading data

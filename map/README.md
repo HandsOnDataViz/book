@@ -18,14 +18,14 @@ A) Try three drop-and-drag tools to transform address data into a simple interac
 
 | Tool | Link	| Step-by-Step Tutorial |
 | ---  | ---- | ---- |
-|BatchGeo	| http://batchgeo.com	| https://www.datavizforall.org/map/batchgeo/ |
-|Google My Maps |	http://google.com/mymaps | https://www.datavizforall.org/map/mymaps/ |
+| BatchGeo	| http://batchgeo.com	| https://www.datavizforall.org/map/batchgeo/ |
+| Google My Maps |	http://google.com/mymaps | https://www.datavizforall.org/map/mymaps/ |
 | Carto Builder	| http://carto.com | https://www.datavizforall.org/map/carto/ |
 
 
 B) Build your maps using this sample address data, which includes 9 locations in North America, with 3 intentional mistakes to test for geocoding errors. Click the link to view the Google Sheet in your browser, and download into CSV (comma-separated values), a generic table format that can be uploaded into most data visualization tools.
 
-[sample-address-data-for-point-maps](https://docs.google.com/spreadsheets/d/1uFUwnbg57nPoWXN7iEibiigle25FrcGwBKZfehPHdTs/)
+[sample address data for point maps](https://docs.google.com/spreadsheets/d/1uFUwnbg57nPoWXN7iEibiigle25FrcGwBKZfehPHdTs/)
 - Click the link above to view the Google Sheet in your browser
 - File > Download As > Comma-separated values (CSV) to save to your computer
 

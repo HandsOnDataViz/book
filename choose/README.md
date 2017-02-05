@@ -1,33 +1,16 @@
 # Choose Tools to Tell Your Data Story
+*by [Jack Dougherty, Stacy Lam, and David Tatem](../introduction/who.md), last updated February 5, 2017*
 
-In recent years, we've seen a growing number of data visualization tools. In fact, there's such an overwhelming number of tools, even counting only those mentioned in this book, that anyone would have a hard time deciding which ones to use.
+Do you feel overwhelmed by the enormous range of data visualization tools? There's been so many different tools released in recent years that anyone would have a hard time deciding which ones to use. Even if you limit your choices to the dozen or so tools specifically mentioned in this book, how do you make wise decisions?
 
-Before testing out a new tool, try listing the criteria that matter in your decision-making process. Which factors matter when deciding whether to add another item to your digital tool kit? Here's the list that comes to our minds, which may differ from yours.  
+The [Draw and Write Your Data Story](/draw/readme.md) chapter reminds us to start with the most important item in your toolkit: ***your story***. Begin by drawing pictures and writing questions or sentences to capture your ideas on paper, and then choose the most appropriate tools to create your vision.
 
-- Price: Is the tool free, or is there a “freemium” model to pay for more features or higher usage?
-- Easy-to-learn: Is the tool relatively simple for new users without coding skills?
-- Power: Does the tool support large amounts of data, and various types of visualizations?
+The [Ask Questions When Choosing Tools](/ask/readme.md) chapter lists several criteria to consider when making software decisions. Many of us look for free or affordable tools in the perfect sweet spot -- easy-to-learn, yet powerful -- and that's the focus of this book.
 
-- Customization: Can I modify details about how my work appears?
-- Data Migration: Can I easily move my data in and out, in case I switch to a different tool?
-- Hosting: Can I decide exactly where my data and visualizations will be stored online?
+The [Rate Three Simple Map Tools](/rate/readme.md) chapter invites readers to create a simple interactive point map using three different online tools, and to reflect on the criteria above.
 
-- Support: Is the tool actively maintained by its creators, and do they answer questions?
-- Open Source: Is the tool’s software visible, can it be modified, and redistributed?
-- Security: Is the tool and my data protected from malicious hackers and malware?
-
-- Collaborative: Does the tool allow several people to work together on one shared product?
-- Privacy: Under the terms of service, is my data and work private or public?
-- Error-friendly: When something fails, does the tool point out possible problems and solutions?
-
-- Cross-platform: Does this tool work across different computer operating systems?
-- Mobile-friendly: Will it correctly display my work on various mobile devices and browsers?
-
-Wow, that’s quite a long list! We’re going to have to make some trade-offs. For example, many of the drag-and-drop tools featured in this book are easy-to-learn, but they often lack the power and customization found in more advanced tools that require coding skills. We often find ourselves searching for the elusive "sweet spot" where tools are friendly, flexible, and free.
-
-![](ToolTradeoffs.png)
-
-But don't forget the most important (yet overlooked) items of your toolkit: your *story*, as described in the next chapter.
+Join our [free online course](.../enroll/readme.md), which introduces these topics with the brief video below, and includes more exercises and opportunities to interact with instructors and other learners. 
+{%youtube%}SS1BGp_lxnU{%endyoutube%}
 
 {% footer %}
 {% endfooter %}

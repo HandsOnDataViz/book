@@ -9,3 +9,6 @@
 | ![](LamStacy-96.jpg) | Stacy Lam is a co-instructor for the [Data Visualization for All online course](http://www.datavizforall.org/enroll) at Trinity College, where she is a prospective Engineering major in the Class of 2019. She co-authored chapters for this book.|
 | ![](TatemDavid-96.jpg) | [David Tatem](http://www.trincoll.edu/LITC/its/about/Pages/Learn.aspx) is a co-instructor for the [Data Visualization for All online course](http://www.datavizforall.org/enroll) at Trinity College, where he is an Instructional Technologist who specializes in the Social Sciences. He co-authored chapters for this book.|
 | ![](EderDerek-96.jpg) | [Derek Eder](http://derekeder.com) is an entrepreneur and civic technology developer in Chicago, where he runs [DataMade](http://datamade.us) and organizes [Chi Hack Night](http://chihacknight.org) events. He developed Searchable Map templates with Google Fusion Tables in this book. Follow [@DerekEder on Twitter](https://twitter.com/derekeder) and [DerekEder on GitHub](https://github.com/derekeder). |
+
+{% footer %}
+{% endfooter %}

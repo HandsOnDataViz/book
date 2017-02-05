@@ -1,7 +1,7 @@
-# Connecticut open data
-*By [Jack Dougherty](../../introduction/who.md), last updated March 25, 2016*
+# Connecticut Open Data
+*By [Jack Dougherty](../../introduction/who.md), last updated Feb 5, 2017*
 
-Since this book was created in Hartford, Connecticut, it lists state and municipal open data repositories for the benefit of local readers:
+Since this book was created in Hartford, Connecticut, we include state and municipal open data repositories for the benefit of local readers:
 
 **Connecticut Open Data** (http://data.ct.gov), the official portal for state government agencies, is hosted on the Socrata platform, which offers built-in data visualization tools and APIs. See also how to create a [filtered point map with Socrata](../../map/socrata/index.html) in this book.
 
@@ -21,21 +21,18 @@ See also separate repositories for individual state agencies:
 
 **Hartford Data** (http://data.hartford.gov), the official portal of the City of Hartford municipal government, is hosted on the Socrata platform, which features built-in visualizations and APIs. See also how to create a [filtered point map with Socrata](../../map/socrata/index.html) in this book. Also, the Hartford Data site links to the City's ArcGIS Online geographic data (http://gisdata.hartford.gov/) and the City's financial data (http://checkbook.hartford.gov/) and budget (http://budget.hartford.gov/).
 
-
 In addition to the official repositories above, Connecticut news organizations that create data visualizations often include links to download data files.
 
 **Connecticut Mirror / Trend CT ** (http://ctmirror.org/) and (http://trendct.org/) are publications of the Connecticut News Project, an independent, nonpartisan, nonprofit organization that focuses on state policy issues. Most of their data visualizations are built with open-source code, with publicly accessible data files. See also their GitHub repository (https://github.com/trendct).
 
 **Hartford Courant Data Desk** (http://www.courant.com/data-desk) produces digital visualizations for the *Hartford Courant*, the largest daily newspaper in Connecticut, owned by Tribune Publishing. Many of these data visualizations are published on the Tableau platform, which allows readers to download the underlying data.
 
-**TO DO** describe Freedom of Information Act (FOIA) data requests in Connecticut
+## Connecticut and Hartford boundary files
 
-
-## Common geographic boundary files
-
-- Click link to download file. If necessary, right-click to Save As...
+- See common geographic boundary files below, with more details in the official repositories above.
+- To download a file, click the link OR right-click to Save As...
 - To view or edit, drag files into http://geojson.io or http://mapshaper.org
-- Learn more in the [Map Your Data](../../map/index.html) and [Shape Your Map Data](../../shape/index.html) sections of this book
+- Learn more in the [Map Your Data](../../map/index.html) and [Transform Your Map Data](../../transform/index.html) sections of this book
 
 | Geography              | Source    | Preview | GeoJSON | KML |
 | :--------------------- | :---------| :------ | :------ |:--- |
@@ -52,6 +49,7 @@ In addition to the official repositories above, Connecticut news organizations t
 - add school districts (and clarify elementary-secondary)
 - add Capitol Region Education Council (CREC) http://www.crec.org/
 - add school attendance areas from federal site
+- describe Freedom of Information Act (FOIA) data requests in Connecticut
 
 {% footer %}
 {% endfooter %}

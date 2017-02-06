@@ -1,7 +1,11 @@
 # Ask Questions When Choosing Tools
 *by [Jack Dougherty, Stacy Lam, and David Tatem](../../introduction/who.md), last updated February 5, 2017*
 
-Before testing out a new tool, try making a list of the criteria that guide your decision-making process. What are the most important factors that influence whether or not you add another item to your digital toolkit? Here's the list that came to our minds:
+When each of us decides which digital tools best fit our needs, we often face trade-offs. On one hand, many of us prefer easy-to-learn tools, especially those with a drag-and-drop interface, but they often force us to settle for limited options. On the other hand, we also favor powerful tools that allow us to control and customize our work, yet most of these require higher-level coding skills. The goal of this book is to find the best of both worlds: that "sweet spot" where tools are both friendly and flexible.
+
+![Image: Diagram of "sweet spot" for easy-to-learn and powerful tools](tool-sweet-spot.png)
+
+Before testing out new tools, try listing the criteria that guide your decision-making process. What are the most important factors that influence whether or not you add another item to your digital toolkit? Here's the list that came to our minds:
 
 ***1) Price:*** Is the tool free, or is there a “freemium” model to pay for more features or higher usage?
 
@@ -31,24 +35,17 @@ Before testing out a new tool, try making a list of the criteria that guide your
 
 *** 14) Mobile-friendly:*** Will it correctly display my work on various mobile devices and browsers?
 
-That's a long list! It's even longer than the number of tools we'll mention in this book.
-
-Don't let our list overwhelm you. The key lesson is that we often need to make trade-offs. For example, many of the drag-and-drop tools featured in this book are easy-to-learn, but they often lack the ability to customize our charts and maps. Those "power features" are typically found in more advanced tools that require coding skills or command-line computer operations. The goal of this book is to help users find their own "sweet spot" where tools are both friendly and flexible.
-
-**TO DO**
--improve diagram below; redo as chart with circled "sweet spot"
-
-![](ToolTradeoffs.png)
-
-Your "sweet spot" may differ from someone else's. But we've organized this book around the types of tools that we believe will suit the largest numbers, based on our experience in working with  people ranging from beginners to experts.
+That's a long list! It's even longer than the number of tools we'll mention in this book. But don't let it overwhelm you. The diagram at the top of the page illustrates the two most important criteria for the many free tools that are currently available: easy-to-learn and powerful features.
 
 ## Learn more
 
-- Carl V. Lewis, dataviz.tools: a curated guide to the best tools, resources and technologies for data visualization, http://dataviz.tools
+- Carl V. Lewis, Dataviz.tools: A curated guide to the best tools, resources and technologies for data visualization, http://dataviz.tools
 
 - Lincoln Mullen, "How to Make Prudent Choices About Your Tools," ProfHacker blog, Chronicle of Higher Education, August 14, 2013, http://www.chronicle.com/blogs/profhacker/how-to-make-prudent-choices-about-your-tools
 
-- Lisa Spiro and contributors, DiRT: Digital Research Tools Directory (formerly Bamboo), http://dirtdirectory.org
+- Lisa Charlotte Rost, “What I Learned Recreating One Chart Using 24 Tools,” Source, December 8, 2016, https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/
+
+- Lisa Spiro and colleagues, DiRT: Digital Research Tools Directory (formerly Bamboo), http://dirtdirectory.org
 
 {% footer %}
 {% endfooter %}

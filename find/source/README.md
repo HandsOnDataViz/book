@@ -22,5 +22,13 @@ Add a *source* tab, after the data, with notes to remind you and others about it
 
 ![](SpreadsheetSourceTab.png)
 
+** TO DO **
+
+Source your data
+     - explain that data cannot be copyrighted, but representations of data can be
+     - open-source and creative commons
+     - credit sources and collaborators on dataviz products and readme files
+     - Whose perspectives does your data privilege? Whose stories remain untold?
+
 {% footer %}
 {% endfooter %}

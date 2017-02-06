@@ -4,5 +4,7 @@
 
 **TO DO** write a new intro to match content that I moved into subfolders
 
+http://trendct.org/2015/08/28/getting-rid-of-duplicate-rows-using-google-sheets/
+
 {% footer %}
 {% endfooter %}

@@ -11,3 +11,6 @@ Closely examine your data files to understand their meaning, sources of origin, 
 
 ** TO DO ** cite and explain this resource
 https://github.com/Quartz/bad-data-guide
+
+Dangers of using Excel
+https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/

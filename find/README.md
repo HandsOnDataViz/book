@@ -24,8 +24,22 @@ Before starting to create charts or maps, get to know your data.
 
 **TO DO** add resource https://github.com/Quartz/bad-data-guide
 
+open data inception 1600+ sites portal
+http://opendatainception.io/
+
 Closely examine your data files to understand their meaning, sources of origin, and limitations.
 **TO DO** expand on this theme with examples of bad and misleading data
+
+1) Always ask: Am I using the best available data?
+
+Compare the HFS list to the City of Hartford’s current list of food establishments:
+https://data.hartford.gov/browse
+go to Public Health Category
+click on the “dataset” version (updated 10 Feb 2016), which is same data but different view than the “map” version
+click on light blue “export” button into any format you wish to compare with the HFS list (see screenshot)
+decide which list is best for your organization’s goal
+
+In this week’s seminar, one of our guests is Brett Flodine, who manages City of Hartford open data repository, and he can answer your questions about this data, as well as the pros/cons of his map version.
 
 
 {% footer %}

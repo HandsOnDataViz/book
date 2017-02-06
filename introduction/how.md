@@ -9,3 +9,6 @@
     - Mac: two-finger trackpad click, or Control + click   
 	  - Windows: ?????
     - Chrome: two-finger trackpad click, or Alt + click
+
+    - - hard refresh (how to do it on different browsers)
+- capture screenshot (how to on different operating systems)

@@ -20,3 +20,29 @@ This section demonstrates ways to restructure your spreadsheet data and make it 
 **TO DO**
 - Clean up data that contains stray commas, or mistyped entries
 - Advanced clean up with Open Refine; see Alvin Chang's CT Mirror guide http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/
+
+
+What’s the best way to store and share data for your project?
+
+If only one person is working on a data table, then any spreadsheet tool is fine (such as Excel).
+
+If multiple people need read-only access to a table, then use a tool to store your spreadsheet online, such as:
+- Use Google Sheets (see below)
+- OR, If you prefer to keep the file in Excel format:
+Set up a free Dropbox.com account
+Upload the Excel file to your Dropbox online
+Use Dropbox commands to “Share a Dropbox link” with other people
+
+
+If multiple people need simultaneous editing access to the table (for example, if both you and Mike need to clean up the data, working at the same time), then use a shareable spreadsheet tool, such as Google Sheets.
+Open Google Drive
+Upload an existing table (in Excel or CSV or other formats)
+Google will convert the table in Google Sheets format
+Change Share settings > Advanced > Anyone with the link > Can Edit
+
+
+http://trendct.org/2015/09/04/tutorial-how-to-make-pivot-tables-in-google-sheets/
+see also
+https://www.youtube.com/watch?v=e48ZsSe48RE
+see also
+https://support.google.com/docs/answer/1272898?hl=en&ref_topic=1258755&rd=1

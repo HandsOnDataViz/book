@@ -1,10 +1,10 @@
 # Simple Point Map with BatchGeo
-*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated January 22, 2017*
+*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated February 6, 2017*
 
 ## Try It
-Explore this interactive point map, created with the free version of BatchGeo (http://batchgeo.com).
+Explore the interactive point map below, or <a href="https://batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40">view the full-screen version</a>, created with BatchGeo (http://batchgeo.com).
 
-<p><iframe src="https://batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40" frameborder="0" width="90%" height="550" style="border:1px solid #aaa;"></iframe></p><p><small>View <a href="https://batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40">BatchGeo demo point map in a full screen map</a></small></p>
+<iframe src="https://batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40" frameborder="0" width="90%" height="550" style="border:1px solid #aaa;"></iframe>
 
 ## Tool Review
 - Pros:
@@ -17,17 +17,25 @@ Explore this interactive point map, created with the free version of BatchGeo (h
   - Free version cannot process more than 250 rows of data
   - Must manually disable advertisements on your free maps
   - Cannot extract geocoded data to migrate to another tool
-  - More advanced mapping features requires an expensive license
+  - More advanced mapping features require an expensive license
 
 ## Tutorial
 
-The free BatchGeo point map tool (http://batchgeo.com) is so easy that it barely needs a tutorial.
-- Build a simple point map with sample data. Right-click > Save As this link to [sample address data in CSV format](../sample-address-data-for-point-maps.csv) to download to your computer.
-- Copy and paste address data into the BatchGeo web interface, or drag-and-drop a spreadsheet file. Use the tool template if needed.
-- Click the Validate & Set Options button to review your data, or the Map Now button.
-- BatchGeo will attempt to geocode your address data and display an interactive point map. Colored markers include pop-up data windows.
-- Click the Save and Continue button. Add map title, select Public or Unlisted, and insert your email address.
-- BatchGeo emails you a link to edit your map, or embed the iframe code in your own website. To learn more, go to [Embed on Your Web](https://www.datavizforall.org/embed/), in this book.
+Let's build a simple point map with sample data. This tool is so easy that most readers probably will skip over this tutorial.
+
+1) Right-click > Save As this link to [sample address data in CSV format](../sample-address-data-for-point-maps.csv), a generic spreadsheet table, and download it to your computer.
+
+2) Open BatchGeo in your browser at http://batchgeo.com
+
+3) Drag-and-drop the address file into BatchGeo. Or, open the CSV file with any spreadsheet tool, then copy and paste the address data into the web interface. Or, use the BatchGeo template if needed.
+
+4) Click the Validate & Set Options button to review your data, or the Map Now button.
+
+5) BatchGeo will attempt to geocode your address data and display an interactive point map. Colored markers include pop-up data windows.
+
+6) Click the Save and Continue button. Add map title, select Public or Unlisted, and insert your email address.
+
+7) BatchGeo emails you a link to edit your map, or to embed the iframe code in your own website. To learn more, go to the [Embed on Your Web](../../embed/readme.md) chapters in this book.
 
 {% footer %}
 {% endfooter %}

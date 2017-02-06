@@ -1,4 +1,5 @@
 # Structure, Plugins, and Syntax
+*last updated by Jack Dougherty on February 6, 2017*
 
 <!-- toc -->
 
@@ -23,28 +24,36 @@ Inside each chapter folder, the main text is stored in the README.md file, to si
 - http://www.datavizforall.org/map/point-gft
 
 
-### Embed links in GitBook Markdown
+### Embed external links in GitBook Markdown
 Insert brackets around the words to be underlined, followed by parentheses for the embedded link, like this:
 
 ```
 Regular text [with underlined hotlink](http://anywhere.com)
 ```
 
-For internal links to other chapters of this GitBook, which is organized into parts, go up one or more folder levels at the start of the pathname. Also, add the phrase **in this book** to the main text to assist when searching for internal book links to revise, using the Find in Project menu in Atom Editor.
+### Embed internal relative links in GitBook Markdown
 
-In this example, the pathname goes up two folder levels to locate the chapter and file:
+For internal relative links to other chapters of this GitBook, which is organized into parts. Also, add the phrase **this book** to the text to assist when searching for internal book links to revise, using the Find in Project menu in Atom Editor.
 
-```
-[Improve this book:](../../gitbook/improve.md)
-```
-
-For internal links to a README.md file in this GitBook, *in my experience* the pathname must end with index.html:
+Example 1: pathname points to folder, at the same level, with a default README.md file (which requires no direct reference)
 
 ```
-see [polygon maps in this book](../../map/polygon-gft/index.html)
+[Go to this chapter](gitbook) in this book
 ```
 
-For internal links to downloadable sample files, upload them into the GitBook and insert a link.
+Example 2: pathname points to folder, up one level, with a default README.md file (which requires no direct reference)
+
+```
+[Go to a different part](../choose) in this book
+```
+
+Example 3: pathname points to folder, up two levels, and a specific .md file name (not default README.md)
+
+```
+[Help us improve this book](../../gitbook/improve.md)
+```
+
+Example 4: For internal links to downloadable sample files, upload them into the GitBook and insert a link.
 
 ```
 [Download this sample file](sample.csv)

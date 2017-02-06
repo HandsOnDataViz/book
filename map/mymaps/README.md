@@ -2,7 +2,7 @@
 *By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated February 6, 2017*
 
 ## Try It
-Explore the interactive point map below, or <a href="https://drive.google.com/open?id=1OPrulm2ISYUb990DJOCoYlt_sWc">view the full-screen version</a>,created with the Google My Maps (https://www.google.com/maps).
+Explore the interactive point map below, or <a href="https://drive.google.com/open?id=1OPrulm2ISYUb990DJOCoYlt_sWc">view the full-screen version</a>,created with Google My Maps (https://www.google.com/maps).
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc" width="90%" height="480"></iframe>
 

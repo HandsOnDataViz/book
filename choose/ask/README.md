@@ -1,9 +1,9 @@
 # Ask Questions When Choosing Tools
-*by [Jack Dougherty, Stacy Lam, and David Tatem](../../introduction/who.md), last updated February 5, 2017*
+*by [Jack Dougherty, Stacy Lam, and David Tatem](../../introduction/who.md), last updated February 6, 2017*
 
 When each of us decides which digital tools best fit our needs, we often face trade-offs. On one hand, many of us prefer easy-to-learn tools, especially those with a drag-and-drop interface, but they often force us to settle for limited options. On the other hand, we also favor powerful tools that allow us to control and customize our work, yet most of these require higher-level coding skills. The goal of this book is to find the best of both worlds: that "sweet spot" where tools are both friendly and flexible.
 
-![Image: Diagram of "sweet spot" for easy-to-learn and powerful tools](tool-sweet-spot.png)
+![Diagram: the 'sweet spot' for easy-to-learn and powerful tools](tool-sweet-spot.png)
 
 Before testing out new tools, try listing the criteria that guide your decision-making process. What are the most important factors that influence whether or not you add another item to your digital toolkit? Here's the list that came to our minds:
 

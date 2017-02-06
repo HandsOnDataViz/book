@@ -35,7 +35,7 @@ Let's build a simple point map with sample data. This tool is so easy that most 
 
 6) Click the Save and Continue button. Add map title, select Public or Unlisted, and insert your email address.
 
-7) BatchGeo emails you a link to edit your map, or to embed the iframe code in your own website. To learn more, go to the [Embed on Your Web](../../embed/readme.md) chapters in this book.
+7) BatchGeo emails you a link to edit your map, or to embed the iframe code in your own website. To learn more, go to the [Embed on Your Web](../../embed) chapters in this book.
 
 {% footer %}
 {% endfooter %}

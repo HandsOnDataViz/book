@@ -61,7 +61,7 @@ After setting all of your Conditional Formatting, press Apply at the bottom of t
 
 ![](SocrataMap12.png)
 
-Visualizations created in the Socrata platform produce HTML iframe codes, which allows you to embed the dataviz in your own website. Select the Embed tab to view and copy the code code. See chapter in this book on [how to embed a dataviz iframe code in your website[(../../embed/README.md).
+Visualizations created in the Socrata platform produce HTML iframe codes, which allows you to embed the dataviz in your own website. Select the Embed tab to view and copy the code. Then go to the [Embed on the Web](../../embed) chapters in this book.
 
 ![](SocrataMap13.jpg)
 

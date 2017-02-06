@@ -26,4 +26,4 @@ Finally, rate your experience using each tool with these selected criteria:
 - Data Migration: Which tool most easily allowed you to import and export your data?
 - Error-friendly: Which tool geocoded most accurately or signaled possible errors?
 
-**Recommended: [Enroll in our free online course](../../enroll/readme.md)** to compare your ratings to other students.
+**Recommended: [Enroll in our free online course](../../enroll)** to compare your ratings to other students.

@@ -54,7 +54,7 @@ Let's build a simple point map with sample data, using Google My Maps (https://w
 
 ![Image: Share link](mymaps-share.png)
 
-10) To embed the map on your own website, click the three vertical dots next to the map title for more options, and select Embed On My Site. The tool will generate an iframe code for you to copy. For next steps, go to the [Embed on Your Web](../../embed/readme.md) chapters in this book.
+10) To embed the map on your own website, click the three vertical dots next to the map title for more options, and select Embed On My Site. The tool will generate an iframe code for you to copy. For next steps, go to the [Embed on Your Web](../../embed) chapters in this book.
 
 ![Image: Embed map on your site](mymaps-embed.png)
 

@@ -9,6 +9,7 @@
 * [Choose Tools to Tell Story](choose/README.md)
    * [Draw Your Data Story](choose/draw/README.md)
    * [Ask Questions about Tools](choose/ask/README.md)
+   * [Rate Three Map Tools](choose/rate/README.md)
 * [Improve Spreadsheet Skills](spreadsheet/README.md)
    * [Format and Sort Data](spreadsheet/format/README.md)
    * [Calculate with Formulas](spreadsheet/calculate/README.md)

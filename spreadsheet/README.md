@@ -9,7 +9,7 @@ Four common spreadsheet tools:
 | :--- | :--- |
 | [Google Sheets](https://www.google.com/sheets/about/) | Free, online collaborative spreadsheet on Google Drive. Requires free account. |
 | [Microsoft Excel Online](https://office.live.com/start/Excel.aspx) | Free online spreadsheet on Microsoft OneDrive. Requires free account. |
-| [Microsoft Excel](https://products.office.com/en-us/excel) | Not free (US $100+) spreadsheet for desktop Mac or Windows, as part of Microsoft Office. |
+| [Microsoft Excel desktop](https://products.office.com/en-us/excel) | Not free (US $100+) spreadsheet for Mac or Windows desktop, as part of Microsoft Office. |
 | [LibreOffice](http://www.libreoffice.org) | Free, open-source alternative to Microsoft Office desktop. Donation requested during download. |
 
 Which spreadsheet tool should you use? That depends on how you wish to share and store data for your project.

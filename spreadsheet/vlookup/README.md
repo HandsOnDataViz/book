@@ -1,10 +1,16 @@
 # Match Data with the VLOOKUP Function
-
 *By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
 
-**TO DO** rewrite to pose the problem: how can you easily match data between two different spreadsheets? Show picture. Yes, while you could manually copy and paste, that would take forever and you could make errors. A better strategy is to see how the VLOOKUP function on most spreadsheet tools can automate this task for you. Also, emphasize Google Sheets examples
+**TO DO**
+- redo the conceptual visual with a better example, maybe towns or school districts?
+- add Google Sheets visuals
+- upload sample tables for readers to follow along
+- see other notes inserted below
 
-Most spreadsheet tools include a VLOOKUP function to automatically "look up" missing data for a column in the first table, and fill it with matching data from a vertical column in a second table. If the two tables share a common data column, you can use VLOOKUP to save time.
+Here's a common problem: Your first spreadsheet contains a long list of towns by population. Your second spreadsheet contains a long list of towns by income. What's the most efficient way to merge all of these columns into one sheet?
+- You could copy and paste each cell, but that would take forever
+- You could sort each sheet alphabetically by town, then copy and paste an entire column, but that only works if each sheet contains the exact same list of towns
+- You could use the VLookup function, which "looks up" data in two vertical columns and automatically fills those that match
 
 ![](vlookup-concept.png)
 
@@ -29,10 +35,8 @@ In Excel, the VLOOKUP formula looks complex at first, so let's break it down int
 ![](vlookup-640.gif)
 
 *TO DO*
-- illustrate same concept in Google Sheets
-- upload sample tables for readers to follow along
 - explain limitations of VLOOKUP
-- suggest related tools: INDEX (?), Merge command in Google Fusion Tables, etc.
+- see also related tools: INDEX (?)
 
 {% footer %}
 {% endfooter %}

@@ -2,10 +2,19 @@
 
 *By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
 
-**TO DO** rewrite to start with "here's a common problem/question" and show rows of data and an unanswered question. Then show how pivot tables can group (or aggregate) data to show a more meaningful story. 
+**TO DO**
+- rewrite to start with a common problem, and how this method solves it
+- use better example
+- create better Google Sheets visuals, then Excel for Mac/Windows
+- offer sample data for users to follow along
 
+Here's a common problem: You have a large spreadsheet with columns of categories, such as (**to come**). You want to count up the number of items in each category. What's the most efficient way to do this?
+- You could sort the data by column and count by hand, which would take forever
+- You could insert a formula with the =COUNT() or =COUNTA() function, but that would only count one column
+- You could create a pivot table to aggregate (or regroup) data in another sheet
 
-Sometimes your goal is to aggregate individual rows of data into larger groups by the same type. For example, one organization compiled a spreadsheet of its contacts. Each row included a city, and when sorted, it appeared like this:
+** REDO THIS **
+For example, one organization compiled a spreadsheet of its contacts. Each row included a city, and when sorted, it appeared like this:
 
 ![](PivotTablesPrep.png)
 
@@ -28,6 +37,13 @@ Most spreadsheet tools include a *pivot table* feature to reorganize and regroup
 4. In Report Editor > Values > add same field > summarize by: COUNTA (to display the count for alphabet/textual entries)
 
 ![](GoogleSheet-pivot-simple.png)
+
+** TO DO **
+- show more complex pivot table with columns and rows
+
+See more resources on pivot tables with Google Sheets
+- Google Help Page https://support.google.com/docs/answer/1272898?hl=en&ref_topic=1258755&rd=1
+- Andrew Ba Tran, "Tutorial: How to Make Pivot Tables in Google Sheets," TrendCT, September 4, 2015, http://trendct.org/2015/09/04/tutorial-how-to-make-pivot-tables-in-google-sheets/
 
 {% footer %}
 {% endfooter %}

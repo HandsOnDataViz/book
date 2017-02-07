@@ -1,8 +1,10 @@
 # Calculate with Formulas and Functions
-
 *By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
 
-**TO DO** update this page - see notes inserted below
+**TO DO**
+- when possible, start text by posing a common problem, and how this method can solve it
+- redo visuals: Google Sheets with better examples
+- see other notes inserted below
 
 Simple formulas can save you lots of time. The big advantage of spreadsheet tools is the ability to insert simple formulas to calculate numbers, or combine columns of text, for entire rows and columns.
 

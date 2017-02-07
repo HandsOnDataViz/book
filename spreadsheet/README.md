@@ -1,48 +1,35 @@
 # Improve Your Spreadsheet Skills
+*by [Jack Dougherty](../introduction/who.md), last updated February 7, 2017*
 
-**TO DO** expand this section
+Spreadsheets are wonderful tools to organize data into tables of rows and columns. With a spreadsheet, you can sort, filter, calculate, aggregate, and reorganize information to help you find the stories buried inside.
 
-Spreadsheets are wonderful tools to organize data into tables of rows and columns. This chapter introduces some of the basic skills in working with spreadsheet tools, including these very popular ones:
+Four common spreadsheet tools:
 
-**TO DO** revise into a table
+| Tool | Features |
+| :--- | :--- |
+| [Google Sheets](https://www.google.com/sheets/about/) | Free, online collaborative spreadsheet on Google Drive. Requires free account. |
+| [Microsoft Excel Online](https://office.live.com/start/Excel.aspx) | Free online spreadsheet on Microsoft OneDrive. Requires free account. |
+| [Microsoft Excel](https://products.office.com/en-us/excel) | Not free (US $100+) spreadsheet for desktop Mac or Windows, as part of Microsoft Office. |
+| [LibreOffice](http://www.libreoffice.org) | Free, open-source alternative to Microsoft Office desktop. Donation requested during download. |
 
+Which spreadsheet tool should you use? That depends on how you wish to share and store data for your project.
+- If you are the **only person** working on a data project, use any spreadsheet tool.
+- If you need to **share live, view-only data** with others, try Google Sheets or MS Excel Online.
+- If you need to **share live, editable data** with others, try Google Sheets.
+- If you need to **secure confidential data**, avoid online tools and use any desktop spreadsheet.
 
+This introductory online book features Google Sheets because it's a free and easy-to-learn tool for collaborating and sharing data with others. The basic spreadsheet methods shown here are very similar across all spreadsheet tools. But advanced users may need more complex tools to manage very large datasets, or relational databases, or to perform deeper analysis.
 
-Although there are differences between these tools, this book will focus on basic tasks that are nearly the same across all three.
+If you're new to spreadsheets or want to refresh your skills, see the following chapters:
+- Share with Google Sheets
+- Sort and Filter Data
+- Calculate with Formulas
+- Match Data with VLookup
+- Group Data with Pivot Tables
+- Save as Generic CSV Format
+- Collect and Share Survey Data with Google Forms
 
-Of course, there are more complex tools to manage large databases (or collections of tables with relationships between them). In this introductory book, we'll focus on simpler spreadsheet tools.
+**[Enroll in our free online course](../../enroll)**, which offers more spreadsheet exercises and opportunities to interact with instructors and other learners.
 
-This section demonstrates ways to restructure your spreadsheet data and make it more meaningful for your data visualization. For example, you may wish to:
-
-- Aggregate (or group together) rows of data with similar entries
-- Join (or merge) data from two tables that share a similar column
-
-**TO DO**
-- Clean up data that contains stray commas, or mistyped entries
-- Advanced clean up with Open Refine; see Alvin Chang's CT Mirror guide http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/
-
-
-What’s the best way to store and share data for your project?
-
-If only one person is working on a data table, then any spreadsheet tool is fine (such as Excel).
-
-If multiple people need read-only access to a table, then use a tool to store your spreadsheet online, such as:
-- Use Google Sheets (see below)
-- OR, If you prefer to keep the file in Excel format:
-Set up a free Dropbox.com account
-Upload the Excel file to your Dropbox online
-Use Dropbox commands to “Share a Dropbox link” with other people
-
-
-If multiple people need simultaneous editing access to the table (for example, if both you and Mike need to clean up the data, working at the same time), then use a shareable spreadsheet tool, such as Google Sheets.
-Open Google Drive
-Upload an existing table (in Excel or CSV or other formats)
-Google will convert the table in Google Sheets format
-Change Share settings > Advanced > Anyone with the link > Can Edit
-
-
-http://trendct.org/2015/09/04/tutorial-how-to-make-pivot-tables-in-google-sheets/
-see also
-https://www.youtube.com/watch?v=e48ZsSe48RE
-see also
-https://support.google.com/docs/answer/1272898?hl=en&ref_topic=1258755&rd=1
+{% footer %}
+{% endfooter %}

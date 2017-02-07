@@ -11,7 +11,7 @@
    * [Ask Questions about Tools](choose/ask/README.md)
    * [Rate Three Map Tools](choose/rate/README.md)
 * [Improve Spreadsheet Skills](spreadsheet/README.md)
-   * [Share with Google Sheets](spreadhsheet/share/README.md)
+   * [Share with Google Sheets](spreadsheet/share/README.md)
    * [Sort and Filter Data](spreadsheet/sort/README.md)
    * [Calculate with Formulas](spreadsheet/calculate/README.md)
    * [Match Data with VLookup](spreadsheet/vlookup/README.md)

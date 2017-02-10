@@ -1,5 +1,5 @@
 # Point Map with Carto Builder
-*By [Jack Dougherty](../../introduction/who.md), last updated February 6, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated February 10, 2017*
 
 ## Try It
 Explore the interactive point map below, or <a href="https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed">view the full-screen version</a>,created with Carto Builder (https://carto.com).
@@ -23,7 +23,7 @@ Explore the interactive point map below, or <a href="https://jackdougherty.carto
 
 Let's build a simple point map with sample data, using Carto Builder (https:/carto.com). Requires signing up for a free account.
 
-1) Right-click > Save As this link to [sample address data in CSV format](../sample-address-data-for-point-maps.csv), a generic spreadsheet format, and download it to your computer.
+1) Right-click > Save As this link to [sample address data in CSV format](../sample-address-data.csv), a generic spreadsheet format, and download it to your computer.
 
 2) Open Carto in your browser https://carto.com
 

@@ -1,5 +1,5 @@
 # Point Map with Google My Maps
-*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated February 6, 2017*
+*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated February 10, 2017*
 
 ## Try It
 Explore the interactive point map below, or <a href="https://drive.google.com/open?id=1OPrulm2ISYUb990DJOCoYlt_sWc">view the full-screen version</a>,created with Google My Maps (https://www.google.com/maps).
@@ -20,7 +20,7 @@ Explore the interactive point map below, or <a href="https://drive.google.com/op
 
 Let's build a simple point map with sample data, using Google My Maps (https://www.google.com/maps). Requires signing up for a free Google account.
 
-1) Right-click > Save As this link to [sample address data in CSV format](../sample-address-data-for-point-maps.csv), a generic spreadsheet format, and download it to your computer.
+1) Right-click > Save As this link to [sample address data in CSV format](../sample-address-data.csv), a generic spreadsheet format, and download it to your computer.
 
 2) Open Google My Maps in your browser https://www.google.com/maps
 

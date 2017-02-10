@@ -1,5 +1,5 @@
 # Choose Tools to Tell Your Data Story
-*by [Jack Dougherty, Stacy Lam, and David Tatem](../introduction/who.md), last updated February 6, 2017*
+*by [Jack Dougherty, Stacy Lam, and David Tatem](../introduction/who.md), last updated February 10, 2017*
 
 Do you feel overwhelmed by the enormous range of data visualization tools? There's been so many different tools released in recent years that anyone would have a hard time deciding which ones to use. Even if you limit your choices to the dozen or so tools specifically mentioned in this book, how do you make wise decisions?
 

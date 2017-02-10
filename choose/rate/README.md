@@ -1,5 +1,5 @@
 # Rate Three Simple Map Tools
-*by [Jack Dougherty, Stacy Lam, and David Tatem](../../introduction/who.md), last updated February 6, 2017*
+*by [Jack Dougherty, Stacy Lam, and David Tatem](../../introduction/who.md), last updated February 10, 2017*
 
 Let's explore criteria from the previous chapter by comparing three different tools, and reflecting on which factors you feel are most important when making decisions about your toolkit. We'll test three drag-and-drop tools to transform sample address data into a simple interactive point map.
 

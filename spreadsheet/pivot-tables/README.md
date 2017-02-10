@@ -1,6 +1,5 @@
 # Group Data with Pivot Tables
-
-*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
+*By [Jack Dougherty](../../introduction/who.md), last updated February 9, 2017*
 
 **TO DO**
 - rewrite to start with a common problem, and how this method solves it
@@ -8,10 +7,14 @@
 - create better Google Sheets visuals, then Excel for Mac/Windows
 - offer sample data for users to follow along
 
-Here's a common problem: You have a large spreadsheet with columns of categories, such as (**to come**). You want to count up the number of items in each category. What's the most efficient way to do this?
-- You could sort the data by column and count by hand, which would take forever
-- You could insert a formula with the =COUNT() or =COUNTA() function, but that would only count one column
-- You could create a pivot table to aggregate (or regroup) data in another sheet
+Here's a common problem: You open a large spreadsheet with many rows of data, such as a list of students. Your goal is to count students by categories, such as the number of male and female students in the gender column.  What's the most efficient way to do this?
+
+**TO DO**
+-insert image of table 
+
+Answer: Create a pivot table to aggregate (or regroup) and count data in another spreadsheet tab.
+
+
 
 ** REDO THIS **
 For example, one organization compiled a spreadsheet of its contacts. Each row included a city, and when sorted, it appeared like this:

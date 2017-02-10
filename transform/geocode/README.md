@@ -1,4 +1,4 @@
-# Geocode Addresses and Save Coordinates with a Google Sheets script 
+# Geocode Addresses and Save Coordinates with a Google Sheets script
 
 *By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
 
@@ -64,8 +64,8 @@ To follow this tutorial, [download 50 sample addresses in CSV format](sample-add
 
 ## Common next steps in this book:
 - Upload geocoded coordinate data into a [Leaflet map template](../../leaflet/index.html).
-- Aggregate individual rows of data into groups by census area with [pivot tables](../../transform/pivot-tables/index.html).
-- [Download census data](../census/index.html) by tract or block group, and use the [VLOOKUP formula](../../transform/vlookup/index.html) to join or merge this rows of data that you have geocoded by census tract or block group.
+- Aggregate individual rows of data into groups by census area with [pivot tables](../../spreadsheet/pivot).
+- [Download census data](../find) by tract or block group, and use the [VLOOKUP formula](../../spreadsheet/vlookup/) to join or merge this rows of data that you have geocoded by census tract or block group.
 
 {% footer %}
 {% endfooter %}

@@ -1,6 +1,8 @@
-# How to read this book
+# How to Read and Comment on this book
+*Last updated February 11, 2017*
 
-**TO DO** add conceptual and logistical recommendations about reading this online book
+**TO DO**
+add conceptual and logistical recommendations about reading and commenting on this online book
 
 - the ideal version is the online web edition, since it includes interactive features that appear as static images and links in the downloadable pdf and ebook editions
 
@@ -12,3 +14,7 @@
 
     - - hard refresh (how to do it on different browsers)
 - capture screenshot (how to on different operating systems)
+
+- raise up text and visuals from gitbook improve.md section
+
+<a href="https://www.datavizforall.org/gitbook/improve.html">Select text and (+) symbol to comment</a> or <a href="https://github.com/JackDougherty/datavizforall">suggest edits on GitHub</a>.

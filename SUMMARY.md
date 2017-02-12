@@ -2,9 +2,9 @@
 
 * [Introduction](README.md)
    * [Why this book?](introduction/why.md)
-   * [What is dataviz?](introduction/what.md)
-   * [Who wrote this book?](introduction/who.md)
-   * [How to read this book](introduction/how.md)
+   * [Who created it?](introduction/who.md)
+   * [How to read and comment](introduction/how.md)
+   * [Donate to student authors](introduction/donate.md)
 * [Enroll in Free edX Course](enroll/README.md)
 * [Choose Tools to Tell Story](choose/README.md)
    * [Draw Your Data Story](choose/draw/README.md)

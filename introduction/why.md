@@ -1,3 +1,8 @@
-# Why This Book?
+# Why this book?
+*Last updated February 11, 2017*
 
-The goal of this book is to democratize the power of data visualization and make it more accessible for all. Over the past several years, my undergraduate students and I have been creating interactive charts and maps to improve our ability to tell data-driven stories on the web. In addition to our academic work, we have also partnered on projects with journalists, government agencies, and non-profit organizations. Tools that were once costly are now freely available on the web, and easier to learn, if you have some guidance on key concepts and step-by-step support. This book-in-progress outlines what we have learned, and seeks to freely share our knowledge with others. Explore our examples, follow the tutorials, and learn how to tell your story **and** show the data.
+*Data Visualization for All*, an open-access online textbook, seeks to help you tell your story -- and show your data -- through the power of the public web.
+
+At Trinity College, my undergraduate students and I have learned so much while creating interactive charts and maps in partnership with local journalists, government agencies, and non-profit organizations. Tools that were once costly are now freely available online, and have become much easier to master, if users have guidance on key concepts and step-by-step instructions. This free book outlines what we have learned from working with our community partners in Hartford, Connecticut, and seeks to share our knowledge with others. We encourage you to help us improve and expand the book for future readers.
+
+Explore our examples, try our tutorials, and dream about better ways to tell your data stories.

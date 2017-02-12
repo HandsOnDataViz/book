@@ -1,8 +1,15 @@
-# Donate to student co-authors at Trinity College
-*Last updated February 11, 2017*
+# Donate to DataViz Students at Trinity College
 
-Help us improve this free book, *Data Visualization for All*, by donating funds to Trinity College in Hartford, Connecticut. Your donation will directly support Trinity student co-authors to revise and add more chapters, and to create data visualizations with community partners. 
+Help us improve this free book, *Data Visualization for All*, by donating funds to DataViz students at Trinity College in Hartford, Connecticut. Your donation will directly support Trinity students who are working to expand the book, and create visualizations with community partners. Contributions are tax-deductible.
 
-[Donate to DataViz at Trinity College](https://securelb.imodules.com/s/1490/index-3col-form.aspx?sid=1490&gid=1&pgid=1188&cid=2232)
-- select the "Other" checkbox and type in "DataViz"
-- donations to Trinity College are tax-deductible
+<a href="https://securelb.imodules.com/s/1490/index-3col-form.aspx?sid=1490&gid=1&pgid=1188&cid=2232"><img alt="Donate to DataViz students" src="donate.png">
+
+In the [Trinity College online donation form](https://securelb.imodules.com/s/1490/index-3col-form.aspx?sid=1490&gid=1&pgid=1188&cid=2232)
+- select "I want to choose designations..."
+- in the "Other" field, type "DataViz"
+
+** TO DO **
+- add student images with testimonials
+
+{% footer %}
+{% endfooter %}

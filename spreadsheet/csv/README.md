@@ -1,9 +1,10 @@
-# Save Spreadsheets in Generic CSV Format
-*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
+# Save Spreadsheets in CSV or ODS Formats
+*By [Jack Dougherty](../../introduction/who.md), last updated February 11, 2017*
 
 ** TO DO **
 - show how this is simple with Google Sheets, then show Excel Desktop
-- emphasize how saving in CSV format will only work on one sheet at a time 
+- emphasize how saving in CSV format will only work on one sheet at a time
+- add ODS as another format for saving a spreadsheet file with multiple tabs
 
 
 Comma Separated Values (abbreviated as CSV) is a generic spreadsheet format that is very portable across nearly all data and visualization tools. In some cases, a tool may require you to convert spreadsheet data from Microsoft Excel or other applications into generic CSV format.

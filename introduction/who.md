@@ -1,7 +1,6 @@
 # Who created this book?
-*Last updated February 11, 2017*
 
-*Data Visualization for All* was created by many contributors, who agreed to freely share our work as an open-access book.
+Contributors to *Data Visualization for All* have agreed to freely share our work as an open-access book.
 
 | Authors | About Us |
 | ---: | :--- |

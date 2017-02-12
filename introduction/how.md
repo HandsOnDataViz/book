@@ -1,5 +1,4 @@
 # How to Read and Comment on this book
-*Last updated February 11, 2017*
 
 **TO DO**
 add conceptual and logistical recommendations about reading and commenting on this online book
@@ -18,3 +17,6 @@ add conceptual and logistical recommendations about reading and commenting on th
 - raise up text and visuals from gitbook improve.md section
 
 <a href="https://www.datavizforall.org/gitbook/improve.html">Select text and (+) symbol to comment</a> or <a href="https://github.com/JackDougherty/datavizforall">suggest edits on GitHub</a>.
+
+{% footer %}
+{% endfooter %}

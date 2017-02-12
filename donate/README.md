@@ -1,4 +1,4 @@
-# Donate to DataViz Students at Trinity College
+# Donate to Support DataViz Students at Trinity
 
 Help us improve this free book, *Data Visualization for All*. Donate funds to support Trinity College students who are expanding chapters and creating data stories with community partners in Hartford, Connecticut. Contributions are tax-deductible.
 

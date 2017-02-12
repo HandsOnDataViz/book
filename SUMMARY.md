@@ -4,7 +4,7 @@
    * [Why this book?](introduction/why.md)
    * [Who created it?](introduction/who.md)
    * [How to read and comment](introduction/how.md)
-* [Donate to DataViz Students](donate.md)
+* [Donate to DataViz Students](donate/README.md)
 * [Enroll in Free edX Course](enroll/README.md)
 * [Choose Tools to Tell Story](choose/README.md)
    * [Draw Your Data Story](choose/draw/README.md)

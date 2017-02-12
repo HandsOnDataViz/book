@@ -19,5 +19,5 @@
 by <a href="https://www.datavizforall.org/introduction/who.html">Jack Dougherty and contributors</a>
 and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons BY-NC 4.0 International License</a>.
 You may freely share and modify this content for non-commercial purposes, with a source credit to <a href="http://DataVizForAll.org">http://DataVizForAll.org</a>.
-<br /><strong>Improve this book: <a href="https://www.datavizforall.org/donate/">Donate to DataViz students</a></strong> and <strong><a href="https://www.datavizforall.org/introduction/how.html">add comments or revisions</a></strong>.
+<br /><strong>Improve this book: <a href="https://www.datavizforall.org/donate">Donate to DataViz students</a></strong> and <strong><a href="https://www.datavizforall.org/introduction/how.html">add comments or revisions</a></strong>.
 </div>

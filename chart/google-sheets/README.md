@@ -78,7 +78,7 @@ Try it: Float your cursor over columns to explore data details.
 - In the Chart Editor > Recommendations tab, choose your preferred Column chart (or Bar chart if you prefer a horizontal orientation), or see more options in Chart Types tab.
 
 ## Stacked column or stacked bar chart
-Best to show differences between sub-categories of data. In the example below, when stacked columns are placed side-by-side, they contrast the percentages of overweight residents in each nation (displayed in blue). Use stacked column or bar charts instead of pie charts, since readers can interpret rectangle sizes more accurately than pie slices.
+Best to show differences between sub-categories of data. In the example below, when stacked columns are placed side-by-side, they contrast the percentages of overweight residents in each nation (displayed in blue). 
 
 Try it: Float your cursor over columns to explore data details.
 

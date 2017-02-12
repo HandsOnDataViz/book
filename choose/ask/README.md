@@ -37,15 +37,17 @@ Before testing out new tools, try listing the criteria that guide your decision-
 
 That's a long list! It's even longer than the number of tools we'll mention in this book. But don't let it overwhelm you. The diagram at the top of the page illustrates the two most important criteria for the many free tools that are currently available: easy-to-learn and powerful features.
 
-## Learn more
+## Learn more about choosing tools
 
-- Carl V. Lewis, Dataviz.tools: A curated guide to the best tools, resources and technologies for data visualization, http://dataviz.tools
+Carl V. Lewis, Dataviz.tools: A curated guide to the best tools, resources and technologies for data visualization, http://dataviz.tools
 
-- Lincoln Mullen, "How to Make Prudent Choices About Your Tools," ProfHacker blog, Chronicle of Higher Education, August 14, 2013, http://www.chronicle.com/blogs/profhacker/how-to-make-prudent-choices-about-your-tools
+Lincoln Mullen, "How to Make Prudent Choices About Your Tools," ProfHacker blog, Chronicle of Higher Education, August 14, 2013, http://www.chronicle.com/blogs/profhacker/how-to-make-prudent-choices-about-your-tools
 
-- Lisa Charlotte Rost, “What I Learned Recreating One Chart Using 24 Tools,” Source, December 8, 2016, https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/
+Lisa Charlotte Rost, “What I Learned Recreating One Chart Using 24 Tools,” Source, December 8, 2016, https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/
 
-- Lisa Spiro and colleagues, DiRT: Digital Research Tools Directory (formerly Bamboo), http://dirtdirectory.org
+Lisa Spiro and colleagues, DiRT: Digital Research Tools Directory (formerly Bamboo), http://dirtdirectory.org
+
+Audrey Watters, “‘The Audrey Test’: Or, What Should Every Techie Know About Education?,” Hack Education, March 17, 2012, http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education
 
 {% footer %}
 {% endfooter %}

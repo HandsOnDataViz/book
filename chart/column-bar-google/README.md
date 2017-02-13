@@ -69,7 +69,7 @@ Best to compare differences between sub-categories of data. Use vertical columns
 - In the Chart Editor > Recommendations tab, choose Stacked column chart (or Stacked bar chart if you prefer a horizontal orientation), or see more options in Chart Types tab.
 
 ## Histograms
-Best to show the distribution of raw data, by displaying the number of values in each bucket. Typically displayed in vertical columns.
+Best to show the distribution of raw data, with number of values in each bucket. Typically displayed in vertical columns.
 
 **Try it**   to come*
 

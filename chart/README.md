@@ -14,6 +14,8 @@
 - Tell your story and show the data. Write sentences, titles, and labels that call attention to the most meaningful insights in your chart, as well as any data limitations.
 
 
+** TO DO ** improve this to match chapters that follow
+
 | Chart type | Best use and tutorial chapters |
 | --- | --- |
 | Column chart<br> ![](chart-placeholder.png) | Best to compare categories of data. Also known as vertical bar charts. <br>Easy tool: [Google Sheets chart tutorials](google-sheets)<br>Power tool: [Highcharts templates](../highcharts/) |

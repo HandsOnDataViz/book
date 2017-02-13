@@ -28,6 +28,8 @@ Cole Nussbaumer Knaflic, Storytelling with Data: A Data Visualization Guide for 
 
 Wayne Lytle, Viz-O-Matic: The Dangers of Glitziness and Other Visualization Faux Pas, 1993 video shared on YouTube, https://www.youtube.com/watch?v=fP-7rhb-qMg
 
+Isabel Meirelles, Design for Information: An Introduction to the Histories, Theories, and Best Practices Behind Effective Information Visualizations (Rockport Publishers, 2013), http://isabelmeirelles.com/book-design-for-information/
+
 Tableau, Visual Analysis Best Practices: A Guidebook, n.d., http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf.
 
 Edward R. Tufte, Beautiful Evidence (Graphics Press, 2006)

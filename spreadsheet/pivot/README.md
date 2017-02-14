@@ -12,13 +12,13 @@ Answer: Create a pivot table to aggregate (or group together) and summarize data
 While pivot tables may look different across spreadsheet tools, the concept is the same.
 
 ## Simple Pivot Table with Google Sheets: Tutorial with Video
-1) Right-click and Save As this link: [sample-students](sample-students.csv) to download the sample data in a generic CSV spreadsheet format to your computer.
-2) Sign into [Google Drive](http://drive.google.com) (requires free account) and drag-and-drop the sample CSV file to instantly upload. Before you do this, make sure your Settings (gear symbol) is set to Convert Uploads to Google Docs editor format (the default setting).
-3) Shift-click to select all columns that you wish to pivot.
-4) Select Data > Pivot Table..., which opens a new spreadsheet tab.
-5) In Report Editor, select Rows > Add Field > Year to list all entries in order.
-6) In Report Editor, select Values > Add Field > Year to summarize all values for each entry.
-7) Change Summarize by SUM to Summarize by COUNTA (to count alphabetical or numerical entries), or COUNT (to count only numeric values).
+- 1) Right-click and Save As this link: [sample-students](sample-students.csv) to download the sample data in a generic CSV spreadsheet format to your computer.
+- 2) Sign into [Google Drive](http://drive.google.com) (requires free account) and drag-and-drop the sample CSV file to instantly upload. Before you do this, make sure your Settings (gear symbol) is set to Convert Uploads to Google Docs editor format (the default setting).
+- 3) Shift-click to select all columns that you wish to pivot.
+- 4) Select Data > Pivot Table..., which opens a new spreadsheet tab.
+- 5) In Report Editor, select Rows > Add Field > Year to list all entries in order.
+- 6) In Report Editor, select Values > Add Field > Year to summarize all values for each entry.
+- 7) Change Summarize by SUM to Summarize by COUNTA (to count alphabetical or numerical entries), or COUNT (to count only numeric values).
 
 {%youtube%}3sK7-g0otGM{%endyoutube%}
 

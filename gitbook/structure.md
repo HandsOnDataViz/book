@@ -1,5 +1,5 @@
 # Structure, Plugins, and Syntax
-*last updated by Jack Dougherty on February 6, 2017*
+*last updated by Jack Dougherty on February 14, 2017*
 
 <!-- toc -->
 
@@ -53,10 +53,10 @@ Example 3: pathname points to folder, up two levels, and a specific .md file nam
 [Help us improve this book](../../gitbook/improve.md)
 ```
 
-Example 4: For internal links to downloadable sample files, upload them into the GitBook and insert a link.
+Example 4: For internal links to downloadable sample files, upload them into the GitBook and insert a link. The text inside brackets CANNOT include a file suffix (.csv).
 
 ```
-[Download this sample file](sample.csv)
+Right-click and Save As this link:[sample students](sample.csv) to download a CSV file to your computer
 ```
 
 *In my experience*, avoid inserting file suffixes (example: .csv) into the viewable main text above.

@@ -26,3 +26,6 @@ Follow the Google Sheet Chart tutorials in this book to create:
 
 ## Learn more
 - [Google Sheet chart types help page](https://support.google.com/docs/answer/190718)
+
+{% footer %}
+{% endfooter %}

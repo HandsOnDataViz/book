@@ -38,6 +38,7 @@
    * [Scatter Chart with Tableau](chart/scatter-chart-tableau/README.md)
    * [Filtered Chart with Tableau](chart/filtered-line-chart-tableau/README.md)
 * [Embed On Your Web](embed/README.md)
+   * [Simple iFrame with GitHub Pages](embed/github-pages/README.md)
    * [Embed iFrame on WordPress](embed/iframe-wordpress/README.md)
    * [Embed Google Sheets Chart](embed/google-sheets/README.md)
    * [Embed Tableau Public](embed/tableau/README.md)

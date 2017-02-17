@@ -16,6 +16,8 @@ add conceptual and logistical recommendations about reading and commenting on th
 
 - raise up text and visuals from gitbook improve.md section
 
+- note that headers and lists cannot accept GitBook comments
+
 <a href="https://www.datavizforall.org/gitbook/improve.html">Select text and (+) symbol to comment</a> or <a href="https://github.com/JackDougherty/datavizforall">suggest edits on GitHub</a>.
 
 {% footer %}

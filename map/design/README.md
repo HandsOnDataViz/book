@@ -1,4 +1,7 @@
-# Questions to Ask Before You Map
+# Map Design Principles
+
+
+Questions to Ask Before You Map
 
 Before leaping into a data mapping project, ask yourself these questions:
 
@@ -25,8 +28,7 @@ If your data tables lacks spatial information, it may not be possible to map it.
 - Polygon map: best for boundary area data (such as census tracts, towns, states)
 
 **To Do**
--
-- Insert quick iframe examples of each?
+- Integrate http://colorbrewer2.org/
 - Refer to other types of maps and data, such as heat maps, line maps, etc.
 
 {% footer %}

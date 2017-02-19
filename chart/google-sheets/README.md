@@ -9,9 +9,10 @@ Use Google Sheets (http://sheets.google.com), an easy drag-and-drop tool, to cre
   - Edit, share, and publish interactive charts from your data, all in one spreadsheet.
 - Cons:
   - Limited control over chart appearance.
-  - No automatic option to cite or link source data inside the chart.
-  - Scatter charts do not correctly display data labels in tooltips.
-  - Bubble charts cannot display uniformly small bubble sizes.
+  - Scatter charts cannot show data in tooltips.
+  - Bubble charts cannot show small, uniform bubbles.
+  - Cannot cite or link to source data inside the chart.
+  - Cannot add annotations to highlight items inside charts.
   - For more powerful tools that require more skills, see tutorials in this book on [Tableau Public](../scatter-chart-tableau/) and [Highcharts](../../highcharts/).
 
 ## Tutorials

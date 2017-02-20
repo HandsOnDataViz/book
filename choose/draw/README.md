@@ -1,7 +1,7 @@
 ## Draw and Write Your Data Story
 *by [Jack Dougherty, Stacy Lam, and David Tatem](../../introduction/who.md), last updated February 5, 2017*
 
-Before you dive deeply into software, think about the most important item in your toolkit: your **story**. The primary reason we're designing visualizations is to improve how we communicate our data story to other people, so let's begin there.
+Before you dive deeply into software, think about the most important item in your toolkit: **your story**. The primary reason we're designing visualizations is to improve how we communicate our data story to other people, so let's begin there.
 
 Push away the computer and pick up some old-school tools:
   - colored markers or pencils

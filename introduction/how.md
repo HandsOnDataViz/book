@@ -3,9 +3,12 @@
 **TO DO**
 add conceptual and logistical recommendations about reading and commenting on this online book
 
-- the ideal version is the online web edition, since it includes interactive features that appear as static images and links in the downloadable pdf and ebook editions
+- We designed this book to be read online, in your web browser, for free.
+- the web edition features interactive charts and maps that you can explore in your browser, just like the kinds we teach you how to create inside this book
+- If you prefer, you also can freely download a PDF edition to print out, or an eBook edition to read on your Kindle or similar device, add links
+- But the online web edition is preferable, because the downloadable PDF and eBook editions do not include several graphics that only appear online.
 
-- when reading online, learn how to open links in new tabs, to help keep your place when moving between different pages.
+- When reading online, learn how to open links in new tabs, to help keep your place when moving between different pages.
   - Open links in new tabs:
     - Mac: two-finger trackpad click, or Control + click   
 	  - Windows: ?????

@@ -7,6 +7,10 @@ Follow these tutorials to create different types of column and bar charts with [
 - Stacked
 - Histograms
 
+**TO DO**
+- copy and paste best use from chart intro
+- add a stacked horizontal bar example with longer labels (such as Lickert scale)
+
 ## Grouped Column and Bar Charts
 Best to compare categories of data, side by side. Use vertical columns or horizontal bars (with more space for long labels).
 

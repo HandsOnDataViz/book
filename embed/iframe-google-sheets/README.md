@@ -1,47 +1,39 @@
-# Embed a Google Sheets interactive chart
+# Copy an iframe code from a Google Sheets interactive chart
+*by [Jack Dougherty](../introduction/who.md), last updated February 22, 2017*
 
-The goal is to embed an interactive chart inside your website, so that users can explore the data. This tutorial displays a *very basic chart* to simplify the process, and the end result will appear like the one below. Try it.
+Question: After you create an interactive chart or map, how do you embed the live version in a website that you control?
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>
+The full answer requires three steps:
+1) Create a web page that supports iframe codes
+2) Copy the iframe code from your visualization
+3) Embed (or paste) the iframe code into your web page
 
-1) In Google Sheets, select the desired data and Insert > Chart. Select the best type for your interactive chart and add any titles, labels, etc.
+This tutorial focuses on the **second step**, and shows how to publish a Google Sheets interactive chart, and copy its iFrame code. Details may differ for other visualization tools, but the general iframe concept will be similar to most cases. For **steps 1 and 3**, see the [Create a Simple Web Page with GitHub Pages](../github-pages/README.md) tutorial and the [Embed iFrame in GitHub Pages](../iframe-github/) tutorial in this chapter.
 
-2) Click right-corner of the interactive chart and select Publish chart. Click OK on next screen.
+## Tutorial
 
-![](GoogleSheets-publish-chart.png)
+1) Create a Google Sheets chart, which requires a free Google Drive account. Learn more in the [Google Sheets Charts tutorial](../../chart/google-sheets) in this book.
 
-3) Select the Embed tab, select the Interactive version of your dataviz, and click the blue Publish button.
+2) Click the drop-down menu in the upper-right corner of the interactive chart and select Publish chart. Click OK on next screen.
 
-![](GoogleSheets-embed-tab-publish-button.png)
+![Screenshot: Drop-down menu to publish a Google Sheets chart](google-sheets-chart-menu-publish.png)
 
-4) Copy the iframe embed code that appears, which you will paste and modify to match your website.
+3) Select the Embed tab, select the Interactive version, and click the blue Publish button. If you make changes to the chart, they will continue to be published to the web automatically, unless you click the Stop button or checkbox at the bottom.
 
-![](GoogleSheets-copy-iframe-code.png)
+![Screenshot: Publish to the web for a Google Sheets chart](google-sheets-publish.png)
 
-5) To embed the iframe in a WordPress.org site, the iframe plugin must be installed, as explained in the [Embed with iframe on WordPress.org](embed/iframe-wordpress) chapter.
+4) Copy the iframe embed code.
 
-6) Log into your Wordpress.org site and create a new post. In the editor window, switch from the Visual to the Text tab, which allows users to modify the code behind your post. Paste the iframe code from your interactive dataviz.
+![Screenshot: Copy the iframe code from a Google Sheets chart](google-sheets-publish-copy-iframe.png)
 
-![](WordPressOrg-text-tab-paste-iframe.png)
+No coding skills are necessary, but it helps to be code-curious. This iframe is a line of HTML code that contains these instructions:
+- iframe tags to mark the beginning ```<iframe...``` and end ```...></iframe>```
+- width and height: to display your chart in a second site, in pixels
+- seamless frameborder: "0" means no border will appear around the chart in the second site
+- scrolling: "no" means the chart will not include its own web scrolling feature
+- src: the web address (or URL) of the visualization to be displayed in the second site
 
-7) Initially, the code you pasted includes HTML iframe tags at the front (<iframe...) and the end (...></iframe>), which looks like this:
-
-```javascript
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>
-```
-
-8) Modify the front end of the iframe code by replacing the less-than symbol ( < ) with a square opening bracket ( [ ). Modify the back end by erasing the greater-than symbol ( > ) and the end tag ( </iframe> ). Replace the back end with a square closing bracket ( ] ).
-
-![](WordPressOrg-replace-with-bracket.png)
-
-Your modified code should look like this:
-```
-[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"]
-```
-
-9) Click Preview or Publish/View Post to see how it appears on the web.
-
-10) If desired, continue to modify the iframe code to improve the display of your dataviz on your website. For example, the initial code was 600 pixels wide (width="600"). To display the dataviz across the full width of your website, change this part of the code to 100% (width="100%").
+See the next tutorial in this chapter, [Embed iFrame in GitHub Pages](../iframe-github/), to learn how to paste the iframe into a simple web page. Or see related tutorials in this chapter to embed an iframe in other common web sites.
 
 {% footer %}
 {% endfooter %}

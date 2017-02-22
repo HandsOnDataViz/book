@@ -16,7 +16,7 @@ Finally, you need to paste (or embed) the iframe code inside your website. Like 
 See more tutorials in this chapter to copy iframes from other visualization tools (such as [Tableau Public](iframe-tableau)) and embed them in other common websites (such as [WordPress](iframe-wordpress), etc.) ** TO DO: add more tutorials and links **
 
 **[Enroll in our free online course](../../enroll)**, which introduces these topics in the brief video below, and offers more exercises and opportunities to interact with instructors and other learners.
-{%m id="RP1Zg_kbVGQ", m=1, s=25%}{%endm%}
+{%youtube%}RP1Zg_kbVGQ{%endyoutube%}
 
 {% footer %}
 {% endfooter %}

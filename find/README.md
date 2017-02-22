@@ -27,6 +27,10 @@ Before starting to create charts or maps, get to know your data.
 open data inception 1600+ sites portal
 http://opendatainception.io/
 
+- Know your data: go out into the field to directly observe how the original data is measured and collected
+
+https://www.opendatanetwork.com/
+
 Closely examine your data files to understand their meaning, sources of origin, and limitations.
 **TO DO** expand on this theme with examples of bad and misleading data
 

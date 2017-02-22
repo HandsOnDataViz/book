@@ -2,6 +2,12 @@
 
 *By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated January 27, 2017*
 
+** TO DO **
+- change directions to paste the full URL
+- carefully explain the Publish step and include a screenshot
+- create video tutorial
+
+
 ## Try the map or open in a [new tab](https://jackdougherty.github.io/leaflet-maps-with-google-sheets/)
 
 <iframe src="https://jackdougherty.github.io/leaflet-maps-with-google-sheets/" width="100%" height=500></iframe>

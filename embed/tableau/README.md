@@ -77,19 +77,19 @@ https://public.tableau.com/views/DataVizForAll-scatter-chart/Sheet1?
 https://public.tableau.com/views/DataVizForAll-scatter-chart/Sheet1?:showVizHome=no&:embed=true
 ```
 
-9) Enclose the link inside an iframe source attribute `src=" "` to make it look similar to this:
+9) Enclose the link inside an iframe source tag `src=` with quotes, to make it look similar to this:
 
 ```html
 src="https://public.tableau.com/views/DataVizForAll-scatter-chart/Sheet1?:showVizHome=no&:embed=true"
 ```
 
-10) Optional: Add iframe attributes for `width` and `height` in percentages or pixels (default), to make it look similar to this:
+10) Optional: Add iframe tags for `width` and `height` in percentages or pixels (default), to make it look similar to this:
 
 ```html
 src="https://public.tableau.com/views/DataVizForAll-scatter-chart/Sheet1?:showVizHome=no&:embed=true" width="100%" height="500"
 ```
 
-11) Add an iframe tag at the beginning `<iframe...` and end `><iframe>` to make it look similar to this:
+11) Add iframe tags at the beginning and end, to make it look similar to this:
 
 ```html
 <iframe src="https://public.tableau.com/views/DataVizForAll-scatter-chart/Sheet1?:showVizHome=no&:embed=true" width="100%" height="500"></iframe>

@@ -27,7 +27,7 @@ This tutorial focuses on the **second step**, and shows how to publish a Google 
 ![Screenshot: Copy the iframe code from a Google Sheets chart](google-sheets-publish-copy-iframe.png)
 
 No coding skills are necessary, but it helps to be code-curious. This iframe is a line of HTML code that contains these instructions:
-- iframe tags to mark the beginning `<iframe... and end `...></iframe>`
+- iframe tags to mark the beginning and end
 - width and height: to display your chart in a second site, in pixels
 - seamless frameborder: "0" means no border will appear around the chart in the second site
 - scrolling: "no" means the chart will not include its own web scrolling feature

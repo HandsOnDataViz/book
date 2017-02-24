@@ -1,15 +1,14 @@
 # Chart Your Data
 *by [Jack Dougherty](../introduction/who.md), last updated February 23, 2017*
 
-Charts are often the best way to visualize your data and pull readers deeper into the story. Even if your data contains geographical information, in some cases a chart tells your story better than a map. But well-designed charts require careful thought about how to communicate meaningful insights to your audience. This chapter features tools to create interactive charts (rather than static images) that you can embed in your website.
+Charts can be a greater way to visualize your data and pull readers deeper into the story. Even if your data contains geographical information, in some cases a chart may tell your story better than a map. But good charts require careful thought about how to communicate insights to your audience. This chapter features design principles and tools to create interactive charts (rather than static images), which you can embed in your website.
 
-## Steps to create an interactive chart
+## Create a meaningful interactive chart
 1) [Draw and write your data story](../../choose/draw) as shown in a previous chapter. What questions do you want to explore, or insights that you want to explain? Sketch a simple picture and write down main ideas to capture your vision on paper.
-2) Ask yourself: Do I really need a chart to tell this data story? Or would a table, or simply text, do just as good a job?
-3) Practice [principles of good chart design](design) in this chapter. Learn to identify good charts from bad ones.
-4) Choose a chart type that matches your story and data format in the table below. Follow tutorial links to *easy tools* for beginners or *power tools* that require you to [Edit and Host code templates](../edit). Refer to [Spreadsheet Skills](../spreadsheet) and [Clean Your Data](../clean) chapters in this book if needed.
-5) Learn how to [embed your interactive chart in your website](../embed) in this book.
-6) Focus on [storytelling](../storytelling) to accompany your visualization. Write compelling titles, labels, and sentences that call attention to the most meaningful insights in your chart, and explain any data limitations.
+2) Practice [principles of good chart design](design) in this chapter. Learn to identify good charts from bad ones.
+3) Choose a chart type that matches your story and data format in the table below. Follow tutorial links to *easy tools* for beginners or *power tools* that require you to [Edit and Host code templates](../edit). Refer to [Spreadsheet Skills](../spreadsheet) and [Clean Your Data](../clean) chapters in this book if needed.
+4) Learn how to [embed your interactive chart in your website](../embed) in this book.
+5) Focus on [storytelling](../storytelling) to accompany your visualization. Write compelling titles, labels, and sentences that call attention to the most meaningful insights in your chart, and explain any data limitations.
 
 | Basic chart types | Best use and tutorial chapters |
 | --- | --- |

@@ -43,7 +43,7 @@
    * [Copy iframe from Google Sheets](embed/iframe-google-sheets/README.md)
    * [Embed iFrame in GitHub Pages](embed/iframe-github/README.md)
    * [Embed iFrame in WordPress](embed/iframe-wordpress/README.md)
-   * [Copy iframe from Tableau Public](embed/iframe-tableau/README.md)
+   * [Embed with Tableau Public](embed/tableau/README.md)
 * [Map Your Data](map/README.md)
    * [Design Principles](map/design/README.md)
    * [Point Map with BatchGeo](map/batchgeo/README.md)

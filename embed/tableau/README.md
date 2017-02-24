@@ -4,8 +4,8 @@
 Question: After creating an interactive data visualization with Tableau Public, how do I embed it on my website?
 
 Answer: Tableau Public supports two embedding methods, and your choice depends on your type of website.
-- A) Embed code: can be pasted directly into an HTML web page
-- B) Link: can be converted into an iFrame for WordPress.org, Wix, and other common web platforms
+- A) Embed code: if you can paste directly into an HTML web page
+- B) Convert Link to iFrame: to paste into WordPress.org, Wix, SquareSpace, Weebly, and many other web platforms
 
 ## Try it
 
@@ -41,7 +41,7 @@ Both methods produce an embedded visualization like the one below. Float your cu
 </html>
 ```
 
-## B) Convert Link to iframe method
+## B) Convert Link to iFrame method
 
 1) Use this method if you need to paste an iframe into common web authoring platforms (such as WordPress.org, Squarespace, Wix, Weebly, etc.), since these platforms typically do not support HTML and JavaScript code pasted directly into content.
 
@@ -77,19 +77,19 @@ https://public.tableau.com/views/DataVizForAll-scatter-chart/Sheet1?
 https://public.tableau.com/views/DataVizForAll-scatter-chart/Sheet1?:showVizHome=no&:embed=true
 ```
 
-9) Enclose the link inside an iframe source attribute ```src=" "``` to make it look similar to this:
+9) Enclose the link inside an iframe source attribute `src=" "` to make it look similar to this:
 
 ```html
 src="https://public.tableau.com/views/DataVizForAll-scatter-chart/Sheet1?:showVizHome=no&:embed=true"
 ```
 
-10) Optional: Add iframe attributes for ```width``` and ```height``` in percentages or pixels (default), to make it look similar to this:
+10) Optional: Add iframe attributes for `width` and `height` in percentages or pixels (default), to make it look similar to this:
 
 ```html
 src="https://public.tableau.com/views/DataVizForAll-scatter-chart/Sheet1?:showVizHome=no&:embed=true" width="100%" height="500"
 ```
 
-11) Add an iframe tag at the beginning ```&lt;iframe...``` and end ```&gt;&lt;/iframe&gt;``` to make it look similar to this:
+11) Add an iframe tag at the beginning `<iframe...` and end `><iframe>` to make it look similar to this:
 
 ```html
 <iframe src="https://public.tableau.com/views/DataVizForAll-scatter-chart/Sheet1?:showVizHome=no&:embed=true" width="100%" height="500"></iframe>

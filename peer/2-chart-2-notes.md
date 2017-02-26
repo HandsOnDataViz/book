@@ -1,4 +1,4 @@
-# Section 2 Chart 2 Peer Review Sample
+# Section 2 Chart 2 Peer Review Sample, with Notes
 
 Nations with the highest percentage of female students enrolled in Data Visualization for All are the Ukraine (51 percent) and Turkey (47 percent), based on preliminary data for those with high enrollment levels (25 or more students).
 
@@ -8,6 +8,12 @@ View the <a href="https://docs.google.com/spreadsheets/d/1hvr0fOFUg4xm9I3L1WFzpH
 
 ## Evaluate:
 1. Story: Did the author clearly tell a meaningful story about the data, with text and visuals?
+  - Yes, this insight on gender differences in student enrollments across nations is a meaningful story.
 2. Chart Type: Did the author choose a chart type that best matches their data story?
+  - Yes, this stacked horizontal bar chart is a good match for showing part-to-whole relationships (gender by percentage) between different nations.
 3. Embed: Did the author embed an interactive chart into the web page?
+  - Yes, when you float your cursor over it, the interactive chart tooltip shows data labels and values.
 4. Good Design: Did the author follow principles of good chart design?
+  - Yes, the chart demonstrates good design principles, such as:
+    - Sorting data into a meaningful order
+    - Using color contrast (blue vs grays) to highlight percentages of female students

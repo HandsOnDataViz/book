@@ -1,5 +1,5 @@
 # Chart Design Principles
-*by [Jack Dougherty](../introduction/who.md), last updated February 23, 2017*
+*by [Jack Dougherty](../introduction/who.md), last updated February 26, 2017*
 
 A compilation of chart design principles from leading experts, illustrated with bad and good examples, and also citations and links to learn more.
 
@@ -14,23 +14,23 @@ A compilation of chart design principles from leading experts, illustrated with 
 
 5) Identify the [chart type](../chart) that best matches your story and data format.
 
-6) Draw visual comparisons that are easy for readers to understand, rather than confusing them (Gourley p. 19).
-**INSERT IMAGE**
+6) Draw visual comparisons that are easy for readers to understand, rather than confusing them (adapted from Gourley p. 19).
+**INSERT IMAGE of side-by-side pie chart vs bar chart**
 
 7) Do the math for your readers. Based on your data story, decide if you should show absolute numbers, percentages, or percent change (Wong pp. 23-25, 104-107).
 **TO DO** INSERT TABLE to illustrate example, and link to spreadsheet skills
 
 8) Order categories logically -- either alphabetically, by value, or sequentially -- depending on your data story (Gourley, p. 19; Wong pp. 70-71).
-**TO DO** INSERT
+**INSERT IMAGE** of a random chart vs others
 
 9) For long labels, use horizontal bar charts instead of vertical column charts (Wong p. 66).
 **TO DO** INSERT
 
-10) On bar and column charts, start the vertical y-axis at zero, and choose natural increments (Wong pp. 51-52). See also the How to Lie with Charts and Maps chapter in this book. **ADD LINK**
+10) On bar and column charts, start the vertical y-axis at zero, and choose natural increments (Wong pp. 51-52). But line charts do not need to start at zero, and can focus on specific ranges. See also the How to Lie with Charts and Maps chapter in this book. **ADD LINK**
 **TO DO** INSERT
 
 11) Beware of pie charts. Most readers cannot accurately estimate sizes of different slices. Consider other ways to show part-to-whole relationships, such as bar/column charts, or stacked bar/column charts (Few 2007, pp. 2-4; Wong p. 79).
-**TO DO** INSERT
+**TO DO** INSERT multi-sliced pie vs bar
 
 12) If you choose to use a pie chart, then show no more than 5 slices, and places the largest slices closest to the top at 12 o'clock (Wong, pp. 74-75).
 **TO DO** INSERT
@@ -38,12 +38,14 @@ A compilation of chart design principles from leading experts, illustrated with 
 13) Words matter as much as pictures.
 - Add meaningful titles, labels, and annotations to draw attention to your data story.
 - Keep typography simple, and use bold type sparingly to highlight your key insights (Wong p. 32; Knaflic pp. 107, 111).
+**TO DO** insert poorly-titled vs well-titled chart
 
 14) On static charts, label items directly when possible. (On interactive charts, designers may need to rely on tooltips and text.) Insert a legend in a logical place for readers (Wong, p. 56).
 
 15) Add source credits and bylines -- with links to view data tables and details -- to build credibility and accountability.
 
 16) Avoid “chart junk” -- such as 3D perspective, shadows, and unnecessary ornaments -- which distract readers from your data story. Never use 3D unless you are plotting three-dimensional data (Tufte p. **?**, Wong p. 62, Knaflic p. 65).
+**TO DO** insert hard-to-read 3D vs easy-to-read 2D chart
 
 17) De-clutter charts (Knaflic pp. 91-98, 130-135).
 
@@ -51,6 +53,8 @@ A compilation of chart design principles from leading experts, illustrated with 
 - Use color to logically organize your data. Avoid random colors (Wong pp. 40, 44).
 - Avoid bad combinations from opposite sides of color wheel, such as red/green or yellow/blue (Wong pp. 40, 44).
 - Use contrast (such as color vs gray) to call attention to your data story (Knaflic pp. 87-88)
+
+**TO DO** insert bad-color vs good-color/contrast chart 
 
 See also Map Design Principles chapter in this book **link**
 

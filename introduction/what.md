@@ -17,7 +17,7 @@ This free online introductory book focuses on selected topics in data visualizat
 
 **Storytelling:** Data visualization is more than pretty pictures. In this book, the best visualizations are those that [tell a story](../storytelling) -- and pull readers' attention to what really matters -- by combining images and text, and offering exploration with explanation.
 
-## Learn more on history and theory of data visualization
+## Learn more
 - Michael Friendly and Daniel J. Denis, “Milestones in the History of Thematic Cartography, Statistical Graphics, and Data Visualization,” 2001, http://www.datavis.ca/milestones/
 - Isabel Meirelles, Design for Information: An Introduction to the Histories, Theories, and Best Practices Behind Effective Information Visualizations (Rockport Publishers, 2013), http://isabelmeirelles.com/book-design-for-information/
 - Edward Tufte, The Visual Display of Quantitative Information (Graphics Press, 1983), and subsequent works at https://www.edwardtufte.com

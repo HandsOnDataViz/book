@@ -1,27 +1,49 @@
-# How to Read and Comment on this book
+# How to Read and Comment
+*by [Jack Dougherty](introduction/who.md), last updated February 28, 2017*
 
-**TO DO**
-add conceptual and logistical recommendations about reading and commenting on this online book
+*Data Visualization for All* refers to both this open-access digital book and a [free online course](../enroll) by the same name. We refer to them as "the book" and "the course."
 
-- We designed this book to be read online, in your web browser, for free.
-- the web edition features interactive charts and maps that you can explore in your browser, just like the kinds we teach you how to create inside this book
-- If you prefer, you also can freely download a PDF edition to print out, or an eBook edition to read on your Kindle or similar device, add links
-- But the online web edition is preferable, because the downloadable PDF and eBook editions do not include several graphics that only appear online.
+## Choose your book format
+We designed the book to be read online, in any modern web browser, on desktops, laptops, or mobile devices. The online edition features interactive charts and maps that you can explore, and video tutorials that you can view at your own pace. If desired, readers can freely download any of the ebook editions--[PDF](https://www.gitbook.com/download/pdf/book/jackdougherty/datavizforall) or [ePUB](https://www.gitbook.com/download/epub/book/jackdougherty/datavizforall) or [Mobi/Kindle](https://www.gitbook.com/download/mobi/book/jackdougherty/datavizforall)--but these do not include the interactive features in the online web edition. Learn more about [how GitBook works](../gitbook) and publish your own book.
 
-- When reading online, learn how to open links in new tabs, to help keep your place when moving between different pages.
-  - Open links in new tabs:
-    - Mac: two-finger trackpad click, or Control + click   
-	  - Windows: ?????
-    - Chrome: two-finger trackpad click, or Alt + click
+## Open links in new tabs
+Keep your place when reading online and moving between pages.  
+- Two-finger trackpad click
+- or Control + click (Mac)
+- or Alt + click (Chrome)
+- or right-click
 
-    - - hard refresh (how to do it on different browsers)
-- capture screenshot (how to on different operating systems)
+![Screenshot: Open link in new tab (on Mac)](contextual-menu.png)
 
-- raise up text and visuals from gitbook improve.md section
+## Use a second monitor
+If you have a small screen, consider connecting a second monitor, or work next to a second computer or tablet. This allows you to view tutorials in one screen and build visualizations in the other screen.
 
-- note that headers and lists cannot accept GitBook comments
+![Image: Laptop with second monitor, and with tablet](laptop-and-monitor-and-tablet.jpg)
 
-<a href="https://www.datavizforall.org/gitbook/improve.html">Select text and (+) symbol to comment</a> or <a href="https://github.com/JackDougherty/datavizforall">suggest edits on GitHub</a>.
+## Comment on any paragraph
+- Requires a free account on GitHub http://github.com
+- Select text and click the plus symbol (+) in margin.
+- GitBook section headers and lists cannot accept comments.
+- View other comments in the margins, or all in [Discussions](https://www.gitbook.com/book/jackdougherty/datavizforall/discussions).
+- Constructive criticism and suggestions are welcome.
+
+![Animation: Comment in GitBook](GitBook-comments-2016-02.gif)
+
+## Suggest edits on any page
+- Click "Edit in GitHub" at top of any page, which opens new tab.
+    ![](GitBook-edit-on-github.png)
+- To view the code behind the page, click Raw button.
+- To suggest revisions, click Editor button (the pencil symbol), which requires free account on GitHub http://github.com
+    ![](GitHub-edit-file.png)
+- After entering revisions, scroll down to click Propose File Change.
+- On next screen, click Create Pull Request to send changes to the book owner.
+- On next screen, click Create Pull Request again to confirm.
+- The book owner will review your suggested revisions, and you will receive automatic notification on any changes.
+
+## Submit additional chapters to the book
+- Recommended: [Contact the lead author](../introduction/who.md) with a summary of your proposed chapter.
+- On the [book GitHub repository](https://github.com/JackDougherty/datavizforall), fork a copy to your own GitHub account (requires free signup).
+- Create your proposed chapter following the book's existing folder/file structure, in GitHub/GitBook Markdown format, as explained in the following pages.
 
 {% footer %}
 {% endfooter %}

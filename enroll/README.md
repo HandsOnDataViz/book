@@ -4,8 +4,8 @@ Tell your story *and* show it with data. In this **free online course** on data 
 
 ![](trinity-edx-logos.png)
 
-## Course begins on February 28, 2017
-Register for free at  [https://www.edx.org/course/data-visualization-all-trinityx-t005x](https://www.edx.org/course/data-visualization-all-trinityx-t005x)
+## Free course NOW thru April 21, 2017
+Register at  [https://www.edx.org/course/data-visualization-all-trinityx-t005x](https://www.edx.org/course/data-visualization-all-trinityx-t005x)
 
 ## Video preview
 {%youtube%}M3_TWyva5yc{%endyoutube%}

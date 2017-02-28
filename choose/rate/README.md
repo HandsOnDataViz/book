@@ -9,7 +9,7 @@ For our sample data, we'll use this table of 9 locations in North America, with 
 
 ![Image: Sample address data screenshot](sample-address-screenshot.png)
 
-First, download the sample data. Right-click > Save As this [sample address data in CSV format](sample-address-data.csv), a general spreadsheet file format, and download it to your computer.
+First, download the sample data. Right-click > Save As this [sample address data in CSV format](sample-address-data.csv), a general spreadsheet file format, and download it to your computer. If you need help, see this [short video tutorial](https://www.youtube.com/watch?v=-04PQldP9HQ) on how to download and upload data.
 
 Next, build a point map with the sample data, by following the tutorials for the three tools below.
 

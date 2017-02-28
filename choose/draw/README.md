@@ -21,8 +21,5 @@ Further down the page (or on a separate sheet), draw quick pictures of the visua
 
 Finally, share your data story with someone else and talk through your preliminary ideas. Does your sketch and sentences help to convey the broader idea that you're trying to communicate? If so, this is one good sign that your data story is worth pursuing, with the visualization tools, templates, and techniques in other chapters of this book.
 
-**TO DO**
-- insert images of sample data stories
-
 {% footer %}
 {% endfooter %}

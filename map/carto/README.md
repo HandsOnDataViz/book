@@ -1,5 +1,5 @@
 # Point Map with Carto Builder
-*By [Jack Dougherty](../../introduction/who.md), last updated February 10, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated February 28, 2017*
 
 ## Try It
 Explore the interactive point map below, or <a href="https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed">view the full-screen version</a>,created with Carto Builder (https://carto.com).
@@ -16,7 +16,7 @@ Explore the interactive point map below, or <a href="https://jackdougherty.carto
   - New users may get lost when moving through multiple screens
   - Free account allows only 400 geocodes per month
 
-## Video Tutorial with Steps Below
+## Video with Step-By-Step Tutorial
 {%youtube%}lto7Z5wC2hQ{%endyoutube%}
 
 ***Before you begin:*** This tutorial uses the newer Carto Builder, rather than older Carto Editor tool. Learn more at https://carto.com/learn/guides/intro/migrating-from-carto-editor-to-carto-builder If you have an old Carto account that has not automatically updated to the new Builder tool, you may need to create a brand-new account to use this tutorial.
@@ -76,7 +76,8 @@ Let's build a simple point map with sample data, using Carto Builder (https:/car
 
 21) If you make edits to your map, you must click the blue Update button to republish your map to the web.
 
-Learn more with the Carto learning guide, Getting Started with Carto Builder https://carto.com/learn/guides/intro/getting-started-with-carto-builder
+## Learn more
+- Getting Started with Carto Builder https://carto.com/learn/guides/intro/getting-started-with-carto-builder
 
 {% footer %}
 {% endfooter %}

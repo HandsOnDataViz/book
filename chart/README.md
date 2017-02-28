@@ -1,7 +1,7 @@
 # Chart Your Data
-*by [Jack Dougherty](../introduction/who.md), last updated February 23, 2017*
+*by [Jack Dougherty](../introduction/who.md), last updated February 28, 2017*
 
-Charts can be a greater way to visualize your data and pull readers deeper into the story. Even if your data contains geographical information, in some cases a chart may tell your story better than a map. But good charts require careful thought about how to communicate insights to your audience. This chapter features design principles and tools to create interactive charts (rather than static images), which you can embed in your website.
+Visualize your data with a chart to pull readers deeper into the story. Even if it contains geographical information, sometimes a chart tells your story better than a map. But good charts require careful thought about how to communicate insights to your audience. This chapter features design principles and free tools to create interactive charts that you can embed in your website.
 
 ## Create a meaningful interactive chart
 1) [Draw and write your data story](../../choose/draw) as shown in a previous chapter. What questions do you want to explore, or insights that you want to explain? Sketch a simple picture and write down main ideas to capture your vision on paper.
@@ -27,3 +27,6 @@ Charts can be a greater way to visualize your data and pull readers deeper into 
 - [Google Sheets Chart types help page](https://support.google.com/docs/answer/190718)
 - [Tableau Public resources page](https://public.tableau.com/en-us/s/resources)
 - [Highcharts demo page](http://www.highcharts.com/demo)
+
+{% footer %}
+{% endfooter %}

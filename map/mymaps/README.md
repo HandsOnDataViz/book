@@ -1,8 +1,8 @@
 # Point Map with Google My Maps
-*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated February 10, 2017*
+*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated February 28, 2017*
 
 ## Try It
-Explore the interactive point map below, or <a href="https://drive.google.com/open?id=1OPrulm2ISYUb990DJOCoYlt_sWc">view the full-screen version</a>,created with Google My Maps (https://www.google.com/maps).
+Explore the interactive point map below, or <a href="https://drive.google.com/open?id=1OPrulm2ISYUb990DJOCoYlt_sWc">view the full-screen version</a>,created with Google My Maps (https://www.google.com/maps/d/).
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc" width="90%" height="480"></iframe>
 
@@ -16,13 +16,14 @@ Explore the interactive point map below, or <a href="https://drive.google.com/op
   - Cannot easily create colored polygon maps from data values
   - Cannot extract geocoded data to migrate to another tool
 
-## Step-by-Step Tutorial
+## Video with Step-by-Step Tutorial
+{%youtube%}ZVIPn8dJeYM{%endyoutube%}
 
-Let's build a simple point map with sample data, using Google My Maps (https://www.google.com/maps). Requires signing up for a free Google account.
+Let's build a simple point map with sample data, using Google My Maps (https://www.google.com/maps/d/). Requires signing up for a free Google Drive account.
 
-1) Right-click > Save As this link to [sample address data in CSV format](../sample-address-data.csv), a generic spreadsheet format, and download it to your computer.
+1) Right-click > Save As this link to [sample address data in CSV format](../sample-address-data.csv), a generic spreadsheet format, and download it to your computer. If you need help with downloading, see this [short video tutorial](https://www.youtube.com/watch?v=-04PQldP9HQ).
 
-2) Open Google My Maps in your browser https://www.google.com/maps
+2) Open and sign in to Google My Maps https://www.google.com/maps/d/
 
 3) Click the red + symbol to create a new map, which will be saved automatically to your Google Drive folder.
 
@@ -58,10 +59,8 @@ Let's build a simple point map with sample data, using Google My Maps (https://w
 
 ![Image: Embed map on your site](mymaps-embed.png)
 
-Learn more at the Google My Maps Help Page https://support.google.com/mymaps/answer/3024396
-
-## Video Tutorial
-{%youtube%}ZVIPn8dJeYM{%endyoutube%}
+## Learn more
+- Google My Maps Help Page https://support.google.com/mymaps/answer/3024396
 
 {% footer %}
 {% endfooter %}

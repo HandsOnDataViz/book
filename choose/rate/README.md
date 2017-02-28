@@ -9,14 +9,14 @@ For our sample data, we'll use this table of 9 locations in North America, with 
 
 ![Image: Sample address data screenshot](sample-address-screenshot.png)
 
-First, download the sample data. Right-click > Save As this [sample address data in CSV format](sample-address-data.csv), a general spreadsheet file format, and download it to your computer. If you need help, see this [short video tutorial](https://www.youtube.com/watch?v=-04PQldP9HQ) on how to download and upload data.
+First, download the sample data. Right-click > Save As this [sample address data in CSV format](sample-address-data.csv), a general spreadsheet file format, and download it to your computer. If you need help with downloading, see this [short video tutorial](https://www.youtube.com/watch?v=-04PQldP9HQ).
 
 Next, build a point map with the sample data, by following the tutorials for the three tools below.
 
 | Tool |  Step-by-step tutorial in this book |
 | :---- | :---- |
 | [BatchGeo](http://batchgeo.com) | [BatchGeo tutorial](../../map/batchgeo/) |
-| [Google My Maps](http://google.com/mymaps) | [My Maps tutorial](../../map/mymaps/) |
+| [Google My Maps](https://www.google.com/maps/d/) | [My Maps tutorial](../../map/mymaps/) |
 | [Carto Builder](http://carto.com) | [Carto tutorial](../../map/carto/) |
 
 Finally, rate your experience using each tool with these selected criteria:

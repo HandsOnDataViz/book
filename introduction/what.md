@@ -1,21 +1,21 @@
-## What is data visualization?
-*by [Jack Dougherty](introduction/who.md), last updated February 20, 2017*
+# What is Data Visualization?
+*by [Jack Dougherty](introduction/who.md), last updated February 28, 2017*
 
-** TO DO **
+Data visualization is broadly defined as a method of encoding numerical, relational, or spatial information into images. Classic examples include [Charles Menard's figurative map](https://en.wikipedia.org/wiki/Charles_Joseph_Minard) of Napoleon's defeat and retreat during the Russian campaign of 1812, and [John Snow's dot map](https://en.wikipedia.org/wiki/John_Snow) of cholera cases during the London epidemic of 1854.
 
-- Distinguish infographics from data visualizations
-- Show examples of interactive charts and maps in this book
+![Images: Menard's figurative map (left) and Snow's dot map (right), from Wikimedia](examples-Minard-Snow.png)
 
-## Exploration versus Explanation
-- define both
-- data visualization can be used for both, but this book emphasizes explanation, in the form of a story
+This free online introductory book focuses on selected topics in data visualization:
 
-## Paper vs. Presentations vs. Public Web
-- How do you envision your audiences will see your data visualizations? Most books assume that your work will be delivered to readers in one of these formats:
-  - printed paper that you hand out to readers in person at a meeting
-  - static PDF file that readers receive via email or download
-  - presentation slides that you deliver to a live audiences
-- But this book
+**Charts and maps:** Despite the growing variety of visualization types, this book features chapters on creating [charts](../chart) and [maps](../map), and a wide range of ways to communicate with these classic models.
 
-## Storytelling with Data and Narrative
-- Data visualization is more than pretty pictures. Instead, the best visualizations are those that tell a story -- and draw your attention to what really matters -- through the combination of images and text.
+**Reusable tools and templates:** Unlike infographics created for one-time use, all of the tools and templates in this book are recyclable, and allow you to upload a new dataset to display your story.
+
+**Free and easy-to-learn:** We have selected data visualization tools that are free to use (or work on a freemium model, where advanced features or higher usage requires payment), and searched for those that we believe are easy-to-learn, based on our teaching experience with undergraduate students and non-profit community organizations.
+
+**Interactive on the open web:** Many books assume that you will deliver your data visualizations to in-person audiences on printed paper or presentation slides. But in this book, we show how to [embed interactive charts and maps on your website](../embed), to share with the wider public.
+
+**Storytelling:** Data visualization is more than pretty pictures. In this book, the best visualizations are those that [tell a story](../storytelling) -- and pull readers' attention to what really matters -- by combining images and text, and offering exploration with explanation.
+
+{% footer %}
+{% endfooter %}

@@ -86,4 +86,3 @@
 * [About This GitBook](gitbook/README.md)
    * [My GitBook Workflow](gitbook/workflow.md)
    * [Structure, Plugins, Syntax](gitbook/structure.md)
-   * [Improve this Book](gitbook/improve.md)

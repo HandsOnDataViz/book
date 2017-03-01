@@ -10,8 +10,8 @@ We designed the book to be read online, in any modern web browser, on desktops, 
 Keep your place when reading online and moving between pages.  
 - Two-finger trackpad click
 - or Control + click (Mac)
-- or Alt + click (Chrome)
-- or right-click
+- or Alt + click (Chromebook)
+- or right-click (Windows and others)
 
 ![Screenshot: Open link in new tab (on Mac)](contextual-menu.png)
 
@@ -33,7 +33,7 @@ If you have a small screen, consider connecting a second monitor, or work next t
 - Click "Edit on GitHub" at top of any page, which opens new tab.
     ![](GitBook-edit-on-github.png)
 - To view the code behind the page, click Raw button.
-- To suggest revisions, click Editor button (the pencil symbol), which requires free account on GitHub http://github.com
+- To suggest revisions, click Editor button (pencil symbol). Requires free [GitHub account](http://github.com).
     ![](GitHub-edit-file.png)
 - After entering revisions, scroll down to click Propose File Change.
 - On next screen, click Create Pull Request to submit proposed changes to the book owner.

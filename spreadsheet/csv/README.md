@@ -1,29 +1,43 @@
 # Save Spreadsheets in CSV or ODS Formats
-*By [Jack Dougherty](../../introduction/who.md), last updated February 11, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 2, 2017*
 
-** TO DO **
-- show how this is simple with Google Sheets, then show Excel Desktop
-- emphasize how saving in CSV format will only work on one sheet at a time
-- add ODS as another format for saving a spreadsheet file with multiple tabs
+To transfer spreadsheet data to another platform, or import it into a visualization tool, you may need to convert your file into a different format. Consider two options:
 
+## Comma-separated values (.csv)
+- to transfer only one sheet of data, with no formulas or formatting, into a wide range of spreadsheet and visualization tools
 
-Comma Separated Values (abbreviated as CSV) is a generic spreadsheet format that is very portable across nearly all data and visualization tools. In some cases, a tool may require you to convert spreadsheet data from Microsoft Excel or other applications into generic CSV format.
+## OpenDocument Spreadsheet (.ods)
+- to transfer multiple sheets, with basic formulas and formatting, into many spreadsheet tools (Excel, Google Sheets, LibreOffice)
 
-Note that CSV format will save only the first sheet of a multi-sheet Excel workbook. If you have source information or other data in other tabs, keep your original Excel file for backup purposes. You can give them parallel file names:
+## Convert to CSV or ODS with Google Sheets
+
+In the File > Download As menu, select either ODS (to convert a Google Sheets file with multiple tabs, formulas, and formatting) or CSV (to capture only the data in the current sheet).
+
+![Screenshot: Download Google Sheets data in ODS or CSV format](google-sheets-download-ods-csv.png)
+
+## Convert to ODS with Microsoft Excel
+
+In the File > Save As menu, select ODS format.
+
+![Screenshot: Save as ODS with Excel for Mac](excel-save-as-ods.png)
+
+## Convert to CSV with Microsoft Excel
+
+1) Note that CSV format will save only the first sheet of a multi-sheet Excel workbook. If you have source information or other data in other tabs, keep your original Excel file for backup purposes. You can give them parallel file names:
 - data.csv
 - data.xlsx
 
-In Microsoft Excel, select File > Save As, and select CSV format in the drop-down menu.
+2) In the Excel file, select the File > Save As menu, and select CSV format.
 
-![](excel-save-as-csv.png)
+![Screenshot: Save as CSV in Excel for Mac](excel-save-as-csv.png)
 
-When saving from Microsoft Excel to CSV, the application will warn you that some Excel features may not be saved in this generic format. Be sure to keep a backup Excel version, and then click Continue to save your data into CSV format.
+3) Older versions of Excel may warn you that some features (such as formulas and formatting) will not be saved in a generic CSV data file. Be sure to keep a backup Excel version, then click Continue to save your data into CSV format.
 
-![](excel-save-as-csv-continue.png)
+![Screenshot: Older Excel warning before saving in CSV format](excel-save-as-csv-continue.png)
 
-When you quit Excel, another screen will ask if you wish to save the CSV file a second time. Don't let Excel confuse you. If you have not made any changes to the Excel file since the step above, click Don't Save, because you already saved the file in CSV format.
+4) In older versions of Excel, when you quit the appliation, another screen will ask if you wish to save the CSV file a second time. **Don't let Excel confuse you.** If you have not made any changes to the Excel file since the step above, click Don't Save, because you already saved the file in CSV format.
 
-![](excel-quit-csv.png)
+![Screenshot: Older Excel version: click Don't Save](excel-quit-csv.png)
 
 {% footer %}
 {% endfooter %}

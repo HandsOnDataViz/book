@@ -12,6 +12,7 @@
    * [Ask Questions about Tools](choose/ask/README.md)
    * [Rate Three Map Tools](choose/rate/README.md)
 * [Improve Spreadsheet Skills](spreadsheet/README.md)
+   * [Upload to Google Sheets](spreadsheet/upload/README.md)
    * [Share with Google Sheets](spreadsheet/share/README.md)
    * [Save as CSV or ODS Format](spreadsheet/csv/README.md)
    * [Sort and Filter Data](spreadsheet/sort/README.md)

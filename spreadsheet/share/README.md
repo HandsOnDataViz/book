@@ -8,7 +8,7 @@ Drive account.
 
 {%youtube%}PoLhyld3KLo{%endyoutube%}
 
-1) In the New menu of Google Drive, select Google Sheets.
+1) Sign in to your Google Drive (http://drive.google.com), and in the New menu, select Google Sheets.
 
 2) New spreadsheets are private by default. Only the owner can view and edit.
 
@@ -33,8 +33,8 @@ Below those settings, select the Access level:
 **Tip:** To avoid sending a long Google Sheets link to others, use a free link-shortening service such as Bit.ly (http://bit.ly). Requires a free account.
 
 ## Learn more:
+- "Share Files from Google Drive," Google help page, https://support.google.com/docs/answer/2494822
 - Jack Dougherty, "How to Co-Author and Peer Edit with Google Docs," Web Writing: How and Why for Liberal Arts Teaching and Learning, (2015), http://epress.trincoll.edu/webwriting/chapter/how-to-google-docs
-
 
 {% footer %}
 {% endfooter %}

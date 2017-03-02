@@ -1,5 +1,5 @@
 # Improve Your Spreadsheet Skills
-*by [Jack Dougherty](../introduction/who.md), last updated February 7, 2017*
+*by [Jack Dougherty](../introduction/who.md), last updated March 1, 2017*
 
 Spreadsheets are wonderful tools to organize data into tables of rows and columns. With a spreadsheet, you can sort, filter, calculate, aggregate, and reorganize information to help you find the stories buried inside.
 
@@ -14,9 +14,9 @@ Four common spreadsheet tools:
 
 Which spreadsheet tool should you use? That depends on how you wish to share and store data for your project.
 - If you are the **only person** working on a data project, use any spreadsheet tool.
-- If you need to **share live, view-only data** with others, try Google Sheets.
-- If you need to **share live, editable data** with others, try Google Sheets.
-- If you need to **secure confidential data**, avoid online tools and use any desktop spreadsheet.
+- If you need to **protect private data**, avoid online tools and use any desktop spreadsheet.
+- If you need to **share live data** with others, use Google Sheets.
+
 
 This introductory online book features Google Sheets because it's a free and easy-to-learn tool for collaborating and sharing data with others. The basic spreadsheet methods shown here are very similar across all spreadsheet tools. But advanced users may need more complex tools to manage very large datasets, or relational databases, or to perform deeper analysis.
 

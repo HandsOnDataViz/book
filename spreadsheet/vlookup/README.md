@@ -1,5 +1,14 @@
-# Match Data with the VLOOKUP Function
-*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2016*
+# Match Spreadsheet Columns with VLOOKUP Function
+*By [Jack Dougherty](../../introduction/who.md), last updated March 2, 2017*
+
+Here's a common problem: One spreadsheet, such as the class roster for DataViz For All, contains a column with a two-letter code for the nation of each student. A second spreadsheet contains a complete list of codes and full names for all nations. What's the best way to merge all of this information into one sheet, so each student row contains the full name of their nation?
+
+![Screenshot: Problem - how to match columns in two tables?](vlookup-problem.png)
+
+The solution: Instead of manually copying and pasting data, most spreadsheet tools contain a VLookup function, which "looks up" data across two or more vertical columns, and automatically fills in matching entries.
+
+![Screenshot: Solution - use the VLookup function](vlookup-solution.png)
+
 
 **TO DO**
 - redo the conceptual visual with a better example, maybe towns or school districts?
@@ -12,7 +21,6 @@ Here's a common problem: Your first spreadsheet contains a long list of towns by
 - You could sort each sheet alphabetically by town, then copy and paste an entire column, but that only works if each sheet contains the exact same list of towns
 - You could use the VLookup function, which "looks up" data in two vertical columns and automatically fills those that match
 
-![](vlookup-concept.png)
 
 In Excel, the VLOOKUP formula looks complex at first, so let's break it down into steps.
 

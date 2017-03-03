@@ -63,7 +63,7 @@
    * [More Tools to Edit Code](edit/tools/README.md)
 * [Highcharts Templates](highcharts/README.md)
 * [Leaflet Map Templates](leaflet/README.md)
-   * [Simple Map](leaflet/simple/README.md)
+   * [Simple Leaflet Point Map](leaflet/simple/README.md)
    * [Leaflet Maps with Google Sheets](leaflet/with-google-sheets/README.md)
    * [Leaflet with Socrata Data](leaflet/with-socrata/README.md)
    * [Point Storymap with Scroll](leaflet/storymap/README.md)

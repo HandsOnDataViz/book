@@ -14,7 +14,7 @@ Explore the very simple interactive map below or view the [full-screen version](
 
 2) Sign in to your free GitHub account
 
-3) In the upper-right corner, click Fork to copy my repository (repo) into your own account. Important: You can only fork a repository **one time**.
+3) In the upper-right corner, click Fork to copy the repository (repo) into your own account. Important: You can only fork a repository **one time**.
 
 4) Click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes the code to a public website you control.
 

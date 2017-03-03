@@ -1,60 +1,89 @@
 # Leaflet Maps with Google Sheets
+*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 3, 2017*
 
-*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated January 27, 2017*
+** This tool and tutorial are still in-progress **
 
-** TO DO **
-- change directions to paste the full URL
-- carefully explain the Publish step and include a screenshot
-- create video tutorial
+## Try it
 
+Explore the map or open in a [new tab](https://jackdougherty.github.io/leaflet-maps-with-google-sheets/)
 
-## Try the map or open in a [new tab](https://jackdougherty.github.io/leaflet-maps-with-google-sheets/)
+<iframe src="https://jackdougherty.github.io/leaflet-maps-with-google-sheets/" width="90%" height=500></iframe>
 
-<iframe src="https://jackdougherty.github.io/leaflet-maps-with-google-sheets/" width="100%" height=500></iframe>
+The Leaflet map pulls data and options from an easy-to-modify Google Sheet.
 
-## Map pulls data and options from Google Sheet
-<iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false" width="100%" height=300></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false" width="90%" height=300></iframe>
 
 ## Tool Review
 - [Leaflet Maps with Google Sheets](https://github.com/JackDougherty/leaflet-maps-with-google-sheets) allows you to create and customize point, polygon, or polyline maps with no coding skills. Copy and publish the Google Sheet template, copy and host the pre-made Leaflet code template with GitHub Pages, and easily link the two together.
 - Requires a free Google account and a free GitHub account
 - ** TO DO ** add more advantages and limitations, currently beta version
 
-## Tutorial to create your own
+## Video with Step-by-Step tutorial
 
-1) Sign into your GitHub account and open this code in a new tab: [Leaflet Maps with Google Sheets](https://github.com/JackDougherty/leaflet-maps-with-google-sheets)
+Creating your own version requires four key steps, explained in more detail below.
+- A) Fork (copy) the code template and publish your version with GitHub Pages
+- B) Make a copy of the Google Sheet template and publish your version
+- C) Paste your Google Sheet link into your GitHub code
+- D) Modify your Google Sheet options, points, polygons, and polylines
 
-2) Fork (or copy) the code to your GitHub account.
+** video to come **
 
-3) Host your code on the public web using GitHub Pages: Settings > Source > Master > Save. Your version of the map will be viewable at the link shown.
+
+### A) Fork (copy) the code template and publish your version with GitHub Pages
+
+1) Right-click to open the Leaflet Maps with Google Sheets code template in a new tab: https://github.com/JackDougherty/leaflet-maps-with-google-sheets
+
+2) Sign in to your free GitHub account
+
+3) In the upper-right corner, click Fork to copy the repository (repo) into your own account. Important: You can only fork a repository **one time**. To make a second copy, see instructions below **to come**.
+
+4) Click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes the code to a public website you control.
+
+5) Scroll down to GitHub Pages section again, and copy the link to your published web site.
 
 ![](lmwgs-1-fork-640.gif)
 
-4) Sign into your Google account and open this spreadsheet in a tab: [Leaflet Maps with Google Sheets template](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g)
+6) Click on the repo name to the go back to the top level.
 
-5) File > Make a Copy to your Google Drive, and File > Publish your Google Sheet to the public web
+7) At the top level of your repo, click on README.md, and click the pencil icon to edit this file, written in easy-to-read Markdown code.
+
+8) Erase the link to previous live site, and paste in the link to your site. Scroll down and Commit (save) your edits.
+
+9) Right-click on the link to your published site and open in a new tab. Your website may take up to 1 minute to appear the first time.
+
+### B) Make a copy of the Google Sheet template and publish your version
+
+1) Right-click to open this Google Sheets spreadsheet in a new tab: https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g
+
+2) Sign into your Google account
+
+3) File > Make a Copy of the Google Sheet template to your Google Drive
+
+4) File > Publish your Google Sheet to the public web
 
 ![](lmwgs-2-make-copy-640.gif)
 
-6) Link your Google Sheet to your Leaflet code.
-- Copy your Google Sheet web address (or URL)
-- In your Github code, click to open this file: google-doc-url.js
-- Click the pencil symbol to edit the file
-- Paste your Google Sheet URL into the code
-- Scroll to bottom of page and press Commit (similar to save)
-- **TO DO** update this visual
+### C) Paste your Google Sheet link into your GitHub code
 
-![](lmwgs-3-paste-id-640.gif)
+1) Copy your Google Sheet web address (or URL)
 
-7) Update map options in your Google Sheet, and refresh your map browser to view
+2) In your Github code repo, click to open this file: google-doc-url.js
+
+3) Click the pencil symbol to edit the file
+
+4) Paste your Google Sheet URL into the code to replace the current URL
+
+5) Scroll to bottom of page and press Commit to save your changes
+
+### D) Modify your Google Sheet options, points, polygons, and polylines
+
+1) Modify settings in the Options tab in your Google Sheet, then refresh the browser in your published map to view changes
 
 ![](lmwgs-4-options-640.gif)
 
-8) Click the Points tab at the bottom of your Google Sheet, paste in new address data, and select 5 columns to geocode
+2) In the Points tab of your Google Sheet, paste in new addresses and select 6 columns to geocode
 
-![](lmwgs-5-geocode-640.gif)
-
-9) Upload polygon and polygon data in GeoJSON format to your GitHub code, and update Polygons and Polylines tabs to match and customize.
+3) Upload polygon and polygon data in GeoJSON format to your GitHub code, and update Polygons and Polylines tabs to match and customize.
 
 
 **TO DO** Add more details for steps 8 and 9 below, and review all details below to simplify above
@@ -72,11 +101,15 @@
 - responsive web design for both small and large devices
 - built entirely with open-source code, and no usage limits
 
-## Create Your Own: Fork a copy of the code template on GitHub
-- https://github.com/jackdougherty/leaflet-map-simple/
-- Remember, if you have already forked one copy, go to your GitHub repository Settings to rename it, or create a new GitHub repo and use GitHub Desktop to upload template Files
+## Frequently Asked Questions
 
-## To Do
+- Q: If I already made one fork of a GitHub repo, it will not allow me to make a second fork. But I want to make a second map. How can I do this?
+- A: Three options **TO DO: explain in more detail**
+  - 1) Go to any of these alternate templates, which contain same code and sheets under a different name
+  - 2) Or download any GitHub repo to your desktop, start a new GitHub repo in your account, and manually upload the files
+  - 3) Or install GitHub Desktop on your Mac/Windows computer to automate the process described in option 2 above -- see tutorial
+
+## To Do -- CLEAN THIS UP
 - explain all steps
 - Insert internal references to prior steps in this book. See the Edit and Host Code Templates section in this book. Requires a free GitHub account to host your own version on the web.
 

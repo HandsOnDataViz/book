@@ -1,6 +1,8 @@
-# More Tools to Modify Web Code
+# Browser Developer Tools
 
-## Built-in Browser Developer Tools
+**TO DO**
+- improve this page
+
 Peek inside any site and view the web code under the hood with the browser developer tools.
 
 In Chrome for Mac, go to View > Developer > Developer Tools

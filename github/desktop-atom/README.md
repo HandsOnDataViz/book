@@ -1,12 +1,12 @@
-# GitHub Desktop and Atom Editor
+# Efficiently Edit Code with GitHub Desktop and Atom Editor
+
+** TO DO ** revise this outdated page
 
 While you can do **nearly** everything in this book with GitHub in your browser, several steps will be faster and more efficient with two related free tools:
 
 - [download GitHub Desktop](https://desktop.github.com/) for Mac/Windows
 
 - [download Atom Editor](https://atom.io/) from GitHub
-
-**TO DO** rewrite this page
 
 Download the free GitHub Desktop tool to sync and  additional GitHub repos on your local Mac or Windows computer.
 GitHub allows users to create one fork of the basic Searchable Map template repository. To create a second template, or to move and edit multiple files for more advanced versions, download the GitHub for Mac/Windows tool.

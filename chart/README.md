@@ -1,14 +1,14 @@
 # Chart Your Data
-*by [Jack Dougherty](../introduction/who.md), last updated February 28, 2017*
+*by [Jack Dougherty](../introduction/who.md), last updated March 5, 2017*
 
 Visualize your data with a chart to pull readers deeper into the story. Even if it contains geographical information, sometimes a chart tells your story better than a map. But good charts require careful thought about how to communicate insights to your audience. This chapter features design principles and free tools to create interactive charts that you can embed in your website.
 
 ## Create a meaningful interactive chart
 1) [Draw and write your data story](../../choose/draw) as shown in a previous chapter. What questions do you want to explore, or insights that you want to explain? Sketch a simple picture and write down main ideas to capture your vision on paper.
 2) Practice [principles of good chart design](design) in this chapter. Learn to identify good charts from bad ones.
-3) Choose a chart type that matches your story and data format in the table below. Follow tutorial links to *easy tools* for beginners or *power tools* that require you to [Edit and Host code templates](../edit). Refer to [Spreadsheet Skills](../spreadsheet) and [Clean Your Data](../clean) chapters in this book if needed.
-4) Learn how to [embed your interactive chart in your website](../embed) in this book.
-5) Focus on [storytelling](../storytelling) to accompany your visualization. Write compelling titles, labels, and sentences that call attention to the most meaningful insights in your chart, and explain any data limitations.
+3) Choose a chart type that matches your story and data format in the table below. Follow tutorial links to *easy tools* for beginners or *power tools* that require you to [Share, Edit, and Host Code Templates with GitHub](../github). Refer to [Spreadsheet Skills](../spreadsheet) and [Clean Your Data](../clean) chapters in this book if needed.
+4) Learn how to [Embed your interactive chart in your website](../embed) in this book.
+5) Focus on [Storytelling](../storytelling) to accompany your visualization. Write compelling titles, labels, and sentences that call attention to the most meaningful insights in your chart, and explain any data limitations.
 
 | Basic chart types | Best use and tutorial chapters |
 | --- | --- |

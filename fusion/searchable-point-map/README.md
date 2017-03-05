@@ -1,6 +1,6 @@
 # Searchable Point Map Template with Google Fusion Tables and GitHub Pages
 
-*By [Derek Eder and Jack Dougherty](../../introduction/who.md), last updated March 26, 2016*
+*By [Derek Eder and Jack Dougherty](../../introduction/who.md), last updated March 5, 2017*
 
 This tutorial demonstrates how to create your own Searchable Map, using [Derek Eder's Searchable Map Template v1.4 for Google Fusion Tables](http://derekeder.com/searchable_map_template/), and freely host it on the web with GitHub Pages.
 
@@ -9,8 +9,8 @@ This tutorial demonstrates how to create your own Searchable Map, using [Derek E
 Explore this live demo (https://jackdougherty.github.io/fusion-map-point/index.html) of a searchable point map with checkboxes. See also the iframe version (https://jackdougherty.github.io/fusion-map-point/index_iframe.html)
 
 Before you begin, review other tutorials in this book:
-- [Point map with Google Fusion Tables](../../map/point-gft/)
-- [Edit and Host Code with GitHub Pages](../../edit/github)
+- [Point map with Google Fusion Tables](../point/)
+- [Share, Edit, and Host Code Templates with GitHub Pages](../github)
 
 Overview of key steps:
 
@@ -22,7 +22,7 @@ Overview of key steps:
 - [F. Add filter to show legend and selected map points](#F)
 - [G. Save code edits from gh-pages to your master branch](#G)
 
-See also the [YouTube video tutorial](#video) and additional [MapsLib Options](#options) below, and the more advanced [GitHub Desktop workflow](../../edit/ghdesktop) in this book.
+See also the [YouTube video tutorial](#video) and additional [MapsLib Options](#options) below, and the more advanced [GitHub Desktop workflow](../github/desktop-atom) in this book.
 
 ## A. Create a point map in Google Fusion Tables <a id="A"></a>
 

@@ -2,9 +2,12 @@
 
 *By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 31, 2016*
 
+** TO DO **
+- revise this page to match updated Leaflet Storymap with Google Sheets
+
 ## Try this demo
 
-<iframe src='https://jackdougherty.github.io/leaflet-storymap' width='100%' height='550'></iframe>
+<iframe src='https://jackdougherty.github.io/leaflet-storymap' width='90%' height='550'></iframe>
 
 ## View demo in new page
 - https://jackdougherty.github.io/leaflet-storymap/
@@ -12,9 +15,8 @@
 ## Create Your Own Storymap
 
 Before you begin, review previous tutorials in this book:
-- [Edit and Host Code Templates with GitHub](../../edit/github/)
-- [Create and Convert Map Data with GeoJson.io](../../shape/geojsonio)
-
+- [Share, Edit, and Host Code Templates with GitHub](../github/)
+- [Create and Convert Map Data with GeoJson.io](../transform/geojsonio)
 
 1. Go to the GitHub repository template (https://github.com/jackdougherty/leaflet-storymap) and fork a copy of this repo to your own GitHub account. Requires signup for a [free GitHub account](http://github.com). Reminder: if you have already forked one copy, go to your GitHub repository Settings to rename or delete the first copy, so that you may create a second copy.
 2. Go to your copy on GitHub and click the "download" button to create a zipped (compressed) copy on your local computer. On most computers, double-click to unzip the folder.
@@ -36,7 +38,7 @@ Before you begin, review previous tutorials in this book:
   - map.geojson
 8. In your master branch, click on the index.html file, click on the pencil icon to turn on the editor, and edit lines 7 and 22 to change the titles that will be displayed. When done, scroll down and click the clean Commit Changes button to save your edits to the master branch.
 9. Host your storymap code on the live web with GitHub Pages. At the top level of your repo on GitHub.com, select the master branch drop-down menu, and type in this new branch name: `gh-pages`. When you first create this branch, it contents may take several minutes to appear the first time on the public web, but updates will take only seconds to appear. Your public URL follows this format: `http://USERNAME.github.io/REPO_NAME`.
-10. Learn more about how to edit your GitHub branches and make 'pull requests' to save changes from one branch to the other in the [GitHub section in this book](../../edit/github/).
+10. Learn more about how to edit your GitHub branches and make 'pull requests' to save changes from one branch to the other in the [GitHub section in this book](../github/).
 
 ##Examples and Extended Features
 See how other readers have used this template to tell their own map stories, and added more features with flexible Leaflet code.  

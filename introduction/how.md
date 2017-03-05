@@ -20,6 +20,12 @@ If you have a small screen, consider connecting a second monitor, or work next t
 
 ![Image: Laptop with second monitor, and with tablet](laptop-and-monitor-and-tablet.jpg)
 
+## Refresh browser
+To view the most up-to-date content in your web browser, do a "hard refresh" to [bypass any saved content in your browser cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
+- Ctrl + F5 (most Windows-Linux browsers)
+- Command + Shift + R (Chrome or Firefox for Mac)
+- Shift + Reload button toolbar (Safari for Mac)
+
 ## Comment on any paragraph
 - Requires a free account on GitHub http://github.com
 - Select text and click the plus symbol (+) in margin.

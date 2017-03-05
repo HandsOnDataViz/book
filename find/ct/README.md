@@ -1,7 +1,7 @@
-# Connecticut Open Data
-*By [Jack Dougherty](../../introduction/who.md), last updated Feb 5, 2017*
+# Connecticut Open Data and Boundaries
+*By [Jack Dougherty](../../introduction/who.md), last updated March 4, 2017*
 
-Since this book was created in Hartford, Connecticut, we include state and municipal open data repositories for the benefit of local readers:
+Since this book was created in Hartford, Connecticut, we include state and municipal open data repositories and boundary files.
 
 **Connecticut Open Data** (http://data.ct.gov), the official portal for state government agencies, is hosted on the Socrata platform, which offers built-in data visualization tools and APIs. See also how to create a [filtered point map with Socrata](../../map/socrata/index.html) in this book.
 
@@ -27,24 +27,26 @@ In addition to the official repositories above, Connecticut news organizations t
 
 **Hartford Courant Data Desk** (http://www.courant.com/data-desk) produces digital visualizations for the *Hartford Courant*, the largest daily newspaper in Connecticut, owned by Tribune Publishing. Many of these data visualizations are published on the Tableau platform, which allows readers to download the underlying data.
 
-## Connecticut and Hartford boundary files
-
-- See common geographic boundary files below, with more details in the official repositories above.
-- To download a file, click the link OR right-click to Save As...
+## Boundaries
+- Converted from shapefile WGS84 to GeoJSON format
+- To download a file, click the link OR right-click > Save As
 - To view or edit, drag files into http://geojson.io or http://mapshaper.org
-- Learn more in the [Map Your Data](../../map/index.html) and [Transform Your Map Data](../../transform/index.html) sections of this book
+- Learn more in the [Transform Your Map Data](../../transform) chapter of this book
 
-| Geography              | Source    | Preview | GeoJSON | KML |
-| :--------------------- | :---------| :------ | :------ |:--- |
-| CT counties            | [MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)| [Preview](http://magic.lib.uconn.edu/preview.html#layers=40) | [GeoJSON](CT-counties-2010-MAGIC.geojson) | [KML](CT-counties-2010-MAGIC.kml) |
-| CT towns               | [MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)| [Preview](http://magic.lib.uconn.edu/preview.html#layers=54) | [GeoJSON](CT-towns-2010-MAGIC.geojson) | [KML](CT-towns-2010-MAGIC.kml) |
-| CT tracts 2010         | [MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)| [Preview](http://magic.lib.uconn.edu/preview.html#layers=66) | [GeoJSON](CT-tracts-2010-MAGIC.geojson) | [KML](CT-tracts-2010-MAGIC.kml) |
-| Hartford County        | [MAGIC](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | not yet | [GeoJSON](HartfordCounty-outline-2010-MAGIC.geojson) | [KML](HartfordCounty-outline-2010-MAGIC.kml) |
-| Hartford neighborhoods | [Hartford](http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5) | [Preview](http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5) | [GeoJSON](Hartford-neighborhoods-2015-HartData.geojson) | [KML](Hartford-neighborhoods-2015-HartData.kml) |
+| Geography | Year-Source-Scale  | Download GeoJSON |
+| :-------- | :------ | :----- | :-----   |
+| CT outline ![](ct-outline.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-outline.geojson](ct-outline.geojson) |
+| CT counties ![](ct-counties.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-counties.geojson](ct-counties.geojson) |
+| CT towns ![](ct-towns.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-towns.geojson](ct-towns.geojson) |
+| CT census tracts ![](ct-tracts-2010.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-tracts-2010.geojson](ct-tracts-2010.geojson) |
+| Hartford County outline ![](hartfordcounty-outline.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartfordcounty-outline.geojson](hartfordcounty-outline.geojson) |
+| Hartford County towns ![](hartfordcounty-towns.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartfordcounty-towns.geojson](hartfordcounty-towns.geojson) |
+| Hartford County tracts ![](hartfordcounty-tracts-2010.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartfordcounty-tracts-2010.geojson](hartfordcounty-tracts-2010.geojson) |
+| Hartford outline ![](hartford-outline.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartford-outline.geojson](hartford-outline.geojson) |
+| Hartford census tracts ![](hartford-tracts-2010.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartford-tracts-2010.geojson](hartford-tracts-2010.geojson) |
+| Hartford neighborhoods ![](hartford-neighborhoods.png) | [2015 Hartford Open Data 1:50,000](http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5) |  [hartford-neighborhoods.geojson](hartford-neighborhoods.geojson) |
 
 **TO DO**
-- reorganize with more details about scale and projection
-- add census areas (tracts; block groups) for City of Hartford; Hartford County;
 - add Capitol Region Council of Governments (CRCOG) http://www.crcog.org/
 - add school districts (and clarify elementary-secondary)
 - add Capitol Region Education Council (CREC) http://www.crec.org/

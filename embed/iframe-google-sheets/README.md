@@ -1,12 +1,12 @@
 # Copy an iframe code from a Google Sheets interactive chart
-*by [Jack Dougherty](../introduction/who.md), last updated February 22, 2017*
+*by [Jack Dougherty](../introduction/who.md), last updated March 6, 2017*
 
 Question: After you create an interactive chart or map, how do you embed the live version in a website that you control?
 
 The full answer requires three steps:
-1) Create a web page that supports iframe codes
-2) Copy the iframe code from your visualization
-3) Embed (or paste) the iframe code into your web page
+- 1) Create a web page that supports iframe codes
+- 2) Copy the iframe code from your visualization
+- 3) Embed (or paste) the iframe code into your web page
 
 This tutorial focuses on the **second step**, and shows how to publish a Google Sheets interactive chart, and copy its iFrame code. Details may differ for other visualization tools, but the general iframe concept will be similar to most cases. For **steps 1 and 3**, see the [Create a Simple Web Page with GitHub Pages](../github-pages/README.md) tutorial and the [Embed iFrame in GitHub Pages](../iframe-github/) tutorial in this chapter.
 

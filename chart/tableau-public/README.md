@@ -3,7 +3,7 @@ by [Jack Dougherty](../introduction/who.md), last updated March 6, 2017*
 
 This book includes tutorials to create interactive charts with Tableau Public https://public.tableau.com. Free download requires email signup.
 - [Create an XY Scatter Chart with Tableau Public](scatter-chart-tableau)
-- Create a Filtered Line Chart with Tableau Public(filtered-line-chart-tableau)
+- [Create a Filtered Line Chart with Tableau Public](filtered-line-chart-tableau)
 
 ## Tool Review
 - Pros

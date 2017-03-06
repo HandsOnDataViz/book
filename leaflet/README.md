@@ -4,7 +4,17 @@
 
 ** TO DO **
 
-Understanding Leaflet map templates
+Tool Review
+
+Advantages:
+- more control to customize and host data visualizations on any web server
+- no usage fee
+- works on any modern web browser
+- responsive design for mobile or desktop
+Disadvantage: dependent on Leaflet code library
+
+
+How to read Leaflet map code templates in this book
 
 Templates vary from simple to complex, but all of them operate with three common types of code:
 - HTML: to structure its content on the web (example: index.html)

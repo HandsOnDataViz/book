@@ -1,8 +1,12 @@
-# GitHub: One Tool for (Nearly) Everything
+# Pull Requests and Merge Changes with GitHub
+*By [Jack Dougherty](../../introduction/who.md), last updated March 5, 2016*
 
-*By [Jack Dougherty](../../introduction/who.md), last updated February 18, 2016*
-
-** TO DO - rewrite this out-of-date page **
+** TO DO **
+- REWRITE this out-of-date page to focus solely on more advanced aspects of GitHub in the browser
+  - branches
+  - pull requests
+  - merge changes
+  
 
 Sign up for a [free GitHub account](http://github.com), a free multi-purpose tool that allows you to:
 - View and fork a copy of open-source code from other users

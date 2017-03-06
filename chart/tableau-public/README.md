@@ -1,5 +1,5 @@
 # Create Charts with Tableau Public
-by [Jack Dougherty](../introduction/who.md), last updated March 6, 2017*
+*by [Jack Dougherty](../introduction/who.md), last updated March 6, 2017*
 
 This book includes tutorials to create interactive charts with Tableau Public https://public.tableau.com. Free download requires email signup.
 - [Create an XY Scatter Chart with Tableau Public](scatter-chart-tableau)

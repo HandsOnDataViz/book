@@ -54,11 +54,11 @@ A compilation of chart design principles from leading experts, illustrated with 
 - Avoid bad combinations from opposite sides of color wheel, such as red/green or yellow/blue (Wong pp. 40, 44).
 - Use contrast (such as color vs gray) to call attention to your data story (Knaflic pp. 87-88)
 
-**TO DO** insert bad-color vs good-color/contrast chart 
+**TO DO** insert bad-color vs good-color/contrast chart
 
 See also Map Design Principles chapter in this book **link**
 
-See also Storytelling with Data chapter in this book **link**
+See also [Tell Your Data Story](../../story) chapter in this book
 
 ## Learn more
 

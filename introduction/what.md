@@ -15,7 +15,7 @@ This free online introductory book focuses on selected topics in data visualizat
 
 **Interactive on the open web:** Many books assume that you will deliver your data visualizations to in-person audiences on printed paper or presentation slides. But in this book, we show how to [embed interactive charts and maps on your website](../embed), to share with the wider public.
 
-**Storytelling:** Data visualization is more than pretty pictures. In this book, the best visualizations are those that [tell a story](../storytelling) -- and pull readers' attention to what really matters -- by combining images and text, and offering exploration with explanation.
+**Storytelling:** Data visualization is more than pretty pictures. In this book, the best visualizations are those that [tell your data story](../story) -- and pull readers' attention to what really matters -- by combining images and text, and offering exploration with explanation.
 
 ## Learn more
 - Michael Friendly and Daniel J. Denis, “Milestones in the History of Thematic Cartography, Statistical Graphics, and Data Visualization,” 2001, http://www.datavis.ca/milestones/

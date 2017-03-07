@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-   * [What is Data Viz?](introduction/what.md)
+   * [What is Dataviz?](introduction/what.md)
    * [Why this Book?](introduction/why.md)
    * [Who Created it?](introduction/who.md)
    * [How to Read and Comment](introduction/how.md)
@@ -80,7 +80,7 @@
    * [Point-Polygon Layers](fusion/point-polygon/README.md)
    * [Point-Polygon Dynamic Legend](fusion/point-polygon-legend/README.md)
    * [Point-Polygon Results List](fusion/point-polygon-list/README.md)
-* [Storytelling with Data](storytelling/README.md)
+* [Tell Your Data Story](story/README.md)
 * [Peer Review Samples](peer/README.md)
    * [Section 2 Chart 1](peer/2-chart-1.md)
    * [Section 2 Chart 1 notes](peer/2-chart-1-notes.md)

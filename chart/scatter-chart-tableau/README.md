@@ -1,6 +1,7 @@
 # Create an XY Scatter Chart with Tableau Public
-
 *by [Jack Dougherty](../../introduction/who.md), last updated February 16, 2016*
+
+** TO DO ** update embedded chart and tutorial
 
 A scatter chart shows the relationship between two variables by displaying a series of XY coordinate points. For example, if you want to view the relationship between a school district's test scores and its student poverty levels, place both of these variables inside an XY scatter chart, as shown below. With an online interactive version, viewers can explore the data and float over or click any point to see its label. Try this sample:
 

@@ -1,5 +1,5 @@
 # Chart Design Principles
-*by [Jack Dougherty](../introduction/who.md), last updated March 7, 2017*
+*by [Jack Dougherty](../introduction/who.md), last updated March 9, 2017*
 
 Spot the difference between good and bad charts, based on this compilation of design principles from leading experts, with citations listed below to learn more.
 
@@ -11,7 +11,7 @@ Spot the difference between good and bad charts, based on this compilation of de
 
 4) Understand basic chart vocabulary: title, labels, horizontal x-axis and vertical y-axis, data series, tooltip, source and credits. *image to come*
 
-5) Identify the [chart type](../chart) that best matches your story and data format.
+5) Identify the [chart type](chart) that best matches your story and data format.
 
 6) Draw visual comparisons that are easy for readers to understand, rather than confusing them (adapted from Gourley p. 19). *image to come*
 

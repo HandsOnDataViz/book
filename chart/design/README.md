@@ -63,6 +63,8 @@ Drew Gourley, How to Use Data Visualization to Win Over Your Audience, (Visage a
 
 Cole Nussbaumer Knaflic, Storytelling with Data: A Data Visualization Guide for Business Professionals, (Hoboken, New Jersey: Wiley, 2015)
 
+Cole Nussbaumer Knalfic, "An Updated Post on Pies," StoryTelling with Data, February 16, 2017, http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies
+
 Wayne Lytle, Viz-O-Matic: The Dangers of Glitziness and Other Visualization Faux Pas, 1993 video shared on YouTube, https://www.youtube.com/watch?v=fP-7rhb-qMg
 
 Isabel Meirelles, Design for Information: An Introduction to the Histories, Theories, and Best Practices Behind Effective Information Visualizations (Rockport Publishers, 2013), http://isabelmeirelles.com/book-design-for-information/

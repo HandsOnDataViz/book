@@ -1,5 +1,5 @@
 # Chart Design Principles
-*by [Jack Dougherty](../introduction/who.md), last updated March 9, 2017*
+*by [Jack Dougherty](../../introduction/who.md), last updated March 9, 2017*
 
 Spot the difference between good and bad charts, based on this compilation of design principles from leading experts, with citations listed below to learn more.
 
@@ -7,11 +7,11 @@ Spot the difference between good and bad charts, based on this compilation of de
 
 2) Before you begin, ask yourself: Do I really need a chart to tell this data story? Or would a table or text alone do a better job?
 
-3) Decide if the best way to communicate with your audience is with static charts (such as images printed on paper) or interactive charts (embedded in a website, with tooltip details and source links). Most of these principles apply to both types, but [this book features tools and tutorials](../chart) to create interactive charts.
+3) Decide if the best way to communicate with your audience is with static charts (such as images printed on paper) or interactive charts (embedded in a website, with tooltip details and source links). Most of these principles apply to both types, but [this book features tools and tutorials](../../chart) to create interactive charts.
 
 4) Understand basic chart vocabulary: title, labels, horizontal x-axis and vertical y-axis, data series, tooltip, source and credits. *image to come*
 
-5) Identify the [chart type](chart) that best matches your story and data format.
+5) Identify the [chart type](../../chart) that best matches your story and data format.
 
 6) Draw visual comparisons that are easy for readers to understand, rather than confusing them (adapted from Gourley p. 19). *image to come*
 
@@ -47,7 +47,7 @@ Spot the difference between good and bad charts, based on this compilation of de
 - Use contrast (such as color vs gray) to call attention to your data story (Knaflic pp. 87-88)
 - *image to come*
 
-See also [Map Design Principles](../map/design) and [Tell Your Data Story](../../story) chapters in this book.
+See also [Map Design Principles](../../map/design) and [Tell Your Data Story](../../story) chapters in this book.
 
 ## Learn more
 

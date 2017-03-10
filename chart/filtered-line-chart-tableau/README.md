@@ -1,7 +1,7 @@
 # Filtered line chart with Tableau Public
 *by [Veronica X. Armendariz and Jack Dougherty](../../introduction/who.md), last updated March 10, 2017*
 
-We created this interactive filtered line chart for a non-profit education advocacy group. They wanted web visitors to compare student achievement level over time across forty schools. Since displaying all of the lines at once is overwhelming, the filtered line chart offers checkboxes to turn on/off selected data lines to make comparisons. Readers can float their cursor over each line to identify the school name and data details. The tutorial below illustrates how to create your own version with a free downloadable tool for Mac and Windows computers, Tableau Public, https://public.tableau.com
+We created this interactive filtered line chart for a non-profit education advocacy group, which wanted web visitors to compare student achievement levels over time across forty schools. Since displaying all of the line charts at once is overwhelming, the filtered line chart provides checkboxes to turn on/off selected data lines to make specific comparisons. Readers can float their cursor over each line to identify the school name and data details. The tutorial below illustrates how to create your own version with a free downloadable tool for Mac and Windows computers, Tableau Public, https://public.tableau.com
 
 ## Try it
 <iframe src='https://public.tableau.com/views/LineChartSample/Sheet1?:showVizHome=no&:embed=true' width="90%" height="530"></iframe>

@@ -58,7 +58,7 @@ Checking this box enables the Download button at the bottom of your published wo
 https://public.tableau.com/profile/USERNAME
 ```
 
-##Learn more
+## Learn more
 - Insert your interactive chart in your own website in the [Embed On Your Web](../../embed/) chapter of this book, and in particular, [Embed Tableau Public on your Website](../../embed/tableau).
 - Combine multiple visualizations and tell stories with Tableau Public dashboard and story point features
 - See Tableau Public Resources, with how-to videos and sample data, https://public.tableau.com/en-us/s/resources

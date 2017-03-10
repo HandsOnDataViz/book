@@ -1,12 +1,17 @@
 # Filtered line chart with Tableau Public
+*by [Veronica X. Armendariz and Jack Dougherty](../../introduction/who.md), last updated March 10, 2017*
 
-*by [Veronica X. Armendariz, Trinity College Class of 2016](../../introduction/who.md), last updated May 5, 2015*
+We created this interactive filtered line chart for a non-profit education advocacy group. They wanted web visitors to compare student achievement level over time across forty schools. Since displaying all of the lines at once is overwhelming, the filtered line chart offers checkboxes to turn on/off selected data lines to make comparisons. Readers can float their cursor over each line to identify the school name and data details. The tutorial below illustrates how to create your own version with a free downloadable tool for Mac and Windows computers, Tableau Public, https://public.tableau.com
 
-Explore this [interactive filtered line chart](https://jackdougherty.github.io/tableau-public-sample/linechart.html):
+## Try it
+<iframe src='https://public.tableau.com/views/LineChartSample/Sheet1?:showVizHome=no&:embed=true' width="90%" height="530"></iframe>
 
-<iframe src='https://jackdougherty.github.io/tableau-public-sample/linechart.html' width="100%" height="530"></iframe>
+** TO DO **
+- update steps from Tableau Public v9 to v10.2
+- insert video tutorial
+- insert direct link https://public.tableau.com/profile/jackdougherty#!/vizhome/LineChartSample/Sheet1
 
-With [Tableau Public](https://public.tableau.com), both Mac and Windows users now have another free and easy-to-use tool for creating interactive data visualizations that tell stories on the web. This tutorial demonstrates how to build a filtered line chart, with checkboxes to display selected school data, using screenshots from the Mac version (with similar steps in Windows). We created this visualization for a non-profit education advocacy group that wants web visitors to compare achievement by student cohorts across forty schools. Since displaying all of the lines at once is too complex, the filter box adds only the desired schools to the line chart, and users can float the cursor over each line to identify the school and data points.
+Before you begin: Read the [Tableau Public tool review](../tableau-public) in this book, then download and install the free application on a Mac or Windows computer from http://public.tableau.com. Requires a free account.
 
 Step 1: Organize your data in a format that Tableau Public can read. Before importing, examine your data in a spreadsheet tool (such as Microsoft Excel) and format the Year column as a Date. To avoid displaying “2007” as “1/1/2007,” create a custom date format as “yyyy,” which displays it as 2007. Also, leave all blank spaces in the spreadsheet as-is so that Tableau automatically converts them to “null” values during the data import.
 
@@ -75,14 +80,10 @@ Step 15: Before saving your workbook, create a free Tableau Public account in yo
 
 Step 16: After saving your workbook, Tableau will generate a general view of how your visualization appears on the web, with an option to email the link. To embed the visualization in your website, copy the HTML embed code and paste it into a web page that can host this code.
 
-In some websites, the HTML embed code can be pasted directly into a web page.
-
-For self-hosted WordPress.org websites, which do not accept HTML code directly, we do this workaround:
-
-- host the HTML embed code in the free GitHub Pages service
-- paste the URL of the hosted GitHub Page as an iframe in our WordPress.org post or page
-
-For more details, see the Host HTML code on the web with GitHub Pages tutorial in this book (TO COME).
+## Learn more
+- Insert your interactive chart in your own website in the [Embed On Your Web](../../embed/) chapter of this book, and in particular, [Embed Tableau Public on your Website](../../embed/tableau).
+- Combine multiple visualizations and tell stories with Tableau Public dashboard and story point features
+- See Tableau Public Resources, with how-to videos and sample data, https://public.tableau.com/en-us/s/resources
 
 {% footer %}
 {% endfooter %}

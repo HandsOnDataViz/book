@@ -1,63 +1,67 @@
 # Create an XY Scatter Chart with Tableau Public
-*by [Jack Dougherty](../../introduction/who.md), last updated February 16, 2016*
+*by [Jack Dougherty](../../introduction/who.md), last updated March 10, 2017*
 
-** TO DO ** update embedded chart and tutorial
+An interactive scatter chart shows the relationship between two variables by displaying a series of XY coordinates. Readers can float their cursor over points to view specific details. The chart below, which illustrates the strong relationship between Connecticut school district income and test scores, was created with the free downloadable tool for Mac and Windows, Tableau Public http://public.tableau.com
 
-A scatter chart shows the relationship between two variables by displaying a series of XY coordinate points. For example, if you want to view the relationship between a school district's test scores and its student poverty levels, place both of these variables inside an XY scatter chart, as shown below. With an online interactive version, viewers can explore the data and float over or click any point to see its label. Try this sample:
+## Try it
 
-<script type='text/javascript' src='https://public.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 981px; height: 741px;'><noscript><a href='http:&#47;&#47;www.datavizforall.org&#47;chart&#47;scatter-chart-tableau&#47;index.html'><img alt='Sheet 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataVizForAll-scatter-chart&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='981' height='741' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='DataVizForAll-scatter-chart&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataVizForAll-scatter-chart&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='showVizHome' value='no' /><param name='showTabs' value='y' /><param name='bootstrapWhenNotified' value='true' /></object></div>
+<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"></iframe>
 
-## Prepare your XY data
-For a simple XY scatter chart, create a spreadsheet that contains three columns: data labels, variable 1, and variable 2. For example, to compare how Connecticut school districts vary by student poverty and test scores, this 3-column spreadsheet was created from two different tables in the [Connecticut Open Data repository, Education section](https://data.ct.gov/Education). [Download the sample data](CT-Districts-StudentPoverty-TestScore-2012-13.csv) in CSV format, which opens in any spreadsheet tool.
+## Video with step-by-step tutorial
 
-![](TableauPublic-prepare-data.png)
+{%youtube%}70RKjT91cjs{%endyoutube%}
 
-Learn how to join two different tables that share a similar column, with the VLookup spreadsheet tutorial in this book, **to do**
+1. Read the [Tableau Public tool review](../tableau-public) in this book, then download and install the free application on a Mac or Windows computer from http://public.tableau.com. Requires a free account.
 
-## The Tableau Public tool
-Several tools can create scatter charts, but Tableau Public offers a relatively quick way to produce a highly interactive version that can easily be embedded on your site, with links to the data source.
+2. Right-click this link to Save this Excel file to your computer: [ct-districts-income-grades-2009-13](ct-districts-income-grades-2009-13.xlsx).
 
-Download and install Tableau Public (https://public.tableau.com/), currently available for Mac or Windows. The free Tableau Public app requires your data to become public, as the name suggests, and is designed for academics, journalists, and non-profit organizations that wish to publish data visualizations on the open web. If you wish to keep your visualizations and the underlying data private, the company sells a similar app called Tableau Desktop. (This tutorial displays screens from version 9.2 for Mac.)
+3. Open the file with any spreadsheet tool to view three columns: district, median household income, and grade levels (above/below national average for 6th grade Math and English test scores). See also the source notes tab, which explains how this data is based on the work of Sean Reardon et al. at the [Stanford Education Data Archive](http://purl.stanford.edu/db586ns4974), Motoko Rich et al. at [The New York Times](http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html), Andrew Ba Tran at [TrendCT](http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/), and the American Community Survey 2009-13 via [Social Explorer](http://socialexplorer.com).
 
-Start up Tableau Public. Click connect to link to the data you prepared above, in an Excel spreadsheet, a generic text file (CSV, comma separated values), or a statistical file (for applications such as SAS, SPSS, and R.)
+Hint: To prepare your own scatter chart data from different sources, see the [Match Spreadsheet Columns with VLookup Function](../../spreadsheet/vlookup) chapter in this book.
 
-![](TableauPublic-connect.png)
+4. Connect to your data file (in this case, to the Excel file your downloaded above).
 
-Tableau Public opens a new workbook and shows the data source tab, to confirm that your spreadsheet has been uploaded correctly. To create your visualization, go to the worksheet by clicking "Sheet 1" in the bottom-left corner.
+5. Drag the Data sheet into the Data Source field.
 
-![](TableauPublic-data-source-go-to-worksheet.png)
+6. In bottom-left corner, click Sheet 1 (you may see a Go To Worksheet reminder). Although the Tableau Public worksheet may feel overwhelming at first, the key is learning where to drag items from the data tab into the main worksheet.
 
-At first glance, the Tableau Public worksheet can feel overwhelming. Don't let it scare you. We're going to do an easy one, together. On the left side, see the three columns of data. Tableau Public has automatically identified our first column (CT School District) as a "Dimension," and our second and third columns (test score and student poverty data) as "Measures."
+7. Drag the Grade Levels measure into the Rows field.
 
-![](TableauPublic-worksheet.png)
+8. Drag the Median Household Income measure into the Columns field. The initial chart will appear as one point, but that's because all of the data is aggregated together. We're not done yet.
 
-The key to Tableau Public is learning where to drag items from the data tab into the main worksheet.
+9. Drag the District dimension into the lower portion of the Marks area. Now your scatter chart will appear, and float your cursor over each point to view details.
 
-Drag one measure (such as student poverty) into the Columns field, where it will turn green. Drag the other measure (test scores) into the Rows field, where it also will turn green. The initial chart will appear as one dot, with all of your data clumped together, but don't worry. We're not done yet.
+10. Click Sheet 1 to rename the title of your chart.
 
-![](TableauPublic-drag-each-measure.png)
+11. Click the Worksheet menu to Show Caption and type in data sources.
 
-Drag the dimension (school districts) into the bottom of the Marks tab. Your scatter chart will appear. Float over each point to reveal its label and underlying data.
+12. Recommended: Click the Standard menu (above Columns) to change view to Fit Width.
 
-![](TableauPublic-drag-dimension.png)
+![Screenshot](tableau-standard-fit-width.png)
 
-To reinforce the concept, here's a short animated loop of the two dragging steps above.
+13. To share your chart to the web, select File > Save to Tableau Public As. Requires signup for a free Tableau account.  
 
-![](TableauPublic-scatter-chart-640.gif)
+14. Click Edit Details. Give your workbook a meaningful title, since this name will appear in the URL for your published work on the Tableau Public server.
 
-## Sharing your Tableau Public on the web
+15. In the toolbar settings, see the checkbox to Allow workbook and its data to be downloaded by others.
 
-Go to File > Save to Tableau Public As. The next step requires signing up for a free Tableau account and profile.
+![Screenshot: Toolbar settings in Tableau Public](tableau-toolbar-settings-allow.png)
 
-![](TableauPublic-save-as.png)
+Checking this box enables the Download button at the bottom of your published work, which allows users to access your data and workbook, to see how you constructed the visualization.
 
-Save your Tableau Public workbook, and give it a meaningful name. Your interactive chart and underlying data will be published on the Tableau server and become publicly available.
+![Screenshot: Download button in Tableau Public](tableau-download.png)
 
-After your workbook is saved on the server, Tableau Public should automatically open it in your default web browser. But if no workbook appears, look in your Tableau Public profile, which follows this format: https://public.tableau.com/profile/USERNAME
+15. Click the Save button to publish your work on the public web (and that's why they call it Tableau Public).
 
-Click the Edit Details button to modify the title or add a brief description. Click the Share button to copy the embed code. Learn how to embed the interactive chart in your own website, in the [Embed section of this book](../../embed/).
+16. After saving your chart to the web, Tableau Public will automatically open the link in your default web browser. Or, see your public works in your Tableau Public online profile, which follows this format:
+```
+https://public.tableau.com/profile/USERNAME
+```
 
-![](TableauPublic-edit-embed.png)
+##Learn more
+- Insert your interactive chart in your own website in the [Embed On Your Web](../../embed/) chapter of this book, and in particular, [Embed Tableau Public on your Website](../../embed/tableau).
+- Combine multiple visualizations and tell stories with Tableau Public dashboard and story point features
+- See Tableau Public Resources, with how-to videos and sample data, https://public.tableau.com/en-us/s/resources
 
 {% footer %}
 {% endfooter %}

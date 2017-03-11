@@ -1,5 +1,5 @@
 # Leaflet Maps with Google Sheets
-*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 3, 2017*
+*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 11, 2017*
 
 ** This tool and tutorial are still in-progress **
 
@@ -31,9 +31,11 @@ Creating your own version requires four key steps, explained in more detail belo
 
 ### A) Fork (copy) the code template and publish your version with GitHub Pages
 
+Before you begin, you will need a free GitHub account: http://github.com
+
 1) Right-click to open the Leaflet Maps with Google Sheets code template in a new tab: https://github.com/JackDougherty/leaflet-maps-with-google-sheets
 
-2) Sign in to your free GitHub account
+2) In the upper-right corner, sign in to your GitHub account
 
 3) In the upper-right corner, click Fork to copy the repository (repo) into your own account. Important: You can only fork a repository **one time**. To make a second copy, see instructions below **to come**.
 

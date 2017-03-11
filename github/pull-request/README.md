@@ -1,12 +1,9 @@
-# Pull Requests and Merge Changes with GitHub
+# Pull Request to Merge Changes on GitHub
 *By [Jack Dougherty](../../introduction/who.md), last updated March 5, 2016*
 
 ** TO DO **
-- REWRITE this out-of-date page to focus solely on more advanced aspects of GitHub in the browser
-  - branches
-  - pull requests
-  - merge changes
-  
+- REWRITE this out-of-date page to focus solely on pull requests, branches, and merge changes
+
 
 Sign up for a [free GitHub account](http://github.com), a free multi-purpose tool that allows you to:
 - View and fork a copy of open-source code from other users

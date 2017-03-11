@@ -1,4 +1,4 @@
-# Browser Developer Tools
+# Find Errors with Browser Developer Tools
 
 **TO DO**
 - improve this page

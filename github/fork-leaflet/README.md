@@ -1,34 +1,22 @@
-# Fork, Host, and Edit a Simple Leaflet Point Map Template with GitHub
-*By [Jack Dougherty](../../introduction/who.md), last updated March 5, 2017*
+# Fork and Host a Simple Leaflet Map with GitHub
+*By [Jack Dougherty](../../introduction/who.md), last updated March 11, 2017*
 
-This tutorial shows how to fork (copy), host, and edit a very simple point map, created with the open-source Leaflet code library (http://leafletjs.com), using GitHub (http://github.com) in your browser.
-
-This basic tutorial teaches only the first steps of hosting and editing code templates. The goal is to help you move beyond the limitations of drag-and-drop web mapping services (such as BatchGeo and Google MyMaps), to create more customized maps on a web server that you control. To learn more, see additional [Leaflet Map Templates](../leaflet) in this book.
-
-## Tool Review
-Leaflet (http://leafletjs.com) is an open-source code library for users to create interactive maps. See tool review in the [Leaflet chapter](../leaflet) in this book.
-
-GitHub (http://github.com) is a versatile tool to share, edit, and host simple code templates on the public web. Requires a free account. See also in this book the [introductory GitHub chapter](../github) and the earlier book chapter on [Creating Simple Web Pages with GitHub Pages](../embed/github-pages).
-- Pros:
-  - Free and easy-to-learn tool to share, edit, and host simple code templates.
-  - All steps below can be completed in your web browser.
-  - Easy to download and migrate open-source code to a different web server.
-- Cons:
-  - All work on GitHub is public by default. Private repositories (folders) require payment.
-  - New users sometimes confuse the links for code repositories versus published web pages.
+This tutorial demonstrates **basic steps** of working with code templates. It shows how to fork (copy), host, and edit a very simple point map created with Leaflet open-source code (http://leafletjs.com), using GitHub (http://github.com) in your browser. Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as BatchGeo and Google MyMaps) and create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](../github). For more advanced examples, see the [Leaflet Map Templates](../leaflet) chapter in this book.
 
 ## Try it
-You will copy and edit a very simple interactive point map like the one below:
+In this introduction to code templates, you will learn how to copy and edit this **very simple** point map with a popup marker:
 <iframe src="https://jackdougherty.github.io/leaflet-map-simple/" width="90%" height=400></iframe>
 
 ## Video with step-by-step tutorial
 {%youtube%}LT3wU4XAzWI{%endyoutube%}
 
+Before you begin, you will need a free GitHub account: http://github.com
+
 1) Right-click to open this GitHub code template in a new tab: https://github.com/JackDougherty/leaflet-map-simple
 
-2) Sign in to your free GitHub account
+2) In the upper-right corner of the code template, sign in to your free GitHub account
 
-3) In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your own account. Important: You can only fork a GitHub repo **one time**. To make a second copy, see chapter **TO DO**
+3) In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your GitHub account. Important: You can only fork a GitHub repo **one time**. To make a second copy, see chapter **TO DO**
 
 4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes the code to a public website that you control.
 

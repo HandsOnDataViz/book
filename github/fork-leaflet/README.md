@@ -1,26 +1,45 @@
-# Fork and Host a Simple Leaflet Map with GitHub
-*By [Jack Dougherty](../../introduction/who.md), last updated March 11, 2017*
+# Fork and Edit a Simple Leaflet Map with GitHub
+*By [Jack Dougherty](../../introduction/who.md), last updated March 12, 2017*
 
-This tutorial demonstrates **basic steps** of working with code templates. It shows how to fork (copy), host, and edit a very simple point map created with Leaflet open-source code (http://leafletjs.com), using GitHub (http://github.com) in your browser. Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as BatchGeo and Google MyMaps) and create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](../github). For more advanced examples, see the [Leaflet Map Templates](../leaflet) chapter in this book.
+This tutorial introduces the **basic steps** of working with code templates, using a simple Leaflet map code (http://leafletjs.com) and GitHub in your browser (http://github.com). You will learn how to:
+- Fork (or copy) the Leaflet map code template to your GitHub account
+- Publish your live map to the public web with the GitHub Pages feature
+- Modify the map title, basemap tiles, and upload new data points
+
+Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as BatchGeo and Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](../github). For more advanced examples, see the [Leaflet Map Templates](../leaflet) chapter in this book.
 
 ## Try it
-In this introduction to code templates, you will learn how to copy and edit this **very simple** point map with a popup marker:
-<iframe src="https://jackdougherty.github.io/leaflet-map-simple/" width="90%" height=400></iframe>
+You will begin this tutorial with a simple interactive map that includes one pop-up point:
+<iframe src="https://jackdougherty.github.io/leaflet-map-simple/" width="90%" height=350></iframe>
+
+By the end of this tutorial, you will learn how to modify the map and add a new CSV spreadsheet of pop-up points:
+<iframe src="https://jackdougherty.github.io/leaflet-map-simple-instructor-sample/" width="90%" height=350></iframe>
 
 ## Video with step-by-step tutorial
+
+** TO DO - update video and expand tutorial steps **
+
 {%youtube%}LT3wU4XAzWI{%endyoutube%}
 
-Before you begin, you will need a free GitHub account: http://github.com
+Before you begin, sign up for a free GitHub account: http://github.com
 
 1) Right-click to open this GitHub code template in a new tab: https://github.com/JackDougherty/leaflet-map-simple
 
 2) In the upper-right corner of the code template, sign in to your free GitHub account
 
-3) In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your GitHub account. Important: You can only fork a GitHub repo **one time**. To make a second copy, see chapter **TO DO**
+3) In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your GitHub account. The web address (URL) of the new copy in your account will follow this format:
+```
+https://github.com/USERNAME/REPOSITORY
+```
 
-4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes the code to a public website that you control.
+Reminder: You can only fork a GitHub repo **one time**. If needed, see how to [Make a Second Copy of a GitHub Repo](../second-copy) in this book.
 
-5) Scroll down to GitHub Pages section again, to select and copy the link to your published web site.
+4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code template to a live map on a public website that you control.
+
+5) Scroll down to GitHub Pages section again, to select and copy the link to your published web site, which will follow this format:
+```
+https://USERNAME.github.io/REPOSITORY
+```
 
 6) Scroll up to the top, and click on your repo name to go back to its main page.
 

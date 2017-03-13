@@ -1,6 +1,6 @@
-# Fork a Highcharts Scatter Chart and Add Data with GitHub
+# Fork and Edit a Highcharts Scatter Chart with GitHub
 
-** TO DO **
+** TO DO  - add video and tutorial steps, with CSV file **
 
 Advantages:
 - more control to customize and host data visualizations on any web server

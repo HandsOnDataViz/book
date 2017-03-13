@@ -4,7 +4,7 @@
 <iframe src="https://jackdougherty.github.io/leaflet-map-simple" width="90%" height=350></iframe>
 
 ## My Highcharts scatter chart
-<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv" width="90%" height=350></iframe>
+<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv" width="90%" height=425></iframe>
 
 ## Evaluate
 1. Leaflet map and title: Did the author embed an interactive Leaflet map with a new title?

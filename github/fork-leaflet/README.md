@@ -1,10 +1,10 @@
 # Fork and Edit a Simple Leaflet Map with GitHub
-*By [Jack Dougherty](../../introduction/who.md), last updated March 12, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 14, 2017*
 
 This tutorial introduces the **basic steps** of working with code templates, using a simple Leaflet map code (http://leafletjs.com) and GitHub in your browser (http://github.com). You will learn how to:
 - Fork (or copy) the Leaflet map code template to your GitHub account
 - Publish your live map to the public web with the GitHub Pages feature
-- Modify the map title, basemap tiles, and upload new data points
+- Modify the map title, basemap tiles, and upload new data points from a CSV spreadsheet
 
 Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as BatchGeo and Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](../github). For more advanced examples, see the [Leaflet Map Templates](../leaflet) chapter in this book.
 
@@ -120,7 +120,8 @@ L.marker([41.55, -72.55]).addTo(map) // EDIT latitude, longitude to re-position 
 ```
 
 ## Learn more
-- See more [advanced Leaflet Map Templates](../leaflet) in this book.
+- See more [advanced Leaflet Map Templates](../leaflet) in this book
+- About Leaflet https://leafletjs.com
 - GitHub Pages features and tutorial, https://pages.github.com
 
 {% footer %}

@@ -1,4 +1,4 @@
-# Efficiently Edit Code with GitHub Desktop and Atom Editor
+# Edit Code More Efficiently with GitHub Desktop and Atom Editor
 
 ** TO DO ** revise this outdated page
 

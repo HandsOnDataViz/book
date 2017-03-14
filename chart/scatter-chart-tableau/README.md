@@ -1,5 +1,5 @@
 # Create an XY Scatter Chart with Tableau Public
-*by [Jack Dougherty](../../introduction/who.md), last updated March 10, 2017*
+*by [Jack Dougherty](../../introduction/who.md), last updated March 14, 2017*
 
 An interactive scatter chart shows the relationship between two variables by displaying a series of XY coordinates. Readers can float their cursor over points to view specific details. The chart below, which illustrates the strong relationship between Connecticut school district income and test scores, was created with the free downloadable tool for Mac and Windows, Tableau Public http://public.tableau.com
 

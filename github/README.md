@@ -21,7 +21,7 @@ GitHub (http://github.com) is a versatile tool to share, edit, and host simple c
 In this chapter, you will learn how to:
 - [Fork and edit a simple Leaflet map with GitHub](fork-leaflet)
 - [Fork and edit a Highcharts scatter chart with GitHub](fork-highcharts)
-- [Create a repository and upload code in GitHub](create-repo)
+- [Create a new repository and upload code with GitHub](create-repo)
 - [Choose an open-source code license](license)
 - [Pull request to merge changes on GitHub](pull-request)
 - [Edit code more efficiently with GitHub Desktop and Atom](desktop-atom)

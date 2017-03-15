@@ -1,5 +1,5 @@
 # Structure, Plugins, and Syntax
-*last updated by Jack Dougherty on February 14, 2017*
+*last updated by Jack Dougherty on March 15, 2017*
 
 <!-- toc -->
 
@@ -53,13 +53,17 @@ Example 3: pathname points to folder, up two levels, and a specific .md file nam
 [Help us improve this book](../../gitbook/improve.md)
 ```
 
-Example 4: For internal links to downloadable sample files, upload them into the GitBook and insert a link. The text inside brackets CANNOT include a file suffix (.csv).
+Example 4 *in theory*: For internal links to downloadable sample files, upload them into the GitBook and insert a link. The text inside brackets CANNOT include a file suffix (.csv).
 
 ```
-Right-click and Save As this link:[sample students](sample.csv) to download a CSV file to your computer
+Right-click and Save this link [sample](sample.csv) to download a CSV file to your computer
 ```
 
-*In my experience*, avoid inserting file suffixes (example: .csv) into the viewable main text above.
+Example 4 *in practice*: In GitBook Slack thread 15 March 2017, @nagim states known problem using Gitbook 3.2.2, if you put a link to a file that is not a Markdown/AsciiDoc file (for example, .txt files), and is part of the repository (stored at the same folder structure as the essay), the links do not work, probably due to an issue in the theme, which he will post. In the meantime, use this workaround:
+
+```
+Right-click and Save this link [https://www.datavizforall.org/chart/scatter-chart-tableau/ct-districts-income-grades-2009-13.xlsx](sample.xlsx) to download an Excel file to your computer
+```
 
 ### Embed images in GitBook Markdown
 Upload images into the chapter folder, and insert the reference in this format:

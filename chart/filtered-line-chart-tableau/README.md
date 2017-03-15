@@ -14,7 +14,11 @@ Or right-click the [link to view full-size in a new tab](https://public.tableau.
 
 1) Read the [Tableau Public tool review](../tableau-public) in this book, then download and install the free application on a Mac or Windows computer from http://public.tableau.com. Requires a free account.
 
-2) Right-click this link to Save this CSV file to your computer: [sample-line-chart](sample-line-chart.csv).
+2a) Right-click this link to Save this CSV file to your computer: [https://www.datavizforall.org/chart/filtered-line-chart-tableau/sample-filtered-line-chart.csv](sample-filtered-line-chart.csv).
+
+OR
+
+2b) Right-click this link to [sample-filtered-line-chart in Google Sheets](https://docs.google.com/spreadsheets/d/1bKcBPjOmF87wGtPvGK1lI-3Do_yXtGwpLCTSpqgObzU), and either File > Make a Copy to your Google Drive, or File > Download As to your computer.
 
 Hint: When preparing your own spreadsheet, format your data so that Tableau Public can read it. For example, make sure that Year data is entered as "2007" instead of "1/1/2007". Leave all blank spaces as-is so that Tableau automatically converts them to "null" values during the data import.
 

@@ -14,7 +14,7 @@ Or right-click the [link to view full-size in a new tab](https://public.tableau.
 
 1) Read the [Tableau Public tool review](../tableau-public) in this book, then download and install the free application on a Mac or Windows computer from http://public.tableau.com. Requires a free account.
 
-2a) Right-click this link to Save this CSV file to your computer: [https://www.datavizforall.org/chart/filtered-line-chart-tableau/sample-filtered-line-chart.csv](sample-filtered-line-chart.csv).
+2a) Right-click and Save to download this sample file to your computer: [sample-filtered-line-chart in CSV format](https://www.datavizforall.org/chart/filtered-line-chart-tableau/sample-filtered-line-chart.csv)
 
 OR
 

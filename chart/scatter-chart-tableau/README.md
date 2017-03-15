@@ -21,31 +21,33 @@ An interactive scatter chart shows the relationship between two variables by dis
 
 Hint: To prepare your own scatter chart data from different sources, see the [Match Spreadsheet Columns with VLookup Function](../../spreadsheet/vlookup) chapter in this book.
 
-4) Connect to your data file. If you downloaded the Excel file, Connect to Excel. Or if you downloaded the CSV file, Connect to Text.
+4) In Tableau Public, click Connect to import the data file from your computer. If you downloaded the Excel file, Connect to Excel. Or if you downloaded the CSV file, Connect to Text. See also "More..." to connect to Google Sheets.
 
 5) Drag the Data sheet into the Data Source field.
 
-6) In bottom-left corner, click Sheet 1 (you may see a Go To Worksheet reminder). Although the Tableau Public worksheet may feel overwhelming at first, the key is learning where to drag items from the data tab into the main worksheet.
+6) In bottom-left corner, below the "Go to Worksheet" reminder, click Sheet 1.
 
-7) Drag the Grade Levels measure into the Rows field.
+7) Welcome to the Tableau Public Worksheet. Although it may feel overwhelming at first, the key is learning where to drag items from the data tab into the main worksheet. Dimensions are any information that is qualitative or categorical, while measures are quantitative information about the dimensions.
 
-8) Drag the Median Household Income measure into the Columns field. The initial chart will appear as one point, but that's because all of the data is aggregated together. We're not done yet.
+8) Drag the Grade Levels measure into the Rows field.
 
-9) Drag the District dimension into the lower portion of the Marks area. Now your scatter chart will appear, and float your cursor over each point to view details.
+9) Drag the Median Household Income measure into the Columns field. The initial chart will appear as one point, but that's because all of the data is aggregated together. We're not done yet.
 
-10) Click Sheet 1 to rename the title of your chart.
+10) Drag the District dimension into the lower portion of the Marks area. Now your scatter chart will appear, and float your cursor over each point to view details.
 
-11) Click the Worksheet menu to Show Caption and type in data sources.
+11) Click Sheet 1 to rename the title of your chart.
 
-12) Recommended: Click the Standard menu (above Columns) to change view to Fit Width.
+12) Click the Worksheet menu to Show Caption and type in data sources.
+
+13) Recommended: Click the Standard menu (above Columns) to change view to Fit Width.
 
 ![](tableau-standard-fit-width.png)
 
-13) To share your chart to the web, select File > Save to Tableau Public As. Requires signup for a free Tableau account.  
+14) To publish your chart on the public web, select File > Save to Tableau Public As. Requires signup for a free Tableau account.  
 
-14) Click Edit Details. Give your workbook a meaningful title, since this name will appear in the URL for your published work on the Tableau Public server.
+15) Give your workbook a meaningful title, since this name will appear in the URL for your published work on the Tableau Public server, and press Save.
 
-15) In the toolbar settings, see the checkbox to Allow workbook and its data to be downloaded by others.
+16) After publishing your work on the web, Tableau Public will automatically open the web link in your default browser. Click Edit Details to enter more information. Under Toolbar settings, see checkbox to Allow your workbook and its data to be downloaded by others.
 
 ![Screenshot: Toolbar settings in Tableau Public](tableau-toolbar-settings-allow.png)
 
@@ -53,17 +55,15 @@ Checking this box enables the Download button at the bottom of your published wo
 
 ![Screenshot: Download button in Tableau Public](tableau-download.png)
 
-16) Click the Save button to publish your work on the public web (and that's why they call it Tableau Public).
+17) To insert your Tableau Public visualization in your own website, see the [Embed On Your Web](../../embed/) chapter of this book, and in particular, [Embed Tableau Public on your Website](../../embed/tableau).
 
-17) After saving your chart to the web, Tableau Public will automatically open the link in your default web browser. Or, see your public works in your Tableau Public online profile, which follows this format:
+18) To see all of your published visualizations, go to your Tableau Public online profile, which follows this format:
 ```
 https://public.tableau.com/profile/USERNAME
 ```
 
 ## Learn more
-- Insert your interactive chart in your own website in the [Embed On Your Web](../../embed/) chapter of this book, and in particular, [Embed Tableau Public on your Website](../../embed/tableau).
-- Combine multiple visualizations and tell stories with Tableau Public dashboard and story point features
-- See Tableau Public Resources, with how-to videos and sample data, https://public.tableau.com/en-us/s/resources
+- Combine multiple visualizations and tell stories with Tableau Public dashboard and story point features. See Tableau Public Resources, with how-to videos and sample data, https://public.tableau.com/en-us/s/resources
 
 {% footer %}
 {% endfooter %}

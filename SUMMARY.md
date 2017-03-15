@@ -49,6 +49,7 @@
 * [Embed On Your Web](embed/README.md)
    * [Simple Web with GitHub Pages](embed/github-pages/README.md)
    * [Copy iframe from Google Sheets](embed/iframe-google-sheets/README.md)
+   * [Convert a Link into iFrame](embed/link-to-iframe/README.md)
    * [Embed iFrame in GitHub Pages](embed/iframe-github/README.md)
    * [Embed iFrame in WordPress](embed/iframe-wordpress/README.md)
    * [Embed with Tableau Public](embed/tableau/README.md)

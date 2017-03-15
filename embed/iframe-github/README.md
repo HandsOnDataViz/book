@@ -7,7 +7,7 @@ Here's the full three-step answer that combines lessons from the [Embed on the W
 
 1) First, create a web page that supports iFrame embed codes. If you don't know what that means or don't yet have a personal website, go back to the previous tutorial, [Create a Simple Web Page with GitHub Pages](../github-pages), or see the video and step-by-step instructions below.
 
-2) Second, copy the iframe code from your data visualization. Go back to the previous tutorial, [Copy an iframe code from a Google Sheets interactive chart](../iframe-google-sheets), or see the video and step-by-step instructions below.
+2) Second, copy or create an iframe code from your data visualization. Go back to the previous tutorial, [Copy an iframe code from a Google Sheets interactive chart](../iframe-google-sheets), or see the video and step-by-step instructions below.
 
 3) Third, embed (or paste) the iframe code into your website. The video and instructions below show how to paste an iframe from a Google Sheets interactive chart into a simple web page with GitHub Pages.
 

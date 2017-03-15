@@ -5,6 +5,7 @@ An interactive filtered line chart provides checkboxes to turn on/off selected d
 
 ## Try it
 <iframe src='https://public.tableau.com/views/LineChartSample/Sheet1?:showVizHome=no&:embed=true' width="90%" height="530"></iframe>
+
 Or right-click the [link to view full-size in a new tab](https://public.tableau.com/views/LineChartSample/Sheet1?:embed=y&:display_count=yes)
 
 ## Video with step-by-step tutorial

@@ -1,26 +1,32 @@
 # Group Data with Pivot Tables
-*By [Jack Dougherty](../../introduction/who.md), last updated February 14, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 15, 2017*
 
 Here's a common problem: You open a large spreadsheet with many rows of data, such as a list of students. Your goal is to count students by categories, such as the number of students by each year of birth.  What's the most efficient way to do this?
 
 ![Screenshot: Long spreadsheet of student data](spreadsheet-pivot-intro.png)
 
-Answer: Create a pivot table to aggregate (or group together) and summarize data in another spreadsheet tab.
+A solution: Create a pivot table to aggregate (or group together) and summarize data in another spreadsheet tab.
 
 ![Screenshot: Pivot table of count by year of birth](spreadsheet-google-pivot-year.png)
 
 While pivot tables may look different across spreadsheet tools, the concept is the same.
 
-## Simple Pivot Table with Google Sheets: Tutorial with Video
-1. Right-click and Save As this link: [sample-students](sample-students.csv) to download the sample data in a generic CSV spreadsheet format to your computer.
-2. Sign into [Google Drive](http://drive.google.com) (requires free account) and drag-and-drop the sample CSV file to instantly upload. Before you do this, make sure your Settings (gear symbol) is set to Convert Uploads to Google Docs editor format (the default setting).
-3. Shift-click to select all columns that you wish to pivot.
-4. Select Data > Pivot Table..., which opens a new spreadsheet tab.
-5. In Report Editor, select Rows > Add Field > Year to list all entries in order.
-6. In Report Editor, select Values > Add Field > Year to summarize all values for each entry.
-7. Change Summarize by SUM to Summarize by COUNTA (to count alphabetical or numerical entries), or COUNT (to count only numeric values).
-
+## Video with step-by-step tutorial for Google Sheets
 {%youtube%}3sK7-g0otGM{%endyoutube%}
+
+1) Right-click and Save this link [sample-students](sample-students.csv) to download the sample data in a generic CSV spreadsheet format to your computer.
+
+2) Sign into [Google Drive](http://drive.google.com) (requires free account) and drag-and-drop the sample CSV file to instantly upload. Before you do this, make sure your Settings (gear symbol) is set to Convert Uploads to Google Docs editor format (the default setting).
+
+3) Shift-click to select all columns that you wish to pivot.
+
+4) Select Data > Pivot Table..., which opens a new spreadsheet tab.
+
+5) In Report Editor, select Rows > Add Field > Year to list all entries in order.
+
+6) In Report Editor, select Values > Add Field > Year to summarize all values for each entry.
+
+7) Change Summarize by SUM to Summarize by COUNTA (to count alphabetical or numerical entries), or COUNT (to count only numeric values).
 
 ## More Advanced Pivot Table with Google Sheets
 

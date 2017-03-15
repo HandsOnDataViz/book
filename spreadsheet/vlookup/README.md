@@ -1,50 +1,31 @@
-# Match Spreadsheet Columns with VLOOKUP Function
-*By [Jack Dougherty](../../introduction/who.md), last updated March 2, 2017*
+# Match Columns with VLOOKUP Function
+*By [Jack Dougherty](../../introduction/who.md), last updated March 15, 2017*
 
-Here's a common problem: One spreadsheet, such as the class roster for DataViz For All, contains a column with a two-letter code for the nation of each student. A second spreadsheet contains a complete list of codes and full names for all nations. What's the best way to merge all of this information into one sheet, so each student row contains the full name of their nation?
+Here's a common problem: Sheet 1 contains a long roster of students enrolled in our *Data Visualization For All* course, with a two-letter code for their nation. Sheet 2 contains the list of codes for each nation. How can we quickly match up this information in one sheet, so that each row contains the nation for each student?
 
-![Screenshot: Problem - how to match columns in two tables?](vlookup-problem.png)
+![Screenshot: Problem - How to match columns in two sheets?](vlookup-problem.png)
 
-The solution: Instead of manually copying and pasting data, most spreadsheet tools contain a VLookup function, which "looks up" data across two or more vertical columns, and automatically fills in matching entries.
+One solution: Spreadsheets contain a VLOOKUP function, which "looks up" data across two or more vertical columns, and automatically fills in matching entries. This tutorial demonstrates how to set up this calculation in Google Sheets and Excel
 
-![Screenshot: Solution - use the VLookup function](vlookup-solution.png)
+![Screenshot: Solution - Use the VLookup function](vlookup-solution.png)
 
+## Video with step-by-step tutorial for Google Sheets
+{%youtube%}qrzKzts3mV0{%endyoutube%}
 
-**TO DO**
-- redo the conceptual visual with a better example, maybe towns or school districts?
-- add Google Sheets visuals
-- upload sample tables for readers to follow along
-- see other notes inserted below
+1) Right-click and Save this link [sample-students-nations](sample-students-nations.ods) to download the sample data in OpenDocument System (.ods) format to your computer. For Google Sheets, see the [Upload Files and Convert tutorial](../upload) in this book. Or, open the file with Microsoft Excel or LibreOffice, and the directions below will be similar.
 
-Here's a common problem: Your first spreadsheet contains a long list of towns by population. Your second spreadsheet contains a long list of towns by income. What's the most efficient way to merge all of these columns into one sheet?
-- You could copy and paste each cell, but that would take forever
-- You could sort each sheet alphabetically by town, then copy and paste an entire column, but that only works if each sheet contains the exact same list of towns
-- You could use the VLookup function, which "looks up" data in two vertical columns and automatically fills those that match
+2) In the students sheet, type "nation" as a column header into cell E1.
 
+3) Click in cell E2, start typing "=VLOOKUP" and the spreadsheet tool will suggest that you complete the formula in this format:
+```
+VLOOKUP(search_key, range, index, [is_sorted])
+```
+  - search_key = the Sheet 1 cell we are trying to match
+  - range = the columns in Sheet 2 where matches may exist
+  - index = the column in the Sheet 2 range that contains the desired result, where 1 = first column, 2 = second column, etc.
+  - [is_sorted] = if the first column of the range is sorted, enter "true" to find the closest match; otherwise enter "false" to return exact matches only
 
-In Excel, the VLOOKUP formula looks complex at first, so let's break it down into steps.
-
-![](excel-vlookup-start.png)
-
-1. In the target column of table 1, type: =VLOOKUP
-
-2. Excel recognizes the start of the VLOOKUP formula, and asks you to fill in required values, separated by commas:
-  - lookup_value: the shared column in table 1 (in this example, click cell A2)
-  - table_array: the relevant columns in table 2 (click on table 2 columns A and B, and Excel will automatically fill in the long reference code to them)
-  - col_index_num: the column from table 2 that you wish to pull into table 1 (in this example, type 2, since you want data from the second column)
-  - [range_lookup]: type "FALSE", to instruct Excel to enter "#NA" if no match is found
-
-3. After filling in the formula, press the Return key. The matched value from table 2 should appear in table 1.
-
-4. Drag the formula down to fill in the column. Inspect your results. In this example, since Broccoli did not appear in table 2, its match is #NA (not applicable) in table 1.
-
-5. To transform your new column from a formula to data, select all, copy, and paste special > values only.
-
-![](vlookup-640.gif)
-
-*TO DO*
-- explain limitations of VLOOKUP
-- see also related tools: INDEX (?)
+4. You can type in the formula, or fill it out by clicking on cells, columns, and sheets as shown in the video above.
 
 {% footer %}
 {% endfooter %}

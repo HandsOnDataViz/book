@@ -11,7 +11,7 @@ Second, you need to copy or create an iframe code from your chart or map. An ifr
 ```
 No coding skills are necessary. See these easy-to-follow examples:
 -[Copy iframe from a Google Sheets chart](iframe-google-sheets/)
--[Convert a weblink into an iframe](link-to-iframe)
+-[Convert a link into an iframe](link-to-iframe)
 
 Finally, you need to paste (or embed) the iframe code inside your website. Like a picture frame, an iframe allows you to display one web page (your data visualization) inside another web page (your personal website). But unlike a picture frame, where the image is static, an iframe makes content interactive, so visitors can explore the chart or map on your site, even though it may actually be hosted on an entirely different website. Go to this third tutorial, which combines the two steps above, called [Embed iFrame in GitHub Pages](iframe-github).
 

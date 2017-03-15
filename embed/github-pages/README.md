@@ -1,11 +1,11 @@
 # Create a Simple Web Page with GitHub Pages
-*by [Jack Dougherty](../introduction/who.md), last updated March 5, 2017*
+*by [Jack Dougherty](../introduction/who.md), last updated March 15, 2017*
 
 Question: After you create an interactive chart or map, how do you embed the live version in a website that you control?
 
 The full answer requires three steps:
 - 1) Create a web page that supports iframe codes
-- 2) Copy the iframe code from your visualization
+- 2) Copy or create an iframe code from your visualization
 - 3) Embed (or paste) the iframe code into your web page
 
 This tutorial focuses on the **first step**. If you don't already have your own website, or if you are not sure whether your site supports iframe codes, then follow the steps below. We will create a simple web page with a free and friendly tool called GitHub (http://github.com), and host it on the public web with the built-in GitHub Pages feature. For **steps 2 and 3**, see the [Copy iframe from Google Sheets](../iframe-google-sheets) tutorial and the [Embed iFrame in GitHub Pages](../iframe-github/) tutorial in this chapter.
@@ -34,6 +34,8 @@ https://github.com/YOUR-USERNAME/YOUR-REPO-NAME
 ```
 
 5) In your GitHub repo, click on Settings, scroll down to GitHub Pages, select Master branch as your source, then Save. This publishes the code from your repo to the public web.
+
+Hint: Do NOT select Theme Chooser for this exercise. It will create additional files that will interfere with displaying an iframe in your README.md file.
 
 6) When the Settings page refreshes, scroll back down to GitHub Pages to see the new link to your published website, which will appear in this format:
 ```

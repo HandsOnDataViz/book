@@ -11,10 +11,10 @@ Code templates help us to move beyond the limits of drag-and-drop web tools (suc
 
 ## Try it
 You will begin this tutorial with a basic chart template that includes only 7 points
-<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv/" width="90%" height=400></iframe>
+<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv/" width="90%" height=425></iframe>
 
 By the end of this tutorial, you will learn how to modify the chart and add a new CSV spreadsheet with over 160 points:
-<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height=400></iframe>
+<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height=425></iframe>
 
 ## Video with step-by-step tutorial
 

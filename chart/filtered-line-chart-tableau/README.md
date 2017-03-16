@@ -1,5 +1,5 @@
 # Create a Filtered Line Chart with Tableau Public
-*by [Veronica X. Armendariz and Jack Dougherty](../../introduction/who.md), last updated March 15, 2017*
+*by [Veronica X. Armendariz and Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
 
 An interactive filtered line chart provides checkboxes to turn on/off selected data lines to make specific comparisons, since displaying all of the lines at once would be overwhelming. Readers can float their cursor over each line to identify the school name and data details. We created this tutorial to help a Hartford non-profit education advocacy group compare cohorts of student achievement levels over time across forty schools. You can create your own version with a free downloadable tool for Mac and Windows computers, Tableau Public, https://public.tableau.com
 
@@ -14,15 +14,11 @@ Or right-click the [link to view full-size in a new tab](https://public.tableau.
 
 1) Read the [Tableau Public tool review](../tableau-public) in this book, then download and install the free application on a Mac or Windows computer from http://public.tableau.com. Requires a free account.
 
-2a) Right-click and Save to download this sample file to your computer: [sample-filtered-line-chart in CSV format](https://www.datavizforall.org/chart/filtered-line-chart-tableau/sample-filtered-line-chart.csv)
-
-OR
-
-2b) Right-click this link to [sample-filtered-line-chart in Google Sheets](https://docs.google.com/spreadsheets/d/1bKcBPjOmF87wGtPvGK1lI-3Do_yXtGwpLCTSpqgObzU), and either File > Make a Copy to your Google Drive, or File > Download As to your computer.
+2) Click link and Save file to download to your computer: [sample-filtered-line-chart in CSV format](https://www.datavizforall.org/chart/filtered-line-chart-tableau/sample-filtered-line-chart.csv). CSV means comma-separated values, a generic spreadsheet format that most data tools can easily open.
 
 Hint: When preparing your own spreadsheet, format your data so that Tableau Public can read it. For example, make sure that Year data is entered as "2007" instead of "1/1/2007". Leave all blank spaces as-is so that Tableau automatically converts them to "null" values during the data import.
 
-3) In Tableau Public, click Connect to import the data file you downloaded to your computer. If you downloaded a CSV file, Connect to Text. See also "More..." to connect to Google Sheets.
+3) In Tableau Public, click Connect to import the data file you downloaded to your computer. If you downloaded a CSV file, Connect to Text. Or if you downloaded an Excel file, Connect to Excel. Or click "More..." to connect to Google Sheets.
 
 4) Your data sheet should automatically appear in Tableau Public. Any blanks will automatically convert to “null.”
 

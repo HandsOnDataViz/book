@@ -1,5 +1,5 @@
 # Fork and Edit a Simple Leaflet Map with GitHub
-*By [Jack Dougherty](../../introduction/who.md), last updated March 14, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
 
 This tutorial introduces the **basic steps** of working with code templates, using a simple Leaflet map code (http://leafletjs.com) and GitHub in your browser (http://github.com). You will learn how to:
 - A) Fork (copy) Leaflet template to your GitHub account
@@ -148,7 +148,7 @@ But a better way to display several points is to remove the code comment symbols
 
 #### D) Geocode addresses in Google Sheet and upload points from data.csv
 
-18) A better way to display multiple points on your map is to prepare and upload a new data.csv file to your GitHub repository. First, right-click to open this Google Sheets template: [Leaflet Maps Simple data points with Geocoder](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/)
+18) A better way to display multiple points on your map is to prepare and upload a new data.csv file to your GitHub repository. First, right-click to open this Google Sheets template in a new tab: [Leaflet Maps Simple data points with Geocoder](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/)
 
 19) Since this sheet is view-only, you cannot edit it. Instead, sign in to your Google account in the upper-right corner.
 

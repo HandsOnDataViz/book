@@ -1,5 +1,5 @@
 # Simple Point Map with BatchGeo
-*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated February 10, 2017*
+*By [Stacy Lam and Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
 
 ## Try It
 Explore the interactive point map below, or <a href="https://batchgeo.com/map/8bce6809ea555e48acac7d0bbf396c40">view the full-screen version</a>, created with BatchGeo (http://batchgeo.com).
@@ -23,7 +23,7 @@ Explore the interactive point map below, or <a href="https://batchgeo.com/map/8b
 
 Let's build a simple point map with sample data. This tool is so easy that most readers probably will skip over this tutorial.
 
-1) Right-click > Save As this link to [sample address data in CSV format](../sample-address-data.csv), a generic spreadsheet table, and download it to your computer.
+1) Click the link and Save the file to your computer: [sample-address-data in CSV format](https://www.datavizforall.org/map/sample-address-data.csv). CSV means comma-separated-values, a generic spreadsheet format that many tools can easily open.
 
 2) Open BatchGeo in your browser at http://batchgeo.com
 

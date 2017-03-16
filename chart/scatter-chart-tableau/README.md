@@ -1,5 +1,5 @@
 # Create an XY Scatter Chart with Tableau Public
-*by [Jack Dougherty](../../introduction/who.md), last updated March 15, 2017*
+*by [Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
 
 An interactive scatter chart shows the relationship between two variables by displaying a series of XY coordinates. Readers can float their cursor over points to view specific details. The chart below, which illustrates the strong relationship between Connecticut school district income and test scores, was created with the free downloadable tool for Mac and Windows, Tableau Public http://public.tableau.com
 
@@ -13,15 +13,13 @@ An interactive scatter chart shows the relationship between two variables by dis
 
 1) Read the [Tableau Public tool review](../tableau-public) in this book, then download and install the free application on a Mac or Windows computer from http://public.tableau.com. Requires a free account.
 
-2a) Right-click this link to Save this Excel file to your computer: [ct-districts-income-grades-2009-13](ct-districts-income-grades-2009-13.xlsx).
+2) Click the link and Save to download the sample file to your computer: [ct-districts-income-grades-2009-13 in Excel format](https://www.datavizforall.org/chart/scatter-chart-tableau/ct-districts-income-grades-2009-13.xlsx).
 
-2b) Or, if you do not have Excel, Right-click this link to Save this CSV file to your computer: [ct-districts-income-grades-2009-13](ct-districts-income-grades-2009-13.csv), which contains the data sheet, but not the source notes sheet.
-
-3) Open the file with any spreadsheet tool to view three columns: district, median household income, and grade levels (above/below national average for 6th grade Math and English test scores). In the Excel version, see the source notes tab, which explains how this data is based on the work of Sean Reardon et al. at the [Stanford Education Data Archive](http://purl.stanford.edu/db586ns4974), Motoko Rich et al. at [The New York Times](http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html), Andrew Ba Tran at [TrendCT](http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/), and the American Community Survey 2009-13 via [Social Explorer](http://socialexplorer.com).
+3) Open the sample file to view three columns: district, median household income, and grade levels (above/below national average for 6th grade Math and English test scores). The Notes tab explains how this data is based on the work of Sean Reardon et al. at the [Stanford Education Data Archive](http://purl.stanford.edu/db586ns4974), Motoko Rich et al. at [The New York Times](http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html), Andrew Ba Tran at [TrendCT](http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/), and the American Community Survey 2009-13 via [Social Explorer](http://socialexplorer.com).
 
 Hint: To prepare your own scatter chart data from different sources, see the [Match Spreadsheet Columns with VLookup Function](../../spreadsheet/vlookup) chapter in this book.
 
-4) In Tableau Public, click Connect to import the data file from your computer. If you downloaded the Excel file, Connect to Excel. Or if you downloaded the CSV file, Connect to Text. See also "More..." to connect to Google Sheets.
+4) In Tableau Public, click Connect to import the data file from your computer. If you downloaded an Excel file, Connect to Excel. Or if you downloaded a CSV file, Connect to Text. Or click "More..." to connect to Google Sheets.
 
 5) Drag the Data sheet into the Data Source field.
 

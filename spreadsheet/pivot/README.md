@@ -1,5 +1,5 @@
 # Group Data with Pivot Tables
-*By [Jack Dougherty](../../introduction/who.md), last updated March 15, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
 
 Here's a common problem: You open a large spreadsheet with many rows of data, such as a list of students. Your goal is to count students by categories, such as the number of students by each year of birth.  What's the most efficient way to do this?
 
@@ -14,7 +14,7 @@ While pivot tables may look different across spreadsheet tools, the concept is t
 ## Video with step-by-step tutorial for Google Sheets
 {%youtube%}3sK7-g0otGM{%endyoutube%}
 
-1) Right-click and Save this link [sample-students](sample-students.csv) to download the sample data in a generic CSV spreadsheet format to your computer.
+1) Click this link and Save to download to your computer: [sample-students in CSV format](https://www.datavizforall.org/spreadsheet/pivot/sample-students.csv). CSV means comma-separated values, a generic spreadsheet format that most tools can easily open.
 
 2) Sign into [Google Drive](http://drive.google.com) (requires free account) and drag-and-drop the sample CSV file to instantly upload. Before you do this, make sure your Settings (gear symbol) is set to Convert Uploads to Google Docs editor format (the default setting).
 

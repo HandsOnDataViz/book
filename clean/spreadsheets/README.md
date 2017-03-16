@@ -1,5 +1,4 @@
 # Clean Messy Data with Spreadsheet Tools
-
 *By [Jack Dougherty](../../introduction/who.md), last updated April 16, 2016*
 
 **TO DO** reorganize this to feature Google Sheets whenever possible, or Excel Online if needed
@@ -18,7 +17,7 @@ Our goal is to remove the word "town" from each row, to produce a clean spreadsh
 - Ansonia
 - Ashford
 
-Here's one quick solution: In any spreadsheet tool, use the Find and Replace command to remove unwanted characters. To follow this example, [download this sample spreadsheet](find-replace-town-geonames.csv). This tutorial shows screens from Excel, but other tools are very similar.
+Here's one quick solution: In any spreadsheet tool, use the Find and Replace command to remove unwanted characters. Try it! Click this link and Save to download to your computer:[find-replace-town-geonames in CSV format](https://www.datavizforall.org/clean/spreadsheets/find-replace-town-geonames.csv). This tutorial shows screens from Excel, but other tools are very similar.
 
 1. Open the Find and Replace command.
 
@@ -34,7 +33,7 @@ Here's one quick solution: In any spreadsheet tool, use the Find and Replace com
 
 One common problem is when multiple pieces of data appear in one column, and your goal is to split them into separate columns. If those data pieces are separated by commas (or similar punctuation), you might be able to fix this with a simple spreadsheet command: split text into columns.
 
-To follow this example, [download this sample spreadsheet](split-coordinate-pairs.csv), and open with Excel. (**TO DO** test with other spreadsheet tools)
+Try it! Click this link and Save to download to your computer: [split-coordinate-pairs in CSV format](https://www.datavizforall.org/clean/spreadsheets/split-coordinate-pairs.csv), and open with Excel. (**TO DO** test with other spreadsheet tools)
 
 1. Select the data column you wish to split.
 

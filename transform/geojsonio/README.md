@@ -1,6 +1,5 @@
 # Convert and Create Map Data with GeoJson.io
-
-*By [Jack Dougherty](../../introduction/who.md), last updated March 17, 2016*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 17, 2017*
 
 Go to http://geojson.io to explore this open-source web tool to convert, edit, and create GeoJSON map data. The tool was originally developed by Tom MacWright, and is supported by Mapbox.com.
 
@@ -10,9 +9,9 @@ Use any spreadsheet tool and prepare a list of coordinate points (known as featu
 
 ![](name-lat-lon-info.png)
 
-Save your spreadsheet in generic CSV format. *Hint:* see [Save Spreadsheet as CSV chapter](../../transform/csv/index.html) in this book.
+Save your spreadsheet in generic CSV format. *Hint:* see [Save Spreadsheet as CSV chapter](../../spreadsheet/csv) in this book.
 
-Example: download this [sample CSV file](name-lat-lon-info.csv)
+Try it! Click this link and Save to download this sample file to your computer: [name-lat-lon-info in CSV format](https://www.datavizforall.org/transform/geojsonio/name-lat-lon-info.csv). CSV means comma-separated values, a generic spreadsheet format that most data tools can easily open.
 
 Drag the CSV file into the GeoJSON.io map window. Flip between the JSON and Table tabs to view or edit the data.
 

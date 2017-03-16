@@ -49,24 +49,24 @@ https://USERNAME.github.io/REPOSITORY
 
 8) Delete the existing link to the live site, and paste in the link to your site. Scroll down and Commit to save your edits.
 
-9) On your repo main page, right-click on the link to your published site to open in a new tab. **Be patient ** because during busy periods, your website may take up to 1 minute to appear the first time.
+9) On your repo main page, right-click on the link to your published site to open in a new tab. **Be patient** during busy periods, when your website may take up to 1 minute to appear the first time.
 
 #### C) Modify the chart title, subtitle, and axis labels
 10) Go back to your browser tab for your code repo. Click on the index.html file (which contains the chart code), and click the pencil icon to edit it.
 
 11) Explore the chart code, which contains HTML, CSS, and JavaScript. Look for code comments that begin with "EDIT" for sections that you can easily change, such as title, subtitle, x-axis and y-axis labels, and tooltip data labels. Scroll down to Commit your changes.
 
-12) Go to your live website browser tab and refresh the page to view your edits. **Be patient* during busy periods, when some edits may take up to 1 minute to appear.
+12) Go to your live website browser tab and refresh the page to view your edits. **Be patient** during busy periods, when some edits may take up to 1 minute to appear.
 
 #### D) Upload new data points from a .CSV spreadsheet
 
 13) Go to your GitHub code repository tab and click to view the file named: data-scatter.csv
 
-14) GitHub automatically opens CSV files. Although you could edit it here, let's upload a much larger data file with the same name. Click this link to download to your computer: [data-scatter in CSV format](https://www.datavizforall.org/github/fork-highcharts/data-scatter.csv)
+14) GitHub automatically opens CSV files. Although it's possible to edit the file inside GitHub, let's upload a larger data file with the same name. Click this link and Save to download to your computer: [data-scatter in CSV format](https://www.datavizforall.org/github/fork-highcharts/data-scatter.csv).
 
 15) In your GitHub code repo, click Upload Files, and drag the new data-scatter.csv into the folder, and Commit changes to replace the existing file with the same name.
 
-16) In your GitHub repo, click the new data-scatter.csv file to inspect the changes. Then go to your live website tab and refresh to see the updated scatter chart. ** Be patient ** because changes make take up to 1 minute during busy periods.
+16) In your GitHub repo, click the new data-scatter.csv file to inspect the changes. Then go to your live website tab and refresh to see the updated scatter chart. ** Be patient** during busy periods, when changes make take up to 1 minute to appear.
 
 ## Learn more
 - See more [Highcharts Templates](../highcharts) in this book

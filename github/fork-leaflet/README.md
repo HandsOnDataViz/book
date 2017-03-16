@@ -48,7 +48,7 @@ https://USERNAME.github.io/REPOSITORY
 
 8) Delete the existing link to my live site, and paste in the link to your site. Scroll down and Commit to save your edits.
 
-9) On your repo main page, right-click on the link to your published site to open in a new tab. **Be patient ** because during busy periods, your website may take up to 1 minute to appear the first time.
+9) On your repo main page, right-click on the link to your published site to open in a new tab. **Be patient** during busy periods, because your website may take up to 1 minute to appear the first time.
 
 #### C) Modify your map title and add layer controls
 
@@ -56,7 +56,7 @@ https://USERNAME.github.io/REPOSITORY
 
 11) Explore the map code, which contains HTML, CSS, and JavaScript. Look for sections that begin with "EDIT" for items that you can easily change. Scroll down to Commit your changes.
 
-12) Go to your live website browser tab and refresh the page to view your edits. **Be patient* during busy periods, when some edits may take up to 1 minute to appear.
+12) Go to your live website browser tab and refresh the page to view your edits. **Be patient** during busy periods, when some edits may take up to 1 minute to appear.
 
 13) To change your map title in the index.html file, click the pencil symbol (to edit) and go to lines 23-25. Replace "EDIT your map title" with your new title:
 ```HTML

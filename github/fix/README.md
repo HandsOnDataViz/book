@@ -1,5 +1,5 @@
 # Fix Common GitHub and Code Errors
-*By [Jack Dougherty](../../introduction/who.md), last updated March 15, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
 
 What happens if you cannot view your published GitHub repository, or if your code breaks and no longer displays what it was designed to show? These are common problems, especially for newer students, because accidentally clicking the wrong box or mistakenly erasing a single character (such as a semicolon) can make your visualization seem to vanish, even though your work is usually still there. Breaking your code -- and figuring out how to fix it -- is a great way to learn, even if it requires trial and error.
 
@@ -40,10 +40,22 @@ If necessary, you can save files to your computer, delete your online GitHub rep
 
 ## Common code template problems and solutions
 
-**TO DO**
-- insert common problems and solutions related to https://github.com/jackdougherty/leaflet-map-simple
+#### My iFrame does not appear in my web page
+- Go back to the [Embed tutorials in this book](../../embed) to double-check the directions
+-
+- Items listed in your iFrame (such as the URL, width, or height) should be enclosed inside quotes
+  - BROKEN iFrame
+  ```
+  <iframe src="https://jackdougherty.github.io/leaflet-map-simple" width=90% height=350></iframe>
+  ```
+  - FIXED iFrame
+  ```
+  <iframe src="https://jackdougherty.github.io/leaflet-map-simple" width="90%"" height="350"></iframe>
+  ```
 
-Highcharts data sometimes does not update in the web cache. Quit browser and re-open it.
+
+**TO DO**
+- Highcharts data sometimes does not update in the web cache. Quit browser and re-open it.
 
 
 ## Browser developer tools

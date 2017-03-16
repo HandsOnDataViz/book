@@ -62,7 +62,7 @@ https://USERNAME.github.io/REPOSITORY
 
 13) Go to your GitHub code repository tab and click to view the file named: data-scatter.csv
 
-14) GitHub automatically opens CSV files. Although you could edit it here, let's upload a much larger data file with the same name. Click this link to download to your computer: [data-scatter in CSV format](https://www.datavizforall.org/github/highcharts/data-scatter.csv)
+14) GitHub automatically opens CSV files. Although you could edit it here, let's upload a much larger data file with the same name. Click this link to download to your computer: [data-scatter in CSV format](https://www.datavizforall.org/github/fork-highcharts/data-scatter.csv)
 
 15) In your GitHub code repo, click Upload Files, and drag the new data-scatter.csv into the folder, and Commit changes to replace the existing file with the same name.
 

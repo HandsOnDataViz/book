@@ -70,3 +70,6 @@ Best to show the distribution of raw data, with number of values in each bucket.
 - Format data into two columns
   - data labels in the first column
   - numeric values in second column
+
+{% footer %}
+{% endfooter %}

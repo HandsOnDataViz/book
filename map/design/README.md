@@ -1,35 +1,24 @@
 # Map Design Principles
+*by [Jack Dougherty](../../introduction/who.md), last updated March 17, 2017*
 
+** TO DO **
+- rewrite questions to match script, and insert visual examples
+- after questions, expand map principles and refer to related chart principles
+- refer also to the Detect Bias chapters
 
-Questions to Ask Before You Map
+** TO DO**
+- explain the problem: which colors make sense in a polygon (aka choropleth) map?
+- a very useful tool is ColorBrewer,  http://colorbrewer2.org, created by Cynthia Brewer, Mark Harrower and the Pennsylvania State University
+- explain and give examples of these concepts
+  - sequential data: best to show steps from low values (light color) to high values (dark color), such as a scale that increases from 1 to 100
+  - diverging data: best to show extremes (dark colors) around a neutral middle (light color), such as a scale from -100 to 0 to 100
+  - qualitative: best to show different categories, with their own color, such as a legend for most important product: apples, oranges, bananas
 
-Before leaping into a data mapping project, ask yourself these questions:
+- choose number of data classes, nature of data, color scheme, color-blind and other options
+- click Export tab to view all options; hex codes are typically used in Leaflet map code templates
 
-## 1. Is a map the best way to tell the story behind this data?
+![Screenshot: ColorBrewer web interface](colorbrewer.png)
 
-Sometimes a line chart may be the best way to tell a story about places over time, such as population change in different towns over time.
-**TO DO**: Insert example of longitudinal place data expressed as line chart, not map
-
-## 2. Does my data contain spatial information, such as the following?
-
-- street addresses (example: 100 Main St, Hartford, CT, 06106)
-- latitude/longitude coordinates (example: 41.756, -72.675)
-- a data column that refers to locations (examples: Town: Hartford, or Zip: 06106)
-
-If your data tables lacks spatial information, it may not be possible to map it.
-
-## 3. Does my map respect the ethical boundaries of public vs private data?
-
-- ** TO DO ** explain and link back to privacy section
-
-## 4. What type of map is the best fit for my spatial data and story?
-
-- Point map: best for specific location data (such as addresses or geocoordinates)
-- Polygon map: best for boundary area data (such as census tracts, towns, states)
-
-**To Do**
-- Integrate http://colorbrewer2.org/
-- Refer to other types of maps and data, such as heat maps, line maps, etc.
 
 {% footer %}
 {% endfooter %}

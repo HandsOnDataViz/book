@@ -36,8 +36,14 @@ then follow these steps to create a meaningful interactive map:
 | to come | to come |
 
 ** TO DO **
+- point maps (with colored markers to show specific locations)
+- polygon maps (with colored areas to show values for regions)
 - Point map: best for specific location data (such as addresses or geocoordinates)
 - Polygon map: best for boundary area data (such as census tracts, towns, states)
+- point map best for showing data about specific locations (addresses, lat/long coords)
+	- show example of a point data table
+- polygon maps best for showing data about geographic regions (nations, states, neighborhoods, etc)
+	- show example of a polygon data table
 - Refer to other types of maps and data, such as story maps, heat maps, etc.
 
 {% footer %}

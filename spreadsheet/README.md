@@ -21,8 +21,10 @@ Which spreadsheet tool should you use? That depends on how you wish to share and
 This introductory online book features Google Sheets because it's a free and easy-to-learn tool for collaborating and sharing data with others. The basic spreadsheet methods shown here are very similar across all spreadsheet tools. But advanced users may need more complex tools to manage very large datasets, or relational databases, or to perform deeper analysis.
 
 If you're new to spreadsheets or want to refresh your skills, see the following chapters:
+- [Upload and Convert to Google Sheets](upload)
+- [Make a Copy with Google Sheets](copy)
 - [Share with Google Sheets](share)
-- [Save as Generic CSV Format](csv)
+- [Save as CSV or ODS Format](csv)
 - [Sort and Filter Data](sort)
 - [Calculate with Formulas](calculate)
 - [Group Data with Pivot Tables](pivot)

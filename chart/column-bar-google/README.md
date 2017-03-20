@@ -1,5 +1,5 @@
 # Column and Bar Charts with Google Sheets
-*By [Jack Dougherty](../../introduction/who.md), last updated March 7, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 20, 2017*
 
 Follow these tutorials to create different types of column and bar charts with Google Sheets http://sheets.google.com on the Google Drive platform. Requires free account.
 - Grouped
@@ -54,7 +54,7 @@ Best to compare sub-categories, or parts of a whole. Vertical columns, or horizo
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/pubchart?oid=307057605&amp;format=interactive"></iframe><a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691">View data from WHO and CDC</a>
 
 **Tutorial:**
-- Begin by opening this link in a new tab: [Google Sheets Stacked column chart template[](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/)
+- Begin by opening this link in a new tab: [Google Sheets Stacked column chart template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/)
 - Follow most of the same steps in first tutorial above.
 - Format your data in a similar way as shown below. Each column is a data series, which displays as a separate color in the chart.<br>
 ![Stacked column chart data table](stacked-column-data.png)

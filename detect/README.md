@@ -4,8 +4,9 @@
 text and video to come
 
 ## Learn more
-- Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9, 2017, http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/.
-- http://flowingdata.com/2016/10/21/trump-bar-chart-baselines-are-the-worst-baselines-sad/
+- Darrell Huff, How to Lie with Statistics (W. W. Norton & Company, 1954), http://books.google.com/books?isbn=0393070875
+- Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
+- Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9, 2017, http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/
 
 {% footer %}
 {% endfooter %}

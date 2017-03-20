@@ -1,41 +1,52 @@
 # Leaflet Maps with Google Sheets
-*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 11, 2017*
-
-** This tool and tutorial are still in-progress **
+*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 20, 2017*
 
 ## Try it
 
-Explore the map or open in a [new tab](https://jackdougherty.github.io/leaflet-maps-with-google-sheets/)
+Explore the map or right-click [this link to open in a new tab](https://jackdougherty.github.io/leaflet-maps-with-google-sheets/)
 
 <iframe src="https://jackdougherty.github.io/leaflet-maps-with-google-sheets/" width="90%" height=500></iframe>
 
-The Leaflet map pulls data and options from an easy-to-modify Google Sheet.
+The Leaflet map pulls data and options from an easy-to-modify Google Sheet. Right-click [this link to open in a new tab](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g)
 
 <iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false" width="90%" height=300></iframe>
 
 ## Tool Review
 - [Leaflet Maps with Google Sheets](https://github.com/JackDougherty/leaflet-maps-with-google-sheets) allows you to create and customize point, polygon, or polyline maps with no coding skills. Copy and publish the Google Sheet template, copy and host the pre-made Leaflet code template with GitHub Pages, and easily link the two together.
 - Requires a free Google account and a free GitHub account
-- ** TO DO ** add more advantages and limitations, currently beta version
+- friendly and easy-to-learn searchable map tool with flexibility for advanced users
+- clickable point data layers with custom marker icons and pop-up images
+- color-coded polygon data layers with numeric or text legends
+- upload and geocode addresses, and set map options, in the Google Sheet template
+- host your live web map and polygon data with GitHub Pages
+- responsive web design for both small and large devices
+- built entirely with open-source code, and no usage limits
 
-## Video with Step-by-Step tutorial
+** TO DO -- rewrite into pros and cons **
 
-Creating your own version requires four key steps, explained in more detail below.
+## Video with step-by-step tutorial
+
+In this tutorial, you will learn how to create your own copy of the Leaflet Maps with Google Sheets template, geocode and customize your own point markers, and either hide or upload your own polygon and/or polyline GeoJSON data. The video and instructions below breaks this down into these key steps:
 - A) Fork (copy) the code template and publish your version with GitHub Pages
-- B) Make a copy of the Google Sheet template and publish your version
-- C) Paste your Google Sheet link into your GitHub code
-- D) Modify your Google Sheet options, points, polygons, and polylines
+- B) File > Make a copy of the Google Sheet template and publish your version
+- C) Paste your Google Sheet and map links into your GitHub
+- D) Modify map title and other settings in the Options tab
+- E) Geocode locations and customize new markers in the Points tab
+- F) Hide the polygon and polyline legends and default GeoJSON data
+- G) Upload and display your own polygon and polyline GeoJSON data
+- H) Upload and display customized marker icons
 
-** video to come **
+Before you begin, this tutorial assumes that you:
+- have a [free Google Drive account](http://drive.google.com), and learned the [File > Make a Copy in Google Sheets](https://www.datavizforall.org/spreadsheet/copy) tutorial in this book
+- have a [free GitHub account](http://github.com), and learned the [Fork a Copy of a Simple Leaflet Map](https://www.datavizforall.org/github/fork-leaflet) tutorial in this book
 
+** TO DO -- insert video  **
 
 ### A) Fork (copy) the code template and publish your version with GitHub Pages
 
-Before you begin, you will need a free GitHub account: http://github.com
-
 1) Right-click to open the Leaflet Maps with Google Sheets code template in a new tab: https://github.com/JackDougherty/leaflet-maps-with-google-sheets
 
-2) In the upper-right corner, sign in to your GitHub account
+2) In the upper-right corner, sign in to your free GitHub account
 
 3) In the upper-right corner, click Fork to copy the repository (repo) into your own account. Important: You can only fork a repository **one time**. To make a second copy, see instructions below **to come**.
 
@@ -53,7 +64,7 @@ Before you begin, you will need a free GitHub account: http://github.com
 
 9) Right-click on the link to your published site and open in a new tab. Your website may take up to 1 minute to appear the first time.
 
-### B) Make a copy of the Google Sheet template and publish your version
+### B) File > Make a copy of the Google Sheet template and publish your version
 
 1) Right-click to open this Google Sheets spreadsheet in a new tab: https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g
 
@@ -65,7 +76,9 @@ Before you begin, you will need a free GitHub account: http://github.com
 
 ![](lmwgs-2-make-copy-640.gif)
 
-### C) Paste your Google Sheet link into your GitHub code
+### C) Paste your Google Sheet and map links into your GitHub
+
+Here's the most important step: connect your Google Sheet directly to your GitHub code.
 
 1) Copy your Google Sheet web address (or URL)
 
@@ -73,106 +86,95 @@ Before you begin, you will need a free GitHub account: http://github.com
 
 3) Click the pencil symbol to edit the file
 
-4) Paste your Google Sheet URL into the code to replace the current URL
+4) Paste your Google Sheet URL into the code to replace the current URL. Do not accidentally delete the existing quotation marks or punctuation.
 
 5) Scroll to bottom of page and press Commit to save your changes
 
-### D) Modify your Google Sheet options, points, polygons, and polylines
+6) Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.
 
-1) Modify settings in the Options tab in your Google Sheet, then refresh the browser in your published map to view changes
+7) In the top-level of your GitHub repo, test the new links to your map and your Google Sheet to make sure they work and point to your versions.
 
-![](lmwgs-4-options-640.gif)
+### D) Modify map title and other settings in the Options tab
 
-2) In the Points tab of your Google Sheet, paste in new addresses and select 6 columns to geocode
+** TO DO - redo GIF **
 
-3) Upload polygon and polygon data in GeoJSON format to your GitHub code, and update Polygons and Polylines tabs to match and customize.
+In your linked Google Sheet, go to the Options Tab and modify these items:
 
+1) Map Title -- insert your own title
 
-**TO DO** Add more details for steps 8 and 9 below, and review all details below to simplify above
+2) Map Subtitle -- insert your own version
 
+3) Author Name -- insert your own name, or first name, or initials (will be public)
 
-- Set map options in a Google Sheet template
--
-- upload and geocode addresses, and set map options, in the Google Sheet template
-- Create Leaflet maps with a linked Google Sheets template.
-- friendly and easy-to-learn searchable map tool with flexibility for advanced users
-- clickable point data layers with custom marker icons and pop-up images
-- color-coded polygon data layers with numeric or text legends
+4) Author Email or Website -- insert your own (will be public), or delete the current name to make it blank
 
-- host your live web map and polygon data with GitHub Pages
-- responsive web design for both small and large devices
-- built entirely with open-source code, and no usage limits
+Open the link to your live map in a new browser tab and refresh to see your changes.
 
-## Frequently Asked Questions
+### E) Geocode locations and customize new markers in the Points tab
 
-- Q: If I already made one fork of a GitHub repo, it will not allow me to make a second fork. But I want to make a second map. How can I do this?
-- A: Three options **TO DO: explain in more detail**
-  - 1) Go to any of these alternate templates, which contain same code and sheets under a different name
-  - 2) Or download any GitHub repo to your desktop, start a new GitHub repo in your account, and manually upload the files
-  - 3) Or install GitHub Desktop on your Mac/Windows computer to automate the process described in option 2 above -- see tutorial
+In your new map, our next goal is to add and modify the appearance of a new set of point markers, based on new addresses that you will enter and geocode.
 
-## To Do -- CLEAN THIS UP
-- explain all steps
-- Insert internal references to prior steps in this book. See the Edit and Host Code Templates section in this book. Requires a free GitHub account to host your own version on the web.
+In the Points tab of your Google Sheet:
+1) Think of a simple data story that involves at least four geocodeable locations, divided into at least two groups. If you need an example, use this sample table of “Famous Places in New York City”:
 
-Design and host your own map on the public web, add your point and/or polygon data, and customize its appearance. *Quick directions for now -- with illustrations to come soon*
+| Group     | Name     | Location |
+| :-------- | :------- | :------  |
+| Landmark  | Empire State Building | 350 5th Ave, New York, NY 10118 |
+| Landmark  | Metropolitan Museum of Art | 1000 5th Ave, New York, NY 10028 |
+| Transit   | Grand Central Terminal | 89 E 42nd St, New York, NY 10017 |
+| Transit   | Penn Station | 159 West 33rd Street, New York, NY 10120 |
 
-These steps require that you sign up and log into a:
-- free GitHub account (https://github.com/) to edit two lines of open-source code
-- free Google Drive account (https://drive.google.com) to copy and edit the Google Sheets template
+2) Enter your Group, Name, and Location data into new rows below the current data.
 
-#### A) Fork/copy this code repository and publish with GitHub Pages
-- Click the Fork button, in the upper-right corner of this code repository, to create a copy of the code in your account.
-- Reminder to fix later: if you have already created a fork of this repo, for your second version you will need to (rename original? clone or download?)
-- Your new repository will have a web address in this format:
-```
-https://github.com/USERNAME/leaflet-maps-with-google-sheets
-```
-- Click the Settings button, in the upper-right section of your new repository.
-- On the Settings page, scroll down to the GitHub Pages section, select Source > master branch, and click Save.
-- GitHub Pages has published the *default* map from your code repository as a live public web page, which you can view by clicking on the link displayed after "Your site is published at...". It will appear in this format:
-```
-https://USERNAME.github.io/leaflet-maps-with-google-sheets/
-```
-- Copy the link to your live web page above.
-- Go back to your GitHub code repository home page.
-- Click on the README.md file. To edit this file, click the pencil symbol in the upper-right.
-- In the Demo section, paste the link to your live web page from above.
-- Scroll down and click the green Commit Changes button, which saves your edits to your GitHub repo.
-- Go back to your GitHub repo home page. The new link you pasted to your default map should appear in the lower half of this page. Test it.
-- Reminder to fix later: need to remove the dev branch from this public repo to avoid confusing newcomers.
+3) Go to the Font Awesome Icons site, http://fontawesome.io/icons, scroll down to Search Icons, find your desired icon code name, and insert this into the Marker Icon (column B) of your Points sheet. For example, search for and insert the icon code "train" or "building" to display markers with either of these symbols in your map. (To upload your own customized marker, see section H further below.)
 
-#### B) File > Make a Copy and Publish your Google Sheets template
-- Your live web map currently displays data from the *default* Google Sheet template. To insert your own data, you will need to make a copy and edit one line of code in your GitHub repository.
-- In your GitHub repo home page, click on the [Google Sheet template link]( https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/edit#gid=0).
-- Make sure that you are logged into your Google Drive account, and select File > Make a Copy. Insert a new name to associate it with your new map data, and save it in a folder where you can find it again later, then click OK.
-- In your new Google Sheet, click File > Publish to the Web. (Leave the drop-downs as "Entire Document" and "Web page"). Click Publish. All data that you enter below will be *public*.
+4) In Marker Color (column C), use the drop-down menu to select a marker color.
 
-#### C) Paste your Google Sheets ID into the GoogleDocID.js file
-- In your browser address bar, copy the long ID for your new Google Sheet, appears between "/d/" and "/edit...". It will look similar this:
-![](google-sheet-id.jpg)
+5) In Icon Color (column D), insert a color word (example: white) or hex code (example: #fff) to color the icon symbol inside your marker. Recommended: use white icon colors with dark marker colors.
 
-- In your GitHub repo home page, click on the file named GoogleDocID.js, and click the pencil symbol to edit it.
-- Replace the default Google Sheet ID by pasting your own from above. Do not erase the quote marks.
-- Scroll down and click the green Commit Changes button to save your edits.
+6) Leave Custom Size (column E) blank.
 
-#### D) Customize your map settings in the Options tab
+7) Optional:
+  - In Image (column G), insert the URL (preferably https://, not http://) of a small-to-medium sized image on the web
+  - In Description (column G), insert text and/or a web link enclosed with an [HTML a href tag with target set to blank](https://www.w3schools.com/tags/tag_a.asp)
 
-#### E) Geocode address data and customize markers in the Points tab
+8) Do NOT delete or rename any column headers. However, you have the option to add new column headers to display in your map table.
 
-#### F) Upload/link polygon data and set legend colors in Options tab
+9) Geocode your new data inside your Google Sheet by dragging your cursor to select 6 columns of data: Location - Latitude - Longitude - Found - Quality - Source
 
-- Go back to your live web map, which now displays data from your new Google Sheet. Keep both open in separate browser tabs or windows. When you make changes to your Google Sheet, click the refresh button in the live map to update the display.
-- The Google Sheet contains three tabs (labeled at the bottom): Options, Points, Polygons.
-- In the Options tab, type in your map title, use drop-downs to select map background, and so forth.
-- In the Points tab, each row represents a point on your map. Type or paste in data, image links, addresses, and so forth.
-  - To geocode addresses inside this Google Sheet, select the Address-Latitude-Longtiude columns, and click the Geocode > Selected Cells (Address to Lat Long) menu. (Geocoding is an add-on feature that does not appear in default Google Sheets.)
-  - Group related points into Categories that you can define, which will appear as layers on the map.
-- In the Polygons tab... TO DO: explain how polygon data must be prepared in GeoJSON format and uploaded into your GitHub repo (see example: ct-towns-density.geojson); refer to http://DataVizForAll.org tutorials on how to prepare your polygon data
-  - find polygon data
-  - refer to tutorial on how GeoJSON data is organized by "properties" -- refer to book and include this exercise: Open your GeoJSON polygon map file with http://geojson.io or http://mapshaper.org to view property categories (such as "name") and values for each item
-  - if needed, convert polygon data from shapefile or KML format into GeoJSON format with http://geojson.io
-  - if needed, edit polygon data and join/merge tables of new data with http://mapshaper.org
+10) In the Geocoder menu that appears in this Google Sheet template, select one of the geocoding services. If one service cannot locate your data, try the other. Always inspect the accuracy of the Found column.
+
+Open the link to your live map in a new browser tab and refresh to see your changes. If your new markers appear correctly, then delete the existing rows that came with this template.
+
+### F) Hide the polygon and polyline legends and default GeoJSON data
+
+To show a simple point map, learn how to turn off and hide the polygon and polyline legend and default data that came with this template. (See how to add your own GeoJSON data in section G below.)
+
+In your linked Google Sheet:
+
+1) In the Options tab, Polyline Legend Position (cell B 35) -- select Off to hide the legend
+
+2) In the Polygons tab, Polygon Legend Position (cell B 4) -- select Off to hide the legend
+
+3) In the Polygons tab, Polygon GeoJSON URL (cell B 6) -- delete contents to remove polygons
+
+4) Go to the next tab, named Polygons1, in its drop-down menu, select Delete to remove sheet
+
+5) In the Polylines tab, delete contents of the GeoJSON URL (cells A 2 and A 3) to remove lines
+
+Go to the browser tab with your new map, and refresh the page to see your changes.
+
+Optional:
+- in the Options tab, Display Table (cell B 29), turn off to hide the table in your map
+- or modify the list of item in Table Columns (cell B 30) to change the display in your table
+
+### G) Upload and display your own polygon and polyline GeoJSON data
+
+** TO COME **
+
+### H) Upload and display customized marker icons
+
+** TO COME **
 
 {% footer %}
 {% endfooter %}

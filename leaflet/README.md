@@ -13,9 +13,9 @@ Cons:
 - must host your own code repositories to publish to the web (with a free service such as GitHub Pages)
 - must rely on open-source community of developers to maintain the core code or specific plugins
 
-| Map templates | Best use and tutorial chapters |
+| Leaflet map templates     | Best use and tutorial chapters |
 | --- | --- |
-| Leaflet Maps with Google Sheets<br> ![](leaflet-maps-with-google-sheets.png) | Best to show any combination of points, polygons, polylines, or table data. Upload data and modify settings in linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Maps with Google Sheets](with-google-sheets) |
+| Leaflet Maps with Google Sheets<br> ![](leaflet-maps-with-google-sheets.png) | Best to show any combination of points, polygons, polylines, or point table data. Upload your GeoJSON data and modify settings in linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Maps with Google Sheets](with-google-sheets) |
 
 ** TO DO **
 - more template links to come. . .

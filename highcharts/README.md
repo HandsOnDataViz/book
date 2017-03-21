@@ -1,24 +1,32 @@
 # Highcharts Code Templates
+*by [Ilya Ilyankou and Jack Dougherty](../introduction/who.md), last updated March 21, 2017*
 
-** TO DO **
-- introduce why and when to use Highcharts code libraries
-- list pros and cons from resources such as https://code.tutsplus.com/tutorials/adding-charts-to-your-site-with-highcharts--cms-21692 and https://www.slant.co/versus/11578/11579/~google-charts_vs_highcharts
-- describe more powerful statistical analysis tools (such as R) and more powerful data visualization code libraries (such as D3), but both are harder to learn, and this book focuses on the easiest tools to complete most common visualization tasks, to spend more energy on the storytelling.
+While beginners appreciate the drag-and-drop chart tools and tutorials described earlier in this book, such as [Google Sheets](../chart/google-sheets) and [Tableau Public](../chart/tableau-public), more advanced users may wish to customize their visualizations, add more complex data, and control exactly how and where their work appears on the web. A more powerful and relatively easy-to-learn solution is to use code templates built with Highcharts, https://highcharts.com, an open-source library, which you can [modify and host on GitHub](../github), as described in a previous chapter in this book.
 
-Advantages:
-- more control to customize and host data visualizations on any web server
-- no usage fee for non-commercial use….see below
-Disadvantage: dependent on Highcharts code library
+## Tool Review
+- Pros of working with Highcharts (http://highcharts.com):
+  - Open-source code that is free for individuals, schools, and non-profits to use online or download
+  - Easier for beginners to understand than more complex visualization code libraries
+- Cons:
+  - For commercial use, you must purchase a license http://www.highcharts.com/products/highcharts
+  - Must host your own code repositories to publish to the web (with a free service such as GitHub Pages)
 
-Also, note that Highcharts is open-source code, and free for individual, school, and non-profit use.
-If commercial use, then you’ll need to purchase a license
-http://www.highcharts.com/products/highcharts
+| Highcharts templates     | Best use and tutorial chapters |
+| --- | --- |
+| to come | to come |
 
-** TO DO - list and link templates **
+## Inside Highcharts code templates
+The templates featured above vary from simple to complex, but all of them include three basic types of code:
+- HTML: to structure content on the web (example: index.html)
+- CSS, or Cascading Style Sheet: to shape how content appears on the web (example: style.css)
+- JavaScript: to create the chart and interactivity (example: script.js)
 
-Highcharts with Google Sheets templates
-- https://github.com/JackDougherty/highcharts-with-google-sheets
+Also, these templates refer to other code elements:
+- library: link to online instructions to complete routine tasks (example: Highcharts)
+- data: content to appear in chart, typically in CSV format (example: data.csv) or pulled from Google Sheets
 
-Highcharts with CSV templates
-- https://github.com/JackDougherty/highcharts-with-csv
-- to do: move CSV templates into separate repo
+## Learn more
+- Highcharts Demos, http://www.highcharts.com/demo
+
+{% footer %}
+{% endfooter %}

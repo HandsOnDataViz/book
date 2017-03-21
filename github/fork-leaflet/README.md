@@ -46,7 +46,7 @@ https://USERNAME.github.io/REPOSITORY
 
 7) At the top level of your repo main page, click on README.md, and click the pencil icon to edit this file, written in easy-to-read Markdown code.
 
-8) Delete the existing link to my live site, and paste in the link to your site. Scroll down and Commit to save your edits.
+8) Delete the link to the current live site, and paste in the link to your site. Scroll down and Commit to save your edits.
 
 9) On your repo main page, right-click on the link to your published site to open in a new tab. **Be patient** during busy periods, because your website may take up to 1 minute to appear the first time.
 

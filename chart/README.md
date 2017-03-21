@@ -1,14 +1,15 @@
 # Chart Your Data
-*by [Jack Dougherty](../introduction/who.md), last updated March 7, 2017*
+*by [Jack Dougherty](../introduction/who.md), last updated March 21, 2017*
 
 Charts pull readers deeper into your story. Even if your data contains geographical information, sometimes a chart tells your story better than a map. But designing meaningful, interactive charts requires careful thought about how to communicate your data story with your audience. In this chapter, you will learn how to:
 - Practice [principles of chart design](design). Learn to identify good charts from bad ones.
-- Choose a chart type that matches your story and data format, and follow tutorials in the table below. Beginners may start with easy-to-learn tools such as [Google Sheets](google-sheets) or [Tableau Public](tableau-public), then move up to more powerful tools, such as [Highcharts](../highcharts), which require you to [Share, Edit, and Host Code Templates with GitHub](../github) or another web host.
+- Choose a chart type that matches your story and data format, and follow tutorials in the table below. Beginners may start with easy-to-learn tools such as [Google Sheets](google-sheets) or [Tableau Public](tableau-public), then move up to more powerful tools, such as [Highcharts](../highcharts), which require you to [Modify and Host Code Templates with GitHub](../github) or another web host.
 
 See also related chapters in this book:
 - [Draw and write your data story](../../choose/draw) to capture your ideas on paper
 - [Improve spreadsheet skills](../spreadsheet), [Find and know your data](../find), and [Clean your data](../clean)
 - [Embed your interactive chart on your website](../embed)
+- [Detect bias in data stories](../detect), including [How to lie with charts](../detect/how-to-lie-with-charts)
 - [Tell your data story](../story), including its most meaningful insights and limitations
 
 | Basic chart types | Best use and tutorial chapters |

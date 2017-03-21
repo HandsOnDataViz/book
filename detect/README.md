@@ -1,7 +1,10 @@
 # Detect Bias in Data Stories
 *by [Jack Dougherty, Stacy Lam, and David Tatem](../introduction/who.md), last updated March 17, 2017*
 
-text and video to come
+text 
+
+**[Enroll in our free online course](../../enroll)**, which introduces these topics in the brief video below, and offers more exercises and opportunities to interact with instructors and other learners.
+{%youtube%}eWfI_ANQT2Q{%endyoutube%}
 
 ## Learn more
 - Darrell Huff, How to Lie with Statistics (W. W. Norton & Company, 1954), http://books.google.com/books?isbn=0393070875

@@ -24,6 +24,9 @@ See also related chapters in this book:
 ** TO DO **
 - story map
 - heat map
+- tab-view map for historical change
+- synchronized side-by-side map
+-
 
 {% footer %}
 {% endfooter %}

@@ -16,12 +16,14 @@ See also related chapters in this book:
 
 | Basic map types | Best use and tutorial chapters |
 | --- | --- |
-| Point map<br> ![](map-point.png) | Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tools: [BatchGeo tutorial](batchgeo) or [Google My Maps tutorial](mymaps)<br>Power tool: [Leaflet Maps with Google Sheets](../leaflet/with-google-sheets) and other [Leaflet templates](..leaflet) |
-| Polygon map<br> ![](map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: ?? <br>Power tool: [Leaflet Maps with Google Sheets](../leaflet/with-google-sheets) and other [Leaflet templates](..leaflet) |
-| Polyline map<br> ![](map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: ?? <br>Power tool: [Leaflet Maps with Google Sheets](../leaflet/with-google-sheets) and other [Leaflet templates](..leaflet)|
-| Combination map<br> ![](map-point-polygon-polyline.png) | Best to show any combination of points, polygons, or polylines. <br>Easy tool: ?? <br>Power tool: [Leaflet Maps with Google Sheets](../leaflet/with-google-sheets) and other [Leaflet templates](..leaflet)  |
-| Story map | to come |
-| Heat map | to come |
+| Point map        <br> ![](map-point.png) | Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tools: [BatchGeo tutorial](batchgeo) or [Google My Maps tutorial](mymaps)<br>Power tool: [Leaflet Maps with Google Sheets](../leaflet/with-google-sheets) and other [Leaflet templates](..leaflet) |
+| Polygon map      <br> ![](map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: ?? <br>Power tool: [Leaflet Maps with Google Sheets](../leaflet/with-google-sheets) and other [Leaflet templates](..leaflet) |
+| Polyline map     <br> ![](map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: ?? <br>Power tool: [Leaflet Maps with Google Sheets](../leaflet/with-google-sheets) and other [Leaflet templates](..leaflet)|
+| Combination map   <br> ![](map-point-polygon-polyline.png) | Best to show any combination of points, polygons, or polylines. <br>Easy tool: ?? <br>Power tool: [Leaflet Maps with Google Sheets](../leaflet/with-google-sheets) and other [Leaflet templates](..leaflet)  |
+
+** TO DO **
+- story map
+- heat map
 
 {% footer %}
 {% endfooter %}

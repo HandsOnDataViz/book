@@ -1,15 +1,12 @@
 # Leaflet Maps with Google Sheets
-*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 20, 2017*
+*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 21, 2017*
 
 ## Try it
-
-Explore the map or right-click [this link to open in a new tab](https://jackdougherty.github.io/leaflet-maps-with-google-sheets/)
-
+Explore the map or right-click to [view full-screen map in a new tab](https://jackdougherty.github.io/leaflet-maps-with-google-sheets/)
 <iframe src="https://jackdougherty.github.io/leaflet-maps-with-google-sheets/" width="90%" height=500></iframe>
 
-The Leaflet map pulls data and options from an easy-to-modify Google Sheet. Right-click [this link to open in a new tab](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g)
-
-<iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false" width="90%" height=300></iframe>
+The map draws the point data and settings from a linked Google Sheet, which you can explore below or right-click to [view full-screen Sheet in a new tab](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g)
+<iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false" width="90%" height=500></iframe>
 
 ## Tool Review
 - [Leaflet Maps with Google Sheets](https://github.com/JackDougherty/leaflet-maps-with-google-sheets) allows you to create and customize point, polygon, or polyline maps with no coding skills. Copy and publish the Google Sheet template, copy and host the pre-made Leaflet code template with GitHub Pages, and easily link the two together.
@@ -23,6 +20,8 @@ The Leaflet map pulls data and options from an easy-to-modify Google Sheet. Righ
 - built entirely with open-source code, and no usage limits
 
 ** TO DO -- rewrite into pros and cons **
+- easy-to-modify Google Sheets for point data and map settings
+- upload polygon or polyline GeoJSON files to your GitHub repo and modify settings in Google Sheets
 
 ## Video with step-by-step tutorial
 
@@ -168,11 +167,28 @@ Optional:
 - in the Options tab, Display Table (cell B 29), turn off to hide the table in your map
 - or modify the list of item in Table Columns (cell B 30) to change the display in your table
 
-### G) Upload and display your own polygon and polyline GeoJSON data
+### G) Upload and display your own polygon GeoJSON data
 
-** TO COME **
+1) Prepare your polygon file in GeoJSON format. View or modify the GeoJSON file properties (such as name, data fields, etc.) with one of these tools:
+- GeoJSON.io, http://geojson.io -- Drag-and-drop your file, and select the Table tab to view or rename properties. See [GeoJSON.io tutorial](../../transform/geojsonio) in this book, OR
+- MapShaper, http://mapshaper.org -- Drag-and-drop your file. To edit, see [MapShaper tutorial](../../transform/mapshaper) in this book
 
-### H) Upload and display customized marker icons
+2) In your GitHub repo, click to open the Geometry subfolder, then click Upload Files, drag-and-drop your geojson file, and Commit changes
+
+3) In your linked Google sheet, go to Polygons tab to adjust these settings:
+- change Polygon GeoJSON URL (cell B 6) to match the pathname of the file you uploaded above
+- change Polygon GeoJSON Name (cell B 5) to the title to be displayed for this polygon layer
+- change Polygon Legend Title (cell B 3) for the title in the polygon legend box
+
+4) To adjust the polygon legend colors and range, see the Polygon Data and Color Settings sections of the Polygon tab in Google Sheets.
+
+5) The code supports multiple polygon layers, which you can add (or delete) by duplicating the Polygons tab. Name them Polygons1, Polygons2, etc.
+
+### H) Upload and display your own polyline GeoJSON data
+
+Follow similar steps as described in the Polygon section above, but adjust settings in the Polylines tab of your linked Google Sheet.
+
+### I) Upload and display customized marker icons
 
 ** TO COME **
 

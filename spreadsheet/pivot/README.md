@@ -36,6 +36,7 @@ In addition to grouping by rows, you can create more advanced pivot tables by gr
 
 ## Learn More
 - Google, Create and Use Pivot Tables Help Page https://support.google.com/docs/answer/1272898
+- LibreOffice, Creating Pivot Tables Help Page https://help.libreoffice.org/Calc/Creating_Pivot_Tables
 - Andrew Ba Tran, "Tutorial: How to Make Pivot Tables in Google Sheets," TrendCT, September 4, 2015, http://trendct.org/2015/09/04/tutorial-how-to-make-pivot-tables-in-google-sheets
 
 {% footer %}

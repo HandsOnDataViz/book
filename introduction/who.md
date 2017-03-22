@@ -1,6 +1,6 @@
 # Who created this book?
 
-Contributors to *Data Visualization for All* have agreed to freely share our work as an open-access book.
+Contributors to *Data Visualization for All* are credited in the byline to specific pages they authored (or co-authored), hold the copyright to those pages (jointly if co-authored), and have agreed to freely share the work as an open-access book. *Data Visualization for All* is copyrighted by Jack Dougherty and contributors and distributed under a [Creative Commons BY-NC 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/). You may freely share and modify this content for non-commercial purposes, with a source credit to: http://DataVizForAll.org
 
 | Authors | About Us |
 | ---: | :--- |
@@ -11,9 +11,23 @@ Contributors to *Data Visualization for All* have agreed to freely share our wor
 | ![](TatemDavid-96.jpg) | [David Tatem](http://www.trincoll.edu/LITC/its/about/Pages/Learn.aspx) is a co-instructor for the [Data Visualization for All online course](http://www.datavizforall.org/enroll) at Trinity College, where he is an Instructional Technologist who specializes in the Social Sciences. He co-authored chapters for this book.|
 | ![](EderDerek-96.jpg) | [Derek Eder](http://derekeder.com) is an entrepreneur and civic technology developer in Chicago, where he runs [DataMade](http://datamade.us) and organizes [Chi Hack Night](http://chihacknight.org) events. He developed Searchable Map templates with Google Fusion Tables in this book. Follow [@DerekEder on Twitter](https://twitter.com/derekeder) and [DerekEder on GitHub](https://github.com/derekeder). |
 
-Funding for student contributions to this book was provided by the [Community Learning Initiative](http://www.trincoll.edu/urbanglobal/cugs/students/cli/Pages/default.aspx) and [Information Technology Services](http://www.trincoll.edu/LITC/its/Pages/default.aspx) at [Trinity College in Hartford, Connecticut](http://www.trincoll.edu).
+Funding for student contributions to this book was generously provided by the [Community Learning Initiative](http://www.trincoll.edu/urbanglobal/cugs/students/cli/Pages/default.aspx) and [Information Technology Services](http://www.trincoll.edu/LITC/its/Pages/default.aspx) at [Trinity College in Hartford, Connecticut](http://www.trincoll.edu).
 
 Live videos were produced with Trinity College Information Technology staff and friends: Angie Wolf, Sean Donnelly, Ron Perkins, Samuel Oyebefun, Phil Duffy, and Christopher Brown.
+
+## Trademarks
+Any use of a trademarked name without a trademark symbol is for readability purposes only. We have no intention of infringing on the trademark.
+- BatchGeo is a registered trademark of BatchGeo, LLC
+- CARTO is a registered trademark of CartoDB, Inc.
+- GitBook is a registered trademark of FriendCode, Inc.
+- GitHub and the GitHub logo are registered trademarks of GitHub, Inc.
+- Google and the Google logo are registered trademarks of Google Inc.
+- Highcharts is a registered trademark of Highsoft, Norway
+- Social Explorer is a registered trademark of Social Explorer, Inc.
+- WordPress is a registered trademark of the WordPress Foundation
+
+## Disclaimer
+The information is this book is provided without warranty. The lead author, contributors, and publisher have neither liability nor responsibility to any person or entity related to any loss or damages arising from the information contained in this book.
 
 {% footer %}
 {% endfooter %}

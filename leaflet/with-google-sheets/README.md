@@ -1,5 +1,5 @@
 # Leaflet Maps with Google Sheets code template
-*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 23, 2017*
+*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 24, 2017*
 
 Question: If you have moved beyond simple drag-and-drop point map tools (such as [BatchGeo](../../map/batchgeo) and [Google My Maps](../../map/mymaps) tutorials in this book), and want to create point and/or polygon and/or polyline maps, where should you go?
 
@@ -26,9 +26,15 @@ The map pulls the point data and settings from a linked Google Sheet, which you 
 ## Create your own: step-by-step tutorial
 In this tutorial, you will learn how to create your own copy of the Leaflet Maps with Google Sheets template, geocode and customize your own point markers, and either hide or upload your own polygon and/or polyline GeoJSON data. The video and instructions below breaks this down into these key steps:
 - A) Fork (copy) the code template and publish your version with GitHub Pages
-- B) File > Make a Copy of Google Sheet template and File > Publish your version
+- B) File > Make a Copy of Google Sheet template, Share, and File > Publish
 - C) Paste your Google Sheet URL into your GitHub
 - D) Modify map title and other settings in the Options tab
+{%youtube%}-nGdrzMuUnI{%endyoutube%}
+
+
+
+
+## Customize your map and upload data
 - E) Geocode locations and customize new markers in the Points tab
 - F) Hide the polygon and polyline legends and default GeoJSON data
 - G) Upload and display your own polygon GeoJSON data
@@ -36,11 +42,11 @@ In this tutorial, you will learn how to create your own copy of the Leaflet Maps
 - I) Upload and display customized marker icons
 - J) Optional: Save Google Sheets as CSV and upload to GitHub
 
+### A) Fork (copy) the code template and publish your version with GitHub Pages
+
 **Before you begin**, this tutorial assumes that you:
 - have a [free Google Drive account](http://drive.google.com), and learned the [File > Make a Copy in Google Sheets](https://www.datavizforall.org/spreadsheet/copy) tutorial in this book
-- have a [free GitHub account](http://github.com), and learned the [Fork a Copy of a Simple Leaflet Map](https://www.datavizforall.org/github/fork-leaflet) tutorial in this book
-
-### A) Fork (copy) the code template and publish your version with GitHub Pages
+- have a [free GitHub account](http://github.com), and understand concepts from the [Modify and Host Code with GitHub](https://www.datavizforall.org/github) chapter in this book
 
 1) Right-click to open this GitHub code template in a new tab: https://github.com/JackDougherty/leaflet-maps-with-google-sheets
 
@@ -71,7 +77,7 @@ https://USERNAME.github.io/leaflet-maps-with-google-sheets
 
 9) On your repo main page, right-click on the link to your published site to open in a new tab. **Be patient** during busy periods, because your website may take up to 1 minute to appear the first time.
 
-### B) File > Make a Copy of Google Sheet template and File > Publish your version
+### B) File > Make a Copy of Google Sheet template, Share, and File > Publish
 
 1) Right-click to open this Google Sheets template in a new tab: https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g
 
@@ -79,7 +85,9 @@ https://USERNAME.github.io/leaflet-maps-with-google-sheets
 
 3) File > Make a Copy of the Google Sheet template to your Google Drive
 
-4) File > Publish your Google Sheet to the public web.
+4) Click the blue Share button, click Advanced, set to Anyone with the link > Can View the Sheet
+
+5) File > Publish your Google Sheet to the public web, so the Leaflet map code can read it. (Don't forget this!)
 
 ![](lmwgs-2-make-copy-640.gif)
 

@@ -57,6 +57,14 @@ If necessary, you can save files to your computer, delete your online GitHub rep
 **TO DO**
 - Highcharts data sometimes does not update in the web cache. Quit browser and re-open it.
 
+## Mac computer problems
+
+#### No file extensions
+
+Several tools in this book will not work properly if your Mac Finder does not display file extensions. In other words, every file should include a period followed by several letters (such as data.csv and map.geojson). If you do not see these extensions at the end of each file name, then go to Finder > Preferences > Advanced and check the box to turn them on, as show below:
+
+![Screenshot: Checkbox to show filename extensions](mac-finder-filename-extensions.png)
+
 
 ## Browser developer tools
 

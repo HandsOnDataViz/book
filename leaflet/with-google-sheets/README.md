@@ -1,5 +1,18 @@
 # Leaflet Maps with Google Sheets code template
-*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 21, 2017*
+*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 23, 2017*
+
+Copy our template to customize your own Leaflet map with points, polygons, and/or polylines, with options and data in your linked Google Sheet. Paste only one line of code to connect your Leaflet Maps with Google Sheets. Requires free Google and GitHub accounts.
+
+## Video and list of features
+{%youtube%}kUEfB8wD3Vk{%endyoutube%}
+- Best to show points, polygons, and/or polylines, with table of points in map view
+- Free and open-source code template, built on Leaflet and linked to Google Sheets
+- Fork the code and host your live map on the web for free with GitHub Pages
+- Geocode location data with US Census or Google, using script inside the Google Sheet
+- Easy-to-modify data labels and map options in Google Sheet tabs or uploaded CSV files
+- Upload your polygon and polyline GeoJSON files, and custom markers, to your GitHub repo
+- Show multiple polygon layers, each with their own color legend and ranges (numerical or text)
+- Responsive design resizes your maps to display inside most mobile devices
 
 ## Try it
 Explore the map or right-click to [view full-screen map in a new tab](https://jackdougherty.github.io/leaflet-maps-with-google-sheets/)
@@ -8,21 +21,7 @@ Explore the map or right-click to [view full-screen map in a new tab](https://ja
 The map pulls the point data and settings from a linked Google Sheet, which you can explore below or right-click to [view full-screen Sheet in a new tab](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g)
 <iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false" width="90%" height=500></iframe>
 
-## Video and list of features
-{%youtube%}kUEfB8wD3Vk{%endyoutube%}
-- Best to show points, polygons, polylines, and/or point table data
-- Free and open-source code template, built on Leaflet and linked to Google Sheets
-- Fork the code and host your live map with GitHub Pages, for free
-- Geocode location data with a script built inside the Google Sheet
-- Easy-to-modify data labels and map options in Google Sheet tabs or uploaded CSV files
-- Upload your GeoJSON polygon and polyline data, and also custom markers, to your GitHub repo
-- Show multiple polygon layers, each with their own color legend and ranges (numerical or text)
-- Responsive design to work on desktops and most mobile devices
-
 ## Create your own: step-by-step tutorial
-
-** TO DO -- insert video  **
-
 In this tutorial, you will learn how to create your own copy of the Leaflet Maps with Google Sheets template, geocode and customize your own point markers, and either hide or upload your own polygon and/or polyline GeoJSON data. The video and instructions below breaks this down into these key steps:
 - A) Fork (copy) the code template and publish your version with GitHub Pages
 - B) File > Make a Copy of Google Sheet template and File > Publish your version

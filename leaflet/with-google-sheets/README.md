@@ -1,7 +1,9 @@
 # Leaflet Maps with Google Sheets code template
 *by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 23, 2017*
 
-Copy our template to customize your own Leaflet map with points, polygons, and/or polylines, with options and data in your linked Google Sheet. Paste only one line of code to connect your Leaflet Maps with Google Sheets. Requires free Google and GitHub accounts.
+Question: If you have moved beyond simple drag-and-drop point map tools (such as [BatchGeo](../../map/batchgeo) and [Google My Maps](../../map/mymaps) tutorials in this book), and want to create point and/or polygon and/or polyline maps, where should you go?
+
+Answer: Copy and customize our open-source template for Leaflet Maps with Google Sheets. Control the map options display data that you upload to your Google Sheet and GitHub repository. No coding skills required, other than pasting one line of code to link your map with your sheet. Requires two free accounts: Google and GitHub.
 
 ## Video and list of features
 {%youtube%}kUEfB8wD3Vk{%endyoutube%}

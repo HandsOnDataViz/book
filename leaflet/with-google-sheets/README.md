@@ -1,5 +1,5 @@
 # Leaflet Maps with Google Sheets code template
-*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 24, 2017*
+*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 25, 2017*
 
 Question: If you have moved beyond simple drag-and-drop point map tools (such as [BatchGeo](../../map/batchgeo) and [Google My Maps](../../map/mymaps) tutorials in this book), and want to create point and/or polygon and/or polyline maps, where should you go?
 
@@ -23,24 +23,23 @@ Explore the map or right-click to [view full-screen map in a new tab](https://ja
 The map pulls the point data and settings from a linked Google Sheet, which you can explore below or right-click to [view full-screen Sheet in a new tab](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g)
 <iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false" width="90%" height=500></iframe>
 
-## Create your own: step-by-step tutorial
-In this tutorial, you will learn how to create your own copy of the Leaflet Maps with Google Sheets template, geocode and customize your own point markers, and either hide or upload your own polygon and/or polyline GeoJSON data. The video and instructions below breaks this down into these key steps:
+## Part 1: Create and customize your map
+In the first part of this tutorial, you will learn how to create your own copy of the Leaflet Maps with Google Sheets template, publish your Google Sheet, and paste its web address into your GitHub repo.
 - A) Fork (copy) the code template and publish your version with GitHub Pages
 - B) File > Make a Copy of Google Sheet template, Share, and File > Publish
-- C) Paste your Google Sheet URL into your GitHub
-- D) Modify map title and other settings in the Options tab
+- C) Paste your Google Sheet URL in two places in your GitHub repo
+- D) Modify your map settings in the Options tab and test your live map
 {%youtube%}-nGdrzMuUnI{%endyoutube%}
 
-
-
-
-## Customize your map and upload data
+## Part 2: Upload and display your map data
+In the second part of this tutorial, you will learn how to geocode and customize your own point markers, and either hide or upload your own polygon and/or polyline GeoJSON data.
 - E) Geocode locations and customize new markers in the Points tab
 - F) Hide the polygon and polyline legends and default GeoJSON data
 - G) Upload and display your own polygon GeoJSON data
 - H) Upload and display your own polyline GeoJSON data
 - I) Upload and display customized marker icons
 - J) Optional: Save Google Sheets as CSV and upload to GitHub
+** TO DO: second half video**
 
 ### A) Fork (copy) the code template and publish your version with GitHub Pages
 
@@ -60,7 +59,7 @@ https://github.com/USERNAME/leaflet-maps-with-google-sheets
 
 Reminder: You can only fork a GitHub repo **one time**. If needed, see how to [Make a Second Copy of a GitHub Repo](../second-copy) in this book.
 
-4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code template to a live map on a public website that you control.
+4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code to a live map on a public website that you control.
 
 5) Scroll down to GitHub Pages section again, and copy the link to your published web site, which will follow this format:
 ```
@@ -73,9 +72,9 @@ https://USERNAME.github.io/leaflet-maps-with-google-sheets
 
 7) At the top level of your repo main page, click on README.md, and click the pencil icon to edit this file, written in easy-to-read Markdown code.
 
-8) Delete the link to the current live site, and paste in the link to your site. Scroll down and Commit to save your edits.
+8) Delete the link to the current live site, and paste in the link to YOUR site. Scroll down and Commit to save your edits.
 
-9) On your repo main page, right-click on the link to your published site to open in a new tab. **Be patient** during busy periods, because your website may take up to 1 minute to appear the first time.
+9) On your repo main page, right-click the link to your live map to open in a new tab. **Be patient** during busy periods on GitHub, when your website may take up to 1 minute to appear the first time.
 
 ### B) File > Make a Copy of Google Sheet template, Share, and File > Publish
 
@@ -85,31 +84,35 @@ https://USERNAME.github.io/leaflet-maps-with-google-sheets
 
 3) File > Make a Copy of the Google Sheet template to your Google Drive
 
-4) Click the blue Share button, click Advanced, set to Anyone with the link > Can View the Sheet
+4) Click the blue Share button, click Advanced, click to change Private to Anyone with the link > Can View the Sheet. This will make your public data easier to view in your map.
 
-5) File > Publish your Google Sheet to the public web, so the Leaflet map code can read it. (Don't forget this!)
+![Screencast: Share Google Sheet for anyone with the link to view]
 
-![](lmwgs-2-make-copy-640.gif)
+5) File > Publish the Link to your Google Sheet to the public web, so the Leaflet map code can read it.
 
-### C) Paste your Google Sheet URL into your GitHub
+![Screenshot: File > Publish the link to your Google Sheet](lmwgs-file-publish.png)
 
-Here's the most important step: connect your Google Sheet directly to your GitHub code.
+6) At the top of your browser, copy your Google Sheet web address or URL (which usually ends in ```...XYZ/edit#gid=0```). Do NOT copy the published URL (which usually ends in ```...XYZ/pubhtml```).
 
-1) Copy your Google Sheet web address (or URL)
+![Screenshot: Copy the Google Sheet URL, not the Publish URL](lmwgs-copy-sheet-url-not-pub-url.png)
 
-2) In your Github code repo, click to open this file: google-doc-url.js
+### C) Paste your Google Sheet URL in two places in your GitHub repo
 
-3) Click the pencil symbol to edit the file
+1) First, connect your Google Sheet directly to your Leaflet Map code. In your Github code repo, click to open this file: ```google-doc-url.js```
 
-4) Paste your Google Sheet URL into the code to replace the current URL. Do not accidentally delete the existing quotation marks or punctuation.
+2) Click the pencil symbol to edit the file.
 
-5) Scroll to bottom of page and press Commit to save your changes
+3) Paste your Google Sheet URL into the code to replace the current URL. Do not delete the single-quotation marks or semicolon.
 
-6) Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.
+4) Scroll to bottom of page and press Commit to save your changes. Now the Leaflet Map code can locate your published Google Sheet.
 
-7) In the top-level of your GitHub repo, test the new links to your map and your Google Sheet to make sure they work and point to your versions.
+![Screencast: Copy Google Sheet URL and paste into GitHub code](lmwgs-paste-google-sheet.png)
 
-### D) Modify map title and other settings in the Options tab
+5) Next, let's paste your Google Sheet URL in a second place to keep track of it. Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.
+
+### D) Modify your map settings in the Options tab and test your live map
+
+In the top-level of your GitHub repo, test the new links to your map and your Google Sheet to make sure they work and point to your versions.
 
 ** TO DO - redo GIF **
 

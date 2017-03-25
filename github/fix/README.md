@@ -1,10 +1,20 @@
 # Fix Common GitHub and Code Errors
-*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 25, 2017*
 
 What happens if you cannot view your published GitHub repository, or if your code breaks and no longer displays what it was designed to show? These are common problems, especially for newer students, because accidentally clicking the wrong box or mistakenly erasing a single character (such as a semicolon) can make your visualization seem to vanish, even though your work is usually still there. Breaking your code -- and figuring out how to fix it -- is a great way to learn, even if it requires trial and error.
 
-## About Simple Web Page with GitHub Pages
+## Safely Delete your GitHub Repo and Start Over
+If you need to delete your GitHub repo and start over, here's a simple way to safely save your work:
+- Go to the top-level of your GitHub repository, similar to ```https://github.com/USERNAME/REPOSITORY```
+- Click the green "Clone or Download" button, and select Download Zip to receive a compressed folder of your repo contents on your computer.
+- In your GitHub repo, click on Settings (upper-right area) and scroll down to Delete This Repository.
+- To prevent accidental deletions, GitHub requires you to type in the REPOSITORY name.
+- Now you can start over in one of these ways:
+  - If you wish to [Create a Simple Web Page with GitHub Pages](../../embed/github-pages), follow that tutorial again.
+  - OR
+  - Fork another copy of the original GitHub repository to your account. After you create your copy, if you wish to add selected files that you previously downloaded to your computer, follow directions to [Upload Code with GitHub](../create-repo) in the second half of this tutorial in this book
 
+## Problems with Creating a Simple Web Page with GitHub Pages
 If you followed the [Create a Simple Web Page with GitHub Pages tutorial](../../embed/github-pages), it should have created two web links (or URLs):
 - your code repository, in this format: ```https://github.com/USERNAME/REPOSITORY```
 - your published web page, in this format: ```https://USERNAME.github.io/REPOSITORY```
@@ -30,15 +40,7 @@ These URLs are NOT case-sensitive, which means that ```https://github.com/USERNA
 
 ![Screenshot: Extra files in GitHub repo will block iFrame in your README](extra-files-block-readme-iframe.png)
 
-#### Save files to computer, delete repo, and start over
-If necessary, you can save files to your computer, delete your online GitHub repository, and start over.
-- Go to the top-level of your GitHub repository, similar to ```https://github.com/USERNAME/REPOSITORY```
-- Click the green "Clone or Download" button, and select Download Zip to receive a compressed folder of your repo contents on your computer.
-- In your GitHub repo, click on Settings (upper-right area) and scroll down to Delete This Repository.
-- To prevent accidental deletions, GitHub requires you to type in the REPOSITORY name.
-- See the [Create a New Repository and Upload Code with GitHub](../create-repo) tutorial in this book to upload the contents of your old repo, if desired.
-
-## Common code template problems and solutions
+## Problems with iFrames
 
 #### My iFrame does not appear in my web page
 - Go back to the [Embed tutorials in this book](../../embed) to double-check the directions
@@ -53,11 +55,37 @@ If necessary, you can save files to your computer, delete your online GitHub rep
   <iframe src="https://jackdougherty.github.io/leaflet-map-simple" width="90%"" height="350"></iframe>
   ```
 
+## Problems with Leaflet Maps with Google Sheets template
 
-**TO DO**
-- Highcharts data sometimes does not update in the web cache. Quit browser and re-open it.
+#### My map does not appear
+1) Confirm that you have completed all of the key steps in the [Leaflet Maps with Google Sheets](../../leaflet/with-google-sheets) tutorial in this book, especially these:
+  - Sign in to Google and File > Make a Copy of the Google Sheet to your Google Drive.
+  - File > Publish your Google Sheet (Jack often forgets this key step!)
+  - Copy your Google Sheet web address from top of your browser (usually ends with ```...XYZ/edit#gid=0```) and paste into your ```google-doc-url.js``` file in your GitHub repo. Do NOT copy the *Published* web address (which usually ends with ```...XYZ/pubhtml```)
+  - When you paste your Google Sheet web address into ```google-doc-url.js```, be careful not to erase single-quote marks or semicolon
+  - Go to your live map link, which should follow this format: ```https://USERNAME.github.io/REPOSITORY```, refresh the browser, and wait at least 30 seconds.
 
-## Mac computer problems
+2) Check your Google Sheet for errors:
+- Do NOT rename column headers (in row 1) of any sheet, because the Leaflet Map code looks for these exact words.
+
+![Screenshot: User accidentally renamed column headers in the Points tab](lmwgs-fix-column-headers.png)
+
+- Do NOT rename row labels (in column A) of any sheet, due to the same reason above.
+
+![Screenshot: Do not rename or delete](lmwgs-do-not-rename-lables.png)
+
+- In your Points tab, DO NOT leave any blank rows
+
+3) Confirm on GitHub Status (https://status.github.com/) that all systems are operational.
+
+4) If you cannot find the problem, go to the top of this page to Safely Delete Your GitHub Repo and Start Over. Also, make a new copy of the Google Sheet template, give it a new name, and copy data from your old sheet using File > Paste Special > Values Only.
+
+## Problems with Highcharts code templates
+
+#### Chart displays old data
+If you upload new data to your Highcharts code template on GitHub Pages, and it does not appear in your browser after refreshing and waiting up to one minute, then GitHub Pages is probably not the cause of the problem. Instead, some browsers continue to show "old" Highcharts in the web cache. The simplest solution is to File > Quit your browser and re-open the link to your Highcharts.
+
+## Problems with Mac Computers
 
 #### No file extensions
 
@@ -65,19 +93,17 @@ Several tools in this book will not work properly if your Mac Finder does not di
 
 ![Screenshot: Checkbox to show filename extensions](mac-finder-filename-extensions.png)
 
+## Solve Problems with Browser Developer Tools
+Peek inside any website and view the web code under the hood with the browser developer tools.
 
-## Browser developer tools
+In Chrome for Mac, go to View > Developer > Developer Tools
 
-  Peek inside any site and view the web code under the hood with the browser developer tools.
+![](Chrome-developer-tools.png)
 
-  In Chrome for Mac, go to View > Developer > Developer Tools
+In Firefox for Mac, go to Tools > Web Developer > Inspector
 
-  ![](Chrome-developer-tools.png)
-
-  In Firefox for Mac, go to Tools > Web Developer > Inspector
-
-  ![](Firefox-tools-inspector.png)
+![](Firefox-tools-inspector.png)
 
 
-  {% footer %}
-  {% endfooter %}
+{% footer %}
+{% endfooter %}

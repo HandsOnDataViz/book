@@ -178,7 +178,7 @@ In your linked Google Sheet:
 
 4) Go to the next tab, named Polygons1, in its drop-down menu, select Delete to remove sheet
 
-5) In the Polylines tab, delete contents of the GeoJSON URL (cells A 2 and A 3) to remove lines
+5) In the Polylines tab, delete the entire row (rows 2 and 3) to remove the existing lines
 
 Go to the browser tab with your new map, and refresh the page to see your changes.
 

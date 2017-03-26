@@ -41,6 +41,8 @@ In the second part of this tutorial, you will learn how to geocode and customize
 - J) Optional: Save Google Sheets as CSV and upload to GitHub
 ** TO DO: second half video**
 
+To solve problems, see [Fix Common GitHub and Code Errors](../../github/fix) chapter in this book.
+
 ### A) Fork (copy) the code template and publish your version with GitHub Pages
 
 **Before you begin**, this tutorial assumes that you:
@@ -222,6 +224,9 @@ If desired, you can save your table data with your code, rather than in a separa
 - polylines.csv
 - notes.csv  (or .txt)
 Upload these files into the main level of your GitHub code repository, where the template will process them automatically.
+
+## Learn more
+To solve problems, see [Fix Common GitHub and Code Errors](../../github/fix) chapter in this book.
 
 {% footer %}
 {% endfooter %}

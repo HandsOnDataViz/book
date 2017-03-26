@@ -1,5 +1,5 @@
 # Fork and Edit a Simple Leaflet Map with GitHub
-*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 25, 2017*
 
 This tutorial introduces the **basic steps** of working with code templates, using a simple Leaflet map code (http://leafletjs.com) and GitHub in your browser (http://github.com). You will learn how to:
 - A) Fork (copy) Leaflet template to your GitHub account
@@ -7,14 +7,14 @@ This tutorial introduces the **basic steps** of working with code templates, usi
 - C) Modify your map title and add layer controls
 - D) Geocode addresses [in a Google Sheet](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/) and upload points from data.csv
 
-Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as BatchGeo and Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](../github). For more advanced examples, see the [Leaflet Map Templates](../leaflet) chapter in this book.
+Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as BatchGeo and Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](../github). For more advanced examples, see the [Leaflet Map Templates](../leaflet) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](../fix) chapter in this book.
 
 ## Try it
 You will begin this tutorial with a simple interactive map that includes one pop-up point:
-<iframe src="https://jackdougherty.github.io/leaflet-map-simple/" width="90%" height=350></iframe>
+<iframe src="https://jackdougherty.github.io/leaflet-map-simple/" width="90%" height="350"></iframe>
 
 By the end of this tutorial, you will learn how to modify the map, then geocode and upload more data points:
-<iframe src="https://jackdougherty.github.io/leaflet-map-simple-instructor-sample/" width="90%" height=350></iframe>
+<iframe src="https://jackdougherty.github.io/leaflet-map-simple-instructor-sample/" width="90%" height="350"></iframe>
 
 ## Video with step-by-step tutorial
 {%youtube%}7iUocaxTYqk{%endyoutube%}
@@ -167,6 +167,7 @@ But a better way to display several points is to remove the code comment symbols
 26) In your GitHub repository, click Upload Files, then drag-and-drop your new data.csv file, and Commit to upload it. Go to your live map browser tab and refresh to view changes. **Be patient* during busy periods, when some edits may take up to 1 minute to appear.
 
 ## Learn more
+- To solve problems, see [Fix Common GitHub and Code Errors](../fix) chapter in this book.
 - See more [advanced Leaflet Map Templates](../leaflet) in this book
 - About Leaflet https://leafletjs.com
 - GitHub Pages features and tutorial, https://pages.github.com

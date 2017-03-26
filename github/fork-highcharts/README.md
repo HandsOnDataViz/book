@@ -1,5 +1,5 @@
 # Fork and Edit a Highcharts Scatter Chart with GitHub
-*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 25, 2017*
 
 This tutorial introduces the **basic steps** of working with code templates, using a simple Highcharts scatter chart code (http://highcharts.com) and GitHub in your browser (http://github.com). You will learn how to:
 - A) Fork (copy) the Highcharts template to your GitHub account
@@ -7,7 +7,7 @@ This tutorial introduces the **basic steps** of working with code templates, usi
 - C) Modify the chart title, subtitle, and axis labels
 - D) Upload new data points from a comma-separated values (.csv) spreadsheet
 
-Code templates help us to move beyond the limits of drag-and-drop web tools (such as Google Sheets and Tableau Public) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](../github). For more advanced examples, see the [Highcharts Templates](../highcharts) chapter in this book.
+Code templates help us to move beyond the limits of drag-and-drop web tools (such as Google Sheets and Tableau Public) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](../github). For more advanced examples, see the [Highcharts Templates](../highcharts) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](../fix) chapter in this book.
 
 ## Try it
 You will begin this tutorial with a basic chart template that includes only 7 points
@@ -69,6 +69,7 @@ https://USERNAME.github.io/REPOSITORY
 16) In your GitHub repo, click the new data-scatter.csv file to inspect the changes. Then go to your live website tab and refresh to see the updated scatter chart. ** Be patient** during busy periods, when changes make take up to 1 minute to appear.
 
 ## Learn more
+- To solve problems, see the [Fix Common GitHub and Code Errors](../fix) chapter in this book.
 - See more [Highcharts Templates](../highcharts) in this book
 - Highcharts Demos http://highcharts.com/demo and Highcharts Docs http://www.highcharts.com/docs
 - GitHub Pages features and tutorial, https://pages.github.com

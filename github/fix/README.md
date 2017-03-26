@@ -52,7 +52,7 @@ These URLs are NOT case-sensitive, which means that ```https://github.com/USERNA
   ```
   - FIXED iFrame
   ```
-  <iframe src="https://jackdougherty.github.io/leaflet-map-simple" width="90%"" height="350"></iframe>
+  <iframe src="https://jackdougherty.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
   ```
 
 ## Problems with Leaflet Maps with Google Sheets template

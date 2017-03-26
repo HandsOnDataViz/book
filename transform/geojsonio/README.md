@@ -1,5 +1,9 @@
-# Convert and Create Map Data with GeoJson.io
-*By [Jack Dougherty](../../introduction/who.md), last updated March 17, 2017*
+# Convert, Edit, and Create Map Data with GeoJson.io
+*By [Jack Dougherty](../../introduction/who.md), last updated March 26, 2017*
+
+** TO DO **
+- rewrite into tool review and tutorial format
+- place polygon conversion at top and specify import-export formats
 
 Go to http://geojson.io to explore this open-source web tool to convert, edit, and create GeoJSON map data. The tool was originally developed by Tom MacWright, and is supported by Mapbox.com.
 

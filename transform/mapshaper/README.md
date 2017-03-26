@@ -1,5 +1,9 @@
-#Edit, Dissolve, and Join with MapShaper.org
+#Convert, Edit, Join, and Dissolve with MapShaper.org
 *By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
+
+** TO DO **
+- rewrite into tool review/tutorial format
+- put conversion at top and clarify import-export formats
 
 MapShaper (http://MapShaper.org) is another versatile open-source mapping tool, developed and maintained by [Matthew Bloch on GitHub](https://github.com/mbloch/mapshaper). Using the web interface, users can:
 - Import and export map layers in multiple formats: Shapefile, GeoJSON, CSV, and more

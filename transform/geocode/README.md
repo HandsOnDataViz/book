@@ -1,8 +1,13 @@
-# Geocode Addresses and Save Coordinates with a Google Sheets script
+# Geocode Addresses into Coordinates with Google Sheets script
+*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 26, 2017*
 
-*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
+**TO DO**
+- problem 1: many tools geocode addresses into a map, but most do not let you save or extract the coordinates (explain)
+- problem 2: some high-quality geocoding services are freely available but not easy for beginners to use
+- solution: We created free Geocoder scripts that run inside a Google Sheet template to solve both problems
+- https://github.com/JackDougherty/google-sheets-geocoder
 
-**TO DO** revise this to start with the problem (address data), with many tools can transform into coordinates, but they do not let you extract the coordinates, then feature our Google Sheet geocoder tool as an all-purpose solution; all of the c
+** REORGANIZE all content below **
 
 Geocoding means to convert the description of a specific place, such as a street address, into a location on a map. Lots of free web tools geocode addresses for us. When you type my work address "300 Summit St, Hartford, CT 06106" into Google Maps, it displays the location as a red point on a map. Right-click that point, select the "What's Here?" option, and the latitude-longitude coordinates will appear: 41.748, -72.692.
 

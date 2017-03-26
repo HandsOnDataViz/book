@@ -44,16 +44,18 @@ These URLs are NOT case-sensitive, which means that ```https://github.com/USERNA
 
 #### My iFrame does not appear in my web page
 - Go back to the [Embed tutorials in this book](../../embed) to double-check the directions
--
-- Items listed in your iFrame (such as the URL, width, or height) should be enclosed inside quotes
-  - BROKEN iFrame
+- Items listed in your iFrame (such as the URL, width, or height) should be enclosed inside straight quotation marks (single or double)
+  - BROKEN iFrame (missing quotation marks for width and height)
   ```
   <iframe src="https://jackdougherty.github.io/leaflet-map-simple" width=90% height=350></iframe>
   ```
-  - FIXED iFrame
+  - FIXED iFrame (with correct quotation marks)
   ```
   <iframe src="https://jackdougherty.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
   ```
+- Use only straight quotes, not curly quotes. Avoid pasting text from a word-processor into GitHub, which can accidentally carry over curly quotes. Typing directly into the GitHub editor will create straight quotes.
+
+![Screenshot: Curly quotes versus straight quotes](curly-vs-straight-quotes.png)
 
 ## Problems with Leaflet Maps with Google Sheets template
 

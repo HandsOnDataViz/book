@@ -53,6 +53,10 @@ These URLs are NOT case-sensitive, which means that ```https://github.com/USERNA
   ```
   <iframe src="https://jackdougherty.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
   ```
+- Use only ```https``` (the extra 's' means 'secure'), not ```http```. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https.
+
+![Screenshot: Replace http with https](http-vs-https.png)
+
 - Use only straight quotes, not curly quotes. Avoid pasting text from a word-processor into GitHub, which can accidentally carry over curly quotes. Typing directly into the GitHub editor will create straight quotes.
 
 ![Screenshot: Curly quotes versus straight quotes](curly-vs-straight-quotes.png)

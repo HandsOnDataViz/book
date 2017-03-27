@@ -51,7 +51,9 @@ One of the most useful tools for creating meaningful polygon (or choropleth) map
 Beware that polygon map design choices about data classes and colors reflect the biases of the author and the software. Read the [Detect Bias in Data Stories](../detect) chapter in this book, especially [How to Lie with Maps](../detect/how-to-lie-with-maps)
 
 ## Learn more
+- Axis Maps, "The Basics of Data Classification," 2010, http://axismaps.github.io/thematic-cartography/articles/classification.html
 - Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation,” Lisa Charlotte Rost, April 22, 2016, https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/.
+- Josh Stevens, "Bivariate Choropleth Maps: A How-To Guide," February 18, 2015, http://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/.
 
 {% footer %}
 {% endfooter %}

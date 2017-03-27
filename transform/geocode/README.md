@@ -1,10 +1,11 @@
-# Geocode Addresses into Coordinates with Google Sheets script
-*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 26, 2017*
+# Geocode Addresses with Google Sheets Scripts
+*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 27, 2017*
 
 **TO DO**
-- problem 1: many tools geocode addresses into a map, but most do not let you save or extract the coordinates (explain)
-- problem 2: some high-quality geocoding services are freely available but not easy for beginners to use
-- solution: We created free Geocoder scripts that run inside a Google Sheet template to solve both problems
+- problem 1: some high-quality geocoding services are freely available but not easy for beginners to use
+- problem 2: many tools geocode addresses into a map, but most do not let you save or extract the coordinates (explain)
+- problem 3: some tools geocode addresses into other geographic units, such as US census tracts
+- solution: We created two free Geocoder scripts that run inside a Google Sheet template to solve these problems
 - https://github.com/JackDougherty/google-sheets-geocoder
 
 ** REORGANIZE all content below **

@@ -7,6 +7,9 @@
 - problem 3: some tools geocode addresses into other geographic units, such as US census tracts
 - solution: We created two free Geocoder scripts that run inside a Google Sheet template to solve these problems
 - https://github.com/JackDougherty/google-sheets-geocoder
+- Also describe and link back how to split columns to form multi-columns addresses
+- also describe and link back to how to unify columns to form a one-column address
+- add this https://developers.google.com/maps/faq#geocoder_queryformat
 
 ** REORGANIZE all content below **
 

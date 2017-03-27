@@ -1,5 +1,5 @@
 #Convert, Edit, Join, and Dissolve with MapShaper.org
-*By [Jack Dougherty](../../introduction/who.md), last updated March 16, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated March 27, 2017*
 
 ** TO DO **
 - rewrite into tool review/tutorial format
@@ -110,7 +110,7 @@ Sometimes your polygon map contains several columns of unwanted data. To quickly
 -filter-fields town
 ```
 
-##Join data columns with a polygon map
+##Join spreadsheet data with polygon map
 
 ** TO DO **
 - fix images and animations to map the new file names and column headers

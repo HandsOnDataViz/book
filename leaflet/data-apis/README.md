@@ -1,4 +1,4 @@
-## Leaflet Map Template with Live Data APIs
+## Pull Open Data into Leaflet Map with APIs
 
 ** TO DO **
 

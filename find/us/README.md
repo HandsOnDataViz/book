@@ -37,9 +37,9 @@ See also in this book: [Geocode addresses with the US Census Geocoder](../geocod
 
 ## Boundaries
 
-at 20m scale
 ** TO DO **
-- link files
+- link and source files and scale
+- http://mapstarter.com/
 
 {% footer %}
 {% endfooter %}

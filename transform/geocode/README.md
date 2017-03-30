@@ -1,5 +1,5 @@
-# Geocode Addresses with Google Sheets Scripts
-*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 27, 2017*
+# Geocode Locations into Coordinates with US Census or Google
+*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 30, 2017*
 
 **TO DO**
 - problem 1: some high-quality geocoding services are freely available but not easy for beginners to use

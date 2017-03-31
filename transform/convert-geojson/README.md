@@ -18,4 +18,5 @@ The shapefile format was created in the 1990s by ESRI, the company that develope
 
 The KML format rose in popularity during the late 2000s. Google Earth, a free and user-friendly tool, allowed many people to view and edit geographic data. KML files are commonly used in the Google Fusion Tables maps described in this book. Sometimes .kml files are distributed in a compressed .kmz format. See the chapter on [converting from KMZ to KML format](convert-kmz/index.html) in this book.
 
-##
+{% footer %}
+{% endfooter %}

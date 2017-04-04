@@ -10,10 +10,11 @@ This tutorial introduces the **basic steps** of working with code templates, usi
 Code templates help us to move beyond the limits of drag-and-drop web tools (such as Google Sheets and Tableau Public) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](../github). For more advanced examples, see the [Highcharts Templates](../highcharts) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](../fix) chapter in this book.
 
 ## Try it
-You will begin this tutorial with a basic chart template that includes only 7 points
+You will begin this tutorial with a basic chart template that includes only 7 points. Right-click to open [full-size chart in new tab](https://jackdougherty.github.io/highcharts-scatter-csv/).
+
 <iframe src="https://jackdougherty.github.io/highcharts-scatter-csv/" width="90%" height=425></iframe>
 
-By the end of this tutorial, you will learn how to modify the chart and add a new CSV spreadsheet with over 160 points:
+By the end of this tutorial, you will learn how to modify the chart and add a new CSV spreadsheet with over 160 points. Right-click to open [full-size chart in new tab](https://jackdougherty.github.io/highcharts-scatter-csv-instructor-sample).
 <iframe src="https://jackdougherty.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height=425></iframe>
 
 ## Video with step-by-step tutorial

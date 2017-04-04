@@ -1,0 +1,17 @@
+# Scatter Chart with CSV Data in Highcharts template
+
+## Try it
+You will begin this tutorial with a basic chart template that includes only 7 points
+<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv/" width="90%" height=425></iframe>
+
+By the end of this tutorial, you will learn how to modify the chart and add a new CSV spreadsheet with over 160 points:
+<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height=425></iframe>
+
+## Tutorial
+
+1) Right-click to open this GitHub code template in a new tab: https://github.com/JackDougherty/highcharts-scatter-csv
+
+2) Go to the [Fork and Edit a Highcharts Scatter Chart with GitHub tutorial](../../github/fork-highcharts) in this book.
+
+{% footer %}
+{% endfooter %}

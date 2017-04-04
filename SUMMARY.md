@@ -79,6 +79,7 @@
    * [How to Lie with Maps](detect/how-to-lie-with-maps/README.md)
 * [Tell Your Data Story](story/README.md)
 * [Highcharts Templates](highcharts/README.md)
+   * [Scatter Chart with CSV Data](highcharts/scatter-csv/README.md)
 * [Leaflet Map Templates](leaflet/README.md)
    * [Leaflet Maps with Google Sheets](leaflet/with-google-sheets/README.md)
    * [Leaflet with Socrata Data](leaflet/with-socrata/README.md)

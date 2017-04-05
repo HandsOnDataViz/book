@@ -34,11 +34,11 @@ In addition to the official repositories above, Connecticut news organizations t
 - To view or edit, drag files into http://geojson.io or http://mapshaper.org
 - Learn more in the [Transform Your Map Data](../../transform) chapter of this book
 
-| Geography | Year-Source-Scale  | Right-click + Save to download GeoJSON |
+| Geography | Year-Source-Size  | Right-click + Save to download GeoJSON |
 | :-------- | :------ | :----- | :-----   |
 | CT outline ![](ct-outline.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-outline.geojson](https://www.datavizforall.org/find/ct/ct-outline.geojson) |
 | CT counties ![](ct-counties.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-counties.geojson](https://www.datavizforall.org/find/ct/ct-counties.geojson) |
-| CT towns ![](ct-towns.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-towns.geojson](https://www.datavizforall.org/find/ct/ct-towns.geojson) |
+| CT towns ![](ct-towns.png) | [2010 Census UConn MAGIC WGS84 simplified to 224k](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-towns.geojson](https://www.datavizforall.org/find/ct/ct-towns.geojson) |
 | CT census tracts ![](ct-tracts-2010.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-tracts-2010.geojson](https://www.datavizforall.org/find/ct/ct-tracts-2010.geojson) |
 | Hartford County outline ![](hartfordcounty-outline.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartfordcounty-outline.geojson](https://www.datavizforall.org/find/ct/hartfordcounty-outline.geojson) |
 | Hartford County towns ![](hartfordcounty-towns.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartfordcounty-towns.geojson](https://www.datavizforall.org/find/ct/hartfordcounty-towns.geojson) |

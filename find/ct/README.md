@@ -1,5 +1,5 @@
 # Connecticut Open Data and Boundaries
-*By [Jack Dougherty](../../introduction/who.md), last updated March 16 at 4pm, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated April 5, 2017*
 
 Since this book was created in Hartford, Connecticut, we include state and municipal open data repositories and boundary files.
 

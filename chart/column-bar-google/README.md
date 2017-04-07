@@ -48,6 +48,8 @@ Best to compare categories side-by-side. Vertical columns, or horizontal bars fo
 
 10) To embed your chart in another website, click the upper-right chart editing controls, select Publish Chart, select Embed, and press the Publish button. Copy the iframe code and see the [Embed on Your Web](http://www.datavizforall.org/embed/) chapter in this book.
 
+11) Reminder: Currently, there is no easy way to cite or link to your source data inside a Google Sheets chart. Instead, cite and link to your source data in the text of the web page, as shown in the example at the top.
+
 ## Separated Column and Bar Charts
 Best to compare categories in separate clusters. Vertical columns, or horizontal bars for long labels.
 

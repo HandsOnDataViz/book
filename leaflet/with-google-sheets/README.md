@@ -1,5 +1,5 @@
 # Leaflet Maps with Google Sheets code template
-*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 25, 2017*
+*by [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated April 10, 2017*
 
 Question: If you have moved beyond simple drag-and-drop point map tools (such as [BatchGeo](../../map/batchgeo) and [Google My Maps](../../map/mymaps) tutorials in this book), and want to create point and/or polygon and/or polyline maps, where should you go?
 
@@ -206,6 +206,9 @@ Optional:
 4) To adjust the polygon legend colors and range, see the Polygon Data and Color Settings sections of the Polygon tab in Google Sheets.
 
 5) The code supports multiple polygon layers, which you can add (or delete) by duplicating the Polygons tab. Name them Polygons1, Polygons2, etc.
+
+* TO DO *
+-  Explain: To use both the automatic ColorBrewer Palette and manual colors, insert blanks (goes to automatic palette above), separated by semicolons. 
 
 ### H) Upload and display your own polyline GeoJSON data
 

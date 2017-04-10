@@ -1,5 +1,5 @@
 #Convert, Edit, Join, and Dissolve with MapShaper.org
-*By [Jack Dougherty](../../introduction/who.md), last updated March 27, 2017*
+*By [Jack Dougherty](../../introduction/who.md), last updated April 10, 2017*
 
 ** TO DO **
 - rewrite into tool review/tutorial format

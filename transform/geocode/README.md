@@ -1,5 +1,5 @@
 # Geocode Locations into Coordinates with US Census or Google
-*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 30, 2017*
+*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated April 10, 2017*
 
 Many free map tools geocode locations by placing them on a map, such as the [BatchGeo](../../map/batchgeo) and [Google My Maps tutorials](../../map/mymaps) in this book. But those tools typically do not allow you to easily extract the latitude-longitude coordinates for each point.
 
@@ -72,7 +72,7 @@ If you do not wish to File > Make a Copy of the Google Sheet templates above, yo
   - Unmatched addresses need to be manually corrected and re-submitted
 
 ### Try it: Batch Upload to US Census
-1) Right-click and Save this CSV file to your computer: [sample-addresses-50](https://www.datavizforall.org/geocode/sample-addresses-50.csv). CSV means comma-separated values, a generic spreadsheet format that most data tools can easily open.
+1) Right-click and Save this CSV file to your computer: [sample-addresses-50](https://www.datavizforall.org/transform/geocode/sample-addresses-50.csv). CSV means comma-separated values, a generic spreadsheet format that most data tools can easily open.
 
 2) Use any spreadsheet tool to organize your address data into five columns: any ID number, street, city, state, zip code. **Remove all column headers**.
 

@@ -31,7 +31,7 @@ Before you begin, sign up for a free GitHub account: http://github.com
 https://github.com/USERNAME/REPOSITORY
 ```
 
-Reminder: You can only fork a GitHub repo **one time**. If needed, see how to [Make a Second Copy of a GitHub Repo](../second-copy) in this book.
+Reminder: You can only fork a GitHub repo **one time**. If needed, see how to make a second copy in the [Create a New Repo in GitHub](../create-repo) chapter in this book.
 
 #### B) Publish your live map to public web with GitHub Pages
 

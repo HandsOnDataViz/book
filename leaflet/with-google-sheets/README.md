@@ -59,7 +59,7 @@ The web address (URL) of the new copy in your account will follow this format:
 https://github.com/USERNAME/leaflet-maps-with-google-sheets
 ```
 
-Reminder: You can only fork a GitHub repo **one time**. If needed, see how to [Make a Second Copy of a GitHub Repo](../second-copy) in this book.
+Reminder: You can only fork a GitHub repo **one time**. If needed, see how to make a second copy in the [Create a New Repo in GitHub](../../github/create-repo) chapter in this book.
 
 4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code to a live map on a public website that you control.
 
@@ -208,7 +208,7 @@ Optional:
 5) The code supports multiple polygon layers, which you can add (or delete) by duplicating the Polygons tab. Name them Polygons1, Polygons2, etc.
 
 * TO DO *
--  Explain: To use both the automatic ColorBrewer Palette and manual colors, insert blanks (goes to automatic palette above), separated by semicolons. 
+-  Explain: To use both the automatic ColorBrewer Palette and manual colors, insert blanks (goes to automatic palette above), separated by semicolons.
 
 ### H) Upload and display your own polyline GeoJSON data
 

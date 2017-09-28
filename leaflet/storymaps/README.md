@@ -1,18 +1,18 @@
-# Leaflet Point Storymap with Scrolling Narrative
+# Leaflet Story Maps with Google Sheets and Scrolling Narrative
 
-*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated March 31, 2016*
+*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated September 28, 2017*
 
-** TO DO **
-- revise this page to match updated Leaflet Storymap with Google Sheets
+## Try it
+Explore the map or right-click to [view full-screen map in a new tab](https://datavizforall.github.io/leaflet-storymaps-with-google-sheets/)
+<iframe src="https://datavizforall.github.io/leaflet-storymaps-with-google-sheets/" width="90%" height=500></iframe>
 
-## Try this demo
+The map pulls the point data and settings from a linked Google Sheet, which you can explore below or right-click to [view full-screen Sheet in a new tab](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/)
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqxGs67j80rAPDZdQaS5jI0avn1qs2y5N8fOaeHUGvyrnIwBmWomlfAuujtvPrxtF-5FBZxi_KdTUm/pubhtml?widget=true&amp;headers=false" width="90%" height=500></iframe>
 
-<iframe src='https://jackdougherty.github.io/leaflet-storymap' width='90%' height='550'></iframe>
 
-## View demo in new page
-- https://jackdougherty.github.io/leaflet-storymap/
+## Create Your Own
 
-## Create Your Own Storymap
+## TO DO -- update all directions below to match new Google Sheet format
 
 Before you begin, review previous tutorials in this book:
 - [Share, Edit, and Host Code Templates with GitHub](../github/)

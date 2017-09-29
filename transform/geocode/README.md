@@ -1,5 +1,5 @@
 # Geocode Locations into Coordinates with US Census or Google
-*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated April 10, 2017*
+*By [Ilya Ilyankou and Jack Dougherty](../../introduction/who.md), last updated September 28, 2017*
 
 Many free map tools geocode locations by placing them on a map, such as the [BatchGeo](../../map/batchgeo) and [Google My Maps tutorials](../../map/mymaps) in this book. But those tools typically do not allow you to easily extract the latitude-longitude coordinates for each point.
 
@@ -44,7 +44,7 @@ The Google Sheet Geocoder runs from a script insert in the Google Sheet, which c
 
 ## How to insert the Geocoder Script into any Google Sheet
 If you do not wish to File > Make a Copy of the Google Sheet templates above, you can insert the open-source Geocoder Scripts into your own Google Sheet:
-- Go to [Google Sheets Geocoder repo on GitHub](https://github.com/JackDougherty/google-sheets-geocoder)
+- Go to [Google Sheets Geocoder repo on GitHub](https://github.com/datavizforall/google-sheets-geocoder)
 - Sign in to your Google Sheets, then select Tools > Script Editor
 - File > Create New Script File
 - Open and copy a script (such as geocoder-census-google.gs) and paste into your Script Editor

@@ -13,6 +13,8 @@ Sometimes KML files are distributed in compressed KMZ format. One easy conversio
 - Use the Save As drop down menu to select .kml format
 
   ![](google-earth-save-kml.png)
+  
+Or use any zip-utility and simply unzip the kmz file. Kmz is simply a 'zipped' version of a kml file!
 
 {% footer %}
 {% endfooter %}

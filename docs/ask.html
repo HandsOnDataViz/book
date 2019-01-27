@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html  lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ask Questions When Choosing Tools | Data Visualization for All</title>
+  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Ask Questions When Choosing Tools | Data Visualization for All" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://datavizforall.github.io/" />
+  
+  <meta property="og:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more." />
+  <meta name="github-repo" content="datavizforall/datavizforall-book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ask Questions When Choosing Tools | Data Visualization for All" />
+  <meta name="twitter:site" content="@datavizforall" />
+  <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more." />
+  
+
+<meta name="author" content="Jack Dougherty">
+<meta name="author" content="Ilya Ilyankou">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="draw.html">
+<link rel="next" href="rate.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-37"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5488840-37');
+</script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><strong>Data Visualization for All</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
+<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors and Contributors</a></li>
+<li class="chapter" data-level="" data-path="read.html"><a href="read.html"><i class="fa fa-check"></i>How to Read and Comment</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Tools to Tell Your Data Story</a><ul>
+<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
+<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i>Improve Your Spreadsheet Skills</a><ul>
+<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload Files and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Data with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Save Spreadsheets in CSV or ODS</a></li>
+<li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
+<li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
+<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Group Data with Pivot Tables</a></li>
+<li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i>Find and Know Your Data</a><ul>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a></li>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a></li>
+<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public or Private Data?</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a></li>
+<li class="chapter" data-level="" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i>Connecticut Open Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i>Clean Up Messy Data</a><ul>
+<li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
+<li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with Open Refine</a></li>
+<li class="chapter" data-level="" data-path="ctnamecleaner.html"><a href="ctnamecleaner.html"><i class="fa fa-check"></i>Fix Connecticut Town Names with CTNamecleaner</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i>Chart Your Data</a><ul>
+<li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
+<li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i>Map Your Data</a><ul>
+<li class="chapter" data-level="" data-path="map-design-principles.html"><a href="map-design-principles.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Simple Point Map with BatchGeo</a></li>
+<li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
+<li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
+<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
+<li class="chapter" data-level="" data-path="social-explorer.html"><a href="social-explorer.html"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i>Embed On Your Web</a><ul>
+<li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
+<li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
+<li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an iFrame</a></li>
+<li class="chapter" data-level="" data-path="iframe-github.html"><a href="iframe-github.html"><i class="fa fa-check"></i>Embed an iframe in GitHub Pages</a></li>
+<li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an iFrame on WordPress.org</a></li>
+<li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i>Modify and Host Code with GitHub</a><ul>
+<li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork and Edit a Simple Leaflet Map with GitHub</a></li>
+<li class="chapter" data-level="" data-path="fork-and-edit-a-highcharts-scatter-chart-with-github.html"><a href="fork-and-edit-a-highcharts-scatter-chart-with-github.html"><i class="fa fa-check"></i>Fork and Edit a Highcharts Scatter Chart with GitHub</a></li>
+<li class="chapter" data-level="" data-path="create-a-new-repo-and-upload-code-with-github.html"><a href="create-a-new-repo-and-upload-code-with-github.html"><i class="fa fa-check"></i>Create a New Repo and Upload Code with GitHub</a></li>
+<li class="chapter" data-level="" data-path="choose-license.html"><a href="choose-license.html"><i class="fa fa-check"></i>Choose an Open-Source Code License</a></li>
+<li class="chapter" data-level="" data-path="pull-request.html"><a href="pull-request.html"><i class="fa fa-check"></i>Pull Request to Merge Changes on GitHub</a></li>
+<li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
+<li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i>Transform Your Map Data</a><ul>
+<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
+<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
+<li class="chapter" data-level="" data-path="normalize-data-to-create-meaningful-polygon-maps.html"><a href="normalize-data-to-create-meaningful-polygon-maps.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert Map Data into GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="convert-edit-and-create-map-data-with-geojson-io.html"><a href="convert-edit-and-create-map-data-with-geojson-io.html"><i class="fa fa-check"></i>Convert, Edit, and Create Map Data with GeoJson.io</a></li>
+<li class="chapter" data-level="" data-path="convert-edit-join-and-dissolve-with-mapshaper-org.html"><a href="convert-edit-join-and-dissolve-with-mapshaper-org.html"><i class="fa fa-check"></i>Convert, Edit, Join, and Dissolve with MapShaper.org</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i>Detect Bias in Data Stories</a><ul>
+<li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i>Tell Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="highcharts.html"><a href="highcharts.html"><i class="fa fa-check"></i>Highcharts Code Templates</a><ul>
+<li class="chapter" data-level="" data-path="scatter-chart-with-csv-data-in-highcharts-template.html"><a href="scatter-chart-with-csv-data-in-highcharts-template.html"><i class="fa fa-check"></i>Scatter Chart with CSV Data in Highcharts Template</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i>Leaflet Map Templates</a><ul>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
+<li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-socrata.html"><a href="leaflet-maps-with-socrata.html"><i class="fa fa-check"></i>Leaflet Maps with Socrata API Open Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-open-apis.html"><a href="leaflet-maps-open-apis.html"><i class="fa fa-check"></i>Pull Open Data into Leaflet Map with APIs</a></li>
+<li class="chapter" data-level="" data-path="leaflet-polygon-map-click.html"><a href="leaflet-polygon-map-click.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Clickable Info Window template</a></li>
+<li class="chapter" data-level="" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
+<li class="chapter" data-level="" data-path="leaflet-polygon-map-multi-year-tabs.html"><a href="leaflet-polygon-map-multi-year-tabs.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Multi-Year Tabs template</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i>Peer Review Samples</a></li>
+<li class="chapter" data-level="" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i>Publishing with Bookdown</a></li>
+<li class="chapter" data-level="" data-path="stuff-to-do.html"><a href="stuff-to-do.html"><i class="fa fa-check"></i>Stuff To Do</a></li>
+<li class="divider"></li>
+<li>Open access book-in-progress</li>
+<li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></li>
+<li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Visualization for All</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ask" class="section level2">
+<h2>Ask Questions When Choosing Tools</h2>
+<p><em>last updated February 6, 2017</em></p>
+<p>When each of us decides which digital tools best fit our needs, we often face trade-offs. On one hand, many of us prefer easy-to-learn tools, especially those with a drag-and-drop interface, but they often force us to settle for limited options. On the other hand, we also favor powerful tools that allow us to control and customize our work, yet most of these require higher-level coding skills. The goal of this book is to find the best of both worlds: that “sweet spot” where tools are both friendly and flexible.</p>
+<div class="figure">
+<img src="images/01-choose/tool-sweet-spot.png" alt="Diagram: the sweet spot for easy-to-learn and powerful tools" />
+<p class="caption">Diagram: the ‘sweet spot’ for easy-to-learn and powerful tools</p>
+</div>
+<p>Before testing out new tools, try listing the criteria that guide your decision-making process. What are the most important factors that influence whether or not you add another item to your digital toolkit? Here’s the list that came to our minds:</p>
+<p><strong><em>1) Price:</em></strong> Is the tool free, or is there a “freemium” model to pay for more features or higher usage?</p>
+<p><strong><em>2) Easy-to-learn:</em></strong> Is the tool relatively simple for new users without coding skills?</p>
+<p><strong><em>3) Power:</em></strong> Does the tool support large amounts of data, and various types of visualizations?</p>
+<p><strong><em>4) Customization:</em></strong> Can I modify details about how my work appears?</p>
+<p><strong><em>5) Data Migration:</em></strong> Can I easily move my data in and out, in case I switch to a different tool?</p>
+<p>*** 6) Hosting:*** Can I decide exactly where my data and visualizations will be stored online?</p>
+<p>*** 7) Support:*** Is the tool actively maintained by its creators, and do they answer questions?</p>
+<p>*** 8) Open Source:*** Is the tool’s software visible, can it be modified, and redistributed?</p>
+<p>*** 9) Security:*** Is the tool and my data protected from malicious hackers and malware?</p>
+<p>*** 10) Collaborative:*** Does the tool allow several people to work together on one shared product?</p>
+<p>*** 11) Privacy:*** Under the terms of service, is my data and work private or public?</p>
+<p>*** 12) Error-friendly:*** When something fails, does the tool point out possible problems and solutions?</p>
+<p>*** 13) Cross-<a href="platform:***" class="uri">platform:***</a> Does this tool work across different computer operating systems?</p>
+<p>*** 14) Mobile-friendly:*** Will it correctly display my work on various mobile devices and browsers?</p>
+<p>That’s a long list! It’s even longer than the number of tools we’ll mention in this book. But don’t let it overwhelm you. The diagram at the top of the page illustrates the two most important criteria for the many free tools that are currently available: easy-to-learn and powerful features.</p>
+<div id="learn-more-about-choosing-tools" class="section level4 unnumbered">
+<h4>Learn more about choosing tools</h4>
+<p>Carl V. Lewis, Dataviz.tools: A curated guide to the best tools, resources and technologies for data visualization, <a href="http://dataviz.tools" class="uri">http://dataviz.tools</a></p>
+<p>Lincoln Mullen, “How to Make Prudent Choices About Your Tools,” ProfHacker blog, Chronicle of Higher Education, August 14, 2013, <a href="http://www.chronicle.com/blogs/profhacker/how-to-make-prudent-choices-about-your-tools" class="uri">http://www.chronicle.com/blogs/profhacker/how-to-make-prudent-choices-about-your-tools</a></p>
+<p>Lisa Charlotte Rost, “What I Learned Recreating One Chart Using 24 Tools,” Source, December 8, 2016, <a href="https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/" class="uri">https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/</a></p>
+<p>Lisa Spiro and colleagues, DiRT: Digital Research Tools Directory (formerly Bamboo), <a href="http://dirtdirectory.org" class="uri">http://dirtdirectory.org</a></p>
+<p>Audrey Watters, “‘The Audrey Test’: Or, What Should Every Techie Know About Education?,” Hack Education, March 17, 2012, <a href="http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education" class="uri">http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="draw.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rate.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/datavizforall/datavizforall-book/edit/master/01.2-ask.Rmd",
+"text": "Edit on GitHub"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+</body>
+
+</html>

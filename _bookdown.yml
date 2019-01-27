@@ -1,0 +1,8 @@
+output_dir: "docs"
+book_filename: "Dougherty-Ilyankou-Data-Visualization-for-All"
+edit: https://github.com/datavizforall/datavizforall-bookdown/edit/master/%s
+language:
+  label:
+    fig: "Image "
+ui:
+    edit: "Edit"

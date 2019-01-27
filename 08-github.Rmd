@@ -1,0 +1,32 @@
+# Modify and Host Code with GitHub {#github}
+*by [Jack Dougherty, Stacy Lam, and David Tatem](authors), last updated March 11, 2017*
+
+In the first half of this book, we explored free web services that offer easy drag-and-drop tools to create interactive charts and maps, such as Google Sheets, Google My Maps, BatchGeo, Carto, and Tableau Public. But these web services have limited options for designing and customizing your visualizations, and also make you dependent on their web servers to host your work. In this second half of the book, we'll explore how to copy, edit, and host code templates, meaning pre-written software instructions to create visualizations. With templates, no prior coding skills are necessary. You will learn how to make simple edits to insert your data, customize its appearance, and display it on the web on a site you control.
+
+Enroll in our free online course *to do: link*, which introduces these topics in the brief video below, and offers more exercises and opportunities to interact with instructors and other learners.
+
+#### Video overview {-}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w6dQ-RIQ5bc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+#### Tool Review {-}
+GitHub (http://github.com) is a versatile tool to share, edit, and host simple code templates on the public web. Requires a free account. Although advanced coders use more powerful command-line versions of this tool, this introduction demonstrates all of the basic steps using GitHub in the web browser.
+
+- Pros:
+  - Free and easy-to-learn tool that beginners can use in the web browser.
+  - Popular tool to share, copy, and edit open-source code repositories (project folders).
+  - Host simple code (such as HTML/CSS/JavaScript) on the live web with GitHub Pages.
+  - Built-in support to quickly display open-data formats: CSV tables and GeoJSON geography.
+  - Easy to migrate code repositories to a different web server.
+- Cons:
+  - By default, all work on GitHub is public. Private repositories require payment.
+  - New users often confuse web addresses for code repository versus published web page.
+
+In this chapter, you will learn how to:
+
+- [Fork and edit a simple Leaflet map with GitHub](fork-leaflet)
+- [Fork and edit a Highcharts scatter chart with GitHub](fork-highcharts)
+- [Create a new repository and upload code with GitHub](create-repo)
+- [Choose an open-source code license](choose-license)
+- [Pull request to merge changes on GitHub](pull-request)
+- [Work more efficiently with Atom editor and GitHub Desktop](atom-desktop)
+- [Fix Common Code and GitHub Errors](fix-code)

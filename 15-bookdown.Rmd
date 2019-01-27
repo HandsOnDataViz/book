@@ -1,0 +1,169 @@
+# Publishing with Bookdown {#bookdown}
+*by [Jack Dougherty and Ilya Ilyankou](authors), last updated January 26, 2019*
+
+For a general introduction to publishing with Bookdown and RStudio in Markdown format, see Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R Markdown*, 2018, https://bookdown.org/yihui/bookdown/.
+
+#### GitHub and Bookdown workflow ROUGH NOTES {-}
+- Install Atom editor, GitHub Desktop, R, RStudio, bookdown package, and tinytex package (to create PDFs) **show steps**
+- Compose in Atom editor, following syntax and style guide below.
+- Build the book as often as desired with RStudio bookdown. Bookdown settings: build all book formats into the `docs` folder.
+- Push changes to repo with GitHub Desktop.
+- In your online book repo, set GitHub Pages to publish from  `master/docs`
+- GitHub Pages custom domain setting adds `CNAME` file to `docs` folder; do not delete
+- Manually transfer `404.html` into 'docs' folder, since not auto-built; do not delete
+- Manually add `google-analytics-otl.html` to root (where bookdown looks for it) and also to `docs` folder (since bookdown does *not appear* to copy it to there on each build)
+- If you have a footer, manually transfer X.X-footer.Rmd to end of each chapter
+- For final PDF and eBook builds:
+  - at present, book builds are not creating PDF versions **TO DO**
+  - review lessons from Tracey Wilson book, and pehaps create a "printbook" fork on GitHub, remove cover image and footers, and learn more about modifying biblio output across different formats. See solution notes https://stackoverflow.com/questions/48965247/use-csl-file-for-pdf-output-in-bookdown/49145699#49145699
+
+#### Syntax and Style Guide {-}
+
+##### Links with brackets and parentheses {-}
+Use brackets and parentheses for an [embedded link](http://example.com)
+
+Use parentheses only for a non-embedded link (http://example.com)
+
+Similarly, display URL with angle brackets: <http://example.com>
+
+If necessary, use HTML to create <a href="http://example.com/" target="_blank">link that opens in a new page</a>
+
+##### Headers with Cross-Reference Links {-}
+
+This DataVizForAll book, each chapter and section is a separate .Rmd file. The numerical order of the file names (index.Rmd, 0.1-x.Rmd, 0.2-y.Rmd, 01-z.Rmd, etc) determines the sequence that they will appear in the built book.
+
+In the index.Rmd file, the settings for the web book state that each chapter and section will be split into its own HTML page, with no automatic numbering.
+
+```markdown
+split_by: section
+number_sections: false
+```
+
+Chapters begin with a first-level header (one hashtag: #) and sections begin with a second-level header (two hashtags: ##). Both chapter and section titles are immediately followed by short ID in curly brackets to enable easy cross-reference links inside the book. The short IDs **MUST** be unique, and ideally **SHOULD** match the .Rmd file name. Although each hashtag chapter/section title is the default ID (such as #Introduction in index.Rmd),  it's safer to create a unique short ID for each chapter/section to avoid confusion.
+
+Bylines appear in italics at the top of each chapter or section, with an embedded cross-reference links to the authors page, followed by the last updated date.
+
+Examples of chapter and section headers, with short IDs, bylines, and dates:
+
+```markdown
+# Chapter Title {#chapter}
+*by [Jack Dougherty and Ilya Ilyankou](authors), last updated January 22, 2019*
+```
+
+```markdown
+## Section Title {#section}
+*by [Jack Dougherty and Ilya Ilyankou](authors), last updated January 22, 2019*
+```
+
+Subheadings inside the chapters/sections must begin with 4 hashtags and end with a no-numbering symbol `{-}`. Note: Using three hashtags makes the subheader appear in the TOC because I have not found way to control toc_depth in web output. Use the no-number symbol to prevent automatic numbering of subheaders (in case we switch the book settings from no-auto-numbering to auto-numbering in the future).
+
+```markdown
+#### Subheadings: use 4 hashtags and a no-number symbol {-}
+```
+
+To embed an internal cross-reference to any chapter or section in the book, embed a link with brackets [for the text] and parentheses (with the short ID). If the cross-ref appears in the body of the text, ADD THE PHRASE "in this book" to the end of the sentence to allow us to search/find all cross-refs in future if needed:
+
+```markdown
+See the [GitHub tutorial](github) in this book.
+```
+NOTE that cross-reference links above are designed for HOSTED WEB BOOKS, and may not work the same in local repo versions, or in ebook/PDF versions.
+
+#### Bookdown-flavored Markdown Syntax
+
+For an em-dash, use three hyphens---like this---rather than two hyphens.
+
+For a block quote, start each line with a caret **AND** add two spaces to insert a line break:
+
+Code:
+```markdown
+> I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him.    
+> --- Mark Twain  
+> --- notable American author  
+```
+Demo:
+
+> I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him.    
+> --- Mark Twain  
+> --- notable American author  
+
+Simple footnote
+
+Code:
+```Markdown
+A text-only footnote.^[This is a footnote, with no reference]
+```
+Demo:
+A text-only footnote.^[This is a footnote, with no reference]
+
+See On The Line book (http://OnTheLine.trincoll.edu) for more details about footnotes using Zotero and Better BibTeX.
+
+#### Embed images and iframes {-}
+
+Insert image using Markdown syntax:
+
+Code:
+```Markdown
+![Caption using markdown: auto-number does not appear in web, but appears in pdf, text *with italics*, no center-alignment on web, but centered in PDF, with [source link](https://google.com)](images/sample.jpg)
+```
+Demo:
+
+![Caption using markdown: auto-number does not appear in web, but appears in pdf, text *with italics*, no center-alignment on web, but centered in PDF, with [source link](https://google.com)](images/sample.jpg)
+
+#### Explore the Chart: embedded HTML iframe {-}
+
+Code:
+```HTML
+<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px"></iframe>
+Recommended: Insert caption and link to view the full-screen version.
+```
+Demo:
+
+<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px"></iframe>
+Recommended: Insert caption and link to view the full-screen version.
+
+#### Scroll the Map: embedded HTML iframe {-}
+
+Code:
+```html
+<iframe src="https://ontheline.github.io/otl-town-borders/" width="90%" height="525px"></iframe>
+Recommended: Insert caption and link to view the full-screen version.
+```
+Demo:
+
+<iframe src="https://ontheline.github.io/otl-town-borders/" width="90%" height="525px"></iframe>
+Recommended: Insert caption and link to view the full-screen version.
+
+#### Watch the YouTube Video: embedded HTML iframe from secure https {-}
+
+Code:
+```html
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gl3uIRYYUmI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+Recommended: Insert caption and link to view the full-screen version.
+```
+Demo:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gl3uIRYYUmI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+Recommended: Insert caption and link to view the full-screen version.
+
+#### Output in other formats {-}
+
+This book is being built primarily for the web edition, and will require more work to create formatted PDF and EPUB versions.
+
+Add this later to index.Rmd, and correctly place and indent it
+
+```markdown
+      download: [pdf, epub, mobi, docx]
+```
+
+And also add this to index.Rmd, and correctly place and indent it
+
+```markdown
+bookdown::pdf_book: default
+
+bookdown::epub_book:
+  dev: svglite
+  stylesheet: css/style.css
+
+bookdown::word_document2:
+  default
+```

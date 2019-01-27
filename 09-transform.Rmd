@@ -1,0 +1,14 @@
+# Transform Your Map Data {#transform}
+*by [Jack Dougherty with Stacy Lam and David Tatem](authors), last updated March 30, 2017*
+
+Interactive web maps are made up of different layers, such as background basemaps, colored or shaded polygons, and/or colored point markers. This chapter describes how to transform your data into layers that you can upload into online map tools and templates. Specifically, you will learn how to:
+
+- [Geocode locations into coordinates with US Census or Google](geocode)
+- [Pivot address-level point data into polygon data](pivot-point-to-polygon)
+- [Normalize data to create more meaningful polygon maps](normalize)
+- [Convert map data](convert-geojson) with [GeoJSON.io](geojsonio) or [Mapshaper.org](mapshaper)
+- [Join spreadsheets and polygon boundaries with MapShaper.org](mapshaper)
+
+Enroll in our free online course **TO DO add link**, which introduces these topics in the brief video below, and offers more exercises and opportunities to interact with instructors and other learners.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3sjjVEJY4MY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

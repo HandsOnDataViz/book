@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html  lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Leaflet Storymaps with Google Sheets and Scrolling Narrative | Data Visualization for All</title>
+  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Leaflet Storymaps with Google Sheets and Scrolling Narrative | Data Visualization for All" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://datavizforall.github.io/" />
+  
+  <meta property="og:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more." />
+  <meta name="github-repo" content="datavizforall/datavizforall-book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Leaflet Storymaps with Google Sheets and Scrolling Narrative | Data Visualization for All" />
+  <meta name="twitter:site" content="@datavizforall" />
+  <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more." />
+  
+
+<meta name="author" content="Jack Dougherty">
+<meta name="author" content="Ilya Ilyankou">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="leaflet-maps-with-google-sheets.html">
+<link rel="next" href="leaflet-maps-with-socrata.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-37"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5488840-37');
+</script>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><strong>Data Visualization for All</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
+<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors and Contributors</a></li>
+<li class="chapter" data-level="" data-path="read.html"><a href="read.html"><i class="fa fa-check"></i>How to Read and Comment</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Tools to Tell Your Data Story</a><ul>
+<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
+<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i>Improve Your Spreadsheet Skills</a><ul>
+<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload Files and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Data with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Save Spreadsheets in CSV or ODS</a></li>
+<li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
+<li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
+<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Group Data with Pivot Tables</a></li>
+<li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i>Find and Know Your Data</a><ul>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a></li>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a></li>
+<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public or Private Data?</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a></li>
+<li class="chapter" data-level="" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i>Connecticut Open Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i>Clean Up Messy Data</a><ul>
+<li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
+<li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with Open Refine</a></li>
+<li class="chapter" data-level="" data-path="ctnamecleaner.html"><a href="ctnamecleaner.html"><i class="fa fa-check"></i>Fix Connecticut Town Names with CTNamecleaner</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i>Chart Your Data</a><ul>
+<li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
+<li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i>Map Your Data</a><ul>
+<li class="chapter" data-level="" data-path="map-design-principles.html"><a href="map-design-principles.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Simple Point Map with BatchGeo</a></li>
+<li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
+<li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
+<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
+<li class="chapter" data-level="" data-path="social-explorer.html"><a href="social-explorer.html"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i>Embed On Your Web</a><ul>
+<li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
+<li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
+<li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an iFrame</a></li>
+<li class="chapter" data-level="" data-path="iframe-github.html"><a href="iframe-github.html"><i class="fa fa-check"></i>Embed an iframe in GitHub Pages</a></li>
+<li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an iFrame on WordPress.org</a></li>
+<li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i>Modify and Host Code with GitHub</a><ul>
+<li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork and Edit a Simple Leaflet Map with GitHub</a></li>
+<li class="chapter" data-level="" data-path="fork-and-edit-a-highcharts-scatter-chart-with-github.html"><a href="fork-and-edit-a-highcharts-scatter-chart-with-github.html"><i class="fa fa-check"></i>Fork and Edit a Highcharts Scatter Chart with GitHub</a></li>
+<li class="chapter" data-level="" data-path="create-a-new-repo-and-upload-code-with-github.html"><a href="create-a-new-repo-and-upload-code-with-github.html"><i class="fa fa-check"></i>Create a New Repo and Upload Code with GitHub</a></li>
+<li class="chapter" data-level="" data-path="choose-license.html"><a href="choose-license.html"><i class="fa fa-check"></i>Choose an Open-Source Code License</a></li>
+<li class="chapter" data-level="" data-path="pull-request.html"><a href="pull-request.html"><i class="fa fa-check"></i>Pull Request to Merge Changes on GitHub</a></li>
+<li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
+<li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i>Transform Your Map Data</a><ul>
+<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
+<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
+<li class="chapter" data-level="" data-path="normalize-data-to-create-meaningful-polygon-maps.html"><a href="normalize-data-to-create-meaningful-polygon-maps.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert Map Data into GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="convert-edit-and-create-map-data-with-geojson-io.html"><a href="convert-edit-and-create-map-data-with-geojson-io.html"><i class="fa fa-check"></i>Convert, Edit, and Create Map Data with GeoJson.io</a></li>
+<li class="chapter" data-level="" data-path="convert-edit-join-and-dissolve-with-mapshaper-org.html"><a href="convert-edit-join-and-dissolve-with-mapshaper-org.html"><i class="fa fa-check"></i>Convert, Edit, Join, and Dissolve with MapShaper.org</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i>Detect Bias in Data Stories</a><ul>
+<li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i>Tell Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="highcharts.html"><a href="highcharts.html"><i class="fa fa-check"></i>Highcharts Code Templates</a><ul>
+<li class="chapter" data-level="" data-path="scatter-chart-with-csv-data-in-highcharts-template.html"><a href="scatter-chart-with-csv-data-in-highcharts-template.html"><i class="fa fa-check"></i>Scatter Chart with CSV Data in Highcharts Template</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i>Leaflet Map Templates</a><ul>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
+<li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-socrata.html"><a href="leaflet-maps-with-socrata.html"><i class="fa fa-check"></i>Leaflet Maps with Socrata API Open Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-open-apis.html"><a href="leaflet-maps-open-apis.html"><i class="fa fa-check"></i>Pull Open Data into Leaflet Map with APIs</a></li>
+<li class="chapter" data-level="" data-path="leaflet-polygon-map-click.html"><a href="leaflet-polygon-map-click.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Clickable Info Window template</a></li>
+<li class="chapter" data-level="" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
+<li class="chapter" data-level="" data-path="leaflet-polygon-map-multi-year-tabs.html"><a href="leaflet-polygon-map-multi-year-tabs.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Multi-Year Tabs template</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i>Peer Review Samples</a></li>
+<li class="chapter" data-level="" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i>Publishing with Bookdown</a></li>
+<li class="chapter" data-level="" data-path="stuff-to-do.html"><a href="stuff-to-do.html"><i class="fa fa-check"></i>Stuff To Do</a></li>
+<li class="divider"></li>
+<li>Open access book-in-progress</li>
+<li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></li>
+<li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Visualization for All</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="leaflet-storymaps-with-google-sheets" class="section level2">
+<h2>Leaflet Storymaps with Google Sheets and Scrolling Narrative</h2>
+<p><em>By <a href="authors">Ilya Ilyankou and Jack Dougherty</a>, last updated September 28, 2017</em></p>
+<div id="try-it-11" class="section level4 unnumbered">
+<h4>Try it</h4>
+<p>Explore the map or right-click to <a href="https://datavizforall.github.io/leaflet-storymaps-with-google-sheets/">view full-screen map in a new tab</a> <iframe src="https://datavizforall.github.io/leaflet-storymaps-with-google-sheets/" width="90%" height=500></iframe></p>
+<p>The map pulls the point data and settings from a linked Google Sheet, which you can explore below or right-click to <a href="https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/">view full-screen Sheet in a new tab</a> <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqxGs67j80rAPDZdQaS5jI0avn1qs2y5N8fOaeHUGvyrnIwBmWomlfAuujtvPrxtF-5FBZxi_KdTUm/pubhtml?widget=true&amp;headers=false" width="90%" height=500></iframe></p>
+</div>
+<div id="features" class="section level4 unnumbered">
+<h4>Features</h4>
+<ul>
+<li>Show map points, text, images, and links with scrolling narrative</li>
+<li>Free and open-source code template, built on Leaflet and linked to Google Sheets</li>
+<li>Fork the code and host your live map on the web for free with GitHub Pages</li>
+<li>Geocode location data with US Census or Google, using script inside the Google Sheet</li>
+<li>Easy-to-modify data and map options in Google Sheet tabs or uploaded CSV files</li>
+<li>Responsive design resizes your maps to display inside most mobile devices</li>
+</ul>
+</div>
+<div id="create-your-own" class="section level4 unnumbered">
+<h4>Create Your Own</h4>
+<ul>
+<li><ol style="list-style-type: upper-alpha">
+<li>Fork (copy) the code template and publish your version with GitHub Pages</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: upper-alpha">
+<li>File &gt; Make a Copy of Google Sheet template, Share, and File &gt; Publish</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: upper-alpha">
+<li>Paste your Google Sheet URL in two places in your GitHub repo</li>
+</ol></li>
+<li><ol start="4" style="list-style-type: upper-alpha">
+<li>Modify your map settings in the Options tab and test your live map</li>
+</ol></li>
+<li><ol start="5" style="list-style-type: upper-alpha">
+<li>Geocode locations in the Points tab</li>
+</ol></li>
+</ul>
+<p>To solve problems, see <a href="fix-code">Fix Common GitHub and Code Errors</a> in this book.</p>
+</div>
+<div id="a-fork-copy-the-code-template-and-publish-your-version-with-github-pages-1" class="section level4 unnumbered">
+<h4>A) Fork (copy) the code template and publish your version with GitHub Pages</h4>
+<p><strong>Before you begin</strong>, this tutorial assumes that you:</p>
+<ul>
+<li>have a <a href="http://drive.google.com">free Google Drive account</a>, and learned the <a href="copy">File &gt; Make a Copy in Google Sheets</a> tutorial in this book</li>
+<li>have a <a href="http://github.com">free GitHub account</a>, and understand concepts from the <a href="github">Modify and Host Code with GitHub</a> chapter in this book</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>Right-click to open this GitHub code template in a new tab: <a href="https://github.com/datavizforall/leaflet-storymaps-with-google-sheets" class="uri">https://github.com/datavizforall/leaflet-storymaps-with-google-sheets</a></p></li>
+<li><p>In the upper-right corner of the code template, sign in to your free GitHub account</p></li>
+<li><p>In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your own account. The web address (URL) of the new copy in your account will follow this format:</p>
+<pre><code>https://github.com/USERNAME/leaflet-storymaps-with-google-sheets</code></pre></li>
+</ol>
+<p>Reminder: You can only fork a GitHub repo <strong>one time</strong>. If needed, see how to make a second copy in the <a href="create-repo">Create a New Repo in GitHub</a> chapter in this book.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code to a live map on a public website that you control.</p></li>
+<li><p>Scroll down to GitHub Pages section again, and copy the link to your published web site, which will follow this format:</p>
+<pre><code>https://USERNAME.github.io/leaflet-storymaps-with-google-sheets</code></pre></li>
+<li><p>Scroll up to the top, and click on your repo name to go back to its main page.</p></li>
+<li><p>At the top level of your repo main page, click on README.md, and click the pencil icon to edit this file, written in easy-to-read Markdown code.</p></li>
+<li><p>Delete the link to the current live site, and paste in the link to YOUR site. Scroll down and Commit to save your edits.</p></li>
+<li><p>On your repo main page, right-click the link to your live map to open in a new tab. <strong>Be patient</strong> during busy periods on GitHub, when your website may take up to 1 minute to appear the first time.</p></li>
+</ol>
+</div>
+<div id="b-file-make-a-copy-of-google-sheet-template-share-and-file-publish-1" class="section level4 unnumbered">
+<h4>B) File &gt; Make a Copy of Google Sheet template, Share, and File &gt; Publish</h4>
+<ol style="list-style-type: decimal">
+<li><p>Right-click to open this Google Sheets template in a new tab: <a href="https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/" class="uri">https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/</a></p></li>
+<li><p>Sign into your Google account</p></li>
+<li><p>File &gt; Make a Copy of the Google Sheet template to your Google Drive</p></li>
+<li><p>Click the blue Share button, click Advanced, click to change Private to Anyone with the link &gt; Can View the Sheet. This will make your public data easier to view in your map.</p></li>
+<li><p>File &gt; Publish the Link to your Google Sheet to the public web, so the Leaflet map code can read it.</p></li>
+</ol>
+<div class="figure">
+<img src="images/12-leaflet/lmwgs-file-publish.png" alt="Screenshot: File &gt; Publish the link to your Google Sheet" />
+<p class="caption">Screenshot: File &gt; Publish the link to your Google Sheet</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>At the top of your browser, copy your Google Sheet web address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>). Do NOT copy the published URL (which usually ends in <code>...XYZ/pubhtml</code>).</li>
+</ol>
+<div class="figure">
+<img src="images/12-leaflet/lmwgs-copy-sheet-url-not-pub-url.png" alt="Screenshot: Copy the Google Sheet URL, not the Publish URL" />
+<p class="caption">Screenshot: Copy the Google Sheet URL, not the Publish URL</p>
+</div>
+</div>
+<div id="c-paste-your-google-sheet-url-in-two-places-in-your-github-repo-1" class="section level4 unnumbered">
+<h4>C) Paste your Google Sheet URL in two places in your GitHub repo</h4>
+<ol style="list-style-type: decimal">
+<li><p>First, connect your Google Sheet directly to your Leaflet Map code. In your Github code repo, click to open this file: <code>google-doc-url.js</code></p></li>
+<li><p>Click the pencil symbol to edit the file.</p></li>
+<li><p>Paste your Google Sheet URL into the code to replace the current URL. Do not delete the single-quotation marks or semicolon.</p></li>
+<li><p>Scroll to bottom of page and press Commit to save your changes. Now the Leaflet Map code can locate your published Google Sheet.</p></li>
+<li><p>Next, let’s paste your Google Sheet URL in a second place to keep track of it. Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.</p></li>
+</ol>
+</div>
+<div id="d-modify-your-map-settings-in-the-options-tab-and-test-your-live-map-1" class="section level4 unnumbered">
+<h4>D) Modify your map settings in the Options tab and test your live map</h4>
+<p>In the top-level of your GitHub repo, test the new links to your map and your Google Sheet to make sure they work and point to your versions.</p>
+<p>** TO DO - redo GIF **</p>
+<p>In your linked Google Sheet, go to the Options Tab and modify these items:</p>
+<ol style="list-style-type: decimal">
+<li><p>Map Title – insert your own title</p></li>
+<li><p>Map Subtitle – insert your own version</p></li>
+<li><p>Author Name – insert your own name, or first name, or initials (will be public)</p></li>
+<li><p>Author Email or Website – insert your own (will be public), or delete the current name to make it blank</p></li>
+</ol>
+<p>Open the link to your live map in a new browser tab and refresh to see your changes.</p>
+</div>
+<div id="e-geocode-locations-and-customize-new-markers-in-the-points-tab-1" class="section level4 unnumbered">
+<h4>E) Geocode locations and customize new markers in the Points tab</h4>
+<p>In your new map, our next goal is to add and modify the appearance of a new set of point markers, based on new addresses that you will enter and geocode.</p>
+<p>In the Points tab of your Google Sheet:</p>
+<ol style="list-style-type: decimal">
+<li><p>Do NOT delete or rename any column headers. However, you have the option to add new column headers to display in your map table.</p></li>
+<li><p>Geocode your new data inside your Google Sheet by dragging your cursor to select 6 columns of data: Location - Latitude - Longitude - Found - Quality - Source</p></li>
+<li><p>In the Geocoder menu that appears in this Google Sheet template, select one of the geocoding services. If one service cannot locate your data, try the other. Always inspect the accuracy of the Found column.</p></li>
+</ol>
+<p>Open the link to your live map in a new browser tab and refresh to see your changes. If your new markers appear correctly, then delete the existing rows that came with this template.</p>
+</div>
+<div id="learn-more-19" class="section level4 unnumbered">
+<h4>Learn more</h4>
+<p>To solve problems, see <a href="fix-code">Fix Common GitHub and Code Errors</a> chapter in this book.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="leaflet-maps-with-google-sheets.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="leaflet-maps-with-socrata.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/datavizforall/datavizforall-book/edit/master/13.02-leaflet-storymaps-with-google-sheets.Rmd",
+"text": "Edit on GitHub"
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+</body>
+
+</html>

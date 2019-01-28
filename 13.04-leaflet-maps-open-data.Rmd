@@ -4,13 +4,13 @@
 Up to this point in the book, we’ve built charts and maps using static data that you have downloaded from other sites. But some open data repositories have APIs, or application program interfaces, which means the software that allows computers to communicate with one another. Below is a Leaflet Map template that uses APIs to pull in the most current data from three different open repository platforms: Socrata, Esri ArcGIS Online, and USGS.
 
 #### Try it {-}
-Explore the map below or [view full-screen version in a new tab](https://jackdougherty.github.io/leaflet-data-apis)
+Explore the map below or [view full-screen version in a new tab](https://datavizforall.github.io/leaflet-data-apis)
 
-<iframe src="https://jackdougherty.github.io/leaflet-data-apis/" width="90%" height=550></iframe>
+<iframe src="https://datavizforall.github.io/leaflet-data-apis/" width="90%" height=550></iframe>
 
 #### How it works {-}
 
-1) Go to the GitHub repo for the map above: https://github.com/JackDougherty/leaflet-data-apis
+1) Go to the GitHub repo for the map above: https://github.com/datavizforall/leaflet-data-apis
 
 2) Explore the code to see how different APIs work. For example, see the first map overlay, which pulls Connecticut School Directory data from the CT Open Data repository on a Socrata open data platform: https://data.ct.gov/resource/v4tt-nt9n
 

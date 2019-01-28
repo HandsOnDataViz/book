@@ -18,8 +18,8 @@ Answer: Copy and customize our open-source template for Leaflet Maps with Google
 - Responsive design resizes your maps to display inside most mobile devices
 
 #### Try it {-}
-Explore the map or right-click to [view full-screen map in a new tab](https://jackdougherty.github.io/leaflet-maps-with-google-sheets/)
-<iframe src="https://jackdougherty.github.io/leaflet-maps-with-google-sheets/" width="90%" height=500></iframe>
+Explore the map or right-click to [view full-screen map in a new tab](https://datavizforall.github.io/leaflet-maps-with-google-sheets/)
+<iframe src="https://datavizforall.github.io/leaflet-maps-with-google-sheets/" width="90%" height=500></iframe>
 
 The map pulls the point data and settings from a linked Google Sheet, which you can explore below or right-click to [view full-screen Sheet in a new tab](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g)
 <iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false" width="90%" height=500></iframe>
@@ -55,7 +55,7 @@ To solve problems, see [Fix Common GitHub and Code Errors](fix-code) chapter in 
 - have a [free Google Drive account](http://drive.google.com), and learned the [File > Make a Copy in Google Sheets](copy) tutorial in this book
 - have a [free GitHub account](http://github.com), and understand concepts from the [Modify and Host Code with GitHub](github) chapter in this book
 
-1) Right-click to open this GitHub code template in a new tab: https://github.com/JackDougherty/leaflet-maps-with-google-sheets
+1) Right-click to open this GitHub code template in a new tab: https://github.com/datavizforall/leaflet-maps-with-google-sheets
 
 2) In the upper-right corner of the code template, sign in to your free GitHub account
 

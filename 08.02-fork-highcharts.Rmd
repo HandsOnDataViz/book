@@ -11,13 +11,13 @@ This tutorial introduces the **basic steps** of working with code templates, usi
 Code templates help us to move beyond the limits of drag-and-drop web tools (such as Google Sheets and Tableau Public) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](github). For more advanced examples, see the [Highcharts Templates](highcharts) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](fix-code) chapter in this book.
 
 #### Try it {-}
-You will begin this tutorial with a basic chart template that includes only 7 points. Right-click to open [full-size chart in new tab](https://jackdougherty.github.io/highcharts-scatter-csv/).
+You will begin this tutorial with a basic chart template that includes only 7 points. Right-click to open [full-size chart in new tab](https://datavizforall.github.io/highcharts-scatter-csv/).
 
-<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv/" width="90%" height=425></iframe>
+<iframe src="https://datavizforall.github.io/highcharts-scatter-csv/" width="90%" height=425></iframe>
 
-By the end of this tutorial, you will learn how to modify the chart and add a new CSV spreadsheet with over 160 points. Right-click to open [full-size chart in new tab](https://jackdougherty.github.io/highcharts-scatter-csv-instructor-sample).
+By the end of this tutorial, you will learn how to modify the chart and add a new CSV spreadsheet with over 160 points. Right-click to open [full-size chart in new tab](https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample).
 
-<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height=425></iframe>
+<iframe src="https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height=425></iframe>
 
 #### Video with step-by-step tutorial {-}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/72pgCZqWg7Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -26,7 +26,7 @@ By the end of this tutorial, you will learn how to modify the chart and add a ne
 
 Before you begin, sign up for a free GitHub account: http://github.com
 
-1) Right-click to open this GitHub code template in a new tab: https://github.com/JackDougherty/highcharts-scatter-csv
+1) Right-click to open this GitHub code template in a new tab: https://github.com/datavizforall/highcharts-scatter-csv
 
 2) In the upper-right corner of the code template, sign in to your free GitHub account
 

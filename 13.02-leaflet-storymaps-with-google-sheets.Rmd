@@ -72,11 +72,11 @@ https://USERNAME.github.io/leaflet-storymaps-with-google-sheets
 
 5) File > Publish the Link to your Google Sheet to the public web, so the Leaflet map code can read it.
 
-![Screenshot: File > Publish the link to your Google Sheet](images/12-leaflet/lmwgs-file-publish.png)
+![Screenshot: File > Publish the link to your Google Sheet](images/13-leaflet/lmwgs-file-publish.png)
 
 6) At the top of your browser, copy your Google Sheet web address or URL (which usually ends in `...XYZ/edit#gid=0`). Do NOT copy the published URL (which usually ends in `...XYZ/pubhtml`).
 
-![Screenshot: Copy the Google Sheet URL, not the Publish URL](images/12-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
+![Screenshot: Copy the Google Sheet URL, not the Publish URL](images/13-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 
 #### C) Paste your Google Sheet URL in two places in your GitHub repo {-}
 

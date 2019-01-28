@@ -74,7 +74,7 @@ Reminder: You can only fork a GitHub repo **one time**. If needed, see how to ma
 https://USERNAME.github.io/leaflet-maps-with-google-sheets
 ```
 
-![Screencast](images/12-leaflet/lmwgs-1-fork-640.gif)
+![Screencast](images/13-leaflet/lmwgs-1-fork-640.gif)
 
 6) Scroll up to the top, and click on your repo name to go back to its main page.
 
@@ -94,15 +94,15 @@ https://USERNAME.github.io/leaflet-maps-with-google-sheets
 
 4) Click the blue Share button, click Advanced, click to change Private to Anyone with the link > Can View the Sheet. This will make your public data easier to view in your map.
 
-![Screencast: Share Google Sheet for anyone with the link to view](images/12-leaflet/lmwgs-2-make-copy-640.gif)
+![Screencast: Share Google Sheet for anyone with the link to view](images/13-leaflet/lmwgs-2-make-copy-640.gif)
 
 5) File > Publish the Link to your Google Sheet to the public web, so the Leaflet map code can read it.
 
-![Screenshot: File > Publish the link to your Google Sheet](images/12-leaflet/lmwgs-file-publish.png)
+![Screenshot: File > Publish the link to your Google Sheet](images/13-leaflet/lmwgs-file-publish.png)
 
 6) At the top of your browser, copy your Google Sheet web address or URL (which usually ends in `...XYZ/edit#gid=0`). Do NOT copy the published URL (which usually ends in `...XYZ/pubhtml`).
 
-![Screenshot: Copy the Google Sheet URL, not the Publish URL](images/12-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
+![Screenshot: Copy the Google Sheet URL, not the Publish URL](images/13-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 
 #### C) Paste your Google Sheet URL in two places in your GitHub repo {-}
 
@@ -114,7 +114,7 @@ https://USERNAME.github.io/leaflet-maps-with-google-sheets
 
 4) Scroll to bottom of page and press Commit to save your changes. Now the Leaflet Map code can locate your published Google Sheet.
 
-![Screencast: Copy Google Sheet URL and paste into GitHub code](images/12-leaflet/lmwgs-paste-google-sheet.png)
+![Screencast: Copy Google Sheet URL and paste into GitHub code](images/13-leaflet/lmwgs-paste-google-sheet.png)
 
 5) Next, let's paste your Google Sheet URL in a second place to keep track of it. Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.
 

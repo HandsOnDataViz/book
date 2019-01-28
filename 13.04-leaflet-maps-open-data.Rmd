@@ -16,11 +16,11 @@ Explore the map below or [view full-screen version in a new tab](https://dataviz
 
 3) Inside the open data repo, look for an API button and copy the endpoint.
 
-![Screenshot: Sample API endpoint in Socrata open data repo](images/12-leaflet/ct-open-data-api-endpoint.png)
+![Screenshot: Sample API endpoint in Socrata open data repo](images/13-leaflet/ct-open-data-api-endpoint.png)
 
 4) Paste the endpoint link into your browser, change the suffix from `.json` to `.geojson` and press return. In order to show the endpoint data as points on a map in this simple Leaflet template, the points must already be geocoded inside the open data repo, and the platform must support a GeoJSON endpoint. In your browser, one sign of success is a long stream of GeoJSON data like this:
 
-![Screenshot: API endpoint with .geojson suffix in Chrome browser](images/12-leaflet/ct-open-data-geojson.png)
+![Screenshot: API endpoint with .geojson suffix in Chrome browser](images/13-leaflet/ct-open-data-geojson.png)
 
 5) In this section of the Leaflet map template, the code includes a jQuery function `$.getJSON` to call the open data endpoint in GeoJSON format: `https://data.ct.gov/resource/v4tt-nt9n.geojson`. It also requires a Socrata app token, and you can get your own token for free at: https://dev.socrata.com/register. Each geocoded school in the Socrata data repository is displayed as a blue circle, with data properties (such as: name) in a clickable pop-up.
 

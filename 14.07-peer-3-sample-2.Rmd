@@ -1,12 +1,12 @@
-# Section 3 Peer Review Sample 1
+## Section 3 Peer Review Sample 2
 
-## My Leaflet map
-<iframe src="https://jackdougherty.github.io/leaflet-map-simple" width="90%" height=350></iframe>
+#### My Leaflet map
+<iframe src="https://datavizforall.github.io/leaflet-map-simple-instructor-sample" width="90%" height=350></iframe>
 
-## My Highcharts scatter chart
-<iframe src="https://jackdougherty.github.io/highcharts-scatter-csv" width="90%" height=425></iframe>
+#### My Highcharts scatter chart
+<iframe src="https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample" width="90%" height=425></iframe>
 
-## Evaluate
+#### Evaluate
 1. Leaflet map and title: Did the author embed an interactive Leaflet map with a new title?
 2. Leaflet map layers: Did the author add controls that toggle on/off different map layers?
 3. Leaflet point markers: Did the author upload a new set of markers, with pop-ups that show titles for each point?

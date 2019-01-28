@@ -19,25 +19,18 @@ for book-in-progress
 
 
 #### Jack's list {-}
-- migrate chapters and images from old to new repo
-- improve the index.Rmd page to include elements from old https://www.datavizforall.org/
-- modify the GitBook file to note that book has moved to http://datavizforall.org
-- update config file to upload contents to new repo
-- update 404.html file (if needed) and manually transfer to docs folder
-- update Google Analytics file and manually transfer to docs folder
-- update ReclaimHosting DNS CNAME file to point to GitHub new repo
 - search project for "TO DO" and "TODO" and "to come" and "UPDATE" references, and write content
-- search project for "Donate" and decide whether to delete or change references to our own Donate button
-  ```html
-  <br /><strong>Improve this book: <a href="https://www.datavizforall.org/donate">Donate to DataViz students</a></strong> and <strong><a href="https://www.datavizforall.org/introduction/how.html">add comments or revisions</a></strong>.
-  </div>
-  ```
 - rewrite introductory sections to shift perspective from "I" to "We"
 - update licensing and About the Authors
 - decide if unwritten "Upload GeoJSON Data to a Leaflet Map template on GitHub" chapter belongs in Leaflet section
 - rethink BatchGeo chapter, since they now have strict limits on free maps (100 views) and our Batch Geo Demo no longer works
 - decide whether to remove all reference to Google Fusion Templates, or keep page to explain how Google deprecated them
 - data folder includes us-states files, but not yet listed or linked in 03.1-census
+- search project for "Donate" and decide whether to delete or change references to our own Donate button
+  ```html
+  <br /><strong>Improve this book: <a href="https://www.datavizforall.org/donate">Donate to DataViz students</a></strong> and <strong><a href="https://www.datavizforall.org/introduction/how.html">add comments or revisions</a></strong>.
+  </div>
+  ```
 - decide if book will include .bib references. If yes, then restore these lines in index.Rmd
   ```markdown
   bibliography: book.bib

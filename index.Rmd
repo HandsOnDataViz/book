@@ -43,7 +43,7 @@ output:
 
 ![ ](images/0-introduction/cover-400wide.jpg)
 
-**This textbook-in-progress was last updated on: `r Sys.Date()`**. All pages and links were revised in January 2019.
+**This book-in-progress** was last updated on: `r Sys.Date()`.
 
 #### Tell your data story with free and easy-to-learn tools. {-}
 
@@ -52,6 +52,8 @@ output:
 [About the authors and contributors](authors) from [Trinity College, Hartford CT](http://www.trincoll.edu): Jack Dougherty, Ilya Ilyankou, Veronica X. Armendariz, Stacy Lam, and David Tatem.
 
 [Read for free online](https://datavizforall.org) (recommended) or download PDF/eBook editions (to come).
+
+Open-source code for text, data, chart and map templates at <https://github.com/datavizforall>
 
 <div style="text-align:center">
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">

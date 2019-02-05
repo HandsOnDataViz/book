@@ -6,7 +6,7 @@ Question: After learning [how to create an interactive data visualization with T
 Answer: Tableau Public supports two embedding methods, and your choice depends on your type of website.
 
 - A) Embed code: if you can paste directly into an HTML web page
-- B) Convert Link to iFrame: to paste into WordPress.org, Wix, SquareSpace, Weebly, and many other web platforms
+- B) Convert Link to iframe: to paste into WordPress.org, Wix, SquareSpace, Weebly, and many other web platforms
 
 #### Try it {-}
 
@@ -42,7 +42,7 @@ Both methods produce an embedded visualization like the one below. Float your cu
 </html>
 ```
 
-#### B) Convert Link to iFrame method {-}
+#### B) Convert Link to iframe method {-}
 
 1) Use this method if you need to paste an iframe into common web authoring platforms (such as WordPress.org, Squarespace, Wix, Weebly, etc.), since these platforms typically do not support HTML and JavaScript code pasted directly into content.
 
@@ -98,11 +98,11 @@ Hint: Insert 90% width, rather than 100, to help readers easily scroll down your
 <iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"></iframe>
 ```
 
-Exceptions to the last step above. As described in the [Embed iFrame on WordPress](embed.html#iframe-wordpress) chapter in this book, in a self-hosted WordPress.org site, with the iframe plugin, insert iframe brackets rather than HTML tags to make a shortcode like this (scroll to right to see all):
+Exceptions to the last step above. As described in the [Embed iframe on WordPress](embed.html#iframe-wordpress) chapter in this book, in a self-hosted WordPress.org site, with the iframe plugin, insert iframe brackets rather than HTML tags to make a shortcode like this (scroll to right to see all):
 
 ```html
 [iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"]
 ```
 
 #### Learn more {-}
-Embedding Tableau Public Views in iFrame, Tableau Support page <http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes>
+Embedding Tableau Public Views in iframe, Tableau Support page <http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes>

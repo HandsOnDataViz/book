@@ -168,9 +168,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i>Embed On Your Web</a><ul>
 <li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
 <li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
-<li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an iFrame</a></li>
-<li class="chapter" data-level="" data-path="iframe-github.html"><a href="iframe-github.html"><i class="fa fa-check"></i>Embed an iframe in GitHub Pages</a></li>
-<li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an iFrame on WordPress.org</a></li>
+<li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an Iframe</a></li>
+<li class="chapter" data-level="" data-path="iframe-github.html"><a href="iframe-github.html"><i class="fa fa-check"></i>Embed an Iframe in GitHub Pages</a></li>
+<li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
 <li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i>Modify and Host Code with GitHub</a><ul>
@@ -187,8 +187,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="normalize-data-to-create-meaningful-polygon-maps.html"><a href="normalize-data-to-create-meaningful-polygon-maps.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert Map Data into GeoJSON format</a></li>
-<li class="chapter" data-level="" data-path="convert-edit-and-create-map-data-with-geojson-io.html"><a href="convert-edit-and-create-map-data-with-geojson-io.html"><i class="fa fa-check"></i>Convert, Edit, and Create Map Data with GeoJson.io</a></li>
+<li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Convert, Edit, and Create Map Data with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="convert-edit-join-and-dissolve-with-mapshaper-org.html"><a href="convert-edit-join-and-dissolve-with-mapshaper-org.html"><i class="fa fa-check"></i>Convert, Edit, Join, and Dissolve with MapShaper.org</a></li>
+<li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i>Detect Bias in Data Stories</a><ul>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
@@ -250,7 +251,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Embed code: if you can paste directly into an HTML web page</li>
 </ol></li>
 <li><ol start="2" style="list-style-type: upper-alpha">
-<li>Convert Link to iFrame: to paste into WordPress.org, Wix, SquareSpace, Weebly, and many other web platforms</li>
+<li>Convert Link to iframe: to paste into WordPress.org, Wix, SquareSpace, Weebly, and many other web platforms</li>
 </ol></li>
 </ul>
 <div id="try-it-6" class="section level4 unnumbered">
@@ -287,7 +288,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="kw">&lt;/html&gt;</span></code></pre></div>
 </div>
 <div id="b-convert-link-to-iframe-method" class="section level4 unnumbered">
-<h4>B) Convert Link to iFrame method</h4>
+<h4>B) Convert Link to iframe method</h4>
 <ol style="list-style-type: decimal">
 <li><p>Use this method if you need to paste an iframe into common web authoring platforms (such as WordPress.org, Squarespace, Wix, Weebly, etc.), since these platforms typically do not support HTML and JavaScript code pasted directly into content.</p></li>
 <li><p>Go to the public web page of any Tableau Public visualization, such as this sample: <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a></p></li>
@@ -327,12 +328,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Add iframe tags at the beginning and end, to make it look similar to this (scroll to right to see all):</li>
 </ol>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no</span><span class="er">&amp;</span><span class="st">:embed=true&quot;</span><span class="ot"> width=</span><span class="st">&quot;90%&quot;</span><span class="ot"> height=</span><span class="st">&quot;500&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span></code></pre></div>
-<p>Exceptions to the last step above. As described in the <a href="embed.html#iframe-wordpress">Embed iFrame on WordPress</a> chapter in this book, in a self-hosted WordPress.org site, with the iframe plugin, insert iframe brackets rather than HTML tags to make a shortcode like this (scroll to right to see all):</p>
+<p>Exceptions to the last step above. As described in the <a href="embed.html#iframe-wordpress">Embed iframe on WordPress</a> chapter in this book, in a self-hosted WordPress.org site, with the iframe plugin, insert iframe brackets rather than HTML tags to make a shortcode like this (scroll to right to see all):</p>
 <div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">[iframe src=&quot;https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no<span class="er">&amp;</span>:embed=true&quot; width=&quot;90%&quot; height=&quot;500&quot;]</code></pre></div>
 </div>
 <div id="learn-more-11" class="section level4 unnumbered">
 <h4>Learn more</h4>
-<p>Embedding Tableau Public Views in iFrame, Tableau Support page <a href="http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes" class="uri">http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes</a></p>
+<p>Embedding Tableau Public Views in iframe, Tableau Support page <a href="http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes" class="uri">http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes</a></p>
 
 </div>
 </div>

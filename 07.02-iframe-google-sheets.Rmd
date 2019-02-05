@@ -9,7 +9,7 @@ The full answer requires three steps:
 - 2) Copy the iframe code from your visualization
 - 3) Embed (or paste) the iframe code into your web page
 
-This tutorial focuses on the **second step**, and shows how to publish a Google Sheets interactive chart, and copy its iFrame code. Details may differ for other visualization tools, but the general iframe concept will be similar to most cases. For **steps 1 and 3**, see the [Create a Simple Web Page with GitHub Pages](github-pages) tutorial and the [Embed iFrame in GitHub Pages](iframe-github/) tutorial in this chapter.
+This tutorial focuses on the **second step**, and shows how to publish a Google Sheets interactive chart, and copy its iframe code. Details may differ for other visualization tools, but the general iframe concept will be similar to most cases. For **steps 1 and 3**, see the [Create a Simple Web Page with GitHub Pages](github-pages) tutorial and the [Embed iframe in GitHub Pages](iframe-github/) tutorial in this chapter.
 
 #### Tutorial {-}
 
@@ -35,4 +35,4 @@ No coding skills are necessary, but it helps to be code-curious. This iframe is 
 - scrolling: "no" means the chart will not include its own web scrolling feature
 - src: the web address (or URL) of the visualization to be displayed in the second site
 
-See the next tutorial in this chapter, [Embed iFrame in GitHub Pages](iframe-github), to learn how to paste the iframe into a simple web page. Or see related tutorials in this chapter to embed an iframe in other common web sites.
+See the next tutorial in this chapter, [Embed iframe in GitHub Pages](iframe-github), to learn how to paste the iframe into a simple web page. Or see related tutorials in this chapter to embed an iframe in other common web sites.

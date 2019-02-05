@@ -131,7 +131,7 @@ In the Trinity self-hosted WordPress site for my classes, I have already activa
 
 Go to WordPress and create a new post. In the editor, switch from the Visual to the Text tab, which allows users to insert and modify HMTL code. Paste the long string that you copied from the step above. Add square brackets at beginning and end, and edit a few characters to match this format (called a "shortcode"), then publish to view your post.
 
-<a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png"><img class="aligncenter size-full wp-image-1700" alt="GFT_iFrameEmbedCode" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iFrameEmbedCode.png" width="599" height="449" /></a>
+<a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iframeEmbedCode.png"><img class="aligncenter size-full wp-image-1700" alt="GFT_iframeEmbedCode" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iframeEmbedCode.png" width="599" height="449" /></a>
 
 **TO DO LIST**
 

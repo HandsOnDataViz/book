@@ -1,7 +1,9 @@
-# Publishing with Bookdown {#bookdown}
+# Publishing *DataVizForAll* with Bookdown {#bookdown}
 *by [Jack Dougherty and Ilya Ilyankou](authors), last updated February 13, 2019*
 
-This open-access book is published using open-source tools, featuring Bookdown with RStudio and GitHub. Publishing with Bookdown allows authors to compose in Markdown (an easy-to-read-and-write computer syntax that works on multiple platforms) and publish in multiple formats (static HTML web pages, PDF files, ePUB ebooks, Microsoft Word documents). Hosting the book in a public GitHub repository, and publishing it with GitHub Pages, easily makes the original text of the book, as well as the published products, available on the public web. For a technical guide to publishing with Bookdown, see Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R Markdown*, 2018, <https://bookdown.org/yihui/bookdown/>.
+This open-access book is published using open-source tools, featuring Bookdown with RStudio and GitHub. Publishing with Bookdown allows authors to compose in Markdown (an easy-to-read-and-write computer syntax that works on multiple platforms) and publish in multiple formats (static HTML web edition, PDF edition, ePUB ebook edition, and Microsoft Word documents). Hosting the book in a public GitHub repository, and publishing it with GitHub Pages, easily makes the original text of the book, as well as the published products, available on the public web. For a technical guide to publishing with Bookdown, see Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R Markdown*, 2018, <https://bookdown.org/yihui/bookdown/>.
+
+An alternative book publishing platform to consider is Pressbooks. This open-source modification of WordPress multisite also supports multiple publication formats (HMTL web edition, PDF edition, ePUB ebook edition. Authors can use the <http://Pressbooks.com> paid hosting service. Or, users with advanced WordPress and some system admin skills can download the code from <http://github.com/pressbooks> and run their own self-hosted book publishing site.
 
 #### Setup RStudio, Bookdown, and TinyTeX {-}
 Below are steps we followed to setup the publishing platform for this book, using our Macintosh OS 10.14 computers. The same general principles also should apply to Windows computers. No special knowledge is required, but these steps will be easier if users are adventurous or already familiar with R Studio, GitHub, or editing code.
@@ -13,24 +15,26 @@ Below are steps we followed to setup the publishing platform for this book, usin
 - Bookdown now should be successfully installed in RStudio. [See screenshot](images/15-bookdown/5-installed.png)
 - Inside RStudio, install the "tinytex" package for Bookdown to create a PDF edition of your book. [See screenshot](images/15-bookdown/6-install-tinytex.png)
 - Don't forget: in RStudio console, type `tinytex::install_tinytex()` and press return to finish the installation. [See screenshot](images/15-bookdown/7-finish-install-tinytex.png)
-- Note: In the step above, we received this error message on our Mac computers: `/usr/local/bin not writeable`. We resolved by reading the software developer's GitHub issue <https://github.com/yihui/tinytex/issues/24> and following these steps:
-  - In the Mac Applications > Utilities folder, open the Terminal application.
-  - Carefully type `sudo chown -R `whoami`:admin /usr/local/bin` and press return.
-  - Carefully type (without "sudo") `~/Library/TinyTeX/bin/x86_64-darwin/tlmgr path add` and press return.
-  - Close the Terminal application.
-  - In the RStudio console, type `tinytex::install_tinytex(force = TRUE)` and press return.
+
+#### If tinytex installation error {-}
+- In the section above, we received this error message on our Mac computers: `/usr/local/bin not writeable`. We resolved by reading the software developer's GitHub issue <https://github.com/yihui/tinytex/issues/24> and following these steps:
+- In the Mac Applications > Utilities folder, open the Terminal application.
+- Carefully type `sudo chown -R `whoami`:admin /usr/local/bin` and press return.
+- Carefully type (without "sudo") `~/Library/TinyTeX/bin/x86_64-darwin/tlmgr path add` and press return.
+- Close the Terminal application.
+- In the RStudio console, type `tinytex::install_tinytex(force = TRUE)` and press return.
 
 #### Download and Build a Sample Book {-}
 - Create a free GitHub account <https://github.com> to share code repositories and publish book editions online.
 - In your web browser, log into your GitHub account, go to the software developer's bookdown-minimal repo <https://github.com/yihui/bookdown-minimal>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <http://datavizforall.org/github.html> in this book.
 - Install GitHub Desktop <https://desktop.github.com> to transfer files between your online GitHub repo and local computer
 - In your web browser, go to your forked copy of `bookdown-minimal` and click the green `Clone or Download` button and select `Open in Desktop`. This should automatically open the GitHub Desktop application, and you can navigate to copy the code repo to a folder on your local computer.
-- In RStudio in the upper-right corner, select Project > Open Project to open the `bookdown-minimal` folder on your local computer. [See screenshot: Open project](images/15-bookdown/8-project-open.png)
-- In RStudio, open the `index.Rmd` file and make some simple edits to the text of this minimal book. For example, remove the hashtag `#` comment symbol in line 8 to "uncomment" and activate the PDF book option. Save your edits. [See screenshot: Edit the index.Rmd file](images/15-bookdown/9-edit-book.png)
+- In RStudio in the upper-right corner, select Project > Open Project to open the `bookdown-minimal` folder on your local computer. [See screenshot](images/15-bookdown/8-project-open.png)
+- In RStudio, open the `index.Rmd` file and make some simple edits to the text of this minimal book. For example, remove the hashtag `#` comment symbol in line 8 to "uncomment" and activate the PDF book option. Save your edits. [See screenshot](images/15-bookdown/9-edit-book.png)
 - Optional: Use your preferred text editor, such as Atom editor <https://atom.io>, to modify the text.
 - In RStudio, upper-right corner, select the Build tab, select Build Book, and choose All Formats to build both the gitbook-style static web edition and PDF edition.
-- If RStudio successfully builds both editions of your minimal book, the output will be saved into your `bookdown-minimal` folder, in a subfolder named `_book`, because that's how this sample is configured. The RStudio internal browser should automatically open your web edition (and it's not a very good browser, so feel free to close it). Also, open the subfolder and inspect the PDF edition. If RStudio found any errors, they will appear in the Build viewer. [See screenshot: Successful build](images/15-bookdown/11-successful-build.png)
-- Hint: In future sessions with RStudio, you may need to select Packages tab and click Update to keep bookdown and other software packages up to date. [See screenshot: Update packages](images/15-bookdown/12-packages-update.png)
+- If RStudio successfully builds both editions of your minimal book, the output will be saved into your `bookdown-minimal` folder, in a subfolder named `_book`, because that's how this sample is configured. The RStudio internal browser should automatically open your web edition (and it's not a very good browser, so feel free to close it). Also, open the subfolder and inspect the PDF edition. If RStudio found any errors, they will appear in the Build viewer. [See screenshot](images/15-bookdown/11-successful-build.png)
+- Hint: In future sessions with RStudio, you may need to select Packages tab and click Update to keep bookdown and other software packages up to date. [See screenshot](images/15-bookdown/12-packages-update.png)
 - Close RStudio.
 
 #### Publish your Book with GitHub Pages {-}
@@ -49,7 +53,7 @@ Below are steps we followed to setup the publishing platform for this book, usin
 - This book also includes a custom `404.html` file that was manually transferred into the `docs` subfolder, since it is not automatically built by Bookdown.
 - This book also includes a custom `google-analytics-datavizforall.html` file in the root-level of repo (where bookdown looks for it) and also is manually transferred to the `docs` subfolder (since bookdown does *not appear* to copy it to there on each build). This tracks web traffic with Google Analytics.
 
-#### Bookdown-flavored Markdown: Syntax and Style Guide {-}
+#### *DataVizForAll* Style Guide with Bookdown-flavored Markdown {-}
 
 ##### Links with brackets and parentheses {-}
 Use brackets and parentheses for an [embedded link](http://example.com)

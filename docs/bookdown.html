@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Publishing with Bookdown | Data Visualization for All</title>
+  <title>Publishing DataVizForAll with Bookdown | Data Visualization for All</title>
   <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Publishing with Bookdown | Data Visualization for All" />
+  <meta property="og:title" content="Publishing DataVizForAll with Bookdown | Data Visualization for All" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://datavizforall.github.io/" />
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="datavizforall/datavizforall-bookdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Publishing with Bookdown | Data Visualization for All" />
+  <meta name="twitter:title" content="Publishing DataVizForAll with Bookdown | Data Visualization for All" />
   <meta name="twitter:site" content="@datavizforall" />
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more." />
   
@@ -218,7 +218,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="peer-3-sample-2.html"><a href="peer-3-sample-2.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2</a></li>
 <li class="chapter" data-level="" data-path="peer-3-sample-2-notes.html"><a href="peer-3-sample-2-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2 with Notes</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i>Publishing with Bookdown</a></li>
+<li><a href="bookdown.html#bookdown">Publishing <em>DataVizForAll</em> with Bookdown</a></li>
 <li class="divider"></li>
 <li>Open access book-in-progress</li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></li>
@@ -242,9 +242,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="bookdown" class="section level1">
-<h1>Publishing with Bookdown</h1>
+<h1>Publishing <em>DataVizForAll</em> with Bookdown</h1>
 <p><em>by <a href="authors">Jack Dougherty and Ilya Ilyankou</a>, last updated February 13, 2019</em></p>
-<p>This open-access book is published using open-source tools, featuring Bookdown with RStudio and GitHub. Publishing with Bookdown allows authors to compose in Markdown (an easy-to-read-and-write computer syntax that works on multiple platforms) and publish in multiple formats (static HTML web pages, PDF files, ePUB ebooks, Microsoft Word documents). Hosting the book in a public GitHub repository, and publishing it with GitHub Pages, easily makes the original text of the book, as well as the published products, available on the public web. For a technical guide to publishing with Bookdown, see Yihui Xie, <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>, 2018, <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</p>
+<p>This open-access book is published using open-source tools, featuring Bookdown with RStudio and GitHub. Publishing with Bookdown allows authors to compose in Markdown (an easy-to-read-and-write computer syntax that works on multiple platforms) and publish in multiple formats (static HTML web edition, PDF edition, ePUB ebook edition, and Microsoft Word documents). Hosting the book in a public GitHub repository, and publishing it with GitHub Pages, easily makes the original text of the book, as well as the published products, available on the public web. For a technical guide to publishing with Bookdown, see Yihui Xie, <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>, 2018, <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</p>
+<p>An alternative book publishing platform to consider is Pressbooks. This open-source modification of WordPress multisite also supports multiple publication formats (HMTL web edition, PDF edition, ePUB ebook edition. Authors can use the <a href="http://Pressbooks.com" class="uri">http://Pressbooks.com</a> paid hosting service. Or, users with advanced WordPress and some system admin skills can download the code from <a href="http://github.com/pressbooks" class="uri">http://github.com/pressbooks</a> and run their own self-hosted book publishing site.</p>
 <div id="setup-rstudio-bookdown-and-tinytex" class="section level4 unnumbered">
 <h4>Setup RStudio, Bookdown, and TinyTeX</h4>
 <p>Below are steps we followed to setup the publishing platform for this book, using our Macintosh OS 10.14 computers. The same general principles also should apply to Windows computers. No special knowledge is required, but these steps will be easier if users are adventurous or already familiar with R Studio, GitHub, or editing code.</p>
@@ -256,7 +257,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Bookdown now should be successfully installed in RStudio. <a href="images/15-bookdown/5-installed.png">See screenshot</a></li>
 <li>Inside RStudio, install the “tinytex” package for Bookdown to create a PDF edition of your book. <a href="images/15-bookdown/6-install-tinytex.png">See screenshot</a></li>
 <li>Don’t forget: in RStudio console, type <code>tinytex::install_tinytex()</code> and press return to finish the installation. <a href="images/15-bookdown/7-finish-install-tinytex.png">See screenshot</a></li>
-<li>Note: In the step above, we received this error message on our Mac computers: <code>/usr/local/bin not writeable</code>. We resolved by reading the software developer’s GitHub issue <a href="https://github.com/yihui/tinytex/issues/24" class="uri">https://github.com/yihui/tinytex/issues/24</a> and following these steps:</li>
+</ul>
+</div>
+<div id="if-tinytex-installation-error" class="section level4 unnumbered">
+<h4>If tinytex installation error</h4>
+<ul>
+<li>In the section above, we received this error message on our Mac computers: <code>/usr/local/bin not writeable</code>. We resolved by reading the software developer’s GitHub issue <a href="https://github.com/yihui/tinytex/issues/24" class="uri">https://github.com/yihui/tinytex/issues/24</a> and following these steps:</li>
 <li>In the Mac Applications &gt; Utilities folder, open the Terminal application.</li>
 <li>Carefully type <code>sudo chown -R</code>whoami<code>:admin /usr/local/bin</code> and press return.</li>
 <li>Carefully type (without “sudo”) <code>~/Library/TinyTeX/bin/x86_64-darwin/tlmgr path add</code> and press return.</li>
@@ -271,12 +277,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>In your web browser, log into your GitHub account, go to the software developer’s bookdown-minimal repo <a href="https://github.com/yihui/bookdown-minimal" class="uri">https://github.com/yihui/bookdown-minimal</a>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <a href="http://datavizforall.org/github.html" class="uri">http://datavizforall.org/github.html</a> in this book.</li>
 <li>Install GitHub Desktop <a href="https://desktop.github.com" class="uri">https://desktop.github.com</a> to transfer files between your online GitHub repo and local computer</li>
 <li>In your web browser, go to your forked copy of <code>bookdown-minimal</code> and click the green <code>Clone or Download</code> button and select <code>Open in Desktop</code>. This should automatically open the GitHub Desktop application, and you can navigate to copy the code repo to a folder on your local computer.</li>
-<li>In RStudio in the upper-right corner, select Project &gt; Open Project to open the <code>bookdown-minimal</code> folder on your local computer. <a href="images/15-bookdown/8-project-open.png">See screenshot: Open project</a></li>
-<li>In RStudio, open the <code>index.Rmd</code> file and make some simple edits to the text of this minimal book. For example, remove the hashtag <code>#</code> comment symbol in line 8 to “uncomment” and activate the PDF book option. Save your edits. <a href="images/15-bookdown/9-edit-book.png">See screenshot: Edit the index.Rmd file</a></li>
+<li>In RStudio in the upper-right corner, select Project &gt; Open Project to open the <code>bookdown-minimal</code> folder on your local computer. <a href="images/15-bookdown/8-project-open.png">See screenshot</a></li>
+<li>In RStudio, open the <code>index.Rmd</code> file and make some simple edits to the text of this minimal book. For example, remove the hashtag <code>#</code> comment symbol in line 8 to “uncomment” and activate the PDF book option. Save your edits. <a href="images/15-bookdown/9-edit-book.png">See screenshot</a></li>
 <li>Optional: Use your preferred text editor, such as Atom editor <a href="https://atom.io" class="uri">https://atom.io</a>, to modify the text.</li>
 <li>In RStudio, upper-right corner, select the Build tab, select Build Book, and choose All Formats to build both the gitbook-style static web edition and PDF edition.</li>
-<li>If RStudio successfully builds both editions of your minimal book, the output will be saved into your <code>bookdown-minimal</code> folder, in a subfolder named <code>_book</code>, because that’s how this sample is configured. The RStudio internal browser should automatically open your web edition (and it’s not a very good browser, so feel free to close it). Also, open the subfolder and inspect the PDF edition. If RStudio found any errors, they will appear in the Build viewer. <a href="images/15-bookdown/11-successful-build.png">See screenshot: Successful build</a></li>
-<li>Hint: In future sessions with RStudio, you may need to select Packages tab and click Update to keep bookdown and other software packages up to date. <a href="images/15-bookdown/12-packages-update.png">See screenshot: Update packages</a></li>
+<li>If RStudio successfully builds both editions of your minimal book, the output will be saved into your <code>bookdown-minimal</code> folder, in a subfolder named <code>_book</code>, because that’s how this sample is configured. The RStudio internal browser should automatically open your web edition (and it’s not a very good browser, so feel free to close it). Also, open the subfolder and inspect the PDF edition. If RStudio found any errors, they will appear in the Build viewer. <a href="images/15-bookdown/11-successful-build.png">See screenshot</a></li>
+<li>Hint: In future sessions with RStudio, you may need to select Packages tab and click Update to keep bookdown and other software packages up to date. <a href="images/15-bookdown/12-packages-update.png">See screenshot</a></li>
 <li>Close RStudio.</li>
 </ul>
 </div>
@@ -302,8 +308,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>This book also includes a custom <code>google-analytics-datavizforall.html</code> file in the root-level of repo (where bookdown looks for it) and also is manually transferred to the <code>docs</code> subfolder (since bookdown does <em>not appear</em> to copy it to there on each build). This tracks web traffic with Google Analytics.</li>
 </ul>
 </div>
-<div id="bookdown-flavored-markdown-syntax-and-style-guide" class="section level4 unnumbered">
-<h4>Bookdown-flavored Markdown: Syntax and Style Guide</h4>
+<div id="datavizforall-style-guide-with-bookdown-flavored-markdown" class="section level4 unnumbered">
+<h4><em>DataVizForAll</em> Style Guide with Bookdown-flavored Markdown</h4>
 <div id="links-with-brackets-and-parentheses" class="section level5 unnumbered">
 <h5>Links with brackets and parentheses</h5>
 <p>Use brackets and parentheses for an <a href="http://example.com">embedded link</a></p>

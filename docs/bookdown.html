@@ -243,29 +243,40 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="bookdown" class="section level1">
 <h1>Publishing with Bookdown</h1>
-<p><em>by <a href="authors">Jack Dougherty and Ilya Ilyankou</a>, last updated February 12, 2019</em></p>
+<p><em>by <a href="authors">Jack Dougherty and Ilya Ilyankou</a>, last updated February 13, 2019</em></p>
 <p>This open-access book is published using open-source tools, featuring Bookdown with RStudio and GitHub. Publishing with Bookdown allows authors to compose in Markdown (an easy-to-read-and-write computer syntax that works on multiple platforms) and publish in multiple formats (static HTML web pages, PDF files, ePUB ebooks, Microsoft Word documents). Hosting the book in a public GitHub repository, and publishing it with GitHub Pages, easily makes the original text of the book, as well as the published products, available on the public web. For a technical guide to publishing with Bookdown, see Yihui Xie, <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>, 2018, <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</p>
 <div id="setup-rstudio-bookdown-and-tinytex" class="section level4 unnumbered">
 <h4>Setup RStudio, Bookdown, and TinyTeX</h4>
-<p>Below are steps we followed to setup the publishing platform for this book, using our Macintosh OS 10.14 computers. The same general principles also should apply to Windows computers. No special knowledge is required, but these steps will be easier if users are adventurous or already familiar with R Studio, GitHub, or editing code. - Install R Project statistical programming language <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a> to build your book with Bookdown. (Yes, we were surprised to use tools designed for statistical analysis to publish a book, but it works!) - <img src="images/15-bookdown/1-r-download.png" alt="Screenshot: Install R Project for Mac" /> - Install the free RStudio Desktop to make R easier to use with a visual editor - <img src="images/15-bookdown/2-download-rstudio.png" alt="Screenshot: Install RStudio Desktop" /> - Inside RStudio, select the Packages tab, and select Install - <img src="images/15-bookdown/3-packages-install.png" alt="Screenshot: Install Packages" /> - Inside RStudio, install the “bookdown” package to build your book, and select Install Dependencies - <img src="images/15-bookdown/4-install-bookdown.png" alt="Screenshot: Install bookdown package" /> - This is how a successful installation of Bookdown appears in RStudio - <img src="images/15-bookdown/5-installed.png" alt="Screenshot: Successful installation of bookdown" /> - Inside RStudio, install the “tinytex” package for Bookdown to create a PDF edition of your book - <img src="images/15-bookdown/6-install-tinytex.png" alt="Screenshot: Install tinytex package" /> - Don’t forget: in RStudio console, type <code>tinytex::install_tinytex()</code> and press return to finish the installation - <img src="images/15-bookdown/7-finish-install-tinytex.png" alt="Screenshot: Finish tinytex installation" /> - Note: In the step above, we received this error message on our Mac computers: <code>/usr/local/bin not writeable</code>. We resolved by reading the software developer’s GitHub issue <a href="https://github.com/yihui/tinytex/issues/24" class="uri">https://github.com/yihui/tinytex/issues/24</a> and following these steps: - In the Mac Applications &gt; Utilities folder, open the Terminal application - Carefully type <code>sudo chown -R</code>whoami<code>:admin /usr/local/bin</code> and press return - Carefully type (without “sudo”) <code>~/Library/TinyTeX/bin/x86_64-darwin/tlmgr path add</code> and press return - Close the Terminal application - In the RStudio console, type <code>tinytex::install_tinytex(force = TRUE)</code> and press return</p>
+<p>Below are steps we followed to setup the publishing platform for this book, using our Macintosh OS 10.14 computers. The same general principles also should apply to Windows computers. No special knowledge is required, but these steps will be easier if users are adventurous or already familiar with R Studio, GitHub, or editing code.</p>
+<ul>
+<li>Install R Project statistical programming language <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a> to build your book with Bookdown. (Yes, we too were surprised to use a statistics package to publish a book, but it works!). <a href="images/15-bookdown/1-r-download.png">See screenshot</a></li>
+<li>Install the free RStudio Desktop to make R easier to use with a visual editor. <a href="images/15-bookdown/2-download-rstudio.png">See screenshot</a></li>
+<li>Inside RStudio, select the Packages tab, and select Install. <a href="images/15-bookdown/3-packages-install.png">See screenshot</a></li>
+<li>Inside RStudio, install the “bookdown” package to build your book, and select Install Dependencies. <a href="images/15-bookdown/4-install-bookdown.png">See screenshot</a></li>
+<li>Bookdown now should be successfully installed in RStudio. <a href="images/15-bookdown/5-installed.png">See screenshot</a></li>
+<li>Inside RStudio, install the “tinytex” package for Bookdown to create a PDF edition of your book. <a href="images/15-bookdown/6-install-tinytex.png">See screenshot</a></li>
+<li>Don’t forget: in RStudio console, type <code>tinytex::install_tinytex()</code> and press return to finish the installation. <a href="images/15-bookdown/7-finish-install-tinytex.png">See screenshot</a></li>
+<li>Note: In the step above, we received this error message on our Mac computers: <code>/usr/local/bin not writeable</code>. We resolved by reading the software developer’s GitHub issue <a href="https://github.com/yihui/tinytex/issues/24" class="uri">https://github.com/yihui/tinytex/issues/24</a> and following these steps:</li>
+<li>In the Mac Applications &gt; Utilities folder, open the Terminal application.</li>
+<li>Carefully type <code>sudo chown -R</code>whoami<code>:admin /usr/local/bin</code> and press return.</li>
+<li>Carefully type (without “sudo”) <code>~/Library/TinyTeX/bin/x86_64-darwin/tlmgr path add</code> and press return.</li>
+<li>Close the Terminal application.</li>
+<li>In the RStudio console, type <code>tinytex::install_tinytex(force = TRUE)</code> and press return.</li>
+</ul>
 </div>
 <div id="download-and-build-a-sample-book" class="section level4 unnumbered">
 <h4>Download and Build a Sample Book</h4>
 <ul>
-<li>Create a free GitHub account <a href="https://github.com" class="uri">https://github.com</a> to share code repositories and publish book editions online</li>
+<li>Create a free GitHub account <a href="https://github.com" class="uri">https://github.com</a> to share code repositories and publish book editions online.</li>
 <li>In your web browser, log into your GitHub account, go to the software developer’s bookdown-minimal repo <a href="https://github.com/yihui/bookdown-minimal" class="uri">https://github.com/yihui/bookdown-minimal</a>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <a href="http://datavizforall.org/github.html" class="uri">http://datavizforall.org/github.html</a> in this book.</li>
 <li>Install GitHub Desktop <a href="https://desktop.github.com" class="uri">https://desktop.github.com</a> to transfer files between your online GitHub repo and local computer</li>
 <li>In your web browser, go to your forked copy of <code>bookdown-minimal</code> and click the green <code>Clone or Download</code> button and select <code>Open in Desktop</code>. This should automatically open the GitHub Desktop application, and you can navigate to copy the code repo to a folder on your local computer.</li>
-<li>In RStudio in the upper-right corner, select Project &gt; Open Project to open the <code>bookdown-minimal</code> folder on your local computer.</li>
-<li><img src="images/15-bookdown/8-project-open.png" alt="Screenshot: Open project" /></li>
-<li>In RStudio, open the <code>index.Rmd</code> file and make some simple edits to the text of this minimal book. For example, remove the hashtag <code>#</code> comment symbol in line 8 to “uncomment” and activate the PDF book option. Save your edits.</li>
-<li><img src="images/15-bookdown/9-edit-book.png" alt="Screenshot: Edit the index.Rmd file" /></li>
+<li>In RStudio in the upper-right corner, select Project &gt; Open Project to open the <code>bookdown-minimal</code> folder on your local computer. <a href="images/15-bookdown/8-project-open.png">See screenshot: Open project</a></li>
+<li>In RStudio, open the <code>index.Rmd</code> file and make some simple edits to the text of this minimal book. For example, remove the hashtag <code>#</code> comment symbol in line 8 to “uncomment” and activate the PDF book option. Save your edits. <a href="images/15-bookdown/9-edit-book.png">See screenshot: Edit the index.Rmd file</a></li>
 <li>Optional: Use your preferred text editor, such as Atom editor <a href="https://atom.io" class="uri">https://atom.io</a>, to modify the text.</li>
 <li>In RStudio, upper-right corner, select the Build tab, select Build Book, and choose All Formats to build both the gitbook-style static web edition and PDF edition.</li>
-<li>If RStudio successfully builds both editions of your minimal book, the output will be saved into your <code>bookdown-minimal</code> folder, in a subfolder named <code>_book</code>, because that’s how this sample is configured. The RStudio internal browser should automatically open your web edition (and it’s not a very good browser, so feel free to close it). Also, open the subfolder and inspect the PDF edition. If RStudio found any errors, they will appear in the Build viewer.</li>
-<li><img src="images/15-bookdown/11-successful-build.png" alt="Screenshot: Successful build" /></li>
-<li>Hint: In future sessions with RStudio, you may need to select Packages tab and click Update to keep bookdown and other software packages up to date.</li>
-<li><img src="images/15-bookdown/12-packages-update.png" alt="Screenshot: Update packages" /></li>
+<li>If RStudio successfully builds both editions of your minimal book, the output will be saved into your <code>bookdown-minimal</code> folder, in a subfolder named <code>_book</code>, because that’s how this sample is configured. The RStudio internal browser should automatically open your web edition (and it’s not a very good browser, so feel free to close it). Also, open the subfolder and inspect the PDF edition. If RStudio found any errors, they will appear in the Build viewer. <a href="images/15-bookdown/11-successful-build.png">See screenshot: Successful build</a></li>
+<li>Hint: In future sessions with RStudio, you may need to select Packages tab and click Update to keep bookdown and other software packages up to date. <a href="images/15-bookdown/12-packages-update.png">See screenshot: Update packages</a></li>
 <li>Close RStudio.</li>
 </ul>
 </div>
@@ -298,7 +309,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Use brackets and parentheses for an <a href="http://example.com">embedded link</a></p>
 <p>Use parentheses only for a non-embedded link (<a href="http://example.com" class="uri">http://example.com</a>)</p>
 <p>Similarly, display URL with angle brackets: <a href="http://example.com" class="uri">http://example.com</a></p>
-<p>If necessary, use HTML to create <a href="http://example.com/" target="_blank">link that opens in a new page</a></p>
+<p>If necessary, use HTML to create <a href='http://example.com/'>link that opens in a new page</a></p>
 </div>
 <div id="headers-with-cross-reference-links" class="section level5 unnumbered">
 <h5>Headers with Cross-Reference Links</h5>
@@ -320,20 +331,17 @@ number_sections: false</code></pre></div>
 <p>NOTE that cross-reference links above are designed for HOSTED WEB BOOKS, and may not work the same in local repo versions, or in ebook/PDF versions.</p>
 </div>
 </div>
-<div id="bookdown-flavored-markdown-syntax" class="section level4">
+<div id="bookdown-flavored-markdown-syntax" class="section level4 unnumbered">
 <h4>Bookdown-flavored Markdown Syntax</h4>
 <p>For an em-dash, use three hyphens—like this—rather than two hyphens.</p>
 <p>For a block quote, start each line with a caret <strong>AND</strong> add two spaces to insert a line break:</p>
 <p>Code:</p>
 <div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">&gt;<span class="dt"> I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him.    </span>
 <span class="dt">&gt; --- Mark Twain</span>  
-<span class="dt">&gt; --- notable American author</span>  </code></pre></div>
-<p>Demo:</p>
-<blockquote>
-<p>I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him.<br />
-— Mark Twain<br />
-— notable American author</p>
-</blockquote>
+<span class="dt">&gt; --- notable American author</span></code></pre></div>
+<p>Demo: &gt; I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him.<br />
+&gt; — Mark Twain<br />
+&gt; — notable American author</p>
 <p>Simple footnote</p>
 <p>Code:</p>
 <div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">A text-only footnote.^[This is a footnote, with no reference]</code></pre></div>

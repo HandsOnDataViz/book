@@ -1,23 +1,65 @@
 # Publishing with Bookdown {#bookdown}
-*by [Jack Dougherty and Ilya Ilyankou](authors), last updated January 26, 2019*
+*by [Jack Dougherty and Ilya Ilyankou](authors), last updated February 12, 2019*
 
-For a general introduction to publishing with Bookdown and RStudio in Markdown format, see Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R Markdown*, 2018, https://bookdown.org/yihui/bookdown/.
+This open-access book is published using open-source tools, featuring Bookdown with RStudio and GitHub. Publishing with Bookdown allows authors to compose in Markdown (an easy-to-read-and-write computer syntax that works on multiple platforms) and publish in multiple formats (static HTML web pages, PDF files, ePUB ebooks, Microsoft Word documents). Hosting the book in a public GitHub repository, and publishing it with GitHub Pages, easily makes the original text of the book, as well as the published products, available on the public web. For a technical guide to publishing with Bookdown, see Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R Markdown*, 2018, <https://bookdown.org/yihui/bookdown/>.
 
-#### GitHub and Bookdown workflow ROUGH NOTES {-}
-- Install Atom editor, GitHub Desktop, R, RStudio, bookdown package, and tinytex package (to create PDFs) **show steps**
-- Compose in Atom editor, following syntax and style guide below.
-- Build the book as often as desired with RStudio bookdown. Bookdown settings: build all book formats into the `docs` folder.
-- Push changes to repo with GitHub Desktop.
-- In your online book repo, set GitHub Pages to publish from  `master/docs`
-- GitHub Pages custom domain setting adds `CNAME` file to `docs` folder; do not delete
-- Manually transfer `404.html` into 'docs' folder, since not auto-built; do not delete
-- Manually add `google-analytics-otl.html` to root (where bookdown looks for it) and also to `docs` folder (since bookdown does *not appear* to copy it to there on each build)
-- If you have a footer, manually transfer X.X-footer.Rmd to end of each chapter
-- For final PDF and eBook builds:
-  - at present, book builds are not creating PDF versions **TO DO**
-  - review lessons from Tracey Wilson book, and pehaps create a "printbook" fork on GitHub, remove cover image and footers, and learn more about modifying biblio output across different formats. See solution notes https://stackoverflow.com/questions/48965247/use-csl-file-for-pdf-output-in-bookdown/49145699#49145699
+#### Setup RStudio, Bookdown, and TinyTeX {-}
+Below are steps we followed to setup the publishing platform for this book, using our Macintosh OS 10.14 computers. The same general principles also should apply to Windows computers. No special knowledge is required, but these steps will be easier if users are adventurous or already familiar with R Studio, GitHub, or editing code.
+- Install R Project statistical programming language <https://www.r-project.org> to build your book with Bookdown. (Yes, we were surprised to use tools designed for statistical analysis to publish a book, but it works!)
+- ![Screenshot: Install R Project for Mac](images/15-bookdown/1-r-download.png)
+- Install the free RStudio Desktop to make R easier to use with a visual editor
+- ![Screenshot: Install RStudio Desktop](images/15-bookdown/2-download-rstudio.png)
+- Inside RStudio, select the Packages tab, and select Install
+- ![Screenshot: Install Packages](images/15-bookdown/3-packages-install.png)
+- Inside RStudio, install the "bookdown" package to build your book, and select Install Dependencies
+- ![Screenshot: Install bookdown package](images/15-bookdown/4-install-bookdown.png)
+- This is how a successful installation of Bookdown appears in RStudio
+- ![Screenshot: Successful installation of bookdown](images/15-bookdown/5-installed.png)
+- Inside RStudio, install the "tinytex" package for Bookdown to create a PDF edition of your book
+- ![Screenshot: Install tinytex package](images/15-bookdown/6-install-tinytex.png)
+- Don't forget: in RStudio console, type `tinytex::install_tinytex()` and press return to finish the installation
+- ![Screenshot: Finish tinytex installation](images/15-bookdown/7-finish-install-tinytex.png)
+- Note: In the step above, we received this error message on our Mac computers: `/usr/local/bin not writeable`. We resolved by reading the software developer's GitHub issue <https://github.com/yihui/tinytex/issues/24> and following these steps:
+  - In the Mac Applications > Utilities folder, open the Terminal application
+  - Carefully type `sudo chown -R `whoami`:admin /usr/local/bin` and press return
+  - Carefully type (without "sudo") `~/Library/TinyTeX/bin/x86_64-darwin/tlmgr path add` and press return
+  - Close the Terminal application
+  - In the RStudio console, type `tinytex::install_tinytex(force = TRUE)` and press return
 
-#### Syntax and Style Guide {-}
+#### Download and Build a Sample Book {-}
+- Create a free GitHub account <https://github.com> to share code repositories and publish book editions online
+- In your web browser, log into your GitHub account, go to the software developer's bookdown-minimal repo <https://github.com/yihui/bookdown-minimal>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <http://datavizforall.org/github.html> in this book.
+- Install GitHub Desktop <https://desktop.github.com> to transfer files between your online GitHub repo and local computer
+- In your web browser, go to your forked copy of `bookdown-minimal` and click the green `Clone or Download` button and select `Open in Desktop`. This should automatically open the GitHub Desktop application, and you can navigate to copy the code repo to a folder on your local computer.
+- In RStudio in the upper-right corner, select Project > Open Project to open the `bookdown-minimal` folder on your local computer.
+- ![Screenshot: Open project](images/15-bookdown/8-project-open.png)
+- In RStudio, open the `index.Rmd` file and make some simple edits to the text of this minimal book. For example, remove the hashtag `#` comment symbol in line 8 to "uncomment" and activate the PDF book option. Save your edits.
+- ![Screenshot: Edit the index.Rmd file](images/15-bookdown/9-edit-book.png)
+- Optional: Use your preferred text editor, such as Atom editor <https://atom.io>, to modify the text.
+- In RStudio, upper-right corner, select the Build tab, select Build Book, and choose All Formats to build both the gitbook-style static web edition and PDF edition.
+- If RStudio successfully builds both editions of your minimal book, the output will be saved into your `bookdown-minimal` folder, in a subfolder named `_book`, because that's how this sample is configured. The RStudio internal browser should automatically open your web edition (and it's not a very good browser, so feel free to close it). Also, open the subfolder and inspect the PDF edition. If RStudio found any errors, they will appear in the Build viewer.
+- ![Screenshot: Successful build](images/15-bookdown/11-successful-build.png)
+- Hint: In future sessions with RStudio, you may need to select Packages tab and click Update to keep bookdown and other software packages up to date.
+- ![Screenshot: Update packages](images/15-bookdown/12-packages-update.png)
+- Close RStudio.
+
+#### Publish your Book with GitHub Pages {-}
+- Open GitHub Desktop and navigate to the `bookdown-minimal` folder on your local computer. Write a summary to commit (save) the changes you made above to your master branch, and push this version to your online GitHub repo.
+- In your web browser, go to your online GitHub repo, with a web address similar to `https://github.com/USERNAME/bookdown-minimal` (insert your GitHub username).
+- In your GitHub repo, select Settings, scroll down to the GitHub Pages section (which is a free web hosting service to publish your code and book editions on the public web). Select Master Branch as your source, and Save.
+- Scroll down to this section again, and the web address of your published site should appear. Copy this address.
+- In a new browser tab, paste the web address from above, and at the end add `_book/index.html` because this sample is configured to store the web edition of your book in this subfolder. Your web address should be similar to: `https://USERNAME.github.io/bookdown-minimal/_book/index.html`
+
+#### Customize your Bookdown and GitHub settings {-}
+- To see customized settings for this book, go to its online repository <https://github.com/datavizforall/dataviz-bookdown>
+- In the `_bookdown.yml` file, the output directory is set to build all book formats into the `docs` folder.
+- The GitHub Pages settings for this repo (which you cannot view) is set to publish from the `master/docs` folder, to match the output directory above. This simplifies the published web address to this format: `https://USERNAME.github.com/REPONAME`
+- Most of the Bookdown configuration settings appear in the `index.Rmd` file. Read more about these options in the software developer's technical guide, <https://bookdown.org/yihui/bookdown/>.
+- In addition, this GitHub Pages repo is published with a custom domain name <https://DataVizForAll.org>. Learn more about custom domain names at <https://help.github.com/articles/using-a-custom-domain-with-github-pages/>, which requires purchasing a domain name from a web hosting service (such as <http://ReclaimHosting.com>). Adding a GitHub Pages custom domain name creates an additional `CNAME` file in the `docs` subfolder. Be careful not to delete it (or place a copy in a subfolder for safekeeping).
+- This book also includes a custom `404.html` file that was manually transferred into the `docs` subfolder, since it is not automatically built by Bookdown.
+- This book also includes a custom `google-analytics-datavizforall.html` file in the root-level of repo (where bookdown looks for it) and also is manually transferred to the `docs` subfolder (since bookdown does *not appear* to copy it to there on each build). This tracks web traffic with Google Analytics.
+
+#### Bookdown-flavored Markdown: Syntax and Style Guide {-}
 
 ##### Links with brackets and parentheses {-}
 Use brackets and parentheses for an [embedded link](http://example.com)

@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Embed Tableau Public on your Website | Data Visualization for All</title>
+  <title>Why this book? | Data Visualization for All</title>
   <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Embed Tableau Public on your Website | Data Visualization for All" />
+  <meta property="og:title" content="Why this book? | Data Visualization for All" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://datavizforall.github.io/" />
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="datavizforall/datavizforall-bookdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Embed Tableau Public on your Website | Data Visualization for All" />
+  <meta name="twitter:title" content="Why this book? | Data Visualization for All" />
   <meta name="twitter:site" content="@datavizforall" />
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="iframe-wordpress.html">
-<link rel="next" href="github.html">
+<link rel="prev" href="what.html">
+<link rel="next" href="authors.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -241,110 +241,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="iframe-tableau" class="section level2">
-<h2>Embed Tableau Public on your Website</h2>
-<p><em>last updated March 10, 2017</em></p>
-<p>Question: After learning <a href="tableau-public">how to create an interactive data visualization with Tableau Public</a> in this book, how do I embed it on my website?</p>
-<p>Answer: Tableau Public supports two embedding methods, and your choice depends on your type of website.</p>
-<ul>
-<li><ol style="list-style-type: upper-alpha">
-<li>Embed code: if you can paste directly into an HTML web page</li>
-</ol></li>
-<li><ol start="2" style="list-style-type: upper-alpha">
-<li>Convert Link to iframe: to paste into WordPress.org, Wix, SquareSpace, Weebly, and many other web platforms</li>
-</ol></li>
-</ul>
-<div id="try-it-6" class="section level4 unnumbered">
-<h4>Try it</h4>
-<p>Both methods produce an embedded visualization like the one below. Float your cursor over points to view data details.</p>
-<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500">
-</iframe>
-</div>
-<div id="a-embed-code-method-for-html-web-pages" class="section level4 unnumbered">
-<h4>A) Embed code method for HTML web pages</h4>
-<ol style="list-style-type: decimal">
-<li><p>Use this method if you can paste HTML and JavaScript code directly into a website with HTML pages.</p></li>
-<li><p>Go to the public web page of any Tableau Public visualization, such as this sample: <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a></p></li>
-<li><p>Before you begin the embed process, click the upper-right Edit Details button to make any final modifications to the title or toolbar settings.</p></li>
-<li><p>Click the bottom-right Share button, click inside the <strong>Embed Code</strong> field, and copy its contents. A typical embed code is a long string of HTML and JavaScript instructions to display the visualization.</p></li>
-</ol>
-<div class="figure">
-<img src="images/07-embed/tableau-edit-share.png" alt="Screenshot: Edit and Share buttons in Tableau Public web page" />
-<p class="caption">Screenshot: Edit and Share buttons in Tableau Public web page</p>
-</div>
-<ol start="5" style="list-style-type: decimal">
-<li>Open an HTML page on your website and paste the embed code in the body section. Below is an example of a sample Tableau Public embed code pasted between the body tags of a simple HTML page.</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span>
-<span class="kw">&lt;html&gt;</span>
-<span class="kw">&lt;head&gt;</span>
-  <span class="kw">&lt;title&gt;</span>sample web page<span class="kw">&lt;/title&gt;</span>
-  <span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content=</span><span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="kw">&gt;</span>
-  <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span>
-<span class="kw">&lt;/head&gt;</span>
-<span class="kw">&lt;body&gt;</span>
-  <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&#39;tableauPlaceholder&#39;</span><span class="ot"> id=</span><span class="st">&#39;viz1489158014225&#39;</span><span class="ot"> style=</span><span class="st">&#39;position: relative&#39;</span><span class="kw">&gt;&lt;noscript&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&#39;https:</span><span class="dv">&amp;#47;&amp;#47;</span><span class="st">www.datavizforall.org</span><span class="dv">&amp;#47;</span><span class="st">chart</span><span class="dv">&amp;#47;</span><span class="st">scatter-chart-tableau</span><span class="dv">&amp;#47;</span><span class="st">&#39;</span><span class="kw">&gt;&lt;img</span><span class="ot"> alt=</span><span class="st">&#39;CT School Districts by Income and Grade Level Equivalents, 2009-13 &#39;</span><span class="ot"> src=</span><span class="st">&#39;https:</span><span class="dv">&amp;#47;&amp;#47;</span><span class="st">public.tableau.com</span><span class="dv">&amp;#47;</span><span class="st">static</span><span class="dv">&amp;#47;</span><span class="st">images</span><span class="dv">&amp;#47;</span><span class="st">CT</span><span class="dv">&amp;#47;</span><span class="st">CTSchoolDistrictsbyIncomeandGradeLevels2009-13</span><span class="dv">&amp;#47;</span><span class="st">Sheet1</span><span class="dv">&amp;#47;</span><span class="st">1_rss.png&#39;</span><span class="ot"> style=</span><span class="st">&#39;border: none&#39;</span> <span class="kw">/&gt;&lt;/a&gt;&lt;/noscript&gt;&lt;object</span><span class="ot"> class=</span><span class="st">&#39;tableauViz&#39;</span><span class="ot">  style=</span><span class="st">&#39;display:none;&#39;</span><span class="kw">&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;host_url&#39;</span><span class="ot"> value=</span><span class="st">&#39;https%3A%2F%2Fpublic.tableau.com%2F&#39;</span> <span class="kw">/&gt;</span> <span class="kw">&lt;param</span><span class="ot"> name=</span><span class="st">&#39;site_root&#39;</span><span class="ot"> value=</span><span class="st">&#39;&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;name&#39;</span><span class="ot"> value=</span><span class="st">&#39;CTSchoolDistrictsbyIncomeandGradeLevels2009-13</span><span class="dv">&amp;#47;</span><span class="st">Sheet1&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;tabs&#39;</span><span class="ot"> value=</span><span class="st">&#39;no&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;toolbar&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;static_image&#39;</span><span class="ot"> value=</span><span class="st">&#39;https:</span><span class="dv">&amp;#47;&amp;#47;</span><span class="st">public.tableau.com</span><span class="dv">&amp;#47;</span><span class="st">static</span><span class="dv">&amp;#47;</span><span class="st">images</span><span class="dv">&amp;#47;</span><span class="st">CT</span><span class="dv">&amp;#47;</span><span class="st">CTSchoolDistrictsbyIncomeandGradeLevels2009-13</span><span class="dv">&amp;#47;</span><span class="st">Sheet1</span><span class="dv">&amp;#47;</span><span class="st">1.png&#39;</span> <span class="kw">/&gt;</span> <span class="kw">&lt;param</span><span class="ot"> name=</span><span class="st">&#39;animate_transition&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_static_image&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_spinner&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_overlay&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_count&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;/object&gt;&lt;/div&gt;</span>                <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&#39;text/javascript&#39;</span><span class="kw">&gt;</span>                    <span class="kw">var</span> divElement <span class="op">=</span> <span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&#39;viz1489158014225&#39;</span>)<span class="op">;</span>                    <span class="kw">var</span> vizElement <span class="op">=</span> <span class="va">divElement</span>.<span class="at">getElementsByTagName</span>(<span class="st">&#39;object&#39;</span>)[<span class="dv">0</span>]<span class="op">;</span>                    <span class="va">vizElement</span>.<span class="va">style</span>.<span class="at">width</span><span class="op">=</span><span class="st">&#39;100%&#39;</span><span class="op">;</span><span class="va">vizElement</span>.<span class="va">style</span>.<span class="at">height</span><span class="op">=</span>(<span class="va">divElement</span>.<span class="at">offsetWidth</span><span class="op">*</span><span class="fl">0.75</span>)<span class="op">+</span><span class="st">&#39;px&#39;</span><span class="op">;</span>                    <span class="kw">var</span> scriptElement <span class="op">=</span> <span class="va">document</span>.<span class="at">createElement</span>(<span class="st">&#39;script&#39;</span>)<span class="op">;</span>                    <span class="va">scriptElement</span>.<span class="at">src</span> <span class="op">=</span> <span class="st">&#39;https://public.tableau.com/javascripts/api/viz_v1.js&#39;</span><span class="op">;</span>                    <span class="va">vizElement</span>.<span class="va">parentNode</span>.<span class="at">insertBefore</span>(scriptElement<span class="op">,</span> vizElement)<span class="op">;</span>                <span class="kw">&lt;/script&gt;</span>
-<span class="kw">&lt;/body&gt;</span>
-<span class="kw">&lt;/html&gt;</span></code></pre></div>
-</div>
-<div id="b-convert-link-to-iframe-method" class="section level4 unnumbered">
-<h4>B) Convert Link to iframe method</h4>
-<ol style="list-style-type: decimal">
-<li><p>Use this method if you need to paste an iframe into common web authoring platforms (such as WordPress.org, Squarespace, Wix, Weebly, etc.), since these platforms typically do not support HTML and JavaScript code pasted directly into content.</p></li>
-<li><p>Go to the public web page of any Tableau Public visualization, such as this sample: <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a></p></li>
-<li><p>Before you begin the embed process, click the upper-right Edit Details button to make any final modifications to the title or toolbar settings.</p></li>
-<li><p>Click the bottom-right Share button, click inside the <strong>Link</strong> field (NOT the Embed Code field), and copy its contents.</p></li>
-</ol>
-<div class="figure">
-<img src="images/07-embed/tableau-edit-share.png" alt="Screenshot: Edit and Share buttons in Tableau Public web page" />
-<p class="caption">Screenshot: Edit and Share buttons in Tableau Public web page</p>
-</div>
-<ol start="5" style="list-style-type: decimal">
-<li>A typical link will look similar to this example (scroll to right to see all):</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:embed=y<span class="er">&amp;</span>:display_count=yes</code></pre></div>
-<ol start="6" style="list-style-type: decimal">
-<li>We need to edit the link to convert it into an iframe format. First, delete any code that appears after the question mark, to make it look like this (scroll to right to see all):</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?</code></pre></div>
-<ol start="7" style="list-style-type: decimal">
-<li>Add this snippet of code to the end, to replace what you deleted above:</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">:showVizHome=no<span class="er">&amp;</span>:embed=true</code></pre></div>
-<ol start="8" style="list-style-type: decimal">
-<li>Now your edited link should look similar to this (scroll to right to see all):</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no<span class="er">&amp;</span>:embed=true</code></pre></div>
-<ol start="9" style="list-style-type: decimal">
-<li>Enclose the link inside an iframe source tag <code>src=</code> with quotes, to make it look similar to this (scroll to right to see all):</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">src=&quot;https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no<span class="er">&amp;</span>:embed=true&quot;</code></pre></div>
-<ol start="10" style="list-style-type: decimal">
-<li>Add iframe tags for <code>width</code> and <code>height</code> in percentages or pixels (default), to make it look similar to this (scroll to right to see all):</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">src=&quot;https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no<span class="er">&amp;</span>:embed=true&quot; width=&quot;90%&quot; height=&quot;500&quot;</code></pre></div>
-<p>Hint: Insert 90% width, rather than 100, to help readers easily scroll down your web page</p>
-<ol start="11" style="list-style-type: decimal">
-<li>Add iframe tags at the beginning and end, to make it look similar to this (scroll to right to see all):</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no</span><span class="er">&amp;</span><span class="st">:embed=true&quot;</span><span class="ot"> width=</span><span class="st">&quot;90%&quot;</span><span class="ot"> height=</span><span class="st">&quot;500&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span></code></pre></div>
-<p>Exceptions to the last step above. As described in the <a href="embed.html#iframe-wordpress">Embed iframe on WordPress</a> chapter in this book, in a self-hosted WordPress.org site, with the iframe plugin, insert iframe brackets rather than HTML tags to make a shortcode like this (scroll to right to see all):</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">[iframe src=&quot;https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no<span class="er">&amp;</span>:embed=true&quot; width=&quot;90%&quot; height=&quot;500&quot;]</code></pre></div>
-</div>
-<div id="learn-more-12" class="section level4 unnumbered">
-<h4>Learn more</h4>
-<p>Embedding Tableau Public Views in iframe, Tableau Support page <a href="http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes" class="uri">http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes</a></p>
+<div id="why" class="section level2">
+<h2>Why this book?</h2>
+<p><em>last updated February 20, 2017</em></p>
+<p><em>Data Visualization for All</em>, an open-access online textbook, seeks to help you tell your story – and show your data – through the power of the public web.</p>
+<p>This open-access book reflects what I’ve learned while teaching data visualization <a href="http://commons.trincoll.edu/dataviz">to undergraduate students at Trinity College</a>, and now <a href="https://www.edx.org/school/trinityx">to a global online class on the Trinity edX platform</a>. Over the past few years, Trinity students and I have built interactive charts and maps in partnership with non-profit organizations in Hartford, Connecticut, to help them share their stories with data on the public web. Also, my students and colleagues have used these tools to create <a href="http://ontheline.trincoll.edu">On The Line: How Schooling, Housing, and Civil Rights Shaped Hartford and its Suburbs</a>, an open-access book-in-progress that features interactive historical maps of urban-suburban change. Students and colleagues who wrote tutorials, designed learning exercises, or developed code templates for <em>Data Visualization for All</em> are listed as <a href="authors">authors and contributors</a>.</p>
+<p>Although my outstanding colleagues have professional training, do not confuse them with me, the proverbial “Jack of all trades, master of none.” I do not consider myself an expert in data visualization, nor should anyone mistake me for a computer scientist or data scientist. Inspect my higher education transcripts and you’ll see only one computer science class (something called FORTRAN77 back in 1982), and not a single course in statistics, sadly. Instead, my desire to learn data visualization was driven by my need as an historian to tell stories about urban-suburban places and change over time. If you’ve ever watched me teach a class or deliver a presentation on these topics – always talking with my hands in the air – you’ll understand my primal need to create charts and maps. Stories become more persuasive when supported with data, especially well-crafted images that convey data relationships more clearly than words. Furthermore, these data stories become more powerful when we share them online, where they reach broader audiences who can interact with and evaluate our evidence.</p>
+<p>In the early 2000s, when I began to dabble in data visualization, our tools were expensive, not easy to learn, and not designed to share our stories on the public web. (One of my well-worn jokes is point to the bald spot on my head, and claim that it was caused while tearing out my hair in frustration while using ArcGIS.) But everything began to change around 2005 when Google Maps publicly released its application programming interface (API) that allowed people with some coding skills to show data points on an interactive web map. Gradually, between 2008-11, I began learning what was possible by working on map projects with talented programmers and geographers, such as Jean-Pierre Haeberly at Trinity, and Michael Howser at the <a href="http://magic.lib.uconn.edu/">University of Connecticut Libraries Map and Geographic Information Center</a> (MAGIC, my favorite acronym), thanks to a grant from the <a href="http://www.neh.gov">National Endowment for the Humanities</a>. Free and low-cost workshops sponsored by <a href="http://thatcamp.org">The Humanities and Technology Camp</a> (THATCamp) at the Center for History and New Media at George Mason University, and <a href="https://sunlightfoundation.com/transparency-camp/">Transparency Camp</a> by the Sunlight Foundation, introduced me to many people (especially Mano Marks and Derek Eder) who demonstrated easier-to-use tools and templates, such as Google Fusion Tables and GitHub. Closer to home, Alvin Chang and other data journalists at the <a href="http://ctmirror.org">Connecticut Mirror</a> showed me how to tell stories on the web with more flexible open-source tools, such as Leaflet and Highcharts.</p>
+<p>All of these data visualization lessons I learned have been <strong>so valuable</strong> – to me, my students, our community partners, and thousands of readers on the web – that my co-authors and I have agreed to share our knowledge with everyone, <strong>for free</strong>. This open-access book is guided by the principle of democratization of knowledge for the public good, hence the book’s title: <em>Data Visualization for All</em>. Not everyone can afford to make this choice, I realize. But the <a href="http://www.trincoll.edu/AboutTrinity/mission/Pages/default.aspx">mission of Trinity College</a> is to engage, connect, and transform, with both our local city of Hartford and the world at large. Since Trinity already pays my salary as a tenured professor, the right thing to do with the knowledge my students and I have gained is to pay it forward. That’s why we created <em>Data Visualization for All.</em></p>
+<p>If this free book is valuable for your education, then join us by sharing and supporting it for future readers: - Tell your friends about the book and share the link via social media, text, or email - Improve the book by adding comments or suggesting new chapters on our GitBook platform</p>
+<p>Try out the tutorials, explore the online examples, share what you’ve learned with others, and dream about better ways to tell your data stories.</p>
 
 </div>
-</div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="iframe-wordpress.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="what.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -374,7 +289,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/datavizforall/datavizforall-bookdown/edit/master/07.06-iframe-tableau.Rmd",
+"link": "https://github.com/datavizforall/datavizforall-bookdown/edit/master/0.2-why.Rmd",
 "text": "Edit on GitHub"
 },
 "history": {

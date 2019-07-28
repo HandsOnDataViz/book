@@ -220,7 +220,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="bookdown.html#bookdown">Publishing <em>DataVizForAll</em> with Bookdown</a></li>
 <li class="divider"></li>
-<li>Open access book-in-progress</li>
+<li style="padding: 10px 15px; font-weight: bold;">Open access book-in-progress</li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></li>
 <li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
 
@@ -243,7 +243,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="chart-design" class="section level2">
 <h2>Chart Design Principles</h2>
-<p><em>last updated June 6, 2019</em></p>
+<p><em>last updated July 7, 2019</em></p>
 <p>Spot the difference between good and bad charts, based on this compilation of design principles from leading experts, with citations listed below to learn more.</p>
 <ol style="list-style-type: decimal">
 <li><p>Remember the <strong>most important principle:</strong> Find meaningful insights in your data, and create visualizations that help you tell these stories. All of the other details below are secondary.</p></li>
@@ -257,9 +257,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <ol start="5" style="list-style-type: decimal">
 <li><p>Identify the <a href="chart">chart type</a> that best matches your story and data format.</p></li>
-<li><p>Draw visual comparisons that are easy for readers to understand, rather than confusing them (adapted from Gourley p. 19). <em>image to come</em></p></li>
-<li><p>Do the math for your readers. Based on your data story, decide if you should show absolute numbers, percentages, or percent change (Wong pp. 23-25, 104-107). <em>image and link to come</em></p></li>
-<li><p>Order categories logically—either alphabetically, by value, or sequentially—depending on your data story (Gourley, p. 19; Wong pp. 70-71).</p></li>
+<li><p>Draw visual comparisons that are easy for readers to understand, rather than confusing them (adapted from Gourley p. 19).</p></li>
+<li><p>Do the math for your readers. Based on your data story, decide if you should show absolute numbers, percentages, or percent change (Wong pp. 23-25, 104-107).</p></li>
+</ol>
+<div class="figure">
+<img src="images/05-chart/Chart%20-%207%20-%20Do%20the%20math.png" />
+
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Order categories logically—either alphabetically, by value, or sequentially—depending on your data story (Gourley, p. 19; Wong pp. 70-71).</li>
 </ol>
 <div class="figure">
 <img src="images/05-chart/Chart%20-%208%20-%20Order.png" />
@@ -273,8 +279,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li><p>On bar and column charts, start the vertical y-axis at zero, and choose natural increments (Wong pp. 51-52). But line charts do not need to start at zero, and can focus on specific ranges. See also the How to Lie with Charts and Maps chapter in this book. <em>image and link to come</em></p></li>
-<li><p>Beware of pie charts. Most readers cannot accurately estimate sizes of different slices. Consider other ways to show part-to-whole relationships, such as bar/column charts, or stacked bar/column charts (Few 2007, pp. 2-4; Wong p. 79).</p></li>
+<li>On bar and column charts, start the vertical y-axis at zero, and choose natural increments (Wong pp. 51-52). But line charts do not need to start at zero, and can focus on specific ranges. See also the <a href="how-to-lie-with-charts">How to Lie with Charts</a> and <a href="how-to-lie-with-maps">How to Lie with Maps</a> chapters in this book.</li>
+</ol>
+<div class="figure">
+<img src="images/05-chart/Chart%20-%2010%20-%20Start%20with%20zero.png" />
+
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>Beware of pie charts. Most readers cannot accurately estimate sizes of different slices. Consider other ways to show part-to-whole relationships, such as bar/column charts, or stacked bar/column charts (Few 2007, pp. 2-4; Wong p. 79).</li>
 </ol>
 <div class="figure">
 <img src="images/05-chart/Chart%20-%2011%20-%20No%20pie%20chart.png" />
@@ -292,14 +304,25 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ol>
 <ul>
 <li>Add meaningful titles, labels, and annotations to draw attention to your data story.</li>
-<li>Keep typography simple, and use bold type sparingly to highlight your key insights (Wong p. 32; Knaflic pp. 107, 111).</li>
-<li><em>image to come</em></li>
+<li>Keep typography simple, and <strong>use bold type</strong> sparingly to highlight your key insights (Wong p. 32; Knaflic pp. 107, 111).</li>
 </ul>
 <ol start="14" style="list-style-type: decimal">
 <li><p>On static charts, label items directly when possible. (On interactive charts, designers may need to rely on tooltips and text.) Insert a legend in a logical place for readers (Wong, p. 56).</p></li>
 <li><p>Add source credits and bylines—with links to view data tables and details—to build credibility and accountability.</p></li>
-<li><p>Avoid “chart junk”–such as 3D perspective, shadows, and unnecessary ornaments—which distract readers from your data story. Never use 3D unless you are plotting three-dimensional data (Tufte p. <em>to come</em>, Wong p. 62, Knaflic p. 65). <em>image to come</em></p></li>
-<li><p>De-clutter charts (Knaflic pp. 91-98, 130-135).</p></li>
+<li><p>Avoid “chart junk”–such as 3D perspective, shadows, and unnecessary ornaments—which distract readers from your data story. Never use 3D unless you are plotting three-dimensional data (Tufte p. <em>to come</em>, Wong p. 62, Knaflic p. 65).</p></li>
+</ol>
+<div class="figure">
+<img src="images/05-chart/Chart%20-%2016%20-%20Avoid%20junk.png" />
+
+</div>
+<ol start="17" style="list-style-type: decimal">
+<li>De-clutter charts (Knaflic pp. 91-98, 130-135).</li>
+</ol>
+<div class="figure">
+<img src="images/05-chart/Chart%20-%2017%20-%20Declutter.png" />
+
+</div>
+<ol start="18" style="list-style-type: decimal">
 <li>Choose colors wisely.</li>
 </ol>
 <ul>
@@ -314,21 +337,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>See also <a href="map-design">Map Design Principles</a> and <a href="story">Tell Your Data Story</a> chapters in this book.</p>
 <div id="learn-more-3" class="section level4 unnumbered">
 <h4>Learn more</h4>
-<p>Stephanie D. H. Evergreen, Effective Data Visualization: The Right Chart for the Right Data, (Los Angeles: SAGE Publications, Inc, 2016)</p>
-<p>Stephen Few, Now You See It: Simple Visualization Techniques for Quantitative Analysis, (Oakland, Calif: Analytics Press, 2009)</p>
-<p>Stephen Few, “Save the Pies for Dessert [critique of pie charts],” Visual Business Intelligence Newsletter, 2007, 1–14, <a href="http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf" class="uri">http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf</a></p>
-<p>Stephen Few, Show Me the Numbers: Designing Tables and Graphs to Enlighten, Second edition (Burlingame, CA: Analytics Press, 2012)</p>
-<p>Drew Gourley, How to Use Data Visualization to Win Over Your Audience, (Visage and Hubspot, June 2015), <a href="https://visage.co/content/data-viz-win-audience" class="uri">https://visage.co/content/data-viz-win-audience</a></p>
-<p>Cole Nussbaumer Knaflic, Storytelling with Data: A Data Visualization Guide for Business Professionals, (Hoboken, New Jersey: Wiley, 2015)</p>
-<p>Cole Nussbaumer Knalfic, “An Updated Post on Pies,” StoryTelling with Data, February 16, 2017, <a href="http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies" class="uri">http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies</a></p>
-<p>Wayne Lytle, Viz-O-Matic: The Dangers of Glitziness and Other Visualization Faux Pas, 1993 video shared on YouTube, <a href="https://www.youtube.com/watch?v=fP-7rhb-qMg" class="uri">https://www.youtube.com/watch?v=fP-7rhb-qMg</a></p>
-<p>Isabel Meirelles, Design for Information: An Introduction to the Histories, Theories, and Best Practices Behind Effective Information Visualizations (Rockport Publishers, 2013), <a href="http://isabelmeirelles.com/book-design-for-information/" class="uri">http://isabelmeirelles.com/book-design-for-information/</a></p>
-<p>Tableau, Visual Analysis Best Practices: A Guidebook, n.d., <a href="http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf" class="uri">http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf</a>.</p>
-<p>Edward R. Tufte, Beautiful Evidence (Graphics Press, 2006)</p>
-<p>“WTF Visualizations: Visualizations That Make No Sense,” 2017, <a href="http://viz.wtf" class="uri">http://viz.wtf</a>.</p>
-<p>xkcd, “University Website,” accessed February 12, 2017, <a href="https://xkcd.com/773/" class="uri">https://xkcd.com/773/</a></p>
-<p>Nathan Yau, “One Dataset, Visualized 25 Ways,” FlowingData, January 24, 2017, <a href="http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/" class="uri">http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/</a></p>
-<p>Nathan Yau, “Best Data Visualization Projects of 2016,” FlowingData, December 29, 2016, <a href="http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/" class="uri">http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/</a></p>
+<ul>
+<li><p>Stephanie D. H. Evergreen, Effective Data Visualization: The Right Chart for the Right Data, (Los Angeles: SAGE Publications, Inc, 2016)</p></li>
+<li><p>Stephen Few, Now You See It: Simple Visualization Techniques for Quantitative Analysis, (Oakland, Calif: Analytics Press, 2009)</p></li>
+<li><p>Stephen Few, “Save the Pies for Dessert [critique of pie charts],” Visual Business Intelligence Newsletter, 2007, 1–14, <a href="http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf" class="uri">http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf</a></p></li>
+<li><p>Stephen Few, Show Me the Numbers: Designing Tables and Graphs to Enlighten, Second edition (Burlingame, CA: Analytics Press, 2012)</p></li>
+<li><p>Drew Gourley, How to Use Data Visualization to Win Over Your Audience, (Visage and Hubspot, June 2015), <a href="https://visage.co/content/data-viz-win-audience" class="uri">https://visage.co/content/data-viz-win-audience</a></p></li>
+<li><p>Cole Nussbaumer Knaflic, Storytelling with Data: A Data Visualization Guide for Business Professionals, (Hoboken, New Jersey: Wiley, 2015)</p></li>
+<li><p>Cole Nussbaumer Knalfic, “An Updated Post on Pies,” StoryTelling with Data, February 16, 2017, <a href="http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies" class="uri">http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies</a></p></li>
+<li><p>Wayne Lytle, Viz-O-Matic: The Dangers of Glitziness and Other Visualization Faux Pas, 1993 video shared on YouTube, <a href="https://www.youtube.com/watch?v=fP-7rhb-qMg" class="uri">https://www.youtube.com/watch?v=fP-7rhb-qMg</a></p></li>
+<li><p>Isabel Meirelles, Design for Information: An Introduction to the Histories, Theories, and Best Practices Behind Effective Information Visualizations (Rockport Publishers, 2013), <a href="http://isabelmeirelles.com/book-design-for-information/" class="uri">http://isabelmeirelles.com/book-design-for-information/</a></p></li>
+<li><p>Tableau, Visual Analysis Best Practices: A Guidebook, n.d., <a href="http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf" class="uri">http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf</a>.</p></li>
+<li><p>Edward R. Tufte, Beautiful Evidence (Graphics Press, 2006)</p></li>
+<li><p>“WTF Visualizations: Visualizations That Make No Sense,” 2017, <a href="http://viz.wtf" class="uri">http://viz.wtf</a>.</p></li>
+<li><p>xkcd, “University Website,” accessed February 12, 2017, <a href="https://xkcd.com/773/" class="uri">https://xkcd.com/773/</a></p></li>
+<li><p>Nathan Yau, “One Dataset, Visualized 25 Ways,” FlowingData, January 24, 2017, <a href="http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/" class="uri">http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/</a></p></li>
+<li><p>Nathan Yau, “Best Data Visualization Projects of 2016,” FlowingData, December 29, 2016, <a href="http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/" class="uri">http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/</a></p></li>
+</ul>
 
 </div>
 </div>

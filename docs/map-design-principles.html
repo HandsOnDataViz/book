@@ -220,7 +220,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="bookdown.html#bookdown">Publishing <em>DataVizForAll</em> with Bookdown</a></li>
 <li class="divider"></li>
-<li>Open access book-in-progress</li>
+<li style="padding: 10px 15px; font-weight: bold;">Open access book-in-progress</li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></li>
 <li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
 
@@ -243,31 +243,48 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="map-design-principles" class="section level2 unnumbered">
 <h2>Map Design Principles</h2>
-<p><em>last updated March 21, 2017</em></p>
+<p><em>last updated July 28, 2019</em></p>
 <div id="ask-before-you-map" class="section level4 unnumbered">
 <h4>Ask Before You Map</h4>
 <p>Before you leap into a mapping project, consider these questions:</p>
-<ol style="list-style-type: upper-alpha">
-<li>Does your data contain geographic information? Common examples:</li>
-</ol>
+<p><strong>Does your data contain geographic information?</strong> Common examples:</p>
 <ul>
-<li>Specific locations or addresses (examples: Trinity College, or 300 Summit St, Hartford, CT)</li>
-<li>Latitude and longitude coordinates (example: 41.756, -72.675)</li>
+<li>Specific locations or addresses (examples: <em>Trinity College</em>, or <em>300 Summit St, Hartford, CT</em>)</li>
+<li>Latitude and longitude coordinates (example: <em>41.756, -72.675</em>)</li>
 <li>Regions that are legally recognized (such as nations, states, counties, census tracts) or that correspond to a boundary map in your possession (such as designated neighborhoods or health districts)</li>
 </ul>
 <p>While there are many more types of geographic information, these examples above are the most common. If your data lacks geographic information, or if you do not possess the corresponding boundary information, it may not be possible to map it.</p>
-<ol start="2" style="list-style-type: upper-alpha">
-<li>Does location really matter to your data story?</li>
-</ol>
+<p><strong>Does location really matter to your data story?</strong></p>
 <p>Sometimes a well-designed chart, rather than a map, may be the best way to visualize your data story. Consider these alternatives:</p>
 <ul>
-<li>to show change over time across different locations, consider a line chart <strong>insert population change line chart</strong></li>
-<li>to show the relationship between two or more datasets across different locations, consider an XY scatter chart or bubble chart <strong>insert income and test score scatter chart </strong></li>
+<li>to show change over time across different locations, consider a line chart</li>
 </ul>
-<ol start="3" style="list-style-type: upper-alpha">
-<li>If a map is the best way to tell your data story, then choose an appropriate type. See <a href="map">table of basic map types</a> in this book.</li>
+<iframe src="https://ourworldindata.org/grapher/projected-population-by-country" style="width: 100%; height: 450px; border: 0 none;">
+</iframe>
+<ul>
+<li>to show the relationship between two or more datasets across different locations, consider an XY scatter chart or bubble chart</li>
+</ul>
+<iframe src="https://ourworldindata.org/grapher/learning-outcomes-vs-gdp-per-capita" style="width: 100%; height: 450px; border: 0 none;">
+</iframe>
+<p>If a map is the best way to tell your data story, then choose an appropriate type. See <a href="map">table of basic map types</a> in this book.</p>
+</div>
+<div id="map-design-principles-1" class="section level4">
+<h4>Map Design Principles</h4>
+<ol style="list-style-type: decimal">
+<li><p>Understand basic map vocabulary: title, legend, baselayer, marker, popup, tooltip, zoom level, polygon, polyline, source.</p></li>
+<li><p>Add source credits and bylines—with links to view data tables and details—to build credibility and accountability.</p></li>
+<li>Choose colors wisely.
+<ul>
+<li>Use color to logically organize your data. Avoid random colors (Wong pp. 40, 44).</li>
+<li>Avoid bad combinations from opposite sides of color wheel, such as red/green or yellow/blue (Wong pp. 40, 44).</li>
+<li>Use contrast (such as color vs gray) to call attention to your data story (Knaflic pp. 87-88)</li>
+</ul></li>
+<li><p>Choose basemaps wisely. Basemaps themselves may contain a lot of information, such as terrain, roads, parks, town names, buildings, etc. They may also use colors that can be distracting to the viewer. Think about the minimum number of elements required in the basemap to tell your story.</p></li>
 </ol>
-<p>** TO DO** - Pull in relevant principles from the <a href="../chart/design">Chart Design</a> chapter in this book - Add more map-specific design principles, such as choosing among basemaps to highlight your story</p>
+<div class="figure">
+<img src="images/06-map/Map%20-%20Baselayers.png" alt="The view of San Francisco with different basemaps" />
+<p class="caption">The view of San Francisco with different basemaps</p>
+</div>
 </div>
 <div id="design-polygon-maps-with-colorbrewer" class="section level4 unnumbered">
 <h4>Design polygon maps with ColorBrewer</h4>
@@ -277,32 +294,42 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p class="caption">Screenshot: ColorBrewer web interface</p>
 </div>
 <ol style="list-style-type: decimal">
-<li>Number of data classes (or “dividers” or “buckets”). More does not necessarily mean better. Try different numbers and color schemes, and decide if you (and your audience) can easily distinguish between them.</li>
-</ol>
+<li>Think about the <strong>number of data classes</strong> (or “dividers” or “buckets”). More does not necessarily mean better. Try different numbers and color schemes, and decide if you (and your audience) can easily distinguish between them.
 <ul>
-<li>a smaller number sorts your data into fewer buckets, and shows a more <strong>coarse map</strong>, but differences in colored ranges become <strong>more visible</strong></li>
-<li>a larger number sorts your data into more buckets, and shows a more <strong>granular map</strong>, but differences in colored ranges become <strong>less visible</strong></li>
-</ul>
-<p>** add screenshot**</p>
+<li>A smaller number sorts your data into fewer buckets, and shows a more <strong>coarse map</strong>, but differences in colored ranges become <strong>more visible</strong>.</li>
+<li>A larger number sorts your data into more buckets, and shows a more <strong>granular map</strong>, but differences in colored ranges become <strong>less visible</strong>.</li>
+</ul></li>
+</ol>
+<div class="figure">
+<img src="images/06-map/Map%20-%20ColorBrewer%20-%20Classes.png" alt="Screenshots: ColorBrewer web interface" />
+<p class="caption">Screenshots: ColorBrewer web interface</p>
+</div>
 <ol start="2" style="list-style-type: decimal">
-<li>Nature of data:</li>
+<li>Think about the <strong>nature of data</strong> you are going to display.</li>
 </ol>
 <ul>
-<li>Sequential: best to show steps from lower values (light color) to higher values (dark color)</li>
-<li>example: a scale that increases from 1 to 100</li>
-<li>Diverging: best to show extremes (dark colors) around a neutral middle (light color)</li>
-<li>example: a scale that highlights extremes from -100 to 0 to 100</li>
-<li>Qualitative: best to show different categories, represented by their own color</li>
-<li>example: a map legend of the dominant crop in each area: apples, oranges, bananas</li>
+<li>Sequential: best to show steps from lower values (light color) to higher values (dark color)
+<ul>
+<li>Example: a scale that increases from 1 to 100</li>
+</ul></li>
+<li>Diverging: best to show extremes (dark colors) around a neutral middle (light color)
+<ul>
+<li>Example: a scale that highlights extremes from -100 to 0 to 100</li>
+</ul></li>
+<li>Qualitative: best to show different categories, represented by their own color
+<ul>
+<li>Example: a map legend of the dominant crop in each area: apples, oranges, bananas</li>
+</ul></li>
 </ul>
-<p>** add screenshot **</p>
+<div class="figure">
+<img src="images/06-map/Map%20-%20ColorBrewer%20-%20Schemes.png" alt="Screenshots: ColorBrewer web interface" />
+<p class="caption">Screenshots: ColorBrewer web interface</p>
+</div>
 <ol start="3" style="list-style-type: decimal">
-<li>Pick a color scheme, with options for colorblind-safe and print-friendly.</li>
-</ol>
+<li>Pick a <strong>color scheme</strong>, with options for colorblind-safe and print-friendly.
 <ul>
 <li>Think about the ideal format for your audiences. Are readers more likely to view your visualization on a computer screen, or in print, or both?</li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
+</ul></li>
 <li>Click the Export tab to view all options. Some Leaflet map templates in this book use specific color names (such as “red” or “darkgreen”) and some use hexadecimal codes, abbreviated as “hex codes” (such as #ff0000 or #336600). To learn more, use a Color Picker tool, such as <a href="https://www.w3schools.com/colors/colors_picker.asp" class="uri">https://www.w3schools.com/colors/colors_picker.asp</a></li>
 </ol>
 <p>Beware that polygon map design choices about data classes and colors reflect the biases of the author and the software. Read the <a href="detect.html">Detect Bias in Data Stories</a> chapter in this book, especially <a href="detect.html#how-to-lie-with-maps">How to Lie with Maps</a></p>

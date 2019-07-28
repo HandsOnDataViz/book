@@ -25,9 +25,9 @@ output:
         scroll_highlight: yes
         collapse: section
         before: |
-            <li><a href="./"><strong>Data Visualization for All</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
+          <li><a href="./"><strong>Data Visualization for All</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
         after: |
-          <li>Open access book-in-progress</li>
+          <li style="padding: 10px 15px; font-weight: bold;">Open access book-in-progress</li>
           <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></li>
           <li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
       download: [pdf, epub, docx]

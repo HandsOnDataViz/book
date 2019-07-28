@@ -1,7 +1,8 @@
 ## Leaflet Maps with Socrata API Open Data {#leaflet-maps-with-socrata}
-*By [Jack Dougherty and Ilya Ilyankou](authors), last updated December 21, 2016*
+*By [Jack Dougherty and Ilya Ilyankou](authors), last updated July 28, 2019*
 
-**TO DO** insert sample map iframe
+<iframe src="https://datavizforall.github.io/leaflet-socrata/index.html" style="width: 100%; height: 450px; border: 0 none;"></iframe>
+Source: [Current Class 1 - Class 4 Food Establishments](https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8), City of Hartford
 
 #### Why pair Leaflet maps with Socrata data? {-}
 Leaflet, a friendly and flexible open-source code library for creating interactive web maps, plays nicely with Socrata, an open data platform used by several government agencies and organizations. Benefits of pairing Leaflet and Socrata:
@@ -14,32 +15,34 @@ Leaflet, a friendly and flexible open-source code library for creating interacti
 
 #### About Socrata API endpoints {-}
 
-**TODO** clean up rough notes and add visuals
+Go to any Socrata open data platform, find a dataset, and click the API tab. As an example, you can use City of Hartford's [Police Incidents dataset](https://data.hartford.gov/Public-Safety/Police-Incidents-01012005-to-Current/889t-nwfu).
 
-Go to any Socrata open data platform, find a dataset, and click the API tab
+![Police Incidents dataset on Hartford Open Data portal](images/13-leaflet/data-hartford-api.png)
 
-Copy the API endpoint. The default version ends in .json
+Copy the API endpoint. The default version is JSON.
 
-If you're new to APIs, test the endpoint by pasting it into your browser (Chrome works best at this), and you will see its data stream in JSON format.
+If you're new to APIs, test the endpoint by pasting it into your browser address line. Ideally you would see a formatted JSON view (use Chrome or Firefox for better results).
 
-Test if this Socrata endpoint supports GeoJSON format by changing the suffix in your browser from `.json` to `.geojson`. GeoJSON format works best with Leaflet because the coding is simpler.
+![Formatted JSON example in Firefox](images/13-leaflet/data-hartford-api-json.png)
 
-If your endpoint supports GeoJSON format, your browser will display a data stream similar to the one below:
+If your browser does not support JSON view, you will see the raw JSON stream only, like the one shown below.
 
-add sample GeoJSON stream
+![Unformatted JSON example in Firefox](images/13-leaflet/data-hartford-api-json-not-formatted.png)
 
-Or if you receive the following error, you probably are viewing an older Socrata endpoint that does not support GeoJSON format, but only JSON format:
+Test if this Socrata endpoint supports GeoJSON format by changing the extention in the API dropdown menu from `JSON` to `GeoJSON`. GeoJSON format works best with Leaflet because the coding is simpler.
 
-`GeoJSON/SoQLPack MimeType is only supported for new backend views`
+If your endpoint supports GeoJSON format, your browser will display a data stream similar to the one below.
+
+![Formatted GeoJSON example in Firefox](images/13-leaflet/data-hartford-api-geojson.png)
 
 If your Socrata endpoint only supports JSON format, but includes data columns with latitude and longitude, see other Leaflet examples further below.
 
 #### Register for Socrata App Token {-}
-- Socrata requires developers to register for a free app token at https://dev.socrata.com/register
+- Socrata requires developers to register for a free app token at https://opendata.socrata.com/signup
 
 #### Demonstration Maps {-}
 
-#### GeoJSON endpoint with default markers and pop-up info window {-}
+#### GeoJSON endpoint with circle markers and tooltips {-}
 - map https://datavizforall.github.io/leaflet-socrata/index.html
 - code https://github.com/datavizforall/leaflet-socrata/index.html
 - data https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8
@@ -53,8 +56,8 @@ If your Socrata endpoint only supports JSON format, but includes data columns wi
 
   - paste and explain the code
 
-#### GeoJSON endpoint with simple data filter, circle marker styling and pop-up info {-}
-- map https://datavizforall.github.io/leaflet-socrata/index-geojson-filter-circle.html
+#### GeoJSON endpoint with simple data filter, default marker styling and pop-up info {-}
+- map https://datavizforall.github.io/leaflet-socrata/index-geojson-filter
 - code https://github.com/datavizforall/leaflet-socrata/
 - data https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98
 

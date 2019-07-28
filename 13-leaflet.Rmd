@@ -1,23 +1,28 @@
 # Leaflet Map Templates {#leaflet}
-*by [Ilya Ilyankou and Jack Dougherty](authors), last updated March 21, 2017*
+*by [Ilya Ilyankou and Jack Dougherty](authors), last updated July 28, 2019*
 
 While beginners appreciate the drag-and-drop map tools and tutorials described earlier in this book, such as [BatchGeo](batchgeo), [Google My Maps](mymaps) and [Carto](carto), more advanced users may wish to customize their visualizations, add more complex data and interactivity, and control exactly how and where their work appears on the web. A more powerful and relatively easy-to-learn solution is to use code templates built with Leaflet <https://leafletjs.com>, an open-source library, which you can [modify and host on GitHub](github), as described in this book.
 
-#### Tool Review {-}
-- Pros of working with Leaflet (https://leafletjs.com):
-  - Open-source code, which anyone can freely use online, download, modify, or expand with plugins
-  - Easier for beginners to understand than some other map code libraries
-  - Compact code library (less than 40 KB) that runs on JavaScript in all modern web browsers
-- Cons:
-  - Must host your own code repositories to publish to the web (with a free service such as GitHub Pages)
-  - Must rely on open-source community of developers to maintain the core code or specific plugins
+#### Working with Leaflet
 
-| Leaflet map templates     | Best use and tutorial chapters |
+**Pros**
+
+- Open-source code, which anyone can freely use online, download, modify, or expand with plugins
+- Easier for beginners to understand than some other map code libraries
+- Compact code library (less than 40 KB) that runs on JavaScript in all modern web browsers
+
+**Cons**
+
+- Must host your own code repositories to publish to the web (with a free service such as GitHub Pages)
+- Must rely on open-source community of developers to maintain the core code or specific plugins
+
+#### Leaflet Map Templates by DataVizForAll
+
+| Template | Best use and tutorial chapter |
 | --- | --- |
 | Leaflet Maps with Google Sheets<br> ![](images/13-leaflet/leaflet-maps-with-google-sheets.png) | Best to show points, polygons, polylines, or point table data. Upload your GeoJSON data and modify settings in linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets) |
-
-** TO DO **
-- more template links to come. . .
+| Leaflet Storymaps with Google Sheets<br> ![](images/13-leaflet/leaflet-storymaps-with-google-sheets.png) | Create a scrolling narrative with points, text, images, and links. <br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets) |
+| Leaflet Maps with Socrata API<br> ![](images/13-leaflet/leaflet-socrata-api-control-layers.png) | Create a Leaflet map powered by data from any Socrata data portal. <br>Template with tutorial: [Leaflet Maps with Socrata](leaflet-maps-with-socrata) |
 
 #### Inside Leaflet code templates {-}
 The templates featured below vary from simple to complex, but all of them include three basic types of code:

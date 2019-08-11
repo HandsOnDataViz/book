@@ -2,8 +2,8 @@
 
 Bar charts (vertical bar charts are often called *column charts*) can be used to compare categorical data. The y-axis (or x-axis for horizontal bar chart) should always start at 0.
 
-<iframe src="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" width="100%" height=500></iframe>
+<iframe src="https://datavizforall.github.io/chartjs-templates/bar-chart/index.html" width="100%" height=500 style="border: 0"></iframe>
 
-Demo: https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html
+Demo: https://datavizforall.github.io/chartjs-templates/bar-chart/index.html
 
-Source and instructions: https://github.com/DataVizForAll/chartjs-templates/tree/master/scatter-chart
+Source and instructions: https://github.com/DataVizForAll/chartjs-templates/tree/master/bar-chart

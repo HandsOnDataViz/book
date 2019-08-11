@@ -2,7 +2,7 @@
 
 Scatter charts (also *scatterplots*) are used to display data of 2 or more dimensions. The scatter chart below shows the relationship between household income and test performance for school districts in Connecticut. Using x- and y-axes to show two dimensions, it is easy to see that test performance improves as household income goes up.
 
-<iframe src="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" width="100%" height=500></iframe>
+<iframe src="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" width="100%" height=500 style="border: 0"></iframe>
 
 Demo: https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html
 

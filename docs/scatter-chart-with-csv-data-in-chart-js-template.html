@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Share Data with Google Sheets | Data Visualization for All</title>
+  <title>Scatter Chart with CSV Data in Chart.js Template | Data Visualization for All</title>
   <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Share Data with Google Sheets | Data Visualization for All" />
+  <meta property="og:title" content="Scatter Chart with CSV Data in Chart.js Template | Data Visualization for All" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://datavizforall.github.io/" />
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="datavizforall/datavizforall-bookdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Share Data with Google Sheets | Data Visualization for All" />
+  <meta name="twitter:title" content="Scatter Chart with CSV Data in Chart.js Template | Data Visualization for All" />
   <meta name="twitter:site" content="@datavizforall" />
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="copy.html">
-<link rel="next" href="csv.html">
+<link rel="prev" href="chartjs.html">
+<link rel="next" href="leaflet.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -197,7 +197,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i>Tell Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i>Chart.js Code Templates</a><ul>
-<li class="chapter" data-level="" data-path="scatter-chart-with-csv-data.html"><a href="scatter-chart-with-csv-data.html"><i class="fa fa-check"></i>Scatter Chart with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="scatter-chart-with-csv-data-in-chart-js-template.html"><a href="scatter-chart-with-csv-data-in-chart-js-template.html"><i class="fa fa-check"></i>Scatter Chart with CSV Data in Chart.js Template</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i>Leaflet Map Templates</a><ul>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
@@ -244,49 +244,33 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="share" class="section level2">
-<h2>Share Data with Google Sheets</h2>
-<p><em>last updated March 1, 2017</em></p>
-<p>To share live spreadsheet data with other people, use Google Sheets (<a href="https://www.google.com/sheets/about/" class="uri">https://www.google.com/sheets/about/</a>). Requires a free Google Drive account.</p>
-<div id="video-with-step-by-step-tutorial" class="section level4 unnumbered">
-<h4>Video with step-by-step tutorial</h4>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PoLhyld3KLo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+<div id="scatter-chart-with-csv-data-in-chart.js-template" class="section level2 unnumbered">
+<h2>Scatter Chart with CSV Data in Chart.js Template</h2>
+<p>Scatter charts (also <em>scatterplots</em>) are used to display data of 2 or more dimensions. The scatter chart below shows the relationship between household income and test performance for school districts in Connecticut. Using x- and y-axes to show two dimensions, it is easy to see that test performance improves as household income goes up.</p>
+<iframe src="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" width="100%" height="425">
 </iframe>
-<ol style="list-style-type: decimal">
-<li><p>Sign in to your Google Drive (<a href="http://drive.google.com" class="uri">http://drive.google.com</a>), and in the New menu, select Google Sheets.</p></li>
-<li><p>New spreadsheets are private by default. Only the owner can view and edit.</p></li>
-<li><p>To open your spreadsheet to others, click the blue Share button.</p></li>
-<li><p>To share data with specific individuals, enter their Google usernames.</p></li>
-<li><p>Or, to share data more widely, click the <strong>Advanced</strong> button on the next screen. (I wish Google made this button larger!)</p></li>
-<li>Click the Change button and decide on Link Sharing settings:</li>
-</ol>
+<p>Demo: <a href="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" class="uri">https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html</a></p>
+<p>Source and instructions: <a href="https://github.com/DataVizForAll/chartjs-templates/tree/master/scatter-chart" class="uri">https://github.com/DataVizForAll/chartjs-templates/tree/master/scatter-chart</a></p>
+<div id="going-beyond-two-dimensions" class="section level4">
+<h4>Going beyond two dimensions</h4>
+<p>To show more than two dimensions in scatter charts, one can:</p>
 <ul>
-<li>Public on the web (anyone can find your data)</li>
-<li>Anyone with the link (similar to an unlisted phone number)</li>
-<li>Off (only specific people you list by Google usernames)</li>
+<li><strong>color</strong> each data point differently to show third dimension, eg use shades of red and green to show 5-year trend in test performance;</li>
+<li><strong>resize</strong> each data point to display fourth dimension, eg number of students in each school district;</li>
+<li>use different <strong>icons or glyphs</strong> to display fifth dimension, eg circles for male students and squares for female students.</li>
 </ul>
-<p>Below those settings, select the Access level: - Can view - Can comment - Can edit (for co-authored data)</p>
-<ol start="7" style="list-style-type: decimal">
-<li>Select Save, and scroll down on the next screen to select Done.</li>
-</ol>
-<p>**<a href="Tip:**" class="uri">Tip:**</a> To avoid sending a long Google Sheets link to others, use a free link-shortening service such as Bit.ly (<a href="http://bit.ly" class="uri">http://bit.ly</a>). Requires a free account.</p>
-</div>
-<div id="learn-more-1" class="section level4 unnumbered">
-<h4>Learn more</h4>
-<ul>
-<li>“Share Files from Google Drive,” Google help page, <a href="https://support.google.com/docs/answer/2494822" class="uri">https://support.google.com/docs/answer/2494822</a></li>
-<li>Jack Dougherty, “How to Co-Author and Peer Edit with Google Docs,” Web Writing: How and Why for Liberal Arts Teaching and Learning, (2015), <a href="http://epress.trincoll.edu/webwriting/chapter/how-to-google-docs" class="uri">http://epress.trincoll.edu/webwriting/chapter/how-to-google-docs</a></li>
-</ul>
+<p>Remember not to overwhelm the viewer and communicate only the data that are necessary to prove or illustrate your idea.</p>
 
 </div>
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="copy.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="csv.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chartjs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="leaflet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -316,7 +300,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/datavizforall/datavizforall-bookdown/edit/master/02.3-share.Rmd",
+"link": "https://github.com/datavizforall/datavizforall-bookdown/edit/master/12.01-chartjs-scatter-csv.Rmd",
 "text": "Edit on GitHub"
 },
 "history": {

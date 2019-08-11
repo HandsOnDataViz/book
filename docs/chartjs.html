@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Share Data with Google Sheets | Data Visualization for All</title>
+  <title>Chart.js Code Templates | Data Visualization for All</title>
   <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Share Data with Google Sheets | Data Visualization for All" />
+  <meta property="og:title" content="Chart.js Code Templates | Data Visualization for All" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://datavizforall.github.io/" />
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="datavizforall/datavizforall-bookdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Share Data with Google Sheets | Data Visualization for All" />
+  <meta name="twitter:title" content="Chart.js Code Templates | Data Visualization for All" />
   <meta name="twitter:site" content="@datavizforall" />
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="copy.html">
-<link rel="next" href="csv.html">
+<link rel="prev" href="story.html">
+<link rel="next" href="scatter-chart-with-csv-data.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -244,49 +244,66 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="share" class="section level2">
-<h2>Share Data with Google Sheets</h2>
-<p><em>last updated March 1, 2017</em></p>
-<p>To share live spreadsheet data with other people, use Google Sheets (<a href="https://www.google.com/sheets/about/" class="uri">https://www.google.com/sheets/about/</a>). Requires a free Google Drive account.</p>
-<div id="video-with-step-by-step-tutorial" class="section level4 unnumbered">
-<h4>Video with step-by-step tutorial</h4>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PoLhyld3KLo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-<ol style="list-style-type: decimal">
-<li><p>Sign in to your Google Drive (<a href="http://drive.google.com" class="uri">http://drive.google.com</a>), and in the New menu, select Google Sheets.</p></li>
-<li><p>New spreadsheets are private by default. Only the owner can view and edit.</p></li>
-<li><p>To open your spreadsheet to others, click the blue Share button.</p></li>
-<li><p>To share data with specific individuals, enter their Google usernames.</p></li>
-<li><p>Or, to share data more widely, click the <strong>Advanced</strong> button on the next screen. (I wish Google made this button larger!)</p></li>
-<li>Click the Change button and decide on Link Sharing settings:</li>
-</ol>
+<div id="chartjs" class="section level1">
+<h1>Chart.js Code Templates</h1>
+<p><em>by <a href="authors">Ilya Ilyankou and Jack Dougherty</a>, last updated August 11, 2019</em></p>
+<p>While beginners appreciate the drag-and-drop chart tools and tutorials described earlier in this book, such as <a href="google-sheets">Google Sheets</a> and <a href="tableau-public">Tableau Public</a>, more advanced users may wish to customize their visualizations, add more complex data, and control exactly how and where their work appears on the web. A more powerful and relatively easy-to-learn solution is to use code templates built with Chart.js <a href="https://www.chartjs.org/" class="uri">https://www.chartjs.org/</a>, an open-source library, which you can <a href="github">modify and host on GitHub</a>, as described in this book.</p>
+<div id="pros-of-working-with-chart.js" class="section level4">
+<h4>Pros of working with Chart.js</h4>
 <ul>
-<li>Public on the web (anyone can find your data)</li>
-<li>Anyone with the link (similar to an unlisted phone number)</li>
-<li>Off (only specific people you list by Google usernames)</li>
+<li>Open-source code that is distributed under MIT license and is free for all and</li>
+<li>Easier for beginners to understand than more complex visualization code libraries such as D3.js</li>
 </ul>
-<p>Below those settings, select the Access level: - Can view - Can comment - Can edit (for co-authored data)</p>
-<ol start="7" style="list-style-type: decimal">
-<li>Select Save, and scroll down on the next screen to select Done.</li>
-</ol>
-<p>**<a href="Tip:**" class="uri">Tip:**</a> To avoid sending a long Google Sheets link to others, use a free link-shortening service such as Bit.ly (<a href="http://bit.ly" class="uri">http://bit.ly</a>). Requires a free account.</p>
 </div>
-<div id="learn-more-1" class="section level4 unnumbered">
+<div id="cons-of-working-with-chart.js" class="section level4">
+<h4>Cons of working with Chart.js</h4>
+<ul>
+<li>Must host your own code repositories to publish to the web (with a free service such as GitHub Pages)</li>
+</ul>
+</div>
+<div id="list-of-chart.js-templates" class="section level4">
+<h4>List of Chart.js templates</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Templates</th>
+<th>Best use and tutorial chapters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>to come</td>
+<td>to come</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="inside-the-templates" class="section level4 unnumbered">
+<h4>Inside the templates</h4>
+<p>The templates featured above vary from simple to complex, but all of them rely on four basic pillars:</p>
+<ul>
+<li>HTML: language to structure content on the web (example: index.html)</li>
+<li>CSS, or Cascading Style Sheet: to shape how content appears on the web (example: style.css)</li>
+<li>JavaScript: code to create the chart and interactivity (example: script.js)</li>
+<li>CSV: data that powers the visualization that is expressed in comma-separated format (example: data.csv)</li>
+</ul>
+<p>Also, these templates refer to other code elements: - library: link to online instructions to complete routine tasks (example: Highcharts) - data: content to appear in chart, typically in CSV format (example: data.csv) or pulled from Google Sheets</p>
+</div>
+<div id="learn-more-18" class="section level4 unnumbered">
 <h4>Learn more</h4>
 <ul>
-<li>“Share Files from Google Drive,” Google help page, <a href="https://support.google.com/docs/answer/2494822" class="uri">https://support.google.com/docs/answer/2494822</a></li>
-<li>Jack Dougherty, “How to Co-Author and Peer Edit with Google Docs,” Web Writing: How and Why for Liberal Arts Teaching and Learning, (2015), <a href="http://epress.trincoll.edu/webwriting/chapter/how-to-google-docs" class="uri">http://epress.trincoll.edu/webwriting/chapter/how-to-google-docs</a></li>
+<li>Chart.js Samples, <a href="https://www.chartjs.org/samples/latest/" class="uri">https://www.chartjs.org/samples/latest/</a></li>
 </ul>
 
-</div>
+</div> 
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="copy.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="csv.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="story.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="scatter-chart-with-csv-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -316,7 +333,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/datavizforall/datavizforall-bookdown/edit/master/02.3-share.Rmd",
+"link": "https://github.com/datavizforall/datavizforall-bookdown/edit/master/12-chartjs.Rmd",
 "text": "Edit on GitHub"
 },
 "history": {

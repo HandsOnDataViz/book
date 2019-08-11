@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Leaflet Maps with Socrata API Open Data | Data Visualization for All</title>
+  <title>Bar Chart with CSV Data | Data Visualization for All</title>
   <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more.">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Leaflet Maps with Socrata API Open Data | Data Visualization for All" />
+  <meta property="og:title" content="Bar Chart with CSV Data | Data Visualization for All" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://datavizforall.github.io/" />
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="datavizforall/datavizforall-bookdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Leaflet Maps with Socrata API Open Data | Data Visualization for All" />
+  <meta name="twitter:title" content="Bar Chart with CSV Data | Data Visualization for All" />
   <meta name="twitter:site" content="@datavizforall" />
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="leaflet-storymaps-with-google-sheets.html">
-<link rel="next" href="leaflet-maps-open-apis.html">
+<link rel="prev" href="scatter-chart-with-csv-data.html">
+<link rel="next" href="leaflet.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -245,116 +245,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="leaflet-maps-with-socrata" class="section level2">
-<h2>Leaflet Maps with Socrata API Open Data</h2>
-<p><em>By <a href="authors">Jack Dougherty and Ilya Ilyankou</a>, last updated July 28, 2019</em></p>
-<iframe src="https://datavizforall.github.io/leaflet-socrata/index.html" style="width: 100%; height: 450px; border: 0 none;">
+<div id="bar-chart-with-csv-data" class="section level2 unnumbered">
+<h2>Bar Chart with CSV Data</h2>
+<p>Bar charts (vertical bar charts are often called <em>column charts</em>) can be used to compare categorical data. The y-axis (or x-axis for horizontal bar chart) should always start at 0.</p>
+<iframe src="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" width="100%" height="500">
 </iframe>
-<p>Source: <a href="https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8">Current Class 1 - Class 4 Food Establishments</a>, City of Hartford</p>
-<div id="why-pair-leaflet-maps-with-socrata-data" class="section level4 unnumbered">
-<h4>Why pair Leaflet maps with Socrata data?</h4>
-<p>Leaflet, a friendly and flexible open-source code library for creating interactive web maps, plays nicely with Socrata, an open data platform used by several government agencies and organizations. Benefits of pairing Leaflet and Socrata:</p>
-<ul>
-<li>Although the Socrata data platform includes built-in visualization tools for anyone to create charts and maps, Leaflet gives you more control over your map design. Furthermore, Leaflet allows you to create maps that bring together data from both Socrata and non-Socrata sources.</li>
-<li>Socrata datasets include an API (application program interface) endpoint, in the form of a web address. This endpoint enables other computers to easily access the most recent data online, instead of a static version that was manually downloaded.</li>
-<li><p>Newer Socrata datasets that include locations (such as latitude and longitude coordinates) also provide endpoints in GeoJSON format. Since Leaflet maps easily process GeoJSON data, only a few lines of code are required.</p></li>
-<li><p>However, Socrata GeoJSON endpoints do not currently support “real-time” data, such as up-to-the-minute locations of public transportation, etc. In these cases, you may need to access data through a provider other than Socrata, most likely in a different format, which may require more coding skills.</p></li>
-</ul>
-</div>
-<div id="about-socrata-api-endpoints" class="section level4 unnumbered">
-<h4>About Socrata API endpoints</h4>
-<p>Go to any Socrata open data platform, find a dataset, and click the API tab. As an example, you can use City of Hartford’s <a href="https://data.hartford.gov/Public-Safety/Police-Incidents-01012005-to-Current/889t-nwfu">Police Incidents dataset</a>.</p>
-<div class="figure">
-<img src="images/13-leaflet/data-hartford-api.png" alt="Police Incidents dataset on Hartford Open Data portal" />
-<p class="caption">Police Incidents dataset on Hartford Open Data portal</p>
-</div>
-<p>Copy the API endpoint. The default version is JSON.</p>
-<p>If you’re new to APIs, test the endpoint by pasting it into your browser address line. Ideally you would see a formatted JSON view (use Chrome or Firefox for better results).</p>
-<div class="figure">
-<img src="images/13-leaflet/data-hartford-api-json.png" alt="Formatted JSON example in Firefox" />
-<p class="caption">Formatted JSON example in Firefox</p>
-</div>
-<p>If your browser does not support JSON view, you will see the raw JSON stream only, like the one shown below.</p>
-<div class="figure">
-<img src="images/13-leaflet/data-hartford-api-json-not-formatted.png" alt="Unformatted JSON example in Firefox" />
-<p class="caption">Unformatted JSON example in Firefox</p>
-</div>
-<p>Test if this Socrata endpoint supports GeoJSON format by changing the extention in the API dropdown menu from <code>JSON</code> to <code>GeoJSON</code>. GeoJSON format works best with Leaflet because the coding is simpler.</p>
-<p>If your endpoint supports GeoJSON format, your browser will display a data stream similar to the one below.</p>
-<div class="figure">
-<img src="images/13-leaflet/data-hartford-api-geojson.png" alt="Formatted GeoJSON example in Firefox" />
-<p class="caption">Formatted GeoJSON example in Firefox</p>
-</div>
-<p>If your Socrata endpoint only supports JSON format, but includes data columns with latitude and longitude, see other Leaflet examples further below.</p>
-</div>
-<div id="register-for-socrata-app-token" class="section level4 unnumbered">
-<h4>Register for Socrata App Token</h4>
-<ul>
-<li>Socrata requires developers to register for a free app token at <a href="https://opendata.socrata.com/signup" class="uri">https://opendata.socrata.com/signup</a></li>
-</ul>
-</div>
-<div id="demonstration-maps" class="section level4 unnumbered">
-<h4>Demonstration Maps</h4>
-</div>
-<div id="geojson-endpoint-with-circle-markers-and-tooltips" class="section level4 unnumbered">
-<h4>GeoJSON endpoint with circle markers and tooltips</h4>
-<ul>
-<li>map <a href="https://datavizforall.github.io/leaflet-socrata/index.html" class="uri">https://datavizforall.github.io/leaflet-socrata/index.html</a></li>
-<li>code <a href="https://github.com/datavizforall/leaflet-socrata/index.html" class="uri">https://github.com/datavizforall/leaflet-socrata/index.html</a></li>
-<li>data <a href="https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8" class="uri">https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8</a></li>
-<li><p>note: location data appears as latitude and longitude coordinates in the <code>geom</code> column</p></li>
-<li><p>steps to create your own (MORE TODO HERE)</p></li>
-<li><p>select API button, copy endpoint, and change suffix from .json to .geojson</p></li>
-<li><p>copy this Leaflet map template, which includes this key section of code:</p></li>
-<li><p>paste and explain the code</p></li>
-</ul>
-</div>
-<div id="geojson-endpoint-with-simple-data-filter-default-marker-styling-and-pop-up-info" class="section level4 unnumbered">
-<h4>GeoJSON endpoint with simple data filter, default marker styling and pop-up info</h4>
-<ul>
-<li>map <a href="https://datavizforall.github.io/leaflet-socrata/index-geojson-filter" class="uri">https://datavizforall.github.io/leaflet-socrata/index-geojson-filter</a></li>
-<li>code <a href="https://github.com/datavizforall/leaflet-socrata/" class="uri">https://github.com/datavizforall/leaflet-socrata/</a></li>
-<li>data <a href="https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98" class="uri">https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98</a></li>
-</ul>
-</div>
-<div id="multiple-socrata-datasets-with-leaflet-control-layers-legend" class="section level4 unnumbered">
-<h4>Multiple Socrata datasets with Leaflet control layers legend</h4>
-<ul>
-<li>map <a href="https://datavizforall.github.io/leaflet-socrata/index-control-layers.html" class="uri">https://datavizforall.github.io/leaflet-socrata/index-control-layers.html</a></li>
-<li>code <a href="https://github.com/datavizforall/leaflet-socrata/index-control-layers.html" class="uri">https://github.com/datavizforall/leaflet-socrata/index-control-layers.html</a></li>
-</ul>
-</div>
-<div id="older-json-only-endpoint-with-separate-columns-for-latitude-longitude" class="section level4 unnumbered">
-<h4>Older JSON-only endpoint, with separate columns for latitude, longitude</h4>
-<ul>
-<li>map <a href="https://datavizforall.github.io/leaflet-socrata/index-json.html" class="uri">https://datavizforall.github.io/leaflet-socrata/index-json.html</a></li>
-<li>code <a href="https://github.com/datavizforall/leaflet-socrata/index-json.html" class="uri">https://github.com/datavizforall/leaflet-socrata/index-json.html</a></li>
-<li>data <a href="https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7" class="uri">https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7</a></li>
-</ul>
-</div>
-<div id="learn-more-21" class="section level4 unnumbered">
-<h4>Learn more</h4>
-<ul>
-<li><a href="https://dev.socrata.com/" class="uri">https://dev.socrata.com/</a></li>
-<li><a href="https://github.com/chriswhong/simpleSodaLeaflet" class="uri">https://github.com/chriswhong/simpleSodaLeaflet</a></li>
-</ul>
-</div>
-<div id="thanks-to" class="section level4 unnumbered">
-<h4>Thanks to</h4>
-<ul>
-<li>Chris Metcalf <a href="https://github.com/chrismetcalf" class="uri">https://github.com/chrismetcalf</a></li>
-<li>Tyler Klyeklamp <a href="https://data.ct.gov/" class="uri">https://data.ct.gov/</a></li>
-</ul>
+<p>Demo: <a href="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" class="uri">https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html</a></p>
+<p>Source and instructions: <a href="https://github.com/DataVizForAll/chartjs-templates/tree/master/scatter-chart" class="uri">https://github.com/DataVizForAll/chartjs-templates/tree/master/scatter-chart</a></p>
 
 </div>
-</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="leaflet-storymaps-with-google-sheets.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="leaflet-maps-open-apis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="scatter-chart-with-csv-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="leaflet.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -384,7 +291,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/datavizforall/datavizforall-bookdown/edit/master/13.03-leaflet-maps-with-socrata.Rmd",
+"link": "https://github.com/datavizforall/datavizforall-bookdown/edit/master/12.02-chartjs-bar-csv.Rmd",
 "text": "Edit on GitHub"
 },
 "history": {

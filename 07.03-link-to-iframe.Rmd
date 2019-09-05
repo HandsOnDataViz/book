@@ -6,7 +6,7 @@ After you publish your data visualization to the web, how do you convert its web
 The answer depends: did you publish your visualization as a code template on GitHub Pages? Or did you publish it using a drop-and-drag tool such as Google Sheets or Tableau Public?
 
 #### Published with a code template on GitHub Pages {-}
-If you published your visualization from a code template (such as Leaflet or Highcharts) with GitHub Pages, follow these easy steps:
+If you published your visualization from a code template (such as Leaflet or Chart.js) with GitHub Pages, follow these easy steps:
 
 1) Copy the URL of your published visualization on GitHub, which will be in this format:
 ```html

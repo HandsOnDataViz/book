@@ -86,10 +86,10 @@ These URLs are NOT case-sensitive, which means that `https://github.com/USERNAME
 
 4) If you cannot find the problem, go to the top of this page to Safely Delete Your GitHub Repo and Start Over. Also, make a new copy of the Google Sheet template, give it a new name, and copy data from your old sheet using File > Paste Special > Values Only.
 
-#### Problems with Highcharts code templates {-}
+#### Problems with Chart.js code templates {-}
 
 ##### Chart displays old data {-}
-If you upload new data to your Highcharts code template on GitHub Pages, and it does not appear in your browser after refreshing and waiting up to one minute, then GitHub Pages is probably not the cause of the problem. Instead, some browsers continue to show "old" Highcharts in the web cache. The simplest solution is to File > Quit your browser and re-open the link to your Highcharts.
+If you upload new data to your Chart.js code template on GitHub Pages, and it does not appear in your browser after refreshing and waiting up to one minute, then GitHub Pages is probably not the cause of the problem. Instead, some browsers continue to show "old" Chart.js in the web cache. The simplest solution is to File > Quit your browser and re-open the link to your Chart.js
 
 #### Problems with Mac Computers {-}
 

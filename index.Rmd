@@ -9,7 +9,7 @@ documentclass: book
 
 url: 'http\://datavizforall.github.io/'
 github-repo: datavizforall/datavizforall-bookdown
-description: 'Tell your data story with free and easy-to-learn tools. "Data Visualization for All," an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more.'
+description: 'Tell your data story with free and easy-to-learn tools. "Data Visualization for All," an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more.'
 
 output:
   bookdown::gitbook:
@@ -58,7 +58,7 @@ output:
 
 #### Tell your data story with free and easy-to-learn tools. {-}
 
-*Data Visualization for All*, an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Highcharts, Leaflet, GitHub, and more.
+*Data Visualization for All*, an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more.
 
 [About the authors and contributors](authors) from [Trinity College, Hartford CT](http://www.trincoll.edu): Jack Dougherty, Ilya Ilyankou, Veronica X. Armendariz, Stacy Lam, and David Tatem.
 

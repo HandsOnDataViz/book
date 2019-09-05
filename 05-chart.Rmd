@@ -4,7 +4,7 @@
 Charts pull readers deeper into your story. Even if your data contains geographical information, sometimes a chart tells your story better than a map. But designing meaningful, interactive charts requires careful thought about how to communicate your data story with your audience. In this chapter, you will learn how to:
 
 - Practice [principles of chart design](chart-design). Learn to identify good charts from bad ones.
-- Choose a chart type that matches your story and data format, and follow tutorials in the table below. Beginners may start with easy-to-learn tools such as [Google Sheets](chart-google-sheets) or [Tableau Public](tableau-public), then move up to more powerful tools, such as [Highcharts](highcharts), which require you to [Modify and Host Code Templates with GitHub](github) or another web host.
+- Choose a chart type that matches your story and data format, and follow tutorials in the table below. Beginners may start with easy-to-learn tools such as [Google Sheets](chart-google-sheets) or [Tableau Public](tableau-public), then move up to more powerful tools, such as [Chart.js](chartjs), which require you to [Modify and Host Code Templates with GitHub](github) or another web host.
 
 See also related chapters in this book:
 

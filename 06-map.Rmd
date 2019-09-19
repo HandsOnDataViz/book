@@ -5,7 +5,7 @@ Maps entice readers to explore your data story and develop a stronger sense of p
 
 - Practice key [principles of map design](map-design).
 - Choose a map type that matches your data story and format, with tutorial links in the table below.
-Beginners may start with easy-to-learn tools such as [BatchGeo](batchgeo) or [Google My Maps](mymaps), then move up to more powerful tools, such as [Leaflet](leaflet), which require you to [Modify and Host Code Templates with GitHub](github) or other web servers.  
+Beginners may start with easy-to-learn tools such as [Google My Maps](mymaps), then move up to more powerful tools, such as [Leaflet](leaflet), which require you to [Modify and Host Code Templates with GitHub](github) or other web servers.  
 
 See also related chapters in this book:
 - [Draw and write your data story](draw) to capture your ideas on paper
@@ -17,7 +17,7 @@ See also related chapters in this book:
 
 | Basic map types | Best use and tutorial chapters |
 | --- | --- |
-| Point map        <br> ![](images/06-map/map-point.png) | Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tools: [BatchGeo tutorial](batchgeo) or [Google My Maps tutorial](mymaps)<br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets) and other [Leaflet templates](leaflet) |
+| Point map        <br> ![](images/06-map/map-point.png) | Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: [Google My Maps tutorial](mymaps)<br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets) and other [Leaflet templates](leaflet) |
 | Polygon map      <br> ![](images/06-map/map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets) and other [Leaflet templates](leaflet) |
 | Polyline map     <br> ![](images/06-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets) and other [Leaflet templates](leaflet)|
 | Combination map   <br> ![](images/06-map/map-point-polygon-polyline.png) | Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets) and other [Leaflet templates](leafletl)  |

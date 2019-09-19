@@ -1,7 +1,7 @@
 ## Geocode Locations into Coordinates with US Census or Google {#geocode}
 *By [Ilya Ilyankou and Jack Dougherty](authors), last updated September 28, 2017*
 
-Many free map tools geocode locations by placing them on a map, such as the [BatchGeo](batchgeo) and [Google My Maps tutorials](/mymaps) in this book. But those tools typically do not allow you to easily extract the latitude-longitude coordinates for each point.
+Many free map tools geocode locations by placing them on a map, such as [Google My Maps tutorials](/mymaps) in this book. But those tools typically do not allow you to easily extract the latitude-longitude coordinates for each point.
 
 We created two free Google Sheets Geocoder scripts that have several advantages:
 

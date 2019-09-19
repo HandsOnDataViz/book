@@ -8,7 +8,7 @@ This tutorial introduces the **basic steps** of working with code templates, usi
 - C) Modify your map title and add layer controls
 - D) Geocode addresses [in a Google Sheet](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/) and upload points from data.csv
 
-Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as BatchGeo and Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](github). For more advanced examples, see the [Leaflet Map Templates](leaflet) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](fix-code) chapter in this book.
+Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](github). For more advanced examples, see the [Leaflet Map Templates](leaflet) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](fix-code) chapter in this book.
 
 #### Try it {-}
 You will begin this tutorial with a simple interactive map that includes one pop-up point:

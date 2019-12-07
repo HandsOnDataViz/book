@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html  lang="en">
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Pull Open Data into Leaflet Map with APIs | Data Visualization for All</title>
-  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Pull Open Data into Leaflet Map with APIs | Data Visualization for All" />
   <meta property="og:type" content="book" />
@@ -22,18 +21,18 @@
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
   
 
-<meta name="author" content="Jack Dougherty">
-<meta name="author" content="Ilya Ilyankou">
+<meta name="author" content="Jack Dougherty" />
+<meta name="author" content="Ilya Ilyankou" />
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="leaflet-maps-with-socrata.html">
-<link rel="next" href="leaflet-polygon-map-click.html">
+<link rel="prev" href="leaflet-maps-with-socrata.html"/>
+<link rel="next" href="leaflet-polygon-map-click.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -41,6 +40,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -60,41 +62,68 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -261,40 +290,40 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>Inside the open data repo, look for an API button and copy the endpoint.</p></li>
 </ol>
 <div class="figure">
-<img src="images/13-leaflet/ct-open-data-api-endpoint.png" alt="Screenshot: Sample API endpoint in Socrata open data repo" />
+<img src="images/13-leaflet/ct-open-data-api-endpoint.png" alt="" />
 <p class="caption">Screenshot: Sample API endpoint in Socrata open data repo</p>
 </div>
 <ol start="4" style="list-style-type: decimal">
 <li>Paste the endpoint link into your browser, change the suffix from <code>.json</code> to <code>.geojson</code> and press return. In order to show the endpoint data as points on a map in this simple Leaflet template, the points must already be geocoded inside the open data repo, and the platform must support a GeoJSON endpoint. In your browser, one sign of success is a long stream of GeoJSON data like this:</li>
 </ol>
 <div class="figure">
-<img src="images/13-leaflet/ct-open-data-geojson.png" alt="Screenshot: API endpoint with .geojson suffix in Chrome browser" />
+<img src="images/13-leaflet/ct-open-data-geojson.png" alt="" />
 <p class="caption">Screenshot: API endpoint with .geojson suffix in Chrome browser</p>
 </div>
 <ol start="5" style="list-style-type: decimal">
 <li>In this section of the Leaflet map template, the code includes a jQuery function <code>$.getJSON</code> to call the open data endpoint in GeoJSON format: <code>https://data.ct.gov/resource/v4tt-nt9n.geojson</code>. It also requires a Socrata app token, and you can get your own token for free at: <a href="https://dev.socrata.com/register" class="uri">https://dev.socrata.com/register</a>. Each geocoded school in the Socrata data repository is displayed as a blue circle, with data properties (such as: name) in a clickable pop-up.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">// load open data from Socrata endpoint in GeoJSON format</span>
-<span class="co">// with simple marker styling: blue circles</span>
-<span class="co">// register your own Socrata app token at https://dev.socrata.com/register</span>
-<span class="co">// Connecticut School Directory, CT Open Data, https://data.ct.gov/resource/v4tt-nt9n</span>
-<span class="va">$</span>.<span class="at">getJSON</span>(<span class="st">&quot;https://data.ct.gov/resource/v4tt-nt9n.geojson?&amp;$$app_token=QVVY3I72SVPbxBYlTM8fA7eet&quot;</span><span class="op">,</span> <span class="kw">function</span> (data)<span class="op">{</span>
-  <span class="kw">var</span> geoJsonLayer <span class="op">=</span> <span class="va">L</span>.<span class="at">geoJson</span>(data<span class="op">,</span> <span class="op">{</span>
-    <span class="dt">pointToLayer</span><span class="op">:</span> <span class="kw">function</span>( feature<span class="op">,</span> latlng) <span class="op">{</span>
-      <span class="kw">var</span> circle <span class="op">=</span> <span class="va">L</span>.<span class="at">circleMarker</span>(latlng<span class="op">,</span> <span class="op">{</span>
-        <span class="dt">radius</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span>
-        <span class="dt">fillColor</span><span class="op">:</span> <span class="st">&quot;blue&quot;</span><span class="op">,</span>
-        <span class="dt">color</span><span class="op">:</span> <span class="st">&quot;blue&quot;</span><span class="op">,</span>
-        <span class="dt">weight</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span>
-        <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span>
-        <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.7</span>
-      <span class="op">}</span>)<span class="op">;</span>
-      <span class="va">circle</span>.<span class="at">bindPopup</span>(<span class="va">feature</span>.<span class="va">properties</span>.<span class="at">name</span> <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> <span class="va">feature</span>.<span class="va">properties</span>.<span class="at">district_name</span>)<span class="op">;</span> <span class="co">// replace last term with property data labels to display from GeoJSON file</span>
-      <span class="cf">return</span> circle<span class="op">;</span>
-    <span class="op">}</span>
-  <span class="op">}</span>).<span class="at">addTo</span>(map)<span class="op">;</span> <span class="co">// display by default</span>
-  <span class="va">controlLayers</span>.<span class="at">addOverlay</span>(geoJsonLayer<span class="op">,</span> <span class="st">&#39;Public Schools (CT Open Data-Socrata)&#39;</span>)<span class="op">;</span>
-<span class="op">}</span>)<span class="op">;</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb48-1"><a href="leaflet-maps-open-apis.html#cb48-1"></a><span class="co">// load open data from Socrata endpoint in GeoJSON format</span></span>
+<span id="cb48-2"><a href="leaflet-maps-open-apis.html#cb48-2"></a><span class="co">// with simple marker styling: blue circles</span></span>
+<span id="cb48-3"><a href="leaflet-maps-open-apis.html#cb48-3"></a><span class="co">// register your own Socrata app token at https://dev.socrata.com/register</span></span>
+<span id="cb48-4"><a href="leaflet-maps-open-apis.html#cb48-4"></a><span class="co">// Connecticut School Directory, CT Open Data, https://data.ct.gov/resource/v4tt-nt9n</span></span>
+<span id="cb48-5"><a href="leaflet-maps-open-apis.html#cb48-5"></a><span class="va">$</span>.<span class="at">getJSON</span>(<span class="st">&quot;https://data.ct.gov/resource/v4tt-nt9n.geojson?&amp;$$app_token=QVVY3I72SVPbxBYlTM8fA7eet&quot;</span><span class="op">,</span> <span class="kw">function</span> (data)<span class="op">{</span></span>
+<span id="cb48-6"><a href="leaflet-maps-open-apis.html#cb48-6"></a>  <span class="kw">var</span> geoJsonLayer <span class="op">=</span> <span class="va">L</span>.<span class="at">geoJson</span>(data<span class="op">,</span> <span class="op">{</span></span>
+<span id="cb48-7"><a href="leaflet-maps-open-apis.html#cb48-7"></a>    <span class="dt">pointToLayer</span><span class="op">:</span> <span class="kw">function</span>( feature<span class="op">,</span> latlng) <span class="op">{</span></span>
+<span id="cb48-8"><a href="leaflet-maps-open-apis.html#cb48-8"></a>      <span class="kw">var</span> circle <span class="op">=</span> <span class="va">L</span>.<span class="at">circleMarker</span>(latlng<span class="op">,</span> <span class="op">{</span></span>
+<span id="cb48-9"><a href="leaflet-maps-open-apis.html#cb48-9"></a>        <span class="dt">radius</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span></span>
+<span id="cb48-10"><a href="leaflet-maps-open-apis.html#cb48-10"></a>        <span class="dt">fillColor</span><span class="op">:</span> <span class="st">&quot;blue&quot;</span><span class="op">,</span></span>
+<span id="cb48-11"><a href="leaflet-maps-open-apis.html#cb48-11"></a>        <span class="dt">color</span><span class="op">:</span> <span class="st">&quot;blue&quot;</span><span class="op">,</span></span>
+<span id="cb48-12"><a href="leaflet-maps-open-apis.html#cb48-12"></a>        <span class="dt">weight</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb48-13"><a href="leaflet-maps-open-apis.html#cb48-13"></a>        <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb48-14"><a href="leaflet-maps-open-apis.html#cb48-14"></a>        <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.7</span></span>
+<span id="cb48-15"><a href="leaflet-maps-open-apis.html#cb48-15"></a>      <span class="op">}</span>)<span class="op">;</span></span>
+<span id="cb48-16"><a href="leaflet-maps-open-apis.html#cb48-16"></a>      <span class="va">circle</span>.<span class="at">bindPopup</span>(<span class="va">feature</span>.<span class="va">properties</span>.<span class="at">name</span> <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> <span class="va">feature</span>.<span class="va">properties</span>.<span class="at">district_name</span>)<span class="op">;</span> <span class="co">// replace last term with property data labels to display from GeoJSON file</span></span>
+<span id="cb48-17"><a href="leaflet-maps-open-apis.html#cb48-17"></a>      <span class="cf">return</span> circle<span class="op">;</span></span>
+<span id="cb48-18"><a href="leaflet-maps-open-apis.html#cb48-18"></a>    <span class="op">}</span></span>
+<span id="cb48-19"><a href="leaflet-maps-open-apis.html#cb48-19"></a>  <span class="op">}</span>).<span class="at">addTo</span>(map)<span class="op">;</span> <span class="co">// display by default</span></span>
+<span id="cb48-20"><a href="leaflet-maps-open-apis.html#cb48-20"></a>  <span class="va">controlLayers</span>.<span class="at">addOverlay</span>(geoJsonLayer<span class="op">,</span> <span class="st">&#39;Public Schools (CT Open Data-Socrata)&#39;</span>)<span class="op">;</span></span>
+<span id="cb48-21"><a href="leaflet-maps-open-apis.html#cb48-21"></a><span class="op">}</span>)<span class="op">;</span></span></code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li>Fork a copy of this repo, play with the code, and try to insert GeoJSON endpoints from other open data repositories.</li>
 </ol>
@@ -312,11 +341,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -324,12 +355,11 @@ gitbook.start({
 "github": true,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -342,6 +372,10 @@ gitbook.start({
 },
 "history": {
 "link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/datavizforall/datavizforall-bookdown/blob/master/13.04-leaflet-maps-open-data.Rmd",
 "text": null
 },
 "download": ["Dougherty-Ilyankou-Data-Visualization-for-All.pdf", "Dougherty-Ilyankou-Data-Visualization-for-All.epub", "Dougherty-Ilyankou-Data-Visualization-for-All.docx"],

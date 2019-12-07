@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html  lang="en">
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Leaflet Thematic Polygon Map with Clickable Info Window template | Data Visualization for All</title>
-  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Leaflet Thematic Polygon Map with Clickable Info Window template | Data Visualization for All" />
   <meta property="og:type" content="book" />
@@ -22,18 +21,18 @@
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
   
 
-<meta name="author" content="Jack Dougherty">
-<meta name="author" content="Ilya Ilyankou">
+<meta name="author" content="Jack Dougherty" />
+<meta name="author" content="Ilya Ilyankou" />
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="leaflet-maps-open-apis.html">
-<link rel="next" href="leaflet-polygon-map-hover.html">
+<link rel="prev" href="leaflet-maps-open-apis.html"/>
+<link rel="next" href="leaflet-polygon-map-hover.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -41,6 +40,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -60,41 +62,68 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -257,7 +286,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="https://datavizforall.github.io/leaflet-map-polygon-click/" class="uri">https://datavizforall.github.io/leaflet-map-polygon-click/</a></li>
 </ul>
 <p><strong>To Do</strong></p>
-<p>-Insert internal references to prior steps in this book. See the Edit and Host Code Templates section in this book. - Requires a free GitHub account to host your own version on the web.</p>
+<p>-Insert internal references to prior steps in this book. See the Edit and Host Code Templates section in this book.
+- Requires a free GitHub account to host your own version on the web.</p>
 </div>
 <div id="create-your-own-fork-a-copy-of-the-code-template-on-github" class="section level4 unnumbered">
 <h4>Create Your Own: Fork a copy of the code template on GitHub</h4>
@@ -271,43 +301,49 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul>
 <li>Find open data repositories to download maps in geojson and other formats</li>
 <li>If map is in shapefile or KML or other format, convert with <a href="http://geojson.io" class="uri">http://geojson.io</a> or <a href="http://mapshaper.org" class="uri">http://mapshaper.org</a></li>
-<li>Import polygon map into <a href="http://mapshaper.org" class="uri">http://mapshaper.org</a>. In this example, map filename is: ct-towns-simple.geojson</li>
+<li>Import polygon map into <a href="http://mapshaper.org" class="uri">http://mapshaper.org</a>. In this example, map filename is: ct-towns-simple.geojson
+<ul>
 <li>See tutorial on Mapshaper.org to delete unwanted data columns or simplify file size</li>
 <li>Export as CSV to create generic spreadsheet of polygon names. In this example, column header is “town”</li>
+</ul></li>
 </ul>
 </div>
 <div id="prepare-your-spreadsheet-data-and-join-with-the-polygon-map" class="section level4 unnumbered">
 <h4>Prepare your spreadsheet data and join with the polygon map</h4>
 <ul>
-<li>Open CSV with any spreadsheet tool to view data column of polygon names.</li>
-<li>Download or prepare your new spreadsheet data in rows to match polygon names.</li>
-<li>Insert columns of data into the CSV sheet. Use VLOOKUP function if needed.</li>
-<li>Save CSV with new name. In this example: ct-towns.csv</li>
-<li>Import ct-towns.csv as second layer into MapShaper.org.</li>
-<li>Use the drop-down to select the polygon map (ct-towns-simple.geojson) as the active, displayed layer.</li>
-<li>Click the Console and enter command to join the CSV table to the GeoJSON polygon, where the matching data columns are both named “town” <code>-join ct-towns.csv keys=town,town</code></li>
-<li>Export the newly joined map with a new filename in GeoJSON format</li>
-<li>Change the file suffix from .json to .geojson to avoid confusion. The new joined map data file is now named: ct-towns-density.geojson</li>
+<li><p>Open CSV with any spreadsheet tool to view data column of polygon names.</p></li>
+<li><p>Download or prepare your new spreadsheet data in rows to match polygon names.</p></li>
+<li><p>Insert columns of data into the CSV sheet. Use VLOOKUP function if needed.</p></li>
+<li><p>Save CSV with new name. In this example: ct-towns.csv</p></li>
+<li><p>Import ct-towns.csv as second layer into MapShaper.org.</p></li>
+<li><p>Use the drop-down to select the polygon map (ct-towns-simple.geojson) as the active, displayed layer.</p></li>
+<li><p>Click the Console and enter command to join the CSV table to the GeoJSON polygon, where the matching data columns are both named “town”</p>
+<pre><code>-join ct-towns.csv keys=town,town</code></pre></li>
+<li><p>Export the newly joined map with a new filename in GeoJSON format</p></li>
+<li><p>Change the file suffix from .json to .geojson to avoid confusion. The new joined map data file is now named: ct-towns-density.geojson</p></li>
 </ul>
 </div>
 <div id="upload-your-map-data-and-edit-template-in-your-github-repo" class="section level4 unnumbered">
 <h4>Upload your map data and edit template in your GitHub repo</h4>
 <ul>
-<li>The GitHub repo you created in the first step contains these files:</li>
+<li>The GitHub repo you created in the first step contains these files:
+<ul>
 <li>ct-towns-density-2010.csv (the spreadsheet joined into the polygon map)</li>
 <li>ct-towns-density.geojson (the joined map data file)</li>
 <li>index.html (the primary web page)</li>
 <li>script.js (code to operate the map, to be modified below)</li>
 <li>style.css (code that styles the map)</li>
 <li>README.md (edit to insert a link to your own version)</li>
-<li><p>LICENSE (terms of use for this free and open-source code)</p></li>
+<li>LICENSE (terms of use for this free and open-source code)</li>
+</ul></li>
 <li>Upload your own map data geojson file</li>
 <li>Recommended: upload your own CSV spreadsheet file to</li>
 <li>In the script.js file, look for code comments labeled “Edit” to change references to geojson map data and its column headers, and also colors and ranges for the polygons and legend</li>
 <li>In GitHub, go to Branches and delete the existing “gh-pages” branch</li>
 <li>In GitHub, go to drop-down menu for Master branch, and type “gh-pages” to create new branch</li>
 <li>Content in the gh-pages branch will be hosted on the live web</li>
-<li><p>Edit the README.md link to point to your own gh-pages branch, in this format: <code>https://USERNAME.github.io/REPO-NAME/</code></p></li>
+<li>Edit the README.md link to point to your own gh-pages branch, in this format:
+<code>https://USERNAME.github.io/REPO-NAME/</code></li>
 </ul>
 
 </div>
@@ -323,11 +359,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -335,12 +373,11 @@ gitbook.start({
 "github": true,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -353,6 +390,10 @@ gitbook.start({
 },
 "history": {
 "link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/datavizforall/datavizforall-bookdown/blob/master/13.05-leaflet-polygon-map-click.Rmd",
 "text": null
 },
 "download": ["Dougherty-Ilyankou-Data-Visualization-for-All.pdf", "Dougherty-Ilyankou-Data-Visualization-for-All.epub", "Dougherty-Ilyankou-Data-Visualization-for-All.docx"],

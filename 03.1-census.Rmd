@@ -1,15 +1,18 @@
 ## US and Census Bureau Open Data {#census}
-*last updated March 1, 2017*
+*By [Jack Dougherty and Ilya Ilyankou](authors), last updated December 25, 2019*
 
-**The U.S. Census Bureau** (http://census.gov) collects and shares population, housing, and economic data on its open repositories.
-- American FactFinder (http://factfinder.census.gov) provides quick facts for a specific location, or links to download more detailed datasets
-- The Decennial Census is a full count of the population every ten years, most recently in 2010.
+**The U.S. Census Bureau** (https://census.gov) collects and shares population, housing, and economic data on its open repositories.
+
+- The Decennial Census is a full count of the population every ten years, most recently in 2010 and the upcoming one in 2020. Because decennial data are counts and not estimates, they represent "true" values and hence come without margins of errors.
 - The American Community Survey (ACS) (https://www.census.gov/programs-surveys/acs/) is annual sample count, which produces:
-  - 1-year estimates for areas with populations of 65,000+
-  - 3-year estimates for areas with populations of 20,000+
-  - 5-year estimates for all census areas
+    - 1-year estimates for areas with populations of 65,000+
+    - 5-year estimates for all census areas
+    - ACS used to release 3-year estimates for geographies with population of 20,000+, but discontinued after the 2011-2013 release.
+    
+Because ACS produces estimates and not "true" counts, data comes with margins of errors. Generally, margins of errors are higher for smaller geographies (eg census blocks) and smaller values (eg the number of Asian females aged 60+ who live in Union, CT). Hence, one needs to be critical when using ACS or other survey data.
 
-Census areas are geographic divisions in this *general format*:
+**Census areas** are geographic divisions in this *general format*:
+
 - State
 - County
 - County subdivisions (equivalent to Connecticut towns and cities)
@@ -17,24 +20,35 @@ Census areas are geographic divisions in this *general format*:
 - Block groups (sub-unit of tract, roughly 600 to 3,000 people)
 - Census blocks (sub-unit of block group, but not always a city block)
 
-Common census areas, as shown in [American FactFinder download tool](http://factfinder.census.gov/faces/nav/jsf/pages/download_center.xhtml).
 
-![](images/03-find/Census-geographies.png)
+### Census areas in the Hartford region
 
-**TO DO** Create interactive map of hierarchical census areas in the Hartford region, with buttons to display colors as panes with z-levels
+The interactive map below illustrates hierarchical relations among geographical census entities for the Hartford region, from state to census block level.
 
-Learn more: Explore this visual interactive of US Census geographic areas and definitions (http://www.census.gov/geo/reference/webatlas/)
+<iframe src="https://datavizforall.github.io/datavizforall-jupyter-examples/census-divisions-hartford.html" height="400" width="100%" frameborder="0"></iframe>
+
+Learn more: Explore the standard hierarchy of US Census geographic entities and definitions (https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf)
 
 See also in this book: [Geocode addresses with the US Census Geocoder](geocode)
 
-**Social Explorer** public version (http://socialexplorer.com) is another reputable source for census and related demographic data, past and present. The platform allows users to create data maps that may be exported as static images or presentation slides. Several academic institutions subscribe to the professional version with additional features.  
+### Data.census.gov
+Data.census.gov (https://data.census.gov) is the main platform to access US Census data. It provides an easy search across census and survey tables. There is an interface to view tables for various years and geographies, and a download button to save data as CSV or PDF. It replaced American FactFinder (https://factfinder.census.gov) in July 2019.
+
+### Social Explorer
+
+**Social Explorer** (https://www.socialexplorer.com/) is a popular tool to view and download census and related demographic data, past and present. The platform allows users to create data maps that may be exported as static images or presentation slides. Social Explorer requires subscription, but many academic institutions provide access.
 
 **TO DO** create tutorial on how to cleanly download census data from Social Explorer and Census.gov to join with geography, especially census tract numbers
 
+### Data.gov
+
 **Data.gov** (https://www.data.gov/) is the official open data repository for US federal government agencies, managed by the US General Services Administration, and powered by an open-source CKAN and WordPress platform.
 
-**National Center for Education Statistics (NCES)** (http://nces.ed.gov/) is the primary federal agency for collecting and reporting education data.
-- Elementary/Secondary Information System (ELSi) (http://nces.ed.gov/ccd/elsi) - create custom tables and charts from the Common Core of Data (CCD) and Private School Survey
+### National Center for Education Statistics
+
+**National Center for Education Statistics (NCES)** (https://nces.ed.gov/) is the primary federal agency for collecting and reporting education data.
+
+- Elementary/Secondary Information System (ELSi) (https://nces.ed.gov/ccd/elsi) - create custom tables and charts from the Common Core of Data (CCD) and Private School Survey.
 
 #### Boundaries {-}
 

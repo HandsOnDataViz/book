@@ -6,16 +6,20 @@ Source your data. Spell out exactly where it came from, so that someone other th
 #### Label the file name {-}
 
 Everyone has seen examples of bad file names:
+
   - data.xls
   - bldgdatalist.csv
   - data77.xls
 
-Write a short but meaningful file name. If different versions of the data are floating around, add the current date at the end, in YYYY-MM-DD format, perhaps like this:
-  - town-demographics-2016-03-08.xls
+Write a short but meaningful file name. It is a good idea to include data source in file name (eg `acs2018`, `worldbank`, or `eurostat`). If different versions of the data are floating around, add the current date at the end, in YYYY-MM-DD format. Good file names look like this:
+
+  - town-demographics-2019-12-02.xls
+  - census2010_population_by_county.csv
+  - eurostat-1999-2019-CO2_emissions.xlsx
 
 #### Save source data in separate sheet {-}
 
-If you have doubts when cleaning up columns, click (or right-click) on the spreadsheet tab to copy the sheet to another tab as a backup, to avoid destroying any data.
+Before modifying the original dataset, make sure to duplicate it to avoid any data losses. One way is to click (or right-click) on the spreadsheet tab to copy the sheet to another tab as a backup.
 
 ![](images/03-find/SpreadsheetCopySheet640w.gif)
 
@@ -23,9 +27,15 @@ Add a *source* tab, after the data, with notes to remind you and others about it
 
 ![](images/03-find/SpreadsheetSourceTab.png)
 
+### Learn more
+Lisa Charlotte Rost, *How to prepare your data for analysis and charting in Excel & Google Sheets*,
+https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/
+
+
 ** TO DO **
 
 Source your data
+
      - explain that data cannot be copyrighted, but representations of data can be
      - open-source and creative commons
      - credit sources and collaborators on dataviz products and readme files

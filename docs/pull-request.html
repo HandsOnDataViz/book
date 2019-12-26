@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html  lang="en">
+
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Pull Request to Merge Changes on GitHub | Data Visualization for All</title>
-  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="Pull Request to Merge Changes on GitHub | Data Visualization for All" />
   <meta property="og:type" content="book" />
@@ -21,18 +22,18 @@
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
   
 
-<meta name="author" content="Jack Dougherty" />
-<meta name="author" content="Ilya Ilyankou" />
+<meta name="author" content="Jack Dougherty">
+<meta name="author" content="Ilya Ilyankou">
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="choose-license.html"/>
-<link rel="next" href="atom-desktop.html"/>
+<link rel="prev" href="choose-license.html">
+<link rel="next" href="atom-desktop.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -40,9 +41,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -62,68 +60,41 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -165,10 +136,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i>Find and Know Your Data</a><ul>
-<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a></li>
-<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a><ul>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#census-areas-in-the-hartford-region"><i class="fa fa-check"></i>Census areas in the Hartford region</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#data.census.gov"><i class="fa fa-check"></i>Data.census.gov</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#social-explorer"><i class="fa fa-check"></i>Social Explorer</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#data.gov"><i class="fa fa-check"></i>Data.gov</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#national-center-for-education-statistics"><i class="fa fa-check"></i>National Center for Education Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a><ul>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html#learn-more-3"><i class="fa fa-check"></i>Learn more</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public or Private Data?</a></li>
-<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a><ul>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html#learn-more-4"><i class="fa fa-check"></i>Learn more</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i>Connecticut Open Data</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i>Clean Up Messy Data</a><ul>
@@ -191,7 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
-<li class="chapter" data-level="" data-path="social-explorer.html"><a href="social-explorer.html"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#social-explorer"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i>Embed On Your Web</a><ul>
 <li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
@@ -275,8 +256,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="pull-request" class="section level2">
 <h2>Pull Request to Merge Changes on GitHub</h2>
 <p><em>By <a href="authors">Jack Dougherty</a>, last updated March 5, 2016</em></p>
-<p>** TO DO **
-- REWRITE this out-of-date page to focus solely on pull requests, branches, and merge changes</p>
+<p>** TO DO ** - REWRITE this out-of-date page to focus solely on pull requests, branches, and merge changes</p>
 <p>Sign up for a <a href="http://github.com">free GitHub account</a>, a free multi-purpose tool that allows you to:</p>
 <ul>
 <li>View and fork a copy of open-source code from other users</li>
@@ -294,62 +274,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li>Inside your free GitHub account, create a new repository (also known as a repo) to host your project’s code (such as an index.html file and more).</li>
 </ol>
-<p><img src="images/08-github/GitHub-NewRepo.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-NewRepo.png" />
+
+</div>
 <ol start="2" style="list-style-type: decimal">
 <li>Enter a repository name and description and check the box to automatically add a README file. If desired, select an open-source license (such as MIT), and click the Create Repository button.</li>
 </ol>
-<p><img src="images/08-github/GitHub-CreateRepo.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-CreateRepo.png" />
+
+</div>
 <ol start="3" style="list-style-type: decimal">
 <li>Your new repository automatically starts opens the “master” branch. Use the drop-down menu to create a new branch, and name it “gh-pages” (which is short for GitHub Pages), and press enter or return on your keyboard.</li>
 </ol>
-<p><img src="images/08-github/GitHub-CreateBranch.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-CreateBranch.png" />
+
+</div>
 <p>In this tutorial, we do all of our editing and testing work in the gh-pages branch, which automatically appears on the public web. When we’re done, we will pull a copy (or sync) our completed work to the master branch for safekeeping and open sharing.</p>
 <ol start="4" style="list-style-type: decimal">
 <li>To add ONE NEW FILE to the gh-pages branch, click the + button next to the repository name and enter the file name. For example, index.html is the default file name for most web projects.</li>
 </ol>
-<p><img src="images/08-github/GitHub-CreateNewFile.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-CreateNewFile.png" />
+
+</div>
 <ol start="5" style="list-style-type: decimal">
 <li>Select the “soft wrap” option (which makes long code strings more readable), and paste code into the editor. In this example, I pasted HTML code that was generated by publishing an interactive chart from a Google Spreadsheet.</li>
 </ol>
-<p><img src="images/08-github/GitHub-CreateFile.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-CreateFile.png" />
+
+</div>
 <ol start="6" style="list-style-type: decimal">
 <li>At the bottom, select the “commit” button (which means you are making a code change). Optionally, name and describe your commit, if you wish to track changes to your work.</li>
 </ol>
-<p><img src="images/08-github/GitHub-CommitButton.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-CommitButton.png" />
+
+</div>
 <ol start="7" style="list-style-type: decimal">
 <li>Edit an existing file in the gh-pages branch by selecting its title. For example, select the README filename (which should have been automatically generated when you created the repository and the gh-pages branch). On the next screen, select the Edit button.</li>
 </ol>
-<p><img src="images/08-github/GitHub-EditFile.png" /></p>
-<p><img src="images/08-github/GitHub-EditFile2.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-EditFile.png" />
+
+</div>
+<div class="figure">
+<img src="images/08-github/GitHub-EditFile2.png" />
+
+</div>
 <ol start="8" style="list-style-type: decimal">
 <li>When editing the README file, type a link to the live web version of this repository, so that visitors may easily click to view it. The GitHub generic public web address is a combination of your username and “.github.io/” and your repository name, like this: <code>http://USERNAME.github.io/REPOSITORYNAME</code></li>
 </ol>
-<p>In my README file, I typically write it this way so that visitors know to click the link:
-View live demonstration site at <em>TO DO: insert link </em></p>
+<p>In my README file, I typically write it this way so that visitors know to click the link: View live demonstration site at <em>TO DO: insert link </em></p>
 <p>Commit your change to the README file in the gh-pages branch by pressing the green button at the bottom of the editor page.</p>
-<p><img src="images/08-github/GitHub-EditReadMe.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-EditReadMe.png" />
+
+</div>
 <p>Hint: If you named your file “index.html” then you don’t need to add anything else to the web address, because the site will automatically point to this default file. But if you entered a different file name, such as “sample.html”, then you need to add it to the web address in this way: <code>http://Username.github.io/Repositoryname/sample.html</code></p>
 <ol start="9" style="list-style-type: decimal">
 <li><p>Select the repository name to go to the upper-most file in the gh-pages branch.</p></li>
 <li><p>To view your live index.html code on the public web, click the link you created in your README file. (Hint: use the right-click feature to open in a new tab/window). Important: The very first time you create a gh-pages branch, it may take up to 10 minutes for its content to appear on the open web. Afterwards, when you add or edit files in this branch, they should appear nearly instantly on the web, though you may need to refresh your browser to view any changes you have made.</p></li>
 </ol>
-<p><img src="images/08-github/GitHub-SelectRepoName2.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-SelectRepoName2.png" />
+
+</div>
 <ol start="11" style="list-style-type: decimal">
 <li>To add MULTIPLE FILES to the gh-pages branch, you could copy and paste each one individually as shown above, or choose one of these labor-saving options:</li>
 </ol>
-<p><img src="images/08-github/GitHub-ForkCloneDownload.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-ForkCloneDownload.png" />
+
+</div>
 <p>If a code template already exists somewhere on GitHub, “fork” a copy of the repository to your own account, create a gh-pages branch for the live web, and edit/modify the files as desired.</p>
-<p>To sync and upload multiple files from your desktop to a GitHub repository, use the free GitHub for Mac or GitHub for Windows tool, which features a graphical user interface to do tasks above very easily.
-Advanced coders may use command-line instructions to upload and sync files to GitHub most efficiently.</p>
+<p>To sync and upload multiple files from your desktop to a GitHub repository, use the free GitHub for Mac or GitHub for Windows tool, which features a graphical user interface to do tasks above very easily. Advanced coders may use command-line instructions to upload and sync files to GitHub most efficiently.</p>
 <ol start="12" style="list-style-type: decimal">
 <li>To BACKUP and SHARE your work: After adding or editing files in the gh-pages branch, create a “pull request” (to merge files) to the master branch.</li>
 </ol>
-<p><img src="images/08-github/GitHub-PullRequest.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-PullRequest.png" />
+
+</div>
 <ol start="13" style="list-style-type: decimal">
-<li>Use the drop-down menus to CAREFULLY select the direction of the merge in this TO-FROM format:
-TO master branch FROM gh-pages branch</li>
+<li>Use the drop-down menus to CAREFULLY select the direction of the merge in this TO-FROM format: TO master branch FROM gh-pages branch</li>
 </ol>
-<p><img src="images/08-github/GitHub-ToFrom.png" /></p>
+<div class="figure">
+<img src="images/08-github/GitHub-ToFrom.png" />
+
+</div>
 <ol start="14" style="list-style-type: decimal">
 <li>Follow these steps to finish the pull request, which merges all content TO the master branch FROM gh-pages branch:</li>
 </ol>
@@ -363,9 +379,11 @@ TO master branch FROM gh-pages branch</li>
 </ul>
 <p>To embed an interactive data visualization from a GitHub Pages host site into a secondary website (such as an organization’s WordPress.org site), see the <a href="iframe-wordpress">Embed iframe with WordPress tutorial in this book</a>.</p>
 <p>See my sample repositories, with links to live demo sites, at <a href="https://github.com/datavizforall?tab=repositories" class="uri">https://github.com/datavizforall?tab=repositories</a>. Learn more about GitHub general features to share and collaborate on other users’ public code repositories.</p>
-<p><strong>TO DO</strong>
-Reminder: GitHub allows users to create <strong>one fork</strong> of a repo to your account. To create a second copy, go to the repo of your first copy, click Settings, and rename it. But if you rename your repo, you also will need to change any links you created to its live version in the next section.</p>
-<p><img src="images/08-github/Github-settings-rename.png" /></p>
+<p><strong>TO DO</strong> Reminder: GitHub allows users to create <strong>one fork</strong> of a repo to your account. To create a second copy, go to the repo of your first copy, click Settings, and rename it. But if you rename your repo, you also will need to change any links you created to its live version in the next section.</p>
+<div class="figure">
+<img src="images/08-github/Github-settings-rename.png" />
+
+</div>
 
 </div>
             </section>
@@ -379,13 +397,11 @@ Reminder: GitHub allows users to create <strong>one fork</strong> of a repo to y
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -393,11 +409,12 @@ gitbook.start({
 "github": true,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -410,10 +427,6 @@ gitbook.start({
 },
 "history": {
 "link": null,
-"text": null
-},
-"view": {
-"link": "https://github.com/datavizforall/datavizforall-bookdown/blob/master/08.05-pull-request.Rmd",
 "text": null
 },
 "download": ["Dougherty-Ilyankou-Data-Visualization-for-All.pdf", "Dougherty-Ilyankou-Data-Visualization-for-All.epub", "Dougherty-Ilyankou-Data-Visualization-for-All.docx"],

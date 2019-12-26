@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html  lang="en">
+
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Geocode Locations into Coordinates with US Census or Google | Data Visualization for All</title>
-  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
-  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="Geocode Locations into Coordinates with US Census or Google | Data Visualization for All" />
   <meta property="og:type" content="book" />
@@ -21,18 +22,18 @@
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
   
 
-<meta name="author" content="Jack Dougherty" />
-<meta name="author" content="Ilya Ilyankou" />
+<meta name="author" content="Jack Dougherty">
+<meta name="author" content="Ilya Ilyankou">
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="transform.html"/>
-<link rel="next" href="pivot-point-to-polygon.html"/>
+<link rel="prev" href="transform.html">
+<link rel="next" href="pivot-point-to-polygon.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -40,9 +41,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
 
 
 
@@ -62,68 +60,41 @@
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -165,10 +136,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i>Find and Know Your Data</a><ul>
-<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a></li>
-<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a><ul>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#census-areas-in-the-hartford-region"><i class="fa fa-check"></i>Census areas in the Hartford region</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#data.census.gov"><i class="fa fa-check"></i>Data.census.gov</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#social-explorer"><i class="fa fa-check"></i>Social Explorer</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#data.gov"><i class="fa fa-check"></i>Data.gov</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#national-center-for-education-statistics"><i class="fa fa-check"></i>National Center for Education Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a><ul>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html#learn-more-3"><i class="fa fa-check"></i>Learn more</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public or Private Data?</a></li>
-<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a><ul>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html#learn-more-4"><i class="fa fa-check"></i>Learn more</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i>Connecticut Open Data</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i>Clean Up Messy Data</a><ul>
@@ -191,7 +172,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
-<li class="chapter" data-level="" data-path="social-explorer.html"><a href="social-explorer.html"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html#social-explorer"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i>Embed On Your Web</a><ul>
 <li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
@@ -293,7 +274,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Note: The <a href="leaflet-maps-with-google-sheets">Leaflet Maps with Google Sheets template</a> in this book includes this Geocoder script.</li>
 </ul>
 <div class="figure">
-<img src="images/09-transform/google-sheets-geocoder-census-google.gif" alt="" />
+<img src="images/09-transform/google-sheets-geocoder-census-google.gif" alt="Screencast: Google Sheets Geocoder: US Census or Google" />
 <p class="caption">Screencast: Google Sheets Geocoder: US Census or Google</p>
 </div>
 </div>
@@ -301,27 +282,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4>Google Sheets Geocoder: US Census Geographies</h4>
 <ul>
 <li>Geocode US addresses into latitude, longitude, GeoID, census tract, inside a Google Sheet</li>
-<li>Go to Google Sheet template, sign in to your account, and File &gt; Make a Copy to your Google Drive
-<a href="https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0</a></li>
+<li>Go to Google Sheet template, sign in to your account, and File &gt; Make a Copy to your Google Drive <a href="https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0</a></li>
 <li>Insert locations, select 8 columns, and select Geocoder menu: US Census 2010 Geographies</li>
 <li>Google Sheets script will ask for permission to run the first time</li>
 </ul>
 <div class="figure">
-<img src="images/09-transform/google-sheets-geocoder-census-geographies.gif" alt="" />
+<img src="images/09-transform/google-sheets-geocoder-census-geographies.gif" alt="Screencast: GoogleSheets Geocoder: US Census Geographies" />
 <p class="caption">Screencast: GoogleSheets Geocoder: US Census Geographies</p>
 </div>
 <div id="about-us-census-15-character-geoid" class="section level5 unnumbered">
 <h5>About US Census 15-character GeoID</h5>
 <ul>
 <li>Make sure that column G is formatted as text (to preserve leading zeros), not number</li>
-<li>Break down a sample GeoID: 090035245022001
-<ul>
+<li>Break down a sample GeoID: 090035245022001</li>
 <li>state = 09</li>
 <li>county = 003</li>
 <li>tract = 524502 = 5245.02</li>
 <li>block group = 2</li>
 <li>block = 001</li>
-</ul></li>
 </ul>
 </div>
 <div id="how-it-works" class="section level5 unnumbered">
@@ -359,18 +337,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Available at US Census Geocoder <a href="https://geocoding.geo.census.gov/geocoder/" class="uri">https://geocoding.geo.census.gov/geocoder/</a></li>
 <li>Upload CSV table with up to 1000 rows for faster processing, in this format, WITHOUT column headers:</li>
 </ul>
-<div class="line-block">AnyID | Street | City | State | Zip |<br />
-:—– | :—– | :— | :—- | : — |<br />
+<div style="white-space: pre-line;">AnyID | Street | City | State | Zip |
+:—– | :—– | :— | :—- | : — |
 1 | 300 Summit St | Hartford | CT | 06106 |</div>
 <ul>
 <li>Find Locations using &gt; Address Batch (returns latitude, longitude coordinates)</li>
 <li>Find Geographies using &gt; Address Batch (returns lat, lng, census geographies)</li>
-<li>Limitations:
-<ul>
+<li>Limitations:</li>
 <li>Inputs and outputs have no column headers, which may confuse novices</li>
 <li>Large batches may be delayed a few minutes during peak time periods</li>
 <li>Unmatched addresses need to be manually corrected and re-submitted</li>
-</ul></li>
 </ul>
 </div>
 <div id="try-it-batch-upload-to-us-census" class="section level4 unnumbered">
@@ -379,16 +355,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Right-click and Save this CSV file to your computer: <a href="sample-addresses-50.csv">sample-addresses-50</a>. CSV means comma-separated values, a generic spreadsheet format that most data tools can easily open.</p></li>
 <li><p>Use any spreadsheet tool to organize your address data into five columns: any ID number, street, city, state, zip code. <strong>Remove all column headers</strong>.</p></li>
 </ol>
-<p><img src="images/09-transform/address-no-column-headers.png" /></p>
+<div class="figure">
+<img src="images/09-transform/address-no-column-headers.png" />
+
+</div>
 <p>Hints:</p>
 <ul>
 <li>If your data lacks ID numbers, quickly <a href="calculate">create a column of consecutive numbers</a>, as shown in this book.</li>
 <li>If your address data includes apartment numbers, leave them in.</li>
 <li>Only the ID and address fields are required. City, state, and zip code may be blank if you lack any of this information, but fewer matches will be exact.</li>
-<li>If your address data is combined into one cell, such as: 300 Summit St, Hartford, CT 06106
-<ul>
+<li>If your address data is combined into one cell, such as: 300 Summit St, Hartford, CT 06106</li>
 <li>then try to <a href="clean-spreadsheets">clean your data with the split column method</a> in this book.</li>
-</ul></li>
 <li>If you need to temporarily move other non-address data columns into a second spreadsheet, remember to paste the column of ID numbers into the second sheet. After geocoding, sort both sheets by the ID column, then paste to rematch the data.</li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
@@ -397,17 +374,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Select the Find Geographies Using…Address Batch button for maximum results, including lat-long coordinates and census geography (tracts and block groups). <em>If census geography is not needed, select Find Locations Using…Address Batch.</em></p></li>
 <li><p>Click the Choose button to upload your CSV file. Use the default benchmark and vintage settings for the most current data. Click the Get Results button, and be patient if using the service during busy weekday hours.</p></li>
 </ol>
-<p><img src="images/09-transform/census-geocoder-batch.png" /></p>
+<div class="figure">
+<img src="images/09-transform/census-geocoder-batch.png" />
+
+</div>
 <ol start="7" style="list-style-type: decimal">
 <li>Census Geocoder will download the results through your web browser in a file named: GeocodeResults.csv. Since these results do not contain column headers, use the screenshot below for guidance, or <a href="http://www.census.gov/geo/maps-data/data/geocoder.html">read the Census Geocoder documentation</a> for more details.</li>
 </ol>
-<p><img src="images/09-transform/geocode-results.png" /></p>
+<div class="figure">
+<img src="images/09-transform/geocode-results.png" />
+
+</div>
 <ol start="8" style="list-style-type: decimal">
 <li><p>Use a spreadsheet tool to open the CSV file. Sort results by the match quality (columns C and D), with these entries: match exact, match non-exact, tie, no-match.</p></li>
 <li><p>For results without an exact match, check the address for typos, and try to re-geocode in a separate CSV file. The US Census Geocoder tool is very good, but not perfect. For a few rows of hard-to-match data, use a different geocoding tool, such as the Google Maps &gt; What’s Here feature described at the top of this page, to look up individual addresses and coordinates.</p></li>
 </ol>
 </div>
-<div id="learn-more-16" class="section level4 unnumbered">
+<div id="learn-more-18" class="section level4 unnumbered">
 <h4>Learn more</h4>
 <ul>
 <li>Aggregate individual rows of data into groups by census area with <a href="pivot">pivot tables</a>.</li>
@@ -427,13 +410,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -441,11 +422,12 @@ gitbook.start({
 "github": true,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -458,10 +440,6 @@ gitbook.start({
 },
 "history": {
 "link": null,
-"text": null
-},
-"view": {
-"link": "https://github.com/datavizforall/datavizforall-bookdown/blob/master/09.01-geocode.Rmd",
 "text": null
 },
 "download": ["Dougherty-Ilyankou-Data-Visualization-for-All.pdf", "Dougherty-Ilyankou-Data-Visualization-for-All.epub", "Dougherty-Ilyankou-Data-Visualization-for-All.docx"],

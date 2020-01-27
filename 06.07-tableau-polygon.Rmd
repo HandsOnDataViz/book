@@ -1,8 +1,26 @@
 ## Polygon Map with Tableau Public {#tableau-polygon}
-*by [Jack Dougherty](authors)last updated Monday January 27, 2020*
+*by [Jack Dougherty](authors) last updated Monday January 27, 2020*
 
 Tableau Public is freely-available software that contains powerful tools to quickly create interactive polygon maps for common boundaries (such as US States, or World Nations.) If you need to create customized maps for less-common boundaries, see our chapter on [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets) in this volume.
 
-Download and install the free Tableau Public tool, available for Mac or Windows, at <https://public.tableau.com/en-us/s/download>. Do not confuse with other Tableau products that require payment. Installation may require up to 5-10 minutes. 
-
 Important: Tableau Public is designed to publicly display your data, which makes this free tool very appropriate for educators, journalists, non-profit organizations, or other users who wish to openly share their map. If you desire a private tool to restrict your data, Tableau offers other tools that require payment.
+
+See also the Tableau Public support page <https://www.tableau.com/support/public> for additional resources, including video tutorials.
+
+1) Download and install the free Tableau Public tool, available for Mac or Windows, at <https://public.tableau.com/en-us/s/download>. Do not confuse with other Tableau products that require payment. Installation may require up to 5-10 minutes.
+
+2) Click this link and Save to download to your computer: [us-sample-data in CSV format](data/us-sample-data.csv). CSV means comma-separated values, a generic spreadsheet format that most tools can easily open. For help with downloading, see this [short video tutorial](https://www.youtube.com/watch?v=-04PQldP9HQ).
+
+3) Open the us-sample-data.csv file with any spreadsheet tool to view its contents.
+
+4) Launch Tableau Public. In the Connect column of the first screen, click "Text file" to connect to the CSV file you downloaded above. (If you had an Excel file in .xlsx format, you would click that instead.) Navigate to select the us-sample.data.csv file on your computer.
+
+5) At first, Tableau Public does **NOT** recognize the names of US areas, which initially appear simply as "text" values (with the "Abc" symbol). Click directly on the "Abc" symbol and use the drop-down menu to convert to Geographic role > State/Province. A tiny globe symbol will appear to show that Tableau Public now recognizes this column as geographic data, which is essential in order to make a map.
+
+![Column displayed as text data](images/06-map/tableau-polygon-1.png)
+
+![Column converted to geographic data](images/06-map/tableau-polygon-2.png)
+
+6) Go to the Worksheet view, by clicking on "Sheet 1" in the bottom-left corner.
+
+7) 

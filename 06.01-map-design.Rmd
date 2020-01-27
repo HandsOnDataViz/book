@@ -1,4 +1,4 @@
-## Map Design Principles {-}
+## Map Design Principles {#map-design}
 *last updated July 28, 2019*
 
 #### Ask Before You Map {-}
@@ -37,7 +37,7 @@ If a map is the best way to tell your data story, then choose an appropriate typ
     - Use color to logically organize your data. Avoid random colors (Wong pp. 40, 44).
     - Avoid bad combinations from opposite sides of color wheel, such as red/green or yellow/blue (Wong pp. 40, 44).
     - Use contrast (such as color vs gray) to call attention to your data story (Knaflic pp. 87-88)
-    
+
 4. Choose basemaps wisely. Basemaps themselves may contain a lot of information, such as terrain, roads, parks, town names, buildings, etc. They may also use colors that can be distracting to the viewer. Think about the minimum number of elements required in the basemap to tell your story.
 
 ![The view of San Francisco with different basemaps](images/06-map/Map - Baselayers.png)

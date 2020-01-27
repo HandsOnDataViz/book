@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html  lang="en">
-
+<html lang="en" xml:lang="en">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>How to Read and Comment | Data Visualization for All</title>
-  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="How to Read and Comment | Data Visualization for All" />
   <meta property="og:type" content="book" />
@@ -22,25 +21,29 @@
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
   
 
-<meta name="author" content="Jack Dougherty">
-<meta name="author" content="Ilya Ilyankou">
+<meta name="author" content="Jack Dougherty" />
+<meta name="author" content="Ilya Ilyankou" />
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="authors.html">
-<link rel="next" href="choose.html">
+<link rel="prev" href="authors.html"/>
+<link rel="next" href="choose.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/elevate-section-attrs-2.0/elevate-section-attrs.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -60,41 +63,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -113,18 +142,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./"><strong>Data Visualization for All</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
 <li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors and Contributors</a></li>
 <li class="chapter" data-level="" data-path="read.html"><a href="read.html"><i class="fa fa-check"></i>How to Read and Comment</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Tools to Tell Your Data Story</a><ul>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Tools to Tell Your Data Story</a>
+<ul>
 <li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
 <li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i>Improve Your Spreadsheet Skills</a><ul>
+<li class="chapter" data-level="" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i>Improve Your Spreadsheet Skills</a>
+<ul>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload Files and Convert to Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Data with Google Sheets</a></li>
@@ -135,29 +167,35 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i>Find and Know Your Data</a><ul>
-<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a><ul>
+<li class="chapter" data-level="" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i>Find and Know Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#census-areas-in-the-hartford-region"><i class="fa fa-check"></i>Census areas in the Hartford region</a></li>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#data.census.gov"><i class="fa fa-check"></i>Data.census.gov</a></li>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#social-explorer"><i class="fa fa-check"></i>Social Explorer</a></li>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#data.gov"><i class="fa fa-check"></i>Data.gov</a></li>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#national-center-for-education-statistics"><i class="fa fa-check"></i>National Center for Education Statistics</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a><ul>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a>
+<ul>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html#learn-more-3"><i class="fa fa-check"></i>Learn more</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public or Private Data?</a></li>
-<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a><ul>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a>
+<ul>
 <li class="chapter" data-level="" data-path="know.html"><a href="know.html#learn-more-4"><i class="fa fa-check"></i>Learn more</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i>Connecticut Open Data</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i>Clean Up Messy Data</a><ul>
+<li class="chapter" data-level="" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i>Clean Up Messy Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with Open Refine</a></li>
 <li class="chapter" data-level="" data-path="ctnamecleaner.html"><a href="ctnamecleaner.html"><i class="fa fa-check"></i>Fix Connecticut Town Names with CTNamecleaner</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i>Chart Your Data</a><ul>
+<li class="chapter" data-level="" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i>Chart Your Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
@@ -167,14 +205,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i>Map Your Data</a><ul>
+<li class="chapter" data-level="" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i>Map Your Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="map-design-principles.html"><a href="map-design-principles.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#social-explorer"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i>Embed On Your Web</a><ul>
+<li class="chapter" data-level="" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i>Embed On Your Web</a>
+<ul>
 <li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
 <li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
 <li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an Iframe</a></li>
@@ -182,7 +222,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
 <li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i>Modify and Host Code with GitHub</a><ul>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i>Modify and Host Code with GitHub</a>
+<ul>
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork and Edit a Simple Leaflet Map with GitHub</a></li>
 <li class="chapter" data-level="" data-path="fork-and-edit-a-highcharts-scatter-chart-with-github.html"><a href="fork-and-edit-a-highcharts-scatter-chart-with-github.html"><i class="fa fa-check"></i>Fork and Edit a Highcharts Scatter Chart with GitHub</a></li>
 <li class="chapter" data-level="" data-path="create-a-new-repo-and-upload-code-with-github.html"><a href="create-a-new-repo-and-upload-code-with-github.html"><i class="fa fa-check"></i>Create a New Repo and Upload Code with GitHub</a></li>
@@ -191,7 +232,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
 <li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i>Transform Your Map Data</a><ul>
+<li class="chapter" data-level="" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i>Transform Your Map Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="normalize-data-to-create-meaningful-polygon-maps.html"><a href="normalize-data-to-create-meaningful-polygon-maps.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
@@ -200,18 +242,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="convert-edit-join-and-dissolve-with-mapshaper-org.html"><a href="convert-edit-join-and-dissolve-with-mapshaper-org.html"><i class="fa fa-check"></i>Convert, Edit, Join, and Dissolve with MapShaper.org</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i>Detect Bias in Data Stories</a><ul>
+<li class="chapter" data-level="" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i>Detect Bias in Data Stories</a>
+<ul>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i>Tell Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i>Chart.js Code Templates</a><ul>
+<li class="chapter" data-level="" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i>Chart.js Code Templates</a>
+<ul>
 <li class="chapter" data-level="" data-path="bar-chart-with-csv-data.html"><a href="bar-chart-with-csv-data.html"><i class="fa fa-check"></i>Bar Chart with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="line-chart-with-csv-data.html"><a href="line-chart-with-csv-data.html"><i class="fa fa-check"></i>Line Chart with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-with-csv-data.html"><a href="scatter-chart-with-csv-data.html"><i class="fa fa-check"></i>Scatter Chart with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="bubble-chart-with-csv-data.html"><a href="bubble-chart-with-csv-data.html"><i class="fa fa-check"></i>Bubble Chart with CSV Data</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i>Leaflet Map Templates</a><ul>
+<li class="chapter" data-level="" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i>Leaflet Map Templates</a>
+<ul>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
 <li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-socrata.html"><a href="leaflet-maps-with-socrata.html"><i class="fa fa-check"></i>Leaflet Maps with Socrata API Open Data</a></li>
@@ -220,7 +265,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
 <li class="chapter" data-level="" data-path="leaflet-polygon-map-multi-year-tabs.html"><a href="leaflet-polygon-map-multi-year-tabs.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Multi-Year Tabs template</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i>Peer Review Samples</a><ul>
+<li class="chapter" data-level="" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i>Peer Review Samples</a>
+<ul>
 <li class="chapter" data-level="" data-path="peer-2-chart-1.html"><a href="peer-2-chart-1.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample</a></li>
 <li class="chapter" data-level="" data-path="peer-2-chart-1-notes.html"><a href="peer-2-chart-1-notes.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample with Notes</a></li>
 <li class="chapter" data-level="" data-path="peer-2-chart-2.html"><a href="peer-2-chart-2.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample</a></li>
@@ -265,9 +311,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="open-links-in-new-tabs" class="section level4 unnumbered">
 <h4>Open links in new tabs</h4>
 <p>Keep your place when reading online and moving between pages.<br />
-- Two-finger trackpad click - or Control + click (Mac) - or Alt + click (Chromebook) - or right-click (Windows and others)</p>
+- Two-finger trackpad click
+- or Control + click (Mac)
+- or Alt + click (Chromebook)
+- or right-click (Windows and others)</p>
 <div class="figure">
-<img src="images/0-introduction/contextual-menu.png" alt="Screenshot: Open link in new tab (on Mac)" />
+<img src="images/0-introduction/contextual-menu.png" alt="" />
 <p class="caption">Screenshot: Open link in new tab (on Mac)</p>
 </div>
 </div>
@@ -275,13 +324,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h4>Use a second monitor</h4>
 <p>If you have a small screen, consider connecting a second monitor, or work next to a second computer or tablet. This allows you to view tutorials in one screen and build visualizations in the other screen.</p>
 <div class="figure">
-<img src="images/0-introduction/laptop-and-monitor-and-tablet.jpg" alt="Image: Laptop with second monitor, and with tablet" />
+<img src="images/0-introduction/laptop-and-monitor-and-tablet.jpg" alt="" />
 <p class="caption">Image: Laptop with second monitor, and with tablet</p>
 </div>
 </div>
 <div id="refresh-browser" class="section level4 unnumbered">
 <h4>Refresh browser</h4>
-<p>To view the most up-to-date content in your web browser, do a “hard refresh” to <a href="https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache">bypass any saved content in your browser cache</a>. - Ctrl + F5 (most Windows-Linux browsers) - Command + Shift + R (Chrome or Firefox for Mac) - Shift + Reload button toolbar (Safari for Mac)</p>
+<p>To view the most up-to-date content in your web browser, do a “hard refresh” to <a href="https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache">bypass any saved content in your browser cache</a>.
+- Ctrl + F5 (most Windows-Linux browsers)
+- Command + Shift + R (Chrome or Firefox for Mac)
+- Shift + Reload button toolbar (Safari for Mac)</p>
 </div>
 <div id="update-comment-on-any-paragraph" class="section level4 unnumbered">
 <h4>UPDATE Comment on any paragraph</h4>
@@ -293,16 +345,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Constructive criticism and suggestions are welcome.</li>
 </ul>
 <div class="figure">
-<img src="images/0-introduction/GitBook-comments-2016-02.gif" alt="Animation: Comment on GitBook" />
+<img src="images/0-introduction/GitBook-comments-2016-02.gif" alt="" />
 <p class="caption">Animation: Comment on GitBook</p>
 </div>
 </div>
 <div id="update-suggest-revisions-on-any-page" class="section level4 unnumbered">
 <h4>UPDATE Suggest revisions on any page</h4>
 <ul>
-<li>Click “Edit on GitHub” at top of any page, which opens new tab. <img src="images/0-introduction/GitBook-edit-on-github.png" /></li>
+<li>Click “Edit on GitHub” at top of any page, which opens new tab.
+<img src="images/0-introduction/GitBook-edit-on-github.png" /></li>
 <li>To view the code behind the page, click Raw button.</li>
-<li>To suggest revisions, click Editor button (pencil symbol). Requires free <a href="http://github.com">GitHub account</a>. <img src="images/0-introduction/GitHub-edit-file.png" /></li>
+<li>To suggest revisions, click Editor button (pencil symbol). Requires free <a href="http://github.com">GitHub account</a>.
+<img src="images/0-introduction/GitHub-edit-file.png" /></li>
 <li>After entering revisions, scroll down to click Propose File Change.</li>
 <li>On next screen, click Create Pull Request to submit proposed changes to the book owner.</li>
 <li>On next screen, click Create Pull Request again to confirm.</li>
@@ -332,11 +386,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -344,12 +400,11 @@ gitbook.start({
 "github": true,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -362,6 +417,10 @@ gitbook.start({
 },
 "history": {
 "link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/datavizforall/datavizforall-bookdown/blob/master/0.4-how.Rmd",
 "text": null
 },
 "download": ["Dougherty-Ilyankou-Data-Visualization-for-All.pdf", "Dougherty-Ilyankou-Data-Visualization-for-All.epub", "Dougherty-Ilyankou-Data-Visualization-for-All.docx"],

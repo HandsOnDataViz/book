@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html  lang="en">
-
+<html lang="en" xml:lang="en">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Fork and Edit a Simple Leaflet Map with GitHub | Data Visualization for All</title>
-  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more.">
-  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+  <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Fork and Edit a Simple Leaflet Map with GitHub | Data Visualization for All" />
   <meta property="og:type" content="book" />
@@ -22,25 +21,29 @@
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
   
 
-<meta name="author" content="Jack Dougherty">
-<meta name="author" content="Ilya Ilyankou">
+<meta name="author" content="Jack Dougherty" />
+<meta name="author" content="Ilya Ilyankou" />
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="github.html">
-<link rel="next" href="fork-and-edit-a-highcharts-scatter-chart-with-github.html">
+<link rel="prev" href="github.html"/>
+<link rel="next" href="fork-and-edit-a-highcharts-scatter-chart-with-github.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/elevate-section-attrs-2.0/elevate-section-attrs.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -60,41 +63,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -113,18 +142,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./"><strong>Data Visualization for All</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
 <li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
 <li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors and Contributors</a></li>
 <li class="chapter" data-level="" data-path="read.html"><a href="read.html"><i class="fa fa-check"></i>How to Read and Comment</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Tools to Tell Your Data Story</a><ul>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Tools to Tell Your Data Story</a>
+<ul>
 <li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
 <li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i>Improve Your Spreadsheet Skills</a><ul>
+<li class="chapter" data-level="" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i>Improve Your Spreadsheet Skills</a>
+<ul>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload Files and Convert to Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Data with Google Sheets</a></li>
@@ -135,29 +167,35 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i>Find and Know Your Data</a><ul>
-<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a><ul>
+<li class="chapter" data-level="" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i>Find and Know Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#census-areas-in-the-hartford-region"><i class="fa fa-check"></i>Census areas in the Hartford region</a></li>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#data.census.gov"><i class="fa fa-check"></i>Data.census.gov</a></li>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#social-explorer"><i class="fa fa-check"></i>Social Explorer</a></li>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#data.gov"><i class="fa fa-check"></i>Data.gov</a></li>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#national-center-for-education-statistics"><i class="fa fa-check"></i>National Center for Education Statistics</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a><ul>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a>
+<ul>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html#learn-more-3"><i class="fa fa-check"></i>Learn more</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public or Private Data?</a></li>
-<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a><ul>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a>
+<ul>
 <li class="chapter" data-level="" data-path="know.html"><a href="know.html#learn-more-4"><i class="fa fa-check"></i>Learn more</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i>Connecticut Open Data</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i>Clean Up Messy Data</a><ul>
+<li class="chapter" data-level="" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i>Clean Up Messy Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with Open Refine</a></li>
 <li class="chapter" data-level="" data-path="ctnamecleaner.html"><a href="ctnamecleaner.html"><i class="fa fa-check"></i>Fix Connecticut Town Names with CTNamecleaner</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i>Chart Your Data</a><ul>
+<li class="chapter" data-level="" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i>Chart Your Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
@@ -167,14 +205,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i>Map Your Data</a><ul>
+<li class="chapter" data-level="" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i>Map Your Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="map-design-principles.html"><a href="map-design-principles.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
 <li class="chapter" data-level="" data-path="census.html"><a href="census.html#social-explorer"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i>Embed On Your Web</a><ul>
+<li class="chapter" data-level="" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i>Embed On Your Web</a>
+<ul>
 <li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
 <li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
 <li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an Iframe</a></li>
@@ -182,7 +222,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
 <li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i>Modify and Host Code with GitHub</a><ul>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i>Modify and Host Code with GitHub</a>
+<ul>
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork and Edit a Simple Leaflet Map with GitHub</a></li>
 <li class="chapter" data-level="" data-path="fork-and-edit-a-highcharts-scatter-chart-with-github.html"><a href="fork-and-edit-a-highcharts-scatter-chart-with-github.html"><i class="fa fa-check"></i>Fork and Edit a Highcharts Scatter Chart with GitHub</a></li>
 <li class="chapter" data-level="" data-path="create-a-new-repo-and-upload-code-with-github.html"><a href="create-a-new-repo-and-upload-code-with-github.html"><i class="fa fa-check"></i>Create a New Repo and Upload Code with GitHub</a></li>
@@ -191,7 +232,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
 <li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i>Transform Your Map Data</a><ul>
+<li class="chapter" data-level="" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i>Transform Your Map Data</a>
+<ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="normalize-data-to-create-meaningful-polygon-maps.html"><a href="normalize-data-to-create-meaningful-polygon-maps.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
@@ -200,18 +242,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="convert-edit-join-and-dissolve-with-mapshaper-org.html"><a href="convert-edit-join-and-dissolve-with-mapshaper-org.html"><i class="fa fa-check"></i>Convert, Edit, Join, and Dissolve with MapShaper.org</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i>Detect Bias in Data Stories</a><ul>
+<li class="chapter" data-level="" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i>Detect Bias in Data Stories</a>
+<ul>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i>Tell Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i>Chart.js Code Templates</a><ul>
+<li class="chapter" data-level="" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i>Chart.js Code Templates</a>
+<ul>
 <li class="chapter" data-level="" data-path="bar-chart-with-csv-data.html"><a href="bar-chart-with-csv-data.html"><i class="fa fa-check"></i>Bar Chart with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="line-chart-with-csv-data.html"><a href="line-chart-with-csv-data.html"><i class="fa fa-check"></i>Line Chart with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-with-csv-data.html"><a href="scatter-chart-with-csv-data.html"><i class="fa fa-check"></i>Scatter Chart with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="bubble-chart-with-csv-data.html"><a href="bubble-chart-with-csv-data.html"><i class="fa fa-check"></i>Bubble Chart with CSV Data</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i>Leaflet Map Templates</a><ul>
+<li class="chapter" data-level="" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i>Leaflet Map Templates</a>
+<ul>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
 <li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-socrata.html"><a href="leaflet-maps-with-socrata.html"><i class="fa fa-check"></i>Leaflet Maps with Socrata API Open Data</a></li>
@@ -220,7 +265,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
 <li class="chapter" data-level="" data-path="leaflet-polygon-map-multi-year-tabs.html"><a href="leaflet-polygon-map-multi-year-tabs.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Multi-Year Tabs template</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i>Peer Review Samples</a><ul>
+<li class="chapter" data-level="" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i>Peer Review Samples</a>
+<ul>
 <li class="chapter" data-level="" data-path="peer-2-chart-1.html"><a href="peer-2-chart-1.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample</a></li>
 <li class="chapter" data-level="" data-path="peer-2-chart-1-notes.html"><a href="peer-2-chart-1-notes.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample with Notes</a></li>
 <li class="chapter" data-level="" data-path="peer-2-chart-2.html"><a href="peer-2-chart-2.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample</a></li>
@@ -274,8 +320,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction <a href="github">Modify and Host Code Templates with GitHub</a>. For more advanced examples, see the <a href="leaflet">Leaflet Map Templates</a> chapter in this book. If you have problems with this tutorial, go to the <a href="fix-code">Fix Common GitHub and Code Errors</a> chapter in this book.</p>
 <div id="try-it-6" class="section level4 unnumbered">
 <h4>Try it</h4>
-<p>You will begin this tutorial with a simple interactive map that includes one pop-up point: <iframe src="https://datavizforall.github.io/leaflet-map-simple/" width="90%" height="350"></iframe></p>
-<p>By the end of this tutorial, you will learn how to modify the map, then geocode and upload more data points: <iframe src="https://datavizforall.github.io/leaflet-map-simple-instructor-sample/" width="90%" height="350"></iframe></p>
+<p>You will begin this tutorial with a simple interactive map that includes one pop-up point:
+<iframe src="https://datavizforall.github.io/leaflet-map-simple/" width="90%" height="350"></iframe></p>
+<p>By the end of this tutorial, you will learn how to modify the map, then geocode and upload more data points:
+<iframe src="https://datavizforall.github.io/leaflet-map-simple-instructor-sample/" width="90%" height="350"></iframe></p>
 </div>
 <div id="video-with-step-by-step-tutorial-6" class="section level4 unnumbered">
 <h4>Video with step-by-step tutorial</h4>
@@ -288,17 +336,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ol style="list-style-type: decimal">
 <li><p>Right-click to open this GitHub code template in a new tab: <a href="https://github.com/datavizforall/leaflet-map-simple" class="uri">https://github.com/datavizforall/leaflet-map-simple</a></p></li>
 <li><p>In the upper-right corner of the code template, sign in to your free GitHub account</p></li>
-<li><p>In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your GitHub account. The web address (URL) of the new copy in your account will follow this format:</p>
-<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">https://github.com/USERNAME/REPOSITORY</code></pre></div></li>
+<li><p>In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your GitHub account. The web address (URL) of the new copy in your account will follow this format:</p></li>
 </ol>
+<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb24-1"><a href="fork-leaflet.html#cb24-1"></a>https://github.com/USERNAME/REPOSITORY</span></code></pre></div>
 <p>Reminder: You can only fork a GitHub repo <strong>one time</strong>. If needed, see how to make a second copy in the <a href="create-repo">Create a New Repo in GitHub</a> chapter in this book.</p>
 </div>
 <div id="b-publish-your-live-map-to-public-web-with-github-pages" class="section level4 unnumbered">
 <h4>B) Publish your live map to public web with GitHub Pages</h4>
 <ol start="4" style="list-style-type: decimal">
 <li><p>In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code template to a live map on a public website that you control.</p></li>
-<li><p>Scroll down to GitHub Pages section again, to select and copy the link to your published web site, which will follow this format:</p>
-<div class="sourceCode"><pre class="sourceCode markdown"><code class="sourceCode markdown">https://USERNAME.github.io/REPOSITORY</code></pre></div></li>
+<li><p>Scroll down to GitHub Pages section again, to select and copy the link to your published web site, which will follow this format:</p></li>
+</ol>
+<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb25-1"><a href="fork-leaflet.html#cb25-1"></a>https://USERNAME.github.io/REPOSITORY</span></code></pre></div>
+<ol start="6" style="list-style-type: decimal">
 <li><p>Scroll up to the top, and click on your repo name to go back to its main page.</p></li>
 <li><p>At the top level of your repo main page, click on README.md, and click the pencil icon to edit this file, written in easy-to-read Markdown code.</p></li>
 <li><p>Delete the link to the current live site, and paste in the link to your site. Scroll down and Commit to save your edits.</p></li>
@@ -311,60 +361,82 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><p>Go back to your browser tab for your code repo. Click on the index.html file (which contains the map code), and click the pencil icon to edit it.</p></li>
 <li><p>Explore the map code, which contains HTML, CSS, and JavaScript. Look for sections that begin with “EDIT” for items that you can easily change. Scroll down to Commit your changes.</p></li>
 <li><p>Go to your live website browser tab and refresh the page to view your edits. <strong>Be patient</strong> during busy periods, when some edits may take up to 1 minute to appear.</p></li>
-<li><p>To change your map title in the index.html file, click the pencil symbol (to edit) and go to lines 23-25. Replace “EDIT your map title” with your new title:</p>
-<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="co">&lt;!-- Display the map and title with HTML division tags  --&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;map-title&quot;</span><span class="kw">&gt;</span>EDIT your map title<span class="kw">&lt;/div&gt;</span>
-<span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;map&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></code></pre></div></li>
-<li><p>To change your initial map zoom level, edit the index.html file and go to line 33. The zoom range for this map is from 1 (max zoom out) to 18 (max zoom in).</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">// Set up initial map center and zoom level</span>
-<span class="kw">var</span> map <span class="op">=</span> <span class="va">L</span>.<span class="at">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> <span class="op">{</span>
-  <span class="dt">center</span><span class="op">:</span> [<span class="fl">41.77</span><span class="op">,</span> <span class="op">-</span><span class="fl">72.69</span>]<span class="op">,</span> <span class="co">// EDIT latitude, longitude to re-center map</span>
-  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span>  <span class="co">// EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in</span>
-  <span class="dt">scrollWheelZoom</span><span class="op">:</span> <span class="kw">false</span>
-<span class="op">}</span>)<span class="op">;</span></code></pre></div></li>
-<li><p>To change the default basemap, edit lines 46 and 52 to delete “.addTo(map)” from the Carto light layer, then add it to the Stamen colored terrain layer. DO NOT erase the semicolons!</p></li>
+<li><p>To change your map title in the index.html file, click the pencil symbol (to edit) and go to lines 23-25. Replace “EDIT your map title” with your new title:</p></li>
+</ol>
+<div class="sourceCode" id="cb26"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb26-1"><a href="fork-leaflet.html#cb26-1"></a><span class="co">&lt;!-- Display the map and title with HTML division tags  --&gt;</span></span>
+<span id="cb26-2"><a href="fork-leaflet.html#cb26-2"></a><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;map-title&quot;</span><span class="kw">&gt;</span>EDIT your map title<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb26-3"><a href="fork-leaflet.html#cb26-3"></a><span class="kw">&lt;div</span><span class="ot"> id=</span><span class="st">&quot;map&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span></code></pre></div>
+<ol start="14" style="list-style-type: decimal">
+<li>To change your initial map zoom level, edit the index.html file and go to line 33. The zoom range for this map is from 1 (max zoom out) to 18 (max zoom in).</li>
+</ol>
+<div class="sourceCode" id="cb27"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb27-1"><a href="fork-leaflet.html#cb27-1"></a><span class="co">// Set up initial map center and zoom level</span></span>
+<span id="cb27-2"><a href="fork-leaflet.html#cb27-2"></a><span class="kw">var</span> map <span class="op">=</span> <span class="va">L</span>.<span class="at">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> <span class="op">{</span></span>
+<span id="cb27-3"><a href="fork-leaflet.html#cb27-3"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">41.77</span><span class="op">,</span> <span class="fl">-72.69</span>]<span class="op">,</span> <span class="co">// EDIT latitude, longitude to re-center map</span></span>
+<span id="cb27-4"><a href="fork-leaflet.html#cb27-4"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">12</span><span class="op">,</span>  <span class="co">// EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in</span></span>
+<span id="cb27-5"><a href="fork-leaflet.html#cb27-5"></a>  <span class="dt">scrollWheelZoom</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb27-6"><a href="fork-leaflet.html#cb27-6"></a><span class="op">}</span>)<span class="op">;</span></span></code></pre></div>
+<ol start="15" style="list-style-type: decimal">
+<li>To change the default basemap, edit lines 46 and 52 to delete “.addTo(map)” from the Carto light layer, then add it to the Stamen colored terrain layer. DO NOT erase the semicolons!</li>
 </ol>
 <p>Your original code looks like this (scroll to right to see all):</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">/* Carto light-gray basemap tiles with labels */</span>
-  <span class="kw">var</span> light <span class="op">=</span> <span class="va">L</span>.<span class="at">tileLayer</span>(<span class="st">&#39;https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png&#39;</span><span class="op">,</span> <span class="op">{</span>
-    <span class="dt">attribution</span><span class="op">:</span> <span class="st">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;, &amp;copy; &lt;a href=&quot;https://carto.com/attribution&quot;&gt;CARTO&lt;/a&gt;&#39;</span>
-  <span class="op">}</span>).<span class="at">addTo</span>(map)<span class="op">;</span> <span class="co">// EDIT - insert or remove &quot;.addTo(map)&quot; before last semicolon to display by default</span>
-  <span class="co">// controlLayers.addBaseLayer(light, &#39;Carto Light basemap&#39;);</span>
-  <span class="co">/* Stamen colored terrain basemap tiles with labels */</span>
-  <span class="kw">var</span> terrain <span class="op">=</span> <span class="va">L</span>.<span class="at">tileLayer</span>(<span class="st">&#39;https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png&#39;</span><span class="op">,</span> <span class="op">{</span>
-    <span class="dt">attribution</span><span class="op">:</span> <span class="st">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;&gt;Stamen Design&lt;/a&gt;, under &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt;. Data by &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt;, under &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;ODbL&lt;/a&gt;.&#39;</span>
-  <span class="op">}</span>)<span class="op">;</span> <span class="co">// EDIT - insert or remove &quot;.addTo(map)&quot; before last semicolon to display by default</span>
-  <span class="co">// controlLayers.addBaseLayer(terrain, &#39;Stamen Terrain basemap&#39;);</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb28-1"><a href="fork-leaflet.html#cb28-1"></a><span class="co">/* Carto light-gray basemap tiles with labels */</span></span>
+<span id="cb28-2"><a href="fork-leaflet.html#cb28-2"></a>  <span class="kw">var</span> light <span class="op">=</span> <span class="va">L</span>.<span class="at">tileLayer</span>(<span class="st">&#39;https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png&#39;</span><span class="op">,</span> <span class="op">{</span></span>
+<span id="cb28-3"><a href="fork-leaflet.html#cb28-3"></a>    <span class="dt">attribution</span><span class="op">:</span> <span class="st">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;, &amp;copy; &lt;a href=&quot;https://carto.com/attribution&quot;&gt;CARTO&lt;/a&gt;&#39;</span></span>
+<span id="cb28-4"><a href="fork-leaflet.html#cb28-4"></a>  <span class="op">}</span>).<span class="at">addTo</span>(map)<span class="op">;</span> <span class="co">// EDIT - insert or remove &quot;.addTo(map)&quot; before last semicolon to display by default</span></span>
+<span id="cb28-5"><a href="fork-leaflet.html#cb28-5"></a>  <span class="co">// controlLayers.addBaseLayer(light, &#39;Carto Light basemap&#39;);</span></span>
+<span id="cb28-6"><a href="fork-leaflet.html#cb28-6"></a>  <span class="co">/* Stamen colored terrain basemap tiles with labels */</span></span>
+<span id="cb28-7"><a href="fork-leaflet.html#cb28-7"></a>  <span class="kw">var</span> terrain <span class="op">=</span> <span class="va">L</span>.<span class="at">tileLayer</span>(<span class="st">&#39;https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png&#39;</span><span class="op">,</span> <span class="op">{</span></span>
+<span id="cb28-8"><a href="fork-leaflet.html#cb28-8"></a>    <span class="dt">attribution</span><span class="op">:</span> <span class="st">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;&gt;Stamen Design&lt;/a&gt;, under &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt;. Data by &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt;, under &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;ODbL&lt;/a&gt;.&#39;</span></span>
+<span id="cb28-9"><a href="fork-leaflet.html#cb28-9"></a>  <span class="op">}</span>)<span class="op">;</span> <span class="co">// EDIT - insert or remove &quot;.addTo(map)&quot; before last semicolon to display by default</span></span>
+<span id="cb28-10"><a href="fork-leaflet.html#cb28-10"></a>  <span class="co">// controlLayers.addBaseLayer(terrain, &#39;Stamen Terrain basemap&#39;);</span></span></code></pre></div>
 <p>After you edit the code, it should look like this (scroll to right to see all):</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">/* Carto light-gray basemap tiles with labels */</span>
-<span class="kw">var</span> light <span class="op">=</span> <span class="va">L</span>.<span class="at">tileLayer</span>(<span class="st">&#39;https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png&#39;</span><span class="op">,</span> <span class="op">{</span>
-  <span class="dt">attribution</span><span class="op">:</span> <span class="st">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;, &amp;copy; &lt;a href=&quot;https://carto.com/attribution&quot;&gt;CARTO&lt;/a&gt;&#39;</span>
-<span class="op">}</span>)<span class="op">;</span> <span class="co">// EDIT - insert or remove &quot;.addTo(map)&quot; before last semicolon to display by default</span>
-<span class="co">// controlLayers.addBaseLayer(light, &#39;Carto Light basemap&#39;);</span>
-<span class="co">/* Stamen colored terrain basemap tiles with labels */</span>
-<span class="kw">var</span> terrain <span class="op">=</span> <span class="va">L</span>.<span class="at">tileLayer</span>(<span class="st">&#39;https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png&#39;</span><span class="op">,</span> <span class="op">{</span>
-  <span class="dt">attribution</span><span class="op">:</span> <span class="st">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;&gt;Stamen Design&lt;/a&gt;, under &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt;. Data by &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt;, under &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;ODbL&lt;/a&gt;.&#39;</span>
-<span class="op">}</span>).<span class="at">addTo</span>(map)<span class="op">;</span> <span class="co">// EDIT - insert or remove &quot;.addTo(map)&quot; before last semicolon to display by default</span>
-<span class="co">// controlLayers.addBaseLayer(terrain, &#39;Stamen Terrain basemap&#39;);</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb29-1"><a href="fork-leaflet.html#cb29-1"></a><span class="co">/* Carto light-gray basemap tiles with labels */</span></span>
+<span id="cb29-2"><a href="fork-leaflet.html#cb29-2"></a><span class="kw">var</span> light <span class="op">=</span> <span class="va">L</span>.<span class="at">tileLayer</span>(<span class="st">&#39;https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png&#39;</span><span class="op">,</span> <span class="op">{</span></span>
+<span id="cb29-3"><a href="fork-leaflet.html#cb29-3"></a>  <span class="dt">attribution</span><span class="op">:</span> <span class="st">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;, &amp;copy; &lt;a href=&quot;https://carto.com/attribution&quot;&gt;CARTO&lt;/a&gt;&#39;</span></span>
+<span id="cb29-4"><a href="fork-leaflet.html#cb29-4"></a><span class="op">}</span>)<span class="op">;</span> <span class="co">// EDIT - insert or remove &quot;.addTo(map)&quot; before last semicolon to display by default</span></span>
+<span id="cb29-5"><a href="fork-leaflet.html#cb29-5"></a><span class="co">// controlLayers.addBaseLayer(light, &#39;Carto Light basemap&#39;);</span></span>
+<span id="cb29-6"><a href="fork-leaflet.html#cb29-6"></a><span class="co">/* Stamen colored terrain basemap tiles with labels */</span></span>
+<span id="cb29-7"><a href="fork-leaflet.html#cb29-7"></a><span class="kw">var</span> terrain <span class="op">=</span> <span class="va">L</span>.<span class="at">tileLayer</span>(<span class="st">&#39;https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png&#39;</span><span class="op">,</span> <span class="op">{</span></span>
+<span id="cb29-8"><a href="fork-leaflet.html#cb29-8"></a>  <span class="dt">attribution</span><span class="op">:</span> <span class="st">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;&gt;Stamen Design&lt;/a&gt;, under &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt;. Data by &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt;, under &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;ODbL&lt;/a&gt;.&#39;</span></span>
+<span id="cb29-9"><a href="fork-leaflet.html#cb29-9"></a><span class="op">}</span>).<span class="at">addTo</span>(map)<span class="op">;</span> <span class="co">// EDIT - insert or remove &quot;.addTo(map)&quot; before last semicolon to display by default</span></span>
+<span id="cb29-10"><a href="fork-leaflet.html#cb29-10"></a><span class="co">// controlLayers.addBaseLayer(terrain, &#39;Stamen Terrain basemap&#39;);</span></span></code></pre></div>
 <ol start="16" style="list-style-type: decimal">
-<li>To add a control panel that turns on/off map layers, delete the code comment symbols (//) that appear in front of lines 38-41, 47, and 53 to activate these sections. When you remove code comments in GitHub, the color changes from gray text (inactive code) to colored text (active code). After you remove the code comments, your file should look like this (scroll to right to see all): ```JavaScript /* Control panel to display map layers */ var controlLayers = L.control.layers( null, null, { position: “topright”, collapsed: false }).addTo(map);</li>
+<li>To add a control panel that turns on/off map layers, delete the code comment symbols (//) that appear in front of lines 38-41, 47, and 53 to activate these sections. When you remove code comments in GitHub, the color changes from gray text (inactive code) to colored text (active code). After you remove the code comments, your file should look like this (scroll to right to see all):</li>
 </ol>
-<p>/* Carto light-gray basemap tiles with labels <em>/ var light = L.tileLayer(‘<a href="https://cartodb-basemaps-%7Bs%7D.global.ssl.fastly.net/light_all/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png</a>’, { attribution: ‘© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, © <a href="https://carto.com/attribution">CARTO</a>’ }); // EDIT - insert or remove “.addTo(map)” before last semicolon to display by default controlLayers.addBaseLayer(light, ‘Carto Light basemap’); /</em> Stamen colored terrain basemap tiles with labels */ var terrain = L.tileLayer(‘<a href="https://stamen-tiles.a.ssl.fastly.net/terrain/%7Bz%7D/%7Bx%7D/%7By%7D.png" class="uri">https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png</a>’, { attribution: ‘Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.’ }).addTo(map); // EDIT - insert or remove “.addTo(map)” before last semicolon to display by default controlLayers.addBaseLayer(terrain, ‘Stamen Terrain basemap’); ``` 17) To change one point on the map, you could edit the latitude and longitude coordinates of the single marker in lines 55-57. To find coordinates for any location and to learn more, go to <a href="http://www.latlong.net" class="uri">http://www.latlong.net</a></p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">/* Display a blue point marker with pop-up text */</span>
-<span class="va">L</span>.<span class="at">marker</span>([<span class="fl">41.77</span><span class="op">,</span> <span class="op">-</span><span class="fl">72.69</span>]).<span class="at">addTo</span>(map) <span class="co">// EDIT latitude, longitude to re-position marker</span>
-.<span class="at">bindPopup</span>(<span class="st">&quot;Insert pop-up text here&quot;</span>)<span class="op">;</span> <span class="co">// EDIT pop-up text message</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb30-1"><a href="fork-leaflet.html#cb30-1"></a><span class="co">/* Control panel to display map layers */</span></span>
+<span id="cb30-2"><a href="fork-leaflet.html#cb30-2"></a> <span class="kw">var</span> controlLayers <span class="op">=</span> <span class="va">L</span>.<span class="va">control</span>.<span class="at">layers</span>( <span class="kw">null</span><span class="op">,</span> <span class="kw">null</span><span class="op">,</span> <span class="op">{</span></span>
+<span id="cb30-3"><a href="fork-leaflet.html#cb30-3"></a>  <span class="dt">position</span><span class="op">:</span> <span class="st">&quot;topright&quot;</span><span class="op">,</span></span>
+<span id="cb30-4"><a href="fork-leaflet.html#cb30-4"></a>  <span class="dt">collapsed</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb30-5"><a href="fork-leaflet.html#cb30-5"></a> <span class="op">}</span>).<span class="at">addTo</span>(map)<span class="op">;</span></span>
+<span id="cb30-6"><a href="fork-leaflet.html#cb30-6"></a></span>
+<span id="cb30-7"><a href="fork-leaflet.html#cb30-7"></a><span class="co">/* Carto light-gray basemap tiles with labels */</span></span>
+<span id="cb30-8"><a href="fork-leaflet.html#cb30-8"></a><span class="kw">var</span> light <span class="op">=</span> <span class="va">L</span>.<span class="at">tileLayer</span>(<span class="st">&#39;https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png&#39;</span><span class="op">,</span> <span class="op">{</span></span>
+<span id="cb30-9"><a href="fork-leaflet.html#cb30-9"></a>  <span class="dt">attribution</span><span class="op">:</span> <span class="st">&#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;, &amp;copy; &lt;a href=&quot;https://carto.com/attribution&quot;&gt;CARTO&lt;/a&gt;&#39;</span></span>
+<span id="cb30-10"><a href="fork-leaflet.html#cb30-10"></a><span class="op">}</span>)<span class="op">;</span> <span class="co">// EDIT - insert or remove &quot;.addTo(map)&quot; before last semicolon to display by default</span></span>
+<span id="cb30-11"><a href="fork-leaflet.html#cb30-11"></a> <span class="va">controlLayers</span>.<span class="at">addBaseLayer</span>(light<span class="op">,</span> <span class="st">&#39;Carto Light basemap&#39;</span>)<span class="op">;</span></span>
+<span id="cb30-12"><a href="fork-leaflet.html#cb30-12"></a><span class="co">/* Stamen colored terrain basemap tiles with labels */</span></span>
+<span id="cb30-13"><a href="fork-leaflet.html#cb30-13"></a><span class="kw">var</span> terrain <span class="op">=</span> <span class="va">L</span>.<span class="at">tileLayer</span>(<span class="st">&#39;https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png&#39;</span><span class="op">,</span> <span class="op">{</span></span>
+<span id="cb30-14"><a href="fork-leaflet.html#cb30-14"></a>  <span class="dt">attribution</span><span class="op">:</span> <span class="st">&#39;Map tiles by &lt;a href=&quot;http://stamen.com&quot;&gt;Stamen Design&lt;/a&gt;, under &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0&quot;&gt;CC BY 3.0&lt;/a&gt;. Data by &lt;a href=&quot;http://openstreetmap.org&quot;&gt;OpenStreetMap&lt;/a&gt;, under &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;ODbL&lt;/a&gt;.&#39;</span></span>
+<span id="cb30-15"><a href="fork-leaflet.html#cb30-15"></a><span class="op">}</span>).<span class="at">addTo</span>(map)<span class="op">;</span> <span class="co">// EDIT - insert or remove &quot;.addTo(map)&quot; before last semicolon to display by default</span></span>
+<span id="cb30-16"><a href="fork-leaflet.html#cb30-16"></a> <span class="va">controlLayers</span>.<span class="at">addBaseLayer</span>(terrain<span class="op">,</span> <span class="st">&#39;Stamen Terrain basemap&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<ol start="17" style="list-style-type: decimal">
+<li>To change one point on the map, you could edit the latitude and longitude coordinates of the single marker in lines 55-57. To find coordinates for any location and to learn more, go to <a href="http://www.latlong.net" class="uri">http://www.latlong.net</a></li>
+</ol>
+<div class="sourceCode" id="cb31"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb31-1"><a href="fork-leaflet.html#cb31-1"></a><span class="co">/* Display a blue point marker with pop-up text */</span></span>
+<span id="cb31-2"><a href="fork-leaflet.html#cb31-2"></a><span class="va">L</span>.<span class="at">marker</span>([<span class="fl">41.77</span><span class="op">,</span> <span class="fl">-72.69</span>]).<span class="at">addTo</span>(map) <span class="co">// EDIT latitude, longitude to re-position marker</span></span>
+<span id="cb31-3"><a href="fork-leaflet.html#cb31-3"></a>.<span class="at">bindPopup</span>(<span class="st">&quot;Insert pop-up text here&quot;</span>)<span class="op">;</span> <span class="co">// EDIT pop-up text message</span></span></code></pre></div>
 <p>But a better way to display several points is to remove the code comment symbols (//) in front of lines 60-69 to activate this section of code, which pulls map points from the data.csv file in your GitHub repository. After your edits, this section should look like this (scroll right to see all):</p>
-<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">/* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */</span>
- <span class="kw">var</span> customLayer <span class="op">=</span> <span class="va">L</span>.<span class="at">geoJson</span>(<span class="kw">null</span><span class="op">,</span> <span class="op">{</span>
-  <span class="dt">onEachFeature</span><span class="op">:</span> <span class="kw">function</span>(feature<span class="op">,</span> layer) <span class="op">{</span>
-    <span class="va">layer</span>.<span class="at">bindPopup</span>(<span class="va">feature</span>.<span class="va">properties</span>.<span class="at">Title</span>)<span class="op">;</span>
-  <span class="op">}</span>
- <span class="op">}</span>)<span class="op">;</span>
- <span class="kw">var</span> runLayer <span class="op">=</span> <span class="va">omnivore</span>.<span class="at">csv</span>(<span class="st">&#39;data.csv&#39;</span><span class="op">,</span> <span class="kw">null</span><span class="op">,</span> customLayer)
- .<span class="at">on</span>(<span class="st">&#39;ready&#39;</span><span class="op">,</span> <span class="kw">function</span>() <span class="op">{</span>
-  <span class="va">map</span>.<span class="at">fitBounds</span>(<span class="va">runLayer</span>.<span class="at">getBounds</span>())<span class="op">;</span>
- <span class="op">}</span>).<span class="at">addTo</span>(map)<span class="op">;</span>
- <span class="va">controlLayers</span>.<span class="at">addOverlay</span>(customLayer<span class="op">,</span> <span class="st">&#39;Markers from data.csv&#39;</span>)<span class="op">;</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb32-1"><a href="fork-leaflet.html#cb32-1"></a><span class="co">/* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */</span></span>
+<span id="cb32-2"><a href="fork-leaflet.html#cb32-2"></a> <span class="kw">var</span> customLayer <span class="op">=</span> <span class="va">L</span>.<span class="at">geoJson</span>(<span class="kw">null</span><span class="op">,</span> <span class="op">{</span></span>
+<span id="cb32-3"><a href="fork-leaflet.html#cb32-3"></a>  <span class="dt">onEachFeature</span><span class="op">:</span> <span class="kw">function</span>(feature<span class="op">,</span> layer) <span class="op">{</span></span>
+<span id="cb32-4"><a href="fork-leaflet.html#cb32-4"></a>    <span class="va">layer</span>.<span class="at">bindPopup</span>(<span class="va">feature</span>.<span class="va">properties</span>.<span class="at">Title</span>)<span class="op">;</span></span>
+<span id="cb32-5"><a href="fork-leaflet.html#cb32-5"></a>  <span class="op">}</span></span>
+<span id="cb32-6"><a href="fork-leaflet.html#cb32-6"></a> <span class="op">}</span>)<span class="op">;</span></span>
+<span id="cb32-7"><a href="fork-leaflet.html#cb32-7"></a> <span class="kw">var</span> runLayer <span class="op">=</span> <span class="va">omnivore</span>.<span class="at">csv</span>(<span class="st">&#39;data.csv&#39;</span><span class="op">,</span> <span class="kw">null</span><span class="op">,</span> customLayer)</span>
+<span id="cb32-8"><a href="fork-leaflet.html#cb32-8"></a> .<span class="at">on</span>(<span class="st">&#39;ready&#39;</span><span class="op">,</span> <span class="kw">function</span>() <span class="op">{</span></span>
+<span id="cb32-9"><a href="fork-leaflet.html#cb32-9"></a>  <span class="va">map</span>.<span class="at">fitBounds</span>(<span class="va">runLayer</span>.<span class="at">getBounds</span>())<span class="op">;</span></span>
+<span id="cb32-10"><a href="fork-leaflet.html#cb32-10"></a> <span class="op">}</span>).<span class="at">addTo</span>(map)<span class="op">;</span></span>
+<span id="cb32-11"><a href="fork-leaflet.html#cb32-11"></a> <span class="va">controlLayers</span>.<span class="at">addOverlay</span>(customLayer<span class="op">,</span> <span class="st">&#39;Markers from data.csv&#39;</span>)<span class="op">;</span></span></code></pre></div>
 </div>
 <div id="d-geocode-addresses-in-google-sheet-and-upload-points-from-data.csv" class="section level4 unnumbered">
 <h4>D) Geocode addresses in Google Sheet and upload points from data.csv</h4>
@@ -402,11 +474,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -414,12 +488,11 @@ gitbook.start({
 "github": true,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -432,6 +505,10 @@ gitbook.start({
 },
 "history": {
 "link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/datavizforall/datavizforall-bookdown/blob/master/08.01-fork-leaflet.Rmd",
 "text": null
 },
 "download": ["Dougherty-Ilyankou-Data-Visualization-for-All.pdf", "Dougherty-Ilyankou-Data-Visualization-for-All.epub", "Dougherty-Ilyankou-Data-Visualization-for-All.docx"],

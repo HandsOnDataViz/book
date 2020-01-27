@@ -311,7 +311,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Click this link and Save to download to your computer: <a href="data/us-sample-data.csv">us-sample-data in CSV format</a>. CSV means comma-separated values, a generic spreadsheet format that most tools can easily open. For help with downloading, see this <a href="https://www.youtube.com/watch?v=-04PQldP9HQ">short video tutorial</a>.</p></li>
 <li><p>Open the us-sample-data.csv file with any spreadsheet tool to view its contents.</p></li>
 <li><p>Launch Tableau Public. In the Connect column of the first screen, click “Text file” to connect to the CSV file you downloaded above. (If you had an Excel file in .xlsx format, you would click that instead.) Navigate to select the us-sample.data.csv file on your computer.</p></li>
-<li><p>At first, Tableau Public does <strong>NOT</strong> recognize the names of US areas, which initially appear simply as “text” values (with the “Abc” symbol). Click directly on the “Abc” symbol and use the drop-down menu to convert to Geographic role &gt; State/Province. A tiny globe symbol will appear to show that Tableau Public now recognizes this column as geographic data, which is essential in order to make a map.</p></li>
+<li><p>At first, Tableau Public does <strong>NOT</strong> recognize the names of US areas, which initially appear simply as “text” values (with the “Abc” symbol). Click and hold down the mouse directly on the “Abc” symbol, and use the drop-down menu to convert to Geographic role &gt; State/Province. A tiny globe symbol will appear to show that Tableau Public now recognizes this column as geographic data, which is essential in order to make a map.</p></li>
 </ol>
 <div class="figure">
 <img src="images/06-map/tableau-polygon-1.png" alt="" />
@@ -322,8 +322,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p class="caption">Column converted to geographic data</p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li><p>Go to the Worksheet view, by clicking on “Sheet 1” in the bottom-left corner.</p></li>
-<li></li>
+<li>Go to the Worksheet view, by clicking on “Sheet 1” in the bottom-left corner. The goal is to build a polygon map, based on the dimensions and variables provided by Tableau Public.</li>
+</ol>
+<p>Step A - Drag the “Area” dimension to the middle of the worksheet to create the geographic areas</p>
+<p>Step B - In the “Marks” panel, change the drop-down menu from “Automatic” to “Map”</p>
+<p>Step C - Drag the “Type” dimension into the “Color” box of the Marks panel to show polygon colors according to type</p>
+<div class="figure">
+<img src="images/06-map/tableau-polygon-3.png" alt="" />
+<p class="caption">Steps A-B-C above</p>
+</div>
+<p>Optional: Add more items, such as “Abbreviation” dimension to “Label” box to display state abbreviations, or “Area” dimension to “tooltips” to display on mouseover.</p>
+<ol start="7" style="list-style-type: decimal">
+<li><p>To display your map online, click “Dashboard” tab in the bottom-left corner.</p></li>
+<li><p>Drag “Sheet 1” (the default name of your map) into your dashboard. Also, drag the map legend from the corner into the lower body of the map (or choose other legend options).</p></li>
+<li><p>To publish your map online, go to File &gt; Save to Tableau Public As… This will require you to create a free Tableau Public Account.</p></li>
+<li><p>Modify your final online product as desired, and see options to embed elsewhere on the web.</p></li>
 </ol>
 
 </div>

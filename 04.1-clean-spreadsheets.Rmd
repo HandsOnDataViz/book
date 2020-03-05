@@ -51,7 +51,9 @@ The coordinate pairs column is now split into two separate columns. Relabel the 
 
 Animated example from Excel for Windows (thanks `@f3mlat`):
 
-![](images/04-clean/excel-win-data-text-to-columns.gif)
+```{r excel-win-data}
+if(knitr::is_html_output()) knitr::include_url("images/04-clean/excel-win-data-text-to-columns.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 **TO DO** write directions to split a single address cell "300 Summit St, Hartford CT 06106" into separate columns for address, city, state, zip
 

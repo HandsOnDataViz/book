@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Section 3 Peer Review Sample 1 | Data Visualization for All</title>
   <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
-  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Section 3 Peer Review Sample 1 | Data Visualization for All" />
   <meta property="og:type" content="book" />
@@ -33,8 +33,8 @@
   
 <link rel="prev" href="peer-2-chart-2-notes.html"/>
 <link rel="next" href="peer-3-sample-1-notes.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
-<script src="libs/elevate-section-attrs-2.0/elevate-section-attrs.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -147,7 +147,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
 <li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors and Contributors</a></li>
-<li class="chapter" data-level="" data-path="read.html"><a href="read.html"><i class="fa fa-check"></i>How to Read and Comment</a></li>
+<li class="chapter" data-level="" data-path="read.html"><a href="read.html"><i class="fa fa-check"></i>How to Read</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Tools to Tell Your Data Story</a>
 <ul>
@@ -211,7 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
-<li class="chapter" data-level="" data-path="census.html"><a href="census.html#social-explorer"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
+<li class="chapter" data-level="" data-path="social-explorer-maps.html"><a href="social-explorer-maps.html"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i>Embed On Your Web</a>
@@ -226,8 +226,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i>Modify and Host Code with GitHub</a>
 <ul>
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork and Edit a Simple Leaflet Map with GitHub</a></li>
-<li class="chapter" data-level="" data-path="fork-and-edit-a-highcharts-scatter-chart-with-github.html"><a href="fork-and-edit-a-highcharts-scatter-chart-with-github.html"><i class="fa fa-check"></i>Fork and Edit a Highcharts Scatter Chart with GitHub</a></li>
-<li class="chapter" data-level="" data-path="create-a-new-repo-and-upload-code-with-github.html"><a href="create-a-new-repo-and-upload-code-with-github.html"><i class="fa fa-check"></i>Create a New Repo and Upload Code with GitHub</a></li>
+<li class="chapter" data-level="" data-path="fork-highcharts.html"><a href="fork-highcharts.html"><i class="fa fa-check"></i>Fork and Edit a Highcharts Scatter Chart with GitHub</a></li>
+<li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Code with GitHub</a></li>
 <li class="chapter" data-level="" data-path="choose-license.html"><a href="choose-license.html"><i class="fa fa-check"></i>Choose an Open-Source Code License</a></li>
 <li class="chapter" data-level="" data-path="pull-request.html"><a href="pull-request.html"><i class="fa fa-check"></i>Pull Request to Merge Changes on GitHub</a></li>
 <li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
@@ -237,10 +237,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize-data-to-create-meaningful-polygon-maps.html"><a href="normalize-data-to-create-meaningful-polygon-maps.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
-<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert Map Data into GeoJSON format</a></li>
-<li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Convert, Edit, and Create Map Data with GeoJson.io</a></li>
-<li class="chapter" data-level="" data-path="convert-edit-join-and-dissolve-with-mapshaper-org.html"><a href="convert-edit-join-and-dissolve-with-mapshaper-org.html"><i class="fa fa-check"></i>Convert, Edit, Join, and Dissolve with MapShaper.org</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
+<li class="chapter" data-level="" data-path="mapshaper-org-to-convert-edit-and-join-data.html"><a href="mapshaper-org-to-convert-edit-and-join-data.html"><i class="fa fa-check"></i>MapShaper.org to Convert, Edit, and Join Data</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i>Detect Bias in Data Stories</a>
@@ -251,10 +251,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i>Tell Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i>Chart.js Code Templates</a>
 <ul>
-<li class="chapter" data-level="" data-path="bar-chart-with-csv-data.html"><a href="bar-chart-with-csv-data.html"><i class="fa fa-check"></i>Bar Chart with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="line-chart-with-csv-data.html"><a href="line-chart-with-csv-data.html"><i class="fa fa-check"></i>Line Chart with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="scatter-chart-with-csv-data.html"><a href="scatter-chart-with-csv-data.html"><i class="fa fa-check"></i>Scatter Chart with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="bubble-chart-with-csv-data.html"><a href="bubble-chart-with-csv-data.html"><i class="fa fa-check"></i>Bubble Chart with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bar.html"><a href="chartjs-bar.html"><i class="fa fa-check"></i>Bar Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-line.html"><a href="chartjs-line.html"><i class="fa fa-check"></i>Line Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-scatter.html"><a href="chartjs-scatter.html"><i class="fa fa-check"></i>Scatter Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bubble.html"><a href="chartjs-bubble.html"><i class="fa fa-check"></i>Bubble Chart.js with CSV Data</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i>Leaflet Map Templates</a>
 <ul>
@@ -373,7 +373,7 @@ gitbook.start({
 "link": "https://github.com/datavizforall/datavizforall-bookdown/blob/master/14.05-peer-3-sample-1.Rmd",
 "text": null
 },
-"download": ["Dougherty-Ilyankou-Data-Visualization-for-All.pdf", "Dougherty-Ilyankou-Data-Visualization-for-All.epub", "Dougherty-Ilyankou-Data-Visualization-for-All.docx"],
+"download": ["Dougherty-Ilyankou-Data-Visualization-for-All.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

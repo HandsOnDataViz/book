@@ -45,7 +45,9 @@ Best to compare categories side-by-side. Vertical columns, or horizontal bars fo
 
 9) To make your data public, select the blue Share button > Advanced, then Change from Private to Public On the Web, with Anyone Can View.
 
-![Screencast: Share your Google Sheet](images/05-chart/column-share.gif)
+```{r share-sheet}
+if(knitr::is_html_output()) knitr::include_url("images/05-chart/column-share.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 10) To embed your chart in another website, click the upper-right chart editing controls, select Publish Chart, select Embed, and press the Publish button. Copy the iframe code and see the [Embed on Your Web](embed.html) chapter in this book.
 

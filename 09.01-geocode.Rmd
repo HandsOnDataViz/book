@@ -18,7 +18,9 @@ As with any geocoding service, accuracy is not guaranteed. Inspect your results 
 - Google Sheets script will ask for permission to run the first time
 - Note: The [Leaflet Maps with Google Sheets template](leaflet-maps-with-google-sheets) in this book includes this Geocoder script.
 
-![Screencast: Google Sheets Geocoder: US Census or Google](images/09-transform/google-sheets-geocoder-census-google.gif)
+```{r googlesheets-geocoder, fig.cap="Screencast: Google Sheets Geocoder: US Census or Google"}
+if(knitr::is_html_output()) knitr::include_url("images/09-transform/google-sheets-geocoder-census-google.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 #### Google Sheets Geocoder: US Census Geographies {-}
 - Geocode US addresses into latitude, longitude, GeoID, census tract, inside a Google Sheet
@@ -28,6 +30,10 @@ https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1v
 - Google Sheets script will ask for permission to run the first time
 
 ![Screencast: GoogleSheets Geocoder: US Census Geographies](images/09-transform/google-sheets-geocoder-census-geographies.gif)
+
+```{r googlesheets-geocoder2, fig.cap="Screencast: Google Sheets Geocoder: US Census Geographies"}
+if(knitr::is_html_output()) knitr::include_url("images/09-transform/google-sheets-geocoder-census-geographies.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 ##### About US Census 15-character GeoID {-}
 - Make sure that column G is formatted as text (to preserve leading zeros), not number

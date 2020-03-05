@@ -1,12 +1,23 @@
-## How to Read and Comment {#read}
-*last updated February 28, 2017*
+## How to Read {#read}
+*last updated March 5, 2020*
 
-** TO DO: update section **
+*Data Visualization for All* refers to both this open-access digital book and a [free online course](https://www.edx.org/course/data-visualization-for-all) by the same name. We refer to them as "the book" and "the course."
 
-*Data Visualization for All* refers to both this open-access digital book and a free online course by the same name. We refer to them as "the book" and "the course." **TO DO: add link to course**
+This open-access book-in-progress is freely available in **two formats:** Web and PDF. **Read the online Web edition** at (http://datavizforall.org) to fully experience the interactive charts, maps, and video clips. Any modern web browser will display the book, but readers may prefer larger screens (desktop, laptop, tablet) over smaller screens (such as smartphones). In your web browser, try these toolbar features near the top of the page:
 
-#### Recommended: Read the online edition {-}
-We designed the book to be read online, in any modern web browser, on desktops, laptops, or mobile devices. The online edition features interactive charts and maps that you can explore, and video tutorials that you can view at your own pace. If desired, readers can freely download any of the ebook editions--but these do not include the interactive features in the online web edition. Learn more about [how GitBook works](../gitbook) and publish your own book.
+- Menu
+- Search
+- Font to adjust text size and display
+- View source code on GitHub
+- Download PDF
+- Shortcuts (arrow keys to navigate; `s` to toggle sidebar; `f` to toggle search)
+- Social Media
+- Share
+
+```{r how-to-read}
+ knitr::include_graphics("images/0-introduction/how-to-read.png")
+```
+A second option is to freely download the PDF edition **INSERT LINK**, which you can print out on paper for off-line reading. Although static images will appear in place of interactive maps and videos, the text and source notes in the PDF version are nearly identical to the web version. Since this digital-first has been created primarily for the web, some aspects of the book-in-progress may appear incomplete in the PDF edition.  After the final manuscript is completed, a cleaner PDF version will be formatted, which the publisher will use to create an inexpensive paperback edition for sale.
 
 #### Open links in new tabs {-}
 Keep your place when reading online and moving between pages.  
@@ -27,29 +38,3 @@ To view the most up-to-date content in your web browser, do a "hard refresh" to 
 - Ctrl + F5 (most Windows-Linux browsers)
 - Command + Shift + R (Chrome or Firefox for Mac)
 - Shift + Reload button toolbar (Safari for Mac)
-
-#### UPDATE Comment on any paragraph {-}
-- Requires a free account on GitHub http://github.com
-- Select text and click the plus symbol (+) in margin.
-- GitBook section headers and lists cannot accept comments.
-- View other comments in the margins, or all in [Discussions](https://www.gitbook.com/book/jackdougherty/datavizforall/discussions).
-- Constructive criticism and suggestions are welcome.
-
-![Animation: Comment on GitBook](images/0-introduction/GitBook-comments-2016-02.gif)
-
-#### UPDATE Suggest revisions on any page {-}
-- Click "Edit on GitHub" at top of any page, which opens new tab.
-    ![](images/0-introduction/GitBook-edit-on-github.png)
-- To view the code behind the page, click Raw button.
-- To suggest revisions, click Editor button (pencil symbol). Requires free [GitHub account](http://github.com).
-    ![](images/0-introduction/GitHub-edit-file.png)
-- After entering revisions, scroll down to click Propose File Change.
-- On next screen, click Create Pull Request to submit proposed changes to the book owner.
-- On next screen, click Create Pull Request again to confirm.
-- The book owner will review your suggested revisions, and you will receive automatic notification on any changes.
-
-#### Propose additional chapters {-}
-- [Contact the authors](introduction.html#who) with a summary of your proposed chapter.
-- On the [book GitHub repository](https://github.com/datavizforall), fork a copy to your own GitHub account (requires free signup).
-- Create your proposed chapter following the book's existing folder/file structure.
-- If accepted, the contributing author retains the copyright to their work but agrees to publish it under the Creative Commons BY-NC license. Authors do not receive royalties, but enjoy the eternal rewards of sharing knowledge.

@@ -21,7 +21,9 @@ Write a short but meaningful file name. It is a good idea to include data source
 
 Before modifying the original dataset, make sure to duplicate it to avoid any data losses. One way is to click (or right-click) on the spreadsheet tab to copy the sheet to another tab as a backup.
 
-![](images/03-find/SpreadsheetCopySheet640w.gif)
+```{r spreadsheet-copy-sheet}
+if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/SpreadsheetCopySheet640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 Add a *source* tab, after the data, with notes to remind you and others about its origins and when it was last updated.
 

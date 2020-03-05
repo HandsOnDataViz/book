@@ -30,13 +30,17 @@ If you've inserted a formula into one row, how can you quickly do the same calcu
 
 Spreadsheets can magically automate calculations across rows or columns. In most cases, you can copy and paste a formula into new cells. Sometimes you can click-and-drag the lower-right corner of a formula cell (which may appear as a cross-hair) to automate calculations.
 
-![](images/02-spreadsheet/SpreadsheetFormula640w.gif)
+```{r spreadsheet-formula}
+if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/SpreadsheetFormula640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 #### Copy and Paste > Special > Values to replace formulas with data {-}
 
 After inserting calculations in a spreadsheet, sometimes dynamic formulas must be replaced with static data before the results can be visualized. One solution is to select and copy a column (or the entire sheet), then paste > special > values to replace the formula with numerical results.
 
-![](images/02-spreadsheet/SpreadsheetPasteSpecialValues640w.gif)
+```{r spreadsheet-paste-special}
+if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/SpreadsheetPasteSpecialValues640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 Remember that if you need to check or run the calculations again at a later point, click (or right-click) the tab to save a copy to the spreadsheet as a backup.
 
@@ -49,4 +53,6 @@ To quickly create a column of consecutive numbers, such as unique ID numbers, in
 - On a Mac, hold down the Option key and drag the cross-hair down to create consecutive numbers
 - **TO DO** insert equivalent commands for Windows, Chromebook
 
-![](images/02-spreadsheet/excel-drag-consec.gif)
+```{r excel-drag-consec}
+if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/excel-drag-consec.gif") else knitr::include_graphics("images/placeholder.jpg")
+```

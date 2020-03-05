@@ -1,4 +1,4 @@
-## Convert, Edit, and Create Map Data with GeoJson.io {#geojsonio}
+## GeoJson.io to Convert, Edit, and Create Map Data {#geojsonio}
 *By [Jack Dougherty](authors), last updated March 26, 2017*
 
 ** TO DO **
@@ -20,7 +20,9 @@ Try it! Click this link and Save to download this sample file to your computer: 
 
 Drag the CSV file into the GeoJSON.io map window. Flip between the JSON and Table tabs to view or edit the data.
 
-![Screencast](images/09-transform/dataviz-geojsonio-640.gif)
+```{r geojsonio, fig.cap="Screencast: GeoJson.io"}
+if(knitr::is_html_output()) knitr::include_url("images/09-transform/dataviz-geojsonio-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 Select the Save menu and export into GeoJSON format.
 

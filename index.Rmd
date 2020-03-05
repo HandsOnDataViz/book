@@ -30,7 +30,7 @@ output:
           <li style="padding: 10px 15px; font-weight: bold;">Open access book-in-progress</li>
           <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></li>
           <li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
-      download: [pdf, epub, docx]
+      download: [pdf]
       edit:
         link: https://github.com/datavizforall/datavizforall-bookdown/edit/master/%s
         text: "Edit on GitHub"
@@ -51,7 +51,11 @@ output:
     default
 ---
 # Introduction {-}
-
+<!-- R global options: R chunk images display without code (no echo); show PDF image over JPG/PNG when available -->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(knitr.graphics.auto_pdf = TRUE)
+```
 ![ ](images/0-introduction/cover-400wide.jpg)
 
 **This book-in-progress** was last updated on: `r Sys.Date()`.

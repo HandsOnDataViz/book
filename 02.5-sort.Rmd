@@ -11,7 +11,9 @@
 
 To sort data rows by a column, select the entire spreadsheet (top-left corner icon), then right-click or look for the sort menu. Be sure to select the entire sheet to avoid accidentally sorting one column without the adjacent ones.
 
-![](images/02-spreadsheet/SpreadsheetSort640w.gif)
+```{r spreadsheet-sort}
+if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/SpreadsheetSort640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 #### Filter data by columns {-}
 

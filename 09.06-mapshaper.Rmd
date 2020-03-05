@@ -1,4 +1,4 @@
-## Convert, Edit, Join, and Dissolve with MapShaper.org {-}
+## MapShaper.org to Convert, Edit, and Join Data {-}
 *By [Jack Dougherty](authors), last updated April 10, 2017*
 
 ** TO DO **
@@ -34,7 +34,9 @@ Try it! Right-click the link and Save to download this sample file to your compu
   - SVG (Scalable Vector Graphics, for print or online)
   - CSV (Comma Separated Values, generic spreadsheet format)
 
-  ![Screencast](images/09-transform/mapshaper-convert-640.gif)
+  ```{r mapshaper-convert, fig.cap="Screencast: Mapshaper convert"}
+  if(knitr::is_html_output()) knitr::include_url("images/09-transform/mapshaper-convert-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+  ```
 
 #### Edit data for specific polygons {-}
 
@@ -70,7 +72,9 @@ Click the Console button, which opens a window to type in commands. Enter the co
 -dissolve
 ```
 
-![Screencast](images/09-transform/mapshaper-dissolve-simple-640.gif)
+```{r mapshaper-dissolve, fig.cap="Screencast: Mapshaper dissolve"}
+if(knitr::is_html_output()) knitr::include_url("images/09-transform/mapshaper-dissolve-simple-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 #### Clip a map to match an outline layer {-}
 Imagine that you start with a polygon map of all towns in Connecticut, and an outline map of Hartford County, a larger region that includes some (but not all) of those smaller towns. Your goal is to create a polygon map of all towns inside Hartford County. In other words, we will "clip" the statewide town map using the county outline map.
@@ -104,7 +108,9 @@ Removed 3 null features and 5 slivers
 ```
 **TO DO** fix animation to match new file names
 
-![Screencast](images/09-transform/mapshaper-clip-640.gif)
+```{r mapshaper-clip, fig.cap="Screencast: Mapshaper clip"}
+if(knitr::is_html_output()) knitr::include_url("images/09-transform/mapshaper-clip-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 #### Remove unwanted data columns {-}
 Sometimes your polygon map contains several columns of unwanted data. To quickly remove them, enter the "-filter-fields" Console command to keep only the columns you list. The example below deletes all columns *except* "town":

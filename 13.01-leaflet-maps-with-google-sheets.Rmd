@@ -74,7 +74,9 @@ Reminder: You can only fork a GitHub repo **one time**. If needed, see how to ma
 https://USERNAME.github.io/leaflet-maps-with-google-sheets
 ```
 
-![Screencast](images/13-leaflet/lmwgs-1-fork-640.gif)
+```{r lmwgs-1, fig.cap="Screencast: Fork"}
+if(knitr::is_html_output()) knitr::include_url("images/13-leaflet/lmwgs-1-fork-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 6) Scroll up to the top, and click on your repo name to go back to its main page.
 
@@ -94,7 +96,9 @@ https://USERNAME.github.io/leaflet-maps-with-google-sheets
 
 4) Click the blue Share button, click Advanced, click to change Private to Anyone with the link > Can View the Sheet. This will make your public data easier to view in your map.
 
-![Screencast: Share Google Sheet for anyone with the link to view](images/13-leaflet/lmwgs-2-make-copy-640.gif)
+```{r lmwgs-2, fig.cap="Screencast: Share Google Sheet"}
+if(knitr::is_html_output()) knitr::include_url("images/13-leaflet/lmwgs-2-make-copy-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 5) File > Publish the Link to your Google Sheet to the public web, so the Leaflet map code can read it.
 

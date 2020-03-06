@@ -78,7 +78,7 @@ These URLs are NOT case-sensitive, which means that `https://github.com/USERNAME
 
 - Do NOT rename row labels (in column A) of any sheet, due to the same reason above.
 
-![Screenshot: Do not rename or delete](images/08-github/lmwgs-do-not-rename-lables.png)
+![Screenshot: Do not rename or delete](images/08-github/lmwgs-do-not-rename-labels.png)
 
 - In your Points tab, DO NOT leave any blank rows
 
@@ -97,7 +97,7 @@ If you upload new data to your Chart.js code template on GitHub Pages, and it do
 
 Several tools in this book will not work properly if your Mac Finder does not display file extensions. In other words, every file should include a period followed by several letters (such as data.csv and map.geojson). If you do not see these extensions at the end of each file name, then go to Finder > Preferences > Advanced and check the box to turn them on, as show below:
 
-![Screenshot: Checkbox to show filename extensions](image/08-github/mac-finder-filename-extensions.png)
+![Screenshot: Checkbox to show filename extensions](images/08-github/mac-finder-filename-extensions.png)
 
 #### Solve Problems with Browser Developer Tools {-}
 Peek inside any website and view the web code under the hood with the browser developer tools.

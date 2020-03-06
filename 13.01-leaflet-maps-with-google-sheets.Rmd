@@ -118,7 +118,9 @@ if(knitr::is_html_output()) knitr::include_url("images/13-leaflet/lmwgs-2-make-c
 
 4) Scroll to bottom of page and press Commit to save your changes. Now the Leaflet Map code can locate your published Google Sheet.
 
-![Screencast: Copy Google Sheet URL and paste into GitHub code](images/13-leaflet/lmwgs-paste-google-sheet.png)
+```{r lmwgs-paste, fig.cap="Screencast: Copy Google Sheet URL and paste into GitHub code"}
+if(knitr::is_html_output()) knitr::include_url("images/13-leaflet/lmwgs-paste-google-sheet-into-code.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
 
 5) Next, let's paste your Google Sheet URL in a second place to keep track of it. Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.
 

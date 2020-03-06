@@ -31,9 +31,7 @@ output:
           <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></li>
           <li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
       download: [pdf]
-      edit:
-        link: https://github.com/datavizforall/datavizforall-bookdown/edit/master/%s
-        text: "Edit on GitHub"
+      view: https://github.com/datavizforall/datavizforall-bookdown/blob/master/%s
       search: yes
       sharing:
         facebook: yes
@@ -42,10 +40,6 @@ output:
 
   bookdown::pdf_book:
     default
-
-  bookdown::epub_book:
-    dev: svglite
-    stylesheet: css/style.css
 
   bookdown::word_document2:
     default

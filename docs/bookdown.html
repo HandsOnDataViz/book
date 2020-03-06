@@ -303,6 +303,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="bookdown" class="section level1">
 <h1>Publishing <em>DataVizForAll</em> with Bookdown</h1>
 <p><em>by <a href="authors">Jack Dougherty and Ilya Ilyankou</a>, last updated February 13, 2019</em></p>
+<p>TODO: Redo this entire section to match updates from On The Line book – see <a href="https://ontheline.trincoll.edu/bookdown.html" class="uri">https://ontheline.trincoll.edu/bookdown.html</a></p>
 <p>This open-access book is published using open-source tools, featuring Bookdown with RStudio and GitHub. Publishing with Bookdown allows authors to compose in Markdown (an easy-to-read-and-write computer syntax that works on multiple platforms) and publish in multiple formats (static HTML web edition, PDF edition, ePUB ebook edition, and Microsoft Word documents). Hosting the book in a public GitHub repository, and publishing it with GitHub Pages, easily makes the original text of the book, as well as the published products, available on the public web. For a technical guide to publishing with Bookdown, see Yihui Xie, <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>, 2018, <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</p>
 <p>An alternative book publishing platform to consider is Pressbooks. This open-source modification of WordPress multisite also supports multiple publication formats (HMTL web edition, PDF edition, ePUB ebook edition. Authors can use the <a href="http://Pressbooks.com" class="uri">http://Pressbooks.com</a> paid hosting service. Or, users with advanced WordPress and some system admin skills can download the code from <a href="http://github.com/pressbooks" class="uri">http://github.com/pressbooks</a> and run their own self-hosted book publishing site.</p>
 <div id="setup-rstudio-bookdown-and-tinytex" class="section level4 unnumbered">
@@ -417,20 +418,13 @@ A text-only footnote.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup
 </div>
 <div id="embed-images-and-iframes" class="section level4 unnumbered">
 <h4>Embed images and iframes</h4>
-<p>Insert image using Markdown syntax:</p>
-<p>Code:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb58-1"><a href="bookdown.html#cb58-1"></a><span class="al">![Caption using markdown: auto-number does not appear in web, but appears in pdf, text *with italics*, no center-alignment on web, but centered in PDF, with [source link](https://google.com)</span>](images/sample.jpg)</span></code></pre></div>
-<p>Demo:</p>
-<div class="figure">
-<img src="images/sample.jpg" alt="" />
-<p class="caption">Caption using markdown: auto-number does not appear in web, but appears in pdf, text <em>with italics</em>, no center-alignment on web, but centered in PDF, with <a href="https://google.com">source link</a></p>
-</div>
+<p>TODO - update</p>
 </div>
 <div id="explore-the-chart-embedded-html-iframe" class="section level4 unnumbered">
 <h4>Explore the Chart: embedded HTML iframe</h4>
 <p>Code:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb59-1"><a href="bookdown.html#cb59-1"></a><span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample/&quot;</span><span class="ot"> width=</span><span class="st">&quot;90%&quot;</span><span class="ot"> height=</span><span class="st">&quot;420px&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span></span>
-<span id="cb59-2"><a href="bookdown.html#cb59-2"></a>Recommended: Insert caption and link to view the full-screen version.</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb58-1"><a href="bookdown.html#cb58-1"></a><span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample/&quot;</span><span class="ot"> width=</span><span class="st">&quot;90%&quot;</span><span class="ot"> height=</span><span class="st">&quot;420px&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span></span>
+<span id="cb58-2"><a href="bookdown.html#cb58-2"></a>Recommended: Insert caption and link to view the full-screen version.</span></code></pre></div>
 <p>Demo:</p>
 <iframe src="https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px">
 </iframe>
@@ -439,8 +433,8 @@ A text-only footnote.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup
 <div id="scroll-the-map-embedded-html-iframe" class="section level4 unnumbered">
 <h4>Scroll the Map: embedded HTML iframe</h4>
 <p>Code:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb60-1"><a href="bookdown.html#cb60-1"></a><span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;https://ontheline.github.io/otl-town-borders/&quot;</span><span class="ot"> width=</span><span class="st">&quot;90%&quot;</span><span class="ot"> height=</span><span class="st">&quot;525px&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span></span>
-<span id="cb60-2"><a href="bookdown.html#cb60-2"></a>Recommended: Insert caption and link to view the full-screen version.</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb59-1"><a href="bookdown.html#cb59-1"></a><span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;https://ontheline.github.io/otl-town-borders/&quot;</span><span class="ot"> width=</span><span class="st">&quot;90%&quot;</span><span class="ot"> height=</span><span class="st">&quot;525px&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span></span>
+<span id="cb59-2"><a href="bookdown.html#cb59-2"></a>Recommended: Insert caption and link to view the full-screen version.</span></code></pre></div>
 <p>Demo:</p>
 <iframe src="https://ontheline.github.io/otl-town-borders/" width="90%" height="525px">
 </iframe>
@@ -449,8 +443,8 @@ A text-only footnote.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup
 <div id="watch-the-youtube-video-embedded-html-iframe-from-secure-https" class="section level4 unnumbered">
 <h4>Watch the YouTube Video: embedded HTML iframe from secure https</h4>
 <p>Code:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb61-1"><a href="bookdown.html#cb61-1"></a><span class="kw">&lt;iframe</span><span class="ot"> width=</span><span class="st">&quot;560&quot;</span><span class="ot"> height=</span><span class="st">&quot;315&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://www.youtube.com/embed/Gl3uIRYYUmI?rel=0&quot;</span><span class="ot"> frameborder=</span><span class="st">&quot;0&quot;</span><span class="ot"> allow=</span><span class="st">&quot;autoplay; encrypted-media&quot;</span><span class="ot"> allowfullscreen</span><span class="kw">&gt;&lt;/iframe&gt;</span></span>
-<span id="cb61-2"><a href="bookdown.html#cb61-2"></a>Recommended: Insert caption and link to view the full-screen version.</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb60-1"><a href="bookdown.html#cb60-1"></a><span class="kw">&lt;iframe</span><span class="ot"> width=</span><span class="st">&quot;560&quot;</span><span class="ot"> height=</span><span class="st">&quot;315&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://www.youtube.com/embed/Gl3uIRYYUmI?rel=0&quot;</span><span class="ot"> frameborder=</span><span class="st">&quot;0&quot;</span><span class="ot"> allow=</span><span class="st">&quot;autoplay; encrypted-media&quot;</span><span class="ot"> allowfullscreen</span><span class="kw">&gt;&lt;/iframe&gt;</span></span>
+<span id="cb60-2"><a href="bookdown.html#cb60-2"></a>Recommended: Insert caption and link to view the full-screen version.</span></code></pre></div>
 <p>Demo:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gl3uIRYYUmI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
@@ -460,16 +454,16 @@ A text-only footnote.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup
 <h4>Output in other formats</h4>
 <p>This book is being built primarily for the web edition, and will require more work to create formatted PDF and EPUB versions.</p>
 <p>Add this later to index.Rmd, and correctly place and indent it</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb62-1"><a href="bookdown.html#cb62-1"></a><span class="bn">      download: [pdf, epub, mobi, docx]</span></span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb61-1"><a href="bookdown.html#cb61-1"></a><span class="bn">      download: [pdf, epub, mobi, docx]</span></span></code></pre></div>
 <p>And also add this to index.Rmd, and correctly place and indent it</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb63-1"><a href="bookdown.html#cb63-1"></a>bookdown::pdf_book: default</span>
-<span id="cb63-2"><a href="bookdown.html#cb63-2"></a></span>
-<span id="cb63-3"><a href="bookdown.html#cb63-3"></a>bookdown::epub_book:</span>
-<span id="cb63-4"><a href="bookdown.html#cb63-4"></a>  dev: svglite</span>
-<span id="cb63-5"><a href="bookdown.html#cb63-5"></a>  stylesheet: css/style.css</span>
-<span id="cb63-6"><a href="bookdown.html#cb63-6"></a></span>
-<span id="cb63-7"><a href="bookdown.html#cb63-7"></a>bookdown::word_document2:</span>
-<span id="cb63-8"><a href="bookdown.html#cb63-8"></a>  default</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb62-1"><a href="bookdown.html#cb62-1"></a>bookdown::pdf_book: default</span>
+<span id="cb62-2"><a href="bookdown.html#cb62-2"></a></span>
+<span id="cb62-3"><a href="bookdown.html#cb62-3"></a>bookdown::epub_book:</span>
+<span id="cb62-4"><a href="bookdown.html#cb62-4"></a>  dev: svglite</span>
+<span id="cb62-5"><a href="bookdown.html#cb62-5"></a>  stylesheet: css/style.css</span>
+<span id="cb62-6"><a href="bookdown.html#cb62-6"></a></span>
+<span id="cb62-7"><a href="bookdown.html#cb62-7"></a>bookdown::word_document2:</span>
+<span id="cb62-8"><a href="bookdown.html#cb62-8"></a>  default</span></code></pre></div>
 
 </div>
 </div>
@@ -522,8 +516,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/datavizforall/datavizforall-bookdown/edit/master/15-bookdown.Rmd",
-"text": "Edit on GitHub"
+"link": null,
+"text": null
 },
 "history": {
 "link": null,
@@ -533,7 +527,7 @@ gitbook.start({
 "link": "https://github.com/datavizforall/datavizforall-bookdown/blob/master/15-bookdown.Rmd",
 "text": null
 },
-"download": ["Dougherty-Ilyankou-Data-Visualization-for-All.pdf"],
+"download": ["Data-Visualization-for-All.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

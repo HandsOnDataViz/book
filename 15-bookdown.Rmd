@@ -1,6 +1,8 @@
 # Publishing *DataVizForAll* with Bookdown {#bookdown}
 *by [Jack Dougherty and Ilya Ilyankou](authors), last updated February 13, 2019*
 
+TODO: Redo this entire section to match updates from On The Line book -- see https://ontheline.trincoll.edu/bookdown.html
+
 This open-access book is published using open-source tools, featuring Bookdown with RStudio and GitHub. Publishing with Bookdown allows authors to compose in Markdown (an easy-to-read-and-write computer syntax that works on multiple platforms) and publish in multiple formats (static HTML web edition, PDF edition, ePUB ebook edition, and Microsoft Word documents). Hosting the book in a public GitHub repository, and publishing it with GitHub Pages, easily makes the original text of the book, as well as the published products, available on the public web. For a technical guide to publishing with Bookdown, see Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R Markdown*, 2018, <https://bookdown.org/yihui/bookdown/>.
 
 An alternative book publishing platform to consider is Pressbooks. This open-source modification of WordPress multisite also supports multiple publication formats (HMTL web edition, PDF edition, ePUB ebook edition. Authors can use the <http://Pressbooks.com> paid hosting service. Or, users with advanced WordPress and some system admin skills can download the code from <http://github.com/pressbooks> and run their own self-hosted book publishing site.
@@ -135,15 +137,8 @@ See On The Line book (http://OnTheLine.trincoll.edu) for more details about foot
 
 #### Embed images and iframes {-}
 
-Insert image using Markdown syntax:
+TODO - update
 
-Code:
-```Markdown
-![Caption using markdown: auto-number does not appear in web, but appears in pdf, text *with italics*, no center-alignment on web, but centered in PDF, with [source link](https://google.com)](images/sample.jpg)
-```
-Demo:
-
-![Caption using markdown: auto-number does not appear in web, but appears in pdf, text *with italics*, no center-alignment on web, but centered in PDF, with [source link](https://google.com)](images/sample.jpg)
 
 #### Explore the Chart: embedded HTML iframe {-}
 

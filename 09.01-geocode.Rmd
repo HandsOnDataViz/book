@@ -29,8 +29,6 @@ https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1v
 - Insert locations, select 8 columns, and select Geocoder menu: US Census 2010 Geographies
 - Google Sheets script will ask for permission to run the first time
 
-![Screencast: GoogleSheets Geocoder: US Census Geographies](images/09-transform/google-sheets-geocoder-census-geographies.gif)
-
 ```{r googlesheets-geocoder2, fig.cap="Screencast: Google Sheets Geocoder: US Census Geographies"}
 if(knitr::is_html_output()) knitr::include_url("images/09-transform/google-sheets-geocoder-census-geographies.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```

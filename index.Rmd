@@ -18,7 +18,7 @@ output:
     includes:
       in_header: google-analytics-datavizforall.html
     split_by: section
-    number_sections: false
+    number_sections: true
     split_bib: true
     config:
       toc:

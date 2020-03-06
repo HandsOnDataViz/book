@@ -1,6 +1,6 @@
-## Bubble Chart.js with CSV Data {#chartjs-bubble}
+## Bubble Chart.js with CSV Data {#chartjs-bubble-csv}
 
-Bubble charts are similar to [scatter plots](scatter-chart-with-csv-data). The size of each dot (marker) is used to represent an additional dimension.
+Bubble charts are similar to [scatter plots](chartjs-scatter-csv). The size of each dot (marker) is used to represent an additional dimension.
 
 In the demo below, the bubble chart shows the relationship between median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut. The size of data point (marker) corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts.
 

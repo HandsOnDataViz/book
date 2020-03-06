@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 Tell Your Data Story | Data Visualization for All</title>
+  <title>12.3 Scatter Chart.js with CSV Data | Data Visualization for All</title>
   <meta name="description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 Tell Your Data Story | Data Visualization for All" />
+  <meta property="og:title" content="12.3 Scatter Chart.js with CSV Data | Data Visualization for All" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://datavizforall.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="datavizforall/datavizforall-bookdown" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 Tell Your Data Story | Data Visualization for All" />
+  <meta name="twitter:title" content="12.3 Scatter Chart.js with CSV Data | Data Visualization for All" />
   <meta name="twitter:site" content="@datavizforall" />
   <meta name="twitter:description" content="Tell your data story with free and easy-to-learn tools. “Data Visualization for All,” an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="how-to-lie-with-maps.html"/>
-<link rel="next" href="chartjs.html"/>
+<link rel="prev" href="chartjs-line-csv.html"/>
+<link rel="next" href="chartjs-bubble-csv.html"/>
 <script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -300,25 +300,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="story" class="section level1" number="11">
-<h1><span class="header-section-number">Chapter 11</span> Tell Your Data Story</h1>
-<p>Tell the story about your data, including its most meaningful insights and limitations
-Write compelling titles, labels, and sentences to accompany your visualization. Call attention to the most meaningful insights in your chart, and explain any data limitations.</p>
-<p>This chapter draws inspiration from Cole Nussbaumer Knaflic, <em>Storytelling with Data: A Data Visualization Guide for Business Professionals</em> (Wiley, 2015), <a href="http://www.storytellingwithdata.com/book/" class="uri">http://www.storytellingwithdata.com/book/</a></p>
+<div id="chartjs-scatter-csv" class="section level2" number="12.3">
+<h2><span class="header-section-number">12.3</span> Scatter Chart.js with CSV Data</h2>
+<p>Scatter charts (also <em>scatterplots</em>) are used to display data of 2 or more dimensions. The scatter chart below shows the relationship between household income and test performance for school districts in Connecticut. Using x- and y-axes to show two dimensions, it is easy to see that test performance improves as household income goes up.</p>
+<iframe src="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" width="100%" height="500" style="border: 0">
+</iframe>
+<p>Demo: <a href="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" class="uri">https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html</a></p>
+<p>Source and instructions: <a href="https://github.com/DataVizForAll/chartjs-templates/tree/master/scatter-chart" class="uri">https://github.com/DataVizForAll/chartjs-templates/tree/master/scatter-chart</a></p>
+<div id="going-beyond-two-dimensions" class="section level4" number="12.3.0.1">
+<h4><span class="header-section-number">12.3.0.1</span> Going beyond two dimensions</h4>
+<p>To show more than two dimensions in scatter charts, one can:</p>
 <ul>
-<li>Beginning, Middle, and End</li>
-<li>Draw Attention to Meaning</li>
+<li><strong>color</strong> each data point differently to show third dimension, eg use shades of red and green to show 5-year trend in test performance;</li>
+<li><strong>resize</strong> each data point to display fourth dimension, eg number of students in each school district;</li>
+<li>use different <strong>icons or glyphs</strong> to display fifth dimension, eg circles for male students and squares for female students.</li>
 </ul>
-<p><em>TO DO</em></p>
+<p>Remember not to overwhelm the viewer and communicate only the data that are necessary to prove or illustrate your idea.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="how-to-lie-with-maps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="chartjs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chartjs-line-csv.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chartjs-bubble-csv.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -357,7 +364,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/datavizforall/datavizforall-bookdown/blob/master/11-story.Rmd",
+"link": "https://github.com/datavizforall/datavizforall-bookdown/blob/master/12.03-chartjs-scatter-csv.Rmd",
 "text": null
 },
 "download": ["Data-Visualization-for-All.pdf"],

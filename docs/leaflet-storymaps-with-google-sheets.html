@@ -302,7 +302,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="leaflet-storymaps-with-google-sheets" class="section level2" number="13.2">
 <h2><span class="header-section-number">13.2</span> Leaflet Storymaps with Google Sheets and Scrolling Narrative</h2>
-<p><em>By <a href="authors">Ilya Ilyankou and Jack Dougherty</a>, last updated September 28, 2017</em></p>
+<p><em>By <a href="authors">Ilya Ilyankou and Jack Dougherty</a>, last updated March 29, 2020</em></p>
 <div id="try-it-9" class="section level4 unnumbered" number="">
 <h4>Try it</h4>
 <p>Explore the map or right-click to <a href="https://datavizforall.github.io/leaflet-storymaps-with-google-sheets/">view full-screen map in a new tab</a>
@@ -423,6 +423,28 @@ The web address (URL) of the new copy in your account will follow this format:</
 <li><p>In the Geocoder menu that appears in this Google Sheet template, select one of the geocoding services. If one service cannot locate your data, try the other. Always inspect the accuracy of the Found column.</p></li>
 </ol>
 <p>Open the link to your live map in a new browser tab and refresh to see your changes. If your new markers appear correctly, then delete the existing rows that came with this template.</p>
+</div>
+<div id="todo" class="section level4 unnumbered" number="">
+<h4>TODO</h4>
+<p>Add documentation for new features added in 2020</p>
+<p>Markers</p>
+<p>I added a new column to the Chapter tab called “Marker”. It has a dropdown with currently three options: Numerated (defaults to that, even if empty value), Plain (with no number), and No marker. The latter is what you want.
+It can be potentially extended to colours, types of markers, etc.
+<a href="https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131" class="uri">https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131</a></p>
+<p>Overlay GeoJSONs</p>
+<p>I added two columns, GeoJSON Overlay with the URL to the GeoJSON, and GeoJSON Feature Properties, which is CSS that defines style of features.
+List the styles separated by semicolon, and no quotation marks required. Eg
+fillColor: orange; weight:2, opacity: 0.5, color: red, fillOpacity: 0.1
+In the code, you will see two vertical lines: they mean “or”. If the value of the left-most expression is not undefined, it uses it. If not, it keeps moving to the right until there is a value that is not an empty string. For example,
+<a href="https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310" class="uri">https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310</a>
+color: feature.properties.COLOR || props.color || ‘silver’,</p>
+<p>Will first attempt to extract the color from the COLOR property of each geoJson feature (useful for choropleth). If not found, it tries the GeoJSON Feature Properties “color”. If that is not set, it uses silver.
+<a href="https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316" class="uri">https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316</a></p>
+<p>Data in local CSV files</p>
+<p>If googleDocURL variable does not exist (eg you delete the file) or is an empty string, it reads two spreadsheets: Options.csv and Chapters.csv from the /csv folder.
+Otherwise, it reads from the google sheet.
+<a href="https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35" class="uri">https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35</a>
+When data is read from a .CSV, it links that in the attribution (<a href="https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396" class="uri">https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396</a>)</p>
 </div>
 <div id="learn-more-22" class="section level4 unnumbered" number="">
 <h4>Learn more</h4>

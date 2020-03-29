@@ -1,6 +1,6 @@
 ## Leaflet Storymaps with Google Sheets and Scrolling Narrative {#leaflet-storymaps-with-google-sheets}
 
-*By [Ilya Ilyankou and Jack Dougherty](authors), last updated September 28, 2017*
+*By [Ilya Ilyankou and Jack Dougherty](authors), last updated March 29, 2020*
 
 #### Try it {-}
 Explore the map or right-click to [view full-screen map in a new tab](https://datavizforall.github.io/leaflet-storymaps-with-google-sheets/)
@@ -121,6 +121,34 @@ In the Points tab of your Google Sheet:
 3) In the Geocoder menu that appears in this Google Sheet template, select one of the geocoding services. If one service cannot locate your data, try the other. Always inspect the accuracy of the Found column.
 
 Open the link to your live map in a new browser tab and refresh to see your changes. If your new markers appear correctly, then delete the existing rows that came with this template.
+
+#### TODO {-}
+Add documentation for new features added in 2020
+
+Markers
+
+I added a new column to the Chapter tab called “Marker”. It has a dropdown with currently three options: Numerated (defaults to that, even if empty value), Plain (with no number), and No marker. The latter is what you want.
+It can be potentially extended to colours, types of markers, etc.
+https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131
+
+Overlay GeoJSONs
+
+I added two columns, GeoJSON Overlay with the URL to the GeoJSON, and GeoJSON Feature Properties, which is CSS that defines style of features.
+List the styles separated by semicolon, and no quotation marks required. Eg
+fillColor: orange; weight:2, opacity: 0.5, color: red, fillOpacity: 0.1
+In the code, you will see two vertical lines: they mean “or”. If the value of the left-most expression is not undefined, it uses it. If not, it keeps moving to the right until there is a value that is not an empty string. For example,
+https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310
+color: feature.properties.COLOR || props.color || 'silver’,
+
+Will first attempt to extract the color from the COLOR property of each geoJson feature (useful for choropleth). If not found, it tries the GeoJSON Feature Properties “color”. If that is not set, it uses silver.
+https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316
+
+Data in local CSV files
+
+If googleDocURL variable does not exist (eg you delete the file) or is an empty string, it reads two spreadsheets: Options.csv and Chapters.csv from the /csv folder.
+Otherwise, it reads from the google sheet.
+https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35
+When data is read from a .CSV, it links that in the attribution (https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396)
 
 #### Learn more {-}
 To solve problems, see [Fix Common GitHub and Code Errors](fix-code) chapter in this book.

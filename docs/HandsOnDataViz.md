@@ -24,11 +24,21 @@ story and show the data. No coding experience is required.
 Hartford CT](http://www.trincoll.edu): Jack Dougherty, Ilya Ilyankou,
 Veronica X. Armendariz, Stacy Lam, and David Tatem.
 
-[Read for free online](https://handsondataviz.org) (recommended) or
-download PDF/eBook editions (to come).
+Read for free online at
+<a href="https://handsondataviz.org" class="uri">https://handsondataviz.org</a>
+or purchase print/eBook editions (to come).
 
-Open-source code for text, data, chart and map templates at
-<a href="https://github.com/handsondataviz" class="uri">https://github.com/handsondataviz</a>
+View open-source code for source text and templates at
+<a href="https://github.com/handsondataviz" class="uri">https://github.com/handsondataviz</a>.
+
+Please send corrections or suggestions for this book-in-progress to
+<a href="mailto:handsondataviz@gmail.com" class="email">handsondataviz@gmail.com</a>,
+or open an issue or submit a pull request on the GitHub repository at
+<a href="https://github.com/handsondataviz/book" class="uri">https://github.com/handsondataviz/book</a>.
+If you submit a GitHub pull request, in your commit message, please add
+the sentence “I assign the copyright of this contribution to Jack
+Dougherty and Ilya Ilyankou,” so that we can maintain the option of
+publishing this book in other forms.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
 <img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" />
@@ -37,7 +47,7 @@ Open-source code for text, data, chart and map templates at
 <div style="text-align:left">
 
 <strong>Hands-On Data Visualization</strong> is copyrighted by
-<a href="https://datavizforall.org/authors">Jack Dougherty and Ilya
+<a href="https://handsondataviz.org/authors">Jack Dougherty and Ilya
 Ilyankou</a> and distributed under a
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative
 Commons BY-NC-ND 4.0 International License</a>. You may freely share
@@ -110,7 +120,7 @@ Why this book?
 
 *last updated February 20, 2017*
 
-*Data Visualization for All*, an open-access online textbook, seeks to
+*Hands-On Data Visualization*, an open-access online textbook, seeks to
 help you tell your story – and show your data – through the power of the
 public web.
 
@@ -127,7 +137,7 @@ How Schooling, Housing, and Civil Rights Shaped Hartford and its
 Suburbs](http://ontheline.trincoll.edu), an open-access book-in-progress
 that features interactive historical maps of urban-suburban change.
 Students and colleagues who wrote tutorials, designed learning
-exercises, or developed code templates for *Data Visualization for All*
+exercises, or developed code templates for *Hands-On Data Visualization*
 are listed as [authors and contributors](authors).
 
 Although my outstanding colleagues have professional training, do not
@@ -177,14 +187,15 @@ valuable** – to me, my students, our community partners, and thousands
 of readers on the web – that my co-authors and I have agreed to share
 our knowledge with everyone, **for free**. This open-access book is
 guided by the principle of democratization of knowledge for the public
-good, hence the book’s title: *Data Visualization for All*. Not everyone
-can afford to make this choice, I realize. But the [mission of Trinity
+good, hence the book’s title: *Hands-On Data Visualization*. Not
+everyone can afford to make this choice, I realize. But the [mission of
+Trinity
 College](http://www.trincoll.edu/AboutTrinity/mission/Pages/default.aspx)
 is to engage, connect, and transform, with both our local city of
 Hartford and the world at large. Since Trinity already pays my salary as
 a tenured professor, the right thing to do with the knowledge my
 students and I have gained is to pay it forward. That’s why we created
-*Data Visualization for All.*
+*Hands-On Data Visualization.*
 
 If this free book is valuable for your education, then join us by
 sharing and supporting it for future readers: - Tell your friends about
@@ -201,16 +212,16 @@ stories.
 Authors and Contributors
 ------------------------
 
-UPDATE THIS: Contributors to *Data Visualization for All* are credited
+UPDATE THIS: Contributors to *Hands-On Data Visualization* are credited
 in the byline to specific pages they authored (or co-authored), hold the
 copyright to those pages (jointly if co-authored), and have agreed to
-freely share the work as an open-access book. *Data Visualization for
-All* is copyrighted by Jack Dougherty and contributors and distributed
-under a [Creative Commons BY-NC 4.0 International
-License](http://creativecommons.org/licenses/by-nc/4.0/). You may freely
-share and modify this content for non-commercial purposes, with a source
+freely share the work as an open-access book. *Hands-On Data
+Visualization* is copyrighted by Jack Dougherty and contributors and
+distributed under a [Creative Commons BY-NC-ND 4.0 International
+License](http://creativecommons.org/licenses/by-nc-nd/4.0/). You may
+freely share this content for non-commercial purposes, with a source
 credit to:
-<a href="http://DataVizForAll.org" class="uri">http://DataVizForAll.org</a>
+<a href="http://handsondataviz.org" class="uri">http://handsondataviz.org</a>
 
 <table>
 <colgroup>
@@ -226,7 +237,7 @@ credit to:
 <tbody>
 <tr class="odd">
 <td><img src="images/0-introduction/DoughertyJack-96.jpg" /></td>
-<td><a href="http://bit.ly/jackdougherty">Jack Dougherty</a> is Professor of Educational Studies at Trinity College in Hartford, Connecticut. He and his <a href="http://commons.trincoll.edu/dataviz">DataViz students</a> partner with community organizations to help tell their data stories on the web. Follow him on <a href="https://twitter.com/doughertyjack">Twitter</a> and <a href="https://github/com/jackdougherty">on GitHub</a>.</td>
+<td><a href="http://jackdougherty.org">Jack Dougherty</a> is Professor of Educational Studies at Trinity College in Hartford, Connecticut. He and his <a href="http://commons.trincoll.edu/dataviz">DataViz students</a> partner with community organizations to help tell their data stories on the web. Follow him on <a href="https://twitter.com/doughertyjack">Twitter</a> and <a href="https://github/com/jackdougherty">on GitHub</a>.</td>
 </tr>
 <tr class="even">
 <td><img src="images/0-introduction/IlyankouIlya-96.jpg" /></td>
@@ -242,11 +253,11 @@ credit to:
 </tr>
 <tr class="odd">
 <td><img src="images/0-introduction/LamStacy-96.jpg" /></td>
-<td>Stacy Lam is a co-instructor for the <a href="http://www.datavizforall.org/enroll">Data Visualization for All online course</a> at Trinity College, where she is a prospective Engineering major in the Class of 2019. She contributed to chapters for this book.</td>
+<td>Stacy Lam is a co-instructor for the <a href="http://handsondataviz.org/enroll">Data Visualization for All online course</a> at Trinity College, where she is a prospective Engineering major in the Class of 2019. She contributed to chapters for this book.</td>
 </tr>
 <tr class="even">
 <td><img src="images/0-introduction/TatemDavid-96.jpg" /></td>
-<td><a href="http://www.trincoll.edu/LITC/its/about/Pages/Learn.aspx">David Tatem</a> is a co-instructor for the <a href="http://www.datavizforall.org/enroll">Data Visualization for All online course</a> at Trinity College, where he is an Instructional Technologist who specializes in the Social Sciences. He contributed to chapters for this book.</td>
+<td><a href="http://www.trincoll.edu/LITC/its/about/Pages/Learn.aspx">David Tatem</a> is a co-instructor for the <a href="http://handsondataviz.org/enroll">Data Visualization for All online course</a> at Trinity College, where he is an Instructional Technologist who specializes in the Social Sciences. He contributed to chapters for this book.</td>
 </tr>
 </tbody>
 </table>
@@ -286,16 +297,10 @@ arising from the information contained in this book.
 How to Read
 -----------
 
-*last updated March 5, 2020*
+*last updated May 12, 2020*
 
-*Data Visualization for All* refers to both this open-access digital
-book and a [free online
-course](https://www.edx.org/course/data-visualization-for-all) by the
-same name. We refer to them as “the book” and “the course.”
-
-This open-access book-in-progress is freely available in **two
-formats:** Web and PDF. **Read the online Web edition** at
-(<a href="http://datavizforall.org" class="uri">http://datavizforall.org</a>)
+This open-access book-in-progress is free to read online at
+<a href="http://handsondataviz.org" class="uri">http://handsondataviz.org</a>
 to fully experience the interactive charts, maps, and video clips. Any
 modern web browser will display the book, but readers may prefer larger
 screens (desktop, laptop, tablet) over smaller screens (such as
@@ -306,23 +311,12 @@ top of the page:
 -   Search
 -   Font to adjust text size and display
 -   View source code on GitHub
--   Download PDF
 -   Shortcuts (arrow keys to navigate; `s` to toggle sidebar; `f` to
     toggle search)
 -   Social Media
 -   Share
 
-![](images/0-introduction/how-to-read.png) A second option is to freely
-download the [PDF
-edition](https://datavizforall.org/Data-Visualization-for-All.pdf),
-which you can print out on paper for off-line reading. Although static
-images will appear in place of interactive maps and videos, the text and
-source notes in the PDF version are nearly identical to the web version.
-Since this digital-first has been created primarily for the web, some
-aspects of the book-in-progress may appear incomplete in the PDF
-edition. After the final manuscript is completed, a cleaner PDF version
-will be formatted, which the publisher will use to create an inexpensive
-paperback edition for sale.
+![Screenshot: How to read](images/0-introduction/how-to-read.png)
 
 #### Open links in new tabs
 
@@ -3645,7 +3639,7 @@ map. An iframe is one line of HTML code with instructions on how to
 display a web page from a specific address (called a URL). A simple
 iframe looks like this:
 
-    <iframe src="https://www.datavizforall.org/embed/index.html"></iframe>
+    <iframe src="https://handsondataviz.org/embed/index.html"></iframe>
 
 No coding skills are necessary. See these easy-to-follow examples:
 
@@ -4153,7 +4147,7 @@ page](images/07-embed/tableau-edit-share.png)
       <meta charset="utf-8">
     </head>
     <body>
-      <div class='tableauPlaceholder' id='viz1489158014225' style='position: relative'><noscript><a href='https:&#47;&#47;www.datavizforall.org&#47;chart&#47;scatter-chart-tableau&#47;'><img alt='CT School Districts by Income and Grade Level Equivalents, 2009-13 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CT&#47;CTSchoolDistrictsbyIncomeandGradeLevels2009-13&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='CTSchoolDistrictsbyIncomeandGradeLevels2009-13&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CT&#47;CTSchoolDistrictsbyIncomeandGradeLevels2009-13&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1489158014225');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      <div class='tableauPlaceholder' id='viz1489158014225' style='position: relative'><noscript><a href='https:&#47;&#47;handsondataviz.org&#47;chart&#47;scatter-chart-tableau&#47;'><img alt='CT School Districts by Income and Grade Level Equivalents, 2009-13 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CT&#47;CTSchoolDistrictsbyIncomeandGradeLevels2009-13&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='CTSchoolDistrictsbyIncomeandGradeLevels2009-13&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CT&#47;CTSchoolDistrictsbyIncomeandGradeLevels2009-13&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1489158014225');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     </body>
     </html>
 
@@ -7820,7 +7814,7 @@ levels (25 or more students).
 View the
 <a href="https://docs.google.com/spreadsheets/d/1hvr0fOFUg4xm9I3L1WFzpHZvRqIRl3w8S9pMNnVg9rQ/edit#gid=1391209592">preliminary
 data for 21 Feb 2017</a> from
-<a href="http://DataVizForAll.org" class="uri">http://DataVizForAll.org</a>
+<a href="http://handsondataviz.org" class="uri">http://handsondataviz.org</a>
 
 #### Evaluate:
 
@@ -7847,7 +7841,7 @@ levels (25 or more students).
 View the
 <a href="https://docs.google.com/spreadsheets/d/1hvr0fOFUg4xm9I3L1WFzpHZvRqIRl3w8S9pMNnVg9rQ/edit#gid=1391209592">preliminary
 data for 21 Feb 2017</a> from
-<a href="http://DataVizForAll.org" class="uri">http://DataVizForAll.org</a>
+<a href="http://handsondataviz.org" class="uri">http://handsondataviz.org</a>
 
 #### Evaluate:
 
@@ -8124,7 +8118,7 @@ already familiar with R Studio, GitHub, or editing code.
     <a href="https://github.com/yihui/bookdown-minimal" class="uri">https://github.com/yihui/bookdown-minimal</a>,
     and fork a copy to your GitHub account. To learn about forking in
     GitHub, see this chapter
-    <a href="http://datavizforall.org/github.html" class="uri">http://datavizforall.org/github.html</a>
+    <a href="http://handsondataviz.org/github.html" class="uri">http://handsondataviz.org/github.html</a>
     in this book.
 -   Install GitHub Desktop
     <a href="https://desktop.github.com" class="uri">https://desktop.github.com</a>
@@ -8200,7 +8194,7 @@ already familiar with R Studio, GitHub, or editing code.
     <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.
 -   In addition, this GitHub Pages repo is published with a custom
     domain name
-    <a href="https://DataVizForAll.org" class="uri">https://DataVizForAll.org</a>.
+    <a href="https://handsondataviz.org" class="uri">https://handsondataviz.org</a>.
     Learn more about custom domain names at
     <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" class="uri">https://help.github.com/articles/using-a-custom-domain-with-github-pages/</a>,
     which requires purchasing a domain name from a web hosting service

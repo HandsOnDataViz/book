@@ -19,9 +19,9 @@ See also GitBook Markdown guide: https://help.gitbook.com/format/markdown.html
 
 Inside each chapter folder, the main text is stored in the README.md file, to simplify the GitBook web addresses. Example:
 - A chapter in the GitHub repository: https://github.com/JackDougherty/datavizforall/blob/master/map/point-gft/README.md
-- The same chapter on GitBook (which converts README.md to index.html): http://www.datavizforall.org/map/point-gft/index.html
+- The same chapter on GitBook (which converts README.md to index.html): http://handsondataviz.org/map/point-gft/index.html
 - Abbreviated web address to same chapter (since "index.html" is not required):
-- http://www.datavizforall.org/map/point-gft
+- http://handsondataviz.org/map/point-gft
 
 
 ### Embed external links in GitBook Markdown
@@ -62,7 +62,7 @@ Right-click this link and Save to download to your computer: [sample](sample.csv
 Example 4 *in practice*: In GitBook Slack thread 15 March 2017, @nagim states known problem using Gitbook 3.2.2, if you put a link to a file that is not a Markdown/AsciiDoc file (for example, .txt files), and is part of the repository (stored at the same folder structure as the essay), the links do not work, probably due to an issue in the theme, which he will post. In the meantime, use this workaround:
 
 ```
-Click this link and Save to download to your computer: [sample-address-data in CSV format](https://www.datavizforall.org/choose/rate/sample-address-data.csv). CSV means comma-separated-values, a generic spreadsheet format that many tools can easily open.
+Click this link and Save to download to your computer: [sample-address-data in CSV format](https://handsondataviz.org/choose/rate/sample-address-data.csv). CSV means comma-separated-values, a generic spreadsheet format that many tools can easily open.
 ```
 
 ### Embed images in GitBook Markdown

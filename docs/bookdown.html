@@ -334,7 +334,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4>Download and Build a Sample Book</h4>
 <ul>
 <li>Create a free GitHub account <a href="https://github.com" class="uri">https://github.com</a> to share code repositories and publish book editions online.</li>
-<li>In your web browser, log into your GitHub account, go to the software developer’s bookdown-minimal repo <a href="https://github.com/yihui/bookdown-minimal" class="uri">https://github.com/yihui/bookdown-minimal</a>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <a href="http://datavizforall.org/github.html" class="uri">http://datavizforall.org/github.html</a> in this book.</li>
+<li>In your web browser, log into your GitHub account, go to the software developer’s bookdown-minimal repo <a href="https://github.com/yihui/bookdown-minimal" class="uri">https://github.com/yihui/bookdown-minimal</a>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <a href="http://handsondataviz.org/github.html" class="uri">http://handsondataviz.org/github.html</a> in this book.</li>
 <li>Install GitHub Desktop <a href="https://desktop.github.com" class="uri">https://desktop.github.com</a> to transfer files between your online GitHub repo and local computer</li>
 <li>In your web browser, go to your forked copy of <code>bookdown-minimal</code> and click the green <code>Clone or Download</code> button and select <code>Open in Desktop</code>. This should automatically open the GitHub Desktop application, and you can navigate to copy the code repo to a folder on your local computer.</li>
 <li>In RStudio in the upper-right corner, select Project &gt; Open Project to open the <code>bookdown-minimal</code> folder on your local computer. <a href="images/15-bookdown/8-project-open.png">See screenshot</a></li>
@@ -363,7 +363,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>In the <code>_bookdown.yml</code> file, the output directory is set to build all book formats into the <code>docs</code> folder.</li>
 <li>The GitHub Pages settings for this repo (which you cannot view) is set to publish from the <code>master/docs</code> folder, to match the output directory above. This simplifies the published web address to this format: <code>https://USERNAME.github.com/REPONAME</code></li>
 <li>Most of the Bookdown configuration settings appear in the <code>index.Rmd</code> file. Read more about these options in the software developer’s technical guide, <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</li>
-<li>In addition, this GitHub Pages repo is published with a custom domain name <a href="https://DataVizForAll.org" class="uri">https://DataVizForAll.org</a>. Learn more about custom domain names at <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" class="uri">https://help.github.com/articles/using-a-custom-domain-with-github-pages/</a>, which requires purchasing a domain name from a web hosting service (such as <a href="http://ReclaimHosting.com" class="uri">http://ReclaimHosting.com</a>). Adding a GitHub Pages custom domain name creates an additional <code>CNAME</code> file in the <code>docs</code> subfolder. Be careful not to delete it (or place a copy in a subfolder for safekeeping).</li>
+<li>In addition, this GitHub Pages repo is published with a custom domain name <a href="https://handsondataviz.org" class="uri">https://handsondataviz.org</a>. Learn more about custom domain names at <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" class="uri">https://help.github.com/articles/using-a-custom-domain-with-github-pages/</a>, which requires purchasing a domain name from a web hosting service (such as <a href="http://ReclaimHosting.com" class="uri">http://ReclaimHosting.com</a>). Adding a GitHub Pages custom domain name creates an additional <code>CNAME</code> file in the <code>docs</code> subfolder. Be careful not to delete it (or place a copy in a subfolder for safekeeping).</li>
 <li>This book also includes a custom <code>404.html</code> file that was manually transferred into the <code>docs</code> subfolder, since it is not automatically built by Bookdown.</li>
 <li>This book also includes a custom <code>google-analytics-datavizforall.html</code> file in the root-level of repo (where bookdown looks for it) and also is manually transferred to the <code>docs</code> subfolder (since bookdown does <em>not appear</em> to copy it to there on each build). This tracks web traffic with Google Analytics.</li>
 </ul>
@@ -527,7 +527,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/15-bookdown.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf", "HandsOnDataViz.word", "HandsOnDataViz.markdown"],
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

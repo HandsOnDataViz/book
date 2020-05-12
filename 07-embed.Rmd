@@ -8,7 +8,7 @@ First, you need to own a website that supports iframe codes (which we'll explain
 Second, you need to copy or create an iframe code from your chart or map. An iframe is one line of HTML code with instructions on how to display a web page from a specific address (called a URL). A simple iframe looks like this:
 
 ```html
-<iframe src="https://www.datavizforall.org/embed/index.html"></iframe>
+<iframe src="https://handsondataviz.org/embed/index.html"></iframe>
 ```
 No coding skills are necessary. See these easy-to-follow examples:
 

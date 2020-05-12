@@ -28,7 +28,7 @@ Below are steps we followed to setup the publishing platform for this book, usin
 
 #### Download and Build a Sample Book {-}
 - Create a free GitHub account <https://github.com> to share code repositories and publish book editions online.
-- In your web browser, log into your GitHub account, go to the software developer's bookdown-minimal repo <https://github.com/yihui/bookdown-minimal>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <http://datavizforall.org/github.html> in this book.
+- In your web browser, log into your GitHub account, go to the software developer's bookdown-minimal repo <https://github.com/yihui/bookdown-minimal>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <http://handsondataviz.org/github.html> in this book.
 - Install GitHub Desktop <https://desktop.github.com> to transfer files between your online GitHub repo and local computer
 - In your web browser, go to your forked copy of `bookdown-minimal` and click the green `Clone or Download` button and select `Open in Desktop`. This should automatically open the GitHub Desktop application, and you can navigate to copy the code repo to a folder on your local computer.
 - In RStudio in the upper-right corner, select Project > Open Project to open the `bookdown-minimal` folder on your local computer. [See screenshot](images/15-bookdown/8-project-open.png)
@@ -51,7 +51,7 @@ Below are steps we followed to setup the publishing platform for this book, usin
 - In the `_bookdown.yml` file, the output directory is set to build all book formats into the `docs` folder.
 - The GitHub Pages settings for this repo (which you cannot view) is set to publish from the `master/docs` folder, to match the output directory above. This simplifies the published web address to this format: `https://USERNAME.github.com/REPONAME`
 - Most of the Bookdown configuration settings appear in the `index.Rmd` file. Read more about these options in the software developer's technical guide, <https://bookdown.org/yihui/bookdown/>.
-- In addition, this GitHub Pages repo is published with a custom domain name <https://DataVizForAll.org>. Learn more about custom domain names at <https://help.github.com/articles/using-a-custom-domain-with-github-pages/>, which requires purchasing a domain name from a web hosting service (such as <http://ReclaimHosting.com>). Adding a GitHub Pages custom domain name creates an additional `CNAME` file in the `docs` subfolder. Be careful not to delete it (or place a copy in a subfolder for safekeeping).
+- In addition, this GitHub Pages repo is published with a custom domain name <https://handsondataviz.org>. Learn more about custom domain names at <https://help.github.com/articles/using-a-custom-domain-with-github-pages/>, which requires purchasing a domain name from a web hosting service (such as <http://ReclaimHosting.com>). Adding a GitHub Pages custom domain name creates an additional `CNAME` file in the `docs` subfolder. Be careful not to delete it (or place a copy in a subfolder for safekeeping).
 - This book also includes a custom `404.html` file that was manually transferred into the `docs` subfolder, since it is not automatically built by Bookdown.
 - This book also includes a custom `google-analytics-datavizforall.html` file in the root-level of repo (where bookdown looks for it) and also is manually transferred to the `docs` subfolder (since bookdown does *not appear* to copy it to there on each build). This tracks web traffic with Google Analytics.
 

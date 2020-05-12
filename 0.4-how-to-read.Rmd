@@ -1,23 +1,17 @@
 ## How to Read {#how-to-read}
-*last updated March 5, 2020*
+*last updated May 12, 2020*
 
-*Data Visualization for All* refers to both this open-access digital book and a [free online course](https://www.edx.org/course/data-visualization-for-all) by the same name. We refer to them as "the book" and "the course."
-
-This open-access book-in-progress is freely available in **two formats:** Web and PDF. **Read the online Web edition** at (http://datavizforall.org) to fully experience the interactive charts, maps, and video clips. Any modern web browser will display the book, but readers may prefer larger screens (desktop, laptop, tablet) over smaller screens (such as smartphones). In your web browser, try these toolbar features near the top of the page:
+This open-access book-in-progress is free to read online at <http://handsondataviz.org> to fully experience the interactive charts, maps, and video clips. Any modern web browser will display the book, but readers may prefer larger screens (desktop, laptop, tablet) over smaller screens (such as smartphones). In your web browser, try these toolbar features near the top of the page:
 
 - Menu
 - Search
 - Font to adjust text size and display
 - View source code on GitHub
-- Download PDF
 - Shortcuts (arrow keys to navigate; `s` to toggle sidebar; `f` to toggle search)
 - Social Media
 - Share
 
-```{r how-to-read}
- knitr::include_graphics("images/0-introduction/how-to-read.png")
-```
-A second option is to freely download the [PDF edition](https://datavizforall.org/Data-Visualization-for-All.pdf), which you can print out on paper for off-line reading. Although static images will appear in place of interactive maps and videos, the text and source notes in the PDF version are nearly identical to the web version. Since this digital-first has been created primarily for the web, some aspects of the book-in-progress may appear incomplete in the PDF edition.  After the final manuscript is completed, a cleaner PDF version will be formatted, which the publisher will use to create an inexpensive paperback edition for sale.
+![Screenshot: How to read](images/0-introduction/how-to-read.png)
 
 #### Open links in new tabs {-}
 Keep your place when reading online and moving between pages.  

@@ -31,7 +31,6 @@ output:
           <li style="padding: 10px 15px; font-weight: bold;">Open access book-in-progress</li>
           <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></li>
           <li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
-      download: [pdf, word, markdown]
       view: https://github.com/handsondataviz/book/blob/master/%s
       search: yes
       sharing:
@@ -64,9 +63,11 @@ Tell your story and show it with data, using free and easy-to-learn tools on the
 
 [About the authors and contributors](authors) from [Trinity College, Hartford CT](http://www.trincoll.edu): Jack Dougherty, Ilya Ilyankou, Veronica X. Armendariz, Stacy Lam, and David Tatem.
 
-[Read for free online](https://handsondataviz.org) (recommended) or download PDF/eBook editions (to come).
+Read for free online at https://handsondataviz.org or purchase print/eBook editions (to come).
 
-Open-source code for text, data, chart and map templates at <https://github.com/handsondataviz>
+View open-source code for source text and templates at <https://github.com/handsondataviz>.
+
+Please send corrections or suggestions for this book-in-progress to <handsondataviz@gmail.com>, or open an issue or submit a pull request on the GitHub repository at <https://github.com/handsondataviz/book>. If you submit a GitHub pull request, in your commit message, please add the sentence “I assign the copyright of this contribution to Jack Dougherty and Ilya Ilyankou,” so that we can maintain the option of publishing this book in other forms.
 
 <div style="text-align:center">
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
@@ -74,6 +75,6 @@ Open-source code for text, data, chart and map templates at <https://github.com/
 </a></div>
 <div style="text-align:left">
 <strong>Hands-On Data Visualization</strong> is copyrighted
-by <a href="https://datavizforall.org/authors">Jack Dougherty and Ilya Ilyankou</a>
+by <a href="https://handsondataviz.org/authors">Jack Dougherty and Ilya Ilyankou</a>
 and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.
 You may freely share this content for non-commercial purposes, with a source credit to <a href="http://HandsOnDataViz.org">http://HandsOnDataViz.org</a>.

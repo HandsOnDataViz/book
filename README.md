@@ -1,6 +1,6 @@
 # Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code  
 
-Open-access book-in-progress by Jack Dougherty and Ilya Ilyankou, under contract for O'Reilly Media
+Open-access book-in-progress by Jack Dougherty and Ilya Ilyankou, under contract with O'Reilly Media
 
 Read online at <http://handsondataviz.org>
 

@@ -1,22 +1,23 @@
 ---
 lang: "en"
-title: "Data Visualization for All"
+title: "Hands-On Data Visualization"
+subtitle: "Interactive Storytelling from Spreadsheets to Code"
 author: ["Jack Dougherty", "Ilya Ilyankou"]
-twitter-handle: datavizforall
+twitter-handle: handsondataviz
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 documentclass: book
 
-url: 'http\://datavizforall.github.io/'
-github-repo: datavizforall/datavizforall-bookdown
-description: 'Tell your data story with free and easy-to-learn tools. "Data Visualization for All," an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more.'
+url: 'http\://handsondataviz.github.io/'
+github-repo: handsondataviz/book
+description: 'Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required.'
 
 output:
   bookdown::gitbook:
     dev: svglite
     css: css/style.css
     includes:
-      in_header: google-analytics-datavizforall.html
+      in_header: google-analytics-dataviz.html
     split_by: section
     number_sections: true
     split_bib: true
@@ -25,13 +26,13 @@ output:
         scroll_highlight: yes
         collapse: section
         before: |
-          <li><a href="./"><strong>Data Visualization for All</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
+          <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
         after: |
           <li style="padding: 10px 15px; font-weight: bold;">Open access book-in-progress</li>
-          <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></li>
+          <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></li>
           <li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
-      download: [pdf]
-      view: https://github.com/datavizforall/datavizforall-bookdown/blob/master/%s
+      download: [pdf, word, markdown]
+      view: https://github.com/handsondataviz/book/blob/master/%s
       search: yes
       sharing:
         facebook: yes
@@ -43,6 +44,9 @@ output:
 
   bookdown::word_document2:
     default
+
+  bookdown::markdown_document2:
+    default
 ---
 # Introduction {-}
 <!-- R global options: R chunk images display without code (no echo); show PDF image over JPG/PNG when available -->
@@ -52,24 +56,24 @@ options(knitr.graphics.auto_pdf = TRUE)
 ```
 ![ ](images/0-introduction/cover-400wide.jpg)
 
-**This book-in-progress** was last updated on: `r Sys.Date()`.
+**This open-access book-in-progress** was last updated on: `r Sys.Date()`.
 
 #### Tell your data story with free and easy-to-learn tools. {-}
 
-*Data Visualization for All*, an open-access textbook, shows how to design interactive charts and maps for your website. We begin with drag-and-drop tools and gradually work our way up to editing open-source code templates. This friendly introduction includes step-by-step tutorials, video screencasts, and real-world examples. Featured tools include Google Sheets, Tableau Public, Chart.js, Leaflet, GitHub, and more.
+Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required.
 
 [About the authors and contributors](authors) from [Trinity College, Hartford CT](http://www.trincoll.edu): Jack Dougherty, Ilya Ilyankou, Veronica X. Armendariz, Stacy Lam, and David Tatem.
 
-[Read for free online](https://datavizforall.org) (recommended) or download PDF/eBook editions (to come).
+[Read for free online](https://handsondataviz.org) (recommended) or download PDF/eBook editions (to come).
 
-Open-source code for text, data, chart and map templates at <https://github.com/datavizforall>
+Open-source code for text, data, chart and map templates at <https://github.com/handsondataviz>
 
 <div style="text-align:center">
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
-  <img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" />
 </a></div>
 <div style="text-align:left">
-<strong>Data Visualization for All</strong> is copyrighted
-by <a href="https://datavizforall.org/authors">Jack Dougherty and Ilya Ilyankou and contributors</a>
-and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons BY-NC 4.0 International License</a>.
-You may freely share and modify this content for non-commercial purposes, with a source credit to <a href="http://DataVizForAll.org">http://DataVizForAll.org</a>.
+<strong>Hands-On Data Visualization</strong> is copyrighted
+by <a href="https://datavizforall.org/authors">Jack Dougherty and Ilya Ilyankou</a>
+and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.
+You may freely share this content for non-commercial purposes, with a source credit to <a href="http://HandsOnDataViz.org">http://HandsOnDataViz.org</a>.

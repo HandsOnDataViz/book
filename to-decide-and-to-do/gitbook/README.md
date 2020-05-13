@@ -6,7 +6,7 @@
 - GitBook.com platform Help Page - https://help.gitbook.com/
 - GitBook Toolchain detailed documentation - http://toolchain.gitbook.com/
 
-This book is hosted on the free GitBook.com platform. Updates are automatically generated when the author makes changes to the master branch of its linked GitHub repository: https://github.com/JackDougherty/datavizforall
+This book is hosted on the free GitBook.com platform. Updates are automatically generated when the author makes changes to the master branch of its linked GitHub repository: https://github.com/JackDougherty/
 
 Read next pages for details about my GitBook structure and workflow.
 

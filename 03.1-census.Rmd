@@ -8,7 +8,7 @@
     - 1-year estimates for areas with populations of 65,000+
     - 5-year estimates for all census areas
     - ACS used to release 3-year estimates for geographies with population of 20,000+, but discontinued after the 2011-2013 release.
-    
+
 Because ACS produces estimates and not "true" counts, data comes with margins of errors. Generally, margins of errors are higher for smaller geographies (eg census blocks) and smaller values (eg the number of Asian females aged 60+ who live in Union, CT). Hence, one needs to be critical when using ACS or other survey data.
 
 **Census areas** are geographic divisions in this *general format*:
@@ -25,7 +25,7 @@ Because ACS produces estimates and not "true" counts, data comes with margins of
 
 The interactive map below illustrates hierarchical relations among geographical census entities for the Hartford region, from state to census block level.
 
-<iframe src="https://datavizforall.github.io/datavizforall-jupyter-examples/census-divisions-hartford.html" height="400" width="100%" frameborder="0"></iframe>
+<iframe src="https://handsondataviz.github.io/census-divisions-hartford/index.html" height="400" width="100%" frameborder="0"></iframe>
 
 Learn more: Explore the standard hierarchy of US Census geographic entities and definitions (https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf)
 

@@ -4,11 +4,11 @@ Bubble charts are similar to [scatter plots](chartjs-scatter-csv). The size of e
 
 In the demo below, the bubble chart shows the relationship between median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut. The size of data point (marker) corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts.
 
-<iframe src="https://datavizforall.github.io/chartjs-templates/bubble-chart/index.html" width="100%" height=500 style="border: 0"></iframe>
+<iframe src="https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html" width="100%" height=500 style="border: 0"></iframe>
 
-Demo: https://datavizforall.github.io/chartjs-templates/bubble-chart/index.html
+Demo: https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html
 
-Source and instructions: https://github.com/DataVizForAll/chartjs-templates/tree/master/bubble-chart
+Source and instructions: https://github.com//chartjs-templates/tree/master/bubble-chart
 
 #### Tip: Use semi-transparent circles
 

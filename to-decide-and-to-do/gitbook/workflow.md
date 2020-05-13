@@ -7,7 +7,7 @@ GitBook offers different ways to compose your books, and each method has its own
 
 Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, branch control
 
-1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizforall
+1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/
 2. Startup browser editor, temporarily create a new branch (dev) to avoid continually building master branch
 3. Write and save edits on each page
 4. When done, merge branches (push dev branch into master branch)
@@ -19,7 +19,7 @@ Advantages: WYSIWYG preview, Markdown menu, proofreader toggle, branch and sync 
 
 Disadvantage: links and images appear, but requires clicking on Markdown version to edit
 
-1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizforall
+1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/
 2. Startup Desktop Editor app and CLONE current book from GitHub to local computer
 3. Create a temporary new branch (dev)
 4. Write and save edits on each page
@@ -33,7 +33,7 @@ Advantages: This method works best when making major changes to the book, such a
 
 Disadvantages: For novice users, requires basic knowledge of GitHub web interface, GitHub Desktop, and a text editor (such as Atom Editor)
 
-1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/datavizforall
+1. Check GitHub repo for any pull requests from contributors: https://github.com/JackDougherty/
 3. Use GitHub Desktop to sync repo to my local computer
 4. Use Atom editor to edit, upload, restructure files
 5. Use GitHub Desktop to commit changes to online repo master branch

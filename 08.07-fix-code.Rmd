@@ -47,11 +47,11 @@ These URLs are NOT case-sensitive, which means that `https://github.com/USERNAME
 - Items listed in your iframe (such as the URL, width, or height) should be enclosed inside straight quotation marks (single or double)
   - BROKEN iframe (missing quotation marks for width and height)
   ```
-  <iframe src="https://datavizforall.github.io/leaflet-map-simple" width=90% height=350></iframe>
+  <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>
   ```
   - FIXED iframe (with correct quotation marks)
   ```
-  <iframe src="https://datavizforall.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
+  <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
   ```
 - Use only `https` (the extra 's' means 'secure'), not `http`. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https.
 

@@ -1,4 +1,4 @@
-# Publishing *DataVizForAll* with Bookdown {#bookdown}
+# Publishing with Bookdown {#bookdown}
 *by [Jack Dougherty and Ilya Ilyankou](authors), last updated February 13, 2019*
 
 TODO: Redo this entire section to match updates from On The Line book -- see https://ontheline.trincoll.edu/bookdown.html
@@ -47,15 +47,15 @@ Below are steps we followed to setup the publishing platform for this book, usin
 - In a new browser tab, paste the web address from above, and at the end add `_book/index.html` because this sample is configured to store the web edition of your book in this subfolder. Your web address should be similar to: `https://USERNAME.github.io/bookdown-minimal/_book/index.html`
 
 #### Customize your Bookdown and GitHub settings {-}
-- To see customized settings for this book, go to its online repository <https://github.com/datavizforall/dataviz-bookdown>
+- To see customized settings for this book, go to its online repository <https://github.com//dataviz-bookdown>
 - In the `_bookdown.yml` file, the output directory is set to build all book formats into the `docs` folder.
 - The GitHub Pages settings for this repo (which you cannot view) is set to publish from the `master/docs` folder, to match the output directory above. This simplifies the published web address to this format: `https://USERNAME.github.com/REPONAME`
 - Most of the Bookdown configuration settings appear in the `index.Rmd` file. Read more about these options in the software developer's technical guide, <https://bookdown.org/yihui/bookdown/>.
 - In addition, this GitHub Pages repo is published with a custom domain name <https://handsondataviz.org>. Learn more about custom domain names at <https://help.github.com/articles/using-a-custom-domain-with-github-pages/>, which requires purchasing a domain name from a web hosting service (such as <http://ReclaimHosting.com>). Adding a GitHub Pages custom domain name creates an additional `CNAME` file in the `docs` subfolder. Be careful not to delete it (or place a copy in a subfolder for safekeeping).
 - This book also includes a custom `404.html` file that was manually transferred into the `docs` subfolder, since it is not automatically built by Bookdown.
-- This book also includes a custom `google-analytics-datavizforall.html` file in the root-level of repo (where bookdown looks for it) and also is manually transferred to the `docs` subfolder (since bookdown does *not appear* to copy it to there on each build). This tracks web traffic with Google Analytics.
+- This book also includes a custom `google-analytics-.html` file in the root-level of repo (where bookdown looks for it) and also is manually transferred to the `docs` subfolder (since bookdown does *not appear* to copy it to there on each build). This tracks web traffic with Google Analytics.
 
-#### *DataVizForAll* Style Guide with Bookdown-flavored Markdown {-}
+#### ** Style Guide with Bookdown-flavored Markdown {-}
 
 ##### Links with brackets and parentheses {-}
 Use brackets and parentheses for an [embedded link](http://example.com)
@@ -68,7 +68,7 @@ If necessary, use HTML to create <a href='http://example.com/'>link that opens i
 
 ##### Headers with Cross-Reference Links {-}
 
-This DataVizForAll book, each chapter and section is a separate .Rmd file. The numerical order of the file names (index.Rmd, 0.1-x.Rmd, 0.2-y.Rmd, 01-z.Rmd, etc) determines the sequence that they will appear in the built book.
+This  book, each chapter and section is a separate .Rmd file. The numerical order of the file names (index.Rmd, 0.1-x.Rmd, 0.2-y.Rmd, 01-z.Rmd, etc) determines the sequence that they will appear in the built book.
 
 In the index.Rmd file, the settings for the web book state that each chapter and section will be split into its own HTML page, with no automatic numbering.
 
@@ -144,12 +144,12 @@ TODO - update
 
 Code:
 ```HTML
-<iframe src="https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px"></iframe>
+<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px"></iframe>
 Recommended: Insert caption and link to view the full-screen version.
 ```
 Demo:
 
-<iframe src="https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px"></iframe>
+<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px"></iframe>
 Recommended: Insert caption and link to view the full-screen version.
 
 #### Scroll the Map: embedded HTML iframe {-}

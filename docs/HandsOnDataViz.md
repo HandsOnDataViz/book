@@ -5,7 +5,7 @@ Introduction
 
 ![](images/0-introduction/cover-400wide.jpg)
 
-**This open-access book-in-progress** was last updated on: 2020-05-12.
+**This open-access book-in-progress** was last updated on: 2020-05-13.
 
 #### Tell your data story with free and easy-to-learn tools.
 
@@ -1247,7 +1247,7 @@ The interactive map below illustrates hierarchical relations among
 geographical census entities for the Hartford region, from state to
 census block level.
 
-<iframe src="https://datavizforall.github.io/datavizforall-jupyter-examples/census-divisions-hartford.html" height="400" width="100%" frameborder="0">
+<iframe src="https://handsondataviz.github.io/census-divisions-hartford/index.html" height="400" width="100%" frameborder="0">
 </iframe>
 
 Learn more: Explore the standard hierarchy of US Census geographic
@@ -4343,11 +4343,11 @@ Errors](fix-code) chapter in this book.
 
 You will begin this tutorial with a simple interactive map that includes
 one pop-up point:
-<iframe src="https://datavizforall.github.io/leaflet-map-simple/" width="90%" height="350"></iframe>
+<iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="90%" height="350"></iframe>
 
 By the end of this tutorial, you will learn how to modify the map, then
 geocode and upload more data points:
-<iframe src="https://datavizforall.github.io/leaflet-map-simple-instructor-sample/" width="90%" height="350"></iframe>
+<iframe src="https://handsondataviz.github.io/leaflet-map-simple-instructor-sample/" width="90%" height="350"></iframe>
 
 #### Video with step-by-step tutorial
 
@@ -4360,7 +4360,7 @@ Before you begin, sign up for a free GitHub account:
 <a href="http://github.com" class="uri">http://github.com</a>
 
 1.  Right-click to open this GitHub code template in a new tab:
-    <a href="https://github.com/datavizforall/leaflet-map-simple" class="uri">https://github.com/datavizforall/leaflet-map-simple</a>
+    <a href="https://github.com//leaflet-map-simple" class="uri">https://github.com//leaflet-map-simple</a>
 
 2.  In the upper-right corner of the code template, sign in to your free
     GitHub account
@@ -4614,17 +4614,17 @@ Errors](fix-code) chapter in this book.
 
 You will begin this tutorial with a basic chart template that includes
 only 7 points. Right-click to open [full-size chart in new
-tab](https://datavizforall.github.io/highcharts-scatter-csv/).
+tab](https://handsondataviz.github.io/highcharts-scatter-csv/).
 
-<iframe src="https://datavizforall.github.io/highcharts-scatter-csv/" width="90%" height="425">
+<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv/" width="90%" height="425">
 </iframe>
 
 By the end of this tutorial, you will learn how to modify the chart and
 add a new CSV spreadsheet with over 160 points. Right-click to open
 [full-size chart in new
-tab](https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample).
+tab](https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample).
 
-<iframe src="https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="425">
+<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="425">
 </iframe>
 
 #### Video with step-by-step tutorial
@@ -4638,7 +4638,7 @@ Before you begin, sign up for a free GitHub account:
 <a href="http://github.com" class="uri">http://github.com</a>
 
 1.  Right-click to open this GitHub code template in a new tab:
-    <a href="https://github.com/datavizforall/highcharts-scatter-csv" class="uri">https://github.com/datavizforall/highcharts-scatter-csv</a>
+    <a href="https://github.com//highcharts-scatter-csv" class="uri">https://github.com//highcharts-scatter-csv</a>
 
 2.  In the upper-right corner of the code template, sign in to your free
     GitHub account
@@ -4758,7 +4758,7 @@ and any computer (such as Mac, Windows, or Chromebook).
     and wish to make a second copy of it. For example, imagine that you
     have already forked a copy of the Leaflet Maps with Google Sheets
     repository from
-    <a href="https://github.com/datavizforall/leaflet-maps-with-google-sheets" class="uri">https://github.com/datavizforall/leaflet-maps-with-google-sheets</a>
+    <a href="https://github.com//leaflet-maps-with-google-sheets" class="uri">https://github.com//leaflet-maps-with-google-sheets</a>
     **TO DO change repo address**
 
 2.  If you try to “fork” it again, GitHub will simply send you back to
@@ -4992,7 +4992,7 @@ see the [Embed iframe with WordPress tutorial in this
 book](iframe-wordpress).
 
 See my sample repositories, with links to live demo sites, at
-<a href="https://github.com/datavizforall?tab=repositories" class="uri">https://github.com/datavizforall?tab=repositories</a>.
+<a href="https://github.com/?tab=repositories" class="uri">https://github.com/?tab=repositories</a>.
 Learn more about GitHub general features to share and collaborate on
 other users’ public code repositories.
 
@@ -5140,13 +5140,13 @@ README](images/08-github/extra-files-block-readme-iframe.png)
 
     <!-- -->
 
-        <iframe src="https://datavizforall.github.io/leaflet-map-simple" width=90% height=350></iframe>
+        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>
 
     -   FIXED iframe (with correct quotation marks)
 
     <!-- -->
 
-        <iframe src="https://datavizforall.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
+        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
 -   Use only `https` (the extra ‘s’ means ‘secure’), not `http`. Some
     web browsers will block content if it mixes http and https
     resources, and some code templates in this book require https.
@@ -5374,7 +5374,7 @@ templates above, you can insert the open-source Geocoder Scripts into
 your own Google Sheet:
 
 -   Go to [Google Sheets Geocoder repo on
-    GitHub](https://github.com/datavizforall/google-sheets-geocoder)
+    GitHub](https://github.com//google-sheets-geocoder)
 -   Sign in to your Google Sheets, then select Tools &gt; Script Editor
 -   File &gt; Create New Script File
 -   Open and copy a script (such as geocoder-census-google.gs) and paste
@@ -6341,7 +6341,7 @@ Next, explore two different polygon maps of the same data. Use the
 drop-down menu to compare “Extreme Differences” versus “Uniform
 Equality”
 
-<iframe src="https://datavizforall.github.io/leaflet-how-to-lie-with-maps/" width="90%" height="500">
+<iframe src="https://handsondataviz.github.io/leaflet-how-to-lie-with-maps/" width="90%" height="500">
 </iframe>
 
 Why are these two maps portray the same data so differently? To see the
@@ -6471,14 +6471,14 @@ Bar charts (vertical bar charts are often called *column charts*) can be
 used to compare categorical data. The y-axis (or x-axis for horizontal
 bar chart) should always start at 0.
 
-<iframe src="https://datavizforall.github.io/chartjs-templates/bar-chart/index.html" width="100%" height="500" style="border: 0">
+<iframe src="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html" width="100%" height="500" style="border: 0">
 </iframe>
 
 Demo:
-<a href="https://datavizforall.github.io/chartjs-templates/bar-chart/index.html" class="uri">https://datavizforall.github.io/chartjs-templates/bar-chart/index.html</a>
+<a href="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html</a>
 
 Source and instructions:
-<a href="https://github.com/DataVizForAll/chartjs-templates/tree/master/bar-chart" class="uri">https://github.com/DataVizForAll/chartjs-templates/tree/master/bar-chart</a>
+<a href="https://github.com//chartjs-templates/tree/master/bar-chart" class="uri">https://github.com//chartjs-templates/tree/master/bar-chart</a>
 
 <!--chapter:end:12.01-chartjs-bar-csv.Rmd-->
 
@@ -6489,14 +6489,14 @@ Line charts are often used to show temporal data (trends). The x-axis
 often represents time intervals. Unlike column or bar charts, y-axes of
 line charts do not necessarily start at 0.
 
-<iframe src="https://datavizforall.github.io/chartjs-templates/line-chart/index.html" width="100%" height="500" style="border: 0">
+<iframe src="https://handsondataviz.github.io/chartjs-templates/line-chart/index.html" width="100%" height="500" style="border: 0">
 </iframe>
 
 Demo:
-<a href="https://datavizforall.github.io/chartjs-templates/line-chart/index.html" class="uri">https://datavizforall.github.io/chartjs-templates/line-chart/index.html</a>
+<a href="https://handsondataviz.github.io/chartjs-templates/line-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/line-chart/index.html</a>
 
 Source and instructions:
-<a href="https://github.com/DataVizForAll/chartjs-templates/tree/master/line-chart" class="uri">https://github.com/DataVizForAll/chartjs-templates/tree/master/line-chart</a>
+<a href="https://github.com//chartjs-templates/tree/master/line-chart" class="uri">https://github.com//chartjs-templates/tree/master/line-chart</a>
 
 <!--chapter:end:12.02-chartjs-line-csv.Rmd-->
 
@@ -6509,14 +6509,14 @@ household income and test performance for school districts in
 Connecticut. Using x- and y-axes to show two dimensions, it is easy to
 see that test performance improves as household income goes up.
 
-<iframe src="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" width="100%" height="500" style="border: 0">
+<iframe src="https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html" width="100%" height="500" style="border: 0">
 </iframe>
 
 Demo:
-<a href="https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html" class="uri">https://datavizforall.github.io/chartjs-templates/scatter-chart/index.html</a>
+<a href="https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html</a>
 
 Source and instructions:
-<a href="https://github.com/DataVizForAll/chartjs-templates/tree/master/scatter-chart" class="uri">https://github.com/DataVizForAll/chartjs-templates/tree/master/scatter-chart</a>
+<a href="https://github.com//chartjs-templates/tree/master/scatter-chart" class="uri">https://github.com//chartjs-templates/tree/master/scatter-chart</a>
 
 #### Going beyond two dimensions
 
@@ -6547,14 +6547,14 @@ school districts in Connecticut. The size of data point (marker)
 corresponds to the number of students enrolled in the school district:
 bigger circles represent larger school districts.
 
-<iframe src="https://datavizforall.github.io/chartjs-templates/bubble-chart/index.html" width="100%" height="500" style="border: 0">
+<iframe src="https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html" width="100%" height="500" style="border: 0">
 </iframe>
 
 Demo:
-<a href="https://datavizforall.github.io/chartjs-templates/bubble-chart/index.html" class="uri">https://datavizforall.github.io/chartjs-templates/bubble-chart/index.html</a>
+<a href="https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html</a>
 
 Source and instructions:
-<a href="https://github.com/DataVizForAll/chartjs-templates/tree/master/bubble-chart" class="uri">https://github.com/DataVizForAll/chartjs-templates/tree/master/bubble-chart</a>
+<a href="https://github.com//chartjs-templates/tree/master/bubble-chart" class="uri">https://github.com//chartjs-templates/tree/master/bubble-chart</a>
 
 #### Tip: Use semi-transparent circles
 
@@ -6615,7 +6615,7 @@ GitHub](github), as described in this book.
 -   Must rely on open-source community of developers to maintain the
     core code or specific plugins
 
-#### Leaflet Map Templates by DataVizForAll
+#### Leaflet Map Templates by
 
 <table>
 <colgroup>
@@ -6706,8 +6706,8 @@ Requires two free accounts: Google and GitHub.
 #### Try it
 
 Explore the map or right-click to [view full-screen map in a new
-tab](https://datavizforall.github.io/leaflet-maps-with-google-sheets/)
-<iframe src="https://datavizforall.github.io/leaflet-maps-with-google-sheets/" width="90%" height=500></iframe>
+tab](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/)
+<iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="90%" height=500></iframe>
 
 The map pulls the point data and settings from a linked Google Sheet,
 which you can explore below or right-click to [view full-screen Sheet in
@@ -6770,7 +6770,7 @@ chapter in this book.
     in this book
 
 1.  Right-click to open this GitHub code template in a new tab:
-    <a href="https://github.com/datavizforall/leaflet-maps-with-google-sheets" class="uri">https://github.com/datavizforall/leaflet-maps-with-google-sheets</a>
+    <a href="https://github.com//leaflet-maps-with-google-sheets" class="uri">https://github.com//leaflet-maps-with-google-sheets</a>
 
 2.  In the upper-right corner of the code template, sign in to your free
     GitHub account
@@ -7107,8 +7107,8 @@ Leaflet Storymaps with Google Sheets and Scrolling Narrative
 #### Try it
 
 Explore the map or right-click to [view full-screen map in a new
-tab](https://datavizforall.github.io/leaflet-storymaps-with-google-sheets/)
-<iframe src="https://datavizforall.github.io/leaflet-storymaps-with-google-sheets/" width="90%" height=500></iframe>
+tab](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/)
+<iframe src="https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/" width="90%" height=500></iframe>
 
 The map pulls the point data and settings from a linked Google Sheet,
 which you can explore below or right-click to [view full-screen Sheet in
@@ -7160,7 +7160,7 @@ this book.
     in this book
 
 1.  Right-click to open this GitHub code template in a new tab:
-    <a href="https://github.com/datavizforall/leaflet-storymaps-with-google-sheets" class="uri">https://github.com/datavizforall/leaflet-storymaps-with-google-sheets</a>
+    <a href="https://github.com//leaflet-storymaps-with-google-sheets" class="uri">https://github.com//leaflet-storymaps-with-google-sheets</a>
 
 2.  In the upper-right corner of the code template, sign in to your free
     GitHub account
@@ -7307,7 +7307,7 @@ dropdown with currently three options: Numerated (defaults to that, even
 if empty value), Plain (with no number), and No marker. The latter is
 what you want. It can be potentially extended to colours, types of
 markers, etc.
-<a href="https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131" class="uri">https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131</a>
+<a href="https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131" class="uri">https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131</a>
 
 Overlay GeoJSONs
 
@@ -7319,22 +7319,22 @@ Eg fillColor: orange; weight:2, opacity: 0.5, color: red, fillOpacity:
 value of the left-most expression is not undefined, it uses it. If not,
 it keeps moving to the right until there is a value that is not an empty
 string. For example,
-<a href="https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310" class="uri">https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310</a>
+<a href="https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310" class="uri">https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310</a>
 color: feature.properties.COLOR || props.color || ‘silver’,
 
 Will first attempt to extract the color from the COLOR property of each
 geoJson feature (useful for choropleth). If not found, it tries the
 GeoJSON Feature Properties “color”. If that is not set, it uses silver.
-<a href="https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316" class="uri">https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316</a>
+<a href="https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316" class="uri">https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316</a>
 
 Data in local CSV files
 
 If googleDocURL variable does not exist (eg you delete the file) or is
 an empty string, it reads two spreadsheets: Options.csv and Chapters.csv
 from the /csv folder. Otherwise, it reads from the google sheet.
-<a href="https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35" class="uri">https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35</a>
+<a href="https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35" class="uri">https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35</a>
 When data is read from a .CSV, it links that in the attribution
-(<a href="https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396" class="uri">https://github.com/DataVizForAll/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396</a>)
+(<a href="https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396" class="uri">https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396</a>)
 
 #### Learn more
 
@@ -7349,7 +7349,7 @@ Leaflet Maps with Socrata API Open Data
 *By [Jack Dougherty and Ilya Ilyankou](authors), last updated July 28,
 2019*
 
-<iframe src="https://datavizforall.github.io/leaflet-socrata/index.html" style="width: 100%; height: 450px; border: 0 none;">
+<iframe src="https://handsondataviz.github.io/leaflet-socrata/index.html" style="width: 100%; height: 450px; border: 0 none;">
 </iframe>
 
 Source: [Current Class 1 - Class 4 Food
@@ -7433,10 +7433,10 @@ below.
 #### GeoJSON endpoint with circle markers and tooltips
 
 -   map
-    <a href="https://datavizforall.github.io/leaflet-socrata/index.html" class="uri">https://datavizforall.github.io/leaflet-socrata/index.html</a>
+    <a href="https://handsondataviz.github.io/leaflet-socrata/index.html" class="uri">https://handsondataviz.github.io/leaflet-socrata/index.html</a>
 
 -   code
-    <a href="https://github.com/datavizforall/leaflet-socrata/index.html" class="uri">https://github.com/datavizforall/leaflet-socrata/index.html</a>
+    <a href="https://github.com//leaflet-socrata/index.html" class="uri">https://github.com//leaflet-socrata/index.html</a>
 
 -   data
     <a href="https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8" class="uri">https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8</a>
@@ -7457,25 +7457,25 @@ below.
 #### GeoJSON endpoint with simple data filter, default marker styling and pop-up info
 
 -   map
-    <a href="https://datavizforall.github.io/leaflet-socrata/index-geojson-filter" class="uri">https://datavizforall.github.io/leaflet-socrata/index-geojson-filter</a>
+    <a href="https://handsondataviz.github.io/leaflet-socrata/index-geojson-filter" class="uri">https://handsondataviz.github.io/leaflet-socrata/index-geojson-filter</a>
 -   code
-    <a href="https://github.com/datavizforall/leaflet-socrata/" class="uri">https://github.com/datavizforall/leaflet-socrata/</a>
+    <a href="https://github.com//leaflet-socrata/" class="uri">https://github.com//leaflet-socrata/</a>
 -   data
     <a href="https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98" class="uri">https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98</a>
 
 #### Multiple Socrata datasets with Leaflet control layers legend
 
 -   map
-    <a href="https://datavizforall.github.io/leaflet-socrata/index-control-layers.html" class="uri">https://datavizforall.github.io/leaflet-socrata/index-control-layers.html</a>
+    <a href="https://handsondataviz.github.io/leaflet-socrata/index-control-layers.html" class="uri">https://handsondataviz.github.io/leaflet-socrata/index-control-layers.html</a>
 -   code
-    <a href="https://github.com/datavizforall/leaflet-socrata/index-control-layers.html" class="uri">https://github.com/datavizforall/leaflet-socrata/index-control-layers.html</a>
+    <a href="https://github.com//leaflet-socrata/index-control-layers.html" class="uri">https://github.com//leaflet-socrata/index-control-layers.html</a>
 
 #### Older JSON-only endpoint, with separate columns for latitude, longitude
 
 -   map
-    <a href="https://datavizforall.github.io/leaflet-socrata/index-json.html" class="uri">https://datavizforall.github.io/leaflet-socrata/index-json.html</a>
+    <a href="https://handsondataviz.github.io/leaflet-socrata/index-json.html" class="uri">https://handsondataviz.github.io/leaflet-socrata/index-json.html</a>
 -   code
-    <a href="https://github.com/datavizforall/leaflet-socrata/index-json.html" class="uri">https://github.com/datavizforall/leaflet-socrata/index-json.html</a>
+    <a href="https://github.com//leaflet-socrata/index-json.html" class="uri">https://github.com//leaflet-socrata/index-json.html</a>
 -   data
     <a href="https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7" class="uri">https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7</a>
 
@@ -7510,15 +7510,15 @@ Esri ArcGIS Online, and USGS.
 #### Try it
 
 Explore the map below or [view full-screen version in a new
-tab](https://datavizforall.github.io/leaflet-data-apis)
+tab](https://handsondataviz.github.io/leaflet-data-apis)
 
-<iframe src="https://datavizforall.github.io/leaflet-data-apis/" width="90%" height="550">
+<iframe src="https://handsondataviz.github.io/leaflet-data-apis/" width="90%" height="550">
 </iframe>
 
 #### How it works
 
 1.  Go to the GitHub repo for the map above:
-    <a href="https://github.com/datavizforall/leaflet-data-apis" class="uri">https://github.com/datavizforall/leaflet-data-apis</a>
+    <a href="https://github.com//leaflet-data-apis" class="uri">https://github.com//leaflet-data-apis</a>
 
 2.  Explore the code to see how different APIs work. For example, see
     the first map overlay, which pulls Connecticut School Directory data
@@ -7588,12 +7588,12 @@ Leaflet Thematic Polygon Map with Clickable Info Window template
 
 #### Try it
 
-<iframe src="https://datavizforall.github.io/leaflet-map-polygon-click/" width="100%" height="550">
+<iframe src="https://handsondataviz.github.io/leaflet-map-polygon-click/" width="100%" height="550">
 </iframe>
 
 #### View demo in new page
 
--   <a href="https://datavizforall.github.io/leaflet-map-polygon-click/" class="uri">https://datavizforall.github.io/leaflet-map-polygon-click/</a>
+-   <a href="https://handsondataviz.github.io/leaflet-map-polygon-click/" class="uri">https://handsondataviz.github.io/leaflet-map-polygon-click/</a>
 
 **To Do**
 
@@ -7603,7 +7603,7 @@ account to host your own version on the web.
 
 #### Create Your Own: Fork a copy of the code template on GitHub
 
--   <a href="https://github.com/datavizforall/leaflet-map-polygon-click" class="uri">https://github.com/datavizforall/leaflet-map-polygon-click</a>
+-   <a href="https://github.com//leaflet-map-polygon-click" class="uri">https://github.com//leaflet-map-polygon-click</a>
 -   Remember, if you have already forked one copy, go to your GitHub
     repository Settings to rename it, or create a new GitHub repo and
     use GitHub Desktop to upload template Files
@@ -7685,12 +7685,12 @@ Leaflet Thematic Polygon Map with Hover Info Window template
 
 #### Try it
 
-<iframe src="https://datavizforall.github.io/leaflet-map-polygon-hover/" width="100%" height="550">
+<iframe src="https://handsondataviz.github.io/leaflet-map-polygon-hover/" width="100%" height="550">
 </iframe>
 
 #### View demo in new page
 
--   <a href="https://datavizforall.github.io/leaflet-map-polygon-hover/" class="uri">https://datavizforall.github.io/leaflet-map-polygon-hover/</a>
+-   <a href="https://handsondataviz.github.io/leaflet-map-polygon-hover/" class="uri">https://handsondataviz.github.io/leaflet-map-polygon-hover/</a>
 
 **To Do**
 
@@ -7700,7 +7700,7 @@ Leaflet Thematic Polygon Map with Hover Info Window template
 
 #### Create Your Own: Fork a copy of the code template on GitHub
 
--   <a href="https://github.com/datavizforall/leaflet-map-polygon-hover/" class="uri">https://github.com/datavizforall/leaflet-map-polygon-hover/</a>
+-   <a href="https://github.com//leaflet-map-polygon-hover/" class="uri">https://github.com//leaflet-map-polygon-hover/</a>
 -   Remember, if you have already forked one copy, go to your GitHub
     repository Settings to rename it, or create a new GitHub repo and
     use GitHub Desktop to upload template Files
@@ -7717,12 +7717,12 @@ Leaflet Thematic Polygon Map with Multi-Year Tabs template
 
 #### Try it
 
-<iframe src="https://datavizforall.github.io/leaflet-map-polygon-tabs/" width="100%" height="550">
+<iframe src="https://handsondataviz.github.io/leaflet-map-polygon-tabs/" width="100%" height="550">
 </iframe>
 
 #### View demo in new page
 
--   <a href="https://datavizforall.github.io/leaflet-map-polygon-tabs/" class="uri">https://datavizforall.github.io/leaflet-map-polygon-tabs/</a>
+-   <a href="https://handsondataviz.github.io/leaflet-map-polygon-tabs/" class="uri">https://handsondataviz.github.io/leaflet-map-polygon-tabs/</a>
 
 \*\* To Do \*\* - Insert internal references to prior steps in this
 book. See the Edit and Host Code Templates section in this book. -
@@ -7731,7 +7731,7 @@ describe all steps, which are similar to the prior chapter
 
 #### Create Your Own: Fork a copy of the code template on GitHub
 
--   <a href="https://github.com/datavizforall/leaflet-map-polygon-tabs/" class="uri">https://github.com/datavizforall/leaflet-map-polygon-tabs/</a>
+-   <a href="https://github.com//leaflet-map-polygon-tabs/" class="uri">https://github.com//leaflet-map-polygon-tabs/</a>
 -   Remember, if you have already forked one copy, go to your GitHub
     repository Settings to rename it, or create a new GitHub repo and
     use GitHub Desktop to upload template Files
@@ -7877,12 +7877,12 @@ Section 3 Peer Review Sample 1
 
 #### My Leaflet map
 
-<iframe src="https://datavizforall.github.io/leaflet-map-simple" width="90%" height="350">
+<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350">
 </iframe>
 
 #### My Highcharts scatter chart
 
-<iframe src="https://datavizforall.github.io/highcharts-scatter-csv" width="90%" height="425">
+<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv" width="90%" height="425">
 </iframe>
 
 #### Evaluate
@@ -7907,12 +7907,12 @@ Section 3 Peer Review Sample 1 with Notes
 
 #### My Leaflet map
 
-<iframe src="https://datavizforall.github.io/leaflet-map-simple" width="90%" height="350">
+<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350">
 </iframe>
 
 #### My Highcharts scatter chart
 
-<iframe src="https://datavizforall.github.io/highcharts-scatter-csv" width="90%" height="425">
+<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv" width="90%" height="425">
 </iframe>
 
 #### Evaluate
@@ -7955,12 +7955,12 @@ Section 3 Peer Review Sample 2
 
 #### My Leaflet map
 
-<iframe src="https://datavizforall.github.io/leaflet-map-simple-instructor-sample" width="90%" height="350">
+<iframe src="https://handsondataviz.github.io/leaflet-map-simple-instructor-sample" width="90%" height="350">
 </iframe>
 
 #### My Highcharts scatter chart
 
-<iframe src="https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample" width="90%" height="425">
+<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample" width="90%" height="425">
 </iframe>
 
 #### Evaluate
@@ -7985,12 +7985,12 @@ Section 3 Peer Review Sample 2 with Notes
 
 #### My Leaflet map
 
-<iframe src="https://datavizforall.github.io/leaflet-map-simple-instructor-sample" width="90%" height="350">
+<iframe src="https://handsondataviz.github.io/leaflet-map-simple-instructor-sample" width="90%" height="350">
 </iframe>
 
 #### My Highcharts scatter chart
 
-<iframe src="https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample" width="90%" height="425">
+<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample" width="90%" height="425">
 </iframe>
 
 #### Evaluate
@@ -8027,8 +8027,8 @@ Section 3 Peer Review Sample 2 with Notes
 
 <!--chapter:end:14.08-peer-3-sample-2-notes.Rmd-->
 
-Publishing *DataVizForAll* with Bookdown
-========================================
+Publishing with Bookdown
+========================
 
 *by [Jack Dougherty and Ilya Ilyankou](authors), last updated February
 13, 2019*
@@ -8181,7 +8181,7 @@ already familiar with R Studio, GitHub, or editing code.
 
 -   To see customized settings for this book, go to its online
     repository
-    <a href="https://github.com/datavizforall/dataviz-bookdown" class="uri">https://github.com/datavizforall/dataviz-bookdown</a>
+    <a href="https://github.com//dataviz-bookdown" class="uri">https://github.com//dataviz-bookdown</a>
 -   In the `_bookdown.yml` file, the output directory is set to build
     all book formats into the `docs` folder.
 -   The GitHub Pages settings for this repo (which you cannot view) is
@@ -8206,13 +8206,13 @@ already familiar with R Studio, GitHub, or editing code.
 -   This book also includes a custom `404.html` file that was manually
     transferred into the `docs` subfolder, since it is not automatically
     built by Bookdown.
--   This book also includes a custom
-    `google-analytics-datavizforall.html` file in the root-level of repo
-    (where bookdown looks for it) and also is manually transferred to
-    the `docs` subfolder (since bookdown does *not appear* to copy it to
-    there on each build). This tracks web traffic with Google Analytics.
+-   This book also includes a custom `google-analytics-.html` file in
+    the root-level of repo (where bookdown looks for it) and also is
+    manually transferred to the `docs` subfolder (since bookdown does
+    *not appear* to copy it to there on each build). This tracks web
+    traffic with Google Analytics.
 
-#### *DataVizForAll* Style Guide with Bookdown-flavored Markdown
+#### \*\* Style Guide with Bookdown-flavored Markdown
 
 ##### Links with brackets and parentheses
 
@@ -8229,10 +8229,10 @@ opens in a new page</a>
 
 ##### Headers with Cross-Reference Links
 
-This DataVizForAll book, each chapter and section is a separate .Rmd
-file. The numerical order of the file names (index.Rmd, 0.1-x.Rmd,
-0.2-y.Rmd, 01-z.Rmd, etc) determines the sequence that they will appear
-in the built book.
+This book, each chapter and section is a separate .Rmd file. The
+numerical order of the file names (index.Rmd, 0.1-x.Rmd, 0.2-y.Rmd,
+01-z.Rmd, etc) determines the sequence that they will appear in the
+built book.
 
 In the index.Rmd file, the settings for the web book state that each
 chapter and section will be split into its own HTML page, with no
@@ -8323,12 +8323,12 @@ TODO - update
 
 Code:
 
-    <iframe src="https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px"></iframe>
+    <iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px"></iframe>
     Recommended: Insert caption and link to view the full-screen version.
 
 Demo:
 
-<iframe src="https://datavizforall.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px">
+<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px">
 </iframe>
 
 Recommended: Insert caption and link to view the full-screen version.

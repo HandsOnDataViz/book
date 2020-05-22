@@ -1,200 +1,321 @@
 # Publishing with Bookdown {#bookdown}
-*by [Jack Dougherty and Ilya Ilyankou](authors), last updated May 14, 2020*
+This open-access book is built with free-to-use, open-source tools---primarily [Bookdown](https://bookdown.org), [GitHub](http://github.com), and [Zotero](http://zotero.org)---and this chapter explains how, so that readers may do it themselves and share their knowledge to improve the process. In addition to our notes below, see also Yihui Xie's more comprehensive [Bookdown guide](https://bookdown.org/yihui/bookdown/).^[@xieBookdownAuthoringBooks2018]
 
-TODO: Redo this entire section to match updates from On The Line book -- see https://ontheline.trincoll.edu/bookdown.html
+Our broad goal is an efficient workflow to compose one document in the easy-to-write [Markdown format](https://en.wikipedia.org/wiki/Markdown) that Bookdown generates into multiple book products: an HTML web edition to read online, a PDF print edition for traditional book publishing, a Microsoft Word edition for editors who request it for copyediting, and option for other formats as desired.
 
-This open-access book is published using open-source tools, featuring Bookdown with RStudio and GitHub. Publishing with Bookdown allows authors to compose in Markdown (an easy-to-read-and-write computer syntax that works on multiple platforms) and publish in multiple formats (static HTML web edition, PDF edition, ePUB ebook edition, and Microsoft Word documents). Hosting the book in a public GitHub repository, and publishing it with GitHub Pages, easily makes the original text of the book, as well as the published products, available on the public web. For a technical guide to publishing with Bookdown, see Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R Markdown*, 2018, <https://bookdown.org/yihui/bookdown/>.
+Since Bookdown is an [R code package](https://www.r-project.org/), we composed the book manuscript in R-flavored Markdown, with one file (.Rmd) for each chapter. We use Bookdown to build these files in its GitBook style as a set of static HTML pages, which we upload to our GitHub repository. Readers can view the open-access web edition of the book at our custom domain: https://HandsOnDataViz. Also, we use Bookdown to build additional book outputs (PDF, MS Word, Markdown) and upload these to the `docs` folder of our GitHub repository, so that our O'Reilly Media editor may download and comment on the manuscript as we revise. Finally, we also have the option to use [Pandoc](https://pandoc.org) alone to convert the full-book Markdown file (.md) into an AsciiDoc file (.asciidoc) for easier importing into the [O'Reilly Atlas platform](https://docs.atlas.oreilly.com/writing_in_asciidoc.html). See some caveats and workarounds below.
 
-An alternative book publishing platform to consider is Pressbooks. This open-source modification of WordPress multisite also supports multiple publication formats (HMTL web edition, PDF edition, ePUB ebook edition. Authors can use the <http://Pressbooks.com> paid hosting service. Or, users with advanced WordPress and some system admin skills can download the code from <http://github.com/pressbooks> and run their own self-hosted book publishing site.
+### File Organization and Headers {-}
+We organized the [GitHub repository for this book](http://github.com/handsondataviz/book) as a set of .Rmd files, one for each chapter. As co-authors, we are careful to work on different chapters of the book, and to regularly push our commits to the repo. Only one of us regularly builds the book with Bookdown to avoid code merge conflicts.
 
-#### Setup RStudio, Bookdown, and TinyTeX {-}
-Below are steps we followed to setup the publishing platform for this book, using our Macintosh OS 10.14 computers. The same general principles also should apply to Windows computers. No special knowledge is required, but these steps will be easier if users are adventurous or already familiar with R Studio, GitHub, or editing code.
+Bookdown assigns a default ID to each header, which can be used for cross-references. The default ID for `# Topic` is `{#topic}`, and the default ID for `## Section Name` is `{#section-name}`, where spaces are replaced by dashes. But we do *not* rely on default IDs because they might change due to editing or contain duplicates across the book.
 
-- Install R Project statistical programming language <https://www.r-project.org> to build your book with Bookdown. (Yes, we too were surprised to use a statistics package to publish a book, but it works!). [See screenshot](images/15-bookdown/1-r-download.png)
-- Install the free RStudio Desktop to make R easier to use with a visual editor. [See screenshot](images/15-bookdown/2-download-rstudio.png)
-- Inside RStudio, select the Packages tab, and select Install. [See screenshot](images/15-bookdown/3-packages-install.png)
-- Inside RStudio, install the "bookdown" package to build your book, and select Install Dependencies. [See screenshot](images/15-bookdown/4-install-bookdown.png)
-- Bookdown now should be successfully installed in RStudio. [See screenshot](images/15-bookdown/5-installed.png)
-- Inside RStudio, install the "tinytex" package for Bookdown to create a PDF edition of your book. [See screenshot](images/15-bookdown/6-install-tinytex.png)
-- Don't forget: in RStudio console, type `tinytex::install_tinytex()` and press return to finish the installation. [See screenshot](images/15-bookdown/7-finish-install-tinytex.png)
+Instead, we *manually assign a unique ID* to each first- and second-level header in the following way. Note that the `{-}` symbol, used alone or in combination *with a space* and a unique ID, prevents auto-numbering in the second- thru fourth-level headers:
 
-#### If tinytex installation error {-}
-- In the section above, we received this error message on our Mac computers: `/usr/local/bin not writeable`. We resolved by reading the software developer's GitHub issue <https://github.com/yihui/tinytex/issues/24> and following these steps:
-- In the Mac Applications > Utilities folder, open the Terminal application.
-- Carefully type `sudo chown -R `whoami`:admin /usr/local/bin` and press return.
-- Carefully type (without "sudo") `~/Library/TinyTeX/bin/x86_64-darwin/tlmgr path add` and press return.
-- Close the Terminal application.
-- In the RStudio console, type `tinytex::install_tinytex(force = TRUE)` and press return.
-
-#### Download and Build a Sample Book {-}
-- Create a free GitHub account <https://github.com> to share code repositories and publish book editions online.
-- In your web browser, log into your GitHub account, go to the software developer's bookdown-minimal repo <https://github.com/yihui/bookdown-minimal>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <http://handsondataviz.org/github.html> in this book.
-- Install GitHub Desktop <https://desktop.github.com> to transfer files between your online GitHub repo and local computer
-- In your web browser, go to your forked copy of `bookdown-minimal` and click the green `Clone or Download` button and select `Open in Desktop`. This should automatically open the GitHub Desktop application, and you can navigate to copy the code repo to a folder on your local computer.
-- In RStudio in the upper-right corner, select Project > Open Project to open the `bookdown-minimal` folder on your local computer. [See screenshot](images/15-bookdown/8-project-open.png)
-- In RStudio, open the `index.Rmd` file and make some simple edits to the text of this minimal book. For example, remove the hashtag `#` comment symbol in line 8 to "uncomment" and activate the PDF book option. Save your edits. [See screenshot](images/15-bookdown/9-edit-book.png)
-- Optional: Use your preferred text editor, such as Atom editor <https://atom.io>, to modify the text.
-- In RStudio, upper-right corner, select the Build tab, select Build Book, and choose All Formats to build both the gitbook-style static web edition and PDF edition.
-- If RStudio successfully builds both editions of your minimal book, the output will be saved into your `bookdown-minimal` folder, in a subfolder named `_book`, because that's how this sample is configured. The RStudio internal browser should automatically open your web edition (and it's not a very good browser, so feel free to close it). Also, open the subfolder and inspect the PDF edition. If RStudio found any errors, they will appear in the Build viewer. [See screenshot](images/15-bookdown/11-successful-build.png)
-- Hint: In future sessions with RStudio, you may need to select Packages tab and click Update to keep bookdown and other software packages up to date. [See screenshot](images/15-bookdown/12-packages-update.png)
-- Close RStudio.
-
-#### Publish your Book with GitHub Pages {-}
-- Open GitHub Desktop and navigate to the `bookdown-minimal` folder on your local computer. Write a summary to commit (save) the changes you made above to your master branch, and push this version to your online GitHub repo.
-- In your web browser, go to your online GitHub repo, with a web address similar to `https://github.com/USERNAME/bookdown-minimal` (insert your GitHub username).
-- In your GitHub repo, select Settings, scroll down to the GitHub Pages section (which is a free web hosting service to publish your code and book editions on the public web). Select Master Branch as your source, and Save.
-- Scroll down to this section again, and the web address of your published site should appear. Copy this address.
-- In a new browser tab, paste the web address from above, and at the end add `_book/index.html` because this sample is configured to store the web edition of your book in this subfolder. Your web address should be similar to: `https://USERNAME.github.io/bookdown-minimal/_book/index.html`
-
-#### Customize your Bookdown and GitHub settings {-}
-- To see customized settings for this book, go to its online repository <https://github.com//dataviz-bookdown>
-- In the `_bookdown.yml` file, the output directory is set to build all book formats into the `docs` folder.
-- The GitHub Pages settings for this repo (which you cannot view) is set to publish from the `master/docs` folder, to match the output directory above. This simplifies the published web address to this format: `https://USERNAME.github.com/REPONAME`
-- Most of the Bookdown configuration settings appear in the `index.Rmd` file. Read more about these options in the software developer's technical guide, <https://bookdown.org/yihui/bookdown/>.
-- In addition, this GitHub Pages repo is published with a custom domain name <https://handsondataviz.org>. Learn more about custom domain names at <https://help.github.com/articles/using-a-custom-domain-with-github-pages/>, which requires purchasing a domain name from a web hosting service (such as <http://ReclaimHosting.com>). Adding a GitHub Pages custom domain name creates an additional `CNAME` file in the `docs` subfolder. Be careful not to delete it (or place a copy in a subfolder for safekeeping).
-- This book also includes a custom `404.html` file that was manually transferred into the `docs` subfolder, since it is not automatically built by Bookdown.
-- This book also includes a custom `google-analytics-.html` file in the root-level of repo (where bookdown looks for it) and also is manually transferred to the `docs` subfolder (since bookdown does *not appear* to copy it to there on each build). This tracks web traffic with Google Analytics.
-
-#### ** Style Guide with Bookdown-flavored Markdown {-}
-
-##### Links with brackets and parentheses {-}
-Use brackets and parentheses for an [embedded link](http://example.com)
-
-Use parentheses only for a non-embedded link (http://example.com)
-
-Similarly, display URL with angle brackets: <http://example.com>
-
-If necessary, use HTML to create <a href='http://example.com/'>link that opens in a new page</a>
-
-##### Headers with Cross-Reference Links {-}
-
-This  book, each chapter and section is a separate .Rmd file. The numerical order of the file names (index.Rmd, 0.1-x.Rmd, 0.2-y.Rmd, 01-z.Rmd, etc) determines the sequence that they will appear in the built book.
-
-In the index.Rmd file, the settings for the web book state that each chapter and section will be split into its own HTML page, with no automatic numbering.
-
-```markdown
-split_by: section
-number_sections: false
+```
+# Top-level chapter title {#unique-name}
+## Second-level section title {- #unique-name}
+### Third-level subhead {-}
+#### Fourth-level subhead {-}
 ```
 
-Chapters begin with a first-level header (one hashtag: #) and sections begin with a second-level header (two hashtags: ##). Both chapter and section titles are immediately followed by short ID in curly brackets to enable easy cross-reference links inside the book. The short IDs **MUST** be unique, and ideally **SHOULD** match the .Rmd file name. Although each hashtag chapter/section title is the default ID (such as #Introduction in index.Rmd),  it's safer to create a unique short ID for each chapter/section to avoid confusion.
+Also, we match the unique ID keyword to the file name for top-level chapters this way: `01-keyword.Rmd` to keep our work organized. Unique names should contain only _alphanumeric_ characters (a-z, A-Z, 0-9) or dashes (-).
 
-Bylines appear in italics at the top of each chapter or section, with an embedded cross-reference links to the authors page, followed by the last updated date.
+In the Bookdown `index.Rmd` for the HTML book output and the PDF output, the `toc_depth: 2` setting displays chapter and section headers down to the second level in the Table of Contents.
 
-Examples of chapter and section headers, with short IDs, bylines, and dates:
+The `split_by: section` setting divides the HTML pages at the second-level header, which creates shorter web pages with reduced scrolling for readers. For each web page, the unique ID becomes the file name, and is stored in the `docs` subfolder.
 
-```markdown
-# Chapter Title {#chapter}
-*by [Jack Dougherty and Ilya Ilyankou](authors), last updated January 22, 2019*
+The `number_sections` setting is true for the HTML and PDF editions, and given the `toc_depth: 2`, this means that they will display two-level chapter-section numbering (1.1, 1.2, etc.) in the Table of Contents. Note that `number_sections` must be true to display Figure and Table numbers in x.x format, which is desired for this book. See relevant settings in this excerpt from `index.Rmd`:
+
+```
+output:
+  bookdown::gitbook:
+    ...
+    toc_depth: 2
+    split_by: section
+    number_sections: true
+    split_bib: true
+    ...
+bookdown::pdf_book:
+  toc_depth: 2
+  number_sections: true
 ```
 
-```markdown
-## Section Title {#section}
-*by [Jack Dougherty and Ilya Ilyankou](authors), last updated January 22, 2019*
+Note that chapter and section numbering do *not* appear automatically in the MS Word output unless you supply a reference.docx file, as described below:
+
+- https://bookdown.org/yihui/rmarkdown/word-document.html
+- https://stackoverflow.com/questions/52924766/numbering-and-referring-sections-in-bookdown
+- https://stackoverflow.com/questions/50609212/caption-styles-for-word-document2-in-bookdown
+
+In the `_bookdown.yml` settings, all book outputs are built into the `docs` subfolder of our GitHub repo, as shown in this excerpt:
+```
+output_dir: "docs"
+book_filename: "HandsOnDataViz"
+language:
+  label:
+    fig: "Figure "
+chapter_name: "Chapter "
+```
+In our GitHub repo, we set GitHub Pages to publish to the web using `master/docs`, which means that visitors can browse the source files at the root level, and view the HTML web pages hosted in the `docs` subfolder. We use the GitHub Pages custom domain setting so that the HTML edition is available at https://HandsOnDataViz.org.
+
+The `docs` subfolder also may contain the following items, which are *not* generated by Bookdown and need to be manually created:
+
+- `CNAME` file for the custom domain, generated by GitHub Pages.
+- `.nojekyll` invisible empty file to ensure speedy processing of HTML files by GitHub Pages.
+- `404.html` custom file to redirects any mistaken web addresses under the domain back to the `index.html` page.
+
+One more option is to copy the Google Analytics code for the web book, paste it into an HTML file in the book repo, and include this reference in the `index.Rmd` code:
+
+```
+output:
+  bookdown::gitbook:
+  ...
+  includes:
+    in_header: google-analytics.html
 ```
 
-Subheadings inside the chapters/sections must begin with 4 hashtags and end with a no-numbering symbol `{-}`. Note: Using three hashtags makes the subheader appear in the TOC because I have not found way to control toc_depth in web output. Use the no-number symbol to prevent automatic numbering of subheaders (in case we switch the book settings from no-auto-numbering to auto-numbering in the future).
+## Style Guide {- #style-guide}
+View the source code to better understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd
 
-```markdown
-#### Subheadings: use 4 hashtags and a no-number symbol {-}
+This book is composed in R-flavored Markdown (.Rmd), and each paragraph begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word.
+
+Insert an embedded link to [O'Reilly](https://www.oreilly.com/). This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O'Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.
+
+For lists, always insert a blank line *before* the items, unless they appear directly after hashtag header.
+
+- unordered
+- list
+
+1. ordered
+2. list
+
+Dashes:
+
+- Use a hyphen (1 dash) for hyphenated words, such as two-thirds or dog-friendly hotel.
+- Use an en-dash (2 dashes) for ranges, such as the May--September magazine issue.
+- Use an em-dash (3 dashes) to insert an additional thought---like this---in a sentence.
+
+Insert `TODO` to note items to finish or review with co-author or editor.
+
+Insert three back tics to insert a code block. Check character line length limits in [O'Reilly style guide](http://oreillymedia.github.io/production-resources/styleguide/#line-length):
+
+```
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 ```
 
-To embed an internal cross-reference to any chapter or section in the book, embed a link with brackets [for the text] and parentheses (with the short ID). If the cross-ref appears in the body of the text, ADD THE PHRASE "in this book" to the end of the sentence to allow us to search/find all cross-refs in future if needed:
+### Conditional Formatting {-}
+Conditional formatting offers the option to display text or images in some editions, but not other editions. Options:
 
-```markdown
-See the [GitHub tutorial](github) in this book.
-```
-NOTE that cross-reference links above are designed for HOSTED WEB BOOKS, and may not work the same in local repo versions, or in ebook/PDF versions.
-
-#### Bookdown-flavored Markdown Syntax {-}
-
-For an em-dash, use three hyphens---like this---rather than two hyphens.
-
-For a block quote, start each line with a caret **AND** add two spaces to insert a line break:
-
-Code:
-```Markdown
-> I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him.    
-> --- Mark Twain  
-> --- notable American author
-```
+1. Insert a HTML code comment `<!-- Comment -->` in the .Rmd file to hide a few lines of text. This appears as commented-out text in the HTML and .md formats, is not displayed in the HTML browser, and does not appear in any way in the PDF, MS Word or AsciiDoc formats.
 
 Demo:
-> I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him.    
-> --- Mark Twain  
-> --- notable American author  
 
-Simple footnote
+<!-- This comment is visible in the source text, but not visible in the HTML browser, nor PDF or MSWord or AsciiDoc outputs. -->
 
-Code:
-```Markdown
-A text-only footnote.^[This is a footnote, with no reference]
+2. R package function `is_[html/latex]_output` allows conditional output for different book products, such as text that should appear in the HTML edition but not the PDF edition, or vice versa.
+
+Demos:
+
+`r if (knitr::is_html_output()) '<!--'`
+This line appears in the PDF and Word versions, and is commented-out in the HTML and Markdown and AsciiDoc versions.
+`r if (knitr::is_html_output()) '-->'`
+
+`r if (knitr::is_latex_output()) '<!--'`
+This line appears in the HTML, Word, Markdown, and AsciiDoc versions, and is commented-out in the PDF version.
+`r if (knitr::is_latex_output()) '-->'`
+
+TODO: Create conditional formatting that displays *only* in the HTML edition, and allows the inclusion of R code-chunks to conditionally display images. See links for more complex conditional formatting:
+
+- https://stackoverflow.com/questions/56808355/how-to-conditionally-process-sections-in-rmarkdown
+- https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html
+- https://blog.earo.me/2019/10/26/reduce-frictions-rmd/
+- https://stackoverflow.com/questions/53861244/html-specific-section-in-bookdown
+- https://stackoverflow.com/questions/41084020/add-a-html-block-above-each-chapter-header
+- https://stackoverflow.com/questions/45360998/code-folding-in-bookdown
+
+3. Option to customize the `style.css` code for the HTML book.
+
+4. Option to add headers, footers, preambles to the HTML or LaTeX versions.
+
+5. Build different versions of the HTML and LaTeX (PDF) books using different chapters by listing them in order in the `_bookdown.yml` file:
+
 ```
-Demo:
-A text-only footnote.^[This is a footnote, with no reference]
-
-See On The Line book (http://OnTheLine.trincoll.edu) for more details about footnotes using Zotero and Better BibTeX.
-
-#### Embed images and iframes {-}
-
-TODO - update
-
-
-#### Explore the Chart: embedded HTML iframe {-}
-
-Code:
-```HTML
-<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px"></iframe>
-Recommended: Insert caption and link to view the full-screen version.
-```
-Demo:
-
-<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px"></iframe>
-Recommended: Insert caption and link to view the full-screen version.
-
-#### Scroll the Map: embedded HTML iframe {-}
-
-Code:
-```html
-<iframe src="https://ontheline.github.io/otl-town-borders/" width="90%" height="525px"></iframe>
-Recommended: Insert caption and link to view the full-screen version.
-```
-Demo:
-
-<iframe src="https://ontheline.github.io/otl-town-borders/" width="90%" height="525px"></iframe>
-Recommended: Insert caption and link to view the full-screen version.
-
-#### Watch the YouTube Video: embedded HTML iframe from secure https {-}
-
-Code:
-```html
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gl3uIRYYUmI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-Recommended: Insert caption and link to view the full-screen version.
-```
-Demo:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gl3uIRYYUmI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-Recommended: Insert caption and link to view the full-screen version.
-
-#### Output in other formats {-}
-
-This book is being built primarily for the web edition, and will require more work to create formatted PDF and EPUB versions.
-
-Add this later to index.Rmd, and correctly place and indent it
-
-```markdown
-      download: [pdf, epub, mobi, docx]
+rmd_files:
+  html: ["index.Rmd", "abstract.Rmd", "intro.Rmd"]
+  latex: ["abstract.Rmd", "intro.Rmd"]
 ```
 
-And also add this to index.Rmd, and correctly place and indent it
+### Cross-references {-}
+In order to cross-reference in Bookdown, assign a unique name or R code-chunk label to each chapter, section, figure, and table. Unique names and labels should contain only _alphanumeric_ characters (a-z, A-Z, 0-9) or dashes (-).
 
-```markdown
-bookdown::pdf_book: default
+To cross-reference any *chapter or section*, and allow readers to jump there, use a HTML link with the unique name, such as `index.html` or `style-guide.html`. Demos:
 
-bookdown::epub_book:
-  dev: svglite
-  stylesheet: css/style.css
+- See [Introduction](index.html)
+- See ["Style Guide" in Chapter x](style-guide.html).
 
-bookdown::word_document2:
-  default
+
+Contrary to the [Bookdown manual](https://bookdown.org/yihui/bookdown/cross-references.html), *avoid* using Bookdown unique ID links to cross-reference chapters or sections, because these create extraneous and imprecise URLs, such as this [bad example](#style-guide).
+
+To cross-reference figures and tables, and display their auto-number and allow readers to jump there, write a call-out with a Bookdown reference to a code-chunk label, such as `See Figure \@ref(fig:sample-map)` or `See Table \@ref(tab:left-table)`. Demos:
+
+- See Figure \@ref(fig:tiger).
+- See Table \@ref(tab:left-table).
+
+Cross-reference interactivity varies by output:
+
+- In HTML, all cross-refs are clickable.
+- In PDF, all cross-refs are clickable (except chapter-level HTML links).
+- In Word, no cross-refs are clickable (unless this varies with reference.docx).
+- TBA with Markdown (.md) and AsciiDoc.
+
+When writing cross-references in the text, the [O'Reilly Style Guide](http://oreillymedia.github.io/production-resources/styleguide/#considering_electronic_formats) prefers live cross references (e.g., "see Figure 2-1"), but if not feasible, use "preceding" or "following" because physical placement of elements may vary across print and digital formats. *Avoid* using "above" or "below."
+
+## Images {- #images}
+Create high-resolution color static images in .jpg or .png format, and animated .gif files, and save them into the `images` subfolder by chapter. Make sure that color images can be rendered into grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add `-original` to the end of the file name prior to resizing or adding more text or artwork.
+
+Use Photoshop or a similar photo-editing tool (*not* Preview) to add any additional text or artwork if desired. Try to maintain a high resolution (300 dpi) and reduce size if desired to fit into the HTML book (measured in pixels) and PDF book (measured in inches). Save into the same folder with the same file name, minus `-original`, like this:
+
 ```
+images/05-chart/design-no-junk-original.png
+images/05-chart/design-no-junk.png
+```
+
+When inserting image filenames into the text, use the version minus `-original`. If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:
+
+`<!-- Images below are 200x200 at 300 resolution -->`
+
+In this book, use *Markdown formatting only for images that appear inside tables* or *do not require captions or figure numbering*, and leave the caption field blank, like this example:
+
+<!-- Images below are 200x200 at 300 resolution -->
+
+| Co-Authors      | About Us      |
+| --------------- | ------------- |
+| ![](images/15-bookdown/dougherty-jack.jpg) | About [Jack Dougherty](http://jackdougherty.org) |
+| ![](images/15-bookdown/ilyankou-ilya.jpg) | About [Ilya Ilyankou](https://github.com/ilyankou) |   
+
+Although Markdown formatting offers a simple syntax that easily converts into other formats with Bookdown/Pandoc, there is no auto-numbering in the HTML edition, while auto-numbering appears in the PDF edition, and numbered figures are required by the publisher. Furthermore, Markdown formatting does not allow conditional output.
+
+For these reasons, this book *primarily uses R code-chunk formatting for images*. The syntax is more complex but supports auto-numbering in HTML and PDF, and conditional output for interactive and static images. Note that R code-chunk images do *not* easily convert with Pandoc from Markdown to AsciiDoc, but "Figure x Caption" appears as a placeholder.
+
+Auto-numbering appears in `Figure x.x` format in HTML and PDF, but `Figure x` format in MS Word. TODO: Check if Word formatting can be changed with reference.docx.
+
+Note that images in PDF output will "float" by design and may appear before or after the desired page, so always add a cross-reference call-out.
+
+Write R code-chunk labels that follow the image file name, and avoid duplicate labels across the book:
+
+```
+ref:design-no-junk
+
+images/05-chart/design-no-junk.png
+```
+
+Do not insert spaces inside the `ref:chunk-label` for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add another blank line.
+
+### Demo: R code-chunk for static image {-}
+...as shown in Figure \@ref(fig:tiger).
+
+(ref:tiger) Caption here. Markdown embedded links are acceptable.
+
+```{r tiger, fig.cap="(ref:tiger)"}
+ knitr::include_graphics("images/15-bookdown/tiger.png")
+```
+
+R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the web version, and a static image with an embedded link appears in the PDF and MS Word outputs. Also note the option to change the default iframe height (400px) and width with settings in the `custom-scripts.html` file, with a code comment reminder.
+
+### Demo: R code-chunk for HTML iframe and static image {-}
+...as shown in Figure \@ref(fig:sample-map).
+
+(ref:sample-map) Caption here, and add embedded link to explore the [full-screen interactive map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
+
+<!-- set iframe 600px height 100% width in custom-scripts.html -->
+```{r sample-map, fig.cap="(ref:sample-map)"}
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/") else knitr::include_graphics("images/15-bookdown/sample-map.jpg")
+```
+
+### Demo: R code-chunk for GIF animation and static image {-}
+TODO: FIX to make sizing appear consistently across browsers (FFox vs Chrome).
+
+...as shown in Figure \@ref(fig:excel-drag).
+
+(ref:excel-drag) Caption here, with embedded link to GitHub repo, not GitHub Pages [animated GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/excel-drag.gif).
+
+<!-- set iframe 450px height in custom-scripts.html -->
+```{r excel-drag, fig.cap="(ref:excel-drag)"}
+if(knitr::is_html_output()) knitr::include_url("images/15-bookdown/excel-drag.gif") else knitr::include_graphics("images/15-bookdown/excel-drag.png")
+```
+
+### Demo: R code-chunk for Youtube video and static image {-}
+Be sure to use the *embed* link from the YouTube *share* button.
+
+...as shown in the video \@ref(fig:video-sample).
+
+(ref:video-sample) Caption here, with embedded link to the [YouTube video](https://youtu.be/-nGdrzMuUnI).
+
+```{r video-sample, fig.cap="(ref:video-sample)"}
+if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-nGdrzMuUnI") else knitr::include_graphics("images/15-bookdown/video-sample.png")
+```
+
+This Bookdown `index.Rmd` file includes an R code-chunk setting immediately after the first header, which displays each code-chunk image without a code echo. Read more about this feature and related options in this [Bookdown chapter](https://bookdown.org/yihui/bookdown/figures.html).
+
+```
+{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Tables {- #tables}
+Create tables in Markdown format, since it produces good output for HTML, PDF, Word, and Markdown. Use a tool such as [Tables Generator](https://www.tablesgenerator.com/markdown_tables) to import significant table data in CSV format, format the column alignment as desired, and press Generate button to create table in Markdown format. For significant table data, save the CSV version in a GitHub repo for potential later use.
+
+Add the Markdown table code shown below to auto-number (Table x) in HTML, PDF, Word.
+
+Table: (\#tab:left-table) Left-justify content, remember blank Line
+
+| Much Much Longer Header | Short Header | Short Header |
+|:---------|:---|:---|
+| Left-justify text content with left-colons | Less  | Here |
+| Use more hyphens to grant more space to some columns | Less | Here |
+
+Table: (\#tab:right-table) Right-justify content, remember blank line
+
+| Header1 | Header2 | Header3 |
+|-----:|-----:|-----:|
+| 123 | 456 | 789 |
+| Right-justify | numerical content  | with right-colons |
+| Use equal hyphens | to make equal space | for all columns |
+
+Workaround for Markdown-to-AsciiDoc: Currently, our attempt to use Pandoc to directly convert a Bookdown-generated Markdown file to AsciiDoc fails because Bookdown creates the .md file with tables in .html format, not Markdown. Our workaround is to paste the individual Markdown-formatted tables directly from the .Rmd into the large .md file prior to converting with Pandoc to AsciiDoc.
+
+## Notes and Bibliography {- #notes}
+This book displays endnotes for each chapter in the HTML book, and footnotes at the bottom of pages for the PDF and MS Word books, followed by an alphabetized bibliography of all references cited on the last page. The notes and bibliography also appear in the full-book Markdown file.
+
+To create notes, insert citation keys in the text, such as `@huffHowLieStatistics1954`, which are generated by [Zotero bibliographic database](http://zotero.org) with the [Better BibTex extension](https://retorque.re/zotero-better-bibtex/), and export these in the *Better BibLaTeX* format into the `dataviz.bib` in the book repo. The repo also contains `.csl` file to generate the notes and bibliography in a specific Chicago-style format, downloaded from the [Zotero Styles Repository](https://www.zotero.org/styles). These instructions are referenced in the `index.Rmd` file for both the HTML and PDF formats, as shown in these excerpts:
+
+```
+bibliography: dataviz.bib
+citation-style: chicago-fullnote-bibliography.csl
+...
+output:
+  bookdown::gitbook:
+    ...
+    pandoc_args: [ "--csl", "chicago-fullnote-bibliography.csl" ]
+
+  bookdown::pdf_book:
+    ...
+    citation_package: none
+    pandoc_args: [ "--csl", "chicago-fullnote-bibliography.csl" ]
+```
+
+Here's a text-only note, with no Zotero citation.^[This is a note, with no bibliographic reference.]
+
+To create a note with citations only, separate Zotero/BibTeX citation keys with semi-colons: ^[@huffHowLieStatistics1954; @monmonierHowLieMaps1996]
+
+Since notes also may include text and punctuation in Markdown syntax, always insert a caret symbol prior to the brackets to demarcate a note:^[Compare how "lying" is justified by @huffHowLieStatistics1954, pp. 10-11 and @monmonierHowLieMaps1996, pp. 11-12.]
+
+Note that the `chicago-fullnote-bibliography.csl` format automatically shortens the note after it its first reference.
+
+### Pandoc Conversion {-}
+- Download [Pandoc](https://pandoc.org)
+- Set Bookdown to build the book as one large Markdown file (docs folder, suffix .md)
+- Use command line to navigate to subfolder with `pwd` and `cd`.
+- Convert with: `pandoc handsondataviz.md --from markdown --to asciidoc --standalone --output handsondataviz.asciidoc`
+- Confirm if AsciiDoc file matches [O'Reilly Atlas import style](https://docs.atlas.oreilly.com/writing_in_asciidoc.html).

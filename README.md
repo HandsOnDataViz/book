@@ -2,7 +2,7 @@
 
 Open-access book-in-progress by Jack Dougherty and Ilya Ilyankou, under contract with O'Reilly Media, Inc.
 
-Read for free online at <http://handsondataviz.org>, or purchase print or ebook edition (to come).
+Read for free online at <http://HandsOnDataViz.org>, or purchase print or ebook edition (to come).
 
 View open-source code for source text and templates at <https://github.com/handsondataviz>.
 
@@ -18,4 +18,4 @@ and distributed under a [Creative Commons BY-NC-ND 4.0 International License](ht
 You may freely share this content for non-commercial purposes, with a source credit to <http://HandsOnDataViz.org>.
 
 ## Disclaimer
-This open-source repository is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. No installation or technical support will be provided.
+This open-source repository is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. No installation or technical support will be provided.

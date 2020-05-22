@@ -29,11 +29,6 @@ pre code {
 p.flushright {
   text-align: right;
 }
-/* remove blockquote last-child right alignment */
-/* blockquote > p:last-child {
-  text-align: right;
-} */
-/* darken block quote text, but same light border */
 .book .book-body .page-wrapper .page-inner section.normal blockquote {
     color: #4d4d4d;
     border-left: 4px solid #e5e5e5;
@@ -71,49 +66,4 @@ blockquote > p:first-child {
     top:10px;
     bottom: 0px;
     font-size: 60px;
- }
- /* footnote counter to restart numbering for each chapter
- thanks @romles https://stackoverflow.com/questions/50616517/restart-endnote-numbering-after-each-gitbook-style-web-chapter-in-r-bookdown */
-
- /* don't show the wrong footnote calls */
- .footnote-ref sup {
-   display: none;
- }
-
- /* use a counter for footnote calls */
- .level1 {
-   counter-reset: fn-call;
- }
-
- .footnote-ref {
-   counter-increment: fn-call;
- }
-
- /* generate new footnote calls */
- .footnote-ref::after {
-   content: counter(fn-call);
-   position: relative;
-   top: -.5em;
-   font-size: 85%;
-   line-height: 0;
-   vertical-align: baseline;
- }
-
- /* use a counter for footnotes numbering */
- .footnotes ol {
-   list-style: none;
-   counter-reset: fn-number;
- }
-
- .footnotes li {
-   counter-increment: fn-number;
- }
-
- .footnotes p::before {
-   content: counter(fn-number) '. ';
- }
-
-/* increase table width */
- table {
-   width: 100% !important;
  }

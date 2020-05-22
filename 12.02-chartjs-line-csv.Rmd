@@ -1,9 +1,0 @@
-## Line Chart.js with CSV Data {#chartjs-line-csv}
-
-Line charts are often used to show temporal data (trends). The x-axis often represents time intervals. Unlike column or bar charts, y-axes of line charts do not necessarily start at 0.
-
-<iframe src="https://handsondataviz.github.io/chartjs-templates/line-chart/index.html" width="100%" height=500 style="border: 0"></iframe>
-
-Demo: https://handsondataviz.github.io/chartjs-templates/line-chart/index.html
-
-Source and instructions: https://github.com//chartjs-templates/tree/master/line-chart

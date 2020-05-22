@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 15 Publishing with Bookdown | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 15 Publishing with Bookdown | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -25,6 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
+<meta name="date" content="2020-05-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +33,7 @@
   
   
 <link rel="prev" href="peer-3-sample-2-notes.html"/>
-
+<link rel="next" href="style-guide.html"/>
 <script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -59,6 +60,14 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-5488840-29');
+</script>
+<script>
+  // adjust web edition height or width of iframe for specific figure references, using tilde (~iframe)
+$(document).ready(function() {
+  $("#fig\\:sample-map~iframe").attr("height", "600px");
+  $("#fig\\:sample-map~iframe").attr("width", "100%");
+  $("#fig\\:excel-drag~iframe").attr("height", "450px");
+})
 </script>
 
 
@@ -144,140 +153,135 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
 <ul>
-<li class="chapter" data-level="0.1" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i><b>0.1</b> What is Data Visualization?</a></li>
-<li class="chapter" data-level="0.2" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i><b>0.2</b> Why this book?</a></li>
-<li class="chapter" data-level="0.3" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i><b>0.3</b> Authors and Contributors</a></li>
-<li class="chapter" data-level="0.4" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i><b>0.4</b> How to Read</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
+<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
+<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i><b>1.1</b> Draw and Write Your Data Story</a></li>
-<li class="chapter" data-level="1.2" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i><b>1.2</b> Ask Questions When Choosing Tools</a></li>
-<li class="chapter" data-level="1.3" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i><b>1.3</b> Rate Three Simple Map Tools</a></li>
+<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
+<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i><b>2.1</b> Upload Files and Convert to Google Sheets</a></li>
-<li class="chapter" data-level="2.2" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i><b>2.2</b> Make a Copy with Google Sheets</a></li>
-<li class="chapter" data-level="2.3" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i><b>2.3</b> Share Data with Google Sheets</a></li>
-<li class="chapter" data-level="2.4" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i><b>2.4</b> Save Spreadsheets in CSV or ODS</a></li>
-<li class="chapter" data-level="2.5" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i><b>2.5</b> Sort and Filter Data</a></li>
-<li class="chapter" data-level="2.6" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i><b>2.6</b> Calculate with Formulas and Functions</a></li>
-<li class="chapter" data-level="2.7" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i><b>2.7</b> Group Data with Pivot Tables</a></li>
-<li class="chapter" data-level="2.8" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i><b>2.8</b> Match Columns with VLOOKUP</a></li>
-<li class="chapter" data-level="2.9" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i><b>2.9</b> Collect and Share Data with Google Forms</a></li>
+<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload Files and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Data with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Save Spreadsheets in CSV or ODS</a></li>
+<li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
+<li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
+<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Group Data with Pivot Tables</a></li>
+<li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i><b>3.1</b> US and Census Bureau Open Data</a>
-<ul>
-<li class="chapter" data-level="3.1.1" data-path="census.html"><a href="census.html#census-areas-in-the-hartford-region"><i class="fa fa-check"></i><b>3.1.1</b> Census areas in the Hartford region</a></li>
-<li class="chapter" data-level="3.1.2" data-path="census.html"><a href="census.html#data.census.gov"><i class="fa fa-check"></i><b>3.1.2</b> Data.census.gov</a></li>
-<li class="chapter" data-level="3.1.3" data-path="census.html"><a href="census.html#social-explorer"><i class="fa fa-check"></i><b>3.1.3</b> Social Explorer</a></li>
-<li class="chapter" data-level="3.1.4" data-path="census.html"><a href="census.html#data.gov"><i class="fa fa-check"></i><b>3.1.4</b> Data.gov</a></li>
-<li class="chapter" data-level="3.1.5" data-path="census.html"><a href="census.html#national-center-for-education-statistics"><i class="fa fa-check"></i><b>3.1.5</b> National Center for Education Statistics</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i><b>3.2</b> Source Your Data Files</a>
-<ul>
-<li class="chapter" data-level="3.2.1" data-path="source.html"><a href="source.html#learn-more-3"><i class="fa fa-check"></i><b>3.2.1</b> Learn more</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i><b>3.3</b> Public or Private Data?</a></li>
-<li class="chapter" data-level="3.4" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i><b>3.4</b> Know Your Data: Is It Good or Bad?</a>
-<ul>
-<li class="chapter" data-level="3.4.1" data-path="know.html"><a href="know.html#learn-more-4"><i class="fa fa-check"></i><b>3.4.1</b> Learn more</a></li>
-</ul></li>
-<li class="chapter" data-level="3.5" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i><b>3.5</b> Connecticut Open Data</a></li>
+<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a></li>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a></li>
+<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public or Private Data?</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a></li>
+<li class="chapter" data-level="" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i>Connecticut Open Data</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i><b>4.1</b> Clean Data with Spreadsheets</a></li>
-<li class="chapter" data-level="4.2" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i><b>4.2</b> Clean Data with Open Refine</a></li>
-<li class="chapter" data-level="4.3" data-path="ctnamecleaner.html"><a href="ctnamecleaner.html"><i class="fa fa-check"></i><b>4.3</b> Fix Connecticut Town Names with CTNamecleaner</a></li>
+<li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
+<li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with Open Refine</a></li>
+<li class="chapter" data-level="" data-path="ctnamecleaner.html"><a href="ctnamecleaner.html"><i class="fa fa-check"></i>Fix Connecticut Town Names with CTNamecleaner</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i><b>5.1</b> Chart Design Principles</a></li>
-<li class="chapter" data-level="5.2" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i><b>5.2</b> Google Sheets Charts</a></li>
-<li class="chapter" data-level="5.3" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i><b>5.3</b> Column and Bar Charts with Google Sheets</a></li>
-<li class="chapter" data-level="5.4" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i><b>5.4</b> Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="5.5" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i><b>5.5</b> Scatter and Bubble Charts with Google Sheets</a></li>
-<li class="chapter" data-level="5.6" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i><b>5.6</b> Create Charts with Tableau Public</a></li>
-<li class="chapter" data-level="5.7" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i><b>5.7</b> Create XY Scatter Chart with Tableau Public</a></li>
-<li class="chapter" data-level="5.8" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i><b>5.8</b> Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
+<li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i><b>6.1</b> Map Design Principles</a></li>
-<li class="chapter" data-level="6.2" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i><b>6.2</b> Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="6.3" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i><b>6.3</b> Point Map with Carto Builder</a></li>
-<li class="chapter" data-level="6.4" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i><b>6.4</b> Filtered Point Map with Socrata Open Data</a></li>
-<li class="chapter" data-level="6.5" data-path="social-explorer-maps.html"><a href="social-explorer-maps.html"><i class="fa fa-check"></i><b>6.5</b> Polygon Maps and Storyboards with Social Explorer</a></li>
-<li class="chapter" data-level="6.6" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i><b>6.6</b> Polygon Map with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
+<li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
+<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
+<li class="chapter" data-level="" data-path="social-explorer-maps.html"><a href="social-explorer-maps.html"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
+<li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>7</b> Embed On Your Web</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i><b>7.1</b> Create a Simple Web Page with GitHub Pages</a></li>
-<li class="chapter" data-level="7.2" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i><b>7.2</b> Copy an iframe code from a Google Sheets interactive chart</a></li>
-<li class="chapter" data-level="7.3" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i><b>7.3</b> Convert a Weblink into an Iframe</a></li>
-<li class="chapter" data-level="7.4" data-path="iframe-github.html"><a href="iframe-github.html"><i class="fa fa-check"></i><b>7.4</b> Embed an Iframe in GitHub Pages</a></li>
-<li class="chapter" data-level="7.5" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i><b>7.5</b> Embed an Iframe on WordPress.org</a></li>
-<li class="chapter" data-level="7.6" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i><b>7.6</b> Embed Tableau Public on your Website</a></li>
+<li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
+<li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
+<li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an Iframe</a></li>
+<li class="chapter" data-level="" data-path="iframe-github.html"><a href="iframe-github.html"><i class="fa fa-check"></i>Embed an Iframe in GitHub Pages</a></li>
+<li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
+<li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>8</b> Modify and Host Code with GitHub</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i><b>8.1</b> Fork and Edit a Simple Leaflet Map with GitHub</a></li>
-<li class="chapter" data-level="8.2" data-path="fork-highcharts.html"><a href="fork-highcharts.html"><i class="fa fa-check"></i><b>8.2</b> Fork and Edit a Highcharts Scatter Chart with GitHub</a></li>
-<li class="chapter" data-level="8.3" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i><b>8.3</b> Create a New Repo and Upload Code with GitHub</a></li>
-<li class="chapter" data-level="8.4" data-path="choose-license.html"><a href="choose-license.html"><i class="fa fa-check"></i><b>8.4</b> Choose an Open-Source Code License</a></li>
-<li class="chapter" data-level="8.5" data-path="pull-request.html"><a href="pull-request.html"><i class="fa fa-check"></i><b>8.5</b> Pull Request to Merge Changes on GitHub</a></li>
-<li class="chapter" data-level="8.6" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i><b>8.6</b> Work more efficiently with Atom editor and GitHub Desktop</a></li>
-<li class="chapter" data-level="8.7" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i><b>8.7</b> Fix Common GitHub and Code Errors</a></li>
+<li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork and Edit a Simple Leaflet Map with GitHub</a></li>
+<li class="chapter" data-level="" data-path="fork-highcharts.html"><a href="fork-highcharts.html"><i class="fa fa-check"></i>Fork and Edit a Highcharts Scatter Chart with GitHub</a></li>
+<li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Code with GitHub</a></li>
+<li class="chapter" data-level="" data-path="choose-license.html"><a href="choose-license.html"><i class="fa fa-check"></i>Choose an Open-Source Code License</a></li>
+<li class="chapter" data-level="" data-path="pull-request.html"><a href="pull-request.html"><i class="fa fa-check"></i>Pull Request to Merge Changes on GitHub</a></li>
+<li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
+<li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>9</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i><b>9.1</b> Geocode Locations into Coordinates with US Census or Google</a></li>
-<li class="chapter" data-level="9.2" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i><b>9.2</b> Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="9.3" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i><b>9.3</b> Normalize Data to Create Meaningful Polygon Maps</a></li>
-<li class="chapter" data-level="9.4" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i><b>9.4</b> Convert to GeoJSON format</a></li>
-<li class="chapter" data-level="9.5" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i><b>9.5</b> GeoJson.io to Convert, Edit, and Create Map Data</a></li>
-<li class="chapter" data-level="9.6" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i><b>9.6</b> MapShaper.org to Convert, Edit, and Join Data</a></li>
-<li class="chapter" data-level="9.7" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i><b>9.7</b> Convert a Compressed KMZ file to KML format</a></li>
+<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
+<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
+<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>MapShaper.org to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>10</b> Detect Bias in Data Stories</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i><b>10.1</b> How to Lie with Charts</a></li>
-<li class="chapter" data-level="10.2" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i><b>10.2</b> How to Lie with Maps</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>11</b> Tell Your Data Story</a></li>
 <li class="chapter" data-level="12" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>12</b> Chart.js Code Templates</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i><b>12.1</b> Bar Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="12.2" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i><b>12.2</b> Line Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="12.3" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i><b>12.3</b> Scatter Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="12.4" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i><b>12.4</b> Bubble Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i>Scatter Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i>Bubble Chart.js with CSV Data</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>13</b> Leaflet Map Templates</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i><b>13.1</b> Leaflet Maps with Google Sheets template</a></li>
-<li class="chapter" data-level="13.2" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i><b>13.2</b> Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
-<li class="chapter" data-level="13.3" data-path="leaflet-maps-with-socrata.html"><a href="leaflet-maps-with-socrata.html"><i class="fa fa-check"></i><b>13.3</b> Leaflet Maps with Socrata API Open Data</a></li>
-<li class="chapter" data-level="13.4" data-path="leaflet-maps-open-apis.html"><a href="leaflet-maps-open-apis.html"><i class="fa fa-check"></i><b>13.4</b> Pull Open Data into Leaflet Map with APIs</a></li>
-<li class="chapter" data-level="13.5" data-path="leaflet-polygon-map-click.html"><a href="leaflet-polygon-map-click.html"><i class="fa fa-check"></i><b>13.5</b> Leaflet Thematic Polygon Map with Clickable Info Window template</a></li>
-<li class="chapter" data-level="13.6" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i><b>13.6</b> Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
-<li class="chapter" data-level="13.7" data-path="leaflet-polygon-map-multi-year-tabs.html"><a href="leaflet-polygon-map-multi-year-tabs.html"><i class="fa fa-check"></i><b>13.7</b> Leaflet Thematic Polygon Map with Multi-Year Tabs template</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
+<li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-socrata.html"><a href="leaflet-maps-with-socrata.html"><i class="fa fa-check"></i>Leaflet Maps with Socrata API Open Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-open-apis.html"><a href="leaflet-maps-open-apis.html"><i class="fa fa-check"></i>Pull Open Data into Leaflet Map with APIs</a></li>
+<li class="chapter" data-level="" data-path="leaflet-polygon-map-click.html"><a href="leaflet-polygon-map-click.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Clickable Info Window template</a></li>
+<li class="chapter" data-level="" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
+<li class="chapter" data-level="" data-path="leaflet-polygon-map-multi-year-tabs.html"><a href="leaflet-polygon-map-multi-year-tabs.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Multi-Year Tabs template</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i><b>14</b> Peer Review Samples</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="peer-2-chart-1.html"><a href="peer-2-chart-1.html"><i class="fa fa-check"></i><b>14.1</b> Section 2 Chart 1 Peer Review Sample</a></li>
-<li class="chapter" data-level="14.2" data-path="peer-2-chart-1-notes.html"><a href="peer-2-chart-1-notes.html"><i class="fa fa-check"></i><b>14.2</b> Section 2 Chart 1 Peer Review Sample with Notes</a></li>
-<li class="chapter" data-level="14.3" data-path="peer-2-chart-2.html"><a href="peer-2-chart-2.html"><i class="fa fa-check"></i><b>14.3</b> Section 2 Chart 2 Peer Review Sample</a></li>
-<li class="chapter" data-level="14.4" data-path="peer-2-chart-2-notes.html"><a href="peer-2-chart-2-notes.html"><i class="fa fa-check"></i><b>14.4</b> Section 2 Chart 2 Peer Review Sample with Notes</a></li>
-<li class="chapter" data-level="14.5" data-path="peer-3-sample-1.html"><a href="peer-3-sample-1.html"><i class="fa fa-check"></i><b>14.5</b> Section 3 Peer Review Sample 1</a></li>
-<li class="chapter" data-level="14.6" data-path="peer-3-sample-1-notes.html"><a href="peer-3-sample-1-notes.html"><i class="fa fa-check"></i><b>14.6</b> Section 3 Peer Review Sample 1 with Notes</a></li>
-<li class="chapter" data-level="14.7" data-path="peer-3-sample-2.html"><a href="peer-3-sample-2.html"><i class="fa fa-check"></i><b>14.7</b> Section 3 Peer Review Sample 2</a></li>
-<li class="chapter" data-level="14.8" data-path="peer-3-sample-2-notes.html"><a href="peer-3-sample-2-notes.html"><i class="fa fa-check"></i><b>14.8</b> Section 3 Peer Review Sample 2 with Notes</a></li>
+<li class="chapter" data-level="" data-path="peer-2-chart-1.html"><a href="peer-2-chart-1.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample</a></li>
+<li class="chapter" data-level="" data-path="peer-2-chart-1-notes.html"><a href="peer-2-chart-1-notes.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample with Notes</a></li>
+<li class="chapter" data-level="" data-path="peer-2-chart-2.html"><a href="peer-2-chart-2.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample</a></li>
+<li class="chapter" data-level="" data-path="peer-2-chart-2-notes.html"><a href="peer-2-chart-2-notes.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample with Notes</a></li>
+<li class="chapter" data-level="" data-path="peer-3-sample-1.html"><a href="peer-3-sample-1.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 1</a></li>
+<li class="chapter" data-level="" data-path="peer-3-sample-1-notes.html"><a href="peer-3-sample-1-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 1 with Notes</a></li>
+<li class="chapter" data-level="" data-path="peer-3-sample-2.html"><a href="peer-3-sample-2.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2</a></li>
+<li class="chapter" data-level="" data-path="peer-3-sample-2-notes.html"><a href="peer-3-sample-2-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2 with Notes</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>15</b> Publishing with Bookdown</a></li>
+<li class="chapter" data-level="15" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>15</b> Publishing with Bookdown</a>
+<ul>
+<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide</a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
+<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>16</b> References</a></li>
 <li class="divider"></li>
 <li style="padding: 10px 15px; font-weight: bold;">Open access book-in-progress</li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></li>
@@ -302,181 +306,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="bookdown" class="section level1" number="15">
 <h1><span class="header-section-number">Chapter 15</span> Publishing with Bookdown</h1>
-<p><em>by <a href="authors">Jack Dougherty and Ilya Ilyankou</a>, last updated February 13, 2019</em></p>
-<p>TODO: Redo this entire section to match updates from On The Line book – see <a href="https://ontheline.trincoll.edu/bookdown.html" class="uri">https://ontheline.trincoll.edu/bookdown.html</a></p>
-<p>This open-access book is published using open-source tools, featuring Bookdown with RStudio and GitHub. Publishing with Bookdown allows authors to compose in Markdown (an easy-to-read-and-write computer syntax that works on multiple platforms) and publish in multiple formats (static HTML web edition, PDF edition, ePUB ebook edition, and Microsoft Word documents). Hosting the book in a public GitHub repository, and publishing it with GitHub Pages, easily makes the original text of the book, as well as the published products, available on the public web. For a technical guide to publishing with Bookdown, see Yihui Xie, <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>, 2018, <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</p>
-<p>An alternative book publishing platform to consider is Pressbooks. This open-source modification of WordPress multisite also supports multiple publication formats (HMTL web edition, PDF edition, ePUB ebook edition. Authors can use the <a href="http://Pressbooks.com" class="uri">http://Pressbooks.com</a> paid hosting service. Or, users with advanced WordPress and some system admin skills can download the code from <a href="http://github.com/pressbooks" class="uri">http://github.com/pressbooks</a> and run their own self-hosted book publishing site.</p>
-<div id="setup-rstudio-bookdown-and-tinytex" class="section level4 unnumbered" number="">
-<h4>Setup RStudio, Bookdown, and TinyTeX</h4>
-<p>Below are steps we followed to setup the publishing platform for this book, using our Macintosh OS 10.14 computers. The same general principles also should apply to Windows computers. No special knowledge is required, but these steps will be easier if users are adventurous or already familiar with R Studio, GitHub, or editing code.</p>
+<p>This open-access book is built with free-to-use, open-source tools—primarily <a href="https://bookdown.org">Bookdown</a>, <a href="http://github.com">GitHub</a>, and <a href="http://zotero.org">Zotero</a>—and this chapter explains how, so that readers may do it themselves and share their knowledge to improve the process. In addition to our notes below, see also Yihui Xie’s more comprehensive <a href="https://bookdown.org/yihui/bookdown/">Bookdown guide</a>.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Our broad goal is an efficient workflow to compose one document in the easy-to-write <a href="https://en.wikipedia.org/wiki/Markdown">Markdown format</a> that Bookdown generates into multiple book products: an HTML web edition to read online, a PDF print edition for traditional book publishing, a Microsoft Word edition for editors who request it for copyediting, and option for other formats as desired.</p>
+<p>Since Bookdown is an <a href="https://www.r-project.org/">R code package</a>, we composed the book manuscript in R-flavored Markdown, with one file (.Rmd) for each chapter. We use Bookdown to build these files in its GitBook style as a set of static HTML pages, which we upload to our GitHub repository. Readers can view the open-access web edition of the book at our custom domain: <a href="https://HandsOnDataViz" class="uri">https://HandsOnDataViz</a>. Also, we use Bookdown to build additional book outputs (PDF, MS Word, Markdown) and upload these to the <code>docs</code> folder of our GitHub repository, so that our O’Reilly Media editor may download and comment on the manuscript as we revise. Finally, we also have the option to use <a href="https://pandoc.org">Pandoc</a> alone to convert the full-book Markdown file (.md) into an AsciiDoc file (.asciidoc) for easier importing into the <a href="https://docs.atlas.oreilly.com/writing_in_asciidoc.html">O’Reilly Atlas platform</a>. See some caveats and workarounds below.</p>
+<div id="file-organization-and-headers" class="section level3 unnumbered" number="">
+<h3>File Organization and Headers</h3>
+<p>We organized the <a href="http://github.com/handsondataviz/book">GitHub repository for this book</a> as a set of .Rmd files, one for each chapter. As co-authors, we are careful to work on different chapters of the book, and to regularly push our commits to the repo. Only one of us regularly builds the book with Bookdown to avoid code merge conflicts.</p>
+<p>Bookdown assigns a default ID to each header, which can be used for cross-references. The default ID for <code># Topic</code> is <code>{#topic}</code>, and the default ID for <code>## Section Name</code> is <code>{#section-name}</code>, where spaces are replaced by dashes. But we do <em>not</em> rely on default IDs because they might change due to editing or contain duplicates across the book.</p>
+<p>Instead, we <em>manually assign a unique ID</em> to each first- and second-level header in the following way. Note that the <code>{-}</code> symbol, used alone or in combination <em>with a space</em> and a unique ID, prevents auto-numbering in the second- thru fourth-level headers:</p>
+<pre><code># Top-level chapter title {#unique-name}
+## Second-level section title {- #unique-name}
+### Third-level subhead {-}
+#### Fourth-level subhead {-}</code></pre>
+<p>Also, we match the unique ID keyword to the file name for top-level chapters this way: <code>01-keyword.Rmd</code> to keep our work organized. Unique names should contain only <em>alphanumeric</em> characters (a-z, A-Z, 0-9) or dashes (-).</p>
+<p>In the Bookdown <code>index.Rmd</code> for the HTML book output and the PDF output, the <code>toc_depth: 2</code> setting displays chapter and section headers down to the second level in the Table of Contents.</p>
+<p>The <code>split_by: section</code> setting divides the HTML pages at the second-level header, which creates shorter web pages with reduced scrolling for readers. For each web page, the unique ID becomes the file name, and is stored in the <code>docs</code> subfolder.</p>
+<p>The <code>number_sections</code> setting is true for the HTML and PDF editions, and given the <code>toc_depth: 2</code>, this means that they will display two-level chapter-section numbering (1.1, 1.2, etc.) in the Table of Contents. Note that <code>number_sections</code> must be true to display Figure and Table numbers in x.x format, which is desired for this book. See relevant settings in this excerpt from <code>index.Rmd</code>:</p>
+<pre><code>output:
+  bookdown::gitbook:
+    ...
+    toc_depth: 2
+    split_by: section
+    number_sections: true
+    split_bib: true
+    ...
+bookdown::pdf_book:
+  toc_depth: 2
+  number_sections: true</code></pre>
+<p>Note that chapter and section numbering do <em>not</em> appear automatically in the MS Word output unless you supply a reference.docx file, as described below:</p>
 <ul>
-<li>Install R Project statistical programming language <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a> to build your book with Bookdown. (Yes, we too were surprised to use a statistics package to publish a book, but it works!). <a href="images/15-bookdown/1-r-download.png">See screenshot</a></li>
-<li>Install the free RStudio Desktop to make R easier to use with a visual editor. <a href="images/15-bookdown/2-download-rstudio.png">See screenshot</a></li>
-<li>Inside RStudio, select the Packages tab, and select Install. <a href="images/15-bookdown/3-packages-install.png">See screenshot</a></li>
-<li>Inside RStudio, install the “bookdown” package to build your book, and select Install Dependencies. <a href="images/15-bookdown/4-install-bookdown.png">See screenshot</a></li>
-<li>Bookdown now should be successfully installed in RStudio. <a href="images/15-bookdown/5-installed.png">See screenshot</a></li>
-<li>Inside RStudio, install the “tinytex” package for Bookdown to create a PDF edition of your book. <a href="images/15-bookdown/6-install-tinytex.png">See screenshot</a></li>
-<li>Don’t forget: in RStudio console, type <code>tinytex::install_tinytex()</code> and press return to finish the installation. <a href="images/15-bookdown/7-finish-install-tinytex.png">See screenshot</a></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/word-document.html" class="uri">https://bookdown.org/yihui/rmarkdown/word-document.html</a></li>
+<li><a href="https://stackoverflow.com/questions/52924766/numbering-and-referring-sections-in-bookdown" class="uri">https://stackoverflow.com/questions/52924766/numbering-and-referring-sections-in-bookdown</a></li>
+<li><a href="https://stackoverflow.com/questions/50609212/caption-styles-for-word-document2-in-bookdown" class="uri">https://stackoverflow.com/questions/50609212/caption-styles-for-word-document2-in-bookdown</a></li>
 </ul>
-</div>
-<div id="if-tinytex-installation-error" class="section level4 unnumbered" number="">
-<h4>If tinytex installation error</h4>
+<p>In the <code>_bookdown.yml</code> settings, all book outputs are built into the <code>docs</code> subfolder of our GitHub repo, as shown in this excerpt:</p>
+<pre><code>output_dir: &quot;docs&quot;
+book_filename: &quot;HandsOnDataViz&quot;
+language:
+  label:
+    fig: &quot;Figure &quot;
+chapter_name: &quot;Chapter &quot;</code></pre>
+<p>In our GitHub repo, we set GitHub Pages to publish to the web using <code>master/docs</code>, which means that visitors can browse the source files at the root level, and view the HTML web pages hosted in the <code>docs</code> subfolder. We use the GitHub Pages custom domain setting so that the HTML edition is available at <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.</p>
+<p>The <code>docs</code> subfolder also may contain the following items, which are <em>not</em> generated by Bookdown and need to be manually created:</p>
 <ul>
-<li>In the section above, we received this error message on our Mac computers: <code>/usr/local/bin not writeable</code>. We resolved by reading the software developer’s GitHub issue <a href="https://github.com/yihui/tinytex/issues/24" class="uri">https://github.com/yihui/tinytex/issues/24</a> and following these steps:</li>
-<li>In the Mac Applications &gt; Utilities folder, open the Terminal application.</li>
-<li>Carefully type <code>sudo chown -R</code>whoami<code>:admin /usr/local/bin</code> and press return.</li>
-<li>Carefully type (without “sudo”) <code>~/Library/TinyTeX/bin/x86_64-darwin/tlmgr path add</code> and press return.</li>
-<li>Close the Terminal application.</li>
-<li>In the RStudio console, type <code>tinytex::install_tinytex(force = TRUE)</code> and press return.</li>
+<li><code>CNAME</code> file for the custom domain, generated by GitHub Pages.</li>
+<li><code>.nojekyll</code> invisible empty file to ensure speedy processing of HTML files by GitHub Pages.</li>
+<li><code>404.html</code> custom file to redirects any mistaken web addresses under the domain back to the <code>index.html</code> page.</li>
 </ul>
-</div>
-<div id="download-and-build-a-sample-book" class="section level4 unnumbered" number="">
-<h4>Download and Build a Sample Book</h4>
-<ul>
-<li>Create a free GitHub account <a href="https://github.com" class="uri">https://github.com</a> to share code repositories and publish book editions online.</li>
-<li>In your web browser, log into your GitHub account, go to the software developer’s bookdown-minimal repo <a href="https://github.com/yihui/bookdown-minimal" class="uri">https://github.com/yihui/bookdown-minimal</a>, and fork a copy to your GitHub account. To learn about forking in GitHub, see this chapter <a href="http://handsondataviz.org/github.html" class="uri">http://handsondataviz.org/github.html</a> in this book.</li>
-<li>Install GitHub Desktop <a href="https://desktop.github.com" class="uri">https://desktop.github.com</a> to transfer files between your online GitHub repo and local computer</li>
-<li>In your web browser, go to your forked copy of <code>bookdown-minimal</code> and click the green <code>Clone or Download</code> button and select <code>Open in Desktop</code>. This should automatically open the GitHub Desktop application, and you can navigate to copy the code repo to a folder on your local computer.</li>
-<li>In RStudio in the upper-right corner, select Project &gt; Open Project to open the <code>bookdown-minimal</code> folder on your local computer. <a href="images/15-bookdown/8-project-open.png">See screenshot</a></li>
-<li>In RStudio, open the <code>index.Rmd</code> file and make some simple edits to the text of this minimal book. For example, remove the hashtag <code>#</code> comment symbol in line 8 to “uncomment” and activate the PDF book option. Save your edits. <a href="images/15-bookdown/9-edit-book.png">See screenshot</a></li>
-<li>Optional: Use your preferred text editor, such as Atom editor <a href="https://atom.io" class="uri">https://atom.io</a>, to modify the text.</li>
-<li>In RStudio, upper-right corner, select the Build tab, select Build Book, and choose All Formats to build both the gitbook-style static web edition and PDF edition.</li>
-<li>If RStudio successfully builds both editions of your minimal book, the output will be saved into your <code>bookdown-minimal</code> folder, in a subfolder named <code>_book</code>, because that’s how this sample is configured. The RStudio internal browser should automatically open your web edition (and it’s not a very good browser, so feel free to close it). Also, open the subfolder and inspect the PDF edition. If RStudio found any errors, they will appear in the Build viewer. <a href="images/15-bookdown/11-successful-build.png">See screenshot</a></li>
-<li>Hint: In future sessions with RStudio, you may need to select Packages tab and click Update to keep bookdown and other software packages up to date. <a href="images/15-bookdown/12-packages-update.png">See screenshot</a></li>
-<li>Close RStudio.</li>
-</ul>
-</div>
-<div id="publish-your-book-with-github-pages" class="section level4 unnumbered" number="">
-<h4>Publish your Book with GitHub Pages</h4>
-<ul>
-<li>Open GitHub Desktop and navigate to the <code>bookdown-minimal</code> folder on your local computer. Write a summary to commit (save) the changes you made above to your master branch, and push this version to your online GitHub repo.</li>
-<li>In your web browser, go to your online GitHub repo, with a web address similar to <code>https://github.com/USERNAME/bookdown-minimal</code> (insert your GitHub username).</li>
-<li>In your GitHub repo, select Settings, scroll down to the GitHub Pages section (which is a free web hosting service to publish your code and book editions on the public web). Select Master Branch as your source, and Save.</li>
-<li>Scroll down to this section again, and the web address of your published site should appear. Copy this address.</li>
-<li>In a new browser tab, paste the web address from above, and at the end add <code>_book/index.html</code> because this sample is configured to store the web edition of your book in this subfolder. Your web address should be similar to: <code>https://USERNAME.github.io/bookdown-minimal/_book/index.html</code></li>
-</ul>
-</div>
-<div id="customize-your-bookdown-and-github-settings" class="section level4 unnumbered" number="">
-<h4>Customize your Bookdown and GitHub settings</h4>
-<ul>
-<li>To see customized settings for this book, go to its online repository <a href="https://github.com//dataviz-bookdown" class="uri">https://github.com//dataviz-bookdown</a></li>
-<li>In the <code>_bookdown.yml</code> file, the output directory is set to build all book formats into the <code>docs</code> folder.</li>
-<li>The GitHub Pages settings for this repo (which you cannot view) is set to publish from the <code>master/docs</code> folder, to match the output directory above. This simplifies the published web address to this format: <code>https://USERNAME.github.com/REPONAME</code></li>
-<li>Most of the Bookdown configuration settings appear in the <code>index.Rmd</code> file. Read more about these options in the software developer’s technical guide, <a href="https://bookdown.org/yihui/bookdown/" class="uri">https://bookdown.org/yihui/bookdown/</a>.</li>
-<li>In addition, this GitHub Pages repo is published with a custom domain name <a href="https://handsondataviz.org" class="uri">https://handsondataviz.org</a>. Learn more about custom domain names at <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" class="uri">https://help.github.com/articles/using-a-custom-domain-with-github-pages/</a>, which requires purchasing a domain name from a web hosting service (such as <a href="http://ReclaimHosting.com" class="uri">http://ReclaimHosting.com</a>). Adding a GitHub Pages custom domain name creates an additional <code>CNAME</code> file in the <code>docs</code> subfolder. Be careful not to delete it (or place a copy in a subfolder for safekeeping).</li>
-<li>This book also includes a custom <code>404.html</code> file that was manually transferred into the <code>docs</code> subfolder, since it is not automatically built by Bookdown.</li>
-<li>This book also includes a custom <code>google-analytics-.html</code> file in the root-level of repo (where bookdown looks for it) and also is manually transferred to the <code>docs</code> subfolder (since bookdown does <em>not appear</em> to copy it to there on each build). This tracks web traffic with Google Analytics.</li>
-</ul>
-</div>
-<div id="style-guide-with-bookdown-flavored-markdown" class="section level4 unnumbered" number="">
-<h4>** Style Guide with Bookdown-flavored Markdown</h4>
-<div id="links-with-brackets-and-parentheses" class="section level5 unnumbered" number="">
-<h5>Links with brackets and parentheses</h5>
-<p>Use brackets and parentheses for an <a href="http://example.com">embedded link</a></p>
-<p>Use parentheses only for a non-embedded link (<a href="http://example.com" class="uri">http://example.com</a>)</p>
-<p>Similarly, display URL with angle brackets: <a href="http://example.com" class="uri">http://example.com</a></p>
-<p>If necessary, use HTML to create <a href='http://example.com/'>link that opens in a new page</a></p>
-</div>
-<div id="headers-with-cross-reference-links" class="section level5 unnumbered" number="">
-<h5>Headers with Cross-Reference Links</h5>
-<p>This book, each chapter and section is a separate .Rmd file. The numerical order of the file names (index.Rmd, 0.1-x.Rmd, 0.2-y.Rmd, 01-z.Rmd, etc) determines the sequence that they will appear in the built book.</p>
-<p>In the index.Rmd file, the settings for the web book state that each chapter and section will be split into its own HTML page, with no automatic numbering.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb51-1"><a href="bookdown.html#cb51-1"></a>split_by: section</span>
-<span id="cb51-2"><a href="bookdown.html#cb51-2"></a>number_sections: false</span></code></pre></div>
-<p>Chapters begin with a first-level header (one hashtag: #) and sections begin with a second-level header (two hashtags: ##). Both chapter and section titles are immediately followed by short ID in curly brackets to enable easy cross-reference links inside the book. The short IDs <strong>MUST</strong> be unique, and ideally <strong>SHOULD</strong> match the .Rmd file name. Although each hashtag chapter/section title is the default ID (such as #Introduction in index.Rmd), it’s safer to create a unique short ID for each chapter/section to avoid confusion.</p>
-<p>Bylines appear in italics at the top of each chapter or section, with an embedded cross-reference links to the authors page, followed by the last updated date.</p>
-<p>Examples of chapter and section headers, with short IDs, bylines, and dates:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb52-1"><a href="bookdown.html#cb52-1"></a><span class="fu"># Chapter Title {#chapter}</span></span>
-<span id="cb52-2"><a href="bookdown.html#cb52-2"></a>*by [Jack Dougherty and Ilya Ilyankou](authors), last updated January 22, 2019*</span></code></pre></div>
-<div class="sourceCode" id="cb53"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb53-1"><a href="bookdown.html#cb53-1"></a><span class="fu">## Section Title {#section}</span></span>
-<span id="cb53-2"><a href="bookdown.html#cb53-2"></a>*by [Jack Dougherty and Ilya Ilyankou](authors), last updated January 22, 2019*</span></code></pre></div>
-<p>Subheadings inside the chapters/sections must begin with 4 hashtags and end with a no-numbering symbol <code>{-}</code>. Note: Using three hashtags makes the subheader appear in the TOC because I have not found way to control toc_depth in web output. Use the no-number symbol to prevent automatic numbering of subheaders (in case we switch the book settings from no-auto-numbering to auto-numbering in the future).</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb54-1"><a href="bookdown.html#cb54-1"></a><span class="fu">#### Subheadings: use 4 hashtags and a no-number symbol {-}</span></span></code></pre></div>
-<p>To embed an internal cross-reference to any chapter or section in the book, embed a link with brackets [for the text] and parentheses (with the short ID). If the cross-ref appears in the body of the text, ADD THE PHRASE “in this book” to the end of the sentence to allow us to search/find all cross-refs in future if needed:</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb55-1"><a href="bookdown.html#cb55-1"></a>See the <span class="ot">[GitHub tutorial](github)</span> in this book.</span></code></pre></div>
-<p>NOTE that cross-reference links above are designed for HOSTED WEB BOOKS, and may not work the same in local repo versions, or in ebook/PDF versions.</p>
+<p>One more option is to copy the Google Analytics code for the web book, paste it into an HTML file in the book repo, and include this reference in the <code>index.Rmd</code> code:</p>
+<pre><code>output:
+  bookdown::gitbook:
+  ...
+  includes:
+    in_header: google-analytics.html</code></pre>
 </div>
 </div>
-<div id="bookdown-flavored-markdown-syntax" class="section level4 unnumbered" number="">
-<h4>Bookdown-flavored Markdown Syntax</h4>
-<p>For an em-dash, use three hyphens—like this—rather than two hyphens.</p>
-<p>For a block quote, start each line with a caret <strong>AND</strong> add two spaces to insert a line break:</p>
-<p>Code:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb56-1"><a href="bookdown.html#cb56-1"></a>&gt;<span class="dt"> I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him.    </span></span>
-<span id="cb56-2"><a href="bookdown.html#cb56-2"></a><span class="dt">&gt; --- Mark Twain</span>  </span>
-<span id="cb56-3"><a href="bookdown.html#cb56-3"></a><span class="dt">&gt; --- notable American author</span></span></code></pre></div>
-<p>Demo:
-&gt; I thoroughly disapprove of duels. If a man should challenge me, I would take him kindly and forgivingly by the hand and lead him to a quiet place and kill him.<br />
-&gt; — Mark Twain<br />
-&gt; — notable American author</p>
-<p>Simple footnote</p>
-<p>Code:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb57-1"><a href="bookdown.html#cb57-1"></a>A text-only footnote.^[This is a footnote, with no reference]</span></code></pre></div>
-<p>Demo:
-A text-only footnote.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
-<p>See On The Line book (<a href="http://OnTheLine.trincoll.edu" class="uri">http://OnTheLine.trincoll.edu</a>) for more details about footnotes using Zotero and Better BibTeX.</p>
-</div>
-<div id="embed-images-and-iframes" class="section level4 unnumbered" number="">
-<h4>Embed images and iframes</h4>
-<p>TODO - update</p>
-</div>
-<div id="explore-the-chart-embedded-html-iframe" class="section level4 unnumbered" number="">
-<h4>Explore the Chart: embedded HTML iframe</h4>
-<p>Code:</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb58-1"><a href="bookdown.html#cb58-1"></a><span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/&quot;</span><span class="ot"> width=</span><span class="st">&quot;90%&quot;</span><span class="ot"> height=</span><span class="st">&quot;420px&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span></span>
-<span id="cb58-2"><a href="bookdown.html#cb58-2"></a>Recommended: Insert caption and link to view the full-screen version.</span></code></pre></div>
-<p>Demo:</p>
-<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="420px">
-</iframe>
-<p>Recommended: Insert caption and link to view the full-screen version.</p>
-</div>
-<div id="scroll-the-map-embedded-html-iframe" class="section level4 unnumbered" number="">
-<h4>Scroll the Map: embedded HTML iframe</h4>
-<p>Code:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb59-1"><a href="bookdown.html#cb59-1"></a><span class="kw">&lt;iframe</span><span class="ot"> src=</span><span class="st">&quot;https://ontheline.github.io/otl-town-borders/&quot;</span><span class="ot"> width=</span><span class="st">&quot;90%&quot;</span><span class="ot"> height=</span><span class="st">&quot;525px&quot;</span><span class="kw">&gt;&lt;/iframe&gt;</span></span>
-<span id="cb59-2"><a href="bookdown.html#cb59-2"></a>Recommended: Insert caption and link to view the full-screen version.</span></code></pre></div>
-<p>Demo:</p>
-<iframe src="https://ontheline.github.io/otl-town-borders/" width="90%" height="525px">
-</iframe>
-<p>Recommended: Insert caption and link to view the full-screen version.</p>
-</div>
-<div id="watch-the-youtube-video-embedded-html-iframe-from-secure-https" class="section level4 unnumbered" number="">
-<h4>Watch the YouTube Video: embedded HTML iframe from secure https</h4>
-<p>Code:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb60-1"><a href="bookdown.html#cb60-1"></a><span class="kw">&lt;iframe</span><span class="ot"> width=</span><span class="st">&quot;560&quot;</span><span class="ot"> height=</span><span class="st">&quot;315&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://www.youtube.com/embed/Gl3uIRYYUmI?rel=0&quot;</span><span class="ot"> frameborder=</span><span class="st">&quot;0&quot;</span><span class="ot"> allow=</span><span class="st">&quot;autoplay; encrypted-media&quot;</span><span class="ot"> allowfullscreen</span><span class="kw">&gt;&lt;/iframe&gt;</span></span>
-<span id="cb60-2"><a href="bookdown.html#cb60-2"></a>Recommended: Insert caption and link to view the full-screen version.</span></code></pre></div>
-<p>Demo:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Gl3uIRYYUmI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-<p>Recommended: Insert caption and link to view the full-screen version.</p>
-</div>
-<div id="output-in-other-formats" class="section level4 unnumbered" number="">
-<h4>Output in other formats</h4>
-<p>This book is being built primarily for the web edition, and will require more work to create formatted PDF and EPUB versions.</p>
-<p>Add this later to index.Rmd, and correctly place and indent it</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb61-1"><a href="bookdown.html#cb61-1"></a><span class="bn">      download: [pdf, epub, mobi, docx]</span></span></code></pre></div>
-<p>And also add this to index.Rmd, and correctly place and indent it</p>
-<div class="sourceCode" id="cb62"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb62-1"><a href="bookdown.html#cb62-1"></a>bookdown::pdf_book: default</span>
-<span id="cb62-2"><a href="bookdown.html#cb62-2"></a></span>
-<span id="cb62-3"><a href="bookdown.html#cb62-3"></a>bookdown::epub_book:</span>
-<span id="cb62-4"><a href="bookdown.html#cb62-4"></a>  dev: svglite</span>
-<span id="cb62-5"><a href="bookdown.html#cb62-5"></a>  stylesheet: css/style.css</span>
-<span id="cb62-6"><a href="bookdown.html#cb62-6"></a></span>
-<span id="cb62-7"><a href="bookdown.html#cb62-7"></a>bookdown::word_document2:</span>
-<span id="cb62-8"><a href="bookdown.html#cb62-8"></a>  default</span></code></pre></div>
-
-</div>
-</div>
-
-
-
-
-
-
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>This is a footnote, with no reference<a href="bookdown.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p><span class="citation">Yihui Xie, <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>, 2018, <a href="https://bookdown.org/yihui/bookdown/" role="doc-biblioref">https://bookdown.org/yihui/bookdown/</a></span><a href="bookdown.html#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -484,8 +372,8 @@ A text-only footnote.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup
           </div>
         </div>
       </div>
-<a href="peer-3-sample-2-notes.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="peer-3-sample-2-notes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="style-guide.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

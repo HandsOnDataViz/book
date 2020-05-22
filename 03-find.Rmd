@@ -1,8 +1,5 @@
 # Find and Know Your Data {#find}
-*by [Jack Dougherty](authors), last updated March 1, 2017*
-
-#### Searching for Open Data {-}
-Increasing numbers of governmental agencies and non-profit organizations are publicly sharing *open data* on the web. When starting a new data visualization project, ask yourself these questions:
+Searching for open data: Increasing numbers of governmental agencies and non-profit organizations are publicly sharing *open data* on the web. When starting a new data visualization project, ask yourself these questions:
 
 - Do I have the most relevant data for my project?
 - Is it the most current data, in the most user-friendly format?
@@ -10,13 +7,13 @@ Increasing numbers of governmental agencies and non-profit organizations are pub
 - Which organizations might have collected data for my topic?
 - Which open data repositories might have published this data?
 
-#### What features do open repositories offer?
+#### What features do open repositories offer? {-}
 - View and export: At minimum, most open data repositories allow users to view their data and export it into common spreadsheet formats. Some also provide geographical boundaries for polygon maps.
 - Built-in visualization tools: Some repositories offer built-in tools for users to create interactive charts or maps on the platform site. Some also provide code snippets for users to embed these built-in visualizations into their own websites.
 - Static and Live data: Most repositories offer static datasets for a specific time period, but some also provide "live" data that is continuously updated.
 - Application Programming Interface (APIs): Some repositories provide endpoints with code instructions that allow users to pull data directly from the platform into an external sites or online visualization, which is ideal for continuously updated data.
 
-#### Know Your Data
+#### Know Your Data {-}
 Before starting to create charts or maps, get to know your data.
 
 - Where did it come from?
@@ -24,7 +21,7 @@ Before starting to create charts or maps, get to know your data.
 - What do the data labels really mean?
 - Ask yourself: Am I working with the *most* recent version, in the *best* available format?
 
-**TO DO** add resource https://github.com/Quartz/bad-data-guide
+TODO: add resource https://github.com/Quartz/bad-data-guide
 
 open data inception 1600+ sites portal
 http://opendatainception.io/
@@ -34,7 +31,7 @@ http://opendatainception.io/
 https://www.opendatanetwork.com/
 
 Closely examine your data files to understand their meaning, sources of origin, and limitations.
-**TO DO** expand on this theme with examples of bad and misleading data
+TODO: expand on this theme with examples of bad and misleading data
 
 1) Always ask: Am I using the best available data?
 
@@ -44,3 +41,180 @@ https://data.hartford.gov/browse
 - click on the “dataset” version (updated 10 Feb 2016), which is same data but different view than the “map” version
 - click on light blue “export” button into any format you wish to compare with the HFS list (see screenshot)
 - decide which list is best for your organization’s goal
+
+## US and Census Bureau Open Data {- #census}
+The [U.S. Census Bureau](https://census.gov) collects and shares population, housing, and economic data on its open repositories.
+
+- The Decennial Census is a full count of the population every ten years, most recently in 2010 and the upcoming one in 2020. Because decennial data are counts and not estimates, they represent "true" values and hence come without margins of errors.
+- The American Community Survey (ACS) (https://www.census.gov/programs-surveys/acs/) is annual sample count, which produces:
+    - 1-year estimates for areas with populations of 65,000+
+    - 5-year estimates for all census areas
+    - ACS used to release 3-year estimates for geographies with population of 20,000+, but discontinued after the 2011-2013 release.
+
+Because ACS produces estimates and not "true" counts, data comes with margins of errors. Generally, margins of errors are higher for smaller geographies (eg census blocks) and smaller values (eg the number of Asian females aged 60+ who live in Union, CT). Hence, one needs to be critical when using ACS or other survey data.
+
+Census areas are geographic divisions in this *general format*:
+
+- State
+- County
+- County subdivisions (equivalent to Connecticut towns and cities)
+- Census tracts (designated areas, roughly 2,500 to 8,000 people)
+- Block groups (sub-unit of tract, roughly 600 to 3,000 people)
+- Census blocks (sub-unit of block group, but not always a city block)
+
+### Census areas in the Hartford region {-}
+
+The interactive map below illustrates hierarchical relations among geographical census entities for the Hartford region, from state to census block level.
+
+<iframe src="https://handsondataviz.github.io/census-divisions-hartford/index.html" height="400" width="100%" frameborder="0"></iframe>
+
+Learn more: Explore the standard hierarchy of US Census geographic entities and definitions (https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf)
+
+See also in this book: [Geocode addresses with the US Census Geocoder](geocode)
+
+### Data.census.gov {-}
+Data.census.gov (https://data.census.gov) is the main platform to access US Census data. It provides an easy search across census and survey tables. There is an interface to view tables for various years and geographies, and a download button to save data as CSV or PDF. It replaced American FactFinder (https://factfinder.census.gov) in July 2019.
+
+### Social Explorer {-}
+Social Explorer (https://www.socialexplorer.com/) is a popular tool to view and download census and related demographic data, past and present. The platform allows users to create data maps that may be exported as static images or presentation slides. Social Explorer requires subscription, but many academic institutions provide access.
+
+TODO: create tutorial on how to cleanly download census data from Social Explorer and Census.gov to join with geography, especially census tract numbers
+
+### Data.gov {-}
+Data.gov (https://www.data.gov/) is the official open data repository for US federal government agencies, managed by the US General Services Administration, and powered by an open-source CKAN and WordPress platform.
+
+### National Center for Education Statistics {-}
+National Center for Education Statistics (NCES) (https://nces.ed.gov/) is the primary federal agency for collecting and reporting education data.
+
+- Elementary/Secondary Information System (ELSi) (https://nces.ed.gov/ccd/elsi) - create custom tables and charts from the Common Core of Data (CCD) and Private School Survey.
+
+#### Boundaries {-}
+- TODO
+- link and source files and scale
+- http://mapstarter.com/
+
+## Source Your Data Files {- #source}
+Source your data. Spell out exactly where it came from, so that someone other than you, several years in the future, could understand its origin.
+
+#### Label the file name {-}
+Everyone has seen examples of bad file names:
+
+  - data.xls
+  - bldgdatalist.csv
+  - data77.xls
+
+Write a short but meaningful file name. It is a good idea to include data source in file name (eg `acs2018`, `worldbank`, or `eurostat`). If different versions of the data are floating around, add the current date at the end, in YYYY-MM-DD format. Good file names look like this:
+
+  - town-demographics-2019-12-02.xls
+  - census2010_population_by_county.csv
+  - eurostat-1999-2019-CO2_emissions.xlsx
+
+#### Save source data in separate sheet {-}
+Before modifying the original dataset, make sure to duplicate it to avoid any data losses. One way is to click (or right-click) on the spreadsheet tab to copy the sheet to another tab as a backup.
+
+```{r spreadsheet-copy-sheet}
+if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/SpreadsheetCopySheet640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
+
+Add a *source* tab, after the data, with notes to remind you and others about its origins and when it was last updated.
+
+![](images/03-find/SpreadsheetSourceTab.png)
+
+### Learn more {-}
+Lisa Charlotte Rost, *How to prepare your data for analysis and charting in Excel & Google Sheets*,
+https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/
+
+TODO: Source your data
+
+     - explain that data cannot be copyrighted, but representations of data can be
+     - open-source and creative commons
+     - credit sources and collaborators on dataviz products and readme files
+     - Whose perspectives does your data privilege? Whose stories remain untold?
+
+## Public or Private Data? {- #public}
+
+Many of the free web-based tools in this book require that your publicly share your data. Check each tool and decide whether it is appropriate for your data, which may have some privacy restrictions.
+
+In some cases, individual data privacy is protected by law, but a government agency may aggregate (sort into larger groups) or anonymize (remove personally identifiable details) data to make it public. For example:
+
+- Individual-level census data is private for about 70 years, but the US Census Bureau publicly releases anonymous data for aggregated areas (such as census blocks, tracts, towns, etc.)
+- Patient-level health records are private, but public health officials share town- and county-level health data.
+- Student-level education data is private, but school districts and state agencies publicly share grade-level and school-level data.
+
+In other cases, individual data is not private. For example:
+
+- When individuals contribute to political campaigns, most US and state laws require that the donor name, address, and amount is public data.
+- When an individual buys home in Connecticut, the owner's name, address, purchase amount, and other details about the home are public data.
+
+## Know Your Data: Is It Good or Bad? {- #know}
+Before starting to create charts or maps, get to know your data.
+
+- Where did it come from?
+- Who compiled the data, and for what purpose?
+- What do the data labels really mean?
+- Ask yourself: Am I working with the *most* recent version, in the *best* available format?
+
+Closely examine your data files to understand their meaning, sources of origin, and limitations.
+TODO: expand on this theme with examples of bad and misleading data
+
+TODO: cite and explain this resource
+https://github.com/Quartz/bad-data-guide
+
+### Learn more {-}
+Christopher Ingraham, *An alarming number of scientific papers contain Excel errors*,
+https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/
+
+## Connecticut Open Data {- #ct}
+Since this book was created in Hartford, Connecticut, we include state and municipal open data repositories and boundary files.
+
+**Connecticut Open Data** (http://data.ct.gov), the official portal for state government agencies, is hosted on the Socrata platform, which offers built-in data visualization tools and APIs. See also how to create a [filtered point map with Socrata](filtered-point-map-socrata) in this book.
+
+See also separate repositories for individual state agencies:
+
+- Office of the State Comptroller (http://www.osc.ct.gov/openCT.html)
+- CT State Department of Education (http://www.sde.ct.gov/sde/cwp/view.asp?a=2758&q=334520)
+- Office of Policy and Management (http://ct.gov/opm/cwp/view.asp?a=3006&Q=383258&opmNav_GID=1386)
+- link to all CT state government agencies (http://portal.ct.gov/Department-and-Agencies/)
+
+**Connecticut State Data Center** (http://ctsdc.uconn.edu/), part of the U.S. Census Data Center Network, is the lead agency for US Census data and other socioeconomic data for Connecticut, and is based at the University of Connecticut Libraries. The site also features data visualizations created on the Tableau platform and provides population projections for the state of Connecticut.
+
+**MAGIC: The Map and Geographic Information Center** (http://magic.lib.uconn.edu), based at the University of Connecticut Libraries, specializes in providing geographic, aerial photography, and map images for the state, past and present. The site also features interactive maps.
+
+**DataHaven** (http://ctdatahaven.org/), a non-profit organization, collects and interprets information about Connecticut neighborhoods, such as its Community Wellbeing Survey. Data resources feature neighborhood profiles for densely-populated areas (New Haven and Hartford-West Hartford), and town profiles for other areas across the state.
+
+**Connecticut Data Collaborative** (http://ctdata.org) is a public-private partnership that advocates for open data access to drive planning, policy, budgeting and decision making in Connecticut at the state, regional and local levels. We democratize public data through custom data exploration tools and a dynamic town profile tool, hosted on the open-source CKAN platform. Users can find state and federal data on topics such as public health, education, crime, municipal data, and racial profiling data.
+
+**Hartford Data** (http://data.hartford.gov), the official portal of the City of Hartford municipal government, is hosted on the Socrata platform, which features built-in visualizations and APIs. See also how to create a [filtered point map with Socrata](filtered-point-map-socrata) in this book. Also, the Hartford Data site links to the City's ArcGIS Online geographic data (http://gisdata.hartford.gov/) and the City's financial data (http://checkbook.hartford.gov/) and budget (http://budget.hartford.gov/).
+
+In addition to the official repositories above, Connecticut news organizations that create data visualizations often include links to download data files.
+
+**Connecticut Mirror / Trend CT ** (http://ctmirror.org/) and (http://trendct.org/) are publications of the Connecticut News Project, an independent, nonpartisan, nonprofit organization that focuses on state policy issues. Most of their data visualizations are built with open-source code, with publicly accessible data files. See also their GitHub repository (https://github.com/trendct).
+
+**Hartford Courant Data Desk** (http://www.courant.com/data-desk) produces digital visualizations for the *Hartford Courant*, the largest daily newspaper in Connecticut, owned by Tribune Publishing. Many of these data visualizations are published on the Tableau platform, which allows readers to download the underlying data.
+
+#### Boundaries {-}
+- Converted from shapefile WGS84 to GeoJSON format
+- To download a GeoJSON file, right-click the link and Save to your computer
+- If you accidentally open the GeoJSON code in your browser, select File > Save Web Page to download it
+- To view or edit, drag files into http://geojson.io or http://mapshaper.org
+- Learn more in the [Transform Your Map Data](transform.html) chapter of this book
+
+| Geography | Year-Source-Size  | Right-click + Save to download GeoJSON |
+| :-------- | :------ | :----- | :-----   |
+| CT outline ![](data/ct-outline.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-outline.geojson](data/ct-outline.geojson) |
+| CT counties ![](data/ct-counties.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-counties.geojson](data/ct-counties.geojson) |
+| CT towns ![](data/ct-towns.png) | [2010 Census UConn MAGIC WGS84 simplified to 224k](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-towns.geojson](data/ct-towns.geojson) |
+| CT census tracts ![](data/ct-tracts-2010.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries)|  [ct-tracts-2010.geojson](data/ct-tracts-2010.geojson) |
+| Hartford County outline ![](data/hartfordcounty-outline.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartfordcounty-outline.geojson](data/hartfordcounty-outline.geojson) |
+| Hartford County towns ![](data/hartfordcounty-towns.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartfordcounty-towns.geojson](data/hartfordcounty-towns.geojson) |
+| Hartford County tracts ![](data/hartfordcounty-tracts-2010.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartfordcounty-tracts-2010.geojson](data/hartfordcounty-tracts-2010.geojson) |
+| Hartford outline ![](data/hartford-outline.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartford-outline.geojson](data/hartford-outline.geojson) |
+| Hartford census tracts ![](data/hartford-tracts-2010.png) | [2010 Census UConn MAGIC WGS84 1:100,000](http://magic.lib.uconn.edu/connecticut_data.html#boundaries) | [hartford-tracts-2010.geojson](data/hartford-tracts-2010.geojson) |
+| Hartford neighborhoods ![](data/hartford-neighborhoods.png) | [2015 Hartford Open Data 1:50,000](http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5) | [hartford-neighborhoods.geojson](data/hartford-neighborhoods.geojson) |
+
+TODO:
+- add Capitol Region Council of Governments (CRCOG) http://www.crcog.org/
+- add school districts (and clarify elementary-secondary)
+- add Capitol Region Education Council (CREC) http://www.crec.org/
+- add school attendance areas from federal site
+- describe Freedom of Information Act (FOIA) data requests in Connecticut

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-05-26" />
+<meta name="date" content="2020-05-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -276,7 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="15" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>15</b> Publishing with Bookdown</a>
 <ul>
-<li class="chapter" data-level="" data-path="style-guide.html"><a href="style-guide.html"><i class="fa fa-check"></i>Style Guide</a></li>
+<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
 <li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
@@ -375,7 +375,7 @@ Figure 9.4: Screencast: Mapshaper convert
 <h4>Dissolve internal polygons to create an outline map</h4>
 <p>MapShaper.org also includes a Console button to type in commands for common map editing tasks. Imagine that you begin with a boundary map that includes internal polygons, but your goal is to remove all of them to create an outline map.</p>
 <p>Click the Console button, which opens a window to type in commands. Enter the command below, then press return. Close the Console window and Export your outline map.</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb40-1"><a href="mapshaper.html#cb40-1"></a>-dissolve</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb43-1"><a href="mapshaper.html#cb43-1"></a>-dissolve</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-dissolve"></span>
 <iframe src="images/09-transform/mapshaper-dissolve-simple-640.gif" width="672" height="400px">
 </iframe>
@@ -400,13 +400,13 @@ Figure 9.5: Screencast: Mapshaper dissolve
 <li><p>In the drop-down menu, select the first map (ct-towns) to display it as the active layer.</p></li>
 <li><p>Click the Console button, type or paste in the command below, and press enter.</p></li>
 </ol>
-<div class="sourceCode" id="cb41"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb41-1"><a href="mapshaper.html#cb41-1"></a>-clip hartfordcounty-outline.geojson</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb44-1"><a href="mapshaper.html#cb44-1"></a>-clip hartfordcounty-outline.geojson</span></code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li><p>The command above instructs MapShaper to clip the active map layer (ct-towns) using the second layer (hartfordcounty-outline).</p></li>
 <li><p>Sometimes the boundaries of the clip layer do not precisely match up with your active layer, due to differences between their sources. If necessary, add the <code>cleanup</code> command to remove any null features or small “slivers” that remain after the clip.</p></li>
 </ol>
-<div class="sourceCode" id="cb42"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb42-1"><a href="mapshaper.html#cb42-1"></a><span class="ss">- </span>clip hartfordcounty-outline.geojson cleanup</span>
-<span id="cb42-2"><a href="mapshaper.html#cb42-2"></a>Removed 3 null features and 5 slivers</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb45-1"><a href="mapshaper.html#cb45-1"></a><span class="ss">- </span>clip hartfordcounty-outline.geojson cleanup</span>
+<span id="cb45-2"><a href="mapshaper.html#cb45-2"></a>Removed 3 null features and 5 slivers</span></code></pre></div>
 <p><strong>TO DO</strong> fix animation to match new file names</p>
 <div class="figure"><span id="fig:mapshaper-clip"></span>
 <iframe src="images/09-transform/mapshaper-clip-640.gif" width="672" height="400px">
@@ -419,7 +419,7 @@ Figure 9.6: Screencast: Mapshaper clip
 <div id="remove-unwanted-data-columns" class="section level4 unnumbered" number="">
 <h4>Remove unwanted data columns</h4>
 <p>Sometimes your polygon map contains several columns of unwanted data. To quickly remove them, enter the “-filter-fields” Console command to keep only the columns you list. The example below deletes all columns <em>except</em> “town”:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb43-1"><a href="mapshaper.html#cb43-1"></a>-filter-fields town</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb46-1"><a href="mapshaper.html#cb46-1"></a>-filter-fields town</span></code></pre></div>
 </div>
 <div id="join-spreadsheet-data-with-polygon-map" class="section level4 unnumbered" number="">
 <h4>Join spreadsheet data with polygon map</h4>
@@ -449,7 +449,7 @@ Figure 9.6: Screencast: Mapshaper clip
 <ol start="5" style="list-style-type: decimal">
 <li>Click the Console button, type this command, and press return:</li>
 </ol>
-<div class="sourceCode" id="cb44"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb44-1"><a href="mapshaper.html#cb44-1"></a>-join ct-towns-popdensity.csv keys=name,name</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb47-1"><a href="mapshaper.html#cb47-1"></a>-join ct-towns-popdensity.csv keys=name,name</span></code></pre></div>
 <p>Type this precisely, with <strong>no spaces</strong> between the words in your keys. This command instructs MapShaper to join the active map layer to the CSV table layer, based on their shared column of data, labeled as “name” in both files. In this example, 169 rows are merged together.</p>
 <p><img src="images/09-transform/mapshaper-join-console.png" /></p>
 <ol start="6" style="list-style-type: decimal">
@@ -464,14 +464,14 @@ Figure 9.6: Screencast: Mapshaper clip
 <li><p>The simple join example above uses identical keys (name,name) because the two columns headers are the same. But if you need to join data where the headers are not the same, enter the first key (the polygon map) and the second key (the CSV table).</p></li>
 <li><p>Mapshaper also helps you to keep track of data that are not properly joined or matched. For example, if the polygon map contains 169 rows (one for each town in Connecticut), but the CSV table contains only 168 rows of data, Mapshaper will join all of those with matching keys, and then display this message:</p></li>
 </ol>
-<div class="sourceCode" id="cb45"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb45-1"><a href="mapshaper.html#cb45-1"></a>Joined 168 data records</span>
-<span id="cb45-2"><a href="mapshaper.html#cb45-2"></a>1/169 target records received no data</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb48-1"><a href="mapshaper.html#cb48-1"></a>Joined 168 data records</span>
+<span id="cb48-2"><a href="mapshaper.html#cb48-2"></a>1/169 target records received no data</span></code></pre></div>
 <p>To capture data records that are not properly joined, add these terms at the end of your join command: <code>unjoined unmatched -info</code>. The first term saves a copy of each unmatched record from the target table to a new layer named “unmatched,” and the second term saves a copy of each unjoined record from the source table into another layer named “unjoined.” In the example below, see the console command and results, and a screenshot of the two new layers.</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb46-1"><a href="mapshaper.html#cb46-1"></a>$ -join towns-data.csv keys=name,name unmatched unjoined -info</span>
-<span id="cb46-2"><a href="mapshaper.html#cb46-2"></a>Joined 27 data records</span>
-<span id="cb46-3"><a href="mapshaper.html#cb46-3"></a>2/29 target records received no data</span>
-<span id="cb46-4"><a href="mapshaper.html#cb46-4"></a>2/29 source records could not be joined</span>
-<span id="cb46-5"><a href="mapshaper.html#cb46-5"></a>Layer 1 ...</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb49-1"><a href="mapshaper.html#cb49-1"></a>$ -join towns-data.csv keys=name,name unmatched unjoined -info</span>
+<span id="cb49-2"><a href="mapshaper.html#cb49-2"></a>Joined 27 data records</span>
+<span id="cb49-3"><a href="mapshaper.html#cb49-3"></a>2/29 target records received no data</span>
+<span id="cb49-4"><a href="mapshaper.html#cb49-4"></a>2/29 source records could not be joined</span>
+<span id="cb49-5"><a href="mapshaper.html#cb49-5"></a>Layer 1 ...</span></code></pre></div>
 <p><img src="images/09-transform/mapshaper-unmatched-unjoined.png" /></p>
 </div>
 <div id="merge-selected-polygons-with-join-and-dissolve-commands" class="section level4 unnumbered" number="">
@@ -499,8 +499,8 @@ Figure 9.6: Screencast: Mapshaper clip
 <ol start="8" style="list-style-type: decimal">
 <li>Click on the Console button, type in both of the commands below, and press Return at the end of each line:</li>
 </ol>
-<div class="sourceCode" id="cb47"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb47-1"><a href="mapshaper.html#cb47-1"></a>-join CT-towns-merged.csv keys=name,name</span>
-<span id="cb47-2"><a href="mapshaper.html#cb47-2"></a>-dissolve merged</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb50-1"><a href="mapshaper.html#cb50-1"></a>-join CT-towns-merged.csv keys=name,name</span>
+<span id="cb50-2"><a href="mapshaper.html#cb50-2"></a>-dissolve merged</span></code></pre></div>
 <p>How to understand the commands above:</p>
 <ul>
 <li><p>The first line “joins” the active layer (the polygon map) to the CSV spreadsheet, with “keys” to match their shared data columns, which are both labeled as “name”.</p></li>
@@ -565,7 +565,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/09-transform.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

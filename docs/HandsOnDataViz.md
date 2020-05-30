@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 26 May 2020
+updated on: 30 May 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -1853,10 +1853,14 @@ good chart takes time and effort, so make sure it enhances your story.
 
 ### Deconstructing a Chart
 
-Let’s take a look at Figure 5-1 that shows the basic components shared
-among most chart types.
+Let’s take a look at Figure
+<a href="#fig:design-principles-chart-components">1</a>. It shows basic
+chart components that are shared among most chart types.
 
-![Figure 5-1](images/05-chart/design-principles-chart-components.png)
+<img src="images/05-chart/design-principles-chart-components.png" alt="Common chart components."  />
+<p class="caption">
+Figure 1: Common chart components.
+</p>
 
 A *title* is perhaps the most important element of any chart. A good
 title is short, clear, and tells a story on its own. For example, “Black
@@ -1871,7 +1875,7 @@ respectively.
 Often these two styles are combined into a title (“story”) and a
 subtitle (“technical”), like that:
 
-    **Black and Asian Population More Likely to Die of Covid-19**
+    Black and Asian Population More Likely to Die of Covid-19
     Covid-19 Deaths by Race in New York City, March 2020
 
 Make sure your subtitle is less prominent than the title. You can
@@ -1910,17 +1914,21 @@ invisible when the chart is printed, only rely on them to convey
 additional, nice-to-have information. Make sure all essential
 information is visible without any user interaction.
 
-### The Unbendable Rules
+### Some Rules are More Important than Others
 
 Although the vast majority of rules in data visualization are open to
 interpretation, there are some that are hard to bend.
 
-**Bar charts start with zero.** Unlike line charts, bar or column charts
-need to have their value axis start at zero. This is to ensure that a
-bar twice the length of another bar represents twice its value. The
-Figure 5-2 shows a good and a bad example.
+**Bar chart axis must start at zero.** Unlike line charts, bar or column
+charts need to have their value axis start at zero. This is to ensure
+that a bar twice the length of another bar represents twice its value.
+The Figure <a href="#fig:design-principles-start-at-zero">2</a> shows a
+good and a bad example.
 
-![Figure 5-2](images/05-chart/design-principles-start-at-zero.png)
+<img src="images/05-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
+<p class="caption">
+Figure 2: Start your bar chart at zero.
+</p>
 
 Starting y-axis at anything other than zero is a common trick used by
 some media and politicians to exaggerate differences in surveys and
@@ -1945,79 +1953,111 @@ Remember that you create a chart to help the reader understand the
 story, not to confuse them. Decide if you want to show absolute numbers,
 percentages, or percent changes, and do the math for your readers.
 
-Start with a white background and add elements as you see appropriate.
-You should be able to justify each element you add. To do so, ask
-yorself: Does this element improve the chart, or can I drop it without
-decreasing readability? This way you won’t end up with so-called “chart
-junk” as shown in Figure 5-3, which includes 3D perspectives, shadows,
-and unnecessary elements. They might have looked cool in early versions
-of Microsoft Office, but let’s stay away from them today.
+**Avoid chart junk**. Start with a white background and add elements as
+you see appropriate. You should be able to justify each element you add.
+To do so, ask yorself: Does this element improve the chart, or can I
+drop it without decreasing readability? This way you won’t end up with
+so-called “chart junk” as shown in Figure
+<a href="#fig:design-principles-junk">3</a>, which includes 3D
+perspectives, shadows, and unnecessary elements. They might have looked
+cool in early versions of Microsoft Office, but let’s stay away from
+them today.
 
-![Figure 5-3](images/05-chart/design-principles-junk.png)
+<img src="images/05-chart/design-principles-junk.png" alt="Avoid chart junk."  />
+<p class="caption">
+Figure 3: Avoid chart junk.
+</p>
 
 The only justification for using three dimensions is to plot
 three-dimensional data, which has x, y, and z values. And don’t let
 anyone tell you otherwise.
 
-Remember that pie charts only show part-to-whole relationship, so all
-slices need to add up to 100%. Generally, the fewer slices the better.
-It is a good practice to arrange slices from largest to smallest,
-clockwise, and put the largest slice at 12 o’clock. Figure 5-4a
-illustrates that.
+**Beware of pie charts**. Remember that pie charts only show
+part-to-whole relationship, so all slices need to add up to 100%.
+Generally, the fewer slices—the better. Arrange slices from largest to
+smallest, clockwise, and put the largest slice at 12 o’clock. Figure
+<a href="#fig:design-principles-pie">4</a> illustrates that.
 
-![Figure 5-4a](images/05-chart/design-principles-pie.png)
+<img src="images/05-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o'clock."  />
+<p class="caption">
+Figure 4: Sort slices in pie charts from largest to smallest, and start
+at 12 o’clock.
+</p>
 
 If your pie chart has more than five slices, consider showing your data
-in a bar chart, either stacked or separated, like Figure 5-4 shows.
+in a bar chart, either stacked or separated, like Figure
+<a href="#fig:design-principles-pie-to-bar">5</a> shows.
 
-![Figure 5-4](images/05-chart/design-principles-pie-to-bar.png)
+<img src="images/05-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
+<p class="caption">
+Figure 5: Consider using bar charts instead of pies.
+</p>
 
-When your column chart has long x-axis labels that have to be rotated
-(often 90 degrees) to fit, consider turning the chart 90 degrees so that
-it becomes a horizontal bar chart. Take a look at Figure 5-5 to see how
-much easier it is to read horizontally-oriented labels.
+**Don’t make people turn their heads to read labels**. When your column
+chart has long x-axis labels that have to be rotated (often 90 degrees)
+to fit, consider turning the chart 90 degrees so that it becomes a
+horizontal bar chart. Take a look at Figure
+<a href="#fig:design-principles-turn-bar">6</a> to see how much easier
+it is to read horizontally-oriented labels.
 
-![Figure 5-5](images/05-chart/design-principles-turn-bar.png)
+<img src="images/05-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
+<p class="caption">
+Figure 6: For long labels, use horizontal bar charts.
+</p>
 
-If your bar chart shows different categories, consider ordering them,
-like is shown in Figure 5-6. You might want to sort them alphabetically,
-which can be useful if you want the reader to be able to quickly ook up
-an item, such as their town. Ordering categories by value is another
-common technique that makes comparisons possible. If your columns
-represent a value of something at a particular time, they have to be
-ordered sequentially, of course.
+**Arrange elements logically**. If your bar chart shows different
+categories, consider ordering them, like is shown in Figure
+<a href="#fig:design-principles-order-categories">7</a>. You might want
+to sort them alphabetically, which can be useful if you want the reader
+to be able to quickly ook up an item, such as their town. Ordering
+categories by value is another common technique that makes comparisons
+possible. If your columns represent a value of something at a particular
+time, they have to be ordered sequentially, of course.
 
-![Figure 5-6](images/05-chart/design-principles-order-categories.png)
+<img src="images/05-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
+<p class="caption">
+Figure 7: For long labels, use horizontal bar charts.
+</p>
 
-When labelling a y-axis, choose natural increments that space equally,
-such as \[0, 20, 40, 60, 80, 100\], or \[1, 10, 100, 1000\] for a
-logarithmic scale. Do not overload your scales. Keep your typography
-simple, use (but do not overuse) **bolding** to highlight major
-insights.
+**Do not overload your chart**. When labelling axes, choose natural
+increments that space equally, such as \[0, 20, 40, 60, 80, 100\], or
+\[1, 10, 100, 1000\] for a logarithmic scale. Do not overload your
+scales. Keep your typography simple, use (but do not overuse)
+**bolding** to highlight major insights. Consider using commas as
+thousands separators for readability (`1,000,000` is much easier to read
+than `1000000`).
 
-The use of color is a complex topic, and there are plenty of books and
-research devoted to it. But some principles are fairly universal. First,
-do not use colors just for the sake of it, most charts are fine being
-monochromatic. Second, remember that color has meaning. When people see
-the color *red*, they have certain associations, and these associations
-vary among cultures. In the world of business, red is conventionally
-used to represent loss, and it would be unwise to use this color to show
-profit. Make sure you avoid random colors.
+**Be careful with the colors**. The use of color is a complex topic, and
+there are plenty of books and research devoted to it. But some
+principles are fairly universal. First, do not use colors just for the
+sake of it, most charts are fine being monochromatic. Second, remember
+that colors come with some meaning attached, which can vary among
+cultures. In the world of business, red is conventionally used to
+represent loss, and it would be unwise to use this color to show profit.
+Make sure you avoid random colors.
 
 Whatever colors you end up choosing, they need to be distinguishable
 (otherwise what is the point?). Do not use colors that are too similar
-in hue. Certain color combinations are hard to interpret for color-blind
+in hue (for example, various shades of green–leave them for choropleth
+maps). Certain color combinations are hard to interpret for color-blind
 people, like green/red or yellow/blue, so be very careful with those.
-Figure 5-7 shows some good and bad examples of color use.
+Figure <a href="#fig:design-principles-color">8</a> shows some good and
+bad examples of color use.
 
-![Figure 5-7](images/05-chart/design-principles-color.png)
+<img src="images/05-chart/design-principles-color.png" alt="Don't use colors just for the sake of it."  />
+<p class="caption">
+Figure 8: Don’t use colors just for the sake of it.
+</p>
 
 If you follow the advice, you should end up with a de-cluttered chart as
-shown in Figure 5-8. Notice how your eyes are drawn to the bars and
-their corresponding values, not bright colors or secondary components
-like the axes lines.
+shown in Figure <a href="#fig:design-principles-decluttered">9</a>.
+Notice how your eyes are drawn to the bars and their corresponding
+values, not bright colors or secondary components like the axes lines.
 
-![Figure 5-8](images/05-chart/design-principles-decluttered.png)
+<img src="images/05-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
+<p class="caption">
+Figure 9: Make sure important things catch the eye first.
+</p>
 
 Google Sheets Charts
 --------------------
@@ -2040,7 +2080,7 @@ the appearance option. Your won’t have much control over your
 scatterplot tooltips. You won’t be able to cite or link to source data
 inside the chart, but it won’t be possible. You won’t be able to
 annotate to highlight items inside charts. But you *will* be able to
-create good-looking interactive visualizations inside your spreadsheet
+create good-looking interactive visualizations inside your spreadsheets
 *quickly*.
 
 Tip: For an overview of charts and graphs in Google Sheets, visit [this
@@ -2247,214 +2287,314 @@ Then your dataset will look like:
     Evening,279
     Night,37
 
-Bins in a histogram normally span the entire range of values of your
-dataset. This way no data is being left out. We recommend you use bins
-of the same size (liek 24 1-hour bins, or four 6-hour bins) to ensure
-the reader can compare across bars.
+Bins in a histogram should span (in other words, “cover”) the entire
+range of values of your dataset. This way you don’t leave out any data.
+We recommend you use bins of the same size (like 24 1-hour bins, or four
+6-hour bins) to ensure readers can compare across bars.
 
 Pie, Line, and Area Charts with Google Sheets
 ---------------------------------------------
 
 #### Pie Chart
 
-Best to show parts of a whole, but hard to estimate size of slices.
+As we mentioned in the Chart Aesthetics section, you need to be careful
+when using pie charts. First, remember to not have too many slices
+(ideally you should limit slices to 5). They should be arranged from
+largest to smallest and start at 12 o’clock. To separate slices, you can
+use different slice colors, or lines.
 
-Try it – to come
+Make sure your data adds up to 100%. If you want to show a pie chart
+with the number of fruit your store had sold in a day—21 apples, 5
+oranges, and 32 bananas—the sum of all fruit, 58, is your 100%. Then a
+reader can figure out that of all fruits sold, approximately 55% were
+bananas. If you decided to also include some, but not all other items
+that your store has sold, such as pizzas, your pie chart would not make
+sense.
 
-Tutorial - to come
+<p>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false">
+</iframe>
+</p>
+
+To make a pie chart with Google Sheets, arrange your data in two
+columns, *Label* and *Value*. Values can be expressed in either
+percentages or counts. For example,
+
+    Apple,21
+    Orange,5
+    Banana,32
+
+Select all cells and go to *Insert &gt; Chart*. Google Sheets is good at
+guessing chart types, so it is possible the chart you will see right
+away will be a pie. If not, in Chart editor in tab Setup, select *Pie
+chart* from the Chart type dropdown list.
+
+Notice that slices are ordered the same way they appear in the
+spreadsheet. We highly recommend you sort values from largest to
+smallest: right-click the header of your values column, and click
+`Sort sheet Z-A`. You will see that the chart updates automatically.
+
+Right-click on the chart, and choose *Chart & axis titles &gt; Chart
+title* to add a meaningful title. In *Customize* tab of the Chart
+editor, you can also change colors and add borders to slices.
 
 #### Line Chart
 
-Best to show change over time with continuous data.
-
-**Try it:** In this line chart, the level of chicken (shown in orange)
-rises steadily and surpasses beef (red) and pork (blue). Float your
-cursor over lines to view data details.
+The most common use of line charts is to represent values at different
+points in time, in other words to show change over time. The line chart
+in Figure 5-X shows per-capita meat availability in the US for the past
+110 years. You can see that the level of chicken (shown in orange) rises
+steadily and surpasses beef (red) and pork (blue).
 
 <p>
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/pubchart?oid=2073830845&amp;format=interactive">
 </iframe>
+<br>
 <a href="https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit#gid=894957893">View
 source data from USDA</a>
 </p>
 
-**Tutorial:**
+The simplest way to organize your data is to use the first column as
+x-axis labels, and each additional column as a new series (which will
+become its own line).
 
--   Begin by opening this link in a new tab: [Google Sheet Line chart
-    template](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/)
--   Follow most of the same steps in first tutorial above.
--   Format your data in a similar way as shown below. Each column is a
-    data series, which displays as a separate color in the
-    chart.<br>![Line chart data
-    table](images/05-chart/line-chart-data.png)
--   In the Chart Editor &gt; Recommendations tab, choose Line chart, or
-    see more options in Chart Types tab.
+For example, the meat data from Figure 5-X looks like that:
+
+    Year    Beef    Pork    Chicken
+    1910    48.5    38.2    11
+    1920    40.7    39  9.7
+    1930    33.7    41.1    11.1
+    1940    37.8    45.1    10
+    1950    44.6    43  14.3
+    1960    59.1    48.6    19.1
+    1970    79.6    48.1    27.4
+    1980    72.1    52.1    32.7
+    1990    63.9    46.4    42.4
+    2000    64.5    47.8    54.2
+    2010    56.7    44.3    58
+    2017    54  47  64
+
+The data is available in a [Google Sheet Line chart
+template](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/),
+which you can use to make a copy.
+
+Select the data, and choose *Insert &gt; Chart*. It is possible Google
+Sheets will create a line chart right away. If not, in Chart editor in
+tab Setup, select *Line chart* from the Chart type dropdown list.
 
 #### Stacked Area Chart
 
-Best to show part-to-whole relationships that change over time.
+In the previous section, we saw how individual meat availability changed
+over time. It was hard, however, to estimate if the overall meat
+availability went up or down. (That is, of course, if we assume that
+beef, pork, and chicken are the only meats we eat).
 
-**Try it:** to come
+We can see how availability of individual meat types, *and* the total
+meat availability over time using a stacked area chart, like shown in
+Figure 5-X. Here, we can still see that chicken has been on the rise
+since 1970s. We can also see that the total availability has not changed
+much since then.
 
-**Tutorial:** to come
+The data is available in a [Google Sheet Stacked area chart
+template](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing),
+which you can use to make a copy.
+
+<p>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive">
+</iframe>
+</p>
+
+Set up the data exactly as you would with a line chart (first column is
+labels for the x-axis, second and following columns are series, or
+lines). Select it, and choose *Insert &gt; Chart*. In the Chart editor,
+in tab Setup, select *Stacked area chart* from the Chart type dropdown
+list.
 
 Scatter and Bubble Charts with Google Sheets
 --------------------------------------------
 
 Follow these tutorials to create different types scatter and bubble
-charts with [Google Sheets](http://sheets.google.com)
+charts with [Google Sheets](https://sheets.google.com).
 
 #### Scatter chart
 
-Best to show relationships between two series of data. Also called an XY
-chart, because each point represents a coordinate value plotted along
-the horizontal x-axis and the vertical y-axis.
+Scatter charts, also known as scatterplots, use x-y coordinates to show
+the relationship between two variables.
 
-**Try it:** This scatter chart reveals a downward slope: nations with
-lower fertility also tend to have higher life expectancy. But remember
-that a data correlation does not necessarily show causation. Float your
-cursor over points to view data details. However, the Google Sheet
-scatter chart only displays static labels for each country, rather than
-interactive tooltips. See alternative tools below.
+This scatter chart in Figure 5-X uses World Bank data to reveal a
+downward slope: nations with lower fertility (births per woman) tend to
+have higher life expectancy. You can also phrase is the other way,
+nations with higher life expectancy at birth have lower fertility.
+Remember that a data correlation does not necessarily show causation, so
+you cannot use this chart to “prove” that fewer births result in longer
+lives, or that longer-living females give birth to fewer children.
+
+If this is an e-book, you should be able to hover over points to view
+data details.
 
 <p>
 <iframe width="626" height="387" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/pubchart?oid=386475448&amp;format=interactive">
 </iframe>
+<br>
 <a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit#gid=562477420">View
 source data from World Bank</a>
 </p>
 
-**Tutorial:**
+The data used in Figure 5-X is available from our [Google Sheets Scatter
+chart
+template](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/).
+You can copy it to your own Google Drive so that you’re able to edit it
+(go to *File &gt; Make a copy*).
 
--   Begin by opening this link in a new tab: [Google Sheets Scatter
-    chart with static data
-    labels](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/)
--   Follow most of the same steps in first tutorial above.
--   Format your data in a similar way as shown below. The first column
-    (life expectancy) is the x-axis data series, and the second column
-    (fertility) is the y-axis data series. The third column consists of
-    data labels (names of countries).<br> ![Scatter chart table
-    data](images/05-chart/scatter-chart-data.png)
--   In the Chart Editor &gt; Recommendations tab, choose Scatter chart,
-    or see more options in Chart Types tab.
--   To display static labels for each point, click the upper-right
-    charter corner for Advanced Editing tools &gt; Customization tab,
-    the scroll down to Series &gt; Data labels &gt; Custom, and press
-    Update. ![Display static point
-    labels](images/05-chart/scatter-chart-custom-data-labels.png)
--   Since the Google Sheets scatter chart is not ideal, consider using
-    the 3-column bubble chart below, or the [Scatter Chart with Tableau
-    Public tutorial](scatter-chart-tableau) in this book.
+Figure 5-X shows the first few rows of the dataset. Notice that the data
+is structured in three columns. The first column, *Life Expectancy*, is
+plotted on the x-axis (horizontal). The second column, *Fertility*, is
+plotted on the y-axis (vertical). The third column contains *Country*
+labels.
+
+![Scatter chart table data](images/05-chart/scatter-chart-data.png)
+
+To build a scatter chart, select the **two** columns that contain your
+numeric data, and go to *Insert &gt; Chart*. Google Sheets will likely
+to guess the chart type and you will see a scatterplot, but if not, you
+can always manually pick Scatter chart from the *Chart type* dropdown.
+Make sure your x-axis is set to Life Expectancy, and your Series shows
+Fertility. Note that both Life Expectancy and Fertility have `123` icon,
+meaning they are numeric.
+
+You will see a lot of scatter charts out there that do not label data
+points, and that’s okay. Some scatter plots are designed to show whether
+or not there is a correlation, and knowing which points are which is not
+important. But sometimes labels are important for your storytelling.
+
+In Chart editor, click on the kebab menu for your Series dataset
+(Fertility), and then *Add labels*. The labels added by default will be
+the x-values of points. To make Google Sheets read labels from the third
+column (*Country*), click the name of your label dataset (Life
+Expectancy), then *Select a data range* button in the upper-right corner
+of the dropdown, and choose cells in the relevant columns. Make sure to
+include the header (first row) if all other data ranges include it.
+
+![Display labels](images/05-chart/scatter-chart-custom-data-labels.png)
+
+Tip: You may notice that some data points are too close to edges, and
+their labels are cut off. To fix this, go to Customize tab of the Chart
+editor. There, you can set minimum and maximum values for both
+horizontal and vertical axes. Unlike in bar charts, axes in scatter
+plots do not have to start at zero. You can set your minimum and maximum
+values to be a few units below and above the extreme points of your data
+range.
 
 #### Bubble chart with 3 columns
 
-Best to show the relationship between two series of data, similar to the
-scatter chart above, with labels in tooltips.
+In this tutorial, we will show you a little trick that you can use if
+you want a scatter chart with both data values displayed in a tooltip.
+We will use the same World Bank dataset as we did for the scatter plot.
 
-**Try it:** This bubble chart shows the same data as above on fertility
-and life expectancy. Float your cursor over each bubble to reveal a
-tooltip with the country name and the two data points.
+The bubble chart (more about the *proper* use of bubble charts in the
+next section) in Figure 5-X shows the same data as our scatterplot on
+life expectancy vs fertility.
+
+If this is an e-book, hover your cursor over each bubble (dot) to reveal
+a tooltip with the country name and the two data points.
 
 <p>
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive">
 </iframe>
+<br>
 <a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit#gid=1602534273">View
 source data from World Bank</a>
 </p>
 
-**Tutorial:** - Begin by opening this link a new tab: [Google Sheets
-Bubble chart with 3 columns
+The data for this example is available in [Google Sheets Bubble chart
+with 3 columns
 template](https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/)
-- Format your data in a similar way as shown below, with three columns
-in this order: - A: label for each bubble - B: numeric data on
-horizontal x-axis - C: numeric data on vertical y-axis<br> ![Bubble
-chart with 3 columns data
-table](images/05-chart/bubble-chart-3-column-data.png) - Follow most of
-the same steps in the first tutorial above. - In the Chart Editor, skip
-the Recommendation tab, select the Chart Types tab, then choose Bubble
-chart (near Scatter chart).<br> ![Bubble chart types
-menu](images/05-chart/bubble-chart-types.png) - Labels will appear on
-each bubble by default. To hide labels initially, so that they appear
-only in the interactive tooltips when floating the cursor over data,
-customize your chart. Click the editing controls in the upper-right
-corner, scroll down to Series, and change Labels &gt; Color &gt;
-None.<br> ![Hide labels in Google Sheets bubble
-chart](images/05-chart/bubble-chart-hide-labels.png) - Unfortunately,
-there is no easy way to reduce all bubbles to a uniformly smaller size.
-See the Google Sheets Bubble chart with 5 columns below, or create a
-[Scatter Chart with Tableau
-Public](chart.html#scatter-chart-with-tableau-public) in this book.
+
+Notice that we moved the labels column (*Country*) to be the first one
+in the dataset, but the order shouldn’t matter in this case. So our
+first column is the label for each bubble, the second column is the data
+to be plotted on horizontal x-axis, and the third column (fertility)
+will be placec on the y-axis.
+
+Select all three columns, and go to *Insert &gt; Chart*. Google Sheets
+will likely create a stacked column chart by default, so choose *Bubble*
+from the Chart type dropdown window.
+
+If you want to remove labels from the bubbles, remove the **ID** series
+(click on the kebab menu &gt; Remove).
+
+Unfortunately, there is no easy way to reduce all bubbles to a uniformly
+smaller size. In the following section, we will introduce you to the
+proper way of using bubble charts.
 
 #### Bubble chart with 5 columns
 
-Best to show the relationship between three or four series of data.
-Similar to a scatter chart, but with bubble size and color to represent
-additional variables.
+Bubble charts are a good alternative to scatter charts if you need to
+include one or two extra series in addition to your x- and
+y-coordinates. One of those can be expressed through bubble size (bigger
+bubbles represent larger values). Another one can make use of color
+(best for categorical data).
 
-**Try it:** This bubble chart shows fertility and life expectancy for a
-subset of the nations above, with population (shown by bubble size) and
-region (shown by bubble color). Float your cursor over bubbles to view
-data details.
+The bubbe chart in Figure 5-X shows fertility and life expectancy for a
+subset of the nations, with population (shown by bubble size) and region
+(shown by bubble color). Float your cursor over bubbles to view data
+details if this is an e-book.
 
 <p>
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/pubchart?oid=200651442&amp;format=interactive">
 </iframe>
+<br>
 <a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/edit#gid=1182154897">View
 data from World Bank</a>
 </p>
 
-\*\* Tutorial \*\* - Begin by opening this link a new tab: [Google
-Sheets Bubble chart with 5 columns
-template](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/)
-- Follow most of the same steps in the tutorials above. - Format your
-data in a similar way as shown below, with 5 columns in this order: - A:
-label for each bubble - B: numeric data on horizontal x-axis - C:
-numeric data on vertical y-axis - D: text data to represent bubble color
-(each category will appear as a new color, or leave blank to display all
-as one color)  
-- E: numeric data to represent bubble size<br> ![Bubble chart with 5
-columns data table](images/05-chart/bubble-chart-5-column-data.png) -
-Labels will appear on each bubble by default. To hide labels in the
-default display (and show them only in the interactive tooltips when
-floating the cursor over data), see the 3-column bubble chart tutorial
-above.
+The five-column dataset is available in this [Google Sheets Bubble chart
+with 5 columns
+template](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/).
+The columns are arranged in the following order: country label, x-axis
+value, y-axis value, color, and bubble size.
 
-#### Learn more
+    Country Life expectancy Fertility   Region  Population
+    United States   78.5    1.70    North America   326687501
+    United Kingdom  81.4    1.70    Europe  66460344
+    ...
+    Nigeria 54.3    5.40    Africa  195874740
+    South Africa    63.9    2.40    Africa  57779622
 
-See additional chart types in this [Google Sheets help
-page](https://support.google.com/docs/answer/190718)
+Select all data and go to *Insert &gt; Chart*, and choose Bubble as the
+Chart type. Make sure your **ID**, **X-axis**, **Y-axis**, **Series**,
+and **Size** fields contains the series you want to display, and make
+sure to have *Use row 1 as headers* option checked.
+
+To change labels color, go to Customize tab of the Chart editor, and set
+Text color under the Bubble menu. Make it gray or black, so that it
+won’t interfere with the bubble colors themselves.
+
+Tip: If some of your bubbles are too close to the borders, set Min and
+Max values for the axis manually under Horizontal axis and Vertical axis
+menus.
 
 Create Charts with Tableau Public
 ---------------------------------
 
-This book includes tutorials to create interactive charts with Tableau
-Public
-<a href="https://public.tableau.com" class="uri">https://public.tableau.com</a>.
-Free download requires email signup.
+Tableau is powerful data visualization software used by many
+professionals and organizations to analyze and present data. Tableau can
+combine multiple datasets to show in a single chart (or a map), and
+allows to create dashboards with multiple visualizations. Individual
+visualizations and dashboards can be published and embedded on your
+website through an iframe.
 
--   [Create an XY Scatter Chart with Tableau
-    Public](scatter-chart-tableau.html)
--   [Create a Filtered Line Chart with Tableau
-    Public](filtered-line-chart-tableau.html)
+Tableau comes in several versions, and the one we’re interestedin in
+Tableau Public. It is free, and only requires an email to
+[download](https://public.tableau.com/s/). You might be overwhelmed by
+the amount of options and features Tableau provides through its
+interface. We will show you the very basics enough to get started, and
+if you want to dive further, there are many great books on Tableau
+available.
 
-#### Tool Review
-
--   Pros
-    -   Easy-to-learn tool for basic charts, with power to create more
-        advanced visualizations
-    -   Tableau Public (free version) includes most features found in
-        Tableau Desktop (US $999+)
-    -   Connect to multiple data formats: Text (CSV), Google Sheets,
-        Excel, and more
-    -   Combine multiple visualizations and tell stories with dashboard
-        and story point features
--   Cons
-    -   Only available as a downloadable application for Mac or Windows
-    -   New users may be overwhelmed by extensive options
-    -   Saving your work online makes it public (hence the name Tableau
-        Public)
-    -   Limited support for maps below the nation or state levels
-    -   Dependent upon Tableau web servers
+In this book, we will show you how to add datasets to Tableau Public,
+and how to [create a scatterplot](scatter-chart-tableau.html) and a
+filtered line chart\](filtered-line-chart-tableau.html).
 
 #### Learn more
 
@@ -5211,7 +5351,7 @@ results in the Found and Quality columns.
 <iframe src="images/09-transform/google-sheets-geocoder-census-google.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 1: Screencast: Google Sheets Geocoder: US Census or Google
+Figure 10: Screencast: Google Sheets Geocoder: US Census or Google
 </p>
 
 #### Google Sheets Geocoder: US Census Geographies
@@ -5228,7 +5368,7 @@ Figure 1: Screencast: Google Sheets Geocoder: US Census or Google
 <iframe src="images/09-transform/google-sheets-geocoder-census-geographies.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 2: Screencast: Google Sheets Geocoder: US Census Geographies
+Figure 11: Screencast: Google Sheets Geocoder: US Census Geographies
 </p>
 
 ##### About US Census 15-character GeoID
@@ -5638,7 +5778,7 @@ and Table tabs to view or edit the data.
 <iframe src="images/09-transform/dataviz-geojsonio-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 3: Screencast: GeoJson.io
+Figure 12: Screencast: GeoJson.io
 </p>
 
 Select the Save menu and export into GeoJSON format.
@@ -5794,7 +5934,7 @@ Export your outline map.
 <iframe src="images/09-transform/mapshaper-dissolve-simple-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 5: Screencast: Mapshaper dissolve
+Figure 14: Screencast: Mapshaper dissolve
 </p>
 
 #### Clip a map to match an outline layer
@@ -5850,7 +5990,7 @@ Refresh the browser to start a new session in
 <iframe src="images/09-transform/mapshaper-clip-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 6: Screencast: Mapshaper clip
+Figure 15: Screencast: Mapshaper clip
 </p>
 
 #### Remove unwanted data columns
@@ -6639,7 +6779,7 @@ GitHub](create-repo.html) chapter in this book.
 <iframe src="images/13-leaflet/lmwgs-1-fork-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 7: Screencast: Fork
+Figure 16: Screencast: Fork
 </p>
 
 1.  Scroll up to the top, and click on your repo name to go back to its
@@ -6673,7 +6813,7 @@ Figure 7: Screencast: Fork
 <iframe src="images/13-leaflet/lmwgs-2-make-copy-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 8: Screencast: Share Google Sheet
+Figure 17: Screencast: Share Google Sheet
 </p>
 
 1.  File &gt; Publish the Link to your Google Sheet to the public web,
@@ -6706,7 +6846,7 @@ URL](images/13-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 <iframe src="images/13-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 9: Screencast: Copy Google Sheet URL and paste into GitHub code
+Figure 18: Screencast: Copy Google Sheet URL and paste into GitHub code
 </p>
 
 1.  Next, let’s paste your Google Sheet URL in a second place to keep
@@ -7969,10 +8109,11 @@ in the `index.Rmd` code:
       includes:
         in_header: google-analytics.html
 
-Style Guide
------------
+Style Guide for *Hands-On Data Visualization*
+---------------------------------------------
 
-View the source code to better understand how this page was composed at:
+View the underlying source code to understand how this page was composed
+at:
 <a href="https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd</a>
 
 This book is composed in R-flavored Markdown (.Rmd), and each paragraph
@@ -8089,10 +8230,10 @@ this [bad example](#style-guide).
 To cross-reference figures and tables, and display their auto-number and
 allow readers to jump there, write a call-out with a Bookdown reference
 to a code-chunk label, such as
-`See Figure <a href="#fig:sample-map">11</a>` or
+`See Figure <a href="#fig:sample-map">20</a>` or
 `See Table <a href="#tab:left-table">1</a>`. Demos:
 
--   See Figure <a href="#fig:tiger">10</a>.
+-   See Figure <a href="#fig:tiger">19</a>.
 -   See Table <a href="#tab:left-table">1</a>.
 
 Cross-reference interactivity varies by output:
@@ -8196,13 +8337,22 @@ Do not insert spaces inside the `ref:chunk-label` for the caption, but
 add a blank line to separate it from the code-chunk. After the
 code-chunk, add another blank line.
 
+Note that the Bookdown `index.Rmd` file includes an R code-chunk setting
+immediately after the first header, which displays each code-chunk image
+without a code echo. Read more about this feature and related options in
+this [Bookdown
+chapter](https://bookdown.org/yihui/bookdown/figures.html).
+
+    {r setup, include=FALSE}
+    knitr::opts_chunk$set(echo = FALSE)
+
 ### Demo: R code-chunk for static image
 
-…as shown in Figure <a href="#fig:tiger">10</a>.
+…as shown in Figure <a href="#fig:tiger">19</a>.
 
 <img src="images/15-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
-Figure 10: Caption here. Markdown embedded links are acceptable.
+Figure 19: Caption here. Markdown embedded links are acceptable.
 </p>
 
 R code-chunks allow more complex conditional formatting, where an
@@ -8214,14 +8364,14 @@ file, with a code comment reminder.
 
 ### Demo: R code-chunk for HTML iframe and static image
 
-…as shown in Figure <a href="#fig:sample-map">11</a>.
+…as shown in Figure <a href="#fig:sample-map">20</a>.
 
 <!-- set iframe 600px height 100% width in custom-scripts.html -->
 
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 11: Caption here, and add embedded link to explore the
+Figure 20: Caption here, and add embedded link to explore the
 [full-screen interactive
 map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 </p>
@@ -8231,14 +8381,14 @@ map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 TODO: FIX to make sizing appear consistently across browsers (FFox vs
 Chrome).
 
-…as shown in Figure <a href="#fig:excel-drag">12</a>.
+…as shown in Figure <a href="#fig:excel-drag">21</a>.
 
 <!-- set iframe 450px height in custom-scripts.html -->
 
 <iframe src="images/15-bookdown/excel-drag.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 12: Caption here, with embedded link to GitHub repo, not GitHub
+Figure 21: Caption here, with embedded link to GitHub repo, not GitHub
 Pages [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/excel-drag.gif).
 </p>
@@ -8247,23 +8397,14 @@ GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/excel
 
 Be sure to use the *embed* link from the YouTube *share* button.
 
-…as shown in the video <a href="#fig:video-sample">13</a>.
+…as shown in the video <a href="#fig:video-sample">22</a>.
 
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 13: Caption here, with embedded link to the [YouTube
+Figure 22: Caption here, with embedded link to the [YouTube
 video](https://youtu.be/-nGdrzMuUnI).
 </p>
-
-This Bookdown `index.Rmd` file includes an R code-chunk setting
-immediately after the first header, which displays each code-chunk image
-without a code echo. Read more about this feature and related options in
-this [Bookdown
-chapter](https://bookdown.org/yihui/bookdown/figures.html).
-
-    {r setup, include=FALSE}
-    knitr::opts_chunk$set(echo = FALSE)
 
 Tables
 ------

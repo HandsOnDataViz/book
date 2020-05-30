@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-05-21" />
+<meta name="date" content="2020-05-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -306,86 +306,147 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chart-design" class="section level2 unnumbered" number="">
 <h2>Chart Design Principles</h2>
-<p>Spot the difference between good and bad charts, based on this compilation of design principles from leading experts, with citations listed below to learn more.</p>
-<ol style="list-style-type: decimal">
-<li><p>Remember the <strong>most important principle:</strong> Find meaningful insights in your data, and create visualizations that help you tell these stories. All of the other details below are secondary.</p></li>
-<li><p>Before you begin, ask yourself: Do I really need a chart to tell this data story? Or would a table or text alone do a better job?</p></li>
-<li><p>Decide if the best way to communicate with your audience is with static charts (such as images printed on paper) or interactive charts (embedded in a website, with tooltip details and source links). Most of these principles apply to both types, but <a href="chart">this book features tools and tutorials</a> to create interactive charts.</p></li>
-<li><p>Understand basic chart vocabulary: title, labels, horizontal x-axis and vertical y-axis, data series, tooltip, source and credits.</p></li>
-</ol>
-<p><img src="images/05-chart/Chart%20-%204%20-%20Vocabulary.png" /></p>
-<ol start="5" style="list-style-type: decimal">
-<li><p>Identify the <a href="chart">chart type</a> that best matches your story and data format.</p></li>
-<li><p>Draw visual comparisons that are easy for readers to understand, rather than confusing them (adapted from Gourley p. 19).</p></li>
-<li><p>Do the math for your readers. Based on your data story, decide if you should show absolute numbers, percentages, or percent change (Wong pp. 23-25, 104-107).</p></li>
-</ol>
-<p><img src="images/05-chart/Chart%20-%207%20-%20Do%20the%20math.png" /></p>
-<ol start="8" style="list-style-type: decimal">
-<li>Order categories logically—either alphabetically, by value, or sequentially—depending on your data story (Gourley, p. 19; Wong pp. 70-71).</li>
-</ol>
-<p><img src="images/05-chart/Chart%20-%208%20-%20Order.png" /></p>
-<ol start="9" style="list-style-type: decimal">
-<li>For long labels, use horizontal bar charts instead of vertical column charts (Wong p. 66).</li>
-</ol>
-<p><img src="images/05-chart/Chart%20-%209%20-%20Bar%20vs%20Column.png" /></p>
-<ol start="10" style="list-style-type: decimal">
-<li>On bar and column charts, start the vertical y-axis at zero, and choose natural increments (Wong pp. 51-52). But line charts do not need to start at zero, and can focus on specific ranges. See also the <a href="how-to-lie-with-charts">How to Lie with Charts</a> and <a href="how-to-lie-with-maps">How to Lie with Maps</a> chapters in this book.</li>
-</ol>
-<p><img src="images/05-chart/Chart%20-%2010%20-%20Start%20with%20zero.png" /></p>
-<ol start="11" style="list-style-type: decimal">
-<li>Beware of pie charts. Most readers cannot accurately estimate sizes of different slices. Consider other ways to show part-to-whole relationships, such as bar/column charts, or stacked bar/column charts (Few 2007, pp. 2-4; Wong p. 79).</li>
-</ol>
-<p><img src="images/05-chart/Chart%20-%2011%20-%20No%20pie%20chart.png" /></p>
-<ol start="12" style="list-style-type: decimal">
-<li>If you choose to use a pie chart, then show no more than 5 slices, and places the largest slices closest to the top at 12 o’clock (Wong, pp. 74-75).</li>
-</ol>
-<p><img src="images/05-chart/Chart%20-%2012%20-%20Pie%20chart%20rules.png" /></p>
-<ol start="13" style="list-style-type: decimal">
-<li>Words matter as much as pictures.</li>
-</ol>
-<ul>
-<li>Add meaningful titles, labels, and annotations to draw attention to your data story.</li>
-<li>Keep typography simple, and <strong>use bold type</strong> sparingly to highlight your key insights (Wong p. 32; Knaflic pp. 107, 111).</li>
-</ul>
-<ol start="14" style="list-style-type: decimal">
-<li><p>On static charts, label items directly when possible. (On interactive charts, designers may need to rely on tooltips and text.) Insert a legend in a logical place for readers (Wong, p. 56).</p></li>
-<li><p>Add source credits and bylines—with links to view data tables and details—to build credibility and accountability.</p></li>
-<li><p>Avoid “chart junk”–such as 3D perspective, shadows, and unnecessary ornaments—which distract readers from your data story. Never use 3D unless you are plotting three-dimensional data (Tufte p. <em>to come</em>, Wong p. 62, Knaflic p. 65).</p></li>
-</ol>
-<p><img src="images/05-chart/Chart%20-%2016%20-%20Avoid%20junk.png" /></p>
-<ol start="17" style="list-style-type: decimal">
-<li>De-clutter charts (Knaflic pp. 91-98, 130-135).</li>
-</ol>
-<p><img src="images/05-chart/Chart%20-%2017%20-%20Declutter.png" /></p>
-<ol start="18" style="list-style-type: decimal">
-<li>Choose colors wisely.</li>
-</ol>
-<ul>
-<li>Use color to logically organize your data. Avoid random colors (Wong pp. 40, 44).</li>
-<li>Avoid bad combinations from opposite sides of color wheel, such as red/green or yellow/blue (Wong pp. 40, 44).</li>
-<li>Use contrast (such as color vs gray) to call attention to your data story (Knaflic pp. 87-88)</li>
-</ul>
-<p><img src="images/05-chart/Chart%20-%2018%20-%20Colors.png" /></p>
-<p>See also <a href="map-design.html">Map Design Principles</a> and <a href="story.html">Tell Your Data Story</a> chapters in this book.</p>
-<div id="learn-more-5" class="section level4 unnumbered" number="">
-<h4>Learn more</h4>
-<ul>
-<li><p>Stephanie D. H. Evergreen, Effective Data Visualization: The Right Chart for the Right Data, (Los Angeles: SAGE Publications, Inc, 2016)</p></li>
-<li><p>Stephen Few, Now You See It: Simple Visualization Techniques for Quantitative Analysis, (Oakland, Calif: Analytics Press, 2009)</p></li>
-<li><p>Stephen Few, “Save the Pies for Dessert [critique of pie charts],” Visual Business Intelligence Newsletter, 2007, 1–14, <a href="http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf" class="uri">http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf</a></p></li>
-<li><p>Stephen Few, Show Me the Numbers: Designing Tables and Graphs to Enlighten, Second edition (Burlingame, CA: Analytics Press, 2012)</p></li>
-<li><p>Drew Gourley, How to Use Data Visualization to Win Over Your Audience, (Visage and Hubspot, June 2015), <a href="https://visage.co/content/data-viz-win-audience" class="uri">https://visage.co/content/data-viz-win-audience</a></p></li>
-<li><p>Cole Nussbaumer Knaflic, Storytelling with Data: A Data Visualization Guide for Business Professionals, (Hoboken, New Jersey: Wiley, 2015)</p></li>
-<li><p>Cole Nussbaumer Knalfic, “An Updated Post on Pies,” StoryTelling with Data, February 16, 2017, <a href="http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies" class="uri">http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies</a></p></li>
-<li><p>Wayne Lytle, Viz-O-Matic: The Dangers of Glitziness and Other Visualization Faux Pas, 1993 video shared on YouTube, <a href="https://www.youtube.com/watch?v=fP-7rhb-qMg" class="uri">https://www.youtube.com/watch?v=fP-7rhb-qMg</a></p></li>
-<li><p>Isabel Meirelles, Design for Information: An Introduction to the Histories, Theories, and Best Practices Behind Effective Information Visualizations (Rockport Publishers, 2013), <a href="http://isabelmeirelles.com/book-design-for-information/" class="uri">http://isabelmeirelles.com/book-design-for-information/</a></p></li>
-<li><p>Tableau, Visual Analysis Best Practices: A Guidebook, n.d., <a href="http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf" class="uri">http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf</a>.</p></li>
-<li><p>Edward R. Tufte, Beautiful Evidence (Graphics Press, 2006)</p></li>
-<li><p>“WTF Visualizations: Visualizations That Make No Sense,” 2017, <a href="http://viz.wtf" class="uri">http://viz.wtf</a>.</p></li>
-<li><p>xkcd, “University Website,” accessed February 12, 2017, <a href="https://xkcd.com/773/" class="uri">https://xkcd.com/773/</a></p></li>
-<li><p>Nathan Yau, “One Dataset, Visualized 25 Ways,” FlowingData, January 24, 2017, <a href="http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/" class="uri">http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/</a></p></li>
-<li><p>Nathan Yau, “Best Data Visualization Projects of 2016,” FlowingData, December 29, 2016, <a href="http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/" class="uri">http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/</a></p></li>
-</ul>
+<p>Although not a science, data visualization comes with a set of rules, principles, and best practices
+that create a basis for clear and eloquent charts. Some of those rules are less rigid than others,
+but prior to “breaking” them, it is important to establish why they are important.</p>
+<p>Before you begin, ask yourself: Do I really need a chart to tell this data story?
+Or would a table or text alone do a better job? Making a good chart takes time and effort,
+so make sure it enhances your story.</p>
+<div id="deconstructing-a-chart" class="section level3" number="5.0.1">
+<h3><span class="header-section-number">5.0.1</span> Deconstructing a Chart</h3>
+<p>Let’s take a look at Figure 5-1 that shows the basic components shared among most chart types.</p>
+<div class="figure">
+<img src="images/05-chart/design-principles-chart-components.png" alt="" />
+<p class="caption">Figure 5-1</p>
+</div>
+<p>A <em>title</em> is perhaps the most important element of any chart. A good title is short, clear,
+and tells a story on its own. For example, “Black and Asian Population More Likely to Die of Covid-19”,
+or “Millions of Tons of Plastic Enter the Ocean Every Year” are both good titles.</p>
+<p>Sometimes a more “dry” and “technical” title is preferred. Our two titles can then be changed to
+“Covid-19 Deaths by Race in New York City, March 2020” and “Tons of Plastic Entering the Ocean, 1950–2020”, respectively.</p>
+<p>Often these two styles are combined into a title (“story”) and a subtitle (“technical”), like that:</p>
+<pre><code>**Black and Asian Population More Likely to Die of Covid-19**
+Covid-19 Deaths by Race in New York City, March 2020</code></pre>
+<p>Make sure your subtitle is less prominent than the title. You can achieve this by decreasing font size,
+or changing font color (or both).</p>
+<p>Horizontal (x) and vertical (y) <em>axes</em> define the scale and units of measure.</p>
+<p>A <em>data series</em> is a collection of observations, which is usually a row or
+a column of numbers, or <em>data points</em>, in your dataset.</p>
+<p><em>Labels</em> and <em>annotations</em> are often used across the chart to give more context. For example,
+a line chart showing US unemployment levels between 1900 and 2020
+can have a “Great Depression” annotation arround 1930s, and “Covid-19 Impact” annotation for 2020,
+both representing spikes in unemployment.
+You might also choose to label items directly instead of relying on axes, which is common
+with bar charts. In that case, a relevant axis can be hidden and the chart will look less cluttered.</p>
+<p>A <em>legend</em> shows symbology, such as colors and shapes used in the chart, and their meaning (usually values that they represent).</p>
+<p>You should add any <em>Notes</em>, <em>Data Sources</em>, and <em>Credits</em> underneath the chart to give more context about
+where the data came from, how it was processed and analyzed, and who created the visualization.
+Remember that being open about these things helps build credibility and accountability.</p>
+<p>In interactive charts, a <em>tooltip</em> is often used to provide more data or context
+once a user clicks or hovers over a data point or a data series.
+Tooltips are great for complex visualizations with multiple layers of data,
+because they de-clutter the chart. But because tooltips are harder to interact with on smaller screens,
+such as phones and tablets, and are invisible when the chart is printed, only rely on them to convey
+additional, nice-to-have information. Make sure all essential information
+is visible without any user interaction.</p>
+</div>
+<div id="the-unbendable-rules" class="section level3 unnumbered" number="">
+<h3>The Unbendable Rules</h3>
+<p>Although the vast majority of rules in data visualization are open to interpretation,
+there are some that are hard to bend.</p>
+<p><strong>Bar charts start with zero.</strong>
+Unlike line charts, bar or column charts need to have their value axis start at zero.
+This is to ensure that a bar twice the length of another bar represents twice its value.
+The Figure 5-2 shows a good and a bad example.</p>
+<div class="figure">
+<img src="images/05-chart/design-principles-start-at-zero.png" alt="" />
+<p class="caption">Figure 5-2</p>
+</div>
+<p>Starting y-axis at anything other than zero is a common trick used by some media
+and politicians to exaggerate differences in surveys and election results.</p>
+<p><strong>Pie Charts Represent 100%</strong>.
+Pie charts is one of the most contentious issues in data visualization.
+Most dataviz practitioners will recommend avoiding them entirely, saying that
+people are bad at accurately estimating sizes of different slices.
+We take a less dramatic stance, as long as you adhere to the recommendations
+we give in the next section.</p>
+<p>But the one and only thing in data visualization that every single professional
+will agree on is that <em>pie charts represent 100% of the quantity</em>.
+If slices sum up to anything other than 100%, it is a crime. If you design a survey
+titled <em>Are you a cat or a dog person?</em> and include <em>I am both</em> as the third option,
+forget about putting the results into a pie chart.</p>
+</div>
+<div id="chart-aesthetics" class="section level3 unnumbered" number="">
+<h3>Chart Aesthetics</h3>
+<p>Remember that you create a chart to help the reader understand the story, not to confuse them.
+Decide if you want to show absolute numbers, percentages, or percent changes, and do the math for your readers.</p>
+<p>Start with a white background and add elements as you see appropriate. You should be able to justify
+each element you add. To do so, ask yorself: Does this element improve the chart, or can I
+drop it without decreasing readability? This way you won’t end up with so-called “chart junk” as shown in Figure 5-3,
+which includes 3D perspectives, shadows, and unnecessary elements. They might have looked cool in early versions
+of Microsoft Office, but let’s stay away from them today.</p>
+<div class="figure">
+<img src="images/05-chart/design-principles-junk.png" alt="" />
+<p class="caption">Figure 5-3</p>
+</div>
+<p>The only justification for using three dimensions is to plot three-dimensional data,
+which has x, y, and z values. And don’t let anyone tell you otherwise.</p>
+<p>Remember that pie charts only show part-to-whole relationship, so all slices need to add up to 100%.
+Generally, the fewer slices the better. It is a good practice to arrange slices from largest
+to smallest, clockwise, and put the largest slice at 12 o’clock. Figure 5-4a illustrates that.</p>
+<div class="figure">
+<img src="images/05-chart/design-principles-pie.png" alt="" />
+<p class="caption">Figure 5-4a</p>
+</div>
+<p>If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or separated,
+like Figure 5-4 shows.</p>
+<div class="figure">
+<img src="images/05-chart/design-principles-pie-to-bar.png" alt="" />
+<p class="caption">Figure 5-4</p>
+</div>
+<p>When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit,
+consider turning the chart 90 degrees so that it becomes a horizontal bar chart.
+Take a look at Figure 5-5 to see how much easier it is to read horizontally-oriented labels.</p>
+<div class="figure">
+<img src="images/05-chart/design-principles-turn-bar.png" alt="" />
+<p class="caption">Figure 5-5</p>
+</div>
+<p>If your bar chart shows different categories, consider ordering them, like is shown in Figure 5-6.
+You might want to sort them alphabetically, which can be useful if you want the reader
+to be able to quickly ook up an item, such as their town. Ordering categories by
+value is another common technique that makes comparisons possible.
+If your columns represent a value of something at a particular time,
+they have to be ordered sequentially, of course.</p>
+<div class="figure">
+<img src="images/05-chart/design-principles-order-categories.png" alt="" />
+<p class="caption">Figure 5-6</p>
+</div>
+<p>When labelling a y-axis, choose natural increments that space equally, such as [0, 20, 40, 60, 80, 100],
+or [1, 10, 100, 1000] for a logarithmic scale. Do not overload your scales.
+Keep your typography simple, use (but do not overuse) <strong>bolding</strong> to highlight major insights.</p>
+<p>The use of color is a complex topic, and there are plenty of books and research devoted to it.
+But some principles are fairly universal. First, do not use colors just for the sake of it,
+most charts are fine being monochromatic.
+Second, remember that color has meaning. When people see the color <em>red</em>,
+they have certain associations, and these associations vary among cultures.
+In the world of business, red is conventionally used to represent loss, and it would be unwise
+to use this color to show profit. Make sure you avoid random colors.</p>
+<p>Whatever colors you end up choosing, they need to be distinguishable
+(otherwise what is the point?). Do not use colors that are too similar in hue.
+Certain color combinations are hard to interpret for color-blind people,
+like green/red or yellow/blue, so be very careful with those.
+Figure 5-7 shows some good and bad examples of color use.</p>
+<div class="figure">
+<img src="images/05-chart/design-principles-color.png" alt="" />
+<p class="caption">Figure 5-7</p>
+</div>
+<p>If you follow the advice, you should end up with a de-cluttered chart as shown in Figure 5-8.
+Notice how your eyes are drawn to the bars and their corresponding values,
+not bright colors or secondary components like the axes lines.</p>
+<div class="figure">
+<img src="images/05-chart/design-principles-decluttered.png" alt="" />
+<p class="caption">Figure 5-8</p>
+</div>
 </div>
 </div>
             </section>

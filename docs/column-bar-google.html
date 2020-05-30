@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-05-21" />
+<meta name="date" content="2020-05-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -306,123 +306,162 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="column-bar-google" class="section level2 unnumbered" number="">
 <h2>Column and Bar Charts with Google Sheets</h2>
-<p>Follow these tutorials to create different types of column and bar charts with Google Sheets <a href="http://sheets.google.com" class="uri">http://sheets.google.com</a> on the Google Drive platform. Requires free account.</p>
+<p>Column and bar charts are some of the most common types of charts
+in data visualization (column charts are just vertical bar charts).
+They are used to compare values across categories.</p>
+<p>In this tutorial, we will use three small datasets to build interactive
+separated, grouped, and stacked bar charts in Google Sheets:</p>
 <ul>
-<li>Grouped</li>
-<li>Separated</li>
-<li>Stacked</li>
-<li>Histograms</li>
+<li>Obesity in the US (by US CDC, and StateOfObesity.org project)</li>
+<li>High-Caolorie Fast-Food Items</li>
+<li>Global Database on Body Mass Index by World Health Organization</li>
 </ul>
-<div id="grouped-column-and-bar-charts" class="section level4 unnumbered" number="">
-<h4>Grouped Column and Bar Charts</h4>
-<p>Best to compare categories side-by-side. Vertical columns, or horizontal bars for long labels.</p>
-<p><strong>Try it:</strong> This grouped column chart shows differences in obesity between men and women in each age bracket. Float your cursor over columns to view data details.</p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/pubchart?oid=787918829&amp;format=interactive">
-</iframe>
-<p><a href="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/edit#gid=1017658845"><br>View data from CDC and StateOfObesity.org</a></p>
-<p><strong>Tutorial:</strong></p>
+<p>You will need a Google account (it’s free).</p>
+<p>If this is an e-book, you should be able to interact with the charts in this tutorial.
+Hover over data points to see tooltips with additional data.</p>
+<div id="grouped-column-and-bar-charts" class="section level3 unnumbered" number="">
+<h3>Grouped Column and Bar Charts</h3>
+<p>Figure 5-9 shows differences in obesity between
+men and women in three age bracket. If you read this book electronically,
+you should be able to hover over columns and see tooltips with data.</p>
+<p>TODO: FIGURE 5-9
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/pubchart?oid=787918829&amp;format=interactive"></iframe><a href="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/edit#gid=1017658845"><br>View data from CDC and StateOfObesity.org</a></p>
+<p>The following steps will help you recreate this interactive chart.</p>
 <ol style="list-style-type: decimal">
 <li><p>Right-click to open link in new tab: <a href="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/">Google Sheet Column chart with grouped data template</a></p></li>
-<li><p>Sign in to your Google Drive or <a href="http://sheets.google.com">sign up for a free account</a></p></li>
-<li><p>Select File &gt; Make a Copy to save your own version to your Google Drive.</p></li>
+<li><p>Sign in to your Google Drive or <a href="https://sheets.google.com">sign up for a free account</a></p></li>
+<li><p>Select File &gt; Make a Copy to save your own version to your Google Drive. Screenshot from Figure 5-10
+shows the relevant item in the File dropdown menu.</p></li>
 </ol>
 <div class="figure">
 <img src="images/05-chart/column-make-copy.png" alt="" />
-<p class="caption">Sign in to Google and File &gt; Make a Copy</p>
+<p class="caption">Figure 5-10: Sign in to Google and File &gt; Make a Copy</p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li><p>To remove the current chart from your copy of the spreadsheet, select it and press the delete.</p></li>
-<li><p>Format your data in a similar way as shown below. Each row is a data series, which displays as a separate color in the chart.</p></li>
+<li><p>To remove the current chart from your copy of the spreadsheet, select it and press the <em>delete</em>.</p></li>
+<li><p>Format your data as shown in Figure 5-11. Each row is a data series, which displays as a separate color in the chart.</p></li>
 </ol>
 <div class="figure">
 <img src="images/05-chart/grouped-column-chart-data.png" alt="" />
-<p class="caption">Grouped column chart data table</p>
+<p class="caption">Figure 5-11: Grouped column chart data table</p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>Use your cursor to select only the data you wish to chart, then select Insert &gt; Chart.</li>
+<li>Use your cursor to select only the data you wish to chart, then select <em>Insert &gt; Chart</em>, like
+in Figure 5-12.</li>
 </ol>
 <div class="figure">
 <img src="images/05-chart/column-insert-chart.png" alt="" />
-<p class="caption">Select data and Insert &gt; Chart</p>
+<p class="caption">Figure 5-12: Select data and Insert &gt; Chart</p>
 </div>
 <ol start="7" style="list-style-type: decimal">
-<li>In the Chart Editor &gt; Recommendations tab, choose your preferred Column chart (or horizontal Bar chart for longer labels), or see more options in Chart Types tab. Press the Insert button.</li>
+<li>In the Chart Editor &gt; Recommendations tab, choose your preferred Column chart
+(or horizontal Bar chart if you have longer labels), or see more options in Chart Types tab as per Figure 5-13.
+Press the Insert button when done.</li>
 </ol>
 <div class="figure">
 <img src="images/05-chart/column-chart-types.png" alt="" />
-<p class="caption">See more options in Chart Types tab</p>
+<p class="caption">Figure 5-14: See more options in Chart Types tab</p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>To customize title, labels, and more, click the editing controls in the upper-right corner.</li>
+<li>To customize title, labels, and more, choose <em>Edit chart</em> from the menu in the upper-right corner of the chart.
+as shown in Figure 5-15.</li>
 </ol>
 <div class="figure">
 <img src="images/05-chart/column-edit-chart.png" alt="" />
-<p class="caption">Customize with editing controls</p>
+<p class="caption">Figure 5-15: Customize with editing controls</p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>To make your data public, select the blue Share button &gt; Advanced, then Change from Private to Public On the Web, with Anyone Can View.</li>
+<li>To make your data public, select Share button in the upper-right corner &gt; Advanced, then Change from Private to Public On the Web, with Anyone Can View.</li>
 </ol>
 <iframe src="images/05-chart/column-share.gif" width="672" height="400px">
 </iframe>
 <ol start="10" style="list-style-type: decimal">
-<li><p>To embed your chart in another website, click the upper-right chart editing controls, select Publish Chart, select Embed, and press the Publish button. Copy the iframe code and see the <a href="embed.html">Embed on Your Web</a> chapter in this book.</p></li>
-<li><p>Reminder: Currently, there is no easy way to cite or link to your source data inside a Google Sheets chart. Instead, cite and link to your source data in the text of the web page, as shown in the example at the top.</p></li>
+<li>To embed your chart in another website, click the upper-right chart editing controls,
+select <em>Publish chart</em>, select Embed, and press the Publish button.
+See <a href="embed.html">Chapter 7</a> of this book to learn what to do with the generated iframe code.</li>
 </ol>
+<p>Note: Currently, there is no easy way to cite or link to your source data inside a Google Sheets chart.
+Instead, cite and link to your source data in the text of the web page. Remember that citing your sources
+adds credibility to your work.</p>
 </div>
-<div id="separated-column-and-bar-charts" class="section level4 unnumbered" number="">
-<h4>Separated Column and Bar Charts</h4>
-<p>Best to compare categories in separate clusters. Vertical columns, or horizontal bars for long labels.</p>
-<p><strong>Try it:</strong> This separated bar chart shows calorie counts of fast food items, separated by restaurant chains. The horizontal bar offers more space for longer labels. Float your cursor over bars to explore data details.</p>
+<div id="separated-column-and-bar-charts" class="section level3 unnumbered" number="">
+<h3>Separated Column and Bar Charts</h3>
+<p>When you visualize individual, independent categories, you wouldn’t want to group charts.
+Instead, you want bars (columns) to be separated.</p>
+<p>Figure 5-16 shows calorie counts of fast food items for two restaurant chains, Starbucks and McDonald’s.
+Unlike Figure 5-9, here the bars are spaced away from each other.</p>
+<p>TODO: FIGURE 5-16</p>
 <iframe width="700" height="432" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive">
 </iframe>
 <p><a href="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126"><br>View data from Starbucks and McDonalds</a></p>
-<p>** Tutorial:**</p>
-<ol style="list-style-type: decimal">
-<li><p>Right-click to open this link in a new tab: <a href="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/">Google Sheet Column chart with separated data template</a></p></li>
-<li><p>Follow similar steps in the first tutorial above.</p></li>
-<li><p>Format your data in a similar way as shown below. Each column is a data series, which displays as a separate color in the chart.</p></li>
-</ol>
+<p>The only difference between making a grouped vs separated bar chart is how you structure your data.
+To make Google Sheets separate columns, you will need to leave some cells blank, like in Figure 5-17.
+Other than that, the steps remain the same.</p>
 <div class="figure">
 <img src="images/05-chart/bar-chart-data.png" alt="" />
-<p class="caption">Bar chart data table</p>
+<p class="caption">Figure 5-17: Bar chart data table</p>
 </div>
-<ol start="4" style="list-style-type: decimal">
-<li>In the Chart Editor &gt; Recommendations tab, choose your preferred Bar chart, or see more options in Chart Types tab.</li>
-</ol>
+<p>If you want to get started with the fast-food example, right-click to open this link in a new tab:
+<a href="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/">Google Sheet Column chart with separated data template</a>.</p>
 </div>
-<div id="stacked-column-and-bar-charts" class="section level4 unnumbered" number="">
-<h4>Stacked Column and Bar Charts</h4>
-<p>Best to compare sub-categories, or parts of a whole. Vertical columns, or horizontal bars for long labels.</p>
-<p><strong>Try it:</strong> This stacked column chart compares the percentage of overweight residents across nations. Float your cursor over columns to view data details.</p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/pubchart?oid=307057605&amp;format=interactive">
-</iframe>
-<p><a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691"><br>View data from WHO and CDC</a></p>
-<p><strong>Tutorial:</strong></p>
-<ol style="list-style-type: decimal">
-<li><p>Begin by opening this link in a new tab: <a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/">Google Sheets Stacked column chart template</a></p></li>
-<li><p>Follow most of the same steps in first tutorial above.</p></li>
-<li><p>Format your data in a similar way as shown below. Each column is a data series, which displays as a separate color in the chart.</p></li>
-</ol>
+<div id="stacked-column-and-bar-charts" class="section level3 unnumbered" number="">
+<h3>Stacked Column and Bar Charts</h3>
+<p>Stacked column and bar charts can be used to compare sub-categories. They can also be used
+to represents parts of a whole instead of pie charts.</p>
+<p>The stacked column chart in Figure 5-18 compares the percentage of overweight residents across nations.</p>
+<p>TODO: FIGURE 5-18
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/pubchart?oid=307057605&amp;format=interactive"></iframe><a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691"><br>View data from WHO and CDC</a></p>
+<p>To create a stacked bar chart, you need to choose Chart Type &gt; Stacked column chart (or Stacked bar chart) in the Chart editor window.
+Structure your data as shown in Figure 5-19. Each column is a new series with its own color.
+To get started with the Body Mass Index example, begin by opening this link in a new tab:
+<a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/">Google Sheets Stacked column chart template</a>.</p>
 <div class="figure">
 <img src="images/05-chart/stacked-column-data.png" alt="" />
-<p class="caption">Stacked column chart data table</p>
+<p class="caption">Figure 5-19: Stacked column chart data table</p>
 </div>
-<ol start="4" style="list-style-type: decimal">
-<li>In the Chart Editor &gt; Recommendations tab, choose Stacked column chart (or Stacked bar chart if you prefer a horizontal orientation), or see more options in Chart Types tab.</li>
-</ol>
 </div>
-<div id="histograms" class="section level4 unnumbered" number="">
-<h4>Histograms</h4>
-<p>Best to show the distribution of raw data, with number of values in each bucket. Typically displayed in vertical columns.</p>
-<p><strong>Try it</strong> to come*</p>
-<p><strong>Tutorial:</strong> to come *</p>
-<ul>
-<li>Format data into two columns
-<ul>
-<li>data labels in the first column</li>
-<li>numeric values in second column</li>
-</ul></li>
-</ul>
+<div id="histograms" class="section level3 unnumbered" number="">
+<h3>Histograms</h3>
+<p>Histogram is a type of bar chart that represents distribution of items, whether numerical
+or categorical. To bulid a histogram, you need to assign each data point to one of
+the non-overlapping <em>buckets</em> (or <em>bins</em>).</p>
+<p>Let’s say you want to know what time of day are you more likely to get an email.
+One approach would be to download metadata about all emails you received in 2020,
+and assign them to a bucket between 0 and 23 according to the email hour.
+Hours will become your bins, and email counts will be your frequency data.
+Then your final dataset can look something like:</p>
+<pre><code>Hour  Emails
+0       12
+1       11
+2       7
+...
+13    82
+14    103
+15    105
+16    74
+17    53
+...
+23    22</code></pre>
+<p>You can now make a histogram. The good news is, Google Sheets considers histograms to
+be regular column charts, so you should be able to use a previous tutorial to make one.</p>
+<p>Hint: Select two columns with the data you want to visualize,
+and go to <em>Insert &gt; Chart</em>. In the Chart editor window, in <em>Setup</em> tab, select <em>Chart type &gt; Column chart</em>.</p>
+<p>Figure 5-20 shows the resulting histogram.</p>
+<p>TODO: FIGURE 5-20
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive"></iframe></p>
+<p>If you want to reuse our fictional dataset from the example,
+<a href="https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit?usp=sharing">make a copy of this spreadsheet</a>.</p>
+<p>If you want to have a less detailed histogram, you can combine hours into greater bins, for example
+<em>Morning</em>, <em>Afternoon</em>, <em>Evening</em>, and <em>Night</em>
+to cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively. Then your dataset will look like:</p>
+<pre><code>Time of Day,Emails
+Morning,353
+Afternoon,497
+Evening,279
+Night,37</code></pre>
+<p>Bins in a histogram normally span the entire range of values of your dataset. This way no data is being left out.
+We recommend you use bins of the same size (liek 24 1-hour bins, or four 6-hour bins) to ensure
+the reader can compare across bars.</p>
 </div>
 </div>
             </section>

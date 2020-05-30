@@ -74,8 +74,8 @@ output:
     in_header: google-analytics.html
 ```
 
-## Style Guide {- #style-guide}
-View the source code to better understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd
+## Style Guide for *Hands-On Data Visualization* {- #style-guide}
+View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd
 
 This book is composed in R-flavored Markdown (.Rmd), and each paragraph begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word.
 
@@ -212,6 +212,13 @@ images/05-chart/design-no-junk.png
 
 Do not insert spaces inside the `ref:chunk-label` for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add another blank line.
 
+Note that the Bookdown `index.Rmd` file includes an R code-chunk setting immediately after the first header, which displays each code-chunk image without a code echo. Read more about this feature and related options in this [Bookdown chapter](https://bookdown.org/yihui/bookdown/figures.html).
+
+```
+{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
 ### Demo: R code-chunk for static image {-}
 ...as shown in Figure \@ref(fig:tiger).
 
@@ -256,17 +263,12 @@ Be sure to use the *embed* link from the YouTube *share* button.
 if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-nGdrzMuUnI") else knitr::include_graphics("images/15-bookdown/video-sample.png")
 ```
 
-This Bookdown `index.Rmd` file includes an R code-chunk setting immediately after the first header, which displays each code-chunk image without a code echo. Read more about this feature and related options in this [Bookdown chapter](https://bookdown.org/yihui/bookdown/figures.html).
-
-```
-{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
 ## Tables {- #tables}
 Create tables in Markdown format, since it produces good output for HTML, PDF, Word, and Markdown. Use a tool such as [Tables Generator](https://www.tablesgenerator.com/markdown_tables) to import significant table data in CSV format, format the column alignment as desired, and press Generate button to create table in Markdown format. For significant table data, save the CSV version in a GitHub repo for potential later use.
 
 Add the Markdown table code shown below to auto-number (Table x) in HTML, PDF, Word.
+
+...as shown in Table \@ref(tab:left-table).
 
 Table: (\#tab:left-table) Left-justify content, remember blank Line
 

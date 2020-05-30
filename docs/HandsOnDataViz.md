@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 21 May 2020
+updated on: 26 May 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -1744,18 +1744,24 @@ Chart Your Data
 Charts pull readers deeper into your story. Even if your data contains
 geographical information, sometimes a chart tells your story better than
 a map. But designing meaningful, interactive charts requires careful
-thought about how to communicate your data story with your audience. In
-this chapter, you will learn how to:
+thought about how to communicate your data story with your audience.
 
--   Practice [principles of chart design](chart-design.html). Learn to
-    identify good charts from bad ones.
--   Choose a chart type that matches your story and data format, and
-    follow tutorials in the table below. Beginners may start with
-    easy-to-learn tools such as [Google
-    Sheets](chart-google-sheets.html) or [Tableau
-    Public](tableau-public.html), then move up to more powerful tools,
-    such as [Chart.js](chartjs.html), which require you to [Modify and
-    Host Code Templates with GitHub](github.html) or another web host.
+In this chapter, we will look at main [principles of chart
+design](chart-design.html), and learn to identify good charts from bad
+ones. You will learn to choose a chart type that matches your story and
+data format.
+
+You will learn how to make static and interactive charts with [Google
+Sheets](chart-google-sheets.html) and how to publish them on your
+website. We will then look at building interactive charts with [Tableau
+Public](tableau-public.html), a free version of the powerful software
+used by data analysts and data visualization practitioners.
+
+At the end, we will introduce chart templates with JavaScript’s
+[Chart.js](chartjs.html) library, which give you a lot of control over
+how the charts look. Working with Chart.js will require you to [modify
+and host code templates with GitHub](github.html), which is described in
+detail in Chapter 8.
 
 See also related chapters in this book:
 
@@ -1835,306 +1841,314 @@ See also related chapters in this book:
 Chart Design Principles
 -----------------------
 
-Spot the difference between good and bad charts, based on this
-compilation of design principles from leading experts, with citations
-listed below to learn more.
+Although not a science, data visualization comes with a set of rules,
+principles, and best practices that create a basis for clear and
+eloquent charts. Some of those rules are less rigid than others, but
+prior to “breaking” them, it is important to establish why they are
+important.
 
-1.  Remember the **most important principle:** Find meaningful insights
-    in your data, and create visualizations that help you tell these
-    stories. All of the other details below are secondary.
+Before you begin, ask yourself: Do I really need a chart to tell this
+data story? Or would a table or text alone do a better job? Making a
+good chart takes time and effort, so make sure it enhances your story.
 
-2.  Before you begin, ask yourself: Do I really need a chart to tell
-    this data story? Or would a table or text alone do a better job?
+### Deconstructing a Chart
 
-3.  Decide if the best way to communicate with your audience is with
-    static charts (such as images printed on paper) or interactive
-    charts (embedded in a website, with tooltip details and source
-    links). Most of these principles apply to both types, but [this book
-    features tools and tutorials](chart) to create interactive charts.
+Let’s take a look at Figure 5-1 that shows the basic components shared
+among most chart types.
 
-4.  Understand basic chart vocabulary: title, labels, horizontal x-axis
-    and vertical y-axis, data series, tooltip, source and credits.
+![Figure 5-1](images/05-chart/design-principles-chart-components.png)
 
-![](images/05-chart/Chart%20-%204%20-%20Vocabulary.png)
+A *title* is perhaps the most important element of any chart. A good
+title is short, clear, and tells a story on its own. For example, “Black
+and Asian Population More Likely to Die of Covid-19”, or “Millions of
+Tons of Plastic Enter the Ocean Every Year” are both good titles.
 
-1.  Identify the [chart type](chart) that best matches your story and
-    data format.
+Sometimes a more “dry” and “technical” title is preferred. Our two
+titles can then be changed to “Covid-19 Deaths by Race in New York City,
+March 2020” and “Tons of Plastic Entering the Ocean, 1950–2020”,
+respectively.
 
-2.  Draw visual comparisons that are easy for readers to understand,
-    rather than confusing them (adapted from Gourley p. 19).
+Often these two styles are combined into a title (“story”) and a
+subtitle (“technical”), like that:
 
-3.  Do the math for your readers. Based on your data story, decide if
-    you should show absolute numbers, percentages, or percent change
-    (Wong pp. 23-25, 104-107).
+    **Black and Asian Population More Likely to Die of Covid-19**
+    Covid-19 Deaths by Race in New York City, March 2020
 
-![](images/05-chart/Chart%20-%207%20-%20Do%20the%20math.png)
+Make sure your subtitle is less prominent than the title. You can
+achieve this by decreasing font size, or changing font color (or both).
 
-1.  Order categories logically—either alphabetically, by value, or
-    sequentially—depending on your data story (Gourley, p. 19; Wong
-    pp. 70-71).
+Horizontal (x) and vertical (y) *axes* define the scale and units of
+measure.
 
-![](images/05-chart/Chart%20-%208%20-%20Order.png)
+A *data series* is a collection of observations, which is usually a row
+or a column of numbers, or *data points*, in your dataset.
 
-1.  For long labels, use horizontal bar charts instead of vertical
-    column charts (Wong p. 66).
+*Labels* and *annotations* are often used across the chart to give more
+context. For example, a line chart showing US unemployment levels
+between 1900 and 2020 can have a “Great Depression” annotation arround
+1930s, and “Covid-19 Impact” annotation for 2020, both representing
+spikes in unemployment. You might also choose to label items directly
+instead of relying on axes, which is common with bar charts. In that
+case, a relevant axis can be hidden and the chart will look less
+cluttered.
 
-![](images/05-chart/Chart%20-%209%20-%20Bar%20vs%20Column.png)
+A *legend* shows symbology, such as colors and shapes used in the chart,
+and their meaning (usually values that they represent).
 
-1.  On bar and column charts, start the vertical y-axis at zero, and
-    choose natural increments (Wong pp. 51-52). But line charts do not
-    need to start at zero, and can focus on specific ranges. See also
-    the [How to Lie with Charts](how-to-lie-with-charts) and [How to Lie
-    with Maps](how-to-lie-with-maps) chapters in this book.
+You should add any *Notes*, *Data Sources*, and *Credits* underneath the
+chart to give more context about where the data came from, how it was
+processed and analyzed, and who created the visualization. Remember that
+being open about these things helps build credibility and
+accountability.
 
-![](images/05-chart/Chart%20-%2010%20-%20Start%20with%20zero.png)
+In interactive charts, a *tooltip* is often used to provide more data or
+context once a user clicks or hovers over a data point or a data series.
+Tooltips are great for complex visualizations with multiple layers of
+data, because they de-clutter the chart. But because tooltips are harder
+to interact with on smaller screens, such as phones and tablets, and are
+invisible when the chart is printed, only rely on them to convey
+additional, nice-to-have information. Make sure all essential
+information is visible without any user interaction.
 
-1.  Beware of pie charts. Most readers cannot accurately estimate sizes
-    of different slices. Consider other ways to show part-to-whole
-    relationships, such as bar/column charts, or stacked bar/column
-    charts (Few 2007, pp. 2-4; Wong p. 79).
+### The Unbendable Rules
 
-![](images/05-chart/Chart%20-%2011%20-%20No%20pie%20chart.png)
+Although the vast majority of rules in data visualization are open to
+interpretation, there are some that are hard to bend.
 
-1.  If you choose to use a pie chart, then show no more than 5 slices,
-    and places the largest slices closest to the top at 12 o’clock
-    (Wong, pp. 74-75).
+**Bar charts start with zero.** Unlike line charts, bar or column charts
+need to have their value axis start at zero. This is to ensure that a
+bar twice the length of another bar represents twice its value. The
+Figure 5-2 shows a good and a bad example.
 
-![](images/05-chart/Chart%20-%2012%20-%20Pie%20chart%20rules.png)
+![Figure 5-2](images/05-chart/design-principles-start-at-zero.png)
 
-1.  Words matter as much as pictures.
+Starting y-axis at anything other than zero is a common trick used by
+some media and politicians to exaggerate differences in surveys and
+election results.
 
--   Add meaningful titles, labels, and annotations to draw attention to
-    your data story.
--   Keep typography simple, and **use bold type** sparingly to highlight
-    your key insights (Wong p. 32; Knaflic pp. 107, 111).
+**Pie Charts Represent 100%**. Pie charts is one of the most contentious
+issues in data visualization. Most dataviz practitioners will recommend
+avoiding them entirely, saying that people are bad at accurately
+estimating sizes of different slices. We take a less dramatic stance, as
+long as you adhere to the recommendations we give in the next section.
 
-1.  On static charts, label items directly when possible. (On
-    interactive charts, designers may need to rely on tooltips and
-    text.) Insert a legend in a logical place for readers (Wong, p. 56).
+But the one and only thing in data visualization that every single
+professional will agree on is that *pie charts represent 100% of the
+quantity*. If slices sum up to anything other than 100%, it is a crime.
+If you design a survey titled *Are you a cat or a dog person?* and
+include *I am both* as the third option, forget about putting the
+results into a pie chart.
 
-2.  Add source credits and bylines—with links to view data tables and
-    details—to build credibility and accountability.
+### Chart Aesthetics
 
-3.  Avoid “chart junk”–such as 3D perspective, shadows, and unnecessary
-    ornaments—which distract readers from your data story. Never use 3D
-    unless you are plotting three-dimensional data (Tufte p. *to come*,
-    Wong p. 62, Knaflic p. 65).
+Remember that you create a chart to help the reader understand the
+story, not to confuse them. Decide if you want to show absolute numbers,
+percentages, or percent changes, and do the math for your readers.
 
-![](images/05-chart/Chart%20-%2016%20-%20Avoid%20junk.png)
+Start with a white background and add elements as you see appropriate.
+You should be able to justify each element you add. To do so, ask
+yorself: Does this element improve the chart, or can I drop it without
+decreasing readability? This way you won’t end up with so-called “chart
+junk” as shown in Figure 5-3, which includes 3D perspectives, shadows,
+and unnecessary elements. They might have looked cool in early versions
+of Microsoft Office, but let’s stay away from them today.
 
-1.  De-clutter charts (Knaflic pp. 91-98, 130-135).
+![Figure 5-3](images/05-chart/design-principles-junk.png)
 
-![](images/05-chart/Chart%20-%2017%20-%20Declutter.png)
+The only justification for using three dimensions is to plot
+three-dimensional data, which has x, y, and z values. And don’t let
+anyone tell you otherwise.
 
-1.  Choose colors wisely.
+Remember that pie charts only show part-to-whole relationship, so all
+slices need to add up to 100%. Generally, the fewer slices the better.
+It is a good practice to arrange slices from largest to smallest,
+clockwise, and put the largest slice at 12 o’clock. Figure 5-4a
+illustrates that.
 
--   Use color to logically organize your data. Avoid random colors (Wong
-    pp. 40, 44).
--   Avoid bad combinations from opposite sides of color wheel, such as
-    red/green or yellow/blue (Wong pp. 40, 44).
--   Use contrast (such as color vs gray) to call attention to your data
-    story (Knaflic pp. 87-88)
+![Figure 5-4a](images/05-chart/design-principles-pie.png)
 
-![](images/05-chart/Chart%20-%2018%20-%20Colors.png)
+If your pie chart has more than five slices, consider showing your data
+in a bar chart, either stacked or separated, like Figure 5-4 shows.
 
-See also [Map Design Principles](map-design.html) and [Tell Your Data
-Story](story.html) chapters in this book.
+![Figure 5-4](images/05-chart/design-principles-pie-to-bar.png)
 
-#### Learn more
+When your column chart has long x-axis labels that have to be rotated
+(often 90 degrees) to fit, consider turning the chart 90 degrees so that
+it becomes a horizontal bar chart. Take a look at Figure 5-5 to see how
+much easier it is to read horizontally-oriented labels.
 
--   Stephanie D. H. Evergreen, Effective Data Visualization: The Right
-    Chart for the Right Data, (Los Angeles: SAGE Publications,
-    Inc, 2016)
+![Figure 5-5](images/05-chart/design-principles-turn-bar.png)
 
--   Stephen Few, Now You See It: Simple Visualization Techniques for
-    Quantitative Analysis, (Oakland, Calif: Analytics Press, 2009)
+If your bar chart shows different categories, consider ordering them,
+like is shown in Figure 5-6. You might want to sort them alphabetically,
+which can be useful if you want the reader to be able to quickly ook up
+an item, such as their town. Ordering categories by value is another
+common technique that makes comparisons possible. If your columns
+represent a value of something at a particular time, they have to be
+ordered sequentially, of course.
 
--   Stephen Few, “Save the Pies for Dessert \[critique of pie charts\],”
-    Visual Business Intelligence Newsletter, 2007, 1–14,
-    <a href="http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf" class="uri">http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf</a>
+![Figure 5-6](images/05-chart/design-principles-order-categories.png)
 
--   Stephen Few, Show Me the Numbers: Designing Tables and Graphs to
-    Enlighten, Second edition (Burlingame, CA: Analytics Press, 2012)
+When labelling a y-axis, choose natural increments that space equally,
+such as \[0, 20, 40, 60, 80, 100\], or \[1, 10, 100, 1000\] for a
+logarithmic scale. Do not overload your scales. Keep your typography
+simple, use (but do not overuse) **bolding** to highlight major
+insights.
 
--   Drew Gourley, How to Use Data Visualization to Win Over Your
-    Audience, (Visage and Hubspot, June 2015),
-    <a href="https://visage.co/content/data-viz-win-audience" class="uri">https://visage.co/content/data-viz-win-audience</a>
+The use of color is a complex topic, and there are plenty of books and
+research devoted to it. But some principles are fairly universal. First,
+do not use colors just for the sake of it, most charts are fine being
+monochromatic. Second, remember that color has meaning. When people see
+the color *red*, they have certain associations, and these associations
+vary among cultures. In the world of business, red is conventionally
+used to represent loss, and it would be unwise to use this color to show
+profit. Make sure you avoid random colors.
 
--   Cole Nussbaumer Knaflic, Storytelling with Data: A Data
-    Visualization Guide for Business Professionals, (Hoboken, New
-    Jersey: Wiley, 2015)
+Whatever colors you end up choosing, they need to be distinguishable
+(otherwise what is the point?). Do not use colors that are too similar
+in hue. Certain color combinations are hard to interpret for color-blind
+people, like green/red or yellow/blue, so be very careful with those.
+Figure 5-7 shows some good and bad examples of color use.
 
--   Cole Nussbaumer Knalfic, “An Updated Post on Pies,” StoryTelling
-    with Data, February 16, 2017,
-    <a href="http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies" class="uri">http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies</a>
+![Figure 5-7](images/05-chart/design-principles-color.png)
 
--   Wayne Lytle, Viz-O-Matic: The Dangers of Glitziness and Other
-    Visualization Faux Pas, 1993 video shared on YouTube,
-    <a href="https://www.youtube.com/watch?v=fP-7rhb-qMg" class="uri">https://www.youtube.com/watch?v=fP-7rhb-qMg</a>
+If you follow the advice, you should end up with a de-cluttered chart as
+shown in Figure 5-8. Notice how your eyes are drawn to the bars and
+their corresponding values, not bright colors or secondary components
+like the axes lines.
 
--   Isabel Meirelles, Design for Information: An Introduction to the
-    Histories, Theories, and Best Practices Behind Effective Information
-    Visualizations (Rockport Publishers, 2013),
-    <a href="http://isabelmeirelles.com/book-design-for-information/" class="uri">http://isabelmeirelles.com/book-design-for-information/</a>
-
--   Tableau, Visual Analysis Best Practices: A Guidebook, n.d.,
-    <a href="http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf" class="uri">http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf</a>.
-
--   Edward R. Tufte, Beautiful Evidence (Graphics Press, 2006)
-
--   “WTF Visualizations: Visualizations That Make No Sense,” 2017,
-    <a href="http://viz.wtf" class="uri">http://viz.wtf</a>.
-
--   xkcd, “University Website,” accessed February 12, 2017,
-    <a href="https://xkcd.com/773/" class="uri">https://xkcd.com/773/</a>
-
--   Nathan Yau, “One Dataset, Visualized 25 Ways,” FlowingData, January
-    24, 2017,
-    <a href="http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/" class="uri">http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/</a>
-
--   Nathan Yau, “Best Data Visualization Projects of 2016,” FlowingData,
-    December 29, 2016,
-    <a href="http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/" class="uri">http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/</a>
+![Figure 5-8](images/05-chart/design-principles-decluttered.png)
 
 Google Sheets Charts
 --------------------
 
-Use Google Sheets
-(<a href="http://sheets.google.com" class="uri">http://sheets.google.com</a>),
-an easy drag-and-drop tool, to create basic interactive charts that you
-can embed in your website.
+Google Sheets
+(<a href="https://sheets.google.com" class="uri">https://sheets.google.com</a>)
+is a well-known spreadsheet program that allows creating basic charts
+using intuitive drag-and-drop interface. Most people who create charts
+with Google Sheets export them as static *png* images. But in fact these
+interactive charts can be easily embedded in your website.
 
-#### Tool Review
+In this section, we will look at creating column and bar charts that are
+separated, grouped, and stacked. We will also look at makig pie, line,
+area, and scatter charts, and learn to visualize three-dimentional data
+using bubble charts.
 
--   Pros:
-    -   Free and easy-to-learn tool on the collaborative Google Drive
-        platform.
-    -   Edit, share, and publish interactive charts from your data, all
-        in one spreadsheet.
--   Cons:
-    -   Limited control over chart appearance.
-    -   Scatter charts cannot show data in tooltips.
-    -   Bubble charts cannot show small, uniform bubbles.
-    -   Cannot cite or link to source data inside the chart.
-    -   Cannot add annotations to highlight items inside charts.
-    -   For more powerful tools that require more skills, see tutorials
-        in this book on [Tableau Public](scatter-chart-tableau.html) and
-        [Chart.js](chartjs.html).
+As most easy-to-use tools, Google Sheets has its shortcomings when it
+comes to charting. You might find yourself with too little control over
+the appearance option. Your won’t have much control over your
+scatterplot tooltips. You won’t be able to cite or link to source data
+inside the chart, but it won’t be possible. You won’t be able to
+annotate to highlight items inside charts. But you *will* be able to
+create good-looking interactive visualizations inside your spreadsheet
+*quickly*.
 
-#### Tutorials
-
-Follow the Google Sheet Chart tutorials in this book to create:
-
--   [Column and Bar Charts](column-bar-google.html)
-    -   Grouped
-    -   Separated
-    -   Stacked
-    -   Histograms
--   [Pie, Line and Area Charts](pie-line-area-google.html)
--   [Scatter and Bubble Charts](scatter-bubble-google.html)
-
-#### Learn more
-
--   [Google Sheet chart types help
-    page](https://support.google.com/docs/answer/190718)
+Tip: For an overview of charts and graphs in Google Sheets, visit [this
+help page](https://support.google.com/docs/answer/190718).
 
 Column and Bar Charts with Google Sheets
 ----------------------------------------
 
-Follow these tutorials to create different types of column and bar
-charts with Google Sheets
-<a href="http://sheets.google.com" class="uri">http://sheets.google.com</a>
-on the Google Drive platform. Requires free account.
+Column and bar charts are some of the most common types of charts in
+data visualization (column charts are just vertical bar charts). They
+are used to compare values across categories.
 
--   Grouped
--   Separated
--   Stacked
--   Histograms
+In this tutorial, we will use three small datasets to build interactive
+separated, grouped, and stacked bar charts in Google Sheets:
 
-#### Grouped Column and Bar Charts
+-   Obesity in the US (by US CDC, and StateOfObesity.org project)
+-   High-Caolorie Fast-Food Items
+-   Global Database on Body Mass Index by World Health Organization
 
-Best to compare categories side-by-side. Vertical columns, or horizontal
-bars for long labels.
+You will need a Google account (it’s free).
 
-**Try it:** This grouped column chart shows differences in obesity
-between men and women in each age bracket. Float your cursor over
-columns to view data details.
+If this is an e-book, you should be able to interact with the charts in
+this tutorial. Hover over data points to see tooltips with additional
+data.
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/pubchart?oid=787918829&amp;format=interactive">
-</iframe>
+### Grouped Column and Bar Charts
 
-<a href="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/edit#gid=1017658845"><br>View
+Figure 5-9 shows differences in obesity between men and women in three
+age bracket. If you read this book electronically, you should be able to
+hover over columns and see tooltips with data.
+
+TODO: FIGURE 5-9
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/pubchart?oid=787918829&amp;format=interactive"></iframe><a href="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/edit#gid=1017658845"><br>View
 data from CDC and StateOfObesity.org</a>
 
-**Tutorial:**
+The following steps will help you recreate this interactive chart.
 
 1.  Right-click to open link in new tab: [Google Sheet Column chart with
     grouped data
     template](https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/)
 
 2.  Sign in to your Google Drive or [sign up for a free
-    account](http://sheets.google.com)
+    account](https://sheets.google.com)
 
 3.  Select File &gt; Make a Copy to save your own version to your Google
-    Drive.
+    Drive. Screenshot from Figure 5-10 shows the relevant item in the
+    File dropdown menu.
 
-![Sign in to Google and File &gt; Make a
+![Figure 5-10: Sign in to Google and File &gt; Make a
 Copy](images/05-chart/column-make-copy.png)
 
 1.  To remove the current chart from your copy of the spreadsheet,
-    select it and press the delete.
+    select it and press the *delete*.
 
-2.  Format your data in a similar way as shown below. Each row is a data
-    series, which displays as a separate color in the chart.
+2.  Format your data as shown in Figure 5-11. Each row is a data series,
+    which displays as a separate color in the chart.
 
-![Grouped column chart data
+![Figure 5-11: Grouped column chart data
 table](images/05-chart/grouped-column-chart-data.png)
 
 1.  Use your cursor to select only the data you wish to chart, then
-    select Insert &gt; Chart.
+    select *Insert &gt; Chart*, like in Figure 5-12.
 
-![Select data and Insert &gt;
+![Figure 5-12: Select data and Insert &gt;
 Chart](images/05-chart/column-insert-chart.png)
 
 1.  In the Chart Editor &gt; Recommendations tab, choose your preferred
-    Column chart (or horizontal Bar chart for longer labels), or see
-    more options in Chart Types tab. Press the Insert button.
+    Column chart (or horizontal Bar chart if you have longer labels), or
+    see more options in Chart Types tab as per Figure 5-13. Press the
+    Insert button when done.
 
-![See more options in Chart Types
+![Figure 5-14: See more options in Chart Types
 tab](images/05-chart/column-chart-types.png)
 
-1.  To customize title, labels, and more, click the editing controls in
-    the upper-right corner.
+1.  To customize title, labels, and more, choose *Edit chart* from the
+    menu in the upper-right corner of the chart. as shown in Figure
+    5-15.
 
-![Customize with editing
+![Figure 5-15: Customize with editing
 controls](images/05-chart/column-edit-chart.png)
 
-1.  To make your data public, select the blue Share button &gt;
-    Advanced, then Change from Private to Public On the Web, with Anyone
-    Can View.
+1.  To make your data public, select Share button in the upper-right
+    corner &gt; Advanced, then Change from Private to Public On the Web,
+    with Anyone Can View.
 
 <iframe src="images/05-chart/column-share.gif" width="100%" height="400px">
 </iframe>
 
 1.  To embed your chart in another website, click the upper-right chart
-    editing controls, select Publish Chart, select Embed, and press the
-    Publish button. Copy the iframe code and see the [Embed on Your
-    Web](embed.html) chapter in this book.
+    editing controls, select *Publish chart*, select Embed, and press
+    the Publish button. See [Chapter 7](embed.html) of this book to
+    learn what to do with the generated iframe code.
 
-2.  Reminder: Currently, there is no easy way to cite or link to your
-    source data inside a Google Sheets chart. Instead, cite and link to
-    your source data in the text of the web page, as shown in the
-    example at the top.
+Note: Currently, there is no easy way to cite or link to your source
+data inside a Google Sheets chart. Instead, cite and link to your source
+data in the text of the web page. Remember that citing your sources adds
+credibility to your work.
 
-#### Separated Column and Bar Charts
+### Separated Column and Bar Charts
 
-Best to compare categories in separate clusters. Vertical columns, or
-horizontal bars for long labels.
+When you visualize individual, independent categories, you wouldn’t want
+to group charts. Instead, you want bars (columns) to be separated.
 
-**Try it:** This separated bar chart shows calorie counts of fast food
-items, separated by restaurant chains. The horizontal bar offers more
-space for longer labels. Float your cursor over bars to explore data
-details.
+Figure 5-16 shows calorie counts of fast food items for two restaurant
+chains, Starbucks and McDonald’s. Unlike Figure 5-9, here the bars are
+spaced away from each other.
+
+TODO: FIGURE 5-16
 
 <iframe width="700" height="432" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive">
 </iframe>
@@ -2142,67 +2156,101 @@ details.
 <a href="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126"><br>View
 data from Starbucks and McDonalds</a>
 
-\*\* Tutorial:\*\*
+The only difference between making a grouped vs separated bar chart is
+how you structure your data. To make Google Sheets separate columns, you
+will need to leave some cells blank, like in Figure 5-17. Other than
+that, the steps remain the same.
 
-1.  Right-click to open this link in a new tab: [Google Sheet Column
-    chart with separated data
-    template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/)
+![Figure 5-17: Bar chart data table](images/05-chart/bar-chart-data.png)
 
-2.  Follow similar steps in the first tutorial above.
+If you want to get started with the fast-food example, right-click to
+open this link in a new tab: [Google Sheet Column chart with separated
+data
+template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/).
 
-3.  Format your data in a similar way as shown below. Each column is a
-    data series, which displays as a separate color in the chart.
+### Stacked Column and Bar Charts
 
-![Bar chart data table](images/05-chart/bar-chart-data.png)
+Stacked column and bar charts can be used to compare sub-categories.
+They can also be used to represents parts of a whole instead of pie
+charts.
 
-1.  In the Chart Editor &gt; Recommendations tab, choose your preferred
-    Bar chart, or see more options in Chart Types tab.
+The stacked column chart in Figure 5-18 compares the percentage of
+overweight residents across nations.
 
-#### Stacked Column and Bar Charts
-
-Best to compare sub-categories, or parts of a whole. Vertical columns,
-or horizontal bars for long labels.
-
-**Try it:** This stacked column chart compares the percentage of
-overweight residents across nations. Float your cursor over columns to
-view data details.
-
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/pubchart?oid=307057605&amp;format=interactive">
-</iframe>
-
-<a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691"><br>View
+TODO: FIGURE 5-18
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/pubchart?oid=307057605&amp;format=interactive"></iframe><a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691"><br>View
 data from WHO and CDC</a>
 
-**Tutorial:**
+To create a stacked bar chart, you need to choose Chart Type &gt;
+Stacked column chart (or Stacked bar chart) in the Chart editor window.
+Structure your data as shown in Figure 5-19. Each column is a new series
+with its own color. To get started with the Body Mass Index example,
+begin by opening this link in a new tab: [Google Sheets Stacked column
+chart
+template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/).
 
-1.  Begin by opening this link in a new tab: [Google Sheets Stacked
-    column chart
-    template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/)
-
-2.  Follow most of the same steps in first tutorial above.
-
-3.  Format your data in a similar way as shown below. Each column is a
-    data series, which displays as a separate color in the chart.
-
-![Stacked column chart data
+![Figure 5-19: Stacked column chart data
 table](images/05-chart/stacked-column-data.png)
 
-1.  In the Chart Editor &gt; Recommendations tab, choose Stacked column
-    chart (or Stacked bar chart if you prefer a horizontal orientation),
-    or see more options in Chart Types tab.
+### Histograms
 
-#### Histograms
+Histogram is a type of bar chart that represents distribution of items,
+whether numerical or categorical. To bulid a histogram, you need to
+assign each data point to one of the non-overlapping *buckets* (or
+*bins*).
 
-Best to show the distribution of raw data, with number of values in each
-bucket. Typically displayed in vertical columns.
+Let’s say you want to know what time of day are you more likely to get
+an email. One approach would be to download metadata about all emails
+you received in 2020, and assign them to a bucket between 0 and 23
+according to the email hour. Hours will become your bins, and email
+counts will be your frequency data. Then your final dataset can look
+something like:
 
-**Try it** to come\*
+    Hour  Emails
+    0       12
+    1       11
+    2       7
+    ...
+    13    82
+    14    103
+    15    105
+    16    74
+    17    53
+    ...
+    23    22
 
-**Tutorial:** to come \*
+You can now make a histogram. The good news is, Google Sheets considers
+histograms to be regular column charts, so you should be able to use a
+previous tutorial to make one.
 
--   Format data into two columns
-    -   data labels in the first column
-    -   numeric values in second column
+Hint: Select two columns with the data you want to visualize, and go to
+*Insert &gt; Chart*. In the Chart editor window, in *Setup* tab, select
+*Chart type &gt; Column chart*.
+
+Figure 5-20 shows the resulting histogram.
+
+TODO: FIGURE 5-20
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive"></iframe>
+
+If you want to reuse our fictional dataset from the example, [make a
+copy of this
+spreadsheet](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit?usp=sharing).
+
+If you want to have a less detailed histogram, you can combine hours
+into greater bins, for example *Morning*, *Afternoon*, *Evening*, and
+*Night* to cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively.
+Then your dataset will look like:
+
+    Time of Day,Emails
+    Morning,353
+    Afternoon,497
+    Evening,279
+    Night,37
+
+Bins in a histogram normally span the entire range of values of your
+dataset. This way no data is being left out. We recommend you use bins
+of the same size (liek 24 1-hour bins, or four 6-hour bins) to ensure
+the reader can compare across bars.
 
 Pie, Line, and Area Charts with Google Sheets
 ---------------------------------------------
@@ -2682,6 +2730,62 @@ Combine multiple visualizations and tell stories with Tableau Public
 dashboard and story point features. See Tableau Public Resources, with
 how-to videos and sample data
 <a href="https://public.tableau.com/en-us/s/resources" class="uri">https://public.tableau.com/en-us/s/resources</a>.
+
+#### See also
+
+-   Stephanie D. H. Evergreen, Effective Data Visualization: The Right
+    Chart for the Right Data, (Los Angeles: SAGE Publications,
+    Inc, 2016)
+
+-   Stephen Few, Now You See It: Simple Visualization Techniques for
+    Quantitative Analysis, (Oakland, Calif: Analytics Press, 2009)
+
+-   Stephen Few, “Save the Pies for Dessert \[critique of pie charts\],”
+    Visual Business Intelligence Newsletter, 2007, 1–14,
+    <a href="http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf" class="uri">http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf</a>
+
+-   Stephen Few, Show Me the Numbers: Designing Tables and Graphs to
+    Enlighten, Second edition (Burlingame, CA: Analytics Press, 2012)
+
+-   Drew Gourley, How to Use Data Visualization to Win Over Your
+    Audience, (Visage and Hubspot, June 2015),
+    <a href="https://visage.co/content/data-viz-win-audience" class="uri">https://visage.co/content/data-viz-win-audience</a>
+
+-   Cole Nussbaumer Knaflic, Storytelling with Data: A Data
+    Visualization Guide for Business Professionals, (Hoboken, New
+    Jersey: Wiley, 2015)
+
+-   Cole Nussbaumer Knalfic, “An Updated Post on Pies,” StoryTelling
+    with Data, February 16, 2017,
+    <a href="http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies" class="uri">http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies</a>
+
+-   Wayne Lytle, Viz-O-Matic: The Dangers of Glitziness and Other
+    Visualization Faux Pas, 1993 video shared on YouTube,
+    <a href="https://www.youtube.com/watch?v=fP-7rhb-qMg" class="uri">https://www.youtube.com/watch?v=fP-7rhb-qMg</a>
+
+-   Isabel Meirelles, Design for Information: An Introduction to the
+    Histories, Theories, and Best Practices Behind Effective Information
+    Visualizations (Rockport Publishers, 2013),
+    <a href="http://isabelmeirelles.com/book-design-for-information/" class="uri">http://isabelmeirelles.com/book-design-for-information/</a>
+
+-   Tableau, Visual Analysis Best Practices: A Guidebook, n.d.,
+    <a href="http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf" class="uri">http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf</a>.
+
+-   Edward R. Tufte, Beautiful Evidence (Graphics Press, 2006)
+
+-   “WTF Visualizations: Visualizations That Make No Sense,” 2017,
+    <a href="http://viz.wtf" class="uri">http://viz.wtf</a>.
+
+-   xkcd, “University Website,” accessed February 12, 2017,
+    <a href="https://xkcd.com/773/" class="uri">https://xkcd.com/773/</a>
+
+-   Nathan Yau, “One Dataset, Visualized 25 Ways,” FlowingData, January
+    24, 2017,
+    <a href="http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/" class="uri">http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/</a>
+
+-   Nathan Yau, “Best Data Visualization Projects of 2016,” FlowingData,
+    December 29, 2016,
+    <a href="http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/" class="uri">http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/</a>
 
 <!--chapter:end:05-chart.Rmd-->
 
@@ -8174,6 +8278,8 @@ potential later use.
 
 Add the Markdown table code shown below to auto-number (Table x) in
 HTML, PDF, Word.
+
+…as shown in Table <a href="#tab:left-table">1</a>.
 
 <table>
 <caption>Table 1: Left-justify content, remember blank Line</caption>

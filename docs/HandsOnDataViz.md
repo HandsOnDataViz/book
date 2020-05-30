@@ -4269,7 +4269,7 @@ Before you begin, sign up for a free GitHub account:
 <a href="http://github.com" class="uri">http://github.com</a>
 
 1.  Right-click to open this GitHub code template in a new tab:
-    <a href="https://github.com//leaflet-map-simple" class="uri">https://github.com//leaflet-map-simple</a>
+    <a href="https://github.com/handsondataviz/leaflet-map-simple" class="uri">https://github.com/handsondataviz/leaflet-map-simple</a>
 
 2.  In the upper-right corner of the code template, sign in to your free
     GitHub account
@@ -4545,7 +4545,7 @@ Before you begin, sign up for a free GitHub account:
 <a href="http://github.com" class="uri">http://github.com</a>
 
 1.  Right-click to open this GitHub code template in a new tab:
-    <a href="https://github.com//highcharts-scatter-csv" class="uri">https://github.com//highcharts-scatter-csv</a>
+    <a href="https://github.com/handsondataviz/highcharts-scatter-csv" class="uri">https://github.com/handsondataviz/highcharts-scatter-csv</a>
 
 2.  In the upper-right corner of the code template, sign in to your free
     GitHub account
@@ -4661,7 +4661,7 @@ and any computer (such as Mac, Windows, or Chromebook).
     and wish to make a second copy of it. For example, imagine that you
     have already forked a copy of the Leaflet Maps with Google Sheets
     repository from
-    <a href="https://github.com//leaflet-maps-with-google-sheets" class="uri">https://github.com//leaflet-maps-with-google-sheets</a>
+    <a href="https://github.com/handsondataviz/leaflet-maps-with-google-sheets" class="uri">https://github.com/handsondataviz/leaflet-maps-with-google-sheets</a>
     **TO DO change repo address**
 
 2.  If you try to “fork” it again, GitHub will simply send you back to
@@ -5263,7 +5263,7 @@ templates above, you can insert the open-source Geocoder Scripts into
 your own Google Sheet:
 
 -   Go to [Google Sheets Geocoder repo on
-    GitHub](https://github.com//google-sheets-geocoder)
+    GitHub](https://github.com/handsondataviz/google-sheets-geocoder)
 -   Sign in to your Google Sheets, then select Tools &gt; Script Editor
 -   File &gt; Create New Script File
 -   Open and copy a script (such as geocoder-census-google.gs) and paste
@@ -6327,7 +6327,7 @@ Demo:
 <a href="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html</a>
 
 Source and instructions:
-<a href="https://github.com//chartjs-templates/tree/master/bar-chart" class="uri">https://github.com//chartjs-templates/tree/master/bar-chart</a>
+<a href="https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart" class="uri">https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart</a>
 
 Line Chart.js with CSV Data
 ---------------------------
@@ -6343,7 +6343,7 @@ Demo:
 <a href="https://handsondataviz.github.io/chartjs-templates/line-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/line-chart/index.html</a>
 
 Source and instructions:
-<a href="https://github.com//chartjs-templates/tree/master/line-chart" class="uri">https://github.com//chartjs-templates/tree/master/line-chart</a>
+<a href="https://github.com/handsondataviz/chartjs-templates/tree/master/line-chart" class="uri">https://github.com/handsondataviz/chartjs-templates/tree/master/line-chart</a>
 
 Scatter Chart.js with CSV Data
 ------------------------------
@@ -6361,7 +6361,7 @@ Demo:
 <a href="https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html</a>
 
 Source and instructions:
-<a href="https://github.com//chartjs-templates/tree/master/scatter-chart" class="uri">https://github.com//chartjs-templates/tree/master/scatter-chart</a>
+<a href="https://github.com/handsondataviz/chartjs-templates/tree/master/scatter-chart" class="uri">https://github.com/handsondataviz/chartjs-templates/tree/master/scatter-chart</a>
 
 #### Going beyond two dimensions
 
@@ -6398,7 +6398,7 @@ Demo:
 <a href="https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html</a>
 
 Source and instructions:
-<a href="https://github.com//chartjs-templates/tree/master/bubble-chart" class="uri">https://github.com//chartjs-templates/tree/master/bubble-chart</a>
+<a href="https://github.com/handsondataviz/chartjs-templates/tree/master/bubble-chart" class="uri">https://github.com/handsondataviz/chartjs-templates/tree/master/bubble-chart</a>
 
 #### Tip: Use semi-transparent circles
 
@@ -6607,7 +6607,7 @@ Errors](fix-code.html) chapter in this book.
     chapter in this book
 
 1.  Right-click to open this GitHub code template in a new tab:
-    <a href="https://github.com//leaflet-maps-with-google-sheets" class="uri">https://github.com//leaflet-maps-with-google-sheets</a>
+    <a href="https://github.com/handsondataviz/leaflet-maps-with-google-sheets" class="uri">https://github.com/handsondataviz/leaflet-maps-with-google-sheets</a>
 
 2.  In the upper-right corner of the code template, sign in to your free
     GitHub account
@@ -6995,7 +6995,7 @@ Errors](fix-code.html) in this book.
     chapter in this book
 
 1.  Right-click to open this GitHub code template in a new tab:
-    <a href="https://github.com//leaflet-storymaps-with-google-sheets" class="uri">https://github.com//leaflet-storymaps-with-google-sheets</a>
+    <a href="https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets" class="uri">https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets</a>
 
 2.  In the upper-right corner of the code template, sign in to your free
     GitHub account
@@ -7142,7 +7142,7 @@ dropdown with currently three options: Numerated (defaults to that, even
 if empty value), Plain (with no number), and No marker. The latter is
 what you want. It can be potentially extended to colours, types of
 markers, etc.
-<a href="https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131" class="uri">https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131</a>
+<a href="https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131" class="uri">https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131</a>
 
 Overlay GeoJSONs
 
@@ -7154,22 +7154,22 @@ Eg fillColor: orange; weight:2, opacity: 0.5, color: red, fillOpacity:
 value of the left-most expression is not undefined, it uses it. If not,
 it keeps moving to the right until there is a value that is not an empty
 string. For example,
-<a href="https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310" class="uri">https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310</a>
+<a href="https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310" class="uri">https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310</a>
 color: feature.properties.COLOR || props.color || ‘silver’,
 
 Will first attempt to extract the color from the COLOR property of each
 geoJson feature (useful for choropleth). If not found, it tries the
 GeoJSON Feature Properties “color”. If that is not set, it uses silver.
-<a href="https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316" class="uri">https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316</a>
+<a href="https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316" class="uri">https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316</a>
 
 Data in local CSV files
 
 If googleDocURL variable does not exist (eg you delete the file) or is
 an empty string, it reads two spreadsheets: Options.csv and Chapters.csv
 from the /csv folder. Otherwise, it reads from the google sheet.
-<a href="https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35" class="uri">https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35</a>
+<a href="https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35" class="uri">https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35</a>
 When data is read from a .CSV, it links that in the attribution
-(<a href="https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396" class="uri">https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396</a>)
+(<a href="https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396" class="uri">https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396</a>)
 
 #### Learn more
 
@@ -7268,7 +7268,7 @@ below.
     <a href="https://handsondataviz.github.io/leaflet-socrata/index.html" class="uri">https://handsondataviz.github.io/leaflet-socrata/index.html</a>
 
 -   code
-    <a href="https://github.com//leaflet-socrata/index.html" class="uri">https://github.com//leaflet-socrata/index.html</a>
+    <a href="https://github.com/handsondataviz/leaflet-socrata/index.html" class="uri">https://github.com/handsondataviz/leaflet-socrata/index.html</a>
 
 -   data
     <a href="https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8" class="uri">https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8</a>
@@ -7291,7 +7291,7 @@ below.
 -   map
     <a href="https://handsondataviz.github.io/leaflet-socrata/index-geojson-filter" class="uri">https://handsondataviz.github.io/leaflet-socrata/index-geojson-filter</a>
 -   code
-    <a href="https://github.com//leaflet-socrata/" class="uri">https://github.com//leaflet-socrata/</a>
+    <a href="https://github.com/handsondataviz/leaflet-socrata/" class="uri">https://github.com/handsondataviz/leaflet-socrata/</a>
 -   data
     <a href="https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98" class="uri">https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98</a>
 
@@ -7300,14 +7300,14 @@ below.
 -   map
     <a href="https://handsondataviz.github.io/leaflet-socrata/index-control-layers.html" class="uri">https://handsondataviz.github.io/leaflet-socrata/index-control-layers.html</a>
 -   code
-    <a href="https://github.com//leaflet-socrata/index-control-layers.html" class="uri">https://github.com//leaflet-socrata/index-control-layers.html</a>
+    <a href="https://github.com/handsondataviz/leaflet-socrata/index-control-layers.html" class="uri">https://github.com/handsondataviz/leaflet-socrata/index-control-layers.html</a>
 
 #### Older JSON-only endpoint, with separate columns for latitude, longitude
 
 -   map
     <a href="https://handsondataviz.github.io/leaflet-socrata/index-json.html" class="uri">https://handsondataviz.github.io/leaflet-socrata/index-json.html</a>
 -   code
-    <a href="https://github.com//leaflet-socrata/index-json.html" class="uri">https://github.com//leaflet-socrata/index-json.html</a>
+    <a href="https://github.com/handsondataviz/leaflet-socrata/index-json.html" class="uri">https://github.com/handsondataviz/leaflet-socrata/index-json.html</a>
 -   data
     <a href="https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7" class="uri">https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7</a>
 
@@ -7345,7 +7345,7 @@ tab](https://handsondataviz.github.io/leaflet-data-apis)
 #### How it works
 
 1.  Go to the GitHub repo for the map above:
-    <a href="https://github.com//leaflet-data-apis" class="uri">https://github.com//leaflet-data-apis</a>
+    <a href="https://github.com/handsondataviz/leaflet-data-apis" class="uri">https://github.com/handsondataviz/leaflet-data-apis</a>
 
 2.  Explore the code to see how different APIs work. For example, see
     the first map overlay, which pulls Connecticut School Directory data
@@ -7427,7 +7427,7 @@ TODO: Decide whether to keep or not
 
 #### Create Your Own: Fork a copy of the code template on GitHub
 
--   <a href="https://github.com//leaflet-map-polygon-click" class="uri">https://github.com//leaflet-map-polygon-click</a>
+-   <a href="https://github.com/handsondataviz/leaflet-map-polygon-click" class="uri">https://github.com/handsondataviz/leaflet-map-polygon-click</a>
 -   Remember, if you have already forked one copy, go to your GitHub
     repository Settings to rename it, or create a new GitHub repo and
     use GitHub Desktop to upload template Files
@@ -7521,7 +7521,7 @@ TODO: Decide whether to keep or not
 
 #### Create Your Own: Fork a copy of the code template on GitHub
 
--   <a href="https://github.com//leaflet-map-polygon-hover/" class="uri">https://github.com//leaflet-map-polygon-hover/</a>
+-   <a href="https://github.com/handsondataviz/leaflet-map-polygon-hover/" class="uri">https://github.com/handsondataviz/leaflet-map-polygon-hover/</a>
 -   Remember, if you have already forked one copy, go to your GitHub
     repository Settings to rename it, or create a new GitHub repo and
     use GitHub Desktop to upload template Files
@@ -7551,7 +7551,7 @@ TODO: decide whether to keep or not
 
 #### Create Your Own: Fork a copy of the code template on GitHub
 
--   <a href="https://github.com//leaflet-map-polygon-tabs/" class="uri">https://github.com//leaflet-map-polygon-tabs/</a>
+-   <a href="https://github.com/handsondataviz/leaflet-map-polygon-tabs/" class="uri">https://github.com/handsondataviz/leaflet-map-polygon-tabs/</a>
 -   Remember, if you have already forked one copy, go to your GitHub
     repository Settings to rename it, or create a new GitHub repo and
     use GitHub Desktop to upload template Files

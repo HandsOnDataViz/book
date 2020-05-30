@@ -89,7 +89,7 @@ To solve problems, see [Fix Common GitHub and Code Errors](fix-code.html) chapte
 - have a [free Google Drive account](http://drive.google.com), and learned the [File > Make a Copy in Google Sheets](copy.html) tutorial in this book
 - have a [free GitHub account](http://github.com), and understand concepts from the [Modify and Host Code with GitHub](github.html) chapter in this book
 
-1) Right-click to open this GitHub code template in a new tab: https://github.com//leaflet-maps-with-google-sheets
+1) Right-click to open this GitHub code template in a new tab: https://github.com/handsondataviz/leaflet-maps-with-google-sheets
 
 2) In the upper-right corner of the code template, sign in to your free GitHub account
 
@@ -316,7 +316,7 @@ To solve problems, see [Fix Common GitHub and Code Errors](fix-code.html) in thi
 - have a [free Google Drive account](http://drive.google.com), and learned the [File > Make a Copy in Google Sheets](copy.html) tutorial in this book
 - have a [free GitHub account](http://github.com), and understand concepts from the [Modify and Host Code with GitHub](github.html) chapter in this book
 
-1) Right-click to open this GitHub code template in a new tab: https://github.com//leaflet-storymaps-with-google-sheets
+1) Right-click to open this GitHub code template in a new tab: https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets
 
 2) In the upper-right corner of the code template, sign in to your free GitHub account
 
@@ -412,7 +412,7 @@ Markers
 
 I added a new column to the Chapter tab called “Marker”. It has a dropdown with currently three options: Numerated (defaults to that, even if empty value), Plain (with no number), and No marker. The latter is what you want.
 It can be potentially extended to colours, types of markers, etc.
-https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131
+https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131
 
 Overlay GeoJSONs
 
@@ -420,18 +420,18 @@ I added two columns, GeoJSON Overlay with the URL to the GeoJSON, and GeoJSON Fe
 List the styles separated by semicolon, and no quotation marks required. Eg
 fillColor: orange; weight:2, opacity: 0.5, color: red, fillOpacity: 0.1
 In the code, you will see two vertical lines: they mean “or”. If the value of the left-most expression is not undefined, it uses it. If not, it keeps moving to the right until there is a value that is not an empty string. For example,
-https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310
+https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L310
 color: feature.properties.COLOR || props.color || 'silver’,
 
 Will first attempt to extract the color from the COLOR property of each geoJson feature (useful for choropleth). If not found, it tries the GeoJSON Feature Properties “color”. If that is not set, it uses silver.
-https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316
+https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316
 
 Data in local CSV files
 
 If googleDocURL variable does not exist (eg you delete the file) or is an empty string, it reads two spreadsheets: Options.csv and Chapters.csv from the /csv folder.
 Otherwise, it reads from the google sheet.
-https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35
-When data is read from a .CSV, it links that in the attribution (https://github.com//leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396)
+https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35
+When data is read from a .CSV, it links that in the attribution (https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396)
 
 #### Learn more {-}
 To solve problems, see [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
@@ -482,7 +482,7 @@ If your Socrata endpoint only supports JSON format, but includes data columns wi
 
 #### GeoJSON endpoint with circle markers and tooltips {-}
 - map https://handsondataviz.github.io/leaflet-socrata/index.html
-- code https://github.com//leaflet-socrata/index.html
+- code https://github.com/handsondataviz/leaflet-socrata/index.html
 - data https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8
 - note: location data appears as latitude and longitude coordinates in the `geom` column
 
@@ -496,16 +496,16 @@ If your Socrata endpoint only supports JSON format, but includes data columns wi
 
 #### GeoJSON endpoint with simple data filter, default marker styling and pop-up info {-}
 - map https://handsondataviz.github.io/leaflet-socrata/index-geojson-filter
-- code https://github.com//leaflet-socrata/
+- code https://github.com/handsondataviz/leaflet-socrata/
 - data https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98
 
 #### Multiple Socrata datasets with Leaflet control layers legend {-}
 - map https://handsondataviz.github.io/leaflet-socrata/index-control-layers.html
-- code https://github.com//leaflet-socrata/index-control-layers.html
+- code https://github.com/handsondataviz/leaflet-socrata/index-control-layers.html
 
 #### Older JSON-only endpoint, with separate columns for latitude, longitude {-}
 - map https://handsondataviz.github.io/leaflet-socrata/index-json.html
-- code https://github.com//leaflet-socrata/index-json.html
+- code https://github.com/handsondataviz/leaflet-socrata/index-json.html
 - data https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7
 
 #### Learn more {-}
@@ -526,7 +526,7 @@ Explore the map below or [view full-screen version in a new tab](https://handson
 
 #### How it works {-}
 
-1) Go to the GitHub repo for the map above: https://github.com//leaflet-data-apis
+1) Go to the GitHub repo for the map above: https://github.com/handsondataviz/leaflet-data-apis
 
 2) Explore the code to see how different APIs work. For example, see the first map overlay, which pulls Connecticut School Directory data from the CT Open Data repository on a Socrata open data platform: https://data.ct.gov/resource/v4tt-nt9n
 
@@ -582,7 +582,7 @@ TODO: Decide whether to keep or not
 - Requires a free GitHub account to host your own version on the web.
 
 #### Create Your Own: Fork a copy of the code template on GitHub {-}
-- https://github.com//leaflet-map-polygon-click
+- https://github.com/handsondataviz/leaflet-map-polygon-click
 - Remember, if you have already forked one copy, go to your GitHub repository Settings to rename it, or create a new GitHub repo and use GitHub Desktop to upload template Files
 
 #### Obtain a polygon boundary map in GeoJSON format {-}
@@ -641,7 +641,7 @@ TODO: Decide whether to keep or not
 - Requires a free GitHub account to host your own version on the web.
 
 #### Create Your Own: Fork a copy of the code template on GitHub {-}
-- https://github.com//leaflet-map-polygon-hover/
+- https://github.com/handsondataviz/leaflet-map-polygon-hover/
 - Remember, if you have already forked one copy, go to your GitHub repository Settings to rename it, or create a new GitHub repo and use GitHub Desktop to upload template Files
 
 **TO DO**
@@ -663,5 +663,5 @@ TODO: decide whether to keep or not
 - describe all steps, which are similar to the prior chapter
 
 #### Create Your Own: Fork a copy of the code template on GitHub {-}
-- https://github.com//leaflet-map-polygon-tabs/
+- https://github.com/handsondataviz/leaflet-map-polygon-tabs/
 - Remember, if you have already forked one copy, go to your GitHub repository Settings to rename it, or create a new GitHub repo and use GitHub Desktop to upload template Files

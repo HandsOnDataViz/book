@@ -42,7 +42,7 @@ Bar charts (vertical bar charts are often called *column charts*) can be used to
 
 Demo: https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html
 
-Source and instructions: https://github.com//chartjs-templates/tree/master/bar-chart
+Source and instructions: https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart
 
 ## Line Chart.js with CSV Data {- #chartjs-line-csv}
 Line charts are often used to show temporal data (trends). The x-axis often represents time intervals. Unlike column or bar charts, y-axes of line charts do not necessarily start at 0.
@@ -51,7 +51,7 @@ Line charts are often used to show temporal data (trends). The x-axis often repr
 
 Demo: https://handsondataviz.github.io/chartjs-templates/line-chart/index.html
 
-Source and instructions: https://github.com//chartjs-templates/tree/master/line-chart
+Source and instructions: https://github.com/handsondataviz/chartjs-templates/tree/master/line-chart
 
 ## Scatter Chart.js with CSV Data {- #chartjs-scatter-csv}
 Scatter charts (also *scatterplots*) are used to display data of 2 or more dimensions. The scatter chart below shows the relationship between household income and test performance for school districts in Connecticut. Using x- and y-axes to show two dimensions, it is easy to see that test performance improves as household income goes up.
@@ -60,7 +60,7 @@ Scatter charts (also *scatterplots*) are used to display data of 2 or more dimen
 
 Demo: https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html
 
-Source and instructions: https://github.com//chartjs-templates/tree/master/scatter-chart
+Source and instructions: https://github.com/handsondataviz/chartjs-templates/tree/master/scatter-chart
 
 #### Going beyond two dimensions {-}
 To show more than two dimensions in scatter charts, one can:
@@ -80,7 +80,7 @@ In the demo below, the bubble chart shows the relationship between median househ
 
 Demo: https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html
 
-Source and instructions: https://github.com//chartjs-templates/tree/master/bubble-chart
+Source and instructions: https://github.com/handsondataviz/chartjs-templates/tree/master/bubble-chart
 
 #### Tip: Use semi-transparent circles {-}
 Data points may obstruct each other. To avoid this, play with color transparency. For example, `rgba(160, 0, 0, 0.5)` is a semi-transparent red in RGBA color model. The `a` stands for `alpha`, and is a number between 0 and 1, where 1 is solid, and 0 is completely transparent. Using transparency, you will be able to see data points that are hidden behind bigger neighbors.

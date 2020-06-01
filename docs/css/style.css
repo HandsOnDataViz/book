@@ -1,3 +1,25 @@
+/* Custom blocks https://bookdown.org/yihui/bookdown/custom-blocks.html */
+.rmdcaution, .rmdimportant, .rmdnote, .rmdtip, .rmdwarning {
+padding: 1em 1em 1em 4em;
+margin-bottom: 10px;
+background: #f5f5f5 5px center/3em no-repeat;
+}
+.rmdcaution {
+background-image: url("../images/blocks/caution.png");
+}
+.rmdimportant {
+background-image: url("../images/blocks/important.png");
+}
+.rmdnote {
+background-image: url("../images/blocks/note.png");
+}
+.rmdtip {
+background-image: url("../images/blocks/tip.png");
+}
+.rmdwarning {
+background-image: url("../images/blocks/warning.png");
+}
+
 p.caption {
   margin-top: 10px;
   margin-left: 20px;

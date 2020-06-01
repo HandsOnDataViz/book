@@ -45,7 +45,7 @@ output:
   bookdown::pdf_book:
     toc_depth: 2
     number_sections: true
-    citation_package: none
+    citation_package: default
     pandoc_args: [ "--csl", "chicago-fullnote-bibliography.csl" ]
 
   bookdown::word_document2:

@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 30 May 2020
+updated on: 01 Jun 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -8358,17 +8358,16 @@ Figure 19: Caption here. Markdown embedded links are acceptable.
 R code-chunks allow more complex conditional formatting, where an
 interactive map or animated GIF or YouTube video clip appears in the web
 version, and a static image with an embedded link appears in the PDF and
-MS Word outputs. Also note the option to change the default iframe
-height (400px) and width with settings in the `custom-scripts.html`
-file, with a code comment reminder.
+MS Word outputs. To change the height of the default 400px iframe, add
+the new height to `include_url` as shown in the examples. However, to
+change the width of the default 675px iframe to less than 100 percent,
+add a line in a `custom-scripts.html` file.
 
 ### Demo: R code-chunk for HTML iframe and static image
 
 …as shown in Figure <a href="#fig:sample-map">20</a>.
 
-<!-- set iframe 600px height 100% width in custom-scripts.html -->
-
-<iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="100%" height="400px">
+<iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="100%" height="600px">
 </iframe>
 <p class="caption">
 Figure 20: Caption here, and add embedded link to explore the
@@ -8378,19 +8377,14 @@ map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 
 ### Demo: R code-chunk for GIF animation and static image
 
-TODO: FIX to make sizing appear consistently across browsers (FFox vs
-Chrome).
+…as shown in Figure <a href="#fig:sheets-option-drag">21</a>.
 
-…as shown in Figure <a href="#fig:excel-drag">21</a>.
-
-<!-- set iframe 450px height in custom-scripts.html -->
-
-<iframe src="images/15-bookdown/excel-drag.gif" width="100%" height="400px">
+<iframe src="images/15-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
 Figure 21: Caption here, with embedded link to GitHub repo, not GitHub
 Pages [animated
-GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/excel-drag.gif).
+GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheets-option-drag.gif).
 </p>
 
 ### Demo: R code-chunk for Youtube video and static image

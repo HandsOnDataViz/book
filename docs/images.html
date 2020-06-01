@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-05-30" />
+<meta name="date" content="2020-06-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -60,14 +60,6 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-5488840-29');
-</script>
-<script>
-  // adjust web edition height or width of iframe for specific figure references, using tilde (~iframe)
-$(document).ready(function() {
-  $("#fig\\:sample-map~iframe").attr("height", "600px");
-  $("#fig\\:sample-map~iframe").attr("width", "100%");
-  $("#fig\\:excel-drag~iframe").attr("height", "450px");
-})
 </script>
 
 
@@ -354,15 +346,14 @@ knitr::opts_chunk$set(echo = FALSE)</code></pre>
 Figure 15.1: Caption here. Markdown embedded links are acceptable.
 </p>
 </div>
-<p>R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the web version, and a static image with an embedded link appears in the PDF and MS Word outputs. Also note the option to change the default iframe height (400px) and width with settings in the <code>custom-scripts.html</code> file, with a code comment reminder.</p>
+<p>R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the web version, and a static image with an embedded link appears in the PDF and MS Word outputs. To change the height of the default 400px iframe, add the new height to <code>include_url</code> as shown in the examples. However, to change the width of the default 675px iframe to less than 100 percent, add a line in a <code>custom-scripts.html</code> file.</p>
 </div>
 <div id="demo-r-code-chunk-for-html-iframe-and-static-image" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for HTML iframe and static image</h3>
 <p>…as shown in Figure <a href="images.html#fig:sample-map">15.2</a>.</p>
 
-<!-- set iframe 600px height 100% width in custom-scripts.html -->
 <div class="figure"><span id="fig:sample-map"></span>
-<iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="672" height="400px">
+<iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="672" height="600px">
 </iframe>
 <p class="caption">
 Figure 15.2: Caption here, and add embedded link to explore the <a href="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/">full-screen interactive map</a>.
@@ -371,15 +362,13 @@ Figure 15.2: Caption here, and add embedded link to explore the <a href="https:/
 </div>
 <div id="demo-r-code-chunk-for-gif-animation-and-static-image" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for GIF animation and static image</h3>
-<p>TODO: FIX to make sizing appear consistently across browsers (FFox vs Chrome).</p>
-<p>…as shown in Figure <a href="images.html#fig:excel-drag">15.3</a>.</p>
+<p>…as shown in Figure <a href="images.html#fig:sheets-option-drag">15.3</a>.</p>
 
-<!-- set iframe 450px height in custom-scripts.html -->
-<div class="figure"><span id="fig:excel-drag"></span>
-<iframe src="images/15-bookdown/excel-drag.gif" width="672" height="400px">
+<div class="figure"><span id="fig:sheets-option-drag"></span>
+<iframe src="images/15-bookdown/sheets-option-drag.gif" width="672" height="250px">
 </iframe>
 <p class="caption">
-Figure 15.3: Caption here, with embedded link to GitHub repo, not GitHub Pages <a href="https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/excel-drag.gif">animated GIF</a>.
+Figure 15.3: Caption here, with embedded link to GitHub repo, not GitHub Pages <a href="https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheets-option-drag.gif">animated GIF</a>.
 </p>
 </div>
 </div>
@@ -445,7 +434,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/15-bookdown.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

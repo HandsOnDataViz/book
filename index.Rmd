@@ -20,7 +20,7 @@ output:
     dev: svglite
     css: css/style.css
     includes:
-      in_header: [google-analytics-dataviz.html, custom-scripts.html]
+      in_header: google-analytics-dataviz.html
     toc_depth: 2
     split_by: section
     number_sections: true

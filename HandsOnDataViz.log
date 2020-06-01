@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.20)  30 MAY 2020 07:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.20)  1 JUN 2020 10:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2603,65 +2603,65 @@ File: images/15-bookdown/sample-map.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/15-bookdown/sample-map.jpg  used on input line 
 9014.
 (pdftex.def)             Requested size: 345.00154pt x 186.1519pt.
-<images/15-bookdown/excel-drag.png, id=3876, 79.497pt x 144.54pt>
-File: images/15-bookdown/excel-drag.png Graphic file (type png)
-<use images/15-bookdown/excel-drag.png>
-Package pdftex.def Info: images/15-bookdown/excel-drag.png  used on input line 
-9030.
-(pdftex.def)             Requested size: 79.50043pt x 144.54623pt.
+<images/15-bookdown/sheets-option-drag.png, id=3876, 271.0125pt x 250.9375pt>
+File: images/15-bookdown/sheets-option-drag.png Graphic file (type png)
+<use images/15-bookdown/sheets-option-drag.png>
+Package pdftex.def Info: images/15-bookdown/sheets-option-drag.png  used on inp
+ut line 9028.
+(pdftex.def)             Requested size: 271.0201pt x 250.94452pt.
 <images/15-bookdown/video-sample.png, id=3880, 168.63pt x 94.6737pt>
 File: images/15-bookdown/video-sample.png Graphic file (type png)
 <use images/15-bookdown/video-sample.png>
 Package pdftex.def Info: images/15-bookdown/video-sample.png  used on input lin
-e 9046.
+e 9044.
 (pdftex.def)             Requested size: 168.63214pt x 94.6749pt.
-[261 <./images/15-bookdown/sample-map.jpg>] [262 <./images/15-bookdown/excel-dr
-ag.png> <./images/15-bookdown/video-sample.png>]
-Overfull \hbox (41.69397pt too wide) in alignment at lines 9060--9065
+[261 <./images/15-bookdown/sample-map.jpg>] [262 <./images/15-bookdown/sheets-o
+ption-drag.png> <./images/15-bookdown/video-sample.png>]
+Overfull \hbox (41.69397pt too wide) in alignment at lines 9058--9063
  [] [] [] 
  []
 
 
-Overfull \hbox (41.69397pt too wide) in alignment at lines 9065--9069
+Overfull \hbox (41.69397pt too wide) in alignment at lines 9063--9067
  [] [] [] 
  []
 
 
-Overfull \hbox (41.69397pt too wide) in alignment at lines 9069--9073
+Overfull \hbox (41.69397pt too wide) in alignment at lines 9067--9071
  [] [] [] 
  []
 
 
-Overfull \hbox (24.25111pt too wide) in paragraph at lines 9099--9100
+Overfull \hbox (24.25111pt too wide) in paragraph at lines 9097--9098
 []\T1/lmr/m/n/10 To cre-ate notes, in-sert ci-ta-tion keys in the text, such as
  \T1/lmtt/m/n/10 @huffHowLieStatistics1954\T1/lmr/m/n/10 ,
  []
 
 [263]
-Underfull \hbox (badness 5475) in paragraph at lines 9137--9139
+Underfull \hbox (badness 5475) in paragraph at lines 9135--9137
 []\T1/lmr/m/n/10 Convert with: \T1/lmtt/m/n/10 pandoc handsondataviz.md --from 
 markdown --to
  []
 
 [264]
 Chapter 16.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 9157.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 9155.
 [265
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 9157.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 9155.
 (./HandsOnDataViz.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 9157.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 9157.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 9155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 9155.
 
 Package rerunfilecheck Info: File `HandsOnDataViz.out' has not changed.
 (rerunfilecheck)             Checksum: C6C8DA090748BD87D7C3DF597EBDC7B6;23271.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 9157.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 9155.
  ) 
 Here is how much of TeX's memory you used:
  14907 strings out of 482424
- 243137 string characters out of 5944450
- 484750 words of memory out of 5000000
+ 243193 string characters out of 5944450
+ 485758 words of memory out of 5000000
  28697 multiletter control sequences out of 15000+600000
  620648 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -2683,7 +2683,7 @@ ist/fonts/type1/public/lm/lmro10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dis
 t/fonts/type1/public/lm/lmtk10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dist/
 fonts/type1/public/lm/lmtt10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dist/fo
 nts/type1/public/lm/lmtti10.pfb>
-Output written on HandsOnDataViz.pdf (265 pages, 21678898 bytes).
+Output written on HandsOnDataViz.pdf (265 pages, 21613196 bytes).
 PDF statistics:
  4330 PDF objects out of 5155 (max. 8388607)
  3784 compressed objects within 38 object streams

@@ -299,9 +299,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="custom-blocks" class="section level2 unnumbered" number="">
 <h2>Custom Blocks</h2>
-<p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd</a></p>
-<p>See <a href="https://bookdown.org/yihui/bookdown/custom-blocks.html">Bookdown Custom Blocks chapter</a> to modify style and output options.</p>
-<p>Demos (still testing):</p>
+<p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd</a></p>
+<p>See Custom Blocks described in <a href="https://bookdown.org/yihui/bookdown/custom-blocks.html">Bookdown</a> and <a href="https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html">RMarkdown</a> to setup style and output options. Be sure to add <code>echo=TRUE</code> in each instance because of the global <code>echo=false</code> in <code>index.Rmd</code> for all R code-chunk images. Also add LaTeX code <code>preamble.tex</code> for PDF output, and include this in the <code>index.Rmd</code> PDF output, as described in <a href="https://bookdown.org/yihui/bookdown/yaml-options.html">Bookdown</a> and <a href="https://bookdown.org/yihui/rmarkdown-cookbook/latex-preamble.html">RMarkdown</a>.</p>
+<p>Demos:</p>
+
+<div class="rmdnote">
+Here is a sample note.
+</div>
+
+<div class="rmdcaution">
+Here is a sample caution.
+</div>
+
+<div class="rmdimportant">
+Here is sample “Important” text.
+</div>
+
+<div class="rmdtip">
+Here is a sample tip.
+</div>
+
+<div class="rmdwarning">
+<p>Here is a sample warning. Remember that if the last line is not a standard paragraph, add a blank line at the end.</p>
+</div>
 </div>
             </section>
 

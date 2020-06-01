@@ -75,7 +75,7 @@ output:
 ```
 
 ## Style Guide for *Hands-On Data Visualization* {- #style-guide}
-View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd
+View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd
 
 This book is composed in R-flavored Markdown (.Rmd), and each paragraph begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word.
 
@@ -172,7 +172,7 @@ Cross-reference interactivity varies by output:
 When writing cross-references in the text, the [O'Reilly Style Guide](http://oreillymedia.github.io/production-resources/styleguide/#considering_electronic_formats) prefers live cross references (e.g., "see Figure 2-1"), but if not feasible, use "preceding" or "following" because physical placement of elements may vary across print and digital formats. *Avoid* using "above" or "below."
 
 ## Images {- #images}
-View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd
+View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd
 
 Create high-resolution color static images in .jpg or .png format, and animated .gif files, and save them into the `images` subfolder by chapter. Make sure that color images can be rendered into grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add `-original` to the end of the file name prior to resizing or adding more text or artwork.
 
@@ -262,7 +262,7 @@ if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-n
 ```
 
 ## Tables {- #tables}
-View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd
+View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd
 
 Create tables in Markdown format, since it produces good output for HTML, PDF, Word, and Markdown. Use a tool such as [Tables Generator](https://www.tablesgenerator.com/markdown_tables) to import significant table data in CSV format, format the column alignment as desired, and press Generate button to create table in Markdown format. For significant table data, save the CSV version in a GitHub repo for potential later use.
 
@@ -286,34 +286,6 @@ Table: (\#tab:right-table) Right-justify content, remember blank line
 | Use equal hyphens | to make equal space | for all columns |
 
 Workaround for Markdown-to-AsciiDoc: Currently, our attempt to use Pandoc to directly convert a Bookdown-generated Markdown file to AsciiDoc fails because Bookdown creates the .md file with tables in .html format, not Markdown. Our workaround is to paste the individual Markdown-formatted tables directly from the .Rmd into the large .md file prior to converting with Pandoc to AsciiDoc.
-
-## Custom Blocks {- #custom-blocks}
-View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd
-
-See [Bookdown Custom Blocks chapter](https://bookdown.org/yihui/bookdown/custom-blocks.html) to modify style and output options.
-
-Demos (still testing):
-
-```{block2, type='rmdnote'}
-Here is a sample note.
-```
-
-```{block2, type='rmdcaution'}
-Here is a sample caution.
-```
-
-```{block2, type='rmdimportant'}
-Here is sample "Important" text.
-```
-
-```{block2, type='rmdtip'}
-Here is a sample tip.
-```
-
-```{block2, note-text, type='rmdwarning'}
-Here is a sample warning. Remember that if the last line is not a standard paragraph, add a blank line at the end.
-
-```
 
 ## Notes and Bibliography {- #notes}
 This book displays endnotes for each chapter in the HTML book, and footnotes at the bottom of pages for the PDF and MS Word books, followed by an alphabetized bibliography of all references cited on the last page. The notes and bibliography also appear in the full-book Markdown file.

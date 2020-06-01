@@ -8114,7 +8114,7 @@ Style Guide for *Hands-On Data Visualization*
 
 View the underlying source code to understand how this page was composed
 at:
-<a href="https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd</a>
+<a href="https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd</a>
 
 This book is composed in R-flavored Markdown (.Rmd), and each paragraph
 begins on a separate line. O’Reilly style guide prefers *italics* rather
@@ -8257,7 +8257,7 @@ Images
 
 View the underlying source code to understand how this page was composed
 at:
-<a href="https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd</a>
+<a href="https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd</a>
 
 Create high-resolution color static images in .jpg or .png format, and
 animated .gif files, and save them into the `images` subfolder by
@@ -8409,7 +8409,7 @@ Tables
 
 View the underlying source code to understand how this page was composed
 at:
-<a href="https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd</a>
+<a href="https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd</a>
 
 Create tables in Markdown format, since it produces good output for
 HTML, PDF, Word, and Markdown. Use a tool such as [Tables
@@ -8481,19 +8481,6 @@ AsciiDoc fails because Bookdown creates the .md file with tables in
 .html format, not Markdown. Our workaround is to paste the individual
 Markdown-formatted tables directly from the .Rmd into the large .md file
 prior to converting with Pandoc to AsciiDoc.
-
-Custom Blocks
--------------
-
-View the underlying source code to understand how this page was composed
-at:
-<a href="https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/01-bookdown.Rmd</a>
-
-See [Bookdown Custom Blocks
-chapter](https://bookdown.org/yihui/bookdown/custom-blocks.html) to
-modify style and output options.
-
-Demos (still testing):
 
 Notes and Bibliography
 ----------------------

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-01" />
+<meta name="date" content="2020-06-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -299,7 +299,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="images" class="section level2 unnumbered" number="">
 <h2>Images</h2>
 <p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd</a></p>
-<p>Create high-resolution color static images in .jpg or .png format, and animated .gif files, and save them into the <code>images</code> subfolder by chapter. Make sure that color images can be rendered into grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add <code>-original</code> to the end of the file name prior to resizing or adding more text or artwork.</p>
+<p>Create high-resolution color static images in .jpg or .png format, and animated .gif files, and save them into the <code>images</code> subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add <code>-original</code> to the end of the file name prior to resizing or adding more text or artwork.</p>
 <p>Use Photoshop or a similar photo-editing tool (<em>not</em> Preview) to add any additional text or artwork if desired. Try to maintain a high resolution (300 dpi) and reduce size if desired to fit into the HTML book (measured in pixels) and PDF book (measured in inches). Save into the same folder with the same file name, minus <code>-original</code>, like this:</p>
 <pre><code>images/05-chart/design-no-junk-original.png
 images/05-chart/design-no-junk.png</code></pre>
@@ -337,8 +337,8 @@ images/05-chart/design-no-junk.png</code></pre>
 <p>Note that the Bookdown <code>index.Rmd</code> file includes an R code-chunk setting immediately after the first header, which displays each code-chunk image without a code echo. Read more about this feature and related options in this <a href="https://bookdown.org/yihui/bookdown/figures.html">Bookdown chapter</a>.</p>
 <pre><code>{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)</code></pre>
-<div id="demo-r-code-chunk-for-static-image" class="section level3 unnumbered" number="">
-<h3>Demo: R code-chunk for static image</h3>
+<div id="demo-r-code-chunk-for-static-image-for-html-and-pdf" class="section level3 unnumbered" number="">
+<h3>Demo: R code-chunk for static image for HTML and PDF</h3>
 <p>…as shown in Figure <a href="images.html#fig:tiger">15.1</a>.</p>
 
 <div class="figure"><span id="fig:tiger"></span>
@@ -349,8 +349,8 @@ Figure 15.1: Caption here. Markdown embedded links are acceptable.
 </div>
 <p>R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the web version, and a static image with an embedded link appears in the PDF and MS Word outputs. To change the height of the default 400px iframe, add the new height to <code>include_url</code> as shown in the examples. However, to change the width of the default 675px iframe to less than 100 percent, add a line in a <code>custom-scripts.html</code> file.</p>
 </div>
-<div id="demo-r-code-chunk-for-html-iframe-and-static-image" class="section level3 unnumbered" number="">
-<h3>Demo: R code-chunk for HTML iframe and static image</h3>
+<div id="demo-r-code-chunk-for-iframe-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
+<h3>Demo: R code-chunk for iframe in HTML and static image in PDF</h3>
 <p>…as shown in Figure <a href="images.html#fig:sample-map">15.2</a>.</p>
 
 <div class="figure"><span id="fig:sample-map"></span>
@@ -361,8 +361,8 @@ Figure 15.2: Caption here, and add embedded link to explore the <a href="https:/
 </p>
 </div>
 </div>
-<div id="demo-r-code-chunk-for-gif-animation-and-static-image" class="section level3 unnumbered" number="">
-<h3>Demo: R code-chunk for GIF animation and static image</h3>
+<div id="demo-r-code-chunk-for-animated-gif-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
+<h3>Demo: R code-chunk for animated GIF in HTML and static image in PDF</h3>
 <p>…as shown in Figure <a href="images.html#fig:sheets-option-drag">15.3</a>.</p>
 
 <div class="figure"><span id="fig:sheets-option-drag"></span>
@@ -373,8 +373,8 @@ Figure 15.3: Caption here, with embedded link to GitHub repo, not GitHub Pages <
 </p>
 </div>
 </div>
-<div id="demo-r-code-chunk-for-youtube-video-and-static-image" class="section level3 unnumbered" number="">
-<h3>Demo: R code-chunk for Youtube video and static image</h3>
+<div id="demo-r-code-chunk-for-youtube-video-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
+<h3>Demo: R code-chunk for Youtube video in HTML and static image in PDF</h3>
 <p>Be sure to use the <em>embed</em> link from the YouTube <em>share</em> button.</p>
 <p>…as shown in the video <a href="images.html#fig:video-sample">15.4</a>.</p>
 

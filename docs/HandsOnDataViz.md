@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 01 Jun 2020
+updated on: 02 Jun 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -8120,6 +8120,42 @@ This book is composed in R-flavored Markdown (.Rmd), and each paragraph
 begins on a separate line. O’Reilly style guide prefers *italics* rather
 than bold. Use single back tics to display a monospaced `code` word.
 
+O’Reilly guidelines recommend making your writing as conversational as
+possible. Imagine you’re speaking to someone one on one, not giving a
+formal lecture to a large group. Refer to the reader as “you” and to
+yourself as “I” for a single-author book, and refer to yourselves as
+“we” for a co-authored book. Use active voice, not passive voice.
+
+More from O’Reilly about chapter structure: Each chapter should begin
+with a paragraph or two that summarizes what the chapter is about and
+why that information is important to the overall topic of your book.
+Subsequent sections should walk readers through the information you’re
+presenting. Keep readers oriented by including signposts like “As you
+learned in Chapter 3” and “I’ll discuss this topic in more detail later
+in this chapter.”
+
+More from O’Reilly about transitions: End section X by saying something
+like, “Now that you understand X, you’re ready to dig into topic Y,” and
+start section Y by explaining how it relates to topic X. Daisy-chaining
+helps readers understand how concepts are connected and why you’re
+covering them in this order. Finally, at the end of each chapter,
+summarize what you discussed in that chapter, and mention what the
+following chapter is going to cover.
+
+O’Reilly encourages the use of tips, notes, and warnings, and assigns
+each of them an animal icon in their books (lemur, crow, and scorpion,
+respectively). In this book manuscript, simply start each with a
+paragraph beginning with the keyword, followed by a colon, to simplify
+find-and-replace at a later date:
+
+-   Tip: A couple of sentences that convey a helpful bit of information,
+    a quick way to do things better.
+-   Note: A couple of sentences of supplemental information. It
+    describes something you want readers to keep in mind as they work,
+    so you use a note to set it apart and make sure they see it.
+-   Warning: Similar to a note or tip, but specifically focused on a way
+    to help readers avoid making a mistake or getting into trouble.
+
 Insert an embedded link to [O’Reilly](https://www.oreilly.com/). This
 appears as a colored clickable link in HTML and Word editions, and a
 non-colored but clickable link in the PDF edition. According to O’Reilly
@@ -8261,13 +8297,14 @@ at:
 
 Create high-resolution color static images in .jpg or .png format, and
 animated .gif files, and save them into the `images` subfolder by
-chapter. Make sure that color images can be rendered into grayscale by
-the publisher for the print book. Write file names in lowercase with
-dashes (not spaces) and begin with keyword of relevant section to keep
-related images grouped together. Despite being in separate folders,
-avoid duplicate image file names across the book. Avoid numbering images
-since they may not match the final sequence. Add `-original` to the end
-of the file name prior to resizing or adding more text or artwork.
+chapter. Make sure that color images include high contrast and/or
+shading, because they will be converted to grayscale by the publisher
+for the print book. Write file names in lowercase with dashes (not
+spaces) and begin with keyword of relevant section to keep related
+images grouped together. Despite being in separate folders, avoid
+duplicate image file names across the book. Avoid numbering images since
+they may not match the final sequence. Add `-original` to the end of the
+file name prior to resizing or adding more text or artwork.
 
 Use Photoshop or a similar photo-editing tool (*not* Preview) to add any
 additional text or artwork if desired. Try to maintain a high resolution
@@ -8350,7 +8387,7 @@ chapter](https://bookdown.org/yihui/bookdown/figures.html).
     {r setup, include=FALSE}
     knitr::opts_chunk$set(echo = FALSE)
 
-### Demo: R code-chunk for static image
+### Demo: R code-chunk for static image for HTML and PDF
 
 …as shown in Figure <a href="#fig:tiger">19</a>.
 
@@ -8367,7 +8404,7 @@ the new height to `include_url` as shown in the examples. However, to
 change the width of the default 675px iframe to less than 100 percent,
 add a line in a `custom-scripts.html` file.
 
-### Demo: R code-chunk for HTML iframe and static image
+### Demo: R code-chunk for iframe in HTML and static image in PDF
 
 …as shown in Figure <a href="#fig:sample-map">20</a>.
 
@@ -8379,7 +8416,7 @@ Figure 20: Caption here, and add embedded link to explore the
 map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 </p>
 
-### Demo: R code-chunk for GIF animation and static image
+### Demo: R code-chunk for animated GIF in HTML and static image in PDF
 
 …as shown in Figure <a href="#fig:sheets-option-drag">21</a>.
 
@@ -8391,7 +8428,7 @@ Pages [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheets-option-drag.gif).
 </p>
 
-### Demo: R code-chunk for Youtube video and static image
+### Demo: R code-chunk for Youtube video in HTML and static image in PDF
 
 Be sure to use the *embed* link from the YouTube *share* button.
 

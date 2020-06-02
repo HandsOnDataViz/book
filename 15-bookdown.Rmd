@@ -79,6 +79,18 @@ View the underlying source code to understand how this page was composed at: htt
 
 This book is composed in R-flavored Markdown (.Rmd), and each paragraph begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word.
 
+O'Reilly guidelines recommend making your writing as conversational as possible. Imagine you're speaking to someone one on one, not giving a formal lecture to a large group. Refer to the reader as "you" and to yourself as "I" for a single-author book, and refer to yourselves as "we" for a co-authored book. Use active voice, not passive voice.
+
+More from O'Reilly about chapter structure: Each chapter should begin with a paragraph or two that summarizes what the chapter is about and why that information is important to the overall topic of your book. Subsequent sections should walk readers through the information you're presenting. Keep readers oriented by including signposts like "As you learned in Chapter 3" and "I'll discuss this topic in more detail later in this chapter."
+
+More from O'Reilly about transitions: End section X by saying something like, "Now that you understand X, you're ready to dig into topic Y," and start section Y by explaining how it relates to topic X. Daisy-chaining helps readers understand how concepts are connected and why you're covering them in this order. Finally, at the end of each chapter, summarize what you discussed in that chapter, and mention what the following chapter is going to cover.
+
+O'Reilly encourages the use of tips, notes, and warnings, and assigns each of them an animal icon in their books (lemur, crow, and scorpion, respectively). In this book manuscript, simply start each with a paragraph beginning with the keyword, followed by a colon, to simplify find-and-replace at a later date:
+
+- Tip: A couple of sentences that convey a helpful bit of information, a quick way to do things better.
+- Note: A couple of sentences of supplemental information. It describes something you want readers to keep in mind as they work, so you use a note to set it apart and make sure they see it.
+- Warning: Similar to a note or tip, but specifically focused on a way to help readers avoid making a mistake or getting into trouble.
+
 Insert an embedded link to [O'Reilly](https://www.oreilly.com/). This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O'Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.
 
 For lists, always insert a blank line *before* the items, unless they appear directly after hashtag header.
@@ -174,7 +186,7 @@ When writing cross-references in the text, the [O'Reilly Style Guide](http://ore
 ## Images {- #images}
 View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd
 
-Create high-resolution color static images in .jpg or .png format, and animated .gif files, and save them into the `images` subfolder by chapter. Make sure that color images can be rendered into grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add `-original` to the end of the file name prior to resizing or adding more text or artwork.
+Create high-resolution color static images in .jpg or .png format, and animated .gif files, and save them into the `images` subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add `-original` to the end of the file name prior to resizing or adding more text or artwork.
 
 Use Photoshop or a similar photo-editing tool (*not* Preview) to add any additional text or artwork if desired. Try to maintain a high resolution (300 dpi) and reduce size if desired to fit into the HTML book (measured in pixels) and PDF book (measured in inches). Save into the same folder with the same file name, minus `-original`, like this:
 
@@ -221,7 +233,7 @@ Note that the Bookdown `index.Rmd` file includes an R code-chunk setting immedia
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-### Demo: R code-chunk for static image {-}
+### Demo: R code-chunk for static image for HTML and PDF {-}
 ...as shown in Figure \@ref(fig:tiger).
 
 (ref:tiger) Caption here. Markdown embedded links are acceptable.
@@ -232,7 +244,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the web version, and a static image with an embedded link appears in the PDF and MS Word outputs. To change the height of the default 400px iframe, add the new height to `include_url` as shown in the examples. However, to change the width of the default 675px iframe to less than 100 percent, add a line in a `custom-scripts.html` file.
 
-### Demo: R code-chunk for HTML iframe and static image {-}
+### Demo: R code-chunk for iframe in HTML and static image in PDF {-}
 ...as shown in Figure \@ref(fig:sample-map).
 
 (ref:sample-map) Caption here, and add embedded link to explore the [full-screen interactive map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
@@ -241,7 +253,7 @@ R code-chunks allow more complex conditional formatting, where an interactive ma
 if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "600px") else knitr::include_graphics("images/15-bookdown/sample-map.jpg")
 ```
 
-### Demo: R code-chunk for GIF animation and static image {-}
+### Demo: R code-chunk for animated GIF in HTML and static image in PDF {-}
 ...as shown in Figure \@ref(fig:sheets-option-drag).
 
 (ref:sheets-option-drag) Caption here, with embedded link to GitHub repo, not GitHub Pages [animated GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheets-option-drag.gif).
@@ -250,7 +262,7 @@ if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io
 if(knitr::is_html_output()) knitr::include_url("images/15-bookdown/sheets-option-drag.gif", height = "250px") else knitr::include_graphics("images/15-bookdown/sheets-option-drag.png")
 ```
 
-### Demo: R code-chunk for Youtube video and static image {-}
+### Demo: R code-chunk for Youtube video in HTML and static image in PDF {-}
 Be sure to use the *embed* link from the YouTube *share* button.
 
 ...as shown in the video \@ref(fig:video-sample).

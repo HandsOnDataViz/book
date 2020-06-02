@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.20)  1 JUN 2020 15:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.5.20)  2 JUN 2020 12:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2539,129 +2539,129 @@ Underfull \hbox (badness 10000) in paragraph at lines 8740--8741
 aption -[] styles -[] for -[] word -[]
  []
 
-[255]
-Overfull \hbox (80.24876pt too wide) in paragraph at lines 8826--8826
+[255] [256]
+Overfull \hbox (80.24876pt too wide) in paragraph at lines 8844--8844
 []\T1/lmtt/m/n/10 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/
 dist/leaflet.css" />[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 8826--8826
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 8844--8844
 []\T1/lmtt/m/n/10 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
 ></script>[] 
  []
 
-[256]
-Underfull \hbox (badness 10000) in paragraph at lines 8860--8862
+
+Underfull \hbox (badness 10000) in paragraph at lines 8878--8880
 [][]$\T1/lmr/m/n/10 https : / / stackover^^]ow . com / questions / 56808355 / h
 ow -[] to -[] conditionally -[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 8866--8868
+[257]
+Underfull \hbox (badness 10000) in paragraph at lines 8884--8886
 [][]$\T1/lmr/m/n/10 https : / / stackover^^]ow . com / questions / 53861244 / h
 tml -[] speci^^\c -[] section -[] in -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8868--8870
+Underfull \hbox (badness 10000) in paragraph at lines 8886--8888
 [][]$\T1/lmr/m/n/10 https : / / stackover^^]ow . com / questions / 41084020 / a
 dd -[] a -[] html -[] block -[] above -[]
  []
 
 
-Overfull \hbox (2.65569pt too wide) in paragraph at lines 8870--8871
+Overfull \hbox (2.65569pt too wide) in paragraph at lines 8888--8889
 [][]$\T1/lmr/m/n/10 https : / / stackover^^]ow . com / questions / 45360998 / c
 ode -[] folding -[] in -[] bookdown$[] 
  []
 
-[257] [258]
-<images/15-bookdown/dougherty-jack.jpg, id=3851, 48.18pt x 48.4209pt>
+[258]
+<images/15-bookdown/dougherty-jack.jpg, id=3849, 48.18pt x 48.4209pt>
 File: images/15-bookdown/dougherty-jack.jpg Graphic file (type jpg)
 <use images/15-bookdown/dougherty-jack.jpg>
 Package pdftex.def Info: images/15-bookdown/dougherty-jack.jpg  used on input l
-ine 8960.
+ine 8978.
 (pdftex.def)             Requested size: 48.17986pt x 48.42076pt.
-<images/15-bookdown/ilyankou-ilya.jpg, id=3853, 48.18pt x 48.18pt>
+<images/15-bookdown/ilyankou-ilya.jpg, id=3851, 48.18pt x 48.18pt>
 File: images/15-bookdown/ilyankou-ilya.jpg Graphic file (type jpg)
 <use images/15-bookdown/ilyankou-ilya.jpg>
 Package pdftex.def Info: images/15-bookdown/ilyankou-ilya.jpg  used on input li
-ne 8961.
+ne 8979.
 (pdftex.def)             Requested size: 48.17986pt x 48.17986pt.
-[259 <./images/15-bookdown/dougherty-jack.jpg> <./images/15-bookdown/ilyankou-i
-lya.jpg>]
-<images/15-bookdown/tiger.png, id=3863, 108.405pt x 110.4125pt>
+[259] [260 <./images/15-bookdown/dougherty-jack.jpg> <./images/15-bookdown/ilya
+nkou-ilya.jpg>]
+<images/15-bookdown/tiger.png, id=3867, 108.405pt x 110.4125pt>
 File: images/15-bookdown/tiger.png Graphic file (type png)
 <use images/15-bookdown/tiger.png>
-Package pdftex.def Info: images/15-bookdown/tiger.png  used on input line 9000.
+Package pdftex.def Info: images/15-bookdown/tiger.png  used on input line 9018.
 
 (pdftex.def)             Requested size: 108.40968pt x 110.41727pt.
-[260 <./images/15-bookdown/tiger.png>]
-<images/15-bookdown/sample-map.jpg, id=3873, 401.8212pt x 216.81pt>
+<images/15-bookdown/sample-map.jpg, id=3869, 401.8212pt x 216.81pt>
 File: images/15-bookdown/sample-map.jpg Graphic file (type jpg)
 <use images/15-bookdown/sample-map.jpg>
 Package pdftex.def Info: images/15-bookdown/sample-map.jpg  used on input line 
-9016.
+9034.
 (pdftex.def)             Requested size: 345.00154pt x 186.1519pt.
-<images/15-bookdown/sheets-option-drag.png, id=3877, 271.0125pt x 250.9375pt>
+<images/15-bookdown/sheets-option-drag.png, id=3873, 271.0125pt x 250.9375pt>
 File: images/15-bookdown/sheets-option-drag.png Graphic file (type png)
 <use images/15-bookdown/sheets-option-drag.png>
 Package pdftex.def Info: images/15-bookdown/sheets-option-drag.png  used on inp
-ut line 9030.
+ut line 9048.
 (pdftex.def)             Requested size: 271.0201pt x 250.94452pt.
-<images/15-bookdown/video-sample.png, id=3881, 168.63pt x 94.6737pt>
+[261 <./images/15-bookdown/tiger.png>] [262 <./images/15-bookdown/sample-map.jp
+g> <./images/15-bookdown/sheets-option-drag.png>]
+<images/15-bookdown/video-sample.png, id=3899, 168.63pt x 94.6737pt>
 File: images/15-bookdown/video-sample.png Graphic file (type png)
 <use images/15-bookdown/video-sample.png>
 Package pdftex.def Info: images/15-bookdown/video-sample.png  used on input lin
-e 9046.
+e 9064.
 (pdftex.def)             Requested size: 168.63214pt x 94.6749pt.
-[261 <./images/15-bookdown/sample-map.jpg>] [262 <./images/15-bookdown/sheets-o
-ption-drag.png> <./images/15-bookdown/video-sample.png>]
-Overfull \hbox (41.69397pt too wide) in alignment at lines 9062--9067
+
+Overfull \hbox (41.69397pt too wide) in alignment at lines 9080--9085
  [] [] [] 
  []
 
 
-Overfull \hbox (41.69397pt too wide) in alignment at lines 9067--9071
+Overfull \hbox (41.69397pt too wide) in alignment at lines 9085--9089
  [] [] [] 
  []
 
 
-Overfull \hbox (41.69397pt too wide) in alignment at lines 9071--9075
+Overfull \hbox (41.69397pt too wide) in alignment at lines 9089--9093
  [] [] [] 
  []
 
-
-Overfull \hbox (24.25111pt too wide) in paragraph at lines 9101--9102
+[263 <./images/15-bookdown/video-sample.png>]
+Overfull \hbox (24.25111pt too wide) in paragraph at lines 9119--9120
 []\T1/lmr/m/n/10 To cre-ate notes, in-sert ci-ta-tion keys in the text, such as
  \T1/lmtt/m/n/10 @huffHowLieStatistics1954\T1/lmr/m/n/10 ,
  []
 
-[263]
-Underfull \hbox (badness 5475) in paragraph at lines 9139--9141
+[264]
+Underfull \hbox (badness 5475) in paragraph at lines 9157--9159
 []\T1/lmr/m/n/10 Convert with: \T1/lmtt/m/n/10 pandoc handsondataviz.md --from 
 markdown --to
  []
 
-[264]
-Chapter 16.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 9159.
-[265
+[265] [266
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 9159.
+Chapter 16.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 9177.
+[267]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 9177.
 (./HandsOnDataViz.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 9159.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 9159.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 9177.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 9177.
 
 Package rerunfilecheck Info: File `HandsOnDataViz.out' has not changed.
 (rerunfilecheck)             Checksum: C6C8DA090748BD87D7C3DF597EBDC7B6;23271.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 9159.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 9177.
  ) 
 Here is how much of TeX's memory you used:
- 14907 strings out of 482424
- 243193 string characters out of 5944450
- 485758 words of memory out of 5000000
+ 14909 strings out of 482424
+ 243321 string characters out of 5944450
+ 485814 words of memory out of 5000000
  28697 multiletter control sequences out of 15000+600000
  620648 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -2683,10 +2683,10 @@ ist/fonts/type1/public/lm/lmro10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dis
 t/fonts/type1/public/lm/lmtk10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dist/
 fonts/type1/public/lm/lmtt10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dist/fo
 nts/type1/public/lm/lmtti10.pfb>
-Output written on HandsOnDataViz.pdf (265 pages, 21613542 bytes).
+Output written on HandsOnDataViz.pdf (267 pages, 21616004 bytes).
 PDF statistics:
- 4332 PDF objects out of 5155 (max. 8388607)
- 3786 compressed objects within 38 object streams
- 1552 named destinations out of 1728 (max. 500000)
+ 4340 PDF objects out of 5155 (max. 8388607)
+ 3792 compressed objects within 38 object streams
+ 1554 named destinations out of 1728 (max. 500000)
  1734 words of extra memory for PDF output out of 10000 (max. 10000000)
 

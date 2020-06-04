@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 02 Jun 2020
+updated on: 04 Jun 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -4299,68 +4299,84 @@ Embedding Tableau Public Views in iframe, Tableau Support page
 Modify and Host Code with GitHub
 ================================
 
-In the first half of this book, we explored free web services that offer
-easy drag-and-drop tools to create interactive charts and maps, such as
-Google Sheets, Google My Maps, Carto, and Tableau Public. But these web
-services have limited options for designing and customizing your
-visualizations, and also make you dependent on their web servers to host
-your work. In this second half of the book, we’ll explore how to copy,
-edit, and host code templates, meaning pre-written software instructions
-to create visualizations. With templates, no prior coding skills are
-necessary. You will learn how to make simple edits to insert your data,
-customize its appearance, and display it on the web on a site you
-control.
+In the first half of this book, you created interactive charts and maps
+on platforms that feature drag-and-drop tools, such as Google Sheets and
+Tableau Public. These platforms are great for beginners, but their
+pre-set tools limit your options for designing and customizing your
+visualizations, and they also require you to depend on their web servers
+to host your work.
 
-Enroll in our [free online
-course](https://www.edx.org/course/data-visualization-for-all), which
-introduces these topics in the brief video below, and offers more
-exercises and opportunities to interact with instructors and other
-learners.
+In the second half of this book, get ready to make a big leap, and we’ll
+help you along the way. You will learn how to copy, edit, and host code
+templates—meaning pre-written software instructions that create data
+visualizations—which you can modify. With templates, you’ll learn how to
+make simple edits to insert your data, customize its appearance, and
+display it on the web on a site that you control. No prior coding
+experience is required, but it helps if you’re *code-curious* and
+willing to experiment with your computer.
 
-#### Video overview
+Code templates are similar to cookbook recipes. Imagine you’re in your
+kitchen, looking at our favorite recipe that we’ve publicly shared to
+make brownies (yum!), which begins with these three steps:
+`Melt butter, Add sugar, Mix in cocoa.` Recipes are templates, meaning
+that you can follow them precisely, or modify them to suit your tastes.
+Imagine that you copy our recipe (or “fork” it, as coders say) and
+insert a new step: `Add walnuts`. If you also publicly share your
+recipe, now there will be two versions of instructions, to suit both
+those who strongly prefer or dislike nuts in their brownies. (We do not
+take sides in this deeply polarizing dispute.)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w6dQ-RIQ5bc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+Currently, the most popular cookbook among coders is GitHub
+<a href="https://github.com" class="uri">https://github.com</a>, with
+more than 40 million users and over 100 million recipes (or “code
+repositories” or “repos”). You can sign up for a free account and choose
+to make your repos private (like Grandma’s secret recipes) or public
+(like the ones we share below). GitHub encourages sharing *open-source
+code*, meaning the creator grants permission for others to freely
+distribute and modify it, based on the conditions of the type of license
+they have selected. When you create a brand-new repo, GitHub invites you
+to [Choose a License](https://choosealicense.com/). Two of the most
+popular open-source software licenses are the [MIT
+License](https://choosealicense.com/licenses/mit/), which is very
+permissive, and the [GNU General Public License version
+3](https://choosealicense.com/licenses/gpl-3.0/), which mandates that
+any modifications be shared under the same license. The latter version
+is often described as a *copyleft* license that requires any derivatives
+of the original code to remain publicly accessible, in contrast to
+traditional *copyright* that favors private ownership. When you fork a
+copy of someone’s open-source code on GitHub, look at the type of
+license they’ve chosen (if any), keep it in your version, and respect
+its terms.
 
-#### Tool Review
+In this chapter, we’ll walk you through these basic GitHub steps:
 
-GitHub (<a href="http://github.com" class="uri">http://github.com</a>)
-is a versatile tool to share, edit, and host simple code templates on
-the public web. Requires a free account. Although advanced coders use
-more powerful command-line versions of this tool, this introduction
-demonstrates all of the basic steps using GitHub in the web browser.
+-   Fork and modify your own copy of our simple Leaflet map code
+    template
+-   Host a live online version of your modified map code on the public
+    web
+-   Create your own brand-new code repo to upload your code or other
+    files
 
--   Pros:
-    -   Free and easy-to-learn tool that beginners can use in the web
-        browser.
-    -   Popular tool to share, copy, and edit open-source code
-        repositories (project folders).
-    -   Host simple code (such as HTML/CSS/JavaScript) on the live web
-        with GitHub Pages.
-    -   Built-in support to quickly display open-data formats: CSV
-        tables and GeoJSON geography.
-    -   Easy to migrate code repositories to a different web server.
--   Cons:
-    -   By default, all work on GitHub is public. Private repositories
-        require payment.
-    -   New users often confuse web addresses for code repository versus
-        published web page.
+You can perform all of the basic steps in the GitHub web browser
+interface, which is a great start for beginners. For intermediate-level
+users, we’ll also show you how to work more efficiently on your personal
+computer with tools such as GitHub Desktop and Atom Editor.
 
-In this chapter, you will learn how to:
+Finally, we’ll discuss how to identify and fix common GitHub and code
+errors. All of us make mistakes and accidentally “break our code” from
+time to time, and it’s a great way to learn how things really work (or
+in this case, how they don’t work!)
 
--   [Fork and edit a simple Leaflet map with GitHub](fork-leaflet.html)
--   [Fork and edit a Highcharts scatter chart with
-    GitHub](fork-highcharts.html)
--   [Create a new repository and upload code with
-    GitHub](create-repo.html)
--   [Choose an open-source code license](choose-license.html)
--   [Pull request to merge changes on GitHub](pull-request.html)
--   [Work more efficiently with Atom editor and GitHub
-    Desktop](atom-desktop.html)
--   [Fix Common Code and GitHub Errors](fix-code.html)
+TODO above: insert cross-references to jump to sections
 
 Fork and Edit a Simple Leaflet Map with GitHub
 ----------------------------------------------
+
+TODO:
+
+-   simplify further the leaflet-map-simple repo
+-   add visuals to accompany forking section, similar to concepts in
+    gitHub-video.Rmd text and video
 
 This tutorial introduces the **basic steps** of working with code
 templates, using a simple Leaflet map code
@@ -4373,20 +4389,14 @@ will learn how to:
 
 -   1.  Publish your live map to public web with GitHub Pages
 
--   1.  Modify your map title and add layer controls
-
--   1.  Geocode addresses [in a Google
-        Sheet](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/)
-        and upload points from data.csv
+-   1.  Modify your map title, zoom level, starting point, and marker
 
 Code templates help us to move beyond the limits of drag-and-drop web
 mapping services (such as Google MyMaps) and to create more customized
-visualizations on a web server that you control. Before you begin, learn
-the broad concepts in the chapter introduction [Modify and Host Code
-Templates with GitHub](github.html). For more advanced examples, see the
-[Leaflet Map Templates](leaflet.html) chapter in this book. If you have
-problems with this tutorial, go to the [Fix Common GitHub and Code
-Errors](fix-code.html) chapter in this book.
+visualizations on a web server that you control. For more advanced
+examples, see the [Leaflet Map Templates](leaflet.html) chapter in this
+book. If you have problems with this tutorial, go to the [Fix Common
+GitHub and Code Errors](fix-code.html) chapter in this book.
 
 #### Try it
 
@@ -4397,11 +4407,6 @@ one pop-up point:
 By the end of this tutorial, you will learn how to modify the map, then
 geocode and upload more data points:
 <iframe src="https://handsondataviz.github.io/leaflet-map-simple-instructor-sample/" width="90%" height="350"></iframe>
-
-#### Video with step-by-step tutorial
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7iUocaxTYqk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
 
 #### A) Fork (copy) Leaflet template to your GitHub account
 
@@ -4492,64 +4497,12 @@ GitHub](create-repo.html) chapter in this book.
       scrollWheelZoom: false
     });
 
-1.  To change the default basemap, edit lines 46 and 52 to delete
-    “.addTo(map)” from the Carto light layer, then add it to the Stamen
-    colored terrain layer. DO NOT erase the semicolons!
+1.  TODO: REVISE to make simpler change in carto url, such as “light” to
+    “dark” or similar; To change the default basemap, edit lines 46 and
+    52 to delete “.addTo(map)” from the Carto light layer, then add it
+    to the Stamen colored terrain layer. DO NOT erase the semicolons!
 
-Your original code looks like this (scroll to right to see all):
-
-    /* Carto light-gray basemap tiles with labels */
-      var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-      }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-      // controlLayers.addBaseLayer(light, 'Carto Light basemap');
-      /* Stamen colored terrain basemap tiles with labels */
-      var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-      }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-      // controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
-
-After you edit the code, it should look like this (scroll to right to
-see all):
-
-    /* Carto light-gray basemap tiles with labels */
-    var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-    }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-    // controlLayers.addBaseLayer(light, 'Carto Light basemap');
-    /* Stamen colored terrain basemap tiles with labels */
-    var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-    }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-    // controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
-
-1.  To add a control panel that turns on/off map layers, delete the code
-    comment symbols (//) that appear in front of lines 38-41, 47, and 53
-    to activate these sections. When you remove code comments in GitHub,
-    the color changes from gray text (inactive code) to colored text
-    (active code). After you remove the code comments, your file should
-    look like this (scroll to right to see all):
-
-<!-- -->
-
-    /* Control panel to display map layers */
-     var controlLayers = L.control.layers( null, null, {
-      position: "topright",
-      collapsed: false
-     }).addTo(map);
-
-    /* Carto light-gray basemap tiles with labels */
-    var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-    }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-     controlLayers.addBaseLayer(light, 'Carto Light basemap');
-    /* Stamen colored terrain basemap tiles with labels */
-    var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-    }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-     controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
-
-1.  To change one point on the map, you could edit the latitude and
+2.  To change one point on the map, you could edit the latitude and
     longitude coordinates of the single marker in lines 55-57. To find
     coordinates for any location and to learn more, go to
     <a href="http://www.latlong.net" class="uri">http://www.latlong.net</a>
@@ -4560,228 +4513,33 @@ see all):
     L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
     .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 
-But a better way to display several points is to remove the code comment
-symbols (//) in front of lines 60-69 to activate this section of code,
-which pulls map points from the data.csv file in your GitHub repository.
-After your edits, this section should look like this (scroll right to
-see all):
-
-    /* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
-     var customLayer = L.geoJson(null, {
-      onEachFeature: function(feature, layer) {
-        layer.bindPopup(feature.properties.Title);
-      }
-     });
-     var runLayer = omnivore.csv('data.csv', null, customLayer)
-     .on('ready', function() {
-      map.fitBounds(runLayer.getBounds());
-     }).addTo(map);
-     controlLayers.addOverlay(customLayer, 'Markers from data.csv');
-
-#### D) Geocode addresses in Google Sheet and upload points from data.csv
-
-1.  A better way to display multiple points on your map is to prepare
-    and upload a new data.csv file to your GitHub repository. First,
-    right-click to open this Google Sheets template in a new tab:
-    [Leaflet Maps Simple data points with
-    Geocoder](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/)
-
-2.  Since this sheet is view-only, you cannot edit it. Instead, sign in
-    to your Google account in the upper-right corner.
-
-3.  Go to File &gt; Make a Copy, which will save a duplicate version to
-    your Google Drive, which you can edit.
-
-4.  In your copy of the Google Sheet, select any cells and press Delete
-    on your keyboard to erase contents. Type new titles and addresses
-    into columns A and B.
-
-5.  To geocode your new addresses (which means converting them into
-    latitude and longitude coordinates), select all of the contents
-    across 6 columns, from Address (B) to Source (G).
-
-6.  Go to the Geocoder menu that appears in this special Google Sheet
-    template, and select any service, such as US Census (for US
-    addresses) or Google Maps. The first time you run the geocoder, the
-    script will ask for permission.
-
-7.  After you have geocoded your addresses, go to File &gt; Download
-    As &gt; Comma-separated values (.CSV format) to save the file to
-    your computer.
-
-8.  In your computer, right-click the downloaded file to rename it to:
-    data.csv
-
-9.  In your GitHub repository, click Upload Files, then drag-and-drop
-    your new data.csv file, and Commit to upload it. Go to your live map
-    browser tab and refresh to view changes. **Be patient\* during busy
-    periods, when some edits may take up to 1 minute to appear.**
+TODO: About hosting: This chapter describes how to use the free GitHub
+Pages feature to host a live version of your code on the public web. But
+what if this service is no longer free at some point in the future, or
+you decide for any reason that it’s best to host your code elsewhere?
+One advantage of creating data visualizations with code templates like
+the ones featured in this book is that you can host them on *any* web
+server. Our templates are designed using three very common types of
+code: an HTML file to…, a JavaScript file to…, and a Cascasding Style
+Sheets (or CSS) file to… Describe abbreviations:…
 
 #### Learn more
 
+-   See more [advanced Leaflet Map Templates](leaflet.html) in this book
 -   To solve problems, see [Fix Common GitHub and Code
     Errors](fix-code.html) chapter in this book.
--   See more [advanced Leaflet Map Templates](leaflet.html) in this book
 -   About Leaflet
     <a href="https://leafletjs.com" class="uri">https://leafletjs.com</a>
 -   GitHub Pages features and tutorial,
     <a href="https://pages.github.com" class="uri">https://pages.github.com</a>
 
-Fork and Edit a Highcharts Scatter Chart with GitHub
-----------------------------------------------------
+Create a New Repo and Upload Files on GitHub
+--------------------------------------------
 
-TODO: Decide whether to keep or replace with Chart.js
-
-This tutorial introduces the **basic steps** of working with code
-templates, using a simple Highcharts scatter chart code
-(<a href="http://highcharts.com" class="uri">http://highcharts.com</a>)
-and GitHub in your browser
-(<a href="http://github.com" class="uri">http://github.com</a>). You
-will learn how to:
-
--   1.  Fork (copy) the Highcharts template to your GitHub account
-
--   1.  Publish your live chart to the public web with GitHub Pages
-
--   1.  Modify the chart title, subtitle, and axis labels
-
--   1.  Upload new data points from a comma-separated values (.csv)
-        spreadsheet
-
-Code templates help us to move beyond the limits of drag-and-drop web
-tools (such as Google Sheets and Tableau Public) and to create more
-customized visualizations on a web server that you control. Before you
-begin, learn the broad concepts in the chapter introduction [Modify and
-Host Code Templates with GitHub](github.html). For more advanced
-examples, see the [Highcharts Templates](highcharts.html) chapter in
-this book. If you have problems with this tutorial, go to the [Fix
-Common GitHub and Code Errors](fix-code.html) chapter in this book.
-
-#### Try it
-
-You will begin this tutorial with a basic chart template that includes
-only 7 points. Right-click to open [full-size chart in new
-tab](https://handsondataviz.github.io/highcharts-scatter-csv/).
-
-<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv/" width="90%" height="425">
-</iframe>
-
-By the end of this tutorial, you will learn how to modify the chart and
-add a new CSV spreadsheet with over 160 points. Right-click to open
-[full-size chart in new
-tab](https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample).
-
-<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height="425">
-</iframe>
-
-#### Video with step-by-step tutorial
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/72pgCZqWg7Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-
-#### A) Fork (copy) the Highcharts template to your GitHub account
-
-Before you begin, sign up for a free GitHub account:
-<a href="http://github.com" class="uri">http://github.com</a>
-
-1.  Right-click to open this GitHub code template in a new tab:
-    <a href="https://github.com/handsondataviz/highcharts-scatter-csv" class="uri">https://github.com/handsondataviz/highcharts-scatter-csv</a>
-
-2.  In the upper-right corner of the code template, sign in to your free
-    GitHub account
-
-3.  In the upper-right corner, click Fork to copy the template (also
-    called a code repository, or repo) into your GitHub account. The web
-    address (URL) of the new copy in your account will follow this
-    format:
-
-<!-- -->
-
-    https://github.com/USERNAME/REPOSITORY
-
-Reminder: You can only fork a GitHub repo **one time**. If needed, see
-how to make a second copy in the [Create a New Repo in
-GitHub](create-repo) chapter in this book.
-
-#### B) Publish your live chart to the web with GitHub Pages
-
-1.  In your new copy of the code repo, click on Settings, scroll down to
-    the GitHub Pages area, select Master, and Save. This publishes your
-    code template to a live map on a public website that you control.
-
-2.  Scroll down to GitHub Pages section again, to select and copy the
-    link to your published web site, which will follow this format:
-
-<!-- -->
-
-    https://USERNAME.github.io/REPOSITORY
-
-1.  Scroll up to the top, and click on your repo name to go back to its
-    main page.
-
-2.  At the top level of your repo main page, click on README.md, and
-    click the pencil icon to edit this file, written in easy-to-read
-    Markdown code.
-
-3.  Delete the existing link to the live site, and paste in the link to
-    your site. Scroll down and Commit to save your edits.
-
-4.  On your repo main page, right-click on the link to your published
-    site to open in a new tab. **Be patient** during busy periods, when
-    your website may take up to 1 minute to appear the first time.
-
-#### C) Modify the chart title, subtitle, and axis labels
-
-1.  Go back to your browser tab for your code repo. Click on the
-    index.html file (which contains the chart code), and click the
-    pencil icon to edit it.
-
-2.  Explore the chart code, which contains HTML, CSS, and JavaScript.
-    Look for code comments that begin with “EDIT” for sections that you
-    can easily change, such as title, subtitle, x-axis and y-axis
-    labels, and tooltip data labels. Scroll down to Commit your changes.
-
-3.  Go to your live website browser tab and refresh the page to view
-    your edits. **Be patient** during busy periods, when some edits may
-    take up to 1 minute to appear.
-
-#### D) Upload new data points from a .CSV spreadsheet
-
-1.  Go to your GitHub code repository tab and click to view the file
-    named: data-scatter.csv
-
-2.  GitHub automatically opens CSV files. Although it’s possible to edit
-    the file inside GitHub, let’s upload a larger data file with the
-    same name. Click this link and Save to download to your computer:
-    [data-scatter in CSV format](data/data-scatter.csv).
-
-3.  In your GitHub code repo, click Upload Files, and drag the new
-    data-scatter.csv into the folder, and Commit changes to replace the
-    existing file with the same name.
-
-4.  In your GitHub repo, click the new data-scatter.csv file to inspect
-    the changes. Then go to your live website tab and refresh to see the
-    updated scatter chart. \*\* Be patient\*\* during busy periods, when
-    changes make take up to 1 minute to appear.
-
-#### Learn more
-
--   To solve problems, see the [Fix Common GitHub and Code
-    Errors](fix-code.html) chapter in this book.
--   See more [Highcharts Templates](highcharts.html) in this book
--   Highcharts Demos
-    <a href="http://highcharts.com/demo" class="uri">http://highcharts.com/demo</a>
-    and Highcharts Docs
-    <a href="http://www.highcharts.com/docs" class="uri">http://www.highcharts.com/docs</a>
--   GitHub Pages features and tutorial,
-    <a href="https://pages.github.com" class="uri">https://pages.github.com</a>
-
-Create a New Repo and Upload Code with GitHub
----------------------------------------------
-
-Question: If I already forked one copy of a GitHub code repository,
-GitHub will not allow me to fork it a second time. So how do I make a
-second copy of a repo?
+TODO: Revise after testing GitHub “template” setting. Question: If I
+already forked one copy of a GitHub code repository, GitHub will not
+allow me to fork it a second time. So how do I make a second copy of a
+repo?
 
 Answer: GitHub has a “one-fork” rule for good reasons, but here’s a
 simple way for beginners to work around it, using only your web browser
@@ -4791,6 +4549,10 @@ and any computer (such as Mac, Windows, or Chromebook).
 -   Download an existing code repository and unzip the folder
 -   Upload the contents of that folder to your new repository and Commit
     Changes
+
+TODO: One of GitHub’s many advantages is built-in support to quickly
+display open-data formats: CSV tables and GeoJSON geography. Upload a
+sample of each one to see how it looks….
 
 #### Video with step-by-step tutorial
 
@@ -4834,211 +4596,6 @@ and any computer (such as Mac, Windows, or Chromebook).
     these last steps, see Part B: Publish section of the [Fork and Edit
     a Leaflet Map](fork-leaflet.html) chapter in this book.
 
-Choose an Open-Source Code License
-----------------------------------
-
-Whether you create a new code repository on GitHub, or fork a copy of
-someone else’s code, you should understand the basic concepts of a
-software license. Developers have the option to add a `LICENSE` file to
-their GitHub repo, which explains what other people can (or cannot) do
-with their code.
-
-On GitHub, free repos are publicly viewable and forkable by other users,
-so the platform encourages the use of open-source licenses. One example
-that is commonly used for code templates linked to this book is the MIT
-License: it allows anyone to copy, modify, and redistribute the code, as
-long as they credit the author(s) and do not hold them liable. Learn
-more about different types of open-source code licenses at
-<a href="http://choosealicense.com" class="uri">http://choosealicense.com</a>
-
-#### Learn more
-
-Licensing a Repository, GitHub Help page,
-<a href="https://help.github.com/articles/licensing-a-repository/" class="uri">https://help.github.com/articles/licensing-a-repository/</a>
-
-Pull Request to Merge Changes on GitHub
----------------------------------------
-
-TODO: REWRITE this out-of-date page to focus solely on pull requests,
-branches, and merge changes
-
-Sign up for a [free GitHub account](http://github.com), a free
-multi-purpose tool that allows you to:
-
--   View and fork a copy of open-source code from other users
--   Make simple edits to your code directly in the browser
--   Share your code and receive or suggest revisions to others
--   Host a live version of your web code with GitHub Pages
-
-GitHub is free if you publicly share your work. Private accounts require
-a subscription.
-
-This chapter shows the basic steps to use GitHub **entirely in your
-browser**, which works well for new users on nearly any computer (Mac,
-Windows, Chromebook, etc.) Intermediate users will want to read the next
-chapter with supplemental tools: GitHub Desktop and Atom editor.
-Advanced users may prefer to use GitHub command-line instructions, which
-are beyond the scope of this book.
-
-**TO DO:** REWRITE directions below to point users to GitHub Desktop and
-Atom Editor for editing on personal computer
-
-Newcomers can host their code on GitHub, and publish to the web using
-the GitHub Pages feature, by following step-by-step instructions or this
-[YouTube video screencast](http://youtu.be/ZVejLE8qtOI).
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZVejLE8qtOI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-
-This basic tutorial demonstrates how to work with GitHub entirely
-through the browser. More advanced GitHub users may download other free
-tools (such as [GitHub for Mac](https://mac.github.com) or [GitHub for
-Windows](https://windows.github.com) or use other methods (such as the
-terminal command line) to work more efficiently.
-
-1.  Inside your free GitHub account, create a new repository (also known
-    as a repo) to host your project’s code (such as an index.html file
-    and more).
-
-![](images/08-github/GitHub-NewRepo.png)
-
-1.  Enter a repository name and description and check the box to
-    automatically add a README file. If desired, select an open-source
-    license (such as MIT), and click the Create Repository button.
-
-![](images/08-github/GitHub-CreateRepo.png)
-
-1.  Your new repository automatically starts opens the “master” branch.
-    Use the drop-down menu to create a new branch, and name it
-    “gh-pages” (which is short for GitHub Pages), and press enter or
-    return on your keyboard.
-
-![](images/08-github/GitHub-CreateBranch.png)
-
-In this tutorial, we do all of our editing and testing work in the
-gh-pages branch, which automatically appears on the public web. When
-we’re done, we will pull a copy (or sync) our completed work to the
-master branch for safekeeping and open sharing.
-
-1.  To add ONE NEW FILE to the gh-pages branch, click the + button next
-    to the repository name and enter the file name. For example,
-    index.html is the default file name for most web projects.
-
-![](images/08-github/GitHub-CreateNewFile.png)
-
-1.  Select the “soft wrap” option (which makes long code strings more
-    readable), and paste code into the editor. In this example, I pasted
-    HTML code that was generated by publishing an interactive chart from
-    a Google Spreadsheet.
-
-![](images/08-github/GitHub-CreateFile.png)
-
-1.  At the bottom, select the “commit” button (which means you are
-    making a code change). Optionally, name and describe your commit, if
-    you wish to track changes to your work.
-
-![](images/08-github/GitHub-CommitButton.png)
-
-1.  Edit an existing file in the gh-pages branch by selecting its title.
-    For example, select the README filename (which should have been
-    automatically generated when you created the repository and the
-    gh-pages branch). On the next screen, select the Edit button.
-
-![](images/08-github/GitHub-EditFile.png)
-
-![](images/08-github/GitHub-EditFile2.png)
-
-1.  When editing the README file, type a link to the live web version of
-    this repository, so that visitors may easily click to view it. The
-    GitHub generic public web address is a combination of your username
-    and “.github.io/” and your repository name, like this:
-    `http://USERNAME.github.io/REPOSITORYNAME`
-
-In my README file, I typically write it this way so that visitors know
-to click the link: View live demonstration site at *TO DO: insert link*
-
-Commit your change to the README file in the gh-pages branch by pressing
-the green button at the bottom of the editor page.
-
-![](images/08-github/GitHub-EditReadMe.png)
-
-Hint: If you named your file “index.html” then you don’t need to add
-anything else to the web address, because the site will automatically
-point to this default file. But if you entered a different file name,
-such as “sample.html”, then you need to add it to the web address in
-this way: `http://Username.github.io/Repositoryname/sample.html`
-
-1.  Select the repository name to go to the upper-most file in the
-    gh-pages branch.
-
-2.  To view your live index.html code on the public web, click the link
-    you created in your README file. (Hint: use the right-click feature
-    to open in a new tab/window). Important: The very first time you
-    create a gh-pages branch, it may take up to 10 minutes for its
-    content to appear on the open web. Afterwards, when you add or edit
-    files in this branch, they should appear nearly instantly on the
-    web, though you may need to refresh your browser to view any changes
-    you have made.
-
-![](images/08-github/GitHub-SelectRepoName2.png)
-
-1.  To add MULTIPLE FILES to the gh-pages branch, you could copy and
-    paste each one individually as shown above, or choose one of these
-    labor-saving options:
-
-![](images/08-github/GitHub-ForkCloneDownload.png)
-
-If a code template already exists somewhere on GitHub, “fork” a copy of
-the repository to your own account, create a gh-pages branch for the
-live web, and edit/modify the files as desired.
-
-To sync and upload multiple files from your desktop to a GitHub
-repository, use the free GitHub for Mac or GitHub for Windows tool,
-which features a graphical user interface to do tasks above very easily.
-Advanced coders may use command-line instructions to upload and sync
-files to GitHub most efficiently.
-
-1.  To BACKUP and SHARE your work: After adding or editing files in the
-    gh-pages branch, create a “pull request” (to merge files) to the
-    master branch.
-
-![](images/08-github/GitHub-PullRequest.png)
-
-1.  Use the drop-down menus to CAREFULLY select the direction of the
-    merge in this TO-FROM format: TO master branch FROM gh-pages branch
-
-![](images/08-github/GitHub-ToFrom.png)
-
-1.  Follow these steps to finish the pull request, which merges all
-    content TO the master branch FROM gh-pages branch:
-
--   Create the pull request (select green button)
--   Give it a title (such as “updated index and ReadMe”)
--   Send pull request (green button)
--   Merge pull request (another green button)
--   Confirm merge (and another green button!)
--   Always double-check your repository branch names to do editing and
-    live web testing in the gh-pages branch, then make sync a copy to
-    public share in the master branch.
-
-To embed an interactive data visualization from a GitHub Pages host site
-into a secondary website (such as an organization’s WordPress.org site),
-see the [Embed iframe with WordPress tutorial in this
-book](iframe-wordpress.html).
-
-See my sample repositories, with links to live demo sites, at
-<a href="https://github.com/?tab=repositories" class="uri">https://github.com/?tab=repositories</a>.
-Learn more about GitHub general features to share and collaborate on
-other users’ public code repositories.
-
-**TO DO** Reminder: GitHub allows users to create **one fork** of a repo
-to your account. To create a second copy, go to the repo of your first
-copy, click Settings, and rename it. But if you rename your repo, you
-also will need to change any links you created to its live version in
-the next section.
-
-![](images/08-github/Github-settings-rename.png)
-
 Work more efficiently with Atom editor and GitHub Desktop
 ---------------------------------------------------------
 
@@ -5050,6 +4607,9 @@ more efficient with two related free tools:
     (<a href="https://atom.io" class="uri">https://atom.io</a>)
 -   download GitHub Desktop for Mac or Windows
     (<a href="https://desktop.github.com" class="uri">https://desktop.github.com</a>)
+
+TODO: also mention GitHub features that allow collaboration, such as
+branches and pull requests
 
 **UPDATE OLD INSTRUCTIONS**
 
@@ -5285,1088 +4845,6 @@ In Firefox for Mac, go to Tools &gt; Web Developer &gt; Inspector
 
 <!--chapter:end:08-github.Rmd-->
 
-Transform Your Map Data
-=======================
-
-Interactive web maps are made up of different layers, such as background
-basemaps, colored or shaded polygons, and/or colored point markers. This
-chapter describes how to transform your data into layers that you can
-upload into online map tools and templates. Specifically, you will learn
-how to:
-
--   [Geocode locations into coordinates with US Census or
-    Google](geocode.html)
--   [Pivot address-level point data into polygon
-    data](pivot-point-to-polygon.html)
--   [Normalize data to create more meaningful polygon
-    maps](normalize.html)
--   [Convert map data](convert-geojson.html) with
-    [GeoJSON.io](geojsonio.html) or [Mapshaper.org](mapshaper.html)
--   [Join spreadsheets and polygon boundaries with
-    MapShaper.org](mapshaper.html)
-
-Enroll in our free online course **TO DO add link**, which introduces
-these topics in the brief video below, and offers more exercises and
-opportunities to interact with instructors and other learners.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3sjjVEJY4MY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-
-Geocode Locations into Coordinates with US Census or Google
------------------------------------------------------------
-
-Many free map tools geocode locations by placing them on a map, such as
-[Google My Maps tutorials](mymaps.html) in this book. But those tools
-typically do not allow you to easily extract the latitude-longitude
-coordinates for each point.
-
-We created two free Google Sheets Geocoder scripts that have several
-advantages:
-
--   convert locations (Hartford CT) or addresses (300 Summit St,
-    Hartford CT) into latitude-longitude coordinates (41.748, -72.692)
-    inside your Google Sheet
--   show the location found in the geocoding database, and match
-    quality, to review your results
--   convert US addresses into US Census geography, such as census
-    tracts, block groups, and blocks
-
-As with any geocoding service, accuracy is not guaranteed. Inspect your
-results in the Found and Quality columns.
-
-#### Google Sheets Geocoder: US Census or Google
-
--   Geocode locations into latitude, longitude, with source and match
-    quality, inside a Google Sheet
--   Go to Google Sheet template, sign in to your account, and File &gt;
-    Make a Copy to your Google Drive
-    <a href="https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0</a>
--   Insert locations, select 6 columns, and select Geocoder menu: US
-    Census or Google (limit 1000 daily per user)
--   Google Sheets script will ask for permission to run the first time
--   Note: The [Leaflet Maps with Google Sheets
-    template](leaflet-maps-with-google-sheets.html) in this book
-    includes this Geocoder script.
-
-<iframe src="images/09-transform/google-sheets-geocoder-census-google.gif" width="100%" height="400px">
-</iframe>
-<p class="caption">
-Figure 10: Screencast: Google Sheets Geocoder: US Census or Google
-</p>
-
-#### Google Sheets Geocoder: US Census Geographies
-
--   Geocode US addresses into latitude, longitude, GeoID, census tract,
-    inside a Google Sheet
--   Go to Google Sheet template, sign in to your account, and File &gt;
-    Make a Copy to your Google Drive
-    <a href="https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0</a>
--   Insert locations, select 8 columns, and select Geocoder menu: US
-    Census 2010 Geographies
--   Google Sheets script will ask for permission to run the first time
-
-<iframe src="images/09-transform/google-sheets-geocoder-census-geographies.gif" width="100%" height="400px">
-</iframe>
-<p class="caption">
-Figure 11: Screencast: Google Sheets Geocoder: US Census Geographies
-</p>
-
-##### About US Census 15-character GeoID
-
--   Make sure that column G is formatted as text (to preserve leading
-    zeros), not number
--   Break down a sample GeoID: 090035245022001
-    -   state = 09
-    -   county = 003
-    -   tract = 524502 = 5245.02
-    -   block group = 2
-    -   block = 001
-
-##### How it works
-
-The Google Sheet Geocoder runs from a script insert in the Google Sheet,
-which calls one of two free geocoding services:
-
--   US Census Geocoder
-    <a href="https://geocoding.geo.census.gov/geocoder" class="uri">https://geocoding.geo.census.gov/geocoder</a>.
-    See more detailed documentation at
-    <a href="http://www.census.gov/geo/maps-data/data/geocoder.html" class="uri">http://www.census.gov/geo/maps-data/data/geocoder.html</a>
--   Geocode with Google Apps: The Maps Service of Google Apps allows
-    users to geocode street addresses without using the Google Maps API,
-    with a limit of 1,000 searches daily per user,
-    <a href="https://developers.google.com/apps-script/reference/maps/geocoder" class="uri">https://developers.google.com/apps-script/reference/maps/geocoder</a>
-
-##### How to insert the Geocoder Script into any Google Sheet
-
-If you do not wish to File &gt; Make a Copy of the Google Sheet
-templates above, you can insert the open-source Geocoder Scripts into
-your own Google Sheet:
-
--   Go to [Google Sheets Geocoder repo on
-    GitHub](https://github.com/handsondataviz/google-sheets-geocoder)
--   Sign in to your Google Sheets, then select Tools &gt; Script Editor
--   File &gt; Create New Script File
--   Open and copy a script (such as geocoder-census-google.gs) and paste
-    into your Script Editor
--   Save and rename to geocoder-census-google.gs
--   Refresh your Google Sheet and look for new Geocoder menu
-
-##### TODO
-
--   Also describe and link back how to split columns to form
-    multi-columns addresses
--   also describe and link back to how to unify columns to form a
-    one-column address
--   add this
-    <a href="https://developers.google.com/maps/faq#geocoder_queryformat" class="uri">https://developers.google.com/maps/faq#geocoder_queryformat</a>
-
-#### See also: Batch upload to US Census
-
--   Available at US Census Geocoder
-    <a href="https://geocoding.geo.census.gov/geocoder/" class="uri">https://geocoding.geo.census.gov/geocoder/</a>
--   Upload CSV table with up to 1000 rows for faster processing, in this
-    format, WITHOUT column headers:
-
-AnyID | Street | City | State | Zip |  
-:—– | :—– | :— | :—- | : — |  
-1 | 300 Summit St | Hartford | CT | 06106 |
-
--   Find Locations using &gt; Address Batch (returns latitude, longitude
-    coordinates)
--   Find Geographies using &gt; Address Batch (returns lat, lng, census
-    geographies)
--   Limitations:
-    -   Inputs and outputs have no column headers, which may confuse
-        novices
-    -   Large batches may be delayed a few minutes during peak time
-        periods
-    -   Unmatched addresses need to be manually corrected and
-        re-submitted
-
-#### Try it: Batch Upload to US Census
-
-1.  Right-click and Save this CSV file to your computer:
-    [sample-addresses-50](sample-addresses-50.csv). CSV means
-    comma-separated values, a generic spreadsheet format that most data
-    tools can easily open.
-
-2.  Use any spreadsheet tool to organize your address data into five
-    columns: any ID number, street, city, state, zip code. **Remove all
-    column headers**.
-
-![](images/09-transform/address-no-column-headers.png)
-
-Hints:
-
--   If your data lacks ID numbers, quickly [create a column of
-    consecutive numbers](calculate.html), as shown in this book.
--   If your address data includes apartment numbers, leave them in.
--   Only the ID and address fields are required. City, state, and zip
-    code may be blank if you lack any of this information, but fewer
-    matches will be exact.
--   If your address data is combined into one cell, such as: 300 Summit
-    St, Hartford, CT 06106
-    -   then try to [clean your data with the split column
-        method](clean-spreadsheets.html) in this book.
--   If you need to temporarily move other non-address data columns into
-    a second spreadsheet, remember to paste the column of ID numbers
-    into the second sheet. After geocoding, sort both sheets by the ID
-    column, then paste to rematch the data.
-
-1.  Save the file in CSV generic spreadsheet format, in batches of no
-    more than 1,0000 rows per file. Learn more about [saving in CSV
-    format](csv.html) in this book.
-
-2.  Go to US Census Geocoder
-    (<a href="https://www.census.gov/geo/maps-data/data/geocoder.html" class="uri">https://www.census.gov/geo/maps-data/data/geocoder.html</a>)
-
-3.  Select the Find Geographies Using…Address Batch button for maximum
-    results, including lat-long coordinates and census geography (tracts
-    and block groups). *If census geography is not needed, select Find
-    Locations Using…Address Batch.*
-
-4.  Click the Choose button to upload your CSV file. Use the default
-    benchmark and vintage settings for the most current data. Click the
-    Get Results button, and be patient if using the service during busy
-    weekday hours.
-
-![](images/09-transform/census-geocoder-batch.png)
-
-1.  Census Geocoder will download the results through your web browser
-    in a file named: GeocodeResults.csv. Since these results do not
-    contain column headers, use the screenshot below for guidance, or
-    [read the Census Geocoder
-    documentation](http://www.census.gov/geo/maps-data/data/geocoder.html)
-    for more details.
-
-![](images/09-transform/geocode-results.png)
-
-1.  Use a spreadsheet tool to open the CSV file. Sort results by the
-    match quality (columns C and D), with these entries: match exact,
-    match non-exact, tie, no-match.
-
-2.  For results without an exact match, check the address for typos, and
-    try to re-geocode in a separate CSV file. The US Census Geocoder
-    tool is very good, but not perfect. For a few rows of hard-to-match
-    data, use a different geocoding tool, such as the Google Maps &gt;
-    What’s Here feature described at the top of this page, to look up
-    individual addresses and coordinates.
-
-#### Learn more
-
--   Aggregate individual rows of data into groups by census area with
-    [pivot tables](pivot.html).
--   [Download census data](find.html) by tract or block group, and use
-    the [VLOOKUP formula](vlookup.html) to join or merge this rows of
-    data that you have geocoded by census tract or block group.
-
-Pivot Address-Level Point Data into Polygon Data
-------------------------------------------------
-
-Problem: If I begin with address-level point data, how can I transform
-this into polygon map data?
-
-One solution: In any spreadsheet, split your address data into separate
-columns (such as Street, City, State), then create a pivot table to
-aggregate rows into groups (such as the number of addresses in each City
-or State).
-
-If your location data is combined into one column (example: 300 Summit
-St, Hartford CT), then see the [Spreadsheets: Split Data Columns
-tutorial](clean-spreadsheets.html) in this book.
-
-Here’s an example using a long list of US hospitals from the Medicare
-open data repository, which is already split into separate columns:
-<a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u" class="uri">https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u</a>
-
-1.  Open the link above, see columns of data (Address, City, State,
-    etc.), and click the blue Export button to download in the CSV
-    generic spreadsheet format.
-
-![Screenshot: Export US Hospital data into CSV
-format](images/09-transform/hospital-socrata-export.png)
-
-1.  Open the file with any spreadsheet tool, and create a pivot table to
-    count up the number of hospitals in each state. For help, see the
-    [Pivot Table tutorial](pivot.html) in this book.
-
-![Screenshot: Pivot Table of US Hospitals by
-State](images/09-transform/hospital-pivot-table.png)
-
-1.  Now you can copy and paste the pivot table raw data of hospitals by
-    US states. See the [Normalize Data tutorial](normalize.html) and
-    also the [Edit and Join Spreadsheet with Polygon Map using
-    Mapshaper](mapshaper.html) tutorial in this book.
-
-#### Other Solutions
-
--   use the [Google Sheets Geocoder: US Census Geographies
-    tutorial](geocode.html) in this book to convert addresses into
-    census tracts, etc., and then pivot
--   do a polygons-to-points spatial join with Mapshaper.org \*\* TO DO
-    \*\*
-
-Normalize Data to Create Meaningful Polygon Maps
-------------------------------------------------
-
-When preparing polygon maps, normalize your data to create more
-meaningful comparisons. Learn the difference between:
-
--   **Raw data:** absolute values, such as the population of each US
-    state (example: Connecticut population in 2015 = 3,590,886 people)
--   **Normalized data:** represented on a standard scale (also known as
-    standardized data), such as the population density of each US state
-    (example: Connecticut 2015 population density = 3,590,886 people /
-    4,482 square miles = 742 people per square mile, equivalent to 1,922
-    people per square kilometer)
-
-The difference between raw versus normalized data matters, especially in
-polygon maps. For example, the US states of Connecticut and Iowa have
-similar populations of about 3 million people each. But the rural
-midwestern state of Iowa has a much larger land area of over 55,000
-square miles, while the more urbanized eastern state of Connecticut has
-a smaller land area of around 4,000 square miles. We can display all of
-this data in a table (as show below), but when making a polygon map, it
-makes most sense to show a normalized value, such as population density.
-
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">US State</th>
-<th style="text-align: left;">Population 2015</th>
-<th style="text-align: left;">Land Area (in square miles)</th>
-<th style="text-align: left;">Density (pop per square mile)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Iowa</td>
-<td style="text-align: left;">3,123,899</td>
-<td style="text-align: left;">55,857</td>
-<td style="text-align: left;">56</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Connecticut</td>
-<td style="text-align: left;">3,590,886</td>
-<td style="text-align: left;">4,842</td>
-<td style="text-align: left;">741</td>
-</tr>
-</tbody>
-</table>
-
-But raw data still matters, too. Although normalized data allows for
-easier comparisons across regions of different size, it can hide very
-low raw data values. For example, imagine two city neighborhoods with
-equally high unemployment rates of 20%, a normalized value. But if one
-neighborhood has a labor market population of 5,000 people while the
-other has only 500, the actual number of unemployed people in the second
-neighborhood is much smaller, as shown in the table below.
-
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Neighborhood</th>
-<th style="text-align: left;">Labor Market Population</th>
-<th style="text-align: left;">Unemployment Rate</th>
-<th style="text-align: left;">Actual Unemployed People</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">First</td>
-<td style="text-align: left;">5,000</td>
-<td style="text-align: left;">20%</td>
-<td style="text-align: left;">1,000</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Second</td>
-<td style="text-align: left;">500</td>
-<td style="text-align: left;">20%</td>
-<td style="text-align: left;">100</td>
-</tr>
-</tbody>
-</table>
-
-#### Different ways to normalize data
-
-After you understand the basic concept, also think about different ways
-to normalize the same data. Your method depends on the type of data
-story you wish to emphasize. Look at the table excerpt below on US
-population and land area by state in 2015:
-
-![Screenshot: US population and land
-area](images/09-transform/us-population-area-2015.png)
-
-There are at least two acceptable ways to normalize this raw data:
-
--   Normalized by area: Population per square mile in each state
-    (calculate = pop / square miles)
--   Normalized by total: Percent of total US population in each state
-    (calculate = state pop / total US pop)
-
-For example:
-
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">US State</th>
-<th style="text-align: left;">Population 2015</th>
-<th style="text-align: left;">Land Area (sq. mi)</th>
-<th style="text-align: left;">Density (per square mile)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Connecticut</td>
-<td style="text-align: left;">3,590,886</td>
-<td style="text-align: left;">4,842</td>
-<td style="text-align: left;">741</td>
-</tr>
-</tbody>
-</table>
-
-Convert to GeoJSON format
--------------------------
-
-When you find map data, it may be stored in one of these common data
-formats below:
-
-#### GeoJSON
-
-GeoJSON is newer, popular open format for map data, and works across
-many tools, so is our top recommendation in this book. GeoJSON files can
-be used with Leaflet map code, Google Maps JS API code, Carto map tools,
-and more. Also, your GitHub repository will automatically display any
-GeoJSON files in a map view.
-
-GeoJSON data must follow a [structured format](http://geojson.org/), but
-the file name may end with either `.geojson` or `.json`. The GeoJSON
-structured format orders coordinates in *longitude-latitude* format, the
-same as X-Y coordinates in mathematics. This is the opposite of Google
-Maps and several other web map tools, which order points in
-*latitude-longitude* format. For example, Hartford Connecticut is
-located at (-72.67, 41.76) in GeoJSON, but (41.76, -72.67) in Google
-Maps.
-
-#### Shapefiles
-
-The shapefile format was created in the 1990s by ESRI, the company that
-developed ArcGIS software. Shapefiles typically appear as a folder of
-subfiles with suffixes such as `.shp`, `.shx`, `.dbf`, and others.
-Although government agencies commonly distribute map data in shapefile
-format, the standard tools for editing these files—ArcGIS and its free
-and open-source cousin, QGIS—are not as easy to learn as other tools in
-this book. For this reason, this book recommends converting shapefiles
-into one of the more friendlier formats below.
-
-#### Keyhole Markup Language (or KML)
-
-The KML format rose in popularity during the late 2000s. Google Earth, a
-free and user-friendly tool, allowed many people to view and edit
-geographic data. KML files are commonly used in the Google Fusion Tables
-maps described in this book. Sometimes `.kml` files are distributed in a
-compressed `.kmz` format. See the chapter on [converting from KMZ to KML
-format](convert-kmz) in this book.
-
-GeoJson.io to Convert, Edit, and Create Map Data
-------------------------------------------------
-
-TODO:
-
--   rewrite into tool review and tutorial format
--   place polygon conversion at top and specify import-export formats
-
-Go to <a href="http://geojson.io" class="uri">http://geojson.io</a> to
-explore this open-source web tool to convert, edit, and create GeoJSON
-map data. The tool was originally developed by Tom MacWright, and is
-supported by Mapbox.com.
-
-#### Convert a CSV spreadsheet of point data into GeoJSON
-
-Use any spreadsheet tool and prepare a list of coordinate points (known
-as features). You must include column headers **lat** and **lon**, or a
-fuller spelling, such as *latitude* and *longitude*. The order of the
-columns does not matter. Also, you can add more headers to identify each
-point (example: name) and include more details (known as the properties
-of the features).
-
-![](images/09-transform/name-lat-lon-info.png)
-
-Save your spreadsheet in generic CSV format. *Hint:* see [Save
-Spreadsheet as CSV chapter](csv.html) in this book.
-
-Try it! Click this link and Save to download this sample file to your
-computer: [name-lat-lon-info in CSV format](data/name-lat-lon-info.csv).
-CSV means comma-separated values, a generic spreadsheet format that most
-data tools can easily open.
-
-Drag the CSV file into the GeoJSON.io map window. Flip between the JSON
-and Table tabs to view or edit the data.
-
-<iframe src="images/09-transform/dataviz-geojsonio-640.gif" width="100%" height="400px">
-</iframe>
-<p class="caption">
-Figure 12: Screencast: GeoJson.io
-</p>
-
-Select the Save menu and export into GeoJSON format.
-
-Optional: Login to GeoJSON.io with your GitHub account and save directly
-to your repository.
-
-#### Convert Shapefile or KML polygons into GeoJSON
-
-Polygon boundary data is often shared as ArcGIS Shapefiles (.shp) or
-Keyhole Markup Language (.kml) files. Drag any of these (and other)
-files into the
-<a href="http://GeoJSON.io" class="uri">http://GeoJSON.io</a> map
-window. Flip between the JSON and Table tabs to view or edit the data.
-
-Select the Save menu and export into GeoJSON format.
-
-![](images/09-transform/geojson-save-as.png)
-
-#### Create GeoJSON data with drawing tools
-
-Use the <a href="http://GeoJSON.io" class="uri">http://GeoJSON.io</a>
-drawing tools to create points, polygons, and polylines. Flip between
-the JSON and Table tabs to view or edit the data.
-
-#### Learn more about GeoJSON.io
-
-Read about more advanced features and view the code at
-<a href="https://github.com/mapbox/geojson.io" class="uri">https://github.com/mapbox/geojson.io</a>
-
-MapShaper.org to Convert, Edit, and Join Data
----------------------------------------------
-
-TODO:
-
--   rewrite into tool review/tutorial format
--   put conversion at top and clarify import-export formats
--   recommended browsers: Firefox or Chrome
--   Mac users: go to Finder &gt; Preferences &gt; Advanced &gt; turn on
-    Show file extensions
-
-MapShaper
-(<a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>) is
-another versatile open-source mapping tool, developed and maintained by
-[Matthew Bloch on GitHub](https://github.com/mbloch/mapshaper). Using
-the web interface, users can:
-
--   Import and export map layers in multiple formats: Shapefile,
-    GeoJSON, CSV, and more
--   Simplify (or smooth out) geographic details to reduce map file size
--   Edit geography with powerful commands (dissolve, clip, join files,
-    etc.)
-
-This free and easy-to-learn MapShaper.org web tool has replaced *many*
-of my map preparation tasks that previously required expensive and
-hard-to-learn ArcGIS software, or its free but
-still-challenging-to-learn cousin, QGIS. Even advanced GIS users may
-discover MapShaper.org to be a quick alternative for some common
-time-consuming tasks.
-
-The examples below focus on polygon boundary data to illustrate common
-map editing tasks. But MapShaper.org also works with other data layers,
-such as tables, points, and lines.
-
-#### Import and convert map boundary files
-
-Try it! Right-click the link and Save to download this sample file to
-your computer: [ct-towns in GeoJSON format](data/ct-towns.geojson). If
-you accidentally open a page of GeoJSON code in your browser, select
-File &gt; Save Page As to download to your computer.
-
-1.  Drag-and-drop any map layer into the
-    <a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>
-    browser window.
-
--   Import GeoJSON (.geojson or .json), TopoJSON, CSV, or Shapefile
-    formats
--   For Shapefiles, import the .shp (features), .dbf (attribute data),
-    and .prj (projection) files. Reminder: the WGS84 projection is most
-    portable across multiple platforms.
--   KML/KMZ files are not compatible. To convert these into a format
-    that Mapshaper can import, see the [Convert KMZ to
-    KML](convert-kmz.html) and [Geojson.io](geojsonio.html) chapters in
-    this book.
-
-1.  Click the Export button and select your preferred format:
-
--   Shapefile (best for ArcGIS/QGIS software)
--   GeoJSON (best for Leaflet and GitHub tools in this book)
--   TopoJSON (similar to GeoJSON, with topographical data)
--   SVG (Scalable Vector Graphics, for print or online)
--   CSV (Comma Separated Values, generic spreadsheet format)
-
-<iframe src="images/09-transform/mapshaper-convert-640.gif" width="100%" height="400px"></iframe>
-<p class="caption">
-(\#fig:mapshaper-convert)Screencast: Mapshaper convert
-</p>
-
-#### Edit data for specific polygons
-
-To edit data for any polygon in MapShaper.org:
-
--   Click the “i” information button
-
--   Select the polygon
-
--   Click inside its pop-up info window to directly edit the data
-
-    ![](images/09-transform/mapshaper-edit-info.png)
-
-#### Simplify map boundaries to reduce file size
-
-If your data visualization project displays a zoomed-out state or
-national or world map, small geographic details that are invisible at
-these zoom levels may not be necessary. Consider using the Simplify
-command to reduce the file size, which may help your interactive web map
-to load faster for web visitors. The example below began with a detailed
-map of Connecticut town boundaries (1:100,000 scale) at 2MB, which
-MapShaper simplified – without visibly sacrificing details at the
-statewide zoom level – to a reduced size of about 200KB.
-
-1.  Try it! Download and upload the sample GeoJSON file as described in
-    the Import section above.
-
-2.  Click the Simplify button to review options, and in most cases,
-    accept the default settings. Click Next.
-
-3.  Slide the Simplify button from 100 percent down to an appropriate
-    number for your map zoom level. If important geographic details
-    disappear, you may have gone too far.
-
-4.  Look in the upper-left corner and click on recommended Repairs to
-    your map file.
-
-5.  Complete the process by clicking Simplify once again. Export your
-    file in the preferred format for your project.
-
-![](images/09-transform/mapshaper-simplify.png)
-
-#### Dissolve internal polygons to create an outline map
-
-MapShaper.org also includes a Console button to type in commands for
-common map editing tasks. Imagine that you begin with a boundary map
-that includes internal polygons, but your goal is to remove all of them
-to create an outline map.
-
-Click the Console button, which opens a window to type in commands.
-Enter the command below, then press return. Close the Console window and
-Export your outline map.
-
-    -dissolve
-
-<iframe src="images/09-transform/mapshaper-dissolve-simple-640.gif" width="100%" height="400px">
-</iframe>
-<p class="caption">
-Figure 14: Screencast: Mapshaper dissolve
-</p>
-
-#### Clip a map to match an outline layer
-
-Imagine that you start with a polygon map of all towns in Connecticut,
-and an outline map of Hartford County, a larger region that includes
-some (but not all) of those smaller towns. Your goal is to create a
-polygon map of all towns inside Hartford County. In other words, we will
-“clip” the statewide town map using the county outline map.
-
-Try it! Right-click the link and Save to download both sample files to
-your computer:
-
--   [ct-towns in GeoJSON format](data/ct-towns.geojson)
--   [hartfordcounty-outline in GeoJSON
-    format](data/hartfordcounty-outline.geojson)
--   If you accidentally open a page of GeoJSON code in your browser,
-    select File &gt; Save Page As to download to your computer.
-
-Refresh the browser to start a new session in
-<a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>.
-
-1.  Drag-and-drop the ct-towns.geojson file to import to MapShaper.
-
-2.  Drag-and-drop the hartfordcounty-outline.geojson map to MapShaper,
-    and click Import to add this second layer.
-
-3.  In the drop-down menu, select the first map (ct-towns) to display it
-    as the active layer.
-
-4.  Click the Console button, type or paste in the command below, and
-    press enter.
-
-<!-- -->
-
-    -clip hartfordcounty-outline.geojson
-
-1.  The command above instructs MapShaper to clip the active map layer
-    (ct-towns) using the second layer (hartfordcounty-outline).
-
-2.  Sometimes the boundaries of the clip layer do not precisely match up
-    with your active layer, due to differences between their sources. If
-    necessary, add the `cleanup` command to remove any null features or
-    small “slivers” that remain after the clip.
-
-<!-- -->
-
-    - clip hartfordcounty-outline.geojson cleanup
-    Removed 3 null features and 5 slivers
-
-**TO DO** fix animation to match new file names
-
-<iframe src="images/09-transform/mapshaper-clip-640.gif" width="100%" height="400px">
-</iframe>
-<p class="caption">
-Figure 15: Screencast: Mapshaper clip
-</p>
-
-#### Remove unwanted data columns
-
-Sometimes your polygon map contains several columns of unwanted data. To
-quickly remove them, enter the “-filter-fields” Console command to keep
-only the columns you list. The example below deletes all columns
-*except* “town”:
-
-    -filter-fields town
-
-#### Join spreadsheet data with polygon map
-
-\*\* TO DO \*\* - fix images and animations to map the new file names
-and column headers
-
-A common mapping task is to join (or merge) new data columns into a
-polygon boundary map, and MapShaper.org makes this very easy. Imagine
-that you have two files:
-
--   Connecticut town boundary map
--   a spreadsheet of town population data
-
-Your goal is to unite these files, so that you can later display them in
-a thematic polygon map. Since these two files share a common column of
-data – the town names – you can join them together into one merged file.
-
-![](images/09-transform/mapshaper-join-table-concept.png)
-
-Try it! Right-click each link and Save to download two sample files to
-your computer:
-
--   [ct-towns in GeoJSON format](data/ct-towns.geojson)
--   [ct-towns-popdensity in CSV format](data/ct-towns-popdensity.csv)
-
-If you accidentally open a page of GeoJSON code in your browser, select
-File &gt; Save Page As to download to your computer.
-
-Refresh the browser to start a new session in
-<a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>.
-
-1.  Drag-and-drop the ct-towns.geojson boundary file into MapShaper.
-    Select the “i” info button and click on any polygon to confirm that
-    the column header is “name”.
-
-2.  Open the ct-towns-popdensity.csv file with any spreadsheet tool and
-    confirm that first column header also is “name”. Close this file.
-
-3.  Drag-and-drop the ct-towns-popdensity.csv file into MapShaper.org,
-    and select the Import button to add it as a second layer. This table
-    layer will appear as rectangular cells, because it does not contain
-    geographic information.
-
-4.  Click the drop-down menu and select the map to display it as the
-    active layer.
-
-![](images/09-transform/mapshaper-join-select-map-layer.png)
-
-1.  Click the Console button, type this command, and press return:
-
-<!-- -->
-
-    -join ct-towns-popdensity.csv keys=name,name
-
-Type this precisely, with **no spaces** between the words in your keys.
-This command instructs MapShaper to join the active map layer to the CSV
-table layer, based on their shared column of data, labeled as “name” in
-both files. In this example, 169 rows are merged together.
-
-![](images/09-transform/mapshaper-join-console.png)
-
-1.  Click the Console button to close the command window. Select the “i”
-    info button and click any polygon to confirm that it now contains
-    the new table data. Export the file in your preferred format.
-
-![](images/09-transform/mapshaper-join-confirm.png)
-
-#### More about joins
-
-1.  If you don’t have a CSV table that matches the columns in your
-    boundary map data, you can easily create one. Upload the boundary
-    map to MapShaper.org, and export in CSV format, and open with any
-    spreadsheet tool. To match data columns in the CSV spreadsheet, use
-    the [VLOOKUP method in this book](vlookup.html).
-
-2.  The simple join example above uses identical keys (name,name)
-    because the two columns headers are the same. But if you need to
-    join data where the headers are not the same, enter the first key
-    (the polygon map) and the second key (the CSV table).
-
-3.  Mapshaper also helps you to keep track of data that are not properly
-    joined or matched. For example, if the polygon map contains 169 rows
-    (one for each town in Connecticut), but the CSV table contains only
-    168 rows of data, Mapshaper will join all of those with matching
-    keys, and then display this message:
-
-<!-- -->
-
-    Joined 168 data records
-    1/169 target records received no data
-
-To capture data records that are not properly joined, add these terms at
-the end of your join command: `unjoined unmatched -info`. The first term
-saves a copy of each unmatched record from the target table to a new
-layer named “unmatched,” and the second term saves a copy of each
-unjoined record from the source table into another layer named
-“unjoined.” In the example below, see the console command and results,
-and a screenshot of the two new layers.
-
-    $ -join towns-data.csv keys=name,name unmatched unjoined -info
-    Joined 27 data records
-    2/29 target records received no data
-    2/29 source records could not be joined
-    Layer 1 ...
-
-![](images/09-transform/mapshaper-unmatched-unjoined.png)
-
-#### Merge selected polygons with join and dissolve commands
-
-\*\* TO DO \*\* fix screenshots to match new data files and column
-headers
-
-Another common task is to merge selected polygons in a boundary map,
-which you can do in MapShaper with the join and dissolve commands you
-learned above. Imagine that you wish to create regional “cluster”
-boundaries from smaller polygon areas. For example, the [Connecticut
-Department of Public
-Health](http://www.ct.gov/dph/cwp/view.asp?a=3123&q=397740) has grouped
-individual towns, such as Bloomfield and West Hartford, into regional
-health districts. Your task is to begin with a statewide polygon map of
-all town boundaries, and to create a new polygon map that displays these
-regional clusters.
-
-Try it! Right-click the link and Save to download the sample files to
-your computer: [ct-towns in GeoJSON format](data/ct-towns.geojson). If
-you accidentally open a page of GeoJSON code in your browser, select
-File &gt; Save Page As to download to your computer.
-
-Refresh the browser to start a new session in
-<a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>.
-
-1.  Import the ct-towns.geojson map file into
-    <a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>.
-
-2.  Export in CSV format. This steps creates a spreadsheet that lists
-    all of the polygon town names, without geographic details.
-
-![](images/09-transform/towns-export-csv.png)
-
-1.  Open the CSV file with any spreadsheet tool. Copy the contents of
-    the “name” column, paste it into a second column, and change the
-    header of this second column to “merged”.
-
-2.  In the new “merged” column, create new listings for towns you wish
-    to merge together. In this example, Bloomfield and West Hartford are
-    merged into Bloomfield-West Hartford. Leave other towns unchanged.
-
-![](images/09-transform/CT-towns-merged-csv.png)
-
-1.  Save this spreadsheet in CSV format with a new file name, such as:
-    ct-towns-merged.csv.
-
-2.  Drag this new ct-towns-merged.csv file into MapShaper, and click
-    Import.
-
-3.  Use the drop-down menu to manage multiple layers in MapShaper. Since
-    the CSV file has no geography, it appears as a series of rectangular
-    cells. Instead, select the ct-towns.geojson map to display it as the
-    active layer.
-
-![](images/09-transform/mapshaper-two-layers.png)
-
-1.  Click on the Console button, type in both of the commands below, and
-    press Return at the end of each line:
-
-<!-- -->
-
-    -join CT-towns-merged.csv keys=name,name
-    -dissolve merged
-
-How to understand the commands above:
-
--   The first line “joins” the active layer (the polygon map) to the CSV
-    spreadsheet, with “keys” to match their shared data columns, which
-    are both labeled as “name”.
-
--   The second line dissolves the polygons of towns listed in the
-    “merged” column of the CSV file. In this simple example, only
-    Bloomfield and West Hartford are dissolved into a combined
-    “Bloomfield-West Hartford” regional health district, and all of the
-    other polygons remain the same.
-
-    ![](images/09-transform/mapshaper-towns-merged.png)
-
-Click the Console button to close its window. Select the “i” information
-button to inspect your merged polygons. Export the map in your preferred
-format.
-
-#### Learn more advanced MapShaper methods
-
--   See the MapShaper GitHub project wiki
-    (<a href="https://github.com/mbloch/mapshaper/wiki/" class="uri">https://github.com/mbloch/mapshaper/wiki/</a>)
-    for more command references and tips about map simplification
-
-**TO DO**: illustrate concept of a point-to-polygon spatial join. When
-using the join command, “If the keys= option is missing, Mapshaper will
-perform a point-to-polygon or polygon-to-point spatial join.”
-
-Convert a Compressed KMZ file to KML format
--------------------------------------------
-
-Sometimes KML files are distributed in compressed KMZ format. One easy
-conversion method:
-
--   Install the free [Google Earth tool](https://www.google.com/earth/)
-
--   Double-click on any .kmz file to open it in Google Earth
-
--   Right-click (or control-click) on the .kmz layer and select *Save
-    As*
-
-    <img src="images/09-transform/google-earth-convert-kmz.png" class="center" />
-
--   Use the *Save As* drop down menu to select .kml format
-
-    <img src="images/09-transform/google-earth-save-kml.png" class="center" />
-
-Or use any zip-utility and simply unzip the kmz file. Kmz is simply a
-‘zipped’ version of a kml file!
-
-<!--chapter:end:09-transform.Rmd-->
-
-Detect Bias in Data Stories
-===========================
-
-While we like to believe data visualizations simply “tell the truth,”
-when you dig further into this topic, you realize that there are
-multiple ways to represent reality. In this chapter, you will learn how
-visualizations display the biases of the people and the software that
-create them. Although we cannot stop bias, we can teach people to look
-for and detect it, and be aware of our own.
-
-Sections in this chapter:
-
--   [How to Lie with Charts](how-to-lie-with-charts.html), inspired by
-    Darrell Huff (1954)
--   [How to Lie with Maps](how-to-lie-with-maps.html), inspired by Mark
-    Monmonier (1996)
-
-Enroll in our free online course *TO DO add link*, which introduces
-these topics in the brief video below, and offers more exercises and
-opportunities to interact with instructors and other learners.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eWfI_ANQT2Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-
-#### Learn more
-
--   Darrell Huff, How to Lie with Statistics (W. W. Norton & Company,
-    1954),
-    <a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a>
--   Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of
-    Chicago Press, 1996),
-    <a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a>
--   Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February
-    9, 2017,
-    <a href="http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/" class="uri">http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/</a>
-
-How to Lie with Charts
-----------------------
-
-One of the best ways to learn how to detect bias in data visualization
-is to intentionally manipulate a chart, and tell two (or more) opposing
-stories with the same data. You’ll learn what to watch out for when
-viewing other people’s charts, and think more carefully about the
-ethical issues when you design your own.
-
-This exercise was inspired by a classic book published more than fifty
-years ago: Darrell Huff, *How to Lie with Statistics* (W. W. Norton &
-Company, 1954),
-<a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a>
-
-Right-click this link and Save to download this sample data in CSV
-format to your computer:
-[us-gross-domestic-product-per-capita](data/us-gross-domestic-product-per-capita.csv).
-This historical data on economic productivity comes from the World Bank,
-World Development Indicators,
-<a href="http://data.worldbank.org/data-catalog/world-development-indicators" class="uri">http://data.worldbank.org/data-catalog/world-development-indicators</a>
-
-Upload the CSV file to your Google Drive (with Settings to Convert to
-Google format) to create a Google Sheet.
-
-Select the data cells and Insert &gt; Chart &gt; Line chart, similar to
-the default version shown below:
-
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/11yrhgBX16JL3O99EfK6mjiRwA6CGZkfuSGXbXhrBLEQ/pubchart?oid=1711889200&amp;format=interactive">
-</iframe>
-
-In your Google Sheet chart, double-click the vertical y-axis to edit the
-Minimum and Maximum values.
-
-![Screenshot: Edit the Min and Max values of the
-Y-axis](images/10-detect/y-axis-min-max.png)
-
-Make the line look “flatter” (slower economic growth) by lowering the
-minimum to $36,000, and increasing the maximum to $100,000, as shown
-below:
-
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/11yrhgBX16JL3O99EfK6mjiRwA6CGZkfuSGXbXhrBLEQ/pubchart?oid=1294345990&amp;format=interactive">
-</iframe>
-
-Make the line look like a “sharper increase” (faster economic growth) by
-increasing the minimum to $38,000, and lowering maximum to $52,000, as
-shown below:
-
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/11yrhgBX16JL3O99EfK6mjiRwA6CGZkfuSGXbXhrBLEQ/pubchart?oid=534244967&amp;format=interactive">
-</iframe>
-
-\*\* TO DO – add conclusion \*\*
-
-How to Lie with Maps
---------------------
-
-One of the best ways to learn how to detect bias in data visualization
-is to intentionally manipulate a map, and tell two (or more) opposing
-stories with the same data. You’ll learn what to watch out for when
-viewing other people’s maps, and think more carefully about the ethical
-issues when you design your own.
-
-This exercise was inspired by Mark S. Monmonier, *How to Lie with Maps,
-2nd ed.* (University of Chicago Press, 1996),
-<a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a>
-
-First, scroll through this data on Median Household Income for
-Hartford-area towns, 2011-15, from American Community Survey 5-year
-estimates. Or right-click to [open this Google Sheet in a new
-tab](https://docs.google.com/spreadsheets/d/13bFHsXJtADIkUCGgjpO76RjrV0OAu62hzK-J3bXEVsk/edit#gid=556312122).
-
-<iframe src="https://docs.google.com/spreadsheets/d/13bFHsXJtADIkUCGgjpO76RjrV0OAu62hzK-J3bXEVsk/pubhtml?gid=556312122&amp;single=true&amp;widget=true&amp;headers=false">
-</iframe>
-
-Next, explore two different polygon maps of the same data. Use the
-drop-down menu to compare “Extreme Differences” versus “Uniform
-Equality”
-
-<iframe src="https://handsondataviz.github.io/leaflet-how-to-lie-with-maps/" width="90%" height="500">
-</iframe>
-
-Why are these two maps portray the same data so differently? To see the
-answer, look at the data ranges. . ..
-
-\*\* TO DO \*\*
-
-Create your own version…
-
-<!--chapter:end:10-detect.Rmd-->
-
-Tell Your Data Story
-====================
-
-TODO: Write this chapter: Tell the story about your data, including its
-most meaningful insights and limitations Write compelling titles,
-labels, and sentences to accompany your visualization. Call attention to
-the most meaningful insights in your chart, and explain any data
-limitations.
-
-This chapter draws inspiration from Cole Nussbaumer Knaflic,
-*Storytelling with Data: A Data Visualization Guide for Business
-Professionals* (Wiley, 2015),
-<a href="http://www.storytellingwithdata.com/book/" class="uri">http://www.storytellingwithdata.com/book/</a>
-
--   Beginning, Middle, and End
--   Draw Attention to Meaning
-
-<!--chapter:end:11-story.Rmd-->
-
 Chart.js Code Templates
 =======================
 
@@ -6562,7 +5040,7 @@ To show more than three dimensions in bubble charts, one can:
 Remember not to overwhelm the viewer and communicate only the data that
 are necessary to prove or illustrate your idea.
 
-<!--chapter:end:12-chartjs.Rmd-->
+<!--chapter:end:09-chartjs.Rmd-->
 
 Leaflet Map Templates
 =====================
@@ -6597,6 +5075,11 @@ Cons:
     core code or specific plugins
 
 #### Leaflet Map Templates
+
+TODO: add and clean up Leaflet Map CSV
+<a href="https://github.com/HandsOnDataViz/leaflet-map-csv" class="uri">https://github.com/HandsOnDataViz/leaflet-map-csv</a>
+to serve as a fuller tutorial for Leaflet Maps, and explain how this
+will teach more principles of modifying Leaflet code
 
 <table>
 <colgroup>
@@ -6643,6 +5126,258 @@ Also, these templates refer to other types of code:
     Positron, a light-gray street map)
 -   data: content to appear on map, typically in CSV or GeoJSON format
     (examples: data.csv, data.geojson)
+
+Fork and Edit Leaflet Map with CSV Data
+---------------------------------------
+
+TODO: REWRITE this to serve as a more advanced version (with repo
+leaflet-map-csv) than the prior chapter (with leaflet-map-simple)
+
+This tutorial introduces more sophisticated Leaflet map code templates
+(<a href="http://leafletjs.com" class="uri">http://leafletjs.com</a>)
+that you can modify and host online with GitHub in your browser
+(<a href="http://github.com" class="uri">http://github.com</a>). You
+will learn how to:
+
+-   1.  Fork (copy) Leaflet template to your GitHub account
+
+-   1.  Publish your live map to public web with GitHub Pages
+
+-   1.  Modify your map title and add layer controls
+
+-   1.  Geocode addresses [in a Google
+        Sheet](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/)
+        and upload points from data.csv
+
+Code templates help us to move beyond the limits of drag-and-drop web
+mapping services (such as Google MyMaps) and to create more customized
+visualizations on a web server that you control. Before you begin, learn
+the broad concepts in the chapter introduction [Modify and Host Code
+Templates with GitHub](github.html). If you have problems with this
+tutorial, go to the [Fix Common GitHub and Code Errors](fix-code.html)
+chapter in this book.
+
+TODO: add demo, remove unnecessary basic steps from below (covered in
+prior chapter)
+
+#### Video with step-by-step tutorial
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7iUocaxTYqk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+
+#### A) Fork (copy) Leaflet template to your GitHub account
+
+Before you begin, sign up for a free GitHub account:
+<a href="http://github.com" class="uri">http://github.com</a>
+
+1.  Right-click to open this GitHub code template in a new tab:
+    <a href="https://github.com/handsondataviz/leaflet-map-simple" class="uri">https://github.com/handsondataviz/leaflet-map-simple</a>
+
+2.  In the upper-right corner of the code template, sign in to your free
+    GitHub account
+
+3.  In the upper-right corner, click Fork to copy the template (also
+    called a code repository, or repo) into your GitHub account. The web
+    address (URL) of the new copy in your account will follow this
+    format:
+
+<!-- -->
+
+    https://github.com/USERNAME/REPOSITORY
+
+Reminder: You can only fork a GitHub repo **one time**. If needed, see
+how to make a second copy in the [Create a New Repo in
+GitHub](create-repo.html) chapter in this book.
+
+#### B) Publish your live map to public web with GitHub Pages
+
+1.  In your new copy of the code repo, click on Settings, scroll down to
+    the GitHub Pages area, select Master, and Save. This publishes your
+    code template to a live map on a public website that you control.
+
+2.  Scroll down to GitHub Pages section again, to select and copy the
+    link to your published web site, which will follow this format:
+
+<!-- -->
+
+    https://USERNAME.github.io/REPOSITORY
+
+1.  Scroll up to the top, and click on your repo name to go back to its
+    main page.
+
+2.  At the top level of your repo main page, click on README.md, and
+    click the pencil icon to edit this file, written in easy-to-read
+    Markdown code.
+
+3.  Delete the link to the current live site, and paste in the link to
+    your site. Scroll down and Commit to save your edits.
+
+4.  On your repo main page, right-click on the link to your published
+    site to open in a new tab. **Be patient** during busy periods,
+    because your website may take up to 1 minute to appear the first
+    time.
+
+#### C) Modify your map title and add layer controls
+
+1.  Go back to your browser tab for your code repo. Click on the
+    index.html file (which contains the map code), and click the pencil
+    icon to edit it.
+
+2.  Explore the map code, which contains HTML, CSS, and JavaScript. Look
+    for sections that begin with “EDIT” for items that you can easily
+    change. Scroll down to Commit your changes.
+
+3.  Go to your live website browser tab and refresh the page to view
+    your edits. **Be patient** during busy periods, when some edits may
+    take up to 1 minute to appear.
+
+4.  To change your map title in the index.html file, click the pencil
+    symbol (to edit) and go to lines 23-25. Replace “EDIT your map
+    title” with your new title:
+
+<!-- -->
+
+    <!-- Display the map and title with HTML division tags  -->
+    <div id="map-title">EDIT your map title</div>
+    <div id="map"></div>
+
+1.  To change your initial map zoom level, edit the index.html file and
+    go to line 33. The zoom range for this map is from 1 (max zoom out)
+    to 18 (max zoom in).
+
+<!-- -->
+
+    // Set up initial map center and zoom level
+    var map = L.map('map', {
+      center: [41.77, -72.69], // EDIT latitude, longitude to re-center map
+      zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
+      scrollWheelZoom: false
+    });
+
+1.  To change the default basemap, edit lines 46 and 52 to delete
+    “.addTo(map)” from the Carto light layer, then add it to the Stamen
+    colored terrain layer. DO NOT erase the semicolons!
+
+Your original code looks like this (scroll to right to see all):
+
+    /* Carto light-gray basemap tiles with labels */
+      var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
+      }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+      // controlLayers.addBaseLayer(light, 'Carto Light basemap');
+      /* Stamen colored terrain basemap tiles with labels */
+      var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+      }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+      // controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
+
+After you edit the code, it should look like this (scroll to right to
+see all):
+
+    /* Carto light-gray basemap tiles with labels */
+    var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
+    }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+    // controlLayers.addBaseLayer(light, 'Carto Light basemap');
+    /* Stamen colored terrain basemap tiles with labels */
+    var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
+      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+    }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+    // controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
+
+1.  To add a control panel that turns on/off map layers, delete the code
+    comment symbols (//) that appear in front of lines 38-41, 47, and 53
+    to activate these sections. When you remove code comments in GitHub,
+    the color changes from gray text (inactive code) to colored text
+    (active code). After you remove the code comments, your file should
+    look like this (scroll to right to see all):
+
+<!-- -->
+
+    /* Control panel to display map layers */
+     var controlLayers = L.control.layers( null, null, {
+      position: "topright",
+      collapsed: false
+     }).addTo(map);
+
+    /* Carto light-gray basemap tiles with labels */
+    var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
+    }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+     controlLayers.addBaseLayer(light, 'Carto Light basemap');
+    /* Stamen colored terrain basemap tiles with labels */
+    var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
+      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+    }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+     controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
+
+1.  To change one point on the map, you could edit the latitude and
+    longitude coordinates of the single marker in lines 55-57. To find
+    coordinates for any location and to learn more, go to
+    <a href="http://www.latlong.net" class="uri">http://www.latlong.net</a>
+
+<!-- -->
+
+    /* Display a blue point marker with pop-up text */
+    L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
+    .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
+
+But a better way to display several points is to remove the code comment
+symbols (//) in front of lines 60-69 to activate this section of code,
+which pulls map points from the data.csv file in your GitHub repository.
+After your edits, this section should look like this (scroll right to
+see all):
+
+    /* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
+     var customLayer = L.geoJson(null, {
+      onEachFeature: function(feature, layer) {
+        layer.bindPopup(feature.properties.Title);
+      }
+     });
+     var runLayer = omnivore.csv('data.csv', null, customLayer)
+     .on('ready', function() {
+      map.fitBounds(runLayer.getBounds());
+     }).addTo(map);
+     controlLayers.addOverlay(customLayer, 'Markers from data.csv');
+
+#### D) Geocode addresses in Google Sheet and upload points from data.csv
+
+1.  A better way to display multiple points on your map is to prepare
+    and upload a new data.csv file to your GitHub repository. First,
+    right-click to open this Google Sheets template in a new tab:
+    [Leaflet Maps Simple data points with
+    Geocoder](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/)
+
+2.  Since this sheet is view-only, you cannot edit it. Instead, sign in
+    to your Google account in the upper-right corner.
+
+3.  Go to File &gt; Make a Copy, which will save a duplicate version to
+    your Google Drive, which you can edit.
+
+4.  In your copy of the Google Sheet, select any cells and press Delete
+    on your keyboard to erase contents. Type new titles and addresses
+    into columns A and B.
+
+5.  To geocode your new addresses (which means converting them into
+    latitude and longitude coordinates), select all of the contents
+    across 6 columns, from Address (B) to Source (G).
+
+6.  Go to the Geocoder menu that appears in this special Google Sheet
+    template, and select any service, such as US Census (for US
+    addresses) or Google Maps. The first time you run the geocoder, the
+    script will ask for permission.
+
+7.  After you have geocoded your addresses, go to File &gt; Download
+    As &gt; Comma-separated values (.CSV format) to save the file to
+    your computer.
+
+8.  In your computer, right-click the downloaded file to rename it to:
+    data.csv
+
+9.  In your GitHub repository, click Upload Files, then drag-and-drop
+    your new data.csv file, and Commit to upload it. Go to your live map
+    browser tab and refresh to view changes. **Be patient\* during busy
+    periods, when some edits may take up to 1 minute to appear.**
 
 Leaflet Maps with Google Sheets template
 ----------------------------------------
@@ -6779,7 +5514,7 @@ GitHub](create-repo.html) chapter in this book.
 <iframe src="images/13-leaflet/lmwgs-1-fork-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 16: Screencast: Fork
+Figure 10: Screencast: Fork
 </p>
 
 1.  Scroll up to the top, and click on your repo name to go back to its
@@ -6813,7 +5548,7 @@ Figure 16: Screencast: Fork
 <iframe src="images/13-leaflet/lmwgs-2-make-copy-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 17: Screencast: Share Google Sheet
+Figure 11: Screencast: Share Google Sheet
 </p>
 
 1.  File &gt; Publish the Link to your Google Sheet to the public web,
@@ -6846,7 +5581,7 @@ URL](images/13-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 <iframe src="images/13-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 18: Screencast: Copy Google Sheet URL and paste into GitHub code
+Figure 12: Screencast: Copy Google Sheet URL and paste into GitHub code
 </p>
 
 1.  Next, let’s paste your Google Sheet URL in a second place to keep
@@ -7696,7 +6431,1089 @@ TODO: decide whether to keep or not
     repository Settings to rename it, or create a new GitHub repo and
     use GitHub Desktop to upload template Files
 
-<!--chapter:end:13-leaflet.Rmd-->
+<!--chapter:end:10-leaflet.Rmd-->
+
+Transform Your Map Data
+=======================
+
+Interactive web maps are made up of different layers, such as background
+basemaps, colored or shaded polygons, and/or colored point markers. This
+chapter describes how to transform your data into layers that you can
+upload into online map tools and templates. Specifically, you will learn
+how to:
+
+-   [Geocode locations into coordinates with US Census or
+    Google](geocode.html)
+-   [Pivot address-level point data into polygon
+    data](pivot-point-to-polygon.html)
+-   [Normalize data to create more meaningful polygon
+    maps](normalize.html)
+-   [Convert map data](convert-geojson.html) with
+    [GeoJSON.io](geojsonio.html) or [Mapshaper.org](mapshaper.html)
+-   [Join spreadsheets and polygon boundaries with
+    MapShaper.org](mapshaper.html)
+
+Enroll in our free online course **TO DO add link**, which introduces
+these topics in the brief video below, and offers more exercises and
+opportunities to interact with instructors and other learners.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3sjjVEJY4MY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+
+Geocode Locations into Coordinates with US Census or Google
+-----------------------------------------------------------
+
+Many free map tools geocode locations by placing them on a map, such as
+[Google My Maps tutorials](mymaps.html) in this book. But those tools
+typically do not allow you to easily extract the latitude-longitude
+coordinates for each point.
+
+We created two free Google Sheets Geocoder scripts that have several
+advantages:
+
+-   convert locations (Hartford CT) or addresses (300 Summit St,
+    Hartford CT) into latitude-longitude coordinates (41.748, -72.692)
+    inside your Google Sheet
+-   show the location found in the geocoding database, and match
+    quality, to review your results
+-   convert US addresses into US Census geography, such as census
+    tracts, block groups, and blocks
+
+As with any geocoding service, accuracy is not guaranteed. Inspect your
+results in the Found and Quality columns.
+
+#### Google Sheets Geocoder: US Census or Google
+
+-   Geocode locations into latitude, longitude, with source and match
+    quality, inside a Google Sheet
+-   Go to Google Sheet template, sign in to your account, and File &gt;
+    Make a Copy to your Google Drive
+    <a href="https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0</a>
+-   Insert locations, select 6 columns, and select Geocoder menu: US
+    Census or Google (limit 1000 daily per user)
+-   Google Sheets script will ask for permission to run the first time
+-   Note: The [Leaflet Maps with Google Sheets
+    template](leaflet-maps-with-google-sheets.html) in this book
+    includes this Geocoder script.
+
+<iframe src="images/09-transform/google-sheets-geocoder-census-google.gif" width="100%" height="400px">
+</iframe>
+<p class="caption">
+Figure 13: Screencast: Google Sheets Geocoder: US Census or Google
+</p>
+
+#### Google Sheets Geocoder: US Census Geographies
+
+-   Geocode US addresses into latitude, longitude, GeoID, census tract,
+    inside a Google Sheet
+-   Go to Google Sheet template, sign in to your account, and File &gt;
+    Make a Copy to your Google Drive
+    <a href="https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0</a>
+-   Insert locations, select 8 columns, and select Geocoder menu: US
+    Census 2010 Geographies
+-   Google Sheets script will ask for permission to run the first time
+
+<iframe src="images/09-transform/google-sheets-geocoder-census-geographies.gif" width="100%" height="400px">
+</iframe>
+<p class="caption">
+Figure 14: Screencast: Google Sheets Geocoder: US Census Geographies
+</p>
+
+##### About US Census 15-character GeoID
+
+-   Make sure that column G is formatted as text (to preserve leading
+    zeros), not number
+-   Break down a sample GeoID: 090035245022001
+    -   state = 09
+    -   county = 003
+    -   tract = 524502 = 5245.02
+    -   block group = 2
+    -   block = 001
+
+##### How it works
+
+The Google Sheet Geocoder runs from a script insert in the Google Sheet,
+which calls one of two free geocoding services:
+
+-   US Census Geocoder
+    <a href="https://geocoding.geo.census.gov/geocoder" class="uri">https://geocoding.geo.census.gov/geocoder</a>.
+    See more detailed documentation at
+    <a href="http://www.census.gov/geo/maps-data/data/geocoder.html" class="uri">http://www.census.gov/geo/maps-data/data/geocoder.html</a>
+-   Geocode with Google Apps: The Maps Service of Google Apps allows
+    users to geocode street addresses without using the Google Maps API,
+    with a limit of 1,000 searches daily per user,
+    <a href="https://developers.google.com/apps-script/reference/maps/geocoder" class="uri">https://developers.google.com/apps-script/reference/maps/geocoder</a>
+
+##### How to insert the Geocoder Script into any Google Sheet
+
+If you do not wish to File &gt; Make a Copy of the Google Sheet
+templates above, you can insert the open-source Geocoder Scripts into
+your own Google Sheet:
+
+-   Go to [Google Sheets Geocoder repo on
+    GitHub](https://github.com/handsondataviz/google-sheets-geocoder)
+-   Sign in to your Google Sheets, then select Tools &gt; Script Editor
+-   File &gt; Create New Script File
+-   Open and copy a script (such as geocoder-census-google.gs) and paste
+    into your Script Editor
+-   Save and rename to geocoder-census-google.gs
+-   Refresh your Google Sheet and look for new Geocoder menu
+
+##### TODO
+
+-   Also describe and link back how to split columns to form
+    multi-columns addresses
+-   also describe and link back to how to unify columns to form a
+    one-column address
+-   add this
+    <a href="https://developers.google.com/maps/faq#geocoder_queryformat" class="uri">https://developers.google.com/maps/faq#geocoder_queryformat</a>
+
+#### See also: Batch upload to US Census
+
+-   Available at US Census Geocoder
+    <a href="https://geocoding.geo.census.gov/geocoder/" class="uri">https://geocoding.geo.census.gov/geocoder/</a>
+-   Upload CSV table with up to 1000 rows for faster processing, in this
+    format, WITHOUT column headers:
+
+AnyID | Street | City | State | Zip |  
+:—– | :—– | :— | :—- | : — |  
+1 | 300 Summit St | Hartford | CT | 06106 |
+
+-   Find Locations using &gt; Address Batch (returns latitude, longitude
+    coordinates)
+-   Find Geographies using &gt; Address Batch (returns lat, lng, census
+    geographies)
+-   Limitations:
+    -   Inputs and outputs have no column headers, which may confuse
+        novices
+    -   Large batches may be delayed a few minutes during peak time
+        periods
+    -   Unmatched addresses need to be manually corrected and
+        re-submitted
+
+#### Try it: Batch Upload to US Census
+
+1.  Right-click and Save this CSV file to your computer:
+    [sample-addresses-50](sample-addresses-50.csv). CSV means
+    comma-separated values, a generic spreadsheet format that most data
+    tools can easily open.
+
+2.  Use any spreadsheet tool to organize your address data into five
+    columns: any ID number, street, city, state, zip code. **Remove all
+    column headers**.
+
+![](images/09-transform/address-no-column-headers.png)
+
+Hints:
+
+-   If your data lacks ID numbers, quickly [create a column of
+    consecutive numbers](calculate.html), as shown in this book.
+-   If your address data includes apartment numbers, leave them in.
+-   Only the ID and address fields are required. City, state, and zip
+    code may be blank if you lack any of this information, but fewer
+    matches will be exact.
+-   If your address data is combined into one cell, such as: 300 Summit
+    St, Hartford, CT 06106
+    -   then try to [clean your data with the split column
+        method](clean-spreadsheets.html) in this book.
+-   If you need to temporarily move other non-address data columns into
+    a second spreadsheet, remember to paste the column of ID numbers
+    into the second sheet. After geocoding, sort both sheets by the ID
+    column, then paste to rematch the data.
+
+1.  Save the file in CSV generic spreadsheet format, in batches of no
+    more than 1,0000 rows per file. Learn more about [saving in CSV
+    format](csv.html) in this book.
+
+2.  Go to US Census Geocoder
+    (<a href="https://www.census.gov/geo/maps-data/data/geocoder.html" class="uri">https://www.census.gov/geo/maps-data/data/geocoder.html</a>)
+
+3.  Select the Find Geographies Using…Address Batch button for maximum
+    results, including lat-long coordinates and census geography (tracts
+    and block groups). *If census geography is not needed, select Find
+    Locations Using…Address Batch.*
+
+4.  Click the Choose button to upload your CSV file. Use the default
+    benchmark and vintage settings for the most current data. Click the
+    Get Results button, and be patient if using the service during busy
+    weekday hours.
+
+![](images/09-transform/census-geocoder-batch.png)
+
+1.  Census Geocoder will download the results through your web browser
+    in a file named: GeocodeResults.csv. Since these results do not
+    contain column headers, use the screenshot below for guidance, or
+    [read the Census Geocoder
+    documentation](http://www.census.gov/geo/maps-data/data/geocoder.html)
+    for more details.
+
+![](images/09-transform/geocode-results.png)
+
+1.  Use a spreadsheet tool to open the CSV file. Sort results by the
+    match quality (columns C and D), with these entries: match exact,
+    match non-exact, tie, no-match.
+
+2.  For results without an exact match, check the address for typos, and
+    try to re-geocode in a separate CSV file. The US Census Geocoder
+    tool is very good, but not perfect. For a few rows of hard-to-match
+    data, use a different geocoding tool, such as the Google Maps &gt;
+    What’s Here feature described at the top of this page, to look up
+    individual addresses and coordinates.
+
+#### Learn more
+
+-   Aggregate individual rows of data into groups by census area with
+    [pivot tables](pivot.html).
+-   [Download census data](find.html) by tract or block group, and use
+    the [VLOOKUP formula](vlookup.html) to join or merge this rows of
+    data that you have geocoded by census tract or block group.
+
+Pivot Address-Level Point Data into Polygon Data
+------------------------------------------------
+
+Problem: If I begin with address-level point data, how can I transform
+this into polygon map data?
+
+One solution: In any spreadsheet, split your address data into separate
+columns (such as Street, City, State), then create a pivot table to
+aggregate rows into groups (such as the number of addresses in each City
+or State).
+
+If your location data is combined into one column (example: 300 Summit
+St, Hartford CT), then see the [Spreadsheets: Split Data Columns
+tutorial](clean-spreadsheets.html) in this book.
+
+Here’s an example using a long list of US hospitals from the Medicare
+open data repository, which is already split into separate columns:
+<a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u" class="uri">https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u</a>
+
+1.  Open the link above, see columns of data (Address, City, State,
+    etc.), and click the blue Export button to download in the CSV
+    generic spreadsheet format.
+
+![Screenshot: Export US Hospital data into CSV
+format](images/09-transform/hospital-socrata-export.png)
+
+1.  Open the file with any spreadsheet tool, and create a pivot table to
+    count up the number of hospitals in each state. For help, see the
+    [Pivot Table tutorial](pivot.html) in this book.
+
+![Screenshot: Pivot Table of US Hospitals by
+State](images/09-transform/hospital-pivot-table.png)
+
+1.  Now you can copy and paste the pivot table raw data of hospitals by
+    US states. See the [Normalize Data tutorial](normalize.html) and
+    also the [Edit and Join Spreadsheet with Polygon Map using
+    Mapshaper](mapshaper.html) tutorial in this book.
+
+#### Other Solutions
+
+-   use the [Google Sheets Geocoder: US Census Geographies
+    tutorial](geocode.html) in this book to convert addresses into
+    census tracts, etc., and then pivot
+-   do a polygons-to-points spatial join with Mapshaper.org \*\* TO DO
+    \*\*
+
+Normalize Data to Create Meaningful Polygon Maps
+------------------------------------------------
+
+When preparing polygon maps, normalize your data to create more
+meaningful comparisons. Learn the difference between:
+
+-   **Raw data:** absolute values, such as the population of each US
+    state (example: Connecticut population in 2015 = 3,590,886 people)
+-   **Normalized data:** represented on a standard scale (also known as
+    standardized data), such as the population density of each US state
+    (example: Connecticut 2015 population density = 3,590,886 people /
+    4,482 square miles = 742 people per square mile, equivalent to 1,922
+    people per square kilometer)
+
+The difference between raw versus normalized data matters, especially in
+polygon maps. For example, the US states of Connecticut and Iowa have
+similar populations of about 3 million people each. But the rural
+midwestern state of Iowa has a much larger land area of over 55,000
+square miles, while the more urbanized eastern state of Connecticut has
+a smaller land area of around 4,000 square miles. We can display all of
+this data in a table (as show below), but when making a polygon map, it
+makes most sense to show a normalized value, such as population density.
+
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">US State</th>
+<th style="text-align: left;">Population 2015</th>
+<th style="text-align: left;">Land Area (in square miles)</th>
+<th style="text-align: left;">Density (pop per square mile)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Iowa</td>
+<td style="text-align: left;">3,123,899</td>
+<td style="text-align: left;">55,857</td>
+<td style="text-align: left;">56</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Connecticut</td>
+<td style="text-align: left;">3,590,886</td>
+<td style="text-align: left;">4,842</td>
+<td style="text-align: left;">741</td>
+</tr>
+</tbody>
+</table>
+
+But raw data still matters, too. Although normalized data allows for
+easier comparisons across regions of different size, it can hide very
+low raw data values. For example, imagine two city neighborhoods with
+equally high unemployment rates of 20%, a normalized value. But if one
+neighborhood has a labor market population of 5,000 people while the
+other has only 500, the actual number of unemployed people in the second
+neighborhood is much smaller, as shown in the table below.
+
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Neighborhood</th>
+<th style="text-align: left;">Labor Market Population</th>
+<th style="text-align: left;">Unemployment Rate</th>
+<th style="text-align: left;">Actual Unemployed People</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">First</td>
+<td style="text-align: left;">5,000</td>
+<td style="text-align: left;">20%</td>
+<td style="text-align: left;">1,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Second</td>
+<td style="text-align: left;">500</td>
+<td style="text-align: left;">20%</td>
+<td style="text-align: left;">100</td>
+</tr>
+</tbody>
+</table>
+
+#### Different ways to normalize data
+
+After you understand the basic concept, also think about different ways
+to normalize the same data. Your method depends on the type of data
+story you wish to emphasize. Look at the table excerpt below on US
+population and land area by state in 2015:
+
+![Screenshot: US population and land
+area](images/09-transform/us-population-area-2015.png)
+
+There are at least two acceptable ways to normalize this raw data:
+
+-   Normalized by area: Population per square mile in each state
+    (calculate = pop / square miles)
+-   Normalized by total: Percent of total US population in each state
+    (calculate = state pop / total US pop)
+
+For example:
+
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">US State</th>
+<th style="text-align: left;">Population 2015</th>
+<th style="text-align: left;">Land Area (sq. mi)</th>
+<th style="text-align: left;">Density (per square mile)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Connecticut</td>
+<td style="text-align: left;">3,590,886</td>
+<td style="text-align: left;">4,842</td>
+<td style="text-align: left;">741</td>
+</tr>
+</tbody>
+</table>
+
+Convert to GeoJSON format
+-------------------------
+
+When you find map data, it may be stored in one of these common data
+formats below:
+
+#### GeoJSON
+
+GeoJSON is newer, popular open format for map data, and works across
+many tools, so is our top recommendation in this book. GeoJSON files can
+be used with Leaflet map code, Google Maps JS API code, Carto map tools,
+and more. Also, your GitHub repository will automatically display any
+GeoJSON files in a map view.
+
+GeoJSON data must follow a [structured format](http://geojson.org/), but
+the file name may end with either `.geojson` or `.json`. The GeoJSON
+structured format orders coordinates in *longitude-latitude* format, the
+same as X-Y coordinates in mathematics. This is the opposite of Google
+Maps and several other web map tools, which order points in
+*latitude-longitude* format. For example, Hartford Connecticut is
+located at (-72.67, 41.76) in GeoJSON, but (41.76, -72.67) in Google
+Maps.
+
+#### Shapefiles
+
+The shapefile format was created in the 1990s by ESRI, the company that
+developed ArcGIS software. Shapefiles typically appear as a folder of
+subfiles with suffixes such as `.shp`, `.shx`, `.dbf`, and others.
+Although government agencies commonly distribute map data in shapefile
+format, the standard tools for editing these files—ArcGIS and its free
+and open-source cousin, QGIS—are not as easy to learn as other tools in
+this book. For this reason, this book recommends converting shapefiles
+into one of the more friendlier formats below.
+
+#### Keyhole Markup Language (or KML)
+
+The KML format rose in popularity during the late 2000s. Google Earth, a
+free and user-friendly tool, allowed many people to view and edit
+geographic data. KML files are commonly used in the Google Fusion Tables
+maps described in this book. Sometimes `.kml` files are distributed in a
+compressed `.kmz` format. See the chapter on [converting from KMZ to KML
+format](convert-kmz) in this book.
+
+GeoJson.io to Convert, Edit, and Create Map Data
+------------------------------------------------
+
+TODO:
+
+-   rewrite into tool review and tutorial format
+-   place polygon conversion at top and specify import-export formats
+
+Go to <a href="http://geojson.io" class="uri">http://geojson.io</a> to
+explore this open-source web tool to convert, edit, and create GeoJSON
+map data. The tool was originally developed by Tom MacWright, and is
+supported by Mapbox.com.
+
+#### Convert a CSV spreadsheet of point data into GeoJSON
+
+Use any spreadsheet tool and prepare a list of coordinate points (known
+as features). You must include column headers **lat** and **lon**, or a
+fuller spelling, such as *latitude* and *longitude*. The order of the
+columns does not matter. Also, you can add more headers to identify each
+point (example: name) and include more details (known as the properties
+of the features).
+
+![](images/09-transform/name-lat-lon-info.png)
+
+Save your spreadsheet in generic CSV format. *Hint:* see [Save
+Spreadsheet as CSV chapter](csv.html) in this book.
+
+Try it! Click this link and Save to download this sample file to your
+computer: [name-lat-lon-info in CSV format](data/name-lat-lon-info.csv).
+CSV means comma-separated values, a generic spreadsheet format that most
+data tools can easily open.
+
+Drag the CSV file into the GeoJSON.io map window. Flip between the JSON
+and Table tabs to view or edit the data.
+
+<iframe src="images/09-transform/dataviz-geojsonio-640.gif" width="100%" height="400px">
+</iframe>
+<p class="caption">
+Figure 15: Screencast: GeoJson.io
+</p>
+
+Select the Save menu and export into GeoJSON format.
+
+Optional: Login to GeoJSON.io with your GitHub account and save directly
+to your repository.
+
+#### Convert Shapefile or KML polygons into GeoJSON
+
+Polygon boundary data is often shared as ArcGIS Shapefiles (.shp) or
+Keyhole Markup Language (.kml) files. Drag any of these (and other)
+files into the
+<a href="http://GeoJSON.io" class="uri">http://GeoJSON.io</a> map
+window. Flip between the JSON and Table tabs to view or edit the data.
+
+Select the Save menu and export into GeoJSON format.
+
+![](images/09-transform/geojson-save-as.png)
+
+#### Create GeoJSON data with drawing tools
+
+Use the <a href="http://GeoJSON.io" class="uri">http://GeoJSON.io</a>
+drawing tools to create points, polygons, and polylines. Flip between
+the JSON and Table tabs to view or edit the data.
+
+#### Learn more about GeoJSON.io
+
+Read about more advanced features and view the code at
+<a href="https://github.com/mapbox/geojson.io" class="uri">https://github.com/mapbox/geojson.io</a>
+
+MapShaper.org to Convert, Edit, and Join Data
+---------------------------------------------
+
+TODO:
+
+-   rewrite into tool review/tutorial format
+-   put conversion at top and clarify import-export formats
+-   recommended browsers: Firefox or Chrome
+-   Mac users: go to Finder &gt; Preferences &gt; Advanced &gt; turn on
+    Show file extensions
+
+MapShaper
+(<a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>) is
+another versatile open-source mapping tool, developed and maintained by
+[Matthew Bloch on GitHub](https://github.com/mbloch/mapshaper). Using
+the web interface, users can:
+
+-   Import and export map layers in multiple formats: Shapefile,
+    GeoJSON, CSV, and more
+-   Simplify (or smooth out) geographic details to reduce map file size
+-   Edit geography with powerful commands (dissolve, clip, join files,
+    etc.)
+
+This free and easy-to-learn MapShaper.org web tool has replaced *many*
+of my map preparation tasks that previously required expensive and
+hard-to-learn ArcGIS software, or its free but
+still-challenging-to-learn cousin, QGIS. Even advanced GIS users may
+discover MapShaper.org to be a quick alternative for some common
+time-consuming tasks.
+
+The examples below focus on polygon boundary data to illustrate common
+map editing tasks. But MapShaper.org also works with other data layers,
+such as tables, points, and lines.
+
+#### Import and convert map boundary files
+
+Try it! Right-click the link and Save to download this sample file to
+your computer: [ct-towns in GeoJSON format](data/ct-towns.geojson). If
+you accidentally open a page of GeoJSON code in your browser, select
+File &gt; Save Page As to download to your computer.
+
+1.  Drag-and-drop any map layer into the
+    <a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>
+    browser window.
+
+-   Import GeoJSON (.geojson or .json), TopoJSON, CSV, or Shapefile
+    formats
+-   For Shapefiles, import the .shp (features), .dbf (attribute data),
+    and .prj (projection) files. Reminder: the WGS84 projection is most
+    portable across multiple platforms.
+-   KML/KMZ files are not compatible. To convert these into a format
+    that Mapshaper can import, see the [Convert KMZ to
+    KML](convert-kmz.html) and [Geojson.io](geojsonio.html) chapters in
+    this book.
+
+1.  Click the Export button and select your preferred format:
+
+-   Shapefile (best for ArcGIS/QGIS software)
+-   GeoJSON (best for Leaflet and GitHub tools in this book)
+-   TopoJSON (similar to GeoJSON, with topographical data)
+-   SVG (Scalable Vector Graphics, for print or online)
+-   CSV (Comma Separated Values, generic spreadsheet format)
+
+<iframe src="images/09-transform/mapshaper-convert-640.gif" width="100%" height="400px"></iframe>
+<p class="caption">
+(\#fig:mapshaper-convert)Screencast: Mapshaper convert
+</p>
+
+#### Edit data for specific polygons
+
+To edit data for any polygon in MapShaper.org:
+
+-   Click the “i” information button
+
+-   Select the polygon
+
+-   Click inside its pop-up info window to directly edit the data
+
+    ![](images/09-transform/mapshaper-edit-info.png)
+
+#### Simplify map boundaries to reduce file size
+
+If your data visualization project displays a zoomed-out state or
+national or world map, small geographic details that are invisible at
+these zoom levels may not be necessary. Consider using the Simplify
+command to reduce the file size, which may help your interactive web map
+to load faster for web visitors. The example below began with a detailed
+map of Connecticut town boundaries (1:100,000 scale) at 2MB, which
+MapShaper simplified – without visibly sacrificing details at the
+statewide zoom level – to a reduced size of about 200KB.
+
+1.  Try it! Download and upload the sample GeoJSON file as described in
+    the Import section above.
+
+2.  Click the Simplify button to review options, and in most cases,
+    accept the default settings. Click Next.
+
+3.  Slide the Simplify button from 100 percent down to an appropriate
+    number for your map zoom level. If important geographic details
+    disappear, you may have gone too far.
+
+4.  Look in the upper-left corner and click on recommended Repairs to
+    your map file.
+
+5.  Complete the process by clicking Simplify once again. Export your
+    file in the preferred format for your project.
+
+![](images/09-transform/mapshaper-simplify.png)
+
+#### Dissolve internal polygons to create an outline map
+
+MapShaper.org also includes a Console button to type in commands for
+common map editing tasks. Imagine that you begin with a boundary map
+that includes internal polygons, but your goal is to remove all of them
+to create an outline map.
+
+Click the Console button, which opens a window to type in commands.
+Enter the command below, then press return. Close the Console window and
+Export your outline map.
+
+    -dissolve
+
+<iframe src="images/09-transform/mapshaper-dissolve-simple-640.gif" width="100%" height="400px">
+</iframe>
+<p class="caption">
+Figure 17: Screencast: Mapshaper dissolve
+</p>
+
+#### Clip a map to match an outline layer
+
+Imagine that you start with a polygon map of all towns in Connecticut,
+and an outline map of Hartford County, a larger region that includes
+some (but not all) of those smaller towns. Your goal is to create a
+polygon map of all towns inside Hartford County. In other words, we will
+“clip” the statewide town map using the county outline map.
+
+Try it! Right-click the link and Save to download both sample files to
+your computer:
+
+-   [ct-towns in GeoJSON format](data/ct-towns.geojson)
+-   [hartfordcounty-outline in GeoJSON
+    format](data/hartfordcounty-outline.geojson)
+-   If you accidentally open a page of GeoJSON code in your browser,
+    select File &gt; Save Page As to download to your computer.
+
+Refresh the browser to start a new session in
+<a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>.
+
+1.  Drag-and-drop the ct-towns.geojson file to import to MapShaper.
+
+2.  Drag-and-drop the hartfordcounty-outline.geojson map to MapShaper,
+    and click Import to add this second layer.
+
+3.  In the drop-down menu, select the first map (ct-towns) to display it
+    as the active layer.
+
+4.  Click the Console button, type or paste in the command below, and
+    press enter.
+
+<!-- -->
+
+    -clip hartfordcounty-outline.geojson
+
+1.  The command above instructs MapShaper to clip the active map layer
+    (ct-towns) using the second layer (hartfordcounty-outline).
+
+2.  Sometimes the boundaries of the clip layer do not precisely match up
+    with your active layer, due to differences between their sources. If
+    necessary, add the `cleanup` command to remove any null features or
+    small “slivers” that remain after the clip.
+
+<!-- -->
+
+    - clip hartfordcounty-outline.geojson cleanup
+    Removed 3 null features and 5 slivers
+
+**TO DO** fix animation to match new file names
+
+<iframe src="images/09-transform/mapshaper-clip-640.gif" width="100%" height="400px">
+</iframe>
+<p class="caption">
+Figure 18: Screencast: Mapshaper clip
+</p>
+
+#### Remove unwanted data columns
+
+Sometimes your polygon map contains several columns of unwanted data. To
+quickly remove them, enter the “-filter-fields” Console command to keep
+only the columns you list. The example below deletes all columns
+*except* “town”:
+
+    -filter-fields town
+
+#### Join spreadsheet data with polygon map
+
+\*\* TO DO \*\* - fix images and animations to map the new file names
+and column headers
+
+A common mapping task is to join (or merge) new data columns into a
+polygon boundary map, and MapShaper.org makes this very easy. Imagine
+that you have two files:
+
+-   Connecticut town boundary map
+-   a spreadsheet of town population data
+
+Your goal is to unite these files, so that you can later display them in
+a thematic polygon map. Since these two files share a common column of
+data – the town names – you can join them together into one merged file.
+
+![](images/09-transform/mapshaper-join-table-concept.png)
+
+Try it! Right-click each link and Save to download two sample files to
+your computer:
+
+-   [ct-towns in GeoJSON format](data/ct-towns.geojson)
+-   [ct-towns-popdensity in CSV format](data/ct-towns-popdensity.csv)
+
+If you accidentally open a page of GeoJSON code in your browser, select
+File &gt; Save Page As to download to your computer.
+
+Refresh the browser to start a new session in
+<a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>.
+
+1.  Drag-and-drop the ct-towns.geojson boundary file into MapShaper.
+    Select the “i” info button and click on any polygon to confirm that
+    the column header is “name”.
+
+2.  Open the ct-towns-popdensity.csv file with any spreadsheet tool and
+    confirm that first column header also is “name”. Close this file.
+
+3.  Drag-and-drop the ct-towns-popdensity.csv file into MapShaper.org,
+    and select the Import button to add it as a second layer. This table
+    layer will appear as rectangular cells, because it does not contain
+    geographic information.
+
+4.  Click the drop-down menu and select the map to display it as the
+    active layer.
+
+![](images/09-transform/mapshaper-join-select-map-layer.png)
+
+1.  Click the Console button, type this command, and press return:
+
+<!-- -->
+
+    -join ct-towns-popdensity.csv keys=name,name
+
+Type this precisely, with **no spaces** between the words in your keys.
+This command instructs MapShaper to join the active map layer to the CSV
+table layer, based on their shared column of data, labeled as “name” in
+both files. In this example, 169 rows are merged together.
+
+![](images/09-transform/mapshaper-join-console.png)
+
+1.  Click the Console button to close the command window. Select the “i”
+    info button and click any polygon to confirm that it now contains
+    the new table data. Export the file in your preferred format.
+
+![](images/09-transform/mapshaper-join-confirm.png)
+
+#### More about joins
+
+1.  If you don’t have a CSV table that matches the columns in your
+    boundary map data, you can easily create one. Upload the boundary
+    map to MapShaper.org, and export in CSV format, and open with any
+    spreadsheet tool. To match data columns in the CSV spreadsheet, use
+    the [VLOOKUP method in this book](vlookup.html).
+
+2.  The simple join example above uses identical keys (name,name)
+    because the two columns headers are the same. But if you need to
+    join data where the headers are not the same, enter the first key
+    (the polygon map) and the second key (the CSV table).
+
+3.  Mapshaper also helps you to keep track of data that are not properly
+    joined or matched. For example, if the polygon map contains 169 rows
+    (one for each town in Connecticut), but the CSV table contains only
+    168 rows of data, Mapshaper will join all of those with matching
+    keys, and then display this message:
+
+<!-- -->
+
+    Joined 168 data records
+    1/169 target records received no data
+
+To capture data records that are not properly joined, add these terms at
+the end of your join command: `unjoined unmatched -info`. The first term
+saves a copy of each unmatched record from the target table to a new
+layer named “unmatched,” and the second term saves a copy of each
+unjoined record from the source table into another layer named
+“unjoined.” In the example below, see the console command and results,
+and a screenshot of the two new layers.
+
+    $ -join towns-data.csv keys=name,name unmatched unjoined -info
+    Joined 27 data records
+    2/29 target records received no data
+    2/29 source records could not be joined
+    Layer 1 ...
+
+![](images/09-transform/mapshaper-unmatched-unjoined.png)
+
+#### Merge selected polygons with join and dissolve commands
+
+\*\* TO DO \*\* fix screenshots to match new data files and column
+headers
+
+Another common task is to merge selected polygons in a boundary map,
+which you can do in MapShaper with the join and dissolve commands you
+learned above. Imagine that you wish to create regional “cluster”
+boundaries from smaller polygon areas. For example, the [Connecticut
+Department of Public
+Health](http://www.ct.gov/dph/cwp/view.asp?a=3123&q=397740) has grouped
+individual towns, such as Bloomfield and West Hartford, into regional
+health districts. Your task is to begin with a statewide polygon map of
+all town boundaries, and to create a new polygon map that displays these
+regional clusters.
+
+Try it! Right-click the link and Save to download the sample files to
+your computer: [ct-towns in GeoJSON format](data/ct-towns.geojson). If
+you accidentally open a page of GeoJSON code in your browser, select
+File &gt; Save Page As to download to your computer.
+
+Refresh the browser to start a new session in
+<a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>.
+
+1.  Import the ct-towns.geojson map file into
+    <a href="http://MapShaper.org" class="uri">http://MapShaper.org</a>.
+
+2.  Export in CSV format. This steps creates a spreadsheet that lists
+    all of the polygon town names, without geographic details.
+
+![](images/09-transform/towns-export-csv.png)
+
+1.  Open the CSV file with any spreadsheet tool. Copy the contents of
+    the “name” column, paste it into a second column, and change the
+    header of this second column to “merged”.
+
+2.  In the new “merged” column, create new listings for towns you wish
+    to merge together. In this example, Bloomfield and West Hartford are
+    merged into Bloomfield-West Hartford. Leave other towns unchanged.
+
+![](images/09-transform/CT-towns-merged-csv.png)
+
+1.  Save this spreadsheet in CSV format with a new file name, such as:
+    ct-towns-merged.csv.
+
+2.  Drag this new ct-towns-merged.csv file into MapShaper, and click
+    Import.
+
+3.  Use the drop-down menu to manage multiple layers in MapShaper. Since
+    the CSV file has no geography, it appears as a series of rectangular
+    cells. Instead, select the ct-towns.geojson map to display it as the
+    active layer.
+
+![](images/09-transform/mapshaper-two-layers.png)
+
+1.  Click on the Console button, type in both of the commands below, and
+    press Return at the end of each line:
+
+<!-- -->
+
+    -join CT-towns-merged.csv keys=name,name
+    -dissolve merged
+
+How to understand the commands above:
+
+-   The first line “joins” the active layer (the polygon map) to the CSV
+    spreadsheet, with “keys” to match their shared data columns, which
+    are both labeled as “name”.
+
+-   The second line dissolves the polygons of towns listed in the
+    “merged” column of the CSV file. In this simple example, only
+    Bloomfield and West Hartford are dissolved into a combined
+    “Bloomfield-West Hartford” regional health district, and all of the
+    other polygons remain the same.
+
+    ![](images/09-transform/mapshaper-towns-merged.png)
+
+Click the Console button to close its window. Select the “i” information
+button to inspect your merged polygons. Export the map in your preferred
+format.
+
+#### Learn more advanced MapShaper methods
+
+-   See the MapShaper GitHub project wiki
+    (<a href="https://github.com/mbloch/mapshaper/wiki/" class="uri">https://github.com/mbloch/mapshaper/wiki/</a>)
+    for more command references and tips about map simplification
+
+**TO DO**: illustrate concept of a point-to-polygon spatial join. When
+using the join command, “If the keys= option is missing, Mapshaper will
+perform a point-to-polygon or polygon-to-point spatial join.”
+
+Convert a Compressed KMZ file to KML format
+-------------------------------------------
+
+Sometimes KML files are distributed in compressed KMZ format. One easy
+conversion method:
+
+-   Install the free [Google Earth tool](https://www.google.com/earth/)
+
+-   Double-click on any .kmz file to open it in Google Earth
+
+-   Right-click (or control-click) on the .kmz layer and select *Save
+    As*
+
+    <img src="images/09-transform/google-earth-convert-kmz.png" class="center" />
+
+-   Use the *Save As* drop down menu to select .kml format
+
+    <img src="images/09-transform/google-earth-save-kml.png" class="center" />
+
+Or use any zip-utility and simply unzip the kmz file. Kmz is simply a
+‘zipped’ version of a kml file!
+
+<!--chapter:end:11-transform.Rmd-->
+
+Detect Bias in Data Stories
+===========================
+
+While we like to believe data visualizations simply “tell the truth,”
+when you dig further into this topic, you realize that there are
+multiple ways to represent reality. In this chapter, you will learn how
+visualizations display the biases of the people and the software that
+create them. Although we cannot stop bias, we can teach people to look
+for and detect it, and be aware of our own.
+
+Sections in this chapter:
+
+-   [How to Lie with Charts](how-to-lie-with-charts.html), inspired by
+    Darrell Huff (1954)
+-   [How to Lie with Maps](how-to-lie-with-maps.html), inspired by Mark
+    Monmonier (1996)
+
+Enroll in our free online course *TO DO add link*, which introduces
+these topics in the brief video below, and offers more exercises and
+opportunities to interact with instructors and other learners.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eWfI_ANQT2Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+
+#### Learn more
+
+-   Darrell Huff, How to Lie with Statistics (W. W. Norton & Company,
+    1954),
+    <a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a>
+-   Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of
+    Chicago Press, 1996),
+    <a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a>
+-   Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February
+    9, 2017,
+    <a href="http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/" class="uri">http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/</a>
+
+How to Lie with Charts
+----------------------
+
+One of the best ways to learn how to detect bias in data visualization
+is to intentionally manipulate a chart, and tell two (or more) opposing
+stories with the same data. You’ll learn what to watch out for when
+viewing other people’s charts, and think more carefully about the
+ethical issues when you design your own.
+
+This exercise was inspired by a classic book published more than fifty
+years ago: Darrell Huff, *How to Lie with Statistics* (W. W. Norton &
+Company, 1954),
+<a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a>
+
+Right-click this link and Save to download this sample data in CSV
+format to your computer:
+[us-gross-domestic-product-per-capita](data/us-gross-domestic-product-per-capita.csv).
+This historical data on economic productivity comes from the World Bank,
+World Development Indicators,
+<a href="http://data.worldbank.org/data-catalog/world-development-indicators" class="uri">http://data.worldbank.org/data-catalog/world-development-indicators</a>
+
+Upload the CSV file to your Google Drive (with Settings to Convert to
+Google format) to create a Google Sheet.
+
+Select the data cells and Insert &gt; Chart &gt; Line chart, similar to
+the default version shown below:
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/11yrhgBX16JL3O99EfK6mjiRwA6CGZkfuSGXbXhrBLEQ/pubchart?oid=1711889200&amp;format=interactive">
+</iframe>
+
+In your Google Sheet chart, double-click the vertical y-axis to edit the
+Minimum and Maximum values.
+
+![Screenshot: Edit the Min and Max values of the
+Y-axis](images/10-detect/y-axis-min-max.png)
+
+Make the line look “flatter” (slower economic growth) by lowering the
+minimum to $36,000, and increasing the maximum to $100,000, as shown
+below:
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/11yrhgBX16JL3O99EfK6mjiRwA6CGZkfuSGXbXhrBLEQ/pubchart?oid=1294345990&amp;format=interactive">
+</iframe>
+
+Make the line look like a “sharper increase” (faster economic growth) by
+increasing the minimum to $38,000, and lowering maximum to $52,000, as
+shown below:
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/11yrhgBX16JL3O99EfK6mjiRwA6CGZkfuSGXbXhrBLEQ/pubchart?oid=534244967&amp;format=interactive">
+</iframe>
+
+\*\* TO DO – add conclusion \*\*
+
+How to Lie with Maps
+--------------------
+
+One of the best ways to learn how to detect bias in data visualization
+is to intentionally manipulate a map, and tell two (or more) opposing
+stories with the same data. You’ll learn what to watch out for when
+viewing other people’s maps, and think more carefully about the ethical
+issues when you design your own.
+
+This exercise was inspired by Mark S. Monmonier, *How to Lie with Maps,
+2nd ed.* (University of Chicago Press, 1996),
+<a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a>
+
+First, scroll through this data on Median Household Income for
+Hartford-area towns, 2011-15, from American Community Survey 5-year
+estimates. Or right-click to [open this Google Sheet in a new
+tab](https://docs.google.com/spreadsheets/d/13bFHsXJtADIkUCGgjpO76RjrV0OAu62hzK-J3bXEVsk/edit#gid=556312122).
+
+<iframe src="https://docs.google.com/spreadsheets/d/13bFHsXJtADIkUCGgjpO76RjrV0OAu62hzK-J3bXEVsk/pubhtml?gid=556312122&amp;single=true&amp;widget=true&amp;headers=false">
+</iframe>
+
+Next, explore two different polygon maps of the same data. Use the
+drop-down menu to compare “Extreme Differences” versus “Uniform
+Equality”
+
+<iframe src="https://handsondataviz.github.io/leaflet-how-to-lie-with-maps/" width="90%" height="500">
+</iframe>
+
+Why are these two maps portray the same data so differently? To see the
+answer, look at the data ranges. . ..
+
+\*\* TO DO \*\*
+
+Create your own version…
+
+<!--chapter:end:12-detect.Rmd-->
+
+Tell Your Data Story
+====================
+
+TODO: Write this chapter: Tell the story about your data, including its
+most meaningful insights and limitations Write compelling titles,
+labels, and sentences to accompany your visualization. Call attention to
+the most meaningful insights in your chart, and explain any data
+limitations.
+
+This chapter draws inspiration from Cole Nussbaumer Knaflic,
+*Storytelling with Data: A Data Visualization Guide for Business
+Professionals* (Wiley, 2015),
+<a href="http://www.storytellingwithdata.com/book/" class="uri">http://www.storytellingwithdata.com/book/</a>
+
+-   Beginning, Middle, and End
+-   Draw Attention to Meaning
+
+<!--chapter:end:13-story.Rmd-->
 
 Peer Review Samples
 ===================
@@ -8439,6 +8256,17 @@ Be sure to use the *embed* link from the YouTube *share* button.
 <p class="caption">
 Figure 22: Caption here, with embedded link to the [YouTube
 video](https://youtu.be/-nGdrzMuUnI).
+</p>
+
+### Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF
+
+<iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="100%" height="400px">
+</iframe>
+<p class="caption">
+Figure 23: Caption and video **only** appear in the HTML version, with
+embedded link to the [YouTube video](https://youtu.be/w6dQ-RIQ5bc). Note
+that using this will change figure-numbering between HTML vs PDF
+versions.
 </p>
 
 Tables

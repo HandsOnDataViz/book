@@ -273,6 +273,13 @@ Be sure to use the *embed* link from the YouTube *share* button.
 if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-nGdrzMuUnI") else knitr::include_graphics("images/15-bookdown/video-sample.png")
 ```
 
+### Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF {-}
+(ref:video-sample2) Caption and video **only** appear in the HTML version, with embedded link to the [YouTube video](https://youtu.be/w6dQ-RIQ5bc). Note that using this will change figure-numbering between HTML vs PDF versions.
+
+```{r video-sample2, fig.cap="(ref:video-sample2)"}
+if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/w6dQ-RIQ5bc")
+```
+
 ## Tables {- #tables}
 View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd
 

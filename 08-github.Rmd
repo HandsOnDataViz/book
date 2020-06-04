@@ -1,43 +1,38 @@
 # Modify and Host Code with GitHub {#github}
-In the first half of this book, we explored free web services that offer easy drag-and-drop tools to create interactive charts and maps, such as Google Sheets, Google My Maps, Carto, and Tableau Public. But these web services have limited options for designing and customizing your visualizations, and also make you dependent on their web servers to host your work. In this second half of the book, we'll explore how to copy, edit, and host code templates, meaning pre-written software instructions to create visualizations. With templates, no prior coding skills are necessary. You will learn how to make simple edits to insert your data, customize its appearance, and display it on the web on a site you control.
+In the first half of this book, you created interactive charts and maps on platforms that feature drag-and-drop tools, such as Google Sheets and Tableau Public. These platforms are great for beginners, but their pre-set tools limit your options for designing and customizing your visualizations, and they also require you to depend on their web servers to host your work.
 
-Enroll in our [free online course](https://www.edx.org/course/data-visualization-for-all), which introduces these topics in the brief video below, and offers more exercises and opportunities to interact with instructors and other learners.
+In the second half of this book, get ready to make a big leap, and we'll help you along the way. You will learn how to copy, edit, and host code templates---meaning pre-written software instructions that create data visualizations---which you can modify. With templates, you'll learn how to make simple edits to insert your data, customize its appearance, and display it on the web on a site that you control. No prior coding experience is required, but it helps if you're *code-curious* and willing to experiment with your computer.
 
-#### Video overview {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/w6dQ-RIQ5bc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+Code templates are similar to cookbook recipes. Imagine you're in your kitchen, looking at our favorite recipe that we've publicly shared to make brownies (yum!), which begins with these three steps: `Melt butter, Add sugar, Mix in cocoa.` Recipes are templates, meaning that you can follow them precisely, or modify them to suit your tastes. Imagine that you copy our recipe (or "fork" it, as coders say) and insert a new step: `Add walnuts`. If you also publicly share your recipe, now there will be two versions of instructions, to suit both those who strongly prefer or dislike nuts in their brownies. (We do not take sides in this deeply polarizing dispute.)
 
-#### Tool Review {-}
-GitHub (http://github.com) is a versatile tool to share, edit, and host simple code templates on the public web. Requires a free account. Although advanced coders use more powerful command-line versions of this tool, this introduction demonstrates all of the basic steps using GitHub in the web browser.
+Currently, the most popular cookbook among coders is GitHub <https://github.com>, with more than 40 million users and over 100 million recipes (or "code repositories" or "repos"). You can sign up for a free account and choose to make your repos private (like Grandma's secret recipes) or public (like the ones we share below). GitHub encourages sharing *open-source code*, meaning the creator grants permission for others to freely distribute and modify it, based on the conditions of the type of license they have selected. When you create a brand-new repo, GitHub invites you to [Choose a License](https://choosealicense.com/). Two of the most popular open-source software licenses are the [MIT License](https://choosealicense.com/licenses/mit/), which is very permissive, and the [GNU General Public License version 3](https://choosealicense.com/licenses/gpl-3.0/), which mandates that any modifications be shared under the same license. The latter version is often described as a *copyleft* license that requires any derivatives of the original code to remain publicly accessible, in contrast to traditional *copyright* that favors private ownership. When you fork a copy of someone's open-source code on GitHub, look at the type of license they've chosen (if any), keep it in your version, and respect its terms.
 
-- Pros:
-  - Free and easy-to-learn tool that beginners can use in the web browser.
-  - Popular tool to share, copy, and edit open-source code repositories (project folders).
-  - Host simple code (such as HTML/CSS/JavaScript) on the live web with GitHub Pages.
-  - Built-in support to quickly display open-data formats: CSV tables and GeoJSON geography.
-  - Easy to migrate code repositories to a different web server.
-- Cons:
-  - By default, all work on GitHub is public. Private repositories require payment.
-  - New users often confuse web addresses for code repository versus published web page.
+In this chapter, we'll walk you through these basic GitHub steps:
 
-In this chapter, you will learn how to:
+- Fork and modify your own copy of our simple Leaflet map code template
+- Host a live online version of your modified map code on the public web
+- Create your own brand-new code repo to upload your code or other files
 
-- [Fork and edit a simple Leaflet map with GitHub](fork-leaflet.html)
-- [Fork and edit a Highcharts scatter chart with GitHub](fork-highcharts.html)
-- [Create a new repository and upload code with GitHub](create-repo.html)
-- [Choose an open-source code license](choose-license.html)
-- [Pull request to merge changes on GitHub](pull-request.html)
-- [Work more efficiently with Atom editor and GitHub Desktop](atom-desktop.html)
-- [Fix Common Code and GitHub Errors](fix-code.html)
+You can perform all of the basic steps in the GitHub web browser interface, which is a great start for beginners. For intermediate-level users, we'll also show you how to work more efficiently on your personal computer with tools such as GitHub Desktop and Atom Editor.
+
+Finally, we'll discuss how to identify and fix common GitHub and code errors. All of us make mistakes and accidentally "break our code" from time to time, and it's a great way to learn how things really work (or in this case, how they don't work!)
+
+TODO above: insert cross-references to jump to sections
 
 ## Fork and Edit a Simple Leaflet Map with GitHub {- #fork-leaflet}
+
+TODO:
+
+- simplify further the leaflet-map-simple repo
+- add visuals to accompany forking section, similar to concepts in gitHub-video.Rmd text and video
+
 This tutorial introduces the **basic steps** of working with code templates, using a simple Leaflet map code (http://leafletjs.com) and GitHub in your browser (http://github.com). You will learn how to:
 
 - A) Fork (copy) Leaflet template to your GitHub account
 - B) Publish your live map to public web with GitHub Pages
-- C) Modify your map title and add layer controls
-- D) Geocode addresses [in a Google Sheet](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/) and upload points from data.csv
+- C) Modify your map title, zoom level, starting point, and marker
 
-Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](github.html). For more advanced examples, see the [Leaflet Map Templates](leaflet.html) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
+Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as Google MyMaps) and to create more customized visualizations on a web server that you control.  For more advanced examples, see the [Leaflet Map Templates](leaflet.html) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
 
 #### Try it {-}
 You will begin this tutorial with a simple interactive map that includes one pop-up point:
@@ -45,9 +40,6 @@ You will begin this tutorial with a simple interactive map that includes one pop
 
 By the end of this tutorial, you will learn how to modify the map, then geocode and upload more data points:
 <iframe src="https://handsondataviz.github.io/leaflet-map-simple-instructor-sample/" width="90%" height="350"></iframe>
-
-#### Video with step-by-step tutorial {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7iUocaxTYqk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 #### A) Fork (copy) Leaflet template to your GitHub account {-}
 Before you begin, sign up for a free GitHub account: http://github.com
@@ -105,55 +97,9 @@ var map = L.map('map', {
 });
 ```
 
-15) To change the default basemap, edit lines 46 and 52 to delete “.addTo(map)” from the Carto light layer, then add it to the Stamen colored terrain layer. DO NOT erase the semicolons!
+15) TODO: REVISE to make simpler change in carto url, such as "light" to "dark" or similar; To change the default basemap, edit lines 46 and 52 to delete “.addTo(map)” from the Carto light layer, then add it to the Stamen colored terrain layer. DO NOT erase the semicolons!
 
-Your original code looks like this (scroll to right to see all):
-```JavaScript
-/* Carto light-gray basemap tiles with labels */
-  var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-  }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  // controlLayers.addBaseLayer(light, 'Carto Light basemap');
-  /* Stamen colored terrain basemap tiles with labels */
-  var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-  }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  // controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
-```
 
-After you edit the code, it should look like this (scroll to right to see all):
-```JavaScript
-/* Carto light-gray basemap tiles with labels */
-var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-}); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-// controlLayers.addBaseLayer(light, 'Carto Light basemap');
-/* Stamen colored terrain basemap tiles with labels */
-var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-}).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-// controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
-```
-
-16) To add a control panel that turns on/off map layers, delete the code comment symbols (//) that appear in front of lines 38-41, 47, and 53 to activate these sections. When you remove code comments in GitHub, the color changes from gray text (inactive code) to colored text (active code). After you remove the code comments, your file should look like this (scroll to right to see all):
-```JavaScript
-/* Control panel to display map layers */
- var controlLayers = L.control.layers( null, null, {
-  position: "topright",
-  collapsed: false
- }).addTo(map);
-
-/* Carto light-gray basemap tiles with labels */
-var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-}); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
- controlLayers.addBaseLayer(light, 'Carto Light basemap');
-/* Stamen colored terrain basemap tiles with labels */
-var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-}).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
- controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
-```
 17) To change one point on the map, you could edit the latitude and longitude coordinates of the single marker in lines 55-57. To find coordinates for any location and to learn more, go to http://www.latlong.net
 
 ```JavaScript
@@ -161,133 +107,26 @@ var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}
 L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
 .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 ```
-But a better way to display several points is to remove the code comment symbols (//) in front of lines 60-69 to activate this section of code, which pulls map points from the data.csv file in your GitHub repository. After your edits, this section should look like this (scroll right to see all):
-```JavaScript
-/* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
- var customLayer = L.geoJson(null, {
-  onEachFeature: function(feature, layer) {
-    layer.bindPopup(feature.properties.Title);
-  }
- });
- var runLayer = omnivore.csv('data.csv', null, customLayer)
- .on('ready', function() {
-  map.fitBounds(runLayer.getBounds());
- }).addTo(map);
- controlLayers.addOverlay(customLayer, 'Markers from data.csv');
-```
 
-#### D) Geocode addresses in Google Sheet and upload points from data.csv {-}
-
-18) A better way to display multiple points on your map is to prepare and upload a new data.csv file to your GitHub repository. First, right-click to open this Google Sheets template in a new tab: [Leaflet Maps Simple data points with Geocoder](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/)
-
-19) Since this sheet is view-only, you cannot edit it. Instead, sign in to your Google account in the upper-right corner.
-
-20) Go to File > Make a Copy, which will save a duplicate version to your Google Drive, which you can edit.
-
-21) In your copy of the Google Sheet, select any cells and press Delete on your keyboard to erase contents. Type new titles and addresses into columns A and B.
-
-22) To geocode your new addresses (which means converting them into latitude and longitude coordinates), select all of the contents across 6 columns, from Address (B) to Source (G).
-
-23) Go to the Geocoder menu that appears in this special Google Sheet template, and select any service, such as US Census (for US addresses) or Google Maps. The first time you run the geocoder, the script will ask for permission.
-
-24) After you have geocoded your addresses, go to File > Download As > Comma-separated values (.CSV format) to save the file to your computer.
-
-25) In your computer, right-click the downloaded file to rename it to: data.csv
-
-26) In your GitHub repository, click Upload Files, then drag-and-drop your new data.csv file, and Commit to upload it. Go to your live map browser tab and refresh to view changes. **Be patient* during busy periods, when some edits may take up to 1 minute to appear.**
+TODO: About hosting: This chapter describes how to use the free GitHub Pages feature to host a live version of your code on the public web. But what if this service is no longer free at some point in the future, or you decide for any reason that it's best to host your code elsewhere? One advantage of creating data visualizations with code templates like the ones featured in this book is that you can host them on *any* web server. Our templates are designed using three very common types of code: an HTML file to..., a JavaScript file to..., and a Cascasding Style Sheets (or CSS) file to... Describe abbreviations:...  
 
 #### Learn more {-}
-- To solve problems, see [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
 - See more [advanced Leaflet Map Templates](leaflet.html) in this book
+- To solve problems, see [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
 - About Leaflet https://leafletjs.com
 - GitHub Pages features and tutorial, https://pages.github.com
 
-## Fork and Edit a Highcharts Scatter Chart with GitHub {- #fork-highcharts}
-TODO: Decide whether to keep or replace with Chart.js
 
-This tutorial introduces the **basic steps** of working with code templates, using a simple Highcharts scatter chart code (http://highcharts.com) and GitHub in your browser (http://github.com). You will learn how to:
-
-- A) Fork (copy) the Highcharts template to your GitHub account
-- B) Publish your live chart to the public web with GitHub Pages
-- C) Modify the chart title, subtitle, and axis labels
-- D) Upload new data points from a comma-separated values (.csv) spreadsheet
-
-Code templates help us to move beyond the limits of drag-and-drop web tools (such as Google Sheets and Tableau Public) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](github.html). For more advanced examples, see the [Highcharts Templates](highcharts.html) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
-
-#### Try it {-}
-You will begin this tutorial with a basic chart template that includes only 7 points. Right-click to open [full-size chart in new tab](https://handsondataviz.github.io/highcharts-scatter-csv/).
-
-<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv/" width="90%" height=425></iframe>
-
-By the end of this tutorial, you will learn how to modify the chart and add a new CSV spreadsheet with over 160 points. Right-click to open [full-size chart in new tab](https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample).
-
-<iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height=425></iframe>
-
-#### Video with step-by-step tutorial {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/72pgCZqWg7Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-#### A) Fork (copy) the Highcharts template to your GitHub account {-}
-
-Before you begin, sign up for a free GitHub account: http://github.com
-
-1) Right-click to open this GitHub code template in a new tab: https://github.com/handsondataviz/highcharts-scatter-csv
-
-2) In the upper-right corner of the code template, sign in to your free GitHub account
-
-3) In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your GitHub account. The web address (URL) of the new copy in your account will follow this format:
-```markdown
-https://github.com/USERNAME/REPOSITORY
-```
-
-Reminder: You can only fork a GitHub repo **one time**. If needed, see how to make a second copy in the [Create a New Repo in GitHub](create-repo) chapter in this book.
-
-#### B) Publish your live chart to the web with GitHub Pages {-}
-4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code template to a live map on a public website that you control.
-
-5) Scroll down to GitHub Pages section again, to select and copy the link to your published web site, which will follow this format:
-```markdown
-https://USERNAME.github.io/REPOSITORY
-```
-
-6) Scroll up to the top, and click on your repo name to go back to its main page.
-
-7) At the top level of your repo main page, click on README.md, and click the pencil icon to edit this file, written in easy-to-read Markdown code.
-
-8) Delete the existing link to the live site, and paste in the link to your site. Scroll down and Commit to save your edits.
-
-9) On your repo main page, right-click on the link to your published site to open in a new tab. **Be patient** during busy periods, when your website may take up to 1 minute to appear the first time.
-
-#### C) Modify the chart title, subtitle, and axis labels {-}
-10) Go back to your browser tab for your code repo. Click on the index.html file (which contains the chart code), and click the pencil icon to edit it.
-
-11) Explore the chart code, which contains HTML, CSS, and JavaScript. Look for code comments that begin with "EDIT" for sections that you can easily change, such as title, subtitle, x-axis and y-axis labels, and tooltip data labels. Scroll down to Commit your changes.
-
-12) Go to your live website browser tab and refresh the page to view your edits. **Be patient** during busy periods, when some edits may take up to 1 minute to appear.
-
-#### D) Upload new data points from a .CSV spreadsheet {-}
-
-13) Go to your GitHub code repository tab and click to view the file named: data-scatter.csv
-
-14) GitHub automatically opens CSV files. Although it's possible to edit the file inside GitHub, let's upload a larger data file with the same name. Click this link and Save to download to your computer: [data-scatter in CSV format](data/data-scatter.csv).
-
-15) In your GitHub code repo, click Upload Files, and drag the new data-scatter.csv into the folder, and Commit changes to replace the existing file with the same name.
-
-16) In your GitHub repo, click the new data-scatter.csv file to inspect the changes. Then go to your live website tab and refresh to see the updated scatter chart. ** Be patient** during busy periods, when changes make take up to 1 minute to appear.
-
-#### Learn more {-}
-- To solve problems, see the [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
-- See more [Highcharts Templates](highcharts.html) in this book
-- Highcharts Demos http://highcharts.com/demo and Highcharts Docs http://www.highcharts.com/docs
-- GitHub Pages features and tutorial, https://pages.github.com
-
-## Create a New Repo and Upload Code with GitHub {- #create-repo}
-Question: If I already forked one copy of a GitHub code repository, GitHub will not allow me to fork it a second time. So how do I make a second copy of a repo?
+## Create a New Repo and Upload Files on GitHub {- #create-repo}
+TODO: Revise after testing GitHub "template" setting. Question: If I already forked one copy of a GitHub code repository, GitHub will not allow me to fork it a second time. So how do I make a second copy of a repo?
 
 Answer: GitHub has a "one-fork" rule for good reasons, but here's a simple way for beginners to work around it, using only your web browser and any computer (such as Mac, Windows, or Chromebook).
 
 - Create a brand-new repository on GitHub in your browser
 - Download an existing code repository and unzip the folder
 - Upload the contents of that folder to your new repository and Commit Changes
+
+TODO: One of GitHub's many advantages is built-in support to quickly display open-data formats: CSV tables and GeoJSON geography. Upload a sample of each one to see how it looks....
 
 #### Video with step-by-step tutorial {-}
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Hev2UcoLtfw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -306,126 +145,18 @@ Answer: GitHub has a "one-fork" rule for good reasons, but here's a simple way f
 
 7) When the upload is done, inspect the contents that you copied into your brand-new repository. To publish your new repo to the live web, go to Settings > GitHub Pages > select Master branch > Save. Then copy the link to your published live site and paste into your README.md file for future reference. If you need to review these last steps, see Part B: Publish section of the [Fork and Edit a Leaflet Map](fork-leaflet.html) chapter in this book.
 
-## Choose an Open-Source Code License {- #choose-license}
-Whether you create a new code repository on GitHub, or fork a copy of someone else's code, you should understand the basic concepts of a software license. Developers have the option to add a `LICENSE` file to their GitHub repo, which explains what other people can (or cannot) do with their code.
 
-On GitHub, free repos are publicly viewable and forkable by other users, so the platform encourages the use of open-source licenses. One example that is commonly used for code templates linked to this book is the MIT License: it allows anyone to copy, modify, and redistribute the code, as long as they credit the author(s) and do not hold them liable. Learn more about different types of open-source code licenses at http://choosealicense.com
 
-#### Learn more {-}
-Licensing a Repository, GitHub Help page, https://help.github.com/articles/licensing-a-repository/
 
-## Pull Request to Merge Changes on GitHub {- #pull-request}
-TODO: REWRITE this out-of-date page to focus solely on pull requests, branches, and merge changes
 
-Sign up for a [free GitHub account](http://github.com), a free multi-purpose tool that allows you to:
-
-- View and fork a copy of open-source code from other users
-- Make simple edits to your code directly in the browser
-- Share your code and receive or suggest revisions to others
-- Host a live version of your web code with GitHub Pages
-
-GitHub is free if you publicly share your work. Private accounts require a subscription.
-
-This chapter shows the basic steps to use GitHub **entirely in your browser**, which works well for new users on nearly any computer (Mac, Windows, Chromebook, etc.) Intermediate users will want to read the next chapter with supplemental tools: GitHub Desktop and Atom editor. Advanced users may prefer to use GitHub command-line instructions, which are beyond the scope of this book.
-
-**TO DO:** REWRITE directions below to point users to GitHub Desktop and Atom Editor for editing on personal computer
-
-Newcomers can host their code on GitHub, and publish to the web using the GitHub Pages feature, by following step-by-step instructions or this [YouTube video screencast](http://youtu.be/ZVejLE8qtOI).
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZVejLE8qtOI?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-This basic tutorial demonstrates how to work with GitHub entirely through the browser. More advanced GitHub users may download other free tools (such as [GitHub for Mac](https://mac.github.com) or [GitHub for Windows](https://windows.github.com) or use other methods (such as the terminal command line) to work more efficiently.
-
-1) Inside your free GitHub account, create a new repository (also known as a repo) to host your project's code (such as an index.html file and more).
-
-![](images/08-github/GitHub-NewRepo.png)
-
-2) Enter a repository name and description and check the box to automatically add a README file. If desired, select an open-source license (such as MIT), and click the Create Repository button.
-
-![](images/08-github/GitHub-CreateRepo.png)
-
-3) Your new repository automatically starts opens the "master" branch. Use the drop-down menu to create a new branch, and name it "gh-pages" (which is short for GitHub Pages), and press enter or return on your keyboard.
-
-![](images/08-github/GitHub-CreateBranch.png)
-
-In this tutorial, we do all of our editing and testing work in the gh-pages branch, which automatically appears on the public web. When we're done, we will pull a copy (or sync) our completed work to the master branch for safekeeping and open sharing.
-
-4) To add ONE NEW FILE to the gh-pages branch, click the + button next to the repository name and enter the file name. For example, index.html is the default file name for most web projects.
-
-![](images/08-github/GitHub-CreateNewFile.png)
-
-5) Select the "soft wrap" option (which makes long code strings more readable), and paste code into the editor. In this example, I pasted HTML code that was generated by publishing an interactive chart from a Google Spreadsheet.
-
-![](images/08-github/GitHub-CreateFile.png)
-
-6) At the bottom, select the "commit" button (which means you are making a code change). Optionally, name and describe your commit, if you wish to track changes to your work.
-
-![](images/08-github/GitHub-CommitButton.png)
-
-7) Edit an existing file in the gh-pages branch by selecting its title. For example, select the README filename (which should have been automatically generated when you created the repository and the gh-pages branch). On the next screen, select the Edit button.
-
-![](images/08-github/GitHub-EditFile.png)
-
-![](images/08-github/GitHub-EditFile2.png)
-
-8) When editing the README file, type a link to the live web version of this repository, so that visitors may easily click to view it. The GitHub generic public web address is a combination of your username and ".github.io/" and your repository name, like this: `http://USERNAME.github.io/REPOSITORYNAME`
-
-In my README file, I typically write it this way so that visitors know to click the link:
-View live demonstration site at *TO DO: insert link*
-
-Commit your change to the README file in the gh-pages branch by pressing the green button at the bottom of the editor page.
-
-![](images/08-github/GitHub-EditReadMe.png)
-
-Hint: If you named your file "index.html" then you don't need to add anything else to the web address, because the site will automatically point to this default file. But if you entered a different file name, such as "sample.html", then you need to add it to the web address in this way:  `http://Username.github.io/Repositoryname/sample.html`
-
-9) Select the repository name to go to the upper-most file in the gh-pages branch.
-
-10) To view your live index.html code on the public web, click the link you created in your README file. (Hint: use the right-click feature to open in a new tab/window). Important: The very first time you create a gh-pages branch, it may take up to 10 minutes for its content to appear on the open web. Afterwards, when you add or edit files in this branch, they should appear nearly instantly on the web, though you may need to refresh your browser to view any changes you have made.
-
-![](images/08-github/GitHub-SelectRepoName2.png)
-
-11) To add MULTIPLE FILES to the gh-pages branch, you could copy and paste each one individually as shown above, or choose one of these labor-saving options:
-
-![](images/08-github/GitHub-ForkCloneDownload.png)
-
-If a code template already exists somewhere on GitHub, "fork" a copy of the repository to your own account, create a gh-pages branch for the live web, and edit/modify the files as desired.
-
-To sync and upload multiple files from your desktop to a GitHub repository, use the free GitHub for Mac or GitHub for Windows tool, which features a graphical user interface to do tasks above very easily.
-Advanced coders may use command-line instructions to upload and sync files to GitHub most efficiently.
-
-12) To BACKUP and SHARE your work: After adding or editing files in the gh-pages branch, create a "pull request" (to merge files) to the master branch.
-
-![](images/08-github/GitHub-PullRequest.png)
-
-13) Use the drop-down menus to CAREFULLY select the direction of the merge in this TO-FROM format:
-TO master branch FROM gh-pages branch
-
-![](images/08-github/GitHub-ToFrom.png)
-
-14) Follow these steps to finish the pull request, which merges all content TO the master branch FROM gh-pages branch:
-
-- Create the pull request (select green button)
-- Give it a title (such as "updated index and ReadMe")
-- Send pull request (green button)
-- Merge pull request (another green button)
-- Confirm merge (and another green button!)
-- Always double-check your repository branch names to do editing and live web testing in the gh-pages branch, then make sync a copy to public share in the master branch.
-
-To embed an interactive data visualization from a GitHub Pages host site into a secondary website (such as an organization's WordPress.org site), see the [Embed iframe with WordPress tutorial in this book](iframe-wordpress.html).
-
-See my sample repositories, with links to live demo sites, at https://github.com/?tab=repositories. Learn more about GitHub general features to share and collaborate on other users' public code repositories.
-
-**TO DO**
-Reminder: GitHub allows users to create **one fork** of a repo to your account. To create a second copy, go to the repo of your first copy, click Settings, and rename it. But if you rename your repo, you also will need to change any links you created to its live version in the next section.
-
-![](images/08-github/Github-settings-rename.png)
 
 ## Work more efficiently with Atom editor and GitHub Desktop {- #atom-desktop}
 TODO: REVISE outdated page: While you can do **nearly** everything in this book with GitHub in your browser, several steps will be faster and more efficient with two related free tools:
 
 - download Atom Editor from GitHub (https://atom.io)
 - download GitHub Desktop for Mac or Windows (https://desktop.github.com)
+
+TODO: also mention GitHub features that allow collaboration, such as branches and pull requests
 
 **UPDATE OLD INSTRUCTIONS**
 

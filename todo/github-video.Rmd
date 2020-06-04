@@ -1,0 +1,28 @@
+Notes
+
+From video: Our theme today is “Share, Edit, and Host Code Templates.” Up to this point in the course, we’ve created simple charts and maps using tools on free web services. On the pro side, these drag-and-drop tools are easy to learn. But on the con side, these services have limited options, and make you dependent on their web servers.
+S: Let’s introduce everyone to more powerful and flexible tools and show them how to use code templates.
+D: Hang on, when you say “code,” some people get nervous because it looks complicated.
+J: That’s why we use templates, Dave. They’re  pre-written software instructions to create common charts and maps. It means we only need to show students how to make simple edits to insert their data, customize its appearance, and display it online.
+S: We can share, edit, and host our templates using one free web service, called GitHub. Although advanced coders use more powerful versions of this tool, we can do everything we need through the web browser, which is great for beginners.
+D: Let’s walk through the big picture before digging into the details.
+J: In this conceptual diagram, I’ll start by sharing a pre-existing template, like those we provide in the links below, with the software instructions to make a simple map. We call this my “code repository,” and it includes an open-source license, which means anyone to make copies and modify them as they wish.
+Next, I need to host my code online, which means displaying its output to anyone who visits its public web address.
+S: Now I can copy Jack’s code, which is also called “forking” it, to make my own repository, or “repo” for short. Also, I’ll make a simple edit to add more data and color these markers red, and then host my version of the map on the web.
+D: I’ll go one step further. I’ll copy Stacy’s code, make another simple edit (which is called a “commit”) to change the map background, and host my version on the web. How do you guys like my map now?
+J: Looks better than mine.
+D: My repo is public, if any of you want to make a copy.
+J: I’ll pull your edits into my map. Thanks!
+S: No thanks, I like my map the way it is.
+J: So Dave, do you feel like a coder now?
+D: Actually, editing code and seeing your changes on the web is pretty cool….  Let’s see what else I can change . .. . . uhhh, I broke my code!
+S: No worries. You can go back a step, or if you want, copy my code again.
+D: Thanks!
+J: Breaking your code -- and figuring out why it doesn’t work -- is a great way to learn.
+S: Let’s create a help guide on how to identify and fix common coding errors.
+D: I’ll help to write that one, because I’ve made nearly every mistake that’s possible.
+J: To bring all of this together, let’s add exercises on creating maps and charts with templates that draw on powerful open-source code libraries:
+S: Let’s start with a very simple template that displays just 2-3 data points, stored inside the code. Then we’ll move up into more advanced templates that bring in your data from an external spreadsheet.
+
+#### Video overview {-}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w6dQ-RIQ5bc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

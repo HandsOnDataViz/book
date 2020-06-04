@@ -314,24 +314,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4>About Socrata API endpoints</h4>
 <p>Go to any Socrata open data platform, find a dataset, and click the API tab. As an example, you can use City of Hartford’s <a href="https://data.hartford.gov/Public-Safety/Police-Incidents-01012005-to-Current/889t-nwfu">Police Incidents dataset</a>.</p>
 <div class="figure">
-<img src="images/13-leaflet/data-hartford-api.png" alt="" />
+<img src="images/10-leaflet/data-hartford-api.png" alt="" />
 <p class="caption">Police Incidents dataset on Hartford Open Data portal</p>
 </div>
 <p>Copy the API endpoint. The default version is JSON.</p>
 <p>If you’re new to APIs, test the endpoint by pasting it into your browser address line. Ideally you would see a formatted JSON view (use Chrome or Firefox for better results).</p>
 <div class="figure">
-<img src="images/13-leaflet/data-hartford-api-json.png" alt="" />
+<img src="images/10-leaflet/data-hartford-api-json.png" alt="" />
 <p class="caption">Formatted JSON example in Firefox</p>
 </div>
 <p>If your browser does not support JSON view, you will see the raw JSON stream only, like the one shown below.</p>
 <div class="figure">
-<img src="images/13-leaflet/data-hartford-api-json-not-formatted.png" alt="" />
+<img src="images/10-leaflet/data-hartford-api-json-not-formatted.png" alt="" />
 <p class="caption">Unformatted JSON example in Firefox</p>
 </div>
 <p>Test if this Socrata endpoint supports GeoJSON format by changing the extention in the API dropdown menu from <code>JSON</code> to <code>GeoJSON</code>. GeoJSON format works best with Leaflet because the coding is simpler.</p>
 <p>If your endpoint supports GeoJSON format, your browser will display a data stream similar to the one below.</p>
 <div class="figure">
-<img src="images/13-leaflet/data-hartford-api-geojson.png" alt="" />
+<img src="images/10-leaflet/data-hartford-api-geojson.png" alt="" />
 <p class="caption">Formatted GeoJSON example in Firefox</p>
 </div>
 <p>If your Socrata endpoint only supports JSON format, but includes data columns with latitude and longitude, see other Leaflet examples further below.</p>

@@ -4888,19 +4888,19 @@ GitHub](github.html), as described in this book.
 </thead>
 <tbody>
 <tr class="odd">
-<td>Chart.js Bar Chart<br> <img src="images/12-chartjs/chartjs-bar.png" /></td>
+<td>Chart.js Bar Chart<br> <img src="images/09-chartjs/chartjs-bar.png" /></td>
 <td>Bar charts (vertical bar charts are often called column charts) can be used to compare categorical data. <br>Template with tutorial: <a href="chartjs-bar-csv.html">Bar Chart.js with CSV Data</a></td>
 </tr>
 <tr class="even">
-<td>Chart.js Line Chart<br> <img src="images/12-chartjs/chartjs-line.png" /></td>
+<td>Chart.js Line Chart<br> <img src="images/09-chartjs/chartjs-line.png" /></td>
 <td>Line charts are normally used to show trends (temporal data). <br>Template with tutorial: <a href="chartjs-line-csv.html">Line Chart with CSV Data</a></td>
 </tr>
 <tr class="odd">
-<td>Chart.js Scatter Chart<br> <img src="images/12-chartjs/chartjs-scatter.png" /></td>
+<td>Chart.js Scatter Chart<br> <img src="images/09-chartjs/chartjs-scatter.png" /></td>
 <td>Scatter charts (also scatterplots) are used to display data of 2 or more dimensions. <br>Template with tutorial: <a href="chartjs-scatter-csv.html">Scatter Chart with CSV Data</a></td>
 </tr>
 <tr class="even">
-<td>Chart.js Bubble Chart<br> <img src="images/12-chartjs/chartjs-bubble.png" /></td>
+<td>Chart.js Bubble Chart<br> <img src="images/09-chartjs/chartjs-bubble.png" /></td>
 <td>Bubble charts are used to display data of 3 or more dimensions. <br>Template with tutorial: <a href="chartjs-bubble-csv.html">Bubbble Chart with CSV Data</a></td>
 </tr>
 </tbody>
@@ -5094,15 +5094,15 @@ will teach more principles of modifying Leaflet code
 </thead>
 <tbody>
 <tr class="odd">
-<td>Leaflet Maps with Google Sheets<br> <img src="images/13-leaflet/leaflet-maps-with-google-sheets.png" /></td>
+<td>Leaflet Maps with Google Sheets<br> <img src="images/10-leaflet/leaflet-maps-with-google-sheets.png" /></td>
 <td>Best to show points, polygons, polylines, or point table data. Upload your GeoJSON data and modify settings in linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a></td>
 </tr>
 <tr class="even">
-<td>Leaflet Storymaps with Google Sheets<br> <img src="images/13-leaflet/leaflet-storymaps-with-google-sheets.png" /></td>
+<td>Leaflet Storymaps with Google Sheets<br> <img src="images/10-leaflet/leaflet-storymaps-with-google-sheets.png" /></td>
 <td>Create a scrolling narrative with points, text, images, and links. <br>Template with tutorial: <a href="leaflet-storymaps-with-google-sheets.html">Leaflet Storymaps with Google Sheets</a></td>
 </tr>
 <tr class="odd">
-<td>Leaflet Maps with Socrata API<br> <img src="images/13-leaflet/leaflet-socrata-api-control-layers.png" /></td>
+<td>Leaflet Maps with Socrata API<br> <img src="images/10-leaflet/leaflet-socrata-api-control-layers.png" /></td>
 <td>Create a Leaflet map powered by data from any Socrata data portal. <br>Template with tutorial: <a href="leaflet-maps-with-socrata.html">Leaflet Maps with Socrata</a></td>
 </tr>
 </tbody>
@@ -5511,7 +5511,7 @@ GitHub](create-repo.html) chapter in this book.
 
     https://USERNAME.github.io/leaflet-maps-with-google-sheets
 
-<iframe src="images/13-leaflet/lmwgs-1-fork-640.gif" width="100%" height="400px">
+<iframe src="images/10-leaflet/lmwgs-1-fork-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
 Figure 10: Screencast: Fork
@@ -5545,7 +5545,7 @@ Figure 10: Screencast: Fork
     to Anyone with the link &gt; Can View the Sheet. This will make your
     public data easier to view in your map.
 
-<iframe src="images/13-leaflet/lmwgs-2-make-copy-640.gif" width="100%" height="400px">
+<iframe src="images/10-leaflet/lmwgs-2-make-copy-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
 Figure 11: Screencast: Share Google Sheet
@@ -5555,14 +5555,14 @@ Figure 11: Screencast: Share Google Sheet
     so the Leaflet map code can read it.
 
 ![Screenshot: File &gt; Publish the link to your Google
-Sheet](images/13-leaflet/lmwgs-file-publish.png)
+Sheet](images/10-leaflet/lmwgs-file-publish.png)
 
 1.  At the top of your browser, copy your Google Sheet web address or
     URL (which usually ends in `...XYZ/edit#gid=0`). Do NOT copy the
     published URL (which usually ends in `...XYZ/pubhtml`).
 
 ![Screenshot: Copy the Google Sheet URL, not the Publish
-URL](images/13-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
+URL](images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 
 #### C) Paste your Google Sheet URL in two places in your GitHub repo
 
@@ -5578,7 +5578,7 @@ URL](images/13-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 4.  Scroll to bottom of page and press Commit to save your changes. Now
     the Leaflet Map code can locate your published Google Sheet.
 
-<iframe src="images/13-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="100%" height="400px">
+<iframe src="images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
 Figure 12: Screencast: Copy Google Sheet URL and paste into GitHub code
@@ -5931,14 +5931,14 @@ GitHub](create-repo.html) chapter in this book.
     so the Leaflet map code can read it.
 
 ![Screenshot: File &gt; Publish the link to your Google
-Sheet](images/13-leaflet/lmwgs-file-publish.png)
+Sheet](images/10-leaflet/lmwgs-file-publish.png)
 
 1.  At the top of your browser, copy your Google Sheet web address or
     URL (which usually ends in `...XYZ/edit#gid=0`). Do NOT copy the
     published URL (which usually ends in `...XYZ/pubhtml`).
 
 ![Screenshot: Copy the Google Sheet URL, not the Publish
-URL](images/13-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
+URL](images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 
 #### C) Paste your Google Sheet URL in two places in your GitHub repo
 
@@ -6099,7 +6099,7 @@ tab. As an example, you can use City of Hartford’s [Police Incidents
 dataset](https://data.hartford.gov/Public-Safety/Police-Incidents-01012005-to-Current/889t-nwfu).
 
 ![Police Incidents dataset on Hartford Open Data
-portal](images/13-leaflet/data-hartford-api.png)
+portal](images/10-leaflet/data-hartford-api.png)
 
 Copy the API endpoint. The default version is JSON.
 
@@ -6108,13 +6108,13 @@ address line. Ideally you would see a formatted JSON view (use Chrome or
 Firefox for better results).
 
 ![Formatted JSON example in
-Firefox](images/13-leaflet/data-hartford-api-json.png)
+Firefox](images/10-leaflet/data-hartford-api-json.png)
 
 If your browser does not support JSON view, you will see the raw JSON
 stream only, like the one shown below.
 
 ![Unformatted JSON example in
-Firefox](images/13-leaflet/data-hartford-api-json-not-formatted.png)
+Firefox](images/10-leaflet/data-hartford-api-json-not-formatted.png)
 
 Test if this Socrata endpoint supports GeoJSON format by changing the
 extention in the API dropdown menu from `JSON` to `GeoJSON`. GeoJSON
@@ -6124,7 +6124,7 @@ If your endpoint supports GeoJSON format, your browser will display a
 data stream similar to the one below.
 
 ![Formatted GeoJSON example in
-Firefox](images/13-leaflet/data-hartford-api-geojson.png)
+Firefox](images/10-leaflet/data-hartford-api-geojson.png)
 
 If your Socrata endpoint only supports JSON format, but includes data
 columns with latitude and longitude, see other Leaflet examples further
@@ -6231,7 +6231,7 @@ tab](https://handsondataviz.github.io/leaflet-data-apis)
     endpoint.
 
 ![Screenshot: Sample API endpoint in Socrata open data
-repo](images/13-leaflet/ct-open-data-api-endpoint.png)
+repo](images/10-leaflet/ct-open-data-api-endpoint.png)
 
 1.  Paste the endpoint link into your browser, change the suffix from
     `.json` to `.geojson` and press return. In order to show the
@@ -6241,7 +6241,7 @@ repo](images/13-leaflet/ct-open-data-api-endpoint.png)
     sign of success is a long stream of GeoJSON data like this:
 
 ![Screenshot: API endpoint with .geojson suffix in Chrome
-browser](images/13-leaflet/ct-open-data-geojson.png)
+browser](images/10-leaflet/ct-open-data-geojson.png)
 
 1.  In this section of the Leaflet map template, the code includes a
     jQuery function `$.getJSON` to call the open data endpoint in
@@ -6496,7 +6496,7 @@ results in the Found and Quality columns.
     template](leaflet-maps-with-google-sheets.html) in this book
     includes this Geocoder script.
 
-<iframe src="images/09-transform/google-sheets-geocoder-census-google.gif" width="100%" height="400px">
+<iframe src="images/11-transform/google-sheets-geocoder-census-google.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
 Figure 13: Screencast: Google Sheets Geocoder: US Census or Google
@@ -6513,7 +6513,7 @@ Figure 13: Screencast: Google Sheets Geocoder: US Census or Google
     Census 2010 Geographies
 -   Google Sheets script will ask for permission to run the first time
 
-<iframe src="images/09-transform/google-sheets-geocoder-census-geographies.gif" width="100%" height="400px">
+<iframe src="images/11-transform/google-sheets-geocoder-census-geographies.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
 Figure 14: Screencast: Google Sheets Geocoder: US Census Geographies
@@ -6602,7 +6602,7 @@ AnyID | Street | City | State | Zip |
     columns: any ID number, street, city, state, zip code. **Remove all
     column headers**.
 
-![](images/09-transform/address-no-column-headers.png)
+![](images/11-transform/address-no-column-headers.png)
 
 Hints:
 
@@ -6638,7 +6638,7 @@ Hints:
     Get Results button, and be patient if using the service during busy
     weekday hours.
 
-![](images/09-transform/census-geocoder-batch.png)
+![](images/11-transform/census-geocoder-batch.png)
 
 1.  Census Geocoder will download the results through your web browser
     in a file named: GeocodeResults.csv. Since these results do not
@@ -6647,7 +6647,7 @@ Hints:
     documentation](http://www.census.gov/geo/maps-data/data/geocoder.html)
     for more details.
 
-![](images/09-transform/geocode-results.png)
+![](images/11-transform/geocode-results.png)
 
 1.  Use a spreadsheet tool to open the CSV file. Sort results by the
     match quality (columns C and D), with these entries: match exact,
@@ -6692,14 +6692,14 @@ open data repository, which is already split into separate columns:
     generic spreadsheet format.
 
 ![Screenshot: Export US Hospital data into CSV
-format](images/09-transform/hospital-socrata-export.png)
+format](images/11-transform/hospital-socrata-export.png)
 
 1.  Open the file with any spreadsheet tool, and create a pivot table to
     count up the number of hospitals in each state. For help, see the
     [Pivot Table tutorial](pivot.html) in this book.
 
 ![Screenshot: Pivot Table of US Hospitals by
-State](images/09-transform/hospital-pivot-table.png)
+State](images/11-transform/hospital-pivot-table.png)
 
 1.  Now you can copy and paste the pivot table raw data of hospitals by
     US states. See the [Normalize Data tutorial](normalize.html) and
@@ -6815,7 +6815,7 @@ story you wish to emphasize. Look at the table excerpt below on US
 population and land area by state in 2015:
 
 ![Screenshot: US population and land
-area](images/09-transform/us-population-area-2015.png)
+area](images/11-transform/us-population-area-2015.png)
 
 There are at least two acceptable ways to normalize this raw data:
 
@@ -6910,7 +6910,7 @@ columns does not matter. Also, you can add more headers to identify each
 point (example: name) and include more details (known as the properties
 of the features).
 
-![](images/09-transform/name-lat-lon-info.png)
+![](images/11-transform/name-lat-lon-info.png)
 
 Save your spreadsheet in generic CSV format. *Hint:* see [Save
 Spreadsheet as CSV chapter](csv.html) in this book.
@@ -6923,7 +6923,7 @@ data tools can easily open.
 Drag the CSV file into the GeoJSON.io map window. Flip between the JSON
 and Table tabs to view or edit the data.
 
-<iframe src="images/09-transform/dataviz-geojsonio-640.gif" width="100%" height="400px">
+<iframe src="images/11-transform/dataviz-geojsonio-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
 Figure 15: Screencast: GeoJson.io
@@ -6944,7 +6944,7 @@ window. Flip between the JSON and Table tabs to view or edit the data.
 
 Select the Save menu and export into GeoJSON format.
 
-![](images/09-transform/geojson-save-as.png)
+![](images/11-transform/geojson-save-as.png)
 
 #### Create GeoJSON data with drawing tools
 
@@ -7020,7 +7020,7 @@ File &gt; Save Page As to download to your computer.
 -   SVG (Scalable Vector Graphics, for print or online)
 -   CSV (Comma Separated Values, generic spreadsheet format)
 
-<iframe src="images/09-transform/mapshaper-convert-640.gif" width="100%" height="400px"></iframe>
+<iframe src="images/11-transform/mapshaper-convert-640.gif" width="100%" height="400px"></iframe>
 <p class="caption">
 (\#fig:mapshaper-convert)Screencast: Mapshaper convert
 </p>
@@ -7035,7 +7035,7 @@ To edit data for any polygon in MapShaper.org:
 
 -   Click inside its pop-up info window to directly edit the data
 
-    ![](images/09-transform/mapshaper-edit-info.png)
+    ![](images/11-transform/mapshaper-edit-info.png)
 
 #### Simplify map boundaries to reduce file size
 
@@ -7064,7 +7064,7 @@ statewide zoom level – to a reduced size of about 200KB.
 5.  Complete the process by clicking Simplify once again. Export your
     file in the preferred format for your project.
 
-![](images/09-transform/mapshaper-simplify.png)
+![](images/11-transform/mapshaper-simplify.png)
 
 #### Dissolve internal polygons to create an outline map
 
@@ -7079,7 +7079,7 @@ Export your outline map.
 
     -dissolve
 
-<iframe src="images/09-transform/mapshaper-dissolve-simple-640.gif" width="100%" height="400px">
+<iframe src="images/11-transform/mapshaper-dissolve-simple-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
 Figure 17: Screencast: Mapshaper dissolve
@@ -7135,7 +7135,7 @@ Refresh the browser to start a new session in
 
 **TO DO** fix animation to match new file names
 
-<iframe src="images/09-transform/mapshaper-clip-640.gif" width="100%" height="400px">
+<iframe src="images/11-transform/mapshaper-clip-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
 Figure 18: Screencast: Mapshaper clip
@@ -7166,7 +7166,7 @@ Your goal is to unite these files, so that you can later display them in
 a thematic polygon map. Since these two files share a common column of
 data – the town names – you can join them together into one merged file.
 
-![](images/09-transform/mapshaper-join-table-concept.png)
+![](images/11-transform/mapshaper-join-table-concept.png)
 
 Try it! Right-click each link and Save to download two sample files to
 your computer:
@@ -7195,7 +7195,7 @@ Refresh the browser to start a new session in
 4.  Click the drop-down menu and select the map to display it as the
     active layer.
 
-![](images/09-transform/mapshaper-join-select-map-layer.png)
+![](images/11-transform/mapshaper-join-select-map-layer.png)
 
 1.  Click the Console button, type this command, and press return:
 
@@ -7208,13 +7208,13 @@ This command instructs MapShaper to join the active map layer to the CSV
 table layer, based on their shared column of data, labeled as “name” in
 both files. In this example, 169 rows are merged together.
 
-![](images/09-transform/mapshaper-join-console.png)
+![](images/11-transform/mapshaper-join-console.png)
 
 1.  Click the Console button to close the command window. Select the “i”
     info button and click any polygon to confirm that it now contains
     the new table data. Export the file in your preferred format.
 
-![](images/09-transform/mapshaper-join-confirm.png)
+![](images/11-transform/mapshaper-join-confirm.png)
 
 #### More about joins
 
@@ -7254,7 +7254,7 @@ and a screenshot of the two new layers.
     2/29 source records could not be joined
     Layer 1 ...
 
-![](images/09-transform/mapshaper-unmatched-unjoined.png)
+![](images/11-transform/mapshaper-unmatched-unjoined.png)
 
 #### Merge selected polygons with join and dissolve commands
 
@@ -7286,7 +7286,7 @@ Refresh the browser to start a new session in
 2.  Export in CSV format. This steps creates a spreadsheet that lists
     all of the polygon town names, without geographic details.
 
-![](images/09-transform/towns-export-csv.png)
+![](images/11-transform/towns-export-csv.png)
 
 1.  Open the CSV file with any spreadsheet tool. Copy the contents of
     the “name” column, paste it into a second column, and change the
@@ -7296,7 +7296,7 @@ Refresh the browser to start a new session in
     to merge together. In this example, Bloomfield and West Hartford are
     merged into Bloomfield-West Hartford. Leave other towns unchanged.
 
-![](images/09-transform/CT-towns-merged-csv.png)
+![](images/11-transform/CT-towns-merged-csv.png)
 
 1.  Save this spreadsheet in CSV format with a new file name, such as:
     ct-towns-merged.csv.
@@ -7309,7 +7309,7 @@ Refresh the browser to start a new session in
     cells. Instead, select the ct-towns.geojson map to display it as the
     active layer.
 
-![](images/09-transform/mapshaper-two-layers.png)
+![](images/11-transform/mapshaper-two-layers.png)
 
 1.  Click on the Console button, type in both of the commands below, and
     press Return at the end of each line:
@@ -7331,7 +7331,7 @@ How to understand the commands above:
     “Bloomfield-West Hartford” regional health district, and all of the
     other polygons remain the same.
 
-    ![](images/09-transform/mapshaper-towns-merged.png)
+    ![](images/11-transform/mapshaper-towns-merged.png)
 
 Click the Console button to close its window. Select the “i” information
 button to inspect your merged polygons. Export the map in your preferred
@@ -7360,11 +7360,11 @@ conversion method:
 -   Right-click (or control-click) on the .kmz layer and select *Save
     As*
 
-    <img src="images/09-transform/google-earth-convert-kmz.png" class="center" />
+    <img src="images/11-transform/google-earth-convert-kmz.png" class="center" />
 
 -   Use the *Save As* drop down menu to select .kml format
 
-    <img src="images/09-transform/google-earth-save-kml.png" class="center" />
+    <img src="images/11-transform/google-earth-save-kml.png" class="center" />
 
 Or use any zip-utility and simply unzip the kmz file. Kmz is simply a
 ‘zipped’ version of a kml file!
@@ -7441,7 +7441,7 @@ In your Google Sheet chart, double-click the vertical y-axis to edit the
 Minimum and Maximum values.
 
 ![Screenshot: Edit the Min and Max values of the
-Y-axis](images/10-detect/y-axis-min-max.png)
+Y-axis](images/12-detect/y-axis-min-max.png)
 
 Make the line look “flatter” (slower economic growth) by lowering the
 minimum to $36,000, and increasing the maximum to $100,000, as shown

@@ -30,7 +30,7 @@ Select the data cells and Insert > Chart > Line chart, similar to the default ve
 
 In your Google Sheet chart, double-click the vertical y-axis to edit the Minimum and Maximum values.
 
-![Screenshot: Edit the Min and Max values of the Y-axis](images/10-detect/y-axis-min-max.png)
+![Screenshot: Edit the Min and Max values of the Y-axis](images/12-detect/y-axis-min-max.png)
 
 Make the line look "flatter" (slower economic growth) by lowering the minimum to $36,000, and increasing the maximum to $100,000, as shown below:
 

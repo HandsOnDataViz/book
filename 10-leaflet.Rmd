@@ -20,9 +20,9 @@ TODO: add and clean up Leaflet Map CSV <https://github.com/HandsOnDataViz/leafle
 
 | Template | Best use and tutorial chapter |
 | --- | --- |
-| Leaflet Maps with Google Sheets<br> ![](images/13-leaflet/leaflet-maps-with-google-sheets.png) | Best to show points, polygons, polylines, or point table data. Upload your GeoJSON data and modify settings in linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) |
-| Leaflet Storymaps with Google Sheets<br> ![](images/13-leaflet/leaflet-storymaps-with-google-sheets.png) | Create a scrolling narrative with points, text, images, and links. <br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
-| Leaflet Maps with Socrata API<br> ![](images/13-leaflet/leaflet-socrata-api-control-layers.png) | Create a Leaflet map powered by data from any Socrata data portal. <br>Template with tutorial: [Leaflet Maps with Socrata](leaflet-maps-with-socrata.html) |
+| Leaflet Maps with Google Sheets<br> ![](images/10-leaflet/leaflet-maps-with-google-sheets.png) | Best to show points, polygons, polylines, or point table data. Upload your GeoJSON data and modify settings in linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) |
+| Leaflet Storymaps with Google Sheets<br> ![](images/10-leaflet/leaflet-storymaps-with-google-sheets.png) | Create a scrolling narrative with points, text, images, and links. <br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
+| Leaflet Maps with Socrata API<br> ![](images/10-leaflet/leaflet-socrata-api-control-layers.png) | Create a Leaflet map powered by data from any Socrata data portal. <br>Template with tutorial: [Leaflet Maps with Socrata](leaflet-maps-with-socrata.html) |
 
 #### Inside Leaflet code templates {-}
 The templates featured below vary from simple to complex, but all of them include three basic types of code:
@@ -279,7 +279,7 @@ https://USERNAME.github.io/leaflet-maps-with-google-sheets
 ```
 
 ```{r lmwgs-1, fig.cap="Screencast: Fork"}
-if(knitr::is_html_output()) knitr::include_url("images/13-leaflet/lmwgs-1-fork-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-1-fork-640.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
 6) Scroll up to the top, and click on your repo name to go back to its main page.
@@ -301,16 +301,16 @@ if(knitr::is_html_output()) knitr::include_url("images/13-leaflet/lmwgs-1-fork-6
 4) Click the blue Share button, click Advanced, click to change Private to Anyone with the link > Can View the Sheet. This will make your public data easier to view in your map.
 
 ```{r lmwgs-2, fig.cap="Screencast: Share Google Sheet"}
-if(knitr::is_html_output()) knitr::include_url("images/13-leaflet/lmwgs-2-make-copy-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-2-make-copy-640.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
 5) File > Publish the Link to your Google Sheet to the public web, so the Leaflet map code can read it.
 
-![Screenshot: File > Publish the link to your Google Sheet](images/13-leaflet/lmwgs-file-publish.png)
+![Screenshot: File > Publish the link to your Google Sheet](images/10-leaflet/lmwgs-file-publish.png)
 
 6) At the top of your browser, copy your Google Sheet web address or URL (which usually ends in `...XYZ/edit#gid=0`). Do NOT copy the published URL (which usually ends in `...XYZ/pubhtml`).
 
-![Screenshot: Copy the Google Sheet URL, not the Publish URL](images/13-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
+![Screenshot: Copy the Google Sheet URL, not the Publish URL](images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 
 #### C) Paste your Google Sheet URL in two places in your GitHub repo {-}
 
@@ -323,7 +323,7 @@ if(knitr::is_html_output()) knitr::include_url("images/13-leaflet/lmwgs-2-make-c
 4) Scroll to bottom of page and press Commit to save your changes. Now the Leaflet Map code can locate your published Google Sheet.
 
 ```{r lmwgs-paste, fig.cap="Screencast: Copy Google Sheet URL and paste into GitHub code"}
-if(knitr::is_html_output()) knitr::include_url("images/13-leaflet/lmwgs-paste-google-sheet-into-code.gif") else knitr::include_graphics("images/placeholder.jpg")
+if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
 5) Next, let's paste your Google Sheet URL in a second place to keep track of it. Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.
@@ -525,11 +525,11 @@ https://USERNAME.github.io/leaflet-storymaps-with-google-sheets
 
 5) File > Publish the Link to your Google Sheet to the public web, so the Leaflet map code can read it.
 
-![Screenshot: File > Publish the link to your Google Sheet](images/13-leaflet/lmwgs-file-publish.png)
+![Screenshot: File > Publish the link to your Google Sheet](images/10-leaflet/lmwgs-file-publish.png)
 
 6) At the top of your browser, copy your Google Sheet web address or URL (which usually ends in `...XYZ/edit#gid=0`). Do NOT copy the published URL (which usually ends in `...XYZ/pubhtml`).
 
-![Screenshot: Copy the Google Sheet URL, not the Publish URL](images/13-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
+![Screenshot: Copy the Google Sheet URL, not the Publish URL](images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 
 #### C) Paste your Google Sheet URL in two places in your GitHub repo {-}
 
@@ -625,23 +625,23 @@ Leaflet, a friendly and flexible open-source code library for creating interacti
 
 Go to any Socrata open data platform, find a dataset, and click the API tab. As an example, you can use City of Hartford's [Police Incidents dataset](https://data.hartford.gov/Public-Safety/Police-Incidents-01012005-to-Current/889t-nwfu).
 
-![Police Incidents dataset on Hartford Open Data portal](images/13-leaflet/data-hartford-api.png)
+![Police Incidents dataset on Hartford Open Data portal](images/10-leaflet/data-hartford-api.png)
 
 Copy the API endpoint. The default version is JSON.
 
 If you're new to APIs, test the endpoint by pasting it into your browser address line. Ideally you would see a formatted JSON view (use Chrome or Firefox for better results).
 
-![Formatted JSON example in Firefox](images/13-leaflet/data-hartford-api-json.png)
+![Formatted JSON example in Firefox](images/10-leaflet/data-hartford-api-json.png)
 
 If your browser does not support JSON view, you will see the raw JSON stream only, like the one shown below.
 
-![Unformatted JSON example in Firefox](images/13-leaflet/data-hartford-api-json-not-formatted.png)
+![Unformatted JSON example in Firefox](images/10-leaflet/data-hartford-api-json-not-formatted.png)
 
 Test if this Socrata endpoint supports GeoJSON format by changing the extention in the API dropdown menu from `JSON` to `GeoJSON`. GeoJSON format works best with Leaflet because the coding is simpler.
 
 If your endpoint supports GeoJSON format, your browser will display a data stream similar to the one below.
 
-![Formatted GeoJSON example in Firefox](images/13-leaflet/data-hartford-api-geojson.png)
+![Formatted GeoJSON example in Firefox](images/10-leaflet/data-hartford-api-geojson.png)
 
 If your Socrata endpoint only supports JSON format, but includes data columns with latitude and longitude, see other Leaflet examples further below.
 
@@ -702,11 +702,11 @@ Explore the map below or [view full-screen version in a new tab](https://handson
 
 3) Inside the open data repo, look for an API button and copy the endpoint.
 
-![Screenshot: Sample API endpoint in Socrata open data repo](images/13-leaflet/ct-open-data-api-endpoint.png)
+![Screenshot: Sample API endpoint in Socrata open data repo](images/10-leaflet/ct-open-data-api-endpoint.png)
 
 4) Paste the endpoint link into your browser, change the suffix from `.json` to `.geojson` and press return. In order to show the endpoint data as points on a map in this simple Leaflet template, the points must already be geocoded inside the open data repo, and the platform must support a GeoJSON endpoint. In your browser, one sign of success is a long stream of GeoJSON data like this:
 
-![Screenshot: API endpoint with .geojson suffix in Chrome browser](images/13-leaflet/ct-open-data-geojson.png)
+![Screenshot: API endpoint with .geojson suffix in Chrome browser](images/10-leaflet/ct-open-data-geojson.png)
 
 5) In this section of the Leaflet map template, the code includes a jQuery function `$.getJSON` to call the open data endpoint in GeoJSON format: `https://data.ct.gov/resource/v4tt-nt9n.geojson`. It also requires a Socrata app token, and you can get your own token for free at: https://dev.socrata.com/register. Each geocoded school in the Socrata data repository is displayed as a blue circle, with data properties (such as: name) in a clickable pop-up.
 

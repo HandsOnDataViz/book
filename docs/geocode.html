@@ -314,7 +314,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Note: The <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets template</a> in this book includes this Geocoder script.</li>
 </ul>
 <div class="figure"><span id="fig:googlesheets-geocoder"></span>
-<iframe src="images/09-transform/google-sheets-geocoder-census-google.gif" width="672" height="400px">
+<iframe src="images/11-transform/google-sheets-geocoder-census-google.gif" width="672" height="400px">
 </iframe>
 <p class="caption">
 Figure 11.1: Screencast: Google Sheets Geocoder: US Census or Google
@@ -331,7 +331,7 @@ Figure 11.1: Screencast: Google Sheets Geocoder: US Census or Google
 <li>Google Sheets script will ask for permission to run the first time</li>
 </ul>
 <div class="figure"><span id="fig:googlesheets-geocoder2"></span>
-<iframe src="images/09-transform/google-sheets-geocoder-census-geographies.gif" width="672" height="400px">
+<iframe src="images/11-transform/google-sheets-geocoder-census-geographies.gif" width="672" height="400px">
 </iframe>
 <p class="caption">
 Figure 11.2: Screencast: Google Sheets Geocoder: US Census Geographies
@@ -406,7 +406,7 @@ Figure 11.2: Screencast: Google Sheets Geocoder: US Census Geographies
 <li><p>Right-click and Save this CSV file to your computer: <a href="sample-addresses-50.csv">sample-addresses-50</a>. CSV means comma-separated values, a generic spreadsheet format that most data tools can easily open.</p></li>
 <li><p>Use any spreadsheet tool to organize your address data into five columns: any ID number, street, city, state, zip code. <strong>Remove all column headers</strong>.</p></li>
 </ol>
-<p><img src="images/09-transform/address-no-column-headers.png" /></p>
+<p><img src="images/11-transform/address-no-column-headers.png" /></p>
 <p>Hints:</p>
 <ul>
 <li>If your data lacks ID numbers, quickly <a href="calculate.html">create a column of consecutive numbers</a>, as shown in this book.</li>
@@ -424,11 +424,11 @@ Figure 11.2: Screencast: Google Sheets Geocoder: US Census Geographies
 <li><p>Select the Find Geographies Using…Address Batch button for maximum results, including lat-long coordinates and census geography (tracts and block groups). <em>If census geography is not needed, select Find Locations Using…Address Batch.</em></p></li>
 <li><p>Click the Choose button to upload your CSV file. Use the default benchmark and vintage settings for the most current data. Click the Get Results button, and be patient if using the service during busy weekday hours.</p></li>
 </ol>
-<p><img src="images/09-transform/census-geocoder-batch.png" /></p>
+<p><img src="images/11-transform/census-geocoder-batch.png" /></p>
 <ol start="7" style="list-style-type: decimal">
 <li>Census Geocoder will download the results through your web browser in a file named: GeocodeResults.csv. Since these results do not contain column headers, use the screenshot below for guidance, or <a href="http://www.census.gov/geo/maps-data/data/geocoder.html">read the Census Geocoder documentation</a> for more details.</li>
 </ol>
-<p><img src="images/09-transform/geocode-results.png" /></p>
+<p><img src="images/11-transform/geocode-results.png" /></p>
 <ol start="8" style="list-style-type: decimal">
 <li><p>Use a spreadsheet tool to open the CSV file. Sort results by the match quality (columns C and D), with these entries: match exact, match non-exact, tie, no-match.</p></li>
 <li><p>For results without an exact match, check the address for typos, and try to re-geocode in a separate CSV file. The US Census Geocoder tool is very good, but not perfect. For a few rows of hard-to-match data, use a different geocoding tool, such as the Google Maps &gt; What’s Here feature described at the top of this page, to look up individual addresses and coordinates.</p></li>

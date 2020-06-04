@@ -30,7 +30,7 @@ As with any geocoding service, accuracy is not guaranteed. Inspect your results 
 - Note: The [Leaflet Maps with Google Sheets template](leaflet-maps-with-google-sheets.html) in this book includes this Geocoder script.
 
 ```{r googlesheets-geocoder, fig.cap="Screencast: Google Sheets Geocoder: US Census or Google"}
-if(knitr::is_html_output()) knitr::include_url("images/09-transform/google-sheets-geocoder-census-google.gif") else knitr::include_graphics("images/placeholder.jpg")
+if(knitr::is_html_output()) knitr::include_url("images/11-transform/google-sheets-geocoder-census-google.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
 #### Google Sheets Geocoder: US Census Geographies {-}
@@ -41,7 +41,7 @@ https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1v
 - Google Sheets script will ask for permission to run the first time
 
 ```{r googlesheets-geocoder2, fig.cap="Screencast: Google Sheets Geocoder: US Census Geographies"}
-if(knitr::is_html_output()) knitr::include_url("images/09-transform/google-sheets-geocoder-census-geographies.gif") else knitr::include_graphics("images/placeholder.jpg")
+if(knitr::is_html_output()) knitr::include_url("images/11-transform/google-sheets-geocoder-census-geographies.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
 ##### About US Census 15-character GeoID {-}
@@ -94,7 +94,7 @@ If you do not wish to File > Make a Copy of the Google Sheet templates above, yo
 
 2) Use any spreadsheet tool to organize your address data into five columns: any ID number, street, city, state, zip code. **Remove all column headers**.
 
-  ![](images/09-transform/address-no-column-headers.png)
+  ![](images/11-transform/address-no-column-headers.png)
 
 Hints:
 
@@ -113,11 +113,11 @@ Hints:
 
 6) Click the Choose button to upload your CSV file. Use the default benchmark and vintage settings for the most current data. Click the Get Results button, and be patient if using the service during busy weekday hours.
 
-  ![](images/09-transform/census-geocoder-batch.png)
+  ![](images/11-transform/census-geocoder-batch.png)
 
 7) Census Geocoder will download the results through your web browser in a file named: GeocodeResults.csv. Since these results do not contain column headers, use the screenshot below for guidance, or [read the Census Geocoder documentation](http://www.census.gov/geo/maps-data/data/geocoder.html) for more details.
 
-  ![](images/09-transform/geocode-results.png)
+  ![](images/11-transform/geocode-results.png)
 
 8) Use a spreadsheet tool to open the CSV file. Sort results by the match quality (columns C and D), with these entries: match exact, match non-exact, tie, no-match.
 
@@ -138,11 +138,11 @@ Here's an example using a long list of US hospitals from the Medicare open data 
 
 1) Open the link above, see columns of data (Address, City, State, etc.), and click the blue Export button to download in the CSV generic spreadsheet format.
 
-![Screenshot: Export US Hospital data into CSV format](images/09-transform/hospital-socrata-export.png)
+![Screenshot: Export US Hospital data into CSV format](images/11-transform/hospital-socrata-export.png)
 
 2) Open the file with any spreadsheet tool, and create a pivot table to count up the number of hospitals in each state. For help, see the [Pivot Table tutorial](pivot.html) in this book.
 
-![Screenshot: Pivot Table of US Hospitals by State](images/09-transform/hospital-pivot-table.png)
+![Screenshot: Pivot Table of US Hospitals by State](images/11-transform/hospital-pivot-table.png)
 
 3) Now you can copy and paste the pivot table raw data of hospitals by US states. See the [Normalize Data tutorial](normalize.html) and also the [Edit and Join Spreadsheet with Polygon Map using Mapshaper](mapshaper.html) tutorial in this book.
 
@@ -173,7 +173,7 @@ But raw data still matters, too. Although normalized data allows for easier comp
 #### Different ways to normalize data {-}
 After you understand the basic concept, also think about different ways to normalize the same data. Your method depends on the type of data story you wish to emphasize. Look at the table excerpt below on US population and land area by state in 2015:
 
-![Screenshot: US population and land area](images/09-transform/us-population-area-2015.png)
+![Screenshot: US population and land area](images/11-transform/us-population-area-2015.png)
 
 There are at least two acceptable ways to normalize this raw data:
 
@@ -212,7 +212,7 @@ Go to http://geojson.io to explore this open-source web tool to convert, edit, a
 #### Convert a CSV spreadsheet of point data into GeoJSON {-}
 Use any spreadsheet tool and prepare a list of coordinate points (known as features). You must include column headers **lat** and **lon**, or a fuller spelling, such as *latitude* and *longitude*. The order of the columns does not matter. Also, you can add more headers to identify each point (example: name) and include more details (known as the properties of the features).
 
-![](images/09-transform/name-lat-lon-info.png)
+![](images/11-transform/name-lat-lon-info.png)
 
 Save your spreadsheet in generic CSV format. *Hint:* see [Save Spreadsheet as CSV chapter](csv.html) in this book.
 
@@ -221,7 +221,7 @@ Try it! Click this link and Save to download this sample file to your computer: 
 Drag the CSV file into the GeoJSON.io map window. Flip between the JSON and Table tabs to view or edit the data.
 
 ```{r geojsonio, fig.cap="Screencast: GeoJson.io"}
-if(knitr::is_html_output()) knitr::include_url("images/09-transform/dataviz-geojsonio-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+if(knitr::is_html_output()) knitr::include_url("images/11-transform/dataviz-geojsonio-640.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
 Select the Save menu and export into GeoJSON format.
@@ -233,7 +233,7 @@ Polygon boundary data is often shared as ArcGIS Shapefiles (.shp) or Keyhole Mar
 
 Select the Save menu and export into GeoJSON format.
 
-![](images/09-transform/geojson-save-as.png)
+![](images/11-transform/geojson-save-as.png)
 
 #### Create GeoJSON data with drawing tools {-}
 Use the <http://GeoJSON.io> drawing tools to create points, polygons, and polylines. Flip between the JSON and Table tabs to view or edit the data.
@@ -276,7 +276,7 @@ Try it! Right-click the link and Save to download this sample file to your compu
   - CSV (Comma Separated Values, generic spreadsheet format)
 
   ```{r mapshaper-convert, fig.cap="Screencast: Mapshaper convert"}
-  if(knitr::is_html_output()) knitr::include_url("images/09-transform/mapshaper-convert-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+  if(knitr::is_html_output()) knitr::include_url("images/11-transform/mapshaper-convert-640.gif") else knitr::include_graphics("images/placeholder.jpg")
   ```
 
 #### Edit data for specific polygons {-}
@@ -286,7 +286,7 @@ To edit data for any polygon in MapShaper.org:
 - Select the polygon
 - Click inside its pop-up info window to directly edit the data
 
-  ![](images/09-transform/mapshaper-edit-info.png)
+  ![](images/11-transform/mapshaper-edit-info.png)
 
 #### Simplify map boundaries to reduce file size {-}
 If your data visualization project displays a zoomed-out state or national or world map, small geographic details that are invisible at these zoom levels may not be necessary. Consider using the Simplify command to reduce the file size, which may help your interactive web map to load faster for web visitors. The example below began with a detailed map of Connecticut town boundaries (1:100,000 scale) at 2MB, which MapShaper simplified -- without visibly sacrificing details at the statewide zoom level -- to a reduced size of about 200KB.
@@ -301,7 +301,7 @@ If your data visualization project displays a zoomed-out state or national or wo
 
 5. Complete the process by clicking Simplify once again. Export your file in the preferred format for your project.
 
-![](images/09-transform/mapshaper-simplify.png)
+![](images/11-transform/mapshaper-simplify.png)
 
 #### Dissolve internal polygons to create an outline map {-}
 MapShaper.org also includes a Console button to type in commands for common map editing tasks. Imagine that you begin with a boundary map that includes internal polygons, but your goal is to remove all of them to create an outline map.
@@ -313,7 +313,7 @@ Click the Console button, which opens a window to type in commands. Enter the co
 ```
 
 ```{r mapshaper-dissolve, fig.cap="Screencast: Mapshaper dissolve"}
-if(knitr::is_html_output()) knitr::include_url("images/09-transform/mapshaper-dissolve-simple-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+if(knitr::is_html_output()) knitr::include_url("images/11-transform/mapshaper-dissolve-simple-640.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
 #### Clip a map to match an outline layer {-}
@@ -349,7 +349,7 @@ Removed 3 null features and 5 slivers
 **TO DO** fix animation to match new file names
 
 ```{r mapshaper-clip, fig.cap="Screencast: Mapshaper clip"}
-if(knitr::is_html_output()) knitr::include_url("images/09-transform/mapshaper-clip-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+if(knitr::is_html_output()) knitr::include_url("images/11-transform/mapshaper-clip-640.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
 #### Remove unwanted data columns {-}
@@ -370,7 +370,7 @@ A common mapping task is to join (or merge) new data columns into a polygon boun
 
 Your goal is to unite these files, so that you can later display them in a thematic polygon map. Since these two files share a common column of data -- the town names -- you can join them together into one merged file.
 
-![](images/09-transform/mapshaper-join-table-concept.png)
+![](images/11-transform/mapshaper-join-table-concept.png)
 
 Try it! Right-click each link and Save to download two sample files to your computer:
 
@@ -389,7 +389,7 @@ Refresh the browser to start a new session in http://MapShaper.org.
 
 4. Click the drop-down menu and select the map to display it as the active layer.
 
-  ![](images/09-transform/mapshaper-join-select-map-layer.png)
+  ![](images/11-transform/mapshaper-join-select-map-layer.png)
 
 5. Click the Console button, type this command, and press return:
 ```markdown
@@ -397,11 +397,11 @@ Refresh the browser to start a new session in http://MapShaper.org.
 ```
 Type this precisely, with **no spaces** between the words in your keys. This command instructs MapShaper to join the active map layer to the CSV table layer, based on their shared column of data, labeled as "name" in both files. In this example, 169 rows are merged together.
 
-  ![](images/09-transform/mapshaper-join-console.png)
+  ![](images/11-transform/mapshaper-join-console.png)
 
 6. Click the Console button to close the command window. Select the "i" info button and click any polygon to confirm that it now contains the new table data. Export the file in your preferred format.
 
-  ![](images/09-transform/mapshaper-join-confirm.png)
+  ![](images/11-transform/mapshaper-join-confirm.png)
 
 #### More about joins {-}
 
@@ -425,7 +425,7 @@ Joined 27 data records
 Layer 1 ...
 ```
 
-![](images/09-transform/mapshaper-unmatched-unjoined.png)
+![](images/11-transform/mapshaper-unmatched-unjoined.png)
 
 #### Merge selected polygons with join and dissolve commands {-}
 
@@ -441,13 +441,13 @@ Try it! Right-click the link and Save to download the sample files to your compu
 
 2. Export in CSV format. This steps creates a spreadsheet that lists all of the polygon town names, without geographic details.
 
-  ![](images/09-transform/towns-export-csv.png)
+  ![](images/11-transform/towns-export-csv.png)
 
 3. Open the CSV file with any spreadsheet tool. Copy the contents of the "name" column, paste it into a second column, and change the header of this second column to "merged".
 
 4. In the new "merged" column, create new listings for towns you wish to merge together. In this example, Bloomfield and West Hartford are merged into Bloomfield-West Hartford. Leave other towns unchanged.
 
-  ![](images/09-transform/CT-towns-merged-csv.png)
+  ![](images/11-transform/CT-towns-merged-csv.png)
 
 5. Save this spreadsheet in CSV format with a new file name, such as: ct-towns-merged.csv.
 
@@ -455,7 +455,7 @@ Try it! Right-click the link and Save to download the sample files to your compu
 
 7. Use the drop-down menu to manage multiple layers in MapShaper. Since the CSV file has no geography, it appears as a series of rectangular cells. Instead, select the ct-towns.geojson map to display it as the active layer.
 
-  ![](images/09-transform/mapshaper-two-layers.png)
+  ![](images/11-transform/mapshaper-two-layers.png)
 
 8. Click on the Console button, type in both of the commands below, and press Return at the end of each line:
 
@@ -469,7 +469,7 @@ How to understand the commands above:
 - The first line "joins" the active layer (the polygon map) to the CSV spreadsheet, with "keys" to match their shared data columns, which are both labeled as "name".
 - The second line dissolves the polygons of towns listed in the "merged" column of the CSV file. In this simple example, only Bloomfield and West Hartford are dissolved into a combined "Bloomfield-West Hartford" regional health district, and all of the other polygons remain the same.
 
-  ![](images/09-transform/mapshaper-towns-merged.png)
+  ![](images/11-transform/mapshaper-towns-merged.png)
 
 Click the Console button to close its window. Select the "i" information button to inspect your merged polygons. Export the map in your preferred format.
 
@@ -486,10 +486,10 @@ Sometimes KML files are distributed in compressed KMZ format. One easy conversio
 - Double-click on any .kmz file to open it in Google Earth
 - Right-click (or control-click) on the .kmz layer and select *Save As*
 
-  ![](images/09-transform/google-earth-convert-kmz.png){.center}
+  ![](images/11-transform/google-earth-convert-kmz.png){.center}
 
 - Use the *Save As* drop down menu to select .kml format
 
-  ![](images/09-transform/google-earth-save-kml.png){.center}
+  ![](images/11-transform/google-earth-save-kml.png){.center}
 
 Or use any zip-utility and simply unzip the kmz file. Kmz is simply a 'zipped' version of a kml file!

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Modify and Host Code with GitHub | Hands-On Data Visualization</title>
+  <title>Chapter 8 Edit and Host Code with GitHub | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Modify and Host Code with GitHub | Hands-On Data Visualization" />
+  <meta property="og:title" content="Chapter 8 Edit and Host Code with GitHub | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Modify and Host Code with GitHub | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Chapter 8 Edit and Host Code with GitHub | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-04" />
+<meta name="date" content="2020-06-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -212,9 +212,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
 <li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>8</b> Modify and Host Code with GitHub</a>
+<li class="chapter" data-level="8" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>8</b> Edit and Host Code with GitHub</a>
 <ul>
-<li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork and Edit a Simple Leaflet Map with GitHub</a></li>
+<li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
 <li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
@@ -295,20 +295,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="github" class="section level1" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Modify and Host Code with GitHub</h1>
+<h1><span class="header-section-number">Chapter 8</span> Edit and Host Code with GitHub</h1>
 <p>In the first half of this book, you created interactive charts and maps on platforms that feature drag-and-drop tools, such as Google Sheets and Tableau Public. These platforms are great for beginners, but their pre-set tools limit your options for designing and customizing your visualizations, and they also require you to depend on their web servers to host your work.</p>
 <p>In the second half of this book, get ready to make a big leap, and we’ll help you along the way. You will learn how to copy, edit, and host code templates—meaning pre-written software instructions that create data visualizations—which you can modify. With templates, you’ll learn how to make simple edits to insert your data, customize its appearance, and display it on the web on a site that you control. No prior coding experience is required, but it helps if you’re <em>code-curious</em> and willing to experiment with your computer.</p>
 <p>Code templates are similar to cookbook recipes. Imagine you’re in your kitchen, looking at our favorite recipe that we’ve publicly shared to make brownies (yum!), which begins with these three steps: <code>Melt butter, Add sugar, Mix in cocoa.</code> Recipes are templates, meaning that you can follow them precisely, or modify them to suit your tastes. Imagine that you copy our recipe (or “fork” it, as coders say) and insert a new step: <code>Add walnuts</code>. If you also publicly share your recipe, now there will be two versions of instructions, to suit both those who strongly prefer or dislike nuts in their brownies. (We do not take sides in this deeply polarizing dispute.)</p>
-<p>Currently, the most popular cookbook among coders is GitHub <a href="https://github.com" class="uri">https://github.com</a>, with more than 40 million users and over 100 million recipes (or “code repositories” or “repos”). You can sign up for a free account and choose to make your repos private (like Grandma’s secret recipes) or public (like the ones we share below). GitHub encourages sharing <em>open-source code</em>, meaning the creator grants permission for others to freely distribute and modify it, based on the conditions of the type of license they have selected. When you create a brand-new repo, GitHub invites you to <a href="https://choosealicense.com/">Choose a License</a>. Two of the most popular open-source software licenses are the <a href="https://choosealicense.com/licenses/mit/">MIT License</a>, which is very permissive, and the <a href="https://choosealicense.com/licenses/gpl-3.0/">GNU General Public License version 3</a>, which mandates that any modifications be shared under the same license. The latter version is often described as a <em>copyleft</em> license that requires any derivatives of the original code to remain publicly accessible, in contrast to traditional <em>copyright</em> that favors private ownership. When you fork a copy of someone’s open-source code on GitHub, look at the type of license they’ve chosen (if any), keep it in your version, and respect its terms.</p>
-<p>In this chapter, we’ll walk you through these basic GitHub steps:</p>
+<p>Currently, the most popular cookbook among coders is <a href="https://github.com">GitHub</a>, with more than 40 million users and over 100 million recipes (or “code repositories” or “repos”). You can sign up for a free account and choose to make your repos private (like Grandma’s secret recipes) or public (like the ones we share below). GitHub encourages sharing <em>open-source code</em>, meaning the creator grants permission for others to freely distribute and modify it, based on the conditions of the type of license they have selected. When you create a brand-new repo, GitHub invites you to <a href="https://choosealicense.com/">Choose a License</a>. Two of the most popular open-source software licenses are the <a href="https://choosealicense.com/licenses/mit/">MIT License</a>, which is very permissive, and the <a href="https://choosealicense.com/licenses/gpl-3.0/">GNU General Public License version 3</a>, which mandates that any modifications be shared under the same license. The latter version is often described as a <em>copyleft</em> license that requires any derivatives of the original code to remain publicly accessible, in contrast to traditional <em>copyright</em> that favors private ownership. When you fork a copy of someone’s open-source code on GitHub, look at the type of license they’ve chosen (if any), keep it in your version, and respect its terms.</p>
+<p>In the next section, we’ll walk you through these basic GitHub steps:</p>
 <ul>
-<li>Fork and modify your own copy of our simple Leaflet map code template</li>
+<li>Get a free GitHub account and fork your copy of a simple Leaflet map code template</li>
+<li>Edit the Leaflet map title, starting position, background layer, and marker</li>
 <li>Host a live online version of your modified map code on the public web</li>
-<li>Create your own brand-new code repo to upload your code or other files</li>
 </ul>
-<p>You can perform all of the basic steps in the GitHub web browser interface, which is a great start for beginners. For intermediate-level users, we’ll also show you how to work more efficiently on your personal computer with tools such as GitHub Desktop and Atom Editor.</p>
-<p>Finally, we’ll discuss how to identify and fix common GitHub and code errors. All of us make mistakes and accidentally “break our code” from time to time, and it’s a great way to learn how things really work (or in this case, how they don’t work!)</p>
-<p>TODO above: insert cross-references to jump to sections</p>
+<p>Later you’ll learn how to create a new GitHub repo to upload code and other types of files.</p>
+<p>We’ll introduce the basic steps of GitHub using its web browser interface, which works best for beginners. Later in this chapter you’ll learn how to work more efficiently with code on your personal computer using tools such as GitHub Desktop and Atom Editor.</p>
+<p>Finally, we’ll discuss how to identify and fix common GitHub and code errors. All of us make mistakes and accidentally “break our code” from time to time, and it’s a great way to learn how things work—and what to do when it doesn’t work!</p>
+<p><strong>TODO above:</strong> insert cross-references to jump to sections; decide whether to convert the text description of recipes to visual images of two recipe cards, one forked from the other, with walnuts added</p>
 </div>
             </section>
 

@@ -90,36 +90,219 @@ TODO:
 - Confirm that Google Fusion Tables geocoder does not require commas between terms
 - Clarify what happens with zip code in the example above
 
-#### Convert Connecticut town names with CTNamecleaner {-}
 
-In Connecticut, residents often list their village or neighborhood names in their address, but these do not necessarily match the official list of 169 Connecticut town governments (called county subdivisions by the US Census). For example, the Elmwood neighborhood is located in the town of West Hartford, and the Rockville village is located in the town of Vernon.
 
-To solve this problem, the data experts at TrendCT/CT Mirror have openly shared a wonderful tool to convert village/neighborhood names into official towns, called CTNamecleaner.
+## Extract Tables from PDFs with Tabula {- #tabula}
 
-![](images/04-clean/CTNamecleaner.png)
+It sometimes happens that the dataset you are interested in is only available as a PDF document.
+Don't despair, you can *likely* use Tabula to extract tables and save them as CSV files.
 
-1. Open CTNamecleaner with your browser at http://shiny.trendct.org/ctnamecleaner/
-2. Upload a CSV generic spreadsheet. Learn more about CSV format in this book **TO DO add link**.
-3. Select the data column to be converted into town names, and download the results.
+Tabula is a free tool that runs on Java, and is available for Linux, Mac, and Windows. It runs on your
+local machine and does not send your data to the cloud, so you can also use it for sensitive documents.
 
-Learn more about [CTNamecleaner on GitHub](https://github.com/trendct/ctnamecleaner), and view the [underlying list of Connecticut place names in a public Google sheet](https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0).
+Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based. You know your PDF is text-based
+if you can use cursor to select and copy-paste text. These are great for Tabula.
+Image-based PDFs are those that were created from scanning documents. Before they can be processed with Tabula,
+you will need to use an optical character recognition (OCR) software, such as Adobe Acrobat,
+to create a text-based PDF.
 
-## Clean Data with Open Refine {- #open-refine}
-TODO: show basic tutorial with Open Refine; link to Alvin Chang's fabulous [Open Refine tutorial in CT Mirror](http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/)
 
-## Fix Connecticut Town Names with CTNamecleaner {- #ctnamecleaner}
-TODO: update this page; avoid duplication in main chapter text
+### Set Up Tabula {-}
 
-Here's a wonderful data-cleaning tool that's specific to Connecticut, but the idea (and open-source code from TrendCT/CT Mirror) may inspire others to create similar tools for other locations.
+You can get the newest version of Tabula from the website (https://tabula.technology/).
+You can use download buttons on the left-hand side, or scroll down to **Download & Install Tabula**
+section to download a copy for your platform.
 
-In Connecticut, residents often list their village or neighborhood names in their address, but these do not necessarily match the official list of 169 Connecticut town governments (called county subdivisions by the US Census). For example, the Elmwood neighborhood is located in the town of West Hartford, and the Rockville village is located in the town of Vernon.
+Unlike most other programs, Tabule does not require installation. Just unzip the downloaded archive,
+and double-click the icon. If prompted with a security message (such as
+*Tabula is an app downloaded from the internet. Are you sure you want to open it?*),
+follow the instruction to proceed (on a Mac, click *Open*).
 
-To solve this problem, the data experts at TrendCT/CT Mirror have openly shared a wonderful tool to convert village/neighborhood names into official towns, called CTNamecleaner.
+Your default system broswer should open, like shown in Figure \@ref(fig:tabula-welcome).
+The URL will be something like `http://127.0.0.1:8080/`, meaning
+the software is running on your local machine. 127.0.0.1, also known as `localhost`, is the hostname for your machine.
+`8080` is called port (it's okay if you see a different port—most likely because 8080 was taken by some other program
+running on your computer). If for any reason you decide to use a different browser,
+just copy-paste the URL.
 
-![](images/04-clean/CTNamecleaner.png)
+Figure \@ref(fig:design-principles-color) shows some good and bad examples of color use.
 
-1. Open CTNamecleaner with your browser at http://shiny.trendct.org/ctnamecleaner/
-2. Upload a CSV generic spreadsheet. Learn more about CSV format in this book **TO DO** fix link
-3. Select the data column to be converted into town names, and download the results.
+(ref:tabula-welcome) Tabula welcome page.
 
-Learn more about [CTNamecleaner on GitHub](https://github.com/trendct/ctnamecleaner), and view the [underlying list of Connecticut place names in a public Google sheet](https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0).
+```{r tabula-welcome, fig.cap="(ref:tabula-welcome)"}
+knitr::include_graphics("images/04-clean/tabula-welcome.png")
+```
+
+### Load a PDF and Autodetect Tables {-}
+
+1. Select the PDF you want to extract data from by clicking the blue *Browse...* button.
+1. Click *Import*. Tabula will begin analyzing the file.
+1. As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly
+clean, with only four buttons in the header.
+1. The easiest first step is to let Tabula autodetect tables. Click the relevant button in the header.
+You will see that each table is highlighted in red, like shown in Figure \@ref(fig:tabula-autodetect).
+
+(ref:tabula-autodetect) Selected tables are highlighted in red.
+
+```{r tabula-autodetect, fig.cap="(ref:tabula-autodetect)"}
+knitr::include_graphics("images/04-clean/tabula-autodetect.png")
+```
+
+### Manually Adjust Selections and Export {-}
+
+1. Click *Preview & Export Extracted Data* green button to see how Tabula thinks the data should be exported.
+1. If it doesn't look right, try switching between *Stream* and *Lattice* extraction methods in the left-hand-side bar.
+1. If the tables still don't look right, or you don't need all tables that Tabula detected, hit *Revise selection* button.
+That will bring you back to the PDF viewer. 
+1. Now you can *Clear All Selections* and manually select
+tables of interest. Use drag-and-drop movements to select tables of interest (or parts of tables).
+1. If you want to "copy" selection to some or all pages, you can use Repeat this Selection dropdown, which appears
+in the lower-right corner of your selections, to propagate changes. This is extremely useful when PDFs consist of
+many pages in the same format.
+1. Once you are happy with the result, you can export it. If you have only one table, we recommend using CSV as export format.
+If you have more than one table, consider switching export format to *zip of CSVs*.
+This way each table will be saved as an individual file, rather than all tables inside one CSV file.
+
+Once you exported your data, you can find it in a Downloads folder on your computer (or wherever you chose to save it).
+It is ready to be opened in Google Sheets or Microsoft Excel, analyzed, and visualized!
+
+
+## Clean Data with OpenRefine {- #open-refine}
+
+Consider a dataset that looks like that:
+
+```
+Year,Country,FundingAgency,FundingAmount
+2000,"Korea, N",Dept of Agriculture,"$32 242 376"
+2000,"Korea–North",Dept of Agriculture,"$86,151,301"
+2000,"Korea North",department of State,"166855"
+2000,"SouthKorea",U.S. Agency for International Development,"282,805a"
+2000,"south Korea",Trade and Development Agency,"  735718"
+2001,"North Korea",US Agency for International Development,"345,399"
+2001,"N Korea",Department of Argic,"  117715223"
+```
+Do you notice any problems with it? Notice how the funding amounts (last column)
+are in quotes and contains commas, spaces, and some have a dollar character.
+Notice also how the Country includes various spellings of North and South Korea.
+Looks like a nightmare to analyze, but not if you know how to use OpenRefine,
+a powerful and free tool to clean up messy data.
+
+This is a subset of
+[US Overseas Loans and Grants (Greenbook)dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook),
+which shows US assistance to South Korea and North Korea between 2000 and 2018.
+We added deliberate misspellings and formatting issues for demonstration purposes
+(although we did not alter values).
+This subset can be [downloaded here](/data/us-foreignaid-greenbook-koreas.csv).
+This dataset has four columns: year (between 2000 and 2018, inclusive), country (North or South Korea),
+a US funding agency, and funding amount (in 2018 US dollars).
+
+### Set up OpenRefine {-}
+
+You can download a copy of OpenRefine for Linux, Mac, or Windows from the official
+download page (https://openrefine.org/download.html). Just like Tabula, it runs in your browser and no
+data leaves your local machine, which is great for confidentiality.
+
+If you work on a **Mac**, the downloaded file will be a .dmg file. You will likely encounter
+a security message that will prevent OpenRefine from launching. Go to System Preferences -> Security and Privacy, and
+hit *Open Anyway* button in the lower half of the window. If prompted with another window, click *Open*.
+
+If you use **Windows**, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
+open in your default browser.
+
+Once launched, you should see OpenRefine in your browser with `127.0.0.1:3333` address (localhost, port 3333),
+like shown in Figure \@ref(fig:openrefine-welcome).
+
+(ref:openrefine-welcome) OpenRefine starting page.
+
+```{r openrefine-welcome, fig.cap="(ref:openrefine-welcome)"}
+knitr::include_graphics("images/04-clean/openrefine-welcome.png")
+```
+
+### Load Data and Start a New Project
+
+To begin cleaning up your messy dataset, you should load it into a new project.
+OpenRefine lets you upload a dataset from your local machine (we will be doing exactly that),
+or a remote URL on the web (including a Google Spreadsheet), or copy/paste data into a text field.
+OpenRefine is able to extract data directly from SQL databases, but this is beyond the scope of this book.
+
+1. Under *Get data from: This computer*, click *Browse...* and select the file. Click Next.
+1. Before you can start cleaning up data, OpenRefine allows you to make sure data is **parsed** properly.
+Put simply, that data is split into appropriate columns. Make sure your table looks OK in the preview,
+or change setting in *Parse data as* block at the bottom of the page until it starts looking meaningful,
+like shown in Figure \@(fig:openrefine-parse).
+1. Hit *Create Project* in the upper-right corner.
+
+(ref:openrefine-parse) OpenRefine parsing options.
+
+```{r openrefine-parse, fig.cap="(ref:openrefine-parse)"}
+knitr::include_graphics("images/04-clean/openrefine-parse.png")
+```
+
+### Convert Dollar Amounts from Text to Numbers {-}
+
+Once your project is created, you will see the first 10 rows of the dataset. You can change it to 5, 10, 25, or 50
+by clicking the appropriate number in the header.
+
+Each column header has its own menu (callable by clicking the arrow-down button).
+Left-aligned numbers in a column are likely represented as text
+(as is the case with FundingAmount column), and they need to be transformed
+into numeric format.
+
+1. To transform text into numbers, open the column menu, and go to *Edit cells* > *Common transforms* > *To number*.
+1. You will see that some numbers became green and right-aligned (success!), but most did not change.
+That is because dollar sign (`$`) and commas (`,`) confuse OpenRefine and prevent values to be converted into numbers.
+1. Let's remove `$` and `,` from the FundingAmount column. In the column menu, choose *Edit cells* > 
+*Transform*. In the Expression window, type `value.replace(',', '')` and notice how commas
+disappear in the preview window. When you confirm your formula works, click *OK*.
+1. Now, repeat the previous step, but instead of a comma, remove the `$` character.
+(Your expression will become `value.replace('$', '')`).
+1. Perform *Edit cells* > *Common transforms* > *To number* again. You will see that all but three
+cells turned green. That is because we have spaces and an `a` character at the end of one number.
+Fix those manually by hovering over cells, and clicking the `edit` button
+(make sure to change *Data type* to *number*, and hit *Apply*,
+like in Figure \@ref(fig:openrefine-manual-edit)).
+
+(ref:openrefine-manual-edit) Manually remove spaces and extra characters, and change data type to number.
+
+```{r openrefine-manual-edit, fig.cap="(ref:openrefine-manual-edit)"}
+knitr::include_graphics("images/04-clean/openrefine-manual-edit.png")
+```
+
+### Cluster Similar Spellings {-}
+
+When you combine different data sources, or process survey data where respondents
+wrote down their answers as opposed to selecting them from a dropdown menu, you might end up
+with multiple spellings of the same word (town name, education level – you name it!).
+One of the most powerful features of OpenRefine is the ability to cluster similar responses.
+
+Take a look at the *Country* column and all variations of North and South Korea spellings.
+From *Country* column's dropdown menu, go to *Facet* > *Text facet*. This will open up a window
+in the left-hand side with all spellings (and counts) of column values. 26 choices for a column 
+that should have just two, North Korea and South Korea!
+
+1. To begin standardizing spellings, click on the arrow-down button of Country column header,
+and choose *Edit cells* > *Cluster and edit*. You will see a window like the one shown in Figure
+\@ref(fig:openrefine-cluster).
+1. You will have a choice of two clustering methods, *key collision* or *nearest neighbor*. Both
+methods can be powered by different functions, but let's leave the default *key collision* with *fingerprint* function.
+1. OpenRefine will calculate a list of clusters. *Values in Cluster* column contains grouped spellings
+that OpenRefine considers the same. If you agree with a grouping, check the *Merge?* box, and assign
+the "true" value to the *New Cell Value* input box. In our example, this would be either `North Korea` or `South Korea`.
+1. You can go through all groupings, **or** stop after one or two and click **Merge Selected & Re-Cluster** button.
+The clusters you chose to merge will be merged, and grouping will be re-calculated
+(don't worry, the window won't go anywhere). Keep regrouping until you are happy with the result.
+
+Spend some time playing with *Keying function* parameters, and notice
+how they produce clusters of different sizes and accuracy.
+
+(ref:openrefine-cluster) Cluster similar text values.
+
+```{r openrefine-cluster, fig.cap="(ref:openrefine-cluster)"}
+knitr::include_graphics("images/04-clean/openrefine-cluster.png")
+```
+
+### Export {-}
+
+Once you are done cleaning up and clustering data, save the clean dataset
+by clicking *Export* button in the upper-right corner of OpenRefine window.
+You can choose your format (we recommend CSV, or comma-separated value).

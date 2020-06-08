@@ -1,7 +1,7 @@
 # Leaflet Map Templates {#leaflet}
 While beginners appreciate the drag-and-drop map tools and tutorials described earlier in this book, [Google My Maps](mymaps.html) and [Carto](carto.html), more advanced users may wish to customize their visualizations, add more complex data and interactivity, and control exactly how and where their work appears on the web. A more powerful and relatively easy-to-learn solution is to use code templates built with Leaflet <https://leafletjs.com>, an open-source library, which you can [modify and host on GitHub](github.html), as described in this book.
 
-#### Working with Leaflet
+#### Working with Leaflet {-}
 Pros:
 
 - Open-source code, which anyone can freely use online, download, modify, or expand with plugins

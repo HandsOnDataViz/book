@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-05" />
+<meta name="date" content="2020-06-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="clean.html"/>
-<link rel="next" href="open-refine.html"/>
+<link rel="next" href="tabula.html"/>
 <script src="libs/header-attrs-2.2/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -180,8 +180,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
-<li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with Open Refine</a></li>
-<li class="chapter" data-level="" data-path="ctnamecleaner.html"><a href="ctnamecleaner.html"><i class="fa fa-check"></i>Fix Connecticut Town Names with CTNamecleaner</a></li>
+<li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
+<li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
@@ -383,18 +383,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Clarify what happens with zip code in the example above</li>
 </ul>
 </div>
-<div id="convert-connecticut-town-names-with-ctnamecleaner" class="section level4 unnumbered" number="">
-<h4>Convert Connecticut town names with CTNamecleaner</h4>
-<p>In Connecticut, residents often list their village or neighborhood names in their address, but these do not necessarily match the official list of 169 Connecticut town governments (called county subdivisions by the US Census). For example, the Elmwood neighborhood is located in the town of West Hartford, and the Rockville village is located in the town of Vernon.</p>
-<p>To solve this problem, the data experts at TrendCT/CT Mirror have openly shared a wonderful tool to convert village/neighborhood names into official towns, called CTNamecleaner.</p>
-<p><img src="images/04-clean/CTNamecleaner.png" /></p>
-<ol style="list-style-type: decimal">
-<li>Open CTNamecleaner with your browser at <a href="http://shiny.trendct.org/ctnamecleaner/" class="uri">http://shiny.trendct.org/ctnamecleaner/</a></li>
-<li>Upload a CSV generic spreadsheet. Learn more about CSV format in this book <strong>TO DO add link</strong>.</li>
-<li>Select the data column to be converted into town names, and download the results.</li>
-</ol>
-<p>Learn more about <a href="https://github.com/trendct/ctnamecleaner">CTNamecleaner on GitHub</a>, and view the <a href="https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0">underlying list of Connecticut place names in a public Google sheet</a>.</p>
-</div>
 </div>
             </section>
 
@@ -402,7 +390,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="clean.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="open-refine.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tabula.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -444,7 +432,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/04-clean.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

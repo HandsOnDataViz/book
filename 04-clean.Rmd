@@ -100,12 +100,9 @@ Don't despair, you can *likely* use Tabula to extract tables and save them as CS
 Tabula is a free tool that runs on Java, and is available for Linux, Mac, and Windows. It runs on your
 local machine and does not send your data to the cloud, so you can also use it for sensitive documents.
 
-Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based. You know your PDF is text-based
-if you can use cursor to select and copy-paste text. These are great for Tabula.
-Image-based PDFs are those that were created from scanning documents. Before they can be processed with Tabula,
-you will need to use an optical character recognition (OCR) software, such as Adobe Acrobat,
+Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based. You know your PDF is text-based if you can use cursor to select and copy-paste text. These are great for Tabula.
+Image-based PDFs are those that were created from scanning documents. Before they can be processed with Tabula, you will need to use an optical character recognition (OCR) software, such as Adobe Acrobat,
 to create a text-based PDF.
-
 
 ### Set Up Tabula {-}
 
@@ -113,17 +110,15 @@ You can get the newest version of Tabula from the website (https://tabula.techno
 You can use download buttons on the left-hand side, or scroll down to **Download & Install Tabula**
 section to download a copy for your platform.
 
-Unlike most other programs, Tabule does not require installation. Just unzip the downloaded archive,
+Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive,
 and double-click the icon. If prompted with a security message (such as
 *Tabula is an app downloaded from the internet. Are you sure you want to open it?*),
 follow the instruction to proceed (on a Mac, click *Open*).
 
-Your default system broswer should open, like shown in Figure \@ref(fig:tabula-welcome).
-The URL will be something like `http://127.0.0.1:8080/`, meaning
-the software is running on your local machine. 127.0.0.1, also known as `localhost`, is the hostname for your machine.
-`8080` is called port (it's okay if you see a different port—most likely because 8080 was taken by some other program
-running on your computer). If for any reason you decide to use a different browser,
-just copy-paste the URL.
+Your default system browser should open, like shown in Figure \@ref(fig:tabula-welcome).
+The URL will be something like `http://127.0.0.1:8080/`, meaning the software is running on your local machine. 127.0.0.1, also known as `localhost`, is the hostname for your machine. `8080` is called port (it's okay if you see a different port—most likely because 8080 was taken by some other program running on your computer). If for any reason you decide to use a different browser, just copy-paste the URL.
+
+TODO: this sentence seems out of place, perhaps due to a mistaken copy-and-paste?
 
 Figure \@ref(fig:design-principles-color) shows some good and bad examples of color use.
 
@@ -135,10 +130,11 @@ knitr::include_graphics("images/04-clean/tabula-welcome.png")
 
 ### Load a PDF and Autodetect Tables {-}
 
+TODO: please add a sample text-based PDF with numbers to extract to make it easier for users to try out
+
 1. Select the PDF you want to extract data from by clicking the blue *Browse...* button.
 1. Click *Import*. Tabula will begin analyzing the file.
-1. As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly
-clean, with only four buttons in the header.
+1. As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly clean, with only four buttons in the header.
 1. The easiest first step is to let Tabula autodetect tables. Click the relevant button in the header.
 You will see that each table is highlighted in red, like shown in Figure \@ref(fig:tabula-autodetect).
 
@@ -153,7 +149,7 @@ knitr::include_graphics("images/04-clean/tabula-autodetect.png")
 1. Click *Preview & Export Extracted Data* green button to see how Tabula thinks the data should be exported.
 1. If it doesn't look right, try switching between *Stream* and *Lattice* extraction methods in the left-hand-side bar.
 1. If the tables still don't look right, or you don't need all tables that Tabula detected, hit *Revise selection* button.
-That will bring you back to the PDF viewer. 
+That will bring you back to the PDF viewer.
 1. Now you can *Clear All Selections* and manually select
 tables of interest. Use drag-and-drop movements to select tables of interest (or parts of tables).
 1. If you want to "copy" selection to some or all pages, you can use Repeat this Selection dropdown, which appears
@@ -187,14 +183,8 @@ Notice also how the Country includes various spellings of North and South Korea.
 Looks like a nightmare to analyze, but not if you know how to use OpenRefine,
 a powerful and free tool to clean up messy data.
 
-This is a subset of
-[US Overseas Loans and Grants (Greenbook)dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook),
-which shows US assistance to South Korea and North Korea between 2000 and 2018.
-We added deliberate misspellings and formatting issues for demonstration purposes
-(although we did not alter values).
-This subset can be [downloaded here](/data/us-foreignaid-greenbook-koreas.csv).
-This dataset has four columns: year (between 2000 and 2018, inclusive), country (North or South Korea),
-a US funding agency, and funding amount (in 2018 US dollars).
+This is a subset of [US Overseas Loans and Grants (Greenbook)dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook), which shows US assistance to South Korea and North Korea between 2000 and 2018. We added deliberate misspellings and formatting issues for demonstration purposes
+(although we did not alter values). This subset can be [downloaded here](/data/us-foreignaid-greenbook-koreas.csv). This dataset has four columns: year (between 2000 and 2018, inclusive), country (North or South Korea), a US funding agency, and funding amount (in 2018 US dollars).
 
 ### Set up OpenRefine {-}
 
@@ -251,7 +241,7 @@ into numeric format.
 1. To transform text into numbers, open the column menu, and go to *Edit cells* > *Common transforms* > *To number*.
 1. You will see that some numbers became green and right-aligned (success!), but most did not change.
 That is because dollar sign (`$`) and commas (`,`) confuse OpenRefine and prevent values to be converted into numbers.
-1. Let's remove `$` and `,` from the FundingAmount column. In the column menu, choose *Edit cells* > 
+1. Let's remove `$` and `,` from the FundingAmount column. In the column menu, choose *Edit cells* >
 *Transform*. In the Expression window, type `value.replace(',', '')` and notice how commas
 disappear in the preview window. When you confirm your formula works, click *OK*.
 1. Now, repeat the previous step, but instead of a comma, remove the `$` character.
@@ -277,7 +267,7 @@ One of the most powerful features of OpenRefine is the ability to cluster simila
 
 Take a look at the *Country* column and all variations of North and South Korea spellings.
 From *Country* column's dropdown menu, go to *Facet* > *Text facet*. This will open up a window
-in the left-hand side with all spellings (and counts) of column values. 26 choices for a column 
+in the left-hand side with all spellings (and counts) of column values. 26 choices for a column
 that should have just two, North Korea and South Korea!
 
 1. To begin standardizing spellings, click on the arrow-down button of Country column header,

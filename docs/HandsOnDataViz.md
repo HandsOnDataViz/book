@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 05 Jun 2020
+updated on: 08 Jun 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -1668,73 +1668,273 @@ TODO:
     between terms
 -   Clarify what happens with zip code in the example above
 
-#### Convert Connecticut town names with CTNamecleaner
+Extract Tables from PDFs with Tabula
+------------------------------------
 
-In Connecticut, residents often list their village or neighborhood names
-in their address, but these do not necessarily match the official list
-of 169 Connecticut town governments (called county subdivisions by the
-US Census). For example, the Elmwood neighborhood is located in the town
-of West Hartford, and the Rockville village is located in the town of
-Vernon.
+It sometimes happens that the dataset you are interested in is only
+available as a PDF document. Don’t despair, you can *likely* use Tabula
+to extract tables and save them as CSV files.
 
-To solve this problem, the data experts at TrendCT/CT Mirror have openly
-shared a wonderful tool to convert village/neighborhood names into
-official towns, called CTNamecleaner.
+Tabula is a free tool that runs on Java, and is available for Linux,
+Mac, and Windows. It runs on your local machine and does not send your
+data to the cloud, so you can also use it for sensitive documents.
 
-![](images/04-clean/CTNamecleaner.png)
+Note: Keep in mind that PDFs generally come in two flavors, image-based
+and text-based. You know your PDF is text-based if you can use cursor to
+select and copy-paste text. These are great for Tabula. Image-based PDFs
+are those that were created from scanning documents. Before they can be
+processed with Tabula, you will need to use an optical character
+recognition (OCR) software, such as Adobe Acrobat, to create a
+text-based PDF.
 
-1.  Open CTNamecleaner with your browser at
-    <a href="http://shiny.trendct.org/ctnamecleaner/" class="uri">http://shiny.trendct.org/ctnamecleaner/</a>
-2.  Upload a CSV generic spreadsheet. Learn more about CSV format in
-    this book **TO DO add link**.
-3.  Select the data column to be converted into town names, and download
-    the results.
+### Set Up Tabula
 
-Learn more about [CTNamecleaner on
-GitHub](https://github.com/trendct/ctnamecleaner), and view the
-[underlying list of Connecticut place names in a public Google
-sheet](https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0).
+You can get the newest version of Tabula from the website
+(<a href="https://tabula.technology/" class="uri">https://tabula.technology/</a>).
+You can use download buttons on the left-hand side, or scroll down to
+**Download & Install Tabula** section to download a copy for your
+platform.
 
-Clean Data with Open Refine
----------------------------
+Unlike most other programs, Tabula does not require installation. Just
+unzip the downloaded archive, and double-click the icon. If prompted
+with a security message (such as *Tabula is an app downloaded from the
+internet. Are you sure you want to open it?*), follow the instruction to
+proceed (on a Mac, click *Open*).
 
-TODO: show basic tutorial with Open Refine; link to Alvin Chang’s
-fabulous [Open Refine tutorial in CT
-Mirror](http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/)
+Your default system browser should open, like shown in Figure
+<a href="#fig:tabula-welcome">1</a>. The URL will be something like
+`http://127.0.0.1:8080/`, meaning the software is running on your local
+machine. 127.0.0.1, also known as `localhost`, is the hostname for your
+machine. `8080` is called port (it’s okay if you see a different
+port—most likely because 8080 was taken by some other program running on
+your computer). If for any reason you decide to use a different browser,
+just copy-paste the URL.
 
-Fix Connecticut Town Names with CTNamecleaner
----------------------------------------------
+TODO: this sentence seems out of place, perhaps due to a mistaken
+copy-and-paste?
 
-TODO: update this page; avoid duplication in main chapter text
+Figure <a href="#fig:design-principles-color">14</a> shows some good and
+bad examples of color use.
 
-Here’s a wonderful data-cleaning tool that’s specific to Connecticut,
-but the idea (and open-source code from TrendCT/CT Mirror) may inspire
-others to create similar tools for other locations.
+<img src="images/04-clean/tabula-welcome.png" alt="Tabula welcome page."  />
+<p class="caption">
+Figure 1: Tabula welcome page.
+</p>
 
-In Connecticut, residents often list their village or neighborhood names
-in their address, but these do not necessarily match the official list
-of 169 Connecticut town governments (called county subdivisions by the
-US Census). For example, the Elmwood neighborhood is located in the town
-of West Hartford, and the Rockville village is located in the town of
-Vernon.
+### Load a PDF and Autodetect Tables
 
-To solve this problem, the data experts at TrendCT/CT Mirror have openly
-shared a wonderful tool to convert village/neighborhood names into
-official towns, called CTNamecleaner.
+TODO: please add a sample text-based PDF with numbers to extract to make
+it easier for users to try out
 
-![](images/04-clean/CTNamecleaner.png)
+1.  Select the PDF you want to extract data from by clicking the blue
+    *Browse…* button.
+2.  Click *Import*. Tabula will begin analyzing the file.
+3.  As soon as Tabula finishes loading the PDF, you will see a PDF
+    viewer with individual pages. The interface is fairly clean, with
+    only four buttons in the header.
+4.  The easiest first step is to let Tabula autodetect tables. Click the
+    relevant button in the header. You will see that each table is
+    highlighted in red, like shown in Figure
+    <a href="#fig:tabula-autodetect">2</a>.
 
-1.  Open CTNamecleaner with your browser at
-    <a href="http://shiny.trendct.org/ctnamecleaner/" class="uri">http://shiny.trendct.org/ctnamecleaner/</a>
-2.  Upload a CSV generic spreadsheet. Learn more about CSV format in
-    this book **TO DO** fix link
-3.  Select the data column to be converted into town names, and download
-    the results.
+<img src="images/04-clean/tabula-autodetect.png" alt="Selected tables are highlighted in red."  />
+<p class="caption">
+Figure 2: Selected tables are highlighted in red.
+</p>
 
-Learn more about [CTNamecleaner on
-GitHub](https://github.com/trendct/ctnamecleaner), and view the
-[underlying list of Connecticut place names in a public Google
-sheet](https://docs.google.com/spreadsheets/d/1WqZIGk2AkHXKYvd4uXy5a2nwyg529e7mMU5610Ale0g/edit#gid=0).
+### Manually Adjust Selections and Export 
+
+1.  Click *Preview & Export Extracted Data* green button to see how
+    Tabula thinks the data should be exported.
+2.  If it doesn’t look right, try switching between *Stream* and
+    *Lattice* extraction methods in the left-hand-side bar.
+3.  If the tables still don’t look right, or you don’t need all tables
+    that Tabula detected, hit *Revise selection* button. That will bring
+    you back to the PDF viewer.
+4.  Now you can *Clear All Selections* and manually select tables of
+    interest. Use drag-and-drop movements to select tables of interest
+    (or parts of tables).
+5.  If you want to “copy” selection to some or all pages, you can use
+    Repeat this Selection dropdown, which appears in the lower-right
+    corner of your selections, to propagate changes. This is extremely
+    useful when PDFs consist of many pages in the same format.
+6.  Once you are happy with the result, you can export it. If you have
+    only one table, we recommend using CSV as export format. If you have
+    more than one table, consider switching export format to *zip of
+    CSVs*. This way each table will be saved as an individual file,
+    rather than all tables inside one CSV file.
+
+Once you exported your data, you can find it in a Downloads folder on
+your computer (or wherever you chose to save it). It is ready to be
+opened in Google Sheets or Microsoft Excel, analyzed, and visualized!
+
+Clean Data with OpenRefine
+--------------------------
+
+Consider a dataset that looks like that:
+
+    Year,Country,FundingAgency,FundingAmount
+    2000,"Korea, N",Dept of Agriculture,"$32 242 376"
+    2000,"Korea–North",Dept of Agriculture,"$86,151,301"
+    2000,"Korea North",department of State,"166855"
+    2000,"SouthKorea",U.S. Agency for International Development,"282,805a"
+    2000,"south Korea",Trade and Development Agency,"  735718"
+    2001,"North Korea",US Agency for International Development,"345,399"
+    2001,"N Korea",Department of Argic,"  117715223"
+
+Do you notice any problems with it? Notice how the funding amounts (last
+column) are in quotes and contains commas, spaces, and some have a
+dollar character. Notice also how the Country includes various spellings
+of North and South Korea. Looks like a nightmare to analyze, but not if
+you know how to use OpenRefine, a powerful and free tool to clean up
+messy data.
+
+This is a subset of [US Overseas Loans and Grants
+(Greenbook)dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook),
+which shows US assistance to South Korea and North Korea between 2000
+and 2018. We added deliberate misspellings and formatting issues for
+demonstration purposes (although we did not alter values). This subset
+can be [downloaded here](/data/us-foreignaid-greenbook-koreas.csv). This
+dataset has four columns: year (between 2000 and 2018, inclusive),
+country (North or South Korea), a US funding agency, and funding amount
+(in 2018 US dollars).
+
+### Set up OpenRefine
+
+You can download a copy of OpenRefine for Linux, Mac, or Windows from
+the official download page
+(<a href="https://openrefine.org/download.html" class="uri">https://openrefine.org/download.html</a>).
+Just like Tabula, it runs in your browser and no data leaves your local
+machine, which is great for confidentiality.
+
+If you work on a **Mac**, the downloaded file will be a .dmg file. You
+will likely encounter a security message that will prevent OpenRefine
+from launching. Go to System Preferences -&gt; Security and Privacy, and
+hit *Open Anyway* button in the lower half of the window. If prompted
+with another window, click *Open*.
+
+If you use **Windows**, unzip the downloaded file. Double-click the .exe
+file, and OpenRefine should open in your default browser.
+
+Once launched, you should see OpenRefine in your browser with
+`127.0.0.1:3333` address (localhost, port 3333), like shown in Figure
+<a href="#fig:openrefine-welcome">3</a>.
+
+<img src="images/04-clean/openrefine-welcome.png" alt="OpenRefine starting page."  />
+<p class="caption">
+Figure 3: OpenRefine starting page.
+</p>
+
+### Load Data and Start a New Project
+
+To begin cleaning up your messy dataset, you should load it into a new
+project. OpenRefine lets you upload a dataset from your local machine
+(we will be doing exactly that), or a remote URL on the web (including a
+Google Spreadsheet), or copy/paste data into a text field. OpenRefine is
+able to extract data directly from SQL databases, but this is beyond the
+scope of this book.
+
+1.  Under *Get data from: This computer*, click *Browse…* and select the
+    file. Click Next.
+2.  Before you can start cleaning up data, OpenRefine allows you to make
+    sure data is **parsed** properly. Put simply, that data is split
+    into appropriate columns. Make sure your table looks OK in the
+    preview, or change setting in *Parse data as* block at the bottom of
+    the page until it starts looking meaningful, like shown in Figure
+    @(fig:openrefine-parse).
+3.  Hit *Create Project* in the upper-right corner.
+
+<img src="images/04-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
+<p class="caption">
+Figure 4: OpenRefine parsing options.
+</p>
+
+### Convert Dollar Amounts from Text to Numbers
+
+Once your project is created, you will see the first 10 rows of the
+dataset. You can change it to 5, 10, 25, or 50 by clicking the
+appropriate number in the header.
+
+Each column header has its own menu (callable by clicking the arrow-down
+button). Left-aligned numbers in a column are likely represented as text
+(as is the case with FundingAmount column), and they need to be
+transformed into numeric format.
+
+1.  To transform text into numbers, open the column menu, and go to
+    *Edit cells* &gt; *Common transforms* &gt; *To number*.
+2.  You will see that some numbers became green and right-aligned
+    (success!), but most did not change. That is because dollar sign
+    (`$`) and commas (`,`) confuse OpenRefine and prevent values to be
+    converted into numbers.
+3.  Let’s remove `$` and `,` from the FundingAmount column. In the
+    column menu, choose *Edit cells* &gt; *Transform*. In the Expression
+    window, type `value.replace(',', '')` and notice how commas
+    disappear in the preview window. When you confirm your formula
+    works, click *OK*.
+4.  Now, repeat the previous step, but instead of a comma, remove the
+    `$` character. (Your expression will become
+    `value.replace('$', '')`).
+5.  Perform *Edit cells* &gt; *Common transforms* &gt; *To number*
+    again. You will see that all but three cells turned green. That is
+    because we have spaces and an `a` character at the end of one
+    number. Fix those manually by hovering over cells, and clicking the
+    `edit` button (make sure to change *Data type* to *number*, and hit
+    *Apply*, like in Figure
+    <a href="#fig:openrefine-manual-edit">5</a>).
+
+<img src="images/04-clean/openrefine-manual-edit.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
+<p class="caption">
+Figure 5: Manually remove spaces and extra characters, and change data
+type to number.
+</p>
+
+### Cluster Similar Spellings
+
+When you combine different data sources, or process survey data where
+respondents wrote down their answers as opposed to selecting them from a
+dropdown menu, you might end up with multiple spellings of the same word
+(town name, education level – you name it!). One of the most powerful
+features of OpenRefine is the ability to cluster similar responses.
+
+Take a look at the *Country* column and all variations of North and
+South Korea spellings. From *Country* column’s dropdown menu, go to
+*Facet* &gt; *Text facet*. This will open up a window in the left-hand
+side with all spellings (and counts) of column values. 26 choices for a
+column that should have just two, North Korea and South Korea!
+
+1.  To begin standardizing spellings, click on the arrow-down button of
+    Country column header, and choose *Edit cells* &gt; *Cluster and
+    edit*. You will see a window like the one shown in Figure
+    <a href="#fig:openrefine-cluster">6</a>.
+2.  You will have a choice of two clustering methods, *key collision* or
+    *nearest neighbor*. Both methods can be powered by different
+    functions, but let’s leave the default *key collision* with
+    *fingerprint* function.
+3.  OpenRefine will calculate a list of clusters. *Values in Cluster*
+    column contains grouped spellings that OpenRefine considers the
+    same. If you agree with a grouping, check the *Merge?* box, and
+    assign the “true” value to the *New Cell Value* input box. In our
+    example, this would be either `North Korea` or `South Korea`.
+4.  You can go through all groupings, **or** stop after one or two and
+    click **Merge Selected & Re-Cluster** button. The clusters you chose
+    to merge will be merged, and grouping will be re-calculated (don’t
+    worry, the window won’t go anywhere). Keep regrouping until you are
+    happy with the result.
+
+Spend some time playing with *Keying function* parameters, and notice
+how they produce clusters of different sizes and accuracy.
+
+<img src="images/04-clean/openrefine-cluster.png" alt="Cluster similar text values."  />
+<p class="caption">
+Figure 6: Cluster similar text values.
+</p>
+
+### Export
+
+Once you are done cleaning up and clustering data, save the clean
+dataset by clicking *Export* button in the upper-right corner of
+OpenRefine window. You can choose your format (we recommend CSV, or
+comma-separated value).
 
 <!--chapter:end:04-clean.Rmd-->
 
@@ -1759,8 +1959,8 @@ used by data analysts and data visualization practitioners.
 
 At the end, we will introduce chart templates with JavaScript’s
 [Chart.js](chartjs.html) library, which give you a lot of control over
-how the charts look. Working with Chart.js will require you to [modify
-and host code templates with GitHub](github.html), which is described in
+how the charts look. Working with Chart.js will require you to [edit and
+host code templates with GitHub](github.html), which is described in
 detail in Chapter 8.
 
 See also related chapters in this book:
@@ -1854,18 +2054,18 @@ good chart takes time and effort, so make sure it enhances your story.
 ### Deconstructing a Chart
 
 Let’s take a look at Figure
-<a href="#fig:design-principles-chart-components">1</a>. It shows basic
+<a href="#fig:design-principles-chart-components">7</a>. It shows basic
 chart components that are shared among most chart types.
 
 <img src="images/05-chart/design-principles-chart-components.png" alt="Common chart components."  />
 <p class="caption">
-Figure 1: Common chart components.
+Figure 7: Common chart components.
 </p>
 
 A *title* is perhaps the most important element of any chart. A good
 title is short, clear, and tells a story on its own. For example, “Black
 and Asian Population More Likely to Die of Covid-19”, or “Millions of
-Tons of Plastic Enter the Ocean Every Year” are both good titles.
+Tons of Plastic Enter the Ocean Every Year” are both clear titles.
 
 Sometimes a more “dry” and “technical” title is preferred. Our two
 titles can then be changed to “Covid-19 Deaths by Race in New York City,
@@ -1922,12 +2122,12 @@ interpretation, there are some that are hard to bend.
 **Bar chart axis must start at zero.** Unlike line charts, bar or column
 charts need to have their value axis start at zero. This is to ensure
 that a bar twice the length of another bar represents twice its value.
-The Figure <a href="#fig:design-principles-start-at-zero">2</a> shows a
+The Figure <a href="#fig:design-principles-start-at-zero">8</a> shows a
 good and a bad example.
 
 <img src="images/05-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
 <p class="caption">
-Figure 2: Start your bar chart at zero.
+Figure 8: Start your bar chart at zero.
 </p>
 
 Starting y-axis at anything other than zero is a common trick used by
@@ -1958,14 +2158,14 @@ you see appropriate. You should be able to justify each element you add.
 To do so, ask yorself: Does this element improve the chart, or can I
 drop it without decreasing readability? This way you won’t end up with
 so-called “chart junk” as shown in Figure
-<a href="#fig:design-principles-junk">3</a>, which includes 3D
+<a href="#fig:design-principles-junk">9</a>, which includes 3D
 perspectives, shadows, and unnecessary elements. They might have looked
 cool in early versions of Microsoft Office, but let’s stay away from
 them today.
 
 <img src="images/05-chart/design-principles-junk.png" alt="Avoid chart junk."  />
 <p class="caption">
-Figure 3: Avoid chart junk.
+Figure 9: Avoid chart junk.
 </p>
 
 The only justification for using three dimensions is to plot
@@ -1976,47 +2176,47 @@ anyone tell you otherwise.
 part-to-whole relationship, so all slices need to add up to 100%.
 Generally, the fewer slices—the better. Arrange slices from largest to
 smallest, clockwise, and put the largest slice at 12 o’clock. Figure
-<a href="#fig:design-principles-pie">4</a> illustrates that.
+<a href="#fig:design-principles-pie">10</a> illustrates that.
 
 <img src="images/05-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o'clock."  />
 <p class="caption">
-Figure 4: Sort slices in pie charts from largest to smallest, and start
+Figure 10: Sort slices in pie charts from largest to smallest, and start
 at 12 o’clock.
 </p>
 
 If your pie chart has more than five slices, consider showing your data
 in a bar chart, either stacked or separated, like Figure
-<a href="#fig:design-principles-pie-to-bar">5</a> shows.
+<a href="#fig:design-principles-pie-to-bar">11</a> shows.
 
 <img src="images/05-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
 <p class="caption">
-Figure 5: Consider using bar charts instead of pies.
+Figure 11: Consider using bar charts instead of pies.
 </p>
 
 **Don’t make people turn their heads to read labels**. When your column
 chart has long x-axis labels that have to be rotated (often 90 degrees)
 to fit, consider turning the chart 90 degrees so that it becomes a
 horizontal bar chart. Take a look at Figure
-<a href="#fig:design-principles-turn-bar">6</a> to see how much easier
+<a href="#fig:design-principles-turn-bar">12</a> to see how much easier
 it is to read horizontally-oriented labels.
 
 <img src="images/05-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 6: For long labels, use horizontal bar charts.
+Figure 12: For long labels, use horizontal bar charts.
 </p>
 
 **Arrange elements logically**. If your bar chart shows different
 categories, consider ordering them, like is shown in Figure
-<a href="#fig:design-principles-order-categories">7</a>. You might want
+<a href="#fig:design-principles-order-categories">13</a>. You might want
 to sort them alphabetically, which can be useful if you want the reader
-to be able to quickly ook up an item, such as their town. Ordering
+to be able to quickly look up an item, such as their town. Ordering
 categories by value is another common technique that makes comparisons
 possible. If your columns represent a value of something at a particular
 time, they have to be ordered sequentially, of course.
 
 <img src="images/05-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 7: For long labels, use horizontal bar charts.
+Figure 13: For long labels, use horizontal bar charts.
 </p>
 
 **Do not overload your chart**. When labelling axes, choose natural
@@ -2038,25 +2238,25 @@ Make sure you avoid random colors.
 
 Whatever colors you end up choosing, they need to be distinguishable
 (otherwise what is the point?). Do not use colors that are too similar
-in hue (for example, various shades of green–leave them for choropleth
+in hue (for example, various shades of green––leave them for choropleth
 maps). Certain color combinations are hard to interpret for color-blind
 people, like green/red or yellow/blue, so be very careful with those.
-Figure <a href="#fig:design-principles-color">8</a> shows some good and
+Figure <a href="#fig:design-principles-color">14</a> shows some good and
 bad examples of color use.
 
 <img src="images/05-chart/design-principles-color.png" alt="Don't use colors just for the sake of it."  />
 <p class="caption">
-Figure 8: Don’t use colors just for the sake of it.
+Figure 14: Don’t use colors just for the sake of it.
 </p>
 
 If you follow the advice, you should end up with a de-cluttered chart as
-shown in Figure <a href="#fig:design-principles-decluttered">9</a>.
+shown in Figure <a href="#fig:design-principles-decluttered">15</a>.
 Notice how your eyes are drawn to the bars and their corresponding
 values, not bright colors or secondary components like the axes lines.
 
 <img src="images/05-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
 <p class="caption">
-Figure 9: Make sure important things catch the eye first.
+Figure 15: Make sure important things catch the eye first.
 </p>
 
 Google Sheets Charts
@@ -2070,8 +2270,8 @@ with Google Sheets export them as static *png* images. But in fact these
 interactive charts can be easily embedded in your website.
 
 In this section, we will look at creating column and bar charts that are
-separated, grouped, and stacked. We will also look at makig pie, line,
-area, and scatter charts, and learn to visualize three-dimentional data
+separated, grouped, and stacked. We will also look at making pie, line,
+area, and scatter charts, and learn to visualize three-dimensional data
 using bubble charts.
 
 As most easy-to-use tools, Google Sheets has its shortcomings when it
@@ -2097,14 +2297,16 @@ In this tutorial, we will use three small datasets to build interactive
 separated, grouped, and stacked bar charts in Google Sheets:
 
 -   Obesity in the US (by US CDC, and StateOfObesity.org project)
--   High-Caolorie Fast-Food Items
+-   High-Calorie Fast-Food Items
 -   Global Database on Body Mass Index by World Health Organization
 
 You will need a Google account (it’s free).
 
-If this is an e-book, you should be able to interact with the charts in
-this tutorial. Hover over data points to see tooltips with additional
-data.
+TODO: Decide whether to apply conditional formatting to make the
+statement below appear only in the web edition of the book.
+
+In the web version of this book, you can interact with charts by
+hovering over data points to see tooltips with additional data.
 
 ### Grouped Column and Bar Charts
 
@@ -4395,12 +4597,12 @@ we can do all of these steps in our web browser on GitHub.
 
 Your goal is to create your own version of this simple interactive map,
 with your modifications, as shown in Figure
-<a href="#fig:leaflet-simple">10</a>.
+<a href="#fig:leaflet-simple">16</a>.
 
 <iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 10: Create your own version of this [simple interactive Leaflet
+Figure 16: Create your own version of this [simple interactive Leaflet
 map](https://handsondataviz.github.io/leaflet-map-simple/).
 </p>
 
@@ -4419,11 +4621,11 @@ wisest choice for a username, if `BrownieChef` is also available.
     <a href="https://github.com/HandsOnDataViz/leaflet-map-simple" class="uri">https://github.com/HandsOnDataViz/leaflet-map-simple</a>
 
 2.  To create your own copy of our template, click the Fork button as
-    shown in Figure <a href="#fig:leaflet-simple-fork">11</a>.
+    shown in Figure <a href="#fig:leaflet-simple-fork">17</a>.
 
 <img src="images/08-github/leaflet-simple-fork.png" alt="Click the Fork button to make your own copy of the code template."  />
 <p class="caption">
-Figure 11: Click the Fork button to make your own copy of the code
+Figure 17: Click the Fork button to make your own copy of the code
 template.
 </p>
 
@@ -4443,11 +4645,11 @@ to create a second version, go to the [Create a New Repo and Upload
 Files on GitHub](create-repo.html) section of this chapter.
 
 1.  Click on the `index.html` file to view the code, as shown in Figure
-    <a href="#fig:leaflet-simple-index">12</a>.
+    <a href="#fig:leaflet-simple-index">18</a>.
 
 <img src="images/08-github/leaflet-simple-index.png" alt="Click the Index file to view the code."  />
 <p class="caption">
-Figure 12: Click the Index file to view the code.
+Figure 18: Click the Index file to view the code.
 </p>
 
 In case this is the first time you’re looking at computer code, we’ve
@@ -4464,11 +4666,11 @@ want to modify a few lines further below.
 
 1.  To edit the code, click on the the pencil symbol in the upper-right
     corner, as shown in Figure
-    <a href="#fig:leaflet-simple-edit">13</a>.
+    <a href="#fig:leaflet-simple-edit">19</a>.
 
 <img src="images/08-github/leaflet-simple-edit.png" alt="Click the pencil button to edit the code."  />
 <p class="caption">
-Figure 13: Click the pencil button to edit the code.
+Figure 19: Click the pencil button to edit the code.
 </p>
 
 Let’s start by making one simple change to prove to everyone that you’re
@@ -4482,11 +4684,11 @@ HTML division tag block around lines 21-23.
 
 2.  To save your edit, scroll to the bottom of the page and click the
     green `Commit Changes` button, as shown in Figure
-    <a href="#fig:leaflet-simple-commit">14</a>.
+    <a href="#fig:leaflet-simple-commit">20</a>.
 
 <img src="images/08-github/leaflet-simple-commit.png" alt="Click the green Commit Changes button to save your edits."  />
 <p class="caption">
-Figure 14: Click the green Commit Changes button to save your edits.
+Figure 20: Click the green Commit Changes button to save your edits.
 </p>
 
 In the language of coders, we “commit” our changes in the same way that
@@ -4505,18 +4707,18 @@ built-in feature called [GitHub Pages](https://pages.github.com/).
 
 1.  To access GitHub Pages, scroll to the top of your repo page and
     click the Settings button as shown in Figure
-    <a href="#fig:leaflet-simple-settings">15</a>.
+    <a href="#fig:leaflet-simple-settings">21</a>.
 
 <img src="images/08-github/leaflet-simple-settings.png" alt="Click the Settings button to access GitHub Pages and publish your work on the web."  />
 <p class="caption">
-Figure 15: Click the Settings button to access GitHub Pages and publish
+Figure 21: Click the Settings button to access GitHub Pages and publish
 your work on the web.
 </p>
 
 1.  In the Settings screen, scroll down to the GitHub Pages area, and
     use the drop-down menu to change Source from `None` to
     `Master Branch`, as shown in Figure
-    <a href="#fig:leaflet-github-pages">16</a>. There is no *commit* or
+    <a href="#fig:leaflet-github-pages">22</a>. There is no *commit* or
     *save* button here, and the change will happen automatically. This
     step tells GitHub to publish a live version of your map on the
     public web, where anyone can access it in their browser, if they
@@ -4525,7 +4727,7 @@ your work on the web.
 <iframe src="images/08-github/leaflet-github-pages.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 16: Under GitHub Pages, switch the source from None to Master as
+Figure 22: Under GitHub Pages, switch the source from None to Master as
 shown in this [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages.gif).
 </p>
@@ -4533,14 +4735,14 @@ GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet
 1.  Scroll back down to the GitHub Pages area to see the web address
     where your live map has been published online, and right-click it to
     open in a new browser tab, as shown in Figure
-    <a href="#fig:leaflet-github-pages2">17</a>. By opening your live
+    <a href="#fig:leaflet-github-pages2">23</a>. By opening your live
     map in a new tab, you to easily go back to your repo in the first
     tab, to edit more code later.
 
 <iframe src="images/08-github/leaflet-github-pages2.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 17: Under GitHub Pages, double-click your published map link as
+Figure 23: Under GitHub Pages, double-click your published map link as
 shown in this [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages2.gif).
 </p>
@@ -4565,11 +4767,11 @@ point to *your* live map, in place of *our* live map.
 
 1.  Go back to the previous browser tab, and click on the repo title to
     return to its home page, as shown in Figure
-    <a href="#fig:leaflet-click-title">18</a>.
+    <a href="#fig:leaflet-click-title">24</a>.
 
 <img src="images/08-github/leaflet-click-title.png" alt="On your first browser tab, click the repo title."  />
 <p class="caption">
-Figure 18: On your first browser tab, click the repo title.
+Figure 24: On your first browser tab, click the repo title.
 </p>
 
 If you can’t find your first browser tab, you can retype your repo home
@@ -4584,11 +4786,11 @@ page address in this format, and insert your GitHub username:
     click the pencil symbol to edit it, paste your link under the label
     `(replace with link to your site)`, and scroll down to commit the
     change. See both steps in Figure
-    <a href="#fig:leaflet-paste-links">19</a>.
+    <a href="#fig:leaflet-paste-links">25</a>.
 
 <img src="images/08-github/leaflet-paste-links.png" alt="Paste the link to your live map at the top of your repo page, and also in your README page."  />
 <p class="caption">
-Figure 19: Paste the link to your live map at the top of your repo page,
+Figure 25: Paste the link to your live map at the top of your repo page,
 and also in your README page.
 </p>
 
@@ -5649,7 +5851,7 @@ GitHub](create-repo.html) chapter in this book.
 <iframe src="images/10-leaflet/lmwgs-1-fork-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 20: Screencast: Fork
+Figure 26: Screencast: Fork
 </p>
 
 1.  Scroll up to the top, and click on your repo name to go back to its
@@ -5683,7 +5885,7 @@ Figure 20: Screencast: Fork
 <iframe src="images/10-leaflet/lmwgs-2-make-copy-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 21: Screencast: Share Google Sheet
+Figure 27: Screencast: Share Google Sheet
 </p>
 
 1.  File &gt; Publish the Link to your Google Sheet to the public web,
@@ -5716,7 +5918,7 @@ URL](images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 <iframe src="images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 22: Screencast: Copy Google Sheet URL and paste into GitHub code
+Figure 28: Screencast: Copy Google Sheet URL and paste into GitHub code
 </p>
 
 1.  Next, let’s paste your Google Sheet URL in a second place to keep
@@ -6634,7 +6836,7 @@ results in the Found and Quality columns.
 <iframe src="images/11-transform/google-sheets-geocoder-census-google.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 23: Screencast: Google Sheets Geocoder: US Census or Google
+Figure 29: Screencast: Google Sheets Geocoder: US Census or Google
 </p>
 
 #### Google Sheets Geocoder: US Census Geographies
@@ -6651,7 +6853,7 @@ Figure 23: Screencast: Google Sheets Geocoder: US Census or Google
 <iframe src="images/11-transform/google-sheets-geocoder-census-geographies.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 24: Screencast: Google Sheets Geocoder: US Census Geographies
+Figure 30: Screencast: Google Sheets Geocoder: US Census Geographies
 </p>
 
 ##### About US Census 15-character GeoID
@@ -7061,7 +7263,7 @@ and Table tabs to view or edit the data.
 <iframe src="images/11-transform/dataviz-geojsonio-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 25: Screencast: GeoJson.io
+Figure 31: Screencast: GeoJson.io
 </p>
 
 Select the Save menu and export into GeoJSON format.
@@ -7217,7 +7419,7 @@ Export your outline map.
 <iframe src="images/11-transform/mapshaper-dissolve-simple-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 27: Screencast: Mapshaper dissolve
+Figure 33: Screencast: Mapshaper dissolve
 </p>
 
 #### Clip a map to match an outline layer
@@ -7273,7 +7475,7 @@ Refresh the browser to start a new session in
 <iframe src="images/11-transform/mapshaper-clip-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 28: Screencast: Mapshaper clip
+Figure 34: Screencast: Mapshaper clip
 </p>
 
 #### Remove unwanted data columns
@@ -8218,10 +8420,10 @@ this [bad example](#style-guide).
 To cross-reference figures and tables, and display their auto-number and
 allow readers to jump there, write a call-out with a Bookdown reference
 to a code-chunk label, such as
-`See Figure <a href="#fig:sample-map">30</a>` or
+`See Figure <a href="#fig:sample-map">36</a>` or
 `See Table <a href="#tab:left-table">1</a>`. Demos:
 
--   See Figure <a href="#fig:tiger">29</a>.
+-   See Figure <a href="#fig:tiger">35</a>.
 -   See Table <a href="#tab:left-table">1</a>.
 
 Cross-reference interactivity varies by output:
@@ -8342,11 +8544,11 @@ chapter](https://bookdown.org/yihui/bookdown/figures.html).
 
 ### Demo: R code-chunk for static image for HTML and PDF
 
-…as shown in Figure <a href="#fig:tiger">29</a>.
+…as shown in Figure <a href="#fig:tiger">35</a>.
 
 <img src="images/15-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
-Figure 29: Caption here. Markdown embedded links are acceptable.
+Figure 35: Caption here. Markdown embedded links are acceptable.
 </p>
 
 R code-chunks allow more complex conditional formatting, where an
@@ -8359,24 +8561,24 @@ add a line in a `custom-scripts.html` file.
 
 ### Demo: R code-chunk for iframe in HTML and static image in PDF
 
-…as shown in Figure <a href="#fig:sample-map">30</a>.
+…as shown in Figure <a href="#fig:sample-map">36</a>.
 
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="100%" height="600px">
 </iframe>
 <p class="caption">
-Figure 30: Caption here, and add embedded link to explore the
+Figure 36: Caption here, and add embedded link to explore the
 [full-screen interactive
 map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 </p>
 
 ### Demo: R code-chunk for animated GIF in HTML and static image in PDF
 
-…as shown in Figure <a href="#fig:sheets-option-drag">31</a>.
+…as shown in Figure <a href="#fig:sheets-option-drag">37</a>.
 
 <iframe src="images/15-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
-Figure 31: Caption here, with embedded link to GitHub repo, not GitHub
+Figure 37: Caption here, with embedded link to GitHub repo, not GitHub
 Pages [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheets-option-drag.gif).
 </p>
@@ -8385,12 +8587,12 @@ GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheet
 
 Be sure to use the *embed* link from the YouTube *share* button.
 
-…as shown in the video <a href="#fig:video-sample">32</a>.
+…as shown in the video <a href="#fig:video-sample">38</a>.
 
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 32: Caption here, with embedded link to the [YouTube
+Figure 38: Caption here, with embedded link to the [YouTube
 video](https://youtu.be/-nGdrzMuUnI).
 </p>
 
@@ -8399,7 +8601,7 @@ video](https://youtu.be/-nGdrzMuUnI).
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 33: Caption and video **only** appear in the HTML version, with
+Figure 39: Caption and video **only** appear in the HTML version, with
 embedded link to the [YouTube video](https://youtu.be/w6dQ-RIQ5bc). Note
 that using this will change figure-numbering between HTML vs PDF
 versions.

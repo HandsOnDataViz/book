@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Clean Data with Open Refine | Hands-On Data Visualization</title>
+  <title>Clean Data with OpenRefine | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Clean Data with Open Refine | Hands-On Data Visualization" />
+  <meta property="og:title" content="Clean Data with OpenRefine | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Clean Data with Open Refine | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Clean Data with OpenRefine | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-05" />
+<meta name="date" content="2020-06-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="clean-spreadsheets.html"/>
-<link rel="next" href="ctnamecleaner.html"/>
+<link rel="prev" href="tabula.html"/>
+<link rel="next" href="chart.html"/>
 <script src="libs/header-attrs-2.2/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -180,8 +180,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
-<li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with Open Refine</a></li>
-<li class="chapter" data-level="" data-path="ctnamecleaner.html"><a href="ctnamecleaner.html"><i class="fa fa-check"></i>Fix Connecticut Town Names with CTNamecleaner</a></li>
+<li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
+<li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
@@ -295,16 +295,145 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="open-refine" class="section level2 unnumbered" number="">
-<h2>Clean Data with Open Refine</h2>
-<p>TODO: show basic tutorial with Open Refine; link to Alvin Chang’s fabulous <a href="http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/">Open Refine tutorial in CT Mirror</a></p>
+<h2>Clean Data with OpenRefine</h2>
+<p>Consider a dataset that looks like that:</p>
+<pre><code>Year,Country,FundingAgency,FundingAmount
+2000,&quot;Korea, N&quot;,Dept of Agriculture,&quot;$32 242 376&quot;
+2000,&quot;Korea–North&quot;,Dept of Agriculture,&quot;$86,151,301&quot;
+2000,&quot;Korea North&quot;,department of State,&quot;166855&quot;
+2000,&quot;SouthKorea&quot;,U.S. Agency for International Development,&quot;282,805a&quot;
+2000,&quot;south Korea&quot;,Trade and Development Agency,&quot;  735718&quot;
+2001,&quot;North Korea&quot;,US Agency for International Development,&quot;345,399&quot;
+2001,&quot;N Korea&quot;,Department of Argic,&quot;  117715223&quot;</code></pre>
+<p>Do you notice any problems with it? Notice how the funding amounts (last column)
+are in quotes and contains commas, spaces, and some have a dollar character.
+Notice also how the Country includes various spellings of North and South Korea.
+Looks like a nightmare to analyze, but not if you know how to use OpenRefine,
+a powerful and free tool to clean up messy data.</p>
+<p>This is a subset of <a href="https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook">US Overseas Loans and Grants (Greenbook)dataset</a>, which shows US assistance to South Korea and North Korea between 2000 and 2018. We added deliberate misspellings and formatting issues for demonstration purposes
+(although we did not alter values). This subset can be <a href="/data/us-foreignaid-greenbook-koreas.csv">downloaded here</a>. This dataset has four columns: year (between 2000 and 2018, inclusive), country (North or South Korea), a US funding agency, and funding amount (in 2018 US dollars).</p>
+<div id="set-up-openrefine" class="section level3 unnumbered" number="">
+<h3>Set up OpenRefine</h3>
+<p>You can download a copy of OpenRefine for Linux, Mac, or Windows from the official
+download page (<a href="https://openrefine.org/download.html" class="uri">https://openrefine.org/download.html</a>). Just like Tabula, it runs in your browser and no
+data leaves your local machine, which is great for confidentiality.</p>
+<p>If you work on a <strong>Mac</strong>, the downloaded file will be a .dmg file. You will likely encounter
+a security message that will prevent OpenRefine from launching. Go to System Preferences -&gt; Security and Privacy, and
+hit <em>Open Anyway</em> button in the lower half of the window. If prompted with another window, click <em>Open</em>.</p>
+<p>If you use <strong>Windows</strong>, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
+open in your default browser.</p>
+<p>Once launched, you should see OpenRefine in your browser with <code>127.0.0.1:3333</code> address (localhost, port 3333),
+like shown in Figure <a href="open-refine.html#fig:openrefine-welcome">4.3</a>.</p>
+
+<div class="figure"><span id="fig:openrefine-welcome"></span>
+<img src="images/04-clean/openrefine-welcome.png" alt="OpenRefine starting page."  />
+<p class="caption">
+Figure 4.3: OpenRefine starting page.
+</p>
 </div>
+</div>
+<div id="load-data-and-start-a-new-project" class="section level3" number="4.0.1">
+<h3><span class="header-section-number">4.0.1</span> Load Data and Start a New Project</h3>
+<p>To begin cleaning up your messy dataset, you should load it into a new project.
+OpenRefine lets you upload a dataset from your local machine (we will be doing exactly that),
+or a remote URL on the web (including a Google Spreadsheet), or copy/paste data into a text field.
+OpenRefine is able to extract data directly from SQL databases, but this is beyond the scope of this book.</p>
+<ol style="list-style-type: decimal">
+<li>Under <em>Get data from: This computer</em>, click <em>Browse…</em> and select the file. Click Next.</li>
+<li>Before you can start cleaning up data, OpenRefine allows you to make sure data is <strong>parsed</strong> properly.
+Put simply, that data is split into appropriate columns. Make sure your table looks OK in the preview,
+or change setting in <em>Parse data as</em> block at the bottom of the page until it starts looking meaningful,
+like shown in Figure @(fig:openrefine-parse).</li>
+<li>Hit <em>Create Project</em> in the upper-right corner.</li>
+</ol>
+
+<div class="figure"><span id="fig:openrefine-parse"></span>
+<img src="images/04-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
+<p class="caption">
+Figure 4.4: OpenRefine parsing options.
+</p>
+</div>
+</div>
+<div id="convert-dollar-amounts-from-text-to-numbers" class="section level3 unnumbered" number="">
+<h3>Convert Dollar Amounts from Text to Numbers</h3>
+<p>Once your project is created, you will see the first 10 rows of the dataset. You can change it to 5, 10, 25, or 50
+by clicking the appropriate number in the header.</p>
+<p>Each column header has its own menu (callable by clicking the arrow-down button).
+Left-aligned numbers in a column are likely represented as text
+(as is the case with FundingAmount column), and they need to be transformed
+into numeric format.</p>
+<ol style="list-style-type: decimal">
+<li>To transform text into numbers, open the column menu, and go to <em>Edit cells</em> &gt; <em>Common transforms</em> &gt; <em>To number</em>.</li>
+<li>You will see that some numbers became green and right-aligned (success!), but most did not change.
+That is because dollar sign (<code>$</code>) and commas (<code>,</code>) confuse OpenRefine and prevent values to be converted into numbers.</li>
+<li>Let’s remove <code>$</code> and <code>,</code> from the FundingAmount column. In the column menu, choose <em>Edit cells</em> &gt;
+<em>Transform</em>. In the Expression window, type <code>value.replace(',', '')</code> and notice how commas
+disappear in the preview window. When you confirm your formula works, click <em>OK</em>.</li>
+<li>Now, repeat the previous step, but instead of a comma, remove the <code>$</code> character.
+(Your expression will become <code>value.replace('$', '')</code>).</li>
+<li>Perform <em>Edit cells</em> &gt; <em>Common transforms</em> &gt; <em>To number</em> again. You will see that all but three
+cells turned green. That is because we have spaces and an <code>a</code> character at the end of one number.
+Fix those manually by hovering over cells, and clicking the <code>edit</code> button
+(make sure to change <em>Data type</em> to <em>number</em>, and hit <em>Apply</em>,
+like in Figure <a href="open-refine.html#fig:openrefine-manual-edit">4.5</a>).</li>
+</ol>
+
+<div class="figure"><span id="fig:openrefine-manual-edit"></span>
+<img src="images/04-clean/openrefine-manual-edit.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
+<p class="caption">
+Figure 4.5: Manually remove spaces and extra characters, and change data type to number.
+</p>
+</div>
+</div>
+<div id="cluster-similar-spellings" class="section level3 unnumbered" number="">
+<h3>Cluster Similar Spellings</h3>
+<p>When you combine different data sources, or process survey data where respondents
+wrote down their answers as opposed to selecting them from a dropdown menu, you might end up
+with multiple spellings of the same word (town name, education level – you name it!).
+One of the most powerful features of OpenRefine is the ability to cluster similar responses.</p>
+<p>Take a look at the <em>Country</em> column and all variations of North and South Korea spellings.
+From <em>Country</em> column’s dropdown menu, go to <em>Facet</em> &gt; <em>Text facet</em>. This will open up a window
+in the left-hand side with all spellings (and counts) of column values. 26 choices for a column
+that should have just two, North Korea and South Korea!</p>
+<ol style="list-style-type: decimal">
+<li>To begin standardizing spellings, click on the arrow-down button of Country column header,
+and choose <em>Edit cells</em> &gt; <em>Cluster and edit</em>. You will see a window like the one shown in Figure
+<a href="open-refine.html#fig:openrefine-cluster">4.6</a>.</li>
+<li>You will have a choice of two clustering methods, <em>key collision</em> or <em>nearest neighbor</em>. Both
+methods can be powered by different functions, but let’s leave the default <em>key collision</em> with <em>fingerprint</em> function.</li>
+<li>OpenRefine will calculate a list of clusters. <em>Values in Cluster</em> column contains grouped spellings
+that OpenRefine considers the same. If you agree with a grouping, check the <em>Merge?</em> box, and assign
+the “true” value to the <em>New Cell Value</em> input box. In our example, this would be either <code>North Korea</code> or <code>South Korea</code>.</li>
+<li>You can go through all groupings, <strong>or</strong> stop after one or two and click <strong>Merge Selected &amp; Re-Cluster</strong> button.
+The clusters you chose to merge will be merged, and grouping will be re-calculated
+(don’t worry, the window won’t go anywhere). Keep regrouping until you are happy with the result.</li>
+</ol>
+<p>Spend some time playing with <em>Keying function</em> parameters, and notice
+how they produce clusters of different sizes and accuracy.</p>
+
+<div class="figure"><span id="fig:openrefine-cluster"></span>
+<img src="images/04-clean/openrefine-cluster.png" alt="Cluster similar text values."  />
+<p class="caption">
+Figure 4.6: Cluster similar text values.
+</p>
+</div>
+</div>
+<div id="export" class="section level3 unnumbered" number="">
+<h3>Export</h3>
+<p>Once you are done cleaning up and clustering data, save the clean dataset
+by clicking <em>Export</em> button in the upper-right corner of OpenRefine window.
+You can choose your format (we recommend CSV, or comma-separated value).</p>
+
+</div>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="clean-spreadsheets.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="ctnamecleaner.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tabula.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chart.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -346,7 +475,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/04-clean.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

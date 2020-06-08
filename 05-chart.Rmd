@@ -14,7 +14,7 @@ data analysts and data visualization practitioners.
 
 At the end, we will introduce chart templates with JavaScript's [Chart.js](chartjs.html) library,
 which give you a lot of control over how the charts look. Working with Chart.js will require
-you to [modify and host code templates with GitHub](github.html), which is described in detail in Chapter 8.
+you to [edit and host code templates with GitHub](github.html), which is described in detail in Chapter 8.
 
 
 See also related chapters in this book:
@@ -43,11 +43,6 @@ See also related chapters in this book:
 - [Tableau Public resources page](https://public.tableau.com/en-us/s/resources)
 - [Chart.js samples page](https://www.chartjs.org/samples/latest/)
 
-
-
-
-
-
 ## Chart Design Principles {- #chart-design}
 
 Although not a science, data visualization comes with a set of rules, principles, and best practices
@@ -71,7 +66,7 @@ knitr::include_graphics("images/05-chart/design-principles-chart-components.png"
 
 A *title* is perhaps the most important element of any chart. A good title is short, clear,
 and tells a story on its own. For example, "Black and Asian Population More Likely to Die of Covid-19",
-or "Millions of Tons of Plastic Enter the Ocean Every Year" are both good titles.
+or "Millions of Tons of Plastic Enter the Ocean Every Year" are both clear titles.
 
 Sometimes a more "dry" and "technical" title is preferred. Our two titles can then be changed to
 "Covid-19 Deaths by Race in New York City, March 2020" and "Tons of Plastic Entering the Ocean, 1950–2020", respectively.
@@ -108,7 +103,7 @@ In interactive charts, a *tooltip* is often used to provide more data or context
 once a user clicks or hovers over a data point or a data series.
 Tooltips are great for complex visualizations with multiple layers of data,
 because they de-clutter the chart. But because tooltips are harder to interact with on smaller screens,
-such as phones and tablets, and are invisible when the chart is printed, only rely on them to convey 
+such as phones and tablets, and are invisible when the chart is printed, only rely on them to convey
 additional, nice-to-have information. Make sure all essential information
 is visible without any user interaction.
 
@@ -140,7 +135,7 @@ we give in the next section.
 
 But the one and only thing in data visualization that every single professional
 will agree on is that *pie charts represent 100% of the quantity*.
-If slices sum up to anything other than 100%, it is a crime. If you design a survey 
+If slices sum up to anything other than 100%, it is a crime. If you design a survey
 titled *Are you a cat or a dog person?* and include *I am both* as the third option,
 forget about putting the results into a pie chart.
 
@@ -149,11 +144,9 @@ forget about putting the results into a pie chart.
 Remember that you create a chart to help the reader understand the story, not to confuse them.
 Decide if you want to show absolute numbers, percentages, or percent changes, and do the math for your readers.
 
-**Avoid chart junk**. Start with a white background and add elements as you see appropriate. You should be able to justify 
-each element you add. To do so, ask yorself: Does this element improve the chart, or can I 
-drop it without decreasing readability? This way you won't end up with so-called "chart junk" as shown in Figure \@ref(fig:design-principles-junk), 
-which includes 3D perspectives, shadows, and unnecessary elements. They might have looked cool in early versions
-of Microsoft Office, but let's stay away from them today.
+**Avoid chart junk**. Start with a white background and add elements as you see appropriate. You should be able to justify
+each element you add. To do so, ask yorself: Does this element improve the chart, or can I
+drop it without decreasing readability? This way you won't end up with so-called "chart junk" as shown in Figure \@ref(fig:design-principles-junk), which includes 3D perspectives, shadows, and unnecessary elements. They might have looked cool in early versions of Microsoft Office, but let's stay away from them today.
 
 (ref:design-principles-junk) Avoid chart junk.
 
@@ -164,8 +157,7 @@ knitr::include_graphics("images/05-chart/design-principles-junk.png")
 The only justification for using three dimensions is to plot three-dimensional data,
 which has x, y, and z values. And don't let anyone tell you otherwise.
 
-**Beware of pie charts**. Remember that pie charts only show part-to-whole relationship, so all slices need to add up to 100%.
-Generally, the fewer slices—the better. Arrange slices from largest
+**Beware of pie charts**. Remember that pie charts only show part-to-whole relationship, so all slices need to add up to 100%. Generally, the fewer slices—the better. Arrange slices from largest
 to smallest, clockwise, and put the largest slice at 12 o'clock.
 Figure \@ref(fig:design-principles-pie) illustrates that.
 
@@ -175,8 +167,7 @@ Figure \@ref(fig:design-principles-pie) illustrates that.
 knitr::include_graphics("images/05-chart/design-principles-pie.png")
 ```
 
-If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or separated,
-like Figure \@ref(fig:design-principles-pie-to-bar) shows.
+If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or separated, like Figure \@ref(fig:design-principles-pie-to-bar) shows.
 
 (ref:design-principles-pie-to-bar) Consider using bar charts instead of pies.
 
@@ -184,9 +175,7 @@ like Figure \@ref(fig:design-principles-pie-to-bar) shows.
 knitr::include_graphics("images/05-chart/design-principles-pie-to-bar.png")
 ```
 
-**Don't make people turn their heads to read labels**. When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit,
-consider turning the chart 90 degrees so that it becomes a horizontal bar chart.
-Take a look at Figure \@ref(fig:design-principles-turn-bar) to see how much easier it is to read horizontally-oriented labels.
+**Don't make people turn their heads to read labels**. When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit, consider turning the chart 90 degrees so that it becomes a horizontal bar chart. Take a look at Figure \@ref(fig:design-principles-turn-bar) to see how much easier it is to read horizontally-oriented labels.
 
 (ref:design-principles-turn-bar) For long labels, use horizontal bar charts.
 
@@ -194,13 +183,7 @@ Take a look at Figure \@ref(fig:design-principles-turn-bar) to see how much easi
 knitr::include_graphics("images/05-chart/design-principles-turn-bar.png")
 ```
 
-**Arrange elements logically**. If your bar chart shows different categories,
-consider ordering them, like is shown in Figure \@ref(fig:design-principles-order-categories).
-You might want to sort them alphabetically, which can be useful if you want the reader
-to be able to quickly ook up an item, such as their town. Ordering categories by
-value is another common technique that makes comparisons possible.
-If your columns represent a value of something at a particular time,
-they have to be ordered sequentially, of course.
+**Arrange elements logically**. If your bar chart shows different categories, consider ordering them, like is shown in Figure \@ref(fig:design-principles-order-categories). You might want to sort them alphabetically, which can be useful if you want the reader to be able to quickly look up an item, such as their town. Ordering categories by value is another common technique that makes comparisons possible. If your columns represent a value of something at a particular time, they have to be ordered sequentially, of course.
 
 (ref:design-principles-order-categories) For long labels, use horizontal bar charts.
 
@@ -208,27 +191,14 @@ they have to be ordered sequentially, of course.
 knitr::include_graphics("images/05-chart/design-principles-order-categories.png")
 ```
 
-**Do not overload your chart**. When labelling axes,
-choose natural increments that space equally, such as [0, 20, 40, 60, 80, 100],
-or [1, 10, 100, 1000] for a logarithmic scale. Do not overload your scales.
+**Do not overload your chart**. When labelling axes, choose natural increments that space equally, such as [0, 20, 40, 60, 80, 100], or [1, 10, 100, 1000] for a logarithmic scale. Do not overload your scales.
 Keep your typography simple, use (but do not overuse) **bolding** to highlight major insights.
-Consider using commas as thousands separators for readability
-(`1,000,000` is much easier to read than `1000000`).
+Consider using commas as thousands separators for readability (`1,000,000` is much easier to read than `1000000`).
 
 **Be careful with the colors**. The use of color is a complex topic, and there are plenty
-of books and research devoted to it.
-But some principles are fairly universal. First, do not use colors just for the sake of it,
-most charts are fine being monochromatic.
-Second, remember that colors come with some meaning attached, which can vary among cultures.
-In the world of business, red is conventionally used to represent loss, and it would be unwise
-to use this color to show profit. Make sure you avoid random colors.
+of books and research devoted to it. But some principles are fairly universal. First, do not use colors just for the sake of it, most charts are fine being monochromatic. Second, remember that colors come with some meaning attached, which can vary among cultures. In the world of business, red is conventionally used to represent loss, and it would be unwise to use this color to show profit. Make sure you avoid random colors.
 
-Whatever colors you end up choosing, they need to be distinguishable
-(otherwise what is the point?). Do not use colors that are too similar in hue 
-(for example, various shades of green–leave them for choropleth maps).
-Certain color combinations are hard to interpret for color-blind people,
-like green/red or yellow/blue, so be very careful with those.
-Figure \@ref(fig:design-principles-color) shows some good and bad examples of color use.
+Whatever colors you end up choosing, they need to be distinguishable (otherwise what is the point?). Do not use colors that are too similar in hue (for example, various shades of green–--leave them for choropleth maps). Certain color combinations are hard to interpret for color-blind people, like green/red or yellow/blue, so be very careful with those. Figure \@ref(fig:design-principles-color) shows some good and bad examples of color use.
 
 (ref:design-principles-color) Don't use colors just for the sake of it.
 
@@ -237,16 +207,13 @@ knitr::include_graphics("images/05-chart/design-principles-color.png")
 ```
 
 If you follow the advice, you should end up with a de-cluttered chart as shown in
-Figure \@ref(fig:design-principles-decluttered).
-Notice how your eyes are drawn to the bars and their corresponding values,
-not bright colors or secondary components like the axes lines.
+Figure \@ref(fig:design-principles-decluttered). Notice how your eyes are drawn to the bars and their corresponding values, not bright colors or secondary components like the axes lines.
 
 (ref:design-principles-decluttered) Make sure important things catch the eye first.
 
 ```{r design-principles-decluttered, fig.cap="(ref:design-principles-decluttered)"}
 knitr::include_graphics("images/05-chart/design-principles-decluttered.png")
 ```
-
 
 ## Google Sheets Charts {- #chart-google-sheets}
 
@@ -256,10 +223,10 @@ Most people who create charts with Google Sheets export them as static *png* ima
 But in fact these interactive charts can be easily embedded in your website.
 
 In this section, we will look at creating column and bar charts that are separated,
-grouped, and stacked. We will also look at makig pie, line, area, and scatter charts,
-and learn to visualize three-dimentional data using bubble charts.
+grouped, and stacked. We will also look at making pie, line, area, and scatter charts,
+and learn to visualize three-dimensional data using bubble charts.
 
-As most easy-to-use tools, Google Sheets has its shortcomings when it comes to 
+As most easy-to-use tools, Google Sheets has its shortcomings when it comes to
 charting. You might find yourself with too little control over the appearance option.
 Your won't have much control  over your scatterplot tooltips.
 You won't be able to cite or link to source data inside the chart,
@@ -269,7 +236,6 @@ inside your spreadsheets *quickly*.
 
 Tip: For an overview of charts and graphs in Google Sheets, visit
 [this help page](https://support.google.com/docs/answer/190718).
-
 
 ## Column and Bar Charts with Google Sheets {- #column-bar-google}
 
@@ -281,13 +247,14 @@ In this tutorial, we will use three small datasets to build interactive
 separated, grouped, and stacked bar charts in Google Sheets:
 
 * Obesity in the US (by US CDC, and StateOfObesity.org project)
-* High-Caolorie Fast-Food Items
+* High-Calorie Fast-Food Items
 * Global Database on Body Mass Index by World Health Organization
 
 You will need a Google account (it's free).
 
-If this is an e-book, you should be able to interact with the charts in this tutorial.
-Hover over data points to see tooltips with additional data.
+TODO: Decide whether to apply conditional formatting to make the statement below appear only in the web edition of the book.
+
+In the web version of this book, you can interact with charts by hovering over data points to see tooltips with additional data.
 
 ### Grouped Column and Bar Charts {-}
 
@@ -451,7 +418,7 @@ First, remember to not have too many slices (ideally you should limit slices to 
 from largest to smallest and start at 12 o'clock. To separate slices, you can use different slice colors,
 or lines.
 
-Make sure your data adds up to 100%. If you want to show a pie chart with the number of fruit your store had 
+Make sure your data adds up to 100%. If you want to show a pie chart with the number of fruit your store had
 sold in a day—21 apples, 5 oranges, and 32 bananas—the sum of all fruit, 58, is your 100%.
 Then a reader can figure out that of all fruits sold, approximately 55% were bananas.
 If you decided to also include some, but not all other items that your store has sold,
@@ -485,7 +452,7 @@ In *Customize* tab of the Chart editor, you can also change colors and add borde
 #### Line Chart {-}
 The most common use of line charts is to represent values at different points in time,
 in other words to show change over time. The line chart in Figure 5-X shows per-capita
-meat availability in the US for the past 110 years. You can see that 
+meat availability in the US for the past 110 years. You can see that
 the level of chicken (shown in orange) rises steadily and surpasses beef (red) and pork (blue).
 
 <p>
@@ -542,8 +509,6 @@ second and following columns are series, or lines). Select it, and choose *Inser
 In the Chart editor, in tab Setup, select  *Stacked area chart* from the Chart type dropdown list.
 
 ## Scatter and Bubble Charts with Google Sheets {- #scatter-bubble-google}
-
-
 
 Follow these tutorials to create different types scatter and bubble charts
 with [Google Sheets](https://sheets.google.com).
@@ -606,7 +571,7 @@ data range.
 
 #### Bubble chart with 3 columns {-}
 In this tutorial, we will show you a little trick that you can use if you want a scatter chart
-with both data values displayed in a tooltip. We will use the same 
+with both data values displayed in a tooltip. We will use the same
 World Bank dataset as we did for the scatter plot.
 
 The bubble chart (more about the *proper* use of bubble charts in the next section)

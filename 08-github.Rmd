@@ -82,7 +82,7 @@ Let's start by making one simple change to prove to everyone that you're now edi
 
 In the language of coders, we "commit" our changes in the same way that most people "save" a document, and later you'll see how GitHub tracks each code commit so that you can roll them back if needed. By default, GitHub inserts a short description of your commit as "Update index.html", and you have the option to customize that description when you start making lots of commits to keep track of your work. Also by default, GitHub commits your changes directly to the `master` branch of your code, which we'll explain later.
 
-Now let's publish your map to the public web to see how this minor edit looks in your browser. GitHub not only stores open-source code, but allows you to host a live online version of HTML-based code with a built-in feature called [GitHub Pages](https://pages.github.com/).
+Now let's publish your edited map to the public web to see how it looks in a web browser. GitHub not only stores open-source code, but its built-in [GitHub Pages](https://pages.github.com/) feature allows you to host a live online version of your HTML-based code, which anyone with the web address can view in their browser. While GitHub Pages is free to use, there are [some restrictions on size and content](https://help.github.com/en/github/working-with-github-pages/about-github-pages) and it is not intended for running an online business or commercial transactions. But one advantage of code templates is that you can host them on any web server you control. Since we're already using GitHub to store and edit our code template, it's easy to turn on GitHub Pages to host it online.
 
 7. To access GitHub Pages, scroll to the top of your repo page and click the Settings button as shown in Figure \@ref(fig:leaflet-simple-settings).
 
@@ -108,7 +108,7 @@ if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-
 if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-pages2.gif") else knitr::include_graphics("images/08-github/leaflet-github-pages2.png")
 ```
 
-10. Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address in this format, `https://YourUserName.github.io/leaflet-map-simple`, where `YourUserName` is your GitHub account username. Remember why we told you not to create your account with a username like `DrunkBrownieChef6789`?
+10. Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address for your repo in this format, `https://YourUserName.github.io/leaflet-map-simple`, where `YourUserName` is your GitHub account username. Remember why we told you not to create your account with a username like `DrunkBrownieChef6789`?
 
 Tip: If your map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing, then do a "hard" browser refresh to contact the web server again. **TODO:** Add hard refresh instructions, or link them here if shown earlier in the book.
 
@@ -134,13 +134,13 @@ If you can't find your first browser tab, you can retype your repo home page add
  knitr::include_graphics("images/08-github/leaflet-paste-links.png")
 ```
 
-Pasting both of these links helps point people who discover your GitHub repo to *your* live map, rather than our version.
+Pasting both of these links helps point people who discover your GitHub repo to *your* live map, rather than *our* version for this book.
 
 Now that you've successfully made simple edits and published your live map, let's make more edits to jazz it up and help you learn more about how Leaflet code works.
 
 13. On your repo home page, click to open the `index.html` file, and click the pencil symbol to edit more code.
 
-Wherever you see the `EDIT` code comment, this points out a line that you should modify. For example, look for the code block shown below that sets up the initial center point of the map and its zoom level. Insert a new latitude and longitude coordinate to set a new center point, and find your coordinates with online tools such as [LatLong.net](https://www.latlong.net/) or Google Maps. TODO: Show how to find coords in GMaps here, or link if it appears earlier in the book.
+Wherever you see the `EDIT` code comment, this points out a line that you can easily modify. For example, look for the code block shown below that sets up the initial center point of the map and its zoom level. Insert a new latitude and longitude coordinate to set a new center point, and find your coordinates with online tools such as [LatLong.net](https://www.latlong.net/) or Google Maps. **TODO:** Show how to find coords in GMaps here, or link if it appears earlier in the book.
 
 ```
   var map = L.map('map', {
@@ -150,7 +150,7 @@ Wherever you see the `EDIT` code comment, this points out a line that you should
   });
 ```
 
-The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change `light_all` to `dark_all` to see the inverse basemap color. See many other Leaflet basemap code options that you can paste in at https://leaflet-extras.github.io/leaflet-providers/preview/. Be sure to attribute the source and keep `}).addTo(map);` in the last line.
+The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change `light_all` to `dark_all`, which will substitute a different CARTO basemap with inverted coloring. Or see many other Leaflet basemap code options that you can paste in at https://leaflet-extras.github.io/leaflet-providers/preview/. Make sure to attribute the source, and also keep `}).addTo(map);` at the end of this code block, which displays the basemap.
 
 ```
  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -158,37 +158,72 @@ The next code block displays the basemap tile layer that serve as the map backgr
  }).addTo(map);
 ```
 
-The last code block displays a single point marker on the map, colored blue by default in Leaflet, with pop-up text when users click it. You can edit the marker coordinates, insert a pop-up text message, or copy and paste the code to create a second marker.
+The last code block displays a single point marker on the map, colored blue by default in Leaflet, with a pop-up message when users click it. You can edit the marker coordinates, insert the pop-up text, or copy and paste the code block to create a second marker.
 
 ```
 L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
 .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 ```
 
-14. After making edits, remember to scroll down and press the Commit button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires 30 seconds to process code edits. To solve problems, see [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
+14. After making edits, remember to scroll down and press the Commit button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires 30 seconds to process code edits. If you have problems, see the [Fix Common GitHub and Code Errors](fix-code.html) section in this chapter.
 
+Congratulations! If this is the first time that you've edited computer code and hosted it online, you can now call yourself a "coder". The process is similar to following and modifying a cookbook recipe, just like you also can call yourself a "chef" after baking your first batch of brownies! Although no one is likely to hire you as a full-time paid coder (or chef) at this early stage, you now understand several of the basic skills needed to copy, edit, and host code online, and you're ready to dive into the more advanced versions, such as [Chart.js code templates in chapter 9](chartjs.html) and [Leaflet map code templates in chapter 10](leaflet.html).
 
-**TODO:** Write section summary, and discuss web hosting: This chapter describes how to use the free GitHub Pages feature to host a live version of your code on the public web. But what if this service is no longer free at some point in the future, or you decide for any reason that it's best to host your code elsewhere? One advantage of creating data visualizations with code templates like the ones featured in this book is that you can host them on *any* web server. Our templates are designed using three very common types of code: an HTML file to..., a JavaScript file to..., and a Cascasding Style Sheets (or CSS) file to... Describe abbreviations:...  
-
-For more advanced examples, see the [Leaflet Map Templates](leaflet.html) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
-
-**TODO: start again here**
+The next section describes how to enhance your GitHub skills by creating new repos and uploading your files. These are essential steps to create a second copy of a code template or to work with more advanced templates in the next two chapters.
 
 ## Create a New Repo and Upload Files on GitHub {- #create-repo}
-TODO: Revise after testing GitHub "template" setting. Question: If I already forked one copy of a GitHub code repository, GitHub will not allow me to fork it a second time. So how do I make a second copy of a repo?
+Now that you've forked an existing repo on GitHub, the next step is to learn how to create a brand-new repo and upload different types of files. These skills will be helpful for several scenarios later in this book. First, since GitHub allows you to create only *one fork* of an existing repository, if you wish to make a *second* copy, you'll need to download the code and upload it into a new repo. Second, [Chapter 9 on Chart.js code templates](chartjs.html) and [chapter 10 on Leaflet map code templates](leaflet.html) allow you to upload your own files to create data visualizations, so we'll show you how GitHub has built-in support for CSV data files and GeoJSON geography files. Once again, we'll demonstrate how to do all of these steps in GitHub's beginner-level browser interface.
 
-Answer: GitHub has a "one-fork" rule for good reasons, but here's a simple way for beginners to work around it, using only your web browser and any computer (such as Mac, Windows, or Chromebook).
+Let's start with GitHub's *one fork* rule. Imagine that you wish to create a second copy of the [leaflet-map-simple template](https://github.com/HandsOnDataViz/leaflet-map-simple) described in the prior section. If you attempt to create a second fork, GitHub will "gray out" the Fork button and display an error message stating that you "Cannot fork because you own this repository..." as shown in Figure \@ref(fig:repo-cannot-fork). There's a good reason for GitHub's one-fork rule: it's designed to prevent you from accidentally creating a second copy, with the same name as your first fork, which would overwrite and erase your previous work.
 
-- Create a brand-new repository on GitHub in your browser
-- Download an existing code repository and unzip the folder
-- Upload the contents of that folder to your new repository and Commit Changes
+(ref:repo-cannot-fork) GitHub's one-fork rule prevents you from creating a second fork of a repo.
 
-TODO: One of GitHub's many advantages is built-in support to quickly display open-data formats: CSV tables and GeoJSON geography. Upload a sample of each one to see how it looks....
+```{r repo-cannot-fork, fig.cap="(ref:repo-cannot-fork)"}
+ knitr::include_graphics("images/08-github/repo-cannot-fork.png")
+```
 
-#### Video with step-by-step tutorial {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hev2UcoLtfw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+So how do you create a second copy of a GitHub repo? We'll show you two solutions. The first solution, if it exists in your case, is easy. Look for a green "Use this template" button in the upper-right screen, as shown in Figure \@ref(fig:repo-template-download), and if you see it, click it. GitHub will ask you to create a brand-new repository name for the second copy of this template, to avoid confusing it with the first copy you made. The "Use this template" button will appear only if the people who created the GitHub repo set it up as a template, and that's exactly what we, the authors of this book, did to make it super-simple for all of you to create multiple copies of our GitHub repos.
 
-1) Follow these steps if you have already forked a GitHub repository and wish to make a second copy of it. For example, imagine that you have already forked a copy of the Leaflet Maps with Google Sheets repository from <https://github.com/handsondataviz/leaflet-maps-with-google-sheets> **TO DO change repo address**
+(ref:repo-template-download) GitHub's one-fork rule prevents you from creating a second fork of a repo.
+
+```{r repo-template-download, fig.cap="(ref:repo-template-download)"}
+ knitr::include_graphics("images/08-github/repo-template-download.png")
+```
+
+But what if you're trying to make a second copy of a GitHub repo where the Fork button is grayed-out and there's no green "Use this template" button? The simplest solution is to follow these steps:
+
+- Download the existing GitHub repo to your local computer
+- Create a brand-new GitHub repo, with a new name
+- Upload the existing code repo files to your brand-new repo
+
+Let's try it. Imagine that you're logged into your GitHub account, and you've already created one fork of the [leaflet-map-simple](https://github.com/HandsOnDataViz/leaflet-map-simple) repo, as we did in the prior section. You wish to create a second copy, but the "Use this template" green button does not appear, either because the repo was created before that feature existed or the people who created the repo didn't set it up that way.
+
+1. Click on the "Clone or download" gray drop-down menu button on the right-side of the screen, as shown in Figure \@ref(fig:repo-template-download), and select "Download ZIP." Your browser will download a zipped compressed folder with the contents of the repo to your local computer, and it may ask you where you wish to save it. Decide on a location and click OK.
+
+2. Navigate to the location on your computer where you saved the folder. Its file name should end with `.zip`, which means you need to double-click to "unzip" or de-compress the folder. After you do this, you should see a folder with three files: `index.html` and `LICENSE` and `README.md`.
+
+3. Go back to your GitHub account in your web browser, click on the "+" plus symbol in the upper-right corner of your account, and select "New repository", as shown in Figure \@ref(fig:repo-create-new).
+
+(ref:repo-create-new) Click the "+" plus symbol in upper-right corner to create a new repo.
+
+```{r repo-create-new, fig.cap="(ref:repo-create-new)"}
+ knitr::include_graphics("images/08-github/repo-create-new.png")
+```
+
+4. On the next screen, GitHub will ask you to assign a repo name. Choose a short one, preferably all-lower-case, and separate words with hyphens if needed. Let's name it `practice` because we'll delete it at the end of this tutorial.
+
+Warning: Check the box to "Initialize this repository with a README" to simplify the next steps, as shown in Figure \@ref(fig:repo-create-options).
+
+All other fields are optional. Click the green "Create Repository" button at the bottom when done.
+
+(ref:repo-create-options) Click the "+" plus symbol in upper-right corner to create a new repo.
+
+```{r repo-create-options, fig.cap="(ref:repo-create-options)"}
+ knitr::include_graphics("images/08-github/repo-create-options.png")
+```
+
+https://github.com/HandsOnDemo/practice
+
 
 2) If you try to "fork" it again, GitHub will simply send you back to the first forked copy you already made. Clicking the "fork" button a second time is useless here.
 

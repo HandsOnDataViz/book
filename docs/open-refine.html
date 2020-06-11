@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-08" />
+<meta name="date" content="2020-06-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -216,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
-<li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
+<li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 <li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
@@ -305,13 +305,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 2000,&quot;south Korea&quot;,Trade and Development Agency,&quot;  735718&quot;
 2001,&quot;North Korea&quot;,US Agency for International Development,&quot;345,399&quot;
 2001,&quot;N Korea&quot;,Department of Argic,&quot;  117715223&quot;</code></pre>
-<p>Do you notice any problems with it? Notice how the funding amounts (last column)
-are in quotes and contains commas, spaces, and some have a dollar character.
-Notice also how the Country includes various spellings of North and South Korea.
-Looks like a nightmare to analyze, but not if you know how to use OpenRefine,
+<p>Can you spot any problems with it? Notice how the funding amounts (last column)
+are not standardized: there are commas as thousands separators, some have spaces,
+and some start with a dollar character.
+Notice also how the Country column includes various spellings of North and South Korea.
+Looks like a nightmare to analyze—until you learn to use OpenRefine,
 a powerful and free tool to clean up messy data.</p>
-<p>This is a subset of <a href="https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook">US Overseas Loans and Grants (Greenbook)dataset</a>, which shows US assistance to South Korea and North Korea between 2000 and 2018. We added deliberate misspellings and formatting issues for demonstration purposes
-(although we did not alter values). This subset can be <a href="/data/us-foreignaid-greenbook-koreas.csv">downloaded here</a>. This dataset has four columns: year (between 2000 and 2018, inclusive), country (North or South Korea), a US funding agency, and funding amount (in 2018 US dollars).</p>
+<p>This data exerpt is from <a href="https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook">US Overseas Loans and Grants (Greenbook)dataset</a>, which shows US assistance to South Korea and North Korea between 2000 and 2018. We added deliberate misspellings and formatting issues for demonstration purposes
+(although we did not alter values). This subset can be <a href="data/us-foreignaid-greenbook-koreas.csv">downloaded here</a>. This dataset has four columns: year (between 2000 and 2018, inclusive), country (North or South Korea), a US funding agency, and funding amount (in 2018 US dollars).</p>
 <div id="set-up-openrefine" class="section level3 unnumbered" number="">
 <h3>Set up OpenRefine</h3>
 <p>You can download a copy of OpenRefine for Linux, Mac, or Windows from the official
@@ -323,17 +324,17 @@ hit <em>Open Anyway</em> button in the lower half of the window. If prompted wit
 <p>If you use <strong>Windows</strong>, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
 open in your default browser.</p>
 <p>Once launched, you should see OpenRefine in your browser with <code>127.0.0.1:3333</code> address (localhost, port 3333),
-like shown in Figure <a href="open-refine.html#fig:openrefine-welcome">4.3</a>.</p>
+like shown in Figure <a href="open-refine.html#fig:openrefine-welcome">4.7</a>.</p>
 
 <div class="figure"><span id="fig:openrefine-welcome"></span>
 <img src="images/04-clean/openrefine-welcome.png" alt="OpenRefine starting page."  />
 <p class="caption">
-Figure 4.3: OpenRefine starting page.
+Figure 4.7: OpenRefine starting page.
 </p>
 </div>
 </div>
-<div id="load-data-and-start-a-new-project" class="section level3" number="4.0.1">
-<h3><span class="header-section-number">4.0.1</span> Load Data and Start a New Project</h3>
+<div id="load-data-and-start-a-new-project" class="section level3 unnumbered" number="">
+<h3>Load Data and Start a New Project</h3>
 <p>To begin cleaning up your messy dataset, you should load it into a new project.
 OpenRefine lets you upload a dataset from your local machine (we will be doing exactly that),
 or a remote URL on the web (including a Google Spreadsheet), or copy/paste data into a text field.
@@ -350,7 +351,7 @@ like shown in Figure @(fig:openrefine-parse).</li>
 <div class="figure"><span id="fig:openrefine-parse"></span>
 <img src="images/04-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
-Figure 4.4: OpenRefine parsing options.
+Figure 4.8: OpenRefine parsing options.
 </p>
 </div>
 </div>
@@ -375,13 +376,13 @@ disappear in the preview window. When you confirm your formula works, click <em>
 cells turned green. That is because we have spaces and an <code>a</code> character at the end of one number.
 Fix those manually by hovering over cells, and clicking the <code>edit</code> button
 (make sure to change <em>Data type</em> to <em>number</em>, and hit <em>Apply</em>,
-like in Figure <a href="open-refine.html#fig:openrefine-manual-edit">4.5</a>).</li>
+like in Figure <a href="open-refine.html#fig:openrefine-manual-edit">4.9</a>).</li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-manual-edit"></span>
 <img src="images/04-clean/openrefine-manual-edit.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
 <p class="caption">
-Figure 4.5: Manually remove spaces and extra characters, and change data type to number.
+Figure 4.9: Manually remove spaces and extra characters, and change data type to number.
 </p>
 </div>
 </div>
@@ -398,7 +399,7 @@ that should have just two, North Korea and South Korea!</p>
 <ol style="list-style-type: decimal">
 <li>To begin standardizing spellings, click on the arrow-down button of Country column header,
 and choose <em>Edit cells</em> &gt; <em>Cluster and edit</em>. You will see a window like the one shown in Figure
-<a href="open-refine.html#fig:openrefine-cluster">4.6</a>.</li>
+<a href="open-refine.html#fig:openrefine-cluster">4.10</a>.</li>
 <li>You will have a choice of two clustering methods, <em>key collision</em> or <em>nearest neighbor</em>. Both
 methods can be powered by different functions, but let’s leave the default <em>key collision</em> with <em>fingerprint</em> function.</li>
 <li>OpenRefine will calculate a list of clusters. <em>Values in Cluster</em> column contains grouped spellings
@@ -414,7 +415,7 @@ how they produce clusters of different sizes and accuracy.</p>
 <div class="figure"><span id="fig:openrefine-cluster"></span>
 <img src="images/04-clean/openrefine-cluster.png" alt="Cluster similar text values."  />
 <p class="caption">
-Figure 4.6: Cluster similar text values.
+Figure 4.10: Cluster similar text values.
 </p>
 </div>
 </div>
@@ -475,7 +476,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/04-clean.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

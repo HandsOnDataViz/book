@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-08" />
+<meta name="date" content="2020-06-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -216,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
-<li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
+<li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 <li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
@@ -300,8 +300,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Don’t despair, you can <em>likely</em> use Tabula to extract tables and save them as CSV files.</p>
 <p>Tabula is a free tool that runs on Java, and is available for Linux, Mac, and Windows. It runs on your
 local machine and does not send your data to the cloud, so you can also use it for sensitive documents.</p>
-<p>Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based. You know your PDF is text-based if you can use cursor to select and copy-paste text. These are great for Tabula.
-Image-based PDFs are those that were created from scanning documents. Before they can be processed with Tabula, you will need to use an optical character recognition (OCR) software, such as Adobe Acrobat,
+<p>Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based.
+You know your PDF is text-based if you can use cursor to select and copy-paste text. These are great for Tabula.
+Image-based PDFs are those that were created from scanning documents. Before they can be processed with Tabula,
+you will need to use an optical character recognition (OCR) software, such as Adobe Acrobat,
 to create a text-based PDF.</p>
 <div id="set-up-tabula" class="section level3 unnumbered" number="">
 <h3>Set Up Tabula</h3>
@@ -312,33 +314,37 @@ section to download a copy for your platform.</p>
 and double-click the icon. If prompted with a security message (such as
 <em>Tabula is an app downloaded from the internet. Are you sure you want to open it?</em>),
 follow the instruction to proceed (on a Mac, click <em>Open</em>).</p>
-<p>Your default system browser should open, like shown in Figure <a href="tabula.html#fig:tabula-welcome">4.1</a>.
-The URL will be something like <code>http://127.0.0.1:8080/</code>, meaning the software is running on your local machine. 127.0.0.1, also known as <code>localhost</code>, is the hostname for your machine. <code>8080</code> is called port (it’s okay if you see a different port—most likely because 8080 was taken by some other program running on your computer). If for any reason you decide to use a different browser, just copy-paste the URL.</p>
-<p>TODO: this sentence seems out of place, perhaps due to a mistaken copy-and-paste?</p>
-<p>Figure <a href="chart-design.html#fig:design-principles-color">5.8</a> shows some good and bad examples of color use.</p>
+<p>Your default system browser should open, like shown in Figure <a href="tabula.html#fig:tabula-welcome">4.5</a>.
+The URL will be something like <code>http://127.0.0.1:8080/</code>, meaning Tabula is running on your local machine.
+127.0.0.1, also known as <code>localhost</code>, is the hostname for your machine. <code>8080</code> is called port
+(it’s okay if you see a different port—most likely because 8080 was taken by some other
+program running on your computer). If for any reason you decide to use a different browser,
+just copy-paste the URL.</p>
 
 <div class="figure"><span id="fig:tabula-welcome"></span>
 <img src="images/04-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
-Figure 4.1: Tabula welcome page.
+Figure 4.5: Tabula welcome page.
 </p>
 </div>
 </div>
 <div id="load-a-pdf-and-autodetect-tables" class="section level3 unnumbered" number="">
 <h3>Load a PDF and Autodetect Tables</h3>
-<p>TODO: please add a sample text-based PDF with numbers to extract to make it easier for users to try out</p>
+<p>For the demonstration, we will use an official PDF document with Covid-19 cases and deaths
+in Connecticut as of May 31, 2020. Such PDFs are published by Connecticut Department of Public Health
+daily during the pandemic. If you want to use this file, you can download it <a href="data/ct-dph-covid-2020-05-31.pdf">from here</a>.</p>
 <ol style="list-style-type: decimal">
 <li>Select the PDF you want to extract data from by clicking the blue <em>Browse…</em> button.</li>
 <li>Click <em>Import</em>. Tabula will begin analyzing the file.</li>
 <li>As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly clean, with only four buttons in the header.</li>
 <li>The easiest first step is to let Tabula autodetect tables. Click the relevant button in the header.
-You will see that each table is highlighted in red, like shown in Figure <a href="tabula.html#fig:tabula-autodetect">4.2</a>.</li>
+You will see that each table is highlighted in red, like shown in Figure <a href="tabula.html#fig:tabula-autodetect">4.6</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:tabula-autodetect"></span>
 <img src="images/04-clean/tabula-autodetect.png" alt="Selected tables are highlighted in red."  />
 <p class="caption">
-Figure 4.2: Selected tables are highlighted in red.
+Figure 4.6: Selected tables are highlighted in red.
 </p>
 </div>
 </div>
@@ -410,7 +416,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/04-clean.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

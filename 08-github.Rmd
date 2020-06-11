@@ -103,15 +103,17 @@ Now let's publish your edited map to the public web to see how it looks in a web
 (ref:leaflet-github-pages) Under GitHub Pages, switch the source from None to Master as shown in this [animated GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages.gif).
 
 ```{r leaflet-github-pages, fig.cap="(ref:leaflet-github-pages)"}
-if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-pages.gif") else knitr::include_graphics("images/08-github/leaflet-github-pages.png")
+if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-pages.gif", height = "325px") else knitr::include_graphics("images/08-github/leaflet-github-pages.png")
 ```
+
+<!-- TODO: Jack can redo the animated GIFs above and below in Camtasia, and insert a fade-out to clearly define its ending. -->
 
 9. Scroll back down to the GitHub Pages area to see the web address where your live map has been published online, and right-click it to open in a new browser tab, as shown in Figure \@ref(fig:leaflet-github-pages2).
 
 (ref:leaflet-github-pages2) Under GitHub Pages, double-click your published map link as shown in this [animated GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages2.gif).
 
 ```{r leaflet-github-pages2, fig.cap="(ref:leaflet-github-pages2)"}
-if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-pages2.gif") else knitr::include_graphics("images/08-github/leaflet-github-pages2.png")
+if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-pages2.gif", height = "250px") else knitr::include_graphics("images/08-github/leaflet-github-pages2.png")
 ```
 
 10. Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address for your repo in this format, `https://YourUserName.github.io/leaflet-map-simple`, where `YourUserName` is your GitHub account username. Remember why we told you not to create your account with a username like `DrunkBrownieChef6789`? Here's why.
@@ -137,7 +139,7 @@ Let's go back to your GitHub repo and edit the GitHub Pages links so that they p
 
 If you can't find your first browser tab, you can retype your repo home page address in this format, and insert your GitHub username: `https://github.com/YourUserName/leaflet-map-simple`.
 
-12. Copy the web address of your live map (in your second browser tab) and paste it into two places on your repo home page (in your first tab). First, click the `Edit` button near the top-right corner of your repo, paste your link there, and save. Second, open the `README.md` file or scroll down to the bottom of the repo home page, click the pencil symbol to edit it, paste your link under the label `(replace with link to your site)`, and scroll down to commit the change. See both steps in Figure \@ref(fig:leaflet-paste-links).
+12. Copy the web address of your live map (in your second browser tab) and paste it into two places on your repo home page (in your first tab). First, click the `Edit` button near the top-right corner of your repo, paste your link there, and save. Second, open the `README.md` file or scroll down to the bottom of the repo home page, click the pencil symbol to edit it, paste your link under the label "(replace with link to your site)", and scroll down to commit the change. See both steps in Figure \@ref(fig:leaflet-paste-links).
 
 (ref:leaflet-paste-links) Paste the link to your live map at the top of your repo page, and also in your README page.
 
@@ -165,7 +167,8 @@ The next code block displays the basemap tile layer that serve as the map backgr
 
 ```
  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
+   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,
+   &copy; <a href="https://carto.com/attribution">CARTO</a>'
  }).addTo(map);
 ```
 
@@ -195,13 +198,13 @@ Let's start with GitHub's *one fork* rule. Imagine that you wish to create a sec
 
 So how do you create a second copy of a GitHub repo? We'll show you two solutions. The first solution, if it exists in your case, is easy. Look for a green "Use this template" button in the upper-right screen, as shown in Figure \@ref(fig:repo-template-download), and if you see it, click it. GitHub will ask you to create a brand-new repository name for the second copy of this template, to avoid confusing it with the first copy you made. The "Use this template" button will appear only if the people who created the GitHub repo set it up as a template, and that's exactly what we, the authors of this book, did to make it super-simple for all of you to create multiple copies of our GitHub repos.
 
-(ref:repo-template-download) GitHub's one-fork rule prevents you from creating a second fork of a repo.
+(ref:repo-template-download) If a green "Use this template" button appears, click it to work around GitHub's one-fork rule.
 
 ```{r repo-template-download, fig.cap="(ref:repo-template-download)"}
  knitr::include_graphics("images/08-github/repo-template-download.png")
 ```
 
-But what if you're trying to make a second copy of a GitHub repo where the Fork button is grayed-out and there's no green "Use this template" button? The simplest solution is to follow these general sequence of steps:
+But what if you're trying to make a second copy of a GitHub repo where the Fork button is grayed-out and there's no green "Use this template" button? Here's a recommended workaround that follows three general steps:
 
 - Download the existing GitHub repo to your local computer
 - Create a brand-new GitHub repo, with a new name
@@ -243,7 +246,7 @@ Your new repo will have a web address similar to `https://github.com/YourUserNam
 
 6. Upload the `index.html` file that you previously downloaded to your local computer by dragging-and-dropping it into the upload area of your GitHub repo in your browser, as shown in Figure \@ref(fig:repo-drag-index). Do not upload `LICENSE` or `README.md` because your new repo already contains those two files. Scroll down to click the green Commit Changes button.
 
-(ref:repo-upload-files) Drag-and-drop the file to the upload screen.
+(ref:repo-drag-index) Drag-and-drop the file to the upload screen.
 
 ```{r repo-drag-index, fig.cap="(ref:repo-drag-index)"}
  knitr::include_graphics("images/08-github/repo-drag-index.png")
@@ -358,13 +361,13 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 11. Now that you've edited the code for your map on your local computer, let's test how it looks before uploading it to GitHub. Go to the location where you saved the repo on your local computer, and right-click the `index.html` file, select Open With, and choose your preferred web browser, as shown in Figure \@ref(fig:finder-open-with).  
 
-Note: Since your browser is displaying only the *local computer* version of your code, the web address will begin with `file:///...` rather than `https://...`, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.
-
 (ref:finder-open-with) Right-click the index.html file on your local computer and open with a browser to check your edits.
 
 ```{r finder-open-with, fig.cap="(ref:finder-open-with)"}
  knitr::include_graphics("images/08-github/finder-open-with.png")
 ```
+
+Note: Since your browser is displaying only the *local computer* version of your code, the web address will begin with `file:///...` rather than `https://...`, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.
 
 Now let's transfer your edits from your local computer to your GitHub web account, which you previously connected when you set up GitHub Desktop.
 

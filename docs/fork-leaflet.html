@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-08" />
+<meta name="date" content="2020-06-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -216,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
-<li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
+<li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 <li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
@@ -296,8 +296,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="fork-leaflet" class="section level2 unnumbered" number="">
 <h2>Fork, Edit, and Host a Simple Leaflet Map Template</h2>
-<p>Now that you understand how <a href="http://github.com">GitHub</a> code repositories are like a public cookbook of recipes, which anyone can copy and modify, let’s get into the kitchen and start baking! In this section, we’ll introduce you to a very simple code template that creates an interactive map using <a href="http://leafletjs.com">Leaflet</a>, an open-source code library that’s very popular with coders, journalists, businesses, and government agencies. Many people chose Leaflet because the code is freely available to everyone, relatively easy to use, and has an active community of supporters who regularly update it. But unlike drag-and-drop tools that we covered in previous chapters, such as Google My Maps or Tableau Public, Leaflet requires you to write (or copy and paste) several lines of code, which need to be hosted on a web server so that other people can view your map in their web browser. Fortunately, we can do all of these steps in our web browser on GitHub.</p>
-<p>Your goal is to create your own version of this simple interactive map, with your modifications, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-simple">8.1</a>.</p>
+<p>Now that you understand how <a href="http://github.com">GitHub</a> code repositories are like a public cookbook of recipes, which anyone can copy and modify, let’s get into the kitchen and start baking! In this section, we’ll introduce you to a very simple code template that creates an interactive map using <a href="http://leafletjs.com">Leaflet</a>, an open-source code library that’s very popular with coders, journalists, businesses, and government agencies. Many people chose Leaflet because the code is freely available to everyone, relatively easy to use, and has an active community of supporters who regularly update it. But unlike drag-and-drop tools that we covered in previous chapters, such as Google My Maps or Tableau Public, Leaflet requires you to write (or copy and paste) several lines of code, which need to be hosted on a web server so that other people can view your map in their web browser. Fortunately, we can do all of these steps in our web browser on GitHub. This means you can do this on any type of computer: Mac, Windows, Chromebook, etc.</p>
+<p>Here’s an overview of the key steps we’ll cover in this section:</p>
+<ul>
+<li>Get a free GitHub account and fork your copy of a simple Leaflet map code template</li>
+<li>Edit the Leaflet map title, starting position, background layer, and marker</li>
+<li>Host a live online version of your modified map code on the public web</li>
+</ul>
+<p>Your goal is to create your own version of this simple interactive map, with your edits, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-simple">8.1</a>.</p>
 
 <div class="figure"><span id="fig:leaflet-simple"></span>
 <iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="672" height="400px">
@@ -320,6 +326,7 @@ Figure 8.2: Click the Fork button to make your own copy of the code template.
 </p>
 </div>
 <p>When you fork someone else’s repo, in the upper-right corner of your browser you should see something like <code>YourUserName/leaflet-map-simple</code> forked from <code>HandsOnDataViz/leaflet-map-simple</code>. This proves that you copied our template into your GitHub account. This very simple repo includes only three files: <code>LICENSE</code> shows that we’ve selected the MIT License, which allows anyone to copy and modify the code as they wish; <code>README.md</code> provides a simple description and link to the live demo, which we’ll come back to later; <code>index.html</code> is the key file that contains the map code.</p>
+<!-- TODO: Decide if we should show generic web address formatting as `YourUserName` or `https://USERNAME.github.io/REPOSITORY` -->
 <p>Tip: By design, GitHub allows you to fork a repo <em>one time</em>, so that you don’t accidentally create two versions with the same name. If you wish to create a second version, go to the <a href="create-repo.html">Create a New Repo and Upload Files on GitHub</a> section of this chapter.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Click on the <code>index.html</code> file to view the code, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-simple-index">8.3</a>.</li>
@@ -355,7 +362,7 @@ Figure 8.5: Click the green Commit Changes button to save your edits.
 </p>
 </div>
 <p>In the language of coders, we “commit” our changes in the same way that most people “save” a document, and later you’ll see how GitHub tracks each code commit so that you can roll them back if needed. By default, GitHub inserts a short description of your commit as “Update index.html”, and you have the option to customize that description when you start making lots of commits to keep track of your work. Also by default, GitHub commits your changes directly to the <code>master</code> branch of your code, which we’ll explain later.</p>
-<p>Now let’s publish your map to the public web to see how this minor edit looks in your browser. GitHub not only stores open-source code, but allows you to host a live online version of HTML-based code with a built-in feature called <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+<p>Now let’s publish your edited map to the public web to see how it looks in a web browser. GitHub not only stores open-source code, but its built-in <a href="https://pages.github.com/">GitHub Pages</a> feature allows you to host a live online version of your HTML-based code, which anyone with the web address can view in their browser. While GitHub Pages is free to use, there are <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages">some restrictions on size and content</a> and it is not intended for running an online business or commercial transactions. But one advantage of code templates is that you can host them on any web server you control. Since we’re already using GitHub to store and edit our code template, it’s easy to turn on GitHub Pages to host it online.</p>
 <ol start="7" style="list-style-type: decimal">
 <li>To access GitHub Pages, scroll to the top of your repo page and click the Settings button as shown in Figure <a href="fork-leaflet.html#fig:leaflet-simple-settings">8.6</a>.</li>
 </ol>
@@ -371,31 +378,37 @@ Figure 8.6: Click the Settings button to access GitHub Pages and publish your wo
 </ol>
 
 <div class="figure"><span id="fig:leaflet-github-pages"></span>
-<iframe src="images/08-github/leaflet-github-pages.gif" width="672" height="400px">
+<iframe src="images/08-github/leaflet-github-pages.gif" width="672" height="325px">
 </iframe>
 <p class="caption">
 Figure 8.7: Under GitHub Pages, switch the source from None to Master as shown in this <a href="https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages.gif">animated GIF</a>.
 </p>
 </div>
+<!-- TODO: Jack can redo the animated GIFs above and below in Camtasia, and insert a fade-out to clearly define its ending. -->
 <ol start="9" style="list-style-type: decimal">
-<li>Scroll back down to the GitHub Pages area to see the web address where your live map has been published online, and right-click it to open in a new browser tab, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-github-pages2">8.8</a>. By opening your live map in a new tab, you to easily go back to your repo in the first tab, to edit more code later.</li>
+<li>Scroll back down to the GitHub Pages area to see the web address where your live map has been published online, and right-click it to open in a new browser tab, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-github-pages2">8.8</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:leaflet-github-pages2"></span>
-<iframe src="images/08-github/leaflet-github-pages2.gif" width="672" height="400px">
+<iframe src="images/08-github/leaflet-github-pages2.gif" width="672" height="250px">
 </iframe>
 <p class="caption">
 Figure 8.8: Under GitHub Pages, double-click your published map link as shown in this <a href="https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages2.gif">animated GIF</a>.
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address in this format, <code>https://YourUserName.github.io/leaflet-map-simple</code>, where <code>YourUserName</code> is your GitHub account username. Remember why we told you not to create your account with a username like <code>DrunkBrownieChef6789</code>?</li>
+<li>Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address for your repo in this format, <code>https://YourUserName.github.io/leaflet-map-simple</code>, where <code>YourUserName</code> is your GitHub account username. Remember why we told you not to create your account with a username like <code>DrunkBrownieChef6789</code>? Here’s why.</li>
 </ol>
 <p>Tip: If your map does <em>not</em> appear right away, wait up to 30 seconds for GitHub Pages to finish processing, then do a “hard” browser refresh to contact the web server again. <strong>TODO:</strong> Add hard refresh instructions, or link them here if shown earlier in the book.</p>
-<p>Tip: Keep this second browser tab open, so that you can come back to your live map later, and copy its web address to use below.</p>
-<p>Let’s go back to your GitHub repo and change the links so that they point to <em>your</em> live map, in place of <em>our</em> live map.</p>
+<p>Note: GitHub creates two different types of web addresses, where you should replace <code>YourUserName</code> and <code>YourRepoName</code> with your own:</p>
+<ul>
+<li>The GitHub repo address, where you can edit your code: <code>https://github.com/YourUserName/YourRepoName</code></li>
+<li>The GitHub Pages address, which publishes a live version of your code: <code>https://YourUsername.github.io/YourRepoName</code></li>
+</ul>
+<p>Tip: When working with the GitHub web interface, keep two browser tabs open. The first tab contains your GitHub repo, where you can edit your code. The second tab contains your GitHub Pages live version, where you can view the results of your edits. By opening your live map in a new tab, you can easily go back to edit your code repo in the first tab, and flip back to view the live results in the second tab.</p>
+<p>Let’s go back to your GitHub repo and edit the GitHub Pages links so that they point to <em>your</em> live map, in place of <em>our</em> live map.</p>
 <ol start="11" style="list-style-type: decimal">
-<li>Go back to the previous browser tab, and click on the repo title to return to its home page, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-click-title">8.9</a>.</li>
+<li>Go back to your first browser tab with your GitHub repo, and click on the repo title to return to its home page, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-click-title">8.9</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:leaflet-click-title"></span>
@@ -406,7 +419,7 @@ Figure 8.9: On your first browser tab, click the repo title.
 </div>
 <p>If you can’t find your first browser tab, you can retype your repo home page address in this format, and insert your GitHub username: <code>https://github.com/YourUserName/leaflet-map-simple</code>.</p>
 <ol start="12" style="list-style-type: decimal">
-<li>Copy the web address of your live map (in your second browser tab) and paste it into two places on your repo home page (in your first tab). First, click the <code>Edit</code> button near the top-right corner of your repo, paste your link there, and save. Second, open the <code>README.md</code> file or scroll down to the bottom of the repo home page, click the pencil symbol to edit it, paste your link under the label <code>(replace with link to your site)</code>, and scroll down to commit the change. See both steps in Figure <a href="fork-leaflet.html#fig:leaflet-paste-links">8.10</a>.</li>
+<li>Copy the web address of your live map (in your second browser tab) and paste it into two places on your repo home page (in your first tab). First, click the <code>Edit</code> button near the top-right corner of your repo, paste your link there, and save. Second, open the <code>README.md</code> file or scroll down to the bottom of the repo home page, click the pencil symbol to edit it, paste your link under the label “(replace with link to your site)”, and scroll down to commit the change. See both steps in Figure <a href="fork-leaflet.html#fig:leaflet-paste-links">8.10</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:leaflet-paste-links"></span>
@@ -415,30 +428,30 @@ Figure 8.9: On your first browser tab, click the repo title.
 Figure 8.10: Paste the link to your live map at the top of your repo page, and also in your README page.
 </p>
 </div>
-<p>Pasting both of these links helps point people who discover your GitHub repo to <em>your</em> live map, rather than our version.</p>
+<p>Pasting both of these links helps point people who discover your GitHub repo to <em>your</em> live map, rather than <em>our</em> version for this book.</p>
 <p>Now that you’ve successfully made simple edits and published your live map, let’s make more edits to jazz it up and help you learn more about how Leaflet code works.</p>
 <ol start="13" style="list-style-type: decimal">
 <li>On your repo home page, click to open the <code>index.html</code> file, and click the pencil symbol to edit more code.</li>
 </ol>
-<p>Wherever you see the <code>EDIT</code> code comment, this points out a line that you should modify. For example, look for the code block shown below that sets up the initial center point of the map and its zoom level. Insert a new latitude and longitude coordinate to set a new center point, and find your coordinates with online tools such as <a href="https://www.latlong.net/">LatLong.net</a> or Google Maps. TODO: Show how to find coords in GMaps here, or link if it appears earlier in the book.</p>
+<p>Wherever you see the <code>EDIT</code> code comment, this points out a line that you can easily modify. For example, look for the code block shown below that sets up the initial center point of the map and its zoom level. Insert a new latitude and longitude coordinate to set a new center point, and find your coordinates with online tools such as <a href="https://www.latlong.net/">LatLong.net</a> or Google Maps. <strong>TODO:</strong> Show how to find coords in GMaps here, or link if it appears earlier in the book.</p>
 <pre><code>  var map = L.map(&#39;map&#39;, {
     center: [41.77, -72.69], // EDIT latitude, longitude to re-center map
     zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
     scrollWheelZoom: false
   });</code></pre>
-<p>The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change <code>light_all</code> to <code>dark_all</code> to see the inverse basemap color. See many other Leaflet basemap code options that you can paste in at <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>. Be sure to attribute the source and keep <code>}).addTo(map);</code> in the last line.</p>
+<p>The next code block displays the basemap tile layer that serve as the map background. Our template uses a light map with all labels, publicly provided by CARTO, with credit to OpenStreetMap. One simple edit is to change <code>light_all</code> to <code>dark_all</code>, which will substitute a different CARTO basemap with inverted coloring. Or see many other Leaflet basemap code options that you can paste in at <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>. Make sure to attribute the source, and also keep <code>}).addTo(map);</code> at the end of this code block, which displays the basemap.</p>
 <pre><code> L.tileLayer(&#39;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&#39;, {
-   attribution: &#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;, &amp;copy; &lt;a href=&quot;https://carto.com/attribution&quot;&gt;CARTO&lt;/a&gt;&#39;
+   attribution: &#39;&amp;copy; &lt;a href=&quot;http://www.openstreetmap.org/copyright&quot;&gt;OpenStreetMap&lt;/a&gt;,
+   &amp;copy; &lt;a href=&quot;https://carto.com/attribution&quot;&gt;CARTO&lt;/a&gt;&#39;
  }).addTo(map);</code></pre>
-<p>The last code block displays a single point marker on the map, colored blue by default in Leaflet, with pop-up text when users click it. You can edit the marker coordinates, insert a pop-up text message, or copy and paste the code to create a second marker.</p>
+<p>The last code block displays a single point marker on the map, colored blue by default in Leaflet, with a pop-up message when users click it. You can edit the marker coordinates, insert the pop-up text, or copy and paste the code block to create a second marker.</p>
 <pre><code>L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
 .bindPopup(&quot;Insert pop-up text here&quot;); // EDIT pop-up text message</code></pre>
 <ol start="14" style="list-style-type: decimal">
-<li>After making edits, remember to scroll down and press the Commit button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires 30 seconds to process code edits. To solve problems, see <a href="fix-code.html">Fix Common GitHub and Code Errors</a> chapter in this book.</li>
+<li>After making edits, remember to scroll down and press the Commit button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires 30 seconds to process code edits. If you have problems, see the <a href="fix-code.html">Fix Common GitHub and Code Errors</a> section in this chapter.</li>
 </ol>
-<p><strong>TODO:</strong> Write section summary, and discuss web hosting: This chapter describes how to use the free GitHub Pages feature to host a live version of your code on the public web. But what if this service is no longer free at some point in the future, or you decide for any reason that it’s best to host your code elsewhere? One advantage of creating data visualizations with code templates like the ones featured in this book is that you can host them on <em>any</em> web server. Our templates are designed using three very common types of code: an HTML file to…, a JavaScript file to…, and a Cascasding Style Sheets (or CSS) file to… Describe abbreviations:…</p>
-<p>For more advanced examples, see the <a href="leaflet.html">Leaflet Map Templates</a> chapter in this book. If you have problems with this tutorial, go to the <a href="fix-code.html">Fix Common GitHub and Code Errors</a> chapter in this book.</p>
-<p><strong>TODO: start again here</strong></p>
+<p>Congratulations! If this is the first time that you’ve edited computer code and hosted it online, you can now call yourself a “coder”. The process is similar to following and modifying a cookbook recipe, just like you also can call yourself a “chef” after baking your first batch of brownies! Although no one is likely to hire you as a full-time paid coder (or chef) at this early stage, you now understand several of the basic skills needed to copy, edit, and host code online, and you’re ready to dive into the more advanced versions, such as <a href="chartjs.html">Chart.js code templates in chapter 9</a> and <a href="leaflet.html">Leaflet map code templates in chapter 10</a>.</p>
+<p>The next section describes how to enhance your GitHub skills by creating new repos and uploading your files. These are essential steps to create a second copy of a code template or to work with more advanced templates in the next two chapters.</p>
 </div>
             </section>
 
@@ -488,7 +501,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/08-github.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

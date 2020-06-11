@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-08" />
+<meta name="date" content="2020-06-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -216,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
-<li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
+<li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 <li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
@@ -296,15 +296,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="clean" class="section level1" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Clean Up Messy Data</h1>
-<p>TO DO</p>
-<ul>
-<li>write a new intro to match content that I moved into subfolders</li>
-<li><a href="http://trendct.org/2015/08/28/getting-rid-of-duplicate-rows-using-google-sheets/" class="uri">http://trendct.org/2015/08/28/getting-rid-of-duplicate-rows-using-google-sheets/</a></li>
-<li>Clean up data that contains stray commas, or mistyped entries</li>
-<li>Advanced clean up with Open Refine; see Alvin Chang’s CT Mirror guide <a href="http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/" class="uri">http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/</a></li>
-<li>rethink formatting data</li>
-<li>see Jake Kara’s “Data Structure Whining” <a href="https://github.com/jakekara/publishing-data-for-journalists" class="uri">https://github.com/jakekara/publishing-data-for-journalists</a></li>
-</ul>
+<p>More often than not, datasets will be messy and hard to visualize right away.
+They will have missing values, various spelling of the same categories,
+dates in different formats, text in numeric-only columns, multiple things in the same columns,
+and other unexpected things (see Figure <a href="clean.html#fig:clean-up-messy-data">4.1</a> for inspiration).
+Don’t be surprised if you find yourself spending longer cleaning up data than
+actually analyzing and visualizing it—it is often the case for data analysts.</p>
+
+<div class="figure"><span id="fig:clean-up-messy-data"></span>
+<img src="images/04-clean/clean-up-messy-data.png" alt="More often than not, raw data looks like this."  />
+<p class="caption">
+Figure 4.1: More often than not, raw data looks like this.
+</p>
+</div>
+<p>It is important to learn several tools in order to know which one to use
+to clean your data efficiently.
+We will start by looking at fairly basic data cleanup using Google Sheets.
+Keep in mind that the same principles (and in most cases
+even the same formulas) can be use in Microsoft Excel, LibreOffice Calc, Mac’s Numbers,
+or other spreadsheet packages.</p>
+<p>We will then show you how to extract table data from PDF documents using a free tool called Tabula.
+Tabula is used by data journalists and researchers worldwide
+to analyze government spendings, procurement records and all sorts of other datasets
+that get trapped in PDFs.</p>
+<p>At the end, we will introduce OpenRefine, an extremely powerful and versatile tool
+to clean up the messiest spreadsheets, such as those containing dozens of misspelled versions
+of universities or town names.</p>
 </div>
             </section>
 
@@ -354,7 +371,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/04-clean.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

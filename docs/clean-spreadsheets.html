@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-08" />
+<meta name="date" content="2020-06-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -216,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
-<li class="chapter" data-level="" data-path="atom-desktop.html"><a href="atom-desktop.html"><i class="fa fa-check"></i>Work more efficiently with Atom editor and GitHub Desktop</a></li>
+<li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 <li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
@@ -296,92 +296,121 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="clean-spreadsheets" class="section level2 unnumbered" number="">
 <h2>Clean Data with Spreadsheets</h2>
-<p>TODO: reorganize this to feature Google Sheets whenever possible, or Excel Online if needed</p>
-<p>Sometimes we receive a spreadsheet with problematic data that needs to be cleaned up before we can successfully upload it into a visualization tool.</p>
+<p>Let’s take a look at some techniques to clean up data directly in your favorite
+spreadsheet tool. We will use Google Sheets as an example, but the same principles
+will apply to most other software packages, such as Excel, Calc, or Numbers.</p>
 <div id="find-and-replace-with-a-blank" class="section level4 unnumbered" number="">
 <h4>Find and Replace with a blank</h4>
-<p>A common problem with census data is that geographic names contain unnecessary words. For example, when downloading Connecticut county subdivisions (towns), each row appears as:</p>
-<ul>
-<li>Andover town</li>
-<li>Ansonia town</li>
-<li>Ashford town</li>
-</ul>
-<p>Our goal is to remove the word “town” from each row, to produce a clean spreadsheet that we can match with other data, like this:</p>
-<ul>
-<li>Andover</li>
-<li>Ansonia</li>
-<li>Ashford</li>
-</ul>
-<p>Here’s one quick solution: In any spreadsheet tool, use the Find and Replace command to remove unwanted characters. Try it! Click this link and Save to download to your computer:<a href="data/find-replace-town-geonames.csv">find-replace-town-geonames in CSV format</a>. This tutorial shows screens from Excel, but other tools are very similar.</p>
+<p>A common problem with census data is that geographic names contain unnecessary words.
+For example, your data can look something like that:</p>
+<pre><code>Hartford town
+New Haven town
+Stamford town</code></pre>
+<p>But you want a clean list of towns, either to display in a chart, or to merge with a different dataset:</p>
+<pre><code>Hartford
+New Haven
+Stamford</code></pre>
+<p>Here’s one quick solution: In any spreadsheet tool, use the Find and Replace command to remove unwanted characters.
+You can download this <a href="data/find-replace-town-geonames.csv">find-replace-town-geonames.csv</a> file,
+which contains 169 Connecticut towns and their population, for the exercise.</p>
 <ol style="list-style-type: decimal">
-<li><p>Open the Find and Replace command.</p></li>
-<li><p>In the Find field, type " town“, leaving a space before the word, since we wish to remove only that word when by itself. (Otherwise, we would accidentally remove the”town" in Newtown.)</p></li>
-<li><p>In the Replace field, leave it blank, to represent a blank space.</p></li>
-<li><p>Press the Replace All button. Since this sample file lists 169 towns, the screen will states that 169 instances of “town” have been replaced.</p></li>
+<li>Select the column you want to modify by clicking on the column header.</li>
+<li>From <em>Edit</em> menu, choose <em>Find and replace</em> item. You will see the window like is shown in Figure <a href="clean-spreadsheets.html#fig:sheets-find-replace">4.2</a>.</li>
+<li>In the <em>Find</em> field, type <code>town</code>, without quotation marks and leaving a space before the word. If you don’t leave the space,
+you will accidentally remove <em>town</em> from <em>Newtown</em>, and you will end up with trailing spaces which can cause troubles in the future.</li>
+<li>Leave the <em>Replace with</em> field blank.</li>
+<li>If you selected the column correctly in step 1, you will see that <em>Search</em>
+value will be set to the <em>Specific range</em> for to that column. Otherwise you will be searching and replacing in the entire spreadsheet.</li>
+<li>You have the option to <em>match case</em>. If checked, <code>town</code> and <code>Town</code> and <code>tOwN</code> will be treated differently.
+For our purpose, you can leave <em>match case</em> unchecked.</li>
+<li>Press the <em>Replace all</em> button. Since this sample file contains 169 towns, the window
+will state that 169 instances of “town” have been replaced.</li>
 </ol>
-<p><img src="images/04-clean/find-replace-blank.png" /></p>
+
+<div class="figure"><span id="fig:sheets-find-replace"></span>
+<img src="images/04-clean/sheets-find-replace.png" alt="Find and Replace window in Google Sheets."  />
+<p class="caption">
+Figure 4.2: Find and Replace window in Google Sheets.
+</p>
 </div>
-<div id="split-one-column-into-two-with-excel" class="section level4 unnumbered" number="">
-<h4>Split one column into two with Excel</h4>
-<p>One common problem is when multiple pieces of data appear in one column, and your goal is to split them into separate columns. If those data pieces are separated by commas (or similar punctuation), you might be able to fix this with a simple spreadsheet command: split text into columns.</p>
-<p>Try it! Click this link and Save to download to your computer: <a href="data/split-coordinate-pairs.csv">split-coordinate-pairs in CSV format</a>, and open with Excel. (TODO: test with other spreadsheet tools)</p>
+</div>
+<div id="splitting-data-into-two-or-more-columns" class="section level4 unnumbered" number="">
+<h4>Splitting data into two or more columns</h4>
+<p>Sometimes multiple pieces of data appear in a single cell,
+such as names (<code>John Doe</code>), coordinate pairs (<code>40.12,-72.12</code>),
+or addresses (<code>300 Summit St, Hartford, CT, 06106</code>). For your analysis,
+you might want to split them into separate entities, so that your <em>FullName</em>
+column (with <code>John Doe</code> in it) becomes <em>FirstName</em> (<code>John</code>) and <em>LastName</em> (<code>Doe</code>) columns,
+coordinates become <em>Latitude</em> and <em>Longitude</em> columns, and your <em>FullAddress</em> column becomes
+4 columns, <em>Street</em>, <em>City</em>, <em>State</em>, and <em>Zip</em> (postcode).</p>
+<p>Let’s begin with a simple example of coordinate pairs. You can download
+a <a href="data/split-coordinate-pairs.csv">sample file here</a>.</p>
 <ol style="list-style-type: decimal">
-<li><p>Select the data column you wish to split.</p></li>
-<li><p>Select Data &gt; Split Text to Column</p></li>
-<li><p>In the wizard screen, select Delimited data and click next.</p></li>
-<li><p>In step 2 of the wizard screen, check the “comma” box, since this symbol divides the data column. Click next.</p></li>
-<li><p>In step 3 of the wizard screen, accept the default General format, and Finish.</p></li>
+<li>Select the data you wish to split, either the full column or just several rows. Note that
+you can only split data from one column at a time.</li>
+<li>Make sure there is no data in the column to the right of the one you’re splitting, because
+all data there will be written over.</li>
+<li>Go to <em>Data</em> and select <em>Split text to columns</em>.</li>
+<li>Google Sheets will try to guess your separator automatically. You will see that your coordinates
+are now split with the comma, and the Separator is set to <em>Detect automatically</em> in the dropdown,
+like in Figure <a href="clean-spreadsheets.html#fig:sheets-split">4.3</a>.
+You can manually change it to a comma (<code>,</code>), a semicolon (<code>;</code>), a period (<code>.</code>), a space character,
+or any other custom character (or even a sequence of characters — more about that in the next example).</li>
+<li>You can rename columns into <em>Longitude</em> (first number) and <em>Latitude</em> (second number).</li>
 </ol>
-<p>The coordinate pairs column is now split into two separate columns. Relabel the headers: longitude and latitude.</p>
-<p>Animated example from Excel for Windows (thanks <code>@f3mlat</code>):</p>
-<iframe src="images/04-clean/excel-win-data-text-to-columns.gif" width="672" height="400px">
-</iframe>
-<p>TODO: write directions to split a single address cell “300 Summit St, Hartford CT 06106” into separate columns for address, city, state, zip</p>
+
+<div class="figure"><span id="fig:sheets-split"></span>
+<img src="images/04-clean/sheets-split.png" alt="Google Sheets provides a dropdown to change a separator."  />
+<p class="caption">
+Figure 4.3: Google Sheets provides a dropdown to change a separator.
+</p>
 </div>
-<div id="combine-separate-data-columns-into-one" class="section level4 unnumbered" number="">
-<h4>Combine separate data columns into one</h4>
-<p>Another common data cleaning problem is when you receive address data in separate columns, like this:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Street</th>
-<th align="left">City</th>
-<th align="left">State</th>
-<th align="left">Zip</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">100 Main St</td>
-<td align="left">Hartford</td>
-<td align="left">CT</td>
-<td align="left">06106</td>
-</tr>
-</tbody>
-</table>
-<p>But your data visualization tool requires you to combine all of this terms into one location column, like this:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Location</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">100 Main St, Hartford, CT 06106</td>
-</tr>
-</tbody>
-</table>
-<p>One easy solution is to write a simple spreadsheet formula to combine (or concatenate) terms, using ampersands (&amp;) as connectors, and quotation marks around blank spaces as separators. For example, if a spreadsheet contained four columns, <em>Address, City, State Zip</em> (A-D), then in column E insert a new header named <em>Location</em> and a formula in this format:</p>
-<ul>
-<li>=A2 &amp;" " &amp; B2 &amp;" " &amp;C2 &amp;" " &amp;D2</li>
-</ul>
-<p><img src="images/04-clean/SpreadsheetCombineTerms.png" /></p>
-<p>TODO:</p>
-<ul>
-<li>Confirm that Google Fusion Tables geocoder does not require commas between terms</li>
-<li>Clarify what happens with zip code in the example above</li>
-</ul>
+<p>Now, let’s look at a slightly more complicated example. Imagine your dataset is structured as follows:</p>
+<pre><code>| Location                           |
+| 300 Summit St, Hartford CT--06106  |
+| 1012 Broad St, Hartford CT--06106  |
+| 37 Alden St, Hartford CT--06114    |</code></pre>
+<p>You want to split it into four cells: street address (300 Summit St), city (Hartford), state (CT), and zipcode (06106).
+Notice that the separator between the street and the rest of the address is a comma,
+a separator between the city and state is a space, and there is two dash lines between state and zipcode.</p>
+<ol style="list-style-type: decimal">
+<li>Start splitting left to right. So your first separator will be a comma.
+Select your column (or one or more cells within that column), and go to <em>Data</em> &gt; <em>Split text to columns</em>.</li>
+<li>Google Sheets should automatically split your cell into two parts, <code>300 Summit St</code> and <code>Hartford CT--06106</code>,
+using comma as a separator. (If it didn’t, just select <em>Comma</em> from the dropdown menu that appeared).</li>
+<li>Now, select only the second column and perform <em>Split text to columns</em>. You will see that the city
+is now separate from the state and zipcode, and Google Sheets chose space as a separator (if it didn’t, choose <em>Space</em> from the dropdown menu).</li>
+<li>Next, select only the third column and perform <em>Split text to columns</em> again. Google Sheets won’t recognize <code>--</code>
+as a separator, so you will have to manually select <em>Custom</em>, type <code>--</code> in the text field,
+and hit Enter. You should now have four columns.</li>
+</ol>
+<p>Tip: Google Sheets will treat zipcodes as numbers and will delete leading zeros (so 06106 will become 6106).
+To fix that, select the column, and go to <em>Format &gt; Number &gt; Plain text</em>. Now you can manually re-add zeros.
+If your dataset is large, consider concatenating 0s using the formula introduced in the next section.</p>
+</div>
+<div id="combine-separate-columns-into-one" class="section level4 unnumbered" number="">
+<h4>Combine separate columns into one</h4>
+<p>Now, let’s see how to perform the reverse action.
+Imagine you receive address data in separate columns, like this:</p>
+<pre><code>| Street        | City        | State      | Zip        |
+| 300 Summit St | Hartford    | CT         | 06106      |</code></pre>
+<p>But, let’s say your mapping tool requires you to combine all of this terms into one location column, like that:</p>
+<pre><code>| Location                            | 
+| 300 Summit St, Hartford, CT 06106   |</code></pre>
+<p>You can write a simple formula to combine (or <strong>concatenate</strong>) terms
+using ampersands (<code>&amp;</code>) as cells values connectors, and quoted spaces (<code>" "</code>) as term separators.</p>
+<p>For example, if a spreadsheet contained four columns,
+<em>Address, City, State, and Zip</em> (columns A-D, see Figure <a href="clean-spreadsheets.html#fig:sheets-concat">4.4</a>),
+then in column E insert a new header named <em>Location</em> and a formula in this format
+(note that spaces before and after ampersands do not make a difference):</p>
+<pre><code>=A2 &amp; &quot; &quot; &amp; B2 &amp; &quot; &quot; &amp; C2 &amp; &quot; &quot; &amp; D2</code></pre>
+
+<div class="figure"><span id="fig:sheets-concat"></span>
+<img src="images/04-clean/sheets-concat.png" alt="Use ampersands to concatenate cell values, with or without spaces around ampersands."  />
+<p class="caption">
+Figure 4.4: Use ampersands to concatenate cell values, with or without spaces around ampersands.
+</p>
+</div>
 </div>
 </div>
             </section>
@@ -432,7 +461,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/04-clean.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

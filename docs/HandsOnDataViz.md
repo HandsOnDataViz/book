@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 08 Jun 2020
+updated on: 11 Jun 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -1517,156 +1517,193 @@ Information Act (FOIA) data requests in Connecticut
 Clean Up Messy Data
 ===================
 
-TO DO
+More often than not, datasets will be messy and hard to visualize right
+away. They will have missing values, various spelling of the same
+categories, dates in different formats, text in numeric-only columns,
+multiple things in the same columns, and other unexpected things (see
+Figure <a href="#fig:clean-up-messy-data">1</a> for inspiration). Don’t
+be surprised if you find yourself spending longer cleaning up data than
+actually analyzing and visualizing it—it is often the case for data
+analysts.
 
--   write a new intro to match content that I moved into subfolders
--   <a href="http://trendct.org/2015/08/28/getting-rid-of-duplicate-rows-using-google-sheets/" class="uri">http://trendct.org/2015/08/28/getting-rid-of-duplicate-rows-using-google-sheets/</a>
--   Clean up data that contains stray commas, or mistyped entries
--   Advanced clean up with Open Refine; see Alvin Chang’s CT Mirror
-    guide
-    <a href="http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/" class="uri">http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/</a>
--   rethink formatting data
--   see Jake Kara’s “Data Structure Whining”
-    <a href="https://github.com/jakekara/publishing-data-for-journalists" class="uri">https://github.com/jakekara/publishing-data-for-journalists</a>
+<img src="images/04-clean/clean-up-messy-data.png" alt="More often than not, raw data looks like this."  />
+<p class="caption">
+Figure 1: More often than not, raw data looks like this.
+</p>
+
+It is important to learn several tools in order to know which one to use
+to clean your data efficiently. We will start by looking at fairly basic
+data cleanup using Google Sheets. Keep in mind that the same principles
+(and in most cases even the same formulas) can be use in Microsoft
+Excel, LibreOffice Calc, Mac’s Numbers, or other spreadsheet packages.
+
+We will then show you how to extract table data from PDF documents using
+a free tool called Tabula. Tabula is used by data journalists and
+researchers worldwide to analyze government spendings, procurement
+records and all sorts of other datasets that get trapped in PDFs.
+
+At the end, we will introduce OpenRefine, an extremely powerful and
+versatile tool to clean up the messiest spreadsheets, such as those
+containing dozens of misspelled versions of universities or town names.
 
 Clean Data with Spreadsheets
 ----------------------------
 
-TODO: reorganize this to feature Google Sheets whenever possible, or
-Excel Online if needed
-
-Sometimes we receive a spreadsheet with problematic data that needs to
-be cleaned up before we can successfully upload it into a visualization
-tool.
+Let’s take a look at some techniques to clean up data directly in your
+favorite spreadsheet tool. We will use Google Sheets as an example, but
+the same principles will apply to most other software packages, such as
+Excel, Calc, or Numbers.
 
 #### Find and Replace with a blank
 
 A common problem with census data is that geographic names contain
-unnecessary words. For example, when downloading Connecticut county
-subdivisions (towns), each row appears as:
+unnecessary words. For example, your data can look something like that:
 
--   Andover town
--   Ansonia town
--   Ashford town
+    Hartford town
+    New Haven town
+    Stamford town
 
-Our goal is to remove the word “town” from each row, to produce a clean
-spreadsheet that we can match with other data, like this:
+But you want a clean list of towns, either to display in a chart, or to
+merge with a different dataset:
 
--   Andover
--   Ansonia
--   Ashford
+    Hartford
+    New Haven
+    Stamford
 
 Here’s one quick solution: In any spreadsheet tool, use the Find and
-Replace command to remove unwanted characters. Try it! Click this link
-and Save to download to your computer:[find-replace-town-geonames in CSV
-format](data/find-replace-town-geonames.csv). This tutorial shows
-screens from Excel, but other tools are very similar.
+Replace command to remove unwanted characters. You can download this
+[find-replace-town-geonames.csv](data/find-replace-town-geonames.csv)
+file, which contains 169 Connecticut towns and their population, for the
+exercise.
 
-1.  Open the Find and Replace command.
-
-2.  In the Find field, type " town“, leaving a space before the word,
-    since we wish to remove only that word when by itself. (Otherwise,
-    we would accidentally remove the”town" in Newtown.)
-
-3.  In the Replace field, leave it blank, to represent a blank space.
-
-4.  Press the Replace All button. Since this sample file lists 169
-    towns, the screen will states that 169 instances of “town” have been
+1.  Select the column you want to modify by clicking on the column
+    header.
+2.  From *Edit* menu, choose *Find and replace* item. You will see the
+    window like is shown in Figure
+    <a href="#fig:sheets-find-replace">2</a>.
+3.  In the *Find* field, type `town`, without quotation marks and
+    leaving a space before the word. If you don’t leave the space, you
+    will accidentally remove *town* from *Newtown*, and you will end up
+    with trailing spaces which can cause troubles in the future.
+4.  Leave the *Replace with* field blank.
+5.  If you selected the column correctly in step 1, you will see that
+    *Search* value will be set to the *Specific range* for to that
+    column. Otherwise you will be searching and replacing in the entire
+    spreadsheet.
+6.  You have the option to *match case*. If checked, `town` and `Town`
+    and `tOwN` will be treated differently. For our purpose, you can
+    leave *match case* unchecked.
+7.  Press the *Replace all* button. Since this sample file contains 169
+    towns, the window will state that 169 instances of “town” have been
     replaced.
 
-![](images/04-clean/find-replace-blank.png)
+<img src="images/04-clean/sheets-find-replace.png" alt="Find and Replace window in Google Sheets."  />
+<p class="caption">
+Figure 2: Find and Replace window in Google Sheets.
+</p>
 
-#### Split one column into two with Excel
+#### Splitting data into two or more columns
 
-One common problem is when multiple pieces of data appear in one column,
-and your goal is to split them into separate columns. If those data
-pieces are separated by commas (or similar punctuation), you might be
-able to fix this with a simple spreadsheet command: split text into
-columns.
+Sometimes multiple pieces of data appear in a single cell, such as names
+(`John Doe`), coordinate pairs (`40.12,-72.12`), or addresses
+(`300 Summit St, Hartford, CT, 06106`). For your analysis, you might
+want to split them into separate entities, so that your *FullName*
+column (with `John Doe` in it) becomes *FirstName* (`John`) and
+*LastName* (`Doe`) columns, coordinates become *Latitude* and
+*Longitude* columns, and your *FullAddress* column becomes 4 columns,
+*Street*, *City*, *State*, and *Zip* (postcode).
 
-Try it! Click this link and Save to download to your computer:
-[split-coordinate-pairs in CSV format](data/split-coordinate-pairs.csv),
-and open with Excel. (TODO: test with other spreadsheet tools)
+Let’s begin with a simple example of coordinate pairs. You can download
+a [sample file here](data/split-coordinate-pairs.csv).
 
-1.  Select the data column you wish to split.
+1.  Select the data you wish to split, either the full column or just
+    several rows. Note that you can only split data from one column at a
+    time.
+2.  Make sure there is no data in the column to the right of the one
+    you’re splitting, because all data there will be written over.
+3.  Go to *Data* and select *Split text to columns*.
+4.  Google Sheets will try to guess your separator automatically. You
+    will see that your coordinates are now split with the comma, and the
+    Separator is set to *Detect automatically* in the dropdown, like in
+    Figure <a href="#fig:sheets-split">3</a>. You can manually change it
+    to a comma (`,`), a semicolon (`;`), a period (`.`), a space
+    character, or any other custom character (or even a sequence of
+    characters — more about that in the next example).
+5.  You can rename columns into *Longitude* (first number) and
+    *Latitude* (second number).
 
-2.  Select Data &gt; Split Text to Column
+<img src="images/04-clean/sheets-split.png" alt="Google Sheets provides a dropdown to change a separator."  />
+<p class="caption">
+Figure 3: Google Sheets provides a dropdown to change a separator.
+</p>
 
-3.  In the wizard screen, select Delimited data and click next.
+Now, let’s look at a slightly more complicated example. Imagine your
+dataset is structured as follows:
 
-4.  In step 2 of the wizard screen, check the “comma” box, since this
-    symbol divides the data column. Click next.
+    | Location                           |
+    | 300 Summit St, Hartford CT--06106  |
+    | 1012 Broad St, Hartford CT--06106  |
+    | 37 Alden St, Hartford CT--06114    |
 
-5.  In step 3 of the wizard screen, accept the default General format,
-    and Finish.
+You want to split it into four cells: street address (300 Summit St),
+city (Hartford), state (CT), and zipcode (06106). Notice that the
+separator between the street and the rest of the address is a comma, a
+separator between the city and state is a space, and there is two dash
+lines between state and zipcode.
 
-The coordinate pairs column is now split into two separate columns.
-Relabel the headers: longitude and latitude.
+1.  Start splitting left to right. So your first separator will be a
+    comma. Select your column (or one or more cells within that column),
+    and go to *Data* &gt; *Split text to columns*.
+2.  Google Sheets should automatically split your cell into two parts,
+    `300 Summit St` and `Hartford CT--06106`, using comma as a
+    separator. (If it didn’t, just select *Comma* from the dropdown menu
+    that appeared).
+3.  Now, select only the second column and perform *Split text to
+    columns*. You will see that the city is now separate from the state
+    and zipcode, and Google Sheets chose space as a separator (if it
+    didn’t, choose *Space* from the dropdown menu).
+4.  Next, select only the third column and perform *Split text to
+    columns* again. Google Sheets won’t recognize `--` as a separator,
+    so you will have to manually select *Custom*, type `--` in the text
+    field, and hit Enter. You should now have four columns.
 
-Animated example from Excel for Windows (thanks `@f3mlat`):
+Tip: Google Sheets will treat zipcodes as numbers and will delete
+leading zeros (so 06106 will become 6106). To fix that, select the
+column, and go to *Format &gt; Number &gt; Plain text*. Now you can
+manually re-add zeros. If your dataset is large, consider concatenating
+0s using the formula introduced in the next section.
 
-<iframe src="images/04-clean/excel-win-data-text-to-columns.gif" width="100%" height="400px">
-</iframe>
+#### Combine separate columns into one
 
-TODO: write directions to split a single address cell “300 Summit St,
-Hartford CT 06106” into separate columns for address, city, state, zip
+Now, let’s see how to perform the reverse action. Imagine you receive
+address data in separate columns, like this:
 
-#### Combine separate data columns into one
+    | Street        | City        | State      | Zip        |
+    | 300 Summit St | Hartford    | CT         | 06106      |
 
-Another common data cleaning problem is when you receive address data in
-separate columns, like this:
+But, let’s say your mapping tool requires you to combine all of this
+terms into one location column, like that:
 
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Street</th>
-<th style="text-align: left;">City</th>
-<th style="text-align: left;">State</th>
-<th style="text-align: left;">Zip</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">100 Main St</td>
-<td style="text-align: left;">Hartford</td>
-<td style="text-align: left;">CT</td>
-<td style="text-align: left;">06106</td>
-</tr>
-</tbody>
-</table>
+    | Location                            | 
+    | 300 Summit St, Hartford, CT 06106   |
 
-But your data visualization tool requires you to combine all of this
-terms into one location column, like this:
+You can write a simple formula to combine (or **concatenate**) terms
+using ampersands (`&`) as cells values connectors, and quoted spaces
+(`" "`) as term separators.
 
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Location</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">100 Main St, Hartford, CT 06106</td>
-</tr>
-</tbody>
-</table>
+For example, if a spreadsheet contained four columns, *Address, City,
+State, and Zip* (columns A-D, see Figure
+<a href="#fig:sheets-concat">4</a>), then in column E insert a new
+header named *Location* and a formula in this format (note that spaces
+before and after ampersands do not make a difference):
 
-One easy solution is to write a simple spreadsheet formula to combine
-(or concatenate) terms, using ampersands (&) as connectors, and
-quotation marks around blank spaces as separators. For example, if a
-spreadsheet contained four columns, *Address, City, State Zip* (A-D),
-then in column E insert a new header named *Location* and a formula in
-this format:
+    =A2 & " " & B2 & " " & C2 & " " & D2
 
--   =A2 &" " & B2 &" " &C2 &" " &D2
-
-![](images/04-clean/SpreadsheetCombineTerms.png)
-
-TODO:
-
--   Confirm that Google Fusion Tables geocoder does not require commas
-    between terms
--   Clarify what happens with zip code in the example above
+<img src="images/04-clean/sheets-concat.png" alt="Use ampersands to concatenate cell values, with or without spaces around ampersands."  />
+<p class="caption">
+Figure 4: Use ampersands to concatenate cell values, with or without
+spaces around ampersands.
+</p>
 
 Extract Tables from PDFs with Tabula
 ------------------------------------
@@ -1702,29 +1739,26 @@ internet. Are you sure you want to open it?*), follow the instruction to
 proceed (on a Mac, click *Open*).
 
 Your default system browser should open, like shown in Figure
-<a href="#fig:tabula-welcome">1</a>. The URL will be something like
-`http://127.0.0.1:8080/`, meaning the software is running on your local
+<a href="#fig:tabula-welcome">5</a>. The URL will be something like
+`http://127.0.0.1:8080/`, meaning Tabula is running on your local
 machine. 127.0.0.1, also known as `localhost`, is the hostname for your
 machine. `8080` is called port (it’s okay if you see a different
 port—most likely because 8080 was taken by some other program running on
 your computer). If for any reason you decide to use a different browser,
 just copy-paste the URL.
 
-TODO: this sentence seems out of place, perhaps due to a mistaken
-copy-and-paste?
-
-Figure <a href="#fig:design-principles-color">14</a> shows some good and
-bad examples of color use.
-
 <img src="images/04-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
-Figure 1: Tabula welcome page.
+Figure 5: Tabula welcome page.
 </p>
 
 ### Load a PDF and Autodetect Tables
 
-TODO: please add a sample text-based PDF with numbers to extract to make
-it easier for users to try out
+For the demonstration, we will use an official PDF document with
+Covid-19 cases and deaths in Connecticut as of May 31, 2020. Such PDFs
+are published by Connecticut Department of Public Health daily during
+the pandemic. If you want to use this file, you can download it [from
+here](data/ct-dph-covid-2020-05-31.pdf).
 
 1.  Select the PDF you want to extract data from by clicking the blue
     *Browse…* button.
@@ -1735,11 +1769,11 @@ it easier for users to try out
 4.  The easiest first step is to let Tabula autodetect tables. Click the
     relevant button in the header. You will see that each table is
     highlighted in red, like shown in Figure
-    <a href="#fig:tabula-autodetect">2</a>.
+    <a href="#fig:tabula-autodetect">6</a>.
 
 <img src="images/04-clean/tabula-autodetect.png" alt="Selected tables are highlighted in red."  />
 <p class="caption">
-Figure 2: Selected tables are highlighted in red.
+Figure 6: Selected tables are highlighted in red.
 </p>
 
 ### Manually Adjust Selections and Export 
@@ -1782,19 +1816,19 @@ Consider a dataset that looks like that:
     2001,"North Korea",US Agency for International Development,"345,399"
     2001,"N Korea",Department of Argic,"  117715223"
 
-Do you notice any problems with it? Notice how the funding amounts (last
-column) are in quotes and contains commas, spaces, and some have a
-dollar character. Notice also how the Country includes various spellings
-of North and South Korea. Looks like a nightmare to analyze, but not if
-you know how to use OpenRefine, a powerful and free tool to clean up
-messy data.
+Can you spot any problems with it? Notice how the funding amounts (last
+column) are not standardized: there are commas as thousands separators,
+some have spaces, and some start with a dollar character. Notice also
+how the Country column includes various spellings of North and South
+Korea. Looks like a nightmare to analyze—until you learn to use
+OpenRefine, a powerful and free tool to clean up messy data.
 
-This is a subset of [US Overseas Loans and Grants
+This data exerpt is from [US Overseas Loans and Grants
 (Greenbook)dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook),
 which shows US assistance to South Korea and North Korea between 2000
 and 2018. We added deliberate misspellings and formatting issues for
 demonstration purposes (although we did not alter values). This subset
-can be [downloaded here](/data/us-foreignaid-greenbook-koreas.csv). This
+can be [downloaded here](data/us-foreignaid-greenbook-koreas.csv). This
 dataset has four columns: year (between 2000 and 2018, inclusive),
 country (North or South Korea), a US funding agency, and funding amount
 (in 2018 US dollars).
@@ -1818,11 +1852,11 @@ file, and OpenRefine should open in your default browser.
 
 Once launched, you should see OpenRefine in your browser with
 `127.0.0.1:3333` address (localhost, port 3333), like shown in Figure
-<a href="#fig:openrefine-welcome">3</a>.
+<a href="#fig:openrefine-welcome">7</a>.
 
 <img src="images/04-clean/openrefine-welcome.png" alt="OpenRefine starting page."  />
 <p class="caption">
-Figure 3: OpenRefine starting page.
+Figure 7: OpenRefine starting page.
 </p>
 
 ### Load Data and Start a New Project
@@ -1846,7 +1880,7 @@ scope of this book.
 
 <img src="images/04-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
-Figure 4: OpenRefine parsing options.
+Figure 8: OpenRefine parsing options.
 </p>
 
 ### Convert Dollar Amounts from Text to Numbers
@@ -1880,11 +1914,11 @@ transformed into numeric format.
     number. Fix those manually by hovering over cells, and clicking the
     `edit` button (make sure to change *Data type* to *number*, and hit
     *Apply*, like in Figure
-    <a href="#fig:openrefine-manual-edit">5</a>).
+    <a href="#fig:openrefine-manual-edit">9</a>).
 
 <img src="images/04-clean/openrefine-manual-edit.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
 <p class="caption">
-Figure 5: Manually remove spaces and extra characters, and change data
+Figure 9: Manually remove spaces and extra characters, and change data
 type to number.
 </p>
 
@@ -1905,7 +1939,7 @@ column that should have just two, North Korea and South Korea!
 1.  To begin standardizing spellings, click on the arrow-down button of
     Country column header, and choose *Edit cells* &gt; *Cluster and
     edit*. You will see a window like the one shown in Figure
-    <a href="#fig:openrefine-cluster">6</a>.
+    <a href="#fig:openrefine-cluster">10</a>.
 2.  You will have a choice of two clustering methods, *key collision* or
     *nearest neighbor*. Both methods can be powered by different
     functions, but let’s leave the default *key collision* with
@@ -1926,7 +1960,7 @@ how they produce clusters of different sizes and accuracy.
 
 <img src="images/04-clean/openrefine-cluster.png" alt="Cluster similar text values."  />
 <p class="caption">
-Figure 6: Cluster similar text values.
+Figure 10: Cluster similar text values.
 </p>
 
 ### Export
@@ -2054,12 +2088,12 @@ good chart takes time and effort, so make sure it enhances your story.
 ### Deconstructing a Chart
 
 Let’s take a look at Figure
-<a href="#fig:design-principles-chart-components">7</a>. It shows basic
+<a href="#fig:design-principles-chart-components">11</a>. It shows basic
 chart components that are shared among most chart types.
 
 <img src="images/05-chart/design-principles-chart-components.png" alt="Common chart components."  />
 <p class="caption">
-Figure 7: Common chart components.
+Figure 11: Common chart components.
 </p>
 
 A *title* is perhaps the most important element of any chart. A good
@@ -2122,12 +2156,12 @@ interpretation, there are some that are hard to bend.
 **Bar chart axis must start at zero.** Unlike line charts, bar or column
 charts need to have their value axis start at zero. This is to ensure
 that a bar twice the length of another bar represents twice its value.
-The Figure <a href="#fig:design-principles-start-at-zero">8</a> shows a
+The Figure <a href="#fig:design-principles-start-at-zero">12</a> shows a
 good and a bad example.
 
 <img src="images/05-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
 <p class="caption">
-Figure 8: Start your bar chart at zero.
+Figure 12: Start your bar chart at zero.
 </p>
 
 Starting y-axis at anything other than zero is a common trick used by
@@ -2158,14 +2192,14 @@ you see appropriate. You should be able to justify each element you add.
 To do so, ask yorself: Does this element improve the chart, or can I
 drop it without decreasing readability? This way you won’t end up with
 so-called “chart junk” as shown in Figure
-<a href="#fig:design-principles-junk">9</a>, which includes 3D
+<a href="#fig:design-principles-junk">13</a>, which includes 3D
 perspectives, shadows, and unnecessary elements. They might have looked
 cool in early versions of Microsoft Office, but let’s stay away from
 them today.
 
 <img src="images/05-chart/design-principles-junk.png" alt="Avoid chart junk."  />
 <p class="caption">
-Figure 9: Avoid chart junk.
+Figure 13: Avoid chart junk.
 </p>
 
 The only justification for using three dimensions is to plot
@@ -2176,38 +2210,38 @@ anyone tell you otherwise.
 part-to-whole relationship, so all slices need to add up to 100%.
 Generally, the fewer slices—the better. Arrange slices from largest to
 smallest, clockwise, and put the largest slice at 12 o’clock. Figure
-<a href="#fig:design-principles-pie">10</a> illustrates that.
+<a href="#fig:design-principles-pie">14</a> illustrates that.
 
 <img src="images/05-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o'clock."  />
 <p class="caption">
-Figure 10: Sort slices in pie charts from largest to smallest, and start
+Figure 14: Sort slices in pie charts from largest to smallest, and start
 at 12 o’clock.
 </p>
 
 If your pie chart has more than five slices, consider showing your data
 in a bar chart, either stacked or separated, like Figure
-<a href="#fig:design-principles-pie-to-bar">11</a> shows.
+<a href="#fig:design-principles-pie-to-bar">15</a> shows.
 
 <img src="images/05-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
 <p class="caption">
-Figure 11: Consider using bar charts instead of pies.
+Figure 15: Consider using bar charts instead of pies.
 </p>
 
 **Don’t make people turn their heads to read labels**. When your column
 chart has long x-axis labels that have to be rotated (often 90 degrees)
 to fit, consider turning the chart 90 degrees so that it becomes a
 horizontal bar chart. Take a look at Figure
-<a href="#fig:design-principles-turn-bar">12</a> to see how much easier
+<a href="#fig:design-principles-turn-bar">16</a> to see how much easier
 it is to read horizontally-oriented labels.
 
 <img src="images/05-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 12: For long labels, use horizontal bar charts.
+Figure 16: For long labels, use horizontal bar charts.
 </p>
 
 **Arrange elements logically**. If your bar chart shows different
 categories, consider ordering them, like is shown in Figure
-<a href="#fig:design-principles-order-categories">13</a>. You might want
+<a href="#fig:design-principles-order-categories">17</a>. You might want
 to sort them alphabetically, which can be useful if you want the reader
 to be able to quickly look up an item, such as their town. Ordering
 categories by value is another common technique that makes comparisons
@@ -2216,7 +2250,7 @@ time, they have to be ordered sequentially, of course.
 
 <img src="images/05-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 13: For long labels, use horizontal bar charts.
+Figure 17: For long labels, use horizontal bar charts.
 </p>
 
 **Do not overload your chart**. When labelling axes, choose natural
@@ -2241,22 +2275,22 @@ Whatever colors you end up choosing, they need to be distinguishable
 in hue (for example, various shades of green––leave them for choropleth
 maps). Certain color combinations are hard to interpret for color-blind
 people, like green/red or yellow/blue, so be very careful with those.
-Figure <a href="#fig:design-principles-color">14</a> shows some good and
+Figure <a href="#fig:design-principles-color">18</a> shows some good and
 bad examples of color use.
 
 <img src="images/05-chart/design-principles-color.png" alt="Don't use colors just for the sake of it."  />
 <p class="caption">
-Figure 14: Don’t use colors just for the sake of it.
+Figure 18: Don’t use colors just for the sake of it.
 </p>
 
 If you follow the advice, you should end up with a de-cluttered chart as
-shown in Figure <a href="#fig:design-principles-decluttered">15</a>.
+shown in Figure <a href="#fig:design-principles-decluttered">19</a>.
 Notice how your eyes are drawn to the bars and their corresponding
 values, not bright colors or secondary components like the axes lines.
 
 <img src="images/05-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
 <p class="caption">
-Figure 15: Make sure important things catch the eye first.
+Figure 19: Make sure important things catch the eye first.
 </p>
 
 Google Sheets Charts
@@ -4529,15 +4563,20 @@ recipe, now there will be two versions of instructions, to suit both
 those who strongly prefer or dislike nuts in their brownies. (We do not
 take sides in this deeply polarizing dispute.)
 
+<!-- TODO: decide whether to convert the text description of recipes to visual images of two hand-written recipe index cards, one forked from the other, with walnuts added? -->
+
 Currently, the most popular cookbook among coders is
 [GitHub](https://github.com), with more than 40 million users and over
 100 million recipes (or “code repositories” or “repos”). You can sign up
 for a free account and choose to make your repos private (like Grandma’s
-secret recipes) or public (like the ones we share below). GitHub
+secret recipes) or public (like the ones we share below). Since GitHub
+was designed to be public, think twice before uploading any confidential
+or sensitive information that should not be shared with others. GitHub
 encourages sharing *open-source code*, meaning the creator grants
 permission for others to freely distribute and modify it, based on the
-conditions of the type of license they have selected. When you create a
-brand-new repo, GitHub invites you to [Choose a
+conditions of the type of license they have selected.
+
+When you create a brand-new repo, GitHub invites you to [Choose a
 License](https://choosealicense.com/). Two of the most popular
 open-source software licenses are the [MIT
 License](https://choosealicense.com/licenses/mit/), which is very
@@ -4551,31 +4590,22 @@ copy of someone’s open-source code on GitHub, look at the type of
 license they’ve chosen (if any), keep it in your version, and respect
 its terms.
 
-In the next section, we’ll walk you through these basic GitHub steps:
+In the next section of this chapter, we will introduce basic steps to
+[fork, edit, and host a simple Leaflet map code template on
+GitHub](fork-leaflet.html).
 
--   Get a free GitHub account and fork your copy of a simple Leaflet map
-    code template
--   Edit the Leaflet map title, starting position, background layer, and
-    marker
--   Host a live online version of your modified map code on the public
-    web
+Later you’ll learn how to [create a new GitHub repo and upload code
+files](create-repo.html).
 
-Later you’ll learn how to create a new GitHub repo to upload code and
-other types of files.
+This chapter introduces GitHub using its web browser interface, which
+works best for beginners. Later you’ll learn about more advanced tools,
+such as [GitHub Desktop and Atom Editor to work more
+efficiently](github-desktop-atom.html) on your personal computer.
 
-We’ll introduce the basic steps of GitHub using its web browser
-interface, which works best for beginners. Later in this chapter you’ll
-learn how to work more efficiently with code on your personal computer
-using tools such as GitHub Desktop and Atom Editor.
-
-Finally, we’ll discuss how to identify and fix common GitHub and code
-errors. All of us make mistakes and accidentally “break our code” from
-time to time, and it’s a great way to learn how things work—and what to
-do when it doesn’t work!
-
-**TODO above:** insert cross-references to jump to sections; decide
-whether to convert the text description of recipes to visual images of
-two recipe cards, one forked from the other, with walnuts added
+Finally, we’ll discuss how to [fix common GitHub and code
+errors](fix-code.html). All of us make mistakes and accidentally “break
+our code” from time to time, and it’s a great way to learn how things
+work—and what to do when it doesn’t work!
 
 Fork, Edit, and Host a Simple Leaflet Map Template
 --------------------------------------------------
@@ -4593,16 +4623,26 @@ drag-and-drop tools that we covered in previous chapters, such as Google
 My Maps or Tableau Public, Leaflet requires you to write (or copy and
 paste) several lines of code, which need to be hosted on a web server so
 that other people can view your map in their web browser. Fortunately,
-we can do all of these steps in our web browser on GitHub.
+we can do all of these steps in our web browser on GitHub. This means
+you can do this on any type of computer: Mac, Windows, Chromebook, etc.
+
+Here’s an overview of the key steps we’ll cover in this section:
+
+-   Get a free GitHub account and fork your copy of a simple Leaflet map
+    code template
+-   Edit the Leaflet map title, starting position, background layer, and
+    marker
+-   Host a live online version of your modified map code on the public
+    web
 
 Your goal is to create your own version of this simple interactive map,
-with your modifications, as shown in Figure
-<a href="#fig:leaflet-simple">16</a>.
+with your edits, as shown in Figure
+<a href="#fig:leaflet-simple">20</a>.
 
 <iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 16: Create your own version of this [simple interactive Leaflet
+Figure 20: Create your own version of this [simple interactive Leaflet
 map](https://handsondataviz.github.io/leaflet-map-simple/).
 </p>
 
@@ -4621,11 +4661,11 @@ wisest choice for a username, if `BrownieChef` is also available.
     <a href="https://github.com/HandsOnDataViz/leaflet-map-simple" class="uri">https://github.com/HandsOnDataViz/leaflet-map-simple</a>
 
 2.  To create your own copy of our template, click the Fork button as
-    shown in Figure <a href="#fig:leaflet-simple-fork">17</a>.
+    shown in Figure <a href="#fig:leaflet-simple-fork">21</a>.
 
 <img src="images/08-github/leaflet-simple-fork.png" alt="Click the Fork button to make your own copy of the code template."  />
 <p class="caption">
-Figure 17: Click the Fork button to make your own copy of the code
+Figure 21: Click the Fork button to make your own copy of the code
 template.
 </p>
 
@@ -4639,17 +4679,19 @@ License, which allows anyone to copy and modify the code as they wish;
 which we’ll come back to later; `index.html` is the key file that
 contains the map code.
 
+<!-- TODO: Decide if we should show generic web address formatting as `YourUserName` or `https://USERNAME.github.io/REPOSITORY` -->
+
 Tip: By design, GitHub allows you to fork a repo *one time*, so that you
 don’t accidentally create two versions with the same name. If you wish
 to create a second version, go to the [Create a New Repo and Upload
 Files on GitHub](create-repo.html) section of this chapter.
 
 1.  Click on the `index.html` file to view the code, as shown in Figure
-    <a href="#fig:leaflet-simple-index">18</a>.
+    <a href="#fig:leaflet-simple-index">22</a>.
 
 <img src="images/08-github/leaflet-simple-index.png" alt="Click the Index file to view the code."  />
 <p class="caption">
-Figure 18: Click the Index file to view the code.
+Figure 22: Click the Index file to view the code.
 </p>
 
 In case this is the first time you’re looking at computer code, we’ve
@@ -4666,11 +4708,11 @@ want to modify a few lines further below.
 
 1.  To edit the code, click on the the pencil symbol in the upper-right
     corner, as shown in Figure
-    <a href="#fig:leaflet-simple-edit">19</a>.
+    <a href="#fig:leaflet-simple-edit">23</a>.
 
 <img src="images/08-github/leaflet-simple-edit.png" alt="Click the pencil button to edit the code."  />
 <p class="caption">
-Figure 19: Click the pencil button to edit the code.
+Figure 23: Click the pencil button to edit the code.
 </p>
 
 Let’s start by making one simple change to prove to everyone that you’re
@@ -4684,11 +4726,11 @@ HTML division tag block around lines 21-23.
 
 2.  To save your edit, scroll to the bottom of the page and click the
     green `Commit Changes` button, as shown in Figure
-    <a href="#fig:leaflet-simple-commit">20</a>.
+    <a href="#fig:leaflet-simple-commit">24</a>.
 
 <img src="images/08-github/leaflet-simple-commit.png" alt="Click the green Commit Changes button to save your edits."  />
 <p class="caption">
-Figure 20: Click the green Commit Changes button to save your edits.
+Figure 24: Click the green Commit Changes button to save your edits.
 </p>
 
 In the language of coders, we “commit” our changes in the same way that
@@ -4700,78 +4742,99 @@ you start making lots of commits to keep track of your work. Also by
 default, GitHub commits your changes directly to the `master` branch of
 your code, which we’ll explain later.
 
-Now let’s publish your map to the public web to see how this minor edit
-looks in your browser. GitHub not only stores open-source code, but
-allows you to host a live online version of HTML-based code with a
-built-in feature called [GitHub Pages](https://pages.github.com/).
+Now let’s publish your edited map to the public web to see how it looks
+in a web browser. GitHub not only stores open-source code, but its
+built-in [GitHub Pages](https://pages.github.com/) feature allows you to
+host a live online version of your HTML-based code, which anyone with
+the web address can view in their browser. While GitHub Pages is free to
+use, there are [some restrictions on size and
+content](https://help.github.com/en/github/working-with-github-pages/about-github-pages)
+and it is not intended for running an online business or commercial
+transactions. But one advantage of code templates is that you can host
+them on any web server you control. Since we’re already using GitHub to
+store and edit our code template, it’s easy to turn on GitHub Pages to
+host it online.
 
 1.  To access GitHub Pages, scroll to the top of your repo page and
     click the Settings button as shown in Figure
-    <a href="#fig:leaflet-simple-settings">21</a>.
+    <a href="#fig:leaflet-simple-settings">25</a>.
 
 <img src="images/08-github/leaflet-simple-settings.png" alt="Click the Settings button to access GitHub Pages and publish your work on the web."  />
 <p class="caption">
-Figure 21: Click the Settings button to access GitHub Pages and publish
+Figure 25: Click the Settings button to access GitHub Pages and publish
 your work on the web.
 </p>
 
 1.  In the Settings screen, scroll down to the GitHub Pages area, and
     use the drop-down menu to change Source from `None` to
     `Master Branch`, as shown in Figure
-    <a href="#fig:leaflet-github-pages">22</a>. There is no *commit* or
+    <a href="#fig:leaflet-github-pages">26</a>. There is no *commit* or
     *save* button here, and the change will happen automatically. This
     step tells GitHub to publish a live version of your map on the
     public web, where anyone can access it in their browser, if they
     have the web address.
 
-<iframe src="images/08-github/leaflet-github-pages.gif" width="100%" height="400px">
+<iframe src="images/08-github/leaflet-github-pages.gif" width="100%" height="325px">
 </iframe>
 <p class="caption">
-Figure 22: Under GitHub Pages, switch the source from None to Master as
+Figure 26: Under GitHub Pages, switch the source from None to Master as
 shown in this [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages.gif).
 </p>
 
+<!-- TODO: Jack can redo the animated GIFs above and below in Camtasia, and insert a fade-out to clearly define its ending. -->
+
 1.  Scroll back down to the GitHub Pages area to see the web address
     where your live map has been published online, and right-click it to
     open in a new browser tab, as shown in Figure
-    <a href="#fig:leaflet-github-pages2">23</a>. By opening your live
-    map in a new tab, you to easily go back to your repo in the first
-    tab, to edit more code later.
+    <a href="#fig:leaflet-github-pages2">27</a>.
 
-<iframe src="images/08-github/leaflet-github-pages2.gif" width="100%" height="400px">
+<iframe src="images/08-github/leaflet-github-pages2.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
-Figure 23: Under GitHub Pages, double-click your published map link as
+Figure 27: Under GitHub Pages, double-click your published map link as
 shown in this [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages2.gif).
 </p>
 
 1.  Click on the new tab to view your live map, with your new title at
     the top. GitHub Pages automatically generates a public web address
-    in this format, `https://YourUserName.github.io/leaflet-map-simple`,
-    where `YourUserName` is your GitHub account username. Remember why
-    we told you not to create your account with a username like
-    `DrunkBrownieChef6789`?
+    for your repo in this format,
+    `https://YourUserName.github.io/leaflet-map-simple`, where
+    `YourUserName` is your GitHub account username. Remember why we told
+    you not to create your account with a username like
+    `DrunkBrownieChef6789`? Here’s why.
 
 Tip: If your map does *not* appear right away, wait up to 30 seconds for
 GitHub Pages to finish processing, then do a “hard” browser refresh to
 contact the web server again. **TODO:** Add hard refresh instructions,
 or link them here if shown earlier in the book.
 
-Tip: Keep this second browser tab open, so that you can come back to
-your live map later, and copy its web address to use below.
+Note: GitHub creates two different types of web addresses, where you
+should replace `YourUserName` and `YourRepoName` with your own:
 
-Let’s go back to your GitHub repo and change the links so that they
-point to *your* live map, in place of *our* live map.
+-   The GitHub repo address, where you can edit your code:
+    `https://github.com/YourUserName/YourRepoName`
+-   The GitHub Pages address, which publishes a live version of your
+    code: `https://YourUsername.github.io/YourRepoName`
 
-1.  Go back to the previous browser tab, and click on the repo title to
-    return to its home page, as shown in Figure
-    <a href="#fig:leaflet-click-title">24</a>.
+Tip: When working with the GitHub web interface, keep two browser tabs
+open. The first tab contains your GitHub repo, where you can edit your
+code. The second tab contains your GitHub Pages live version, where you
+can view the results of your edits. By opening your live map in a new
+tab, you can easily go back to edit your code repo in the first tab, and
+flip back to view the live results in the second tab.
+
+Let’s go back to your GitHub repo and edit the GitHub Pages links so
+that they point to *your* live map, in place of *our* live map.
+
+1.  Go back to your first browser tab with your GitHub repo, and click
+    on the repo title to return to its home page, as shown in Figure
+    <a href="#fig:leaflet-click-title">28</a>.
 
 <img src="images/08-github/leaflet-click-title.png" alt="On your first browser tab, click the repo title."  />
 <p class="caption">
-Figure 24: On your first browser tab, click the repo title.
+Figure 28: On your first browser tab, click the repo title.
 </p>
 
 If you can’t find your first browser tab, you can retype your repo home
@@ -4784,18 +4847,18 @@ page address in this format, and insert your GitHub username:
     your repo, paste your link there, and save. Second, open the
     `README.md` file or scroll down to the bottom of the repo home page,
     click the pencil symbol to edit it, paste your link under the label
-    `(replace with link to your site)`, and scroll down to commit the
+    “(replace with link to your site)”, and scroll down to commit the
     change. See both steps in Figure
-    <a href="#fig:leaflet-paste-links">25</a>.
+    <a href="#fig:leaflet-paste-links">29</a>.
 
 <img src="images/08-github/leaflet-paste-links.png" alt="Paste the link to your live map at the top of your repo page, and also in your README page."  />
 <p class="caption">
-Figure 25: Paste the link to your live map at the top of your repo page,
+Figure 29: Paste the link to your live map at the top of your repo page,
 and also in your README page.
 </p>
 
 Pasting both of these links helps point people who discover your GitHub
-repo to *your* live map, rather than our version.
+repo to *your* live map, rather than *our* version for this book.
 
 Now that you’ve successfully made simple edits and published your live
 map, let’s make more edits to jazz it up and help you learn more about
@@ -4805,12 +4868,13 @@ how Leaflet code works.
     click the pencil symbol to edit more code.
 
 Wherever you see the `EDIT` code comment, this points out a line that
-you should modify. For example, look for the code block shown below that
-sets up the initial center point of the map and its zoom level. Insert a
-new latitude and longitude coordinate to set a new center point, and
-find your coordinates with online tools such as
-[LatLong.net](https://www.latlong.net/) or Google Maps. TODO: Show how
-to find coords in GMaps here, or link if it appears earlier in the book.
+you can easily modify. For example, look for the code block shown below
+that sets up the initial center point of the map and its zoom level.
+Insert a new latitude and longitude coordinate to set a new center
+point, and find your coordinates with online tools such as
+[LatLong.net](https://www.latlong.net/) or Google Maps. **TODO:** Show
+how to find coords in GMaps here, or link if it appears earlier in the
+book.
 
       var map = L.map('map', {
         center: [41.77, -72.69], // EDIT latitude, longitude to re-center map
@@ -4821,20 +4885,22 @@ to find coords in GMaps here, or link if it appears earlier in the book.
 The next code block displays the basemap tile layer that serve as the
 map background. Our template uses a light map with all labels, publicly
 provided by CARTO, with credit to OpenStreetMap. One simple edit is to
-change `light_all` to `dark_all` to see the inverse basemap color. See
-many other Leaflet basemap code options that you can paste in at
+change `light_all` to `dark_all`, which will substitute a different
+CARTO basemap with inverted coloring. Or see many other Leaflet basemap
+code options that you can paste in at
 <a href="https://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">https://leaflet-extras.github.io/leaflet-providers/preview/</a>.
-Be sure to attribute the source and keep `}).addTo(map);` in the last
-line.
+Make sure to attribute the source, and also keep `}).addTo(map);` at the
+end of this code block, which displays the basemap.
 
      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
+       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>,
+       &copy; <a href="https://carto.com/attribution">CARTO</a>'
      }).addTo(map);
 
 The last code block displays a single point marker on the map, colored
-blue by default in Leaflet, with pop-up text when users click it. You
-can edit the marker coordinates, insert a pop-up text message, or copy
-and paste the code to create a second marker.
+blue by default in Leaflet, with a pop-up message when users click it.
+You can edit the marker coordinates, insert the pop-up text, or copy and
+paste the code block to create a second marker.
 
     L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
     .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
@@ -4843,126 +4909,480 @@ and paste the code to create a second marker.
     button to save changes. Then go to your browser tab with the live
     map, and do a hard-refresh to view changes. If your map edits do not
     appear right away, remember that GitHub Pages sometimes requires 30
-    seconds to process code edits. To solve problems, see [Fix Common
-    GitHub and Code Errors](fix-code.html) chapter in this book.
+    seconds to process code edits. If you have problems, see the [Fix
+    Common GitHub and Code Errors](fix-code.html) section in this
+    chapter.
 
-**TODO:** Write section summary, and discuss web hosting: This chapter
-describes how to use the free GitHub Pages feature to host a live
-version of your code on the public web. But what if this service is no
-longer free at some point in the future, or you decide for any reason
-that it’s best to host your code elsewhere? One advantage of creating
-data visualizations with code templates like the ones featured in this
-book is that you can host them on *any* web server. Our templates are
-designed using three very common types of code: an HTML file to…, a
-JavaScript file to…, and a Cascasding Style Sheets (or CSS) file to…
-Describe abbreviations:…
+Congratulations! If this is the first time that you’ve edited computer
+code and hosted it online, you can now call yourself a “coder”. The
+process is similar to following and modifying a cookbook recipe, just
+like you also can call yourself a “chef” after baking your first batch
+of brownies! Although no one is likely to hire you as a full-time paid
+coder (or chef) at this early stage, you now understand several of the
+basic skills needed to copy, edit, and host code online, and you’re
+ready to dive into the more advanced versions, such as [Chart.js code
+templates in chapter 9](chartjs.html) and [Leaflet map code templates in
+chapter 10](leaflet.html).
 
-For more advanced examples, see the [Leaflet Map
-Templates](leaflet.html) chapter in this book. If you have problems with
-this tutorial, go to the [Fix Common GitHub and Code
-Errors](fix-code.html) chapter in this book.
-
-**TODO: start again here**
+The next section describes how to enhance your GitHub skills by creating
+new repos and uploading your files. These are essential steps to create
+a second copy of a code template or to work with more advanced templates
+in the next two chapters.
 
 Create a New Repo and Upload Files on GitHub
 --------------------------------------------
 
-TODO: Revise after testing GitHub “template” setting. Question: If I
-already forked one copy of a GitHub code repository, GitHub will not
-allow me to fork it a second time. So how do I make a second copy of a
-repo?
+Now that you’ve forked an existing repo on GitHub, the next step is to
+learn how to create a brand-new repo and upload different types of
+files. These skills will be helpful for several scenarios later in this
+book. First, since GitHub allows you to create only *one fork* of an
+existing repository, if you wish to make a *second* copy, you’ll need to
+download the code and upload it into a new repo. Second, [Chapter 9 on
+Chart.js code templates](chartjs.html) and [chapter 10 on Leaflet map
+code templates](leaflet.html) allow you to upload your own files to
+create data visualizations. Once again, we’ll demonstrate how to do all
+of these steps in GitHub’s beginner-level browser interface.
 
-Answer: GitHub has a “one-fork” rule for good reasons, but here’s a
-simple way for beginners to work around it, using only your web browser
-and any computer (such as Mac, Windows, or Chromebook).
+Let’s start with GitHub’s *one fork* rule. Imagine that you wish to
+create a second copy of the [leaflet-map-simple
+template](https://github.com/HandsOnDataViz/leaflet-map-simple)
+described in the prior section. If you attempt to create a second fork,
+GitHub will “gray out” the Fork button and display an error message
+stating that you “Cannot fork because you own this repository…” as shown
+in Figure <a href="#fig:repo-cannot-fork">30</a>. There’s a good reason
+for GitHub’s one-fork rule: it’s designed to prevent you from
+accidentally creating a second copy, with the same name as your first
+fork, which would overwrite and erase your previous work.
 
--   Create a brand-new repository on GitHub in your browser
--   Download an existing code repository and unzip the folder
--   Upload the contents of that folder to your new repository and Commit
-    Changes
+<img src="images/08-github/repo-cannot-fork.png" alt="GitHub's one-fork rule prevents you from creating a second fork of a repo."  />
+<p class="caption">
+Figure 30: GitHub’s one-fork rule prevents you from creating a second
+fork of a repo.
+</p>
 
-TODO: One of GitHub’s many advantages is built-in support to quickly
-display open-data formats: CSV tables and GeoJSON geography. Upload a
-sample of each one to see how it looks….
+So how do you create a second copy of a GitHub repo? We’ll show you two
+solutions. The first solution, if it exists in your case, is easy. Look
+for a green “Use this template” button in the upper-right screen, as
+shown in Figure <a href="#fig:repo-template-download">31</a>, and if you
+see it, click it. GitHub will ask you to create a brand-new repository
+name for the second copy of this template, to avoid confusing it with
+the first copy you made. The “Use this template” button will appear only
+if the people who created the GitHub repo set it up as a template, and
+that’s exactly what we, the authors of this book, did to make it
+super-simple for all of you to create multiple copies of our GitHub
+repos.
 
-#### Video with step-by-step tutorial
+&lt;img src=“images/08-github/repo-template-download.png” alt=“If a
+green”Use this template" button appears, click it to work around
+GitHub’s one-fork rule." /&gt;
+<p class="caption">
+Figure 31: If a green “Use this template” button appears, click it to
+work around GitHub’s one-fork rule.
+</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Hev2UcoLtfw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+But what if you’re trying to make a second copy of a GitHub repo where
+the Fork button is grayed-out and there’s no green “Use this template”
+button? Here’s a recommended workaround that follows three general
+steps:
+
+-   Download the existing GitHub repo to your local computer
+-   Create a brand-new GitHub repo, with a new name
+-   Upload the existing code repo files to your brand-new repo
+
+Imagine that you’ve already created one fork of the
+[leaflet-map-simple](https://github.com/HandsOnDataViz/leaflet-map-simple)
+repo, as we did in the prior section. You wish to create a second copy,
+but the “Use this template” green button does not appear, either because
+the repo was created before that feature existed, or the people who
+created the repo didn’t set it up that way.
+
+1.  Click on the “Clone or download” gray drop-down menu button on the
+    right-side of the screen, as shown in Figure
+    <a href="#fig:repo-template-download">31</a>, and select “Download
+    ZIP.” Your browser will download a zipped compressed folder with the
+    contents of the repo to your local computer, and it may ask you
+    where you wish to save it. Decide on a location and click OK.
+
+2.  Navigate to the location on your computer where you saved the
+    folder. Its file name should end with `.zip`, which means you need
+    to double-click to “unzip” or de-compress the folder. After you
+    unzip it, a new folder will appear named `leaflet-map-simple-master`
+    with three files: `index.html` and `LICENSE` and `README.md`. The
+    word `master` refers to the master branch of your repo.
+
+3.  Go back to your GitHub account in your web browser, click on the “+”
+    plus symbol in the upper-right corner of your account, and select
+    “New repository”, as shown in Figure
+    <a href="#fig:repo-create-new">32</a>.
+
+&lt;img src=“images/08-github/repo-create-new.png” alt=“Click the”+"
+plus symbol in upper-right corner to create a new repo." /&gt;
+<p class="caption">
+Figure 32: Click the “+” plus symbol in upper-right corner to create a
+new repo.
+</p>
+
+1.  On the next screen, GitHub will ask you to create a new repo name.
+    Choose a short one, preferably all lower-case, and separate words
+    with hyphens if needed. Let’s name it `practice` because we’ll
+    delete it at the end of this tutorial.
+
+Check the box to “Initialize this repository with a README” to simplify
+the next steps. Also, “Add a license” that matches the code you plan to
+upload, which in this case is “MIT License.” Other fields are optional.
+Click the green “Create Repository” button at the bottom when done, as
+shown in Figure <a href="#fig:repo-create-options">33</a>.
+
+&lt;img src=“images/08-github/repo-create-options.png” alt=“After naming
+your new repo, check the box to”Initialize this repo with a README" and
+“Add a license” to match the code (select “MIT”)." /&gt;
+<p class="caption">
+Figure 33: After naming your new repo, check the box to “Initialize this
+repo with a README” and “Add a license” to match the code (select
+“MIT”).
+</p>
+
+Your new repo will have a web address similar to
+`https://github.com/YourUserName/practice`.
+
+1.  On your new repo home page, click the Upload Files button, near the
+    middle of the screen, as shown in Figure
+    <a href="#fig:repo-upload-files">34</a>.
+
+<img src="images/08-github/repo-upload-files.png" alt="Click the Upload Files button."  />
+<p class="caption">
+Figure 34: Click the Upload Files button.
+</p>
+
+1.  Upload the `index.html` file that you previously downloaded to your
+    local computer by dragging-and-dropping it into the upload area of
+    your GitHub repo in your browser, as shown in Figure
+    <a href="#fig:repo-drag-index">35</a>. Do not upload `LICENSE` or
+    `README.md` because your new repo already contains those two files.
+    Scroll down to click the green Commit Changes button.
+
+<img src="images/08-github/repo-drag-index.png" alt="Drag-and-drop the file to the upload screen."  />
+<p class="caption">
+Figure 35: Drag-and-drop the file to the upload screen.
+</p>
+
+When the upload is complete, your repo should contain three files, now
+including a copy of the `index.html` code that you previously downloaded
+from the `leaflet-map-simple` template. This achieved our goal of
+working around GitHub’s one-fork rule, by creating a new repo and
+manually uploading a second copy of the code.
+
+<!-- TODO: If someone thinks we need a screenshot to illustrate the end result above, see the repo-upload-success-original.png file. Or if we don't need it, then delete it. -->
+
+Optionally, you could use GitHub Pages to publish a live version of the
+code online, and paste the links to the live version at the top of your
+repo and your README.md file, as described in the [Fork, Edit, and Host
+a Simple Leaflet Map Template](fork-leaflet.html) section of this
+chapter.
+
+1.  Since this was only a `practice` repo, let’s delete it from GitHub.
+    In the repo screen of your browser, click the top-right Settings
+    button, scroll all the way down to the “Danger Zone,” and click
+    “Delete this repository,” as shown in Figure
+    <a href="#fig:repo-delete">36</a>. GitHub will ask you to type in
+    your username and repo name to ensure that you really want to delete
+    the repo, and are not a drunken brownie chef.
+
+<img src="images/08-github/repo-delete.png" alt="After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm."  />
+<p class="caption">
+Figure 36: After clicking the Delete Repository button, GitHub will ask
+you to type your username and repo name to confirm.
+</p>
+
+<!-- TODO: Will that "drunk" joke work here? Or is it inappropriate, or too distant from the "DrunkenBrownieChef6789" reference in the prior section?  -->
+
+So far, you’ve learned how to copy, edit, and host code using the GitHub
+web interface, which is a great introduction for beginners. Now you’re
+ready to move up to tools that will allow you to work more efficiently
+with GitHub, such as GitHub Desktop and Atom Editor, to quickly move
+entire repos to your local computer, edit the code, and move them back
+online.
+
+GitHub Desktop and Atom Editor to Code Efficiently
+--------------------------------------------------
+
+Editing your code through the GitHub web interface is a good way to
+start, but it can be very slow, especially if you need to modify or
+upload multiple files in your repo. To speed up your work, we recommend
+that you download two free tools—[GitHub
+Desktop](https://desktop.github.com) and [Atom Text
+Editor](https://atom.io)—which run on Mac or Windows computers. When you
+connect your GitHub web account to GitHub Desktop, it allows you to
+“pull” the most recent version of the code to your local computer’s hard
+drive, make and test your edits, and “push” your commits back to your
+GitHub web account. Atom Text Editor, which is also created by the
+makers of GitHub, allows you to view and edit code repos on your local
+computer more easily than the GitHub web interface. While there are many
+text editors for coders, Atom is designed to work well with GitHub
+Desktop.
+
+Tip: Currently, neither GitHub Desktop nor Atom Editor are supported for
+Chromebooks, but [Google’s Web
+Store](https://chrome.google.com/webstore) offers several text editors,
+such as Text and Caret, which offer some of the functionality described
+below.)
+
+Let’s use GitHub Desktop to pull a copy of your `leaflet-map-simple`
+template to your local computer, make some edits in Atom Editor, and
+push your commits back up to GitHub.
+
+1.  Go to the GitHub web repo you wish to copy to your local computer.
+    In your browser, navigate to
+    `https://github.com/YourUserName/leaflet-map-simple`, using your
+    GitHub username, to access the repo you created in the [Fork, Edit,
+    and Host a Simple Leaflet Map Template](fork-leaflet.html) section
+    of this chapter. Click the “Clone or download” button on the right
+    side, and select “Open in Desktop,” as shown in Figure
+    <a href="#fig:desktop-open">37</a>. The next screen will show a link
+    to the GitHub Desktop web page, and you should download and install
+    the application.
+
+&lt;img src=“images/08-github/desktop-open.png” alt=“In your GitHub web
+repo, click”Clone or download" and “Open in Desktop” to download and
+install GitHub Desktop." /&gt;
+<p class="caption">
+Figure 37: In your GitHub web repo, click “Clone or download” and “Open
+in Desktop” to download and install GitHub Desktop.
+</p>
+
+1.  When you open GitHub Desktop for the first time, you’ll need to
+    connect it to the GitHub web account you previously created in this
+    chapter. On the welcome screen, click the blue “Sign in to
+    GitHub.com” button, as shown in Figure
+    <a href="#fig:desktop-signin">38</a>, and login with your GitHub
+    username and password. On the next screen, GitHub will ask you to
+    click the green “Authorize desktop” button to confirm that you wish
+    to connect to your account.
+
+&lt;img src=“images/08-github/desktop-signin.png” alt=“Click the
+blue”Sign in to GitHub.com" button to link GitHub Desktop to your GitHub
+account." /&gt;
+<p class="caption">
+Figure 38: Click the blue “Sign in to GitHub.com” button to link GitHub
+Desktop to your GitHub account.
+</p>
+
+<!-- TODO: Decide if we wish to show the desktop-authorize screenshot, which is in the images folder, but don't believe is essential to include here. -->
+
+1.  In the next setup screen, GitHub Desktop asks you to configure Git,
+    the underlying software that runs GitHub. Confirm that it displays
+    your username and click Continue, as shown in Figure
+    <a href="#fig:desktop-configure">39</a>.
+
+<img src="images/08-github/desktop-configure.png" alt="Click the Continue button to authorize GitHub Desktop to send commits to your GitHub account."  />
+<p class="caption">
+Figure 39: Click the Continue button to authorize GitHub Desktop to send
+commits to your GitHub account.
+</p>
+
+1.  On the “Let’s Get Started” with GitHub Desktop screen, click on
+    “Your Repositories” on the right side to select your
+    `leaflet-map-sample`, and further below click the blue button to
+    “Clone” it to your local computer, as shown in Figure
+    <a href="#fig:desktop-start">40</a>.
+
+&lt;img src=“images/08-github/desktop-start.png” alt=“Select
+your”leaflet-map-simple" repo and click the Clone button to copy it to
+your local computer." /&gt;
+<p class="caption">
+Figure 40: Select your “leaflet-map-simple” repo and click the Clone
+button to copy it to your local computer.
+</p>
+
+1.  When you clone a repo, GitHub Desktop asks you to select the Local
+    Path, meaning the location where you wish to store a copy of your
+    GitHub repo on your local computer, as shown in Figure
+    <a href="#fig:desktop-clone-path">41</a>. Before you click the Clone
+    button, remember the path to this location, since you’ll need to
+    find it later.
+
+<img src="images/08-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click Clone."  />
+<p class="caption">
+Figure 41: Select the Local Path where your repo will be stored on your
+computer, then click Clone.
+</p>
+
+1.  On the next screen, GitHub Desktop may ask, “How are you planning to
+    use this fork?” Select the default entry “To contribute to the
+    parent project,” which means you plan to send your edits back to
+    your GitHub web account, and click Continue, as shown in Figure
+    <a href="#fig:desktop-fork">42</a>.
+
+&lt;img src=“images/08-github/desktop-fork.png” alt=“If asked how you
+plan to use this fork, select the default”To contribute to the parent
+project" and click Continue." /&gt;
+<p class="caption">
+Figure 42: If asked how you plan to use this fork, select the default
+“To contribute to the parent project” and click Continue.
+</p>
+
+1.  Now you have copies of your GitHub repo in two places—in your GitHub
+    web account and on your local computer—as shown in Figure
+    <a href="#fig:desktop-finder">43</a>. Your screen may look
+    different, depending on whether you use Windows or Mac, and the
+    Local Path you selected to store your files.
+
+<img src="images/08-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub web account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different."  />
+<p class="caption">
+Figure 43: Now you have two copies of your repo: in your GitHub web
+account (on the left) and on your local computer (on the right, as shown
+in the Mac Finder). Windows screens will look different.
+</p>
+
+1.  Before we can edit the code in your local computer, [download and
+    install the Atom Editor application](https://atom.io). Then go to
+    your GitHub Desktop screen, confirm that the Current Repository is
+    `leaflet-map-simple`, and click the “Open in Atom” button as shown
+    in Figure <a href="#fig:desktop-atom">44</a>.
+
+&lt;img src=“images/08-github/desktop-atom.png” alt=“In GitHub Desktop,
+confirm the Current Repo and click the”Open in Atom" button to edit the
+code." /&gt;
+<p class="caption">
+Figure 44: In GitHub Desktop, confirm the Current Repo and click the
+“Open in Atom” button to edit the code.
+</p>
+
+1.  Since Atom Editor is integrated with GitHub Desktop, it opens up
+    your entire repo as a “project,” where you can click files in the
+    left window to open as new tabs to view and edit code, as shown in
+    Figure <a href="#fig:atom-project">45</a>. Open your `index.html`
+    file and edit the title of your map, around line 22, then save your
+    work.
+
+&lt;img src=“images/08-github/atom-project.png” alt=“Atom Editor opens
+your repo as a”project," where you can click files to view code. Edit
+your map title." /&gt;
+<p class="caption">
+Figure 45: Atom Editor opens your repo as a “project,” where you can
+click files to view code. Edit your map title.
+</p>
+
+1.  After saving your code edit, it’s a good habit to clean up your Atom
+    Editor workspace. Right-click on the current Project and select
+    Remove Project Folder in the menu, as shown in Figure
+    <a href="#fig:atom-remove-project">46</a>. Next time you open up
+    Atom Editor, you can right-click to Add Project Folder, and choose
+    any GitHub repo that you have copied to your local computer.
+
+<img src="images/08-github/atom-remove-project.png" alt="To clean up your Atom Editor workspace, right-click to Remove Project Folder."  />
+<p class="caption">
+Figure 46: To clean up your Atom Editor workspace, right-click to Remove
+Project Folder.
+</p>
+
+1.  Now that you’ve edited the code for your map on your local computer,
+    let’s test how it looks before uploading it to GitHub. Go to the
+    location where you saved the repo on your local computer, and
+    right-click the `index.html` file, select Open With, and choose your
+    preferred web browser, as shown in Figure
+    <a href="#fig:finder-open-with">47</a>.
+
+<img src="images/08-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
+<p class="caption">
+Figure 47: Right-click the index.html file on your local computer and
+open with a browser to check your edits.
+</p>
+
+Note: Since your browser is displaying only the *local computer* version
+of your code, the web address will begin with `file:///...` rather than
+`https://...`, as appears in your GitHub Pages online map. Also, if your
+code depends on online elements, those features may not function when
+viewing it locally. But for this simple Leaflet map template, your
+updated map title should appear, allowing you to check its appearance
+before pushing your edits to the web.
+
+Now let’s transfer your edits from your local computer to your GitHub
+web account, which you previously connected when you set up GitHub
+Desktop.
+
+1.  Go to GitHub Desktop, confirm that your Current Repo is
+    `leaflet-map-simple`, and you will see your code edits summarized on
+    the screen. In this two-step process, first click the blue “Commit
+    to Master” button at the bottom of the page to save your edits to
+    your local copy of your repo. (If you edit multiple files, GitHub
+    Desktop will ask you write a summary of your edit, to help you keep
+    track of your work.) Second, click the blue “Push origin” button to
+    transfer those edits to the parent copy of your repo on your GitHub
+    web account. Both steps are shown in Figure
+    <a href="#fig:desktop-commit-push">48</a>.
+
+<iframe src="images/08-github/desktop-commit-push.gif" width="100%" height="400px">
 </iframe>
+<p class="caption">
+Figure 48: In this two-step process, click “Commit to Master,” then
+click “Push origin” to save and copy your edits from your local computer
+to your GitHub web account, as shown in this [animated
+GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/desktop-commit-push.gif).
+</p>
 
-1.  Follow these steps if you have already forked a GitHub repository
-    and wish to make a second copy of it. For example, imagine that you
-    have already forked a copy of the Leaflet Maps with Google Sheets
-    repository from
-    <a href="https://github.com/handsondataviz/leaflet-maps-with-google-sheets" class="uri">https://github.com/handsondataviz/leaflet-maps-with-google-sheets</a>
-    **TO DO change repo address**
+Congratulations! You’ve successfully navigated a round-trip journey of
+code, from your GitHub account to your local computer, and back again to
+GitHub. Since you previously used the GitHub Pages settings to create an
+online version of your code, go see if your edited map title now appears
+on the public web. The web address you set up earlier follows this
+format `https://YourUserName.github.io/YourRepoName`, substituting your
+GitHub username and repo name.
 
-2.  If you try to “fork” it again, GitHub will simply send you back to
-    the first forked copy you already made. Clicking the “fork” button a
-    second time is useless here.
+While you could have made the tiny code edit above in the GitHub web
+interface, hopefully you’ve begun to see many advantages of using GitHub
+Desktop and Atom Editor to edit code and push commits from your local
+computer. First, you can make more complex code modifications with Atom
+Editor, which includes search, find-and-replace, and other features to
+work more efficiently. Second, when you copy the repo to your local
+computer, you can quickly drag-and-drop multiple files and subfolders
+for complex visualizations, such as data, geography, and images. Third,
+depending on the type of code, you may be able to test how it works
+locally with your browser, before uploading your commits to the public
+web.
 
-3.  Instead, go to your GitHub account and Create a New Repository. Give
-    it a different name, and click the box to create a README.md file,
-    then scroll down to click the Create button.
+GitHub also offers a powerful platform for collaborative projects, such
+as *Hands-On Data Visualization*. As co-authors, we composed the text of
+these book chapters and all of the sample code templates on GitHub. Jack
+started each day by “pulling” the most recent version of the book from
+our shared GitHub account to his local computer using GitHub Desktop,
+where he worked on sections and “pushed” his commits (aka edits) back to
+GitHub. At the same time, Ilya “pulled” the latest version and “pushed”
+his commits back to GitHub as well. Both of us see the commits that each
+other made, line-by-line in green and red (showing additions and
+deletions), by selecting the GitHub repo “Code” tab and clicking on one
+of our commits, as shown in Figure
+<a href="#fig:compare-commits">49</a>.
 
-4.  Go to the original repository where you wish to make a second copy,
-    and click the Clone or Download button, and Download a zipped
-    (compressed) file to your computer.
+<img src="images/08-github/compare-commits.png" alt="Drag-and-drop the file to the upload screen."  />
+<p class="caption">
+Figure 49: Drag-and-drop the file to the upload screen.
+</p>
 
-5.  In your computer downloads folder, unzip the compressed file,
-    typically by double-clicking it.
+Although GitHub does not operate like Google Documents, which displays
+live edits, the platform has several advantages when working
+collaboratively with code. First, since GitHub tracks every commit we
+make, it allows us to go back and restore a very specific past version
+of the code if needed. Second, when GitHub repos are public, anyone can
+view your code and submit an “issue” to notify the owner about an idea
+or problem, or send a “pull request” of suggested code edits, which the
+owner can accept or reject. Third, GitHub allows collaborators to create
+different “branches” of a repo (the default is called “master”) in order
+to make edits, and then “merge” the branches back together if desired.
+Occasionally, if two or more coders attempt to push incompatible commits
+to the same repo, GitHub will warn about a “Merge Conflict.” To resolve
+this conflict and preserve everyone’s work, you may need to use the
+Command Line Interface (CLI) version of GitHub, which means typing
+commands directly into the Terminal application on Mac or Windows. Many
+professional coders regularly work on the Command Line with GitHub, but
+this requires memorizing a list of commands and is beyond the scope of
+this introductory book.
 
-6.  Go to the top level of your brand-new GitHub repository, and click
-    the Upload Files button. Drag-and-drop all of the contents of the
-    code repo you downloaded, EXCEPT the README.md file, because you
-    have already created a new one. Click the Commit Changes button and
-    be patient. During busy periods, a large upload may take 1 minute or
-    more for GitHub to process.
-
-7.  When the upload is done, inspect the contents that you copied into
-    your brand-new repository. To publish your new repo to the live web,
-    go to Settings &gt; GitHub Pages &gt; select Master branch &gt;
-    Save. Then copy the link to your published live site and paste into
-    your README.md file for future reference. If you need to review
-    these last steps, see Part B: Publish section of the [Fork and Edit
-    a Leaflet Map](fork-leaflet.html) chapter in this book.
-
-Work more efficiently with Atom editor and GitHub Desktop
----------------------------------------------------------
-
-TODO: REVISE outdated page: While you can do **nearly** everything in
-this book with GitHub in your browser, several steps will be faster and
-more efficient with two related free tools:
-
--   download Atom Editor from GitHub
-    (<a href="https://atom.io" class="uri">https://atom.io</a>)
--   download GitHub Desktop for Mac or Windows
-    (<a href="https://desktop.github.com" class="uri">https://desktop.github.com</a>)
-
-TODO: also mention GitHub features that allow collaboration, such as
-branches and pull requests
-
-**UPDATE OLD INSTRUCTIONS**
-
-Download the free GitHub Desktop tool to sync and additional GitHub
-repos on your local Mac or Windows computer. GitHub allows users to
-create one fork of the basic Searchable Map template repository. To
-create a second template, or to move and edit multiple files for more
-advanced versions, download the GitHub for Mac/Windows tool. 1. Download
-the free tool: [GitHub for Mac](https://mac.github.com/) or [GitHub for
-Windows](https://windows.github.com/) 1. In the Searchable Map Template
-in GitHub, click **Clone** and save to your hard drive 1. In your GitHub
-browser, create a new repository for your second template, and select
-options to create a README.MD and license (recommended: MIT). 1. Clone
-your second template repository to your hard drive 1. In your hard
-drive, copy and paste the files from the cloned Searchable Map Template
-to your cloned second template. Replace the existing README.MD and
-license files. 1. In your GitHub for Mac/Windows tool, **Commit and
-Sync** your second template to your GitHub online account. Title the
-commit before clicking the button. 1. Refresh your browser to view the
-synced files in your GitHub account. Start at the top of these
-directions to remove an old gh-pages branch, create a new gh-pages
-branch, and edit files.
+Overall, you’ll find that GitHub Desktop and Atom Editor makes it much
+easier to work with the [Chart.js code templates in Chapter
+9](chartjs.hmtl) and the [Leaflet map code templates in Chapter
+10](leaflet.html). The next section offers advice on how to fix common
+GitHub and coding errors that you might encounter.
 
 Fix Common GitHub and Code Errors
 ---------------------------------
@@ -5851,7 +6271,7 @@ GitHub](create-repo.html) chapter in this book.
 <iframe src="images/10-leaflet/lmwgs-1-fork-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 26: Screencast: Fork
+Figure 50: Screencast: Fork
 </p>
 
 1.  Scroll up to the top, and click on your repo name to go back to its
@@ -5885,7 +6305,7 @@ Figure 26: Screencast: Fork
 <iframe src="images/10-leaflet/lmwgs-2-make-copy-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 27: Screencast: Share Google Sheet
+Figure 51: Screencast: Share Google Sheet
 </p>
 
 1.  File &gt; Publish the Link to your Google Sheet to the public web,
@@ -5918,7 +6338,7 @@ URL](images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 <iframe src="images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 28: Screencast: Copy Google Sheet URL and paste into GitHub code
+Figure 52: Screencast: Copy Google Sheet URL and paste into GitHub code
 </p>
 
 1.  Next, let’s paste your Google Sheet URL in a second place to keep
@@ -6836,7 +7256,7 @@ results in the Found and Quality columns.
 <iframe src="images/11-transform/google-sheets-geocoder-census-google.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 29: Screencast: Google Sheets Geocoder: US Census or Google
+Figure 53: Screencast: Google Sheets Geocoder: US Census or Google
 </p>
 
 #### Google Sheets Geocoder: US Census Geographies
@@ -6853,7 +7273,7 @@ Figure 29: Screencast: Google Sheets Geocoder: US Census or Google
 <iframe src="images/11-transform/google-sheets-geocoder-census-geographies.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 30: Screencast: Google Sheets Geocoder: US Census Geographies
+Figure 54: Screencast: Google Sheets Geocoder: US Census Geographies
 </p>
 
 ##### About US Census 15-character GeoID
@@ -7263,7 +7683,7 @@ and Table tabs to view or edit the data.
 <iframe src="images/11-transform/dataviz-geojsonio-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 31: Screencast: GeoJson.io
+Figure 55: Screencast: GeoJson.io
 </p>
 
 Select the Save menu and export into GeoJSON format.
@@ -7419,7 +7839,7 @@ Export your outline map.
 <iframe src="images/11-transform/mapshaper-dissolve-simple-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 33: Screencast: Mapshaper dissolve
+Figure 57: Screencast: Mapshaper dissolve
 </p>
 
 #### Clip a map to match an outline layer
@@ -7475,7 +7895,7 @@ Refresh the browser to start a new session in
 <iframe src="images/11-transform/mapshaper-clip-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 34: Screencast: Mapshaper clip
+Figure 58: Screencast: Mapshaper clip
 </p>
 
 #### Remove unwanted data columns
@@ -8420,10 +8840,10 @@ this [bad example](#style-guide).
 To cross-reference figures and tables, and display their auto-number and
 allow readers to jump there, write a call-out with a Bookdown reference
 to a code-chunk label, such as
-`See Figure <a href="#fig:sample-map">36</a>` or
+`See Figure <a href="#fig:sample-map">60</a>` or
 `See Table <a href="#tab:left-table">1</a>`. Demos:
 
--   See Figure <a href="#fig:tiger">35</a>.
+-   See Figure <a href="#fig:tiger">59</a>.
 -   See Table <a href="#tab:left-table">1</a>.
 
 Cross-reference interactivity varies by output:
@@ -8544,11 +8964,11 @@ chapter](https://bookdown.org/yihui/bookdown/figures.html).
 
 ### Demo: R code-chunk for static image for HTML and PDF
 
-…as shown in Figure <a href="#fig:tiger">35</a>.
+…as shown in Figure <a href="#fig:tiger">59</a>.
 
 <img src="images/15-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
-Figure 35: Caption here. Markdown embedded links are acceptable.
+Figure 59: Caption here. Markdown embedded links are acceptable.
 </p>
 
 R code-chunks allow more complex conditional formatting, where an
@@ -8561,24 +8981,24 @@ add a line in a `custom-scripts.html` file.
 
 ### Demo: R code-chunk for iframe in HTML and static image in PDF
 
-…as shown in Figure <a href="#fig:sample-map">36</a>.
+…as shown in Figure <a href="#fig:sample-map">60</a>.
 
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="100%" height="600px">
 </iframe>
 <p class="caption">
-Figure 36: Caption here, and add embedded link to explore the
+Figure 60: Caption here, and add embedded link to explore the
 [full-screen interactive
 map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 </p>
 
 ### Demo: R code-chunk for animated GIF in HTML and static image in PDF
 
-…as shown in Figure <a href="#fig:sheets-option-drag">37</a>.
+…as shown in Figure <a href="#fig:sheets-option-drag">61</a>.
 
 <iframe src="images/15-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
-Figure 37: Caption here, with embedded link to GitHub repo, not GitHub
+Figure 61: Caption here, with embedded link to GitHub repo, not GitHub
 Pages [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheets-option-drag.gif).
 </p>
@@ -8587,12 +9007,12 @@ GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheet
 
 Be sure to use the *embed* link from the YouTube *share* button.
 
-…as shown in the video <a href="#fig:video-sample">38</a>.
+…as shown in the video <a href="#fig:video-sample">62</a>.
 
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 38: Caption here, with embedded link to the [YouTube
+Figure 62: Caption here, with embedded link to the [YouTube
 video](https://youtu.be/-nGdrzMuUnI).
 </p>
 
@@ -8601,7 +9021,7 @@ video](https://youtu.be/-nGdrzMuUnI).
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 39: Caption and video **only** appear in the HTML version, with
+Figure 63: Caption and video **only** appear in the HTML version, with
 embedded link to the [YouTube video](https://youtu.be/w6dQ-RIQ5bc). Note
 that using this will change figure-numbering between HTML vs PDF
 versions.

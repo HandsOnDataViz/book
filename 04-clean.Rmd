@@ -1,95 +1,172 @@
 # Clean Up Messy Data {#clean}
-TO DO
 
-- write a new intro to match content that I moved into subfolders
-- http://trendct.org/2015/08/28/getting-rid-of-duplicate-rows-using-google-sheets/
-- Clean up data that contains stray commas, or mistyped entries
-- Advanced clean up with Open Refine; see Alvin Chang's CT Mirror guide http://trendct.org/2015/04/24/john-jonathan-and-johnny-how-to-merge-them-in-open-refine/
-- rethink formatting data
-- see Jake Kara’s “Data Structure Whining” https://github.com/jakekara/publishing-data-for-journalists
+More often than not, datasets will be messy and hard to visualize right away.
+They will have missing values, various spelling of the same categories,
+dates in different formats, text in numeric-only columns, multiple things in the same columns,
+and other unexpected things (see Figure \@ref(fig:clean-up-messy-data) for inspiration).
+Don't be surprised if you find yourself spending longer cleaning up data than
+actually analyzing and visualizing it—it is often the case for data analysts.
+
+(ref:clean-up-messy-data) More often than not, raw data looks like this.
+
+```{r clean-up-messy-data, fig.cap="(ref:clean-up-messy-data)"}
+knitr::include_graphics("images/04-clean/clean-up-messy-data.png")
+```
+
+It is important to learn several tools in order to know which one to use
+to clean your data efficiently.
+We will start by looking at fairly basic data cleanup using Google Sheets.
+Keep in mind that the same principles (and in most cases
+even the same formulas) can be use in Microsoft Excel, LibreOffice Calc, Mac's Numbers,
+or other spreadsheet packages.
+
+We will then show you how to extract table data from PDF documents using a free tool called Tabula.
+Tabula is used by data journalists and researchers worldwide
+to analyze government spendings, procurement records and all sorts of other datasets
+that get trapped in PDFs.
+
+At the end, we will introduce OpenRefine, an extremely powerful and versatile tool
+to clean up the messiest spreadsheets, such as those containing dozens of misspelled versions
+of universities or town names.
 
 ## Clean Data with Spreadsheets {- #clean-spreadsheets}
-TODO: reorganize this to feature Google Sheets whenever possible, or Excel Online if needed
 
-Sometimes we receive a spreadsheet with problematic data that needs to be cleaned up before we can successfully upload it into a visualization tool.
+Let's take a look at some techniques to clean up data directly in your favorite
+spreadsheet tool. We will use Google Sheets as an example, but the same principles
+will apply to most other software packages, such as Excel, Calc, or Numbers.
 
 #### Find and Replace with a blank {-}
 
-A common problem with census data is that geographic names contain unnecessary words. For example, when downloading Connecticut county subdivisions (towns), each row appears as:
+A common problem with census data is that geographic names contain unnecessary words.
+For example, your data can look something like that:
 
-- Andover town
-- Ansonia town
-- Ashford town
-
-Our goal is to remove the word "town" from each row, to produce a clean spreadsheet that we can match with other data, like this:
-
-- Andover
-- Ansonia
-- Ashford
-
-Here's one quick solution: In any spreadsheet tool, use the Find and Replace command to remove unwanted characters. Try it! Click this link and Save to download to your computer:[find-replace-town-geonames in CSV format](data/find-replace-town-geonames.csv). This tutorial shows screens from Excel, but other tools are very similar.
-
-1. Open the Find and Replace command.
-
-2. In the Find field, type " town", leaving a space before the word, since we wish to remove only that word when by itself. (Otherwise, we would accidentally remove the "town" in Newtown.)
-
-3. In the Replace field, leave it blank, to represent a blank space.
-
-4. Press the Replace All button. Since this sample file lists 169 towns, the screen will states that 169 instances of "town" have been replaced.
-
-![](images/04-clean/find-replace-blank.png)
-
-#### Split one column into two with Excel {-}
-
-One common problem is when multiple pieces of data appear in one column, and your goal is to split them into separate columns. If those data pieces are separated by commas (or similar punctuation), you might be able to fix this with a simple spreadsheet command: split text into columns.
-
-Try it! Click this link and Save to download to your computer: [split-coordinate-pairs in CSV format](data/split-coordinate-pairs.csv), and open with Excel. (TODO: test with other spreadsheet tools)
-
-1. Select the data column you wish to split.
-
-2. Select Data > Split Text to Column
-
-3. In the wizard screen, select Delimited data and click next.
-
-4. In step 2 of the wizard screen, check the "comma" box, since this symbol divides the data column. Click next.
-
-5. In step 3 of the wizard screen, accept the default General format, and Finish.
-
-The coordinate pairs column is now split into two separate columns. Relabel the headers: longitude and latitude.
-
-Animated example from Excel for Windows (thanks `@f3mlat`):
-
-```{r excel-win-data}
-if(knitr::is_html_output()) knitr::include_url("images/04-clean/excel-win-data-text-to-columns.gif") else knitr::include_graphics("images/placeholder.jpg")
+```
+Hartford town
+New Haven town
+Stamford town
 ```
 
-TODO: write directions to split a single address cell "300 Summit St, Hartford CT 06106" into separate columns for address, city, state, zip
+But you want a clean list of towns, either to display in a chart, or to merge with a different dataset:
 
-#### Combine separate data columns into one {-}
+```
+Hartford
+New Haven
+Stamford
+```
 
-Another common data cleaning problem is when you receive address data in separate columns, like this:
+Here's one quick solution: In any spreadsheet tool, use the Find and Replace command to remove unwanted characters.
+You can download this [find-replace-town-geonames.csv](data/find-replace-town-geonames.csv) file,
+which contains 169 Connecticut towns and their population, for the exercise.
 
-| Street      | City        | State      | Zip        |
-| :---------- | :---------- | :--------- | :--------- |
-| 100 Main St | Hartford    | CT         | 06106      |
+1. Select the column you want to modify by clicking on the column header.
+1. From *Edit* menu, choose *Find and replace* item. You will see the window like is shown in Figure \@ref(fig:sheets-find-replace).
+1. In the *Find* field, type ` town`, without quotation marks and leaving a space before the word. If you don't leave the space,
+you will accidentally remove *town* from *Newtown*, and you will end up with trailing spaces which can cause troubles in the future.
+1. Leave the *Replace with* field blank.
+1. If you selected the column correctly in step 1, you will see that *Search*
+value will be set to the *Specific range* for to that column. Otherwise you will be searching and replacing in the entire spreadsheet.
+1. You have the option to *match case*. If checked, `town` and `Town` and `tOwN` will be treated differently.
+For our purpose, you can leave *match case* unchecked.
+1. Press the *Replace all* button. Since this sample file contains 169 towns, the window
+will state that 169 instances of "town" have been replaced.
 
-But your data visualization tool requires you to combine all of this terms into one location column, like this:
+(ref:sheets-find-replace) Find and Replace window in Google Sheets.
 
-| Location                          |
-| :-------------------------------- |
-| 100 Main St, Hartford, CT 06106   |
+```{r sheets-find-replace, fig.cap="(ref:sheets-find-replace)"}
+knitr::include_graphics("images/04-clean/sheets-find-replace.png")
+```
 
-One easy solution is to write a simple spreadsheet formula to combine (or concatenate) terms, using ampersands (&) as connectors, and quotation marks around blank spaces as separators. For example, if a spreadsheet contained four columns, *Address, City, State Zip* (A-D), then in column E insert a new header named *Location* and a formula in this format:
+#### Splitting data into two or more columns {-}
 
-- =A2 &" " & B2 &" " &C2 &" " &D2
+Sometimes multiple pieces of data appear in a single cell,
+such as names (`John Doe`), coordinate pairs (`40.12,-72.12`),
+or addresses (`300 Summit St, Hartford, CT, 06106`). For your analysis,
+you might want to split them into separate entities, so that your *FullName*
+column (with `John Doe` in it) becomes *FirstName* (`John`) and *LastName* (`Doe`) columns,
+coordinates become *Latitude* and *Longitude* columns, and your *FullAddress* column becomes
+4 columns, *Street*, *City*, *State*, and *Zip* (postcode).
 
-![](images/04-clean/SpreadsheetCombineTerms.png)
+Let's begin with a simple example of coordinate pairs. You can download
+a [sample file here](data/split-coordinate-pairs.csv).
 
-TODO:
+1. Select the data you wish to split, either the full column or just several rows. Note that
+you can only split data from one column at a time.
+1. Make sure there is no data in the column to the right of the one you're splitting, because
+all data there will be written over.
+1. Go to *Data* and select *Split text to columns*.
+1. Google Sheets will try to guess your separator automatically. You will see that your coordinates
+are now split with the comma, and the Separator is set to *Detect automatically* in the dropdown,
+like in Figure \@ref(fig:sheets-split).
+You can manually change it to a comma (`,`), a semicolon (`;`), a period (`.`), a space character,
+or any other custom character (or even a sequence of characters — more about that in the next example).
+1. You can rename columns into *Longitude* (first number) and *Latitude* (second number).
 
-- Confirm that Google Fusion Tables geocoder does not require commas between terms
-- Clarify what happens with zip code in the example above
+(ref:sheets-split) Google Sheets provides a dropdown to change a separator.
 
+```{r sheets-split, fig.cap="(ref:sheets-split)"}
+knitr::include_graphics("images/04-clean/sheets-split.png")
+```
+
+Now, let's look at a slightly more complicated example. Imagine your dataset is structured as follows:
+```
+| Location                           |
+| 300 Summit St, Hartford CT--06106  |
+| 1012 Broad St, Hartford CT--06106  |
+| 37 Alden St, Hartford CT--06114    |
+``` 
+
+You want to split it into four cells: street address (300 Summit St), city (Hartford), state (CT), and zipcode (06106).
+Notice that the separator between the street and the rest of the address is a comma,
+a separator between the city and state is a space, and there is two dash lines between state and zipcode.
+
+1. Start splitting left to right. So your first separator will be a comma.
+Select your column (or one or more cells within that column), and go to *Data* > *Split text to columns*.
+1. Google Sheets should automatically split your cell into two parts, `300 Summit St` and `Hartford CT--06106`,
+using comma as a separator. (If it didn't, just select *Comma* from the dropdown menu that appeared).
+1. Now, select only the second column and perform *Split text to columns*. You will see that the city
+is now separate from the state and zipcode, and Google Sheets chose space as a separator (if it didn't, choose *Space* from the dropdown menu).
+1. Next, select only the third column and perform *Split text to columns* again. Google Sheets won't recognize `--`
+as a separator, so you will have to manually select *Custom*, type `--` in the text field,
+and hit Enter. You should now have four columns.
+
+Tip: Google Sheets will treat zipcodes as numbers and will delete leading zeros (so 06106 will become 6106).
+To fix that, select the column, and go to *Format > Number > Plain text*. Now you can manually re-add zeros.
+If your dataset is large, consider concatenating 0s using the formula introduced in the next section.
+
+#### Combine separate columns into one {-}
+
+Now, let's see how to perform the reverse action.
+Imagine you receive address data in separate columns, like this:
+
+```
+| Street        | City        | State      | Zip        |
+| 300 Summit St | Hartford    | CT         | 06106      |
+```
+
+But, let's say your mapping tool requires you to combine all of this terms into one location column, like that:
+
+```
+| Location                            | 
+| 300 Summit St, Hartford, CT 06106   |
+```
+
+You can write a simple formula to combine (or **concatenate**) terms
+using ampersands (`&`) as cells values connectors, and quoted spaces (`" "`) as term separators.
+
+For example, if a spreadsheet contained four columns,
+*Address, City, State, and Zip* (columns A-D, see Figure \@ref(fig:sheets-concat)),
+then in column E insert a new header named *Location* and a formula in this format
+(note that spaces before and after ampersands do not make a difference):
+
+```
+=A2 & " " & B2 & " " & C2 & " " & D2
+```
+
+(ref:sheets-concat) Use ampersands to concatenate cell values, with or without spaces around ampersands.
+
+```{r sheets-concat, fig.cap="(ref:sheets-concat)"}
+knitr::include_graphics("images/04-clean/sheets-concat.png")
+```
 
 
 ## Extract Tables from PDFs with Tabula {- #tabula}
@@ -100,8 +177,10 @@ Don't despair, you can *likely* use Tabula to extract tables and save them as CS
 Tabula is a free tool that runs on Java, and is available for Linux, Mac, and Windows. It runs on your
 local machine and does not send your data to the cloud, so you can also use it for sensitive documents.
 
-Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based. You know your PDF is text-based if you can use cursor to select and copy-paste text. These are great for Tabula.
-Image-based PDFs are those that were created from scanning documents. Before they can be processed with Tabula, you will need to use an optical character recognition (OCR) software, such as Adobe Acrobat,
+Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based.
+You know your PDF is text-based if you can use cursor to select and copy-paste text. These are great for Tabula.
+Image-based PDFs are those that were created from scanning documents. Before they can be processed with Tabula,
+you will need to use an optical character recognition (OCR) software, such as Adobe Acrobat,
 to create a text-based PDF.
 
 ### Set Up Tabula {-}
@@ -116,11 +195,11 @@ and double-click the icon. If prompted with a security message (such as
 follow the instruction to proceed (on a Mac, click *Open*).
 
 Your default system browser should open, like shown in Figure \@ref(fig:tabula-welcome).
-The URL will be something like `http://127.0.0.1:8080/`, meaning the software is running on your local machine. 127.0.0.1, also known as `localhost`, is the hostname for your machine. `8080` is called port (it's okay if you see a different port—most likely because 8080 was taken by some other program running on your computer). If for any reason you decide to use a different browser, just copy-paste the URL.
-
-TODO: this sentence seems out of place, perhaps due to a mistaken copy-and-paste?
-
-Figure \@ref(fig:design-principles-color) shows some good and bad examples of color use.
+The URL will be something like `http://127.0.0.1:8080/`, meaning Tabula is running on your local machine.
+127.0.0.1, also known as `localhost`, is the hostname for your machine. `8080` is called port
+(it's okay if you see a different port—most likely because 8080 was taken by some other
+program running on your computer). If for any reason you decide to use a different browser,
+just copy-paste the URL.
 
 (ref:tabula-welcome) Tabula welcome page.
 
@@ -130,7 +209,9 @@ knitr::include_graphics("images/04-clean/tabula-welcome.png")
 
 ### Load a PDF and Autodetect Tables {-}
 
-TODO: please add a sample text-based PDF with numbers to extract to make it easier for users to try out
+For the demonstration, we will use an official PDF document with Covid-19 cases and deaths
+in Connecticut as of May 31, 2020. Such PDFs are published by Connecticut Department of Public Health
+daily during the pandemic. If you want to use this file, you can download it [from here](data/ct-dph-covid-2020-05-31.pdf).
 
 1. Select the PDF you want to extract data from by clicking the blue *Browse...* button.
 1. Click *Import*. Tabula will begin analyzing the file.
@@ -177,14 +258,15 @@ Year,Country,FundingAgency,FundingAmount
 2001,"North Korea",US Agency for International Development,"345,399"
 2001,"N Korea",Department of Argic,"  117715223"
 ```
-Do you notice any problems with it? Notice how the funding amounts (last column)
-are in quotes and contains commas, spaces, and some have a dollar character.
-Notice also how the Country includes various spellings of North and South Korea.
-Looks like a nightmare to analyze, but not if you know how to use OpenRefine,
+Can you spot any problems with it? Notice how the funding amounts (last column)
+are not standardized: there are commas as thousands separators, some have spaces,
+and some start with a dollar character.
+Notice also how the Country column includes various spellings of North and South Korea.
+Looks like a nightmare to analyze—until you learn to use OpenRefine,
 a powerful and free tool to clean up messy data.
 
-This is a subset of [US Overseas Loans and Grants (Greenbook)dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook), which shows US assistance to South Korea and North Korea between 2000 and 2018. We added deliberate misspellings and formatting issues for demonstration purposes
-(although we did not alter values). This subset can be [downloaded here](/data/us-foreignaid-greenbook-koreas.csv). This dataset has four columns: year (between 2000 and 2018, inclusive), country (North or South Korea), a US funding agency, and funding amount (in 2018 US dollars).
+This data exerpt is from [US Overseas Loans and Grants (Greenbook)dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook), which shows US assistance to South Korea and North Korea between 2000 and 2018. We added deliberate misspellings and formatting issues for demonstration purposes
+(although we did not alter values). This subset can be [downloaded here](data/us-foreignaid-greenbook-koreas.csv). This dataset has four columns: year (between 2000 and 2018, inclusive), country (North or South Korea), a US funding agency, and funding amount (in 2018 US dollars).
 
 ### Set up OpenRefine {-}
 
@@ -208,7 +290,7 @@ like shown in Figure \@ref(fig:openrefine-welcome).
 knitr::include_graphics("images/04-clean/openrefine-welcome.png")
 ```
 
-### Load Data and Start a New Project
+### Load Data and Start a New Project {-}
 
 To begin cleaning up your messy dataset, you should load it into a new project.
 OpenRefine lets you upload a dataset from your local machine (we will be doing exactly that),

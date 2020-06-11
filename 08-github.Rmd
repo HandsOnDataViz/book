@@ -368,36 +368,19 @@ Note: Since your browser is displaying only the *local computer* version of your
 
 Now let's transfer your edits from your local computer to your GitHub web account, which you previously connected when you set up GitHub Desktop.
 
-11. Go to GitHub Desktop, and if your Current Repo is `leaflet-map-simple`, you will see your code edits summarized on the screen. Click the blue Commit to Master button at the bottom of the page to save your edits to your local copy of your repo. Next, click the blue "Push origin" button to transfer those edits to the parent copy of your repo on your GitHub web account. This two-step process is shown in Figure \@ref(fig:desktop-commit-push).
+11. Go to GitHub Desktop, confirm that your Current Repo is `leaflet-map-simple`, and you will see your code edits summarized on the screen. In this two-step process, first click the blue "Commit to Master" button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue "Push origin" button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure \@ref(fig:desktop-commit-push).
 
-(ref:desktop-commit-push) **FIX CAPTION**
+(ref:desktop-commit-push) In this two-step process, click "Commit to Master," then click "Push origin" to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/desktop-commit-push.gif).
 
 ```{r desktop-commit-push, fig.cap="(ref:desktop-commit-push)"}
- knitr::include_graphics("images/08-github/desktop-commit-push.gif")
+if(knitr::is_html_output()) knitr::include_url("images/08-github/desktop-commit-push.gif") else knitr::include_graphics("images/08-github/desktop-commit-push.png")
 ```
 
-**START AGAIN HERE**
-PUT TWO static images together
-Go see if edits appear on your live map, hosted with GitHub Pages, at .....
-Summarize the value of GitHub Desktop.... more complex code edits, and transfer files directly to the repo in your local computer.... testing....
-Restore leaflet-simple-map to its pre-edited state
+Congratulations! You've successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format `https://YourUserName.github.io/YourRepoName`, substituting your GitHub username and repo name.
 
+While you could have made the tiny code edit above in the GitHub web interface, hopefully you've begun to see many advantages of using GitHub Desktop and Atom Editor to edit code and push commits from your local computer. First, you can make more complex code modifications with Atom Editor, which includes search, find-and-replace, and other features to work more efficiently. Second, when you copy the repo to your local computer, you can quickly drag-and-drop multiple files and subfolders for complex visualizations, such as data, geography, and images. Third, depending on the type of code, you may be able to test how it works locally with your browser, before uploading your commits to the public web.
 
-**UPDATE OLD INSTRUCTIONS**
-
-Download the free GitHub Desktop tool to sync and  additional GitHub repos on your local Mac or Windows computer.
-GitHub allows users to create one fork of the basic Searchable Map template repository. To create a second template, or to move and edit multiple files for more advanced versions, download the GitHub for Mac/Windows tool.
-1. Download the free tool: [GitHub for Mac](https://mac.github.com/) or [GitHub for Windows](https://windows.github.com/)
-1. In the Searchable Map Template in GitHub, click __Clone__ and save to your hard drive
-1. In your GitHub browser, create a new repository for your second template, and select options to create a README.MD and license (recommended: MIT).
-1. Clone your second template repository to your hard drive
-1. In your hard drive, copy and paste the files from the cloned Searchable Map Template to your cloned second template. Replace the existing README.MD and license files.
-1. In your GitHub for Mac/Windows tool, __Commit and Sync__ your second template to your GitHub online account. Title the commit before clicking the button.
-1. Refresh your browser to view the synced files in your GitHub account. Start at the top of these directions to remove an old gh-pages branch, create a new gh-pages branch, and edit files.
-
-
-
-GitHub is a powerful platform for collaborative projects. For example, we collaboratively composed the text of this book and all of the code templates on GitHub. Jack started each day by "pulling" the most recent version of the manuscript from our shared GitHub account to his local computer with GitHub Desktop, where he worked on sections and "pushed" his commits (aka edits) back to GitHub. At the same time, Ilya "pulled" the latest version and "pushed" his commits back to GitHub as well. Both of us can view the commits that each other made, line-by-line in green and red (showing additions and deletions), by selecting the GitHub repo "Code" tab and clicking one of our commits, as shown in Figure \@ref(fig:compare-commits).
+GitHub also offers a powerful platform for collaborative projects, such as *Hands-On Data Visualization*. As co-authors, we composed the text of these book chapters and all of the sample code templates on GitHub. Jack started each day by "pulling" the most recent version of the book from our shared GitHub account to his local computer using GitHub Desktop, where he worked on sections and "pushed" his commits (aka edits) back to GitHub. At the same time, Ilya "pulled" the latest version and "pushed" his commits back to GitHub as well. Both of us see the commits that each other made, line-by-line in green and red (showing additions and deletions), by selecting the GitHub repo "Code" tab and clicking on one of our commits, as shown in Figure \@ref(fig:compare-commits).
 
 (ref:compare-commits) Drag-and-drop the file to the upload screen.
 
@@ -405,9 +388,9 @@ GitHub is a powerful platform for collaborative projects. For example, we collab
  knitr::include_graphics("images/08-github/compare-commits.png")
 ```
 
-While GitHub is not like Google Documents, which displays live editing of text by co-authors, the platform has several other advantages when working together with code. First, since GitHub tracks every code commit we make, it allows us to go back and restore a very specific past version of the code if needed. Second, when GitHub repos are public, anyone can view your code and submit an "issue" to notify the owner about a problem or idea, or send a "pull request" of suggested code edits, which the owner can accept or reject. Third, GitHub allows collaborators to create different "branches" of a repo (the default is called "master"), make their own edits, and then "merge" the branches back together if desired. Occasionally, if two or more coders attempt to push incompatible commits to the same repo, GitHub will warn about a "Merge Conflict." To resolve this conflict and preserve everyone's work, you may need to use the Command Line Interface (CLI) version of GitHub, which means typing commands directly into the Terminal application on Mac or Windows. Many professional coders regularly work on the Command Line with GitHub, but this requires memorizing a list of commands and is beyond the scope of this introductory book.
+Although GitHub does not operate like Google Documents, which displays live edits, the platform has several advantages when working collaboratively with code. First, since GitHub tracks every commit we make, it allows us to go back and restore a very specific past version of the code if needed. Second, when GitHub repos are public, anyone can view your code and submit an "issue" to notify the owner about an idea or problem, or send a "pull request" of suggested code edits, which the owner can accept or reject. Third, GitHub allows collaborators to create different "branches" of a repo (the default is called "master") in order to make edits, and then "merge" the branches back together if desired. Occasionally, if two or more coders attempt to push incompatible commits to the same repo, GitHub will warn about a "Merge Conflict." To resolve this conflict and preserve everyone's work, you may need to use the Command Line Interface (CLI) version of GitHub, which means typing commands directly into the Terminal application on Mac or Windows. Many professional coders regularly work on the Command Line with GitHub, but this requires memorizing a list of commands and is beyond the scope of this introductory book.
 
-
+Overall, you'll find that GitHub Desktop and Atom Editor makes it much easier to work with the [Chart.js code templates in Chapter 9](chartjs.hmtl) and the [Leaflet map code templates in Chapter 10](leaflet.html). The next section offers advice on how to fix common GitHub and coding errors that you might encounter.
 
 ## Fix Common GitHub and Code Errors {- #fix-code}
 What happens if you cannot view your published GitHub repository, or if your code breaks and no longer displays what it was designed to show? These are common problems, especially for newer students, because accidentally clicking the wrong box or mistakenly erasing a single character (such as a semicolon) can make your visualization seem to vanish, even though your work is usually still there. Breaking your code---and figuring out how to fix it---is a great way to learn, even if it requires trial and error.

@@ -622,12 +622,12 @@ The columns are arranged in the following order: country label, x-axis value,
 y-axis value, color, and bubble size.
 
 ```
-Country	Life expectancy	Fertility	Region	Population
-United States	78.5	1.70	North America	326687501
-United Kingdom	81.4	1.70	Europe	66460344
+Country        | Life expectancy | Fertility | Region        | Population
+United States	 |            78.5 |	    1.70 | North America |	326687501
+United Kingdom |	          81.4 |	    1.70 | Europe        |   66460344
 ...
-Nigeria	54.3	5.40	Africa	195874740
-South Africa	63.9	2.40	Africa	57779622
+Nigeria	       |            54.3 |	    5.40 | Africa        |  195874740
+South Africa   |            63.9 |      2.40 | Africa        |	 57779622
 ```
 
 Select all data and go to *Insert > Chart*, and choose Bubble as the Chart type.
@@ -655,169 +655,217 @@ We will show you the very basics enough to get started, and if you want to
 dive further, there are many great books on Tableau available.
 
 In this book, we will show you how to add datasets to Tableau Public, and how to [create a scatterplot](scatter-chart-tableau.html)
-and a filtered line chart](filtered-line-chart-tableau.html).
-
-#### Learn more {-}
-- [Embed Tableau Public on Your Website](iframe-tableau) chapter in this book
-- Tableau Public Resources, with how-to videos and sample data <https://public.tableau.com/en-us/s/resources>
-- Tableau Public Support page <https://www.tableau.com/support/public>
+and a [filtered line chart](filtered-line-chart-tableau.html).
 
 ## Create XY Scatter Chart with Tableau Public {- #scatter-chart-tableau}
-An interactive scatter chart shows the relationship between two variables by displaying a series of XY coordinates. Readers can float their cursor over points to view specific details. The chart below, which illustrates the strong relationship between Connecticut school district income and test scores, was created with the free downloadable tool for Mac and Windows, Tableau Public <http://public.tableau.com>.
+Just to remind you, scatter charts plot two variables
+against each other, on x- and y-axis, revealing possible correlations.
+With Tableau Public, you can create an interactive scatter chart,
+letting users hover over points to view specific details.
 
-#### Try it {-}
+Figure \@ref(fig:tableau-scatter-demo) illustrates a
+strong relationship between Connecticut school district income and
+test scores.
 
-<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"></iframe>
+(ref:tableau-scatter-demo) Household income vs test scores in Connecticut school districts. Made with Tableau Public.
 
-#### Video with step-by-step tutorial {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/70RKjT91cjs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-1) Read the [Tableau Public tool review](tableau-public) in this book, then download and install the free application on a Mac or Windows computer from <http://public.tableau.com>. Requires a free account.
-
-2) Click the link and Save to download the sample file to your computer: [ct-districts-income-grades-2009-13 in Excel format](data/ct-districts-income-grades-2009-13.xlsx).
-
-3) Open the sample file to view three columns: district, median household income, and grade levels (above/below national average for 6th grade Math and English test scores). The Notes tab explains how this data is based on the work of Sean Reardon et al. at the [Stanford Education Data Archive](http://purl.stanford.edu/db586ns4974), Motoko Rich et al. at [The New York Times](http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html), Andrew Ba Tran at [TrendCT](http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/), and the American Community Survey 2009-13 via [Social Explorer](http://socialexplorer.com).
-
-Hint: To prepare your own scatter chart data from different sources, see the [Match Spreadsheet Columns with VLookup Function](vlookup) chapter in this book.
-
-4) In Tableau Public, click Connect to import the data file from your computer. If you downloaded an Excel file, Connect to Excel. Or if you downloaded a CSV file, Connect to Text. Or click "More..." to connect to Google Sheets.
-
-5) Drag the Data sheet into the Data Source field.
-
-6) In bottom-left corner, below the "Go to Worksheet" reminder, click Sheet 1.
-
-7) Welcome to the Tableau Public Worksheet. Although it may feel overwhelming at first, the key is learning where to drag items from the data tab into the main worksheet. Dimensions are any information that is qualitative or categorical, while measures are quantitative information about the dimensions.
-
-8) Drag the Grade Levels measure into the Rows field.
-
-9) Drag the Median Household Income measure into the Columns field. The initial chart will appear as one point, but that's because all of the data is aggregated together. We're not done yet.
-
-10) Drag the District dimension into the lower portion of the Marks area. Now your scatter chart will appear, and float your cursor over each point to view details.
-
-11) Click Sheet 1 to rename the title of your chart.
-
-12) Click the Worksheet menu to Show Caption and type in data sources.
-
-13) Recommended: Click the Standard menu (above Columns) to change view to Fit Width.
-
-![](images/05-chart/tableau-standard-fit-width.png)
-
-14) To publish your chart on the public web, select File > Save to Tableau Public As. Requires signup for a free Tableau account.  
-
-15) Give your workbook a meaningful title, since this name will appear in the URL for your published work on the Tableau Public server, and press Save.
-
-16) After publishing your work on the web, Tableau Public will automatically open the web link in your default browser. Click Edit Details to enter more information. Under Toolbar settings, see checkbox to Allow your workbook and its data to be downloaded by others.
-
-![Screenshot: Toolbar settings in Tableau Public](images/05-chart/tableau-toolbar-settings-allow.png)
-
-Checking this box enables the Download button at the bottom of your published work, which allows users to access your data and workbook, to see how you constructed the visualization.
-
-![Screenshot: Download button in Tableau Public](images/05-chart/tableau-download.png)
-
-17) To insert your Tableau Public visualization in your own website, see the [Embed On Your Web](embed.html) chapter of this book, and in particular, [Embed Tableau Public on your Website](embed.html#tableau).
-
-18) To see all of your published visualizations, go to your Tableau Public online profile, which follows this format:
-```markdown
-https://public.tableau.com/profile/USERNAME
+```{r tableau-scatter-demo, fig.cap="(ref:tableau-scatter-demo)"}
+if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-scatter-demo.png")
 ```
-#### Learn more {-}
-Combine multiple visualizations and tell stories with Tableau Public dashboard and story point features. See Tableau Public Resources, with how-to videos and sample data <https://public.tableau.com/en-us/s/resources>.
+
+#### Install Tableau and Get Data {-}
+
+You can download Tableau Public for Windows or Mac from Tableau's official
+website (https://public.tableau.com). You will need to provide your email address.
+
+If you wish to use the dataset from the scatter plot in Figure \@ref(fig:tableau-scatter-demo),
+you can [download the Excel file here](data/ct-districts-income-grades-2009-13.xlsx).
+This data file consists of three columns: district, median household income, and grade levels
+(above/below national average for 6th grade Math and English test scores).
+The Notes tab explains how this data is based on the work of Sean Reardon et al.
+at the [Stanford Education Data Archive](http://purl.stanford.edu/db586ns4974),
+Motoko Rich et al. at [The New York Times](http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html),
+Andrew Ba Tran at [TrendCT](http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/),
+and the American Community Survey 2009-13 via [Social Explorer](http://socialexplorer.com).
+
+#### Connect Data and Create a Scatterplot {-}
+
+Tableau Public's welcome page includes three sections: Connect, Open, and Discover.
+
+1. Under Connect, choose Microsoft Excel if you decided to use the sample dataset
+or your own Excel file. To load a CSV file, choose *Text file*.
+If your data is in Google Sheets, click *More...* and choose Google Sheets.
+Once you successfully connect to your data source, you will see it under Connections
+in the Data Source tab. Under Sheets, you will see two tables, `data` and `notes`.
+
+2.  Drag `data` sheet into *Drag tables here* area, like is shown in Figure \@ref(fig:tableau-connect).
+You will see the preview of the table under the drag-and-drop area.
+You have successfully connected one data source to Tableau Public, and you are ready
+to build your first chart. Go to *Sheet 1* tab (in the lower-left corner of the window).
+
+(ref:tableau-connect) Drag `data` sheet into *Drag tables here* area.
+
+```{r tableau-connect, fig.cap="(ref:tableau-connect)"}
+knitr::include_graphics("images/05-chart/tableau-connect.png")
+```
+
+3. Welcome to your first worksheet. Although it may feel overwhelming at first, the key is learning
+where to drag items from the Data pane (left) into the main worksheet.
+**Dimensions** are any information that is qualitative or categorical, and are shown in blue
+with *Abc* tables. **Measures** are quantitative information about the dimensions,
+shown in green with *#* icons.
+
+4. Drag the *Grade Levels* measure into the **Rows** field above the charting area (which
+for now is just empty space).
+Tableau will apply a summation function to it, and you will see the `SUM(Grade Levels)` appearing
+in the Rows row, and a blue bar in the charting area. For now it makes little sense, so let's
+plot another measure (variable).
+
+5. Drag *Median Household Income* to the **Columns** field (just above the Rows field).
+Tableau will once again apply the summation function, so you will see `SUM(Median Household Income)`
+in the Columns. The bar chart will transform into a scatter chart with just one data point
+in the upper-right corner. That is because the data for both is aggregated (remember the `SUM` function).
+
+6. We want to tell Tableau to disaggregate the household and grade levels variables. To do so,
+drag *District* dimention into the lower portion of the Marks area. You will now see
+a real scatter chart in the charting area. If you hover over points, you will see all three
+values associated with it.
+
+#### Add Title and Caption, and Publish{-}
+
+Give your scatter chart a meaningful title by double-clicking on default *Sheet 1* title
+above the charting area.
+
+You will normally need to provide additional information about the chart,
+such as source of the data, who built the visualization and when, and other
+important things. You can do so inside a Caption, a text block that accompanies
+your Tableau visualization. In the menu, go to *Worksheet > Show Caption*. Double-click
+the Caption block that appeared, and edit the text.
+
+As a result, your final worksheet will look like shown in Figure \@ref(fig:tableau-xy-final).
+
+(ref:tableau-xy-final) This scatter chart is ready to be published.
+
+```{r tableau-xy-final, fig.cap="(ref:tableau-xy-final)"}
+knitr::include_graphics("images/05-chart/tableau-xy-final.png")
+```
+
+Tip: In the dropdown above Columns section, change *Standard* to *Fit Width*
+to ensure your chart occupies 100% of available horizontal space.
+
+To publish the chart to the web,
+
+1. Go to *File > Save to Tableau Pubic As...*. A window to sign in to your account will pop up.
+If you don't have an account, click *Create one now for free* at the bottom.
+
+1. Once signed in, a window to set the workbook title will appear. Change the deafult *Book1* title
+to something meaningful, as this name will appear in the URL for your published work. Click Save.
+
+1. Once the dashboard is saved, Tableau Public will open up a window in your default browser
+with the visualization. In the green ribbon above the chart, click *Edit Details*
+to edit chart's title or description. Under *Toolbar Settings*, see checkbox to
+*Allow others to download or explore and copy this workbook and its data*
+(Figure \@ref(fig:tableau-toolbar-settings)), and enable/disable
+it as you think is appropriate. As advocates for open and accessible data, we recommend
+leaving the box checked.
+
+(ref:tableau-toolbar-settings) This scatter chart is ready to be published.
+
+```{r tableau-toolbar-settings, fig.cap="(ref:tableau-toolbar-settings)"}
+knitr::include_graphics("images/05-chart/tableau-toolbar-settings.png")
+```
+
+Note: To insert your Tableau Public visualization in your own website,
+see [Embed Tableau Public on Your Website](embed-tableau.html) chapter of this book.
+
+Tip: The entire portfolio of your Tableau Public visualizations lives at `https://public.tableau.com/profile/USERNAME`,
+where `USERNAME` is your unique username.
+
 
 ## Create Filtered Line Chart with Tableau Public {- #filtered-line-chart-tableau}
-TODO: Decide whether to keep or not. Originally co-authored with Veronica. An interactive filtered line chart provides checkboxes to turn on/off selected data lines to make specific comparisons, since displaying all of the lines at once would be overwhelming. Readers can float their cursor over each line to identify the school name and data details. We created this tutorial to help a Hartford non-profit education advocacy group compare cohorts of student achievement levels over time across forty schools. You can create your own version with a free downloadable tool for Mac and Windows computers, Tableau Public <https://public.tableau.com>.
 
-#### Try it {-}
-<iframe src='https://public.tableau.com/views/LineChartSample/Sheet1?:showVizHome=no&:embed=true' width="90%" height="530"></iframe>
+One of the advantages of interactive visualizations over static (including printed)
+is the ability to store a lot more data, and show it only when required.
+In other words, an interactive visualization can be made into a data-exploration tool
+that won't overwhelm the viewer at first sight, but will allow the viewer
+to "dig" and find specific data points and patterns.
 
-Or right-click the [link to view full-size in a new tab](https://public.tableau.com/views/LineChartSample/Sheet1?:embed=y&:display_count=yes)
+In this tutorial, we will build an interactive filtered line chart with Tableau Public
+like is shown in Figure \@ref(fig:tableau-filtered-demo).
+The filter will be a collection of checkboxes that allow to add/remove lines
+from the chart. Viewers can hover over each line to identify the school
+name and data attached to it.
 
-#### Video with step-by-step tutorial {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_L4u9mfE8Qo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+We will use % Population with Internet Access by the World Bank. You can download the dataset
+[here](data/world-bank-internet-users-1995-2018.csv).
 
-1) Read the [Tableau Public tool review](tableau-public) in this book, then download and install the free application on a Mac or Windows computer from <http://public.tableau.com>. Requires a free account.
+(ref:tableau-filtered-demo) Internet Access by Country, 1995–2018.
 
-2) Click link and Save file to download to your computer: [sample-filtered-line-chart in CSV format](data/sample-filtered-line-chart.csv). CSV means comma-separated values, a generic spreadsheet format that most data tools can easily open.
-
-Hint: When preparing your own spreadsheet, format your data so that Tableau Public can read it. For example, make sure that Year data is entered as "2007" instead of "1/1/2007". Leave all blank spaces as-is so that Tableau automatically converts them to "null" values during the data import.
-
-3) In Tableau Public, click Connect to import the data file you downloaded to your computer. If you downloaded a CSV file, Connect to Text. Or if you downloaded an Excel file, Connect to Excel. Or click "More..." to connect to Google Sheets.
-
-4) Your data sheet should automatically appear in Tableau Public. Any blanks will automatically convert to “null.”
-
-5) In bottom-left corner, below the "Go to Worksheet" reminder, click Sheet 1.
-
-6) Welcome to the Tableau Public Worksheet. Although it may feel overwhelming at first, the key is learning where to drag-and-drop items from the data tab into the main worksheet. Dimensions are any information that is qualitative or categorical, while measures are quantitative information about the dimensions.  In this example, we are creating a line chart with two dimensions (year and school) and one measure (scores).
-
-7) Drag-and-drop Year into the Column field.
-
-8) Drag-and-drop Schools into the Row field.
-
-9) Drag-and-drop Scores into the middle of the grid.
-
-10) Select Score (but not its drop-down menu), then go to the Analysis menu and turn off Aggregated Measures. We need to do this so that the numbers are displayed individually, and not aggregated by default.
-
-11) In the upper-right corner, go to the Show Me window. (If it is closed, then open it.) Then select Lines (continuous).
-
-12) Initially, each School row appears at its own chart. To blend all of them together into one master chart, drag School to the Marks window and drop it on the Color button. All of the School lines will appear in one chart, with identifying colors.
-
-13) To filter the line chart to display only selected items, go to the Marks window, select the School Cohort drop-down menu, and choose Filter.
-
-14) The Filter window should appear in the far-right side. (If necessary, close the Show Me window to view the Filter window.) Select only a few schools to display by default.
-
-15) Since users can identify schools by turning them on in the Filter window, or floating their cursors to view tooltips for each line, we do not need to show the color legend for each school. In bottom-right School window, select the drop-down menu and choose Hide Card.
-
-16) Confirm or enter text for the axes, title, and caption to describe the data source.
-
-17) To publish your chart on the public web, select File > Save to Tableau Public As. Requires signup for a free Tableau account.
-
-18) Give your workbook a meaningful title, since this name will appear in the URL for your published work on the Tableau Public server, and Save.
-
-19) After publishing your work on the web, Tableau Public will automatically open the web link in your default browser. Click Edit Details to enter more information. Under Toolbar settings, see checkbox to Allow your workbook and its data to be downloaded by others.
-
-![Screenshot: Toolbar settings in Tableau Public](images/05-chart/tableau-toolbar-settings-allow.png)
-
-Checking this box enables the Download button at the bottom of your published work, which allows users to access your data and workbook, to see how you constructed the visualization.
-
-![Screenshot: Download button in Tableau Public](images/05-chart/tableau-download.png)
-
-20) To insert your Tableau Public visualization in your own website, see the [Embed On Your Web](embed) chapter of this book, and in particular, [Embed Tableau Public on your Website](iframe-tableau).
-
-21) To see all of your published visualizations, go to your Tableau Public online profile, which follows this format:
-```markdown
-https://public.tableau.com/profile/USERNAME
+```{r tableau-filtered-demo, fig.cap="(ref:tableau-filtered-demo)"}
+if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-filtered-demo.png")
 ```
-####  Learn more {-}
-Combine multiple visualizations and tell stories with Tableau Public dashboard and story point features. See Tableau Public Resources, with how-to videos and sample data <https://public.tableau.com/en-us/s/resources>.
 
+We assume that you have Tableau installed (if not, see previous tutorial, [Create XY Scatter Chart with Tableau Public](scatter-chart-tableau.html)).
 
+### Connect Text File and Build a Line Chart {-}
 
-#### See also {-}
-- Stephanie D. H. Evergreen, Effective Data Visualization: The Right Chart for the Right Data, (Los Angeles: SAGE Publications, Inc, 2016)
+Open Tableau Public, and under Connect menu, choose *Text file*.
+Tableau may or may not have imported the table automatically. If you see the preview of the table
+with three columns: *Country Name*, *Year*, and *Percent Internet Users*, you can proceed to Sheet 1.
 
-- Stephen Few, Now You See It: Simple Visualization Techniques for Quantitative Analysis, (Oakland, Calif: Analytics Press, 2009)
+If not, drag and drop the file (under Files section in the left) to the *Drag tables here* area.
+Once you see the preview, go to Sheet 1.
 
-- Stephen Few, “Save the Pies for Dessert [critique of pie charts],” Visual Business Intelligence Newsletter, 2007, 1–14, http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf
+Your variables will be listed under Tables in the left-hand side. The original variables
+are displayed in normal font, the *generated* variables will be shown in *italics*
+(such as *Latitude* and *Longitude* that Tableau guessed from the country names).
 
-- Stephen Few, Show Me the Numbers: Designing Tables and Graphs to Enlighten, Second edition (Burlingame, CA: Analytics Press, 2012)
+To build a line chart, 
 
-- Drew Gourley, How to Use Data Visualization to Win Over Your Audience, (Visage and Hubspot, June 2015), https://visage.co/content/data-viz-win-audience
+1. Drag Year variable to **Columns**.
+1. Drag Percent Internet Users variable to **Rows**. The variable will change to `SUM(Percent Internet Users)`.
+You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let's fix it.
+1. In order to "break" aggregation, drag and drop Country Name to the Color box of the Marks card.
+Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding filtering,
+we don't care about it much. So go ahead and press *Add all members* button.
+1. Now you should see an absolute spaghetti plate of lines and colors. To add filtering,
+drag *Country Name* to the Filters card. In the Filter window, make sure all countries
+are checked, and click *OK*.
+1. Right-click on *Country Name* pill in Filters card, and check Show Filter (see Figure \@ref(fig:tableau-filtered-show-filter.png))
+1. You will see a list of options with all checkboxes on have appeared to the right of the visualization.
+Click *(All)* to add/remove all options, and add a few of your favorite countries to see
+how the interactive filtering works.
 
-- Cole Nussbaumer Knaflic, Storytelling with Data: A Data Visualization Guide for Business Professionals, (Hoboken, New Jersey: Wiley, 2015)
+(ref:tableau-filtered-show-filter) Once you dragged Country Name to the Filters card, make sure the Filter is displayed.
 
-- Cole Nussbaumer Knalfic, "An Updated Post on Pies," StoryTelling with Data, February 16, 2017, http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies
+```{r tableau-filtered-show-filter, out.width=200, fig.cap="(ref:tableau-filtered-show-filter)"}
+knitr::include_graphics("images/05-chart/tableau-filtered-show-filter.png")
+```
 
-- Wayne Lytle, Viz-O-Matic: The Dangers of Glitziness and Other Visualization Faux Pas, 1993 video shared on YouTube, https://www.youtube.com/watch?v=fP-7rhb-qMg
+### Add Title and Caption, and Publish {-}
 
-- Isabel Meirelles, Design for Information: An Introduction to the Histories, Theories, and Best Practices Behind Effective Information Visualizations (Rockport Publishers, 2013), http://isabelmeirelles.com/book-design-for-information/
+Replace *Sheet 1* title (above the chart) with "Internet Access by Country, 1995–2018" by double-clicking on it.
+In the menu, go to *Worksheet > Show Caption* to add a Caption block under the chart.
+Use this space to add source of your data (World Bank), and perhaps credit yourself as
+the author of this visualization.
 
-- Tableau, Visual Analysis Best Practices: A Guidebook, n.d., http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf.
+Change *Standard* to *Fit Width* in the dropdown above the Columns field.
 
-- Edward R. Tufte, Beautiful Evidence (Graphics Press, 2006)
+You may notice that the x-axis (Year) starts with 1994 and ends with 2020,
+although our data is for 1995–2018. Double-click on the x-axis, and change
+**Range** from *Automatic* to *Fixed*, with the Fixed start of `1995`, and the Fixed end of `2018`.
+Close the window and see that the empty space on the edges has disappeared.
 
-- “WTF Visualizations: Visualizations That Make No Sense,” 2017, http://viz.wtf.
+Once your filtered line chart looks like the one shown in Figure \@ref(fig:tableau-filtered-ready),
+you are ready to publish.
 
-- xkcd, “University Website,” accessed February 12, 2017, https://xkcd.com/773/
+(ref:tableau-filtered-ready) This workbook is ready to be published.
 
-- Nathan Yau, “One Dataset, Visualized 25 Ways,” FlowingData, January 24, 2017, http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/
+```{r tableau-filtered-ready, fig.cap="(ref:tableau-filtered-ready)"}
+knitr::include_graphics("images/05-chart/tableau-filtered-ready.png")
+```
 
-- Nathan Yau, “Best Data Visualization Projects of 2016,” FlowingData, December 29, 2016, http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/
+To publish the filtered line chart to the web, go to *File > Save to Tableau Public As...*.
+You may be prompted with the window to log in to your account (or create one if you don't have it yet).
+The next steps are fairly self-explanatory, and you can consult
+[the previous tutorial](scatter-chart-tableau.html) for more information on publishing.

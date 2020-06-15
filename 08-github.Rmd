@@ -5,7 +5,7 @@ In the second half of this book, get ready to make a big leap, and we'll help yo
 
 Code templates are similar to cookbook recipes. Imagine you're in your kitchen, looking at our favorite recipe that we've publicly shared to make brownies (yum!), which begins with these three steps: `Melt butter, Add sugar, Mix in cocoa.` Recipes are templates, meaning that you can follow them precisely, or modify them to suit your tastes. Imagine that you copy our recipe (or "fork" it, as coders say) and insert a new step: `Add walnuts`. If you also publicly share your recipe, now there will be two versions of instructions, to suit both those who strongly prefer or dislike nuts in their brownies. (We do not take sides in this deeply polarizing dispute.)
 
-<!-- TODO: decide whether to convert the text description of recipes to visual images of two hand-written recipe index cards, one forked from the other, with walnuts added? -->
+<!-- TODO: decide whether to supplement the text description of recipes with visual images of two hand-written recipe index cards, one forked from the other, with walnuts added? -->
 
 Currently, the most popular cookbook among coders is [GitHub](https://github.com), with more than 40 million users and over 100 million recipes (or "code repositories" or "repos"). You can sign up for a free account and choose to make your repos private (like Grandma's secret recipes) or public (like the ones we share below). Since GitHub was designed to be public, think twice before uploading any confidential or sensitive information that should not be shared with others. GitHub encourages sharing *open-source code*, meaning the creator grants permission for others to freely distribute and modify it, based on the conditions of the type of license they have selected.
 
@@ -52,7 +52,9 @@ Tip: Choose a GitHub username that's relatively short, and one that you'll be ha
 
 When you fork someone else's repo, in the upper-right corner of your browser you should see something like `YourUserName/leaflet-map-simple` forked from `HandsOnDataViz/leaflet-map-simple`. This proves that you copied our template into your GitHub account. This very simple repo includes only three files: `LICENSE` shows that we've selected the MIT License, which allows anyone to copy and modify the code as they wish; `README.md` provides a simple description and link to the live demo, which we'll come back to later; `index.html` is the key file that contains the map code.
 
-<!-- TODO: Decide if we should show generic web address formatting as `YourUserName` or `https://USERNAME.github.io/REPOSITORY` -->
+<!-- TODO: Question: What’s the best way to show generic GitHub web address formatting?
+a)  https://YourUserName.github.io/YourRepoName
+b) https://USERNAME.github.io/REPOSITORY     -->
 
 Tip: By design, GitHub allows you to fork a repo *one time*, so that you don't accidentally create two versions with the same name. If you wish to create a second version, go to the [Create a New Repo and Upload Files on GitHub](create-repo.html) section of this chapter.
 
@@ -106,7 +108,7 @@ Now let's publish your edited map to the public web to see how it looks in a web
 if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-pages.gif", height = "325px") else knitr::include_graphics("images/08-github/leaflet-github-pages.png")
 ```
 
-<!-- TODO: Jack can redo the animated GIFs above and below in Camtasia, and insert a fade-out to clearly define its ending. -->
+<!-- TODO: for the Web edition, Jack can redo the animated GIFs above and below in Camtasia, and insert a fade-out to clearly define its ending. -->
 
 9. Scroll back down to the GitHub Pages area to see the web address where your live map has been published online, and right-click it to open in a new browser tab, as shown in Figure \@ref(fig:leaflet-github-pages2).
 
@@ -266,7 +268,7 @@ Optionally, you could use GitHub Pages to publish a live version of the code onl
  knitr::include_graphics("images/08-github/repo-delete.png")
 ```
 
-<!-- TODO: Will that "drunk" joke work here? Or is it inappropriate, or too distant from the "DrunkenBrownieChef6789" reference in the prior section?  -->
+<!-- TODO: Will that "drunken brownie chef" joke work here? Or is it inappropriate, or too distant from the "DrunkenBrownieChef6789" reference in the prior section?  -->
 
 So far, you've learned how to copy, edit, and host code using the GitHub web interface, which is a great introduction for beginners. Now you're ready to move up to tools that will allow you to work more efficiently with GitHub, such as GitHub Desktop and Atom Editor, to quickly move entire repos to your local computer, edit the code, and move them back online.
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-11" />
+<meta name="date" content="2020-06-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,8 +296,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="scatter-bubble-google" class="section level2 unnumbered" number="">
 <h2>Scatter and Bubble Charts with Google Sheets</h2>
+<p><strong>TODO: after initial review of this section, update all Figures, numbers, links</strong></p>
 <p>Follow these tutorials to create different types scatter and bubble charts
 with <a href="https://sheets.google.com">Google Sheets</a>.</p>
+<p><strong>TODO: Add conversational narrative about when and why you might want scatter and bubble charts</strong></p>
 <div id="scatter-chart" class="section level4 unnumbered" number="">
 <h4>Scatter chart</h4>
 <p>Scatter charts, also known as scatterplots, use x-y coordinates to show the relationship between
@@ -370,7 +372,7 @@ with the country name and the two data points.</p>
 <p>Notice that we moved the labels column (<em>Country</em>) to be the first one in the dataset,
 but the order shouldn’t matter in this case. So our first column is the label for each bubble,
 the second column is the data to be plotted on horizontal x-axis, and the third column (fertility)
-will be placec on the y-axis.</p>
+will be place on the y-axis.</p>
 <p>Select all three columns, and go to <em>Insert &gt; Chart</em>. Google Sheets will likely create a stacked
 column chart by default, so choose <em>Bubble</em> from the Chart type dropdown window.</p>
 <p>If you want to remove labels from the bubbles, remove the <strong>ID</strong> series (click on the kebab menu &gt; Remove).</p>
@@ -383,7 +385,7 @@ In the following section, we will introduce you to the proper way of using bubbl
 one or two extra series in addition to your x- and y-coordinates. One of those
 can be expressed through bubble size (bigger bubbles represent larger values).
 Another one can make use of color (best for categorical data).</p>
-<p>The bubbe chart in Figure 5-X shows fertility and life expectancy for a subset of the nations,
+<p>The bubble chart in Figure 5-X shows fertility and life expectancy for a subset of the nations,
 with population (shown by bubble size) and region (shown by bubble color).
 Float your cursor over bubbles to view data details if this is an e-book.</p>
 <p>
@@ -395,12 +397,12 @@ Float your cursor over bubbles to view data details if this is an e-book.</p>
 <p>The five-column dataset is available in this <a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/">Google Sheets Bubble chart with 5 columns template</a>.
 The columns are arranged in the following order: country label, x-axis value,
 y-axis value, color, and bubble size.</p>
-<pre><code>Country Life expectancy Fertility   Region  Population
-United States   78.5    1.70    North America   326687501
-United Kingdom  81.4    1.70    Europe  66460344
+<pre><code>Country        | Life expectancy | Fertility | Region        | Population
+United States    |            78.5 |        1.70 | North America |  326687501
+United Kingdom |              81.4 |        1.70 | Europe        |   66460344
 ...
-Nigeria 54.3    5.40    Africa  195874740
-South Africa    63.9    2.40    Africa  57779622</code></pre>
+Nigeria        |            54.3 |      5.40 | Africa        |  195874740
+South Africa   |            63.9 |      2.40 | Africa        |   57779622</code></pre>
 <p>Select all data and go to <em>Insert &gt; Chart</em>, and choose Bubble as the Chart type.
 Make sure your <strong>ID</strong>, <strong>X-axis</strong>, <strong>Y-axis</strong>, <strong>Series</strong>, and <strong>Size</strong> fields
 contains the series you want to display, and make sure to have <em>Use row 1 as headers</em> option checked.</p>

@@ -118,7 +118,7 @@ if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-
 
 10. Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address for your repo in this format, `https://YourUserName.github.io/leaflet-map-simple`, where `YourUserName` is your GitHub account username. Remember why we told you not to create your account with a username like `DrunkBrownieChef6789`? Here's why.
 
-Tip: If your map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing, then do a "hard" browser refresh to contact the web server again. **TODO:** Add hard refresh instructions, or link them here if shown earlier in the book.
+Tip: If your map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing, then do a "hard" browser refresh to contact the web server again. **TODO: Link to hard-refresh instructions in Fix section in this chapter**
 
 Note: GitHub creates two different types of web addresses, where you should replace `YourUserName` and `YourRepoName` with your own:
 
@@ -396,6 +396,8 @@ Although GitHub does not operate like Google Documents, which displays live edit
 Overall, you'll find that GitHub Desktop and Atom Editor makes it much easier to work with the [Chart.js code templates in Chapter 9](chartjs.hmtl) and the [Leaflet map code templates in Chapter 10](leaflet.html). The next section offers advice on how to fix common GitHub and coding errors that you might encounter.
 
 ## Fix Common GitHub and Code Errors {- #fix-code}
+**TODO: Update this entire section**
+
 What happens if you cannot view your published GitHub repository, or if your code breaks and no longer displays what it was designed to show? These are common problems, especially for newer students, because accidentally clicking the wrong box or mistakenly erasing a single character (such as a semicolon) can make your visualization seem to vanish, even though your work is usually still there. Breaking your code---and figuring out how to fix it---is a great way to learn, even if it requires trial and error.
 
 TODO: Test one way to fix GitHub errors by going into the commits and going back to a previous version of the code. Is this possible in the web version?
@@ -425,7 +427,7 @@ These URLs are NOT case-sensitive, which means that `https://github.com/USERNAME
 ##### My simple GitHub web page does not appear {-}
 - Make sure that you are pointing to the correct URL for your published web page, in the format shown above.
 - Be patient. During busy periods on GitHub, it may take up to 1 minute for new content to appear in your browser.
-- Do a "hard refresh" to [bypass any saved content in your browser cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
+- **MOVE UP** Do a "hard refresh" to [bypass any saved content in your browser cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
   - Ctrl + F5 (most Windows-Linux browsers)
   - Command + Shift + R (Chrome or Firefox for Mac)
   - Shift + Reload button toolbar (Safari for Mac)

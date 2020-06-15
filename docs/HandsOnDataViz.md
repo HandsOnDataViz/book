@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 11 Jun 2020
+updated on: 15 Jun 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -1991,11 +1991,11 @@ website. We will then look at building interactive charts with [Tableau
 Public](tableau-public.html), a free version of the powerful software
 used by data analysts and data visualization practitioners.
 
-At the end, we will introduce chart templates with JavaScript’s
-[Chart.js](chartjs.html) library, which give you a lot of control over
-how the charts look. Working with Chart.js will require you to [edit and
-host code templates with GitHub](github.html), which is described in
-detail in Chapter 8.
+At the end, we will introduce chart templates with the
+[Chart.js](chartjs.html) JavaScript code library, which give you a lot
+of control over how the charts look. Working with Chart.js will require
+you to [edit and host code templates with GitHub](github.html), which is
+described in detail in Chapter 8.
 
 See also related chapters in this book:
 
@@ -2123,7 +2123,7 @@ or a column of numbers, or *data points*, in your dataset.
 
 *Labels* and *annotations* are often used across the chart to give more
 context. For example, a line chart showing US unemployment levels
-between 1900 and 2020 can have a “Great Depression” annotation arround
+between 1900 and 2020 can have a “Great Depression” annotation around
 1930s, and “Covid-19 Impact” annotation for 2020, both representing
 spikes in unemployment. You might also choose to label items directly
 instead of relying on axes, which is common with bar charts. In that
@@ -2189,7 +2189,7 @@ percentages, or percent changes, and do the math for your readers.
 
 **Avoid chart junk**. Start with a white background and add elements as
 you see appropriate. You should be able to justify each element you add.
-To do so, ask yorself: Does this element improve the chart, or can I
+To do so, ask yourself: Does this element improve the chart, or can I
 drop it without decreasing readability? This way you won’t end up with
 so-called “chart junk” as shown in Figure
 <a href="#fig:design-principles-junk">13</a>, which includes 3D
@@ -2330,7 +2330,7 @@ are used to compare values across categories.
 In this tutorial, we will use three small datasets to build interactive
 separated, grouped, and stacked bar charts in Google Sheets:
 
--   Obesity in the US (by US CDC, and StateOfObesity.org project)
+-   Obesity in the US (by US CDC and StateOfObesity.org project)
 -   High-Calorie Fast-Food Items
 -   Global Database on Body Mass Index by World Health Organization
 
@@ -2344,15 +2344,22 @@ hovering over data points to see tooltips with additional data.
 
 ### Grouped Column and Bar Charts
 
-Figure 5-9 shows differences in obesity between men and women in three
-age bracket. If you read this book electronically, you should be able to
-hover over columns and see tooltips with data.
+Figure <a href="#fig:column-grouped">20</a> shows differences in obesity
+between men and women, grouped together in three age brackets to allow
+for easier gender comparisons across the same ages. In the interactive
+web version, hover over columns and see tooltips with data.
 
-TODO: FIGURE 5-9
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/pubchart?oid=787918829&amp;format=interactive"></iframe><a href="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/edit#gid=1017658845"><br>View
-data from CDC and StateOfObesity.org</a>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;amp;format=interactive" width="100%" height="400px">
+</iframe>
+<p class="caption">
+Figure 20: Grouped column chart with data from
+[StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf).
+Explore the [full-screen interactive
+version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
+</p>
 
-The following steps will help you recreate this interactive chart.
+The following steps will help you recreate an interactive grouped column
+(or horizontal bar) chart.
 
 1.  Right-click to open link in new tab: [Google Sheet Column chart with
     grouped data
@@ -2362,53 +2369,90 @@ The following steps will help you recreate this interactive chart.
     account](https://sheets.google.com)
 
 3.  Select File &gt; Make a Copy to save your own version to your Google
-    Drive. Screenshot from Figure 5-10 shows the relevant item in the
-    File dropdown menu.
+    Drive, as shown in Figure <a href="#fig:file-make-copy">21</a>.
 
-![Figure 5-10: Sign in to Google and File &gt; Make a
-Copy](images/05-chart/column-make-copy.png)
+<img src="images/05-chart/file-make-copy.png" alt="Make your own copy of the Google Sheet."  />
+<p class="caption">
+Figure 21: Make your own copy of the Google Sheet.
+</p>
 
-1.  To remove the current chart from your copy of the spreadsheet,
-    select it and press the *delete*.
+1.  To remove the current chart from your copy of the spreadsheet, float
+    your cursor to the top-right corner of the chart to make the 3-dot
+    symbol appear, and select Delete, as shown in Figure
+    <a href="#fig:delete-chart">22</a>.
 
-2.  Format your data as shown in Figure 5-11. Each row is a data series,
-    which displays as a separate color in the chart.
+<img src="images/05-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot symbol appear, and select Delete."  />
+<p class="caption">
+Figure 22: Float cursor in top-right corner of the chart to make the
+3-dot symbol appear, and select Delete.
+</p>
 
-![Figure 5-11: Grouped column chart data
-table](images/05-chart/grouped-column-chart-data.png)
+1.  Format your data to make each column a data series, as shown in
+    Figure <a href="#fig:column-grouped-data">23</a>, which means it
+    will display as a separate color in the chart.
 
-1.  Use your cursor to select only the data you wish to chart, then
-    select *Insert &gt; Chart*, like in Figure 5-12.
+<img src="images/05-chart/column-grouped-data.png" alt="Format data in columns to make colored grouped columns in your chart."  />
+<p class="caption">
+Figure 23: Format data in columns to make colored grouped columns in
+your chart.
+</p>
 
-![Figure 5-12: Select data and Insert &gt;
-Chart](images/05-chart/column-insert-chart.png)
+1.  Use your cursor to select only the data you wish to chart, then go
+    to the Insert menu and select Chart, as shown in Figure
+    <a href="#fig:column-grouped-insert">24</a>.
 
-1.  In the Chart Editor &gt; Recommendations tab, choose your preferred
-    Column chart (or horizontal Bar chart if you have longer labels), or
-    see more options in Chart Types tab as per Figure 5-13. Press the
-    Insert button when done.
+<img src="images/05-chart/column-grouped-insert.png" alt="Select your data and then Insert >
+Chart." /&gt;
+<p class="caption">
+Figure 24: Select your data and then Insert &gt; Chart.
+</p>
 
-![Figure 5-14: See more options in Chart Types
-tab](images/05-chart/column-chart-types.png)
+1.  In the Chart Editor, change the default selection to Column chart,
+    with Stacking none, to display Grouped Columns, as shown in Figure
+    <a href="#fig:column-grouped-editor">25</a>. Or select horizontal
+    Bar chart if you have longer labels.
 
-1.  To customize title, labels, and more, choose *Edit chart* from the
-    menu in the upper-right corner of the chart. as shown in Figure
-    5-15.
+<img src="images/05-chart/column-grouped-editor.png" alt="Change the default to Column chart, with Stacking none."  />
+<p class="caption">
+Figure 25: Change the default to Column chart, with Stacking none.
+</p>
 
-![Figure 5-15: Customize with editing
-controls](images/05-chart/column-edit-chart.png)
+1.  To customize title, labels, and more, in the Chart Editor select
+    Customize, as shown in Figure
+    <a href="#fig:chart-editor-customize">26</a>.
 
-1.  To make your data public, select Share button in the upper-right
-    corner &gt; Advanced, then Change from Private to Public On the Web,
-    with Anyone Can View.
+<img src="images/05-chart/chart-editor-customize.png" alt="Select Customize to edit title, labels, and more."  />
+<p class="caption">
+Figure 26: Select Customize to edit title, labels, and more.
+</p>
 
-<iframe src="images/05-chart/column-share.gif" width="100%" height="400px">
-</iframe>
+1.  To make your data public, go to the upper-right corner of your sheet
+    to click the Share button, and in the next screen, click the words
+    “Change to anyone with the link,” as shown in Figure
+    <a href="#fig:share-button-sheet">27</a>. This means your sheet is
+    no longer Restricted to only you, but can be viewed by anyone with
+    the link. See additional options.
 
-1.  To embed your chart in another website, click the upper-right chart
-    editing controls, select *Publish chart*, select Embed, and press
-    the Publish button. See [Chapter 7](embed.html) of this book to
-    learn what to do with the generated iframe code.
+&lt;img src=“images/05-chart/share-button-sheet.png” alt=“Click the
+Share button and then click”Change to anyone with the link." to make
+your data public." /&gt;
+<p class="caption">
+Figure 27: Click the Share button and then click “Change to anyone with
+the link.” to make your data public.
+</p>
+
+1.  To embed an interactive version of your chart in another web page,
+    click the 3-dot symbol in the upper-right corner of your chart, and
+    select Publish Chart, as shown in Figure
+    <a href="#fig:chart-publish">28</a>. In the next screen, select
+    Embed and press the Publish button. See [Chapter 7 Embed on the
+    Web](embed.html) to learn what to do with the iframe code.
+
+<img src="images/05-chart/chart-publish.png" alt="Select Publish Chart to embed an interactive chart on another web page, as described in Chapter 7."  />
+<p class="caption">
+Figure 28: Select Publish Chart to embed an interactive chart on another
+web page, as described in Chapter 7.
+</p>
 
 Note: Currently, there is no easy way to cite or link to your source
 data inside a Google Sheets chart. Instead, cite and link to your source
@@ -2417,56 +2461,76 @@ credibility to your work.
 
 ### Separated Column and Bar Charts
 
-When you visualize individual, independent categories, you wouldn’t want
-to group charts. Instead, you want bars (columns) to be separated.
+When you visualize independent categories of data, and you don’t want
+them to appear grouped together, then create a chart with separated
+columns (or horizontal bars, if you have long data labels). For example,
+Figure <a href="#fig:bar-separated">29</a> is a separated bar chart of
+calorie counts of fast food items for two restaurant chains, Starbucks
+and McDonald’s. Unlike the grouped column chart above in Figure
+<a href="#fig:column-grouped">20</a>, here the bars are separated from
+each other, because we do not need to make comparisons between
+sub-groups.
 
-Figure 5-16 shows calorie counts of fast food items for two restaurant
-chains, Starbucks and McDonald’s. Unlike Figure 5-9, here the bars are
-spaced away from each other.
-
-TODO: FIGURE 5-16
-
-<iframe width="700" height="432" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive">
+<iframe src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
+<p class="caption">
+Figure 29: Separated bar chart with data from [Starbucks and
+McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126).
+Explore the [full-screen interactive
+version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
+</p>
 
-<a href="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126"><br>View
-data from Starbucks and McDonalds</a>
+The only difference between making a grouped versus a separated chart is
+how you structure your data. To make Google Sheets separate columns or
+bars, you need to leave some cells blank, as shown in Figure
+<a href="#fig:bar-separated-data">30</a>. The rest of the steps remain
+the same as above.
 
-The only difference between making a grouped vs separated bar chart is
-how you structure your data. To make Google Sheets separate columns, you
-will need to leave some cells blank, like in Figure 5-17. Other than
-that, the steps remain the same.
+<img src="images/05-chart/bar-separated-data.png" alt="Create a separated column or bar chart by leaving some cells blank."  />
+<p class="caption">
+Figure 30: Create a separated column or bar chart by leaving some cells
+blank.
+</p>
 
-![Figure 5-17: Bar chart data table](images/05-chart/bar-chart-data.png)
-
-If you want to get started with the fast-food example, right-click to
-open this link in a new tab: [Google Sheet Column chart with separated
-data
+To create your own separated column or bar chart using the fast-food
+example, right-click to open this link in a new tab: [Google Sheet
+Separated Bar Chart
 template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/).
 
 ### Stacked Column and Bar Charts
 
-Stacked column and bar charts can be used to compare sub-categories.
-They can also be used to represents parts of a whole instead of pie
-charts.
+Stacked column and bar charts can be used to compare subcategories. They
+can also be used to represents parts of a whole instead of pie charts.
+For example, the stacked column chart in Figure
+<a href="#fig:column-stacked">31</a> compares the percentage of
+overweight residents across nations, where colors allow for easy
+comparisons of weight-group subcategories across nations.
 
-The stacked column chart in Figure 5-18 compares the percentage of
-overweight residents across nations.
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;amp;format=interactive" width="100%" height="400px">
+</iframe>
+<p class="caption">
+Figure 31: Stacked column chart with data from [WHO and
+CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691).
+Explore the [full-screen interactive
+version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive).
+</p>
 
-TODO: FIGURE 5-18
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/pubchart?oid=307057605&amp;format=interactive"></iframe><a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691"><br>View
-data from WHO and CDC</a>
+To create a stacked column or bar chart, structure your data so that
+each column will become a new series with its own color, as shown in
+Figure <a href="#fig:column-stacked-data">32</a>. Then in the Chart
+Editor window, choose Chart Type &gt; Stacked column chart (or Stacked
+bar chart). The rest of the steps are similar to the ones above.
 
-To create a stacked bar chart, you need to choose Chart Type &gt;
-Stacked column chart (or Stacked bar chart) in the Chart editor window.
-Structure your data as shown in Figure 5-19. Each column is a new series
-with its own color. To get started with the Body Mass Index example,
-begin by opening this link in a new tab: [Google Sheets Stacked column
-chart
+<img src="images/05-chart/column-stacked-data.png" alt="Create a stacked column or bar chart by structuring your data as shown."  />
+<p class="caption">
+Figure 32: Create a stacked column or bar chart by structuring your data
+as shown.
+</p>
+
+To create your own stacked column or bar chart using the international
+weight level example, right-click to open this link in a new tab:
+[Google Sheets Stacked Column Chart
 template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/).
-
-![Figure 5-19: Stacked column chart data
-table](images/05-chart/stacked-column-data.png)
 
 ### Histograms
 
@@ -2479,43 +2543,48 @@ Let’s say you want to know what time of day are you more likely to get
 an email. One approach would be to download metadata about all emails
 you received in 2020, and assign them to a bucket between 0 and 23
 according to the email hour. Hours will become your bins, and email
-counts will be your frequency data. Then your final dataset can look
-something like:
+counts will be your frequency data. Then your final dataset would look
+something like this:
 
     Hour  Emails
     0       12
     1       11
     2       7
     ...
-    13    82
-    14    103
-    15    105
-    16    74
-    17    53
-    ...
+    21    24
+    22    34
     23    22
 
 You can now make a histogram. The good news is, Google Sheets considers
 histograms to be regular column charts, so you should be able to use a
 previous tutorial to make one.
 
-Hint: Select two columns with the data you want to visualize, and go to
-*Insert &gt; Chart*. In the Chart editor window, in *Setup* tab, select
-*Chart type &gt; Column chart*.
+Select two columns with the data you want to visualize, and go to Insert
+&gt; Chart. In the Chart editor window, in the Setup tab, select Chart
+type &gt; Column chart. See the result in Figure
+<a href="#fig:histogram">33</a>
 
-Figure 5-20 shows the resulting histogram.
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;amp;format=interactive" width="100%" height="400px">
+</iframe>
+<p class="caption">
+Figure 33: Histogram chart with [fictitious source
+data](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=0).
+Explore the [full-screen interactive
+version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive).
+</p>
 
-TODO: FIGURE 5-20
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive"></iframe>
+To create your own histogram chart using our fictional email dataset,
+right-click to open this link in a new tab: [Histogram Chart
+template](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit?usp=sharing).
 
-If you want to reuse our fictional dataset from the example, [make a
-copy of this
-spreadsheet](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit?usp=sharing).
-
-If you want to have a less detailed histogram, you can combine hours
-into greater bins, for example *Morning*, *Afternoon*, *Evening*, and
-*Night* to cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively.
-Then your dataset will look like:
+Bins in a histogram should span (in other words, “cover”) the entire
+range of values of your dataset. This way you don’t leave out any data.
+We recommend you use bins of the same size (like 24 1-hour bins, or four
+6-hour bins) to ensure readers can compare across bars. For example, if
+you want to create a less detailed histogram, you can combine hours into
+larger bins, such as *Morning*, *Afternoon*, *Evening*, and *Night* to
+cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively. Then your
+dataset will look like:
 
     Time of Day,Emails
     Morning,353
@@ -2523,13 +2592,11 @@ Then your dataset will look like:
     Evening,279
     Night,37
 
-Bins in a histogram should span (in other words, “cover”) the entire
-range of values of your dataset. This way you don’t leave out any data.
-We recommend you use bins of the same size (like 24 1-hour bins, or four
-6-hour bins) to ensure readers can compare across bars.
-
 Pie, Line, and Area Charts with Google Sheets
 ---------------------------------------------
+
+**TODO: after initial review of this section, update all Figures,
+numbers, links**
 
 #### Pie Chart
 
@@ -2649,8 +2716,14 @@ list.
 Scatter and Bubble Charts with Google Sheets
 --------------------------------------------
 
+**TODO: after initial review of this section, update all Figures,
+numbers, links**
+
 Follow these tutorials to create different types scatter and bubble
 charts with [Google Sheets](https://sheets.google.com).
+
+**TODO: Add conversational narrative about when and why you might want
+scatter and bubble charts**
 
 #### Scatter chart
 
@@ -2750,7 +2823,7 @@ Notice that we moved the labels column (*Country*) to be the first one
 in the dataset, but the order shouldn’t matter in this case. So our
 first column is the label for each bubble, the second column is the data
 to be plotted on horizontal x-axis, and the third column (fertility)
-will be placec on the y-axis.
+will be place on the y-axis.
 
 Select all three columns, and go to *Insert &gt; Chart*. Google Sheets
 will likely create a stacked column chart by default, so choose *Bubble*
@@ -2771,7 +2844,7 @@ y-coordinates. One of those can be expressed through bubble size (bigger
 bubbles represent larger values). Another one can make use of color
 (best for categorical data).
 
-The bubbe chart in Figure 5-X shows fertility and life expectancy for a
+The bubble chart in Figure 5-X shows fertility and life expectancy for a
 subset of the nations, with population (shown by bubble size) and region
 (shown by bubble color). Float your cursor over bubbles to view data
 details if this is an e-book.
@@ -2790,12 +2863,12 @@ template](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSP
 The columns are arranged in the following order: country label, x-axis
 value, y-axis value, color, and bubble size.
 
-    Country Life expectancy Fertility   Region  Population
-    United States   78.5    1.70    North America   326687501
-    United Kingdom  81.4    1.70    Europe  66460344
+    Country        | Life expectancy | Fertility | Region        | Population
+    United States    |            78.5 |        1.70 | North America |  326687501
+    United Kingdom |              81.4 |        1.70 | Europe        |   66460344
     ...
-    Nigeria 54.3    5.40    Africa  195874740
-    South Africa    63.9    2.40    Africa  57779622
+    Nigeria        |            54.3 |      5.40 | Africa        |  195874740
+    South Africa   |            63.9 |      2.40 | Africa        |   57779622
 
 Select all data and go to *Insert &gt; Chart*, and choose Bubble as the
 Chart type. Make sure your **ID**, **X-axis**, **Y-axis**, **Series**,
@@ -2820,7 +2893,7 @@ allows to create dashboards with multiple visualizations. Individual
 visualizations and dashboards can be published and embedded on your
 website through an iframe.
 
-Tableau comes in several versions, and the one we’re interestedin in
+Tableau comes in several versions, and the one we’re interested in is
 Tableau Public. It is free, and only requires an email to
 [download](https://public.tableau.com/s/). You might be overwhelmed by
 the amount of options and features Tableau provides through its
@@ -2830,338 +2903,259 @@ available.
 
 In this book, we will show you how to add datasets to Tableau Public,
 and how to [create a scatterplot](scatter-chart-tableau.html) and a
-filtered line chart\](filtered-line-chart-tableau.html).
-
-#### Learn more
-
--   [Embed Tableau Public on Your Website](iframe-tableau) chapter in
-    this book
--   Tableau Public Resources, with how-to videos and sample data
-    <a href="https://public.tableau.com/en-us/s/resources" class="uri">https://public.tableau.com/en-us/s/resources</a>
--   Tableau Public Support page
-    <a href="https://www.tableau.com/support/public" class="uri">https://www.tableau.com/support/public</a>
+[filtered line chart](filtered-line-chart-tableau.html).
 
 Create XY Scatter Chart with Tableau Public
 -------------------------------------------
 
-An interactive scatter chart shows the relationship between two
-variables by displaying a series of XY coordinates. Readers can float
-their cursor over points to view specific details. The chart below,
-which illustrates the strong relationship between Connecticut school
-district income and test scores, was created with the free downloadable
-tool for Mac and Windows, Tableau Public
-<a href="http://public.tableau.com" class="uri">http://public.tableau.com</a>.
+Just to remind you, scatter charts plot two variables against each
+other, on x- and y-axis, revealing possible correlations. With Tableau
+Public, you can create an interactive scatter chart, letting users hover
+over points to view specific details.
 
-#### Try it
+Figure <a href="#fig:tableau-scatter-demo">34</a> illustrates a strong
+relationship between Connecticut school district income and test scores.
 
-<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500">
+<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="100%" height="500px">
 </iframe>
+<p class="caption">
+Figure 34: Household income vs test scores in Connecticut school
+districts. Made with Tableau Public.
+</p>
 
-#### Video with step-by-step tutorial
+#### Install Tableau and Get Data
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/70RKjT91cjs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+You can download Tableau Public for Windows or Mac from Tableau’s
+official website
+(<a href="https://public.tableau.com" class="uri">https://public.tableau.com</a>).
+You will need to provide your email address.
 
-1.  Read the [Tableau Public tool review](tableau-public) in this book,
-    then download and install the free application on a Mac or Windows
-    computer from
-    <a href="http://public.tableau.com" class="uri">http://public.tableau.com</a>.
-    Requires a free account.
+If you wish to use the dataset from the scatter plot in Figure
+<a href="#fig:tableau-scatter-demo">34</a>, you can [download the Excel
+file here](data/ct-districts-income-grades-2009-13.xlsx). This data file
+consists of three columns: district, median household income, and grade
+levels (above/below national average for 6th grade Math and English test
+scores). The Notes tab explains how this data is based on the work of
+Sean Reardon et al. at the [Stanford Education Data
+Archive](http://purl.stanford.edu/db586ns4974), Motoko Rich et al. at
+[The New York
+Times](http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html),
+Andrew Ba Tran at
+[TrendCT](http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/),
+and the American Community Survey 2009-13 via [Social
+Explorer](http://socialexplorer.com).
 
-2.  Click the link and Save to download the sample file to your
-    computer: [ct-districts-income-grades-2009-13 in Excel
-    format](data/ct-districts-income-grades-2009-13.xlsx).
+#### Connect Data and Create a Scatterplot
 
-3.  Open the sample file to view three columns: district, median
-    household income, and grade levels (above/below national average for
-    6th grade Math and English test scores). The Notes tab explains how
-    this data is based on the work of Sean Reardon et al. at the
-    [Stanford Education Data
-    Archive](http://purl.stanford.edu/db586ns4974), Motoko Rich et
-    al. at [The New York
-    Times](http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html),
-    Andrew Ba Tran at
-    [TrendCT](http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/),
-    and the American Community Survey 2009-13 via [Social
-    Explorer](http://socialexplorer.com).
+Tableau Public’s welcome page includes three sections: Connect, Open,
+and Discover.
 
-Hint: To prepare your own scatter chart data from different sources, see
-the [Match Spreadsheet Columns with VLookup Function](vlookup) chapter
-in this book.
+1.  Under Connect, choose Microsoft Excel if you decided to use the
+    sample dataset or your own Excel file. To load a CSV file, choose
+    *Text file*. If your data is in Google Sheets, click *More…* and
+    choose Google Sheets. Once you successfully connect to your data
+    source, you will see it under Connections in the Data Source tab.
+    Under Sheets, you will see two tables, `data` and `notes`.
 
-1.  In Tableau Public, click Connect to import the data file from your
-    computer. If you downloaded an Excel file, Connect to Excel. Or if
-    you downloaded a CSV file, Connect to Text. Or click “More…” to
-    connect to Google Sheets.
+2.  Drag `data` sheet into *Drag tables here* area, like is shown in
+    Figure <a href="#fig:tableau-connect">35</a>. You will see the
+    preview of the table under the drag-and-drop area. You have
+    successfully connected one data source to Tableau Public, and you
+    are ready to build your first chart. Go to *Sheet 1* tab (in the
+    lower-left corner of the window).
 
-2.  Drag the Data sheet into the Data Source field.
+<img src="images/05-chart/tableau-connect.png" alt="Drag `data` sheet into *Drag tables here* area."  />
+<p class="caption">
+Figure 35: Drag `data` sheet into *Drag tables here* area.
+</p>
 
-3.  In bottom-left corner, below the “Go to Worksheet” reminder, click
-    Sheet 1.
+1.  Welcome to your first worksheet. Although it may feel overwhelming
+    at first, the key is learning where to drag items from the Data pane
+    (left) into the main worksheet. **Dimensions** are any information
+    that is qualitative or categorical, and are shown in blue with *Abc*
+    tables. **Measures** are quantitative information about the
+    dimensions, shown in green with *\#* icons.
 
-4.  Welcome to the Tableau Public Worksheet. Although it may feel
-    overwhelming at first, the key is learning where to drag items from
-    the data tab into the main worksheet. Dimensions are any information
-    that is qualitative or categorical, while measures are quantitative
-    information about the dimensions.
+2.  Drag the *Grade Levels* measure into the **Rows** field above the
+    charting area (which for now is just empty space). Tableau will
+    apply a summation function to it, and you will see the
+    `SUM(Grade Levels)` appearing in the Rows row, and a blue bar in the
+    charting area. For now it makes little sense, so let’s plot another
+    measure (variable).
 
-5.  Drag the Grade Levels measure into the Rows field.
+3.  Drag *Median Household Income* to the **Columns** field (just above
+    the Rows field). Tableau will once again apply the summation
+    function, so you will see `SUM(Median Household Income)` in the
+    Columns. The bar chart will transform into a scatter chart with just
+    one data point in the upper-right corner. That is because the data
+    for both is aggregated (remember the `SUM` function).
 
-6.  Drag the Median Household Income measure into the Columns field. The
-    initial chart will appear as one point, but that’s because all of
-    the data is aggregated together. We’re not done yet.
+4.  We want to tell Tableau to disaggregate the household and grade
+    levels variables. To do so, drag *District* dimention into the lower
+    portion of the Marks area. You will now see a real scatter chart in
+    the charting area. If you hover over points, you will see all three
+    values associated with it.
 
-7.  Drag the District dimension into the lower portion of the Marks
-    area. Now your scatter chart will appear, and float your cursor over
-    each point to view details.
+#### Add Title and Caption, and Publish
 
-8.  Click Sheet 1 to rename the title of your chart.
+Give your scatter chart a meaningful title by double-clicking on default
+*Sheet 1* title above the charting area.
 
-9.  Click the Worksheet menu to Show Caption and type in data sources.
+You will normally need to provide additional information about the
+chart, such as source of the data, who built the visualization and when,
+and other important things. You can do so inside a Caption, a text block
+that accompanies your Tableau visualization. In the menu, go to
+*Worksheet &gt; Show Caption*. Double-click the Caption block that
+appeared, and edit the text.
 
-10. Recommended: Click the Standard menu (above Columns) to change view
-    to Fit Width.
+As a result, your final worksheet will look like shown in Figure
+<a href="#fig:tableau-xy-final">36</a>.
 
-![](images/05-chart/tableau-standard-fit-width.png)
+<img src="images/05-chart/tableau-xy-final.png" alt="This scatter chart is ready to be published."  />
+<p class="caption">
+Figure 36: This scatter chart is ready to be published.
+</p>
 
-1.  To publish your chart on the public web, select File &gt; Save to
-    Tableau Public As. Requires signup for a free Tableau account.
+Tip: In the dropdown above Columns section, change *Standard* to *Fit
+Width* to ensure your chart occupies 100% of available horizontal space.
 
-2.  Give your workbook a meaningful title, since this name will appear
-    in the URL for your published work on the Tableau Public server, and
-    press Save.
+To publish the chart to the web,
 
-3.  After publishing your work on the web, Tableau Public will
-    automatically open the web link in your default browser. Click Edit
-    Details to enter more information. Under Toolbar settings, see
-    checkbox to Allow your workbook and its data to be downloaded by
-    others.
+1.  Go to *File &gt; Save to Tableau Pubic As…*. A window to sign in to
+    your account will pop up. If you don’t have an account, click
+    *Create one now for free* at the bottom.
 
-![Screenshot: Toolbar settings in Tableau
-Public](images/05-chart/tableau-toolbar-settings-allow.png)
+2.  Once signed in, a window to set the workbook title will appear.
+    Change the deafult *Book1* title to something meaningful, as this
+    name will appear in the URL for your published work. Click Save.
 
-Checking this box enables the Download button at the bottom of your
-published work, which allows users to access your data and workbook, to
-see how you constructed the visualization.
+3.  Once the dashboard is saved, Tableau Public will open up a window in
+    your default browser with the visualization. In the green ribbon
+    above the chart, click *Edit Details* to edit chart’s title or
+    description. Under *Toolbar Settings*, see checkbox to *Allow others
+    to download or explore and copy this workbook and its data* (Figure
+    <a href="#fig:tableau-toolbar-settings">37</a>), and enable/disable
+    it as you think is appropriate. As advocates for open and accessible
+    data, we recommend leaving the box checked.
 
-![Screenshot: Download button in Tableau
-Public](images/05-chart/tableau-download.png)
+<img src="images/05-chart/tableau-toolbar-settings.png" alt="This scatter chart is ready to be published."  />
+<p class="caption">
+Figure 37: This scatter chart is ready to be published.
+</p>
 
-1.  To insert your Tableau Public visualization in your own website, see
-    the [Embed On Your Web](embed.html) chapter of this book, and in
-    particular, [Embed Tableau Public on your
-    Website](embed.html#tableau).
+Note: To insert your Tableau Public visualization in your own website,
+see [Embed Tableau Public on Your Website](embed-tableau.html) chapter
+of this book.
 
-2.  To see all of your published visualizations, go to your Tableau
-    Public online profile, which follows this format:
-
-<!-- -->
-
-    https://public.tableau.com/profile/USERNAME
-
-#### Learn more
-
-Combine multiple visualizations and tell stories with Tableau Public
-dashboard and story point features. See Tableau Public Resources, with
-how-to videos and sample data
-<a href="https://public.tableau.com/en-us/s/resources" class="uri">https://public.tableau.com/en-us/s/resources</a>.
+Tip: The entire portfolio of your Tableau Public visualizations lives at
+`https://public.tableau.com/profile/USERNAME`, where `USERNAME` is your
+unique username.
 
 Create Filtered Line Chart with Tableau Public
 ----------------------------------------------
 
-TODO: Decide whether to keep or not. Originally co-authored with
-Veronica. An interactive filtered line chart provides checkboxes to turn
-on/off selected data lines to make specific comparisons, since
-displaying all of the lines at once would be overwhelming. Readers can
-float their cursor over each line to identify the school name and data
-details. We created this tutorial to help a Hartford non-profit
-education advocacy group compare cohorts of student achievement levels
-over time across forty schools. You can create your own version with a
-free downloadable tool for Mac and Windows computers, Tableau Public
-<a href="https://public.tableau.com" class="uri">https://public.tableau.com</a>.
+One of the advantages of interactive visualizations over static
+(including printed) is the ability to store a lot more data, and show it
+only when required. In other words, an interactive visualization can be
+made into a data-exploration tool that won’t overwhelm the viewer at
+first sight, but will allow the viewer to “dig” and find specific data
+points and patterns.
 
-#### Try it
+In this tutorial, we will build an interactive filtered line chart with
+Tableau Public like is shown in Figure
+<a href="#fig:tableau-filtered-demo">38</a>. The filter will be a
+collection of checkboxes that allow to add/remove lines from the chart.
+Viewers can hover over each line to identify the school name and data
+attached to it.
 
-<iframe src="https://public.tableau.com/views/LineChartSample/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="530">
+We will use % Population with Internet Access by the World Bank. You can
+download the dataset
+[here](data/world-bank-internet-users-1995-2018.csv).
+
+<iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="100%" height="500px">
 </iframe>
+<p class="caption">
+Figure 38: Internet Access by Country, 1995–2018.
+</p>
 
-Or right-click the [link to view full-size in a new
-tab](https://public.tableau.com/views/LineChartSample/Sheet1?:embed=y&:display_count=yes)
+We assume that you have Tableau installed (if not, see previous
+tutorial, [Create XY Scatter Chart with Tableau
+Public](scatter-chart-tableau.html)).
 
-#### Video with step-by-step tutorial
+### Connect Text File and Build a Line Chart
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_L4u9mfE8Qo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+Open Tableau Public, and under Connect menu, choose *Text file*. Tableau
+may or may not have imported the table automatically. If you see the
+preview of the table with three columns: *Country Name*, *Year*, and
+*Percent Internet Users*, you can proceed to Sheet 1.
 
-1.  Read the [Tableau Public tool review](tableau-public) in this book,
-    then download and install the free application on a Mac or Windows
-    computer from
-    <a href="http://public.tableau.com" class="uri">http://public.tableau.com</a>.
-    Requires a free account.
+If not, drag and drop the file (under Files section in the left) to the
+*Drag tables here* area. Once you see the preview, go to Sheet 1.
 
-2.  Click link and Save file to download to your computer:
-    [sample-filtered-line-chart in CSV
-    format](data/sample-filtered-line-chart.csv). CSV means
-    comma-separated values, a generic spreadsheet format that most data
-    tools can easily open.
+Your variables will be listed under Tables in the left-hand side. The
+original variables are displayed in normal font, the *generated*
+variables will be shown in *italics* (such as *Latitude* and *Longitude*
+that Tableau guessed from the country names).
 
-Hint: When preparing your own spreadsheet, format your data so that
-Tableau Public can read it. For example, make sure that Year data is
-entered as “2007” instead of “1/1/2007”. Leave all blank spaces as-is so
-that Tableau automatically converts them to “null” values during the
-data import.
+To build a line chart,
 
-1.  In Tableau Public, click Connect to import the data file you
-    downloaded to your computer. If you downloaded a CSV file, Connect
-    to Text. Or if you downloaded an Excel file, Connect to Excel. Or
-    click “More…” to connect to Google Sheets.
+1.  Drag Year variable to **Columns**.
+2.  Drag Percent Internet Users variable to **Rows**. The variable will
+    change to `SUM(Percent Internet Users)`. You should see a single
+    line chart that sums up percentages for each year. That is
+    completely incorrect, so let’s fix it.
+3.  In order to “break” aggregation, drag and drop Country Name to the
+    Color box of the Marks card. Tableau will warn you that the
+    recommended number of colors should not exceed 20. Since we will be
+    adding filtering, we don’t care about it much. So go ahead and press
+    *Add all members* button.
+4.  Now you should see an absolute spaghetti plate of lines and colors.
+    To add filtering, drag *Country Name* to the Filters card. In the
+    Filter window, make sure all countries are checked, and click *OK*.
+5.  Right-click on *Country Name* pill in Filters card, and check Show
+    Filter (see Figure @ref(fig:tableau-filtered-show-filter.png))
+6.  You will see a list of options with all checkboxes on have appeared
+    to the right of the visualization. Click *(All)* to add/remove all
+    options, and add a few of your favorite countries to see how the
+    interactive filtering works.
 
-2.  Your data sheet should automatically appear in Tableau Public. Any
-    blanks will automatically convert to “null.”
+<img src="images/05-chart/tableau-filtered-show-filter.png" alt="Once you dragged Country Name to the Filters card, make sure the Filter is displayed." width="200" />
+<p class="caption">
+Figure 39: Once you dragged Country Name to the Filters card, make sure
+the Filter is displayed.
+</p>
 
-3.  In bottom-left corner, below the “Go to Worksheet” reminder, click
-    Sheet 1.
+### Add Title and Caption, and Publish
 
-4.  Welcome to the Tableau Public Worksheet. Although it may feel
-    overwhelming at first, the key is learning where to drag-and-drop
-    items from the data tab into the main worksheet. Dimensions are any
-    information that is qualitative or categorical, while measures are
-    quantitative information about the dimensions. In this example, we
-    are creating a line chart with two dimensions (year and school) and
-    one measure (scores).
+Replace *Sheet 1* title (above the chart) with “Internet Access by
+Country, 1995–2018” by double-clicking on it. In the menu, go to
+*Worksheet &gt; Show Caption* to add a Caption block under the chart.
+Use this space to add source of your data (World Bank), and perhaps
+credit yourself as the author of this visualization.
 
-5.  Drag-and-drop Year into the Column field.
+Change *Standard* to *Fit Width* in the dropdown above the Columns
+field.
 
-6.  Drag-and-drop Schools into the Row field.
+You may notice that the x-axis (Year) starts with 1994 and ends with
+2020, although our data is for 1995–2018. Double-click on the x-axis,
+and change **Range** from *Automatic* to *Fixed*, with the Fixed start
+of `1995`, and the Fixed end of `2018`. Close the window and see that
+the empty space on the edges has disappeared.
 
-7.  Drag-and-drop Scores into the middle of the grid.
+Once your filtered line chart looks like the one shown in Figure
+<a href="#fig:tableau-filtered-ready">40</a>, you are ready to publish.
 
-8.  Select Score (but not its drop-down menu), then go to the Analysis
-    menu and turn off Aggregated Measures. We need to do this so that
-    the numbers are displayed individually, and not aggregated by
-    default.
+<img src="images/05-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
+<p class="caption">
+Figure 40: This workbook is ready to be published.
+</p>
 
-9.  In the upper-right corner, go to the Show Me window. (If it is
-    closed, then open it.) Then select Lines (continuous).
-
-10. Initially, each School row appears at its own chart. To blend all of
-    them together into one master chart, drag School to the Marks window
-    and drop it on the Color button. All of the School lines will appear
-    in one chart, with identifying colors.
-
-11. To filter the line chart to display only selected items, go to the
-    Marks window, select the School Cohort drop-down menu, and choose
-    Filter.
-
-12. The Filter window should appear in the far-right side. (If
-    necessary, close the Show Me window to view the Filter window.)
-    Select only a few schools to display by default.
-
-13. Since users can identify schools by turning them on in the Filter
-    window, or floating their cursors to view tooltips for each line, we
-    do not need to show the color legend for each school. In
-    bottom-right School window, select the drop-down menu and choose
-    Hide Card.
-
-14. Confirm or enter text for the axes, title, and caption to describe
-    the data source.
-
-15. To publish your chart on the public web, select File &gt; Save to
-    Tableau Public As. Requires signup for a free Tableau account.
-
-16. Give your workbook a meaningful title, since this name will appear
-    in the URL for your published work on the Tableau Public server, and
-    Save.
-
-17. After publishing your work on the web, Tableau Public will
-    automatically open the web link in your default browser. Click Edit
-    Details to enter more information. Under Toolbar settings, see
-    checkbox to Allow your workbook and its data to be downloaded by
-    others.
-
-![Screenshot: Toolbar settings in Tableau
-Public](images/05-chart/tableau-toolbar-settings-allow.png)
-
-Checking this box enables the Download button at the bottom of your
-published work, which allows users to access your data and workbook, to
-see how you constructed the visualization.
-
-![Screenshot: Download button in Tableau
-Public](images/05-chart/tableau-download.png)
-
-1.  To insert your Tableau Public visualization in your own website, see
-    the [Embed On Your Web](embed) chapter of this book, and in
-    particular, [Embed Tableau Public on your Website](iframe-tableau).
-
-2.  To see all of your published visualizations, go to your Tableau
-    Public online profile, which follows this format:
-
-<!-- -->
-
-    https://public.tableau.com/profile/USERNAME
-
-#### Learn more
-
-Combine multiple visualizations and tell stories with Tableau Public
-dashboard and story point features. See Tableau Public Resources, with
-how-to videos and sample data
-<a href="https://public.tableau.com/en-us/s/resources" class="uri">https://public.tableau.com/en-us/s/resources</a>.
-
-#### See also
-
--   Stephanie D. H. Evergreen, Effective Data Visualization: The Right
-    Chart for the Right Data, (Los Angeles: SAGE Publications,
-    Inc, 2016)
-
--   Stephen Few, Now You See It: Simple Visualization Techniques for
-    Quantitative Analysis, (Oakland, Calif: Analytics Press, 2009)
-
--   Stephen Few, “Save the Pies for Dessert \[critique of pie charts\],”
-    Visual Business Intelligence Newsletter, 2007, 1–14,
-    <a href="http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf" class="uri">http://www.perceptualedge.com/articles/visual_business_intelligence/save_the_pies_for_dessert.pdf</a>
-
--   Stephen Few, Show Me the Numbers: Designing Tables and Graphs to
-    Enlighten, Second edition (Burlingame, CA: Analytics Press, 2012)
-
--   Drew Gourley, How to Use Data Visualization to Win Over Your
-    Audience, (Visage and Hubspot, June 2015),
-    <a href="https://visage.co/content/data-viz-win-audience" class="uri">https://visage.co/content/data-viz-win-audience</a>
-
--   Cole Nussbaumer Knaflic, Storytelling with Data: A Data
-    Visualization Guide for Business Professionals, (Hoboken, New
-    Jersey: Wiley, 2015)
-
--   Cole Nussbaumer Knalfic, “An Updated Post on Pies,” StoryTelling
-    with Data, February 16, 2017,
-    <a href="http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies" class="uri">http://www.storytellingwithdata.com/blog/2017/1/10/an-updated-post-on-pies</a>
-
--   Wayne Lytle, Viz-O-Matic: The Dangers of Glitziness and Other
-    Visualization Faux Pas, 1993 video shared on YouTube,
-    <a href="https://www.youtube.com/watch?v=fP-7rhb-qMg" class="uri">https://www.youtube.com/watch?v=fP-7rhb-qMg</a>
-
--   Isabel Meirelles, Design for Information: An Introduction to the
-    Histories, Theories, and Best Practices Behind Effective Information
-    Visualizations (Rockport Publishers, 2013),
-    <a href="http://isabelmeirelles.com/book-design-for-information/" class="uri">http://isabelmeirelles.com/book-design-for-information/</a>
-
--   Tableau, Visual Analysis Best Practices: A Guidebook, n.d.,
-    <a href="http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf" class="uri">http://www.tableau.com/sites/default/files/media/whitepaper_visual-analysis-guidebook_0.pdf</a>.
-
--   Edward R. Tufte, Beautiful Evidence (Graphics Press, 2006)
-
--   “WTF Visualizations: Visualizations That Make No Sense,” 2017,
-    <a href="http://viz.wtf" class="uri">http://viz.wtf</a>.
-
--   xkcd, “University Website,” accessed February 12, 2017,
-    <a href="https://xkcd.com/773/" class="uri">https://xkcd.com/773/</a>
-
--   Nathan Yau, “One Dataset, Visualized 25 Ways,” FlowingData, January
-    24, 2017,
-    <a href="http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/" class="uri">http://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/</a>
-
--   Nathan Yau, “Best Data Visualization Projects of 2016,” FlowingData,
-    December 29, 2016,
-    <a href="http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/" class="uri">http://flowingdata.com/2016/12/29/best-data-visualization-projects-of-2016/</a>
+To publish the filtered line chart to the web, go to *File &gt; Save to
+Tableau Public As…*. You may be prompted with the window to log in to
+your account (or create one if you don’t have it yet). The next steps
+are fairly self-explanatory, and you can consult [the previous
+tutorial](scatter-chart-tableau.html) for more information on
+publishing.
 
 <!--chapter:end:05-chart.Rmd-->
 
@@ -4637,12 +4631,12 @@ Here’s an overview of the key steps we’ll cover in this section:
 
 Your goal is to create your own version of this simple interactive map,
 with your edits, as shown in Figure
-<a href="#fig:leaflet-simple">20</a>.
+<a href="#fig:leaflet-simple">41</a>.
 
 <iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 20: Create your own version of this [simple interactive Leaflet
+Figure 41: Create your own version of this [simple interactive Leaflet
 map](https://handsondataviz.github.io/leaflet-map-simple/).
 </p>
 
@@ -4661,11 +4655,11 @@ wisest choice for a username, if `BrownieChef` is also available.
     <a href="https://github.com/HandsOnDataViz/leaflet-map-simple" class="uri">https://github.com/HandsOnDataViz/leaflet-map-simple</a>
 
 2.  To create your own copy of our template, click the Fork button as
-    shown in Figure <a href="#fig:leaflet-simple-fork">21</a>.
+    shown in Figure <a href="#fig:leaflet-simple-fork">42</a>.
 
 <img src="images/08-github/leaflet-simple-fork.png" alt="Click the Fork button to make your own copy of the code template."  />
 <p class="caption">
-Figure 21: Click the Fork button to make your own copy of the code
+Figure 42: Click the Fork button to make your own copy of the code
 template.
 </p>
 
@@ -4687,11 +4681,11 @@ to create a second version, go to the [Create a New Repo and Upload
 Files on GitHub](create-repo.html) section of this chapter.
 
 1.  Click on the `index.html` file to view the code, as shown in Figure
-    <a href="#fig:leaflet-simple-index">22</a>.
+    <a href="#fig:leaflet-simple-index">43</a>.
 
 <img src="images/08-github/leaflet-simple-index.png" alt="Click the Index file to view the code."  />
 <p class="caption">
-Figure 22: Click the Index file to view the code.
+Figure 43: Click the Index file to view the code.
 </p>
 
 In case this is the first time you’re looking at computer code, we’ve
@@ -4708,11 +4702,11 @@ want to modify a few lines further below.
 
 1.  To edit the code, click on the the pencil symbol in the upper-right
     corner, as shown in Figure
-    <a href="#fig:leaflet-simple-edit">23</a>.
+    <a href="#fig:leaflet-simple-edit">44</a>.
 
 <img src="images/08-github/leaflet-simple-edit.png" alt="Click the pencil button to edit the code."  />
 <p class="caption">
-Figure 23: Click the pencil button to edit the code.
+Figure 44: Click the pencil button to edit the code.
 </p>
 
 Let’s start by making one simple change to prove to everyone that you’re
@@ -4726,11 +4720,11 @@ HTML division tag block around lines 21-23.
 
 2.  To save your edit, scroll to the bottom of the page and click the
     green `Commit Changes` button, as shown in Figure
-    <a href="#fig:leaflet-simple-commit">24</a>.
+    <a href="#fig:leaflet-simple-commit">45</a>.
 
 <img src="images/08-github/leaflet-simple-commit.png" alt="Click the green Commit Changes button to save your edits."  />
 <p class="caption">
-Figure 24: Click the green Commit Changes button to save your edits.
+Figure 45: Click the green Commit Changes button to save your edits.
 </p>
 
 In the language of coders, we “commit” our changes in the same way that
@@ -4757,18 +4751,18 @@ host it online.
 
 1.  To access GitHub Pages, scroll to the top of your repo page and
     click the Settings button as shown in Figure
-    <a href="#fig:leaflet-simple-settings">25</a>.
+    <a href="#fig:leaflet-simple-settings">46</a>.
 
 <img src="images/08-github/leaflet-simple-settings.png" alt="Click the Settings button to access GitHub Pages and publish your work on the web."  />
 <p class="caption">
-Figure 25: Click the Settings button to access GitHub Pages and publish
+Figure 46: Click the Settings button to access GitHub Pages and publish
 your work on the web.
 </p>
 
 1.  In the Settings screen, scroll down to the GitHub Pages area, and
     use the drop-down menu to change Source from `None` to
     `Master Branch`, as shown in Figure
-    <a href="#fig:leaflet-github-pages">26</a>. There is no *commit* or
+    <a href="#fig:leaflet-github-pages">47</a>. There is no *commit* or
     *save* button here, and the change will happen automatically. This
     step tells GitHub to publish a live version of your map on the
     public web, where anyone can access it in their browser, if they
@@ -4777,7 +4771,7 @@ your work on the web.
 <iframe src="images/08-github/leaflet-github-pages.gif" width="100%" height="325px">
 </iframe>
 <p class="caption">
-Figure 26: Under GitHub Pages, switch the source from None to Master as
+Figure 47: Under GitHub Pages, switch the source from None to Master as
 shown in this [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages.gif).
 </p>
@@ -4787,12 +4781,12 @@ GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet
 1.  Scroll back down to the GitHub Pages area to see the web address
     where your live map has been published online, and right-click it to
     open in a new browser tab, as shown in Figure
-    <a href="#fig:leaflet-github-pages2">27</a>.
+    <a href="#fig:leaflet-github-pages2">48</a>.
 
 <iframe src="images/08-github/leaflet-github-pages2.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
-Figure 27: Under GitHub Pages, double-click your published map link as
+Figure 48: Under GitHub Pages, double-click your published map link as
 shown in this [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages2.gif).
 </p>
@@ -4807,8 +4801,8 @@ GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet
 
 Tip: If your map does *not* appear right away, wait up to 30 seconds for
 GitHub Pages to finish processing, then do a “hard” browser refresh to
-contact the web server again. **TODO:** Add hard refresh instructions,
-or link them here if shown earlier in the book.
+contact the web server again. **TODO: Link to hard-refresh instructions
+in Fix section in this chapter**
 
 Note: GitHub creates two different types of web addresses, where you
 should replace `YourUserName` and `YourRepoName` with your own:
@@ -4830,11 +4824,11 @@ that they point to *your* live map, in place of *our* live map.
 
 1.  Go back to your first browser tab with your GitHub repo, and click
     on the repo title to return to its home page, as shown in Figure
-    <a href="#fig:leaflet-click-title">28</a>.
+    <a href="#fig:leaflet-click-title">49</a>.
 
 <img src="images/08-github/leaflet-click-title.png" alt="On your first browser tab, click the repo title."  />
 <p class="caption">
-Figure 28: On your first browser tab, click the repo title.
+Figure 49: On your first browser tab, click the repo title.
 </p>
 
 If you can’t find your first browser tab, you can retype your repo home
@@ -4849,11 +4843,11 @@ page address in this format, and insert your GitHub username:
     click the pencil symbol to edit it, paste your link under the label
     “(replace with link to your site)”, and scroll down to commit the
     change. See both steps in Figure
-    <a href="#fig:leaflet-paste-links">29</a>.
+    <a href="#fig:leaflet-paste-links">50</a>.
 
 <img src="images/08-github/leaflet-paste-links.png" alt="Paste the link to your live map at the top of your repo page, and also in your README page."  />
 <p class="caption">
-Figure 29: Paste the link to your live map at the top of your repo page,
+Figure 50: Paste the link to your live map at the top of your repo page,
 and also in your README page.
 </p>
 
@@ -4949,21 +4943,21 @@ template](https://github.com/HandsOnDataViz/leaflet-map-simple)
 described in the prior section. If you attempt to create a second fork,
 GitHub will “gray out” the Fork button and display an error message
 stating that you “Cannot fork because you own this repository…” as shown
-in Figure <a href="#fig:repo-cannot-fork">30</a>. There’s a good reason
+in Figure <a href="#fig:repo-cannot-fork">51</a>. There’s a good reason
 for GitHub’s one-fork rule: it’s designed to prevent you from
 accidentally creating a second copy, with the same name as your first
 fork, which would overwrite and erase your previous work.
 
 <img src="images/08-github/repo-cannot-fork.png" alt="GitHub's one-fork rule prevents you from creating a second fork of a repo."  />
 <p class="caption">
-Figure 30: GitHub’s one-fork rule prevents you from creating a second
+Figure 51: GitHub’s one-fork rule prevents you from creating a second
 fork of a repo.
 </p>
 
 So how do you create a second copy of a GitHub repo? We’ll show you two
 solutions. The first solution, if it exists in your case, is easy. Look
 for a green “Use this template” button in the upper-right screen, as
-shown in Figure <a href="#fig:repo-template-download">31</a>, and if you
+shown in Figure <a href="#fig:repo-template-download">52</a>, and if you
 see it, click it. GitHub will ask you to create a brand-new repository
 name for the second copy of this template, to avoid confusing it with
 the first copy you made. The “Use this template” button will appear only
@@ -4976,7 +4970,7 @@ repos.
 green”Use this template" button appears, click it to work around
 GitHub’s one-fork rule." /&gt;
 <p class="caption">
-Figure 31: If a green “Use this template” button appears, click it to
+Figure 52: If a green “Use this template” button appears, click it to
 work around GitHub’s one-fork rule.
 </p>
 
@@ -4998,7 +4992,7 @@ created the repo didn’t set it up that way.
 
 1.  Click on the “Clone or download” gray drop-down menu button on the
     right-side of the screen, as shown in Figure
-    <a href="#fig:repo-template-download">31</a>, and select “Download
+    <a href="#fig:repo-template-download">52</a>, and select “Download
     ZIP.” Your browser will download a zipped compressed folder with the
     contents of the repo to your local computer, and it may ask you
     where you wish to save it. Decide on a location and click OK.
@@ -5013,12 +5007,12 @@ created the repo didn’t set it up that way.
 3.  Go back to your GitHub account in your web browser, click on the “+”
     plus symbol in the upper-right corner of your account, and select
     “New repository”, as shown in Figure
-    <a href="#fig:repo-create-new">32</a>.
+    <a href="#fig:repo-create-new">53</a>.
 
 &lt;img src=“images/08-github/repo-create-new.png” alt=“Click the”+"
 plus symbol in upper-right corner to create a new repo." /&gt;
 <p class="caption">
-Figure 32: Click the “+” plus symbol in upper-right corner to create a
+Figure 53: Click the “+” plus symbol in upper-right corner to create a
 new repo.
 </p>
 
@@ -5031,13 +5025,13 @@ Check the box to “Initialize this repository with a README” to simplify
 the next steps. Also, “Add a license” that matches the code you plan to
 upload, which in this case is “MIT License.” Other fields are optional.
 Click the green “Create Repository” button at the bottom when done, as
-shown in Figure <a href="#fig:repo-create-options">33</a>.
+shown in Figure <a href="#fig:repo-create-options">54</a>.
 
 &lt;img src=“images/08-github/repo-create-options.png” alt=“After naming
 your new repo, check the box to”Initialize this repo with a README" and
 “Add a license” to match the code (select “MIT”)." /&gt;
 <p class="caption">
-Figure 33: After naming your new repo, check the box to “Initialize this
+Figure 54: After naming your new repo, check the box to “Initialize this
 repo with a README” and “Add a license” to match the code (select
 “MIT”).
 </p>
@@ -5047,23 +5041,23 @@ Your new repo will have a web address similar to
 
 1.  On your new repo home page, click the Upload Files button, near the
     middle of the screen, as shown in Figure
-    <a href="#fig:repo-upload-files">34</a>.
+    <a href="#fig:repo-upload-files">55</a>.
 
 <img src="images/08-github/repo-upload-files.png" alt="Click the Upload Files button."  />
 <p class="caption">
-Figure 34: Click the Upload Files button.
+Figure 55: Click the Upload Files button.
 </p>
 
 1.  Upload the `index.html` file that you previously downloaded to your
     local computer by dragging-and-dropping it into the upload area of
     your GitHub repo in your browser, as shown in Figure
-    <a href="#fig:repo-drag-index">35</a>. Do not upload `LICENSE` or
+    <a href="#fig:repo-drag-index">56</a>. Do not upload `LICENSE` or
     `README.md` because your new repo already contains those two files.
     Scroll down to click the green Commit Changes button.
 
 <img src="images/08-github/repo-drag-index.png" alt="Drag-and-drop the file to the upload screen."  />
 <p class="caption">
-Figure 35: Drag-and-drop the file to the upload screen.
+Figure 56: Drag-and-drop the file to the upload screen.
 </p>
 
 When the upload is complete, your repo should contain three files, now
@@ -5084,13 +5078,13 @@ chapter.
     In the repo screen of your browser, click the top-right Settings
     button, scroll all the way down to the “Danger Zone,” and click
     “Delete this repository,” as shown in Figure
-    <a href="#fig:repo-delete">36</a>. GitHub will ask you to type in
+    <a href="#fig:repo-delete">57</a>. GitHub will ask you to type in
     your username and repo name to ensure that you really want to delete
     the repo, and are not a drunken brownie chef.
 
 <img src="images/08-github/repo-delete.png" alt="After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm."  />
 <p class="caption">
-Figure 36: After clicking the Delete Repository button, GitHub will ask
+Figure 57: After clicking the Delete Repository button, GitHub will ask
 you to type your username and repo name to confirm.
 </p>
 
@@ -5138,7 +5132,7 @@ push your commits back up to GitHub.
     and Host a Simple Leaflet Map Template](fork-leaflet.html) section
     of this chapter. Click the “Clone or download” button on the right
     side, and select “Open in Desktop,” as shown in Figure
-    <a href="#fig:desktop-open">37</a>. The next screen will show a link
+    <a href="#fig:desktop-open">58</a>. The next screen will show a link
     to the GitHub Desktop web page, and you should download and install
     the application.
 
@@ -5146,7 +5140,7 @@ push your commits back up to GitHub.
 repo, click”Clone or download" and “Open in Desktop” to download and
 install GitHub Desktop." /&gt;
 <p class="caption">
-Figure 37: In your GitHub web repo, click “Clone or download” and “Open
+Figure 58: In your GitHub web repo, click “Clone or download” and “Open
 in Desktop” to download and install GitHub Desktop.
 </p>
 
@@ -5154,7 +5148,7 @@ in Desktop” to download and install GitHub Desktop.
     connect it to the GitHub web account you previously created in this
     chapter. On the welcome screen, click the blue “Sign in to
     GitHub.com” button, as shown in Figure
-    <a href="#fig:desktop-signin">38</a>, and login with your GitHub
+    <a href="#fig:desktop-signin">59</a>, and login with your GitHub
     username and password. On the next screen, GitHub will ask you to
     click the green “Authorize desktop” button to confirm that you wish
     to connect to your account.
@@ -5163,7 +5157,7 @@ in Desktop” to download and install GitHub Desktop.
 blue”Sign in to GitHub.com" button to link GitHub Desktop to your GitHub
 account." /&gt;
 <p class="caption">
-Figure 38: Click the blue “Sign in to GitHub.com” button to link GitHub
+Figure 59: Click the blue “Sign in to GitHub.com” button to link GitHub
 Desktop to your GitHub account.
 </p>
 
@@ -5172,11 +5166,11 @@ Desktop to your GitHub account.
 1.  In the next setup screen, GitHub Desktop asks you to configure Git,
     the underlying software that runs GitHub. Confirm that it displays
     your username and click Continue, as shown in Figure
-    <a href="#fig:desktop-configure">39</a>.
+    <a href="#fig:desktop-configure">60</a>.
 
 <img src="images/08-github/desktop-configure.png" alt="Click the Continue button to authorize GitHub Desktop to send commits to your GitHub account."  />
 <p class="caption">
-Figure 39: Click the Continue button to authorize GitHub Desktop to send
+Figure 60: Click the Continue button to authorize GitHub Desktop to send
 commits to your GitHub account.
 </p>
 
@@ -5184,26 +5178,26 @@ commits to your GitHub account.
     “Your Repositories” on the right side to select your
     `leaflet-map-sample`, and further below click the blue button to
     “Clone” it to your local computer, as shown in Figure
-    <a href="#fig:desktop-start">40</a>.
+    <a href="#fig:desktop-start">61</a>.
 
 &lt;img src=“images/08-github/desktop-start.png” alt=“Select
 your”leaflet-map-simple" repo and click the Clone button to copy it to
 your local computer." /&gt;
 <p class="caption">
-Figure 40: Select your “leaflet-map-simple” repo and click the Clone
+Figure 61: Select your “leaflet-map-simple” repo and click the Clone
 button to copy it to your local computer.
 </p>
 
 1.  When you clone a repo, GitHub Desktop asks you to select the Local
     Path, meaning the location where you wish to store a copy of your
     GitHub repo on your local computer, as shown in Figure
-    <a href="#fig:desktop-clone-path">41</a>. Before you click the Clone
+    <a href="#fig:desktop-clone-path">62</a>. Before you click the Clone
     button, remember the path to this location, since you’ll need to
     find it later.
 
 <img src="images/08-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click Clone."  />
 <p class="caption">
-Figure 41: Select the Local Path where your repo will be stored on your
+Figure 62: Select the Local Path where your repo will be stored on your
 computer, then click Clone.
 </p>
 
@@ -5211,25 +5205,25 @@ computer, then click Clone.
     use this fork?” Select the default entry “To contribute to the
     parent project,” which means you plan to send your edits back to
     your GitHub web account, and click Continue, as shown in Figure
-    <a href="#fig:desktop-fork">42</a>.
+    <a href="#fig:desktop-fork">63</a>.
 
 &lt;img src=“images/08-github/desktop-fork.png” alt=“If asked how you
 plan to use this fork, select the default”To contribute to the parent
 project" and click Continue." /&gt;
 <p class="caption">
-Figure 42: If asked how you plan to use this fork, select the default
+Figure 63: If asked how you plan to use this fork, select the default
 “To contribute to the parent project” and click Continue.
 </p>
 
 1.  Now you have copies of your GitHub repo in two places—in your GitHub
     web account and on your local computer—as shown in Figure
-    <a href="#fig:desktop-finder">43</a>. Your screen may look
+    <a href="#fig:desktop-finder">64</a>. Your screen may look
     different, depending on whether you use Windows or Mac, and the
     Local Path you selected to store your files.
 
 <img src="images/08-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub web account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different."  />
 <p class="caption">
-Figure 43: Now you have two copies of your repo: in your GitHub web
+Figure 64: Now you have two copies of your repo: in your GitHub web
 account (on the left) and on your local computer (on the right, as shown
 in the Mac Finder). Windows screens will look different.
 </p>
@@ -5238,20 +5232,20 @@ in the Mac Finder). Windows screens will look different.
     install the Atom Editor application](https://atom.io). Then go to
     your GitHub Desktop screen, confirm that the Current Repository is
     `leaflet-map-simple`, and click the “Open in Atom” button as shown
-    in Figure <a href="#fig:desktop-atom">44</a>.
+    in Figure <a href="#fig:desktop-atom">65</a>.
 
 &lt;img src=“images/08-github/desktop-atom.png” alt=“In GitHub Desktop,
 confirm the Current Repo and click the”Open in Atom" button to edit the
 code." /&gt;
 <p class="caption">
-Figure 44: In GitHub Desktop, confirm the Current Repo and click the
+Figure 65: In GitHub Desktop, confirm the Current Repo and click the
 “Open in Atom” button to edit the code.
 </p>
 
 1.  Since Atom Editor is integrated with GitHub Desktop, it opens up
     your entire repo as a “project,” where you can click files in the
     left window to open as new tabs to view and edit code, as shown in
-    Figure <a href="#fig:atom-project">45</a>. Open your `index.html`
+    Figure <a href="#fig:atom-project">66</a>. Open your `index.html`
     file and edit the title of your map, around line 22, then save your
     work.
 
@@ -5259,20 +5253,20 @@ Figure 44: In GitHub Desktop, confirm the Current Repo and click the
 your repo as a”project," where you can click files to view code. Edit
 your map title." /&gt;
 <p class="caption">
-Figure 45: Atom Editor opens your repo as a “project,” where you can
+Figure 66: Atom Editor opens your repo as a “project,” where you can
 click files to view code. Edit your map title.
 </p>
 
 1.  After saving your code edit, it’s a good habit to clean up your Atom
     Editor workspace. Right-click on the current Project and select
     Remove Project Folder in the menu, as shown in Figure
-    <a href="#fig:atom-remove-project">46</a>. Next time you open up
+    <a href="#fig:atom-remove-project">67</a>. Next time you open up
     Atom Editor, you can right-click to Add Project Folder, and choose
     any GitHub repo that you have copied to your local computer.
 
 <img src="images/08-github/atom-remove-project.png" alt="To clean up your Atom Editor workspace, right-click to Remove Project Folder."  />
 <p class="caption">
-Figure 46: To clean up your Atom Editor workspace, right-click to Remove
+Figure 67: To clean up your Atom Editor workspace, right-click to Remove
 Project Folder.
 </p>
 
@@ -5281,11 +5275,11 @@ Project Folder.
     location where you saved the repo on your local computer, and
     right-click the `index.html` file, select Open With, and choose your
     preferred web browser, as shown in Figure
-    <a href="#fig:finder-open-with">47</a>.
+    <a href="#fig:finder-open-with">68</a>.
 
 <img src="images/08-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
 <p class="caption">
-Figure 47: Right-click the index.html file on your local computer and
+Figure 68: Right-click the index.html file on your local computer and
 open with a browser to check your edits.
 </p>
 
@@ -5310,12 +5304,12 @@ Desktop.
     track of your work.) Second, click the blue “Push origin” button to
     transfer those edits to the parent copy of your repo on your GitHub
     web account. Both steps are shown in Figure
-    <a href="#fig:desktop-commit-push">48</a>.
+    <a href="#fig:desktop-commit-push">69</a>.
 
 <iframe src="images/08-github/desktop-commit-push.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 48: In this two-step process, click “Commit to Master,” then
+Figure 69: In this two-step process, click “Commit to Master,” then
 click “Push origin” to save and copy your edits from your local computer
 to your GitHub web account, as shown in this [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/desktop-commit-push.gif).
@@ -5352,11 +5346,11 @@ his commits back to GitHub as well. Both of us see the commits that each
 other made, line-by-line in green and red (showing additions and
 deletions), by selecting the GitHub repo “Code” tab and clicking on one
 of our commits, as shown in Figure
-<a href="#fig:compare-commits">49</a>.
+<a href="#fig:compare-commits">70</a>.
 
 <img src="images/08-github/compare-commits.png" alt="Drag-and-drop the file to the upload screen."  />
 <p class="caption">
-Figure 49: Drag-and-drop the file to the upload screen.
+Figure 70: Drag-and-drop the file to the upload screen.
 </p>
 
 Although GitHub does not operate like Google Documents, which displays
@@ -5386,6 +5380,8 @@ GitHub and coding errors that you might encounter.
 
 Fix Common GitHub and Code Errors
 ---------------------------------
+
+**TODO: Update this entire section**
 
 What happens if you cannot view your published GitHub repository, or if
 your code breaks and no longer displays what it was designed to show?
@@ -5448,7 +5444,8 @@ the same location.
     published web page, in the format shown above.
 -   Be patient. During busy periods on GitHub, it may take up to 1
     minute for new content to appear in your browser.
--   Do a “hard refresh” to [bypass any saved content in your browser
+-   **MOVE UP** Do a “hard refresh” to [bypass any saved content in your
+    browser
     cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
     -   Ctrl + F5 (most Windows-Linux browsers)
     -   Command + Shift + R (Chrome or Firefox for Mac)
@@ -6271,7 +6268,7 @@ GitHub](create-repo.html) chapter in this book.
 <iframe src="images/10-leaflet/lmwgs-1-fork-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 50: Screencast: Fork
+Figure 71: Screencast: Fork
 </p>
 
 1.  Scroll up to the top, and click on your repo name to go back to its
@@ -6305,7 +6302,7 @@ Figure 50: Screencast: Fork
 <iframe src="images/10-leaflet/lmwgs-2-make-copy-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 51: Screencast: Share Google Sheet
+Figure 72: Screencast: Share Google Sheet
 </p>
 
 1.  File &gt; Publish the Link to your Google Sheet to the public web,
@@ -6338,7 +6335,7 @@ URL](images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 <iframe src="images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 52: Screencast: Copy Google Sheet URL and paste into GitHub code
+Figure 73: Screencast: Copy Google Sheet URL and paste into GitHub code
 </p>
 
 1.  Next, let’s paste your Google Sheet URL in a second place to keep
@@ -7256,7 +7253,7 @@ results in the Found and Quality columns.
 <iframe src="images/11-transform/google-sheets-geocoder-census-google.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 53: Screencast: Google Sheets Geocoder: US Census or Google
+Figure 74: Screencast: Google Sheets Geocoder: US Census or Google
 </p>
 
 #### Google Sheets Geocoder: US Census Geographies
@@ -7273,7 +7270,7 @@ Figure 53: Screencast: Google Sheets Geocoder: US Census or Google
 <iframe src="images/11-transform/google-sheets-geocoder-census-geographies.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 54: Screencast: Google Sheets Geocoder: US Census Geographies
+Figure 75: Screencast: Google Sheets Geocoder: US Census Geographies
 </p>
 
 ##### About US Census 15-character GeoID
@@ -7683,7 +7680,7 @@ and Table tabs to view or edit the data.
 <iframe src="images/11-transform/dataviz-geojsonio-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 55: Screencast: GeoJson.io
+Figure 76: Screencast: GeoJson.io
 </p>
 
 Select the Save menu and export into GeoJSON format.
@@ -7839,7 +7836,7 @@ Export your outline map.
 <iframe src="images/11-transform/mapshaper-dissolve-simple-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 57: Screencast: Mapshaper dissolve
+Figure 78: Screencast: Mapshaper dissolve
 </p>
 
 #### Clip a map to match an outline layer
@@ -7895,7 +7892,7 @@ Refresh the browser to start a new session in
 <iframe src="images/11-transform/mapshaper-clip-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 58: Screencast: Mapshaper clip
+Figure 79: Screencast: Mapshaper clip
 </p>
 
 #### Remove unwanted data columns
@@ -8840,10 +8837,10 @@ this [bad example](#style-guide).
 To cross-reference figures and tables, and display their auto-number and
 allow readers to jump there, write a call-out with a Bookdown reference
 to a code-chunk label, such as
-`See Figure <a href="#fig:sample-map">60</a>` or
+`See Figure <a href="#fig:sample-map">81</a>` or
 `See Table <a href="#tab:left-table">1</a>`. Demos:
 
--   See Figure <a href="#fig:tiger">59</a>.
+-   See Figure <a href="#fig:tiger">80</a>.
 -   See Table <a href="#tab:left-table">1</a>.
 
 Cross-reference interactivity varies by output:
@@ -8964,11 +8961,11 @@ chapter](https://bookdown.org/yihui/bookdown/figures.html).
 
 ### Demo: R code-chunk for static image for HTML and PDF
 
-…as shown in Figure <a href="#fig:tiger">59</a>.
+…as shown in Figure <a href="#fig:tiger">80</a>.
 
 <img src="images/15-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
-Figure 59: Caption here. Markdown embedded links are acceptable.
+Figure 80: Caption here. Markdown embedded links are acceptable.
 </p>
 
 R code-chunks allow more complex conditional formatting, where an
@@ -8981,24 +8978,24 @@ add a line in a `custom-scripts.html` file.
 
 ### Demo: R code-chunk for iframe in HTML and static image in PDF
 
-…as shown in Figure <a href="#fig:sample-map">60</a>.
+…as shown in Figure <a href="#fig:sample-map">81</a>.
 
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="100%" height="600px">
 </iframe>
 <p class="caption">
-Figure 60: Caption here, and add embedded link to explore the
+Figure 81: Caption here, and add embedded link to explore the
 [full-screen interactive
 map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 </p>
 
 ### Demo: R code-chunk for animated GIF in HTML and static image in PDF
 
-…as shown in Figure <a href="#fig:sheets-option-drag">61</a>.
+…as shown in Figure <a href="#fig:sheets-option-drag">82</a>.
 
 <iframe src="images/15-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
-Figure 61: Caption here, with embedded link to GitHub repo, not GitHub
+Figure 82: Caption here, with embedded link to GitHub repo, not GitHub
 Pages [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheets-option-drag.gif).
 </p>
@@ -9007,12 +9004,12 @@ GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheet
 
 Be sure to use the *embed* link from the YouTube *share* button.
 
-…as shown in the video <a href="#fig:video-sample">62</a>.
+…as shown in the video <a href="#fig:video-sample">83</a>.
 
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 62: Caption here, with embedded link to the [YouTube
+Figure 83: Caption here, with embedded link to the [YouTube
 video](https://youtu.be/-nGdrzMuUnI).
 </p>
 
@@ -9021,7 +9018,7 @@ video](https://youtu.be/-nGdrzMuUnI).
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 63: Caption and video **only** appear in the HTML version, with
+Figure 84: Caption and video **only** appear in the HTML version, with
 embedded link to the [YouTube video](https://youtu.be/w6dQ-RIQ5bc). Note
 that using this will change figure-numbering between HTML vs PDF
 versions.

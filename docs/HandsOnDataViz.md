@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 15 Jun 2020
+updated on: 16 Jun 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -116,6 +116,14 @@ generously provided by the [Community Learning
 Initiative](https://cher.trincoll.edu/community-learning/) and
 [Information Technology Services](https://www.trincoll.edu/LITC/its/) at
 [Trinity College in Hartford, Connecticut](http://www.trincoll.edu).
+
+Thanks to many individuals and organizations for generously making time
+to help us learn many of the skills that we teach in this book: Alvin
+Chang and Andrew Ba Tran, who tutored and shared their Leaflet map
+templates while at *The Connecticut Mirror*; Patrick Murray-John,
+formerly at the Roy Rosenzweig Center for History and New Media, who
+clued us into being *code-curious*, and many others at The Humanities
+and Technology Camp (THATCamp) conference series…
 
 What is Data Visualization?
 ---------------------------
@@ -4531,24 +4539,27 @@ Edit and Host Code with GitHub
 ==============================
 
 In the first half of this book, you created interactive charts and maps
-on platforms that feature drag-and-drop tools, such as Google Sheets and
-Tableau Public. These platforms are great for beginners, but their
-pre-set tools limit your options for designing and customizing your
-visualizations, and they also require you to depend on their web servers
-to host your work.
+on free drag-and-drop tool platforms created by companies such as Google
+and Tableau. These platforms are great for beginners, but their pre-set
+tools limit your options for designing and customizing your
+visualizations, and they also require you to depend upon their web
+servers and terms of service to host your data and work products. If
+these companies change their tools or terms, you have little choice in
+the matter, other than deleting your account and switching services,
+which means that your online charts and maps would appear to audiences
+as dead links.
 
-In the second half of this book, get ready to make a big leap, and we’ll
-help you along the way. You will learn how to copy, edit, and host code
-templates—meaning pre-written software instructions that create data
-visualizations—which you can modify. With templates, you’ll learn how to
-make simple edits to insert your data, customize its appearance, and
-display it on the web on a site that you control. No prior coding
-experience is required, but it helps if you’re *code-curious* and
-willing to experiment with your computer.
+In the second half of this book, get ready to make a big leap—and we’ll
+help you through every step—by learning how to copy, edit, and host code
+templates. These templates are pre-written software instructions that
+allow you to upload your data, customize its appearance, and display
+your interactive charts and maps on a web site that you control. No
+prior coding experience is required, but it helps if you’re
+*code-curious* and willing to experiment with your computer.
 
 Code templates are similar to cookbook recipes. Imagine you’re in your
-kitchen, looking at our favorite recipe that we’ve publicly shared to
-make brownies (yum!), which begins with these three steps:
+kitchen, looking at our favorite recipe we’ve publicly shared to make
+brownies (yum!), which begins with these three steps:
 `Melt butter, Add sugar, Mix in cocoa.` Recipes are templates, meaning
 that you can follow them precisely, or modify them to suit your tastes.
 Imagine that you copy our recipe (or “fork” it, as coders say) and
@@ -4557,7 +4568,7 @@ recipe, now there will be two versions of instructions, to suit both
 those who strongly prefer or dislike nuts in their brownies. (We do not
 take sides in this deeply polarizing dispute.)
 
-<!-- TODO: decide whether to convert the text description of recipes to visual images of two hand-written recipe index cards, one forked from the other, with walnuts added? -->
+<!-- TODO: decide whether to supplement the text description of recipes with visual images of two hand-written recipe index cards, one forked from the other, with walnuts added? -->
 
 Currently, the most popular cookbook among coders is
 [GitHub](https://github.com), with more than 40 million users and over
@@ -4583,6 +4594,21 @@ traditional *copyright* that favors private ownership. When you fork a
 copy of someone’s open-source code on GitHub, look at the type of
 license they’ve chosen (if any), keep it in your version, and respect
 its terms.
+
+To be clear, the GitHub platform is also owned by a large company
+(Microsoft purchased it in 2018), and when using it to share or host
+code, you’re also dependent on its tools and terms. But the magic of
+code templates is that you can migrate and host your work anywhere on
+the web. You could move to a competing repository-hosting service such
+as [GitLab](http://gitlab.com), or purchase your own domain name and
+server space through one of many web hosting services. Or you can choose
+a hybrid option, such as hosting your code on GitHub and choosing its
+custom domain option, to display it under a domain name that you’ve
+purchased, just like the web version of this book is hosted on GitHub
+under our domain name,
+<a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
+If we choose to move the code away from GitHub, we have the option to
+repoint our domain to a different web host.
 
 In the next section of this chapter, we will introduce basic steps to
 [fork, edit, and host a simple Leaflet map code template on
@@ -4673,7 +4699,9 @@ License, which allows anyone to copy and modify the code as they wish;
 which we’ll come back to later; `index.html` is the key file that
 contains the map code.
 
-<!-- TODO: Decide if we should show generic web address formatting as `YourUserName` or `https://USERNAME.github.io/REPOSITORY` -->
+<!-- TODO: Question: What’s the best way to show generic GitHub web address formatting?
+a)  https://YourUserName.github.io/YourRepoName
+b) https://USERNAME.github.io/REPOSITORY     -->
 
 Tip: By design, GitHub allows you to fork a repo *one time*, so that you
 don’t accidentally create two versions with the same name. If you wish
@@ -4776,7 +4804,7 @@ shown in this [animated
 GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages.gif).
 </p>
 
-<!-- TODO: Jack can redo the animated GIFs above and below in Camtasia, and insert a fade-out to clearly define its ending. -->
+<!-- TODO: for the Web edition, Jack can redo the animated GIFs above and below in Camtasia, and insert a fade-out to clearly define its ending. -->
 
 1.  Scroll back down to the GitHub Pages area to see the web address
     where your live map has been published online, and right-click it to
@@ -5088,7 +5116,7 @@ Figure 57: After clicking the Delete Repository button, GitHub will ask
 you to type your username and repo name to confirm.
 </p>
 
-<!-- TODO: Will that "drunk" joke work here? Or is it inappropriate, or too distant from the "DrunkenBrownieChef6789" reference in the prior section?  -->
+<!-- TODO: Will that "drunken brownie chef" joke work here? Or is it inappropriate, or too distant from the "DrunkenBrownieChef6789" reference in the prior section?  -->
 
 So far, you’ve learned how to copy, edit, and host code using the GitHub
 web interface, which is a great introduction for beginners. Now you’re
@@ -5372,6 +5400,9 @@ professional coders regularly work on the Command Line with GitHub, but
 this requires memorizing a list of commands and is beyond the scope of
 this introductory book.
 
+TODO: At this writing, GitHub is considering changing the default branch
+from “master” to “main”. Stay tuned
+
 Overall, you’ll find that GitHub Desktop and Atom Editor makes it much
 easier to work with the [Chart.js code templates in Chapter
 9](chartjs.hmtl) and the [Leaflet map code templates in Chapter
@@ -5381,16 +5412,72 @@ GitHub and coding errors that you might encounter.
 Fix Common GitHub and Code Errors
 ---------------------------------
 
-**TODO: Update this entire section**
+Creating your data visualizations through code templates hosted on
+GitHub has multiple advantages over drag-and-drop tools. Coding gives
+you more power to customize their appearance and interactive features,
+and to control where your data and products reside online. But there’s
+also a trade-off. Code can “break” and leave you staring at a blank
+screen. Sometimes problems happens through no fault of your own, such as
+when a “code dependency” to an online background map or code library is
+unexpectedly interrupted. But more often it seems that problems arise
+because we make simple mistakes that break our own code. Whatever the
+cause, one big drawback of working with code is that you’re also
+responsible for fixing it.
 
-What happens if you cannot view your published GitHub repository, or if
-your code breaks and no longer displays what it was designed to show?
-These are common problems, especially for newer students, because
-accidentally clicking the wrong box or mistakenly erasing a single
-character (such as a semicolon) can make your visualization seem to
-vanish, even though your work is usually still there. Breaking your
-code—and figuring out how to fix it—is a great way to learn, even if it
-requires trial and error.
+We designed this section as a guide to help new coders diagnose and
+solve common errors when working with code templates on GitHub. We
+understand the feeling you experience when a simple typo—such as a
+misplaced semicolon (;)—makes your data visualization disappear from the
+screen. Finding the source of the problem can be very frustrating. But
+breaking your code—and figuring out how to fix it—also can be a great
+way to learn, because trial-and-error on a computer often provides
+immediate feedback that supports the learning process and develops our
+thinking.
+
+TODO: Start here; Reorganize the logic of subsections below, perhaps in
+this way
+
+-   Problems with iframes (since this chapter appears before code
+    templates)
+-   Problems with GitHub forking and hosting (the core of this chapter)
+-   Problems with code templates (the latter portion of this chapter and
+    the next two chapters)
+-   Problems with Mac computers
+
+#### Problems with iframes
+
+##### My iframe does not appear in my web page
+
+-   Go back to the [Embed tutorials in this book](embed.html) to
+    double-check the directions
+-   Items listed in your iframe (such as the URL, width, or height)
+    should be enclosed inside straight quotation marks (single or
+    double)
+    -   BROKEN iframe (missing quotation marks for width and height)
+
+    <!-- -->
+
+        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>
+
+    -   FIXED iframe (with correct quotation marks)
+
+    <!-- -->
+
+        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
+-   Use only `https` (the extra ‘s’ means ‘secure’), not `http`. Some
+    web browsers will block content if it mixes http and https
+    resources, and some code templates in this book require https.
+
+![Screenshot: Replace http with
+https](images/08-github/http-vs-https.png)
+
+-   Use only straight quotes, not curly quotes. Avoid pasting text from
+    a word-processor into GitHub, which can accidentally carry over
+    curly quotes. Typing directly into the GitHub editor will create
+    straight quotes.
+
+![Screenshot: Curly quotes versus straight
+quotes](images/08-github/curly-vs-straight-quotes.png)
 
 TODO: Test one way to fix GitHub errors by going into the commits and
 going back to a previous version of the code. Is this possible in the
@@ -5474,41 +5561,6 @@ the same location.
 ![Screenshot: Extra files in GitHub repo will block iframe in your
 README](images/08-github/extra-files-block-readme-iframe.png)
 
-#### Problems with iframes
-
-##### My iframe does not appear in my web page
-
--   Go back to the [Embed tutorials in this book](embed.html) to
-    double-check the directions
--   Items listed in your iframe (such as the URL, width, or height)
-    should be enclosed inside straight quotation marks (single or
-    double)
-    -   BROKEN iframe (missing quotation marks for width and height)
-
-    <!-- -->
-
-        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>
-
-    -   FIXED iframe (with correct quotation marks)
-
-    <!-- -->
-
-        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
--   Use only `https` (the extra ‘s’ means ‘secure’), not `http`. Some
-    web browsers will block content if it mixes http and https
-    resources, and some code templates in this book require https.
-
-![Screenshot: Replace http with
-https](images/08-github/http-vs-https.png)
-
--   Use only straight quotes, not curly quotes. Avoid pasting text from
-    a word-processor into GitHub, which can accidentally carry over
-    curly quotes. Typing directly into the GitHub editor will create
-    straight quotes.
-
-![Screenshot: Curly quotes versus straight
-quotes](images/08-github/curly-vs-straight-quotes.png)
-
 #### Problems with Leaflet Maps with Google Sheets template
 
 ##### My map does not appear
@@ -5567,6 +5619,11 @@ to one minute, then GitHub Pages is probably not the cause of the
 problem. Instead, some browsers continue to show “old” Chart.js in the
 web cache. The simplest solution is to File &gt; Quit your browser and
 re-open the link to your Chart.js
+
+TODO: Our Chart.js templates appear blank (just text, no chart) when
+viewed in the local browser. But Leaflet maps appear mostly or partially
+complete. Why is this, and how should we inform readers about this?
+Discuss with Ilya
 
 #### Problems with Mac Computers
 

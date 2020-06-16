@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-15" />
+<meta name="date" content="2020-06-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,9 +296,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="fix-code" class="section level2 unnumbered" number="">
 <h2>Fix Common GitHub and Code Errors</h2>
-<p><strong>TODO: Update this entire section</strong></p>
-<p>What happens if you cannot view your published GitHub repository, or if your code breaks and no longer displays what it was designed to show? These are common problems, especially for newer students, because accidentally clicking the wrong box or mistakenly erasing a single character (such as a semicolon) can make your visualization seem to vanish, even though your work is usually still there. Breaking your code—and figuring out how to fix it—is a great way to learn, even if it requires trial and error.</p>
+<p>Creating your data visualizations through code templates hosted on GitHub has multiple advantages over drag-and-drop tools. Coding gives you more power to customize their appearance and interactive features, and to control where your data and products reside online. But there’s also a trade-off. Code can “break” and leave you staring at a blank screen. Sometimes problems happens through no fault of your own, such as when a “code dependency” to an online background map or code library is unexpectedly interrupted. But more often it seems that problems arise because we make simple mistakes that break our own code. Whatever the cause, one big drawback of working with code is that you’re also responsible for fixing it.</p>
+<p>We designed this section as a guide to help new coders diagnose and solve common errors when working with code templates on GitHub. We understand the feeling you experience when a simple typo—such as a misplaced semicolon (;)—makes your data visualization disappear from the screen. Finding the source of the problem can be very frustrating. But breaking your code—and figuring out how to fix it—also can be a great way to learn, because trial-and-error on a computer often provides immediate feedback that supports the learning process and develops our thinking.</p>
+<p>TODO: Start here; Reorganize the logic of subsections below, perhaps in this way</p>
+<ul>
+<li>Problems with iframes (since this chapter appears before code templates)</li>
+<li>Problems with GitHub forking and hosting (the core of this chapter)</li>
+<li>Problems with code templates (the latter portion of this chapter and the next two chapters)</li>
+<li>Problems with Mac computers</li>
+</ul>
+<div id="problems-with-iframes" class="section level4 unnumbered" number="">
+<h4>Problems with iframes</h4>
+<div id="my-iframe-does-not-appear-in-my-web-page" class="section level5 unnumbered" number="">
+<h5>My iframe does not appear in my web page</h5>
+<ul>
+<li>Go back to the <a href="embed.html">Embed tutorials in this book</a> to double-check the directions</li>
+<li>Items listed in your iframe (such as the URL, width, or height) should be enclosed inside straight quotation marks (single or double)
+<ul>
+<li>BROKEN iframe (missing quotation marks for width and height)</li>
+</ul>
+<pre><code>&lt;iframe src=&quot;https://handsondataviz.github.io/leaflet-map-simple&quot; width=90% height=350&gt;&lt;/iframe&gt;</code></pre>
+<ul>
+<li>FIXED iframe (with correct quotation marks)</li>
+</ul>
+<pre><code>&lt;iframe src=&quot;https://handsondataviz.github.io/leaflet-map-simple&quot; width=&quot;90%&quot; height=&quot;350&quot;&gt;&lt;/iframe&gt;</code></pre></li>
+<li>Use only <code>https</code> (the extra ‘s’ means ‘secure’), not <code>http</code>. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https.</li>
+</ul>
+<div class="figure">
+<img src="images/08-github/http-vs-https.png" alt="" />
+<p class="caption">Screenshot: Replace http with https</p>
+</div>
+<ul>
+<li>Use only straight quotes, not curly quotes. Avoid pasting text from a word-processor into GitHub, which can accidentally carry over curly quotes. Typing directly into the GitHub editor will create straight quotes.</li>
+</ul>
+<div class="figure">
+<img src="images/08-github/curly-vs-straight-quotes.png" alt="" />
+<p class="caption">Screenshot: Curly quotes versus straight quotes</p>
+</div>
 <p>TODO: Test one way to fix GitHub errors by going into the commits and going back to a previous version of the code. Is this possible in the web version?</p>
+</div>
+</div>
 <div id="safely-delete-your-github-repo-and-start-over" class="section level4 unnumbered" number="">
 <h4>Safely Delete your GitHub Repo and Start Over</h4>
 <p>If you need to delete your GitHub repo and start over, here’s a simple way to safely save your work:</p>
@@ -354,36 +391,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div id="problems-with-iframes" class="section level4 unnumbered" number="">
-<h4>Problems with iframes</h4>
-<div id="my-iframe-does-not-appear-in-my-web-page" class="section level5 unnumbered" number="">
-<h5>My iframe does not appear in my web page</h5>
-<ul>
-<li>Go back to the <a href="embed.html">Embed tutorials in this book</a> to double-check the directions</li>
-<li>Items listed in your iframe (such as the URL, width, or height) should be enclosed inside straight quotation marks (single or double)
-<ul>
-<li>BROKEN iframe (missing quotation marks for width and height)</li>
-</ul>
-<pre><code>&lt;iframe src=&quot;https://handsondataviz.github.io/leaflet-map-simple&quot; width=90% height=350&gt;&lt;/iframe&gt;</code></pre>
-<ul>
-<li>FIXED iframe (with correct quotation marks)</li>
-</ul>
-<pre><code>&lt;iframe src=&quot;https://handsondataviz.github.io/leaflet-map-simple&quot; width=&quot;90%&quot; height=&quot;350&quot;&gt;&lt;/iframe&gt;</code></pre></li>
-<li>Use only <code>https</code> (the extra ‘s’ means ‘secure’), not <code>http</code>. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https.</li>
-</ul>
-<div class="figure">
-<img src="images/08-github/http-vs-https.png" alt="" />
-<p class="caption">Screenshot: Replace http with https</p>
-</div>
-<ul>
-<li>Use only straight quotes, not curly quotes. Avoid pasting text from a word-processor into GitHub, which can accidentally carry over curly quotes. Typing directly into the GitHub editor will create straight quotes.</li>
-</ul>
-<div class="figure">
-<img src="images/08-github/curly-vs-straight-quotes.png" alt="" />
-<p class="caption">Screenshot: Curly quotes versus straight quotes</p>
-</div>
-</div>
-</div>
 <div id="problems-with-leaflet-maps-with-google-sheets-template" class="section level4 unnumbered" number="">
 <h4>Problems with Leaflet Maps with Google Sheets template</h4>
 <div id="my-map-does-not-appear" class="section level5 unnumbered" number="">
@@ -429,6 +436,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="chart-displays-old-data" class="section level5 unnumbered" number="">
 <h5>Chart displays old data</h5>
 <p>If you upload new data to your Chart.js code template on GitHub Pages, and it does not appear in your browser after refreshing and waiting up to one minute, then GitHub Pages is probably not the cause of the problem. Instead, some browsers continue to show “old” Chart.js in the web cache. The simplest solution is to File &gt; Quit your browser and re-open the link to your Chart.js</p>
+<p>TODO: Our Chart.js templates appear blank (just text, no chart) when viewed in the local browser. But Leaflet maps appear mostly or partially complete. Why is this, and how should we inform readers about this? Discuss with Ilya</p>
 </div>
 </div>
 <div id="problems-with-mac-computers" class="section level4 unnumbered" number="">

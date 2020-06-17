@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-16" />
+<meta name="date" content="2020-06-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="create-repo.html"/>
-<link rel="next" href="fix-code.html"/>
+<link rel="next" href="chartjs.html"/>
 <script src="libs/header-attrs-2.2/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -217,7 +217,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
-<li class="chapter" data-level="" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i>Fix Common GitHub and Code Errors</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -253,7 +252,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>13</b> Tell Your Data Story</a></li>
-<li class="chapter" data-level="14" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i><b>14</b> Peer Review Samples</a>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i><b>A</b> Fix Common Code Errors</a></li>
+<li class="chapter" data-level="B" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i><b>B</b> Peer Review Samples</a>
 <ul>
 <li class="chapter" data-level="" data-path="peer-2-chart-1.html"><a href="peer-2-chart-1.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample</a></li>
 <li class="chapter" data-level="" data-path="peer-2-chart-1-notes.html"><a href="peer-2-chart-1-notes.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample with Notes</a></li>
@@ -264,14 +265,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="peer-3-sample-2.html"><a href="peer-3-sample-2.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2</a></li>
 <li class="chapter" data-level="" data-path="peer-3-sample-2-notes.html"><a href="peer-3-sample-2-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2 with Notes</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>15</b> Publishing with Bookdown</a>
+<li class="chapter" data-level="C" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>C</b> Publishing with Bookdown</a>
 <ul>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
 <li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>16</b> References</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li style="padding: 10px 15px; font-weight: bold;">Open access book-in-progress</li>
 <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></li>
@@ -420,7 +421,7 @@ Figure 8.28: Right-click the index.html file on your local computer and open wit
 <iframe src="images/08-github/desktop-commit-push.gif" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure 8.29: In this two-step process, click “Commit to Master,” then click “Push origin” to save and copy your edits from your local computer to your GitHub web account, as shown in this <a href="https://github.com/HandsOnDataViz/book/blob/master/images/08-github/desktop-commit-push.gif">animated GIF</a>.
+Figure 8.29: In this two-step process, click “Commit to Master,” then click “Push origin” to save and copy your edits from your local computer to your GitHub web account, as shown in this <a href="https://handsondataviz.org/images/08-github/desktop-commit-push.gif">animated GIF</a>.
 </p>
 </div>
 <p>Congratulations! You’ve successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format <code>https://YourUserName.github.io/YourRepoName</code>, substituting your GitHub username and repo name.</p>
@@ -435,15 +436,17 @@ Figure 8.30: Drag-and-drop the file to the upload screen.
 </div>
 <p>Although GitHub does not operate like Google Documents, which displays live edits, the platform has several advantages when working collaboratively with code. First, since GitHub tracks every commit we make, it allows us to go back and restore a very specific past version of the code if needed. Second, when GitHub repos are public, anyone can view your code and submit an “issue” to notify the owner about an idea or problem, or send a “pull request” of suggested code edits, which the owner can accept or reject. Third, GitHub allows collaborators to create different “branches” of a repo (the default is called “master”) in order to make edits, and then “merge” the branches back together if desired. Occasionally, if two or more coders attempt to push incompatible commits to the same repo, GitHub will warn about a “Merge Conflict.” To resolve this conflict and preserve everyone’s work, you may need to use the Command Line Interface (CLI) version of GitHub, which means typing commands directly into the Terminal application on Mac or Windows. Many professional coders regularly work on the Command Line with GitHub, but this requires memorizing a list of commands and is beyond the scope of this introductory book.</p>
 <p>TODO: At this writing, GitHub is considering changing the default branch from “master” to “main”. Stay tuned</p>
-<p>Overall, you’ll find that GitHub Desktop and Atom Editor makes it much easier to work with the <a href="chartjs.hmtl">Chart.js code templates in Chapter 9</a> and the <a href="leaflet.html">Leaflet map code templates in Chapter 10</a>. The next section offers advice on how to fix common GitHub and coding errors that you might encounter.</p>
+<p>Overall, you’ll find that GitHub Desktop and Atom Editor makes it much easier to work with <a href="chartjs.hmtl">Chart.js code templates in Chapter 9</a> and the <a href="leaflet.html">Leaflet map code templates in Chapter 10</a>.</p>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
 <a href="create-repo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="fix-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chartjs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

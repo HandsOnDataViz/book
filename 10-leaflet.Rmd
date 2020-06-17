@@ -48,7 +48,7 @@ This tutorial introduces more sophisticated Leaflet map code templates (http://l
 - C) Modify your map title and add layer controls
 - D) Geocode addresses [in a Google Sheet](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/) and upload points from data.csv
 
-Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](github.html). If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
+Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Edit and Host Code with GitHub](github.html). If you have problems with this tutorial, go to the [Fix Common Code Errors](fix-code.html) section of the appendix.
 
 TODO: add demo, remove unnecessary basic steps from below (covered in prior chapter)
 
@@ -251,14 +251,14 @@ In the second part of this tutorial, you will learn how to geocode and customize
 -
 ** TO DO: second half video**
 
-To solve problems, see [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
+To solve problems, see [Fix Common Code Errors](fix-code.html) section of the appendix.
 
 #### A) Fork (copy) the code template and publish your version with GitHub Pages {-}
 
 **Before you begin**, this tutorial assumes that you:
 
 - have a [free Google Drive account](http://drive.google.com), and learned the [File > Make a Copy in Google Sheets](copy.html) tutorial in this book
-- have a [free GitHub account](http://github.com), and understand concepts from the [Modify and Host Code with GitHub](github.html) chapter in this book
+- have a [free GitHub account](http://github.com), and understand concepts from the [Edit and Host Code with GitHub](github.html) chapter in this book
 
 1) Right-click to open this GitHub code template in a new tab: https://github.com/handsondataviz/leaflet-maps-with-google-sheets
 
@@ -451,7 +451,7 @@ If desired, you can save your table data with your code, rather than in a separa
 Upload these files into the main level of your GitHub code repository, where the template will process them automatically.
 
 #### Learn more {-}
-To solve problems, see [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
+To solve problems, see [Fix Common Code Errors](fix-code.html) section of the appendix.
 
 ## Leaflet Storymaps with Google Sheets and Scrolling Narrative {- #leaflet-storymaps-with-google-sheets}
 TODO: Add intro text
@@ -478,14 +478,14 @@ The map pulls the point data and settings from a linked Google Sheet, which you 
 - D) Modify your map settings in the Options tab and test your live map
 - E) Geocode locations in the Points tab
 
-To solve problems, see [Fix Common GitHub and Code Errors](fix-code.html) in this book.
+To solve problems, see [Fix Common Code Errors](fix-code.html) section of the appendix.
 
 #### A) Fork (copy) the code template and publish your version with GitHub Pages {-}
 
 **Before you begin**, this tutorial assumes that you:
 
 - have a [free Google Drive account](http://drive.google.com), and learned the [File > Make a Copy in Google Sheets](copy.html) tutorial in this book
-- have a [free GitHub account](http://github.com), and understand concepts from the [Modify and Host Code with GitHub](github.html) chapter in this book
+- have a [free GitHub account](http://github.com), and understand concepts from the [Edit and Host Code with GitHub](github.html) chapter in this book
 
 1) Right-click to open this GitHub code template in a new tab: https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets
 
@@ -605,7 +605,7 @@ https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/mast
 When data is read from a .CSV, it links that in the attribution (https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396)
 
 #### Learn more {-}
-To solve problems, see [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
+To solve problems, see [Fix Common Code Errors](fix-code.html) section of the appendix.
 
 ## Leaflet Maps with Socrata API Open Data {- #leaflet-maps-with-socrata}
 TODO: Decide whether to keep or not, and if so, add intro

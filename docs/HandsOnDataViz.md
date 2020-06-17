@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 16 Jun 2020
+updated on: 17 Jun 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -3181,8 +3181,8 @@ your website. In this chapter, you will learn how to:
     tutorial links in the table below. Beginners may start with
     easy-to-learn tools such as [Google My Maps](mymaps.html), then move
     up to more powerful tools, such as [Leaflet](leaflet.html), which
-    require you to [Modify and Host Code Templates with
-    GitHub](github.html) or other web servers.
+    require you to [Edit and Host Code with GitHub](github.html) or
+    other web servers.
 
 See also related chapters in this book:
 
@@ -4622,8 +4622,8 @@ works best for beginners. Later you’ll learn about more advanced tools,
 such as [GitHub Desktop and Atom Editor to work more
 efficiently](github-desktop-atom.html) on your personal computer.
 
-Finally, we’ll discuss how to [fix common GitHub and code
-errors](fix-code.html). All of us make mistakes and accidentally “break
+If problems arise, turn to the [Fix Common Code Errors](fix-code.html)
+section in the appendix. All of us make mistakes and accidentally “break
 our code” from time to time, and it’s a great way to learn how things
 work—and what to do when it doesn’t work!
 
@@ -4801,7 +4801,7 @@ your work on the web.
 <p class="caption">
 Figure 47: Under GitHub Pages, switch the source from None to Master as
 shown in this [animated
-GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages.gif).
+GIF](https://handsondataviz.org/images/08-github/leaflet-github-pages.gif).
 </p>
 
 <!-- TODO: for the Web edition, Jack can redo the animated GIFs above and below in Camtasia, and insert a fade-out to clearly define its ending. -->
@@ -4816,7 +4816,7 @@ GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet
 <p class="caption">
 Figure 48: Under GitHub Pages, double-click your published map link as
 shown in this [animated
-GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages2.gif).
+GIF](https://handsondataviz.org/images/08-github/leaflet-github-pages2.gif).
 </p>
 
 1.  Click on the new tab to view your live map, with your new title at
@@ -4932,8 +4932,7 @@ paste the code block to create a second marker.
     map, and do a hard-refresh to view changes. If your map edits do not
     appear right away, remember that GitHub Pages sometimes requires 30
     seconds to process code edits. If you have problems, see the [Fix
-    Common GitHub and Code Errors](fix-code.html) section in this
-    chapter.
+    Common Code Errors](fix-code.html) section in the appendix.
 
 Congratulations! If this is the first time that you’ve edited computer
 code and hosted it online, you can now call yourself a “coder”. The
@@ -5340,7 +5339,7 @@ Desktop.
 Figure 69: In this two-step process, click “Commit to Master,” then
 click “Push origin” to save and copy your edits from your local computer
 to your GitHub web account, as shown in this [animated
-GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/desktop-commit-push.gif).
+GIF](https://handsondataviz.org/images/08-github/desktop-commit-push.gif).
 </p>
 
 Congratulations! You’ve successfully navigated a round-trip journey of
@@ -5404,253 +5403,8 @@ TODO: At this writing, GitHub is considering changing the default branch
 from “master” to “main”. Stay tuned
 
 Overall, you’ll find that GitHub Desktop and Atom Editor makes it much
-easier to work with the [Chart.js code templates in Chapter
-9](chartjs.hmtl) and the [Leaflet map code templates in Chapter
-10](leaflet.html). The next section offers advice on how to fix common
-GitHub and coding errors that you might encounter.
-
-Fix Common GitHub and Code Errors
----------------------------------
-
-Creating your data visualizations through code templates hosted on
-GitHub has multiple advantages over drag-and-drop tools. Coding gives
-you more power to customize their appearance and interactive features,
-and to control where your data and products reside online. But there’s
-also a trade-off. Code can “break” and leave you staring at a blank
-screen. Sometimes problems happens through no fault of your own, such as
-when a “code dependency” to an online background map or code library is
-unexpectedly interrupted. But more often it seems that problems arise
-because we make simple mistakes that break our own code. Whatever the
-cause, one big drawback of working with code is that you’re also
-responsible for fixing it.
-
-We designed this section as a guide to help new coders diagnose and
-solve common errors when working with code templates on GitHub. We
-understand the feeling you experience when a simple typo—such as a
-misplaced semicolon (;)—makes your data visualization disappear from the
-screen. Finding the source of the problem can be very frustrating. But
-breaking your code—and figuring out how to fix it—also can be a great
-way to learn, because trial-and-error on a computer often provides
-immediate feedback that supports the learning process and develops our
-thinking.
-
-TODO: Start here; Reorganize the logic of subsections below, perhaps in
-this way
-
--   Problems with iframes (since this chapter appears before code
-    templates)
--   Problems with GitHub forking and hosting (the core of this chapter)
--   Problems with code templates (the latter portion of this chapter and
-    the next two chapters)
--   Problems with Mac computers
-
-#### Problems with iframes
-
-##### My iframe does not appear in my web page
-
--   Go back to the [Embed tutorials in this book](embed.html) to
-    double-check the directions
--   Items listed in your iframe (such as the URL, width, or height)
-    should be enclosed inside straight quotation marks (single or
-    double)
-    -   BROKEN iframe (missing quotation marks for width and height)
-
-    <!-- -->
-
-        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>
-
-    -   FIXED iframe (with correct quotation marks)
-
-    <!-- -->
-
-        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
--   Use only `https` (the extra ‘s’ means ‘secure’), not `http`. Some
-    web browsers will block content if it mixes http and https
-    resources, and some code templates in this book require https.
-
-![Screenshot: Replace http with
-https](images/08-github/http-vs-https.png)
-
--   Use only straight quotes, not curly quotes. Avoid pasting text from
-    a word-processor into GitHub, which can accidentally carry over
-    curly quotes. Typing directly into the GitHub editor will create
-    straight quotes.
-
-![Screenshot: Curly quotes versus straight
-quotes](images/08-github/curly-vs-straight-quotes.png)
-
-TODO: Test one way to fix GitHub errors by going into the commits and
-going back to a previous version of the code. Is this possible in the
-web version?
-
-#### Safely Delete your GitHub Repo and Start Over
-
-If you need to delete your GitHub repo and start over, here’s a simple
-way to safely save your work:
-
--   Go to the top-level of your GitHub repository, similar to
-    `https://github.com/USERNAME/REPOSITORY`
--   Click the green “Clone or Download” button, and select Download Zip
-    to receive a compressed folder of your repo contents on your
-    computer.
--   In your GitHub repo, click on Settings (upper-right area) and scroll
-    down to Delete This Repository.
--   To prevent accidental deletions, GitHub requires you to type in the
-    REPOSITORY name.
--   Now you can start over in one of these ways:
-    -   If you wish to [Create a Simple Web Page with GitHub
-        Pages](github-pages.html), follow that tutorial again.
-    -   OR
-    -   Fork another copy of the original GitHub repository to your
-        account. After you create your copy, if you wish to add selected
-        files that you previously downloaded to your computer, follow
-        directions to [Upload Code with GitHub](create-repo) in the
-        second half of this tutorial in this book
-
-#### Problems with Creating a Simple Web Page with GitHub Pages
-
-If you followed the [Create a Simple Web Page with GitHub Pages
-tutorial](github-pages.html), it should have created two web links (or
-URLs):
-
--   your code repository, in this format:
-    `https://github.com/USERNAME/REPOSITORY`
--   your published web page, in this format:
-    `https://USERNAME.github.io/REPOSITORY`
-
-Be sure to insert your GitHub username, and your GitHub repository name,
-in the general formats above.
-
-These URLs are NOT case-sensitive, which means that
-`https://github.com/USERNAME` and `https://gitub.com/username` point to
-the same location.
-
-##### My simple GitHub web page does not appear
-
--   Make sure that you are pointing to the correct URL for your
-    published web page, in the format shown above.
--   Be patient. During busy periods on GitHub, it may take up to 1
-    minute for new content to appear in your browser.
--   **MOVE UP** Do a “hard refresh” to [bypass any saved content in your
-    browser
-    cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
-    -   Ctrl + F5 (most Windows-Linux browsers)
-    -   Command + Shift + R (Chrome or Firefox for Mac)
-    -   Shift + Reload button toolbar (Safari for Mac)
--   Test the link to your published web page in a different browser. If
-    you normally use Chrome, try Firefox.
--   On rare occasions, the GitHub service or GitHub Pages feature may be
-    down. Check
-    <a href="https://status.github.com" class="uri">https://status.github.com</a>.
-
-##### My simple GitHub web page does not display my iframe
-
--   If you followed the [Create a Simple Web Page with GitHub Pages
-    tutorial](github-pages) and inserted an iframe in the README.md
-    file, it will appear in your published web page, under these
-    conditions:
-    -   Ideally, your README.md should be the ONLY file in this GitHub
-        repository
-    -   Any other files in your repo (such as index.html, default.html,
-        or index.md) will block the iframe HTML code in your README.md
-        from being published on the web. If you accidentally selected a
-        GitHub Pages Theme, you need to delete any extra files it
-        created: click each file, select trash can to delete it, and
-        commit changes.
-
-![Screenshot: Extra files in GitHub repo will block iframe in your
-README](images/08-github/extra-files-block-readme-iframe.png)
-
-#### Problems with Leaflet Maps with Google Sheets template
-
-##### My map does not appear
-
-1.  Confirm that you have completed all of the key steps in the [Leaflet
-    Maps with Google Sheets](leaflet-with-google-sheets) tutorial in
-    this book, especially these:
-
--   Sign in to Google and File &gt; Make a Copy of the Google Sheet to
-    your Google Drive.
--   File &gt; Publish your Google Sheet (Jack often forgets this key
-    step!)
--   Copy your Google Sheet web address from top of your browser (usually
-    ends with `...XYZ/edit#gid=0`) and paste into your
-    `google-doc-url.js` file in your GitHub repo. Do NOT copy the
-    *Published* web address (which usually ends with `...XYZ/pubhtml`)
--   When you paste your Google Sheet web address into
-    `google-doc-url.js`, be careful not to erase single-quote marks or
-    semicolon
--   Go to your live map link, which should follow this format:
-    `https://USERNAME.github.io/REPOSITORY`, refresh the browser, and
-    wait at least 30 seconds.
-
-1.  Check your Google Sheet for errors:
-
--   Do NOT rename column headers (in row 1) of any sheet, because the
-    Leaflet Map code looks for these exact words.
-
-![Screenshot: User accidentally renamed column headers in the Points
-tab](images/08-github/lmwgs-fix-column-headers.png)
-
--   Do NOT rename row labels (in column A) of any sheet, due to the same
-    reason above.
-
-![Screenshot: Do not rename or
-delete](images/08-github/lmwgs-do-not-rename-labels.png)
-
--   In your Points tab, DO NOT leave any blank rows
-
-1.  Confirm on GitHub Status
-    (<a href="https://status.github.com/" class="uri">https://status.github.com/</a>)
-    that all systems are operational.
-
-2.  If you cannot find the problem, go to the top of this page to Safely
-    Delete Your GitHub Repo and Start Over. Also, make a new copy of the
-    Google Sheet template, give it a new name, and copy data from your
-    old sheet using File &gt; Paste Special &gt; Values Only.
-
-#### Problems with Chart.js code templates
-
-##### Chart displays old data
-
-If you upload new data to your Chart.js code template on GitHub Pages,
-and it does not appear in your browser after refreshing and waiting up
-to one minute, then GitHub Pages is probably not the cause of the
-problem. Instead, some browsers continue to show “old” Chart.js in the
-web cache. The simplest solution is to File &gt; Quit your browser and
-re-open the link to your Chart.js
-
-TODO: Our Chart.js templates appear blank (just text, no chart) when
-viewed in the local browser. But Leaflet maps appear mostly or partially
-complete. Why is this, and how should we inform readers about this?
-Discuss with Ilya
-
-#### Problems with Mac Computers
-
-##### No file extensions
-
-Several tools in this book will not work properly if your Mac Finder
-does not display file extensions. In other words, every file should
-include a period followed by several letters (such as data.csv and
-map.geojson). If you do not see these extensions at the end of each file
-name, then go to Finder &gt; Preferences &gt; Advanced and check the box
-to turn them on, as show below:
-
-![Screenshot: Checkbox to show filename
-extensions](images/08-github/mac-finder-filename-extensions.png)
-
-#### Solve Problems with Browser Developer Tools
-
-Peek inside any website and view the web code under the hood with the
-browser developer tools.
-
-In Chrome for Mac, go to View &gt; Developer &gt; Developer Tools
-
-![](images/08-github/Chrome-developer-tools.png)
-
-In Firefox for Mac, go to Tools &gt; Web Developer &gt; Inspector
-
-![](images/08-github/Firefox-tools-inspector.png)
+easier to work with [Chart.js code templates in Chapter 9](chartjs.hmtl)
+and the [Leaflet map code templates in Chapter 10](leaflet.html).
 
 <!--chapter:end:08-github.Rmd-->
 
@@ -5963,10 +5717,9 @@ will learn how to:
 Code templates help us to move beyond the limits of drag-and-drop web
 mapping services (such as Google MyMaps) and to create more customized
 visualizations on a web server that you control. Before you begin, learn
-the broad concepts in the chapter introduction [Modify and Host Code
-Templates with GitHub](github.html). If you have problems with this
-tutorial, go to the [Fix Common GitHub and Code Errors](fix-code.html)
-chapter in this book.
+the broad concepts in the chapter introduction [Edit and Host Code with
+GitHub](github.html). If you have problems with this tutorial, go to the
+[Fix Common Code Errors](fix-code.html) section of the appendix.
 
 TODO: add demo, remove unnecessary basic steps from below (covered in
 prior chapter)
@@ -6278,8 +6031,8 @@ polygon and/or polyline GeoJSON data.
 
 -   \*\* TO DO: second half video\*\*
 
-To solve problems, see [Fix Common GitHub and Code
-Errors](fix-code.html) chapter in this book.
+To solve problems, see [Fix Common Code Errors](fix-code.html) section
+of the appendix.
 
 #### A) Fork (copy) the code template and publish your version with GitHub Pages
 
@@ -6289,7 +6042,7 @@ Errors](fix-code.html) chapter in this book.
     learned the [File &gt; Make a Copy in Google Sheets](copy.html)
     tutorial in this book
 -   have a [free GitHub account](http://github.com), and understand
-    concepts from the [Modify and Host Code with GitHub](github.html)
+    concepts from the [Edit and Host Code with GitHub](github.html)
     chapter in this book
 
 1.  Right-click to open this GitHub code template in a new tab:
@@ -6617,8 +6370,8 @@ where the template will process them automatically.
 
 #### Learn more
 
-To solve problems, see [Fix Common GitHub and Code
-Errors](fix-code.html) chapter in this book.
+To solve problems, see [Fix Common Code Errors](fix-code.html) section
+of the appendix.
 
 Leaflet Storymaps with Google Sheets and Scrolling Narrative
 ------------------------------------------------------------
@@ -6666,8 +6419,8 @@ tab](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNl
 
 -   1.  Geocode locations in the Points tab
 
-To solve problems, see [Fix Common GitHub and Code
-Errors](fix-code.html) in this book.
+To solve problems, see [Fix Common Code Errors](fix-code.html) section
+of the appendix.
 
 #### A) Fork (copy) the code template and publish your version with GitHub Pages
 
@@ -6677,7 +6430,7 @@ Errors](fix-code.html) in this book.
     learned the [File &gt; Make a Copy in Google Sheets](copy.html)
     tutorial in this book
 -   have a [free GitHub account](http://github.com), and understand
-    concepts from the [Modify and Host Code with GitHub](github.html)
+    concepts from the [Edit and Host Code with GitHub](github.html)
     chapter in this book
 
 1.  Right-click to open this GitHub code template in a new tab:
@@ -6859,8 +6612,8 @@ When data is read from a .CSV, it links that in the attribution
 
 #### Learn more
 
-To solve problems, see [Fix Common GitHub and Code
-Errors](fix-code.html) chapter in this book.
+To solve problems, see [Fix Common Code Errors](fix-code.html) section
+of the appendix.
 
 Leaflet Maps with Socrata API Open Data
 ---------------------------------------
@@ -8326,6 +8079,253 @@ Professionals* (Wiley, 2015),
 
 <!--chapter:end:13-story.Rmd-->
 
+Appendix
+========
+
+Fix Common Code Errors
+======================
+
+Creating your data visualizations through code templates hosted on
+GitHub has multiple advantages over drag-and-drop tools. Coding gives
+you more power to customize their appearance and interactive features,
+and to control where your data and products reside online. But there’s
+also a trade-off. Code can “break” and leave you staring at a blank
+screen. Sometimes problems happens through no fault of your own, such as
+when a “code dependency” to an online background map or code library is
+unexpectedly interrupted. But more often it seems that problems arise
+because we make simple mistakes that break our own code. Whatever the
+cause, one big drawback of working with code is that you’re also
+responsible for fixing it.
+
+We designed this section as a guide to help new coders diagnose and
+solve common errors when working with code templates on GitHub. We
+understand the feeling you experience when a simple typo—such as a
+misplaced semicolon (;)—makes your data visualization disappear from the
+screen. Finding the source of the problem can be very frustrating. But
+breaking your code—and figuring out how to fix it—also can be a great
+way to learn, because trial-and-error on a computer often provides
+immediate feedback that supports the learning process and develops our
+thinking.
+
+TODO: Start here; Reorganize the logic of subsections below, perhaps in
+this way
+
+-   Problems with iframes (since this chapter appears before code
+    templates)
+-   Problems with GitHub forking and hosting (the core of this chapter)
+-   Problems with code templates (the latter portion of this chapter and
+    the next two chapters)
+-   Problems with Mac computers
+
+#### Problems with iframes
+
+##### My iframe does not appear in my web page
+
+-   Go back to the [Embed tutorials in this book](embed.html) to
+    double-check the directions
+-   Items listed in your iframe (such as the URL, width, or height)
+    should be enclosed inside straight quotation marks (single or
+    double)
+    -   BROKEN iframe (missing quotation marks for width and height)
+
+    <!-- -->
+
+        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>
+
+    -   FIXED iframe (with correct quotation marks)
+
+    <!-- -->
+
+        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
+-   Use only `https` (the extra ‘s’ means ‘secure’), not `http`. Some
+    web browsers will block content if it mixes http and https
+    resources, and some code templates in this book require https.
+
+![Screenshot: Replace http with https](images/14-fix/http-vs-https.png)
+
+-   Use only straight quotes, not curly quotes. Avoid pasting text from
+    a word-processor into GitHub, which can accidentally carry over
+    curly quotes. Typing directly into the GitHub editor will create
+    straight quotes.
+
+![Screenshot: Curly quotes versus straight
+quotes](images/14-fix/curly-vs-straight-quotes.png)
+
+TODO: Test one way to fix GitHub errors by going into the commits and
+going back to a previous version of the code. Is this possible in the
+web version?
+
+#### Safely Delete your GitHub Repo and Start Over
+
+If you need to delete your GitHub repo and start over, here’s a simple
+way to safely save your work:
+
+-   Go to the top-level of your GitHub repository, similar to
+    `https://github.com/USERNAME/REPOSITORY`
+-   Click the green “Clone or Download” button, and select Download Zip
+    to receive a compressed folder of your repo contents on your
+    computer.
+-   In your GitHub repo, click on Settings (upper-right area) and scroll
+    down to Delete This Repository.
+-   To prevent accidental deletions, GitHub requires you to type in the
+    REPOSITORY name.
+-   Now you can start over in one of these ways:
+    -   If you wish to [Create a Simple Web Page with GitHub
+        Pages](github-pages.html), follow that tutorial again.
+    -   OR
+    -   Fork another copy of the original GitHub repository to your
+        account. After you create your copy, if you wish to add selected
+        files that you previously downloaded to your computer, follow
+        directions to [Upload Code with GitHub](create-repo) in the
+        second half of this tutorial in this book
+
+#### Problems with Creating a Simple Web Page with GitHub Pages
+
+If you followed the [Create a Simple Web Page with GitHub Pages
+tutorial](github-pages.html), it should have created two web links (or
+URLs):
+
+-   your code repository, in this format:
+    `https://github.com/USERNAME/REPOSITORY`
+-   your published web page, in this format:
+    `https://USERNAME.github.io/REPOSITORY`
+
+Be sure to insert your GitHub username, and your GitHub repository name,
+in the general formats above.
+
+These URLs are NOT case-sensitive, which means that
+`https://github.com/USERNAME` and `https://gitub.com/username` point to
+the same location.
+
+##### My simple GitHub web page does not appear
+
+-   Make sure that you are pointing to the correct URL for your
+    published web page, in the format shown above.
+-   Be patient. During busy periods on GitHub, it may take up to 1
+    minute for new content to appear in your browser.
+-   **MOVE UP** Do a “hard refresh” to [bypass any saved content in your
+    browser
+    cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
+    -   Ctrl + F5 (most Windows-Linux browsers)
+    -   Command + Shift + R (Chrome or Firefox for Mac)
+    -   Shift + Reload button toolbar (Safari for Mac)
+-   Test the link to your published web page in a different browser. If
+    you normally use Chrome, try Firefox.
+-   On rare occasions, the GitHub service or GitHub Pages feature may be
+    down. Check
+    <a href="https://status.github.com" class="uri">https://status.github.com</a>.
+
+##### My simple GitHub web page does not display my iframe
+
+-   If you followed the [Create a Simple Web Page with GitHub Pages
+    tutorial](github-pages) and inserted an iframe in the README.md
+    file, it will appear in your published web page, under these
+    conditions:
+    -   Ideally, your README.md should be the ONLY file in this GitHub
+        repository
+    -   Any other files in your repo (such as index.html, default.html,
+        or index.md) will block the iframe HTML code in your README.md
+        from being published on the web. If you accidentally selected a
+        GitHub Pages Theme, you need to delete any extra files it
+        created: click each file, select trash can to delete it, and
+        commit changes.
+
+![Screenshot: Extra files in GitHub repo will block iframe in your
+README](images/14-fix/extra-files-block-readme-iframe.png)
+
+#### Problems with Leaflet Maps with Google Sheets template
+
+##### My map does not appear
+
+1.  Confirm that you have completed all of the key steps in the [Leaflet
+    Maps with Google Sheets](leaflet-with-google-sheets) tutorial in
+    this book, especially these:
+
+-   Sign in to Google and File &gt; Make a Copy of the Google Sheet to
+    your Google Drive.
+-   File &gt; Publish your Google Sheet (Jack often forgets this key
+    step!)
+-   Copy your Google Sheet web address from top of your browser (usually
+    ends with `...XYZ/edit#gid=0`) and paste into your
+    `google-doc-url.js` file in your GitHub repo. Do NOT copy the
+    *Published* web address (which usually ends with `...XYZ/pubhtml`)
+-   When you paste your Google Sheet web address into
+    `google-doc-url.js`, be careful not to erase single-quote marks or
+    semicolon
+-   Go to your live map link, which should follow this format:
+    `https://USERNAME.github.io/REPOSITORY`, refresh the browser, and
+    wait at least 30 seconds.
+
+1.  Check your Google Sheet for errors:
+
+-   Do NOT rename column headers (in row 1) of any sheet, because the
+    Leaflet Map code looks for these exact words.
+
+![Screenshot: User accidentally renamed column headers in the Points
+tab](images/14-fix/lmwgs-fix-column-headers.png)
+
+-   Do NOT rename row labels (in column A) of any sheet, due to the same
+    reason above.
+
+![Screenshot: Do not rename or
+delete](images/14-fix/lmwgs-do-not-rename-labels.png)
+
+-   In your Points tab, DO NOT leave any blank rows
+
+1.  Confirm on GitHub Status
+    (<a href="https://status.github.com/" class="uri">https://status.github.com/</a>)
+    that all systems are operational.
+
+2.  If you cannot find the problem, go to the top of this page to Safely
+    Delete Your GitHub Repo and Start Over. Also, make a new copy of the
+    Google Sheet template, give it a new name, and copy data from your
+    old sheet using File &gt; Paste Special &gt; Values Only.
+
+#### Problems with Chart.js code templates
+
+##### Chart displays old data
+
+If you upload new data to your Chart.js code template on GitHub Pages,
+and it does not appear in your browser after refreshing and waiting up
+to one minute, then GitHub Pages is probably not the cause of the
+problem. Instead, some browsers continue to show “old” Chart.js in the
+web cache. The simplest solution is to File &gt; Quit your browser and
+re-open the link to your Chart.js
+
+TODO: Our Chart.js templates appear blank (just text, no chart) when
+viewed in the local browser. But Leaflet maps appear mostly or partially
+complete. Why is this, and how should we inform readers about this?
+Discuss with Ilya
+
+#### Problems with Mac Computers
+
+##### No file extensions
+
+Several tools in this book will not work properly if your Mac Finder
+does not display file extensions. In other words, every file should
+include a period followed by several letters (such as data.csv and
+map.geojson). If you do not see these extensions at the end of each file
+name, then go to Finder &gt; Preferences &gt; Advanced and check the box
+to turn them on, as show below:
+
+![Screenshot: Checkbox to show filename
+extensions](images/14-fix/mac-finder-filename-extensions.png)
+
+#### Solve Problems with Browser Developer Tools
+
+Peek inside any website and view the web code under the hood with the
+browser developer tools.
+
+In Chrome for Mac, go to View &gt; Developer &gt; Developer Tools
+
+![](images/14-fix/Chrome-developer-tools.png)
+
+In Firefox for Mac, go to Tools &gt; Web Developer &gt; Inspector
+
+![](images/14-fix/Firefox-tools-inspector.png)
+
+<!--chapter:end:14-fix.Rmd-->
+
 Peer Review Samples
 ===================
 
@@ -8339,7 +8339,7 @@ Section 2 Chart 1 Peer Review Sample
 Students in the Data Visualization for All course come from several
 different countries, including Australia, Bangladesh, and Belgium.
 
-![](images/14-peer/2-chart-1.png)
+![](images/15-peer/2-chart-1.png)
 
 #### Evaluate
 
@@ -8356,7 +8356,7 @@ Section 2 Chart 1 Peer Review Sample with Notes
 Students in the Data Visualization for All course come from several
 different countries, including Australia, Bangladesh, and Belgium.
 
-![](images/14-peer/2-chart-1.png)
+![](images/15-peer/2-chart-1.png)
 
 #### Evaluate
 
@@ -8598,7 +8598,7 @@ Section 3 Peer Review Sample 2 with Notes
 1.  Additional comments for the author. What works well? What could be
     improved?
 
-<!--chapter:end:14-peer.Rmd-->
+<!--chapter:end:15-peer.Rmd-->
 
 Publishing with Bookdown
 ========================
@@ -8664,6 +8664,23 @@ Also, we match the unique ID keyword to the file name for top-level
 chapters this way: `01-keyword.Rmd` to keep our work organized. Unique
 names should contain only *alphanumeric* characters (a-z, A-Z, 0-9) or
 dashes (-).
+
+A special header in this book is the unnumbered header beginning with
+`(APPENDIX)`, which indicates that all chapters appearing afterwards are
+appendices. According to
+[Bookdown](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html),
+the numbering style will appear correctly in HTML and LaTeX/PDF output,
+but not in Word or ebooks.
+
+    # Chapter One
+
+    # Chapter Two
+
+    # (APPENDIX) Appendix {-}
+
+    # Appendix A
+
+    # Appendix B
 
 In the Bookdown `index.Rmd` for the HTML book output and the PDF output,
 the `toc_depth: 2` setting displays chapter and section headers down to
@@ -8742,7 +8759,7 @@ Style Guide for *Hands-On Data Visualization*
 
 View the underlying source code to understand how this page was composed
 at:
-<a href="https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd</a>
+<a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a>
 
 This book is composed in R-flavored Markdown (.Rmd), and each paragraph
 begins on a separate line. O’Reilly style guide prefers *italics* rather
@@ -8789,6 +8806,11 @@ appears as a colored clickable link in HTML and Word editions, and a
 non-colored but clickable link in the PDF edition. According to O’Reilly
 Atlas documentation, the AsciiDoc version should automatically unfurl
 for the printed edition.
+
+Also, embed the link directly in the sentence, such as [download this
+sample
+PDF](https://handsondataviz.org/data/ct-dph-covid-2020-05-31.pdf), and
+avoid linking words such as “here” or “this web page.”
 
 For lists, always insert a blank line *before* the items, unless they
 appear directly after hashtag header.
@@ -8921,7 +8943,7 @@ Images
 
 View the underlying source code to understand how this page was composed
 at:
-<a href="https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd</a>
+<a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a>
 
 Create high-resolution color static images in .jpg or .png format, and
 animated .gif files, and save them into the `images` subfolder by
@@ -8965,11 +8987,11 @@ leave the caption field blank, like this example:
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="images/15-bookdown/dougherty-jack.jpg" /></td>
+<td><img src="images/16-bookdown/dougherty-jack.jpg" /></td>
 <td>About <a href="http://jackdougherty.org">Jack Dougherty</a></td>
 </tr>
 <tr class="even">
-<td><img src="images/15-bookdown/ilyankou-ilya.jpg" /></td>
+<td><img src="images/16-bookdown/ilyankou-ilya.jpg" /></td>
 <td>About <a href="https://github.com/ilyankou">Ilya Ilyankou</a></td>
 </tr>
 </tbody>
@@ -9020,7 +9042,7 @@ chapter](https://bookdown.org/yihui/bookdown/figures.html).
 
 …as shown in Figure <a href="#fig:tiger">80</a>.
 
-<img src="images/15-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
+<img src="images/16-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
 Figure 80: Caption here. Markdown embedded links are acceptable.
 </p>
@@ -9049,12 +9071,11 @@ map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 
 …as shown in Figure <a href="#fig:sheets-option-drag">82</a>.
 
-<iframe src="images/15-bookdown/sheets-option-drag.gif" width="100%" height="250px">
+<iframe src="images/16-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
-Figure 82: Caption here, with embedded link to GitHub repo, not GitHub
-Pages [animated
-GIF](https://github.com/HandsOnDataViz/book/blob/master/images/15-bookdown/sheets-option-drag.gif).
+Figure 82: Caption here, with embedded link to the [animated
+GIF](https://handsondataviz.org/images/16-bookdown/sheets-option-drag.gif).
 </p>
 
 ### Demo: R code-chunk for Youtube video in HTML and static image in PDF
@@ -9086,7 +9107,7 @@ Tables
 
 View the underlying source code to understand how this page was composed
 at:
-<a href="https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/15-bookdown.Rmd</a>
+<a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a>
 
 Create tables in Markdown format, since it produces good output for
 HTML, PDF, Word, and Markdown. Use a tool such as [Tables
@@ -9215,13 +9236,13 @@ shortens the note after it its first reference.
 -   Confirm if AsciiDoc file matches [O’Reilly Atlas import
     style](https://docs.atlas.oreilly.com/writing_in_asciidoc.html).
 
-<!--chapter:end:15-bookdown.Rmd-->
+<!--chapter:end:16-bookdown.Rmd-->
+<!-- Automated list of references generated by Bookdown + Zotero citation keys below. PDF output will appear without "References" at the top, but this seems to be the best solution. See https://bookdown.org/yihui/bookdown/citations.html -->
 
 References
 ==========
 
-<!-- Automated list of references generated by Bookdown + Zotero citation keys below -->
-<!--chapter:end:16-references.Rmd-->
+<!--chapter:end:17-references.Rmd-->
 
 Huff, Darrell. *How to Lie with Statistics*. W. W. Norton & Company,
 1954–2010. <http://books.google.com/books?isbn=0393070875>.

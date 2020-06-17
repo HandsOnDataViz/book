@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.4)  16 JUN 2020 10:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.6.4)  17 JUN 2020 14:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -502,7 +502,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \openout5 = `HandsOnDataViz.toc'.
 
 [6]
-<images/0-introduction/cover-400wide.jpg, id=536, 401.5pt x 403.5075pt>
+<images/0-introduction/cover-400wide.jpg, id=531, 401.5pt x 403.5075pt>
 File: images/0-introduction/cover-400wide.jpg Graphic file (type jpg)
 <use images/0-introduction/cover-400wide.jpg>
 Package pdftex.def Info: images/0-introduction/cover-400wide.jpg  used on input
@@ -521,13 +521,13 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 (/Users/jdoughe2/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<images/0-introduction/dougherty-jack.jpg, id=546, 48.18pt x 48.4209pt>
+<images/0-introduction/dougherty-jack.jpg, id=541, 48.18pt x 48.4209pt>
 File: images/0-introduction/dougherty-jack.jpg Graphic file (type jpg)
 <use images/0-introduction/dougherty-jack.jpg>
 Package pdftex.def Info: images/0-introduction/dougherty-jack.jpg  used on inpu
 t line 201.
 (pdftex.def)             Requested size: 48.17986pt x 48.42076pt.
-<images/0-introduction/ilyankou-ilya.jpg, id=550, 48.18pt x 48.18pt>
+<images/0-introduction/ilyankou-ilya.jpg, id=545, 48.18pt x 48.18pt>
 File: images/0-introduction/ilyankou-ilya.jpg Graphic file (type jpg)
 <use images/0-introduction/ilyankou-ilya.jpg>
 Package pdftex.def Info: images/0-introduction/ilyankou-ilya.jpg  used on input
@@ -535,7 +535,7 @@ Package pdftex.def Info: images/0-introduction/ilyankou-ilya.jpg  used on input
 (pdftex.def)             Requested size: 48.17986pt x 48.17986pt.
 [8] [9 <./images/0-introduction/dougherty-jack.jpg> <./images/0-introduction/il
 yankou-ilya.jpg>]
-<images/0-introduction/examples-Minard-Snow.png, id=580, 803.0pt x 260.975pt>
+<images/0-introduction/examples-Minard-Snow.png, id=575, 803.0pt x 260.975pt>
 File: images/0-introduction/examples-Minard-Snow.png Graphic file (type png)
 <use images/0-introduction/examples-Minard-Snow.png>
 Package pdftex.def Info: images/0-introduction/examples-Minard-Snow.png  used o
@@ -558,20 +558,20 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
 (/Users/jdoughe2/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<images/0-introduction/how-to-read.png, id=625, 863.225pt x 178.6675pt>
+<images/0-introduction/how-to-read.png, id=620, 863.225pt x 178.6675pt>
 File: images/0-introduction/how-to-read.png Graphic file (type png)
 <use images/0-introduction/how-to-read.png>
 Package pdftex.def Info: images/0-introduction/how-to-read.png  used on input l
 ine 315.
 (pdftex.def)             Requested size: 344.99411pt x 71.40575pt.
-<images/0-introduction/contextual-menu.png, id=626, 185.69376pt x 63.73813pt>
+<images/0-introduction/contextual-menu.png, id=621, 185.69376pt x 63.73813pt>
 File: images/0-introduction/contextual-menu.png Graphic file (type png)
 <use images/0-introduction/contextual-menu.png>
 Package pdftex.def Info: images/0-introduction/contextual-menu.png  used on inp
 ut line 339.
 (pdftex.def)             Requested size: 185.69896pt x 63.7399pt.
 [13 <./images/0-introduction/how-to-read.png>]
-<images/0-introduction/laptop-and-monitor-and-tablet.jpg, id=641, 602.25pt x 19
+<images/0-introduction/laptop-and-monitor-and-tablet.jpg, id=636, 602.25pt x 19
 4.7275pt>
 File: images/0-introduction/laptop-and-monitor-and-tablet.jpg Graphic file (typ
 e jpg)
@@ -588,14 +588,14 @@ Underfull \vbox (badness 7326) has occurred while \output is active []
 [15
 
 ] [16]
-<images/01-choose/tool-sweet-spot.png, id=669, 488.82625pt x 268.00125pt>
+<images/01-choose/tool-sweet-spot.png, id=664, 488.82625pt x 268.00125pt>
 File: images/01-choose/tool-sweet-spot.png Graphic file (type png)
 <use images/01-choose/tool-sweet-spot.png>
 Package pdftex.def Info: images/01-choose/tool-sweet-spot.png  used on input li
 ne 439.
 (pdftex.def)             Requested size: 345.00294pt x 189.14944pt.
 [17 <./images/01-choose/tool-sweet-spot.png>] [18]
-<images/01-choose/sample-address-screenshot.png, id=705, 389.95688pt x 109.9106
+<images/01-choose/sample-address-screenshot.png, id=700, 389.95688pt x 109.9106
 3pt>
 File: images/01-choose/sample-address-screenshot.png Graphic file (type png)
 <use images/01-choose/sample-address-screenshot.png>
@@ -607,7 +607,7 @@ n input line 506.
 ]
 Chapter 2.
 [21]
-<images/02-spreadsheet/google-drive-settings-convert-uploads.png, id=744, 1004.
+<images/02-spreadsheet/google-drive-settings-convert-uploads.png, id=739, 1004.
 75375pt x 454.69875pt>
 File: images/02-spreadsheet/google-drive-settings-convert-uploads.png Graphic f
 ile (type png)
@@ -616,7 +616,7 @@ Package pdftex.def Info: images/02-spreadsheet/google-drive-settings-convert-up
 loads.png  used on input line 655.
 (pdftex.def)             Requested size: 344.99997pt x 156.12885pt.
 [22]
-<images/02-spreadsheet/google-drive-upload-methods.png, id=755, 832.10875pt x 3
+<images/02-spreadsheet/google-drive-upload-methods.png, id=750, 832.10875pt x 3
 78.41376pt>
 File: images/02-spreadsheet/google-drive-upload-methods.png Graphic file (type 
 png)
@@ -624,7 +624,7 @@ png)
 Package pdftex.def Info: images/02-spreadsheet/google-drive-upload-methods.png 
  used on input line 669.
 (pdftex.def)             Requested size: 345.00127pt x 156.89442pt.
-<images/02-spreadsheet/google-drive-sheets-icon-rename.png, id=756, 456.70625pt
+<images/02-spreadsheet/google-drive-sheets-icon-rename.png, id=751, 456.70625pt
  x 271.0125pt>
 File: images/02-spreadsheet/google-drive-sheets-icon-rename.png Graphic file (t
 ype png)
@@ -632,7 +632,7 @@ ype png)
 Package pdftex.def Info: images/02-spreadsheet/google-drive-sheets-icon-rename.
 png  used on input line 683.
 (pdftex.def)             Requested size: 345.00972pt x 204.73103pt.
-<images/02-spreadsheet/google-drive-spreadsheet-icons.png, id=757, 227.34938pt 
+<images/02-spreadsheet/google-drive-spreadsheet-icons.png, id=752, 227.34938pt 
 x 158.5925pt>
 File: images/02-spreadsheet/google-drive-spreadsheet-icons.png Graphic file (ty
 pe png)
@@ -644,14 +644,14 @@ ng  used on input line 697.
 es/02-spreadsheet/google-drive-upload-methods.png>] [24 <./images/02-spreadshee
 t/google-drive-sheets-icon-rename.png> <./images/02-spreadsheet/google-drive-sp
 readsheet-icons.png>]
-<images/02-spreadsheet/google-sheets-copy1.png, id=773, 822.07124pt x 191.71625
+<images/02-spreadsheet/google-sheets-copy1.png, id=768, 822.07124pt x 191.71625
 pt>
 File: images/02-spreadsheet/google-sheets-copy1.png Graphic file (type png)
 <use images/02-spreadsheet/google-sheets-copy1.png>
 Package pdftex.def Info: images/02-spreadsheet/google-sheets-copy1.png  used on
  input line 711.
 (pdftex.def)             Requested size: 344.99161pt x 80.4559pt.
-<images/02-spreadsheet/google-sheets-copy2.png, id=775, 822.07124pt x 506.89375
+<images/02-spreadsheet/google-sheets-copy2.png, id=770, 822.07124pt x 506.89375
 pt>
 File: images/02-spreadsheet/google-sheets-copy2.png Graphic file (type png)
 <use images/02-spreadsheet/google-sheets-copy2.png>
@@ -665,7 +665,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 821--822
 pter / how -[] to -[] google -[]
  []
 
-<images/02-spreadsheet/google-sheets-download-ods-csv.png, id=809, 346.29375pt 
+<images/02-spreadsheet/google-sheets-download-ods-csv.png, id=804, 346.29375pt 
 x 295.1025pt>
 File: images/02-spreadsheet/google-sheets-download-ods-csv.png Graphic file (ty
 pe png)
@@ -673,21 +673,21 @@ pe png)
 Package pdftex.def Info: images/02-spreadsheet/google-sheets-download-ods-csv.p
 ng  used on input line 858.
 (pdftex.def)             Requested size: 345.00887pt x 294.00755pt.
-<images/02-spreadsheet/excel-save-as-ods.png, id=810, 369.38pt x 264.99pt>
+<images/02-spreadsheet/excel-save-as-ods.png, id=805, 369.38pt x 264.99pt>
 File: images/02-spreadsheet/excel-save-as-ods.png Graphic file (type png)
 <use images/02-spreadsheet/excel-save-as-ods.png>
 Package pdftex.def Info: images/02-spreadsheet/excel-save-as-ods.png  used on i
 nput line 870.
 (pdftex.def)             Requested size: 345.00218pt x 247.50157pt.
 [27] [28 <./images/02-spreadsheet/google-sheets-download-ods-csv.png>]
-<images/02-spreadsheet/excel-save-as-csv.png, id=833, 378.41376pt x 272.01625pt
+<images/02-spreadsheet/excel-save-as-csv.png, id=828, 378.41376pt x 272.01625pt
 >
 File: images/02-spreadsheet/excel-save-as-csv.png Graphic file (type png)
 <use images/02-spreadsheet/excel-save-as-csv.png>
 Package pdftex.def Info: images/02-spreadsheet/excel-save-as-csv.png  used on i
 nput line 903.
 (pdftex.def)             Requested size: 345.00375pt x 248.00003pt.
-<images/02-spreadsheet/excel-save-as-csv-continue.png, id=834, 457.71pt x 253.9
+<images/02-spreadsheet/excel-save-as-csv-continue.png, id=829, 457.71pt x 253.9
 4875pt>
 File: images/02-spreadsheet/excel-save-as-csv-continue.png Graphic file (type p
 ng)
@@ -698,13 +698,13 @@ used on input line 917.
 [29 <./images/02-spreadsheet/excel-save-as-ods.png>] [30 <./images/02-spreadshe
 et/excel-save-as-csv.png> <./images/02-spreadsheet/excel-save-as-csv-continue.p
 ng>]
-<images/02-spreadsheet/excel-quit-csv.png, id=852, 686.565pt x 311.1625pt>
+<images/02-spreadsheet/excel-quit-csv.png, id=847, 686.565pt x 311.1625pt>
 File: images/02-spreadsheet/excel-quit-csv.png Graphic file (type png)
 <use images/02-spreadsheet/excel-quit-csv.png>
 Package pdftex.def Info: images/02-spreadsheet/excel-quit-csv.png  used on inpu
 t line 931.
 (pdftex.def)             Requested size: 344.99974pt x 156.35953pt.
-<images/placeholder.jpg, id=853, 666.49pt x 250.9375pt>
+<images/placeholder.jpg, id=848, 666.49pt x 250.9375pt>
 File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
 Package pdftex.def Info: images/placeholder.jpg  used on input line 959.
@@ -724,7 +724,7 @@ File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
 Package pdftex.def Info: images/placeholder.jpg  used on input line 1055.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
-<images/02-spreadsheet/spreadsheet-pivot-intro.png, id=885, 297.11pt x 222.8325
+<images/02-spreadsheet/spreadsheet-pivot-intro.png, id=880, 297.11pt x 222.8325
 pt>
 File: images/02-spreadsheet/spreadsheet-pivot-intro.png Graphic file (type png)
 
@@ -732,7 +732,7 @@ File: images/02-spreadsheet/spreadsheet-pivot-intro.png Graphic file (type png)
 Package pdftex.def Info: images/02-spreadsheet/spreadsheet-pivot-intro.png  use
 d on input line 1065.
 (pdftex.def)             Requested size: 297.1138pt x 222.83534pt.
-<images/02-spreadsheet/spreadsheet-google-pivot-year.png, id=886, 725.71124pt x
+<images/02-spreadsheet/spreadsheet-google-pivot-year.png, id=881, 725.71124pt x
  480.79625pt>
 File: images/02-spreadsheet/spreadsheet-google-pivot-year.png Graphic file (typ
 e png)
@@ -742,7 +742,7 @@ g  used on input line 1073.
 (pdftex.def)             Requested size: 345.00433pt x 228.57132pt.
 [34] [35 <./images/02-spreadsheet/spreadsheet-pivot-intro.png> <./images/02-spr
 eadsheet/spreadsheet-google-pivot-year.png>]
-<images/02-spreadsheet/spreadsheet-pivot-google-advanced.png, id=905, 930.47626
+<images/02-spreadsheet/spreadsheet-pivot-google-advanced.png, id=900, 930.47626
 pt x 777.90625pt>
 File: images/02-spreadsheet/spreadsheet-pivot-google-advanced.png Graphic file 
 (type png)
@@ -750,13 +750,13 @@ File: images/02-spreadsheet/spreadsheet-pivot-google-advanced.png Graphic file
 Package pdftex.def Info: images/02-spreadsheet/spreadsheet-pivot-google-advance
 d.png  used on input line 1109.
 (pdftex.def)             Requested size: 344.99492pt x 288.42616pt.
-<images/02-spreadsheet/vlookup-problem.png, id=909, 593.21625pt x 308.15125pt>
+<images/02-spreadsheet/vlookup-problem.png, id=904, 593.21625pt x 308.15125pt>
 File: images/02-spreadsheet/vlookup-problem.png Graphic file (type png)
 <use images/02-spreadsheet/vlookup-problem.png>
 Package pdftex.def Info: images/02-spreadsheet/vlookup-problem.png  used on inp
 ut line 1135.
 (pdftex.def)             Requested size: 345.00705pt x 179.21684pt.
-<images/02-spreadsheet/vlookup-solution.png, id=910, 232.36812pt x 162.10562pt>
+<images/02-spreadsheet/vlookup-solution.png, id=905, 232.36812pt x 162.10562pt>
 
 File: images/02-spreadsheet/vlookup-solution.png Graphic file (type png)
 <use images/02-spreadsheet/vlookup-solution.png>
@@ -780,7 +780,7 @@ File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
 Package pdftex.def Info: images/placeholder.jpg  used on input line 1426.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
-<images/03-find/SpreadsheetSourceTab.png, id=1020, 451.6875pt x 179.67125pt>
+<images/03-find/SpreadsheetSourceTab.png, id=1015, 451.6875pt x 179.67125pt>
 File: images/03-find/SpreadsheetSourceTab.png Graphic file (type png)
 <use images/03-find/SpreadsheetSourceTab.png>
 Package pdftex.def Info: images/03-find/SpreadsheetSourceTab.png  used on input
@@ -816,12 +816,12 @@ Underfull \hbox (badness 2818) in paragraph at lines 1541--1542
 News Project, an
  []
 
-<data/ct-outline.png, id=1076, 128.48pt x 96.36pt>
+<data/ct-outline.png, id=1071, 128.48pt x 96.36pt>
 File: data/ct-outline.png Graphic file (type png)
 <use data/ct-outline.png>
 Package pdftex.def Info: data/ct-outline.png  used on input line 1577.
 (pdftex.def)             Requested size: 96.60089pt x 72.45065pt.
-<data/ct-counties.png, id=1079, 128.48pt x 97.36375pt>
+<data/ct-counties.png, id=1074, 128.48pt x 97.36375pt>
 File: data/ct-counties.png Graphic file (type png)
 <use data/ct-counties.png>
 Package pdftex.def Info: data/ct-counties.png  used on input line 1586.
@@ -831,17 +831,17 @@ Overfull \hbox (4.83815pt too wide) in paragraph at lines 1590--1591
 \T1/lmr/m/n/10 counties.geojson[]|  
  []
 
-<data/ct-towns.png, id=1082, 128.48pt x 97.36375pt>
+<data/ct-towns.png, id=1077, 128.48pt x 97.36375pt>
 File: data/ct-towns.png Graphic file (type png)
 <use data/ct-towns.png>
 Package pdftex.def Info: data/ct-towns.png  used on input line 1595.
 (pdftex.def)             Requested size: 96.60089pt x 73.20535pt.
-<data/ct-tracts-2010.png, id=1085, 128.48pt x 94.3525pt>
+<data/ct-tracts-2010.png, id=1080, 128.48pt x 94.3525pt>
 File: data/ct-tracts-2010.png Graphic file (type png)
 <use data/ct-tracts-2010.png>
 Package pdftex.def Info: data/ct-tracts-2010.png  used on input line 1604.
 (pdftex.def)             Requested size: 96.60089pt x 70.94127pt.
-<data/hartfordcounty-outline.png, id=1088, 128.48pt x 128.48pt>
+<data/hartfordcounty-outline.png, id=1083, 128.48pt x 128.48pt>
 File: data/hartfordcounty-outline.png Graphic file (type png)
 <use data/hartfordcounty-outline.png>
 Package pdftex.def Info: data/hartfordcounty-outline.png  used on input line 16
@@ -852,7 +852,7 @@ Overfull \hbox (2.83824pt too wide) in paragraph at lines 1617--1618
 [][]\T1/lmr/m/n/10 hartfordcounty- 
  []
 
-<data/hartfordcounty-towns.png, id=1091, 128.48pt x 128.48pt>
+<data/hartfordcounty-towns.png, id=1086, 128.48pt x 128.48pt>
 File: data/hartfordcounty-towns.png Graphic file (type png)
 <use data/hartfordcounty-towns.png>
 Package pdftex.def Info: data/hartfordcounty-towns.png  used on input line 1622
@@ -863,7 +863,7 @@ Overfull \hbox (2.83824pt too wide) in paragraph at lines 1626--1627
 [][]\T1/lmr/m/n/10 hartfordcounty- 
  []
 
-<data/hartfordcounty-tracts-2010.png, id=1094, 128.48pt x 128.48pt>
+<data/hartfordcounty-tracts-2010.png, id=1089, 128.48pt x 128.48pt>
 File: data/hartfordcounty-tracts-2010.png Graphic file (type png)
 <use data/hartfordcounty-tracts-2010.png>
 Package pdftex.def Info: data/hartfordcounty-tracts-2010.png  used on input lin
@@ -874,18 +874,18 @@ Overfull \hbox (2.83824pt too wide) in paragraph at lines 1635--1636
 [][]\T1/lmr/m/n/10 hartfordcounty- 
  []
 
-<data/hartford-outline.png, id=1097, 128.48pt x 168.12813pt>
+<data/hartford-outline.png, id=1092, 128.48pt x 168.12813pt>
 File: data/hartford-outline.png Graphic file (type png)
 <use data/hartford-outline.png>
 Package pdftex.def Info: data/hartford-outline.png  used on input line 1640.
 (pdftex.def)             Requested size: 96.60089pt x 126.41132pt.
-<data/hartford-tracts-2010.png, id=1100, 128.48pt x 169.63374pt>
+<data/hartford-tracts-2010.png, id=1095, 128.48pt x 169.63374pt>
 File: data/hartford-tracts-2010.png Graphic file (type png)
 <use data/hartford-tracts-2010.png>
 Package pdftex.def Info: data/hartford-tracts-2010.png  used on input line 1649
 .
 (pdftex.def)             Requested size: 96.60089pt x 127.54335pt.
-<data/hartford-neighborhoods.png, id=1103, 128.48pt x 170.13562pt>
+<data/hartford-neighborhoods.png, id=1098, 128.48pt x 170.13562pt>
 File: data/hartford-neighborhoods.png Graphic file (type png)
 <use data/hartford-neighborhoods.png>
 Package pdftex.def Info: data/hartford-neighborhoods.png  used on input line 16
@@ -904,35 +904,35 @@ rhoods.png>] [52
 
 ]
 Chapter 4.
-<images/04-clean/clean-up-messy-data.png, id=1180, 228.855pt x 84.315pt>
+<images/04-clean/clean-up-messy-data.png, id=1175, 228.855pt x 84.315pt>
 File: images/04-clean/clean-up-messy-data.png Graphic file (type png)
 <use images/04-clean/clean-up-messy-data.png>
 Package pdftex.def Info: images/04-clean/clean-up-messy-data.png  used on input
  line 1690.
 (pdftex.def)             Requested size: 228.85791pt x 84.31606pt.
 [53 <./images/04-clean/clean-up-messy-data.png>]
-<images/04-clean/sheets-find-replace.png, id=1190, 794.97pt x 579.16376pt>
+<images/04-clean/sheets-find-replace.png, id=1185, 794.97pt x 579.16376pt>
 File: images/04-clean/sheets-find-replace.png Graphic file (type png)
 <use images/04-clean/sheets-find-replace.png>
 Package pdftex.def Info: images/04-clean/sheets-find-replace.png  used on input
  line 1770.
 (pdftex.def)             Requested size: 345.00856pt x 251.35094pt.
 [54] [55 <./images/04-clean/sheets-find-replace.png>]
-<images/04-clean/sheets-split.png, id=1216, 530.98375pt x 408.52625pt>
+<images/04-clean/sheets-split.png, id=1211, 530.98375pt x 408.52625pt>
 File: images/04-clean/sheets-split.png Graphic file (type png)
 <use images/04-clean/sheets-split.png>
 Package pdftex.def Info: images/04-clean/sheets-split.png  used on input line 1
 814.
 (pdftex.def)             Requested size: 345.0057pt x 265.43918pt.
 [56] [57 <./images/04-clean/sheets-split.png>]
-<images/04-clean/sheets-concat.png, id=1236, 739.76375pt x 173.64874pt>
+<images/04-clean/sheets-concat.png, id=1231, 739.76375pt x 173.64874pt>
 File: images/04-clean/sheets-concat.png Graphic file (type png)
 <use images/04-clean/sheets-concat.png>
 Package pdftex.def Info: images/04-clean/sheets-concat.png  used on input line 
 1888.
 (pdftex.def)             Requested size: 345.00249pt x 80.9843pt.
 [58]
-<images/04-clean/tabula-welcome.png, id=1249, 954.56625pt x 733.74126pt>
+<images/04-clean/tabula-welcome.png, id=1244, 954.56625pt x 733.74126pt>
 File: images/04-clean/tabula-welcome.png Graphic file (type png)
 <use images/04-clean/tabula-welcome.png>
 Package pdftex.def Info: images/04-clean/tabula-welcome.png  used on input line
@@ -940,7 +940,7 @@ Package pdftex.def Info: images/04-clean/tabula-welcome.png  used on input line
 (pdftex.def)             Requested size: 344.99818pt x 265.18788pt.
 [59 <./images/04-clean/sheets-concat.png>] [60 <./images/04-clean/tabula-welcom
 e.png>]
-<images/04-clean/tabula-autodetect.png, id=1267, 1084.05pt x 895.345pt>
+<images/04-clean/tabula-autodetect.png, id=1262, 1084.05pt x 895.345pt>
 File: images/04-clean/tabula-autodetect.png Graphic file (type png)
 <use images/04-clean/tabula-autodetect.png>
 Package pdftex.def Info: images/04-clean/tabula-autodetect.png  used on input l
@@ -964,13 +964,13 @@ Overfull \hbox (3.34969pt too wide) in paragraph at lines 2038--2040
 h \T1/lmtt/m/n/10 127.0.0.1:3333
  []
 
-<images/04-clean/openrefine-welcome.png, id=1297, 1084.05pt x 895.345pt>
+<images/04-clean/openrefine-welcome.png, id=1292, 1084.05pt x 895.345pt>
 File: images/04-clean/openrefine-welcome.png Graphic file (type png)
 <use images/04-clean/openrefine-welcome.png>
 Package pdftex.def Info: images/04-clean/openrefine-welcome.png  used on input 
 line 2045.
 (pdftex.def)             Requested size: 345.00084pt x 284.94514pt.
-<images/04-clean/openrefine-parse.png, id=1298, 1084.05pt x 774.895pt>
+<images/04-clean/openrefine-parse.png, id=1293, 1084.05pt x 774.895pt>
 File: images/04-clean/openrefine-parse.png Graphic file (type png)
 <use images/04-clean/openrefine-parse.png>
 Package pdftex.def Info: images/04-clean/openrefine-parse.png  used on input li
@@ -982,7 +982,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line
 (/Users/jdoughe2/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [65 <./images/04-clean/openrefine-parse.png>]
-<images/04-clean/openrefine-manual-edit.png, id=1332, 543.02875pt x 161.60374pt
+<images/04-clean/openrefine-manual-edit.png, id=1327, 543.02875pt x 161.60374pt
 >
 File: images/04-clean/openrefine-manual-edit.png Graphic file (type png)
 <use images/04-clean/openrefine-manual-edit.png>
@@ -990,7 +990,7 @@ Package pdftex.def Info: images/04-clean/openrefine-manual-edit.png  used on in
 put line 2119.
 (pdftex.def)             Requested size: 345.01pt x 102.67395pt.
 [66 <./images/04-clean/openrefine-manual-edit.png>]
-<images/04-clean/openrefine-cluster.png, id=1347, 1004.75375pt x 636.3775pt>
+<images/04-clean/openrefine-cluster.png, id=1342, 1004.75375pt x 636.3775pt>
 File: images/04-clean/openrefine-cluster.png Graphic file (type png)
 <use images/04-clean/openrefine-cluster.png>
 Package pdftex.def Info: images/04-clean/openrefine-cluster.png  used on input 
@@ -1000,61 +1000,61 @@ line 2164.
 
 ]
 Chapter 5.
-<images/05-chart/chart-grouped-column.png, id=1375, 256.96pt x 134.5025pt>
+<images/05-chart/chart-grouped-column.png, id=1370, 256.96pt x 134.5025pt>
 File: images/05-chart/chart-grouped-column.png Graphic file (type png)
 <use images/05-chart/chart-grouped-column.png>
 Package pdftex.def Info: images/05-chart/chart-grouped-column.png  used on inpu
 t line 2222.
 (pdftex.def)             Requested size: 162.15227pt x 84.87656pt.
-<images/05-chart/chart-separated-column.png, id=1378, 256.96pt x 149.55875pt>
+<images/05-chart/chart-separated-column.png, id=1373, 256.96pt x 149.55875pt>
 File: images/05-chart/chart-separated-column.png Graphic file (type png)
 <use images/05-chart/chart-separated-column.png>
 Package pdftex.def Info: images/05-chart/chart-separated-column.png  used on in
 put line 2227.
 (pdftex.def)             Requested size: 162.15227pt x 94.37769pt.
-<images/05-chart/chart-stacked-column.png, id=1381, 256.96pt x 166.6225pt>
+<images/05-chart/chart-stacked-column.png, id=1376, 256.96pt x 166.6225pt>
 File: images/05-chart/chart-stacked-column.png Graphic file (type png)
 <use images/05-chart/chart-stacked-column.png>
 Package pdftex.def Info: images/05-chart/chart-stacked-column.png  used on inpu
 t line 2232.
 (pdftex.def)             Requested size: 162.15227pt x 105.1456pt.
-<images/05-chart/chart-histogram.png, id=1384, 256.96pt x 161.60374pt>
+<images/05-chart/chart-histogram.png, id=1379, 256.96pt x 161.60374pt>
 File: images/05-chart/chart-histogram.png Graphic file (type png)
 <use images/05-chart/chart-histogram.png>
 Package pdftex.def Info: images/05-chart/chart-histogram.png  used on input lin
 e 2237.
 (pdftex.def)             Requested size: 162.15227pt x 101.97858pt.
-<images/05-chart/chart-pie.png, id=1387, 256.96pt x 177.66376pt>
+<images/05-chart/chart-pie.png, id=1382, 256.96pt x 177.66376pt>
 File: images/05-chart/chart-pie.png Graphic file (type png)
 <use images/05-chart/chart-pie.png>
 Package pdftex.def Info: images/05-chart/chart-pie.png  used on input line 2242
 .
 (pdftex.def)             Requested size: 162.15227pt x 112.1131pt.
-<images/05-chart/chart-line.png, id=1390, 256.96pt x 148.555pt>
+<images/05-chart/chart-line.png, id=1385, 256.96pt x 148.555pt>
 File: images/05-chart/chart-line.png Graphic file (type png)
 <use images/05-chart/chart-line.png>
 Package pdftex.def Info: images/05-chart/chart-line.png  used on input line 224
 7.
 (pdftex.def)             Requested size: 162.15227pt x 93.74428pt.
-<images/05-chart/chart-filtered-line.png, id=1393, 256.96pt x 176.66pt>
+<images/05-chart/chart-filtered-line.png, id=1388, 256.96pt x 176.66pt>
 File: images/05-chart/chart-filtered-line.png Graphic file (type png)
 <use images/05-chart/chart-filtered-line.png>
 Package pdftex.def Info: images/05-chart/chart-filtered-line.png  used on input
  line 2252.
 (pdftex.def)             Requested size: 162.15227pt x 111.47968pt.
-<images/05-chart/chart-stacked-area.png, id=1395, 256.96pt x 141.52875pt>
+<images/05-chart/chart-stacked-area.png, id=1390, 256.96pt x 141.52875pt>
 File: images/05-chart/chart-stacked-area.png Graphic file (type png)
 <use images/05-chart/chart-stacked-area.png>
 Package pdftex.def Info: images/05-chart/chart-stacked-area.png  used on input 
 line 2257.
 (pdftex.def)             Requested size: 162.15227pt x 89.31042pt.
-<images/05-chart/chart-scatter.png, id=1398, 256.96pt x 158.5925pt>
+<images/05-chart/chart-scatter.png, id=1393, 256.96pt x 158.5925pt>
 File: images/05-chart/chart-scatter.png Graphic file (type png)
 <use images/05-chart/chart-scatter.png>
 Package pdftex.def Info: images/05-chart/chart-scatter.png  used on input line 
 2262.
 (pdftex.def)             Requested size: 162.15227pt x 100.07834pt.
-<images/05-chart/chart-bubble.png, id=1402, 389.455pt x 237.88875pt>
+<images/05-chart/chart-bubble.png, id=1397, 389.455pt x 237.88875pt>
 File: images/05-chart/chart-bubble.png Graphic file (type png)
 <use images/05-chart/chart-bubble.png>
 Package pdftex.def Info: images/05-chart/chart-bubble.png  used on input line 2
@@ -1065,7 +1065,7 @@ separated-column.png> <./images/05-chart/chart-stacked-column.png> <./images/05
 -chart/chart-histogram.png>] [71 <./images/05-chart/chart-pie.png> <./images/05
 -chart/chart-line.png> <./images/05-chart/chart-filtered-line.png> <./images/05
 -chart/chart-stacked-area.png>]
-<images/05-chart/design-principles-chart-components.png, id=1433, 1254.6875pt x
+<images/05-chart/design-principles-chart-components.png, id=1428, 1254.6875pt x
  665.48625pt>
 File: images/05-chart/design-principles-chart-components.png Graphic file (type
  png)
@@ -1075,7 +1075,7 @@ Package pdftex.def Info: images/05-chart/design-principles-chart-components.png
 (pdftex.def)             Requested size: 344.99226pt x 182.98389pt.
 [72 <./images/05-chart/chart-scatter.png> <./images/05-chart/chart-bubble.png>]
 [73 <./images/05-chart/design-principles-chart-components.png>]
-<images/05-chart/design-principles-start-at-zero.png, id=1456, 1254.6875pt x 59
+<images/05-chart/design-principles-start-at-zero.png, id=1451, 1254.6875pt x 59
 2.96532pt>
 File: images/05-chart/design-principles-start-at-zero.png Graphic file (type pn
 g)
@@ -1084,14 +1084,14 @@ Package pdftex.def Info: images/05-chart/design-principles-start-at-zero.png  u
 sed on input line 2374.
 (pdftex.def)             Requested size: 344.99226pt x 163.04333pt.
 [74 <./images/05-chart/design-principles-start-at-zero.png>]
-<images/05-chart/design-principles-junk.png, id=1466, 1254.6875pt x 540.77031pt
+<images/05-chart/design-principles-junk.png, id=1461, 1254.6875pt x 540.77031pt
 >
 File: images/05-chart/design-principles-junk.png Graphic file (type png)
 <use images/05-chart/design-principles-junk.png>
 Package pdftex.def Info: images/05-chart/design-principles-junk.png  used on in
 put line 2409.
 (pdftex.def)             Requested size: 344.99226pt x 148.69167pt.
-<images/05-chart/design-principles-pie.png, id=1468, 1145.27875pt x 573.14125pt
+<images/05-chart/design-principles-pie.png, id=1463, 1145.27875pt x 573.14125pt
 >
 File: images/05-chart/design-principles-pie.png Graphic file (type png)
 <use images/05-chart/design-principles-pie.png>
@@ -1099,14 +1099,14 @@ Package pdftex.def Info: images/05-chart/design-principles-pie.png  used on inp
 ut line 2424.
 (pdftex.def)             Requested size: 345.00179pt x 172.65207pt.
 [75 <./images/05-chart/design-principles-junk.png>]
-<images/05-chart/design-principles-pie-to-bar.png, id=1478, 1145.27875pt x 573.
+<images/05-chart/design-principles-pie-to-bar.png, id=1473, 1145.27875pt x 573.
 14125pt>
 File: images/05-chart/design-principles-pie-to-bar.png Graphic file (type png)
 <use images/05-chart/design-principles-pie-to-bar.png>
 Package pdftex.def Info: images/05-chart/design-principles-pie-to-bar.png  used
  on input line 2434.
 (pdftex.def)             Requested size: 345.00179pt x 172.65207pt.
-<images/05-chart/design-principles-turn-bar.png, id=1480, 1254.6875pt x 573.141
+<images/05-chart/design-principles-turn-bar.png, id=1475, 1254.6875pt x 573.141
 25pt>
 File: images/05-chart/design-principles-turn-bar.png Graphic file (type png)
 <use images/05-chart/design-principles-turn-bar.png>
@@ -1115,7 +1115,7 @@ n input line 2444.
 (pdftex.def)             Requested size: 344.99226pt x 157.59247pt.
 [76 <./images/05-chart/design-principles-pie.png> <./images/05-chart/design-pri
 nciples-pie-to-bar.png>]
-<images/05-chart/design-principles-order-categories.png, id=1491, 1254.6875pt x
+<images/05-chart/design-principles-order-categories.png, id=1486, 1254.6875pt x
  407.5225pt>
 File: images/05-chart/design-principles-order-categories.png Graphic file (type
  png)
@@ -1125,14 +1125,14 @@ Package pdftex.def Info: images/05-chart/design-principles-order-categories.png
 (pdftex.def)             Requested size: 344.99226pt x 112.05348pt.
 [77 <./images/05-chart/design-principles-turn-bar.png> <./images/05-chart/desig
 n-principles-order-categories.png>]
-<images/05-chart/design-principles-color.png, id=1500, 1102.1175pt x 1215.54124
+<images/05-chart/design-principles-color.png, id=1495, 1102.1175pt x 1215.54124
 pt>
 File: images/05-chart/design-principles-color.png Graphic file (type png)
 <use images/05-chart/design-principles-color.png>
 Package pdftex.def Info: images/05-chart/design-principles-color.png  used on i
 nput line 2471.
 (pdftex.def)             Requested size: 344.99947pt x 380.50487pt.
-<images/05-chart/design-principles-decluttered.png, id=1502, 1254.6875pt x 601.
+<images/05-chart/design-principles-decluttered.png, id=1497, 1254.6875pt x 601.
 99907pt>
 File: images/05-chart/design-principles-decluttered.png Graphic file (type png)
 
@@ -1141,44 +1141,44 @@ Package pdftex.def Info: images/05-chart/design-principles-decluttered.png  use
 d on input line 2482.
 (pdftex.def)             Requested size: 344.99226pt x 165.52728pt.
 [78] [79 <./images/05-chart/design-principles-color.png>]
-<images/05-chart/column-grouped.png, id=1520, 180.17313pt x 114.4275pt>
+<images/05-chart/column-grouped.png, id=1515, 180.17313pt x 114.4275pt>
 File: images/05-chart/column-grouped.png Graphic file (type png)
 <use images/05-chart/column-grouped.png>
 Package pdftex.def Info: images/05-chart/column-grouped.png  used on input line
  2547.
 (pdftex.def)             Requested size: 180.17267pt x 114.42722pt.
-<images/05-chart/file-make-copy.png, id=1528, 49.4347pt x 53.70062pt>
+<images/05-chart/file-make-copy.png, id=1523, 49.4347pt x 53.70062pt>
 File: images/05-chart/file-make-copy.png Graphic file (type png)
 <use images/05-chart/file-make-copy.png>
 Package pdftex.def Info: images/05-chart/file-make-copy.png  used on input line
  2567.
 (pdftex.def)             Requested size: 49.4353pt x 53.7013pt.
 [80 <./images/05-chart/design-principles-decluttered.png>]
-<images/05-chart/delete-chart.png, id=1543, 40.90282pt x 24.34094pt>
+<images/05-chart/delete-chart.png, id=1538, 40.90282pt x 24.34094pt>
 File: images/05-chart/delete-chart.png Graphic file (type png)
 <use images/05-chart/delete-chart.png>
 Package pdftex.def Info: images/05-chart/delete-chart.png  used on input line 2
 583.
 (pdftex.def)             Requested size: 40.9027pt x 24.34087pt.
-<images/05-chart/column-grouped-data.png, id=1545, 87.07532pt x 29.10875pt>
+<images/05-chart/column-grouped-data.png, id=1540, 87.07532pt x 29.10875pt>
 File: images/05-chart/column-grouped-data.png Graphic file (type png)
 <use images/05-chart/column-grouped-data.png>
 Package pdftex.def Info: images/05-chart/column-grouped-data.png  used on input
  line 2599.
 (pdftex.def)             Requested size: 87.07774pt x 29.10956pt.
-<images/05-chart/column-grouped-insert.png, id=1547, 57.21375pt x 77.28876pt>
+<images/05-chart/column-grouped-insert.png, id=1542, 57.21375pt x 77.28876pt>
 File: images/05-chart/column-grouped-insert.png Graphic file (type png)
 <use images/05-chart/column-grouped-insert.png>
 Package pdftex.def Info: images/05-chart/column-grouped-insert.png  used on inp
 ut line 2615.
 (pdftex.def)             Requested size: 57.2162pt x 77.29208pt.
-<images/05-chart/column-grouped-editor.png, id=1549, 80.55093pt x 70.76437pt>
+<images/05-chart/column-grouped-editor.png, id=1544, 80.55093pt x 70.76437pt>
 File: images/05-chart/column-grouped-editor.png Graphic file (type png)
 <use images/05-chart/column-grouped-editor.png>
 Package pdftex.def Info: images/05-chart/column-grouped-editor.png  used on inp
 ut line 2631.
 (pdftex.def)             Requested size: 80.55441pt x 70.76743pt.
-<images/05-chart/chart-editor-customize.png, id=1551, 80.55093pt x 53.95157pt>
+<images/05-chart/chart-editor-customize.png, id=1546, 80.55093pt x 53.95157pt>
 File: images/05-chart/chart-editor-customize.png Graphic file (type png)
 <use images/05-chart/chart-editor-customize.png>
 Package pdftex.def Info: images/05-chart/chart-editor-customize.png  used on in
@@ -1188,19 +1188,19 @@ put line 2647.
 g> <./images/05-chart/delete-chart.png>] [82 <./images/05-chart/column-grouped-
 data.png> <./images/05-chart/column-grouped-insert.png> <./images/05-chart/colu
 mn-grouped-editor.png> <./images/05-chart/chart-editor-customize.png>]
-<images/05-chart/share-button-sheet.png, id=1577, 96.10907pt x 46.42343pt>
+<images/05-chart/share-button-sheet.png, id=1572, 96.10907pt x 46.42343pt>
 File: images/05-chart/share-button-sheet.png Graphic file (type png)
 <use images/05-chart/share-button-sheet.png>
 Package pdftex.def Info: images/05-chart/share-button-sheet.png  used on input 
 line 2663.
 (pdftex.def)             Requested size: 96.11176pt x 46.42471pt.
-<images/05-chart/chart-publish.png, id=1580, 38.1425pt x 39.64813pt>
+<images/05-chart/chart-publish.png, id=1575, 38.1425pt x 39.64813pt>
 File: images/05-chart/chart-publish.png Graphic file (type png)
 <use images/05-chart/chart-publish.png>
 Package pdftex.def Info: images/05-chart/chart-publish.png  used on input line 
 2679.
 (pdftex.def)             Requested size: 38.14413pt x 39.64983pt.
-<images/05-chart/bar-separated.png, id=1583, 175.15437pt x 108.15407pt>
+<images/05-chart/bar-separated.png, id=1578, 175.15437pt x 108.15407pt>
 File: images/05-chart/bar-separated.png Graphic file (type png)
 <use images/05-chart/bar-separated.png>
 Package pdftex.def Info: images/05-chart/bar-separated.png  used on input line 
@@ -1208,19 +1208,19 @@ Package pdftex.def Info: images/05-chart/bar-separated.png  used on input line
 (pdftex.def)             Requested size: 175.16196pt x 108.15874pt.
 [83 <./images/05-chart/share-button-sheet.png> <./images/05-chart/chart-publish
 .png>]
-<images/05-chart/bar-separated-data.png, id=1604, 132.74594pt x 34.37843pt>
+<images/05-chart/bar-separated-data.png, id=1598, 132.74594pt x 34.37843pt>
 File: images/05-chart/bar-separated-data.png Graphic file (type png)
 <use images/05-chart/bar-separated-data.png>
 Package pdftex.def Info: images/05-chart/bar-separated-data.png  used on input 
 line 2709.
 (pdftex.def)             Requested size: 132.75572pt x 34.38095pt.
-<images/05-chart/column-stacked.png, id=1607, 161.60374pt x 95.35625pt>
+<images/05-chart/column-stacked.png, id=1601, 161.60374pt x 95.35625pt>
 File: images/05-chart/column-stacked.png Graphic file (type png)
 <use images/05-chart/column-stacked.png>
 Package pdftex.def Info: images/05-chart/column-stacked.png  used on input line
  2727.
 (pdftex.def)             Requested size: 161.61073pt x 95.36037pt.
-<images/05-chart/column-stacked-data.png, id=1613, 113.1728pt x 54.9553pt>
+<images/05-chart/column-stacked-data.png, id=1607, 113.1728pt x 54.9553pt>
 File: images/05-chart/column-stacked-data.png Graphic file (type png)
 <use images/05-chart/column-stacked-data.png>
 Package pdftex.def Info: images/05-chart/column-stacked-data.png  used on input
@@ -1229,20 +1229,20 @@ Package pdftex.def Info: images/05-chart/column-stacked-data.png  used on input
 [84 <./images/05-chart/bar-separated.png> <./images/05-chart/bar-separated-data
 .png>] [85 <./images/05-chart/column-stacked.png> <./images/05-chart/column-sta
 cked-data.png>]
-<images/05-chart/histogram.png, id=1639, 149.8097pt x 91.84312pt>
+<images/05-chart/histogram.png, id=1634, 149.8097pt x 91.84312pt>
 File: images/05-chart/histogram.png Graphic file (type png)
 <use images/05-chart/histogram.png>
 Package pdftex.def Info: images/05-chart/histogram.png  used on input line 2779
 .
 (pdftex.def)             Requested size: 149.81845pt x 91.84848pt.
 [86 <./images/05-chart/histogram.png>] [87] [88]
-<images/05-chart/scatter-chart-data.png, id=1672, 735.74875pt x 501.875pt>
+<images/05-chart/scatter-chart-data.png, id=1667, 735.74875pt x 501.875pt>
 File: images/05-chart/scatter-chart-data.png Graphic file (type png)
 <use images/05-chart/scatter-chart-data.png>
 Package pdftex.def Info: images/05-chart/scatter-chart-data.png  used on input 
 line 2941.
 (pdftex.def)             Requested size: 345.00487pt x 235.33755pt.
-<images/05-chart/scatter-chart-custom-data-labels.png, id=1673, 320.19624pt x 6
+<images/05-chart/scatter-chart-custom-data-labels.png, id=1668, 320.19624pt x 6
 76.5275pt>
 File: images/05-chart/scatter-chart-custom-data-labels.png Graphic file (type p
 ng)
@@ -1285,14 +1285,14 @@ Overfull \hbox (38.24889pt too wide) in paragraph at lines 3031--3031
  []
 
 [92]
-<images/05-chart/tableau-scatter-demo.png, id=1710, 1020.81375pt x 654.445pt>
+<images/05-chart/tableau-scatter-demo.png, id=1705, 1020.81375pt x 654.445pt>
 File: images/05-chart/tableau-scatter-demo.png Graphic file (type png)
 <use images/05-chart/tableau-scatter-demo.png>
 Package pdftex.def Info: images/05-chart/tableau-scatter-demo.png  used on inpu
 t line 3079.
 (pdftex.def)             Requested size: 345.00043pt x 221.1802pt.
 [93]
-<images/05-chart/tableau-connect.png, id=1731, 1066.98625pt x 767.86874pt>
+<images/05-chart/tableau-connect.png, id=1726, 1066.98625pt x 767.86874pt>
 File: images/05-chart/tableau-connect.png Graphic file (type png)
 <use images/05-chart/tableau-connect.png>
 Package pdftex.def Info: images/05-chart/tableau-connect.png  used on input lin
@@ -1302,21 +1302,21 @@ e 3125.
 Underfull \vbox (badness 1168) has occurred while \output is active []
 
 [95 <./images/05-chart/tableau-connect.png>]
-<images/05-chart/tableau-xy-final.png, id=1752, 1066.98625pt x 767.86874pt>
+<images/05-chart/tableau-xy-final.png, id=1747, 1066.98625pt x 767.86874pt>
 File: images/05-chart/tableau-xy-final.png Graphic file (type png)
 <use images/05-chart/tableau-xy-final.png>
 Package pdftex.def Info: images/05-chart/tableau-xy-final.png  used on input li
 ne 3175.
 (pdftex.def)             Requested size: 344.9918pt x 248.27725pt.
 [96 <./images/05-chart/tableau-xy-final.png>]
-<images/05-chart/tableau-toolbar-settings.png, id=1763, 568.1225pt x 110.4125pt
+<images/05-chart/tableau-toolbar-settings.png, id=1758, 568.1225pt x 110.4125pt
 >
 File: images/05-chart/tableau-toolbar-settings.png Graphic file (type png)
 <use images/05-chart/tableau-toolbar-settings.png>
 Package pdftex.def Info: images/05-chart/tableau-toolbar-settings.png  used on 
 input line 3206.
 (pdftex.def)             Requested size: 345.01115pt x 67.05162pt.
-<images/05-chart/tableau-filtered-demo.png, id=1767, 1025.8325pt x 652.4375pt>
+<images/05-chart/tableau-filtered-demo.png, id=1762, 1025.8325pt x 652.4375pt>
 File: images/05-chart/tableau-filtered-demo.png Graphic file (type png)
 <use images/05-chart/tableau-filtered-demo.png>
 Package pdftex.def Info: images/05-chart/tableau-filtered-demo.png  used on inp
@@ -1324,7 +1324,7 @@ ut line 3239.
 (pdftex.def)             Requested size: 344.99043pt x 219.41661pt.
 [97 <./images/05-chart/tableau-toolbar-settings.png>] [98 <./images/05-chart/ta
 bleau-filtered-demo.png>]
-<images/05-chart/tableau-filtered-show-filter.png, id=1790, 244.915pt x 358.338
+<images/05-chart/tableau-filtered-show-filter.png, id=1785, 244.915pt x 358.338
 75pt>
 File: images/05-chart/tableau-filtered-show-filter.png Graphic file (type png)
 <use images/05-chart/tableau-filtered-show-filter.png>
@@ -1332,7 +1332,7 @@ Package pdftex.def Info: images/05-chart/tableau-filtered-show-filter.png  used
  on input line 3289.
 (pdftex.def)             Requested size: 200.75684pt x 293.73032pt.
 [99 <./images/05-chart/tableau-filtered-show-filter.png>]
-<images/05-chart/tableau-filtered-ready.png, id=1803, 1187.43625pt x 771.88374p
+<images/05-chart/tableau-filtered-ready.png, id=1798, 1187.43625pt x 771.88374p
 t>
 File: images/05-chart/tableau-filtered-ready.png Graphic file (type png)
 <use images/05-chart/tableau-filtered-ready.png>
@@ -1341,30 +1341,30 @@ put line 3315.
 (pdftex.def)             Requested size: 344.99997pt x 224.26456pt.
 [100 <./images/05-chart/tableau-filtered-ready.png>]
 Chapter 6.
-<images/06-map/map-point.png, id=1825, 128.48pt x 100.375pt>
+<images/06-map/map-point.png, id=1820, 128.48pt x 100.375pt>
 File: images/06-map/map-point.png Graphic file (type png)
 <use images/06-map/map-point.png>
 Package pdftex.def Info: images/06-map/map-point.png  used on input line 3366.
 (pdftex.def)             Requested size: 128.4875pt x 100.38086pt.
-<images/06-map/map-polygon.png, id=1829, 128.48pt x 100.375pt>
+<images/06-map/map-polygon.png, id=1824, 128.48pt x 100.375pt>
 File: images/06-map/map-polygon.png Graphic file (type png)
 <use images/06-map/map-polygon.png>
 Package pdftex.def Info: images/06-map/map-polygon.png  used on input line 3371
 .
 (pdftex.def)             Requested size: 128.4875pt x 100.38086pt.
-<images/06-map/map-polyline.png, id=1833, 128.48pt x 100.375pt>
+<images/06-map/map-polyline.png, id=1828, 128.48pt x 100.375pt>
 File: images/06-map/map-polyline.png Graphic file (type png)
 <use images/06-map/map-polyline.png>
 Package pdftex.def Info: images/06-map/map-polyline.png  used on input line 337
 6.
 (pdftex.def)             Requested size: 128.4875pt x 100.38086pt.
-<images/06-map/map-point-polygon-polyline.png, id=1836, 128.48pt x 100.375pt>
+<images/06-map/map-point-polygon-polyline.png, id=1831, 128.48pt x 100.375pt>
 File: images/06-map/map-point-polygon-polyline.png Graphic file (type png)
 <use images/06-map/map-point-polygon-polyline.png>
 Package pdftex.def Info: images/06-map/map-point-polygon-polyline.png  used on 
 input line 3381.
 (pdftex.def)             Requested size: 128.4875pt x 100.38086pt.
-<images/06-map/map-storymap.png, id=1839, 401.5pt x 230.8625pt>
+<images/06-map/map-storymap.png, id=1834, 401.5pt x 230.8625pt>
 File: images/06-map/map-storymap.png Graphic file (type png)
 <use images/06-map/map-storymap.png>
 Package pdftex.def Info: images/06-map/map-storymap.png  used on input line 338
@@ -1375,20 +1375,20 @@ Package pdftex.def Info: images/06-map/map-storymap.png  used on input line 338
 ] [102 <./images/06-map/map-point.png> <./images/06-map/map-polygon.png> <./ima
 ges/06-map/map-polyline.png> <./images/06-map/map-point-polygon-polyline.png>] 
 [103 <./images/06-map/map-storymap.png>]
-<images/06-map/Map - Baselayers.png, id=1870, 1268.74pt x 469.755pt>
+<images/06-map/Map - Baselayers.png, id=1865, 1268.74pt x 469.755pt>
 File: images/06-map/Map - Baselayers.png Graphic file (type png)
 <use images/06-map/Map - Baselayers.png>
 Package pdftex.def Info: images/06-map/Map - Baselayers.png  used on input line
  3471.
 (pdftex.def)             Requested size: 345.00366pt x 127.7387pt.
-<images/06-map/colorbrewer.png, id=1872, 516.93124pt x 349.305pt>
+<images/06-map/colorbrewer.png, id=1867, 516.93124pt x 349.305pt>
 File: images/06-map/colorbrewer.png Graphic file (type png)
 <use images/06-map/colorbrewer.png>
 Package pdftex.def Info: images/06-map/colorbrewer.png  used on input line 3483
 .
 (pdftex.def)             Requested size: 345.00911pt x 233.13237pt.
 [104 <./images/06-map/Map - Baselayers.png>]
-<images/06-map/Map - ColorBrewer - Classes.png, id=1886, 1254.6875pt x 503.8825
+<images/06-map/Map - ColorBrewer - Classes.png, id=1881, 1254.6875pt x 503.8825
 pt>
 File: images/06-map/Map - ColorBrewer - Classes.png Graphic file (type png)
 <use images/06-map/Map - ColorBrewer - Classes.png>
@@ -1396,7 +1396,7 @@ Package pdftex.def Info: images/06-map/Map - ColorBrewer - Classes.png  used on
  input line 3504.
 (pdftex.def)             Requested size: 344.99226pt x 138.54889pt.
 [105 <./images/06-map/colorbrewer.png>]
-<images/06-map/Map - ColorBrewer - Schemes.png, id=1895, 1254.6875pt x 364.3612
+<images/06-map/Map - ColorBrewer - Schemes.png, id=1890, 1254.6875pt x 364.3612
 5pt>
 File: images/06-map/Map - ColorBrewer - Schemes.png Graphic file (type png)
 <use images/06-map/Map - ColorBrewer - Schemes.png>
@@ -1405,25 +1405,25 @@ Package pdftex.def Info: images/06-map/Map - ColorBrewer - Schemes.png  used on
 (pdftex.def)             Requested size: 344.99226pt x 100.18575pt.
 [106 <./images/06-map/Map - ColorBrewer - Classes.png> <./images/06-map/Map - C
 olorBrewer - Schemes.png>] [107]
-<images/06-map/mymaps-create-map.png, id=1936, 137.01187pt x 56.71187pt>
+<images/06-map/mymaps-create-map.png, id=1931, 137.01187pt x 56.71187pt>
 File: images/06-map/mymaps-create-map.png Graphic file (type png)
 <use images/06-map/mymaps-create-map.png>
 Package pdftex.def Info: images/06-map/mymaps-create-map.png  used on input lin
 e 3644.
 (pdftex.def)             Requested size: 137.01154pt x 56.71172pt.
-<images/06-map/mymaps-import.png, id=1937, 161.10187pt x 158.09062pt>
+<images/06-map/mymaps-import.png, id=1932, 161.10187pt x 158.09062pt>
 File: images/06-map/mymaps-import.png Graphic file (type png)
 <use images/06-map/mymaps-import.png>
 Package pdftex.def Info: images/06-map/mymaps-import.png  used on input line 36
 58.
 (pdftex.def)             Requested size: 161.10884pt x 158.09746pt.
-<images/06-map/mymaps-choose-import.png, id=1938, 351.3125pt x 213.79875pt>
+<images/06-map/mymaps-choose-import.png, id=1933, 351.3125pt x 213.79875pt>
 File: images/06-map/mymaps-choose-import.png Graphic file (type png)
 <use images/06-map/mymaps-choose-import.png>
 Package pdftex.def Info: images/06-map/mymaps-choose-import.png  used on input 
 line 3664.
 (pdftex.def)             Requested size: 345.029pt x 209.9748pt.
-<images/06-map/mymaps-choose-position.png, id=1939, 244.41313pt x 143.03438pt>
+<images/06-map/mymaps-choose-position.png, id=1934, 244.41313pt x 143.03438pt>
 File: images/06-map/mymaps-choose-position.png Graphic file (type png)
 <use images/06-map/mymaps-choose-position.png>
 Package pdftex.def Info: images/06-map/mymaps-choose-position.png  used on inpu
@@ -1432,13 +1432,13 @@ t line 3678.
 [108 <./images/06-map/mymaps-create-map.png> <./images/06-map/mymaps-import.png
 >] [109 <./images/06-map/mymaps-choose-import.png> <./images/06-map/mymaps-choo
 se-position.png>]
-<images/06-map/mymaps-choose-title.png, id=1959, 240.39813pt x 134.5025pt>
+<images/06-map/mymaps-choose-title.png, id=1954, 240.39813pt x 134.5025pt>
 File: images/06-map/mymaps-choose-title.png Graphic file (type png)
 <use images/06-map/mymaps-choose-title.png>
 Package pdftex.def Info: images/06-map/mymaps-choose-title.png  used on input l
 ine 3692.
 (pdftex.def)             Requested size: 240.4012pt x 134.5042pt.
-<images/06-map/mymaps-fix-errors.png, id=1960, 133.49875pt x 132.99687pt>
+<images/06-map/mymaps-fix-errors.png, id=1955, 133.49875pt x 132.99687pt>
 File: images/06-map/mymaps-fix-errors.png Graphic file (type png)
 <use images/06-map/mymaps-fix-errors.png>
 Package pdftex.def Info: images/06-map/mymaps-fix-errors.png  used on input lin
@@ -1450,13 +1450,13 @@ Package pdftex.def Info: images/placeholder.jpg  used on input line 3718.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
 [110 <./images/06-map/mymaps-choose-title.png> <./images/06-map/mymaps-fix-erro
 rs.png>]
-<images/06-map/mymaps-share.png, id=1971, 124.465pt x 24.09pt>
+<images/06-map/mymaps-share.png, id=1966, 124.465pt x 24.09pt>
 File: images/06-map/mymaps-share.png Graphic file (type png)
 <use images/06-map/mymaps-share.png>
 Package pdftex.def Info: images/06-map/mymaps-share.png  used on input line 373
 0.
 (pdftex.def)             Requested size: 124.46469pt x 24.08992pt.
-<images/06-map/mymaps-embed.png, id=1973, 114.92938pt x 143.53625pt>
+<images/06-map/mymaps-embed.png, id=1968, 114.92938pt x 143.53625pt>
 File: images/06-map/mymaps-embed.png Graphic file (type png)
 <use images/06-map/mymaps-embed.png>
 Package pdftex.def Info: images/06-map/mymaps-embed.png  used on input line 374
@@ -1470,7 +1470,7 @@ Underfull \hbox (badness 3623) in paragraph at lines 3755--3756
 
 [111 <./images/06-map/mymaps-share.png> <./images/06-map/mymaps-embed.png>] [11
 2]
-<images/06-map/carto-dashboard-maps-datasets.png, id=2006, 350.30875pt x 130.48
+<images/06-map/carto-dashboard-maps-datasets.png, id=2001, 350.30875pt x 130.48
 75pt>
 File: images/06-map/carto-dashboard-maps-datasets.png Graphic file (type png)
 <use images/06-map/carto-dashboard-maps-datasets.png>
@@ -1478,13 +1478,13 @@ Package pdftex.def Info: images/06-map/carto-dashboard-maps-datasets.png  used
 on input line 3832.
 (pdftex.def)             Requested size: 345.02141pt x 128.51799pt.
 [113 <./images/06-map/carto-dashboard-maps-datasets.png>]
-<images/06-map/carto-point-style-value.png, id=2025, 256.96pt x 401.5pt>
+<images/06-map/carto-point-style-value.png, id=2020, 256.96pt x 401.5pt>
 File: images/06-map/carto-point-style-value.png Graphic file (type png)
 <use images/06-map/carto-point-style-value.png>
 Package pdftex.def Info: images/06-map/carto-point-style-value.png  used on inp
 ut line 3879.
 (pdftex.def)             Requested size: 256.97504pt x 401.5235pt.
-<images/06-map/carto-publish-map.png, id=2026, 640.3925pt x 175.65625pt>
+<images/06-map/carto-publish-map.png, id=2021, 640.3925pt x 175.65625pt>
 File: images/06-map/carto-publish-map.png Graphic file (type png)
 <use images/06-map/carto-publish-map.png>
 Package pdftex.def Info: images/06-map/carto-publish-map.png  used on input lin
@@ -1498,13 +1498,13 @@ Underfull \hbox (badness 1178) in paragraph at lines 3918--3919
 
 [114] [115 <./images/06-map/carto-point-style-value.png>] [116 <./images/06-map
 /carto-publish-map.png>]
-<images/06-map/SocrataMap1.png, id=2064, 601.24625pt x 559.08875pt>
+<images/06-map/SocrataMap1.png, id=2059, 601.24625pt x 559.08875pt>
 File: images/06-map/SocrataMap1.png Graphic file (type png)
 <use images/06-map/SocrataMap1.png>
 Package pdftex.def Info: images/06-map/SocrataMap1.png  used on input line 3945
 .
 (pdftex.def)             Requested size: 345.00748pt x 320.81664pt.
-<images/06-map/SocrataMap2.png, id=2066, 626.34pt x 540.0175pt>
+<images/06-map/SocrataMap2.png, id=2061, 626.34pt x 540.0175pt>
 File: images/06-map/SocrataMap2.png Graphic file (type png)
 <use images/06-map/SocrataMap2.png>
 Package pdftex.def Info: images/06-map/SocrataMap2.png  used on input line 3949
@@ -1514,7 +1514,7 @@ Package pdftex.def Info: images/06-map/SocrataMap2.png  used on input line 3949
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [117 <./images/06-map/SocrataMap1.png (PNG copy)>]
-<images/06-map/SocrataMap3.png, id=2074, 565.11125pt x 611.28375pt>
+<images/06-map/SocrataMap3.png, id=2069, 565.11125pt x 611.28375pt>
 File: images/06-map/SocrataMap3.png Graphic file (type png)
 <use images/06-map/SocrataMap3.png>
 Package pdftex.def Info: images/06-map/SocrataMap3.png  used on input line 3953
@@ -1524,7 +1524,7 @@ Package pdftex.def Info: images/06-map/SocrataMap3.png  used on input line 3953
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [118 <./images/06-map/SocrataMap2.png (PNG copy)>]
-<images/06-map/SocrataMap4.png, id=2079, 606.265pt x 527.9725pt>
+<images/06-map/SocrataMap4.png, id=2074, 606.265pt x 527.9725pt>
 File: images/06-map/SocrataMap4.png Graphic file (type png)
 <use images/06-map/SocrataMap4.png>
 Package pdftex.def Info: images/06-map/SocrataMap4.png  used on input line 3957
@@ -1534,7 +1534,7 @@ Package pdftex.def Info: images/06-map/SocrataMap4.png  used on input line 3957
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [119 <./images/06-map/SocrataMap3.png (PNG copy)>]
-<images/06-map/SocrataMap5.png, id=2084, 554.07pt x 600.2425pt>
+<images/06-map/SocrataMap5.png, id=2079, 554.07pt x 600.2425pt>
 File: images/06-map/SocrataMap5.png Graphic file (type png)
 <use images/06-map/SocrataMap5.png>
 Package pdftex.def Info: images/06-map/SocrataMap5.png  used on input line 3961
@@ -1544,7 +1544,7 @@ Package pdftex.def Info: images/06-map/SocrataMap5.png  used on input line 3961
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [120 <./images/06-map/SocrataMap4.png (PNG copy)>]
-<images/06-map/SocrataMap6.png, id=2089, 490.83376pt x 632.3625pt>
+<images/06-map/SocrataMap6.png, id=2084, 490.83376pt x 632.3625pt>
 File: images/06-map/SocrataMap6.png Graphic file (type png)
 <use images/06-map/SocrataMap6.png>
 Package pdftex.def Info: images/06-map/SocrataMap6.png  used on input line 3965
@@ -1554,7 +1554,7 @@ Package pdftex.def Info: images/06-map/SocrataMap6.png  used on input line 3965
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [121 <./images/06-map/SocrataMap5.png (PNG copy)>]
-<images/06-map/SocrataMap7.png, id=2095, 475.7775pt x 536.0025pt>
+<images/06-map/SocrataMap7.png, id=2090, 475.7775pt x 536.0025pt>
 File: images/06-map/SocrataMap7.png Graphic file (type png)
 <use images/06-map/SocrataMap7.png>
 Package pdftex.def Info: images/06-map/SocrataMap7.png  used on input line 3969
@@ -1564,7 +1564,7 @@ Package pdftex.def Info: images/06-map/SocrataMap7.png  used on input line 3969
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [122 <./images/06-map/SocrataMap6.png (PNG copy)>]
-<images/06-map/SocrataMap8.png, id=2100, 434.62375pt x 520.94624pt>
+<images/06-map/SocrataMap8.png, id=2095, 434.62375pt x 520.94624pt>
 File: images/06-map/SocrataMap8.png Graphic file (type png)
 <use images/06-map/SocrataMap8.png>
 Package pdftex.def Info: images/06-map/SocrataMap8.png  used on input line 3973
@@ -1574,7 +1574,7 @@ Package pdftex.def Info: images/06-map/SocrataMap8.png  used on input line 3973
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [123 <./images/06-map/SocrataMap7.png (PNG copy)>]
-<images/06-map/SocrataMap9.png, id=2106, 559.08875pt x 578.16pt>
+<images/06-map/SocrataMap9.png, id=2100, 559.08875pt x 578.16pt>
 File: images/06-map/SocrataMap9.png Graphic file (type png)
 <use images/06-map/SocrataMap9.png>
 Package pdftex.def Info: images/06-map/SocrataMap9.png  used on input line 3977
@@ -1584,7 +1584,7 @@ Package pdftex.def Info: images/06-map/SocrataMap9.png  used on input line 3977
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [124 <./images/06-map/SocrataMap8.png (PNG copy)>]
-<images/06-map/SocrataMap10.png, id=2111, 563.10374pt x 539.01375pt>
+<images/06-map/SocrataMap10.png, id=2106, 563.10374pt x 539.01375pt>
 File: images/06-map/SocrataMap10.png Graphic file (type png)
 <use images/06-map/SocrataMap10.png>
 Package pdftex.def Info: images/06-map/SocrataMap10.png  used on input line 398
@@ -1594,7 +1594,7 @@ Package pdftex.def Info: images/06-map/SocrataMap10.png  used on input line 398
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [125 <./images/06-map/SocrataMap9.png (PNG copy)>]
-<images/06-map/SocrataMap11.png, id=2116, 424.58624pt x 504.88625pt>
+<images/06-map/SocrataMap11.png, id=2111, 424.58624pt x 504.88625pt>
 File: images/06-map/SocrataMap11.png Graphic file (type png)
 <use images/06-map/SocrataMap11.png>
 Package pdftex.def Info: images/06-map/SocrataMap11.png  used on input line 398
@@ -1604,7 +1604,7 @@ Package pdftex.def Info: images/06-map/SocrataMap11.png  used on input line 398
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [126 <./images/06-map/SocrataMap10.png (PNG copy)>]
-<images/06-map/SocrataMap12.png, id=2121, 665.48625pt x 408.52625pt>
+<images/06-map/SocrataMap12.png, id=2116, 665.48625pt x 408.52625pt>
 File: images/06-map/SocrataMap12.png Graphic file (type png)
 <use images/06-map/SocrataMap12.png>
 Package pdftex.def Info: images/06-map/SocrataMap12.png  used on input line 398
@@ -1614,7 +1614,7 @@ Package pdftex.def Info: images/06-map/SocrataMap12.png  used on input line 398
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [127 <./images/06-map/SocrataMap11.png (PNG copy)>]
-<images/06-map/SocrataMap13.jpg, id=2128, 506.89375pt x 488.82625pt>
+<images/06-map/SocrataMap13.jpg, id=2123, 506.89375pt x 488.82625pt>
 File: images/06-map/SocrataMap13.jpg Graphic file (type jpg)
 <use images/06-map/SocrataMap13.jpg>
 Package pdftex.def Info: images/06-map/SocrataMap13.jpg  used on input line 399
@@ -1625,12 +1625,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [128 <./images/06-map/SocrataMap12.png (PNG copy)>] [129 <./images/06-map/Socra
 taMap13.jpg>]
-<images/06-map/SE-home.png, id=2143, 1001.7425pt x 534.99875pt>
+<images/06-map/SE-home.png, id=2138, 1001.7425pt x 534.99875pt>
 File: images/06-map/SE-home.png Graphic file (type png)
 <use images/06-map/SE-home.png>
 Package pdftex.def Info: images/06-map/SE-home.png  used on input line 4041.
 (pdftex.def)             Requested size: 345.0054pt x 184.2564pt.
-<images/06-map/SE-default-map.png, id=2144, 1037.8775pt x 746.79pt>
+<images/06-map/SE-default-map.png, id=2139, 1037.8775pt x 746.79pt>
 File: images/06-map/SE-default-map.png Graphic file (type png)
 <use images/06-map/SE-default-map.png>
 Package pdftex.def Info: images/06-map/SE-default-map.png  used on input line 4
@@ -1640,20 +1640,20 @@ Package pdftex.def Info: images/06-map/SE-default-map.png  used on input line 4
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [130 <./images/06-map/SE-home.png>]
-<images/06-map/SE-data-levels.png, id=2152, 1043.9pt x 742.775pt>
+<images/06-map/SE-data-levels.png, id=2147, 1043.9pt x 742.775pt>
 File: images/06-map/SE-data-levels.png Graphic file (type png)
 <use images/06-map/SE-data-levels.png>
 Package pdftex.def Info: images/06-map/SE-data-levels.png  used on input line 4
 049.
 (pdftex.def)             Requested size: 344.99777pt x 245.47919pt.
 [131 <./images/06-map/SE-default-map.png> <./images/06-map/SE-data-levels.png>]
-<images/06-map/SE-share-embed.png, id=2157, 868.24374pt x 616.3025pt>
+<images/06-map/SE-share-embed.png, id=2152, 868.24374pt x 616.3025pt>
 File: images/06-map/SE-share-embed.png Graphic file (type png)
 <use images/06-map/SE-share-embed.png>
 Package pdftex.def Info: images/06-map/SE-share-embed.png  used on input line 4
 053.
 (pdftex.def)             Requested size: 344.99939pt x 244.88974pt.
-<images/06-map/SE-tell-a-story.png, id=2158, 1039.885pt x 744.7825pt>
+<images/06-map/SE-tell-a-story.png, id=2153, 1039.885pt x 744.7825pt>
 File: images/06-map/SE-tell-a-story.png Graphic file (type png)
 <use images/06-map/SE-tell-a-story.png>
 Package pdftex.def Info: images/06-map/SE-tell-a-story.png  used on input line 
@@ -1661,13 +1661,13 @@ Package pdftex.def Info: images/06-map/SE-tell-a-story.png  used on input line
 (pdftex.def)             Requested size: 344.98785pt x 247.08589pt.
 [132 <./images/06-map/SE-share-embed.png> <./images/06-map/SE-tell-a-story.png>
 ]
-<images/06-map/tableau-polygon-1.png, id=2169, 761.84625pt x 490.83376pt>
+<images/06-map/tableau-polygon-1.png, id=2164, 761.84625pt x 490.83376pt>
 File: images/06-map/tableau-polygon-1.png Graphic file (type png)
 <use images/06-map/tableau-polygon-1.png>
 Package pdftex.def Info: images/06-map/tableau-polygon-1.png  used on input lin
 e 4087.
 (pdftex.def)             Requested size: 344.98985pt x 222.26619pt.
-<images/06-map/tableau-polygon-2.png, id=2170, 1000.73875pt x 490.83376pt>
+<images/06-map/tableau-polygon-2.png, id=2165, 1000.73875pt x 490.83376pt>
 File: images/06-map/tableau-polygon-2.png Graphic file (type png)
 <use images/06-map/tableau-polygon-2.png>
 Package pdftex.def Info: images/06-map/tableau-polygon-2.png  used on input lin
@@ -1675,7 +1675,7 @@ e 4093.
 (pdftex.def)             Requested size: 344.99565pt x 169.2105pt.
 [133] [134 <./images/06-map/tableau-polygon-1.png> <./images/06-map/tableau-pol
 ygon-2.png>]
-<images/06-map/tableau-polygon-3.png, id=2192, 1309.89375pt x 757.83125pt>
+<images/06-map/tableau-polygon-3.png, id=2187, 1309.89375pt x 757.83125pt>
 File: images/06-map/tableau-polygon-3.png Graphic file (type png)
 <use images/06-map/tableau-polygon-3.png>
 Package pdftex.def Info: images/06-map/tableau-polygon-3.png  used on input lin
@@ -1688,7 +1688,7 @@ Chapter 7.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 4143.
 [137] [138] [139]
-<images/07-embed/google-sheets-chart-menu-publish.png, id=2260, 355.82938pt x 2
+<images/07-embed/google-sheets-chart-menu-publish.png, id=2255, 355.82938pt x 2
 03.76125pt>
 File: images/07-embed/google-sheets-chart-menu-publish.png Graphic file (type p
 ng)
@@ -1696,14 +1696,14 @@ ng)
 Package pdftex.def Info: images/07-embed/google-sheets-chart-menu-publish.png  
 used on input line 4325.
 (pdftex.def)             Requested size: 345.0129pt x 197.56732pt.
-<images/07-embed/google-sheets-publish.png, id=2261, 300.62312pt x 253.44687pt>
+<images/07-embed/google-sheets-publish.png, id=2256, 300.62312pt x 253.44687pt>
 
 File: images/07-embed/google-sheets-publish.png Graphic file (type png)
 <use images/07-embed/google-sheets-publish.png>
 Package pdftex.def Info: images/07-embed/google-sheets-publish.png  used on inp
 ut line 4339.
 (pdftex.def)             Requested size: 300.63155pt x 253.45396pt.
-<images/07-embed/google-sheets-publish-copy-iframe.png, id=2262, 298.61563pt x 
+<images/07-embed/google-sheets-publish-copy-iframe.png, id=2257, 298.61563pt x 
 307.64937pt>
 File: images/07-embed/google-sheets-publish-copy-iframe.png Graphic file (type 
 png)
@@ -1714,7 +1714,7 @@ Package pdftex.def Info: images/07-embed/google-sheets-publish-copy-iframe.png
 [140] [141 <./images/07-embed/google-sheets-chart-menu-publish.png> <./images/0
 7-embed/google-sheets-publish.png>] [142 <./images/07-embed/google-sheets-publi
 sh-copy-iframe.png>] [143] [144] [145]
-<images/07-embed/WordPressOrg-iframe-plugin-activate.jpg, id=2343, 361.35pt x 8
+<images/07-embed/WordPressOrg-iframe-plugin-activate.jpg, id=2338, 361.35pt x 8
 6.3225pt>
 File: images/07-embed/WordPressOrg-iframe-plugin-activate.jpg Graphic file (typ
 e jpg)
@@ -1722,7 +1722,7 @@ e jpg)
 Package pdftex.def Info: images/07-embed/WordPressOrg-iframe-plugin-activate.jp
 g  used on input line 4573.
 (pdftex.def)             Requested size: 345.00084pt x 82.41684pt.
-<images/07-embed/WordPressOrg-text-tab-paste-iframe.png, id=2345, 698.61pt x 27
+<images/07-embed/WordPressOrg-text-tab-paste-iframe.png, id=2340, 698.61pt x 27
 6.03125pt>
 File: images/07-embed/WordPressOrg-text-tab-paste-iframe.png Graphic file (type
  png)
@@ -1731,7 +1731,7 @@ Package pdftex.def Info: images/07-embed/WordPressOrg-text-tab-paste-iframe.png
   used on input line 4588.
 (pdftex.def)             Requested size: 344.99753pt x 136.31367pt.
 [146 <./images/07-embed/WordPressOrg-iframe-plugin-activate.jpg>]
-<images/07-embed/WordPressOrg-replace-with-bracket.png, id=2353, 705.63625pt x 
+<images/07-embed/WordPressOrg-replace-with-bracket.png, id=2348, 705.63625pt x 
 268.00125pt>
 File: images/07-embed/WordPressOrg-replace-with-bracket.png Graphic file (type 
 png)
@@ -1753,7 +1753,7 @@ Underfull \hbox (badness 2173) in paragraph at lines 4672--4674
 e / jackdougherty # ! /
  []
 
-<images/07-embed/tableau-edit-share.png, id=2364, 401.5pt x 282.55562pt>
+<images/07-embed/tableau-edit-share.png, id=2359, 401.5pt x 282.55562pt>
 File: images/07-embed/tableau-edit-share.png Graphic file (type png)
 <use images/07-embed/tableau-edit-share.png>
 Package pdftex.def Info: images/07-embed/tableau-edit-share.png  used on input 
@@ -1779,26 +1779,26 @@ Chapter 8.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [154]
-<images/08-github/leaflet-simple.png, id=2449, 125.46875pt x 77.79062pt>
+<images/08-github/leaflet-simple.png, id=2444, 125.46875pt x 77.79062pt>
 File: images/08-github/leaflet-simple.png Graphic file (type png)
 <use images/08-github/leaflet-simple.png>
 Package pdftex.def Info: images/08-github/leaflet-simple.png  used on input lin
 e 4892.
 (pdftex.def)             Requested size: 125.47034pt x 77.7916pt.
 [155 <./images/08-github/leaflet-simple.png>]
-<images/08-github/leaflet-simple-fork.png, id=2460, 150.5625pt x 16.8128pt>
+<images/08-github/leaflet-simple-fork.png, id=2455, 150.5625pt x 16.8128pt>
 File: images/08-github/leaflet-simple-fork.png Graphic file (type png)
 <use images/08-github/leaflet-simple-fork.png>
 Package pdftex.def Info: images/08-github/leaflet-simple-fork.png  used on inpu
 t line 4912.
 (pdftex.def)             Requested size: 150.56212pt x 16.81274pt.
-<images/08-github/leaflet-simple-index.png, id=2463, 75.28125pt x 38.64438pt>
+<images/08-github/leaflet-simple-index.png, id=2458, 75.28125pt x 38.64438pt>
 File: images/08-github/leaflet-simple-index.png Graphic file (type png)
 <use images/08-github/leaflet-simple-index.png>
 Package pdftex.def Info: images/08-github/leaflet-simple-index.png  used on inp
 ut line 4932.
 (pdftex.def)             Requested size: 75.28793pt x 38.6478pt.
-<images/08-github/leaflet-simple-edit.png, id=2466, 75.28125pt x 43.66313pt>
+<images/08-github/leaflet-simple-edit.png, id=2461, 75.28125pt x 43.66313pt>
 File: images/08-github/leaflet-simple-edit.png Graphic file (type png)
 <use images/08-github/leaflet-simple-edit.png>
 Package pdftex.def Info: images/08-github/leaflet-simple-edit.png  used on inpu
@@ -1806,7 +1806,7 @@ t line 4950.
 (pdftex.def)             Requested size: 75.28564pt x 43.66566pt.
 [156 <./images/08-github/leaflet-simple-fork.png> <./images/08-github/leaflet-s
 imple-index.png>]
-<images/08-github/leaflet-simple-commit.png, id=2483, 117.68968pt x 87.82813pt>
+<images/08-github/leaflet-simple-commit.png, id=2478, 117.68968pt x 87.82813pt>
 
 File: images/08-github/leaflet-simple-commit.png Graphic file (type png)
 <use images/08-github/leaflet-simple-commit.png>
@@ -1815,19 +1815,19 @@ put line 4969.
 (pdftex.def)             Requested size: 117.69118pt x 87.82922pt.
 [157 <./images/08-github/leaflet-simple-edit.png> <./images/08-github/leaflet-s
 imple-commit.png>]
-<images/08-github/leaflet-simple-settings.png, id=2498, 200.75pt x 29.35968pt>
+<images/08-github/leaflet-simple-settings.png, id=2493, 200.75pt x 29.35968pt>
 File: images/08-github/leaflet-simple-settings.png Graphic file (type png)
 <use images/08-github/leaflet-simple-settings.png>
 Package pdftex.def Info: images/08-github/leaflet-simple-settings.png  used on 
 input line 4989.
 (pdftex.def)             Requested size: 200.7495pt x 29.35959pt.
-<images/08-github/leaflet-github-pages.png, id=2500, 150.5625pt x 63.98906pt>
+<images/08-github/leaflet-github-pages.png, id=2495, 150.5625pt x 63.98906pt>
 File: images/08-github/leaflet-github-pages.png Graphic file (type png)
 <use images/08-github/leaflet-github-pages.png>
 Package pdftex.def Info: images/08-github/leaflet-github-pages.png  used on inp
 ut line 5005.
 (pdftex.def)             Requested size: 150.56212pt x 63.98889pt.
-<images/08-github/leaflet-github-pages2.png, id=2504, 200.75pt x 68.50594pt>
+<images/08-github/leaflet-github-pages2.png, id=2499, 200.75pt x 68.50594pt>
 File: images/08-github/leaflet-github-pages2.png Graphic file (type png)
 <use images/08-github/leaflet-github-pages2.png>
 Package pdftex.def Info: images/08-github/leaflet-github-pages2.png  used on in
@@ -1846,7 +1846,7 @@ Overfull \hbox (154.56856pt too wide) in paragraph at lines 5040--5042
 tt/m/n/10 https://github.com/YourUserName/YourRepoName 
  []
 
-<images/08-github/leaflet-click-title.png, id=2522, 75.28125pt x 20.075pt>
+<images/08-github/leaflet-click-title.png, id=2517, 75.28125pt x 20.075pt>
 File: images/08-github/leaflet-click-title.png Graphic file (type png)
 <use images/08-github/leaflet-click-title.png>
 Package pdftex.def Info: images/08-github/leaflet-click-title.png  used on inpu
@@ -1864,7 +1864,7 @@ Underfull \hbox (badness 1515) in paragraph at lines 5065--5066
 -name:
  []
 
-<images/08-github/leaflet-paste-links.png, id=2524, 200.75pt x 142.5325pt>
+<images/08-github/leaflet-paste-links.png, id=2519, 200.75pt x 142.5325pt>
 File: images/08-github/leaflet-paste-links.png Graphic file (type png)
 <use images/08-github/leaflet-paste-links.png>
 Package pdftex.def Info: images/08-github/leaflet-paste-links.png  used on inpu
@@ -1908,13 +1908,13 @@ ssage[]
  []
 
 [161]
-<images/08-github/repo-cannot-fork.png, id=2557, 166.37157pt x 28.60687pt>
+<images/08-github/repo-cannot-fork.png, id=2551, 166.37157pt x 28.60687pt>
 File: images/08-github/repo-cannot-fork.png Graphic file (type png)
 <use images/08-github/repo-cannot-fork.png>
 Package pdftex.def Info: images/08-github/repo-cannot-fork.png  used on input l
 ine 5145.
 (pdftex.def)             Requested size: 166.37875pt x 28.6081pt.
-<images/08-github/repo-template-download.png, id=2559, 82.55844pt x 15.05624pt>
+<images/08-github/repo-template-download.png, id=2553, 82.55844pt x 15.05624pt>
 
 File: images/08-github/repo-template-download.png Graphic file (type png)
 <use images/08-github/repo-template-download.png>
@@ -1923,13 +1923,13 @@ nput line 5155.
 (pdftex.def)             Requested size: 82.56075pt x 15.05666pt.
 [162 <./images/08-github/repo-cannot-fork.png> <./images/08-github/repo-templat
 e-download.png>]
-<images/08-github/repo-create-new.png, id=2572, 62.73438pt x 63.98906pt>
+<images/08-github/repo-create-new.png, id=2566, 62.73438pt x 63.98906pt>
 File: images/08-github/repo-create-new.png Graphic file (type png)
 <use images/08-github/repo-create-new.png>
 Package pdftex.def Info: images/08-github/repo-create-new.png  used on input li
 ne 5187.
 (pdftex.def)             Requested size: 62.7342pt x 63.98889pt.
-<images/08-github/repo-create-options.png, id=2574, 112.92188pt x 125.46875pt>
+<images/08-github/repo-create-options.png, id=2568, 112.92188pt x 125.46875pt>
 File: images/08-github/repo-create-options.png Graphic file (type png)
 <use images/08-github/repo-create-options.png>
 Package pdftex.def Info: images/08-github/repo-create-options.png  used on inpu
@@ -1941,14 +1941,14 @@ Overfull \hbox (75.55403pt too wide) in paragraph at lines 5209--5210
 /n/10 https://github.com/YourUserName/practice\T1/lmr/m/n/10 . 
  []
 
-<images/08-github/repo-upload-files.png, id=2576, 150.5625pt x 27.10126pt>
+<images/08-github/repo-upload-files.png, id=2570, 150.5625pt x 27.10126pt>
 File: images/08-github/repo-upload-files.png Graphic file (type png)
 <use images/08-github/repo-upload-files.png>
 Package pdftex.def Info: images/08-github/repo-upload-files.png  used on input 
 line 5223.
 (pdftex.def)             Requested size: 150.569pt x 27.10242pt.
 [163 <./images/08-github/repo-create-new.png>]
-<images/08-github/repo-drag-index.png, id=2592, 200.75pt x 82.80937pt>
+<images/08-github/repo-drag-index.png, id=2586, 200.75pt x 82.80937pt>
 File: images/08-github/repo-drag-index.png Graphic file (type png)
 <use images/08-github/repo-drag-index.png>
 Package pdftex.def Info: images/08-github/repo-drag-index.png  used on input li
@@ -1956,7 +1956,7 @@ ne 5239.
 (pdftex.def)             Requested size: 200.75868pt x 82.81294pt.
 [164 <./images/08-github/repo-create-options.png> <./images/08-github/repo-uplo
 ad-files.png> <./images/08-github/repo-drag-index.png>]
-<images/08-github/repo-delete.png, id=2606, 150.5625pt x 107.90312pt>
+<images/08-github/repo-delete.png, id=2599, 150.5625pt x 107.90312pt>
 File: images/08-github/repo-delete.png Graphic file (type png)
 <use images/08-github/repo-delete.png>
 Package pdftex.def Info: images/08-github/repo-delete.png  used on input line 5
@@ -1968,13 +1968,13 @@ Overfull \hbox (55.91624pt too wide) in paragraph at lines 5279--5280
 ourUserName/leaflet-map-simple\T1/lmr/m/n/10 ,
  []
 
-<images/08-github/desktop-open.png, id=2620, 200.75pt x 104.89188pt>
+<images/08-github/desktop-open.png, id=2614, 200.75pt x 104.89188pt>
 File: images/08-github/desktop-open.png Graphic file (type png)
 <use images/08-github/desktop-open.png>
 Package pdftex.def Info: images/08-github/desktop-open.png  used on input line 
 5286.
 (pdftex.def)             Requested size: 200.7495pt x 104.8916pt.
-<images/08-github/desktop-signin.png, id=2622, 87.82813pt x 70.2625pt>
+<images/08-github/desktop-signin.png, id=2616, 87.82813pt x 70.2625pt>
 File: images/08-github/desktop-signin.png Graphic file (type png)
 <use images/08-github/desktop-signin.png>
 Package pdftex.def Info: images/08-github/desktop-signin.png  used on input lin
@@ -1982,31 +1982,31 @@ e 5302.
 (pdftex.def)             Requested size: 87.83325pt x 70.2666pt.
 [166 <./images/08-github/desktop-open.png> <./images/08-github/desktop-signin.p
 ng>]
-<images/08-github/desktop-configure.png, id=2635, 87.82813pt x 52.195pt>
+<images/08-github/desktop-configure.png, id=2629, 87.82813pt x 52.195pt>
 File: images/08-github/desktop-configure.png Graphic file (type png)
 <use images/08-github/desktop-configure.png>
 Package pdftex.def Info: images/08-github/desktop-configure.png  used on input 
 line 5318.
 (pdftex.def)             Requested size: 87.83325pt x 52.19804pt.
-<images/08-github/desktop-start.png, id=2637, 150.5625pt x 96.36pt>
+<images/08-github/desktop-start.png, id=2631, 150.5625pt x 96.36pt>
 File: images/08-github/desktop-start.png Graphic file (type png)
 <use images/08-github/desktop-start.png>
 Package pdftex.def Info: images/08-github/desktop-start.png  used on input line
  5334.
 (pdftex.def)             Requested size: 150.56212pt x 96.35974pt.
-<images/08-github/desktop-clone-path.png, id=2639, 125.46875pt x 78.04156pt>
+<images/08-github/desktop-clone-path.png, id=2633, 125.46875pt x 78.04156pt>
 File: images/08-github/desktop-clone-path.png Graphic file (type png)
 <use images/08-github/desktop-clone-path.png>
 Package pdftex.def Info: images/08-github/desktop-clone-path.png  used on input
  line 5350.
 (pdftex.def)             Requested size: 125.47034pt x 78.04254pt.
-<images/08-github/desktop-fork.png, id=2641, 119.94812pt x 117.68968pt>
+<images/08-github/desktop-fork.png, id=2635, 119.94812pt x 117.68968pt>
 File: images/08-github/desktop-fork.png Graphic file (type png)
 <use images/08-github/desktop-fork.png>
 Package pdftex.def Info: images/08-github/desktop-fork.png  used on input line 
 5366.
 (pdftex.def)             Requested size: 119.94963pt x 117.69118pt.
-<images/08-github/desktop-finder.png, id=2643, 200.75pt x 95.85812pt>
+<images/08-github/desktop-finder.png, id=2637, 200.75pt x 95.85812pt>
 File: images/08-github/desktop-finder.png Graphic file (type png)
 <use images/08-github/desktop-finder.png>
 Package pdftex.def Info: images/08-github/desktop-finder.png  used on input lin
@@ -2015,13 +2015,13 @@ e 5382.
 [167 <./images/08-github/desktop-configure.png> <./images/08-github/desktop-sta
 rt.png>] [168 <./images/08-github/desktop-clone-path.png> <./images/08-github/d
 esktop-fork.png>]
-<images/08-github/desktop-atom.png, id=2666, 200.75pt x 137.7647pt>
+<images/08-github/desktop-atom.png, id=2660, 200.75pt x 137.7647pt>
 File: images/08-github/desktop-atom.png Graphic file (type png)
 <use images/08-github/desktop-atom.png>
 Package pdftex.def Info: images/08-github/desktop-atom.png  used on input line 
 5398.
 (pdftex.def)             Requested size: 200.76173pt x 137.77275pt.
-<images/08-github/atom-project.png, id=2668, 200.75pt x 114.92938pt>
+<images/08-github/atom-project.png, id=2662, 200.75pt x 114.92938pt>
 File: images/08-github/atom-project.png Graphic file (type png)
 <use images/08-github/atom-project.png>
 Package pdftex.def Info: images/08-github/atom-project.png  used on input line 
@@ -2029,13 +2029,13 @@ Package pdftex.def Info: images/08-github/atom-project.png  used on input line
 (pdftex.def)             Requested size: 200.76173pt x 114.9361pt.
 [169 <./images/08-github/desktop-finder.png> <./images/08-github/desktop-atom.p
 ng>]
-<images/08-github/atom-remove-project.png, id=2684, 81.05281pt x 76.285pt>
+<images/08-github/atom-remove-project.png, id=2678, 81.05281pt x 76.285pt>
 File: images/08-github/atom-remove-project.png Graphic file (type png)
 <use images/08-github/atom-remove-project.png>
 Package pdftex.def Info: images/08-github/atom-remove-project.png  used on inpu
 t line 5430.
 (pdftex.def)             Requested size: 81.05632pt x 76.28828pt.
-<images/08-github/finder-open-with.png, id=2686, 105.39375pt x 90.3375pt>
+<images/08-github/finder-open-with.png, id=2680, 105.39375pt x 90.3375pt>
 File: images/08-github/finder-open-with.png Graphic file (type png)
 <use images/08-github/finder-open-with.png>
 Package pdftex.def Info: images/08-github/finder-open-with.png  used on input l
@@ -2049,7 +2049,7 @@ Overfull \hbox (27.30501pt too wide) in paragraph at lines 5459--5460
 
 [170 <./images/08-github/atom-project.png> <./images/08-github/atom-remove-proj
 ect.png>]
-<images/08-github/desktop-commit-push.png, id=2698, 239.89626pt x 326.21875pt>
+<images/08-github/desktop-commit-push.png, id=2692, 239.89626pt x 326.21875pt>
 File: images/08-github/desktop-commit-push.png Graphic file (type png)
 <use images/08-github/desktop-commit-push.png>
 Package pdftex.def Info: images/08-github/desktop-commit-push.png  used on inpu
@@ -2063,288 +2063,180 @@ p jour-ney of
 
 [171 <./images/08-github/finder-open-with.png>] [172 <./images/08-github/deskto
 p-commit-push.png>]
-<images/08-github/compare-commits.png, id=2714, 249.43187pt x 88.33pt>
+<images/08-github/compare-commits.png, id=2708, 249.43187pt x 88.33pt>
 File: images/08-github/compare-commits.png Graphic file (type png)
 <use images/08-github/compare-commits.png>
 Package pdftex.def Info: images/08-github/compare-commits.png  used on input li
 ne 5480.
 (pdftex.def)             Requested size: 249.43506pt x 88.33112pt.
-[173 <./images/08-github/compare-commits.png>]
-Overfull \hbox (183.99857pt too wide) in paragraph at lines 5535--5535
- []\T1/lmtt/m/n/10 <iframe src="https://handsondataviz.github.io/leaflet-map-si
-mple" width=90% height=350></iframe>[] 
- []
+[173 <./images/08-github/compare-commits.png>] [174
 
-
-Overfull \hbox (204.9985pt too wide) in paragraph at lines 5545--5545
- []\T1/lmtt/m/n/10 <iframe src="https://handsondataviz.github.io/leaflet-map-si
-mple" width="90%" height="350"></iframe>[] 
- []
-
-<images/08-github/http-vs-https.png, id=2726, 363.3575pt x 256.96pt>
-File: images/08-github/http-vs-https.png Graphic file (type png)
-<use images/08-github/http-vs-https.png>
-Package pdftex.def Info: images/08-github/http-vs-https.png  used on input line
- 5552.
-(pdftex.def)             Requested size: 345.01024pt x 243.98514pt.
-<images/08-github/curly-vs-straight-quotes.png, id=2727, 641.39626pt x 473.77pt
->
-File: images/08-github/curly-vs-straight-quotes.png Graphic file (type png)
-<use images/08-github/curly-vs-straight-quotes.png>
-Package pdftex.def Info: images/08-github/curly-vs-straight-quotes.png  used on
- input line 5564.
-(pdftex.def)             Requested size: 345.00801pt x 254.8416pt.
-[174]
-Overfull \hbox (119.8052pt too wide) in paragraph at lines 5579--5581
-[]\T1/lmr/m/n/10 Go to the top-level of your GitHub repos-i-tory, sim-i-lar to 
-\T1/lmtt/m/n/10 https://github.com/USERNAME/REPOSITORY 
- []
-
-[175 <./images/08-github/http-vs-https.png>] [176 <./images/08-github/curly-vs-
-straight-quotes.png>]
-Overfull \hbox (36.333pt too wide) in paragraph at lines 5609--5611
-[]\T1/lmr/m/n/10 your code repos-i-tory, in this for-mat: \T1/lmtt/m/n/10 https
-://github.com/USERNAME/REPOSITORY 
- []
-
-
-Overfull \hbox (49.0821pt too wide) in paragraph at lines 5611--5612
-[]\T1/lmr/m/n/10 your pub-lished web page, in this for-mat: \T1/lmtt/m/n/10 htt
-ps://USERNAME.github.io/REPOSITORY 
- []
-
-
-Overfull \hbox (32.8873pt too wide) in paragraph at lines 5616--5617
-[]\T1/lmr/m/n/10 These URLs are NOT case-sensitive, which means that \T1/lmtt/m
-/n/10 https://github.com/USERNAME
- []
-
-[177]
-<images/08-github/extra-files-block-readme-iframe.png, id=2768, 253.44687pt x 2
-21.32687pt>
-File: images/08-github/extra-files-block-readme-iframe.png Graphic file (type p
-ng)
-<use images/08-github/extra-files-block-readme-iframe.png>
-Package pdftex.def Info: images/08-github/extra-files-block-readme-iframe.png  
-used on input line 5666.
-(pdftex.def)             Requested size: 253.45396pt x 221.33305pt.
-[178 <./images/08-github/extra-files-block-readme-iframe.png>]
-Overfull \hbox (124.98439pt too wide) in paragraph at lines 5696--5697
-[]\T1/lmr/m/n/10 Go to your live map link, which should fol-low this for-mat: \
-T1/lmtt/m/n/10 https://USERNAME.github.io/REPOSITORY\T1/lmr/m/n/10 ,
- []
-
-<images/08-github/lmwgs-fix-column-headers.png, id=2781, 595.22375pt x 232.87pt
->
-File: images/08-github/lmwgs-fix-column-headers.png Graphic file (type png)
-<use images/08-github/lmwgs-fix-column-headers.png>
-Package pdftex.def Info: images/08-github/lmwgs-fix-column-headers.png  used on
- input line 5715.
-(pdftex.def)             Requested size: 344.99388pt x 134.97229pt.
-<images/08-github/lmwgs-do-not-rename-labels.png, id=2782, 271.0125pt x 451.687
-5pt>
-File: images/08-github/lmwgs-do-not-rename-labels.png Graphic file (type png)
-<use images/08-github/lmwgs-do-not-rename-labels.png>
-Package pdftex.def Info: images/08-github/lmwgs-do-not-rename-labels.png  used 
-on input line 5727.
-(pdftex.def)             Requested size: 271.0201pt x 451.70016pt.
-[179 <./images/08-github/lmwgs-fix-column-headers.png>] [180 <./images/08-githu
-b/lmwgs-do-not-rename-labels.png>]
-<images/08-github/mac-finder-filename-extensions.png, id=2801, 590.205pt x 165.
-61874pt>
-File: images/08-github/mac-finder-filename-extensions.png Graphic file (type pn
-g)
-<use images/08-github/mac-finder-filename-extensions.png>
-Package pdftex.def Info: images/08-github/mac-finder-filename-extensions.png  u
-sed on input line 5770.
-(pdftex.def)             Requested size: 345.00285pt x 96.81201pt.
-<images/08-github/Chrome-developer-tools.png, id=2802, 994.71625pt x 743.77875p
-t>
-File: images/08-github/Chrome-developer-tools.png Graphic file (type png)
-<use images/08-github/Chrome-developer-tools.png>
-Package pdftex.def Info: images/08-github/Chrome-developer-tools.png  used on i
-nput line 5782.
-(pdftex.def)             Requested size: 344.99886pt x 257.96584pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[181 <./images/08-github/mac-finder-filename-extensions.png>]
-<images/08-github/Firefox-tools-inspector.png, id=2815, 991.705pt x 744.7825pt>
-
-File: images/08-github/Firefox-tools-inspector.png Graphic file (type png)
-<use images/08-github/Firefox-tools-inspector.png>
-Package pdftex.def Info: images/08-github/Firefox-tools-inspector.png  used on 
-input line 5786.
-(pdftex.def)             Requested size: 344.99858pt x 259.09811pt.
-[182 <./images/08-github/Chrome-developer-tools.png> <./images/08-github/Firefo
-x-tools-inspector.png>]
+]
 Chapter 9.
-<images/09-chartjs/chartjs-bar.png, id=2825, 333.245pt x 307.1475pt>
+<images/09-chartjs/chartjs-bar.png, id=2727, 333.245pt x 307.1475pt>
 File: images/09-chartjs/chartjs-bar.png Graphic file (type png)
 <use images/09-chartjs/chartjs-bar.png>
 Package pdftex.def Info: images/09-chartjs/chartjs-bar.png  used on input line 
-5831.
+5533.
 (pdftex.def)             Requested size: 162.15245pt x 149.45377pt.
-<images/09-chartjs/chartjs-line.png, id=2827, 345.29pt x 312.16624pt>
+<images/09-chartjs/chartjs-line.png, id=2729, 345.29pt x 312.16624pt>
 File: images/09-chartjs/chartjs-line.png Graphic file (type png)
 <use images/09-chartjs/chartjs-line.png>
 Package pdftex.def Info: images/09-chartjs/chartjs-line.png  used on input line
- 5836.
+ 5538.
 (pdftex.def)             Requested size: 162.14932pt x 146.5943pt.
-<images/09-chartjs/chartjs-scatter.png, id=2829, 342.27875pt x 309.155pt>
+<images/09-chartjs/chartjs-scatter.png, id=2731, 342.27875pt x 309.155pt>
 File: images/09-chartjs/chartjs-scatter.png Graphic file (type png)
 <use images/09-chartjs/chartjs-scatter.png>
 Package pdftex.def Info: images/09-chartjs/chartjs-scatter.png  used on input l
-ine 5841.
+ine 5543.
 (pdftex.def)             Requested size: 162.15582pt x 146.46332pt.
-<images/09-chartjs/chartjs-bubble.png, id=2831, 339.2675pt x 318.18875pt>
+<images/09-chartjs/chartjs-bubble.png, id=2733, 339.2675pt x 318.18875pt>
 File: images/09-chartjs/chartjs-bubble.png Graphic file (type png)
 <use images/09-chartjs/chartjs-bubble.png>
 Package pdftex.def Info: images/09-chartjs/chartjs-bubble.png  used on input li
-ne 5846.
+ne 5548.
 (pdftex.def)             Requested size: 162.14767pt x 152.07341pt.
-[183
-
-] [184 <./images/09-chartjs/chartjs-bar.png> <./images/09-chartjs/chartjs-line.
-png> <./images/09-chartjs/chartjs-scatter.png>] [185 <./images/09-chartjs/chart
-js-bubble.png>]
-Underfull \hbox (badness 2653) in paragraph at lines 5897--5898
+[175] [176 <./images/09-chartjs/chartjs-bar.png> <./images/09-chartjs/chartjs-l
+ine.png> <./images/09-chartjs/chartjs-scatter.png>] [177 <./images/09-chartjs/c
+hartjs-bubble.png>]
+Underfull \hbox (badness 2653) in paragraph at lines 5599--5600
 []\T1/lmr/m/n/10 Demo: []$https : / / handsondataviz . github . io / chartjs -[
 ] templates / bar -[] chart / index .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5899--5900
+Underfull \hbox (badness 10000) in paragraph at lines 5601--5602
 []\T1/lmr/m/n/10 Source and in-struc-tions: []$https : / / github . com / hands
 ondataviz / chartjs -[]
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 5907--5908
+Underfull \hbox (badness 1874) in paragraph at lines 5609--5610
 []\T1/lmr/m/n/10 Demo: []$https : / / handsondataviz . github . io / chartjs -[
 ] templates / line -[] chart / index .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5909--5910
+Underfull \hbox (badness 10000) in paragraph at lines 5611--5612
 []\T1/lmr/m/n/10 Source and in-struc-tions: []$https : / / github . com / hands
 ondataviz / chartjs -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5917--5918
+Underfull \hbox (badness 10000) in paragraph at lines 5619--5620
 []\T1/lmr/m/n/10 Demo: []$https : / / handsondataviz . github . io / chartjs -[
 ] templates / scatter -[] chart /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5919--5920
+Underfull \hbox (badness 10000) in paragraph at lines 5621--5622
 []\T1/lmr/m/n/10 Source and in-struc-tions: []$https : / / github . com / hands
 ondataviz / chartjs -[]
  []
 
-[186]
-Underfull \hbox (badness 10000) in paragraph at lines 5947--5948
+[178]
+Underfull \hbox (badness 10000) in paragraph at lines 5649--5650
 []\T1/lmr/m/n/10 Demo: []$https : / / handsondataviz . github . io / chartjs -[
 ] templates / bubble -[] chart /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5949--5950
+Underfull \hbox (badness 10000) in paragraph at lines 5651--5652
 []\T1/lmr/m/n/10 Source and in-struc-tions: []$https : / / github . com / hands
 ondataviz / chartjs -[]
  []
 
-[187] [188
+[179] [180
 
 ]
 Chapter 10.
 
-Overfull \hbox (12.1935pt too wide) in paragraph at lines 6008--6009
+Overfull \hbox (12.1935pt too wide) in paragraph at lines 5710--5711
 \T1/lmr/m/n/10 TODO: add and clean up Leaflet Map CSV []$https : / / github . c
 om / HandsOnDataViz /
  []
 
-[189]
-<images/10-leaflet/leaflet-maps-with-google-sheets.png, id=2924, 529.98pt x 303
+[181]
+<images/10-leaflet/leaflet-maps-with-google-sheets.png, id=2827, 529.98pt x 303
 .1325pt>
 File: images/10-leaflet/leaflet-maps-with-google-sheets.png Graphic file (type 
 png)
 <use images/10-leaflet/leaflet-maps-with-google-sheets.png>
 Package pdftex.def Info: images/10-leaflet/leaflet-maps-with-google-sheets.png 
- used on input line 6020.
+ used on input line 5722.
 (pdftex.def)             Requested size: 162.14908pt x 92.74435pt.
-<images/10-leaflet/leaflet-storymaps-with-google-sheets.png, id=2926, 301.125pt
+<images/10-leaflet/leaflet-storymaps-with-google-sheets.png, id=2829, 301.125pt
  x 180.675pt>
 File: images/10-leaflet/leaflet-storymaps-with-google-sheets.png Graphic file (
 type png)
 <use images/10-leaflet/leaflet-storymaps-with-google-sheets.png>
 Package pdftex.def Info: images/10-leaflet/leaflet-storymaps-with-google-sheets
-.png  used on input line 6025.
+.png  used on input line 5727.
 (pdftex.def)             Requested size: 162.15477pt x 97.29286pt.
-<images/10-leaflet/leaflet-socrata-api-control-layers.png, id=2928, 552.0625pt 
+<images/10-leaflet/leaflet-socrata-api-control-layers.png, id=2831, 552.0625pt 
 x 334.75063pt>
 File: images/10-leaflet/leaflet-socrata-api-control-layers.png Graphic file (ty
 pe png)
 <use images/10-leaflet/leaflet-socrata-api-control-layers.png>
 Package pdftex.def Info: images/10-leaflet/leaflet-socrata-api-control-layers.p
-ng  used on input line 6030.
+ng  used on input line 5732.
 (pdftex.def)             Requested size: 162.14941pt x 98.3215pt.
-[190 <./images/10-leaflet/leaflet-maps-with-google-sheets.png> <./images/10-lea
+[182 <./images/10-leaflet/leaflet-maps-with-google-sheets.png> <./images/10-lea
 flet/leaflet-storymaps-with-google-sheets.png> <./images/10-leaflet/leaflet-soc
-rata-api-control-layers.png>] [191] [192] [193] [194] [195] [196] [197]
+rata-api-control-layers.png>] [183] [184] [185] [186] [187] [188] [189]
 File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
-Package pdftex.def Info: images/placeholder.jpg  used on input line 6537.
+Package pdftex.def Info: images/placeholder.jpg  used on input line 6239.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
 
-Overfull \hbox (20.52861pt too wide) in paragraph at lines 6561--6563
+Overfull \hbox (20.52861pt too wide) in paragraph at lines 6263--6265
 \T1/lmr/m/n/10 docs . google . com / spreadsheets / d / 1ZxvU8eGyuN9M8GxTU9acKV
 Jv70iC3px _
  []
 
-[198]
+[190]
 File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
-Package pdftex.def Info: images/placeholder.jpg  used on input line 6572.
+Package pdftex.def Info: images/placeholder.jpg  used on input line 6274.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
-<images/10-leaflet/lmwgs-file-publish.png, id=3080, 1505.625pt x 1039.885pt>
+<images/10-leaflet/lmwgs-file-publish.png, id=2982, 1505.625pt x 1039.885pt>
 File: images/10-leaflet/lmwgs-file-publish.png Graphic file (type png)
 <use images/10-leaflet/lmwgs-file-publish.png>
 Package pdftex.def Info: images/10-leaflet/lmwgs-file-publish.png  used on inpu
-t line 6586.
+t line 6288.
 (pdftex.def)             Requested size: 344.99992pt x 238.27994pt.
-<images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png, id=3081, 935.495pt x 3
+<images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png, id=2983, 935.495pt x 3
 71.3875pt>
 File: images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png Graphic file (type
  png)
 <use images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png>
 Package pdftex.def Info: images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png
-  used on input line 6600.
+  used on input line 6302.
 (pdftex.def)             Requested size: 345.00005pt x 136.96353pt.
-[199] [200 <./images/10-leaflet/lmwgs-file-publish.png> <./images/10-leaflet/lm
+[191] [192 <./images/10-leaflet/lmwgs-file-publish.png> <./images/10-leaflet/lm
 wgs-copy-sheet-url-not-pub-url.png>]
 File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
-Package pdftex.def Info: images/placeholder.jpg  used on input line 6622.
+Package pdftex.def Info: images/placeholder.jpg  used on input line 6324.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
-[201]
-Overfull \hbox (42.75092pt too wide) in alignment at lines 6673--6677
+[193]
+Overfull \hbox (42.75092pt too wide) in alignment at lines 6375--6379
  [] [] [] 
  []
 
 
-Overfull \hbox (42.75092pt too wide) in alignment at lines 6677--6683
+Overfull \hbox (42.75092pt too wide) in alignment at lines 6379--6385
  [] [] [] 
  []
 
-[202] [203] [204]
-Underfull \hbox (badness 3168) in paragraph at lines 6862--6862
+[194] [195] [196]
+Underfull \hbox (badness 3168) in paragraph at lines 6564--6564
 [][]\T1/lmr/bx/n/14.4 Leaflet Sto-rymaps with Google Sheets and
  []
 
-[205] [206]
-Overfull \hbox (95.94653pt too wide) in paragraph at lines 7007--7009
+[197] [198]
+Overfull \hbox (95.94653pt too wide) in paragraph at lines 6709--6711
 \T1/lmr/m/n/10 docs . google . com / spreadsheets / d / 1AO6XHL _ 0JafWZF4KEejk
 dDNqfuZWUk3SlNlQ6MjlRFM/$[] 
  []
@@ -2352,597 +2244,716 @@ dDNqfuZWUk3SlNlQ6MjlRFM/$[]
 File: images/10-leaflet/lmwgs-file-publish.png Graphic file (type png)
 <use images/10-leaflet/lmwgs-file-publish.png>
 Package pdftex.def Info: images/10-leaflet/lmwgs-file-publish.png  used on inpu
-t line 7020.
+t line 6722.
 (pdftex.def)             Requested size: 344.99992pt x 238.27994pt.
 File: images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png Graphic file (type
  png)
 <use images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png>
 Package pdftex.def Info: images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png
-  used on input line 7034.
+  used on input line 6736.
 (pdftex.def)             Requested size: 345.00005pt x 136.96353pt.
-[207] [208] [209]
-Underfull \hbox (badness 1184) in paragraph at lines 7108--7111
+[199] [200] [201]
+Underfull \hbox (badness 1184) in paragraph at lines 6810--6813
 \T1/lmr/m/n/10 down with cur-rently three op-tions: Nu-mer-ated (de-faults to t
 hat, even
  []
 
 
-Underfull \hbox (badness 1337) in paragraph at lines 7114--7120
+Underfull \hbox (badness 1337) in paragraph at lines 6816--6822
 []\T1/lmr/m/n/10 I added two columns, Geo-J-SON Over-lay with the URL to the Ge
 o-J-
  []
 
 
-Underfull \hbox (badness 1048) in paragraph at lines 7114--7120
+Underfull \hbox (badness 1048) in paragraph at lines 6816--6822
 \T1/lmr/m/n/10 of fea-tures. List the styles sep-a-rated by semi-colon, and no 
 quo-ta-tion
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 7114--7120
+Underfull \hbox (badness 2512) in paragraph at lines 6816--6822
 \T1/lmr/m/n/10 empty string. For ex-am-ple, []$https : / / github . com / hands
 ondataviz / lea^^]et -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7114--7120
+Underfull \hbox (badness 10000) in paragraph at lines 6816--6822
 \T1/lmr/m/n/10 storymaps -[] with -[] google -[] sheets / blob / master / scrip
 ts / storymap . js # L310$[] color:
  []
 
 
-Underfull \hbox (badness 1622) in paragraph at lines 7121--7123
+Underfull \hbox (badness 1622) in paragraph at lines 6823--6825
 []\T1/lmr/m/n/10 Will first at-tempt to ex-tract the color from the COLOR prop-
 erty of
  []
 
 
-Underfull \hbox (badness 1577) in paragraph at lines 7121--7123
+Underfull \hbox (badness 1577) in paragraph at lines 6823--6825
 \T1/lmr/m/n/10 Geo-J-SON Fea-ture Prop-er-ties ``color''. If that is not set, i
 t uses sil-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7121--7123
+Underfull \hbox (badness 10000) in paragraph at lines 6823--6825
 \T1/lmr/m/n/10 ver. []$https : / / github . com / handsondataviz / lea^^]et -[]
  storymaps -[] with -[] google -[]
  []
 
 
-Underfull \hbox (badness 1028) in paragraph at lines 7126--7130
+Underfull \hbox (badness 1028) in paragraph at lines 6828--6832
 []\T1/lmr/m/n/10 If google-DocURL vari-able does not ex-ist (eg you delete the 
 file) or is
  []
 
 
-Underfull \hbox (badness 2818) in paragraph at lines 7126--7130
+Underfull \hbox (badness 2818) in paragraph at lines 6828--6832
 \T1/lmr/m/n/10 an empty string, it reads two spread-sheets: Op-tions.csv and Ch
 ap-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7126--7130
+Underfull \hbox (badness 10000) in paragraph at lines 6828--6832
 []$\T1/lmr/m/n/10 https : / / github . com / handsondataviz / lea^^]et -[] stor
 ymaps -[] with -[] google -[] sheets /
  []
 
-[210]
-<images/10-leaflet/data-hartford-api.png, id=3282, 1842.885pt x 904.37875pt>
+[202]
+<images/10-leaflet/data-hartford-api.png, id=3183, 1842.885pt x 904.37875pt>
 File: images/10-leaflet/data-hartford-api.png Graphic file (type png)
 <use images/10-leaflet/data-hartford-api.png>
 Package pdftex.def Info: images/10-leaflet/data-hartford-api.png  used on input
- line 7170.
+ line 6872.
 (pdftex.def)             Requested size: 344.97769pt x 169.2946pt.
-[211]
-<images/10-leaflet/data-hartford-api-json.png, id=3296, 1842.885pt x 935.495pt>
+[203]
+<images/10-leaflet/data-hartford-api-json.png, id=3197, 1842.885pt x 935.495pt>
 
 File: images/10-leaflet/data-hartford-api-json.png Graphic file (type png)
 <use images/10-leaflet/data-hartford-api-json.png>
 Package pdftex.def Info: images/10-leaflet/data-hartford-api-json.png  used on 
-input line 7180.
+input line 6882.
 (pdftex.def)             Requested size: 344.97769pt x 175.11938pt.
-<images/10-leaflet/data-hartford-api-json-not-formatted.png, id=3297, 1842.885p
+<images/10-leaflet/data-hartford-api-json-not-formatted.png, id=3198, 1842.885p
 t x 935.495pt>
 File: images/10-leaflet/data-hartford-api-json-not-formatted.png Graphic file (
 type png)
 <use images/10-leaflet/data-hartford-api-json-not-formatted.png>
 Package pdftex.def Info: images/10-leaflet/data-hartford-api-json-not-formatted
-.png  used on input line 7188.
+.png  used on input line 6890.
 (pdftex.def)             Requested size: 344.97769pt x 175.11938pt.
-[212 <./images/10-leaflet/data-hartford-api.png> <./images/10-leaflet/data-hart
+[204 <./images/10-leaflet/data-hartford-api.png> <./images/10-leaflet/data-hart
 ford-api-json.png>]
-<images/10-leaflet/data-hartford-api-geojson.png, id=3307, 1842.885pt x 935.495
+<images/10-leaflet/data-hartford-api-geojson.png, id=3208, 1842.885pt x 935.495
 pt>
 File: images/10-leaflet/data-hartford-api-geojson.png Graphic file (type png)
 <use images/10-leaflet/data-hartford-api-geojson.png>
 Package pdftex.def Info: images/10-leaflet/data-hartford-api-geojson.png  used 
-on input line 7198.
+on input line 6900.
 (pdftex.def)             Requested size: 344.97769pt x 175.11938pt.
-[213 <./images/10-leaflet/data-hartford-api-json-not-formatted.png> <./images/1
+[205 <./images/10-leaflet/data-hartford-api-json-not-formatted.png> <./images/1
 0-leaflet/data-hartford-api-geojson.png>]
-Underfull \hbox (badness 4467) in paragraph at lines 7228--7230
+Underfull \hbox (badness 4467) in paragraph at lines 6930--6932
 []\T1/lmr/m/n/10 data []$https : / / data . hartford . gov / Public -[] Health 
 / Current -[] Class -[] 1 -[] Class -[] 4 -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7251--7253
+Underfull \hbox (badness 10000) in paragraph at lines 6953--6955
 []\T1/lmr/m/n/10 map []$https : / / handsondataviz . github . io / lea^^]et -[]
  socrata / index -[] geojson -[]
  []
 
 
-Overfull \hbox (13.13927pt too wide) in paragraph at lines 7255--7256
+Overfull \hbox (13.13927pt too wide) in paragraph at lines 6957--6958
 []\T1/lmr/m/n/10 data []$https : / / data . ct . gov / Environment -[] and -[] 
 Natural -[] Resources / Agricultural -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7265--7267
+Underfull \hbox (badness 10000) in paragraph at lines 6967--6969
 []\T1/lmr/m/n/10 map []$https : / / handsondataviz . github . io / lea^^]et -[]
  socrata / index -[] control -[]
  []
 
 
-Underfull \hbox (badness 7944) in paragraph at lines 7267--7268
+Underfull \hbox (badness 7944) in paragraph at lines 6969--6970
 []\T1/lmr/m/n/10 code []$https : / / github . com / handsondataviz / lea^^]et -
 [] socrata / index -[] control -[]
  []
 
-[214]
-Underfull \hbox (badness 10000) in paragraph at lines 7281--7282
+[206]
+Underfull \hbox (badness 10000) in paragraph at lines 6983--6984
 []\T1/lmr/m/n/10 data []$https : / / opendata . demo . socrata . com / Governme
 nt / Kentucky -[]
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 7327--7329
+Underfull \hbox (badness 1325) in paragraph at lines 7029--7031
 []\T1/lmr/m/n/10 Go to the GitHub repo for the map above: []$https : / / github
  . com /
  []
 
-<images/10-leaflet/ct-open-data-api-endpoint.png, id=3357, 1010.77625pt x 468.7
+<images/10-leaflet/ct-open-data-api-endpoint.png, id=3258, 1010.77625pt x 468.7
 5125pt>
 File: images/10-leaflet/ct-open-data-api-endpoint.png Graphic file (type png)
 <use images/10-leaflet/ct-open-data-api-endpoint.png>
 Package pdftex.def Info: images/10-leaflet/ct-open-data-api-endpoint.png  used 
-on input line 7336.
+on input line 7038.
 (pdftex.def)             Requested size: 345.00119pt x 159.99557pt.
-[215]
-<images/10-leaflet/ct-open-data-geojson.png, id=3377, 887.315pt x 153.57375pt>
+[207]
+<images/10-leaflet/ct-open-data-geojson.png, id=3278, 887.315pt x 153.57375pt>
 File: images/10-leaflet/ct-open-data-geojson.png Graphic file (type png)
 <use images/10-leaflet/ct-open-data-geojson.png>
 Package pdftex.def Info: images/10-leaflet/ct-open-data-geojson.png  used on in
-put line 7350.
+put line 7052.
 (pdftex.def)             Requested size: 344.99539pt x 59.71072pt.
-[216 <./images/10-leaflet/ct-open-data-api-endpoint.png> <./images/10-leaflet/c
-t-open-data-geojson.png>] [217] [218] [219] [220]
+[208 <./images/10-leaflet/ct-open-data-api-endpoint.png> <./images/10-leaflet/c
+t-open-data-geojson.png>] [209] [210] [211] [212]
 Chapter 11.
-[221
+[213
 
 ]
 File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
-Package pdftex.def Info: images/placeholder.jpg  used on input line 7682.
+Package pdftex.def Info: images/placeholder.jpg  used on input line 7384.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
-[222]
+[214]
 File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
-Package pdftex.def Info: images/placeholder.jpg  used on input line 7705.
+Package pdftex.def Info: images/placeholder.jpg  used on input line 7407.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
 
-Underfull \hbox (badness 4673) in paragraph at lines 7744--7746
+Underfull \hbox (badness 4673) in paragraph at lines 7446--7448
 \T1/lmr/m/n/10 more de-tailed doc-u-men-ta-tion at []$http : / / www . census .
  gov / geo / maps -[]
  []
 
-[223]
-Overfull \hbox (2.55539pt too wide) in paragraph at lines 7782--7783
+[215]
+Overfull \hbox (2.55539pt too wide) in paragraph at lines 7484--7485
 []\T1/lmr/m/n/10 add this []$https : / / developers . google . com / maps / faq
  # geocoder _ queryformat$[] 
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 7792--7794
+Underfull \hbox (badness 1540) in paragraph at lines 7494--7496
 []\T1/lmr/m/n/10 Available at US Cen-sus Geocoder []$https : / / geocoding . ge
 o . census . gov /
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 7817--7818
+Underfull \hbox (badness 1590) in paragraph at lines 7519--7520
 []\T1/lmr/m/n/10 Unmatched ad-dresses need to be man-u-ally cor-rected and re-
  []
 
-[224]
-<images/11-transform/address-no-column-headers.png, id=3506, 549.05125pt x 113.
+[216]
+<images/11-transform/address-no-column-headers.png, id=3407, 549.05125pt x 113.
 42375pt>
 File: images/11-transform/address-no-column-headers.png Graphic file (type png)
 
 <use images/11-transform/address-no-column-headers.png>
 Package pdftex.def Info: images/11-transform/address-no-column-headers.png  use
-d on input line 7833.
+d on input line 7535.
 (pdftex.def)             Requested size: 345.00769pt x 71.27214pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7863--7865
+Underfull \hbox (badness 10000) in paragraph at lines 7565--7567
 []\T1/lmr/m/n/10 Go to US Cen-sus Geocoder ([]$https : / / www . census . gov /
  geo / maps -[]
  []
 
-<images/11-transform/census-geocoder-batch.png, id=3511, 701.62125pt x 411.5375
+<images/11-transform/census-geocoder-batch.png, id=3412, 701.62125pt x 411.5375
 pt>
 File: images/11-transform/census-geocoder-batch.png Graphic file (type png)
 <use images/11-transform/census-geocoder-batch.png>
 Package pdftex.def Info: images/11-transform/census-geocoder-batch.png  used on
- input line 7870.
+ input line 7572.
 (pdftex.def)             Requested size: 345.00717pt x 202.36473pt.
-[225 <./images/11-transform/address-no-column-headers.png>]
-<images/11-transform/geocode-results.png, id=3524, 1086.0575pt x 164.615pt>
+[217 <./images/11-transform/address-no-column-headers.png>]
+<images/11-transform/geocode-results.png, id=3426, 1086.0575pt x 164.615pt>
 File: images/11-transform/geocode-results.png Graphic file (type png)
 <use images/11-transform/geocode-results.png>
 Package pdftex.def Info: images/11-transform/geocode-results.png  used on input
- line 7880.
+ line 7582.
 (pdftex.def)             Requested size: 344.99342pt x 52.29105pt.
-[226 <./images/11-transform/census-geocoder-batch.png> <./images/11-transform/g
+[218 <./images/11-transform/census-geocoder-batch.png> <./images/11-transform/g
 eocode-results.png>]
-<images/11-transform/hospital-socrata-export.png, id=3544, 791.95876pt x 309.15
+<images/11-transform/hospital-socrata-export.png, id=3445, 791.95876pt x 309.15
 5pt>
 File: images/11-transform/hospital-socrata-export.png Graphic file (type png)
 <use images/11-transform/hospital-socrata-export.png>
 Package pdftex.def Info: images/11-transform/hospital-socrata-export.png  used 
-on input line 7924.
+on input line 7626.
 (pdftex.def)             Requested size: 345.00682pt x 134.67946pt.
-<images/11-transform/hospital-pivot-table.png, id=3546, 653.44125pt x 523.9575p
+<images/11-transform/hospital-pivot-table.png, id=3447, 653.44125pt x 523.9575p
 t>
 File: images/11-transform/hospital-pivot-table.png Graphic file (type png)
 <use images/11-transform/hospital-pivot-table.png>
 Package pdftex.def Info: images/11-transform/hospital-pivot-table.png  used on 
-input line 7938.
+input line 7640.
 (pdftex.def)             Requested size: 344.99611pt x 276.63283pt.
-[227 <./images/11-transform/hospital-socrata-export.png>] [228 <./images/11-tra
-nsform/hospital-pivot-table.png>] [229]
-<images/11-transform/us-population-area-2015.png, id=3576, 383.4325pt x 189.708
+[219 <./images/11-transform/hospital-socrata-export.png>] [220 <./images/11-tra
+nsform/hospital-pivot-table.png>] [221]
+<images/11-transform/us-population-area-2015.png, id=3476, 383.4325pt x 189.708
 76pt>
 File: images/11-transform/us-population-area-2015.png Graphic file (type png)
 <use images/11-transform/us-population-area-2015.png>
 Package pdftex.def Info: images/11-transform/us-population-area-2015.png  used 
-on input line 8056.
+on input line 7758.
 (pdftex.def)             Requested size: 345.0217pt x 170.70445pt.
 
-Overfull \hbox (11.6672pt too wide) in alignment at lines 8072--8076
+Overfull \hbox (11.6672pt too wide) in alignment at lines 7774--7778
  [] [] [] [] 
  []
 
 
-Overfull \hbox (11.6672pt too wide) in alignment at lines 8076--8079
+Overfull \hbox (11.6672pt too wide) in alignment at lines 7778--7781
  [] [] [] [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[230 <./images/11-transform/us-population-area-2015.png (PNG copy)>] [231]
-<images/11-transform/name-lat-lon-info.png, id=3600, 721.69624pt x 87.32625pt>
+[222 <./images/11-transform/us-population-area-2015.png (PNG copy)>] [223]
+<images/11-transform/name-lat-lon-info.png, id=3501, 721.69624pt x 87.32625pt>
 File: images/11-transform/name-lat-lon-info.png Graphic file (type png)
 <use images/11-transform/name-lat-lon-info.png>
 Package pdftex.def Info: images/11-transform/name-lat-lon-info.png  used on inp
-ut line 8129.
+ut line 7831.
 (pdftex.def)             Requested size: 345.0007pt x 41.74556pt.
 File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
-Package pdftex.def Info: images/placeholder.jpg  used on input line 8139.
+Package pdftex.def Info: images/placeholder.jpg  used on input line 7841.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
-[232 <./images/11-transform/name-lat-lon-info.png>]
-<images/11-transform/geojson-save-as.png, id=3613, 748.7975pt x 489.83pt>
+[224 <./images/11-transform/name-lat-lon-info.png>]
+<images/11-transform/geojson-save-as.png, id=3514, 748.7975pt x 489.83pt>
 File: images/11-transform/geojson-save-as.png Graphic file (type png)
 <use images/11-transform/geojson-save-as.png>
 Package pdftex.def Info: images/11-transform/geojson-save-as.png  used on input
- line 8155.
+ line 7857.
 (pdftex.def)             Requested size: 344.99947pt x 225.68329pt.
-[233 <./images/11-transform/geojson-save-as.png>] [234]
+[225 <./images/11-transform/geojson-save-as.png>] [226]
 File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
-Package pdftex.def Info: images/placeholder.jpg  used on input line 8250.
+Package pdftex.def Info: images/placeholder.jpg  used on input line 7952.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
-<images/11-transform/mapshaper-edit-info.png, id=3642, 470.75874pt x 385.44pt>
+<images/11-transform/mapshaper-edit-info.png, id=3543, 470.75874pt x 385.44pt>
 File: images/11-transform/mapshaper-edit-info.png Graphic file (type png)
 <use images/11-transform/mapshaper-edit-info.png>
 Package pdftex.def Info: images/11-transform/mapshaper-edit-info.png  used on i
-nput line 8268.
+nput line 7970.
 (pdftex.def)             Requested size: 320.00397pt x 262.0075pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[235] [236 <./images/11-transform/mapshaper-edit-info.png>]
-<images/11-transform/mapshaper-simplify.png, id=3661, 911.405pt x 597.23125pt>
+[227] [228 <./images/11-transform/mapshaper-edit-info.png>]
+<images/11-transform/mapshaper-simplify.png, id=3561, 911.405pt x 597.23125pt>
 File: images/11-transform/mapshaper-simplify.png Graphic file (type png)
 <use images/11-transform/mapshaper-simplify.png>
 Package pdftex.def Info: images/11-transform/mapshaper-simplify.png  used on in
-put line 8291.
+put line 7993.
 (pdftex.def)             Requested size: 345.00243pt x 226.07538pt.
 File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
-Package pdftex.def Info: images/placeholder.jpg  used on input line 8309.
+Package pdftex.def Info: images/placeholder.jpg  used on input line 8011.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
-[237 <./images/11-transform/mapshaper-simplify.png>] [238]
+[229 <./images/11-transform/mapshaper-simplify.png>] [230]
 File: images/placeholder.jpg Graphic file (type jpg)
 <use images/placeholder.jpg>
-Package pdftex.def Info: images/placeholder.jpg  used on input line 8371.
+Package pdftex.def Info: images/placeholder.jpg  used on input line 8073.
 (pdftex.def)             Requested size: 345.00047pt x 129.89474pt.
-<images/11-transform/mapshaper-join-table-concept.png, id=3685, 833.1125pt x 40
+<images/11-transform/mapshaper-join-table-concept.png, id=3586, 833.1125pt x 40
 1.5pt>
 File: images/11-transform/mapshaper-join-table-concept.png Graphic file (type p
 ng)
 <use images/11-transform/mapshaper-join-table-concept.png>
 Package pdftex.def Info: images/11-transform/mapshaper-join-table-concept.png  
-used on input line 8406.
+used on input line 8108.
 (pdftex.def)             Requested size: 344.99794pt x 166.26405pt.
-[239]
-<images/11-transform/mapshaper-join-select-map-layer.png, id=3698, 355.3275pt x
+[231]
+<images/11-transform/mapshaper-join-select-map-layer.png, id=3599, 355.3275pt x
  344.28625pt>
 File: images/11-transform/mapshaper-join-select-map-layer.png Graphic file (typ
 e png)
 <use images/11-transform/mapshaper-join-select-map-layer.png>
 Package pdftex.def Info: images/11-transform/mapshaper-join-select-map-layer.pn
-g  used on input line 8434.
+g  used on input line 8136.
 (pdftex.def)             Requested size: 345.00882pt x 334.28821pt.
 
 Underfull \vbox (badness 1968) has occurred while \output is active []
 
-[240 <./images/11-transform/mapshaper-join-table-concept.png>]
-<images/11-transform/mapshaper-join-console.png, id=3707, 661.47125pt x 250.937
+[232 <./images/11-transform/mapshaper-join-table-concept.png>]
+<images/11-transform/mapshaper-join-console.png, id=3608, 661.47125pt x 250.937
 5pt>
 File: images/11-transform/mapshaper-join-console.png Graphic file (type png)
 <use images/11-transform/mapshaper-join-console.png>
 Package pdftex.def Info: images/11-transform/mapshaper-join-console.png  used o
-n input line 8452.
+n input line 8154.
 (pdftex.def)             Requested size: 344.99654pt x 130.8788pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[241 <./images/11-transform/mapshaper-join-select-map-layer.png>]
-<images/11-transform/mapshaper-join-confirm.png, id=3714, 482.80376pt x 235.881
+[233 <./images/11-transform/mapshaper-join-select-map-layer.png>]
+<images/11-transform/mapshaper-join-confirm.png, id=3614, 482.80376pt x 235.881
 26pt>
 File: images/11-transform/mapshaper-join-confirm.png Graphic file (type png)
 <use images/11-transform/mapshaper-join-confirm.png>
 Package pdftex.def Info: images/11-transform/mapshaper-join-confirm.png  used o
-n input line 8462.
+n input line 8164.
 (pdftex.def)             Requested size: 345.01053pt x 168.56023pt.
-[242 <./images/11-transform/mapshaper-join-console.png> <./images/11-transform/
+[234 <./images/11-transform/mapshaper-join-console.png> <./images/11-transform/
 mapshaper-join-confirm.png>]
-<images/11-transform/mapshaper-unmatched-unjoined.png, id=3726, 457.71pt x 434.
+<images/11-transform/mapshaper-unmatched-unjoined.png, id=3626, 457.71pt x 434.
 62375pt>
 File: images/11-transform/mapshaper-unmatched-unjoined.png Graphic file (type p
 ng)
 <use images/11-transform/mapshaper-unmatched-unjoined.png>
 Package pdftex.def Info: images/11-transform/mapshaper-unmatched-unjoined.png  
-used on input line 8497.
+used on input line 8199.
 (pdftex.def)             Requested size: 345.01372pt x 327.6117pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[243] [244 <./images/11-transform/mapshaper-unmatched-unjoined.png>]
-<images/11-transform/towns-export-csv.png, id=3743, 191.71625pt x 190.7125pt>
+[235] [236 <./images/11-transform/mapshaper-unmatched-unjoined.png>]
+<images/11-transform/towns-export-csv.png, id=3645, 191.71625pt x 190.7125pt>
 File: images/11-transform/towns-export-csv.png Graphic file (type png)
 <use images/11-transform/towns-export-csv.png>
 Package pdftex.def Info: images/11-transform/towns-export-csv.png  used on inpu
-t line 8519.
+t line 8221.
 (pdftex.def)             Requested size: 191.72455pt x 190.72075pt.
-<images/11-transform/CT-towns-merged-csv.png, id=3744, 368.37625pt x 218.8175pt
+<images/11-transform/CT-towns-merged-csv.png, id=3646, 368.37625pt x 218.8175pt
 >
 File: images/11-transform/CT-towns-merged-csv.png Graphic file (type png)
 <use images/11-transform/CT-towns-merged-csv.png>
 Package pdftex.def Info: images/11-transform/CT-towns-merged-csv.png  used on i
-nput line 8530.
+nput line 8232.
 (pdftex.def)             Requested size: 344.99774pt x 204.93054pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[245 <./images/11-transform/towns-export-csv.png>]
-<images/11-transform/mapshaper-two-layers.png, id=3753, 408.52625pt x 346.29375
+[237 <./images/11-transform/towns-export-csv.png>]
+<images/11-transform/mapshaper-two-layers.png, id=3655, 408.52625pt x 346.29375
 pt>
 File: images/11-transform/mapshaper-two-layers.png Graphic file (type png)
 <use images/11-transform/mapshaper-two-layers.png>
 Package pdftex.def Info: images/11-transform/mapshaper-two-layers.png  used on 
-input line 8543.
+input line 8245.
 (pdftex.def)             Requested size: 345.01732pt x 292.4594pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[246 <./images/11-transform/CT-towns-merged-csv.png>]
-<images/11-transform/mapshaper-towns-merged.png, id=3761, 618.31pt x 447.6725pt
+[238 <./images/11-transform/CT-towns-merged-csv.png>]
+<images/11-transform/mapshaper-towns-merged.png, id=3663, 618.31pt x 447.6725pt
 >
 File: images/11-transform/mapshaper-towns-merged.png Graphic file (type png)
 <use images/11-transform/mapshaper-towns-merged.png>
 Package pdftex.def Info: images/11-transform/mapshaper-towns-merged.png  used o
-n input line 8568.
+n input line 8270.
 (pdftex.def)             Requested size: 320.0135pt x 231.69809pt.
-[247 <./images/11-transform/mapshaper-two-layers.png>]
-<images/11-transform/google-earth-convert-kmz.png, id=3770, 611.28375pt x 515.9
+[239 <./images/11-transform/mapshaper-two-layers.png>]
+<images/11-transform/google-earth-convert-kmz.png, id=3671, 611.28375pt x 515.9
 275pt>
 File: images/11-transform/google-earth-convert-kmz.png Graphic file (type png)
 <use images/11-transform/google-earth-convert-kmz.png>
 Package pdftex.def Info: images/11-transform/google-earth-convert-kmz.png  used
- on input line 8599.
+ on input line 8301.
 (pdftex.def)             Requested size: 319.99603pt x 270.07875pt.
-[248 <./images/11-transform/mapshaper-towns-merged.png>]
-<images/11-transform/google-earth-save-kml.png, id=3780, 571.13374pt x 80.3pt>
+[240 <./images/11-transform/mapshaper-towns-merged.png>]
+<images/11-transform/google-earth-save-kml.png, id=3680, 571.13374pt x 80.3pt>
 File: images/11-transform/google-earth-save-kml.png Graphic file (type png)
 <use images/11-transform/google-earth-save-kml.png>
 Package pdftex.def Info: images/11-transform/google-earth-save-kml.png  used on
- input line 8603.
+ input line 8305.
 (pdftex.def)             Requested size: 319.99829pt x 44.99095pt.
-[249 <./images/11-transform/google-earth-convert-kmz.png> <./images/11-transfor
-m/google-earth-save-kml.png>] [250
+[241 <./images/11-transform/google-earth-convert-kmz.png> <./images/11-transfor
+m/google-earth-save-kml.png>] [242
 
 ]
 Chapter 12.
-[251]
-<images/12-detect/y-axis-min-max.png, id=3806, 97.36375pt x 209.78375pt>
+[243]
+<images/12-detect/y-axis-min-max.png, id=3707, 97.36375pt x 209.78375pt>
 File: images/12-detect/y-axis-min-max.png Graphic file (type png)
 <use images/12-detect/y-axis-min-max.png>
 Package pdftex.def Info: images/12-detect/y-axis-min-max.png  used on input lin
-e 8657.
+e 8359.
 (pdftex.def)             Requested size: 97.3635pt x 209.78322pt.
-[252 <./images/12-detect/y-axis-min-max.png>] [253] [254
+[244 <./images/12-detect/y-axis-min-max.png>] [245] [246
 
 ]
 Chapter 13.
-[255] [256
+[247] [248
 
 ]
-Chapter 14.
-<images/14-peer/2-chart-1.png, id=3836, 602.25pt x 372.39125pt>
-File: images/14-peer/2-chart-1.png Graphic file (type png)
-<use images/14-peer/2-chart-1.png>
-Package pdftex.def Info: images/14-peer/2-chart-1.png  used on input line 8712.
+Appendix A.
+[249]
+Overfull \hbox (183.99857pt too wide) in paragraph at lines 8451--8451
+ []\T1/lmtt/m/n/10 <iframe src="https://handsondataviz.github.io/leaflet-map-si
+mple" width=90% height=350></iframe>[] 
+ []
+
+
+Overfull \hbox (204.9985pt too wide) in paragraph at lines 8461--8461
+ []\T1/lmtt/m/n/10 <iframe src="https://handsondataviz.github.io/leaflet-map-si
+mple" width="90%" height="350"></iframe>[] 
+ []
+
+<images/14-fix/http-vs-https.png, id=3746, 363.3575pt x 256.96pt>
+File: images/14-fix/http-vs-https.png Graphic file (type png)
+<use images/14-fix/http-vs-https.png>
+Package pdftex.def Info: images/14-fix/http-vs-https.png  used on input line 84
+68.
+(pdftex.def)             Requested size: 345.01024pt x 243.98514pt.
+<images/14-fix/curly-vs-straight-quotes.png, id=3747, 641.39626pt x 473.77pt>
+File: images/14-fix/curly-vs-straight-quotes.png Graphic file (type png)
+<use images/14-fix/curly-vs-straight-quotes.png>
+Package pdftex.def Info: images/14-fix/curly-vs-straight-quotes.png  used on in
+put line 8480.
+(pdftex.def)             Requested size: 345.00801pt x 254.8416pt.
+[250 <./images/14-fix/http-vs-https.png>] [251 <./images/14-fix/curly-vs-straig
+ht-quotes.png>]
+Overfull \hbox (119.8052pt too wide) in paragraph at lines 8495--8497
+[]\T1/lmr/m/n/10 Go to the top-level of your GitHub repos-i-tory, sim-i-lar to 
+\T1/lmtt/m/n/10 https://github.com/USERNAME/REPOSITORY 
+ []
+
+
+Overfull \hbox (36.333pt too wide) in paragraph at lines 8525--8527
+[]\T1/lmr/m/n/10 your code repos-i-tory, in this for-mat: \T1/lmtt/m/n/10 https
+://github.com/USERNAME/REPOSITORY 
+ []
+
+
+Overfull \hbox (49.0821pt too wide) in paragraph at lines 8527--8528
+[]\T1/lmr/m/n/10 your pub-lished web page, in this for-mat: \T1/lmtt/m/n/10 htt
+ps://USERNAME.github.io/REPOSITORY 
+ []
+
+
+Overfull \hbox (32.8873pt too wide) in paragraph at lines 8532--8533
+[]\T1/lmr/m/n/10 These URLs are NOT case-sensitive, which means that \T1/lmtt/m
+/n/10 https://github.com/USERNAME
+ []
+
+[252]
+<images/14-fix/extra-files-block-readme-iframe.png, id=3778, 253.44687pt x 221.
+32687pt>
+File: images/14-fix/extra-files-block-readme-iframe.png Graphic file (type png)
+
+<use images/14-fix/extra-files-block-readme-iframe.png>
+Package pdftex.def Info: images/14-fix/extra-files-block-readme-iframe.png  use
+d on input line 8582.
+(pdftex.def)             Requested size: 253.45396pt x 221.33305pt.
+[253 <./images/14-fix/extra-files-block-readme-iframe.png>]
+Overfull \hbox (124.98439pt too wide) in paragraph at lines 8612--8613
+[]\T1/lmr/m/n/10 Go to your live map link, which should fol-low this for-mat: \
+T1/lmtt/m/n/10 https://USERNAME.github.io/REPOSITORY\T1/lmr/m/n/10 ,
+ []
+
+<images/14-fix/lmwgs-fix-column-headers.png, id=3789, 595.22375pt x 232.87pt>
+File: images/14-fix/lmwgs-fix-column-headers.png Graphic file (type png)
+<use images/14-fix/lmwgs-fix-column-headers.png>
+Package pdftex.def Info: images/14-fix/lmwgs-fix-column-headers.png  used on in
+put line 8631.
+(pdftex.def)             Requested size: 344.99388pt x 134.97229pt.
+<images/14-fix/lmwgs-do-not-rename-labels.png, id=3790, 271.0125pt x 451.6875pt
+>
+File: images/14-fix/lmwgs-do-not-rename-labels.png Graphic file (type png)
+<use images/14-fix/lmwgs-do-not-rename-labels.png>
+Package pdftex.def Info: images/14-fix/lmwgs-do-not-rename-labels.png  used on 
+input line 8643.
+(pdftex.def)             Requested size: 271.0201pt x 451.70016pt.
+[254 <./images/14-fix/lmwgs-fix-column-headers.png>] [255 <./images/14-fix/lmwg
+s-do-not-rename-labels.png>]
+<images/14-fix/mac-finder-filename-extensions.png, id=3808, 590.205pt x 165.618
+74pt>
+File: images/14-fix/mac-finder-filename-extensions.png Graphic file (type png)
+<use images/14-fix/mac-finder-filename-extensions.png>
+Package pdftex.def Info: images/14-fix/mac-finder-filename-extensions.png  used
+ on input line 8686.
+(pdftex.def)             Requested size: 345.00285pt x 96.81201pt.
+[256 <./images/14-fix/mac-finder-filename-extensions.png>]
+<images/14-fix/Chrome-developer-tools.png, id=3826, 994.71625pt x 743.77875pt>
+File: images/14-fix/Chrome-developer-tools.png Graphic file (type png)
+<use images/14-fix/Chrome-developer-tools.png>
+Package pdftex.def Info: images/14-fix/Chrome-developer-tools.png  used on inpu
+t line 8698.
+(pdftex.def)             Requested size: 344.99886pt x 257.96584pt.
+<images/14-fix/Firefox-tools-inspector.png, id=3827, 991.705pt x 744.7825pt>
+File: images/14-fix/Firefox-tools-inspector.png Graphic file (type png)
+<use images/14-fix/Firefox-tools-inspector.png>
+Package pdftex.def Info: images/14-fix/Firefox-tools-inspector.png  used on inp
+ut line 8702.
+(pdftex.def)             Requested size: 344.99858pt x 259.09811pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[257 <./images/14-fix/Chrome-developer-tools.png>] [258 <./images/14-fix/Firefo
+x-tools-inspector.png>]
+Appendix B.
+<images/15-peer/2-chart-1.png, id=3837, 602.25pt x 372.39125pt>
+File: images/15-peer/2-chart-1.png Graphic file (type png)
+<use images/15-peer/2-chart-1.png>
+Package pdftex.def Info: images/15-peer/2-chart-1.png  used on input line 8715.
 
 (pdftex.def)             Requested size: 345.0137pt x 213.33347pt.
-[257 <./images/14-peer/2-chart-1.png>]
-File: images/14-peer/2-chart-1.png Graphic file (type png)
-<use images/14-peer/2-chart-1.png>
-Package pdftex.def Info: images/14-peer/2-chart-1.png  used on input line 8737.
+[259
+
+ <./images/15-peer/2-chart-1.png>]
+File: images/15-peer/2-chart-1.png Graphic file (type png)
+<use images/15-peer/2-chart-1.png>
+Package pdftex.def Info: images/15-peer/2-chart-1.png  used on input line 8740.
 
 (pdftex.def)             Requested size: 345.0137pt x 213.33347pt.
-[258] [259] [260] [261] [262] [263] [264
+[260] [261] [262] [263] [264] [265] [266
 
 ]
-Chapter 15.
-[265] [266]
-Underfull \hbox (badness 10000) in paragraph at lines 9207--9209
+Appendix C.
+[267]
+Underfull \hbox (badness 1365) in paragraph at lines 9183--9184
+\T1/lmtt/m/n/10 (APPENDIX)\T1/lmr/m/n/10 , which in-di-cates that all chap-ters
+ ap-pear-ing af-ter-wards are
+ []
+
+[268]
+Underfull \hbox (badness 10000) in paragraph at lines 9224--9226
 [][]$\T1/lmr/m/n/10 https : / / stackover^^]ow . com / questions / 52924766 / n
 umbering -[] and -[] referring -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9209--9210
+Underfull \hbox (badness 10000) in paragraph at lines 9226--9227
 [][]$\T1/lmr/m/n/10 https : / / stackover^^]ow . com / questions / 50609212 / c
 aption -[] styles -[] for -[] word -[]
  []
 
-[267] [268]
-Overfull \hbox (80.24876pt too wide) in paragraph at lines 9313--9313
+[269] [270]
+Overfull \hbox (80.24876pt too wide) in paragraph at lines 9332--9332
 []\T1/lmtt/m/n/10 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/
 dist/leaflet.css" />[] 
  []
 
 
-Overfull \hbox (27.74892pt too wide) in paragraph at lines 9313--9313
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 9332--9332
 []\T1/lmtt/m/n/10 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
 ></script>[] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 9347--9349
+[271]
+Underfull \hbox (badness 10000) in paragraph at lines 9366--9368
 [][]$\T1/lmr/m/n/10 https : / / stackover^^]ow . com / questions / 56808355 / h
 ow -[] to -[] conditionally -[]
  []
 
-[269]
-Underfull \hbox (badness 10000) in paragraph at lines 9353--9355
+
+Underfull \hbox (badness 10000) in paragraph at lines 9372--9374
 [][]$\T1/lmr/m/n/10 https : / / stackover^^]ow . com / questions / 53861244 / h
 tml -[] speci^^\c -[] section -[] in -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9355--9357
+Underfull \hbox (badness 10000) in paragraph at lines 9374--9376
 [][]$\T1/lmr/m/n/10 https : / / stackover^^]ow . com / questions / 41084020 / a
 dd -[] a -[] html -[] block -[] above -[]
  []
 
 
-Overfull \hbox (2.65569pt too wide) in paragraph at lines 9357--9358
+Overfull \hbox (2.65569pt too wide) in paragraph at lines 9376--9377
 [][]$\T1/lmr/m/n/10 https : / / stackover^^]ow . com / questions / 45360998 / c
 ode -[] folding -[] in -[] bookdown$[] 
  []
 
-[270]
-<images/15-bookdown/dougherty-jack.jpg, id=4040, 48.18pt x 48.4209pt>
-File: images/15-bookdown/dougherty-jack.jpg Graphic file (type jpg)
-<use images/15-bookdown/dougherty-jack.jpg>
-Package pdftex.def Info: images/15-bookdown/dougherty-jack.jpg  used on input l
-ine 9447.
+[272] [273]
+<images/16-bookdown/dougherty-jack.jpg, id=4051, 48.18pt x 48.4209pt>
+File: images/16-bookdown/dougherty-jack.jpg Graphic file (type jpg)
+<use images/16-bookdown/dougherty-jack.jpg>
+Package pdftex.def Info: images/16-bookdown/dougherty-jack.jpg  used on input l
+ine 9466.
 (pdftex.def)             Requested size: 48.17986pt x 48.42076pt.
-<images/15-bookdown/ilyankou-ilya.jpg, id=4042, 48.18pt x 48.18pt>
-File: images/15-bookdown/ilyankou-ilya.jpg Graphic file (type jpg)
-<use images/15-bookdown/ilyankou-ilya.jpg>
-Package pdftex.def Info: images/15-bookdown/ilyankou-ilya.jpg  used on input li
-ne 9448.
+<images/16-bookdown/ilyankou-ilya.jpg, id=4053, 48.18pt x 48.18pt>
+File: images/16-bookdown/ilyankou-ilya.jpg Graphic file (type jpg)
+<use images/16-bookdown/ilyankou-ilya.jpg>
+Package pdftex.def Info: images/16-bookdown/ilyankou-ilya.jpg  used on input li
+ne 9467.
 (pdftex.def)             Requested size: 48.17986pt x 48.17986pt.
-[271] [272 <./images/15-bookdown/dougherty-jack.jpg> <./images/15-bookdown/ilya
-nkou-ilya.jpg>]
-<images/15-bookdown/tiger.png, id=4058, 108.405pt x 110.4125pt>
-File: images/15-bookdown/tiger.png Graphic file (type png)
-<use images/15-bookdown/tiger.png>
-Package pdftex.def Info: images/15-bookdown/tiger.png  used on input line 9487.
+[274 <./images/16-bookdown/dougherty-jack.jpg> <./images/16-bookdown/ilyankou-i
+lya.jpg>]
+<images/16-bookdown/tiger.png, id=4062, 108.405pt x 110.4125pt>
+File: images/16-bookdown/tiger.png Graphic file (type png)
+<use images/16-bookdown/tiger.png>
+Package pdftex.def Info: images/16-bookdown/tiger.png  used on input line 9506.
 
 (pdftex.def)             Requested size: 108.40968pt x 110.41727pt.
-<images/15-bookdown/sample-map.jpg, id=4060, 401.8212pt x 216.81pt>
-File: images/15-bookdown/sample-map.jpg Graphic file (type jpg)
-<use images/15-bookdown/sample-map.jpg>
-Package pdftex.def Info: images/15-bookdown/sample-map.jpg  used on input line 
-9503.
+<images/16-bookdown/sample-map.jpg, id=4064, 401.8212pt x 216.81pt>
+File: images/16-bookdown/sample-map.jpg Graphic file (type jpg)
+<use images/16-bookdown/sample-map.jpg>
+Package pdftex.def Info: images/16-bookdown/sample-map.jpg  used on input line 
+9522.
 (pdftex.def)             Requested size: 345.00154pt x 186.1519pt.
-<images/15-bookdown/sheets-option-drag.png, id=4064, 156.1032pt x 144.54pt>
-File: images/15-bookdown/sheets-option-drag.png Graphic file (type png)
-<use images/15-bookdown/sheets-option-drag.png>
-Package pdftex.def Info: images/15-bookdown/sheets-option-drag.png  used on inp
-ut line 9517.
+<images/16-bookdown/sheets-option-drag.png, id=4068, 156.1032pt x 144.54pt>
+File: images/16-bookdown/sheets-option-drag.png Graphic file (type png)
+<use images/16-bookdown/sheets-option-drag.png>
+Package pdftex.def Info: images/16-bookdown/sheets-option-drag.png  used on inp
+ut line 9536.
 (pdftex.def)             Requested size: 156.10994pt x 144.54623pt.
-[273 <./images/15-bookdown/tiger.png>] [274 <./images/15-bookdown/sample-map.jp
-g> <./images/15-bookdown/sheets-option-drag.png>]
-<images/15-bookdown/video-sample.png, id=4089, 168.63pt x 94.6737pt>
-File: images/15-bookdown/video-sample.png Graphic file (type png)
-<use images/15-bookdown/video-sample.png>
-Package pdftex.def Info: images/15-bookdown/video-sample.png  used on input lin
-e 9533.
+[275] [276 <./images/16-bookdown/tiger.png> <./images/16-bookdown/sample-map.jp
+g>]
+<images/16-bookdown/video-sample.png, id=4088, 168.63pt x 94.6737pt>
+File: images/16-bookdown/video-sample.png Graphic file (type png)
+<use images/16-bookdown/video-sample.png>
+Package pdftex.def Info: images/16-bookdown/video-sample.png  used on input lin
+e 9552.
 (pdftex.def)             Requested size: 168.63214pt x 94.6749pt.
 
-Overfull \hbox (41.69397pt too wide) in alignment at lines 9555--9560
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[277 <./images/16-bookdown/sheets-option-drag.png> <./images/16-bookdown/video-
+sample.png>]
+Overfull \hbox (41.69397pt too wide) in alignment at lines 9574--9579
  [] [] [] 
  []
 
 
-Overfull \hbox (41.69397pt too wide) in alignment at lines 9560--9564
+Overfull \hbox (41.69397pt too wide) in alignment at lines 9579--9583
  [] [] [] 
  []
 
 
-Overfull \hbox (41.69397pt too wide) in alignment at lines 9564--9568
+Overfull \hbox (41.69397pt too wide) in alignment at lines 9583--9587
  [] [] [] 
  []
 
-[275 <./images/15-bookdown/video-sample.png>]
-Overfull \hbox (24.25111pt too wide) in paragraph at lines 9594--9595
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[278]
+Overfull \hbox (24.25111pt too wide) in paragraph at lines 9613--9614
 []\T1/lmr/m/n/10 To cre-ate notes, in-sert ci-ta-tion keys in the text, such as
  \T1/lmtt/m/n/10 @huffHowLieStatistics1954\T1/lmr/m/n/10 ,
  []
 
-[276]
-Underfull \hbox (badness 5475) in paragraph at lines 9632--9634
+[279]
+Underfull \hbox (badness 5475) in paragraph at lines 9651--9653
 []\T1/lmr/m/n/10 Convert with: \T1/lmtt/m/n/10 pandoc handsondataviz.md --from 
 markdown --to
  []
 
-[277] [278
+[280]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 9670.
+[281
 
 ]
-Chapter 16.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 9652.
-[279]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 9652.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 9670.
 (./HandsOnDataViz.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 9652.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 9652.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 9670.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 9670.
 
 Package rerunfilecheck Info: File `HandsOnDataViz.out' has not changed.
-(rerunfilecheck)             Checksum: 90D3277078276D22F029E178C1F5B6F8;22615.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 9652.
+(rerunfilecheck)             Checksum: 416C13B64633AF8A958C0BADFB4067A8;22448.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 9670.
  ) 
 Here is how much of TeX's memory you used:
  15195 strings out of 482426
- 252324 string characters out of 5947095
- 490122 words of memory out of 5000000
- 28918 multiletter control sequences out of 15000+600000
+ 252190 string characters out of 5947095
+ 489899 words of memory out of 5000000
+ 28916 multiletter control sequences out of 15000+600000
  620648 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  34i,9n,37p,6064b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2963,10 +2974,10 @@ ist/fonts/type1/public/lm/lmro10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dis
 t/fonts/type1/public/lm/lmtk10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dist/
 fonts/type1/public/lm/lmtt10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dist/fo
 nts/type1/public/lm/lmtti10.pfb>
-Output written on HandsOnDataViz.pdf (279 pages, 25442157 bytes).
+Output written on HandsOnDataViz.pdf (281 pages, 25443086 bytes).
 PDF statistics:
- 4540 PDF objects out of 5155 (max. 8388607)
- 3874 compressed objects within 39 object streams
- 1585 named destinations out of 1728 (max. 500000)
- 1888 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4542 PDF objects out of 5155 (max. 8388607)
+ 3875 compressed objects within 39 object streams
+ 1586 named destinations out of 1728 (max. 500000)
+ 1880 words of extra memory for PDF output out of 10000 (max. 10000000)
 

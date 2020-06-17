@@ -19,7 +19,7 @@ Later you'll learn how to [create a new GitHub repo and upload code files](creat
 
 This chapter introduces GitHub using its web browser interface, which works best for beginners. Later you'll learn about more advanced tools, such as [GitHub Desktop and Atom Editor to work more efficiently](github-desktop-atom.html) on your personal computer.
 
-Finally, we'll discuss how to [fix common GitHub and code errors](fix-code.html). All of us make mistakes and accidentally "break our code" from time to time, and it's a great way to learn how things work---and what to do when it doesn't work!
+If problems arise, turn to the [Fix Common Code Errors](fix-code.html) section in the appendix. All of us make mistakes and accidentally "break our code" from time to time, and it's a great way to learn how things work---and what to do when it doesn't work!
 
 ## Fork, Edit, and Host a Simple Leaflet Map Template {- #fork-leaflet}
 Now that you understand how [GitHub](http://github.com) code repositories are like a public cookbook of recipes, which anyone can copy and modify, let's get into the kitchen and start baking! In this section, we'll introduce you to a very simple code template that creates an interactive map using [Leaflet](http://leafletjs.com), an open-source code library that's very popular with coders, journalists, businesses, and government agencies. Many people chose Leaflet because the code is freely available to everyone, relatively easy to use, and has an active community of supporters who regularly update it. But unlike drag-and-drop tools that we covered in previous chapters, such as Google My Maps or Tableau Public, Leaflet requires you to write (or copy and paste) several lines of code, which need to be hosted on a web server so that other people can view your map in their web browser. Fortunately, we can do all of these steps in our web browser on GitHub. This means you can do this on any type of computer: Mac, Windows, Chromebook, etc.
@@ -104,7 +104,7 @@ Now let's publish your edited map to the public web to see how it looks in a web
 
 8. In the Settings screen, scroll down to the GitHub Pages area, and use the drop-down menu to change Source from `None` to `Master Branch`, as shown in Figure \@ref(fig:leaflet-github-pages). There is no *commit* or *save* button here, and the change will happen automatically. This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
 
-(ref:leaflet-github-pages) Under GitHub Pages, switch the source from None to Master as shown in this [animated GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages.gif).
+(ref:leaflet-github-pages) Under GitHub Pages, switch the source from None to Master as shown in this [animated GIF](https://handsondataviz.org/images/08-github/leaflet-github-pages.gif).
 
 ```{r leaflet-github-pages, fig.cap="(ref:leaflet-github-pages)"}
 if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-pages.gif", height = "325px") else knitr::include_graphics("images/08-github/leaflet-github-pages.png")
@@ -114,7 +114,7 @@ if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-
 
 9. Scroll back down to the GitHub Pages area to see the web address where your live map has been published online, and right-click it to open in a new browser tab, as shown in Figure \@ref(fig:leaflet-github-pages2).
 
-(ref:leaflet-github-pages2) Under GitHub Pages, double-click your published map link as shown in this [animated GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/leaflet-github-pages2.gif).
+(ref:leaflet-github-pages2) Under GitHub Pages, double-click your published map link as shown in this [animated GIF](https://handsondataviz.org/images/08-github/leaflet-github-pages2.gif).
 
 ```{r leaflet-github-pages2, fig.cap="(ref:leaflet-github-pages2)"}
 if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-pages2.gif", height = "250px") else knitr::include_graphics("images/08-github/leaflet-github-pages2.png")
@@ -183,7 +183,7 @@ L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position 
 .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 ```
 
-14. After making edits, remember to scroll down and press the Commit button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires 30 seconds to process code edits. If you have problems, see the [Fix Common GitHub and Code Errors](fix-code.html) section in this chapter.
+14. After making edits, remember to scroll down and press the Commit button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires 30 seconds to process code edits. If you have problems, see the [Fix Common Code Errors](fix-code.html) section in the appendix.
 
 Congratulations! If this is the first time that you've edited computer code and hosted it online, you can now call yourself a "coder". The process is similar to following and modifying a cookbook recipe, just like you also can call yourself a "chef" after baking your first batch of brownies! Although no one is likely to hire you as a full-time paid coder (or chef) at this early stage, you now understand several of the basic skills needed to copy, edit, and host code online, and you're ready to dive into the more advanced versions, such as [Chart.js code templates in chapter 9](chartjs.html) and [Leaflet map code templates in chapter 10](leaflet.html).
 
@@ -377,7 +377,7 @@ Now let's transfer your edits from your local computer to your GitHub web accoun
 
 11. Go to GitHub Desktop, confirm that your Current Repo is `leaflet-map-simple`, and you will see your code edits summarized on the screen. In this two-step process, first click the blue "Commit to Master" button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue "Push origin" button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure \@ref(fig:desktop-commit-push).
 
-(ref:desktop-commit-push) In this two-step process, click "Commit to Master," then click "Push origin" to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://github.com/HandsOnDataViz/book/blob/master/images/08-github/desktop-commit-push.gif).
+(ref:desktop-commit-push) In this two-step process, click "Commit to Master," then click "Push origin" to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://handsondataviz.org/images/08-github/desktop-commit-push.gif).
 
 ```{r desktop-commit-push, fig.cap="(ref:desktop-commit-push)"}
 if(knitr::is_html_output()) knitr::include_url("images/08-github/desktop-commit-push.gif") else knitr::include_graphics("images/08-github/desktop-commit-push.png")
@@ -399,136 +399,4 @@ Although GitHub does not operate like Google Documents, which displays live edit
 
 TODO: At this writing, GitHub is considering changing the default branch from "master" to "main". Stay tuned
 
-Overall, you'll find that GitHub Desktop and Atom Editor makes it much easier to work with the [Chart.js code templates in Chapter 9](chartjs.hmtl) and the [Leaflet map code templates in Chapter 10](leaflet.html). The next section offers advice on how to fix common GitHub and coding errors that you might encounter.
-
-## Fix Common GitHub and Code Errors {- #fix-code}
-Creating your data visualizations through code templates hosted on GitHub has multiple advantages over drag-and-drop tools. Coding gives you more power to customize their appearance and interactive features, and to control where your data and products reside online. But there's also a trade-off. Code can "break" and leave you staring at a blank screen. Sometimes problems happens through no fault of your own, such as when a "code dependency" to an online background map or code library is unexpectedly interrupted. But more often it seems that problems arise because we make simple mistakes that break our own code. Whatever the cause, one big drawback of working with code is that you're also responsible for fixing it.
-
-We designed this section as a guide to help new coders diagnose and solve common errors when working with code templates on GitHub. We understand the feeling you experience when a simple typo---such as a misplaced semicolon (;)---makes your data visualization disappear from the screen. Finding the source of the problem can be very frustrating. But breaking your code---and figuring out how to fix it---also can be a great way to learn, because trial-and-error on a computer often provides immediate feedback that supports the learning process and develops our thinking.
-
-TODO: Start here; Reorganize the logic of subsections below, perhaps in this way
-
-- Problems with iframes (since this chapter appears before code templates)
-- Problems with GitHub forking and hosting (the core of this chapter)
-- Problems with code templates (the latter portion of this chapter and the next two chapters)
-- Problems with Mac computers
-
-
-#### Problems with iframes {-}
-
-##### My iframe does not appear in my web page {-}
-- Go back to the [Embed tutorials in this book](embed.html) to double-check the directions
-- Items listed in your iframe (such as the URL, width, or height) should be enclosed inside straight quotation marks (single or double)
-  - BROKEN iframe (missing quotation marks for width and height)
-  ```
-  <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>
-  ```
-  - FIXED iframe (with correct quotation marks)
-  ```
-  <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
-  ```
-- Use only `https` (the extra 's' means 'secure'), not `http`. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https.
-
-![Screenshot: Replace http with https](images/08-github/http-vs-https.png)
-
-- Use only straight quotes, not curly quotes. Avoid pasting text from a word-processor into GitHub, which can accidentally carry over curly quotes. Typing directly into the GitHub editor will create straight quotes.
-
-![Screenshot: Curly quotes versus straight quotes](images/08-github/curly-vs-straight-quotes.png)
-
-
-
-TODO: Test one way to fix GitHub errors by going into the commits and going back to a previous version of the code. Is this possible in the web version?
-
-#### Safely Delete your GitHub Repo and Start Over {-}
-If you need to delete your GitHub repo and start over, here's a simple way to safely save your work:
-
-- Go to the top-level of your GitHub repository, similar to `https://github.com/USERNAME/REPOSITORY`
-- Click the green "Clone or Download" button, and select Download Zip to receive a compressed folder of your repo contents on your computer.
-- In your GitHub repo, click on Settings (upper-right area) and scroll down to Delete This Repository.
-- To prevent accidental deletions, GitHub requires you to type in the REPOSITORY name.
-- Now you can start over in one of these ways:
-  - If you wish to [Create a Simple Web Page with GitHub Pages](github-pages.html), follow that tutorial again.
-  - OR
-  - Fork another copy of the original GitHub repository to your account. After you create your copy, if you wish to add selected files that you previously downloaded to your computer, follow directions to [Upload Code with GitHub](create-repo) in the second half of this tutorial in this book
-
-
-
-#### Problems with Creating a Simple Web Page with GitHub Pages {-}
-If you followed the [Create a Simple Web Page with GitHub Pages tutorial](github-pages.html), it should have created two web links (or URLs):
-
-- your code repository, in this format: `https://github.com/USERNAME/REPOSITORY`
-- your published web page, in this format: `https://USERNAME.github.io/REPOSITORY`
-
-Be sure to insert your GitHub username, and your GitHub repository name, in the general formats above.
-
-These URLs are NOT case-sensitive, which means that `https://github.com/USERNAME` and `https://gitub.com/username` point to the same location.
-
-##### My simple GitHub web page does not appear {-}
-- Make sure that you are pointing to the correct URL for your published web page, in the format shown above.
-- Be patient. During busy periods on GitHub, it may take up to 1 minute for new content to appear in your browser.
-- **MOVE UP** Do a "hard refresh" to [bypass any saved content in your browser cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
-  - Ctrl + F5 (most Windows-Linux browsers)
-  - Command + Shift + R (Chrome or Firefox for Mac)
-  - Shift + Reload button toolbar (Safari for Mac)
-- Test the link to your published web page in a different browser. If you normally use Chrome, try Firefox.
-- On rare occasions, the GitHub service or GitHub Pages feature may be down. Check <https://status.github.com>.
-
-##### My simple GitHub web page does not display my iframe {-}
-- If you followed the [Create a Simple Web Page with GitHub Pages tutorial](github-pages) and inserted an iframe in the README.md file, it will appear in your published web page, under these conditions:
-  - Ideally, your README.md should be the ONLY file in this GitHub repository
-  - Any other files in your repo (such as index.html, default.html, or index.md) will block the iframe HTML code in your README.md from being published on the web. If you accidentally selected a GitHub Pages Theme, you need to delete any extra files it created: click each file, select trash can to delete it, and commit changes.
-
-![Screenshot: Extra files in GitHub repo will block iframe in your README](images/08-github/extra-files-block-readme-iframe.png)
-
-
-
-#### Problems with Leaflet Maps with Google Sheets template {-}
-
-##### My map does not appear {-}
-1) Confirm that you have completed all of the key steps in the [Leaflet Maps with Google Sheets](leaflet-with-google-sheets) tutorial in this book, especially these:
-  - Sign in to Google and File > Make a Copy of the Google Sheet to your Google Drive.
-  - File > Publish your Google Sheet (Jack often forgets this key step!)
-  - Copy your Google Sheet web address from top of your browser (usually ends with `...XYZ/edit#gid=0`) and paste into your `google-doc-url.js` file in your GitHub repo. Do NOT copy the *Published* web address (which usually ends with `...XYZ/pubhtml`)
-  - When you paste your Google Sheet web address into `google-doc-url.js`, be careful not to erase single-quote marks or semicolon
-  - Go to your live map link, which should follow this format: `https://USERNAME.github.io/REPOSITORY`, refresh the browser, and wait at least 30 seconds.
-
-2) Check your Google Sheet for errors:
-- Do NOT rename column headers (in row 1) of any sheet, because the Leaflet Map code looks for these exact words.
-
-![Screenshot: User accidentally renamed column headers in the Points tab](images/08-github/lmwgs-fix-column-headers.png)
-
-- Do NOT rename row labels (in column A) of any sheet, due to the same reason above.
-
-![Screenshot: Do not rename or delete](images/08-github/lmwgs-do-not-rename-labels.png)
-
-- In your Points tab, DO NOT leave any blank rows
-
-3) Confirm on GitHub Status (https://status.github.com/) that all systems are operational.
-
-4) If you cannot find the problem, go to the top of this page to Safely Delete Your GitHub Repo and Start Over. Also, make a new copy of the Google Sheet template, give it a new name, and copy data from your old sheet using File > Paste Special > Values Only.
-
-#### Problems with Chart.js code templates {-}
-
-##### Chart displays old data {-}
-If you upload new data to your Chart.js code template on GitHub Pages, and it does not appear in your browser after refreshing and waiting up to one minute, then GitHub Pages is probably not the cause of the problem. Instead, some browsers continue to show "old" Chart.js in the web cache. The simplest solution is to File > Quit your browser and re-open the link to your Chart.js
-
-TODO: Our Chart.js templates appear blank (just text, no chart) when viewed in the local browser. But Leaflet maps appear mostly or partially complete. Why is this, and how should we inform readers about this? Discuss with Ilya
-
-#### Problems with Mac Computers {-}
-
-##### No file extensions {-}
-
-Several tools in this book will not work properly if your Mac Finder does not display file extensions. In other words, every file should include a period followed by several letters (such as data.csv and map.geojson). If you do not see these extensions at the end of each file name, then go to Finder > Preferences > Advanced and check the box to turn them on, as show below:
-
-![Screenshot: Checkbox to show filename extensions](images/08-github/mac-finder-filename-extensions.png)
-
-#### Solve Problems with Browser Developer Tools {-}
-Peek inside any website and view the web code under the hood with the browser developer tools.
-
-In Chrome for Mac, go to View > Developer > Developer Tools
-
-![](images/08-github/Chrome-developer-tools.png)
-
-In Firefox for Mac, go to Tools > Web Developer > Inspector
-
-![](images/08-github/Firefox-tools-inspector.png)
+Overall, you'll find that GitHub Desktop and Atom Editor makes it much easier to work with [Chart.js code templates in Chapter 9](chartjs.hmtl) and the [Leaflet map code templates in Chapter 10](leaflet.html).

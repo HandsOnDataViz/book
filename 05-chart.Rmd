@@ -343,7 +343,7 @@ adds credibility to your work.
 
 ### Separated Column and Bar Charts {-}
 
-When you visualize independent categories of data, and you don't want them to appear grouped together, then create a chart with separated columns (or horizontal bars, if you have long data labels). For example, Figure \@ref(fig:bar-separated) is a separated bar chart of calorie counts of fast food items for two restaurant chains, Starbucks and McDonald's. Unlike the grouped column chart above in Figure \@ref(fig:column-grouped), here the bars are separated from each other, because we do not need to make comparisons between sub-groups.
+When you visualize independent categories of data, and you don't want them to appear grouped together, then create a chart with separated columns (or horizontal bars, if you have long data labels). For example, Figure \@ref(fig:bar-separated) is a separated bar chart of calorie counts of fast food items for two restaurant chains, Starbucks and McDonald's. Unlike the grouped column chart in Figure \@ref(fig:column-grouped), here the bars are separated from each other, because we do not need to make comparisons between sub-groups.
 
 (ref:bar-separated) Separated bar chart with data from [Starbucks and McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
 

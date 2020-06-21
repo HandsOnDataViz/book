@@ -111,7 +111,7 @@ is visible without any user interaction.
 Although the vast majority of rules in data visualization are open to interpretation,
 there are some that are hard to bend.
 
-**Bar chart axis must start at zero.**
+**Bar chars must start at zero.**
 Unlike line charts, bar or column charts need to have their value axis start at zero.
 This is to ensure that a bar twice the length of another bar represents twice its value.
 The Figure \@ref(fig:design-principles-start-at-zero) shows a good and a bad example.
@@ -152,6 +152,9 @@ drop it without decreasing readability? This way you won't end up with so-called
 ```{r design-principles-junk, fig.cap="(ref:design-principles-junk)"}
 knitr::include_graphics("images/05-chart/design-principles-junk.png")
 ```
+
+Do not use shadows or thick outlines with bar charts, because the reader might think
+that decorative elements are part of the chart, and thus misread the values that bars represent.
 
 The only justification for using three dimensions is to plot three-dimensional data,
 which has x, y, and z values. And don't let anyone tell you otherwise.
@@ -216,7 +219,7 @@ knitr::include_graphics("images/05-chart/design-principles-decluttered.png")
 
 ## Google Sheets Charts {- #chart-google-sheets}
 
-Google Sheets (https://sheets.google.com) is a well-known spreadsheet program
+[Google Sheets](https://sheets.google.com) is a well-known spreadsheet program
 that allows creating basic charts using intuitive drag-and-drop interface.
 Most people who create charts with Google Sheets export them as static *png* images.
 But in fact these interactive charts can be easily embedded in your website.
@@ -225,16 +228,15 @@ In this section, we will look at creating column and bar charts that are separat
 grouped, and stacked. We will also look at making pie, line, area, and scatter charts,
 and learn to visualize three-dimensional data using bubble charts.
 
-As most easy-to-use tools, Google Sheets has its shortcomings when it comes to
-charting. You might find yourself with too little control over the appearance option.
-Your won't have much control  over your scatterplot tooltips.
-You won't be able to cite or link to source data inside the chart,
-but it won't be possible. You won't be able to annotate to highlight items inside charts.
-But you *will* be able to create good-looking interactive visualizations
-inside your spreadsheets *quickly*.
+As most easy-to-use tools, Google Sheets has its shortcomings.
+You won't be able to control tooltips of scatterplot tooltips,
+or cite or link to source data inside charts.
+You won't be able to annotate or highlight items.
+But you *will* be able to *quickly* make good-looking interactive charts
+*quickly*.
 
-Tip: For an overview of charts and graphs in Google Sheets, visit
-[this help page](https://support.google.com/docs/answer/190718).
+Tip: Visit [Types of charts & graphs in Google Sheets](https://support.google.com/docs/answer/190718)
+for an overview of chart types.
 
 ## Column and Bar Charts with Google Sheets {- #column-bar-google}
 
@@ -438,32 +440,33 @@ Night,37
 
 ## Pie, Line, and Area Charts with Google Sheets {- #pie-line-area-google}
 
-**TODO: after initial review of this section, update all Figures, numbers, links**
-
 #### Pie Chart {-}
 As we mentioned in the Chart Aesthetics section, you need to be careful when using pie charts.
 First, remember to not have too many slices (ideally you should limit slices to 5). They should be arranged
 from largest to smallest and start at 12 o'clock. To separate slices, you can use different slice colors,
 or lines.
 
-Make sure your data adds up to 100%. If you want to show a pie chart with the number of fruit your store had
+Make sure your data adds up to 100%. For example, if you want to show a pie chart with the number of fruit your store had
 sold in a day—21 apples, 5 oranges, and 32 bananas—the sum of all fruit, 58, is your 100%.
 Then a reader can figure out that of all fruits sold, approximately 55% were bananas.
-If you decided to also include some, but not all other items that your store has sold,
-such as pizzas, your pie chart would not make sense.
+This example is illustrated in Figure \@ref(fig:pie).
+If you decided to include *some*, but *not all* other items that your store has sold (for example,
+you include pizzas but exclude ice-cream), your pie chart would not make sense.
 
-<p>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-</p>
+(ref:pie) Pie chart with [fictitious source data](https://docs.google.com/spreadsheets/d/11cn0eysXqXIwhcTKmGuzMDw_RmpDpYLKZN3TeevT-Vg/edit?usp=sharing). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive).
+
+```{r pie, fig.cap="(ref:pie)"}
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive") else knitr::include_graphics("images/05-chart/pie.png")
+```
 
 To make a pie chart with Google Sheets, arrange your data in two columns, *Label* and *Value*.
-Values can be expressed in either percentages or counts.
+Values can be expressed as either percentages or counts.
 For example,
 
 ```
-Apple,21
-Orange,5
-Banana,32
+| Apple  |  21 |
+| Orange |   5 |
+| Banana |  32 |
 ```
 
 Select all cells and go to *Insert > Chart*. Google Sheets is good at guessing chart types,
@@ -479,58 +482,52 @@ In *Customize* tab of the Chart editor, you can also change colors and add borde
 
 #### Line Chart {-}
 The most common use of line charts is to represent values at different points in time,
-in other words to show change over time. The line chart in Figure 5-X shows per-capita
+in other words to show change over time. The line chart in Figure \@ref(fig:line) shows per-capita
 meat availability in the US for the past 110 years. You can see that
 the level of chicken (shown in orange) rises steadily and surpasses beef (red) and pork (blue).
 
-<p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/pubchart?oid=2073830845&amp;format=interactive"></iframe>
-<br>
-<a href="https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit#gid=894957893">View source data from USDA</a>
-</p>
+(ref:line) Line chart showing meat availability per capita in the US, according to the [US Department of Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive).
+
+```{r line, fig.cap="(ref:line)"}
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive") else knitr::include_graphics("images/05-chart/line.png")
+```
 
 The simplest way to organize your data is to use the first column as x-axis labels,
 and each additional column as a new series (which will become its own line).
+For example, the meat data from the line chart in Figure \@ref(fig:line) is 
+structured as shown in Figure \@ref(fig:line-data).
 
-For example, the meat data from Figure 5-X looks like that:
-```
-Year	Beef	Pork	Chicken
-1910	48.5	38.2	11
-1920	40.7	39	9.7
-1930	33.7	41.1	11.1
-1940	37.8	45.1	10
-1950	44.6	43	14.3
-1960	59.1	48.6	19.1
-1970	79.6	48.1	27.4
-1980	72.1	52.1	32.7
-1990	63.9	46.4	42.4
-2000	64.5	47.8	54.2
-2010	56.7	44.3	58
-2017	54	47	64
+(ref:line-data) Data for the line chart shown in Figure \@ref(fig:line).
+
+```{r line-data, out.width=250, fig.cap="(ref:line-data)"}
+knitr::include_graphics("images/05-chart/line-data.png")
 ```
 
-The data is available in a [Google Sheet Line chart template](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/),
-which you can use to make a copy.
+The data is available in the [Google Sheet Line chart template](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/).
+If you wish to use it, just make a copy to your own Google Drive from the File menu.
 
 Select the data, and choose *Insert > Chart*. It is possible Google Sheets will create a line chart right away.
 If not, in Chart editor in tab Setup, select  *Line chart* from the Chart type dropdown list.
 
 #### Stacked Area Chart {-}
-In the previous section, we saw how individual meat availability changed over time.
+The line chart in the previous example made it possible to see how individual meat availability changed over time.
 It was hard, however, to estimate if the overall meat availability went up or down.
 (That is, of course, if we assume that beef, pork, and chicken are the only meats we eat).
 
 We can see how availability of individual meat types, *and* the total meat availability over time
-using a stacked area chart, like shown in Figure 5-X. Here, we can still see that chicken
-has been on the rise since 1970s. We can also see that the total availability has not changed much
-since then.
+using a stacked area chart, like shown in Figure \@ref(fig:stacked-area). Here, we can still see that chicken
+has been on the rise since 1970s. We can also see that the total availability was on the
+rise between 1910 and 1970 with a small dip around 1930s, and it didn't change much between 
+1970 and 2017.
 
-The data is available in a [Google Sheet Stacked area chart template](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing),
-which you can use to make a copy.
+(ref:stacked-area) In addition to individual meat availability, stacked area charts show the overall availability. See data by [US Department of Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive).
 
-<p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive"></iframe>
-</p>
+```{r stacked-area, fig.cap="(ref:stacked-area)"}
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive") else knitr::include_graphics("images/05-chart/stacked-area.png")
+```
+
+The data for the stacked area chart is available from the [Google Sheet Stacked area chart template](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing),
+which you copy to your own Drive.
 
 Set up the data exactly as you would with a line chart (first column is labels for the x-axis,
 second and following columns are series, or lines). Select it, and choose *Insert > Chart*.
@@ -549,32 +546,34 @@ with [Google Sheets](https://sheets.google.com).
 Scatter charts, also known as scatterplots, use x-y coordinates to show the relationship between
 two variables.
 
-This scatter chart in Figure 5-X uses World Bank data to reveal a downward slope:
+The scatter chart in Figure \@ref(fig:scatter) uses World Bank data to reveal a downward slope:
 nations with lower fertility (births per woman)
 tend to have higher life expectancy. You can also phrase is the other way,
 nations with higher life expectancy at birth have lower fertility.
-Remember that a data correlation does not
-necessarily show causation, so you cannot use this chart to "prove" that fewer
+Remember that correlation does not
+mean causation, so you cannot use this chart to argue that fewer
 births result in longer lives, or that longer-living females give birth to fewer children.
 
-If this is an e-book, you should be able to hover over points to view data details.
+(ref:scatter) This scatterplot shows that nations with lower fertility tend to have higher life expectancy. [See data](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit?usp=sharing) by World Bank. Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&format=interactive).
 
-<p>
-<iframe width="626" height="387" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/pubchart?oid=386475448&amp;format=interactive"></iframe>
-<br>
-<a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit#gid=562477420">View source data from World Bank</a>
-</p>
+```{r scatter, fig.cap="(ref:scatter)"}
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;format=interactive") else knitr::include_graphics("images/05-chart/scatter.png")
+```
 
-The data used in Figure 5-X is available from our
-[Google Sheets Scatter chart template](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/).
+The data used in Figure \@ref(fig:scatter) is available from our
+[Google Sheets Scatter chart template](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit?usp=sharing).
 You can copy it to your own Google Drive so that you're able to edit it (go to *File > Make a copy*).
 
-Figure 5-X shows the first few rows of the dataset.
+Figure \@ref(fig:scatter-data) shows the first few rows of the dataset.
 Notice that the data is structured in three columns. The first column, *Life Expectancy*,
 is plotted on the x-axis (horizontal). The second column, *Fertility*, is plotted on the y-axis (vertical).
 The third column contains *Country* labels.
 
-![Scatter chart table data](images/05-chart/scatter-chart-data.png)
+(ref:scatter-data) Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels.
+
+```{r scatter-data, out.width=350, fig.cap="(ref:scatter-data)"}
+knitr::include_graphics("images/05-chart/scatter-data.png")
+```
 
 To build a scatter chart, select the **two** columns that contain your numeric data,
 and go to *Insert > Chart*. Google Sheets will likely to guess the chart type and you will see a scatterplot,
@@ -586,14 +585,19 @@ You will see a lot of scatter charts out there that do not label data points, an
 Some scatter plots are designed to show whether or not there is a correlation, and knowing
 which points are which is not important. But sometimes labels are important for your storytelling.
 
-In Chart editor, click on the kebab menu for your Series dataset (Fertility), and then *Add labels*.
+In Chart editor, click on the kebab menu for your Series dataset (Fertility), and then *Add labels*
+(see Figure \@ref(fig:scatter-labels)).
 The labels added by default will be the x-values of points. To make Google Sheets read
 labels from the third column (*Country*), click the name of your label dataset (Life Expectancy),
 then *Select a data range* button in the upper-right corner of the dropdown,
 and choose cells in the relevant columns. Make sure to include the header (first row) if
 all other data ranges include it.
 
-![Display labels](images/05-chart/scatter-chart-custom-data-labels.png)
+(ref:scatter-labels) In the chart's Setup window, choose *Add labels* to the Series.
+
+```{r scatter-labels, out.width=350, fig.cap="(ref:scatter-labels)"}
+knitr::include_graphics("images/05-chart/scatter-labels.png")
+```
 
 Tip: You may notice that some data points are too close to edges, and their labels are cut off.
 To fix this, go to Customize tab of the Chart editor. There, you can set minimum and maximum values
@@ -607,18 +611,18 @@ with both data values displayed in a tooltip. We will use the same
 World Bank dataset as we did for the scatter plot.
 
 The bubble chart (more about the *proper* use of bubble charts in the next section)
-in Figure 5-X shows the same data as our scatterplot on life expectancy vs fertility.
+in Figure \@ref(fig:bubble-3) shows the same data as our scatterplot on life expectancy vs fertility.
 
 If this is an e-book, hover your cursor over each bubble (dot) to reveal a tooltip
 with the country name and the two data points.
 
-<p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive"></iframe>
-<br>
-<a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit#gid=1602534273">View source data from World Bank</a>
-</p>
+(ref:bubble-3) This bubble chart is essentially a scatter chart, because no other dimensions (colors, sizes) are used. [See data](https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit?usp=sharing) by World Bank. Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/u/3/d/e/2PACX-1vQtMosshgyX6YoPpHo9QhSPk-ckOw1_yRryTF_vYJooBeWF13RaPv2IrGffcpaiqHPwfKFJAWY0HwA3/pubchart?oid=2105121864&format=interactive).
 
-The data for this example is available in [Google Sheets Bubble chart with 3 columns template](https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/)
+```{r bubble-3, fig.cap="(ref:bubble-3)"}
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive") else knitr::include_graphics("images/05-chart/bubble-3.png")
+```
+
+The data for this example is available in [Google Sheets Bubble chart with 3 columns template](https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/).
 
 Notice that we moved the labels column (*Country*) to be the first one in the dataset,
 but the order shouldn't matter in this case. So our first column is the label for each bubble,
@@ -639,27 +643,24 @@ one or two extra series in addition to your x- and y-coordinates. One of those
 can be expressed through bubble size (bigger bubbles represent larger values).
 Another one can make use of color (best for categorical data).
 
-The bubble chart in Figure 5-X shows fertility and life expectancy for a subset of the nations,
+The bubble chart in Figure \@ref(fig:bubble-5) shows fertility and life expectancy for a subset of the nations,
 with population (shown by bubble size) and region (shown by bubble color).
 Float your cursor over bubbles to view data details if this is an e-book.
 
-<p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/pubchart?oid=200651442&amp;format=interactive"></iframe>
-<br>
-<a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/edit#gid=1182154897">View data from World Bank</a>
-</p>
+(ref:bubble-5) This bubble chart shows fertility and life expectancy for several countries, including their population (shown by bubble size) and region (shown by bubble color). [See data](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/edit?usp=sharing) by World Bank. Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&format=interactive).
+
+```{r bubble-5, fig.cap="(ref:bubble-5)"}
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive") else knitr::include_graphics("images/05-chart/bubble-5.png")
+```
 
 The five-column dataset is available in this [Google Sheets Bubble chart with 5 columns template](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/).
 The columns are arranged in the following order: country label, x-axis value,
 y-axis value, color, and bubble size.
 
-```
-Country        | Life expectancy | Fertility | Region        | Population
-United States	 |            78.5 |	    1.70 | North America |	326687501
-United Kingdom |	          81.4 |	    1.70 | Europe        |   66460344
-...
-Nigeria	       |            54.3 |	    5.40 | Africa        |  195874740
-South Africa   |            63.9 |      2.40 | Africa        |	 57779622
+(ref:bubble-5-data) Bubble chart data. Bubble size represents population, color – region.
+
+```{r bubble-5-data, fig.cap="(ref:bubble-5-data)"}
+knitr::include_graphics("images/05-chart/bubble-5-data.png")
 ```
 
 Select all data and go to *Insert > Chart*, and choose Bubble as the Chart type.
@@ -695,23 +696,23 @@ against each other, on x- and y-axis, revealing possible correlations.
 With Tableau Public, you can create an interactive scatter chart,
 letting users hover over points to view specific details.
 
-Figure \@ref(fig:tableau-scatter-demo) illustrates a
+Figure \@ref(fig:tableau-xy-demo) illustrates a
 strong relationship between Connecticut school district income and
 test scores.
 
-(ref:tableau-scatter-demo) Household income vs test scores in Connecticut school districts. Made with Tableau Public.
+(ref:tableau-xy-demo) Household income vs test scores in Connecticut school districts. Made with Tableau Public.
 
-```{r tableau-scatter-demo, fig.cap="(ref:tableau-scatter-demo)"}
+```{r tableau-xy-demo, fig.cap="(ref:tableau-xy-demo)"}
 if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-scatter-demo.png")
 ```
 
 #### Install Tableau and Get Data {-}
 
-You can download Tableau Public for Windows or Mac from Tableau's official
-website (https://public.tableau.com). You will need to provide your email address.
+You can download Tableau Public for Windows or Mac from Tableau's [official
+website](https://public.tableau.com). You will need to provide your email address.
 
 If you wish to use the dataset from the scatter plot in Figure \@ref(fig:tableau-scatter-demo),
-you can [download the Excel file here](data/ct-districts-income-grades-2009-13.xlsx).
+you can [download the sample Excel file](data/ct-districts-income-grades-2009-13.xlsx).
 This data file consists of three columns: district, median household income, and grade levels
 (above/below national average for 6th grade Math and English test scores).
 The Notes tab explains how this data is based on the work of Sean Reardon et al.
@@ -747,10 +748,11 @@ where to drag items from the Data pane (left) into the main worksheet.
 with *Abc* tables. **Measures** are quantitative information about the dimensions,
 shown in green with *#* icons.
 
-4. Drag the *Grade Levels* measure into the **Rows** field above the charting area (which
-for now is just empty space).
+4. Drag the *Grade Levels* measure into the **Rows** field above the charting area, which
+for now is just empty space. You can consult Figure \@ref(fig:tableau-xy-dragging) for this
+and two following steps.
 Tableau will apply a summation function to it, and you will see the `SUM(Grade Levels)` appearing
-in the Rows row, and a blue bar in the charting area. For now it makes little sense, so let's
+in the Rows row, and a blue bar in the charting area. It makes little sense so far, so let's
 plot another measure (variable).
 
 5. Drag *Median Household Income* to the **Columns** field (just above the Rows field).
@@ -762,6 +764,12 @@ in the upper-right corner. That is because the data for both is aggregated (reme
 drag *District* dimention into the lower portion of the Marks area. You will now see
 a real scatter chart in the charting area. If you hover over points, you will see all three
 values associated with it.
+
+(ref:tableau-xy-dragging) Drag measures and dimensions to the right places in Tableau.
+
+```{r tableau-xy-dragging, fig.cap="(ref:tableau-xy-dragging)"}
+knitr::include_graphics("images/05-chart/tableau-xy-dragging.png")
+```
 
 #### Add Title and Caption, and Publish{-}
 

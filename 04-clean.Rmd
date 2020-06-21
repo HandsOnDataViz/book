@@ -55,19 +55,20 @@ Stamford
 ```
 
 Here's one quick solution: In any spreadsheet tool, use the Find and Replace command to remove unwanted characters.
-You can download this [find-replace-town-geonames.csv](data/find-replace-town-geonames.csv) file,
+You can download our [sample file](data/find-replace-town-geonames.csv),
 which contains 169 Connecticut towns and their population, for the exercise.
 
-1. Select the column you want to modify by clicking on the column header.
-1. From *Edit* menu, choose *Find and replace* item. You will see the window like is shown in Figure \@ref(fig:sheets-find-replace).
-1. In the *Find* field, type ` town`, without quotation marks and leaving a space before the word. If you don't leave the space,
+1. Select the column you want to modify by clicking on the column header. If you don't,
+you will be searching and replacing in the entire spreadsheet.
+2. From *Edit* menu, choose *Find and replace* item. You will see the window like is shown in Figure \@ref(fig:sheets-find-replace).
+3. In the *Find* field, type ` town`, without quotation marks and leaving a space before the word. If you don't leave the space,
 you will accidentally remove *town* from *Newtown*, and you will end up with trailing spaces which can cause troubles in the future.
-1. Leave the *Replace with* field blank.
-1. If you selected the column correctly in step 1, you will see that *Search*
-value will be set to the *Specific range* for to that column. Otherwise you will be searching and replacing in the entire spreadsheet.
-1. You have the option to *match case*. If checked, `town` and `Town` and `tOwN` will be treated differently.
+4. Leave the *Replace with* field blank.
+5. *Search* field should be set to the range you selected in step 1, or *All sheets* if you didn't
+select anything.
+6. You have the option to *match case*. If checked, `town` and `Town` and `tOwN` will be treated differently.
 For our purpose, you can leave *match case* unchecked.
-1. Press the *Replace all* button. Since this sample file contains 169 towns, the window
+7. Press the *Replace all* button. Since this sample file contains 169 towns, the window
 will state that 169 instances of "town" have been replaced.
 
 (ref:sheets-find-replace) Find and Replace window in Google Sheets.
@@ -76,7 +77,7 @@ will state that 169 instances of "town" have been replaced.
 knitr::include_graphics("images/04-clean/sheets-find-replace.png")
 ```
 
-#### Splitting data into two or more columns {-}
+#### Split data into two or more columns {-}
 
 Sometimes multiple pieces of data appear in a single cell,
 such as names (`John Doe`), coordinate pairs (`40.12,-72.12`),
@@ -86,11 +87,15 @@ column (with `John Doe` in it) becomes *FirstName* (`John`) and *LastName* (`Doe
 coordinates become *Latitude* and *Longitude* columns, and your *FullAddress* column becomes
 4 columns, *Street*, *City*, *State*, and *Zip* (postcode).
 
-Let's begin with a simple example of coordinate pairs. You can download
-a [sample file here](data/split-coordinate-pairs.csv).
+##### Example 1 {-}
 
-1. Select the data you wish to split, either the full column or just several rows. Note that
-you can only split data from one column at a time.
+Let's begin with a simple example of coordinate pairs. You can use our
+[sample file](data/split-coordinate-pairs.csv),
+which is a collection of latitude-longitude pairs separated by a comma,
+with each pair on a new line.
+
+1. Select the data you wish to split, either the full column or just several rows.
+Note that you can only split data from one column at a time.
 1. Make sure there is no data in the column to the right of the one you're splitting, because
 all data there will be written over.
 1. Go to *Data* and select *Split text to columns*.
@@ -98,7 +103,7 @@ all data there will be written over.
 are now split with the comma, and the Separator is set to *Detect automatically* in the dropdown,
 like in Figure \@ref(fig:sheets-split).
 You can manually change it to a comma (`,`), a semicolon (`;`), a period (`.`), a space character,
-or any other custom character (or even a sequence of characters — more about that in the next example).
+or any other custom character (or even a sequence of characters — more about that in Example 2 of this section).
 1. You can rename columns into *Longitude* (first number) and *Latitude* (second number).
 
 (ref:sheets-split) Google Sheets provides a dropdown to change a separator.
@@ -107,7 +112,11 @@ or any other custom character (or even a sequence of characters — more about t
 knitr::include_graphics("images/04-clean/sheets-split.png")
 ```
 
-Now, let's look at a slightly more complicated example. Imagine your dataset is structured as follows:
+##### Example 2 {-}
+
+Now, let's look at a slightly more complicated example.
+Imagine your dataset is structured as follows:
+
 ```
 | Location                           |
 | 300 Summit St, Hartford CT--06106  |
@@ -115,9 +124,11 @@ Now, let's look at a slightly more complicated example. Imagine your dataset is 
 | 37 Alden St, Hartford CT--06114    |
 ``` 
 
-You want to split it into four cells: street address (300 Summit St), city (Hartford), state (CT), and zipcode (06106).
+Each cell contains a full address, but you want to split it into four cells:
+street address (300 Summit St), city (Hartford), state (CT), and zipcode (06106).
 Notice that the separator between the street and the rest of the address is a comma,
-a separator between the city and state is a space, and there is two dash lines between state and zipcode.
+a separator between the city and state is a space, and there are two dash
+lines between state and zipcode.
 
 1. Start splitting left to right. So your first separator will be a comma.
 Select your column (or one or more cells within that column), and go to *Data* > *Split text to columns*.
@@ -131,19 +142,21 @@ and hit Enter. You should now have four columns.
 
 Tip: Google Sheets will treat zipcodes as numbers and will delete leading zeros (so 06106 will become 6106).
 To fix that, select the column, and go to *Format > Number > Plain text*. Now you can manually re-add zeros.
-If your dataset is large, consider concatenating 0s using the formula introduced in the next section.
+If your dataset is large, consider concatenating 0s using the formula introduced in [Combine separate columns into one](#combine-separate-columns-into-one).
 
 #### Combine separate columns into one {-}
 
 Now, let's see how to perform the reverse action.
-Imagine you receive address data in separate columns, like this:
+Imagine you receive address data in separate columns, formatted like this:
 
 ```
 | Street        | City        | State      | Zip        |
 | 300 Summit St | Hartford    | CT         | 06106      |
 ```
 
-But, let's say your mapping tool requires you to combine all of this terms into one location column, like that:
+The data comes is four columns: street address, city, state, and zipcode.
+Let's say your mapping tool requires you to combine all of this terms into
+one location column, like that:
 
 ```
 | Location                            | 
@@ -151,7 +164,10 @@ But, let's say your mapping tool requires you to combine all of this terms into 
 ```
 
 You can write a simple formula to combine (or **concatenate**) terms
-using ampersands (`&`) as cells values connectors, and quoted spaces (`" "`) as term separators.
+using ampersands (`&`) as cells values connectors,
+and quoted spaces (`" "`), or spaces with commas (`", "`),
+or a dash with spaces on both sides (`" - "`), or anything
+else as term separators.
 
 For example, if a spreadsheet contained four columns,
 *Address, City, State, and Zip* (columns A-D, see Figure \@ref(fig:sheets-concat)),
@@ -162,12 +178,18 @@ then in column E insert a new header named *Location* and a formula in this form
 =A2 & " " & B2 & " " & C2 & " " & D2
 ```
 
-(ref:sheets-concat) Use ampersands to concatenate cell values, with or without spaces around ampersands.
+(ref:sheets-concat) Use ampersands to concatenate cell values,
+with or without spaces around ampersands.
 
 ```{r sheets-concat, fig.cap="(ref:sheets-concat)"}
 knitr::include_graphics("images/04-clean/sheets-concat.png")
 ```
 
+You are now able to split data to columns using custom separators, and 
+concatenate values from different cells into one. But what if your table is trapped
+inside a PDF? In the next section, we will introduce Tabula and show you how to
+convert tables from PDF documents into tables that you can analyze in Google Sheets,
+Microsoft Excel, or similar packages.
 
 ## Extract Tables from PDFs with Tabula {- #tabula}
 
@@ -185,14 +207,15 @@ to create a text-based PDF.
 
 ### Set Up Tabula {-}
 
-You can get the newest version of Tabula from the website (https://tabula.technology/).
+You can get the newest version of Tabula [from the website](https://tabula.technology/).
 You can use download buttons on the left-hand side, or scroll down to **Download & Install Tabula**
 section to download a copy for your platform.
 
 Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive,
 and double-click the icon. If prompted with a security message (such as
-*Tabula is an app downloaded from the internet. Are you sure you want to open it?*),
-follow the instruction to proceed (on a Mac, click *Open*).
+"Tabula is an app downloaded from the internet. Are you sure you want to open it?"),
+follow the instruction to proceed (on a Mac, click *Open*; you might have to go to
+System Preferences > Security & Privacy, and resolve the issue there).
 
 Your default system browser should open, like shown in Figure \@ref(fig:tabula-welcome).
 The URL will be something like `http://127.0.0.1:8080/`, meaning Tabula is running on your local machine.
@@ -208,10 +231,10 @@ knitr::include_graphics("images/04-clean/tabula-welcome.png")
 ```
 
 ### Load a PDF and Autodetect Tables {-}
-
-For the demonstration, we will use an official PDF document with Covid-19 cases and deaths
-in Connecticut as of May 31, 2020. Such PDFs are published by Connecticut Department of Public Health
-daily during the pandemic. If you want to use this file, you can download it [from here](data/ct-dph-covid-2020-05-31.pdf).
+Since the beginning of the Covid-19 pandemic, the Department of Public Health in Connecticut
+has been issuing daily PDFs with case and death count by town.
+For the demonstration, we will use [one of those PDFs](data/ct-dph-covid-2020-05-31.pdf)
+from May 31, 2020.
 
 1. Select the PDF you want to extract data from by clicking the blue *Browse...* button.
 1. Click *Import*. Tabula will begin analyzing the file.
@@ -228,50 +251,58 @@ knitr::include_graphics("images/04-clean/tabula-autodetect.png")
 ### Manually Adjust Selections and Export {-}
 
 1. Click *Preview & Export Extracted Data* green button to see how Tabula thinks the data should be exported.
-1. If it doesn't look right, try switching between *Stream* and *Lattice* extraction methods in the left-hand-side bar.
-1. If the tables still don't look right, or you don't need all tables that Tabula detected, hit *Revise selection* button.
+1. If the preview tables don't contain the data you want, try switching between *Stream* and *Lattice* extraction methods in the left-hand-side bar.
+1. If the tables still don't look right, or you with to remove some tables that Tabula auto-detected, hit *Revise selection* button.
 That will bring you back to the PDF viewer.
 1. Now you can *Clear All Selections* and manually select
 tables of interest. Use drag-and-drop movements to select tables of interest (or parts of tables).
-1. If you want to "copy" selection to some or all pages, you can use Repeat this Selection dropdown, which appears
-in the lower-right corner of your selections, to propagate changes. This is extremely useful when PDFs consist of
-many pages in the same format.
+1. If you want to "copy" selection to some or all pages, you can use *Repeat this Selection* dropdown, which appears
+in the lower-right corner of your selections, to propagate changes. This is extremely useful if your PDF consists of
+many similarly-formatted pages.
 1. Once you are happy with the result, you can export it. If you have only one table, we recommend using CSV as export format.
 If you have more than one table, consider switching export format to *zip of CSVs*.
 This way each table will be saved as an individual file, rather than all tables inside one CSV file.
 
 Once you exported your data, you can find it in a Downloads folder on your computer (or wherever you chose to save it).
 It is ready to be opened in Google Sheets or Microsoft Excel, analyzed, and visualized!
+In the following section, we are going to look how to clean up messy datasets with OpenRefine.
 
 
 ## Clean Data with OpenRefine {- #open-refine}
 
-Consider a dataset that looks like that:
+Consider a dataset that looks like the one in Figure \@ref(fig:openrefine-dataset).
+Can you spot any problems with it?
 
+(ref:openrefine-dataset) First 20 rows of the sample dataset. Can you spot any problems with it?
+
+```{r openrefine-dataset, fig.cap="(ref:openrefine-dataset)"}
+knitr::include_graphics("images/04-clean/openrefine-dataset.png")
 ```
-Year,Country,FundingAgency,FundingAmount
-2000,"Korea, N",Dept of Agriculture,"$32 242 376"
-2000,"Korea–North",Dept of Agriculture,"$86,151,301"
-2000,"Korea North",department of State,"166855"
-2000,"SouthKorea",U.S. Agency for International Development,"282,805a"
-2000,"south Korea",Trade and Development Agency,"  735718"
-2001,"North Korea",US Agency for International Development,"345,399"
-2001,"N Korea",Department of Argic,"  117715223"
-```
-Can you spot any problems with it? Notice how the funding amounts (last column)
-are not standardized: there are commas as thousands separators, some have spaces,
-and some start with a dollar character.
+
+Notice how the funding amounts (last column)
+are not standardized. Some amounts have commas as thousands separators,
+some have spaces, and some start with a dollar character.
 Notice also how the Country column includes various spellings of North and South Korea.
-Looks like a nightmare to analyze—until you learn to use OpenRefine,
-a powerful and free tool to clean up messy data.
+Datasets like this can be an absolute nightmare to analyze. Luckily,
+OpenRefine provides powerful tools to clean up and standardize such data.
 
-This data exerpt is from [US Overseas Loans and Grants (Greenbook)dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook), which shows US assistance to South Korea and North Korea between 2000 and 2018. We added deliberate misspellings and formatting issues for demonstration purposes
-(although we did not alter values). This subset can be [downloaded here](data/us-foreignaid-greenbook-koreas.csv). This dataset has four columns: year (between 2000 and 2018, inclusive), country (North or South Korea), a US funding agency, and funding amount (in 2018 US dollars).
+Note: This data exerpt is from [US Overseas Loans and Grants (Greenbook) dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook),
+which shows US economic and military assistance to various countries.
+We chose to only include assistance to South Korea and North Korea for the years between 2000 and 2018.
+We added deliberate misspellings and formatting issues for demonstration purposes
+(although we did not alter values). 
+
+Download this [sample dataset](data/us-foreignaid-greenbook-koreas.csv)
+or use your own file with messy data.
+Inspect the file in any spreadsheet software. You can see that the dataset has four columns:
+year (between 2000 and 2018, inclusive), country (North or South Korea),
+a US funding agency, and funding amount (in 2018 US dollars).
+Let's now use OpenRefine to clean it up.
 
 ### Set up OpenRefine {-}
 
-You can download a copy of OpenRefine for Linux, Mac, or Windows from the official
-download page (https://openrefine.org/download.html). Just like Tabula, it runs in your browser and no
+You can download a copy of OpenRefine for Linux, Mac, or Windows from the [official
+download page](https://openrefine.org/download.html). Just like Tabula, it runs in your browser and no
 data leaves your local machine, which is great for confidentiality.
 
 If you work on a **Mac**, the downloaded file will be a .dmg file. You will likely encounter
@@ -293,15 +324,18 @@ knitr::include_graphics("images/04-clean/openrefine-welcome.png")
 ### Load Data and Start a New Project {-}
 
 To begin cleaning up your messy dataset, you should load it into a new project.
-OpenRefine lets you upload a dataset from your local machine (we will be doing exactly that),
+OpenRefine lets you upload a dataset from your local machine,
 or a remote URL on the web (including a Google Spreadsheet), or copy/paste data into a text field.
 OpenRefine is able to extract data directly from SQL databases, but this is beyond the scope of this book.
+We assume that you downloaded the sample dataset we provided (or you are using your own file),
+so let's load it from your computer.
 
 1. Under *Get data from: This computer*, click *Browse...* and select the file. Click Next.
 1. Before you can start cleaning up data, OpenRefine allows you to make sure data is **parsed** properly.
-Put simply, that data is split into appropriate columns. Make sure your table looks OK in the preview,
+In our case, parsing means the way the data is split into columns.
+Make sure OpenRefine assigned values to the right columns,
 or change setting in *Parse data as* block at the bottom of the page until it starts looking meaningful,
-like shown in Figure \@(fig:openrefine-parse).
+like shown in Figure \@ref(fig:openrefine-parse).
 1. Hit *Create Project* in the upper-right corner.
 
 (ref:openrefine-parse) OpenRefine parsing options.
@@ -310,14 +344,19 @@ like shown in Figure \@(fig:openrefine-parse).
 knitr::include_graphics("images/04-clean/openrefine-parse.png")
 ```
 
+Now when you've successfully read the data into a new project, let's start
+the fun part: converting text into numbers, removing unnecessary characters,
+and fixing the spellings for North and South Koreas.
+
 ### Convert Dollar Amounts from Text to Numbers {-}
 
-Once your project is created, you will see the first 10 rows of the dataset. You can change it to 5, 10, 25, or 50
-by clicking the appropriate number in the header.
+Once your project is created, you will see the first 10 rows of the dataset.
+You can change it to 5, 10, 25, or 50
+by clicking the appropriate number in the header
 
 Each column header has its own menu (callable by clicking the arrow-down button).
 Left-aligned numbers in a column are likely represented as text
-(as is the case with FundingAmount column), and they need to be transformed
+(as is the case with FundingAmount column in our example), and they need to be transformed
 into numeric format.
 
 1. To transform text into numbers, open the column menu, and go to *Edit cells* > *Common transforms* > *To number*.
@@ -328,10 +367,11 @@ That is because dollar sign (`$`) and commas (`,`) confuse OpenRefine and preven
 disappear in the preview window. When you confirm your formula works, click *OK*.
 1. Now, repeat the previous step, but instead of a comma, remove the `$` character.
 (Your expression will become `value.replace('$', '')`).
-1. Perform *Edit cells* > *Common transforms* > *To number* again. You will see that all but three
+1. Perform Step 1 again.
+You will see that all but three
 cells turned green. That is because we have spaces and an `a` character at the end of one number.
 Fix those manually by hovering over cells, and clicking the `edit` button
-(make sure to change *Data type* to *number*, and hit *Apply*,
+(in the new popup window, make sure to change *Data type* to *number*, and hit *Apply*,
 like in Figure \@ref(fig:openrefine-manual-edit)).
 
 (ref:openrefine-manual-edit) Manually remove spaces and extra characters, and change data type to number.
@@ -340,6 +380,10 @@ like in Figure \@ref(fig:openrefine-manual-edit)).
 knitr::include_graphics("images/04-clean/openrefine-manual-edit.png")
 ```
 
+At this point, all funding amounts should be clean numbers, right-aligned and colored in green.
+We're ready to move on to the Country column and fix different spellings of Koreas.
+
+
 ### Cluster Similar Spellings {-}
 
 When you combine different data sources, or process survey data where respondents
@@ -347,10 +391,11 @@ wrote down their answers as opposed to selecting them from a dropdown menu, you 
 with multiple spellings of the same word (town name, education level – you name it!).
 One of the most powerful features of OpenRefine is the ability to cluster similar responses.
 
-Take a look at the *Country* column and all variations of North and South Korea spellings.
+If you use our original sample file, take a look at the *Country* column and
+all variations of North and South Korea spellings.
 From *Country* column's dropdown menu, go to *Facet* > *Text facet*. This will open up a window
 in the left-hand side with all spellings (and counts) of column values. 26 choices for a column
-that should have just two, North Korea and South Korea!
+that should have just two distinct values, North Korea and South Korea!
 
 1. To begin standardizing spellings, click on the arrow-down button of Country column header,
 and choose *Edit cells* > *Cluster and edit*. You will see a window like the one shown in Figure
@@ -378,3 +423,18 @@ knitr::include_graphics("images/04-clean/openrefine-cluster.png")
 Once you are done cleaning up and clustering data, save the clean dataset
 by clicking *Export* button in the upper-right corner of OpenRefine window.
 You can choose your format (we recommend CSV, or comma-separated value).
+Now you have a clean dataset that is ready to be processed and visualized.
+
+### Summary {-}
+
+In this chapter, we looked at cleaning up tables in Google Sheets,
+liberating tabular data trapped in PDFs
+using Tabula, and using OpenRefine to clean up very messy datasets.
+You will often find yourself using several of these tools on the same dataset
+before it becomes good enough for your analysis. We encourage you to
+learn more formulas in Google Sheets, and explore extra functionality of OpenRefine
+in your spare time.
+
+You now know how to clean up your data, so let's proceed to visualizing it.
+In the following chapter, we will introduce you to a range of free data visualization
+tools that you can use to build interactive charts and embed them in your website.

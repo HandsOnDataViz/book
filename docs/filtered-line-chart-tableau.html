@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-17" />
+<meta name="date" content="2020-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,8 @@
   
   
 <link rel="prev" href="scatter-chart-tableau.html"/>
-<link rel="next" href="map.html"/>
-<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<link rel="next" href="summary-1.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -189,10 +190,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -217,6 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -303,7 +306,7 @@ In other words, an interactive visualization can be made into a data-exploration
 that won’t overwhelm the viewer at first sight, but will allow the viewer
 to “dig” and find specific data points and patterns.</p>
 <p>In this tutorial, we will build an interactive filtered line chart with Tableau Public
-like is shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-demo">5.28</a>.
+like is shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-demo">5.39</a>.
 The filter will be a collection of checkboxes that allow to add/remove lines
 from the chart. Viewers can hover over each line to identify the school
 name and data attached to it.</p>
@@ -314,10 +317,10 @@ name and data attached to it.</p>
 <iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 5.28: Internet Access by Country, 1995–2018.
+Figure 5.39: Internet Access by Country, 1995–2018.
 </p>
 </div>
-<p>We assume that you have Tableau installed (if not, see previous tutorial, <a href="scatter-chart-tableau.html">Create XY Scatter Chart with Tableau Public</a>).</p>
+<p>We assume that you have Tableau installed. If not, see the previous tutorial, <a href="scatter-chart-tableau.html">Create XY Scatter Chart with Tableau Public</a>.</p>
 <div id="connect-text-file-and-build-a-line-chart" class="section level3 unnumbered" number="">
 <h3>Connect Text File and Build a Line Chart</h3>
 <p>Open Tableau Public, and under Connect menu, choose <em>Text file</em>.
@@ -348,7 +351,7 @@ how the interactive filtering works.</li>
 <div class="figure"><span id="fig:tableau-filtered-show-filter"></span>
 <img src="images/05-chart/tableau-filtered-show-filter.png" alt="Once you dragged Country Name to the Filters card, make sure the Filter is displayed." width="200" />
 <p class="caption">
-Figure 5.29: Once you dragged Country Name to the Filters card, make sure the Filter is displayed.
+Figure 5.40: Once you dragged Country Name to the Filters card, make sure the Filter is displayed.
 </p>
 </div>
 </div>
@@ -363,30 +366,30 @@ the author of this visualization.</p>
 although our data is for 1995–2018. Double-click on the x-axis, and change
 <strong>Range</strong> from <em>Automatic</em> to <em>Fixed</em>, with the Fixed start of <code>1995</code>, and the Fixed end of <code>2018</code>.
 Close the window and see that the empty space on the edges has disappeared.</p>
-<p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-ready">5.30</a>,
+<p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-ready">5.41</a>,
 you are ready to publish.</p>
 
 <div class="figure"><span id="fig:tableau-filtered-ready"></span>
 <img src="images/05-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
 <p class="caption">
-Figure 5.30: This workbook is ready to be published.
+Figure 5.41: This workbook is ready to be published.
 </p>
 </div>
 <p>To publish the filtered line chart to the web, go to <em>File &gt; Save to Tableau Public As…</em>.
 You may be prompted with the window to log in to your account (or create one if you don’t have it yet).
 The next steps are fairly self-explanatory, and you can consult
 <a href="scatter-chart-tableau.html">the previous tutorial</a> for more information on publishing.</p>
-
+<p>See the <a href="embed-tableau.html">Embed Tableau Public on Your Website</a> section of this book to insert the interactive version of your chart on a web page that you control.</p>
+<p>To learn more, see <a href="https://public.tableau.com/en-us/s/resources">Tableau Public resources page</a>.</p>
 </div>
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
 <a href="scatter-chart-tableau.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="map.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="summary-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

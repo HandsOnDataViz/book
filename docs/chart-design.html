@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-17" />
+<meta name="date" content="2020-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,7 @@
   
 <link rel="prev" href="chart.html"/>
 <link rel="next" href="chart-google-sheets.html"/>
-<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -189,10 +190,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -217,6 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -349,8 +352,9 @@ is visible without any user interaction.</p>
 <h3>Some Rules are More Important than Others</h3>
 <p>Although the vast majority of rules in data visualization are open to interpretation,
 there are some that are hard to bend.</p>
-<p><strong>Bar chart axis must start at zero.</strong>
-Unlike line charts, bar or column charts need to have their value axis start at zero.
+<div id="bar-chars-must-start-at-zero" class="section level4 unnumbered" number="">
+<h4>Bar chars must start at zero</h4>
+<p>Unlike line charts, bar or column charts need to have their value axis start at zero.
 This is to ensure that a bar twice the length of another bar represents twice its value.
 The Figure <a href="chart-design.html#fig:design-principles-start-at-zero">5.2</a> shows a good and a bad example.</p>
 
@@ -361,9 +365,11 @@ Figure 5.2: Start your bar chart at zero.
 </p>
 </div>
 <p>Starting y-axis at anything other than zero is a common trick used by some media
-and politicians to exaggerate differences in surveys and election results.</p>
-<p><strong>Pie Charts Represent 100%</strong>.
-Pie charts is one of the most contentious issues in data visualization.
+and politicians to exaggerate differences in surveys and election results. Learn more about how to <a href="detect.html">detect bias in data stories</a> in chapter 12.</p>
+</div>
+<div id="pie-charts-represent-100" class="section level4 unnumbered" number="">
+<h4>Pie Charts Represent 100%</h4>
+<p>Pie charts is one of the most contentious issues in data visualization.
 Most dataviz practitioners will recommend avoiding them entirely, saying that
 people are bad at accurately estimating sizes of different slices.
 We take a less dramatic stance, as long as you adhere to the recommendations
@@ -374,11 +380,14 @@ If slices sum up to anything other than 100%, it is a crime. If you design a sur
 titled <em>Are you a cat or a dog person?</em> and include <em>I am both</em> as the third option,
 forget about putting the results into a pie chart.</p>
 </div>
+</div>
 <div id="chart-aesthetics" class="section level3 unnumbered" number="">
 <h3>Chart Aesthetics</h3>
 <p>Remember that you create a chart to help the reader understand the story, not to confuse them.
 Decide if you want to show absolute numbers, percentages, or percent changes, and do the math for your readers.</p>
-<p><strong>Avoid chart junk</strong>. Start with a white background and add elements as you see appropriate. You should be able to justify
+<div id="avoid-chart-junk" class="section level4 unnumbered" number="">
+<h4>Avoid chart junk</h4>
+<p>Start with a white background and add elements as you see appropriate. You should be able to justify
 each element you add. To do so, ask yourself: Does this element improve the chart, or can I
 drop it without decreasing readability? This way you won’t end up with so-called “chart junk” as shown in Figure <a href="chart-design.html#fig:design-principles-junk">5.3</a>, which includes 3D perspectives, shadows, and unnecessary elements. They might have looked cool in early versions of Microsoft Office, but let’s stay away from them today.</p>
 
@@ -388,9 +397,14 @@ drop it without decreasing readability? This way you won’t end up with so-call
 Figure 5.3: Avoid chart junk.
 </p>
 </div>
+<p>Do not use shadows or thick outlines with bar charts, because the reader might think
+that decorative elements are part of the chart, and thus misread the values that bars represent.</p>
 <p>The only justification for using three dimensions is to plot three-dimensional data,
 which has x, y, and z values. And don’t let anyone tell you otherwise.</p>
-<p><strong>Beware of pie charts</strong>. Remember that pie charts only show part-to-whole relationship, so all slices need to add up to 100%. Generally, the fewer slices—the better. Arrange slices from largest
+</div>
+<div id="beware-of-pie-charts" class="section level4 unnumbered" number="">
+<h4>Beware of pie charts</h4>
+<p>Remember that pie charts only show part-to-whole relationship, so all slices need to add up to 100%. Generally, the fewer slices—the better. Arrange slices from largest
 to smallest, clockwise, and put the largest slice at 12 o’clock.
 Figure <a href="chart-design.html#fig:design-principles-pie">5.4</a> illustrates that.</p>
 
@@ -408,7 +422,10 @@ Figure 5.4: Sort slices in pie charts from largest to smallest, and start at 12 
 Figure 5.5: Consider using bar charts instead of pies.
 </p>
 </div>
-<p><strong>Don’t make people turn their heads to read labels</strong>. When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit, consider turning the chart 90 degrees so that it becomes a horizontal bar chart. Take a look at Figure <a href="chart-design.html#fig:design-principles-turn-bar">5.6</a> to see how much easier it is to read horizontally-oriented labels.</p>
+</div>
+<div id="dont-make-people-turn-their-heads-to-read-labels" class="section level4 unnumbered" number="">
+<h4>Don’t make people turn their heads to read labels</h4>
+<p>When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit, consider turning the chart 90 degrees so that it becomes a horizontal bar chart. Take a look at Figure <a href="chart-design.html#fig:design-principles-turn-bar">5.6</a> to see how much easier it is to read horizontally-oriented labels.</p>
 
 <div class="figure"><span id="fig:design-principles-turn-bar"></span>
 <img src="images/05-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
@@ -416,7 +433,10 @@ Figure 5.5: Consider using bar charts instead of pies.
 Figure 5.6: For long labels, use horizontal bar charts.
 </p>
 </div>
-<p><strong>Arrange elements logically</strong>. If your bar chart shows different categories, consider ordering them, like is shown in Figure <a href="chart-design.html#fig:design-principles-order-categories">5.7</a>. You might want to sort them alphabetically, which can be useful if you want the reader to be able to quickly look up an item, such as their town. Ordering categories by value is another common technique that makes comparisons possible. If your columns represent a value of something at a particular time, they have to be ordered sequentially, of course.</p>
+</div>
+<div id="arrange-elements-logically" class="section level4 unnumbered" number="">
+<h4>Arrange elements logically</h4>
+<p>If your bar chart shows different categories, consider ordering them, like is shown in Figure <a href="chart-design.html#fig:design-principles-order-categories">5.7</a>. You might want to sort them alphabetically, which can be useful if you want the reader to be able to quickly look up an item, such as their town. Ordering categories by value is another common technique that makes comparisons possible. If your columns represent a value of something at a particular time, they have to be ordered sequentially, of course.</p>
 
 <div class="figure"><span id="fig:design-principles-order-categories"></span>
 <img src="images/05-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
@@ -424,10 +444,16 @@ Figure 5.6: For long labels, use horizontal bar charts.
 Figure 5.7: For long labels, use horizontal bar charts.
 </p>
 </div>
-<p><strong>Do not overload your chart</strong>. When labelling axes, choose natural increments that space equally, such as [0, 20, 40, 60, 80, 100], or [1, 10, 100, 1000] for a logarithmic scale. Do not overload your scales.
+</div>
+<div id="do-not-overload-your-chart" class="section level4 unnumbered" number="">
+<h4>Do not overload your chart</h4>
+<p>When labelling axes, choose natural increments that space equally, such as [0, 20, 40, 60, 80, 100], or [1, 10, 100, 1000] for a logarithmic scale. Do not overload your scales.
 Keep your typography simple, use (but do not overuse) <strong>bolding</strong> to highlight major insights.
 Consider using commas as thousands separators for readability (<code>1,000,000</code> is much easier to read than <code>1000000</code>).</p>
-<p><strong>Be careful with the colors</strong>. The use of color is a complex topic, and there are plenty
+</div>
+<div id="be-careful-with-the-colors" class="section level4 unnumbered" number="">
+<h4>Be careful with the colors</h4>
+<p>The use of color is a complex topic, and there are plenty
 of books and research devoted to it. But some principles are fairly universal. First, do not use colors just for the sake of it, most charts are fine being monochromatic. Second, remember that colors come with some meaning attached, which can vary among cultures. In the world of business, red is conventionally used to represent loss, and it would be unwise to use this color to show profit. Make sure you avoid random colors.</p>
 <p>Whatever colors you end up choosing, they need to be distinguishable (otherwise what is the point?). Do not use colors that are too similar in hue (for example, various shades of green––leave them for choropleth maps). Certain color combinations are hard to interpret for color-blind people, like green/red or yellow/blue, so be very careful with those. Figure <a href="chart-design.html#fig:design-principles-color">5.8</a> shows some good and bad examples of color use.</p>
 
@@ -445,6 +471,7 @@ Figure <a href="chart-design.html#fig:design-principles-decluttered">5.9</a>. No
 <p class="caption">
 Figure 5.9: Make sure important things catch the eye first.
 </p>
+</div>
 </div>
 </div>
 </div>

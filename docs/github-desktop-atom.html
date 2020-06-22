@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-17" />
+<meta name="date" content="2020-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +33,8 @@
   
   
 <link rel="prev" href="create-repo.html"/>
-<link rel="next" href="chartjs.html"/>
-<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<link rel="next" href="summary-2.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -189,10 +190,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -217,6 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -301,7 +304,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Tip: Currently, neither GitHub Desktop nor Atom Editor are supported for Chromebooks, but <a href="https://chrome.google.com/webstore">Google’s Web Store</a> offers several text editors, such as Text and Caret, which offer some of the functionality described below.)</p>
 <p>Let’s use GitHub Desktop to pull a copy of your <code>leaflet-map-simple</code> template to your local computer, make some edits in Atom Editor, and push your commits back up to GitHub.</p>
 <ol style="list-style-type: decimal">
-<li>Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to <code>https://github.com/YourUserName/leaflet-map-simple</code>, using your GitHub username, to access the repo you created in the <a href="fork-leaflet.html">Fork, Edit, and Host a Simple Leaflet Map Template</a> section of this chapter. Click the “Clone or download” button on the right side, and select “Open in Desktop,” as shown in Figure <a href="github-desktop-atom.html#fig:desktop-open">8.18</a>. The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.</li>
+<li>Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to <code>https://github.com/USERNAME/leaflet-map-simple</code>, using your GitHub username, to access the repo you created in the <a href="fork-leaflet.html">Fork, Edit, and Host a Simple Leaflet Map Template</a> section of this chapter. Click the “Clone or download” button on the right side, and select “Open in Desktop,” as shown in Figure <a href="github-desktop-atom.html#fig:desktop-open">8.18</a>. The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.</li>
 </ol>
 
 <div class="figure"><span id="fig:desktop-open"></span>
@@ -320,7 +323,6 @@ Figure 8.18: In your GitHub web repo, click “Clone or download” and “Open 
 Figure 8.19: Click the blue “Sign in to GitHub.com” button to link GitHub Desktop to your GitHub account.
 </p>
 </div>
-<!-- TODO: Decide if we wish to show the desktop-authorize screenshot, which is in the images folder, but don't believe is essential to include here. -->
 <ol start="3" style="list-style-type: decimal">
 <li>In the next setup screen, GitHub Desktop asks you to configure Git, the underlying software that runs GitHub. Confirm that it displays your username and click Continue, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-configure">8.20</a>.</li>
 </ol>
@@ -424,8 +426,9 @@ Figure 8.28: Right-click the index.html file on your local computer and open wit
 Figure 8.29: In this two-step process, click “Commit to Master,” then click “Push origin” to save and copy your edits from your local computer to your GitHub web account, as shown in this <a href="https://handsondataviz.org/images/08-github/desktop-commit-push.gif">animated GIF</a>.
 </p>
 </div>
-<p>Congratulations! You’ve successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format <code>https://YourUserName.github.io/YourRepoName</code>, substituting your GitHub username and repo name.</p>
+<p>Congratulations! You’ve successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format <code>https://USERNAME.github.io/REPOSITORY</code>, substituting your GitHub username and repo name.</p>
 <p>While you could have made the tiny code edit above in the GitHub web interface, hopefully you’ve begun to see many advantages of using GitHub Desktop and Atom Editor to edit code and push commits from your local computer. First, you can make more complex code modifications with Atom Editor, which includes search, find-and-replace, and other features to work more efficiently. Second, when you copy the repo to your local computer, you can quickly drag-and-drop multiple files and subfolders for complex visualizations, such as data, geography, and images. Third, depending on the type of code, you may be able to test how it works locally with your browser, before uploading your commits to the public web.</p>
+<p>Tip: Atom Editor has many built-in features that recognize and help you edit code, plus the option to install more <a href="https://atom.io/packages">packages</a> in the Preferences menu. One helpful built-in tool is Edit &gt; Toggle Comments, which automatically detects the coding language and converts the selected text from executable code to non-executed code comments. Another built-in tool is Edit &gt; Lines &gt; Auto Indent, which automatically cleans up selected text or an entire page of code for easier reading.</p>
 <p>GitHub also offers a powerful platform for collaborative projects, such as <em>Hands-On Data Visualization</em>. As co-authors, we composed the text of these book chapters and all of the sample code templates on GitHub. Jack started each day by “pulling” the most recent version of the book from our shared GitHub account to his local computer using GitHub Desktop, where he worked on sections and “pushed” his commits (aka edits) back to GitHub. At the same time, Ilya “pulled” the latest version and “pushed” his commits back to GitHub as well. Both of us see the commits that each other made, line-by-line in green and red (showing additions and deletions), by selecting the GitHub repo “Code” tab and clicking on one of our commits, as shown in Figure <a href="github-desktop-atom.html#fig:compare-commits">8.30</a>.</p>
 
 <div class="figure"><span id="fig:compare-commits"></span>
@@ -435,18 +438,14 @@ Figure 8.30: Drag-and-drop the file to the upload screen.
 </p>
 </div>
 <p>Although GitHub does not operate like Google Documents, which displays live edits, the platform has several advantages when working collaboratively with code. First, since GitHub tracks every commit we make, it allows us to go back and restore a very specific past version of the code if needed. Second, when GitHub repos are public, anyone can view your code and submit an “issue” to notify the owner about an idea or problem, or send a “pull request” of suggested code edits, which the owner can accept or reject. Third, GitHub allows collaborators to create different “branches” of a repo (the default is called “master”) in order to make edits, and then “merge” the branches back together if desired. Occasionally, if two or more coders attempt to push incompatible commits to the same repo, GitHub will warn about a “Merge Conflict.” To resolve this conflict and preserve everyone’s work, you may need to use the Command Line Interface (CLI) version of GitHub, which means typing commands directly into the Terminal application on Mac or Windows. Many professional coders regularly work on the Command Line with GitHub, but this requires memorizing a list of commands and is beyond the scope of this introductory book.</p>
-<p>TODO: At this writing, GitHub is considering changing the default branch from “master” to “main”. Stay tuned</p>
-<p>Overall, you’ll find that GitHub Desktop and Atom Editor makes it much easier to work with <a href="chartjs.hmtl">Chart.js code templates in Chapter 9</a> and the <a href="leaflet.html">Leaflet map code templates in Chapter 10</a>.</p>
-
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
 <a href="create-repo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="chartjs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="summary-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

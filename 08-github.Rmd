@@ -5,8 +5,6 @@ In the second half of this book, get ready to make a big leap---and we'll help y
 
 Code templates are similar to cookbook recipes. Imagine you're in your kitchen, looking at our favorite recipe we've publicly shared to make brownies (yum!), which begins with these three steps: `Melt butter, Add sugar, Mix in cocoa.` Recipes are templates, meaning that you can follow them precisely, or modify them to suit your tastes. Imagine that you copy our recipe (or "fork" it, as coders say) and insert a new step: `Add walnuts`. If you also publicly share your recipe, now there will be two versions of instructions, to suit both those who strongly prefer or dislike nuts in their brownies. (We do not take sides in this deeply polarizing dispute.)
 
-<!-- TODO: decide whether to supplement the text description of recipes with visual images of two hand-written recipe index cards, one forked from the other, with walnuts added? -->
-
 Currently, the most popular cookbook among coders is [GitHub](https://github.com), with more than 40 million users and over 100 million recipes (or "code repositories" or "repos"). You can sign up for a free account and choose to make your repos private (like Grandma's secret recipes) or public (like the ones we share below). Since GitHub was designed to be public, think twice before uploading any confidential or sensitive information that should not be shared with others. GitHub encourages sharing *open-source code*, meaning the creator grants permission for others to freely distribute and modify it, based on the conditions of the type of license they have selected.
 
 When you create a brand-new repo, GitHub invites you to [Choose a License](https://choosealicense.com/). Two of the most popular open-source software licenses are the [MIT License](https://choosealicense.com/licenses/mit/), which is very permissive, and the [GNU General Public License version 3](https://choosealicense.com/licenses/gpl-3.0/), which mandates that any modifications be shared under the same license. The latter version is often described as a *copyleft* license that requires any derivatives of the original code to remain publicly accessible, in contrast to traditional *copyright* that favors private ownership. When you fork a copy of someone's open-source code on GitHub, look at the type of license they've chosen (if any), keep it in your version, and respect its terms.
@@ -52,11 +50,7 @@ Tip: Choose a GitHub username that's relatively short, and one that you'll be ha
  knitr::include_graphics("images/08-github/leaflet-simple-fork.png")
 ```
 
-When you fork someone else's repo, in the upper-right corner of your browser you should see something like `YourUserName/leaflet-map-simple` forked from `HandsOnDataViz/leaflet-map-simple`. This proves that you copied our template into your GitHub account. This very simple repo includes only three files: `LICENSE` shows that we've selected the MIT License, which allows anyone to copy and modify the code as they wish; `README.md` provides a simple description and link to the live demo, which we'll come back to later; `index.html` is the key file that contains the map code.
-
-<!-- TODO: Question: What’s the best way to show generic GitHub web address formatting?
-a)  https://YourUserName.github.io/YourRepoName
-b) https://USERNAME.github.io/REPOSITORY     -->
+When you fork someone else's repo, in the upper-right corner of your browser you should see something like `USERNAME/leaflet-map-simple` forked from `HandsOnDataViz/leaflet-map-simple`, where `USERNAME` refers to your GitHub account username. This proves that you copied our template into your GitHub account. This very simple repo includes only three files: `LICENSE` shows that we've selected the MIT License, which allows anyone to copy and modify the code as they wish; `README.md` provides a simple description and link to the live demo, which we'll come back to later; `index.html` is the key file that contains the map code.
 
 Tip: By design, GitHub allows you to fork a repo *one time*, so that you don't accidentally create two versions with the same name. If you wish to create a second version, go to the [Create a New Repo and Upload Files on GitHub](create-repo.html) section of this chapter.
 
@@ -92,6 +86,8 @@ Let's start by making one simple change to prove to everyone that you're now edi
 
 In the language of coders, we "commit" our changes in the same way that most people "save" a document, and later you'll see how GitHub tracks each code commit so that you can roll them back if needed. By default, GitHub inserts a short description of your commit as "Update index.html", and you have the option to customize that description when you start making lots of commits to keep track of your work. Also by default, GitHub commits your changes directly to the `master` branch of your code, which we'll explain later.
 
+**TODO:** At this writing, GitHub is considering changing the default branch from "master" to "main". Stay tuned for updates!
+
 Now let's publish your edited map to the public web to see how it looks in a web browser. GitHub not only stores open-source code, but its built-in [GitHub Pages](https://pages.github.com/) feature allows you to host a live online version of your HTML-based code, which anyone with the web address can view in their browser. While GitHub Pages is free to use, there are [some restrictions on size and content](https://help.github.com/en/github/working-with-github-pages/about-github-pages) and it is not intended for running an online business or commercial transactions. But one advantage of code templates is that you can host them on any web server you control. Since we're already using GitHub to store and edit our code template, it's easy to turn on GitHub Pages to host it online.
 
 7. To access GitHub Pages, scroll to the top of your repo page and click the Settings button as shown in Figure \@ref(fig:leaflet-simple-settings).
@@ -120,14 +116,24 @@ if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-
 if(knitr::is_html_output()) knitr::include_url("images/08-github/leaflet-github-pages2.gif", height = "250px") else knitr::include_graphics("images/08-github/leaflet-github-pages2.png")
 ```
 
-10. Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address for your repo in this format, `https://YourUserName.github.io/leaflet-map-simple`, where `YourUserName` is your GitHub account username. Remember why we told you not to create your account with a username like `DrunkBrownieChef6789`? Here's why.
+10. Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address for your repo in this format, `https://USERNAME.github.io/leaflet-map-simple`, where `USERNAME` is your GitHub account username. Remember why we told you not to create your account with a username like `DrunkBrownieChef6789`? Here's why.
+
+<!-- TODO: Check final draft to ensure that this long Tip + Note + Tip appears correctly. -->
 
 Tip: If your map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing, then do a "hard" browser refresh to contact the web server again. **TODO: Link to hard-refresh instructions in Fix section in this chapter**
 
-Note: GitHub creates two different types of web addresses, where you should replace `YourUserName` and `YourRepoName` with your own:
+Note: GitHub creates two different types of web addresses, where you should replace `USERNAME` and `REPOSITORY` with your own:
 
-- The GitHub repo address, where you can edit your code: `https://github.com/YourUserName/YourRepoName`
-- The GitHub Pages address, which publishes a live version of your code: `https://YourUsername.github.io/YourRepoName`
+- The GitHub repo address, where you can edit your code:
+  - `https://github.com/USERNAME/REPOSITORY`
+- The GitHub Pages address, which publishes a live version of your code:
+  - `https://USERNAME.github.io/REPOSITORY`
+
+The live version of your code points to the `index.html` page by default, so you do not need to include it in the web address.
+
+Finally, web addresses are *not* case sensitive, meaning that you can type all of it in lower-case to save time!
+
+
 
 Tip: When working with the GitHub web interface, keep two browser tabs open. The first tab contains your GitHub repo, where you can edit your code. The second tab contains your GitHub Pages live version, where you can view the results of your edits. By opening your live map in a new tab, you can easily go back to edit your code repo in the first tab, and flip back to view the live results in the second tab.
 
@@ -141,7 +147,7 @@ Let's go back to your GitHub repo and edit the GitHub Pages links so that they p
  knitr::include_graphics("images/08-github/leaflet-click-title.png")
 ```
 
-If you can't find your first browser tab, you can retype your repo home page address in this format, and insert your GitHub username: `https://github.com/YourUserName/leaflet-map-simple`.
+If you can't find your first browser tab, you can retype your repo home page address in this format, and insert your GitHub username: `https://github.com/USERNAME/leaflet-map-simple`.
 
 12. Copy the web address of your live map (in your second browser tab) and paste it into two places on your repo home page (in your first tab). First, click the `Edit` button near the top-right corner of your repo, paste your link there, and save. Second, open the `README.md` file or scroll down to the bottom of the repo home page, click the pencil symbol to edit it, paste your link under the label "(replace with link to your site)", and scroll down to commit the change. See both steps in Figure \@ref(fig:leaflet-paste-links).
 
@@ -238,7 +244,7 @@ Check the box to "Initialize this repository with a README" to simplify the next
  knitr::include_graphics("images/08-github/repo-create-options.png")
 ```
 
-Your new repo will have a web address similar to `https://github.com/YourUserName/practice`.
+Your new repo will have a web address similar to `https://github.com/USERNAME/practice`.
 
 5. On your new repo home page, click the Upload Files button, near the middle of the screen, as shown in Figure \@ref(fig:repo-upload-files).
 
@@ -257,8 +263,6 @@ Your new repo will have a web address similar to `https://github.com/YourUserNam
 ```
 
 When the upload is complete, your repo should contain three files, now including a copy of the `index.html` code that you previously downloaded from the `leaflet-map-simple` template. This achieved our goal of working around GitHub's one-fork rule, by creating a new repo and manually uploading a second copy of the code.
-
-<!-- TODO: If someone thinks we need a screenshot to illustrate the end result above, see the repo-upload-success-original.png file. Or if we don't need it, then delete it. -->
 
 Optionally, you could use GitHub Pages to publish a live version of the code online, and paste the links to the live version at the top of your repo and your README.md file, as described in the [Fork, Edit, and Host a Simple Leaflet Map Template](fork-leaflet.html) section of this chapter.
 
@@ -281,7 +285,7 @@ Tip: Currently, neither GitHub Desktop nor Atom Editor are supported for Chromeb
 
 Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to your local computer, make some edits in Atom Editor, and push your commits back up to GitHub.
 
-1. Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to `https://github.com/YourUserName/leaflet-map-simple`, using your GitHub username, to access the repo you created in the [Fork, Edit, and Host a Simple Leaflet Map Template](fork-leaflet.html) section of this chapter. Click the "Clone or download" button on the right side, and select "Open in Desktop," as shown in Figure \@ref(fig:desktop-open). The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.
+1. Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to `https://github.com/USERNAME/leaflet-map-simple`, using your GitHub username, to access the repo you created in the [Fork, Edit, and Host a Simple Leaflet Map Template](fork-leaflet.html) section of this chapter. Click the "Clone or download" button on the right side, and select "Open in Desktop," as shown in Figure \@ref(fig:desktop-open). The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.
 
 (ref:desktop-open) In your GitHub web repo, click "Clone or download" and "Open in Desktop" to download and install GitHub Desktop.
 
@@ -296,8 +300,6 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 ```{r desktop-signin, fig.cap="(ref:desktop-signin)"}
  knitr::include_graphics("images/08-github/desktop-signin.png")
 ```
-
-<!-- TODO: Decide if we wish to show the desktop-authorize screenshot, which is in the images folder, but don't believe is essential to include here. -->
 
 3. In the next setup screen, GitHub Desktop asks you to configure Git, the underlying software that runs GitHub. Confirm that it displays your username and click Continue, as shown in Figure \@ref(fig:desktop-configure).
 
@@ -383,9 +385,11 @@ Now let's transfer your edits from your local computer to your GitHub web accoun
 if(knitr::is_html_output()) knitr::include_url("images/08-github/desktop-commit-push.gif") else knitr::include_graphics("images/08-github/desktop-commit-push.png")
 ```
 
-Congratulations! You've successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format `https://YourUserName.github.io/YourRepoName`, substituting your GitHub username and repo name.
+Congratulations! You've successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format `https://USERNAME.github.io/REPOSITORY`, substituting your GitHub username and repo name.
 
 While you could have made the tiny code edit above in the GitHub web interface, hopefully you've begun to see many advantages of using GitHub Desktop and Atom Editor to edit code and push commits from your local computer. First, you can make more complex code modifications with Atom Editor, which includes search, find-and-replace, and other features to work more efficiently. Second, when you copy the repo to your local computer, you can quickly drag-and-drop multiple files and subfolders for complex visualizations, such as data, geography, and images. Third, depending on the type of code, you may be able to test how it works locally with your browser, before uploading your commits to the public web.
+
+Tip: Atom Editor has many built-in features that recognize and help you edit code, plus the option to install more [packages](https://atom.io/packages) in the Preferences menu. One helpful built-in tool is Edit > Toggle Comments, which automatically detects the coding language and converts the selected text from executable code to non-executed code comments. Another built-in tool is Edit > Lines > Auto Indent, which automatically cleans up selected text or an entire page of code for easier reading.
 
 GitHub also offers a powerful platform for collaborative projects, such as *Hands-On Data Visualization*. As co-authors, we composed the text of these book chapters and all of the sample code templates on GitHub. Jack started each day by "pulling" the most recent version of the book from our shared GitHub account to his local computer using GitHub Desktop, where he worked on sections and "pushed" his commits (aka edits) back to GitHub. At the same time, Ilya "pulled" the latest version and "pushed" his commits back to GitHub as well. Both of us see the commits that each other made, line-by-line in green and red (showing additions and deletions), by selecting the GitHub repo "Code" tab and clicking on one of our commits, as shown in Figure \@ref(fig:compare-commits).
 
@@ -397,6 +401,6 @@ GitHub also offers a powerful platform for collaborative projects, such as *Hand
 
 Although GitHub does not operate like Google Documents, which displays live edits, the platform has several advantages when working collaboratively with code. First, since GitHub tracks every commit we make, it allows us to go back and restore a very specific past version of the code if needed. Second, when GitHub repos are public, anyone can view your code and submit an "issue" to notify the owner about an idea or problem, or send a "pull request" of suggested code edits, which the owner can accept or reject. Third, GitHub allows collaborators to create different "branches" of a repo (the default is called "master") in order to make edits, and then "merge" the branches back together if desired. Occasionally, if two or more coders attempt to push incompatible commits to the same repo, GitHub will warn about a "Merge Conflict." To resolve this conflict and preserve everyone's work, you may need to use the Command Line Interface (CLI) version of GitHub, which means typing commands directly into the Terminal application on Mac or Windows. Many professional coders regularly work on the Command Line with GitHub, but this requires memorizing a list of commands and is beyond the scope of this introductory book.
 
-TODO: At this writing, GitHub is considering changing the default branch from "master" to "main". Stay tuned
+## Summary {-}
 
-Overall, you'll find that GitHub Desktop and Atom Editor makes it much easier to work with [Chart.js code templates in Chapter 9](chartjs.hmtl) and the [Leaflet map code templates in Chapter 10](leaflet.html).
+If this is the first time you've forked, edited, and hosted live code on the public web, welcome to the coding family! We hope you agree that GitHub is a powerful platform for engaging in this work and sharing with others. While beginners will appreciate the web interface, you'll find that the GitHub Desktop and Atom Editor tools makes it much easier to work with [Chart.js code templates in Chapter 9](chartjs.hmtl) and the [Leaflet map code templates in Chapter 10](leaflet.html). Let's build on your brand-new coding skills to create more customized charts and maps in the next two chapters.

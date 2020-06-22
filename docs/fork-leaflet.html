@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-17" />
+<meta name="date" content="2020-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,7 @@
   
 <link rel="prev" href="github.html"/>
 <link rel="next" href="create-repo.html"/>
-<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -189,10 +190,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -217,6 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -326,10 +329,7 @@ Figure 8.1: Create your own version of this <a href="https://handsondataviz.gith
 Figure 8.2: Click the Fork button to make your own copy of the code template.
 </p>
 </div>
-<p>When you fork someone else’s repo, in the upper-right corner of your browser you should see something like <code>YourUserName/leaflet-map-simple</code> forked from <code>HandsOnDataViz/leaflet-map-simple</code>. This proves that you copied our template into your GitHub account. This very simple repo includes only three files: <code>LICENSE</code> shows that we’ve selected the MIT License, which allows anyone to copy and modify the code as they wish; <code>README.md</code> provides a simple description and link to the live demo, which we’ll come back to later; <code>index.html</code> is the key file that contains the map code.</p>
-<!-- TODO: Question: What’s the best way to show generic GitHub web address formatting?
-a)  https://YourUserName.github.io/YourRepoName
-b) https://USERNAME.github.io/REPOSITORY     -->
+<p>When you fork someone else’s repo, in the upper-right corner of your browser you should see something like <code>USERNAME/leaflet-map-simple</code> forked from <code>HandsOnDataViz/leaflet-map-simple</code>, where <code>USERNAME</code> refers to your GitHub account username. This proves that you copied our template into your GitHub account. This very simple repo includes only three files: <code>LICENSE</code> shows that we’ve selected the MIT License, which allows anyone to copy and modify the code as they wish; <code>README.md</code> provides a simple description and link to the live demo, which we’ll come back to later; <code>index.html</code> is the key file that contains the map code.</p>
 <p>Tip: By design, GitHub allows you to fork a repo <em>one time</em>, so that you don’t accidentally create two versions with the same name. If you wish to create a second version, go to the <a href="create-repo.html">Create a New Repo and Upload Files on GitHub</a> section of this chapter.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Click on the <code>index.html</code> file to view the code, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-simple-index">8.3</a>.</li>
@@ -365,6 +365,7 @@ Figure 8.5: Click the green Commit Changes button to save your edits.
 </p>
 </div>
 <p>In the language of coders, we “commit” our changes in the same way that most people “save” a document, and later you’ll see how GitHub tracks each code commit so that you can roll them back if needed. By default, GitHub inserts a short description of your commit as “Update index.html”, and you have the option to customize that description when you start making lots of commits to keep track of your work. Also by default, GitHub commits your changes directly to the <code>master</code> branch of your code, which we’ll explain later.</p>
+<p><strong>TODO:</strong> At this writing, GitHub is considering changing the default branch from “master” to “main”. Stay tuned for updates!</p>
 <p>Now let’s publish your edited map to the public web to see how it looks in a web browser. GitHub not only stores open-source code, but its built-in <a href="https://pages.github.com/">GitHub Pages</a> feature allows you to host a live online version of your HTML-based code, which anyone with the web address can view in their browser. While GitHub Pages is free to use, there are <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages">some restrictions on size and content</a> and it is not intended for running an online business or commercial transactions. But one advantage of code templates is that you can host them on any web server you control. Since we’re already using GitHub to store and edit our code template, it’s easy to turn on GitHub Pages to host it online.</p>
 <ol start="7" style="list-style-type: decimal">
 <li>To access GitHub Pages, scroll to the top of your repo page and click the Settings button as shown in Figure <a href="fork-leaflet.html#fig:leaflet-simple-settings">8.6</a>.</li>
@@ -400,14 +401,23 @@ Figure 8.8: Under GitHub Pages, double-click your published map link as shown in
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address for your repo in this format, <code>https://YourUserName.github.io/leaflet-map-simple</code>, where <code>YourUserName</code> is your GitHub account username. Remember why we told you not to create your account with a username like <code>DrunkBrownieChef6789</code>? Here’s why.</li>
+<li>Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address for your repo in this format, <code>https://USERNAME.github.io/leaflet-map-simple</code>, where <code>USERNAME</code> is your GitHub account username. Remember why we told you not to create your account with a username like <code>DrunkBrownieChef6789</code>? Here’s why.</li>
 </ol>
+<!-- TODO: Check final draft to ensure that this long Tip + Note + Tip appears correctly. -->
 <p>Tip: If your map does <em>not</em> appear right away, wait up to 30 seconds for GitHub Pages to finish processing, then do a “hard” browser refresh to contact the web server again. <strong>TODO: Link to hard-refresh instructions in Fix section in this chapter</strong></p>
-<p>Note: GitHub creates two different types of web addresses, where you should replace <code>YourUserName</code> and <code>YourRepoName</code> with your own:</p>
+<p>Note: GitHub creates two different types of web addresses, where you should replace <code>USERNAME</code> and <code>REPOSITORY</code> with your own:</p>
 <ul>
-<li>The GitHub repo address, where you can edit your code: <code>https://github.com/YourUserName/YourRepoName</code></li>
-<li>The GitHub Pages address, which publishes a live version of your code: <code>https://YourUsername.github.io/YourRepoName</code></li>
+<li>The GitHub repo address, where you can edit your code:
+<ul>
+<li><code>https://github.com/USERNAME/REPOSITORY</code></li>
+</ul></li>
+<li>The GitHub Pages address, which publishes a live version of your code:
+<ul>
+<li><code>https://USERNAME.github.io/REPOSITORY</code></li>
+</ul></li>
 </ul>
+<p>The live version of your code points to the <code>index.html</code> page by default, so you do not need to include it in the web address.</p>
+<p>Finally, web addresses are <em>not</em> case sensitive, meaning that you can type all of it in lower-case to save time!</p>
 <p>Tip: When working with the GitHub web interface, keep two browser tabs open. The first tab contains your GitHub repo, where you can edit your code. The second tab contains your GitHub Pages live version, where you can view the results of your edits. By opening your live map in a new tab, you can easily go back to edit your code repo in the first tab, and flip back to view the live results in the second tab.</p>
 <p>Let’s go back to your GitHub repo and edit the GitHub Pages links so that they point to <em>your</em> live map, in place of <em>our</em> live map.</p>
 <ol start="11" style="list-style-type: decimal">
@@ -420,7 +430,7 @@ Figure 8.8: Under GitHub Pages, double-click your published map link as shown in
 Figure 8.9: On your first browser tab, click the repo title.
 </p>
 </div>
-<p>If you can’t find your first browser tab, you can retype your repo home page address in this format, and insert your GitHub username: <code>https://github.com/YourUserName/leaflet-map-simple</code>.</p>
+<p>If you can’t find your first browser tab, you can retype your repo home page address in this format, and insert your GitHub username: <code>https://github.com/USERNAME/leaflet-map-simple</code>.</p>
 <ol start="12" style="list-style-type: decimal">
 <li>Copy the web address of your live map (in your second browser tab) and paste it into two places on your repo home page (in your first tab). First, click the <code>Edit</code> button near the top-right corner of your repo, paste your link there, and save. Second, open the <code>README.md</code> file or scroll down to the bottom of the repo home page, click the pencil symbol to edit it, paste your link under the label “(replace with link to your site)”, and scroll down to commit the change. See both steps in Figure <a href="fork-leaflet.html#fig:leaflet-paste-links">8.10</a>.</li>
 </ol>

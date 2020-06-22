@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-17" />
+<meta name="date" content="2020-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,7 @@
   
 <link rel="prev" href="column-bar-google.html"/>
 <link rel="next" href="scatter-bubble-google.html"/>
-<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -189,10 +190,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -217,6 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -297,28 +300,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="pie-line-area-google" class="section level2 unnumbered" number="">
 <h2>Pie, Line, and Area Charts with Google Sheets</h2>
-<p><strong>TODO: after initial review of this section, update all Figures, numbers, links</strong></p>
 <div id="pie-chart" class="section level4 unnumbered" number="">
 <h4>Pie Chart</h4>
-<p>As we mentioned in the Chart Aesthetics section, you need to be careful when using pie charts.
+<p>As we mentioned in the <a href="chart-design.html">Chart Aesthetics section</a>, you need to be careful when using pie charts.
 First, remember to not have too many slices (ideally you should limit slices to 5). They should be arranged
 from largest to smallest and start at 12 o’clock. To separate slices, you can use different slice colors,
 or lines.</p>
-<p>Make sure your data adds up to 100%. If you want to show a pie chart with the number of fruit your store had
-sold in a day—21 apples, 5 oranges, and 32 bananas—the sum of all fruit, 58, is your 100%.
+<p>Make sure your data adds up to 100%. For example, if you want to show a pie chart with the number of fruit your store had
+sold in a day—–21 apples, 5 oranges, and 32 bananas—–the sum of all fruit, 58, is your 100%.
 Then a reader can figure out that of all fruits sold, approximately 55% were bananas.
-If you decided to also include some, but not all other items that your store has sold,
-such as pizzas, your pie chart would not make sense.</p>
-<p>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false">
+This example is illustrated in Figure <a href="pie-line-area-google.html#fig:pie">5.24</a>.
+If you decided to include <em>some</em>, but <em>not all</em> other items that your store has sold (for example,
+you include pizzas but exclude ice cream), your pie chart would not make sense.</p>
+
+<div class="figure"><span id="fig:pie"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
+<p class="caption">
+Figure 5.24: Pie chart with <a href="https://docs.google.com/spreadsheets/d/11cn0eysXqXIwhcTKmGuzMDw_RmpDpYLKZN3TeevT-Vg/edit?usp=sharing">fictitious source data</a>. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive">full-screen interactive version</a>.
 </p>
+</div>
 <p>To make a pie chart with Google Sheets, arrange your data in two columns, <em>Label</em> and <em>Value</em>.
-Values can be expressed in either percentages or counts.
+Values can be expressed as either percentages or counts.
 For example,</p>
-<pre><code>Apple,21
-Orange,5
-Banana,32</code></pre>
+<pre><code>| Apple  |  21 |
+| Orange |   5 |
+| Banana |  32 |</code></pre>
 <p>Select all cells and go to <em>Insert &gt; Chart</em>. Google Sheets is good at guessing chart types,
 so it is possible the chart you will see right away will be a pie. If not, in Chart editor in tab Setup,
 select <em>Pie chart</em> from the Chart type dropdown list.</p>
@@ -331,51 +338,53 @@ In <em>Customize</em> tab of the Chart editor, you can also change colors and ad
 <div id="line-chart" class="section level4 unnumbered" number="">
 <h4>Line Chart</h4>
 <p>The most common use of line charts is to represent values at different points in time,
-in other words to show change over time. The line chart in Figure 5-X shows per-capita
+in other words to show change over time. The line chart in Figure <a href="pie-line-area-google.html#fig:line">5.25</a> shows per-capita
 meat availability in the US for the past 110 years. You can see that
 the level of chicken (shown in orange) rises steadily and surpasses beef (red) and pork (blue).</p>
-<p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/pubchart?oid=2073830845&amp;format=interactive">
+
+<div class="figure"><span id="fig:line"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
-<br>
-<a href="https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit#gid=894957893">View source data from USDA</a>
+<p class="caption">
+Figure 5.25: Line chart showing meat availability per capita in the US, according to the <a href="https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing">US Department of Agriculture</a>. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive">full-screen interactive version</a>.
 </p>
+</div>
 <p>The simplest way to organize your data is to use the first column as x-axis labels,
-and each additional column as a new series (which will become its own line).</p>
-<p>For example, the meat data from Figure 5-X looks like that:</p>
-<pre><code>Year    Beef    Pork    Chicken
-1910    48.5    38.2    11
-1920    40.7    39  9.7
-1930    33.7    41.1    11.1
-1940    37.8    45.1    10
-1950    44.6    43  14.3
-1960    59.1    48.6    19.1
-1970    79.6    48.1    27.4
-1980    72.1    52.1    32.7
-1990    63.9    46.4    42.4
-2000    64.5    47.8    54.2
-2010    56.7    44.3    58
-2017    54  47  64</code></pre>
-<p>The data is available in a <a href="https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/">Google Sheet Line chart template</a>,
-which you can use to make a copy.</p>
+and each additional column as a new series (which will become its own line).
+For example, the meat data from the line chart is
+structured as shown in Figure <a href="pie-line-area-google.html#fig:line-data">5.26</a>.</p>
+
+<div class="figure"><span id="fig:line-data"></span>
+<img src="images/05-chart/line-data.png" alt="Data for the line chart shown in Figure 5.25." width="250" />
+<p class="caption">
+Figure 5.26: Data for the line chart shown in Figure <a href="pie-line-area-google.html#fig:line">5.25</a>.
+</p>
+</div>
+<p>The data is available in the <a href="https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/">Google Sheet Line chart template</a>.
+If you wish to use it, just make a copy to your own Google Drive from the File menu.</p>
 <p>Select the data, and choose <em>Insert &gt; Chart</em>. It is possible Google Sheets will create a line chart right away.
 If not, in Chart editor in tab Setup, select <em>Line chart</em> from the Chart type dropdown list.</p>
 </div>
 <div id="stacked-area-chart" class="section level4 unnumbered" number="">
 <h4>Stacked Area Chart</h4>
-<p>In the previous section, we saw how individual meat availability changed over time.
+<p>The line chart in the previous example made it possible to see how individual meat availability changed over time.
 It was hard, however, to estimate if the overall meat availability went up or down.
 (That is, of course, if we assume that beef, pork, and chicken are the only meats we eat).</p>
 <p>We can see how availability of individual meat types, <em>and</em> the total meat availability over time
-using a stacked area chart, like shown in Figure 5-X. Here, we can still see that chicken
-has been on the rise since 1970s. We can also see that the total availability has not changed much
-since then.</p>
-<p>The data is available in a <a href="https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing">Google Sheet Stacked area chart template</a>,
-which you can use to make a copy.</p>
-<p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive">
+using a stacked area chart, like shown in Figure <a href="pie-line-area-google.html#fig:stacked-area">5.27</a>. Here, we can still see that chicken
+has been on the rise since 1970s. We can also see that the total availability was on the
+rise between 1910 and 1970 with a small dip around 1930s, and it didn’t change much between
+1970 and 2017.</p>
+
+<div class="figure"><span id="fig:stacked-area"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
+<p class="caption">
+Figure 5.27: In addition to individual meat availability, stacked area charts show the overall availability. See data by <a href="https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing">US Department of Agriculture</a>. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive">full-screen interactive version</a>.
 </p>
+</div>
+<p>The data for the stacked area chart is available from the <a href="https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/">Google Sheet Stacked area chart template</a>,
+which you copy to your own Drive.</p>
 <p>Set up the data exactly as you would with a line chart (first column is labels for the x-axis,
 second and following columns are series, or lines). Select it, and choose <em>Insert &gt; Chart</em>.
 In the Chart editor, in tab Setup, select <em>Stacked area chart</em> from the Chart type dropdown list.</p>

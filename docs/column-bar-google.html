@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-17" />
+<meta name="date" content="2020-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,7 @@
   
 <link rel="prev" href="chart-google-sheets.html"/>
 <link rel="next" href="pie-line-area-google.html"/>
-<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -189,10 +190,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -217,6 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -307,9 +310,7 @@ separated, grouped, and stacked bar charts in Google Sheets:</p>
 <li>High-Calorie Fast-Food Items</li>
 <li>Global Database on Body Mass Index by World Health Organization</li>
 </ul>
-<p>You will need a Google account (it’s free).</p>
-<p>TODO: Decide whether to apply conditional formatting to make the statement below appear only in the web edition of the book.</p>
-<p>In the web version of this book, you can interact with charts by hovering over data points to see tooltips with additional data.</p>
+<p>Before you begin, you will need to create a free <a href="https://www.google.com/drive/">Google Drive account</a>. If you already Google Mail, you can use the same username for your Google Drive account.</p>
 <div id="grouped-column-and-bar-charts" class="section level3 unnumbered" number="">
 <h3>Grouped Column and Bar Charts</h3>
 <p>Figure <a href="column-bar-google.html#fig:column-grouped">5.10</a> shows differences in obesity between men and women, grouped together in three age brackets to allow for easier gender comparisons across the same ages. In the interactive web version, hover over columns and see tooltips with data.</p>
@@ -324,24 +325,24 @@ Figure 5.10: Grouped column chart with data from <a href="http://stateofobesity.
 <p>The following steps will help you recreate an interactive grouped column (or horizontal bar) chart.</p>
 <ol style="list-style-type: decimal">
 <li><p>Right-click to open link in new tab: <a href="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/">Google Sheet Column chart with grouped data template</a></p></li>
-<li><p>Sign in to your Google Drive or <a href="https://sheets.google.com">sign up for a free account</a></p></li>
+<li><p>Sign in to continue to Google Sheets (which is part of Google Drive). If you don’t already have a Google account, you can create one.</p></li>
 <li><p>Select File &gt; Make a Copy to save your own version to your Google Drive, as shown in Figure <a href="column-bar-google.html#fig:file-make-copy">5.11</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:file-make-copy"></span>
-<img src="images/05-chart/file-make-copy.png" alt="Make your own copy of the Google Sheet."  />
+<img src="images/05-chart/file-make-copy.png" alt="Make your own copy of the Google Sheet template."  />
 <p class="caption">
-Figure 5.11: Make your own copy of the Google Sheet.
+Figure 5.11: Make your own copy of the Google Sheet template.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot symbol appear, and select Delete, as shown in Figure <a href="column-bar-google.html#fig:delete-chart">5.12</a>.</li>
+<li>To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot menu appear, and select Delete, as shown in Figure <a href="column-bar-google.html#fig:delete-chart">5.12</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:delete-chart"></span>
-<img src="images/05-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot symbol appear, and select Delete."  />
+<img src="images/05-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot menu appear, and select Delete."  />
 <p class="caption">
-Figure 5.12: Float cursor in top-right corner of the chart to make the 3-dot symbol appear, and select Delete.
+Figure 5.12: Float cursor in top-right corner of the chart to make the 3-dot menu appear, and select Delete.
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
@@ -395,7 +396,7 @@ Figure 5.17: Click the Share button and then click “Change to anyone with the 
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>To embed an interactive version of your chart in another web page, click the 3-dot symbol in the upper-right corner of your chart, and select Publish Chart, as shown in Figure <a href="column-bar-google.html#fig:chart-publish">5.18</a>. In the next screen, select Embed and press the Publish button. See <a href="embed.html">Chapter 7 Embed on the Web</a> to learn what to do with the iframe code.</li>
+<li>To embed an interactive version of your chart in another web page, click the 3-dot menu in the upper-right corner of your chart, and select Publish Chart, as shown in Figure <a href="column-bar-google.html#fig:chart-publish">5.18</a>. In the next screen, select Embed and press the Publish button. See <a href="embed.html">Chapter 7 Embed on the Web</a> to learn what to do with the iframe code.</li>
 </ol>
 
 <div class="figure"><span id="fig:chart-publish"></span>
@@ -410,7 +411,7 @@ adds credibility to your work.</p>
 </div>
 <div id="separated-column-and-bar-charts" class="section level3 unnumbered" number="">
 <h3>Separated Column and Bar Charts</h3>
-<p>When you visualize independent categories of data, and you don’t want them to appear grouped together, then create a chart with separated columns (or horizontal bars, if you have long data labels). For example, Figure <a href="column-bar-google.html#fig:bar-separated">5.19</a> is a separated bar chart of calorie counts of fast food items for two restaurant chains, Starbucks and McDonald’s. Unlike the grouped column chart above in Figure <a href="column-bar-google.html#fig:column-grouped">5.10</a>, here the bars are separated from each other, because we do not need to make comparisons between sub-groups.</p>
+<p>When you visualize independent categories of data, and you don’t want them to appear grouped together, then create a chart with separated columns (or horizontal bars, if you have long data labels). For example, Figure <a href="column-bar-google.html#fig:bar-separated">5.19</a> is a separated bar chart of calorie counts of fast food items for two restaurant chains, Starbucks and McDonald’s. Unlike the grouped column chart in Figure <a href="column-bar-google.html#fig:column-grouped">5.10</a>, here the bars are separated from each other, because we do not need to make comparisons between sub-groups.</p>
 
 <div class="figure"><span id="fig:bar-separated"></span>
 <iframe src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;amp;format=interactive" width="672" height="400px">

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Scatter and Bubble Charts with Google Sheets | Hands-On Data Visualization</title>
+  <title>XY Scatter and Bubble Charts with Google Sheets | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Scatter and Bubble Charts with Google Sheets | Hands-On Data Visualization" />
+  <meta property="og:title" content="XY Scatter and Bubble Charts with Google Sheets | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Scatter and Bubble Charts with Google Sheets | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="XY Scatter and Bubble Charts with Google Sheets | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-17" />
+<meta name="date" content="2020-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,7 @@
   
 <link rel="prev" href="pie-line-area-google.html"/>
 <link rel="next" href="tableau-public.html"/>
-<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -189,10 +190,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -217,6 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -296,39 +299,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="scatter-bubble-google" class="section level2 unnumbered" number="">
-<h2>Scatter and Bubble Charts with Google Sheets</h2>
-<p><strong>TODO: after initial review of this section, update all Figures, numbers, links</strong></p>
-<p>Follow these tutorials to create different types scatter and bubble charts
-with <a href="https://sheets.google.com">Google Sheets</a>.</p>
-<p><strong>TODO: Add conversational narrative about when and why you might want scatter and bubble charts</strong></p>
-<div id="scatter-chart" class="section level4 unnumbered" number="">
-<h4>Scatter chart</h4>
-<p>Scatter charts, also known as scatterplots, use x-y coordinates to show the relationship between
-two variables.</p>
-<p>This scatter chart in Figure 5-X uses World Bank data to reveal a downward slope:
+<h2>XY Scatter and Bubble Charts with Google Sheets</h2>
+<p>Consider using XY scatter charts, also known as scatterplots, to display data coordinates to show the relationship between
+two variables. The first example below compares the relationships between life expectancy (shown on the X axis) and fertility (shown on the Y axis), which each nation is represented as a dot (an X-Y coordinate). Bubble charts are basically scatter charts on steroids, meaning that they can display the relationship of up to five variables. Further below you’ll build a bubble chart based on the same XY life expectancy-fertility dataset, with added variables for population (displayed as circle size) and region of the world (displayed as circle color). Fancier bubble charts animate the circles to represent one more variable: change over time.</p>
+<!-- TODO: Ilya - please review the conversational section intro I added above and feel free to revise. Should we add a link to an animated bubble chart, or not? -->
+<div id="xy-scatter-chart" class="section level4 unnumbered" number="">
+<h4>XY Scatter chart</h4>
+<p>The scatter chart in Figure <a href="scatter-bubble-google.html#fig:scatter">5.28</a> uses World Bank data to reveal a downward slope:
 nations with lower fertility (births per woman)
 tend to have higher life expectancy. You can also phrase is the other way,
 nations with higher life expectancy at birth have lower fertility.
-Remember that a data correlation does not
-necessarily show causation, so you cannot use this chart to “prove” that fewer
+Remember that correlation does not
+mean causation, so you cannot use this chart to argue that fewer
 births result in longer lives, or that longer-living females give birth to fewer children.</p>
-<p>If this is an e-book, you should be able to hover over points to view data details.</p>
-<p>
-<iframe width="626" height="387" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/pubchart?oid=386475448&amp;format=interactive">
+
+<div class="figure"><span id="fig:scatter"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
-<br>
-<a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit#gid=562477420">View source data from World Bank</a>
+<p class="caption">
+Figure 5.28: This scatter chart shows that nations with lower fertility tend to have higher life expectancy. <a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;format=interactive">full-screen interactive version</a>.
 </p>
-<p>The data used in Figure 5-X is available from our
-<a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/">Google Sheets Scatter chart template</a>.
+</div>
+<p>The data used in Figure <a href="scatter-bubble-google.html#fig:scatter">5.28</a> is available from our
+<a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit?usp=sharing">Google Sheets Scatter chart template</a>.
 You can copy it to your own Google Drive so that you’re able to edit it (go to <em>File &gt; Make a copy</em>).</p>
-<p>Figure 5-X shows the first few rows of the dataset.
+<p>Figure <a href="scatter-bubble-google.html#fig:scatter-data">5.29</a> shows the first few rows of the dataset.
 Notice that the data is structured in three columns. The first column, <em>Life Expectancy</em>,
 is plotted on the x-axis (horizontal). The second column, <em>Fertility</em>, is plotted on the y-axis (vertical).
 The third column contains <em>Country</em> labels.</p>
-<div class="figure">
-<img src="images/05-chart/scatter-chart-data.png" alt="" />
-<p class="caption">Scatter chart table data</p>
+
+<div class="figure"><span id="fig:scatter-data"></span>
+<img src="images/05-chart/scatter-data.png" alt="Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels." width="350" />
+<p class="caption">
+Figure 5.29: Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels.
+</p>
 </div>
 <p>To build a scatter chart, select the <strong>two</strong> columns that contain your numeric data,
 and go to <em>Insert &gt; Chart</em>. Google Sheets will likely to guess the chart type and you will see a scatterplot,
@@ -338,21 +342,26 @@ Note that both Life Expectancy and Fertility have <code>123</code> icon, meaning
 <p>You will see a lot of scatter charts out there that do not label data points, and that’s okay.
 Some scatter plots are designed to show whether or not there is a correlation, and knowing
 which points are which is not important. But sometimes labels are important for your storytelling.</p>
-<p>In Chart editor, click on the kebab menu for your Series dataset (Fertility), and then <em>Add labels</em>.
+<p>In Chart editor, click on the 3-dot menu for your Series dataset (Fertility), and then <em>Add labels</em>
+(see Figure <a href="scatter-bubble-google.html#fig:scatter-labels">5.30</a>).
 The labels added by default will be the x-values of points. To make Google Sheets read
 labels from the third column (<em>Country</em>), click the name of your label dataset (Life Expectancy),
 then <em>Select a data range</em> button in the upper-right corner of the dropdown,
 and choose cells in the relevant columns. Make sure to include the header (first row) if
 all other data ranges include it.</p>
-<div class="figure">
-<img src="images/05-chart/scatter-chart-custom-data-labels.png" alt="" />
-<p class="caption">Display labels</p>
+
+<div class="figure"><span id="fig:scatter-labels"></span>
+<img src="images/05-chart/scatter-labels.png" alt="In the chart’s Setup window, choose Add labels to the Series." width="350" />
+<p class="caption">
+Figure 5.30: In the chart’s Setup window, choose <em>Add labels</em> to the Series.
+</p>
 </div>
 <p>Tip: You may notice that some data points are too close to edges, and their labels are cut off.
 To fix this, go to Customize tab of the Chart editor. There, you can set minimum and maximum values
 for both horizontal and vertical axes. Unlike in bar charts, axes in scatter plots do not have to start at zero.
 You can set your minimum and maximum values to be a few units below and above the extreme points of your
 data range.</p>
+<p>Note: Another name for the 3-dot menu symbol is the “kebab menu” because it resembles Middle Eastern food cooked on a skewer, in contrast to the three-line “burger menu” on many mobile devices. TODO: Add picture of each icon?</p>
 </div>
 <div id="bubble-chart-with-3-columns" class="section level4 unnumbered" number="">
 <h4>Bubble chart with 3 columns</h4>
@@ -360,16 +369,18 @@ data range.</p>
 with both data values displayed in a tooltip. We will use the same
 World Bank dataset as we did for the scatter plot.</p>
 <p>The bubble chart (more about the <em>proper</em> use of bubble charts in the next section)
-in Figure 5-X shows the same data as our scatterplot on life expectancy vs fertility.</p>
-<p>If this is an e-book, hover your cursor over each bubble (dot) to reveal a tooltip
+in Figure <a href="scatter-bubble-google.html#fig:bubble-3">5.31</a> shows the same data as our scatterplot on life expectancy vs fertility.</p>
+<p>In the interactive version of the chart, hover your cursor over each bubble (dot) to reveal a tooltip
 with the country name and the two data points.</p>
-<p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive">
+
+<div class="figure"><span id="fig:bubble-3"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
-<br>
-<a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit#gid=1602534273">View source data from World Bank</a>
+<p class="caption">
+Figure 5.31: This bubble chart is essentially a scatter chart, because no other dimensions (colors, sizes) are used. <a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit?usp=sharing">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/u/3/d/e/2PACX-1vQtMosshgyX6YoPpHo9QhSPk-ckOw1_yRryTF_vYJooBeWF13RaPv2IrGffcpaiqHPwfKFJAWY0HwA3/pubchart?oid=2105121864&amp;format=interactive">full-screen interactive version</a>.
 </p>
-<p>The data for this example is available in <a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/">Google Sheets Bubble chart with 3 columns template</a></p>
+</div>
+<p>The data for this example is available in <a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/">Google Sheets Bubble chart with 3 columns template</a>.</p>
 <p>Notice that we moved the labels column (<em>Country</em>) to be the first one in the dataset,
 but the order shouldn’t matter in this case. So our first column is the label for each bubble,
 the second column is the data to be plotted on horizontal x-axis, and the third column (fertility)
@@ -386,24 +397,27 @@ In the following section, we will introduce you to the proper way of using bubbl
 one or two extra series in addition to your x- and y-coordinates. One of those
 can be expressed through bubble size (bigger bubbles represent larger values).
 Another one can make use of color (best for categorical data).</p>
-<p>The bubble chart in Figure 5-X shows fertility and life expectancy for a subset of the nations,
+<p>The bubble chart in Figure <a href="scatter-bubble-google.html#fig:bubble-5">5.32</a> shows fertility and life expectancy for a subset of the nations,
 with population (shown by bubble size) and region (shown by bubble color).
-Float your cursor over bubbles to view data details if this is an e-book.</p>
-<p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/pubchart?oid=200651442&amp;format=interactive">
+Float your cursor over bubbles to view data details in the interactive version of the chart.</p>
+
+<div class="figure"><span id="fig:bubble-5"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
-<br>
-<a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/edit#gid=1182154897">View data from World Bank</a>
+<p class="caption">
+Figure 5.32: This bubble chart shows fertility and life expectancy for several countries, including their population (shown by bubble size) and region (shown by bubble color). <a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive">full-screen interactive version</a>.
 </p>
+</div>
 <p>The five-column dataset is available in this <a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/">Google Sheets Bubble chart with 5 columns template</a>.
 The columns are arranged in the following order: country label, x-axis value,
 y-axis value, color, and bubble size.</p>
-<pre><code>Country        | Life expectancy | Fertility | Region        | Population
-United States    |            78.5 |        1.70 | North America |  326687501
-United Kingdom |              81.4 |        1.70 | Europe        |   66460344
-...
-Nigeria        |            54.3 |      5.40 | Africa        |  195874740
-South Africa   |            63.9 |      2.40 | Africa        |   57779622</code></pre>
+
+<div class="figure"><span id="fig:bubble-5-data"></span>
+<img src="images/05-chart/bubble-5-data.png" alt="Bubble chart data. Bubble size represents population, color – region."  />
+<p class="caption">
+Figure 5.33: Bubble chart data. Bubble size represents population, color – region.
+</p>
+</div>
 <p>Select all data and go to <em>Insert &gt; Chart</em>, and choose Bubble as the Chart type.
 Make sure your <strong>ID</strong>, <strong>X-axis</strong>, <strong>Y-axis</strong>, <strong>Series</strong>, and <strong>Size</strong> fields
 contains the series you want to display, and make sure to have <em>Use row 1 as headers</em> option checked.</p>

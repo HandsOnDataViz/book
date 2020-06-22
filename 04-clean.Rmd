@@ -96,17 +96,16 @@ with each pair on a new line.
 
 1. Select the data you wish to split, either the full column or just several rows.
 Note that you can only split data from one column at a time.
-1. Make sure there is no data in the column to the right of the one you're splitting, because
+2. Make sure there is no data in the column to the right of the one you're splitting, because
 all data there will be written over.
-1. Go to *Data* and select *Split text to columns*.
-1. Google Sheets will try to guess your separator automatically. You will see that your coordinates
-are now split with the comma, and the Separator is set to *Detect automatically* in the dropdown,
-like in Figure \@ref(fig:sheets-split).
+3. Go to *Data* and select *Split text to columns*, as in Figure \@ref(fig:sheets-split).
+4. Google Sheets will try to guess your separator automatically. You will see that your coordinates
+are now split with the comma, and the Separator is set to *Detect automatically* in the dropdown.
 You can manually change it to a comma (`,`), a semicolon (`;`), a period (`.`), a space character,
 or any other custom character (or even a sequence of characters — more about that in Example 2 of this section).
-1. You can rename columns into *Longitude* (first number) and *Latitude* (second number).
+5. You can rename columns into *Longitude* (first number) and *Latitude* (second number).
 
-(ref:sheets-split) Google Sheets provides a dropdown to change a separator.
+(ref:sheets-split) Select Data > Split text to columns to automatically separate data.
 
 ```{r sheets-split, fig.cap="(ref:sheets-split)"}
 knitr::include_graphics("images/04-clean/sheets-split.png")
@@ -122,7 +121,7 @@ Imagine your dataset is structured as follows:
 | 300 Summit St, Hartford CT--06106  |
 | 1012 Broad St, Hartford CT--06106  |
 | 37 Alden St, Hartford CT--06114    |
-``` 
+```
 
 Each cell contains a full address, but you want to split it into four cells:
 street address (300 Summit St), city (Hartford), state (CT), and zipcode (06106).
@@ -132,11 +131,11 @@ lines between state and zipcode.
 
 1. Start splitting left to right. So your first separator will be a comma.
 Select your column (or one or more cells within that column), and go to *Data* > *Split text to columns*.
-1. Google Sheets should automatically split your cell into two parts, `300 Summit St` and `Hartford CT--06106`,
+2. Google Sheets should automatically split your cell into two parts, `300 Summit St` and `Hartford CT--06106`,
 using comma as a separator. (If it didn't, just select *Comma* from the dropdown menu that appeared).
-1. Now, select only the second column and perform *Split text to columns*. You will see that the city
+3. Now, select only the second column and perform *Split text to columns*. You will see that the city
 is now separate from the state and zipcode, and Google Sheets chose space as a separator (if it didn't, choose *Space* from the dropdown menu).
-1. Next, select only the third column and perform *Split text to columns* again. Google Sheets won't recognize `--`
+4. Next, select only the third column and perform *Split text to columns* again. Google Sheets won't recognize `--`
 as a separator, so you will have to manually select *Custom*, type `--` in the text field,
 and hit Enter. You should now have four columns.
 
@@ -159,18 +158,18 @@ Let's say your mapping tool requires you to combine all of this terms into
 one location column, like that:
 
 ```
-| Location                            | 
+| Location                            |
 | 300 Summit St, Hartford, CT 06106   |
 ```
 
-You can write a simple formula to combine (or **concatenate**) terms
+You can write a simple formula to combine (or concatenate) terms
 using ampersands (`&`) as cells values connectors,
 and quoted spaces (`" "`), or spaces with commas (`", "`),
 or a dash with spaces on both sides (`" - "`), or anything
 else as term separators.
 
 For example, if a spreadsheet contained four columns,
-*Address, City, State, and Zip* (columns A-D, see Figure \@ref(fig:sheets-concat)),
+*Address, City, State, and Zip* (columns A-D, see Figure \@ref(fig:sheets-concat),
 then in column E insert a new header named *Location* and a formula in this format
 (note that spaces before and after ampersands do not make a difference):
 
@@ -185,7 +184,7 @@ with or without spaces around ampersands.
 knitr::include_graphics("images/04-clean/sheets-concat.png")
 ```
 
-You are now able to split data to columns using custom separators, and 
+You are now able to split data to columns using custom separators, and
 concatenate values from different cells into one. But what if your table is trapped
 inside a PDF? In the next section, we will introduce Tabula and show you how to
 convert tables from PDF documents into tables that you can analyze in Google Sheets,
@@ -196,7 +195,7 @@ Microsoft Excel, or similar packages.
 It sometimes happens that the dataset you are interested in is only available as a PDF document.
 Don't despair, you can *likely* use Tabula to extract tables and save them as CSV files.
 
-Tabula is a free tool that runs on Java, and is available for Linux, Mac, and Windows. It runs on your
+Tabula is a free tool that runs on Java, and is available for Mac, Windows, and Linx computers. It runs on your
 local machine and does not send your data to the cloud, so you can also use it for sensitive documents.
 
 Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based.
@@ -207,8 +206,8 @@ to create a text-based PDF.
 
 ### Set Up Tabula {-}
 
-Get the newest version of Tabula from [the official website](https://tabula.technology/).
-You can use download buttons on the left-hand side, or scroll down to **Download & Install Tabula**
+[Download the newest version of Tabula](https://tabula.technology/).
+You can use download buttons on the left-hand side, or scroll down to the *Download & Install Tabula*
 section to download a copy for your platform.
 
 Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive,
@@ -237,9 +236,9 @@ For the demonstration, we will use [one of those PDFs](data/ct-dph-covid-2020-05
 from May 31, 2020.
 
 1. Select the PDF you want to extract data from by clicking the blue *Browse...* button.
-1. Click *Import*. Tabula will begin analyzing the file.
-1. As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly clean, with only four buttons in the header.
-1. The easiest first step is to let Tabula autodetect tables. Click the relevant button in the header.
+2. Click *Import*. Tabula will begin analyzing the file.
+3. As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly clean, with only four buttons in the header.
+4. The easiest first step is to let Tabula autodetect tables. Click the relevant button in the header.
 You will see that each table is highlighted in red, like shown in Figure \@ref(fig:tabula-autodetect).
 
 (ref:tabula-autodetect) Selected tables are highlighted in red.
@@ -251,15 +250,15 @@ knitr::include_graphics("images/04-clean/tabula-autodetect.png")
 ### Manually Adjust Selections and Export {-}
 
 1. Click *Preview & Export Extracted Data* green button to see how Tabula thinks the data should be exported.
-1. If the preview tables don't contain the data you want, try switching between *Stream* and *Lattice* extraction methods in the left-hand-side bar.
-1. If the tables still don't look right, or you with to remove some tables that Tabula auto-detected, hit *Revise selection* button.
+2. If the preview tables don't contain the data you want, try switching between *Stream* and *Lattice* extraction methods in the left-hand-side bar.
+3. If the tables still don't look right, or you with to remove some tables that Tabula auto-detected, hit *Revise selection* button.
 That will bring you back to the PDF viewer.
-1. Now you can *Clear All Selections* and manually select
+4. Now you can *Clear All Selections* and manually select
 tables of interest. Use drag-and-drop movements to select tables of interest (or parts of tables).
-1. If you want to "copy" selection to some or all pages, you can use *Repeat this Selection* dropdown, which appears
+5. If you want to "copy" selection to some or all pages, you can use *Repeat this Selection* dropdown, which appears
 in the lower-right corner of your selections, to propagate changes. This is extremely useful if your PDF consists of
 many similarly-formatted pages.
-1. Once you are happy with the result, you can export it. If you have only one table, we recommend using CSV as export format.
+6. Once you are happy with the result, you can export it. If you have only one table, we recommend using CSV as export format.
 If you have more than one table, consider switching export format to *zip of CSVs*.
 This way each table will be saved as an individual file, rather than all tables inside one CSV file.
 
@@ -290,7 +289,7 @@ Note: This data exerpt is from [US Overseas Loans and Grants (Greenbook) dataset
 which shows US economic and military assistance to various countries.
 We chose to only include assistance to South Korea and North Korea for the years between 2000 and 2018.
 We added deliberate misspellings and formatting issues for demonstration purposes
-(although we did not alter values). 
+(although we did not alter values).
 
 Download this [sample dataset](data/us-foreignaid-greenbook-koreas.csv)
 or use your own file with messy data.
@@ -331,12 +330,12 @@ We assume that you downloaded the sample dataset we provided (or you are using y
 so let's load it from your computer.
 
 1. Under *Get data from: This computer*, click *Browse...* and select the file. Click Next.
-1. Before you can start cleaning up data, OpenRefine allows you to make sure data is **parsed** properly.
+2. Before you can start cleaning up data, OpenRefine allows you to make sure data is **parsed** properly.
 In our case, parsing means the way the data is split into columns.
 Make sure OpenRefine assigned values to the right columns,
 or change setting in *Parse data as* block at the bottom of the page until it starts looking meaningful,
 like shown in Figure \@ref(fig:openrefine-parse).
-1. Hit *Create Project* in the upper-right corner.
+3. Hit *Create Project* in the upper-right corner.
 
 (ref:openrefine-parse) OpenRefine parsing options.
 
@@ -360,14 +359,14 @@ Left-aligned numbers in a column are likely represented as text
 into numeric format.
 
 1. To transform text into numbers, open the column menu, and go to *Edit cells* > *Common transforms* > *To number*.
-1. You will see that some numbers became green and right-aligned (success!), but most did not change.
+2. You will see that some numbers became green and right-aligned (success!), but most did not change.
 That is because dollar sign (`$`) and commas (`,`) confuse OpenRefine and prevent values to be converted into numbers.
-1. Let's remove `$` and `,` from the FundingAmount column. In the column menu, choose *Edit cells* >
+3. Let's remove `$` and `,` from the FundingAmount column. In the column menu, choose *Edit cells* >
 *Transform*. In the Expression window, type `value.replace(',', '')` and notice how commas
 disappear in the preview window. When you confirm your formula works, click *OK*.
-1. Now, repeat the previous step, but instead of a comma, remove the `$` character.
+4. Now, repeat the previous step, but instead of a comma, remove the `$` character.
 (Your expression will become `value.replace('$', '')`).
-1. Perform Step 1 again.
+5. Perform Step 1 again.
 You will see that all but three
 cells turned green. That is because we have spaces and an `a` character at the end of one number.
 Fix those manually by hovering over cells, and clicking the `edit` button
@@ -400,12 +399,12 @@ that should have just two distinct values, North Korea and South Korea!
 1. To begin standardizing spellings, click on the arrow-down button of Country column header,
 and choose *Edit cells* > *Cluster and edit*. You will see a window like the one shown in Figure
 \@ref(fig:openrefine-cluster).
-1. You will have a choice of two clustering methods, *key collision* or *nearest neighbor*. Both
+2. You will have a choice of two clustering methods, *key collision* or *nearest neighbor*. Both
 methods can be powered by different functions, but let's leave the default *key collision* with *fingerprint* function.
-1. OpenRefine will calculate a list of clusters. *Values in Cluster* column contains grouped spellings
+3. OpenRefine will calculate a list of clusters. *Values in Cluster* column contains grouped spellings
 that OpenRefine considers the same. If you agree with a grouping, check the *Merge?* box, and assign
 the "true" value to the *New Cell Value* input box. In our example, this would be either `North Korea` or `South Korea`.
-1. You can go through all groupings, **or** stop after one or two and click **Merge Selected & Re-Cluster** button.
+4. You can go through all groupings, **or** stop after one or two and click **Merge Selected & Re-Cluster** button.
 The clusters you chose to merge will be merged, and grouping will be re-calculated
 (don't worry, the window won't go anywhere). Keep regrouping until you are happy with the result.
 

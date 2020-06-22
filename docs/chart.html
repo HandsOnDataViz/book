@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-17" />
+<meta name="date" content="2020-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,7 @@
   
 <link rel="prev" href="open-refine.html"/>
 <link rel="next" href="chart-design.html"/>
-<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -189,10 +190,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -217,6 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -301,23 +304,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 sometimes a chart tells your story better than a map. But designing meaningful, interactive charts
 requires careful thought about how to communicate your data story with your audience.</p>
 <p>In this chapter, we will look at main <a href="chart-design.html">principles of chart design</a>, and
-learn to identify good charts from bad ones. You will learn to choose a chart type that
-matches your story and data format.</p>
-<p>You will learn how to make static and interactive charts with <a href="chart-google-sheets.html">Google Sheets</a>
-and how to publish them on your website. We will then look at building interactive charts with
-<a href="tableau-public.html">Tableau Public</a>, a free version of the powerful software used by
-data analysts and data visualization practitioners.</p>
-<p>At the end, we will introduce chart templates with the <a href="chartjs.html">Chart.js</a> JavaScript code library,
-which give you a lot of control over how the charts look. Working with Chart.js will require
-you to <a href="github.html">edit and host code templates with GitHub</a>, which is described in detail in Chapter 8.</p>
-<p>See also related chapters in this book:</p>
-<ul>
-<li><a href="draw.html">Draw and write your data story</a> to capture your ideas on paper</li>
-<li><a href="spreadsheet.html">Improve spreadsheet skills</a>, <a href="find.html">Find and know your data</a>, and <a href="clean.html">Clean your data</a></li>
-<li><a href="embed.html">Embed your interactive chart on your website</a></li>
-<li><a href="detect.html">Detect bias in data stories</a>, including <a href="how-to-lie-with-charts.html">How to lie with charts</a></li>
-<li><a href="story.html">Tell your data story</a>, including its most meaningful insights and limitations</li>
-</ul>
+learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. In addition to static chart images, this book focuses on interactive charts that display more data when you float your cursor over them in your web browser. Later you’ll learn how to <a href="embed.html">embed interactive charts on your web</a> in chapter 7.</p>
+<p>To begin, this grid of basic chart types will help you decide which type you wish to create. Your decision will be based on the format of your data, and story you wish to tell, such as the type of data comparison you wish to draw to your reader’s attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools, such as the <a href="chart-google-sheets.html">Google Sheets chart tool</a>, and for more advanced charts, <a href="tableau-public.html">Tableau Public</a>, the free version of the powerful software used by many data analysts and visualization practitioners. The grid also refers to more powerful chart tools, such as <a href="chartjs.html">Chart.js code templates</a> in chapter 9, which give you ever more control over how your design and display your data, but also require learning how to <a href="github.html">edit and host code templates with GitHub</a> in chapter 8.</p>
 <table>
 <colgroup>
 <col width="50%" />
@@ -363,8 +351,8 @@ you to <a href="github.html">edit and host code templates with GitHub</a>, which
 <td>Best to show parts of a whole, with change over time. <br>Easy tool: <a href="pie-line-area-google.html">Google Sheets stacked area tutorial</a><br>Power tool: <a href="chartjs.html">Chart.js templates</a></td>
 </tr>
 <tr class="odd">
-<td>Scatter chart <br> <img src="images/05-chart/chart-scatter.png" /></td>
-<td>Best to show relationship between two sets of data. Also called an XY chart. <br>Easy tool: <a href="scatter-bubble-google.html">Google Sheets scatter chart tutorial</a> or <a href="scatter-chart-tableau.html">Tableau Public scatter chart tutorial</a><br>Power tool: <a href="chartjs.html">Chart.js templates</a></td>
+<td>XY Scatter chart <br> <img src="images/05-chart/chart-scatter.png" /></td>
+<td>Best to show relationship between two sets of data. <br>Easy tool: <a href="scatter-bubble-google.html">Google Sheets scatter chart tutorial</a> or <a href="scatter-chart-tableau.html">Tableau Public scatter chart tutorial</a><br>Power tool: <a href="chartjs.html">Chart.js templates</a></td>
 </tr>
 <tr class="even">
 <td>Bubble chart <br> <img src="images/05-chart/chart-bubble.png" /></td>
@@ -372,14 +360,6 @@ you to <a href="github.html">edit and host code templates with GitHub</a>, which
 </tr>
 </tbody>
 </table>
-<div id="for-more-advanced-chart-types-and-tutorials" class="section level4 unnumbered" number="">
-<h4>For more advanced chart types and tutorials</h4>
-<ul>
-<li><a href="https://support.google.com/docs/answer/190718">Google Sheets Chart types help page</a></li>
-<li><a href="https://public.tableau.com/en-us/s/resources">Tableau Public resources page</a></li>
-<li><a href="https://www.chartjs.org/samples/latest/">Chart.js samples page</a></li>
-</ul>
-</div>
 </div>
             </section>
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-17" />
+<meta name="date" content="2020-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,7 +34,7 @@
   
 <link rel="prev" href="clean.html"/>
 <link rel="next" href="tabula.html"/>
-<script src="libs/header-attrs-2.2/header-attrs.js"></script>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -189,10 +190,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -217,6 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -312,16 +315,17 @@ Stamford town</code></pre>
 New Haven
 Stamford</code></pre>
 <p>Here’s one quick solution: In any spreadsheet tool, use the Find and Replace command to remove unwanted characters.
-You can download this <a href="data/find-replace-town-geonames.csv">find-replace-town-geonames.csv</a> file,
+You can download our <a href="data/find-replace-town-geonames.csv">sample file</a>,
 which contains 169 Connecticut towns and their population, for the exercise.</p>
 <ol style="list-style-type: decimal">
-<li>Select the column you want to modify by clicking on the column header.</li>
+<li>Select the column you want to modify by clicking on the column header. If you don’t,
+you will be searching and replacing in the entire spreadsheet.</li>
 <li>From <em>Edit</em> menu, choose <em>Find and replace</em> item. You will see the window like is shown in Figure <a href="clean-spreadsheets.html#fig:sheets-find-replace">4.2</a>.</li>
 <li>In the <em>Find</em> field, type <code>town</code>, without quotation marks and leaving a space before the word. If you don’t leave the space,
 you will accidentally remove <em>town</em> from <em>Newtown</em>, and you will end up with trailing spaces which can cause troubles in the future.</li>
 <li>Leave the <em>Replace with</em> field blank.</li>
-<li>If you selected the column correctly in step 1, you will see that <em>Search</em>
-value will be set to the <em>Specific range</em> for to that column. Otherwise you will be searching and replacing in the entire spreadsheet.</li>
+<li><em>Search</em> field should be set to the range you selected in step 1, or <em>All sheets</em> if you didn’t
+select anything.</li>
 <li>You have the option to <em>match case</em>. If checked, <code>town</code> and <code>Town</code> and <code>tOwN</code> will be treated differently.
 For our purpose, you can leave <em>match case</em> unchecked.</li>
 <li>Press the <em>Replace all</em> button. Since this sample file contains 169 towns, the window
@@ -335,8 +339,8 @@ Figure 4.2: Find and Replace window in Google Sheets.
 </p>
 </div>
 </div>
-<div id="splitting-data-into-two-or-more-columns" class="section level4 unnumbered" number="">
-<h4>Splitting data into two or more columns</h4>
+<div id="split-data-into-two-or-more-columns" class="section level4 unnumbered" number="">
+<h4>Split data into two or more columns</h4>
 <p>Sometimes multiple pieces of data appear in a single cell,
 such as names (<code>John Doe</code>), coordinate pairs (<code>40.12,-72.12</code>),
 or addresses (<code>300 Summit St, Hartford, CT, 06106</code>). For your analysis,
@@ -344,36 +348,45 @@ you might want to split them into separate entities, so that your <em>FullName</
 column (with <code>John Doe</code> in it) becomes <em>FirstName</em> (<code>John</code>) and <em>LastName</em> (<code>Doe</code>) columns,
 coordinates become <em>Latitude</em> and <em>Longitude</em> columns, and your <em>FullAddress</em> column becomes
 4 columns, <em>Street</em>, <em>City</em>, <em>State</em>, and <em>Zip</em> (postcode).</p>
-<p>Let’s begin with a simple example of coordinate pairs. You can download
-a <a href="data/split-coordinate-pairs.csv">sample file here</a>.</p>
+<div id="example-1" class="section level5 unnumbered" number="">
+<h5>Example 1</h5>
+<p>Let’s begin with a simple example of coordinate pairs. You can use our
+<a href="data/split-coordinate-pairs.csv">sample file</a>,
+which is a collection of latitude-longitude pairs separated by a comma,
+with each pair on a new line.</p>
 <ol style="list-style-type: decimal">
-<li>Select the data you wish to split, either the full column or just several rows. Note that
-you can only split data from one column at a time.</li>
+<li>Select the data you wish to split, either the full column or just several rows.
+Note that you can only split data from one column at a time.</li>
 <li>Make sure there is no data in the column to the right of the one you’re splitting, because
 all data there will be written over.</li>
-<li>Go to <em>Data</em> and select <em>Split text to columns</em>.</li>
+<li>Go to <em>Data</em> and select <em>Split text to columns</em>, as in Figure <a href="clean-spreadsheets.html#fig:sheets-split">4.3</a>.</li>
 <li>Google Sheets will try to guess your separator automatically. You will see that your coordinates
-are now split with the comma, and the Separator is set to <em>Detect automatically</em> in the dropdown,
-like in Figure <a href="clean-spreadsheets.html#fig:sheets-split">4.3</a>.
+are now split with the comma, and the Separator is set to <em>Detect automatically</em> in the dropdown.
 You can manually change it to a comma (<code>,</code>), a semicolon (<code>;</code>), a period (<code>.</code>), a space character,
-or any other custom character (or even a sequence of characters — more about that in the next example).</li>
+or any other custom character (or even a sequence of characters — more about that in Example 2 of this section).</li>
 <li>You can rename columns into <em>Longitude</em> (first number) and <em>Latitude</em> (second number).</li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-split"></span>
-<img src="images/04-clean/sheets-split.png" alt="Google Sheets provides a dropdown to change a separator."  />
+<img src="images/04-clean/sheets-split.png" alt="Select Data &gt; Split text to columns to automatically separate data."  />
 <p class="caption">
-Figure 4.3: Google Sheets provides a dropdown to change a separator.
+Figure 4.3: Select Data &gt; Split text to columns to automatically separate data.
 </p>
 </div>
-<p>Now, let’s look at a slightly more complicated example. Imagine your dataset is structured as follows:</p>
+</div>
+<div id="example-2" class="section level5 unnumbered" number="">
+<h5>Example 2</h5>
+<p>Now, let’s look at a slightly more complicated example.
+Imagine your dataset is structured as follows:</p>
 <pre><code>| Location                           |
 | 300 Summit St, Hartford CT--06106  |
 | 1012 Broad St, Hartford CT--06106  |
 | 37 Alden St, Hartford CT--06114    |</code></pre>
-<p>You want to split it into four cells: street address (300 Summit St), city (Hartford), state (CT), and zipcode (06106).
+<p>Each cell contains a full address, but you want to split it into four cells:
+street address (300 Summit St), city (Hartford), state (CT), and zipcode (06106).
 Notice that the separator between the street and the rest of the address is a comma,
-a separator between the city and state is a space, and there is two dash lines between state and zipcode.</p>
+a separator between the city and state is a space, and there are two dash
+lines between state and zipcode.</p>
 <ol style="list-style-type: decimal">
 <li>Start splitting left to right. So your first separator will be a comma.
 Select your column (or one or more cells within that column), and go to <em>Data</em> &gt; <em>Split text to columns</em>.</li>
@@ -387,31 +400,43 @@ and hit Enter. You should now have four columns.</li>
 </ol>
 <p>Tip: Google Sheets will treat zipcodes as numbers and will delete leading zeros (so 06106 will become 6106).
 To fix that, select the column, and go to <em>Format &gt; Number &gt; Plain text</em>. Now you can manually re-add zeros.
-If your dataset is large, consider concatenating 0s using the formula introduced in the next section.</p>
+If your dataset is large, consider concatenating 0s using the formula introduced in <a href="clean-spreadsheets.html#combine-separate-columns-into-one">Combine separate columns into one</a>.</p>
+</div>
 </div>
 <div id="combine-separate-columns-into-one" class="section level4 unnumbered" number="">
 <h4>Combine separate columns into one</h4>
 <p>Now, let’s see how to perform the reverse action.
-Imagine you receive address data in separate columns, like this:</p>
+Imagine you receive address data in separate columns, formatted like this:</p>
 <pre><code>| Street        | City        | State      | Zip        |
 | 300 Summit St | Hartford    | CT         | 06106      |</code></pre>
-<p>But, let’s say your mapping tool requires you to combine all of this terms into one location column, like that:</p>
-<pre><code>| Location                            | 
+<p>The data comes is four columns: street address, city, state, and zipcode.
+Let’s say your mapping tool requires you to combine all of this terms into
+one location column, like that:</p>
+<pre><code>| Location                            |
 | 300 Summit St, Hartford, CT 06106   |</code></pre>
-<p>You can write a simple formula to combine (or <strong>concatenate</strong>) terms
-using ampersands (<code>&amp;</code>) as cells values connectors, and quoted spaces (<code>" "</code>) as term separators.</p>
+<p>You can write a simple formula to combine (or concatenate) terms
+using ampersands (<code>&amp;</code>) as cells values connectors,
+and quoted spaces (<code>" "</code>), or spaces with commas (<code>", "</code>),
+or a dash with spaces on both sides (<code>" - "</code>), or anything
+else as term separators.</p>
 <p>For example, if a spreadsheet contained four columns,
-<em>Address, City, State, and Zip</em> (columns A-D, see Figure <a href="clean-spreadsheets.html#fig:sheets-concat">4.4</a>),
+<em>Address, City, State, and Zip</em> (columns A-D, see Figure <a href="clean-spreadsheets.html#fig:sheets-concat">4.4</a>,
 then in column E insert a new header named <em>Location</em> and a formula in this format
 (note that spaces before and after ampersands do not make a difference):</p>
 <pre><code>=A2 &amp; &quot; &quot; &amp; B2 &amp; &quot; &quot; &amp; C2 &amp; &quot; &quot; &amp; D2</code></pre>
-
+<p>(ref:sheets-concat) Use ampersands to concatenate cell values,
+with or without spaces around ampersands.</p>
 <div class="figure"><span id="fig:sheets-concat"></span>
-<img src="images/04-clean/sheets-concat.png" alt="Use ampersands to concatenate cell values, with or without spaces around ampersands."  />
+<img src="images/04-clean/sheets-concat.png" alt="(ref:sheets-concat)"  />
 <p class="caption">
-Figure 4.4: Use ampersands to concatenate cell values, with or without spaces around ampersands.
+Figure 4.4: (ref:sheets-concat)
 </p>
 </div>
+<p>You are now able to split data to columns using custom separators, and
+concatenate values from different cells into one. But what if your table is trapped
+inside a PDF? In the next section, we will introduce Tabula and show you how to
+convert tables from PDF documents into tables that you can analyze in Google Sheets,
+Microsoft Excel, or similar packages.</p>
 </div>
 </div>
             </section>

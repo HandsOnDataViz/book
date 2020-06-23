@@ -55,9 +55,10 @@ output:
     default
 ---
 # Introduction {-}
-<!-- R global options: R chunk images display without code (no echo) -->
+<!-- R global options: R chunk images display without code (no echo); show PDF image over JPG/PNG when available in PDF output -->
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+options(knitr.graphics.auto_pdf = TRUE)
 ```
 ![ ](images/0-introduction/cover-400wide.jpg)
 

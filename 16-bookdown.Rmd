@@ -204,21 +204,22 @@ When writing cross-references in the text, the [O'Reilly Style Guide](http://ore
 ## Images {- #images}
 View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd
 
-Create high-resolution color static images in .png or .jpg format, and save them into the `images` subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add `-original` to the end of the file name prior to resizing or adding more text or artwork.
+Create high-resolution color screenshots and other static images in .png or .jpg format, with tight cropping on a high-resolution Retina monitor, typically at 144 ppi. Save items into the `images` subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.
 
-Capture original screenshots with tight cropping on Retina monitor at 144 ppi. When the original screenshot is larger than approximately 350px on either side, we need to create a copy and modify it to fit both the HTML and PDF versions, since the original will appear too large in the latter. Place the copy in Photoshop or a similar photo-editing tool (*not* Preview) and use Image Size settings double its resolution (to 288 ppi), but reduce the pixel size by 50 percent.
+If a screenshot requires additional artwork or text for the HTML edition, make a copy of the original and add `-ann` to note that this version is annotated, save into the same folder with the same root file name, and use in the code-chunk image pathnames. The publisher will use the original image and add their own artwork for their editions.
 
-![Use Photoshop or similar tool to double the resolution but reduce image size by 50 percent](images/16-bookdown/photoshop-image.png)
+If an image is larger than approximately 300px on either side, one more option is to reduce the image size in the PDF version. Use Photoshop (*not* Preview) to reduce the image size, and save a copy with the same file name with the .pdf extension into the folder.
 
-If necessary, the image size can be reduced further, since this is what matters most for the HMTL version, while the PDF version is simply a mockup for ORM editorial use. Add any additional artwork or text if desired to this copy, and save into the same folder with the same file name, minus `-original`, like this:
+In some cases (such as images inside Markdown tables, or static screenshots to accompany iframes), it may make sense to save a full-size version, with `-original` in the file name, for the publisher to use when creating the print book.
+
+Overall, sometimes the folder will contain only one version of a simple image, but in other cases it may contain up to 3-4 versions of an image:
 
 ```
-images/05-chart/design-no-junk-original.png
-images/05-chart/design-no-junk.png
+images/05-chart/design-setup.png
+images/05-chart/design-setup-ann.png
+images/05-chart/design-setup-ann.pdf
+images/05-chart/design-setup-original.png
 ```
-
-When inserting image filenames into the text, use the version minus `-original`. ORM will use the original version for its book production workflow.
-
 
 If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:
 
@@ -226,7 +227,7 @@ If creating images to appear as the same size in sequence, add a code-comment wi
 
 In this book, use *Markdown formatting only for images that appear inside tables* or *do not require captions or figure numbering*, and leave the caption field blank, like this example:
 
-<!-- Images below are 200x200 at 300 resolution -->
+<!-- Images below are 200x200 at 300 resolution do not follow style guide due to placement in a table -->
 
 | Co-Authors      | About Us      |
 | --------------- | ------------- |
@@ -235,36 +236,49 @@ In this book, use *Markdown formatting only for images that appear inside tables
 
 Although Markdown formatting offers a simple syntax that easily converts into other formats with Bookdown/Pandoc, there is no auto-numbering in the HTML edition, while auto-numbering appears in the PDF edition, and numbered figures are required by the publisher. Furthermore, Markdown formatting does not allow conditional output.
 
+### Images using R code-chunks {-}
 For these reasons, this book *primarily uses R code-chunk formatting for images*. The syntax is more complex but supports auto-numbering in HTML and PDF, and conditional output for interactive and static images. Note that R code-chunk images do *not* easily convert with Pandoc from Markdown to AsciiDoc, but "Figure x Caption" appears as a placeholder.
 
-Auto-numbering appears in `Figure x.x` format in HTML and PDF, but `Figure x` format in MS Word. TODO: Check if Word formatting can be changed with reference.docx.
+Auto-numbering appears in `Figure x.x` format in HTML and PDF, but `Figure x` format in MS Word. Note that Word formatting can be changed with reference.docx.
 
 Note that images in PDF output will "float" by design and may appear before or after the desired page, so always add a cross-reference call-out.
 
 Write R code-chunk labels that follow the image file name, and avoid duplicate labels across the book:
 
 ```
-ref:design-no-junk
+ref:design-setup
 
-images/05-chart/design-no-junk.png
+images/05-chart/design-setup.png
 ```
 
 Do not insert spaces inside the `ref:chunk-label` for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add *another* blank line to avoid "undefined reference" Bookdown errors.
 
-Note that the Bookdown `index.Rmd` file includes an R code-chunk setting immediately after the first header, which displays each code-chunk image without a code echo. Read more about this feature and related options in this [Bookdown chapter](https://bookdown.org/yihui/bookdown/figures.html).
+For each figure, manually add a cross-reference call-out and insert `fig.pos='h'` to place the image "here" on the page in the PDF output, to *attempt* to avoid PDF floating. Ignore the Bookdown LaTeX warning message "h float specifier changed to ht." See more at https://bookdown.org/yihui/bookdown/figures.html and https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
+
+This Bookdown `index.Rmd` file includes two global R code-chunk settings immediately after the first header. One setting displays each code-chunk image without a code echo. The other setting automatically inserts the PDF version of an PNG/JPG image, whenever it exists, in the PDF output, which allows us to manually reduce the image sizes for the PDF book. Read more about these options in this Bookdown chapter: https://bookdown.org/yihui/bookdown/figures.html.
 
 ```
 {r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+options(knitr.graphics.auto_pdf = TRUE)
 ```
 
-### Demo: R code-chunk for static image for HTML and PDF {-}
-...as shown in Figure \@ref(fig:tiger).
+### Demo: R code-chunk for small static image for HTML and PDF editions {-}
+Small is defined as each side less than 300px, as shown in Figure \@ref(fig:tiger).
 
 (ref:tiger) Caption here. Markdown embedded links are acceptable.
 
 ```{r tiger, fig.cap="(ref:tiger)"}
  knitr::include_graphics("images/16-bookdown/tiger.png")
+```
+
+### R code-chunk for larger static image using out.width and PDF img {-}
+For larger images, where one side is greater than 300px, set the out.width to a pixel number for ideal display in the HTML edition. Also, if needed, copy the image, use Photoshop to create a smaller image size, and save with same file name and a .pdf extension for auto-substitution in the PDF output ...as shown in Figure \@ref(fig:screenshot-tall).
+
+(ref:screenshot-tall) Using out.width=200 and smaller PDF image size.
+
+```{r screenshot-tall, fig.pos='h', out.width=200, fig.cap="(ref:screenshot-tall)"}
+ knitr::include_graphics("images/16-bookdown/screenshot-tall.png")
 ```
 
 R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the web version, and a static image with an embedded link appears in the PDF and MS Word outputs. To change the height of the default 400px iframe, add the new height to `include_url` as shown in the examples. However, to change the width of the default 675px iframe to less than 100 percent, add a line in a `custom-scripts.html` file.
@@ -274,7 +288,7 @@ R code-chunks allow more complex conditional formatting, where an interactive ma
 
 (ref:sample-map) Caption here, and add embedded link to explore the [full-screen interactive map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 
-```{r sample-map, fig.cap="(ref:sample-map)"}
+```{r sample-map, fig.pos='h', fig.cap="(ref:sample-map)"}
 if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "600px") else knitr::include_graphics("images/16-bookdown/sample-map.jpg")
 ```
 
@@ -283,7 +297,7 @@ When appropriate, create animated GIF files using Camtasia, and add fade-to-blac
 
 (ref:sheets-option-drag) Caption here, with embedded link to the [animated GIF](https://handsondataviz.org/images/16-bookdown/sheets-option-drag.gif).
 
-```{r sheets-option-drag, fig.cap="(ref:sheets-option-drag)"}
+```{r sheets-option-drag, fig.pos='h', fig.cap="(ref:sheets-option-drag)"}
 if(knitr::is_html_output()) knitr::include_url("images/16-bookdown/sheets-option-drag.gif", height = "250px") else knitr::include_graphics("images/16-bookdown/sheets-option-drag.png")
 ```
 
@@ -299,9 +313,11 @@ if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-n
 ```
 
 ### Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF {-}
-(ref:video-sample2) Caption and video **only** appear in the HTML version, with embedded link to the [YouTube video](https://youtu.be/w6dQ-RIQ5bc). Note that using this will change figure-numbering between HTML vs PDF versions.
+This option may be relevant when you wish to display a video only in the HMTL edition, with no screenshot of it in the PDF edition. Note that this will alter figure-numbering between the HTML and PDF editions.
 
-```{r video-sample2, fig.cap="(ref:video-sample2)"}
+(ref:video-sample2) Caption **only** for HTML version, with embedded link to the [YouTube video](https://youtu.be/w6dQ-RIQ5bc).
+
+```{r video-sample2, fig.pos='h', fig.cap="(ref:video-sample2)"}
 if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/w6dQ-RIQ5bc")
 ```
 
@@ -309,6 +325,8 @@ if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/w6
 View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd
 
 Create tables in Markdown format, since it produces good output for HTML, PDF, Word, and Markdown. Use a tool such as [Tables Generator](https://www.tablesgenerator.com/markdown_tables) to import significant table data in CSV format, format the column alignment as desired, and press Generate button to create table in Markdown format. For significant table data, save the CSV version in a GitHub repo for potential later use.
+
+TODO: Check if any un-numbered Markdown tables in the chapter affect table auto-numbering.
 
 Add the Markdown table code shown below to auto-number (Table x) in HTML, PDF, Word.
 
@@ -359,9 +377,12 @@ Since notes also may include text and punctuation in Markdown syntax, always ins
 
 Note that the `chicago-fullnote-bibliography.csl` format automatically shortens the note after it its first reference.
 
-### Pandoc Conversion {-}
+### Manual Pandoc Conversion to AsciiDoc {-}
+The O'Reilly Atlas platform can [import AsciiDoc documents](https://docs.atlas.oreilly.com/writing_in_asciidoc.html). While Bookdown does not directly generated this format, one workaround is use the Bookdown-generated large Markdown file, and manually convert it with Pandoc to AsciiDoc format.
+
 - Download [Pandoc](https://pandoc.org)
 - Set Bookdown to build the book as one large Markdown file (docs folder, suffix .md)
 - Use command line to navigate to subfolder with `pwd` and `cd`.
 - Convert with: `pandoc handsondataviz.md --from markdown --to asciidoc --standalone --output handsondataviz.asciidoc`
-- Confirm if AsciiDoc file matches [O'Reilly Atlas import style](https://docs.atlas.oreilly.com/writing_in_asciidoc.html).
+
+See workaround notes in the Tables section and other sections above.

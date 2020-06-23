@@ -301,20 +301,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="images" class="section level2 unnumbered" number="">
 <h2>Images</h2>
 <p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a></p>
-<p>Create high-resolution color static images in .png or .jpg format, and save them into the <code>images</code> subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add <code>-original</code> to the end of the file name prior to resizing or adding more text or artwork.</p>
-<p>Capture original screenshots with tight cropping on Retina monitor at 144 ppi. When the original screenshot is larger than approximately 350px on either side, we need to create a copy and modify it to fit both the HTML and PDF versions, since the original will appear too large in the latter. Place the copy in Photoshop or a similar photo-editing tool (<em>not</em> Preview) and use Image Size settings double its resolution (to 288 ppi), but reduce the pixel size by 50 percent.</p>
-<div class="figure">
-<img src="images/16-bookdown/photoshop-image.png" alt="" />
-<p class="caption">Use Photoshop or similar tool to double the resolution but reduce image size by 50 percent</p>
-</div>
-<p>If necessary, the image size can be reduced further, since this is what matters most for the HMTL version, while the PDF version is simply a mockup for ORM editorial use. Add any additional artwork or text if desired to this copy, and save into the same folder with the same file name, minus <code>-original</code>, like this:</p>
-<pre><code>images/05-chart/design-no-junk-original.png
-images/05-chart/design-no-junk.png</code></pre>
-<p>When inserting image filenames into the text, use the version minus <code>-original</code>. ORM will use the original version for its book production workflow.</p>
+<p>Create high-resolution color screenshots and other static images in .png or .jpg format, with tight cropping on a high-resolution Retina monitor, typically at 144 ppi. Save items into the <code>images</code> subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.</p>
+<p>If a screenshot requires additional artwork or text for the HTML edition, make a copy of the original and add <code>-ann</code> to note that this version is annotated, save into the same folder with the same root file name, and use in the code-chunk image pathnames. The publisher will use the original image and add their own artwork for their editions.</p>
+<p>If an image is larger than approximately 300px on either side, one more option is to reduce the image size in the PDF version. Use Photoshop (<em>not</em> Preview) to reduce the image size, and save a copy with the same file name with the .pdf extension into the folder. In some cases, the folder will contain only one version of each image, but in other cases it may contain up to three versions of an image:</p>
+<pre><code>images/05-chart/design-no-junk.png
+images/05-chart/design-no-junk-ann.png
+images/05-chart/design-no-junk-ann.pdf</code></pre>
 <p>If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:</p>
 <p><code>&lt;!-- Images below are 200x200 at 300 resolution --&gt;</code></p>
 <p>In this book, use <em>Markdown formatting only for images that appear inside tables</em> or <em>do not require captions or figure numbering</em>, and leave the caption field blank, like this example:</p>
-<!-- Images below are 200x200 at 300 resolution -->
+<!-- Images below are 200x200 at 300 resolution do not follow style guide due to placement in a table -->
 <table>
 <thead>
 <tr class="header">
@@ -334,20 +330,25 @@ images/05-chart/design-no-junk.png</code></pre>
 </tbody>
 </table>
 <p>Although Markdown formatting offers a simple syntax that easily converts into other formats with Bookdown/Pandoc, there is no auto-numbering in the HTML edition, while auto-numbering appears in the PDF edition, and numbered figures are required by the publisher. Furthermore, Markdown formatting does not allow conditional output.</p>
+<div id="images-using-r-code-chunks" class="section level3 unnumbered" number="">
+<h3>Images using R code-chunks</h3>
 <p>For these reasons, this book <em>primarily uses R code-chunk formatting for images</em>. The syntax is more complex but supports auto-numbering in HTML and PDF, and conditional output for interactive and static images. Note that R code-chunk images do <em>not</em> easily convert with Pandoc from Markdown to AsciiDoc, but “Figure x Caption” appears as a placeholder.</p>
-<p>Auto-numbering appears in <code>Figure x.x</code> format in HTML and PDF, but <code>Figure x</code> format in MS Word. TODO: Check if Word formatting can be changed with reference.docx.</p>
+<p>Auto-numbering appears in <code>Figure x.x</code> format in HTML and PDF, but <code>Figure x</code> format in MS Word. Note that Word formatting can be changed with reference.docx.</p>
 <p>Note that images in PDF output will “float” by design and may appear before or after the desired page, so always add a cross-reference call-out.</p>
 <p>Write R code-chunk labels that follow the image file name, and avoid duplicate labels across the book:</p>
 <pre><code>ref:design-no-junk
 
 images/05-chart/design-no-junk.png</code></pre>
 <p>Do not insert spaces inside the <code>ref:chunk-label</code> for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add <em>another</em> blank line to avoid “undefined reference” Bookdown errors.</p>
-<p>Note that the Bookdown <code>index.Rmd</code> file includes an R code-chunk setting immediately after the first header, which displays each code-chunk image without a code echo. Read more about this feature and related options in this <a href="https://bookdown.org/yihui/bookdown/figures.html">Bookdown chapter</a>.</p>
+<p>For each figure, manually add a cross-reference call-out and insert <code>fig.pos='h'</code> to place the image “here” on the page in the PDF output, to <em>attempt</em> to avoid PDF floating. Ignore the Bookdown LaTeX warning message “h float specifier changed to ht.” See more at <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a> and <a href="https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html</a></p>
+<p>This Bookdown <code>index.Rmd</code> file includes two global R code-chunk settings immediately after the first header. One setting displays each code-chunk image without a code echo. The other setting automatically inserts the PDF version of an PNG/JPG image, whenever it exists, in the PDF output, which allows us to manually reduce the image sizes for the PDF book. Read more about these options in this Bookdown chapter: <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a>.</p>
 <pre><code>{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)</code></pre>
-<div id="demo-r-code-chunk-for-static-image-for-html-and-pdf" class="section level3 unnumbered" number="">
-<h3>Demo: R code-chunk for static image for HTML and PDF</h3>
-<p>…as shown in Figure <a href="images.html#fig:tiger">C.1</a>.</p>
+knitr::opts_chunk$set(echo = FALSE)
+options(knitr.graphics.auto_pdf = TRUE)</code></pre>
+</div>
+<div id="demo-r-code-chunk-for-small-static-image-for-html-and-pdf-editions" class="section level3 unnumbered" number="">
+<h3>Demo: R code-chunk for small static image for HTML and PDF editions</h3>
+<p>Small is defined as each side less than 300px, as shown in Figure <a href="images.html#fig:tiger">C.1</a>.</p>
 
 <div class="figure"><span id="fig:tiger"></span>
 <img src="images/16-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
@@ -355,53 +356,65 @@ knitr::opts_chunk$set(echo = FALSE)</code></pre>
 Figure C.1: Caption here. Markdown embedded links are acceptable.
 </p>
 </div>
+</div>
+<div id="r-code-chunk-for-larger-static-image-using-out.width-and-pdf-img" class="section level3 unnumbered" number="">
+<h3>R code-chunk for larger static image using out.width and PDF img</h3>
+<p>For larger images, where one side is greater than 300px, set the out.width to a pixel number for ideal display in the HTML edition. Also, if needed, copy the image, use Photoshop to create a smaller image size, and save with same file name and a .pdf extension for auto-substitution in the PDF output …as shown in Figure <a href="images.html#fig:screenshot-tall">C.2</a>.</p>
+
+<div class="figure"><span id="fig:screenshot-tall"></span>
+<img src="images/16-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
+<p class="caption">
+Figure C.2: Using out.width=200 and smaller PDF image size.
+</p>
+</div>
 <p>R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the web version, and a static image with an embedded link appears in the PDF and MS Word outputs. To change the height of the default 400px iframe, add the new height to <code>include_url</code> as shown in the examples. However, to change the width of the default 675px iframe to less than 100 percent, add a line in a <code>custom-scripts.html</code> file.</p>
 </div>
 <div id="demo-r-code-chunk-for-iframe-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for iframe in HTML and static image in PDF</h3>
-<p>…as shown in Figure <a href="images.html#fig:sample-map">C.2</a>.</p>
+<p>…as shown in Figure <a href="images.html#fig:sample-map">C.3</a>.</p>
 
 <div class="figure"><span id="fig:sample-map"></span>
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="672" height="600px">
 </iframe>
 <p class="caption">
-Figure C.2: Caption here, and add embedded link to explore the <a href="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/">full-screen interactive map</a>.
+Figure C.3: Caption here, and add embedded link to explore the <a href="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/">full-screen interactive map</a>.
 </p>
 </div>
 </div>
 <div id="demo-r-code-chunk-for-animated-gif-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for animated GIF in HTML and static image in PDF</h3>
-<p>When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. TODO: ADD this here …as shown in Figure <a href="images.html#fig:sheets-option-drag">C.3</a>.</p>
+<p>When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. TODO: ADD this here …as shown in Figure <a href="images.html#fig:sheets-option-drag">C.4</a>.</p>
 
 <div class="figure"><span id="fig:sheets-option-drag"></span>
 <iframe src="images/16-bookdown/sheets-option-drag.gif" width="672" height="250px">
 </iframe>
 <p class="caption">
-Figure C.3: Caption here, with embedded link to the <a href="https://handsondataviz.org/images/16-bookdown/sheets-option-drag.gif">animated GIF</a>.
+Figure C.4: Caption here, with embedded link to the <a href="https://handsondataviz.org/images/16-bookdown/sheets-option-drag.gif">animated GIF</a>.
 </p>
 </div>
 </div>
 <div id="demo-r-code-chunk-for-youtube-video-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for Youtube video in HTML and static image in PDF</h3>
 <p>Be sure to use the <em>embed</em> link from the YouTube <em>share</em> button.</p>
-<p>…as shown in the video <a href="images.html#fig:video-sample">C.4</a>.</p>
+<p>…as shown in the video <a href="images.html#fig:video-sample">C.5</a>.</p>
 
 <div class="figure"><span id="fig:video-sample"></span>
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure C.4: Caption here, with embedded link to the <a href="https://youtu.be/-nGdrzMuUnI">YouTube video</a>.
+Figure C.5: Caption here, with embedded link to the <a href="https://youtu.be/-nGdrzMuUnI">YouTube video</a>.
 </p>
 </div>
 </div>
 <div id="demo-r-code-chunk-for-youtube-video-in-html-with-no-static-image-in-pdf" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF</h3>
+<p>This option may be relevant when you wish to display a video only in the HMTL edition, with no screenshot of it in the PDF edition. Note that this will alter figure-numbering between the HTML and PDF editions.</p>
 
 <div class="figure"><span id="fig:video-sample2"></span>
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure C.5: Caption and video <strong>only</strong> appear in the HTML version, with embedded link to the <a href="https://youtu.be/w6dQ-RIQ5bc">YouTube video</a>. Note that using this will change figure-numbering between HTML vs PDF versions.
+Figure C.6: Caption <strong>only</strong> for HTML version, with embedded link to the <a href="https://youtu.be/w6dQ-RIQ5bc">YouTube video</a>.
 </p>
 </div>
 </div>

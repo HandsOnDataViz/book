@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-22" />
+<meta name="date" content="2020-06-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -355,37 +355,37 @@ Figure 8.4: Click the pencil button to edit the code.
 <p>Let’s start by making one simple change to prove to everyone that you’re now editing <em>your</em> map, by modifying the map title, which appears in the HTML division tag block around lines 21-23.</p>
 <ol start="5" style="list-style-type: decimal">
 <li><p>In this line <code>&lt;div id="map-title"&gt;EDIT your map title&lt;/div&gt;</code>, type your new map title in place of the words <code>EDIT your map title</code>. Be careful not to erase the HTML tags which appear on both ends inside the <code>&lt; &gt;</code> symbols.</p></li>
-<li><p>To save your edit, scroll to the bottom of the page and click the green <code>Commit Changes</code> button, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-simple-commit">8.5</a>.</p></li>
+<li><p>To save your edit, scroll to the bottom of the page and click the green <em>Commit Changes</em> button, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-simple-commit">8.5</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:leaflet-simple-commit"></span>
 <img src="images/08-github/leaflet-simple-commit.png" alt="Click the green Commit Changes button to save your edits."  />
 <p class="caption">
-Figure 8.5: Click the green Commit Changes button to save your edits.
+Figure 8.5: Click the green <em>Commit Changes</em> button to save your edits.
 </p>
 </div>
 <p>In the language of coders, we “commit” our changes in the same way that most people “save” a document, and later you’ll see how GitHub tracks each code commit so that you can roll them back if needed. By default, GitHub inserts a short description of your commit as “Update index.html”, and you have the option to customize that description when you start making lots of commits to keep track of your work. Also by default, GitHub commits your changes directly to the <code>master</code> branch of your code, which we’ll explain later.</p>
 <p><strong>TODO:</strong> At this writing, GitHub is considering changing the default branch from “master” to “main”. Stay tuned for updates!</p>
 <p>Now let’s publish your edited map to the public web to see how it looks in a web browser. GitHub not only stores open-source code, but its built-in <a href="https://pages.github.com/">GitHub Pages</a> feature allows you to host a live online version of your HTML-based code, which anyone with the web address can view in their browser. While GitHub Pages is free to use, there are <a href="https://help.github.com/en/github/working-with-github-pages/about-github-pages">some restrictions on size and content</a> and it is not intended for running an online business or commercial transactions. But one advantage of code templates is that you can host them on any web server you control. Since we’re already using GitHub to store and edit our code template, it’s easy to turn on GitHub Pages to host it online.</p>
 <ol start="7" style="list-style-type: decimal">
-<li>To access GitHub Pages, scroll to the top of your repo page and click the Settings button as shown in Figure <a href="fork-leaflet.html#fig:leaflet-simple-settings">8.6</a>.</li>
+<li>To access GitHub Pages, scroll to the top of your repo page and click the <em>Settings</em> button as shown in Figure <a href="fork-leaflet.html#fig:leaflet-simple-settings">8.6</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:leaflet-simple-settings"></span>
 <img src="images/08-github/leaflet-simple-settings.png" alt="Click the Settings button to access GitHub Pages and publish your work on the web."  />
 <p class="caption">
-Figure 8.6: Click the Settings button to access GitHub Pages and publish your work on the web.
+Figure 8.6: Click the <em>Settings</em> button to access GitHub Pages and publish your work on the web.
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>In the Settings screen, scroll down to the GitHub Pages area, and use the drop-down menu to change Source from <code>None</code> to <code>Master Branch</code>, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-github-pages">8.7</a>. There is no <em>commit</em> or <em>save</em> button here, and the change will happen automatically. This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.</li>
+<li>In the Settings screen, scroll down to the GitHub Pages area, and use the drop-down menu to change <em>Source</em> from <em>None</em> to <em>Master Branch</em>, as shown in Figure <a href="fork-leaflet.html#fig:leaflet-github-pages">8.7</a>. There is no <em>commit</em> or <em>save</em> button here, and the change will happen automatically. This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.</li>
 </ol>
 
 <div class="figure"><span id="fig:leaflet-github-pages"></span>
 <iframe src="images/08-github/leaflet-github-pages.gif" width="672" height="325px">
 </iframe>
 <p class="caption">
-Figure 8.7: Under GitHub Pages, switch the source from None to Master as shown in this <a href="https://handsondataviz.org/images/08-github/leaflet-github-pages.gif">animated GIF</a>.
+Figure 8.7: Under GitHub Pages, switch the source from <em>None</em> to <em>Master</em> as shown in this <a href="https://handsondataviz.org/images/08-github/leaflet-github-pages.gif">animated GIF</a>.
 </p>
 </div>
 <!-- TODO: for the Web edition, Jack can redo the animated GIFs above and below in Camtasia, and insert a fade-out to clearly define its ending. -->
@@ -404,7 +404,13 @@ Figure 8.8: Under GitHub Pages, double-click your published map link as shown in
 <li>Click on the new tab to view your live map, with your new title at the top. GitHub Pages automatically generates a public web address for your repo in this format, <code>https://USERNAME.github.io/leaflet-map-simple</code>, where <code>USERNAME</code> is your GitHub account username. Remember why we told you not to create your account with a username like <code>DrunkBrownieChef6789</code>? Here’s why.</li>
 </ol>
 <!-- TODO: Check final draft to ensure that this long Tip + Note + Tip appears correctly. -->
-<p>Tip: If your map does <em>not</em> appear right away, wait up to 30 seconds for GitHub Pages to finish processing, then do a “hard” browser refresh to contact the web server again. <strong>TODO: Link to hard-refresh instructions in Fix section in this chapter</strong></p>
+<p>Tip: If your map does <em>not</em> appear right away, wait up to 30 seconds for GitHub Pages to finish processing your edits. Then do a “hard refresh” to <a href="https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache">bypass any saved content in your browser cache</a> and re-download the entire web page from the server, using one of these key combinations:</p>
+<ul>
+<li>Ctrl + F5 (most browsers for Windows or Linux)</li>
+<li>Command + Shift + R (Chrome or Firefox for Mac)</li>
+<li>Shift + Reload button toolbar (Safari for Mac)</li>
+<li>Ctrl + Shift + Backspace (on Chromebook)</li>
+</ul>
 <p>Note: GitHub creates two different types of web addresses, where you should replace <code>USERNAME</code> and <code>REPOSITORY</code> with your own:</p>
 <ul>
 <li>The GitHub repo address, where you can edit your code:
@@ -432,7 +438,7 @@ Figure 8.9: On your first browser tab, click the repo title.
 </div>
 <p>If you can’t find your first browser tab, you can retype your repo home page address in this format, and insert your GitHub username: <code>https://github.com/USERNAME/leaflet-map-simple</code>.</p>
 <ol start="12" style="list-style-type: decimal">
-<li>Copy the web address of your live map (in your second browser tab) and paste it into two places on your repo home page (in your first tab). First, click the <code>Edit</code> button near the top-right corner of your repo, paste your link there, and save. Second, open the <code>README.md</code> file or scroll down to the bottom of the repo home page, click the pencil symbol to edit it, paste your link under the label “(replace with link to your site)”, and scroll down to commit the change. See both steps in Figure <a href="fork-leaflet.html#fig:leaflet-paste-links">8.10</a>.</li>
+<li>Copy the web address of your live map (in your second browser tab) and paste it into two places on your repo home page (in your first tab). First, click the <em>Edit</em> button near the top-right corner of your repo, paste your link there, and save. Second, open the <code>README.md</code> file or scroll down to the bottom of the repo home page, click the pencil symbol to edit it, paste your link under the label <em>(replace with link to your site)</em>, and scroll down to commit the change. See both steps in Figure <a href="fork-leaflet.html#fig:leaflet-paste-links">8.10</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:leaflet-paste-links"></span>
@@ -461,7 +467,7 @@ Figure 8.10: Paste the link to your live map at the top of your repo page, and a
 <pre><code>L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
 .bindPopup(&quot;Insert pop-up text here&quot;); // EDIT pop-up text message</code></pre>
 <ol start="14" style="list-style-type: decimal">
-<li>After making edits, remember to scroll down and press the Commit button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires 30 seconds to process code edits. If you have problems, see the <a href="fix-code.html">Fix Common Code Errors</a> section in the appendix.</li>
+<li>After making edits, remember to scroll down and press the <em>Commit</em> button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires up to 30 seconds to process code edits. If you have problems, see the <a href="fix-code.html">Fix Common Code Errors</a> section in the appendix.</li>
 </ol>
 <p>Congratulations! If this is the first time that you’ve edited computer code and hosted it online, you can now call yourself a “coder”. The process is similar to following and modifying a cookbook recipe, just like you also can call yourself a “chef” after baking your first batch of brownies! Although no one is likely to hire you as a full-time paid coder (or chef) at this early stage, you now understand several of the basic skills needed to copy, edit, and host code online, and you’re ready to dive into the more advanced versions, such as <a href="chartjs.html">Chart.js code templates in chapter 9</a> and <a href="leaflet.html">Leaflet map code templates in chapter 10</a>.</p>
 <p>The next section describes how to enhance your GitHub skills by creating new repos and uploading your files. These are essential steps to create a second copy of a code template or to work with more advanced templates in the next two chapters.</p>

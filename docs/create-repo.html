@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-22" />
+<meta name="date" content="2020-06-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -312,54 +312,54 @@ Figure 8.11: GitHub’s one-fork rule prevents you from creating a second fork o
 <p>So how do you create a second copy of a GitHub repo? We’ll show you two solutions. The first solution, if it exists in your case, is easy. Look for a green “Use this template” button in the upper-right screen, as shown in Figure <a href="create-repo.html#fig:repo-template-download">8.12</a>, and if you see it, click it. GitHub will ask you to create a brand-new repository name for the second copy of this template, to avoid confusing it with the first copy you made. The “Use this template” button will appear only if the people who created the GitHub repo set it up as a template, and that’s exactly what we, the authors of this book, did to make it super-simple for all of you to create multiple copies of our GitHub repos.</p>
 
 <div class="figure"><span id="fig:repo-template-download"></span>
-<img src="images/08-github/repo-template-download.png" alt="If a green “Use this template” button appears, click it to work around GitHub’s one-fork rule."  />
+<img src="images/08-github/repo-template-download.png" alt="If a green Use this template button appears, click it to work around GitHub’s one-fork rule."  />
 <p class="caption">
-Figure 8.12: If a green “Use this template” button appears, click it to work around GitHub’s one-fork rule.
+Figure 8.12: If a green <em>Use this template</em> button appears, click it to work around GitHub’s one-fork rule.
 </p>
 </div>
-<p>But what if you’re trying to make a second copy of a GitHub repo where the Fork button is grayed-out and there’s no green “Use this template” button? Here’s a recommended workaround that follows three general steps:</p>
+<p>But what if you’re trying to make a second copy of a GitHub repo where the <em>Fork</em> button is grayed-out and there’s no green <em>Use this template</em> button? Here’s a recommended workaround that follows three general steps:</p>
 <ul>
 <li>Download the existing GitHub repo to your local computer</li>
 <li>Create a brand-new GitHub repo, with a new name</li>
 <li>Upload the existing code repo files to your brand-new repo</li>
 </ul>
-<p>Imagine that you’ve already created one fork of the <a href="https://github.com/HandsOnDataViz/leaflet-map-simple">leaflet-map-simple</a> repo, as we did in the prior section. You wish to create a second copy, but the “Use this template” green button does not appear, either because the repo was created before that feature existed, or the people who created the repo didn’t set it up that way.</p>
+<p>Imagine that you’ve already created one fork of the <a href="https://github.com/HandsOnDataViz/leaflet-map-simple">leaflet-map-simple</a> repo, as we did in the prior section. You wish to create a second copy, but the <em>Use this template</em> green button does not appear, either because the repo was created before that feature existed, or the people who created the repo didn’t set it up that way.</p>
 <ol style="list-style-type: decimal">
-<li><p>Click on the “Clone or download” gray drop-down menu button on the right-side of the screen, as shown in Figure <a href="create-repo.html#fig:repo-template-download">8.12</a>, and select “Download ZIP.” Your browser will download a zipped compressed folder with the contents of the repo to your local computer, and it may ask you where you wish to save it. Decide on a location and click OK.</p></li>
+<li><p>Click on the gray <em>Clone or download</em> drop-down menu button on the right-side of the screen, as shown in Figure <a href="create-repo.html#fig:repo-template-download">8.12</a>, and select <em>Download ZIP</em>. Your browser will download a zipped compressed folder with the contents of the repo to your local computer, and it may ask you where you wish to save it. Decide on a location and click OK.</p></li>
 <li><p>Navigate to the location on your computer where you saved the folder. Its file name should end with <code>.zip</code>, which means you need to double-click to “unzip” or de-compress the folder. After you unzip it, a new folder will appear named <code>leaflet-map-simple-master</code> with three files: <code>index.html</code> and <code>LICENSE</code> and <code>README.md</code>. The word <code>master</code> refers to the master branch of your repo.</p></li>
-<li><p>Go back to your GitHub account in your web browser, click on the “+” plus symbol in the upper-right corner of your account, and select “New repository”, as shown in Figure <a href="create-repo.html#fig:repo-create-new">8.13</a>.</p></li>
+<li><p>Go back to your GitHub account in your web browser, click on the plus (+) symbol in the upper-right corner of your account, and select <em>New repository</em>, as shown in Figure <a href="create-repo.html#fig:repo-create-new">8.13</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:repo-create-new"></span>
-<img src="images/08-github/repo-create-new.png" alt="Click the “+” plus symbol in upper-right corner to create a new repo."  />
+<img src="images/08-github/repo-create-new.png" alt="Click the plus (+) symbol in upper-right corner to create a new repo."  />
 <p class="caption">
-Figure 8.13: Click the “+” plus symbol in upper-right corner to create a new repo.
+Figure 8.13: Click the plus (+) symbol in upper-right corner to create a new repo.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
 <li>On the next screen, GitHub will ask you to create a new repo name. Choose a short one, preferably all lower-case, and separate words with hyphens if needed. Let’s name it <code>practice</code> because we’ll delete it at the end of this tutorial.</li>
 </ol>
-<p>Check the box to “Initialize this repository with a README” to simplify the next steps. Also, “Add a license” that matches the code you plan to upload, which in this case is “MIT License.” Other fields are optional. Click the green “Create Repository” button at the bottom when done, as shown in Figure <a href="create-repo.html#fig:repo-create-options">8.14</a>.</p>
+<p>Check the box to <em>Initialize this repository with a README</em> to simplify the next steps. Also, select <em>Add a license</em> that matches the code you plan to upload, which in this case is “MIT License.” Other fields are optional. Click the green <em>Create Repository</em> button at the bottom when done, as shown in Figure <a href="create-repo.html#fig:repo-create-options">8.14</a>.</p>
 
 <div class="figure"><span id="fig:repo-create-options"></span>
-<img src="images/08-github/repo-create-options.png" alt="After naming your new repo, check the box to “Initialize this repo with a README” and “Add a license” to match the code (select “MIT”)."  />
+<img src="images/08-github/repo-create-options.png" alt="After naming your new repo, check the box to Initialize this repo with a README and Add a license to match the code (select “MIT”)."  />
 <p class="caption">
-Figure 8.14: After naming your new repo, check the box to “Initialize this repo with a README” and “Add a license” to match the code (select “MIT”).
+Figure 8.14: After naming your new repo, check the box to <em>Initialize this repo with a README</em> and <em>Add a license</em> to match the code (select “MIT”).
 </p>
 </div>
 <p>Your new repo will have a web address similar to <code>https://github.com/USERNAME/practice</code>.</p>
 <ol start="5" style="list-style-type: decimal">
-<li>On your new repo home page, click the Upload Files button, near the middle of the screen, as shown in Figure <a href="create-repo.html#fig:repo-upload-files">8.15</a>.</li>
+<li>On your new repo home page, click the <em>Upload Files</em> button, near the middle of the screen, as shown in Figure <a href="create-repo.html#fig:repo-upload-files">8.15</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:repo-upload-files"></span>
 <img src="images/08-github/repo-upload-files.png" alt="Click the Upload Files button."  />
 <p class="caption">
-Figure 8.15: Click the Upload Files button.
+Figure 8.15: Click the <em>Upload Files</em> button.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>Upload the <code>index.html</code> file that you previously downloaded to your local computer by dragging-and-dropping it into the upload area of your GitHub repo in your browser, as shown in Figure <a href="create-repo.html#fig:repo-drag-index">8.16</a>. Do not upload <code>LICENSE</code> or <code>README.md</code> because your new repo already contains those two files. Scroll down to click the green Commit Changes button.</li>
+<li>Upload the <code>index.html</code> file that you previously downloaded to your local computer by dragging-and-dropping it into the upload area of your GitHub repo in your browser, as shown in Figure <a href="create-repo.html#fig:repo-drag-index">8.16</a>. Do not upload <code>LICENSE</code> or <code>README.md</code> because your new repo already contains those two files. Scroll down to click the green <em>Commit Changes</em> button.</li>
 </ol>
 
 <div class="figure"><span id="fig:repo-drag-index"></span>
@@ -371,7 +371,7 @@ Figure 8.16: Drag-and-drop the file to the upload screen.
 <p>When the upload is complete, your repo should contain three files, now including a copy of the <code>index.html</code> code that you previously downloaded from the <code>leaflet-map-simple</code> template. This achieved our goal of working around GitHub’s one-fork rule, by creating a new repo and manually uploading a second copy of the code.</p>
 <p>Optionally, you could use GitHub Pages to publish a live version of the code online, and paste the links to the live version at the top of your repo and your README.md file, as described in the <a href="fork-leaflet.html">Fork, Edit, and Host a Simple Leaflet Map Template</a> section of this chapter.</p>
 <ol start="7" style="list-style-type: decimal">
-<li>Since this was only a <code>practice</code> repo, let’s delete it from GitHub. In the repo screen of your browser, click the top-right Settings button, scroll all the way down to the “Danger Zone,” and click “Delete this repository,” as shown in Figure <a href="create-repo.html#fig:repo-delete">8.17</a>. GitHub will ask you to type in your username and repo name to ensure that you really want to delete the repo, and are not a drunken brownie chef.</li>
+<li>Since this was only a <code>practice</code> repo, let’s delete it from GitHub. In the repo screen of your browser, click the top-right <em>Settings</em> button, scroll all the way down to the <em>Danger Zone</em>, and click <em>Delete this repository</em>, as shown in Figure <a href="create-repo.html#fig:repo-delete">8.17</a>. GitHub will ask you to type in your username and repo name to ensure that you really want to delete the repo, to prove you are not a drunken brownie chef.</li>
 </ol>
 
 <div class="figure"><span id="fig:repo-delete"></span>

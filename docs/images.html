@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-22" />
+<meta name="date" content="2020-06-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -301,11 +301,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="images" class="section level2 unnumbered" number="">
 <h2>Images</h2>
 <p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a></p>
-<p>Create high-resolution color static images in .jpg or .png format, and animated .gif files, and save them into the <code>images</code> subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add <code>-original</code> to the end of the file name prior to resizing or adding more text or artwork.</p>
-<p>Use Photoshop or a similar photo-editing tool (<em>not</em> Preview) to add any additional text or artwork if desired. Try to maintain a high resolution (300 dpi) and reduce size if desired to fit into the HTML book (measured in pixels) and PDF book (measured in inches). Save into the same folder with the same file name, minus <code>-original</code>, like this:</p>
+<p>Create high-resolution color static images in .png or .jpg format, and save them into the <code>images</code> subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add <code>-original</code> to the end of the file name prior to resizing or adding more text or artwork.</p>
+<p>Capture original screenshots with tight cropping on Retina monitor at 144 ppi. When the original screenshot is larger than approximately 350px on either side, we need to create a copy and modify it to fit both the HTML and PDF versions, since the original will appear too large in the latter. Place the copy in Photoshop or a similar photo-editing tool (<em>not</em> Preview) and use Image Size settings double its resolution (to 288 ppi), but reduce the pixel size by 50 percent.</p>
+<div class="figure">
+<img src="images/16-bookdown/photoshop-image.png" alt="" />
+<p class="caption">Use Photoshop or similar tool to double the resolution but reduce image size by 50 percent</p>
+</div>
+<p>If necessary, the image size can be reduced further, since this is what matters most for the HMTL version, while the PDF version is simply a mockup for ORM editorial use. Add any additional artwork or text if desired to this copy, and save into the same folder with the same file name, minus <code>-original</code>, like this:</p>
 <pre><code>images/05-chart/design-no-junk-original.png
 images/05-chart/design-no-junk.png</code></pre>
-<p>When inserting image filenames into the text, use the version minus <code>-original</code>. If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:</p>
+<p>When inserting image filenames into the text, use the version minus <code>-original</code>. ORM will use the original version for its book production workflow.</p>
+<p>If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:</p>
 <p><code>&lt;!-- Images below are 200x200 at 300 resolution --&gt;</code></p>
 <p>In this book, use <em>Markdown formatting only for images that appear inside tables</em> or <em>do not require captions or figure numbering</em>, and leave the caption field blank, like this example:</p>
 <!-- Images below are 200x200 at 300 resolution -->
@@ -365,7 +371,7 @@ Figure C.2: Caption here, and add embedded link to explore the <a href="https://
 </div>
 <div id="demo-r-code-chunk-for-animated-gif-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for animated GIF in HTML and static image in PDF</h3>
-<p>…as shown in Figure <a href="images.html#fig:sheets-option-drag">C.3</a>.</p>
+<p>When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. TODO: ADD this here …as shown in Figure <a href="images.html#fig:sheets-option-drag">C.3</a>.</p>
 
 <div class="figure"><span id="fig:sheets-option-drag"></span>
 <iframe src="images/16-bookdown/sheets-option-drag.gif" width="672" height="250px">

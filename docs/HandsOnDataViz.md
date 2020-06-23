@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 22 Jun 2020
+updated on: 23 Jun 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -1709,19 +1709,18 @@ ampersands (`&`) as cells values connectors, and quoted spaces (`" "`),
 or spaces with commas (`", "`), or a dash with spaces on both sides
 (`" - "`), or anything else as term separators.
 
-For example, if a spreadsheet contained four columns, *Address, City,
-State, and Zip* (columns A-D, see Figure
-<a href="#fig:sheets-concat">4</a>, then in column E insert a new header
-named *Location* and a formula in this format (note that spaces before
-and after ampersands do not make a difference):
+For example, imagine that a spreadsheet contains an address that is
+separated into four columns—*Address, City, State,* and *Zip*—as shown
+in columns A-D in Figure <a href="#fig:sheets-combine">4</a>. In column
+E, you can add new header named *Location* and insert a formula in this
+format, to combine the items using ampersands (`&`) and separating them
+with quoted spaces (`" "`):
 
-    =A2 & " " & B2 & " " & C2 & " " & D2
+`=A2&" "&B2&" "&C2&" "&D2`
 
-with or without spaces around ampersands.
-
-<img src="images/04-clean/sheets-concat.png" alt="Use ampersands to concatenate cell values,"  />
+<img src="images/04-clean/sheets-combine.png" alt="Use ampersands to combine items and separate them with spaces."  />
 <p class="caption">
-Figure 4: Use ampersands to concatenate cell values,
+Figure 4: Use ampersands to combine items and separate them with spaces.
 </p>
 
 You are now able to split data to columns using custom separators, and
@@ -1738,7 +1737,7 @@ available as a PDF document. Don’t despair, you can *likely* use Tabula
 to extract tables and save them as CSV files.
 
 Tabula is a free tool that runs on Java, and is available for Mac,
-Windows, and Linx computers. It runs on your local machine and does not
+Windows, and Linux computers. It runs on your local machine and does not
 send your data to the cloud, so you can also use it for sensitive
 documents.
 
@@ -4861,12 +4860,12 @@ HTML division tag block around lines 21-23.
     the `< >` symbols.
 
 2.  To save your edit, scroll to the bottom of the page and click the
-    green `Commit Changes` button, as shown in Figure
+    green *Commit Changes* button, as shown in Figure
     <a href="#fig:leaflet-simple-commit">57</a>.
 
-<img src="images/08-github/leaflet-simple-commit.png" alt="Click the green Commit Changes button to save your edits."  />
+<img src="images/08-github/leaflet-simple-commit.png" alt="Click the green *Commit Changes* button to save your edits."  />
 <p class="caption">
-Figure 57: Click the green Commit Changes button to save your edits.
+Figure 57: Click the green *Commit Changes* button to save your edits.
 </p>
 
 In the language of coders, we “commit” our changes in the same way that
@@ -4895,18 +4894,18 @@ store and edit our code template, it’s easy to turn on GitHub Pages to
 host it online.
 
 1.  To access GitHub Pages, scroll to the top of your repo page and
-    click the Settings button as shown in Figure
+    click the *Settings* button as shown in Figure
     <a href="#fig:leaflet-simple-settings">58</a>.
 
-<img src="images/08-github/leaflet-simple-settings.png" alt="Click the Settings button to access GitHub Pages and publish your work on the web."  />
+<img src="images/08-github/leaflet-simple-settings.png" alt="Click the *Settings* button to access GitHub Pages and publish your work on the web."  />
 <p class="caption">
-Figure 58: Click the Settings button to access GitHub Pages and publish
-your work on the web.
+Figure 58: Click the *Settings* button to access GitHub Pages and
+publish your work on the web.
 </p>
 
 1.  In the Settings screen, scroll down to the GitHub Pages area, and
-    use the drop-down menu to change Source from `None` to
-    `Master Branch`, as shown in Figure
+    use the drop-down menu to change *Source* from *None* to *Master
+    Branch*, as shown in Figure
     <a href="#fig:leaflet-github-pages">59</a>. There is no *commit* or
     *save* button here, and the change will happen automatically. This
     step tells GitHub to publish a live version of your map on the
@@ -4916,8 +4915,8 @@ your work on the web.
 <iframe src="images/08-github/leaflet-github-pages.gif" width="100%" height="325px">
 </iframe>
 <p class="caption">
-Figure 59: Under GitHub Pages, switch the source from None to Master as
-shown in this [animated
+Figure 59: Under GitHub Pages, switch the source from *None* to *Master*
+as shown in this [animated
 GIF](https://handsondataviz.org/images/08-github/leaflet-github-pages.gif).
 </p>
 
@@ -4947,9 +4946,16 @@ GIF](https://handsondataviz.org/images/08-github/leaflet-github-pages2.gif).
 <!-- TODO: Check final draft to ensure that this long Tip + Note + Tip appears correctly. -->
 
 Tip: If your map does *not* appear right away, wait up to 30 seconds for
-GitHub Pages to finish processing, then do a “hard” browser refresh to
-contact the web server again. **TODO: Link to hard-refresh instructions
-in Fix section in this chapter**
+GitHub Pages to finish processing your edits. Then do a “hard refresh”
+to [bypass any saved content in your browser
+cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and
+re-download the entire web page from the server, using one of these key
+combinations:
+
+-   Ctrl + F5 (most browsers for Windows or Linux)
+-   Command + Shift + R (Chrome or Firefox for Mac)
+-   Shift + Reload button toolbar (Safari for Mac)
+-   Ctrl + Shift + Backspace (on Chromebook)
 
 Note: GitHub creates two different types of web addresses, where you
 should replace `USERNAME` and `REPOSITORY` with your own:
@@ -4991,11 +4997,11 @@ page address in this format, and insert your GitHub username:
 
 1.  Copy the web address of your live map (in your second browser tab)
     and paste it into two places on your repo home page (in your first
-    tab). First, click the `Edit` button near the top-right corner of
+    tab). First, click the *Edit* button near the top-right corner of
     your repo, paste your link there, and save. Second, open the
     `README.md` file or scroll down to the bottom of the repo home page,
     click the pencil symbol to edit it, paste your link under the label
-    “(replace with link to your site)”, and scroll down to commit the
+    *(replace with link to your site)*, and scroll down to commit the
     change. See both steps in Figure
     <a href="#fig:leaflet-paste-links">62</a>.
 
@@ -5053,12 +5059,12 @@ paste the code block to create a second marker.
     L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
     .bindPopup("Insert pop-up text here"); // EDIT pop-up text message
 
-1.  After making edits, remember to scroll down and press the Commit
+1.  After making edits, remember to scroll down and press the *Commit*
     button to save changes. Then go to your browser tab with the live
     map, and do a hard-refresh to view changes. If your map edits do not
-    appear right away, remember that GitHub Pages sometimes requires 30
-    seconds to process code edits. If you have problems, see the [Fix
-    Common Code Errors](fix-code.html) section in the appendix.
+    appear right away, remember that GitHub Pages sometimes requires up
+    to 30 seconds to process code edits. If you have problems, see the
+    [Fix Common Code Errors](fix-code.html) section in the appendix.
 
 Congratulations! If this is the first time that you’ve edited computer
 code and hosted it online, you can now call yourself a “coder”. The
@@ -5119,16 +5125,14 @@ that’s exactly what we, the authors of this book, did to make it
 super-simple for all of you to create multiple copies of our GitHub
 repos.
 
-&lt;img src=“images/08-github/repo-template-download.png” alt=“If a
-green”Use this template" button appears, click it to work around
-GitHub’s one-fork rule." /&gt;
+<img src="images/08-github/repo-template-download.png" alt="If a green *Use this template* button appears, click it to work around GitHub's one-fork rule."  />
 <p class="caption">
-Figure 64: If a green “Use this template” button appears, click it to
+Figure 64: If a green *Use this template* button appears, click it to
 work around GitHub’s one-fork rule.
 </p>
 
 But what if you’re trying to make a second copy of a GitHub repo where
-the Fork button is grayed-out and there’s no green “Use this template”
+the *Fork* button is grayed-out and there’s no green *Use this template*
 button? Here’s a recommended workaround that follows three general
 steps:
 
@@ -5139,14 +5143,14 @@ steps:
 Imagine that you’ve already created one fork of the
 [leaflet-map-simple](https://github.com/HandsOnDataViz/leaflet-map-simple)
 repo, as we did in the prior section. You wish to create a second copy,
-but the “Use this template” green button does not appear, either because
+but the *Use this template* green button does not appear, either because
 the repo was created before that feature existed, or the people who
 created the repo didn’t set it up that way.
 
-1.  Click on the “Clone or download” gray drop-down menu button on the
+1.  Click on the gray *Clone or download* drop-down menu button on the
     right-side of the screen, as shown in Figure
-    <a href="#fig:repo-template-download">64</a>, and select “Download
-    ZIP.” Your browser will download a zipped compressed folder with the
+    <a href="#fig:repo-template-download">64</a>, and select *Download
+    ZIP*. Your browser will download a zipped compressed folder with the
     contents of the repo to your local computer, and it may ask you
     where you wish to save it. Decide on a location and click OK.
 
@@ -5157,15 +5161,14 @@ created the repo didn’t set it up that way.
     with three files: `index.html` and `LICENSE` and `README.md`. The
     word `master` refers to the master branch of your repo.
 
-3.  Go back to your GitHub account in your web browser, click on the “+”
-    plus symbol in the upper-right corner of your account, and select
-    “New repository”, as shown in Figure
+3.  Go back to your GitHub account in your web browser, click on the
+    plus (+) symbol in the upper-right corner of your account, and
+    select *New repository*, as shown in Figure
     <a href="#fig:repo-create-new">65</a>.
 
-&lt;img src=“images/08-github/repo-create-new.png” alt=“Click the”+"
-plus symbol in upper-right corner to create a new repo." /&gt;
+<img src="images/08-github/repo-create-new.png" alt="Click the plus (+) symbol in upper-right corner to create a new repo."  />
 <p class="caption">
-Figure 65: Click the “+” plus symbol in upper-right corner to create a
+Figure 65: Click the plus (+) symbol in upper-right corner to create a
 new repo.
 </p>
 
@@ -5174,31 +5177,31 @@ new repo.
     with hyphens if needed. Let’s name it `practice` because we’ll
     delete it at the end of this tutorial.
 
-Check the box to “Initialize this repository with a README” to simplify
-the next steps. Also, “Add a license” that matches the code you plan to
-upload, which in this case is “MIT License.” Other fields are optional.
-Click the green “Create Repository” button at the bottom when done, as
-shown in Figure <a href="#fig:repo-create-options">66</a>.
+Check the box to *Initialize this repository with a README* to simplify
+the next steps. Also, select *Add a license* that matches the code you
+plan to upload, which in this case is “MIT License.” Other fields are
+optional. Click the green *Create Repository* button at the bottom when
+done, as shown in Figure <a href="#fig:repo-create-options">66</a>.
 
 &lt;img src=“images/08-github/repo-create-options.png” alt=“After naming
-your new repo, check the box to”Initialize this repo with a README" and
-“Add a license” to match the code (select “MIT”)." /&gt;
+your new repo, check the box to *Initialize this repo with a README* and
+*Add a license* to match the code (select”MIT“).” /&gt;
 <p class="caption">
-Figure 66: After naming your new repo, check the box to “Initialize this
-repo with a README” and “Add a license” to match the code (select
+Figure 66: After naming your new repo, check the box to *Initialize this
+repo with a README* and *Add a license* to match the code (select
 “MIT”).
 </p>
 
 Your new repo will have a web address similar to
 `https://github.com/USERNAME/practice`.
 
-1.  On your new repo home page, click the Upload Files button, near the
-    middle of the screen, as shown in Figure
+1.  On your new repo home page, click the *Upload Files* button, near
+    the middle of the screen, as shown in Figure
     <a href="#fig:repo-upload-files">67</a>.
 
-<img src="images/08-github/repo-upload-files.png" alt="Click the Upload Files button."  />
+<img src="images/08-github/repo-upload-files.png" alt="Click the *Upload Files* button."  />
 <p class="caption">
-Figure 67: Click the Upload Files button.
+Figure 67: Click the *Upload Files* button.
 </p>
 
 1.  Upload the `index.html` file that you previously downloaded to your
@@ -5206,7 +5209,7 @@ Figure 67: Click the Upload Files button.
     your GitHub repo in your browser, as shown in Figure
     <a href="#fig:repo-drag-index">68</a>. Do not upload `LICENSE` or
     `README.md` because your new repo already contains those two files.
-    Scroll down to click the green Commit Changes button.
+    Scroll down to click the green *Commit Changes* button.
 
 <img src="images/08-github/repo-drag-index.png" alt="Drag-and-drop the file to the upload screen."  />
 <p class="caption">
@@ -5226,12 +5229,12 @@ a Simple Leaflet Map Template](fork-leaflet.html) section of this
 chapter.
 
 1.  Since this was only a `practice` repo, let’s delete it from GitHub.
-    In the repo screen of your browser, click the top-right Settings
-    button, scroll all the way down to the “Danger Zone,” and click
-    “Delete this repository,” as shown in Figure
+    In the repo screen of your browser, click the top-right *Settings*
+    button, scroll all the way down to the *Danger Zone*, and click
+    *Delete this repository*, as shown in Figure
     <a href="#fig:repo-delete">69</a>. GitHub will ask you to type in
     your username and repo name to ensure that you really want to delete
-    the repo, and are not a drunken brownie chef.
+    the repo, to prove you are not a drunken brownie chef.
 
 <img src="images/08-github/repo-delete.png" alt="After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm."  />
 <p class="caption">
@@ -5281,87 +5284,83 @@ push your commits back up to GitHub.
     `https://github.com/USERNAME/leaflet-map-simple`, using your GitHub
     username, to access the repo you created in the [Fork, Edit, and
     Host a Simple Leaflet Map Template](fork-leaflet.html) section of
-    this chapter. Click the “Clone or download” button on the right
-    side, and select “Open in Desktop,” as shown in Figure
+    this chapter. Click the *Clone or download* button on the right
+    side, and select *Open in Desktop*, as shown in Figure
     <a href="#fig:desktop-open">70</a>. The next screen will show a link
     to the GitHub Desktop web page, and you should download and install
     the application.
 
-&lt;img src=“images/08-github/desktop-open.png” alt=“In your GitHub web
-repo, click”Clone or download" and “Open in Desktop” to download and
-install GitHub Desktop." /&gt;
+<img src="images/08-github/desktop-open.png" alt="In your GitHub web repo, click *Clone or download* and *Open in Desktop* to download and install GitHub Desktop."  />
 <p class="caption">
-Figure 70: In your GitHub web repo, click “Clone or download” and “Open
-in Desktop” to download and install GitHub Desktop.
+Figure 70: In your GitHub web repo, click *Clone or download* and *Open
+in Desktop* to download and install GitHub Desktop.
 </p>
 
 1.  When you open GitHub Desktop for the first time, you’ll need to
     connect it to the GitHub web account you previously created in this
-    chapter. On the welcome screen, click the blue “Sign in to
-    GitHub.com” button, as shown in Figure
+    chapter. On the welcome screen, click the blue *Sign in to
+    GitHub.com* button, as shown in Figure
     <a href="#fig:desktop-signin">71</a>, and login with your GitHub
     username and password. On the next screen, GitHub will ask you to
-    click the green “Authorize desktop” button to confirm that you wish
+    click the green *Authorize desktop* button to confirm that you wish
     to connect to your account.
 
-&lt;img src=“images/08-github/desktop-signin.png” alt=“Click the
-blue”Sign in to GitHub.com" button to link GitHub Desktop to your GitHub
-account." /&gt;
+<img src="images/08-github/desktop-signin.png" alt="Click the blue *Sign in to GitHub.com* button to link GitHub Desktop to your GitHub account."  />
 <p class="caption">
-Figure 71: Click the blue “Sign in to GitHub.com” button to link GitHub
+Figure 71: Click the blue *Sign in to GitHub.com* button to link GitHub
 Desktop to your GitHub account.
 </p>
 
 1.  In the next setup screen, GitHub Desktop asks you to configure Git,
     the underlying software that runs GitHub. Confirm that it displays
-    your username and click Continue, as shown in Figure
+    your username and click *Continue*, as shown in Figure
     <a href="#fig:desktop-configure">72</a>.
 
-<img src="images/08-github/desktop-configure.png" alt="Click the Continue button to authorize GitHub Desktop to send commits to your GitHub account."  />
+<img src="images/08-github/desktop-configure.png" alt="Click the *Continue* button to authorize GitHub Desktop to send commits to your GitHub account."  />
 <p class="caption">
-Figure 72: Click the Continue button to authorize GitHub Desktop to send
-commits to your GitHub account.
+Figure 72: Click the *Continue* button to authorize GitHub Desktop to
+send commits to your GitHub account.
 </p>
 
 1.  On the “Let’s Get Started” with GitHub Desktop screen, click on
-    “Your Repositories” on the right side to select your
+    *Your Repositories* on the right side to select your
     `leaflet-map-sample`, and further below click the blue button to
-    “Clone” it to your local computer, as shown in Figure
+    *Clone* it to your local computer, as shown in Figure
     <a href="#fig:desktop-start">73</a>.
 
 &lt;img src=“images/08-github/desktop-start.png” alt=“Select
-your”leaflet-map-simple" repo and click the Clone button to copy it to
+your”leaflet-map-simple" repo and click the *Clone* button to copy it to
 your local computer." /&gt;
 <p class="caption">
-Figure 73: Select your “leaflet-map-simple” repo and click the Clone
+Figure 73: Select your “leaflet-map-simple” repo and click the *Clone*
 button to copy it to your local computer.
 </p>
 
 1.  When you clone a repo, GitHub Desktop asks you to select the Local
     Path, meaning the location where you wish to store a copy of your
     GitHub repo on your local computer, as shown in Figure
-    <a href="#fig:desktop-clone-path">74</a>. Before you click the Clone
-    button, remember the path to this location, since you’ll need to
-    find it later.
+    <a href="#fig:desktop-clone-path">74</a>. Before you click the
+    *Clone* button, remember the path to this location, since you’ll
+    need to find it later.
 
-<img src="images/08-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click Clone."  />
+<img src="images/08-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click *Clone*."  />
 <p class="caption">
 Figure 74: Select the Local Path where your repo will be stored on your
-computer, then click Clone.
+computer, then click *Clone*.
 </p>
 
 1.  On the next screen, GitHub Desktop may ask, “How are you planning to
     use this fork?” Select the default entry “To contribute to the
     parent project,” which means you plan to send your edits back to
-    your GitHub web account, and click Continue, as shown in Figure
+    your GitHub web account, and click *Continue*, as shown in Figure
     <a href="#fig:desktop-fork">75</a>.
 
 &lt;img src=“images/08-github/desktop-fork.png” alt=“If asked how you
 plan to use this fork, select the default”To contribute to the parent
-project" and click Continue." /&gt;
+project" and click *Continue*." /&gt;
 <p class="caption">
 Figure 75: If asked how you plan to use this fork, select the default
-“To contribute to the parent project” and click Continue.
+“To contribute to the parent project” and click *Continue*.
 </p>
 
 1.  Now you have copies of your GitHub repo in two places—in your GitHub
@@ -5380,15 +5379,13 @@ in the Mac Finder). Windows screens will look different.
 1.  Before we can edit the code in your local computer, [download and
     install the Atom Editor application](https://atom.io). Then go to
     your GitHub Desktop screen, confirm that the Current Repository is
-    `leaflet-map-simple`, and click the “Open in Atom” button as shown
+    `leaflet-map-simple`, and click the *Open in Atom* button as shown
     in Figure <a href="#fig:desktop-atom">77</a>.
 
-&lt;img src=“images/08-github/desktop-atom.png” alt=“In GitHub Desktop,
-confirm the Current Repo and click the”Open in Atom" button to edit the
-code." /&gt;
+<img src="images/08-github/desktop-atom.png" alt="In GitHub Desktop, confirm the Current Repo and click the *Open in Atom* button to edit the code."  />
 <p class="caption">
 Figure 77: In GitHub Desktop, confirm the Current Repo and click the
-“Open in Atom” button to edit the code.
+*Open in Atom* button to edit the code.
 </p>
 
 1.  Since Atom Editor is integrated with GitHub Desktop, it opens up
@@ -5408,15 +5405,15 @@ click files to view code. Edit your map title.
 
 1.  After saving your code edit, it’s a good habit to clean up your Atom
     Editor workspace. Right-click on the current Project and select
-    Remove Project Folder in the menu, as shown in Figure
+    *Remove Project Folder* in the menu, as shown in Figure
     <a href="#fig:atom-remove-project">79</a>. Next time you open up
-    Atom Editor, you can right-click to Add Project Folder, and choose
+    Atom Editor, you can right-click to *Add Project Folder*, and choose
     any GitHub repo that you have copied to your local computer.
 
-<img src="images/08-github/atom-remove-project.png" alt="To clean up your Atom Editor workspace, right-click to Remove Project Folder."  />
+<img src="images/08-github/atom-remove-project.png" alt="To clean up your Atom Editor workspace, right-click to *Remove Project Folder*."  />
 <p class="caption">
-Figure 79: To clean up your Atom Editor workspace, right-click to Remove
-Project Folder.
+Figure 79: To clean up your Atom Editor workspace, right-click to
+*Remove Project Folder*.
 </p>
 
 1.  Now that you’ve edited the code for your map on your local computer,
@@ -5446,11 +5443,11 @@ Desktop.
 
 1.  Go to GitHub Desktop, confirm that your Current Repo is
     `leaflet-map-simple`, and you will see your code edits summarized on
-    the screen. In this two-step process, first click the blue “Commit
-    to Master” button at the bottom of the page to save your edits to
+    the screen. In this two-step process, first click the blue *Commit
+    to Master* button at the bottom of the page to save your edits to
     your local copy of your repo. (If you edit multiple files, GitHub
     Desktop will ask you write a summary of your edit, to help you keep
-    track of your work.) Second, click the blue “Push origin” button to
+    track of your work.) Second, click the blue *Push origin* button to
     transfer those edits to the parent copy of your repo on your GitHub
     web account. Both steps are shown in Figure
     <a href="#fig:desktop-commit-push">81</a>.
@@ -5458,8 +5455,8 @@ Desktop.
 <iframe src="images/08-github/desktop-commit-push.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 81: In this two-step process, click “Commit to Master,” then
-click “Push origin” to save and copy your edits from your local computer
+Figure 81: In this two-step process, click *Commit to Master*, then
+click *Push origin* to save and copy your edits from your local computer
 to your GitHub web account, as shown in this [animated
 GIF](https://handsondataviz.org/images/08-github/desktop-commit-push.gif).
 </p>
@@ -5487,11 +5484,11 @@ web.
 Tip: Atom Editor has many built-in features that recognize and help you
 edit code, plus the option to install more
 [packages](https://atom.io/packages) in the Preferences menu. One
-helpful built-in tool is Edit &gt; Toggle Comments, which automatically
-detects the coding language and converts the selected text from
-executable code to non-executed code comments. Another built-in tool is
-Edit &gt; Lines &gt; Auto Indent, which automatically cleans up selected
-text or an entire page of code for easier reading.
+helpful built-in tool is *Edit &gt; Toggle Comments*, which
+automatically detects the coding language and converts the selected text
+from executable code to non-executed code comments. Another built-in
+tool is *Edit &gt; Lines &gt; Auto Indent*, which automatically cleans
+up selected text or an entire page of code for easier reading.
 
 GitHub also offers a powerful platform for collaborative projects, such
 as *Hands-On Data Visualization*. As co-authors, we composed the text of
@@ -5502,7 +5499,7 @@ where he worked on sections and “pushed” his commits (aka edits) back to
 GitHub. At the same time, Ilya “pulled” the latest version and “pushed”
 his commits back to GitHub as well. Both of us see the commits that each
 other made, line-by-line in green and red (showing additions and
-deletions), by selecting the GitHub repo “Code” tab and clicking on one
+deletions), by selecting the GitHub repo *Code* tab and clicking on one
 of our commits, as shown in Figure
 <a href="#fig:compare-commits">82</a>.
 
@@ -8338,16 +8335,25 @@ the same location.
 
 -   Make sure that you are pointing to the correct URL for your
     published web page, in the format shown above.
+
 -   Be patient. During busy periods on GitHub, it may take up to 1
     minute for new content to appear in your browser.
--   **MOVE UP** Do a “hard refresh” to [bypass any saved content in your
-    browser
-    cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
-    -   Ctrl + F5 (most Windows-Linux browsers)
+
+-   **MOVE UP** If your map does *not* appear right away, wait up to 30
+    seconds for GitHub Pages to finish processing your edits. Then do a
+    “hard refresh” to [bypass any saved content in your browser
+    cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache)
+    and re-download the entire web page from the server, using one of
+    these key combinations:
+
+    -   Ctrl + F5 (most browsers for Windows or Linux)
     -   Command + Shift + R (Chrome or Firefox for Mac)
     -   Shift + Reload button toolbar (Safari for Mac)
+    -   Ctrl + Shift + Backspace (on Chromebook)
+
 -   Test the link to your published web page in a different browser. If
     you normally use Chrome, try Firefox.
+
 -   On rare occasions, the GitHub service or GitHub Pages feature may be
     down. Check
     <a href="https://status.github.com" class="uri">https://status.github.com</a>.
@@ -8949,6 +8955,10 @@ sample
 PDF](https://handsondataviz.org/data/ct-dph-covid-2020-05-31.pdf), and
 avoid linking words such as “here” or “this web page.”
 
+When instructions refer to software menu items, use italics. Example:
+Select *File &gt; Make a Copy* to save your own version to your Google
+Drive.
+
 For lists, always insert a blank line *before* the items, unless they
 appear directly after hashtag header.
 
@@ -9082,30 +9092,44 @@ View the underlying source code to understand how this page was composed
 at:
 <a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a>
 
-Create high-resolution color static images in .jpg or .png format, and
-animated .gif files, and save them into the `images` subfolder by
-chapter. Make sure that color images include high contrast and/or
-shading, because they will be converted to grayscale by the publisher
-for the print book. Write file names in lowercase with dashes (not
-spaces) and begin with keyword of relevant section to keep related
-images grouped together. Despite being in separate folders, avoid
-duplicate image file names across the book. Avoid numbering images since
-they may not match the final sequence. Add `-original` to the end of the
-file name prior to resizing or adding more text or artwork.
+Create high-resolution color static images in .png or .jpg format, and
+save them into the `images` subfolder by chapter. Make sure that color
+images include high contrast and/or shading, because they will be
+converted to grayscale by the publisher for the print book. Write file
+names in lowercase with dashes (not spaces) and begin with keyword of
+relevant section to keep related images grouped together. Despite being
+in separate folders, avoid duplicate image file names across the book.
+Avoid numbering images since they may not match the final sequence. Add
+`-original` to the end of the file name prior to resizing or adding more
+text or artwork.
 
-Use Photoshop or a similar photo-editing tool (*not* Preview) to add any
-additional text or artwork if desired. Try to maintain a high resolution
-(300 dpi) and reduce size if desired to fit into the HTML book (measured
-in pixels) and PDF book (measured in inches). Save into the same folder
-with the same file name, minus `-original`, like this:
+Capture original screenshots with tight cropping on Retina monitor at
+144 ppi. When the original screenshot is larger than approximately 350px
+on either side, we need to create a copy and modify it to fit both the
+HTML and PDF versions, since the original will appear too large in the
+latter. Place the copy in Photoshop or a similar photo-editing tool
+(*not* Preview) and use Image Size settings double its resolution (to
+288 ppi), but reduce the pixel size by 50 percent.
+
+![Use Photoshop or similar tool to double the resolution but reduce
+image size by 50 percent](images/16-bookdown/photoshop-image.png)
+
+If necessary, the image size can be reduced further, since this is what
+matters most for the HMTL version, while the PDF version is simply a
+mockup for ORM editorial use. Add any additional artwork or text if
+desired to this copy, and save into the same folder with the same file
+name, minus `-original`, like this:
 
     images/05-chart/design-no-junk-original.png
     images/05-chart/design-no-junk.png
 
 When inserting image filenames into the text, use the version minus
-`-original`. If creating images to appear as the same size in sequence,
-add a code-comment with the image width, height, and resolution as a
-reminder to make others match up, like this:
+`-original`. ORM will use the original version for its book production
+workflow.
+
+If creating images to appear as the same size in sequence, add a
+code-comment with the image width, height, and resolution as a reminder
+to make others match up, like this:
 
 `<!-- Images below are 200x200 at 300 resolution -->`
 
@@ -9206,7 +9230,9 @@ map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 
 ### Demo: R code-chunk for animated GIF in HTML and static image in PDF
 
-…as shown in Figure <a href="#fig:sheets-option-drag">94</a>.
+When appropriate, create animated GIF files using Camtasia, and add
+fade-to-black to mark the end-point in the looped version. TODO: ADD
+this here …as shown in Figure <a href="#fig:sheets-option-drag">94</a>.
 
 <iframe src="images/16-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>

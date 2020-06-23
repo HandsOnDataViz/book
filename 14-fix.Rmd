@@ -65,10 +65,15 @@ These URLs are NOT case-sensitive, which means that `https://github.com/USERNAME
 ##### My simple GitHub web page does not appear {-}
 - Make sure that you are pointing to the correct URL for your published web page, in the format shown above.
 - Be patient. During busy periods on GitHub, it may take up to 1 minute for new content to appear in your browser.
-- **MOVE UP** Do a "hard refresh" to [bypass any saved content in your browser cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
-  - Ctrl + F5 (most Windows-Linux browsers)
+- **MOVE UP**
+If your map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing your edits. Then do a "hard refresh" to [bypass any saved content in your browser cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
+
+  - Ctrl + F5 (most browsers for Windows or Linux)
   - Command + Shift + R (Chrome or Firefox for Mac)
   - Shift + Reload button toolbar (Safari for Mac)
+  - Ctrl + Shift + Backspace (on Chromebook)
+
+
 - Test the link to your published web page in a different browser. If you normally use Chrome, try Firefox.
 - On rare occasions, the GitHub service or GitHub Pages feature may be down. Check <https://status.github.com>.
 

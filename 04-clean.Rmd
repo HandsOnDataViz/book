@@ -168,20 +168,12 @@ and quoted spaces (`" "`), or spaces with commas (`", "`),
 or a dash with spaces on both sides (`" - "`), or anything
 else as term separators.
 
-For example, if a spreadsheet contained four columns,
-*Address, City, State, and Zip* (columns A-D, see Figure \@ref(fig:sheets-concat),
-then in column E insert a new header named *Location* and a formula in this format
-(note that spaces before and after ampersands do not make a difference):
+For example, imagine that a spreadsheet contains an address that is separated into four columns---*Address, City, State,* and *Zip*---as shown in columns A-D in Figure \@ref(fig:sheets-combine). In column E, you can add new header named *Location* and insert a formula in this format, to combine the items using ampersands (`&`) and separating them with quoted spaces (`" "`), like this: `=A2&" "&B2&" "&C2&" "&D2`
 
-```
-=A2 & " " & B2 & " " & C2 & " " & D2
-```
+(ref:sheets-combine) Use ampersands to combine items and separate them with spaces.
 
-(ref:sheets-concat) Use ampersands to concatenate cell values,
-with or without spaces around ampersands.
-
-```{r sheets-concat, fig.cap="(ref:sheets-concat)"}
-knitr::include_graphics("images/04-clean/sheets-concat.png")
+```{r sheets-combine, fig.cap="(ref:sheets-combine)"}
+ knitr::include_graphics("images/04-clean/sheets-combine.png")
 ```
 
 You are now able to split data to columns using custom separators, and
@@ -195,7 +187,7 @@ Microsoft Excel, or similar packages.
 It sometimes happens that the dataset you are interested in is only available as a PDF document.
 Don't despair, you can *likely* use Tabula to extract tables and save them as CSV files.
 
-Tabula is a free tool that runs on Java, and is available for Mac, Windows, and Linx computers. It runs on your
+Tabula is a free tool that runs on Java, and is available for Mac, Windows, and Linux computers. It runs on your
 local machine and does not send your data to the cloud, so you can also use it for sensitive documents.
 
 Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based.

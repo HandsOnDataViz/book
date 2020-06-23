@@ -109,6 +109,8 @@ Insert an embedded link to [O'Reilly](https://www.oreilly.com/). This appears as
 
 Also, embed the link directly in the sentence, such as [download this sample PDF](https://handsondataviz.org/data/ct-dph-covid-2020-05-31.pdf), and avoid linking words such as "here" or "this web page."
 
+When instructions refer to software menu items, use italics. Example: Select *File > Make a Copy* to save your own version to your Google Drive.
+
 For lists, always insert a blank line *before* the items, unless they appear directly after hashtag header.
 
 - unordered
@@ -202,16 +204,23 @@ When writing cross-references in the text, the [O'Reilly Style Guide](http://ore
 ## Images {- #images}
 View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd
 
-Create high-resolution color static images in .jpg or .png format, and animated .gif files, and save them into the `images` subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add `-original` to the end of the file name prior to resizing or adding more text or artwork.
+Create high-resolution color static images in .png or .jpg format, and save them into the `images` subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence. Add `-original` to the end of the file name prior to resizing or adding more text or artwork.
 
-Use Photoshop or a similar photo-editing tool (*not* Preview) to add any additional text or artwork if desired. Try to maintain a high resolution (300 dpi) and reduce size if desired to fit into the HTML book (measured in pixels) and PDF book (measured in inches). Save into the same folder with the same file name, minus `-original`, like this:
+Capture original screenshots with tight cropping on Retina monitor at 144 ppi. When the original screenshot is larger than approximately 350px on either side, we need to create a copy and modify it to fit both the HTML and PDF versions, since the original will appear too large in the latter. Place the copy in Photoshop or a similar photo-editing tool (*not* Preview) and use Image Size settings double its resolution (to 288 ppi), but reduce the pixel size by 50 percent.
+
+![Use Photoshop or similar tool to double the resolution but reduce image size by 50 percent](images/16-bookdown/photoshop-image.png)
+
+If necessary, the image size can be reduced further, since this is what matters most for the HMTL version, while the PDF version is simply a mockup for ORM editorial use. Add any additional artwork or text if desired to this copy, and save into the same folder with the same file name, minus `-original`, like this:
 
 ```
 images/05-chart/design-no-junk-original.png
 images/05-chart/design-no-junk.png
 ```
 
-When inserting image filenames into the text, use the version minus `-original`. If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:
+When inserting image filenames into the text, use the version minus `-original`. ORM will use the original version for its book production workflow.
+
+
+If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:
 
 `<!-- Images below are 200x200 at 300 resolution -->`
 
@@ -270,7 +279,7 @@ if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io
 ```
 
 ### Demo: R code-chunk for animated GIF in HTML and static image in PDF {-}
-...as shown in Figure \@ref(fig:sheets-option-drag).
+When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. TODO: ADD this here ...as shown in Figure \@ref(fig:sheets-option-drag).
 
 (ref:sheets-option-drag) Caption here, with embedded link to the [animated GIF](https://handsondataviz.org/images/16-bookdown/sheets-option-drag.gif).
 

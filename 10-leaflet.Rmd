@@ -579,6 +579,12 @@ Open the link to your live map in a new browser tab and refresh to see your chan
 #### TODO {-}
 Add documentation for new features added in 2020
 
+Add links to your text in the Google Sheet
+
+Add line breaks to your text in the Google Sheet
+
+TODO to code: Add Scroll Down text and symbol after the subtitle
+
 Markers
 
 I added a new column to the Chapter tab called “Marker”. It has a dropdown with currently three options: Numerated (defaults to that, even if empty value), Plain (with no number), and No marker. The latter is what you want.
@@ -603,6 +609,19 @@ If googleDocURL variable does not exist (eg you delete the file) or is an empty 
 Otherwise, it reads from the google sheet.
 https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35
 When data is read from a .CSV, it links that in the attribution (https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396)
+
+Modify your Style Sheet
+
+To adjust title size:
+In GitHub, go to css/styles.css file, scroll all the way to the bottom, and adjust font-size values (or just use the links below).
+See your title around line 170, and change font-size up or down....
+
+To add a horizontal line, you need to be a bit creative (see screenshot attached)! Break down text in your Description with the following code for the horizontal line:
+
+`<span style="display:block;width:100%;height:1px;background-color: silver; margin: 20px 0;"></span>`
+
+When you copy-paste this snippet, the straight quotation marks do not turn into curly marks, otherwise it won’t work.
+
 
 #### Learn more {-}
 To solve problems, see [Fix Common Code Errors](fix-code.html) section of the appendix.

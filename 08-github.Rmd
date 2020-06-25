@@ -1,4 +1,7 @@
 # Edit and Host Code with GitHub {#github}
+
+**TODO:** GitHub recently updated its web interface, so need to redo selected screenshots. Also, GitHub announced that it will change the default branch from "master" to "main," so update text and images when done.
+
 In the first half of this book, you created interactive charts and maps on free drag-and-drop tool platforms created by companies such as Google and Tableau. These platforms are great for beginners, but their pre-set tools limit your options for designing and customizing your visualizations, and they also require you to depend upon their web servers and terms of service to host your data and work products. If these companies change their tools or terms, you have little choice in the matter, other than deleting your account and switching services, which means that your online charts and maps would appear to audiences as dead links.
 
 In the second half of this book, get ready to make a big leap---and we'll help you through every step---by learning how to copy, edit, and host code templates. These templates are pre-written software instructions that allow you to upload your data, customize its appearance, and display your interactive charts and maps on a web site that you control. No prior coding experience is required, but it helps if you're *code-curious* and willing to experiment with your computer.
@@ -85,8 +88,6 @@ Let's start by making one simple change to prove to everyone that you're now edi
 ```
 
 In the language of coders, we "commit" our changes in the same way that most people "save" a document, and later you'll see how GitHub tracks each code commit so that you can roll them back if needed. By default, GitHub inserts a short description of your commit as "Update index.html", and you have the option to customize that description when you start making lots of commits to keep track of your work. Also by default, GitHub commits your changes directly to the `master` branch of your code, which we'll explain later.
-
-**TODO:** At this writing, GitHub is considering changing the default branch from "master" to "main". Stay tuned for updates!
 
 Now let's publish your edited map to the public web to see how it looks in a web browser. GitHub not only stores open-source code, but its built-in [GitHub Pages](https://pages.github.com/) feature allows you to host a live online version of your HTML-based code, which anyone with the web address can view in their browser. While GitHub Pages is free to use, there are [some restrictions on size and content](https://help.github.com/en/github/working-with-github-pages/about-github-pages) and it is not intended for running an online business or commercial transactions. But one advantage of code templates is that you can host them on any web server you control. Since we're already using GitHub to store and edit our code template, it's easy to turn on GitHub Pages to host it online.
 

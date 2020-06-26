@@ -1,5 +1,53 @@
 # Improve Your Spreadsheet Skills {#spreadsheet}
-Spreadsheets are wonderful tools to organize data into tables of rows and columns. With a spreadsheet, you can sort, filter, calculate, aggregate, and reorganize information to help you find the stories buried inside.
+Before we begin to design data visualizations, let's bring our spreadsheet skills up to speed. The interactive charts and maps that we'll construct later this book are built on data tables. We normally open up data tables with spreadsheet tools, such as Google Sheets or Microsoft Excel, that display numbers or text in rows and columns, where each box in the grid called a "cell".
+
+In this chapter, you'll learn (or refresh) your skills in using spreadsheet tools for basic tasks, such as sharing, sorting, and making calculations with your data.
+
+normally see as rows and columns of numbers or text. First, you need to learn or refresh your skills in using spreadsheet tools to sort, pivot, and match up tables
+
+
+While teaching data visualization over the past decade, we noticed that many of our students would benefit from learning some specific spreadsheet skills, since these have not been regularly taught in most schools or colleges or workplaces. So we added this introductory chapter to fill this common gap. Even if you *think* you're familiar with spreadsheet basics, we strongly recommend reviewing the
+
+Goal is to help you uncover the stories buried inside your data.
+
+
+ since these are not regularly taught, and
+
+
+We added this chapter on spreadsheet
+
+
+We added this chapter to this introductory book because we saw that many first-time  
+
+While teaching people to create their first data visualizations, we've noticed that many
+
+
+Warning: Several tools in this book will not work properly if your computer does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac computer operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
+
+(ref:mac-file-extensions) On a Mac, go to Finder > Preferences > Advanced and check the box to *Show all filename extensions*.
+
+```{r mac-file-extensions, fig.cap="(ref:mac-file-extensions)"}
+ knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
+```
+
+
+Spreadsheet tools
+
+Data formats
+
+Skills you'll learn in this chapter....
+
+Warning: To follow the steps in this book, we recommend either a desktop or laptop computer, running either the Mac or Windows or Linux operating system, with an internet connection and a modern web browser such as Chrome, Firefox, Safari, or Edge. Another good option is a Chromebook laptop, which enables you to complete *most* of the steps in this book, and we'll point out any limitations in specific chapters. While it's possible to use a tablet or smartphone device, we do not recommend it because you cannot follow all of the steps, and you'll also get frustrated with the small screen and perhaps throw your device (or this book) across the room, and possibly hit someone else in the head. Ouch! We are not responsible for injuries caused by flying objects.
+
+Tip: If you're working on a laptop, consider buying or borrowing an external mouse that can plug into your machine. We've met several people who found it much easier to click, hover, and scroll with a mouse rather than a laptop's built-in trackpad.
+
+Tip: If you're new to working with computers---or teaching new users with this book---consider starting with [mouse exercises](http://www.pbclibrary.org/mousing/mousercise.htm). All of the tools in this book assume that users already know how to click tiny buttons, hover over links, and scroll web pages, but rarely are these skills taught, and everyone needs to learn them at some point in our lives.
+
+TODO: I added the tips above because these are huge yet surmountable obstacles for many people I've worked with, especially older generations and incarcerated people.
+
+
+
+This introductory online book features Google Sheets because it's a free and easy-to-learn tool for collaborating and sharing data with others. The basic spreadsheet methods shown here are very similar across all spreadsheet tools. But advanced users may need more complex tools to manage very large datasets, or relational databases, or to perform deeper analysis.
 
 Four common spreadsheet tools:
 
@@ -16,7 +64,7 @@ Which spreadsheet tool should you use? That depends on how you wish to share and
 - If you need to **protect private data**, avoid online tools and use any desktop spreadsheet.
 - If you need to **share live data** with others, use Google Sheets.
 
-This introductory online book features Google Sheets because it's a free and easy-to-learn tool for collaborating and sharing data with others. The basic spreadsheet methods shown here are very similar across all spreadsheet tools. But advanced users may need more complex tools to manage very large datasets, or relational databases, or to perform deeper analysis.
+
 
 If you're new to spreadsheets or want to refresh your skills, see the following chapters:
 
@@ -30,7 +78,6 @@ If you're new to spreadsheets or want to refresh your skills, see the following 
 - [Match Data with VLookup](vlookup.html)
 - [Collect and Share Survey Data with Google Forms](forms.html)
 
-Enroll in our free online course] which offers more spreadsheet exercises and opportunities to interact with instructors and other learners.
 
 ## Upload Files and Convert to Google Sheets {- #upload}
 
@@ -308,3 +355,11 @@ VLOOKUP(search_key, range, index, [is_sorted])
 ## Collect and Share Data with Google Forms {- #forms}
 
 TODO: write simple tutorial for Google Forms and explain how to share the spreadsheet; also mention other web form services
+
+### Summary {-}
+
+TODO: write summary
+
+Also refer to more additional spreadsheet skills elsewhere in the book.
+[Chapter 4: Clean Up Messy Data](clean.html) shows how to find and replace, split data into columns, and combine columns of data.
+[Chapter 11: Transform Your Map Data](transform.html) shows how to geocode addresses, pivoting address points into polygons, and normalize data.

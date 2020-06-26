@@ -118,13 +118,15 @@ If you upload new data to your Chart.js code template on GitHub Pages, and it do
 
 TODO: Our Chart.js templates appear blank (just text, no chart) when viewed in the local browser. But Leaflet maps appear mostly or partially complete. Why is this, and how should we inform readers about this? Discuss with Ilya
 
-#### Problems with Mac Computers {-}
+#### Cannot see filename extensions: a common Mac problem {-}
 
-##### No file extensions {-}
+Several tools in this book will not work properly if your computer does not display the filename extensions, meaning the abbreviated file format that appears after the period, such as `data.csv` or `map.geojson`. The Mac computer operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions2).
 
-Several tools in this book will not work properly if your Mac Finder does not display file extensions. In other words, every file should include a period followed by several letters (such as data.csv and map.geojson). If you do not see these extensions at the end of each file name, then go to Finder > Preferences > Advanced and check the box to turn them on, as show below:
+(ref:mac-file-extensions2) On a Mac, go to Finder > Preferences > Advanced and check the box to *Show all filename extensions*.
 
-![Screenshot: Checkbox to show filename extensions](images/14-fix/mac-finder-filename-extensions.png)
+```{r mac-file-extensions2, fig.cap="(ref:mac-file-extensions2)"}
+ knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
+```
 
 #### Solve Problems with Browser Developer Tools {-}
 Peek inside any website and view the web code under the hood with the browser developer tools.

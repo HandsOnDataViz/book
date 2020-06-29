@@ -1,495 +1,948 @@
 # Transform Your Map Data {#transform}
-Interactive web maps are made up of different layers, such as background basemaps, colored or shaded polygons, and/or colored point markers. This chapter describes how to transform your data into layers that you can upload into online map tools and templates. Specifically, you will learn how to:
 
-- [Geocode locations into coordinates with US Census or Google](geocode.html)
-- [Pivot address-level point data into polygon data](pivot-point-to-polygon.html)
-- [Normalize data to create more meaningful polygon maps](normalize.html)
-- [Convert map data](convert-geojson.html) with [GeoJSON.io](geojsonio.html) or [Mapshaper.org](mapshaper.html)
-- [Join spreadsheets and polygon boundaries with MapShaper.org](mapshaper.html)
+All maps, including interactive web maps, are made up of different layers.
+These are background basemaps, colored or shaded polygons (also known as *choropleth* layers), lines,
+and point data that are often represented as markers.
 
-Enroll in our free online course **TO DO add link**, which introduces these topics in the brief video below, and offers more exercises and opportunities to interact with instructors and other learners.
+In this chapter, we will look at multiple ways to convert and edit geospatial data
+to create layers (files) that you can use in your favorite mapping tools.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3sjjVEJY4MY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+We will begin by looking at the process of geocoding, or transforming human-friendly
+address lines into points that can be plotted on the map (see Figure \@ref(fig:transform-data) for inspiration).
+We will then talk about polygons and why you should normalize your data before creating choropleth maps.
+These map transformations happen inside spreadsheets, so you won't directly deal
+with map data until you are halfway through the chapter.
+
+(ref:transform-data) To map addresses, you need to geocode them first.
+
+```{r transform-data, fig.cap="(ref:transform-data)"}
+knitr::include_graphics("images/11-transform/transform-data.png")
+```
+
+Before you can dive into creating shapes and dealing with boundaries in the map, we will
+introduce various file formats (most notably GeoJSON) and talk about geospatial data in general.
+You will learn that map data can be raster and vector, that geospatial data consists of location
+and attribute components, and how GeoJSON is different from Shapefiles and other geographical data formats.
+
+You will then get a chance to draw your own map layers on top of satellite imagery
+using [GeoJson.io](https://geojson.io), and learn to simplify, crop, and join spreadsheet and geospatial data in [Mapshaper](https://mapshaper.org).
+Both are powerful, web-based open-source tools that can substitute ArcGIS and QGIS for certain common tasks.
+
+By the end of this chapter, you should feel much more confident navigating the
+overwhelming world of geospatial data.
+
 
 ## Geocode Locations into Coordinates with US Census or Google {- #geocode}
-Many free map tools geocode locations by placing them on a map, such as [Google My Maps tutorials](mymaps.html) in this book. But those tools typically do not allow you to easily extract the latitude-longitude coordinates for each point.
 
-We created two free Google Sheets Geocoder scripts that have several advantages:
+Before addresses can be mapped, they need to be geocoded.
+**Geocoding** is a process of transforming a human-readable address, such as *300 Summit St, Hartford, CT*
+into a latitude-longitude pair, such as *41.747,-72.692*. These numbers are x- and y-coordinates
+that maps understand.
 
-- convert locations (Hartford CT) or addresses (300 Summit St, Hartford CT) into latitude-longitude coordinates (41.748, -72.692) inside your Google Sheet
-- show the location found in the geocoding database, and match quality, to review your results
-- convert US addresses into US Census geography, such as census tracts, block groups, and blocks
+If you have just a handful of addresses, it might be faster to use Google Maps to geocode them.
+Search for an address, right-click on the map and select *What's here?*.
+A popup window with latitude and longitude values will appear, and you can record them
+in your spreadsheet. But what if you need to geocode dozens, hundreds, or even thousands of addresses?
 
-As with any geocoding service, accuracy is not guaranteed. Inspect your results in the Found and Quality columns.
+In this section, we will look at two ways to geocode lists of addresses: using our custom-built
+[Google Sheets Geocoder](https://github.com/HandsOnDataViz/google-sheets-geocoder), which
+lets you choose between Google Geocoder (available pretty much worldwide) and the US Census Geocoder suitable for US addresses,
+and a stand-alone US Census Geocoder that lets you upload address files and get geocoded results.
 
-#### Google Sheets Geocoder: US Census or Google {-}
-- Geocode locations into latitude, longitude, with source and match quality, inside a Google Sheet
-- Go to Google Sheet template, sign in to your account, and File > Make a Copy to your Google Drive <https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0>
-- Insert locations, select 6 columns, and select Geocoder menu: US Census or Google (limit 1000 daily per user)
-- Google Sheets script will ask for permission to run the first time
-- Note: The [Leaflet Maps with Google Sheets template](leaflet-maps-with-google-sheets.html) in this book includes this Geocoder script.
+#### Geocode addresses with Google Sheets Geocoder {-}
 
-```{r googlesheets-geocoder, fig.cap="Screencast: Google Sheets Geocoder: US Census or Google"}
-if(knitr::is_html_output()) knitr::include_url("images/11-transform/google-sheets-geocoder-census-google.gif") else knitr::include_graphics("images/placeholder.jpg")
+The Google Sheets Geocoder script lives inside a [Google Sheet](https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0) that you can copy to your own Google Drive
+(you don't need editing access, just go to *File > Make a copy*).
+
+The spreadsheet contains six columns. Populate the first column, *Location*, with your addresses.
+The remaining five columns will be filled by the geocoding script. Select all six columns,
+go to *Geocoder* in the menu, and choose which geocoding utility to use, like is shown in Figure \@ref(fig:google-sheets-geocoder).
+
+(ref:google-sheets-geocoder) Put addresses in the first column, and use Geocoder to fill in the remaining five.
+
+```{r google-sheets-geocoder, fig.cap="(ref:google-sheets-geocoder)"}
+if(knitr::is_html_output()) knitr::include_url("images/11-transform/google-sheets-geocoder-census-google.gif", height="280px") else knitr::include_graphics("images/11-transform/google-sheets-geocoder.png")
 ```
 
-#### Google Sheets Geocoder: US Census Geographies {-}
-- Geocode US addresses into latitude, longitude, GeoID, census tract, inside a Google Sheet
-- Go to Google Sheet template, sign in to your account, and File > Make a Copy to your Google Drive
-https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0
-- Insert locations, select 8 columns, and select Geocoder menu: US Census 2010 Geographies
-- Google Sheets script will ask for permission to run the first time
+Note: If your address data is split into multiple columns (such as *Street*, *City*, and *State*),
+revisit [Clean Data with Spreadsheets](clean-spreadsheets.html) section to remind yourself
+how to "glue" multiple cells into one .
 
-```{r googlesheets-geocoder2, fig.cap="Screencast: Google Sheets Geocoder: US Census Geographies"}
-if(knitr::is_html_output()) knitr::include_url("images/11-transform/google-sheets-geocoder-census-geographies.gif") else knitr::include_graphics("images/placeholder.jpg")
+If you run the script for the first time, Google Sheets may ask for permission or warn that the script is not safe.
+Disregard this message. The code is open-source and is available [on GitHub](https://github.com/HandsOnDataViz/google-sheets-geocoder),
+so you or your programmer friend can make sure it doesn't steal your personal data.
+
+Once the script finishes executing, you will get a pop-up notification that will tell you how many addresses
+were successfully geocoded, and how many failed. Inspect *Found* and *Quality* columns to ensure the geocoder matched your addresses correctly.
+Then look at the failed addresses and see if you can spot problems with them. For tops about
+using Google geocoder, see [documentation](https://developers.google.com/maps/faq#geocoder_queryformat).
+
+Note: The Geocoder plugin is a small Apps Script program that is connected to your Google sheet.
+It sends your addresses to either [US Census Geocoder](https://geocoding.geo.census.gov/geocoder),
+or [Google Geocoding API](https://developers.google.com/apps-script/reference/maps/geocoder),
+and gets geocoded results as a response.
+
+
+#### Geocode US addresses to census tracts with Google Sheets Geocoder {-}
+
+You can use a modified version of the Google Sheets Geocoder, available in
+[its own spreadsheet](https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0),
+to assign census tracts and GeoIDs to addresses within the United States.
+
+A GeoID is a unique identifier of a place according to the US Census. A sample 15-digit
+GeoID, `090035245022001`, consists of a state (09), followed by county (003),
+followed by census tract (524502, or more conventional 5245.02),
+followed by a census block group (2), and finally a census block (001).
+
+Make a copy of the [template spreadsheet](https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0)
+into your own Google Drive by going to *File > Make a copy*.
+
+You only need to populate the first column, *Location*. The rest seven columns
+will be populated by the Geocoder. Similar to the previous template, select all eight columns,
+and go to *Geocoder > US Census 2010 Geographies*, like is shown in Figure \@ref(fig:google-sheets-geocoder-census).
+
+If you run this script for the first time, Google Sheets will ask you for permission to run,
+and will possibly warn you that this script is unsafe. Once again, you shouldn't worry. The plugin
+is open-source and you can inspect it to make sure it doesn't steal or retain your personal data.
+
+(ref:google-sheets-geocoder-census) Put addresses in the first column, and use Geocoder to fill in the remaining seven.
+
+```{r google-sheets-geocoder-census, fig.cap="(ref:google-sheets-geocoder-census)"}
+if(knitr::is_html_output()) knitr::include_url("images/11-transform/google-sheets-geocoder-census-geographies.gif", height="330px") else knitr::include_graphics("images/google-sheets-geocoder-census.png")
 ```
 
-##### About US Census 15-character GeoID {-}
-- Make sure that column G is formatted as text (to preserve leading zeros), not number
-- Break down a sample GeoID: 090035245022001
-  - state = 09
-  - county = 003
-  - tract = 524502 = 5245.02
-  - block group = 2
-  - block = 001
 
-##### How it works {-}
-The Google Sheet Geocoder runs from a script insert in the Google Sheet, which calls one of two free geocoding services:
+#### Insert Google Sheets Geocoder script into your own spreadsheet {-}
 
-- US Census Geocoder https://geocoding.geo.census.gov/geocoder. See more detailed documentation at http://www.census.gov/geo/maps-data/data/geocoder.html
-- Geocode with Google Apps: The Maps Service of Google Apps allows users to geocode street addresses without using the Google Maps API, with a limit of 1,000 searches daily per user, https://developers.google.com/apps-script/reference/maps/geocoder
+If you don't want to make a copy of the Google Sheet templates from the previous examples,
+you can insert the open-source Geocoder scripts into your own Google sheet.
 
-##### How to insert the Geocoder Script into any Google Sheet {-}
-If you do not wish to File > Make a Copy of the Google Sheet templates above, you can insert the open-source Geocoder Scripts into your own Google Sheet:
+1. In your personal Google spreadsheet, go to *Tools > Script Editor*. This should open up a new tab.
+1. Replace the empty `function myFunction()` with the contents of `geocoder-census-google.gs` from the plugin's [repo on GitHub](https://github.com/handsondataviz/google-sheets-geocoder).
+1. In Script Editor, click *File > Save*. An *Edit Project Name* window will pop up, where you should give the script a meaningful name, such as "Geocoder".
+1. Close the Script Editor, and go back to your spreadsheet. Refresh and wait for a couple of seconds. *Geocoder* should appear in the menu.
 
-- Go to [Google Sheets Geocoder repo on GitHub](https://github.com/handsondataviz/google-sheets-geocoder)
-- Sign in to your Google Sheets, then select Tools > Script Editor
-- File > Create New Script File
-- Open and copy a script (such as geocoder-census-google.gs) and paste into your Script Editor
-- Save and rename to geocoder-census-google.gs
-- Refresh your Google Sheet and look for new Geocoder menu
 
-##### TODO {-}
-- Also describe and link back how to split columns to form multi-columns addresses
-- also describe and link back to how to unify columns to form a one-column address
-- add this https://developers.google.com/maps/faq#geocoder_queryformat
+#### Geocode up to 10,000 US addresses with US Census Geocoder {-}
 
-#### See also: Batch upload to US Census {-}
-- Available at US Census Geocoder https://geocoding.geo.census.gov/geocoder/
-- Upload CSV table with up to 1000 rows for faster processing, in this format, WITHOUT column headers:
+One of the fastest ways to geocode up to 10,000 US addresses at a time is to create
+a CSV file with 5 columns and upload it to Address Batch form of the [US Census Geocoder](https://geocoding.geo.census.gov/geocoder/locations/addressbatch?form).
+In the menu on the left-hand side, you can switch from *Find Locations* to *Find Geographies*
+if you wish to include census tract and GeoID data in addition to the coordinates.
 
-| AnyID  | Street | City | State | Zip   |
-| :----- | :----- | :--- | :---- | : --- |
-| 1      | 300 Summit St  | Hartford | CT | 06106 |
+Your CSV file needs to be formatted the following way, *without the header row*:
 
-- Find Locations using > Address Batch (returns latitude, longitude coordinates)
-- Find Geographies using > Address Batch (returns lat, lng, census geographies)
-- Limitations:
-  - Inputs and outputs have no column headers, which may confuse novices
-  - Large batches may be delayed a few minutes during peak time periods
-  - Unmatched addresses need to be manually corrected and re-submitted
+```
+| 1 | 300 Summit St | Hartford | CT | 06106 |
+| 2 | 1012 Broad St | Hartford | CT | 06106 |
+```
 
-#### Try it: Batch Upload to US Census {-}
-1) Right-click and Save this CSV file to your computer: [sample-addresses-50](sample-addresses-50.csv). CSV means comma-separated values, a generic spreadsheet format that most data tools can easily open.
+Here, the first column is unique IDs (make sure it is unique to each address, but they don't have to
+start at 1 or be in an increasing order). The second column is street address. The third column is city.
+Column four is state, and the final fifth column is zip code.
 
-2) Use any spreadsheet tool to organize your address data into five columns: any ID number, street, city, state, zip code. **Remove all column headers**.
+Upload the file using the *Browse...* button of *Select Address File*,
+use *Public_AR_Current* Benchmark, and hit *Get Results*.
 
-  ![](images/11-transform/address-no-column-headers.png)
+In a few moments (it usually takes longer for larger files), the tool will return a
+file named *GeocodeResults.csv* with geocoded results.
+Save it, and inspect it in your favorite spreadsheet tool. The resulting file is
+an eight-column CSV file with the original ID and address, match type (exact, non-exact, tie, or no match),
+and latitude/longitude coordinates.
 
-Hints:
+Getting a *tie* matching means there are multiple possible results for your address. To see all possible matches of an address that 
+got a *tie*, use *One Line* or *Address* tools in the left-hand side menu and search for that address.
 
-- If your data lacks ID numbers, quickly [create a column of consecutive numbers](calculate.html), as shown in this book.
-- If your address data includes apartment numbers, leave them in.
-- Only the ID and address fields are required. City, state, and zip code may be blank if you lack any of this information, but fewer matches will be exact.
-- If your address data is combined into one cell, such as: 300 Summit St, Hartford, CT 06106
-  - then try to [clean your data with the split column method](clean-spreadsheets.html) in this book.
-- If you need to temporarily move other non-address data columns into a second spreadsheet, remember to paste the column of ID numbers into the second sheet. After geocoding, sort both sheets by the ID column, then paste to rematch the data.
+Tip: If you see some unmatched addresses, use a filtering functionality of your
+spreadsheet to filter for unmatched addresses, then manually correct them,
+save as a separate CSV file, and re-upload. You can use the US Census Geocoder as many
+times as you want, as long as a single file doesn't exceed 10,000 records.
 
-3) Save the file in CSV generic spreadsheet format, in batches of no more than 1,0000 rows per file. Learn more about [saving in CSV format](csv.html) in this book.
+* In reality only the first two columns, *unique ID* and *street address*, are required. City, state, and zip code
+may be left blank if you don't have that data. But there are usually fewer exact matches for addresses with missing elements.
+* If your data lacks ID values, you can create a column of consecutive numbers.
+See [Calculate with Formulas and Functions](calculate.html) section of this book to see how.
+* Make sure your street addresses don't contain city, state, and zip code data. If they do,
+use splitting text to columns technique, described in the [Clean Data with Spreadsheets](clean-spreadsheets.html) section
+of the book, to get rid of that extra data. But if your street addresses contain apartments, you can leave them in.
 
-4) Go to US Census Geocoder (https://www.census.gov/geo/maps-data/data/geocoder.html)
+US Census Geocoder has a comprehensive [overview and documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/census-geocoder.html)
+that you can refer to if you encounter issues not covered here.
 
-5) Select the Find Geographies Using...Address Batch button for maximum results, including lat-long coordinates and census geography (tracts and block groups). *If census geography is not needed, select Find Locations Using...Address Batch.*
-
-6) Click the Choose button to upload your CSV file. Use the default benchmark and vintage settings for the most current data. Click the Get Results button, and be patient if using the service during busy weekday hours.
-
-  ![](images/11-transform/census-geocoder-batch.png)
-
-7) Census Geocoder will download the results through your web browser in a file named: GeocodeResults.csv. Since these results do not contain column headers, use the screenshot below for guidance, or [read the Census Geocoder documentation](http://www.census.gov/geo/maps-data/data/geocoder.html) for more details.
-
-  ![](images/11-transform/geocode-results.png)
-
-8) Use a spreadsheet tool to open the CSV file. Sort results by the match quality (columns C and D), with these entries: match exact, match non-exact, tie, no-match.
-
-9) For results without an exact match, check the address for typos, and try to re-geocode in a separate CSV file. The US Census Geocoder tool is very good, but not perfect. For a few rows of hard-to-match data, use a different geocoding tool, such as the Google Maps > What's Here feature described at the top of this page, to look up individual addresses and coordinates.
-
-#### Learn more {-}
-- Aggregate individual rows of data into groups by census area with [pivot tables](pivot.html).
-- [Download census data](find.html) by tract or block group, and use the [VLOOKUP formula](vlookup.html) to join or merge this rows of data that you have geocoded by census tract or block group.
+If for some reason you cannot geocode address-level data, but you need to produce some mapping output,
+you can use pivot tables to get counts of points for specific areas, such as towns or states. In the next section,
+we will look at hospital addresses in the US and how we can count them by state using pivot tables.
 
 ## Pivot Address-Level Point Data into Polygon Data {- #pivot-point-to-polygon}
-Problem: If I begin with address-level point data, how can I transform this into polygon map data?
 
-One solution: In any spreadsheet, split your address data into separate columns (such as Street, City, State), then create a pivot table to aggregate rows into groups (such as the number of addresses in each City or State).
+If you deal with geographical data, you may find yourself in a situation where
+you have a list of addresses which need to be counted (**aggregated**) by area
+and displayed as a polygon (**choropleth**) map. In this case, a simple pivot table
+in a spreadsheet software can solve the problem.
 
-If your location data is combined into one column (example: 300 Summit St, Hartford CT), then see the [Spreadsheets: Split Data Columns tutorial](clean-spreadsheets.html) in this book.
+Let's take a look at a [list of all hospitals](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data)
+that are registered with the Medicare program in the United States. The dataset is
+stored and displayed by Socrata, a web database popular among government agencies and city administrations.
+This particular dataset has information on each hospital's name,
+location (nicely divided into Address, City, State, and ZIP Code columns),
+a phone number and some other indicators, such as mortality and patient experience.
 
-Here's an example using a long list of US hospitals from the Medicare open data repository, which is already split into separate columns: https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u
+Now, imagine you are given a task to create a polygon map of total hospitals by US state,
+so instead of showing individual hospitals as points, you want darker shadows of blue
+to represent states with more hospitals. See Figure \@ref(fig:pivot-address) to see what
+we are talking about.
 
-1) Open the link above, see columns of data (Address, City, State, etc.), and click the blue Export button to download in the CSV generic spreadsheet format.
+(ref:pivot-address) You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps.
 
-![Screenshot: Export US Hospital data into CSV format](images/11-transform/hospital-socrata-export.png)
+```{r pivot-address, fig.cap="(ref:pivot-address)"}
+knitr::include_graphics("images/11-transform/pivot-address.png")
+```
 
-2) Open the file with any spreadsheet tool, and create a pivot table to count up the number of hospitals in each state. For help, see the [Pivot Table tutorial](pivot.html) in this book.
+First, save the database to your local machine by going to *Export > Download > CSV*
+of Socrata interface. Figure \@ref(fig:pivot-address-export) shows where you can find the Export button.
 
-![Screenshot: Pivot Table of US Hospitals by State](images/11-transform/hospital-pivot-table.png)
+(ref:pivot-address-export) In Socrata, you can export the entire dataset as a CSV.
 
-3) Now you can copy and paste the pivot table raw data of hospitals by US states. See the [Normalize Data tutorial](normalize.html) and also the [Edit and Join Spreadsheet with Polygon Map using Mapshaper](mapshaper.html) tutorial in this book.
+```{r pivot-address-export, fig.cap="(ref:pivot-address-export)"}
+knitr::include_graphics("images/11-transform/pivot-address-export.png")
+```
 
-#### Other Solutions {-}
-- use the [Google Sheets Geocoder: US Census Geographies tutorial](geocode.html) in this book to convert addresses into census tracts, etc., and then pivot
-- do a polygons-to-points spatial join with Mapshaper.org ** TO DO **
+Next, open the file in your favorite spreadsheet tool. If you use Google Sheets,
+use *File > Import > Upload* to import CSV data. Make sure your address columns are present,
+and move on to creating a pivot table (in Google Sheets, go to *Data > Pivot table*, make sure the entire data range
+is selected, and click *Create*). In the pivot table, set **Rows** to *State*, because
+we want to get counts by state. Next, set pivot table's **Values** to *State*—or really any other
+column that has no missing values—and choose *Summarize by: COUNTA*. Voila!
+
+(ref:pivot-address-sheet) Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
+
+```{r pivot-address-sheet, fig.cap="(ref:pivot-address-sheet)"}
+knitr::include_graphics("images/11-transform/pivot-address-sheet.png")
+```
+
+Your aggregated dataset is ready, so save it as a CSV. If you use Google Sheets,
+go to *File > Download > Comma-separated values (.csv, current sheet)*.
+You can now merge this dataset with your polygons manually using editing capabilities of
+[GeoJson.io](geojsonio.html), or merge it all in one go using powerful [Mapshaper](mapshaper.html).
+
+We will introduce both tools in the next few sections.
+But before we do that, let's talk about data normalization and why showing
+counts of hospitals per state doesn't really tell a good story.
 
 ## Normalize Data to Create Meaningful Polygon Maps {- #normalize}
-When preparing polygon maps, normalize your data to create more meaningful comparisons. Learn the difference between:
 
-- **Raw data:** absolute values, such as the population of each US state (example: Connecticut population in 2015 = 3,590,886 people)
-- **Normalized data:** represented on a standard scale (also known as standardized data), such as the population density of each US state (example: Connecticut 2015 population density = 3,590,886 people / 4,482 square miles = 742 people per square mile, equivalent to 1,922 people per square kilometer)
+Polygon (choropleth) maps are best when they represent relative, not absolute values.
+Consider two maps shown in Figure \@ref(fig:normalize-map-data). They both are
+about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of
+June 26, 2020. The map on the left shows total number of recorded cases per state,
+and the map on the right shows cases adjusted by the state's population.
+Darker colors represent higher values. Do you notice any differences in spatial patterns?
 
-The difference between raw versus normalized data matters, especially in polygon maps. For example, the US states of Connecticut and Iowa have similar populations of about 3 million people each. But the rural midwestern state of Iowa has a much larger land area of over 55,000 square miles, while the more urbanized eastern state of Connecticut has a smaller land area of around 4,000 square miles. We can display all of this data in a table (as show below), but when making a polygon map, it makes most sense to show a normalized value, such as population density.
+(ref:normalize-map-data) Choropleth (polygon) maps work best with normalized values.
 
-| US State  | Population 2015 | Land Area (in square miles) | Density (pop per square mile) |
-| :----- | :----- | :----- | :----- |
-| Iowa   |  3,123,899	 | 55,857 | 56 |
-| Connecticut | 3,590,886	| 4,842 | 741 |
+```{r normalize-map-data, fig.cap="(ref:normalize-map-data)"}
+knitr::include_graphics("images/11-transform/normalize-map-data.png")
+```
 
-But raw data still matters, too. Although normalized data allows for easier comparisons across regions of different size, it can hide very low raw data values. For example, imagine two city neighborhoods with equally high unemployment rates of 20%, a normalized value. But if one neighborhood has a labor market population of 5,000 people while the other has only 500, the actual number of unemployed people in the second neighborhood is much smaller, as shown in the table below.
+Note: Both maps show Covid-19 data collected by the New York Times and published
+[on GitHub](https://github.com/nytimes/covid-19-data).
+In one map, we normalized (divided) values by population in each state,
+according to the 2018 US Census American Community Survey,
+the most recent data available on the day of writing. We didn't
+add legends and other important cartographic elements so that you can
+better focus on interpreting spatial patterns. In both cases,
+we used Jenks natural breaks for classification.
 
-| Neighborhood  | Labor Market Population  | Unemployment Rate | Actual Unemployed People |
-| :----- | :----- | :----- | :----- |
-| First  |  5,000 | 20% | 1,000 |
-| Second | 500	| 20%| 100 |
+What are the worst-hit states according to the map showing total Covid-19 counts?
+If you are familiar with the US geography, you can quickly tell that these are
+New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California.
+But five of these happen to be some of the most populous states in the US,
+so it makes sense that they will also have higher Covid-19 cases.
+
+Now, how about the map on the right? You can see that New York and its neighbors,
+including New Jersey and Massachusetts, have by far the highest rates per capita
+(per person), which we saw in the first map. But you can also see
+that in fact California, Texas, and Florida were impacted to a lesser extent
+than the map on the left had suggested. So the map with per-capita values is a
+much better illustration to the story about New York being the epicenter of the Covid-19
+crisis in the United States (at least in the spring of 2020).
 
 #### Different ways to normalize data {-}
-After you understand the basic concept, also think about different ways to normalize the same data. Your method depends on the type of data story you wish to emphasize. Look at the table excerpt below on US population and land area by state in 2015:
 
-![Screenshot: US population and land area](images/11-transform/us-population-area-2015.png)
+You can normalize data in many ways, and there is not necessarily one
+acceptable way of doing it.
 
-There are at least two acceptable ways to normalize this raw data:
+One of the most common ways of normalization is deriving "per capita", or "per person" values.
+If values are small, such as rare disease cases or lottery winners, they can be presented as "per 1,000" or "per 100,000" people.
+Divide your quantity by population in that area to derive per capita values.
 
-- Normalized by area: Population per square mile in each state (calculate = pop / square miles)
-- Normalized by total: Percent of total US population in each state (calculate = state pop / total US pop)
+Choropleth (polygon) maps work well with percentages. The good news is, humans like percentages too.
+It is quite natural for us to understand that a 9% unemployment rate means that of 100 people
+who were willing to work, nine were unable to find a job. To derive a percentage for unemployment,
+divide the number of unemployed people by labor force size (adult
+population who are willing and able to work), and multiply by 100.
 
-For example:
+Unlike counts, most *measured* variables do not need normalization because
+they belong to a scale. For example, median age (the age of the "middle"
+person in a population, when sorted from youngest to oldest) can be directly compared
+among populations. We know that humans live anywhere between 0 and 120 years or so,
+and we wouldn't expect median ages to be vastly different from one country to another (maybe twice,
+but not tenfold). Median incomes, if measured in the same currency, also belong to the same scale
+and can be compared directly.
 
-| US State  | Population 2015 | Land Area (sq. mi) | Density (per square mile) | Percent of total US pop |
-| :----- | :----- | :----- | :----- |
-| Connecticut | 3,590,886	| 4,842 | 741 | 1.1% |
+#### How not to normalize values {-}
+
+Absolute values are very important for context. Saying that "20% of blond men living in
+in town X won the lottery" may sound like a catchy headline, but in reality
+the town has 450 residents, of those 200 are men, and of those only 5 have light hair color.
+One of those five (and here comes the 20%) was lucky to win the lottery, so technically
+the headline didn't lie.
+
+This is, of course, an extreme and comic example, but exaggerations in this spirit are not uncommon.
+If you want readers to trust you, make sure you are open about total counts when reporting
+normalized values (such as percentages or per capita values).
+
+Absolute values are important for another reason: behind numbers there are often people,
+and smaller, normalized values may hide the scale of the problem.
+Saying that "the unemployment rate is only 5%" is valid, but the 5%
+of, say, Indian labor force (around 522 million) is about 26 million, which is
+pretty much the total population of Australia.
+
+Exercise your best judgement when you normalize values. Make sure you don't
+blow numbers out of proportion by normalizing values in smaller populations.
+But also don't hide large counts behind smaller percentages for larger populations.
+
+At this point, you should have enough geocoding and spreadsheet skills to aid you
+with map making. In the following section, we will talk about geographical data in general and
+will introduce different geospatial file formats to ensure you are
+ready to create, use, and share map data.
 
 ## Convert to GeoJSON format {- #convert-geojson}
-When you find map data, it may be stored in one of these common data formats below:
+
+Geospatial data comes in an overwhelming number of file formats.
+We will tell you about a few most common ones so that you have
+a general idea of what tools you can use to work with them.
+But before we do that, let's talk about the basics of geospatial (map) data.
+
+#### About geospatial data {-}
+
+The first thing to know about geospatial data is that it
+consists of two components, **location** and **attribute**.
+When you use Google Maps to search for a restaurant, you get a red
+marker on the screen that points to the latitude and longitude
+of the physical location of the restaurant in the real world. These latitude and longitude (two numbers)
+are your location component.
+The name of the restaurant, its human-friendly address, and guest reviews
+are the attributes, which bring value to your location data.
+
+Second, geospatial data can be **raster** or **vector**,
+as illustrated in Figure \@ref(fig:geospatial-raster-vector).
+Raster data is a grid of cells ("pixels") of a certain size
+(for example, 1 meter by 1 meter). For example, satellite images
+of the Earth that you see on Google Maps are raster geospatial data.
+Each pixel contains the color of Earth that satellite cameras
+were able to capture. People and algorithms can then use raster
+data (images) to create outlines of buildings, lakes, roads,
+and other objects. These outlines become vector data. For example, most of
+[OpenStreetMap](https://www.openstreetmap.org) was built
+by volunteers tracing outlines of objects from satellite images.
+
+(ref:geospatial-raster-vector) Geospatial data can be raster or vector.
+
+```{r geospatial-raster-vector, fig.cap="(ref:geospatial-raster-vector)"}
+knitr::include_graphics("images/11-transform/geospatial-raster-vector.png")
+```
+
+In this book, we will focus on vector data, which is based on
+points, lines, and polygons. Vector data can be
+much more precise than raster data, because points' coordinates
+can be expressed with precise decimals. In addition, vector
+data can contain as much extra *attribute* information about each object as desired,
+whereas raster data is generally limited to 1 value per cell,
+whether it is the Earth color, or temperature, or altitude.
+Moreover, vector map files are usually much smaller in size
+than raster ones.
+
+Let's take a look at some of the most common vector file formats.
 
 #### GeoJSON {-}
-GeoJSON is newer, popular open format for map data, and works across many tools, so is our top recommendation in this book. GeoJSON files can be used with Leaflet map code, Google Maps JS API code, Carto map tools, and more. Also, your GitHub repository will automatically display any GeoJSON files in a map view.
+[GeoJSON](https://geojson.org) is a newer, popular open format for map data
+that comes in `.geojson` or `.json` files.
+It was first developed in 2008, and then standardized in 2016 by
+the Internet Engineering Task Force (IETF). The code snippet below
+represents a single point (feature) with latitude of 41.76 and longitude of -72.67
+in GeoJSON format. That point has a *name* attribute (property) whose value is *Hartford*. 
 
-GeoJSON data must follow a [structured format](http://geojson.org/), but the file name may end with either `.geojson` or `.json`. The GeoJSON structured format orders coordinates in *longitude-latitude* format, the same as X-Y coordinates in mathematics. This is the opposite of Google Maps and several other web map tools, which order points in *latitude-longitude* format. For example, Hartford Connecticut is located at (-72.67, 41.76) in GeoJSON, but (41.76, -72.67) in Google Maps.
+```
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-72.67, 41.76]
+  },
+  "properties": {
+    "name": "Hartford"
+  }
+}
+```
+
+The simplicity and readability of GeoJSON allows you to edit it even in the most
+simple text editor. We strongly recommend you use and share your map data in GeoJSON.
+Web-based maps, such as those built with Leaflet, Mapbox, Google Maps JS API, and Carto,
+as well as ArcGIS and QGIS all support GeoJSON.
+
+Also, your GitHub repository will automatically display any GeoJSON files in a map view,
+like is shown in Figure \@ref(fig:geojson-github).
+
+(ref:geojson-github) GitHub can show previews of GeoJSON files stored in repositories.
+
+```{r geojson-github, fig.cap="(ref:geojson-github)"}
+knitr::include_graphics("images/11-transform/geojson-github.png")
+```
+
+In GeoJSON, coordinates are ordered in *longitude-latitude* format,
+the same as X-Y coordinates in mathematics. This is the opposite of Google Maps
+and some other web map tools, which order values as *latitude-longitude*.
+For example, *Hartford, Conn.* is located at (-72.67, 41.76) according to GeoJSON,
+but at (41.76, -72.67) in Google Maps. Neither notation is right or wrong, just make sure
+you know which one you are dealing with.
 
 #### Shapefiles {-}
-The shapefile format was created in the 1990s by ESRI, the company that developed ArcGIS software. Shapefiles typically appear as a folder of subfiles with suffixes such as `.shp`, `.shx`, `.dbf`, and others. Although government agencies commonly distribute map data in shapefile format, the standard tools for editing these files---ArcGIS and its free and open-source cousin, QGIS---are not as easy to learn as other tools in this book. For this reason, this book recommends converting shapefiles into one of the more friendlier formats below.
+The shapefile format was created in the 1990s by Esri, the company that develops
+ArcGIS software. Shapefiles typically appear as a folder of subfiles with suffixes
+such as `.shp`, `.shx`, and `.dbf`. The folder with shapefiles is often compressed in a `.zip` file.
+
+Although government agencies commonly distribute map data in shapefile format, the standard tools for editing
+these files---ArcGIS and its free and open-source cousin, QGIS---are not as
+easy to learn as other tools in this book. For this reason, we
+recommend converting shapefiles into GeoJSON files if possible.
+[Mapshaper](mapshaper.html), discussed a bit later in the chapter, can perform such
+conversion.
+
+#### GPS Exchange Format (GPX) {-}
+
+If you ever exported your Strava run or a bike ride
+from a GPS device, chances are you ended up with a `.gpx` file.
+GPX is an open standard and is based on XML markup language.
+Like GeoJSON, you can inspect a GPX file in any simple text editor
+to see its contents. Most likely, you will see a collection timestamps and latitude/longitude
+coordinates of the recording GPS device at that particular time.
+You should be able to convert GPX to GeoJSON with [GeoJson.io](geojsonio.html)
+utility discussed later in this chapter.
 
 #### Keyhole Markup Language (or KML) {-}
-The KML format rose in popularity during the late 2000s. Google Earth, a free and user-friendly tool, allowed many people to view and edit geographic data. KML files are commonly used in the Google Fusion Tables maps described in this book. Sometimes `.kml` files are distributed in a compressed `.kmz` format. See the chapter on [converting from KMZ to KML format](convert-kmz) in this book.
+
+The KML format rose in popularity during the late 2000s.
+Google Earth, a free and user-friendly tool, allowed many people to
+view and edit geographic data. KML files were often used
+with maps powered by Google Fusion Tables, but that became history in late 2019.
+[GeoJson.io](geojsonio.html) should be able to convert your KML file into a GeoJSON.
+
+Sometimes `.kml` files are distributed in a compressed `.kmz` format.
+See [Converting from KMZ to KML format](convert-kmz) section of this book
+to learn to convert.
+
+#### MapInfo TAB {-}
+Similar to Esri's shapefiles, MapInfo's TAB format comes as a folder
+with `.tab`, `.dat`, `.ind`, and some other files. It is a proprietary format created
+and supported by MapInfo, Esri's competitor, and is designed to work well with MapInfo Pro
+GIS software. Unfortunately, you will most likely need MapInfo Pro, QGIS, or ArcGIS to re-save these as GeoJSON 
+or a Shapefile.
 
 
 ## GeoJson.io to Convert, Edit, and Create Map Data {- #geojsonio}
-TODO:
 
-- rewrite into tool review and tutorial format
-- place polygon conversion at top and specify import-export formats
+[GeoJson.io](https://geojson.io) is a popular open-source web tool to convert,
+edit, and create GeoJSON files. The tool was originally developed by
+[Tom MacWright](https://macwright.org/about/) in 2013
+and quickly became a go-to tool for geospatial practitioners.
 
-Go to http://geojson.io to explore this open-source web tool to convert, edit, and create GeoJSON map data. The tool was originally developed by Tom MacWright, and is supported by Mapbox.com.
+In this tutorial, we will show you how to convert existing KML, GPX, TopoJSON, and even
+CSV files with lat/lon data into GeoJSON files. We will also look at
+editing attribute data and adding new features to GeoJSON files,
+and creating them from scratch by tracing satellite imagery.
 
-#### Convert a CSV spreadsheet of point data into GeoJSON {-}
-Use any spreadsheet tool and prepare a list of coordinate points (known as features). You must include column headers **lat** and **lon**, or a fuller spelling, such as *latitude* and *longitude*. The order of the columns does not matter. Also, you can add more headers to identify each point (example: name) and include more details (known as the properties of the features).
+#### Convert KML, GPX, and other formats into GeoJSON {-}
 
-![](images/11-transform/name-lat-lon-info.png)
+Navigate to [GeoJson.io](https://geojson.io). You will see
+a map on the left, and a Table/JSON attribute view area on the right. At the start,
+it represents an empty feature collection (features are your points, lines, and polygons).
 
-Save your spreadsheet in generic CSV format. *Hint:* see [Save Spreadsheet as CSV chapter](csv.html) in this book.
+Drag and drop your geospatial data file into the map area on the left.
+Alternatively, you can also import a file from *Open > File* menu.
+If you don't have a geospatial file, download [Hartford parks](data/hartford-parks.kml)
+in KML format. If GeoJson.io was able to recognize and import the file,
+you will see a green popup message in the upper-left corner saying how many
+features (in case of Hartford parks, polygons) were imported.
+Figure \@ref(fig:geojson-io-import) shows us that 62 features were imported from
+the sample Hartford parks file. You can see that the polygons appeared
+on top of the Mapbox world layer.
 
-Try it! Click this link and Save to download this sample file to your computer: [name-lat-lon-info in CSV format](data/name-lat-lon-info.csv). CSV means comma-separated values, a generic spreadsheet format that most data tools can easily open.
+Note: If GeoJson.io couldn't import your file, you will see a red
+popup saying it "Could not detect file type". You will need to use a different
+tool, such as Mapshaper or QGIS, to convert your file to GeoJSON.
 
-Drag the CSV file into the GeoJSON.io map window. Flip between the JSON and Table tabs to view or edit the data.
+(ref:geojson-io-import) GeoJson.io successfully imported Hartford parks KML file.
 
-```{r geojsonio, fig.cap="Screencast: GeoJson.io"}
-if(knitr::is_html_output()) knitr::include_url("images/11-transform/dataviz-geojsonio-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+```{r geojson-io-import, fig.cap="(ref:geojson-io-import)"}
+knitr::include_graphics("images/11-transform/geojson-io-import.png")
 ```
 
-Select the Save menu and export into GeoJSON format.
+You can now save your file to GeoJSON. Go to *Save > GeoJSON* to download
+a converted GeoJSON file to your computer.
 
-Optional: Login to GeoJSON.io with your GitHub account and save directly to your repository.
+#### Create GeoJSON from a CSV file {-}
 
-#### Convert Shapefile or KML polygons into GeoJSON {-}
-Polygon boundary data is often shared as ArcGIS Shapefiles (.shp) or Keyhole Markup Language (.kml) files. Drag any of these (and other) files into the <http://GeoJSON.io> map window. Flip between the JSON and Table tabs to view or edit the data.
+GeoJson.io can transform a spreadsheet with *latitude* (or *lat*) and *longitude* (or *lon*)
+columns into a GeoJSON file of point features. Each row in the spreadsheet
+becomes its own point, and all columns other than *lat* and *lon*
+become *attributes* (or *properties*) of point features. An example of
+such spreadsheet is shown in Figure \@ref(fig:geojson-io-csv-data). You
+can [download it](data/hartford-and-suburbs.csv) for the exercise.
 
-Select the Save menu and export into GeoJSON format.
+(ref:geojson-io-csv-data) A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features.
 
-![](images/11-transform/geojson-save-as.png)
+```{r geojson-io-csv-data, fig.cap="(ref:geojson-io-csv-data)"}
+knitr::include_graphics("images/11-transform/geojson-io-csv-data.png")
+```
 
-#### Create GeoJSON data with drawing tools {-}
-Use the <http://GeoJSON.io> drawing tools to create points, polygons, and polylines. Flip between the JSON and Table tabs to view or edit the data.
+1. Save your spreadsheet as a CSV file, and drag-and-drop it to the map area of GeoJson.io.
+You should see a green popup in the upper-left corner notifying you how many features
+were imported.
 
-#### Learn more about GeoJSON.io {-}
-Read about more advanced features and view the code at https://github.com/mapbox/geojson.io
+Note: If you had some data on the map already, GeoJson.io wouldn't erase anything
+but instead would add point features to the existing map.
 
+2. Click on a marker to see a popup with point properties. If you used the sample file
+with towns around Hartford, you will see *town*, *community_type*, and *wiki_link* features
+in addition to the tool's default *marker-color*, *marker-size*, and *marker-symbol*
+fields.
+3. The popup is interactive, and you can click and edit each property (including property names).
+You can also add a new property by clicking the *Add row* button. You can delete
+the marker by clicking *Delete feature* button.
+4. Click *Save* to record all marker changes to the GeoJSON. This will close the popup window,
+and you will see updated markers in the JSON tab to the right of the map.
+5. It may be quicker to view all data as a table instead of dealing with individual marker popups.
+In **Table** tab to the right of the map, you can add, rename, and remove columns
+from *all* features (markers) at once.
+Table cells are also modifiable, so you can edit your data there.
+6. Once you are happy with your map data, go to *Save > GeoJSON* to download the result to your computer.
+You can also log into GeoJson.io with your GitHub account and save directly to your repository.
 
-## MapShaper.org to Convert, Edit, and Join Data {- #mapshaper}
-TODO:
+```{r geojsonio-gif, fig.cap="A spreadsheet with coordinates columns can be transformed into a GeoJSON with point features."}
+if(knitr::is_html_output()) knitr::include_url("images/11-transform/dataviz-geojsonio-640.gif", height="466px")
+```
 
-- rewrite into tool review/tutorial format
-- put conversion at top and clarify import-export formats
-- recommended browsers: Firefox or Chrome
-- Mac users: go to Finder > Preferences > Advanced > turn on Show file extensions
+#### Create a GeoJSON from scratch using drawing tools {-}
 
-MapShaper (http://MapShaper.org) is another versatile open-source mapping tool, developed and maintained by [Matthew Bloch on GitHub](https://github.com/mbloch/mapshaper). Using the web interface, users can:
+GeoJson.io lets you create geospatial files from scratch, using simple drawing
+tools to put markers (points), lines, and polygons to appropriate locations.
+These are useful when you have no original file to work with.
 
-- Import and export map layers in multiple formats: Shapefile, GeoJSON, CSV, and more
-- Simplify (or smooth out) geographic details to reduce map file size
-- Edit geography with powerful commands (dissolve, clip, join files, etc.)
+1. Open GeoJson.io and in the lower-left corner switch from Mapbox (vector tiles)
+to Satellite.
+2. In the upper-right corner of the map, use the Search tool to find the area you're interested in mapping.
+For this exercise, we will use tennis courts at Trinity College, Hartford, as shown in
+Figure \@ref(fig:geojson-io-draw).
 
-This free and easy-to-learn MapShaper.org web tool has replaced *many* of my map preparation tasks that previously required expensive and hard-to-learn ArcGIS software, or its free but still-challenging-to-learn cousin, QGIS. Even advanced GIS users may discover MapShaper.org to be a quick alternative for some common time-consuming tasks.
+(ref:geojson-io-draw) Use drawing tools to create points, lines, and polygons in GeoJson.io.
 
-The examples below focus on polygon boundary data to illustrate common map editing tasks. But MapShaper.org also works with other data layers, such as tables, points, and lines.
+```{r geojson-io-draw, fig.cap="(ref:geojson-io-draw)"}
+knitr::include_graphics("images/11-transform/geojson-io-draw.png")
+```
 
-#### Import and convert map boundary files {-}
-Try it! Right-click the link and Save to download this sample file to your computer: [ct-towns in GeoJSON format](data/ct-towns.geojson). If you accidentally open a page of GeoJSON code in your browser, select File > Save Page As to download to your computer.
+3. In the toolbar, you have a choice of four drawing tools: a polyline (which is a series
+of points connected by lines, but not closed like a polygon), a polygon, a rectangle
+(which is just an instance of a polygon), and a marker (point). Let's start with the latter.
+4. Click on the *Draw a marker* button, and click anywhere on the map to place it.
+You will see a gray marker that is now part of your map. You can modify its properties,
+or delete it in the interactive pop-up.
+5. Next, choose *Draw a polyline* and click on multiple locations in the map to see
+connected lines appearing. To finish and create a feature, click again on the final point.
+Polylines are generally used for roads and paths.
+6. Drawing a polygon is similar to drawing a polyline, except that you need to complete
+the feature by making your final point at the same location as your initial point.
+Polygons are used to define object boundaries, from continents to buildings, cars, and
+anything that has significant dimensions.
+7. Use *Edit layers* tool (the one above *Delete*) to move a marker to a better position,
+or adjust the shapes of your features.
 
-1. Drag-and-drop any map layer into the <http://MapShaper.org> browser window.
-  - Import GeoJSON (.geojson or .json), TopoJSON, CSV, or Shapefile formats
-  - For Shapefiles, import the .shp (features), .dbf (attribute data), and .prj (projection) files. Reminder: the WGS84 projection is most portable across multiple platforms.
-  - KML/KMZ files are not compatible. To convert these into a format that Mapshaper can import, see the [Convert KMZ to KML](convert-kmz.html) and [Geojson.io](geojsonio.html) chapters in this book.
+Once you are done creating features and their physical boundaries, it is time to add
+meaningful attribution data. Use the interactive popups or the Table view to
+give objects names and other qualities. When finished, save the GeoJSON to your computer.
 
-2. Click the Export button and select your preferred format:
-  - Shapefile (best for ArcGIS/QGIS software)
-  - GeoJSON (best for Leaflet and GitHub tools in this book)
-  - TopoJSON (similar to GeoJSON, with topographical data)
-  - SVG (Scalable Vector Graphics, for print or online)
-  - CSV (Comma Separated Values, generic spreadsheet format)
+Drawing tools can be used to correct your existing GeoJSON files. For example,
+if you created a GeoJSON from a CSV file, you might decide to move some markers
+with *Edit layers* tool instead of modifying their latitude and longitude values.
+Or you might decide that your polygons (eg those representing Hartford parks) are
+too "simplified", and make them more precise with the satellite imagery.
 
-  ```{r mapshaper-convert, fig.cap="Screencast: Mapshaper convert"}
-  if(knitr::is_html_output()) knitr::include_url("images/11-transform/mapshaper-convert-640.gif") else knitr::include_graphics("images/placeholder.jpg")
-  ```
+In the next section, we will introduce Mapshaper, another free online tool
+to convert and modify geospatial files.
+
+## Mapshaper to Convert, Edit, and Join Data {- #mapshaper}
+
+Like [GeoJson.io](geojsonio.html), [Mapshaper](https://mapshaper.org)
+is a free, open-source editor that can convert geospatial files, edit attribute
+data, filter and dissolve features, simplify boundaries to make files smaller,
+and many more. Unlike GeoJson.io, Mapshaper doesn't have drawing tools,
+so you won't be able to create geospatial files from scratch.
+
+Mapshaper is developed and maintained by Matthew Bloch [on GitHub](https://github.com/mbloch/mapshaper).
+It is written in JavaScript, so we recommend you use a recent version of Firefox or Chrome.
+
+This free and easy-to-learn Mapshaper web tool has replaced *many* of our map preparation
+tasks that previously required expensive and hard-to-learn ArcGIS software, or its free
+but still-challenging-to-learn cousin, QGIS. Even advanced GIS users may discover Mapshaper
+to be a quick alternative for some common but time-consuming tasks.
+
+#### Import, convert, and export map boundary files {-}
+
+You can use Mapshaper to convert between geospatial file formats. Unlike GeoJson.io,
+Mapshaper also supports Esri Shapefiles (which is a folder of individual files with the same name,
+but different extensions), so you can easily convert a Shapefile into a web-friendly GeoJSON.
+
+1. Navigate to [Mapshaper.org](https://mapshaper.org). The start page is two large drag-and-drop zones
+which you can use to import your file. The smaller area at the bottom, *Quick import*, uses default
+import settings and is a good way to begin.
+2. Drag and drop your geospatial file to the *Quick import* area,
+or use our sample Shapefile of [US state boundaries](data/us-states.zip).
+This is a `.zip` archive which contains a folder with all necessary files.
+
+Note: If you want to import a folder, you need to either select all files inside that folder
+and drop them all together to the import area, or create a `.zip` archive.
+
+3. Each imported file becomes a layer, and is accessible from the dropdown menu in the top-middle
+of the browser window. There, you can see how many features each layer has, toggle their visibility,
+or delete them.
+4. To export, go to *Export* in the upper-right corner, and select a desired file format.
+The choice of export formats is shown in Figure \@ref(fig:mapshaper-export).
+As of July 2020, these are Shapefile, GeoJSON,
+TopoJSON (similar to GeoJSON, but with topographical data), JSON records, CSV,
+or SVG (Scalable Vector Graphics, for web and print). If you export more than one layer at a time,
+Mapshaper will archive them first, and you will download an `output.zip` that contains
+all exported layers.
+
+(ref:mapshaper-export) You can use Mapshaper to quickly convert between geospatial file formats.
+
+```{r mapshaper-export, fig.cap="(ref:mapshaper-export)"}
+knitr::include_graphics("images/11-transform/mapshaper-export.png")
+```
+
+Tip: Mapshaper doesn't work with KML or KMZ files, but you can use [GeoJson.io](#geojson.html) to convert these.
+
 
 #### Edit data for specific polygons {-}
-To edit data for any polygon in MapShaper.org:
 
-- Click the "i" information button
-- Select the polygon
-- Click inside its pop-up info window to directly edit the data
+You can edit attribute data of individual polygons (and also points and lines) in Mapshaper.
+Figure \@ref(fig:mapshaper-edit) shows you how.
 
-  ![](images/11-transform/mapshaper-edit-info.png)
+1. Import the file whose polygon attributes you want to edit.
+1. Under the cursor tool, select *edit attributes*.
+1. Click on the polygon you want to edit. A pop-up will appear in the upper-left corner
+listing all attributes and values of the polygon.
+1. Click on any value (underlined, in blue) and edit it.
+1. When you are done, export your geospatial file by clicking *Export* and
+choosing the desired file format.
+
+(ref:mapshaper-edit) Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points. 
+
+```{r mapshaper-edit, fig.cap="(ref:mapshaper-edit)"}
+knitr::include_graphics("images/11-transform/mapshaper-edit.png")
+```
+
 
 #### Simplify map boundaries to reduce file size {-}
-If your data visualization project displays a zoomed-out state or national or world map, small geographic details that are invisible at these zoom levels may not be necessary. Consider using the Simplify command to reduce the file size, which may help your interactive web map to load faster for web visitors. The example below began with a detailed map of Connecticut town boundaries (1:100,000 scale) at 2MB, which MapShaper simplified -- without visibly sacrificing details at the statewide zoom level -- to a reduced size of about 200KB.
 
-1. Try it! Download and upload the sample GeoJSON file as described in the Import section above.
+You may not need precise and detailed map boundaries for
+data visualization projects where zoomed-out geographies are shown.
+Detailed boundaries are heavy, and may slow down your web maps.
 
-2. Click the Simplify button to review options, and in most cases, accept the default settings. Click Next.
+Consider two maps of the contiguous US states, also known as Lower-48, shown in Figure \@ref(fig:mapshaper-simplify-demo).
+The map on the left is more detailed and is about 230 kilobytes, but the map on the right
+is only 37 kilobytes, 6 times smaller!
 
-3. Slide the Simplify button from 100 percent down to an appropriate number for your map zoom level. If important geographic details disappear, you may have gone too far.
+(ref:mapshaper-simplify-demo) Consider simplifying geometries with Mapshaper to make your web maps faster.
 
-4. Look in the upper-left corner and click on recommended Repairs to your map file.
+```{r mapshaper-simplify-demo, fig.cap="(ref:mapshaper-simplify-demo)"}
+knitr::include_graphics("images/11-transform/mapshaper-simplify-demo.png")
+```
 
-5. Complete the process by clicking Simplify once again. Export your file in the preferred format for your project.
+1. Import your geo file to Mapshaper. You can use the [sample contiguous US states GeoJSON](data/lower-48.geojson).
+1. Click the *Simplify* button in the upper-right corner. The Simplification menu will appear,
+where you can choose one of three methods. We recommend checking *prevent shape removal*, and leaving
+the default *Visvalingam / weighted area*. Click *Apply*.
+1. You will see a slider with `100%` appear on top (Figure \@ref(fig:mapshaper-simplify)), replacing the layer selection dropdown.
+Move the slider to the right and see the map simplify its shape as you go. Stop when you think
+the map looks appropriate (when the shapes are still recognizable).
+1. Mapshaper may suggest to repair line intersections in the upper-left corner. Click *Repair*.
+1. You can now export your file using the *Export* feature.
 
-![](images/11-transform/mapshaper-simplify.png)
+(ref:mapshaper-simplify) Use Simplify & Repair tools in Mapshaper.
+
+```{r mapshaper-simplify, fig.cap="(ref:mapshaper-simplify)"}
+knitr::include_graphics("images/11-transform/mapshaper-simplify.png")
+```
+
+Tip: You may find the US shape a bit unusual and vertically "shrunk".
+In **Console**, type `-proj EPSG:3857` to change projection to Web Mercator,
+which is more common.
 
 #### Dissolve internal polygons to create an outline map {-}
-MapShaper.org also includes a Console button to type in commands for common map editing tasks. Imagine that you begin with a boundary map that includes internal polygons, but your goal is to remove all of them to create an outline map.
 
-Click the Console button, which opens a window to type in commands. Enter the command below, then press return. Close the Console window and Export your outline map.
+Mapshaper's most powerful tools are available through **Console**, which allows you to type commands for common map editing tasks.
+One of such tasks is to create an outline map by removing the internal boundaries. For example, you can dissolve
+state boundaries of the US map in the previous exercise to get the outline of the country, like is shown in
+Figure \@ref(fig:mapshaper-dissolve).
+
+(ref:mapshaper-dissolve) Mapshaper lets you dissolve boundaries to create an outline shape.
+
+```{r mapshaper-dissolve, fig.cap="(ref:mapshaper-dissolve)"}
+knitr::include_graphics("images/11-transform/mapshaper-dissolve.png")
+```
+
+Click the Console button, which opens a window to type in commands. Enter the command below, then press return (Enter).
+
 
 ```markdown
 -dissolve
 ```
 
-```{r mapshaper-dissolve, fig.cap="Screencast: Mapshaper dissolve"}
-if(knitr::is_html_output()) knitr::include_url("images/11-transform/mapshaper-dissolve-simple-640.gif") else knitr::include_graphics("images/placeholder.jpg")
-```
+You will see that internal boundaries became lighter color, and that's Mapshaper's way of saying they no longer exist.
+You can now export your outline shape.
+
 
 #### Clip a map to match an outline layer {-}
-Imagine that you start with a polygon map of all towns in Connecticut, and an outline map of Hartford County, a larger region that includes some (but not all) of those smaller towns. Your goal is to create a polygon map of all towns inside Hartford County. In other words, we will "clip" the statewide town map using the county outline map.
 
-Try it! Right-click the link and Save to download both sample files to your computer:
+The state of Connecticut consists of 8 counties, which in turn are divided into towns. There are a total of 169 towns in Connecticut.
+Imagine you are given a [boundary file of all 169 towns](data/ct-towns.geojson), and [the outline of Hartford county](data/hartfordcounty-outline.geojson).
+You need to "cut" the original towns map to only include those towns that fall within Hartford county.
 
-  - [ct-towns in GeoJSON format](data/ct-towns.geojson)
-  - [hartfordcounty-outline in GeoJSON format](data/hartfordcounty-outline.geojson)
-  - If you accidentally open a page of GeoJSON code in your browser, select File > Save Page As to download to your computer.
+Mapshaper allows you to do just that using one simple `-clip` command.
 
-Refresh the browser to start a new session in http://MapShaper.org.
+1. Import two boundary files into Mapshaper. One is the larger one that is being clipped (if you use sample files, *ct-towns*),
+and one is the desired final shape (*hartfordcounty-outline*). The latter is what ArcGIS calls the "clip feature".
+2. Make sure your active layer is set to the map you are clipping (*ct-towns*).
+3. In the **Console**, type `-clip` followed by the name of your clip layer, like that:
+```
+-clip hartfordcounty-outline
+```
+4. You should see your active layer got clipped. Sometimes you end up with tiny "slivers" of clipped areas that remain alongside the borders.
+If that is the case, use the `-filter-slivers` command to remove them, like that:
+```
+-clip hartfordcounty-outline -filter-slivers
+```
+5. Your Mapshaper state should look like pictured in Figure \@ref(fig:mapshaper-clip). You can now save the file on your computer using the *Export* button.
 
-1. Drag-and-drop the ct-towns.geojson file to import to MapShaper.
+(ref:mapshaper-clip) When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature iteslf.
 
-2. Drag-and-drop the hartfordcounty-outline.geojson map to MapShaper, and click Import to add this second layer.
-
-3. In the drop-down menu, select the first map (ct-towns) to display it as the active layer.
-
-4. Click the Console button, type or paste in the command below, and press enter.
-```markdown
--clip hartfordcounty-outline.geojson
+```{r mapshaper-clip, fig.cap="(ref:mapshaper-clip)"}
+knitr::include_graphics("images/11-transform/mapshaper-clip.png")
 ```
 
-5. The command above instructs MapShaper to clip the active map layer (ct-towns) using the second layer (hartfordcounty-outline).
+#### Remove unwanted data fields {-}
 
-6. Sometimes the boundaries of the clip layer do not precisely match up with your active layer, due to differences between their sources. If necessary, add the `cleanup` command to remove any null features or small "slivers" that remain after the clip.
+Sometimes map features, such as polygons, lines, and points, contain unwanted *attributes* (or fields, or columns) that you may want to remove.
+In **Console**, use `-filter-fields` editing command to remove unnecessary fields.
 
-```markdown
-- clip hartfordcounty-outline.geojson cleanup
-Removed 3 null features and 5 slivers
+For example, remove all fields except *town*:
+
 ```
-**TO DO** fix animation to match new file names
-
-```{r mapshaper-clip, fig.cap="Screencast: Mapshaper clip"}
-if(knitr::is_html_output()) knitr::include_url("images/11-transform/mapshaper-clip-640.gif") else knitr::include_graphics("images/placeholder.jpg")
-```
-
-#### Remove unwanted data columns {-}
-Sometimes your polygon map contains several columns of unwanted data. To quickly remove them, enter the "-filter-fields" Console command to keep only the columns you list. The example below deletes all columns *except* "town":
-
-```markdown
 -filter-fields town
 ```
 
-#### Join spreadsheet data with polygon map {-}
-** TO DO **
-- fix images and animations to map the new file names and column headers
+If you want to leave more than one field, separate them by a comma, but without spaces, like that:
 
-A common mapping task is to join (or merge) new data columns into a polygon boundary map, and MapShaper.org makes this very easy. Imagine that you have two files:
-
-- Connecticut town boundary map
-- a spreadsheet of town population data
-
-Your goal is to unite these files, so that you can later display them in a thematic polygon map. Since these two files share a common column of data -- the town names -- you can join them together into one merged file.
-
-![](images/11-transform/mapshaper-join-table-concept.png)
-
-Try it! Right-click each link and Save to download two sample files to your computer:
-
-- [ct-towns in GeoJSON format](data/ct-towns.geojson)
-- [ct-towns-popdensity in CSV format](data/ct-towns-popdensity.csv)
-
-If you accidentally open a page of GeoJSON code in your browser, select File > Save Page As to download to your computer.
-
-Refresh the browser to start a new session in http://MapShaper.org.
-
-1. Drag-and-drop the ct-towns.geojson boundary file into MapShaper. Select the "i" info button and click on any polygon to confirm that the column header is "name".
-
-2. Open the ct-towns-popdensity.csv file with any spreadsheet tool and confirm that first column header also is "name". Close this file.
-
-3. Drag-and-drop the ct-towns-popdensity.csv file into MapShaper.org, and select the Import button to add it as a second layer. This table layer will appear as rectangular cells, because it does not contain geographic information.
-
-4. Click the drop-down menu and select the map to display it as the active layer.
-
-  ![](images/11-transform/mapshaper-join-select-map-layer.png)
-
-5. Click the Console button, type this command, and press return:
-```markdown
--join ct-towns-popdensity.csv keys=name,name
 ```
-Type this precisely, with **no spaces** between the words in your keys. This command instructs MapShaper to join the active map layer to the CSV table layer, based on their shared column of data, labeled as "name" in both files. In this example, 169 rows are merged together.
+-filter-fields town,state
+```
 
-  ![](images/11-transform/mapshaper-join-console.png)
+Note: If you leave a space after comma, you will get a *Command expects a single value* error.
 
-6. Click the Console button to close the command window. Select the "i" info button and click any polygon to confirm that it now contains the new table data. Export the file in your preferred format.
 
-  ![](images/11-transform/mapshaper-join-confirm.png)
+#### Join spreadsheet data with polygon map {-}
+
+Combining spreadsheet data with geographical boundaries is a common task for geospatial practitioners.
+Imagine you have a file with [Connecticut town boundaries](data/ct-towns.geojson),
+and you want to add [population data](data/ct-towns-popdensity.csv) to each of them
+in order to build a choropleth map.
+
+Mapshaper provides a powerful `-join` command to join such files. Remember that you need some common keys
+in both datasets (such as *town name*, or *state*, or *country*) in order to join files. Otherwise Mapshaper has no way of knowing which
+numbers belong to which polygons.
+
+1. Import both geospatial file and a CSV dataset into Mapshaper using Quick import box.
+2. Make sure both files appear in the drop-down list of layers.
+Your CSV data will be shown as something that resembles a table. Use the *Cursor > inspect attributes* tool
+to make sure the data is imported correctly. If you use the sample CT files, note that the *ct-towns* layer
+has *name* attribute with the name of the town, and *ct-towns-popdensity* has town names in the *town* column.
+3. Make your geospatial layer (*ct-towns*) is the one active.
+4. Open **Console**, and use the `-join` command, like that:
+```
+-join ct-towns-popdensity keys=name,town
+```
+where `ct-towns-popdensity` is the CSV layer you are merging with, and `keys` are the attributes that contain values to join by.
+In case with our sample files, these would be town names which are stored in `name` attribute of the map file, and `town` column
+of the CSV file.
+
+5. You will see a message in the console notifying you if join was performed successfully, or if Mapshaper encountered any errors.
+6. Use the *Cursor > inspect attributes* tool to make sure you see CSV columns as fields of your polygons, like is shown in Figure \@ref(fig:mapshaper-join).
+7. You can now save the file to your computer by clicking the *Export* button.
+
+(ref:mapshaper-join) Mapshaper lets you join spatial and CSV files using common keys (for example, town names).
+
+```{r mapshaper-join, fig.cap="(ref:mapshaper-join)"}
+knitr::include_graphics("images/11-transform/mapshaper-join.png")
+```
+
+Tip: To avoid confusion, it may be useful to re-name your CSV column that contains key values to match the key attribute name of your map.
+In our example, you would rename *town* column to *name* column in the CSV, and your command would end with `keys=name,name`.
+
+Do you remember aggregating address-level point records of hospitals into [hospital counts per state](pivot-point-to-polygon.html)?
+Now is a good time to find that .CSV file and practice your merging skills.
+
+
+#### Count points in polygons with Mapshaper {-}
+
+Mapshaper lets you count points in polygons, and record that number in polygon attributes using `-join` command.
+
+1. Import two geospatial files, one containing polygon boundaries (for example, [US state boundaries](data/us-states.geojson)),
+and another containing points that you want to aggregate (for example,
+[hospitals in the US](data/hospitals-points.geojson)).
+
+2. Make sure your polygons (not points) layer is active by selecting it from the dropdown menu.
+
+3. In **Console**, perform `-join` using a `count()` function, like that: 
+```
+-join hospitals-points calc='hospitals = count()' fields=
+```
+This command tells Mapshaper to count points inside *hospitals-points* layer and record them as *hospitals* attribute of the polygons.
+The `fields=` part tells Mapshaper to not copy any fields from the points, because we are performing many-to-one matching (many hospitals
+per state, in our case).
+
+4. Use the *Cursor > inspect attributes* tool to make sure polygons obtained a new field with the recorded count of points,
+like is shown in Figure \@ref(fig:mapshaper-count-points).
+
+5. Save the new file using *Export* button and choosing the desired output format.
+
+(ref:mapshaper-count-points) Mapshaper's -join can count points in polygons.
+
+```{r mapshaper-count-points, fig.cap="(ref:mapshaper-count-points)"}
+knitr::include_graphics("images/11-transform/mapshaper-count-points.png")
+```
 
 #### More about joins {-}
 
-1. If you don't have a CSV table that matches the columns in your boundary map data, you can easily create one. Upload the boundary map to MapShaper.org, and export in CSV format, and open with any spreadsheet tool. To match data columns in the CSV spreadsheet, use the [VLOOKUP method in this book](vlookup.html).
+As you saw in counting points in polygons example, you do not need to specify *keys* if you want to perform join
+based on geographical locations between two geo files. If one of your files is a CSV, you need *keys*. 
 
-2. The simple join example above uses identical keys (name,name) because the two columns headers are the same. But if you need to join data where the headers are not the same, enter the first key (the polygon map) and the second key (the CSV table).
+If you don't have a CSV table that matches the columns in your boundary map data, you can easily create one.
+Upload the boundary map to Mapshaper, and export in CSV format. Open the downloaded file in any spreadsheet tool.
+To match data columns in the CSV spreadsheet, use the [VLOOKUP](vlookup.html) function.
 
-3. Mapshaper also helps you to keep track of data that are not properly joined or matched. For example, if the polygon map contains 169 rows (one for each town in Connecticut), but the CSV table contains only 168 rows of data, Mapshaper will join all of those with matching keys, and then display this message:
-```markdown
-Joined 168 data records
-1/169 target records received no data
+In real life, you will rarely have perfect files with one-to-one matches,
+so you might want to have more information about which features didn't get matched so
+that you can fix your data.
+Mapshaper helps you keep track of data that is not properly joined or matched. For example, if the polygon map contains 169 features
+(one for each town in Connecticut), but the CSV table contains only 168 rows of data, Mapshaper will join all of those with matching keys,
+and then display this message:
 ```
-
-To capture data records that are not properly joined, add these terms at the end of your join command: `unjoined unmatched -info`. The first term saves a copy of each unmatched record from the target table to a new layer named "unmatched," and the second term saves a copy of each unjoined record from the source table into another layer named "unjoined." In the example below, see the console command and results, and a screenshot of the two new layers.
-
-```markdown
-$ -join towns-data.csv keys=name,name unmatched unjoined -info
-Joined 27 data records
-2/29 target records received no data
-2/29 source records could not be joined
-Layer 1 ...
+[join] Joined data from 168 source records to 168 target records
+[join] 1/169 target records received no data
+[join] 1/169 source records could not be joined
 ```
+To get more details on which values were not joined, add `unjoined unmatched -info` flags to your join command, like this:
+```
+-join ct-towns-popdensity keys=name,town unjoined unmatched -info
+```
+The `unjoined` flag saves a copy of each unjoined record from the source table into another layer named *unjoined*.
+The `unmatched` flag saves a copy of each unmatched record from the target table to a new layer named *unmatched*.
+And the `-info` flag outputs some additional information about the joining procedure to the console.
 
-![](images/11-transform/mapshaper-unmatched-unjoined.png)
 
 #### Merge selected polygons with join and dissolve commands {-}
 
-** TO DO ** fix screenshots to match new data files and column headers
+In Mapshaper, you can merge selected polygons into larger "clusters" using `-join` and `-dissolve` commands.
 
- Another common task is to merge selected polygons in a boundary map, which you can do in MapShaper with the join and dissolve commands you learned above. Imagine that you wish to create regional "cluster" boundaries from smaller polygon areas. For example, the [Connecticut Department of Public Health](http://www.ct.gov/dph/cwp/view.asp?a=3123&q=397740) has grouped individual towns, such as Bloomfield and West Hartford, into regional health districts. Your task is to begin with a statewide polygon map of all town boundaries, and to create a new polygon map that displays these regional clusters.
+Imagine that you are employed by the CT Department of Public Health, and your task is
+to divide 169 towns into 20 so-called Health Districts and produce a new geospatial file.
+By the way, health districts [are a real thing in Connecticut](https://portal.ct.gov/DPH/Local-Health-Admin/LHA/Local-Health-Administration---Site-Map).
 
-Try it! Right-click the link and Save to download the sample files to your computer: [ct-towns in GeoJSON format](data/ct-towns.geojson). If you accidentally open a page of GeoJSON code in your browser, select File > Save Page As to download to your computer.
+You should begin by creating a *crosswalk* of towns and their health districts. It can be as simple as a two-column CSV list
+of a town and its district. Because your boss didn't give you a list of towns in a spreadsheet format,
+but instead a GeoJSON file with town boundaries, let's extract a list of towns from it.
 
- Refresh the browser to start a new session in http://MapShaper.org.
+1. Import [ct-towns.geojson](data/ct-towns.geojson) to Mapshaper using Quick import box.
+2. You can use the *Cursor > inspect attributes* tool to see that each polygon has a *name* attribute with the name of the town.
+3. Save attribute data as a CSV file using *Export* button. Open the file in any spreadsheet tool. You will see that your data is a one-column
+file with a *name& column that lists 169 towns.
+4. Create a second column titled *merged* and copy-paste values from the first, *name* column.
+At this point your spreadsheet contains two columns with the same values.
+5. Pick a few towns, for example *West Hartford* and *Bloomfield*, and assign "Bloomfield-West Hartford"
+to their *merged* column, like is shown in Figure \@ref(fig:mapshaper-merge-csv). You may stop right here and move to the next step, or keep assigning district names
+to a few other neighboring towns.
 
-1. Import the ct-towns.geojson map file into http://MapShaper.org.
+(ref:mapshaper-merge-csv) Create a two-column crosswalk of towns and which districts they should be merged to.
 
-2. Export in CSV format. This steps creates a spreadsheet that lists all of the polygon town names, without geographic details.
-
-  ![](images/11-transform/towns-export-csv.png)
-
-3. Open the CSV file with any spreadsheet tool. Copy the contents of the "name" column, paste it into a second column, and change the header of this second column to "merged".
-
-4. In the new "merged" column, create new listings for towns you wish to merge together. In this example, Bloomfield and West Hartford are merged into Bloomfield-West Hartford. Leave other towns unchanged.
-
-  ![](images/11-transform/CT-towns-merged-csv.png)
-
-5. Save this spreadsheet in CSV format with a new file name, such as: ct-towns-merged.csv.
-
-6. Drag this new ct-towns-merged.csv file into MapShaper, and click Import.
-
-7. Use the drop-down menu to manage multiple layers in MapShaper. Since the CSV file has no geography, it appears as a series of rectangular cells. Instead, select the ct-towns.geojson map to display it as the active layer.
-
-  ![](images/11-transform/mapshaper-two-layers.png)
-
-8. Click on the Console button, type in both of the commands below, and press Return at the end of each line:
-
-```markdown
--join CT-towns-merged.csv keys=name,name
--dissolve merged
+```{r mapshaper-merge-csv, out.width="250px", fig.cap="(ref:mapshaper-merge-csv)"}
+knitr::include_graphics("images/11-transform/mapshaper-merge-csv.png")
 ```
 
-How to understand the commands above:
+6. Save this new file as *ct-towns-merged.csv*, and drag-and-drop it to Mapshaper on top of your *ct-towns* layer. Click *Import*.
+7. This new CSV layer will be added as *ct-towns-merged* and will appear as a series of table cells. From the dropdown menu,
+select *ct-towns* to get back to your map.
+8. Now you are ready to merge certain towns into districts according to your uploaded CSV file. Open **Console**, and type:
+```
+-join ct-towns-merged keys=name,name
+```
+to join the CSV layer with the boundaries layer that you see on the screen, followed by 
+```
+-dissolve merged
+```
+to dissolve polygons of towns according to the *merged* column of the CSV file.
 
-- The first line "joins" the active layer (the polygon map) to the CSV spreadsheet, with "keys" to match their shared data columns, which are both labeled as "name".
-- The second line dissolves the polygons of towns listed in the "merged" column of the CSV file. In this simple example, only Bloomfield and West Hartford are dissolved into a combined "Bloomfield-West Hartford" regional health district, and all of the other polygons remain the same.
+In our example, only Bloomfield and West Hartford are dissolved into a combined
+"Bloomfield-West Hartford" regional health district (with the shared boundary between towns becoming grayed out),
+and all of the other polygons remain the same. Figure \@ref(fig:mapshaper-merge) shows the final result.
 
-  ![](images/11-transform/mapshaper-towns-merged.png)
+(ref:mapshaper-merge) Merge polygons based on a predefined crosswalk.
 
-Click the Console button to close its window. Select the "i" information button to inspect your merged polygons. Export the map in your preferred format.
+```{r mapshaper-merge, fig.cap="(ref:mapshaper-merge)"}
+knitr::include_graphics("images/11-transform/mapshaper-merge.png")
+```
+
+You can inspect attribute data of polygons using *Cursor > inspect attributes* tool, and save the resulting file
+using the *Export* button.
+
 
 #### Learn more advanced MapShaper methods {-}
 
-- See the MapShaper GitHub project wiki (https://github.com/mbloch/mapshaper/wiki/) for more command references and tips about map simplification
+There are many more commands within Mapshaper that are worth exploring if you are serious about GIS, such as changing projections, filtering
+features using JavaScript expressions, assigning colors to polygons based on values, and many more. Explore the [Wiki](https://github.com/mbloch/mapshaper/wiki/Command-Reference) of Mapshaper project on GitHub for more commands and examples.
 
-**TO DO**: illustrate concept of a point-to-polygon spatial join. When using the join command, "If the keys= option is missing, Mapshaper will perform a point-to-polygon or polygon-to-point spatial join."
 
 ## Convert a Compressed KMZ file to KML format {- #convert-kmz}
-Sometimes KML files are distributed in compressed KMZ format. One easy conversion method:
+Sometimes KML files are distributed in compressed KMZ format.
+The easiest way to convert is to use free Google Earth Pro.
 
-- Install the free [Google Earth tool](https://www.google.com/earth/)
-- Double-click on any .kmz file to open it in Google Earth
-- Right-click (or control-click) on the .kmz layer and select *Save As*
+1. Download and install [Google Earth Pro](https://www.google.com/earth/versions/) for desktop.
+2. Double-click on any .kmz file to open it in Google Earth Pro. Alternatively, open Google Earth Pro first,
+and go to *File > Open* and choose your KMZ file.
+3. Right-click (or control-click) on the KMZ layer under Places menu, and select *Save Place As...*,
+like is shown in Figure \@ref(fig:kmz-earth).
 
-  ![](images/11-transform/google-earth-convert-kmz.png){.center}
+(ref:kmz-earth) In Google Earth Pro, right-click KMZ layer and choose *Save Place As*.
 
-- Use the *Save As* drop down menu to select .kml format
+```{r kmz-earth, out.width="400px", fig.cap="(ref:kmz-earth)"}
+knitr::include_graphics("images/11-transform/kmz-earth.png")
+```
+4. In the dropdown menu of *Save file...* window, choose KML format, like is shown in Figure \@ref(fig:kmz-save-as).
 
-  ![](images/11-transform/google-earth-save-kml.png){.center}
+(ref:kmz-save-as) Save as KML, not KMZ.
 
-Or use any zip-utility and simply unzip the kmz file. Kmz is simply a 'zipped' version of a kml file!
+```{r kmz-save-as, out.width="350px", fig.cap="(ref:kmz-save-as)"}
+knitr::include_graphics("images/11-transform/kmz-save-as.png")
+```
+
+Alternatively, you can use any zip-utility to extract a KML file from KMZ.
+KMZ is simply a 'zipped' version of a KML file!

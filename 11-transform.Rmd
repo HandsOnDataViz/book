@@ -150,7 +150,7 @@ Save it, and inspect it in your favorite spreadsheet tool. The resulting file is
 an eight-column CSV file with the original ID and address, match type (exact, non-exact, tie, or no match),
 and latitude/longitude coordinates.
 
-Getting a *tie* matching means there are multiple possible results for your address. To see all possible matches of an address that 
+Getting a *tie* matching means there are multiple possible results for your address. To see all possible matches of an address that
 got a *tie*, use *One Line* or *Address* tools in the left-hand side menu and search for that address.
 
 Tip: If you see some unmatched addresses, use a filtering functionality of your
@@ -371,7 +371,7 @@ that comes in `.geojson` or `.json` files.
 It was first developed in 2008, and then standardized in 2016 by
 the Internet Engineering Task Force (IETF). The code snippet below
 represents a single point (feature) with latitude of 41.76 and longitude of -72.67
-in GeoJSON format. That point has a *name* attribute (property) whose value is *Hartford*. 
+in GeoJSON format. That point has a *name* attribute (property) whose value is *Hartford*.
 
 ```
 {
@@ -446,7 +446,7 @@ to learn to convert.
 Similar to Esri's shapefiles, MapInfo's TAB format comes as a folder
 with `.tab`, `.dat`, `.ind`, and some other files. It is a proprietary format created
 and supported by MapInfo, Esri's competitor, and is designed to work well with MapInfo Pro
-GIS software. Unfortunately, you will most likely need MapInfo Pro, QGIS, or ArcGIS to re-save these as GeoJSON 
+GIS software. Unfortunately, you will most likely need MapInfo Pro, QGIS, or ArcGIS to re-save these as GeoJSON
 or a Shapefile.
 
 
@@ -645,7 +645,7 @@ listing all attributes and values of the polygon.
 1. When you are done, export your geospatial file by clicking *Export* and
 choosing the desired file format.
 
-(ref:mapshaper-edit) Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points. 
+(ref:mapshaper-edit) Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points.
 
 ```{r mapshaper-edit, fig.cap="(ref:mapshaper-edit)"}
 knitr::include_graphics("images/11-transform/mapshaper-edit.png")
@@ -812,7 +812,7 @@ and another containing points that you want to aggregate (for example,
 
 2. Make sure your polygons (not points) layer is active by selecting it from the dropdown menu.
 
-3. In **Console**, perform `-join` using a `count()` function, like that: 
+3. In **Console**, perform `-join` using a `count()` function, like that:
 ```
 -join hospitals-points calc='hospitals = count()' fields=
 ```
@@ -834,7 +834,7 @@ knitr::include_graphics("images/11-transform/mapshaper-count-points.png")
 #### More about joins {-}
 
 As you saw in counting points in polygons example, you do not need to specify *keys* if you want to perform join
-based on geographical locations between two geo files. If one of your files is a CSV, you need *keys*. 
+based on geographical locations between two geo files. If one of your files is a CSV, you need *keys*.
 
 If you don't have a CSV table that matches the columns in your boundary map data, you can easily create one.
 Upload the boundary map to Mapshaper, and export in CSV format. Open the downloaded file in any spreadsheet tool.
@@ -895,7 +895,7 @@ select *ct-towns* to get back to your map.
 ```
 -join ct-towns-merged keys=name,name
 ```
-to join the CSV layer with the boundaries layer that you see on the screen, followed by 
+to join the CSV layer with the boundaries layer that you see on the screen, followed by
 ```
 -dissolve merged
 ```
@@ -920,6 +920,7 @@ using the *Export* button.
 There are many more commands within Mapshaper that are worth exploring if you are serious about GIS, such as changing projections, filtering
 features using JavaScript expressions, assigning colors to polygons based on values, and many more. Explore the [Wiki](https://github.com/mbloch/mapshaper/wiki/Command-Reference) of Mapshaper project on GitHub for more commands and examples.
 
+TODO: Add Mapwarper section here 
 
 ## Convert a Compressed KMZ file to KML format {- #convert-kmz}
 Sometimes KML files are distributed in compressed KMZ format.

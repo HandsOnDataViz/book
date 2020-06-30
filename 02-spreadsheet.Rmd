@@ -1,26 +1,36 @@
 # Improve Your Spreadsheet Skills {#spreadsheet}
-Before we begin to design data visualizations, let's bring our spreadsheet skills up to speed. The interactive charts and maps that we'll construct later this book are built on data tables. We normally open up data tables with spreadsheet tools, such as Google Sheets or Microsoft Excel, that display numbers or text in rows and columns, where each box in the grid called a "cell".
+Before we begin to design data visualizations, let's bring our spreadsheet skills up to speed. While teaching this topic, we've heard many people describe how they "never really learned" how to use spreadsheet tools, such as Google Sheets or Microsoft Excel, as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.
 
-In this chapter, you'll learn (or refresh) your skills in using spreadsheet tools for basic tasks, such as sharing, sorting, and making calculations with your data.
+To fill this gap, we added this chapter to introduce or refresh your spreadsheet skills. The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a "cell." In this chapter, we'll start by reviewing basic steps, such as [uploading](upload.html) and [sharing data](share.html), [sorting and filtering](sort.html), and [inserting simple formulas to automatically run calculations](calculate.html). Then we'll step up to the next level of skills, such as [grouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), and [collecting data with online forms](forms.html). Even if you *think* you know how to use spreadsheets, skim through these sections and you'll probably learn a few things that will help you to create better charts and maps later in the book.
 
-normally see as rows and columns of numbers or text. First, you need to learn or refresh your skills in using spreadsheet tools to sort, pivot, and match up tables
+Spreadsheet tools and terminology:
 
+Most of our examples in this book feature [Google Sheets](https://www.google.com/sheets/about/), a free and easy-to-learn collaborative spreadsheet tool, which is part of the Google Drive family. Users can sign up for a free personal account or a paid business account, and if you already have a Google Mail account, you can use the same username to access it.
 
-While teaching data visualization over the past decade, we noticed that many of our students would benefit from learning some specific spreadsheet skills, since these have not been regularly taught in most schools or colleges or workplaces. So we added this introductory chapter to fill this common gap. Even if you *think* you're familiar with spreadsheet basics, we strongly recommend reviewing the
+The methods shown here are similar across other spreadsheet tools, such as:
 
-Goal is to help you uncover the stories buried inside your data.
+- free online [Microsoft Excel for Office Live](https://office.live.com/start/Excel.aspx)
+- paid downloadable [Microsoft Excel for Office 365](https://www.microsoft.com/en-us/microsoft-365/microsoft-office) for desktop, laptop, and other devices
+- free and open-source downloadable [LibreOffice](https://www.libreoffice.org/) for desktop and laptop, with donation requested
 
+Any of these tools will be sufficient for this book, but more advanced users may need more complex tools to manage very large datasets, or relational databases, or to perform deeper analysis.
 
- since these are not regularly taught, and
+TODO: Which spreadsheet tool should you use? That depends on how you wish to share and store data for your project.
 
+- If you are the **only person** working on a data project, use any spreadsheet tool.
+- If you need to **protect private data**, avoid online tools and use any desktop spreadsheet.
+- If you need to **share live data** with others, use Google Sheets.
 
-We added this chapter on spreadsheet
+TODO: Data formats
 
+- Comma-separated values (.csv), a generic single sheet
+- Microsoft Excel current (.xlsx) and older format (.xls)
+- OpenData System (.ods), a generic multi-tab spreadsheet
 
-We added this chapter to this introductory book because we saw that many first-time  
-
-While teaching people to create their first data visualizations, we've noticed that many
-
+- OpenDocument Spreadsheet (.ods)
+- Comma-separated values (.csv)
+- Tab-separated values (.tab)
+- Text files (.txt) into Google Sheets format
 
 Warning: Several tools in this book will not work properly if your computer does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac computer operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
 
@@ -31,11 +41,9 @@ Warning: Several tools in this book will not work properly if your computer does
 ```
 
 
-Spreadsheet tools
 
-Data formats
 
-Skills you'll learn in this chapter....
+
 
 Warning: To follow the steps in this book, we recommend either a desktop or laptop computer, running either the Mac or Windows or Linux operating system, with an internet connection and a modern web browser such as Chrome, Firefox, Safari, or Edge. Another good option is a Chromebook laptop, which enables you to complete *most* of the steps in this book, and we'll point out any limitations in specific chapters. While it's possible to use a tablet or smartphone device, we do not recommend it because you cannot follow all of the steps, and you'll also get frustrated with the small screen and perhaps throw your device (or this book) across the room, and possibly hit someone else in the head. Ouch! We are not responsible for injuries caused by flying objects.
 
@@ -43,40 +51,14 @@ Tip: If you're working on a laptop, consider buying or borrowing an external mou
 
 Tip: If you're new to working with computers---or teaching new users with this book---consider starting with [mouse exercises](http://www.pbclibrary.org/mousing/mousercise.htm). All of the tools in this book assume that users already know how to click tiny buttons, hover over links, and scroll web pages, but rarely are these skills taught, and everyone needs to learn them at some point in our lives.
 
-TODO: I added the tips above because these are huge yet surmountable obstacles for many people I've worked with, especially older generations and incarcerated people.
+TODO: I added the tips above because these are huge yet surmountable obstacles for many people I've worked with, especially older generations and incarcerated people. But I'm uncertain about the link to the mouse exercises. Perhaps I should tweet at public library staff and instructors to find better beginning resources?
 
 
 
-This introductory online book features Google Sheets because it's a free and easy-to-learn tool for collaborating and sharing data with others. The basic spreadsheet methods shown here are very similar across all spreadsheet tools. But advanced users may need more complex tools to manage very large datasets, or relational databases, or to perform deeper analysis.
-
-Four common spreadsheet tools:
-
-| Tool | Features |
-| :--- | :--- |
-| [Google Sheets](https://www.google.com/sheets/about/) | Free, online collaborative spreadsheet on Google Drive. Requires free account. |
-| [Microsoft Excel Online](https://office.live.com/start/Excel.aspx) | Free online spreadsheet on Microsoft OneDrive. Requires free account. Cannot open CSV generic spreadsheet files. |
-| [Microsoft Excel desktop](https://products.office.com/en-us/excel) | Not free (US $100+) spreadsheet for Mac or Windows desktop, as part of Microsoft Office. |
-| [LibreOffice](http://www.libreoffice.org) | Free, open-source alternative to Microsoft Office desktop. Donation requested during download. |
-
-Which spreadsheet tool should you use? That depends on how you wish to share and store data for your project.
-
-- If you are the **only person** working on a data project, use any spreadsheet tool.
-- If you need to **protect private data**, avoid online tools and use any desktop spreadsheet.
-- If you need to **share live data** with others, use Google Sheets.
 
 
 
-If you're new to spreadsheets or want to refresh your skills, see the following chapters:
 
-- [Upload and Convert to Google Sheets](upload.html)
-- [Make a Copy with Google Sheets](copy.html)
-- [Share with Google Sheets](share.html)
-- [Save as CSV or ODS Format](csv.html)
-- [Sort and Filter Data](sort.html)
-- [Calculate with Formulas](calculate.html)
-- [Group Data with Pivot Tables](pivot.html)
-- [Match Data with VLookup](vlookup.html)
-- [Collect and Share Survey Data with Google Forms](forms.html)
 
 
 ## Upload Files and Convert to Google Sheets {- #upload}

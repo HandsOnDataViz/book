@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Images | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Images | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-23" />
+<meta name="date" content="2020-07-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -194,7 +194,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
-<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -219,7 +218,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
-<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -246,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
-<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>MapShaper.org to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>12</b> Detect Bias in Data Stories</a>
@@ -303,10 +301,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a></p>
 <p>Create high-resolution color screenshots and other static images in .png or .jpg format, with tight cropping on a high-resolution Retina monitor, typically at 144 ppi. Save items into the <code>images</code> subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.</p>
 <p>If a screenshot requires additional artwork or text for the HTML edition, make a copy of the original and add <code>-ann</code> to note that this version is annotated, save into the same folder with the same root file name, and use in the code-chunk image pathnames. The publisher will use the original image and add their own artwork for their editions.</p>
-<p>If an image is larger than approximately 300px on either side, one more option is to reduce the image size in the PDF version. Use Photoshop (<em>not</em> Preview) to reduce the image size, and save a copy with the same file name with the .pdf extension into the folder. In some cases, the folder will contain only one version of each image, but in other cases it may contain up to three versions of an image:</p>
-<pre><code>images/05-chart/design-no-junk.png
-images/05-chart/design-no-junk-ann.png
-images/05-chart/design-no-junk-ann.pdf</code></pre>
+<p>If an image is larger than approximately 300px on either side, one more option is to reduce the image size in the PDF version. Use Photoshop (<em>not</em> Preview) to reduce the image size, and save a copy with the same file name with the .pdf extension into the folder.</p>
+<p>In some cases (such as images inside Markdown tables, or static screenshots to accompany iframes), it may make sense to save a full-size version, with <code>-original</code> in the file name, for the publisher to use when creating the print book.</p>
+<p>Overall, sometimes the folder will contain only one version of a simple image, but in other cases it may contain up to 3-4 versions of an image:</p>
+<pre><code>images/05-chart/design-setup.png
+images/05-chart/design-setup-ann.png
+images/05-chart/design-setup-ann.pdf
+images/05-chart/design-setup-original.png</code></pre>
 <p>If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:</p>
 <p><code>&lt;!-- Images below are 200x200 at 300 resolution --&gt;</code></p>
 <p>In this book, use <em>Markdown formatting only for images that appear inside tables</em> or <em>do not require captions or figure numbering</em>, and leave the caption field blank, like this example:</p>
@@ -336,9 +337,9 @@ images/05-chart/design-no-junk-ann.pdf</code></pre>
 <p>Auto-numbering appears in <code>Figure x.x</code> format in HTML and PDF, but <code>Figure x</code> format in MS Word. Note that Word formatting can be changed with reference.docx.</p>
 <p>Note that images in PDF output will “float” by design and may appear before or after the desired page, so always add a cross-reference call-out.</p>
 <p>Write R code-chunk labels that follow the image file name, and avoid duplicate labels across the book:</p>
-<pre><code>ref:design-no-junk
+<pre><code>ref:design-setup
 
-images/05-chart/design-no-junk.png</code></pre>
+images/05-chart/design-setup.png</code></pre>
 <p>Do not insert spaces inside the <code>ref:chunk-label</code> for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add <em>another</em> blank line to avoid “undefined reference” Bookdown errors.</p>
 <p>For each figure, manually add a cross-reference call-out and insert <code>fig.pos='h'</code> to place the image “here” on the page in the PDF output, to <em>attempt</em> to avoid PDF floating. Ignore the Bookdown LaTeX warning message “h float specifier changed to ht.” See more at <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a> and <a href="https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html</a></p>
 <p>This Bookdown <code>index.Rmd</code> file includes two global R code-chunk settings immediately after the first header. One setting displays each code-chunk image without a code echo. The other setting automatically inserts the PDF version of an PNG/JPG image, whenever it exists, in the PDF output, which allows us to manually reduce the image sizes for the PDF book. Read more about these options in this Bookdown chapter: <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a>.</p>

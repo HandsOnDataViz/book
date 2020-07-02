@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Geocode Locations into Coordinates with US Census or Google | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Geocode Locations into Coordinates with US Census or Google | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-23" />
+<meta name="date" content="2020-07-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -194,7 +194,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
-<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -219,7 +218,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
-<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -246,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
-<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>MapShaper.org to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>12</b> Detect Bias in Data Stories</a>
@@ -300,150 +298,130 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="geocode" class="section level2 unnumbered" number="">
 <h2>Geocode Locations into Coordinates with US Census or Google</h2>
-<p>Many free map tools geocode locations by placing them on a map, such as <a href="mymaps.html">Google My Maps tutorials</a> in this book. But those tools typically do not allow you to easily extract the latitude-longitude coordinates for each point.</p>
-<p>We created two free Google Sheets Geocoder scripts that have several advantages:</p>
-<ul>
-<li>convert locations (Hartford CT) or addresses (300 Summit St, Hartford CT) into latitude-longitude coordinates (41.748, -72.692) inside your Google Sheet</li>
-<li>show the location found in the geocoding database, and match quality, to review your results</li>
-<li>convert US addresses into US Census geography, such as census tracts, block groups, and blocks</li>
-</ul>
-<p>As with any geocoding service, accuracy is not guaranteed. Inspect your results in the Found and Quality columns.</p>
-<div id="google-sheets-geocoder-us-census-or-google" class="section level4 unnumbered" number="">
-<h4>Google Sheets Geocoder: US Census or Google</h4>
-<ul>
-<li>Geocode locations into latitude, longitude, with source and match quality, inside a Google Sheet</li>
-<li>Go to Google Sheet template, sign in to your account, and File &gt; Make a Copy to your Google Drive <a href="https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0</a></li>
-<li>Insert locations, select 6 columns, and select Geocoder menu: US Census or Google (limit 1000 daily per user)</li>
-<li>Google Sheets script will ask for permission to run the first time</li>
-<li>Note: The <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets template</a> in this book includes this Geocoder script.</li>
-</ul>
-<div class="figure"><span id="fig:googlesheets-geocoder"></span>
-<iframe src="images/11-transform/google-sheets-geocoder-census-google.gif" width="672" height="400px">
+<p>Before addresses can be mapped, they need to be geocoded.
+<strong>Geocoding</strong> is a process of transforming a human-readable address, such as <em>300 Summit St, Hartford, CT</em>
+into a latitude-longitude pair, such as <em>41.747,-72.692</em>. These numbers are x- and y-coordinates
+that maps understand.</p>
+<p>If you have just a few addresses, it might be faster to geocode them with <a href="https://www.google.com/maps">Google Maps</a>.
+Search for an address, right-click on that point, and select <em>What’s here?</em> to reveal a popup window with its latitude and longitude, as shown in Figure <a href="geocode.html#fig:gmaps-whats-here">11.2</a>. You can copy and paste the coordinates into your spreadsheet.</p>
+
+<div class="figure"><span id="fig:gmaps-whats-here"></span>
+<img src="images/11-transform/gmaps-whats-here.png" alt="To geocode one address, search in Google Maps and right-click What’s here? to show coordinates."  />
+<p class="caption">
+Figure 11.2: To geocode one address, search in Google Maps and right-click <em>What’s here?</em> to show coordinates.
+</p>
+</div>
+<p>But what if you need to geocode dozens, hundreds, or even thousands of addresses? In this section, we will look at two ways to geocode larger lists of addresses. First, you’ll learn how to use our custom-built
+<a href="https://github.com/HandsOnDataViz/google-sheets-geocoder">Google Sheets Geocoder</a>, which
+lets you upload up to 1,000 addresses and choose between Google Geocoder (available pretty much worldwide) and the US Census Geocoder (for US addresses only) Second, you’ll learn how to use a stand-alone US Census Geocoder that allows you to upload up to 10,000 addresses (for the US only) and download results.</p>
+<p>TODO: I tried to add numerical limitations for each tool to clarify the “two ways”; check details</p>
+<div id="geocode-addresses-with-google-sheets-geocoder" class="section level4 unnumbered" number="">
+<h4>Geocode addresses with Google Sheets Geocoder</h4>
+<p>The Google Sheets Geocoder script lives inside a <a href="https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0">Google Sheet</a> that you can copy to your own Google Drive
+(you don’t need editing access, just go to <em>File &gt; Make a copy</em>).</p>
+<p>The spreadsheet contains six columns. Populate the first column, <em>Location</em>, with your addresses.
+The remaining five columns will be filled by the geocoding script. Select all six columns,
+go to <em>Geocoder</em> in the menu, and choose which geocoding utility to use, like is shown in Figure <a href="geocode.html#fig:sheets-geocoder">11.3</a>.</p>
+
+<div class="figure"><span id="fig:sheets-geocoder"></span>
+<iframe src="images/11-transform/sheets-geocoder.gif" width="672" height="280px">
 </iframe>
 <p class="caption">
-Figure 11.1: Screencast: Google Sheets Geocoder: US Census or Google
+Figure 11.3: Put addresses in the first column, and use Geocoder to fill in the remaining five.
+</p>
+</div>
+<p>Note: If your address data is split into multiple columns (such as <em>Street</em>, <em>City</em>, and <em>State</em>),
+revisit <a href="clean-spreadsheets.html">Clean Data with Spreadsheets</a> section to remind yourself
+how to “glue” multiple cells into one.</p>
+<p>If you run the script for the first time, Google Sheets may ask for permission or warn that the script is not safe.
+Disregard this message. The code is open-source and is available <a href="https://github.com/HandsOnDataViz/google-sheets-geocoder">on GitHub</a>,
+so you or your programmer friend can make sure it doesn’t steal your personal data.</p>
+<p>TODO: Fix the Google App code to remove warning message</p>
+<p>Once the script finishes executing, you will get a pop-up notification that will tell you how many addresses
+were successfully geocoded, and how many failed. Inspect <em>Found</em> and <em>Quality</em> columns to ensure the geocoder matched your addresses correctly.
+Then look at the failed addresses and see if you can spot problems with them. For tops about
+using Google geocoder, see <a href="https://developers.google.com/maps/faq#geocoder_queryformat">documentation</a>.</p>
+<p>Note: The Geocoder plugin is a small Apps Script program that is connected to your Google sheet.
+It sends your addresses to either <a href="https://geocoding.geo.census.gov/geocoder">US Census Geocoder</a>,
+or <a href="https://developers.google.com/apps-script/reference/maps/geocoder">Google Geocoding API</a>,
+and gets geocoded results as a response.</p>
+</div>
+<div id="geocode-us-addresses-to-census-tracts-with-google-sheets-geocoder" class="section level4 unnumbered" number="">
+<h4>Geocode US addresses to census tracts with Google Sheets Geocoder</h4>
+<p>You can use a modified version of the Google Sheets Geocoder, available in
+<a href="https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0">its own spreadsheet</a>,
+to assign census tracts and GeoIDs to addresses within the United States.</p>
+<p>A GeoID is a unique identifier of a place according to the US Census. A sample 15-digit
+GeoID, <code>090035245022001</code>, consists of a state (09), followed by county (003),
+followed by census tract (524502, or more conventional 5245.02),
+followed by a census block group (2), and finally a census block (001).</p>
+<p>Make a copy of the <a href="https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0">template spreadsheet</a>
+into your own Google Drive by going to <em>File &gt; Make a copy</em>.</p>
+<p>You only need to populate the first column, <em>Location</em>. The rest seven columns
+will be populated by the Geocoder. Similar to the previous template, select all eight columns,
+and go to <em>Geocoder &gt; US Census 2010 Geographies</em>, like is shown in Figure <a href="geocode.html#fig:sheets-geocoder-censusgeo">11.4</a>.</p>
+<p>If you run this script for the first time, Google Sheets will ask you for permission to run,
+and will possibly warn you that this script is unsafe. Once again, you shouldn’t worry. The plugin
+is open-source and you can inspect it to make sure it doesn’t steal or retain your personal data.</p>
+
+<div class="figure"><span id="fig:sheets-geocoder-censusgeo"></span>
+<iframe src="images/11-transform/sheets-geocoder-censusgeo.gif" width="672" height="330px">
+</iframe>
+<p class="caption">
+Figure 11.4: Put addresses in the first column, and use Geocoder to fill in the remaining seven.
 </p>
 </div>
 </div>
-<div id="google-sheets-geocoder-us-census-geographies" class="section level4 unnumbered" number="">
-<h4>Google Sheets Geocoder: US Census Geographies</h4>
-<ul>
-<li>Geocode US addresses into latitude, longitude, GeoID, census tract, inside a Google Sheet</li>
-<li>Go to Google Sheet template, sign in to your account, and File &gt; Make a Copy to your Google Drive
-<a href="https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0</a></li>
-<li>Insert locations, select 8 columns, and select Geocoder menu: US Census 2010 Geographies</li>
-<li>Google Sheets script will ask for permission to run the first time</li>
-</ul>
-<div class="figure"><span id="fig:googlesheets-geocoder2"></span>
-<iframe src="images/11-transform/google-sheets-geocoder-census-geographies.gif" width="672" height="400px">
-</iframe>
-<p class="caption">
-Figure 11.2: Screencast: Google Sheets Geocoder: US Census Geographies
-</p>
-</div>
-<div id="about-us-census-15-character-geoid" class="section level5 unnumbered" number="">
-<h5>About US Census 15-character GeoID</h5>
-<ul>
-<li>Make sure that column G is formatted as text (to preserve leading zeros), not number</li>
-<li>Break down a sample GeoID: 090035245022001
-<ul>
-<li>state = 09</li>
-<li>county = 003</li>
-<li>tract = 524502 = 5245.02</li>
-<li>block group = 2</li>
-<li>block = 001</li>
-</ul></li>
-</ul>
-</div>
-<div id="how-it-works-1" class="section level5 unnumbered" number="">
-<h5>How it works</h5>
-<p>The Google Sheet Geocoder runs from a script insert in the Google Sheet, which calls one of two free geocoding services:</p>
-<ul>
-<li>US Census Geocoder <a href="https://geocoding.geo.census.gov/geocoder" class="uri">https://geocoding.geo.census.gov/geocoder</a>. See more detailed documentation at <a href="http://www.census.gov/geo/maps-data/data/geocoder.html" class="uri">http://www.census.gov/geo/maps-data/data/geocoder.html</a></li>
-<li>Geocode with Google Apps: The Maps Service of Google Apps allows users to geocode street addresses without using the Google Maps API, with a limit of 1,000 searches daily per user, <a href="https://developers.google.com/apps-script/reference/maps/geocoder" class="uri">https://developers.google.com/apps-script/reference/maps/geocoder</a></li>
-</ul>
-</div>
-<div id="how-to-insert-the-geocoder-script-into-any-google-sheet" class="section level5 unnumbered" number="">
-<h5>How to insert the Geocoder Script into any Google Sheet</h5>
-<p>If you do not wish to File &gt; Make a Copy of the Google Sheet templates above, you can insert the open-source Geocoder Scripts into your own Google Sheet:</p>
-<ul>
-<li>Go to <a href="https://github.com/handsondataviz/google-sheets-geocoder">Google Sheets Geocoder repo on GitHub</a></li>
-<li>Sign in to your Google Sheets, then select Tools &gt; Script Editor</li>
-<li>File &gt; Create New Script File</li>
-<li>Open and copy a script (such as geocoder-census-google.gs) and paste into your Script Editor</li>
-<li>Save and rename to geocoder-census-google.gs</li>
-<li>Refresh your Google Sheet and look for new Geocoder menu</li>
-</ul>
-</div>
-<div id="todo-1" class="section level5 unnumbered" number="">
-<h5>TODO</h5>
-<ul>
-<li>Also describe and link back how to split columns to form multi-columns addresses</li>
-<li>also describe and link back to how to unify columns to form a one-column address</li>
-<li>add this <a href="https://developers.google.com/maps/faq#geocoder_queryformat" class="uri">https://developers.google.com/maps/faq#geocoder_queryformat</a></li>
-</ul>
-</div>
-</div>
-<div id="see-also-batch-upload-to-us-census" class="section level4 unnumbered" number="">
-<h4>See also: Batch upload to US Census</h4>
-<ul>
-<li>Available at US Census Geocoder <a href="https://geocoding.geo.census.gov/geocoder/" class="uri">https://geocoding.geo.census.gov/geocoder/</a></li>
-<li>Upload CSV table with up to 1000 rows for faster processing, in this format, WITHOUT column headers:</li>
-</ul>
-<div class="line-block">AnyID | Street | City | State | Zip |<br />
-:—– | :—– | :— | :—- | : — |<br />
-1 | 300 Summit St | Hartford | CT | 06106 |</div>
-<ul>
-<li>Find Locations using &gt; Address Batch (returns latitude, longitude coordinates)</li>
-<li>Find Geographies using &gt; Address Batch (returns lat, lng, census geographies)</li>
-<li>Limitations:
-<ul>
-<li>Inputs and outputs have no column headers, which may confuse novices</li>
-<li>Large batches may be delayed a few minutes during peak time periods</li>
-<li>Unmatched addresses need to be manually corrected and re-submitted</li>
-</ul></li>
-</ul>
-</div>
-<div id="try-it-batch-upload-to-us-census" class="section level4 unnumbered" number="">
-<h4>Try it: Batch Upload to US Census</h4>
+<div id="insert-google-sheets-geocoder-script-into-your-own-spreadsheet" class="section level4 unnumbered" number="">
+<h4>Insert Google Sheets Geocoder script into your own spreadsheet</h4>
+<p>If you don’t want to make a copy of the Google Sheet templates from the previous examples,
+you can insert the open-source Geocoder scripts into your own Google sheet.</p>
 <ol style="list-style-type: decimal">
-<li><p>Right-click and Save this CSV file to your computer: <a href="sample-addresses-50.csv">sample-addresses-50</a>. CSV means comma-separated values, a generic spreadsheet format that most data tools can easily open.</p></li>
-<li><p>Use any spreadsheet tool to organize your address data into five columns: any ID number, street, city, state, zip code. <strong>Remove all column headers</strong>.</p></li>
-</ol>
-<p><img src="images/11-transform/address-no-column-headers.png" /></p>
-<p>Hints:</p>
-<ul>
-<li>If your data lacks ID numbers, quickly <a href="calculate.html">create a column of consecutive numbers</a>, as shown in this book.</li>
-<li>If your address data includes apartment numbers, leave them in.</li>
-<li>Only the ID and address fields are required. City, state, and zip code may be blank if you lack any of this information, but fewer matches will be exact.</li>
-<li>If your address data is combined into one cell, such as: 300 Summit St, Hartford, CT 06106
-<ul>
-<li>then try to <a href="clean-spreadsheets.html">clean your data with the split column method</a> in this book.</li>
-</ul></li>
-<li>If you need to temporarily move other non-address data columns into a second spreadsheet, remember to paste the column of ID numbers into the second sheet. After geocoding, sort both sheets by the ID column, then paste to rematch the data.</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li><p>Save the file in CSV generic spreadsheet format, in batches of no more than 1,0000 rows per file. Learn more about <a href="csv.html">saving in CSV format</a> in this book.</p></li>
-<li><p>Go to US Census Geocoder (<a href="https://www.census.gov/geo/maps-data/data/geocoder.html" class="uri">https://www.census.gov/geo/maps-data/data/geocoder.html</a>)</p></li>
-<li><p>Select the Find Geographies Using…Address Batch button for maximum results, including lat-long coordinates and census geography (tracts and block groups). <em>If census geography is not needed, select Find Locations Using…Address Batch.</em></p></li>
-<li><p>Click the Choose button to upload your CSV file. Use the default benchmark and vintage settings for the most current data. Click the Get Results button, and be patient if using the service during busy weekday hours.</p></li>
-</ol>
-<p><img src="images/11-transform/census-geocoder-batch.png" /></p>
-<ol start="7" style="list-style-type: decimal">
-<li>Census Geocoder will download the results through your web browser in a file named: GeocodeResults.csv. Since these results do not contain column headers, use the screenshot below for guidance, or <a href="http://www.census.gov/geo/maps-data/data/geocoder.html">read the Census Geocoder documentation</a> for more details.</li>
-</ol>
-<p><img src="images/11-transform/geocode-results.png" /></p>
-<ol start="8" style="list-style-type: decimal">
-<li><p>Use a spreadsheet tool to open the CSV file. Sort results by the match quality (columns C and D), with these entries: match exact, match non-exact, tie, no-match.</p></li>
-<li><p>For results without an exact match, check the address for typos, and try to re-geocode in a separate CSV file. The US Census Geocoder tool is very good, but not perfect. For a few rows of hard-to-match data, use a different geocoding tool, such as the Google Maps &gt; What’s Here feature described at the top of this page, to look up individual addresses and coordinates.</p></li>
+<li>In your personal Google spreadsheet, go to <em>Tools &gt; Script Editor</em>. This should open up a new tab.</li>
+<li>Replace the empty <code>function myFunction()</code> with the contents of <code>geocoder-census-google.gs</code> from the plugin’s <a href="https://github.com/handsondataviz/google-sheets-geocoder">repo on GitHub</a>.</li>
+<li>In Script Editor, click <em>File &gt; Save</em>. An <em>Edit Project Name</em> window will pop up, where you should give the script a meaningful name, such as “Geocoder”.</li>
+<li>Close the Script Editor, and go back to your spreadsheet. Refresh and wait for a couple of seconds. <em>Geocoder</em> should appear in the menu.</li>
 </ol>
 </div>
-<div id="learn-more-13" class="section level4 unnumbered" number="">
-<h4>Learn more</h4>
+<div id="geocode-up-to-10000-us-addresses-with-us-census-geocoder" class="section level4 unnumbered" number="">
+<h4>Geocode up to 10,000 US addresses with US Census Geocoder</h4>
+<p>One of the fastest ways to geocode up to 10,000 US addresses at a time is to create
+a CSV file with 5 columns and upload it to Address Batch form of the <a href="https://geocoding.geo.census.gov/geocoder/locations/addressbatch?form">US Census Geocoder</a>.
+In the menu on the left-hand side, you can switch from <em>Find Locations</em> to <em>Find Geographies</em>
+if you wish to include census tract and GeoID data in addition to the coordinates.</p>
+<p>Your CSV file needs to be formatted the following way, <em>without the header row</em>:</p>
+<pre><code>| 1 | 300 Summit St | Hartford | CT | 06106 |
+| 2 | 1012 Broad St | Hartford | CT | 06106 |</code></pre>
+<p>Here, the first column is unique IDs (make sure it is unique to each address, but they don’t have to
+start at 1 or be in an increasing order). The second column is street address. The third column is city.
+Column four is state, and the final fifth column is zip code.</p>
+<p>Upload the file using the <em>Browse…</em> button of <em>Select Address File</em>,
+use <em>Public_AR_Current</em> Benchmark, and hit <em>Get Results</em>.</p>
+<p>In a few moments (it usually takes longer for larger files), the tool will return a
+file named <em>GeocodeResults.csv</em> with geocoded results.
+Save it, and inspect it in your favorite spreadsheet tool. The resulting file is
+an eight-column CSV file with the original ID and address, match type (exact, non-exact, tie, or no match),
+and latitude/longitude coordinates.</p>
+<p>Getting a <em>tie</em> matching means there are multiple possible results for your address. To see all possible matches of an address that
+got a <em>tie</em>, use <em>One Line</em> or <em>Address</em> tools in the left-hand side menu and search for that address.</p>
+<p>Tip: If you see some unmatched addresses, use a filtering functionality of your
+spreadsheet to filter for unmatched addresses, then manually correct them,
+save as a separate CSV file, and re-upload. You can use the US Census Geocoder as many
+times as you want, as long as a single file doesn’t exceed 10,000 records.</p>
 <ul>
-<li>Aggregate individual rows of data into groups by census area with <a href="pivot.html">pivot tables</a>.</li>
-<li><a href="find.html">Download census data</a> by tract or block group, and use the <a href="vlookup.html">VLOOKUP formula</a> to join or merge this rows of data that you have geocoded by census tract or block group.</li>
+<li>In reality only the first two columns, <em>unique ID</em> and <em>street address</em>, are required. City, state, and zip code
+may be left blank if you don’t have that data. But there are usually fewer exact matches for addresses with missing elements.</li>
+<li>If your data lacks ID values, you can create a column of consecutive numbers.
+See <a href="calculate.html">Calculate with Formulas and Functions</a> section of this book to see how.</li>
+<li>Make sure your street addresses don’t contain city, state, and zip code data. If they do,
+use splitting text to columns technique, described in the <a href="clean-spreadsheets.html">Clean Data with Spreadsheets</a> section
+of the book, to get rid of that extra data. But if your street addresses contain apartments, you can leave them in.</li>
 </ul>
+<p>US Census Geocoder has a comprehensive <a href="https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/census-geocoder.html">overview and documentation</a>
+that you can refer to if you encounter issues not covered here.</p>
+<p>If for some reason you cannot geocode address-level data, but you need to produce some mapping output,
+you can use pivot tables to get counts of points for specific areas, such as towns or states. In the next section,
+we will look at hospital addresses in the US and how we can count them by state using pivot tables.</p>
 </div>
 </div>
             </section>

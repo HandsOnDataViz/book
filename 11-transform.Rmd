@@ -26,7 +26,7 @@ and attribute components, and how GeoJSON is different from Shapefiles and other
 
 You will then get a chance to draw your own map layers on top of satellite imagery
 using [GeoJson.io](https://geojson.io), and learn to simplify, crop, and join spreadsheet and geospatial data in [Mapshaper](https://mapshaper.org).
-Both are powerful, web-based open-source tools that can substitute ArcGIS and QGIS for certain common tasks.
+Both are powerful, web-based open-source geodata tools that for common tasks can substitute for more complex geographic information system tools, such as ArcGIS or QGIS.
 
 By the end of this chapter, you should feel much more confident navigating the
 overwhelming world of geospatial data.
@@ -39,15 +39,20 @@ Before addresses can be mapped, they need to be geocoded.
 into a latitude-longitude pair, such as *41.747,-72.692*. These numbers are x- and y-coordinates
 that maps understand.
 
-If you have just a handful of addresses, it might be faster to use Google Maps to geocode them.
-Search for an address, right-click on the map and select *What's here?*.
-A popup window with latitude and longitude values will appear, and you can record them
-in your spreadsheet. But what if you need to geocode dozens, hundreds, or even thousands of addresses?
+If you have just a few addresses, it might be faster to geocode them with [Google Maps](https://www.google.com/maps).
+Search for an address, right-click on that point, and select *What's here?* to reveal a popup window with its latitude and longitude, as shown in Figure \@ref(fig:gmaps-whats-here). You can copy and paste the coordinates into your spreadsheet.
 
-In this section, we will look at two ways to geocode lists of addresses: using our custom-built
+(ref:gmaps-whats-here) To geocode one address, search in Google Maps and right-click *What's here?* to show coordinates.
+
+```{r gmaps-whats-here, fig.cap="(ref:gmaps-whats-here)"}
+knitr::include_graphics("images/11-transform/gmaps-whats-here.png")
+```
+
+But what if you need to geocode dozens, hundreds, or even thousands of addresses? In this section, we will look at two ways to geocode larger lists of addresses. First, you'll learn how to use our custom-built
 [Google Sheets Geocoder](https://github.com/HandsOnDataViz/google-sheets-geocoder), which
-lets you choose between Google Geocoder (available pretty much worldwide) and the US Census Geocoder suitable for US addresses,
-and a stand-alone US Census Geocoder that lets you upload address files and get geocoded results.
+lets you upload up to 1,000 addresses and choose between Google Geocoder (available pretty much worldwide) and the US Census Geocoder (for US addresses only) Second, you'll learn how to use a stand-alone US Census Geocoder that allows you to upload up to 10,000 addresses (for the US only) and download results.
+
+TODO: I tried to add numerical limitations for each tool to clarify the "two ways"; check details
 
 #### Geocode addresses with Google Sheets Geocoder {-}
 
@@ -56,21 +61,23 @@ The Google Sheets Geocoder script lives inside a [Google Sheet](https://docs.goo
 
 The spreadsheet contains six columns. Populate the first column, *Location*, with your addresses.
 The remaining five columns will be filled by the geocoding script. Select all six columns,
-go to *Geocoder* in the menu, and choose which geocoding utility to use, like is shown in Figure \@ref(fig:google-sheets-geocoder).
+go to *Geocoder* in the menu, and choose which geocoding utility to use, like is shown in Figure \@ref(fig:sheets-geocoder).
 
-(ref:google-sheets-geocoder) Put addresses in the first column, and use Geocoder to fill in the remaining five.
+(ref:sheets-geocoder) Put addresses in the first column, and use Geocoder to fill in the remaining five.
 
-```{r google-sheets-geocoder, fig.cap="(ref:google-sheets-geocoder)"}
-if(knitr::is_html_output()) knitr::include_url("images/11-transform/google-sheets-geocoder-census-google.gif", height="280px") else knitr::include_graphics("images/11-transform/google-sheets-geocoder.png")
+```{r sheets-geocoder, fig.cap="(ref:sheets-geocoder)"}
+if(knitr::is_html_output()) knitr::include_url("images/11-transform/sheets-geocoder.gif", height="280px") else knitr::include_graphics("images/11-transform/sheets-geocoder.png")
 ```
 
 Note: If your address data is split into multiple columns (such as *Street*, *City*, and *State*),
 revisit [Clean Data with Spreadsheets](clean-spreadsheets.html) section to remind yourself
-how to "glue" multiple cells into one .
+how to "glue" multiple cells into one.
 
 If you run the script for the first time, Google Sheets may ask for permission or warn that the script is not safe.
 Disregard this message. The code is open-source and is available [on GitHub](https://github.com/HandsOnDataViz/google-sheets-geocoder),
 so you or your programmer friend can make sure it doesn't steal your personal data.
+
+TODO: Fix the Google App code to remove warning message
 
 Once the script finishes executing, you will get a pop-up notification that will tell you how many addresses
 were successfully geocoded, and how many failed. Inspect *Found* and *Quality* columns to ensure the geocoder matched your addresses correctly.
@@ -99,18 +106,17 @@ into your own Google Drive by going to *File > Make a copy*.
 
 You only need to populate the first column, *Location*. The rest seven columns
 will be populated by the Geocoder. Similar to the previous template, select all eight columns,
-and go to *Geocoder > US Census 2010 Geographies*, like is shown in Figure \@ref(fig:google-sheets-geocoder-census).
+and go to *Geocoder > US Census 2010 Geographies*, like is shown in Figure \@ref(fig:sheets-geocoder-censusgeo).
 
 If you run this script for the first time, Google Sheets will ask you for permission to run,
 and will possibly warn you that this script is unsafe. Once again, you shouldn't worry. The plugin
 is open-source and you can inspect it to make sure it doesn't steal or retain your personal data.
 
-(ref:google-sheets-geocoder-census) Put addresses in the first column, and use Geocoder to fill in the remaining seven.
+(ref:sheets-geocoder-censusgeo) Put addresses in the first column, and use Geocoder to fill in the remaining seven.
 
-```{r google-sheets-geocoder-census, fig.cap="(ref:google-sheets-geocoder-census)"}
-if(knitr::is_html_output()) knitr::include_url("images/11-transform/google-sheets-geocoder-census-geographies.gif", height="330px") else knitr::include_graphics("images/google-sheets-geocoder-census.png")
+```{r sheets-geocoder-censusgeo, fig.cap="(ref:sheets-geocoder-censusgeo)"}
+if(knitr::is_html_output()) knitr::include_url("images/11-transform/sheets-geocoder-censusgeo.gif", height="330px") else knitr::include_graphics("images/11-transform/sheets-geocoder-censusgeo.png")
 ```
-
 
 #### Insert Google Sheets Geocoder script into your own spreadsheet {-}
 
@@ -920,7 +926,7 @@ using the *Export* button.
 There are many more commands within Mapshaper that are worth exploring if you are serious about GIS, such as changing projections, filtering
 features using JavaScript expressions, assigning colors to polygons based on values, and many more. Explore the [Wiki](https://github.com/mbloch/mapshaper/wiki/Command-Reference) of Mapshaper project on GitHub for more commands and examples.
 
-TODO: Add Mapwarper section here 
+TODO: Add Mapwarper section here
 
 ## Convert a Compressed KMZ file to KML format {- #convert-kmz}
 Sometimes KML files are distributed in compressed KMZ format.

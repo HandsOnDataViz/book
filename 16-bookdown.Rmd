@@ -127,6 +127,8 @@ Dashes:
 
 Insert `TODO` to note items to finish or review with co-author or editor.
 
+At the end of each chapter, insert **Summary** using bold type, rather than a hashtag header, to avoid creating several unnecessary web pages named "Summary" in the HTML edition. Although this does not match the O'Reilly style guide, it can easily be fixed in book production. 
+
 Insert three back tics to insert a code block. Check character line length limits in [O'Reilly style guide](http://oreillymedia.github.io/production-resources/styleguide/#line-length):
 
 ```

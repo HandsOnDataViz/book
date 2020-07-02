@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Convert to GeoJSON format | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Convert to GeoJSON format | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-23" />
+<meta name="date" content="2020-07-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -194,7 +194,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
-<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -219,7 +218,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
-<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -246,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
-<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>MapShaper.org to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>12</b> Detect Bias in Data Stories</a>
@@ -300,19 +298,128 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="convert-geojson" class="section level2 unnumbered" number="">
 <h2>Convert to GeoJSON format</h2>
-<p>When you find map data, it may be stored in one of these common data formats below:</p>
+<p>Geospatial data comes in an overwhelming number of file formats.
+We will tell you about a few most common ones so that you have
+a general idea of what tools you can use to work with them.
+But before we do that, let’s talk about the basics of geospatial (map) data.</p>
+<div id="about-geospatial-data" class="section level4 unnumbered" number="">
+<h4>About geospatial data</h4>
+<p>The first thing to know about geospatial data is that it
+consists of two components, <strong>location</strong> and <strong>attribute</strong>.
+When you use Google Maps to search for a restaurant, you get a red
+marker on the screen that points to the latitude and longitude
+of the physical location of the restaurant in the real world. These latitude and longitude (two numbers)
+are your location component.
+The name of the restaurant, its human-friendly address, and guest reviews
+are the attributes, which bring value to your location data.</p>
+<p>Second, geospatial data can be <strong>raster</strong> or <strong>vector</strong>,
+as illustrated in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">11.9</a>.
+Raster data is a grid of cells (“pixels”) of a certain size
+(for example, 1 meter by 1 meter). For example, satellite images
+of the Earth that you see on Google Maps are raster geospatial data.
+Each pixel contains the color of Earth that satellite cameras
+were able to capture. People and algorithms can then use raster
+data (images) to create outlines of buildings, lakes, roads,
+and other objects. These outlines become vector data. For example, most of
+<a href="https://www.openstreetmap.org">OpenStreetMap</a> was built
+by volunteers tracing outlines of objects from satellite images.</p>
+
+<div class="figure"><span id="fig:geospatial-raster-vector"></span>
+<img src="images/11-transform/geospatial-raster-vector.png" alt="Geospatial data can be raster or vector."  />
+<p class="caption">
+Figure 11.9: Geospatial data can be raster or vector.
+</p>
+</div>
+<p>In this book, we will focus on vector data, which is based on
+points, lines, and polygons. Vector data can be
+much more precise than raster data, because points’ coordinates
+can be expressed with precise decimals. In addition, vector
+data can contain as much extra <em>attribute</em> information about each object as desired,
+whereas raster data is generally limited to 1 value per cell,
+whether it is the Earth color, or temperature, or altitude.
+Moreover, vector map files are usually much smaller in size
+than raster ones.</p>
+<p>Let’s take a look at some of the most common vector file formats.</p>
+</div>
 <div id="geojson" class="section level4 unnumbered" number="">
 <h4>GeoJSON</h4>
-<p>GeoJSON is newer, popular open format for map data, and works across many tools, so is our top recommendation in this book. GeoJSON files can be used with Leaflet map code, Google Maps JS API code, Carto map tools, and more. Also, your GitHub repository will automatically display any GeoJSON files in a map view.</p>
-<p>GeoJSON data must follow a <a href="http://geojson.org/">structured format</a>, but the file name may end with either <code>.geojson</code> or <code>.json</code>. The GeoJSON structured format orders coordinates in <em>longitude-latitude</em> format, the same as X-Y coordinates in mathematics. This is the opposite of Google Maps and several other web map tools, which order points in <em>latitude-longitude</em> format. For example, Hartford Connecticut is located at (-72.67, 41.76) in GeoJSON, but (41.76, -72.67) in Google Maps.</p>
+<p><a href="https://geojson.org">GeoJSON</a> is a newer, popular open format for map data
+that comes in <code>.geojson</code> or <code>.json</code> files.
+It was first developed in 2008, and then standardized in 2016 by
+the Internet Engineering Task Force (IETF). The code snippet below
+represents a single point (feature) with latitude of 41.76 and longitude of -72.67
+in GeoJSON format. That point has a <em>name</em> attribute (property) whose value is <em>Hartford</em>.</p>
+<pre><code>{
+  &quot;type&quot;: &quot;Feature&quot;,
+  &quot;geometry&quot;: {
+    &quot;type&quot;: &quot;Point&quot;,
+    &quot;coordinates&quot;: [-72.67, 41.76]
+  },
+  &quot;properties&quot;: {
+    &quot;name&quot;: &quot;Hartford&quot;
+  }
+}</code></pre>
+<p>The simplicity and readability of GeoJSON allows you to edit it even in the most
+simple text editor. We strongly recommend you use and share your map data in GeoJSON.
+Web-based maps, such as those built with Leaflet, Mapbox, Google Maps JS API, and Carto,
+as well as ArcGIS and QGIS all support GeoJSON.</p>
+<p>Also, your GitHub repository will automatically display any GeoJSON files in a map view,
+like is shown in Figure <a href="convert-geojson.html#fig:geojson-github">11.10</a>.</p>
+
+<div class="figure"><span id="fig:geojson-github"></span>
+<img src="images/11-transform/geojson-github.png" alt="GitHub can show previews of GeoJSON files stored in repositories."  />
+<p class="caption">
+Figure 11.10: GitHub can show previews of GeoJSON files stored in repositories.
+</p>
+</div>
+<p>In GeoJSON, coordinates are ordered in <em>longitude-latitude</em> format,
+the same as X-Y coordinates in mathematics. This is the opposite of Google Maps
+and some other web map tools, which order values as <em>latitude-longitude</em>.
+For example, <em>Hartford, Conn.</em> is located at (-72.67, 41.76) according to GeoJSON,
+but at (41.76, -72.67) in Google Maps. Neither notation is right or wrong, just make sure
+you know which one you are dealing with.</p>
 </div>
 <div id="shapefiles" class="section level4 unnumbered" number="">
 <h4>Shapefiles</h4>
-<p>The shapefile format was created in the 1990s by ESRI, the company that developed ArcGIS software. Shapefiles typically appear as a folder of subfiles with suffixes such as <code>.shp</code>, <code>.shx</code>, <code>.dbf</code>, and others. Although government agencies commonly distribute map data in shapefile format, the standard tools for editing these files—ArcGIS and its free and open-source cousin, QGIS—are not as easy to learn as other tools in this book. For this reason, this book recommends converting shapefiles into one of the more friendlier formats below.</p>
+<p>The shapefile format was created in the 1990s by Esri, the company that develops
+ArcGIS software. Shapefiles typically appear as a folder of subfiles with suffixes
+such as <code>.shp</code>, <code>.shx</code>, and <code>.dbf</code>. The folder with shapefiles is often compressed in a <code>.zip</code> file.</p>
+<p>Although government agencies commonly distribute map data in shapefile format, the standard tools for editing
+these files—ArcGIS and its free and open-source cousin, QGIS—are not as
+easy to learn as other tools in this book. For this reason, we
+recommend converting shapefiles into GeoJSON files if possible.
+<a href="mapshaper.html">Mapshaper</a>, discussed a bit later in the chapter, can perform such
+conversion.</p>
+</div>
+<div id="gps-exchange-format-gpx" class="section level4 unnumbered" number="">
+<h4>GPS Exchange Format (GPX)</h4>
+<p>If you ever exported your Strava run or a bike ride
+from a GPS device, chances are you ended up with a <code>.gpx</code> file.
+GPX is an open standard and is based on XML markup language.
+Like GeoJSON, you can inspect a GPX file in any simple text editor
+to see its contents. Most likely, you will see a collection timestamps and latitude/longitude
+coordinates of the recording GPS device at that particular time.
+You should be able to convert GPX to GeoJSON with <a href="geojsonio.html">GeoJson.io</a>
+utility discussed later in this chapter.</p>
 </div>
 <div id="keyhole-markup-language-or-kml" class="section level4 unnumbered" number="">
 <h4>Keyhole Markup Language (or KML)</h4>
-<p>The KML format rose in popularity during the late 2000s. Google Earth, a free and user-friendly tool, allowed many people to view and edit geographic data. KML files are commonly used in the Google Fusion Tables maps described in this book. Sometimes <code>.kml</code> files are distributed in a compressed <code>.kmz</code> format. See the chapter on <a href="convert-kmz">converting from KMZ to KML format</a> in this book.</p>
+<p>The KML format rose in popularity during the late 2000s.
+Google Earth, a free and user-friendly tool, allowed many people to
+view and edit geographic data. KML files were often used
+with maps powered by Google Fusion Tables, but that became history in late 2019.
+<a href="geojsonio.html">GeoJson.io</a> should be able to convert your KML file into a GeoJSON.</p>
+<p>Sometimes <code>.kml</code> files are distributed in a compressed <code>.kmz</code> format.
+See <a href="convert-kmz">Converting from KMZ to KML format</a> section of this book
+to learn to convert.</p>
+</div>
+<div id="mapinfo-tab" class="section level4 unnumbered" number="">
+<h4>MapInfo TAB</h4>
+<p>Similar to Esri’s shapefiles, MapInfo’s TAB format comes as a folder
+with <code>.tab</code>, <code>.dat</code>, <code>.ind</code>, and some other files. It is a proprietary format created
+and supported by MapInfo, Esri’s competitor, and is designed to work well with MapInfo Pro
+GIS software. Unfortunately, you will most likely need MapInfo Pro, QGIS, or ArcGIS to re-save these as GeoJSON
+or a Shapefile.</p>
 </div>
 </div>
             </section>

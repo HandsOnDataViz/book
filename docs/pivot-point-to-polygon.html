@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Pivot Address-Level Point Data into Polygon Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Pivot Address-Level Point Data into Polygon Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-23" />
+<meta name="date" content="2020-07-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -194,7 +194,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
-<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -219,7 +218,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
-<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -246,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
-<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>MapShaper.org to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>12</b> Detect Bias in Data Stories</a>
@@ -300,34 +298,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="pivot-point-to-polygon" class="section level2 unnumbered" number="">
 <h2>Pivot Address-Level Point Data into Polygon Data</h2>
-<p>Problem: If I begin with address-level point data, how can I transform this into polygon map data?</p>
-<p>One solution: In any spreadsheet, split your address data into separate columns (such as Street, City, State), then create a pivot table to aggregate rows into groups (such as the number of addresses in each City or State).</p>
-<p>If your location data is combined into one column (example: 300 Summit St, Hartford CT), then see the <a href="clean-spreadsheets.html">Spreadsheets: Split Data Columns tutorial</a> in this book.</p>
-<p>Here’s an example using a long list of US hospitals from the Medicare open data repository, which is already split into separate columns: <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u" class="uri">https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u</a></p>
-<ol style="list-style-type: decimal">
-<li>Open the link above, see columns of data (Address, City, State, etc.), and click the blue Export button to download in the CSV generic spreadsheet format.</li>
-</ol>
-<div class="figure">
-<img src="images/11-transform/hospital-socrata-export.png" alt="" />
-<p class="caption">Screenshot: Export US Hospital data into CSV format</p>
+<p>If you deal with geographical data, you may find yourself in a situation where
+you have a list of addresses which need to be counted (<strong>aggregated</strong>) by area
+and displayed as a polygon (<strong>choropleth</strong>) map. In this case, a simple pivot table
+in a spreadsheet software can solve the problem.</p>
+<p>Let’s take a look at a <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">list of all hospitals</a>
+that are registered with the Medicare program in the United States. The dataset is
+stored and displayed by Socrata, a web database popular among government agencies and city administrations.
+This particular dataset has information on each hospital’s name,
+location (nicely divided into Address, City, State, and ZIP Code columns),
+a phone number and some other indicators, such as mortality and patient experience.</p>
+<p>Now, imagine you are given a task to create a polygon map of total hospitals by US state,
+so instead of showing individual hospitals as points, you want darker shadows of blue
+to represent states with more hospitals. See Figure <a href="pivot-point-to-polygon.html#fig:pivot-address">11.5</a> to see what
+we are talking about.</p>
+
+<div class="figure"><span id="fig:pivot-address"></span>
+<img src="images/11-transform/pivot-address.png" alt="You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps."  />
+<p class="caption">
+Figure 11.5: You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps.
+</p>
 </div>
-<ol start="2" style="list-style-type: decimal">
-<li>Open the file with any spreadsheet tool, and create a pivot table to count up the number of hospitals in each state. For help, see the <a href="pivot.html">Pivot Table tutorial</a> in this book.</li>
-</ol>
-<div class="figure">
-<img src="images/11-transform/hospital-pivot-table.png" alt="" />
-<p class="caption">Screenshot: Pivot Table of US Hospitals by State</p>
+<p>First, save the database to your local machine by going to <em>Export &gt; Download &gt; CSV</em>
+of Socrata interface. Figure <a href="pivot-point-to-polygon.html#fig:pivot-address-export">11.6</a> shows where you can find the Export button.</p>
+
+<div class="figure"><span id="fig:pivot-address-export"></span>
+<img src="images/11-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
+<p class="caption">
+Figure 11.6: In Socrata, you can export the entire dataset as a CSV.
+</p>
 </div>
-<ol start="3" style="list-style-type: decimal">
-<li>Now you can copy and paste the pivot table raw data of hospitals by US states. See the <a href="normalize.html">Normalize Data tutorial</a> and also the <a href="mapshaper.html">Edit and Join Spreadsheet with Polygon Map using Mapshaper</a> tutorial in this book.</li>
-</ol>
-<div id="other-solutions" class="section level4 unnumbered" number="">
-<h4>Other Solutions</h4>
-<ul>
-<li>use the <a href="geocode.html">Google Sheets Geocoder: US Census Geographies tutorial</a> in this book to convert addresses into census tracts, etc., and then pivot</li>
-<li>do a polygons-to-points spatial join with Mapshaper.org ** TO DO **</li>
-</ul>
+<p>Next, open the file in your favorite spreadsheet tool. If you use Google Sheets,
+use <em>File &gt; Import &gt; Upload</em> to import CSV data. Make sure your address columns are present,
+and move on to creating a pivot table (in Google Sheets, go to <em>Data &gt; Pivot table</em>, make sure the entire data range
+is selected, and click <em>Create</em>). In the pivot table, set <strong>Rows</strong> to <em>State</em>, because
+we want to get counts by state. Next, set pivot table’s <strong>Values</strong> to <em>State</em>—or really any other
+column that has no missing values—and choose <em>Summarize by: COUNTA</em>. Voila!</p>
+
+<div class="figure"><span id="fig:pivot-address-sheet"></span>
+<img src="images/11-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
+<p class="caption">
+Figure 11.7: Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
+</p>
 </div>
+<p>Your aggregated dataset is ready, so save it as a CSV. If you use Google Sheets,
+go to <em>File &gt; Download &gt; Comma-separated values (.csv, current sheet)</em>.
+You can now merge this dataset with your polygons manually using editing capabilities of
+<a href="geojsonio.html">GeoJson.io</a>, or merge it all in one go using powerful <a href="mapshaper.html">Mapshaper</a>.</p>
+<p>We will introduce both tools in the next few sections.
+But before we do that, let’s talk about data normalization and why showing
+counts of hospitals per state doesn’t really tell a good story.</p>
 </div>
             </section>
 

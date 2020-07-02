@@ -1,36 +1,33 @@
 # Improve Your Spreadsheet Skills {#spreadsheet}
-Before we begin to design data visualizations, let's bring our spreadsheet skills up to speed. While teaching this topic, we've heard many people describe how they "never really learned" how to use spreadsheet tools, such as Google Sheets or Microsoft Excel, as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.
+Before we begin to design data visualizations, let's bring our spreadsheet skills up to speed. While teaching this topic, we've heard many people describe how they "never really learned" how to use spreadsheet tools as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.
 
 To fill this gap, we added this chapter to introduce or refresh your spreadsheet skills. The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a "cell." In this chapter, we'll start by reviewing basic steps, such as [uploading](upload.html) and [sharing data](share.html), [sorting and filtering](sort.html), and [inserting simple formulas to automatically run calculations](calculate.html). Then we'll step up to the next level of skills, such as [grouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), and [collecting data with online forms](forms.html). Even if you *think* you know how to use spreadsheets, skim through these sections and you'll probably learn a few things that will help you to create better charts and maps later in the book.
 
-Spreadsheet tools and terminology:
+TODO: Consider adding Relational Database section, and demonstrate with free AirTable tool
 
-Most of our examples in this book feature [Google Sheets](https://www.google.com/sheets/about/), a free and easy-to-learn collaborative spreadsheet tool, which is part of the Google Drive family. Users can sign up for a free personal account or a paid business account, and if you already have a Google Mail account, you can use the same username to access it.
+About spreadsheet tools and data formats:
 
-The methods shown here are similar across other spreadsheet tools, such as:
+Most of our examples in this book feature [Google Sheets](https://www.google.com/sheets/about/), a free and easy-to-learn collaborative spreadsheet tool, which is part of the Google Drive family. Users can sign up for a free personal account or a paid business account, and if you already have a Google Mail account, you can use the same username to access it. In general, the methods we demonstrate are very similar to other spreadsheet tools, such as:
 
 - free online [Microsoft Excel for Office Live](https://office.live.com/start/Excel.aspx)
 - paid downloadable [Microsoft Excel for Office 365](https://www.microsoft.com/en-us/microsoft-365/microsoft-office) for desktop, laptop, and other devices
-- free and open-source downloadable [LibreOffice](https://www.libreoffice.org/) for desktop and laptop, with donation requested
+- free and open-source downloadable [LibreOffice and its Calc tool](https://www.libreoffice.org/) for desktop and laptop, with donation requested
 
-Any of these tools will be sufficient for this book, but more advanced users may need more complex tools to manage very large datasets, or relational databases, or to perform deeper analysis.
+Which spreadsheet tool should you use? As we describe in more detail in [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), that answer depends on multiple factors. Is your data public or private? If private, consider using downloadable spreadsheet tool that runs on your personal computer, to reduce the risk of an accidental data breach with an online spreadsheet tool. Also, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that's designed to allow other team members to simultaneously view or edit data, such as Google Sheets.
 
-TODO: Which spreadsheet tool should you use? That depends on how you wish to share and store data for your project.
+Spreadsheet tools organize data in different formats. When you download spreadsheet data to your personal computer, you typically see its filename, followed by a period and a 3- or 4-character abbreviated extension, which represents the data format, as shown in Figure \@ref(fig:data-formats). The most common data formats we use in this chapter are:
 
-- If you are the **only person** working on a data project, use any spreadsheet tool.
-- If you need to **protect private data**, avoid online tools and use any desktop spreadsheet.
-- If you need to **share live data** with others, use Google Sheets.
+- `.csv` means Comma-Separated Values, a generic format for a single sheet of simple data
+- `.ods` means OpenDocument Spreadsheet, a standardized open format that supports multi-tabbed data sheets, formulas, styling, etc.
+- `.xlsx` or the older `.xls` means Microsoft Excel, a proprietary format that supports multi-tabbed sheets, formulas, styling, etc.
 
-TODO: Data formats
+(ref:data-formats) Three common data formats---csv, ods, and xlsx---displayed as icons in the Mac Finder.
 
-- Comma-separated values (.csv), a generic single sheet
-- Microsoft Excel current (.xlsx) and older format (.xls)
-- OpenData System (.ods), a generic multi-tab spreadsheet
+```{r data-formats, fig.cap="(ref:data-formats)"}
+ knitr::include_graphics("images/02-spreadsheet/data-formats.png")
+```
 
-- OpenDocument Spreadsheet (.ods)
-- Comma-separated values (.csv)
-- Tab-separated values (.tab)
-- Text files (.txt) into Google Sheets format
+TODO: Expand screenshot to show data format icons Windows and Chromebook -- or not?
 
 Warning: Several tools in this book will not work properly if your computer does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac computer operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
 
@@ -39,27 +36,6 @@ Warning: Several tools in this book will not work properly if your computer does
 ```{r mac-file-extensions, fig.cap="(ref:mac-file-extensions)"}
  knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
 ```
-
-
-
-
-
-
-Warning: To follow the steps in this book, we recommend either a desktop or laptop computer, running either the Mac or Windows or Linux operating system, with an internet connection and a modern web browser such as Chrome, Firefox, Safari, or Edge. Another good option is a Chromebook laptop, which enables you to complete *most* of the steps in this book, and we'll point out any limitations in specific chapters. While it's possible to use a tablet or smartphone device, we do not recommend it because you cannot follow all of the steps, and you'll also get frustrated with the small screen and perhaps throw your device (or this book) across the room, and possibly hit someone else in the head. Ouch! We are not responsible for injuries caused by flying objects.
-
-Tip: If you're working on a laptop, consider buying or borrowing an external mouse that can plug into your machine. We've met several people who found it much easier to click, hover, and scroll with a mouse rather than a laptop's built-in trackpad.
-
-Tip: If you're new to working with computers---or teaching new users with this book---consider starting with [mouse exercises](http://www.pbclibrary.org/mousing/mousercise.htm). All of the tools in this book assume that users already know how to click tiny buttons, hover over links, and scroll web pages, but rarely are these skills taught, and everyone needs to learn them at some point in our lives.
-
-TODO: I added the tips above because these are huge yet surmountable obstacles for many people I've worked with, especially older generations and incarcerated people. But I'm uncertain about the link to the mouse exercises. Perhaps I should tweet at public library staff and instructors to find better beginning resources?
-
-
-
-
-
-
-
-
 
 ## Upload Files and Convert to Google Sheets {- #upload}
 
@@ -338,7 +314,9 @@ VLOOKUP(search_key, range, index, [is_sorted])
 
 TODO: write simple tutorial for Google Forms and explain how to share the spreadsheet; also mention other web form services
 
-### Summary {-}
+TODO: Consider adding Relational Database section, and demonstrate with free AirTable
+
+**Summary**
 
 TODO: write summary
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Improve Your Spreadsheet Skills | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Improve Your Spreadsheet Skills | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-23" />
+<meta name="date" content="2020-07-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -194,7 +194,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
-<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -219,7 +218,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
-<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -246,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
-<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>MapShaper.org to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>12</b> Detect Bias in Data Stories</a>
@@ -300,58 +298,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="spreadsheet" class="section level1" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Improve Your Spreadsheet Skills</h1>
-<p>Spreadsheets are wonderful tools to organize data into tables of rows and columns. With a spreadsheet, you can sort, filter, calculate, aggregate, and reorganize information to help you find the stories buried inside.</p>
-<p>Four common spreadsheet tools:</p>
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Tool</th>
-<th align="left">Features</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><a href="https://www.google.com/sheets/about/">Google Sheets</a></td>
-<td align="left">Free, online collaborative spreadsheet on Google Drive. Requires free account.</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://office.live.com/start/Excel.aspx">Microsoft Excel Online</a></td>
-<td align="left">Free online spreadsheet on Microsoft OneDrive. Requires free account. Cannot open CSV generic spreadsheet files.</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="https://products.office.com/en-us/excel">Microsoft Excel desktop</a></td>
-<td align="left">Not free (US $100+) spreadsheet for Mac or Windows desktop, as part of Microsoft Office.</td>
-</tr>
-<tr class="even">
-<td align="left"><a href="http://www.libreoffice.org">LibreOffice</a></td>
-<td align="left">Free, open-source alternative to Microsoft Office desktop. Donation requested during download.</td>
-</tr>
-</tbody>
-</table>
-<p>Which spreadsheet tool should you use? That depends on how you wish to share and store data for your project.</p>
+<p>Before we begin to design data visualizations, let’s bring our spreadsheet skills up to speed. While teaching this topic, we’ve heard many people describe how they “never really learned” how to use spreadsheet tools as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.</p>
+<p>To fill this gap, we added this chapter to introduce or refresh your spreadsheet skills. The interactive charts and maps that we’ll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a “cell.” In this chapter, we’ll start by reviewing basic steps, such as <a href="upload.html">uploading</a> and <a href="share.html">sharing data</a>, <a href="sort.html">sorting and filtering</a>, and <a href="calculate.html">inserting simple formulas to automatically run calculations</a>. Then we’ll step up to the next level of skills, such as <a href="pivot.html">grouping data with pivot tables</a>, <a href="vlookup.html">matching columns with lookup tables</a>, and <a href="forms.html">collecting data with online forms</a>. Even if you <em>think</em> you know how to use spreadsheets, skim through these sections and you’ll probably learn a few things that will help you to create better charts and maps later in the book.</p>
+<p>TODO: Consider adding Relational Database section, and demonstrate with free AirTable tool</p>
+<p>About spreadsheet tools and data formats:</p>
+<p>Most of our examples in this book feature <a href="https://www.google.com/sheets/about/">Google Sheets</a>, a free and easy-to-learn collaborative spreadsheet tool, which is part of the Google Drive family. Users can sign up for a free personal account or a paid business account, and if you already have a Google Mail account, you can use the same username to access it. In general, the methods we demonstrate are very similar to other spreadsheet tools, such as:</p>
 <ul>
-<li>If you are the <strong>only person</strong> working on a data project, use any spreadsheet tool.</li>
-<li>If you need to <strong>protect private data</strong>, avoid online tools and use any desktop spreadsheet.</li>
-<li>If you need to <strong>share live data</strong> with others, use Google Sheets.</li>
+<li>free online <a href="https://office.live.com/start/Excel.aspx">Microsoft Excel for Office Live</a></li>
+<li>paid downloadable <a href="https://www.microsoft.com/en-us/microsoft-365/microsoft-office">Microsoft Excel for Office 365</a> for desktop, laptop, and other devices</li>
+<li>free and open-source downloadable <a href="https://www.libreoffice.org/">LibreOffice and its Calc tool</a> for desktop and laptop, with donation requested</li>
 </ul>
-<p>This introductory online book features Google Sheets because it’s a free and easy-to-learn tool for collaborating and sharing data with others. The basic spreadsheet methods shown here are very similar across all spreadsheet tools. But advanced users may need more complex tools to manage very large datasets, or relational databases, or to perform deeper analysis.</p>
-<p>If you’re new to spreadsheets or want to refresh your skills, see the following chapters:</p>
+<p>Which spreadsheet tool should you use? As we describe in more detail in <a href="choose.html">Chapter 1: Choose Tools to Tell Your Data Story</a>, that answer depends on multiple factors. Is your data public or private? If private, consider using downloadable spreadsheet tool that runs on your personal computer, to reduce the risk of an accidental data breach with an online spreadsheet tool. Also, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that’s designed to allow other team members to simultaneously view or edit data, such as Google Sheets.</p>
+<p>Spreadsheet tools organize data in different formats. When you download spreadsheet data to your personal computer, you typically see its filename, followed by a period and a 3- or 4-character abbreviated extension, which represents the data format, as shown in Figure <a href="spreadsheet.html#fig:data-formats">2.1</a>. The most common data formats we use in this chapter are:</p>
 <ul>
-<li><a href="upload.html">Upload and Convert to Google Sheets</a></li>
-<li><a href="copy.html">Make a Copy with Google Sheets</a></li>
-<li><a href="share.html">Share with Google Sheets</a></li>
-<li><a href="csv.html">Save as CSV or ODS Format</a></li>
-<li><a href="sort.html">Sort and Filter Data</a></li>
-<li><a href="calculate.html">Calculate with Formulas</a></li>
-<li><a href="pivot.html">Group Data with Pivot Tables</a></li>
-<li><a href="vlookup.html">Match Data with VLookup</a></li>
-<li><a href="forms.html">Collect and Share Survey Data with Google Forms</a></li>
+<li><code>.csv</code> means Comma-Separated Values, a generic format for a single sheet of simple data</li>
+<li><code>.ods</code> means OpenDocument Spreadsheet, a standardized open format that supports multi-tabbed data sheets, formulas, styling, etc.</li>
+<li><code>.xlsx</code> or the older <code>.xls</code> means Microsoft Excel, a proprietary format that supports multi-tabbed sheets, formulas, styling, etc.</li>
 </ul>
-<p>Enroll in our free online course] which offers more spreadsheet exercises and opportunities to interact with instructors and other learners.</p>
+
+<div class="figure"><span id="fig:data-formats"></span>
+<img src="images/02-spreadsheet/data-formats.png" alt="Three common data formats—csv, ods, and xlsx—displayed as icons in the Mac Finder."  />
+<p class="caption">
+Figure 2.1: Three common data formats—csv, ods, and xlsx—displayed as icons in the Mac Finder.
+</p>
+</div>
+<p>TODO: Expand screenshot to show data format icons Windows and Chromebook – or not?</p>
+<p>Warning: Several tools in this book will not work properly if your computer does not display the filename extensions, meaning the abbreviated file format after the period, such as <code>data.csv</code> or <code>map.geojson</code>. The Mac computer operating system hides these by default, so you need to turn them on by going to Finder &gt; Preferences &gt; Advanced, and check the box to <em>Show all filename extensions</em>, as shown in Figure <a href="spreadsheet.html#fig:mac-file-extensions">2.2</a>.</p>
+
+<div class="figure"><span id="fig:mac-file-extensions"></span>
+<img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to Finder &gt; Preferences &gt; Advanced and check the box to Show all filename extensions."  />
+<p class="caption">
+Figure 2.2: On a Mac, go to Finder &gt; Preferences &gt; Advanced and check the box to <em>Show all filename extensions</em>.
+</p>
+</div>
 </div>
             </section>
 

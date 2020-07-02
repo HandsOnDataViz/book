@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 11 Transform Your Map Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 11 Transform Your Map Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-06-23" />
+<meta name="date" content="2020-07-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -194,7 +194,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
-<li class="chapter" data-level="" data-path="summary-1.html"><a href="summary-1.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -219,7 +218,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
-<li class="chapter" data-level="" data-path="summary-2.html"><a href="summary-2.html"><i class="fa fa-check"></i>Summary</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
 <ul>
@@ -246,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
-<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>MapShaper.org to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>12</b> Detect Bias in Data Stories</a>
@@ -300,17 +298,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="transform" class="section level1" number="11">
 <h1><span class="header-section-number">Chapter 11</span> Transform Your Map Data</h1>
-<p>Interactive web maps are made up of different layers, such as background basemaps, colored or shaded polygons, and/or colored point markers. This chapter describes how to transform your data into layers that you can upload into online map tools and templates. Specifically, you will learn how to:</p>
-<ul>
-<li><a href="geocode.html">Geocode locations into coordinates with US Census or Google</a></li>
-<li><a href="pivot-point-to-polygon.html">Pivot address-level point data into polygon data</a></li>
-<li><a href="normalize.html">Normalize data to create more meaningful polygon maps</a></li>
-<li><a href="convert-geojson.html">Convert map data</a> with <a href="geojsonio.html">GeoJSON.io</a> or <a href="mapshaper.html">Mapshaper.org</a></li>
-<li><a href="mapshaper.html">Join spreadsheets and polygon boundaries with MapShaper.org</a></li>
-</ul>
-<p>Enroll in our free online course <strong>TO DO add link</strong>, which introduces these topics in the brief video below, and offers more exercises and opportunities to interact with instructors and other learners.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3sjjVEJY4MY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+<p>All maps, including interactive web maps, are made up of different layers.
+These are background basemaps, colored or shaded polygons (also known as <em>choropleth</em> layers), lines,
+and point data that are often represented as markers.</p>
+<p>In this chapter, we will look at multiple ways to convert and edit geospatial data
+to create layers (files) that you can use in your favorite mapping tools.</p>
+<p>We will begin by looking at the process of geocoding, or transforming human-friendly
+address lines into points that can be plotted on the map (see Figure <a href="transform.html#fig:transform-data">11.1</a> for inspiration).
+We will then talk about polygons and why you should normalize your data before creating choropleth maps.
+These map transformations happen inside spreadsheets, so you won’t directly deal
+with map data until you are halfway through the chapter.</p>
+
+<div class="figure"><span id="fig:transform-data"></span>
+<img src="images/11-transform/transform-data.png" alt="To map addresses, you need to geocode them first."  />
+<p class="caption">
+Figure 11.1: To map addresses, you need to geocode them first.
+</p>
+</div>
+<p>Before you can dive into creating shapes and dealing with boundaries in the map, we will
+introduce various file formats (most notably GeoJSON) and talk about geospatial data in general.
+You will learn that map data can be raster and vector, that geospatial data consists of location
+and attribute components, and how GeoJSON is different from Shapefiles and other geographical data formats.</p>
+<p>You will then get a chance to draw your own map layers on top of satellite imagery
+using <a href="https://geojson.io">GeoJson.io</a>, and learn to simplify, crop, and join spreadsheet and geospatial data in <a href="https://mapshaper.org">Mapshaper</a>.
+Both are powerful, web-based open-source geodata tools that for common tasks can substitute for more complex geographic information system tools, such as ArcGIS or QGIS.</p>
+<p>By the end of this chapter, you should feel much more confident navigating the
+overwhelming world of geospatial data.</p>
 </div>
             </section>
 

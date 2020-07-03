@@ -3,31 +3,30 @@ Before we begin to design data visualizations, let's bring our spreadsheet skill
 
 To fill this gap, we added this chapter to introduce or refresh your spreadsheet skills. The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a "cell." In this chapter, we'll start by reviewing basic steps, such as [sharing data](share.html), [sorting and filtering](sort.html), and [calculating with formulas and functions](calculate.html). Then we'll step up to the next level of skills, such as [grouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), [collecting data with online forms](forms.html), and [connecting sheets with a relational database](database.html). Even if you *think* you know how to use spreadsheets, skim through these sections and you'll probably learn a few things that will help you to create better charts and maps later in the book.
 
-About spreadsheet tools and data formats:
+About spreadsheet tools:
 
-Most of our examples in this book feature [Google Sheets](https://www.google.com/sheets/about/), a free and easy-to-learn collaborative spreadsheet tool, which is part of the Google Drive family. Users can sign up for a free personal account or a paid business account, and if you already have a Google Mail account, you can use the same username to access it. In general, the methods we demonstrate are very similar to other spreadsheet tools, such as:
+- Free online [Google Sheets](https://www.google.com/sheets/about/) offers an easy-to-learn yet powerful spreadsheet tool that works in any modern web browser. Since it's designed for collaboration and exports data into multiple open formats, we feature it in several examples in this book. You can sign up for a free personal [Google Drive](https://drive.google.com) account with the same username as your Google Mail account, or create a separate account to reduce Google's invasion into your personal life. Another option is to pay for a [Google Suite](https://gsuite.google.com/) business account, with nearly identical tools, but designed for larger teams and organizations.  
+- Free downloadable [LibreOffice and its Calc spreadsheet](https://www.libreoffice.org/) is a powerful and increasingly popular open-source alternative to Microsoft Office, available for Mac, Windows, and Linux desktop and laptop computers. When downloading, a donation is requested to continue support for open-source software development.
+- Free online [Microsoft Excel for OneDrive](https://onedrive.live.com) and the paid online [Microsoft Excel for Office 365](https://www.microsoft.com/en-us/microsoft-365/microsoft-office) offer limited Office tools in your web browser. For example, these online versions of Excel do *not* allow you to easily save or download files into the Comma Separated Values (.csv) generic data format, a very important feature required by other data visualization tools in later chapters of this book. Exporting to CSV format requires the downloadable version of Excel below. TODO: Further fact-checking needed because I investigated for 15 minutes and cannot find an easy way to export to CSV in the online Excel using the free OneDrive or paid Office 365 account, contrary to this Microsoft Support page: https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba
+- Paid downloadable [Microsoft Excel](https://www.microsoft.com/) is available for Windows and Mac desktops and laptops, and other devices. When people simply say "Excel" they usually mean this powerful yet pricey version. It offers the most complete set of spreadsheet tools (including the simple task of exporting to CSV that its online cousins lack), but was not originally designed for online collaboration.
 
-- free online [Microsoft Excel for Office Live](https://office.live.com/start/Excel.aspx)
-- paid downloadable [Microsoft Excel for Office 365](https://www.microsoft.com/en-us/microsoft-365/microsoft-office) for desktop, laptop, and other devices
-- free and open-source downloadable [LibreOffice and its Calc tool](https://www.libreoffice.org/) for desktop and laptop, with donation requested
+Which spreadsheet tool should you use? As we describe in more detail in [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), that answer depends on multiple factors. Is your data public or private? If private, consider using downloadable spreadsheet tool that runs on your personal computer, to reduce the risk of an accidental data breach with an online spreadsheet tool. Also, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that's designed to allow other team members to simultaneously view or edit data. In this book, we emphasize public, shared datasets, so our examples feature Google Sheets. But most of the spreadsheet methods we teach are common across other spreadsheet tools, and we point out exceptions where relevant.
 
-Which spreadsheet tool should you use? As we describe in more detail in [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), that answer depends on multiple factors. Is your data public or private? If private, consider using downloadable spreadsheet tool that runs on your personal computer, to reduce the risk of an accidental data breach with an online spreadsheet tool. Also, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that's designed to allow other team members to simultaneously view or edit data, such as Google Sheets.
+About data formats:
 
 Spreadsheet tools organize data in different formats. When you download spreadsheet data to your personal computer, you typically see its filename, followed by a period and a 3- or 4-character abbreviated extension, which represents the data format, as shown in Figure \@ref(fig:data-formats). The most common data formats we use in this chapter are:
 
-- `.csv` means Comma-Separated Values, a generic format for a single sheet of simple data
+- `.csv` means Comma Separated Values, a generic format for a single sheet of simple data, with no formulas or styling.
 - `.ods` means OpenDocument Spreadsheet, a standardized open format that supports multi-tabbed data sheets, formulas, styling, etc.
 - `.xlsx` or the older `.xls` means Microsoft Excel, a proprietary format that supports multi-tabbed sheets, formulas, styling, etc.
 
-(ref:data-formats) Three common data formats---csv, ods, and xlsx---displayed as icons in the Mac Finder.
+(ref:data-formats) Three common data formats---csv, ods, and xlsx---displayed as icons in the Mac Finder. TODO: Expand screenshot to show data formats as displayed in Chromebook for comparison?
 
 ```{r data-formats, fig.cap="(ref:data-formats)"}
  knitr::include_graphics("images/02-spreadsheet/data-formats.png")
 ```
 
-TODO: Expand screenshot to show data formats as displayed in Chromebook?
-
-Warning: Several tools in this book will not work properly if your computer does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac computer operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
+Warning: Several tools in this book may not work properly on a Mac computer that does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
 
 (ref:mac-file-extensions) On a Mac, go to Finder > Preferences > Advanced and check the box to *Show all filename extensions*.
 
@@ -36,7 +35,7 @@ Warning: Several tools in this book will not work properly if your computer does
 ```
 
 ## Make Your Own Copy of a Google Sheet {- #copy}
-In several chapters of this book, we share sample data with you by linking to a Google Sheet, with settings that allow you to view---but not edit---our file. We want everyone to have access to the data, but do not want anyone to accidentally change the original version. Follow these simple steps to make your own copy of the Google Sheet in order to edit your version.
+In several chapters of this book, we share sample data with links to Google Sheets, using settings that allow you to view---but not edit---the original file. We want everyone to have access to the data, but do not want anyone to accidentally modify the contents. Follow these simple steps to make your own copy of a Google Sheet that you can edit, without changing our version.
 
 1. Right-click on this [sample-students Google Sheets file](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA) to open in a new tab. We set it to "View only" so that anyone on the internet can see the contents, but not edit them.
 
@@ -86,17 +85,17 @@ Tip: If you don't want to send people a really long and ugly Google Sheet web ad
  knitr::include_graphics("images/02-spreadsheet/link-shortening.png")
 ```
 
-Now that you have different options for sharing a Google Sheet, let's learn how to upload and properly *convert* data from different formats.
+Now that you have different options for sharing a Google Sheet, let's learn how to upload and convert data from different formats.
 
 ## Upload and Convert Data to Google Sheets {- #upload}
 
-The most common mistake to avoid when using Google Drive is not clicking the hidden *Convert uploads* box. This automatically transforms files such as Microsoft Excel sheets or Word documents into Google Sheets or Google Docs format, which allows for much easier editing. For some reason, Google turns off this option by default on new accounts, and hides it inside its Settings screen. But if you're reading this page, you'll learn how to turn it on, and the many benefits of doing so. Be sure share this tip with your friends and family---they'll thank you!
+A common mistake to avoid when using Google Drive is failing to check the hidden *Convert uploads* box. Checking this box automatically transforms files such as Microsoft Excel sheets or Word documents into Google Sheets or Google Docs format, which allows easier editing. Google turns off this option by default on new accounts, and hides it inside its Settings screen. But if you're reading this page, you'll learn how to turn it on, and the benefits of doing so. Share this tip with your family, friends, and co-workers---they'll thank you!
 
 1. Find an Excel file you can use on your personal computer. If you don't have one, click this [sample Excel data file](https://handsondataviz.org/data/data.xlsx) and save to download to your computer.
 
-2. Log into your [Google Drive](https://drive.google.com) account, and click the gear symbol in the upper-right corner to open the Settings screen.
+2. Log into your [Google Drive](https://drive.google.com) account, and click the *Gear* symbol in the upper-right corner to open the Settings screen. Note that this global *Gear symbol > Settings* appears at Google Drive level, *not* inside each Google Sheet.
 
-3. Check the box to *Convert uploaded files to Google Docs editor format*, as shown in Figure \@ref(fig:convert-uploads), and click *Done*.
+3. Check the box to *Convert uploaded files to Google Docs editor format*, as shown in Figure \@ref(fig:convert-uploads), and click *Done*. This turns on the conversion setting globally, meaning it will convert all possible files that you upload in the future---including Microsoft Excel, Word, PowerPoint, and more---unless you turn it off.
 
 (ref:convert-uploads) Inside your Google Drive settings (the gear symbol), check the box to convert uploads.
 
@@ -112,74 +111,58 @@ The most common mistake to avoid when using Google Drive is not clicking the hid
  knitr::include_graphics("images/02-spreadsheet/upload-file.png")
 ```
 
-**START AGAIN HERE**
+If you forget to check the *Convert uploads* box, Google Drive will keep uploaded files in their original format, and display their icons and file name extensions such as `.xlsx` or `.csv`, as shown in Figure \@ref(fig:drive-file-icons).
+
+(ref:drive-file-icons) If you forget to convert uploads, Google Drive will keep files in their original format with these icons.
+
+```{r drive-file-icons, fig.cap="(ref:drive-file-icons)"}
+ knitr::include_graphics("images/02-spreadsheet/drive-file-icons.png")
+```
+
+Tip: Google Drive now allows you to edit Microsoft Office file formats, but not all features are guaranteed to work across platforms. Also, Google Drive now allows you to convert an uploaded Excel file into its Google format by using the *File > Save as Google Sheets* menu.
+
+Tip: To convert individual files to your Google Drive, while keeping the global conversion setting off, from inside any Google Sheet you can select *File > Import > Upload*. But we recommend that most people turn on the global conversion setting as described above, except in cases where you intentionally use Google Drive to edit an Excel-formatted file, and understand that some features may not work.
 
 
-Google Drive can convert many file types into [Google Sheets format](https://www.google.com/sheets/about/):
+## Download and Export to CSV or ODS formats {- #csv}
 
-- Microsoft Excel (.xls and .xlsx)
-- OpenDocument Spreadsheet (.ods)
-- Comma-separated values (.csv)
-- Tab-separated values (.tab)
-- Text files (.txt) into Google Sheets format
+In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned the advantages of selecting software tools that support data migration, so that you can export your work to other platforms. Digital technology always changes. Never upload important data into a tool if you can't easily get it out! In addition, better tools allow you to export your work in open-data or generic file formats, not just proprietary formats created primarily for a specific company's software platform.
 
+When choosing a spreadsheet tool, test if and how it exports into these two open data formats:
 
+- Comma Separated Values (.csv) export only one sheet of data, with no formulas or formatting, into a wide range of spreadsheet and visualization tools, including several featured in later chapters of this book.
+- OpenDocument Spreadsheet (.ods) exports a spreadsheet with multiple tabs of data, including basic formulas and formatting, into multiple spreadsheet tools, including Google Sheets, Microsoft Excel, and LibreOffice
 
-4) When your file is successfully converted, the Google Sheets icon will appear. Recommended: Right-click to rename the file and remove the old extension (.xlsx or .csv or other), since it is no longer in this old format.
+In Google Sheets, go to *File > Download As* to export in CSV format (for only the current sheet) or ODS format (for a multi-tabbed spreadsheet with most formulas and formatting), or other formats, as shown in Figure \@ref(fig:sheets-download).
 
-![Screenshot: Right-click the Google Sheets icon to remove old file extension](images/02-spreadsheet/google-drive-sheets-icon-rename.png)
+(ref:sheets-download) In Google Sheets, go to *File > Download As* to export data to other common formats.
 
-5) Google Drive files that display different icons have **not** been converted into Google Sheets format.
+```{r sheets-download, fig.cap="(ref:sheets-download)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-download.png")
+```
 
-![Screenshot: Spreadsheet format icons in Google Drive](images/02-spreadsheet/google-drive-spreadsheet-icons.png)
+In the downloadable LibreOffice and its Calc spreadsheet tool, select *File > Save As* to save in its native ODS format, or export in CSV, XLSX, and other formats.
 
-**Beware**: A different way to convert spreadsheets into Google Sheets format is the File > Import menu, but this creates two files in your Google Drive (such as data and data.csv), which is confusing.  
+In the online Excel for free OneDrive or paid Office 365, the *File > Save As* menu allows you to save a file in its native XLSX format, or export in ODS format, as shown in Figure \@ref(fig:excel-online-save-as). But online Excel lacks an easy way to export data in CSV format.
 
+(ref:excel-online-save-as) Online versions of Excel export into ODS format, but not CSV.
 
+```{r excel-online-save-as, fig.cap="(ref:excel-online-save-as)"}
+ knitr::include_graphics("images/02-spreadsheet/excel-online-save-as.png")
+```
 
+In the downloadable Excel for Windows and Mac, the *File > Save As* menu allows you to save a file in its native XLSX format, or export in CSV, ODS, or other formats. But saving from Excel into CSV format requires thinking through a few steps that sometimes confuse people.
 
-## Download Google Sheets to CSV or other formats {- #csv}
-
-In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned the advantages of working with software that
-
-To transfer spreadsheet data to another platform, or import it into a visualization tool, you may need to convert your file into a different format. Consider two options:
-
-#### Comma-separated values (.csv) {-}
-- to transfer only one sheet of data, with no formulas or formatting, into a wide range of spreadsheet and visualization tools
-
-#### OpenDocument Spreadsheet (.ods) {-}
-- to transfer multiple sheets, with basic formulas and formatting, into many spreadsheet tools (Excel, Google Sheets, LibreOffice)
-
-#### Convert to CSV or ODS with Google Sheets {-}
-
-In the File > Download As menu, select either ODS (to convert a Google Sheets file with multiple tabs, formulas, and formatting) or CSV (to capture only the data in the current sheet).
-
-![Screenshot: Download Google Sheets data in ODS or CSV format](images/02-spreadsheet/google-sheets-download-ods-csv.png)
-
-#### Convert to ODS with Microsoft Excel {-}
-
-In the File > Save As menu, select ODS format.
-
-![Screenshot: Save as ODS with Excel for Mac](images/02-spreadsheet/excel-save-as-ods.png)
-
-#### Convert to CSV with Microsoft Excel {-}
-
-1) Note that CSV format will save only the first sheet of a multi-sheet Excel workbook. If you have source information or other data in other tabs, keep your original Excel file for backup purposes. You can give them parallel file names:
+1. Remember that if you have an Excel workbook with multiple sheets and formulas, the CSV export will only save the *active* sheet (meaning the one you're currently viewing), and only the *data* in that sheet (meaning none of the formulas you may have used for calculations). If you need to create a CSV version for other data visualization tools in this book, we advise that you first save a full-version of your Excel file, and then save a CSV file, using parallel file names:
 
 - data.csv
 - data.xlsx
 
-2) In the Excel file, select the File > Save As menu, and select CSV format.
+2. In the downloadable version of Excel, click on *File > Save As* and select *CSV* format. If you see multiple CSV options, choose *CSV UTF-8*, which should work best across different computer platforms.
 
-![Screenshot: Save as CSV in Excel for Mac](images/02-spreadsheet/excel-save-as-csv.png)
+3. If your Excel workbook contains multiple sheets, you may see a warning that it cannot be saved in CSV format, which only saves data contained in the active sheet. If you understand this, click *OK* to continue. On the next screen, Excel may warn you about "Possible data loss" when saving an Excel file in CSV format, which is true. That's why we recommended that you first save the full-version of your Excel file before saving a CSV file.
 
-3) Older versions of Excel may warn you that some features (such as formulas and formatting) will not be saved in a generic CSV data file. Be sure to keep a backup Excel version, then click Continue to save your data into CSV format.
 
-![Screenshot: Older Excel warning before saving in CSV format](images/02-spreadsheet/excel-save-as-csv-continue.png)
-
-4) In older versions of Excel, when you quit the application, another screen will ask if you wish to save the CSV file a second time. **Don't let Excel confuse you.** If you have not made any changes to the Excel file since the step above, click Don't Save, because you already saved the file in CSV format.
-
-![Screenshot: Older Excel version: click Don't Save](images/02-spreadsheet/excel-quit-csv.png)
 
 
 

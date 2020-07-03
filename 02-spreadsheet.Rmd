@@ -1,9 +1,7 @@
 # Improve Your Spreadsheet Skills {#spreadsheet}
 Before we begin to design data visualizations, let's bring our spreadsheet skills up to speed. While teaching this topic, we've heard many people describe how they "never really learned" how to use spreadsheet tools as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.
 
-To fill this gap, we added this chapter to introduce or refresh your spreadsheet skills. The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a "cell." In this chapter, we'll start by reviewing basic steps, such as [uploading](upload.html) and [sharing data](share.html), [sorting and filtering](sort.html), and [inserting simple formulas to automatically run calculations](calculate.html). Then we'll step up to the next level of skills, such as [grouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), and [collecting data with online forms](forms.html). Even if you *think* you know how to use spreadsheets, skim through these sections and you'll probably learn a few things that will help you to create better charts and maps later in the book.
-
-TODO: Consider adding Relational Database section, and demonstrate with free AirTable tool
+To fill this gap, we added this chapter to introduce or refresh your spreadsheet skills. The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a "cell." In this chapter, we'll start by reviewing basic steps, such as [sharing data](share.html), [sorting and filtering](sort.html), and [calculating with formulas and functions](calculate.html). Then we'll step up to the next level of skills, such as [grouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), [collecting data with online forms](forms.html), and [connecting sheets with a relational database](database.html). Even if you *think* you know how to use spreadsheets, skim through these sections and you'll probably learn a few things that will help you to create better charts and maps later in the book.
 
 About spreadsheet tools and data formats:
 
@@ -27,7 +25,7 @@ Spreadsheet tools organize data in different formats. When you download spreadsh
  knitr::include_graphics("images/02-spreadsheet/data-formats.png")
 ```
 
-TODO: Expand screenshot to show data format icons Windows and Chromebook -- or not?
+TODO: Expand screenshot to show data formats as displayed in Chromebook?
 
 Warning: Several tools in this book will not work properly if your computer does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac computer operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
 
@@ -37,7 +35,85 @@ Warning: Several tools in this book will not work properly if your computer does
  knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
 ```
 
-## Upload Files and Convert to Google Sheets {- #upload}
+## Make Your Own Copy of a Google Sheet {- #copy}
+In several chapters of this book, we share sample data with you by linking to a Google Sheet, with settings that allow you to view---but not edit---our file. We want everyone to have access to the data, but do not want anyone to accidentally change the original version. Follow these simple steps to make your own copy of the Google Sheet in order to edit your version.
+
+1. Right-click on this [sample-students Google Sheets file](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA) to open in a new tab. We set it to "View only" so that anyone on the internet can see the contents, but not edit them.
+
+2. Sign in to your Google account by clicking the blue button in the upper-right corner.
+
+3. Go to *File > Make a Copy* to create a duplicate of this Google Sheet in your Google Drive, as shown in Figure \@ref(fig:file-make-copy). You can rename the file to remove "Copy of...".
+
+(ref:file-make-copy) Go to *File > Make a Copy* to create your own version of this Google Sheet.
+
+```{r file-make-copy, fig.cap="(ref:file-make-copy)"}
+ knitr::include_graphics("images/02-spreadsheet/file-make-copy.png")
+```
+
+4. To keep your Google Drive files organized, click the *My Drive* button and the *New folder* button to create a folder for your data, before clicking *OK*, as shown in Figure \@ref(fig:my-drive-new-folder). If you make a habit of saving every file in a folder, you'll save a lot of time later when searching for the correct file.
+
+(ref:my-drive-new-folder) Click the *My Drive* and *New folder* buttons to save your work in a folder.
+
+```{r my-drive-new-folder, fig.cap="(ref:my-drive-new-folder)"}
+ knitr::include_graphics("images/02-spreadsheet/my-drive-new-folder.png")
+```
+
+Your copy of the Google Sheet will be private to you only, by default. In the next section we'll learn about different options for sharing your Google Sheet data with others.
+
+
+## Share Your Google Sheets {- #share}
+If you're working on a collaborative project with other people, Google Sheets offers several ways to share your data online, even with people who do not own a Google account. When you create a new Sheet, its default setting is private, meaning only you can view or edit its contents. In this section, you'll learn how to expand those options using the *Share* button.
+
+1. Log into your [Google Drive account](http://drive.google.com), click the *New* button, select *Google Sheets*, and create a blank spreadsheet. By default, a new Sheet will be private to you. You will need to name your file to proceed with next steps.
+
+2. Click the *Share* button in the upper-right corner, and your options will appear on the *Share with people and groups* screen, as shown in Figure \@ref(fig:share-screen).
+
+3. In the top half of the screen, you can share access with specific individuals by typing their Google usernames into the *Add people and groups* field. For each person or group you add, on the next screen select the drop-down menu to choose if they can *View*, *Comment* on, or *Edit* the file. Decide if you wish to notify them with a link to the file and optional message.
+
+4. In the lower half of the screen, you can share access more widely by clicking on *Change to anyone with the link*. On the next screen, the default option is to allow anyone who has the link to *View* the file, but you can change this to allow anyone to *Comment* on or *Edit* it. Also, you can click *Copy link* to paste the web address to your data in an email or public website.
+
+(ref:share-screen) Click the *Share* button to grant access to individuals (top half) or anyone with the link (bottom half).
+
+```{r share-screen, fig.cap="(ref:share-screen)"}
+ knitr::include_graphics("images/02-spreadsheet/share-screen.png")
+```
+
+Tip: If you don't want to send people a really long and ugly Google Sheet web address such as `https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA`, use a free link-shortening service. For example, by using our free [Bitly.com](http://bitly.com) account and its handy [Chrome browser extension](https://chrome.google.com/webstore/detail/bitly-unleash-the-power-o/iabeihobmhlgpkcgjiloemdbofjbdcic) or [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/user/13352154/), we can paste in a long URL and customize the back-end to something shorter, such as [bit.ly/sample-students](https://bit.ly/sample-students), as shown in Figure \@ref(fig:link-shortening). If someone else has already claimed your preferred custom name, you'll need to think up a different one. Beware that `bit.ly` links are case-sensitive, so we prefer to customize the back-end in all lower-case to match the front-end.
+
+(ref:link-shortening) Use a free link-shortening service, such as Bitly.com, and customize its back-end.
+
+```{r link-shortening, fig.cap="(ref:link-shortening)"}
+ knitr::include_graphics("images/02-spreadsheet/link-shortening.png")
+```
+
+Now that you have different options for sharing a Google Sheet, let's learn how to upload and properly *convert* data from different formats.
+
+## Upload and Convert Data to Google Sheets {- #upload}
+
+The most common mistake to avoid when using Google Drive is not clicking the hidden *Convert uploads* box. This automatically transforms files such as Microsoft Excel sheets or Word documents into Google Sheets or Google Docs format, which allows for much easier editing. For some reason, Google turns off this option by default on new accounts, and hides it inside its Settings screen. But if you're reading this page, you'll learn how to turn it on, and the many benefits of doing so. Be sure share this tip with your friends and family---they'll thank you!
+
+1. Find an Excel file you can use on your personal computer. If you don't have one, click this [sample Excel data file](https://handsondataviz.org/data/data.xlsx) and save to download to your computer.
+
+2. Log into your [Google Drive](https://drive.google.com) account, and click the gear symbol in the upper-right corner to open the Settings screen.
+
+3. Check the box to *Convert uploaded files to Google Docs editor format*, as shown in Figure \@ref(fig:convert-uploads), and click *Done*.
+
+(ref:convert-uploads) Inside your Google Drive settings (the gear symbol), check the box to convert uploads.
+
+```{r convert-uploads, fig.cap="(ref:convert-uploads)"}
+ knitr::include_graphics("images/02-spreadsheet/convert-uploads.png")
+```
+
+4. Upload a sample Excel file from your computer to your Google Drive. Either drag-and-drop it to the desired folder, as shown in Figure \@ref(fig:upload-file), or use the *New* button and select *File upload*.
+
+(ref:upload-file) Drag-and-drop your sample Excel file into your Google Drive to upload it.
+
+```{r upload-file, fig.cap="(ref:upload-file)"}
+ knitr::include_graphics("images/02-spreadsheet/upload-file.png")
+```
+
+**START AGAIN HERE**
+
 
 Google Drive can convert many file types into [Google Sheets format](https://www.google.com/sheets/about/):
 
@@ -47,16 +123,7 @@ Google Drive can convert many file types into [Google Sheets format](https://www
 - Tab-separated values (.tab)
 - Text files (.txt) into Google Sheets format
 
-#### Tutorial {-}
-1) Sign in to your free Google Drive account (http://drive.google.com)
 
-2) To convert files into Google Sheets format, open the Settings (upper-right gear symbol), and **check the box** to Convert uploaded files to Google Docs.
-
-![Screenshot: Check the box to Convert uploaded files to Google Docs format](images/02-spreadsheet/google-drive-settings-convert-uploads.png)
-
-3) To upload your file, use the New > File Upload menu OR drag-and-drop it into your Google Drive screen.
-
-![Screenshot: New > File upload OR Drag-and-drop the file](images/02-spreadsheet/google-drive-upload-methods.png)
 
 4) When your file is successfully converted, the Google Sheets icon will appear. Recommended: Right-click to rename the file and remove the old extension (.xlsx or .csv or other), since it is no longer in this old format.
 
@@ -68,67 +135,13 @@ Google Drive can convert many file types into [Google Sheets format](https://www
 
 **Beware**: A different way to convert spreadsheets into Google Sheets format is the File > Import menu, but this creates two files in your Google Drive (such as data and data.csv), which is confusing.  
 
-## Make a Copy with Google Sheets {- #copy}
-In this book, you will open links to Google Sheets that allow you to view -- but not edit -- the contents. How can you quickly make your own version that you can edit?
 
-![Screenshot: View-only in Google Sheets](images/02-spreadsheet/google-sheets-copy1.png)
 
-#### Best solution {-}
-1) Sign in to your Google account in the upper-right corner. Requires a free account.
 
-2) Go to File > Make a Copy to save a duplicate of the spreadsheet to your Google Drive. By default, your copy will be private to you. Go to the [Share Data with Google Sheets](spreadsheet.html#share) chapter in this book to allow others to view, comment, or edit your spreadsheet.
+## Download Google Sheets to CSV or other formats {- #csv}
 
-Highly recommended: Create folders in your Google Drive to keep your files organized and easily findable.
+In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned the advantages of working with software that
 
-![Screenshot: Sign in and File > Make a Copy in Google Sheets](images/02-spreadsheet/google-sheets-copy2.png)
-
-#### Alternate solution {-}
-Another option is to File > Download As into a different format, such as:
-
-- Microsoft Excel (.xlsx)
-- OpenData System (.ods), a generic multi-tab spreadsheet
-- Comma-separated values (.csv), a generic single sheet
-
-No Google account is required.
-
-## Share Data with Google Sheets {- #share}
-To share live spreadsheet data with other people, use Google Sheets (https://www.google.com/sheets/about/). Requires a free Google
-Drive account.
-
-#### Video with step-by-step tutorial {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PoLhyld3KLo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-1) Sign in to your Google Drive (http://drive.google.com), and in the New menu, select Google Sheets.
-
-2) New spreadsheets are private by default. Only the owner can view and edit.
-
-3) To open your spreadsheet to others, click the blue Share button.
-
-4) To share data with specific individuals, enter their Google usernames.
-
-5) Or, to share data more widely, click the **Advanced** button on the next screen. (I wish Google made this button larger!)
-
-6) Click the Change button and decide on Link Sharing settings:
-
-- Public on the web (anyone can find your data)
-- Anyone with the link (similar to an unlisted phone number)
-- Off (only specific people you list by Google usernames)
-
-Below those settings, select the Access level:
-
-- Can view
-- Can comment
-- Can edit (for co-authored data)
-
-7) Select Save, and scroll down on the next screen to select Done.
-
-**Tip:** To avoid sending a long Google Sheets link to others, use a free link-shortening service such as Bit.ly (http://bit.ly). Requires a free account.
-
-#### Learn more {-}
-- "Share Files from Google Drive," Google help page, https://support.google.com/docs/answer/2494822
-- Jack Dougherty, "How to Co-Author and Peer Edit with Google Docs," Web Writing: How and Why for Liberal Arts Teaching and Learning, (2015), http://epress.trincoll.edu/webwriting/chapter/how-to-google-docs
-
-## Save Spreadsheets in CSV or ODS {- #csv}
 To transfer spreadsheet data to another platform, or import it into a visualization tool, you may need to convert your file into a different format. Consider two options:
 
 #### Comma-separated values (.csv) {-}
@@ -168,6 +181,8 @@ In the File > Save As menu, select ODS format.
 
 ![Screenshot: Older Excel version: click Don't Save](images/02-spreadsheet/excel-quit-csv.png)
 
+
+
 ## Sort and Filter Data {- #sort}
 
 TODO:
@@ -187,6 +202,9 @@ if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/Spreadshee
 
 #### Filter data by columns {-}
 TO DO
+
+
+
 
 ## Calculate with Formulas and Functions {- #calculate}
 TODO:
@@ -314,7 +332,9 @@ VLOOKUP(search_key, range, index, [is_sorted])
 
 TODO: write simple tutorial for Google Forms and explain how to share the spreadsheet; also mention other web form services
 
-TODO: Consider adding Relational Database section, and demonstrate with free AirTable
+## Connect Sheets with Relational Database {- #database}
+
+TODO: add introduction to relational database section, with AirTable
 
 **Summary**
 

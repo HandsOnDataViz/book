@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Make a Copy with Google Sheets | Hands-On Data Visualization</title>
+  <title>Make Your Own Copy of a Google Sheet | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Make a Copy with Google Sheets | Hands-On Data Visualization" />
+  <meta property="og:title" content="Make Your Own Copy of a Google Sheet | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Make a Copy with Google Sheets | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Make Your Own Copy of a Google Sheet | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-01" />
+<meta name="date" content="2020-07-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="upload.html"/>
+<link rel="prev" href="spreadsheet.html"/>
 <link rel="next" href="share.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -160,15 +160,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
 <ul>
-<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload Files and Convert to Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Data with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Save Spreadsheets in CSV or ODS</a></li>
+<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
+<li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Group Data with Pivot Tables</a></li>
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
+<li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with Relational Database</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
@@ -297,41 +298,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="copy" class="section level2 unnumbered" number="">
-<h2>Make a Copy with Google Sheets</h2>
-<p>In this book, you will open links to Google Sheets that allow you to view – but not edit – the contents. How can you quickly make your own version that you can edit?</p>
-<div class="figure">
-<img src="images/02-spreadsheet/google-sheets-copy1.png" alt="" />
-<p class="caption">Screenshot: View-only in Google Sheets</p>
-</div>
-<div id="best-solution" class="section level4 unnumbered" number="">
-<h4>Best solution</h4>
+<h2>Make Your Own Copy of a Google Sheet</h2>
+<p>In several chapters of this book, we share sample data with links to Google Sheets, using settings that allow you to view—but not edit—the original file. We want everyone to have access to the data, but do not want anyone to accidentally modify the contents. Follow these simple steps to make your own copy of a Google Sheet that you can edit, without changing our version.</p>
 <ol style="list-style-type: decimal">
-<li><p>Sign in to your Google account in the upper-right corner. Requires a free account.</p></li>
-<li><p>Go to File &gt; Make a Copy to save a duplicate of the spreadsheet to your Google Drive. By default, your copy will be private to you. Go to the <a href="spreadsheet.html#share">Share Data with Google Sheets</a> chapter in this book to allow others to view, comment, or edit your spreadsheet.</p></li>
+<li><p>Right-click on this <a href="https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA">sample-students Google Sheets file</a> to open in a new tab. We set it to “View only” so that anyone on the internet can see the contents, but not edit them.</p></li>
+<li><p>Sign in to your Google account by clicking the blue button in the upper-right corner.</p></li>
+<li><p>Go to <em>File &gt; Make a Copy</em> to create a duplicate of this Google Sheet in your Google Drive, as shown in Figure <a href="copy.html#fig:file-make-copy">2.3</a>. You can rename the file to remove “Copy of…”.</p></li>
 </ol>
-<p>Highly recommended: Create folders in your Google Drive to keep your files organized and easily findable.</p>
-<div class="figure">
-<img src="images/02-spreadsheet/google-sheets-copy2.png" alt="" />
-<p class="caption">Screenshot: Sign in and File &gt; Make a Copy in Google Sheets</p>
+
+<div class="figure"><span id="fig:file-make-copy"></span>
+<img src="images/02-spreadsheet/file-make-copy.png" alt="Go to File &gt; Make a Copy to create your own version of this Google Sheet."  />
+<p class="caption">
+Figure 2.3: Go to <em>File &gt; Make a Copy</em> to create your own version of this Google Sheet.
+</p>
 </div>
+<ol start="4" style="list-style-type: decimal">
+<li>To keep your Google Drive files organized, click the <em>My Drive</em> button and the <em>New folder</em> button to create a folder for your data, before clicking <em>OK</em>, as shown in Figure <a href="copy.html#fig:my-drive-new-folder">2.4</a>. If you make a habit of saving every file in a folder, you’ll save a lot of time later when searching for the correct file.</li>
+</ol>
+
+<div class="figure"><span id="fig:my-drive-new-folder"></span>
+<img src="images/02-spreadsheet/my-drive-new-folder.png" alt="Click the My Drive and New folder buttons to save your work in a folder."  />
+<p class="caption">
+Figure 2.4: Click the <em>My Drive</em> and <em>New folder</em> buttons to save your work in a folder.
+</p>
 </div>
-<div id="alternate-solution" class="section level4 unnumbered" number="">
-<h4>Alternate solution</h4>
-<p>Another option is to File &gt; Download As into a different format, such as:</p>
-<ul>
-<li>Microsoft Excel (.xlsx)</li>
-<li>OpenData System (.ods), a generic multi-tab spreadsheet</li>
-<li>Comma-separated values (.csv), a generic single sheet</li>
-</ul>
-<p>No Google account is required.</p>
-</div>
+<p>Your copy of the Google Sheet will be private to you only, by default. In the next section we’ll learn about different options for sharing your Google Sheet data with others.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="upload.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="spreadsheet.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="share.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

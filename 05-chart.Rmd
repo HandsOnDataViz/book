@@ -254,12 +254,12 @@ The following steps will help you recreate an interactive grouped column (or hor
 
 2. Sign in to continue to Google Sheets (which is part of Google Drive). If you don't already have a Google account, you can create one.
 
-3. Select File > Make a Copy to save your own version to your Google Drive, as shown in Figure \@ref(fig:file-make-copy).
+3. Select File > Make a Copy to save your own version to your Google Drive, as shown in Figure \@ref(fig:file-make-copy2).
 
-(ref:file-make-copy) Make your own copy of the Google Sheet template.
+(ref:file-make-copy2) Make your own copy of the Google Sheet template.
 
-```{r file-make-copy, fig.cap="(ref:file-make-copy)"}
- knitr::include_graphics("images/05-chart/file-make-copy.png")
+```{r file-make-copy2, fig.cap="(ref:file-make-copy2)"}
+ knitr::include_graphics("images/05-chart/file-make-copy2.png")
 ```
 
 4. To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot menu appear, and select Delete, as shown in Figure \@ref(fig:delete-chart).

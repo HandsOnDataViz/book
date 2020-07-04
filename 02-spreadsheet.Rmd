@@ -162,35 +162,52 @@ In the downloadable Excel for Windows and Mac, the *File > Save As* menu allows 
 
 3. If your Excel workbook contains multiple sheets, you may see a warning that it cannot be saved in CSV format, which only saves data contained in the active sheet. If you understand this, click *OK* to continue. On the next screen, Excel may warn you about "Possible data loss" when saving an Excel file in CSV format, which is true. That's why we recommended that you first save the full-version of your Excel file before saving a CSV file.
 
+TODO: I can add screenshots of any of the downloadable Excel steps above, but I don't think it's necessary. Thoughts?
 
-
+Once you've learned how to export your spreadsheet data into an open format, you're ready to migrate it into other data visualization tools or platforms that we'll introduce in later chapters of this book. Data portability is key for ensuring that your charts and maps will last well into the future.
 
 
 ## Sort and Filter Data {- #sort}
 
-TODO:
+Spreadsheet tools help you delve into your data and lift its stories to the surface. One of the most basic steps in organizing your data is to *sort* the contents of an entire table by one column, such as alphabetical order in a column of text, or highest-to-lowest order in a column of numbers. A related method is to *filter* an entire table to display only rows that contain certain values, such as a specific text or numerical value among all of the other entries. While you could manually sort or filter small datasets, spreadsheets become more powerful when you work with hundreds or thousands of rows of data.
 
-- write intro on the title concepts
-- when possible, start text by posing a common problem, and how this method can solve it
-- redo visuals: Google Sheets with better example
-- add Filter data
+Let's use a large sample file to learn how to sort and filter data.
 
-#### Sort data by columns {-}
+1. Open this [Google Sheet of New York City restaurant health inspection data](https://docs.google.com/spreadsheets/d/1WvEa46w8en5uWiMX7Jq6o02Q--wMHN2jGFOjD4sr73A/). It contains over 13,000 rows of data for inspections conducted in January 2020, where each row is a health violation. This is just a fraction of the full dataset. See the [NYC Open Data source](https://nycopendata.socrata.com/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j) for more info.
 
-To sort data rows by a column, select the entire spreadsheet (top-left corner icon), then right-click or look for the sort menu. Be sure to select the entire sheet to avoid accidentally sorting one column without the adjacent ones.
+2. Login to your Google Sheets account, and go to *File > Make a Copy* to create your own version that you can edit.
 
-```{r spreadsheet-sort}
-if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/SpreadsheetSort640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+3. Before sorting, click the upper-left corner of the sheet to select all cells, as shown in Figure \@ref(fig:sheets-select-all). The entire sheet should become light blue to show you've selected all cells.
+
+(ref:sheets-select-all) Click the upper-left corner to select all cells before sorting.
+
+```{r sheets-select-all, fig.cap="(ref:sheets-select-all)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-select-all.png")
 ```
 
-#### Filter data by columns {-}
-TO DO
+Warning: If you forget to select all cells, you might accidentally sort one column independently of the others, which would scramble your entire dataset and make it meaningless. Always select all cells before sorting!
 
+4. Go to *Data > Sort Range* to review all of your sort options. In the next screen, check the *Data has header row* box to view the column headers in your data. Let's sort the *SCORE* column in ascending order (from A-Z), as shown in Figure \@ref(fig:sheets-sort-range), to display the lowest-scoring restaurants at the top of the sheet.
 
+(ref:sheets-sort-range) Go to *Data > Sort Range*, check the header row box, and sort by *SCORE* in ascending order.
+
+```{r sheets-sort-range, fig.cap="(ref:sheets-sort-range)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-sort-range.png")
+```
+
+5. Now let's try filtering your sheet. Go to *Data > Create a Filter*, which inserts downward arrows in each column header. Click on the downward arrow in the *BORO* column, and see options to display or hide rows of data. For example, click only the *Manhattan* boro, and unclick all of the other options, to display only rows with that name, as shown in Figure \@ref(fig:sheets-filter).
+
+(ref:sheets-filter) Go to *Data > Create a Filter*, and in the *BORO* column, select only *Manhattan*.
+
+```{r sheets-filter, fig.cap="(ref:sheets-filter)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-filter.png")
+```
+
+By sorting and filtering large spreadsheets, you can begin to focus on key details in your data. Where should we *not* go out for lunch?
 
 
 ## Calculate with Formulas and Functions {- #calculate}
-TODO:
+**TODO: START AGAIN HERE**
 
 - when possible, start text by posing a common problem, and how this method can solve it
 - redo visuals: Google Sheets with better examples

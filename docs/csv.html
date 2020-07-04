@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Save Spreadsheets in CSV or ODS | Hands-On Data Visualization</title>
+  <title>Download and Export to CSV or ODS formats | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Save Spreadsheets in CSV or ODS | Hands-On Data Visualization" />
+  <meta property="og:title" content="Download and Export to CSV or ODS formats | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Save Spreadsheets in CSV or ODS | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Download and Export to CSV or ODS formats | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-01" />
+<meta name="date" content="2020-07-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="share.html"/>
+<link rel="prev" href="upload.html"/>
 <link rel="next" href="sort.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -160,15 +160,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
 <ul>
-<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload Files and Convert to Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Data with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Save Spreadsheets in CSV or ODS</a></li>
+<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
+<li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Group Data with Pivot Tables</a></li>
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
+<li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with Relational Database</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
@@ -297,74 +298,51 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="csv" class="section level2 unnumbered" number="">
-<h2>Save Spreadsheets in CSV or ODS</h2>
-<p>To transfer spreadsheet data to another platform, or import it into a visualization tool, you may need to convert your file into a different format. Consider two options:</p>
-<div id="comma-separated-values-.csv" class="section level4 unnumbered" number="">
-<h4>Comma-separated values (.csv)</h4>
+<h2>Download and Export to CSV or ODS formats</h2>
+<p>In <a href="choose.html">Chapter 1: Choose Tools to Tell Your Data Story</a>, we learned the advantages of selecting software tools that support data migration, so that you can export your work to other platforms. Digital technology always changes. Never upload important data into a tool if you can’t easily get it out! In addition, better tools allow you to export your work in open-data or generic file formats, not just proprietary formats created primarily for a specific company’s software platform.</p>
+<p>When choosing a spreadsheet tool, test if and how it exports into these two open data formats:</p>
 <ul>
-<li>to transfer only one sheet of data, with no formulas or formatting, into a wide range of spreadsheet and visualization tools</li>
+<li>Comma Separated Values (.csv) export only one sheet of data, with no formulas or formatting, into a wide range of spreadsheet and visualization tools, including several featured in later chapters of this book.</li>
+<li>OpenDocument Spreadsheet (.ods) exports a spreadsheet with multiple tabs of data, including basic formulas and formatting, into multiple spreadsheet tools, including Google Sheets, Microsoft Excel, and LibreOffice</li>
 </ul>
+<p>In Google Sheets, go to <em>File &gt; Download As</em> to export in CSV format (for only the current sheet) or ODS format (for a multi-tabbed spreadsheet with most formulas and formatting), or other formats, as shown in Figure <a href="csv.html#fig:sheets-download">2.10</a>.</p>
+
+<div class="figure"><span id="fig:sheets-download"></span>
+<img src="images/02-spreadsheet/sheets-download.png" alt="In Google Sheets, go to File &gt; Download As to export data to other common formats."  />
+<p class="caption">
+Figure 2.10: In Google Sheets, go to <em>File &gt; Download As</em> to export data to other common formats.
+</p>
 </div>
-<div id="opendocument-spreadsheet-.ods" class="section level4 unnumbered" number="">
-<h4>OpenDocument Spreadsheet (.ods)</h4>
-<ul>
-<li>to transfer multiple sheets, with basic formulas and formatting, into many spreadsheet tools (Excel, Google Sheets, LibreOffice)</li>
-</ul>
+<p>In the downloadable LibreOffice and its Calc spreadsheet tool, select <em>File &gt; Save As</em> to save in its native ODS format, or export in CSV, XLSX, and other formats.</p>
+<p>In the online Excel for free OneDrive or paid Office 365, the <em>File &gt; Save As</em> menu allows you to save a file in its native XLSX format, or export in ODS format, as shown in Figure <a href="csv.html#fig:excel-online-save-as">2.11</a>. But online Excel lacks an easy way to export data in CSV format.</p>
+
+<div class="figure"><span id="fig:excel-online-save-as"></span>
+<img src="images/02-spreadsheet/excel-online-save-as.png" alt="Online versions of Excel export into ODS format, but not CSV."  />
+<p class="caption">
+Figure 2.11: Online versions of Excel export into ODS format, but not CSV.
+</p>
 </div>
-<div id="convert-to-csv-or-ods-with-google-sheets" class="section level4 unnumbered" number="">
-<h4>Convert to CSV or ODS with Google Sheets</h4>
-<p>In the File &gt; Download As menu, select either ODS (to convert a Google Sheets file with multiple tabs, formulas, and formatting) or CSV (to capture only the data in the current sheet).</p>
-<div class="figure">
-<img src="images/02-spreadsheet/google-sheets-download-ods-csv.png" alt="" />
-<p class="caption">Screenshot: Download Google Sheets data in ODS or CSV format</p>
-</div>
-</div>
-<div id="convert-to-ods-with-microsoft-excel" class="section level4 unnumbered" number="">
-<h4>Convert to ODS with Microsoft Excel</h4>
-<p>In the File &gt; Save As menu, select ODS format.</p>
-<div class="figure">
-<img src="images/02-spreadsheet/excel-save-as-ods.png" alt="" />
-<p class="caption">Screenshot: Save as ODS with Excel for Mac</p>
-</div>
-</div>
-<div id="convert-to-csv-with-microsoft-excel" class="section level4 unnumbered" number="">
-<h4>Convert to CSV with Microsoft Excel</h4>
+<p>In the downloadable Excel for Windows and Mac, the <em>File &gt; Save As</em> menu allows you to save a file in its native XLSX format, or export in CSV, ODS, or other formats. But saving from Excel into CSV format requires thinking through a few steps that sometimes confuse people.</p>
 <ol style="list-style-type: decimal">
-<li>Note that CSV format will save only the first sheet of a multi-sheet Excel workbook. If you have source information or other data in other tabs, keep your original Excel file for backup purposes. You can give them parallel file names:</li>
+<li>Remember that if you have an Excel workbook with multiple sheets and formulas, the CSV export will only save the <em>active</em> sheet (meaning the one you’re currently viewing), and only the <em>data</em> in that sheet (meaning none of the formulas you may have used for calculations). If you need to create a CSV version for other data visualization tools in this book, we advise that you first save a full-version of your Excel file, and then save a CSV file, using parallel file names:</li>
 </ol>
 <ul>
 <li>data.csv</li>
 <li>data.xlsx</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
-<li>In the Excel file, select the File &gt; Save As menu, and select CSV format.</li>
+<li><p>In the downloadable version of Excel, click on <em>File &gt; Save As</em> and select <em>CSV</em> format. If you see multiple CSV options, choose <em>CSV UTF-8</em>, which should work best across different computer platforms.</p></li>
+<li><p>If your Excel workbook contains multiple sheets, you may see a warning that it cannot be saved in CSV format, which only saves data contained in the active sheet. If you understand this, click <em>OK</em> to continue. On the next screen, Excel may warn you about “Possible data loss” when saving an Excel file in CSV format, which is true. That’s why we recommended that you first save the full-version of your Excel file before saving a CSV file.</p></li>
 </ol>
-<div class="figure">
-<img src="images/02-spreadsheet/excel-save-as-csv.png" alt="" />
-<p class="caption">Screenshot: Save as CSV in Excel for Mac</p>
-</div>
-<ol start="3" style="list-style-type: decimal">
-<li>Older versions of Excel may warn you that some features (such as formulas and formatting) will not be saved in a generic CSV data file. Be sure to keep a backup Excel version, then click Continue to save your data into CSV format.</li>
-</ol>
-<div class="figure">
-<img src="images/02-spreadsheet/excel-save-as-csv-continue.png" alt="" />
-<p class="caption">Screenshot: Older Excel warning before saving in CSV format</p>
-</div>
-<ol start="4" style="list-style-type: decimal">
-<li>In older versions of Excel, when you quit the application, another screen will ask if you wish to save the CSV file a second time. <strong>Don’t let Excel confuse you.</strong> If you have not made any changes to the Excel file since the step above, click Don’t Save, because you already saved the file in CSV format.</li>
-</ol>
-<div class="figure">
-<img src="images/02-spreadsheet/excel-quit-csv.png" alt="" />
-<p class="caption">Screenshot: Older Excel version: click Don’t Save</p>
-</div>
-</div>
+<p>TODO: I can add screenshots of any of the downloadable Excel steps above, but I don’t think it’s necessary. Thoughts?</p>
+<p>Once you’ve learned how to export your spreadsheet data into an open format, you’re ready to migrate it into other data visualization tools or platforms that we’ll introduce in later chapters of this book. Data portability is key for ensuring that your charts and maps will last well into the future.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="share.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="upload.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="sort.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

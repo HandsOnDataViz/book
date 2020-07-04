@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-01" />
+<meta name="date" content="2020-07-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -160,15 +160,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
 <ul>
-<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload Files and Convert to Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Data with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Save Spreadsheets in CSV or ODS</a></li>
+<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
+<li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Group Data with Pivot Tables</a></li>
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
+<li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with Relational Database</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
@@ -298,23 +299,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="sort" class="section level2 unnumbered" number="">
 <h2>Sort and Filter Data</h2>
-<p>TODO:</p>
-<ul>
-<li>write intro on the title concepts</li>
-<li>when possible, start text by posing a common problem, and how this method can solve it</li>
-<li>redo visuals: Google Sheets with better example</li>
-<li>add Filter data</li>
-</ul>
-<div id="sort-data-by-columns" class="section level4 unnumbered" number="">
-<h4>Sort data by columns</h4>
-<p>To sort data rows by a column, select the entire spreadsheet (top-left corner icon), then right-click or look for the sort menu. Be sure to select the entire sheet to avoid accidentally sorting one column without the adjacent ones.</p>
-<iframe src="images/02-spreadsheet/SpreadsheetSort640w.gif" width="672" height="400px">
-</iframe>
+<p>Spreadsheet tools help you delve into your data and lift its stories to the surface. One of the most basic steps in organizing your data is to <em>sort</em> the contents of an entire table by one column, such as alphabetical order in a column of text, or highest-to-lowest order in a column of numbers. A related method is to <em>filter</em> an entire table to display only rows that contain certain values, such as a specific text or numerical value among all of the other entries. While you could manually sort or filter small datasets, spreadsheets become more powerful when you work with hundreds or thousands of rows of data.</p>
+<p>Let’s use a large sample file to learn how to sort and filter data.</p>
+<ol style="list-style-type: decimal">
+<li><p>Open this <a href="https://docs.google.com/spreadsheets/d/1WvEa46w8en5uWiMX7Jq6o02Q--wMHN2jGFOjD4sr73A/">Google Sheet of New York City restaurant health inspection data</a>. It contains over 13,000 rows of data for inspections conducted in January 2020, where each row is a health violation. This is just a fraction of the full dataset. See the <a href="https://nycopendata.socrata.com/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j">NYC Open Data source</a> for more info.</p></li>
+<li><p>Login to your Google Sheets account, and go to <em>File &gt; Make a Copy</em> to create your own version that you can edit.</p></li>
+<li><p>Before sorting, click the upper-left corner of the sheet to select all cells, as shown in Figure <a href="sort.html#fig:sheets-select-all">2.12</a>. The entire sheet should become light blue to show you’ve selected all cells.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:sheets-select-all"></span>
+<img src="images/02-spreadsheet/sheets-select-all.png" alt="Click the upper-left corner to select all cells before sorting."  />
+<p class="caption">
+Figure 2.12: Click the upper-left corner to select all cells before sorting.
+</p>
 </div>
-<div id="filter-data-by-columns" class="section level4 unnumbered" number="">
-<h4>Filter data by columns</h4>
-<p>TO DO</p>
+<p>Warning: If you forget to select all cells, you might accidentally sort one column independently of the others, which would scramble your entire dataset and make it meaningless. Always select all cells before sorting!</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Go to <em>Data &gt; Sort Range</em> to review all of your sort options. In the next screen, check the <em>Data has header row</em> box to view the column headers in your data. Let’s sort the <em>SCORE</em> column in ascending order (from A-Z), as shown in Figure <a href="sort.html#fig:sheets-sort-range">2.13</a>, to display the lowest-scoring restaurants at the top of the sheet.</li>
+</ol>
+
+<div class="figure"><span id="fig:sheets-sort-range"></span>
+<img src="images/02-spreadsheet/sheets-sort-range.png" alt="Go to Data &gt; Sort Range, check the header row box, and sort by SCORE in ascending order."  />
+<p class="caption">
+Figure 2.13: Go to <em>Data &gt; Sort Range</em>, check the header row box, and sort by <em>SCORE</em> in ascending order.
+</p>
 </div>
+<ol start="5" style="list-style-type: decimal">
+<li>Now let’s try filtering your sheet. Go to <em>Data &gt; Create a Filter</em>, which inserts downward arrows in each column header. Click on the downward arrow in the <em>BORO</em> column, and see options to display or hide rows of data. For example, click only the <em>Manhattan</em> boro, and unclick all of the other options, to display only rows with that name, as shown in Figure <a href="sort.html#fig:sheets-filter">2.14</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:sheets-filter"></span>
+<img src="images/02-spreadsheet/sheets-filter.png" alt="Go to Data &gt; Create a Filter, and in the BORO column, select only Manhattan."  />
+<p class="caption">
+Figure 2.14: Go to <em>Data &gt; Create a Filter</em>, and in the <em>BORO</em> column, select only <em>Manhattan</em>.
+</p>
+</div>
+<p>By sorting and filtering large spreadsheets, you can begin to focus on key details in your data. Where should we <em>not</em> go out for lunch?</p>
 </div>
             </section>
 

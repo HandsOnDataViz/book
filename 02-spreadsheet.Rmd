@@ -1,7 +1,9 @@
 # Improve Your Spreadsheet Skills {#spreadsheet}
 Before we begin to design data visualizations, let's bring our spreadsheet skills up to speed. While teaching this topic, we've heard many people describe how they "never really learned" how to use spreadsheet tools as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.
 
-To fill this gap, we added this chapter to introduce or refresh your spreadsheet skills. The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a "cell." In this chapter, we'll start by reviewing basic steps, such as [sharing data](share.html), [sorting and filtering](sort.html), and [calculating with formulas and functions](calculate.html). Then we'll step up to the next level of skills, such as [grouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), [collecting data with online forms](forms.html), and [connecting sheets with a relational database](database.html). Even if you *think* you know how to use spreadsheets, skim through these sections and you'll probably learn a few things that will help you to create better charts and maps later in the book.
+To fill this gap, we added this chapter to introduce or refresh your spreadsheet skills. The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a "cell." In this chapter, we'll start by reviewing basic steps, such as [sharing data](share.html), [sorting and filtering](sort.html), and [calculating with formulas and functions](calculate.html). Then we'll step up to the next level of skills, such as [regrouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), [connecting sheets with a relational database](database.html), and [collecting data with online forms](forms.html). All of the methods we illustrate are intended for introductory users, and do not require any background in statistics.
+
+If you can add up numbers---or better said, if you want your computer to add up numbers and do even more work for you---then this chapter is right for you. Even if you *think* you know something about using spreadsheets, skim these sections and you might learn a trick or two that will help you to design charts and maps more efficiently in later chapters.
 
 About spreadsheet tools:
 
@@ -168,12 +170,11 @@ Once you've learned how to export your spreadsheet data into an open format, you
 
 
 ## Sort and Filter Data {- #sort}
-
 Spreadsheet tools help you delve into your data and lift its stories to the surface. One of the most basic steps in organizing your data is to *sort* the contents of an entire table by one column, such as alphabetical order in a column of text, or highest-to-lowest order in a column of numbers. A related method is to *filter* an entire table to display only rows that contain certain values, such as a specific text or numerical value among all of the other entries. While you could manually sort or filter small datasets, spreadsheets become more powerful when you work with hundreds or thousands of rows of data.
 
 Let's use a large sample file to learn how to sort and filter data.
 
-1. Open this [Google Sheet of New York City restaurant health inspection data](https://docs.google.com/spreadsheets/d/1WvEa46w8en5uWiMX7Jq6o02Q--wMHN2jGFOjD4sr73A/). It contains over 13,000 rows of data for inspections conducted in January 2020, where each row is a health violation. This is just a fraction of the full dataset. See the [NYC Open Data source](https://nycopendata.socrata.com/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j) for more info.
+1. Open this [Google Sheet of New York City restaurant health inspection data](https://docs.google.com/spreadsheets/d/1WvEa46w8en5uWiMX7Jq6o02Q--wMHN2jGFOjD4sr73A/). It contains over 13,000 rows of data for inspections conducted in January 2020, where each row is a health violation. This is just a fraction of the full dataset available from the original source, [NYC Open Data](https://nycopendata.socrata.com/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j).
 
 2. Login to your Google Sheets account, and go to *File > Make a Copy* to create your own version that you can edit.
 
@@ -207,139 +208,191 @@ By sorting and filtering large spreadsheets, you can begin to focus on key detai
 
 
 ## Calculate with Formulas and Functions {- #calculate}
-**TODO: START AGAIN HERE**
+Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. In this section you'll learn how to write a simple formula that adds up a column of numbers, then you'll insert built-in functions to show the sum and average.
 
-- when possible, start text by posing a common problem, and how this method can solve it
-- redo visuals: Google Sheets with better examples
-- see other notes inserted below
+1. Open this Google Sheet of [Measles cases in three nations 2010-18](https://docs.google.com/spreadsheets/d/15Q16jcgoIcoQ-UkAJ3nfQpU-4d_Hk6tJqEYoobmnxY0/), a subset of [data from the World Health Organization](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/measles---number-of-reported-cases). Log into your Google Drive account, and go to *File > Make a Copy* to edit your own version.
 
-Simple formulas can save you lots of time. The big advantage of spreadsheet tools is the ability to insert simple formulas to calculate numbers, or combine columns of text, for entire rows and columns.
+2. Let's calculate the total number of reported cases in 2010 by inserting a simple formula that adds up the cells for Canada, Mexico, and the US that year. Spreadsheet formulas begin with an `=` equal sign, and refer to specific cells and operations. Click on cell B5 and type in `= B2 + B3 + B4` then press *Return* or *Enter*. A total of 162 cases in 2010 will appear in the cell where you entered the formula.
 
-#### Write a simple formula {-}
+3. Now let's speed up our work using the built-in `SUM` function to total up numbers for us. Click on column C5 and type in `=SUM(C2:C4)`, which calculates the sum of all of the cells between C2 and C4. then press *Return*. A total of 1,026 cases in 2011 will appear.
 
-In most spreadsheets, begin writing a simple formula with an equal sign, and refer to specific cells and functions, such as:
+4. Now let's speed up our work even more by using the built-in click-and-drag tool to extend the `SUM` calculation across the row for each remaining year. Click in cell C5, and float your cursor over the dot in the bottom-right corner, which transforms your cursor into a crosshair symbol. Then click-and-drag your crosshair cursor from cell C5 to J5, which automatically copies and pastes the formula in each cell, and let go, as shown in Figure \@ref(fig:drag-calculation).
 
-- = A2 + B2 + C2
+(ref:drag-calculation) Click on the bottom-right dot to transform your cursor into a crosshair, then drag to paste the formula, as shown in this [animated GIF](https://handsondataviz.org/images/02-spreadsheet/drag-calculation.gif).
 
-#### Write formulas with built-in functions {-}
-TODO: rewrite to show how this is same as above
-
-- = Sum(A2:C2)
-
-TODO: rewrite to show common numerical and textual functions
-
-- = Average(A2:C2)
-
-#### Copy and paste, or drag formulas {-}
-If you've inserted a formula into one row, how can you quickly do the same calculation across all rows?
-
-Spreadsheets can magically automate calculations across rows or columns. In most cases, you can copy and paste a formula into new cells. Sometimes you can click-and-drag the lower-right corner of a formula cell (which may appear as a cross-hair) to automate calculations.
-
-```{r spreadsheet-formula}
-if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/SpreadsheetFormula640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+```{r drag-calculation, fig.cap="(ref:drag-calculation)"}
+if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/drag-calculation.gif", height = "300px") else knitr::include_graphics("images/02-spreadsheet/drag-calculation.png")
 ```
 
-#### Copy and Paste > Special > Values to replace formulas with data {-}
-After inserting calculations in a spreadsheet, sometimes dynamic formulas must be replaced with static data before the results can be visualized. One solution is to select and copy a column (or the entire sheet), then paste > special > values to replace the formula with numerical results.
+5. We can use another built-in function to calculate the average number of reported cases for each nation over time. Click in cell K2 and type in `=AVERAGE(B2:J2)` or select it if the tool suggests it. Then click the right-corner dot in cell K2 and drag downward to extend the calculation for the other rows.
 
-```{r spreadsheet-paste-special}
-if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/SpreadsheetPasteSpecialValues640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+Tip: Spreadsheet tools ignore empty cells when performing calculations. In this example, the World Health Organization did not list any data for the US in 2018.
+
+Warning: When you save a spreadsheet in CSV format, your calculated results will remain, but any formulas that created those results will disappear from the CSV sheet. Keep the original in a spreadsheet format as a reminder about how you constructed the formulas.
+
+Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text. See more examples in the "Split data into two or more columns" and "Combine columns into one" sections in [Chapter 4: Clean Up Messy Data](clean.html). In the next section, you'll learn a more advanced spreadsheet method to regroup data with a pivot table.
+
+## Regroup Data with Pivot Tables {- #pivot}
+Pivot tables are another powerful feature built into spreadsheet tools to help you regroup or rearrange your data, hence the name "pivot." In this section we'll start with a sheet that contains an anonymous partial class roster for an online data visualization class we previously taught. Each row represents an individual student, including their birth year, gender, and country of origin. You'll learn how to "pivot" this individual-level data into a new sheet that cross-tabulates the number of students by birth year and gender.
+
+1. Open this [Google Sheet of Sample Students](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA), log into your Google Drive, and go to *File > Make a Copy* to edit your own version.
+
+2. Go to *Data > Pivot Table*, and on the next screen, select *Create* in a new sheet, as shown in Figure \@ref(fig:sheets-pivot-create).
+
+(ref:sheets-pivot-create) Go to *Data > Pivot Table*, and create in a new sheet.
+
+```{r sheets-pivot-create, fig.cap="(ref:sheets-pivot-create)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-pivot-create.png")
 ```
 
-Remember that if you need to check or run the calculations again at a later point, click (or right-click) the tab to save a copy to the spreadsheet as a backup.
+3. In the *Pivot table editor* screen, you can regroup data from the first sheet by adding rows, columns, and values. First, click the Rows *Add* button and select *year*, which shows each of the unique entries for birth year in column A.
 
-#### Create a column of consecutive numbers {-}
-To quickly create a column of consecutive numbers, such as unique ID numbers, in most spreadsheet tools:
+4. Next, to count the number of students for each birth year, click the Values *Add* button and select *year* again. Initially, the pivot table will summarize by adding up the total of all birth years, but you don't want that. Instead, change the *Summarize by* drop-down menu to *COUNT*, which shows the frequency for each row, as shown in Figure \@ref(fig:sheets-pivot-editor).
 
-- Insert the number 1 into a cell and press Return
-- Click the cell and float the cursor over the bottom-right corner, where it will change into a cross-hair symbol
-- On a Mac, hold down the Option key and drag the cross-hair down to create consecutive numbers
-- **TO DO** insert equivalent commands for Windows, Chromebook
+(ref:sheets-pivot-editor) In the Google Sheets pivot editor, add *year* as a Row, and add *year* again as a Value, but change *Summarize by* to *Count*, as shown in this [animated GIF](https://handsondataviz.org/images/02-spreadsheet/sheets-pivot-editor.gif).
 
-```{r excel-drag-consec}
-if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/excel-drag-consec.gif") else knitr::include_graphics("images/placeholder.jpg")
+```{r sheets-pivot-editor, fig.cap="(ref:sheets-pivot-editor)"}
+if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-pivot-editor.gif", height = "1080px") else knitr::include_graphics("images/02-spreadsheet/sheets-pivot-editor.png")
 ```
 
-## Group Data with Pivot Tables {- #pivot}
-Here's a common problem: You open a large spreadsheet with many rows of data, such as a list of students. Your goal is to count students by categories, such as the number of students by each year of birth.  What's the most efficient way to do this?
+Tip: *COUNT* summarizes numerical values, and *COUNTA* summarizes text values.
 
-![Screenshot: Long spreadsheet of student data](images/02-spreadsheet/spreadsheet-pivot-intro.png)
+5. You can create more advanced pivot tables by adding a *Column* header, such as *gender*, to display a cross-tabulation of students by birth year and gender. Furthermore, you can also *Filter* the data, for example, to show only students who listed *US* as their country of origin.
 
-A solution: Create a pivot table to aggregate (or group together) and summarize data in another spreadsheet tab.
+While pivot tables may look a bit different across other spreadsheet tools, the concept is similar. Learn more about how pivot tables work in the [support pages for LibreOffice](https://help.libreoffice.org/Calc/Creating_Pivot_Tables) and [Microsoft Excel](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576). Click to download and save this [sample student data in CSV format](https://handsondataviz.org/data/sample-students.csv) to your computer to upload into either tool.
 
-![Screenshot: Pivot table of count by year of birth](images/02-spreadsheet/spreadsheet-google-pivot-year.png)
-
-While pivot tables may look different across spreadsheet tools, the concept is the same.
-
-#### Video with step-by-step tutorial for Google Sheets {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3sK7-g0otGM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-1) Click this link and Save to download to your computer: [sample-students in CSV format](data/sample-students.csv). CSV means comma-separated values, a generic spreadsheet format that most tools can easily open.
-
-2) Sign into [Google Drive](http://drive.google.com) (requires free account) and drag-and-drop the sample CSV file to instantly upload. Before you do this, make sure your Settings (gear symbol) is set to Convert Uploads to Google Docs editor format (the default setting).
-
-3) Shift-click to select all columns that you wish to pivot.
-
-4) Select Data > Pivot Table..., which opens a new spreadsheet tab.
-
-5) In Report Editor, select Rows > Add Field > Year to list all entries in order.
-
-6) In Report Editor, select Values > Add Field > Year to summarize all values for each entry.
-
-7) Change Summarize by SUM to Summarize by COUNTA (to count alphabetical or numerical entries), or COUNT (to count only numeric values).
-
-#### More Advanced Pivot Table with Google Sheets {-}
-In addition to grouping by rows, you can create more advanced pivot tables by grouping by columns and filtering results. For example, the pivot table shown below shows rows by birth year, columns by gender (blank, female, male, other), and filters results to show only 18 students from one country: US.
-
-![Screenshot: Advanced pivot table by year of birth and gender for US](images/02-spreadsheet/spreadsheet-pivot-google-advanced.png)
-
-#### Learn More {-}
-- Google, Create and Use Pivot Tables Help Page https://support.google.com/docs/answer/1272898
-- LibreOffice, Creating Pivot Tables Help Page https://help.libreoffice.org/Calc/Creating_Pivot_Tables
-- Andrew Ba Tran, "Tutorial: How to Make Pivot Tables in Google Sheets," TrendCT, September 4, 2015, http://trendct.org/2015/09/04/tutorial-how-to-make-pivot-tables-in-google-sheets
+Now that you've learned how to regroup data with pivot tables, let's move on to another common task of matching data columns from different sheets.
 
 ## Match Columns with VLOOKUP {- #vlookup}
-Here's a common problem: Sheet 1 contains a long roster of students enrolled in our *Data Visualization For All* course, with a two-letter code for their nation. Sheet 2 contains the list of codes for each nation. How can we quickly match up this information in one sheet, so that each row contains the nation for each student?
+Spreadsheet tools also allow you to "look up" matching data from one sheet and automatically paste it into another sheet, using the "VLOOKUP" function. The "V" stands for "vertical" lookup, which means making matches across columns, the most typical way to lookup data. In this section you'll learn how to write a function in one sheet that looks for matching data in a second sheet, and pastes it into a new column in the first sheet.
 
-![Screenshot: Problem - How to match columns in two sheets?](images/02-spreadsheet/vlookup-problem.png)
+Here's a common problem where "VLOOKUP" can save you lots of time. Imagine two spreadsheets. The first sheet, which we saw in the previous section, contains a list of students enrolled in a class, where each row includes a two-letter code for their country of origin. But some abbreviations may not be familiar to everyone. A second sheet contains a list of all of the two-letter abbreviated codes, plus the full name of each country, as shown in Figure \@ref(fig:vlookup-setup). Your goal is to "lookup" each student's two-letter code in the second sheet, and paste the full name of each country for each row in the first sheet. Doing this manually would require lots of your time, but learning how to use the VLOOKUP function will do the work for you automatically.
 
-One solution: Spreadsheets contain a VLOOKUP function, which "looks up" data across two or more vertical columns, and automatically fills in matching entries. This tutorial demonstrates how to set up this calculation in Google Sheets and Excel
+(ref:vlookup-setup) The problem: match each two-letter code in the left sheet with the full country name in the right sheet.
 
-![Screenshot: Solution - Use the VLookup function](images/02-spreadsheet/vlookup-solution.png)
+```{r vlookup-setup, fig.cap="(ref:vlookup-setup)"}
+ knitr::include_graphics("images/02-spreadsheet/vlookup-setup.png")
+```
 
-#### Video with step-by-step tutorial for Google Sheets {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qrzKzts3mV0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+1. In one browser tab, open this [Google Sheet of Sample Students](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA). In another tab, open this [Google Sheet of Country Codes 2-letter](https://docs.google.com/spreadsheets/d/1iuImHkn2Aotf-0g6pcKv6e65QLWICjVHNUrcGfPxQNE). Log into your Google Drive, and go to *File > Make a Copy* to create your own version of both sheets, so that you can edit them.
 
-1) Click this link and Save to download to your computer: [sample-students-nations in .ODS format](data/sample-students-nations.ods). ODS means OpenDocument System, a generic multi-tab format that most spreadsheet tools can easily open.
+2. Let's simplify this two-file problem by copying all of the data into one Google Sheet. Go to the Country Codes sheet, select the *countries* tab, and go to *Copy to > Existing spreadsheet*, and select *Sample Students,* as shown in Figure \@ref(fig:vlookup-copy). Go back to the *Sample Students* sheet and you'll see a new tab named *Copy of countries*.
 
-2) To upload the downloaded file to Google Sheets, see the [Upload Files and Convert tutorial](upload) in this book, and remember that Settings (gear symbol) must be set to Convert files to Google format. Or, open the file with Microsoft Excel or LibreOffice, and the directions below will be similar.
+(ref:vlookup-copy) Copy the *countries* data into the existing *Sample Students* sheet.
 
-2) In the students sheet, type "nation" as a column header into cell E1.
+```{r vlookup-copy, fig.cap="(ref:vlookup-copy)"}
+ knitr::include_graphics("images/02-spreadsheet/vlookup-copy.png")
+```
 
-3) Click in cell E2, start typing "=VLOOKUP" and the spreadsheet tool will suggest that you complete the formula in this format:
+3. In the Sample Students sheet, in the *students* tab, click in cell E1 and type `country name.` This creates a new column header where lookup results will be automatically pasted.
 
-```markdown
+3. Click in cell E2 and type `=VLOOKUP` and Google Sheets will suggest that you complete the full formula in this format:
+
+```
 VLOOKUP(search_key, range, index, [is_sorted])
 ```
-  - search_key = the Sheet 1 cell we are trying to match
-  - range = the columns in Sheet 2 where matches may exist
-  - index = the column in the Sheet 2 range that contains the desired result, where 1 = first column, 2 = second column, etc.
-  - [is_sorted] = if the first column of the range is sorted, enter "true" to find the closest match; otherwise enter "false" to return exact matches only
 
-4) You can type in the formula, or fill it out by clicking on cells, columns, and sheets as shown in the video above.
+Here's what each part means:
 
-## Collect and Share Data with Google Forms {- #forms}
+- search_key = The cell in Sheet 1 you wish to match.
+- range = At least two columns in Sheet 2 to search for your match and desired result.
+- index = The column in the Sheet 2 range that contains your desired result, where 1 = first column, 2 = second column, etc.
+- [is_sorted] = Enter `false` to find exact matches only, which makes sense in this case. Otherwise, enter `true` if the first column of the Sheet 2 range is sorted and you will accept the closest match, even if not an exact one.
 
-TODO: write simple tutorial for Google Forms and explain how to share the spreadsheet; also mention other web form services
+4. Type in the full VLOOKUP formula or click on the relevant cells and columns to automatically enter it. Your formula should look similar to `=VLOOKUP(D2,'Copy of countries'!A:B,2,false)`, as shown in Figure \@ref(fig:vlookup-solution), but may differ if you have different tab names.
+
+(ref:vlookup-solution) Your VLOOKUP formula should look similar to this, depending on your tab names.
+
+```{r vlookup-solution, fig.cap="(ref:vlookup-solution)"}
+ knitr::include_graphics("images/02-spreadsheet/vlookup-solution.png")
+```
+
+Let's break down each part of that formula, separated by commas:
+
+- D2 = The search_key, the cell you want to match in the *students* tab.
+- *'Copy of countries'!A:B* = The range, meaning you are searching for matches and results in all of columns A and B in the *Copy of countries* tab.
+- 2 = The index, meaning your desired result appears in the 2nd column of the range above.
+- *false* = Display exact matches only.
+
+5. After you enter the full VLOOKUP formula, press *Enter* on your keyboard, and the result should display an exact match, if found. In this example, the student with country code `KR` should also display its full country name, `Korea, Republic of`. Float your cursor over the dot in the bottom-right corner of that cell to drag down the results.
+
+While we used Google Sheets to demonstrate how to "lookup" matching data in another spreadsheet column, the
+
+Now that you understand how to use the VLOOKUP function to match columns data columns across spreadsheets, the next section will introduce you to the concept of a relational database, and when you might want to use one.
 
 ## Connect Sheets with Relational Database {- #database}
+In the previous section, you learned how the VLOOKUP function can search for matching data in columns across spreadsheets and automatically paste results. Building on that concept, let's distinguish between a spreadsheet and a relational database, and in what cases you might want to use the latter.
 
-TODO: add introduction to relational database section, with AirTable
+A spreadsheet is sometimes called a "flat-file database" because all of the records are stored in rows and columns in a single table. For example, if your company kept track of all of your orders and customers in a spreadsheet, the entries would appear like this:
+
+```
+Order   Customer    Location
+1       Janice      New York
+2       Jean        Seattle
+3       Jim         Dallas
+4       Joe         Los Angeles
+5       Julius      Chicago
+6       Janice      New York
+7       Julius      Chicago
+```
+
+In a spreadsheet, every time a customer placed an order, their location would need to be entered separately, which would mean lots of duplicated information. Also, updates would requiring changing the same information in multiple places in your spreadsheet.
+
+By contrast, if your company used a relational database, you would maintain two tables---one for orders and one for customers---with links between them, like this:
+
+```
+Order       Customer
+1           Janice  
+2           Jean
+3           Jim
+4           Joe    
+5           Julius
+6           Janice
+7           Julius
+
+
+Customer    Location
+Janice      New York
+Jean        Seattle
+Jim         Dallas
+Joe         Los Angeles
+Julius      Chicago
+```
+
+When someone's address changed, in a relational database it would only need to be updated in one place---the customer table---and only one time. Also, by separating data into different tables, it would be easier to add up your total customers without counting duplicates.
+
+If you're responsible for managing data tables with relationships between them, especially one-to-many relationships (such as where Janice and Julius each place multiple orders), consider the pros and cons of working with a relational database. Years ago, relational databases required complex software that was not easy to set up. But a newer generation of tools such as [AirTable](http://airtable.com) enable you to create relational databases in your web browser with up to 1,200 free records (and more with the paid version), using existing templates (or design your own), and collaborative editing with your co-workers. Furthermore, Airtable supports data migration by allowing you to export all of your records in CSV format.
+
+While the details of setting up a relational database are beyond the scope of this chapter, it's important to understand the conceptual difference between a "flat-file" spreadsheet and a collection of data tables with linked relationships. In the next section, we'll describe how to collect data using online forms, a feature found in Google Sheets, Airtable, and several other tools.
+
+## Collect Data with Online Forms {- #forms}
+No doubt, everyone with an email address has been asked to fill out at least one online form. We promise *not* to send you another! But if you need to collect simple data from people who communicate digitally with you, sometimes the easiest solution is to send them an online form that compiles their responses in a data table, which can be much faster than re-entering information from paper forms.
+
+If you already have a Google Drive account, one tool that many people overlook is Google Forms, which is partially hidden under *New > More > Google Forms*, as shown in Figure \@ref(fig:forms-new).
+
+(ref:forms-new) The Google Forms tool is partially hidden in the Google Drive *New > More* menu.
+
+```{r forms-new, fig.cap="(ref:forms-new)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-new.png")
+```
+
+The Google Forms *Questions* tab allows you to request different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure \@ref(fig:forms-questions). Click the *Preview* (eyeball) button to see how your form will appear to users, then click the *Send* button to distribute via email, a link, or an iframe. You can learn more about how to use the latter in [Chapter 7: Embed On Your Web](embed.html).
+
+(ref:forms-questions) The Google Forms *Questions* tab allows you to request different types of responses.
+
+```{r forms-questions, fig.cap="(ref:forms-questions)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-questions.png")
+```
+
+The Google Forms *Responses* tab includes a button to open answers you receive in a linked Google Sheet, as shown in Figure \@ref(fig:forms-responses). As you've learned in this chapter, data becomes more powerful when you can share, organize, and analyze it using spreadsheet tools to help reveal and tell its underlying stories.
+
+(ref:forms-responses) The Google Forms *Responses* tab includes a button to open answers in a linked Google Sheet.
+
+```{r forms-responses, fig.cap="(ref:forms-responses)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-responses.png")
+```
 
 **Summary**
+If you're one of the many people who "never really learned" about spreadsheets in school or on the job, or if you've taught yourself bits and pieces along the way, we hope that this chapter has successfully introduced or refreshed your skills. All of the subsequent chapters in this book, especially those on designing interactive charts and maps, require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, as well as more advanced skills in pivoting tables and matching with lookup tables, with the broader goal of telling your data stories.
 
-TODO: write summary
-
-Also refer to more additional spreadsheet skills elsewhere in the book.
-[Chapter 4: Clean Up Messy Data](clean.html) shows how to find and replace, split data into columns, and combine columns of data.
-[Chapter 11: Transform Your Map Data](transform.html) shows how to geocode addresses, pivoting address points into polygons, and normalize data.
+The next chapter describes strategies for finding data, particularly on open data sites operated by governmental and non-profit organizations, where you'll also need spreadsheet skills to download information in an organized way. See additional spreadsheet skills in later chapters of the book. [Chapter 4: Clean Up Messy Data](clean.html) demonstrates how to find and replace, split data into columns, and combine columns of data (such as when you need the street address, city, and postal code all in one line). [Chapter 11: Transform Your Map Data](transform.html) also features more advanced spreadsheet skills and tools, such as how to geocode addresses, pivot address points into polygons, and how to normalize data to create more meaningful polygon maps.

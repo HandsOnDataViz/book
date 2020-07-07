@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-03" />
+<meta name="date" content="2020-07-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="forms.html"/>
-<link rel="next" href="find.html"/>
+<link rel="prev" href="vlookup.html"/>
+<link rel="next" href="forms.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -166,10 +166,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
-<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Group Data with Pivot Tables</a></li>
+<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
-<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
 <li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with Relational Database</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Online Forms</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
@@ -299,22 +299,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="database" class="section level2 unnumbered" number="">
 <h2>Connect Sheets with Relational Database</h2>
-<p>TODO: add introduction to relational database section, with AirTable</p>
-<p><strong>Summary</strong></p>
-<p>TODO: write summary</p>
-<p>Also refer to more additional spreadsheet skills elsewhere in the book.
-<a href="clean.html">Chapter 4: Clean Up Messy Data</a> shows how to find and replace, split data into columns, and combine columns of data.
-<a href="transform.html">Chapter 11: Transform Your Map Data</a> shows how to geocode addresses, pivoting address points into polygons, and normalize data.</p>
+<p>In the previous section, you learned how the VLOOKUP function can search for matching data in columns across spreadsheets and automatically paste results. Building on that concept, let’s distinguish between a spreadsheet and a relational database, and in what cases you might want to use the latter.</p>
+<p>A spreadsheet is sometimes called a “flat-file database” because all of the records are stored in rows and columns in a single table. For example, if your company kept track of all of your orders and customers in a spreadsheet, the entries would appear like this:</p>
+<pre><code>Order   Customer    Location
+1       Janice      New York
+2       Jean        Seattle
+3       Jim         Dallas
+4       Joe         Los Angeles
+5       Julius      Chicago
+6       Janice      New York
+7       Julius      Chicago</code></pre>
+<p>In a spreadsheet, every time a customer placed an order, their location would need to be entered separately, which would mean lots of duplicated information. Also, updates would requiring changing the same information in multiple places in your spreadsheet.</p>
+<p>By contrast, if your company used a relational database, you would maintain two tables—one for orders and one for customers—with links between them, like this:</p>
+<pre><code>Order       Customer
+1           Janice  
+2           Jean
+3           Jim
+4           Joe    
+5           Julius
+6           Janice
+7           Julius
 
+
+Customer    Location
+Janice      New York
+Jean        Seattle
+Jim         Dallas
+Joe         Los Angeles
+Julius      Chicago</code></pre>
+<p>When someone’s address changed, in a relational database it would only need to be updated in one place—the customer table—and only one time. Also, by separating data into different tables, it would be easier to add up your total customers without counting duplicates.</p>
+<p>If you’re responsible for managing data tables with relationships between them, especially one-to-many relationships (such as where Janice and Julius each place multiple orders), consider the pros and cons of working with a relational database. Years ago, relational databases required complex software that was not easy to set up. But a newer generation of tools such as <a href="http://airtable.com">AirTable</a> enable you to create relational databases in your web browser with up to 1,200 free records (and more with the paid version), using existing templates (or design your own), and collaborative editing with your co-workers. Furthermore, Airtable supports data migration by allowing you to export all of your records in CSV format.</p>
+<p>While the details of setting up a relational database are beyond the scope of this chapter, it’s important to understand the conceptual difference between a “flat-file” spreadsheet and a collection of data tables with linked relationships. In the next section, we’ll describe how to collect data using online forms, a feature found in Google Sheets, Airtable, and several other tools.</p>
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="forms.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="find.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="vlookup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="forms.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

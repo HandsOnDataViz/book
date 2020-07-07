@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 03 Jul 2020
+updated on: 07 Jul 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -593,13 +593,18 @@ each box in the grid is called a “cell.” In this chapter, we’ll start by
 reviewing basic steps, such as [sharing data](share.html), [sorting and
 filtering](sort.html), and [calculating with formulas and
 functions](calculate.html). Then we’ll step up to the next level of
-skills, such as [grouping data with pivot tables](pivot.html), [matching
-columns with lookup tables](vlookup.html), [collecting data with online
-forms](forms.html), and [connecting sheets with a relational
-database](database.html). Even if you *think* you know how to use
-spreadsheets, skim through these sections and you’ll probably learn a
-few things that will help you to create better charts and maps later in
-the book.
+skills, such as [regrouping data with pivot tables](pivot.html),
+[matching columns with lookup tables](vlookup.html), [connecting sheets
+with a relational database](database.html), and [collecting data with
+online forms](forms.html). All of the methods we illustrate are intended
+for introductory users, and do not require any background in statistics.
+
+If you can add up numbers—or better said, if you want your computer to
+add up numbers and do even more work for you—then this chapter is right
+for you. Even if you *think* you know something about using
+spreadsheets, skim these sections and you might learn a trick or two
+that will help you to design charts and maps more efficiently in later
+chapters.
 
 About spreadsheet tools:
 
@@ -985,9 +990,9 @@ Let’s use a large sample file to learn how to sort and filter data.
     data](https://docs.google.com/spreadsheets/d/1WvEa46w8en5uWiMX7Jq6o02Q--wMHN2jGFOjD4sr73A/).
     It contains over 13,000 rows of data for inspections conducted in
     January 2020, where each row is a health violation. This is just a
-    fraction of the full dataset. See the [NYC Open Data
-    source](https://nycopendata.socrata.com/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j)
-    for more info.
+    fraction of the full dataset available from the original source,
+    [NYC Open
+    Data](https://nycopendata.socrata.com/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j).
 
 2.  Login to your Google Sheets account, and go to *File &gt; Make a
     Copy* to create your own version that you can edit.
@@ -1044,225 +1049,398 @@ key details in your data. Where should we *not* go out for lunch?
 Calculate with Formulas and Functions
 -------------------------------------
 
-**TODO: START AGAIN HERE**
+Spreadsheet tools can save you lots of time when you insert simple
+formulas and functions to automatically perform calculations across
+entire rows and columns of data. In this section you’ll learn how to
+write a simple formula that adds up a column of numbers, then you’ll
+insert built-in functions to show the sum and average.
 
--   when possible, start text by posing a common problem, and how this
-    method can solve it
--   redo visuals: Google Sheets with better examples
--   see other notes inserted below
+1.  Open this Google Sheet of [Measles cases in three nations
+    2010-18](https://docs.google.com/spreadsheets/d/15Q16jcgoIcoQ-UkAJ3nfQpU-4d_Hk6tJqEYoobmnxY0/),
+    a subset of [data from the World Health
+    Organization](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/measles---number-of-reported-cases).
+    Log into your Google Drive account, and go to *File &gt; Make a
+    Copy* to edit your own version.
 
-Simple formulas can save you lots of time. The big advantage of
-spreadsheet tools is the ability to insert simple formulas to calculate
-numbers, or combine columns of text, for entire rows and columns.
+2.  Let’s calculate the total number of reported cases in 2010 by
+    inserting a simple formula that adds up the cells for Canada,
+    Mexico, and the US that year. Spreadsheet formulas begin with an `=`
+    equal sign, and refer to specific cells and operations. Click on
+    cell B5 and type in `= B2 + B3 + B4` then press *Return* or *Enter*.
+    A total of 162 cases in 2010 will appear in the cell where you
+    entered the formula.
 
-#### Write a simple formula
+3.  Now let’s speed up our work using the built-in `SUM` function to
+    total up numbers for us. Click on column C5 and type in
+    `=SUM(C2:C4)`, which calculates the sum of all of the cells between
+    C2 and C4. then press *Return*. A total of 1,026 cases in 2011 will
+    appear.
 
-In most spreadsheets, begin writing a simple formula with an equal sign,
-and refer to specific cells and functions, such as:
+4.  Now let’s speed up our work even more by using the built-in
+    click-and-drag tool to extend the `SUM` calculation across the row
+    for each remaining year. Click in cell C5, and float your cursor
+    over the dot in the bottom-right corner, which transforms your
+    cursor into a crosshair symbol. Then click-and-drag your crosshair
+    cursor from cell C5 to J5, which automatically copies and pastes the
+    formula in each cell, and let go, as shown in Figure
+    <a href="#fig:drag-calculation">15</a>.
 
--   = A2 + B2 + C2
-
-#### Write formulas with built-in functions
-
-TODO: rewrite to show how this is same as above
-
--   = Sum(A2:C2)
-
-TODO: rewrite to show common numerical and textual functions
-
--   = Average(A2:C2)
-
-#### Copy and paste, or drag formulas
-
-If you’ve inserted a formula into one row, how can you quickly do the
-same calculation across all rows?
-
-Spreadsheets can magically automate calculations across rows or columns.
-In most cases, you can copy and paste a formula into new cells.
-Sometimes you can click-and-drag the lower-right corner of a formula
-cell (which may appear as a cross-hair) to automate calculations.
-
-<iframe src="images/02-spreadsheet/SpreadsheetFormula640w.gif" width="100%" height="400px">
+<iframe src="images/02-spreadsheet/drag-calculation.gif" width="100%" height="300px">
 </iframe>
+<p class="caption">
+Figure 15: Click on the bottom-right dot to transform your cursor into a
+crosshair, then drag to paste the formula, as shown in this [animated
+GIF](https://handsondataviz.org/images/02-spreadsheet/drag-calculation.gif).
+</p>
 
-#### Copy and Paste &gt; Special &gt; Values to replace formulas with data
+1.  We can use another built-in function to calculate the average number
+    of reported cases for each nation over time. Click in cell K2 and
+    type in `=AVERAGE(B2:J2)` or select it if the tool suggests it. Then
+    click the right-corner dot in cell K2 and drag downward to extend
+    the calculation for the other rows.
 
-After inserting calculations in a spreadsheet, sometimes dynamic
-formulas must be replaced with static data before the results can be
-visualized. One solution is to select and copy a column (or the entire
-sheet), then paste &gt; special &gt; values to replace the formula with
-numerical results.
+Tip: Spreadsheet tools ignore empty cells when performing calculations.
+In this example, the World Health Organization did not list any data for
+the US in 2018.
 
-<iframe src="images/02-spreadsheet/SpreadsheetPasteSpecialValues640w.gif" width="100%" height="400px">
+Warning: When you save a spreadsheet in CSV format, your calculated
+results will remain, but any formulas that created those results will
+disappear from the CSV sheet. Keep the original in a spreadsheet format
+as a reminder about how you constructed the formulas.
+
+Spreadsheet tools contain many more functions to perform numerical
+calculations and also to modify text. See more examples in the “Split
+data into two or more columns” and “Combine columns into one” sections
+in [Chapter 4: Clean Up Messy Data](clean.html). In the next section,
+you’ll learn a more advanced spreadsheet method to regroup data with a
+pivot table.
+
+Regroup Data with Pivot Tables
+------------------------------
+
+Pivot tables are another powerful feature built into spreadsheet tools
+to help you regroup or rearrange your data, hence the name “pivot.” In
+this section we’ll start with a sheet that contains an anonymous partial
+class roster for an online data visualization class we previously
+taught. Each row represents an individual student, including their birth
+year, gender, and country of origin. You’ll learn how to “pivot” this
+individual-level data into a new sheet that cross-tabulates the number
+of students by birth year and gender.
+
+1.  Open this [Google Sheet of Sample
+    Students](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA),
+    log into your Google Drive, and go to *File &gt; Make a Copy* to
+    edit your own version.
+
+2.  Go to *Data &gt; Pivot Table*, and on the next screen, select
+    *Create* in a new sheet, as shown in Figure
+    <a href="#fig:sheets-pivot-create">16</a>.
+
+<img src="images/02-spreadsheet/sheets-pivot-create.png" alt="Go to *Data >
+Pivot Table\*, and create in a new sheet." /&gt;
+<p class="caption">
+Figure 16: Go to *Data &gt; Pivot Table*, and create in a new sheet.
+</p>
+
+1.  In the *Pivot table editor* screen, you can regroup data from the
+    first sheet by adding rows, columns, and values. First, click the
+    Rows *Add* button and select *year*, which shows each of the unique
+    entries for birth year in column A.
+
+2.  Next, to count the number of students for each birth year, click the
+    Values *Add* button and select *year* again. Initially, the pivot
+    table will summarize by adding up the total of all birth years, but
+    you don’t want that. Instead, change the *Summarize by* drop-down
+    menu to *COUNT*, which shows the frequency for each row, as shown in
+    Figure <a href="#fig:sheets-pivot-editor">17</a>.
+
+<iframe src="images/02-spreadsheet/sheets-pivot-editor.gif" width="100%" height="1080px">
 </iframe>
+<p class="caption">
+Figure 17: In the Google Sheets pivot editor, add *year* as a Row, and
+add *year* again as a Value, but change *Summarize by* to *Count*, as
+shown in this [animated
+GIF](https://handsondataviz.org/images/02-spreadsheet/sheets-pivot-editor.gif).
+</p>
 
-Remember that if you need to check or run the calculations again at a
-later point, click (or right-click) the tab to save a copy to the
-spreadsheet as a backup.
+Tip: *COUNT* summarizes numerical values, and *COUNTA* summarizes text
+values.
 
-#### Create a column of consecutive numbers
+1.  You can create more advanced pivot tables by adding a *Column*
+    header, such as *gender*, to display a cross-tabulation of students
+    by birth year and gender. Furthermore, you can also *Filter* the
+    data, for example, to show only students who listed *US* as their
+    country of origin.
 
-To quickly create a column of consecutive numbers, such as unique ID
-numbers, in most spreadsheet tools:
+While pivot tables may look a bit different across other spreadsheet
+tools, the concept is similar. Learn more about how pivot tables work in
+the [support pages for
+LibreOffice](https://help.libreoffice.org/Calc/Creating_Pivot_Tables)
+and [Microsoft
+Excel](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576).
+Click to download and save this [sample student data in CSV
+format](https://handsondataviz.org/data/sample-students.csv) to your
+computer to upload into either tool.
 
--   Insert the number 1 into a cell and press Return
--   Click the cell and float the cursor over the bottom-right corner,
-    where it will change into a cross-hair symbol
--   On a Mac, hold down the Option key and drag the cross-hair down to
-    create consecutive numbers
--   **TO DO** insert equivalent commands for Windows, Chromebook
-
-<iframe src="images/02-spreadsheet/excel-drag-consec.gif" width="100%" height="400px">
-</iframe>
-
-Group Data with Pivot Tables
-----------------------------
-
-Here’s a common problem: You open a large spreadsheet with many rows of
-data, such as a list of students. Your goal is to count students by
-categories, such as the number of students by each year of birth. What’s
-the most efficient way to do this?
-
-![Screenshot: Long spreadsheet of student
-data](images/02-spreadsheet/spreadsheet-pivot-intro.png)
-
-A solution: Create a pivot table to aggregate (or group together) and
-summarize data in another spreadsheet tab.
-
-![Screenshot: Pivot table of count by year of
-birth](images/02-spreadsheet/spreadsheet-google-pivot-year.png)
-
-While pivot tables may look different across spreadsheet tools, the
-concept is the same.
-
-#### Video with step-by-step tutorial for Google Sheets
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3sK7-g0otGM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
-
-1.  Click this link and Save to download to your computer:
-    [sample-students in CSV format](data/sample-students.csv). CSV means
-    comma-separated values, a generic spreadsheet format that most tools
-    can easily open.
-
-2.  Sign into [Google Drive](http://drive.google.com) (requires free
-    account) and drag-and-drop the sample CSV file to instantly upload.
-    Before you do this, make sure your Settings (gear symbol) is set to
-    Convert Uploads to Google Docs editor format (the default setting).
-
-3.  Shift-click to select all columns that you wish to pivot.
-
-4.  Select Data &gt; Pivot Table…, which opens a new spreadsheet tab.
-
-5.  In Report Editor, select Rows &gt; Add Field &gt; Year to list all
-    entries in order.
-
-6.  In Report Editor, select Values &gt; Add Field &gt; Year to
-    summarize all values for each entry.
-
-7.  Change Summarize by SUM to Summarize by COUNTA (to count
-    alphabetical or numerical entries), or COUNT (to count only numeric
-    values).
-
-#### More Advanced Pivot Table with Google Sheets
-
-In addition to grouping by rows, you can create more advanced pivot
-tables by grouping by columns and filtering results. For example, the
-pivot table shown below shows rows by birth year, columns by gender
-(blank, female, male, other), and filters results to show only 18
-students from one country: US.
-
-![Screenshot: Advanced pivot table by year of birth and gender for
-US](images/02-spreadsheet/spreadsheet-pivot-google-advanced.png)
-
-#### Learn More
-
--   Google, Create and Use Pivot Tables Help Page
-    <a href="https://support.google.com/docs/answer/1272898" class="uri">https://support.google.com/docs/answer/1272898</a>
--   LibreOffice, Creating Pivot Tables Help Page
-    <a href="https://help.libreoffice.org/Calc/Creating_Pivot_Tables" class="uri">https://help.libreoffice.org/Calc/Creating_Pivot_Tables</a>
--   Andrew Ba Tran, “Tutorial: How to Make Pivot Tables in Google
-    Sheets,” TrendCT, September 4, 2015,
-    <a href="http://trendct.org/2015/09/04/tutorial-how-to-make-pivot-tables-in-google-sheets" class="uri">http://trendct.org/2015/09/04/tutorial-how-to-make-pivot-tables-in-google-sheets</a>
+Now that you’ve learned how to regroup data with pivot tables, let’s
+move on to another common task of matching data columns from different
+sheets.
 
 Match Columns with VLOOKUP
 --------------------------
 
-Here’s a common problem: Sheet 1 contains a long roster of students
-enrolled in our *Data Visualization For All* course, with a two-letter
-code for their nation. Sheet 2 contains the list of codes for each
-nation. How can we quickly match up this information in one sheet, so
-that each row contains the nation for each student?
+Spreadsheet tools also allow you to “look up” matching data from one
+sheet and automatically paste it into another sheet, using the “VLOOKUP”
+function. The “V” stands for “vertical” lookup, which means making
+matches across columns, the most typical way to lookup data. In this
+section you’ll learn how to write a function in one sheet that looks for
+matching data in a second sheet, and pastes it into a new column in the
+first sheet.
 
-![Screenshot: Problem - How to match columns in two
-sheets?](images/02-spreadsheet/vlookup-problem.png)
+Here’s a common problem where “VLOOKUP” can save you lots of time.
+Imagine two spreadsheets. The first sheet, which we saw in the previous
+section, contains a list of students enrolled in a class, where each row
+includes a two-letter code for their country of origin. But some
+abbreviations may not be familiar to everyone. A second sheet contains a
+list of all of the two-letter abbreviated codes, plus the full name of
+each country, as shown in Figure <a href="#fig:vlookup-setup">18</a>.
+Your goal is to “lookup” each student’s two-letter code in the second
+sheet, and paste the full name of each country for each row in the first
+sheet. Doing this manually would require lots of your time, but learning
+how to use the VLOOKUP function will do the work for you automatically.
 
-One solution: Spreadsheets contain a VLOOKUP function, which “looks up”
-data across two or more vertical columns, and automatically fills in
-matching entries. This tutorial demonstrates how to set up this
-calculation in Google Sheets and Excel
+<img src="images/02-spreadsheet/vlookup-setup.png" alt="The problem: match each two-letter code in the left sheet with the full country name in the right sheet."  />
+<p class="caption">
+Figure 18: The problem: match each two-letter code in the left sheet
+with the full country name in the right sheet.
+</p>
 
-![Screenshot: Solution - Use the VLookup
-function](images/02-spreadsheet/vlookup-solution.png)
+1.  In one browser tab, open this [Google Sheet of Sample
+    Students](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA).
+    In another tab, open this [Google Sheet of Country Codes
+    2-letter](https://docs.google.com/spreadsheets/d/1iuImHkn2Aotf-0g6pcKv6e65QLWICjVHNUrcGfPxQNE).
+    Log into your Google Drive, and go to *File &gt; Make a Copy* to
+    create your own version of both sheets, so that you can edit them.
 
-#### Video with step-by-step tutorial for Google Sheets
+2.  Let’s simplify this two-file problem by copying all of the data into
+    one Google Sheet. Go to the Country Codes sheet, select the
+    *countries* tab, and go to *Copy to &gt; Existing spreadsheet*, and
+    select *Sample Students,* as shown in Figure
+    <a href="#fig:vlookup-copy">19</a>. Go back to the *Sample Students*
+    sheet and you’ll see a new tab named *Copy of countries*.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qrzKzts3mV0?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+<img src="images/02-spreadsheet/vlookup-copy.png" alt="Copy the *countries* data into the existing *Sample Students* sheet."  />
+<p class="caption">
+Figure 19: Copy the *countries* data into the existing *Sample Students*
+sheet.
+</p>
 
-1.  Click this link and Save to download to your computer:
-    [sample-students-nations in .ODS
-    format](data/sample-students-nations.ods). ODS means OpenDocument
-    System, a generic multi-tab format that most spreadsheet tools can
-    easily open.
+1.  In the Sample Students sheet, in the *students* tab, click in cell
+    E1 and type `country name.` This creates a new column header where
+    lookup results will be automatically pasted.
 
-2.  To upload the downloaded file to Google Sheets, see the [Upload
-    Files and Convert tutorial](upload) in this book, and remember that
-    Settings (gear symbol) must be set to Convert files to Google
-    format. Or, open the file with Microsoft Excel or LibreOffice, and
-    the directions below will be similar.
-
-3.  In the students sheet, type “nation” as a column header into cell
-    E1.
-
-4.  Click in cell E2, start typing “=VLOOKUP” and the spreadsheet tool
-    will suggest that you complete the formula in this format:
+2.  Click in cell E2 and type `=VLOOKUP` and Google Sheets will suggest
+    that you complete the full formula in this format:
 
 <!-- -->
 
     VLOOKUP(search_key, range, index, [is_sorted])
 
--   search\_key = the Sheet 1 cell we are trying to match
--   range = the columns in Sheet 2 where matches may exist
--   index = the column in the Sheet 2 range that contains the desired
+Here’s what each part means:
+
+-   search\_key = The cell in Sheet 1 you wish to match.
+-   range = At least two columns in Sheet 2 to search for your match and
+    desired result.
+-   index = The column in the Sheet 2 range that contains your desired
     result, where 1 = first column, 2 = second column, etc.
--   \[is\_sorted\] = if the first column of the range is sorted, enter
-    “true” to find the closest match; otherwise enter “false” to return
-    exact matches only
+-   \[is\_sorted\] = Enter `false` to find exact matches only, which
+    makes sense in this case. Otherwise, enter `true` if the first
+    column of the Sheet 2 range is sorted and you will accept the
+    closest match, even if not an exact one.
 
-1.  You can type in the formula, or fill it out by clicking on cells,
-    columns, and sheets as shown in the video above.
+1.  Type in the full VLOOKUP formula or click on the relevant cells and
+    columns to automatically enter it. Your formula should look similar
+    to `=VLOOKUP(D2,'Copy of countries'!A:B,2,false)`, as shown in
+    Figure <a href="#fig:vlookup-solution">20</a>, but may differ if you
+    have different tab names.
 
-Collect and Share Data with Google Forms
-----------------------------------------
+<img src="images/02-spreadsheet/vlookup-solution.png" alt="Your VLOOKUP formula should look similar to this, depending on your tab names."  />
+<p class="caption">
+Figure 20: Your VLOOKUP formula should look similar to this, depending
+on your tab names.
+</p>
 
-TODO: write simple tutorial for Google Forms and explain how to share
-the spreadsheet; also mention other web form services
+Let’s break down each part of that formula, separated by commas:
+
+-   D2 = The search\_key, the cell you want to match in the *students*
+    tab.
+-   *‘Copy of countries’!A:B* = The range, meaning you are searching for
+    matches and results in all of columns A and B in the *Copy of
+    countries* tab.
+-   2 = The index, meaning your desired result appears in the 2nd column
+    of the range above.
+-   *false* = Display exact matches only.
+
+1.  After you enter the full VLOOKUP formula, press *Enter* on your
+    keyboard, and the result should display an exact match, if found. In
+    this example, the student with country code `KR` should also display
+    its full country name, `Korea, Republic of`. Float your cursor over
+    the dot in the bottom-right corner of that cell to drag down the
+    results.
+
+While we used Google Sheets to demonstrate how to “lookup” matching data
+in another spreadsheet column, the
+
+Now that you understand how to use the VLOOKUP function to match columns
+data columns across spreadsheets, the next section will introduce you to
+the concept of a relational database, and when you might want to use
+one.
 
 Connect Sheets with Relational Database
 ---------------------------------------
 
-TODO: add introduction to relational database section, with AirTable
+In the previous section, you learned how the VLOOKUP function can search
+for matching data in columns across spreadsheets and automatically paste
+results. Building on that concept, let’s distinguish between a
+spreadsheet and a relational database, and in what cases you might want
+to use the latter.
 
-**Summary**
+A spreadsheet is sometimes called a “flat-file database” because all of
+the records are stored in rows and columns in a single table. For
+example, if your company kept track of all of your orders and customers
+in a spreadsheet, the entries would appear like this:
 
-TODO: write summary
+    Order   Customer    Location
+    1       Janice      New York
+    2       Jean        Seattle
+    3       Jim         Dallas
+    4       Joe         Los Angeles
+    5       Julius      Chicago
+    6       Janice      New York
+    7       Julius      Chicago
 
-Also refer to more additional spreadsheet skills elsewhere in the book.
-[Chapter 4: Clean Up Messy Data](clean.html) shows how to find and
-replace, split data into columns, and combine columns of data. [Chapter
-11: Transform Your Map Data](transform.html) shows how to geocode
-addresses, pivoting address points into polygons, and normalize data.
+In a spreadsheet, every time a customer placed an order, their location
+would need to be entered separately, which would mean lots of duplicated
+information. Also, updates would requiring changing the same information
+in multiple places in your spreadsheet.
+
+By contrast, if your company used a relational database, you would
+maintain two tables—one for orders and one for customers—with links
+between them, like this:
+
+    Order       Customer
+    1           Janice  
+    2           Jean
+    3           Jim
+    4           Joe    
+    5           Julius
+    6           Janice
+    7           Julius
+
+
+    Customer    Location
+    Janice      New York
+    Jean        Seattle
+    Jim         Dallas
+    Joe         Los Angeles
+    Julius      Chicago
+
+When someone’s address changed, in a relational database it would only
+need to be updated in one place—the customer table—and only one time.
+Also, by separating data into different tables, it would be easier to
+add up your total customers without counting duplicates.
+
+If you’re responsible for managing data tables with relationships
+between them, especially one-to-many relationships (such as where Janice
+and Julius each place multiple orders), consider the pros and cons of
+working with a relational database. Years ago, relational databases
+required complex software that was not easy to set up. But a newer
+generation of tools such as [AirTable](http://airtable.com) enable you
+to create relational databases in your web browser with up to 1,200 free
+records (and more with the paid version), using existing templates (or
+design your own), and collaborative editing with your co-workers.
+Furthermore, Airtable supports data migration by allowing you to export
+all of your records in CSV format.
+
+While the details of setting up a relational database are beyond the
+scope of this chapter, it’s important to understand the conceptual
+difference between a “flat-file” spreadsheet and a collection of data
+tables with linked relationships. In the next section, we’ll describe
+how to collect data using online forms, a feature found in Google
+Sheets, Airtable, and several other tools.
+
+Collect Data with Online Forms
+------------------------------
+
+No doubt, everyone with an email address has been asked to fill out at
+least one online form. We promise *not* to send you another! But if you
+need to collect simple data from people who communicate digitally with
+you, sometimes the easiest solution is to send them an online form that
+compiles their responses in a data table, which can be much faster than
+re-entering information from paper forms.
+
+If you already have a Google Drive account, one tool that many people
+overlook is Google Forms, which is partially hidden under *New &gt; More
+&gt; Google Forms*, as shown in Figure <a href="#fig:forms-new">21</a>.
+
+<img src="images/02-spreadsheet/forms-new.png" alt="The Google Forms tool is partially hidden in the Google Drive *New >
+More\* menu." /&gt;
+<p class="caption">
+Figure 21: The Google Forms tool is partially hidden in the Google Drive
+*New &gt; More* menu.
+</p>
+
+The Google Forms *Questions* tab allows you to request different types
+of responses: short- and paragraph-length answers, multiple choice,
+checkboxes, file uploads, etc., as shown in Figure
+<a href="#fig:forms-questions">22</a>. Click the *Preview* (eyeball)
+button to see how your form will appear to users, then click the *Send*
+button to distribute via email, a link, or an iframe. You can learn more
+about how to use the latter in [Chapter 7: Embed On Your
+Web](embed.html).
+
+<img src="images/02-spreadsheet/forms-questions.png" alt="The Google Forms *Questions* tab allows you to request different types of responses."  />
+<p class="caption">
+Figure 22: The Google Forms *Questions* tab allows you to request
+different types of responses.
+</p>
+
+The Google Forms *Responses* tab includes a button to open answers you
+receive in a linked Google Sheet, as shown in Figure
+<a href="#fig:forms-responses">23</a>. As you’ve learned in this
+chapter, data becomes more powerful when you can share, organize, and
+analyze it using spreadsheet tools to help reveal and tell its
+underlying stories.
+
+<img src="images/02-spreadsheet/forms-responses.png" alt="The Google Forms *Responses* tab includes a button to open answers in a linked Google Sheet."  />
+<p class="caption">
+Figure 23: The Google Forms *Responses* tab includes a button to open
+answers in a linked Google Sheet.
+</p>
+
+**Summary** If you’re one of the many people who “never really learned”
+about spreadsheets in school or on the job, or if you’ve taught yourself
+bits and pieces along the way, we hope that this chapter has
+successfully introduced or refreshed your skills. All of the subsequent
+chapters in this book, especially those on designing interactive charts
+and maps, require a basic level of familiarity with spreadsheets. In
+addition to serving as incredible time-savers when it comes to tedious
+data tasks, the spreadsheet tools and methods featured above are
+designed to help you share, sort, calculate, as well as more advanced
+skills in pivoting tables and matching with lookup tables, with the
+broader goal of telling your data stories.
+
+The next chapter describes strategies for finding data, particularly on
+open data sites operated by governmental and non-profit organizations,
+where you’ll also need spreadsheet skills to download information in an
+organized way. See additional spreadsheet skills in later chapters of
+the book. [Chapter 4: Clean Up Messy Data](clean.html) demonstrates how
+to find and replace, split data into columns, and combine columns of
+data (such as when you need the street address, city, and postal code
+all in one line). [Chapter 11: Transform Your Map Data](transform.html)
+also features more advanced spreadsheet skills and tools, such as how to
+geocode addresses, pivot address points into polygons, and how to
+normalize data to create more meaningful polygon maps.
 
 <!--chapter:end:02-spreadsheet.Rmd-->
 
@@ -1737,14 +1915,14 @@ More often than not, datasets will be messy and hard to visualize right
 away. They will have missing values, various spelling of the same
 categories, dates in different formats, text in numeric-only columns,
 multiple things in the same columns, and other unexpected things (see
-Figure <a href="#fig:clean-up-messy-data">15</a> for inspiration). Don’t
+Figure <a href="#fig:clean-up-messy-data">24</a> for inspiration). Don’t
 be surprised if you find yourself spending longer cleaning up data than
 actually analyzing and visualizing it—it is often the case for data
 analysts.
 
 <img src="images/04-clean/clean-up-messy-data.png" alt="More often than not, raw data looks like this."  />
 <p class="caption">
-Figure 15: More often than not, raw data looks like this.
+Figure 24: More often than not, raw data looks like this.
 </p>
 
 It is important to learn several tools in order to know which one to use
@@ -1796,7 +1974,7 @@ Connecticut towns and their population, for the exercise.
     entire spreadsheet.
 2.  From *Edit* menu, choose *Find and replace* item. You will see the
     window like is shown in Figure
-    <a href="#fig:sheets-find-replace">16</a>.
+    <a href="#fig:sheets-find-replace">25</a>.
 3.  In the *Find* field, type `town`, without quotation marks and
     leaving a space before the word. If you don’t leave the space, you
     will accidentally remove *town* from *Newtown*, and you will end up
@@ -1813,7 +1991,7 @@ Connecticut towns and their population, for the exercise.
 
 <img src="images/04-clean/sheets-find-replace.png" alt="Find and Replace window in Google Sheets."  />
 <p class="caption">
-Figure 16: Find and Replace window in Google Sheets.
+Figure 25: Find and Replace window in Google Sheets.
 </p>
 
 #### Split data into two or more columns
@@ -1840,7 +2018,7 @@ line.
 2.  Make sure there is no data in the column to the right of the one
     you’re splitting, because all data there will be written over.
 3.  Go to *Data* and select *Split text to columns*, as in Figure
-    <a href="#fig:sheets-split">17</a>.
+    <a href="#fig:sheets-split">26</a>.
 4.  Google Sheets will try to guess your separator automatically. You
     will see that your coordinates are now split with the comma, and the
     Separator is set to *Detect automatically* in the dropdown. You can
@@ -1854,7 +2032,7 @@ line.
 <img src="images/04-clean/sheets-split.png" alt="Select Data > Split
 text to columns to automatically separate data." /&gt;
 <p class="caption">
-Figure 17: Select Data &gt; Split text to columns to automatically
+Figure 26: Select Data &gt; Split text to columns to automatically
 separate data.
 </p>
 
@@ -1919,14 +2097,14 @@ or spaces with commas (`", "`), or a dash with spaces on both sides
 
 For example, imagine that a spreadsheet contains an address that is
 separated into four columns—*Address, City, State,* and *Zip*—as shown
-in columns A-D in Figure <a href="#fig:sheets-combine">18</a>. In column
+in columns A-D in Figure <a href="#fig:sheets-combine">27</a>. In column
 E, you can add new header named *Location* and insert a formula in this
 format, to combine the items using ampersands (`&`) and separating them
 with quoted spaces (`" "`), like this: `=A2&" "&B2&" "&C2&" "&D2`
 
 <img src="images/04-clean/sheets-combine.png" alt="Use ampersands to combine items and separate them with spaces."  />
 <p class="caption">
-Figure 18: Use ampersands to combine items and separate them with
+Figure 27: Use ampersands to combine items and separate them with
 spaces.
 </p>
 
@@ -1971,7 +2149,7 @@ proceed (on a Mac, click *Open*; you might have to go to System
 Preferences &gt; Security & Privacy, and resolve the issue there).
 
 Your default system browser should open, like shown in Figure
-<a href="#fig:tabula-welcome">19</a>. The URL will be something like
+<a href="#fig:tabula-welcome">28</a>. The URL will be something like
 `http://127.0.0.1:8080/`, meaning Tabula is running on your local
 machine. 127.0.0.1, also known as `localhost`, is the hostname for your
 machine. `8080` is called port (it’s okay if you see a different
@@ -1981,7 +2159,7 @@ just copy-paste the URL.
 
 <img src="images/04-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
-Figure 19: Tabula welcome page.
+Figure 28: Tabula welcome page.
 </p>
 
 ### Load a PDF and Autodetect Tables
@@ -2000,11 +2178,11 @@ PDFs](data/ct-dph-covid-2020-05-31.pdf) from May 31, 2020.
 4.  The easiest first step is to let Tabula autodetect tables. Click the
     relevant button in the header. You will see that each table is
     highlighted in red, like shown in Figure
-    <a href="#fig:tabula-autodetect">20</a>.
+    <a href="#fig:tabula-autodetect">29</a>.
 
 <img src="images/04-clean/tabula-autodetect.png" alt="Selected tables are highlighted in red."  />
 <p class="caption">
-Figure 20: Selected tables are highlighted in red.
+Figure 29: Selected tables are highlighted in red.
 </p>
 
 ### Manually Adjust Selections and Export 
@@ -2040,12 +2218,12 @@ Clean Data with OpenRefine
 --------------------------
 
 Consider a dataset that looks like the one in Figure
-<a href="#fig:openrefine-dataset">21</a>. Can you spot any problems with
+<a href="#fig:openrefine-dataset">30</a>. Can you spot any problems with
 it?
 
 <img src="images/04-clean/openrefine-dataset.png" alt="First 20 rows of the sample dataset. Can you spot any problems with it?"  />
 <p class="caption">
-Figure 21: First 20 rows of the sample dataset. Can you spot any
+Figure 30: First 20 rows of the sample dataset. Can you spot any
 problems with it?
 </p>
 
@@ -2089,11 +2267,11 @@ file, and OpenRefine should open in your default browser.
 
 Once launched, you should see OpenRefine in your browser with
 `127.0.0.1:3333` address (localhost, port 3333), like shown in Figure
-<a href="#fig:openrefine-welcome">22</a>.
+<a href="#fig:openrefine-welcome">31</a>.
 
 <img src="images/04-clean/openrefine-welcome.png" alt="OpenRefine starting page."  />
 <p class="caption">
-Figure 22: OpenRefine starting page.
+Figure 31: OpenRefine starting page.
 </p>
 
 ### Load Data and Start a New Project
@@ -2113,12 +2291,12 @@ using your own file), so let’s load it from your computer.
     the data is split into columns. Make sure OpenRefine assigned values
     to the right columns, or change setting in *Parse data as* block at
     the bottom of the page until it starts looking meaningful, like
-    shown in Figure <a href="#fig:openrefine-parse">23</a>.
+    shown in Figure <a href="#fig:openrefine-parse">32</a>.
 3.  Hit *Create Project* in the upper-right corner.
 
 <img src="images/04-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
-Figure 23: OpenRefine parsing options.
+Figure 32: OpenRefine parsing options.
 </p>
 
 Now when you’ve successfully read the data into a new project, let’s
@@ -2155,11 +2333,11 @@ to be transformed into numeric format.
     end of one number. Fix those manually by hovering over cells, and
     clicking the `edit` button (in the new popup window, make sure to
     change *Data type* to *number*, and hit *Apply*, like in Figure
-    <a href="#fig:openrefine-manual-edit">24</a>).
+    <a href="#fig:openrefine-manual-edit">33</a>).
 
 <img src="images/04-clean/openrefine-manual-edit.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
 <p class="caption">
-Figure 24: Manually remove spaces and extra characters, and change data
+Figure 33: Manually remove spaces and extra characters, and change data
 type to number.
 </p>
 
@@ -2185,7 +2363,7 @@ distinct values, North Korea and South Korea!
 1.  To begin standardizing spellings, click on the arrow-down button of
     Country column header, and choose *Edit cells* &gt; *Cluster and
     edit*. You will see a window like the one shown in Figure
-    <a href="#fig:openrefine-cluster">25</a>.
+    <a href="#fig:openrefine-cluster">34</a>.
 2.  You will have a choice of two clustering methods, *key collision* or
     *nearest neighbor*. Both methods can be powered by different
     functions, but let’s leave the default *key collision* with
@@ -2206,7 +2384,7 @@ how they produce clusters of different sizes and accuracy.
 
 <img src="images/04-clean/openrefine-cluster.png" alt="Cluster similar text values."  />
 <p class="caption">
-Figure 25: Cluster similar text values.
+Figure 34: Cluster similar text values.
 </p>
 
 ### Export
@@ -2337,12 +2515,12 @@ good chart takes time and effort, so make sure it enhances your story.
 ### Deconstructing a Chart
 
 Let’s take a look at Figure
-<a href="#fig:design-principles-chart-components">26</a>. It shows basic
+<a href="#fig:design-principles-chart-components">35</a>. It shows basic
 chart components that are shared among most chart types.
 
 <img src="images/05-chart/design-principles-chart-components.png" alt="Common chart components."  />
 <p class="caption">
-Figure 26: Common chart components.
+Figure 35: Common chart components.
 </p>
 
 A *title* is perhaps the most important element of any chart. A good
@@ -2407,12 +2585,12 @@ interpretation, there are some that are hard to bend.
 Unlike line charts, bar or column charts need to have their value axis
 start at zero. This is to ensure that a bar twice the length of another
 bar represents twice its value. The Figure
-<a href="#fig:design-principles-start-at-zero">27</a> shows a good and a
+<a href="#fig:design-principles-start-at-zero">36</a> shows a good and a
 bad example.
 
 <img src="images/05-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
 <p class="caption">
-Figure 27: Start your bar chart at zero.
+Figure 36: Start your bar chart at zero.
 </p>
 
 Starting y-axis at anything other than zero is a common trick used by
@@ -2447,14 +2625,14 @@ Start with a white background and add elements as you see appropriate.
 You should be able to justify each element you add. To do so, ask
 yourself: Does this element improve the chart, or can I drop it without
 decreasing readability? This way you won’t end up with so-called “chart
-junk” as shown in Figure <a href="#fig:design-principles-junk">28</a>,
+junk” as shown in Figure <a href="#fig:design-principles-junk">37</a>,
 which includes 3D perspectives, shadows, and unnecessary elements. They
 might have looked cool in early versions of Microsoft Office, but let’s
 stay away from them today.
 
 <img src="images/05-chart/design-principles-junk.png" alt="Avoid chart junk."  />
 <p class="caption">
-Figure 28: Avoid chart junk.
+Figure 37: Avoid chart junk.
 </p>
 
 Do not use shadows or thick outlines with bar charts, because the reader
@@ -2470,22 +2648,22 @@ anyone tell you otherwise.
 Remember that pie charts only show part-to-whole relationship, so all
 slices need to add up to 100%. Generally, the fewer slices—the better.
 Arrange slices from largest to smallest, clockwise, and put the largest
-slice at 12 o’clock. Figure <a href="#fig:design-principles-pie">29</a>
+slice at 12 o’clock. Figure <a href="#fig:design-principles-pie">38</a>
 illustrates that.
 
 <img src="images/05-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o'clock."  />
 <p class="caption">
-Figure 29: Sort slices in pie charts from largest to smallest, and start
+Figure 38: Sort slices in pie charts from largest to smallest, and start
 at 12 o’clock.
 </p>
 
 If your pie chart has more than five slices, consider showing your data
 in a bar chart, either stacked or separated, like Figure
-<a href="#fig:design-principles-pie-to-bar">30</a> shows.
+<a href="#fig:design-principles-pie-to-bar">39</a> shows.
 
 <img src="images/05-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
 <p class="caption">
-Figure 30: Consider using bar charts instead of pies.
+Figure 39: Consider using bar charts instead of pies.
 </p>
 
 #### Don’t make people turn their heads to read labels
@@ -2493,19 +2671,19 @@ Figure 30: Consider using bar charts instead of pies.
 When your column chart has long x-axis labels that have to be rotated
 (often 90 degrees) to fit, consider turning the chart 90 degrees so that
 it becomes a horizontal bar chart. Take a look at Figure
-<a href="#fig:design-principles-turn-bar">31</a> to see how much easier
+<a href="#fig:design-principles-turn-bar">40</a> to see how much easier
 it is to read horizontally-oriented labels.
 
 <img src="images/05-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 31: For long labels, use horizontal bar charts.
+Figure 40: For long labels, use horizontal bar charts.
 </p>
 
 #### Arrange elements logically
 
 If your bar chart shows different categories, consider ordering them,
 like is shown in Figure
-<a href="#fig:design-principles-order-categories">32</a>. You might want
+<a href="#fig:design-principles-order-categories">41</a>. You might want
 to sort them alphabetically, which can be useful if you want the reader
 to be able to quickly look up an item, such as their town. Ordering
 categories by value is another common technique that makes comparisons
@@ -2514,7 +2692,7 @@ time, they have to be ordered sequentially, of course.
 
 <img src="images/05-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 32: For long labels, use horizontal bar charts.
+Figure 41: For long labels, use horizontal bar charts.
 </p>
 
 #### Do not overload your chart
@@ -2541,22 +2719,22 @@ Whatever colors you end up choosing, they need to be distinguishable
 in hue (for example, various shades of green––leave them for choropleth
 maps). Certain color combinations are hard to interpret for color-blind
 people, like green/red or yellow/blue, so be very careful with those.
-Figure <a href="#fig:design-principles-color">33</a> shows some good and
+Figure <a href="#fig:design-principles-color">42</a> shows some good and
 bad examples of color use.
 
 <img src="images/05-chart/design-principles-color.png" alt="Don't use colors just for the sake of it."  />
 <p class="caption">
-Figure 33: Don’t use colors just for the sake of it.
+Figure 42: Don’t use colors just for the sake of it.
 </p>
 
 If you follow the advice, you should end up with a de-cluttered chart as
-shown in Figure <a href="#fig:design-principles-decluttered">34</a>.
+shown in Figure <a href="#fig:design-principles-decluttered">43</a>.
 Notice how your eyes are drawn to the bars and their corresponding
 values, not bright colors or secondary components like the axes lines.
 
 <img src="images/05-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
 <p class="caption">
-Figure 34: Make sure important things catch the eye first.
+Figure 43: Make sure important things catch the eye first.
 </p>
 
 Google Sheets Charts
@@ -2604,7 +2782,7 @@ can use the same username for your Google Drive account.
 
 ### Grouped Column and Bar Charts
 
-Figure <a href="#fig:column-grouped">35</a> shows differences in obesity
+Figure <a href="#fig:column-grouped">44</a> shows differences in obesity
 between men and women, grouped together in three age brackets to allow
 for easier gender comparisons across the same ages. In the interactive
 web version, hover over columns and see tooltips with data.
@@ -2612,7 +2790,7 @@ web version, hover over columns and see tooltips with data.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 35: Grouped column chart with data from
+Figure 44: Grouped column chart with data from
 [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf).
 Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
@@ -2630,67 +2808,67 @@ The following steps will help you recreate an interactive grouped column
     one.
 
 3.  Select File &gt; Make a Copy to save your own version to your Google
-    Drive, as shown in Figure <a href="#fig:file-make-copy2">36</a>.
+    Drive, as shown in Figure <a href="#fig:file-make-copy2">45</a>.
 
 <img src="images/05-chart/file-make-copy2.png" alt="Make your own copy of the Google Sheet template."  />
 <p class="caption">
-Figure 36: Make your own copy of the Google Sheet template.
+Figure 45: Make your own copy of the Google Sheet template.
 </p>
 
 1.  To remove the current chart from your copy of the spreadsheet, float
     your cursor to the top-right corner of the chart to make the 3-dot
     menu appear, and select Delete, as shown in Figure
-    <a href="#fig:delete-chart">37</a>.
+    <a href="#fig:delete-chart">46</a>.
 
 <img src="images/05-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot menu appear, and select Delete."  />
 <p class="caption">
-Figure 37: Float cursor in top-right corner of the chart to make the
+Figure 46: Float cursor in top-right corner of the chart to make the
 3-dot menu appear, and select Delete.
 </p>
 
 1.  Format your data to make each column a data series, as shown in
-    Figure <a href="#fig:column-grouped-data">38</a>, which means it
+    Figure <a href="#fig:column-grouped-data">47</a>, which means it
     will display as a separate color in the chart.
 
 <img src="images/05-chart/column-grouped-data.png" alt="Format data in columns to make colored grouped columns in your chart."  />
 <p class="caption">
-Figure 38: Format data in columns to make colored grouped columns in
+Figure 47: Format data in columns to make colored grouped columns in
 your chart.
 </p>
 
 1.  Use your cursor to select only the data you wish to chart, then go
     to the Insert menu and select Chart, as shown in Figure
-    <a href="#fig:column-grouped-insert">39</a>.
+    <a href="#fig:column-grouped-insert">48</a>.
 
 <img src="images/05-chart/column-grouped-insert.png" alt="Select your data and then Insert >
 Chart." /&gt;
 <p class="caption">
-Figure 39: Select your data and then Insert &gt; Chart.
+Figure 48: Select your data and then Insert &gt; Chart.
 </p>
 
 1.  In the Chart Editor, change the default selection to Column chart,
     with Stacking none, to display Grouped Columns, as shown in Figure
-    <a href="#fig:column-grouped-editor">40</a>. Or select horizontal
+    <a href="#fig:column-grouped-editor">49</a>. Or select horizontal
     Bar chart if you have longer labels.
 
 <img src="images/05-chart/column-grouped-editor.png" alt="Change the default to Column chart, with Stacking none."  />
 <p class="caption">
-Figure 40: Change the default to Column chart, with Stacking none.
+Figure 49: Change the default to Column chart, with Stacking none.
 </p>
 
 1.  To customize title, labels, and more, in the Chart Editor select
     Customize, as shown in Figure
-    <a href="#fig:chart-editor-customize">41</a>.
+    <a href="#fig:chart-editor-customize">50</a>.
 
 <img src="images/05-chart/chart-editor-customize.png" alt="Select Customize to edit title, labels, and more."  />
 <p class="caption">
-Figure 41: Select Customize to edit title, labels, and more.
+Figure 50: Select Customize to edit title, labels, and more.
 </p>
 
 1.  To make your data public, go to the upper-right corner of your sheet
     to click the Share button, and in the next screen, click the words
     “Change to anyone with the link,” as shown in Figure
-    <a href="#fig:share-button-sheet">42</a>. This means your sheet is
+    <a href="#fig:share-button-sheet">51</a>. This means your sheet is
     no longer Restricted to only you, but can be viewed by anyone with
     the link. See additional options.
 
@@ -2698,20 +2876,20 @@ Figure 41: Select Customize to edit title, labels, and more.
 Share button and then click”Change to anyone with the link." to make
 your data public." /&gt;
 <p class="caption">
-Figure 42: Click the Share button and then click “Change to anyone with
+Figure 51: Click the Share button and then click “Change to anyone with
 the link.” to make your data public.
 </p>
 
 1.  To embed an interactive version of your chart in another web page,
     click the 3-dot menu in the upper-right corner of your chart, and
     select Publish Chart, as shown in Figure
-    <a href="#fig:chart-publish">43</a>. In the next screen, select
+    <a href="#fig:chart-publish">52</a>. In the next screen, select
     Embed and press the Publish button. See [Chapter 7 Embed on the
     Web](embed.html) to learn what to do with the iframe code.
 
 <img src="images/05-chart/chart-publish.png" alt="Select Publish Chart to embed an interactive chart on another web page, as described in Chapter 7."  />
 <p class="caption">
-Figure 43: Select Publish Chart to embed an interactive chart on another
+Figure 52: Select Publish Chart to embed an interactive chart on another
 web page, as described in Chapter 7.
 </p>
 
@@ -2725,17 +2903,17 @@ credibility to your work.
 When you visualize independent categories of data, and you don’t want
 them to appear grouped together, then create a chart with separated
 columns (or horizontal bars, if you have long data labels). For example,
-Figure <a href="#fig:bar-separated">44</a> is a separated bar chart of
+Figure <a href="#fig:bar-separated">53</a> is a separated bar chart of
 calorie counts of fast food items for two restaurant chains, Starbucks
 and McDonald’s. Unlike the grouped column chart in Figure
-<a href="#fig:column-grouped">35</a>, here the bars are separated from
+<a href="#fig:column-grouped">44</a>, here the bars are separated from
 each other, because we do not need to make comparisons between
 sub-groups.
 
 <iframe src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 44: Separated bar chart with data from [Starbucks and
+Figure 53: Separated bar chart with data from [Starbucks and
 McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126).
 Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
@@ -2744,12 +2922,12 @@ version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o
 The only difference between making a grouped versus a separated chart is
 how you structure your data. To make Google Sheets separate columns or
 bars, you need to leave some cells blank, as shown in Figure
-<a href="#fig:bar-separated-data">45</a>. The rest of the steps remain
+<a href="#fig:bar-separated-data">54</a>. The rest of the steps remain
 the same as above.
 
 <img src="images/05-chart/bar-separated-data.png" alt="Create a separated column or bar chart by leaving some cells blank."  />
 <p class="caption">
-Figure 45: Create a separated column or bar chart by leaving some cells
+Figure 54: Create a separated column or bar chart by leaving some cells
 blank.
 </p>
 
@@ -2763,14 +2941,14 @@ template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnU
 Stacked column and bar charts can be used to compare subcategories. They
 can also be used to represents parts of a whole instead of pie charts.
 For example, the stacked column chart in Figure
-<a href="#fig:column-stacked">46</a> compares the percentage of
+<a href="#fig:column-stacked">55</a> compares the percentage of
 overweight residents across nations, where colors allow for easy
 comparisons of weight-group subcategories across nations.
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 46: Stacked column chart with data from [WHO and
+Figure 55: Stacked column chart with data from [WHO and
 CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691).
 Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive).
@@ -2778,13 +2956,13 @@ version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-F
 
 To create a stacked column or bar chart, structure your data so that
 each column will become a new series with its own color, as shown in
-Figure <a href="#fig:column-stacked-data">47</a>. Then in the Chart
+Figure <a href="#fig:column-stacked-data">56</a>. Then in the Chart
 Editor window, choose Chart Type &gt; Stacked column chart (or Stacked
 bar chart). The rest of the steps are similar to the ones above.
 
 <img src="images/05-chart/column-stacked-data.png" alt="Create a stacked column or bar chart by structuring your data as shown."  />
 <p class="caption">
-Figure 47: Create a stacked column or bar chart by structuring your data
+Figure 56: Create a stacked column or bar chart by structuring your data
 as shown.
 </p>
 
@@ -2823,12 +3001,12 @@ previous tutorial to make one.
 Select two columns with the data you want to visualize, and go to Insert
 &gt; Chart. In the Chart editor window, in the Setup tab, select Chart
 type &gt; Column chart. See the result in Figure
-<a href="#fig:histogram">48</a>
+<a href="#fig:histogram">57</a>
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 48: Histogram chart with [fictitious source
+Figure 57: Histogram chart with [fictitious source
 data](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=0).
 Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive).
@@ -2869,14 +3047,14 @@ pie chart with the number of fruit your store had sold in a day—–21
 apples, 5 oranges, and 32 bananas—–the sum of all fruit, 58, is your
 100%. Then a reader can figure out that of all fruits sold,
 approximately 55% were bananas. This example is illustrated in Figure
-<a href="#fig:pie">49</a>. If you decided to include *some*, but *not
+<a href="#fig:pie">58</a>. If you decided to include *some*, but *not
 all* other items that your store has sold (for example, you include
 pizzas but exclude ice cream), your pie chart would not make sense.
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 49: Pie chart with [fictitious source
+Figure 58: Pie chart with [fictitious source
 data](https://docs.google.com/spreadsheets/d/11cn0eysXqXIwhcTKmGuzMDw_RmpDpYLKZN3TeevT-Vg/edit?usp=sharing).
 Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive).
@@ -2908,7 +3086,7 @@ editor, you can also change colors and add borders to slices.
 
 The most common use of line charts is to represent values at different
 points in time, in other words to show change over time. The line chart
-in Figure <a href="#fig:line">50</a> shows per-capita meat availability
+in Figure <a href="#fig:line">59</a> shows per-capita meat availability
 in the US for the past 110 years. You can see that the level of chicken
 (shown in orange) rises steadily and surpasses beef (red) and pork
 (blue).
@@ -2916,7 +3094,7 @@ in the US for the past 110 years. You can see that the level of chicken
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 50: Line chart showing meat availability per capita in the US,
+Figure 59: Line chart showing meat availability per capita in the US,
 according to the [US Department of
 Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing).
 Explore the [full-screen interactive
@@ -2926,12 +3104,12 @@ version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S32
 The simplest way to organize your data is to use the first column as
 x-axis labels, and each additional column as a new series (which will
 become its own line). For example, the meat data from the line chart is
-structured as shown in Figure <a href="#fig:line-data">51</a>.
+structured as shown in Figure <a href="#fig:line-data">60</a>.
 
-<img src="images/05-chart/line-data.png" alt="Data for the line chart shown in Figure 50." width="250" />
+<img src="images/05-chart/line-data.png" alt="Data for the line chart shown in Figure 59." width="250" />
 <p class="caption">
-Figure 51: Data for the line chart shown in Figure
-<a href="#fig:line">50</a>.
+Figure 60: Data for the line chart shown in Figure
+<a href="#fig:line">59</a>.
 </p>
 
 The data is available in the [Google Sheet Line chart
@@ -2953,7 +3131,7 @@ eat).
 
 We can see how availability of individual meat types, *and* the total
 meat availability over time using a stacked area chart, like shown in
-Figure <a href="#fig:stacked-area">52</a>. Here, we can still see that
+Figure <a href="#fig:stacked-area">61</a>. Here, we can still see that
 chicken has been on the rise since 1970s. We can also see that the total
 availability was on the rise between 1910 and 1970 with a small dip
 around 1930s, and it didn’t change much between 1970 and 2017.
@@ -2961,7 +3139,7 @@ around 1930s, and it didn’t change much between 1970 and 2017.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 52: In addition to individual meat availability, stacked area
+Figure 61: In addition to individual meat availability, stacked area
 charts show the overall availability. See data by [US Department of
 Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing).
 Explore the [full-screen interactive
@@ -2998,7 +3176,7 @@ animate the circles to represent one more variable: change over time.
 
 #### XY Scatter chart
 
-The scatter chart in Figure <a href="#fig:scatter">53</a> uses World
+The scatter chart in Figure <a href="#fig:scatter">62</a> uses World
 Bank data to reveal a downward slope: nations with lower fertility
 (births per woman) tend to have higher life expectancy. You can also
 phrase is the other way, nations with higher life expectancy at birth
@@ -3009,20 +3187,20 @@ lives, or that longer-living females give birth to fewer children.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 53: This scatter chart shows that nations with lower fertility
+Figure 62: This scatter chart shows that nations with lower fertility
 tend to have higher life expectancy. [See
 data](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/)
 by World Bank. Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&format=interactive).
 </p>
 
-The data used in Figure <a href="#fig:scatter">53</a> is available from
+The data used in Figure <a href="#fig:scatter">62</a> is available from
 our [Google Sheets Scatter chart
 template](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit?usp=sharing).
 You can copy it to your own Google Drive so that you’re able to edit it
 (go to *File &gt; Make a copy*).
 
-Figure <a href="#fig:scatter-data">54</a> shows the first few rows of
+Figure <a href="#fig:scatter-data">63</a> shows the first few rows of
 the dataset. Notice that the data is structured in three columns. The
 first column, *Life Expectancy*, is plotted on the x-axis (horizontal).
 The second column, *Fertility*, is plotted on the y-axis (vertical). The
@@ -3030,7 +3208,7 @@ third column contains *Country* labels.
 
 <img src="images/05-chart/scatter-data.png" alt="Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels." width="350" />
 <p class="caption">
-Figure 54: Data for a scatterplot is usually represented in 3 columns:
+Figure 63: Data for a scatterplot is usually represented in 3 columns:
 x-values, y-values, and labels.
 </p>
 
@@ -3049,7 +3227,7 @@ important. But sometimes labels are important for your storytelling.
 
 In Chart editor, click on the 3-dot menu for your Series dataset
 (Fertility), and then *Add labels* (see Figure
-<a href="#fig:scatter-labels">55</a>). The labels added by default will
+<a href="#fig:scatter-labels">64</a>). The labels added by default will
 be the x-values of points. To make Google Sheets read labels from the
 third column (*Country*), click the name of your label dataset (Life
 Expectancy), then *Select a data range* button in the upper-right corner
@@ -3058,7 +3236,7 @@ include the header (first row) if all other data ranges include it.
 
 <img src="images/05-chart/scatter-labels.png" alt="In the chart's Setup window, choose *Add labels* to the Series." width="350" />
 <p class="caption">
-Figure 55: In the chart’s Setup window, choose *Add labels* to the
+Figure 64: In the chart’s Setup window, choose *Add labels* to the
 Series.
 </p>
 
@@ -3082,7 +3260,7 @@ you want a scatter chart with both data values displayed in a tooltip.
 We will use the same World Bank dataset as we did for the scatter plot.
 
 The bubble chart (more about the *proper* use of bubble charts in the
-next section) in Figure <a href="#fig:bubble-3">56</a> shows the same
+next section) in Figure <a href="#fig:bubble-3">65</a> shows the same
 data as our scatterplot on life expectancy vs fertility.
 
 In the interactive version of the chart, hover your cursor over each
@@ -3092,7 +3270,7 @@ points.
 <iframe src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 56: This bubble chart is essentially a scatter chart, because no
+Figure 65: This bubble chart is essentially a scatter chart, because no
 other dimensions (colors, sizes) are used. [See
 data](https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit?usp=sharing)
 by World Bank. Explore the [full-screen interactive
@@ -3128,7 +3306,7 @@ y-coordinates. One of those can be expressed through bubble size (bigger
 bubbles represent larger values). Another one can make use of color
 (best for categorical data).
 
-The bubble chart in Figure <a href="#fig:bubble-5">57</a> shows
+The bubble chart in Figure <a href="#fig:bubble-5">66</a> shows
 fertility and life expectancy for a subset of the nations, with
 population (shown by bubble size) and region (shown by bubble color).
 Float your cursor over bubbles to view data details in the interactive
@@ -3137,7 +3315,7 @@ version of the chart.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 57: This bubble chart shows fertility and life expectancy for
+Figure 66: This bubble chart shows fertility and life expectancy for
 several countries, including their population (shown by bubble size) and
 region (shown by bubble color). [See
 data](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/)
@@ -3153,7 +3331,7 @@ value, y-axis value, color, and bubble size.
 
 <img src="images/05-chart/bubble-5-data.png" alt="Bubble chart data. Bubble size represents population, color – region."  />
 <p class="caption">
-Figure 58: Bubble chart data. Bubble size represents population, color –
+Figure 67: Bubble chart data. Bubble size represents population, color –
 region.
 </p>
 
@@ -3205,13 +3383,13 @@ other, on x- and y-axis, revealing possible correlations. With Tableau
 Public, you can create an interactive scatter chart, letting users hover
 over points to view specific details.
 
-Figure <a href="#fig:tableau-xy-demo">59</a> illustrates a strong
+Figure <a href="#fig:tableau-xy-demo">68</a> illustrates a strong
 relationship between Connecticut school district income and test scores.
 
 <iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="100%" height="500px">
 </iframe>
 <p class="caption">
-Figure 59: Household income vs test scores in Connecticut school
+Figure 68: Household income vs test scores in Connecticut school
 districts. Made with Tableau Public.
 </p>
 
@@ -3222,7 +3400,7 @@ You can download Tableau Public for Windows or Mac from Tableau’s
 your email address.
 
 If you wish to use the dataset from the scatter plot in Figure
-<a href="#fig:tableau-xy-demo">59</a>, you can [download the sample
+<a href="#fig:tableau-xy-demo">68</a>, you can [download the sample
 Excel file](data/ct-districts-income-grades-2009-13.xlsx). This data
 file consists of three columns: district, median household income, and
 grade levels (above/below national average for 6th grade Math and
@@ -3249,14 +3427,14 @@ and Discover.
     Under Sheets, you will see two tables, `data` and `notes`.
 
 2.  Drag `data` sheet into *Drag tables here* area, like is shown in
-    Figure <a href="#fig:tableau-connect">60</a>. You will see the
+    Figure <a href="#fig:tableau-connect">69</a>. You will see the
     preview of the table under the drag-and-drop area. You have
     successfully connected one data source to Tableau Public, and you
     are ready to build your first chart.
 
 <img src="images/05-chart/tableau-connect.png" alt="Drag `data` sheet into *Drag tables here* area."  />
 <p class="caption">
-Figure 60: Drag `data` sheet into *Drag tables here* area.
+Figure 69: Drag `data` sheet into *Drag tables here* area.
 </p>
 
 <!-- TODO: Let's find out whether real first-time users can follow these steps! -->
@@ -3271,7 +3449,7 @@ Figure 60: Drag `data` sheet into *Drag tables here* area.
 
 2.  Drag the *Grade Levels* measure into the **Rows** field above the
     charting area, which for now is just empty space. You can consult
-    Figure <a href="#fig:tableau-xy-dragging">61</a> for this and two
+    Figure <a href="#fig:tableau-xy-dragging">70</a> for this and two
     following steps. Tableau will apply a summation function to it, and
     you will see the `SUM(Grade Levels)` appearing in the Rows row, and
     a blue bar in the charting area. It makes little sense so far, so
@@ -3292,7 +3470,7 @@ Figure 60: Drag `data` sheet into *Drag tables here* area.
 
 <img src="images/05-chart/tableau-xy-dragging.png" alt="Drag measures and dimensions to the right places in Tableau."  />
 <p class="caption">
-Figure 61: Drag measures and dimensions to the right places in Tableau.
+Figure 70: Drag measures and dimensions to the right places in Tableau.
 </p>
 
 #### Add Title and Caption, and Publish
@@ -3308,11 +3486,11 @@ that accompanies your Tableau visualization. In the menu, go to
 appeared, and edit the text.
 
 As a result, your final worksheet will look like shown in Figure
-<a href="#fig:tableau-xy-final">62</a>.
+<a href="#fig:tableau-xy-final">71</a>.
 
 <img src="images/05-chart/tableau-xy-final.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 62: This scatter chart is ready to be published.
+Figure 71: This scatter chart is ready to be published.
 </p>
 
 Tip: In the dropdown above Columns section, change *Standard* to *Fit
@@ -3333,13 +3511,13 @@ To publish the chart to the web,
     above the chart, click *Edit Details* to edit chart’s title or
     description. Under *Toolbar Settings*, see checkbox to *Allow others
     to download or explore and copy this workbook and its data* (Figure
-    <a href="#fig:tableau-toolbar-settings">63</a>), and enable/disable
+    <a href="#fig:tableau-toolbar-settings">72</a>), and enable/disable
     it as you think is appropriate. As advocates for open and accessible
     data, we recommend leaving the box checked.
 
 <img src="images/05-chart/tableau-toolbar-settings.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 63: This scatter chart is ready to be published.
+Figure 72: This scatter chart is ready to be published.
 </p>
 
 See the [Embed Tableau Public on Your Website](embed-tableau.html)
@@ -3365,7 +3543,7 @@ points and patterns.
 
 In this tutorial, we will build an interactive filtered line chart with
 Tableau Public like is shown in Figure
-<a href="#fig:tableau-filtered-demo">64</a>. The filter will be a
+<a href="#fig:tableau-filtered-demo">73</a>. The filter will be a
 collection of checkboxes that allow to add/remove lines from the chart.
 Viewers can hover over each line to identify the school name and data
 attached to it.
@@ -3377,7 +3555,7 @@ download the dataset
 <iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="100%" height="500px">
 </iframe>
 <p class="caption">
-Figure 64: Internet Access by Country, 1995–2018.
+Figure 73: Internet Access by Country, 1995–2018.
 </p>
 
 We assume that you have Tableau installed. If not, see the previous
@@ -3423,7 +3601,7 @@ To build a line chart,
 
 <img src="images/05-chart/tableau-filtered-show-filter.png" alt="Once you dragged Country Name to the Filters card, make sure the Filter is displayed." width="200" />
 <p class="caption">
-Figure 65: Once you dragged Country Name to the Filters card, make sure
+Figure 74: Once you dragged Country Name to the Filters card, make sure
 the Filter is displayed.
 </p>
 
@@ -3445,11 +3623,11 @@ of `1995`, and the Fixed end of `2018`. Close the window and see that
 the empty space on the edges has disappeared.
 
 Once your filtered line chart looks like the one shown in Figure
-<a href="#fig:tableau-filtered-ready">66</a>, you are ready to publish.
+<a href="#fig:tableau-filtered-ready">75</a>, you are ready to publish.
 
 <img src="images/05-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
 <p class="caption">
-Figure 66: This workbook is ready to be published.
+Figure 75: This workbook is ready to be published.
 </p>
 
 To publish the filtered line chart to the web, go to *File &gt; Save to
@@ -4984,12 +5162,12 @@ Here’s an overview of the key steps we’ll cover in this section:
 
 Your goal is to create your own version of this simple interactive map,
 with your edits, as shown in Figure
-<a href="#fig:leaflet-simple">67</a>.
+<a href="#fig:leaflet-simple">76</a>.
 
 <iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 67: Create your own version of this [simple interactive Leaflet
+Figure 76: Create your own version of this [simple interactive Leaflet
 map](https://handsondataviz.github.io/leaflet-map-simple/).
 </p>
 
@@ -5008,11 +5186,11 @@ wisest choice for a username, if `BrownieChef` is also available.
     <a href="https://github.com/HandsOnDataViz/leaflet-map-simple" class="uri">https://github.com/HandsOnDataViz/leaflet-map-simple</a>
 
 2.  To create your own copy of our template, click the Fork button as
-    shown in Figure <a href="#fig:leaflet-simple-fork">68</a>.
+    shown in Figure <a href="#fig:leaflet-simple-fork">77</a>.
 
 <img src="images/08-github/leaflet-simple-fork.png" alt="Click the Fork button to make your own copy of the code template."  />
 <p class="caption">
-Figure 68: Click the Fork button to make your own copy of the code
+Figure 77: Click the Fork button to make your own copy of the code
 template.
 </p>
 
@@ -5033,11 +5211,11 @@ to create a second version, go to the [Create a New Repo and Upload
 Files on GitHub](create-repo.html) section of this chapter.
 
 1.  Click on the `index.html` file to view the code, as shown in Figure
-    <a href="#fig:leaflet-simple-index">69</a>.
+    <a href="#fig:leaflet-simple-index">78</a>.
 
 <img src="images/08-github/leaflet-simple-index.png" alt="Click the Index file to view the code."  />
 <p class="caption">
-Figure 69: Click the Index file to view the code.
+Figure 78: Click the Index file to view the code.
 </p>
 
 In case this is the first time you’re looking at computer code, we’ve
@@ -5054,11 +5232,11 @@ want to modify a few lines further below.
 
 1.  To edit the code, click on the the pencil symbol in the upper-right
     corner, as shown in Figure
-    <a href="#fig:leaflet-simple-edit">70</a>.
+    <a href="#fig:leaflet-simple-edit">79</a>.
 
 <img src="images/08-github/leaflet-simple-edit.png" alt="Click the pencil button to edit the code."  />
 <p class="caption">
-Figure 70: Click the pencil button to edit the code.
+Figure 79: Click the pencil button to edit the code.
 </p>
 
 Let’s start by making one simple change to prove to everyone that you’re
@@ -5072,11 +5250,11 @@ HTML division tag block around lines 21-23.
 
 2.  To save your edit, scroll to the bottom of the page and click the
     green *Commit Changes* button, as shown in Figure
-    <a href="#fig:leaflet-simple-commit">71</a>.
+    <a href="#fig:leaflet-simple-commit">80</a>.
 
 <img src="images/08-github/leaflet-simple-commit.png" alt="Click the green *Commit Changes* button to save your edits."  />
 <p class="caption">
-Figure 71: Click the green *Commit Changes* button to save your edits.
+Figure 80: Click the green *Commit Changes* button to save your edits.
 </p>
 
 In the language of coders, we “commit” our changes in the same way that
@@ -5103,18 +5281,18 @@ host it online.
 
 1.  To access GitHub Pages, scroll to the top of your repo page and
     click the *Settings* button as shown in Figure
-    <a href="#fig:leaflet-simple-settings">72</a>.
+    <a href="#fig:leaflet-simple-settings">81</a>.
 
 <img src="images/08-github/leaflet-simple-settings.png" alt="Click the *Settings* button to access GitHub Pages and publish your work on the web."  />
 <p class="caption">
-Figure 72: Click the *Settings* button to access GitHub Pages and
+Figure 81: Click the *Settings* button to access GitHub Pages and
 publish your work on the web.
 </p>
 
 1.  In the Settings screen, scroll down to the GitHub Pages area, and
     use the drop-down menu to change *Source* from *None* to *Master
     Branch*, as shown in Figure
-    <a href="#fig:leaflet-github-pages">73</a>. There is no *commit* or
+    <a href="#fig:leaflet-github-pages">82</a>. There is no *commit* or
     *save* button here, and the change will happen automatically. This
     step tells GitHub to publish a live version of your map on the
     public web, where anyone can access it in their browser, if they
@@ -5123,7 +5301,7 @@ publish your work on the web.
 <iframe src="images/08-github/leaflet-github-pages.gif" width="100%" height="325px">
 </iframe>
 <p class="caption">
-Figure 73: Under GitHub Pages, switch the source from *None* to *Master*
+Figure 82: Under GitHub Pages, switch the source from *None* to *Master*
 as shown in this [animated
 GIF](https://handsondataviz.org/images/08-github/leaflet-github-pages.gif).
 </p>
@@ -5133,12 +5311,12 @@ GIF](https://handsondataviz.org/images/08-github/leaflet-github-pages.gif).
 1.  Scroll back down to the GitHub Pages area to see the web address
     where your live map has been published online, and right-click it to
     open in a new browser tab, as shown in Figure
-    <a href="#fig:leaflet-github-pages2">74</a>.
+    <a href="#fig:leaflet-github-pages2">83</a>.
 
 <iframe src="images/08-github/leaflet-github-pages2.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
-Figure 74: Under GitHub Pages, double-click your published map link as
+Figure 83: Under GitHub Pages, double-click your published map link as
 shown in this [animated
 GIF](https://handsondataviz.org/images/08-github/leaflet-github-pages2.gif).
 </p>
@@ -5192,11 +5370,11 @@ that they point to *your* live map, in place of *our* live map.
 
 1.  Go back to your first browser tab with your GitHub repo, and click
     on the repo title to return to its home page, as shown in Figure
-    <a href="#fig:leaflet-click-title">75</a>.
+    <a href="#fig:leaflet-click-title">84</a>.
 
 <img src="images/08-github/leaflet-click-title.png" alt="On your first browser tab, click the repo title."  />
 <p class="caption">
-Figure 75: On your first browser tab, click the repo title.
+Figure 84: On your first browser tab, click the repo title.
 </p>
 
 If you can’t find your first browser tab, you can retype your repo home
@@ -5211,11 +5389,11 @@ page address in this format, and insert your GitHub username:
     click the pencil symbol to edit it, paste your link under the label
     *(replace with link to your site)*, and scroll down to commit the
     change. See both steps in Figure
-    <a href="#fig:leaflet-paste-links">76</a>.
+    <a href="#fig:leaflet-paste-links">85</a>.
 
 <img src="images/08-github/leaflet-paste-links.png" alt="Paste the link to your live map at the top of your repo page, and also in your README page."  />
 <p class="caption">
-Figure 76: Paste the link to your live map at the top of your repo page,
+Figure 85: Paste the link to your live map at the top of your repo page,
 and also in your README page.
 </p>
 
@@ -5310,21 +5488,21 @@ template](https://github.com/HandsOnDataViz/leaflet-map-simple)
 described in the prior section. If you attempt to create a second fork,
 GitHub will “gray out” the Fork button and display an error message
 stating that you “Cannot fork because you own this repository…” as shown
-in Figure <a href="#fig:repo-cannot-fork">77</a>. There’s a good reason
+in Figure <a href="#fig:repo-cannot-fork">86</a>. There’s a good reason
 for GitHub’s one-fork rule: it’s designed to prevent you from
 accidentally creating a second copy, with the same name as your first
 fork, which would overwrite and erase your previous work.
 
 <img src="images/08-github/repo-cannot-fork.png" alt="GitHub's one-fork rule prevents you from creating a second fork of a repo."  />
 <p class="caption">
-Figure 77: GitHub’s one-fork rule prevents you from creating a second
+Figure 86: GitHub’s one-fork rule prevents you from creating a second
 fork of a repo.
 </p>
 
 So how do you create a second copy of a GitHub repo? We’ll show you two
 solutions. The first solution, if it exists in your case, is easy. Look
 for a green “Use this template” button in the upper-right screen, as
-shown in Figure <a href="#fig:repo-template-download">78</a>, and if you
+shown in Figure <a href="#fig:repo-template-download">87</a>, and if you
 see it, click it. GitHub will ask you to create a brand-new repository
 name for the second copy of this template, to avoid confusing it with
 the first copy you made. The “Use this template” button will appear only
@@ -5335,7 +5513,7 @@ repos.
 
 <img src="images/08-github/repo-template-download.png" alt="If a green *Use this template* button appears, click it to work around GitHub's one-fork rule."  />
 <p class="caption">
-Figure 78: If a green *Use this template* button appears, click it to
+Figure 87: If a green *Use this template* button appears, click it to
 work around GitHub’s one-fork rule.
 </p>
 
@@ -5357,7 +5535,7 @@ created the repo didn’t set it up that way.
 
 1.  Click on the gray *Clone or download* drop-down menu button on the
     right-side of the screen, as shown in Figure
-    <a href="#fig:repo-template-download">78</a>, and select *Download
+    <a href="#fig:repo-template-download">87</a>, and select *Download
     ZIP*. Your browser will download a zipped compressed folder with the
     contents of the repo to your local computer, and it may ask you
     where you wish to save it. Decide on a location and click OK.
@@ -5372,11 +5550,11 @@ created the repo didn’t set it up that way.
 3.  Go back to your GitHub account in your web browser, click on the
     plus (+) symbol in the upper-right corner of your account, and
     select *New repository*, as shown in Figure
-    <a href="#fig:repo-create-new">79</a>.
+    <a href="#fig:repo-create-new">88</a>.
 
 <img src="images/08-github/repo-create-new.png" alt="Click the plus (+) symbol in upper-right corner to create a new repo."  />
 <p class="caption">
-Figure 79: Click the plus (+) symbol in upper-right corner to create a
+Figure 88: Click the plus (+) symbol in upper-right corner to create a
 new repo.
 </p>
 
@@ -5389,13 +5567,13 @@ Check the box to *Initialize this repository with a README* to simplify
 the next steps. Also, select *Add a license* that matches the code you
 plan to upload, which in this case is “MIT License.” Other fields are
 optional. Click the green *Create Repository* button at the bottom when
-done, as shown in Figure <a href="#fig:repo-create-options">80</a>.
+done, as shown in Figure <a href="#fig:repo-create-options">89</a>.
 
 &lt;img src=“images/08-github/repo-create-options.png” alt=“After naming
 your new repo, check the box to *Initialize this repo with a README* and
 *Add a license* to match the code (select”MIT“).” /&gt;
 <p class="caption">
-Figure 80: After naming your new repo, check the box to *Initialize this
+Figure 89: After naming your new repo, check the box to *Initialize this
 repo with a README* and *Add a license* to match the code (select
 “MIT”).
 </p>
@@ -5405,23 +5583,23 @@ Your new repo will have a web address similar to
 
 1.  On your new repo home page, click the *Upload Files* button, near
     the middle of the screen, as shown in Figure
-    <a href="#fig:repo-upload-files">81</a>.
+    <a href="#fig:repo-upload-files">90</a>.
 
 <img src="images/08-github/repo-upload-files.png" alt="Click the *Upload Files* button."  />
 <p class="caption">
-Figure 81: Click the *Upload Files* button.
+Figure 90: Click the *Upload Files* button.
 </p>
 
 1.  Upload the `index.html` file that you previously downloaded to your
     local computer by dragging-and-dropping it into the upload area of
     your GitHub repo in your browser, as shown in Figure
-    <a href="#fig:repo-drag-index">82</a>. Do not upload `LICENSE` or
+    <a href="#fig:repo-drag-index">91</a>. Do not upload `LICENSE` or
     `README.md` because your new repo already contains those two files.
     Scroll down to click the green *Commit Changes* button.
 
 <img src="images/08-github/repo-drag-index.png" alt="Drag-and-drop the file to the upload screen."  />
 <p class="caption">
-Figure 82: Drag-and-drop the file to the upload screen.
+Figure 91: Drag-and-drop the file to the upload screen.
 </p>
 
 When the upload is complete, your repo should contain three files, now
@@ -5440,13 +5618,13 @@ chapter.
     In the repo screen of your browser, click the top-right *Settings*
     button, scroll all the way down to the *Danger Zone*, and click
     *Delete this repository*, as shown in Figure
-    <a href="#fig:repo-delete">83</a>. GitHub will ask you to type in
+    <a href="#fig:repo-delete">92</a>. GitHub will ask you to type in
     your username and repo name to ensure that you really want to delete
     the repo, to prove you are not a drunken brownie chef.
 
 <img src="images/08-github/repo-delete.png" alt="After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm."  />
 <p class="caption">
-Figure 83: After clicking the Delete Repository button, GitHub will ask
+Figure 92: After clicking the Delete Repository button, GitHub will ask
 you to type your username and repo name to confirm.
 </p>
 
@@ -5494,13 +5672,13 @@ push your commits back up to GitHub.
     Host a Simple Leaflet Map Template](fork-leaflet.html) section of
     this chapter. Click the *Clone or download* button on the right
     side, and select *Open in Desktop*, as shown in Figure
-    <a href="#fig:desktop-open">84</a>. The next screen will show a link
+    <a href="#fig:desktop-open">93</a>. The next screen will show a link
     to the GitHub Desktop web page, and you should download and install
     the application.
 
 <img src="images/08-github/desktop-open.png" alt="In your GitHub web repo, click *Clone or download* and *Open in Desktop* to download and install GitHub Desktop."  />
 <p class="caption">
-Figure 84: In your GitHub web repo, click *Clone or download* and *Open
+Figure 93: In your GitHub web repo, click *Clone or download* and *Open
 in Desktop* to download and install GitHub Desktop.
 </p>
 
@@ -5508,25 +5686,25 @@ in Desktop* to download and install GitHub Desktop.
     connect it to the GitHub web account you previously created in this
     chapter. On the welcome screen, click the blue *Sign in to
     GitHub.com* button, as shown in Figure
-    <a href="#fig:desktop-signin">85</a>, and login with your GitHub
+    <a href="#fig:desktop-signin">94</a>, and login with your GitHub
     username and password. On the next screen, GitHub will ask you to
     click the green *Authorize desktop* button to confirm that you wish
     to connect to your account.
 
 <img src="images/08-github/desktop-signin.png" alt="Click the blue *Sign in to GitHub.com* button to link GitHub Desktop to your GitHub account."  />
 <p class="caption">
-Figure 85: Click the blue *Sign in to GitHub.com* button to link GitHub
+Figure 94: Click the blue *Sign in to GitHub.com* button to link GitHub
 Desktop to your GitHub account.
 </p>
 
 1.  In the next setup screen, GitHub Desktop asks you to configure Git,
     the underlying software that runs GitHub. Confirm that it displays
     your username and click *Continue*, as shown in Figure
-    <a href="#fig:desktop-configure">86</a>.
+    <a href="#fig:desktop-configure">95</a>.
 
 <img src="images/08-github/desktop-configure.png" alt="Click the *Continue* button to authorize GitHub Desktop to send commits to your GitHub account."  />
 <p class="caption">
-Figure 86: Click the *Continue* button to authorize GitHub Desktop to
+Figure 95: Click the *Continue* button to authorize GitHub Desktop to
 send commits to your GitHub account.
 </p>
 
@@ -5534,26 +5712,26 @@ send commits to your GitHub account.
     *Your Repositories* on the right side to select your
     `leaflet-map-sample`, and further below click the blue button to
     *Clone* it to your local computer, as shown in Figure
-    <a href="#fig:desktop-start">87</a>.
+    <a href="#fig:desktop-start">96</a>.
 
 &lt;img src=“images/08-github/desktop-start.png” alt=“Select
 your”leaflet-map-simple" repo and click the *Clone* button to copy it to
 your local computer." /&gt;
 <p class="caption">
-Figure 87: Select your “leaflet-map-simple” repo and click the *Clone*
+Figure 96: Select your “leaflet-map-simple” repo and click the *Clone*
 button to copy it to your local computer.
 </p>
 
 1.  When you clone a repo, GitHub Desktop asks you to select the Local
     Path, meaning the location where you wish to store a copy of your
     GitHub repo on your local computer, as shown in Figure
-    <a href="#fig:desktop-clone-path">88</a>. Before you click the
+    <a href="#fig:desktop-clone-path">97</a>. Before you click the
     *Clone* button, remember the path to this location, since you’ll
     need to find it later.
 
 <img src="images/08-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click *Clone*."  />
 <p class="caption">
-Figure 88: Select the Local Path where your repo will be stored on your
+Figure 97: Select the Local Path where your repo will be stored on your
 computer, then click *Clone*.
 </p>
 
@@ -5561,25 +5739,25 @@ computer, then click *Clone*.
     use this fork?” Select the default entry “To contribute to the
     parent project,” which means you plan to send your edits back to
     your GitHub web account, and click *Continue*, as shown in Figure
-    <a href="#fig:desktop-fork">89</a>.
+    <a href="#fig:desktop-fork">98</a>.
 
 &lt;img src=“images/08-github/desktop-fork.png” alt=“If asked how you
 plan to use this fork, select the default”To contribute to the parent
 project" and click *Continue*." /&gt;
 <p class="caption">
-Figure 89: If asked how you plan to use this fork, select the default
+Figure 98: If asked how you plan to use this fork, select the default
 “To contribute to the parent project” and click *Continue*.
 </p>
 
 1.  Now you have copies of your GitHub repo in two places—in your GitHub
     web account and on your local computer—as shown in Figure
-    <a href="#fig:desktop-finder">90</a>. Your screen may look
+    <a href="#fig:desktop-finder">99</a>. Your screen may look
     different, depending on whether you use Windows or Mac, and the
     Local Path you selected to store your files.
 
 <img src="images/08-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub web account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different."  />
 <p class="caption">
-Figure 90: Now you have two copies of your repo: in your GitHub web
+Figure 99: Now you have two copies of your repo: in your GitHub web
 account (on the left) and on your local computer (on the right, as shown
 in the Mac Finder). Windows screens will look different.
 </p>
@@ -5588,18 +5766,18 @@ in the Mac Finder). Windows screens will look different.
     install the Atom Editor application](https://atom.io). Then go to
     your GitHub Desktop screen, confirm that the Current Repository is
     `leaflet-map-simple`, and click the *Open in Atom* button as shown
-    in Figure <a href="#fig:desktop-atom">91</a>.
+    in Figure <a href="#fig:desktop-atom">100</a>.
 
 <img src="images/08-github/desktop-atom.png" alt="In GitHub Desktop, confirm the Current Repo and click the *Open in Atom* button to edit the code."  />
 <p class="caption">
-Figure 91: In GitHub Desktop, confirm the Current Repo and click the
+Figure 100: In GitHub Desktop, confirm the Current Repo and click the
 *Open in Atom* button to edit the code.
 </p>
 
 1.  Since Atom Editor is integrated with GitHub Desktop, it opens up
     your entire repo as a “project,” where you can click files in the
     left window to open as new tabs to view and edit code, as shown in
-    Figure <a href="#fig:atom-project">92</a>. Open your `index.html`
+    Figure <a href="#fig:atom-project">101</a>. Open your `index.html`
     file and edit the title of your map, around line 22, then save your
     work.
 
@@ -5607,20 +5785,20 @@ Figure 91: In GitHub Desktop, confirm the Current Repo and click the
 your repo as a”project," where you can click files to view code. Edit
 your map title." /&gt;
 <p class="caption">
-Figure 92: Atom Editor opens your repo as a “project,” where you can
+Figure 101: Atom Editor opens your repo as a “project,” where you can
 click files to view code. Edit your map title.
 </p>
 
 1.  After saving your code edit, it’s a good habit to clean up your Atom
     Editor workspace. Right-click on the current Project and select
     *Remove Project Folder* in the menu, as shown in Figure
-    <a href="#fig:atom-remove-project">93</a>. Next time you open up
+    <a href="#fig:atom-remove-project">102</a>. Next time you open up
     Atom Editor, you can right-click to *Add Project Folder*, and choose
     any GitHub repo that you have copied to your local computer.
 
 <img src="images/08-github/atom-remove-project.png" alt="To clean up your Atom Editor workspace, right-click to *Remove Project Folder*."  />
 <p class="caption">
-Figure 93: To clean up your Atom Editor workspace, right-click to
+Figure 102: To clean up your Atom Editor workspace, right-click to
 *Remove Project Folder*.
 </p>
 
@@ -5629,11 +5807,11 @@ Figure 93: To clean up your Atom Editor workspace, right-click to
     location where you saved the repo on your local computer, and
     right-click the `index.html` file, select Open With, and choose your
     preferred web browser, as shown in Figure
-    <a href="#fig:finder-open-with">94</a>.
+    <a href="#fig:finder-open-with">103</a>.
 
 <img src="images/08-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
 <p class="caption">
-Figure 94: Right-click the index.html file on your local computer and
+Figure 103: Right-click the index.html file on your local computer and
 open with a browser to check your edits.
 </p>
 
@@ -5658,12 +5836,12 @@ Desktop.
     track of your work.) Second, click the blue *Push origin* button to
     transfer those edits to the parent copy of your repo on your GitHub
     web account. Both steps are shown in Figure
-    <a href="#fig:desktop-commit-push">95</a>.
+    <a href="#fig:desktop-commit-push">104</a>.
 
 <iframe src="images/08-github/desktop-commit-push.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 95: In this two-step process, click *Commit to Master*, then
+Figure 104: In this two-step process, click *Commit to Master*, then
 click *Push origin* to save and copy your edits from your local computer
 to your GitHub web account, as shown in this [animated
 GIF](https://handsondataviz.org/images/08-github/desktop-commit-push.gif).
@@ -5709,11 +5887,11 @@ his commits back to GitHub as well. Both of us see the commits that each
 other made, line-by-line in green and red (showing additions and
 deletions), by selecting the GitHub repo *Code* tab and clicking on one
 of our commits, as shown in Figure
-<a href="#fig:compare-commits">96</a>.
+<a href="#fig:compare-commits">105</a>.
 
 <img src="images/08-github/compare-commits.png" alt="Drag-and-drop the file to the upload screen."  />
 <p class="caption">
-Figure 96: Drag-and-drop the file to the upload screen.
+Figure 105: Drag-and-drop the file to the upload screen.
 </p>
 
 Although GitHub does not operate like Google Documents, which displays
@@ -6419,7 +6597,7 @@ GitHub](create-repo.html) chapter in this book.
 <iframe src="images/10-leaflet/lmwgs-1-fork-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 97: Screencast: Fork
+Figure 106: Screencast: Fork
 </p>
 
 1.  Scroll up to the top, and click on your repo name to go back to its
@@ -6453,7 +6631,7 @@ Figure 97: Screencast: Fork
 <iframe src="images/10-leaflet/lmwgs-2-make-copy-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 98: Screencast: Share Google Sheet
+Figure 107: Screencast: Share Google Sheet
 </p>
 
 1.  File &gt; Publish the Link to your Google Sheet to the public web,
@@ -6486,7 +6664,7 @@ URL](images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 <iframe src="images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 99: Screencast: Copy Google Sheet URL and paste into GitHub code
+Figure 108: Screencast: Copy Google Sheet URL and paste into GitHub code
 </p>
 
 1.  Next, let’s paste your Google Sheet URL in a second place to keep
@@ -7374,7 +7552,7 @@ favorite mapping tools.
 
 We will begin by looking at the process of geocoding, or transforming
 human-friendly address lines into points that can be plotted on the map
-(see Figure <a href="#fig:transform-data">100</a> for inspiration). We
+(see Figure <a href="#fig:transform-data">109</a> for inspiration). We
 will then talk about polygons and why you should normalize your data
 before creating choropleth maps. These map transformations happen inside
 spreadsheets, so you won’t directly deal with map data until you are
@@ -7382,7 +7560,7 @@ halfway through the chapter.
 
 <img src="images/11-transform/transform-data.png" alt="To map addresses, you need to geocode them first."  />
 <p class="caption">
-Figure 100: To map addresses, you need to geocode them first.
+Figure 109: To map addresses, you need to geocode them first.
 </p>
 
 Before you can dive into creating shapes and dealing with boundaries in
@@ -7415,12 +7593,12 @@ If you have just a few addresses, it might be faster to geocode them
 with [Google Maps](https://www.google.com/maps). Search for an address,
 right-click on that point, and select *What’s here?* to reveal a popup
 window with its latitude and longitude, as shown in Figure
-<a href="#fig:gmaps-whats-here">101</a>. You can copy and paste the
+<a href="#fig:gmaps-whats-here">110</a>. You can copy and paste the
 coordinates into your spreadsheet.
 
 <img src="images/11-transform/gmaps-whats-here.png" alt="To geocode one address, search in Google Maps and right-click *What's here?* to show coordinates."  />
 <p class="caption">
-Figure 101: To geocode one address, search in Google Maps and
+Figure 110: To geocode one address, search in Google Maps and
 right-click *What’s here?* to show coordinates.
 </p>
 
@@ -7449,12 +7627,12 @@ The spreadsheet contains six columns. Populate the first column,
 *Location*, with your addresses. The remaining five columns will be
 filled by the geocoding script. Select all six columns, go to *Geocoder*
 in the menu, and choose which geocoding utility to use, like is shown in
-Figure <a href="#fig:sheets-geocoder">102</a>.
+Figure <a href="#fig:sheets-geocoder">111</a>.
 
 <iframe src="images/11-transform/sheets-geocoder.gif" width="100%" height="280px">
 </iframe>
 <p class="caption">
-Figure 102: Put addresses in the first column, and use Geocoder to fill
+Figure 111: Put addresses in the first column, and use Geocoder to fill
 in the remaining five.
 </p>
 
@@ -7509,7 +7687,7 @@ You only need to populate the first column, *Location*. The rest seven
 columns will be populated by the Geocoder. Similar to the previous
 template, select all eight columns, and go to *Geocoder &gt; US Census
 2010 Geographies*, like is shown in Figure
-<a href="#fig:sheets-geocoder-censusgeo">103</a>.
+<a href="#fig:sheets-geocoder-censusgeo">112</a>.
 
 If you run this script for the first time, Google Sheets will ask you
 for permission to run, and will possibly warn you that this script is
@@ -7520,7 +7698,7 @@ data.
 <iframe src="images/11-transform/sheets-geocoder-censusgeo.gif" width="100%" height="330px">
 </iframe>
 <p class="caption">
-Figure 103: Put addresses in the first column, and use Geocoder to fill
+Figure 112: Put addresses in the first column, and use Geocoder to fill
 in the remaining seven.
 </p>
 
@@ -7629,23 +7807,23 @@ other indicators, such as mortality and patient experience.
 Now, imagine you are given a task to create a polygon map of total
 hospitals by US state, so instead of showing individual hospitals as
 points, you want darker shadows of blue to represent states with more
-hospitals. See Figure <a href="#fig:pivot-address">104</a> to see what
+hospitals. See Figure <a href="#fig:pivot-address">113</a> to see what
 we are talking about.
 
 <img src="images/11-transform/pivot-address.png" alt="You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps."  />
 <p class="caption">
-Figure 104: You can count addresses by state (or other area) to produce
+Figure 113: You can count addresses by state (or other area) to produce
 polygon, or choropleth, maps instead of point maps.
 </p>
 
 First, save the database to your local machine by going to *Export &gt;
 Download &gt; CSV* of Socrata interface. Figure
-<a href="#fig:pivot-address-export">105</a> shows where you can find the
+<a href="#fig:pivot-address-export">114</a> shows where you can find the
 Export button.
 
 <img src="images/11-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
 <p class="caption">
-Figure 105: In Socrata, you can export the entire dataset as a CSV.
+Figure 114: In Socrata, you can export the entire dataset as a CSV.
 </p>
 
 Next, open the file in your favorite spreadsheet tool. If you use Google
@@ -7659,7 +7837,7 @@ no missing values—and choose *Summarize by: COUNTA*. Voila!
 
 <img src="images/11-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
-Figure 106: Use pivot tables in any spreadsheet software to count
+Figure 115: Use pivot tables in any spreadsheet software to count
 addresses per area (such as state, county, of zip code).
 </p>
 
@@ -7678,7 +7856,7 @@ Normalize Data to Create Meaningful Polygon Maps
 
 Polygon (choropleth) maps are best when they represent relative, not
 absolute values. Consider two maps shown in Figure
-<a href="#fig:normalize-map-data">107</a>. They both are about Covid-19
+<a href="#fig:normalize-map-data">116</a>. They both are about Covid-19
 cases in the US states (excluding Alaska and Hawaii) as of June 26,
 2020. The map on the left shows total number of recorded cases per
 state, and the map on the right shows cases adjusted by the state’s
@@ -7687,7 +7865,7 @@ differences in spatial patterns?
 
 <img src="images/11-transform/normalize-map-data.png" alt="Choropleth (polygon) maps work best with normalized values."  />
 <p class="caption">
-Figure 107: Choropleth (polygon) maps work best with normalized values.
+Figure 116: Choropleth (polygon) maps work best with normalized values.
 </p>
 
 Note: Both maps show Covid-19 data collected by the New York Times and
@@ -7793,7 +7971,7 @@ address, and guest reviews are the attributes, which bring value to your
 location data.
 
 Second, geospatial data can be **raster** or **vector**, as illustrated
-in Figure <a href="#fig:geospatial-raster-vector">108</a>. Raster data
+in Figure <a href="#fig:geospatial-raster-vector">117</a>. Raster data
 is a grid of cells (“pixels”) of a certain size (for example, 1 meter by
 1 meter). For example, satellite images of the Earth that you see on
 Google Maps are raster geospatial data. Each pixel contains the color of
@@ -7805,7 +7983,7 @@ built by volunteers tracing outlines of objects from satellite images.
 
 <img src="images/11-transform/geospatial-raster-vector.png" alt="Geospatial data can be raster or vector."  />
 <p class="caption">
-Figure 108: Geospatial data can be raster or vector.
+Figure 117: Geospatial data can be raster or vector.
 </p>
 
 In this book, we will focus on vector data, which is based on points,
@@ -7847,11 +8025,11 @@ QGIS all support GeoJSON.
 
 Also, your GitHub repository will automatically display any GeoJSON
 files in a map view, like is shown in Figure
-<a href="#fig:geojson-github">109</a>.
+<a href="#fig:geojson-github">118</a>.
 
 <img src="images/11-transform/geojson-github.png" alt="GitHub can show previews of GeoJSON files stored in repositories."  />
 <p class="caption">
-Figure 109: GitHub can show previews of GeoJSON files stored in
+Figure 118: GitHub can show previews of GeoJSON files stored in
 repositories.
 </p>
 
@@ -7937,7 +8115,7 @@ you don’t have a geospatial file, download [Hartford
 parks](data/hartford-parks.kml) in KML format. If GeoJson.io was able to
 recognize and import the file, you will see a green popup message in the
 upper-left corner saying how many features (in case of Hartford parks,
-polygons) were imported. Figure <a href="#fig:geojson-io-import">110</a>
+polygons) were imported. Figure <a href="#fig:geojson-io-import">119</a>
 shows us that 62 features were imported from the sample Hartford parks
 file. You can see that the polygons appeared on top of the Mapbox world
 layer.
@@ -7948,7 +8126,7 @@ tool, such as Mapshaper or QGIS, to convert your file to GeoJSON.
 
 <img src="images/11-transform/geojson-io-import.png" alt="GeoJson.io successfully imported Hartford parks KML file."  />
 <p class="caption">
-Figure 110: GeoJson.io successfully imported Hartford parks KML file.
+Figure 119: GeoJson.io successfully imported Hartford parks KML file.
 </p>
 
 You can now save your file to GeoJSON. Go to *Save &gt; GeoJSON* to
@@ -7961,12 +8139,12 @@ GeoJson.io can transform a spreadsheet with *latitude* (or *lat*) and
 Each row in the spreadsheet becomes its own point, and all columns other
 than *lat* and *lon* become *attributes* (or *properties*) of point
 features. An example of such spreadsheet is shown in Figure
-<a href="#fig:geojson-io-csv-data">111</a>. You can [download
+<a href="#fig:geojson-io-csv-data">120</a>. You can [download
 it](data/hartford-and-suburbs.csv) for the exercise.
 
 <img src="images/11-transform/geojson-io-csv-data.png" alt="A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features."  />
 <p class="caption">
-Figure 111: A spreadsheet with lat/lon columns can be transformed into a
+Figure 120: A spreadsheet with lat/lon columns can be transformed into a
 GeoJSON with point features.
 </p>
 
@@ -8002,7 +8180,7 @@ anything but instead would add point features to the existing map.
 <iframe src="images/11-transform/dataviz-geojsonio-640.gif" width="100%" height="466px">
 </iframe>
 <p class="caption">
-Figure 112: A spreadsheet with coordinates columns can be transformed
+Figure 121: A spreadsheet with coordinates columns can be transformed
 into a GeoJSON with point features.
 </p>
 
@@ -8018,11 +8196,11 @@ to work with.
 2.  In the upper-right corner of the map, use the Search tool to find
     the area you’re interested in mapping. For this exercise, we will
     use tennis courts at Trinity College, Hartford, as shown in Figure
-    <a href="#fig:geojson-io-draw">113</a>.
+    <a href="#fig:geojson-io-draw">122</a>.
 
 <img src="images/11-transform/geojson-io-draw.png" alt="Use drawing tools to create points, lines, and polygons in GeoJson.io."  />
 <p class="caption">
-Figure 113: Use drawing tools to create points, lines, and polygons in
+Figure 122: Use drawing tools to create points, lines, and polygons in
 GeoJson.io.
 </p>
 
@@ -8109,7 +8287,7 @@ or create a `.zip` archive.
     or delete them.
 2.  To export, go to *Export* in the upper-right corner, and select a
     desired file format. The choice of export formats is shown in Figure
-    <a href="#fig:mapshaper-export">114</a>. As of July 2020, these are
+    <a href="#fig:mapshaper-export">123</a>. As of July 2020, these are
     Shapefile, GeoJSON, TopoJSON (similar to GeoJSON, but with
     topographical data), JSON records, CSV, or SVG (Scalable Vector
     Graphics, for web and print). If you export more than one layer at a
@@ -8118,7 +8296,7 @@ or create a `.zip` archive.
 
 <img src="images/11-transform/mapshaper-export.png" alt="You can use Mapshaper to quickly convert between geospatial file formats."  />
 <p class="caption">
-Figure 114: You can use Mapshaper to quickly convert between geospatial
+Figure 123: You can use Mapshaper to quickly convert between geospatial
 file formats.
 </p>
 
@@ -8128,7 +8306,7 @@ Tip: Mapshaper doesn’t work with KML or KMZ files, but you can use
 #### Edit data for specific polygons
 
 You can edit attribute data of individual polygons (and also points and
-lines) in Mapshaper. Figure <a href="#fig:mapshaper-edit">115</a> shows
+lines) in Mapshaper. Figure <a href="#fig:mapshaper-edit">124</a> shows
 you how.
 
 1.  Import the file whose polygon attributes you want to edit.
@@ -8141,7 +8319,7 @@ you how.
 
 <img src="images/11-transform/mapshaper-edit.png" alt="Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points."  />
 <p class="caption">
-Figure 115: Use *edit attributes* tool (under Cursor tool) to edit
+Figure 124: Use *edit attributes* tool (under Cursor tool) to edit
 attributes of polygons, lines, and points.
 </p>
 
@@ -8152,13 +8330,13 @@ visualization projects where zoomed-out geographies are shown. Detailed
 boundaries are heavy, and may slow down your web maps.
 
 Consider two maps of the contiguous US states, also known as Lower-48,
-shown in Figure <a href="#fig:mapshaper-simplify-demo">116</a>. The map
+shown in Figure <a href="#fig:mapshaper-simplify-demo">125</a>. The map
 on the left is more detailed and is about 230 kilobytes, but the map on
 the right is only 37 kilobytes, 6 times smaller!
 
 <img src="images/11-transform/mapshaper-simplify-demo.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
 <p class="caption">
-Figure 116: Consider simplifying geometries with Mapshaper to make your
+Figure 125: Consider simplifying geometries with Mapshaper to make your
 web maps faster.
 </p>
 
@@ -8169,7 +8347,7 @@ web maps faster.
     methods. We recommend checking *prevent shape removal*, and leaving
     the default *Visvalingam / weighted area*. Click *Apply*.
 3.  You will see a slider with `100%` appear on top (Figure
-    <a href="#fig:mapshaper-simplify">117</a>), replacing the layer
+    <a href="#fig:mapshaper-simplify">126</a>), replacing the layer
     selection dropdown. Move the slider to the right and see the map
     simplify its shape as you go. Stop when you think the map looks
     appropriate (when the shapes are still recognizable).
@@ -8179,7 +8357,7 @@ web maps faster.
 
 <img src="images/11-transform/mapshaper-simplify.png" alt="Use Simplify & Repair tools in Mapshaper."  />
 <p class="caption">
-Figure 117: Use Simplify & Repair tools in Mapshaper.
+Figure 126: Use Simplify & Repair tools in Mapshaper.
 </p>
 
 Tip: You may find the US shape a bit unusual and vertically “shrunk”. In
@@ -8193,11 +8371,11 @@ allows you to type commands for common map editing tasks. One of such
 tasks is to create an outline map by removing the internal boundaries.
 For example, you can dissolve state boundaries of the US map in the
 previous exercise to get the outline of the country, like is shown in
-Figure <a href="#fig:mapshaper-dissolve">118</a>.
+Figure <a href="#fig:mapshaper-dissolve">127</a>.
 
 <img src="images/11-transform/mapshaper-dissolve.png" alt="Mapshaper lets you dissolve boundaries to create an outline shape."  />
 <p class="caption">
-Figure 118: Mapshaper lets you dissolve boundaries to create an outline
+Figure 127: Mapshaper lets you dissolve boundaries to create an outline
 shape.
 </p>
 
@@ -8245,12 +8423,12 @@ Mapshaper allows you to do just that using one simple `-clip` command.
     -clip hartfordcounty-outline -filter-slivers
 
 1.  Your Mapshaper state should look like pictured in Figure
-    <a href="#fig:mapshaper-clip">119</a>. You can now save the file on
+    <a href="#fig:mapshaper-clip">128</a>. You can now save the file on
     your computer using the *Export* button.
 
 <img src="images/11-transform/mapshaper-clip.png" alt="When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature iteslf."  />
 <p class="caption">
-Figure 119: When clipping, make sure your active layer is the one being
+Figure 128: When clipping, make sure your active layer is the one being
 clipped (with many features), not the clipping feature iteslf.
 </p>
 
@@ -8310,13 +8488,13 @@ attribute of the map file, and `town` column of the CSV file.
     performed successfully, or if Mapshaper encountered any errors.
 2.  Use the *Cursor &gt; inspect attributes* tool to make sure you see
     CSV columns as fields of your polygons, like is shown in Figure
-    <a href="#fig:mapshaper-join">120</a>.
+    <a href="#fig:mapshaper-join">129</a>.
 3.  You can now save the file to your computer by clicking the *Export*
     button.
 
 <img src="images/11-transform/mapshaper-join.png" alt="Mapshaper lets you join spatial and CSV files using common keys (for example, town names)."  />
 <p class="caption">
-Figure 120: Mapshaper lets you join spatial and CSV files using common
+Figure 129: Mapshaper lets you join spatial and CSV files using common
 keys (for example, town names).
 </p>
 
@@ -8357,14 +8535,14 @@ state, in our case).
 
 1.  Use the *Cursor &gt; inspect attributes* tool to make sure polygons
     obtained a new field with the recorded count of points, like is
-    shown in Figure <a href="#fig:mapshaper-count-points">121</a>.
+    shown in Figure <a href="#fig:mapshaper-count-points">130</a>.
 
 2.  Save the new file using *Export* button and choosing the desired
     output format.
 
 <img src="images/11-transform/mapshaper-count-points.png" alt="Mapshaper's -join can count points in polygons."  />
 <p class="caption">
-Figure 121: Mapshaper’s -join can count points in polygons.
+Figure 130: Mapshaper’s -join can count points in polygons.
 </p>
 
 #### More about joins
@@ -8433,13 +8611,13 @@ let’s extract a list of towns from it.
     two columns with the same values.
 5.  Pick a few towns, for example *West Hartford* and *Bloomfield*, and
     assign “Bloomfield-West Hartford” to their *merged* column, like is
-    shown in Figure <a href="#fig:mapshaper-merge-csv">122</a>. You may
+    shown in Figure <a href="#fig:mapshaper-merge-csv">131</a>. You may
     stop right here and move to the next step, or keep assigning
     district names to a few other neighboring towns.
 
 <img src="images/11-transform/mapshaper-merge-csv.png" alt="Create a two-column crosswalk of towns and which districts they should be merged to." width="250px" />
 <p class="caption">
-Figure 122: Create a two-column crosswalk of towns and which districts
+Figure 131: Create a two-column crosswalk of towns and which districts
 they should be merged to.
 </p>
 
@@ -8466,12 +8644,12 @@ CSV file.
 In our example, only Bloomfield and West Hartford are dissolved into a
 combined “Bloomfield-West Hartford” regional health district (with the
 shared boundary between towns becoming grayed out), and all of the other
-polygons remain the same. Figure <a href="#fig:mapshaper-merge">123</a>
+polygons remain the same. Figure <a href="#fig:mapshaper-merge">132</a>
 shows the final result.
 
 <img src="images/11-transform/mapshaper-merge.png" alt="Merge polygons based on a predefined crosswalk."  />
 <p class="caption">
-Figure 123: Merge polygons based on a predefined crosswalk.
+Figure 132: Merge polygons based on a predefined crosswalk.
 </p>
 
 You can inspect attribute data of polygons using *Cursor &gt; inspect
@@ -8501,20 +8679,20 @@ easiest way to convert is to use free Google Earth Pro.
     Open* and choose your KMZ file.
 3.  Right-click (or control-click) on the KMZ layer under Places menu,
     and select *Save Place As…*, like is shown in Figure
-    <a href="#fig:kmz-earth">124</a>.
+    <a href="#fig:kmz-earth">133</a>.
 
 <img src="images/11-transform/kmz-earth.png" alt="In Google Earth Pro, right-click KMZ layer and choose *Save Place As*." width="400px" />
 <p class="caption">
-Figure 124: In Google Earth Pro, right-click KMZ layer and choose *Save
+Figure 133: In Google Earth Pro, right-click KMZ layer and choose *Save
 Place As*.
 </p>
 
 1.  In the dropdown menu of *Save file…* window, choose KML format, like
-    is shown in Figure <a href="#fig:kmz-save-as">125</a>.
+    is shown in Figure <a href="#fig:kmz-save-as">134</a>.
 
 <img src="images/11-transform/kmz-save-as.png" alt="Save as KML, not KMZ." width="350px" />
 <p class="caption">
-Figure 125: Save as KML, not KMZ.
+Figure 134: Save as KML, not KMZ.
 </p>
 
 Alternatively, you can use any zip-utility to extract a KML file from
@@ -8904,13 +9082,13 @@ that appears after the period, such as `data.csv` or `map.geojson`. The
 Mac computer operating system hides these by default, so you need to
 turn them on by going to Finder &gt; Preferences &gt; Advanced, and
 check the box to *Show all filename extensions*, as shown in Figure
-<a href="#fig:mac-file-extensions2">126</a>.
+<a href="#fig:mac-file-extensions2">135</a>.
 
 <img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to Finder >
 Preferences &gt; Advanced and check the box to *Show all filename
 extensions*." /&gt;
 <p class="caption">
-Figure 126: On a Mac, go to Finder &gt; Preferences &gt; Advanced and
+Figure 135: On a Mac, go to Finder &gt; Preferences &gt; Advanced and
 check the box to *Show all filename extensions*.
 </p>
 
@@ -9528,10 +9706,10 @@ this [bad example](#style-guide).
 To cross-reference figures and tables, and display their auto-number and
 allow readers to jump there, write a call-out with a Bookdown reference
 to a code-chunk label, such as
-`See Figure <a href="#fig:sample-map">129</a>` or
+`See Figure <a href="#fig:sample-map">138</a>` or
 `See Table <a href="#tab:left-table">1</a>`. Demos:
 
--   See Figure <a href="#fig:tiger">127</a>.
+-   See Figure <a href="#fig:tiger">136</a>.
 -   See Table <a href="#tab:left-table">1</a>.
 
 Cross-reference interactivity varies by output:
@@ -9680,11 +9858,11 @@ Read more about these options in this Bookdown chapter:
 ### Demo: R code-chunk for small static image for HTML and PDF editions
 
 Small is defined as each side less than 300px, as shown in Figure
-<a href="#fig:tiger">127</a>.
+<a href="#fig:tiger">136</a>.
 
 <img src="images/16-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
-Figure 127: Caption here. Markdown embedded links are acceptable.
+Figure 136: Caption here. Markdown embedded links are acceptable.
 </p>
 
 ### R code-chunk for larger static image using out.width and PDF img
@@ -9694,11 +9872,11 @@ out.width to a pixel number for ideal display in the HTML edition. Also,
 if needed, copy the image, use Photoshop to create a smaller image size,
 and save with same file name and a .pdf extension for auto-substitution
 in the PDF output …as shown in Figure
-<a href="#fig:screenshot-tall">128</a>.
+<a href="#fig:screenshot-tall">137</a>.
 
 <img src="images/16-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
 <p class="caption">
-Figure 128: Using out.width=200 and smaller PDF image size.
+Figure 137: Using out.width=200 and smaller PDF image size.
 </p>
 
 R code-chunks allow more complex conditional formatting, where an
@@ -9711,12 +9889,12 @@ add a line in a `custom-scripts.html` file.
 
 ### Demo: R code-chunk for iframe in HTML and static image in PDF
 
-…as shown in Figure <a href="#fig:sample-map">129</a>.
+…as shown in Figure <a href="#fig:sample-map">138</a>.
 
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="100%" height="600px">
 </iframe>
 <p class="caption">
-Figure 129: Caption here, and add embedded link to explore the
+Figure 138: Caption here, and add embedded link to explore the
 [full-screen interactive
 map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 </p>
@@ -9725,12 +9903,12 @@ map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 
 When appropriate, create animated GIF files using Camtasia, and add
 fade-to-black to mark the end-point in the looped version. TODO: ADD
-this here …as shown in Figure <a href="#fig:sheets-option-drag">130</a>.
+this here …as shown in Figure <a href="#fig:sheets-option-drag">139</a>.
 
 <iframe src="images/16-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
-Figure 130: Caption here, with embedded link to the [animated
+Figure 139: Caption here, with embedded link to the [animated
 GIF](https://handsondataviz.org/images/16-bookdown/sheets-option-drag.gif).
 </p>
 
@@ -9738,12 +9916,12 @@ GIF](https://handsondataviz.org/images/16-bookdown/sheets-option-drag.gif).
 
 Be sure to use the *embed* link from the YouTube *share* button.
 
-…as shown in the video <a href="#fig:video-sample">131</a>.
+…as shown in the video <a href="#fig:video-sample">140</a>.
 
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 131: Caption here, with embedded link to the [YouTube
+Figure 140: Caption here, with embedded link to the [YouTube
 video](https://youtu.be/-nGdrzMuUnI).
 </p>
 
@@ -9756,7 +9934,7 @@ this will alter figure-numbering between the HTML and PDF editions.
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 132: Caption **only** for HTML version, with embedded link to the
+Figure 141: Caption **only** for HTML version, with embedded link to the
 [YouTube video](https://youtu.be/w6dQ-RIQ5bc).
 </p>
 

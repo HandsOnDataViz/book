@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-03" />
+<meta name="date" content="2020-07-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -166,10 +166,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
-<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Group Data with Pivot Tables</a></li>
+<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
-<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
 <li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with Relational Database</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Online Forms</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
@@ -299,57 +299,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="calculate" class="section level2 unnumbered" number="">
 <h2>Calculate with Formulas and Functions</h2>
-<p><strong>TODO: START AGAIN HERE</strong></p>
-<ul>
-<li>when possible, start text by posing a common problem, and how this method can solve it</li>
-<li>redo visuals: Google Sheets with better examples</li>
-<li>see other notes inserted below</li>
-</ul>
-<p>Simple formulas can save you lots of time. The big advantage of spreadsheet tools is the ability to insert simple formulas to calculate numbers, or combine columns of text, for entire rows and columns.</p>
-<div id="write-a-simple-formula" class="section level4 unnumbered" number="">
-<h4>Write a simple formula</h4>
-<p>In most spreadsheets, begin writing a simple formula with an equal sign, and refer to specific cells and functions, such as:</p>
-<ul>
-<li>= A2 + B2 + C2</li>
-</ul>
-</div>
-<div id="write-formulas-with-built-in-functions" class="section level4 unnumbered" number="">
-<h4>Write formulas with built-in functions</h4>
-<p>TODO: rewrite to show how this is same as above</p>
-<ul>
-<li>= Sum(A2:C2)</li>
-</ul>
-<p>TODO: rewrite to show common numerical and textual functions</p>
-<ul>
-<li>= Average(A2:C2)</li>
-</ul>
-</div>
-<div id="copy-and-paste-or-drag-formulas" class="section level4 unnumbered" number="">
-<h4>Copy and paste, or drag formulas</h4>
-<p>If you’ve inserted a formula into one row, how can you quickly do the same calculation across all rows?</p>
-<p>Spreadsheets can magically automate calculations across rows or columns. In most cases, you can copy and paste a formula into new cells. Sometimes you can click-and-drag the lower-right corner of a formula cell (which may appear as a cross-hair) to automate calculations.</p>
-<iframe src="images/02-spreadsheet/SpreadsheetFormula640w.gif" width="672" height="400px">
+<p>Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. In this section you’ll learn how to write a simple formula that adds up a column of numbers, then you’ll insert built-in functions to show the sum and average.</p>
+<ol style="list-style-type: decimal">
+<li><p>Open this Google Sheet of <a href="https://docs.google.com/spreadsheets/d/15Q16jcgoIcoQ-UkAJ3nfQpU-4d_Hk6tJqEYoobmnxY0/">Measles cases in three nations 2010-18</a>, a subset of <a href="https://www.who.int/data/gho/data/indicators/indicator-details/GHO/measles---number-of-reported-cases">data from the World Health Organization</a>. Log into your Google Drive account, and go to <em>File &gt; Make a Copy</em> to edit your own version.</p></li>
+<li><p>Let’s calculate the total number of reported cases in 2010 by inserting a simple formula that adds up the cells for Canada, Mexico, and the US that year. Spreadsheet formulas begin with an <code>=</code> equal sign, and refer to specific cells and operations. Click on cell B5 and type in <code>= B2 + B3 + B4</code> then press <em>Return</em> or <em>Enter</em>. A total of 162 cases in 2010 will appear in the cell where you entered the formula.</p></li>
+<li><p>Now let’s speed up our work using the built-in <code>SUM</code> function to total up numbers for us. Click on column C5 and type in <code>=SUM(C2:C4)</code>, which calculates the sum of all of the cells between C2 and C4. then press <em>Return</em>. A total of 1,026 cases in 2011 will appear.</p></li>
+<li><p>Now let’s speed up our work even more by using the built-in click-and-drag tool to extend the <code>SUM</code> calculation across the row for each remaining year. Click in cell C5, and float your cursor over the dot in the bottom-right corner, which transforms your cursor into a crosshair symbol. Then click-and-drag your crosshair cursor from cell C5 to J5, which automatically copies and pastes the formula in each cell, and let go, as shown in Figure <a href="calculate.html#fig:drag-calculation">2.15</a>.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:drag-calculation"></span>
+<iframe src="images/02-spreadsheet/drag-calculation.gif" width="672" height="300px">
 </iframe>
+<p class="caption">
+Figure 2.15: Click on the bottom-right dot to transform your cursor into a crosshair, then drag to paste the formula, as shown in this <a href="https://handsondataviz.org/images/02-spreadsheet/drag-calculation.gif">animated GIF</a>.
+</p>
 </div>
-<div id="copy-and-paste-special-values-to-replace-formulas-with-data" class="section level4 unnumbered" number="">
-<h4>Copy and Paste &gt; Special &gt; Values to replace formulas with data</h4>
-<p>After inserting calculations in a spreadsheet, sometimes dynamic formulas must be replaced with static data before the results can be visualized. One solution is to select and copy a column (or the entire sheet), then paste &gt; special &gt; values to replace the formula with numerical results.</p>
-<iframe src="images/02-spreadsheet/SpreadsheetPasteSpecialValues640w.gif" width="672" height="400px">
-</iframe>
-<p>Remember that if you need to check or run the calculations again at a later point, click (or right-click) the tab to save a copy to the spreadsheet as a backup.</p>
-</div>
-<div id="create-a-column-of-consecutive-numbers" class="section level4 unnumbered" number="">
-<h4>Create a column of consecutive numbers</h4>
-<p>To quickly create a column of consecutive numbers, such as unique ID numbers, in most spreadsheet tools:</p>
-<ul>
-<li>Insert the number 1 into a cell and press Return</li>
-<li>Click the cell and float the cursor over the bottom-right corner, where it will change into a cross-hair symbol</li>
-<li>On a Mac, hold down the Option key and drag the cross-hair down to create consecutive numbers</li>
-<li><strong>TO DO</strong> insert equivalent commands for Windows, Chromebook</li>
-</ul>
-<iframe src="images/02-spreadsheet/excel-drag-consec.gif" width="672" height="400px">
-</iframe>
-</div>
+<ol start="5" style="list-style-type: decimal">
+<li>We can use another built-in function to calculate the average number of reported cases for each nation over time. Click in cell K2 and type in <code>=AVERAGE(B2:J2)</code> or select it if the tool suggests it. Then click the right-corner dot in cell K2 and drag downward to extend the calculation for the other rows.</li>
+</ol>
+<p>Tip: Spreadsheet tools ignore empty cells when performing calculations. In this example, the World Health Organization did not list any data for the US in 2018.</p>
+<p>Warning: When you save a spreadsheet in CSV format, your calculated results will remain, but any formulas that created those results will disappear from the CSV sheet. Keep the original in a spreadsheet format as a reminder about how you constructed the formulas.</p>
+<p>Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text. See more examples in the “Split data into two or more columns” and “Combine columns into one” sections in <a href="clean.html">Chapter 4: Clean Up Messy Data</a>. In the next section, you’ll learn a more advanced spreadsheet method to regroup data with a pivot table.</p>
 </div>
             </section>
 

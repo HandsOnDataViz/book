@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Collect and Share Data with Google Forms | Hands-On Data Visualization</title>
+  <title>Collect Data with Online Forms | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Collect and Share Data with Google Forms | Hands-On Data Visualization" />
+  <meta property="og:title" content="Collect Data with Online Forms | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Collect and Share Data with Google Forms | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Collect Data with Online Forms | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets and Tableau Public, then gradually working up to editing open-source Chart.js and Leaflet code templates on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-03" />
+<meta name="date" content="2020-07-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="vlookup.html"/>
-<link rel="next" href="database.html"/>
+<link rel="prev" href="database.html"/>
+<link rel="next" href="find.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -166,10 +166,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
-<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Group Data with Pivot Tables</a></li>
+<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
-<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect and Share Data with Google Forms</a></li>
 <li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with Relational Database</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Online Forms</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
@@ -298,16 +298,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="forms" class="section level2 unnumbered" number="">
-<h2>Collect and Share Data with Google Forms</h2>
-<p>TODO: write simple tutorial for Google Forms and explain how to share the spreadsheet; also mention other web form services</p>
+<h2>Collect Data with Online Forms</h2>
+<p>No doubt, everyone with an email address has been asked to fill out at least one online form. We promise <em>not</em> to send you another! But if you need to collect simple data from people who communicate digitally with you, sometimes the easiest solution is to send them an online form that compiles their responses in a data table, which can be much faster than re-entering information from paper forms.</p>
+<p>If you already have a Google Drive account, one tool that many people overlook is Google Forms, which is partially hidden under <em>New &gt; More &gt; Google Forms</em>, as shown in Figure <a href="forms.html#fig:forms-new">2.21</a>.</p>
+
+<div class="figure"><span id="fig:forms-new"></span>
+<img src="images/02-spreadsheet/forms-new.png" alt="The Google Forms tool is partially hidden in the Google Drive New &gt; More menu."  />
+<p class="caption">
+Figure 2.21: The Google Forms tool is partially hidden in the Google Drive <em>New &gt; More</em> menu.
+</p>
 </div>
+<p>The Google Forms <em>Questions</em> tab allows you to request different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure <a href="forms.html#fig:forms-questions">2.22</a>. Click the <em>Preview</em> (eyeball) button to see how your form will appear to users, then click the <em>Send</em> button to distribute via email, a link, or an iframe. You can learn more about how to use the latter in <a href="embed.html">Chapter 7: Embed On Your Web</a>.</p>
+
+<div class="figure"><span id="fig:forms-questions"></span>
+<img src="images/02-spreadsheet/forms-questions.png" alt="The Google Forms Questions tab allows you to request different types of responses."  />
+<p class="caption">
+Figure 2.22: The Google Forms <em>Questions</em> tab allows you to request different types of responses.
+</p>
+</div>
+<p>The Google Forms <em>Responses</em> tab includes a button to open answers you receive in a linked Google Sheet, as shown in Figure <a href="forms.html#fig:forms-responses">2.23</a>. As you’ve learned in this chapter, data becomes more powerful when you can share, organize, and analyze it using spreadsheet tools to help reveal and tell its underlying stories.</p>
+
+<div class="figure"><span id="fig:forms-responses"></span>
+<img src="images/02-spreadsheet/forms-responses.png" alt="The Google Forms Responses tab includes a button to open answers in a linked Google Sheet."  />
+<p class="caption">
+Figure 2.23: The Google Forms <em>Responses</em> tab includes a button to open answers in a linked Google Sheet.
+</p>
+</div>
+<p><strong>Summary</strong>
+If you’re one of the many people who “never really learned” about spreadsheets in school or on the job, or if you’ve taught yourself bits and pieces along the way, we hope that this chapter has successfully introduced or refreshed your skills. All of the subsequent chapters in this book, especially those on designing interactive charts and maps, require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, as well as more advanced skills in pivoting tables and matching with lookup tables, with the broader goal of telling your data stories.</p>
+<p>The next chapter describes strategies for finding data, particularly on open data sites operated by governmental and non-profit organizations, where you’ll also need spreadsheet skills to download information in an organized way. See additional spreadsheet skills in later chapters of the book. <a href="clean.html">Chapter 4: Clean Up Messy Data</a> demonstrates how to find and replace, split data into columns, and combine columns of data (such as when you need the street address, city, and postal code all in one line). <a href="transform.html">Chapter 11: Transform Your Map Data</a> also features more advanced spreadsheet skills and tools, such as how to geocode addresses, pivot address points into polygons, and how to normalize data to create more meaningful polygon maps.</p>
+
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="vlookup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="database.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="database.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="find.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,73 +1,65 @@
 # Find and Know Your Data {#find}
+In the early stages of a visualization project, you will likely ask two important and related questions: *Where can I find data?* and when I do, *How do I know what it really means?* If you skip over these questions and leap too quickly into constructing charts and maps, you run the risk of creating meaningless, or perhaps worse, misleading visualizations. This chapter breaks down both of these broad questions in greater detail, and provides concrete strategies to [recognize bad data](bad.html), [source your data](source.html), navigate [public versus private data](public.html), and search a growing number of [open data repositories](opendata.html).
 
-When searching for information for a visualization project, ask yourself these questions to find and know your data:
+When searching for data, your newest best friend may be a librarian. Sometimes a data-smart librarian happens to know exactly where to locate a dataset that you've been seeking for day. But their more valuable skill is guiding us on *how to search* by reflecting on the types of questions librarians commonly ask:
 
+1. What types of organizations may have collected or published the data you seek? If a governmental organization may have been involved, then at what level (national, state/provincial, regional, or municipal), and which branch or agency? Or might data have been compiled by a non-governmental organization, such as academic institutions, journalists, for-profit corporations, or non-profit groups? Figuring out which organizations might have collected the data can help point you to the digital or print materials they typically publish, and most appropriate tools to focus your search in that particular area.
 
-- Which organizations might have collected or published data on this topic?
-  - government agencies
-  - academic institutions
-  - non-governmental or non-profit organizations
-  - open data repositories, which may be operated by any of the above....
-- What level of data is available: individual cases or aggregated into larger groups?
-  - for example, education data sometimes available at individual student level (explain), but due to privacy laws, is more likely made public in larger groups (school data, district data, state data)
-- When is the most current data available?
+2. Have any prior publications drawn on similar datasets, and if so, how can we trace their sources? Some of our best data visualization ideas began while reading textual evidence or noticing a table in a print publication or outdated web page, which convinced us that the data existed *somewhere*. With these valuable leads, librarians can help you track down source notes on where the data originated, or sometimes find more up-to-date versions of the data.  
 
+3. What level(s) of data are available? Is information disaggregated by individual cases or aggregated into larger groups? Librarians can help us to decipher how and why different organizations publish data in different formats. For example, US Census seeks to collect data every ten years about each person residing in the nation, but under the law, this individual-level data is confidential and not released to the public for 72 years. You can look up individual census data for 1940 and earlier decades at the [US National Archives](https://www.archives.gov/research/genealogy/census/about) and other websites. But the US Census publishes current data for larger areas, such as neighborhood-level block groups, census tracts, cities, and states, by aggregating individual records into data tables, and suppressing small-numbered cells to protect people's privacy. Librarians can help us understand organization's guidelines on when and how they make data available at different levels.
 
+If your search has produced some results, the next step is to get to know your data. Closely examine your files and ask questions about their origin, meaning, and limitations:
 
+4. Who collected and published this data, and for what purpose? Since individuals and organizations require time and resources to do this work, seek to clarify their motivations and assumptions, both explicit and implicit ones.
+Who was the intended audience of the work? Whose perspectives does the data privilege? Whose stories remain untold? As practitioners of data visualization, we strongly favor evidence-based reasoning over its less-informed alternatives. But we also caution against embracing so-called data objectivity. Numbers are *not* neutral, and we always need to consider the broader contexts in which people created them.
 
-Once you've located some relevant information, get to know your data. Closely examine your data files to understand their meaning, sources of origin, and limitations.
+5. What do the data labels *really* mean? Most spreadsheets contain abbreviated column headers, particularly due to software character limits, but some questions of data interpretation run much deeper. For example, socially-constructed labels such as "race" or "gender" may not clarify how the creators defined their terms, or what role respondents played in the collection process. Even seemingly objective labels such as "income" or "population" or "elevation" may not adequately describe exactly what was counted, how it was measured, and the margins of error. Better-quality datasets include detailed definitions of the collection process to help you to understand the decisions made by its creators. If not, then your next best option may be to go out into the field, if feasible, and directly observe how the data is measured and collected.
 
-- Where did it come from?
-- For what purpose was this data originally collected?
-- What do the data labels really mean? Ideally, go out into the field to directly observe how the original data is measured and collected
-- Is this the *most* recent version, in the *best* available format?
-- Whose perspectives does your data privilege? Whose stories remain untold?
-
-
+To be clear, you may never *truly know* your data if it was collected by someone else, particularly a different person in a distant place or time. But don't let that philosophical obstacles stop you from asking good questions about the origins and limitations of your data. Only by clarifying what we know---and what we don't know---can we create meaningful data visualizations that bring their inner-stories to life.
 
 ## Recognize Bad Data {- #bad}
+A vital skill needed by all data visualization creators is the ability to recognize bad data. If you fail to catch a problem in your data at an early stage, someone else may discover it later, which could diminish the credibility of all of your work. Fortunately, members of the data visualization community have shared multiple examples of issues we've encountered in our work, and newer members will benefit from our embarrassing mistakes. One popular crowd-sourced compilation by data journalists was [The Quartz Guide to Bad Data](https://github.com/Quartz/bad-data-guide), last updated in 2018, which includes several of these helpful warning signs:
 
-Summarize key points from https://github.com/Quartz/bad-data-guide
+Watch out for spreadsheets with "bad data":
 
-Christopher Ingraham, *An alarming number of scientific papers contain Excel errors*,
-https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/
-
+- Missing values: If you see blank or "null" entries, does that mean data was not collected? Or maybe a respondent did not answer? If you're unsure, find out from the data creator. Also beware when humans enter a `0` or `-1` to represent a missing value, without thinking about the consequences of running calculations.
+- Missing leading zeros: The US Census Bureau lists every place using a FIPS code, and some spreadsheet users may accidentally convert text to numbers and strip out the leading zeroes. For example, the FIPS code for Los Angeles County is `037`, but someone might accidentally strip out the leading zero and convert it to `37`, which represents North Carolina.
+- 65536 rows or 255 columns: These are the maximum number of rows supported by older-style Excel spreadsheets, or columns supported by Apple Numbers spreadsheet, respectively. If your spreadsheet stops exactly at either of these limits, you probably have only partial data.
+- Inconsistent date formats: For example, November 3rd, 2020 is commonly entered in spreadsheets by Americans as `11/3/2020` (month-date-year), while many others around the globe type `3/11/2020` (date-month-year). Check your source.
+- Dates such as January 1st 1900, 1904, or 1970: These are default timestamps in Excel spreadsheets and Unix operating systems, which may indicate the actual date was blank or overwritten.
+- Dates similar to `43891`: When you type `March 1` during the year 2020 into Microsoft Excel, it automatically displays as `1-Mar`, but is saved using Excel's internal date system as `43891`. If someone converts this column from date to text format, you'll see Excel's 5-digit number, not the dates you're expecting. According to a [2016 report in the Washington Post](https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/), a team of geneticists detected a surprisingly high number of related Excel errors in papers published in leading scientific journals.
 
 ## Source Your Data {- #source}
-One way to avoid "bad data" is to source your data every time you download or create a new file. Spell out exactly where it came from, so that someone other than you, several years in the future, could understand its origin and limitations.
+Another way to reduce "bad data" issues is to clarify the source every time you download or create a new spreadsheet file. Add details about where the data came from, so that someone other than you, several years in the future, has sufficient information to understand its origin and limitations.
 
-The first step is to thoughtfully label every file name. All of us have experienced bad file names like these:
+The first step is to label every data file that you download or create. All of us have experienced bad file names like these:
 
-  - data.xls
-  - bldgdatalist.csv
-  - data77.xls
+  - data.csv
+  - download.xls
+  - data2020.xlsx
 
-Write a short but meaningful file name. While there is no perfect system, a good strategy is to include data source keywords, such as `acs2018`, `worldbank`, or `eurostat`. If you or co-workers will be working on different versions of a downloaded file, include the current date in YYYY-MM-DD format. Replace blank spaces with dashes (`-`) or underscores (`_`). Good file names look like this:
+Write a short but meaningful file name. While there's no perfect system, a good strategy is to abbreviate the source (such as `census` or `worldbank` or `eurostat`), with topic keywords, and a date or range. If you or co-workers will be working on different versions of a downloaded file, include the current date in YYYY-MM-DD (year-month-date) format. Replace blank spaces with dashes (`-`) or underscores (`_`). Better file names look like this:
 
   - town-demographics-2019-12-02.xls
   - census2010_population_by_county.csv
-  - eurostat-1999-2019-CO2_emissions.xlsx
+  - eurostat-1999-2019-CO2-emissions.xlsx
 
-Save your notes inside the spreadsheet the contains the data. Add a new tab named *notes* that describes the origins of the data, a longer description for any abbreviated labels, and when it was last updated. Add your own name and give credit to any collaborators who helped you.
+The second step is to save more detailed source notes about the data on a separate tab inside the spreadsheet (which works for multi-tab spreadsheet tools such as Google Sheets, LibreOffice, and Excel). Add a new tab named *notes* that describes the origins of the data, a longer description for any abbreviated labels, and when it was last updated, as shown in Figure \@ref(fig:sheets-with-tabs). Add your own name and give credit to collaborators who worked with you. For CSV files, which do not support multi-tabs sheets, create a text file using a parallel file name.
 
-TODO: redo this image to match what's written above.
+(ref:sheets-with-tabs) Create separate spreadsheet tabs for data, notes, and backup.
 
-![](images/03-find/SpreadsheetSourceTab.png)
-
-Make a duplicate of the original dataset before editing. For simple spreadsheets, a quick solution is to right-click on the tab containing the data, to make a copy to another tab as a backup. Label your backup and leave it alone!
-
-TODO: Fix image to match above
-
-```{r spreadsheet-copy-sheet}
-if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/SpreadsheetCopySheet640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+```{r sheets-with-tabs, fig.cap="(ref:sheets-with-tabs)"}
+ knitr::include_graphics("images/03-find/sheets-with-tabs.png")
 ```
+A third step is to make a backup of the original data before cleaning or editing it. For a simple one-sheet file in a multi-tab spreadsheet tool, right-click on the tab containing the data to make a duplicate copy in another tab, also shown in the preceding figure. Clearly label the new tab as a backup and leave it alone! For CSV files or more complex spreadsheets, create a separate backup file.
 
-Learn more: Lisa Charlotte Rost, *How to prepare your data for analysis and charting in Excel & Google Sheets*,
-https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/
+Make a habit of using these three sourcing strategies---filenames, notes, and backups---to reduce your chances of making "bad data" errors and to increase the credibility of your data visualizations. In the next section, we'll address a related set of questions you should ask yourself regarding public versus private data.
 
+## Public versus Private Data {- #public}
+In addition to asking questions about the origins and limitations of your data, you also should consider the ethics and legal aspects of public versus private data.
 
-
-## Public or Private Data? {- #public}
+START AGAIN HERE
 
 Many of the free web-based tools in this book require that your publicly share your data. Check each tool and decide whether it is appropriate for your data, which may have some privacy restrictions.
 
@@ -87,7 +79,7 @@ Under US law, you cannot copyright data, such as the raw information in the rows
 In the US, federal and state governments are subject to different versions of the Freedom of Information Act, and people often refer to sending a "FOIA" request... explain and link.... Some government agencies delay action or reject requests, and some requests appeal to review boards or take other legal actions.... Governments often find that fighting open information requests can be expensive, so some have begun to share more on open data repositories...
 
 
-## Open Data Repositories {-}
+## Open Data Repositories {- #opendata}
 TODO: Explain growth of open data platforms, and why they matter...
 
 - View and export: At minimum, most open data repositories allow users to view their data and export it into common spreadsheet formats. Some also provide geographical boundaries for polygon maps.

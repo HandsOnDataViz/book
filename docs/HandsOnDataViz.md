@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 07 Jul 2020
+updated on: 08 Jul 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -1547,22 +1547,6 @@ Census areas are geographic divisions in this *general format*:
 -   Block groups (sub-unit of tract, roughly 600 to 3,000 people)
 -   Census blocks (sub-unit of block group, but not always a city block)
 
-### Census areas in the Hartford region
-
-The interactive map below illustrates hierarchical relations among
-geographical census entities for the Hartford region, from state to
-census block level.
-
-<iframe src="https://handsondataviz.github.io/census-divisions-hartford/index.html" height="400" width="100%" frameborder="0">
-</iframe>
-
-Learn more: Explore the standard hierarchy of US Census geographic
-entities and definitions
-(<a href="https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf" class="uri">https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf</a>)
-
-See also in this book: [Geocode addresses with the US Census
-Geocoder](geocode)
-
 ### Data.census.gov
 
 Data.census.gov
@@ -1716,195 +1700,6 @@ TODO: cite and explain this resource
 Christopher Ingraham, *An alarming number of scientific papers contain
 Excel errors*,
 <a href="https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/" class="uri">https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/</a>
-
-Connecticut Open Data
----------------------
-
-Since this book was created in Hartford, Connecticut, we include state
-and municipal open data repositories and boundary files.
-
-**Connecticut Open Data**
-(<a href="http://data.ct.gov" class="uri">http://data.ct.gov</a>), the
-official portal for state government agencies, is hosted on the Socrata
-platform, which offers built-in data visualization tools and APIs. See
-also how to create a [filtered point map with
-Socrata](filtered-point-map-socrata) in this book.
-
-See also separate repositories for individual state agencies:
-
--   Office of the State Comptroller
-    (<a href="http://www.osc.ct.gov/openCT.html" class="uri">http://www.osc.ct.gov/openCT.html</a>)
--   CT State Department of Education
-    (<a href="http://www.sde.ct.gov/sde/cwp/view.asp?a=2758&amp;q=334520" class="uri">http://www.sde.ct.gov/sde/cwp/view.asp?a=2758&amp;q=334520</a>)
--   Office of Policy and Management
-    (<a href="http://ct.gov/opm/cwp/view.asp?a=3006&amp;Q=383258&amp;opmNav_GID=1386" class="uri">http://ct.gov/opm/cwp/view.asp?a=3006&amp;Q=383258&amp;opmNav_GID=1386</a>)
--   link to all CT state government agencies
-    (<a href="http://portal.ct.gov/Department-and-Agencies/" class="uri">http://portal.ct.gov/Department-and-Agencies/</a>)
-
-**Connecticut State Data Center**
-(<a href="http://ctsdc.uconn.edu/" class="uri">http://ctsdc.uconn.edu/</a>),
-part of the U.S. Census Data Center Network, is the lead agency for US
-Census data and other socioeconomic data for Connecticut, and is based
-at the University of Connecticut Libraries. The site also features data
-visualizations created on the Tableau platform and provides population
-projections for the state of Connecticut.
-
-**MAGIC: The Map and Geographic Information Center**
-(<a href="http://magic.lib.uconn.edu" class="uri">http://magic.lib.uconn.edu</a>),
-based at the University of Connecticut Libraries, specializes in
-providing geographic, aerial photography, and map images for the state,
-past and present. The site also features interactive maps.
-
-**DataHaven**
-(<a href="http://ctdatahaven.org/" class="uri">http://ctdatahaven.org/</a>),
-a non-profit organization, collects and interprets information about
-Connecticut neighborhoods, such as its Community Wellbeing Survey. Data
-resources feature neighborhood profiles for densely-populated areas (New
-Haven and Hartford-West Hartford), and town profiles for other areas
-across the state.
-
-**Connecticut Data Collaborative**
-(<a href="http://ctdata.org" class="uri">http://ctdata.org</a>) is a
-public-private partnership that advocates for open data access to drive
-planning, policy, budgeting and decision making in Connecticut at the
-state, regional and local levels. We democratize public data through
-custom data exploration tools and a dynamic town profile tool, hosted on
-the open-source CKAN platform. Users can find state and federal data on
-topics such as public health, education, crime, municipal data, and
-racial profiling data.
-
-**Hartford Data**
-(<a href="http://data.hartford.gov" class="uri">http://data.hartford.gov</a>),
-the official portal of the City of Hartford municipal government, is
-hosted on the Socrata platform, which features built-in visualizations
-and APIs. See also how to create a [filtered point map with
-Socrata](filtered-point-map-socrata) in this book. Also, the Hartford
-Data site links to the City’s ArcGIS Online geographic data
-(<a href="http://gisdata.hartford.gov/" class="uri">http://gisdata.hartford.gov/</a>)
-and the City’s financial data
-(<a href="http://checkbook.hartford.gov/" class="uri">http://checkbook.hartford.gov/</a>)
-and budget
-(<a href="http://budget.hartford.gov/" class="uri">http://budget.hartford.gov/</a>).
-
-In addition to the official repositories above, Connecticut news
-organizations that create data visualizations often include links to
-download data files.
-
-**Connecticut Mirror / Trend CT **
-(<a href="http://ctmirror.org/" class="uri">http://ctmirror.org/</a>)
-and (<a href="http://trendct.org/" class="uri">http://trendct.org/</a>)
-are publications of the Connecticut News Project, an independent,
-nonpartisan, nonprofit organization that focuses on state policy issues.
-Most of their data visualizations are built with open-source code, with
-publicly accessible data files. See also their GitHub repository
-(<a href="https://github.com/trendct" class="uri">https://github.com/trendct</a>).
-
-**Hartford Courant Data Desk**
-(<a href="http://www.courant.com/data-desk" class="uri">http://www.courant.com/data-desk</a>)
-produces digital visualizations for the *Hartford Courant*, the largest
-daily newspaper in Connecticut, owned by Tribune Publishing. Many of
-these data visualizations are published on the Tableau platform, which
-allows readers to download the underlying data.
-
-#### Boundaries
-
--   Converted from shapefile WGS84 to GeoJSON format
--   To download a GeoJSON file, right-click the link and Save to your
-    computer
--   If you accidentally open the GeoJSON code in your browser, select
-    File &gt; Save Web Page to download it
--   To view or edit, drag files into
-    <a href="http://geojson.io" class="uri">http://geojson.io</a> or
-    <a href="http://mapshaper.org" class="uri">http://mapshaper.org</a>
--   Learn more in the [Transform Your Map Data](transform.html) chapter
-    of this book
-
-<table>
-<colgroup>
-<col style="width: 32%" />
-<col style="width: 25%" />
-<col style="width: 21%" />
-<col style="width: 21%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Geography</th>
-<th style="text-align: left;">Year-Source-Size</th>
-<th style="text-align: left;">Right-click + Save to download GeoJSON</th>
-<th style="text-align: left;"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">CT outline <img src="data/ct-outline.png" /></td>
-<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
-<td style="text-align: left;"><a href="data/ct-outline.geojson">ct-outline.geojson</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">CT counties <img src="data/ct-counties.png" /></td>
-<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
-<td style="text-align: left;"><a href="data/ct-counties.geojson">ct-counties.geojson</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">CT towns <img src="data/ct-towns.png" /></td>
-<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 simplified to 224k</a></td>
-<td style="text-align: left;"><a href="data/ct-towns.geojson">ct-towns.geojson</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">CT census tracts <img src="data/ct-tracts-2010.png" /></td>
-<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
-<td style="text-align: left;"><a href="data/ct-tracts-2010.geojson">ct-tracts-2010.geojson</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Hartford County outline <img src="data/hartfordcounty-outline.png" /></td>
-<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
-<td style="text-align: left;"><a href="data/hartfordcounty-outline.geojson">hartfordcounty-outline.geojson</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Hartford County towns <img src="data/hartfordcounty-towns.png" /></td>
-<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
-<td style="text-align: left;"><a href="data/hartfordcounty-towns.geojson">hartfordcounty-towns.geojson</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Hartford County tracts <img src="data/hartfordcounty-tracts-2010.png" /></td>
-<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
-<td style="text-align: left;"><a href="data/hartfordcounty-tracts-2010.geojson">hartfordcounty-tracts-2010.geojson</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Hartford outline <img src="data/hartford-outline.png" /></td>
-<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
-<td style="text-align: left;"><a href="data/hartford-outline.geojson">hartford-outline.geojson</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Hartford census tracts <img src="data/hartford-tracts-2010.png" /></td>
-<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
-<td style="text-align: left;"><a href="data/hartford-tracts-2010.geojson">hartford-tracts-2010.geojson</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Hartford neighborhoods <img src="data/hartford-neighborhoods.png" /></td>
-<td style="text-align: left;"><a href="http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5">2015 Hartford Open Data 1:50,000</a></td>
-<td style="text-align: left;"><a href="data/hartford-neighborhoods.geojson">hartford-neighborhoods.geojson</a></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-
-TODO: - add Capitol Region Council of Governments (CRCOG)
-<a href="http://www.crcog.org/" class="uri">http://www.crcog.org/</a> -
-add school districts (and clarify elementary-secondary) - add Capitol
-Region Education Council (CREC)
-<a href="http://www.crec.org/" class="uri">http://www.crec.org/</a> -
-add school attendance areas from federal site - describe Freedom of
-Information Act (FOIA) data requests in Connecticut
 
 <!--chapter:end:03-find.Rmd-->
 
@@ -5127,9 +4922,9 @@ works best for beginners. Later you’ll learn about more advanced tools,
 such as [GitHub Desktop and Atom Editor to work more
 efficiently](github-desktop-atom.html) on your personal computer.
 
-If problems arise, turn to the [Fix Common Code Errors](fix-code.html)
-section in the appendix. All of us make mistakes and accidentally “break
-our code” from time to time, and it’s a great way to learn how things
+If problems arise, turn to the [Fix Common Mistakes](fix.html) section
+in the appendix. All of us make mistakes and accidentally “break our
+code” from time to time, and it’s a great way to learn how things
 work—and what to do when it doesn’t work!
 
 Fork, Edit, and Host a Simple Leaflet Map Template
@@ -5450,7 +5245,7 @@ paste the code block to create a second marker.
     map, and do a hard-refresh to view changes. If your map edits do not
     appear right away, remember that GitHub Pages sometimes requires up
     to 30 seconds to process code edits. If you have problems, see the
-    [Fix Common Code Errors](fix-code.html) section in the appendix.
+    [Fix Common Mistakes](fix.html) section in the appendix.
 
 Congratulations! If this is the first time that you’ve edited computer
 code and hosted it online, you can now call yourself a “coder”. The
@@ -6238,7 +6033,7 @@ mapping services (such as Google MyMaps) and to create more customized
 visualizations on a web server that you control. Before you begin, learn
 the broad concepts in the chapter introduction [Edit and Host Code with
 GitHub](github.html). If you have problems with this tutorial, go to the
-[Fix Common Code Errors](fix-code.html) section of the appendix.
+[Fix Common Mistakes](fix.html) section of the appendix.
 
 TODO: add demo, remove unnecessary basic steps from below (covered in
 prior chapter)
@@ -6550,8 +6345,8 @@ polygon and/or polyline GeoJSON data.
 
 -   \*\* TO DO: second half video\*\*
 
-To solve problems, see [Fix Common Code Errors](fix-code.html) section
-of the appendix.
+To solve problems, see the [Fix Common Mistakes](fix.html) section of
+the appendix.
 
 #### A) Fork (copy) the code template and publish your version with GitHub Pages
 
@@ -6889,8 +6684,8 @@ where the template will process them automatically.
 
 #### Learn more
 
-To solve problems, see [Fix Common Code Errors](fix-code.html) section
-of the appendix.
+To solve problems, see the [Fix Common Mistakes](fix.html) section of
+the appendix.
 
 Leaflet Storymaps with Google Sheets and Scrolling Narrative
 ------------------------------------------------------------
@@ -6938,8 +6733,8 @@ tab](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNl
 
 -   1.  Geocode locations in the Points tab
 
-To solve problems, see [Fix Common Code Errors](fix-code.html) section
-of the appendix.
+To solve problems, see the [Fix Common Mistakes](fix.html) section of
+the appendix.
 
 #### A) Fork (copy) the code template and publish your version with GitHub Pages
 
@@ -7153,8 +6948,8 @@ turn into curly marks, otherwise it won’t work.
 
 #### Learn more
 
-To solve problems, see [Fix Common Code Errors](fix-code.html) section
-of the appendix.
+To solve problems, see [Fix Common Mistakes](fix.html) section of the
+appendix.
 
 Leaflet Maps with Socrata API Open Data
 ---------------------------------------
@@ -8850,8 +8645,8 @@ Professionals* (Wiley, 2015),
 Appendix
 ========
 
-Fix Common Code Errors
-======================
+Fix Common Mistakes
+===================
 
 Creating your data visualizations through code templates hosted on
 GitHub has multiple advantages over drag-and-drop tools. Coding gives
@@ -8878,12 +8673,38 @@ thinking.
 TODO: Start here; Reorganize the logic of subsections below, perhaps in
 this way
 
+-   Problems with Mac computers
+-   Problems with data tables
 -   Problems with iframes (since this chapter appears before code
     templates)
--   Problems with GitHub forking and hosting (the core of this chapter)
--   Problems with code templates (the latter portion of this chapter and
-    the next two chapters)
--   Problems with Mac computers
+-   Problems with GitHub forking and hosting
+-   Problems with code templates
+
+#### Problems with Mac computers: cannot see filename extension
+
+Several tools in this book will not work properly if your computer does
+not display the filename extensions, meaning the abbreviated file format
+that appears after the period, such as `data.csv` or `map.geojson`. The
+Mac computer operating system hides these by default, so you need to
+turn them on by going to Finder &gt; Preferences &gt; Advanced, and
+check the box to *Show all filename extensions*, as shown in Figure
+<a href="#fig:mac-file-extensions2">135</a>.
+
+<img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to Finder >
+Preferences &gt; Advanced and check the box to *Show all filename
+extensions*." /&gt;
+<p class="caption">
+Figure 135: On a Mac, go to Finder &gt; Preferences &gt; Advanced and
+check the box to *Show all filename extensions*.
+</p>
+
+#### Problems with data tables
+
+Avoid typing blank spaces after column headers—or any spreadsheet
+entries—since some data visualization tools will not match them with
+headers lacking a blank character.
+
+![](images/14-fix/avoid-header-blank-space.png)
 
 #### Problems with iframes
 
@@ -9074,24 +8895,6 @@ viewed in the local browser. But Leaflet maps appear mostly or partially
 complete. Why is this, and how should we inform readers about this?
 Discuss with Ilya
 
-#### Cannot see filename extensions: a common Mac problem
-
-Several tools in this book will not work properly if your computer does
-not display the filename extensions, meaning the abbreviated file format
-that appears after the period, such as `data.csv` or `map.geojson`. The
-Mac computer operating system hides these by default, so you need to
-turn them on by going to Finder &gt; Preferences &gt; Advanced, and
-check the box to *Show all filename extensions*, as shown in Figure
-<a href="#fig:mac-file-extensions2">135</a>.
-
-<img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to Finder >
-Preferences &gt; Advanced and check the box to *Show all filename
-extensions*." /&gt;
-<p class="caption">
-Figure 135: On a Mac, go to Finder &gt; Preferences &gt; Advanced and
-check the box to *Show all filename extensions*.
-</p>
-
 #### Solve Problems with Browser Developer Tools
 
 Peek inside any website and view the web code under the hood with the
@@ -9107,6 +8910,213 @@ In Firefox for Mac, go to Tools &gt; Web Developer &gt; Inspector
 
 <!--chapter:end:14-fix.Rmd-->
 
+Find Connecticut Data
+=====================
+
+Since this book was created in Hartford, Connecticut, we include state
+and municipal open data repositories and boundary files.
+
+**Connecticut Open Data**
+(<a href="http://data.ct.gov" class="uri">http://data.ct.gov</a>), the
+official portal for state government agencies, is hosted on the Socrata
+platform, which offers built-in data visualization tools and APIs. See
+also how to create a [filtered point map with
+Socrata](filtered-point-map-socrata) in this book.
+
+See also separate repositories for individual state agencies:
+
+-   Office of the State Comptroller
+    (<a href="http://www.osc.ct.gov/openCT.html" class="uri">http://www.osc.ct.gov/openCT.html</a>)
+-   CT State Department of Education
+    (<a href="http://www.sde.ct.gov/sde/cwp/view.asp?a=2758&amp;q=334520" class="uri">http://www.sde.ct.gov/sde/cwp/view.asp?a=2758&amp;q=334520</a>)
+-   Office of Policy and Management
+    (<a href="http://ct.gov/opm/cwp/view.asp?a=3006&amp;Q=383258&amp;opmNav_GID=1386" class="uri">http://ct.gov/opm/cwp/view.asp?a=3006&amp;Q=383258&amp;opmNav_GID=1386</a>)
+-   link to all CT state government agencies
+    (<a href="http://portal.ct.gov/Department-and-Agencies/" class="uri">http://portal.ct.gov/Department-and-Agencies/</a>)
+
+**Connecticut State Data Center**
+(<a href="http://ctsdc.uconn.edu/" class="uri">http://ctsdc.uconn.edu/</a>),
+part of the U.S. Census Data Center Network, is the lead agency for US
+Census data and other socioeconomic data for Connecticut, and is based
+at the University of Connecticut Libraries. The site also features data
+visualizations created on the Tableau platform and provides population
+projections for the state of Connecticut.
+
+**MAGIC: The Map and Geographic Information Center**
+(<a href="http://magic.lib.uconn.edu" class="uri">http://magic.lib.uconn.edu</a>),
+based at the University of Connecticut Libraries, specializes in
+providing geographic, aerial photography, and map images for the state,
+past and present. The site also features interactive maps.
+
+**DataHaven**
+(<a href="http://ctdatahaven.org/" class="uri">http://ctdatahaven.org/</a>),
+a non-profit organization, collects and interprets information about
+Connecticut neighborhoods, such as its Community Wellbeing Survey. Data
+resources feature neighborhood profiles for densely-populated areas (New
+Haven and Hartford-West Hartford), and town profiles for other areas
+across the state.
+
+**Connecticut Data Collaborative**
+(<a href="http://ctdata.org" class="uri">http://ctdata.org</a>) is a
+public-private partnership that advocates for open data access to drive
+planning, policy, budgeting and decision making in Connecticut at the
+state, regional and local levels. We democratize public data through
+custom data exploration tools and a dynamic town profile tool, hosted on
+the open-source CKAN platform. Users can find state and federal data on
+topics such as public health, education, crime, municipal data, and
+racial profiling data.
+
+**Hartford Data**
+(<a href="http://data.hartford.gov" class="uri">http://data.hartford.gov</a>),
+the official portal of the City of Hartford municipal government, is
+hosted on the Socrata platform, which features built-in visualizations
+and APIs. See also how to create a [filtered point map with
+Socrata](filtered-point-map-socrata) in this book. Also, the Hartford
+Data site links to the City’s ArcGIS Online geographic data
+(<a href="http://gisdata.hartford.gov/" class="uri">http://gisdata.hartford.gov/</a>)
+and the City’s financial data
+(<a href="http://checkbook.hartford.gov/" class="uri">http://checkbook.hartford.gov/</a>)
+and budget
+(<a href="http://budget.hartford.gov/" class="uri">http://budget.hartford.gov/</a>).
+
+In addition to the official repositories above, Connecticut news
+organizations that create data visualizations often include links to
+download data files.
+
+**Connecticut Mirror / Trend CT**
+(<a href="http://ctmirror.org/" class="uri">http://ctmirror.org/</a>)
+and (<a href="http://trendct.org/" class="uri">http://trendct.org/</a>)
+are publications of the Connecticut News Project, an independent,
+nonpartisan, nonprofit organization that focuses on state policy issues.
+Most of their data visualizations are built with open-source code, with
+publicly accessible data files. See also their GitHub repository
+(<a href="https://github.com/trendct" class="uri">https://github.com/trendct</a>).
+
+**Hartford Courant Data Desk**
+(<a href="http://www.courant.com/data-desk" class="uri">http://www.courant.com/data-desk</a>)
+produces digital visualizations for the *Hartford Courant*, the largest
+daily newspaper in Connecticut, owned by Tribune Publishing. Many of
+these data visualizations are published on the Tableau platform, which
+allows readers to download the underlying data.
+
+### Census areas in the Hartford region
+
+The interactive map below illustrates hierarchical relations among
+geographical census entities for the Hartford region, from state to
+census block level.
+
+<iframe src="https://handsondataviz.github.io/census-divisions-hartford/index.html" height="400" width="100%" frameborder="0">
+</iframe>
+
+Learn more: Explore the standard hierarchy of US Census geographic
+entities and definitions
+(<a href="https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf" class="uri">https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf</a>)
+
+See also in this book: [Geocode addresses with the US Census
+Geocoder](geocode.html)
+
+#### Boundaries
+
+-   Converted from shapefile WGS84 to GeoJSON format
+-   To download a GeoJSON file, right-click the link and Save to your
+    computer
+-   If you accidentally open the GeoJSON code in your browser, select
+    File &gt; Save Web Page to download it
+-   To view or edit, drag files into
+    <a href="http://geojson.io" class="uri">http://geojson.io</a> or
+    <a href="http://mapshaper.org" class="uri">http://mapshaper.org</a>
+-   Learn more in the [Transform Your Map Data](transform.html) chapter
+    of this book
+
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 25%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Geography</th>
+<th style="text-align: left;">Year-Source-Size</th>
+<th style="text-align: left;">Right-click + Save to download GeoJSON</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CT outline <img src="data/ct-outline.png" /></td>
+<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
+<td style="text-align: left;"><a href="data/ct-outline.geojson">ct-outline.geojson</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT counties <img src="data/ct-counties.png" /></td>
+<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
+<td style="text-align: left;"><a href="data/ct-counties.geojson">ct-counties.geojson</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CT towns <img src="data/ct-towns.png" /></td>
+<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 simplified to 224k</a></td>
+<td style="text-align: left;"><a href="data/ct-towns.geojson">ct-towns.geojson</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CT census tracts <img src="data/ct-tracts-2010.png" /></td>
+<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
+<td style="text-align: left;"><a href="data/ct-tracts-2010.geojson">ct-tracts-2010.geojson</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hartford County outline <img src="data/hartfordcounty-outline.png" /></td>
+<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
+<td style="text-align: left;"><a href="data/hartfordcounty-outline.geojson">hartfordcounty-outline.geojson</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hartford County towns <img src="data/hartfordcounty-towns.png" /></td>
+<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
+<td style="text-align: left;"><a href="data/hartfordcounty-towns.geojson">hartfordcounty-towns.geojson</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hartford County tracts <img src="data/hartfordcounty-tracts-2010.png" /></td>
+<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
+<td style="text-align: left;"><a href="data/hartfordcounty-tracts-2010.geojson">hartfordcounty-tracts-2010.geojson</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hartford outline <img src="data/hartford-outline.png" /></td>
+<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
+<td style="text-align: left;"><a href="data/hartford-outline.geojson">hartford-outline.geojson</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Hartford census tracts <img src="data/hartford-tracts-2010.png" /></td>
+<td style="text-align: left;"><a href="http://magic.lib.uconn.edu/connecticut_data.html#boundaries">2010 Census UConn MAGIC WGS84 1:100,000</a></td>
+<td style="text-align: left;"><a href="data/hartford-tracts-2010.geojson">hartford-tracts-2010.geojson</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hartford neighborhoods <img src="data/hartford-neighborhoods.png" /></td>
+<td style="text-align: left;"><a href="http://gisdata.hartford.gov/datasets/d3deb11bfd9242ce9c927187c512da9e_5">2015 Hartford Open Data 1:50,000</a></td>
+<td style="text-align: left;"><a href="data/hartford-neighborhoods.geojson">hartford-neighborhoods.geojson</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+
+TODO: - add Capitol Region Council of Governments (CRCOG)
+<a href="http://www.crcog.org/" class="uri">http://www.crcog.org/</a> -
+add school districts (and clarify elementary-secondary) - add Capitol
+Region Education Council (CREC)
+<a href="http://www.crec.org/" class="uri">http://www.crec.org/</a> -
+add school attendance areas from federal site - describe Freedom of
+Information Act (FOIA) data requests in Connecticut
+
+<!--chapter:end:15-ct.Rmd-->
+
 Peer Review Samples
 ===================
 
@@ -9120,7 +9130,7 @@ Section 2 Chart 1 Peer Review Sample
 Students in the Data Visualization for All course come from several
 different countries, including Australia, Bangladesh, and Belgium.
 
-![](images/15-peer/2-chart-1.png)
+![](images/16-peer/2-chart-1.png)
 
 #### Evaluate
 
@@ -9137,7 +9147,7 @@ Section 2 Chart 1 Peer Review Sample with Notes
 Students in the Data Visualization for All course come from several
 different countries, including Australia, Bangladesh, and Belgium.
 
-![](images/15-peer/2-chart-1.png)
+![](images/16-peer/2-chart-1.png)
 
 #### Evaluate
 
@@ -9379,7 +9389,7 @@ Section 3 Peer Review Sample 2 with Notes
 1.  Additional comments for the author. What works well? What could be
     improved?
 
-<!--chapter:end:15-peer.Rmd-->
+<!--chapter:end:16-peer.Rmd-->
 
 Publishing with Bookdown
 ========================
@@ -9540,7 +9550,7 @@ Style Guide for *Hands-On Data Visualization*
 
 View the underlying source code to understand how this page was composed
 at:
-<a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a>
+<a href="https://github.com/HandsOnDataViz/book/blob/master/17-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/17-bookdown.Rmd</a>
 
 This book is composed in R-flavored Markdown (.Rmd), and each paragraph
 begins on a separate line. O’Reilly style guide prefers *italics* rather
@@ -9733,7 +9743,7 @@ Images
 
 View the underlying source code to understand how this page was composed
 at:
-<a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a>
+<a href="https://github.com/HandsOnDataViz/book/blob/master/17-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/17-bookdown.Rmd</a>
 
 Create high-resolution color screenshots and other static images in .png
 or .jpg format, with tight cropping on a high-resolution Retina monitor,
@@ -9791,11 +9801,11 @@ leave the caption field blank, like this example:
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="images/16-bookdown/dougherty-jack.jpg" /></td>
+<td><img src="images/17-bookdown/dougherty-jack.jpg" /></td>
 <td>About <a href="http://jackdougherty.org">Jack Dougherty</a></td>
 </tr>
 <tr class="even">
-<td><img src="images/16-bookdown/ilyankou-ilya.jpg" /></td>
+<td><img src="images/17-bookdown/ilyankou-ilya.jpg" /></td>
 <td>About <a href="https://github.com/ilyankou">Ilya Ilyankou</a></td>
 </tr>
 </tbody>
@@ -9860,7 +9870,7 @@ Read more about these options in this Bookdown chapter:
 Small is defined as each side less than 300px, as shown in Figure
 <a href="#fig:tiger">136</a>.
 
-<img src="images/16-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
+<img src="images/17-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
 Figure 136: Caption here. Markdown embedded links are acceptable.
 </p>
@@ -9874,7 +9884,7 @@ and save with same file name and a .pdf extension for auto-substitution
 in the PDF output …as shown in Figure
 <a href="#fig:screenshot-tall">137</a>.
 
-<img src="images/16-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
+<img src="images/17-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
 <p class="caption">
 Figure 137: Using out.width=200 and smaller PDF image size.
 </p>
@@ -9905,11 +9915,11 @@ When appropriate, create animated GIF files using Camtasia, and add
 fade-to-black to mark the end-point in the looped version. TODO: ADD
 this here …as shown in Figure <a href="#fig:sheets-option-drag">139</a>.
 
-<iframe src="images/16-bookdown/sheets-option-drag.gif" width="100%" height="250px">
+<iframe src="images/17-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
 Figure 139: Caption here, with embedded link to the [animated
-GIF](https://handsondataviz.org/images/16-bookdown/sheets-option-drag.gif).
+GIF](https://handsondataviz.org/images/17-bookdown/sheets-option-drag.gif).
 </p>
 
 ### Demo: R code-chunk for Youtube video in HTML and static image in PDF
@@ -9943,7 +9953,7 @@ Tables
 
 View the underlying source code to understand how this page was composed
 at:
-<a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a>
+<a href="https://github.com/HandsOnDataViz/book/blob/master/17-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/17-bookdown.Rmd</a>
 
 Create tables in Markdown format, since it produces good output for
 HTML, PDF, Word, and Markdown. Use a tool such as [Tables
@@ -10081,13 +10091,13 @@ it with Pandoc to AsciiDoc format.
 
 See workaround notes in the Tables section and other sections above.
 
-<!--chapter:end:16-bookdown.Rmd-->
+<!--chapter:end:17-bookdown.Rmd-->
 <!-- Automated list of references generated by Bookdown + Zotero citation keys below. PDF output will appear without "References" at the top, but this seems to be the best solution. See https://bookdown.org/yihui/bookdown/citations.html -->
 
 References
 ==========
 
-<!--chapter:end:17-references.Rmd-->
+<!--chapter:end:18-references.Rmd-->
 
 Huff, Darrell. *How to Lie with Statistics*. W. W. Norton & Company,
 1954–2010. <http://books.google.com/books?isbn=0393070875>.

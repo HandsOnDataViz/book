@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-07" />
+<meta name="date" content="2020-07-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -177,7 +177,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public or Private Data?</a></li>
 <li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a></li>
-<li class="chapter" data-level="" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i>Connecticut Open Data</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
@@ -255,8 +254,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="13" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>13</b> Tell Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="fix-code.html"><a href="fix-code.html"><i class="fa fa-check"></i><b>A</b> Fix Common Code Errors</a></li>
-<li class="chapter" data-level="B" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i><b>B</b> Peer Review Samples</a>
+<li class="chapter" data-level="A" data-path="fix.html"><a href="fix.html"><i class="fa fa-check"></i><b>A</b> Fix Common Mistakes</a></li>
+<li class="chapter" data-level="B" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i><b>B</b> Find Connecticut Data</a></li>
+<li class="chapter" data-level="C" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i><b>C</b> Peer Review Samples</a>
 <ul>
 <li class="chapter" data-level="" data-path="peer-2-chart-1.html"><a href="peer-2-chart-1.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample</a></li>
 <li class="chapter" data-level="" data-path="peer-2-chart-1-notes.html"><a href="peer-2-chart-1-notes.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample with Notes</a></li>
@@ -267,7 +267,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="peer-3-sample-2.html"><a href="peer-3-sample-2.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2</a></li>
 <li class="chapter" data-level="" data-path="peer-3-sample-2-notes.html"><a href="peer-3-sample-2-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2 with Notes</a></li>
 </ul></li>
-<li class="chapter" data-level="C" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>C</b> Publishing with Bookdown</a>
+<li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
 <ul>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
@@ -299,7 +299,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="images" class="section level2 unnumbered" number="">
 <h2>Images</h2>
-<p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/16-bookdown.Rmd</a></p>
+<p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/master/17-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/17-bookdown.Rmd</a></p>
 <p>Create high-resolution color screenshots and other static images in .png or .jpg format, with tight cropping on a high-resolution Retina monitor, typically at 144 ppi. Save items into the <code>images</code> subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.</p>
 <p>If a screenshot requires additional artwork or text for the HTML edition, make a copy of the original and add <code>-ann</code> to note that this version is annotated, save into the same folder with the same root file name, and use in the code-chunk image pathnames. The publisher will use the original image and add their own artwork for their editions.</p>
 <p>If an image is larger than approximately 300px on either side, one more option is to reduce the image size in the PDF version. Use Photoshop (<em>not</em> Preview) to reduce the image size, and save a copy with the same file name with the .pdf extension into the folder.</p>
@@ -322,11 +322,11 @@ images/05-chart/design-setup-original.png</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="images/16-bookdown/dougherty-jack.jpg" /></td>
+<td><img src="images/17-bookdown/dougherty-jack.jpg" /></td>
 <td>About <a href="http://jackdougherty.org">Jack Dougherty</a></td>
 </tr>
 <tr class="even">
-<td><img src="images/16-bookdown/ilyankou-ilya.jpg" /></td>
+<td><img src="images/17-bookdown/ilyankou-ilya.jpg" /></td>
 <td>About <a href="https://github.com/ilyankou">Ilya Ilyankou</a></td>
 </tr>
 </tbody>
@@ -350,61 +350,61 @@ options(knitr.graphics.auto_pdf = TRUE)</code></pre>
 </div>
 <div id="demo-r-code-chunk-for-small-static-image-for-html-and-pdf-editions" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for small static image for HTML and PDF editions</h3>
-<p>Small is defined as each side less than 300px, as shown in Figure <a href="images.html#fig:tiger">C.1</a>.</p>
+<p>Small is defined as each side less than 300px, as shown in Figure <a href="images.html#fig:tiger">D.1</a>.</p>
 
 <div class="figure"><span id="fig:tiger"></span>
-<img src="images/16-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
+<img src="images/17-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
-Figure C.1: Caption here. Markdown embedded links are acceptable.
+Figure D.1: Caption here. Markdown embedded links are acceptable.
 </p>
 </div>
 </div>
 <div id="r-code-chunk-for-larger-static-image-using-out.width-and-pdf-img" class="section level3 unnumbered" number="">
 <h3>R code-chunk for larger static image using out.width and PDF img</h3>
-<p>For larger images, where one side is greater than 300px, set the out.width to a pixel number for ideal display in the HTML edition. Also, if needed, copy the image, use Photoshop to create a smaller image size, and save with same file name and a .pdf extension for auto-substitution in the PDF output …as shown in Figure <a href="images.html#fig:screenshot-tall">C.2</a>.</p>
+<p>For larger images, where one side is greater than 300px, set the out.width to a pixel number for ideal display in the HTML edition. Also, if needed, copy the image, use Photoshop to create a smaller image size, and save with same file name and a .pdf extension for auto-substitution in the PDF output …as shown in Figure <a href="images.html#fig:screenshot-tall">D.2</a>.</p>
 
 <div class="figure"><span id="fig:screenshot-tall"></span>
-<img src="images/16-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
+<img src="images/17-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
 <p class="caption">
-Figure C.2: Using out.width=200 and smaller PDF image size.
+Figure D.2: Using out.width=200 and smaller PDF image size.
 </p>
 </div>
 <p>R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the web version, and a static image with an embedded link appears in the PDF and MS Word outputs. To change the height of the default 400px iframe, add the new height to <code>include_url</code> as shown in the examples. However, to change the width of the default 675px iframe to less than 100 percent, add a line in a <code>custom-scripts.html</code> file.</p>
 </div>
 <div id="demo-r-code-chunk-for-iframe-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for iframe in HTML and static image in PDF</h3>
-<p>…as shown in Figure <a href="images.html#fig:sample-map">C.3</a>.</p>
+<p>…as shown in Figure <a href="images.html#fig:sample-map">D.3</a>.</p>
 
 <div class="figure"><span id="fig:sample-map"></span>
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="672" height="600px">
 </iframe>
 <p class="caption">
-Figure C.3: Caption here, and add embedded link to explore the <a href="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/">full-screen interactive map</a>.
+Figure D.3: Caption here, and add embedded link to explore the <a href="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/">full-screen interactive map</a>.
 </p>
 </div>
 </div>
 <div id="demo-r-code-chunk-for-animated-gif-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for animated GIF in HTML and static image in PDF</h3>
-<p>When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. TODO: ADD this here …as shown in Figure <a href="images.html#fig:sheets-option-drag">C.4</a>.</p>
+<p>When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. TODO: ADD this here …as shown in Figure <a href="images.html#fig:sheets-option-drag">D.4</a>.</p>
 
 <div class="figure"><span id="fig:sheets-option-drag"></span>
-<iframe src="images/16-bookdown/sheets-option-drag.gif" width="672" height="250px">
+<iframe src="images/17-bookdown/sheets-option-drag.gif" width="672" height="250px">
 </iframe>
 <p class="caption">
-Figure C.4: Caption here, with embedded link to the <a href="https://handsondataviz.org/images/16-bookdown/sheets-option-drag.gif">animated GIF</a>.
+Figure D.4: Caption here, with embedded link to the <a href="https://handsondataviz.org/images/17-bookdown/sheets-option-drag.gif">animated GIF</a>.
 </p>
 </div>
 </div>
 <div id="demo-r-code-chunk-for-youtube-video-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for Youtube video in HTML and static image in PDF</h3>
 <p>Be sure to use the <em>embed</em> link from the YouTube <em>share</em> button.</p>
-<p>…as shown in the video <a href="images.html#fig:video-sample">C.5</a>.</p>
+<p>…as shown in the video <a href="images.html#fig:video-sample">D.5</a>.</p>
 
 <div class="figure"><span id="fig:video-sample"></span>
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure C.5: Caption here, with embedded link to the <a href="https://youtu.be/-nGdrzMuUnI">YouTube video</a>.
+Figure D.5: Caption here, with embedded link to the <a href="https://youtu.be/-nGdrzMuUnI">YouTube video</a>.
 </p>
 </div>
 </div>
@@ -416,7 +416,7 @@ Figure C.5: Caption here, with embedded link to the <a href="https://youtu.be/-n
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure C.6: Caption <strong>only</strong> for HTML version, with embedded link to the <a href="https://youtu.be/w6dQ-RIQ5bc">YouTube video</a>.
+Figure D.6: Caption <strong>only</strong> for HTML version, with embedded link to the <a href="https://youtu.be/w6dQ-RIQ5bc">YouTube video</a>.
 </p>
 </div>
 </div>
@@ -466,10 +466,10 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/16-bookdown.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/17-bookdown.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

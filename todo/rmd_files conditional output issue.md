@@ -21,7 +21,7 @@ rmd_files:
     "13-story.Rmd",
     "14-fix.Rmd",
     "15-peer.Rmd",
-    "16-bookdown.Rmd",
+    "17-bookdown.Rmd",
     "17-references.Rmd"
   ]
   latex: [

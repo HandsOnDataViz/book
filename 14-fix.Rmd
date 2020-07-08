@@ -1,17 +1,34 @@
 # (APPENDIX) Appendix {-}
 
-# Fix Common Code Errors {#fix-code}
+# Fix Common Mistakes {#fix}
 Creating your data visualizations through code templates hosted on GitHub has multiple advantages over drag-and-drop tools. Coding gives you more power to customize their appearance and interactive features, and to control where your data and products reside online. But there's also a trade-off. Code can "break" and leave you staring at a blank screen. Sometimes problems happens through no fault of your own, such as when a "code dependency" to an online background map or code library is unexpectedly interrupted. But more often it seems that problems arise because we make simple mistakes that break our own code. Whatever the cause, one big drawback of working with code is that you're also responsible for fixing it.
 
 We designed this section as a guide to help new coders diagnose and solve common errors when working with code templates on GitHub. We understand the feeling you experience when a simple typo---such as a misplaced semicolon (;)---makes your data visualization disappear from the screen. Finding the source of the problem can be very frustrating. But breaking your code---and figuring out how to fix it---also can be a great way to learn, because trial-and-error on a computer often provides immediate feedback that supports the learning process and develops our thinking.
 
 TODO: Start here; Reorganize the logic of subsections below, perhaps in this way
 
-- Problems with iframes (since this chapter appears before code templates)
-- Problems with GitHub forking and hosting (the core of this chapter)
-- Problems with code templates (the latter portion of this chapter and the next two chapters)
 - Problems with Mac computers
+- Problems with data tables
+- Problems with iframes (since this chapter appears before code templates)
+- Problems with GitHub forking and hosting
+- Problems with code templates
 
+#### Problems with Mac computers: cannot see filename extension {-}
+
+Several tools in this book will not work properly if your computer does not display the filename extensions, meaning the abbreviated file format that appears after the period, such as `data.csv` or `map.geojson`. The Mac computer operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions2).
+
+(ref:mac-file-extensions2) On a Mac, go to Finder > Preferences > Advanced and check the box to *Show all filename extensions*.
+
+```{r mac-file-extensions2, fig.cap="(ref:mac-file-extensions2)"}
+ knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
+```
+
+
+#### Problems with data tables {-}
+
+Avoid typing blank spaces after column headers---or any spreadsheet entries---since some data visualization tools will not match them with headers lacking a blank character.
+
+![](images/14-fix/avoid-header-blank-space.png)
 
 #### Problems with iframes {-}
 
@@ -118,15 +135,6 @@ If you upload new data to your Chart.js code template on GitHub Pages, and it do
 
 TODO: Our Chart.js templates appear blank (just text, no chart) when viewed in the local browser. But Leaflet maps appear mostly or partially complete. Why is this, and how should we inform readers about this? Discuss with Ilya
 
-#### Cannot see filename extensions: a common Mac problem {-}
-
-Several tools in this book will not work properly if your computer does not display the filename extensions, meaning the abbreviated file format that appears after the period, such as `data.csv` or `map.geojson`. The Mac computer operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions2).
-
-(ref:mac-file-extensions2) On a Mac, go to Finder > Preferences > Advanced and check the box to *Show all filename extensions*.
-
-```{r mac-file-extensions2, fig.cap="(ref:mac-file-extensions2)"}
- knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
-```
 
 #### Solve Problems with Browser Developer Tools {-}
 Peek inside any website and view the web code under the hood with the browser developer tools.

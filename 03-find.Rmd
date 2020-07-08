@@ -1,127 +1,71 @@
 # Find and Know Your Data {#find}
-Searching for open data: Increasing numbers of governmental agencies and non-profit organizations are publicly sharing *open data* on the web. When starting a new data visualization project, ask yourself these questions:
 
-- Do I have the most relevant data for my project?
-- Is it the most current data, in the most user-friendly format?
-- Is data available at the individual level, or aggregated into larger groups?
-- Which organizations might have collected data for my topic?
-- Which open data repositories might have published this data?
+When searching for information for a visualization project, ask yourself these questions to find and know your data:
 
-#### What features do open repositories offer? {-}
-- View and export: At minimum, most open data repositories allow users to view their data and export it into common spreadsheet formats. Some also provide geographical boundaries for polygon maps.
-- Built-in visualization tools: Some repositories offer built-in tools for users to create interactive charts or maps on the platform site. Some also provide code snippets for users to embed these built-in visualizations into their own websites.
-- Static and Live data: Most repositories offer static datasets for a specific time period, but some also provide "live" data that is continuously updated.
-- Application Programming Interface (APIs): Some repositories provide endpoints with code instructions that allow users to pull data directly from the platform into an external sites or online visualization, which is ideal for continuously updated data.
 
-#### Know Your Data {-}
-Before starting to create charts or maps, get to know your data.
+- Which organizations might have collected or published data on this topic?
+  - government agencies
+  - academic institutions
+  - non-governmental or non-profit organizations
+  - open data repositories, which may be operated by any of the above....
+- What level of data is available: individual cases or aggregated into larger groups?
+  - for example, education data sometimes available at individual student level (explain), but due to privacy laws, is more likely made public in larger groups (school data, district data, state data)
+- When is the most current data available?
+
+
+
+
+Once you've located some relevant information, get to know your data. Closely examine your data files to understand their meaning, sources of origin, and limitations.
 
 - Where did it come from?
-- Who compiled the data, and for what purpose?
-- What do the data labels really mean?
-- Ask yourself: Am I working with the *most* recent version, in the *best* available format?
-
-TODO: add resource https://github.com/Quartz/bad-data-guide
-
-open data inception 1600+ sites portal
-http://opendatainception.io/
-
-- Know your data: go out into the field to directly observe how the original data is measured and collected
-
-https://www.opendatanetwork.com/
-
-Closely examine your data files to understand their meaning, sources of origin, and limitations.
-TODO: expand on this theme with examples of bad and misleading data
-
-1) Always ask: Am I using the best available data?
-
-- Compare the HFS list to the City of Hartford’s current list of food establishments:
-https://data.hartford.gov/browse
-- go to Public Health Category
-- click on the “dataset” version (updated 10 Feb 2016), which is same data but different view than the “map” version
-- click on light blue “export” button into any format you wish to compare with the HFS list (see screenshot)
-- decide which list is best for your organization’s goal
-
-## US and Census Bureau Open Data {- #census}
-The [U.S. Census Bureau](https://census.gov) collects and shares population, housing, and economic data on its open repositories.
-
-- The Decennial Census is a full count of the population every ten years, most recently in 2010 and the upcoming one in 2020. Because decennial data are counts and not estimates, they represent "true" values and hence come without margins of errors.
-- The American Community Survey (ACS) (https://www.census.gov/programs-surveys/acs/) is annual sample count, which produces:
-    - 1-year estimates for areas with populations of 65,000+
-    - 5-year estimates for all census areas
-    - ACS used to release 3-year estimates for geographies with population of 20,000+, but discontinued after the 2011-2013 release.
-
-Because ACS produces estimates and not "true" counts, data comes with margins of errors. Generally, margins of errors are higher for smaller geographies (eg census blocks) and smaller values (eg the number of Asian females aged 60+ who live in Union, CT). Hence, one needs to be critical when using ACS or other survey data.
-
-Census areas are geographic divisions in this *general format*:
-
-- State
-- County
-- County subdivisions (equivalent to Connecticut towns and cities)
-- Census tracts (designated areas, roughly 2,500 to 8,000 people)
-- Block groups (sub-unit of tract, roughly 600 to 3,000 people)
-- Census blocks (sub-unit of block group, but not always a city block)
+- For what purpose was this data originally collected?
+- What do the data labels really mean? Ideally, go out into the field to directly observe how the original data is measured and collected
+- Is this the *most* recent version, in the *best* available format?
+- Whose perspectives does your data privilege? Whose stories remain untold?
 
 
 
-### Data.census.gov {-}
-Data.census.gov (https://data.census.gov) is the main platform to access US Census data. It provides an easy search across census and survey tables. There is an interface to view tables for various years and geographies, and a download button to save data as CSV or PDF. It replaced American FactFinder (https://factfinder.census.gov) in July 2019.
+## Recognize Bad Data {- #bad}
 
-### Social Explorer {-}
-Social Explorer (https://www.socialexplorer.com/) is a popular tool to view and download census and related demographic data, past and present. The platform allows users to create data maps that may be exported as static images or presentation slides. Social Explorer requires subscription, but many academic institutions provide access.
+Summarize key points from https://github.com/Quartz/bad-data-guide
 
-TODO: create tutorial on how to cleanly download census data from Social Explorer and Census.gov to join with geography, especially census tract numbers
+Christopher Ingraham, *An alarming number of scientific papers contain Excel errors*,
+https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/
 
-### Data.gov {-}
-Data.gov (https://www.data.gov/) is the official open data repository for US federal government agencies, managed by the US General Services Administration, and powered by an open-source CKAN and WordPress platform.
 
-### National Center for Education Statistics {-}
-National Center for Education Statistics (NCES) (https://nces.ed.gov/) is the primary federal agency for collecting and reporting education data.
+## Source Your Data {- #source}
+One way to avoid "bad data" is to source your data every time you download or create a new file. Spell out exactly where it came from, so that someone other than you, several years in the future, could understand its origin and limitations.
 
-- Elementary/Secondary Information System (ELSi) (https://nces.ed.gov/ccd/elsi) - create custom tables and charts from the Common Core of Data (CCD) and Private School Survey.
-
-#### Boundaries {-}
-- TODO
-- link and source files and scale
-- http://mapstarter.com/
-
-## Source Your Data Files {- #source}
-Source your data. Spell out exactly where it came from, so that someone other than you, several years in the future, could understand its origin.
-
-#### Label the file name {-}
-Everyone has seen examples of bad file names:
+The first step is to thoughtfully label every file name. All of us have experienced bad file names like these:
 
   - data.xls
   - bldgdatalist.csv
   - data77.xls
 
-Write a short but meaningful file name. It is a good idea to include data source in file name (eg `acs2018`, `worldbank`, or `eurostat`). If different versions of the data are floating around, add the current date at the end, in YYYY-MM-DD format. Good file names look like this:
+Write a short but meaningful file name. While there is no perfect system, a good strategy is to include data source keywords, such as `acs2018`, `worldbank`, or `eurostat`. If you or co-workers will be working on different versions of a downloaded file, include the current date in YYYY-MM-DD format. Replace blank spaces with dashes (`-`) or underscores (`_`). Good file names look like this:
 
   - town-demographics-2019-12-02.xls
   - census2010_population_by_county.csv
   - eurostat-1999-2019-CO2_emissions.xlsx
 
-#### Save source data in separate sheet {-}
-Before modifying the original dataset, make sure to duplicate it to avoid any data losses. One way is to click (or right-click) on the spreadsheet tab to copy the sheet to another tab as a backup.
+Save your notes inside the spreadsheet the contains the data. Add a new tab named *notes* that describes the origins of the data, a longer description for any abbreviated labels, and when it was last updated. Add your own name and give credit to any collaborators who helped you.
+
+TODO: redo this image to match what's written above.
+
+![](images/03-find/SpreadsheetSourceTab.png)
+
+Make a duplicate of the original dataset before editing. For simple spreadsheets, a quick solution is to right-click on the tab containing the data, to make a copy to another tab as a backup. Label your backup and leave it alone!
+
+TODO: Fix image to match above
 
 ```{r spreadsheet-copy-sheet}
 if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/SpreadsheetCopySheet640w.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
-Add a *source* tab, after the data, with notes to remind you and others about its origins and when it was last updated.
-
-![](images/03-find/SpreadsheetSourceTab.png)
-
-### Learn more {-}
-Lisa Charlotte Rost, *How to prepare your data for analysis and charting in Excel & Google Sheets*,
+Learn more: Lisa Charlotte Rost, *How to prepare your data for analysis and charting in Excel & Google Sheets*,
 https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/
 
-TODO: Source your data
 
-     - explain that data cannot be copyrighted, but representations of data can be
-     - open-source and creative commons
-     - credit sources and collaborators on dataviz products and readme files
-     - Whose perspectives does your data privilege? Whose stories remain untold?
 
 ## Public or Private Data? {- #public}
 
@@ -138,20 +82,36 @@ In other cases, individual data is not private. For example:
 - When individuals contribute to political campaigns, most US and state laws require that the donor name, address, and amount is public data.
 - When an individual buys home in Connecticut, the owner's name, address, purchase amount, and other details about the home are public data.
 
-## Know Your Data: Is It Good or Bad? {- #know}
-Before starting to create charts or maps, get to know your data.
+Under US law, you cannot copyright data, such as the raw information in the rows and columns of a spreadsheet. But you can copy, but representations of data can be protected by copyright. ... explain...  In the spirit of openness, we encourage you to share your data visualizations under a Creative Commons license... explain... in fact, this book is copyrighted, and the source text is publicly available under a Creative Commons TODO: TYPE license...
 
-- Where did it come from?
-- Who compiled the data, and for what purpose?
-- What do the data labels really mean?
-- Ask yourself: Am I working with the *most* recent version, in the *best* available format?
+In the US, federal and state governments are subject to different versions of the Freedom of Information Act, and people often refer to sending a "FOIA" request... explain and link.... Some government agencies delay action or reject requests, and some requests appeal to review boards or take other legal actions.... Governments often find that fighting open information requests can be expensive, so some have begun to share more on open data repositories...
 
-Closely examine your data files to understand their meaning, sources of origin, and limitations.
-TODO: expand on this theme with examples of bad and misleading data
 
-TODO: cite and explain this resource
-https://github.com/Quartz/bad-data-guide
+## Open Data Repositories {-}
+TODO: Explain growth of open data platforms, and why they matter...
 
-### Learn more {-}
-Christopher Ingraham, *An alarming number of scientific papers contain Excel errors*,
-https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/
+- View and export: At minimum, most open data repositories allow users to view their data and export it into common spreadsheet formats. Some also provide geographical boundaries for polygon maps.
+- Built-in visualization tools: Some repositories offer built-in tools for users to create interactive charts or maps on the platform site. Some also provide code snippets for users to embed these built-in visualizations into their own websites.
+- Static and Live data: Most repositories offer static datasets for a specific time period, but some also provide "live" data that is continuously updated.
+- Application Programming Interface (APIs): Some repositories provide endpoints with code instructions that allow users to pull data directly from the platform into an external sites or online visualization, which is ideal for continuously updated data.
+
+While we would love to offer a comprehensive list of all open data repositories, that's not possible because...
+
+Instead, the best we can do is to briefly mention types of places where we commonly go looking for data...
+
+TODO:
+open data inception 1600+ sites portal
+http://opendatainception.io/
+
+https://www.opendatanetwork.com/
+
+Data.gov (https://www.data.gov/) is the official open data repository for US federal government agencies, managed by the US General Services Administration, and powered by an open-source CKAN and WordPress platform.
+
+
+The [U.S. Census Bureau](https://census.gov) collects and shares population, housing, and economic data on its open repositories. The Decennial Census is a full count of the population every ten years, while the American Community Survey (ACS) (https://www.census.gov/programs-surveys/acs/) is an annual sample count which produces various one-year, three-year, or five-year estimates for different census geographies, with margins of error.
+
+Data.census.gov (https://data.census.gov) is the main platform to access US Census data. It provides an easy search across census and survey tables. There is an interface to view tables for various years and geographies, and a download button to save data as CSV or PDF. It replaced American FactFinder (https://factfinder.census.gov) in July 2019.
+
+Social Explorer (https://www.socialexplorer.com/) is a popular tool to view and download census and related demographic data, past and present. The platform allows users to create data maps that may be exported as static images or presentation slides. Social Explorer requires subscription, but many academic institutions provide access. TODO: describe how it contains rich data, including historical census.... but currently free only for a 14-day trial period... several academic institutions have paid subscriptions to their students, staff, and faculty.
+
+Also NHGIS

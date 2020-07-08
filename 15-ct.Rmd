@@ -27,7 +27,38 @@ In addition to the official repositories above, Connecticut news organizations t
 
 **Hartford Courant Data Desk** (http://www.courant.com/data-desk) produces digital visualizations for the *Hartford Courant*, the largest daily newspaper in Connecticut, owned by Tribune Publishing. Many of these data visualizations are published on the Tableau platform, which allows readers to download the underlying data.
 
-### Census areas in the Hartford region {-}
+### Census areas in the Hartford region {- #census}
+
+The [U.S. Census Bureau](https://census.gov) collects and shares population, housing, and economic data on its open repositories.
+
+- The Decennial Census is a full count of the population every ten years, most recently in 2010 and the upcoming one in 2020. Because decennial data are counts and not estimates, they represent "true" values and hence come without margins of errors.
+- The American Community Survey (ACS) (https://www.census.gov/programs-surveys/acs/) is annual sample count, which produces:
+    - 1-year estimates for areas with populations of 65,000+
+    - 5-year estimates for all census areas
+    - ACS used to release 3-year estimates for geographies with population of 20,000+, but discontinued after the 2011-2013 release.
+
+Because ACS produces estimates and not "true" counts, data comes with margins of errors. Generally, margins of errors are higher for smaller geographies (eg census blocks) and smaller values (eg the number of Asian females aged 60+ who live in Union, CT). Hence, one needs to be critical when using ACS or other survey data.
+
+
+### Data.census.gov {-}
+Data.census.gov (https://data.census.gov) is the main platform to access US Census data. It provides an easy search across census and survey tables. There is an interface to view tables for various years and geographies, and a download button to save data as CSV or PDF. It replaced American FactFinder (https://factfinder.census.gov) in July 2019.
+
+### Social Explorer {-}
+Social Explorer (https://www.socialexplorer.com/) is a popular tool to view and download census and related demographic data, past and present. The platform allows users to create data maps that may be exported as static images or presentation slides. Social Explorer requires subscription, but many academic institutions provide access.
+
+TODO: create tutorial on how to cleanly download census data from Social Explorer and Census.gov to join with geography, especially census tract numbers
+
+Census areas are geographic divisions in this *general format*:
+
+- State
+- County
+- County subdivisions (equivalent to Connecticut towns and cities)
+- Census tracts (designated areas, roughly 2,500 to 8,000 people)
+- Block groups (sub-unit of tract, roughly 600 to 3,000 people)
+- Census blocks (sub-unit of block group, but not always a city block)
+
+ADD individual data from Census Manuscript available 70+ years later -- link to national archives
+
 The interactive map below illustrates hierarchical relations among geographical census entities for the Hartford region, from state to census block level.
 
 <iframe src="https://handsondataviz.github.io/census-divisions-hartford/index.html" height="400" width="100%" frameborder="0"></iframe>
@@ -35,6 +66,11 @@ The interactive map below illustrates hierarchical relations among geographical 
 Learn more: Explore the standard hierarchy of US Census geographic entities and definitions (https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf)
 
 See also in this book: [Geocode addresses with the US Census Geocoder](geocode.html)
+
+### National Center for Education Statistics {-}
+National Center for Education Statistics (NCES) (https://nces.ed.gov/) is the primary federal agency for collecting and reporting education data.
+
+- Elementary/Secondary Information System (ELSi) (https://nces.ed.gov/ccd/elsi) - create custom tables and charts from the Common Core of Data (CCD) and Private School Survey.
 
 #### Boundaries {-}
 - Converted from shapefile WGS84 to GeoJSON format

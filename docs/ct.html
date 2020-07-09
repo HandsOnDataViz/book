@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-08" />
+<meta name="date" content="2020-07-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -173,10 +173,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a></li>
-<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a></li>
-<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public or Private Data?</a></li>
-<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a></li>
+<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
+<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
+<li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
@@ -231,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="leaflet-csv.html"><a href="leaflet-csv.html"><i class="fa fa-check"></i>Fork and Edit Leaflet Map with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
 <li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
-<li class="chapter" data-level="" data-path="leaflet-maps-with-socrata.html"><a href="leaflet-maps-with-socrata.html"><i class="fa fa-check"></i>Leaflet Maps with Socrata API Open Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-open-apis.html"><a href="leaflet-maps-open-apis.html"><i class="fa fa-check"></i>Pull Open Data into Leaflet Map with APIs</a></li>
 <li class="chapter" data-level="" data-path="leaflet-polygon-map-click.html"><a href="leaflet-polygon-map-click.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Clickable Info Window template</a></li>
 <li class="chapter" data-level="" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
@@ -316,13 +316,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In addition to the official repositories above, Connecticut news organizations that create data visualizations often include links to download data files.</p>
 <p><strong>Connecticut Mirror / Trend CT</strong> (<a href="http://ctmirror.org/" class="uri">http://ctmirror.org/</a>) and (<a href="http://trendct.org/" class="uri">http://trendct.org/</a>) are publications of the Connecticut News Project, an independent, nonpartisan, nonprofit organization that focuses on state policy issues. Most of their data visualizations are built with open-source code, with publicly accessible data files. See also their GitHub repository (<a href="https://github.com/trendct" class="uri">https://github.com/trendct</a>).</p>
 <p><strong>Hartford Courant Data Desk</strong> (<a href="http://www.courant.com/data-desk" class="uri">http://www.courant.com/data-desk</a>) produces digital visualizations for the <em>Hartford Courant</em>, the largest daily newspaper in Connecticut, owned by Tribune Publishing. Many of these data visualizations are published on the Tableau platform, which allows readers to download the underlying data.</p>
-<div id="census-areas-in-the-hartford-region" class="section level3 unnumbered" number="">
+<div id="census" class="section level3 unnumbered" number="">
 <h3>Census areas in the Hartford region</h3>
+<p>The <a href="https://census.gov">U.S. Census Bureau</a> collects and shares population, housing, and economic data on its open repositories.</p>
+<ul>
+<li>The Decennial Census is a full count of the population every ten years, most recently in 2010 and the upcoming one in 2020. Because decennial data are counts and not estimates, they represent “true” values and hence come without margins of errors.</li>
+<li>The American Community Survey (ACS) (<a href="https://www.census.gov/programs-surveys/acs/" class="uri">https://www.census.gov/programs-surveys/acs/</a>) is annual sample count, which produces:
+<ul>
+<li>1-year estimates for areas with populations of 65,000+</li>
+<li>5-year estimates for all census areas</li>
+<li>ACS used to release 3-year estimates for geographies with population of 20,000+, but discontinued after the 2011-2013 release.</li>
+</ul></li>
+</ul>
+<p>Because ACS produces estimates and not “true” counts, data comes with margins of errors. Generally, margins of errors are higher for smaller geographies (eg census blocks) and smaller values (eg the number of Asian females aged 60+ who live in Union, CT). Hence, one needs to be critical when using ACS or other survey data.</p>
+</div>
+<div id="data.census.gov" class="section level3 unnumbered" number="">
+<h3>Data.census.gov</h3>
+<p>Data.census.gov (<a href="https://data.census.gov" class="uri">https://data.census.gov</a>) is the main platform to access US Census data. It provides an easy search across census and survey tables. There is an interface to view tables for various years and geographies, and a download button to save data as CSV or PDF. It replaced American FactFinder (<a href="https://factfinder.census.gov" class="uri">https://factfinder.census.gov</a>) in July 2019.</p>
+</div>
+<div id="social-explorer" class="section level3 unnumbered" number="">
+<h3>Social Explorer</h3>
+<p>Social Explorer (<a href="https://www.socialexplorer.com/" class="uri">https://www.socialexplorer.com/</a>) is a popular tool to view and download census and related demographic data, past and present. The platform allows users to create data maps that may be exported as static images or presentation slides. Social Explorer requires subscription, but many academic institutions provide access.</p>
+<p>TODO: create tutorial on how to cleanly download census data from Social Explorer and Census.gov to join with geography, especially census tract numbers</p>
+<p>Census areas are geographic divisions in this <em>general format</em>:</p>
+<ul>
+<li>State</li>
+<li>County</li>
+<li>County subdivisions (equivalent to Connecticut towns and cities)</li>
+<li>Census tracts (designated areas, roughly 2,500 to 8,000 people)</li>
+<li>Block groups (sub-unit of tract, roughly 600 to 3,000 people)</li>
+<li>Census blocks (sub-unit of block group, but not always a city block)</li>
+</ul>
+<p>ADD individual data from Census Manuscript available 70+ years later – link to national archives</p>
 <p>The interactive map below illustrates hierarchical relations among geographical census entities for the Hartford region, from state to census block level.</p>
 <iframe src="https://handsondataviz.github.io/census-divisions-hartford/index.html" height="400" width="100%" frameborder="0">
 </iframe>
 <p>Learn more: Explore the standard hierarchy of US Census geographic entities and definitions (<a href="https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf" class="uri">https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf</a>)</p>
 <p>See also in this book: <a href="geocode.html">Geocode addresses with the US Census Geocoder</a></p>
+</div>
+<div id="national-center-for-education-statistics" class="section level3 unnumbered" number="">
+<h3>National Center for Education Statistics</h3>
+<p>National Center for Education Statistics (NCES) (<a href="https://nces.ed.gov/" class="uri">https://nces.ed.gov/</a>) is the primary federal agency for collecting and reporting education data.</p>
+<ul>
+<li>Elementary/Secondary Information System (ELSi) (<a href="https://nces.ed.gov/ccd/elsi" class="uri">https://nces.ed.gov/ccd/elsi</a>) - create custom tables and charts from the Common Core of Data (CCD) and Private School Survey.</li>
+</ul>
 <div id="boundaries" class="section level4 unnumbered" number="">
 <h4>Boundaries</h4>
 <ul>
@@ -468,7 +505,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/15-ct.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

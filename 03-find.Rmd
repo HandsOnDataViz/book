@@ -57,53 +57,54 @@ A third step is to make a backup of the original data before cleaning or editing
 Make a habit of using these three sourcing strategies---filenames, notes, and backups---to reduce your chances of making "bad data" errors and to increase the credibility of your data visualizations. In the next section, we'll address a related set of questions you should ask yourself regarding public versus private data.
 
 ## Public versus Private Data {- #public}
-In addition to asking questions about the origins and limitations of your data, you also should consider the ethics and legal aspects of public versus private data.
+In addition to asking questions about the origins and limitations of your data, it's also important for you to be aware of important distinctions between public versus private data, and their implications for designing your visualizations. This section offers some general observations about data privacy based on our context in the United States. Since we are not lawyers (thank goodness!), please consult with legal experts for advice about your specific case.
 
-START AGAIN HERE
+Here's what's most important---and confusing---about access to data in the US. Individual-level data is often considered private, except in certain areas where our governmental process has determined that broader interests are served by making it public. First, here are two examples where individual-level data generally remains private:
 
-Many of the free web-based tools in this book require that your publicly share your data. Check each tool and decide whether it is appropriate for your data, which may have some privacy restrictions.
+- Patient-level health data is generally protected under the [Privacy Rule of the Health Insurance Portability and Accountability Act](https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act#Privacy_Rule), commonly known as HIPAA. But public health officials regularly aggregate individual patient records into larger anonymized public datasets to track progress about various illnesses.
+- Student-level education data is generally protected under the [Family Educational Rights and Privacy Act](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act), commonly known as FERPA. But education officials regularly aggregate individual student records into larger anonymized public datasets to track the progress of schools, districts, and states.  
 
-In some cases, individual data privacy is protected by law, but a government agency may aggregate (sort into larger groups) or anonymize (remove personally identifiable details) data to make it public. For example:
+But here are other examples where our government has determined that a broader interest is served by making individual-level data available to the public:
 
-- Individual-level census data is private for about 70 years, but the US Census Bureau publicly releases anonymous data for aggregated areas (such as census blocks, tracts, towns, etc.)
-- Patient-level health records are private, but public health officials share town- and county-level health data.
-- Student-level education data is private, but school districts and state agencies publicly share grade-level and school-level data.
+- Individual contributions to political candidates are public. You can search donors by name and address in this [US Federal Election Commission public database](https://www.fec.gov/data/receipts/individual-contributions/), as well as other state-level sites.
+- Individual salaries for officers of tax-exempt organizations are public. You can search by name across a digitized database of Internal Revenue Service (IRS) 990 forms that tax-exempt organizations are required to submit on several platforms, such as ProPublica's [Nonprofit Explorer](https://projects.propublica.org/nonprofits).
+- Individual property ownership records are public, and increasingly online in many locations. For example, one company provides a [US public records directory](https://publicrecords.netronline.com/) with links to local government property records, where available. Follow the links to search the value of the home owned by the first author in West Hartford, Connecticut, how much he and his spouse paid for it, the number of bathrooms, and so forth.
+- Individual police officer reports regarding "use of force" are public by New Jersey state law. But no one could easily search these local police department records until a team of journalists from NJ Advance Media created a public database, [The Force Report](https://force.nj.com/), where anyone can look up individual officers and investigate patterns of violence.
 
-In other cases, individual data is not private. For example:
-
-- When individuals contribute to political campaigns, most US and state laws require that the donor name, address, and amount is public data.
-- When an individual buys home in Connecticut, the owner's name, address, purchase amount, and other details about the home are public data.
-
-Under US law, you cannot copyright data, such as the raw information in the rows and columns of a spreadsheet. But you can copy, but representations of data can be protected by copyright. ... explain...  In the spirit of openness, we encourage you to share your data visualizations under a Creative Commons license... explain... in fact, this book is copyrighted, and the source text is publicly available under a Creative Commons TODO: TYPE license...
-
-In the US, federal and state governments are subject to different versions of the Freedom of Information Act, and people often refer to sending a "FOIA" request... explain and link.... Some government agencies delay action or reject requests, and some requests appeal to review boards or take other legal actions.... Governments often find that fighting open information requests can be expensive, so some have begun to share more on open data repositories...
-
+Also, the US federal government is subject to the [Freedom of Information Act](https://en.wikipedia.org/wiki/Freedom_of_Information_Act), which enables people to submit a "FOIA" request to obtain certain types of public records to improve government transparency. Many states and their municipalities are subject to related FOIA laws, which are listed by non-profit organizations such as the [National Freedom of Information Coalition](https://www.nfoic.org/). While some government agencies routinely delay or reject FOIA requests, others have learned that fighting against public information can be expensive, and have begun to pro-actively share more information on open data repositories.
 
 ## Open Data Repositories {- #opendata}
-TODO: Explain growth of open data platforms, and why they matter...
+Over the past decade, an increasing number of governmental and non-governmental organizations have begun to publicly share data through open data repositories. While some of these datasets were previously available as individual files on isolated websites, these growing networks have made open data easier to find, enabled more frequent updates, and sometimes have allowed live interaction. Open data repositories often include these features:
 
-- View and export: At minimum, most open data repositories allow users to view their data and export it into common spreadsheet formats. Some also provide geographical boundaries for polygon maps.
-- Built-in visualization tools: Some repositories offer built-in tools for users to create interactive charts or maps on the platform site. Some also provide code snippets for users to embed these built-in visualizations into their own websites.
-- Static and Live data: Most repositories offer static datasets for a specific time period, but some also provide "live" data that is continuously updated.
-- Application Programming Interface (APIs): Some repositories provide endpoints with code instructions that allow users to pull data directly from the platform into an external sites or online visualization, which is ideal for continuously updated data.
+- View and Export: At minimum, open data repositories allow users to view and export data in common spreadsheet formats, such as CSV, ODS, and XLSX. Some repositories also provide geographical boundary files for creating maps.
+- Built-in Visualization Tools: Several repositories offer built-in tools for users to create interactive charts or maps on the platform site. Some also provide code snippets for users to embed these built-in visualizations into their own websites, which you'll learn more about in [Chapter 7: Embed on Your Web](embed.html).
+- Application Programming Interface (APIs): Some repositories provide endpoints with code instructions that allow users to pull data directly from the platform into an external site or online visualization. When repositories continuously update data and publish an API endpoint, it can be an ideal way to display "nearly live" data in your visualization, which you'll learn more about in [Chapter 10: Leaflet Map Templates](leaflet.html).
 
-While we would love to offer a comprehensive list of all open data repositories, that's not possible because...
+Due to the recent growth of open data repositories, especially in governmental policy and scientific research, there is no single website that lists all of them. Instead, we briefly mention just a few of the sites we turn to when hunting for types of data that may interest our readers, while acknowledging that we could have added many others:
 
-Instead, the best we can do is to briefly mention types of places where we commonly go looking for data...
+TODO: Decide which links to include, remove, or others to add below....
 
-TODO:
-open data inception 1600+ sites portal
-http://opendatainception.io/
+United States open data:
 
-https://www.opendatanetwork.com/
+- [Data.gov](https://www.data.gov/), the official repository for US federal government agencies.
+- [Data.census.gov](https://data.census.gov), the main platform to access US Census Bureau data. The Decennial Census is a full count of the population every ten years, while the American Community Survey (ACS) is an annual sample count that produces one-year, three-year, or five-year estimates for different census geographies, with margins of error.
+- [Open Data Network](https://www.opendatanetwork.com/) directory of primarily US state and municipal open data platforms by Socrata
 
-Data.gov (https://www.data.gov/) is the official open data repository for US federal government agencies, managed by the US General Services Administration, and powered by an open-source CKAN and WordPress platform.
+International open data:
 
+- [Eurostat](https://ec.europa.eu/eurostat), the statistical office of the European Union
+- [Global Open Data Index](https://index.okfn.org/dataset/) by the Open Knowledge Foundation
+- [Google Public Data](https://www.google.com/publicdata/directory)
+- [openAfrica](https://africaopendata.org/) by Code for Africa
+- [Open Data Inception](https://opendatainception.io/) a map-oriented global directory
+- [World Bank Open Data](https://data.worldbank.org/)
 
-The [U.S. Census Bureau](https://census.gov) collects and shares population, housing, and economic data on its open repositories. The Decennial Census is a full count of the population every ten years, while the American Community Survey (ACS) (https://www.census.gov/programs-surveys/acs/) is an annual sample count which produces various one-year, three-year, or five-year estimates for different census geographies, with margins of error.
+In addition, students, staff, and faculty at better-resourced institutions of higher education also may have access to a paid library subscription to "closed" data repositories:
 
-Data.census.gov (https://data.census.gov) is the main platform to access US Census data. It provides an easy search across census and survey tables. There is an interface to view tables for various years and geographies, and a download button to save data as CSV or PDF. It replaced American FactFinder (https://factfinder.census.gov) in July 2019.
+- [Social Explorer](https://www.socialexplorer.com/) includes decades of demographic, economic, health, education, religion, and crime data for local and national geographies, primarily for the US, Canada, and Europe. Previously, some access was public, but now requires paid subscription or 14-day free trial.
+- IPUMS NHGIS?
+- more?
 
-Social Explorer (https://www.socialexplorer.com/) is a popular tool to view and download census and related demographic data, past and present. The platform allows users to create data maps that may be exported as static images or presentation slides. Social Explorer requires subscription, but many academic institutions provide access. TODO: describe how it contains rich data, including historical census.... but currently free only for a 14-day trial period... several academic institutions have paid subscriptions to their students, staff, and faculty.
+**Summary**
 
-Also NHGIS
+This chapter reviewed two broad questions that everyone should ask during the early stages of their visualization project: *Where can I find data?* and *How do I know what it really means?* We broke down both questions into more specific parts to develop your knowledge and skills in recognizing bad data, sourcing the origins of your data, distinguishing between public versus private data, and navigating the growing number of open data repositories. As you leap into the next few chapters on cleaning data and creating interactive charts and maps, remember these lessons as you strive to create meaningful visualizations.

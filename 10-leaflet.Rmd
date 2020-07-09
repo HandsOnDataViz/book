@@ -23,7 +23,7 @@ TODO: add and clean up Leaflet Map CSV <https://github.com/HandsOnDataViz/leafle
 | --- | --- |
 | Leaflet Maps with Google Sheets<br> ![](images/10-leaflet/leaflet-maps-with-google-sheets.png) | Best to show points, polygons, polylines, or point table data. Upload your GeoJSON data and modify settings in linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) |
 | Leaflet Storymaps with Google Sheets<br> ![](images/10-leaflet/leaflet-storymaps-with-google-sheets.png) | Create a scrolling narrative with points, text, images, and links. <br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
-| Leaflet Maps with Socrata API<br> ![](images/10-leaflet/leaflet-socrata-api-control-layers.png) | Create a Leaflet map powered by data from any Socrata data portal. <br>Template with tutorial: [Leaflet Maps with Socrata](leaflet-maps-with-socrata.html) |
+| Leaflet Maps with Open Data API<br> ![](images/10-leaflet/leaflet-socrata-api-control-layers.png) | Create a Leaflet map powered by an open data repository application programming interface (API), such as a Socrata data repository endpoint. <br>Template with tutorial: [Leaflet Maps with Open Data API](leaflet-maps-with-api.html) |
 
 #### Inside Leaflet code templates {-}
 The templates featured below vary from simple to complex, but all of them include three basic types of code:
@@ -626,8 +626,12 @@ When you copy-paste this snippet, the straight quotation marks do not turn into 
 #### Learn more {-}
 To solve problems, see [Fix Common Mistakes](fix.html) section of the appendix.
 
-## Leaflet Maps with Socrata API Open Data {- #leaflet-maps-with-socrata}
-TODO: Decide whether to keep or not, and if so, add intro
+## Leaflet Maps with Open Data API {- #leaflet-maps-with-api}
+TODO:
+- Note this new title and URL, which is more general than the older title and "leaflet-maps-with-socrata" URL
+- Update the example to pull map data from a continuously updated map, since the current example has not been updated since 2018
+- Decide if there's anything useful to borrow from the other example repo, such as a non-Socrata endpoint?: https://github.com/HandsOnDataViz/leaflet-data-apis
+- write intro to connect more directly to the [Open Data section](opendata.html) in ch 3, and describe open data APIs in general, with Socrata API serving as a convenient example.
 
 <iframe src="https://handsondataviz.github.io/leaflet-socrata/index.html" style="width: 100%; height: 450px; border: 0 none;"></iframe>
 Source: [Current Class 1 - Class 4 Food Establishments](https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8), City of Hartford

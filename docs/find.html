@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-08" />
+<meta name="date" content="2020-07-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="forms.html"/>
-<link rel="next" href="census.html"/>
+<link rel="next" href="bad.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -173,10 +173,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="census.html"><a href="census.html"><i class="fa fa-check"></i>US and Census Bureau Open Data</a></li>
-<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data Files</a></li>
-<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public or Private Data?</a></li>
-<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data: Is It Good or Bad?</a></li>
+<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
+<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
+<li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
@@ -231,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="leaflet-csv.html"><a href="leaflet-csv.html"><i class="fa fa-check"></i>Fork and Edit Leaflet Map with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
 <li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
-<li class="chapter" data-level="" data-path="leaflet-maps-with-socrata.html"><a href="leaflet-maps-with-socrata.html"><i class="fa fa-check"></i>Leaflet Maps with Socrata API Open Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-open-apis.html"><a href="leaflet-maps-open-apis.html"><i class="fa fa-check"></i>Pull Open Data into Leaflet Map with APIs</a></li>
 <li class="chapter" data-level="" data-path="leaflet-polygon-map-click.html"><a href="leaflet-polygon-map-click.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Clickable Info Window template</a></li>
 <li class="chapter" data-level="" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
@@ -299,53 +299,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="find" class="section level1" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Find and Know Your Data</h1>
-<p>Searching for open data: Increasing numbers of governmental agencies and non-profit organizations are publicly sharing <em>open data</em> on the web. When starting a new data visualization project, ask yourself these questions:</p>
-<ul>
-<li>Do I have the most relevant data for my project?</li>
-<li>Is it the most current data, in the most user-friendly format?</li>
-<li>Is data available at the individual level, or aggregated into larger groups?</li>
-<li>Which organizations might have collected data for my topic?</li>
-<li>Which open data repositories might have published this data?</li>
-</ul>
-<div id="what-features-do-open-repositories-offer" class="section level4 unnumbered" number="">
-<h4>What features do open repositories offer?</h4>
-<ul>
-<li>View and export: At minimum, most open data repositories allow users to view their data and export it into common spreadsheet formats. Some also provide geographical boundaries for polygon maps.</li>
-<li>Built-in visualization tools: Some repositories offer built-in tools for users to create interactive charts or maps on the platform site. Some also provide code snippets for users to embed these built-in visualizations into their own websites.</li>
-<li>Static and Live data: Most repositories offer static datasets for a specific time period, but some also provide “live” data that is continuously updated.</li>
-<li>Application Programming Interface (APIs): Some repositories provide endpoints with code instructions that allow users to pull data directly from the platform into an external sites or online visualization, which is ideal for continuously updated data.</li>
-</ul>
-</div>
-<div id="know-your-data" class="section level4 unnumbered" number="">
-<h4>Know Your Data</h4>
-<p>Before starting to create charts or maps, get to know your data.</p>
-<ul>
-<li>Where did it come from?</li>
-<li>Who compiled the data, and for what purpose?</li>
-<li>What do the data labels really mean?</li>
-<li>Ask yourself: Am I working with the <em>most</em> recent version, in the <em>best</em> available format?</li>
-</ul>
-<p>TODO: add resource <a href="https://github.com/Quartz/bad-data-guide" class="uri">https://github.com/Quartz/bad-data-guide</a></p>
-<p>open data inception 1600+ sites portal
-<a href="http://opendatainception.io/" class="uri">http://opendatainception.io/</a></p>
-<ul>
-<li>Know your data: go out into the field to directly observe how the original data is measured and collected</li>
-</ul>
-<p><a href="https://www.opendatanetwork.com/" class="uri">https://www.opendatanetwork.com/</a></p>
-<p>Closely examine your data files to understand their meaning, sources of origin, and limitations.
-TODO: expand on this theme with examples of bad and misleading data</p>
+<p>In the early stages of a visualization project, you will likely ask two important and related questions: <em>Where can I find data?</em> and when I do, <em>How do I know what it really means?</em> If you skip over these questions and leap too quickly into constructing charts and maps, you run the risk of creating meaningless, or perhaps worse, misleading visualizations. This chapter breaks down both of these broad questions in greater detail, and provides concrete strategies to <a href="bad.html">recognize bad data</a>, <a href="source.html">source your data</a>, navigate <a href="public.html">public versus private data</a>, and search a growing number of <a href="opendata.html">open data repositories</a>.</p>
+<p>When searching for data, your newest best friend may be a librarian. Sometimes a data-smart librarian happens to know exactly where to locate a dataset that you’ve been seeking for day. But their more valuable skill is guiding us on <em>how to search</em> by reflecting on the types of questions librarians commonly ask:</p>
 <ol style="list-style-type: decimal">
-<li>Always ask: Am I using the best available data?</li>
+<li><p>What types of organizations may have collected or published the data you seek? If a governmental organization may have been involved, then at what level (national, state/provincial, regional, or municipal), and which branch or agency? Or might data have been compiled by a non-governmental organization, such as academic institutions, journalists, for-profit corporations, or non-profit groups? Figuring out which organizations might have collected the data can help point you to the digital or print materials they typically publish, and most appropriate tools to focus your search in that particular area.</p></li>
+<li><p>Have any prior publications drawn on similar datasets, and if so, how can we trace their sources? Some of our best data visualization ideas began while reading textual evidence or noticing a table in a print publication or outdated web page, which convinced us that the data existed <em>somewhere</em>. With these valuable leads, librarians can help you track down source notes on where the data originated, or sometimes find more up-to-date versions of the data.</p></li>
+<li><p>What level(s) of data are available? Is information disaggregated by individual cases or aggregated into larger groups? Librarians can help us to decipher how and why different organizations publish data in different formats. For example, US Census seeks to collect data every ten years about each person residing in the nation, but under the law, this individual-level data is confidential and not released to the public for 72 years. You can look up individual census data for 1940 and earlier decades at the <a href="https://www.archives.gov/research/genealogy/census/about">US National Archives</a> and other websites. But the US Census publishes current data for larger areas, such as neighborhood-level block groups, census tracts, cities, and states, by aggregating individual records into data tables, and suppressing small-numbered cells to protect people’s privacy. Librarians can help us understand organization’s guidelines on when and how they make data available at different levels.</p></li>
 </ol>
-<ul>
-<li>Compare the HFS list to the City of Hartford’s current list of food establishments:
-<a href="https://data.hartford.gov/browse" class="uri">https://data.hartford.gov/browse</a></li>
-<li>go to Public Health Category</li>
-<li>click on the “dataset” version (updated 10 Feb 2016), which is same data but different view than the “map” version</li>
-<li>click on light blue “export” button into any format you wish to compare with the HFS list (see screenshot)</li>
-<li>decide which list is best for your organization’s goal</li>
-</ul>
-</div>
+<p>If your search has produced some results, the next step is to get to know your data. Closely examine your files and ask questions about their origin, meaning, and limitations:</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Who collected and published this data, and for what purpose? Since individuals and organizations require time and resources to do this work, seek to clarify their motivations and assumptions, both explicit and implicit ones.
+Who was the intended audience of the work? Whose perspectives does the data privilege? Whose stories remain untold? As practitioners of data visualization, we strongly favor evidence-based reasoning over its less-informed alternatives. But we also caution against embracing so-called data objectivity. Numbers are <em>not</em> neutral, and we always need to consider the broader contexts in which people created them.</p></li>
+<li><p>What do the data labels <em>really</em> mean? Most spreadsheets contain abbreviated column headers, particularly due to software character limits, but some questions of data interpretation run much deeper. For example, socially-constructed labels such as “race” or “gender” may not clarify how the creators defined their terms, or what role respondents played in the collection process. Even seemingly objective labels such as “income” or “population” or “elevation” may not adequately describe exactly what was counted, how it was measured, and the margins of error. Better-quality datasets include detailed definitions of the collection process to help you to understand the decisions made by its creators. If not, then your next best option may be to go out into the field, if feasible, and directly observe how the data is measured and collected.</p></li>
+</ol>
+<p>To be clear, you may never <em>truly know</em> your data if it was collected by someone else, particularly a different person in a distant place or time. But don’t let that philosophical obstacles stop you from asking good questions about the origins and limitations of your data. Only by clarifying what we know—and what we don’t know—can we create meaningful data visualizations that bring their inner-stories to life.</p>
 </div>
             </section>
 
@@ -353,7 +320,7 @@ TODO: expand on this theme with examples of bad and misleading data</p>
         </div>
       </div>
 <a href="forms.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="census.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bad.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -395,7 +362,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/03-find.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

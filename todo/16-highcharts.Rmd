@@ -3,7 +3,7 @@
 
 While beginners appreciate the drag-and-drop chart tools and tutorials described earlier in this book, such as [Google Sheets](google-sheets) and [Tableau Public](tableau-public), more advanced users may wish to customize their visualizations, add more complex data, and control exactly how and where their work appears on the web. A more powerful and relatively easy-to-learn solution is to use code templates built with Highcharts <https://highcharts.com>, an open-source library, which you can [modify and host on GitHub](github), as described in this book.
 
-#### Tool Review {-}
+Tool review: 
 - Pros of working with Highcharts (http://highcharts.com):
   - Open-source code that is free for individuals, schools, and non-profits to use online or download
   - Easier for beginners to understand than more complex visualization code libraries
@@ -25,5 +25,5 @@ Also, these templates refer to other code elements:
 - library: link to online instructions to complete routine tasks (example: Highcharts)
 - data: content to appear in chart, typically in CSV format (example: data.csv) or pulled from Google Sheets
 
-#### Learn more {-}
+Learn more: 
 - Highcharts Demos, http://www.highcharts.com/demo

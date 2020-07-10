@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 09 Jul 2020
+updated on: 10 Jul 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -165,8 +165,6 @@ charts and maps on your website](embed), to share with the wider public.
 this book, the best visualizations are those that [tell your data
 story](story) – and pull readers’ attention to what really matters – by
 combining images and text, and offering exploration with explanation.
-
-#### Learn more
 
 -   Michael Friendly and Daniel J. Denis, “Milestones in the History of
     Thematic Cartography, Statistical Graphics, and Data Visualization,”
@@ -581,6 +579,10 @@ criteria:
 
 Recommended: Enroll in our free online course **LINK TO DO** to compare
 your ratings to other students.
+
+### Summary
+
+TODO
 
 <!--chapter:end:01-choose.Rmd-->
 
@@ -1428,17 +1430,19 @@ Figure 23: The Google Forms *Responses* tab includes a button to open
 answers in a linked Google Sheet.
 </p>
 
-**Summary** If you’re one of the many people who “never really learned”
-about spreadsheets in school or on the job, or if you’ve taught yourself
-bits and pieces along the way, we hope that this chapter has
-successfully introduced or refreshed your skills. All of the subsequent
-chapters in this book, especially those on designing interactive charts
-and maps, require a basic level of familiarity with spreadsheets. In
-addition to serving as incredible time-savers when it comes to tedious
-data tasks, the spreadsheet tools and methods featured above are
-designed to help you share, sort, calculate, as well as more advanced
-skills in pivoting tables and matching with lookup tables, with the
-broader goal of telling your data stories.
+### Summary
+
+If you’re one of the many people who “never really learned” about
+spreadsheets in school or on the job, or if you’ve taught yourself bits
+and pieces along the way, we hope that this chapter has successfully
+introduced or refreshed your skills. All of the subsequent chapters in
+this book, especially those on designing interactive charts and maps,
+require a basic level of familiarity with spreadsheets. In addition to
+serving as incredible time-savers when it comes to tedious data tasks,
+the spreadsheet tools and methods featured above are designed to help
+you share, sort, calculate, as well as more advanced skills in pivoting
+tables and matching with lookup tables, with the broader goal of telling
+your data stories.
 
 The next chapter describes strategies for finding data, particularly on
 open data sites operated by governmental and non-profit organizations,
@@ -1608,19 +1612,20 @@ The first step is to label every data file that you download or create.
 All of us have experienced bad file names like these:
 
 -   data.csv
--   download.xls
--   data2020.xlsx
+-   file.xls
+-   download.xlsx
 
 Write a short but meaningful file name. While there’s no perfect system,
 a good strategy is to abbreviate the source (such as `census` or
 `worldbank` or `eurostat`), with topic keywords, and a date or range. If
 you or co-workers will be working on different versions of a downloaded
 file, include the current date in YYYY-MM-DD (year-month-date) format.
-Replace blank spaces with dashes (`-`) or underscores (`_`). Better file
+If you plan to upload files to the web, type names in all lower-case and
+replace blank spaces with dashes (`-`) or underscores (`_`). Better file
 names look like this:
 
--   town-demographics-2019-12-02.xls
--   census2010\_population\_by\_county.csv
+-   town-demographics-2019-12-02.csv
+-   census2010\_population\_by\_county.xls
 -   eurostat-1999-2019-CO2-emissions.xlsx
 
 The second step is to save more detailed source notes about the data on
@@ -1714,13 +1719,15 @@ Also, the US federal government is subject to the [Freedom of
 Information
 Act](https://en.wikipedia.org/wiki/Freedom_of_Information_Act), which
 enables people to submit a “FOIA” request to obtain certain types of
-public records to improve government transparency. Many states and their
-municipalities are subject to related FOIA laws, which are listed by
-non-profit organizations such as the [National Freedom of Information
-Coalition](https://www.nfoic.org/). While some government agencies
-routinely delay or reject FOIA requests, others have learned that
-fighting against public information can be expensive, and have begun to
-pro-actively share more information on open data repositories.
+public records to improve government transparency. Individual states and
+their municipalities are subject to their own Freedom of Information
+laws, which are summarized in the [Open Government
+Guide](https://www.rcfp.org/open-government-guide/) by the Reporters
+Committee for Freedom of the Press, and also by the [National Freedom of
+Information Coalition](https://www.nfoic.org/). While some government
+agencies delay or reject FOIA requests, which can result in expensive
+litigation, others have begun to pro-actively share more public
+information on open data repositories.
 
 Open Data Repositories
 ----------------------
@@ -1795,7 +1802,7 @@ subscription to “closed” data repositories:
 -   IPUMS NHGIS?
 -   more?
 
-**Summary**
+### Summary
 
 This chapter reviewed two broad questions that everyone should ask
 during the early stages of their visualization project: *Where can I
@@ -2297,7 +2304,7 @@ OpenRefine window. You can choose your format (we recommend CSV, or
 comma-separated value). Now you have a clean dataset that is ready to be
 processed and visualized.
 
-**Summary**
+### Summary
 
 In this chapter, we looked at cleaning up tables in Google Sheets,
 liberating tabular data trapped in PDFs using Tabula, and using
@@ -3546,7 +3553,7 @@ a web page that you control.
 To learn more, see [Tableau Public resources
 page](https://public.tableau.com/en-us/s/resources).
 
-**Summary**
+### Summary
 
 Congratulations on creating interactive charts that pull readers deeper
 into your story, and encourage them to explore the underlying data! As
@@ -3573,6 +3580,8 @@ chapter 8.
 
 Map Your Data
 =============
+
+TODO: Rewrite chapter
 
 Maps entice readers to explore your data story and develop a stronger
 sense of place. But good maps require careful thought about how to
@@ -3766,16 +3775,14 @@ reflect the biases of the author and the software. Read the [Detect Bias
 in Data Stories](detect.html) chapter in this book, especially [How to
 Lie with Maps](detect.html#how-to-lie-with-maps)
 
-#### Learn more
-
--   Axis Maps, “The Basics of Data Classification,” 2010,
-    <a href="http://axismaps.github.io/thematic-cartography/articles/classification.html" class="uri">http://axismaps.github.io/thematic-cartography/articles/classification.html</a>
--   Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
-    Visualisation,” Lisa Charlotte Rost, April 22, 2016,
-    <a href="https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/" class="uri">https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/</a>.
--   Josh Stevens, “Bivariate Choropleth Maps: A How-To Guide,” February
-    18, 2015,
-    <a href="http://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/" class="uri">http://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/</a>.
+Learn more: - Axis Maps, “The Basics of Data Classification,” 2010,
+<a href="http://axismaps.github.io/thematic-cartography/articles/classification.html" class="uri">http://axismaps.github.io/thematic-cartography/articles/classification.html</a>
+- Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
+Visualisation,” Lisa Charlotte Rost, April 22, 2016,
+<a href="https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/" class="uri">https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/</a>.
+- Josh Stevens, “Bivariate Choropleth Maps: A How-To Guide,” February
+18, 2015,
+<a href="http://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/" class="uri">http://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/</a>.
 
 Point Map with Google My Maps
 -----------------------------
@@ -3783,9 +3790,8 @@ Point Map with Google My Maps
 TODO: add text, check current documentation and features at
 <a href="https://www.google.com/maps/about/mymaps/" class="uri">https://www.google.com/maps/about/mymaps/</a>
 
-#### Try It
-
-Explore the interactive point map below, or [view the full-screen
+Try it: Explore the interactive point map below, or [view the
+full-screen
 version](https://drive.google.com/open?id=1OPrulm2ISYUb990DJOCoYlt_sWc),
 created with Google My Maps
 <a href="https://www.google.com/maps/d/" class="uri">https://www.google.com/maps/d/</a>.
@@ -3793,22 +3799,15 @@ created with Google My Maps
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc" width="90%" height="480">
 </iframe>
 
-#### Tool Review
+Tool review: - Pros - Easy-to learn free mapping tool to import and
+style point, polyline, and polygon layers and basemap layers - Share and
+collaborate through the Google Drive platform - Geocoding error warning
+- Cons - Limited options to customize map markers - Cannot easily create
+colored polygon maps from data values - Cannot extract geocoded data to
+migrate to another tool
 
--   Pros
-    -   Easy-to learn free mapping tool to import and style point,
-        polyline, and polygon layers and basemap layers
-    -   Share and collaborate through the Google Drive platform
-    -   Geocoding error warning
--   Cons
-    -   Limited options to customize map markers
-    -   Cannot easily create colored polygon maps from data values
-    -   Cannot extract geocoded data to migrate to another tool
-
-#### Video with Step-by-Step Tutorial
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZVIPn8dJeYM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+Video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZVIPn8dJeYM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Let’s build a simple point map with sample data, using Google My Maps
 <a href="https://www.google.com/maps/d/" class="uri">https://www.google.com/maps/d/</a>.
@@ -3875,10 +3874,8 @@ errors](images/06-map/mymaps-fix-errors.png)
 
 ![Image: Embed map on your site](images/06-map/mymaps-embed.png)
 
-#### Learn more
-
--   Google My Maps Help Page
-    <a href="https://support.google.com/mymaps/answer/3024396" class="uri">https://support.google.com/mymaps/answer/3024396</a>
+Learn more: - Google My Maps Help Page
+<a href="https://support.google.com/mymaps/answer/3024396" class="uri">https://support.google.com/mymaps/answer/3024396</a>
 
 Point Map with Carto Builder
 ----------------------------
@@ -3891,9 +3888,8 @@ TODO:
 -   if this tool stays in the book, check the iframe below to see if
     update is needed
 
-#### Try It
-
-Explore the interactive point map below, or [view the full-screen
+Try it: Explore the interactive point map below, or [view the
+full-screen
 version](https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed)
 ,created with Carto Builder
 <a href="https://carto.com" class="uri">https://carto.com</a>.
@@ -3901,21 +3897,15 @@ version](https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b
 <iframe width="90%" height="500" frameborder="0" src="https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>
 </iframe>
 
-#### Tool Review
+Tool review: - Pros: - Free and powerful drag-and-drop map tool in the
+browser - Customize point markers and polygon colors by data values -
+Additional features include geographic analysis tools - Cons: - Several
+steps required to create simple point or polygon map - New users may get
+lost when moving through multiple screens - Free account allows only 400
+geocodes per month
 
--   Pros:
-    -   Free and powerful drag-and-drop map tool in the browser
-    -   Customize point markers and polygon colors by data values
-    -   Additional features include geographic analysis tools
--   Cons:
-    -   Several steps required to create simple point or polygon map
-    -   New users may get lost when moving through multiple screens
-    -   Free account allows only 400 geocodes per month
-
-#### Video with Step-By-Step Tutorial
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lto7Z5wC2hQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+Video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lto7Z5wC2hQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ***Before you begin:*** This tutorial uses the newer Carto Builder,
 rather than older Carto Editor tool. Learn more at
@@ -4017,10 +4007,8 @@ map](images/06-map/carto-publish-map.png)
 2.  If you make edits to your map, you must click the blue Update button
     to republish your map to the web.
 
-#### Learn more
-
--   Getting Started with Carto Builder
-    <a href="https://carto.com/learn/guides/intro/getting-started-with-carto-builder" class="uri">https://carto.com/learn/guides/intro/getting-started-with-carto-builder</a>
+Learn more: - Getting Started with Carto Builder
+<a href="https://carto.com/learn/guides/intro/getting-started-with-carto-builder" class="uri">https://carto.com/learn/guides/intro/getting-started-with-carto-builder</a>
 
 Filtered Point Map with Socrata Open Data
 -----------------------------------------
@@ -4339,6 +4327,8 @@ display on mouseover.
 Embed On Your Web
 =================
 
+TODO: Reorganize and rewrite chapter
+
 After you create a chart or map, how do display it inside your website
 as an *interactive* visualization? Our goal is not a static picture, but
 a live chart or map that users can explore. This is an important
@@ -4411,10 +4401,9 @@ it on the public web with the built-in GitHub Pages feature. For **steps
 Sheets](iframe-google-sheets.html) tutorial and the [Embed iframe in
 GitHub Pages](iframe-github.html) tutorial in this chapter.
 
-#### Tool Review
-
-GitHub <a href="http://github.com" class="uri">http://github.com</a> is
-a versatile tool that can be used to create simple web pages.
+Tool review: GitHub
+<a href="http://github.com" class="uri">http://github.com</a> is a
+versatile tool that can be used to create simple web pages.
 
 -   Pros:
     -   Free and easy-to-learn tool to edit and host simple pages on the
@@ -4426,10 +4415,8 @@ a versatile tool that can be used to create simple web pages.
     -   New users sometimes confuse the links for code repositories
         versus published web pages.
 
-#### Video with step-by-step tutorial
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AFdogZFyN0c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+Video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AFdogZFyN0c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 1.  Sign up for free GitHub account, then sign in, at
     <a href="http://github.com" class="uri">http://github.com</a>.
@@ -4626,7 +4613,7 @@ tutorials:
     and instructions below show how to paste an iframe from a Google
     Sheets interactive chart into a simple web page with GitHub Pages.
 
-#### Try it
+Try it:
 
 The goal is to embed the iframe code from a Google Sheets interactive
 chart, which resides on a Google web server, into your GitHub Pages web
@@ -4803,7 +4790,7 @@ depends on your type of website.
 -   1.  Convert Link to iframe: to paste into WordPress.org, Wix,
         SquareSpace, Weebly, and many other web platforms
 
-#### Try it
+Try it:
 
 Both methods produce an embedded visualization like the one below. Float
 your cursor over points to view data details.
@@ -4932,9 +4919,8 @@ right to see all):
 
     [iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"]
 
-#### Learn more
-
-Embedding Tableau Public Views in iframe, Tableau Support page
+Learn more: Embedding Tableau Public Views in iframe, Tableau Support
+page
 <a href="http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes" class="uri">http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes</a>
 
 <!--chapter:end:07-embed.Rmd-->
@@ -5832,6 +5818,8 @@ in the next two chapters.
 Chart.js Code Templates
 =======================
 
+TODO: Rewrite chapter
+
 While beginners appreciate the drag-and-drop chart tools and tutorials
 described earlier in this book, such as [Google
 Sheets](google-sheets.html) and [Tableau Public](tableau-public.html),
@@ -5910,10 +5898,8 @@ Also, these templates refer to other code elements:
 -   data: content to appear in chart, typically in CSV format (example:
     data.csv) or pulled from Google Sheets
 
-#### Learn more
-
--   Chart.js Samples,
-    <a href="https://www.chartjs.org/samples/latest/" class="uri">https://www.chartjs.org/samples/latest/</a>
+Learn more: - Chart.js Samples,
+<a href="https://www.chartjs.org/samples/latest/" class="uri">https://www.chartjs.org/samples/latest/</a>
 
 Bar Chart.js with CSV Data
 --------------------------
@@ -6028,6 +6014,8 @@ are necessary to prove or illustrate your idea.
 
 Leaflet Map Templates
 =====================
+
+TODO: Rewrite chapter
 
 While beginners appreciate the drag-and-drop map tools and tutorials
 described earlier in this book, [Google My Maps](mymaps.html) and
@@ -6145,10 +6133,8 @@ GitHub](github.html). If you have problems with this tutorial, go to the
 TODO: add demo, remove unnecessary basic steps from below (covered in
 prior chapter)
 
-#### Video with step-by-step tutorial
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7iUocaxTYqk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+Video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7iUocaxTYqk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 #### A) Fork (copy) Leaflet template to your GitHub account
 
@@ -6400,9 +6386,7 @@ Requires two free accounts: Google and GitHub.
 -   Responsive design resizes your maps to display inside most mobile
     devices
 
-#### Try it
-
-Explore the map or right-click to [view full-screen map in a new
+Try it: Explore the map or right-click to [view full-screen map in a new
 tab](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/)
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="90%" height=500></iframe>
 
@@ -6789,19 +6773,15 @@ CSV format, with these file names:
 Upload these files into the main level of your GitHub code repository,
 where the template will process them automatically.
 
-#### Learn more
-
-To solve problems, see the [Fix Common Mistakes](fix.html) section of
-the appendix.
+Learn more: To solve problems, see the [Fix Common Mistakes](fix.html)
+section of the appendix.
 
 Leaflet Storymaps with Google Sheets and Scrolling Narrative
 ------------------------------------------------------------
 
 TODO: Add intro text
 
-#### Try it
-
-Explore the map or right-click to [view full-screen map in a new
+Try it: Explore the map or right-click to [view full-screen map in a new
 tab](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/)
 <iframe src="https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/" width="90%" height=500></iframe>
 
@@ -7053,10 +7033,8 @@ for the horizontal line:
 When you copy-paste this snippet, the straight quotation marks do not
 turn into curly marks, otherwise it won’t work.
 
-#### Learn more
-
-To solve problems, see [Fix Common Mistakes](fix.html) section of the
-appendix.
+Learn more: To solve problems, see [Fix Common Mistakes](fix.html)
+section of the appendix.
 
 Leaflet Maps with Open Data API
 -------------------------------
@@ -7201,10 +7179,10 @@ below.
 -   data
     <a href="https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7" class="uri">https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7</a>
 
-#### Learn more
-
--   <a href="https://dev.socrata.com/" class="uri">https://dev.socrata.com/</a>
--   <a href="https://github.com/chriswhong/simpleSodaLeaflet" class="uri">https://github.com/chriswhong/simpleSodaLeaflet</a>
+Learn more: -
+<a href="https://dev.socrata.com/" class="uri">https://dev.socrata.com/</a>
+-
+<a href="https://github.com/chriswhong/simpleSodaLeaflet" class="uri">https://github.com/chriswhong/simpleSodaLeaflet</a>
 
 #### Thanks to
 
@@ -7224,9 +7202,7 @@ communicate with one another. Below is a Leaflet Map template that uses
 APIs to pull in the most current data from three different open
 repository platforms: Socrata, Esri ArcGIS Online, and USGS.
 
-#### Try it
-
-Explore the map below or [view full-screen version in a new
+Try it: Explore the map below or [view full-screen version in a new
 tab](https://handsondataviz.github.io/leaflet-data-apis)
 
 <iframe src="https://handsondataviz.github.io/leaflet-data-apis/" width="90%" height="550">
@@ -7300,10 +7276,8 @@ Leaflet Thematic Polygon Map with Clickable Info Window template
 
 TODO: Decide whether to keep or not
 
-#### Try it
-
-<iframe src="https://handsondataviz.github.io/leaflet-map-polygon-click/" width="100%" height="550">
-</iframe>
+Try it:
+<iframe src="https://handsondataviz.github.io/leaflet-map-polygon-click/" width="100%" height=550></iframe>
 
 #### View demo in new page
 
@@ -7394,10 +7368,8 @@ Leaflet Thematic Polygon Map with Hover Info Window template
 
 TODO: Decide whether to keep or not
 
-#### Try it
-
-<iframe src="https://handsondataviz.github.io/leaflet-map-polygon-hover/" width="100%" height="550">
-</iframe>
+Try it:
+<iframe src="https://handsondataviz.github.io/leaflet-map-polygon-hover/" width="100%" height=550></iframe>
 
 #### View demo in new page
 
@@ -7423,10 +7395,8 @@ Leaflet Thematic Polygon Map with Multi-Year Tabs template
 
 TODO: decide whether to keep or not
 
-#### Try it
-
-<iframe src="https://handsondataviz.github.io/leaflet-map-polygon-tabs/" width="100%" height="550">
-</iframe>
+Try it:
+<iframe src="https://handsondataviz.github.io/leaflet-map-polygon-tabs/" width="100%" height=550></iframe>
 
 #### View demo in new page
 
@@ -8613,6 +8583,8 @@ KMZ. KMZ is simply a ‘zipped’ version of a KML file!
 Detect Bias in Data Stories
 ===========================
 
+TODO: Rewrite chapter
+
 While we like to believe data visualizations simply “tell the truth,”
 when you dig further into this topic, you realize that there are
 multiple ways to represent reality. In this chapter, you will learn how
@@ -8634,17 +8606,15 @@ opportunities to interact with instructors and other learners.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eWfI_ANQT2Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
 
-#### Learn more
-
--   Darrell Huff, How to Lie with Statistics (W. W. Norton & Company,
-    1954),
-    <a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a>
--   Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of
-    Chicago Press, 1996),
-    <a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a>
--   Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February
-    9, 2017,
-    <a href="http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/" class="uri">http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/</a>
+Learn more: - Darrell Huff, How to Lie with Statistics (W. W. Norton &
+Company, 1954),
+<a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a>
+- Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of
+Chicago Press, 1996),
+<a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a>
+- Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9,
+2017,
+<a href="http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/" class="uri">http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/</a>
 
 How to Lie with Charts
 ----------------------
@@ -8776,6 +8746,9 @@ Appendix
 Fix Common Mistakes
 ===================
 
+TODO: Rewrite appendix to focus more broadly on “common mistakes” not
+just “code errors”
+
 Creating your data visualizations through code templates hosted on
 GitHub has multiple advantages over drag-and-drop tools. Coding gives
 you more power to customize their appearance and interactive features,
@@ -8798,8 +8771,7 @@ way to learn, because trial-and-error on a computer often provides
 immediate feedback that supports the learning process and develops our
 thinking.
 
-TODO: Start here; Reorganize the logic of subsections below, perhaps in
-this way
+TODO: Reorganize contents, perhaps using this outline?
 
 -   Problems with Mac computers
 -   Problems with data tables
@@ -9040,6 +9012,8 @@ In Firefox for Mac, go to Tools &gt; Web Developer &gt; Inspector
 
 Find Connecticut Data
 =====================
+
+TODO: Rewrite and update this appendix
 
 Since this book was created in Hartford, Connecticut, we include state
 and municipal open data repositories and boundary files.
@@ -9654,6 +9628,12 @@ chapters this way: `01-keyword.Rmd` to keep our work organized. Unique
 names should contain only *alphanumeric* characters (a-z, A-Z, 0-9) or
 dashes (-).
 
+Subheaders must have unique names or IDs to avoid Bookdown errors about
+duplicated references. To avoid this issue for repeated subheaders (such
+as “Summary”), at the end of each chapter insert a third-level summary
+subhead, but insert a unique ID that matches each chapter number, like
+this: `### Summary {- #summary17}`
+
 A special header in this book is the unnumbered header beginning with
 `(APPENDIX)`, which indicates that all chapters appearing afterwards are
 appendices. According to
@@ -9825,11 +9805,6 @@ Dashes:
 
 Insert `TODO` to note items to finish or review with co-author or
 editor.
-
-At the end of each chapter, insert **Summary** using bold type, rather
-than a hashtag header, to avoid creating several unnecessary web pages
-named “Summary” in the HTML edition. Although this does not match the
-O’Reilly style guide, it can easily be fixed in book production.
 
 Insert three back tics to insert a code block. Check character line
 length limits in [O’Reilly style

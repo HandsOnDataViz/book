@@ -10,7 +10,7 @@ This tutorial introduces the **basic steps** of working with code templates, usi
 
 Code templates help us to move beyond the limits of drag-and-drop web tools (such as Google Sheets and Tableau Public) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Modify and Host Code Templates with GitHub](github.html). For more advanced examples, see the [Highcharts Templates](highcharts.html) chapter in this book. If you have problems with this tutorial, go to the [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
 
-#### Try it {-}
+Try it:
 You will begin this tutorial with a basic chart template that includes only 7 points. Right-click to open [full-size chart in new tab](https://handsondataviz.github.io/highcharts-scatter-csv/).
 
 <iframe src="https://handsondataviz.github.io/highcharts-scatter-csv/" width="90%" height=425></iframe>
@@ -19,7 +19,7 @@ By the end of this tutorial, you will learn how to modify the chart and add a ne
 
 <iframe src="https://handsondataviz.github.io/highcharts-scatter-csv-instructor-sample/" width="90%" height=425></iframe>
 
-#### Video with step-by-step tutorial {-}
+Video: 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/72pgCZqWg7Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 #### A) Fork (copy) the Highcharts template to your GitHub account {-}
@@ -70,7 +70,7 @@ https://USERNAME.github.io/REPOSITORY
 
 16) In your GitHub repo, click the new data-scatter.csv file to inspect the changes. Then go to your live website tab and refresh to see the updated scatter chart. ** Be patient** during busy periods, when changes make take up to 1 minute to appear.
 
-#### Learn more {-}
+Learn more: 
 - To solve problems, see the [Fix Common GitHub and Code Errors](fix-code.html) chapter in this book.
 - See more [Highcharts Templates](highcharts.html) in this book
 - Highcharts Demos http://highcharts.com/demo and Highcharts Docs http://www.highcharts.com/docs

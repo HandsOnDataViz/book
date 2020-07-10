@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-09" />
+<meta name="date" content="2020-07-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -312,6 +312,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ### Third-level subhead {-}
 #### Fourth-level subhead {-}</code></pre>
 <p>Also, we match the unique ID keyword to the file name for top-level chapters this way: <code>01-keyword.Rmd</code> to keep our work organized. Unique names should contain only <em>alphanumeric</em> characters (a-z, A-Z, 0-9) or dashes (-).</p>
+<p>Subheaders must have unique names or IDs to avoid Bookdown errors about duplicated references. To avoid this issue for repeated subheaders (such as “Summary”), at the end of each chapter insert a third-level summary subhead, but insert a unique ID that matches each chapter number, like this: <code>### Summary {- #summary17}</code></p>
 <p>A special header in this book is the unnumbered header beginning with <code>(APPENDIX)</code>, which indicates that all chapters appearing afterwards are appendices. According to <a href="https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html">Bookdown</a>, the numbering style will appear correctly in HTML and LaTeX/PDF output, but not in Word or ebooks.</p>
 <pre><code># Chapter One
 

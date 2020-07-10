@@ -1,4 +1,6 @@
 # Embed On Your Web {#embed}
+TODO: Reorganize and rewrite chapter
+
 After you create a chart or map, how do display it inside your website as an *interactive* visualization? Our goal is not a static picture, but a live chart or map that users can explore. This is an important question for beginners, since data visualizations are not valuable unless you can control where and how your work appears. This chapter walks you through the key steps.
 
 First, you need to own a website that supports iframe codes (which we'll explain below). If you do not have a website that supports this, then follow this quick tutorial to [Create a simple web page with GitHub Pages](github-pages.html). Even if you already have a website, still do this tutorial, because it introduces a tool used many times in this book.
@@ -32,7 +34,7 @@ The full answer requires three steps:
 
 This tutorial focuses on the **first step**. If you don't already have your own website, or if you are not sure whether your site supports iframe codes, then follow the steps below. We will create a simple web page with a free and friendly tool called GitHub <http://github.com>, and host it on the public web with the built-in GitHub Pages feature. For **steps 2 and 3**, see the [Copy iframe from Google Sheets](iframe-google-sheets.html) tutorial and the [Embed iframe in GitHub Pages](iframe-github.html) tutorial in this chapter.
 
-#### Tool Review {-}
+Tool review: 
 GitHub <http://github.com> is a versatile tool that can be used to create simple web pages.
 
 - Pros:
@@ -42,7 +44,7 @@ GitHub <http://github.com> is a versatile tool that can be used to create simple
   - All work on GitHub is public by default. Private repositories (folders) require payment.
   - New users sometimes confuse the links for code repositories versus published web pages.
 
-#### Video with step-by-step tutorial {-}
+Video: 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AFdogZFyN0c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 1) Sign up for free GitHub account, then sign in, at <http://github.com>.
@@ -163,7 +165,7 @@ Here's the full three-step answer that combines lessons from the [Embed on the W
 
 3) Third, embed (or paste) the iframe code into your website. The video and instructions below show how to paste an iframe from a Google Sheets interactive chart into a simple web page with GitHub Pages.
 
-#### Try it {-}
+Try it:
 
 The goal is to embed the iframe code from a Google Sheets interactive chart, which resides on a Google web server, into your GitHub Pages web site. The result will be similar to the one below:
 
@@ -269,7 +271,7 @@ Answer: Tableau Public supports two embedding methods, and your choice depends o
 - A) Embed code: if you can paste directly into an HTML web page
 - B) Convert Link to iframe: to paste into WordPress.org, Wix, SquareSpace, Weebly, and many other web platforms
 
-#### Try it {-}
+Try it:
 
 Both methods produce an embedded visualization like the one below. Float your cursor over points to view data details.
 
@@ -365,5 +367,5 @@ Exceptions to the last step above. As described in the [Embed iframe on WordPres
 [iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"]
 ```
 
-#### Learn more {-}
+Learn more: 
 Embedding Tableau Public Views in iframe, Tableau Support page <http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes>

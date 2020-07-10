@@ -1,4 +1,6 @@
 # Leaflet Map Templates {#leaflet}
+TODO: Rewrite chapter
+
 While beginners appreciate the drag-and-drop map tools and tutorials described earlier in this book, [Google My Maps](mymaps.html) and [Carto](carto.html), more advanced users may wish to customize their visualizations, add more complex data and interactivity, and control exactly how and where their work appears on the web. A more powerful and relatively easy-to-learn solution is to use code templates built with Leaflet <https://leafletjs.com>, an open-source library, which you can [modify and host on GitHub](github.html), as described in this book.
 
 #### Working with Leaflet {-}
@@ -52,7 +54,7 @@ Code templates help us to move beyond the limits of drag-and-drop web mapping se
 
 TODO: add demo, remove unnecessary basic steps from below (covered in prior chapter)
 
-#### Video with step-by-step tutorial {-}
+Video: 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7iUocaxTYqk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 #### A) Fork (copy) Leaflet template to your GitHub account {-}
@@ -222,7 +224,7 @@ Answer: Copy and customize our open-source template for Leaflet Maps with Google
 - Show multiple polygon layers, each with their own color legend and ranges (numerical or text)
 - Responsive design resizes your maps to display inside most mobile devices
 
-#### Try it {-}
+Try it:
 Explore the map or right-click to [view full-screen map in a new tab](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/)
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="90%" height=500></iframe>
 
@@ -450,13 +452,13 @@ If desired, you can save your table data with your code, rather than in a separa
 
 Upload these files into the main level of your GitHub code repository, where the template will process them automatically.
 
-#### Learn more {-}
+Learn more: 
 To solve problems, see the [Fix Common Mistakes](fix.html) section of the appendix.
 
 ## Leaflet Storymaps with Google Sheets and Scrolling Narrative {- #leaflet-storymaps-with-google-sheets}
 TODO: Add intro text
 
-#### Try it {-}
+Try it:
 Explore the map or right-click to [view full-screen map in a new tab](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/)
 <iframe src="https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/" width="90%" height=500></iframe>
 
@@ -623,7 +625,7 @@ To add a horizontal line, you need to be a bit creative (see screenshot attached
 When you copy-paste this snippet, the straight quotation marks do not turn into curly marks, otherwise it won’t work.
 
 
-#### Learn more {-}
+Learn more: 
 To solve problems, see [Fix Common Mistakes](fix.html) section of the appendix.
 
 ## Leaflet Maps with Open Data API {- #leaflet-maps-with-api}
@@ -702,7 +704,7 @@ If your Socrata endpoint only supports JSON format, but includes data columns wi
 - code https://github.com/handsondataviz/leaflet-socrata/index-json.html
 - data https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7
 
-#### Learn more {-}
+Learn more: 
 - https://dev.socrata.com/
 - https://github.com/chriswhong/simpleSodaLeaflet
 
@@ -713,7 +715,7 @@ If your Socrata endpoint only supports JSON format, but includes data columns wi
 ## Pull Open Data into Leaflet Map with APIs {- #leaflet-maps-open-apis}
 TODO: Decide whether to keep or not. Up to this point in the book, we’ve built charts and maps using static data that you have downloaded from other sites. But some open data repositories have APIs, or application program interfaces, which means the software that allows computers to communicate with one another. Below is a Leaflet Map template that uses APIs to pull in the most current data from three different open repository platforms: Socrata, Esri ArcGIS Online, and USGS.
 
-#### Try it {-}
+Try it:
 Explore the map below or [view full-screen version in a new tab](https://handsondataviz.github.io/leaflet-data-apis)
 
 <iframe src="https://handsondataviz.github.io/leaflet-data-apis/" width="90%" height=550></iframe>
@@ -764,7 +766,7 @@ $.getJSON("https://data.ct.gov/resource/v4tt-nt9n.geojson?&$$app_token=QVVY3I72S
 ## Leaflet Thematic Polygon Map with Clickable Info Window template {- #leaflet-polygon-map-click}
 TODO: Decide whether to keep or not
 
-#### Try it {-}
+Try it:
 <iframe src="https://handsondataviz.github.io/leaflet-map-polygon-click/" width="100%" height=550></iframe>
 
 #### View demo in new page {-}
@@ -823,7 +825,7 @@ TODO: Decide whether to keep or not
 ## Leaflet Thematic Polygon Map with Hover Info Window template {- #leaflet-polygon-map-hover}
 TODO: Decide whether to keep or not
 
-#### Try it {-}
+Try it:
 <iframe src="https://handsondataviz.github.io/leaflet-map-polygon-hover/" width="100%" height=550></iframe>
 
 #### View demo in new page {-}
@@ -844,7 +846,7 @@ TODO: Decide whether to keep or not
 ## Leaflet Thematic Polygon Map with Multi-Year Tabs template {- #leaflet-polygon-map-multi-year-tabs}
 TODO: decide whether to keep or not
 
-#### Try it {-}
+Try it:
 <iframe src="https://handsondataviz.github.io/leaflet-map-polygon-tabs/" width="100%" height=550></iframe>
 
 #### View demo in new page {-}

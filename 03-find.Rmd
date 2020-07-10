@@ -36,13 +36,13 @@ Another way to reduce "bad data" issues is to clarify the source every time you 
 The first step is to label every data file that you download or create. All of us have experienced bad file names like these:
 
   - data.csv
-  - download.xls
-  - data2020.xlsx
+  - file.xls
+  - download.xlsx
 
-Write a short but meaningful file name. While there's no perfect system, a good strategy is to abbreviate the source (such as `census` or `worldbank` or `eurostat`), with topic keywords, and a date or range. If you or co-workers will be working on different versions of a downloaded file, include the current date in YYYY-MM-DD (year-month-date) format. Replace blank spaces with dashes (`-`) or underscores (`_`). Better file names look like this:
+Write a short but meaningful file name. While there's no perfect system, a good strategy is to abbreviate the source (such as `census` or `worldbank` or `eurostat`), with topic keywords, and a date or range. If you or co-workers will be working on different versions of a downloaded file, include the current date in YYYY-MM-DD (year-month-date) format. If you plan to upload files to the web, type names in all lower-case and replace blank spaces with dashes (`-`) or underscores (`_`). Better file names look like this:
 
-  - town-demographics-2019-12-02.xls
-  - census2010_population_by_county.csv
+  - town-demographics-2019-12-02.csv
+  - census2010_population_by_county.xls
   - eurostat-1999-2019-CO2-emissions.xlsx
 
 The second step is to save more detailed source notes about the data on a separate tab inside the spreadsheet (which works for multi-tab spreadsheet tools such as Google Sheets, LibreOffice, and Excel). Add a new tab named *notes* that describes the origins of the data, a longer description for any abbreviated labels, and when it was last updated, as shown in Figure \@ref(fig:sheets-with-tabs). Add your own name and give credit to collaborators who worked with you. For CSV files, which do not support multi-tabs sheets, create a text file using a parallel file name.
@@ -52,6 +52,7 @@ The second step is to save more detailed source notes about the data on a separa
 ```{r sheets-with-tabs, fig.cap="(ref:sheets-with-tabs)"}
  knitr::include_graphics("images/03-find/sheets-with-tabs.png")
 ```
+
 A third step is to make a backup of the original data before cleaning or editing it. For a simple one-sheet file in a multi-tab spreadsheet tool, right-click on the tab containing the data to make a duplicate copy in another tab, also shown in the preceding figure. Clearly label the new tab as a backup and leave it alone! For CSV files or more complex spreadsheets, create a separate backup file.
 
 Make a habit of using these three sourcing strategies---filenames, notes, and backups---to reduce your chances of making "bad data" errors and to increase the credibility of your data visualizations. In the next section, we'll address a related set of questions you should ask yourself regarding public versus private data.
@@ -71,7 +72,7 @@ But here are other examples where our government has determined that a broader i
 - Individual property ownership records are public, and increasingly online in many locations. For example, one company provides a [US public records directory](https://publicrecords.netronline.com/) with links to local government property records, where available. Follow the links to search the value of the home owned by the first author in West Hartford, Connecticut, how much he and his spouse paid for it, the number of bathrooms, and so forth.
 - Individual police officer reports regarding "use of force" are public by New Jersey state law. But no one could easily search these local police department records until a team of journalists from NJ Advance Media created a public database, [The Force Report](https://force.nj.com/), where anyone can look up individual officers and investigate patterns of violence.
 
-Also, the US federal government is subject to the [Freedom of Information Act](https://en.wikipedia.org/wiki/Freedom_of_Information_Act), which enables people to submit a "FOIA" request to obtain certain types of public records to improve government transparency. Many states and their municipalities are subject to related FOIA laws, which are listed by non-profit organizations such as the [National Freedom of Information Coalition](https://www.nfoic.org/). While some government agencies routinely delay or reject FOIA requests, others have learned that fighting against public information can be expensive, and have begun to pro-actively share more information on open data repositories.
+Also, the US federal government is subject to the [Freedom of Information Act](https://en.wikipedia.org/wiki/Freedom_of_Information_Act), which enables people to submit a "FOIA" request to obtain certain types of public records to improve government transparency. Individual states and their municipalities are subject to their own Freedom of Information laws, which are summarized in the [Open Government Guide](https://www.rcfp.org/open-government-guide/) by the Reporters Committee for Freedom of the Press, and also by the [National Freedom of Information Coalition](https://www.nfoic.org/). While some government agencies delay or reject FOIA requests, which can result in expensive litigation, others have begun to pro-actively share more public information on open data repositories.
 
 ## Open Data Repositories {- #opendata}
 Over the past decade, an increasing number of governmental and non-governmental organizations have begun to publicly share data through open data repositories. While some of these datasets were previously available as individual files on isolated websites, these growing networks have made open data easier to find, enabled more frequent updates, and sometimes have allowed live interaction. Open data repositories often include these features:
@@ -105,6 +106,6 @@ In addition, students, staff, and faculty at better-resourced institutions of hi
 - IPUMS NHGIS?
 - more?
 
-**Summary**
+### Summary {- #summary3}
 
 This chapter reviewed two broad questions that everyone should ask during the early stages of their visualization project: *Where can I find data?* and *How do I know what it really means?* We broke down both questions into more specific parts to develop your knowledge and skills in recognizing bad data, sourcing the origins of your data, distinguishing between public versus private data, and navigating the growing number of open data repositories. As you leap into the next few chapters on cleaning data and creating interactive charts and maps, remember these lessons as you strive to create meaningful visualizations.

@@ -1,4 +1,6 @@
 # Chart.js Code Templates {#chartjs}
+TODO: Rewrite chapter
+
 While beginners appreciate the drag-and-drop chart tools and tutorials described earlier in this book, such as [Google Sheets](google-sheets.html) and [Tableau Public](tableau-public.html), more advanced users may wish to customize their visualizations, add more complex data, and control exactly how and where their work appears on the web. A more powerful and relatively easy-to-learn solution is to use code templates built with Chart.js <https://www.chartjs.org/>, an open-source library, which you can [modify and host on GitHub](github.html), as described in this book.
 
 #### Working with Chart.js {-}
@@ -32,7 +34,7 @@ Also, these templates refer to other code elements:
   * library: link to online instructions to complete routine tasks (example: Chart.js)
   * data: content to appear in chart, typically in CSV format (example: data.csv) or pulled from Google Sheets
 
-#### Learn more {-}
+Learn more: 
 - Chart.js Samples, https://www.chartjs.org/samples/latest/
 
 ## Bar Chart.js with CSV Data {- #chartjs-bar-csv}

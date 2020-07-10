@@ -21,6 +21,8 @@ Instead, we *manually assign a unique ID* to each first- and second-level header
 
 Also, we match the unique ID keyword to the file name for top-level chapters this way: `01-keyword.Rmd` to keep our work organized. Unique names should contain only _alphanumeric_ characters (a-z, A-Z, 0-9) or dashes (-).
 
+Subheaders must have unique names or IDs to avoid Bookdown errors about duplicated references. To avoid this issue for repeated subheaders (such as “Summary”), at the end of each chapter insert a third-level summary subhead, but insert a unique ID that matches each chapter number, like this: `### Summary {- #summary17}`
+
 A special header in this book is the unnumbered header beginning with `(APPENDIX)`, which indicates that all chapters appearing afterwards are appendices. According to [Bookdown](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html), the numbering style will appear correctly in HTML and LaTeX/PDF output, but not in Word or ebooks.
 
 ```
@@ -126,8 +128,6 @@ Dashes:
 - Use an em-dash (3 dashes) to insert an additional thought---like this---in a sentence.
 
 Insert `TODO` to note items to finish or review with co-author or editor.
-
-At the end of each chapter, insert **Summary** using bold type, rather than a hashtag header, to avoid creating several unnecessary web pages named "Summary" in the HTML edition. Although this does not match the O'Reilly style guide, it can easily be fixed in book production. 
 
 Insert three back tics to insert a code block. Check character line length limits in [O'Reilly style guide](http://oreillymedia.github.io/production-resources/styleguide/#line-length):
 

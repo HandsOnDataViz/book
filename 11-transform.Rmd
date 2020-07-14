@@ -40,7 +40,7 @@ into a latitude-longitude pair, such as *41.747,-72.692*. These numbers are x- a
 that maps understand.
 
 If you have just a few addresses, it might be faster to geocode them with [Google Maps](https://www.google.com/maps).
-Search for an address, right-click on that point, and select *What's here?* to reveal a popup window with its latitude and longitude, as shown in Figure \@ref(fig:gmaps-whats-here). You can copy and paste the coordinates into your spreadsheet.
+Search for an address, right-click on that point, and select *What's here?* to reveal a popup window with its latitude and longitude, as shown in Figure \@ref(fig:gmaps-whats-here). You can copy and paste the coordinates into your spreadsheet. Similar tools also geocode one place at a time, such as [LatLong.net](https://www.latlong.net/).
 
 (ref:gmaps-whats-here) To geocode one address, search in Google Maps and right-click *What's here?* to show coordinates.
 

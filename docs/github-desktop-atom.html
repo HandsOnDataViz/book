@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-10" />
+<meta name="date" content="2020-07-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -215,7 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>8</b> Edit and Host Code with GitHub</a>
 <ul>
-<li class="chapter" data-level="" data-path="fork-leaflet.html"><a href="fork-leaflet.html"><i class="fa fa-check"></i>Fork, Edit, and Host a Simple Leaflet Map Template</a></li>
+<li class="chapter" data-level="" data-path="copy-leaflet.html"><a href="copy-leaflet.html"><i class="fa fa-check"></i>Copy, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
@@ -303,13 +303,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Tip: Currently, neither GitHub Desktop nor Atom Editor are supported for Chromebooks, but <a href="https://chrome.google.com/webstore">Google’s Web Store</a> offers several text editors, such as Text and Caret, which offer some of the functionality described below.)</p>
 <p>Let’s use GitHub Desktop to pull a copy of your <code>leaflet-map-simple</code> template to your local computer, make some edits in Atom Editor, and push your commits back up to GitHub.</p>
 <ol style="list-style-type: decimal">
-<li>Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to <code>https://github.com/USERNAME/leaflet-map-simple</code>, using your GitHub username, to access the repo you created in the <a href="fork-leaflet.html">Fork, Edit, and Host a Simple Leaflet Map Template</a> section of this chapter. Click the <em>Clone or download</em> button on the right side, and select <em>Open in Desktop</em>, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-open">8.18</a>. The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.</li>
+<li>Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to <code>https://github.com/USERNAME/leaflet-map-simple</code>, using your GitHub username, to access the repo you created in the <a href="copy-leaflet.html">Copy, Edit, and Host a Simple Leaflet Map Template</a> section of this chapter. Click the <em>Add file &gt; Open with GitHub Desktop</em> drop-down menu button near the middle of your screen, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-open">8.18</a>. The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.</li>
 </ol>
 
 <div class="figure"><span id="fig:desktop-open"></span>
-<img src="images/08-github/desktop-open.png" alt="In your GitHub web repo, click Clone or download and Open in Desktop to download and install GitHub Desktop."  />
+<img src="images/08-github/desktop-open.png" alt="In your GitHub repo on the web, click Add file &gt; Open with GitHub Desktop to download and install GitHub Desktop."  />
 <p class="caption">
-Figure 8.18: In your GitHub web repo, click <em>Clone or download</em> and <em>Open in Desktop</em> to download and install GitHub Desktop.
+Figure 8.18: In your GitHub repo on the web, click <em>Add file &gt; Open with GitHub Desktop</em> to download and install GitHub Desktop.
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
@@ -337,7 +337,7 @@ Figure 8.20: Click the <em>Continue</em> button to authorize GitHub Desktop to s
 </ol>
 
 <div class="figure"><span id="fig:desktop-start"></span>
-<img src="images/08-github/desktop-start.png" alt="Select your “leaflet-map-simple” repo and click the Clone button to copy it to your local computer."  />
+<img src="images/08-github/desktop-start-annotated.png" alt="Select your “leaflet-map-simple” repo and click the Clone button to copy it to your local computer."  />
 <p class="caption">
 Figure 8.21: Select your “leaflet-map-simple” repo and click the <em>Clone</em> button to copy it to your local computer.
 </p>
@@ -367,9 +367,9 @@ Figure 8.23: If asked how you plan to use this fork, select the default “To co
 </ol>
 
 <div class="figure"><span id="fig:desktop-finder"></span>
-<img src="images/08-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub web account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different."  />
+<img src="images/08-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different."  />
 <p class="caption">
-Figure 8.24: Now you have two copies of your repo: in your GitHub web account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different.
+Figure 8.24: Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different.
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
@@ -377,7 +377,7 @@ Figure 8.24: Now you have two copies of your repo: in your GitHub web account (o
 </ol>
 
 <div class="figure"><span id="fig:desktop-atom"></span>
-<img src="images/08-github/desktop-atom.png" alt="In GitHub Desktop, confirm the Current Repo and click the Open in Atom button to edit the code."  />
+<img src="images/08-github/desktop-atom-annotated.png" alt="In GitHub Desktop, confirm the Current Repo and click the Open in Atom button to edit the code."  />
 <p class="caption">
 Figure 8.25: In GitHub Desktop, confirm the Current Repo and click the <em>Open in Atom</em> button to edit the code.
 </p>
@@ -387,7 +387,7 @@ Figure 8.25: In GitHub Desktop, confirm the Current Repo and click the <em>Open 
 </ol>
 
 <div class="figure"><span id="fig:atom-project"></span>
-<img src="images/08-github/atom-project.png" alt="Atom Editor opens your repo as a “project,” where you can click files to view code. Edit your map title."  />
+<img src="images/08-github/atom-project-annotated.png" alt="Atom Editor opens your repo as a “project,” where you can click files to view code. Edit your map title."  />
 <p class="caption">
 Figure 8.26: Atom Editor opens your repo as a “project,” where you can click files to view code. Edit your map title.
 </p>
@@ -397,7 +397,7 @@ Figure 8.26: Atom Editor opens your repo as a “project,” where you can click
 </ol>
 
 <div class="figure"><span id="fig:atom-remove-project"></span>
-<img src="images/08-github/atom-remove-project.png" alt="To clean up your Atom Editor workspace, right-click to Remove Project Folder."  />
+<img src="images/08-github/atom-remove-project-annotated.png" alt="To clean up your Atom Editor workspace, right-click to Remove Project Folder."  />
 <p class="caption">
 Figure 8.27: To clean up your Atom Editor workspace, right-click to <em>Remove Project Folder</em>.
 </p>
@@ -436,7 +436,8 @@ Figure 8.29: In this two-step process, click <em>Commit to Master</em>, then cli
 Figure 8.30: Drag-and-drop the file to the upload screen.
 </p>
 </div>
-<p>Although GitHub does not operate like Google Documents, which displays live edits, the platform has several advantages when working collaboratively with code. First, since GitHub tracks every commit we make, it allows us to go back and restore a very specific past version of the code if needed. Second, when GitHub repos are public, anyone can view your code and submit an “issue” to notify the owner about an idea or problem, or send a “pull request” of suggested code edits, which the owner can accept or reject. Third, GitHub allows collaborators to create different “branches” of a repo (the default is called “master”) in order to make edits, and then “merge” the branches back together if desired. Occasionally, if two or more coders attempt to push incompatible commits to the same repo, GitHub will warn about a “Merge Conflict.” To resolve this conflict and preserve everyone’s work, you may need to use the Command Line Interface (CLI) version of GitHub, which means typing commands directly into the Terminal application on Mac or Windows. Many professional coders regularly work on the Command Line with GitHub, but this requires memorizing a list of commands and is beyond the scope of this introductory book.</p>
+<p>Although GitHub does not operate like Google Documents, which displays live edits, the platform has several advantages when working collaboratively with code. First, since GitHub tracks every commit we make, it allows us to go back and restore a very specific past version of the code if needed. Second, when GitHub repos are public, anyone can view your code and submit an “issue” to notify the owner about an idea or problem, or send a “pull request” of suggested code edits, which the owner can accept or reject. Third, GitHub allows collaborators to create different “branches” of a repo in order to make edits, and then “merge” the branches back together if desired. Occasionally, if two or more coders attempt to push incompatible commits to the same repo, GitHub will warn about a “Merge Conflict,” and ask you to resolve these conflicts in order to preserve everyone’s work.</p>
+<p>Many coders prefer to work on GitHub using its Command Line Interface (CLI), which means memorizing and typing specific commands directly into the Terminal application on Mac or Windows, but this is beyond the scope of this introductory book.</p>
 <p><strong>Summary</strong></p>
 <p>If this is the first time you’ve forked, edited, and hosted live code on the public web, welcome to the coding family! We hope you agree that GitHub is a powerful platform for engaging in this work and sharing with others. While beginners will appreciate the web interface, you’ll find that the GitHub Desktop and Atom Editor tools makes it much easier to work with <a href="chartjs.hmtl">Chart.js code templates in Chapter 9</a> and the <a href="leaflet.html">Leaflet map code templates in Chapter 10</a>. Let’s build on your brand-new coding skills to create more customized charts and maps in the next two chapters.</p>
 

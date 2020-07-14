@@ -5000,10 +5000,8 @@ repoint our domain to a different web host.
 
 In the next section of this chapter, we will introduce basic steps to
 [copy, edit, and host a simple Leaflet map code template on
-GitHub](copy-leaflet.html).
-
-Later you’ll learn how to [create a new GitHub repo and upload code
-files](create-repo.html).
+GitHub](copy-leaflet.html). Later you’ll learn how to [create a new
+GitHub repo and upload code files](create-repo.html).
 
 This chapter introduces GitHub using its web browser interface, which
 works best for beginners. Later you’ll learn about intermediate-level
@@ -5081,7 +5079,7 @@ Figure 78: Click *Use this template* to make your own copy.
     Figure <a href="#fig:leaflet-simple-name">79</a>. Click the green
     *Create repository from template* button.
 
-<img src="images/08-github/leaflet-simple-name.png" alt="Name your copied repo `leaflet-map-simple`."  />
+<img src="images/08-github/leaflet-simple-name.png" alt="Name your copied repo `leaflet-map-simple`." width="600" />
 <p class="caption">
 Figure 79: Name your copied repo `leaflet-map-simple`.
 </p>
@@ -5114,7 +5112,7 @@ your GitHub account, and it contains only three files:
 1.  Click on the `index.html` file to view the code, as shown in Figure
     <a href="#fig:leaflet-simple-index">80</a>.
 
-<img src="images/08-github/leaflet-simple-index.png" alt="Click the Index file to view the code."  />
+<img src="images/08-github/leaflet-simple-index.png" alt="Click the Index file to view the code." width="250" />
 <p class="caption">
 Figure 80: Click the Index file to view the code.
 </p>
@@ -5154,7 +5152,7 @@ HTML division tag block around lines 21-23.
     green *Commit Changes* button, as shown in Figure
     <a href="#fig:leaflet-simple-commit">82</a>.
 
-<img src="images/08-github/leaflet-simple-commit.png" alt="Click the green *Commit Changes* button to save your edits."  />
+<img src="images/08-github/leaflet-simple-commit.png" alt="Click the green *Commit Changes* button to save your edits." width="450" />
 <p class="caption">
 Figure 82: Click the green *Commit Changes* button to save your edits.
 </p>
@@ -5201,7 +5199,8 @@ publish your work on the web.
     have the web address.
 
 <img src="images/08-github/leaflet-github-pages.png" alt="In *Settings >
-GitHub Pages*, switch the source from *None\* to *Master*." /&gt;
+GitHub Pages*, switch the source from *None\* to *Master*." width=“500”
+/&gt;
 <p class="caption">
 Figure 84: In *Settings &gt; GitHub Pages*, switch the source from
 *None* to *Master*.
@@ -5218,7 +5217,7 @@ from *Master* to *Main* to eliminate its master-slave metaphor.
 
 <img src="images/08-github/leaflet-github-pages-link.png" alt="In *Settings >
 GitHub Pages\*, right-click your published map link to open in a new
-tab." /&gt;
+tab." width=“600” /&gt;
 <p class="caption">
 Figure 85: In *Settings &gt; GitHub Pages*, right-click your published
 map link to open in a new tab.
@@ -5270,7 +5269,7 @@ live map, instead of *our* live map.
     on the repo title to return to its home page, as shown in Figure
     <a href="#fig:leaflet-click-title">86</a>.
 
-<img src="images/08-github/leaflet-click-title.png" alt="On your first browser tab, click the repo title."  />
+<img src="images/08-github/leaflet-click-title.png" alt="On your first browser tab, click the repo title." width="450" />
 <p class="caption">
 Figure 86: On your first browser tab, click the repo title.
 </p>
@@ -5281,7 +5280,7 @@ Figure 86: On your first browser tab, click the repo title.
     under the label *(replace with link to your site)* and scroll down
     to commit the change.
 
-<img src="images/08-github/leaflet-paste-link.png" alt="Open and edit the `README` file to paste the link to your live map."  />
+<img src="images/08-github/leaflet-paste-link.png" alt="Open and edit the `README` file to paste the link to your live map." width="600" />
 <p class="caption">
 Figure 87: Open and edit the `README` file to paste the link to your
 live map.
@@ -5398,7 +5397,7 @@ summarized in these three steps:
 
 <img src="images/08-github/repo-code-download.png" alt="Click *Code >
 Download Zip\* to create a compressed folder of a repo on your
-computer." /&gt;
+computer." width=“350” /&gt;
 <p class="caption">
 Figure 88: Click *Code &gt; Download Zip* to create a compressed folder
 of a repo on your computer.
@@ -5417,7 +5416,7 @@ of a repo on your computer.
     select *New repository*, as shown in Figure
     <a href="#fig:repo-create-new">89</a>.
 
-<img src="images/08-github/repo-create-new.png" alt="Click the plus (+) symbol in upper-right corner to create a new repo."  />
+<img src="images/08-github/repo-create-new.png" alt="Click the plus (+) symbol in upper-right corner to create a new repo." width="300" />
 <p class="caption">
 Figure 89: Click the plus (+) symbol in upper-right corner to create a
 new repo.
@@ -5439,7 +5438,7 @@ in Figure <a href="#fig:repo-create-options">90</a>.
 &lt;img src=“images/08-github/repo-create-options.png” alt=“Name your
 new repo”practice“, check the box to *Initialize this repo with a
 README*, and *Add a license* (select”MIT“) to match any code you plan to
-upload.” /&gt;
+upload.” width=“400” /&gt;
 <p class="caption">
 Figure 90: Name your new repo “practice”, check the box to *Initialize
 this repo with a README*, and *Add a license* (select “MIT”) to match
@@ -5453,7 +5452,7 @@ Your new repo will have a web address similar to
     drop-down menu button, near the middle of the screen, as shown in
     Figure <a href="#fig:repo-upload-files">91</a>.
 
-<img src="images/08-github/repo-upload-files.png" alt="Click the *Upload Files* button."  />
+<img src="images/08-github/repo-upload-files.png" alt="Click the *Upload Files* button." width="350" />
 <p class="caption">
 Figure 91: Click the *Upload Files* button.
 </p>
@@ -5490,7 +5489,7 @@ chapter.
     your username and repo name to ensure that you really want to delete
     the repo, to prove you are not a drunken brownie chef.
 
-<img src="images/08-github/repo-delete.png" alt="After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm."  />
+<img src="images/08-github/repo-delete.png" alt="After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm." width="600" />
 <p class="caption">
 Figure 93: After clicking the Delete Repository button, GitHub will ask
 you to type your username and repo name to confirm.
@@ -5544,7 +5543,7 @@ push your commits back up to GitHub.
 
 <img src="images/08-github/desktop-open.png" alt="In your GitHub repo on the web, click *Add file >
 Open with GitHub Desktop\* to download and install GitHub Desktop."
-/&gt;
+width=“350” /&gt;
 <p class="caption">
 Figure 94: In your GitHub repo on the web, click *Add file &gt; Open
 with GitHub Desktop* to download and install GitHub Desktop.
@@ -5559,7 +5558,7 @@ with GitHub Desktop* to download and install GitHub Desktop.
     click the green *Authorize desktop* button to confirm that you wish
     to connect to your account.
 
-<img src="images/08-github/desktop-signin.png" alt="Click the blue *Sign in to GitHub.com* button to link GitHub Desktop to your GitHub account."  />
+<img src="images/08-github/desktop-signin.png" alt="Click the blue *Sign in to GitHub.com* button to link GitHub Desktop to your GitHub account." width="500" />
 <p class="caption">
 Figure 95: Click the blue *Sign in to GitHub.com* button to link GitHub
 Desktop to your GitHub account.
@@ -5570,7 +5569,7 @@ Desktop to your GitHub account.
     your username and click *Continue*, as shown in Figure
     <a href="#fig:desktop-configure">96</a>.
 
-<img src="images/08-github/desktop-configure.png" alt="Click the *Continue* button to authorize GitHub Desktop to send commits to your GitHub account."  />
+<img src="images/08-github/desktop-configure.png" alt="Click the *Continue* button to authorize GitHub Desktop to send commits to your GitHub account." width="500" />
 <p class="caption">
 Figure 96: Click the *Continue* button to authorize GitHub Desktop to
 send commits to your GitHub account.
@@ -5597,7 +5596,7 @@ button to copy it to your local computer.
     *Clone* button, remember the path to this location, since you’ll
     need to find it later.
 
-<img src="images/08-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click *Clone*."  />
+<img src="images/08-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click *Clone*." width="500" />
 <p class="caption">
 Figure 98: Select the Local Path where your repo will be stored on your
 computer, then click *Clone*.
@@ -5611,7 +5610,7 @@ computer, then click *Clone*.
 
 &lt;img src=“images/08-github/desktop-fork.png” alt=“If asked how you
 plan to use this fork, select the default”To contribute to the parent
-project" and click *Continue*." /&gt;
+project" and click *Continue*." width=“500” /&gt;
 <p class="caption">
 Figure 99: If asked how you plan to use this fork, select the default
 “To contribute to the parent project” and click *Continue*.
@@ -5623,7 +5622,7 @@ Figure 99: If asked how you plan to use this fork, select the default
     different, depending on whether you use Windows or Mac, and the
     Local Path you selected to store your files.
 
-<img src="images/08-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different."  />
+<img src="images/08-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different." width="500" />
 <p class="caption">
 Figure 100: Now you have two copies of your repo: in your GitHub online
 account (on the left) and on your local computer (on the right, as shown
@@ -5706,7 +5705,7 @@ Desktop.
     web account. Both steps are shown in Figure
     <a href="#fig:desktop-commit-push">105</a>.
 
-<iframe src="images/08-github/desktop-commit-push.gif" width="100%" height="400px">
+<iframe src="images/08-github/desktop-commit-push.gif" width="100%" height="500px">
 </iframe>
 <p class="caption">
 Figure 105: In this two-step process, click *Commit to Master*, then

@@ -12,9 +12,7 @@ When you create a brand-new repo, GitHub invites you to [Choose a License](https
 
 To be clear, the GitHub platform is also owned by a large company (Microsoft purchased it in 2018), and when using it to share or host code, you're also dependent on its tools and terms. But the magic of code templates is that you can migrate and host your work anywhere on the web. You could move to a competing repository-hosting service such as [GitLab](http://gitlab.com), or purchase your own domain name and server space through one of many web hosting services. Or you can choose a hybrid option, such as hosting your code on GitHub and choosing its custom domain option, to display it under a domain name that you've purchased, just like the web version of this book is hosted on GitHub under our domain name, https://HandsOnDataViz.org. If we choose to move the code away from GitHub, we have the option to repoint our domain to a different web host.
 
-In the next section of this chapter, we will introduce basic steps to [copy, edit, and host a simple Leaflet map code template on GitHub](copy-leaflet.html).
-
-Later you'll learn how to [create a new GitHub repo and upload code files](create-repo.html).
+In the next section of this chapter, we will introduce basic steps to [copy, edit, and host a simple Leaflet map code template on GitHub](copy-leaflet.html). Later you'll learn how to [create a new GitHub repo and upload code files](create-repo.html).
 
 This chapter introduces GitHub using its web browser interface, which works best for beginners. Later you'll learn about intermediate-level tools, such as [GitHub Desktop and Atom Editor](github-desktop-atom.html), to work more efficiently with code repos on your personal computer.
 
@@ -55,7 +53,7 @@ Tip: Choose a GitHub username that's relatively short, and one that you'll be ha
 
 (ref:leaflet-simple-name) Name your copied repo `leaflet-map-simple`.
 
-```{r leaflet-simple-name, fig.cap="(ref:leaflet-simple-name)"}
+```{r leaflet-simple-name, out.width=600, fig.cap="(ref:leaflet-simple-name)"}
  knitr::include_graphics("images/08-github/leaflet-simple-name.png")
 ```
 
@@ -71,7 +69,7 @@ The upper-left corner of the next screen will say `USERNAME/leaflet-map-simple` 
 
 (ref:leaflet-simple-index) Click the Index file to view the code.
 
-```{r leaflet-simple-index, fig.cap="(ref:leaflet-simple-index)"}
+```{r leaflet-simple-index, out.width=250, fig.cap="(ref:leaflet-simple-index)"}
  knitr::include_graphics("images/08-github/leaflet-simple-index.png")
 ```
 
@@ -93,7 +91,7 @@ Let's start by making one simple change to prove to everyone that you're now edi
 
 (ref:leaflet-simple-commit) Click the green *Commit Changes* button to save your edits.
 
-```{r leaflet-simple-commit, fig.cap="(ref:leaflet-simple-commit)"}
+```{r leaflet-simple-commit, out.width=450, fig.cap="(ref:leaflet-simple-commit)"}
  knitr::include_graphics("images/08-github/leaflet-simple-commit.png")
 ```
 
@@ -113,7 +111,7 @@ Now let's publish your edited map to the public web to see how it looks in a web
 
 (ref:leaflet-github-pages) In *Settings > GitHub Pages*, switch the source from *None* to *Master*.
 
-```{r leaflet-github-pages, fig.cap="(ref:leaflet-github-pages)"}
+```{r leaflet-github-pages, out.width=500, fig.cap="(ref:leaflet-github-pages)"}
 knitr::include_graphics("images/08-github/leaflet-github-pages.png")
 ```
 
@@ -123,7 +121,7 @@ Note: GitHub recently announced it plans to change the default branch from *Mast
 
 (ref:leaflet-github-pages-link) In *Settings > GitHub Pages*, right-click your published map link to open in a new tab.
 
-```{r leaflet-github-pages-link, fig.cap="(ref:leaflet-github-pages-link)"}
+```{r leaflet-github-pages-link, out.width=600, fig.cap="(ref:leaflet-github-pages-link)"}
 knitr::include_graphics("images/08-github/leaflet-github-pages-link.png")
 ```
 
@@ -156,7 +154,7 @@ Now let's edit your the GitHub repo so that the link points to *your* live map, 
 
 (ref:leaflet-click-title) On your first browser tab, click the repo title.
 
-```{r leaflet-click-title, fig.cap="(ref:leaflet-click-title)"}
+```{r leaflet-click-title, out.width=450, fig.cap="(ref:leaflet-click-title)"}
  knitr::include_graphics("images/08-github/leaflet-click-title.png")
 ```
 
@@ -164,7 +162,7 @@ Now let's edit your the GitHub repo so that the link points to *your* live map, 
 
 (ref:leaflet-paste-link) Open and edit the `README` file to paste the link to your live map.
 
-```{r leaflet-paste-link, fig.cap="(ref:leaflet-paste-link)"}
+```{r leaflet-paste-link, out.width=600, fig.cap="(ref:leaflet-paste-link)"}
  knitr::include_graphics("images/08-github/leaflet-paste-link.png")
 ```
 
@@ -219,7 +217,7 @@ So how do you make a second fork of a GitHub repo, if there's no *Use this templ
 
 (ref:repo-code-download) Click *Code > Download Zip* to create a compressed folder of a repo on your computer.
 
-```{r repo-code-download, fig.cap="(ref:repo-code-download)"}
+```{r repo-code-download, out.width=350, fig.cap="(ref:repo-code-download)"}
  knitr::include_graphics("images/08-github/repo-code-download.png")
 ```
 
@@ -229,7 +227,7 @@ So how do you make a second fork of a GitHub repo, if there's no *Use this templ
 
 (ref:repo-create-new) Click the plus (+) symbol in upper-right corner to create a new repo.
 
-```{r repo-create-new, fig.cap="(ref:repo-create-new)"}
+```{r repo-create-new, out.width=300, fig.cap="(ref:repo-create-new)"}
  knitr::include_graphics("images/08-github/repo-create-new.png")
 ```
 
@@ -241,7 +239,7 @@ Also, select *Add a license* that matches the code you plan to upload, which in 
 
 (ref:repo-create-options) Name your new repo "practice", check the box to *Initialize this repo with a README*, and *Add a license* (select "MIT") to match any code you plan to upload.
 
-```{r repo-create-options, fig.cap="(ref:repo-create-options)"}
+```{r repo-create-options, out.width=400, fig.cap="(ref:repo-create-options)"}
  knitr::include_graphics("images/08-github/repo-create-options.png")
 ```
 
@@ -251,7 +249,7 @@ Your new repo will have a web address similar to `https://github.com/USERNAME/pr
 
 (ref:repo-upload-files) Click the *Upload Files* button.
 
-```{r repo-upload-files, fig.cap="(ref:repo-upload-files)"}
+```{r repo-upload-files, out.width=350, fig.cap="(ref:repo-upload-files)"}
  knitr::include_graphics("images/08-github/repo-upload-files.png")
 ```
 
@@ -271,7 +269,7 @@ Optionally, you could use GitHub Pages to publish a live version of the code onl
 
 (ref:repo-delete) After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm.
 
-```{r repo-delete, fig.cap="(ref:repo-delete)"}
+```{r repo-delete, out.width=600, fig.cap="(ref:repo-delete)"}
  knitr::include_graphics("images/08-github/repo-delete.png")
 ```
 
@@ -288,7 +286,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 (ref:desktop-open) In your GitHub repo on the web, click *Add file > Open with GitHub Desktop* to download and install GitHub Desktop.
 
-```{r desktop-open, fig.cap="(ref:desktop-open)"}
+```{r desktop-open, out.width=350, fig.cap="(ref:desktop-open)"}
  knitr::include_graphics("images/08-github/desktop-open.png")
 ```
 
@@ -296,7 +294,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 (ref:desktop-signin) Click the blue *Sign in to GitHub.com* button to link GitHub Desktop to your GitHub account.
 
-```{r desktop-signin, fig.cap="(ref:desktop-signin)"}
+```{r desktop-signin, out.width=500, fig.cap="(ref:desktop-signin)"}
  knitr::include_graphics("images/08-github/desktop-signin.png")
 ```
 
@@ -304,7 +302,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 (ref:desktop-configure) Click the *Continue* button to authorize GitHub Desktop to send commits to your GitHub account.
 
-```{r desktop-configure, fig.cap="(ref:desktop-configure)"}
+```{r desktop-configure, out.width=500, fig.cap="(ref:desktop-configure)"}
  knitr::include_graphics("images/08-github/desktop-configure.png")
 ```
 
@@ -320,7 +318,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 (ref:desktop-clone-path) Select the Local Path where your repo will be stored on your computer, then click *Clone*.
 
-```{r desktop-clone-path, fig.cap="(ref:desktop-clone-path)"}
+```{r desktop-clone-path, out.width=500, fig.cap="(ref:desktop-clone-path)"}
  knitr::include_graphics("images/08-github/desktop-clone-path.png")
 ```
 
@@ -328,7 +326,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 (ref:desktop-fork) If asked how you plan to use this fork, select the default "To contribute to the parent project" and click *Continue*.
 
-```{r desktop-fork, fig.cap="(ref:desktop-fork)"}
+```{r desktop-fork, out.width=500, fig.cap="(ref:desktop-fork)"}
  knitr::include_graphics("images/08-github/desktop-fork.png")
 ```
 
@@ -336,7 +334,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 (ref:desktop-finder) Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different.
 
-```{r desktop-finder, fig.cap="(ref:desktop-finder)"}
+```{r desktop-finder, out.width=500, fig.cap="(ref:desktop-finder)"}
  knitr::include_graphics("images/08-github/desktop-finder.png")
 ```
 
@@ -381,7 +379,7 @@ Now let's transfer your edits from your local computer to your GitHub web accoun
 (ref:desktop-commit-push) In this two-step process, click *Commit to Master*, then click *Push origin* to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://handsondataviz.org/images/08-github/desktop-commit-push.gif).
 
 ```{r desktop-commit-push, fig.cap="(ref:desktop-commit-push)"}
-if(knitr::is_html_output()) knitr::include_url("images/08-github/desktop-commit-push.gif") else knitr::include_graphics("images/08-github/desktop-commit-push-annotated.png")
+if(knitr::is_html_output()) knitr::include_url("images/08-github/desktop-commit-push.gif", height = "500px") else knitr::include_graphics("images/08-github/desktop-commit-push-annotated.png")
 ```
 
 Congratulations! You've successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format `https://USERNAME.github.io/REPOSITORY`, substituting your GitHub username and repo name.

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-14" />
+<meta name="date" content="2020-07-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -305,7 +305,7 @@ In other words, an interactive visualization can be made into a data-exploration
 that won’t overwhelm the viewer at first sight, but will allow the viewer
 to “dig” and find specific data points and patterns.</p>
 <p>In this tutorial, we will build an interactive filtered line chart with Tableau Public
-like is shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-demo">5.39</a>.
+like is shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-demo">5.40</a>.
 The filter will be a collection of checkboxes that allow to add/remove lines
 from the chart. Viewers can hover over each line to identify the school
 name and data attached to it.</p>
@@ -316,7 +316,7 @@ name and data attached to it.</p>
 <iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 5.39: Internet Access by Country, 1995–2018.
+Figure 5.40: Internet Access by Country, 1995–2018.
 </p>
 </div>
 <p>We assume that you have Tableau installed. If not, see the previous tutorial, <a href="scatter-chart-tableau.html">Create XY Scatter Chart with Tableau Public</a>.</p>
@@ -348,9 +348,9 @@ how the interactive filtering works.</li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-filtered-show-filter"></span>
-<img src="images/05-chart/tableau-filtered-show-filter.png" alt="Once you dragged Country Name to the Filters card, make sure the Filter is displayed." width="200" />
+<img src="images/05-chart/tableau-filtered-show-filter.png" alt="Once you dragged Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
 <p class="caption">
-Figure 5.40: Once you dragged Country Name to the Filters card, make sure the Filter is displayed.
+Figure 5.41: Once you dragged Country Name to the Filters card, make sure the Filter is displayed.
 </p>
 </div>
 </div>
@@ -365,13 +365,13 @@ the author of this visualization.</p>
 although our data is for 1995–2018. Double-click on the x-axis, and change
 <strong>Range</strong> from <em>Automatic</em> to <em>Fixed</em>, with the Fixed start of <code>1995</code>, and the Fixed end of <code>2018</code>.
 Close the window and see that the empty space on the edges has disappeared.</p>
-<p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-ready">5.41</a>,
+<p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-ready">5.42</a>,
 you are ready to publish.</p>
 
 <div class="figure"><span id="fig:tableau-filtered-ready"></span>
 <img src="images/05-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
 <p class="caption">
-Figure 5.41: This workbook is ready to be published.
+Figure 5.42: This workbook is ready to be published.
 </p>
 </div>
 <p>To publish the filtered line chart to the web, go to <em>File &gt; Save to Tableau Public As…</em>.
@@ -438,7 +438,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/05-chart.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-14" />
+<meta name="date" content="2020-07-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -300,8 +300,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="scatter-bubble-google" class="section level2 unnumbered" number="">
 <h2>XY Scatter and Bubble Charts with Google Sheets</h2>
 <p>Consider using XY scatter charts, also known as scatterplots, to display data coordinates to show the relationship between
-two variables. The first example below compares the relationships between life expectancy (shown on the X axis) and fertility (shown on the Y axis), which each nation is represented as a dot (an X-Y coordinate). Bubble charts are basically scatter charts on steroids, meaning that they can display the relationship of up to five variables. Further below you’ll build a bubble chart based on the same XY life expectancy-fertility dataset, with added variables for population (displayed as circle size) and region of the world (displayed as circle color). Fancier bubble charts animate the circles to represent one more variable: change over time.</p>
-<!-- TODO: Ilya - please review the conversational section intro I added above and feel free to revise. Should we add a link to an animated bubble chart, or not? -->
+two variables. The first example below compares the relationships between life expectancy (shown on the X axis) and fertility (shown on the Y axis),
+which each nation is represented as a dot (an X-Y coordinate).
+Bubble charts are basically scatter charts on steroids, meaning that they can display the relationship of up to five variables.
+Further below you’ll build a bubble chart based on the same XY life expectancy-fertility dataset, with added variables for population (displayed as circle size) and region of the world (displayed as circle color).</p>
+<p>Fancier bubble charts animate the circles to represent one more variable: change over time.
+Such animated bubble charts were popularized by Hans Rosling, a renowned Swedish professor
+of global health. You can watch one of his famous <a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen">TED talks</a>
+to see animated bar charts in action.</p>
 <div id="xy-scatter-chart" class="section level4 unnumbered" number="">
 <h4>XY Scatter chart</h4>
 <p>The scatter chart in Figure <a href="scatter-bubble-google.html#fig:scatter">5.28</a> uses World Bank data to reveal a downward slope:
@@ -328,7 +334,7 @@ is plotted on the x-axis (horizontal). The second column, <em>Fertility</em>, is
 The third column contains <em>Country</em> labels.</p>
 
 <div class="figure"><span id="fig:scatter-data"></span>
-<img src="images/05-chart/scatter-data.png" alt="Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels." width="350" />
+<img src="images/05-chart/scatter-data.png" alt="Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels." width="350px" />
 <p class="caption">
 Figure 5.29: Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels.
 </p>
@@ -350,7 +356,7 @@ and choose cells in the relevant columns. Make sure to include the header (first
 all other data ranges include it.</p>
 
 <div class="figure"><span id="fig:scatter-labels"></span>
-<img src="images/05-chart/scatter-labels.png" alt="In the chart’s Setup window, choose Add labels to the Series." width="350" />
+<img src="images/05-chart/scatter-labels-annotated.png" alt="In the chart’s Setup window, choose Add labels to the Series." width="350px" />
 <p class="caption">
 Figure 5.30: In the chart’s Setup window, choose <em>Add labels</em> to the Series.
 </p>
@@ -360,7 +366,16 @@ To fix this, go to Customize tab of the Chart editor. There, you can set minimum
 for both horizontal and vertical axes. Unlike in bar charts, axes in scatter plots do not have to start at zero.
 You can set your minimum and maximum values to be a few units below and above the extreme points of your
 data range.</p>
-<p>Note: Another name for the 3-dot menu symbol is the “kebab menu” because it resembles Middle Eastern food cooked on a skewer, in contrast to the three-line “burger menu” on many mobile devices. TODO: Add picture of each icon?</p>
+<p>Note: Another name for the 3-dot menu symbol is the “kebab menu” because it resembles Middle Eastern
+food cooked on a skewer, in contrast to the three-line “hamburger menu” on many mobile devices,
+as shown in Figure <a href="scatter-bubble-google.html#fig:menu-hamburger-kebab">5.31</a>.</p>
+
+<div class="figure"><span id="fig:menu-hamburger-kebab"></span>
+<img src="images/05-chart/menu-hamburger-kebab.png" alt="You should be able to distinguish kebab from hamburger menu icons."  />
+<p class="caption">
+Figure 5.31: You should be able to distinguish kebab from hamburger menu icons.
+</p>
+</div>
 </div>
 <div id="bubble-chart-with-3-columns" class="section level4 unnumbered" number="">
 <h4>Bubble chart with 3 columns</h4>
@@ -368,7 +383,7 @@ data range.</p>
 with both data values displayed in a tooltip. We will use the same
 World Bank dataset as we did for the scatter plot.</p>
 <p>The bubble chart (more about the <em>proper</em> use of bubble charts in the next section)
-in Figure <a href="scatter-bubble-google.html#fig:bubble-3">5.31</a> shows the same data as our scatterplot on life expectancy vs fertility.</p>
+in Figure <a href="scatter-bubble-google.html#fig:bubble-3">5.32</a> shows the same data as our scatterplot on life expectancy vs fertility.</p>
 <p>In the interactive version of the chart, hover your cursor over each bubble (dot) to reveal a tooltip
 with the country name and the two data points.</p>
 
@@ -376,14 +391,14 @@ with the country name and the two data points.</p>
 <iframe src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure 5.31: This bubble chart is essentially a scatter chart, because no other dimensions (colors, sizes) are used. <a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit?usp=sharing">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/u/3/d/e/2PACX-1vQtMosshgyX6YoPpHo9QhSPk-ckOw1_yRryTF_vYJooBeWF13RaPv2IrGffcpaiqHPwfKFJAWY0HwA3/pubchart?oid=2105121864&amp;format=interactive">full-screen interactive version</a>.
+Figure 5.32: This bubble chart is essentially a scatter chart, because no other dimensions (colors, sizes) are used. <a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit?usp=sharing">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/u/3/d/e/2PACX-1vQtMosshgyX6YoPpHo9QhSPk-ckOw1_yRryTF_vYJooBeWF13RaPv2IrGffcpaiqHPwfKFJAWY0HwA3/pubchart?oid=2105121864&amp;format=interactive">full-screen interactive version</a>.
 </p>
 </div>
 <p>The data for this example is available in <a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/">Google Sheets Bubble chart with 3 columns template</a>.</p>
 <p>Notice that we moved the labels column (<em>Country</em>) to be the first one in the dataset,
 but the order shouldn’t matter in this case. So our first column is the label for each bubble,
 the second column is the data to be plotted on horizontal x-axis, and the third column (fertility)
-will be place on the y-axis.</p>
+will be placed on the y-axis.</p>
 <p>Select all three columns, and go to <em>Insert &gt; Chart</em>. Google Sheets will likely create a stacked
 column chart by default, so choose <em>Bubble</em> from the Chart type dropdown window.</p>
 <p>If you want to remove labels from the bubbles, remove the <strong>ID</strong> series (click on the kebab menu &gt; Remove).</p>
@@ -396,7 +411,7 @@ In the following section, we will introduce you to the proper way of using bubbl
 one or two extra series in addition to your x- and y-coordinates. One of those
 can be expressed through bubble size (bigger bubbles represent larger values).
 Another one can make use of color (best for categorical data).</p>
-<p>The bubble chart in Figure <a href="scatter-bubble-google.html#fig:bubble-5">5.32</a> shows fertility and life expectancy for a subset of the nations,
+<p>The bubble chart in Figure <a href="scatter-bubble-google.html#fig:bubble-5">5.33</a> shows fertility and life expectancy for a subset of the nations,
 with population (shown by bubble size) and region (shown by bubble color).
 Float your cursor over bubbles to view data details in the interactive version of the chart.</p>
 
@@ -404,7 +419,7 @@ Float your cursor over bubbles to view data details in the interactive version o
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure 5.32: This bubble chart shows fertility and life expectancy for several countries, including their population (shown by bubble size) and region (shown by bubble color). <a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive">full-screen interactive version</a>.
+Figure 5.33: This bubble chart shows fertility and life expectancy for several countries, including their population (shown by bubble size) and region (shown by bubble color). <a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive">full-screen interactive version</a>.
 </p>
 </div>
 <p>The five-column dataset is available in this <a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/">Google Sheets Bubble chart with 5 columns template</a>.
@@ -412,9 +427,9 @@ The columns are arranged in the following order: country label, x-axis value,
 y-axis value, color, and bubble size.</p>
 
 <div class="figure"><span id="fig:bubble-5-data"></span>
-<img src="images/05-chart/bubble-5-data.png" alt="Bubble chart data. Bubble size represents population, color – region."  />
+<img src="images/05-chart/bubble-5-data.png" alt="Bubble chart data. Bubble size represents population, color – region." width="400px" />
 <p class="caption">
-Figure 5.33: Bubble chart data. Bubble size represents population, color – region.
+Figure 5.34: Bubble chart data. Bubble size represents population, color – region.
 </p>
 </div>
 <p>Select all data and go to <em>Insert &gt; Chart</em>, and choose Bubble as the Chart type.
@@ -474,7 +489,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/05-chart.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

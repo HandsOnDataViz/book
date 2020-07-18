@@ -8,6 +8,8 @@ learn to identify good charts from bad ones. You will learn important rules that
 
 To begin, this grid of basic chart types will help you decide which type you wish to create. Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader's attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools, such as the [Google Sheets chart tool](chart-google-sheets.html), and for more advanced charts, [Tableau Public](tableau-public.html), the free version of the powerful software used by many data analysts and visualization practitioners. The grid also refers to more powerful chart tools, such as [Chart.js code templates](chartjs.html) in chapter 9, which give you ever more control over how your design and display your data, but also require learning how to [edit and host code templates with GitHub](github.html) in chapter 8.
 
+Table: (\#tab:chart-types) Chart types covered in this book
+
 | Basic chart types | Best use and tutorial chapters |
 | --- | --- |
 | Grouped column or bar<br> ![](images/05-chart/chart-grouped-column.png) | Best to compare categories side-by-side. Vertical columns, or horizontal bars for long labels. <br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js templates](chartjs.html) |
@@ -20,8 +22,6 @@ To begin, this grid of basic chart types will help you decide which type you wis
 | Stacked area chart<br> ![](images/05-chart/chart-stacked-area.png) | Best to show parts of a whole, with change over time. <br>Easy tool: [Google Sheets stacked area tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js templates](chartjs.html) |
 | XY Scatter chart <br> ![](images/05-chart/chart-scatter.png) | Best to show the relationship between two sets of data. <br>Easy tool: [Google Sheets scatter chart tutorial](scatter-bubble-google.html) or [Tableau Public scatter chart tutorial](scatter-chart-tableau.html)<br>Power tool: [Chart.js templates](chartjs.html) |
 | Bubble chart <br> ![](images/05-chart/chart-bubble.png) | Best to show the relationship between three or four sets of data, using bubble size and color.<br>Easy tool: [Google Sheets bubble chart tutorial](scatter-bubble-google.html)<br>Power tool: [Chart.js templates](chartjs.html) |
-
-*Table 5.1: Chart types covered in this book.*
 
 ## Chart Design Principles {- #chart-design}
 

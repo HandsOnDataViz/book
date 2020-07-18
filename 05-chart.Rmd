@@ -6,7 +6,7 @@ requires careful thought about how to communicate your data story with your audi
 In this chapter, we will look at main [principles of chart design](chart-design.html), and
 learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. In addition to static chart images, this book focuses on interactive charts that display more data when you float your cursor over them in your web browser. Later you'll learn how to [embed interactive charts on your web](embed.html) in chapter 7.
 
-To begin, this grid of basic chart types will help you decide which type you wish to create. Your decision will be based on the format of your data, and story you wish to tell, such as the type of data comparison you wish to draw to your reader's attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools, such as the [Google Sheets chart tool](chart-google-sheets.html), and for more advanced charts, [Tableau Public](tableau-public.html), the free version of the powerful software used by many data analysts and visualization practitioners. The grid also refers to more powerful chart tools, such as [Chart.js code templates](chartjs.html) in chapter 9, which give you ever more control over how your design and display your data, but also require learning how to [edit and host code templates with GitHub](github.html) in chapter 8.
+To begin, this grid of basic chart types will help you decide which type you wish to create. Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader's attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools, such as the [Google Sheets chart tool](chart-google-sheets.html), and for more advanced charts, [Tableau Public](tableau-public.html), the free version of the powerful software used by many data analysts and visualization practitioners. The grid also refers to more powerful chart tools, such as [Chart.js code templates](chartjs.html) in chapter 9, which give you ever more control over how your design and display your data, but also require learning how to [edit and host code templates with GitHub](github.html) in chapter 8.
 
 | Basic chart types | Best use and tutorial chapters |
 | --- | --- |
@@ -18,8 +18,10 @@ To begin, this grid of basic chart types will help you decide which type you wis
 | Line chart<br> ![](images/05-chart/chart-line.png) | Best to show continuous data, such as change over time.<br>Easy tool: [Google Sheets line chart tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js templates](chartjs.html) |
 | Filtered line chart <br> ![](images/05-chart/chart-filtered-line.png) | Best to show multiple lines of continuous data, with on-off toggle buttons. <br>Easy tool: [Tableau Public filtered line chart tutorial](filtered-line-chart-tableau.html) |
 | Stacked area chart<br> ![](images/05-chart/chart-stacked-area.png) | Best to show parts of a whole, with change over time. <br>Easy tool: [Google Sheets stacked area tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js templates](chartjs.html) |
-| XY Scatter chart <br> ![](images/05-chart/chart-scatter.png) | Best to show relationship between two sets of data. <br>Easy tool: [Google Sheets scatter chart tutorial](scatter-bubble-google.html) or [Tableau Public scatter chart tutorial](scatter-chart-tableau.html)<br>Power tool: [Chart.js templates](chartjs.html) |
-| Bubble chart <br> ![](images/05-chart/chart-bubble.png) | Best to show relationship between three or four sets of data, using bubble size and color.<br>Easy tool: [Google Sheets bubble chart tutorial](scatter-bubble-google.html)<br>Power tool: [Chart.js templates](chartjs.html) |
+| XY Scatter chart <br> ![](images/05-chart/chart-scatter.png) | Best to show the relationship between two sets of data. <br>Easy tool: [Google Sheets scatter chart tutorial](scatter-bubble-google.html) or [Tableau Public scatter chart tutorial](scatter-chart-tableau.html)<br>Power tool: [Chart.js templates](chartjs.html) |
+| Bubble chart <br> ![](images/05-chart/chart-bubble.png) | Best to show the relationship between three or four sets of data, using bubble size and color.<br>Easy tool: [Google Sheets bubble chart tutorial](scatter-bubble-google.html)<br>Power tool: [Chart.js templates](chartjs.html) |
+
+*Table 5.1: Chart types covered in this book.*
 
 ## Chart Design Principles {- #chart-design}
 
@@ -80,7 +82,7 @@ Remember that being open about these things helps build credibility and accounta
 In interactive charts, a *tooltip* is often used to provide more data or context
 once a user clicks or hovers over a data point or a data series.
 Tooltips are great for complex visualizations with multiple layers of data,
-because they de-clutter the chart. But because tooltips are harder to interact with on smaller screens,
+because they declutter the chart. But because tooltips are harder to interact with on smaller screens,
 such as phones and tablets, and are invisible when the chart is printed, only rely on them to convey
 additional, nice-to-have information. Make sure all essential information
 is visible without any user interaction.
@@ -90,7 +92,7 @@ is visible without any user interaction.
 Although the vast majority of rules in data visualization are open to interpretation,
 there are some that are hard to bend.
 
-#### Bar chars must start at zero {-}
+#### Bar charts must start at zero {-}
 Unlike line charts, bar or column charts need to have their value axis start at zero.
 This is to ensure that a bar twice the length of another bar represents twice its value.
 The Figure \@ref(fig:design-principles-start-at-zero) shows a good and a bad example.
@@ -236,7 +238,7 @@ separated, grouped, and stacked bar charts in Google Sheets:
 * High-Calorie Fast-Food Items
 * Global Database on Body Mass Index by World Health Organization
 
-Before you begin, you will need to create a free [Google Drive account](https://www.google.com/drive/). If you already Google Mail, you can use the same username for your Google Drive account.
+Before you begin, you will need to create a free [Google Drive account](https://www.google.com/drive/). If you already use Google Mail (Gmail), you can use the same username for your Google Drive account.
 
 ### Grouped Column and Bar Charts {-}
 
@@ -258,15 +260,15 @@ The following steps will help you recreate an interactive grouped column (or hor
 
 (ref:file-make-copy2) Make your own copy of the Google Sheet template.
 
-```{r file-make-copy2, fig.cap="(ref:file-make-copy2)"}
+```{r file-make-copy2, out.width="250px", fig.cap="(ref:file-make-copy2)"}
  knitr::include_graphics("images/05-chart/file-make-copy2.png")
 ```
 
 4. To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot menu appear, and select Delete, as shown in Figure \@ref(fig:delete-chart).
 
-(ref:delete-chart) Float cursor in top-right corner of the chart to make the 3-dot menu appear, and select Delete.
+(ref:delete-chart) Float cursor in top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete.
 
-```{r delete-chart, fig.cap="(ref:delete-chart)"}
+```{r delete-chart, out.width="180px", fig.cap="(ref:delete-chart)"}
  knitr::include_graphics("images/05-chart/delete-chart.png")
 ```
 
@@ -274,7 +276,7 @@ The following steps will help you recreate an interactive grouped column (or hor
 
 (ref:column-grouped-data) Format data in columns to make colored grouped columns in your chart.
 
-```{r column-grouped-data, fig.cap="(ref:column-grouped-data)"}
+```{r column-grouped-data, out.width="350px", fig.cap="(ref:column-grouped-data)"}
  knitr::include_graphics("images/05-chart/column-grouped-data.png")
 ```
 
@@ -282,15 +284,15 @@ The following steps will help you recreate an interactive grouped column (or hor
 
 (ref:column-grouped-insert) Select your data and then Insert > Chart.
 
-```{r column-grouped-insert, fig.cap="(ref:column-grouped-insert)"}
+```{r column-grouped-insert, out.width="250px", fig.cap="(ref:column-grouped-insert)"}
  knitr::include_graphics("images/05-chart/column-grouped-insert.png")
 ```
 
-7. In the Chart Editor, change the default selection to Column chart, with Stacking none, to display Grouped Columns, as shown in Figure \@ref(fig:column-grouped-editor). Or select horizontal Bar chart if you have longer labels.
+7. In the Chart Editor, change the default selection to Column chart, with Stacking none, to display Grouped Columns, as shown in Figure \@ref(fig:column-grouped-editor). Or select *Horizontal bar chart* if you have longer labels.
 
 (ref:column-grouped-editor) Change the default to Column chart, with Stacking none.
 
-```{r column-grouped-editor, fig.cap="(ref:column-grouped-editor)"}
+```{r column-grouped-editor, out.width="250px", fig.cap="(ref:column-grouped-editor)"}
  knitr::include_graphics("images/05-chart/column-grouped-editor.png")
 ```
 
@@ -298,7 +300,7 @@ The following steps will help you recreate an interactive grouped column (or hor
 
 (ref:chart-editor-customize) Select Customize to edit title, labels, and more.
 
-```{r chart-editor-customize, fig.cap="(ref:chart-editor-customize)"}
+```{r chart-editor-customize, out.width="250px", fig.cap="(ref:chart-editor-customize)"}
  knitr::include_graphics("images/05-chart/chart-editor-customize.png")
 ```
 
@@ -306,15 +308,15 @@ The following steps will help you recreate an interactive grouped column (or hor
 
 (ref:share-button-sheet) Click the Share button and then click "Change to anyone with the link." to make your data public.
 
-```{r share-button-sheet, fig.cap="(ref:share-button-sheet)"}
- knitr::include_graphics("images/05-chart/share-button-sheet.png")
+```{r share-button-sheet, out.width="350px", fig.cap="(ref:share-button-sheet)"}
+ knitr::include_graphics("images/05-chart/share-button-sheet-annotated.png")
 ```
 
 10. To embed an interactive version of your chart in another web page, click the 3-dot menu in the upper-right corner of your chart, and select Publish Chart, as shown in Figure \@ref(fig:chart-publish). In the next screen, select Embed and press the Publish button. See [Chapter 7 Embed on the Web](embed.html) to learn what to do with the iframe code.
 
 (ref:chart-publish) Select Publish Chart to embed an interactive chart on another web page, as described in Chapter 7.
 
-```{r chart-publish, fig.cap="(ref:chart-publish)"}
+```{r chart-publish, out.width="200px", fig.cap="(ref:chart-publish)"}
  knitr::include_graphics("images/05-chart/chart-publish.png")
 ```
 
@@ -348,7 +350,7 @@ To create your own separated column or bar chart using the fast-food example, ri
 ### Stacked Column and Bar Charts {-}
 
 Stacked column and bar charts can be used to compare subcategories. They can also be used
-to represents parts of a whole instead of pie charts. For example, the stacked column chart in Figure \@ref(fig:column-stacked) compares the percentage of overweight residents across nations, where colors allow for easy comparisons of weight-group subcategories across nations.
+to represent parts of a whole instead of pie charts. For example, the stacked column chart in Figure \@ref(fig:column-stacked) compares the percentage of overweight residents across nations, where colors allow for easy comparisons of weight-group subcategories across nations.
 
 (ref:column-stacked) Stacked column chart with data from [WHO and CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive).
 
@@ -360,7 +362,7 @@ To create a stacked column or bar chart, structure your data so that each column
 
 (ref:column-stacked-data) Create a stacked column or bar chart by structuring your data as shown.
 
-```{r column-stacked-data, fig.cap="(ref:column-stacked-data)"}
+```{r column-stacked-data, out.width="350px", fig.cap="(ref:column-stacked-data)"}
  knitr::include_graphics("images/05-chart/column-stacked-data.png")
 ```
 
@@ -371,10 +373,10 @@ To create your own stacked column or bar chart using the international weight le
 ### Histograms {-}
 
 Histogram is a type of bar chart that represents distribution of items, whether numerical
-or categorical. To bulid a histogram, you need to assign each data point to one of
+or categorical. To build a histogram, you need to assign each data point to one of
 the non-overlapping *buckets* (or *bins*).
 
-Let's say you want to know what time of day are you more likely to get an email.
+Let's say you want to know what time of day you are more likely to get an email.
 One approach would be to download metadata about all emails you received in 2020,
 and assign them to a bucket between 0 and 23 according to the email hour.
 Hours will become your bins, and email counts will be your frequency data.
@@ -382,13 +384,14 @@ Then your final dataset would look something like this:
 
 ```
 Hour  Emails
-0	    12
-1	    11
-2	    7
+------------
+0     12
+1     11
+2     7
 ...
 21    24
 22    34
-23	  22
+23    22
 ```
 You can now make a histogram. The good news is, Google Sheets considers histograms to
 be regular column charts, so you should be able to use a previous tutorial to make one.
@@ -412,11 +415,12 @@ readers can compare across bars. For example, if you want to create a less detai
 to cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively. Then your dataset will look like:
 
 ```
-Time of Day,Emails
-Morning,353
-Afternoon,497
-Evening,279
-Night,37
+TimeOfDay    Emails
+-------------------
+Morning      353
+Afternoon    497
+Evening      279
+Night        37
 ```
 
 ## Pie, Line, and Area Charts with Google Sheets {- #pie-line-area-google}
@@ -480,7 +484,7 @@ structured as shown in Figure \@ref(fig:line-data).
 
 (ref:line-data) Data for the line chart shown in Figure \@ref(fig:line).
 
-```{r line-data, out.width=250, fig.cap="(ref:line-data)"}
+```{r line-data, out.width="250px", fig.cap="(ref:line-data)"}
 knitr::include_graphics("images/05-chart/line-data.png")
 ```
 
@@ -497,7 +501,7 @@ It was hard, however, to estimate if the overall meat availability went up or do
 
 We can see how availability of individual meat types, *and* the total meat availability over time
 using a stacked area chart, like shown in Figure \@ref(fig:stacked-area). Here, we can still see that chicken
-has been on the rise since 1970s. We can also see that the total availability was on the
+has been on the rise since the 1970s. We can also see that the total availability was on the
 rise between 1910 and 1970 with a small dip around 1930s, and it didn't change much between
 1970 and 2017.
 
@@ -516,9 +520,15 @@ In the Chart editor, in tab Setup, select  *Stacked area chart* from the Chart t
 
 ## XY Scatter and Bubble Charts with Google Sheets {- #scatter-bubble-google}
 Consider using XY scatter charts, also known as scatterplots, to display data coordinates to show the relationship between
-two variables. The first example below compares the relationships between life expectancy (shown on the X axis) and fertility (shown on the Y axis), which each nation is represented as a dot (an X-Y coordinate). Bubble charts are basically scatter charts on steroids, meaning that they can display the relationship of up to five variables. Further below you'll build a bubble chart based on the same XY life expectancy-fertility dataset, with added variables for population (displayed as circle size) and region of the world (displayed as circle color). Fancier bubble charts animate the circles to represent one more variable: change over time.
+two variables. The first example below compares the relationships between life expectancy (shown on the X axis) and fertility (shown on the Y axis),
+which each nation is represented as a dot (an X-Y coordinate).
+Bubble charts are basically scatter charts on steroids, meaning that they can display the relationship of up to five variables.
+Further below you'll build a bubble chart based on the same XY life expectancy-fertility dataset, with added variables for population (displayed as circle size) and region of the world (displayed as circle color).
 
-<!-- TODO: Ilya - please review the conversational section intro I added above and feel free to revise. Should we add a link to an animated bubble chart, or not? -->
+Fancier bubble charts animate the circles to represent one more variable: change over time.
+Such animated bubble charts were popularized by Hans Rosling, a renowned Swedish professor
+of global health. You can watch one of his famous [TED talks](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen)
+to see animated bar charts in action.
 
 #### XY Scatter chart {-}
 The scatter chart in Figure \@ref(fig:scatter) uses World Bank data to reveal a downward slope:
@@ -546,7 +556,7 @@ The third column contains *Country* labels.
 
 (ref:scatter-data) Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels.
 
-```{r scatter-data, out.width=350, fig.cap="(ref:scatter-data)"}
+```{r scatter-data, out.width="350px", fig.cap="(ref:scatter-data)"}
 knitr::include_graphics("images/05-chart/scatter-data.png")
 ```
 
@@ -570,8 +580,8 @@ all other data ranges include it.
 
 (ref:scatter-labels) In the chart's Setup window, choose *Add labels* to the Series.
 
-```{r scatter-labels, out.width=350, fig.cap="(ref:scatter-labels)"}
-knitr::include_graphics("images/05-chart/scatter-labels.png")
+```{r scatter-labels, out.width="350px", fig.cap="(ref:scatter-labels)"}
+knitr::include_graphics("images/05-chart/scatter-labels-annotated.png")
 ```
 
 Tip: You may notice that some data points are too close to edges, and their labels are cut off.
@@ -580,7 +590,15 @@ for both horizontal and vertical axes. Unlike in bar charts, axes in scatter plo
 You can set your minimum and maximum values to be a few units below and above the extreme points of your
 data range.
 
-Note: Another name for the 3-dot menu symbol is the "kebab menu" because it resembles Middle Eastern food cooked on a skewer, in contrast to the three-line "burger menu" on many mobile devices. TODO: Add picture of each icon?
+Note: Another name for the 3-dot menu symbol is the "kebab menu" because it resembles Middle Eastern
+food cooked on a skewer, in contrast to the three-line "hamburger menu" on many mobile devices,
+as shown in Figure \@ref(fig:menu-hamburger-kebab).
+
+(ref:menu-hamburger-kebab) You should be able to distinguish kebab from hamburger menu icons.
+
+```{r menu-hamburger-kebab, fig.cap="(ref:menu-hamburger-kebab)"}
+knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
+```
 
 #### Bubble chart with 3 columns {-}
 In this tutorial, we will show you a little trick that you can use if you want a scatter chart
@@ -604,7 +622,7 @@ The data for this example is available in [Google Sheets Bubble chart with 3 col
 Notice that we moved the labels column (*Country*) to be the first one in the dataset,
 but the order shouldn't matter in this case. So our first column is the label for each bubble,
 the second column is the data to be plotted on horizontal x-axis, and the third column (fertility)
-will be place on the y-axis.
+will be placed on the y-axis.
 
 Select all three columns, and go to *Insert > Chart*. Google Sheets will likely create a stacked
 column chart by default, so choose *Bubble* from the Chart type dropdown window.
@@ -636,7 +654,7 @@ y-axis value, color, and bubble size.
 
 (ref:bubble-5-data) Bubble chart data. Bubble size represents population, color – region.
 
-```{r bubble-5-data, fig.cap="(ref:bubble-5-data)"}
+```{r bubble-5-data, out.width="400px", fig.cap="(ref:bubble-5-data)"}
 knitr::include_graphics("images/05-chart/bubble-5-data.png")
 ```
 
@@ -677,7 +695,7 @@ Figure \@ref(fig:tableau-xy-demo) illustrates a
 strong relationship between Connecticut school district income and
 test scores.
 
-(ref:tableau-xy-demo) Household income vs test scores in Connecticut school districts. Made with Tableau Public.
+(ref:tableau-xy-demo) This scatterplot is made in Tableau Public an shows the relationship between household income and test scores in Connecticut school districts.
 
 ```{r tableau-xy-demo, fig.cap="(ref:tableau-xy-demo)"}
 if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-xy-demo.png")
@@ -716,7 +734,7 @@ to build your first chart.
 (ref:tableau-connect) Drag `data` sheet into *Drag tables here* area.
 
 ```{r tableau-connect, fig.cap="(ref:tableau-connect)"}
-knitr::include_graphics("images/05-chart/tableau-connect.png")
+knitr::include_graphics("images/05-chart/tableau-connect-annotated.png")
 ```
 
 <!-- TODO: Let's find out whether real first-time users can follow these steps! -->
@@ -741,14 +759,14 @@ in the Columns. The bar chart will transform into a scatter chart with just one 
 in the upper-right corner. That is because the data for both is aggregated (remember the `SUM` function).
 
 6. We want to tell Tableau to disaggregate the household and grade levels variables. To do so,
-drag *District* dimention into the lower portion of the Marks area. You will now see
+drag *District* dimension into the lower portion of the Marks area. You will now see
 a real scatter chart in the charting area. If you hover over points, you will see all three
 values associated with it.
 
 (ref:tableau-xy-dragging) Drag measures and dimensions to the right places in Tableau.
 
 ```{r tableau-xy-dragging, fig.cap="(ref:tableau-xy-dragging)"}
-knitr::include_graphics("images/05-chart/tableau-xy-dragging.png")
+knitr::include_graphics("images/05-chart/tableau-xy-dragging-annotated.png")
 ```
 
 #### Add Title and Caption, and Publish {-}
@@ -767,7 +785,7 @@ As a result, your final worksheet will look like shown in Figure \@ref(fig:table
 (ref:tableau-xy-final) This scatter chart is ready to be published.
 
 ```{r tableau-xy-final, fig.cap="(ref:tableau-xy-final)"}
-knitr::include_graphics("images/05-chart/tableau-xy-final.png")
+knitr::include_graphics("images/05-chart/tableau-xy-final-annotated.png")
 ```
 
 Tip: In the dropdown above Columns section, change *Standard* to *Fit Width*
@@ -778,12 +796,12 @@ To publish the chart to the web,
 1. Go to *File > Save to Tableau Public As...*. A window to sign in to your account will pop up.
 If you don't have an account, click *Create one now for free* at the bottom.
 
-2. Once signed in, a window to set the workbook title will appear. Change the deafult *Book1* title
+2. Once signed in, a window to set the workbook title will appear. Change the default *Book1* title
 to something meaningful, as this name will appear in the URL for your published work. Click Save.
 
 3. Once the dashboard is saved, Tableau Public will open up a window in your default browser
 with the visualization. In the green ribbon above the chart, click *Edit Details*
-to edit chart's title or description. Under *Toolbar Settings*, see checkbox to
+to edit the title or description. Under *Toolbar Settings*, see checkbox to
 *Allow others to download or explore and copy this workbook and its data*
 (Figure \@ref(fig:tableau-toolbar-settings)), and enable/disable
 it as you think is appropriate. As advocates for open and accessible data, we recommend
@@ -792,7 +810,7 @@ leaving the box checked.
 (ref:tableau-toolbar-settings) This scatter chart is ready to be published.
 
 ```{r tableau-toolbar-settings, fig.cap="(ref:tableau-toolbar-settings)"}
-knitr::include_graphics("images/05-chart/tableau-toolbar-settings.png")
+knitr::include_graphics("images/05-chart/tableau-toolbar-settings-annotated.png")
 ```
 
 See the [Embed Tableau Public on Your Website](embed-tableau.html) section of this book to insert the interactive version of your chart on a web page that you control.
@@ -859,7 +877,7 @@ how the interactive filtering works.
 
 (ref:tableau-filtered-show-filter) Once you dragged Country Name to the Filters card, make sure the Filter is displayed.
 
-```{r tableau-filtered-show-filter, out.width=200, fig.cap="(ref:tableau-filtered-show-filter)"}
+```{r tableau-filtered-show-filter, out.width="220px", fig.cap="(ref:tableau-filtered-show-filter)"}
 knitr::include_graphics("images/05-chart/tableau-filtered-show-filter.png")
 ```
 

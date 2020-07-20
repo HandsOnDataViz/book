@@ -107,9 +107,13 @@ O'Reilly encourages the use of tips, notes, and warnings, and assigns each of th
 - Note: A couple of sentences of supplemental information. It describes something you want readers to keep in mind as they work, so you use a note to set it apart and make sure they see it.
 - Warning: Similar to a note or tip, but specifically focused on a way to help readers avoid making a mistake or getting into trouble.
 
+Also:
+
+- Sidebar: Use this to note where the editor has requested a boxed sidebar. If longer than one paragraph, add "End Sidebar" to close it.
+
 Insert an embedded link to [O'Reilly](https://www.oreilly.com/). This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O'Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.
 
-Also, embed the link directly in the sentence, such as [download this sample PDF](https://handsondataviz.org/data/ct-dph-covid-2020-05-31.pdf), and avoid linking words such as "here" or "this web page."
+Also, embed the link directly in the sentence, such as [download this sample PDF](https://handsondataviz.org/data/ct-dph-covid-2020-05-31.pdf). Avoid linking words such as "here" or "this web page." Also, avoid writing "Click on this..." in the main text, such as when downloading a sample file, since readers cannot click on the print edition. However, it is acceptable to write "click on" or "right-click on" in a tutorial on interacting with software.
 
 When instructions refer to software menu items, use italics. Example: Select *File > Make a Copy* to save your own version to your Google Drive.
 

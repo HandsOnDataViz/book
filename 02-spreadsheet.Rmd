@@ -1,20 +1,37 @@
 # Improve Your Spreadsheet Skills {#spreadsheet}
-Before we begin to design data visualizations, let's bring our spreadsheet skills up to speed. While teaching this topic, we've heard many people describe how they "never really learned" how to use spreadsheet tools as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.
+Before we begin to design data visualizations, it's important to make sure our spreadsheet skills are up to speed. While teaching this topic, we've heard many people describe how they "never really learned" how to use spreadsheet tools as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.
 
-To fill this gap, we added this chapter to introduce or refresh your spreadsheet skills. The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a "cell." In this chapter, we'll start by reviewing basic steps, such as [sharing data](share.html), [sorting and filtering](sort.html), and [calculating with formulas and functions](calculate.html). Then we'll step up to the next level of skills, such as [regrouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), [connecting sheets with a relational database](database.html), and [collecting data with online forms](forms.html). All of the methods we illustrate are intended for introductory users, and do not require any background in statistics.
+The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a "cell." In this chapter, we'll start by reviewing basic steps, such as [sharing data](share.html), [sorting and filtering](sort.html), and [calculating with formulas and functions](calculate.html). Then we'll step up to the next level of skills, such as [regrouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), [connecting sheets with a relational database](database.html), and [collecting data with online forms](forms.html). All of the methods we illustrate are intended for introductory users, and do not require any background in statistics.
 
-If you can add up numbers---or better said, if you want your computer to add up numbers and do even more work for you---then this chapter is right for you. Even if you *think* you know something about using spreadsheets, skim these sections and you might learn a trick or two that will help you to design charts and maps more efficiently in later chapters.
+If you want to learn ways to make your computer do more work for you, this is the right chapter for you. Even if you *think* you know something about using spreadsheets, skim these sections and you might learn a trick or two that will help you to design charts and maps more efficiently in later chapters.
 
-About spreadsheet tools:
+## Selecting your Spreadsheet Tool {- #spreadsheet-tool}
+Which spreadsheet tool should you use? As we describe in more detail in [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), the answer depends on how you respond to different questions about your work. First, is your data public or private? If private, consider using a downloadable spreadsheet tool that runs on your personal computer, to reduce the risk of an accidental data breach that might happen when using an online spreadsheet tool that automatically stores your data in the cloud. Second, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that's designed to allow other team members to simultaneously view or edit data. Third, do you need to import or export data in any specific format (which we'll describe in the next section), such as Comma Separated Values (CSV)? If yes, then choose a spreadsheet tool that supports that format. Finally, do you prefer a free tool, or are you willing to pay for it, or donate funds to support open-source development?
 
-- Free online [Google Sheets](https://www.google.com/sheets/about/) offers an easy-to-learn yet powerful spreadsheet tool that works in any modern web browser. Since it's designed for collaboration and exports data into multiple open formats, we feature it in several examples in this book. You can sign up for a free personal [Google Drive](https://drive.google.com) account with the same username as your Google Mail account, or create a separate account to reduce Google's invasion into your personal life. Another option is to pay for a [Google Suite](https://gsuite.google.com/) business account, with nearly identical tools, but designed for larger teams and organizations.  
-- Free downloadable [LibreOffice and its Calc spreadsheet](https://www.libreoffice.org/) is a powerful and increasingly popular open-source alternative to Microsoft Office, available for Mac, Windows, and Linux desktop and laptop computers. When downloading, a donation is requested to continue support for open-source software development.
-- Free online [Microsoft Excel for OneDrive](https://onedrive.live.com) and the paid online [Microsoft Excel for Office 365](https://www.microsoft.com/en-us/microsoft-365/microsoft-office) offer limited Office tools in your web browser. For example, these online versions of Excel do *not* allow you to easily save or download files into the Comma Separated Values (.csv) generic data format, a very important feature required by other data visualization tools in later chapters of this book. Exporting to CSV format requires the downloadable version of Excel below. TODO: Further fact-checking needed because I investigated for 15 minutes and cannot find an easy way to export to CSV in the online Excel using the free OneDrive or paid Office 365 account, contrary to this Microsoft Support page: https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba
-- Paid downloadable [Microsoft Excel](https://www.microsoft.com/) is available for Windows and Mac desktops and laptops, and other devices. When people simply say "Excel" they usually mean this powerful yet pricey version. It offers the most complete set of spreadsheet tools (including the simple task of exporting to CSV that its online cousins lack), but was not originally designed for online collaboration.
+Here's how three common spreadsheet tools compare on these questions:
 
-Which spreadsheet tool should you use? As we describe in more detail in [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), that answer depends on multiple factors. Is your data public or private? If private, consider using downloadable spreadsheet tool that runs on your personal computer, to reduce the risk of an accidental data breach with an online spreadsheet tool. Also, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that's designed to allow other team members to simultaneously view or edit data. In this book, we emphasize public, shared datasets, so our examples feature Google Sheets. But most of the spreadsheet methods we teach are common across other spreadsheet tools, and we point out exceptions where relevant.
+- [Google Sheets](https://www.google.com/sheets/about/) is a free online spreadsheet tool that works in any modern web browser, and automatically stores your data in the cloud. While data you upload is private by default, you can choose to share it with specific individuals or anyone on the internet, and allow them to view or edit for real-time collaboration, similar to Google Documents. Google Sheets also imports and exports data in CSV, ODS, Excel, and other formats. You can sign up for a free personal [Google Drive](https://drive.google.com) account with the same username as your Google Mail account, or create a separate account under a new username to reduce Google's invasion into your private life. Another option is to pay for a [Google Suite](https://gsuite.google.com/) business account subscription, which offers nearly identical tools, but with sharing settings designed for larger organizations or educational institutions.
+- [LibreOffice](https://www.libreoffice.org/) is a free downloadable suite of tools, including its Calc spreadsheet, available for Mac, Windows, and Linux computers, and is an increasingly popular alternative to Microsoft Office. When you download LibreOffice, its sponsor organization, The Document Foundation, requests a donation to continue its open-source software development. The Calc spreadsheet tool imports and exports data in its native ODS format, as well as CSV, Excel, and others. While an online collaborative platform is under development, it is not yet available for broad usage.
+- [Microsoft Excel](https://support.microsoft.com/en-us/excel) is the spreadsheet tool in the Microsoft Office suite, which is available in different versions, though commonly confused as the company has changed its product names over time. A paid subscription to [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365) allows you to download the Excel tool to your Windows or Mac computer or other devices (which is what most people mean when they simply say "Excel") and also to work with Excel online through your browser and share files with collaborators through Microsoft's file hosting service. Also, anyone can sign up for a free version of Excel online (without the downloadable tool) at Microsoft's [Office on the Web](https://office.com). But neither the paid nor free version of Excel online allows you to download files into the Comma Separated Values (.csv) generic data format, an important feature required by some data visualization tools in later chapters of this book. You can only export to CSV using the downloadable Excel tool, available only with a paid Microsoft 365 subscription.
 
-About data formats:
+Deciding which spreadsheet tool to use is not a simple choice. Sometimes our decisions change from project to project, depending on costs, data formats, privacy concerns, and the personal preferences of any collaborators. Occasionally we've also had co-workers or clients specifically request that we send them non-sensitive spreadsheet data attached to an email, rather than sharing it through a spreadsheet tool platform that was designed for collaboration. So it's best to be familiar with all three commonly-used spreadsheet tools above, and to understand their respective strengths and weaknesses.
+
+In this book, we primarily use Google Sheets for most of our examples. All of the data we distribute through this book is public. Also, we wanted a spreadsheet tool designed for collaboration, so that we can share links to data files with readers like you, so that you can view our original version, and either make a copy to edit in your own Google Drive, or download in a different format to use in LibreOffice or Excel. Most of the spreadsheet methods we teach look the same across all spreadsheet tools, and we point out exceptions when relevant.
+
+## Download and Export to CSV or ODS formats {- #csv}
+
+START AGAIN HERE 
+
+In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned the advantages of selecting software tools that support data migration, so that you can export your work to other platforms. Digital technology always changes. Never upload important data into a tool if you can't easily get it out! In addition, better tools allow you to export your work in open-data or generic file formats, not just proprietary formats created primarily for a specific company's software platform.
+
+When choosing a spreadsheet tool, test if and how it exports into these two open data formats:
+
+- Comma Separated Values (.csv) export only one sheet of data, with no formulas or formatting, into a wide range of spreadsheet and visualization tools, including several featured in later chapters of this book.
+- OpenDocument Spreadsheet (.ods) exports a spreadsheet with multiple tabs of data, including basic formulas and formatting, into multiple spreadsheet tools, including Google Sheets, Microsoft Excel, and LibreOffice
+
+
+
+About data formats:  MERGE ABOVE?
 
 Spreadsheet tools organize data in different formats. When you download spreadsheet data to your personal computer, you typically see its filename, followed by a period and a 3- or 4-character abbreviated extension, which represents the data format, as shown in Figure \@ref(fig:data-formats). The most common data formats we use in this chapter are:
 
@@ -22,11 +39,51 @@ Spreadsheet tools organize data in different formats. When you download spreadsh
 - `.ods` means OpenDocument Spreadsheet, a standardized open format that supports multi-tabbed data sheets, formulas, styling, etc.
 - `.xlsx` or the older `.xls` means Microsoft Excel, a proprietary format that supports multi-tabbed sheets, formulas, styling, etc.
 
-(ref:data-formats) Three common data formats---csv, ods, and xlsx---displayed as icons in the Mac Finder. TODO: Expand screenshot to show data formats as displayed in Chromebook for comparison?
+(ref:data-formats) Three common data formats---csv, ods, and xlsx---displayed as icons in the Mac Finder.
 
 ```{r data-formats, fig.cap="(ref:data-formats)"}
  knitr::include_graphics("images/02-spreadsheet/data-formats.png")
 ```
+
+
+
+
+
+In Google Sheets, go to *File > Download As* to export in CSV format (for only the current sheet) or ODS format (for a multi-tabbed spreadsheet with most formulas and formatting), or other formats, as shown in Figure \@ref(fig:sheets-download).
+
+(ref:sheets-download) In Google Sheets, go to *File > Download As* to export data to other common formats.
+
+```{r sheets-download, fig.cap="(ref:sheets-download)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-download.png")
+```
+
+In the downloadable LibreOffice and its Calc spreadsheet tool, select *File > Save As* to save in its native ODS format, or export in CSV, XLSX, and other formats.
+
+In the online Excel for free OneDrive or paid Office 365, the *File > Save As* menu allows you to save a file in its native XLSX format, or export in ODS format, as shown in Figure \@ref(fig:excel-online-save-as). But online Excel lacks an easy way to export data in CSV format.
+
+(ref:excel-online-save-as) Online versions of Excel export into ODS format, but not CSV.
+
+```{r excel-online-save-as, fig.cap="(ref:excel-online-save-as)"}
+ knitr::include_graphics("images/02-spreadsheet/excel-online-save-as.png")
+```
+
+In the downloadable Excel for Windows and Mac, the *File > Save As* menu allows you to save a file in its native XLSX format, or export in CSV, ODS, or other formats. But saving from Excel into CSV format requires thinking through a few steps that sometimes confuse people.
+
+1. Remember that if you have an Excel workbook with multiple sheets and formulas, the CSV export will only save the *active* sheet (meaning the one you're currently viewing), and only the *data* in that sheet (meaning none of the formulas you may have used for calculations). If you need to create a CSV version for other data visualization tools in this book, we advise that you first save a full-version of your Excel file, and then save a CSV file, using parallel file names:
+
+- data.csv
+- data.xlsx
+
+2. In the downloadable version of Excel, click on *File > Save As* and select *CSV* format. If you see multiple CSV options, choose *CSV UTF-8*, which should work best across different computer platforms.
+
+3. If your Excel workbook contains multiple sheets, you may see a warning that it cannot be saved in CSV format, which only saves data contained in the active sheet. If you understand this, click *OK* to continue. On the next screen, Excel may warn you about "Possible data loss" when saving an Excel file in CSV format, which is true. That's why we recommended that you first save the full-version of your Excel file before saving a CSV file.
+
+TODO: I can add screenshots of any of the downloadable Excel steps above, but I don't think it's necessary. Thoughts?
+
+Once you've learned how to export your spreadsheet data into an open format, you're ready to migrate it into other data visualization tools or platforms that we'll introduce in later chapters of this book. Data portability is key for ensuring that your charts and maps will last well into the future.
+
+
+TODO: does this warning fit here?
 
 Warning: Several tools in this book may not work properly on a Mac computer that does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
 
@@ -35,6 +92,9 @@ Warning: Several tools in this book may not work properly on a Mac computer that
 ```{r mac-file-extensions, fig.cap="(ref:mac-file-extensions)"}
  knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
 ```
+
+
+
 
 ## Make Your Own Copy of a Google Sheet {- #copy}
 In several chapters of this book, we share sample data with links to Google Sheets, using settings that allow you to view---but not edit---the original file. We want everyone to have access to the data, but do not want anyone to accidentally modify the contents. Follow these simple steps to make your own copy of a Google Sheet that you can edit, without changing our version.
@@ -125,48 +185,6 @@ Tip: Google Drive now allows you to edit Microsoft Office file formats, but not 
 
 Tip: To convert individual files to your Google Drive, while keeping the global conversion setting off, from inside any Google Sheet you can select *File > Import > Upload*. But we recommend that most people turn on the global conversion setting as described above, except in cases where you intentionally use Google Drive to edit an Excel-formatted file, and understand that some features may not work.
 
-
-## Download and Export to CSV or ODS formats {- #csv}
-
-In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned the advantages of selecting software tools that support data migration, so that you can export your work to other platforms. Digital technology always changes. Never upload important data into a tool if you can't easily get it out! In addition, better tools allow you to export your work in open-data or generic file formats, not just proprietary formats created primarily for a specific company's software platform.
-
-When choosing a spreadsheet tool, test if and how it exports into these two open data formats:
-
-- Comma Separated Values (.csv) export only one sheet of data, with no formulas or formatting, into a wide range of spreadsheet and visualization tools, including several featured in later chapters of this book.
-- OpenDocument Spreadsheet (.ods) exports a spreadsheet with multiple tabs of data, including basic formulas and formatting, into multiple spreadsheet tools, including Google Sheets, Microsoft Excel, and LibreOffice
-
-In Google Sheets, go to *File > Download As* to export in CSV format (for only the current sheet) or ODS format (for a multi-tabbed spreadsheet with most formulas and formatting), or other formats, as shown in Figure \@ref(fig:sheets-download).
-
-(ref:sheets-download) In Google Sheets, go to *File > Download As* to export data to other common formats.
-
-```{r sheets-download, fig.cap="(ref:sheets-download)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-download.png")
-```
-
-In the downloadable LibreOffice and its Calc spreadsheet tool, select *File > Save As* to save in its native ODS format, or export in CSV, XLSX, and other formats.
-
-In the online Excel for free OneDrive or paid Office 365, the *File > Save As* menu allows you to save a file in its native XLSX format, or export in ODS format, as shown in Figure \@ref(fig:excel-online-save-as). But online Excel lacks an easy way to export data in CSV format.
-
-(ref:excel-online-save-as) Online versions of Excel export into ODS format, but not CSV.
-
-```{r excel-online-save-as, fig.cap="(ref:excel-online-save-as)"}
- knitr::include_graphics("images/02-spreadsheet/excel-online-save-as.png")
-```
-
-In the downloadable Excel for Windows and Mac, the *File > Save As* menu allows you to save a file in its native XLSX format, or export in CSV, ODS, or other formats. But saving from Excel into CSV format requires thinking through a few steps that sometimes confuse people.
-
-1. Remember that if you have an Excel workbook with multiple sheets and formulas, the CSV export will only save the *active* sheet (meaning the one you're currently viewing), and only the *data* in that sheet (meaning none of the formulas you may have used for calculations). If you need to create a CSV version for other data visualization tools in this book, we advise that you first save a full-version of your Excel file, and then save a CSV file, using parallel file names:
-
-- data.csv
-- data.xlsx
-
-2. In the downloadable version of Excel, click on *File > Save As* and select *CSV* format. If you see multiple CSV options, choose *CSV UTF-8*, which should work best across different computer platforms.
-
-3. If your Excel workbook contains multiple sheets, you may see a warning that it cannot be saved in CSV format, which only saves data contained in the active sheet. If you understand this, click *OK* to continue. On the next screen, Excel may warn you about "Possible data loss" when saving an Excel file in CSV format, which is true. That's why we recommended that you first save the full-version of your Excel file before saving a CSV file.
-
-TODO: I can add screenshots of any of the downloadable Excel steps above, but I don't think it's necessary. Thoughts?
-
-Once you've learned how to export your spreadsheet data into an open format, you're ready to migrate it into other data visualization tools or platforms that we'll introduce in later chapters of this book. Data portability is key for ensuring that your charts and maps will last well into the future.
 
 
 ## Sort and Filter Data {- #sort}

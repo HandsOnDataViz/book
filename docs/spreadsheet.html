@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-18" />
+<meta name="date" content="2020-07-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="rate.html"/>
-<link rel="next" href="copy.html"/>
+<link rel="next" href="spreadsheet-tool.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -160,10 +160,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
 <ul>
+<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Selecting your Spreadsheet Tool</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
@@ -299,40 +300,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="spreadsheet" class="section level1" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Improve Your Spreadsheet Skills</h1>
-<p>Before we begin to design data visualizations, let’s bring our spreadsheet skills up to speed. While teaching this topic, we’ve heard many people describe how they “never really learned” how to use spreadsheet tools as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.</p>
-<p>To fill this gap, we added this chapter to introduce or refresh your spreadsheet skills. The interactive charts and maps that we’ll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a “cell.” In this chapter, we’ll start by reviewing basic steps, such as <a href="share.html">sharing data</a>, <a href="sort.html">sorting and filtering</a>, and <a href="calculate.html">calculating with formulas and functions</a>. Then we’ll step up to the next level of skills, such as <a href="pivot.html">regrouping data with pivot tables</a>, <a href="vlookup.html">matching columns with lookup tables</a>, <a href="database.html">connecting sheets with a relational database</a>, and <a href="forms.html">collecting data with online forms</a>. All of the methods we illustrate are intended for introductory users, and do not require any background in statistics.</p>
-<p>If you can add up numbers—or better said, if you want your computer to add up numbers and do even more work for you—then this chapter is right for you. Even if you <em>think</em> you know something about using spreadsheets, skim these sections and you might learn a trick or two that will help you to design charts and maps more efficiently in later chapters.</p>
-<p>About spreadsheet tools:</p>
-<ul>
-<li>Free online <a href="https://www.google.com/sheets/about/">Google Sheets</a> offers an easy-to-learn yet powerful spreadsheet tool that works in any modern web browser. Since it’s designed for collaboration and exports data into multiple open formats, we feature it in several examples in this book. You can sign up for a free personal <a href="https://drive.google.com">Google Drive</a> account with the same username as your Google Mail account, or create a separate account to reduce Google’s invasion into your personal life. Another option is to pay for a <a href="https://gsuite.google.com/">Google Suite</a> business account, with nearly identical tools, but designed for larger teams and organizations.<br />
-</li>
-<li>Free downloadable <a href="https://www.libreoffice.org/">LibreOffice and its Calc spreadsheet</a> is a powerful and increasingly popular open-source alternative to Microsoft Office, available for Mac, Windows, and Linux desktop and laptop computers. When downloading, a donation is requested to continue support for open-source software development.</li>
-<li>Free online <a href="https://onedrive.live.com">Microsoft Excel for OneDrive</a> and the paid online <a href="https://www.microsoft.com/en-us/microsoft-365/microsoft-office">Microsoft Excel for Office 365</a> offer limited Office tools in your web browser. For example, these online versions of Excel do <em>not</em> allow you to easily save or download files into the Comma Separated Values (.csv) generic data format, a very important feature required by other data visualization tools in later chapters of this book. Exporting to CSV format requires the downloadable version of Excel below. TODO: Further fact-checking needed because I investigated for 15 minutes and cannot find an easy way to export to CSV in the online Excel using the free OneDrive or paid Office 365 account, contrary to this Microsoft Support page: <a href="https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba" class="uri">https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba</a></li>
-<li>Paid downloadable <a href="https://www.microsoft.com/">Microsoft Excel</a> is available for Windows and Mac desktops and laptops, and other devices. When people simply say “Excel” they usually mean this powerful yet pricey version. It offers the most complete set of spreadsheet tools (including the simple task of exporting to CSV that its online cousins lack), but was not originally designed for online collaboration.</li>
-</ul>
-<p>Which spreadsheet tool should you use? As we describe in more detail in <a href="choose.html">Chapter 1: Choose Tools to Tell Your Data Story</a>, that answer depends on multiple factors. Is your data public or private? If private, consider using downloadable spreadsheet tool that runs on your personal computer, to reduce the risk of an accidental data breach with an online spreadsheet tool. Also, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that’s designed to allow other team members to simultaneously view or edit data. In this book, we emphasize public, shared datasets, so our examples feature Google Sheets. But most of the spreadsheet methods we teach are common across other spreadsheet tools, and we point out exceptions where relevant.</p>
-<p>About data formats:</p>
-<p>Spreadsheet tools organize data in different formats. When you download spreadsheet data to your personal computer, you typically see its filename, followed by a period and a 3- or 4-character abbreviated extension, which represents the data format, as shown in Figure <a href="spreadsheet.html#fig:data-formats">2.1</a>. The most common data formats we use in this chapter are:</p>
-<ul>
-<li><code>.csv</code> means Comma Separated Values, a generic format for a single sheet of simple data, with no formulas or styling.</li>
-<li><code>.ods</code> means OpenDocument Spreadsheet, a standardized open format that supports multi-tabbed data sheets, formulas, styling, etc.</li>
-<li><code>.xlsx</code> or the older <code>.xls</code> means Microsoft Excel, a proprietary format that supports multi-tabbed sheets, formulas, styling, etc.</li>
-</ul>
-
-<div class="figure"><span id="fig:data-formats"></span>
-<img src="images/02-spreadsheet/data-formats.png" alt="Three common data formats—csv, ods, and xlsx—displayed as icons in the Mac Finder. TODO: Expand screenshot to show data formats as displayed in Chromebook for comparison?"  />
-<p class="caption">
-Figure 2.1: Three common data formats—csv, ods, and xlsx—displayed as icons in the Mac Finder. TODO: Expand screenshot to show data formats as displayed in Chromebook for comparison?
-</p>
-</div>
-<p>Warning: Several tools in this book may not work properly on a Mac computer that does not display the filename extensions, meaning the abbreviated file format after the period, such as <code>data.csv</code> or <code>map.geojson</code>. The Mac operating system hides these by default, so you need to turn them on by going to Finder &gt; Preferences &gt; Advanced, and check the box to <em>Show all filename extensions</em>, as shown in Figure <a href="spreadsheet.html#fig:mac-file-extensions">2.2</a>.</p>
-
-<div class="figure"><span id="fig:mac-file-extensions"></span>
-<img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to Finder &gt; Preferences &gt; Advanced and check the box to Show all filename extensions."  />
-<p class="caption">
-Figure 2.2: On a Mac, go to Finder &gt; Preferences &gt; Advanced and check the box to <em>Show all filename extensions</em>.
-</p>
-</div>
+<p>Before we begin to design data visualizations, it’s important to make sure our spreadsheet skills are up to speed. While teaching this topic, we’ve heard many people describe how they “never really learned” how to use spreadsheet tools as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.</p>
+<p>The interactive charts and maps that we’ll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a “cell.” In this chapter, we’ll start by reviewing basic steps, such as <a href="share.html">sharing data</a>, <a href="sort.html">sorting and filtering</a>, and <a href="calculate.html">calculating with formulas and functions</a>. Then we’ll step up to the next level of skills, such as <a href="pivot.html">regrouping data with pivot tables</a>, <a href="vlookup.html">matching columns with lookup tables</a>, <a href="database.html">connecting sheets with a relational database</a>, and <a href="forms.html">collecting data with online forms</a>. All of the methods we illustrate are intended for introductory users, and do not require any background in statistics.</p>
+<p>If you want to learn ways to make your computer do more work for you, this is the right chapter for you. Even if you <em>think</em> you know something about using spreadsheets, skim these sections and you might learn a trick or two that will help you to design charts and maps more efficiently in later chapters.</p>
 </div>
             </section>
 
@@ -340,7 +310,7 @@ Figure 2.2: On a Mac, go to Finder &gt; Preferences &gt; Advanced and check the 
         </div>
       </div>
 <a href="rate.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="copy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="spreadsheet-tool.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -382,7 +352,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/02-spreadsheet.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-18" />
+<meta name="date" content="2020-07-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="share.html"/>
-<link rel="next" href="csv.html"/>
+<link rel="next" href="sort.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -160,10 +160,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
 <ul>
+<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Selecting your Spreadsheet Tool</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
@@ -303,31 +304,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li><p>Find an Excel file you can use on your personal computer. If you don’t have one, click this <a href="https://handsondataviz.org/data/data.xlsx">sample Excel data file</a> and save to download to your computer.</p></li>
 <li><p>Log into your <a href="https://drive.google.com">Google Drive</a> account, and click the <em>Gear</em> symbol in the upper-right corner to open the Settings screen. Note that this global <em>Gear symbol &gt; Settings</em> appears at Google Drive level, <em>not</em> inside each Google Sheet.</p></li>
-<li><p>Check the box to <em>Convert uploaded files to Google Docs editor format</em>, as shown in Figure <a href="upload.html#fig:convert-uploads">2.7</a>, and click <em>Done</em>. This turns on the conversion setting globally, meaning it will convert all possible files that you upload in the future—including Microsoft Excel, Word, PowerPoint, and more—unless you turn it off.</p></li>
+<li><p>Check the box to <em>Convert uploaded files to Google Docs editor format</em>, as shown in Figure <a href="upload.html#fig:convert-uploads">2.9</a>, and click <em>Done</em>. This turns on the conversion setting globally, meaning it will convert all possible files that you upload in the future—including Microsoft Excel, Word, PowerPoint, and more—unless you turn it off.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:convert-uploads"></span>
 <img src="images/02-spreadsheet/convert-uploads.png" alt="Inside your Google Drive settings (the gear symbol), check the box to convert uploads."  />
 <p class="caption">
-Figure 2.7: Inside your Google Drive settings (the gear symbol), check the box to convert uploads.
+Figure 2.9: Inside your Google Drive settings (the gear symbol), check the box to convert uploads.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>Upload a sample Excel file from your computer to your Google Drive. Either drag-and-drop it to the desired folder, as shown in Figure <a href="upload.html#fig:upload-file">2.8</a>, or use the <em>New</em> button and select <em>File upload</em>.</li>
+<li>Upload a sample Excel file from your computer to your Google Drive. Either drag-and-drop it to the desired folder, as shown in Figure <a href="upload.html#fig:upload-file">2.10</a>, or use the <em>New</em> button and select <em>File upload</em>.</li>
 </ol>
 
 <div class="figure"><span id="fig:upload-file"></span>
 <img src="images/02-spreadsheet/upload-file.png" alt="Drag-and-drop your sample Excel file into your Google Drive to upload it."  />
 <p class="caption">
-Figure 2.8: Drag-and-drop your sample Excel file into your Google Drive to upload it.
+Figure 2.10: Drag-and-drop your sample Excel file into your Google Drive to upload it.
 </p>
 </div>
-<p>If you forget to check the <em>Convert uploads</em> box, Google Drive will keep uploaded files in their original format, and display their icons and file name extensions such as <code>.xlsx</code> or <code>.csv</code>, as shown in Figure <a href="upload.html#fig:drive-file-icons">2.9</a>.</p>
+<p>If you forget to check the <em>Convert uploads</em> box, Google Drive will keep uploaded files in their original format, and display their icons and file name extensions such as <code>.xlsx</code> or <code>.csv</code>, as shown in Figure <a href="upload.html#fig:drive-file-icons">2.11</a>.</p>
 
 <div class="figure"><span id="fig:drive-file-icons"></span>
 <img src="images/02-spreadsheet/drive-file-icons.png" alt="If you forget to convert uploads, Google Drive will keep files in their original format with these icons."  />
 <p class="caption">
-Figure 2.9: If you forget to convert uploads, Google Drive will keep files in their original format with these icons.
+Figure 2.11: If you forget to convert uploads, Google Drive will keep files in their original format with these icons.
 </p>
 </div>
 <p>Tip: Google Drive now allows you to edit Microsoft Office file formats, but not all features are guaranteed to work across platforms. Also, Google Drive now allows you to convert an uploaded Excel file into its Google format by using the <em>File &gt; Save as Google Sheets</em> menu.</p>
@@ -339,7 +340,7 @@ Figure 2.9: If you forget to convert uploads, Google Drive will keep files in th
         </div>
       </div>
 <a href="share.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="csv.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sort.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -381,7 +382,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/02-spreadsheet.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

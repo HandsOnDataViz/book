@@ -386,9 +386,13 @@ Note that the `chicago-fullnote-bibliography.csl` format automatically shortens 
 ### Manual Pandoc Conversion to AsciiDoc {-}
 The O'Reilly Atlas platform can [import AsciiDoc documents](https://docs.atlas.oreilly.com/writing_in_asciidoc.html). While Bookdown does not directly generated this format, one workaround is use the Bookdown-generated large Markdown file, and manually convert it with Pandoc to AsciiDoc format.
 
-- Download [Pandoc](https://pandoc.org)
-- Set Bookdown to build the book as one large Markdown file (docs folder, suffix .md)
-- Use command line to navigate to subfolder with `pwd` and `cd`.
-- Convert with: `pandoc handsondataviz.md --from markdown --to asciidoc --standalone --output handsondataviz.asciidoc`
+See also workaround notes in the Tables section and other sections above.
 
-See workaround notes in the Tables section and other sections above.
+- Download [Pandoc](https://pandoc.org)
+- Build the book with Bookdown, including one large Markdown file (docs folder, suffix .md)
+- Manually rename it as HandsOnDataViz-modified.md
+- Manually paste in these Markdown tables (to replace HTML tables)
+  - table of authors in index.Rmd
+  - table of charts in 05-chart.Rmd
+- Use command line to navigate to subfolder with `pwd` and `cd`.
+- Convert with: `pandoc handsondataviz-modified.md --from markdown --to asciidoc --standalone --output handsondataviz-modified.asciidoc`

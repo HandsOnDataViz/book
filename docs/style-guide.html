@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-18" />
+<meta name="date" content="2020-07-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -160,10 +160,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
 <ul>
+<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Selecting your Spreadsheet Tool</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
@@ -310,8 +311,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Note: A couple of sentences of supplemental information. It describes something you want readers to keep in mind as they work, so you use a note to set it apart and make sure they see it.</li>
 <li>Warning: Similar to a note or tip, but specifically focused on a way to help readers avoid making a mistake or getting into trouble.</li>
 </ul>
+<p>Also:</p>
+<ul>
+<li>Sidebar: Use this to note where the editor has requested a boxed sidebar. If longer than one paragraph, add “End Sidebar” to close it.</li>
+</ul>
 <p>Insert an embedded link to <a href="https://www.oreilly.com/">O’Reilly</a>. This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O’Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.</p>
-<p>Also, embed the link directly in the sentence, such as <a href="https://handsondataviz.org/data/ct-dph-covid-2020-05-31.pdf">download this sample PDF</a>, and avoid linking words such as “here” or “this web page.”</p>
+<p>Also, embed the link directly in the sentence, such as <a href="https://handsondataviz.org/data/ct-dph-covid-2020-05-31.pdf">download this sample PDF</a>. Avoid linking words such as “here” or “this web page.” Also, avoid writing “Click on this…” in the main text, such as when downloading a sample file, since readers cannot click on the print edition. However, it is acceptable to write “click on” or “right-click on” in a tutorial on interacting with software.</p>
 <p>When instructions refer to software menu items, use italics. Example: Select <em>File &gt; Make a Copy</em> to save your own version to your Google Drive.</p>
 <p>For lists, always insert a blank line <em>before</em> the items, unless they appear directly after hashtag header.</p>
 <ul>
@@ -438,7 +443,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/17-bookdown.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

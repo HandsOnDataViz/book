@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-18" />
+<meta name="date" content="2020-07-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="upload.html"/>
-<link rel="next" href="sort.html"/>
+<link rel="prev" href="spreadsheet-tool.html"/>
+<link rel="next" href="copy.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -160,10 +160,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
 <ul>
+<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Selecting your Spreadsheet Tool</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
@@ -305,21 +306,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Comma Separated Values (.csv) export only one sheet of data, with no formulas or formatting, into a wide range of spreadsheet and visualization tools, including several featured in later chapters of this book.</li>
 <li>OpenDocument Spreadsheet (.ods) exports a spreadsheet with multiple tabs of data, including basic formulas and formatting, into multiple spreadsheet tools, including Google Sheets, Microsoft Excel, and LibreOffice</li>
 </ul>
-<p>In Google Sheets, go to <em>File &gt; Download As</em> to export in CSV format (for only the current sheet) or ODS format (for a multi-tabbed spreadsheet with most formulas and formatting), or other formats, as shown in Figure <a href="csv.html#fig:sheets-download">2.10</a>.</p>
+<p>About data formats: TODO: MERGE ABOVE?</p>
+<p>Spreadsheet tools organize data in different formats. When you download spreadsheet data to your personal computer, you typically see its filename, followed by a period and a 3- or 4-character abbreviated extension, which represents the data format, as shown in Figure <a href="csv.html#fig:data-formats">2.1</a>. The most common data formats we use in this chapter are:</p>
+<ul>
+<li><code>.csv</code> means Comma Separated Values, a generic format for a single sheet of simple data, with no formulas or styling.</li>
+<li><code>.ods</code> means OpenDocument Spreadsheet, a standardized open format that supports multi-tabbed data sheets, formulas, styling, etc.</li>
+<li><code>.xlsx</code> or the older <code>.xls</code> means Microsoft Excel, a proprietary format that supports multi-tabbed sheets, formulas, styling, etc.</li>
+</ul>
+
+<div class="figure"><span id="fig:data-formats"></span>
+<img src="images/02-spreadsheet/data-formats.png" alt="Three common data formats—csv, ods, and xlsx—displayed as icons in the Mac Finder."  />
+<p class="caption">
+Figure 2.1: Three common data formats—csv, ods, and xlsx—displayed as icons in the Mac Finder.
+</p>
+</div>
+<p>In Google Sheets, go to <em>File &gt; Download As</em> to export in CSV format (for only the current sheet) or ODS format (for a multi-tabbed spreadsheet with most formulas and formatting), or other formats, as shown in Figure <a href="csv.html#fig:sheets-download">2.2</a>.</p>
 
 <div class="figure"><span id="fig:sheets-download"></span>
 <img src="images/02-spreadsheet/sheets-download.png" alt="In Google Sheets, go to File &gt; Download As to export data to other common formats."  />
 <p class="caption">
-Figure 2.10: In Google Sheets, go to <em>File &gt; Download As</em> to export data to other common formats.
+Figure 2.2: In Google Sheets, go to <em>File &gt; Download As</em> to export data to other common formats.
 </p>
 </div>
 <p>In the downloadable LibreOffice and its Calc spreadsheet tool, select <em>File &gt; Save As</em> to save in its native ODS format, or export in CSV, XLSX, and other formats.</p>
-<p>In the online Excel for free OneDrive or paid Office 365, the <em>File &gt; Save As</em> menu allows you to save a file in its native XLSX format, or export in ODS format, as shown in Figure <a href="csv.html#fig:excel-online-save-as">2.11</a>. But online Excel lacks an easy way to export data in CSV format.</p>
+<p>In the online Excel for free OneDrive or paid Office 365, the <em>File &gt; Save As</em> menu allows you to save a file in its native XLSX format, or export in ODS format, as shown in Figure <a href="csv.html#fig:excel-online-save-as">2.3</a>. But online Excel lacks an easy way to export data in CSV format.</p>
 
 <div class="figure"><span id="fig:excel-online-save-as"></span>
 <img src="images/02-spreadsheet/excel-online-save-as.png" alt="Online versions of Excel export into ODS format, but not CSV."  />
 <p class="caption">
-Figure 2.11: Online versions of Excel export into ODS format, but not CSV.
+Figure 2.3: Online versions of Excel export into ODS format, but not CSV.
 </p>
 </div>
 <p>In the downloadable Excel for Windows and Mac, the <em>File &gt; Save As</em> menu allows you to save a file in its native XLSX format, or export in CSV, ODS, or other formats. But saving from Excel into CSV format requires thinking through a few steps that sometimes confuse people.</p>
@@ -336,14 +351,23 @@ Figure 2.11: Online versions of Excel export into ODS format, but not CSV.
 </ol>
 <p>TODO: I can add screenshots of any of the downloadable Excel steps above, but I don’t think it’s necessary. Thoughts?</p>
 <p>Once you’ve learned how to export your spreadsheet data into an open format, you’re ready to migrate it into other data visualization tools or platforms that we’ll introduce in later chapters of this book. Data portability is key for ensuring that your charts and maps will last well into the future.</p>
+<p>TODO: does this warning fit here?</p>
+<p>Warning: Several tools in this book may not work properly on a Mac computer that does not display the filename extensions, meaning the abbreviated file format after the period, such as <code>data.csv</code> or <code>map.geojson</code>. The Mac operating system hides these by default, so you need to turn them on by going to Finder &gt; Preferences &gt; Advanced, and check the box to <em>Show all filename extensions</em>, as shown in Figure <a href="csv.html#fig:mac-file-extensions">2.4</a>.</p>
+
+<div class="figure"><span id="fig:mac-file-extensions"></span>
+<img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to Finder &gt; Preferences &gt; Advanced and check the box to Show all filename extensions."  />
+<p class="caption">
+Figure 2.4: On a Mac, go to Finder &gt; Preferences &gt; Advanced and check the box to <em>Show all filename extensions</em>.
+</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="upload.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sort.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="spreadsheet-tool.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="copy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -385,7 +409,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/02-spreadsheet.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

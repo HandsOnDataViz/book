@@ -19,9 +19,6 @@ Deciding which spreadsheet tool to use is not a simple choice. Sometimes our dec
 In this book, we primarily use Google Sheets for most of our examples. All of the data we distribute through this book is public. Also, we wanted a spreadsheet tool designed for collaboration, so that we can share links to data files with readers like you, so that you can view our original version, and either make a copy to edit in your own Google Drive, or download in a different format to use in LibreOffice or Excel. Most of the spreadsheet methods we teach look the same across all spreadsheet tools, and we point out exceptions when relevant.
 
 ## Download and Export to CSV or ODS formats {- #csv}
-
-START AGAIN HERE 
-
 In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned the advantages of selecting software tools that support data migration, so that you can export your work to other platforms. Digital technology always changes. Never upload important data into a tool if you can't easily get it out! In addition, better tools allow you to export your work in open-data or generic file formats, not just proprietary formats created primarily for a specific company's software platform.
 
 When choosing a spreadsheet tool, test if and how it exports into these two open data formats:
@@ -29,9 +26,7 @@ When choosing a spreadsheet tool, test if and how it exports into these two open
 - Comma Separated Values (.csv) export only one sheet of data, with no formulas or formatting, into a wide range of spreadsheet and visualization tools, including several featured in later chapters of this book.
 - OpenDocument Spreadsheet (.ods) exports a spreadsheet with multiple tabs of data, including basic formulas and formatting, into multiple spreadsheet tools, including Google Sheets, Microsoft Excel, and LibreOffice
 
-
-
-About data formats:  MERGE ABOVE?
+About data formats:  TODO: MERGE ABOVE?
 
 Spreadsheet tools organize data in different formats. When you download spreadsheet data to your personal computer, you typically see its filename, followed by a period and a 3- or 4-character abbreviated extension, which represents the data format, as shown in Figure \@ref(fig:data-formats). The most common data formats we use in this chapter are:
 
@@ -44,10 +39,6 @@ Spreadsheet tools organize data in different formats. When you download spreadsh
 ```{r data-formats, fig.cap="(ref:data-formats)"}
  knitr::include_graphics("images/02-spreadsheet/data-formats.png")
 ```
-
-
-
-
 
 In Google Sheets, go to *File > Download As* to export in CSV format (for only the current sheet) or ODS format (for a multi-tabbed spreadsheet with most formulas and formatting), or other formats, as shown in Figure \@ref(fig:sheets-download).
 

@@ -1,11 +1,19 @@
-# Improve Your Spreadsheet Skills {#spreadsheet}
+# Strengthen Spreadsheet Skills {#spreadsheet}
 Before we begin to design data visualizations, it's important to make sure our spreadsheet skills are up to speed. While teaching this topic, we've heard many people describe how they "never really learned" how to use spreadsheet tools as part of their official schooling or workplace training. But spreadsheet skills are vital to learn, not only as incredible time-savers for tedious tasks, but more importantly, to help us discover the stories buried inside our data.
 
-The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools to reveal rows and columns of numbers and text, where each box in the grid is called a "cell." In this chapter, we'll start by reviewing basic steps, such as [sharing data](share.html), [sorting and filtering](sort.html), and [calculating with formulas and functions](calculate.html). Then we'll step up to the next level of skills, such as [regrouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), [connecting sheets with a relational database](database.html), and [collecting data with online forms](forms.html). All of the methods we illustrate are intended for introductory users, and do not require any background in statistics.
+The interactive charts and maps that we'll construct later this book are built on data tables, which we typically open with spreadsheet tools, such as Google Sheets, LibreOffice, or Microsoft Excel. Spreadsheets typically contain columns and rows of numerical or textual data, as shown in Figure \@ref(fig:spreadsheet-terms). The first row often contains headers, meaning labels describing the data in each column. Also, columns are automatically labeled with letters, and rows with numbers, so that every cell or box in the grid can be referenced, such `C2`. When you click on a cell, it may display a formula that automatically runs a calculation with references other cells. Formulas always begin with an equal sign, and may simply add up other cells (such as `=C2+C3+C4`), or may contain a function that performs a specific operation (such as calculating the average of a range of cells: `=average(C2:C7)`). Some spreadsheet files contain multiple sheets (sometimes called workbooks), where each tab across the bottom opens a specific sheet.
+
+(ref:spreadsheet-terms) Screenshot of a typical spreadsheet, with headers, tabs, and the active cell displaying a formula.
+
+```{r spreadsheet-terms, fig.cap="(ref:spreadsheet-terms)"}
+ knitr::include_graphics("images/02-spreadsheet/spreadsheet-terms-annotated.png")
+```
+
+In this chapter, we'll start by reviewing basic steps, such as [sharing data](share.html), [sorting and filtering](sort.html), and [calculating with formulas and functions](calculate.html). Then we'll step up to the next level of skills, such as [regrouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), and [collecting data with online forms](forms.html). We'll also distinguish between [a relational database versus a spreadsheet](database.html). All of the methods we illustrate are intended for introductory users, and do not require any background in statistics.
 
 If you want to learn ways to make your computer do more work for you, this is the right chapter for you. Even if you *think* you know something about using spreadsheets, skim these sections and you might learn a trick or two that will help you to design charts and maps more efficiently in later chapters.
 
-## Selecting your Spreadsheet Tool {- #spreadsheet-tool}
+## Select your Spreadsheet Tool {- #spreadsheet-tool}
 Which spreadsheet tool should you use? As we describe in more detail in [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), the answer depends on how you respond to different questions about your work. First, is your data public or private? If private, consider using a downloadable spreadsheet tool that runs on your personal computer, to reduce the risk of an accidental data breach that might happen when using an online spreadsheet tool that automatically stores your data in the cloud. Second, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that's designed to allow other team members to simultaneously view or edit data. Third, do you need to import or export data in any specific format (which we'll describe in the next section), such as Comma Separated Values (CSV)? If yes, then choose a spreadsheet tool that supports that format. Finally, do you prefer a free tool, or are you willing to pay for it, or donate funds to support open-source development?
 
 Here's how three common spreadsheet tools compare on these questions:
@@ -45,9 +53,9 @@ In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned th
 
 Warning: If you're working in any spreadsheet with multiple tabs and formulas, a CSV export will save only the *active* sheet (meaning the one you're currently viewing), and only the *data* in that sheet (meaning that if you inserted formulas to run calculations, only the results would appear, not the formulas). Later in this book you may need to create a CSV file to import into a data visualization tool, so if the source was a multi-tabbed spreadsheet with formulas, keep track of the original.
 
-One reason we feature Google Sheets in this book is because it exports data in both formats. Go to *File > Download As* to export in CSV format (for only the current sheet) or ODS format (for a multi-tabbed spreadsheet with most formulas and formatting), or other formats such as Excel, as shown in Figure \@ref(fig:sheets-download). Similarly, the downloadable LibreOffice and its Calc spreadsheet tool also exports data in these formats. Select *File > Save As* to save in its native ODS format, or export in CSV, Excel, and other formats.
+One reason we feature Google Sheets in this book is because it exports data in several common formats. To try it, open this [Google Sheets sample data](https://docs.google.com/spreadsheets/d/1eXWG6sSb6ZL4pKvCsCjcqeJ8l4vqbckuYEBj8T-uefo/) in a new tab, and go to *File > Download As* to export in CSV format (for only the data in the active sheet) or ODS format (which keeps data and most formulas in multi-tab spreadsheets), or other formats such as Excel, as shown in Figure \@ref(fig:sheets-download). Similarly, in the downloadable LibreOffice and its Calc spreadsheet tool, select *File > Save As* to save data in its native ODS format, or to export to CSV, Excel, or other formats.
 
-(ref:sheets-download) In Google Sheets, go to *File > Download As* to export data to other common formats.
+(ref:sheets-download) In Google Sheets, go to *File > Download As* to export data in several common formats.
 
 ```{r sheets-download, fig.cap="(ref:sheets-download)"}
  knitr::include_graphics("images/02-spreadsheet/sheets-download.png")
@@ -60,7 +68,7 @@ Once you've learned how to export your spreadsheet data into an open format, you
 ## Make Your Own Copy of a Google Sheet {- #copy}
 In this book we provide several sample data files using Google Sheets. Our links point to the online files, and we set the sharing settings to allow anyone to view---but not edit---the original version. This allows everyone to have access to the data, but no one can accidentally modify the contents. In order for you to complete several exercises in this chapter, you need to learn how to make your own copy of our Google Sheets---which you can edit---without changing our originals.
 
-1. Right-click on this [sample-students Google Sheets file](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA) to open in a new tab. We set it to "View only" so that anyone on the internet can see the contents, but not edit the file.
+1. Open this [Google Sheets to public survey responses by readers of this book](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser. We set it to "View only" so that anyone on the internet can see the contents, but not edit the original file.
 
 2. Sign in to your Google account by clicking the blue button in the upper-right corner.
 
@@ -115,20 +123,21 @@ then use a free link-shortening service. For example, by using our free [Bitly.c
 Now that you have different options for sharing a Google Sheet, let's learn how to upload and convert data from different formats.
 
 ## Upload and Convert Data to Google Sheets {- #upload}
-One reason we feature the Google Sheets in this book is because this online spreadsheet tool offers good support for data migration, meaning the ability to import and export files in many common formats.
+We feature Google Sheets in this book partly because it supports data migration, meaning the ability to import and export files in many common formats. But imports work best when you check the *Convert uploads* box, which is hidden inside the Google Drive Settings gear symbol as shown in Figure \@ref(fig:drive-settings). Checking this box automatically transforms Microsoft Excel sheets into Google Sheets format (and also Microsoft Word and PowerPoint files into Google Documents and Slides formats), which allows easier editing. Google turns off this setting by default on new accounts, but if you're reading this page, you'll learn how to turn it on, and the benefits of doing so.
 
+1. Find a sample Excel file you can use on your personal computer. If you don't have one, open and save to download to your computer this [Excel file of the DataViz Public Survey Subset](https://handsondataviz.org/data/dataviz-public-survey-subset.xlsx)
 
-offers good support for data migration, meaning the ability to import and export files in many formats.
+2. Log into your [Google Drive](https://drive.google.com) account, and click the *Gear* symbol in the upper-right corner, as shown in Figure \@ref(fig:drive-settings), to open the Settings screen. Note that this global *Gear symbol > Settings* appears at Google Drive level, *not* inside each Google Sheet.
 
-A common mistake to avoid when using Google Drive is failing to check the hidden *Convert uploads* box. Checking this box automatically transforms files such as Microsoft Excel sheets or Word documents into Google Sheets or Google Docs format, which allows easier editing. Google turns off this option by default on new accounts, and hides it inside its Settings screen. But if you're reading this page, you'll learn how to turn it on, and the benefits of doing so.
+(ref:drive-settings) Click your Google Drive Settings (gear symbol) in the upper-right corner.
 
-1. Find an Excel file you can use on your personal computer. If you don't have one, click this [sample Excel data file](https://handsondataviz.org/data/data.xlsx) and save to download to your computer. **TODO:** follow our own advice and give sample data files more meaningful names
+```{r drive-settings, fig.cap="(ref:drive-settings)"}
+ knitr::include_graphics("images/02-spreadsheet/drive-settings.png")
+```
 
-2. Log into your [Google Drive](https://drive.google.com) account, and click the *Gear* symbol in the upper-right corner to open the Settings screen. Note that this global *Gear symbol > Settings* appears at Google Drive level, *not* inside each Google Sheet.
+3. On the Settings screen, check the box to *Convert uploaded files to Google Docs editor format*, as shown in Figure \@ref(fig:convert-uploads), and click *Done*. This turns on the conversion setting globally, meaning it will convert all possible files that you upload in the future---including Microsoft Excel, Word, PowerPoint, and more---unless you turn it off.
 
-3. Check the box to *Convert uploaded files to Google Docs editor format*, as shown in Figure \@ref(fig:convert-uploads), and click *Done*. This turns on the conversion setting globally, meaning it will convert all possible files that you upload in the future---including Microsoft Excel, Word, PowerPoint, and more---unless you turn it off.
-
-(ref:convert-uploads) Inside your Google Drive settings (the gear symbol), check the box to convert uploads.
+(ref:convert-uploads) Inside your Google Drive Settings, check the box to automatically convert all uploads.
 
 ```{r convert-uploads, fig.cap="(ref:convert-uploads)"}
  knitr::include_graphics("images/02-spreadsheet/convert-uploads.png")
@@ -154,7 +163,7 @@ Tip: Google Drive now allows you to edit Microsoft Office file formats, but not 
 
 Tip: To convert individual files to your Google Drive, while keeping the global conversion setting off, from inside any Google Sheet you can select *File > Import > Upload*. But we recommend that most people turn on the global conversion setting as described above, except in cases where you intentionally use Google Drive to edit an Excel-formatted file, and understand that some features may not work.
 
-
+TODO: review section above in revision notes, then START AGAIN here
 
 ## Sort and Filter Data {- #sort}
 Spreadsheet tools help you delve into your data and lift its stories to the surface. One of the most basic steps in organizing your data is to *sort* the contents of an entire table by one column, such as alphabetical order in a column of text, or highest-to-lowest order in a column of numbers. A related method is to *filter* an entire table to display only rows that contain certain values, such as a specific text or numerical value among all of the other entries. While you could manually sort or filter small datasets, spreadsheets become more powerful when you work with hundreds or thousands of rows of data.
@@ -306,8 +315,38 @@ Let's break down each part of that formula, separated by commas:
 While we used Google Sheets to demonstrate how to "lookup" matching data in another spreadsheet column, the
 
 Now that you understand how to use the VLOOKUP function to match columns data columns across spreadsheets, the next section will introduce you to the concept of a relational database, and when you might want to use one.
+TODO: CHANGE TRANSITION
+
+
+## Collect Data with Online Forms {- #forms}
+No doubt, everyone with an email address has been asked to fill out at least one online form. We promise *not* to send you another! But if you need to collect simple data from people who communicate digitally with you, sometimes the easiest solution is to send them an online form that compiles their responses in a data table, which can be much faster than re-entering information from paper forms.
+
+If you already have a Google Drive account, one tool that many people overlook is Google Forms, which is partially hidden under *New > More > Google Forms*, as shown in Figure \@ref(fig:forms-new).
+
+(ref:forms-new) The Google Forms tool is partially hidden in the Google Drive *New > More* menu.
+
+```{r forms-new, fig.cap="(ref:forms-new)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-new.png")
+```
+
+The Google Forms *Questions* tab allows you to request different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure \@ref(fig:forms-questions). Click the *Preview* (eyeball) button to see how your form will appear to users, then click the *Send* button to distribute via email, a link, or an iframe. You can learn more about how to use the latter in [Chapter 7: Embed On Your Web](embed.html).
+
+(ref:forms-questions) The Google Forms *Questions* tab allows you to request different types of responses.
+
+```{r forms-questions, fig.cap="(ref:forms-questions)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-questions.png")
+```
+
+The Google Forms *Responses* tab includes a button to open answers you receive in a linked Google Sheet, as shown in Figure \@ref(fig:forms-responses). As you've learned in this chapter, data becomes more powerful when you can share, organize, and analyze it using spreadsheet tools to help reveal and tell its underlying stories.
+
+(ref:forms-responses) The Google Forms *Responses* tab includes a button to open answers in a linked Google Sheet.
+
+```{r forms-responses, fig.cap="(ref:forms-responses)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-responses.png")
+```
 
 ## Connect Sheets with Relational Database {- #database}
+TODO: Consider renaming: Relational Database versus Spreadsheet
 In the previous section, you learned how the VLOOKUP function can search for matching data in columns across spreadsheets and automatically paste results. Building on that concept, let's distinguish between a spreadsheet and a relational database, and in what cases you might want to use the latter.
 
 A spreadsheet is sometimes called a "flat-file database" because all of the records are stored in rows and columns in a single table. For example, if your company kept track of all of your orders and customers in a spreadsheet, the entries would appear like this:
@@ -351,33 +390,6 @@ When someone's address changed, in a relational database it would only need to b
 If you're responsible for managing data tables with relationships between them, especially one-to-many relationships (such as where Janice and Julius each place multiple orders), consider the pros and cons of working with a relational database. Years ago, relational databases required complex software that was not easy to set up. But a newer generation of tools such as [AirTable](http://airtable.com) enable you to create relational databases in your web browser with up to 1,200 free records (and more with the paid version), using existing templates (or design your own), and collaborative editing with your co-workers. Furthermore, Airtable supports data migration by allowing you to export all of your records in CSV format.
 
 While the details of setting up a relational database are beyond the scope of this chapter, it's important to understand the conceptual difference between a "flat-file" spreadsheet and a collection of data tables with linked relationships. In the next section, we'll describe how to collect data using online forms, a feature found in Google Sheets, Airtable, and several other tools.
-
-## Collect Data with Online Forms {- #forms}
-No doubt, everyone with an email address has been asked to fill out at least one online form. We promise *not* to send you another! But if you need to collect simple data from people who communicate digitally with you, sometimes the easiest solution is to send them an online form that compiles their responses in a data table, which can be much faster than re-entering information from paper forms.
-
-If you already have a Google Drive account, one tool that many people overlook is Google Forms, which is partially hidden under *New > More > Google Forms*, as shown in Figure \@ref(fig:forms-new).
-
-(ref:forms-new) The Google Forms tool is partially hidden in the Google Drive *New > More* menu.
-
-```{r forms-new, fig.cap="(ref:forms-new)"}
- knitr::include_graphics("images/02-spreadsheet/forms-new.png")
-```
-
-The Google Forms *Questions* tab allows you to request different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure \@ref(fig:forms-questions). Click the *Preview* (eyeball) button to see how your form will appear to users, then click the *Send* button to distribute via email, a link, or an iframe. You can learn more about how to use the latter in [Chapter 7: Embed On Your Web](embed.html).
-
-(ref:forms-questions) The Google Forms *Questions* tab allows you to request different types of responses.
-
-```{r forms-questions, fig.cap="(ref:forms-questions)"}
- knitr::include_graphics("images/02-spreadsheet/forms-questions.png")
-```
-
-The Google Forms *Responses* tab includes a button to open answers you receive in a linked Google Sheet, as shown in Figure \@ref(fig:forms-responses). As you've learned in this chapter, data becomes more powerful when you can share, organize, and analyze it using spreadsheet tools to help reveal and tell its underlying stories.
-
-(ref:forms-responses) The Google Forms *Responses* tab includes a button to open answers in a linked Google Sheet.
-
-```{r forms-responses, fig.cap="(ref:forms-responses)"}
- knitr::include_graphics("images/02-spreadsheet/forms-responses.png")
-```
 
 ### Summary {- #summary2}
 If you're one of the many people who "never really learned" about spreadsheets in school or on the job, or if you've taught yourself bits and pieces along the way, we hope that this chapter has successfully introduced or refreshed your skills. All of the subsequent chapters in this book, especially those on designing interactive charts and maps, require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, as well as more advanced skills in pivoting tables and matching with lookup tables, with the broader goal of telling your data stories.

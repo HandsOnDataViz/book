@@ -11,7 +11,7 @@ Beginners may start with easy-to-learn tools such as [Google My Maps](mymaps.htm
 See also related chapters in this book:
 
 - [Draw and write your data story](draw.html) to capture your ideas on paper
-- [Improve spreadsheet skills](spreadsheet.html), [Find and know your data](find.html), and [Clean your data](clean.html)
+- [Strengthen spreadsheet skills](spreadsheet.html), [Find and know your data](find.html), and [Clean your data](clean.html)
 - [Transform your map data](transform.html)
 - [Embed your interactive chart on your website](embed.html)
 - [Detect bias in data stories](detect.html), including [How to lie with maps](how-to-lie-with-maps.html)
@@ -102,7 +102,7 @@ One of the most useful tools for creating meaningful polygon (or choropleth) map
 
 Beware that polygon map design choices about data classes and colors reflect the biases of the author and the software. Read the [Detect Bias in Data Stories](detect.html) chapter in this book, especially [How to Lie with Maps](detect.html#how-to-lie-with-maps)
 
-Learn more: 
+Learn more:
 - Axis Maps, "The Basics of Data Classification," 2010, http://axismaps.github.io/thematic-cartography/articles/classification.html
 - Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation,” Lisa Charlotte Rost, April 22, 2016, https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/.
 - Josh Stevens, "Bivariate Choropleth Maps: A How-To Guide," February 18, 2015, http://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/.
@@ -115,7 +115,7 @@ Explore the interactive point map below, or [view the full-screen version](https
 
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc" width="90%" height="480"></iframe>
 
-Tool review: 
+Tool review:
 - Pros
   - Easy-to learn free mapping tool to import and style point, polyline, and polygon layers and basemap layers
   - Share and collaborate through the Google Drive platform
@@ -125,7 +125,7 @@ Tool review:
   - Cannot easily create colored polygon maps from data values
   - Cannot extract geocoded data to migrate to another tool
 
-Video: 
+Video:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZVIPn8dJeYM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Let's build a simple point map with sample data, using Google My Maps <https://www.google.com/maps/d/>. Requires signing up for a free Google Drive account.
@@ -170,7 +170,7 @@ if(knitr::is_html_output()) knitr::include_url("images/06-map/mymaps-style-group
 
 ![Image: Embed map on your site](images/06-map/mymaps-embed.png)
 
-Learn more: 
+Learn more:
 - Google My Maps Help Page <https://support.google.com/mymaps/answer/3024396>
 
 ## Point Map with Carto Builder {- #carto}
@@ -185,7 +185,7 @@ Explore the interactive point map below, or [view the full-screen version](https
 
 <iframe width="90%" height="500" frameborder="0" src="https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 
-Tool review: 
+Tool review:
 - Pros:
   - Free and powerful drag-and-drop map tool in the browser
   - Customize point markers and polygon colors by data values
@@ -195,7 +195,7 @@ Tool review:
   - New users may get lost when moving through multiple screens
   - Free account allows only 400 geocodes per month
 
-Video: 
+Video:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lto7Z5wC2hQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ***Before you begin:*** This tutorial uses the newer Carto Builder, rather than older Carto Editor tool. Learn more at <https://carto.com/learn/guides/intro/migrating-from-carto-editor-to-carto-builder>. If you have an old Carto account that has not automatically updated to the new Builder tool, you may need to create a brand-new account to use this tutorial.
@@ -255,7 +255,7 @@ Let's build a simple point map with sample data, using Carto Builder <https:/car
 
 21) If you make edits to your map, you must click the blue Update button to republish your map to the web.
 
-Learn more: 
+Learn more:
 - Getting Started with Carto Builder <https://carto.com/learn/guides/intro/getting-started-with-carto-builder>
 
 ## Filtered Point Map with Socrata Open Data {- #filtered-point-map-socrata}

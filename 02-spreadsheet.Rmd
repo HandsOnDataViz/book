@@ -53,7 +53,7 @@ In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned th
 
 Warning: If you're working in any spreadsheet with multiple tabs and formulas, a CSV export will save only the *active* sheet (meaning the one you're currently viewing), and only the *data* in that sheet (meaning that if you inserted formulas to run calculations, only the results would appear, not the formulas). Later in this book you may need to create a CSV file to import into a data visualization tool, so if the source was a multi-tabbed spreadsheet with formulas, keep track of the original.
 
-One reason we feature Google Sheets in this book is because it exports data in several common formats. To try it, open this [Google Sheets sample data](https://docs.google.com/spreadsheets/d/1eXWG6sSb6ZL4pKvCsCjcqeJ8l4vqbckuYEBj8T-uefo/) in a new tab, and go to *File > Download As* to export in CSV format (for only the data in the active sheet) or ODS format (which keeps data and most formulas in multi-tab spreadsheets), or other formats such as Excel, as shown in Figure \@ref(fig:sheets-download). Similarly, in the downloadable LibreOffice and its Calc spreadsheet tool, select *File > Save As* to save data in its native ODS format, or to export to CSV, Excel, or other formats.
+One reason we feature Google Sheets in this book is because it exports data in several common formats. To try it, open this [Google Sheets sample data file](https://docs.google.com/spreadsheets/d/1eXWG6sSb6ZL4pKvCsCjcqeJ8l4vqbckuYEBj8T-uefo/) in a new tab, and go to *File > Download As* to export in CSV format (for only the data in the active sheet) or ODS format (which keeps data and most formulas in multi-tab spreadsheets), or other formats such as Excel, as shown in Figure \@ref(fig:sheets-download). Similarly, in the downloadable LibreOffice and its Calc spreadsheet tool, select *File > Save As* to save data in its native ODS format, or to export to CSV, Excel, or other formats.
 
 (ref:sheets-download) In Google Sheets, go to *File > Download As* to export data in several common formats.
 
@@ -66,9 +66,11 @@ But exporting data can be trickier in Microsoft Excel. Using the online Excel to
 Once you've learned how to export your spreadsheet data into an open format, you're ready to migrate it into other data visualization tools or platforms that we'll introduce in later chapters of this book. Data portability is key for ensuring that your charts and maps will last well into the future.
 
 ## Make Your Own Copy of a Google Sheet {- #copy}
-In this book we provide several sample data files using Google Sheets. Our links point to the online files, and we set the sharing settings to allow anyone to view---but not edit---the original version. This allows everyone to have access to the data, but no one can accidentally modify the contents. In order for you to complete several exercises in this chapter, you need to learn how to make your own copy of our Google Sheets---which you can edit---without changing our originals.
+In this book we provide several data files using Google Sheets. Our links point to the online files, and we set the sharing settings to allow anyone to view---but not edit---the original version. This allows everyone to have access to the data, but no one can accidentally modify the contents. In order for you to complete several exercises in this chapter, you need to learn how to make your own copy of our Google Sheets---which you can edit---without changing our originals.
 
-1. Open this [Google Sheets to public survey responses by readers of this book](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser. We set it to "View only" so that anyone on the internet can see the contents, but not edit the original file.
+Let's begin by making a copy of a real dataset that may interest you, because it includes people like you. So far about 3,000 readers of this book have responded to a quick public survey about their general location in the world, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed. Later in this chapter you'll learn how to create your own online form with a link to spreadsheet results.
+
+1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser. We set it to "View only" so that anyone on the internet can see the contents, but not edit the original file.
 
 2. Sign in to your Google account by clicking the blue button in the upper-right corner.
 
@@ -123,13 +125,13 @@ then use a free link-shortening service. For example, by using our free [Bitly.c
 Now that you have different options for sharing a Google Sheet, let's learn how to upload and convert data from different formats.
 
 ## Upload and Convert Data to Google Sheets {- #upload}
-We feature Google Sheets in this book partly because it supports data migration, meaning the ability to import and export files in many common formats. But imports work best when you check the *Convert uploads* box, which is hidden inside the Google Drive Settings gear symbol as shown in Figure \@ref(fig:drive-settings). Checking this box automatically transforms Microsoft Excel sheets into Google Sheets format (and also Microsoft Word and PowerPoint files into Google Documents and Slides formats), which allows easier editing. Google turns off this setting by default on new accounts, but if you're reading this page, you'll learn how to turn it on, and the benefits of doing so.
+We feature Google Sheets in this book partly because it supports data migration, meaning the ability to import and export files in many common formats. But imports work best when you check the *Convert uploads* box, which is hidden inside the Google Drive Settings gear symbol as shown in Figure \@ref(fig:drive-settings). Checking this box automatically transforms Microsoft Excel sheets into Google Sheets format (and also Microsoft Word and PowerPoint files into Google Documents and Slides formats), which allows easier editing. If you don't check this box, then Google will keep your files in their original format, which makes them harder to edit. Google turns off this conversion setting by default on new accounts, but we'll teach you how to turn it on, and the benefits of doing so.
 
-1. Find a sample Excel file you can use on your personal computer. If you don't have one, open and save to download to your computer this [Excel file of the DataViz Public Survey Subset](https://handsondataviz.org/data/dataviz-public-survey-subset.xlsx)
+1. Find a sample Excel file you can use on your personal computer. If you don't have one, open and save to download to your computer this [Excel file of a subset of the Hands-On Data Visualization reader public survey responses](https://handsondataviz.org/data/subset-reader-survey.xlsx)
 
-2. Log into your [Google Drive](https://drive.google.com) account, and click the *Gear* symbol in the upper-right corner, as shown in Figure \@ref(fig:drive-settings), to open the Settings screen. Note that this global *Gear symbol > Settings* appears at Google Drive level, *not* inside each Google Sheet.
+2. Log into your [Google Drive](https://drive.google.com) account, and click the *Gear symbol* in the upper-right corner, as shown in Figure \@ref(fig:drive-settings), to open the Settings screen. Note that this global *Gear symbol > Settings* appears at Google Drive level, *not* inside each Google Sheet.
 
-(ref:drive-settings) Click your Google Drive Settings (gear symbol) in the upper-right corner.
+(ref:drive-settings) Click your Google Drive *Gear Symbol > Settings* in the upper-right corner.
 
 ```{r drive-settings, fig.cap="(ref:drive-settings)"}
  knitr::include_graphics("images/02-spreadsheet/drive-settings.png")
@@ -159,18 +161,15 @@ If you forget to check the *Convert uploads* box, Google Drive will keep uploade
  knitr::include_graphics("images/02-spreadsheet/drive-file-icons.png")
 ```
 
-Tip: Google Drive now allows you to edit Microsoft Office file formats, but not all features are guaranteed to work across platforms. Also, Google Drive now allows you to convert an uploaded Excel file into its Google format by using the *File > Save as Google Sheets* menu.
+Tip: Google Drive now allows you to edit Microsoft Office file formats, but not all features are guaranteed to work across platforms. Also, Google Drive now allows you to convert a specific uploaded Excel file into its Google format by using the *File > Save as Google Sheets* menu. Finally, to convert individual files to your Google Drive, while keeping the global conversion setting off, from inside any Google Sheet you can select *File > Import > Upload*. But we recommend that most people turn on the global conversion setting as described above, except in cases where you intentionally use Google Drive to edit an Excel-formatted file, and understand that some features may not work.
 
-Tip: To convert individual files to your Google Drive, while keeping the global conversion setting off, from inside any Google Sheet you can select *File > Import > Upload*. But we recommend that most people turn on the global conversion setting as described above, except in cases where you intentionally use Google Drive to edit an Excel-formatted file, and understand that some features may not work.
-
-TODO: review section above in revision notes, then START AGAIN here
 
 ## Sort and Filter Data {- #sort}
-Spreadsheet tools help you delve into your data and lift its stories to the surface. One of the most basic steps in organizing your data is to *sort* the contents of an entire table by one column, such as alphabetical order in a column of text, or highest-to-lowest order in a column of numbers. A related method is to *filter* an entire table to display only rows that contain certain values, such as a specific text or numerical value among all of the other entries. While you could manually sort or filter small datasets, spreadsheets become more powerful when you work with hundreds or thousands of rows of data.
+Spreadsheet tools help you delve into your data and lift its stories to the surface. A basic step in organizing your data is to *sort* a table by a particular column, to quickly view its minimum and maximum values, and the range that lies in between. A related method is to *filter* an entire table to display only rows that contain certain values, to help them stand out for further study among all of the other entries. Both of these methods become more powerful when your spreadsheets contain hundreds or thousands of rows of data.
 
-Let's use a large sample file to learn how to sort and filter data.
+To learn how to sort and filter, let's explore a large dataset of around 3,000 readers of this book who responded to a quick public survey about their general location in the world, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed.
 
-1. Open this [Google Sheet of New York City restaurant health inspection data](https://docs.google.com/spreadsheets/d/1WvEa46w8en5uWiMX7Jq6o02Q--wMHN2jGFOjD4sr73A/). It contains over 13,000 rows of data for inspections conducted in January 2020, where each row is a health violation. This is just a fraction of the full dataset available from the original source, [NYC Open Data](https://nycopendata.socrata.com/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j).
+1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser.
 
 2. Login to your Google Sheets account, and go to *File > Make a Copy* to create your own version that you can edit.
 
@@ -182,26 +181,29 @@ Let's use a large sample file to learn how to sort and filter data.
  knitr::include_graphics("images/02-spreadsheet/sheets-select-all.png")
 ```
 
-Warning: If you forget to select all cells, you might accidentally sort one column independently of the others, which would scramble your entire dataset and make it meaningless. Always select all cells before sorting!
+Warning: If you forget to select all cells, you might accidentally sort one column independently of the others, which will scramble your dataset and make it meaningless. Always select all cells before sorting!
 
-4. Go to *Data > Sort Range* to review all of your sort options. In the next screen, check the *Data has header row* box to view the column headers in your data. Let's sort the *SCORE* column in ascending order (from A-Z), as shown in Figure \@ref(fig:sheets-sort-range), to display the lowest-scoring restaurants at the top of the sheet.
+4. Go to *Data > Sort Range* to review all of your sort options. In the next screen, check the *Data has header row* box to view the column headers in your data. Let's sort the *Experience with data visualization* column in ascending order (from A-Z), as shown in Figure \@ref(fig:sheets-sort-range), to display the minimum at the top, the maximum at the bottom, and the range in between.
 
-(ref:sheets-sort-range) Go to *Data > Sort Range*, check the header row box, and sort by *SCORE* in ascending order.
+(ref:sheets-sort-range) Go to *Data > Sort Range*, check the header row box, and sort by *Experience with dataviz* in ascending order.
 
 ```{r sheets-sort-range, fig.cap="(ref:sheets-sort-range)"}
  knitr::include_graphics("images/02-spreadsheet/sheets-sort-range.png")
 ```
 
-5. Now let's try filtering your sheet. Go to *Data > Create a Filter*, which inserts downward arrows in each column header. Click on the downward arrow in the *BORO* column, and see options to display or hide rows of data. For example, click only the *Manhattan* boro, and unclick all of the other options, to display only rows with that name, as shown in Figure \@ref(fig:sheets-filter).
+Scroll through your sorted data and you'll see that over 1,000 readers rated themselves as beginners (level 1) with data visualization.
 
-(ref:sheets-filter) Go to *Data > Create a Filter*, and in the *BORO* column, select only *Manhattan*.
+5. Now let's try filtering your sheet. Go to *Data > Create a Filter*, which inserts downward arrows in each column header. Click on the downward arrow in the *Occupation* column, and see options to display or hide rows of data. For example, click the "Clear" button to undo all options, then click only *educator* to display only rows with that response, as shown in Figure \@ref(fig:sheets-filter). Click "OK".
+
+(ref:sheets-filter) Go to *Data > Create a Filter*, click the downward arrow in the *Occupation* column, select only *educator*.
 
 ```{r sheets-filter, fig.cap="(ref:sheets-filter)"}
  knitr::include_graphics("images/02-spreadsheet/sheets-filter.png")
 ```
 
-By sorting and filtering large spreadsheets, you can begin to focus on key details in your data. Where should we *not* go out for lunch?
+Now your view of reader responses is sorted by experience, and filtered to show only educators. Scroll through their one-sentence goals for learning about data visualization. How to do they compare to your own goals?
 
+TODO: START REVISING HERE
 
 ## Calculate with Formulas and Functions {- #calculate}
 Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. In this section you'll learn how to write a simple formula that adds up a column of numbers, then you'll insert built-in functions to show the sum and average.

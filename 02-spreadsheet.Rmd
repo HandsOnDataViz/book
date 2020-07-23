@@ -9,9 +9,9 @@ The interactive charts and maps that we'll construct later this book are built o
  knitr::include_graphics("images/02-spreadsheet/spreadsheet-terms-annotated.png")
 ```
 
-In this chapter, we'll start by reviewing basic steps, such as [sharing data](share.html), [sorting and filtering](sort.html), and [calculating with formulas and functions](calculate.html). Then we'll step up to the next level of skills, such as [regrouping data with pivot tables](pivot.html), [matching columns with lookup tables](vlookup.html), and [collecting data with online forms](forms.html). We'll also distinguish between [a relational database versus a spreadsheet](database.html). All of the methods we illustrate are intended for introductory users, and do not require any background in statistics.
+In this chapter, we'll start by reviewing basic steps, such as [sharing](share.html), [uploading](upload.html), and [collecting data with online forms](forms.html). Then we'll move on to ways of organizing and analyzing your data, such as [sorting and filtering](sort.html), [calculating with formulas and functions](calculate.html), and [regrouping with pivot tables](pivot.html). Finally, we'll examine ways to connect different datasets, such as [matching columns with lookup tables](vlookup.html), and the difference between [flat spreadsheets versus relational databases](database.html). We illustrate all of these methods with beginner-level users in mind, meaning they do not require any prior background.
 
-If you want to learn ways to make your computer do more work for you, this is the right chapter for you. Even if you *think* you know something about using spreadsheets, skim these sections and you might learn a trick or two that will help you to design charts and maps more efficiently in later chapters.
+If you want to learn ways to make your computer do more of the tedious data preparation work for you, this chapter is definitely for you. Or if you already feel very familiar with spreadsheets, you should at least skim this chapter, and perhaps you'll learn a trick or two that will help you to create charts and maps more efficiently later in the book.
 
 ## Select your Spreadsheet Tool {- #spreadsheet-tool}
 Which spreadsheet tool should you use? As we describe in more detail in [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), the answer depends on how you respond to different questions about your work. First, is your data public or private? If private, consider using a downloadable spreadsheet tool that runs on your personal computer, to reduce the risk of an accidental data breach that might happen when using an online spreadsheet tool that automatically stores your data in the cloud. Second, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that's designed to allow other team members to simultaneously view or edit data. Third, do you need to import or export data in any specific format (which we'll describe in the next section), such as Comma Separated Values (CSV)? If yes, then choose a spreadsheet tool that supports that format. Finally, do you prefer a free tool, or are you willing to pay for it, or donate funds to support open-source development?
@@ -68,7 +68,7 @@ Once you've learned how to export your spreadsheet data into an open format, you
 ## Make Your Own Copy of a Google Sheet {- #copy}
 In this book we provide several data files using Google Sheets. Our links point to the online files, and we set the sharing settings to allow anyone to view---but not edit---the original version. This allows everyone to have access to the data, but no one can accidentally modify the contents. In order for you to complete several exercises in this chapter, you need to learn how to make your own copy of our Google Sheets---which you can edit---without changing our originals.
 
-Let's begin by making a copy of a real dataset that may interest you, because it includes people like you. So far about 3,000 readers of this book have responded to a quick public survey about their general location in the world, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed. Later in this chapter you'll learn how to create your own online form with a link to spreadsheet results.
+Let's begin by making a copy of a real dataset that may interest you, because it includes people like you. So far about 3,000 readers of this book have responded to a quick public survey about their general location, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed. Later in this chapter you'll learn how to create your own online form with a link to spreadsheet results.
 
 1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser. We set it to "View only" so that anyone on the internet can see the contents, but not edit the original file.
 
@@ -163,11 +163,57 @@ If you forget to check the *Convert uploads* box, Google Drive will keep uploade
 
 Tip: Google Drive now allows you to edit Microsoft Office file formats, but not all features are guaranteed to work across platforms. Also, Google Drive now allows you to convert a specific uploaded Excel file into its Google format by using the *File > Save as Google Sheets* menu. Finally, to convert individual files to your Google Drive, while keeping the global conversion setting off, from inside any Google Sheet you can select *File > Import > Upload*. But we recommend that most people turn on the global conversion setting as described above, except in cases where you intentionally use Google Drive to edit an Excel-formatted file, and understand that some features may not work.
 
+Now that you know how to upload and convert an existing dataset, in the next section you will learn how to collect data using an online form, and access it as a spreadsheet.
+
+## Collect Data with Online Forms {- #forms}
+As you saw in prior sections, we invite readers of this book to fill out a [quick online form](https://forms.gle/yn5QwTzfQkYcppQn9) so that we can learn more about people like you, and to continue to make revisions to match your expectations. So far about 3,000 readers have responded, and you can view this [public spreadsheet of survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) about their generation location, prior level of experience and education, and goals for learning data visualization. In this section, you'll learn how to create an online form and link the results to a live Google Sheet.
+
+Inside your Google Drive account, one tool that's often overlooked is Google Forms, which is partially hidden under *New > More > Google Forms*, as shown in Figure \@ref(fig:forms-new).
+
+(ref:forms-new) The Google Forms tool is partially hidden in the Google Drive *New > More* menu.
+
+```{r forms-new, fig.cap="(ref:forms-new)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-new.png")
+```
+
+The Google Forms *Questions* tab allows you to design questions with different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure \@ref(fig:forms-questions).
+
+(ref:forms-questions) The Google Forms *Questions* tab allows you to designate different types of responses.
+
+```{r forms-questions, fig.cap="(ref:forms-questions)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-questions.png")
+```
+
+Give each question a very short title, since these will appear as column headers in the linked spreadsheet you'll create further below. If a question needs more explanation or examples, click the three-dot kebob menu in the bottom-right corner to *Show > Description*, which opens a text box where you can type in more details, as shown in Figure \@ref(fig:forms-description). Also, you can *Show > Response validation*, which requires users to follow a particular format, such as an email address or phone number.
+
+(ref:forms-description) Click the three-dot kebab menu to *Show > Description* to add details for any question.
+
+```{r forms-description, fig.cap="(ref:forms-description)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-description.png")
+ ```
+
+To preview how your online will appear to recipients, click the *Eyeball symbol* near the top of the page, as shown in Figure \@ref(fig:forms-preview). When your form is complete, click the *Send* button to distribute it via email, a link, or to embed the live form as an iframe on a web page. Learn more about the latter option in [Chapter 7: Embed On Your Web](embed.html).
+
+(ref:forms-preview) Click the *Eyeball symbol* to preview your form.
+
+```{r forms-preview, fig.cap="(ref:forms-preview)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-preview.png")
+ ```
+
+The Google Forms *Responses* tab will show individual results you receive, and also includes a powerful button to open the data in a linked Google Sheet, as shown in Figure \@ref(fig:forms-responses).
+
+(ref:forms-responses) The Google Forms *Responses* tab includes a button to open results in a linked Google Sheet.
+
+```{r forms-responses, fig.cap="(ref:forms-responses)"}
+ knitr::include_graphics("images/02-spreadsheet/forms-responses.png")
+```
+
+Now that you've learned how to collect data with an online form and linked spreadsheet, the next two sections will teach you how to sort, filter, and pivot tables to begin analyzing their contents and the stories they reveal.
 
 ## Sort and Filter Data {- #sort}
 Spreadsheet tools help you delve into your data and lift its stories to the surface. A basic step in organizing your data is to *sort* a table by a particular column, to quickly view its minimum and maximum values, and the range that lies in between. A related method is to *filter* an entire table to display only rows that contain certain values, to help them stand out for further study among all of the other entries. Both of these methods become more powerful when your spreadsheets contain hundreds or thousands of rows of data.
 
-To learn how to sort and filter, let's explore a large dataset of around 3,000 readers of this book who responded to a quick public survey about their general location in the world, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed.
+To learn how to sort and filter, let's explore a large dataset of around 3,000 readers of this book who responded to a quick public survey about their general location, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed.
 
 1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser.
 
@@ -201,41 +247,69 @@ Scroll through your sorted data and you'll see that over 1,000 readers rated the
  knitr::include_graphics("images/02-spreadsheet/sheets-filter.png")
 ```
 
-Now your view of reader responses is sorted by experience, and filtered to show only educators. Scroll through their one-sentence goals for learning about data visualization. How to do they compare to your own goals?
-
-TODO: START REVISING HERE
+Now your view of reader responses is sorted by experience, and filtered to show only educators. Scroll through their one-sentence goals for learning about data visualization. How to do they compare to your own goals? In the next section, we'll learn how to start analyzing your data with simple formulas and functions.
 
 ## Calculate with Formulas and Functions {- #calculate}
-Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. In this section you'll learn how to write a simple formula that adds up a column of numbers, then you'll insert built-in functions to show the sum and average.
+Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. Formulas always begin with an equal sign, and may simply add up other cells (such as `=C2+C3+C4`), or may contain a function that performs a specific operation (such as calculating the sum of a range of cells: `=SUM(C2:C100)`). In this section you'll learn how to write two formulas with functions: one to calculate an average numeric value, and another to count the frequency of a specific text response.
 
-1. Open this Google Sheet of [Measles cases in three nations 2010-18](https://docs.google.com/spreadsheets/d/15Q16jcgoIcoQ-UkAJ3nfQpU-4d_Hk6tJqEYoobmnxY0/), a subset of [data from the World Health Organization](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/measles---number-of-reported-cases). Log into your Google Drive account, and go to *File > Make a Copy* to edit your own version.
+Let's explore a large dataset of around 3,000 readers of this book who responded to a quick public survey about their general location, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed.
 
-2. Let's calculate the total number of reported cases in 2010 by inserting a simple formula that adds up the cells for Canada, Mexico, and the US that year. Spreadsheet formulas begin with an `=` equal sign, and refer to specific cells and operations. Click on cell B5 and type in `= B2 + B3 + B4` then press *Return* or *Enter*. A total of 162 cases in 2010 will appear in the cell where you entered the formula.
+1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser.
 
-3. Now let's speed up our work using the built-in `SUM` function to total up numbers for us. Click on column C5 and type in `=SUM(C2:C4)`, which calculates the sum of all of the cells between C2 and C4. then press *Return*. A total of 1,026 cases in 2011 will appear.
+2. Log into your Google Drive account, and go to *File > Make a Copy* to edit your own version.
 
-4. Now let's speed up our work even more by using the built-in click-and-drag tool to extend the `SUM` calculation across the row for each remaining year. Click in cell C5, and float your cursor over the dot in the bottom-right corner, which transforms your cursor into a crosshair symbol. Then click-and-drag your crosshair cursor from cell C5 to J5, which automatically copies and pastes the formula in each cell, and let go, as shown in Figure \@ref(fig:drag-calculation).
+3. Add a blank row immediately below the header to make space for our calculations. Right-click on row number 1 and select *Insert 1 below* to add a new row, as shown in Figure \@ref(fig:sheets-insert-row).
 
-(ref:drag-calculation) Click on the bottom-right dot to transform your cursor into a crosshair, then drag to paste the formula, as shown in this [animated GIF](https://handsondataviz.org/images/02-spreadsheet/drag-calculation.gif).
+(ref:sheets-insert-row) Right-click on row number 1 and select *Insert 1 below*.
 
-```{r drag-calculation, fig.cap="(ref:drag-calculation)"}
-if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/drag-calculation.gif", height = "300px") else knitr::include_graphics("images/02-spreadsheet/drag-calculation.png")
+```{r sheets-insert-row, fig.cap="(ref:sheets-insert-row)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-insert-row.png")
 ```
 
-5. We can use another built-in function to calculate the average number of reported cases for each nation over time. Click in cell K2 and type in `=AVERAGE(B2:J2)` or select it if the tool suggests it. Then click the right-corner dot in cell K2 and drag downward to extend the calculation for the other rows.
+4. Let's calculate the average level of reader experience with data visualization. Click on cell E2 in the new blank row you just created, and type an equal symbol (`=`) to start a formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the average for the range of the entire column, as shown in Figure \@ref(fig:sheets-average). If you're using a different spreadsheet tool and this formula does not automatically appear, you can type it in like this: `=AVERAGE(E3:E2894)` and press *Return* or *Enter* on your keyboard. Note that this live spreadsheet has a growing number of responses, so you will need to insert the current number of rows in the last cell reference to include all entries.
 
-Tip: Spreadsheet tools ignore empty cells when performing calculations. In this example, the World Health Organization did not list any data for the US in 2018.
+(ref:sheets-average) Type `=` to start a formula and select the suggestion for average, or type it directly in with the correct range.
 
-Warning: When you save a spreadsheet in CSV format, your calculated results will remain, but any formulas that created those results will disappear from the CSV sheet. Keep the original in a spreadsheet format as a reminder about how you constructed the formulas.
+```{r sheets-average, fig.cap="(ref:sheets-average)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-average.png")
+```
 
-Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text. See more examples in the "Split data into two or more columns" and "Combine columns into one" sections in [Chapter 4: Clean Up Messy Data](clean.html). In the next section, you'll learn a more advanced spreadsheet method to regroup data with a pivot table.
+Currently, the average reader experience with data visualization is around 2 on a scale from 1 (beginner) to 5 (professional), but this may change as more readers fill out the survey.
+
+Tip: Spreadsheet tools ignore empty cells when performing calculations, so when readers leave some blank responses, it skips over those values.
+
+5. Part of the magic of spreadsheets is that you can use the built-in click-and-drag feature to copy and paste a formula across other columns or rows, and it will automatically update its cell references. Click in cell E2, and then press and hold down on the blue dot in the bottom-right corner of that cell, which transforms your cursor into a crosshair symbol. Drag your cursor to cell F2 and let go, and show in Figure \@ref(fig:sheets-drag-calc). The formula will be automatically pasted and updated for the new column to `=AVERAGE(F3:F2894)`. Once again, since this is a live spreadsheet with a growing number of responses, your sheet will have a larger number in the last cell reference.
+
+(ref:sheets-drag-calc) Click on the blue bottom-right dot in cell E2, then drag and drop your crosshair cursor in cell F2 to automatically paste and update the formula, as shown in these three frames.
+
+```{r sheets-drag-calc, fig.cap="(ref:sheets-drag-calc)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-drag-calc.png")
+```
+
+Warning: If you save a spreadsheet in CSV format, your calculated results will appear in the CSV sheet, but any formulas you created to produce those results will disappear. Always keep your original spreadsheet format to remind yourself how you constructed formulas.
+
+6. Since the *Occupation* column contains a defined set of text responses, let's use a different function to count them up. Click in cell G2 and type the equal symbol (`=`) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is *educator* for the range of the entire column, as shown in Figure \@ref(fig:sheets-countif). If you're using a different spreadsheet tool and this formula does not automatically appear, you can type it in like this: `=COUNTIF(G3:G2894,"=educator")` and press *Return* or *Enter* on your keyboard. Once again, this live spreadsheet has a growing number of responses, so you will need to insert the current number of rows in the last cell reference to include all entries.
+
+(ref:countif) Type `=` to start a formula and select the suggestion for count if the response is *educator*, or type it directly in with the correct range.
+
+```{r sheets-countif, fig.cap="(ref:sheets-countif)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-countif.png")
+```
+
+Currently, our readers include about 150 educators, but this will grow as more people answer the survey.  
+
+Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text, as described in this [Google Sheets Help Page](https://support.google.com/docs/topic/9054603). See more examples in the "Split data into two or more columns" and "Combine columns into one" sections in [Chapter 4: Clean Up Messy Data](clean.html).  
+
+Now that you've learned how to count one type of survey response, the next section will teach you how to regroup data with pivot tables that summarize all responses by different categories.
 
 ## Regroup Data with Pivot Tables {- #pivot}
-Pivot tables are another powerful feature built into spreadsheet tools to help you regroup or rearrange your data, hence the name "pivot." In this section we'll start with a sheet that contains an anonymous partial class roster for an online data visualization class we previously taught. Each row represents an individual student, including their birth year, gender, and country of origin. You'll learn how to "pivot" this individual-level data into a new sheet that cross-tabulates the number of students by birth year and gender.
+Pivot tables are another powerful feature built into spreadsheet tools to help you regroup your data and summarize it in a new way, hence the name "pivot." Yet pivot tables are often overlooked by people who were never taught about them, or have not yet discovered how to use them. In this section, we'll start with a large dataset of around 3,000 readers of this book who responded to a [quick public survey](https://forms.gle/yn5QwTzfQkYcppQn9). Each row represents an individual reader, including their occupation and prior level of experience with data visualization. You'll learn how to "pivot" this individual-level data into a new table that displays the total number of reader responses by two categories: occupation and experience level.
 
-1. Open this [Google Sheet of Sample Students](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA), log into your Google Drive, and go to *File > Make a Copy* to edit your own version.
+1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser. Log into your Google Drive account, and go to *File > Make a Copy* to edit your own version.
 
-2. Go to *Data > Pivot Table*, and on the next screen, select *Create* in a new sheet, as shown in Figure \@ref(fig:sheets-pivot-create).
+2. Or, if you have already created your own copy for the prior section on Formulas and Functions, delete row 2 that contains our calculations, because we don't want those getting mixed into our pivot table.
+
+3. Go to *Data > Pivot Table*, and on the next screen, select *Create* in a new sheet, as shown in Figure \@ref(fig:sheets-pivot-create). The new sheet will include a Pivot Table tab at the bottom.
 
 (ref:sheets-pivot-create) Go to *Data > Pivot Table*, and create in a new sheet.
 
@@ -243,26 +317,59 @@ Pivot tables are another powerful feature built into spreadsheet tools to help y
  knitr::include_graphics("images/02-spreadsheet/sheets-pivot-create.png")
 ```
 
-3. In the *Pivot table editor* screen, you can regroup data from the first sheet by adding rows, columns, and values. First, click the Rows *Add* button and select *year*, which shows each of the unique entries for birth year in column A.
+4. In the *Pivot table editor* screen, you can regroup data from the first sheet by adding rows, columns, and values. First, click the Rows *Add* button and select *Occupation*, which displays the unique entries in that column, as shown in Figure \@ref(fig:sheets-pivot-rows).
 
-4. Next, to count the number of students for each birth year, click the Values *Add* button and select *year* again. Initially, the pivot table will summarize by adding up the total of all birth years, but you don't want that. Instead, change the *Summarize by* drop-down menu to *COUNT*, which shows the frequency for each row, as shown in Figure \@ref(fig:sheets-pivot-editor).
+(ref:sheets-pivot-rows) In the *Pivot table editor*, click the Rows *Add* button and select *Occupation*.
 
-(ref:sheets-pivot-editor) In the Google Sheets pivot editor, add *year* as a Row, and add *year* again as a Value, but change *Summarize by* to *Count*, as shown in this [animated GIF](https://handsondataviz.org/images/02-spreadsheet/sheets-pivot-editor.gif).
-
-```{r sheets-pivot-editor, fig.cap="(ref:sheets-pivot-editor)"}
-if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-pivot-editor.gif", height = "1080px") else knitr::include_graphics("images/02-spreadsheet/sheets-pivot-editor.png")
+```{r sheets-pivot-rows, fig.cap="(ref:sheets-pivot-rows)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-pivot-rows.png")
 ```
 
-Tip: *COUNT* summarizes numerical values, and *COUNTA* summarizes text values.
+5. Next, to count up the number of responses for each entry, click the Values *Add* button and select *Occupation* again. Google Sheets will automatically summarize the values by *COUNTA*, meaning it displays the frequency of each textual response, as shown in Figure \@ref(fig:sheets-pivot-values).
 
-5. You can create more advanced pivot tables by adding a *Column* header, such as *gender*, to display a cross-tabulation of students by birth year and gender. Furthermore, you can also *Filter* the data, for example, to show only students who listed *US* as their country of origin.
+(ref:sheets-pivot-values) In the *Pivot table editor*, click the Values *Add* button and select *Occupation*.
 
-While pivot tables may look a bit different across other spreadsheet tools, the concept is similar. Learn more about how pivot tables work in the [support pages for LibreOffice](https://help.libreoffice.org/Calc/Creating_Pivot_Tables) and [Microsoft Excel](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576). Click to download and save this [sample student data in CSV format](https://handsondataviz.org/data/sample-students.csv) to your computer to upload into either tool.
+```{r sheets-pivot-values, fig.cap="(ref:sheets-pivot-values)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-pivot-values.png")
+```
 
-Now that you've learned how to regroup data with pivot tables, let's move on to another common task of matching data columns from different sheets.
+Currently, the top three occupations listed by readers are information technology, for-profit business, and student. Since this is a live spreadsheet, these rankings may change as more readers respond to the survey.
+
+6. Furthermore, you can create a more advanced pivot cross-tabulation of occupation and experience among reader responses. Click on the *Columns* button to add *Experience with data visualization*, as shown in Figure \@ref(fig:sheets-pivot-columns).
+
+(ref:sheets-pivot-columns) In the *Pivot table editor*, click the Columns *Add* button and select *Experience with data visualization*.
+
+```{r sheets-pivot-columns, fig.cap="(ref:sheets-pivot-columns)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-pivot-columns.png")
+```
+
+If you wanted to go one step further, you could also *Filter* the data to limit the pivot table results, for example, to only readers who listed 20 or more years of schooling.
+
+Deciding how to add *Values* in the *Pivot table editor* can be challenging, because there are multiple options to summarize the data, as shown in Figure \@ref(fig:sheets-pivot-summarize). Google Sheets will offer its automated guess based on the context, but you may need to manually select the best option to represent your data as desired. Three of the most common options to summarize values are:
+
+- SUM: the total value of numeric responses (What is the total years of schooling for readers?)
+- COUNT: frequency of numeric responses (How many readers listed 20 years of schooling?)
+- COUNTA: frequency of text responses (How many readers listed occupation as "educator")
+
+Although Google Sheets pivot tables show raw numbers by default, you also can choose to display them as percentages of the row, of the column, or of the grand total.
+
+(ref:sheets-pivot-summarize) In the *Pivot table editor*, see multiple options to summarize *Values*.
+
+```{r sheets-pivot-summarize, fig.cap="(ref:sheets-pivot-summarize)"}
+ knitr::include_graphics("images/02-spreadsheet/sheets-pivot-summarize.png")
+```
+
+While designing pivot tables may look differently across other spreadsheet tools, the concept is the same. Learn more about how pivot tables work in the [support pages for Google Sheets](https://support.google.com/docs/topic/9054603) or [LibreOffice](https://help.libreoffice.org/Calc/Creating_Pivot_Tables) or [Microsoft Excel](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576). Remember that you can download the Google Sheets data and export to ODS or Excel format to experiment with pivot tables in other tools.
+
+Now that you've learned how to regroup and summarize data with pivot tables, in the next section you'll learn a related method to connect matching data columns across different spreadsheets using VLOOKUP.
+
 
 ## Match Columns with VLOOKUP {- #vlookup}
-Spreadsheet tools also allow you to "look up" matching data from one sheet and automatically paste it into another sheet, using the "VLOOKUP" function. The "V" stands for "vertical" lookup, which means making matches across columns, the most typical way to lookup data. In this section you'll learn how to write a function in one sheet that looks for matching data in a second sheet, and pastes it into a new column in the first sheet.
+Spreadsheet tools also allow you to "look up" data in one sheet and automatically find and paste matching data from another sheet. This section introduces the "VLOOKUP" function, where the "V" stands for "vertical," meaning matches across columns, which is the most common way to look up data. You'll learn how to write a function in one sheet that looks for matching cells in select columns in a second sheet, and pastes the relevant data into a new column in the first sheet. If you've ever faced the tedious task of manually looking up and matching data between two different spreadsheets, this automated method will save you lots of time.
+
+TODO: START AGAIN HERE, and use example of two sheets: a list of individual names and organizations, and a separate list of organizations with mailing addresses. Your goal is to create one spreadsheet that matches up the two sheets to create a mailing list, where each row contains each person's name, org, and address.
+
+
 
 Here's a common problem where "VLOOKUP" can save you lots of time. Imagine two spreadsheets. The first sheet, which we saw in the previous section, contains a list of students enrolled in a class, where each row includes a two-letter code for their country of origin. But some abbreviations may not be familiar to everyone. A second sheet contains a list of all of the two-letter abbreviated codes, plus the full name of each country, as shown in Figure \@ref(fig:vlookup-setup). Your goal is to "lookup" each student's two-letter code in the second sheet, and paste the full name of each country for each row in the first sheet. Doing this manually would require lots of your time, but learning how to use the VLOOKUP function will do the work for you automatically.
 
@@ -319,33 +426,6 @@ While we used Google Sheets to demonstrate how to "lookup" matching data in anot
 Now that you understand how to use the VLOOKUP function to match columns data columns across spreadsheets, the next section will introduce you to the concept of a relational database, and when you might want to use one.
 TODO: CHANGE TRANSITION
 
-
-## Collect Data with Online Forms {- #forms}
-No doubt, everyone with an email address has been asked to fill out at least one online form. We promise *not* to send you another! But if you need to collect simple data from people who communicate digitally with you, sometimes the easiest solution is to send them an online form that compiles their responses in a data table, which can be much faster than re-entering information from paper forms.
-
-If you already have a Google Drive account, one tool that many people overlook is Google Forms, which is partially hidden under *New > More > Google Forms*, as shown in Figure \@ref(fig:forms-new).
-
-(ref:forms-new) The Google Forms tool is partially hidden in the Google Drive *New > More* menu.
-
-```{r forms-new, fig.cap="(ref:forms-new)"}
- knitr::include_graphics("images/02-spreadsheet/forms-new.png")
-```
-
-The Google Forms *Questions* tab allows you to request different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure \@ref(fig:forms-questions). Click the *Preview* (eyeball) button to see how your form will appear to users, then click the *Send* button to distribute via email, a link, or an iframe. You can learn more about how to use the latter in [Chapter 7: Embed On Your Web](embed.html).
-
-(ref:forms-questions) The Google Forms *Questions* tab allows you to request different types of responses.
-
-```{r forms-questions, fig.cap="(ref:forms-questions)"}
- knitr::include_graphics("images/02-spreadsheet/forms-questions.png")
-```
-
-The Google Forms *Responses* tab includes a button to open answers you receive in a linked Google Sheet, as shown in Figure \@ref(fig:forms-responses). As you've learned in this chapter, data becomes more powerful when you can share, organize, and analyze it using spreadsheet tools to help reveal and tell its underlying stories.
-
-(ref:forms-responses) The Google Forms *Responses* tab includes a button to open answers in a linked Google Sheet.
-
-```{r forms-responses, fig.cap="(ref:forms-responses)"}
- knitr::include_graphics("images/02-spreadsheet/forms-responses.png")
-```
 
 ## Connect Sheets with Relational Database {- #database}
 TODO: Consider renaming: Relational Database versus Spreadsheet

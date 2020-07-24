@@ -304,7 +304,7 @@ Tip: In Google Sheets, another way to write the formula above is `=AVERAGE(E3:E)
  knitr::include_graphics("images/02-spreadsheet/sheets-countif.png")
 ```
 
-Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text, as described in this [Google Sheets Help Page](https://support.google.com/docs/topic/9054603). See more examples in the "Split data into two or more columns" and "Combine columns into one" sections in [Chapter 4: Clean Up Messy Data](clean.html).  
+Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text, as described in this [Google Sheets Help Page](https://support.google.com/docs/topic/9054603). See additional spreadsheet skills in later chapters of the book. [Chapter 4: Clean Up Messy Data](clean.html) demonstrates how to find and replace, split data into columns, and combine columns of data (such as when you need the street address, city, and postal code all in one line). [Chapter 11: Transform Your Map Data](transform.html) also features more advanced spreadsheet skills and tools, such as how to geocode addresses, pivot address points into polygons, and how to normalize data to create more meaningful polygon maps.
 
 Now that you've learned how to count one type of survey response, the next section will teach you how to regroup data with pivot tables that summarize all responses by different categories.
 
@@ -443,52 +443,35 @@ You've successfully created a mailing list---including each person's name, organ
 
 
 ## Connect Sheets with Relational Database {- #database}
-TODO: Consider renaming: Relational Database versus Spreadsheet
-In the previous section, you learned how the VLOOKUP function can search for matching data in columns across spreadsheets and automatically paste results. Building on that concept, let's distinguish between a spreadsheet and a relational database, and in what cases you might want to use the latter.
+In the previous section, you learned how the VLOOKUP function can search for matching data in columns across spreadsheets and automatically paste results. Building on that concept, let's distinguish between a spreadsheet and a relational database, and under what circumstances it might be wiser to use the latter.
 
-A spreadsheet is sometimes called a "flat-file database" because all of the records are stored in rows and columns in a single table. For example, if your company kept track of all of your orders and customers in a spreadsheet, the entries would appear like this:
+A spreadsheet is sometimes called a "flat-file database" because all of the records are stored in rows and columns in a single table. For example, if you kept a single spreadsheet of US food bank staff, every row would list an individual person, organization, and addresses, just like the mailing list we created in Figure \@ref(fig:vlookup-final) in the prior section on VLOOKUP.
 
-```
-Order   Customer    Location
-1       Janice      New York
-2       Jean        Seattle
-3       Jim         Dallas
-4       Joe         Los Angeles
-5       Julius      Chicago
-6       Janice      New York
-7       Julius      Chicago
-```
+But keeping all of your data in a single spreadsheet can raise problems. For example, it contains lots of duplicated entries. For people who all work at the same food bank, each row contains a duplicate of that organization's address. If an organization moves to a new location, you need to update all of the rows that contain those addresses. Or if two organizations merge together under a new name, you need to update all of the rows for individuals affected by that change. While keeping all of your information organized in a single spreadsheet initially sounds like a good idea, when your dataset grows in size and internal relationships (such as tracking people who are connected to organizations, etc.), continually updating every row becomes a lot of extra work.
 
-In a spreadsheet, every time a customer placed an order, their location would need to be entered separately, which would mean lots of duplicated information. Also, updates would requiring changing the same information in multiple places in your spreadsheet.
+Instead of a single spreadsheet, consider using a relational database, which organizes information into separate sheets (also known as tables), but continually maintains the relevant connections between them. Look back at the two-sheet problem we presented in Figure \@ref(fig:vlookup-setup) at the beginning of the VLOOKUP section. The first sheet lists individual people at each food bank, the second sheet lists the address for each food bank, and the two sheets share a column named *organization* that shows how they are related. Relational databases can save you time. For example, if you update an organization's address in one sheet, the linked sheet will automatically reflect this change in every row for staff who work at that organization.
 
-By contrast, if your company used a relational database, you would maintain two tables---one for orders and one for customers---with links between them, like this:
+Although Google Sheets is a great spreadsheet, it's not a relational database. Instead, consider a better tool such as [Airtable](https://airtable.com), which allows you to create relational databases in your web browser with up to 1,200 free records (or more with the paid version), using existing templates or your own designs. Airtable enables data migration by importing or exporting all records in CSV format, and it also supports real-time editor collaboration with co-workers.
 
-```
-Order       Customer
-1           Janice  
-2           Jean
-3           Jim
-4           Joe    
-5           Julius
-6           Janice
-7           Julius
+To demonstrate, we imported both of the Google Sheets above into this [live Airtable database called Food Banks sample](https://airtable.com/shrOlb4XT11Xy2LP2), which anyone with the link can view, but not edit. At the top are tabs to view each sheet, named *people* and *food banks*. To transform this into a relational database, we used Airtable settings to link the *organization* column in the *people* sheet to the *food banks* sheet, where the addresses are stored, as shown in Figure \@ref(fig:airtable-link).
 
+(ref:airtable-link) In this Airtable sample, we linked the *organization* column in the *people* sheet to the *food banks* sheet.
 
-Customer    Location
-Janice      New York
-Jean        Seattle
-Jim         Dallas
-Joe         Los Angeles
-Julius      Chicago
+```{r airtable-link, fig.cap="(ref:airtable-link)"}
+ knitr::include_graphics("images/02-spreadsheet/airtable-link.png")
 ```
 
-When someone's address changed, in a relational database it would only need to be updated in one place---the customer table---and only one time. Also, by separating data into different tables, it would be easier to add up your total customers without counting duplicates.
+In Airtable, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the *people* sheet, their organization's full address appears from the *food banks* sheet, as shown in Figure \@ref(fig:airtable-expand). In our editable version, if we update the address for one organization in the *food banks* sheet, it's automatically changed for all employees linked to that organization in the *people* sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we'll cover in [Chapter 7: Embed on your Web](embed.html). See more about its features in the [Airtable Support page](https://support.airtable.com).
 
-If you're responsible for managing data tables with relationships between them, especially one-to-many relationships (such as where Janice and Julius each place multiple orders), consider the pros and cons of working with a relational database. Years ago, relational databases required complex software that was not easy to set up. But a newer generation of tools such as [AirTable](http://airtable.com) enable you to create relational databases in your web browser with up to 1,200 free records (and more with the paid version), using existing templates (or design your own), and collaborative editing with your co-workers. Furthermore, Airtable supports data migration by allowing you to export all of your records in CSV format.
+(ref:airtable-expand) In Airtable, click on a row in one sheet to expand and view its linked data in other sheets.
 
-While the details of setting up a relational database are beyond the scope of this chapter, it's important to understand the conceptual difference between a "flat-file" spreadsheet and a collection of data tables with linked relationships. In the next section, we'll describe how to collect data using online forms, a feature found in Google Sheets, Airtable, and several other tools.
+```{r airtable-expand, fig.cap="(ref:airtable-expand)"}
+ knitr::include_graphics("images/02-spreadsheet/airtable-expand.png")
+```
+
+It's important to understand the conceptual differences between a "flat-file" spreadsheet and a relational database to help you determine when to use one tool versus another. As you've learned in the sections above, spreadsheets are your best choice to begin organizing and analyzing your data, using methods such as sorting, filtering, pivoting, and lookup, to help reveal the underlying stories that you may wish to visualize. But relational databases are your best choice when maintaining large amounts of data with internal links, like one-to-many relationships, such as an organization with several employees.  
 
 ### Summary {- #summary2}
-If you're one of the many people who "never really learned" about spreadsheets in school or on the job, or if you've taught yourself bits and pieces along the way, we hope that this chapter has successfully introduced or refreshed your skills. All of the subsequent chapters in this book, especially those on designing interactive charts and maps, require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, as well as more advanced skills in pivoting tables and matching with lookup tables, with the broader goal of telling your data stories.
+If you're one of the many people who "never really learned" about spreadsheets in school or on the job, or if you've taught yourself bits and pieces along the way, we hope that this chapter has successfully strengthened your skills. All of the subsequent chapters in this book, especially those on designing [interactive charts](charts.html) in chapter 5 and [interactive maps](maps.html) in chapter 6, require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, pivot, and lookup matching data, with the broader goal of visualizing your data stories.
 
-The next chapter describes strategies for finding data, particularly on open data sites operated by governmental and non-profit organizations, where you'll also need spreadsheet skills to download information in an organized way. See additional spreadsheet skills in later chapters of the book. [Chapter 4: Clean Up Messy Data](clean.html) demonstrates how to find and replace, split data into columns, and combine columns of data (such as when you need the street address, city, and postal code all in one line). [Chapter 11: Transform Your Map Data](transform.html) also features more advanced spreadsheet skills and tools, such as how to geocode addresses, pivot address points into polygons, and how to normalize data to create more meaningful polygon maps.
+The next chapter describes strategies for finding data, particularly on open data sites operated by governmental and non-profit organizations, where you'll also need spreadsheet skills to download and organize public information.

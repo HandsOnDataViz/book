@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-21" />
+<meta name="date" content="2020-07-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -150,7 +150,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
 <li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read</a></li>
+<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
 <ul>
@@ -158,19 +158,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
 <li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
+<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Spreadsheet Skills</a>
 <ul>
-<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Selecting your Spreadsheet Tool</a></li>
+<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Select your Spreadsheet Tool</a></li>
 <li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Online Forms</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
 <li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with Relational Database</a></li>
-<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Online Forms</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
@@ -220,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
+<li class="chapter" data-level="9" data-path="chartjs-highcharts.html"><a href="chartjs-highcharts.html"><i class="fa fa-check"></i><b>9</b> Chart.js and Highcharts Templates</a>
 <ul>
 <li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar Chart.js with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart.js with CSV Data</a></li>
@@ -300,66 +300,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="csv" class="section level2 unnumbered" number="">
 <h2>Download and Export to CSV or ODS formats</h2>
-<p>In <a href="choose.html">Chapter 1: Choose Tools to Tell Your Data Story</a>, we learned the advantages of selecting software tools that support data migration, so that you can export your work to other platforms. Digital technology always changes. Never upload important data into a tool if you can’t easily get it out! In addition, better tools allow you to export your work in open-data or generic file formats, not just proprietary formats created primarily for a specific company’s software platform.</p>
-<p>When choosing a spreadsheet tool, test if and how it exports into these two open data formats:</p>
-<ul>
-<li>Comma Separated Values (.csv) export only one sheet of data, with no formulas or formatting, into a wide range of spreadsheet and visualization tools, including several featured in later chapters of this book.</li>
-<li>OpenDocument Spreadsheet (.ods) exports a spreadsheet with multiple tabs of data, including basic formulas and formatting, into multiple spreadsheet tools, including Google Sheets, Microsoft Excel, and LibreOffice</li>
-</ul>
-<p>About data formats: TODO: MERGE ABOVE?</p>
-<p>Spreadsheet tools organize data in different formats. When you download spreadsheet data to your personal computer, you typically see its filename, followed by a period and a 3- or 4-character abbreviated extension, which represents the data format, as shown in Figure <a href="csv.html#fig:data-formats">2.1</a>. The most common data formats we use in this chapter are:</p>
-<ul>
-<li><code>.csv</code> means Comma Separated Values, a generic format for a single sheet of simple data, with no formulas or styling.</li>
-<li><code>.ods</code> means OpenDocument Spreadsheet, a standardized open format that supports multi-tabbed data sheets, formulas, styling, etc.</li>
-<li><code>.xlsx</code> or the older <code>.xls</code> means Microsoft Excel, a proprietary format that supports multi-tabbed sheets, formulas, styling, etc.</li>
-</ul>
-
-<div class="figure"><span id="fig:data-formats"></span>
-<img src="images/02-spreadsheet/data-formats.png" alt="Three common data formats—csv, ods, and xlsx—displayed as icons in the Mac Finder."  />
-<p class="caption">
-Figure 2.1: Three common data formats—csv, ods, and xlsx—displayed as icons in the Mac Finder.
-</p>
-</div>
-<p>In Google Sheets, go to <em>File &gt; Download As</em> to export in CSV format (for only the current sheet) or ODS format (for a multi-tabbed spreadsheet with most formulas and formatting), or other formats, as shown in Figure <a href="csv.html#fig:sheets-download">2.2</a>.</p>
+<p>In <a href="choose.html">Chapter 1: Choose Tools to Tell Your Data Story</a>, we learned the advantages of selecting software tools that support data migration, so that you can export your work to other platforms. Since digital technology is always changing, it’s a good rule of thumb to never upload important data into a tool if you can’t easily get it back out. Ideally, spreadsheet tools should allow you to export your work in generic or open-data file formats, such as Comma Separated Values (CSV) and OpenDocument Spreadsheet (ODS), to maximize your options to migrate to other platforms.</p>
+<p>Warning: If you’re working in any spreadsheet with multiple tabs and formulas, a CSV export will save only the <em>active</em> sheet (meaning the one you’re currently viewing), and only the <em>data</em> in that sheet (meaning that if you inserted formulas to run calculations, only the results would appear, not the formulas). Later in this book you may need to create a CSV file to import into a data visualization tool, so if the source was a multi-tabbed spreadsheet with formulas, keep track of the original.</p>
+<p>One reason we feature Google Sheets in this book is because it exports data in several common formats. To try it, open this <a href="https://docs.google.com/spreadsheets/d/1eXWG6sSb6ZL4pKvCsCjcqeJ8l4vqbckuYEBj8T-uefo/">Google Sheets sample data file</a> in a new tab, and go to <em>File &gt; Download As</em> to export in CSV format (for only the data in the active sheet) or ODS format (which keeps data and most formulas in multi-tab spreadsheets), or other formats such as Excel, as shown in Figure <a href="csv.html#fig:sheets-download">2.4</a>. Similarly, in the downloadable LibreOffice and its Calc spreadsheet tool, select <em>File &gt; Save As</em> to save data in its native ODS format, or to export to CSV, Excel, or other formats.</p>
 
 <div class="figure"><span id="fig:sheets-download"></span>
-<img src="images/02-spreadsheet/sheets-download.png" alt="In Google Sheets, go to File &gt; Download As to export data to other common formats."  />
+<img src="images/02-spreadsheet/sheets-download.png" alt="In Google Sheets, go to File &gt; Download As to export data in several common formats."  />
 <p class="caption">
-Figure 2.2: In Google Sheets, go to <em>File &gt; Download As</em> to export data to other common formats.
+Figure 2.4: In Google Sheets, go to <em>File &gt; Download As</em> to export data in several common formats.
 </p>
 </div>
-<p>In the downloadable LibreOffice and its Calc spreadsheet tool, select <em>File &gt; Save As</em> to save in its native ODS format, or export in CSV, XLSX, and other formats.</p>
-<p>In the online Excel for free OneDrive or paid Office 365, the <em>File &gt; Save As</em> menu allows you to save a file in its native XLSX format, or export in ODS format, as shown in Figure <a href="csv.html#fig:excel-online-save-as">2.3</a>. But online Excel lacks an easy way to export data in CSV format.</p>
-
-<div class="figure"><span id="fig:excel-online-save-as"></span>
-<img src="images/02-spreadsheet/excel-online-save-as.png" alt="Online versions of Excel export into ODS format, but not CSV."  />
-<p class="caption">
-Figure 2.3: Online versions of Excel export into ODS format, but not CSV.
-</p>
-</div>
-<p>In the downloadable Excel for Windows and Mac, the <em>File &gt; Save As</em> menu allows you to save a file in its native XLSX format, or export in CSV, ODS, or other formats. But saving from Excel into CSV format requires thinking through a few steps that sometimes confuse people.</p>
-<ol style="list-style-type: decimal">
-<li>Remember that if you have an Excel workbook with multiple sheets and formulas, the CSV export will only save the <em>active</em> sheet (meaning the one you’re currently viewing), and only the <em>data</em> in that sheet (meaning none of the formulas you may have used for calculations). If you need to create a CSV version for other data visualization tools in this book, we advise that you first save a full-version of your Excel file, and then save a CSV file, using parallel file names:</li>
-</ol>
-<ul>
-<li>data.csv</li>
-<li>data.xlsx</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li><p>In the downloadable version of Excel, click on <em>File &gt; Save As</em> and select <em>CSV</em> format. If you see multiple CSV options, choose <em>CSV UTF-8</em>, which should work best across different computer platforms.</p></li>
-<li><p>If your Excel workbook contains multiple sheets, you may see a warning that it cannot be saved in CSV format, which only saves data contained in the active sheet. If you understand this, click <em>OK</em> to continue. On the next screen, Excel may warn you about “Possible data loss” when saving an Excel file in CSV format, which is true. That’s why we recommended that you first save the full-version of your Excel file before saving a CSV file.</p></li>
-</ol>
-<p>TODO: I can add screenshots of any of the downloadable Excel steps above, but I don’t think it’s necessary. Thoughts?</p>
+<p>But exporting data can be trickier in Microsoft Excel. Using the online Excel tool in your browser (either the free or paid version), you <em>cannot</em> save files in the generic single-sheet CSV format, a step required by some data visualization tools in later chapters of this book. Only the downloadable Excel tool (which now requires a paid subscription) will export in CSV format, a step required by some data visualization tools in later chapters of this book. And when using the downloadable Excel tool to save in CSV format, the steps sometimes confuse people. First, if you see multiple CSV options, choose <em>CSV UTF-8</em>, which should work best across different computer platforms. Second, if your Excel workbook contains multiple sheets or formulas, you may see a warning that it cannot be saved in CSV format, which only saves data (not formulas) contained in the active sheet (not all sheets). If you understand this, click <em>OK</em> to continue. Third, on the next screen, Excel may warn you about “Possible data loss” when saving an Excel file in CSV format, for reasons described above. Overall, when working with the downloadable Excel tool, first save the full-version of your Excel file in XLSX format before exporting a single sheet in CSV format.</p>
 <p>Once you’ve learned how to export your spreadsheet data into an open format, you’re ready to migrate it into other data visualization tools or platforms that we’ll introduce in later chapters of this book. Data portability is key for ensuring that your charts and maps will last well into the future.</p>
-<p>TODO: does this warning fit here?</p>
-<p>Warning: Several tools in this book may not work properly on a Mac computer that does not display the filename extensions, meaning the abbreviated file format after the period, such as <code>data.csv</code> or <code>map.geojson</code>. The Mac operating system hides these by default, so you need to turn them on by going to Finder &gt; Preferences &gt; Advanced, and check the box to <em>Show all filename extensions</em>, as shown in Figure <a href="csv.html#fig:mac-file-extensions">2.4</a>.</p>
-
-<div class="figure"><span id="fig:mac-file-extensions"></span>
-<img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to Finder &gt; Preferences &gt; Advanced and check the box to Show all filename extensions."  />
-<p class="caption">
-Figure 2.4: On a Mac, go to Finder &gt; Preferences &gt; Advanced and check the box to <em>Show all filename extensions</em>.
-</p>
-</div>
 </div>
             </section>
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-21" />
+<meta name="date" content="2020-07-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -150,7 +150,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
 <li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read</a></li>
+<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
 <ul>
@@ -158,19 +158,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
 <li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
+<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Spreadsheet Skills</a>
 <ul>
-<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Selecting your Spreadsheet Tool</a></li>
+<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Select your Spreadsheet Tool</a></li>
 <li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Online Forms</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
 <li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with Relational Database</a></li>
-<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Online Forms</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
@@ -220,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
+<li class="chapter" data-level="9" data-path="chartjs-highcharts.html"><a href="chartjs-highcharts.html"><i class="fa fa-check"></i><b>9</b> Chart.js and Highcharts Templates</a>
 <ul>
 <li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar Chart.js with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart.js with CSV Data</a></li>
@@ -300,36 +300,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="pivot" class="section level2 unnumbered" number="">
 <h2>Regroup Data with Pivot Tables</h2>
-<p>Pivot tables are another powerful feature built into spreadsheet tools to help you regroup or rearrange your data, hence the name “pivot.” In this section we’ll start with a sheet that contains an anonymous partial class roster for an online data visualization class we previously taught. Each row represents an individual student, including their birth year, gender, and country of origin. You’ll learn how to “pivot” this individual-level data into a new sheet that cross-tabulates the number of students by birth year and gender.</p>
+<p>Pivot tables are another powerful feature built into spreadsheet tools to help you regroup your data and summarize it in a new way, hence the name “pivot.” Yet pivot tables are often overlooked by people who were never taught about them, or have not yet discovered how to use them. In this section, we’ll start with a large dataset of around 3,000 readers of this book who responded to a <a href="https://forms.gle/yn5QwTzfQkYcppQn9">quick public survey</a>. Each row represents an individual reader, including their occupation and prior level of experience with data visualization. You’ll learn how to “pivot” this individual-level data into a new table that displays the total number of reader responses by two categories: occupation and experience level.</p>
 <ol style="list-style-type: decimal">
-<li><p>Open this <a href="https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA">Google Sheet of Sample Students</a>, log into your Google Drive, and go to <em>File &gt; Make a Copy</em> to edit your own version.</p></li>
-<li><p>Go to <em>Data &gt; Pivot Table</em>, and on the next screen, select <em>Create</em> in a new sheet, as shown in Figure <a href="pivot.html#fig:sheets-pivot-create">2.16</a>.</p></li>
+<li><p>Open this <a href="https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo">Google Sheet of Hands-On Data Visualization reader public survey responses</a> in a new tab in your browser. Log into your Google Drive account, and go to <em>File &gt; Make a Copy</em> to edit your own version.</p></li>
+<li><p>Or, if you have already created your own copy for the prior section on Formulas and Functions, delete row 2 that contains our calculations, because we don’t want those getting mixed into our pivot table.</p></li>
+<li><p>Go to <em>Data &gt; Pivot Table</em>, and on the next screen, select <em>Create</em> in a new sheet, as shown in Figure <a href="pivot.html#fig:sheets-pivot-create">2.26</a>. The new sheet will include a Pivot Table tab at the bottom.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-pivot-create"></span>
 <img src="images/02-spreadsheet/sheets-pivot-create.png" alt="Go to Data &gt; Pivot Table, and create in a new sheet."  />
 <p class="caption">
-Figure 2.16: Go to <em>Data &gt; Pivot Table</em>, and create in a new sheet.
+Figure 2.26: Go to <em>Data &gt; Pivot Table</em>, and create in a new sheet.
 </p>
 </div>
-<ol start="3" style="list-style-type: decimal">
-<li><p>In the <em>Pivot table editor</em> screen, you can regroup data from the first sheet by adding rows, columns, and values. First, click the Rows <em>Add</em> button and select <em>year</em>, which shows each of the unique entries for birth year in column A.</p></li>
-<li><p>Next, to count the number of students for each birth year, click the Values <em>Add</em> button and select <em>year</em> again. Initially, the pivot table will summarize by adding up the total of all birth years, but you don’t want that. Instead, change the <em>Summarize by</em> drop-down menu to <em>COUNT</em>, which shows the frequency for each row, as shown in Figure <a href="pivot.html#fig:sheets-pivot-editor">2.17</a>.</p></li>
+<ol start="4" style="list-style-type: decimal">
+<li>In the <em>Pivot table editor</em> screen, you can regroup data from the first sheet by adding rows, columns, and values. First, click the Rows <em>Add</em> button and select <em>Occupation</em>, which displays the unique entries in that column, as shown in Figure <a href="pivot.html#fig:sheets-pivot-rows">2.27</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-pivot-editor"></span>
-<iframe src="images/02-spreadsheet/sheets-pivot-editor.gif" width="672" height="1080px">
-</iframe>
+<div class="figure"><span id="fig:sheets-pivot-rows"></span>
+<img src="images/02-spreadsheet/sheets-pivot-rows.png" alt="In the Pivot table editor, click the Rows Add button and select Occupation."  />
 <p class="caption">
-Figure 2.17: In the Google Sheets pivot editor, add <em>year</em> as a Row, and add <em>year</em> again as a Value, but change <em>Summarize by</em> to <em>Count</em>, as shown in this <a href="https://handsondataviz.org/images/02-spreadsheet/sheets-pivot-editor.gif">animated GIF</a>.
+Figure 2.27: In the <em>Pivot table editor</em>, click the Rows <em>Add</em> button and select <em>Occupation</em>.
 </p>
 </div>
-<p>Tip: <em>COUNT</em> summarizes numerical values, and <em>COUNTA</em> summarizes text values.</p>
 <ol start="5" style="list-style-type: decimal">
-<li>You can create more advanced pivot tables by adding a <em>Column</em> header, such as <em>gender</em>, to display a cross-tabulation of students by birth year and gender. Furthermore, you can also <em>Filter</em> the data, for example, to show only students who listed <em>US</em> as their country of origin.</li>
+<li>Next, to count up the number of responses for each entry, click the Values <em>Add</em> button and select <em>Occupation</em> again. Google Sheets will automatically summarize the values by <em>COUNTA</em>, meaning it displays the frequency of each textual response, as shown in Figure <a href="pivot.html#fig:sheets-pivot-values">2.28</a>.</li>
 </ol>
-<p>While pivot tables may look a bit different across other spreadsheet tools, the concept is similar. Learn more about how pivot tables work in the <a href="https://help.libreoffice.org/Calc/Creating_Pivot_Tables">support pages for LibreOffice</a> and <a href="https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576">Microsoft Excel</a>. Click to download and save this <a href="https://handsondataviz.org/data/sample-students.csv">sample student data in CSV format</a> to your computer to upload into either tool.</p>
-<p>Now that you’ve learned how to regroup data with pivot tables, let’s move on to another common task of matching data columns from different sheets.</p>
+
+<div class="figure"><span id="fig:sheets-pivot-values"></span>
+<img src="images/02-spreadsheet/sheets-pivot-values.png" alt="In the Pivot table editor, click the Values Add button and select Occupation."  />
+<p class="caption">
+Figure 2.28: In the <em>Pivot table editor</em>, click the Values <em>Add</em> button and select <em>Occupation</em>.
+</p>
+</div>
+<p>Currently, the top three occupations listed by readers are information technology, for-profit business, and student. Since this is a live spreadsheet, these rankings may change as more readers respond to the survey.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Furthermore, you can create a more advanced pivot cross-tabulation of occupation and experience among reader responses. Click on the <em>Columns</em> button to add <em>Experience with data visualization</em>, as shown in Figure <a href="pivot.html#fig:sheets-pivot-columns">2.29</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:sheets-pivot-columns"></span>
+<img src="images/02-spreadsheet/sheets-pivot-columns.png" alt="In the Pivot table editor, click the Columns Add button and select Experience with data visualization."  />
+<p class="caption">
+Figure 2.29: In the <em>Pivot table editor</em>, click the Columns <em>Add</em> button and select <em>Experience with data visualization</em>.
+</p>
+</div>
+<p>If you wanted to go one step further, you could also <em>Filter</em> the data to limit the pivot table results, for example, to only readers who listed 20 or more years of schooling.</p>
+<p>Deciding how to add <em>Values</em> in the <em>Pivot table editor</em> can be challenging, because there are multiple options to summarize the data, as shown in Figure <a href="pivot.html#fig:sheets-pivot-summarize">2.30</a>. Google Sheets will offer its automated guess based on the context, but you may need to manually select the best option to represent your data as desired. Three of the most common options to summarize values are:</p>
+<ul>
+<li>SUM: the total value of numeric responses (What is the total years of schooling for readers?)</li>
+<li>COUNT: frequency of numeric responses (How many readers listed 20 years of schooling?)</li>
+<li>COUNTA: frequency of text responses (How many readers listed occupation as “educator”)</li>
+</ul>
+<p>Although Google Sheets pivot tables show raw numbers by default, you also can choose to display them as percentages of the row, of the column, or of the grand total.</p>
+
+<div class="figure"><span id="fig:sheets-pivot-summarize"></span>
+<img src="images/02-spreadsheet/sheets-pivot-summarize.png" alt="In the Pivot table editor, see multiple options to summarize Values."  />
+<p class="caption">
+Figure 2.30: In the <em>Pivot table editor</em>, see multiple options to summarize <em>Values</em>.
+</p>
+</div>
+<p>While designing pivot tables may look differently across other spreadsheet tools, the concept is the same. Learn more about how pivot tables work in the <a href="https://support.google.com/docs/topic/9054603">support pages for Google Sheets</a> or <a href="https://help.libreoffice.org/Calc/Creating_Pivot_Tables">LibreOffice</a> or <a href="https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576">Microsoft Excel</a>. Remember that you can download the Google Sheets data and export to ODS or Excel format to experiment with pivot tables in other tools.</p>
+<p>Now that you’ve learned how to regroup and summarize data with pivot tables, in the next section you’ll learn a related method to connect matching data columns across different spreadsheets using VLOOKUP.</p>
 </div>
             </section>
 

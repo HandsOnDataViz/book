@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-21" />
+<meta name="date" content="2020-07-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -150,7 +150,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
 <li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read</a></li>
+<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
 <ul>
@@ -158,19 +158,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
 <li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Improve Your Spreadsheet Skills</a>
+<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Spreadsheet Skills</a>
 <ul>
-<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Selecting your Spreadsheet Tool</a></li>
+<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Select your Spreadsheet Tool</a></li>
 <li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Online Forms</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
 <li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
 <li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with Relational Database</a></li>
-<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Online Forms</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
@@ -220,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="chartjs.html"><a href="chartjs.html"><i class="fa fa-check"></i><b>9</b> Chart.js Code Templates</a>
+<li class="chapter" data-level="9" data-path="chartjs-highcharts.html"><a href="chartjs-highcharts.html"><i class="fa fa-check"></i><b>9</b> Chart.js and Highcharts Templates</a>
 <ul>
 <li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar Chart.js with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart.js with CSV Data</a></li>
@@ -300,27 +300,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="calculate" class="section level2 unnumbered" number="">
 <h2>Calculate with Formulas and Functions</h2>
-<p>Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. In this section you’ll learn how to write a simple formula that adds up a column of numbers, then you’ll insert built-in functions to show the sum and average.</p>
+<p>Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. Formulas always begin with an equal sign, and may simply add up other cells (such as <code>=C2+C3+C4</code>), or may contain a function that performs a specific operation (such as calculating the sum of a range of cells: <code>=SUM(C2:C100)</code>). In this section you’ll learn how to write two formulas with functions: one to calculate an average numeric value, and another to count the frequency of a specific text response.</p>
+<p>Let’s explore a large dataset of around 3,000 readers of this book who responded to a quick public survey about their general location, prior level of experience and education, and goals for learning data visualization. If you haven’t already done so, <a href="https://forms.gle/yn5QwTzfQkYcppQn9">fill out the quick survey form</a> to contribute your own response, and also to give you a better sense of how the questions were posed.</p>
 <ol style="list-style-type: decimal">
-<li><p>Open this Google Sheet of <a href="https://docs.google.com/spreadsheets/d/15Q16jcgoIcoQ-UkAJ3nfQpU-4d_Hk6tJqEYoobmnxY0/">Measles cases in three nations 2010-18</a>, a subset of <a href="https://www.who.int/data/gho/data/indicators/indicator-details/GHO/measles---number-of-reported-cases">data from the World Health Organization</a>. Log into your Google Drive account, and go to <em>File &gt; Make a Copy</em> to edit your own version.</p></li>
-<li><p>Let’s calculate the total number of reported cases in 2010 by inserting a simple formula that adds up the cells for Canada, Mexico, and the US that year. Spreadsheet formulas begin with an <code>=</code> equal sign, and refer to specific cells and operations. Click on cell B5 and type in <code>= B2 + B3 + B4</code> then press <em>Return</em> or <em>Enter</em>. A total of 162 cases in 2010 will appear in the cell where you entered the formula.</p></li>
-<li><p>Now let’s speed up our work using the built-in <code>SUM</code> function to total up numbers for us. Click on column C5 and type in <code>=SUM(C2:C4)</code>, which calculates the sum of all of the cells between C2 and C4. then press <em>Return</em>. A total of 1,026 cases in 2011 will appear.</p></li>
-<li><p>Now let’s speed up our work even more by using the built-in click-and-drag tool to extend the <code>SUM</code> calculation across the row for each remaining year. Click in cell C5, and float your cursor over the dot in the bottom-right corner, which transforms your cursor into a crosshair symbol. Then click-and-drag your crosshair cursor from cell C5 to J5, which automatically copies and pastes the formula in each cell, and let go, as shown in Figure <a href="calculate.html#fig:drag-calculation">2.15</a>.</p></li>
+<li><p>Open this <a href="https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo">Google Sheet of Hands-On Data Visualization reader public survey responses</a> in a new tab in your browser.</p></li>
+<li><p>Log into your Google Drive account, and go to <em>File &gt; Make a Copy</em> to edit your own version.</p></li>
+<li><p>Add a blank row immediately below the header to make space for our calculations. Right-click on row number 1 and select <em>Insert 1 below</em> to add a new row, as shown in Figure <a href="calculate.html#fig:sheets-insert-row">2.22</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:drag-calculation"></span>
-<iframe src="images/02-spreadsheet/drag-calculation.gif" width="672" height="300px">
-</iframe>
+<div class="figure"><span id="fig:sheets-insert-row"></span>
+<img src="images/02-spreadsheet/sheets-insert-row.png" alt="Right-click on row number 1 and select Insert 1 below."  />
 <p class="caption">
-Figure 2.15: Click on the bottom-right dot to transform your cursor into a crosshair, then drag to paste the formula, as shown in this <a href="https://handsondataviz.org/images/02-spreadsheet/drag-calculation.gif">animated GIF</a>.
+Figure 2.22: Right-click on row number 1 and select <em>Insert 1 below</em>.
 </p>
 </div>
-<ol start="5" style="list-style-type: decimal">
-<li>We can use another built-in function to calculate the average number of reported cases for each nation over time. Click in cell K2 and type in <code>=AVERAGE(B2:J2)</code> or select it if the tool suggests it. Then click the right-corner dot in cell K2 and drag downward to extend the calculation for the other rows.</li>
+<ol start="4" style="list-style-type: decimal">
+<li>Let’s calculate the average level of reader experience with data visualization. Click on cell E2 in the new blank row you just created, and type an equal symbol (<code>=</code>) to start a formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the average for current values in the column, such as <code>=AVERAGE(E3:E2894)</code>, then press <em>Return</em> or <em>Enter</em> on your keyboard, as shown in Figure <a href="calculate.html#fig:sheets-average">2.23</a>.</li>
 </ol>
-<p>Tip: Spreadsheet tools ignore empty cells when performing calculations. In this example, the World Health Organization did not list any data for the US in 2018.</p>
-<p>Warning: When you save a spreadsheet in CSV format, your calculated results will remain, but any formulas that created those results will disappear from the CSV sheet. Keep the original in a spreadsheet format as a reminder about how you constructed the formulas.</p>
-<p>Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text. See more examples in the “Split data into two or more columns” and “Combine columns into one” sections in <a href="clean.html">Chapter 4: Clean Up Messy Data</a>. In the next section, you’ll learn a more advanced spreadsheet method to regroup data with a pivot table.</p>
+
+<div class="figure"><span id="fig:sheets-average"></span>
+<img src="images/02-spreadsheet/sheets-average.png" alt="Type = to start a formula and select the suggestion for average, or type it directly in with the correct range."  />
+<p class="caption">
+Figure 2.23: Type <code>=</code> to start a formula and select the suggestion for average, or type it directly in with the correct range.
+</p>
+</div>
+<p>Since our live spreadsheet has a growing number of survey responses, you will have a larger number in the last cell reference to include all of the entries in your version. Currently, the average level of reader experience with data visualization is around 2 on a scale from 1 (beginner) to 5 (professional), but this may change as more readers fill out the survey. Note that if any readers leave this question blank, spreadsheet tools ignore empty cells when performing calculations.</p>
+<p>Tip: In Google Sheets, another way to write the formula above is <code>=AVERAGE(E3:E)</code>, which averages <em>all</em> values in column E, beginning with cell E3, without specifying the last cell reference. Using this syntax will keep your calculations up-to-date if more rows are added, but it does <em>not</em> work with LibreOffice or Excel.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Part of the magic of spreadsheets is that you can use the built-in hold-and-drag feature to copy and paste a formula across other columns or rows, and it will automatically update its cell references. Click in cell E2, and then press and hold down on the blue dot in the bottom-right corner of that cell, which transforms your cursor into a crosshair symbol. Drag your cursor to cell F2 and let go, and show in Figure <a href="calculate.html#fig:sheets-drag-calc">2.24</a>. The formula will be automatically pasted and updated for the new column to <code>=AVERAGE(F3:F2894)</code> or <code>AVERAGE(F3:F)</code>, depending on which way you entered it above. Once again, since this is a live spreadsheet with a growing number of responses, your sheet will have a larger number in the last cell reference.</li>
+</ol>
+
+<div class="figure"><span id="fig:sheets-drag-calc"></span>
+<img src="images/02-spreadsheet/sheets-drag-calc.png" alt="Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula, as shown in these three frames."  />
+<p class="caption">
+Figure 2.24: Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula, as shown in these three frames.
+</p>
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li>Since the <em>Occupation</em> column contains a defined set of text responses, let’s use a different function to count them using an <em>if statement</em>, such as the number of responses if a reader listed “educator”. Click in cell G2 and type the equal symbol (<code>=</code>) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is <em>educator</em> for current values in the entire column. You can directly type in the formula <code>=COUNTIF(G3:G2894,"=educator")</code>, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax <code>=COUNTIF(G3:G,"=educator")</code> that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure <a href="calculate.html#fig:sheets-countif">2.25</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:sheets-countif"></span>
+<img src="images/02-spreadsheet/sheets-countif.png" alt="(ref:sheets-countif)"  />
+<p class="caption">
+Figure 2.25: (ref:sheets-countif)
+</p>
+</div>
+<p>Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text, as described in this <a href="https://support.google.com/docs/topic/9054603">Google Sheets Help Page</a>. See additional spreadsheet skills in later chapters of the book. <a href="clean.html">Chapter 4: Clean Up Messy Data</a> demonstrates how to find and replace, split data into columns, and combine columns of data (such as when you need the street address, city, and postal code all in one line). <a href="transform.html">Chapter 11: Transform Your Map Data</a> also features more advanced spreadsheet skills and tools, such as how to geocode addresses, pivot address points into polygons, and how to normalize data to create more meaningful polygon maps.</p>
+<p>Now that you’ve learned how to count one type of survey response, the next section will teach you how to regroup data with pivot tables that summarize all responses by different categories.</p>
 </div>
             </section>
 

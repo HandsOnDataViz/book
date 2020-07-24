@@ -367,27 +367,19 @@ Now that you've learned how to regroup and summarize data with pivot tables, in 
 ## Match Columns with VLOOKUP {- #vlookup}
 Spreadsheet tools also allow you to "look up" data in one sheet and automatically find and paste matching data from another sheet. This section introduces the "VLOOKUP" function, where the "V" stands for "vertical," meaning matches across columns, which is the most common way to look up data. You'll learn how to write a function in one sheet that looks for matching cells in select columns in a second sheet, and pastes the relevant data into a new column in the first sheet. If you've ever faced the tedious task of manually looking up and matching data between two different spreadsheets, this automated method will save you lots of time.
 
-TODO: START AGAIN HERE, and use example of two sheets: a list of individual names and organizations, and a separate list of organizations with mailing addresses. Your goal is to create one spreadsheet that matches up the two sheets to create a mailing list, where each row contains each person's name, org, and address.
+Here's a common scenario where it's helpful to use the "VLOOKUP" function. Picture two data sheets with information about food banks that help feed hungry people in different parts of the US. The first sheet lists individual names of leadership staff at each food bank. The second sheet lists the address for each food bank, as shown in Figure \@ref(fig:vlookup-setup). The two sheets share a common column named "organization." Your goal is to produce one sheet that looks like a mailing list, where each row contains one individual's name, organization, and mailing address. Since we're using this small example to illustrate the concept, you could sort and manually paste in the data. But imagine that the actual list includes over 200 US food banks, so let's use "VLOOKUP" to automatically match and copy the relevant data.
 
-
-
-Here's a common problem where "VLOOKUP" can save you lots of time. Imagine two spreadsheets. The first sheet, which we saw in the previous section, contains a list of students enrolled in a class, where each row includes a two-letter code for their country of origin. But some abbreviations may not be familiar to everyone. A second sheet contains a list of all of the two-letter abbreviated codes, plus the full name of each country, as shown in Figure \@ref(fig:vlookup-setup). Your goal is to "lookup" each student's two-letter code in the second sheet, and paste the full name of each country for each row in the first sheet. Doing this manually would require lots of your time, but learning how to use the VLOOKUP function will do the work for you automatically.
-
-(ref:vlookup-setup) The problem: match each two-letter code in the left sheet with the full country name in the right sheet.
+(ref:vlookup-setup) Your goal is to create one mailing list that matches each name on the left sheet with the organization and address on the right sheet.
 
 ```{r vlookup-setup, fig.cap="(ref:vlookup-setup)"}
  knitr::include_graphics("images/02-spreadsheet/vlookup-setup.png")
 ```
 
-1. In one browser tab, open this [Google Sheet of Sample Students](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA). In another tab, open this [Google Sheet of Country Codes 2-letter](https://docs.google.com/spreadsheets/d/1iuImHkn2Aotf-0g6pcKv6e65QLWICjVHNUrcGfPxQNE). Log into your Google Drive, and go to *File > Make a Copy* to create your own version of both sheets, so that you can edit them.
+1. Open this [Google Sheet of Food Bank names and addresses](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA) in a new browser tab. Log into your Google Drive, and go to *File > Make a Copy* to create your own version that you can edit.
 
-2. Let's simplify this two-file problem by copying all of the data into one Google Sheet. Go to the Country Codes sheet, select the *countries* tab, and go to *Copy to > Existing spreadsheet*, and select *Sample Students,* as shown in Figure \@ref(fig:vlookup-copy). Go back to the *Sample Students* sheet and you'll see a new tab named *Copy of countries*.
+We simplified this two-sheet problem by placing both in the same Google Sheet. The first tab is called *names* and the second tab is called *addresses*. If you need to import one Google Sheet into another, go to the tab of one sheet, select *Copy to > Existing spreadsheet*, and select the name of the other sheet.
 
-(ref:vlookup-copy) Copy the *countries* data into the existing *Sample Students* sheet.
-
-```{r vlookup-copy, fig.cap="(ref:vlookup-copy)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-copy.png")
-```
+START AGAIN HERE 
 
 3. In the Sample Students sheet, in the *students* tab, click in cell E1 and type `country name.` This creates a new column header where lookup results will be automatically pasted.
 

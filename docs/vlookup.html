@@ -158,19 +158,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
 <li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Spreadsheet Skills</a>
+<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
 <ul>
-<li class="chapter" data-level="" data-path="spreadsheet-tool.html"><a href="spreadsheet-tool.html"><i class="fa fa-check"></i>Select your Spreadsheet Tool</a></li>
-<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download and Export to CSV or ODS formats</a></li>
-<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make Your Own Copy of a Google Sheet</a></li>
+<li class="chapter" data-level="" data-path="spreadsheet-tools.html"><a href="spreadsheet-tools.html"><i class="fa fa-check"></i>Select your Spreadsheet Tools</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download to CSV or ODS Format</a></li>
+<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert Data to Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Online Forms</a></li>
+<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Google Forms</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
-<li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas and Functions</a></li>
-<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Regroup Data with Pivot Tables</a></li>
+<li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas</a></li>
+<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Summarize Data with Pivot Tables</a></li>
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
-<li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with Relational Database</a></li>
+<li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with a Relational Database</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
@@ -304,7 +304,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Here’s a scenario that illustrates why and how to use the VLOOKUP function. Figure <a href="vlookup.html#fig:vlookup-setup">2.31</a> shows two different sheets with sample data about food banks that help feed hungry people in different parts of the US, drawn from <a href="https://www.feedingamerica.org/find-your-local-foodbank">Feeding America: Find Your Local Food Bank</a>. The first sheet lists individual people at each food bank, the second sheet lists the address for each food bank, and the two share a common column named <em>organization</em>. Your goal is to produce one sheet that serves as a mailing list, where each row contains one individual’s name, organization, and full mailing address. Since we’re using a small data sample to simplify this tutorial, it may be tempting to manually copy and paste in the data. But imagine an actual case that includes over 200 US food banks and many more individuals, where using an automated method to match and paste data is essential.</p>
 
 <div class="figure"><span id="fig:vlookup-setup"></span>
-<img src="images/02-spreadsheet/vlookup-setup.png" alt="Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet."  />
+<img src="images/02-spreadsheet/vlookup-setup.png" alt="Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet." width="750" />
 <p class="caption">
 Figure 2.31: Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet.
 </p>
@@ -318,7 +318,7 @@ Figure 2.31: Your goal is to create one mailing list that matches individual nam
 </ol>
 
 <div class="figure"><span id="fig:vlookup-headers"></span>
-<img src="images/02-spreadsheet/vlookup-headers.png" alt="Paste the last four column headers from the addresses sheet into the names sheet."  />
+<img src="images/02-spreadsheet/vlookup-headers.png" alt="Paste the last four column headers from the addresses sheet into the names sheet." width="500" />
 <p class="caption">
 Figure 2.32: Paste the last four column headers from the <em>addresses</em> sheet into the <em>names</em> sheet.
 </p>
@@ -339,7 +339,7 @@ Figure 2.32: Paste the last four column headers from the <em>addresses</em> shee
 </ol>
 
 <div class="figure"><span id="fig:vlookup-solution"></span>
-<img src="images/02-spreadsheet/vlookup-solution.png" alt="The VLOOKUP formula in cell C2 of the names sheet (top) searches for matches across columns A to E in the addresses sheet (bottom)."  />
+<img src="images/02-spreadsheet/vlookup-solution.png" alt="The VLOOKUP formula in cell C2 of the names sheet (top) searches for matches across columns A to E in the addresses sheet (bottom)." width="700" />
 <p class="caption">
 Figure 2.33: The VLOOKUP formula in cell C2 of the <em>names</em> sheet (top) searches for matches across columns A to E in the <em>addresses</em> sheet (bottom).
 </p>
@@ -356,7 +356,7 @@ Figure 2.33: The VLOOKUP formula in cell C2 of the <em>names</em> sheet (top) se
 </ol>
 
 <div class="figure"><span id="fig:vlookup-drag"></span>
-<img src="images/02-spreadsheet/vlookup-drag.png" alt="Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula."  />
+<img src="images/02-spreadsheet/vlookup-drag.png" alt="Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
 Figure 2.34: Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula.
 </p>
@@ -366,7 +366,7 @@ Figure 2.34: Click on cell C2, then hold-and-drag the bottom-right blue dot acro
 </ol>
 
 <div class="figure"><span id="fig:vlookup-final"></span>
-<img src="images/02-spreadsheet/vlookup-final.png" alt="Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula."  />
+<img src="images/02-spreadsheet/vlookup-final.png" alt="Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
 Figure 2.35: Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula.
 </p>

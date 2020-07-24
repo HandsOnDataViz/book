@@ -279,11 +279,11 @@ Small is defined as each side less than 300px, as shown in Figure \@ref(fig:tige
 ```
 
 ### R code-chunk for larger static image using out.width and PDF img {-}
-For larger images, where one side is greater than 300px, set the out.width to a pixel number for ideal display in the HTML edition. Also, if needed, copy the image, use Photoshop to create a smaller image size, and save with same file name and a .pdf extension for auto-substitution in the PDF output ...as shown in Figure \@ref(fig:screenshot-tall).
+For larger images, where one side is greater than 300px, set the out.width to a pixel number for ideal display in the HTML edition. Also optional to reduce float in PDF: `fig.pos='h',`. If necessary, copy the image, use Photoshop to create a smaller image size, and save with same file name and a .pdf extension for auto-substitution in the PDF output ...as shown in Figure \@ref(fig:screenshot-tall).
 
 (ref:screenshot-tall) Using out.width=200 and smaller PDF image size.
 
-```{r screenshot-tall, fig.pos='h', out.width=200, fig.cap="(ref:screenshot-tall)"}
+```{r screenshot-tall, out.width=200, fig.cap="(ref:screenshot-tall)"}
  knitr::include_graphics("images/17-bookdown/screenshot-tall.png")
 ```
 
@@ -294,16 +294,16 @@ R code-chunks allow more complex conditional formatting, where an interactive ma
 
 (ref:sample-map) Caption here, and add embedded link to explore the [full-screen interactive map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 
-```{r sample-map, fig.pos='h', fig.cap="(ref:sample-map)"}
+```{r sample-map, fig.cap="(ref:sample-map)"}
 if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "600px") else knitr::include_graphics("images/17-bookdown/sample-map.jpg")
 ```
 
 ### Demo: R code-chunk for animated GIF in HTML and static image in PDF {-}
-When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. TODO: ADD this here ...as shown in Figure \@ref(fig:sheets-option-drag).
+When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. Add ...as shown in Figure \@ref(fig:sheets-option-drag).
 
 (ref:sheets-option-drag) Caption here, with embedded link to the [animated GIF](https://handsondataviz.org/images/17-bookdown/sheets-option-drag.gif).
 
-```{r sheets-option-drag, fig.pos='h', fig.cap="(ref:sheets-option-drag)"}
+```{r sheets-option-drag, fig.cap="(ref:sheets-option-drag)"}
 if(knitr::is_html_output()) knitr::include_url("images/17-bookdown/sheets-option-drag.gif", height = "250px") else knitr::include_graphics("images/17-bookdown/sheets-option-drag.png")
 ```
 
@@ -323,7 +323,7 @@ This option may be relevant when you wish to display a video only in the HMTL ed
 
 (ref:video-sample2) Caption **only** for HTML version, with embedded link to the [YouTube video](https://youtu.be/w6dQ-RIQ5bc).
 
-```{r video-sample2, fig.pos='h', fig.cap="(ref:video-sample2)"}
+```{r video-sample2, fig.cap="(ref:video-sample2)"}
 if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/w6dQ-RIQ5bc")
 ```
 

@@ -589,8 +589,8 @@ TODO
 
 <!--chapter:end:01-choose.Rmd-->
 
-Strengthen Spreadsheet Skills
-=============================
+Strengthen Your Spreadsheet Skills
+==================================
 
 Before we begin to design data visualizations, it’s important to make
 sure our spreadsheet skills are up to speed. While teaching this topic,
@@ -617,7 +617,7 @@ operation (such as calculating the average of a range of cells:
 (sometimes called workbooks), where each tab across the bottom opens a
 specific sheet.
 
-<img src="images/02-spreadsheet/spreadsheet-terms-annotated.png" alt="Screenshot of a typical spreadsheet, with headers, tabs, and the active cell displaying a formula."  />
+<img src="images/02-spreadsheet/spreadsheet-terms-annotated.png" alt="Screenshot of a typical spreadsheet, with headers, tabs, and the active cell displaying a formula." width="600" />
 <p class="caption">
 Figure 1: Screenshot of a typical spreadsheet, with headers, tabs, and
 the active cell displaying a formula.
@@ -627,11 +627,10 @@ In this chapter, we’ll start by reviewing basic steps, such as
 [sharing](share.html), [uploading](upload.html), and [collecting data
 with online forms](forms.html). Then we’ll move on to ways of organizing
 and analyzing your data, such as [sorting and filtering](sort.html),
-[calculating with formulas and functions](calculate.html), and
-[regrouping with pivot tables](pivot.html). Finally, we’ll examine ways
-to connect different datasets, such as [matching columns with lookup
-tables](vlookup.html), and the difference between [flat spreadsheets
-versus relational databases](database.html). We illustrate all of these
+[calculating with formulas](calculate.html), and [summarizing with pivot
+tables](pivot.html). Finally, we’ll examine ways to connect different
+sheets, such as [matching columns with lookup tables](vlookup.html), and
+[relational databases](database.html). We illustrate all of these
 methods with beginner-level users in mind, meaning they do not require
 any prior background.
 
@@ -641,10 +640,10 @@ you already feel very familiar with spreadsheets, you should at least
 skim this chapter, and perhaps you’ll learn a trick or two that will
 help you to create charts and maps more efficiently later in the book.
 
-Select your Spreadsheet Tool
-----------------------------
+Select your Spreadsheet Tools
+-----------------------------
 
-Which spreadsheet tool should you use? As we describe in more detail in
+Which spreadsheet tools should you use? As we describe in more detail in
 [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), the
 answer depends on how you respond to different questions about your
 work. First, is your data public or private? If private, consider using
@@ -708,10 +707,10 @@ Here’s how three common spreadsheet tools compare on these questions:
     can only export to CSV format using the downloadable Excel tool,
     which is now available only with a paid Microsoft 365 subscription.
 
-Deciding which spreadsheet tool to use is not a simple choice. Sometimes
-our decisions change from project to project, depending on costs, data
-formats, privacy concerns, and the personal preferences of any
-collaborators. Occasionally we’ve also had co-workers or clients
+Deciding which spreadsheet tools to use is not a simple choice.
+Sometimes our decisions change from project to project, depending on
+costs, data formats, privacy concerns, and the personal preferences of
+any collaborators. Occasionally we’ve also had co-workers or clients
 specifically request that we send them non-sensitive spreadsheet data
 attached to an email, rather than sharing it through a spreadsheet tool
 platform that was designed for collaboration. So it’s best to be
@@ -747,7 +746,7 @@ in this book are:
     your personal computer because they are primarily designed to exist
     online.
 
-<img src="images/02-spreadsheet/data-formats.png" alt="Three data formats commonly seen on your computer---csv, ods, and xlsx---when displayed properly in the Mac Finder."  />
+<img src="images/02-spreadsheet/data-formats.png" alt="Three data formats commonly seen on your computer---csv, ods, and xlsx---when displayed properly in the Mac Finder." width="350" />
 <p class="caption">
 Figure 2: Three data formats commonly seen on your computer—csv, ods,
 and xlsx—when displayed properly in the Mac Finder.
@@ -763,14 +762,14 @@ and check the box to *Show all filename extensions*, as shown in Figure
 
 <img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to Finder >
 Preferences &gt; Advanced and check the box to *Show all filename
-extensions*." /&gt;
+extensions*." width=“400” /&gt;
 <p class="caption">
 Figure 3: On a Mac, go to Finder &gt; Preferences &gt; Advanced and
 check the box to *Show all filename extensions*.
 </p>
 
-Download and Export to CSV or ODS formats
------------------------------------------
+Download to CSV or ODS Format
+-----------------------------
 
 In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we
 learned the advantages of selecting software tools that support data
@@ -804,7 +803,8 @@ tool, select *File &gt; Save As* to save data in its native ODS format,
 or to export to CSV, Excel, or other formats.
 
 <img src="images/02-spreadsheet/sheets-download.png" alt="In Google Sheets, go to *File >
-Download As\* to export data in several common formats." /&gt;
+Download As\* to export data in several common formats." width=“600”
+/&gt;
 <p class="caption">
 Figure 4: In Google Sheets, go to *File &gt; Download As* to export data
 in several common formats.
@@ -836,8 +836,8 @@ or platforms that we’ll introduce in later chapters of this book. Data
 portability is key for ensuring that your charts and maps will last well
 into the future.
 
-Make Your Own Copy of a Google Sheet
-------------------------------------
+Make a Copy of a Google Sheet
+-----------------------------
 
 In this book we provide several data files using Google Sheets. Our
 links point to the online files, and we set the sharing settings to
@@ -873,7 +873,8 @@ create your own online form with a link to spreadsheet results.
     remove “Copy of…”.
 
 <img src="images/02-spreadsheet/file-make-copy.png" alt="Go to *File >
-Make a Copy\* to create your own version of this Google Sheet." /&gt;
+Make a Copy\* to create your own version of this Google Sheet."
+width=“250” /&gt;
 <p class="caption">
 Figure 5: Go to *File &gt; Make a Copy* to create your own version of
 this Google Sheet.
@@ -885,7 +886,7 @@ this Google Sheet.
     folder for your data, before clicking *OK*, as shown in Figure
     <a href="#fig:my-drive-new-folder">6</a>.
 
-<img src="images/02-spreadsheet/my-drive-new-folder.png" alt="Click the *My Drive* and *New folder* buttons to save your work in a folder."  />
+<img src="images/02-spreadsheet/my-drive-new-folder.png" alt="Click the *My Drive* and *New folder* buttons to save your work in a folder." width="300" />
 <p class="caption">
 Figure 6: Click the *My Drive* and *New folder* buttons to save your
 work in a folder.
@@ -928,7 +929,7 @@ using the *Share* button.
     *Edit* it. Also, you can click *Copy link* to paste the web address
     to your data in an email or public website.
 
-<img src="images/02-spreadsheet/share-screen.png" alt="Click the *Share* button to grant access to individuals (top half) or anyone with the link (bottom half)."  />
+<img src="images/02-spreadsheet/share-screen.png" alt="Click the *Share* button to grant access to individuals (top half) or anyone with the link (bottom half)." width="600" />
 <p class="caption">
 Figure 7: Click the *Share* button to grant access to individuals (top
 half) or anyone with the link (bottom half).
@@ -952,7 +953,7 @@ a different one. Beware that `bit.ly` links are case-sensitive, so we
 prefer to customize the back-end in all lower-case to match the
 front-end.
 
-<img src="images/02-spreadsheet/link-shortening.png" alt="Use a free link-shortening service, such as Bitly.com, and customize its back-end."  />
+<img src="images/02-spreadsheet/link-shortening.png" alt="Use a free link-shortening service, such as Bitly.com, and customize its back-end." width="350" />
 <p class="caption">
 Figure 8: Use a free link-shortening service, such as Bitly.com, and
 customize its back-end.
@@ -961,8 +962,8 @@ customize its back-end.
 Now that you have different options for sharing a Google Sheet, let’s
 learn how to upload and convert data from different formats.
 
-Upload and Convert Data to Google Sheets
-----------------------------------------
+Upload and Convert to Google Sheets
+-----------------------------------
 
 We feature Google Sheets in this book partly because it supports data
 migration, meaning the ability to import and export files in many common
@@ -990,7 +991,7 @@ to turn it on, and the benefits of doing so.
     Google Drive level, *not* inside each Google Sheet.
 
 <img src="images/02-spreadsheet/drive-settings.png" alt="Click your Google Drive *Gear Symbol >
-Settings\* in the upper-right corner." /&gt;
+Settings\* in the upper-right corner." width=“300” /&gt;
 <p class="caption">
 Figure 9: Click your Google Drive *Gear Symbol &gt; Settings* in the
 upper-right corner.
@@ -1003,7 +1004,7 @@ upper-right corner.
     possible files that you upload in the future—including Microsoft
     Excel, Word, PowerPoint, and more—unless you turn it off.
 
-<img src="images/02-spreadsheet/convert-uploads.png" alt="Inside your Google Drive Settings, check the box to automatically convert all uploads."  />
+<img src="images/02-spreadsheet/convert-uploads.png" alt="Inside your Google Drive Settings, check the box to automatically convert all uploads." width="750" />
 <p class="caption">
 Figure 10: Inside your Google Drive Settings, check the box to
 automatically convert all uploads.
@@ -1014,7 +1015,7 @@ automatically convert all uploads.
     <a href="#fig:upload-file">11</a>, or use the *New* button and
     select *File upload*.
 
-<img src="images/02-spreadsheet/upload-file.png" alt="Drag-and-drop your sample Excel file into your Google Drive to upload it."  />
+<img src="images/02-spreadsheet/upload-file.png" alt="Drag-and-drop your sample Excel file into your Google Drive to upload it." width="300" />
 <p class="caption">
 Figure 11: Drag-and-drop your sample Excel file into your Google Drive
 to upload it.
@@ -1025,7 +1026,7 @@ uploaded files in their original format, and display their icons and
 file name extensions such as `.xlsx` or `.csv`, as shown in Figure
 <a href="#fig:drive-file-icons">12</a>.
 
-<img src="images/02-spreadsheet/drive-file-icons.png" alt="If you forget to convert uploads, Google Drive will keep files in their original format with these icons."  />
+<img src="images/02-spreadsheet/drive-file-icons.png" alt="If you forget to convert uploads, Google Drive will keep files in their original format with these icons." width="300" />
 <p class="caption">
 Figure 12: If you forget to convert uploads, Google Drive will keep
 files in their original format with these icons.
@@ -1046,7 +1047,7 @@ Now that you know how to upload and convert an existing dataset, in the
 next section you will learn how to collect data using an online form,
 and access it as a spreadsheet.
 
-Collect Data with Online Forms
+Collect Data with Google Forms
 ------------------------------
 
 As you saw in prior sections, we invite readers of this book to fill out
@@ -1065,7 +1066,7 @@ Google Forms, which is partially hidden under *New &gt; More &gt; Google
 Forms*, as shown in Figure <a href="#fig:forms-new">13</a>.
 
 <img src="images/02-spreadsheet/forms-new.png" alt="The Google Forms tool is partially hidden in the Google Drive *New >
-More\* menu." /&gt;
+More\* menu." width=“500” /&gt;
 <p class="caption">
 Figure 13: The Google Forms tool is partially hidden in the Google Drive
 *New &gt; More* menu.
@@ -1076,7 +1077,7 @@ different types of responses: short- and paragraph-length answers,
 multiple choice, checkboxes, file uploads, etc., as shown in Figure
 <a href="#fig:forms-questions">14</a>.
 
-<img src="images/02-spreadsheet/forms-questions.png" alt="The Google Forms *Questions* tab allows you to designate different types of responses."  />
+<img src="images/02-spreadsheet/forms-questions.png" alt="The Google Forms *Questions* tab allows you to designate different types of responses." width="700" />
 <p class="caption">
 Figure 14: The Google Forms *Questions* tab allows you to designate
 different types of responses.
@@ -1092,7 +1093,7 @@ Response validation*, which requires users to follow a particular
 format, such as an email address or phone number.
 
 <img src="images/02-spreadsheet/forms-description.png" alt="Click the three-dot kebab menu to *Show >
-Description\* to add details for any question." /&gt;
+Description\* to add details for any question." width=“700” /&gt;
 <p class="caption">
 Figure 15: Click the three-dot kebab menu to *Show &gt; Description* to
 add details for any question.
@@ -1105,7 +1106,7 @@ the *Send* button to distribute it via email, a link, or to embed the
 live form as an iframe on a web page. Learn more about the latter option
 in [Chapter 7: Embed On Your Web](embed.html).
 
-<img src="images/02-spreadsheet/forms-preview.png" alt="Click the *Eyeball symbol* to preview your form."  />
+<img src="images/02-spreadsheet/forms-preview.png" alt="Click the *Eyeball symbol* to preview your form." width="350" />
 <p class="caption">
 Figure 16: Click the *Eyeball symbol* to preview your form.
 </p>
@@ -1115,7 +1116,7 @@ receive, and also includes a powerful button to open the data in a
 linked Google Sheet, as shown in Figure
 <a href="#fig:forms-responses">17</a>.
 
-<img src="images/02-spreadsheet/forms-responses.png" alt="The Google Forms *Responses* tab includes a button to open results in a linked Google Sheet."  />
+<img src="images/02-spreadsheet/forms-responses.png" alt="The Google Forms *Responses* tab includes a button to open results in a linked Google Sheet." width="500" />
 <p class="caption">
 Figure 17: The Google Forms *Responses* tab includes a button to open
 results in a linked Google Sheet.
@@ -1159,7 +1160,7 @@ the questions were posed.
     <a href="#fig:sheets-select-all">18</a>. The entire sheet should
     become light blue to show you’ve selected all cells.
 
-<img src="images/02-spreadsheet/sheets-select-all.png" alt="Click the upper-left corner to select all cells before sorting."  />
+<img src="images/02-spreadsheet/sheets-select-all.png" alt="Click the upper-left corner to select all cells before sorting." width="400" />
 <p class="caption">
 Figure 18: Click the upper-left corner to select all cells before
 sorting.
@@ -1179,7 +1180,7 @@ and make it meaningless. Always select all cells before sorting!
 
 <img src="images/02-spreadsheet/sheets-sort-range.png" alt="Go to *Data >
 Sort Range*, check the header row box, and sort by *Experience with
-dataviz\* in ascending order." /&gt;
+dataviz\* in ascending order." width=“400” /&gt;
 <p class="caption">
 Figure 19: Go to *Data &gt; Sort Range*, check the header row box, and
 sort by *Experience with dataviz* in ascending order.
@@ -1198,7 +1199,7 @@ but Excel has a different option called *Window &gt; Split*.
 
 <img src="images/02-spreadsheet/sheets-view-freeze.png" alt="In Google Sheets, go to *View >
 Freeze\* to select the number of rows to continuously display when
-scrolling downward." /&gt;
+scrolling downward." width=“500” /&gt;
 <p class="caption">
 Figure 20: In Google Sheets, go to *View &gt; Freeze* to select the
 number of rows to continuously display when scrolling downward.
@@ -1214,7 +1215,7 @@ number of rows to continuously display when scrolling downward.
 
 <img src="images/02-spreadsheet/sheets-filter.png" alt="Go to *Data >
 Create a Filter*, click the downward arrow in the *Occupation\* column,
-select only *educator*." /&gt;
+select only *educator*." width=“300” /&gt;
 <p class="caption">
 Figure 21: Go to *Data &gt; Create a Filter*, click the downward arrow
 in the *Occupation* column, select only *educator*.
@@ -1226,8 +1227,8 @@ learning about data visualization. How to do they compare to your own
 goals? In the next section, we’ll learn how to start analyzing your data
 with simple formulas and functions.
 
-Calculate with Formulas and Functions
--------------------------------------
+Calculate with Formulas
+-----------------------
 
 Spreadsheet tools can save you lots of time when you insert simple
 formulas and functions to automatically perform calculations across
@@ -1260,7 +1261,7 @@ posed.
     below* to add a new row, as shown in Figure
     <a href="#fig:sheets-insert-row">22</a>.
 
-<img src="images/02-spreadsheet/sheets-insert-row.png" alt="Right-click on row number 1 and select *Insert 1 below*."  />
+<img src="images/02-spreadsheet/sheets-insert-row.png" alt="Right-click on row number 1 and select *Insert 1 below*." width="200" />
 <p class="caption">
 Figure 22: Right-click on row number 1 and select *Insert 1 below*.
 </p>
@@ -1274,7 +1275,7 @@ Figure 22: Right-click on row number 1 and select *Insert 1 below*.
     press *Return* or *Enter* on your keyboard, as shown in Figure
     <a href="#fig:sheets-average">23</a>.
 
-<img src="images/02-spreadsheet/sheets-average.png" alt="Type `=` to start a formula and select the suggestion for average, or type it directly in with the correct range."  />
+<img src="images/02-spreadsheet/sheets-average.png" alt="Type `=` to start a formula and select the suggestion for average, or type it directly in with the correct range." width="300" />
 <p class="caption">
 Figure 23: Type `=` to start a formula and select the suggestion for
 average, or type it directly in with the correct range.
@@ -1307,7 +1308,7 @@ but it does *not* work with LibreOffice or Excel.
     spreadsheet with a growing number of responses, your sheet will have
     a larger number in the last cell reference.
 
-<img src="images/02-spreadsheet/sheets-drag-calc.png" alt="Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula, as shown in these three frames."  />
+<img src="images/02-spreadsheet/sheets-drag-calc.png" alt="Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula, as shown in these three frames." width="300" />
 <p class="caption">
 Figure 24: Click on the blue bottom-right dot in cell E2, then
 hold-and-drag your crosshair cursor in cell F2, and let go to
@@ -1330,9 +1331,10 @@ frames.
     specific endpoint, as shown in Figure
     <a href="#fig:sheets-countif">25</a>.
 
-<img src="images/02-spreadsheet/sheets-countif.png" alt="(ref:sheets-countif)"  />
+<img src="images/02-spreadsheet/sheets-countif.png" alt="Select or enter a formula that counts responses if the entry is *educator*." width="250" />
 <p class="caption">
-Figure 25: (ref:sheets-countif)
+Figure 25: Select or enter a formula that counts responses if the entry
+is *educator*.
 </p>
 
 Spreadsheet tools contain many more functions to perform numerical
@@ -1351,15 +1353,15 @@ Now that you’ve learned how to count one type of survey response, the
 next section will teach you how to regroup data with pivot tables that
 summarize all responses by different categories.
 
-Regroup Data with Pivot Tables
-------------------------------
+Summarize Data with Pivot Tables
+--------------------------------
 
 Pivot tables are another powerful feature built into spreadsheet tools
-to help you regroup your data and summarize it in a new way, hence the
-name “pivot.” Yet pivot tables are often overlooked by people who were
-never taught about them, or have not yet discovered how to use them. In
-this section, we’ll start with a large dataset of around 3,000 readers
-of this book who responded to a [quick public
+to help you reorganize your data and summarize it in a new way, hence
+the name “pivot.” Yet pivot tables are often overlooked by people who
+were never taught about them, or have not yet discovered how to use
+them. In this section, we’ll start with a large dataset of around 3,000
+readers of this book who responded to a [quick public
 survey](https://forms.gle/yn5QwTzfQkYcppQn9). Each row represents an
 individual reader, including their occupation and prior level of
 experience with data visualization. You’ll learn how to “pivot” this
@@ -1383,7 +1385,7 @@ reader responses by two categories: occupation and experience level.
     include a Pivot Table tab at the bottom.
 
 <img src="images/02-spreadsheet/sheets-pivot-create.png" alt="Go to *Data >
-Pivot Table\*, and create in a new sheet." /&gt;
+Pivot Table\*, and create in a new sheet." width=“450” /&gt;
 <p class="caption">
 Figure 26: Go to *Data &gt; Pivot Table*, and create in a new sheet.
 </p>
@@ -1394,19 +1396,19 @@ Figure 26: Go to *Data &gt; Pivot Table*, and create in a new sheet.
     entries in that column, as shown in Figure
     <a href="#fig:sheets-pivot-rows">27</a>.
 
-<img src="images/02-spreadsheet/sheets-pivot-rows.png" alt="In the *Pivot table editor*, click the Rows *Add* button and select *Occupation*."  />
+<img src="images/02-spreadsheet/sheets-pivot-rows.png" alt="In the *Pivot table editor*, click the Rows *Add* button and select *Occupation*." width="600" />
 <p class="caption">
 Figure 27: In the *Pivot table editor*, click the Rows *Add* button and
 select *Occupation*.
 </p>
 
-1.  Next, to count up the number of responses for each entry, click the
+1.  Next, to count the number of responses for each entry, click the
     Values *Add* button and select *Occupation* again. Google Sheets
     will automatically summarize the values by *COUNTA*, meaning it
     displays the frequency of each textual response, as shown in Figure
     <a href="#fig:sheets-pivot-values">28</a>.
 
-<img src="images/02-spreadsheet/sheets-pivot-values.png" alt="In the *Pivot table editor*, click the Values *Add* button and select *Occupation*."  />
+<img src="images/02-spreadsheet/sheets-pivot-values.png" alt="In the *Pivot table editor*, click the Values *Add* button and select *Occupation*." width="600" />
 <p class="caption">
 Figure 28: In the *Pivot table editor*, click the Values *Add* button
 and select *Occupation*.
@@ -1428,9 +1430,10 @@ Figure 29: In the *Pivot table editor*, click the Columns *Add* button
 and select *Experience with data visualization*.
 </p>
 
-If you wanted to go one step further, you could also *Filter* the data
-to limit the pivot table results, for example, to only readers who
-listed 20 or more years of schooling.
+To go one step further, *Filter* the data to limit the pivot table
+results by another category. For example, you can click the Filters
+*Add* button and select *Years of school* to display only readers who
+listed 20 or more years.
 
 Deciding how to add *Values* in the *Pivot table editor* can be
 challenging, because there are multiple options to summarize the data,
@@ -1450,7 +1453,7 @@ Although Google Sheets pivot tables show raw numbers by default, you
 also can choose to display them as percentages of the row, of the
 column, or of the grand total.
 
-<img src="images/02-spreadsheet/sheets-pivot-summarize.png" alt="In the *Pivot table editor*, see multiple options to summarize *Values*."  />
+<img src="images/02-spreadsheet/sheets-pivot-summarize.png" alt="In the *Pivot table editor*, see multiple options to summarize *Values*." width="250" />
 <p class="caption">
 Figure 30: In the *Pivot table editor*, see multiple options to
 summarize *Values*.
@@ -1499,7 +1502,7 @@ and paste in the data. But imagine an actual case that includes over 200
 US food banks and many more individuals, where using an automated method
 to match and paste data is essential.
 
-<img src="images/02-spreadsheet/vlookup-setup.png" alt="Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet."  />
+<img src="images/02-spreadsheet/vlookup-setup.png" alt="Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet." width="750" />
 <p class="caption">
 Figure 31: Your goal is to create one mailing list that matches
 individual names and organizations on the left sheet with their
@@ -1527,7 +1530,7 @@ the name of the other sheet.
     This creates new column headers where our lookup results will be
     automatically pasted.
 
-<img src="images/02-spreadsheet/vlookup-headers.png" alt="Paste the last four column headers from the *addresses* sheet into the *names* sheet."  />
+<img src="images/02-spreadsheet/vlookup-headers.png" alt="Paste the last four column headers from the *addresses* sheet into the *names* sheet." width="500" />
 <p class="caption">
 Figure 32: Paste the last four column headers from the *addresses* sheet
 into the *names* sheet.
@@ -1561,7 +1564,7 @@ Here’s what each part means:
     a range of columns A to E in the *addresses* sheet. Press *Return*
     or *Enter* on your keyboard.
 
-<img src="images/02-spreadsheet/vlookup-solution.png" alt="The VLOOKUP formula in cell C2 of the *names* sheet (top) searches for matches across columns A to E in the *addresses* sheet (bottom)."  />
+<img src="images/02-spreadsheet/vlookup-solution.png" alt="The VLOOKUP formula in cell C2 of the *names* sheet (top) searches for matches across columns A to E in the *addresses* sheet (bottom)." width="700" />
 <p class="caption">
 Figure 33: The VLOOKUP formula in cell C2 of the *names* sheet (top)
 searches for matches across columns A to E in the *addresses* sheet
@@ -1587,7 +1590,7 @@ Let’s break down each part of the formula you entered in cell C2 of the
     paste and update the formula for the city, state, and zip columns,
     as shown in Figure <a href="#fig:vlookup-drag">34</a>.
 
-<img src="images/02-spreadsheet/vlookup-drag.png" alt="Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula."  />
+<img src="images/02-spreadsheet/vlookup-drag.png" alt="Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
 Figure 34: Click on cell C2, then hold-and-drag the bottom-right blue
 dot across columns D to F, which automatically pastes and updates the
@@ -1598,7 +1601,7 @@ formula.
     formula downward to fill in all rows, as shown in Figure
     <a href="#fig:vlookup-final">35</a>.
 
-<img src="images/02-spreadsheet/vlookup-final.png" alt="Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula."  />
+<img src="images/02-spreadsheet/vlookup-final.png" alt="Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
 Figure 35: Click on cell F2, then hold-and-drag the bottom-right blue
 dot down to row 11, which automatically pastes and updates the formula.
@@ -1616,8 +1619,8 @@ formulas to connect different spreadsheets, the next section will teach
 you how to manage multiple relationships between spreadsheets with the
 help of a relational database.
 
-Connect Sheets with Relational Database
----------------------------------------
+Connect Sheets with a Relational Database
+-----------------------------------------
 
 In the previous section, you learned how the VLOOKUP function can search
 for matching data in columns across spreadsheets and automatically paste
@@ -1675,7 +1678,7 @@ database, we used Airtable settings to link the *organization* column in
 the *people* sheet to the *food banks* sheet, where the addresses are
 stored, as shown in Figure <a href="#fig:airtable-link">36</a>.
 
-<img src="images/02-spreadsheet/airtable-link.png" alt="In this Airtable sample, we linked the *organization* column in the *people* sheet to the *food banks* sheet."  />
+<img src="images/02-spreadsheet/airtable-link.png" alt="In this Airtable sample, we linked the *organization* column in the *people* sheet to the *food banks* sheet." width="500" />
 <p class="caption">
 Figure 36: In this Airtable sample, we linked the *organization* column
 in the *people* sheet to the *food banks* sheet.
@@ -1693,10 +1696,12 @@ can share with others, a topic we’ll cover in [Chapter 7: Embed on your
 Web](embed.html). See more about its features in the [Airtable Support
 page](https://support.airtable.com).
 
-<img src="images/02-spreadsheet/airtable-expand.png" alt="In Airtable, click on a row in one sheet to expand and view its linked data in other sheets."  />
+<iframe src="https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow" width="600" height="533px">
+</iframe>
 <p class="caption">
-Figure 37: In Airtable, click on a row in one sheet to expand and view
-its linked data in other sheets.
+Figure 37: In this [Airtable
+demo](https://airtable.com/shrOlb4XT11Xy2LP2), click on a row in one
+sheet to expand and view its linked data in another sheet.
 </p>
 
 It’s important to understand the conceptual differences between a
@@ -10327,11 +10332,11 @@ Figure 152: Caption here. Markdown embedded links are acceptable.
 ### R code-chunk for larger static image using out.width and PDF img
 
 For larger images, where one side is greater than 300px, set the
-out.width to a pixel number for ideal display in the HTML edition. Also,
-if needed, copy the image, use Photoshop to create a smaller image size,
-and save with same file name and a .pdf extension for auto-substitution
-in the PDF output …as shown in Figure
-<a href="#fig:screenshot-tall">153</a>.
+out.width to a pixel number for ideal display in the HTML edition. Also
+optional to reduce float in PDF: `fig.pos='h',`. If necessary, copy the
+image, use Photoshop to create a smaller image size, and save with same
+file name and a .pdf extension for auto-substitution in the PDF output
+…as shown in Figure <a href="#fig:screenshot-tall">153</a>.
 
 <img src="images/17-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
 <p class="caption">
@@ -10361,8 +10366,8 @@ map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 ### Demo: R code-chunk for animated GIF in HTML and static image in PDF
 
 When appropriate, create animated GIF files using Camtasia, and add
-fade-to-black to mark the end-point in the looped version. TODO: ADD
-this here …as shown in Figure <a href="#fig:sheets-option-drag">155</a>.
+fade-to-black to mark the end-point in the looped version. Add …as shown
+in Figure <a href="#fig:sheets-option-drag">155</a>.
 
 <iframe src="images/17-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>

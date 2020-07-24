@@ -266,7 +266,7 @@ Let's explore a large dataset of around 3,000 readers of this book who responded
  knitr::include_graphics("images/02-spreadsheet/sheets-insert-row.png")
 ```
 
-4. Let's calculate the average level of reader experience with data visualization. Click on cell E2 in the new blank row you just created, and type an equal symbol (`=`) to start a formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the average for the range of the entire column, as shown in Figure \@ref(fig:sheets-average). If you're using a different spreadsheet tool and this formula does not automatically appear, you can type it in like this: `=AVERAGE(E3:E2894)` and press *Return* or *Enter* on your keyboard. Note that this live spreadsheet has a growing number of responses, so you will need to insert the current number of rows in the last cell reference to include all entries.
+4. Let's calculate the average level of reader experience with data visualization. Click on cell E2 in the new blank row you just created, and type an equal symbol (`=`) to start a formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the average for current values in the column, such as `=AVERAGE(E3:E2894)`, then press *Return* or *Enter* on your keyboard, as shown in Figure \@ref(fig:sheets-average).
 
 (ref:sheets-average) Type `=` to start a formula and select the suggestion for average, or type it directly in with the correct range.
 
@@ -274,29 +274,25 @@ Let's explore a large dataset of around 3,000 readers of this book who responded
  knitr::include_graphics("images/02-spreadsheet/sheets-average.png")
 ```
 
-Currently, the average reader experience with data visualization is around 2 on a scale from 1 (beginner) to 5 (professional), but this may change as more readers fill out the survey.
+Since our live spreadsheet has a growing number of survey responses, you will have a larger number in the last cell reference to include all of the entries in your version. Currently, the average level of reader experience with data visualization is around 2 on a scale from 1 (beginner) to 5 (professional), but this may change as more readers fill out the survey. Note that if any readers leave this question blank, spreadsheet tools ignore empty cells when performing calculations.
 
-Tip: Spreadsheet tools ignore empty cells when performing calculations, so when readers leave some blank responses, it skips over those values.
+Tip: In Google Sheets, another way to write the formula above is `=AVERAGE(E3:E)`, which averages *all* values in column E, beginning with cell E3, without specifying the last cell reference. Using this syntax will keep your calculations up-to-date if more rows are added, but it does *not* work with LibreOffice or Excel.
 
-5. Part of the magic of spreadsheets is that you can use the built-in click-and-drag feature to copy and paste a formula across other columns or rows, and it will automatically update its cell references. Click in cell E2, and then press and hold down on the blue dot in the bottom-right corner of that cell, which transforms your cursor into a crosshair symbol. Drag your cursor to cell F2 and let go, and show in Figure \@ref(fig:sheets-drag-calc). The formula will be automatically pasted and updated for the new column to `=AVERAGE(F3:F2894)`. Once again, since this is a live spreadsheet with a growing number of responses, your sheet will have a larger number in the last cell reference.
+5. Part of the magic of spreadsheets is that you can use the built-in hold-and-drag feature to copy and paste a formula across other columns or rows, and it will automatically update its cell references. Click in cell E2, and then press and hold down on the blue dot in the bottom-right corner of that cell, which transforms your cursor into a crosshair symbol. Drag your cursor to cell F2 and let go, and show in Figure \@ref(fig:sheets-drag-calc). The formula will be automatically pasted and updated for the new column to `=AVERAGE(F3:F2894)` or `AVERAGE(F3:F)`, depending on which way you entered it above. Once again, since this is a live spreadsheet with a growing number of responses, your sheet will have a larger number in the last cell reference.
 
-(ref:sheets-drag-calc) Click on the blue bottom-right dot in cell E2, then drag and drop your crosshair cursor in cell F2 to automatically paste and update the formula, as shown in these three frames.
+(ref:sheets-drag-calc) Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula, as shown in these three frames.
 
 ```{r sheets-drag-calc, fig.cap="(ref:sheets-drag-calc)"}
  knitr::include_graphics("images/02-spreadsheet/sheets-drag-calc.png")
 ```
 
-Warning: If you save a spreadsheet in CSV format, your calculated results will appear in the CSV sheet, but any formulas you created to produce those results will disappear. Always keep your original spreadsheet format to remind yourself how you constructed formulas.
+6. Since the *Occupation* column contains a defined set of text responses, let's use a different function to count them using an *if statement*, such as the number of responses if a reader listed "educator". Click in cell G2 and type the equal symbol (`=`) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is *educator* for current values in the entire column. You can directly type in the formula `=COUNTIF(G3:G2894,"=educator")`, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax `=COUNTIF(G3:G,"=educator")` that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure \@ref(fig:sheets-countif).
 
-6. Since the *Occupation* column contains a defined set of text responses, let's use a different function to count them up. Click in cell G2 and type the equal symbol (`=`) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is *educator* for the range of the entire column, as shown in Figure \@ref(fig:sheets-countif). If you're using a different spreadsheet tool and this formula does not automatically appear, you can type it in like this: `=COUNTIF(G3:G2894,"=educator")` and press *Return* or *Enter* on your keyboard. Once again, this live spreadsheet has a growing number of responses, so you will need to insert the current number of rows in the last cell reference to include all entries.
-
-(ref:countif) Type `=` to start a formula and select the suggestion for count if the response is *educator*, or type it directly in with the correct range.
+(ref:countif) Select or enter a formula that counts responses if the entry is *educator*.
 
 ```{r sheets-countif, fig.cap="(ref:sheets-countif)"}
  knitr::include_graphics("images/02-spreadsheet/sheets-countif.png")
 ```
-
-Currently, our readers include about 150 educators, but this will grow as more people answer the survey.  
 
 Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text, as described in this [Google Sheets Help Page](https://support.google.com/docs/topic/9054603). See more examples in the "Split data into two or more columns" and "Combine columns into one" sections in [Chapter 4: Clean Up Messy Data](clean.html).  
 
@@ -367,7 +363,7 @@ Now that you've learned how to regroup and summarize data with pivot tables, in 
 ## Match Columns with VLOOKUP {- #vlookup}
 Spreadsheet tools also allow you to "look up" data in one sheet and automatically find and paste matching data from another sheet. This section introduces the "VLOOKUP" function, where the "V" stands for "vertical," meaning matches across columns, which is the most common way to look up data. You'll learn how to write a function in one sheet that looks for matching cells in select columns in a second sheet, and pastes the relevant data into a new column in the first sheet. If you've ever faced the tedious task of manually looking up and matching data between two different spreadsheets, this automated method will save you lots of time.
 
-Here's a common scenario where it's helpful to use the "VLOOKUP" function. Picture two data sheets with information about food banks that help feed hungry people in different parts of the US. The first sheet lists individual names of leadership staff at each food bank. The second sheet lists the address for each food bank, as shown in Figure \@ref(fig:vlookup-setup). The two sheets share a common column named "organization." Your goal is to produce one sheet that looks like a mailing list, where each row contains one individual's name, organization, and mailing address. Since we're using this small example to illustrate the concept, you could sort and manually paste in the data. But imagine that the actual list includes over 200 US food banks, so let's use "VLOOKUP" to automatically match and copy the relevant data.
+Here's a common scenario where it's helpful to use the "VLOOKUP" function. Picture two data sheets with sample data about food banks that help feed hungry people in different parts of the US, drawn from [Feeding America: Find Your Local Food Bank](https://www.feedingamerica.org/find-your-local-foodbank). The first sheet lists individual names of leadership staff at each food bank. The second sheet lists the address for each food bank, as shown in Figure \@ref(fig:vlookup-setup). The two sheets share a common column named "organization." Your goal is to produce one sheet that looks like a mailing list, where each row contains one individual's name, organization, and mailing address. Since we're using this small sample to illustrate the concept, you could sort and manually paste in the data. But imagine that the actual sheets includes over 200 US food banks and many more individuals. So let's use "VLOOKUP" to automatically match and paste data for us on this small sample, to prepare for much larger datasets in the future.
 
 (ref:vlookup-setup) Your goal is to create one mailing list that matches each name on the left sheet with the organization and address on the right sheet.
 
@@ -375,15 +371,19 @@ Here's a common scenario where it's helpful to use the "VLOOKUP" function. Pictu
  knitr::include_graphics("images/02-spreadsheet/vlookup-setup.png")
 ```
 
-1. Open this [Google Sheet of Food Bank names and addresses](https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA) in a new browser tab. Log into your Google Drive, and go to *File > Make a Copy* to create your own version that you can edit.
+1. Open this [Google Sheet of Food Bank sample names and addresses](https://docs.google.com/spreadsheets/d/1bcvOJayycijIbf8e-u_cMq0kPbEp29MFQr_FXK6igs4) in a new browser tab. Log into your Google Drive, and go to *File > Make a Copy* to create your own version that you can edit.
 
-We simplified this two-sheet problem by placing both in the same Google Sheet. The first tab is called *names* and the second tab is called *addresses*. If you need to import one Google Sheet into another, go to the tab of one sheet, select *Copy to > Existing spreadsheet*, and select the name of the other sheet.
+We simplified this two-sheet problem by placing both tables in the same Google Sheet. Click on the first tab, called *names*, and the second tab, called *addresses*. In the future, if you need to move two separate Google Sheets into the same file, go to the tab of one sheet, right-click the tab to *Copy to > Existing spreadsheet*, and select the name of the other sheet.
 
-START AGAIN HERE 
+2. In your editable copy of the Google Sheet, the *names* tab will be our destination for the mailing list we will create. Go to the *addresses* sheet, copy the column headers for *address - city - state - zip*, and paste them into cells C1 through F1 on the *names* sheet, as shown in Figure \@ref(fig:vlookup-headers). This creates new column headers where our lookup results will be automatically pasted.
 
-3. In the Sample Students sheet, in the *students* tab, click in cell E1 and type `country name.` This creates a new column header where lookup results will be automatically pasted.
+(ref:vlookup-headers) Paste the last four headers from the *addresses* sheet into the *names* sheet.
 
-3. Click in cell E2 and type `=VLOOKUP` and Google Sheets will suggest that you complete the full formula in this format:
+```{r vlookup-headers, fig.cap="(ref:vlookup-headers)"}
+ knitr::include_graphics("images/02-spreadsheet/vlookup-headers.png")
+```
+
+3. In the *names* sheet, click in cell C2 and type `=VLOOKUP`, and Google Sheets will suggest that you complete the full formula in this format:
 
 ```
 VLOOKUP(search_key, range, index, [is_sorted])
@@ -391,33 +391,45 @@ VLOOKUP(search_key, range, index, [is_sorted])
 
 Here's what each part means:
 
-- search_key = The cell in Sheet 1 you wish to match.
-- range = At least two columns in Sheet 2 to search for your match and desired result.
-- index = The column in the Sheet 2 range that contains your desired result, where 1 = first column, 2 = second column, etc.
-- [is_sorted] = Enter `false` to find exact matches only, which makes sense in this case. Otherwise, enter `true` if the first column of the Sheet 2 range is sorted and you will accept the closest match, even if not an exact one.
+- search_key = The cell in 1st sheet you wish to match.
+- range = At least two columns in the 2nd sheet to search for your match and desired result.
+- index = The column in the 2nd sheet range that contains your desired result, where 1 = first column, 2 = second column, etc.
+- [is_sorted] = Enter `false` to find exact matches only, which makes sense in this case. Otherwise, enter `true` if the first column of the 2nd sheet range is sorted and you will accept the closest match, even if not an exact one.
 
-4. Type in the full VLOOKUP formula or click on the relevant cells and columns to automatically enter it. Your formula should look similar to `=VLOOKUP(D2,'Copy of countries'!A:B,2,false)`, as shown in Figure \@ref(fig:vlookup-solution), but may differ if you have different tab names.
+4. You can either type in the formula with comma separators `=VLOOKUP(B2,'addresses'!A:E,2,false)`, or click on the relevant cells, columns, and sheets for the tool to automatically enter it for you, as shown in Figure \@ref(fig:vlookup-solution). What's new here is that this formula in the *names* sheet refers to a range of columns A to E in the *addresses* sheet. Press *Return* or *Enter* on your keyboard.
 
-(ref:vlookup-solution) Your VLOOKUP formula should look similar to this, depending on your tab names.
+(ref:vlookup-solution) The VLOOKUP formula in *names* sheet cell C2 seeks to match cell B2 across columns A to E in the *addresses* sheet.
 
 ```{r vlookup-solution, fig.cap="(ref:vlookup-solution)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-solution.png")
+ knitr::include_graphics("images/02-spreadsheet/vlookup-solution-annotated.png")
 ```
 
-Let's break down each part of that formula, separated by commas:
+Let's break down each part of the formula you entered in the *names* sheet, cell C2:
 
-- D2 = The search_key, the cell you want to match in the *students* tab.
-- *'Copy of countries'!A:B* = The range, meaning you are searching for matches and results in all of columns A and B in the *Copy of countries* tab.
-- 2 = The index, meaning your desired result appears in the 2nd column of the range above.
-- *false* = Display exact matches only.
+- `B2` = The search_key, meaning the cell you wish to match in the 1st sheet (the organization in the *names* sheet)
+- `'addresses'!A:E` = The range, meaning you are searching for your match and results across columns A to E in the *addresses* sheet.
+- `2` = The index, meaning your desired result appears in the 2nd column of the range above (columns A to E in the *addresses* sheet).
+- `false` = Find exact matches only.
 
-5. After you enter the full VLOOKUP formula, press *Enter* on your keyboard, and the result should display an exact match, if found. In this example, the student with country code `KR` should also display its full country name, `Korea, Republic of`. Float your cursor over the dot in the bottom-right corner of that cell to drag down the results.
+5. After you enter the full VLOOKUP formula, it should display the exact match for the first organization, the Central Texas Food Bank, whose address is 6500 Metropolis Dr. Click and hold down on the blue dot in the bottom-right corner of cell C2, and drag your crosshair cursor across columns D to F and let go, which will automatically paste and update the formula for the city, state, and zip columns, as shown in Figure \@ref(fig:vlookup-drag).
 
-While we used Google Sheets to demonstrate how to "lookup" matching data in another spreadsheet column, the
+(ref:vlookup-drag) Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula.
 
-Now that you understand how to use the VLOOKUP function to match columns data columns across spreadsheets, the next section will introduce you to the concept of a relational database, and when you might want to use one.
-TODO: CHANGE TRANSITION
+```{r vlookup-drag, fig.cap="(ref:vlookup-drag)"}
+ knitr::include_graphics("images/02-spreadsheet/vlookup-drag.png")
+```
 
+6. Finally, use the same hold-and-drag method to paste and update the formula downward to fill in all rows, as shown in Figure \@ref(fig:vlookup-final).
+
+(ref:vlookup-final) Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula.
+
+```{r vlookup-final, fig.cap="(ref:vlookup-final)"}
+ knitr::include_graphics("images/02-spreadsheet/vlookup-final.png")
+```
+
+Warning: If you save this spreadsheet in CSV format, your calculated results will appear in the CSV sheet, but any formulas you created to produce those results will disappear. Always keep your original spreadsheet format to remind yourself how you constructed formulas.
+
+You've successfully created a mailing list---including each person's name, organization, and full address---using the VLOOKUP function to match and paste data from two sheets. Now that you understand how to use formulas to connect different spreadsheets, the next section introduces you to the differences between flat spreadsheets versus relational databases, and why you might want to use one over the other.
 
 ## Connect Sheets with Relational Database {- #database}
 TODO: Consider renaming: Relational Database versus Spreadsheet

@@ -291,7 +291,7 @@ Tip: In Google Sheets, another way to write the formula above is `=AVERAGE(E3:E)
 (ref:sheets-drag-calc) Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula.
 
 ```{r sheets-drag-calc, out.width=300, fig.cap="(ref:sheets-option-drag)"}
-if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-drag-calc.gif", height = "185px") else knitr::include_graphics("images/17-bookdown/sheets-option-drag.png")
+if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-drag-calc.gif", height = "85px") else knitr::include_graphics("images/17-bookdown/sheets-option-drag.png")
 ```
 
 6. Since the *Occupation* column contains a defined set of text responses, let's use a different function to count them using an *if statement*, such as the number of responses if a reader listed "educator". Click in cell G2 and type the equal symbol (`=`) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is *educator* for current values in the entire column. You can directly type in the formula `=COUNTIF(G3:G2894,"=educator")`, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax `=COUNTIF(G3:G,"=educator")` that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure \@ref(fig:sheets-countif).

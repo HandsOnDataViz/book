@@ -1312,8 +1312,9 @@ but it does *not* work with LibreOffice or Excel.
 <iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="300" height="85px">
 </iframe>
 <p class="caption">
-Figure 24: Caption here, with embedded link to the [animated
-GIF](https://handsondataviz.org/images/17-bookdown/sheets-option-drag.gif).
+Figure 24: Click on the blue bottom-right dot in cell E2, then
+hold-and-drag your crosshair cursor in cell F2, and let go to
+automatically paste and update the formula.
 </p>
 
 1.  Since the *Occupation* column contains a defined set of text

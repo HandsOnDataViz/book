@@ -112,13 +112,13 @@ If you're working on a collaborative project with other people, Google Sheets of
 
 Tip: If you don't want to send people a really long and ugly Google Sheet web address such as:
 
-`https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA`
+`https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo`
 
-then use a free link-shortening service. For example, by using our free [Bitly.com](http://bitly.com) account and its handy [Chrome browser extension](https://chrome.google.com/webstore/detail/bitly-unleash-the-power-o/iabeihobmhlgpkcgjiloemdbofjbdcic) or [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/user/13352154/), we can paste in a long URL and customize the back-end to something shorter, such as [bit.ly/sample-students](https://bit.ly/sample-students), as shown in Figure \@ref(fig:link-shortening). If someone else has already claimed your preferred custom name, you'll need to think up a different one. Beware that `bit.ly` links are case-sensitive, so we prefer to customize the back-end in all lower-case to match the front-end.
+then use a free link-shortening service. For example, by using our free [Bitly.com](http://bitly.com) account and its handy [Chrome browser extension](https://chrome.google.com/webstore/detail/bitly-unleash-the-power-o/iabeihobmhlgpkcgjiloemdbofjbdcic) or [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/user/13352154/), we can paste in a long URL and customize the back-end to something shorter, such as [bit.ly/reader-survey](https://bit.ly/reader-survey), as shown in Figure \@ref(fig:link-shortening). If someone else has already claimed your preferred custom name, you'll need to think up a different one. Beware that `bit.ly` links are case-sensitive, so we prefer to customize the back-end in all lower-case to match the front-end.
 
 (ref:link-shortening) Use a free link-shortening service, such as Bitly.com, and customize its back-end.
 
-```{r link-shortening, out.width=350, fig.cap="(ref:link-shortening)"}
+```{r link-shortening, out.width=300, fig.cap="(ref:link-shortening)"}
  knitr::include_graphics("images/02-spreadsheet/link-shortening.png")
 ```
 
@@ -288,10 +288,10 @@ Tip: In Google Sheets, another way to write the formula above is `=AVERAGE(E3:E)
 
 5. Part of the magic of spreadsheets is that you can use the built-in hold-and-drag feature to copy and paste a formula across other columns or rows, and it will automatically update its cell references. Click in cell E2, and then press and hold down on the blue dot in the bottom-right corner of that cell, which transforms your cursor into a crosshair symbol. Drag your cursor to cell F2 and let go, and show in Figure \@ref(fig:sheets-drag-calc). The formula will be automatically pasted and updated for the new column to `=AVERAGE(F3:F2894)` or `AVERAGE(F3:F)`, depending on which way you entered it above. Once again, since this is a live spreadsheet with a growing number of responses, your sheet will have a larger number in the last cell reference.
 
-(ref:sheets-drag-calc) Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula, as shown in these three frames.
+(ref:sheets-drag-calc) Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula.
 
-```{r sheets-drag-calc, out.width=300, fig.cap="(ref:sheets-drag-calc)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-drag-calc.png")
+```{r sheets-drag-calc, out.width=300, fig.cap="(ref:sheets-option-drag)"}
+if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-drag-calc.gif", height = "185px") else knitr::include_graphics("images/17-bookdown/sheets-option-drag.png")
 ```
 
 6. Since the *Occupation* column contains a defined set of text responses, let's use a different function to count them using an *if statement*, such as the number of responses if a reader listed "educator". Click in cell G2 and type the equal symbol (`=`) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is *educator* for current values in the entire column. You can directly type in the formula `=COUNTIF(G3:G2894,"=educator")`, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax `=COUNTIF(G3:G,"=educator")` that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure \@ref(fig:sheets-countif).

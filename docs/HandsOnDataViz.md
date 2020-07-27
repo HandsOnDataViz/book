@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 24 Jul 2020
+updated on: 27 Jul 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -938,7 +938,7 @@ half) or anyone with the link (bottom half).
 Tip: If you don’t want to send people a really long and ugly Google
 Sheet web address such as:
 
-`https://docs.google.com/spreadsheets/d/1FYTiLHfOI2caT2lkI4i8fGbhA-oKT_MSOP1vQWWC9MA`
+`https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo`
 
 then use a free link-shortening service. For example, by using our free
 [Bitly.com](http://bitly.com) account and its handy [Chrome browser
@@ -946,14 +946,14 @@ extension](https://chrome.google.com/webstore/detail/bitly-unleash-the-power-o/i
 or [Firefox browser
 extension](https://addons.mozilla.org/en-US/firefox/user/13352154/), we
 can paste in a long URL and customize the back-end to something shorter,
-such as [bit.ly/sample-students](https://bit.ly/sample-students), as
-shown in Figure <a href="#fig:link-shortening">8</a>. If someone else
-has already claimed your preferred custom name, you’ll need to think up
-a different one. Beware that `bit.ly` links are case-sensitive, so we
+such as [bit.ly/reader-survey](https://bit.ly/reader-survey), as shown
+in Figure <a href="#fig:link-shortening">8</a>. If someone else has
+already claimed your preferred custom name, you’ll need to think up a
+different one. Beware that `bit.ly` links are case-sensitive, so we
 prefer to customize the back-end in all lower-case to match the
 front-end.
 
-<img src="images/02-spreadsheet/link-shortening.png" alt="Use a free link-shortening service, such as Bitly.com, and customize its back-end." width="350" />
+<img src="images/02-spreadsheet/link-shortening.png" alt="Use a free link-shortening service, such as Bitly.com, and customize its back-end." width="300" />
 <p class="caption">
 Figure 8: Use a free link-shortening service, such as Bitly.com, and
 customize its back-end.
@@ -1308,12 +1308,11 @@ but it does *not* work with LibreOffice or Excel.
     spreadsheet with a growing number of responses, your sheet will have
     a larger number in the last cell reference.
 
-<img src="images/02-spreadsheet/sheets-drag-calc.png" alt="Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula, as shown in these three frames." width="300" />
+<iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="300" height="185px">
+</iframe>
 <p class="caption">
-Figure 24: Click on the blue bottom-right dot in cell E2, then
-hold-and-drag your crosshair cursor in cell F2, and let go to
-automatically paste and update the formula, as shown in these three
-frames.
+Figure 24: Caption here, with embedded link to the [animated
+GIF](https://handsondataviz.org/images/17-bookdown/sheets-option-drag.gif).
 </p>
 
 1.  Since the *Occupation* column contains a defined set of text

@@ -12,13 +12,14 @@ updated on: 27 Jul 2020
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
 interactive charts and customized maps for your website, beginning with
-easy drag-and-drop tools, such as Google Sheets and Tableau Public, then
-gradually working up to editing open-source Chart.js and Leaflet code
-templates on GitHub. Follow along with the step-by-step tutorials,
-real-world examples, and online resources. This book is ideal for
-students, non-profit organizations, small business owners, local
-governments, journalists, academics, or anyone who wants to tell their
-story and show the data. No coding experience is required.
+easy drag-and-drop tools, such as Google Sheets, Datawrapper, and
+Tableau Public. You’ll also gradually learn how to edit open-source code
+templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along
+with the step-by-step tutorials, real-world examples, and online
+resources. This book is ideal for students, non-profit organizations,
+small business owners, local governments, journalists, academics, or
+anyone who wants to tell their story and show the data. No coding
+experience is required.
 
 Read for free online at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>
@@ -1308,7 +1309,7 @@ but it does *not* work with LibreOffice or Excel.
     spreadsheet with a growing number of responses, your sheet will have
     a larger number in the last cell reference.
 
-<iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="300" height="185px">
+<iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="300" height="85px">
 </iframe>
 <p class="caption">
 Figure 24: Caption here, with embedded link to the [animated

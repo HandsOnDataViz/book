@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 27 Jul 2020
+updated on: 28 Jul 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -98,7 +98,7 @@ Authors
 Acknowledgements
 ----------------
 
-An earlier version of this book was titled *Data Visualization For All*
+An earlier draft of this book was titled *Data Visualization For All*
 and designed to accompany a [free online edX
 course](https://www.edx.org/course/data-visualization-for-all) by the
 same name at Trinity College. Two co-instructors for this edX course
@@ -106,15 +106,12 @@ contributed valuable ideas and co-created videos: Stacy Lam, Trinity
 Class of 2019, and David Tatem, Instructional Technologist at Trinity
 College. Veronica X. Armendariz, Trinity Class of 2016, also made
 valuable contributions to an earlier version of the book while she was a
-Teaching Assistant for the DataViz internship seminar.
-
-Videos for the edX course were produced with Trinity College Information
-Technology staff and friends: Angie Wolf, Sean Donnelly, Ron Perkins,
-Samuel Oyebefun, Phil Duffy, and Christopher Brown.
-
-Funding for student contributors to an earlier version of this book was
-generously provided by the [Community Learning
-Initiative](https://cher.trincoll.edu/community-learning/) and
+Teaching Assistant for the DataViz internship seminar. Videos for the
+edX course were produced with Trinity College Information Technology
+staff and friends: Angie Wolf, Sean Donnelly, Ron Perkins, Samuel
+Oyebefun, Phil Duffy, and Christopher Brown. Funding for students who
+worked on the earlier draft was generously provided by the [Community
+Learning Initiative](https://cher.trincoll.edu/community-learning/) and
 [Information Technology Services](https://www.trincoll.edu/LITC/its/) at
 [Trinity College in Hartford, Connecticut](http://www.trincoll.edu).
 
@@ -125,6 +122,10 @@ templates while at *The Connecticut Mirror*; Patrick Murray-John,
 formerly at the Roy Rosenzweig Center for History and New Media, who
 clued us into being *code-curious*, and many others at The Humanities
 and Technology Camp (THATCamp) conference series…
+
+We appreciate everyone who provided feedback to improve this book,
+especially Amelia Blevins, our developmental editor at O’Reilly, and
+technical reviewers Carl Allchin,…
 
 What is Data Visualization?
 ---------------------------
@@ -648,10 +649,10 @@ Which spreadsheet tools should you use? As we describe in more detail in
 [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), the
 answer depends on how you respond to different questions about your
 work. First, is your data public or private? If private, consider using
-a downloadable spreadsheet tool that runs on your personal computer, to
-reduce the risk of an accidental data breach that might happen when
-using an online spreadsheet tool that automatically stores your data in
-the cloud. Second, will you be working solo or with other people? For
+a downloadable spreadsheet tool that runs on your computer, to reduce
+the risk of an accidental data breach that might happen when using an
+online spreadsheet tool that automatically stores your data in the
+cloud. Second, will you be working solo or with other people? For
 collaborative projects, consider using an online spreadsheet tool that’s
 designed to allow other team members to simultaneously view or edit
 data. Third, do you need to import or export data in any specific format
@@ -730,9 +731,9 @@ spreadsheet tools, and we point out exceptions when relevant.
 ### Sidebar: Common data formats
 
 Spreadsheet tools organize data in different formats. When you download
-spreadsheet data to your personal computer, you typically see its
-filename, followed by a period and a 3- or 4-character abbreviated
-extension, which represents the data format, as shown in Figure
+spreadsheet data to your computer, you typically see its filename,
+followed by a period and a 3- or 4-character abbreviated extension,
+which represents the data format, as shown in Figure
 <a href="#fig:data-formats">2</a>. The most common data formats we use
 in this book are:
 
@@ -744,8 +745,7 @@ in this book are:
     supports multi-tabbed sheets, formulas, styling, etc.
 -   `.gsheet` means Google Sheets, which also supports multi-tabbed
     sheets, formulas, styling, etc., but you don’t normally see these on
-    your personal computer because they are primarily designed to exist
-    online.
+    your computer because they are primarily designed to exist online.
 
 <img src="images/02-spreadsheet/data-formats.png" alt="Three data formats commonly seen on your computer---csv, ods, and xlsx---when displayed properly in the Mac Finder." width="350" />
 <p class="caption">
@@ -979,10 +979,10 @@ format, which makes them harder to edit. Google turns off this
 conversion setting by default on new accounts, but we’ll teach you how
 to turn it on, and the benefits of doing so.
 
-1.  Find a sample Excel file you can use on your personal computer. If
-    you don’t have one, open and save to download to your computer this
-    [Excel file of a subset of the Hands-On Data Visualization reader
-    public survey
+1.  Find a sample Excel file you can use on your computer. If you don’t
+    have one, open and save to download to your computer this [Excel
+    file of a subset of the Hands-On Data Visualization reader public
+    survey
     responses](https://handsondataviz.org/data/subset-reader-survey.xlsx)
 
 2.  Log into your [Google Drive](https://drive.google.com) account, and
@@ -1339,16 +1339,20 @@ is *educator*.
 </p>
 
 Spreadsheet tools contain many more functions to perform numerical
-calculations and also to modify text, as described in this [Google
-Sheets Help Page](https://support.google.com/docs/topic/9054603). See
-additional spreadsheet skills in later chapters of the book. [Chapter 4:
-Clean Up Messy Data](clean.html) demonstrates how to find and replace,
-split data into columns, and combine columns of data (such as when you
-need the street address, city, and postal code all in one line).
-[Chapter 11: Transform Your Map Data](transform.html) also features more
-advanced spreadsheet skills and tools, such as how to geocode addresses,
-pivot address points into polygons, and how to normalize data to create
-more meaningful polygon maps.
+calculations and also to modify text. Read more about functions in this
+support pages for [Google
+Sheets](https://support.google.com/docs/topic/9054603),
+[LibreOffice](https://help.libreoffice.org/Calc/Functions_by_Category),
+or [Microsoft Excel support
+page](https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb).
+See additional spreadsheet skills in later chapters of the book.
+[Chapter 4: Clean Up Messy Data](clean.html) demonstrates how to find
+and replace, split data into columns, and combine columns of data (such
+as when you need the street address, city, and postal code all in one
+line). [Chapter 11: Transform Your Map Data](transform.html) also
+features more advanced spreadsheet skills and tools, such as how to
+geocode addresses, pivot address points into polygons, and how to
+normalize data to create more meaningful polygon maps.
 
 Now that you’ve learned how to count one type of survey response, the
 next section will teach you how to regroup data with pivot tables that

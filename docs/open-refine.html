@@ -174,6 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for Your Search</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data</a></li>
 <li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
@@ -242,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
@@ -331,16 +333,16 @@ Let’s now use OpenRefine to clean it up.</p>
 <p>You can download a copy of OpenRefine for Linux, Mac, or Windows from the <a href="https://openrefine.org/download.html">official
 download page</a>. Just like Tabula, it runs in your browser and no
 data leaves your local machine, which is great for confidentiality.</p>
-<p>If you work on a <strong>Mac</strong>, the downloaded file will be a .dmg file. You will likely encounter
+<p>If you work on a Mac, the downloaded file will be a .dmg file. You will likely encounter
 a security message that will prevent OpenRefine from launching. Go to System Preferences -&gt; Security and Privacy, and
 hit <em>Open Anyway</em> button in the lower half of the window. If prompted with another window, click <em>Open</em>.</p>
-<p>If you use <strong>Windows</strong>, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
+<p>If you use Windows, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
 open in your default browser.</p>
 <p>Once launched, you should see OpenRefine in your browser with <code>127.0.0.1:3333</code> address (localhost, port 3333),
 like shown in Figure <a href="open-refine.html#fig:openrefine-welcome">4.8</a>.</p>
 
 <div class="figure"><span id="fig:openrefine-welcome"></span>
-<img src="images/04-clean/openrefine-welcome.png" alt="OpenRefine starting page."  />
+<img src="images/04-clean/openrefine-welcome-annotated.png" alt="OpenRefine starting page."  />
 <p class="caption">
 Figure 4.8: OpenRefine starting page.
 </p>
@@ -355,8 +357,8 @@ OpenRefine is able to extract data directly from SQL databases, but this is beyo
 We assume that you downloaded the sample dataset we provided (or you are using your own file),
 so let’s load it from your computer.</p>
 <ol style="list-style-type: decimal">
-<li>Under <em>Get data from: This computer</em>, click <em>Browse…</em> and select the file. Click Next.</li>
-<li>Before you can start cleaning up data, OpenRefine allows you to make sure data is <strong>parsed</strong> properly.
+<li>Under <em>Get data from: This computer</em>, click <em>Browse…</em> and select the file. Click <em>Next</em>.</li>
+<li>Before you can start cleaning up data, OpenRefine allows you to make sure data is <em>parsed</em> properly.
 In our case, parsing means the way the data is split into columns.
 Make sure OpenRefine assigned values to the right columns,
 or change setting in <em>Parse data as</em> block at the bottom of the page until it starts looking meaningful,
@@ -392,16 +394,19 @@ That is because dollar sign (<code>$</code>) and commas (<code>,</code>) confuse
 disappear in the preview window. When you confirm your formula works, click <em>OK</em>.</li>
 <li>Now, repeat the previous step, but instead of a comma, remove the <code>$</code> character.
 (Your expression will become <code>value.replace('$', '')</code>).</li>
-<li>Perform Step 1 again.
-You will see that all but three
-cells turned green. That is because we have spaces and an <code>a</code> character at the end of one number.
+<li>In steps 3 and 4, we replaced text (string) values with other string values,
+making OpenRefine think this column is no longer numeric. As a result, all values
+are once again left-aligned and in black. Perform step 1 again to
+see that all but three
+cells turning green (successfully converting to numeric).
+Now we need to remove spaces and an <code>a</code> character at the end of one number.
 Fix those manually by hovering over cells, and clicking the <code>edit</code> button
 (in the new popup window, make sure to change <em>Data type</em> to <em>number</em>, and hit <em>Apply</em>,
 like in Figure <a href="open-refine.html#fig:openrefine-manual-edit">4.10</a>).</li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-manual-edit"></span>
-<img src="images/04-clean/openrefine-manual-edit.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
+<img src="images/04-clean/openrefine-manual-edit-annotated.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
 <p class="caption">
 Figure 4.10: Manually remove spaces and extra characters, and change data type to number.
 </p>
@@ -428,8 +433,9 @@ and choose <em>Edit cells</em> &gt; <em>Cluster and edit</em>. You will see a wi
 methods can be powered by different functions, but let’s leave the default <em>key collision</em> with <em>fingerprint</em> function.</li>
 <li>OpenRefine will calculate a list of clusters. <em>Values in Cluster</em> column contains grouped spellings
 that OpenRefine considers the same. If you agree with a grouping, check the <em>Merge?</em> box, and assign
-the “true” value to the <em>New Cell Value</em> input box. In our example, this would be either <code>North Korea</code> or <code>South Korea</code>.</li>
-<li>You can go through all groupings, <strong>or</strong> stop after one or two and click <strong>Merge Selected &amp; Re-Cluster</strong> button.
+the “true” value to the <em>New Cell Value</em> input box (see first cluster in Figure <a href="open-refine.html#fig:openrefine-cluster">4.11</a>).
+In our example, this would be either <code>North Korea</code> or <code>South Korea</code>.</li>
+<li>You can go through all groupings, or stop after one or two and click <em>Merge Selected &amp; Re-Cluster</em> button.
 The clusters you chose to merge will be merged, and grouping will be re-calculated
 (don’t worry, the window won’t go anywhere). Keep regrouping until you are happy with the result.</li>
 </ol>
@@ -437,7 +443,7 @@ The clusters you chose to merge will be merged, and grouping will be re-calculat
 how they produce clusters of different sizes and accuracy.</p>
 
 <div class="figure"><span id="fig:openrefine-cluster"></span>
-<img src="images/04-clean/openrefine-cluster.png" alt="Cluster similar text values."  />
+<img src="images/04-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
 <p class="caption">
 Figure 4.11: Cluster similar text values.
 </p>
@@ -453,12 +459,13 @@ Now you have a clean dataset that is ready to be processed and visualized.</p>
 <div id="summary4" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
 <p>In this chapter, we looked at cleaning up tables in Google Sheets,
-liberating tabular data trapped in PDFs
-using Tabula, and using OpenRefine to clean up very messy datasets.
+liberating tabular data trapped in PDFs using Tabula, and using
+OpenRefine to clean up very messy datasets.
 You will often find yourself using several of these tools on the same dataset
 before it becomes good enough for your analysis. We encourage you to
 learn more formulas in Google Sheets, and explore extra functionality of OpenRefine
-in your spare time.</p>
+in your spare time. The more clean-up tools and techniques you know, the more able and adaptable
+you become to tackle more complex cases.</p>
 <p>You now know how to clean up your data, so let’s proceed to visualizing it.
 In the following chapter, we will introduce you to a range of free data visualization
 tools that you can use to build interactive charts and embed them in your website.</p>

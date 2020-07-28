@@ -174,6 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for Your Search</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data</a></li>
 <li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
@@ -242,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
@@ -315,7 +317,9 @@ to be a quick alternative for some common but time-consuming tasks.</p>
 <h4>Import, convert, and export map boundary files</h4>
 <p>You can use Mapshaper to convert between geospatial file formats. Unlike GeoJson.io,
 Mapshaper also supports Esri Shapefiles (which is a folder of individual files with the same name,
-but different extensions), so you can easily convert a Shapefile into a web-friendly GeoJSON.</p>
+but different file extensions), so you can easily convert a Shapefile into a web-friendly GeoJSON.
+In the following steps, we will convert a geospatial file by import it to Mapshaper,
+and then export it as a different file type.</p>
 <ol style="list-style-type: decimal">
 <li>Navigate to <a href="https://mapshaper.org">Mapshaper.org</a>. The start page is two large drag-and-drop zones
 which you can use to import your file. The smaller area at the bottom, <em>Quick import</em>, uses default
@@ -373,16 +377,18 @@ Figure 11.16: Use <em>edit attributes</em> tool (under Cursor tool) to edit attr
 <p>You may not need precise and detailed map boundaries for
 data visualization projects where zoomed-out geographies are shown.
 Detailed boundaries are heavy, and may slow down your web maps.</p>
-<p>Consider two maps of the contiguous US states, also known as Lower-48, shown in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">11.17</a>.
-The map on the left is more detailed and is about 230 kilobytes, but the map on the right
+<p>Consider two maps of the contiguous US states (also known as <em>the lower 48</em>,
+the term Ilya learned in 2018 while travelling in Alaska), shown in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">11.17</a>.
+The map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">11.17</a>a is more detailed and is about 230 kilobytes, but the map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">11.17</a>b
 is only 37 kilobytes, 6 times smaller!</p>
 
 <div class="figure"><span id="fig:mapshaper-simplify-demo"></span>
-<img src="images/11-transform/mapshaper-simplify-demo.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
+<img src="images/11-transform/mapshaper-simplify-demo-annotated.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
 <p class="caption">
 Figure 11.17: Consider simplifying geometries with Mapshaper to make your web maps faster.
 </p>
 </div>
+<p>To simplify map boundaries in Mapshaper, follow the steps below.</p>
 <ol style="list-style-type: decimal">
 <li>Import your geo file to Mapshaper. You can use the <a href="data/lower-48.geojson">sample contiguous US states GeoJSON</a>.</li>
 <li>Click the <em>Simplify</em> button in the upper-right corner. The Simplification menu will appear,
@@ -407,7 +413,7 @@ which is more common.</p>
 </div>
 <div id="dissolve-internal-polygons-to-create-an-outline-map" class="section level4 unnumbered" number="">
 <h4>Dissolve internal polygons to create an outline map</h4>
-<p>Mapshaper’s most powerful tools are available through <strong>Console</strong>, which allows you to type commands for common map editing tasks.
+<p>Mapshaper’s most powerful tools are available through the <em>Console</em>, which allows you to type commands for common map editing tasks.
 One of such tasks is to create an outline map by removing the internal boundaries. For example, you can dissolve
 state boundaries of the US map in the previous exercise to get the outline of the country, like is shown in
 Figure <a href="mapshaper.html#fig:mapshaper-dissolve">11.19</a>.</p>
@@ -433,7 +439,7 @@ You need to “cut” the original towns map to only include those towns that fa
 <li>Import two boundary files into Mapshaper. One is the larger one that is being clipped (if you use sample files, <em>ct-towns</em>),
 and one is the desired final shape (<em>hartfordcounty-outline</em>). The latter is what ArcGIS calls the “clip feature”.</li>
 <li>Make sure your active layer is set to the map you are clipping (<em>ct-towns</em>).</li>
-<li>In the <strong>Console</strong>, type <code>-clip</code> followed by the name of your clip layer, like that:</li>
+<li>In the <em>Console</em>, type <code>-clip</code> followed by the name of your clip layer, like that:</li>
 </ol>
 <pre><code>-clip hartfordcounty-outline</code></pre>
 <ol start="4" style="list-style-type: decimal">
@@ -455,12 +461,12 @@ Figure 11.20: When clipping, make sure your active layer is the one being clippe
 <div id="remove-unwanted-data-fields" class="section level4 unnumbered" number="">
 <h4>Remove unwanted data fields</h4>
 <p>Sometimes map features, such as polygons, lines, and points, contain unwanted <em>attributes</em> (or fields, or columns) that you may want to remove.
-In <strong>Console</strong>, use <code>-filter-fields</code> editing command to remove unnecessary fields.</p>
+In the <em>Console</em>, type the <code>-filter-fields</code> editing command to remove unnecessary fields.</p>
 <p>For example, remove all fields except <em>town</em>:</p>
 <pre><code>-filter-fields town</code></pre>
 <p>If you want to leave more than one field, separate them by a comma, but without spaces, like that:</p>
 <pre><code>-filter-fields town,state</code></pre>
-<p>Note: If you leave a space after comma, you will get a <em>Command expects a single value</em> error.</p>
+<p>Warning: If you leave a space after comma, you will get a <em>Command expects a single value</em> error.</p>
 </div>
 <div id="join-spreadsheet-data-with-polygon-map" class="section level4 unnumbered" number="">
 <h4>Join spreadsheet data with polygon map</h4>
@@ -478,7 +484,7 @@ Your CSV data will be shown as something that resembles a table. Use the <em>Cur
 to make sure the data is imported correctly. If you use the sample CT files, note that the <em>ct-towns</em> layer
 has <em>name</em> attribute with the name of the town, and <em>ct-towns-popdensity</em> has town names in the <em>town</em> column.</li>
 <li>Make your geospatial layer (<em>ct-towns</em>) is the one active.</li>
-<li>Open <strong>Console</strong>, and use the <code>-join</code> command, like that:</li>
+<li>Open the <em>Console</em>, and use the <code>-join</code> command, like this:</li>
 </ol>
 <pre><code>-join ct-towns-popdensity keys=name,town</code></pre>
 <p>where <code>ct-towns-popdensity</code> is the CSV layer you are merging with, and <code>keys</code> are the attributes that contain values to join by.
@@ -498,8 +504,8 @@ Figure 11.21: Mapshaper lets you join spatial and CSV files using common keys (f
 </div>
 <p>Tip: To avoid confusion, it may be useful to re-name your CSV column that contains key values to match the key attribute name of your map.
 In our example, you would rename <em>town</em> column to <em>name</em> column in the CSV, and your command would end with <code>keys=name,name</code>.</p>
-<p>Do you remember aggregating address-level point records of hospitals into <a href="pivot-point-to-polygon.html">hospital counts per state</a>?
-Now is a good time to find that .CSV file and practice your merging skills.</p>
+<p>Do you remember aggregating address-level point records of hospitals into <a href="pivot-point-to-polygon.html">hospital counts per state</a>
+discussed earlier in this chapter? Now is a good time to find that .CSV file and practice your merging skills.</p>
 </div>
 <div id="count-points-in-polygons-with-mapshaper" class="section level4 unnumbered" number="">
 <h4>Count points in polygons with Mapshaper</h4>
@@ -509,7 +515,7 @@ Now is a good time to find that .CSV file and practice your merging skills.</p>
 and another containing points that you want to aggregate (for example,
 <a href="data/hospitals-points.geojson">hospitals in the US</a>).</p></li>
 <li><p>Make sure your polygons (not points) layer is active by selecting it from the dropdown menu.</p></li>
-<li><p>In <strong>Console</strong>, perform <code>-join</code> using a <code>count()</code> function, like that:</p></li>
+<li><p>In the <em>Console</em>, perform <code>-join</code> using a <code>count()</code> function, like this:</p></li>
 </ol>
 <pre><code>-join hospitals-points calc=&#39;hospitals = count()&#39; fields=</code></pre>
 <p>This command tells Mapshaper to count points inside <em>hospitals-points</em> layer and record them as <em>hospitals</em> attribute of the polygons.
@@ -530,8 +536,10 @@ Figure 11.22: Mapshaper’s -join can count points in polygons.
 </div>
 <div id="more-about-joins" class="section level4 unnumbered" number="">
 <h4>More about joins</h4>
-<p>As you saw in counting points in polygons example, you do not need to specify <em>keys</em> if you want to perform join
-based on geographical locations between two geo files. If one of your files is a CSV, you need <em>keys</em>.</p>
+<p>From the “Count points in polygons with Mapshaper” section of this chapter,
+you should recall that you do not need to specify <em>keys</em> if you want to perform join
+based on geographical locations between two geospatial layers (one being points, the other is polygons).
+If one of your files is a CSV, you need <em>keys</em>.</p>
 <p>If you don’t have a CSV table that matches the columns in your boundary map data, you can easily create one.
 Upload the boundary map to Mapshaper, and export in CSV format. Open the downloaded file in any spreadsheet tool.
 To match data columns in the CSV spreadsheet, use the <a href="vlookup.html">VLOOKUP</a> function.</p>
@@ -556,8 +564,10 @@ And the <code>-info</code> flag outputs some additional information about the jo
 <p>Imagine that you are employed by the CT Department of Public Health, and your task is
 to divide 169 towns into 20 so-called Health Districts and produce a new geospatial file.
 By the way, health districts <a href="https://portal.ct.gov/DPH/Local-Health-Admin/LHA/Local-Health-Administration---Site-Map">are a real thing in Connecticut</a>.</p>
-<p>You should begin by creating a <em>crosswalk</em> of towns and their health districts. It can be as simple as a two-column CSV list
-of a town and its district. Because your boss didn’t give you a list of towns in a spreadsheet format,
+<p>You should begin by creating a <em>crosswalk</em> of towns and their health districts.
+Computer scientists and those working with data often use the term <em>crosswalk</em> to describe some kind of matching
+between two sets of data, such as zipcodes and towns where they are located. In our case, the crosswalk can be as simple as a two-column CSV list
+of a town and its district, each on a new line. Because your boss didn’t give you a list of towns in a spreadsheet format,
 but instead a GeoJSON file with town boundaries, let’s extract a list of towns from it.</p>
 <ol style="list-style-type: decimal">
 <li>Import <a href="data/ct-towns.geojson">ct-towns.geojson</a> to Mapshaper using Quick import box.</li>
@@ -581,7 +591,7 @@ Figure 11.23: Create a two-column crosswalk of towns and which districts they sh
 <li>Save this new file as <em>ct-towns-merged.csv</em>, and drag-and-drop it to Mapshaper on top of your <em>ct-towns</em> layer. Click <em>Import</em>.</li>
 <li>This new CSV layer will be added as <em>ct-towns-merged</em> and will appear as a series of table cells. From the dropdown menu,
 select <em>ct-towns</em> to get back to your map.</li>
-<li>Now you are ready to merge certain towns into districts according to your uploaded CSV file. Open <strong>Console</strong>, and type:</li>
+<li>Now you are ready to merge certain towns into districts according to your uploaded CSV file. Open the <em>Console</em>, and type:</li>
 </ol>
 <pre><code>-join ct-towns-merged keys=name,name</code></pre>
 <p>to join the CSV layer with the boundaries layer that you see on the screen, followed by</p>

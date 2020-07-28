@@ -1744,23 +1744,33 @@ Find and Know Your Data
 =======================
 
 In the early stages of a visualization project, you will likely ask two
-important and related questions: *Where can I find data?* and when I do,
-*How do I know what it really means?* If you skip over these questions
-and leap too quickly into constructing charts and maps, you run the risk
-of creating meaningless, or perhaps worse, misleading visualizations.
-This chapter breaks down both of these broad questions in greater
-detail, and provides concrete strategies to [recognize bad
-data](bad.html), [source your data](source.html), navigate [public
-versus private data](public.html), and search a growing number of [open
-data repositories](opendata.html).
+important and related questions: *Where can I find data?* and *What do I
+really know about it?* If you skip over these questions and leap too
+quickly into constructing charts and maps, you run the risk of creating
+meaningless, or perhaps worse, misleading visualizations. This chapter
+breaks down both of these broad questions in greater detail, and
+provides concrete strategies to [guide your
+search](guide.html)[recognize bad data](bad.html), [source your
+data](source.html), navigate [public versus private data](public.html),
+and search a growing number of [open data repositories](opendata.html).
 
-When searching for data, your newest best friend may be a librarian.
-Sometimes a data-smart librarian happens to know exactly where to locate
-a dataset that you’ve been seeking for day. But their more valuable
-skill is guiding us on *how to search* by reflecting on the types of
-questions librarians commonly ask:
+Guiding Questions for Your Search
+---------------------------------
 
-1.  What types of organizations may have collected or published the data
+TODO: REDO… When searching for data, your newest best friend may be a
+librarian. Sometimes a data-smart librarian happens to know exactly
+where to locate a dataset that you’ve been seeking for day. But their
+more valuable skill is guiding us on *how to search* by reflecting on
+the types of questions librarians commonly ask:
+
+-   What’s the question you’re trying to answer? Write it down in the
+    form of a researchable question. For example…. when journalists
+    Jacqueline Rabe Thomas and XY explored lost education during covid,
+    they asked: *INSERT WELL-FORMED QUESTION* and cite their study…
+    Similarly, when data journalists Andrew Ba Tran and others at the
+    Wash Post investigated prescription drug abuse(?), they asked….
+
+-   What types of organizations may have collected or published the data
     you seek? If a governmental organization may have been involved,
     then at what level (national, state/provincial, regional, or
     municipal), and which branch or agency? Or might data have been
@@ -1771,15 +1781,15 @@ questions librarians commonly ask:
     typically publish, and most appropriate tools to focus your search
     in that particular area.
 
-2.  Have any prior publications drawn on similar datasets, and if so,
-    how can we trace their sources? Some of our best data visualization
+-   Have prior publications drawn on similar datasets, and if so, how
+    can we trace their sources? Some of our best data visualization
     ideas began while reading textual evidence or noticing a table in a
     print publication or outdated web page, which convinced us that the
     data existed *somewhere*. With these valuable leads, librarians can
     help you track down source notes on where the data originated, or
     sometimes find more up-to-date versions of the data.
 
-3.  What level(s) of data are available? Is information disaggregated by
+-   What level(s) of data are available? Is information disaggregated by
     individual cases or aggregated into larger groups? Librarians can
     help us to decipher how and why different organizations publish data
     in different formats. For example, US Census seeks to collect data
@@ -1796,11 +1806,17 @@ questions librarians commonly ask:
     guidelines on when and how they make data available at different
     levels.
 
+Know Your Data
+--------------
+
+TODO: explain more about expectations about “knowing what you data
+means” in the scope of this chapter….
+
 If your search has produced some results, the next step is to get to
 know your data. Closely examine your files and ask questions about their
 origin, meaning, and limitations:
 
-1.  Who collected and published this data, and for what purpose? Since
+-   Who collected and published this data, and for what purpose? Since
     individuals and organizations require time and resources to do this
     work, seek to clarify their motivations and assumptions, both
     explicit and implicit ones. Who was the intended audience of the
@@ -1811,7 +1827,7 @@ origin, meaning, and limitations:
     Numbers are *not* neutral, and we always need to consider the
     broader contexts in which people created them.
 
-2.  What do the data labels *really* mean? Most spreadsheets contain
+-   What do the data labels *really* mean? Most spreadsheets contain
     abbreviated column headers, particularly due to software character
     limits, but some questions of data interpretation run much deeper.
     For example, socially-constructed labels such as “race” or “gender”
@@ -1837,14 +1853,14 @@ Recognize Bad Data
 
 A vital skill needed by all data visualization creators is the ability
 to recognize bad data. If you fail to catch a problem in your data at an
-early stage, someone else may discover it later, which could diminish
-the credibility of all of your work. Fortunately, members of the data
-visualization community have shared multiple examples of issues we’ve
-encountered in our work, and newer members will benefit from our
-embarrassing mistakes. One popular crowd-sourced compilation by data
-journalists was [The Quartz Guide to Bad
-Data](https://github.com/Quartz/bad-data-guide), last updated in 2018,
-which includes several of these helpful warning signs:
+early stage, someone else may discover it later, which could lead to
+false conclusions and diminish the credibility of all of your work.
+Fortunately, members of the data visualization community have shared
+multiple examples of issues we’ve encountered in our work, and newer
+members will benefit from our embarrassing mistakes. One popular
+crowd-sourced compilation by data journalists was [The Quartz Guide to
+Bad Data](https://github.com/Quartz/bad-data-guide), last updated in
+2018, which includes several of these helpful warning signs:
 
 Watch out for spreadsheets with “bad data”:
 
@@ -1875,11 +1891,17 @@ Watch out for spreadsheets with “bad data”:
     2020 into Microsoft Excel, it automatically displays as `1-Mar`, but
     is saved using Excel’s internal date system as `43891`. If someone
     converts this column from date to text format, you’ll see Excel’s
-    5-digit number, not the dates you’re expecting. According to a [2016
-    report in the Washington
-    Post](https://www.washingtonpost.com/news/wonk/wp/2016/08/26/an-alarming-number-of-scientific-papers-contain-excel-errors/),
-    a team of geneticists detected a surprisingly high number of related
-    Excel errors in papers published in leading scientific journals.
+    5-digit number, not the dates you’re expecting.
+
+TODO: ADD So when you encounter “bad data,” what should you do? Follow
+the source of your data stream to identify where the problem arose… If
+you cannot resolve the problem on your own, contact the data provider to
+ask about the issue….. And if no one can help you to resolve an
+important data issue, then decide whether you need can still work on
+your data and add a cautionary note, or whether it’s wiser to stop and
+reevaluate. …. So what should the reader do? Ignore the data set? Filter
+out rogue results? I think some advice needs to be given as to how to
+deal with this situation once they identify it.”
 
 Source Your Data
 ----------------
@@ -1908,7 +1930,7 @@ names look like this:
 
 -   town-demographics-2019-12-02.csv
 -   census2010\_population\_by\_county.xls
--   eurostat-1999-2019-CO2-emissions.xlsx
+-   eurostat-1999-2019-co2-emissions.xlsx
 
 The second step is to save more detailed source notes about the data on
 a separate tab inside the spreadsheet (which works for multi-tab
@@ -1928,9 +1950,10 @@ Figure 38: Create separate spreadsheet tabs for data, notes, and backup.
 A third step is to make a backup of the original data before cleaning or
 editing it. For a simple one-sheet file in a multi-tab spreadsheet tool,
 right-click on the tab containing the data to make a duplicate copy in
-another tab, also shown in the preceding figure. Clearly label the new
-tab as a backup and leave it alone! For CSV files or more complex
-spreadsheets, create a separate backup file.
+another tab, also shown in Figure
+<a href="#fig:sheets-with-tabs">38</a>. Clearly label the new tab as a
+backup and leave it alone! For CSV files or more complex spreadsheets,
+create a separate backup file.
 
 Make a habit of using these three sourcing strategies—filenames, notes,
 and backups—to reduce your chances of making “bad data” errors and to
@@ -1949,78 +1972,128 @@ observations about data privacy based on our context in the United
 States. Since we are not lawyers (thank goodness!), please consult with
 legal experts for advice about your specific case.
 
-Here’s what’s most important—and confusing—about access to data in the
-US. Individual-level data is often considered private, except in certain
-areas where our governmental process has determined that broader
-interests are served by making it public. First, here are two examples
-where individual-level data generally remains private:
+In the United States, the 1966 [Freedom of Information
+Act](https://en.wikipedia.org/wiki/Freedom_of_Information_Act) and its
+subsequent amendments have sought to open access to information in the
+federal government, with the view that increased transparency would
+promote public scrutiny and pressure on officials to make positive
+changes. In addition, state governments operate under their own freedom
+of information laws, sometimes called “open records” or “sunshine laws.”
+When people say they’ve submitted a “FOIA,” it means they’ve sent a
+written request to a government agency for information that they believe
+should be public under the law. But federal and state FOIA laws are
+complex, and courts have interpreted cases in different ways over time,
+as summarized in the [Open Government
+Guide](https://www.rcfp.org/open-government-guide/) by the Reporters
+Committee for Freedom of the Press, and also by the [National Freedom of
+Information Coalition](https://www.nfoic.org/). Sometimes government
+agencies quickly agree and comply with a FOIA request, while other times
+they may delay or reject it, which may pressure the requester to attempt
+to resolve the issue through time-consuming litigation. Around the
+world, [over 100 nations have their own version of freedom of
+information
+laws](https://en.wikipedia.org/wiki/Freedom_of_information_laws_by_country),
+with the oldest being Sweden’s 1766 Freedom of the Press Act, but these
+laws vary widely.
+
+What’s most important—and confusing—about access to US data is that
+individual-level data is usually considered private, except in certain
+areas where our governmental process has determined that a broader
+interest is served by making it public. On one hand, here are two
+categories where individual-level data is private under federal law:
 
 -   Patient-level health data is generally protected under the [Privacy
     Rule of the Health Insurance Portability and Accountability
     Act](https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act#Privacy_Rule),
-    commonly known as HIPAA. But public health officials regularly
-    aggregate individual patient records into larger anonymized public
-    datasets to track progress about various illnesses.
+    commonly known as HIPAA. Public health officials regularly aggregate
+    patient records into larger anonymized public datasets to track
+    progress about various illnesses. This process keeps
+    individual-level data about each patient private, but allows the
+    public to benefit from information about broad trends.
+
 -   Student-level education data is generally protected under the
     [Family Educational Rights and Privacy
     Act](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act),
-    commonly known as FERPA. But education officials regularly aggregate
-    individual student records into larger anonymized public datasets to
-    track the progress of schools, districts, and states.
+    commonly known as FERPA. Public education officials regularly
+    aggregate student records into larger anonymized public datasets to
+    track the progress of schools, districts, and states. Once again,
+    this process keeps individual-level data about each student private,
+    but allows the public to benefit from information about broad
+    trends.
 
-But here are other examples where our government has determined that a
-broader interest is served by making individual-level data available to
-the public:
+On the other hand, here are three categories where government has ruled
+that the public interest is served by making individual-level data
+available to all:
 
--   Individual contributions to political candidates are public. You can
-    search donors by name and address in this [US Federal Election
-    Commission public
-    database](https://www.fec.gov/data/receipts/individual-contributions/),
-    as well as other state-level sites.
--   Individual salaries for officers of tax-exempt organizations are
-    public. You can search by name across a digitized database of
-    Internal Revenue Service (IRS) 990 forms that tax-exempt
-    organizations are required to submit on several platforms, such as
-    ProPublica’s [Nonprofit
-    Explorer](https://projects.propublica.org/nonprofits).
+-   Individual contributions to political candidates are public
+    information in the [US Federal Election Commission
+    database](https://www.fec.gov/data/receipts/individual-contributions/).
+    See related databases such as [Follow The
+    Money](https://www.followthemoney.org/) by the National Institute on
+    Money in Politics and [Open Secrets](http://www.opensecrets.org/) by
+    the Center for Responsive Politics, which both describe more details
+    about donations submitted through political action committees and
+    controversial exceptions to campaign finance laws. Across the US,
+    state-level political contribution laws vary widely, and public
+    records are stored in separate databases. For example, anyone can
+    search the [Connecticut Campaign Reporting Information
+    System](https://seec.ct.gov/Portal/eCRIS/eCrisSearch) to find
+    donations made by the first author to state-level political
+    campaigns.
+
 -   Individual property ownership records are public, and increasingly
-    online in many locations. For example, one company provides a [US
+    hosted online by many local governments. This privately-funded [US
     public records directory](https://publicrecords.netronline.com/)
-    with links to local government property records, where available.
-    Follow the links to search the value of the home owned by the first
-    author in West Hartford, Connecticut, how much he and his spouse
-    paid for it, the number of bathrooms, and so forth.
--   Individual police officer reports regarding “use of force” are
-    public by New Jersey state law. But no one could easily search these
-    local police department records until a team of journalists from NJ
-    Advance Media created a public database, [The Force
-    Report](https://force.nj.com/), where anyone can look up individual
-    officers and investigate patterns of violence.
+    provides links to county and municipal property records, where
+    available. For example, anyone can search the [property assessment
+    database for the Town of West Hartford,
+    Connecticut](http://gis.vgsi.com/westhartfordct/) to find property
+    owned by the first author, its square footage, and purchase price.
 
-Also, the US federal government is subject to the [Freedom of
-Information
-Act](https://en.wikipedia.org/wiki/Freedom_of_Information_Act), which
-enables people to submit a “FOIA” request to obtain certain types of
-public records to improve government transparency. Individual states and
-their municipalities are subject to their own Freedom of Information
-laws, which are summarized in the [Open Government
-Guide](https://www.rcfp.org/open-government-guide/) by the Reporters
-Committee for Freedom of the Press, and also by the [National Freedom of
-Information Coalition](https://www.nfoic.org/). While some government
-agencies delay or reject FOIA requests, which can result in expensive
-litigation, others have begun to pro-actively share more public
-information on open data repositories.
+-   Individual salaries for officers of tax-exempt organizations are
+    public, which they are required to file on Internal Revenue Service
+    (IRS) 990 forms each year. For example, anyone can search 990 forms
+    on ProPublica’s [Nonprofit
+    Explorer](https://projects.propublica.org/nonprofits), and view the
+    salary and other compensation of the top officers of the first
+    author’s employer, Trinity College in Hartford, Connecticut.
+
+The boundary between what types of individual-level data should remain
+private or become public is continually changing, and subject to
+political and social pressures. On one hand, critics of “[big
+data](https://en.wikipedia.org/wiki/Big_data)” and “[surveillance
+capitalism](https://en.wikipedia.org/wiki/Surveillance_capitalism)”
+charge that governments seek more power and corporations seek more
+profits by collecting and commodifying massive amounts of personal data
+about each individual. On the other hand, the Black Lives Matter
+movement has gradually made more individual-level data publicly
+available on violence by police officers. For example, New Jersey state
+law required local police departments to make “use of force” reports
+publicly available, but no one could easily search these paper forms
+until a team of journalists from from NJ Advance Media created [The
+Force Report public database](https://force.nj.com/), where anyone can
+look up individual officers and investigate possible patterns of violent
+behavior. Similarly, a team of ProPublica journalists created [The NYPD
+Files public database](https://projects.propublica.org/nypd-ccrb/),
+which now allows anyone to search closed cases of civilian complaints
+against New York City police officers, by name or precinct, for
+potential patterns of substantiated allegations. People working in the
+field of data visualization need to stay informed about the shifting
+boundary lines between private versus public individual-level data, and
+contribute to discussions about whose interests are served by making
+more data available.
 
 Open Data Repositories
 ----------------------
 
 Over the past decade, an increasing number of governmental and
-non-governmental organizations have begun to publicly share data through
-open data repositories. While some of these datasets were previously
-available as individual files on isolated websites, these growing
-networks have made open data easier to find, enabled more frequent
-updates, and sometimes have allowed live interaction. Open data
-repositories often include these features:
+non-governmental organizations in the US and around the globe have begun
+to pro-actively share public data through open data repositories. While
+some of these datasets were previously available as individual files on
+isolated websites, these growing networks have made open data easier to
+find, enabled more frequent agency updates, and sometimes support live
+interaction with other computers. Open data repositories often include
+these features:
 
 -   View and Export: At minimum, open data repositories allow users to
     view and export data in common spreadsheet formats, such as CSV,
@@ -2031,13 +2104,13 @@ repositories often include these features:
     site. Some also provide code snippets for users to embed these
     built-in visualizations into their own websites, which you’ll learn
     more about in [Chapter 7: Embed on Your Web](embed.html).
--   Application Programming Interface (APIs): Some repositories provide
-    endpoints with code instructions that allow users to pull data
-    directly from the platform into an external site or online
+-   Application Program Interface (APIs): Some repositories provide
+    endpoints with code instructions that allow other computers to pull
+    data directly from the platform into an external site or online
     visualization. When repositories continuously update data and
-    publish an API endpoint, it can be an ideal way to display “nearly
-    live” data in your visualization, which you’ll learn more about in
-    [Chapter 10: Leaflet Map Templates](leaflet.html).
+    publish an API endpoint, it can be an ideal way to display live or
+    “almost live” data in your visualization, which you’ll learn more
+    about in [Chapter 10: Leaflet Map Templates](leaflet.html).
 
 Due to the recent growth of open data repositories, especially in
 governmental policy and scientific research, there is no single website
@@ -2088,7 +2161,7 @@ subscription to “closed” data repositories:
 
 This chapter reviewed two broad questions that everyone should ask
 during the early stages of their visualization project: *Where can I
-find data?* and *How do I know what it really means?* We broke down both
+find data?* and *What do I really know about it?* We broke down both
 questions into more specific parts to develop your knowledge and skills
 in recognizing bad data, sourcing the origins of your data,
 distinguishing between public versus private data, and navigating the
@@ -2141,8 +2214,17 @@ Excel, Calc, or Numbers.
 
 #### Find and Replace with a blank
 
-A common problem with census data is that geographic names contain
-unnecessary words. For example, your data can look something like that:
+*Find and Replace* tool is one of the most powerful data clean-up tools
+in spreadsheets. You can use it to remove thousands separators from
+numbers (to change `1,234,567` to `1234567`) or to remove units of
+measure that sometimes reside in the same cells as numbers (`321 kg`
+-&gt; `321`). You can also use it to bulk-change spellings, for example
+to shorten, expand, or translate country names (`Republic of India`
+-&gt; `India`, `US` -&gt; `United States`, `Italy` -&gt; `Italia`).
+
+Let’s look at *Find and Replace* in practice. A common problem with US
+census data is that geographic names contain unnecessary words. For
+example, your data can look something like that:
 
     Hartford town
     New Haven town
@@ -2155,10 +2237,10 @@ merge with a different dataset:
     New Haven
     Stamford
 
-Here’s one quick solution: In any spreadsheet tool, use the Find and
-Replace command to remove unwanted characters. You can download our
-[sample file](data/find-replace-town-geonames.csv), which contains 169
-Connecticut towns and their population, for the exercise.
+We can use *Find and Replace* tool to remove the unwanted “town” part.
+You can download our [sample file](data/find-replace-town-geonames.csv),
+which contains 169 Connecticut towns and their population, for the
+exercise.
 
 1.  Select the column you want to modify by clicking on the column
     header. If you don’t, you will be searching and replacing in the
@@ -2166,8 +2248,8 @@ Connecticut towns and their population, for the exercise.
 2.  From *Edit* menu, choose *Find and replace* item. You will see the
     window like is shown in Figure
     <a href="#fig:sheets-find-replace">40</a>.
-3.  In the *Find* field, type `town`, without quotation marks and
-    leaving a space before the word. If you don’t leave the space, you
+3.  In the *Find* field, type `town`, without quotation marks **and
+    leave a space before the word**. If you don’t leave the space, you
     will accidentally remove *town* from *Newtown*, and you will end up
     with trailing spaces which can cause troubles in the future.
 4.  Leave the *Replace with* field blank.
@@ -2179,8 +2261,10 @@ Connecticut towns and their population, for the exercise.
 7.  Press the *Replace all* button. Since this sample file contains 169
     towns, the window will state that 169 instances of “town” have been
     replaced.
+8.  Inspect the resulting sheet. Make sure town names such as *Newtown*
+    remained untouched.
 
-<img src="images/04-clean/sheets-find-replace.png" alt="Find and Replace window in Google Sheets."  />
+<img src="images/04-clean/sheets-find-replace-annotated.png" alt="Find and Replace window in Google Sheets."  />
 <p class="caption">
 Figure 40: Find and Replace window in Google Sheets.
 </p>
@@ -2220,8 +2304,8 @@ line.
 5.  You can rename columns into *Longitude* (first number) and
     *Latitude* (second number).
 
-<img src="images/04-clean/sheets-split.png" alt="Select Data > Split
-text to columns to automatically separate data." /&gt;
+<img src="images/04-clean/sheets-split-annotated.png" alt="Select Data >
+Split text to columns to automatically separate data." width=“350” /&gt;
 <p class="caption">
 Figure 41: Select Data &gt; Split text to columns to automatically
 separate data.
@@ -2232,10 +2316,11 @@ separate data.
 Now, let’s look at a slightly more complicated example. Imagine your
 dataset is structured as follows:
 
-    | Location                           |
-    | 300 Summit St, Hartford CT--06106  |
-    | 1012 Broad St, Hartford CT--06106  |
-    | 37 Alden St, Hartford CT--06114    |
+    | Location                          |
+    | --------------------------------- |
+    | 300 Summit St, Hartford CT--06106 |
+    | 1012 Broad St, Hartford CT--06106 |
+    | 37 Alden St, Hartford CT--06114   |
 
 Each cell contains a full address, but you want to split it into four
 cells: street address (300 Summit St), city (Hartford), state (CT), and
@@ -2263,23 +2348,25 @@ Tip: Google Sheets will treat zipcodes as numbers and will delete
 leading zeros (so 06106 will become 6106). To fix that, select the
 column, and go to *Format &gt; Number &gt; Plain text*. Now you can
 manually re-add zeros. If your dataset is large, consider concatenating
-0s using the formula introduced in [Combine separate columns into
-one](#combine-separate-columns-into-one).
+0s using the formula introduced in the [following
+section](#combine-separate-columns-into-one).
 
 #### Combine separate columns into one
 
 Now, let’s see how to perform the reverse action. Imagine you receive
 address data in separate columns, formatted like this:
 
-    | Street        | City        | State      | Zip        |
-    | 300 Summit St | Hartford    | CT         | 06106      |
+    | Street        | City       | State  | Zip   |
+    | ------------- | ---------- | ------ | ----- |
+    | 300 Summit St | Hartford   | CT     | 06106 |
 
 The data comes is four columns: street address, city, state, and
 zipcode. Let’s say your mapping tool requires you to combine all of this
 terms into one location column, like that:
 
-    | Location                            |
-    | 300 Summit St, Hartford, CT 06106   |
+    | Location                          |
+    | --------------------------------- |
+    | 300 Summit St, Hartford, CT 06106 |
 
 You can write a simple formula to combine (or concatenate) terms using
 ampersands (`&`) as cells values connectors, and quoted spaces (`" "`),
@@ -2291,13 +2378,19 @@ separated into four columns—*Address, City, State,* and *Zip*—as shown
 in columns A-D in Figure <a href="#fig:sheets-combine">42</a>. In column
 E, you can add new header named *Location* and insert a formula in this
 format, to combine the items using ampersands (`&`) and separating them
-with quoted spaces (`" "`), like this: `=A2&" "&B2&" "&C2&" "&D2`
+with commas (`", "`) or quoted spaces (`" "`), like this:
+`=A2 & ", " & B2 & ", " & C2 & " " & D2`.
 
 <img src="images/04-clean/sheets-combine.png" alt="Use ampersands to combine items and separate them with spaces."  />
 <p class="caption">
 Figure 42: Use ampersands to combine items and separate them with
 spaces.
 </p>
+
+Note: Lisa Charlotte Rost from Datawrapper has written a brilliant [blog
+post](https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/)
+talking about data preparation for charting and analysis in Google
+Sheets, which we recommend for further reading.
 
 You are now able to split data to columns using custom separators, and
 concatenate values from different cells into one. But what if your table
@@ -2447,20 +2540,20 @@ the [official download page](https://openrefine.org/download.html). Just
 like Tabula, it runs in your browser and no data leaves your local
 machine, which is great for confidentiality.
 
-If you work on a **Mac**, the downloaded file will be a .dmg file. You
-will likely encounter a security message that will prevent OpenRefine
-from launching. Go to System Preferences -&gt; Security and Privacy, and
-hit *Open Anyway* button in the lower half of the window. If prompted
-with another window, click *Open*.
+If you work on a Mac, the downloaded file will be a .dmg file. You will
+likely encounter a security message that will prevent OpenRefine from
+launching. Go to System Preferences -&gt; Security and Privacy, and hit
+*Open Anyway* button in the lower half of the window. If prompted with
+another window, click *Open*.
 
-If you use **Windows**, unzip the downloaded file. Double-click the .exe
+If you use Windows, unzip the downloaded file. Double-click the .exe
 file, and OpenRefine should open in your default browser.
 
 Once launched, you should see OpenRefine in your browser with
 `127.0.0.1:3333` address (localhost, port 3333), like shown in Figure
 <a href="#fig:openrefine-welcome">46</a>.
 
-<img src="images/04-clean/openrefine-welcome.png" alt="OpenRefine starting page."  />
+<img src="images/04-clean/openrefine-welcome-annotated.png" alt="OpenRefine starting page."  />
 <p class="caption">
 Figure 46: OpenRefine starting page.
 </p>
@@ -2476,9 +2569,9 @@ We assume that you downloaded the sample dataset we provided (or you are
 using your own file), so let’s load it from your computer.
 
 1.  Under *Get data from: This computer*, click *Browse…* and select the
-    file. Click Next.
+    file. Click *Next*.
 2.  Before you can start cleaning up data, OpenRefine allows you to make
-    sure data is **parsed** properly. In our case, parsing means the way
+    sure data is *parsed* properly. In our case, parsing means the way
     the data is split into columns. Make sure OpenRefine assigned values
     to the right columns, or change setting in *Parse data as* block at
     the bottom of the page until it starts looking meaningful, like
@@ -2519,14 +2612,18 @@ to be transformed into numeric format.
 4.  Now, repeat the previous step, but instead of a comma, remove the
     `$` character. (Your expression will become
     `value.replace('$', '')`).
-5.  Perform Step 1 again. You will see that all but three cells turned
-    green. That is because we have spaces and an `a` character at the
-    end of one number. Fix those manually by hovering over cells, and
-    clicking the `edit` button (in the new popup window, make sure to
-    change *Data type* to *number*, and hit *Apply*, like in Figure
+5.  In steps 3 and 4, we replaced text (string) values with other string
+    values, making OpenRefine think this column is no longer numeric. As
+    a result, all values are once again left-aligned and in black.
+    Perform step 1 again to see that all but three cells turning green
+    (successfully converting to numeric). Now we need to remove spaces
+    and an `a` character at the end of one number. Fix those manually by
+    hovering over cells, and clicking the `edit` button (in the new
+    popup window, make sure to change *Data type* to *number*, and hit
+    *Apply*, like in Figure
     <a href="#fig:openrefine-manual-edit">48</a>).
 
-<img src="images/04-clean/openrefine-manual-edit.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
+<img src="images/04-clean/openrefine-manual-edit-annotated.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
 <p class="caption">
 Figure 48: Manually remove spaces and extra characters, and change data
 type to number.
@@ -2562,18 +2659,19 @@ distinct values, North Korea and South Korea!
 3.  OpenRefine will calculate a list of clusters. *Values in Cluster*
     column contains grouped spellings that OpenRefine considers the
     same. If you agree with a grouping, check the *Merge?* box, and
-    assign the “true” value to the *New Cell Value* input box. In our
+    assign the “true” value to the *New Cell Value* input box (see first
+    cluster in Figure <a href="#fig:openrefine-cluster">49</a>). In our
     example, this would be either `North Korea` or `South Korea`.
-4.  You can go through all groupings, **or** stop after one or two and
-    click **Merge Selected & Re-Cluster** button. The clusters you chose
-    to merge will be merged, and grouping will be re-calculated (don’t
+4.  You can go through all groupings, or stop after one or two and click
+    *Merge Selected & Re-Cluster* button. The clusters you chose to
+    merge will be merged, and grouping will be re-calculated (don’t
     worry, the window won’t go anywhere). Keep regrouping until you are
     happy with the result.
 
 Spend some time playing with *Keying function* parameters, and notice
 how they produce clusters of different sizes and accuracy.
 
-<img src="images/04-clean/openrefine-cluster.png" alt="Cluster similar text values."  />
+<img src="images/04-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
 <p class="caption">
 Figure 49: Cluster similar text values.
 </p>
@@ -2594,7 +2692,8 @@ OpenRefine to clean up very messy datasets. You will often find yourself
 using several of these tools on the same dataset before it becomes good
 enough for your analysis. We encourage you to learn more formulas in
 Google Sheets, and explore extra functionality of OpenRefine in your
-spare time.
+spare time. The more clean-up tools and techniques you know, the more
+able and adaptable you become to tackle more complex cases.
 
 You now know how to clean up your data, so let’s proceed to visualizing
 it. In the following chapter, we will introduce you to a range of free
@@ -2618,7 +2717,7 @@ some aesthetic guidelines to follow when customizing your own designs.
 In addition to static chart images, this book focuses on interactive
 charts that display more data when you float your cursor over them in
 your web browser. Later you’ll learn how to [embed interactive charts on
-your web](embed.html) in chapter 7.
+your website](embed.html) in chapter 7.
 
 To begin, this grid of basic chart types will help you decide which type
 you wish to create. Your decision will be based on the format of your
@@ -2774,9 +2873,10 @@ interpretation, there are some that are hard to bend.
 
 #### Bar charts must start at zero
 
-Unlike line charts, bar or column charts need to have their value axis
-start at zero. This is to ensure that a bar twice the length of another
-bar represents twice its value. The Figure
+Bar charts use *length* to represent value, therefore their value axis
+*must start at zero*. That applies to column and area charts as well.
+This is to ensure that a bar twice the length of another bar represents
+twice its value. The Figure
 <a href="#fig:design-principles-start-at-zero">51</a> shows a good and a
 bad example.
 
@@ -2820,11 +2920,16 @@ decreasing readability? This way you won’t end up with so-called “chart
 junk” as shown in Figure <a href="#fig:design-principles-junk">52</a>,
 which includes 3D perspectives, shadows, and unnecessary elements. They
 might have looked cool in early versions of Microsoft Office, but let’s
-stay away from them today.
+stay away from them today. Chart junk distracts the viewer and reduces
+chart readability and comprehension. It also looks unprofessional and
+doesn’t add credibility to you as a storyteller.
 
-<img src="images/05-chart/design-principles-junk.png" alt="Avoid chart junk."  />
+&lt;img src=“images/05-chart/design-principles-junk.png” alt=“Chart junk
+distracts the viewer, so stay away from shadows, 3D perspectives,
+unnecessary colors and other”fancy" elements." /&gt;
 <p class="caption">
-Figure 52: Avoid chart junk.
+Figure 52: Chart junk distracts the viewer, so stay away from shadows,
+3D perspectives, unnecessary colors and other “fancy” elements.
 </p>
 
 Do not use shadows or thick outlines with bar charts, because the reader
@@ -2832,8 +2937,12 @@ might think that decorative elements are part of the chart, and thus
 misread the values that bars represent.
 
 The only justification for using three dimensions is to plot
-three-dimensional data, which has x, y, and z values. And don’t let
-anyone tell you otherwise.
+three-dimensional data, which has x, y, and z values. For example, you
+can build a [three-dimensional map of population
+density](https://blog.mapbox.com/3d-mapping-global-population-density-how-i-built-it-141785c91107),
+where x and y values represent latitude and longitude. In most cases,
+however, three dimensions are best represented in a bubble chart, or a
+scatterplot with varying shapes and/or colors.
 
 #### Beware of pie charts
 
@@ -2891,7 +3000,7 @@ Figure 56: For long labels, use horizontal bar charts.
 
 When labelling axes, choose natural increments that space equally, such
 as \[0, 20, 40, 60, 80, 100\], or \[1, 10, 100, 1000\] for a logarithmic
-scale. Do not overload your scales. Keep your typography simple, use
+scale. Do not overload your scales. Keep your typography simple, and use
 (but do not overuse) **bolding** to highlight major insights. Consider
 using commas as thousands separators for readability (`1,000,000` is
 much easier to read than `1000000`).
@@ -2932,12 +3041,11 @@ Figure 58: Make sure important things catch the eye first.
 Google Sheets Charts
 --------------------
 
-[Google Sheets](https://sheets.google.com) is a well-known spreadsheet
-program that allows you to create basic charts using its intuitive
-drag-and-drop interface. Most people who create charts with Google
-Sheets export them as static *png* images. But in fact these interactive
-charts can be easily [embedded on your website](embed.html), as you’ll
-learn in chapter 7.
+In addition to powerful data wrangling capabilities, [Google
+Sheets](https://sheets.google.com) has robust support for charting. Most
+people who create charts with Google Sheets export them as static *png*
+images. But in fact these interactive charts can be easily [embedded on
+your website](embed.html), as you’ll learn in chapter 7.
 
 In this section, we will look at creating column and bar charts that are
 separated, grouped, and stacked. We will also look at making pie, line,
@@ -2968,10 +3076,6 @@ separated, grouped, and stacked bar charts in Google Sheets:
 -   High-Calorie Fast-Food Items
 -   Global Database on Body Mass Index by World Health Organization
 
-Before you begin, you will need to create a free [Google Drive
-account](https://www.google.com/drive/). If you already use Google Mail
-(Gmail), you can use the same username for your Google Drive account.
-
 ### Grouped Column and Bar Charts
 
 Figure <a href="#fig:column-grouped">59</a> shows differences in obesity
@@ -2991,9 +3095,9 @@ version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o
 The following steps will help you recreate an interactive grouped column
 (or horizontal bar) chart.
 
-1.  Right-click to open link in new tab: [Google Sheet Column chart with
-    grouped data
+1.  Open [Google Sheet Column chart with grouped data
     template](https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/)
+    in your browser.
 
 2.  Sign in to continue to Google Sheets (which is part of Google
     Drive). If you don’t already have a Google account, you can create
@@ -3009,7 +3113,7 @@ Figure 60: Make your own copy of the Google Sheet template.
 
 1.  To remove the current chart from your copy of the spreadsheet, float
     your cursor to the top-right corner of the chart to make the 3-dot
-    menu appear, and select Delete, as shown in Figure
+    (kebab) menu appear, and select Delete, as shown in Figure
     <a href="#fig:delete-chart">61</a>.
 
 <img src="images/05-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete." width="180px" />
@@ -3018,49 +3122,60 @@ Figure 61: Float cursor in top-right corner of the chart to make the
 3-dot (kebab) menu appear, and select Delete.
 </p>
 
+Note: Another name for the 3-dot menu symbol is the “kebab menu” because
+it resembles Middle Eastern food cooked on a skewer, in contrast to the
+three-line “hamburger menu” on many mobile devices, as shown in Figure
+<a href="#fig:menu-hamburger-kebab">62</a>.
+
+<img src="images/05-chart/menu-hamburger-kebab.png" alt="You should be able to distinguish kebab from hamburger menu icons."  />
+<p class="caption">
+Figure 62: You should be able to distinguish kebab from hamburger menu
+icons.
+</p>
+
 1.  Format your data to make each column a data series, as shown in
-    Figure <a href="#fig:column-grouped-data">62</a>, which means it
+    Figure <a href="#fig:column-grouped-data">63</a>, which means it
     will display as a separate color in the chart.
 
 <img src="images/05-chart/column-grouped-data.png" alt="Format data in columns to make colored grouped columns in your chart." width="350px" />
 <p class="caption">
-Figure 62: Format data in columns to make colored grouped columns in
+Figure 63: Format data in columns to make colored grouped columns in
 your chart.
 </p>
 
 1.  Use your cursor to select only the data you wish to chart, then go
     to the Insert menu and select Chart, as shown in Figure
-    <a href="#fig:column-grouped-insert">63</a>.
+    <a href="#fig:column-grouped-insert">64</a>.
 
 <img src="images/05-chart/column-grouped-insert.png" alt="Select your data and then Insert >
 Chart." width=“250px” /&gt;
 <p class="caption">
-Figure 63: Select your data and then Insert &gt; Chart.
+Figure 64: Select your data and then Insert &gt; Chart.
 </p>
 
 1.  In the Chart Editor, change the default selection to Column chart,
     with Stacking none, to display Grouped Columns, as shown in Figure
-    <a href="#fig:column-grouped-editor">64</a>. Or select *Horizontal
+    <a href="#fig:column-grouped-editor">65</a>. Or select *Horizontal
     bar chart* if you have longer labels.
 
 <img src="images/05-chart/column-grouped-editor.png" alt="Change the default to Column chart, with Stacking none." width="250px" />
 <p class="caption">
-Figure 64: Change the default to Column chart, with Stacking none.
+Figure 65: Change the default to Column chart, with Stacking none.
 </p>
 
 1.  To customize title, labels, and more, in the Chart Editor select
     Customize, as shown in Figure
-    <a href="#fig:chart-editor-customize">65</a>.
+    <a href="#fig:chart-editor-customize">66</a>.
 
 <img src="images/05-chart/chart-editor-customize.png" alt="Select Customize to edit title, labels, and more." width="250px" />
 <p class="caption">
-Figure 65: Select Customize to edit title, labels, and more.
+Figure 66: Select Customize to edit title, labels, and more.
 </p>
 
 1.  To make your data public, go to the upper-right corner of your sheet
     to click the Share button, and in the next screen, click the words
     “Change to anyone with the link,” as shown in Figure
-    <a href="#fig:share-button-sheet">66</a>. This means your sheet is
+    <a href="#fig:share-button-sheet">67</a>. This means your sheet is
     no longer Restricted to only you, but can be viewed by anyone with
     the link. See additional options.
 
@@ -3068,20 +3183,20 @@ Figure 65: Select Customize to edit title, labels, and more.
 alt=“Click the Share button and then click”Change to anyone with the
 link." to make your data public." width=“350px” /&gt;
 <p class="caption">
-Figure 66: Click the Share button and then click “Change to anyone with
+Figure 67: Click the Share button and then click “Change to anyone with
 the link.” to make your data public.
 </p>
 
 1.  To embed an interactive version of your chart in another web page,
-    click the 3-dot menu in the upper-right corner of your chart, and
+    click the kebab menu in the upper-right corner of your chart, and
     select Publish Chart, as shown in Figure
-    <a href="#fig:chart-publish">67</a>. In the next screen, select
+    <a href="#fig:chart-publish">68</a>. In the next screen, select
     Embed and press the Publish button. See [Chapter 7 Embed on the
     Web](embed.html) to learn what to do with the iframe code.
 
 <img src="images/05-chart/chart-publish.png" alt="Select Publish Chart to embed an interactive chart on another web page, as described in Chapter 7." width="200px" />
 <p class="caption">
-Figure 67: Select Publish Chart to embed an interactive chart on another
+Figure 68: Select Publish Chart to embed an interactive chart on another
 web page, as described in Chapter 7.
 </p>
 
@@ -3095,7 +3210,7 @@ credibility to your work.
 When you visualize independent categories of data, and you don’t want
 them to appear grouped together, then create a chart with separated
 columns (or horizontal bars, if you have long data labels). For example,
-Figure <a href="#fig:bar-separated">68</a> is a separated bar chart of
+Figure <a href="#fig:bar-separated">69</a> is a separated bar chart of
 calorie counts of fast food items for two restaurant chains, Starbucks
 and McDonald’s. Unlike the grouped column chart in Figure
 <a href="#fig:column-grouped">59</a>, here the bars are separated from
@@ -3105,7 +3220,7 @@ sub-groups.
 <iframe src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 68: Separated bar chart with data from [Starbucks and
+Figure 69: Separated bar chart with data from [Starbucks and
 McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126).
 Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
@@ -3114,18 +3229,17 @@ version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o
 The only difference between making a grouped versus a separated chart is
 how you structure your data. To make Google Sheets separate columns or
 bars, you need to leave some cells blank, as shown in Figure
-<a href="#fig:bar-separated-data">69</a>. The rest of the steps remain
+<a href="#fig:bar-separated-data">70</a>. The rest of the steps remain
 the same as above.
 
 <img src="images/05-chart/bar-separated-data.png" alt="Create a separated column or bar chart by leaving some cells blank."  />
 <p class="caption">
-Figure 69: Create a separated column or bar chart by leaving some cells
+Figure 70: Create a separated column or bar chart by leaving some cells
 blank.
 </p>
 
 To create your own separated column or bar chart using the fast-food
-example, right-click to open this link in a new tab: [Google Sheet
-Separated Bar Chart
+example, make a copy of [Google Sheet Separated Bar Chart
 template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/).
 
 ### Stacked Column and Bar Charts
@@ -3133,14 +3247,14 @@ template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnU
 Stacked column and bar charts can be used to compare subcategories. They
 can also be used to represent parts of a whole instead of pie charts.
 For example, the stacked column chart in Figure
-<a href="#fig:column-stacked">70</a> compares the percentage of
+<a href="#fig:column-stacked">71</a> compares the percentage of
 overweight residents across nations, where colors allow for easy
 comparisons of weight-group subcategories across nations.
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 70: Stacked column chart with data from [WHO and
+Figure 71: Stacked column chart with data from [WHO and
 CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691).
 Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive).
@@ -3148,20 +3262,26 @@ version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-F
 
 To create a stacked column or bar chart, structure your data so that
 each column will become a new series with its own color, as shown in
-Figure <a href="#fig:column-stacked-data">71</a>. Then in the Chart
+Figure <a href="#fig:column-stacked-data">72</a>. Then in the Chart
 Editor window, choose Chart Type &gt; Stacked column chart (or Stacked
 bar chart). The rest of the steps are similar to the ones above.
 
 <img src="images/05-chart/column-stacked-data.png" alt="Create a stacked column or bar chart by structuring your data as shown." width="350px" />
 <p class="caption">
-Figure 71: Create a stacked column or bar chart by structuring your data
+Figure 72: Create a stacked column or bar chart by structuring your data
 as shown.
 </p>
 
 To create your own stacked column or bar chart using the international
-weight level example, right-click to open this link in a new tab:
-[Google Sheets Stacked Column Chart
-template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/).
+weight level example, visit the [Google Sheets Stacked Column Chart
+template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/)
+and make a copy of the spreadsheet.
+
+To change colors of series (for example, to show Overweight category in
+red), click the kebab menu in the top-right corner of the chart, then go
+to *Edit Chart &gt; Customize &gt; Series*. There, choose the
+appropriate series from the dropdown menu, and set its color from the
+Color dropdown menu that appears.
 
 ### Histograms
 
@@ -3177,15 +3297,14 @@ according to the email hour. Hours will become your bins, and email
 counts will be your frequency data. Then your final dataset would look
 something like this:
 
-    Hour  Emails
-    ------------
-    0     12
-    1     11
-    2     7
-    ...
-    21    24
-    22    34
-    23    22
+    | Hour | Emails |
+    | ---- | ------ |
+    | 0    | 12     |
+    | 1    | 11     |
+    | 2    | 7      |
+    .................
+    | 22   | 34     |
+    | 23   | 22     |
 
 You can now make a histogram. The good news is, Google Sheets considers
 histograms to be regular column charts, so you should be able to use a
@@ -3194,19 +3313,19 @@ previous tutorial to make one.
 Select two columns with the data you want to visualize, and go to Insert
 &gt; Chart. In the Chart editor window, in the Setup tab, select Chart
 type &gt; Column chart. See the result in Figure
-<a href="#fig:histogram">72</a>
+<a href="#fig:histogram">73</a>
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 72: Histogram chart with [fictitious source
+Figure 73: Histogram chart with [fictitious source
 data](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=0).
 Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive).
 </p>
 
-To create your own histogram chart using our fictional email dataset,
-right-click to open this link in a new tab: [Histogram Chart
+If you wish to use our fictional email dataset to create your own
+histogram, you can make a copy of the [Histogram Chart
 template](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit?usp=sharing).
 
 Bins in a histogram should span (in other words, “cover”) the entire
@@ -3218,12 +3337,12 @@ larger bins, such as *Morning*, *Afternoon*, *Evening*, and *Night* to
 cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively. Then your
 dataset will look like:
 
-    TimeOfDay    Emails
-    -------------------
-    Morning      353
-    Afternoon    497
-    Evening      279
-    Night        37
+    | TimeOfDay | Emails |
+    | --------- | ------ |
+    | Morning   | 353    |
+    | Afternoon | 497    |
+    | Evening   | 279    |
+    | Night     | 37     |
 
 Pie, Line, and Area Charts with Google Sheets
 ---------------------------------------------
@@ -3241,14 +3360,14 @@ pie chart with the number of fruit your store had sold in a day—–21
 apples, 5 oranges, and 32 bananas—–the sum of all fruit, 58, is your
 100%. Then a reader can figure out that of all fruits sold,
 approximately 55% were bananas. This example is illustrated in Figure
-<a href="#fig:pie">73</a>. If you decided to include *some*, but *not
+<a href="#fig:pie">74</a>. If you decided to include *some*, but *not
 all* other items that your store has sold (for example, you include
 pizzas but exclude ice cream), your pie chart would not make sense.
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 73: Pie chart with [fictitious source
+Figure 74: Pie chart with [fictitious source
 data](https://docs.google.com/spreadsheets/d/11cn0eysXqXIwhcTKmGuzMDw_RmpDpYLKZN3TeevT-Vg/edit?usp=sharing).
 Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive).
@@ -3269,7 +3388,7 @@ chart* from the Chart type dropdown list.
 
 Notice that slices are ordered the same way they appear in the
 spreadsheet. We highly recommend you sort values from largest to
-smallest: right-click the header of your values column, and click
+smallest: right-click the header of your values column, and choose
 `Sort sheet Z-A`. You will see that the chart updates automatically.
 
 Right-click on the chart, and choose *Chart & axis titles &gt; Chart
@@ -3280,15 +3399,15 @@ editor, you can also change colors and add borders to slices.
 
 The most common use of line charts is to represent values at different
 points in time, in other words to show change over time. The line chart
-in Figure <a href="#fig:line">74</a> shows per-capita meat availability
+in Figure <a href="#fig:line">75</a> shows per-capita meat availability
 in the US for the past 110 years. You can see that the level of chicken
-(shown in orange) rises steadily and surpasses beef (red) and pork
-(blue).
+(shown in light-green) rises steadily and surpasses beef (blue) and pork
+(gray).
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 74: Line chart showing meat availability per capita in the US,
+Figure 75: Line chart showing meat availability per capita in the US,
 according to the [US Department of
 Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing).
 Explore the [full-screen interactive
@@ -3298,12 +3417,12 @@ version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S32
 The simplest way to organize your data is to use the first column as
 x-axis labels, and each additional column as a new series (which will
 become its own line). For example, the meat data from the line chart is
-structured as shown in Figure <a href="#fig:line-data">75</a>.
+structured as shown in Figure <a href="#fig:line-data">76</a>.
 
-<img src="images/05-chart/line-data.png" alt="Data for the line chart shown in Figure 74." width="250px" />
+<img src="images/05-chart/line-data.png" alt="Data for the line chart shown in Figure 75." width="250px" />
 <p class="caption">
-Figure 75: Data for the line chart shown in Figure
-<a href="#fig:line">74</a>.
+Figure 76: Data for the line chart shown in Figure
+<a href="#fig:line">75</a>.
 </p>
 
 The data is available in the [Google Sheet Line chart
@@ -3325,7 +3444,7 @@ eat).
 
 We can see how availability of individual meat types, *and* the total
 meat availability over time using a stacked area chart, like shown in
-Figure <a href="#fig:stacked-area">76</a>. Here, we can still see that
+Figure <a href="#fig:stacked-area">77</a>. Here, we can still see that
 chicken has been on the rise since the 1970s. We can also see that the
 total availability was on the rise between 1910 and 1970 with a small
 dip around 1930s, and it didn’t change much between 1970 and 2017.
@@ -3333,7 +3452,7 @@ dip around 1930s, and it didn’t change much between 1970 and 2017.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 76: In addition to individual meat availability, stacked area
+Figure 77: In addition to individual meat availability, stacked area
 charts show the overall availability. See data by [US Department of
 Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing).
 Explore the [full-screen interactive
@@ -3367,14 +3486,17 @@ region of the world (displayed as circle color).
 
 Fancier bubble charts animate the circles to represent one more
 variable: change over time. Such animated bubble charts were popularized
-by Hans Rosling, a renowned Swedish professor of global health. You can
-watch one of his famous [TED
+by Hans Rosling, a renowned Swedish professor of global health.
+
+Note: We recommend you watch one of Hans Rosling’s famous [TED
 talks](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen)
-to see animated bar charts in action.
+to see animated bar charts in action. You can also visit [Gapminder
+Foundation website](https://www.gapminder.org/) to see more data
+visualizations and learn more about Hans’s work and legacy.
 
 #### XY Scatter chart
 
-The scatter chart in Figure <a href="#fig:scatter">77</a> uses World
+The scatter chart in Figure <a href="#fig:scatter">78</a> uses World
 Bank data to reveal a downward slope: nations with lower fertility
 (births per woman) tend to have higher life expectancy. You can also
 phrase is the other way, nations with higher life expectancy at birth
@@ -3385,20 +3507,20 @@ lives, or that longer-living females give birth to fewer children.
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
-Figure 77: This scatter chart shows that nations with lower fertility
+Figure 78: This scatter chart shows that nations with lower fertility
 tend to have higher life expectancy. [See
 data](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/)
 by World Bank. Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&format=interactive).
 </p>
 
-The data used in Figure <a href="#fig:scatter">77</a> is available from
+The data used in Figure <a href="#fig:scatter">78</a> is available from
 our [Google Sheets Scatter chart
 template](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit?usp=sharing).
 You can copy it to your own Google Drive so that you’re able to edit it
 (go to *File &gt; Make a copy*).
 
-Figure <a href="#fig:scatter-data">78</a> shows the first few rows of
+Figure <a href="#fig:scatter-data">79</a> shows the first few rows of
 the dataset. Notice that the data is structured in three columns. The
 first column, *Life Expectancy*, is plotted on the x-axis (horizontal).
 The second column, *Fertility*, is plotted on the y-axis (vertical). The
@@ -3406,11 +3528,11 @@ third column contains *Country* labels.
 
 <img src="images/05-chart/scatter-data.png" alt="Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels." width="350px" />
 <p class="caption">
-Figure 78: Data for a scatterplot is usually represented in 3 columns:
+Figure 79: Data for a scatterplot is usually represented in 3 columns:
 x-values, y-values, and labels.
 </p>
 
-To build a scatter chart, select the **two** columns that contain your
+To build a scatter chart, select the *two* columns that contain your
 numeric data, and go to *Insert &gt; Chart*. Google Sheets will likely
 to guess the chart type and you will see a scatterplot, but if not, you
 can always manually pick Scatter chart from the *Chart type* dropdown.
@@ -3423,9 +3545,9 @@ points, and that’s okay. Some scatter plots are designed to show whether
 or not there is a correlation, and knowing which points are which is not
 important. But sometimes labels are important for your storytelling.
 
-In Chart editor, click on the 3-dot menu for your Series dataset
+In Chart editor, open the kebab menu (3 dots) of your Series dataset
 (Fertility), and then *Add labels* (see Figure
-<a href="#fig:scatter-labels">79</a>). The labels added by default will
+<a href="#fig:scatter-labels">80</a>). The labels added by default will
 be the x-values of points. To make Google Sheets read labels from the
 third column (*Country*), click the name of your label dataset (Life
 Expectancy), then *Select a data range* button in the upper-right corner
@@ -3434,7 +3556,7 @@ include the header (first row) if all other data ranges include it.
 
 <img src="images/05-chart/scatter-labels-annotated.png" alt="In the chart's Setup window, choose *Add labels* to the Series." width="350px" />
 <p class="caption">
-Figure 79: In the chart’s Setup window, choose *Add labels* to the
+Figure 80: In the chart’s Setup window, choose *Add labels* to the
 Series.
 </p>
 
@@ -3445,17 +3567,6 @@ horizontal and vertical axes. Unlike in bar charts, axes in scatter
 plots do not have to start at zero. You can set your minimum and maximum
 values to be a few units below and above the extreme points of your data
 range.
-
-Note: Another name for the 3-dot menu symbol is the “kebab menu” because
-it resembles Middle Eastern food cooked on a skewer, in contrast to the
-three-line “hamburger menu” on many mobile devices, as shown in Figure
-<a href="#fig:menu-hamburger-kebab">80</a>.
-
-<img src="images/05-chart/menu-hamburger-kebab.png" alt="You should be able to distinguish kebab from hamburger menu icons."  />
-<p class="caption">
-Figure 80: You should be able to distinguish kebab from hamburger menu
-icons.
-</p>
 
 #### Bubble chart with 3 columns
 
@@ -3495,7 +3606,7 @@ Select all three columns, and go to *Insert &gt; Chart*. Google Sheets
 will likely create a stacked column chart by default, so choose *Bubble*
 from the Chart type dropdown window.
 
-If you want to remove labels from the bubbles, remove the **ID** series
+If you want to remove labels from the bubbles, remove the *ID* series
 (click on the kebab menu &gt; Remove).
 
 Unfortunately, there is no easy way to reduce all bubbles to a uniformly
@@ -3540,9 +3651,9 @@ region.
 </p>
 
 Select all data and go to *Insert &gt; Chart*, and choose Bubble as the
-Chart type. Make sure your **ID**, **X-axis**, **Y-axis**, **Series**,
-and **Size** fields contains the series you want to display, and make
-sure to have *Use row 1 as headers* option checked.
+Chart type. Make sure your *ID*, *X-axis*, *Y-axis*, *Series*, and
+*Size* fields contain the series you want to display, and make sure to
+have *Use row 1 as headers* option checked.
 
 To change labels color, go to Customize tab of the Chart editor, and set
 Text color under the Bubble menu. Make it gray or black, so that it
@@ -3647,20 +3758,19 @@ Figure 85: Drag `data` sheet into *Drag tables here* area.
 1.  Go to *Sheet 1* tab (in the lower-left corner of the window) to view
     your worksheet. Although it may feel overwhelming at first, the key
     is learning where to drag items from the Data pane (left) into the
-    main worksheet. **Dimensions** are any information that is
-    qualitative or categorical, and are shown in blue with *Abc* tables.
-    **Measures** are quantitative information about the dimensions,
-    shown in green with *\#* icons.
+    main worksheet. Tableau marks all data fields as blue (discrete
+    values, mostly text fields or numeric labels) or green (continuous
+    values, mostly numbers).
 
-2.  Drag the *Grade Levels* measure into the **Rows** field above the
+2.  Drag the *Grade Levels* field into the *Rows* field above the
     charting area, which for now is just empty space. You can consult
     Figure <a href="#fig:tableau-xy-dragging">86</a> for this and two
     following steps. Tableau will apply a summation function to it, and
     you will see the `SUM(Grade Levels)` appearing in the Rows row, and
     a blue bar in the charting area. It makes little sense so far, so
-    let’s plot another measure (variable).
+    let’s plot another data field.
 
-3.  Drag *Median Household Income* to the **Columns** field (just above
+3.  Drag *Median Household Income* to the *Columns* field (just above
     the Rows field). Tableau will once again apply the summation
     function, so you will see `SUM(Median Household Income)` in the
     Columns. The bar chart will transform into a scatter chart with just
@@ -3668,14 +3778,14 @@ Figure 85: Drag `data` sheet into *Drag tables here* area.
     for both is aggregated (remember the `SUM` function).
 
 4.  We want to tell Tableau to disaggregate the household and grade
-    levels variables. To do so, drag *District* dimension into the lower
-    portion of the Marks area. You will now see a real scatter chart in
-    the charting area. If you hover over points, you will see all three
-    values associated with it.
+    levels variables. To do so, drag *District* dimension into the
+    *Detail* box of the Marks card. You will now see a real scatter
+    chart in the charting area. If you hover over points, you will see
+    all three values associated with it.
 
-<img src="images/05-chart/tableau-xy-dragging-annotated.png" alt="Drag measures and dimensions to the right places in Tableau."  />
+<img src="images/05-chart/tableau-xy-dragging-annotated.png" alt="Drag data fields to the right places in Tableau."  />
 <p class="caption">
-Figure 86: Drag measures and dimensions to the right places in Tableau.
+Figure 86: Drag data fields to the right places in Tableau.
 </p>
 
 #### Add Title and Caption, and Publish
@@ -3784,8 +3894,8 @@ that Tableau guessed from the country names).
 
 To build a line chart,
 
-1.  Drag Year variable to **Columns**.
-2.  Drag Percent Internet Users variable to **Rows**. The variable will
+1.  Drag Year variable to *Columns*.
+2.  Drag Percent Internet Users variable to *Rows*. The variable will
     change to `SUM(Percent Internet Users)`. You should see a single
     line chart that sums up percentages for each year. That is
     completely incorrect, so let’s fix it.
@@ -3798,15 +3908,16 @@ To build a line chart,
     To add filtering, drag *Country Name* to the Filters card. In the
     Filter window, make sure all countries are checked, and click *OK*.
 5.  Right-click on *Country Name* pill in Filters card, and check Show
-    Filter (see Figure @ref(fig:tableau-filtered-show-filter.png))
+    Filter (see Figure
+    <a href="#fig:tableau-filtered-show-filter">90</a>)
 6.  You will see a list of options with all checkboxes on have appeared
     to the right of the visualization. Click *(All)* to add/remove all
     options, and add a few of your favorite countries to see how the
     interactive filtering works.
 
-<img src="images/05-chart/tableau-filtered-show-filter.png" alt="Once you dragged Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
+<img src="images/05-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
 <p class="caption">
-Figure 90: Once you dragged Country Name to the Filters card, make sure
+Figure 90: After you drag Country Name to the Filters card, make sure
 the Filter is displayed.
 </p>
 
@@ -3823,9 +3934,9 @@ field.
 
 You may notice that the x-axis (Year) starts with 1994 and ends with
 2020, although our data is for 1995–2018. Double-click on the x-axis,
-and change **Range** from *Automatic* to *Fixed*, with the Fixed start
-of `1995`, and the Fixed end of `2018`. Close the window and see that
-the empty space on the edges has disappeared.
+and change *Range* from *Automatic* to *Fixed*, with the Fixed start of
+`1995`, and the Fixed end of `2018`. Close the window and see that the
+empty space on the edges has disappeared.
 
 Once your filtered line chart looks like the one shown in Figure
 <a href="#fig:tableau-filtered-ready">91</a>, you are ready to publish.
@@ -3845,9 +3956,6 @@ publishing.
 See the [Embed Tableau Public on Your Website](embed-tableau.html)
 section of this book to insert the interactive version of your chart on
 a web page that you control.
-
-To learn more, see [Tableau Public resources
-page](https://public.tableau.com/en-us/s/resources).
 
 ### Summary
 
@@ -5408,9 +5516,9 @@ your GitHub account, and it contains only three files:
 1.  Click on the `index.html` file to view the code, as shown in Figure
     <a href="#fig:leaflet-simple-index">95</a>.
 
-<img src="images/08-github/leaflet-simple-index.png" alt="Click the Index file to view the code." width="250" />
+<img src="images/08-github/leaflet-simple-index.png" alt="Click the index.html file to view the code." width="250" />
 <p class="caption">
-Figure 95: Click the Index file to view the code.
+Figure 95: Click the index.html file to view the code.
 </p>
 
 If this is the first time you’re looking at computer code, it may feel
@@ -7738,9 +7846,9 @@ navigating the overwhelming world of geospatial data.
 Geocode Locations into Coordinates with US Census or Google
 -----------------------------------------------------------
 
-Before addresses can be mapped, they need to be geocoded. **Geocoding**
-is a process of transforming a human-readable address, such as *300
-Summit St, Hartford, CT* into a latitude-longitude pair, such as
+Before addresses can be mapped, they need to be geocoded. Geocoding is a
+process of transforming a human-readable address, such as *300 Summit
+St, Hartford, CT* into a latitude-longitude pair, such as
 *41.747,-72.692*. These numbers are x- and y-coordinates that maps
 understand.
 
@@ -7763,20 +7871,24 @@ addresses? In this section, we will look at two ways to geocode larger
 lists of addresses. First, you’ll learn how to use our custom-built
 [Google Sheets
 Geocoder](https://github.com/HandsOnDataViz/google-sheets-geocoder),
-which lets you upload up to 1,000 addresses and choose between Google
-Geocoder (available pretty much worldwide) and the US Census Geocoder
-(for US addresses only) Second, you’ll learn how to use a stand-alone US
-Census Geocoder that allows you to upload up to 10,000 addresses (for
-the US only) and download results.
+which lets you convert addresses using Google Geocoder (available pretty
+much worldwide) and the US Census Geocoder (for US addresses only).
+Second, you’ll learn how to use a stand-alone US Census Geocoder that
+allows you to upload a file with up to 10,000 addresses within the US,
+and download geocoded results.
 
-TODO: I tried to add numerical limitations for each tool to clarify the
-“two ways”; check details
+Note: Using Google Maps Geocoder within Google Sheets (App Script) does
+not require an API key. In the past, free tier was restricted by 1,000
+geocoding requests in 24 hours. Since 2018, [use quotas are
+unclear](https://developers.google.com/apps-script/guides/services/quotas),
+but we believe the new limit is [up to 50 requests per
+minute](https://developers.google.com/maps/documentation/geocoding/usage-and-billing#other-usage-limits).
 
 #### Geocode addresses with Google Sheets Geocoder
 
-The Google Sheets Geocoder script lives inside a [Google
+The Google Sheets Geocoder script lives inside [a special Google
 Sheet](https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0)
-that you can copy to your own Google Drive (you don’t need editing
+that you should *copy* to your own Google Drive (you don’t need editing
 access, just go to *File &gt; Make a copy*).
 
 The spreadsheet contains six columns. Populate the first column,
@@ -7804,13 +7916,11 @@ GitHub](https://github.com/HandsOnDataViz/google-sheets-geocoder), so
 you or your programmer friend can make sure it doesn’t steal your
 personal data.
 
-TODO: Fix the Google App code to remove warning message
-
 Once the script finishes executing, you will get a pop-up notification
 that will tell you how many addresses were successfully geocoded, and
 how many failed. Inspect *Found* and *Quality* columns to ensure the
 geocoder matched your addresses correctly. Then look at the failed
-addresses and see if you can spot problems with them. For tops about
+addresses and see if you can spot problems with them. For tips about
 using Google geocoder, see
 [documentation](https://developers.google.com/maps/faq#geocoder_queryformat).
 
@@ -7886,8 +7996,8 @@ In the menu on the left-hand side, you can switch from *Find Locations*
 to *Find Geographies* if you wish to include census tract and GeoID data
 in addition to the coordinates.
 
-Your CSV file needs to be formatted the following way, *without the
-header row*:
+Your CSV file **must not contain a header row**. It needs to be
+formatted the following way:
 
     | 1 | 300 Summit St | Hartford | CT | 06106 |
     | 2 | 1012 Broad St | Hartford | CT | 06106 |
@@ -7918,21 +8028,23 @@ correct them, save as a separate CSV file, and re-upload. You can use
 the US Census Geocoder as many times as you want, as long as a single
 file doesn’t exceed 10,000 records.
 
--   In reality only the first two columns, *unique ID* and *street
-    address*, are required. City, state, and zip code may be left blank
-    if you don’t have that data. But there are usually fewer exact
-    matches for addresses with missing elements.
--   If your data lacks ID values, you can create a column of consecutive
-    numbers. See [Calculate with Formulas and Functions](calculate.html)
-    section of this book to see how.
--   Make sure your street addresses don’t contain city, state, and zip
-    code data. If they do, use splitting text to columns technique,
-    described in the [Clean Data with
-    Spreadsheets](clean-spreadsheets.html) section of the book, to get
-    rid of that extra data. But if your street addresses contain
-    apartments, you can leave them in.
+In reality only the first two columns, *unique ID* and *street address*,
+are required for the US Census Geocoder to accept your file for
+processing. City, state, and zip code values may be left blank if you
+don’t have that data. But to ensure you get exact matches, you should
+provide as much data as is available to you.
 
-US Census Geocoder has a comprehensive [overview and
+If your data lacks ID values, you can create a column of consecutive
+numbers. See [Calculate with Formulas and Functions](calculate.html)
+section of this book to see how.
+
+Make sure your street addresses don’t contain city, state, and zip code
+data. If they do, use splitting text to columns technique, described in
+the [Clean Data with Spreadsheets](clean-spreadsheets.html) section of
+the book, to get rid of that extra data. But if your street addresses
+contain apartment numbers, you can leave them in.
+
+Note: US Census Geocoder has a comprehensive [overview and
 documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/census-geocoder.html)
 that you can refer to if you encounter issues not covered here.
 
@@ -7947,9 +8059,13 @@ Pivot Address-Level Point Data into Polygon Data
 
 If you deal with geographical data, you may find yourself in a situation
 where you have a list of addresses which need to be counted
-(**aggregated**) by area and displayed as a polygon (**choropleth**)
-map. In this case, a simple pivot table in a spreadsheet software can
-solve the problem.
+(*aggregated*) by area and displayed as a polygon map. In this case, a
+simple pivot table in a spreadsheet software can solve the problem.
+
+Note: A special case of a polygon map is a *choropleth* map, which
+represents polygons that are colored in a particular way to represent
+underlying values. A lot of polygon maps end up being *choropleth* maps,
+so we will be using this term a lot in this book.
 
 Let’s take a look at a [list of all
 hospitals](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data)
@@ -7960,16 +8076,18 @@ has information on each hospital’s name, location (nicely divided into
 Address, City, State, and ZIP Code columns), a phone number and some
 other indicators, such as mortality and patient experience.
 
-Now, imagine you are given a task to create a polygon map of total
-hospitals by US state, so instead of showing individual hospitals as
-points, you want darker shadows of blue to represent states with more
-hospitals. See Figure <a href="#fig:pivot-address">129</a> to see what
-we are talking about.
+Now, imagine you are given a task to create a choropleth map of total
+hospitals by US state. Instead of showing individual hospitals as points
+(as in Figuere <a href="#fig:pivot-address">129</a>a ), you want darker
+shades of blue to represent states with more hospitals (as in Figure
+<a href="#fig:pivot-address">129</a>b).
 
-<img src="images/11-transform/pivot-address.png" alt="You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps."  />
+or choropleth, maps instead of point maps.
+
+<img src="images/11-transform/pivot-address-annotated.png" alt="You can count addresses by state (or other area) to produce polygon,"  />
 <p class="caption">
 Figure 129: You can count addresses by state (or other area) to produce
-polygon, or choropleth, maps instead of point maps.
+polygon,
 </p>
 
 First, save the database to your local machine by going to *Export &gt;
@@ -7987,9 +8105,9 @@ Sheets, use *File &gt; Import &gt; Upload* to import CSV data. Make sure
 your address columns are present, and move on to creating a pivot table
 (in Google Sheets, go to *Data &gt; Pivot table*, make sure the entire
 data range is selected, and click *Create*). In the pivot table, set
-**Rows** to *State*, because we want to get counts by state. Next, set
-pivot table’s **Values** to *State*—or really any other column that has
-no missing values—and choose *Summarize by: COUNTA*. Voila!
+*Rows* to *State*, because we want to get counts by state. Next, set
+pivot table’s *Values* to *State*—or really any other column that has no
+missing values—and choose *Summarize by: COUNTA*. Voila!
 
 <img src="images/11-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
@@ -8007,47 +8125,50 @@ We will introduce both tools in the next few sections. But before we do
 that, let’s talk about data normalization and why showing counts of
 hospitals per state doesn’t really tell a good story.
 
-Normalize Data to Create Meaningful Polygon Maps
-------------------------------------------------
+Normalize Data to Create Meaningful Choropleth Maps
+---------------------------------------------------
 
-Polygon (choropleth) maps are best when they represent relative, not
-absolute values. Consider two maps shown in Figure
+Choropleth maps are best when they represent relative, not absolute
+values. Consider two maps shown in Figure
 <a href="#fig:normalize-map-data">132</a>. They both are about Covid-19
 cases in the US states (excluding Alaska and Hawaii) as of June 26,
-2020. The map on the left shows total number of recorded cases per
-state, and the map on the right shows cases adjusted by the state’s
-population. Darker colors represent higher values. Do you notice any
-differences in spatial patterns?
+2020. Figure <a href="#fig:normalize-map-data">132</a>a shows total
+number of recorded cases per state, and Figure
+<a href="#fig:normalize-map-data">132</a>b shows Covid-19 cases adjusted
+by the state’s population. Darker colors represent higher values. Do you
+notice any differences in spatial patterns?
 
-<img src="images/11-transform/normalize-map-data.png" alt="Choropleth (polygon) maps work best with normalized values."  />
+<img src="images/11-transform/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
 <p class="caption">
-Figure 132: Choropleth (polygon) maps work best with normalized values.
+Figure 132: Choropleth maps work best with normalized values.
 </p>
 
-Note: Both maps show Covid-19 data collected by the New York Times and
-published [on GitHub](https://github.com/nytimes/covid-19-data). In one
-map, we normalized (divided) values by population in each state,
-according to the 2018 US Census American Community Survey, the most
-recent data available on the day of writing. We didn’t add legends and
-other important cartographic elements so that you can better focus on
-interpreting spatial patterns. In both cases, we used Jenks natural
-breaks for classification.
+Both maps show Covid-19 data collected by the New York Times and
+published [on GitHub](https://github.com/nytimes/covid-19-data). In the
+map in Figure <a href="#fig:normalize-map-data">132</a>b, we normalized
+(divided) values by population in each state, according to the 2018 US
+Census American Community Survey, the most recent data available on the
+day of writing. We didn’t add legends and other important cartographic
+elements so that you can better focus on interpreting spatial patterns.
+In both cases, we used Jenks natural breaks for classification.
 
 What are the worst-hit states according to the map showing total
-Covid-19 counts? If you are familiar with the US geography, you can
-quickly tell that these are New York, New Jersey, Massachusetts,
-Florida, Illinois, Texas, and California. But five of these happen to be
-some of the most populous states in the US, so it makes sense that they
-will also have higher Covid-19 cases.
+Covid-19 counts (shown in Figure
+<a href="#fig:normalize-map-data">132</a>a)? If you are familiar with
+the US geography, you can quickly tell that these are New York, New
+Jersey, Massachusetts, Florida, Illinois, Texas, and California. But
+five of these happen to be some of the most populous states in the US,
+so it makes sense that they will also have higher Covid-19 cases.
 
-Now, how about the map on the right? You can see that New York and its
-neighbors, including New Jersey and Massachusetts, have by far the
-highest rates per capita (per person), which we saw in the first map.
-But you can also see that in fact California, Texas, and Florida were
-impacted to a lesser extent than the map on the left had suggested. So
-the map with per-capita values is a much better illustration to the
-story about New York being the epicenter of the Covid-19 crisis in the
-United States (at least in the spring of 2020).
+Now, how about the map in Figure
+<a href="#fig:normalize-map-data">132</a>b? You can see that New York
+and its neighbors, including New Jersey and Massachusetts, have by far
+the highest rates per capita (per person), which we saw in the first
+map. But you can also see that in fact California, Texas, and Florida
+were impacted to a lesser extent than the map on the left had suggested.
+So the map with per-capita values is a much better illustration to the
+story about New York being the *first* epicenter of the Covid-19 crisis
+in the United States.
 
 #### Different ways to normalize data
 
@@ -8060,13 +8181,12 @@ or lottery winners, they can be presented as “per 1,000” or “per
 100,000” people. Divide your quantity by population in that area to
 derive per capita values.
 
-Choropleth (polygon) maps work well with percentages. The good news is,
-humans like percentages too. It is quite natural for us to understand
-that a 9% unemployment rate means that of 100 people who were willing to
-work, nine were unable to find a job. To derive a percentage for
-unemployment, divide the number of unemployed people by labor force size
-(adult population who are willing and able to work), and multiply by
-100.
+Choropleth maps work well with percentages. The good news is, humans
+like percentages too. It is quite natural for us to understand that a 9%
+unemployment rate means that of 100 people who were willing to work,
+nine were unable to find a job. To derive a percentage for unemployment,
+divide the number of unemployed people by labor force size (adult
+population who are willing and able to work), and multiply by 100.
 
 Unlike counts, most *measured* variables do not need normalization
 because they belong to a scale. For example, median age (the age of the
@@ -8118,7 +8238,7 @@ talk about the basics of geospatial (map) data.
 #### About geospatial data
 
 The first thing to know about geospatial data is that it consists of two
-components, **location** and **attribute**. When you use Google Maps to
+components, *location* and *attribut*. When you use Google Maps to
 search for a restaurant, you get a red marker on the screen that points
 to the latitude and longitude of the physical location of the restaurant
 in the real world. These latitude and longitude (two numbers) are your
@@ -8126,10 +8246,11 @@ location component. The name of the restaurant, its human-friendly
 address, and guest reviews are the attributes, which bring value to your
 location data.
 
-Second, geospatial data can be **raster** or **vector**, as illustrated
-in Figure <a href="#fig:geospatial-raster-vector">133</a>. Raster data
-is a grid of cells (“pixels”) of a certain size (for example, 1 meter by
-1 meter). For example, satellite images of the Earth that you see on
+Second, geospatial data can be *raster* or *vector*, as illustrated in
+Figure <a href="#fig:geospatial-raster-vector">133</a>. Raster data, as
+shown in Figure <a href="#fig:geospatial-raster-vector">133</a>a, is a
+grid of cells (“pixels”) of a certain size (for example, 1 meter by 1
+meter). For example, satellite images of the Earth that you see on
 Google Maps are raster geospatial data. Each pixel contains the color of
 Earth that satellite cameras were able to capture. People and algorithms
 can then use raster data (images) to create outlines of buildings,
@@ -8137,19 +8258,20 @@ lakes, roads, and other objects. These outlines become vector data. For
 example, most of [OpenStreetMap](https://www.openstreetmap.org) was
 built by volunteers tracing outlines of objects from satellite images.
 
-<img src="images/11-transform/geospatial-raster-vector.png" alt="Geospatial data can be raster or vector."  />
+<img src="images/11-transform/geospatial-raster-vector-annotated.png" alt="Geospatial data can be raster or vector."  />
 <p class="caption">
 Figure 133: Geospatial data can be raster or vector.
 </p>
 
 In this book, we will focus on vector data, which is based on points,
-lines, and polygons. Vector data can be much more precise than raster
-data, because points’ coordinates can be expressed with precise
-decimals. In addition, vector data can contain as much extra *attribute*
-information about each object as desired, whereas raster data is
-generally limited to 1 value per cell, whether it is the Earth color, or
-temperature, or altitude. Moreover, vector map files are usually much
-smaller in size than raster ones.
+lines, and polygons, as shown in Figure
+<a href="#fig:geospatial-raster-vector">133</a>b. Vector data can be
+much more precise than raster data, because points’ coordinates can be
+expressed with precise decimals. In addition, vector data can contain as
+much extra *attribute* information about each object as desired, whereas
+raster data is generally limited to 1 value per cell, whether it is the
+Earth color, or temperature, or altitude. Moreover, vector map files are
+usually much smaller in size than raster ones.
 
 Let’s take a look at some of the most common vector file formats.
 
@@ -8177,7 +8299,11 @@ The simplicity and readability of GeoJSON allows you to edit it even in
 the most simple text editor. We strongly recommend you use and share
 your map data in GeoJSON. Web-based maps, such as those built with
 Leaflet, Mapbox, Google Maps JS API, and Carto, as well as ArcGIS and
-QGIS all support GeoJSON.
+QGIS all support GeoJSON. By having your geospatial data stored and
+shared in GeoJSON, you ensure you can use it on the web with nearly any
+mapping tool. You can also be confident that other people will be able
+to use and extract data from the file without bulky and often expensive
+GIS software installed.
 
 Also, your GitHub repository will automatically display any GeoJSON
 files in a map view, like is shown in Figure
@@ -8189,13 +8315,15 @@ Figure 134: GitHub can show previews of GeoJSON files stored in
 repositories.
 </p>
 
-In GeoJSON, coordinates are ordered in *longitude-latitude* format, the
-same as X-Y coordinates in mathematics. This is the opposite of Google
-Maps and some other web map tools, which order values as
+Warning: In GeoJSON, coordinates are ordered in *longitude-latitude*
+format, the same as X-Y coordinates in mathematics. This is the opposite
+of Google Maps and some other web map tools, which order values as
 *latitude-longitude*. For example, *Hartford, Conn.* is located at
 (-72.67, 41.76) according to GeoJSON, but at (41.76, -72.67) in Google
 Maps. Neither notation is right or wrong, just make sure you know which
-one you are dealing with.
+one you are dealing with. Tom MacWright created a great summary table
+[showing lat/lon order of different geospatial formats and
+technologies](https://macwright.com/lonlat/).
 
 #### Shapefiles
 
@@ -8224,10 +8352,11 @@ discussed later in this chapter.
 
 #### Keyhole Markup Language (or KML)
 
-The KML format rose in popularity during the late 2000s. Google Earth, a
-free and user-friendly tool, allowed many people to view and edit
-geographic data. KML files were often used with maps powered by Google
-Fusion Tables, but that became history in late 2019.
+The KML format rose in popularity during the late 2000s. It was
+developed for Google Earth, a free and user-friendly tool that allowed
+many people to view and edit two- and three-dimensional geographic data.
+KML files were often used with maps powered by Google Fusion Tables, but
+that [became history in late 2019](https://killedbygoogle.com/).
 [GeoJson.io](geojsonio.html) should be able to convert your KML file
 into a GeoJSON.
 
@@ -8243,6 +8372,14 @@ format created and supported by MapInfo, Esri’s competitor, and is
 designed to work well with MapInfo Pro GIS software. Unfortunately, you
 will most likely need MapInfo Pro, QGIS, or ArcGIS to re-save these as
 GeoJSON or a Shapefile.
+
+We’ve mentioned only a handful of the most common geospatial file
+formats. There is a myriad of other, less known formats for both raster
+and vector data. Remember that GeoJSON is one of the best, most
+universal formats for your *vector* data, and we strongly recommend to
+store and share your map data in GeoJSON. In the next section, we will
+look at free online tools to create, convert, join, crop, and in other
+ways manipulate GeoJSON files.
 
 GeoJson.io to Convert, Edit, and Create Map Data
 ------------------------------------------------
@@ -8316,19 +8453,21 @@ anything but instead would add point features to the existing map.
     *community\_type*, and *wiki\_link* features in addition to the
     tool’s default *marker-color*, *marker-size*, and *marker-symbol*
     fields.
-2.  The popup is interactive, and you can click and edit each property
-    (including property names). You can also add a new property by
-    clicking the *Add row* button. You can delete the marker by clicking
-    *Delete feature* button.
-3.  Click *Save* to record all marker changes to the GeoJSON. This will
+
+Tip: The popup is interactive, and you can click and edit each property
+(including property names). You can also add a new property by clicking
+the *Add row* button. You can delete the marker by clicking *Delete
+feature* button.
+
+1.  Click *Save* to record all marker changes to the GeoJSON. This will
     close the popup window, and you will see updated markers in the JSON
     tab to the right of the map.
-4.  It may be quicker to view all data as a table instead of dealing
-    with individual marker popups. In **Table** tab to the right of the
-    map, you can add, rename, and remove columns from *all* features
+2.  It may be quicker to view all data as a table instead of dealing
+    with individual marker popups. In the *Table* tab to the right of
+    the map, you can add, rename, and remove columns from *all* features
     (markers) at once. Table cells are also modifiable, so you can edit
     your data there.
-5.  Once you are happy with your map data, go to *Save &gt; GeoJSON* to
+3.  Once you are happy with your map data, go to *Save &gt; GeoJSON* to
     download the result to your computer. You can also log into
     GeoJson.io with your GitHub account and save directly to your
     repository.
@@ -8345,7 +8484,8 @@ into a GeoJSON with point features.
 GeoJson.io lets you create geospatial files from scratch, using simple
 drawing tools to put markers (points), lines, and polygons to
 appropriate locations. These are useful when you have no original file
-to work with.
+to work with. The following steps will show you how to create a new
+GeoJSON file and add markers, lines, and polygons to it.
 
 1.  Open GeoJson.io and in the lower-left corner switch from Mapbox
     (vector tiles) to Satellite.
@@ -8363,7 +8503,7 @@ GeoJson.io.
 1.  In the toolbar, you have a choice of four drawing tools: a polyline
     (which is a series of points connected by lines, but not closed like
     a polygon), a polygon, a rectangle (which is just an instance of a
-    polygon), and a marker (point). Let’s start with the latter.
+    polygon), and a marker (point). Let’s start by creating a marker.
 2.  Click on the *Draw a marker* button, and click anywhere on the map
     to place it. You will see a gray marker that is now part of your
     map. You can modify its properties, or delete it in the interactive
@@ -8421,8 +8561,10 @@ time-consuming tasks.
 
 You can use Mapshaper to convert between geospatial file formats. Unlike
 GeoJson.io, Mapshaper also supports Esri Shapefiles (which is a folder
-of individual files with the same name, but different extensions), so
-you can easily convert a Shapefile into a web-friendly GeoJSON.
+of individual files with the same name, but different file extensions),
+so you can easily convert a Shapefile into a web-friendly GeoJSON. In
+the following steps, we will convert a geospatial file by import it to
+Mapshaper, and then export it as a different file type.
 
 1.  Navigate to [Mapshaper.org](https://mapshaper.org). The start page
     is two large drag-and-drop zones which you can use to import your
@@ -8485,16 +8627,21 @@ You may not need precise and detailed map boundaries for data
 visualization projects where zoomed-out geographies are shown. Detailed
 boundaries are heavy, and may slow down your web maps.
 
-Consider two maps of the contiguous US states, also known as Lower-48,
-shown in Figure <a href="#fig:mapshaper-simplify-demo">141</a>. The map
-on the left is more detailed and is about 230 kilobytes, but the map on
-the right is only 37 kilobytes, 6 times smaller!
+Consider two maps of the contiguous US states (also known as *the lower
+48*, the term Ilya learned in 2018 while travelling in Alaska), shown in
+Figure <a href="#fig:mapshaper-simplify-demo">141</a>. The map in Figure
+<a href="#fig:mapshaper-simplify-demo">141</a>a is more detailed and is
+about 230 kilobytes, but the map in Figure
+<a href="#fig:mapshaper-simplify-demo">141</a>b is only 37 kilobytes, 6
+times smaller!
 
-<img src="images/11-transform/mapshaper-simplify-demo.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
+<img src="images/11-transform/mapshaper-simplify-demo-annotated.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
 <p class="caption">
 Figure 141: Consider simplifying geometries with Mapshaper to make your
 web maps faster.
 </p>
+
+To simplify map boundaries in Mapshaper, follow the steps below.
 
 1.  Import your geo file to Mapshaper. You can use the [sample
     contiguous US states GeoJSON](data/lower-48.geojson).
@@ -8522,12 +8669,12 @@ Mercator, which is more common.
 
 #### Dissolve internal polygons to create an outline map
 
-Mapshaper’s most powerful tools are available through **Console**, which
-allows you to type commands for common map editing tasks. One of such
-tasks is to create an outline map by removing the internal boundaries.
-For example, you can dissolve state boundaries of the US map in the
-previous exercise to get the outline of the country, like is shown in
-Figure <a href="#fig:mapshaper-dissolve">143</a>.
+Mapshaper’s most powerful tools are available through the *Console*,
+which allows you to type commands for common map editing tasks. One of
+such tasks is to create an outline map by removing the internal
+boundaries. For example, you can dissolve state boundaries of the US map
+in the previous exercise to get the outline of the country, like is
+shown in Figure <a href="#fig:mapshaper-dissolve">143</a>.
 
 <img src="images/11-transform/mapshaper-dissolve.png" alt="Mapshaper lets you dissolve boundaries to create an outline shape."  />
 <p class="caption">
@@ -8562,7 +8709,7 @@ Mapshaper allows you to do just that using one simple `-clip` command.
     what ArcGIS calls the “clip feature”.
 2.  Make sure your active layer is set to the map you are clipping
     (*ct-towns*).
-3.  In the **Console**, type `-clip` followed by the name of your clip
+3.  In the *Console*, type `-clip` followed by the name of your clip
     layer, like that:
 
 <!-- -->
@@ -8592,8 +8739,8 @@ clipped (with many features), not the clipping feature iteslf.
 
 Sometimes map features, such as polygons, lines, and points, contain
 unwanted *attributes* (or fields, or columns) that you may want to
-remove. In **Console**, use `-filter-fields` editing command to remove
-unnecessary fields.
+remove. In the *Console*, type the `-filter-fields` editing command to
+remove unnecessary fields.
 
 For example, remove all fields except *town*:
 
@@ -8604,8 +8751,8 @@ without spaces, like that:
 
     -filter-fields town,state
 
-Note: If you leave a space after comma, you will get a *Command expects
-a single value* error.
+Warning: If you leave a space after comma, you will get a *Command
+expects a single value* error.
 
 #### Join spreadsheet data with polygon map
 
@@ -8629,7 +8776,7 @@ Mapshaper has no way of knowing which numbers belong to which polygons.
     *ct-towns* layer has *name* attribute with the name of the town, and
     *ct-towns-popdensity* has town names in the *town* column.
 3.  Make your geospatial layer (*ct-towns*) is the one active.
-4.  Open **Console**, and use the `-join` command, like that:
+4.  Open the *Console*, and use the `-join` command, like this:
 
 <!-- -->
 
@@ -8660,8 +8807,9 @@ our example, you would rename *town* column to *name* column in the CSV,
 and your command would end with `keys=name,name`.
 
 Do you remember aggregating address-level point records of hospitals
-into [hospital counts per state](pivot-point-to-polygon.html)? Now is a
-good time to find that .CSV file and practice your merging skills.
+into [hospital counts per state](pivot-point-to-polygon.html) discussed
+earlier in this chapter? Now is a good time to find that .CSV file and
+practice your merging skills.
 
 #### Count points in polygons with Mapshaper
 
@@ -8676,8 +8824,8 @@ polygon attributes using `-join` command.
 2.  Make sure your polygons (not points) layer is active by selecting it
     from the dropdown menu.
 
-3.  In **Console**, perform `-join` using a `count()` function, like
-    that:
+3.  In the *Console*, perform `-join` using a `count()` function, like
+    this:
 
 <!-- -->
 
@@ -8703,10 +8851,11 @@ Figure 146: Mapshaper’s -join can count points in polygons.
 
 #### More about joins
 
-As you saw in counting points in polygons example, you do not need to
-specify *keys* if you want to perform join based on geographical
-locations between two geo files. If one of your files is a CSV, you need
-*keys*.
+From the “Count points in polygons with Mapshaper” section of this
+chapter, you should recall that you do not need to specify *keys* if you
+want to perform join based on geographical locations between two
+geospatial layers (one being points, the other is polygons). If one of
+your files is a CSV, you need *keys*.
 
 If you don’t have a CSV table that matches the columns in your boundary
 map data, you can easily create one. Upload the boundary map to
@@ -8750,10 +8899,13 @@ thing in
 Connecticut](https://portal.ct.gov/DPH/Local-Health-Admin/LHA/Local-Health-Administration---Site-Map).
 
 You should begin by creating a *crosswalk* of towns and their health
-districts. It can be as simple as a two-column CSV list of a town and
-its district. Because your boss didn’t give you a list of towns in a
-spreadsheet format, but instead a GeoJSON file with town boundaries,
-let’s extract a list of towns from it.
+districts. Computer scientists and those working with data often use the
+term *crosswalk* to describe some kind of matching between two sets of
+data, such as zipcodes and towns where they are located. In our case,
+the crosswalk can be as simple as a two-column CSV list of a town and
+its district, each on a new line. Because your boss didn’t give you a
+list of towns in a spreadsheet format, but instead a GeoJSON file with
+town boundaries, let’s extract a list of towns from it.
 
 1.  Import [ct-towns.geojson](data/ct-towns.geojson) to Mapshaper using
     Quick import box.
@@ -8783,7 +8935,7 @@ they should be merged to.
     appear as a series of table cells. From the dropdown menu, select
     *ct-towns* to get back to your map.
 3.  Now you are ready to merge certain towns into districts according to
-    your uploaded CSV file. Open **Console**, and type:
+    your uploaded CSV file. Open the *Console*, and type:
 
 <!-- -->
 
@@ -8825,8 +8977,15 @@ TODO: Add Mapwarper section here
 Convert a Compressed KMZ file to KML format
 -------------------------------------------
 
-Sometimes KML files are distributed in compressed KMZ format. The
-easiest way to convert is to use free Google Earth Pro.
+In the previous sections, we looked at using Geojson.io and Mapshaper to
+convert geospatial files. However, not all file types can be converted
+with these tools. This chapter shows a particular example of a commonly
+requested `.kmz` &lt;-&gt; `.kml` pair conversion with Google Earth Pro.
+
+KMZ is a compressed version of a KML file, and the easiest way to
+convert between the two is to use free Google Earth Pro (if you remember
+from *Convert to GeoJSON format* section, KML is a native format of
+Google Earth).
 
 1.  Download and install [Google Earth
     Pro](https://www.google.com/earth/versions/) for desktop.
@@ -8837,10 +8996,10 @@ easiest way to convert is to use free Google Earth Pro.
     and select *Save Place As…*, like is shown in Figure
     <a href="#fig:kmz-earth">149</a>.
 
-<img src="images/11-transform/kmz-earth.png" alt="In Google Earth Pro, right-click KMZ layer and choose *Save Place As*." width="400px" />
+<img src="images/11-transform/kmz-earth.png" alt="In Google Earth Pro, right-click the KMZ layer and choose *Save Place As*." width="400px" />
 <p class="caption">
-Figure 149: In Google Earth Pro, right-click KMZ layer and choose *Save
-Place As*.
+Figure 149: In Google Earth Pro, right-click the KMZ layer and choose
+*Save Place As*.
 </p>
 
 1.  In the dropdown menu of *Save file…* window, choose KML format, like
@@ -8853,6 +9012,20 @@ Figure 150: Save as KML, not KMZ.
 
 Alternatively, you can use any zip-utility to extract a KML file from
 KMZ. KMZ is simply a ‘zipped’ version of a KML file!
+
+### Summary
+
+In this chapter, you learned to use pivot tables to count addresses
+(points) by geographical area, such as states or cities (polygons). You
+lerned that geospatial data can be vector or raster. The best file
+format to store, share, and use vector data is GeoJSON. You can use
+GeoJson.io to create, edit, or convert geospatial files inside your
+browser. Mapshaper is another online tool to convert, simplify, join or
+crop geospatial data.
+
+In the following chapter, we will talk detecting bias in charts and
+maps. so that you become a better storyteller and a more critical
+reader.
 
 <!--chapter:end:11-transform.Rmd-->
 

@@ -174,6 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for Your Search</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data</a></li>
 <li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
@@ -242,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
@@ -362,13 +364,15 @@ but instead would add point features to the existing map.</p>
 with towns around Hartford, you will see <em>town</em>, <em>community_type</em>, and <em>wiki_link</em> features
 in addition to the tool’s default <em>marker-color</em>, <em>marker-size</em>, and <em>marker-symbol</em>
 fields.</li>
-<li>The popup is interactive, and you can click and edit each property (including property names).
+</ol>
+<p>Tip: The popup is interactive, and you can click and edit each property (including property names).
 You can also add a new property by clicking the <em>Add row</em> button. You can delete
-the marker by clicking <em>Delete feature</em> button.</li>
+the marker by clicking <em>Delete feature</em> button.</p>
+<ol start="3" style="list-style-type: decimal">
 <li>Click <em>Save</em> to record all marker changes to the GeoJSON. This will close the popup window,
 and you will see updated markers in the JSON tab to the right of the map.</li>
 <li>It may be quicker to view all data as a table instead of dealing with individual marker popups.
-In <strong>Table</strong> tab to the right of the map, you can add, rename, and remove columns
+In the <em>Table</em> tab to the right of the map, you can add, rename, and remove columns
 from <em>all</em> features (markers) at once.
 Table cells are also modifiable, so you can edit your data there.</li>
 <li>Once you are happy with your map data, go to <em>Save &gt; GeoJSON</em> to download the result to your computer.
@@ -386,7 +390,9 @@ Figure 11.13: A spreadsheet with coordinates columns can be transformed into a G
 <h4>Create a GeoJSON from scratch using drawing tools</h4>
 <p>GeoJson.io lets you create geospatial files from scratch, using simple drawing
 tools to put markers (points), lines, and polygons to appropriate locations.
-These are useful when you have no original file to work with.</p>
+These are useful when you have no original file to work with. The following
+steps will show you how to create a new GeoJSON file and add markers, lines, and polygons
+to it.</p>
 <ol style="list-style-type: decimal">
 <li>Open GeoJson.io and in the lower-left corner switch from Mapbox (vector tiles)
 to Satellite.</li>
@@ -404,7 +410,7 @@ Figure 11.14: Use drawing tools to create points, lines, and polygons in GeoJson
 <ol start="3" style="list-style-type: decimal">
 <li>In the toolbar, you have a choice of four drawing tools: a polyline (which is a series
 of points connected by lines, but not closed like a polygon), a polygon, a rectangle
-(which is just an instance of a polygon), and a marker (point). Let’s start with the latter.</li>
+(which is just an instance of a polygon), and a marker (point). Let’s start by creating a marker.</li>
 <li>Click on the <em>Draw a marker</em> button, and click anywhere on the map to place it.
 You will see a gray marker that is now part of your map. You can modify its properties,
 or delete it in the interactive pop-up.</li>

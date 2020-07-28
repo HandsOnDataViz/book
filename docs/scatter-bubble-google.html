@@ -174,6 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for Your Search</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data</a></li>
 <li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
@@ -242,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
@@ -307,11 +309,13 @@ Bubble charts are basically scatter charts on steroids, meaning that they can di
 Further below you’ll build a bubble chart based on the same XY life expectancy-fertility dataset, with added variables for population (displayed as circle size) and region of the world (displayed as circle color).</p>
 <p>Fancier bubble charts animate the circles to represent one more variable: change over time.
 Such animated bubble charts were popularized by Hans Rosling, a renowned Swedish professor
-of global health. You can watch one of his famous <a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen">TED talks</a>
-to see animated bar charts in action.</p>
+of global health.</p>
+<p>Note: We recommend you watch one of Hans Rosling’s famous <a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen">TED talks</a>
+to see animated bar charts in action. You can also visit <a href="https://www.gapminder.org/">Gapminder Foundation website</a> to see more data visualizations
+and learn more about Hans’s work and legacy.</p>
 <div id="xy-scatter-chart" class="section level4 unnumbered" number="">
 <h4>XY Scatter chart</h4>
-<p>The scatter chart in Figure <a href="scatter-bubble-google.html#fig:scatter">5.28</a> uses World Bank data to reveal a downward slope:
+<p>The scatter chart in Figure <a href="scatter-bubble-google.html#fig:scatter">5.29</a> uses World Bank data to reveal a downward slope:
 nations with lower fertility (births per woman)
 tend to have higher life expectancy. You can also phrase is the other way,
 nations with higher life expectancy at birth have lower fertility.
@@ -323,13 +327,13 @@ births result in longer lives, or that longer-living females give birth to fewer
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure 5.28: This scatter chart shows that nations with lower fertility tend to have higher life expectancy. <a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;format=interactive">full-screen interactive version</a>.
+Figure 5.29: This scatter chart shows that nations with lower fertility tend to have higher life expectancy. <a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;format=interactive">full-screen interactive version</a>.
 </p>
 </div>
-<p>The data used in Figure <a href="scatter-bubble-google.html#fig:scatter">5.28</a> is available from our
+<p>The data used in Figure <a href="scatter-bubble-google.html#fig:scatter">5.29</a> is available from our
 <a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit?usp=sharing">Google Sheets Scatter chart template</a>.
 You can copy it to your own Google Drive so that you’re able to edit it (go to <em>File &gt; Make a copy</em>).</p>
-<p>Figure <a href="scatter-bubble-google.html#fig:scatter-data">5.29</a> shows the first few rows of the dataset.
+<p>Figure <a href="scatter-bubble-google.html#fig:scatter-data">5.30</a> shows the first few rows of the dataset.
 Notice that the data is structured in three columns. The first column, <em>Life Expectancy</em>,
 is plotted on the x-axis (horizontal). The second column, <em>Fertility</em>, is plotted on the y-axis (vertical).
 The third column contains <em>Country</em> labels.</p>
@@ -337,10 +341,10 @@ The third column contains <em>Country</em> labels.</p>
 <div class="figure"><span id="fig:scatter-data"></span>
 <img src="images/05-chart/scatter-data.png" alt="Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels." width="350px" />
 <p class="caption">
-Figure 5.29: Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels.
+Figure 5.30: Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels.
 </p>
 </div>
-<p>To build a scatter chart, select the <strong>two</strong> columns that contain your numeric data,
+<p>To build a scatter chart, select the <em>two</em> columns that contain your numeric data,
 and go to <em>Insert &gt; Chart</em>. Google Sheets will likely to guess the chart type and you will see a scatterplot,
 but if not, you can always manually pick Scatter chart from the <em>Chart type</em> dropdown.
 Make sure your x-axis is set to Life Expectancy, and your Series shows Fertility.
@@ -348,8 +352,8 @@ Note that both Life Expectancy and Fertility have <code>123</code> icon, meaning
 <p>You will see a lot of scatter charts out there that do not label data points, and that’s okay.
 Some scatter plots are designed to show whether or not there is a correlation, and knowing
 which points are which is not important. But sometimes labels are important for your storytelling.</p>
-<p>In Chart editor, click on the 3-dot menu for your Series dataset (Fertility), and then <em>Add labels</em>
-(see Figure <a href="scatter-bubble-google.html#fig:scatter-labels">5.30</a>).
+<p>In Chart editor, open the kebab menu (3 dots) of your Series dataset (Fertility), and then <em>Add labels</em>
+(see Figure <a href="scatter-bubble-google.html#fig:scatter-labels">5.31</a>).
 The labels added by default will be the x-values of points. To make Google Sheets read
 labels from the third column (<em>Country</em>), click the name of your label dataset (Life Expectancy),
 then <em>Select a data range</em> button in the upper-right corner of the dropdown,
@@ -359,7 +363,7 @@ all other data ranges include it.</p>
 <div class="figure"><span id="fig:scatter-labels"></span>
 <img src="images/05-chart/scatter-labels-annotated.png" alt="In the chart’s Setup window, choose Add labels to the Series." width="350px" />
 <p class="caption">
-Figure 5.30: In the chart’s Setup window, choose <em>Add labels</em> to the Series.
+Figure 5.31: In the chart’s Setup window, choose <em>Add labels</em> to the Series.
 </p>
 </div>
 <p>Tip: You may notice that some data points are too close to edges, and their labels are cut off.
@@ -367,16 +371,6 @@ To fix this, go to Customize tab of the Chart editor. There, you can set minimum
 for both horizontal and vertical axes. Unlike in bar charts, axes in scatter plots do not have to start at zero.
 You can set your minimum and maximum values to be a few units below and above the extreme points of your
 data range.</p>
-<p>Note: Another name for the 3-dot menu symbol is the “kebab menu” because it resembles Middle Eastern
-food cooked on a skewer, in contrast to the three-line “hamburger menu” on many mobile devices,
-as shown in Figure <a href="scatter-bubble-google.html#fig:menu-hamburger-kebab">5.31</a>.</p>
-
-<div class="figure"><span id="fig:menu-hamburger-kebab"></span>
-<img src="images/05-chart/menu-hamburger-kebab.png" alt="You should be able to distinguish kebab from hamburger menu icons."  />
-<p class="caption">
-Figure 5.31: You should be able to distinguish kebab from hamburger menu icons.
-</p>
-</div>
 </div>
 <div id="bubble-chart-with-3-columns" class="section level4 unnumbered" number="">
 <h4>Bubble chart with 3 columns</h4>
@@ -402,7 +396,7 @@ the second column is the data to be plotted on horizontal x-axis, and the third 
 will be placed on the y-axis.</p>
 <p>Select all three columns, and go to <em>Insert &gt; Chart</em>. Google Sheets will likely create a stacked
 column chart by default, so choose <em>Bubble</em> from the Chart type dropdown window.</p>
-<p>If you want to remove labels from the bubbles, remove the <strong>ID</strong> series (click on the kebab menu &gt; Remove).</p>
+<p>If you want to remove labels from the bubbles, remove the <em>ID</em> series (click on the kebab menu &gt; Remove).</p>
 <p>Unfortunately, there is no easy way to reduce all bubbles to a uniformly smaller size.
 In the following section, we will introduce you to the proper way of using bubble charts.</p>
 </div>
@@ -434,8 +428,8 @@ Figure 5.34: Bubble chart data. Bubble size represents population, color – reg
 </p>
 </div>
 <p>Select all data and go to <em>Insert &gt; Chart</em>, and choose Bubble as the Chart type.
-Make sure your <strong>ID</strong>, <strong>X-axis</strong>, <strong>Y-axis</strong>, <strong>Series</strong>, and <strong>Size</strong> fields
-contains the series you want to display, and make sure to have <em>Use row 1 as headers</em> option checked.</p>
+Make sure your <em>ID</em>, <em>X-axis</em>, <em>Y-axis</em>, <em>Series</em>, and <em>Size</em> fields
+contain the series you want to display, and make sure to have <em>Use row 1 as headers</em> option checked.</p>
 <p>To change labels color, go to Customize tab of the Chart editor, and set Text color under the Bubble menu.
 Make it gray or black, so that it won’t interfere with the bubble colors themselves.</p>
 <p>Tip: If some of your bubbles are too close to the borders, set Min and Max values for the axis manually

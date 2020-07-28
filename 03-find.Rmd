@@ -1,11 +1,8 @@
 # Find and Know Your Data {#find}
 In the early stages of a visualization project, you will likely ask two important and related questions: *Where can I find data?* and *What do I really know about it?* If you skip over these questions and leap too quickly into constructing charts and maps, you run the risk of creating meaningless, or perhaps worse, misleading visualizations. This chapter breaks down both of these broad questions in greater detail, and provides concrete strategies to [guide your search](guide.html)[recognize bad data](bad.html), [source your data](source.html), navigate [public versus private data](public.html), and search a growing number of [open data repositories](opendata.html).
 
-
-
 ## Guiding Questions for Your Search {- #guiding}
-
-REDO... When searching for data, your newest best friend may be a librarian. Sometimes a data-smart librarian happens to know exactly where to locate a dataset that you've been seeking for day. But their more valuable skill is guiding us on *how to search* by reflecting on the types of questions librarians commonly ask:
+TODO: REDO... When searching for data, your newest best friend may be a librarian. Sometimes a data-smart librarian happens to know exactly where to locate a dataset that you've been seeking for day. But their more valuable skill is guiding us on *how to search* by reflecting on the types of questions librarians commonly ask:
 
 - What's the question you're trying to answer? Write it down in the form of a researchable question. For example.... when journalists Jacqueline Rabe Thomas and XY explored lost education during covid, they asked: *INSERT WELL-FORMED QUESTION* and cite their study... Similarly, when data journalists Andrew Ba Tran and others at the Wash Post investigated prescription drug abuse(?), they asked....
 
@@ -16,8 +13,6 @@ REDO... When searching for data, your newest best friend may be a librarian. Som
 - What level(s) of data are available? Is information disaggregated by individual cases or aggregated into larger groups? Librarians can help us to decipher how and why different organizations publish data in different formats. For example, US Census seeks to collect data every ten years about each person residing in the nation, but under the law, this individual-level data is confidential and not released to the public for 72 years. You can look up individual census data for 1940 and earlier decades at the [US National Archives](https://www.archives.gov/research/genealogy/census/about) and other websites. But the US Census publishes current data for larger areas, such as neighborhood-level block groups, census tracts, cities, and states, by aggregating individual records into data tables, and suppressing small-numbered cells to protect people's privacy. Librarians can help us understand organization's guidelines on when and how they make data available at different levels.
 
 ## Know Your Data {- #know}
-
-
 TODO: explain more about expectations about “knowing what you data means” in the scope of this chapter….
 
 If your search has produced some results, the next step is to get to know your data. Closely examine your files and ask questions about their origin, meaning, and limitations:
@@ -75,16 +70,13 @@ In addition to asking questions about the origins and limitations of your data, 
 
 In the United States, the 1966 [Freedom of Information Act](https://en.wikipedia.org/wiki/Freedom_of_Information_Act) and its subsequent amendments have sought to open access to information in the federal government, with the view that increased transparency would promote public scrutiny and pressure on officials to make positive changes. In addition, state governments operate under their own freedom of information laws, sometimes called "open records" or "sunshine laws." When people say they've submitted a "FOIA," it means they've sent a written request to a government agency for information that they believe should be public under the law. But federal and state FOIA laws are complex, and courts have interpreted cases in different ways over time, as summarized in the [Open Government Guide](https://www.rcfp.org/open-government-guide/) by the Reporters Committee for Freedom of the Press, and also by the [National Freedom of Information Coalition](https://www.nfoic.org/). Sometimes government agencies quickly agree and comply with a FOIA request, while other times they may delay or reject it, which may pressure the requester to attempt to resolve the issue through time-consuming litigation. Around the world, [over 100 nations have their own version of freedom of information laws](https://en.wikipedia.org/wiki/Freedom_of_information_laws_by_country), with the oldest being Sweden's 1766 Freedom of the Press Act, but these laws vary widely.
 
+What's most important---and confusing---about access to US data is that individual-level data is usually considered private, except in certain areas where our governmental process has determined that a broader interest is served by making it public. On one hand, here are two categories where individual-level data is private under federal law:
 
+- Patient-level health data is generally protected under the [Privacy Rule of the Health Insurance Portability and Accountability Act](https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act#Privacy_Rule), commonly known as HIPAA. Public health officials regularly aggregate patient records into larger anonymized public datasets to track progress about various illnesses. This process keeps individual-level data about each patient private, but allows the public to benefit from information about broad trends.
 
+- Student-level education data is generally protected under the [Family Educational Rights and Privacy Act](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act), commonly known as FERPA. Public education officials regularly aggregate student records into larger anonymized public datasets to track the progress of schools, districts, and states. Once again, this process keeps individual-level data about each student private, but allows the public to benefit from information about broad trends.
 
-Here's what's most important---and confusing---about access to data in the US. Individual-level data is often considered private, except in certain areas where our governmental process has determined that broader interests are served by making it public. First, here are two examples where individual-level data generally remains private:
-
-- Patient-level health data is generally protected under the [Privacy Rule of the Health Insurance Portability and Accountability Act](https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act#Privacy_Rule), commonly known as HIPAA. But public health officials regularly aggregate individual patient records into larger anonymized public datasets to track progress about various illnesses.
-
-- Student-level education data is generally protected under the [Family Educational Rights and Privacy Act](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act), commonly known as FERPA. But education officials regularly aggregate individual student records into larger anonymized public datasets to track the progress of schools, districts, and states.  
-
-But here are other examples where the US government has determined that a broader interest is served by making individual-level data available to the public:
+On the other hand, here are three categories where government has ruled that the public interest is served by making individual-level data available to all:
 
 - Individual contributions to political candidates are public information in the [US Federal Election Commission database](https://www.fec.gov/data/receipts/individual-contributions/). See related databases such as [Follow The Money](https://www.followthemoney.org/) by the National Institute on Money in Politics and [Open Secrets](http://www.opensecrets.org/) by the Center for Responsive Politics, which both describe more details about donations submitted through political action committees and controversial exceptions to campaign finance laws. Across the US, state-level political contribution laws vary widely, and public records are stored in separate databases. For example, anyone can search the [Connecticut Campaign Reporting Information System](https://seec.ct.gov/Portal/eCRIS/eCrisSearch) to find donations made by the first author to state-level political campaigns.
 
@@ -92,14 +84,7 @@ But here are other examples where the US government has determined that a broade
 
 - Individual salaries for officers of tax-exempt organizations are public, which they are required to file on Internal Revenue Service (IRS) 990 forms each year. For example, anyone can search 990 forms on ProPublica's [Nonprofit Explorer](https://projects.propublica.org/nonprofits), and view the salary and other compensation of the top officers of the first author's employer, Trinity College in Hartford, Connecticut.
 
-TODO: Add "big data"
-
-TODO: ADD how the boundary between public and private individual-level data is continually changing, and subject to political and social pressures...
-
-- Individual police officer reports are gradually becoming more public, partly in response to the Black Lives Matter movement. For example, New Jersey state law required local police departments to make public "use of force" reports, but no one could easily search these until a team of journalists from from NJ Advance Media created [The Force Report](https://force.nj.com/) public database, where anyone can look up individual officers and investigate patterns of violence. Similarly, a team of ProPublica journalists created [The NYPD Files public database](https://projects.propublica.org/nypd-ccrb/), where anyone can search closed cases of civilian complaints against New York City police officers, by name or precinct.
-
-
-
+The boundary between what types of individual-level data should remain private or become public is continually changing, and subject to political and social pressures. On one hand, critics of "[big data](https://en.wikipedia.org/wiki/Big_data)" and "[surveillance capitalism](https://en.wikipedia.org/wiki/Surveillance_capitalism)" charge that governments seek more power and corporations seek more profits by collecting and commodifying massive amounts of personal data about each individual. On the other hand, the Black Lives Matter movement has gradually made more individual-level data publicly available on violence by police officers. For example, New Jersey state law required local police departments to make "use of force" reports publicly available, but no one could easily search these paper forms until a team of journalists from from NJ Advance Media created [The Force Report public database](https://force.nj.com/), where anyone can look up individual officers and investigate possible patterns of violent behavior. Similarly, a team of ProPublica journalists created [The NYPD Files public database](https://projects.propublica.org/nypd-ccrb/), which now allows anyone to search closed cases of civilian complaints against New York City police officers, by name or precinct, for potential patterns of substantiated allegations. People working in the field of data visualization need to stay informed about the shifting boundary lines between private versus public individual-level data, and contribute to discussions about whose interests are served by making more data available.
 
 
 ## Open Data Repositories {- #opendata}

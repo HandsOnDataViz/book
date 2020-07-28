@@ -70,7 +70,7 @@ which contains 169 Connecticut towns and their population, for the exercise.
 1. Select the column you want to modify by clicking on the column header. If you don't,
 you will be searching and replacing in the entire spreadsheet.
 2. From *Edit* menu, choose *Find and replace* item. You will see the window like is shown in Figure \@ref(fig:sheets-find-replace).
-3. In the *Find* field, type ` town`, without quotation marks **and leaving a space before the word**. If you don't leave the space,
+3. In the *Find* field, type ` town`, without quotation marks **and leave a space before the word**. If you don't leave the space,
 you will accidentally remove *town* from *Newtown*, and you will end up with trailing spaces which can cause troubles in the future.
 4. Leave the *Replace with* field blank.
 5. *Search* field should be set to the range you selected in step 1, or *All sheets* if you didn't
@@ -117,7 +117,7 @@ or any other custom character (or even a sequence of characters — more about t
 
 (ref:sheets-split) Select Data > Split text to columns to automatically separate data.
 
-```{r sheets-split, fig.cap="(ref:sheets-split)"}
+```{r sheets-split, out.width=350, fig.cap="(ref:sheets-split)"}
 knitr::include_graphics("images/04-clean/sheets-split-annotated.png")
 ```
 
@@ -318,11 +318,11 @@ You can download a copy of OpenRefine for Linux, Mac, or Windows from the [offic
 download page](https://openrefine.org/download.html). Just like Tabula, it runs in your browser and no
 data leaves your local machine, which is great for confidentiality.
 
-If you work on a **Mac**, the downloaded file will be a .dmg file. You will likely encounter
+If you work on a Mac, the downloaded file will be a .dmg file. You will likely encounter
 a security message that will prevent OpenRefine from launching. Go to System Preferences -> Security and Privacy, and
 hit *Open Anyway* button in the lower half of the window. If prompted with another window, click *Open*.
 
-If you use **Windows**, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
+If you use Windows, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
 open in your default browser.
 
 Once launched, you should see OpenRefine in your browser with `127.0.0.1:3333` address (localhost, port 3333),
@@ -343,8 +343,8 @@ OpenRefine is able to extract data directly from SQL databases, but this is beyo
 We assume that you downloaded the sample dataset we provided (or you are using your own file),
 so let's load it from your computer.
 
-1. Under *Get data from: This computer*, click *Browse...* and select the file. Click Next.
-2. Before you can start cleaning up data, OpenRefine allows you to make sure data is **parsed** properly.
+1. Under *Get data from: This computer*, click *Browse...* and select the file. Click *Next*.
+2. Before you can start cleaning up data, OpenRefine allows you to make sure data is *parsed* properly.
 In our case, parsing means the way the data is split into columns.
 Make sure OpenRefine assigned values to the right columns,
 or change setting in *Parse data as* block at the bottom of the page until it starts looking meaningful,
@@ -422,7 +422,7 @@ methods can be powered by different functions, but let's leave the default *key 
 that OpenRefine considers the same. If you agree with a grouping, check the *Merge?* box, and assign
 the "true" value to the *New Cell Value* input box (see first cluster in Figure \@ref(fig:openrefine-cluster)).
 In our example, this would be either `North Korea` or `South Korea`.
-4. You can go through all groupings, **or** stop after one or two and click **Merge Selected & Re-Cluster** button.
+4. You can go through all groupings, or stop after one or two and click *Merge Selected & Re-Cluster* button.
 The clusters you chose to merge will be merged, and grouping will be re-calculated
 (don't worry, the window won't go anywhere). Keep regrouping until you are happy with the result.
 

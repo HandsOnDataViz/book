@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Normalize Data to Create Meaningful Polygon Maps | Hands-On Data Visualization</title>
+  <title>Normalize Data to Create Meaningful Choropleth Maps | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Normalize Data to Create Meaningful Polygon Maps | Hands-On Data Visualization" />
+  <meta property="og:title" content="Normalize Data to Create Meaningful Choropleth Maps | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Normalize Data to Create Meaningful Polygon Maps | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Normalize Data to Create Meaningful Choropleth Maps | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -174,6 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for Your Search</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data</a></li>
 <li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
@@ -242,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
@@ -299,40 +301,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="normalize" class="section level2 unnumbered" number="">
-<h2>Normalize Data to Create Meaningful Polygon Maps</h2>
-<p>Polygon (choropleth) maps are best when they represent relative, not absolute values.
+<h2>Normalize Data to Create Meaningful Choropleth Maps</h2>
+<p>Choropleth maps are best when they represent relative, not absolute values.
 Consider two maps shown in Figure <a href="normalize.html#fig:normalize-map-data">11.8</a>. They both are
 about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of
-June 26, 2020. The map on the left shows total number of recorded cases per state,
-and the map on the right shows cases adjusted by the state’s population.
+June 26, 2020. Figure <a href="normalize.html#fig:normalize-map-data">11.8</a>a shows total number of recorded cases per state,
+and Figure <a href="normalize.html#fig:normalize-map-data">11.8</a>b shows Covid-19 cases adjusted by the state’s population.
 Darker colors represent higher values. Do you notice any differences in spatial patterns?</p>
 
 <div class="figure"><span id="fig:normalize-map-data"></span>
-<img src="images/11-transform/normalize-map-data.png" alt="Choropleth (polygon) maps work best with normalized values."  />
+<img src="images/11-transform/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
 <p class="caption">
-Figure 11.8: Choropleth (polygon) maps work best with normalized values.
+Figure 11.8: Choropleth maps work best with normalized values.
 </p>
 </div>
-<p>Note: Both maps show Covid-19 data collected by the New York Times and published
+<p>Both maps show Covid-19 data collected by the New York Times and published
 <a href="https://github.com/nytimes/covid-19-data">on GitHub</a>.
-In one map, we normalized (divided) values by population in each state,
+In the map in Figure <a href="normalize.html#fig:normalize-map-data">11.8</a>b, we normalized (divided) values by population in each state,
 according to the 2018 US Census American Community Survey,
 the most recent data available on the day of writing. We didn’t
 add legends and other important cartographic elements so that you can
 better focus on interpreting spatial patterns. In both cases,
 we used Jenks natural breaks for classification.</p>
-<p>What are the worst-hit states according to the map showing total Covid-19 counts?
+<p>What are the worst-hit states according to the map showing total Covid-19 counts
+(shown in Figure <a href="normalize.html#fig:normalize-map-data">11.8</a>a)?
 If you are familiar with the US geography, you can quickly tell that these are
 New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California.
 But five of these happen to be some of the most populous states in the US,
 so it makes sense that they will also have higher Covid-19 cases.</p>
-<p>Now, how about the map on the right? You can see that New York and its neighbors,
+<p>Now, how about the map in Figure <a href="normalize.html#fig:normalize-map-data">11.8</a>b?
+You can see that New York and its neighbors,
 including New Jersey and Massachusetts, have by far the highest rates per capita
 (per person), which we saw in the first map. But you can also see
 that in fact California, Texas, and Florida were impacted to a lesser extent
 than the map on the left had suggested. So the map with per-capita values is a
-much better illustration to the story about New York being the epicenter of the Covid-19
-crisis in the United States (at least in the spring of 2020).</p>
+much better illustration to the story about New York being the <em>first</em> epicenter of the Covid-19
+crisis in the United States.</p>
 <div id="different-ways-to-normalize-data" class="section level4 unnumbered" number="">
 <h4>Different ways to normalize data</h4>
 <p>You can normalize data in many ways, and there is not necessarily one
@@ -340,7 +344,7 @@ acceptable way of doing it.</p>
 <p>One of the most common ways of normalization is deriving “per capita”, or “per person” values.
 If values are small, such as rare disease cases or lottery winners, they can be presented as “per 1,000” or “per 100,000” people.
 Divide your quantity by population in that area to derive per capita values.</p>
-<p>Choropleth (polygon) maps work well with percentages. The good news is, humans like percentages too.
+<p>Choropleth maps work well with percentages. The good news is, humans like percentages too.
 It is quite natural for us to understand that a 9% unemployment rate means that of 100 people
 who were willing to work, nine were unable to find a job. To derive a percentage for unemployment,
 divide the number of unemployed people by labor force size (adult

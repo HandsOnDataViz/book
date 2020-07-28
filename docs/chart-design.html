@@ -174,6 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for Your Search</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data</a></li>
 <li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
@@ -242,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
@@ -354,7 +356,8 @@ is visible without any user interaction.</p>
 there are some that are hard to bend.</p>
 <div id="bar-charts-must-start-at-zero" class="section level4 unnumbered" number="">
 <h4>Bar charts must start at zero</h4>
-<p>Unlike line charts, bar or column charts need to have their value axis start at zero.
+<p>Bar charts use <em>length</em> to represent value, therefore their value axis <em>must start at zero</em>.
+That applies to column and area charts as well.
 This is to ensure that a bar twice the length of another bar represents twice its value.
 The Figure <a href="chart-design.html#fig:design-principles-start-at-zero">5.2</a> shows a good and a bad example.</p>
 
@@ -384,23 +387,35 @@ forget about putting the results into a pie chart.</p>
 <div id="chart-aesthetics" class="section level3 unnumbered" number="">
 <h3>Chart Aesthetics</h3>
 <p>Remember that you create a chart to help the reader understand the story, not to confuse them.
-Decide if you want to show absolute numbers, percentages, or percent changes, and do the math for your readers.</p>
+Decide if you want to show absolute numbers, percentages, or percent changes,
+and do the math for your readers.</p>
 <div id="avoid-chart-junk" class="section level4 unnumbered" number="">
 <h4>Avoid chart junk</h4>
-<p>Start with a white background and add elements as you see appropriate. You should be able to justify
-each element you add. To do so, ask yourself: Does this element improve the chart, or can I
-drop it without decreasing readability? This way you won’t end up with so-called “chart junk” as shown in Figure <a href="chart-design.html#fig:design-principles-junk">5.3</a>, which includes 3D perspectives, shadows, and unnecessary elements. They might have looked cool in early versions of Microsoft Office, but let’s stay away from them today.</p>
+<p>Start with a white background and add elements as you see appropriate.
+You should be able to justify each element you add. To do so, ask yourself:
+Does this element improve the chart, or can I drop it without decreasing readability?
+This way you won’t end up with so-called “chart junk” as shown
+in Figure <a href="chart-design.html#fig:design-principles-junk">5.3</a>, which includes 3D perspectives,
+shadows, and unnecessary elements. They might have looked cool in
+early versions of Microsoft Office, but let’s stay away from them today.
+Chart junk distracts the viewer and reduces chart readability and comprehension.
+It also looks unprofessional and doesn’t add credibility to you as a storyteller.</p>
 
 <div class="figure"><span id="fig:design-principles-junk"></span>
-<img src="images/05-chart/design-principles-junk.png" alt="Avoid chart junk."  />
+<img src="images/05-chart/design-principles-junk.png" alt="Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other “fancy” elements."  />
 <p class="caption">
-Figure 5.3: Avoid chart junk.
+Figure 5.3: Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other “fancy” elements.
 </p>
 </div>
 <p>Do not use shadows or thick outlines with bar charts, because the reader might think
-that decorative elements are part of the chart, and thus misread the values that bars represent.</p>
+that decorative elements are part of the chart, and thus misread the
+values that bars represent.</p>
 <p>The only justification for using three dimensions is to plot three-dimensional data,
-which has x, y, and z values. And don’t let anyone tell you otherwise.</p>
+which has x, y, and z values. For example, you can build a <a href="https://blog.mapbox.com/3d-mapping-global-population-density-how-i-built-it-141785c91107">three-dimensional map of
+population density</a>,
+where x and y values represent latitude and longitude. In most cases, however,
+three dimensions are best represented in a bubble chart, or a scatterplot
+with varying shapes and/or colors.</p>
 </div>
 <div id="beware-of-pie-charts" class="section level4 unnumbered" number="">
 <h4>Beware of pie charts</h4>
@@ -448,7 +463,7 @@ Figure 5.7: For long labels, use horizontal bar charts.
 <div id="do-not-overload-your-chart" class="section level4 unnumbered" number="">
 <h4>Do not overload your chart</h4>
 <p>When labelling axes, choose natural increments that space equally, such as [0, 20, 40, 60, 80, 100], or [1, 10, 100, 1000] for a logarithmic scale. Do not overload your scales.
-Keep your typography simple, use (but do not overuse) <strong>bolding</strong> to highlight major insights.
+Keep your typography simple, and use (but do not overuse) <strong>bolding</strong> to highlight major insights.
 Consider using commas as thousands separators for readability (<code>1,000,000</code> is much easier to read than <code>1000000</code>).</p>
 </div>
 <div id="be-careful-with-the-colors" class="section level4 unnumbered" number="">

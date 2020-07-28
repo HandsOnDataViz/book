@@ -35,7 +35,7 @@ overwhelming world of geospatial data.
 ## Geocode Locations into Coordinates with US Census or Google {- #geocode}
 
 Before addresses can be mapped, they need to be geocoded.
-**Geocoding** is a process of transforming a human-readable address, such as *300 Summit St, Hartford, CT*
+Geocoding is a process of transforming a human-readable address, such as *300 Summit St, Hartford, CT*
 into a latitude-longitude pair, such as *41.747,-72.692*. These numbers are x- and y-coordinates
 that maps understand.
 
@@ -194,11 +194,11 @@ we will look at hospital addresses in the US and how we can count them by state 
 ## Pivot Address-Level Point Data into Polygon Data {- #pivot-point-to-polygon}
 
 If you deal with geographical data, you may find yourself in a situation where
-you have a list of addresses which need to be counted (**aggregated**) by area
+you have a list of addresses which need to be counted (*aggregated*) by area
 and displayed as a polygon map. In this case, a simple pivot table in a spreadsheet
 software can solve the problem.
 
-Note: A special case of a polygon map is a **chropleth** map,
+Note: A special case of a polygon map is a *choropleth* map,
 which represents polygons that are colored in a particular way to represent underlying values.
 A lot of polygon maps end up being *choropleth* maps, so we will be using this term a lot in this book.
 
@@ -232,8 +232,8 @@ knitr::include_graphics("images/11-transform/pivot-address-export.png")
 Next, open the file in your favorite spreadsheet tool. If you use Google Sheets,
 use *File > Import > Upload* to import CSV data. Make sure your address columns are present,
 and move on to creating a pivot table (in Google Sheets, go to *Data > Pivot table*, make sure the entire data range
-is selected, and click *Create*). In the pivot table, set **Rows** to *State*, because
-we want to get counts by state. Next, set pivot table's **Values** to *State*—or really any other
+is selected, and click *Create*). In the pivot table, set *Rows* to *State*, because
+we want to get counts by state. Next, set pivot table's *Values* to *State*—or really any other
 column that has no missing values—and choose *Summarize by: COUNTA*. Voila!
 
 (ref:pivot-address-sheet) Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
@@ -351,7 +351,7 @@ But before we do that, let's talk about the basics of geospatial (map) data.
 #### About geospatial data {-}
 
 The first thing to know about geospatial data is that it
-consists of two components, **location** and **attribute**.
+consists of two components, *location* and *attribut*.
 When you use Google Maps to search for a restaurant, you get a red
 marker on the screen that points to the latitude and longitude
 of the physical location of the restaurant in the real world. These latitude and longitude (two numbers)
@@ -359,7 +359,7 @@ are your location component.
 The name of the restaurant, its human-friendly address, and guest reviews
 are the attributes, which bring value to your location data.
 
-Second, geospatial data can be **raster** or **vector**,
+Second, geospatial data can be *raster* or *vector*,
 as illustrated in Figure \@ref(fig:geospatial-raster-vector).
 Raster data, as shown in Figure \@ref(fig:geospatial-raster-vector)a, is a grid of cells ("pixels") of a certain size
 (for example, 1 meter by 1 meter). For example, satellite images
@@ -559,7 +559,7 @@ the marker by clicking *Delete feature* button.
 3. Click *Save* to record all marker changes to the GeoJSON. This will close the popup window,
 and you will see updated markers in the JSON tab to the right of the map.
 4. It may be quicker to view all data as a table instead of dealing with individual marker popups.
-In **Table** tab to the right of the map, you can add, rename, and remove columns
+In the *Table* tab to the right of the map, you can add, rename, and remove columns
 from *all* features (markers) at once.
 Table cells are also modifiable, so you can edit your data there.
 5. Once you are happy with your map data, go to *Save > GeoJSON* to download the result to your computer.
@@ -733,7 +733,7 @@ which is more common.
 
 #### Dissolve internal polygons to create an outline map {-}
 
-Mapshaper's most powerful tools are available through **Console**, which allows you to type commands for common map editing tasks.
+Mapshaper's most powerful tools are available through the *Console*, which allows you to type commands for common map editing tasks.
 One of such tasks is to create an outline map by removing the internal boundaries. For example, you can dissolve
 state boundaries of the US map in the previous exercise to get the outline of the country, like is shown in
 Figure \@ref(fig:mapshaper-dissolve).
@@ -766,7 +766,7 @@ Mapshaper allows you to do just that using one simple `-clip` command.
 1. Import two boundary files into Mapshaper. One is the larger one that is being clipped (if you use sample files, *ct-towns*),
 and one is the desired final shape (*hartfordcounty-outline*). The latter is what ArcGIS calls the "clip feature".
 2. Make sure your active layer is set to the map you are clipping (*ct-towns*).
-3. In the **Console**, type `-clip` followed by the name of your clip layer, like that:
+3. In the *Console*, type `-clip` followed by the name of your clip layer, like that:
 ```
 -clip hartfordcounty-outline
 ```
@@ -786,7 +786,7 @@ knitr::include_graphics("images/11-transform/mapshaper-clip.png")
 #### Remove unwanted data fields {-}
 
 Sometimes map features, such as polygons, lines, and points, contain unwanted *attributes* (or fields, or columns) that you may want to remove.
-In **Console**, use `-filter-fields` editing command to remove unnecessary fields.
+In the *Console*, type the `-filter-fields` editing command to remove unnecessary fields.
 
 For example, remove all fields except *town*:
 
@@ -820,7 +820,7 @@ Your CSV data will be shown as something that resembles a table. Use the *Cursor
 to make sure the data is imported correctly. If you use the sample CT files, note that the *ct-towns* layer
 has *name* attribute with the name of the town, and *ct-towns-popdensity* has town names in the *town* column.
 3. Make your geospatial layer (*ct-towns*) is the one active.
-4. Open **Console**, and use the `-join` command, like that:
+4. Open the *Console*, and use the `-join` command, like this:
 ```
 -join ct-towns-popdensity keys=name,town
 ```
@@ -855,7 +855,7 @@ and another containing points that you want to aggregate (for example,
 
 2. Make sure your polygons (not points) layer is active by selecting it from the dropdown menu.
 
-3. In **Console**, perform `-join` using a `count()` function, like that:
+3. In the *Console*, perform `-join` using a `count()` function, like this:
 ```
 -join hospitals-points calc='hospitals = count()' fields=
 ```
@@ -876,7 +876,7 @@ knitr::include_graphics("images/11-transform/mapshaper-count-points.png")
 
 #### More about joins {-}
 
-From the **Count points in polygons with Mapshaper** section of this chapter,
+From the "Count points in polygons with Mapshaper" section of this chapter,
 you should recall that you do not need to specify *keys* if you want to perform join
 based on geographical locations between two geospatial layers (one being points, the other is polygons).
 If one of your files is a CSV, you need *keys*.
@@ -938,7 +938,7 @@ knitr::include_graphics("images/11-transform/mapshaper-merge-csv.png")
 6. Save this new file as *ct-towns-merged.csv*, and drag-and-drop it to Mapshaper on top of your *ct-towns* layer. Click *Import*.
 7. This new CSV layer will be added as *ct-towns-merged* and will appear as a series of table cells. From the dropdown menu,
 select *ct-towns* to get back to your map.
-8. Now you are ready to merge certain towns into districts according to your uploaded CSV file. Open **Console**, and type:
+8. Now you are ready to merge certain towns into districts according to your uploaded CSV file. Open the *Console*, and type:
 ```
 -join ct-towns-merged keys=name,name
 ```
@@ -986,7 +986,7 @@ and go to *File > Open* and choose your KMZ file.
 3. Right-click (or control-click) on the KMZ layer under Places menu, and select *Save Place As...*,
 like is shown in Figure \@ref(fig:kmz-earth).
 
-(ref:kmz-earth) In Google Earth Pro, right-click KMZ layer and choose *Save Place As*.
+(ref:kmz-earth) In Google Earth Pro, right-click the KMZ layer and choose *Save Place As*.
 
 ```{r kmz-earth, out.width="400px", fig.cap="(ref:kmz-earth)"}
 knitr::include_graphics("images/11-transform/kmz-earth.png")

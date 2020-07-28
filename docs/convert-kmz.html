@@ -174,6 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for Your Search</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data</a></li>
 <li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
@@ -242,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
@@ -300,8 +302,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="convert-kmz" class="section level2 unnumbered" number="">
 <h2>Convert a Compressed KMZ file to KML format</h2>
-<p>Sometimes KML files are distributed in compressed KMZ format.
-The easiest way to convert is to use free Google Earth Pro.</p>
+<p>In the previous sections, we looked at using Geojson.io and Mapshaper
+to convert geospatial files. However, not all file types can be converted with these tools.
+This chapter shows a particular example of a commonly requested
+<code>.kmz</code> &lt;-&gt; <code>.kml</code> pair conversion with Google Earth Pro.</p>
+<p>KMZ is a compressed version of a KML file, and the easiest way to convert
+between the two is to use free Google Earth Pro (if you remember from
+<em>Convert to GeoJSON format</em> section, KML is a native format of Google Earth).</p>
 <ol style="list-style-type: decimal">
 <li>Download and install <a href="https://www.google.com/earth/versions/">Google Earth Pro</a> for desktop.</li>
 <li>Double-click on any .kmz file to open it in Google Earth Pro. Alternatively, open Google Earth Pro first,
@@ -311,9 +318,9 @@ like is shown in Figure <a href="convert-kmz.html#fig:kmz-earth">11.25</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:kmz-earth"></span>
-<img src="images/11-transform/kmz-earth.png" alt="In Google Earth Pro, right-click KMZ layer and choose Save Place As." width="400px" />
+<img src="images/11-transform/kmz-earth.png" alt="In Google Earth Pro, right-click the KMZ layer and choose Save Place As." width="400px" />
 <p class="caption">
-Figure 11.25: In Google Earth Pro, right-click KMZ layer and choose <em>Save Place As</em>.
+Figure 11.25: In Google Earth Pro, right-click the KMZ layer and choose <em>Save Place As</em>.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
@@ -328,7 +335,18 @@ Figure 11.26: Save as KML, not KMZ.
 </div>
 <p>Alternatively, you can use any zip-utility to extract a KML file from KMZ.
 KMZ is simply a ‘zipped’ version of a KML file!</p>
+<div id="summary11" class="section level3 unnumbered" number="">
+<h3>Summary</h3>
+<p>In this chapter, you learned to use pivot tables to count addresses (points)
+by geographical area, such as states or cities (polygons).
+You lerned that geospatial data can be vector or raster.
+The best file format to store, share, and use vector data is GeoJSON.
+You can use GeoJson.io to create, edit, or convert geospatial files inside your browser.
+Mapshaper is another online tool to convert, simplify, join or crop geospatial data.</p>
+<p>In the following chapter, we will talk detecting bias in charts and maps.
+so that you become a better storyteller and a more critical reader.</p>
 
+</div>
 </div>
 <!-- </div> -->
             </section>

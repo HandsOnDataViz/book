@@ -174,6 +174,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for Your Search</a></li>
+<li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data</a></li>
 <li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
@@ -242,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Polygon Maps</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
@@ -333,8 +335,8 @@ are displayed in normal font, the <em>generated</em> variables will be shown in 
 (such as <em>Latitude</em> and <em>Longitude</em> that Tableau guessed from the country names).</p>
 <p>To build a line chart,</p>
 <ol style="list-style-type: decimal">
-<li>Drag Year variable to <strong>Columns</strong>.</li>
-<li>Drag Percent Internet Users variable to <strong>Rows</strong>. The variable will change to <code>SUM(Percent Internet Users)</code>.
+<li>Drag Year variable to <em>Columns</em>.</li>
+<li>Drag Percent Internet Users variable to <em>Rows</em>. The variable will change to <code>SUM(Percent Internet Users)</code>.
 You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let’s fix it.</li>
 <li>In order to “break” aggregation, drag and drop Country Name to the Color box of the Marks card.
 Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding filtering,
@@ -342,16 +344,16 @@ we don’t care about it much. So go ahead and press <em>Add all members</em> bu
 <li>Now you should see an absolute spaghetti plate of lines and colors. To add filtering,
 drag <em>Country Name</em> to the Filters card. In the Filter window, make sure all countries
 are checked, and click <em>OK</em>.</li>
-<li>Right-click on <em>Country Name</em> pill in Filters card, and check Show Filter (see Figure @ref(fig:tableau-filtered-show-filter.png))</li>
+<li>Right-click on <em>Country Name</em> pill in Filters card, and check Show Filter (see Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-show-filter">5.41</a>)</li>
 <li>You will see a list of options with all checkboxes on have appeared to the right of the visualization.
 Click <em>(All)</em> to add/remove all options, and add a few of your favorite countries to see
 how the interactive filtering works.</li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-filtered-show-filter"></span>
-<img src="images/05-chart/tableau-filtered-show-filter.png" alt="Once you dragged Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
+<img src="images/05-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
 <p class="caption">
-Figure 5.41: Once you dragged Country Name to the Filters card, make sure the Filter is displayed.
+Figure 5.41: After you drag Country Name to the Filters card, make sure the Filter is displayed.
 </p>
 </div>
 </div>
@@ -364,7 +366,7 @@ the author of this visualization.</p>
 <p>Change <em>Standard</em> to <em>Fit Width</em> in the dropdown above the Columns field.</p>
 <p>You may notice that the x-axis (Year) starts with 1994 and ends with 2020,
 although our data is for 1995–2018. Double-click on the x-axis, and change
-<strong>Range</strong> from <em>Automatic</em> to <em>Fixed</em>, with the Fixed start of <code>1995</code>, and the Fixed end of <code>2018</code>.
+<em>Range</em> from <em>Automatic</em> to <em>Fixed</em>, with the Fixed start of <code>1995</code>, and the Fixed end of <code>2018</code>.
 Close the window and see that the empty space on the edges has disappeared.</p>
 <p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-ready">5.42</a>,
 you are ready to publish.</p>
@@ -379,12 +381,13 @@ Figure 5.42: This workbook is ready to be published.
 You may be prompted with the window to log in to your account (or create one if you don’t have it yet).
 The next steps are fairly self-explanatory, and you can consult
 <a href="scatter-chart-tableau.html">the previous tutorial</a> for more information on publishing.</p>
-<p>See the <a href="embed-tableau.html">Embed Tableau Public on Your Website</a> section of this book to insert the interactive version of your chart on a web page that you control.</p>
-<p>To learn more, see <a href="https://public.tableau.com/en-us/s/resources">Tableau Public resources page</a>.</p>
+<p>See the <a href="embed-tableau.html">Embed Tableau Public on Your Website</a> section of this
+book to insert the interactive version of your chart on a web page that you control.</p>
 </div>
 <div id="summary5" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
-<p>Congratulations on creating interactive charts that pull readers deeper into your story, and encourage them to explore the underlying data! As you continue to create more, always match the chart type to your data format and the story you wish to emphasize. Also, design your charts based on the principles and aesthetic guidelines in this chapter. While anyone can click a few buttons to quickly create a chart nowadays, your audiences will greatly appreciate well-designed charts that thoughtfully call their attention to meaningful patterns in the data.</p>
+<p>Congratulations on creating interactive charts that pull readers deeper into your story, and encourage them to explore the underlying data! As you continue to create more, always match the chart type to your data format and the story you wish to emphasize. Also, design your charts based on the principles and aesthetic guidelines in this chapter.
+While anyone can click a few buttons to quickly create a chart nowadays, your audiences will greatly appreciate well-designed charts that thoughtfully call their attention to meaningful patterns in the data.</p>
 <p>The next chapter on <a href="map.html">Map Your Data</a> follows a similar format to introduce different map types, design principles, and hands-on tutorials to create interactive visualizations with spatial data. Later you’ll learn how to <a href="embed.html">embed interactive charts on your web</a> in chapter 7.</p>
 <p>To learn about more powerful charting tools, see <a href="chartjs-highcharts.html">Chart.js and Highcharts templates</a> in chapter 9, which give you ever more control over how your design and display your data, but also require learning how to <a href="github.html">edit and host code templates with GitHub</a> in chapter 8.</p>
 

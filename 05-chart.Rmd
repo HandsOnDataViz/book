@@ -94,7 +94,7 @@ there are some that are hard to bend.
 
 #### Bar charts must start at zero {-}
 
-Bar charts use *length* to represent value, therefore their value axis **must start at zero**.
+Bar charts use *length* to represent value, therefore their value axis *must start at zero*.
 That applies to column and area charts as well.
 This is to ensure that a bar twice the length of another bar represents twice its value.
 The Figure \@ref(fig:design-principles-start-at-zero) shows a good and a bad example.
@@ -151,7 +151,7 @@ values that bars represent.
 The only justification for using three dimensions is to plot three-dimensional data,
 which has x, y, and z values. For example, you can build a [three-dimensional map of
 population density](https://blog.mapbox.com/3d-mapping-global-population-density-how-i-built-it-141785c91107),
-where x and y values represent latitude and longitude. In most cases, however, 
+where x and y values represent latitude and longitude. In most cases, however,
 three dimensions are best represented in a bubble chart, or a scatterplot
 with varying shapes and/or colors.
 
@@ -194,7 +194,7 @@ knitr::include_graphics("images/05-chart/design-principles-order-categories.png"
 
 #### Do not overload your chart {-}
 When labelling axes, choose natural increments that space equally, such as [0, 20, 40, 60, 80, 100], or [1, 10, 100, 1000] for a logarithmic scale. Do not overload your scales.
-Keep your typography simple, use (but do not overuse) **bolding** to highlight major insights.
+Keep your typography simple, and use (but do not overuse) **bolding** to highlight major insights.
 Consider using commas as thousands separators for readability (`1,000,000` is much easier to read than `1000000`).
 
 #### Be careful with the colors {-}
@@ -590,7 +590,7 @@ The third column contains *Country* labels.
 knitr::include_graphics("images/05-chart/scatter-data.png")
 ```
 
-To build a scatter chart, select the **two** columns that contain your numeric data,
+To build a scatter chart, select the *two* columns that contain your numeric data,
 and go to *Insert > Chart*. Google Sheets will likely to guess the chart type and you will see a scatterplot,
 but if not, you can always manually pick Scatter chart from the *Chart type* dropdown.
 Make sure your x-axis is set to Life Expectancy, and your Series shows Fertility.
@@ -647,7 +647,7 @@ will be placed on the y-axis.
 Select all three columns, and go to *Insert > Chart*. Google Sheets will likely create a stacked
 column chart by default, so choose *Bubble* from the Chart type dropdown window.
 
-If you want to remove labels from the bubbles, remove the **ID** series (click on the kebab menu > Remove).
+If you want to remove labels from the bubbles, remove the *ID* series (click on the kebab menu > Remove).
 
 Unfortunately, there is no easy way to reduce all bubbles to a uniformly smaller size.
 In the following section, we will introduce you to the proper way of using bubble charts.
@@ -679,8 +679,8 @@ knitr::include_graphics("images/05-chart/bubble-5-data.png")
 ```
 
 Select all data and go to *Insert > Chart*, and choose Bubble as the Chart type.
-Make sure your **ID**, **X-axis**, **Y-axis**, **Series**, and **Size** fields
-contains the series you want to display, and make sure to have *Use row 1 as headers* option checked.
+Make sure your *ID*, *X-axis*, *Y-axis*, *Series*, and *Size* fields
+contain the series you want to display, and make sure to have *Use row 1 as headers* option checked.
 
 To change labels color, go to Customize tab of the Chart editor, and set Text color under the Bubble menu.
 Make it gray or black, so that it won't interfere with the bubble colors themselves.
@@ -765,14 +765,14 @@ where to drag items from the Data pane (left) into the main worksheet.
 Tableau marks all data fields as blue (discrete values, mostly text fields or numeric labels)
 or green (continuous values, mostly numbers).
 
-4. Drag the *Grade Levels* field into the **Rows** field above the charting area, which
+4. Drag the *Grade Levels* field into the *Rows* field above the charting area, which
 for now is just empty space. You can consult Figure \@ref(fig:tableau-xy-dragging) for this
 and two following steps.
 Tableau will apply a summation function to it, and you will see the `SUM(Grade Levels)` appearing
 in the Rows row, and a blue bar in the charting area. It makes little sense so far, so let's
 plot another data field.
 
-5. Drag *Median Household Income* to the **Columns** field (just above the Rows field).
+5. Drag *Median Household Income* to the *Columns* field (just above the Rows field).
 Tableau will once again apply the summation function, so you will see `SUM(Median Household Income)`
 in the Columns. The bar chart will transform into a scatter chart with just one data point
 in the upper-right corner. That is because the data for both is aggregated (remember the `SUM` function).
@@ -880,8 +880,8 @@ are displayed in normal font, the *generated* variables will be shown in *italic
 
 To build a line chart,
 
-1. Drag Year variable to **Columns**.
-2. Drag Percent Internet Users variable to **Rows**. The variable will change to `SUM(Percent Internet Users)`.
+1. Drag Year variable to *Columns*.
+2. Drag Percent Internet Users variable to *Rows*. The variable will change to `SUM(Percent Internet Users)`.
 You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let's fix it.
 3. In order to "break" aggregation, drag and drop Country Name to the Color box of the Marks card.
 Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding filtering,
@@ -894,7 +894,7 @@ are checked, and click *OK*.
 Click *(All)* to add/remove all options, and add a few of your favorite countries to see
 how the interactive filtering works.
 
-(ref:tableau-filtered-show-filter) Once you dragged Country Name to the Filters card, make sure the Filter is displayed.
+(ref:tableau-filtered-show-filter) After you drag Country Name to the Filters card, make sure the Filter is displayed.
 
 ```{r tableau-filtered-show-filter, out.width="220px", fig.cap="(ref:tableau-filtered-show-filter)"}
 knitr::include_graphics("images/05-chart/tableau-filtered-show-filter.png")
@@ -911,7 +911,7 @@ Change *Standard* to *Fit Width* in the dropdown above the Columns field.
 
 You may notice that the x-axis (Year) starts with 1994 and ends with 2020,
 although our data is for 1995–2018. Double-click on the x-axis, and change
-**Range** from *Automatic* to *Fixed*, with the Fixed start of `1995`, and the Fixed end of `2018`.
+*Range* from *Automatic* to *Fixed*, with the Fixed start of `1995`, and the Fixed end of `2018`.
 Close the window and see that the empty space on the edges has disappeared.
 
 Once your filtered line chart looks like the one shown in Figure \@ref(fig:tableau-filtered-ready),

@@ -37,7 +37,15 @@ will apply to most other software packages, such as Excel, Calc, or Numbers.
 
 #### Find and Replace with a blank {-}
 
-A common problem with census data is that geographic names contain unnecessary words.
+*Find and Replace* tool is one of the most powerful data clean-up tools in spreadsheets.
+You can use it to remove thousands separators from numbers (to change `1,234,567` to `1234567`)
+or to remove units of measure that sometimes reside in the same cells as numbers
+(`321 kg` -> `321`). You can also use it to bulk-change spellings, for example
+to shorten, expand, or translate country names (`Republic of India` -> `India`,
+`US` -> `United States`, `Italy` -> `Italia`).
+
+Let's look at *Find and Replace* in practice.
+A common problem with US census data is that geographic names contain unnecessary words.
 For example, your data can look something like that:
 
 ```
@@ -46,7 +54,8 @@ New Haven town
 Stamford town
 ```
 
-But you want a clean list of towns, either to display in a chart, or to merge with a different dataset:
+But you want a clean list of towns, either to display in a chart,
+or to merge with a different dataset:
 
 ```
 Hartford
@@ -54,14 +63,14 @@ New Haven
 Stamford
 ```
 
-Here's one quick solution: In any spreadsheet tool, use the Find and Replace command to remove unwanted characters.
+We can use *Find and Replace* tool to remove the unwanted "town" part.
 You can download our [sample file](data/find-replace-town-geonames.csv),
 which contains 169 Connecticut towns and their population, for the exercise.
 
 1. Select the column you want to modify by clicking on the column header. If you don't,
 you will be searching and replacing in the entire spreadsheet.
 2. From *Edit* menu, choose *Find and replace* item. You will see the window like is shown in Figure \@ref(fig:sheets-find-replace).
-3. In the *Find* field, type ` town`, without quotation marks and leaving a space before the word. If you don't leave the space,
+3. In the *Find* field, type ` town`, without quotation marks **and leaving a space before the word**. If you don't leave the space,
 you will accidentally remove *town* from *Newtown*, and you will end up with trailing spaces which can cause troubles in the future.
 4. Leave the *Replace with* field blank.
 5. *Search* field should be set to the range you selected in step 1, or *All sheets* if you didn't
@@ -70,11 +79,12 @@ select anything.
 For our purpose, you can leave *match case* unchecked.
 7. Press the *Replace all* button. Since this sample file contains 169 towns, the window
 will state that 169 instances of "town" have been replaced.
+8. Inspect the resulting sheet. Make sure town names such as *Newtown* remained untouched.
 
 (ref:sheets-find-replace) Find and Replace window in Google Sheets.
 
 ```{r sheets-find-replace, fig.cap="(ref:sheets-find-replace)"}
-knitr::include_graphics("images/04-clean/sheets-find-replace.png")
+knitr::include_graphics("images/04-clean/sheets-find-replace-annotated.png")
 ```
 
 #### Split data into two or more columns {-}
@@ -108,7 +118,7 @@ or any other custom character (or even a sequence of characters — more about t
 (ref:sheets-split) Select Data > Split text to columns to automatically separate data.
 
 ```{r sheets-split, fig.cap="(ref:sheets-split)"}
-knitr::include_graphics("images/04-clean/sheets-split.png")
+knitr::include_graphics("images/04-clean/sheets-split-annotated.png")
 ```
 
 ##### Example 2 {-}
@@ -117,10 +127,11 @@ Now, let's look at a slightly more complicated example.
 Imagine your dataset is structured as follows:
 
 ```
-| Location                           |
-| 300 Summit St, Hartford CT--06106  |
-| 1012 Broad St, Hartford CT--06106  |
-| 37 Alden St, Hartford CT--06114    |
+| Location                          |
+| --------------------------------- |
+| 300 Summit St, Hartford CT--06106 |
+| 1012 Broad St, Hartford CT--06106 |
+| 37 Alden St, Hartford CT--06114   |
 ```
 
 Each cell contains a full address, but you want to split it into four cells:
@@ -141,7 +152,7 @@ and hit Enter. You should now have four columns.
 
 Tip: Google Sheets will treat zipcodes as numbers and will delete leading zeros (so 06106 will become 6106).
 To fix that, select the column, and go to *Format > Number > Plain text*. Now you can manually re-add zeros.
-If your dataset is large, consider concatenating 0s using the formula introduced in [Combine separate columns into one](#combine-separate-columns-into-one).
+If your dataset is large, consider concatenating 0s using the formula introduced in the [following section](#combine-separate-columns-into-one).
 
 #### Combine separate columns into one {-}
 
@@ -149,8 +160,9 @@ Now, let's see how to perform the reverse action.
 Imagine you receive address data in separate columns, formatted like this:
 
 ```
-| Street        | City        | State      | Zip        |
-| 300 Summit St | Hartford    | CT         | 06106      |
+| Street        | City       | State  | Zip   |
+| ------------- | ---------- | ------ | ----- |
+| 300 Summit St | Hartford   | CT     | 06106 |
 ```
 
 The data comes is four columns: street address, city, state, and zipcode.
@@ -158,8 +170,9 @@ Let's say your mapping tool requires you to combine all of this terms into
 one location column, like that:
 
 ```
-| Location                            |
-| 300 Summit St, Hartford, CT 06106   |
+| Location                          |
+| --------------------------------- |
+| 300 Summit St, Hartford, CT 06106 |
 ```
 
 You can write a simple formula to combine (or concatenate) terms
@@ -168,13 +181,22 @@ and quoted spaces (`" "`), or spaces with commas (`", "`),
 or a dash with spaces on both sides (`" - "`), or anything
 else as term separators.
 
-For example, imagine that a spreadsheet contains an address that is separated into four columns---*Address, City, State,* and *Zip*---as shown in columns A-D in Figure \@ref(fig:sheets-combine). In column E, you can add new header named *Location* and insert a formula in this format, to combine the items using ampersands (`&`) and separating them with quoted spaces (`" "`), like this: `=A2&" "&B2&" "&C2&" "&D2`
+For example, imagine that a spreadsheet contains an address that is separated into
+four columns---*Address, City, State,* and *Zip*---as shown in columns A-D in
+Figure \@ref(fig:sheets-combine). In column E, you can add new header named
+*Location* and insert a formula in this format, to combine the items using
+ampersands (`&`) and separating them with commas (`", "`) or quoted spaces (`" "`), like
+this: `=A2 & ", " & B2 & ", " & C2 & " " & D2`.
 
 (ref:sheets-combine) Use ampersands to combine items and separate them with spaces.
 
 ```{r sheets-combine, fig.cap="(ref:sheets-combine)"}
  knitr::include_graphics("images/04-clean/sheets-combine.png")
 ```
+
+Note: Lisa Charlotte Rost from Datawrapper has written a brilliant [blog post](https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/)
+talking about data preparation for charting and analysis in Google Sheets,
+which we recommend for further reading.
 
 You are now able to split data to columns using custom separators, and
 concatenate values from different cells into one. But what if your table is trapped
@@ -309,7 +331,7 @@ like shown in Figure \@ref(fig:openrefine-welcome).
 (ref:openrefine-welcome) OpenRefine starting page.
 
 ```{r openrefine-welcome, fig.cap="(ref:openrefine-welcome)"}
-knitr::include_graphics("images/04-clean/openrefine-welcome.png")
+knitr::include_graphics("images/04-clean/openrefine-welcome-annotated.png")
 ```
 
 ### Load Data and Start a New Project {-}
@@ -358,9 +380,12 @@ That is because dollar sign (`$`) and commas (`,`) confuse OpenRefine and preven
 disappear in the preview window. When you confirm your formula works, click *OK*.
 4. Now, repeat the previous step, but instead of a comma, remove the `$` character.
 (Your expression will become `value.replace('$', '')`).
-5. Perform Step 1 again.
-You will see that all but three
-cells turned green. That is because we have spaces and an `a` character at the end of one number.
+5. In steps 3 and 4, we replaced text (string) values with other string values,
+making OpenRefine think this column is no longer numeric. As a result, all values
+are once again left-aligned and in black. Perform step 1 again to
+see that all but three
+cells turning green (successfully converting to numeric).
+Now we need to remove spaces and an `a` character at the end of one number.
 Fix those manually by hovering over cells, and clicking the `edit` button
 (in the new popup window, make sure to change *Data type* to *number*, and hit *Apply*,
 like in Figure \@ref(fig:openrefine-manual-edit)).
@@ -368,7 +393,7 @@ like in Figure \@ref(fig:openrefine-manual-edit)).
 (ref:openrefine-manual-edit) Manually remove spaces and extra characters, and change data type to number.
 
 ```{r openrefine-manual-edit, fig.cap="(ref:openrefine-manual-edit)"}
-knitr::include_graphics("images/04-clean/openrefine-manual-edit.png")
+knitr::include_graphics("images/04-clean/openrefine-manual-edit-annotated.png")
 ```
 
 At this point, all funding amounts should be clean numbers, right-aligned and colored in green.
@@ -395,7 +420,8 @@ and choose *Edit cells* > *Cluster and edit*. You will see a window like the one
 methods can be powered by different functions, but let's leave the default *key collision* with *fingerprint* function.
 3. OpenRefine will calculate a list of clusters. *Values in Cluster* column contains grouped spellings
 that OpenRefine considers the same. If you agree with a grouping, check the *Merge?* box, and assign
-the "true" value to the *New Cell Value* input box. In our example, this would be either `North Korea` or `South Korea`.
+the "true" value to the *New Cell Value* input box (see first cluster in Figure \@ref(fig:openrefine-cluster)).
+In our example, this would be either `North Korea` or `South Korea`.
 4. You can go through all groupings, **or** stop after one or two and click **Merge Selected & Re-Cluster** button.
 The clusters you chose to merge will be merged, and grouping will be re-calculated
 (don't worry, the window won't go anywhere). Keep regrouping until you are happy with the result.
@@ -406,7 +432,7 @@ how they produce clusters of different sizes and accuracy.
 (ref:openrefine-cluster) Cluster similar text values.
 
 ```{r openrefine-cluster, fig.cap="(ref:openrefine-cluster)"}
-knitr::include_graphics("images/04-clean/openrefine-cluster.png")
+knitr::include_graphics("images/04-clean/openrefine-cluster-annotated.png")
 ```
 
 ### Export {-}
@@ -419,12 +445,13 @@ Now you have a clean dataset that is ready to be processed and visualized.
 ### Summary {- #summary4}
 
 In this chapter, we looked at cleaning up tables in Google Sheets,
-liberating tabular data trapped in PDFs
-using Tabula, and using OpenRefine to clean up very messy datasets.
+liberating tabular data trapped in PDFs using Tabula, and using
+OpenRefine to clean up very messy datasets.
 You will often find yourself using several of these tools on the same dataset
 before it becomes good enough for your analysis. We encourage you to
 learn more formulas in Google Sheets, and explore extra functionality of OpenRefine
-in your spare time.
+in your spare time. The more clean-up tools and techniques you know, the more able and adaptable
+you become to tackle more complex cases.
 
 You now know how to clean up your data, so let's proceed to visualizing it.
 In the following chapter, we will introduce you to a range of free data visualization

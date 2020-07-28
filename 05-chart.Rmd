@@ -4,7 +4,7 @@ sometimes a chart tells your story better than a map. But designing meaningful, 
 requires careful thought about how to communicate your data story with your audience.
 
 In this chapter, we will look at main [principles of chart design](chart-design.html), and
-learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. In addition to static chart images, this book focuses on interactive charts that display more data when you float your cursor over them in your web browser. Later you'll learn how to [embed interactive charts on your web](embed.html) in chapter 7.
+learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. In addition to static chart images, this book focuses on interactive charts that display more data when you float your cursor over them in your web browser. Later you'll learn how to [embed interactive charts on your website](embed.html) in chapter 7.
 
 To begin, this grid of basic chart types will help you decide which type you wish to create. Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader's attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools, such as the [Google Sheets chart tool](chart-google-sheets.html), and for more advanced charts, [Tableau Public](tableau-public.html), the free version of the powerful software used by many data analysts and visualization practitioners. The grid also refers to more powerful chart tools, such as [Chart.js and Highcharts templates](chartjs-highcharts.html) in chapter 9, which give you ever more control over how your design and display your data, but also require learning how to [edit and host code templates with GitHub](github.html) in chapter 8.
 
@@ -93,7 +93,9 @@ Although the vast majority of rules in data visualization are open to interpreta
 there are some that are hard to bend.
 
 #### Bar charts must start at zero {-}
-Unlike line charts, bar or column charts need to have their value axis start at zero.
+
+Bar charts use *length* to represent value, therefore their value axis **must start at zero**.
+That applies to column and area charts as well.
 This is to ensure that a bar twice the length of another bar represents twice its value.
 The Figure \@ref(fig:design-principles-start-at-zero) shows a good and a bad example.
 
@@ -122,24 +124,36 @@ forget about putting the results into a pie chart.
 ### Chart Aesthetics {-}
 
 Remember that you create a chart to help the reader understand the story, not to confuse them.
-Decide if you want to show absolute numbers, percentages, or percent changes, and do the math for your readers.
+Decide if you want to show absolute numbers, percentages, or percent changes,
+and do the math for your readers.
 
 #### Avoid chart junk {-}
-Start with a white background and add elements as you see appropriate. You should be able to justify
-each element you add. To do so, ask yourself: Does this element improve the chart, or can I
-drop it without decreasing readability? This way you won't end up with so-called "chart junk" as shown in Figure \@ref(fig:design-principles-junk), which includes 3D perspectives, shadows, and unnecessary elements. They might have looked cool in early versions of Microsoft Office, but let's stay away from them today.
+Start with a white background and add elements as you see appropriate.
+You should be able to justify each element you add. To do so, ask yourself:
+Does this element improve the chart, or can I drop it without decreasing readability?
+This way you won't end up with so-called "chart junk" as shown
+in Figure \@ref(fig:design-principles-junk), which includes 3D perspectives,
+shadows, and unnecessary elements. They might have looked cool in
+early versions of Microsoft Office, but let's stay away from them today.
+Chart junk distracts the viewer and reduces chart readability and comprehension.
+It also looks unprofessional and doesn't add credibility to you as a storyteller.
 
-(ref:design-principles-junk) Avoid chart junk.
+(ref:design-principles-junk) Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other "fancy" elements.
 
 ```{r design-principles-junk, fig.cap="(ref:design-principles-junk)"}
 knitr::include_graphics("images/05-chart/design-principles-junk.png")
 ```
 
 Do not use shadows or thick outlines with bar charts, because the reader might think
-that decorative elements are part of the chart, and thus misread the values that bars represent.
+that decorative elements are part of the chart, and thus misread the
+values that bars represent.
 
 The only justification for using three dimensions is to plot three-dimensional data,
-which has x, y, and z values. And don't let anyone tell you otherwise.
+which has x, y, and z values. For example, you can build a [three-dimensional map of
+population density](https://blog.mapbox.com/3d-mapping-global-population-density-how-i-built-it-141785c91107),
+where x and y values represent latitude and longitude. In most cases, however, 
+three dimensions are best represented in a bubble chart, or a scatterplot
+with varying shapes and/or colors.
 
 #### Beware of pie charts {-}
 Remember that pie charts only show part-to-whole relationship, so all slices need to add up to 100%. Generally, the fewer slices—the better. Arrange slices from largest
@@ -206,10 +220,10 @@ knitr::include_graphics("images/05-chart/design-principles-decluttered.png")
 
 ## Google Sheets Charts {- #chart-google-sheets}
 
-[Google Sheets](https://sheets.google.com) is a well-known spreadsheet program
-that allows you to create basic charts using its intuitive drag-and-drop interface.
-Most people who create charts with Google Sheets export them as static *png* images.
-But in fact these interactive charts can be easily [embedded on your website](embed.html), as you'll learn in chapter 7.
+In addition to powerful data wrangling capabilities, [Google Sheets](https://sheets.google.com)
+has robust support for charting. Most people who create charts with Google Sheets export
+them as static *png* images. But in fact these interactive charts can be
+easily [embedded on your website](embed.html), as you'll learn in chapter 7.
 
 In this section, we will look at creating column and bar charts that are separated,
 grouped, and stacked. We will also look at making pie, line, area, and scatter charts,
@@ -238,8 +252,6 @@ separated, grouped, and stacked bar charts in Google Sheets:
 * High-Calorie Fast-Food Items
 * Global Database on Body Mass Index by World Health Organization
 
-Before you begin, you will need to create a free [Google Drive account](https://www.google.com/drive/). If you already use Google Mail (Gmail), you can use the same username for your Google Drive account.
-
 ### Grouped Column and Bar Charts {-}
 
 Figure \@ref(fig:column-grouped) shows differences in obesity between men and women, grouped together in three age brackets to allow for easier gender comparisons across the same ages. In the interactive web version, hover over columns and see tooltips with data.
@@ -252,7 +264,7 @@ if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsh
 
 The following steps will help you recreate an interactive grouped column (or horizontal bar) chart.
 
-1. Right-click to open link in new tab: [Google Sheet Column chart with grouped data template](https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/)
+1. Open [Google Sheet Column chart with grouped data template](https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/) in your browser.
 
 2. Sign in to continue to Google Sheets (which is part of Google Drive). If you don't already have a Google account, you can create one.
 
@@ -264,12 +276,22 @@ The following steps will help you recreate an interactive grouped column (or hor
  knitr::include_graphics("images/05-chart/file-make-copy2.png")
 ```
 
-4. To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot menu appear, and select Delete, as shown in Figure \@ref(fig:delete-chart).
+4. To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete, as shown in Figure \@ref(fig:delete-chart).
 
 (ref:delete-chart) Float cursor in top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete.
 
 ```{r delete-chart, out.width="180px", fig.cap="(ref:delete-chart)"}
  knitr::include_graphics("images/05-chart/delete-chart.png")
+```
+
+Note: Another name for the 3-dot menu symbol is the "kebab menu" because it resembles Middle Eastern
+food cooked on a skewer, in contrast to the three-line "hamburger menu" on many mobile devices,
+as shown in Figure \@ref(fig:menu-hamburger-kebab).
+
+(ref:menu-hamburger-kebab) You should be able to distinguish kebab from hamburger menu icons.
+
+```{r menu-hamburger-kebab, fig.cap="(ref:menu-hamburger-kebab)"}
+knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
 ```
 
 5. Format your data to make each column a data series, as shown in Figure \@ref(fig:column-grouped-data), which means it will display as a separate color in the chart.
@@ -312,7 +334,7 @@ The following steps will help you recreate an interactive grouped column (or hor
  knitr::include_graphics("images/05-chart/share-button-sheet-annotated.png")
 ```
 
-10. To embed an interactive version of your chart in another web page, click the 3-dot menu in the upper-right corner of your chart, and select Publish Chart, as shown in Figure \@ref(fig:chart-publish). In the next screen, select Embed and press the Publish button. See [Chapter 7 Embed on the Web](embed.html) to learn what to do with the iframe code.
+10. To embed an interactive version of your chart in another web page, click the kebab menu in the upper-right corner of your chart, and select Publish Chart, as shown in Figure \@ref(fig:chart-publish). In the next screen, select Embed and press the Publish button. See [Chapter 7 Embed on the Web](embed.html) to learn what to do with the iframe code.
 
 (ref:chart-publish) Select Publish Chart to embed an interactive chart on another web page, as described in Chapter 7.
 
@@ -344,8 +366,8 @@ The rest of the steps remain the same as above.
  knitr::include_graphics("images/05-chart/bar-separated-data.png")
 ```
 
-To create your own separated column or bar chart using the fast-food example, right-click to open this link in a new tab:
-[Google Sheet Separated Bar Chart template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/).
+To create your own separated column or bar chart using the fast-food example,
+make a copy of [Google Sheet Separated Bar Chart template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/).
 
 ### Stacked Column and Bar Charts {-}
 
@@ -366,8 +388,14 @@ To create a stacked column or bar chart, structure your data so that each column
  knitr::include_graphics("images/05-chart/column-stacked-data.png")
 ```
 
-To create your own stacked column or bar chart using the international weight level example, right-click to open this link in a new tab:
-[Google Sheets Stacked Column Chart template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/).
+To create your own stacked column or bar chart using the international weight level example,
+visit the [Google Sheets Stacked Column Chart template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/)
+and make a copy of the spreadsheet.
+
+To change colors of series (for example, to show Overweight category in red),
+click the kebab menu in the top-right corner of the chart, then
+go to *Edit Chart > Customize > Series*. There, choose the appropriate series
+from the dropdown menu, and set its color from the Color dropdown menu that appears.
 
 
 ### Histograms {-}
@@ -383,15 +411,14 @@ Hours will become your bins, and email counts will be your frequency data.
 Then your final dataset would look something like this:
 
 ```
-Hour  Emails
-------------
-0     12
-1     11
-2     7
-...
-21    24
-22    34
-23    22
+| Hour | Emails |
+| ---- | ------ |
+| 0    | 12     |
+| 1    | 11     |
+| 2    | 7      |
+.................
+| 22   | 34     |
+| 23   | 22     |
 ```
 You can now make a histogram. The good news is, Google Sheets considers histograms to
 be regular column charts, so you should be able to use a previous tutorial to make one.
@@ -405,7 +432,7 @@ and go to Insert > Chart. In the Chart editor window, in the Setup tab, select C
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive") else knitr::include_graphics("images/05-chart/histogram.png")
 ```
 
-To create your own histogram chart using our fictional email dataset, right-click to open this link in a new tab:
+If you wish to use our fictional email dataset to create your own histogram, you can make a copy of the
 [Histogram Chart template](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit?usp=sharing).
 
 Bins in a histogram should span (in other words, "cover") the entire range of values of your dataset.
@@ -415,12 +442,12 @@ readers can compare across bars. For example, if you want to create a less detai
 to cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively. Then your dataset will look like:
 
 ```
-TimeOfDay    Emails
--------------------
-Morning      353
-Afternoon    497
-Evening      279
-Night        37
+| TimeOfDay | Emails |
+| --------- | ------ |
+| Morning   | 353    |
+| Afternoon | 497    |
+| Evening   | 279    |
+| Night     | 37     |
 ```
 
 ## Pie, Line, and Area Charts with Google Sheets {- #pie-line-area-google}
@@ -459,7 +486,7 @@ so it is possible the chart you will see right away will be a pie. If not, in Ch
 select  *Pie chart* from the Chart type dropdown list.
 
 Notice that slices are ordered the same way they appear in the spreadsheet. We highly recommend you
-sort values from largest to smallest: right-click the header of your values column, and click `Sort sheet Z-A`.
+sort values from largest to smallest: right-click the header of your values column, and choose `Sort sheet Z-A`.
 You will see that the chart updates automatically.
 
 Right-click on the chart, and choose *Chart & axis titles > Chart title* to add a meaningful title.
@@ -469,7 +496,7 @@ In *Customize* tab of the Chart editor, you can also change colors and add borde
 The most common use of line charts is to represent values at different points in time,
 in other words to show change over time. The line chart in Figure \@ref(fig:line) shows per-capita
 meat availability in the US for the past 110 years. You can see that
-the level of chicken (shown in orange) rises steadily and surpasses beef (red) and pork (blue).
+the level of chicken (shown in light-green) rises steadily and surpasses beef (blue) and pork (gray).
 
 (ref:line) Line chart showing meat availability per capita in the US, according to the [US Department of Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive).
 
@@ -527,8 +554,11 @@ Further below you'll build a bubble chart based on the same XY life expectancy-f
 
 Fancier bubble charts animate the circles to represent one more variable: change over time.
 Such animated bubble charts were popularized by Hans Rosling, a renowned Swedish professor
-of global health. You can watch one of his famous [TED talks](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen)
-to see animated bar charts in action.
+of global health.
+
+Note: We recommend you watch one of Hans Rosling's famous [TED talks](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen)
+to see animated bar charts in action. You can also visit [Gapminder Foundation website](https://www.gapminder.org/) to see more data visualizations
+and learn more about Hans's work and legacy.
 
 #### XY Scatter chart {-}
 The scatter chart in Figure \@ref(fig:scatter) uses World Bank data to reveal a downward slope:
@@ -570,7 +600,7 @@ You will see a lot of scatter charts out there that do not label data points, an
 Some scatter plots are designed to show whether or not there is a correlation, and knowing
 which points are which is not important. But sometimes labels are important for your storytelling.
 
-In Chart editor, click on the 3-dot menu for your Series dataset (Fertility), and then *Add labels*
+In Chart editor, open the kebab menu (3 dots) of your Series dataset (Fertility), and then *Add labels*
 (see Figure \@ref(fig:scatter-labels)).
 The labels added by default will be the x-values of points. To make Google Sheets read
 labels from the third column (*Country*), click the name of your label dataset (Life Expectancy),
@@ -589,16 +619,6 @@ To fix this, go to Customize tab of the Chart editor. There, you can set minimum
 for both horizontal and vertical axes. Unlike in bar charts, axes in scatter plots do not have to start at zero.
 You can set your minimum and maximum values to be a few units below and above the extreme points of your
 data range.
-
-Note: Another name for the 3-dot menu symbol is the "kebab menu" because it resembles Middle Eastern
-food cooked on a skewer, in contrast to the three-line "hamburger menu" on many mobile devices,
-as shown in Figure \@ref(fig:menu-hamburger-kebab).
-
-(ref:menu-hamburger-kebab) You should be able to distinguish kebab from hamburger menu icons.
-
-```{r menu-hamburger-kebab, fig.cap="(ref:menu-hamburger-kebab)"}
-knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
-```
 
 #### Bubble chart with 3 columns {-}
 In this tutorial, we will show you a little trick that you can use if you want a scatter chart
@@ -742,16 +762,15 @@ knitr::include_graphics("images/05-chart/tableau-connect-annotated.png")
 3. Go to *Sheet 1* tab (in the lower-left corner of the window) to view your worksheet.
 Although it may feel overwhelming at first, the key is learning
 where to drag items from the Data pane (left) into the main worksheet.
-**Dimensions** are any information that is qualitative or categorical, and are shown in blue
-with *Abc* tables. **Measures** are quantitative information about the dimensions,
-shown in green with *#* icons.
+Tableau marks all data fields as blue (discrete values, mostly text fields or numeric labels)
+or green (continuous values, mostly numbers).
 
-4. Drag the *Grade Levels* measure into the **Rows** field above the charting area, which
+4. Drag the *Grade Levels* field into the **Rows** field above the charting area, which
 for now is just empty space. You can consult Figure \@ref(fig:tableau-xy-dragging) for this
 and two following steps.
 Tableau will apply a summation function to it, and you will see the `SUM(Grade Levels)` appearing
 in the Rows row, and a blue bar in the charting area. It makes little sense so far, so let's
-plot another measure (variable).
+plot another data field.
 
 5. Drag *Median Household Income* to the **Columns** field (just above the Rows field).
 Tableau will once again apply the summation function, so you will see `SUM(Median Household Income)`
@@ -759,11 +778,11 @@ in the Columns. The bar chart will transform into a scatter chart with just one 
 in the upper-right corner. That is because the data for both is aggregated (remember the `SUM` function).
 
 6. We want to tell Tableau to disaggregate the household and grade levels variables. To do so,
-drag *District* dimension into the lower portion of the Marks area. You will now see
+drag *District* dimension into the *Detail* box of the Marks card. You will now see
 a real scatter chart in the charting area. If you hover over points, you will see all three
 values associated with it.
 
-(ref:tableau-xy-dragging) Drag measures and dimensions to the right places in Tableau.
+(ref:tableau-xy-dragging) Drag data fields to the right places in Tableau.
 
 ```{r tableau-xy-dragging, fig.cap="(ref:tableau-xy-dragging)"}
 knitr::include_graphics("images/05-chart/tableau-xy-dragging-annotated.png")
@@ -870,7 +889,7 @@ we don't care about it much. So go ahead and press *Add all members* button.
 4. Now you should see an absolute spaghetti plate of lines and colors. To add filtering,
 drag *Country Name* to the Filters card. In the Filter window, make sure all countries
 are checked, and click *OK*.
-5. Right-click on *Country Name* pill in Filters card, and check Show Filter (see Figure \@ref(fig:tableau-filtered-show-filter.png))
+5. Right-click on *Country Name* pill in Filters card, and check Show Filter (see Figure \@ref(fig:tableau-filtered-show-filter))
 6. You will see a list of options with all checkboxes on have appeared to the right of the visualization.
 Click *(All)* to add/remove all options, and add a few of your favorite countries to see
 how the interactive filtering works.
@@ -909,13 +928,13 @@ You may be prompted with the window to log in to your account (or create one if 
 The next steps are fairly self-explanatory, and you can consult
 [the previous tutorial](scatter-chart-tableau.html) for more information on publishing.
 
-See the [Embed Tableau Public on Your Website](embed-tableau.html) section of this book to insert the interactive version of your chart on a web page that you control.
-
-To learn more, see [Tableau Public resources page](https://public.tableau.com/en-us/s/resources).
+See the [Embed Tableau Public on Your Website](embed-tableau.html) section of this
+book to insert the interactive version of your chart on a web page that you control.
 
 ### Summary {- #summary5}
 
-Congratulations on creating interactive charts that pull readers deeper into your story, and encourage them to explore the underlying data! As you continue to create more, always match the chart type to your data format and the story you wish to emphasize. Also, design your charts based on the principles and aesthetic guidelines in this chapter. While anyone can click a few buttons to quickly create a chart nowadays, your audiences will greatly appreciate well-designed charts that thoughtfully call their attention to meaningful patterns in the data.
+Congratulations on creating interactive charts that pull readers deeper into your story, and encourage them to explore the underlying data! As you continue to create more, always match the chart type to your data format and the story you wish to emphasize. Also, design your charts based on the principles and aesthetic guidelines in this chapter.
+While anyone can click a few buttons to quickly create a chart nowadays, your audiences will greatly appreciate well-designed charts that thoughtfully call their attention to meaningful patterns in the data.
 
 The next chapter on [Map Your Data](map.html) follows a similar format to introduce different map types, design principles, and hands-on tutorials to create interactive visualizations with spatial data. Later you'll learn how to [embed interactive charts on your web](embed.html) in chapter 7.
 

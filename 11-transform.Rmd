@@ -48,16 +48,25 @@ Search for an address, right-click on that point, and select *What's here?* to r
 knitr::include_graphics("images/11-transform/gmaps-whats-here.png")
 ```
 
-But what if you need to geocode dozens, hundreds, or even thousands of addresses? In this section, we will look at two ways to geocode larger lists of addresses. First, you'll learn how to use our custom-built
-[Google Sheets Geocoder](https://github.com/HandsOnDataViz/google-sheets-geocoder), which
-lets you upload up to 1,000 addresses and choose between Google Geocoder (available pretty much worldwide) and the US Census Geocoder (for US addresses only) Second, you'll learn how to use a stand-alone US Census Geocoder that allows you to upload up to 10,000 addresses (for the US only) and download results.
+But what if you need to geocode dozens, hundreds, or even thousands of addresses?
+In this section, we will look at two ways to geocode larger lists of addresses.
+First, you'll learn how to use our custom-built
+[Google Sheets Geocoder](https://github.com/HandsOnDataViz/google-sheets-geocoder),
+which lets you convert addresses using Google Geocoder (available pretty much worldwide)
+and the US Census Geocoder (for US addresses only).
+Second, you'll learn how to use a stand-alone US Census Geocoder that allows you
+to upload a file with up to 10,000 addresses within the US, and download geocoded results.
 
-TODO: I tried to add numerical limitations for each tool to clarify the "two ways"; check details
+Note: Using Google Maps Geocoder within Google Sheets (App Script) does not require
+an API key. In the past, free tier was restricted by 1,000 geocoding requests in 24 hours.
+Since 2018, [use quotas are unclear](https://developers.google.com/apps-script/guides/services/quotas),
+but we believe the new limit is [up to 50 requests per minute](https://developers.google.com/maps/documentation/geocoding/usage-and-billing#other-usage-limits).
+
 
 #### Geocode addresses with Google Sheets Geocoder {-}
 
-The Google Sheets Geocoder script lives inside a [Google Sheet](https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0) that you can copy to your own Google Drive
-(you don't need editing access, just go to *File > Make a copy*).
+The Google Sheets Geocoder script lives inside [a special Google Sheet](https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0)
+that you should *copy* to your own Google Drive (you don't need editing access, just go to *File > Make a copy*).
 
 The spreadsheet contains six columns. Populate the first column, *Location*, with your addresses.
 The remaining five columns will be filled by the geocoding script. Select all six columns,
@@ -77,11 +86,9 @@ If you run the script for the first time, Google Sheets may ask for permission o
 Disregard this message. The code is open-source and is available [on GitHub](https://github.com/HandsOnDataViz/google-sheets-geocoder),
 so you or your programmer friend can make sure it doesn't steal your personal data.
 
-TODO: Fix the Google App code to remove warning message
-
 Once the script finishes executing, you will get a pop-up notification that will tell you how many addresses
 were successfully geocoded, and how many failed. Inspect *Found* and *Quality* columns to ensure the geocoder matched your addresses correctly.
-Then look at the failed addresses and see if you can spot problems with them. For tops about
+Then look at the failed addresses and see if you can spot problems with them. For tips about
 using Google geocoder, see [documentation](https://developers.google.com/maps/faq#geocoder_queryformat).
 
 Note: The Geocoder plugin is a small Apps Script program that is connected to your Google sheet.
@@ -136,7 +143,7 @@ a CSV file with 5 columns and upload it to Address Batch form of the [US Census 
 In the menu on the left-hand side, you can switch from *Find Locations* to *Find Geographies*
 if you wish to include census tract and GeoID data in addition to the coordinates.
 
-Your CSV file needs to be formatted the following way, *without the header row*:
+Your CSV file **must not contain a header row**. It needs to be formatted the following way:
 
 ```
 | 1 | 300 Summit St | Hartford | CT | 06106 |
@@ -164,15 +171,20 @@ spreadsheet to filter for unmatched addresses, then manually correct them,
 save as a separate CSV file, and re-upload. You can use the US Census Geocoder as many
 times as you want, as long as a single file doesn't exceed 10,000 records.
 
-* In reality only the first two columns, *unique ID* and *street address*, are required. City, state, and zip code
-may be left blank if you don't have that data. But there are usually fewer exact matches for addresses with missing elements.
-* If your data lacks ID values, you can create a column of consecutive numbers.
-See [Calculate with Formulas and Functions](calculate.html) section of this book to see how.
-* Make sure your street addresses don't contain city, state, and zip code data. If they do,
-use splitting text to columns technique, described in the [Clean Data with Spreadsheets](clean-spreadsheets.html) section
-of the book, to get rid of that extra data. But if your street addresses contain apartments, you can leave them in.
+In reality only the first two columns, *unique ID* and *street address*,
+are required for the US Census Geocoder to accept your file for processing.
+City, state, and zip code values may be left blank if you don't have that data.
+But to ensure you get exact matches, you should provide as much data as is available to you.
 
-US Census Geocoder has a comprehensive [overview and documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/census-geocoder.html)
+If your data lacks ID values, you can create a column of consecutive numbers.
+See [Calculate with Formulas and Functions](calculate.html) section of this book to see how.
+
+Make sure your street addresses don't contain city, state, and zip code data. If they do,
+use splitting text to columns technique, described in the [Clean Data with Spreadsheets](clean-spreadsheets.html) section
+of the book, to get rid of that extra data. But if your street addresses contain apartment numbers, you can leave them in.
+
+Note: US Census Geocoder has a comprehensive
+[overview and documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/census-geocoder.html)
 that you can refer to if you encounter issues not covered here.
 
 If for some reason you cannot geocode address-level data, but you need to produce some mapping output,
@@ -183,8 +195,12 @@ we will look at hospital addresses in the US and how we can count them by state 
 
 If you deal with geographical data, you may find yourself in a situation where
 you have a list of addresses which need to be counted (**aggregated**) by area
-and displayed as a polygon (**choropleth**) map. In this case, a simple pivot table
-in a spreadsheet software can solve the problem.
+and displayed as a polygon map. In this case, a simple pivot table in a spreadsheet
+software can solve the problem.
+
+Note: A special case of a polygon map is a **chropleth** map,
+which represents polygons that are colored in a particular way to represent underlying values.
+A lot of polygon maps end up being *choropleth* maps, so we will be using this term a lot in this book.
 
 Let's take a look at a [list of all hospitals](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data)
 that are registered with the Medicare program in the United States. The dataset is
@@ -193,15 +209,15 @@ This particular dataset has information on each hospital's name,
 location (nicely divided into Address, City, State, and ZIP Code columns),
 a phone number and some other indicators, such as mortality and patient experience.
 
-Now, imagine you are given a task to create a polygon map of total hospitals by US state,
-so instead of showing individual hospitals as points, you want darker shadows of blue
-to represent states with more hospitals. See Figure \@ref(fig:pivot-address) to see what
-we are talking about.
+Now, imagine you are given a task to create a choropleth map of total hospitals by US state.
+Instead of showing individual hospitals as points (as in Figuere \@ref(fig:pivot-address)a ),
+you want darker shades of blue to represent states with more hospitals (as in Figure \@ref(fig:pivot-address)b).
 
-(ref:pivot-address) You can count addresses by state (or other area) to produce polygon, or choropleth, maps instead of point maps.
+(ref:pivot-address) You can count addresses by state (or other area) to produce polygon,
+or choropleth, maps instead of point maps.
 
 ```{r pivot-address, fig.cap="(ref:pivot-address)"}
-knitr::include_graphics("images/11-transform/pivot-address.png")
+knitr::include_graphics("images/11-transform/pivot-address-annotated.png")
 ```
 
 First, save the database to your local machine by going to *Export > Download > CSV*
@@ -235,43 +251,45 @@ We will introduce both tools in the next few sections.
 But before we do that, let's talk about data normalization and why showing
 counts of hospitals per state doesn't really tell a good story.
 
-## Normalize Data to Create Meaningful Polygon Maps {- #normalize}
+## Normalize Data to Create Meaningful Choropleth Maps {- #normalize}
 
-Polygon (choropleth) maps are best when they represent relative, not absolute values.
+Choropleth maps are best when they represent relative, not absolute values.
 Consider two maps shown in Figure \@ref(fig:normalize-map-data). They both are
 about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of
-June 26, 2020. The map on the left shows total number of recorded cases per state,
-and the map on the right shows cases adjusted by the state's population.
+June 26, 2020. Figure \@ref(fig:normalize-map-data)a shows total number of recorded cases per state,
+and Figure \@ref(fig:normalize-map-data)b shows Covid-19 cases adjusted by the state's population.
 Darker colors represent higher values. Do you notice any differences in spatial patterns?
 
-(ref:normalize-map-data) Choropleth (polygon) maps work best with normalized values.
+(ref:normalize-map-data) Choropleth maps work best with normalized values.
 
 ```{r normalize-map-data, fig.cap="(ref:normalize-map-data)"}
-knitr::include_graphics("images/11-transform/normalize-map-data.png")
+knitr::include_graphics("images/11-transform/normalize-map-data-annotated.png")
 ```
 
-Note: Both maps show Covid-19 data collected by the New York Times and published
+Both maps show Covid-19 data collected by the New York Times and published
 [on GitHub](https://github.com/nytimes/covid-19-data).
-In one map, we normalized (divided) values by population in each state,
+In the map in Figure \@ref(fig:normalize-map-data)b, we normalized (divided) values by population in each state,
 according to the 2018 US Census American Community Survey,
 the most recent data available on the day of writing. We didn't
 add legends and other important cartographic elements so that you can
 better focus on interpreting spatial patterns. In both cases,
 we used Jenks natural breaks for classification.
 
-What are the worst-hit states according to the map showing total Covid-19 counts?
+What are the worst-hit states according to the map showing total Covid-19 counts
+(shown in Figure \@ref(fig:normalize-map-data)a)?
 If you are familiar with the US geography, you can quickly tell that these are
 New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California.
 But five of these happen to be some of the most populous states in the US,
 so it makes sense that they will also have higher Covid-19 cases.
 
-Now, how about the map on the right? You can see that New York and its neighbors,
+Now, how about the map in Figure \@ref(fig:normalize-map-data)b?
+You can see that New York and its neighbors,
 including New Jersey and Massachusetts, have by far the highest rates per capita
 (per person), which we saw in the first map. But you can also see
 that in fact California, Texas, and Florida were impacted to a lesser extent
 than the map on the left had suggested. So the map with per-capita values is a
-much better illustration to the story about New York being the epicenter of the Covid-19
-crisis in the United States (at least in the spring of 2020).
+much better illustration to the story about New York being the *first* epicenter of the Covid-19
+crisis in the United States.
 
 #### Different ways to normalize data {-}
 
@@ -282,7 +300,7 @@ One of the most common ways of normalization is deriving "per capita", or "per p
 If values are small, such as rare disease cases or lottery winners, they can be presented as "per 1,000" or "per 100,000" people.
 Divide your quantity by population in that area to derive per capita values.
 
-Choropleth (polygon) maps work well with percentages. The good news is, humans like percentages too.
+Choropleth maps work well with percentages. The good news is, humans like percentages too.
 It is quite natural for us to understand that a 9% unemployment rate means that of 100 people
 who were willing to work, nine were unable to find a job. To derive a percentage for unemployment,
 divide the number of unemployed people by labor force size (adult
@@ -343,7 +361,7 @@ are the attributes, which bring value to your location data.
 
 Second, geospatial data can be **raster** or **vector**,
 as illustrated in Figure \@ref(fig:geospatial-raster-vector).
-Raster data is a grid of cells ("pixels") of a certain size
+Raster data, as shown in Figure \@ref(fig:geospatial-raster-vector)a, is a grid of cells ("pixels") of a certain size
 (for example, 1 meter by 1 meter). For example, satellite images
 of the Earth that you see on Google Maps are raster geospatial data.
 Each pixel contains the color of Earth that satellite cameras
@@ -356,11 +374,11 @@ by volunteers tracing outlines of objects from satellite images.
 (ref:geospatial-raster-vector) Geospatial data can be raster or vector.
 
 ```{r geospatial-raster-vector, fig.cap="(ref:geospatial-raster-vector)"}
-knitr::include_graphics("images/11-transform/geospatial-raster-vector.png")
+knitr::include_graphics("images/11-transform/geospatial-raster-vector-annotated.png")
 ```
 
 In this book, we will focus on vector data, which is based on
-points, lines, and polygons. Vector data can be
+points, lines, and polygons, as shown in Figure \@ref(fig:geospatial-raster-vector)b. Vector data can be
 much more precise than raster data, because points' coordinates
 can be expressed with precise decimals. In addition, vector
 data can contain as much extra *attribute* information about each object as desired,
@@ -395,7 +413,10 @@ in GeoJSON format. That point has a *name* attribute (property) whose value is *
 The simplicity and readability of GeoJSON allows you to edit it even in the most
 simple text editor. We strongly recommend you use and share your map data in GeoJSON.
 Web-based maps, such as those built with Leaflet, Mapbox, Google Maps JS API, and Carto,
-as well as ArcGIS and QGIS all support GeoJSON.
+as well as ArcGIS and QGIS all support GeoJSON. By having your geospatial data stored
+and shared in GeoJSON, you ensure you can use it on the web with nearly any mapping tool.
+You can also be confident that other people will be able to use and extract data
+from the file without bulky and often expensive GIS software installed.
 
 Also, your GitHub repository will automatically display any GeoJSON files in a map view,
 like is shown in Figure \@ref(fig:geojson-github).
@@ -406,12 +427,13 @@ like is shown in Figure \@ref(fig:geojson-github).
 knitr::include_graphics("images/11-transform/geojson-github.png")
 ```
 
-In GeoJSON, coordinates are ordered in *longitude-latitude* format,
+Warning: In GeoJSON, coordinates are ordered in *longitude-latitude* format,
 the same as X-Y coordinates in mathematics. This is the opposite of Google Maps
 and some other web map tools, which order values as *latitude-longitude*.
 For example, *Hartford, Conn.* is located at (-72.67, 41.76) according to GeoJSON,
 but at (41.76, -72.67) in Google Maps. Neither notation is right or wrong, just make sure
-you know which one you are dealing with.
+you know which one you are dealing with. Tom MacWright created a great summary table
+[showing lat/lon order of different geospatial formats and technologies](https://macwright.com/lonlat/).
 
 #### Shapefiles {-}
 The shapefile format was created in the 1990s by Esri, the company that develops
@@ -439,9 +461,9 @@ utility discussed later in this chapter.
 #### Keyhole Markup Language (or KML) {-}
 
 The KML format rose in popularity during the late 2000s.
-Google Earth, a free and user-friendly tool, allowed many people to
-view and edit geographic data. KML files were often used
-with maps powered by Google Fusion Tables, but that became history in late 2019.
+It was developed for Google Earth, a free and user-friendly tool that allowed many people to
+view and edit two- and three-dimensional geographic data. KML files were often used
+with maps powered by Google Fusion Tables, but that [became history in late 2019](https://killedbygoogle.com/).
 [GeoJson.io](geojsonio.html) should be able to convert your KML file into a GeoJSON.
 
 Sometimes `.kml` files are distributed in a compressed `.kmz` format.
@@ -455,6 +477,12 @@ and supported by MapInfo, Esri's competitor, and is designed to work well with M
 GIS software. Unfortunately, you will most likely need MapInfo Pro, QGIS, or ArcGIS to re-save these as GeoJSON
 or a Shapefile.
 
+We've mentioned only a handful of the most common geospatial file formats.
+There is a myriad of other, less known formats for both raster and vector data.
+Remember that GeoJSON is one of the best, most universal formats for your *vector* data,
+and we strongly recommend to store and share your map data in GeoJSON.
+In the next section, we will look at free online tools to create, convert, join, crop,
+and in other ways manipulate GeoJSON files.
 
 ## GeoJson.io to Convert, Edit, and Create Map Data {- #geojsonio}
 
@@ -523,16 +551,18 @@ but instead would add point features to the existing map.
 with towns around Hartford, you will see *town*, *community_type*, and *wiki_link* features
 in addition to the tool's default *marker-color*, *marker-size*, and *marker-symbol*
 fields.
-3. The popup is interactive, and you can click and edit each property (including property names).
+
+Tip: The popup is interactive, and you can click and edit each property (including property names).
 You can also add a new property by clicking the *Add row* button. You can delete
 the marker by clicking *Delete feature* button.
-4. Click *Save* to record all marker changes to the GeoJSON. This will close the popup window,
+
+3. Click *Save* to record all marker changes to the GeoJSON. This will close the popup window,
 and you will see updated markers in the JSON tab to the right of the map.
-5. It may be quicker to view all data as a table instead of dealing with individual marker popups.
+4. It may be quicker to view all data as a table instead of dealing with individual marker popups.
 In **Table** tab to the right of the map, you can add, rename, and remove columns
 from *all* features (markers) at once.
 Table cells are also modifiable, so you can edit your data there.
-6. Once you are happy with your map data, go to *Save > GeoJSON* to download the result to your computer.
+5. Once you are happy with your map data, go to *Save > GeoJSON* to download the result to your computer.
 You can also log into GeoJson.io with your GitHub account and save directly to your repository.
 
 ```{r geojsonio-gif, fig.cap="A spreadsheet with coordinates columns can be transformed into a GeoJSON with point features."}
@@ -543,7 +573,9 @@ if(knitr::is_html_output()) knitr::include_url("images/11-transform/dataviz-geoj
 
 GeoJson.io lets you create geospatial files from scratch, using simple drawing
 tools to put markers (points), lines, and polygons to appropriate locations.
-These are useful when you have no original file to work with.
+These are useful when you have no original file to work with. The following
+steps will show you how to create a new GeoJSON file and add markers, lines, and polygons
+to it.
 
 1. Open GeoJson.io and in the lower-left corner switch from Mapbox (vector tiles)
 to Satellite.
@@ -559,7 +591,7 @@ knitr::include_graphics("images/11-transform/geojson-io-draw.png")
 
 3. In the toolbar, you have a choice of four drawing tools: a polyline (which is a series
 of points connected by lines, but not closed like a polygon), a polygon, a rectangle
-(which is just an instance of a polygon), and a marker (point). Let's start with the latter.
+(which is just an instance of a polygon), and a marker (point). Let's start by creating a marker.
 4. Click on the *Draw a marker* button, and click anywhere on the map to place it.
 You will see a gray marker that is now part of your map. You can modify its properties,
 or delete it in the interactive pop-up.
@@ -606,7 +638,9 @@ to be a quick alternative for some common but time-consuming tasks.
 
 You can use Mapshaper to convert between geospatial file formats. Unlike GeoJson.io,
 Mapshaper also supports Esri Shapefiles (which is a folder of individual files with the same name,
-but different extensions), so you can easily convert a Shapefile into a web-friendly GeoJSON.
+but different file extensions), so you can easily convert a Shapefile into a web-friendly GeoJSON.
+In the following steps, we will convert a geospatial file by import it to Mapshaper,
+and then export it as a different file type.
 
 1. Navigate to [Mapshaper.org](https://mapshaper.org). The start page is two large drag-and-drop zones
 which you can use to import your file. The smaller area at the bottom, *Quick import*, uses default
@@ -664,15 +698,18 @@ You may not need precise and detailed map boundaries for
 data visualization projects where zoomed-out geographies are shown.
 Detailed boundaries are heavy, and may slow down your web maps.
 
-Consider two maps of the contiguous US states, also known as Lower-48, shown in Figure \@ref(fig:mapshaper-simplify-demo).
-The map on the left is more detailed and is about 230 kilobytes, but the map on the right
+Consider two maps of the contiguous US states (also known as *the lower 48*,
+the term Ilya learned in 2018 while travelling in Alaska), shown in Figure \@ref(fig:mapshaper-simplify-demo).
+The map in Figure \@ref(fig:mapshaper-simplify-demo)a is more detailed and is about 230 kilobytes, but the map in Figure \@ref(fig:mapshaper-simplify-demo)b
 is only 37 kilobytes, 6 times smaller!
 
 (ref:mapshaper-simplify-demo) Consider simplifying geometries with Mapshaper to make your web maps faster.
 
 ```{r mapshaper-simplify-demo, fig.cap="(ref:mapshaper-simplify-demo)"}
-knitr::include_graphics("images/11-transform/mapshaper-simplify-demo.png")
+knitr::include_graphics("images/11-transform/mapshaper-simplify-demo-annotated.png")
 ```
+
+To simplify map boundaries in Mapshaper, follow the steps below.
 
 1. Import your geo file to Mapshaper. You can use the [sample contiguous US states GeoJSON](data/lower-48.geojson).
 1. Click the *Simplify* button in the upper-right corner. The Simplification menu will appear,
@@ -763,7 +800,7 @@ If you want to leave more than one field, separate them by a comma, but without 
 -filter-fields town,state
 ```
 
-Note: If you leave a space after comma, you will get a *Command expects a single value* error.
+Warning: If you leave a space after comma, you will get a *Command expects a single value* error.
 
 
 #### Join spreadsheet data with polygon map {-}
@@ -804,8 +841,8 @@ knitr::include_graphics("images/11-transform/mapshaper-join.png")
 Tip: To avoid confusion, it may be useful to re-name your CSV column that contains key values to match the key attribute name of your map.
 In our example, you would rename *town* column to *name* column in the CSV, and your command would end with `keys=name,name`.
 
-Do you remember aggregating address-level point records of hospitals into [hospital counts per state](pivot-point-to-polygon.html)?
-Now is a good time to find that .CSV file and practice your merging skills.
+Do you remember aggregating address-level point records of hospitals into [hospital counts per state](pivot-point-to-polygon.html)
+discussed earlier in this chapter? Now is a good time to find that .CSV file and practice your merging skills.
 
 
 #### Count points in polygons with Mapshaper {-}
@@ -839,8 +876,10 @@ knitr::include_graphics("images/11-transform/mapshaper-count-points.png")
 
 #### More about joins {-}
 
-As you saw in counting points in polygons example, you do not need to specify *keys* if you want to perform join
-based on geographical locations between two geo files. If one of your files is a CSV, you need *keys*.
+From the **Count points in polygons with Mapshaper** section of this chapter,
+you should recall that you do not need to specify *keys* if you want to perform join
+based on geographical locations between two geospatial layers (one being points, the other is polygons).
+If one of your files is a CSV, you need *keys*.
 
 If you don't have a CSV table that matches the columns in your boundary map data, you can easily create one.
 Upload the boundary map to Mapshaper, and export in CSV format. Open the downloaded file in any spreadsheet tool.
@@ -874,8 +913,10 @@ Imagine that you are employed by the CT Department of Public Health, and your ta
 to divide 169 towns into 20 so-called Health Districts and produce a new geospatial file.
 By the way, health districts [are a real thing in Connecticut](https://portal.ct.gov/DPH/Local-Health-Admin/LHA/Local-Health-Administration---Site-Map).
 
-You should begin by creating a *crosswalk* of towns and their health districts. It can be as simple as a two-column CSV list
-of a town and its district. Because your boss didn't give you a list of towns in a spreadsheet format,
+You should begin by creating a *crosswalk* of towns and their health districts.
+Computer scientists and those working with data often use the term *crosswalk* to describe some kind of matching
+between two sets of data, such as zipcodes and towns where they are located. In our case, the crosswalk can be as simple as a two-column CSV list
+of a town and its district, each on a new line. Because your boss didn't give you a list of towns in a spreadsheet format,
 but instead a GeoJSON file with town boundaries, let's extract a list of towns from it.
 
 1. Import [ct-towns.geojson](data/ct-towns.geojson) to Mapshaper using Quick import box.
@@ -929,8 +970,15 @@ features using JavaScript expressions, assigning colors to polygons based on val
 TODO: Add Mapwarper section here
 
 ## Convert a Compressed KMZ file to KML format {- #convert-kmz}
-Sometimes KML files are distributed in compressed KMZ format.
-The easiest way to convert is to use free Google Earth Pro.
+
+In the previous sections, we looked at using Geojson.io and Mapshaper
+to convert geospatial files. However, not all file types can be converted with these tools.
+This chapter shows a particular example of a commonly requested
+`.kmz` <-> `.kml` pair conversion with Google Earth Pro.
+
+KMZ is a compressed version of a KML file, and the easiest way to convert
+between the two is to use free Google Earth Pro (if you remember from
+*Convert to GeoJSON format* section, KML is a native format of Google Earth).
 
 1. Download and install [Google Earth Pro](https://www.google.com/earth/versions/) for desktop.
 2. Double-click on any .kmz file to open it in Google Earth Pro. Alternatively, open Google Earth Pro first,
@@ -953,3 +1001,15 @@ knitr::include_graphics("images/11-transform/kmz-save-as.png")
 
 Alternatively, you can use any zip-utility to extract a KML file from KMZ.
 KMZ is simply a 'zipped' version of a KML file!
+
+### Summary {- #summary11}
+
+In this chapter, you learned to use pivot tables to count addresses (points)
+by geographical area, such as states or cities (polygons).
+You lerned  that geospatial data can be vector or raster.
+The best file format to store, share, and use vector data is GeoJSON.
+You can use GeoJson.io to create, edit, or convert geospatial files inside your browser.
+Mapshaper is another online tool to convert, simplify, join or crop geospatial data.
+
+In the following chapter, we will talk detecting bias in charts and maps.
+so that you become a better storyteller and a more critical reader.

@@ -115,7 +115,7 @@ Now let's publish your edited map to the public web to see how it looks in a web
 knitr::include_graphics("images/08-github/leaflet-github-pages.png")
 ```
 
-Note: GitHub recently announced it plans to change the default branch from *Master* to *Main* to eliminate its master-slave metaphor. **TODO:** Update repos, text, and screenshots when this happens.
+Note: **TODO:** GitHub recently announced it plans to change the default branch from *Master* to *Main* to eliminate its master-slave metaphor. GitHub recommends waiting until later in 2020 for their system to support this change. When that happens, we need to update repos, text, and screenshots. See more at https://github.com/github/renaming
 
 11. Scroll back down to *Settings > GitHub Pages* to see the web address where your live map has been published online, and right-click it to open in a new browser tab, as shown in Figure \@ref(fig:leaflet-github-pages-link).
 

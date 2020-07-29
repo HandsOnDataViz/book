@@ -86,7 +86,6 @@ On the other hand, here are three categories where government has ruled that the
 
 The boundary between what types of individual-level data should remain private or become public is continually changing, and subject to political and social pressures. On one hand, critics of "[big data](https://en.wikipedia.org/wiki/Big_data)" and "[surveillance capitalism](https://en.wikipedia.org/wiki/Surveillance_capitalism)" charge that governments seek more power and corporations seek more profits by collecting and commodifying massive amounts of personal data about each individual. On the other hand, the Black Lives Matter movement has gradually made more individual-level data publicly available on violence by police officers. For example, New Jersey state law required local police departments to make "use of force" reports publicly available, but no one could easily search these paper forms until a team of journalists from from NJ Advance Media created [The Force Report public database](https://force.nj.com/), where anyone can look up individual officers and investigate possible patterns of violent behavior. Similarly, a team of ProPublica journalists created [The NYPD Files public database](https://projects.propublica.org/nypd-ccrb/), which now allows anyone to search closed cases of civilian complaints against New York City police officers, by name or precinct, for potential patterns of substantiated allegations. People working in the field of data visualization need to stay informed about the shifting boundary lines between private versus public individual-level data, and contribute to discussions about whose interests are served by making more data available.
 
-
 ## Open Data Repositories {- #opendata}
 Over the past decade, an increasing number of governmental and non-governmental organizations in the US and around the globe have begun to pro-actively share public data through open data repositories. While some of these datasets were previously available as individual files on isolated websites, these growing networks have made open data easier to find, enabled more frequent agency updates, and sometimes support live interaction with other computers. Open data repositories often include these features:
 
@@ -94,30 +93,20 @@ Over the past decade, an increasing number of governmental and non-governmental 
 - Built-in Visualization Tools: Several repositories offer built-in tools for users to create interactive charts or maps on the platform site. Some also provide code snippets for users to embed these built-in visualizations into their own websites, which you'll learn more about in [Chapter 7: Embed on Your Web](embed.html).
 - Application Program Interface (APIs): Some repositories provide endpoints with code instructions that allow other computers to pull data directly from the platform into an external site or online visualization. When repositories continuously update data and publish an API endpoint, it can be an ideal way to display live or "almost live" data in your visualization, which you'll learn more about in [Chapter 10: Leaflet Map Templates](leaflet.html).
 
-Due to the recent growth of open data repositories, especially in governmental policy and scientific research, there is no single website that lists all of them. Instead, we briefly mention just a few of the sites we turn to when hunting for types of data that may interest our readers, while acknowledging that we could have added many others:
-
-TODO: Decide which links to include, remove, or others to add below....
-
-United States open data:
+Due to the recent growth of open data repositories, especially in governmental policy and scientific research, there is no single website that lists all of them. Instead, we list just a few sites from the US and around the globe to spark readers' curiosity:
 
 - [Data.gov](https://www.data.gov/), the official repository for US federal government agencies.
 - [Data.census.gov](https://data.census.gov), the main platform to access US Census Bureau data. The Decennial Census is a full count of the population every ten years, while the American Community Survey (ACS) is an annual sample count that produces one-year, three-year, or five-year estimates for different census geographies, with margins of error.
-- [Open Data Network](https://www.opendatanetwork.com/) directory of primarily US state and municipal open data platforms by Socrata
-
-International open data:
-
 - [Eurostat](https://ec.europa.eu/eurostat), the statistical office of the European Union
 - [Global Open Data Index](https://index.okfn.org/dataset/) by the Open Knowledge Foundation
 - [Google Public Data](https://www.google.com/publicdata/directory)
+- [IPUMS](https://www.ipums.org), the Integrated Public Use Microdata Series, the world's largest individual-level population database, with microdata samples from US and international census records and surveys, hosted by the University of Minnesota
 - [openAfrica](https://africaopendata.org/) by Code for Africa
 - [Open Data Inception](https://opendatainception.io/) a map-oriented global directory
+- [Open Data Network](https://www.opendatanetwork.com/) directory of primarily US state and municipal open data platforms by Socrata
 - [World Bank Open Data](https://data.worldbank.org/)
 
-In addition, students, staff, and faculty at better-resourced institutions of higher education also may have access to a paid library subscription to "closed" data repositories:
-
-- [Social Explorer](https://www.socialexplorer.com/) includes decades of demographic, economic, health, education, religion, and crime data for local and national geographies, primarily for the US, Canada, and Europe. Previously, some access was public, but now requires paid subscription or 14-day free trial.
-- IPUMS NHGIS?
-- more?
+In addition, students, staff, and faculty at better-funded institutions of higher education also may have access to a paid library subscription to "closed" data repositories. For example, [Social Explorer](https://www.socialexplorer.com/) includes decades of demographic, economic, health, education, religion, and crime data for local and national geographies, primarily for the US, Canada, and Europe. Previously, Social Explorer made many files available to the public, but it now requires a paid subscription or 14-day free trial.
 
 ### Summary {- #summary3}
 

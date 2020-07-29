@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 28 Jul 2020
+updated on: 29 Jul 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -359,7 +359,11 @@ cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
 Choose Tools to Tell Your Data Story
 ====================================
 
-TODO: Reorganize and rewrite chapter
+TODO: Reorganize and rewrite chapter Start with line about pushing away
+the computer and drawing out the visualization in your mind… Once you
+have a clearer mental (and physical) picture of what you seek to create,
+then choose digital tools… REVISE TITLE? – Choose Tools to Picture Your
+Data Story
 
 Do you feel overwhelmed by the enormous range of data visualization
 tools? There’s been so many different tools released in recent years
@@ -1743,32 +1747,59 @@ public information.
 Find and Know Your Data
 =======================
 
-In the early stages of a visualization project, you will likely ask two
+In the early stages of a visualization project, we often ask these two
 important and related questions: *Where can I find data?* and *What do I
 really know about it?* If you skip over these questions and leap too
 quickly into constructing charts and maps, you run the risk of creating
 meaningless, or perhaps worse, misleading visualizations. This chapter
-breaks down both of these broad questions in greater detail, and
-provides concrete strategies to [guide your
-search](guide.html)[recognize bad data](bad.html), [source your
-data](source.html), navigate [public versus private data](public.html),
-and search a growing number of [open data repositories](opendata.html).
+breaks down both of these broad questions, and provides concrete
+strategies to [guide your search](guide.html), [recognize bad
+data](bad.html), [source your data origins](source.html), understand
+debates about [public versus private data](public.html), and navigate a
+growing number of [open data repositories](opendata.html).
 
-Guiding Questions for Your Search
----------------------------------
+Once you’ve found some data, we offer specific ways to [reflect on what
+you *really* know about it](know.html). Data does not magically appear
+out of thin air. Instead, people collect and publish information, with
+explicit or implicit purposes, in the social context of their time.
+Therefore, when working with data, we need to ask: Whose stories are
+told? Whose perspectives remain unspoken? And do labels always mean what
+they claim? As data visualization practitioners, we strongly favor
+evidence-based reasoning over less-informed alternatives. But we also
+caution against embracing so-called data objectivity. Even numbers are
+*not* neutral. Always consider the broader contexts in which people
+created information.
 
-TODO: REDO… When searching for data, your newest best friend may be a
-librarian. Sometimes a data-smart librarian happens to know exactly
-where to locate a dataset that you’ve been seeking for day. But their
-more valuable skill is guiding us on *how to search* by reflecting on
-the types of questions librarians commonly ask:
+Guiding Questions for your Data Search
+--------------------------------------
 
--   What’s the question you’re trying to answer? Write it down in the
-    form of a researchable question. For example…. when journalists
-    Jacqueline Rabe Thomas and XY explored lost education during covid,
-    they asked: *INSERT WELL-FORMED QUESTION* and cite their study…
-    Similarly, when data journalists Andrew Ba Tran and others at the
-    Wash Post investigated prescription drug abuse(?), they asked….
+For many people, a data search is simply “Googling” key words on the
+web. Sometimes that works, and sometimes not. When that fails, we think
+about the many lessons we’ve learned from working alongside librarians,
+journalists, and researchers while data-hunting over the years.
+Sometimes they’ve impressed us by knowing *exactly* where to locate a
+specific dataset that has eluded us. But the more valuable insight we’ve
+acquired from our colleagues is set of guiding questions, which outline
+a deeper process of thinking about *how to search* for data:
+
+-   Exactly what is your research question? Start the process by writing
+    down your question—literally in the form of a question, punctuated
+    with a question mark—to clarify your own thinking, and also so that
+    you can clearly communicate it to others who may be assisting you.
+    All too often, our brains automatically jump ahead to try to
+    identify the *answer*, without reflecting on the best way frame the
+    *question* in a way that does not limit the range of possible
+    results.
+
+TODO: ADD some of these above?
+
+    For example, team X investigated topic Y by posing a well-formed question: Z.
+
+    ICE detention project http://xpmethod.columbia.edu/torn-apart/volume/2/index ; https://twitter.com/DoughertyJack/status/1072916691728916480
+
+    Sometimes we have reframed questions by shifting the first word from "What is...[the answer]?" to "How has...[the process]?" BUT this needs richer well-formed examples of researchable questions, perhaps authentic examples with cites to data stories by specific journalists....
+
+    Also, it's perfectly normal to revise your question as your research evolves. For example, we once began a project by asking "What were school test scores in the 1960s?" Gradually, we realized that standardized state-level school testing did not arise in places like Connecticut until the mid-1980s accountability movement, and even then results were not widely accessible to the public until newspapers began to publish them once a year in print in the 1990s, and then continuously on the internet around the 2000s. So our data question shifted to "When and how did the Connecticut residents become aware of standardized school-level test scores?" [ADD CITE]
 
 -   What types of organizations may have collected or published the data
     you seek? If a governmental organization may have been involved,
@@ -1776,15 +1807,16 @@ the types of questions librarians commonly ask:
     municipal), and which branch or agency? Or might data have been
     compiled by a non-governmental organization, such as academic
     institutions, journalists, for-profit corporations, or non-profit
-    groups? Figuring out which organizations might have collected the
+    groups? Figuring out *which organizations* might have collected the
     data can help point you to the digital or print materials they
     typically publish, and most appropriate tools to focus your search
     in that particular area.
 
 -   Have prior publications drawn on similar datasets, and if so, how
-    can we trace their sources? Some of our best data visualization
-    ideas began while reading textual evidence or noticing a table in a
-    print publication or outdated web page, which convinced us that the
+    can we trace their sources? Some of our best visualization ideas
+    began while reading a textual description of data, or stumbling
+    across a table in a print publication or outdated web page. These
+    persuaded us that a previous version of the data existed, that the
     data existed *somewhere*. With these valuable leads, librarians can
     help you track down source notes on where the data originated, or
     sometimes find more up-to-date versions of the data.
@@ -1806,47 +1838,8 @@ the types of questions librarians commonly ask:
     guidelines on when and how they make data available at different
     levels.
 
-Know Your Data
---------------
-
-TODO: explain more about expectations about “knowing what you data
-means” in the scope of this chapter….
-
-If your search has produced some results, the next step is to get to
-know your data. Closely examine your files and ask questions about their
-origin, meaning, and limitations:
-
--   Who collected and published this data, and for what purpose? Since
-    individuals and organizations require time and resources to do this
-    work, seek to clarify their motivations and assumptions, both
-    explicit and implicit ones. Who was the intended audience of the
-    work? Whose perspectives does the data privilege? Whose stories
-    remain untold? As practitioners of data visualization, we strongly
-    favor evidence-based reasoning over its less-informed alternatives.
-    But we also caution against embracing so-called data objectivity.
-    Numbers are *not* neutral, and we always need to consider the
-    broader contexts in which people created them.
-
--   What do the data labels *really* mean? Most spreadsheets contain
-    abbreviated column headers, particularly due to software character
-    limits, but some questions of data interpretation run much deeper.
-    For example, socially-constructed labels such as “race” or “gender”
-    may not clarify how the creators defined their terms, or what role
-    respondents played in the collection process. Even seemingly
-    objective labels such as “income” or “population” or “elevation” may
-    not adequately describe exactly what was counted, how it was
-    measured, and the margins of error. Better-quality datasets include
-    detailed definitions of the collection process to help you to
-    understand the decisions made by its creators. If not, then your
-    next best option may be to go out into the field, if feasible, and
-    directly observe how the data is measured and collected.
-
-To be clear, you may never *truly know* your data if it was collected by
-someone else, particularly a different person in a distant place or
-time. But don’t let that philosophical obstacles stop you from asking
-good questions about the origins and limitations of your data. Only by
-clarifying what we know—and what we don’t know—can we create meaningful
-data visualizations that bring their inner-stories to life.
+ADD: Sometimes the data does not yet exist, or has not yet
+systematically collected and organized…. “missing data”
 
 Recognize Bad Data
 ------------------
@@ -2083,6 +2076,19 @@ boundary lines between private versus public individual-level data, and
 contribute to discussions about whose interests are served by making
 more data available.
 
+TODO: ADD TO ABOVE? Similarly, the Washington post. Up with the West
+Virginia newspaper to obtain privately owned drug records Through a
+court order, which they transformed into a public database that allows
+anyone to search individual doctors prescribing narcotics for potential
+patterns of substance abuse
+
+TODO: ADD – a deeper concern is privately-owned individual-level data
+The credit score companies know my purchases in my payment history on my
+mortgages and credit cards Amazon knows my purchase history Netflix
+knows viewing history Google knows my browsing history Apple knows my
+location history via iPhone When people criticize big data, are usually
+refer to private companies compiling individual data
+
 Open Data Repositories
 ----------------------
 
@@ -2114,13 +2120,8 @@ these features:
 
 Due to the recent growth of open data repositories, especially in
 governmental policy and scientific research, there is no single website
-that lists all of them. Instead, we briefly mention just a few of the
-sites we turn to when hunting for types of data that may interest our
-readers, while acknowledging that we could have added many others:
-
-TODO: Decide which links to include, remove, or others to add below….
-
-United States open data:
+that lists all of them. Instead, we list just a few sites from the US
+and around the globe to spark readers’ curiosity:
 
 -   [Data.gov](https://www.data.gov/), the official repository for US
     federal government agencies.
@@ -2130,32 +2131,76 @@ United States open data:
     Survey (ACS) is an annual sample count that produces one-year,
     three-year, or five-year estimates for different census geographies,
     with margins of error.
--   [Open Data Network](https://www.opendatanetwork.com/) directory of
-    primarily US state and municipal open data platforms by Socrata
-
-International open data:
-
 -   [Eurostat](https://ec.europa.eu/eurostat), the statistical office of
     the European Union
 -   [Global Open Data Index](https://index.okfn.org/dataset/) by the
     Open Knowledge Foundation
 -   [Google Public Data](https://www.google.com/publicdata/directory)
+-   [IPUMS](https://www.ipums.org), the Integrated Public Use Microdata
+    Series, the world’s largest individual-level population database,
+    with microdata samples from US and international census records and
+    surveys, hosted by the University of Minnesota
 -   [openAfrica](https://africaopendata.org/) by Code for Africa
 -   [Open Data Inception](https://opendatainception.io/) a map-oriented
     global directory
+-   [Open Data Network](https://www.opendatanetwork.com/) directory of
+    primarily US state and municipal open data platforms by Socrata
 -   [World Bank Open Data](https://data.worldbank.org/)
 
-In addition, students, staff, and faculty at better-resourced
-institutions of higher education also may have access to a paid library
-subscription to “closed” data repositories:
+In addition, students, staff, and faculty at better-funded institutions
+of higher education also may have access to a paid library subscription
+to “closed” data repositories. For example, [Social
+Explorer](https://www.socialexplorer.com/) includes decades of
+demographic, economic, health, education, religion, and crime data for
+local and national geographies, primarily for the US, Canada, and
+Europe. Previously, Social Explorer made many files available to the
+public, but it now requires a paid subscription or 14-day free trial.
 
--   [Social Explorer](https://www.socialexplorer.com/) includes decades
-    of demographic, economic, health, education, religion, and crime
-    data for local and national geographies, primarily for the US,
-    Canada, and Europe. Previously, some access was public, but now
-    requires paid subscription or 14-day free trial.
--   IPUMS NHGIS?
--   more?
+Know Your Data
+--------------
+
+TODO: explain more about expectations about “knowing what you data
+means” in the scope of this chapter….
+
+If your search has produced some results, the next step is to get to
+know your data. Closely examine your files and ask questions about their
+origin, meaning, and limitations:
+
+-   Who collected and published this data, and for what purpose? Since
+    individuals and organizations require time and resources to do this
+    work, seek to clarify their motivations and assumptions, both
+    explicit and implicit ones. Who was the intended audience of the
+    work? Whose perspectives does the data privilege? Whose stories
+    remain untold? As practitioners of data visualization, we strongly
+    favor evidence-based reasoning over its less-informed alternatives.
+    But we also caution against embracing so-called data objectivity.
+    Numbers are *not* neutral, and we always need to consider the
+    broader contexts in which people created them.
+
+-   What do the data labels *really* mean? Most spreadsheets contain
+    abbreviated column headers, particularly due to software character
+    limits, but some questions of data interpretation run much deeper.
+    For example, socially-constructed labels such as “race” or “gender”
+    may not clarify how the creators defined their terms, or what role
+    respondents played in the collection process. Even seemingly
+    objective labels such as “income” or “population” or “elevation” may
+    not adequately describe exactly what was counted, how it was
+    measured, and the margins of error. Better-quality datasets include
+    detailed definitions of the collection process to help you to
+    understand the decisions made by its creators. If not, then your
+    next best option may be to go out into the field, if feasible, and
+    directly observe how the data is measured and collected.
+
+TODO: Add examples above on how US census race and ethnicity categories
+changed over time? And how ACS measurements about income in small areas
+are subject to high margins of error?
+
+To be clear, you may never *truly know* your data if it was collected by
+someone else, particularly a different person in a distant place or
+time. But don’t let that philosophical obstacles stop you from asking
+good questions about the origins and limitations of your data. Only by
+clarifying what we know—and what we don’t know—can we create meaningful
+data visualizations that bring their inner-stories to life.
 
 ### Summary
 
@@ -5610,9 +5655,12 @@ Figure 99: In *Settings &gt; GitHub Pages*, switch the source from
 *None* to *Master*.
 </p>
 
-Note: GitHub recently announced it plans to change the default branch
-from *Master* to *Main* to eliminate its master-slave metaphor.
-**TODO:** Update repos, text, and screenshots when this happens.
+Note: **TODO:** GitHub recently announced it plans to change the default
+branch from *Master* to *Main* to eliminate its master-slave metaphor.
+GitHub recommends waiting until later in 2020 for their system to
+support this change. When that happens, we need to update repos, text,
+and screenshots. See more at
+<a href="https://github.com/github/renaming" class="uri">https://github.com/github/renaming</a>
 
 1.  Scroll back down to *Settings &gt; GitHub Pages* to see the web
     address where your live map has been published online, and

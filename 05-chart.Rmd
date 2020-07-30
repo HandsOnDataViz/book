@@ -138,7 +138,7 @@ early versions of Microsoft Office, but let's stay away from them today.
 Chart junk distracts the viewer and reduces chart readability and comprehension.
 It also looks unprofessional and doesn't add credibility to you as a storyteller.
 
-(ref:design-principles-junk) Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other "fancy" elements.
+(ref:design-principles-junk) Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements.
 
 ```{r design-principles-junk, fig.cap="(ref:design-principles-junk)"}
 knitr::include_graphics("images/05-chart/design-principles-junk.png")
@@ -304,7 +304,7 @@ knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
 
 6. Use your cursor to select only the data you wish to chart, then go to the Insert menu and select Chart, as shown in Figure \@ref(fig:column-grouped-insert).
 
-(ref:column-grouped-insert) Select your data and then Insert > Chart.
+(ref:column-grouped-insert) Select your data and then Insert the Chart.
 
 ```{r column-grouped-insert, out.width="250px", fig.cap="(ref:column-grouped-insert)"}
  knitr::include_graphics("images/05-chart/column-grouped-insert.png")
@@ -328,7 +328,7 @@ knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
 
 9. To make your data public, go to the upper-right corner of your sheet to click the Share button, and in the next screen, click the words "Change to anyone with the link," as shown in Figure \@ref(fig:share-button-sheet). This means your sheet is no longer Restricted to only you, but can be viewed by anyone with the link. See additional options.
 
-(ref:share-button-sheet) Click the Share button and then click "Change to anyone with the link." to make your data public.
+(ref:share-button-sheet) Click the Share button and then click *Change to anyone with the link* to make your data public.
 
 ```{r share-button-sheet, out.width="350px", fig.cap="(ref:share-button-sheet)"}
  knitr::include_graphics("images/05-chart/share-button-sheet-annotated.png")

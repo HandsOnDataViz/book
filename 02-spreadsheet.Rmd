@@ -42,7 +42,7 @@ Spreadsheet tools organize data in different formats. When you download spreadsh
 
 Warning: Several tools in this book may not work properly on a Mac computer that does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
 
-(ref:mac-file-extensions) On a Mac, go to Finder > Preferences > Advanced and check the box to *Show all filename extensions*.
+(ref:mac-file-extensions) On a Mac, go to *Finder-Preferences-Advanced* and check the box to *Show all filename extensions*.
 
 ```{r mac-file-extensions, out.width=400, fig.cap="(ref:mac-file-extensions)"}
  knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
@@ -55,7 +55,7 @@ Warning: If you're working in any spreadsheet with multiple tabs and formulas, a
 
 One reason we feature Google Sheets in this book is because it exports data in several common formats. To try it, open this [Google Sheets sample data file](https://docs.google.com/spreadsheets/d/1eXWG6sSb6ZL4pKvCsCjcqeJ8l4vqbckuYEBj8T-uefo/) in a new tab, and go to *File > Download As* to export in CSV format (for only the data in the active sheet) or ODS format (which keeps data and most formulas in multi-tab spreadsheets), or other formats such as Excel, as shown in Figure \@ref(fig:sheets-download). Similarly, in the downloadable LibreOffice and its Calc spreadsheet tool, select *File > Save As* to save data in its native ODS format, or to export to CSV, Excel, or other formats.
 
-(ref:sheets-download) In Google Sheets, go to *File > Download As* to export data in several common formats.
+(ref:sheets-download) In Google Sheets, go to *File - Download As* to export data in several common formats.
 
 ```{r sheets-download, out.width=600, fig.cap="(ref:sheets-download)"}
  knitr::include_graphics("images/02-spreadsheet/sheets-download.png")
@@ -76,7 +76,7 @@ Let's begin by making a copy of a real dataset that may interest you, because it
 
 3. Go to *File > Make a Copy* to create a duplicate of this Google Sheet in your Google Drive, as shown in Figure \@ref(fig:file-make-copy). You can rename the file to remove "Copy of...".
 
-(ref:file-make-copy) Go to *File > Make a Copy* to create your own version of this Google Sheet.
+(ref:file-make-copy) Go to *File - Make a Copy* to create your own version of this Google Sheet.
 
 ```{r file-make-copy, out.width=250, fig.cap="(ref:file-make-copy)"}
  knitr::include_graphics("images/02-spreadsheet/file-make-copy.png")
@@ -131,7 +131,7 @@ We feature Google Sheets in this book partly because it supports data migration,
 
 2. Log into your [Google Drive](https://drive.google.com) account, and click the *Gear symbol* in the upper-right corner, as shown in Figure \@ref(fig:drive-settings), to open the Settings screen. Note that this global *Gear symbol > Settings* appears at Google Drive level, *not* inside each Google Sheet.
 
-(ref:drive-settings) Click your Google Drive *Gear Symbol > Settings* in the upper-right corner.
+(ref:drive-settings) Click your Google Drive *Gear Symbol - Settings* in the upper-right corner.
 
 ```{r drive-settings, out.width=300, fig.cap="(ref:drive-settings)"}
  knitr::include_graphics("images/02-spreadsheet/drive-settings.png")
@@ -170,7 +170,7 @@ As you saw in prior sections, we invite readers of this book to fill out a [quic
 
 Inside your Google Drive account, one tool that's often overlooked is Google Forms, which is partially hidden under *New > More > Google Forms*, as shown in Figure \@ref(fig:forms-new).
 
-(ref:forms-new) The Google Forms tool is partially hidden in the Google Drive *New > More* menu.
+(ref:forms-new) The Google Forms tool is partially hidden in the Google Drive *New - More* menu.
 
 ```{r forms-new, out.width=500, fig.cap="(ref:forms-new)"}
  knitr::include_graphics("images/02-spreadsheet/forms-new.png")
@@ -186,7 +186,7 @@ The Google Forms *Questions* tab allows you to design questions with different t
 
 Give each question a very short title, since these will appear as column headers in the linked spreadsheet you'll create further below. If a question needs more explanation or examples, click the three-dot kebob menu in the bottom-right corner to *Show > Description*, which opens a text box where you can type in more details, as shown in Figure \@ref(fig:forms-description). Also, you can *Show > Response validation*, which requires users to follow a particular format, such as an email address or phone number.
 
-(ref:forms-description) Click the three-dot kebab menu to *Show > Description* to add details for any question.
+(ref:forms-description) Click the three-dot kebab menu to *Show - Description* to add details for any question.
 
 ```{r forms-description, out.width=700, fig.cap="(ref:forms-description)"}
  knitr::include_graphics("images/02-spreadsheet/forms-description.png")
@@ -231,7 +231,7 @@ Warning: If you forget to select all cells, you might accidentally sort one colu
 
 4. Go to *Data > Sort Range* to review all of your sort options. In the next screen, check the *Data has header row* box to view the column headers in your data. Let's sort the *Experience with data visualization* column in ascending order (from A-Z), as shown in Figure \@ref(fig:sheets-sort-range), to display the minimum at the top, the maximum at the bottom, and the range in between.
 
-(ref:sheets-sort-range) Go to *Data > Sort Range*, check the header row box, and sort by *Experience with dataviz* in ascending order.
+(ref:sheets-sort-range) Go to *Data - Sort Range*, check the header row box, and sort by *Experience with dataviz* in ascending order.
 
 ```{r sheets-sort-range, out.width=400, fig.cap="(ref:sheets-sort-range)"}
  knitr::include_graphics("images/02-spreadsheet/sheets-sort-range.png")
@@ -241,7 +241,7 @@ Scroll through your sorted data and you'll see that over 1,000 readers rated the
 
 Tip: When working with large spreadsheets, you can "freeze" the first row so that column headers will still appear as you scroll downward. In Google Sheets, go to *View > Freeze* and select 1 row, as shown in Figure \@ref(fig:sheets-view-freeze). You can also freeze one or more columns to continuously display when scrolling sideways. LibreOffice has a same option to *View > Freeze Rows and Columns*, but Excel has a different option called *Window > Split*.
 
-(ref:sheets-view-freeze) In Google Sheets, go to *View > Freeze* to select the number of rows to continuously display when scrolling downward.
+(ref:sheets-view-freeze) In Google Sheets, go to *View - Freeze* to select the number of rows to continuously display when scrolling downward.
 
 ```{r sheets-view-freeze, out.width=500, fig.cap="(ref:sheets-view-freeze)"}
  knitr::include_graphics("images/02-spreadsheet/sheets-view-freeze.png")
@@ -249,7 +249,7 @@ Tip: When working with large spreadsheets, you can "freeze" the first row so tha
 
 5. Now let's try filtering your sheet. Go to *Data > Create a Filter*, which inserts downward arrows in each column header. Click on the downward arrow in the *Occupation* column, and see options to display or hide rows of data. For example, click the "Clear" button to undo all options, then click only *educator* to display only rows with that response, as shown in Figure \@ref(fig:sheets-filter). Click "OK".
 
-(ref:sheets-filter) Go to *Data > Create a Filter*, click the downward arrow in the *Occupation* column, select only *educator*.
+(ref:sheets-filter) Go to *Data - Create a Filter*, click the downward arrow in the *Occupation* column, select only *educator*.
 
 ```{r sheets-filter, out.width=300, fig.cap="(ref:sheets-filter)"}
  knitr::include_graphics("images/02-spreadsheet/sheets-filter.png")
@@ -315,7 +315,7 @@ Pivot tables are another powerful feature built into spreadsheet tools to help y
 
 3. Go to *Data > Pivot Table*, and on the next screen, select *Create* in a new sheet, as shown in Figure \@ref(fig:sheets-pivot-create). The new sheet will include a Pivot Table tab at the bottom.
 
-(ref:sheets-pivot-create) Go to *Data > Pivot Table*, and create in a new sheet.
+(ref:sheets-pivot-create) Go to *Data - Pivot Table*, and create in a new sheet.
 
 ```{r sheets-pivot-create, out.width=450, fig.cap="(ref:sheets-pivot-create)"}
  knitr::include_graphics("images/02-spreadsheet/sheets-pivot-create.png")

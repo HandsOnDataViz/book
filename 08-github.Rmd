@@ -109,7 +109,7 @@ Now let's publish your edited map to the public web to see how it looks in a web
 
 10. In the Settings screen, scroll way down to the GitHub Pages area, and use the drop-down menu to change *Source* from *None* to *Master Branch*, as shown in Figure \@ref(fig:leaflet-github-pages). There is no *commit* or *save* button here, and the change will happen automatically. This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
 
-(ref:leaflet-github-pages) In *Settings > GitHub Pages*, switch the source from *None* to *Master*.
+(ref:leaflet-github-pages) In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Master*.
 
 ```{r leaflet-github-pages, out.width=500, fig.cap="(ref:leaflet-github-pages)"}
 knitr::include_graphics("images/08-github/leaflet-github-pages.png")
@@ -119,7 +119,7 @@ Note: **TODO:** GitHub recently announced it plans to change the default branch 
 
 11. Scroll back down to *Settings > GitHub Pages* to see the web address where your live map has been published online, and right-click it to open in a new browser tab, as shown in Figure \@ref(fig:leaflet-github-pages-link).
 
-(ref:leaflet-github-pages-link) In *Settings > GitHub Pages*, right-click your published map link to open in a new tab.
+(ref:leaflet-github-pages-link) In *Settings* for *GitHub Pages*, right-click your published map link to open in a new tab.
 
 ```{r leaflet-github-pages-link, out.width=600, fig.cap="(ref:leaflet-github-pages-link)"}
 knitr::include_graphics("images/08-github/leaflet-github-pages-link.png")
@@ -215,7 +215,7 @@ So how do you make a second fork of a GitHub repo, if there's no *Use this templ
 
 1. Click on the *Code > Download Zip* drop-down menu button on any repo, as shown in Figure \@ref(fig:repo-code-download). Your browser will download a zipped compressed folder with the contents of the repo to your local computer, and it may ask you where you wish to save it. Decide on a location and click OK.
 
-(ref:repo-code-download) Click *Code > Download Zip* to create a compressed folder of a repo on your computer.
+(ref:repo-code-download) Click *Code* and select *Download Zip* to create a compressed folder of a repo on your computer.
 
 ```{r repo-code-download, out.width=350, fig.cap="(ref:repo-code-download)"}
  knitr::include_graphics("images/08-github/repo-code-download.png")
@@ -237,7 +237,7 @@ Check the box to *Initialize this repository with a README* to simplify the next
 
 Also, select *Add a license* that matches the code you plan to upload, which in this case is "MIT License." Other fields are optional. Click the green *Create Repository* button at the bottom when done, as shown in Figure \@ref(fig:repo-create-options).
 
-(ref:repo-create-options) Name your new repo "practice", check the box to *Initialize this repo with a README*, and *Add a license* (select "MIT") to match any code you plan to upload.
+(ref:repo-create-options) Name your new repo `practice`, check the box to *Initialize this repo with a README*, and *Add a license* (select *MIT*) to match any code you plan to upload.
 
 ```{r repo-create-options, out.width=400, fig.cap="(ref:repo-create-options)"}
  knitr::include_graphics("images/08-github/repo-create-options.png")
@@ -284,7 +284,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 1. Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to `https://github.com/USERNAME/leaflet-map-simple`, using your GitHub username, to access the repo you created in the [Copy, Edit, and Host a Simple Leaflet Map Template](copy-leaflet.html) section of this chapter. Click the *Add file > Open with GitHub Desktop* drop-down menu button near the middle of your screen, as shown in Figure \@ref(fig:desktop-open). The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.
 
-(ref:desktop-open) In your GitHub repo on the web, click *Add file > Open with GitHub Desktop* to download and install GitHub Desktop.
+(ref:desktop-open) In your GitHub repo on the web, click *Add file* to *Open with GitHub Desktop* to download and install GitHub Desktop.
 
 ```{r desktop-open, out.width=350, fig.cap="(ref:desktop-open)"}
  knitr::include_graphics("images/08-github/desktop-open.png")
@@ -308,7 +308,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 4. On the "Let's Get Started" with GitHub Desktop screen, click on *Your Repositories* on the right side to select your `leaflet-map-sample`, and further below click the blue button to *Clone* it to your local computer, as shown in Figure \@ref(fig:desktop-start).
 
-(ref:desktop-start) Select your "leaflet-map-simple" repo and click the *Clone* button to copy it to your local computer.
+(ref:desktop-start) Select your `leaflet-map-simple` repo and click the *Clone* button to copy it to your local computer.
 
 ```{r desktop-start, fig.cap="(ref:desktop-start)"}
  knitr::include_graphics("images/08-github/desktop-start-annotated.png")
@@ -324,7 +324,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 6. On the next screen, GitHub Desktop may ask, "How are you planning to use this fork?" Select the default entry "To contribute to the parent project," which means you plan to send your edits back to your GitHub web account, and click *Continue*, as shown in Figure \@ref(fig:desktop-fork).
 
-(ref:desktop-fork) If asked how you plan to use this fork, select the default "To contribute to the parent project" and click *Continue*.
+(ref:desktop-fork) If asked how you plan to use this fork, select the default *To contribute to the parent project* and click *Continue*.
 
 ```{r desktop-fork, out.width=500, fig.cap="(ref:desktop-fork)"}
  knitr::include_graphics("images/08-github/desktop-fork.png")
@@ -348,7 +348,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 9. Since Atom Editor is integrated with GitHub Desktop, it opens up your entire repo as a "project," where you can click files in the left window to open as new tabs to view and edit code, as shown in Figure \@ref(fig:atom-project). Open your `index.html` file and edit the title of your map, around line 22, then save your work.
 
-(ref:atom-project) Atom Editor opens your repo as a "project," where you can click files to view code. Edit your map title.
+(ref:atom-project) Atom Editor opens your repo as a *project*, where you can click files to view code. Edit your map title.
 
 ```{r atom-project, fig.cap="(ref:atom-project)"}
  knitr::include_graphics("images/08-github/atom-project-annotated.png")

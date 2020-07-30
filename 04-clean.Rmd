@@ -115,7 +115,7 @@ You can manually change it to a comma (`,`), a semicolon (`;`), a period (`.`), 
 or any other custom character (or even a sequence of characters — more about that in Example 2 of this section).
 5. You can rename columns into *Longitude* (first number) and *Latitude* (second number).
 
-(ref:sheets-split) Select Data > Split text to columns to automatically separate data.
+(ref:sheets-split) Select *Data - Split text to columns* to automatically separate data.
 
 ```{r sheets-split, out.width=350, fig.cap="(ref:sheets-split)"}
 knitr::include_graphics("images/04-clean/sheets-split-annotated.png")

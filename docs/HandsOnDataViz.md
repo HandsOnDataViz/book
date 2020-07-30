@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 29 Jul 2020
+updated on: 30 Jul 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -765,12 +765,10 @@ need to turn them on by going to Finder &gt; Preferences &gt; Advanced,
 and check the box to *Show all filename extensions*, as shown in Figure
 <a href="#fig:mac-file-extensions">3</a>.
 
-<img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to Finder >
-Preferences &gt; Advanced and check the box to *Show all filename
-extensions*." width=“400” /&gt;
+<img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to *Finder-Preferences-Advanced* and check the box to *Show all filename extensions*." width="400" />
 <p class="caption">
-Figure 3: On a Mac, go to Finder &gt; Preferences &gt; Advanced and
-check the box to *Show all filename extensions*.
+Figure 3: On a Mac, go to *Finder-Preferences-Advanced* and check the
+box to *Show all filename extensions*.
 </p>
 
 Download to CSV or ODS Format
@@ -807,12 +805,10 @@ Similarly, in the downloadable LibreOffice and its Calc spreadsheet
 tool, select *File &gt; Save As* to save data in its native ODS format,
 or to export to CSV, Excel, or other formats.
 
-<img src="images/02-spreadsheet/sheets-download.png" alt="In Google Sheets, go to *File >
-Download As\* to export data in several common formats." width=“600”
-/&gt;
+<img src="images/02-spreadsheet/sheets-download.png" alt="In Google Sheets, go to *File - Download As* to export data in several common formats." width="600" />
 <p class="caption">
-Figure 4: In Google Sheets, go to *File &gt; Download As* to export data
-in several common formats.
+Figure 4: In Google Sheets, go to *File - Download As* to export data in
+several common formats.
 </p>
 
 But exporting data can be trickier in Microsoft Excel. Using the online
@@ -877,12 +873,10 @@ create your own online form with a link to spreadsheet results.
     <a href="#fig:file-make-copy">5</a>. You can rename the file to
     remove “Copy of…”.
 
-<img src="images/02-spreadsheet/file-make-copy.png" alt="Go to *File >
-Make a Copy\* to create your own version of this Google Sheet."
-width=“250” /&gt;
+<img src="images/02-spreadsheet/file-make-copy.png" alt="Go to *File - Make a Copy* to create your own version of this Google Sheet." width="250" />
 <p class="caption">
-Figure 5: Go to *File &gt; Make a Copy* to create your own version of
-this Google Sheet.
+Figure 5: Go to *File - Make a Copy* to create your own version of this
+Google Sheet.
 </p>
 
 1.  To keep your Google Drive files organized, save them in folders with
@@ -995,10 +989,9 @@ to turn it on, and the benefits of doing so.
     screen. Note that this global *Gear symbol &gt; Settings* appears at
     Google Drive level, *not* inside each Google Sheet.
 
-<img src="images/02-spreadsheet/drive-settings.png" alt="Click your Google Drive *Gear Symbol >
-Settings\* in the upper-right corner." width=“300” /&gt;
+<img src="images/02-spreadsheet/drive-settings.png" alt="Click your Google Drive *Gear Symbol - Settings* in the upper-right corner." width="300" />
 <p class="caption">
-Figure 9: Click your Google Drive *Gear Symbol &gt; Settings* in the
+Figure 9: Click your Google Drive *Gear Symbol - Settings* in the
 upper-right corner.
 </p>
 
@@ -1070,11 +1063,10 @@ Inside your Google Drive account, one tool that’s often overlooked is
 Google Forms, which is partially hidden under *New &gt; More &gt; Google
 Forms*, as shown in Figure <a href="#fig:forms-new">13</a>.
 
-<img src="images/02-spreadsheet/forms-new.png" alt="The Google Forms tool is partially hidden in the Google Drive *New >
-More\* menu." width=“500” /&gt;
+<img src="images/02-spreadsheet/forms-new.png" alt="The Google Forms tool is partially hidden in the Google Drive *New - More* menu." width="500" />
 <p class="caption">
 Figure 13: The Google Forms tool is partially hidden in the Google Drive
-*New &gt; More* menu.
+*New - More* menu.
 </p>
 
 The Google Forms *Questions* tab allows you to design questions with
@@ -1097,11 +1089,10 @@ a text box where you can type in more details, as shown in Figure
 Response validation*, which requires users to follow a particular
 format, such as an email address or phone number.
 
-<img src="images/02-spreadsheet/forms-description.png" alt="Click the three-dot kebab menu to *Show >
-Description\* to add details for any question." width=“700” /&gt;
+<img src="images/02-spreadsheet/forms-description.png" alt="Click the three-dot kebab menu to *Show - Description* to add details for any question." width="700" />
 <p class="caption">
-Figure 15: Click the three-dot kebab menu to *Show &gt; Description* to
-add details for any question.
+Figure 15: Click the three-dot kebab menu to *Show - Description* to add
+details for any question.
 </p>
 
 To preview how your online will appear to recipients, click the *Eyeball
@@ -1183,12 +1174,10 @@ and make it meaningless. Always select all cells before sorting!
     minimum at the top, the maximum at the bottom, and the range in
     between.
 
-<img src="images/02-spreadsheet/sheets-sort-range.png" alt="Go to *Data >
-Sort Range*, check the header row box, and sort by *Experience with
-dataviz\* in ascending order." width=“400” /&gt;
+<img src="images/02-spreadsheet/sheets-sort-range.png" alt="Go to *Data - Sort Range*, check the header row box, and sort by *Experience with dataviz* in ascending order." width="400" />
 <p class="caption">
-Figure 19: Go to *Data &gt; Sort Range*, check the header row box, and
-sort by *Experience with dataviz* in ascending order.
+Figure 19: Go to *Data - Sort Range*, check the header row box, and sort
+by *Experience with dataviz* in ascending order.
 </p>
 
 Scroll through your sorted data and you’ll see that over 1,000 readers
@@ -1202,12 +1191,10 @@ or more columns to continuously display when scrolling sideways.
 LibreOffice has a same option to *View &gt; Freeze Rows and Columns*,
 but Excel has a different option called *Window &gt; Split*.
 
-<img src="images/02-spreadsheet/sheets-view-freeze.png" alt="In Google Sheets, go to *View >
-Freeze\* to select the number of rows to continuously display when
-scrolling downward." width=“500” /&gt;
+<img src="images/02-spreadsheet/sheets-view-freeze.png" alt="In Google Sheets, go to *View - Freeze* to select the number of rows to continuously display when scrolling downward." width="500" />
 <p class="caption">
-Figure 20: In Google Sheets, go to *View &gt; Freeze* to select the
-number of rows to continuously display when scrolling downward.
+Figure 20: In Google Sheets, go to *View - Freeze* to select the number
+of rows to continuously display when scrolling downward.
 </p>
 
 1.  Now let’s try filtering your sheet. Go to *Data &gt; Create a
@@ -1218,12 +1205,10 @@ number of rows to continuously display when scrolling downward.
     with that response, as shown in Figure
     <a href="#fig:sheets-filter">21</a>. Click “OK”.
 
-<img src="images/02-spreadsheet/sheets-filter.png" alt="Go to *Data >
-Create a Filter*, click the downward arrow in the *Occupation\* column,
-select only *educator*." width=“300” /&gt;
+<img src="images/02-spreadsheet/sheets-filter.png" alt="Go to *Data - Create a Filter*, click the downward arrow in the *Occupation* column, select only *educator*." width="300" />
 <p class="caption">
-Figure 21: Go to *Data &gt; Create a Filter*, click the downward arrow
-in the *Occupation* column, select only *educator*.
+Figure 21: Go to *Data - Create a Filter*, click the downward arrow in
+the *Occupation* column, select only *educator*.
 </p>
 
 Now your view of reader responses is sorted by experience, and filtered
@@ -1393,10 +1378,9 @@ reader responses by two categories: occupation and experience level.
     <a href="#fig:sheets-pivot-create">26</a>. The new sheet will
     include a Pivot Table tab at the bottom.
 
-<img src="images/02-spreadsheet/sheets-pivot-create.png" alt="Go to *Data >
-Pivot Table\*, and create in a new sheet." width=“450” /&gt;
+<img src="images/02-spreadsheet/sheets-pivot-create.png" alt="Go to *Data - Pivot Table*, and create in a new sheet." width="450" />
 <p class="caption">
-Figure 26: Go to *Data &gt; Pivot Table*, and create in a new sheet.
+Figure 26: Go to *Data - Pivot Table*, and create in a new sheet.
 </p>
 
 1.  In the *Pivot table editor* screen, you can regroup data from the
@@ -2349,10 +2333,9 @@ line.
 5.  You can rename columns into *Longitude* (first number) and
     *Latitude* (second number).
 
-<img src="images/04-clean/sheets-split-annotated.png" alt="Select Data >
-Split text to columns to automatically separate data." width=“350” /&gt;
+<img src="images/04-clean/sheets-split-annotated.png" alt="Select *Data - Split text to columns* to automatically separate data." width="350" />
 <p class="caption">
-Figure 41: Select Data &gt; Split text to columns to automatically
+Figure 41: Select *Data - Split text to columns* to automatically
 separate data.
 </p>
 
@@ -2969,12 +2952,10 @@ stay away from them today. Chart junk distracts the viewer and reduces
 chart readability and comprehension. It also looks unprofessional and
 doesn’t add credibility to you as a storyteller.
 
-&lt;img src=“images/05-chart/design-principles-junk.png” alt=“Chart junk
-distracts the viewer, so stay away from shadows, 3D perspectives,
-unnecessary colors and other”fancy" elements." /&gt;
+<img src="images/05-chart/design-principles-junk.png" alt="Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements."  />
 <p class="caption">
 Figure 52: Chart junk distracts the viewer, so stay away from shadows,
-3D perspectives, unnecessary colors and other “fancy” elements.
+3D perspectives, unnecessary colors and other fancy elements.
 </p>
 
 Do not use shadows or thick outlines with bar charts, because the reader
@@ -3192,10 +3173,9 @@ your chart.
     to the Insert menu and select Chart, as shown in Figure
     <a href="#fig:column-grouped-insert">64</a>.
 
-<img src="images/05-chart/column-grouped-insert.png" alt="Select your data and then Insert >
-Chart." width=“250px” /&gt;
+<img src="images/05-chart/column-grouped-insert.png" alt="Select your data and then Insert the Chart." width="250px" />
 <p class="caption">
-Figure 64: Select your data and then Insert &gt; Chart.
+Figure 64: Select your data and then Insert the Chart.
 </p>
 
 1.  In the Chart Editor, change the default selection to Column chart,
@@ -3224,12 +3204,10 @@ Figure 66: Select Customize to edit title, labels, and more.
     no longer Restricted to only you, but can be viewed by anyone with
     the link. See additional options.
 
-&lt;img src=“images/05-chart/share-button-sheet-annotated.png”
-alt=“Click the Share button and then click”Change to anyone with the
-link." to make your data public." width=“350px” /&gt;
+<img src="images/05-chart/share-button-sheet-annotated.png" alt="Click the Share button and then click *Change to anyone with the link* to make your data public." width="350px" />
 <p class="caption">
-Figure 67: Click the Share button and then click “Change to anyone with
-the link.” to make your data public.
+Figure 67: Click the Share button and then click *Change to anyone with
+the link* to make your data public.
 </p>
 
 1.  To embed an interactive version of your chart in another web page,
@@ -5647,12 +5625,10 @@ publish your work on the web.
     public web, where anyone can access it in their browser, if they
     have the web address.
 
-<img src="images/08-github/leaflet-github-pages.png" alt="In *Settings >
-GitHub Pages*, switch the source from *None\* to *Master*." width=“500”
-/&gt;
+<img src="images/08-github/leaflet-github-pages.png" alt="In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Master*." width="500" />
 <p class="caption">
-Figure 99: In *Settings &gt; GitHub Pages*, switch the source from
-*None* to *Master*.
+Figure 99: In *Settings*, go to *GitHub Pages*, and switch the source
+from *None* to *Master*.
 </p>
 
 Note: **TODO:** GitHub recently announced it plans to change the default
@@ -5667,11 +5643,9 @@ and screenshots. See more at
     right-click it to open in a new browser tab, as shown in Figure
     <a href="#fig:leaflet-github-pages-link">100</a>.
 
-<img src="images/08-github/leaflet-github-pages-link.png" alt="In *Settings >
-GitHub Pages\*, right-click your published map link to open in a new
-tab." width=“600” /&gt;
+<img src="images/08-github/leaflet-github-pages-link.png" alt="In *Settings* for *GitHub Pages*, right-click your published map link to open in a new tab." width="600" />
 <p class="caption">
-Figure 100: In *Settings &gt; GitHub Pages*, right-click your published
+Figure 100: In *Settings* for *GitHub Pages*, right-click your published
 map link to open in a new tab.
 </p>
 
@@ -5847,12 +5821,10 @@ summarized in these three steps:
     contents of the repo to your local computer, and it may ask you
     where you wish to save it. Decide on a location and click OK.
 
-<img src="images/08-github/repo-code-download.png" alt="Click *Code >
-Download Zip\* to create a compressed folder of a repo on your
-computer." width=“350” /&gt;
+<img src="images/08-github/repo-code-download.png" alt="Click *Code* and select *Download Zip* to create a compressed folder of a repo on your computer." width="350" />
 <p class="caption">
-Figure 103: Click *Code &gt; Download Zip* to create a compressed folder
-of a repo on your computer.
+Figure 103: Click *Code* and select *Download Zip* to create a
+compressed folder of a repo on your computer.
 </p>
 
 1.  Navigate to the location on your computer where you saved the
@@ -5887,13 +5859,10 @@ which in this case is “MIT License.” Other fields are optional. Click
 the green *Create Repository* button at the bottom when done, as shown
 in Figure <a href="#fig:repo-create-options">105</a>.
 
-&lt;img src=“images/08-github/repo-create-options.png” alt=“Name your
-new repo”practice“, check the box to *Initialize this repo with a
-README*, and *Add a license* (select”MIT“) to match any code you plan to
-upload.” width=“400” /&gt;
+<img src="images/08-github/repo-create-options.png" alt="Name your new repo `practice`, check the box to *Initialize this repo with a README*, and *Add a license* (select *MIT*) to match any code you plan to upload." width="400" />
 <p class="caption">
-Figure 105: Name your new repo “practice”, check the box to *Initialize
-this repo with a README*, and *Add a license* (select “MIT”) to match
+Figure 105: Name your new repo `practice`, check the box to *Initialize
+this repo with a README*, and *Add a license* (select *MIT*) to match
 any code you plan to upload.
 </p>
 
@@ -5993,11 +5962,9 @@ push your commits back up to GitHub.
     show a link to the GitHub Desktop web page, and you should download
     and install the application.
 
-<img src="images/08-github/desktop-open.png" alt="In your GitHub repo on the web, click *Add file >
-Open with GitHub Desktop\* to download and install GitHub Desktop."
-width=“350” /&gt;
+<img src="images/08-github/desktop-open.png" alt="In your GitHub repo on the web, click *Add file* to *Open with GitHub Desktop* to download and install GitHub Desktop." width="350" />
 <p class="caption">
-Figure 109: In your GitHub repo on the web, click *Add file &gt; Open
+Figure 109: In your GitHub repo on the web, click *Add file* to *Open
 with GitHub Desktop* to download and install GitHub Desktop.
 </p>
 
@@ -6033,11 +6000,9 @@ send commits to your GitHub account.
     *Clone* it to your local computer, as shown in Figure
     <a href="#fig:desktop-start">112</a>.
 
-&lt;img src=“images/08-github/desktop-start-annotated.png” alt=“Select
-your”leaflet-map-simple" repo and click the *Clone* button to copy it to
-your local computer." /&gt;
+<img src="images/08-github/desktop-start-annotated.png" alt="Select your `leaflet-map-simple` repo and click the *Clone* button to copy it to your local computer."  />
 <p class="caption">
-Figure 112: Select your “leaflet-map-simple” repo and click the *Clone*
+Figure 112: Select your `leaflet-map-simple` repo and click the *Clone*
 button to copy it to your local computer.
 </p>
 
@@ -6060,12 +6025,10 @@ computer, then click *Clone*.
     your GitHub web account, and click *Continue*, as shown in Figure
     <a href="#fig:desktop-fork">114</a>.
 
-&lt;img src=“images/08-github/desktop-fork.png” alt=“If asked how you
-plan to use this fork, select the default”To contribute to the parent
-project" and click *Continue*." width=“500” /&gt;
+<img src="images/08-github/desktop-fork.png" alt="If asked how you plan to use this fork, select the default *To contribute to the parent project* and click *Continue*." width="500" />
 <p class="caption">
 Figure 114: If asked how you plan to use this fork, select the default
-“To contribute to the parent project” and click *Continue*.
+*To contribute to the parent project* and click *Continue*.
 </p>
 
 1.  Now you have copies of your GitHub repo in two places—in your GitHub
@@ -6100,11 +6063,9 @@ Figure 116: In GitHub Desktop, confirm the Current Repo and click the
     file and edit the title of your map, around line 22, then save your
     work.
 
-&lt;img src=“images/08-github/atom-project-annotated.png” alt=“Atom
-Editor opens your repo as a”project," where you can click files to view
-code. Edit your map title." /&gt;
+<img src="images/08-github/atom-project-annotated.png" alt="Atom Editor opens your repo as a *project*, where you can click files to view code. Edit your map title."  />
 <p class="caption">
-Figure 117: Atom Editor opens your repo as a “project,” where you can
+Figure 117: Atom Editor opens your repo as a *project*, where you can
 click files to view code. Edit your map title.
 </p>
 
@@ -9287,12 +9248,10 @@ turn them on by going to Finder &gt; Preferences &gt; Advanced, and
 check the box to *Show all filename extensions*, as shown in Figure
 <a href="#fig:mac-file-extensions2">151</a>.
 
-<img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to Finder >
-Preferences &gt; Advanced and check the box to *Show all filename
-extensions*." /&gt;
+<img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to *Finder* then *Preferences* then *Advanced* and check the box to *Show all filename extensions*."  />
 <p class="caption">
-Figure 151: On a Mac, go to Finder &gt; Preferences &gt; Advanced and
-check the box to *Show all filename extensions*.
+Figure 151: On a Mac, go to *Finder* then *Preferences* then *Advanced*
+and check the box to *Show all filename extensions*.
 </p>
 
 #### Problems with data tables

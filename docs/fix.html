@@ -276,6 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
 <li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
+<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -334,17 +335,17 @@ Figure A.1: On a Mac, go to <em>Finder</em> then <em>Preferences</em> then <em>A
 <div id="my-iframe-does-not-appear-in-my-web-page" class="section level5 unnumbered" number="">
 <h5>My iframe does not appear in my web page</h5>
 <ul>
-<li>Go back to the <a href="embed.html">Embed tutorials in this book</a> to double-check the directions</li>
-<li>Items listed in your iframe (such as the URL, width, or height) should be enclosed inside straight quotation marks (single or double)
+<li><p>Go back to the <a href="embed.html">Embed tutorials in this book</a> to double-check the directions</p></li>
+<li><p>Items listed in your iframe (such as the URL, width, or height) should be enclosed inside straight quotation marks (single or double)</p>
 <ul>
 <li>BROKEN iframe (missing quotation marks for width and height)</li>
 </ul>
-<pre><code>&lt;iframe src=&quot;https://handsondataviz.github.io/leaflet-map-simple&quot; width=90% height=350&gt;&lt;/iframe&gt;</code></pre>
+<p><code>&lt;iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350&gt;&lt;/iframe&gt;</code></p>
 <ul>
 <li>FIXED iframe (with correct quotation marks)</li>
 </ul>
-<pre><code>&lt;iframe src=&quot;https://handsondataviz.github.io/leaflet-map-simple&quot; width=&quot;90%&quot; height=&quot;350&quot;&gt;&lt;/iframe&gt;</code></pre></li>
-<li>Use only <code>https</code> (the extra ‘s’ means ‘secure’), not <code>http</code>. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https.</li>
+<p><code>&lt;iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"&gt;&lt;/iframe&gt;</code></p></li>
+<li><p>Use only <code>https</code> (the extra ‘s’ means ‘secure’), not <code>http</code>. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https.</p></li>
 </ul>
 <div class="figure">
 <img src="images/14-fix/http-vs-https.png" alt="" />

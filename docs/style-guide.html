@@ -276,6 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
 <li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
+<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -343,18 +344,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Conditional Formatting</h3>
 <p>Conditional formatting offers the option to display text or images in some editions, but not other editions. Options:</p>
 <ol style="list-style-type: decimal">
-<li>Insert a HTML code comment <code>&lt;!-- Comment --&gt;</code> in the .Rmd file to hide a few lines of text. This appears as commented-out text in the HTML and .md formats, is not displayed in the HTML browser, and does not appear in any way in the PDF, MS Word or AsciiDoc formats.</li>
+<li>Insert a HTML code comment <code>&lt;!-- Comment --&gt;</code> in the .Rmd file to hide a few lines of text. This appears as commented-out text in the HTML and .md formats, is not displayed in the HTML browser, and does not appear in any way in the PDF or MS Word formats.</li>
 </ol>
 <p>Demo:</p>
-<!-- This comment is visible in the source text, but not visible in the HTML browser, nor PDF or MSWord or AsciiDoc outputs. -->
+<!-- This comment is visible in the .MD source text, but not visible in the HTML browser, nor PDF or MSWord outputs. -->
 <ol start="2" style="list-style-type: decimal">
 <li>R package function <code>is_[html/latex]_output</code> allows conditional output for different book products, such as text that should appear in the HTML edition but not the PDF edition, or vice versa.</li>
 </ol>
 <p>Demos:</p>
 <!--
-This line appears in the PDF and Word versions, and is commented-out in the HTML and Markdown and AsciiDoc versions.
+This line appears in the PDF and Word versions, and is commented-out in the HTML and Markdown versions.
 -->
-<p>This line appears in the HTML, Word, Markdown, and AsciiDoc versions, and is commented-out in the PDF version.</p>
+<p>This line appears in the HTML, Word, Markdown versions, and is commented-out in the PDF version.</p>
 <p>TODO: Create conditional formatting that displays <em>only</em> in the HTML edition, and allows the inclusion of R code-chunks to conditionally display images. See links for more complex conditional formatting:</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/56808355/how-to-conditionally-process-sections-in-rmarkdown" class="uri">https://stackoverflow.com/questions/56808355/how-to-conditionally-process-sections-in-rmarkdown</a></li>
@@ -392,7 +393,6 @@ This line appears in the PDF and Word versions, and is commented-out in the HTML
 <li>In HTML, all cross-refs are clickable.</li>
 <li>In PDF, all cross-refs are clickable (except chapter-level HTML links).</li>
 <li>In Word, no cross-refs are clickable (unless this varies with reference.docx).</li>
-<li>TBA with Markdown (.md) and AsciiDoc.</li>
 </ul>
 <p>When writing cross-references in the text, the <a href="http://oreillymedia.github.io/production-resources/styleguide/#considering_electronic_formats">O’Reilly Style Guide</a> prefers live cross references (e.g., “see Figure 2-1”), but if not feasible, use “preceding” or “following” because physical placement of elements may vary across print and digital formats. <em>Avoid</em> using “above” or “below.”</p>
 </div>

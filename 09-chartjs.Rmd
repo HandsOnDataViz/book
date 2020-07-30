@@ -41,7 +41,7 @@ Learn more:
 ## Bar Chart.js with CSV Data {- #chartjs-bar-csv}
 Bar charts (vertical bar charts are often called *column charts*) can be used to compare categorical data. The y-axis (or x-axis for horizontal bar chart) should always start at 0.
 
-<iframe src="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html" width="100%" height=500 style="border: 0"></iframe>
+TODO: add R code-chunk iframe of src below
 
 Demo: https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html
 
@@ -50,7 +50,7 @@ Source and instructions: https://github.com/handsondataviz/chartjs-templates/tre
 ## Line Chart.js with CSV Data {- #chartjs-line-csv}
 Line charts are often used to show temporal data (trends). The x-axis often represents time intervals. Unlike column or bar charts, y-axes of line charts do not necessarily start at 0.
 
-<iframe src="https://handsondataviz.github.io/chartjs-templates/line-chart/index.html" width="100%" height=500 style="border: 0"></iframe>
+TODO: add R code-chunk iframe of src below
 
 Demo: https://handsondataviz.github.io/chartjs-templates/line-chart/index.html
 
@@ -59,7 +59,7 @@ Source and instructions: https://github.com/handsondataviz/chartjs-templates/tre
 ## Scatter Chart.js with CSV Data {- #chartjs-scatter-csv}
 Scatter charts (also *scatterplots*) are used to display data of 2 or more dimensions. The scatter chart below shows the relationship between household income and test performance for school districts in Connecticut. Using x- and y-axes to show two dimensions, it is easy to see that test performance improves as household income goes up.
 
-<iframe src="https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html" width="100%" height=500 style="border: 0"></iframe>
+TODO: add R code-chunk iframe of src below
 
 Demo: https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html
 
@@ -79,7 +79,7 @@ Bubble charts are similar to [scatter plots](chartjs-scatter-csv.html). The size
 
 In the demo below, the bubble chart shows the relationship between median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut. The size of data point (marker) corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts.
 
-<iframe src="https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html" width="100%" height=500 style="border: 0"></iframe>
+TODO: add R code-chunk iframe of src below
 
 Demo: https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html
 

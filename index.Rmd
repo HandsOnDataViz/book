@@ -53,8 +53,7 @@ output:
     default
 
   bookdown::markdown_document2:
-    base_format: rmarkdown::md_document
-    variant: markdown_strict
+    default
 ---
 # Introduction {-}
 <!-- R global options: R chunk images display without code (no echo); show PDF image over JPG/PNG when available in PDF output -->

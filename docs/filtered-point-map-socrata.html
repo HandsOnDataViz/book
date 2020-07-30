@@ -276,6 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
 <li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
+<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -304,14 +305,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Filtered Point Map with Socrata Open Data</h2>
 <p>TODO: decide whether to keep or not; originally co-authored with Veronica.</p>
 <p>Open data repositories recently launched by <a href="http://data.ct.gov">the State of Connecticut</a> and <a href="http://data.hartford.gov">the City of Hartford</a> both use <a href="http://www.socrata.com">the Socrata platform</a>, which offer user-friendly ways to view, filter, and export data. Also, the Socrata platform includes built-in support to create interactive charts and maps, and to embed them on your own websites. This tutorial demonstrates these features by creating an interactive point map of selected schools from the Connecticut Education Directory in the state data portal. The final product looks like this:</p>
-<div>
-<iframe width="100%" title="CT Schools Map 2015" height="425px" src="https://data.ct.gov/w/qzq5-hbms/wqz6-rhce?cur=xi3jnhM8SI_&amp;from=root" frameborder="0" scrolling="no">
-<a href="https://data.ct.gov/Education/CT-Schools-Map-2015/qzq5-hbms" title="CT Schools Map 2015">CT Schools Map 2015</a>
-</iframe>
-<p>
-<a href="http://www.socrata.com/">Powered by Socrata</a>
-</p>
-</div>
+<p>TODO: CT Schools Map 2015 is currently broken; decide whether to keep, and if so, convert to code-chunk iframe. Original links</p>
+<p><a href="https://data.ct.gov/w/qzq5-hbms/wqz6-rhce?cur=xi3jnhM8SI_&amp;from=root" class="uri">https://data.ct.gov/w/qzq5-hbms/wqz6-rhce?cur=xi3jnhM8SI_&amp;from=root</a></p>
+<p><a href="https://data.ct.gov/Education/CT-Schools-Map-2015/qzq5-hbms" class="uri">https://data.ct.gov/Education/CT-Schools-Map-2015/qzq5-hbms</a></p>
 <p>One advantage of creating data visualizations directly on an open data platform is that the chart or map is linked to the data repository. For example, if the Socrata platform administrator updates the data table, then a Socrata dataviz based on that data will be automatically updated, too. This may be especially useful for “live” data that is continuously updated by agency administrators, such as fire, crime, and property data repositories.</p>
 <p>But there are limitations to creating your chart or map on an open data repository platform. First, if the agency stops using the platform, or changes the structure of the underlying data, your online chart or map may stop functioning. Second, you are usually limited to using data tables and geographic boundaries that already exist on that platform, since importing your own may not be an option.</p>
 <p>If these limitations concern you, a simple alternative is to export data from the open repository (which means that any “live” data would become “static” data), and import it into your preferred dataviz tool, such as those described in other chapters of this book. A second, more advanced alternative, is to learn how to pull live data from the repository directly into your dataviz, using an Application Programming Interface (API), which requires coding skills that are beyond the scope of this tutorial. To learn more about the Socrata API: <a href="https://dev.socrata.com/" class="uri">https://dev.socrata.com/</a>.</p>

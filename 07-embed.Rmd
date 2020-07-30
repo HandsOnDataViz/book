@@ -8,6 +8,7 @@ First, you need to own a website that supports iframe codes (which we'll explain
 Second, you need to copy or create an iframe code from your chart or map. An iframe is one line of HTML code with instructions on how to display a web page from a specific address (called a URL). A simple iframe looks like this:
 
 `<iframe src="https://handsondataviz.org/embed/index.html"></iframe>`
+
 No coding skills are necessary. See these easy-to-follow examples:
 
 -[Copy iframe from a Google Sheets chart](iframe-google-sheets.html)
@@ -16,10 +17,6 @@ No coding skills are necessary. See these easy-to-follow examples:
 Finally, you need to paste (or embed) the iframe code inside your website. Like a picture frame, an iframe allows you to display one web page (your data visualization) inside another web page (your personal website). But unlike a picture frame, where the image is static, an iframe makes content interactive, so visitors can explore the chart or map on your site, even though it may actually be hosted on an entirely different website. Go to this third tutorial, which combines the two steps above, called [Embed Iframe in GitHub Pages](iframe-github.html).
 
 See more tutorials in this chapter to copy iframes from other visualization tools (such as [Tableau Public](iframe-tableau.html) and embed them in other common websites (such as [WordPress](iframe-wordpress.html), etc.) ** TO DO: add more tutorials and links **
-
-Enroll in our free online course **link to do**, which introduces these topics in the brief video below, and offers more exercises and opportunities to interact with instructors and other learners.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RP1Zg_kbVGQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Create a Simple Web Page with GitHub Pages {- #github-pages}
 Question: After you create an interactive chart or map, how do you embed the live version in a website that you control?
@@ -42,8 +39,7 @@ GitHub <http://github.com> is a versatile tool that can be used to create simple
   - All work on GitHub is public by default. Private repositories (folders) require payment.
   - New users sometimes confuse the links for code repositories versus published web pages.
 
-Video:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AFdogZFyN0c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[Video](https://youtube.be/AFdogZFyN0c)
 
 1) Sign up for free GitHub account, then sign in, at <http://github.com>.
 
@@ -52,18 +48,16 @@ Video:
 3) Name your repository (or "repo"), and select Initialize with a README file. Optional steps: add a description and select a license.
 
 4) Scroll down and click the green button to Create your repo, which will appear in a new browser tab, with this URL format:
-```html
-https://github.com/YOUR-USERNAME/YOUR-REPO-NAME
-```
+
+`https://github.com/YOUR-USERNAME/YOUR-REPO-NAME`
 
 5) In your GitHub repo, click on Settings, scroll down to GitHub Pages, select Master branch as your source, then Save. This publishes the code from your repo to the public web.
 
 Hint: Do NOT select Theme Chooser for this exercise. It will create additional files that will interfere with displaying an iframe in your README.md file.
 
 6) When the Settings page refreshes, scroll back down to GitHub Pages to see the new link to your published website, which will appear in this format:
-```html
-https://YOUR-USERNAME.github.io/YOUR-REPO-NAME
-```
+
+`https://YOUR-USERNAME.github.io/YOUR-REPO-NAME`
 
 7) Right-click and Copy the link to your published web site.
 
@@ -165,10 +159,9 @@ Try it:
 
 The goal is to embed the iframe code from a Google Sheets interactive chart, which resides on a Google web server, into your GitHub Pages web site. The result will be similar to the one below:
 
-<iframe width="644" height="398" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/pubchart?oid=200651442&amp;format=interactive"></iframe>
+TODO: Convert to code-chunk iframe: https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/pubchart?oid=200651442&amp;format=interactive
 
-#### Video tutorial and step-by-step instructions {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/enjhlnqaXOE?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[Video](https://youtube.be/enjhlnqaXOE]
 
 1) Sign up for free GitHub account, then sign in, at <https://github.com>.
 
@@ -177,16 +170,14 @@ The goal is to embed the iframe code from a Google Sheets interactive chart, whi
 3) Name your repository (or "repo"), and select *Initialize this repository with a README*. Optional steps: add a description and select a license.
 
 4) Scroll down and click the green button to Create your repo, which will appear in a new browser tab, with this URL format:
-```html
-https://github.com/YOUR-USERNAME/YOUR-REPO-NAME
-```
+
+`https://github.com/YOUR-USERNAME/YOUR-REPO-NAME`
 
 5) In your GitHub repo, click on Settings tab, scroll down to *GitHub Pages*, select **master branch** as your Source, then Save. This publishes the code from your repo to the public web.
 
 6) When the Settings page refreshes, scroll back down to GitHub Pages to see the new link to your published website, which will appear in this format:
-```html
-https://YOUR-USERNAME.github.io/YOUR-REPO-NAME
-```
+
+`https://YOUR-USERNAME.github.io/YOUR-REPO-NAME`
 
 7) Right-click and Copy this link to your published web site.
 
@@ -254,7 +245,7 @@ Your modified code should look like this:
 
 The goal is to embed an interactive chart inside your website, so that users can explore the data. This tutorial displays a *very basic chart* to simplify the process, and the end result will appear like the one below. Try it.
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>
+TODO: Convert to code-chunk iframe: https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive
 
 ## Embed Tableau Public on your Website {- #iframe-tableau}
 Question: After learning [how to create an interactive data visualization with Tableau Public](tableau-public.html) in this book, how do I embed it on my website?
@@ -268,13 +259,13 @@ Try it:
 
 Both methods produce an embedded visualization like the one below. Float your cursor over points to view data details.
 
-<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"></iframe>
+TODO: convert to code-chunk iframe: https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true
 
 #### A) Embed code method for HTML web pages {-}
 
 1) Use this method if you can paste HTML and JavaScript code directly into a website with HTML pages.
 
-2) Go to the public web page of any Tableau Public visualization, such as this sample: <https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1>
+2) Go to the public web page of any Tableau Public visualization, such as this sample: https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1
 
 3) Before you begin the embed process, click the upper-right Edit Details button to make any final modifications to the title or toolbar settings.
 
@@ -283,6 +274,8 @@ Both methods produce an embedded visualization like the one below. Float your cu
 ![Screenshot: Edit and Share buttons in Tableau Public web page](images/07-embed/tableau-edit-share.png)
 
 5) Open an HTML page on your website and paste the embed code in the body section. Below is an example of a sample Tableau Public embed code pasted between the body tags of a simple HTML page.
+
+TODO: find a way to replace this triple backtic code snippet, since it may throw errors into Markdown output.
 
 ```html
 <!DOCTYPE html>
@@ -312,53 +305,37 @@ Both methods produce an embedded visualization like the one below. Float your cu
 
 5) A typical link will look similar to this example (scroll to right to see all):
 
-```html
-https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:embed=y&:display_count=yes
-```
+`https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:embed=y&:display_count=yes`
 
 6) We need to edit the link to convert it into an iframe format. First, delete any code that appears after the question mark, to make it look like this (scroll to right to see all):
 
-```html
-https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?
-```
+`https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?`
 
 7) Add this snippet of code to the end, to replace what you deleted above:
 
-```html
-:showVizHome=no&:embed=true
-```
+`:showVizHome=no&:embed=true`
 
 8) Now your edited link should look similar to this (scroll to right to see all):
 
-```html
-https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true
-```
+`https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true`
 
 9) Enclose the link inside an iframe source tag `src=` with quotes, to make it look similar to this (scroll to right to see all):
 
-```html
-src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true"
-```
+`src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" `
 
 10) Add iframe tags for `width` and `height` in percentages or pixels (default), to make it look similar to this (scroll to right to see all):
 
-```html
-src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"
-```
+`src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500" `
 
 Hint: Insert 90% width, rather than 100, to help readers easily scroll down your web page
 
 11) Add iframe tags at the beginning and end, to make it look similar to this (scroll to right to see all):
 
-```html
-<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"></iframe>
-```
+`<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"></iframe>`
 
 Exceptions to the last step above. As described in the [Embed iframe on WordPress](embed.html#iframe-wordpress) chapter in this book, in a self-hosted WordPress.org site, with the iframe plugin, insert iframe brackets rather than HTML tags to make a shortcode like this (scroll to right to see all):
 
-```html
-[iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"]
-```
+`[iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"]`
 
 Learn more:
 Embedding Tableau Public Views in iframe, Tableau Support page <http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes>

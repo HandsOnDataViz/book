@@ -276,6 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
 <li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
+<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -323,20 +324,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="7" style="list-style-type: decimal">
 <li>Initially, the code you pasted includes HTML iframe tags at the front <code>&lt;iframe...</code> and the end <code>...&gt;&lt;/iframe&gt;</code>, which looks like this:</li>
 </ol>
-<div class="sourceCode" id="cb20"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb20-1"><a href="iframe-wordpress.html#cb20-1"></a><span class="op">&lt;</span>iframe width<span class="op">=</span><span class="st">&quot;600&quot;</span> height<span class="op">=</span><span class="st">&quot;371&quot;</span> seamless frameborder<span class="op">=</span><span class="st">&quot;0&quot;</span> scrolling<span class="op">=</span><span class="st">&quot;no&quot;</span> src<span class="op">=</span><span class="st">&quot;https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;amp;format=interactive&quot;</span><span class="op">&gt;&lt;/</span>iframe<span class="op">&gt;</span></span></code></pre></div>
+<p><code>&lt;iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;amp;format=interactive"&gt;&lt;/iframe&gt;</code></p>
 <ol start="8" style="list-style-type: decimal">
 <li>Modify the front end of the iframe code by replacing the less-than symbol ( &lt; ) with a square opening bracket ( [ ). Modify the back end by erasing the greater-than symbol ( &gt; ) and the end tag ( </iframe> ). Replace the back end with a square closing bracket ( ] ).</li>
 </ol>
 <p><img src="images/07-embed/WordPressOrg-replace-with-bracket.png" /></p>
 <p>Your modified code should look like this:</p>
-<pre><code>[iframe width=&quot;600&quot; height=&quot;371&quot; seamless frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;amp;format=interactive&quot;]</code></pre>
+<p><code>[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;amp;format=interactive"]</code></p>
 <ol start="9" style="list-style-type: decimal">
 <li><p>Click Preview or Publish/View Post to see how it appears on the web.</p></li>
 <li><p>If desired, continue to modify the iframe code to improve the display of your dataviz on your website. For example, the initial code was 600 pixels wide (width=“600”). To display the dataviz across the full width of your website, change this part of the code to 100% (width=“100%”).</p></li>
 </ol>
 <p>The goal is to embed an interactive chart inside your website, so that users can explore the data. This tutorial displays a <em>very basic chart</em> to simplify the process, and the end result will appear like the one below. Try it.</p>
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive">
-</iframe>
+<p>TODO: Convert to code-chunk iframe: <a href="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive" class="uri">https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive</a></p>
 </div>
             </section>
 

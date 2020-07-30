@@ -3,7 +3,7 @@ This open-access book is built with free-to-use, open-source tools---primarily [
 
 Our broad goal is an efficient workflow to compose one document in the easy-to-write [Markdown format](https://en.wikipedia.org/wiki/Markdown) that Bookdown generates into multiple book products: an HTML web edition to read online, a PDF print edition for traditional book publishing, a Microsoft Word edition for editors who request it for copyediting, and option for other formats as desired.
 
-Since Bookdown is an [R code package](https://www.r-project.org/), we composed the book manuscript in R-flavored Markdown, with one file (.Rmd) for each chapter. We use Bookdown to build these files in its GitBook style as a set of static HTML pages, which we upload to our GitHub repository. Readers can view the open-access web edition of the book at our custom domain: https://HandsOnDataViz. Also, we use Bookdown to build additional book outputs (PDF, MS Word, Markdown) and upload these to the `docs` folder of our GitHub repository, so that our O'Reilly Media editor may download and comment on the manuscript as we revise. Finally, we also have the option to use [Pandoc](https://pandoc.org) alone to convert the full-book Markdown file (.md) into an AsciiDoc file (.asciidoc) for easier importing into the [O'Reilly Atlas platform](https://docs.atlas.oreilly.com/writing_in_asciidoc.html). See some caveats and workarounds below.
+Since Bookdown is an [R code package](https://www.r-project.org/), we composed the book manuscript in R-flavored Markdown, with one file (.Rmd) for each chapter. We use Bookdown to build these files in its GitBook style as a set of static HTML pages, which we upload to our GitHub repository. Readers can view the open-access web edition of the book at our custom domain: https://HandsOnDataViz. Also, we use Bookdown to build additional book outputs (PDF, MS Word, Markdown) and upload these to the `docs` folder of our GitHub repository, so that our O'Reilly Media editor may download and comment on the manuscript as we revise. Finally, we have arranged with the O'Reilly production team to convert our *modified* version of the full-book Markdown file into their [O'Reilly Atlas platform](https://docs.atlas.oreilly.com/writing_in_asciidoc.html). See some caveats and workarounds below.
 
 ### File Organization and Headers {-}
 We organized the [GitHub repository for this book](http://github.com/handsondataviz/book) as a set of .Rmd files, one for each chapter. As co-authors, we are careful to work on different chapters of the book, and to regularly push our commits to the repo. Only one of us regularly builds the book with Bookdown to avoid code merge conflicts.
@@ -143,22 +143,22 @@ Insert three back tics to insert a code block. Check character line length limit
 ### Conditional Formatting {-}
 Conditional formatting offers the option to display text or images in some editions, but not other editions. Options:
 
-1. Insert a HTML code comment `<!-- Comment -->` in the .Rmd file to hide a few lines of text. This appears as commented-out text in the HTML and .md formats, is not displayed in the HTML browser, and does not appear in any way in the PDF, MS Word or AsciiDoc formats.
+1. Insert a HTML code comment `<!-- Comment -->` in the .Rmd file to hide a few lines of text. This appears as commented-out text in the HTML and .md formats, is not displayed in the HTML browser, and does not appear in any way in the PDF or MS Word formats.
 
 Demo:
 
-<!-- This comment is visible in the source text, but not visible in the HTML browser, nor PDF or MSWord or AsciiDoc outputs. -->
+<!-- This comment is visible in the .MD source text, but not visible in the HTML browser, nor PDF or MSWord outputs. -->
 
 2. R package function `is_[html/latex]_output` allows conditional output for different book products, such as text that should appear in the HTML edition but not the PDF edition, or vice versa.
 
 Demos:
 
 `r if (knitr::is_html_output()) '<!--'`
-This line appears in the PDF and Word versions, and is commented-out in the HTML and Markdown and AsciiDoc versions.
+This line appears in the PDF and Word versions, and is commented-out in the HTML and Markdown versions.
 `r if (knitr::is_html_output()) '-->'`
 
 `r if (knitr::is_latex_output()) '<!--'`
-This line appears in the HTML, Word, Markdown, and AsciiDoc versions, and is commented-out in the PDF version.
+This line appears in the HTML, Word, Markdown versions, and is commented-out in the PDF version.
 `r if (knitr::is_latex_output()) '-->'`
 
 TODO: Create conditional formatting that displays *only* in the HTML edition, and allows the inclusion of R code-chunks to conditionally display images. See links for more complex conditional formatting:
@@ -203,7 +203,6 @@ Cross-reference interactivity varies by output:
 - In HTML, all cross-refs are clickable.
 - In PDF, all cross-refs are clickable (except chapter-level HTML links).
 - In Word, no cross-refs are clickable (unless this varies with reference.docx).
-- TBA with Markdown (.md) and AsciiDoc.
 
 When writing cross-references in the text, the [O'Reilly Style Guide](http://oreillymedia.github.io/production-resources/styleguide/#considering_electronic_formats) prefers live cross references (e.g., "see Figure 2-1"), but if not feasible, use "preceding" or "following" because physical placement of elements may vary across print and digital formats. *Avoid* using "above" or "below."
 
@@ -243,9 +242,9 @@ In this book, use *Markdown formatting only for images that appear inside tables
 Although Markdown formatting offers a simple syntax that easily converts into other formats with Bookdown/Pandoc, there is no auto-numbering in the HTML edition, while auto-numbering appears in the PDF edition, and numbered figures are required by the publisher. Furthermore, Markdown formatting does not allow conditional output.
 
 ### Images using R code-chunks {-}
-For these reasons, this book *primarily uses R code-chunk formatting for images*. The syntax is more complex but supports auto-numbering in HTML and PDF, and conditional output for interactive and static images. Note that R code-chunk images do *not* easily convert with Pandoc from Markdown to AsciiDoc, but "Figure x Caption" appears as a placeholder.
+For these reasons, this book *primarily uses R code-chunk formatting for images*. The syntax is more complex but supports auto-numbering in HTML and PDF, and conditional output for interactive and static images. Note that *static* R code-chunk images convert to Markdown, but *interactive* images do *NOT* convert and need to be manually edited in the *modified* file, described further below.
 
-Auto-numbering appears in `Figure x.x` format in HTML and PDF, but `Figure x` format in MS Word. Note that Word formatting can be changed with reference.docx.
+Auto-numbering appears in `Figure x.x` format in HTML and PDF, but `Figure x` format in MS Word and Markdown. Note that Word formatting can be changed with reference.docx.
 
 Note that images in PDF output will "float" by design and may appear before or after the desired page, so always add a cross-reference call-out.
 
@@ -259,7 +258,7 @@ images/05-chart/design-setup.png
 
 Do not insert spaces inside the `ref:chunk-label` for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add *another* blank line to avoid "undefined reference" Bookdown errors.
 
-Inside the ref caption, do NOT use bad symbols (`<` or `>` or `"`) that will throw HTML errors into the Markdown output images. Instead, use safe symbols, such as (`*` and `-`) to designate computer instructions, such as *File - Make a Copy*.
+Inside the R code-chunk ref caption, do NOT use mischievous characters (such as `<` or `>` or `"`) that will throw HTML errors into the Markdown output images. Instead, use safe characters such as (`*` and `-`) to designate computer instructions, such as *File - Make a Copy*.
 
 For each figure, manually add a cross-reference call-out and insert `fig.pos='h'` to place the image "here" on the page in the PDF output, to *attempt* to avoid PDF floating. Ignore the Bookdown LaTeX warning message "h float specifier changed to ht." See more at https://bookdown.org/yihui/bookdown/figures.html and https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
 
@@ -355,7 +354,7 @@ Table: (\#tab:right-table) Right-justify content, remember blank line
 | Right-justify | numerical content  | with right-colons |
 | Use equal hyphens | to make equal space | for all columns |
 
-Workaround for Markdown-to-AsciiDoc: Currently, our attempt to use Pandoc to directly convert a Bookdown-generated Markdown file to AsciiDoc fails because Bookdown creates the .md file with tables in .html format, not Markdown. Our workaround is to paste the individual Markdown-formatted tables directly from the .Rmd into the large .md file prior to converting with Pandoc to AsciiDoc.
+Currently, Bookdown creates the Markdown file with tables in HTML format, not Markdown format. Our workaround is to paste the individual Markdown-formatted tables directly from the .Rmd into the *modified* full-book .md file.
 
 ## Notes and Bibliography {- #notes}
 This book displays endnotes for each chapter in the HTML book, and footnotes at the bottom of pages for the PDF and MS Word books, followed by an alphabetized bibliography of all references cited on the last page. The notes and bibliography also appear in the full-book Markdown file.
@@ -385,26 +384,30 @@ Since notes also may include text and punctuation in Markdown syntax, always ins
 
 Note that the `chicago-fullnote-bibliography.csl` format automatically shortens the note after it its first reference.
 
-### Manual Pandoc Conversion to AsciiDoc {-}
-The O'Reilly Atlas platform can [import AsciiDoc documents](https://docs.atlas.oreilly.com/writing_in_asciidoc.html). While Bookdown does not directly generated this format, one workaround is use the Bookdown-generated large Markdown file, and manually convert it with Pandoc to AsciiDoc format.
-
-See also workaround notes in the Tables section and other sections above. Remember to avoid bad symbols in code-chunk captions (`<` or `>` or `"`) that will throw HTML errors into the Markdown output images.
-
-Note that the index file creates "strict Markdown" output as described in https://bookdown.org/yihui/rmarkdown/markdown-document.html
+## Manually Modify Markdown Output {- #modify-markdown}
+The O'Reilly production team has agreed to accept our full-book Markdown file into their workflow, which is easier for them to work with than the full-book MSWord file. Note that our Bookdown index.Rmd file includes code to generate a full-book Markdown:
 
 ```
 bookdown::markdown_document2:
-  base_format: rmarkdown::md_document
-  variant: markdown_strict
+  default
 ```
 
-- Download [Pandoc](https://pandoc.org)
+See this not-fully-documented Bookdown solution about generating Markdown output: https://stackoverflow.com/questions/58164239/compile-bookdown-to-markdown. We experimented to see if "strict" Markdown would produce cleaner output, following this RMarkdown guide https://bookdown.org/yihui/rmarkdown/markdown-document.html, but saw no difference when compared to the default settings.
+
+We need to do a bit of manual cleanup before ORM production team can convert the full-book Markdown file into [AsciiDoc format for their Atlas platform](https://docs.atlas.oreilly.com/writing_in_asciidoc.html), unless we find a way to automate these steps. See workaround notes in the Images and Tables sections above. Remember to avoid mischievous characters in R code-chunk image captions (such as `<` or `>` or `"`) that will throw HTML errors into the Markdown output images.
+
 - Build the book with Bookdown, including one large Markdown file (docs folder, suffix .md)
 - Manually rename it as HandsOnDataViz-modified.md
-- Manually paste in these Markdown tables (to replace HTML tables)
+- Manually paste in these Markdown tables to replace HTML tables (unless ORM can handle this part)
   - from index.Rmd, table of authors
   - from 05-chart.Rmd, Table 1: Chart types covered in this book
-- Manually replace any `<iframe...` HTML or GIF elements with their PNG substitutes, and new ALT text
-- Manually delete any remaining `<iframe...` elements
+- Manually replace any `<iframe...` HTML or GIF elements with their PNG substitutes, and new ALT text (unless authors come up with a better way to automate this)
+- Manually delete any remaining `<iframe...` elements (unless they are non-executable code snippets)
+- Save and push the modified Markdown file up to GitHub repo
+
+Note: Previously, we tried to use [Pandoc](http://pandoc.org) to convert the modified.md file to asciidoc, but encountered many errors.
+
+OLD Pandoc conversion steps (for reference only):
+
 - Use command line to navigate to subfolder with `pwd` and `cd`.
-- Convert with: `pandoc handsondataviz-modified.md --from markdown --to asciidoc --standalone  --wrap=none --output handsondataviz-modified.asciidoc`
+- Convert with: `pandoc handsondataviz-modified.md --from markdown --to asciidoc --standalone --output handsondataviz-modified.asciidoc`

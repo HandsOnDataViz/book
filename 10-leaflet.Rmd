@@ -18,7 +18,8 @@ Cons:
 #### Leaflet Map Templates {-}
 
 TODO: add and clean up Leaflet Map CSV <https://github.com/HandsOnDataViz/leaflet-map-csv> to serve as a fuller tutorial for Leaflet Maps, and explain how this will teach more principles of modifying Leaflet code. ...then geocode and upload more data points:
-<iframe src="https://handsondataviz.github.io/leaflet-map-simple-instructor-sample/" width="90%" height="350"></iframe>
+
+TODO: convert to R code-chunk iframe: https://handsondataviz.github.io/leaflet-map-simple-instructor-sample/
 
 
 | Template | Best use and tutorial chapter |
@@ -54,8 +55,7 @@ Code templates help us to move beyond the limits of drag-and-drop web mapping se
 
 TODO: add demo, remove unnecessary basic steps from below (covered in prior chapter)
 
-Video: 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7iUocaxTYqk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[Video](https://youtube.be/7iUocaxTYqk)
 
 #### A) Fork (copy) Leaflet template to your GitHub account {-}
 Before you begin, sign up for a free GitHub account: http://github.com
@@ -65,9 +65,8 @@ Before you begin, sign up for a free GitHub account: http://github.com
 2) In the upper-right corner of the code template, sign in to your free GitHub account
 
 3) In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your GitHub account. The web address (URL) of the new copy in your account will follow this format:
-```markdown
-https://github.com/USERNAME/REPOSITORY
-```
+
+`https://github.com/USERNAME/REPOSITORY`
 
 Reminder: You can only fork a GitHub repo **one time**. If needed, see how to make a second copy in the [Create a New Repo in GitHub](create-repo.html) chapter in this book.
 
@@ -76,9 +75,8 @@ Reminder: You can only fork a GitHub repo **one time**. If needed, see how to ma
 4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code template to a live map on a public website that you control.
 
 5) Scroll down to GitHub Pages section again, to select and copy the link to your published web site, which will follow this format:
-```markdown
-https://USERNAME.github.io/REPOSITORY
-```
+
+`https://USERNAME.github.io/REPOSITORY`
 
 6) Scroll up to the top, and click on your repo name to go back to its main page.
 
@@ -97,6 +95,9 @@ https://USERNAME.github.io/REPOSITORY
 12) Go to your live website browser tab and refresh the page to view your edits. **Be patient** during busy periods, when some edits may take up to 1 minute to appear.
 
 13) To change your map title in the index.html file, click the pencil symbol (to edit) and go to lines 23-25. Replace "EDIT your map title" with your new title:
+
+TODO: decide if these triple backtic snippets will stay, or if they will throw errors into Markdown output
+
 ```HTML
 <!-- Display the map and title with HTML division tags  -->
 <div id="map-title">EDIT your map title</div>
@@ -212,8 +213,7 @@ Question: If you have moved beyond simple drag-and-drop point map tool, such as 
 
 Answer: Copy and customize our open-source template for Leaflet Maps with Google Sheets. Control the map options display data that you upload to your Google Sheet and GitHub repository. No coding skills required, other than pasting one line of code to link your map with your sheet. Requires two free accounts: Google and GitHub.
 
-#### Video and list of features {-}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kUEfB8wD3Vk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[Video](https://youtube.be/kUEfB8wD3Vk)
 
 - Best to show points, polygons, and/or polylines, with table of points in map view
 - Free and open-source code template, built on Leaflet and linked to Google Sheets
@@ -223,6 +223,8 @@ Answer: Copy and customize our open-source template for Leaflet Maps with Google
 - Upload your polygon and polyline GeoJSON files, and custom markers, to your GitHub repo
 - Show multiple polygon layers, each with their own color legend and ranges (numerical or text)
 - Responsive design resizes your maps to display inside most mobile devices
+
+TODO: convert all on this page to code-chunk iframes
 
 Try it:
 Explore the map or right-click to [view full-screen map in a new tab](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/)
@@ -452,7 +454,7 @@ If desired, you can save your table data with your code, rather than in a separa
 
 Upload these files into the main level of your GitHub code repository, where the template will process them automatically.
 
-Learn more: 
+Learn more:
 To solve problems, see the [Fix Common Mistakes](fix.html) section of the appendix.
 
 ## Leaflet Storymaps with Google Sheets and Scrolling Narrative {- #leaflet-storymaps-with-google-sheets}
@@ -625,7 +627,7 @@ To add a horizontal line, you need to be a bit creative (see screenshot attached
 When you copy-paste this snippet, the straight quotation marks do not turn into curly marks, otherwise it won’t work.
 
 
-Learn more: 
+Learn more:
 To solve problems, see [Fix Common Mistakes](fix.html) section of the appendix.
 
 ## Leaflet Maps with Open Data API {- #leaflet-maps-with-api}
@@ -704,7 +706,7 @@ If your Socrata endpoint only supports JSON format, but includes data columns wi
 - code https://github.com/handsondataviz/leaflet-socrata/index-json.html
 - data https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7
 
-Learn more: 
+Learn more:
 - https://dev.socrata.com/
 - https://github.com/chriswhong/simpleSodaLeaflet
 

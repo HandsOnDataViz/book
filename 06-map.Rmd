@@ -49,11 +49,11 @@ Sometimes a well-designed chart, rather than a map, may be the best way to visua
 
 - to show change over time across different locations, consider a line chart
 
-<iframe src="https://ourworldindata.org/grapher/projected-population-by-country" style="width: 100%; height: 450px; border: 0 none;"></iframe>
+TODO: if we keep, convert to iframe: https://ourworldindata.org/grapher/projected-population-by-country
 
 - to show the relationship between two or more datasets across different locations, consider an XY scatter chart or bubble chart
 
-<iframe src="https://ourworldindata.org/grapher/learning-outcomes-vs-gdp-per-capita" style="width: 100%; height: 450px; border: 0 none;"></iframe>
+TODO: TODO: if we keep, convert to iframe: https://ourworldindata.org/grapher/learning-outcomes-vs-gdp-per-capita
 
 
 If a map is the best way to tell your data story, then choose an appropriate type. See [table of basic map types](map) in this book.
@@ -113,7 +113,7 @@ TODO: add text, check current documentation and features at https://www.google.c
 Try it:
 Explore the interactive point map below, or [view the full-screen version](https://drive.google.com/open?id=1OPrulm2ISYUb990DJOCoYlt_sWc), created with Google My Maps <https://www.google.com/maps/d/>.
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc" width="90%" height="480"></iframe>
+TODO: if we keep, convert to iframe: https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc
 
 Tool review:
 - Pros
@@ -125,8 +125,7 @@ Tool review:
   - Cannot easily create colored polygon maps from data values
   - Cannot extract geocoded data to migrate to another tool
 
-Video:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZVIPn8dJeYM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+See [video](https://youtube.be/ZVIPn8dJeYM)
 
 Let's build a simple point map with sample data, using Google My Maps <https://www.google.com/maps/d/>. Requires signing up for a free Google Drive account.
 
@@ -183,7 +182,8 @@ TODO:
 Try it:
 Explore the interactive point map below, or [view the full-screen version](https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed) ,created with Carto Builder <https://carto.com>.
 
-<iframe width="90%" height="500" frameborder="0" src="https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+TODO: if we keep, convert to code-chunk iframe: https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed
+
 
 Tool review:
 - Pros:
@@ -195,8 +195,7 @@ Tool review:
   - New users may get lost when moving through multiple screens
   - Free account allows only 400 geocodes per month
 
-Video:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lto7Z5wC2hQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+See [video](https://youtube.be/lto7Z5wC2hQ)
 
 ***Before you begin:*** This tutorial uses the newer Carto Builder, rather than older Carto Editor tool. Learn more at <https://carto.com/learn/guides/intro/migrating-from-carto-editor-to-carto-builder>. If you have an old Carto account that has not automatically updated to the new Builder tool, you may need to create a brand-new account to use this tutorial.
 
@@ -263,7 +262,11 @@ TODO: decide whether to keep or not; originally co-authored with Veronica.
 
 Open data repositories recently launched by [the State of Connecticut](http://data.ct.gov) and [the City of Hartford](http://data.hartford.gov) both use [the Socrata platform](http://www.socrata.com), which offer user-friendly ways to view, filter, and export data. Also, the Socrata platform includes built-in support to create interactive charts and maps, and to embed them on your own websites. This tutorial demonstrates these features by creating an interactive point map of selected schools from the Connecticut Education Directory in the state data portal. The final product looks like this:
 
-<div><iframe width="100%" title="CT Schools Map 2015" height="425px" src="https://data.ct.gov/w/qzq5-hbms/wqz6-rhce?cur=xi3jnhM8SI_&from=root" frameborder="0"scrolling="no"><a href="https://data.ct.gov/Education/CT-Schools-Map-2015/qzq5-hbms" title="CT Schools Map 2015">CT Schools Map 2015</a></iframe><p><a href="http://www.socrata.com/">Powered by Socrata</a></p></div>
+TODO: CT Schools Map 2015 is currently broken; decide whether to keep, and if so, convert to code-chunk iframe. Original links
+
+https://data.ct.gov/w/qzq5-hbms/wqz6-rhce?cur=xi3jnhM8SI_&from=root
+
+https://data.ct.gov/Education/CT-Schools-Map-2015/qzq5-hbms
 
 One advantage of creating data visualizations directly on an open data platform is that the chart or map is linked to the data repository. For example, if the Socrata platform administrator updates the data table, then a Socrata dataviz based on that data will be automatically updated, too. This may be especially useful for "live" data that is continuously updated by agency administrators, such as fire, crime, and property data repositories.
 
@@ -329,7 +332,7 @@ TODO: decide whether to keep or not, since free license terms changed
 
 The Social Explorer free edition <http://socialexplorer.com> offers one solution to creating colored polygon maps with US Census demographic data. Explore the embedded sample map below.
 
-<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.socialexplorer.com/0889800f4d/embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+TODO: decide whether or not to keep, and if yes, convert to iframe: https://www.socialexplorer.com/0889800f4d/embed
 
 #### Advantages {-}
 - Quick and easy-to-learn

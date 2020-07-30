@@ -62,6 +62,8 @@ ADD individual data from Census Manuscript available 70+ years later -- link to 
 
 The interactive map below illustrates hierarchical relations among geographical census entities for the Hartford region, from state to census block level.
 
+TODO: convert all to code-chunk iframes
+
 <iframe src="https://handsondataviz.github.io/census-divisions-hartford/index.html" height="400" width="100%" frameborder="0"></iframe>
 
 Learn more: Explore the standard hierarchy of US Census geographic entities and definitions (https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf)

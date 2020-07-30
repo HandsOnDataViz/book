@@ -276,6 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
 <li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
+<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -337,15 +338,15 @@ images/05-chart/design-setup-original.png</code></pre>
 <p>Although Markdown formatting offers a simple syntax that easily converts into other formats with Bookdown/Pandoc, there is no auto-numbering in the HTML edition, while auto-numbering appears in the PDF edition, and numbered figures are required by the publisher. Furthermore, Markdown formatting does not allow conditional output.</p>
 <div id="images-using-r-code-chunks" class="section level3 unnumbered" number="">
 <h3>Images using R code-chunks</h3>
-<p>For these reasons, this book <em>primarily uses R code-chunk formatting for images</em>. The syntax is more complex but supports auto-numbering in HTML and PDF, and conditional output for interactive and static images. Note that R code-chunk images do <em>not</em> easily convert with Pandoc from Markdown to AsciiDoc, but “Figure x Caption” appears as a placeholder.</p>
-<p>Auto-numbering appears in <code>Figure x.x</code> format in HTML and PDF, but <code>Figure x</code> format in MS Word. Note that Word formatting can be changed with reference.docx.</p>
+<p>For these reasons, this book <em>primarily uses R code-chunk formatting for images</em>. The syntax is more complex but supports auto-numbering in HTML and PDF, and conditional output for interactive and static images. Note that <em>static</em> R code-chunk images convert to Markdown, but <em>interactive</em> images do <em>NOT</em> convert and need to be manually edited in the <em>modified</em> file, described further below.</p>
+<p>Auto-numbering appears in <code>Figure x.x</code> format in HTML and PDF, but <code>Figure x</code> format in MS Word and Markdown. Note that Word formatting can be changed with reference.docx.</p>
 <p>Note that images in PDF output will “float” by design and may appear before or after the desired page, so always add a cross-reference call-out.</p>
 <p>Write R code-chunk labels that follow the image file name, and avoid duplicate labels across the book:</p>
 <pre><code>ref:design-setup
 
 images/05-chart/design-setup.png</code></pre>
 <p>Do not insert spaces inside the <code>ref:chunk-label</code> for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add <em>another</em> blank line to avoid “undefined reference” Bookdown errors.</p>
-<p>Inside the ref caption, do NOT use bad symbols (<code>&lt;</code> or <code>&gt;</code> or <code>"</code>) that will throw HTML errors into the Markdown output images. Instead, use safe symbols, such as (<code>*</code> and <code>-</code>) to designate computer instructions, such as <em>File - Make a Copy</em>.</p>
+<p>Inside the R code-chunk ref caption, do NOT use mischievous characters (such as <code>&lt;</code> or <code>&gt;</code> or <code>"</code>) that will throw HTML errors into the Markdown output images. Instead, use safe characters such as (<code>*</code> and <code>-</code>) to designate computer instructions, such as <em>File - Make a Copy</em>.</p>
 <p>For each figure, manually add a cross-reference call-out and insert <code>fig.pos='h'</code> to place the image “here” on the page in the PDF output, to <em>attempt</em> to avoid PDF floating. Ignore the Bookdown LaTeX warning message “h float specifier changed to ht.” See more at <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a> and <a href="https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html</a></p>
 <p>This Bookdown <code>index.Rmd</code> file includes two global R code-chunk settings immediately after the first header. One setting displays each code-chunk image without a code echo. The other setting automatically inserts the PDF version of an PNG/JPG image, whenever it exists, in the PDF output, which allows us to manually reduce the image sizes for the PDF book. Read more about these options in this Bookdown chapter: <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a>.</p>
 <pre><code>{r setup, include=FALSE}

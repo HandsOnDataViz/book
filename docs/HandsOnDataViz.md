@@ -393,10 +393,7 @@ Enroll in our free online course **TO DO add link**, which introduces
 these topics in the brief video below, and offers more exercises and
 opportunities to interact with instructors and other learners.
 
-#### Watch the YouTube Video
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SS1BGp_lxnU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+Watch the [YouTube Video](https://youtu.be/SS1BGp_lxnU)
 
 Draw and Write Your Data Story
 ------------------------------
@@ -4107,14 +4104,14 @@ to visualize your data story. Consider these alternatives:
 -   to show change over time across different locations, consider a line
     chart
 
-<iframe src="https://ourworldindata.org/grapher/projected-population-by-country" style="width: 100%; height: 450px; border: 0 none;">
-</iframe>
+TODO: if we keep, convert to iframe:
+<a href="https://ourworldindata.org/grapher/projected-population-by-country" class="uri">https://ourworldindata.org/grapher/projected-population-by-country</a>
 
 -   to show the relationship between two or more datasets across
     different locations, consider an XY scatter chart or bubble chart
 
-<iframe src="https://ourworldindata.org/grapher/learning-outcomes-vs-gdp-per-capita" style="width: 100%; height: 450px; border: 0 none;">
-</iframe>
+TODO: TODO: if we keep, convert to iframe:
+<a href="https://ourworldindata.org/grapher/learning-outcomes-vs-gdp-per-capita" class="uri">https://ourworldindata.org/grapher/learning-outcomes-vs-gdp-per-capita</a>
 
 If a map is the best way to tell your data story, then choose an
 appropriate type. See [table of basic map types](map) in this book.
@@ -4223,8 +4220,8 @@ version](https://drive.google.com/open?id=1OPrulm2ISYUb990DJOCoYlt_sWc),
 created with Google My Maps
 <a href="https://www.google.com/maps/d/" class="uri">https://www.google.com/maps/d/</a>.
 
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc" width="90%" height="480">
-</iframe>
+TODO: if we keep, convert to iframe:
+<a href="https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc" class="uri">https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc</a>
 
 Tool review: - Pros - Easy-to learn free mapping tool to import and
 style point, polyline, and polygon layers and basemap layers - Share and
@@ -4233,8 +4230,7 @@ collaborate through the Google Drive platform - Geocoding error warning
 colored polygon maps from data values - Cannot extract geocoded data to
 migrate to another tool
 
-Video:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZVIPn8dJeYM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+See [video](https://youtube.be/ZVIPn8dJeYM)
 
 Let’s build a simple point map with sample data, using Google My Maps
 <a href="https://www.google.com/maps/d/" class="uri">https://www.google.com/maps/d/</a>.
@@ -4321,8 +4317,8 @@ version](https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b
 ,created with Carto Builder
 <a href="https://carto.com" class="uri">https://carto.com</a>.
 
-<iframe width="90%" height="500" frameborder="0" src="https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>
-</iframe>
+TODO: if we keep, convert to code-chunk iframe:
+<a href="https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed" class="uri">https://jackdougherty.carto.com/builder/1abbb430-ec89-11e6-a661-0e05a8b3e3d7/embed</a>
 
 Tool review: - Pros: - Free and powerful drag-and-drop map tool in the
 browser - Customize point markers and polygon colors by data values -
@@ -4331,8 +4327,7 @@ steps required to create simple point or polygon map - New users may get
 lost when moving through multiple screens - Free account allows only 400
 geocodes per month
 
-Video:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lto7Z5wC2hQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+See [video](https://youtube.be/lto7Z5wC2hQ)
 
 ***Before you begin:*** This tutorial uses the newer Carto Builder,
 rather than older Carto Editor tool. Learn more at
@@ -4454,13 +4449,12 @@ creating an interactive point map of selected schools from the
 Connecticut Education Directory in the state data portal. The final
 product looks like this:
 
-<iframe width="100%" title="CT Schools Map 2015" height="425px" src="https://data.ct.gov/w/qzq5-hbms/wqz6-rhce?cur=xi3jnhM8SI_&amp;from=root" frameborder="0" scrolling="no">
-<a href="https://data.ct.gov/Education/CT-Schools-Map-2015/qzq5-hbms" title="CT Schools Map 2015">CT
-Schools Map 2015</a>
-</iframe>
-<p>
-<a href="http://www.socrata.com/">Powered by Socrata</a>
-</p>
+TODO: CT Schools Map 2015 is currently broken; decide whether to keep,
+and if so, convert to code-chunk iframe. Original links
+
+<a href="https://data.ct.gov/w/qzq5-hbms/wqz6-rhce?cur=xi3jnhM8SI_&amp;from=root" class="uri">https://data.ct.gov/w/qzq5-hbms/wqz6-rhce?cur=xi3jnhM8SI_&amp;from=root</a>
+
+<a href="https://data.ct.gov/Education/CT-Schools-Map-2015/qzq5-hbms" class="uri">https://data.ct.gov/Education/CT-Schools-Map-2015/qzq5-hbms</a>
 
 One advantage of creating data visualizations directly on an open data
 platform is that the chart or map is linked to the data repository. For
@@ -4609,8 +4603,8 @@ The Social Explorer free edition
 offers one solution to creating colored polygon maps with US Census
 demographic data. Explore the embedded sample map below.
 
-<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.socialexplorer.com/0889800f4d/embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
-</iframe>
+TODO: decide whether or not to keep, and if yes, convert to iframe:
+<a href="https://www.socialexplorer.com/0889800f4d/embed" class="uri">https://www.socialexplorer.com/0889800f4d/embed</a>
 
 #### Advantages
 
@@ -4775,7 +4769,7 @@ map. An iframe is one line of HTML code with instructions on how to
 display a web page from a specific address (called a URL). A simple
 iframe looks like this:
 
-    <iframe src="https://handsondataviz.org/embed/index.html"></iframe>
+`<iframe src="https://handsondataviz.org/embed/index.html"></iframe>`
 
 No coding skills are necessary. See these easy-to-follow examples:
 
@@ -4796,13 +4790,6 @@ visualization tools (such as [Tableau Public](iframe-tableau.html) and
 embed them in other common websites (such as
 [WordPress](iframe-wordpress.html), etc.) \*\* TO DO: add more tutorials
 and links \*\*
-
-Enroll in our free online course **link to do**, which introduces these
-topics in the brief video below, and offers more exercises and
-opportunities to interact with instructors and other learners.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RP1Zg_kbVGQ?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
 
 Create a Simple Web Page with GitHub Pages
 ------------------------------------------
@@ -4842,8 +4829,7 @@ versatile tool that can be used to create simple web pages.
     -   New users sometimes confuse the links for code repositories
         versus published web pages.
 
-Video:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AFdogZFyN0c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[Video](https://youtube.be/AFdogZFyN0c)
 
 1.  Sign up for free GitHub account, then sign in, at
     <a href="http://github.com" class="uri">http://github.com</a>.
@@ -4857,9 +4843,7 @@ Video:
 4.  Scroll down and click the green button to Create your repo, which
     will appear in a new browser tab, with this URL format:
 
-<!-- -->
-
-    https://github.com/YOUR-USERNAME/YOUR-REPO-NAME
+`https://github.com/YOUR-USERNAME/YOUR-REPO-NAME`
 
 1.  In your GitHub repo, click on Settings, scroll down to GitHub Pages,
     select Master branch as your source, then Save. This publishes the
@@ -4873,9 +4857,7 @@ README.md file.
     to see the new link to your published website, which will appear in
     this format:
 
-<!-- -->
-
-    https://YOUR-USERNAME.github.io/YOUR-REPO-NAME
+`https://YOUR-USERNAME.github.io/YOUR-REPO-NAME`
 
 1.  Right-click and Copy the link to your published web site.
 
@@ -4989,16 +4971,12 @@ Leaflet or Chart.js) with GitHub Pages, follow these easy steps:
 1.  Add `iframe` tags to the beginning and end, insert `src=` and
     enclose the URL inside quotation marks, like this:
 
-<!-- -->
-
-    <iframe src="https://USERNAME.github.io/RESPOSITORY"></iframe>
+`<iframe src="https://USERNAME.github.io/RESPOSITORY"></iframe>`
 
 1.  Optional: Insert preferred width and height (in pixels by default,
     or percentages), like this:
 
-<!-- -->
-
-    <iframe src="https://USERNAME.github.io/RESPOSITORY" width="90%" height="400"></iframe>
+`<iframe src="https://USERNAME.github.io/RESPOSITORY" width="90%" height="400"></iframe>`
 
 1.  Go to the appropriate tutorial to embed your iframe in your personal
     website:
@@ -5046,13 +5024,10 @@ The goal is to embed the iframe code from a Google Sheets interactive
 chart, which resides on a Google web server, into your GitHub Pages web
 site. The result will be similar to the one below:
 
-<iframe width="644" height="398" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/pubchart?oid=200651442&amp;format=interactive">
-</iframe>
+TODO: Convert to code-chunk iframe:
+<a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/pubchart?oid=200651442&amp;format=interactive" class="uri">https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/pubchart?oid=200651442&amp;format=interactive</a>
 
-#### Video tutorial and step-by-step instructions
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/enjhlnqaXOE?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+\[Video\](<a href="https://youtube.be/enjhlnqaXOE" class="uri">https://youtube.be/enjhlnqaXOE</a>\]
 
 1.  Sign up for free GitHub account, then sign in, at
     <a href="https://github.com" class="uri">https://github.com</a>.
@@ -5067,9 +5042,7 @@ site. The result will be similar to the one below:
 4.  Scroll down and click the green button to Create your repo, which
     will appear in a new browser tab, with this URL format:
 
-<!-- -->
-
-    https://github.com/YOUR-USERNAME/YOUR-REPO-NAME
+`https://github.com/YOUR-USERNAME/YOUR-REPO-NAME`
 
 1.  In your GitHub repo, click on Settings tab, scroll down to *GitHub
     Pages*, select **master branch** as your Source, then Save. This
@@ -5079,9 +5052,7 @@ site. The result will be similar to the one below:
     to see the new link to your published website, which will appear in
     this format:
 
-<!-- -->
-
-    https://YOUR-USERNAME.github.io/YOUR-REPO-NAME
+`https://YOUR-USERNAME.github.io/YOUR-REPO-NAME`
 
 1.  Right-click and Copy this link to your published web site.
 
@@ -5170,9 +5141,7 @@ But details vary, so read and experiment with the examples that follow.
     front `<iframe...` and the end `...></iframe>`, which looks like
     this:
 
-<!-- -->
-
-    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>
+`<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>`
 
 1.  Modify the front end of the iframe code by replacing the less-than
     symbol ( &lt; ) with a square opening bracket ( \[ ). Modify the
@@ -5184,7 +5153,7 @@ But details vary, so read and experiment with the examples that follow.
 
 Your modified code should look like this:
 
-    [iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"]
+`[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"]`
 
 1.  Click Preview or Publish/View Post to see how it appears on the web.
 
@@ -5199,8 +5168,8 @@ users can explore the data. This tutorial displays a *very basic chart*
 to simplify the process, and the end result will appear like the one
 below. Try it.
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive">
-</iframe>
+TODO: Convert to code-chunk iframe:
+<a href="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive" class="uri">https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive</a>
 
 Embed Tableau Public on your Website
 ------------------------------------
@@ -5222,8 +5191,8 @@ Try it:
 Both methods produce an embedded visualization like the one below. Float
 your cursor over points to view data details.
 
-<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500">
-</iframe>
+TODO: convert to code-chunk iframe:
+<a href="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a>?:showVizHome=no&:embed=true
 
 #### A) Embed code method for HTML web pages
 
@@ -5249,7 +5218,8 @@ page](images/07-embed/tableau-edit-share.png)
     body section. Below is an example of a sample Tableau Public embed
     code pasted between the body tags of a simple HTML page.
 
-<!-- -->
+TODO: find a way to replace this triple backtic code snippet, since it
+may throw errors into Markdown output.
 
     <!DOCTYPE html>
     <html>
@@ -5287,46 +5257,34 @@ page](images/07-embed/tableau-edit-share.png)
 1.  A typical link will look similar to this example (scroll to right to
     see all):
 
-<!-- -->
-
-    https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:embed=y&:display_count=yes
+`https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:embed=y&:display_count=yes`
 
 1.  We need to edit the link to convert it into an iframe format. First,
     delete any code that appears after the question mark, to make it
     look like this (scroll to right to see all):
 
-<!-- -->
-
-    https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?
+`https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?`
 
 1.  Add this snippet of code to the end, to replace what you deleted
     above:
 
-<!-- -->
-
-    :showVizHome=no&:embed=true
+`:showVizHome=no&:embed=true`
 
 1.  Now your edited link should look similar to this (scroll to right to
     see all):
 
-<!-- -->
-
-    https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true
+`https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true`
 
 1.  Enclose the link inside an iframe source tag `src=` with quotes, to
     make it look similar to this (scroll to right to see all):
 
-<!-- -->
-
-    src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true"
+`src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true"`
 
 1.  Add iframe tags for `width` and `height` in percentages or pixels
     (default), to make it look similar to this (scroll to right to see
     all):
 
-<!-- -->
-
-    src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"
+`src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"`
 
 Hint: Insert 90% width, rather than 100, to help readers easily scroll
 down your web page
@@ -5334,9 +5292,7 @@ down your web page
 1.  Add iframe tags at the beginning and end, to make it look similar to
     this (scroll to right to see all):
 
-<!-- -->
-
-    <iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"></iframe>
+`<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"></iframe>`
 
 Exceptions to the last step above. As described in the [Embed iframe on
 WordPress](embed.html#iframe-wordpress) chapter in this book, in a
@@ -5344,7 +5300,7 @@ self-hosted WordPress.org site, with the iframe plugin, insert iframe
 brackets rather than HTML tags to make a shortcode like this (scroll to
 right to see all):
 
-    [iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"]
+`[iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"]`
 
 Learn more: Embedding Tableau Public Views in iframe, Tableau Support
 page
@@ -6300,8 +6256,7 @@ Bar charts (vertical bar charts are often called *column charts*) can be
 used to compare categorical data. The y-axis (or x-axis for horizontal
 bar chart) should always start at 0.
 
-<iframe src="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html" width="100%" height="500" style="border: 0">
-</iframe>
+TODO: add R code-chunk iframe of src below
 
 Demo:
 <a href="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html</a>
@@ -6316,8 +6271,7 @@ Line charts are often used to show temporal data (trends). The x-axis
 often represents time intervals. Unlike column or bar charts, y-axes of
 line charts do not necessarily start at 0.
 
-<iframe src="https://handsondataviz.github.io/chartjs-templates/line-chart/index.html" width="100%" height="500" style="border: 0">
-</iframe>
+TODO: add R code-chunk iframe of src below
 
 Demo:
 <a href="https://handsondataviz.github.io/chartjs-templates/line-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/line-chart/index.html</a>
@@ -6334,8 +6288,7 @@ household income and test performance for school districts in
 Connecticut. Using x- and y-axes to show two dimensions, it is easy to
 see that test performance improves as household income goes up.
 
-<iframe src="https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html" width="100%" height="500" style="border: 0">
-</iframe>
+TODO: add R code-chunk iframe of src below
 
 Demo:
 <a href="https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html</a>
@@ -6371,8 +6324,7 @@ school districts in Connecticut. The size of data point (marker)
 corresponds to the number of students enrolled in the school district:
 bigger circles represent larger school districts.
 
-<iframe src="https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html" width="100%" height="500" style="border: 0">
-</iframe>
+TODO: add R code-chunk iframe of src below
 
 Demo:
 <a href="https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html</a>
@@ -6445,7 +6397,9 @@ TODO: add and clean up Leaflet Map CSV
 to serve as a fuller tutorial for Leaflet Maps, and explain how this
 will teach more principles of modifying Leaflet code. …then geocode and
 upload more data points:
-<iframe src="https://handsondataviz.github.io/leaflet-map-simple-instructor-sample/" width="90%" height="350"></iframe>
+
+TODO: convert to R code-chunk iframe:
+<a href="https://handsondataviz.github.io/leaflet-map-simple-instructor-sample/" class="uri">https://handsondataviz.github.io/leaflet-map-simple-instructor-sample/</a>
 
 <table>
 <colgroup>
@@ -6525,8 +6479,7 @@ GitHub](github.html). If you have problems with this tutorial, go to the
 TODO: add demo, remove unnecessary basic steps from below (covered in
 prior chapter)
 
-Video:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7iUocaxTYqk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+[Video](https://youtube.be/7iUocaxTYqk)
 
 #### A) Fork (copy) Leaflet template to your GitHub account
 
@@ -6544,9 +6497,7 @@ Before you begin, sign up for a free GitHub account:
     address (URL) of the new copy in your account will follow this
     format:
 
-<!-- -->
-
-    https://github.com/USERNAME/REPOSITORY
+`https://github.com/USERNAME/REPOSITORY`
 
 Reminder: You can only fork a GitHub repo **one time**. If needed, see
 how to make a second copy in the [Create a New Repo in
@@ -6561,9 +6512,7 @@ GitHub](create-repo.html) chapter in this book.
 2.  Scroll down to GitHub Pages section again, to select and copy the
     link to your published web site, which will follow this format:
 
-<!-- -->
-
-    https://USERNAME.github.io/REPOSITORY
+`https://USERNAME.github.io/REPOSITORY`
 
 1.  Scroll up to the top, and click on your repo name to go back to its
     main page.
@@ -6598,7 +6547,8 @@ GitHub](create-repo.html) chapter in this book.
     symbol (to edit) and go to lines 23-25. Replace “EDIT your map
     title” with your new title:
 
-<!-- -->
+TODO: decide if these triple backtic snippets will stay, or if they will
+throw errors into Markdown output
 
     <!-- Display the map and title with HTML division tags  -->
     <div id="map-title">EDIT your map title</div>
@@ -6756,10 +6706,7 @@ to your Google Sheet and GitHub repository. No coding skills required,
 other than pasting one line of code to link your map with your sheet.
 Requires two free accounts: Google and GitHub.
 
-#### Video and list of features
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kUEfB8wD3Vk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+[Video](https://youtube.be/kUEfB8wD3Vk)
 
 -   Best to show points, polygons, and/or polylines, with table of
     points in map view
@@ -6777,6 +6724,8 @@ Requires two free accounts: Google and GitHub.
     ranges (numerical or text)
 -   Responsive design resizes your maps to display inside most mobile
     devices
+
+TODO: convert all on this page to code-chunk iframes
 
 Try it: Explore the map or right-click to [view full-screen map in a new
 tab](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/)
@@ -9061,6 +9010,8 @@ Enroll in our free online course *TO DO add link*, which introduces
 these topics in the brief video below, and offers more exercises and
 opportunities to interact with instructors and other learners.
 
+TODO: convert all to code-chunk iframes
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eWfI_ANQT2Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
 </iframe>
 
@@ -9268,20 +9219,19 @@ headers lacking a blank character.
 
 -   Go back to the [Embed tutorials in this book](embed.html) to
     double-check the directions
+
 -   Items listed in your iframe (such as the URL, width, or height)
     should be enclosed inside straight quotation marks (single or
     double)
+
     -   BROKEN iframe (missing quotation marks for width and height)
 
-    <!-- -->
-
-        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>
+    `<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>`
 
     -   FIXED iframe (with correct quotation marks)
 
-    <!-- -->
+    `<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>`
 
-        <iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>
 -   Use only `https` (the extra ‘s’ means ‘secure’), not `http`. Some
     web browsers will block content if it mixes http and https
     resources, and some code templates in this book require https.
@@ -9622,6 +9572,8 @@ The interactive map below illustrates hierarchical relations among
 geographical census entities for the Hartford region, from state to
 census block level.
 
+TODO: convert all to code-chunk iframes
+
 <iframe src="https://handsondataviz.github.io/census-divisions-hartford/index.html" height="400" width="100%" frameborder="0">
 </iframe>
 
@@ -9809,6 +9761,8 @@ Nations with the highest percentage of female students enrolled in Data
 Visualization for All are the Ukraine (51 percent) and Turkey (47
 percent), based on preliminary data for those with high enrollment
 levels (25 or more students).
+
+TODO: convert all to code-chunk iframes
 
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1hvr0fOFUg4xm9I3L1WFzpHZvRqIRl3w8S9pMNnVg9rQ/pubchart?oid=2012433343&amp;format=interactive">
 </iframe>
@@ -10047,10 +10001,9 @@ book at our custom domain:
 Also, we use Bookdown to build additional book outputs (PDF, MS Word,
 Markdown) and upload these to the `docs` folder of our GitHub
 repository, so that our O’Reilly Media editor may download and comment
-on the manuscript as we revise. Finally, we also have the option to use
-[Pandoc](https://pandoc.org) alone to convert the full-book Markdown
-file (.md) into an AsciiDoc file (.asciidoc) for easier importing into
-the [O’Reilly Atlas
+on the manuscript as we revise. Finally, we have arranged with the
+O’Reilly production team to convert our *modified* version of the
+full-book Markdown file into their [O’Reilly Atlas
 platform](https://docs.atlas.oreilly.com/writing_in_asciidoc.html). See
 some caveats and workarounds below.
 
@@ -10287,11 +10240,11 @@ some editions, but not other editions. Options:
 1.  Insert a HTML code comment `<!-- Comment -->` in the .Rmd file to
     hide a few lines of text. This appears as commented-out text in the
     HTML and .md formats, is not displayed in the HTML browser, and does
-    not appear in any way in the PDF, MS Word or AsciiDoc formats.
+    not appear in any way in the PDF or MS Word formats.
 
 Demo:
 
-<!-- This comment is visible in the source text, but not visible in the HTML browser, nor PDF or MSWord or AsciiDoc outputs. -->
+<!-- This comment is visible in the .MD source text, but not visible in the HTML browser, nor PDF or MSWord outputs. -->
 
 1.  R package function `is_[html/latex]_output` allows conditional
     output for different book products, such as text that should appear
@@ -10300,11 +10253,11 @@ Demo:
 Demos:
 
 <!--
-This line appears in the PDF and Word versions, and is commented-out in the HTML and Markdown and AsciiDoc versions.
+This line appears in the PDF and Word versions, and is commented-out in the HTML and Markdown versions.
 -->
 
-This line appears in the HTML, Word, Markdown, and AsciiDoc versions,
-and is commented-out in the PDF version.
+This line appears in the HTML, Word, Markdown versions, and is
+commented-out in the PDF version.
 
 TODO: Create conditional formatting that displays *only* in the HTML
 edition, and allows the inclusion of R code-chunks to conditionally
@@ -10368,7 +10321,6 @@ Cross-reference interactivity varies by output:
     links).
 -   In Word, no cross-refs are clickable (unless this varies with
     reference.docx).
--   TBA with Markdown (.md) and AsciiDoc.
 
 When writing cross-references in the text, the [O’Reilly Style
 Guide](http://oreillymedia.github.io/production-resources/styleguide/#considering_electronic_formats)
@@ -10461,12 +10413,13 @@ formatting does not allow conditional output.
 For these reasons, this book *primarily uses R code-chunk formatting for
 images*. The syntax is more complex but supports auto-numbering in HTML
 and PDF, and conditional output for interactive and static images. Note
-that R code-chunk images do *not* easily convert with Pandoc from
-Markdown to AsciiDoc, but “Figure x Caption” appears as a placeholder.
+that *static* R code-chunk images convert to Markdown, but *interactive*
+images do *NOT* convert and need to be manually edited in the *modified*
+file, described further below.
 
 Auto-numbering appears in `Figure x.x` format in HTML and PDF, but
-`Figure x` format in MS Word. Note that Word formatting can be changed
-with reference.docx.
+`Figure x` format in MS Word and Markdown. Note that Word formatting can
+be changed with reference.docx.
 
 Note that images in PDF output will “float” by design and may appear
 before or after the desired page, so always add a cross-reference
@@ -10484,10 +10437,10 @@ add a blank line to separate it from the code-chunk. After the
 code-chunk, add *another* blank line to avoid “undefined reference”
 Bookdown errors.
 
-Inside the ref caption, do NOT use bad symbols (`<` or `>` or `"`) that
-will throw HTML errors into the Markdown output images. Instead, use
-safe symbols, such as (`*` and `-`) to designate computer instructions,
-such as *File - Make a Copy*.
+Inside the R code-chunk ref caption, do NOT use mischievous characters
+(such as `<` or `>` or `"`) that will throw HTML errors into the
+Markdown output images. Instead, use safe characters such as (`*` and
+`-`) to designate computer instructions, such as *File - Make a Copy*.
 
 For each figure, manually add a cross-reference call-out and insert
 `fig.pos='h'` to place the image “here” on the page in the PDF output,
@@ -10666,12 +10619,10 @@ HTML, PDF, Word.
 </tbody>
 </table>
 
-Workaround for Markdown-to-AsciiDoc: Currently, our attempt to use
-Pandoc to directly convert a Bookdown-generated Markdown file to
-AsciiDoc fails because Bookdown creates the .md file with tables in
-.html format, not Markdown. Our workaround is to paste the individual
-Markdown-formatted tables directly from the .Rmd into the large .md file
-prior to converting with Pandoc to AsciiDoc.
+Currently, Bookdown creates the Markdown file with tables in HTML
+format, not Markdown format. Our workaround is to paste the individual
+Markdown-formatted tables directly from the .Rmd into the *modified*
+full-book .md file.
 
 Notes and Bibliography
 ----------------------
@@ -10718,37 +10669,56 @@ note:[4]
 Note that the `chicago-fullnote-bibliography.csl` format automatically
 shortens the note after it its first reference.
 
-### Manual Pandoc Conversion to AsciiDoc
+Manually Modify Markdown Output
+-------------------------------
 
-The O’Reilly Atlas platform can [import AsciiDoc
-documents](https://docs.atlas.oreilly.com/writing_in_asciidoc.html).
-While Bookdown does not directly generated this format, one workaround
-is use the Bookdown-generated large Markdown file, and manually convert
-it with Pandoc to AsciiDoc format.
-
-See also workaround notes in the Tables section and other sections
-above. Remember to avoid bad symbols in code-chunk captions (`<` or `>`
-or `"`) that will throw HTML errors into the Markdown output images.
-
-Note that the index file creates “strict Markdown” output as described
-in
-<a href="https://bookdown.org/yihui/rmarkdown/markdown-document.html" class="uri">https://bookdown.org/yihui/rmarkdown/markdown-document.html</a>
+The O’Reilly production team has agreed to accept our full-book Markdown
+file into their workflow, which is easier for them to work with than the
+full-book MSWord file. Note that our Bookdown index.Rmd file includes
+code to generate a full-book Markdown:
 
     bookdown::markdown_document2:
-      base_format: rmarkdown::md_document
-      variant: markdown_strict
+      default
 
--   Download [Pandoc](https://pandoc.org)
+See this not-fully-documented Bookdown solution about generating
+Markdown output:
+<a href="https://stackoverflow.com/questions/58164239/compile-bookdown-to-markdown" class="uri">https://stackoverflow.com/questions/58164239/compile-bookdown-to-markdown</a>.
+We experimented to see if “strict” Markdown would produce cleaner
+output, following this RMarkdown guide
+<a href="https://bookdown.org/yihui/rmarkdown/markdown-document.html" class="uri">https://bookdown.org/yihui/rmarkdown/markdown-document.html</a>,
+but saw no difference when compared to the default settings.
+
+We need to do a bit of manual cleanup before ORM production team can
+convert the full-book Markdown file into [AsciiDoc format for their
+Atlas
+platform](https://docs.atlas.oreilly.com/writing_in_asciidoc.html),
+unless we find a way to automate these steps. See workaround notes in
+the Images and Tables sections above. Remember to avoid mischievous
+characters in R code-chunk image captions (such as `<` or `>` or `"`)
+that will throw HTML errors into the Markdown output images.
+
 -   Build the book with Bookdown, including one large Markdown file
     (docs folder, suffix .md)
 -   Manually rename it as HandsOnDataViz-modified.md
--   Manually paste in these Markdown tables (to replace HTML tables)
-    -   table of authors in index.Rmd
-    -   table of charts in 05-chart.Rmd
--   Manually remove any remaining iframes
+-   Manually paste in these Markdown tables to replace HTML tables
+    (unless ORM can handle this part)
+    -   from index.Rmd, table of authors
+    -   from 05-chart.Rmd, Table 1: Chart types covered in this book
+-   Manually replace any `<iframe...` HTML or GIF elements with their
+    PNG substitutes, and new ALT text (unless authors come up with a
+    better way to automate this)
+-   Manually delete any remaining `<iframe...` elements (unless they are
+    non-executable code snippets)
+-   Save and push the modified Markdown file up to GitHub repo
+
+Note: Previously, we tried to use [Pandoc](http://pandoc.org) to convert
+the modified.md file to asciidoc, but encountered many errors.
+
+OLD Pandoc conversion steps (for reference only):
+
 -   Use command line to navigate to subfolder with `pwd` and `cd`.
 -   Convert with:
-    `pandoc handsondataviz-modified.md --from markdown --to asciidoc --standalone  --wrap=none --output handsondataviz-modified.asciidoc`
+    `pandoc handsondataviz-modified.md --from markdown --to asciidoc --standalone --output handsondataviz-modified.asciidoc`
 
 <!--chapter:end:17-bookdown.Rmd-->
 <!-- Automated list of references generated by Bookdown + Zotero citation keys below. PDF output will appear without "References" at the top, but this seems to be the best solution. See https://bookdown.org/yihui/bookdown/citations.html -->

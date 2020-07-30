@@ -276,6 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
 <li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
+<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -304,10 +305,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Leaflet Maps with Google Sheets template</h2>
 <p>Question: If you have moved beyond simple drag-and-drop point map tool, such as <a href="mymaps.html">Google My Maps</a> tutorials in this book, and want to create point and/or polygon and/or polyline maps, where should you go?</p>
 <p>Answer: Copy and customize our open-source template for Leaflet Maps with Google Sheets. Control the map options display data that you upload to your Google Sheet and GitHub repository. No coding skills required, other than pasting one line of code to link your map with your sheet. Requires two free accounts: Google and GitHub.</p>
-<div id="video-and-list-of-features" class="section level4 unnumbered" number="">
-<h4>Video and list of features</h4>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kUEfB8wD3Vk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-</iframe>
+<p><a href="https://youtube.be/kUEfB8wD3Vk">Video</a></p>
 <ul>
 <li>Best to show points, polygons, and/or polylines, with table of points in map view</li>
 <li>Free and open-source code template, built on Leaflet and linked to Google Sheets</li>
@@ -318,12 +316,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Show multiple polygon layers, each with their own color legend and ranges (numerical or text)</li>
 <li>Responsive design resizes your maps to display inside most mobile devices</li>
 </ul>
+<p>TODO: convert all on this page to code-chunk iframes</p>
 <p>Try it:
 Explore the map or right-click to <a href="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/">view full-screen map in a new tab</a>
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="90%" height=500></iframe></p>
 <p>The map pulls the point data and settings from a linked Google Sheet, which you can explore below or right-click to <a href="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g">view full-screen Sheet in a new tab</a>
 <iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false" width="90%" height=500></iframe></p>
-</div>
 <div id="part-1-create-and-customize-your-map" class="section level4 unnumbered" number="">
 <h4>Part 1: Create and customize your map</h4>
 <p>In the first part of this tutorial, you will learn how to create your own copy of the Leaflet Maps with Google Sheets template, publish your Google Sheet, and paste its web address into your GitHub repo.</p>
@@ -383,13 +381,13 @@ Explore the map or right-click to <a href="https://handsondataviz.github.io/leaf
 <li><p>In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your own account.
 The web address (URL) of the new copy in your account will follow this format:</p></li>
 </ol>
-<div class="sourceCode" id="cb43"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb43-1"><a href="leaflet-maps-with-google-sheets.html#cb43-1"></a>https://github.com/USERNAME/leaflet-maps-with-google-sheets</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb24-1"><a href="leaflet-maps-with-google-sheets.html#cb24-1"></a>https://github.com/USERNAME/leaflet-maps-with-google-sheets</span></code></pre></div>
 <p>Reminder: You can only fork a GitHub repo <strong>one time</strong>. If needed, see how to make a second copy in the <a href="create-repo.html">Create a New Repo in GitHub</a> chapter in this book.</p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code to a live map on a public website that you control.</p></li>
 <li><p>Scroll down to GitHub Pages section again, and copy the link to your published web site, which will follow this format:</p></li>
 </ol>
-<div class="sourceCode" id="cb44"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb44-1"><a href="leaflet-maps-with-google-sheets.html#cb44-1"></a>https://USERNAME.github.io/leaflet-maps-with-google-sheets</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb25-1"><a href="leaflet-maps-with-google-sheets.html#cb25-1"></a>https://USERNAME.github.io/leaflet-maps-with-google-sheets</span></code></pre></div>
 <div class="figure"><span id="fig:lmwgs-1"></span>
 <iframe src="images/10-leaflet/lmwgs-1-fork-640.gif" width="672" height="400px">
 </iframe>

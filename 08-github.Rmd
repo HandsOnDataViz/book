@@ -235,9 +235,9 @@ So how do you make a second fork of a GitHub repo, if there's no *Use this templ
 
 Check the box to *Initialize this repository with a README* to simplify the next steps.
 
-Also, select *Add a license* that matches the code you plan to upload, which in this case is "MIT License." Other fields are optional. Click the green *Create Repository* button at the bottom when done, as shown in Figure \@ref(fig:repo-create-options).
+Also, select *Add a license* that matches the code you plan to upload, which in this case is *MIT License*. Other fields are optional. Click the green *Create Repository* button at the bottom when done, as shown in Figure \@ref(fig:repo-create-options).
 
-(ref:repo-create-options) Name your new repo `practice`, check the box to *Initialize this repo with a README*, and *Add a license* (select *MIT*) to match any code you plan to upload.
+(ref:repo-create-options) Name your new repo *practice*, check the box to *Initialize this repo with a README*, and *Add a license* (select *MIT*) to match any code you plan to upload.
 
 ```{r repo-create-options, out.width=400, fig.cap="(ref:repo-create-options)"}
  knitr::include_graphics("images/08-github/repo-create-options.png")
@@ -308,7 +308,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 
 4. On the "Let's Get Started" with GitHub Desktop screen, click on *Your Repositories* on the right side to select your `leaflet-map-sample`, and further below click the blue button to *Clone* it to your local computer, as shown in Figure \@ref(fig:desktop-start).
 
-(ref:desktop-start) Select your `leaflet-map-simple` repo and click the *Clone* button to copy it to your local computer.
+(ref:desktop-start) Select your *leaflet-map-simple* repo and click the *Clone* button to copy it to your local computer.
 
 ```{r desktop-start, fig.cap="(ref:desktop-start)"}
  knitr::include_graphics("images/08-github/desktop-start-annotated.png")

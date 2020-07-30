@@ -259,6 +259,8 @@ images/05-chart/design-setup.png
 
 Do not insert spaces inside the `ref:chunk-label` for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add *another* blank line to avoid "undefined reference" Bookdown errors.
 
+Inside the ref caption, do NOT use bad symbols (`<` or `>` or `"`) that will throw HTML errors into the Markdown output images. Instead, use safe symbols, such as (`*` and `-`) to designate computer instructions, such as *File - Make a Copy*.
+
 For each figure, manually add a cross-reference call-out and insert `fig.pos='h'` to place the image "here" on the page in the PDF output, to *attempt* to avoid PDF floating. Ignore the Bookdown LaTeX warning message "h float specifier changed to ht." See more at https://bookdown.org/yihui/bookdown/figures.html and https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html
 
 This Bookdown `index.Rmd` file includes two global R code-chunk settings immediately after the first header. One setting displays each code-chunk image without a code echo. The other setting automatically inserts the PDF version of an PNG/JPG image, whenever it exists, in the PDF output, which allows us to manually reduce the image sizes for the PDF book. Read more about these options in this Bookdown chapter: https://bookdown.org/yihui/bookdown/figures.html.
@@ -386,13 +388,23 @@ Note that the `chicago-fullnote-bibliography.csl` format automatically shortens 
 ### Manual Pandoc Conversion to AsciiDoc {-}
 The O'Reilly Atlas platform can [import AsciiDoc documents](https://docs.atlas.oreilly.com/writing_in_asciidoc.html). While Bookdown does not directly generated this format, one workaround is use the Bookdown-generated large Markdown file, and manually convert it with Pandoc to AsciiDoc format.
 
-See also workaround notes in the Tables section and other sections above.
+See also workaround notes in the Tables section and other sections above. Remember to avoid bad symbols in code-chunk captions (`<` or `>` or `"`) that will throw HTML errors into the Markdown output images.
+
+Note that the index file creates "strict Markdown" output as described in https://bookdown.org/yihui/rmarkdown/markdown-document.html
+
+```
+bookdown::markdown_document2:
+  base_format: rmarkdown::md_document
+  variant: markdown_strict
+```
 
 - Download [Pandoc](https://pandoc.org)
 - Build the book with Bookdown, including one large Markdown file (docs folder, suffix .md)
 - Manually rename it as HandsOnDataViz-modified.md
 - Manually paste in these Markdown tables (to replace HTML tables)
-  - table of authors in index.Rmd
-  - table of charts in 05-chart.Rmd
+  - from index.Rmd, table of authors
+  - from 05-chart.Rmd, Table 1: Chart types covered in this book
+- Manually replace any `<iframe...` HTML or GIF elements with their PNG substitutes, and new ALT text
+- Manually delete any remaining `<iframe...` elements
 - Use command line to navigate to subfolder with `pwd` and `cd`.
-- Convert with: `pandoc handsondataviz-modified.md --from markdown --to asciidoc --standalone --output handsondataviz-modified.asciidoc`
+- Convert with: `pandoc handsondataviz-modified.md --from markdown --to asciidoc --standalone  --wrap=none --output handsondataviz-modified.asciidoc`

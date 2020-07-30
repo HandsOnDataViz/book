@@ -7,9 +7,7 @@ First, you need to own a website that supports iframe codes (which we'll explain
 
 Second, you need to copy or create an iframe code from your chart or map. An iframe is one line of HTML code with instructions on how to display a web page from a specific address (called a URL). A simple iframe looks like this:
 
-```html
-<iframe src="https://handsondataviz.org/embed/index.html"></iframe>
-```
+`<iframe src="https://handsondataviz.org/embed/index.html"></iframe>`
 No coding skills are necessary. See these easy-to-follow examples:
 
 -[Copy iframe from a Google Sheets chart](iframe-google-sheets.html)
@@ -34,7 +32,7 @@ The full answer requires three steps:
 
 This tutorial focuses on the **first step**. If you don't already have your own website, or if you are not sure whether your site supports iframe codes, then follow the steps below. We will create a simple web page with a free and friendly tool called GitHub <http://github.com>, and host it on the public web with the built-in GitHub Pages feature. For **steps 2 and 3**, see the [Copy iframe from Google Sheets](iframe-google-sheets.html) tutorial and the [Embed iframe in GitHub Pages](iframe-github.html) tutorial in this chapter.
 
-Tool review: 
+Tool review:
 GitHub <http://github.com> is a versatile tool that can be used to create simple web pages.
 
 - Pros:
@@ -44,7 +42,7 @@ GitHub <http://github.com> is a versatile tool that can be used to create simple
   - All work on GitHub is public by default. Private repositories (folders) require payment.
   - New users sometimes confuse the links for code repositories versus published web pages.
 
-Video: 
+Video:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AFdogZFyN0c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 1) Sign up for free GitHub account, then sign in, at <http://github.com>.
@@ -133,14 +131,12 @@ https://USERNAME.github.io/REPOSITORY
 ```
 
 2) Add `iframe` tags to the beginning and end, insert `src=` and enclose the URL inside quotation marks, like this:
-```html
-<iframe src="https://USERNAME.github.io/RESPOSITORY"></iframe>
-```
+
+`<iframe src="https://USERNAME.github.io/RESPOSITORY"></iframe>`
 
 3) Optional: Insert preferred width and height (in pixels by default, or percentages), like this:
-```html
-<iframe src="https://USERNAME.github.io/RESPOSITORY" width="90%" height="400"></iframe>
-```
+
+`<iframe src="https://USERNAME.github.io/RESPOSITORY" width="90%" height="400"></iframe>`
 
 4) Go to the appropriate tutorial to embed your iframe in your personal website:
 
@@ -242,18 +238,15 @@ But details vary, so read and experiment with the examples that follow.
 
 7) Initially, the code you pasted includes HTML iframe tags at the front `<iframe...` and the end `...></iframe>`, which looks like this:
 
-```javascript
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>
-```
+`<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>`
 
 8) Modify the front end of the iframe code by replacing the less-than symbol ( < ) with a square opening bracket ( [ ). Modify the back end by erasing the greater-than symbol ( > ) and the end tag ( </iframe> ). Replace the back end with a square closing bracket ( ] ).
 
 ![](images/07-embed/WordPressOrg-replace-with-bracket.png)
 
 Your modified code should look like this:
-```
-[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"]
-```
+
+`[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"]`
 
 9) Click Preview or Publish/View Post to see how it appears on the web.
 
@@ -367,5 +360,5 @@ Exceptions to the last step above. As described in the [Embed iframe on WordPres
 [iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"]
 ```
 
-Learn more: 
+Learn more:
 Embedding Tableau Public Views in iframe, Tableau Support page <http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes>

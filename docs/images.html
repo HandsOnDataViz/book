@@ -345,6 +345,7 @@ images/05-chart/design-setup-original.png</code></pre>
 
 images/05-chart/design-setup.png</code></pre>
 <p>Do not insert spaces inside the <code>ref:chunk-label</code> for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add <em>another</em> blank line to avoid “undefined reference” Bookdown errors.</p>
+<p>Inside the ref caption, do NOT use bad symbols (<code>&lt;</code> or <code>&gt;</code> or <code>"</code>) that will throw HTML errors into the Markdown output images. Instead, use safe symbols, such as (<code>*</code> and <code>-</code>) to designate computer instructions, such as <em>File - Make a Copy</em>.</p>
 <p>For each figure, manually add a cross-reference call-out and insert <code>fig.pos='h'</code> to place the image “here” on the page in the PDF output, to <em>attempt</em> to avoid PDF floating. Ignore the Bookdown LaTeX warning message “h float specifier changed to ht.” See more at <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a> and <a href="https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html</a></p>
 <p>This Bookdown <code>index.Rmd</code> file includes two global R code-chunk settings immediately after the first header. One setting displays each code-chunk image without a code echo. The other setting automatically inserts the PDF version of an PNG/JPG image, whenever it exists, in the PDF output, which allows us to manually reduce the image sizes for the PDF book. Read more about these options in this Bookdown chapter: <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a>.</p>
 <pre><code>{r setup, include=FALSE}
@@ -472,7 +473,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/17-bookdown.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

@@ -1,0 +1,153 @@
+# (APPENDIX) Appendix {-}
+
+# Fix Common Mistakes {#fix}
+TODO: Rewrite appendix to focus more broadly on "common mistakes" not just "code errors"
+
+Creating your data visualizations through code templates hosted on GitHub has multiple advantages over drag-and-drop tools. Coding gives you more power to customize their appearance and interactive features, and to control where your data and products reside online. But there's also a trade-off. Code can "break" and leave you staring at a blank screen. Sometimes problems happens through no fault of your own, such as when a "code dependency" to an online background map or code library is unexpectedly interrupted. But more often it seems that problems arise because we make simple mistakes that break our own code. Whatever the cause, one big drawback of working with code is that you're also responsible for fixing it.
+
+We designed this section as a guide to help new coders diagnose and solve common errors when working with code templates on GitHub. We understand the feeling you experience when a simple typo---such as a misplaced semicolon (;)---makes your data visualization disappear from the screen. Finding the source of the problem can be very frustrating. But breaking your code---and figuring out how to fix it---also can be a great way to learn, because trial-and-error on a computer often provides immediate feedback that supports the learning process and develops our thinking.
+
+TODO: Reorganize contents, perhaps using this outline?
+
+- Problems with Mac computers
+- Problems with data tables
+- Problems with iframes (since this chapter appears before code templates)
+- Problems with GitHub forking and hosting
+- Problems with code templates
+
+#### Problems with Mac computers: cannot see filename extension {-}
+
+Several tools in this book will not work properly if your computer does not display the filename extensions, meaning the abbreviated file format that appears after the period, such as `data.csv` or `map.geojson`. The Mac computer operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions2).
+
+(ref:mac-file-extensions2) On a Mac, go to *Finder* then *Preferences* then *Advanced* and check the box to *Show all filename extensions*.
+
+
+```r
+ knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
+```
+
+![(\#fig:mac-file-extensions2)(ref:mac-file-extensions2)](images/02-spreadsheet/mac-file-extensions.png) 
+
+
+#### Problems with data tables {-}
+
+Avoid typing blank spaces after column headers---or any spreadsheet entries---since some data visualization tools will not match them with headers lacking a blank character.
+
+![](images/14-fix/avoid-header-blank-space.png)
+
+#### Problems with iframes {-}
+
+##### My iframe does not appear in my web page {-}
+- Go back to the [Embed tutorials in this book](embed.html) to double-check the directions
+- Items listed in your iframe (such as the URL, width, or height) should be enclosed inside straight quotation marks (single or double)
+  - BROKEN iframe (missing quotation marks for width and height)
+
+  `<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width=90% height=350></iframe>`
+
+  - FIXED iframe (with correct quotation marks)
+
+  `<iframe src="https://handsondataviz.github.io/leaflet-map-simple" width="90%" height="350"></iframe>`
+
+- Use only `https` (the extra 's' means 'secure'), not `http`. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https.
+
+![Screenshot: Replace http with https](images/14-fix/http-vs-https.png)
+
+- Use only straight quotes, not curly quotes. Avoid pasting text from a word-processor into GitHub, which can accidentally carry over curly quotes. Typing directly into the GitHub editor will create straight quotes.
+
+![Screenshot: Curly quotes versus straight quotes](images/14-fix/curly-vs-straight-quotes.png)
+
+
+
+TODO: Test one way to fix GitHub errors by going into the commits and going back to a previous version of the code. Is this possible in the web version?
+
+#### Safely Delete your GitHub Repo and Start Over {-}
+If you need to delete your GitHub repo and start over, here's a simple way to safely save your work:
+
+- Go to the top-level of your GitHub repository, similar to `https://github.com/USERNAME/REPOSITORY`
+- Click the green "Clone or Download" button, and select Download Zip to receive a compressed folder of your repo contents on your computer.
+- In your GitHub repo, click on Settings (upper-right area) and scroll down to Delete This Repository.
+- To prevent accidental deletions, GitHub requires you to type in the REPOSITORY name.
+- Now you can start over in one of these ways:
+  - If you wish to [Create a Simple Web Page with GitHub Pages](github-pages.html), follow that tutorial again.
+  - OR
+  - Fork another copy of the original GitHub repository to your account. After you create your copy, if you wish to add selected files that you previously downloaded to your computer, follow directions to [Upload Code with GitHub](create-repo) in the second half of this tutorial in this book
+
+
+
+#### Problems with Creating a Simple Web Page with GitHub Pages {-}
+If you followed the [Create a Simple Web Page with GitHub Pages tutorial](github-pages.html), it should have created two web links (or URLs):
+
+- your code repository, in this format: `https://github.com/USERNAME/REPOSITORY`
+- your published web page, in this format: `https://USERNAME.github.io/REPOSITORY`
+
+Be sure to insert your GitHub username, and your GitHub repository name, in the general formats above.
+
+These URLs are NOT case-sensitive, which means that `https://github.com/USERNAME` and `https://gitub.com/username` point to the same location.
+
+##### My simple GitHub web page does not appear {-}
+- Make sure that you are pointing to the correct URL for your published web page, in the format shown above.
+- Be patient. During busy periods on GitHub, it may take up to 1 minute for new content to appear in your browser.
+- **MOVE UP**
+If your map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing your edits. Then do a "hard refresh" to [bypass any saved content in your browser cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
+
+  - Ctrl + F5 (most browsers for Windows or Linux)
+  - Command + Shift + R (Chrome or Firefox for Mac)
+  - Shift + Reload button toolbar (Safari for Mac)
+  - Ctrl + Shift + Backspace (on Chromebook)
+
+
+- Test the link to your published web page in a different browser. If you normally use Chrome, try Firefox.
+- On rare occasions, the GitHub service or GitHub Pages feature may be down. Check <https://status.github.com>.
+
+##### My simple GitHub web page does not display my iframe {-}
+- If you followed the [Create a Simple Web Page with GitHub Pages tutorial](github-pages) and inserted an iframe in the README.md file, it will appear in your published web page, under these conditions:
+  - Ideally, your README.md should be the ONLY file in this GitHub repository
+  - Any other files in your repo (such as index.html, default.html, or index.md) will block the iframe HTML code in your README.md from being published on the web. If you accidentally selected a GitHub Pages Theme, you need to delete any extra files it created: click each file, select trash can to delete it, and commit changes.
+
+![Screenshot: Extra files in GitHub repo will block iframe in your README](images/14-fix/extra-files-block-readme-iframe.png)
+
+
+
+#### Problems with Leaflet Maps with Google Sheets template {-}
+
+##### My map does not appear {-}
+1) Confirm that you have completed all of the key steps in the [Leaflet Maps with Google Sheets](leaflet-with-google-sheets) tutorial in this book, especially these:
+  - Sign in to Google and File > Make a Copy of the Google Sheet to your Google Drive.
+  - File > Publish your Google Sheet (Jack often forgets this key step!)
+  - Copy your Google Sheet web address from top of your browser (usually ends with `...XYZ/edit#gid=0`) and paste into your `google-doc-url.js` file in your GitHub repo. Do NOT copy the *Published* web address (which usually ends with `...XYZ/pubhtml`)
+  - When you paste your Google Sheet web address into `google-doc-url.js`, be careful not to erase single-quote marks or semicolon
+  - Go to your live map link, which should follow this format: `https://USERNAME.github.io/REPOSITORY`, refresh the browser, and wait at least 30 seconds.
+
+2) Check your Google Sheet for errors:
+- Do NOT rename column headers (in row 1) of any sheet, because the Leaflet Map code looks for these exact words.
+
+![Screenshot: User accidentally renamed column headers in the Points tab](images/14-fix/lmwgs-fix-column-headers.png)
+
+- Do NOT rename row labels (in column A) of any sheet, due to the same reason above.
+
+![Screenshot: Do not rename or delete](images/14-fix/lmwgs-do-not-rename-labels.png)
+
+- In your Points tab, DO NOT leave any blank rows
+
+3) Confirm on GitHub Status (https://status.github.com/) that all systems are operational.
+
+4) If you cannot find the problem, go to the top of this page to Safely Delete Your GitHub Repo and Start Over. Also, make a new copy of the Google Sheet template, give it a new name, and copy data from your old sheet using File > Paste Special > Values Only.
+
+#### Problems with Chart.js code templates {-}
+
+##### Chart displays old data {-}
+If you upload new data to your Chart.js code template on GitHub Pages, and it does not appear in your browser after refreshing and waiting up to one minute, then GitHub Pages is probably not the cause of the problem. Instead, some browsers continue to show "old" Chart.js in the web cache. The simplest solution is to File > Quit your browser and re-open the link to your Chart.js
+
+TODO: Our Chart.js templates appear blank (just text, no chart) when viewed in the local browser. But Leaflet maps appear mostly or partially complete. Why is this, and how should we inform readers about this? Discuss with Ilya
+
+
+#### Solve Problems with Browser Developer Tools {-}
+Peek inside any website and view the web code under the hood with the browser developer tools.
+
+In Chrome for Mac, go to View > Developer > Developer Tools
+
+![](images/14-fix/Chrome-developer-tools.png)
+
+In Firefox for Mac, go to Tools > Web Developer > Inspector
+
+![](images/14-fix/Firefox-tools-inspector.png)

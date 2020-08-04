@@ -311,6 +311,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Add a blank row immediately below the header to make space for our calculations. Right-click on row number 1 and select <em>Insert 1 below</em> to add a new row, as shown in Figure <a href="calculate.html#fig:sheets-insert-row">2.22</a>.</p></li>
 </ol>
 
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="calculate.html#cb22-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/02-spreadsheet/sheets-insert-row.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:sheets-insert-row"></span>
 <img src="images/02-spreadsheet/sheets-insert-row.png" alt="Right-click on row number 1 and select Insert 1 below." width="200" />
 <p class="caption">
@@ -321,6 +322,7 @@ Figure 2.22: Right-click on row number 1 and select <em>Insert 1 below</em>.
 <li>Let’s calculate the average level of reader experience with data visualization. Click on cell E2 in the new blank row you just created, and type an equal symbol (<code>=</code>) to start a formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the average for current values in the column, such as <code>=AVERAGE(E3:E2894)</code>, then press <em>Return</em> or <em>Enter</em> on your keyboard, as shown in Figure <a href="calculate.html#fig:sheets-average">2.23</a>.</li>
 </ol>
 
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="calculate.html#cb23-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/02-spreadsheet/sheets-average.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:sheets-average"></span>
 <img src="images/02-spreadsheet/sheets-average.png" alt="Type = to start a formula and select the suggestion for average, or type it directly in with the correct range." width="300" />
 <p class="caption">
@@ -333,6 +335,7 @@ Figure 2.23: Type <code>=</code> to start a formula and select the suggestion fo
 <li>Part of the magic of spreadsheets is that you can use the built-in hold-and-drag feature to copy and paste a formula across other columns or rows, and it will automatically update its cell references. Click in cell E2, and then press and hold down on the blue dot in the bottom-right corner of that cell, which transforms your cursor into a crosshair symbol. Drag your cursor to cell F2 and let go, and show in Figure <a href="calculate.html#fig:sheets-drag-calc">2.24</a>. The formula will be automatically pasted and updated for the new column to <code>=AVERAGE(F3:F2894)</code> or <code>AVERAGE(F3:F)</code>, depending on which way you entered it above. Once again, since this is a live spreadsheet with a growing number of responses, your sheet will have a larger number in the last cell reference.</li>
 </ol>
 
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="calculate.html#cb24-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;images/02-spreadsheet/sheets-drag-calc.gif&quot;</span>, <span class="dt">height =</span> <span class="st">&quot;85px&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/02-spreadsheet/sheets-drag-calc.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:sheets-drag-calc"></span>
 <iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="300" height="85px">
 </iframe>
@@ -344,6 +347,7 @@ Figure 2.24: Click on the blue bottom-right dot in cell E2, then hold-and-drag y
 <li>Since the <em>Occupation</em> column contains a defined set of text responses, let’s use a different function to count them using an <em>if statement</em>, such as the number of responses if a reader listed “educator”. Click in cell G2 and type the equal symbol (<code>=</code>) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is <em>educator</em> for current values in the entire column. You can directly type in the formula <code>=COUNTIF(G3:G2894,"=educator")</code>, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax <code>=COUNTIF(G3:G,"=educator")</code> that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure <a href="calculate.html#fig:sheets-countif">2.25</a>.</li>
 </ol>
 
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="calculate.html#cb25-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/02-spreadsheet/sheets-countif.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:sheets-countif"></span>
 <img src="images/02-spreadsheet/sheets-countif.png" alt="Select or enter a formula that counts responses if the entry is educator." width="250" />
 <p class="caption">

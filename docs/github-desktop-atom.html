@@ -310,6 +310,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to <code>https://github.com/USERNAME/leaflet-map-simple</code>, using your GitHub username, to access the repo you created in the <a href="copy-leaflet.html">Copy, Edit, and Host a Simple Leaflet Map Template</a> section of this chapter. Click the <em>Add file &gt; Open with GitHub Desktop</em> drop-down menu button near the middle of your screen, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-open">8.18</a>. The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.</li>
 </ol>
 
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="github-desktop-atom.html#cb125-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/desktop-open.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:desktop-open"></span>
 <img src="images/08-github/desktop-open.png" alt="In your GitHub repo on the web, click Add file to Open with GitHub Desktop to download and install GitHub Desktop." width="350" />
 <p class="caption">
@@ -320,6 +321,7 @@ Figure 8.18: In your GitHub repo on the web, click <em>Add file</em> to <em>Open
 <li>When you open GitHub Desktop for the first time, you’ll need to connect it to the GitHub web account you previously created in this chapter. On the welcome screen, click the blue <em>Sign in to GitHub.com</em> button, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-signin">8.19</a>, and login with your GitHub username and password. On the next screen, GitHub will ask you to click the green <em>Authorize desktop</em> button to confirm that you wish to connect to your account.</li>
 </ol>
 
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="github-desktop-atom.html#cb126-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/desktop-signin.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:desktop-signin"></span>
 <img src="images/08-github/desktop-signin.png" alt="Click the blue Sign in to GitHub.com button to link GitHub Desktop to your GitHub account." width="500" />
 <p class="caption">
@@ -330,6 +332,7 @@ Figure 8.19: Click the blue <em>Sign in to GitHub.com</em> button to link GitHub
 <li>In the next setup screen, GitHub Desktop asks you to configure Git, the underlying software that runs GitHub. Confirm that it displays your username and click <em>Continue</em>, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-configure">8.20</a>.</li>
 </ol>
 
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="github-desktop-atom.html#cb127-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/desktop-configure.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:desktop-configure"></span>
 <img src="images/08-github/desktop-configure.png" alt="Click the Continue button to authorize GitHub Desktop to send commits to your GitHub account." width="500" />
 <p class="caption">
@@ -340,6 +343,7 @@ Figure 8.20: Click the <em>Continue</em> button to authorize GitHub Desktop to s
 <li>On the “Let’s Get Started” with GitHub Desktop screen, click on <em>Your Repositories</em> on the right side to select your <code>leaflet-map-sample</code>, and further below click the blue button to <em>Clone</em> it to your local computer, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-start">8.21</a>.</li>
 </ol>
 
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="github-desktop-atom.html#cb128-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/desktop-start-annotated.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:desktop-start"></span>
 <img src="images/08-github/desktop-start-annotated.png" alt="Select your leaflet-map-simple repo and click the Clone button to copy it to your local computer."  />
 <p class="caption">
@@ -350,6 +354,7 @@ Figure 8.21: Select your <em>leaflet-map-simple</em> repo and click the <em>Clon
 <li>When you clone a repo, GitHub Desktop asks you to select the Local Path, meaning the location where you wish to store a copy of your GitHub repo on your local computer, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-clone-path">8.22</a>. Before you click the <em>Clone</em> button, remember the path to this location, since you’ll need to find it later.</li>
 </ol>
 
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="github-desktop-atom.html#cb129-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/desktop-clone-path.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:desktop-clone-path"></span>
 <img src="images/08-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click Clone." width="500" />
 <p class="caption">
@@ -360,6 +365,7 @@ Figure 8.22: Select the Local Path where your repo will be stored on your comput
 <li>On the next screen, GitHub Desktop may ask, “How are you planning to use this fork?” Select the default entry “To contribute to the parent project,” which means you plan to send your edits back to your GitHub web account, and click <em>Continue</em>, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-fork">8.23</a>.</li>
 </ol>
 
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="github-desktop-atom.html#cb130-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/desktop-fork.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:desktop-fork"></span>
 <img src="images/08-github/desktop-fork.png" alt="If asked how you plan to use this fork, select the default To contribute to the parent project and click Continue." width="500" />
 <p class="caption">
@@ -370,6 +376,7 @@ Figure 8.23: If asked how you plan to use this fork, select the default <em>To c
 <li>Now you have copies of your GitHub repo in two places—in your GitHub web account and on your local computer—as shown in Figure <a href="github-desktop-atom.html#fig:desktop-finder">8.24</a>. Your screen may look different, depending on whether you use Windows or Mac, and the Local Path you selected to store your files.</li>
 </ol>
 
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="github-desktop-atom.html#cb131-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/desktop-finder.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:desktop-finder"></span>
 <img src="images/08-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different." width="500" />
 <p class="caption">
@@ -380,6 +387,7 @@ Figure 8.24: Now you have two copies of your repo: in your GitHub online account
 <li>Before we can edit the code in your local computer, <a href="https://atom.io">download and install the Atom Editor application</a>. Then go to your GitHub Desktop screen, confirm that the Current Repository is <code>leaflet-map-simple</code>, and click the <em>Open in Atom</em> button as shown in Figure <a href="github-desktop-atom.html#fig:desktop-atom">8.25</a>.</li>
 </ol>
 
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="github-desktop-atom.html#cb132-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/desktop-atom-annotated.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:desktop-atom"></span>
 <img src="images/08-github/desktop-atom-annotated.png" alt="In GitHub Desktop, confirm the Current Repo and click the Open in Atom button to edit the code."  />
 <p class="caption">
@@ -390,6 +398,7 @@ Figure 8.25: In GitHub Desktop, confirm the Current Repo and click the <em>Open 
 <li>Since Atom Editor is integrated with GitHub Desktop, it opens up your entire repo as a “project,” where you can click files in the left window to open as new tabs to view and edit code, as shown in Figure <a href="github-desktop-atom.html#fig:atom-project">8.26</a>. Open your <code>index.html</code> file and edit the title of your map, around line 22, then save your work.</li>
 </ol>
 
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="github-desktop-atom.html#cb133-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/atom-project-annotated.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:atom-project"></span>
 <img src="images/08-github/atom-project-annotated.png" alt="Atom Editor opens your repo as a project, where you can click files to view code. Edit your map title."  />
 <p class="caption">
@@ -400,6 +409,7 @@ Figure 8.26: Atom Editor opens your repo as a <em>project</em>, where you can cl
 <li>After saving your code edit, it’s a good habit to clean up your Atom Editor workspace. Right-click on the current Project and select <em>Remove Project Folder</em> in the menu, as shown in Figure <a href="github-desktop-atom.html#fig:atom-remove-project">8.27</a>. Next time you open up Atom Editor, you can right-click to <em>Add Project Folder</em>, and choose any GitHub repo that you have copied to your local computer.</li>
 </ol>
 
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="github-desktop-atom.html#cb134-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/atom-remove-project-annotated.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:atom-remove-project"></span>
 <img src="images/08-github/atom-remove-project-annotated.png" alt="To clean up your Atom Editor workspace, right-click to Remove Project Folder."  />
 <p class="caption">
@@ -410,6 +420,7 @@ Figure 8.27: To clean up your Atom Editor workspace, right-click to <em>Remove P
 <li>Now that you’ve edited the code for your map on your local computer, let’s test how it looks before uploading it to GitHub. Go to the location where you saved the repo on your local computer, and right-click the <code>index.html</code> file, select Open With, and choose your preferred web browser, as shown in Figure <a href="github-desktop-atom.html#fig:finder-open-with">8.28</a>.</li>
 </ol>
 
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="github-desktop-atom.html#cb135-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/finder-open-with.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:finder-open-with"></span>
 <img src="images/08-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
 <p class="caption">
@@ -422,6 +433,7 @@ Figure 8.28: Right-click the index.html file on your local computer and open wit
 <li>Go to GitHub Desktop, confirm that your Current Repo is <code>leaflet-map-simple</code>, and you will see your code edits summarized on the screen. In this two-step process, first click the blue <em>Commit to Master</em> button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue <em>Push origin</em> button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure <a href="github-desktop-atom.html#fig:desktop-commit-push">8.29</a>.</li>
 </ol>
 
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="github-desktop-atom.html#cb136-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;images/08-github/desktop-commit-push.gif&quot;</span>, <span class="dt">height =</span> <span class="st">&quot;500px&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/desktop-commit-push-annotated.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:desktop-commit-push"></span>
 <iframe src="images/08-github/desktop-commit-push.gif" width="672" height="500px">
 </iframe>
@@ -434,6 +446,7 @@ Figure 8.29: In this two-step process, click <em>Commit to Master</em>, then cli
 <p>Tip: Atom Editor has many built-in features that recognize and help you edit code, plus the option to install more <a href="https://atom.io/packages">packages</a> in the Preferences menu. One helpful built-in tool is <em>Edit &gt; Toggle Comments</em>, which automatically detects the coding language and converts the selected text from executable code to non-executed code comments. Another built-in tool is <em>Edit &gt; Lines &gt; Auto Indent</em>, which automatically cleans up selected text or an entire page of code for easier reading.</p>
 <p>GitHub also offers a powerful platform for collaborative projects, such as <em>Hands-On Data Visualization</em>. As co-authors, we composed the text of these book chapters and all of the sample code templates on GitHub. Jack started each day by “pulling” the most recent version of the book from our shared GitHub account to his local computer using GitHub Desktop, where he worked on sections and “pushed” his commits (aka edits) back to GitHub. At the same time, Ilya “pulled” the latest version and “pushed” his commits back to GitHub as well. Both of us see the commits that each other made, line-by-line in green and red (showing additions and deletions), by selecting the GitHub repo <em>Code</em> tab and clicking on one of our commits, as shown in Figure <a href="github-desktop-atom.html#fig:compare-commits">8.30</a>.</p>
 
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="github-desktop-atom.html#cb137-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/08-github/compare-commits.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:compare-commits"></span>
 <img src="images/08-github/compare-commits.png" alt="Drag-and-drop the file to the upload screen."  />
 <p class="caption">

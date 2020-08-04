@@ -324,6 +324,7 @@ Remember that correlation does not
 mean causation, so you cannot use this chart to argue that fewer
 births result in longer lives, or that longer-living females give birth to fewer children.</p>
 
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="scatter-bubble-google.html#cb88-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;amp;format=interactive&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/05-chart/scatter.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:scatter"></span>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
@@ -339,6 +340,7 @@ Notice that the data is structured in three columns. The first column, <em>Life 
 is plotted on the x-axis (horizontal). The second column, <em>Fertility</em>, is plotted on the y-axis (vertical).
 The third column contains <em>Country</em> labels.</p>
 
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="scatter-bubble-google.html#cb89-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/05-chart/scatter-data.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:scatter-data"></span>
 <img src="images/05-chart/scatter-data.png" alt="Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels." width="350px" />
 <p class="caption">
@@ -361,6 +363,7 @@ then <em>Select a data range</em> button in the upper-right corner of the dropdo
 and choose cells in the relevant columns. Make sure to include the header (first row) if
 all other data ranges include it.</p>
 
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="scatter-bubble-google.html#cb90-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/05-chart/scatter-labels-annotated.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:scatter-labels"></span>
 <img src="images/05-chart/scatter-labels-annotated.png" alt="In the chart’s Setup window, choose Add labels to the Series." width="350px" />
 <p class="caption">
@@ -383,6 +386,7 @@ in Figure <a href="scatter-bubble-google.html#fig:bubble-3">5.32</a> shows the s
 <p>In the interactive version of the chart, hover your cursor over each bubble (dot) to reveal a tooltip
 with the country name and the two data points.</p>
 
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="scatter-bubble-google.html#cb91-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;amp;format=interactive&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/05-chart/bubble-3.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:bubble-3"></span>
 <iframe src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
@@ -411,6 +415,7 @@ Another one can make use of color (best for categorical data).</p>
 with population (shown by bubble size) and region (shown by bubble color).
 Float your cursor over bubbles to view data details in the interactive version of the chart.</p>
 
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="scatter-bubble-google.html#cb92-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;amp;format=interactive&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/05-chart/bubble-5.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:bubble-5"></span>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
@@ -422,6 +427,7 @@ Figure 5.33: This bubble chart shows fertility and life expectancy for several c
 The columns are arranged in the following order: country label, x-axis value,
 y-axis value, color, and bubble size.</p>
 
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="scatter-bubble-google.html#cb93-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/05-chart/bubble-5-data.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:bubble-5-data"></span>
 <img src="images/05-chart/bubble-5-data.png" alt="Bubble chart data. Bubble size represents population, color – region." width="400px" />
 <p class="caption">

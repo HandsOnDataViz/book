@@ -321,6 +321,7 @@ Instead of showing individual hospitals as points (as in Figuere <a href="pivot-
 you want darker shades of blue to represent states with more hospitals (as in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address">11.5</a>b).</p>
 <p>(ref:pivot-address) You can count addresses by state (or other area) to produce polygon,
 or choropleth, maps instead of point maps.</p>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="pivot-point-to-polygon.html#cb159-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/pivot-address-annotated.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:pivot-address"></span>
 <img src="images/11-transform/pivot-address-annotated.png" alt="(ref:pivot-address)"  />
 <p class="caption">
@@ -330,6 +331,7 @@ Figure 11.5: (ref:pivot-address)
 <p>First, save the database to your local machine by going to <em>Export &gt; Download &gt; CSV</em>
 of Socrata interface. Figure <a href="pivot-point-to-polygon.html#fig:pivot-address-export">11.6</a> shows where you can find the Export button.</p>
 
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="pivot-point-to-polygon.html#cb160-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/pivot-address-export.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:pivot-address-export"></span>
 <img src="images/11-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
 <p class="caption">
@@ -343,6 +345,7 @@ is selected, and click <em>Create</em>). In the pivot table, set <em>Rows</em> t
 we want to get counts by state. Next, set pivot table’s <em>Values</em> to <em>State</em>—or really any other
 column that has no missing values—and choose <em>Summarize by: COUNTA</em>. Voila!</p>
 
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="pivot-point-to-polygon.html#cb161-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/pivot-address-sheet.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:pivot-address-sheet"></span>
 <img src="images/11-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">

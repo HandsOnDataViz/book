@@ -633,6 +633,8 @@ operation (such as calculating the average of a range of cells:
 (sometimes called workbooks), where each tab across the bottom opens a
 specific sheet.
 
+     knitr::include_graphics("images/02-spreadsheet/spreadsheet-terms-annotated.png")
+
 <img src="images/02-spreadsheet/spreadsheet-terms-annotated.png" alt="Screenshot of a typical spreadsheet, with headers, tabs, and the active cell displaying a formula." width="600" />
 <p class="caption">
 Figure 1: Screenshot of a typical spreadsheet, with headers, tabs, and
@@ -761,6 +763,10 @@ in this book are:
     sheets, formulas, styling, etc., but you don’t normally see these on
     your computer because they are primarily designed to exist online.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/data-formats.png")
+
 <img src="images/02-spreadsheet/data-formats.png" alt="Three data formats commonly seen on your computer---csv, ods, and xlsx---when displayed properly in the Mac Finder." width="350" />
 <p class="caption">
 Figure 2: Three data formats commonly seen on your computer—csv, ods,
@@ -774,6 +780,8 @@ abbreviated file format after the period, such as `data.csv` or
 need to turn them on by going to Finder &gt; Preferences &gt; Advanced,
 and check the box to *Show all filename extensions*, as shown in Figure
 <a href="#fig:mac-file-extensions">3</a>.
+
+     knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
 
 <img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to *Finder-Preferences-Advanced* and check the box to *Show all filename extensions*." width="400" />
 <p class="caption">
@@ -814,6 +822,8 @@ Excel, as shown in Figure <a href="#fig:sheets-download">4</a>.
 Similarly, in the downloadable LibreOffice and its Calc spreadsheet
 tool, select *File &gt; Save As* to save data in its native ODS format,
 or to export to CSV, Excel, or other formats.
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-download.png")
 
 <img src="images/02-spreadsheet/sheets-download.png" alt="In Google Sheets, go to *File - Download As* to export data in several common formats." width="600" />
 <p class="caption">
@@ -883,6 +893,10 @@ create your own online form with a link to spreadsheet results.
     <a href="#fig:file-make-copy">5</a>. You can rename the file to
     remove “Copy of…”.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/file-make-copy.png")
+
 <img src="images/02-spreadsheet/file-make-copy.png" alt="Go to *File - Make a Copy* to create your own version of this Google Sheet." width="250" />
 <p class="caption">
 Figure 5: Go to *File - Make a Copy* to create your own version of this
@@ -894,6 +908,10 @@ Google Sheet.
     click the *My Drive* button and the *New folder* button to create a
     folder for your data, before clicking *OK*, as shown in Figure
     <a href="#fig:my-drive-new-folder">6</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/my-drive-new-folder.png")
 
 <img src="images/02-spreadsheet/my-drive-new-folder.png" alt="Click the *My Drive* and *New folder* buttons to save your work in a folder." width="300" />
 <p class="caption">
@@ -938,6 +956,10 @@ using the *Share* button.
     *Edit* it. Also, you can click *Copy link* to paste the web address
     to your data in an email or public website.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/share-screen.png")
+
 <img src="images/02-spreadsheet/share-screen.png" alt="Click the *Share* button to grant access to individuals (top half) or anyone with the link (bottom half)." width="600" />
 <p class="caption">
 Figure 7: Click the *Share* button to grant access to individuals (top
@@ -961,6 +983,8 @@ already claimed your preferred custom name, you’ll need to think up a
 different one. Beware that `bit.ly` links are case-sensitive, so we
 prefer to customize the back-end in all lower-case to match the
 front-end.
+
+     knitr::include_graphics("images/02-spreadsheet/link-shortening.png")
 
 <img src="images/02-spreadsheet/link-shortening.png" alt="Use a free link-shortening service, such as Bitly.com, and customize its back-end." width="300" />
 <p class="caption">
@@ -999,6 +1023,10 @@ to turn it on, and the benefits of doing so.
     screen. Note that this global *Gear symbol &gt; Settings* appears at
     Google Drive level, *not* inside each Google Sheet.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/drive-settings.png")
+
 <img src="images/02-spreadsheet/drive-settings.png" alt="Click your Google Drive *Gear Symbol - Settings* in the upper-right corner." width="300" />
 <p class="caption">
 Figure 9: Click your Google Drive *Gear Symbol - Settings* in the
@@ -1012,6 +1040,10 @@ upper-right corner.
     possible files that you upload in the future—including Microsoft
     Excel, Word, PowerPoint, and more—unless you turn it off.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/convert-uploads.png")
+
 <img src="images/02-spreadsheet/convert-uploads.png" alt="Inside your Google Drive Settings, check the box to automatically convert all uploads." width="750" />
 <p class="caption">
 Figure 10: Inside your Google Drive Settings, check the box to
@@ -1023,6 +1055,10 @@ automatically convert all uploads.
     <a href="#fig:upload-file">11</a>, or use the *New* button and
     select *File upload*.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/upload-file.png")
+
 <img src="images/02-spreadsheet/upload-file.png" alt="Drag-and-drop your sample Excel file into your Google Drive to upload it." width="300" />
 <p class="caption">
 Figure 11: Drag-and-drop your sample Excel file into your Google Drive
@@ -1033,6 +1069,8 @@ If you forget to check the *Convert uploads* box, Google Drive will keep
 uploaded files in their original format, and display their icons and
 file name extensions such as `.xlsx` or `.csv`, as shown in Figure
 <a href="#fig:drive-file-icons">12</a>.
+
+     knitr::include_graphics("images/02-spreadsheet/drive-file-icons.png")
 
 <img src="images/02-spreadsheet/drive-file-icons.png" alt="If you forget to convert uploads, Google Drive will keep files in their original format with these icons." width="300" />
 <p class="caption">
@@ -1073,6 +1111,8 @@ Inside your Google Drive account, one tool that’s often overlooked is
 Google Forms, which is partially hidden under *New &gt; More &gt; Google
 Forms*, as shown in Figure <a href="#fig:forms-new">13</a>.
 
+     knitr::include_graphics("images/02-spreadsheet/forms-new.png")
+
 <img src="images/02-spreadsheet/forms-new.png" alt="The Google Forms tool is partially hidden in the Google Drive *New - More* menu." width="500" />
 <p class="caption">
 Figure 13: The Google Forms tool is partially hidden in the Google Drive
@@ -1083,6 +1123,8 @@ The Google Forms *Questions* tab allows you to design questions with
 different types of responses: short- and paragraph-length answers,
 multiple choice, checkboxes, file uploads, etc., as shown in Figure
 <a href="#fig:forms-questions">14</a>.
+
+     knitr::include_graphics("images/02-spreadsheet/forms-questions.png")
 
 <img src="images/02-spreadsheet/forms-questions.png" alt="The Google Forms *Questions* tab allows you to designate different types of responses." width="700" />
 <p class="caption">
@@ -1099,6 +1141,8 @@ a text box where you can type in more details, as shown in Figure
 Response validation*, which requires users to follow a particular
 format, such as an email address or phone number.
 
+     knitr::include_graphics("images/02-spreadsheet/forms-description.png")
+
 <img src="images/02-spreadsheet/forms-description.png" alt="Click the three-dot kebab menu to *Show - Description* to add details for any question." width="700" />
 <p class="caption">
 Figure 15: Click the three-dot kebab menu to *Show - Description* to add
@@ -1112,6 +1156,8 @@ the *Send* button to distribute it via email, a link, or to embed the
 live form as an iframe on a web page. Learn more about the latter option
 in [Chapter 7: Embed On Your Web](embed.html).
 
+     knitr::include_graphics("images/02-spreadsheet/forms-preview.png")
+
 <img src="images/02-spreadsheet/forms-preview.png" alt="Click the *Eyeball symbol* to preview your form." width="350" />
 <p class="caption">
 Figure 16: Click the *Eyeball symbol* to preview your form.
@@ -1121,6 +1167,8 @@ The Google Forms *Responses* tab will show individual results you
 receive, and also includes a powerful button to open the data in a
 linked Google Sheet, as shown in Figure
 <a href="#fig:forms-responses">17</a>.
+
+     knitr::include_graphics("images/02-spreadsheet/forms-responses.png")
 
 <img src="images/02-spreadsheet/forms-responses.png" alt="The Google Forms *Responses* tab includes a button to open results in a linked Google Sheet." width="500" />
 <p class="caption">
@@ -1166,6 +1214,10 @@ the questions were posed.
     <a href="#fig:sheets-select-all">18</a>. The entire sheet should
     become light blue to show you’ve selected all cells.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-select-all.png")
+
 <img src="images/02-spreadsheet/sheets-select-all.png" alt="Click the upper-left corner to select all cells before sorting." width="400" />
 <p class="caption">
 Figure 18: Click the upper-left corner to select all cells before
@@ -1184,6 +1236,10 @@ and make it meaningless. Always select all cells before sorting!
     minimum at the top, the maximum at the bottom, and the range in
     between.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-sort-range.png")
+
 <img src="images/02-spreadsheet/sheets-sort-range.png" alt="Go to *Data - Sort Range*, check the header row box, and sort by *Experience with dataviz* in ascending order." width="400" />
 <p class="caption">
 Figure 19: Go to *Data - Sort Range*, check the header row box, and sort
@@ -1201,6 +1257,8 @@ or more columns to continuously display when scrolling sideways.
 LibreOffice has a same option to *View &gt; Freeze Rows and Columns*,
 but Excel has a different option called *Window &gt; Split*.
 
+     knitr::include_graphics("images/02-spreadsheet/sheets-view-freeze.png")
+
 <img src="images/02-spreadsheet/sheets-view-freeze.png" alt="In Google Sheets, go to *View - Freeze* to select the number of rows to continuously display when scrolling downward." width="500" />
 <p class="caption">
 Figure 20: In Google Sheets, go to *View - Freeze* to select the number
@@ -1214,6 +1272,10 @@ of rows to continuously display when scrolling downward.
     to undo all options, then click only *educator* to display only rows
     with that response, as shown in Figure
     <a href="#fig:sheets-filter">21</a>. Click “OK”.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-filter.png")
 
 <img src="images/02-spreadsheet/sheets-filter.png" alt="Go to *Data - Create a Filter*, click the downward arrow in the *Occupation* column, select only *educator*." width="300" />
 <p class="caption">
@@ -1261,6 +1323,10 @@ posed.
     below* to add a new row, as shown in Figure
     <a href="#fig:sheets-insert-row">22</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-insert-row.png")
+
 <img src="images/02-spreadsheet/sheets-insert-row.png" alt="Right-click on row number 1 and select *Insert 1 below*." width="200" />
 <p class="caption">
 Figure 22: Right-click on row number 1 and select *Insert 1 below*.
@@ -1274,6 +1340,10 @@ Figure 22: Right-click on row number 1 and select *Insert 1 below*.
     current values in the column, such as `=AVERAGE(E3:E2894)`, then
     press *Return* or *Enter* on your keyboard, as shown in Figure
     <a href="#fig:sheets-average">23</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-average.png")
 
 <img src="images/02-spreadsheet/sheets-average.png" alt="Type `=` to start a formula and select the suggestion for average, or type it directly in with the correct range." width="300" />
 <p class="caption">
@@ -1308,6 +1378,10 @@ but it does *not* work with LibreOffice or Excel.
     spreadsheet with a growing number of responses, your sheet will have
     a larger number in the last cell reference.
 
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-drag-calc.gif", height = "85px") else knitr::include_graphics("images/02-spreadsheet/sheets-drag-calc.png")
+
 <iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="300" height="85px">
 </iframe>
 <p class="caption">
@@ -1330,6 +1404,10 @@ automatically paste and update the formula.
     that runs the calculation on the entire column without naming a
     specific endpoint, as shown in Figure
     <a href="#fig:sheets-countif">25</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-countif.png")
 
 <img src="images/02-spreadsheet/sheets-countif.png" alt="Select or enter a formula that counts responses if the entry is *educator*." width="250" />
 <p class="caption">
@@ -1388,6 +1466,10 @@ reader responses by two categories: occupation and experience level.
     <a href="#fig:sheets-pivot-create">26</a>. The new sheet will
     include a Pivot Table tab at the bottom.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-pivot-create.png")
+
 <img src="images/02-spreadsheet/sheets-pivot-create.png" alt="Go to *Data - Pivot Table*, and create in a new sheet." width="450" />
 <p class="caption">
 Figure 26: Go to *Data - Pivot Table*, and create in a new sheet.
@@ -1398,6 +1480,10 @@ Figure 26: Go to *Data - Pivot Table*, and create in a new sheet.
     Rows *Add* button and select *Occupation*, which displays the unique
     entries in that column, as shown in Figure
     <a href="#fig:sheets-pivot-rows">27</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-pivot-rows.png")
 
 <img src="images/02-spreadsheet/sheets-pivot-rows.png" alt="In the *Pivot table editor*, click the Rows *Add* button and select *Occupation*." width="600" />
 <p class="caption">
@@ -1410,6 +1496,10 @@ select *Occupation*.
     will automatically summarize the values by *COUNTA*, meaning it
     displays the frequency of each textual response, as shown in Figure
     <a href="#fig:sheets-pivot-values">28</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-pivot-values.png")
 
 <img src="images/02-spreadsheet/sheets-pivot-values.png" alt="In the *Pivot table editor*, click the Values *Add* button and select *Occupation*." width="600" />
 <p class="caption">
@@ -1426,6 +1516,10 @@ survey.
     of occupation and experience among reader responses. Click on the
     *Columns* button to add *Experience with data visualization*, as
     shown in Figure <a href="#fig:sheets-pivot-columns">29</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-pivot-columns.png")
 
 <img src="images/02-spreadsheet/sheets-pivot-columns.png" alt="In the *Pivot table editor*, click the Columns *Add* button and select *Experience with data visualization*."  />
 <p class="caption">
@@ -1455,6 +1549,8 @@ desired. Three of the most common options to summarize values are:
 Although Google Sheets pivot tables show raw numbers by default, you
 also can choose to display them as percentages of the row, of the
 column, or of the grand total.
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-pivot-summarize.png")
 
 <img src="images/02-spreadsheet/sheets-pivot-summarize.png" alt="In the *Pivot table editor*, see multiple options to summarize *Values*." width="250" />
 <p class="caption">
@@ -1505,6 +1601,8 @@ and paste in the data. But imagine an actual case that includes over 200
 US food banks and many more individuals, where using an automated method
 to match and paste data is essential.
 
+     knitr::include_graphics("images/02-spreadsheet/vlookup-setup.png")
+
 <img src="images/02-spreadsheet/vlookup-setup.png" alt="Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet." width="750" />
 <p class="caption">
 Figure 31: Your goal is to create one mailing list that matches
@@ -1532,6 +1630,10 @@ the name of the other sheet.
     sheet, as shown in Figure <a href="#fig:vlookup-headers">32</a>.
     This creates new column headers where our lookup results will be
     automatically pasted.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/vlookup-headers.png")
 
 <img src="images/02-spreadsheet/vlookup-headers.png" alt="Paste the last four column headers from the *addresses* sheet into the *names* sheet." width="500" />
 <p class="caption">
@@ -1567,6 +1669,10 @@ Here’s what each part means:
     a range of columns A to E in the *addresses* sheet. Press *Return*
     or *Enter* on your keyboard.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/vlookup-solution.png")
+
 <img src="images/02-spreadsheet/vlookup-solution.png" alt="The VLOOKUP formula in cell C2 of the *names* sheet (top) searches for matches across columns A to E in the *addresses* sheet (bottom)." width="700" />
 <p class="caption">
 Figure 33: The VLOOKUP formula in cell C2 of the *names* sheet (top)
@@ -1593,6 +1699,10 @@ Let’s break down each part of the formula you entered in cell C2 of the
     paste and update the formula for the city, state, and zip columns,
     as shown in Figure <a href="#fig:vlookup-drag">34</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/vlookup-drag.png")
+
 <img src="images/02-spreadsheet/vlookup-drag.png" alt="Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
 Figure 34: Click on cell C2, then hold-and-drag the bottom-right blue
@@ -1603,6 +1713,10 @@ formula.
 1.  Finally, use the same hold-and-drag method to paste and update the
     formula downward to fill in all rows, as shown in Figure
     <a href="#fig:vlookup-final">35</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/vlookup-final.png")
 
 <img src="images/02-spreadsheet/vlookup-final.png" alt="Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
@@ -1681,6 +1795,8 @@ database, we used Airtable settings to link the *organization* column in
 the *people* sheet to the *food banks* sheet, where the addresses are
 stored, as shown in Figure <a href="#fig:airtable-link">36</a>.
 
+     knitr::include_graphics("images/02-spreadsheet/airtable-link.png")
+
 <img src="images/02-spreadsheet/airtable-link.png" alt="In this Airtable sample, we linked the *organization* column in the *people* sheet to the *food banks* sheet." width="500" />
 <p class="caption">
 Figure 36: In this Airtable sample, we linked the *organization* column
@@ -1698,6 +1814,8 @@ you to sort, filter, and create different views of your data that you
 can share with others, a topic we’ll cover in [Chapter 7: Embed on your
 Web](embed.html). See more about its features in the [Airtable Support
 page](https://support.airtable.com).
+
+    if(knitr::is_html_output()) knitr::include_url("https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow", height = "533px") else knitr::include_graphics("images/02-spreadsheet/airtable-expand.png")
 
 <iframe src="https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow" width="600" height="533px">
 </iframe>
@@ -2189,6 +2307,8 @@ to create a CSV file from this data, give it a parallel name to your
 multi-tabbed spreadsheet file so that you can easily relocate the
 original source notes.
 
+     knitr::include_graphics("images/03-find/sheets-with-tabs.png")
+
 <img src="images/03-find/sheets-with-tabs.png" alt="Create separate spreadsheet tabs for data, notes, and backup."  />
 <p class="caption">
 Figure 38: Create separate spreadsheet tabs for data, notes, and backup.
@@ -2394,6 +2514,8 @@ be surprised if you find yourself spending longer cleaning up data than
 actually analyzing and visualizing it—it is often the case for data
 analysts.
 
+    knitr::include_graphics("images/04-clean/clean-up-messy-data.png")
+
 <img src="images/04-clean/clean-up-messy-data.png" alt="More often than not, raw data looks like this."  />
 <p class="caption">
 Figure 39: More often than not, raw data looks like this.
@@ -2474,6 +2596,10 @@ exercise.
 8.  Inspect the resulting sheet. Make sure town names such as *Newtown*
     remained untouched.
 
+<!-- -->
+
+    knitr::include_graphics("images/04-clean/sheets-find-replace-annotated.png")
+
 <img src="images/04-clean/sheets-find-replace-annotated.png" alt="Find and Replace window in Google Sheets."  />
 <p class="caption">
 Figure 40: Find and Replace window in Google Sheets.
@@ -2513,6 +2639,10 @@ line.
     section).
 5.  You can rename columns into *Longitude* (first number) and
     *Latitude* (second number).
+
+<!-- -->
+
+    knitr::include_graphics("images/04-clean/sheets-split-annotated.png")
 
 <img src="images/04-clean/sheets-split-annotated.png" alt="Select *Data - Split text to columns* to automatically separate data." width="350" />
 <p class="caption">
@@ -2590,6 +2720,8 @@ format, to combine the items using ampersands (`&`) and separating them
 with commas (`", "`) or quoted spaces (`" "`), like this:
 `=A2 & ", " & B2 & ", " & C2 & " " & D2`.
 
+     knitr::include_graphics("images/04-clean/sheets-combine.png")
+
 <img src="images/04-clean/sheets-combine.png" alt="Use ampersands to combine items and separate them with spaces."  />
 <p class="caption">
 Figure 42: Use ampersands to combine items and separate them with
@@ -2650,6 +2782,8 @@ port—most likely because 8080 was taken by some other program running on
 your computer). If for any reason you decide to use a different browser,
 just copy-paste the URL.
 
+    knitr::include_graphics("images/04-clean/tabula-welcome.png")
+
 <img src="images/04-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
 Figure 43: Tabula welcome page.
@@ -2672,6 +2806,10 @@ PDFs](data/ct-dph-covid-2020-05-31.pdf) from May 31, 2020.
     relevant button in the header. You will see that each table is
     highlighted in red, like shown in Figure
     <a href="#fig:tabula-autodetect">44</a>.
+
+<!-- -->
+
+    knitr::include_graphics("images/04-clean/tabula-autodetect.png")
 
 <img src="images/04-clean/tabula-autodetect.png" alt="Selected tables are highlighted in red."  />
 <p class="caption">
@@ -2713,6 +2851,8 @@ Clean Data with OpenRefine
 Consider a dataset that looks like the one in Figure
 <a href="#fig:openrefine-dataset">45</a>. Can you spot any problems with
 it?
+
+    knitr::include_graphics("images/04-clean/openrefine-dataset.png")
 
 <img src="images/04-clean/openrefine-dataset.png" alt="First 20 rows of the sample dataset. Can you spot any problems with it?"  />
 <p class="caption">
@@ -2762,6 +2902,8 @@ Once launched, you should see OpenRefine in your browser with
 `127.0.0.1:3333` address (localhost, port 3333), like shown in Figure
 <a href="#fig:openrefine-welcome">46</a>.
 
+    knitr::include_graphics("images/04-clean/openrefine-welcome-annotated.png")
+
 <img src="images/04-clean/openrefine-welcome-annotated.png" alt="OpenRefine starting page."  />
 <p class="caption">
 Figure 46: OpenRefine starting page.
@@ -2786,6 +2928,10 @@ using your own file), so let’s load it from your computer.
     the bottom of the page until it starts looking meaningful, like
     shown in Figure <a href="#fig:openrefine-parse">47</a>.
 3.  Hit *Create Project* in the upper-right corner.
+
+<!-- -->
+
+    knitr::include_graphics("images/04-clean/openrefine-parse.png")
 
 <img src="images/04-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
@@ -2831,6 +2977,10 @@ to be transformed into numeric format.
     popup window, make sure to change *Data type* to *number*, and hit
     *Apply*, like in Figure
     <a href="#fig:openrefine-manual-edit">48</a>).
+
+<!-- -->
+
+    knitr::include_graphics("images/04-clean/openrefine-manual-edit-annotated.png")
 
 <img src="images/04-clean/openrefine-manual-edit-annotated.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
 <p class="caption">
@@ -2879,6 +3029,8 @@ distinct values, North Korea and South Korea!
 
 Spend some time playing with *Keying function* parameters, and notice
 how they produce clusters of different sizes and accuracy.
+
+    knitr::include_graphics("images/04-clean/openrefine-cluster-annotated.png")
 
 <img src="images/04-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
 <p class="caption">
@@ -3018,6 +3170,8 @@ Let’s take a look at Figure
 <a href="#fig:design-principles-chart-components">50</a>. It shows basic
 chart components that are shared among most chart types.
 
+    knitr::include_graphics("images/05-chart/design-principles-chart-components.png")
+
 <img src="images/05-chart/design-principles-chart-components.png" alt="Common chart components."  />
 <p class="caption">
 Figure 50: Common chart components.
@@ -3089,6 +3243,8 @@ twice its value. The Figure
 <a href="#fig:design-principles-start-at-zero">51</a> shows a good and a
 bad example.
 
+    knitr::include_graphics("images/05-chart/design-principles-start-at-zero.png")
+
 <img src="images/05-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
 <p class="caption">
 Figure 51: Start your bar chart at zero.
@@ -3133,6 +3289,8 @@ stay away from them today. Chart junk distracts the viewer and reduces
 chart readability and comprehension. It also looks unprofessional and
 doesn’t add credibility to you as a storyteller.
 
+    knitr::include_graphics("images/05-chart/design-principles-junk.png")
+
 <img src="images/05-chart/design-principles-junk.png" alt="Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements."  />
 <p class="caption">
 Figure 52: Chart junk distracts the viewer, so stay away from shadows,
@@ -3159,6 +3317,8 @@ Arrange slices from largest to smallest, clockwise, and put the largest
 slice at 12 o’clock. Figure <a href="#fig:design-principles-pie">53</a>
 illustrates that.
 
+    knitr::include_graphics("images/05-chart/design-principles-pie.png")
+
 <img src="images/05-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o'clock."  />
 <p class="caption">
 Figure 53: Sort slices in pie charts from largest to smallest, and start
@@ -3168,6 +3328,8 @@ at 12 o’clock.
 If your pie chart has more than five slices, consider showing your data
 in a bar chart, either stacked or separated, like Figure
 <a href="#fig:design-principles-pie-to-bar">54</a> shows.
+
+    knitr::include_graphics("images/05-chart/design-principles-pie-to-bar.png")
 
 <img src="images/05-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
 <p class="caption">
@@ -3181,6 +3343,8 @@ When your column chart has long x-axis labels that have to be rotated
 it becomes a horizontal bar chart. Take a look at Figure
 <a href="#fig:design-principles-turn-bar">55</a> to see how much easier
 it is to read horizontally-oriented labels.
+
+    knitr::include_graphics("images/05-chart/design-principles-turn-bar.png")
 
 <img src="images/05-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
@@ -3197,6 +3361,8 @@ to be able to quickly look up an item, such as their town. Ordering
 categories by value is another common technique that makes comparisons
 possible. If your columns represent a value of something at a particular
 time, they have to be ordered sequentially, of course.
+
+    knitr::include_graphics("images/05-chart/design-principles-order-categories.png")
 
 <img src="images/05-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
@@ -3230,6 +3396,8 @@ people, like green/red or yellow/blue, so be very careful with those.
 Figure <a href="#fig:design-principles-color">57</a> shows some good and
 bad examples of color use.
 
+    knitr::include_graphics("images/05-chart/design-principles-color.png")
+
 <img src="images/05-chart/design-principles-color.png" alt="Don't use colors just for the sake of it."  />
 <p class="caption">
 Figure 57: Don’t use colors just for the sake of it.
@@ -3239,6 +3407,8 @@ If you follow the advice, you should end up with a de-cluttered chart as
 shown in Figure <a href="#fig:design-principles-decluttered">58</a>.
 Notice how your eyes are drawn to the bars and their corresponding
 values, not bright colors or secondary components like the axes lines.
+
+    knitr::include_graphics("images/05-chart/design-principles-decluttered.png")
 
 <img src="images/05-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
 <p class="caption">
@@ -3290,6 +3460,8 @@ between men and women, grouped together in three age brackets to allow
 for easier gender comparisons across the same ages. In the interactive
 web version, hover over columns and see tooltips with data.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-grouped.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3313,6 +3485,10 @@ The following steps will help you recreate an interactive grouped column
 3.  Select File &gt; Make a Copy to save your own version to your Google
     Drive, as shown in Figure <a href="#fig:file-make-copy2">60</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/file-make-copy2.png")
+
 <img src="images/05-chart/file-make-copy2.png" alt="Make your own copy of the Google Sheet template." width="250px" />
 <p class="caption">
 Figure 60: Make your own copy of the Google Sheet template.
@@ -3322,6 +3498,10 @@ Figure 60: Make your own copy of the Google Sheet template.
     your cursor to the top-right corner of the chart to make the 3-dot
     (kebab) menu appear, and select Delete, as shown in Figure
     <a href="#fig:delete-chart">61</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/delete-chart.png")
 
 <img src="images/05-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete." width="180px" />
 <p class="caption">
@@ -3334,6 +3514,8 @@ it resembles Middle Eastern food cooked on a skewer, in contrast to the
 three-line “hamburger menu” on many mobile devices, as shown in Figure
 <a href="#fig:menu-hamburger-kebab">62</a>.
 
+    knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
+
 <img src="images/05-chart/menu-hamburger-kebab.png" alt="You should be able to distinguish kebab from hamburger menu icons."  />
 <p class="caption">
 Figure 62: You should be able to distinguish kebab from hamburger menu
@@ -3343,6 +3525,10 @@ icons.
 1.  Format your data to make each column a data series, as shown in
     Figure <a href="#fig:column-grouped-data">63</a>, which means it
     will display as a separate color in the chart.
+
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/column-grouped-data.png")
 
 <img src="images/05-chart/column-grouped-data.png" alt="Format data in columns to make colored grouped columns in your chart." width="350px" />
 <p class="caption">
@@ -3354,6 +3540,10 @@ your chart.
     to the Insert menu and select Chart, as shown in Figure
     <a href="#fig:column-grouped-insert">64</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/column-grouped-insert.png")
+
 <img src="images/05-chart/column-grouped-insert.png" alt="Select your data and then Insert the Chart." width="250px" />
 <p class="caption">
 Figure 64: Select your data and then Insert the Chart.
@@ -3364,6 +3554,10 @@ Figure 64: Select your data and then Insert the Chart.
     <a href="#fig:column-grouped-editor">65</a>. Or select *Horizontal
     bar chart* if you have longer labels.
 
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/column-grouped-editor.png")
+
 <img src="images/05-chart/column-grouped-editor.png" alt="Change the default to Column chart, with Stacking none." width="250px" />
 <p class="caption">
 Figure 65: Change the default to Column chart, with Stacking none.
@@ -3372,6 +3566,10 @@ Figure 65: Change the default to Column chart, with Stacking none.
 1.  To customize title, labels, and more, in the Chart Editor select
     Customize, as shown in Figure
     <a href="#fig:chart-editor-customize">66</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/chart-editor-customize.png")
 
 <img src="images/05-chart/chart-editor-customize.png" alt="Select Customize to edit title, labels, and more." width="250px" />
 <p class="caption">
@@ -3385,6 +3583,10 @@ Figure 66: Select Customize to edit title, labels, and more.
     no longer Restricted to only you, but can be viewed by anyone with
     the link. See additional options.
 
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/share-button-sheet-annotated.png")
+
 <img src="images/05-chart/share-button-sheet-annotated.png" alt="Click the Share button and then click *Change to anyone with the link* to make your data public." width="350px" />
 <p class="caption">
 Figure 67: Click the Share button and then click *Change to anyone with
@@ -3397,6 +3599,10 @@ the link* to make your data public.
     <a href="#fig:chart-publish">68</a>. In the next screen, select
     Embed and press the Publish button. See [Chapter 7 Embed on the
     Web](embed.html) to learn what to do with the iframe code.
+
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/chart-publish.png")
 
 <img src="images/05-chart/chart-publish.png" alt="Select Publish Chart to embed an interactive chart on another web page, as described in Chapter 7." width="200px" />
 <p class="caption">
@@ -3421,6 +3627,8 @@ and McDonald’s. Unlike the grouped column chart in Figure
 each other, because we do not need to make comparisons between
 sub-groups.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive") else knitr::include_graphics("images/05-chart/bar-separated.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3435,6 +3643,8 @@ how you structure your data. To make Google Sheets separate columns or
 bars, you need to leave some cells blank, as shown in Figure
 <a href="#fig:bar-separated-data">70</a>. The rest of the steps remain
 the same as above.
+
+     knitr::include_graphics("images/05-chart/bar-separated-data.png")
 
 <img src="images/05-chart/bar-separated-data.png" alt="Create a separated column or bar chart by leaving some cells blank."  />
 <p class="caption">
@@ -3455,6 +3665,8 @@ For example, the stacked column chart in Figure
 overweight residents across nations, where colors allow for easy
 comparisons of weight-group subcategories across nations.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-stacked.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3469,6 +3681,8 @@ each column will become a new series with its own color, as shown in
 Figure <a href="#fig:column-stacked-data">72</a>. Then in the Chart
 Editor window, choose Chart Type &gt; Stacked column chart (or Stacked
 bar chart). The rest of the steps are similar to the ones above.
+
+     knitr::include_graphics("images/05-chart/column-stacked-data.png")
 
 <img src="images/05-chart/column-stacked-data.png" alt="Create a stacked column or bar chart by structuring your data as shown." width="350px" />
 <p class="caption">
@@ -3519,6 +3733,8 @@ Select two columns with the data you want to visualize, and go to Insert
 type &gt; Column chart. See the result in Figure
 <a href="#fig:histogram">73</a>
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive") else knitr::include_graphics("images/05-chart/histogram.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3568,6 +3784,8 @@ approximately 55% were bananas. This example is illustrated in Figure
 all* other items that your store has sold (for example, you include
 pizzas but exclude ice cream), your pie chart would not make sense.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive") else knitr::include_graphics("images/05-chart/pie.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3608,6 +3826,8 @@ in the US for the past 110 years. You can see that the level of chicken
 (shown in light-green) rises steadily and surpasses beef (blue) and pork
 (gray).
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive") else knitr::include_graphics("images/05-chart/line.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3622,6 +3842,8 @@ The simplest way to organize your data is to use the first column as
 x-axis labels, and each additional column as a new series (which will
 become its own line). For example, the meat data from the line chart is
 structured as shown in Figure <a href="#fig:line-data">76</a>.
+
+    knitr::include_graphics("images/05-chart/line-data.png")
 
 <img src="images/05-chart/line-data.png" alt="Data for the line chart shown in Figure 75." width="250px" />
 <p class="caption">
@@ -3652,6 +3874,8 @@ Figure <a href="#fig:stacked-area">77</a>. Here, we can still see that
 chicken has been on the rise since the 1970s. We can also see that the
 total availability was on the rise between 1910 and 1970 with a small
 dip around 1930s, and it didn’t change much between 1970 and 2017.
+
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive") else knitr::include_graphics("images/05-chart/stacked-area.png")
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
@@ -3708,6 +3932,8 @@ have lower fertility. Remember that correlation does not mean causation,
 so you cannot use this chart to argue that fewer births result in longer
 lives, or that longer-living females give birth to fewer children.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;format=interactive") else knitr::include_graphics("images/05-chart/scatter.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3729,6 +3955,8 @@ the dataset. Notice that the data is structured in three columns. The
 first column, *Life Expectancy*, is plotted on the x-axis (horizontal).
 The second column, *Fertility*, is plotted on the y-axis (vertical). The
 third column contains *Country* labels.
+
+    knitr::include_graphics("images/05-chart/scatter-data.png")
 
 <img src="images/05-chart/scatter-data.png" alt="Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels." width="350px" />
 <p class="caption">
@@ -3758,6 +3986,8 @@ Expectancy), then *Select a data range* button in the upper-right corner
 of the dropdown, and choose cells in the relevant columns. Make sure to
 include the header (first row) if all other data ranges include it.
 
+    knitr::include_graphics("images/05-chart/scatter-labels-annotated.png")
+
 <img src="images/05-chart/scatter-labels-annotated.png" alt="In the chart's Setup window, choose *Add labels* to the Series." width="350px" />
 <p class="caption">
 Figure 80: In the chart’s Setup window, choose *Add labels* to the
@@ -3785,6 +4015,8 @@ data as our scatterplot on life expectancy vs fertility.
 In the interactive version of the chart, hover your cursor over each
 bubble (dot) to reveal a tooltip with the country name and the two data
 points.
+
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive") else knitr::include_graphics("images/05-chart/bubble-3.png")
 
 <iframe src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
@@ -3831,6 +4063,8 @@ population (shown by bubble size) and region (shown by bubble color).
 Float your cursor over bubbles to view data details in the interactive
 version of the chart.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive") else knitr::include_graphics("images/05-chart/bubble-5.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3847,6 +4081,8 @@ with 5 columns
 template](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/).
 The columns are arranged in the following order: country label, x-axis
 value, y-axis value, color, and bubble size.
+
+    knitr::include_graphics("images/05-chart/bubble-5-data.png")
 
 <img src="images/05-chart/bubble-5-data.png" alt="Bubble chart data. Bubble size represents population, color – region." width="400px" />
 <p class="caption">
@@ -3905,6 +4141,8 @@ over points to view specific details.
 Figure <a href="#fig:tableau-xy-demo">84</a> illustrates a strong
 relationship between Connecticut school district income and test scores.
 
+    if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-xy-demo.png")
+
 <iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="100%" height="500px">
 </iframe>
 <p class="caption">
@@ -3952,6 +4190,10 @@ and Discover.
     successfully connected one data source to Tableau Public, and you
     are ready to build your first chart.
 
+<!-- -->
+
+    knitr::include_graphics("images/05-chart/tableau-connect-annotated.png")
+
 <img src="images/05-chart/tableau-connect-annotated.png" alt="Drag `data` sheet into *Drag tables here* area."  />
 <p class="caption">
 Figure 85: Drag `data` sheet into *Drag tables here* area.
@@ -3987,6 +4229,10 @@ Figure 85: Drag `data` sheet into *Drag tables here* area.
     chart in the charting area. If you hover over points, you will see
     all three values associated with it.
 
+<!-- -->
+
+    knitr::include_graphics("images/05-chart/tableau-xy-dragging-annotated.png")
+
 <img src="images/05-chart/tableau-xy-dragging-annotated.png" alt="Drag data fields to the right places in Tableau."  />
 <p class="caption">
 Figure 86: Drag data fields to the right places in Tableau.
@@ -4006,6 +4252,8 @@ appeared, and edit the text.
 
 As a result, your final worksheet will look like shown in Figure
 <a href="#fig:tableau-xy-final">87</a>.
+
+    knitr::include_graphics("images/05-chart/tableau-xy-final-annotated.png")
 
 <img src="images/05-chart/tableau-xy-final-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
@@ -4033,6 +4281,10 @@ To publish the chart to the web,
     <a href="#fig:tableau-toolbar-settings">88</a>), and enable/disable
     it as you think is appropriate. As advocates for open and accessible
     data, we recommend leaving the box checked.
+
+<!-- -->
+
+    knitr::include_graphics("images/05-chart/tableau-toolbar-settings-annotated.png")
 
 <img src="images/05-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
@@ -4070,6 +4322,8 @@ attached to it.
 We will use % Population with Internet Access by the World Bank. You can
 download the dataset
 [here](data/world-bank-internet-users-1995-2018.csv).
+
+    if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-filtered-demo.png")
 
 <iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="100%" height="500px">
 </iframe>
@@ -4119,6 +4373,10 @@ To build a line chart,
     options, and add a few of your favorite countries to see how the
     interactive filtering works.
 
+<!-- -->
+
+    knitr::include_graphics("images/05-chart/tableau-filtered-show-filter.png")
+
 <img src="images/05-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
 <p class="caption">
 Figure 90: After you drag Country Name to the Filters card, make sure
@@ -4144,6 +4402,8 @@ empty space on the edges has disappeared.
 
 Once your filtered line chart looks like the one shown in Figure
 <a href="#fig:tableau-filtered-ready">91</a>, you are ready to publish.
+
+    knitr::include_graphics("images/05-chart/tableau-filtered-ready.png")
 
 <img src="images/05-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
 <p class="caption">
@@ -4463,6 +4723,10 @@ errors](images/06-map/mymaps-fix-errors.png)
 1.  To style the map markers, click Individual Styles. In this sample
     data, you can select Group Places By &gt; Style By &gt; Group. This
     will color markers according to the three categories.
+
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/06-map/mymaps-style-groups-640w.gif") else knitr::include_graphics("images/placeholder.jpg")
 
 <iframe src="images/06-map/mymaps-style-groups-640w.gif" width="100%" height="400px">
 </iframe>
@@ -5612,6 +5876,8 @@ Your goal is to create your own version of this simple interactive map,
 with your edits, as shown in Figure
 <a href="#fig:leaflet-simple">92</a>.
 
+    if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-map-simple/") else knitr::include_graphics("images/08-github/leaflet-simple.png")
+
 <iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -5636,6 +5902,10 @@ wisest choice for a username, if `BrownieChef` is also available.
     our repo, as shown in Figure
     <a href="#fig:leaflet-simple-template">93</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-template.png")
+
 <img src="images/08-github/leaflet-simple-template.png" alt="Click *Use this template* to make your own copy."  />
 <p class="caption">
 Figure 93: Click *Use this template* to make your own copy.
@@ -5645,6 +5915,10 @@ Figure 93: Click *Use this template* to make your own copy.
     copy of the repo `leaflet-map-simple`, the same as ours, as shown in
     Figure <a href="#fig:leaflet-simple-name">94</a>. Click the green
     *Create repository from template* button.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-name.png")
 
 <img src="images/08-github/leaflet-simple-name.png" alt="Name your copied repo `leaflet-map-simple`." width="600" />
 <p class="caption">
@@ -5679,6 +5953,10 @@ your GitHub account, and it contains only three files:
 1.  Click on the `index.html` file to view the code, as shown in Figure
     <a href="#fig:leaflet-simple-index">95</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-index.png")
+
 <img src="images/08-github/leaflet-simple-index.png" alt="Click the index.html file to view the code." width="250" />
 <p class="caption">
 Figure 95: Click the index.html file to view the code.
@@ -5701,6 +5979,10 @@ below.
     corner, as shown in Figure
     <a href="#fig:leaflet-simple-edit">96</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-edit.png")
+
 <img src="images/08-github/leaflet-simple-edit.png" alt="Click the pencil button to edit the code."  />
 <p class="caption">
 Figure 96: Click the pencil button to edit the code.
@@ -5718,6 +6000,10 @@ HTML division tag block around lines 21-23.
 2.  To save your edit, scroll to the bottom of the page and click the
     green *Commit Changes* button, as shown in Figure
     <a href="#fig:leaflet-simple-commit">97</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-commit.png")
 
 <img src="images/08-github/leaflet-simple-commit.png" alt="Click the green *Commit Changes* button to save your edits." width="450" />
 <p class="caption">
@@ -5750,6 +6036,10 @@ host it online.
     click the *Settings* button as shown in Figure
     <a href="#fig:leaflet-simple-settings">98</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-settings.png")
+
 <img src="images/08-github/leaflet-simple-settings.png" alt="Click the *Settings* button to access GitHub Pages and publish your work on the web."  />
 <p class="caption">
 Figure 98: Click the *Settings* button to access GitHub Pages and
@@ -5764,6 +6054,10 @@ publish your work on the web.
     step tells GitHub to publish a live version of your map on the
     public web, where anyone can access it in their browser, if they
     have the web address.
+
+<!-- -->
+
+    knitr::include_graphics("images/08-github/leaflet-github-pages.png")
 
 <img src="images/08-github/leaflet-github-pages.png" alt="In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Master*." width="500" />
 <p class="caption">
@@ -5782,6 +6076,10 @@ and screenshots. See more at
     address where your live map has been published online, and
     right-click it to open in a new browser tab, as shown in Figure
     <a href="#fig:leaflet-github-pages-link">100</a>.
+
+<!-- -->
+
+    knitr::include_graphics("images/08-github/leaflet-github-pages-link.png")
 
 <img src="images/08-github/leaflet-github-pages-link.png" alt="In *Settings* for *GitHub Pages*, right-click your published map link to open in a new tab." width="600" />
 <p class="caption">
@@ -5835,6 +6133,10 @@ live map, instead of *our* live map.
     on the repo title to return to its home page, as shown in Figure
     <a href="#fig:leaflet-click-title">101</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-click-title.png")
+
 <img src="images/08-github/leaflet-click-title.png" alt="On your first browser tab, click the repo title." width="450" />
 <p class="caption">
 Figure 101: On your first browser tab, click the repo title.
@@ -5845,6 +6147,10 @@ Figure 101: On your first browser tab, click the repo title.
     <a href="#fig:leaflet-paste-link">102</a>. Paste your live web link
     under the label *(replace with link to your site)* and scroll down
     to commit the change.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-paste-link.png")
 
 <img src="images/08-github/leaflet-paste-link.png" alt="Open and edit the `README` file to paste the link to your live map." width="600" />
 <p class="caption">
@@ -5961,6 +6267,10 @@ summarized in these three steps:
     contents of the repo to your local computer, and it may ask you
     where you wish to save it. Decide on a location and click OK.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/repo-code-download.png")
+
 <img src="images/08-github/repo-code-download.png" alt="Click *Code* and select *Download Zip* to create a compressed folder of a repo on your computer." width="350" />
 <p class="caption">
 Figure 103: Click *Code* and select *Download Zip* to create a
@@ -5979,6 +6289,10 @@ compressed folder of a repo on your computer.
     plus (+) symbol in the upper-right corner of your account, and
     select *New repository*, as shown in Figure
     <a href="#fig:repo-create-new">104</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/repo-create-new.png")
 
 <img src="images/08-github/repo-create-new.png" alt="Click the plus (+) symbol in upper-right corner to create a new repo." width="300" />
 <p class="caption">
@@ -5999,6 +6313,8 @@ which in this case is *MIT License*. Other fields are optional. Click
 the green *Create Repository* button at the bottom when done, as shown
 in Figure <a href="#fig:repo-create-options">105</a>.
 
+     knitr::include_graphics("images/08-github/repo-create-options.png")
+
 <img src="images/08-github/repo-create-options.png" alt="Name your new repo *practice*, check the box to *Initialize this repo with a README*, and *Add a license* (select *MIT*) to match any code you plan to upload." width="400" />
 <p class="caption">
 Figure 105: Name your new repo *practice*, check the box to *Initialize
@@ -6013,6 +6329,10 @@ Your new repo will have a web address similar to
     drop-down menu button, near the middle of the screen, as shown in
     Figure <a href="#fig:repo-upload-files">106</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/repo-upload-files.png")
+
 <img src="images/08-github/repo-upload-files.png" alt="Click the *Upload Files* button." width="350" />
 <p class="caption">
 Figure 106: Click the *Upload Files* button.
@@ -6024,6 +6344,10 @@ Figure 106: Click the *Upload Files* button.
     <a href="#fig:repo-drag-index">107</a>. Do not upload `LICENSE` or
     `README.md` because your new repo already contains those two files.
     Scroll down to click the green *Commit Changes* button.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/repo-drag-index-annotated.png")
 
 <img src="images/08-github/repo-drag-index-annotated.png" alt="Drag-and-drop the `index.html` file to the upload screen."  />
 <p class="caption">
@@ -6049,6 +6373,10 @@ chapter.
     <a href="#fig:repo-delete">108</a>. GitHub will ask you to type in
     your username and repo name to ensure that you really want to delete
     the repo, to prove you are not a drunken brownie chef.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/repo-delete.png")
 
 <img src="images/08-github/repo-delete.png" alt="After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm." width="600" />
 <p class="caption">
@@ -6102,6 +6430,10 @@ push your commits back up to GitHub.
     show a link to the GitHub Desktop web page, and you should download
     and install the application.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-open.png")
+
 <img src="images/08-github/desktop-open.png" alt="In your GitHub repo on the web, click *Add file* to *Open with GitHub Desktop* to download and install GitHub Desktop." width="350" />
 <p class="caption">
 Figure 109: In your GitHub repo on the web, click *Add file* to *Open
@@ -6117,6 +6449,10 @@ with GitHub Desktop* to download and install GitHub Desktop.
     click the green *Authorize desktop* button to confirm that you wish
     to connect to your account.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-signin.png")
+
 <img src="images/08-github/desktop-signin.png" alt="Click the blue *Sign in to GitHub.com* button to link GitHub Desktop to your GitHub account." width="500" />
 <p class="caption">
 Figure 110: Click the blue *Sign in to GitHub.com* button to link GitHub
@@ -6127,6 +6463,10 @@ Desktop to your GitHub account.
     the underlying software that runs GitHub. Confirm that it displays
     your username and click *Continue*, as shown in Figure
     <a href="#fig:desktop-configure">111</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-configure.png")
 
 <img src="images/08-github/desktop-configure.png" alt="Click the *Continue* button to authorize GitHub Desktop to send commits to your GitHub account." width="500" />
 <p class="caption">
@@ -6139,6 +6479,10 @@ send commits to your GitHub account.
     `leaflet-map-sample`, and further below click the blue button to
     *Clone* it to your local computer, as shown in Figure
     <a href="#fig:desktop-start">112</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-start-annotated.png")
 
 <img src="images/08-github/desktop-start-annotated.png" alt="Select your *leaflet-map-simple* repo and click the *Clone* button to copy it to your local computer."  />
 <p class="caption">
@@ -6153,6 +6497,10 @@ button to copy it to your local computer.
     *Clone* button, remember the path to this location, since you’ll
     need to find it later.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-clone-path.png")
+
 <img src="images/08-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click *Clone*." width="500" />
 <p class="caption">
 Figure 113: Select the Local Path where your repo will be stored on your
@@ -6165,6 +6513,10 @@ computer, then click *Clone*.
     your GitHub web account, and click *Continue*, as shown in Figure
     <a href="#fig:desktop-fork">114</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-fork.png")
+
 <img src="images/08-github/desktop-fork.png" alt="If asked how you plan to use this fork, select the default *To contribute to the parent project* and click *Continue*." width="500" />
 <p class="caption">
 Figure 114: If asked how you plan to use this fork, select the default
@@ -6176,6 +6528,10 @@ Figure 114: If asked how you plan to use this fork, select the default
     <a href="#fig:desktop-finder">115</a>. Your screen may look
     different, depending on whether you use Windows or Mac, and the
     Local Path you selected to store your files.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-finder.png")
 
 <img src="images/08-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different." width="500" />
 <p class="caption">
@@ -6190,6 +6546,10 @@ in the Mac Finder). Windows screens will look different.
     `leaflet-map-simple`, and click the *Open in Atom* button as shown
     in Figure <a href="#fig:desktop-atom">116</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-atom-annotated.png")
+
 <img src="images/08-github/desktop-atom-annotated.png" alt="In GitHub Desktop, confirm the Current Repo and click the *Open in Atom* button to edit the code."  />
 <p class="caption">
 Figure 116: In GitHub Desktop, confirm the Current Repo and click the
@@ -6202,6 +6562,10 @@ Figure 116: In GitHub Desktop, confirm the Current Repo and click the
     Figure <a href="#fig:atom-project">117</a>. Open your `index.html`
     file and edit the title of your map, around line 22, then save your
     work.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/atom-project-annotated.png")
 
 <img src="images/08-github/atom-project-annotated.png" alt="Atom Editor opens your repo as a *project*, where you can click files to view code. Edit your map title."  />
 <p class="caption">
@@ -6216,6 +6580,10 @@ click files to view code. Edit your map title.
     Atom Editor, you can right-click to *Add Project Folder*, and choose
     any GitHub repo that you have copied to your local computer.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/atom-remove-project-annotated.png")
+
 <img src="images/08-github/atom-remove-project-annotated.png" alt="To clean up your Atom Editor workspace, right-click to *Remove Project Folder*."  />
 <p class="caption">
 Figure 118: To clean up your Atom Editor workspace, right-click to
@@ -6228,6 +6596,10 @@ Figure 118: To clean up your Atom Editor workspace, right-click to
     right-click the `index.html` file, select Open With, and choose your
     preferred web browser, as shown in Figure
     <a href="#fig:finder-open-with">119</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/finder-open-with.png")
 
 <img src="images/08-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
 <p class="caption">
@@ -6257,6 +6629,10 @@ Desktop.
     transfer those edits to the parent copy of your repo on your GitHub
     web account. Both steps are shown in Figure
     <a href="#fig:desktop-commit-push">120</a>.
+
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/08-github/desktop-commit-push.gif", height = "500px") else knitr::include_graphics("images/08-github/desktop-commit-push-annotated.png")
 
 <iframe src="images/08-github/desktop-commit-push.gif" width="100%" height="500px">
 </iframe>
@@ -6308,6 +6684,8 @@ other made, line-by-line in green and red (showing additions and
 deletions), by selecting the GitHub repo *Code* tab and clicking on one
 of our commits, as shown in Figure
 <a href="#fig:compare-commits">121</a>.
+
+     knitr::include_graphics("images/08-github/compare-commits.png")
 
 <img src="images/08-github/compare-commits.png" alt="Drag-and-drop the file to the upload screen."  />
 <p class="caption">
@@ -7005,6 +7383,8 @@ GitHub](create-repo.html) chapter in this book.
 
     https://USERNAME.github.io/leaflet-maps-with-google-sheets
 
+    if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-1-fork-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+
 <iframe src="images/10-leaflet/lmwgs-1-fork-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -7039,6 +7419,10 @@ Figure 122: Screencast: Fork
     to Anyone with the link &gt; Can View the Sheet. This will make your
     public data easier to view in your map.
 
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-2-make-copy-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+
 <iframe src="images/10-leaflet/lmwgs-2-make-copy-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -7071,6 +7455,10 @@ URL](images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 
 4.  Scroll to bottom of page and press Commit to save your changes. Now
     the Leaflet Map code can locate your published Google Sheet.
+
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif") else knitr::include_graphics("images/placeholder.jpg")
 
 <iframe src="images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="100%" height="400px">
 </iframe>
@@ -7963,6 +8351,8 @@ before creating choropleth maps. These map transformations happen inside
 spreadsheets, so you won’t directly deal with map data until you are
 halfway through the chapter.
 
+    knitr::include_graphics("images/11-transform/transform-data.png")
+
 <img src="images/11-transform/transform-data.png" alt="To map addresses, you need to geocode them first."  />
 <p class="caption">
 Figure 125: To map addresses, you need to geocode them first.
@@ -8002,6 +8392,8 @@ window with its latitude and longitude, as shown in Figure
 coordinates into your spreadsheet. Similar tools also geocode one place
 at a time, such as [LatLong.net](https://www.latlong.net/).
 
+    knitr::include_graphics("images/11-transform/gmaps-whats-here.png")
+
 <img src="images/11-transform/gmaps-whats-here.png" alt="To geocode one address, search in Google Maps and right-click *What's here?* to show coordinates."  />
 <p class="caption">
 Figure 126: To geocode one address, search in Google Maps and
@@ -8038,6 +8430,8 @@ The spreadsheet contains six columns. Populate the first column,
 filled by the geocoding script. Select all six columns, go to *Geocoder*
 in the menu, and choose which geocoding utility to use, like is shown in
 Figure <a href="#fig:sheets-geocoder">127</a>.
+
+    if(knitr::is_html_output()) knitr::include_url("images/11-transform/sheets-geocoder.gif", height="280px") else knitr::include_graphics("images/11-transform/sheets-geocoder.png")
 
 <iframe src="images/11-transform/sheets-geocoder.gif" width="100%" height="280px">
 </iframe>
@@ -8102,6 +8496,8 @@ for permission to run, and will possibly warn you that this script is
 unsafe. Once again, you shouldn’t worry. The plugin is open-source and
 you can inspect it to make sure it doesn’t steal or retain your personal
 data.
+
+    if(knitr::is_html_output()) knitr::include_url("images/11-transform/sheets-geocoder-censusgeo.gif", height="330px") else knitr::include_graphics("images/11-transform/sheets-geocoder-censusgeo.png")
 
 <iframe src="images/11-transform/sheets-geocoder-censusgeo.gif" width="100%" height="330px">
 </iframe>
@@ -8226,6 +8622,8 @@ shades of blue to represent states with more hospitals (as in Figure
 
 or choropleth, maps instead of point maps.
 
+    knitr::include_graphics("images/11-transform/pivot-address-annotated.png")
+
 <img src="images/11-transform/pivot-address-annotated.png" alt="You can count addresses by state (or other area) to produce polygon,"  />
 <p class="caption">
 Figure 129: You can count addresses by state (or other area) to produce
@@ -8236,6 +8634,8 @@ First, save the database to your local machine by going to *Export &gt;
 Download &gt; CSV* of Socrata interface. Figure
 <a href="#fig:pivot-address-export">130</a> shows where you can find the
 Export button.
+
+    knitr::include_graphics("images/11-transform/pivot-address-export.png")
 
 <img src="images/11-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
 <p class="caption">
@@ -8250,6 +8650,8 @@ data range is selected, and click *Create*). In the pivot table, set
 *Rows* to *State*, because we want to get counts by state. Next, set
 pivot table’s *Values* to *State*—or really any other column that has no
 missing values—and choose *Summarize by: COUNTA*. Voila!
+
+    knitr::include_graphics("images/11-transform/pivot-address-sheet.png")
 
 <img src="images/11-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
@@ -8279,6 +8681,8 @@ number of recorded cases per state, and Figure
 <a href="#fig:normalize-map-data">132</a>b shows Covid-19 cases adjusted
 by the state’s population. Darker colors represent higher values. Do you
 notice any differences in spatial patterns?
+
+    knitr::include_graphics("images/11-transform/normalize-map-data-annotated.png")
 
 <img src="images/11-transform/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
 <p class="caption">
@@ -8400,6 +8804,8 @@ lakes, roads, and other objects. These outlines become vector data. For
 example, most of [OpenStreetMap](https://www.openstreetmap.org) was
 built by volunteers tracing outlines of objects from satellite images.
 
+    knitr::include_graphics("images/11-transform/geospatial-raster-vector-annotated.png")
+
 <img src="images/11-transform/geospatial-raster-vector-annotated.png" alt="Geospatial data can be raster or vector."  />
 <p class="caption">
 Figure 133: Geospatial data can be raster or vector.
@@ -8450,6 +8856,8 @@ GIS software installed.
 Also, your GitHub repository will automatically display any GeoJSON
 files in a map view, like is shown in Figure
 <a href="#fig:geojson-github">134</a>.
+
+    knitr::include_graphics("images/11-transform/geojson-github.png")
 
 <img src="images/11-transform/geojson-github.png" alt="GitHub can show previews of GeoJSON files stored in repositories."  />
 <p class="caption">
@@ -8559,6 +8967,8 @@ Note: If GeoJson.io couldn’t import your file, you will see a red popup
 saying it “Could not detect file type”. You will need to use a different
 tool, such as Mapshaper or QGIS, to convert your file to GeoJSON.
 
+    knitr::include_graphics("images/11-transform/geojson-io-import.png")
+
 <img src="images/11-transform/geojson-io-import.png" alt="GeoJson.io successfully imported Hartford parks KML file."  />
 <p class="caption">
 Figure 135: GeoJson.io successfully imported Hartford parks KML file.
@@ -8576,6 +8986,8 @@ than *lat* and *lon* become *attributes* (or *properties*) of point
 features. An example of such spreadsheet is shown in Figure
 <a href="#fig:geojson-io-csv-data">136</a>. You can [download
 it](data/hartford-and-suburbs.csv) for the exercise.
+
+    knitr::include_graphics("images/11-transform/geojson-io-csv-data.png")
 
 <img src="images/11-transform/geojson-io-csv-data.png" alt="A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features."  />
 <p class="caption">
@@ -8614,6 +9026,10 @@ feature* button.
     GeoJson.io with your GitHub account and save directly to your
     repository.
 
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/11-transform/dataviz-geojsonio-640.gif", height="466px")
+
 <iframe src="images/11-transform/dataviz-geojsonio-640.gif" width="100%" height="466px">
 </iframe>
 <p class="caption">
@@ -8635,6 +9051,10 @@ GeoJSON file and add markers, lines, and polygons to it.
     the area you’re interested in mapping. For this exercise, we will
     use tennis courts at Trinity College, Hartford, as shown in Figure
     <a href="#fig:geojson-io-draw">138</a>.
+
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/geojson-io-draw.png")
 
 <img src="images/11-transform/geojson-io-draw.png" alt="Use drawing tools to create points, lines, and polygons in GeoJson.io."  />
 <p class="caption">
@@ -8734,6 +9154,10 @@ or create a `.zip` archive.
     time, Mapshaper will archive them first, and you will download an
     `output.zip` that contains all exported layers.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-export.png")
+
 <img src="images/11-transform/mapshaper-export.png" alt="You can use Mapshaper to quickly convert between geospatial file formats."  />
 <p class="caption">
 Figure 139: You can use Mapshaper to quickly convert between geospatial
@@ -8757,6 +9181,10 @@ you how.
 5.  When you are done, export your geospatial file by clicking *Export*
     and choosing the desired file format.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-edit.png")
+
 <img src="images/11-transform/mapshaper-edit.png" alt="Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points."  />
 <p class="caption">
 Figure 140: Use *edit attributes* tool (under Cursor tool) to edit
@@ -8776,6 +9204,8 @@ Figure <a href="#fig:mapshaper-simplify-demo">141</a>. The map in Figure
 about 230 kilobytes, but the map in Figure
 <a href="#fig:mapshaper-simplify-demo">141</a>b is only 37 kilobytes, 6
 times smaller!
+
+    knitr::include_graphics("images/11-transform/mapshaper-simplify-demo-annotated.png")
 
 <img src="images/11-transform/mapshaper-simplify-demo-annotated.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
 <p class="caption">
@@ -8800,6 +9230,10 @@ To simplify map boundaries in Mapshaper, follow the steps below.
     corner. Click *Repair*.
 5.  You can now export your file using the *Export* feature.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-simplify.png")
+
 <img src="images/11-transform/mapshaper-simplify.png" alt="Use Simplify & Repair tools in Mapshaper."  />
 <p class="caption">
 Figure 142: Use Simplify & Repair tools in Mapshaper.
@@ -8817,6 +9251,8 @@ such tasks is to create an outline map by removing the internal
 boundaries. For example, you can dissolve state boundaries of the US map
 in the previous exercise to get the outline of the country, like is
 shown in Figure <a href="#fig:mapshaper-dissolve">143</a>.
+
+    knitr::include_graphics("images/11-transform/mapshaper-dissolve.png")
 
 <img src="images/11-transform/mapshaper-dissolve.png" alt="Mapshaper lets you dissolve boundaries to create an outline shape."  />
 <p class="caption">
@@ -8870,6 +9306,10 @@ Mapshaper allows you to do just that using one simple `-clip` command.
 1.  Your Mapshaper state should look like pictured in Figure
     <a href="#fig:mapshaper-clip">144</a>. You can now save the file on
     your computer using the *Export* button.
+
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-clip.png")
 
 <img src="images/11-transform/mapshaper-clip.png" alt="When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature iteslf."  />
 <p class="caption">
@@ -8937,6 +9377,10 @@ attribute of the map file, and `town` column of the CSV file.
 3.  You can now save the file to your computer by clicking the *Export*
     button.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-join.png")
+
 <img src="images/11-transform/mapshaper-join.png" alt="Mapshaper lets you join spatial and CSV files using common keys (for example, town names)."  />
 <p class="caption">
 Figure 145: Mapshaper lets you join spatial and CSV files using common
@@ -8985,6 +9429,10 @@ state, in our case).
 
 2.  Save the new file using *Export* button and choosing the desired
     output format.
+
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-count-points.png")
 
 <img src="images/11-transform/mapshaper-count-points.png" alt="Mapshaper's -join can count points in polygons."  />
 <p class="caption">
@@ -9065,6 +9513,10 @@ town boundaries, let’s extract a list of towns from it.
     stop right here and move to the next step, or keep assigning
     district names to a few other neighboring towns.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-merge-csv.png")
+
 <img src="images/11-transform/mapshaper-merge-csv.png" alt="Create a two-column crosswalk of towns and which districts they should be merged to." width="250px" />
 <p class="caption">
 Figure 147: Create a two-column crosswalk of towns and which districts
@@ -9096,6 +9548,8 @@ combined “Bloomfield-West Hartford” regional health district (with the
 shared boundary between towns becoming grayed out), and all of the other
 polygons remain the same. Figure <a href="#fig:mapshaper-merge">148</a>
 shows the final result.
+
+    knitr::include_graphics("images/11-transform/mapshaper-merge.png")
 
 <img src="images/11-transform/mapshaper-merge.png" alt="Merge polygons based on a predefined crosswalk."  />
 <p class="caption">
@@ -9138,6 +9592,10 @@ Google Earth).
     and select *Save Place As…*, like is shown in Figure
     <a href="#fig:kmz-earth">149</a>.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/kmz-earth.png")
+
 <img src="images/11-transform/kmz-earth.png" alt="In Google Earth Pro, right-click the KMZ layer and choose *Save Place As*." width="400px" />
 <p class="caption">
 Figure 149: In Google Earth Pro, right-click the KMZ layer and choose
@@ -9146,6 +9604,10 @@ Figure 149: In Google Earth Pro, right-click the KMZ layer and choose
 
 1.  In the dropdown menu of *Save file…* window, choose KML format, like
     is shown in Figure <a href="#fig:kmz-save-as">150</a>.
+
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/kmz-save-as.png")
 
 <img src="images/11-transform/kmz-save-as.png" alt="Save as KML, not KMZ." width="350px" />
 <p class="caption">
@@ -9382,6 +9844,8 @@ Mac computer operating system hides these by default, so you need to
 turn them on by going to Finder &gt; Preferences &gt; Advanced, and
 check the box to *Show all filename extensions*, as shown in Figure
 <a href="#fig:mac-file-extensions2">151</a>.
+
+     knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
 
 <img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to *Finder* then *Preferences* then *Advanced* and check the box to *Show all filename extensions*."  />
 <p class="caption">
@@ -10651,6 +11115,8 @@ Read more about these options in this Bookdown chapter:
 Small is defined as each side less than 300px, as shown in Figure
 <a href="#fig:tiger">152</a>.
 
+     knitr::include_graphics("images/17-bookdown/tiger.png")
+
 <img src="images/17-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
 Figure 152: Caption here. Markdown embedded links are acceptable.
@@ -10664,6 +11130,8 @@ optional to reduce float in PDF: `fig.pos='h',`. If necessary, copy the
 image, use Photoshop to create a smaller image size, and save with same
 file name and a .pdf extension for auto-substitution in the PDF output
 …as shown in Figure <a href="#fig:screenshot-tall">153</a>.
+
+     knitr::include_graphics("images/17-bookdown/screenshot-tall.png")
 
 <img src="images/17-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
 <p class="caption">
@@ -10682,6 +11150,8 @@ add a line in a `custom-scripts.html` file.
 
 …as shown in Figure <a href="#fig:sample-map">154</a>.
 
+    if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "600px") else knitr::include_graphics("images/17-bookdown/sample-map.jpg")
+
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="100%" height="600px">
 </iframe>
 <p class="caption">
@@ -10696,6 +11166,8 @@ When appropriate, create animated GIF files using Camtasia, and add
 fade-to-black to mark the end-point in the looped version. Add …as shown
 in Figure <a href="#fig:sheets-option-drag">155</a>.
 
+    if(knitr::is_html_output()) knitr::include_url("images/17-bookdown/sheets-option-drag.gif", height = "250px") else knitr::include_graphics("images/17-bookdown/sheets-option-drag.png")
+
 <iframe src="images/17-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
@@ -10709,6 +11181,8 @@ Be sure to use the *embed* link from the YouTube *share* button.
 
 …as shown in the video <a href="#fig:video-sample">156</a>.
 
+    if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-nGdrzMuUnI") else knitr::include_graphics("images/17-bookdown/video-sample.png")
+
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -10721,6 +11195,8 @@ video](https://youtu.be/-nGdrzMuUnI).
 This option may be relevant when you wish to display a video only in the
 HMTL edition, with no screenshot of it in the PDF edition. Note that
 this will alter figure-numbering between the HTML and PDF editions.
+
+    if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/w6dQ-RIQ5bc")
 
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="100%" height="400px">
 </iframe>

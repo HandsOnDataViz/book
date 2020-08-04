@@ -316,6 +316,7 @@ name and data attached to it.</p>
 <p>We will use % Population with Internet Access by the World Bank. You can download the dataset
 <a href="data/world-bank-internet-users-1995-2018.csv">here</a>.</p>
 
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="filtered-line-chart-tableau.html#cb99-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true&quot;</span>, <span class="dt">height=</span><span class="st">&quot;500px&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/05-chart/tableau-filtered-demo.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:tableau-filtered-demo"></span>
 <iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
@@ -351,6 +352,7 @@ Click <em>(All)</em> to add/remove all options, and add a few of your favorite c
 how the interactive filtering works.</li>
 </ol>
 
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="filtered-line-chart-tableau.html#cb100-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/05-chart/tableau-filtered-show-filter.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:tableau-filtered-show-filter"></span>
 <img src="images/05-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
 <p class="caption">
@@ -372,6 +374,7 @@ Close the window and see that the empty space on the edges has disappeared.</p>
 <p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-ready">5.42</a>,
 you are ready to publish.</p>
 
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="filtered-line-chart-tableau.html#cb101-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/05-chart/tableau-filtered-ready.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:tableau-filtered-ready"></span>
 <img src="images/05-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
 <p class="caption">

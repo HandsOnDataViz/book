@@ -357,6 +357,7 @@ options(knitr.graphics.auto_pdf = TRUE)</code></pre>
 <h3>Demo: R code-chunk for small static image for HTML and PDF editions</h3>
 <p>Small is defined as each side less than 300px, as shown in Figure <a href="images.html#fig:tiger">D.1</a>.</p>
 
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="images.html#cb204-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/17-bookdown/tiger.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:tiger"></span>
 <img src="images/17-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
@@ -368,6 +369,7 @@ Figure D.1: Caption here. Markdown embedded links are acceptable.
 <h3>R code-chunk for larger static image using out.width and PDF img</h3>
 <p>For larger images, where one side is greater than 300px, set the out.width to a pixel number for ideal display in the HTML edition. Also optional to reduce float in PDF: <code>fig.pos='h',</code>. If necessary, copy the image, use Photoshop to create a smaller image size, and save with same file name and a .pdf extension for auto-substitution in the PDF output …as shown in Figure <a href="images.html#fig:screenshot-tall">D.2</a>.</p>
 
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="images.html#cb205-1"></a> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/17-bookdown/screenshot-tall.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:screenshot-tall"></span>
 <img src="images/17-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
 <p class="caption">
@@ -380,6 +382,7 @@ Figure D.2: Using out.width=200 and smaller PDF image size.
 <h3>Demo: R code-chunk for iframe in HTML and static image in PDF</h3>
 <p>…as shown in Figure <a href="images.html#fig:sample-map">D.3</a>.</p>
 
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="images.html#cb206-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;https://handsondataviz.github.io/leaflet-maps-with-google-sheets/&quot;</span>, <span class="dt">height =</span> <span class="st">&quot;600px&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/17-bookdown/sample-map.jpg&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:sample-map"></span>
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="672" height="600px">
 </iframe>
@@ -392,6 +395,7 @@ Figure D.3: Caption here, and add embedded link to explore the <a href="https://
 <h3>Demo: R code-chunk for animated GIF in HTML and static image in PDF</h3>
 <p>When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. Add …as shown in Figure <a href="images.html#fig:sheets-option-drag">D.4</a>.</p>
 
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="images.html#cb207-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;images/17-bookdown/sheets-option-drag.gif&quot;</span>, <span class="dt">height =</span> <span class="st">&quot;250px&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/17-bookdown/sheets-option-drag.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:sheets-option-drag"></span>
 <iframe src="images/17-bookdown/sheets-option-drag.gif" width="672" height="250px">
 </iframe>
@@ -405,6 +409,7 @@ Figure D.4: Caption here, with embedded link to the <a href="https://handsondata
 <p>Be sure to use the <em>embed</em> link from the YouTube <em>share</em> button.</p>
 <p>…as shown in the video <a href="images.html#fig:video-sample">D.5</a>.</p>
 
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="images.html#cb208-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;https://www.youtube.com/embed/-nGdrzMuUnI&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/17-bookdown/video-sample.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:video-sample"></span>
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="672" height="400px">
 </iframe>
@@ -417,6 +422,7 @@ Figure D.5: Caption here, with embedded link to the <a href="https://youtu.be/-n
 <h3>Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF</h3>
 <p>This option may be relevant when you wish to display a video only in the HMTL edition, with no screenshot of it in the PDF edition. Note that this will alter figure-numbering between the HTML and PDF editions.</p>
 
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="images.html#cb209-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;https://www.youtube.com/embed/w6dQ-RIQ5bc&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:video-sample2"></span>
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="672" height="400px">
 </iframe>

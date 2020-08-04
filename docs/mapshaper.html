@@ -344,6 +344,7 @@ Mapshaper will archive them first, and you will download an <code>output.zip</co
 all exported layers.</li>
 </ol>
 
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="mapshaper.html#cb170-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/mapshaper-export.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-export"></span>
 <img src="images/11-transform/mapshaper-export.png" alt="You can use Mapshaper to quickly convert between geospatial file formats."  />
 <p class="caption">
@@ -366,6 +367,7 @@ listing all attributes and values of the polygon.</li>
 choosing the desired file format.</li>
 </ol>
 
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="mapshaper.html#cb171-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/mapshaper-edit.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-edit"></span>
 <img src="images/11-transform/mapshaper-edit.png" alt="Use edit attributes tool (under Cursor tool) to edit attributes of polygons, lines, and points."  />
 <p class="caption">
@@ -383,6 +385,7 @@ the term Ilya learned in 2018 while travelling in Alaska), shown in Figure <a hr
 The map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">11.17</a>a is more detailed and is about 230 kilobytes, but the map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">11.17</a>b
 is only 37 kilobytes, 6 times smaller!</p>
 
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="mapshaper.html#cb172-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/mapshaper-simplify-demo-annotated.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-simplify-demo"></span>
 <img src="images/11-transform/mapshaper-simplify-demo-annotated.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
 <p class="caption">
@@ -402,6 +405,7 @@ the map looks appropriate (when the shapes are still recognizable).</li>
 <li>You can now export your file using the <em>Export</em> feature.</li>
 </ol>
 
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="mapshaper.html#cb173-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/mapshaper-simplify.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-simplify"></span>
 <img src="images/11-transform/mapshaper-simplify.png" alt="Use Simplify &amp; Repair tools in Mapshaper."  />
 <p class="caption">
@@ -419,6 +423,7 @@ One of such tasks is to create an outline map by removing the internal boundarie
 state boundaries of the US map in the previous exercise to get the outline of the country, like is shown in
 Figure <a href="mapshaper.html#fig:mapshaper-dissolve">11.19</a>.</p>
 
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="mapshaper.html#cb174-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/mapshaper-dissolve.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-dissolve"></span>
 <img src="images/11-transform/mapshaper-dissolve.png" alt="Mapshaper lets you dissolve boundaries to create an outline shape."  />
 <p class="caption">
@@ -426,7 +431,7 @@ Figure 11.19: Mapshaper lets you dissolve boundaries to create an outline shape.
 </p>
 </div>
 <p>Click the Console button, which opens a window to type in commands. Enter the command below, then press return (Enter).</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb31-1"><a href="mapshaper.html#cb31-1"></a>-dissolve</span></code></pre></div>
+<div class="sourceCode" id="cb175"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb175-1"><a href="mapshaper.html#cb175-1"></a>-dissolve</span></code></pre></div>
 <p>You will see that internal boundaries became lighter color, and that’s Mapshaper’s way of saying they no longer exist.
 You can now export your outline shape.</p>
 </div>
@@ -452,6 +457,7 @@ If that is the case, use the <code>-filter-slivers</code> command to remove them
 <li>Your Mapshaper state should look like pictured in Figure <a href="mapshaper.html#fig:mapshaper-clip">11.20</a>. You can now save the file on your computer using the <em>Export</em> button.</li>
 </ol>
 
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="mapshaper.html#cb178-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/mapshaper-clip.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-clip"></span>
 <img src="images/11-transform/mapshaper-clip.png" alt="When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature iteslf."  />
 <p class="caption">
@@ -497,6 +503,7 @@ of the CSV file.</p>
 <li>You can now save the file to your computer by clicking the <em>Export</em> button.</li>
 </ol>
 
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="mapshaper.html#cb182-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/mapshaper-join.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-join"></span>
 <img src="images/11-transform/mapshaper-join.png" alt="Mapshaper lets you join spatial and CSV files using common keys (for example, town names)."  />
 <p class="caption">
@@ -528,6 +535,7 @@ like is shown in Figure <a href="mapshaper.html#fig:mapshaper-count-points">11.2
 <li><p>Save the new file using <em>Export</em> button and choosing the desired output format.</p></li>
 </ol>
 
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="mapshaper.html#cb184-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/mapshaper-count-points.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-count-points"></span>
 <img src="images/11-transform/mapshaper-count-points.png" alt="Mapshaper’s -join can count points in polygons."  />
 <p class="caption">
@@ -582,6 +590,7 @@ to their <em>merged</em> column, like is shown in Figure <a href="mapshaper.html
 to a few other neighboring towns.</li>
 </ol>
 
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="mapshaper.html#cb187-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/mapshaper-merge-csv.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-merge-csv"></span>
 <img src="images/11-transform/mapshaper-merge-csv.png" alt="Create a two-column crosswalk of towns and which districts they should be merged to." width="250px" />
 <p class="caption">
@@ -602,6 +611,7 @@ select <em>ct-towns</em> to get back to your map.</li>
 “Bloomfield-West Hartford” regional health district (with the shared boundary between towns becoming grayed out),
 and all of the other polygons remain the same. Figure <a href="mapshaper.html#fig:mapshaper-merge">11.24</a> shows the final result.</p>
 
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="mapshaper.html#cb190-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/mapshaper-merge.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:mapshaper-merge"></span>
 <img src="images/11-transform/mapshaper-merge.png" alt="Merge polygons based on a predefined crosswalk."  />
 <p class="caption">

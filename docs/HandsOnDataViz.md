@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 30 Jul 2020
+updated on: 04 Aug 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -359,11 +359,17 @@ cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
 Choose Tools to Tell Your Data Story
 ====================================
 
-TODO: Reorganize and rewrite chapter Start with line about pushing away
-the computer and drawing out the visualization in your mind… Once you
-have a clearer mental (and physical) picture of what you seek to create,
-then choose digital tools… REVISE TITLE? – Choose Tools to Picture Your
-Data Story
+TODO: Reorganize and rewrite chapter Revise title? – Choose Tools to
+Draw Your Data Story
+
+Push away the computer and pick up some old-school tools:
+
+-   colored markers or pencils
+-   lots of blank paper
+-   your imagination
+
+Once you have a clearer mental (and physical) picture of what you seek
+to create, then choose digital tools…
 
 Do you feel overwhelmed by the enormous range of data visualization
 tools? There’s been so many different tools released in recent years
@@ -412,7 +418,14 @@ Push away the computer and pick up some old-school tools:
 First, at the top of the page, write down your data story.
 
 -   Is it in the form of a question? If so, figure out how to pose the
-    question.
+    question. \[Use some of this from ch 3? – Start the process by
+    writing down your question—literally in the form of a question,
+    punctuated with a question mark—to clarify your own thinking, and
+    also so that you can clearly communicate it to others who may be
+    assisting you. All too often, our brains automatically jump ahead to
+    try to identify the *answer*, without reflecting on the best way
+    frame the *question* in a way that does not limit the range of
+    possible results.\]
 -   Or maybe it’s in the form of an answer to that question? If so,
     spell out your clearest statement.
 -   If you’re lucky, perhaps you already can envision a full story, with
@@ -1734,219 +1747,224 @@ really know about it?* If you skip over these questions and leap too
 quickly into constructing charts and maps, you run the risk of creating
 meaningless, or perhaps worse, misleading visualizations. This chapter
 breaks down both of these broad questions, and provides concrete
-strategies to [guide your search](guide.html), [recognize bad
-data](bad.html), [source your data origins](source.html), understand
-debates about [public versus private data](public.html), and navigate a
-growing number of [open data repositories](opendata.html).
-
-Once you’ve found some data, we offer specific ways to [reflect on what
-you *really* know about it](know.html). Data does not magically appear
-out of thin air. Instead, people collect and publish information, with
-explicit or implicit purposes, in the social context of their time.
-Therefore, when working with data, we need to ask: Whose stories are
-told? Whose perspectives remain unspoken? And do labels always mean what
-they claim? As data visualization practitioners, we strongly favor
-evidence-based reasoning over less-informed alternatives. But we also
-caution against embracing so-called data objectivity. Even numbers are
-*not* neutral. Always consider the broader contexts in which people
-created information.
+strategies to [guide your search](guide.html), understand debates about
+[public and private data](public.html), navigate a growing number of
+[open data repositories](opendata.html), [source your data
+origins](source.html), and [recognize bad data](bad.html). Once you’ve
+found some files, we also ways to reflect on [what you *really* know
+about your data](know.html). Information does not magically appear out
+of thin air. Instead, people collect and publish data, with explicit or
+implicit purposes, within the social contexts and power structures of
+their times. As data visualization advocates, we strongly favor
+evidence-based reasoning over less-informed alternatives. But we caution
+against embracing so-called data objectivity, since numbers and other
+forms of data are *not* neutral. Therefore, when working with data,
+pause to inquire more deeply about *Whose stories are told?* and *Whose
+perspectives remain unspoken?* Only by asking these types of questions,
+according to *[Data Feminism](https://data-feminism.mitpress.mit.edu/)*
+authors Catherine D’Ignazio and Lauren Klein, will we “start to see how
+privilege is baked into our data practices and our data products.”[1]
 
 Guiding Questions for your Data Search
 --------------------------------------
 
-For many people, a data search is simply “Googling” key words on the
-web. Sometimes that works, and sometimes not. When that fails, we think
-about the many lessons we’ve learned from working alongside librarians,
-journalists, and researchers while data-hunting over the years.
-Sometimes they’ve impressed us by knowing *exactly* where to locate a
-specific dataset that has eluded us. But the more valuable insight we’ve
-acquired from our colleagues is set of guiding questions, which outline
-a deeper process of thinking about *how to search* for data:
+For many people, a data search is simply “Googling” some keywords on the
+web. Sometimes that works, sometimes not. When that approach flounders,
+we reflect on the many lessons we’ve learned about data-hunting while
+working alongside talented librarians, journalists, and researchers.
+Collectively, they taught us a set of guiding questions that outline a
+more thoughtful process about *how to search* for data:
 
--   Exactly what is your research question? Start the process by writing
-    down your question—literally in the form of a question, punctuated
-    with a question mark—to clarify your own thinking, and also so that
-    you can clearly communicate it to others who may be assisting you.
-    All too often, our brains automatically jump ahead to try to
-    identify the *answer*, without reflecting on the best way frame the
-    *question* in a way that does not limit the range of possible
-    results.
+*What exactly is the question you’re seeking to answer with data?*
+Literally write it down—in the form of a question, punctuated with a
+question mark at the end—to clarify your own thinking, and also so that
+you can clearly communicate it to others who can assist you. All too
+often, our brains automatically leap ahead to try to identify the
+*answer*, without reflecting on the best way frame the *question* in a
+way that does not limit the range of possible outcomes.
 
-TODO: ADD some of these above?
+Look back at data visualization projects that made a lasting impression
+on you to identify the underlying question that motivated them. In their
+coverage of the US opioid epidemic, the *Washington Post* and the West
+Virginia *Charleston Gazette-Mail* successfully fought a legal battle to
+obtain a US Drug Enforcement Agency database that the federal government
+and the drug industry sought to keep secret. In 2019, a team of data
+journalists published the database with interactive maps to answer one
+of their central questions: *How many prescription opioid pills were
+sent to each US county, per capita, and which companies and distributors
+were responsible?* Their [maps
+revealed](https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/)
+high clusters in several rural Appalachian counties that received over
+150 opioid pills per resident, on average, each year from 2006 to 2014.
+Moreover, only six companies distributed over three-quarters of the 100
+billion oxycodone and hydrocodone pills across the US during this
+period: McKesson Corp., Walgreens, Cardinal Health, AmerisourceBergen,
+CVS and Walmart. Even if you’re not working with data as large or as
+controversial as this one, the broader lesson is to clearly identify the
+question you’re seeking to answer.
 
-    For example, team X investigated topic Y by posing a well-formed question: Z.
+Also, it’s perfectly normal to revise your question as your research
+evolves. For example, we once began a data project by naively asking
+*What were Connecticut public school test scores in the 1960s?* Soon we
+discovered that standardized state-level school testing as we know it
+today did not appear in states like Connecticut until the mid-1980s
+school accountability movement. Even then, results were not widely
+visible to the public until newspapers began to publish them once a year
+in print in the 1990s. Later, real estate firms, school-ratings
+companies, and government agencies began to publish data continuously on
+the web as the Internet expanded in the late 1990s and early 2000s.
+Based on what we learned, we revised our research question to *When and
+how did Connecticut homebuyers start to become aware of school test
+scores, and how did these influence the prices they were willing to pay
+for access to selected public school attendance areas?*[2] Be prepared
+to refine your question when the evidence leads you in a better
+direction.
 
-    ICE detention project http://xpmethod.columbia.edu/torn-apart/volume/2/index ; https://twitter.com/DoughertyJack/status/1072916691728916480
+*What types of organizations may have collected or published the data
+you seek?* If a governmental organization may have been involved, then
+at what level: local, regional, state/provincial, national, or
+international? Which branch of government: executive, legislative,
+judicial? Or which particular governmental agency might have been
+responsible for compiling or distributing this information? Since all of
+these different structures can be overwhelming, reach out to librarians
+who are trained to work with government documents and databases, often
+at [state government
+libraries](https://libguides.ala.org/mailing-lists), or at local
+institutions participating in the [US Federal Depository Library
+Program](https://www.doi.gov/library/collections/federal-documents). Or
+might the data you seek have been compiled by a non-governmental
+organization, such as academic institutions, journalists, non-profit
+groups, or for-profit corporations? Figuring out *which organizations*
+might have collected and published the data can help point you to the
+digital or print materials they typically publish, and most appropriate
+tools to focus your search in that particular area.
 
-    Sometimes we have reframed questions by shifting the first word from "What is...[the answer]?" to "How has...[the process]?" BUT this needs richer well-formed examples of researchable questions, perhaps authentic examples with cites to data stories by specific journalists....
+*What level(s) of data are available?* Is information disaggregated by
+individual cases or aggregated into larger groups? Librarians can help
+us to decipher how and why different organizations publish data in
+different formats. For example, US Census seeks to collect data every
+ten years about each person residing in the nation, but under the law,
+this individual-level data is confidential and not released to the
+public for 72 years. You can look up individual census data for 1940 and
+earlier decades at the [US National
+Archives](https://www.archives.gov/research/genealogy/census/about) and
+other websites. But the US Census publishes current data for larger
+areas, such as neighborhood-level block groups, census tracts, cities,
+and states, by aggregating individual records into data tables, and
+suppressing small-numbered cells to protect people’s privacy. Librarians
+can help us understand organization’s guidelines on when and how they
+make data available at different levels
 
-    Also, it's perfectly normal to revise your question as your research evolves. For example, we once began a project by asking "What were school test scores in the 1960s?" Gradually, we realized that standardized state-level school testing did not arise in places like Connecticut until the mid-1980s accountability movement, and even then results were not widely accessible to the public until newspapers began to publish them once a year in print in the 1990s, and then continuously on the internet around the 2000s. So our data question shifted to "When and how did the Connecticut residents become aware of standardized school-level test scores?" [ADD CITE]
+*Have prior publications drawn on similar data, and if so, how can we
+trace their sources?* Some of our best ideas began when reading an
+article or book that described its source of evidence, and we imagined
+new ways to visualize that data. Several times we have stumbled across a
+data table in a print publication, or perhaps an old web page, which
+sparked our interest in tracking down a newer version to explore. Even
+*outdated* data helps by demonstrating how someone or some organization
+collected it at one point in time. Follow the footnotes to track down
+its origins. Use [Google Scholar](https://google.com/scholar) and more
+specialized research databases (ask librarians for assistance if needed)
+to track down the source of previously-published data. One bonus is that
+if you can locate more current data, you may be able to design a
+visualization that compares change over time.
 
--   What types of organizations may have collected or published the data
-    you seek? If a governmental organization may have been involved,
-    then at what level (national, state/provincial, regional, or
-    municipal), and which branch or agency? Or might data have been
-    compiled by a non-governmental organization, such as academic
-    institutions, journalists, for-profit corporations, or non-profit
-    groups? Figuring out *which organizations* might have collected the
-    data can help point you to the digital or print materials they
-    typically publish, and most appropriate tools to focus your search
-    in that particular area.
+*What if no one has collected the data you’re looking for?* Sometimes
+this happens due to more than a simple oversight. In *[Data
+Feminism](https://data-feminism.mitpress.mit.edu/)*, Catherine D’Ignazio
+and Lauren Klein underscore how issues of data collection “are directly
+connected to larger issues of power and privilege” by recounting a story
+about tennis star Serena Williams. When Williams experienced
+life-threatening complications while giving birth to her daughter in
+2017, she called public attention to the way that she, a Black woman,
+needed to advocate for herself in the hospital. After her experience,
+she wrote on social media that “Black women are over 3 times more likely
+than white women to die from pregnancy- or childbirth-related causes,”
+citing the US Centers for Disease Control and Prevention (CDC). When
+journalists followed up to investigate further, they discovered the
+absence of detailed data on maternal mortality, and what a 2014 United
+Nations report described as a “particularly weak” aspect of data
+collection in the US healthcare system. Journalists reported that “there
+was still no national system for tracking complications sustained in
+pregnancy and childbirth,” despite comparable systems for other health
+issues such as heart attacks or hip replacements. Power structures are
+designed to count people whose lives either are highly valued, or under
+a high degree of surveillance. D’Ignazio and Klein call on us critically
+examine these power systems, collect data to counter their effects, and
+make everyone’s labor in this process more visible.[3] If no one has
+collected the data you’re looking for, perhaps you can make valuable
+steps to publicly recognize the issue and contribute to positive change.
 
--   Have prior publications drawn on similar datasets, and if so, how
-    can we trace their sources? Some of our best visualization ideas
-    began while reading a textual description of data, or stumbling
-    across a table in a print publication or outdated web page. These
-    persuaded us that a previous version of the data existed, that the
-    data existed *somewhere*. With these valuable leads, librarians can
-    help you track down source notes on where the data originated, or
-    sometimes find more up-to-date versions of the data.
+Hunting for data involves much more than Googling keywords. Deepen your
+search by reflecting on the types of questions that librarians,
+journalists, and other researchers have taught us to ask: What types of
+organizations might—or might not—have collected the data? At what
+levels? At any prior point in time? And under what social and political
+contexts? In the next section, you’ll learn more about related issues to
+consider over public and private data.
 
--   What level(s) of data are available? Is information disaggregated by
-    individual cases or aggregated into larger groups? Librarians can
-    help us to decipher how and why different organizations publish data
-    in different formats. For example, US Census seeks to collect data
-    every ten years about each person residing in the nation, but under
-    the law, this individual-level data is confidential and not released
-    to the public for 72 years. You can look up individual census data
-    for 1940 and earlier decades at the [US National
-    Archives](https://www.archives.gov/research/genealogy/census/about)
-    and other websites. But the US Census publishes current data for
-    larger areas, such as neighborhood-level block groups, census
-    tracts, cities, and states, by aggregating individual records into
-    data tables, and suppressing small-numbered cells to protect
-    people’s privacy. Librarians can help us understand organization’s
-    guidelines on when and how they make data available at different
-    levels.
+Public and Private Data
+-----------------------
 
-ADD: Sometimes the data does not yet exist, or has not yet
-systematically collected and organized…. “missing data”
+When searching for data, you also need to be informed about debates
+about public and private data. Not only do these debates influence what
+kinds of search you will conduct, but they also involve you in deeper
+ethical issues about data collection and distribution. At stake are two
+major questions. The first asks: *To what extent should organizations be
+allowed to collect data about private individuals?* The second question
+is: *When our government collects data, to what extent should it be
+publicly available?* This section offers our general observations about
+these debates, based primarily on our context in the United States.
+Since we are not lawyers (thank goodness!), please consult with legal
+experts for advice about your specific case.
 
-Recognize Bad Data
-------------------
+Several critics of “big data” worry that governments are becoming more
+like a totalitarian “Big Brother” as they collect more data about
+individual citizens in the digital age. In the United States, concerns
+mounted in 2013 when whistleblower Eric Snowden disclosed how the
+National Security Agency conducted global surveillance using US citizen
+email and phone records provided by telecommunications companies.
+Shoshana Zuboff, a Harvard Business School professor and author of *The
+Age of Surveillance Capitalism*, warns of an equal threat posed by
+corporations that collect and commodify massive amounts of
+individually-identifiable data for profit.[4] Due to the rise of digital
+commerce, powerful technology companies own data that you and others
+consider to be private:
 
-A vital skill needed by all data visualization creators is the ability
-to recognize bad data. If you fail to catch a problem in your data at an
-early stage, someone else may discover it later, which could lead to
-false conclusions and diminish the credibility of all of your work.
-Fortunately, members of the data visualization community have shared
-multiple examples of issues we’ve encountered in our work, and newer
-members will benefit from our embarrassing mistakes. One popular
-crowd-sourced compilation by data journalists was [The Quartz Guide to
-Bad Data](https://github.com/Quartz/bad-data-guide), last updated in
-2018, which includes several of these helpful warning signs:
+-   Google knows what words you typed into their search engine, as shown
+    in aggregated form in [Google
+    Trends](https://trends.google.com/trends/). Also, Google’s Chrome
+    browser tracks your web activity through cookies, as described by
+    technology reporter [Geoffrey
+    Fowler](https://www.washingtonpost.com/technology/2019/06/21/google-chrome-has-become-surveillance-software-its-time-switch/).
+-   Amazon eavesdrops and records your conversations around its Alexa
+    home assistants, as [Fowler
+    describes](https://www.washingtonpost.com/technology/2019/05/06/alexa-has-been-eavesdropping-you-this-whole-time/).
+-   Facebook follows which friends and political causes you favor, but
+    also [tracks your off-Facebook
+    activity](https://www.washingtonpost.com/technology/2020/01/28/off-facebook-activity-page/),
+    such as purchases made at other businesses, to improve its targeted
+    advertising.
 
-Watch out for spreadsheets with “bad data”:
+Some point out that “big data” collected by large corporations can offer
+public benefits. For example, [Apple shared its aggregated mobility
+data](https://www.apple.com/covid19/mobility) collected from iPhone
+users to help public health officials compare which populations stayed
+home rather than travel during the Covid pandemic. But corporations are
+still setting their own terms for how they collect data and what they
+can do with it. Although California has begun to [implement its Consumer
+Privacy Act in
+2020](https://www.washingtonpost.com/technology/2020/01/21/ccpa-transparency/),
+which promises to allow individuals the right to review and delete the
+data that companies collect about them, US state and federal government
+has not fully entered this policy arena. If you work with data that was
+collected from individuals by public or private organizations, learn
+about these controversies to help you make wise and ethical choices in
+your visualizations.
 
--   Missing values: If you see blank or “null” entries, does that mean
-    data was not collected? Or maybe a respondent did not answer? If
-    you’re unsure, find out from the data creator. Also beware when
-    humans enter a `0` or `-1` to represent a missing value, without
-    thinking about the consequences of running calculations.
--   Missing leading zeros: The US Census Bureau lists every place using
-    a FIPS code, and some spreadsheet users may accidentally convert
-    text to numbers and strip out the leading zeroes. For example, the
-    FIPS code for Los Angeles County is `037`, but someone might
-    accidentally strip out the leading zero and convert it to `37`,
-    which represents North Carolina.
--   65536 rows or 255 columns: These are the maximum number of rows
-    supported by older-style Excel spreadsheets, or columns supported by
-    Apple Numbers spreadsheet, respectively. If your spreadsheet stops
-    exactly at either of these limits, you probably have only partial
-    data.
--   Inconsistent date formats: For example, November 3rd, 2020 is
-    commonly entered in spreadsheets by Americans as `11/3/2020`
-    (month-date-year), while many others around the globe type
-    `3/11/2020` (date-month-year). Check your source.
--   Dates such as January 1st 1900, 1904, or 1970: These are default
-    timestamps in Excel spreadsheets and Unix operating systems, which
-    may indicate the actual date was blank or overwritten.
--   Dates similar to `43891`: When you type `March 1` during the year
-    2020 into Microsoft Excel, it automatically displays as `1-Mar`, but
-    is saved using Excel’s internal date system as `43891`. If someone
-    converts this column from date to text format, you’ll see Excel’s
-    5-digit number, not the dates you’re expecting.
-
-TODO: ADD So when you encounter “bad data,” what should you do? Follow
-the source of your data stream to identify where the problem arose… If
-you cannot resolve the problem on your own, contact the data provider to
-ask about the issue….. And if no one can help you to resolve an
-important data issue, then decide whether you need can still work on
-your data and add a cautionary note, or whether it’s wiser to stop and
-reevaluate. …. So what should the reader do? Ignore the data set? Filter
-out rogue results? I think some advice needs to be given as to how to
-deal with this situation once they identify it.”
-
-Source Your Data
-----------------
-
-Another way to reduce “bad data” issues is to clarify the source every
-time you download or create a new spreadsheet file. Add details about
-where the data came from, so that someone other than you, several years
-in the future, has sufficient information to understand its origin and
-limitations.
-
-The first step is to label every data file that you download or create.
-All of us have experienced bad file names like these:
-
--   data.csv
--   file.xls
--   download.xlsx
-
-Write a short but meaningful file name. While there’s no perfect system,
-a good strategy is to abbreviate the source (such as `census` or
-`worldbank` or `eurostat`), with topic keywords, and a date or range. If
-you or co-workers will be working on different versions of a downloaded
-file, include the current date in YYYY-MM-DD (year-month-date) format.
-If you plan to upload files to the web, type names in all lower-case and
-replace blank spaces with dashes (`-`) or underscores (`_`). Better file
-names look like this:
-
--   town-demographics-2019-12-02.csv
--   census2010\_population\_by\_county.xls
--   eurostat-1999-2019-co2-emissions.xlsx
-
-The second step is to save more detailed source notes about the data on
-a separate tab inside the spreadsheet (which works for multi-tab
-spreadsheet tools such as Google Sheets, LibreOffice, and Excel). Add a
-new tab named *notes* that describes the origins of the data, a longer
-description for any abbreviated labels, and when it was last updated, as
-shown in Figure <a href="#fig:sheets-with-tabs">38</a>. Add your own
-name and give credit to collaborators who worked with you. For CSV
-files, which do not support multi-tabs sheets, create a text file using
-a parallel file name.
-
-<img src="images/03-find/sheets-with-tabs.png" alt="Create separate spreadsheet tabs for data, notes, and backup."  />
-<p class="caption">
-Figure 38: Create separate spreadsheet tabs for data, notes, and backup.
-</p>
-
-A third step is to make a backup of the original data before cleaning or
-editing it. For a simple one-sheet file in a multi-tab spreadsheet tool,
-right-click on the tab containing the data to make a duplicate copy in
-another tab, also shown in Figure
-<a href="#fig:sheets-with-tabs">38</a>. Clearly label the new tab as a
-backup and leave it alone! For CSV files or more complex spreadsheets,
-create a separate backup file.
-
-Make a habit of using these three sourcing strategies—filenames, notes,
-and backups—to reduce your chances of making “bad data” errors and to
-increase the credibility of your data visualizations. In the next
-section, we’ll address a related set of questions you should ask
-yourself regarding public versus private data.
-
-Public versus Private Data
---------------------------
-
-In addition to asking questions about the origins and limitations of
-your data, it’s also important for you to be aware of important
-distinctions between public versus private data, and their implications
-for designing your visualizations. This section offers some general
-observations about data privacy based on our context in the United
-States. Since we are not lawyers (thank goodness!), please consult with
-legal experts for advice about your specific case.
-
-In the United States, the 1966 [Freedom of Information
+The second area of debate asks: When our government collects data, to
+what extent should it be publicly available? In the United States, the
+1966 [Freedom of Information
 Act](https://en.wikipedia.org/wiki/Freedom_of_Information_Act) and its
 subsequent amendments have sought to open access to information in the
 federal government, with the view that increased transparency would
@@ -1970,59 +1988,59 @@ laws](https://en.wikipedia.org/wiki/Freedom_of_information_laws_by_country),
 with the oldest being Sweden’s 1766 Freedom of the Press Act, but these
 laws vary widely.
 
-What’s most important—and confusing—about access to US data is that
-individual-level data is usually considered private, except in certain
-areas where our governmental process has determined that a broader
-interest is served by making it public. On one hand, here are two
-categories where individual-level data is private under federal law:
+In most cases, individual-level data collected by US federal and state
+governments is considered private, except in cases where our
+governmental process has determined that a broader interest is served by
+making it public. To illustrate this distinction, let’s begin with two
+cases where US federal law protects the privacy of individual-level
+data:
 
 -   Patient-level health data is generally protected under the [Privacy
     Rule of the Health Insurance Portability and Accountability
     Act](https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act#Privacy_Rule),
-    commonly known as HIPAA. Public health officials regularly aggregate
-    patient records into larger anonymized public datasets to track
-    progress about various illnesses. This process keeps
-    individual-level data about each patient private, but allows the
-    public to benefit from information about broad trends.
+    commonly known as HIPAA. In order for public health officials to
+    track broad trends about illness in the population, individual
+    patient data must be aggregated into larger anonymized datasets in
+    ways that protect specific people’s confidentiality.
 
--   Student-level education data is generally protected under the
-    [Family Educational Rights and Privacy
+-   Similarly, student-level education data is generally protected under
+    the [Family Educational Rights and Privacy
     Act](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act),
     commonly known as FERPA. Public education officials regularly
-    aggregate student records into larger anonymized public datasets to
-    track the progress of schools, districts, and states. Once again,
-    this process keeps individual-level data about each student private,
-    but allows the public to benefit from information about broad
-    trends.
+    aggregate individual student records into larger anonymized public
+    datasets to track the broad progress of schools, districts, and
+    states, without revealing individually-identifiable data.
 
-On the other hand, here are three categories where government has ruled
-that the public interest is served by making individual-level data
-available to all:
+On the other hand, here are three cases where government has ruled that
+the public interest is served by making individual-level data widely
+available:
 
 -   Individual contributions to political candidates are public
     information in the [US Federal Election Commission
-    database](https://www.fec.gov/data/receipts/individual-contributions/).
-    See related databases such as [Follow The
-    Money](https://www.followthemoney.org/) by the National Institute on
-    Money in Politics and [Open Secrets](http://www.opensecrets.org/) by
-    the Center for Responsive Politics, which both describe more details
-    about donations submitted through political action committees and
-    controversial exceptions to campaign finance laws. Across the US,
-    state-level political contribution laws vary widely, and public
-    records are stored in separate databases. For example, anyone can
-    search the [Connecticut Campaign Reporting Information
+    database](https://www.fec.gov/data/receipts/individual-contributions/),
+    and related databases by non-profit organizations, such as [Follow
+    The Money](https://www.followthemoney.org/) by the National
+    Institute on Money in Politics and [Open
+    Secrets](http://www.opensecrets.org/) by the Center for Responsive
+    Politics. The latter two sites describe more details about donations
+    submitted through political action committees and controversial
+    exceptions to campaign finance laws. Across the US, state-level
+    political contribution laws vary widely, and these public records
+    are stored in separate databases. For example, anyone can search the
+    [Connecticut Campaign Reporting Information
     System](https://seec.ct.gov/Portal/eCRIS/eCrisSearch) to find
     donations made by the first author to state-level political
     campaigns.
 
 -   Individual property ownership records are public, and increasingly
-    hosted online by many local governments. This privately-funded [US
-    public records directory](https://publicrecords.netronline.com/)
-    provides links to county and municipal property records, where
-    available. For example, anyone can search the [property assessment
-    database for the Town of West Hartford,
-    Connecticut](http://gis.vgsi.com/westhartfordct/) to find property
-    owned by the first author, its square footage, and purchase price.
+    hosted online by many local governments. A privately-funded company
+    compiled this [US public records
+    directory](https://publicrecords.netronline.com/) with links to
+    county and municipal property records, where available. For example,
+    anyone can search the [property assessment database for the Town of
+    West Hartford, Connecticut](http://gis.vgsi.com/westhartfordct/) to
+    find property owned by the first author, its square footage, and
+    purchase price.
 
 -   Individual salaries for officers of tax-exempt organizations are
     public, which they are required to file on Internal Revenue Service
@@ -2032,50 +2050,36 @@ available to all:
     salary and other compensation of the top officers of the first
     author’s employer, Trinity College in Hartford, Connecticut.
 
-The boundary between what types of individual-level data should remain
-private or become public is continually changing, and subject to
-political and social pressures. On one hand, critics of “[big
-data](https://en.wikipedia.org/wiki/Big_data)” and “[surveillance
-capitalism](https://en.wikipedia.org/wiki/Surveillance_capitalism)”
-charge that governments seek more power and corporations seek more
-profits by collecting and commodifying massive amounts of personal data
-about each individual. On the other hand, the Black Lives Matter
-movement has gradually made more individual-level data publicly
-available on violence by police officers. For example, New Jersey state
-law required local police departments to make “use of force” reports
-publicly available, but no one could easily search these paper forms
-until a team of journalists from from NJ Advance Media created [The
-Force Report public database](https://force.nj.com/), where anyone can
-look up individual officers and investigate possible patterns of violent
-behavior. Similarly, a team of ProPublica journalists created [The NYPD
-Files public database](https://projects.propublica.org/nypd-ccrb/),
+Social and political pressures are continually changing the boundary
+over what types of individual-level data collected by government should
+be made publicly available. For example, the Black Lives Matter movement
+has gradually made more individual-level data about violence by police
+officers more widely available. For example, in 2001 the State of New
+Jersey required local police departments to document any “use of force”
+by officers, whether minor or major, such as firing their gun. But no
+one could easily search these paper forms until a team of journalists
+from NJ Advance Media submitted over 500 public records requests and
+compiled [The Force Report digital database](https://force.nj.com/),
+where anyone can look up individual officers and investigate patterns of
+violent behavior. Similarly, a team of ProPublica journalists created
+[The NYPD Files database](https://projects.propublica.org/nypd-ccrb/),
 which now allows anyone to search closed cases of civilian complaints
-against New York City police officers, by name or precinct, for
-potential patterns of substantiated allegations. People working in the
-field of data visualization need to stay informed about the shifting
-boundary lines between private versus public individual-level data, and
-contribute to discussions about whose interests are served by making
-more data available.
+against New York City police officers, by name or precinct, for patterns
+of substantiated allegations.
 
-TODO: ADD TO ABOVE? Similarly, the Washington post. Up with the West
-Virginia newspaper to obtain privately owned drug records Through a
-court order, which they transformed into a public database that allows
-anyone to search individual doctors prescribing narcotics for potential
-patterns of substance abuse
-
-TODO: ADD – a deeper concern is privately-owned individual-level data
-The credit score companies know my purchases in my payment history on my
-mortgages and credit cards Amazon knows my purchase history Netflix
-knows viewing history Google knows my browsing history Apple knows my
-location history via iPhone When people criticize big data, are usually
-refer to private companies compiling individual data
+If you work with data, get informed about key debates over what should
+be public or private, become active in policy discussions about whose
+interests are being served, and contribute to making positive change. In
+the next section, you’ll learn how to explore datasets that governments
+and non-governmental organizations have intentionally shared with the
+public.
 
 Open Data Repositories
 ----------------------
 
 Over the past decade, an increasing number of governmental and
-non-governmental organizations in the US and around the globe have begun
-to pro-actively share public data through open data repositories. While
+non-governmental organizations around the globe have begun to
+pro-actively share public data through open data repositories. While
 some of these datasets were previously available as individual files on
 isolated websites, these growing networks have made open data easier to
 find, enabled more frequent agency updates, and sometimes support live
@@ -2102,7 +2106,8 @@ these features:
 Due to the recent growth of open data repositories, especially in
 governmental policy and scientific research, there is no single website
 that lists all of them. Instead, we list just a few sites from the US
-and around the globe to spark readers’ curiosity:
+and around the globe to spark readers’ curiosity and encourage you to
+dig deeper:
 
 -   [Data.gov](https://www.data.gov/), the official repository for US
     federal government agencies.
@@ -2113,20 +2118,22 @@ and around the globe to spark readers’ curiosity:
     three-year, or five-year estimates for different census geographies,
     with margins of error.
 -   [Eurostat](https://ec.europa.eu/eurostat), the statistical office of
-    the European Union
--   [Global Open Data Index](https://index.okfn.org/dataset/) by the
-    Open Knowledge Foundation
--   [Google Public Data](https://www.google.com/publicdata/directory)
--   [IPUMS](https://www.ipums.org), the Integrated Public Use Microdata
+    the European Union.
+-   [Global Open Data Index](https://index.okfn.org/dataset/), by the
+    Open Knowledge Foundation.
+-   [Google Public Data](https://www.google.com/publicdata/directory).
+-   [Google Dataset Search](https://datasetsearch.research.google.com/).
+-   [IPUMS](https://www.ipums.org), Integrated Public Use Microdata
     Series, the world’s largest individual-level population database,
     with microdata samples from US and international census records and
-    surveys, hosted by the University of Minnesota
--   [openAfrica](https://africaopendata.org/) by Code for Africa
--   [Open Data Inception](https://opendatainception.io/) a map-oriented
-    global directory
--   [Open Data Network](https://www.opendatanetwork.com/) directory of
-    primarily US state and municipal open data platforms by Socrata
--   [World Bank Open Data](https://data.worldbank.org/)
+    surveys, hosted by the University of Minnesota.
+-   [openAfrica](https://africaopendata.org/), by Code for Africa.
+-   [Open Data Inception](https://opendatainception.io/), a map-oriented
+    global directory.
+-   [Open Data Network](https://www.opendatanetwork.com/), a directory
+    by Socrata, primarily of US state and municipal open data platforms.
+-   [World Bank Open Data](https://data.worldbank.org/), a global
+    collection of economic development data.
 
 In addition, students, staff, and faculty at better-funded institutions
 of higher education also may have access to a paid library subscription
@@ -2137,51 +2144,229 @@ local and national geographies, primarily for the US, Canada, and
 Europe. Previously, Social Explorer made many files available to the
 public, but it now requires a paid subscription or 14-day free trial.
 
+Now that you’ve learned more about navigating open data repositories,
+the next section will teach you ways to properly source the data that
+you discover.
+
+Source Your Data
+----------------
+
+When you find data, write the source information inside the downloaded
+file or a new file you create. Add key details about its origins, so
+that you—or someone else in the future—can replicate your steps. We
+recommend doing this in two places: the spreadsheet file name and a
+source notes tab. As a third step, make a backup sheet of your data.
+
+The first step is to label every data file that you download or create.
+All of us have experienced “bad file names” like these, which you should
+avoid:
+
+-   data.csv
+-   file.ods
+-   download.xlsx
+
+Write a short but meaningful file name. While there’s no perfect system,
+a good strategy is to abbreviate the source (such as `census` or
+`worldbank` or `eurostat`), add topic keywords, and a date or range. If
+you or co-workers will be working on different versions of a downloaded
+file, include the current date in YYYY-MM-DD (year-month-date) format.
+If you plan to upload files to the web, type names in all lower-case and
+replace blank spaces with dashes (`-`) or underscores (`_`). Better file
+names look like this:
+
+-   town-demographics-2019-12-02.csv
+-   census2010\_population\_by\_county.ods
+-   eurostat-1999-2019-co2-emissions.xlsx
+
+The second step is to save more detailed source notes about the data on
+a separate tab inside the spreadsheet, which works for multi-tab
+spreadsheet tools such as Google Sheets, LibreOffice, and Excel. Add a
+new tab named *notes* that describes the origins of the data, a longer
+description for any abbreviated labels, and when it was last updated, as
+shown in Figure <a href="#fig:sheets-with-tabs">38</a>. Add your own
+name and give credit to collaborators who worked with you. If you need
+to create a CSV file from this data, give it a parallel name to your
+multi-tabbed spreadsheet file so that you can easily relocate the
+original source notes.
+
+<img src="images/03-find/sheets-with-tabs.png" alt="Create separate spreadsheet tabs for data, notes, and backup."  />
+<p class="caption">
+Figure 38: Create separate spreadsheet tabs for data, notes, and backup.
+</p>
+
+A third step is to make a backup of the original data before cleaning or
+editing it. For a simple one-sheet file in a multi-tab spreadsheet tool,
+right-click on the tab containing the data to make a duplicate copy in
+another tab, also shown in Figure
+<a href="#fig:sheets-with-tabs">38</a>. Clearly label the new tab as a
+backup and leave it alone! For CSV files or more complex spreadsheets,
+create a separate backup file. To be clear, these simple backup strategy
+only helps you from making non-fixable edits to your original data. Make
+sure you have a broader strategy to backup your files from your computer
+or cloud account in case either of those are deleted or those systems
+crash.
+
+Make a habit of using these three sourcing strategies—filenames, notes,
+and backups—to increase the credibility and replicability of your data
+visualizations. In the next section, we’ll explore more ways to reduce
+your chances of making “bad data” errors.
+
+Recognize Bad Data
+------------------
+
+When your data search produces some results, another key step is to open
+the file, quickly scroll through the content, and look for any warning
+signs that it might contain “bad data.” If you fail to catch a problem
+in your data at an early stage, it could lead to false conclusions and
+diminish the credibility of all of your work. Fortunately, members of
+the data visualization community have shared multiple examples of
+problems we’ve previously encountered, to help save newer members from
+making the same embarrassing mistakes. One popular crowd-sourced
+compilation by data journalists was [The Quartz Guide to Bad
+Data](https://github.com/Quartz/bad-data-guide), last updated in 2018.
+Watch out for spreadsheets containing these “bad data” warning signs:
+
+-   Missing values: If you see blank or “null” entries, does that mean
+    data was not collected? Or maybe a respondent did not answer? If
+    you’re unsure, find out from the data creator. Also beware when
+    humans enter a `0` or `-1` to represent a missing value, without
+    thinking about its consequences on running spreadsheet calculations,
+    such as SUM or AVERAGE.
+-   Missing leading zeros: One of the zip codes for Hartford,
+    Connecticut is `06119`. If someone converts a column of zip codes to
+    numerical data, it will strip out the leading zero and appear as
+    `6119`. Similarly, the US Census Bureau lists every place using a
+    FIPS code, and some of these also begin with a meaningful zero
+    character. For example, the FIPS code for Los Angeles County,
+    California is `037`, but if someone accidentally converts a column
+    of text to numbers, it will strip out the leading zero and convert
+    that FIPS code to `37`, which represents the state of North
+    Carolina.
+-   65536 rows or 255 columns: These are the maximum number of rows
+    supported by older-style Excel spreadsheets, or columns supported by
+    Apple Numbers spreadsheet, respectively. If your spreadsheet stops
+    exactly at either of these limits, you probably have only partial
+    data.
+-   Inconsistent date formats: For example, November 3rd, 2020 is
+    commonly entered in spreadsheets in the US as `11/3/2020`
+    (month-date-year), while people in other locations around the globe
+    commonly type it as `3/11/2020` (date-month-year). Check your
+    source.
+-   Dates such as January 1st 1900, 1904, or 1970: These are default
+    timestamps in Excel spreadsheets and Unix operating systems, which
+    may indicate the actual date was blank or overwritten.
+-   Dates similar to `43891`: When you type `March 1` during the year
+    2020 into Microsoft Excel, it automatically displays as `1-Mar`, but
+    is saved using Excel’s internal date system as `43891`. If someone
+    converts this column from date to text format, you’ll see Excel’s
+    5-digit number, not the dates you’re expecting.
+
+Another way to review the quality of data entry in any column in a
+spreadsheet is to create [a filter](sort.html) or a [pivot
+table](pivot.html) as described in chapter 2. This allows you to quickly
+inspect the range of values that appear in that column, and whether they
+match what you expected to find.
+
+What should you do when you discover bad data in your project? Sometimes
+small issues are relatively straightforward, do not call into question
+the integrity of the entire dataset, and you can fix them using methods
+to [clean up messy data](clean.html) that we describe in chapter 4. But
+larger issues are more problematic. Follow the source of your data
+stream to try to identify where the issue began. If you cannot find and
+fix the issue on your own, contact the data provider to ask for their
+input, since they should have a strong interest in improving the quality
+of the data. If they cannot resolve an important data issue, then you
+need to pause and think carefully. In this case, is it wiser to continue
+working with problematic data and add a cautionary note to readers, or
+should you stop using the dataset entirely and call attention to its
+underlying problem? These are not easy decisions, and you should ask for
+opinions from colleagues. In any case, never ignore the warning signs of
+bad data.
+
+In the next section, you’ll learn more questions to help you know your
+data at a deeper level.
+
 Know Your Data
 --------------
 
-TODO: explain more about expectations about “knowing what you data
-means” in the scope of this chapter….
+Now that you’ve found, sourced, and inspected the file, the next step to
+*know your data* more deeply than what appears at its surface level.
+Read the source notes and examine the contents to reflect on what is
+explicitly stated—or unstated—to better understand its origin, context,
+and limitations. You cannot program a computer to do this step for you,
+as it requires critical-thinking skills to see beyond the characters and
+numbers appearing on your screen.
 
-If your search has produced some results, the next step is to get to
-know your data. Closely examine your files and ask questions about their
-origin, meaning, and limitations:
+One place to start is to ask: *What do the data labels really mean?* and
+to consider these potential issues:
 
--   Who collected and published this data, and for what purpose? Since
-    individuals and organizations require time and resources to do this
-    work, seek to clarify their motivations and assumptions, both
-    explicit and implicit ones. Who was the intended audience of the
-    work? Whose perspectives does the data privilege? Whose stories
-    remain untold? As practitioners of data visualization, we strongly
-    favor evidence-based reasoning over its less-informed alternatives.
-    But we also caution against embracing so-called data objectivity.
-    Numbers are *not* neutral, and we always need to consider the
-    broader contexts in which people created them.
+-   Abbreviated column headers, such as *Elevation* or *Income*, often
+    appear in spreadsheets. Sometimes the original software limited the
+    number of characters that could be entered, or the people who
+    created the header names preferred to keep them short. But was
+    *Elevation* entered in meters or feet? An abbreviated data label
+    does not answer that key question, so you’ll need to check the
+    source notes, or if that’s not available, compare elevation data for
+    a specific point in the dataset to a known source that includes the
+    measurement unit. Similarly, if you’re working with US Census data,
+    does the *Income* abbreviation refer to per person, per family, or
+    per household? Also, does it reflect the median or the average
+    level? Check the source notes.
 
--   What do the data labels *really* mean? Most spreadsheets contain
-    abbreviated column headers, particularly due to software character
-    limits, but some questions of data interpretation run much deeper.
-    For example, socially-constructed labels such as “race” or “gender”
-    may not clarify how the creators defined their terms, or what role
-    respondents played in the collection process. Even seemingly
-    objective labels such as “income” or “population” or “elevation” may
-    not adequately describe exactly what was counted, how it was
-    measured, and the margins of error. Better-quality datasets include
-    detailed definitions of the collection process to help you to
-    understand the decisions made by its creators. If not, then your
-    next best option may be to go out into the field, if feasible, and
-    directly observe how the data is measured and collected.
+-   Exactly how was the data recorded? For example, was *Elevation* for
+    a specific location measured by a GPS unit on the ground? Or was the
+    location geocoded on a digital map that contains elevation data? In
+    most cases the two methods will yield different results, and whether
+    it matters to you depends on the degree of precision required in
+    your work. Similarly, when working with US Census data, it’s
+    important to know that *Income* is a self-reported measure. In
+    addition, be cautious if you’re working with the American Community
+    Survey estimated data, which relies on small samples for lower
+    levels of geography, such as a neighborhood-level census tract,
+    which sometimes generates high margins of error that make the data
+    meaningless. Check the source notes.
 
-TODO: Add examples above on how US census race and ethnicity categories
-changed over time? And how ACS measurements about income in small areas
-are subject to high margins of error?
+<!-- TODO: Ilya, can you locate in any ACS report on median household income for any Hartford census tract, where the margin of error is extremely high? I seem to recall seeing some in ACS 2009 where the MOE was as high as the income level. If this exists, please send me a link to the data so I can insert as an example in chapter 3. -->
+
+-   To what extent is the data socially constructed? In other words,
+    what do the data labels reveal or hide about how people defined
+    categories in different social and political contexts, which differ
+    across place and time? For example, we designed an [interactive
+    historical map of racial
+    change](https://ontheline.github.io/otl-racial-change/index-caption.html#10/41.7900/-72.6000/1900/100)
+    for Hartford County, Connecticut using over 100 years of US Census
+    data. But Census categories for race and ethnicity changed
+    dramatically during those decades because people in power redefined
+    these contested terms and moved who belonged in which group. For
+    example, through the 1930s, the US Census separated “Native White”
+    and “Foreign-born White” in its official reports, then combined and
+    generally reported these as “White” in later decades. Also, the
+    Census classified “Mexican” as “Other races” in 1930, then moved
+    this group back to “White” in 1940, then began to report “Puerto
+    Rican or Spanish surname” data in 1960, followed by “Hispanic or
+    Latino” in later decades, as an ethnic category that was distinct
+    from race. The Census finally replaced “Negro” with “Black” in 1980,
+    and in 2000 allow people to select more than one racial category,
+    such as both “White” and “Black,” unlike prior decades when these
+    terms were mutually exclusive and people could choose only one. As a
+    result, historical changes in the social construction of race and
+    ethnicity influenced how we designed our map to display “White” or
+    “White alone” over time, with additional census categories relevant
+    to each decade shown in the pop-up window, with our explanation of
+    our decisions in the caption and source notes. There is no single
+    definitive way to visualize socially-constructed data when
+    definitions change across decades. But when you make choices about
+    data, describe your thought process in the notes.
+
+<!-- TODO: Read and insert Margo Anderson's American Census 2nd edition 2015 here as background -->
 
 To be clear, you may never *truly know* your data if it was collected by
 someone else, particularly a different person in a distant place or
-time. But don’t let that philosophical obstacles stop you from asking
-good questions about the origins and limitations of your data. Only by
-clarifying what we know—and what we don’t know—can we create meaningful
-data visualizations that bring their inner-stories to life.
+time. But don’t let philosophical obstacles stop you from asking good
+questions about the origins, context, and limitations of your data. Only
+by clarifying what we know—and what we don’t know—can we create
+meaningful visualizations that bring people’s stories behind the data to
+the forefront.
 
 ### Summary
 
@@ -2189,12 +2374,11 @@ This chapter reviewed two broad questions that everyone should ask
 during the early stages of their visualization project: *Where can I
 find data?* and *What do I really know about it?* We broke down both
 questions into more specific parts to develop your knowledge and skills
-in recognizing bad data, sourcing the origins of your data,
-distinguishing between public versus private data, and navigating the
-growing number of open data repositories. As you leap into the next few
-chapters on cleaning data and creating interactive charts and maps,
-remember these lessons as you strive to create meaningful
-visualizations.
+in guiding questions for your search, engaging with debates over public
+and private data, navigating open data repositories, sourcing data
+origins, recognizing bad data, and understanding your data at a deeper
+level. Remember these lessons as you leap into the next few chapters on
+cleaning data and creating interactive charts and maps.
 
 <!--chapter:end:03-find.Rmd-->
 
@@ -9982,7 +10166,7 @@ tools—primarily [Bookdown](https://bookdown.org),
 chapter explains how, so that readers may do it themselves and share
 their knowledge to improve the process. In addition to our notes below,
 see also Yihui Xie’s more comprehensive [Bookdown
-guide](https://bookdown.org/yihui/bookdown/).[1]
+guide](https://bookdown.org/yihui/bookdown/).[5]
 
 Our broad goal is an efficient workflow to compose one document in the
 easy-to-write [Markdown format](https://en.wikipedia.org/wiki/Markdown)
@@ -10657,14 +10841,14 @@ and PDF formats, as shown in these excerpts:
         citation_package: none
         pandoc_args: [ "--csl", "chicago-fullnote-bibliography.csl" ]
 
-Here’s a text-only note, with no Zotero citation.[2]
+Here’s a text-only note, with no Zotero citation.[6]
 
 To create a note with citations only, separate Zotero/BibTeX citation
-keys with semi-colons:[3]
+keys with semi-colons:[7]
 
 Since notes also may include text and punctuation in Markdown syntax,
 always insert a caret symbol prior to the brackets to demarcate a
-note:[4]
+note:[8]
 
 Note that the `chicago-fullnote-bibliography.csl` format automatically
 shortens the note after it its first reference.
@@ -10728,8 +10912,17 @@ References
 
 <!--chapter:end:18-references.Rmd-->
 
+D’Ignazio, Catherine, and Lauren F. Klein. *Data Feminism*. MIT Press,
+2020. <https://data-feminism.mitpress.mit.edu/>.
+
+Dougherty, Jack, Jeffrey Harrelson, Laura Maloney, Drew Murphy, Russell
+Smith, Michael Snow, and Diane Zannoni. “School Choice in Suburbia: Test
+Scores, Race, and Housing Markets.” *American Journal of Education* 115,
+no. 4 (August 2009): 523–48.
+<http://digitalrepository.trincoll.edu/cssp_papers/1>.
+
 Huff, Darrell. *How to Lie with Statistics*. W. W. Norton & Company,
-1954–2010. <http://books.google.com/books?isbn=0393070875>.
+1954. <http://books.google.com/books?isbn=0393070875>.
 
 Monmonier, Mark S. *How to Lie with Maps*. 2nd ed. University of Chicago
 Press, 1996. <http://books.google.com/books?isbn=0226534219>.
@@ -10737,15 +10930,33 @@ Press, 1996. <http://books.google.com/books?isbn=0226534219>.
 Xie, Yihui. *Bookdown: Authoring Books and Technical Documents with R
 Markdown*, 2018. <https://bookdown.org/yihui/bookdown/>.
 
-[1] Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R
+Zuboff, Shoshana. *The Age of Surveillance Capitalism: The Fight for a
+Human Future at the New Frontier of Power*. PublicAffairs, 2019.
+<https://www.google.com/books/edition/The_Age_of_Surveillance_Capitalism/lRqrDQAAQBAJ>.
+
+[1] Catherine D’Ignazio and Lauren F. Klein, *Data Feminism* (MIT Press,
+2020), <https://data-feminism.mitpress.mit.edu/>.
+
+[2] Jack Dougherty et al., “School Choice in Suburbia: Test Scores,
+Race, and Housing Markets,” *American Journal of Education* 115, no. 4
+(August 2009): 523–48,
+<http://digitalrepository.trincoll.edu/cssp_papers/1>.
+
+[3] D’Ignazio and Klein, *Data Feminism*, chap. 1.
+
+[4] Shoshana Zuboff, *The Age of Surveillance Capitalism: The Fight for
+a Human Future at the New Frontier of Power* (PublicAffairs, 2019),
+<https://www.google.com/books/edition/The_Age_of_Surveillance_Capitalism/lRqrDQAAQBAJ>.
+
+[5] Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R
 Markdown*, 2018, <https://bookdown.org/yihui/bookdown/>
 
-[2] This is a note, with no bibliographic reference.
+[6] This is a note, with no bibliographic reference.
 
-[3] Darrell Huff, *How to Lie with Statistics* (W. W. Norton & Company,
-1954–2010), <http://books.google.com/books?isbn=0393070875>; Mark S.
+[7] Darrell Huff, *How to Lie with Statistics* (W. W. Norton & Company,
+1954), <http://books.google.com/books?isbn=0393070875>; Mark S.
 Monmonier, *How to Lie with Maps*, 2nd ed. (University of Chicago Press,
 1996), <http://books.google.com/books?isbn=0226534219>
 
-[4] Compare how “lying” is justified by Huff, *How to Lie with
+[8] Compare how “lying” is justified by Huff, *How to Lie with
 Statistics*, pp. 10-11 and Monmonier, *How to Lie with Maps*, pp. 11-12.

@@ -479,6 +479,7 @@ The map pulls the point data and settings from a linked Google Sheet, which you 
 - A) Fork (copy) the code template and publish your version with GitHub Pages
 - B) File > Make a Copy of Google Sheet template, Share, and File > Publish
 - C) Paste your Google Sheet URL in two places in your GitHub repo
+- C2) NEW: Create a free Google Sheets API key to paste into the code
 - D) Modify your map settings in the Options tab and test your live map
 - E) Geocode locations in the Points tab
 
@@ -547,6 +548,39 @@ https://USERNAME.github.io/leaflet-storymaps-with-google-sheets
 4) Scroll to bottom of page and press Commit to save your changes. Now the Leaflet Map code can locate your published Google Sheet.
 
 5) Next, let's paste your Google Sheet URL in a second place to keep track of it. Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.
+
+#### NEW C2: Create a free Google Sheets API key to paste into the code
+TODO: Explain why you need to create a free Google Sheets API Key to allow the code template to read data from your Google Sheet. (This is a new requirement with version X of our template, beginning in August 2020, in order to work with Google Sheets API version 4.)
+
+Reminders:
+
+- you need a personal Google account, not a Google Suite account issued by your school or business
+- if you already did this step for another Leaflet Map, you can copy and use your existing Google Sheets API key
+
+
+- Visit https://console.developers.google.com/ and log in to your Google account. The Google Cloud Platform may ask you to identify your country and agree to terms of service.
+
+- Click on *Create a Project* on the opening screen. Or if you don't see that option, go to the upper-left drop-down menu to *Select a project > New project*. IMAGE google-api-create.png
+
+- Give your new project a meaningful short name to remind you of its purpose, such as `handsondataviz`. You do not need to create an organization or parent folder. Click Create. IMAGE google-api-name.png
+
+- Enable Google Sheets API inside your Google cloud project. To do so,
+    - From the top menu, press `+ Enable APIs and Services`   IMG google-api-enable.png
+    - Use the search bar to find Google Sheets API and select it.   IMG google-api-search.png
+    - In the next screen click Click Enable.   IMG google-api-select.png
+
+  - In the left sidebar menu, click *Credentials*, then click *+ Create Credentials* and select *API key*. IMG google-api-credentials.png
+
+- A window with the generated API key will appear. Copy it. IMG google-api-key.png
+
+- In that window, click Restrict key. In the new window, under API restrictions, choose Restrict key radio button. In the dropdown that appears, choose Google Sheets API. Click Save. IMG google-api-restrict.png
+
+- COPY see text below -- IMG google-api-copy.png
+
+Copy your Google API key to `google-doc-url.js` file inside a GoogleApiKey variable. Once you save it go GitHub you may get a notification from GitHub’s GitGuardian bot saying you have an exposed API key. Don’t worry about it – this key can only be used with Google Sheets, and it’s free. You did not attach billing information to it, so there is no way you can get charged.
+
+
+
 
 #### D) Modify your map settings in the Options tab and test your live map {-}
 

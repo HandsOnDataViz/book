@@ -26,10 +26,7 @@ Several tools in this book will not work properly if your computer does not disp
  knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
 ```
 
-<div class="figure">
-<img src="images/02-spreadsheet/mac-file-extensions.png" alt="(ref:mac-file-extensions2)"  />
-<p class="caption">(\#fig:mac-file-extensions2)(ref:mac-file-extensions2)</p>
-</div>
+![(\#fig:mac-file-extensions2)(ref:mac-file-extensions2)](images/02-spreadsheet/mac-file-extensions.png) 
 
 
 #### Problems with data tables {-}

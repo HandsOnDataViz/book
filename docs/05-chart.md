@@ -45,10 +45,7 @@ It shows basic chart components that are shared among most chart types.
 knitr::include_graphics("images/05-chart/design-principles-chart-components.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/design-principles-chart-components.png" alt="(ref:design-principles-chart-components)"  />
-<p class="caption">(\#fig:design-principles-chart-components)(ref:design-principles-chart-components)</p>
-</div>
+![(\#fig:design-principles-chart-components)(ref:design-principles-chart-components)](images/05-chart/design-principles-chart-components.png) 
 
 A *title* is perhaps the most important element of any chart. A good title is short, clear,
 and tells a story on its own. For example, "Black and Asian Population More Likely to Die of Covid-19",
@@ -112,10 +109,7 @@ The Figure \@ref(fig:design-principles-start-at-zero) shows a good and a bad exa
 knitr::include_graphics("images/05-chart/design-principles-start-at-zero.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/design-principles-start-at-zero.png" alt="(ref:design-principles-start-at-zero)"  />
-<p class="caption">(\#fig:design-principles-start-at-zero)(ref:design-principles-start-at-zero)</p>
-</div>
+![(\#fig:design-principles-start-at-zero)(ref:design-principles-start-at-zero)](images/05-chart/design-principles-start-at-zero.png) 
 
 Starting y-axis at anything other than zero is a common trick used by some media
 and politicians to exaggerate differences in surveys and election results. Learn more about how to [detect bias in data stories](detect.html) in chapter 12.
@@ -157,10 +151,7 @@ It also looks unprofessional and doesn't add credibility to you as a storyteller
 knitr::include_graphics("images/05-chart/design-principles-junk.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/design-principles-junk.png" alt="(ref:design-principles-junk)"  />
-<p class="caption">(\#fig:design-principles-junk)(ref:design-principles-junk)</p>
-</div>
+![(\#fig:design-principles-junk)(ref:design-principles-junk)](images/05-chart/design-principles-junk.png) 
 
 Do not use shadows or thick outlines with bar charts, because the reader might think
 that decorative elements are part of the chart, and thus misread the
@@ -185,10 +176,7 @@ Figure \@ref(fig:design-principles-pie) illustrates that.
 knitr::include_graphics("images/05-chart/design-principles-pie.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/design-principles-pie.png" alt="(ref:design-principles-pie)"  />
-<p class="caption">(\#fig:design-principles-pie)(ref:design-principles-pie)</p>
-</div>
+![(\#fig:design-principles-pie)(ref:design-principles-pie)](images/05-chart/design-principles-pie.png) 
 
 If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or separated, like Figure \@ref(fig:design-principles-pie-to-bar) shows.
 
@@ -199,10 +187,7 @@ If your pie chart has more than five slices, consider showing your data in a bar
 knitr::include_graphics("images/05-chart/design-principles-pie-to-bar.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/design-principles-pie-to-bar.png" alt="(ref:design-principles-pie-to-bar)"  />
-<p class="caption">(\#fig:design-principles-pie-to-bar)(ref:design-principles-pie-to-bar)</p>
-</div>
+![(\#fig:design-principles-pie-to-bar)(ref:design-principles-pie-to-bar)](images/05-chart/design-principles-pie-to-bar.png) 
 
 #### Don't make people turn their heads to read labels {-}
 When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit, consider turning the chart 90 degrees so that it becomes a horizontal bar chart. Take a look at Figure \@ref(fig:design-principles-turn-bar) to see how much easier it is to read horizontally-oriented labels.
@@ -214,10 +199,7 @@ When your column chart has long x-axis labels that have to be rotated (often 90 
 knitr::include_graphics("images/05-chart/design-principles-turn-bar.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/design-principles-turn-bar.png" alt="(ref:design-principles-turn-bar)"  />
-<p class="caption">(\#fig:design-principles-turn-bar)(ref:design-principles-turn-bar)</p>
-</div>
+![(\#fig:design-principles-turn-bar)(ref:design-principles-turn-bar)](images/05-chart/design-principles-turn-bar.png) 
 
 #### Arrange elements logically {-}
 If your bar chart shows different categories, consider ordering them, like is shown in Figure \@ref(fig:design-principles-order-categories). You might want to sort them alphabetically, which can be useful if you want the reader to be able to quickly look up an item, such as their town. Ordering categories by value is another common technique that makes comparisons possible. If your columns represent a value of something at a particular time, they have to be ordered sequentially, of course.
@@ -229,10 +211,7 @@ If your bar chart shows different categories, consider ordering them, like is sh
 knitr::include_graphics("images/05-chart/design-principles-order-categories.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/design-principles-order-categories.png" alt="(ref:design-principles-order-categories)"  />
-<p class="caption">(\#fig:design-principles-order-categories)(ref:design-principles-order-categories)</p>
-</div>
+![(\#fig:design-principles-order-categories)(ref:design-principles-order-categories)](images/05-chart/design-principles-order-categories.png) 
 
 #### Do not overload your chart {-}
 When labelling axes, choose natural increments that space equally, such as [0, 20, 40, 60, 80, 100], or [1, 10, 100, 1000] for a logarithmic scale. Do not overload your scales.
@@ -252,10 +231,7 @@ Whatever colors you end up choosing, they need to be distinguishable (otherwise 
 knitr::include_graphics("images/05-chart/design-principles-color.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/design-principles-color.png" alt="(ref:design-principles-color)"  />
-<p class="caption">(\#fig:design-principles-color)(ref:design-principles-color)</p>
-</div>
+![(\#fig:design-principles-color)(ref:design-principles-color)](images/05-chart/design-principles-color.png) 
 
 If you follow the advice, you should end up with a de-cluttered chart as shown in
 Figure \@ref(fig:design-principles-decluttered). Notice how your eyes are drawn to the bars and their corresponding values, not bright colors or secondary components like the axes lines.
@@ -267,10 +243,7 @@ Figure \@ref(fig:design-principles-decluttered). Notice how your eyes are drawn 
 knitr::include_graphics("images/05-chart/design-principles-decluttered.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/design-principles-decluttered.png" alt="(ref:design-principles-decluttered)"  />
-<p class="caption">(\#fig:design-principles-decluttered)(ref:design-principles-decluttered)</p>
-</div>
+![(\#fig:design-principles-decluttered)(ref:design-principles-decluttered)](images/05-chart/design-principles-decluttered.png) 
 
 ## Google Sheets Charts {- #chart-google-sheets}
 
@@ -317,10 +290,7 @@ Figure \@ref(fig:column-grouped) shows differences in obesity between men and wo
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-grouped.png")
 ```
 
-<div class="figure">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;amp;format=interactive" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:column-grouped)(ref:column-grouped)</p>
-</div>
+![(\#fig:column-grouped)(ref:column-grouped)](images/05-chart/column-grouped.png) 
 
 The following steps will help you recreate an interactive grouped column (or horizontal bar) chart.
 
@@ -337,10 +307,9 @@ The following steps will help you recreate an interactive grouped column (or hor
  knitr::include_graphics("images/05-chart/file-make-copy2.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/file-make-copy2.png" alt="(ref:file-make-copy2)" width="250px" />
-<p class="caption">(\#fig:file-make-copy2)(ref:file-make-copy2)</p>
-</div>
+\begin{figure}
+\includegraphics[width=250px]{images/05-chart/file-make-copy2} \caption{(ref:file-make-copy2)}(\#fig:file-make-copy2)
+\end{figure}
 
 4. To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete, as shown in Figure \@ref(fig:delete-chart).
 
@@ -351,10 +320,9 @@ The following steps will help you recreate an interactive grouped column (or hor
  knitr::include_graphics("images/05-chart/delete-chart.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/delete-chart.png" alt="(ref:delete-chart)" width="180px" />
-<p class="caption">(\#fig:delete-chart)(ref:delete-chart)</p>
-</div>
+\begin{figure}
+\includegraphics[width=180px]{images/05-chart/delete-chart} \caption{(ref:delete-chart)}(\#fig:delete-chart)
+\end{figure}
 
 Note: Another name for the 3-dot menu symbol is the "kebab menu" because it resembles Middle Eastern
 food cooked on a skewer, in contrast to the three-line "hamburger menu" on many mobile devices,
@@ -367,10 +335,7 @@ as shown in Figure \@ref(fig:menu-hamburger-kebab).
 knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/menu-hamburger-kebab.png" alt="(ref:menu-hamburger-kebab)"  />
-<p class="caption">(\#fig:menu-hamburger-kebab)(ref:menu-hamburger-kebab)</p>
-</div>
+![(\#fig:menu-hamburger-kebab)(ref:menu-hamburger-kebab)](images/05-chart/menu-hamburger-kebab.png) 
 
 5. Format your data to make each column a data series, as shown in Figure \@ref(fig:column-grouped-data), which means it will display as a separate color in the chart.
 
@@ -381,10 +346,9 @@ knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
  knitr::include_graphics("images/05-chart/column-grouped-data.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/column-grouped-data.png" alt="(ref:column-grouped-data)" width="350px" />
-<p class="caption">(\#fig:column-grouped-data)(ref:column-grouped-data)</p>
-</div>
+\begin{figure}
+\includegraphics[width=350px]{images/05-chart/column-grouped-data} \caption{(ref:column-grouped-data)}(\#fig:column-grouped-data)
+\end{figure}
 
 6. Use your cursor to select only the data you wish to chart, then go to the Insert menu and select Chart, as shown in Figure \@ref(fig:column-grouped-insert).
 
@@ -395,10 +359,9 @@ knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
  knitr::include_graphics("images/05-chart/column-grouped-insert.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/column-grouped-insert.png" alt="(ref:column-grouped-insert)" width="250px" />
-<p class="caption">(\#fig:column-grouped-insert)(ref:column-grouped-insert)</p>
-</div>
+\begin{figure}
+\includegraphics[width=250px]{images/05-chart/column-grouped-insert} \caption{(ref:column-grouped-insert)}(\#fig:column-grouped-insert)
+\end{figure}
 
 7. In the Chart Editor, change the default selection to Column chart, with Stacking none, to display Grouped Columns, as shown in Figure \@ref(fig:column-grouped-editor). Or select *Horizontal bar chart* if you have longer labels.
 
@@ -409,10 +372,9 @@ knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
  knitr::include_graphics("images/05-chart/column-grouped-editor.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/column-grouped-editor.png" alt="(ref:column-grouped-editor)" width="250px" />
-<p class="caption">(\#fig:column-grouped-editor)(ref:column-grouped-editor)</p>
-</div>
+\begin{figure}
+\includegraphics[width=250px]{images/05-chart/column-grouped-editor} \caption{(ref:column-grouped-editor)}(\#fig:column-grouped-editor)
+\end{figure}
 
 8. To customize title, labels, and more, in the Chart Editor select Customize, as shown in Figure \@ref(fig:chart-editor-customize).
 
@@ -423,10 +385,9 @@ knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
  knitr::include_graphics("images/05-chart/chart-editor-customize.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/chart-editor-customize.png" alt="(ref:chart-editor-customize)" width="250px" />
-<p class="caption">(\#fig:chart-editor-customize)(ref:chart-editor-customize)</p>
-</div>
+\begin{figure}
+\includegraphics[width=250px]{images/05-chart/chart-editor-customize} \caption{(ref:chart-editor-customize)}(\#fig:chart-editor-customize)
+\end{figure}
 
 9. To make your data public, go to the upper-right corner of your sheet to click the Share button, and in the next screen, click the words "Change to anyone with the link," as shown in Figure \@ref(fig:share-button-sheet). This means your sheet is no longer Restricted to only you, but can be viewed by anyone with the link. See additional options.
 
@@ -437,10 +398,9 @@ knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
  knitr::include_graphics("images/05-chart/share-button-sheet-annotated.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/share-button-sheet-annotated.png" alt="(ref:share-button-sheet)" width="350px" />
-<p class="caption">(\#fig:share-button-sheet)(ref:share-button-sheet)</p>
-</div>
+\begin{figure}
+\includegraphics[width=350px]{images/05-chart/share-button-sheet-annotated} \caption{(ref:share-button-sheet)}(\#fig:share-button-sheet)
+\end{figure}
 
 10. To embed an interactive version of your chart in another web page, click the kebab menu in the upper-right corner of your chart, and select Publish Chart, as shown in Figure \@ref(fig:chart-publish). In the next screen, select Embed and press the Publish button. See [Chapter 7 Embed on the Web](embed.html) to learn what to do with the iframe code.
 
@@ -451,10 +411,9 @@ knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
  knitr::include_graphics("images/05-chart/chart-publish.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/chart-publish.png" alt="(ref:chart-publish)" width="200px" />
-<p class="caption">(\#fig:chart-publish)(ref:chart-publish)</p>
-</div>
+\begin{figure}
+\includegraphics[width=200px]{images/05-chart/chart-publish} \caption{(ref:chart-publish)}(\#fig:chart-publish)
+\end{figure}
 
 Note: Currently, there is no easy way to cite or link to your source data inside a Google Sheets chart.
 Instead, cite and link to your source data in the text of the web page. Remember that citing your sources
@@ -471,10 +430,7 @@ When you visualize independent categories of data, and you don't want them to ap
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive") else knitr::include_graphics("images/05-chart/bar-separated.png")
 ```
 
-<div class="figure">
-<iframe src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;amp;format=interactive" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:bar-separated)(ref:bar-separated)</p>
-</div>
+![(\#fig:bar-separated)(ref:bar-separated)](images/05-chart/bar-separated.png) 
 
 The only difference between making a grouped versus a separated chart is how you structure your data.
 To make Google Sheets separate columns or bars, you need to leave some cells blank, as shown in Figure \@ref(fig:bar-separated-data).
@@ -487,10 +443,7 @@ The rest of the steps remain the same as above.
  knitr::include_graphics("images/05-chart/bar-separated-data.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/bar-separated-data.png" alt="(ref:bar-separated-data)"  />
-<p class="caption">(\#fig:bar-separated-data)(ref:bar-separated-data)</p>
-</div>
+![(\#fig:bar-separated-data)(ref:bar-separated-data)](images/05-chart/bar-separated-data.png) 
 
 To create your own separated column or bar chart using the fast-food example,
 make a copy of [Google Sheet Separated Bar Chart template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/).
@@ -507,10 +460,7 @@ to represent parts of a whole instead of pie charts. For example, the stacked co
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-stacked.png")
 ```
 
-<div class="figure">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;amp;format=interactive" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:column-stacked)(ref:column-stacked)</p>
-</div>
+![(\#fig:column-stacked)(ref:column-stacked)](images/05-chart/column-stacked.png) 
 
 To create a stacked column or bar chart, structure your data so that each column will become a new series with its own color, as shown in Figure \@ref(fig:column-stacked-data). Then in the Chart Editor window, choose Chart Type > Stacked column chart (or Stacked bar chart). The rest of the steps are similar to the ones above.
 
@@ -521,10 +471,9 @@ To create a stacked column or bar chart, structure your data so that each column
  knitr::include_graphics("images/05-chart/column-stacked-data.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/column-stacked-data.png" alt="(ref:column-stacked-data)" width="350px" />
-<p class="caption">(\#fig:column-stacked-data)(ref:column-stacked-data)</p>
-</div>
+\begin{figure}
+\includegraphics[width=350px]{images/05-chart/column-stacked-data} \caption{(ref:column-stacked-data)}(\#fig:column-stacked-data)
+\end{figure}
 
 To create your own stacked column or bar chart using the international weight level example,
 visit the [Google Sheets Stacked Column Chart template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/)
@@ -571,10 +520,7 @@ and go to Insert > Chart. In the Chart editor window, in the Setup tab, select C
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive") else knitr::include_graphics("images/05-chart/histogram.png")
 ```
 
-<div class="figure">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;amp;format=interactive" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:histogram)(ref:histogram)</p>
-</div>
+![(\#fig:histogram)(ref:histogram)](images/05-chart/histogram.png) 
 
 If you wish to use our fictional email dataset to create your own histogram, you can make a copy of the
 [Histogram Chart template](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit?usp=sharing).
@@ -616,10 +562,7 @@ you include pizzas but exclude ice cream), your pie chart would not make sense.
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive") else knitr::include_graphics("images/05-chart/pie.png")
 ```
 
-<div class="figure">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;amp;format=interactive" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:pie)(ref:pie)</p>
-</div>
+![(\#fig:pie)(ref:pie)](images/05-chart/pie.png) 
 
 To make a pie chart with Google Sheets, arrange your data in two columns, *Label* and *Value*.
 Values can be expressed as either percentages or counts.
@@ -655,10 +598,7 @@ the level of chicken (shown in light-green) rises steadily and surpasses beef (b
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive") else knitr::include_graphics("images/05-chart/line.png")
 ```
 
-<div class="figure">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;amp;format=interactive" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:line)(ref:line)</p>
-</div>
+![(\#fig:line)(ref:line)](images/05-chart/line.png) 
 
 The simplest way to organize your data is to use the first column as x-axis labels,
 and each additional column as a new series (which will become its own line).
@@ -672,10 +612,9 @@ structured as shown in Figure \@ref(fig:line-data).
 knitr::include_graphics("images/05-chart/line-data.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/line-data.png" alt="(ref:line-data)" width="250px" />
-<p class="caption">(\#fig:line-data)(ref:line-data)</p>
-</div>
+\begin{figure}
+\includegraphics[width=250px]{images/05-chart/line-data} \caption{(ref:line-data)}(\#fig:line-data)
+\end{figure}
 
 The data is available in the [Google Sheet Line chart template](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/).
 If you wish to use it, just make a copy to your own Google Drive from the File menu.
@@ -701,10 +640,7 @@ rise between 1910 and 1970 with a small dip around 1930s, and it didn't change m
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive") else knitr::include_graphics("images/05-chart/stacked-area.png")
 ```
 
-<div class="figure">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;amp;format=interactive" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:stacked-area)(ref:stacked-area)</p>
-</div>
+![(\#fig:stacked-area)(ref:stacked-area)](images/05-chart/stacked-area.png) 
 
 The data for the stacked area chart is available from the [Google Sheet Stacked area chart template](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/),
 which you copy to your own Drive.
@@ -744,10 +680,7 @@ births result in longer lives, or that longer-living females give birth to fewer
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;format=interactive") else knitr::include_graphics("images/05-chart/scatter.png")
 ```
 
-<div class="figure">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;amp;format=interactive" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:scatter)(ref:scatter)</p>
-</div>
+![(\#fig:scatter)(ref:scatter)](images/05-chart/scatter.png) 
 
 The data used in Figure \@ref(fig:scatter) is available from our
 [Google Sheets Scatter chart template](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit?usp=sharing).
@@ -765,10 +698,9 @@ The third column contains *Country* labels.
 knitr::include_graphics("images/05-chart/scatter-data.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/scatter-data.png" alt="(ref:scatter-data)" width="350px" />
-<p class="caption">(\#fig:scatter-data)(ref:scatter-data)</p>
-</div>
+\begin{figure}
+\includegraphics[width=350px]{images/05-chart/scatter-data} \caption{(ref:scatter-data)}(\#fig:scatter-data)
+\end{figure}
 
 To build a scatter chart, select the *two* columns that contain your numeric data,
 and go to *Insert > Chart*. Google Sheets will likely to guess the chart type and you will see a scatterplot,
@@ -795,10 +727,9 @@ all other data ranges include it.
 knitr::include_graphics("images/05-chart/scatter-labels-annotated.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/scatter-labels-annotated.png" alt="(ref:scatter-labels)" width="350px" />
-<p class="caption">(\#fig:scatter-labels)(ref:scatter-labels)</p>
-</div>
+\begin{figure}
+\includegraphics[width=350px]{images/05-chart/scatter-labels-annotated} \caption{(ref:scatter-labels)}(\#fig:scatter-labels)
+\end{figure}
 
 Tip: You may notice that some data points are too close to edges, and their labels are cut off.
 To fix this, go to Customize tab of the Chart editor. There, you can set minimum and maximum values
@@ -824,10 +755,7 @@ with the country name and the two data points.
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive") else knitr::include_graphics("images/05-chart/bubble-3.png")
 ```
 
-<div class="figure">
-<iframe src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;amp;format=interactive" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:bubble-3)(ref:bubble-3)</p>
-</div>
+![(\#fig:bubble-3)(ref:bubble-3)](images/05-chart/bubble-3.png) 
 
 The data for this example is available in [Google Sheets Bubble chart with 3 columns template](https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/).
 
@@ -861,10 +789,7 @@ Float your cursor over bubbles to view data details in the interactive version o
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive") else knitr::include_graphics("images/05-chart/bubble-5.png")
 ```
 
-<div class="figure">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;amp;format=interactive" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:bubble-5)(ref:bubble-5)</p>
-</div>
+![(\#fig:bubble-5)(ref:bubble-5)](images/05-chart/bubble-5.png) 
 
 The five-column dataset is available in this [Google Sheets Bubble chart with 5 columns template](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/).
 The columns are arranged in the following order: country label, x-axis value,
@@ -877,10 +802,9 @@ y-axis value, color, and bubble size.
 knitr::include_graphics("images/05-chart/bubble-5-data.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/bubble-5-data.png" alt="(ref:bubble-5-data)" width="400px" />
-<p class="caption">(\#fig:bubble-5-data)(ref:bubble-5-data)</p>
-</div>
+\begin{figure}
+\includegraphics[width=400px]{images/05-chart/bubble-5-data} \caption{(ref:bubble-5-data)}(\#fig:bubble-5-data)
+\end{figure}
 
 Select all data and go to *Insert > Chart*, and choose Bubble as the Chart type.
 Make sure your *ID*, *X-axis*, *Y-axis*, *Series*, and *Size* fields
@@ -926,10 +850,7 @@ test scores.
 if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-xy-demo.png")
 ```
 
-<div class="figure">
-<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px"></iframe>
-<p class="caption">(\#fig:tableau-xy-demo)(ref:tableau-xy-demo)</p>
-</div>
+![(\#fig:tableau-xy-demo)(ref:tableau-xy-demo)](images/05-chart/tableau-xy-demo.png) 
 
 #### Install Tableau and Get Data {-}
 
@@ -968,10 +889,7 @@ to build your first chart.
 knitr::include_graphics("images/05-chart/tableau-connect-annotated.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/tableau-connect-annotated.png" alt="(ref:tableau-connect)"  />
-<p class="caption">(\#fig:tableau-connect)(ref:tableau-connect)</p>
-</div>
+![(\#fig:tableau-connect)(ref:tableau-connect)](images/05-chart/tableau-connect-annotated.png) 
 
 <!-- TODO: Let's find out whether real first-time users can follow these steps! -->
 
@@ -1005,10 +923,7 @@ values associated with it.
 knitr::include_graphics("images/05-chart/tableau-xy-dragging-annotated.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/tableau-xy-dragging-annotated.png" alt="(ref:tableau-xy-dragging)"  />
-<p class="caption">(\#fig:tableau-xy-dragging)(ref:tableau-xy-dragging)</p>
-</div>
+![(\#fig:tableau-xy-dragging)(ref:tableau-xy-dragging)](images/05-chart/tableau-xy-dragging-annotated.png) 
 
 #### Add Title and Caption, and Publish {-}
 
@@ -1030,10 +945,7 @@ As a result, your final worksheet will look like shown in Figure \@ref(fig:table
 knitr::include_graphics("images/05-chart/tableau-xy-final-annotated.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/tableau-xy-final-annotated.png" alt="(ref:tableau-xy-final)"  />
-<p class="caption">(\#fig:tableau-xy-final)(ref:tableau-xy-final)</p>
-</div>
+![(\#fig:tableau-xy-final)(ref:tableau-xy-final)](images/05-chart/tableau-xy-final-annotated.png) 
 
 Tip: In the dropdown above Columns section, change *Standard* to *Fit Width*
 to ensure your chart occupies 100% of available horizontal space.
@@ -1061,10 +973,7 @@ leaving the box checked.
 knitr::include_graphics("images/05-chart/tableau-toolbar-settings-annotated.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/tableau-toolbar-settings-annotated.png" alt="(ref:tableau-toolbar-settings)"  />
-<p class="caption">(\#fig:tableau-toolbar-settings)(ref:tableau-toolbar-settings)</p>
-</div>
+![(\#fig:tableau-toolbar-settings)(ref:tableau-toolbar-settings)](images/05-chart/tableau-toolbar-settings-annotated.png) 
 
 See the [Embed Tableau Public on Your Website](embed-tableau.html) section of this book to insert the interactive version of your chart on a web page that you control.
 
@@ -1098,10 +1007,7 @@ We will use % Population with Internet Access by the World Bank. You can downloa
 if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-filtered-demo.png")
 ```
 
-<div class="figure">
-<iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px"></iframe>
-<p class="caption">(\#fig:tableau-filtered-demo)(ref:tableau-filtered-demo)</p>
-</div>
+![(\#fig:tableau-filtered-demo)(ref:tableau-filtered-demo)](images/05-chart/tableau-filtered-demo.png) 
 
 We assume that you have Tableau installed. If not, see the previous tutorial, [Create XY Scatter Chart with Tableau Public](scatter-chart-tableau.html).
 
@@ -1141,10 +1047,9 @@ how the interactive filtering works.
 knitr::include_graphics("images/05-chart/tableau-filtered-show-filter.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/tableau-filtered-show-filter.png" alt="(ref:tableau-filtered-show-filter)" width="220px" />
-<p class="caption">(\#fig:tableau-filtered-show-filter)(ref:tableau-filtered-show-filter)</p>
-</div>
+\begin{figure}
+\includegraphics[width=220px]{images/05-chart/tableau-filtered-show-filter} \caption{(ref:tableau-filtered-show-filter)}(\#fig:tableau-filtered-show-filter)
+\end{figure}
 
 ### Add Title and Caption, and Publish {-}
 
@@ -1170,10 +1075,7 @@ you are ready to publish.
 knitr::include_graphics("images/05-chart/tableau-filtered-ready.png")
 ```
 
-<div class="figure">
-<img src="images/05-chart/tableau-filtered-ready.png" alt="(ref:tableau-filtered-ready)"  />
-<p class="caption">(\#fig:tableau-filtered-ready)(ref:tableau-filtered-ready)</p>
-</div>
+![(\#fig:tableau-filtered-ready)(ref:tableau-filtered-ready)](images/05-chart/tableau-filtered-ready.png) 
 
 To publish the filtered line chart to the web, go to *File > Save to Tableau Public As...*.
 You may be prompted with the window to log in to your account (or create one if you don't have it yet).

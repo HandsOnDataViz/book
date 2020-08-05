@@ -288,10 +288,7 @@ https://USERNAME.github.io/leaflet-maps-with-google-sheets
 if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-1-fork-640.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
-<div class="figure">
-<iframe src="images/10-leaflet/lmwgs-1-fork-640.gif" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:lmwgs-1)Screencast: Fork</p>
-</div>
+![(\#fig:lmwgs-1)Screencast: Fork](images/placeholder.jpg) 
 
 6) Scroll up to the top, and click on your repo name to go back to its main page.
 
@@ -316,10 +313,7 @@ if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-1-fork-6
 if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-2-make-copy-640.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
-<div class="figure">
-<iframe src="images/10-leaflet/lmwgs-2-make-copy-640.gif" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:lmwgs-2)Screencast: Share Google Sheet</p>
-</div>
+![(\#fig:lmwgs-2)Screencast: Share Google Sheet](images/placeholder.jpg) 
 
 5) File > Publish the Link to your Google Sheet to the public web, so the Leaflet map code can read it.
 
@@ -344,10 +338,7 @@ if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-2-make-c
 if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
-<div class="figure">
-<iframe src="images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="672" height="400px"></iframe>
-<p class="caption">(\#fig:lmwgs-paste)Screencast: Copy Google Sheet URL and paste into GitHub code</p>
-</div>
+![(\#fig:lmwgs-paste)Screencast: Copy Google Sheet URL and paste into GitHub code](images/placeholder.jpg) 
 
 5) Next, let's paste your Google Sheet URL in a second place to keep track of it. Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.
 

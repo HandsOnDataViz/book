@@ -162,7 +162,7 @@ Let's build a simple point map with sample data, using Google My Maps <https://w
 if(knitr::is_html_output()) knitr::include_url("images/06-map/mymaps-style-groups-640w.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
-<iframe src="images/06-map/mymaps-style-groups-640w.gif" width="672" height="400px"></iframe>
+![](images/placeholder.jpg)<!-- --> 
 
 9) To publish your map on the web, click Share, add a map title, change from Private to Public on the Web, so that anyone can view your map. Click Save and Done.
 

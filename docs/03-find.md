@@ -100,7 +100,10 @@ The second step is to save more detailed source notes about the data on a separa
  knitr::include_graphics("images/03-find/sheets-with-tabs.png")
 ```
 
-![(\#fig:sheets-with-tabs)(ref:sheets-with-tabs)](images/03-find/sheets-with-tabs.png) 
+<div class="figure">
+<img src="images/03-find/sheets-with-tabs.png" alt="(ref:sheets-with-tabs)"  />
+<p class="caption">(\#fig:sheets-with-tabs)(ref:sheets-with-tabs)</p>
+</div>
 
 A third step is to make a backup of the original data before cleaning or editing it. For a simple one-sheet file in a multi-tab spreadsheet tool, right-click on the tab containing the data to make a duplicate copy in another tab, also shown in Figure \@ref(fig:sheets-with-tabs). Clearly label the new tab as a backup and leave it alone! For CSV files or more complex spreadsheets, create a separate backup file. To be clear, these simple backup strategy only helps you from making non-fixable edits to your original data. Make sure you have a broader strategy to backup your files from your computer or cloud account in case either of those are deleted or those systems crash.
 

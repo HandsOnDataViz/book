@@ -313,7 +313,7 @@ if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io
 ```
 
 <div class="figure">
-<iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="100%" height="600px"></iframe>
+<iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="672" height="600px"></iframe>
 <p class="caption">(\#fig:sample-map)(ref:sample-map)</p>
 </div>
 
@@ -328,7 +328,7 @@ if(knitr::is_html_output()) knitr::include_url("images/17-bookdown/sheets-option
 ```
 
 <div class="figure">
-<iframe src="images/17-bookdown/sheets-option-drag.gif" width="100%" height="250px"></iframe>
+<iframe src="images/17-bookdown/sheets-option-drag.gif" width="672" height="250px"></iframe>
 <p class="caption">(\#fig:sheets-option-drag)(ref:sheets-option-drag)</p>
 </div>
 
@@ -345,7 +345,7 @@ if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-n
 ```
 
 <div class="figure">
-<iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="100%" height="400px"></iframe>
+<iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="672" height="400px"></iframe>
 <p class="caption">(\#fig:video-sample)(ref:video-sample)</p>
 </div>
 
@@ -360,7 +360,7 @@ if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/w6
 ```
 
 <div class="figure">
-<iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="100%" height="400px"></iframe>
+<iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="672" height="400px"></iframe>
 <p class="caption">(\#fig:video-sample2)(ref:video-sample2)</p>
 </div>
 

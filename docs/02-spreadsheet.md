@@ -10,9 +10,10 @@ The interactive charts and maps that we'll construct later this book are built o
  knitr::include_graphics("images/02-spreadsheet/spreadsheet-terms-annotated.png")
 ```
 
-\begin{figure}
-\includegraphics[width=600px]{images/02-spreadsheet/spreadsheet-terms-annotated} \caption{(ref:spreadsheet-terms)}(\#fig:spreadsheet-terms)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/spreadsheet-terms-annotated.png" alt="(ref:spreadsheet-terms)" width="600" />
+<p class="caption">(\#fig:spreadsheet-terms)(ref:spreadsheet-terms)</p>
+</div>
 
 In this chapter, we'll start by reviewing basic steps, such as [sharing](share.html), [uploading](upload.html), and [collecting data with online forms](forms.html). Then we'll move on to ways of organizing and analyzing your data, such as [sorting and filtering](sort.html), [calculating with formulas](calculate.html), and [summarizing with pivot tables](pivot.html). Finally, we'll examine ways to connect different sheets, such as [matching columns with lookup tables](vlookup.html), and [relational databases](database.html). We illustrate all of these methods with beginner-level users in mind, meaning they do not require any prior background.
 
@@ -46,9 +47,10 @@ Spreadsheet tools organize data in different formats. When you download spreadsh
  knitr::include_graphics("images/02-spreadsheet/data-formats.png")
 ```
 
-\begin{figure}
-\includegraphics[width=350px]{images/02-spreadsheet/data-formats} \caption{(ref:data-formats)}(\#fig:data-formats)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/data-formats.png" alt="(ref:data-formats)" width="350" />
+<p class="caption">(\#fig:data-formats)(ref:data-formats)</p>
+</div>
 
 Warning: Several tools in this book may not work properly on a Mac computer that does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
 
@@ -59,9 +61,10 @@ Warning: Several tools in this book may not work properly on a Mac computer that
  knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
 ```
 
-\begin{figure}
-\includegraphics[width=400px]{images/02-spreadsheet/mac-file-extensions} \caption{(ref:mac-file-extensions)}(\#fig:mac-file-extensions)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/mac-file-extensions.png" alt="(ref:mac-file-extensions)" width="400" />
+<p class="caption">(\#fig:mac-file-extensions)(ref:mac-file-extensions)</p>
+</div>
 
 ## Download to CSV or ODS Format {- #csv}
 In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned the advantages of selecting software tools that support data migration, so that you can export your work to other platforms. Since digital technology is always changing, it's a good rule of thumb to never upload important data into a tool if you can't easily get it back out. Ideally, spreadsheet tools should allow you to export your work in generic or open-data file formats, such as Comma Separated Values (CSV) and OpenDocument Spreadsheet (ODS), to maximize your options to migrate to other platforms.
@@ -77,9 +80,10 @@ One reason we feature Google Sheets in this book is because it exports data in s
  knitr::include_graphics("images/02-spreadsheet/sheets-download.png")
 ```
 
-\begin{figure}
-\includegraphics[width=600px]{images/02-spreadsheet/sheets-download} \caption{(ref:sheets-download)}(\#fig:sheets-download)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-download.png" alt="(ref:sheets-download)" width="600" />
+<p class="caption">(\#fig:sheets-download)(ref:sheets-download)</p>
+</div>
 
 But exporting data can be trickier in Microsoft Excel. Using the online Excel tool in your browser (either the free or paid version), you *cannot* save files in the generic single-sheet CSV format, a step required by some data visualization tools in later chapters of this book. Only the downloadable Excel tool (which now requires a paid subscription) will export in CSV format, a step required by some data visualization tools in later chapters of this book. And when using the downloadable Excel tool to save in CSV format, the steps sometimes confuse people. First, if you see multiple CSV options, choose *CSV UTF-8*, which should work best across different computer platforms. Second, if your Excel workbook contains multiple sheets or formulas, you may see a warning that it cannot be saved in CSV format, which only saves data (not formulas) contained in the active sheet (not all sheets). If you understand this, click *OK* to continue. Third, on the next screen, Excel may warn you about "Possible data loss" when saving an Excel file in CSV format, for reasons described above. Overall, when working with the downloadable Excel tool, first save the full-version of your Excel file in XLSX format before exporting a single sheet in CSV format.
 
@@ -103,9 +107,10 @@ Let's begin by making a copy of a real dataset that may interest you, because it
  knitr::include_graphics("images/02-spreadsheet/file-make-copy.png")
 ```
 
-\begin{figure}
-\includegraphics[width=250px]{images/02-spreadsheet/file-make-copy} \caption{(ref:file-make-copy)}(\#fig:file-make-copy)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/file-make-copy.png" alt="(ref:file-make-copy)" width="250" />
+<p class="caption">(\#fig:file-make-copy)(ref:file-make-copy)</p>
+</div>
 
 4. To keep your Google Drive files organized, save them in folders with relevant names to make them easier to find. For example, you can click the *My Drive* button and the *New folder* button to create a folder for your data, before clicking *OK*, as shown in Figure \@ref(fig:my-drive-new-folder).
 
@@ -116,9 +121,10 @@ Let's begin by making a copy of a real dataset that may interest you, because it
  knitr::include_graphics("images/02-spreadsheet/my-drive-new-folder.png")
 ```
 
-\begin{figure}
-\includegraphics[width=300px]{images/02-spreadsheet/my-drive-new-folder} \caption{(ref:my-drive-new-folder)}(\#fig:my-drive-new-folder)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/my-drive-new-folder.png" alt="(ref:my-drive-new-folder)" width="300" />
+<p class="caption">(\#fig:my-drive-new-folder)(ref:my-drive-new-folder)</p>
+</div>
 
 Your copy of the Google Sheet will be private to you only, by default. In the next section we'll learn about different options for sharing your Google Sheet data with others.
 
@@ -141,9 +147,10 @@ If you're working on a collaborative project with other people, Google Sheets of
  knitr::include_graphics("images/02-spreadsheet/share-screen.png")
 ```
 
-\begin{figure}
-\includegraphics[width=600px]{images/02-spreadsheet/share-screen} \caption{(ref:share-screen)}(\#fig:share-screen)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/share-screen.png" alt="(ref:share-screen)" width="600" />
+<p class="caption">(\#fig:share-screen)(ref:share-screen)</p>
+</div>
 
 Tip: If you don't want to send people a really long and ugly Google Sheet web address such as:
 
@@ -158,9 +165,10 @@ then use a free link-shortening service. For example, by using our free [Bitly.c
  knitr::include_graphics("images/02-spreadsheet/link-shortening.png")
 ```
 
-\begin{figure}
-\includegraphics[width=300px]{images/02-spreadsheet/link-shortening} \caption{(ref:link-shortening)}(\#fig:link-shortening)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/link-shortening.png" alt="(ref:link-shortening)" width="300" />
+<p class="caption">(\#fig:link-shortening)(ref:link-shortening)</p>
+</div>
 
 Now that you have different options for sharing a Google Sheet, let's learn how to upload and convert data from different formats.
 
@@ -178,9 +186,10 @@ We feature Google Sheets in this book partly because it supports data migration,
  knitr::include_graphics("images/02-spreadsheet/drive-settings.png")
 ```
 
-\begin{figure}
-\includegraphics[width=300px]{images/02-spreadsheet/drive-settings} \caption{(ref:drive-settings)}(\#fig:drive-settings)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/drive-settings.png" alt="(ref:drive-settings)" width="300" />
+<p class="caption">(\#fig:drive-settings)(ref:drive-settings)</p>
+</div>
 
 3. On the Settings screen, check the box to *Convert uploaded files to Google Docs editor format*, as shown in Figure \@ref(fig:convert-uploads), and click *Done*. This turns on the conversion setting globally, meaning it will convert all possible files that you upload in the future---including Microsoft Excel, Word, PowerPoint, and more---unless you turn it off.
 
@@ -191,9 +200,10 @@ We feature Google Sheets in this book partly because it supports data migration,
  knitr::include_graphics("images/02-spreadsheet/convert-uploads.png")
 ```
 
-\begin{figure}
-\includegraphics[width=750px]{images/02-spreadsheet/convert-uploads} \caption{(ref:convert-uploads)}(\#fig:convert-uploads)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/convert-uploads.png" alt="(ref:convert-uploads)" width="750" />
+<p class="caption">(\#fig:convert-uploads)(ref:convert-uploads)</p>
+</div>
 
 4. Upload a sample Excel file from your computer to your Google Drive. Either drag-and-drop it to the desired folder, as shown in Figure \@ref(fig:upload-file), or use the *New* button and select *File upload*.
 
@@ -204,9 +214,10 @@ We feature Google Sheets in this book partly because it supports data migration,
  knitr::include_graphics("images/02-spreadsheet/upload-file.png")
 ```
 
-\begin{figure}
-\includegraphics[width=300px]{images/02-spreadsheet/upload-file} \caption{(ref:upload-file)}(\#fig:upload-file)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/upload-file.png" alt="(ref:upload-file)" width="300" />
+<p class="caption">(\#fig:upload-file)(ref:upload-file)</p>
+</div>
 
 If you forget to check the *Convert uploads* box, Google Drive will keep uploaded files in their original format, and display their icons and file name extensions such as `.xlsx` or `.csv`, as shown in Figure \@ref(fig:drive-file-icons).
 
@@ -217,9 +228,10 @@ If you forget to check the *Convert uploads* box, Google Drive will keep uploade
  knitr::include_graphics("images/02-spreadsheet/drive-file-icons.png")
 ```
 
-\begin{figure}
-\includegraphics[width=300px]{images/02-spreadsheet/drive-file-icons} \caption{(ref:drive-file-icons)}(\#fig:drive-file-icons)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/drive-file-icons.png" alt="(ref:drive-file-icons)" width="300" />
+<p class="caption">(\#fig:drive-file-icons)(ref:drive-file-icons)</p>
+</div>
 
 Tip: Google Drive now allows you to edit Microsoft Office file formats, but not all features are guaranteed to work across platforms. Also, Google Drive now allows you to convert a specific uploaded Excel file into its Google format by using the *File > Save as Google Sheets* menu. Finally, to convert individual files to your Google Drive, while keeping the global conversion setting off, from inside any Google Sheet you can select *File > Import > Upload*. But we recommend that most people turn on the global conversion setting as described above, except in cases where you intentionally use Google Drive to edit an Excel-formatted file, and understand that some features may not work.
 
@@ -237,9 +249,10 @@ Inside your Google Drive account, one tool that's often overlooked is Google For
  knitr::include_graphics("images/02-spreadsheet/forms-new.png")
 ```
 
-\begin{figure}
-\includegraphics[width=500px]{images/02-spreadsheet/forms-new} \caption{(ref:forms-new)}(\#fig:forms-new)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/forms-new.png" alt="(ref:forms-new)" width="500" />
+<p class="caption">(\#fig:forms-new)(ref:forms-new)</p>
+</div>
 
 The Google Forms *Questions* tab allows you to design questions with different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure \@ref(fig:forms-questions).
 
@@ -250,9 +263,10 @@ The Google Forms *Questions* tab allows you to design questions with different t
  knitr::include_graphics("images/02-spreadsheet/forms-questions.png")
 ```
 
-\begin{figure}
-\includegraphics[width=700px]{images/02-spreadsheet/forms-questions} \caption{(ref:forms-questions)}(\#fig:forms-questions)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/forms-questions.png" alt="(ref:forms-questions)" width="700" />
+<p class="caption">(\#fig:forms-questions)(ref:forms-questions)</p>
+</div>
 
 Give each question a very short title, since these will appear as column headers in the linked spreadsheet you'll create further below. If a question needs more explanation or examples, click the three-dot kebob menu in the bottom-right corner to *Show > Description*, which opens a text box where you can type in more details, as shown in Figure \@ref(fig:forms-description). Also, you can *Show > Response validation*, which requires users to follow a particular format, such as an email address or phone number.
 
@@ -263,9 +277,10 @@ Give each question a very short title, since these will appear as column headers
  knitr::include_graphics("images/02-spreadsheet/forms-description.png")
 ```
 
-\begin{figure}
-\includegraphics[width=700px]{images/02-spreadsheet/forms-description} \caption{(ref:forms-description)}(\#fig:forms-description)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/forms-description.png" alt="(ref:forms-description)" width="700" />
+<p class="caption">(\#fig:forms-description)(ref:forms-description)</p>
+</div>
 
 To preview how your online will appear to recipients, click the *Eyeball symbol* near the top of the page, as shown in Figure \@ref(fig:forms-preview). When your form is complete, click the *Send* button to distribute it via email, a link, or to embed the live form as an iframe on a web page. Learn more about the latter option in [Chapter 7: Embed On Your Web](embed.html).
 
@@ -276,9 +291,10 @@ To preview how your online will appear to recipients, click the *Eyeball symbol*
  knitr::include_graphics("images/02-spreadsheet/forms-preview.png")
 ```
 
-\begin{figure}
-\includegraphics[width=350px]{images/02-spreadsheet/forms-preview} \caption{(ref:forms-preview)}(\#fig:forms-preview)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/forms-preview.png" alt="(ref:forms-preview)" width="350" />
+<p class="caption">(\#fig:forms-preview)(ref:forms-preview)</p>
+</div>
 
 The Google Forms *Responses* tab will show individual results you receive, and also includes a powerful button to open the data in a linked Google Sheet, as shown in Figure \@ref(fig:forms-responses).
 
@@ -289,9 +305,10 @@ The Google Forms *Responses* tab will show individual results you receive, and a
  knitr::include_graphics("images/02-spreadsheet/forms-responses.png")
 ```
 
-\begin{figure}
-\includegraphics[width=500px]{images/02-spreadsheet/forms-responses} \caption{(ref:forms-responses)}(\#fig:forms-responses)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/forms-responses.png" alt="(ref:forms-responses)" width="500" />
+<p class="caption">(\#fig:forms-responses)(ref:forms-responses)</p>
+</div>
 
 Now that you've learned how to collect data with an online form and linked spreadsheet, the next two sections will teach you how to sort, filter, and pivot tables to begin analyzing their contents and the stories they reveal.
 
@@ -313,9 +330,10 @@ To learn how to sort and filter, let's explore a large dataset of around 3,000 r
  knitr::include_graphics("images/02-spreadsheet/sheets-select-all.png")
 ```
 
-\begin{figure}
-\includegraphics[width=400px]{images/02-spreadsheet/sheets-select-all} \caption{(ref:sheets-select-all)}(\#fig:sheets-select-all)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-select-all.png" alt="(ref:sheets-select-all)" width="400" />
+<p class="caption">(\#fig:sheets-select-all)(ref:sheets-select-all)</p>
+</div>
 
 Warning: If you forget to select all cells, you might accidentally sort one column independently of the others, which will scramble your dataset and make it meaningless. Always select all cells before sorting!
 
@@ -328,9 +346,10 @@ Warning: If you forget to select all cells, you might accidentally sort one colu
  knitr::include_graphics("images/02-spreadsheet/sheets-sort-range.png")
 ```
 
-\begin{figure}
-\includegraphics[width=400px]{images/02-spreadsheet/sheets-sort-range} \caption{(ref:sheets-sort-range)}(\#fig:sheets-sort-range)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-sort-range.png" alt="(ref:sheets-sort-range)" width="400" />
+<p class="caption">(\#fig:sheets-sort-range)(ref:sheets-sort-range)</p>
+</div>
 
 Scroll through your sorted data and you'll see that over 1,000 readers rated themselves as beginners (level 1) with data visualization.
 
@@ -343,9 +362,10 @@ Tip: When working with large spreadsheets, you can "freeze" the first row so tha
  knitr::include_graphics("images/02-spreadsheet/sheets-view-freeze.png")
 ```
 
-\begin{figure}
-\includegraphics[width=500px]{images/02-spreadsheet/sheets-view-freeze} \caption{(ref:sheets-view-freeze)}(\#fig:sheets-view-freeze)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-view-freeze.png" alt="(ref:sheets-view-freeze)" width="500" />
+<p class="caption">(\#fig:sheets-view-freeze)(ref:sheets-view-freeze)</p>
+</div>
 
 5. Now let's try filtering your sheet. Go to *Data > Create a Filter*, which inserts downward arrows in each column header. Click on the downward arrow in the *Occupation* column, and see options to display or hide rows of data. For example, click the "Clear" button to undo all options, then click only *educator* to display only rows with that response, as shown in Figure \@ref(fig:sheets-filter). Click "OK".
 
@@ -356,9 +376,10 @@ Tip: When working with large spreadsheets, you can "freeze" the first row so tha
  knitr::include_graphics("images/02-spreadsheet/sheets-filter.png")
 ```
 
-\begin{figure}
-\includegraphics[width=300px]{images/02-spreadsheet/sheets-filter} \caption{(ref:sheets-filter)}(\#fig:sheets-filter)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-filter.png" alt="(ref:sheets-filter)" width="300" />
+<p class="caption">(\#fig:sheets-filter)(ref:sheets-filter)</p>
+</div>
 
 Now your view of reader responses is sorted by experience, and filtered to show only educators. Scroll through their one-sentence goals for learning about data visualization. How to do they compare to your own goals? In the next section, we'll learn how to start analyzing your data with simple formulas and functions.
 
@@ -380,9 +401,10 @@ Let's explore a large dataset of around 3,000 readers of this book who responded
  knitr::include_graphics("images/02-spreadsheet/sheets-insert-row.png")
 ```
 
-\begin{figure}
-\includegraphics[width=200px]{images/02-spreadsheet/sheets-insert-row} \caption{(ref:sheets-insert-row)}(\#fig:sheets-insert-row)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-insert-row.png" alt="(ref:sheets-insert-row)" width="200" />
+<p class="caption">(\#fig:sheets-insert-row)(ref:sheets-insert-row)</p>
+</div>
 
 4. Let's calculate the average level of reader experience with data visualization. Click on cell E2 in the new blank row you just created, and type an equal symbol (`=`) to start a formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the average for current values in the column, such as `=AVERAGE(E3:E2894)`, then press *Return* or *Enter* on your keyboard, as shown in Figure \@ref(fig:sheets-average).
 
@@ -393,9 +415,10 @@ Let's explore a large dataset of around 3,000 readers of this book who responded
  knitr::include_graphics("images/02-spreadsheet/sheets-average.png")
 ```
 
-\begin{figure}
-\includegraphics[width=300px]{images/02-spreadsheet/sheets-average} \caption{(ref:sheets-average)}(\#fig:sheets-average)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-average.png" alt="(ref:sheets-average)" width="300" />
+<p class="caption">(\#fig:sheets-average)(ref:sheets-average)</p>
+</div>
 
 Since our live spreadsheet has a growing number of survey responses, you will have a larger number in the last cell reference to include all of the entries in your version. Currently, the average level of reader experience with data visualization is around 2 on a scale from 1 (beginner) to 5 (professional), but this may change as more readers fill out the survey. Note that if any readers leave this question blank, spreadsheet tools ignore empty cells when performing calculations.
 
@@ -410,9 +433,10 @@ Tip: In Google Sheets, another way to write the formula above is `=AVERAGE(E3:E)
 if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-drag-calc.gif", height = "85px") else knitr::include_graphics("images/02-spreadsheet/sheets-drag-calc.png")
 ```
 
-\begin{figure}
-\includegraphics[width=300px]{images/02-spreadsheet/sheets-drag-calc} \caption{(ref:sheets-drag-calc)}(\#fig:sheets-drag-calc)
-\end{figure}
+<div class="figure">
+<iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="300" height="85px"></iframe>
+<p class="caption">(\#fig:sheets-drag-calc)(ref:sheets-drag-calc)</p>
+</div>
 
 6. Since the *Occupation* column contains a defined set of text responses, let's use a different function to count them using an *if statement*, such as the number of responses if a reader listed "educator". Click in cell G2 and type the equal symbol (`=`) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is *educator* for current values in the entire column. You can directly type in the formula `=COUNTIF(G3:G2894,"=educator")`, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax `=COUNTIF(G3:G,"=educator")` that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure \@ref(fig:sheets-countif).
 
@@ -423,9 +447,10 @@ if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-dra
  knitr::include_graphics("images/02-spreadsheet/sheets-countif.png")
 ```
 
-\begin{figure}
-\includegraphics[width=250px]{images/02-spreadsheet/sheets-countif} \caption{(ref:sheets-countif)}(\#fig:sheets-countif)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-countif.png" alt="(ref:sheets-countif)" width="250" />
+<p class="caption">(\#fig:sheets-countif)(ref:sheets-countif)</p>
+</div>
 
 Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text. Read more about functions in this support pages for [Google Sheets](https://support.google.com/docs/topic/9054603), [LibreOffice](https://help.libreoffice.org/Calc/Functions_by_Category), or [Microsoft Excel support page](https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb). See additional spreadsheet skills in later chapters of the book. [Chapter 4: Clean Up Messy Data](clean.html) demonstrates how to find and replace, split data into columns, and combine columns of data (such as when you need the street address, city, and postal code all in one line). [Chapter 11: Transform Your Map Data](transform.html) also features more advanced spreadsheet skills and tools, such as how to geocode addresses, pivot address points into polygons, and how to normalize data to create more meaningful polygon maps.
 
@@ -447,9 +472,10 @@ Pivot tables are another powerful feature built into spreadsheet tools to help y
  knitr::include_graphics("images/02-spreadsheet/sheets-pivot-create.png")
 ```
 
-\begin{figure}
-\includegraphics[width=450px]{images/02-spreadsheet/sheets-pivot-create} \caption{(ref:sheets-pivot-create)}(\#fig:sheets-pivot-create)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-pivot-create.png" alt="(ref:sheets-pivot-create)" width="450" />
+<p class="caption">(\#fig:sheets-pivot-create)(ref:sheets-pivot-create)</p>
+</div>
 
 4. In the *Pivot table editor* screen, you can regroup data from the first sheet by adding rows, columns, and values. First, click the Rows *Add* button and select *Occupation*, which displays the unique entries in that column, as shown in Figure \@ref(fig:sheets-pivot-rows).
 
@@ -460,9 +486,10 @@ Pivot tables are another powerful feature built into spreadsheet tools to help y
  knitr::include_graphics("images/02-spreadsheet/sheets-pivot-rows.png")
 ```
 
-\begin{figure}
-\includegraphics[width=600px]{images/02-spreadsheet/sheets-pivot-rows} \caption{(ref:sheets-pivot-rows)}(\#fig:sheets-pivot-rows)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-pivot-rows.png" alt="(ref:sheets-pivot-rows)" width="600" />
+<p class="caption">(\#fig:sheets-pivot-rows)(ref:sheets-pivot-rows)</p>
+</div>
 
 5. Next, to count the number of responses for each entry, click the Values *Add* button and select *Occupation* again. Google Sheets will automatically summarize the values by *COUNTA*, meaning it displays the frequency of each textual response, as shown in Figure \@ref(fig:sheets-pivot-values).
 
@@ -473,9 +500,10 @@ Pivot tables are another powerful feature built into spreadsheet tools to help y
  knitr::include_graphics("images/02-spreadsheet/sheets-pivot-values.png")
 ```
 
-\begin{figure}
-\includegraphics[width=600px]{images/02-spreadsheet/sheets-pivot-values} \caption{(ref:sheets-pivot-values)}(\#fig:sheets-pivot-values)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-pivot-values.png" alt="(ref:sheets-pivot-values)" width="600" />
+<p class="caption">(\#fig:sheets-pivot-values)(ref:sheets-pivot-values)</p>
+</div>
 
 Currently, the top three occupations listed by readers are information technology, for-profit business, and student. Since this is a live spreadsheet, these rankings may change as more readers respond to the survey.
 
@@ -488,7 +516,10 @@ Currently, the top three occupations listed by readers are information technolog
  knitr::include_graphics("images/02-spreadsheet/sheets-pivot-columns.png")
 ```
 
-![(\#fig:sheets-pivot-columns)(ref:sheets-pivot-columns)](images/02-spreadsheet/sheets-pivot-columns.png) 
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-pivot-columns.png" alt="(ref:sheets-pivot-columns)"  />
+<p class="caption">(\#fig:sheets-pivot-columns)(ref:sheets-pivot-columns)</p>
+</div>
 
 To go one step further, *Filter* the data to limit the pivot table results by another category. For example, you can click the Filters *Add* button and select *Years of school* to display only readers who listed 20 or more years.
 
@@ -507,9 +538,10 @@ Although Google Sheets pivot tables show raw numbers by default, you also can ch
  knitr::include_graphics("images/02-spreadsheet/sheets-pivot-summarize.png")
 ```
 
-\begin{figure}
-\includegraphics[width=250px]{images/02-spreadsheet/sheets-pivot-summarize} \caption{(ref:sheets-pivot-summarize)}(\#fig:sheets-pivot-summarize)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/sheets-pivot-summarize.png" alt="(ref:sheets-pivot-summarize)" width="250" />
+<p class="caption">(\#fig:sheets-pivot-summarize)(ref:sheets-pivot-summarize)</p>
+</div>
 
 While designing pivot tables may look differently across other spreadsheet tools, the concept is the same. Learn more about how pivot tables work in the [support pages for Google Sheets](https://support.google.com/docs/topic/9054603) or [LibreOffice](https://help.libreoffice.org/Calc/Creating_Pivot_Tables) or [Microsoft Excel](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576). Remember that you can download the Google Sheets data and export to ODS or Excel format to experiment with pivot tables in other tools.
 
@@ -528,9 +560,10 @@ Here's a scenario that illustrates why and how to use the VLOOKUP function. Figu
  knitr::include_graphics("images/02-spreadsheet/vlookup-setup.png")
 ```
 
-\begin{figure}
-\includegraphics[width=750px]{images/02-spreadsheet/vlookup-setup} \caption{(ref:vlookup-setup)}(\#fig:vlookup-setup)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/vlookup-setup.png" alt="(ref:vlookup-setup)" width="750" />
+<p class="caption">(\#fig:vlookup-setup)(ref:vlookup-setup)</p>
+</div>
 
 1. Open this [Google Sheet of Food Bank sample names and addresses](https://docs.google.com/spreadsheets/d/1bcvOJayycijIbf8e-u_cMq0kPbEp29MFQr_FXK6igs4) in a new browser tab. Log into your Google Drive, and go to *File > Make a Copy* to create your own version that you can edit.
 
@@ -545,9 +578,10 @@ We simplified this two-sheet problem by placing both tables in the same Google S
  knitr::include_graphics("images/02-spreadsheet/vlookup-headers.png")
 ```
 
-\begin{figure}
-\includegraphics[width=500px]{images/02-spreadsheet/vlookup-headers} \caption{(ref:vlookup-headers)}(\#fig:vlookup-headers)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/vlookup-headers.png" alt="(ref:vlookup-headers)" width="500" />
+<p class="caption">(\#fig:vlookup-headers)(ref:vlookup-headers)</p>
+</div>
 
 3. In the *names* sheet, click in cell C2 and type `=VLOOKUP`, and Google Sheets will suggest that you complete the full formula in this format:
 
@@ -571,9 +605,10 @@ Here's what each part means:
  knitr::include_graphics("images/02-spreadsheet/vlookup-solution.png")
 ```
 
-\begin{figure}
-\includegraphics[width=700px]{images/02-spreadsheet/vlookup-solution} \caption{(ref:vlookup-solution)}(\#fig:vlookup-solution)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/vlookup-solution.png" alt="(ref:vlookup-solution)" width="700" />
+<p class="caption">(\#fig:vlookup-solution)(ref:vlookup-solution)</p>
+</div>
 
 Let's break down each part of the formula you entered in cell C2 of the *names* sheet:
 
@@ -591,9 +626,10 @@ Let's break down each part of the formula you entered in cell C2 of the *names* 
  knitr::include_graphics("images/02-spreadsheet/vlookup-drag.png")
 ```
 
-\begin{figure}
-\includegraphics[width=500px]{images/02-spreadsheet/vlookup-drag} \caption{(ref:vlookup-drag)}(\#fig:vlookup-drag)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/vlookup-drag.png" alt="(ref:vlookup-drag)" width="500" />
+<p class="caption">(\#fig:vlookup-drag)(ref:vlookup-drag)</p>
+</div>
 
 6. Finally, use the same hold-and-drag method to paste and update the formula downward to fill in all rows, as shown in Figure \@ref(fig:vlookup-final).
 
@@ -604,9 +640,10 @@ Let's break down each part of the formula you entered in cell C2 of the *names* 
  knitr::include_graphics("images/02-spreadsheet/vlookup-final.png")
 ```
 
-\begin{figure}
-\includegraphics[width=500px]{images/02-spreadsheet/vlookup-final} \caption{(ref:vlookup-final)}(\#fig:vlookup-final)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/vlookup-final.png" alt="(ref:vlookup-final)" width="500" />
+<p class="caption">(\#fig:vlookup-final)(ref:vlookup-final)</p>
+</div>
 
 Warning: If you save this spreadsheet in CSV format, your calculated results will appear in the CSV sheet, but any formulas you created to produce those results will disappear. Always keep track of your original spreadsheet to remind yourself how you constructed formulas.
 
@@ -633,9 +670,10 @@ To demonstrate, we imported both of the Google Sheets above into this [live Airt
  knitr::include_graphics("images/02-spreadsheet/airtable-link.png")
 ```
 
-\begin{figure}
-\includegraphics[width=500px]{images/02-spreadsheet/airtable-link} \caption{(ref:airtable-link)}(\#fig:airtable-link)
-\end{figure}
+<div class="figure">
+<img src="images/02-spreadsheet/airtable-link.png" alt="(ref:airtable-link)" width="500" />
+<p class="caption">(\#fig:airtable-link)(ref:airtable-link)</p>
+</div>
 
 In Airtable, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the *people* sheet, their organization's full address appears from the *food banks* sheet, as shown in Figure \@ref(fig:airtable-expand). In our editable version, if we update the address for one organization in the *food banks* sheet, it's automatically changed for all employees linked to that organization in the *people* sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we'll cover in [Chapter 7: Embed on your Web](embed.html). See more about its features in the [Airtable Support page](https://support.airtable.com).
 
@@ -646,9 +684,10 @@ In Airtable, click on a linked row to expand it and view related data. For examp
 if(knitr::is_html_output()) knitr::include_url("https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow", height = "533px") else knitr::include_graphics("images/02-spreadsheet/airtable-expand.png")
 ```
 
-\begin{figure}
-\includegraphics[width=600px]{images/02-spreadsheet/airtable-expand} \caption{(ref:airtable-expand)}(\#fig:airtable-expand)
-\end{figure}
+<div class="figure">
+<iframe src="https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow" width="600" height="533px"></iframe>
+<p class="caption">(\#fig:airtable-expand)(ref:airtable-expand)</p>
+</div>
 
 It's important to understand the conceptual differences between a "flat-file" spreadsheet and a relational database to help you determine when to use one tool versus another. As you've learned in the sections above, spreadsheets are your best choice to begin organizing and analyzing your data, using methods such as sorting, filtering, pivoting, and lookup, to help reveal the underlying stories that you may wish to visualize. But relational databases are your best choice when maintaining large amounts of data with internal links, like one-to-many relationships, such as an organization with several employees.  
 

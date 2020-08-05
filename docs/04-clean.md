@@ -14,7 +14,10 @@ actually analyzing and visualizing it—it is often the case for data analysts.
 knitr::include_graphics("images/04-clean/clean-up-messy-data.png")
 ```
 
-![(\#fig:clean-up-messy-data)(ref:clean-up-messy-data)](images/04-clean/clean-up-messy-data.png) 
+<div class="figure">
+<img src="images/04-clean/clean-up-messy-data.png" alt="(ref:clean-up-messy-data)"  />
+<p class="caption">(\#fig:clean-up-messy-data)(ref:clean-up-messy-data)</p>
+</div>
 
 It is important to learn several tools in order to know which one to use
 to clean your data efficiently.
@@ -91,7 +94,10 @@ will state that 169 instances of "town" have been replaced.
 knitr::include_graphics("images/04-clean/sheets-find-replace-annotated.png")
 ```
 
-![(\#fig:sheets-find-replace)(ref:sheets-find-replace)](images/04-clean/sheets-find-replace-annotated.png) 
+<div class="figure">
+<img src="images/04-clean/sheets-find-replace-annotated.png" alt="(ref:sheets-find-replace)"  />
+<p class="caption">(\#fig:sheets-find-replace)(ref:sheets-find-replace)</p>
+</div>
 
 #### Split data into two or more columns {-}
 
@@ -128,9 +134,10 @@ or any other custom character (or even a sequence of characters — more about t
 knitr::include_graphics("images/04-clean/sheets-split-annotated.png")
 ```
 
-\begin{figure}
-\includegraphics[width=350px]{images/04-clean/sheets-split-annotated} \caption{(ref:sheets-split)}(\#fig:sheets-split)
-\end{figure}
+<div class="figure">
+<img src="images/04-clean/sheets-split-annotated.png" alt="(ref:sheets-split)" width="350" />
+<p class="caption">(\#fig:sheets-split)(ref:sheets-split)</p>
+</div>
 
 ##### Example 2 {-}
 
@@ -206,7 +213,10 @@ this: `=A2 & ", " & B2 & ", " & C2 & " " & D2`.
  knitr::include_graphics("images/04-clean/sheets-combine.png")
 ```
 
-![(\#fig:sheets-combine)(ref:sheets-combine)](images/04-clean/sheets-combine.png) 
+<div class="figure">
+<img src="images/04-clean/sheets-combine.png" alt="(ref:sheets-combine)"  />
+<p class="caption">(\#fig:sheets-combine)(ref:sheets-combine)</p>
+</div>
 
 Note: Lisa Charlotte Rost from Datawrapper has written a brilliant [blog post](https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/)
 talking about data preparation for charting and analysis in Google Sheets,
@@ -258,7 +268,10 @@ just copy-paste the URL.
 knitr::include_graphics("images/04-clean/tabula-welcome.png")
 ```
 
-![(\#fig:tabula-welcome)(ref:tabula-welcome)](images/04-clean/tabula-welcome.png) 
+<div class="figure">
+<img src="images/04-clean/tabula-welcome.png" alt="(ref:tabula-welcome)"  />
+<p class="caption">(\#fig:tabula-welcome)(ref:tabula-welcome)</p>
+</div>
 
 ### Load a PDF and Autodetect Tables {-}
 Since the beginning of the Covid-19 pandemic, the Department of Public Health in Connecticut
@@ -279,7 +292,10 @@ You will see that each table is highlighted in red, like shown in Figure \@ref(f
 knitr::include_graphics("images/04-clean/tabula-autodetect.png")
 ```
 
-![(\#fig:tabula-autodetect)(ref:tabula-autodetect)](images/04-clean/tabula-autodetect.png) 
+<div class="figure">
+<img src="images/04-clean/tabula-autodetect.png" alt="(ref:tabula-autodetect)"  />
+<p class="caption">(\#fig:tabula-autodetect)(ref:tabula-autodetect)</p>
+</div>
 
 ### Manually Adjust Selections and Export {-}
 
@@ -313,7 +329,10 @@ Can you spot any problems with it?
 knitr::include_graphics("images/04-clean/openrefine-dataset.png")
 ```
 
-![(\#fig:openrefine-dataset)(ref:openrefine-dataset)](images/04-clean/openrefine-dataset.png) 
+<div class="figure">
+<img src="images/04-clean/openrefine-dataset.png" alt="(ref:openrefine-dataset)"  />
+<p class="caption">(\#fig:openrefine-dataset)(ref:openrefine-dataset)</p>
+</div>
 
 Notice how the funding amounts (last column)
 are not standardized. Some amounts have commas as thousands separators,
@@ -358,7 +377,10 @@ like shown in Figure \@ref(fig:openrefine-welcome).
 knitr::include_graphics("images/04-clean/openrefine-welcome-annotated.png")
 ```
 
-![(\#fig:openrefine-welcome)(ref:openrefine-welcome)](images/04-clean/openrefine-welcome-annotated.png) 
+<div class="figure">
+<img src="images/04-clean/openrefine-welcome-annotated.png" alt="(ref:openrefine-welcome)"  />
+<p class="caption">(\#fig:openrefine-welcome)(ref:openrefine-welcome)</p>
+</div>
 
 ### Load Data and Start a New Project {-}
 
@@ -384,7 +406,10 @@ like shown in Figure \@ref(fig:openrefine-parse).
 knitr::include_graphics("images/04-clean/openrefine-parse.png")
 ```
 
-![(\#fig:openrefine-parse)(ref:openrefine-parse)](images/04-clean/openrefine-parse.png) 
+<div class="figure">
+<img src="images/04-clean/openrefine-parse.png" alt="(ref:openrefine-parse)"  />
+<p class="caption">(\#fig:openrefine-parse)(ref:openrefine-parse)</p>
+</div>
 
 Now when you've successfully read the data into a new project, let's start
 the fun part: converting text into numbers, removing unnecessary characters,
@@ -426,7 +451,10 @@ like in Figure \@ref(fig:openrefine-manual-edit)).
 knitr::include_graphics("images/04-clean/openrefine-manual-edit-annotated.png")
 ```
 
-![(\#fig:openrefine-manual-edit)(ref:openrefine-manual-edit)](images/04-clean/openrefine-manual-edit-annotated.png) 
+<div class="figure">
+<img src="images/04-clean/openrefine-manual-edit-annotated.png" alt="(ref:openrefine-manual-edit)"  />
+<p class="caption">(\#fig:openrefine-manual-edit)(ref:openrefine-manual-edit)</p>
+</div>
 
 At this point, all funding amounts should be clean numbers, right-aligned and colored in green.
 We're ready to move on to the Country column and fix different spellings of Koreas.
@@ -468,7 +496,10 @@ how they produce clusters of different sizes and accuracy.
 knitr::include_graphics("images/04-clean/openrefine-cluster-annotated.png")
 ```
 
-![(\#fig:openrefine-cluster)(ref:openrefine-cluster)](images/04-clean/openrefine-cluster-annotated.png) 
+<div class="figure">
+<img src="images/04-clean/openrefine-cluster-annotated.png" alt="(ref:openrefine-cluster)"  />
+<p class="caption">(\#fig:openrefine-cluster)(ref:openrefine-cluster)</p>
+</div>
 
 ### Export {-}
 

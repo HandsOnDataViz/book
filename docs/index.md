@@ -3,7 +3,7 @@ lang: "en"
 title: "Hands-On Data Visualization"
 subtitle: "Interactive Storytelling from Spreadsheets to Code"
 author: ["Jack Dougherty", "Ilya Ilyankou"]
-date: "2020-08-04"
+date: "2020-08-05"
 twitter-handle: handsondataviz
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
@@ -60,7 +60,7 @@ output:
 
 ![ ](images/0-introduction/cover-400wide.jpg)
 
-This open-access **book-in-progress**, by Jack Dougherty and Ilya Ilyankou, is under contract with O'Reilly Media, Inc., and was last updated on: 04 Aug 2020
+This open-access **book-in-progress**, by Jack Dougherty and Ilya Ilyankou, is under contract with O'Reilly Media, Inc., and was last updated on: 05 Aug 2020
 
 Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You'll also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required.
 

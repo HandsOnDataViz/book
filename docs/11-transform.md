@@ -20,7 +20,10 @@ with map data until you are halfway through the chapter.
 knitr::include_graphics("images/11-transform/transform-data.png")
 ```
 
-![(\#fig:transform-data)(ref:transform-data)](images/11-transform/transform-data.png) 
+<div class="figure">
+<img src="images/11-transform/transform-data.png" alt="(ref:transform-data)"  />
+<p class="caption">(\#fig:transform-data)(ref:transform-data)</p>
+</div>
 
 Before you can dive into creating shapes and dealing with boundaries in the map, we will
 introduce various file formats (most notably GeoJSON) and talk about geospatial data in general.
@@ -52,7 +55,10 @@ Search for an address, right-click on that point, and select *What's here?* to r
 knitr::include_graphics("images/11-transform/gmaps-whats-here.png")
 ```
 
-![(\#fig:gmaps-whats-here)(ref:gmaps-whats-here)](images/11-transform/gmaps-whats-here.png) 
+<div class="figure">
+<img src="images/11-transform/gmaps-whats-here.png" alt="(ref:gmaps-whats-here)"  />
+<p class="caption">(\#fig:gmaps-whats-here)(ref:gmaps-whats-here)</p>
+</div>
 
 But what if you need to geocode dozens, hundreds, or even thousands of addresses?
 In this section, we will look at two ways to geocode larger lists of addresses.
@@ -85,7 +91,10 @@ go to *Geocoder* in the menu, and choose which geocoding utility to use, like is
 if(knitr::is_html_output()) knitr::include_url("images/11-transform/sheets-geocoder.gif", height="280px") else knitr::include_graphics("images/11-transform/sheets-geocoder.png")
 ```
 
-![(\#fig:sheets-geocoder)(ref:sheets-geocoder)](images/11-transform/sheets-geocoder.png) 
+<div class="figure">
+<iframe src="images/11-transform/sheets-geocoder.gif" width="672" height="280px"></iframe>
+<p class="caption">(\#fig:sheets-geocoder)(ref:sheets-geocoder)</p>
+</div>
 
 Note: If your address data is split into multiple columns (such as *Street*, *City*, and *State*),
 revisit [Clean Data with Spreadsheets](clean-spreadsheets.html) section to remind yourself
@@ -135,7 +144,10 @@ is open-source and you can inspect it to make sure it doesn't steal or retain yo
 if(knitr::is_html_output()) knitr::include_url("images/11-transform/sheets-geocoder-censusgeo.gif", height="330px") else knitr::include_graphics("images/11-transform/sheets-geocoder-censusgeo.png")
 ```
 
-![(\#fig:sheets-geocoder-censusgeo)(ref:sheets-geocoder-censusgeo)](images/11-transform/sheets-geocoder-censusgeo.png) 
+<div class="figure">
+<iframe src="images/11-transform/sheets-geocoder-censusgeo.gif" width="672" height="330px"></iframe>
+<p class="caption">(\#fig:sheets-geocoder-censusgeo)(ref:sheets-geocoder-censusgeo)</p>
+</div>
 
 #### Insert Google Sheets Geocoder script into your own spreadsheet {-}
 
@@ -233,7 +245,10 @@ or choropleth, maps instead of point maps.
 knitr::include_graphics("images/11-transform/pivot-address-annotated.png")
 ```
 
-![(\#fig:pivot-address)(ref:pivot-address)](images/11-transform/pivot-address-annotated.png) 
+<div class="figure">
+<img src="images/11-transform/pivot-address-annotated.png" alt="(ref:pivot-address)"  />
+<p class="caption">(\#fig:pivot-address)(ref:pivot-address)</p>
+</div>
 
 First, save the database to your local machine by going to *Export > Download > CSV*
 of Socrata interface. Figure \@ref(fig:pivot-address-export) shows where you can find the Export button.
@@ -245,7 +260,10 @@ of Socrata interface. Figure \@ref(fig:pivot-address-export) shows where you can
 knitr::include_graphics("images/11-transform/pivot-address-export.png")
 ```
 
-![(\#fig:pivot-address-export)(ref:pivot-address-export)](images/11-transform/pivot-address-export.png) 
+<div class="figure">
+<img src="images/11-transform/pivot-address-export.png" alt="(ref:pivot-address-export)"  />
+<p class="caption">(\#fig:pivot-address-export)(ref:pivot-address-export)</p>
+</div>
 
 Next, open the file in your favorite spreadsheet tool. If you use Google Sheets,
 use *File > Import > Upload* to import CSV data. Make sure your address columns are present,
@@ -261,7 +279,10 @@ column that has no missing values—and choose *Summarize by: COUNTA*. Voila!
 knitr::include_graphics("images/11-transform/pivot-address-sheet.png")
 ```
 
-![(\#fig:pivot-address-sheet)(ref:pivot-address-sheet)](images/11-transform/pivot-address-sheet.png) 
+<div class="figure">
+<img src="images/11-transform/pivot-address-sheet.png" alt="(ref:pivot-address-sheet)"  />
+<p class="caption">(\#fig:pivot-address-sheet)(ref:pivot-address-sheet)</p>
+</div>
 
 Your aggregated dataset is ready, so save it as a CSV. If you use Google Sheets,
 go to *File > Download > Comma-separated values (.csv, current sheet)*.
@@ -288,7 +309,10 @@ Darker colors represent higher values. Do you notice any differences in spatial 
 knitr::include_graphics("images/11-transform/normalize-map-data-annotated.png")
 ```
 
-![(\#fig:normalize-map-data)(ref:normalize-map-data)](images/11-transform/normalize-map-data-annotated.png) 
+<div class="figure">
+<img src="images/11-transform/normalize-map-data-annotated.png" alt="(ref:normalize-map-data)"  />
+<p class="caption">(\#fig:normalize-map-data)(ref:normalize-map-data)</p>
+</div>
 
 Both maps show Covid-19 data collected by the New York Times and published
 [on GitHub](https://github.com/nytimes/covid-19-data).
@@ -402,7 +426,10 @@ by volunteers tracing outlines of objects from satellite images.
 knitr::include_graphics("images/11-transform/geospatial-raster-vector-annotated.png")
 ```
 
-![(\#fig:geospatial-raster-vector)(ref:geospatial-raster-vector)](images/11-transform/geospatial-raster-vector-annotated.png) 
+<div class="figure">
+<img src="images/11-transform/geospatial-raster-vector-annotated.png" alt="(ref:geospatial-raster-vector)"  />
+<p class="caption">(\#fig:geospatial-raster-vector)(ref:geospatial-raster-vector)</p>
+</div>
 
 In this book, we will focus on vector data, which is based on
 points, lines, and polygons, as shown in Figure \@ref(fig:geospatial-raster-vector)b. Vector data can be
@@ -455,7 +482,10 @@ like is shown in Figure \@ref(fig:geojson-github).
 knitr::include_graphics("images/11-transform/geojson-github.png")
 ```
 
-![(\#fig:geojson-github)(ref:geojson-github)](images/11-transform/geojson-github.png) 
+<div class="figure">
+<img src="images/11-transform/geojson-github.png" alt="(ref:geojson-github)"  />
+<p class="caption">(\#fig:geojson-github)(ref:geojson-github)</p>
+</div>
 
 Warning: In GeoJSON, coordinates are ordered in *longitude-latitude* format,
 the same as X-Y coordinates in mathematics. This is the opposite of Google Maps
@@ -553,7 +583,10 @@ tool, such as Mapshaper or QGIS, to convert your file to GeoJSON.
 knitr::include_graphics("images/11-transform/geojson-io-import.png")
 ```
 
-![(\#fig:geojson-io-import)(ref:geojson-io-import)](images/11-transform/geojson-io-import.png) 
+<div class="figure">
+<img src="images/11-transform/geojson-io-import.png" alt="(ref:geojson-io-import)"  />
+<p class="caption">(\#fig:geojson-io-import)(ref:geojson-io-import)</p>
+</div>
 
 You can now save your file to GeoJSON. Go to *Save > GeoJSON* to download
 a converted GeoJSON file to your computer.
@@ -574,7 +607,10 @@ can [download it](data/hartford-and-suburbs.csv) for the exercise.
 knitr::include_graphics("images/11-transform/geojson-io-csv-data.png")
 ```
 
-![(\#fig:geojson-io-csv-data)(ref:geojson-io-csv-data)](images/11-transform/geojson-io-csv-data.png) 
+<div class="figure">
+<img src="images/11-transform/geojson-io-csv-data.png" alt="(ref:geojson-io-csv-data)"  />
+<p class="caption">(\#fig:geojson-io-csv-data)(ref:geojson-io-csv-data)</p>
+</div>
 
 1. Save your spreadsheet as a CSV file, and drag-and-drop it to the map area of GeoJson.io.
 You should see a green popup in the upper-left corner notifying you how many features
@@ -606,6 +642,11 @@ You can also log into GeoJson.io with your GitHub account and save directly to y
 if(knitr::is_html_output()) knitr::include_url("images/11-transform/dataviz-geojsonio-640.gif", height="466px")
 ```
 
+<div class="figure">
+<iframe src="images/11-transform/dataviz-geojsonio-640.gif" width="672" height="466px"></iframe>
+<p class="caption">(\#fig:geojsonio-gif)A spreadsheet with coordinates columns can be transformed into a GeoJSON with point features.</p>
+</div>
+
 #### Create a GeoJSON from scratch using drawing tools {-}
 
 GeoJson.io lets you create geospatial files from scratch, using simple drawing
@@ -627,7 +668,10 @@ Figure \@ref(fig:geojson-io-draw).
 knitr::include_graphics("images/11-transform/geojson-io-draw.png")
 ```
 
-![(\#fig:geojson-io-draw)(ref:geojson-io-draw)](images/11-transform/geojson-io-draw.png) 
+<div class="figure">
+<img src="images/11-transform/geojson-io-draw.png" alt="(ref:geojson-io-draw)"  />
+<p class="caption">(\#fig:geojson-io-draw)(ref:geojson-io-draw)</p>
+</div>
 
 3. In the toolbar, you have a choice of four drawing tools: a polyline (which is a series
 of points connected by lines, but not closed like a polygon), a polygon, a rectangle
@@ -710,7 +754,10 @@ all exported layers.
 knitr::include_graphics("images/11-transform/mapshaper-export.png")
 ```
 
-![(\#fig:mapshaper-export)(ref:mapshaper-export)](images/11-transform/mapshaper-export.png) 
+<div class="figure">
+<img src="images/11-transform/mapshaper-export.png" alt="(ref:mapshaper-export)"  />
+<p class="caption">(\#fig:mapshaper-export)(ref:mapshaper-export)</p>
+</div>
 
 Tip: Mapshaper doesn't work with KML or KMZ files, but you can use [GeoJson.io](#geojson.html) to convert these.
 
@@ -735,7 +782,10 @@ choosing the desired file format.
 knitr::include_graphics("images/11-transform/mapshaper-edit.png")
 ```
 
-![(\#fig:mapshaper-edit)(ref:mapshaper-edit)](images/11-transform/mapshaper-edit.png) 
+<div class="figure">
+<img src="images/11-transform/mapshaper-edit.png" alt="(ref:mapshaper-edit)"  />
+<p class="caption">(\#fig:mapshaper-edit)(ref:mapshaper-edit)</p>
+</div>
 
 
 #### Simplify map boundaries to reduce file size {-}
@@ -756,7 +806,10 @@ is only 37 kilobytes, 6 times smaller!
 knitr::include_graphics("images/11-transform/mapshaper-simplify-demo-annotated.png")
 ```
 
-![(\#fig:mapshaper-simplify-demo)(ref:mapshaper-simplify-demo)](images/11-transform/mapshaper-simplify-demo-annotated.png) 
+<div class="figure">
+<img src="images/11-transform/mapshaper-simplify-demo-annotated.png" alt="(ref:mapshaper-simplify-demo)"  />
+<p class="caption">(\#fig:mapshaper-simplify-demo)(ref:mapshaper-simplify-demo)</p>
+</div>
 
 To simplify map boundaries in Mapshaper, follow the steps below.
 
@@ -777,7 +830,10 @@ the map looks appropriate (when the shapes are still recognizable).
 knitr::include_graphics("images/11-transform/mapshaper-simplify.png")
 ```
 
-![(\#fig:mapshaper-simplify)(ref:mapshaper-simplify)](images/11-transform/mapshaper-simplify.png) 
+<div class="figure">
+<img src="images/11-transform/mapshaper-simplify.png" alt="(ref:mapshaper-simplify)"  />
+<p class="caption">(\#fig:mapshaper-simplify)(ref:mapshaper-simplify)</p>
+</div>
 
 Tip: You may find the US shape a bit unusual and vertically "shrunk".
 In **Console**, type `-proj EPSG:3857` to change projection to Web Mercator,
@@ -797,7 +853,10 @@ Figure \@ref(fig:mapshaper-dissolve).
 knitr::include_graphics("images/11-transform/mapshaper-dissolve.png")
 ```
 
-![(\#fig:mapshaper-dissolve)(ref:mapshaper-dissolve)](images/11-transform/mapshaper-dissolve.png) 
+<div class="figure">
+<img src="images/11-transform/mapshaper-dissolve.png" alt="(ref:mapshaper-dissolve)"  />
+<p class="caption">(\#fig:mapshaper-dissolve)(ref:mapshaper-dissolve)</p>
+</div>
 
 Click the Console button, which opens a window to type in commands. Enter the command below, then press return (Enter).
 
@@ -839,7 +898,10 @@ If that is the case, use the `-filter-slivers` command to remove them, like that
 knitr::include_graphics("images/11-transform/mapshaper-clip.png")
 ```
 
-![(\#fig:mapshaper-clip)(ref:mapshaper-clip)](images/11-transform/mapshaper-clip.png) 
+<div class="figure">
+<img src="images/11-transform/mapshaper-clip.png" alt="(ref:mapshaper-clip)"  />
+<p class="caption">(\#fig:mapshaper-clip)(ref:mapshaper-clip)</p>
+</div>
 
 #### Remove unwanted data fields {-}
 
@@ -897,7 +959,10 @@ of the CSV file.
 knitr::include_graphics("images/11-transform/mapshaper-join.png")
 ```
 
-![(\#fig:mapshaper-join)(ref:mapshaper-join)](images/11-transform/mapshaper-join.png) 
+<div class="figure">
+<img src="images/11-transform/mapshaper-join.png" alt="(ref:mapshaper-join)"  />
+<p class="caption">(\#fig:mapshaper-join)(ref:mapshaper-join)</p>
+</div>
 
 Tip: To avoid confusion, it may be useful to re-name your CSV column that contains key values to match the key attribute name of your map.
 In our example, you would rename *town* column to *name* column in the CSV, and your command would end with `keys=name,name`.
@@ -936,7 +1001,10 @@ like is shown in Figure \@ref(fig:mapshaper-count-points).
 knitr::include_graphics("images/11-transform/mapshaper-count-points.png")
 ```
 
-![(\#fig:mapshaper-count-points)(ref:mapshaper-count-points)](images/11-transform/mapshaper-count-points.png) 
+<div class="figure">
+<img src="images/11-transform/mapshaper-count-points.png" alt="(ref:mapshaper-count-points)"  />
+<p class="caption">(\#fig:mapshaper-count-points)(ref:mapshaper-count-points)</p>
+</div>
 
 #### More about joins {-}
 
@@ -1000,9 +1068,10 @@ to a few other neighboring towns.
 knitr::include_graphics("images/11-transform/mapshaper-merge-csv.png")
 ```
 
-\begin{figure}
-\includegraphics[width=250px]{images/11-transform/mapshaper-merge-csv} \caption{(ref:mapshaper-merge-csv)}(\#fig:mapshaper-merge-csv)
-\end{figure}
+<div class="figure">
+<img src="images/11-transform/mapshaper-merge-csv.png" alt="(ref:mapshaper-merge-csv)" width="250px" />
+<p class="caption">(\#fig:mapshaper-merge-csv)(ref:mapshaper-merge-csv)</p>
+</div>
 
 6. Save this new file as *ct-towns-merged.csv*, and drag-and-drop it to Mapshaper on top of your *ct-towns* layer. Click *Import*.
 7. This new CSV layer will be added as *ct-towns-merged* and will appear as a series of table cells. From the dropdown menu,
@@ -1028,7 +1097,10 @@ and all of the other polygons remain the same. Figure \@ref(fig:mapshaper-merge)
 knitr::include_graphics("images/11-transform/mapshaper-merge.png")
 ```
 
-![(\#fig:mapshaper-merge)(ref:mapshaper-merge)](images/11-transform/mapshaper-merge.png) 
+<div class="figure">
+<img src="images/11-transform/mapshaper-merge.png" alt="(ref:mapshaper-merge)"  />
+<p class="caption">(\#fig:mapshaper-merge)(ref:mapshaper-merge)</p>
+</div>
 
 You can inspect attribute data of polygons using *Cursor > inspect attributes* tool, and save the resulting file
 using the *Export* button.
@@ -1065,9 +1137,10 @@ like is shown in Figure \@ref(fig:kmz-earth).
 knitr::include_graphics("images/11-transform/kmz-earth.png")
 ```
 
-\begin{figure}
-\includegraphics[width=400px]{images/11-transform/kmz-earth} \caption{(ref:kmz-earth)}(\#fig:kmz-earth)
-\end{figure}
+<div class="figure">
+<img src="images/11-transform/kmz-earth.png" alt="(ref:kmz-earth)" width="400px" />
+<p class="caption">(\#fig:kmz-earth)(ref:kmz-earth)</p>
+</div>
 4. In the dropdown menu of *Save file...* window, choose KML format, like is shown in Figure \@ref(fig:kmz-save-as).
 
 (ref:kmz-save-as) Save as KML, not KMZ.
@@ -1077,9 +1150,10 @@ knitr::include_graphics("images/11-transform/kmz-earth.png")
 knitr::include_graphics("images/11-transform/kmz-save-as.png")
 ```
 
-\begin{figure}
-\includegraphics[width=350px]{images/11-transform/kmz-save-as} \caption{(ref:kmz-save-as)}(\#fig:kmz-save-as)
-\end{figure}
+<div class="figure">
+<img src="images/11-transform/kmz-save-as.png" alt="(ref:kmz-save-as)" width="350px" />
+<p class="caption">(\#fig:kmz-save-as)(ref:kmz-save-as)</p>
+</div>
 
 Alternatively, you can use any zip-utility to extract a KML file from KMZ.
 KMZ is simply a 'zipped' version of a KML file!

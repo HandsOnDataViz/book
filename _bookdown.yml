@@ -1,4 +1,3 @@
-new_session: yes
 output_dir: "docs"
 delete_merged_file: true
 book_filename: "HandsOnDataViz"
@@ -8,24 +7,21 @@ language:
     tab: "Table "
 chapter_name: "Chapter "
 
-rmd_files: [
-  "index.Rmd",
-  "01-choose.Rmd",
-  "02-spreadsheet.Rmd",
-  "03-find.Rmd",
-  "04-clean.Rmd",
-  "05-chart.Rmd",
-  "06-map.Rmd",
-  "07-embed.Rmd",
-  "08-github.Rmd",
-  "09-chartjs.Rmd",
-  "10-leaflet.Rmd",
-  "11-transform.Rmd",
-  "12-detect.Rmd",
-  "13-story.Rmd",
-  "14-fix.Rmd",
-  "15-ct.Rmd", # not for ORM
-  "16-peer.Rmd", # not for ORM
-  "17-bookdown.Rmd", # not for ORM
-  "18-references.Rmd"
-]
+# rmd_files: [
+#   "index.Rmd",
+#   "01-choose.Rmd",
+#   "02-spreadsheet.Rmd",
+#   "03-find.Rmd",
+#   "04-clean.Rmd",
+#   "05-chart.Rmd",
+#   "06-map.Rmd",
+#   "07-embed.Rmd",
+#   "08-github.Rmd",
+#   "09-chartjs.Rmd",
+#   "10-leaflet.Rmd",
+#   "11-transform.Rmd",
+#   "12-detect.Rmd",
+#   "13-story.Rmd",
+#   "14-fix.Rmd",
+#   "18-references.Rmd"
+# ]

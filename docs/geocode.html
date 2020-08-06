@@ -310,7 +310,6 @@ that maps understand.</p>
 <p>If you have just a few addresses, it might be faster to geocode them with <a href="https://www.google.com/maps">Google Maps</a>.
 Search for an address, right-click on that point, and select <em>What’s here?</em> to reveal a popup window with its latitude and longitude, as shown in Figure <a href="geocode.html#fig:gmaps-whats-here">11.2</a>. You can copy and paste the coordinates into your spreadsheet. Similar tools also geocode one place at a time, such as <a href="https://www.latlong.net/">LatLong.net</a>.</p>
 
-<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="geocode.html#cb155-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/gmaps-whats-here.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:gmaps-whats-here"></span>
 <img src="images/11-transform/gmaps-whats-here.png" alt="To geocode one address, search in Google Maps and right-click What’s here? to show coordinates."  />
 <p class="caption">
@@ -337,7 +336,6 @@ that you should <em>copy</em> to your own Google Drive (you don’t need editing
 The remaining five columns will be filled by the geocoding script. Select all six columns,
 go to <em>Geocoder</em> in the menu, and choose which geocoding utility to use, like is shown in Figure <a href="geocode.html#fig:sheets-geocoder">11.3</a>.</p>
 
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="geocode.html#cb156-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;images/11-transform/sheets-geocoder.gif&quot;</span>, <span class="dt">height=</span><span class="st">&quot;280px&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/sheets-geocoder.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:sheets-geocoder"></span>
 <iframe src="images/11-transform/sheets-geocoder.gif" width="672" height="280px">
 </iframe>
@@ -378,7 +376,6 @@ and go to <em>Geocoder &gt; US Census 2010 Geographies</em>, like is shown in Fi
 and will possibly warn you that this script is unsafe. Once again, you shouldn’t worry. The plugin
 is open-source and you can inspect it to make sure it doesn’t steal or retain your personal data.</p>
 
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="geocode.html#cb157-1"></a><span class="cf">if</span>(knitr<span class="op">::</span><span class="kw">is_html_output</span>()) knitr<span class="op">::</span><span class="kw">include_url</span>(<span class="st">&quot;images/11-transform/sheets-geocoder-censusgeo.gif&quot;</span>, <span class="dt">height=</span><span class="st">&quot;330px&quot;</span>) <span class="cf">else</span> knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;images/11-transform/sheets-geocoder-censusgeo.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span id="fig:sheets-geocoder-censusgeo"></span>
 <iframe src="images/11-transform/sheets-geocoder-censusgeo.gif" width="672" height="330px">
 </iframe>

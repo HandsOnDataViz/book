@@ -17,7 +17,9 @@ See also related chapters in this book:
 - [Detect bias in data stories](detect.html), including [How to lie with maps](how-to-lie-with-maps.html)
 - [Tell your data story](story.html), including its most meaningful insights and limitations
 
-| Basic map types | Best use and tutorial chapters |
+Table: (\#tab:map-types) Basic Map Types and Tutorials
+
+| Map | Best use and tutorials in this book |
 | --- | --- |
 | Point map        <br> ![](images/06-map/map-point.png) | Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: [Google My Maps tutorial](mymaps.html)<br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
 | Polygon map      <br> ![](images/06-map/map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tools: [Tableau Public](tableau-polygon.html) or [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |

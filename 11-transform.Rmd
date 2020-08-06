@@ -24,9 +24,10 @@ introduce various file formats (most notably GeoJSON) and talk about geospatial 
 You will learn that map data can be raster and vector, that geospatial data consists of location
 and attribute components, and how GeoJSON is different from Shapefiles and other geographical data formats.
 
-You will then get a chance to draw your own map layers on top of satellite imagery
-using [GeoJson.io](https://geojson.io), and learn to simplify, crop, and join spreadsheet and geospatial data in [Mapshaper](https://mapshaper.org).
+With our tutorials, you will learn how to convert or draw your own layer of map polygons or polylines on top of satellite imagery
+using [the GeoJson.io tool](geojsonio.html), and also how to edit geospatial data and join it with spreadsheet data using [the Mapshaper tool](mapshaper.html).
 Both are powerful, web-based open-source geodata tools that for common tasks can substitute for more complex geographic information system tools, such as ArcGIS or QGIS.
+Finally, you'll also learn how to georectify a digitized historical map to display as an interactive map overlay using [the MapWarper tool](mapwarper.html).
 
 By the end of this chapter, you should feel much more confident navigating the
 overwhelming world of geospatial data.
@@ -967,7 +968,14 @@ using the *Export* button.
 There are many more commands within Mapshaper that are worth exploring if you are serious about GIS, such as changing projections, filtering
 features using JavaScript expressions, assigning colors to polygons based on values, and many more. Explore the [Wiki](https://github.com/mbloch/mapshaper/wiki/Command-Reference) of Mapshaper project on GitHub for more commands and examples.
 
-TODO: Add Mapwarper section here
+
+## Georectify a Digitized Map with MapWarper {- #mapwarper}
+TODO: write this section about using [MapWarper](http://mapwarper.net), a tool created and hosted by Tim Waters, to upload and georectify a scanned map. This means to properly position a scanned map based on standard coordinates, so that you can place it as an overlay on an interactive map, such as [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html).
+
+Anyone can upload and georectify a map on the developer's public site at http://mapwarper.net, and also see how it's used by organizations such as the New York Public Library at http://maps.nypl.org.
+
+Warning: MapWarper is a wonderful open-source tool and platform, but service may be interrupted. As of July 2020, the site warns: "Ran out of disk space. Maps older than 2 years will need re-warping to work. Downtime will happen again."
+
 
 ## Convert a Compressed KMZ file to KML format {- #convert-kmz}
 

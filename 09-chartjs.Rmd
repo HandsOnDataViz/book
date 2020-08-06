@@ -13,14 +13,14 @@ While beginners appreciate the drag-and-drop chart tools and tutorials described
 ##### Cons
 - Must host your own code repositories to publish to the web (with a free service such as GitHub Pages)
 
-#### List of Chart.js templates
+Table: (\#tab:chart-templates) Chart Templates and Tutorials
 
-| Templates     | Best use and tutorial chapters |
+| Chart Templates | Best use and tutorials in this book |
 | --- | --- |
 | Chart.js Bar Chart<br> ![](images/09-chartjs/chartjs-bar.png) | Bar charts (vertical bar charts are often called column charts) can be used to compare categorical data. <br>Template with tutorial: [Bar Chart.js with CSV Data](chartjs-bar-csv.html) |
 | Chart.js Line Chart<br> ![](images/09-chartjs/chartjs-line.png) | Line charts are normally used to show trends (temporal data). <br>Template with tutorial: [Line Chart with CSV Data](chartjs-line-csv.html) |
 | Chart.js Scatter Chart<br> ![](images/09-chartjs/chartjs-scatter.png) | Scatter charts (also scatterplots) are used to display data of 2 or more dimensions. <br>Template with tutorial: [Scatter Chart with CSV Data](chartjs-scatter-csv.html) |
-| Chart.js Bubble Chart<br> ![](images/09-chartjs/chartjs-bubble.png) | Bubble charts are used to display data of 3 or more dimensions. <br>Template with tutorial: [Bubbble Chart with CSV Data](chartjs-bubble-csv.html) |
+| Chart.js Bubble Chart<br> ![](images/09-chartjs/chartjs-bubble.png) | Bubble charts are used to display data of 3 or more dimensions. <br>Template with tutorial: [Bubble Chart with CSV Data](chartjs-bubble-csv.html) |
 
 #### Inside the templates {-}
 The templates featured above vary from simple to complex, but all of them rely on four basic pillars:

@@ -27,7 +27,7 @@ and attribute components, and how GeoJSON is different from Shapefiles and other
 With our tutorials, you will learn how to convert or draw your own layer of map polygons or polylines on top of satellite imagery
 using [the GeoJson.io tool](geojsonio.html), and also how to edit geospatial data and join it with spreadsheet data using [the Mapshaper tool](mapshaper.html).
 Both are powerful, web-based open-source geodata tools that for common tasks can substitute for more complex geographic information system tools, such as ArcGIS or QGIS.
-Finally, you'll also learn how to georectify a digitized historical map to display as an interactive map overlay using [the MapWarper tool](mapwarper.html).
+Finally, you'll also learn how to georectify a digitized map to display as a background overlay using [the MapWarper tool](mapwarper.html).
 
 By the end of this chapter, you should feel much more confident navigating the
 overwhelming world of geospatial data.
@@ -352,7 +352,7 @@ But before we do that, let's talk about the basics of geospatial (map) data.
 #### About geospatial data {-}
 
 The first thing to know about geospatial data is that it
-consists of two components, *location* and *attribut*.
+consists of two components, *location* and *attribute*.
 When you use Google Maps to search for a restaurant, you get a red
 marker on the screen that points to the latitude and longitude
 of the physical location of the restaurant in the real world. These latitude and longitude (two numbers)

@@ -1,43 +1,27 @@
 # Leaflet Map Templates {#leaflet}
-In [Chapter 5: Map Your Data](map.html), we described several drag-and-drop mapping tools designed for beginners, such as [Google My Maps](mymaps.html) and TODO: INSERT OTHERS. In this chapter, we offer more advanced map tutorials using our open-source code templates, which you can copy and modify with skills you learned in [Chapter 8: Edit and Host Code with GitHub](github.html). We built all of the templates in this chapter with [Leaflet](https://leafletjs.com), a powerful open-source code library for creating interactive maps on desktop or mobile devices.
+In [Chapter 5: Map Your Data](map.html), we described several drag-and-drop tools designed for beginners, such as [Google My Maps](mymaps.html) and TODO: INSERT OTHERS. In this chapter, we offer more advanced map tutorials using our open-source code templates, which you can copy and modify with skills you learned in [Chapter 8: Edit and Host Code with GitHub](github.html). We built all of the templates in this chapter with [Leaflet](https://leafletjs.com), a powerful open-source code library for creating interactive maps on desktop or mobile devices.
 
-No coding skills are required to use our first two easier-to-use templates because they pull your map data from a linked Google Sheet. The first template, [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets), is a general-purpose tool that can display points, polygons, or polylines, using colors, styles, and linked data you enter into your Google Sheet. It also includes the option to display a table of map marker results below your map. The second template, [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets), displays your map data and text as a scrolling narrative of chapters that guide readers through your storyline, with the option to display images, audio or video clips, and historical map backgrounds that you enter into your linked Google Sheet. If you wish to use some of these extra features, look ahead to [Chapter 11: Transform Your Map Data](transform.html) to learn how to locate addresses with our [built-in Google Sheets Geocoder](geocode.html), create and edit polygons and polylines [with the GeoJson.io tool](geojsonio.html), edit or join data with polygons [using the MapShaper tool](mapshaper.html), or georectify a scanned map to use as an overlay [with the MapWarper tool](mapwarper.html).
+No coding skills are required to use our first two easy-to-use templates because they pull your map data from a linked Google Sheet. The first template, [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets), is a general-purpose tool that can display points, polygons, or polylines, using your choice of colors, styles, and icons, based on data uploaded into your linked Google Sheet and GitHub repository. It also includes the option to display a table of point map markers next to your map. The second template, [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets), displays your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to display paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet and GitHub repo. If you wish to use some of these extra features, look ahead to [Chapter 11: Transform Your Map Data](transform.html) to learn how to locate addresses with our [built-in Google Sheets Geocoder](geocode.html), create and edit polygons and polylines [with the GeoJson.io tool](geojsonio.html), edit or join data with polygons [using the MapShaper tool](mapshaper.html), or georectify a scanned map to use as a background overlay [with the MapWarper tool](mapwarper.html). Also, if you create your own copy of either template above and invite people to visit your map, learn how to [Get Your Own Free Google Sheets API Key](google-sheets-api-key.html) to insert into the code, so that our key is not overused.
 
-Our remaining Leaflet templates are designed to help users develop their map coding skills, even if you have no prior experience, but can follow instructions and are *code-curious* about how things work. TODO: DESCRIBE templates and integrate this....
+Our remaining Leaflet templates are designed to help users develop their map coding skills. Even if you have no prior coding experience, but can follow instructions and are *code-curious* about how things work on your computer, start with the [Leaflet Maps with CSV Data tutorial](leaflet-maps-with-csv.html), which walks you through the steps of creating a point map that pulls data from a CSV file, a [generic spreadsheet format we discussed in Chapter 2](spreadsheet.html). Then move on to the [Leaflet Maps with Open Data API tutorial](leaflet-maps-with-api.html), to learn how to code using an application program interface to pull information directly from [open data repositories as we described in Chapter 3](opendata.html). In both of these templates, you'll learn how Leaflet maps are written using three coding languages:
 
-The templates featured below vary from simple to complex, but all of them include three basic types of code:
+- HTML: to structure content on the web page, typically in a file named `index.html`.
+- CSS or Cascading Style Sheet: to shape how content appears on the page, either inside `index.html` or in a separate file such as `style.css`.
+- JavaScript: to create the interactive map using instructions from the Leaflet code library, either inside `index.html` on in a separate file, such as `script.js`.
 
-- HTML: to structure content on the web (example: index.html)
-- CSS, or Cascading Style Sheet: to shape how content appears on the web (example: style.css)
-- JavaScript: to create the map and interactivity  (example: script.js)
-
-Also, these templates refer to other types of code:
-
-- library: link to online instructions to complete routine tasks (examples: Leaflet, jQuery)
-- basemap tiles: link to online background map (example: Carto Positron, a light-gray street map)
-- data: content to appear on map, typically in CSV or GeoJSON format (examples: data.csv, data.geojson)
-
-Pros:
-
-- Open-source code, which anyone can freely use online, download, modify, or expand with plugins
-- Easier for beginners to understand than some other map code libraries
-- Compact code library (less than 40 KB) that runs on JavaScript in all modern web browsers
-
-Cons:
-
-- Must host your own code repositories to publish to the web (with a free service such as GitHub Pages)
-- Must rely on open-source community of developers to maintain the core code or specific plugins
-
-
+Explore our Leaflet map templates and you'll also see how they refer to different code components, such as basemap tiles from [various open-access online providers](https://leaflet-extras.github.io/leaflet-providers/preview/), such as Carto, Esri, Stamen, and Open Street Map, that allow you to zoom into background maps. You'll also see data files to place information about points, polygons, or polylines on top of the map, usually in CSV or [GeoJSON format---see chapter 11](convert-geojson.html), with names similar to `data.csv` or `map.geojson`. If you're new to coding, creating Leaflet maps can be a great place to start and quickly see the results of what you've learned. To help you solve problems that may arise, see [Fix Common Mistakes](fix.html) in the appendix.
 
 Table: (\#tab:map-templates) Map Templates and Tutorials
 
 | Map Templates | Best use and tutorials in this book |
 | --- | --- |
-| Leaflet Maps with Google Sheets<br> ![](images/10-leaflet/leaflet-maps-with-google-sheets.png) | Best to show points, polygons, polylines, or point table data. Upload your GeoJSON data and modify settings in linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) |
-| Leaflet Storymaps with Google Sheets<br> ![](images/10-leaflet/leaflet-storymaps-with-google-sheets.png) | Create a scrolling narrative with points, text, images, and links. <br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
-| Leaflet Maps with CSV Data<br> ![](images/10-leaflet/leaflet-maps-with-csv.png) | Learn how to code your own Leaflet point map that pulls data from a CSV file.<br>Template with tutorial: [Leaflet Maps with CSV Data](leaflet-maps-with-csv.html)  |
-| Leaflet Maps with Open Data API<br> ![](images/10-leaflet/leaflet-socrata-api-control-layers.png) | Learn how to code your own Leaflet map with an application program interface (API) to display points or polylines from open data repositories, such as Socrata and others.<br>Template with tutorial: [Leaflet Maps with Open Data API](leaflet-maps-with-api.html) |
+| Leaflet Maps with Google Sheets<br> ![](images/10-leaflet/leaflet-maps-with-google-sheets.png) | Best to show interactive points, polygons, or polylines, using your choice of colors, styles, and icons, based on data loaded into your linked Google Sheet (or CSV file) and GitHub repository. Includes option to display a table of point map markers next to your map.  <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) |
+| Leaflet Storymaps with Google Sheets<br> ![](images/10-leaflet/leaflet-storymaps-with-google-sheets.png) | Best to display your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to include paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
+| Leaflet Maps with CSV Data<br> ![](images/10-leaflet/leaflet-maps-with-csv.png) | Learn how to code your own Leaflet point map that pulls data from a CSV file in your GitHub repo.<br>Template with tutorial: [Leaflet Maps with CSV Data](leaflet-maps-with-csv.html)  |
+| Leaflet Maps with Open Data API<br> ![](images/10-leaflet/leaflet-socrata-api-control-layers.png) | Learn how to code your own Leaflet map with an application program interface (API) that pulls content directly from open data repositories, such as Socrata and others.<br>Template with tutorial: [Leaflet Maps with Open Data API](leaflet-maps-with-api.html) |
+
+TODO: decide whether to add any other Leaflet map templates we created for HandsOnDataViz or OnTheLine
+
 
 
 ## Leaflet Maps with Google Sheets template {- #leaflet-maps-with-google-sheets}
@@ -84,6 +68,7 @@ In the second part of this tutorial, you will learn how to geocode and customize
 - H) Upload and display your own polyline GeoJSON data
 - I) Upload and display customized marker icons
 - J) Optional: Save Google Sheets as CSV and upload to GitHub
+- IMPORTANT: If you invite people to visit your copy of this template, learn how to [Get Your Own Free Google Sheets API Key](google-sheets-api-key.html) to insert into the code, so that our key is not overused.
 -
 ** TO DO: second half video**
 
@@ -95,6 +80,7 @@ To solve problems, see the [Fix Common Mistakes](fix.html) section of the append
 
 - have a [free Google Drive account](http://drive.google.com), and learned the [File > Make a Copy in Google Sheets](copy.html) tutorial in this book
 - have a [free GitHub account](http://github.com), and understand concepts from the [Edit and Host Code with GitHub](github.html) chapter in this book
+
 
 1) Right-click to open this GitHub code template in a new tab: https://github.com/handsondataviz/leaflet-maps-with-google-sheets
 
@@ -381,38 +367,6 @@ https://USERNAME.github.io/leaflet-storymaps-with-google-sheets
 
 5) Next, let's paste your Google Sheet URL in a second place to keep track of it. Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.
 
-#### NEW C2: Create a free Google Sheets API key to paste into the code
-TODO: Explain why you need to create a free Google Sheets API Key to allow the code template to read data from your Google Sheet. (This is a new requirement with version X of our template, beginning in August 2020, in order to work with Google Sheets API version 4.)
-
-Reminders:
-
-- you need a personal Google account, not a Google Suite account issued by your school or business
-- if you already did this step for another Leaflet Map, you can copy and use your existing Google Sheets API key
-
-
-- Visit https://console.developers.google.com/ and log in to your Google account. The Google Cloud Platform may ask you to identify your country and agree to terms of service.
-
-- Click on *Create a Project* on the opening screen. Or if you don't see that option, go to the upper-left drop-down menu to *Select a project > New project*. IMAGE google-api-create.png
-
-- Give your new project a meaningful short name to remind you of its purpose, such as `handsondataviz`. You do not need to create an organization or parent folder. Click Create. IMAGE google-api-name.png
-
-- Enable Google Sheets API inside your Google cloud project. To do so,
-    - From the top menu, press `+ Enable APIs and Services`   IMG google-api-enable.png
-    - Use the search bar to find Google Sheets API and select it.   IMG google-api-search.png
-    - In the next screen click Click Enable.   IMG google-api-select.png
-
-  - In the left sidebar menu, click *Credentials*, then click *+ Create Credentials* and select *API key*. IMG google-api-credentials.png
-
-- A window with the generated API key will appear. Copy it. IMG google-api-key.png
-
-- In that window, click Restrict key. In the new window, under API restrictions, choose Restrict key radio button. In the dropdown that appears, choose Google Sheets API. Click Save. IMG google-api-restrict.png
-
-- COPY see text below -- IMG google-api-copy.png
-
-Copy your Google API key to `google-doc-url.js` file inside a GoogleApiKey variable. Once you save it go GitHub you may get a notification from GitHub’s GitGuardian bot saying you have an exposed API key. Don’t worry about it – this key can only be used with Google Sheets, and it’s free. You did not attach billing information to it, so there is no way you can get charged.
-
-
-
 
 #### D) Modify your map settings in the Options tab and test your live map {-}
 
@@ -495,6 +449,42 @@ When you copy-paste this snippet, the straight quotation marks do not turn into 
 
 Learn more:
 To solve problems, see [Fix Common Mistakes](fix.html) section of the appendix.
+
+
+
+## Create Your Own Google Sheets API Key {- #google-sheets-api-key}
+TODO: Explain why you need to create a free Google Sheets API Key to allow the code template to read data from your Google Sheet. (This is a new requirement with version X of our template, beginning in August 2020, in order to work with Google Sheets API version 4.)
+
+Reminders:
+
+- you need a personal Google account, not a Google Suite account issued by your school or business
+- if you already did this step for another Leaflet Map, you can copy and use your existing Google Sheets API key
+
+
+- Visit https://console.developers.google.com/ and log in to your Google account. The Google Cloud Platform may ask you to identify your country and agree to terms of service.
+
+- Click on *Create a Project* on the opening screen. Or if you don't see that option, go to the upper-left drop-down menu to *Select a project > New project*. IMAGE google-api-create.png
+
+- Give your new project a meaningful short name to remind you of its purpose, such as `handsondataviz`. You do not need to create an organization or parent folder. Click Create. IMAGE google-api-name.png
+
+- Enable Google Sheets API inside your Google cloud project. To do so,
+    - From the top menu, press `+ Enable APIs and Services`   IMG google-api-enable.png
+    - Use the search bar to find Google Sheets API and select it.   IMG google-api-search.png
+    - In the next screen click Click Enable.   IMG google-api-select.png
+
+  - In the left sidebar menu, click *Credentials*, then click *+ Create Credentials* and select *API key*. IMG google-api-credentials.png
+
+- A window with the generated API key will appear. Copy it. IMG google-api-key.png
+
+- In that window, click Restrict key. In the new window, under API restrictions, choose Restrict key radio button. In the dropdown that appears, choose Google Sheets API. Click Save. IMG google-api-restrict.png
+
+- COPY see text below -- IMG google-api-copy.png
+
+Copy your Google API key to `google-doc-url.js` file inside a GoogleApiKey variable. Once you save it go GitHub you may get a notification from GitHub’s GitGuardian bot saying you have an exposed API key. Don’t worry about it – this key can only be used with Google Sheets, and it’s free. You did not attach billing information to it, so there is no way you can get charged.
+
+
+
+
 
 
 

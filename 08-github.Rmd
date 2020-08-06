@@ -107,7 +107,7 @@ Now let's publish your edited map to the public web to see how it looks in a web
  knitr::include_graphics("images/08-github/leaflet-simple-settings.png")
 ```
 
-10. In the Settings screen, scroll way down to the GitHub Pages area, and use the drop-down menu to change *Source* from *None* to *Master Branch*, as shown in Figure \@ref(fig:leaflet-github-pages). There is no *commit* or *save* button here, and the change will happen automatically. This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
+10. In the Settings screen, scroll way down to the GitHub Pages area. In the drop-down menu, change *Source* from *None* to *Master*, keep the default */(root)* option in the middle, and press *Save* as shown in Figure \@ref(fig:leaflet-github-pages). This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
 
 (ref:leaflet-github-pages) In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Master*.
 
@@ -139,7 +139,7 @@ Keep both tabs open so you can easily go back and forth between editing your cod
 
 Note: The live version of your code points to the `index.html` page by default, so it's not necessary to include it in the web address. Also, web addresses are *not* case sensitive, meaning you can save time by typing all of it in lower-case.
 
-Tip: If your live map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing your edits. Then do a "hard refresh" to [bypass any saved content in your browser cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
+Tip: If your live map does *not* appear right away, wait up to 30 seconds for GitHub Pages to finish processing your edits. Then give your browser a "hard refresh" to [bypass any saved content in your cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache) and re-download the entire web page from the server, using one of these key combinations:
 
   - Ctrl + F5 (most browsers for Windows or Linux)
   - Command + Shift + R (Chrome or Firefox for Mac)

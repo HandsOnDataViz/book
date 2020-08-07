@@ -20,11 +20,11 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 | Combination map   <br> ![](images/06-map/map-point-polygon-polyline.png) | Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)  |
 | Storymap <br> ![](images/06-map/map-storymap.png) | Best for guided point-by-point journey through a historical narrative, with optional photos, audio, or video on an interactive map. <br> Easy tool: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/) <br> Power tool: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
 
-TODO:
+TODO ABOVE: 
 
-- heat map
-- tab-view map for historical change
-- synchronized side-by-side map
+- UPDATE table to match chapter contents.
+- Add tab-view map for historical change template?
+- Add synchronized side-by-side map template?
 
 ## Map Design Principles {- #map-design}
 
@@ -96,7 +96,7 @@ knitr::include_graphics("images/06-map/map-principles-color-schemes.png")
 Sequential palettes are used to represent continuous numeric values, in other words, anything that can be placed
 on a scale. For example, average income, population counts, percent unemployed, etc.
 Usually such palettes are single-hue (for example, different shades of blue), and
-typically draker colors represent higher values (but not always).
+typically darker colors represent higher values (but not always).
 
 Diverging palettes also represent continuous values.
 Unlike sequential palettes, however, diverging colors represent "direction" from some reference value,
@@ -121,7 +121,7 @@ differnet color palettes. The map in Figure \@ref(fig:map-principles-classificat
 represents per capita income for the contiguous US states using a sequential color scheme
 consisting of five shades of blue. The darker the color, the higher the income. You can quickly
 see that states in the north-east, such as Connecticut, Massachusettes, New Jersey,
-and Maryland have the highest per capita income. 
+and Maryland have the highest per capita income.
 
 In Figure \@ref(fig:map-principles-classification)b, we used a divergent color scheme to show
 whether states have higher or lower per capita incomes than the United States as a whole.
@@ -219,7 +219,7 @@ basemaps. For this tutorial, we chose *Dark Landmass*.
 
 Let's now proceed to the most important step—adding data. You can [download](data/nigeria-airports.csv)
 a dataset of Nigerian airports that we got [from the World Bank](https://datacatalog.worldbank.org/dataset/nigeria-airports)
-as a Shapefile and then converted to a CSV. 
+as a Shapefile and then converted to a CSV.
 
 Under *Untitled layer* item, click *Import* button, and drag-and-drop the CSV file.
 Once the data file is uploaded, My Maps will ask which columns contain location data.
@@ -329,7 +329,7 @@ if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/uX
 Sign in to your [Datawrapper account](https://app.datawrapper.de/signin)
 and click *New Map* in the header. Datawrapper will offer a choice of
 a *Choropleth*, *Symbol*, and *Locator* maps, as shown in Figure \@ref(fig:datawrapper-map-choose).
-Go ahead and choose *choropleth*. 
+Go ahead and choose *choropleth*.
 
 (ref:datawrapper-map-choose) Sign in to Datawrapper, click *New Map*, and choose *Choropleth*.
 
@@ -447,7 +447,7 @@ a geocoded column that contains latitude and longitude values.
 
 ### Sign Up for Socrata Account {-}
 
-Navigate to [Data.Medicare.gov](https://data.medicare.gov/) click *Sign In* button 
+Navigate to [Data.Medicare.gov](https://data.medicare.gov/) click *Sign In* button
 in the upper-right corner. Scroll down to *Sign Up* link. Follow the instructions,
 including setting up two-step authentication, to create a free account.
 
@@ -661,7 +661,7 @@ in Figure \@ref(fig:tableau-polygon-filter)).
 knitr::include_graphics("images/06-map/tableau-polygon-filter-annotated.png")
 ```
 
-You can change the color scheme by clicking the Color box of the Marks card, and 
+You can change the color scheme by clicking the Color box of the Marks card, and
 then *Edit colors*. Change the palette to *Reds*, and make it stepped rather than continuous,
 as shown in Figure \@ref(fig:tableau-polygon-color).
 
@@ -684,7 +684,7 @@ knitr::include_graphics("images/06-map/tableau-polygon-tooltip.png")
 ```
 
 And finally, let's add a proper title to the map. Double-click the default *Sheet 1* name
-to bring up the *Edit Title* window, and change the name of your chart to a more meaningful 
+to bring up the *Edit Title* window, and change the name of your chart to a more meaningful
 *Military Spending as % of GDP (2018)*.
 
 ### Publish Your Tableau Map {-}
@@ -705,7 +705,7 @@ In reviewing all these tools, we only scratched the surface and showed simple ex
 to get you started quickly. All platforms allow layering data to create powerful exploration
 mapping visualizations.
 
-None of the platforms required special geospatial data, as all were smart enough to perform 
+None of the platforms required special geospatial data, as all were smart enough to perform
 geocoding and know the boundaries and coordinates of objects given to them.
 In [Chapter 11](#transform), we will talk more about geospatial data,
 how it can be obtained, stored, modified, and shared.

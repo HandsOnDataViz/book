@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-05" />
+<meta name="date" content="2020-08-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="chartjs-bubble-csv.html"/>
-<link rel="next" href="leaflet-csv.html"/>
+<link rel="next" href="leaflet-maps-with-google-sheets.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -202,9 +202,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
-<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
-<li class="chapter" data-level="" data-path="social-explorer-maps.html"><a href="social-explorer-maps.html"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
+<li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>7</b> Embed On Your Web</a>
@@ -231,14 +230,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>10</b> Leaflet Map Templates</a>
 <ul>
-<li class="chapter" data-level="" data-path="leaflet-csv.html"><a href="leaflet-csv.html"><i class="fa fa-check"></i>Fork and Edit Leaflet Map with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
-<li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
-<li class="chapter" data-level="" data-path="leaflet-maps-open-apis.html"><a href="leaflet-maps-open-apis.html"><i class="fa fa-check"></i>Pull Open Data into Leaflet Map with APIs</a></li>
-<li class="chapter" data-level="" data-path="leaflet-polygon-map-click.html"><a href="leaflet-polygon-map-click.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Clickable Info Window template</a></li>
-<li class="chapter" data-level="" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
-<li class="chapter" data-level="" data-path="leaflet-polygon-map-multi-year-tabs.html"><a href="leaflet-polygon-map-multi-year-tabs.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Multi-Year Tabs template</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>11</b> Transform Your Map Data</a>
 <ul>
@@ -248,6 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify a Digitized Map with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>12</b> Detect Bias in Data Stories</a>
@@ -303,68 +300,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="leaflet" class="section level1" number="10">
 <h1><span class="header-section-number">Chapter 10</span> Leaflet Map Templates</h1>
-<p>TODO: Rewrite chapter</p>
-<p>While beginners appreciate the drag-and-drop map tools and tutorials described earlier in this book, <a href="mymaps.html">Google My Maps</a> and <a href="carto.html">Carto</a>, more advanced users may wish to customize their visualizations, add more complex data and interactivity, and control exactly how and where their work appears on the web. A more powerful and relatively easy-to-learn solution is to use code templates built with Leaflet <a href="https://leafletjs.com" class="uri">https://leafletjs.com</a>, an open-source library, which you can <a href="github.html">modify and host on GitHub</a>, as described in this book.</p>
-<div id="working-with-leaflet" class="section level4 unnumbered" number="">
-<h4>Working with Leaflet</h4>
-<p>Pros:</p>
+<p>In <a href="map.html">Chapter 6: Map Your Data</a>, we described several drag-and-drop tools designed for beginners, such as <a href="mymaps.html">Google My Maps</a> and <a href="map-with-datawrapper.html">Datawrapper</a>. In this chapter, we offer more advanced map tutorials using our open-source code templates, which you can copy and modify with skills you learned in <a href="github.html">Chapter 8: Edit and Host Code with GitHub</a>. We built all of the templates in this chapter with <a href="https://leafletjs.com">Leaflet</a>, a powerful open-source code library for creating interactive maps on desktop or mobile devices.</p>
+<p>No coding skills are required to use our first two easy-to-use templates because they pull your map data from a linked Google Sheet. The first template, <a href="leaflet-maps-with-google-sheets">Leaflet Maps with Google Sheets</a>, is a general-purpose tool that can display points, polygons, or polylines, using your choice of colors, icons, and images, based on data uploaded into your linked Google Sheet and GitHub repository. It also includes the option to display a table of point markers next to your map. The second template, <a href="leaflet-storymaps-with-google-sheets">Leaflet Storymaps with Google Sheets</a>, displays your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to display paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet and GitHub repo. If you wish to add some of these extra features, look ahead to <a href="transform.html">Chapter 11: Transform Your Map Data</a> to learn how to locate addresses with our <a href="geocode.html">built-in Google Sheets Geocoder</a>, create and edit polygons and polylines <a href="geojsonio.html">with the GeoJson.io tool</a>, edit or join data with polygons <a href="mapshaper.html">using the MapShaper tool</a>, or georectify a scanned map to use as a background overlay <a href="mapwarper.html">with the MapWarper tool</a>.</p>
+<!-- TODO: ask Amelia if it's okay to leave this out of the chapter intro: Also, if you create your own copy of either template above and invite people to visit your map, learn how to [Get Your Own Free Google Sheets API Key](google-sheets-api-key.html) to insert into the code, so that our key is not overused. -->
+<p>Our remaining Leaflet templates are designed to help users develop their map coding skills. Even if you have no prior coding experience, but can follow instructions and are <em>code-curious</em> about how things work on your computer, start with the <a href="leaflet-maps-with-csv.html">Leaflet Maps with CSV Data tutorial</a>, which walks you through the steps of creating a point map that pulls data from a CSV file, a <a href="spreadsheet.html">generic spreadsheet format we discussed in Chapter 2</a>. Then move on to the <a href="leaflet-maps-with-api.html">Leaflet Maps with Open Data API tutorial</a>, to learn how to code using an application program interface to pull information directly from <a href="opendata.html">open data repositories as we described in Chapter 3</a>. In both of these templates, you’ll learn how Leaflet maps are written using three coding languages:</p>
 <ul>
-<li>Open-source code, which anyone can freely use online, download, modify, or expand with plugins</li>
-<li>Easier for beginners to understand than some other map code libraries</li>
-<li>Compact code library (less than 40 KB) that runs on JavaScript in all modern web browsers</li>
+<li>HTML: to structure content on the web page, typically in a file named <code>index.html</code>.</li>
+<li>CSS or Cascading Style Sheet: to shape how content appears on the page, either inside <code>index.html</code> or in a separate file such as <code>style.css</code>.</li>
+<li>JavaScript: to create the interactive map using instructions from the Leaflet code library, either inside <code>index.html</code> on in a separate file, such as <code>script.js</code>.</li>
 </ul>
-<p>Cons:</p>
-<ul>
-<li>Must host your own code repositories to publish to the web (with a free service such as GitHub Pages)</li>
-<li>Must rely on open-source community of developers to maintain the core code or specific plugins</li>
-</ul>
-</div>
-<div id="leaflet-map-templates" class="section level4 unnumbered" number="">
-<h4>Leaflet Map Templates</h4>
-<p>TODO: add and clean up Leaflet Map CSV <a href="https://github.com/HandsOnDataViz/leaflet-map-csv" class="uri">https://github.com/HandsOnDataViz/leaflet-map-csv</a> to serve as a fuller tutorial for Leaflet Maps, and explain how this will teach more principles of modifying Leaflet code. …then geocode and upload more data points:</p>
-<p>TODO: convert to R code-chunk iframe: <a href="https://handsondataviz.github.io/leaflet-map-simple-instructor-sample/" class="uri">https://handsondataviz.github.io/leaflet-map-simple-instructor-sample/</a></p>
+<p>Explore our Leaflet map templates and you’ll also see how they refer to different code components, such as basemap tiles from <a href="https://leaflet-extras.github.io/leaflet-providers/preview/">various open-access online providers</a>, such as Carto, Esri, Stamen, and Open Street Map, that allow you to zoom into background maps. You’ll also see data files to place information about points, polygons, or polylines on top of the map, usually in CSV or <a href="convert-geojson.html">GeoJSON format—see chapter 11</a>, with names similar to <code>data.csv</code> or <code>map.geojson</code>. If you’re new to coding, creating Leaflet maps can be a great place to start and quickly see the results of what you’ve learned. To help you solve problems that may arise, see <a href="fix.html">Fix Common Mistakes</a> in the appendix.</p>
 <table>
+<caption><span id="tab:map-templates">Table 10.1: </span> Map Templates and Tutorials</caption>
 <colgroup>
 <col width="50%" />
 <col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Template</th>
-<th>Best use and tutorial chapter</th>
+<th>Map Templates</th>
+<th>Best use and tutorials in this book</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Leaflet Maps with Google Sheets<br> <img src="images/10-leaflet/leaflet-maps-with-google-sheets.png" /></td>
-<td>Best to show points, polygons, polylines, or point table data. Upload your GeoJSON data and modify settings in linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a></td>
+<td>Best to show interactive points, polygons, or polylines, using your choice of colors, styles, and icons, based on data loaded into your linked Google Sheet (or CSV file) and GitHub repository. Includes option to display a table of point map markers next to your map. <br>Template with tutorial: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a></td>
 </tr>
 <tr class="even">
 <td>Leaflet Storymaps with Google Sheets<br> <img src="images/10-leaflet/leaflet-storymaps-with-google-sheets.png" /></td>
-<td>Create a scrolling narrative with points, text, images, and links. <br>Template with tutorial: <a href="leaflet-storymaps-with-google-sheets.html">Leaflet Storymaps with Google Sheets</a></td>
+<td>Best to display your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to include paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: <a href="leaflet-storymaps-with-google-sheets.html">Leaflet Storymaps with Google Sheets</a></td>
 </tr>
 <tr class="odd">
+<td>Leaflet Maps with CSV Data<br> <img src="images/10-leaflet/leaflet-maps-with-csv.png" /></td>
+<td>Learn how to code your own Leaflet point map that pulls data from a CSV file in your GitHub repo.<br>Template with tutorial: <a href="leaflet-maps-with-csv.html">Leaflet Maps with CSV Data</a></td>
+</tr>
+<tr class="even">
 <td>Leaflet Maps with Open Data API<br> <img src="images/10-leaflet/leaflet-socrata-api-control-layers.png" /></td>
-<td>Create a Leaflet map powered by an open data repository application programming interface (API), such as a Socrata data repository endpoint. <br>Template with tutorial: <a href="leaflet-maps-with-api.html">Leaflet Maps with Open Data API</a></td>
+<td>Learn how to code your own Leaflet map with an application program interface (API) that pulls content directly from open data repositories, such as Socrata and others.<br>Template with tutorial: <a href="leaflet-maps-with-api.html">Leaflet Maps with Open Data API</a></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div id="inside-leaflet-code-templates" class="section level4 unnumbered" number="">
-<h4>Inside Leaflet code templates</h4>
-<p>The templates featured below vary from simple to complex, but all of them include three basic types of code:</p>
-<ul>
-<li>HTML: to structure content on the web (example: index.html)</li>
-<li>CSS, or Cascading Style Sheet: to shape how content appears on the web (example: style.css)</li>
-<li>JavaScript: to create the map and interactivity (example: script.js)</li>
-</ul>
-<p>Also, these templates refer to other types of code:</p>
-<ul>
-<li>library: link to online instructions to complete routine tasks (examples: Leaflet, jQuery)</li>
-<li>basemap tiles: link to online background map (example: Carto Positron, a light-gray street map)</li>
-<li>data: content to appear on map, typically in CSV or GeoJSON format (examples: data.csv, data.geojson)</li>
-</ul>
-</div>
+<p>TODO: decide whether to add any other Leaflet map templates we created for HandsOnDataViz or OnTheLine</p>
 </div>
             </section>
 
@@ -372,7 +349,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="chartjs-bubble-csv.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="leaflet-csv.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="leaflet-maps-with-google-sheets.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-05" />
+<meta name="date" content="2020-08-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="social-explorer-maps.html"/>
+<link rel="prev" href="filtered-point-map-socrata.html"/>
 <link rel="next" href="embed.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -202,9 +202,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
-<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
-<li class="chapter" data-level="" data-path="social-explorer-maps.html"><a href="social-explorer-maps.html"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
+<li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>7</b> Embed On Your Web</a>
@@ -231,14 +230,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>10</b> Leaflet Map Templates</a>
 <ul>
-<li class="chapter" data-level="" data-path="leaflet-csv.html"><a href="leaflet-csv.html"><i class="fa fa-check"></i>Fork and Edit Leaflet Map with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
-<li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
-<li class="chapter" data-level="" data-path="leaflet-maps-open-apis.html"><a href="leaflet-maps-open-apis.html"><i class="fa fa-check"></i>Pull Open Data into Leaflet Map with APIs</a></li>
-<li class="chapter" data-level="" data-path="leaflet-polygon-map-click.html"><a href="leaflet-polygon-map-click.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Clickable Info Window template</a></li>
-<li class="chapter" data-level="" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
-<li class="chapter" data-level="" data-path="leaflet-polygon-map-multi-year-tabs.html"><a href="leaflet-polygon-map-multi-year-tabs.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Multi-Year Tabs template</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>11</b> Transform Your Map Data</a>
 <ul>
@@ -248,6 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify a Digitized Map with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>12</b> Detect Bias in Data Stories</a>
@@ -303,42 +300,124 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="tableau-polygon" class="section level2 unnumbered" number="">
 <h2>Polygon Map with Tableau Public</h2>
-<p>Tableau Public is freely-available software that contains powerful tools to quickly create interactive polygon maps for common boundaries (such as US States, or World Nations.) If you need to create customized maps for less-common boundaries, see our chapter on <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> in this volume.</p>
-<p>Important: Tableau Public is designed to publicly display your data, which makes this free tool very appropriate for educators, journalists, non-profit organizations, or other users who wish to openly share their map. If you desire a private tool to restrict your data, Tableau offers other tools that require payment.</p>
-<p>See also the Tableau Public support page <a href="https://www.tableau.com/support/public" class="uri">https://www.tableau.com/support/public</a> for additional resources, including video tutorials.</p>
-<ol style="list-style-type: decimal">
-<li><p>Download and install the free Tableau Public tool, available for Mac or Windows, at <a href="https://public.tableau.com/en-us/s/download" class="uri">https://public.tableau.com/en-us/s/download</a>. Do not confuse with other Tableau products that require payment. Installation may require up to 5-10 minutes.</p></li>
-<li><p>Click this link and Save to download to your computer: <a href="data/us-sample-data.csv">us-sample-data in CSV format</a>. CSV means comma-separated values, a generic spreadsheet format that most tools can easily open. For help with downloading, see this <a href="https://www.youtube.com/watch?v=-04PQldP9HQ">short video tutorial</a>.</p></li>
-<li><p>Open the us-sample-data.csv file with any spreadsheet tool to view its contents.</p></li>
-<li><p>Launch Tableau Public. In the Connect column of the first screen, click “Text file” to connect to the CSV file you downloaded above. (If you had an Excel file in .xlsx format, you would click that instead.) Navigate to select the us-sample.data.csv file on your computer.</p></li>
-<li><p>At first, Tableau Public does <strong>NOT</strong> recognize the names of US areas, which initially appear simply as “text” values (with the “Abc” symbol). Click and hold down the mouse directly on the “Abc” symbol, and use the drop-down menu to convert to Geographic role &gt; State/Province. A tiny globe symbol will appear to show that Tableau Public now recognizes this column as geographic data, which is essential in order to make a map.</p></li>
-</ol>
-<div class="figure">
-<img src="images/06-map/tableau-polygon-1.png" alt="" />
-<p class="caption">Column displayed as text data</p>
-</div>
-<div class="figure">
-<img src="images/06-map/tableau-polygon-2.png" alt="" />
-<p class="caption">Column converted to geographic data</p>
-</div>
-<ol start="6" style="list-style-type: decimal">
-<li>Go to the Worksheet view, by clicking on “Sheet 1” in the bottom-left corner. The goal is to build a polygon map, based on the dimensions and variables provided by Tableau Public.</li>
-</ol>
-<p>Step A - Drag the “Area” dimension to the middle of the worksheet to create the geographic areas</p>
-<p>Step B - In the “Marks” panel, change the drop-down menu from “Automatic” to “Map”</p>
-<p>Step C - Drag the “Type” dimension into the “Color” box of the Marks panel to show polygon colors according to type</p>
-<div class="figure">
-<img src="images/06-map/tableau-polygon-3.png" alt="" />
-<p class="caption">Steps A-B-C above</p>
-</div>
-<p>Optional: Add more items, such as “Abbreviation” dimension to “Label” box to display state abbreviations, or “Area” dimension to “tooltips” to display on mouseover.</p>
-<ol start="7" style="list-style-type: decimal">
-<li><p>To display your map online, click “Dashboard” tab in the bottom-left corner.</p></li>
-<li><p>Drag “Sheet 1” (the default name of your map) into your dashboard. Also, drag the map legend from the corner into the lower body of the map (or choose other legend options).</p></li>
-<li><p>To publish your map online, go to File &gt; Save to Tableau Public As… This will require you to create a free Tableau Public Account.</p></li>
-<li><p>Modify your final online product as desired, and see options to embed elsewhere on the web.</p></li>
-</ol>
+<p>In the previous chapter, we looked at using Tableau Public to build
+<a href="scatter-chart-tableau.html#scatter-chart-tableau">scatterplots</a> and <a href="filtered-line-chart-tableau.html#filtered-line-chart-tableau">filtered line charts</a>.
+Tableau can also be used to create point and polygon maps.</p>
+<p>In this tutorial, we will create a choropleth map of military spending per country
+as percentage of gross dometic product as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-final">6.27</a>.
+Remember that choropleth maps work best when
+they show relative, not absolute numbers.
+Displaying total spending per country is a bad idea, as bigger countries tend
+to have larger populations and as a result larger values for a lot of measures,
+including military spending.</p>
 
+<div class="figure"><span id="fig:tableau-polygon-final"></span>
+<iframe src="https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
+</iframe>
+<p class="caption">
+Figure 6.27: This choropleth map is made in Tableau Public
+</p>
+</div>
+<p>To create maps in Tableau, you do not always need geospatial files. Tableau can recognize
+of a lot of locations, including boundaries for countries and territories, counties within countries,
+states, US zip codes, airport codes, city locations, and some others. A simple spreadsheet that references
+these locations can suffice. In this tutorial, we will rely on Tableau to automatically recognize country
+names. If you require custom boundaries or points (such as town names in your local language),
+take a look at <a href="https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm">Create Tableau Maps from Spatial Files</a>
+article from the official Tableau documentation.</p>
+<p>Before we begin, <a href="data/military-spending-2018.csv">download the 2018 data</a> that we obtained from the World Bank.</p>
+<div id="create-a-choropleth-map-in-tableau" class="section level3 unnumbered" number="">
+<h3>Create a Choropleth Map in Tableau</h3>
+<p>Launch Tableau. In <strong>Connect</strong> section on start up, choose <em>Text file</em>, and select <code>military-spending-2018.csv</code>.
+From Data Source tab, inspect the dataset contents. It contains four columns: Country Name, which includes
+countries and territories defined by the World Bank, the three-digit Country Code,
+Indicator Name (same for all rows), and percent value, as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-connect">6.28</a>.
+Notice that some values are set to <em>null</em> (not available).</p>
+
+<div class="figure"><span id="fig:tableau-polygon-connect"></span>
+<img src="images/06-map/tableau-polygon-connect-annotated.png" alt="When finished inspecting the connected file, go to Sheet 1."  />
+<p class="caption">
+Figure 6.28: When finished inspecting the connected file, go to Sheet 1.
+</p>
+</div>
+<p>In the variables list on the left, notice how Tableau generated <em>Latitude</em> and <em>Longitude</em>
+fields based on country names and country codes (by the way, you only need one or the other, not both).</p>
+<p>Drag and drop Longitude to <strong>Columns</strong>, and <em>Latitude</em> to <strong>Rows</strong>,
+as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-drag">6.29</a>.
+You should see that the chart area shows an empty map of the world
+(if not, double-check that Latitude is indeed in Rows, not Columns).
+In Marks box, change <em>Automatic</em> to <em>Map</em>, and drag <em>Country Name</em> variable
+to the <strong>Size</strong> box of the Marks card. You will see that country outlines turned blue.</p>
+
+<div class="figure"><span id="fig:tableau-polygon-drag"></span>
+<img src="images/06-map/tableau-polygon-drag-annotated.png" alt="Drag and drop variables to the right places."  />
+<p class="caption">
+Figure 6.29: Drag and drop variables to the right places.
+</p>
+</div>
+<p>We want colors to represent military spending values, so drag <em>Value</em> variable to
+the <strong>Color</strong> box of the Marks card. You should now see a proper choropleth map.</p>
+<p>Places like Greenland and Libya do not have available values, but they are still
+painted with the lightest color, which is misleading. To remove countries with <em>null</em> values
+from the map, drag <em>Values</em> to the <em>Filters</em> card. A popup window will ask you how
+you want to filter, just leave everything unchanged. This will leave the whole range of values,
+and exclude <em>null</em> values (see the checkbox in the lower-right corner of the Filter window
+in Figure <a href="tableau-polygon.html#fig:tableau-polygon-filter">6.30</a>).</p>
+
+<div class="figure"><span id="fig:tableau-polygon-filter"></span>
+<img src="images/06-map/tableau-polygon-filter-annotated.png" alt="Filter values to remove countries with no data from display." width="400" />
+<p class="caption">
+Figure 6.30: Filter values to remove countries with no data from display.
+</p>
+</div>
+<p>You can change the color scheme by clicking the Color box of the Marks card, and
+then <em>Edit colors</em>. Change the palette to <em>Reds</em>, and make it stepped rather than continuous,
+as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-color">6.31</a>.</p>
+
+<div class="figure"><span id="fig:tableau-polygon-color"></span>
+<img src="images/06-map/tableau-polygon-color.png" alt="Change the color scheme to Reds with 5 steps." width="400" />
+<p class="caption">
+Figure 6.31: Change the color scheme to Reds with 5 steps.
+</p>
+</div>
+<p>You may notice the tooltip calls values <em>Value</em> when hovering over countries.
+Click the Tooltip box of the Marks card to change text to <em>Military spending</em>,
+and add a percentage sign after the value itself, as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-tooltip">6.32</a>.
+Make sure not to change values between
+<code>&lt;</code> and <code>&gt;</code>, as these are references to variables.</p>
+
+<div class="figure"><span id="fig:tableau-polygon-tooltip"></span>
+<img src="images/06-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
+<p class="caption">
+Figure 6.32: Change tooltip text to make it more user-friendly.
+</p>
+</div>
+<p>And finally, let’s add a proper title to the map. Double-click the default <em>Sheet 1</em> name
+to bring up the <em>Edit Title</em> window, and change the name of your chart to a more meaningful
+<em>Military Spending as % of GDP (2018)</em>.</p>
+</div>
+<div id="publish-your-tableau-map" class="section level3 unnumbered" number="">
+<h3>Publish Your Tableau Map</h3>
+<p>Once you are ready to publish and share the map, go to <em>File &gt; Save to Tableau Public</em>.
+In the pop-up window, log in to your account if requested. Give it a title, such
+as <em>Military Spending</em>, and click Save.</p>
+</div>
+<div id="summary6" class="section level3 unnumbered" number="">
+<h3>Summary</h3>
+<p>In this chapter, we looked at free mapping platforms to create simple point and polygon maps.
+Google My Maps is a good choice for point maps that can be created in collaboration with others.
+If the data you are interested in lives on Socrata platform, you might be able to create a point
+map within the platform itself, and embed it as an iframe in your own website.
+Tableau is another very powerful tool to build and share polygon and point maps.</p>
+<p>In reviewing all these tools, we only scratched the surface and showed simple examples
+to get you started quickly. All platforms allow layering data to create powerful exploration
+mapping visualizations.</p>
+<p>None of the platforms required special geospatial data, as all were smart enough to perform
+geocoding and know the boundaries and coordinates of objects given to them.
+In <a href="transform.html#transform">Chapter 11</a>, we will talk more about geospatial data,
+how it can be obtained, stored, modified, and shared.</p>
+
+</div>
 </div>
 <!-- </div> -->
             </section>
@@ -346,7 +425,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="social-explorer-maps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="filtered-point-map-socrata.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="embed.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

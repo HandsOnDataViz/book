@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-05" />
+<meta name="date" content="2020-08-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="map-design.html"/>
-<link rel="next" href="carto.html"/>
+<link rel="next" href="map-with-datawrapper.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -202,9 +202,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="carto.html"><a href="carto.html"><i class="fa fa-check"></i>Point Map with Carto Builder</a></li>
-<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata Open Data</a></li>
-<li class="chapter" data-level="" data-path="social-explorer-maps.html"><a href="social-explorer-maps.html"><i class="fa fa-check"></i>Polygon Maps and Storyboards with Social Explorer</a></li>
+<li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>7</b> Embed On Your Web</a>
@@ -231,14 +230,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>10</b> Leaflet Map Templates</a>
 <ul>
-<li class="chapter" data-level="" data-path="leaflet-csv.html"><a href="leaflet-csv.html"><i class="fa fa-check"></i>Fork and Edit Leaflet Map with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets template</a></li>
-<li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets and Scrolling Narrative</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
-<li class="chapter" data-level="" data-path="leaflet-maps-open-apis.html"><a href="leaflet-maps-open-apis.html"><i class="fa fa-check"></i>Pull Open Data into Leaflet Map with APIs</a></li>
-<li class="chapter" data-level="" data-path="leaflet-polygon-map-click.html"><a href="leaflet-polygon-map-click.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Clickable Info Window template</a></li>
-<li class="chapter" data-level="" data-path="leaflet-polygon-map-hover.html"><a href="leaflet-polygon-map-hover.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Hover Info Window template</a></li>
-<li class="chapter" data-level="" data-path="leaflet-polygon-map-multi-year-tabs.html"><a href="leaflet-polygon-map-multi-year-tabs.html"><i class="fa fa-check"></i>Leaflet Thematic Polygon Map with Multi-Year Tabs template</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>11</b> Transform Your Map Data</a>
 <ul>
@@ -248,6 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify a Digitized Map with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>12</b> Detect Bias in Data Stories</a>
@@ -303,83 +300,134 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="mymaps" class="section level2 unnumbered" number="">
 <h2>Point Map with Google My Maps</h2>
-<p>TODO: add text, check current documentation and features at <a href="https://www.google.com/maps/about/mymaps/" class="uri">https://www.google.com/maps/about/mymaps/</a></p>
-<p>Try it:
-Explore the interactive point map below, or <a href="https://drive.google.com/open?id=1OPrulm2ISYUb990DJOCoYlt_sWc">view the full-screen version</a>, created with Google My Maps <a href="https://www.google.com/maps/d/" class="uri">https://www.google.com/maps/d/</a>.</p>
-<p>TODO: if we keep, convert to iframe: <a href="https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc" class="uri">https://www.google.com/maps/d/u/0/embed?mid=1OPrulm2ISYUb990DJOCoYlt_sWc</a></p>
-<p>Tool review:
-- Pros
-- Easy-to learn free mapping tool to import and style point, polyline, and polygon layers and basemap layers
-- Share and collaborate through the Google Drive platform
-- Geocoding error warning
-- Cons
-- Limited options to customize map markers
-- Cannot easily create colored polygon maps from data values
-- Cannot extract geocoded data to migrate to another tool</p>
-<p>See <a href="https://youtube.be/ZVIPn8dJeYM">video</a></p>
-<p>Let’s build a simple point map with sample data, using Google My Maps <a href="https://www.google.com/maps/d/" class="uri">https://www.google.com/maps/d/</a>. Requires signing up for a free Google Drive account.</p>
-<ol style="list-style-type: decimal">
-<li><p>Click this link and Save to download to your computer: <a href="data/sample-address-data.csv">sample-address-data in CSV format</a>. CSV means comma-separated values, a generic spreadsheet format that most tools can easily open. For help with downloading, see this <a href="https://www.youtube.com/watch?v=-04PQldP9HQ">short video tutorial</a>.</p></li>
-<li><p>Open and sign in to Google My Maps <a href="https://www.google.com/maps/d/" class="uri">https://www.google.com/maps/d/</a></p></li>
-<li><p>Click the red + symbol to create a new map, which will be saved automatically to your Google Drive folder.</p></li>
-</ol>
-<div class="figure">
-<img src="images/06-map/mymaps-create-map.png" alt="" />
-<p class="caption">Image: Create a new map</p>
-</div>
-<ol start="4" style="list-style-type: decimal">
-<li>In the map layers area, click the blue Import link. Drag-and-drop the CSV address data file into the web interface to import it.</li>
-</ol>
-<div class="figure">
-<img src="images/06-map/mymaps-import.png" alt="" />
-<p class="caption">Image: Import a data layer</p>
-</div>
-<div class="figure">
-<img src="images/06-map/mymaps-choose-import.png" alt="" />
-<p class="caption">Image: Drag-and-drop data into My Maps</p>
-</div>
-<ol start="5" style="list-style-type: decimal">
-<li>Choose columns to position your placements. Select “Address” for this sample data, then Continue.</li>
-</ol>
-<div class="figure">
-<img src="images/06-map/mymaps-choose-position.png" alt="" />
-<p class="caption">Image: Choose columns to position placemarks</p>
-</div>
-<ol start="6" style="list-style-type: decimal">
-<li>Choose a column to title your markers. Select “Description” for this sample data, then Finish.</li>
-</ol>
-<div class="figure">
-<img src="images/06-map/mymaps-choose-title.png" alt="" />
-<p class="caption">Image: Choose column to title markers</p>
-</div>
-<ol start="7" style="list-style-type: decimal">
-<li>After My Maps uploads and geocodes your sample data, click Open Data Table to inspect the results.</li>
-</ol>
-<div class="figure">
-<img src="images/06-map/mymaps-fix-errors.png" alt="" />
-<p class="caption">Image: Open Data Table to inspect geocoding errors</p>
-</div>
-<ol start="8" style="list-style-type: decimal">
-<li>To style the map markers, click Individual Styles. In this sample data, you can select Group Places By &gt; Style By &gt; Group. This will color markers according to the three categories.</li>
-</ol>
-<iframe src="images/06-map/mymaps-style-groups-640w.gif" width="672" height="400px">
+<p><a href="https://www.google.com/maps/about/mymaps/">My Maps</a> is Google’s service
+that allows users to create custom maps using Google Maps platform.
+It is perhaps the fastest ways of building point and basic polygon maps, although
+it limits your styling options.</p>
+<p>My Maps is most powerful when it comes to collaboration. The platform functions
+within Google Drive, and so allows you to invite
+other users with Google accounts to work on the map.</p>
+<p>In this section, we will look at building a point map of airports in Nigeria, as is shown
+in Figure <a href="mymaps.html#fig:mymaps-final">6.5</a>. We will
+create a map, change a baselayer, import point data, style points, and share the map.</p>
+
+<div class="figure"><span id="fig:mymaps-final"></span>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1v1ZNrpfBtq_p4wTRyj2hIKBtTnkmhnMF" width="672" height="500px">
 </iframe>
-<ol start="9" style="list-style-type: decimal">
-<li>To publish your map on the web, click Share, add a map title, change from Private to Public on the Web, so that anyone can view your map. Click Save and Done.</li>
-</ol>
-<div class="figure">
-<img src="images/06-map/mymaps-share.png" alt="" />
-<p class="caption">Image: Share link</p>
+<p class="caption">
+Figure 6.5: A map of airports in Nigeria built using Google My Maps.
+</p>
 </div>
-<ol start="10" style="list-style-type: decimal">
-<li>To embed the map on your own website, click the three vertical dots next to the map title for more options, and select Embed On My Site. The tool will generate an iframe code for you to copy. For next steps, go to the <a href="embed.html">Embed on Your Web</a> chapters in this book.</li>
-</ol>
-<div class="figure">
-<img src="images/06-map/mymaps-embed.png" alt="" />
-<p class="caption">Image: Embed map on your site</p>
+<div id="create-a-new-map-in-my-maps" class="section level3 unnumbered" number="">
+<h3>Create a New Map in My Maps</h3>
+<p>Navigate to <a href="https://www.google.com/mymaps/">Google My Maps</a>.
+In the upper-right corner, click <code>+ Create a New Map</code> button,
+as shown in Figure <a href="mymaps.html#fig:mymaps-create-new">6.6</a>.</p>
+
+<div class="figure"><span id="fig:mymaps-create-new"></span>
+<img src="images/06-map/mymaps-create-new.png" alt="A map of airports in Nigeria built using Google My Maps." width="300" />
+<p class="caption">
+Figure 6.6: A map of airports in Nigeria built using Google My Maps.
+</p>
 </div>
-<p>Learn more:
-- Google My Maps Help Page <a href="https://support.google.com/mymaps/answer/3024396" class="uri">https://support.google.com/mymaps/answer/3024396</a></p>
+<p>You will see a typical Google Maps with no data. Click on the current title (<code>Untitled map</code>),
+and add appropriate title and description in the modal window that appeared
+(see Figure <a href="mymaps.html#fig:mymaps-edit-title">6.7</a> for inspiration).</p>
+
+<div class="figure"><span id="fig:mymaps-edit-title"></span>
+<img src="images/06-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
+<p class="caption">
+Figure 6.7: Add title and description to your map.
+</p>
+</div>
+<p>Before we add any points, let’s change the basemap to something less boring.
+At the bottom of the control window, open <em>Base map</em> dropdown, and pick one of nine available
+basemaps. For this tutorial, we chose <em>Dark Landmass</em>.</p>
+<p>Let’s now proceed to the most important step—adding data. You can <a href="data/nigeria-airports.csv">download</a>
+a dataset of Nigerian airports that we got <a href="https://datacatalog.worldbank.org/dataset/nigeria-airports">from the World Bank</a>
+as a Shapefile and then converted to a CSV.</p>
+<p>Under <em>Untitled layer</em> item, click <em>Import</em> button, and drag-and-drop the CSV file.
+Once the data file is uploaded, My Maps will ask which columns contain location data.
+In our case, these are <em>LATITUDE</em> and <em>LONGITUDE</em> columns, as shown in Figure <a href="mymaps.html#fig:mymaps-lat-lon">6.8</a>.</p>
+
+<div class="figure"><span id="fig:mymaps-lat-lon"></span>
+<img src="images/06-map/mymaps-lat-lon-annotated.png" alt="Check LATITUDE and LONGITUDE as your location columns." width="300" />
+<p class="caption">
+Figure 6.8: Check LATITUDE and LONGITUDE as your location columns.
+</p>
+</div>
+<p>Once the two boxes are checked, click <em>Continue</em>. Another window will pop up, asking
+which column to use to annotate points. Choose <em>City</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-column-title">6.9</a>,
+and then <em>Finish</em>.</p>
+
+<div class="figure"><span id="fig:mymaps-column-title"></span>
+<img src="images/06-map/mymaps-column-title-annotated.png" alt="Choose City as the title for your markers." width="300" />
+<p class="caption">
+Figure 6.9: Choose City as the title for your markers.
+</p>
+</div>
+<p>It will take a few moments for My Maps to create a new layer, which
+will be added to the layer menu as <em>nigeria-airports.csv</em>.
+Once the layer is created, My Maps will center the map to fit the points.</p>
+<p>Let’s replace the original blue markers to orange airport symbols.
+In layers menu, hover over <em>All items</em> and click the paint bucket symbol
+on the right. Change “All items” text to “Airports”,
+choose orange color, and click on <em>More icons</em> to find an airport symbol
+(we recommend using Filter to search for “airport”, or simply scroll down to Transportation section).
+The marker in the layers menu will change to an orange airplane,
+as shown in Figure <a href="mymaps.html#fig:mymaps-color">6.10</a>.</p>
+
+<div class="figure"><span id="fig:mymaps-color"></span>
+<img src="images/06-map/mymaps-color-annotated.png" alt="In My Maps, you can change marker colors and icons." width="300" />
+<p class="caption">
+Figure 6.10: In My Maps, you can change marker colors and icons.
+</p>
+</div>
+<p>Click on the layer name, which by default is set to the name of imported file (<code>nigeria-airports.csv</code>),
+and change it to <em>Nigerian Airports</em>. Alternatively open a kebab menu to the right of the layer name, and choose <em>Rename this layer</em>.</p>
+<p>You can accompany each marker with a label. Click <em>Uniform style</em> under the layer, and choose <em>Alt_name</em>
+in the <em>Set labels</em> dropdown menu. You will see alternative airport names, such as <em>BENIN</em>, displayed
+to the right of the markers.</p>
+<p>Click <em>Preview</em> to see how the map looks like outside of the My Maps editing studio.</p>
+</div>
+<div id="share-your-google-map" class="section level3 unnumbered" number="">
+<h3>Share Your Google Map</h3>
+<p>If you are happy with the result, click <em>Share</em>, and click <em>Change to anyone with the link</em>
+(see Figure <a href="mymaps.html#fig:mymaps-share">6.11</a>),
+just as you would with any other Google Drive document.</p>
+
+<div class="figure"><span id="fig:mymaps-share"></span>
+<img src="images/06-map/mymaps-share.png" alt="Make sure anyone with the link can view your map before you share it." width="400" />
+<p class="caption">
+Figure 6.11: Make sure anyone with the link can view your map before you share it.
+</p>
+</div>
+<p>You can now generate a code snippet to embed the map as an iframe.
+From the main kebab menu to the right of the map title, choose <em>Embed on my site</em> (Figure <a href="mymaps.html#fig:mymaps-embed">6.12</a>).
+You can use now use this iframe code to embed your map to
+your Wordpress, Squarespace, or any other website.</p>
+
+<div class="figure"><span id="fig:mymaps-embed"></span>
+<img src="images/06-map/mymaps-embed-annotated.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
+<p class="caption">
+Figure 6.12: My Maps can generate an iframe code to include the map on your own website.
+</p>
+</div>
+</div>
+<div id="going-beyond-points" class="section level3 unnumbered" number="">
+<h3>Going Beyond Points</h3>
+<p>Google My Maps has more powerful features for map making.
+Instead of uploading datasets with latitude/longitude pairs,
+you can use simple addresses (and My Maps will take care of geocoding),
+or add markers by clicking on the map using <em>Add marker</em> feature.
+You can classify points based on a property, and use different colors
+to represent them.</p>
+<p>You are not limited to just point maps. You can also draw your own shapes, including
+lines and polygons. You can add data to multiple layers.
+Unfortunately, Google My Maps has no comprehensive documentation,
+so you have to explore the studio yourself if you want to create
+more complex projects.</p>
+</div>
 </div>
             </section>
 
@@ -387,7 +435,7 @@ Explore the interactive point map below, or <a href="https://drive.google.com/op
         </div>
       </div>
 <a href="map-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="carto.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="map-with-datawrapper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

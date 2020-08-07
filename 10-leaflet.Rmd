@@ -1,7 +1,9 @@
 # Leaflet Map Templates {#leaflet}
-In [Chapter 5: Map Your Data](map.html), we described several drag-and-drop tools designed for beginners, such as [Google My Maps](mymaps.html) and TODO: INSERT OTHERS. In this chapter, we offer more advanced map tutorials using our open-source code templates, which you can copy and modify with skills you learned in [Chapter 8: Edit and Host Code with GitHub](github.html). We built all of the templates in this chapter with [Leaflet](https://leafletjs.com), a powerful open-source code library for creating interactive maps on desktop or mobile devices.
+In [Chapter 6: Map Your Data](map.html), we described several drag-and-drop tools designed for beginners, such as [Google My Maps](mymaps.html) and [Datawrapper](map-with-datawrapper.html). In this chapter, we offer more advanced map tutorials using our open-source code templates, which you can copy and modify with skills you learned in [Chapter 8: Edit and Host Code with GitHub](github.html). We built all of the templates in this chapter with [Leaflet](https://leafletjs.com), a powerful open-source code library for creating interactive maps on desktop or mobile devices.
 
-No coding skills are required to use our first two easy-to-use templates because they pull your map data from a linked Google Sheet. The first template, [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets), is a general-purpose tool that can display points, polygons, or polylines, using your choice of colors, icons, and images, based on data uploaded into your linked Google Sheet and GitHub repository. It also includes the option to display a table of point map markers next to your map. The second template, [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets), displays your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to display paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet and GitHub repo. If you wish to use some of these extra features, look ahead to [Chapter 11: Transform Your Map Data](transform.html) to learn how to locate addresses with our [built-in Google Sheets Geocoder](geocode.html), create and edit polygons and polylines [with the GeoJson.io tool](geojsonio.html), edit or join data with polygons [using the MapShaper tool](mapshaper.html), or georectify a scanned map to use as a background overlay [with the MapWarper tool](mapwarper.html). Also, if you create your own copy of either template above and invite people to visit your map, learn how to [Get Your Own Free Google Sheets API Key](google-sheets-api-key.html) to insert into the code, so that our key is not overused.
+No coding skills are required to use our first two easy-to-use templates because they pull your map data from a linked Google Sheet. The first template, [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets), is a general-purpose tool that can display points, polygons, or polylines, using your choice of colors, icons, and images, based on data uploaded into your linked Google Sheet and GitHub repository. It also includes the option to display a table of point markers next to your map. The second template, [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets), displays your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to display paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet and GitHub repo. If you wish to add some of these extra features, look ahead to [Chapter 11: Transform Your Map Data](transform.html) to learn how to locate addresses with our [built-in Google Sheets Geocoder](geocode.html), create and edit polygons and polylines [with the GeoJson.io tool](geojsonio.html), edit or join data with polygons [using the MapShaper tool](mapshaper.html), or georectify a scanned map to use as a background overlay [with the MapWarper tool](mapwarper.html).
+
+<!-- TODO: ask Amelia if it's okay to leave this out of the chapter intro: Also, if you create your own copy of either template above and invite people to visit your map, learn how to [Get Your Own Free Google Sheets API Key](google-sheets-api-key.html) to insert into the code, so that our key is not overused. -->
 
 Our remaining Leaflet templates are designed to help users develop their map coding skills. Even if you have no prior coding experience, but can follow instructions and are *code-curious* about how things work on your computer, start with the [Leaflet Maps with CSV Data tutorial](leaflet-maps-with-csv.html), which walks you through the steps of creating a point map that pulls data from a CSV file, a [generic spreadsheet format we discussed in Chapter 2](spreadsheet.html). Then move on to the [Leaflet Maps with Open Data API tutorial](leaflet-maps-with-api.html), to learn how to code using an application program interface to pull information directly from [open data repositories as we described in Chapter 3](opendata.html). In both of these templates, you'll learn how Leaflet maps are written using three coding languages:
 
@@ -23,7 +25,7 @@ Table: (\#tab:map-templates) Map Templates and Tutorials
 TODO: decide whether to add any other Leaflet map templates we created for HandsOnDataViz or OnTheLine
 
 
-## Leaflet Maps with Google Sheets template {- #leaflet-maps-with-google-sheets}
+## Leaflet Maps with Google Sheets {- #leaflet-maps-with-google-sheets}
 Sometimes you need to create a map that cannot be made easily with drag-and-drop tools, because you need to customize its appearance or add new layers of point, polygon, or polyline data. In these cases, consider making a copy of our Leaflet Maps with Google Sheets template on GitHub. It gives you more control over choosing colors, icons, and images, and also the option to display a data table of point markers. To customize your interactive map, you enter data into a Google Sheet template, which you link directly to your copy of the Leaflet code repository, as shown in Figure \@ref(fig:lmwgs-map) and Figure \@ref(fig:lmwgs-sheet).
 
 TODO: Create and insert a new version of the demo, featuring ECGreenway route thru CT, points with photos, and pop density of towns to highlight how this bike route connects cities.
@@ -430,7 +432,9 @@ To solve problems, see [Fix Common Mistakes](fix.html) section of the appendix.
 
 
 
-## Create Your Own Google Sheets API Key {- #google-sheets-api-key}
+## Get Your Google Sheets API Key {- #google-sheets-api-key}
+TODO: write out all steps from notes below
+
 TODO: Explain why you need to create a free Google Sheets API Key to allow the code template to read data from your Google Sheet. (This is a new requirement with version X of our template, beginning in August 2020, in order to work with Google Sheets API version 4.)
 
 Reminders:
@@ -630,7 +634,9 @@ But a better way to display several points is to remove the code comment symbols
 
 ## Leaflet Maps with Open Data API {- #leaflet-maps-with-api}
 TODO:
+
 - Note this new title and URL, which is more general than the older title and "leaflet-maps-with-socrata" URL
+- Blend in other section below this one
 - Update the example to pull map data from a continuously updated map, since the current example has not been updated since 2018
 - Decide if there's anything useful to borrow from the other example repo, such as a non-Socrata endpoint?: https://github.com/HandsOnDataViz/leaflet-data-apis
 - write intro to connect more directly to the [Open Data section](opendata.html) in ch 3, and describe open data APIs in general, with Socrata API serving as a convenient example.
@@ -712,7 +718,10 @@ Learn more:
 - Chris Metcalf https://github.com/chrismetcalf
 - Tyler Klyeklamp https://data.ct.gov/
 
-## Pull Open Data into Leaflet Map with APIs {- #leaflet-maps-open-apis}
+
+**TODO: blend this section into the one above**
+
+Pull Open Data into Leaflet Map with APIs {- #leaflet-maps-open-apis}
 TODO: Decide whether to keep or not. Up to this point in the book, we’ve built charts and maps using static data that you have downloaded from other sites. But some open data repositories have APIs, or application program interfaces, which means the software that allows computers to communicate with one another. Below is a Leaflet Map template that uses APIs to pull in the most current data from three different open repository platforms: Socrata, Esri ArcGIS Online, and USGS.
 
 Try it:

@@ -49,9 +49,6 @@ output:
     citation_package: default
     pandoc_args: [ "--csl", "chicago-fullnote-bibliography.csl" ]
 
-  bookdown::word_document2:
-    default
-
   bookdown::markdown_document2:
     default
 ---

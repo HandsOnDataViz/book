@@ -83,9 +83,7 @@ Note: If your address data is split into multiple columns (such as *Street*, *Ci
 revisit [Clean Data with Spreadsheets](clean-spreadsheets.html) section to remind yourself
 how to "glue" multiple cells into one.
 
-If you run the script for the first time, Google Sheets may ask for permission or warn that the script is not safe.
-Disregard this message. The code is open-source and is available [on GitHub](https://github.com/HandsOnDataViz/google-sheets-geocoder),
-so you or your programmer friend can make sure it doesn't steal your personal data.
+The first time you run the Geocoder script, it will ask for your permission. TODO: since we still need Google to authorize our script, you will need to click *Advanced* and then *Go to Geocoder (unsafe)* near the bottom of the next screen. Trust us -- our script is safe to use! The code is open-source and is available [on GitHub](https://github.com/HandsOnDataViz/google-sheets-geocoder), so you or your programmer friend can make sure it doesn't steal your personal data. Sorry for the inconvenience.
 
 Once the script finishes executing, you will get a pop-up notification that will tell you how many addresses
 were successfully geocoded, and how many failed. Inspect *Found* and *Quality* columns to ensure the geocoder matched your addresses correctly.

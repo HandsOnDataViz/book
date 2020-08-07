@@ -8,9 +8,9 @@ learn to identify good charts from bad ones. You will learn important rules that
 
 To begin, this grid of basic chart types will help you decide which type you wish to create. Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader's attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools, such as the [Google Sheets chart tool](chart-google-sheets.html), and for more advanced charts, [Tableau Public](tableau-public.html), the free version of the powerful software used by many data analysts and visualization practitioners. The grid also refers to more powerful chart tools, such as [Chart.js and Highcharts templates](chartjs-highcharts.html) in chapter 9, which give you ever more control over how your design and display your data, but also require learning how to [edit and host code templates with GitHub](github.html) in chapter 8.
 
-Table: (\#tab:chart-types) Chart types covered in this book
+Table: (\#tab:chart-types) Basic Chart Types and Tutorials
 
-| Basic chart types | Best use and tutorial chapters |
+| Chart | Best use and tutorials in this book |
 | --- | --- |
 | Grouped column or bar<br> ![](images/05-chart/chart-grouped-column.png) | Best to compare categories side-by-side. Vertical columns, or horizontal bars for long labels. <br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartjs-highcharts.html) |
 | Separated column or bar<br> ![](images/05-chart/chart-separated-column.png) | Best to compare categories in separate clusters. Vertical columns, or horizontal bars for long labels.<br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartjs-highcharts.html) |

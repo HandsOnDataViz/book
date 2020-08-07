@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-30" />
+<meta name="date" content="2020-08-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="guiding.html"/>
-<link rel="next" href="source.html"/>
+<link rel="prev" href="source.html"/>
+<link rel="next" href="know.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -175,10 +175,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for your Data Search</a></li>
-<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
-<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
-<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
+<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public and Private Data</a></li>
 <li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
+<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
@@ -303,25 +303,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="bad" class="section level2 unnumbered" number="">
 <h2>Recognize Bad Data</h2>
-<p>A vital skill needed by all data visualization creators is the ability to recognize bad data. If you fail to catch a problem in your data at an early stage, someone else may discover it later, which could lead to false conclusions and diminish the credibility of all of your work. Fortunately, members of the data visualization community have shared multiple examples of issues we’ve encountered in our work, and newer members will benefit from our embarrassing mistakes. One popular crowd-sourced compilation by data journalists was <a href="https://github.com/Quartz/bad-data-guide">The Quartz Guide to Bad Data</a>, last updated in 2018, which includes several of these helpful warning signs:</p>
-<p>Watch out for spreadsheets with “bad data”:</p>
+<p>When your data search produces some results, another key step is to open the file, quickly scroll through the content, and look for any warning signs that it might contain “bad data.” If you fail to catch a problem in your data at an early stage, it could lead to false conclusions and diminish the credibility of all of your work. Fortunately, members of the data visualization community have shared multiple examples of problems we’ve previously encountered, to help save newer members from making the same embarrassing mistakes. One popular crowd-sourced compilation by data journalists was <a href="https://github.com/Quartz/bad-data-guide">The Quartz Guide to Bad Data</a>, last updated in 2018. Watch out for spreadsheets containing these “bad data” warning signs:</p>
 <ul>
-<li>Missing values: If you see blank or “null” entries, does that mean data was not collected? Or maybe a respondent did not answer? If you’re unsure, find out from the data creator. Also beware when humans enter a <code>0</code> or <code>-1</code> to represent a missing value, without thinking about the consequences of running calculations.</li>
-<li>Missing leading zeros: The US Census Bureau lists every place using a FIPS code, and some spreadsheet users may accidentally convert text to numbers and strip out the leading zeroes. For example, the FIPS code for Los Angeles County is <code>037</code>, but someone might accidentally strip out the leading zero and convert it to <code>37</code>, which represents North Carolina.</li>
+<li>Missing values: If you see blank or “null” entries, does that mean data was not collected? Or maybe a respondent did not answer? If you’re unsure, find out from the data creator. Also beware when humans enter a <code>0</code> or <code>-1</code> to represent a missing value, without thinking about its consequences on running spreadsheet calculations, such as SUM or AVERAGE.</li>
+<li>Missing leading zeros: One of the zip codes for Hartford, Connecticut is <code>06119</code>. If someone converts a column of zip codes to numerical data, it will strip out the leading zero and appear as <code>6119</code>. Similarly, the US Census Bureau lists every place using a FIPS code, and some of these also begin with a meaningful zero character. For example, the FIPS code for Los Angeles County, California is <code>037</code>, but if someone accidentally converts a column of text to numbers, it will strip out the leading zero and convert that FIPS code to <code>37</code>, which represents the state of North Carolina.</li>
 <li>65536 rows or 255 columns: These are the maximum number of rows supported by older-style Excel spreadsheets, or columns supported by Apple Numbers spreadsheet, respectively. If your spreadsheet stops exactly at either of these limits, you probably have only partial data.</li>
-<li>Inconsistent date formats: For example, November 3rd, 2020 is commonly entered in spreadsheets by Americans as <code>11/3/2020</code> (month-date-year), while many others around the globe type <code>3/11/2020</code> (date-month-year). Check your source.</li>
+<li>Inconsistent date formats: For example, November 3rd, 2020 is commonly entered in spreadsheets in the US as <code>11/3/2020</code> (month-date-year), while people in other locations around the globe commonly type it as <code>3/11/2020</code> (date-month-year). Check your source.</li>
 <li>Dates such as January 1st 1900, 1904, or 1970: These are default timestamps in Excel spreadsheets and Unix operating systems, which may indicate the actual date was blank or overwritten.</li>
 <li>Dates similar to <code>43891</code>: When you type <code>March 1</code> during the year 2020 into Microsoft Excel, it automatically displays as <code>1-Mar</code>, but is saved using Excel’s internal date system as <code>43891</code>. If someone converts this column from date to text format, you’ll see Excel’s 5-digit number, not the dates you’re expecting.</li>
 </ul>
-<p>TODO: ADD So when you encounter “bad data,” what should you do? Follow the source of your data stream to identify where the problem arose… If you cannot resolve the problem on your own, contact the data provider to ask about the issue….. And if no one can help you to resolve an important data issue, then decide whether you need can still work on your data and add a cautionary note, or whether it’s wiser to stop and reevaluate. …. So what should the reader do? Ignore the data set? Filter out rogue results? I think some advice needs to be given as to how to deal with this situation once they identify it.”</p>
+<p>Another way to review the quality of data entry in any column in a spreadsheet is to create <a href="sort.html">a filter</a> or a <a href="pivot.html">pivot table</a> as described in chapter 2. This allows you to quickly inspect the range of values that appear in that column, and whether they match what you expected to find.</p>
+<p>What should you do when you discover bad data in your project? Sometimes small issues are relatively straightforward, do not call into question the integrity of the entire dataset, and you can fix them using methods to <a href="clean.html">clean up messy data</a> that we describe in chapter 4. But larger issues are more problematic. Follow the source of your data stream to try to identify where the issue began. If you cannot find and fix the issue on your own, contact the data provider to ask for their input, since they should have a strong interest in improving the quality of the data. If they cannot resolve an important data issue, then you need to pause and think carefully. In this case, is it wiser to continue working with problematic data and add a cautionary note to readers, or should you stop using the dataset entirely and call attention to its underlying problem? These are not easy decisions, and you should ask for opinions from colleagues. In any case, never ignore the warning signs of bad data.</p>
+<p>In the next section, you’ll learn more questions to help you know your data at a deeper level.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="guiding.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="source.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="source.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="know.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

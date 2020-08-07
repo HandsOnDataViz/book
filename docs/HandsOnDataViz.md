@@ -7,7 +7,7 @@ Introduction
 
 This open-access **book-in-progress**, by Jack Dougherty and Ilya
 Ilyankou, is under contract with O’Reilly Media, Inc., and was last
-updated on: 30 Jul 2020
+updated on: 04 Aug 2020
 
 Tell your story and show it with data, using free and easy-to-learn
 tools on the web. This introductory book teaches you how to design
@@ -359,11 +359,17 @@ cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
 Choose Tools to Tell Your Data Story
 ====================================
 
-TODO: Reorganize and rewrite chapter Start with line about pushing away
-the computer and drawing out the visualization in your mind… Once you
-have a clearer mental (and physical) picture of what you seek to create,
-then choose digital tools… REVISE TITLE? – Choose Tools to Picture Your
-Data Story
+TODO: Reorganize and rewrite chapter Revise title? – Choose Tools to
+Draw Your Data Story
+
+Push away the computer and pick up some old-school tools:
+
+-   colored markers or pencils
+-   lots of blank paper
+-   your imagination
+
+Once you have a clearer mental (and physical) picture of what you seek
+to create, then choose digital tools…
 
 Do you feel overwhelmed by the enormous range of data visualization
 tools? There’s been so many different tools released in recent years
@@ -412,7 +418,14 @@ Push away the computer and pick up some old-school tools:
 First, at the top of the page, write down your data story.
 
 -   Is it in the form of a question? If so, figure out how to pose the
-    question.
+    question. \[Use some of this from ch 3? – Start the process by
+    writing down your question—literally in the form of a question,
+    punctuated with a question mark—to clarify your own thinking, and
+    also so that you can clearly communicate it to others who may be
+    assisting you. All too often, our brains automatically jump ahead to
+    try to identify the *answer*, without reflecting on the best way
+    frame the *question* in a way that does not limit the range of
+    possible results.\]
 -   Or maybe it’s in the form of an answer to that question? If so,
     spell out your clearest statement.
 -   If you’re lucky, perhaps you already can envision a full story, with
@@ -620,6 +633,8 @@ operation (such as calculating the average of a range of cells:
 (sometimes called workbooks), where each tab across the bottom opens a
 specific sheet.
 
+     knitr::include_graphics("images/02-spreadsheet/spreadsheet-terms-annotated.png")
+
 <img src="images/02-spreadsheet/spreadsheet-terms-annotated.png" alt="Screenshot of a typical spreadsheet, with headers, tabs, and the active cell displaying a formula." width="600" />
 <p class="caption">
 Figure 1: Screenshot of a typical spreadsheet, with headers, tabs, and
@@ -748,6 +763,10 @@ in this book are:
     sheets, formulas, styling, etc., but you don’t normally see these on
     your computer because they are primarily designed to exist online.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/data-formats.png")
+
 <img src="images/02-spreadsheet/data-formats.png" alt="Three data formats commonly seen on your computer---csv, ods, and xlsx---when displayed properly in the Mac Finder." width="350" />
 <p class="caption">
 Figure 2: Three data formats commonly seen on your computer—csv, ods,
@@ -761,6 +780,8 @@ abbreviated file format after the period, such as `data.csv` or
 need to turn them on by going to Finder &gt; Preferences &gt; Advanced,
 and check the box to *Show all filename extensions*, as shown in Figure
 <a href="#fig:mac-file-extensions">3</a>.
+
+     knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
 
 <img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to *Finder-Preferences-Advanced* and check the box to *Show all filename extensions*." width="400" />
 <p class="caption">
@@ -801,6 +822,8 @@ Excel, as shown in Figure <a href="#fig:sheets-download">4</a>.
 Similarly, in the downloadable LibreOffice and its Calc spreadsheet
 tool, select *File &gt; Save As* to save data in its native ODS format,
 or to export to CSV, Excel, or other formats.
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-download.png")
 
 <img src="images/02-spreadsheet/sheets-download.png" alt="In Google Sheets, go to *File - Download As* to export data in several common formats." width="600" />
 <p class="caption">
@@ -870,6 +893,10 @@ create your own online form with a link to spreadsheet results.
     <a href="#fig:file-make-copy">5</a>. You can rename the file to
     remove “Copy of…”.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/file-make-copy.png")
+
 <img src="images/02-spreadsheet/file-make-copy.png" alt="Go to *File - Make a Copy* to create your own version of this Google Sheet." width="250" />
 <p class="caption">
 Figure 5: Go to *File - Make a Copy* to create your own version of this
@@ -881,6 +908,10 @@ Google Sheet.
     click the *My Drive* button and the *New folder* button to create a
     folder for your data, before clicking *OK*, as shown in Figure
     <a href="#fig:my-drive-new-folder">6</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/my-drive-new-folder.png")
 
 <img src="images/02-spreadsheet/my-drive-new-folder.png" alt="Click the *My Drive* and *New folder* buttons to save your work in a folder." width="300" />
 <p class="caption">
@@ -925,6 +956,10 @@ using the *Share* button.
     *Edit* it. Also, you can click *Copy link* to paste the web address
     to your data in an email or public website.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/share-screen.png")
+
 <img src="images/02-spreadsheet/share-screen.png" alt="Click the *Share* button to grant access to individuals (top half) or anyone with the link (bottom half)." width="600" />
 <p class="caption">
 Figure 7: Click the *Share* button to grant access to individuals (top
@@ -948,6 +983,8 @@ already claimed your preferred custom name, you’ll need to think up a
 different one. Beware that `bit.ly` links are case-sensitive, so we
 prefer to customize the back-end in all lower-case to match the
 front-end.
+
+     knitr::include_graphics("images/02-spreadsheet/link-shortening.png")
 
 <img src="images/02-spreadsheet/link-shortening.png" alt="Use a free link-shortening service, such as Bitly.com, and customize its back-end." width="300" />
 <p class="caption">
@@ -986,6 +1023,10 @@ to turn it on, and the benefits of doing so.
     screen. Note that this global *Gear symbol &gt; Settings* appears at
     Google Drive level, *not* inside each Google Sheet.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/drive-settings.png")
+
 <img src="images/02-spreadsheet/drive-settings.png" alt="Click your Google Drive *Gear Symbol - Settings* in the upper-right corner." width="300" />
 <p class="caption">
 Figure 9: Click your Google Drive *Gear Symbol - Settings* in the
@@ -999,6 +1040,10 @@ upper-right corner.
     possible files that you upload in the future—including Microsoft
     Excel, Word, PowerPoint, and more—unless you turn it off.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/convert-uploads.png")
+
 <img src="images/02-spreadsheet/convert-uploads.png" alt="Inside your Google Drive Settings, check the box to automatically convert all uploads." width="750" />
 <p class="caption">
 Figure 10: Inside your Google Drive Settings, check the box to
@@ -1010,6 +1055,10 @@ automatically convert all uploads.
     <a href="#fig:upload-file">11</a>, or use the *New* button and
     select *File upload*.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/upload-file.png")
+
 <img src="images/02-spreadsheet/upload-file.png" alt="Drag-and-drop your sample Excel file into your Google Drive to upload it." width="300" />
 <p class="caption">
 Figure 11: Drag-and-drop your sample Excel file into your Google Drive
@@ -1020,6 +1069,8 @@ If you forget to check the *Convert uploads* box, Google Drive will keep
 uploaded files in their original format, and display their icons and
 file name extensions such as `.xlsx` or `.csv`, as shown in Figure
 <a href="#fig:drive-file-icons">12</a>.
+
+     knitr::include_graphics("images/02-spreadsheet/drive-file-icons.png")
 
 <img src="images/02-spreadsheet/drive-file-icons.png" alt="If you forget to convert uploads, Google Drive will keep files in their original format with these icons." width="300" />
 <p class="caption">
@@ -1060,6 +1111,8 @@ Inside your Google Drive account, one tool that’s often overlooked is
 Google Forms, which is partially hidden under *New &gt; More &gt; Google
 Forms*, as shown in Figure <a href="#fig:forms-new">13</a>.
 
+     knitr::include_graphics("images/02-spreadsheet/forms-new.png")
+
 <img src="images/02-spreadsheet/forms-new.png" alt="The Google Forms tool is partially hidden in the Google Drive *New - More* menu." width="500" />
 <p class="caption">
 Figure 13: The Google Forms tool is partially hidden in the Google Drive
@@ -1070,6 +1123,8 @@ The Google Forms *Questions* tab allows you to design questions with
 different types of responses: short- and paragraph-length answers,
 multiple choice, checkboxes, file uploads, etc., as shown in Figure
 <a href="#fig:forms-questions">14</a>.
+
+     knitr::include_graphics("images/02-spreadsheet/forms-questions.png")
 
 <img src="images/02-spreadsheet/forms-questions.png" alt="The Google Forms *Questions* tab allows you to designate different types of responses." width="700" />
 <p class="caption">
@@ -1086,6 +1141,8 @@ a text box where you can type in more details, as shown in Figure
 Response validation*, which requires users to follow a particular
 format, such as an email address or phone number.
 
+     knitr::include_graphics("images/02-spreadsheet/forms-description.png")
+
 <img src="images/02-spreadsheet/forms-description.png" alt="Click the three-dot kebab menu to *Show - Description* to add details for any question." width="700" />
 <p class="caption">
 Figure 15: Click the three-dot kebab menu to *Show - Description* to add
@@ -1099,6 +1156,8 @@ the *Send* button to distribute it via email, a link, or to embed the
 live form as an iframe on a web page. Learn more about the latter option
 in [Chapter 7: Embed On Your Web](embed.html).
 
+     knitr::include_graphics("images/02-spreadsheet/forms-preview.png")
+
 <img src="images/02-spreadsheet/forms-preview.png" alt="Click the *Eyeball symbol* to preview your form." width="350" />
 <p class="caption">
 Figure 16: Click the *Eyeball symbol* to preview your form.
@@ -1108,6 +1167,8 @@ The Google Forms *Responses* tab will show individual results you
 receive, and also includes a powerful button to open the data in a
 linked Google Sheet, as shown in Figure
 <a href="#fig:forms-responses">17</a>.
+
+     knitr::include_graphics("images/02-spreadsheet/forms-responses.png")
 
 <img src="images/02-spreadsheet/forms-responses.png" alt="The Google Forms *Responses* tab includes a button to open results in a linked Google Sheet." width="500" />
 <p class="caption">
@@ -1153,6 +1214,10 @@ the questions were posed.
     <a href="#fig:sheets-select-all">18</a>. The entire sheet should
     become light blue to show you’ve selected all cells.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-select-all.png")
+
 <img src="images/02-spreadsheet/sheets-select-all.png" alt="Click the upper-left corner to select all cells before sorting." width="400" />
 <p class="caption">
 Figure 18: Click the upper-left corner to select all cells before
@@ -1171,6 +1236,10 @@ and make it meaningless. Always select all cells before sorting!
     minimum at the top, the maximum at the bottom, and the range in
     between.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-sort-range.png")
+
 <img src="images/02-spreadsheet/sheets-sort-range.png" alt="Go to *Data - Sort Range*, check the header row box, and sort by *Experience with dataviz* in ascending order." width="400" />
 <p class="caption">
 Figure 19: Go to *Data - Sort Range*, check the header row box, and sort
@@ -1188,6 +1257,8 @@ or more columns to continuously display when scrolling sideways.
 LibreOffice has a same option to *View &gt; Freeze Rows and Columns*,
 but Excel has a different option called *Window &gt; Split*.
 
+     knitr::include_graphics("images/02-spreadsheet/sheets-view-freeze.png")
+
 <img src="images/02-spreadsheet/sheets-view-freeze.png" alt="In Google Sheets, go to *View - Freeze* to select the number of rows to continuously display when scrolling downward." width="500" />
 <p class="caption">
 Figure 20: In Google Sheets, go to *View - Freeze* to select the number
@@ -1201,6 +1272,10 @@ of rows to continuously display when scrolling downward.
     to undo all options, then click only *educator* to display only rows
     with that response, as shown in Figure
     <a href="#fig:sheets-filter">21</a>. Click “OK”.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-filter.png")
 
 <img src="images/02-spreadsheet/sheets-filter.png" alt="Go to *Data - Create a Filter*, click the downward arrow in the *Occupation* column, select only *educator*." width="300" />
 <p class="caption">
@@ -1248,6 +1323,10 @@ posed.
     below* to add a new row, as shown in Figure
     <a href="#fig:sheets-insert-row">22</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-insert-row.png")
+
 <img src="images/02-spreadsheet/sheets-insert-row.png" alt="Right-click on row number 1 and select *Insert 1 below*." width="200" />
 <p class="caption">
 Figure 22: Right-click on row number 1 and select *Insert 1 below*.
@@ -1261,6 +1340,10 @@ Figure 22: Right-click on row number 1 and select *Insert 1 below*.
     current values in the column, such as `=AVERAGE(E3:E2894)`, then
     press *Return* or *Enter* on your keyboard, as shown in Figure
     <a href="#fig:sheets-average">23</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-average.png")
 
 <img src="images/02-spreadsheet/sheets-average.png" alt="Type `=` to start a formula and select the suggestion for average, or type it directly in with the correct range." width="300" />
 <p class="caption">
@@ -1295,6 +1378,10 @@ but it does *not* work with LibreOffice or Excel.
     spreadsheet with a growing number of responses, your sheet will have
     a larger number in the last cell reference.
 
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-drag-calc.gif", height = "85px") else knitr::include_graphics("images/02-spreadsheet/sheets-drag-calc.png")
+
 <iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="300" height="85px">
 </iframe>
 <p class="caption">
@@ -1317,6 +1404,10 @@ automatically paste and update the formula.
     that runs the calculation on the entire column without naming a
     specific endpoint, as shown in Figure
     <a href="#fig:sheets-countif">25</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-countif.png")
 
 <img src="images/02-spreadsheet/sheets-countif.png" alt="Select or enter a formula that counts responses if the entry is *educator*." width="250" />
 <p class="caption">
@@ -1375,6 +1466,10 @@ reader responses by two categories: occupation and experience level.
     <a href="#fig:sheets-pivot-create">26</a>. The new sheet will
     include a Pivot Table tab at the bottom.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-pivot-create.png")
+
 <img src="images/02-spreadsheet/sheets-pivot-create.png" alt="Go to *Data - Pivot Table*, and create in a new sheet." width="450" />
 <p class="caption">
 Figure 26: Go to *Data - Pivot Table*, and create in a new sheet.
@@ -1385,6 +1480,10 @@ Figure 26: Go to *Data - Pivot Table*, and create in a new sheet.
     Rows *Add* button and select *Occupation*, which displays the unique
     entries in that column, as shown in Figure
     <a href="#fig:sheets-pivot-rows">27</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-pivot-rows.png")
 
 <img src="images/02-spreadsheet/sheets-pivot-rows.png" alt="In the *Pivot table editor*, click the Rows *Add* button and select *Occupation*." width="600" />
 <p class="caption">
@@ -1397,6 +1496,10 @@ select *Occupation*.
     will automatically summarize the values by *COUNTA*, meaning it
     displays the frequency of each textual response, as shown in Figure
     <a href="#fig:sheets-pivot-values">28</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-pivot-values.png")
 
 <img src="images/02-spreadsheet/sheets-pivot-values.png" alt="In the *Pivot table editor*, click the Values *Add* button and select *Occupation*." width="600" />
 <p class="caption">
@@ -1413,6 +1516,10 @@ survey.
     of occupation and experience among reader responses. Click on the
     *Columns* button to add *Experience with data visualization*, as
     shown in Figure <a href="#fig:sheets-pivot-columns">29</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-pivot-columns.png")
 
 <img src="images/02-spreadsheet/sheets-pivot-columns.png" alt="In the *Pivot table editor*, click the Columns *Add* button and select *Experience with data visualization*."  />
 <p class="caption">
@@ -1442,6 +1549,8 @@ desired. Three of the most common options to summarize values are:
 Although Google Sheets pivot tables show raw numbers by default, you
 also can choose to display them as percentages of the row, of the
 column, or of the grand total.
+
+     knitr::include_graphics("images/02-spreadsheet/sheets-pivot-summarize.png")
 
 <img src="images/02-spreadsheet/sheets-pivot-summarize.png" alt="In the *Pivot table editor*, see multiple options to summarize *Values*." width="250" />
 <p class="caption">
@@ -1492,6 +1601,8 @@ and paste in the data. But imagine an actual case that includes over 200
 US food banks and many more individuals, where using an automated method
 to match and paste data is essential.
 
+     knitr::include_graphics("images/02-spreadsheet/vlookup-setup.png")
+
 <img src="images/02-spreadsheet/vlookup-setup.png" alt="Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet." width="750" />
 <p class="caption">
 Figure 31: Your goal is to create one mailing list that matches
@@ -1519,6 +1630,10 @@ the name of the other sheet.
     sheet, as shown in Figure <a href="#fig:vlookup-headers">32</a>.
     This creates new column headers where our lookup results will be
     automatically pasted.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/vlookup-headers.png")
 
 <img src="images/02-spreadsheet/vlookup-headers.png" alt="Paste the last four column headers from the *addresses* sheet into the *names* sheet." width="500" />
 <p class="caption">
@@ -1554,6 +1669,10 @@ Here’s what each part means:
     a range of columns A to E in the *addresses* sheet. Press *Return*
     or *Enter* on your keyboard.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/vlookup-solution.png")
+
 <img src="images/02-spreadsheet/vlookup-solution.png" alt="The VLOOKUP formula in cell C2 of the *names* sheet (top) searches for matches across columns A to E in the *addresses* sheet (bottom)." width="700" />
 <p class="caption">
 Figure 33: The VLOOKUP formula in cell C2 of the *names* sheet (top)
@@ -1580,6 +1699,10 @@ Let’s break down each part of the formula you entered in cell C2 of the
     paste and update the formula for the city, state, and zip columns,
     as shown in Figure <a href="#fig:vlookup-drag">34</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/vlookup-drag.png")
+
 <img src="images/02-spreadsheet/vlookup-drag.png" alt="Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
 Figure 34: Click on cell C2, then hold-and-drag the bottom-right blue
@@ -1590,6 +1713,10 @@ formula.
 1.  Finally, use the same hold-and-drag method to paste and update the
     formula downward to fill in all rows, as shown in Figure
     <a href="#fig:vlookup-final">35</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/02-spreadsheet/vlookup-final.png")
 
 <img src="images/02-spreadsheet/vlookup-final.png" alt="Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
@@ -1668,6 +1795,8 @@ database, we used Airtable settings to link the *organization* column in
 the *people* sheet to the *food banks* sheet, where the addresses are
 stored, as shown in Figure <a href="#fig:airtable-link">36</a>.
 
+     knitr::include_graphics("images/02-spreadsheet/airtable-link.png")
+
 <img src="images/02-spreadsheet/airtable-link.png" alt="In this Airtable sample, we linked the *organization* column in the *people* sheet to the *food banks* sheet." width="500" />
 <p class="caption">
 Figure 36: In this Airtable sample, we linked the *organization* column
@@ -1685,6 +1814,8 @@ you to sort, filter, and create different views of your data that you
 can share with others, a topic we’ll cover in [Chapter 7: Embed on your
 Web](embed.html). See more about its features in the [Airtable Support
 page](https://support.airtable.com).
+
+    if(knitr::is_html_output()) knitr::include_url("https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow", height = "533px") else knitr::include_graphics("images/02-spreadsheet/airtable-expand.png")
 
 <iframe src="https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow" width="600" height="533px">
 </iframe>
@@ -1734,219 +1865,224 @@ really know about it?* If you skip over these questions and leap too
 quickly into constructing charts and maps, you run the risk of creating
 meaningless, or perhaps worse, misleading visualizations. This chapter
 breaks down both of these broad questions, and provides concrete
-strategies to [guide your search](guide.html), [recognize bad
-data](bad.html), [source your data origins](source.html), understand
-debates about [public versus private data](public.html), and navigate a
-growing number of [open data repositories](opendata.html).
-
-Once you’ve found some data, we offer specific ways to [reflect on what
-you *really* know about it](know.html). Data does not magically appear
-out of thin air. Instead, people collect and publish information, with
-explicit or implicit purposes, in the social context of their time.
-Therefore, when working with data, we need to ask: Whose stories are
-told? Whose perspectives remain unspoken? And do labels always mean what
-they claim? As data visualization practitioners, we strongly favor
-evidence-based reasoning over less-informed alternatives. But we also
-caution against embracing so-called data objectivity. Even numbers are
-*not* neutral. Always consider the broader contexts in which people
-created information.
+strategies to [guide your search](guide.html), understand debates about
+[public and private data](public.html), navigate a growing number of
+[open data repositories](opendata.html), [source your data
+origins](source.html), and [recognize bad data](bad.html). Once you’ve
+found some files, we also ways to reflect on [what you *really* know
+about your data](know.html). Information does not magically appear out
+of thin air. Instead, people collect and publish data, with explicit or
+implicit purposes, within the social contexts and power structures of
+their times. As data visualization advocates, we strongly favor
+evidence-based reasoning over less-informed alternatives. But we caution
+against embracing so-called data objectivity, since numbers and other
+forms of data are *not* neutral. Therefore, when working with data,
+pause to inquire more deeply about *Whose stories are told?* and *Whose
+perspectives remain unspoken?* Only by asking these types of questions,
+according to *[Data Feminism](https://data-feminism.mitpress.mit.edu/)*
+authors Catherine D’Ignazio and Lauren Klein, will we “start to see how
+privilege is baked into our data practices and our data products.”[1]
 
 Guiding Questions for your Data Search
 --------------------------------------
 
-For many people, a data search is simply “Googling” key words on the
-web. Sometimes that works, and sometimes not. When that fails, we think
-about the many lessons we’ve learned from working alongside librarians,
-journalists, and researchers while data-hunting over the years.
-Sometimes they’ve impressed us by knowing *exactly* where to locate a
-specific dataset that has eluded us. But the more valuable insight we’ve
-acquired from our colleagues is set of guiding questions, which outline
-a deeper process of thinking about *how to search* for data:
+For many people, a data search is simply “Googling” some keywords on the
+web. Sometimes that works, sometimes not. When that approach flounders,
+we reflect on the many lessons we’ve learned about data-hunting while
+working alongside talented librarians, journalists, and researchers.
+Collectively, they taught us a set of guiding questions that outline a
+more thoughtful process about *how to search* for data:
 
--   Exactly what is your research question? Start the process by writing
-    down your question—literally in the form of a question, punctuated
-    with a question mark—to clarify your own thinking, and also so that
-    you can clearly communicate it to others who may be assisting you.
-    All too often, our brains automatically jump ahead to try to
-    identify the *answer*, without reflecting on the best way frame the
-    *question* in a way that does not limit the range of possible
-    results.
+*What exactly is the question you’re seeking to answer with data?*
+Literally write it down—in the form of a question, punctuated with a
+question mark at the end—to clarify your own thinking, and also so that
+you can clearly communicate it to others who can assist you. All too
+often, our brains automatically leap ahead to try to identify the
+*answer*, without reflecting on the best way frame the *question* in a
+way that does not limit the range of possible outcomes.
 
-TODO: ADD some of these above?
+Look back at data visualization projects that made a lasting impression
+on you to identify the underlying question that motivated them. In their
+coverage of the US opioid epidemic, the *Washington Post* and the West
+Virginia *Charleston Gazette-Mail* successfully fought a legal battle to
+obtain a US Drug Enforcement Agency database that the federal government
+and the drug industry sought to keep secret. In 2019, a team of data
+journalists published the database with interactive maps to answer one
+of their central questions: *How many prescription opioid pills were
+sent to each US county, per capita, and which companies and distributors
+were responsible?* Their [maps
+revealed](https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/)
+high clusters in several rural Appalachian counties that received over
+150 opioid pills per resident, on average, each year from 2006 to 2014.
+Moreover, only six companies distributed over three-quarters of the 100
+billion oxycodone and hydrocodone pills across the US during this
+period: McKesson Corp., Walgreens, Cardinal Health, AmerisourceBergen,
+CVS and Walmart. Even if you’re not working with data as large or as
+controversial as this one, the broader lesson is to clearly identify the
+question you’re seeking to answer.
 
-    For example, team X investigated topic Y by posing a well-formed question: Z.
+Also, it’s perfectly normal to revise your question as your research
+evolves. For example, we once began a data project by naively asking
+*What were Connecticut public school test scores in the 1960s?* Soon we
+discovered that standardized state-level school testing as we know it
+today did not appear in states like Connecticut until the mid-1980s
+school accountability movement. Even then, results were not widely
+visible to the public until newspapers began to publish them once a year
+in print in the 1990s. Later, real estate firms, school-ratings
+companies, and government agencies began to publish data continuously on
+the web as the Internet expanded in the late 1990s and early 2000s.
+Based on what we learned, we revised our research question to *When and
+how did Connecticut homebuyers start to become aware of school test
+scores, and how did these influence the prices they were willing to pay
+for access to selected public school attendance areas?*[2] Be prepared
+to refine your question when the evidence leads you in a better
+direction.
 
-    ICE detention project http://xpmethod.columbia.edu/torn-apart/volume/2/index ; https://twitter.com/DoughertyJack/status/1072916691728916480
+*What types of organizations may have collected or published the data
+you seek?* If a governmental organization may have been involved, then
+at what level: local, regional, state/provincial, national, or
+international? Which branch of government: executive, legislative,
+judicial? Or which particular governmental agency might have been
+responsible for compiling or distributing this information? Since all of
+these different structures can be overwhelming, reach out to librarians
+who are trained to work with government documents and databases, often
+at [state government
+libraries](https://libguides.ala.org/mailing-lists), or at local
+institutions participating in the [US Federal Depository Library
+Program](https://www.doi.gov/library/collections/federal-documents). Or
+might the data you seek have been compiled by a non-governmental
+organization, such as academic institutions, journalists, non-profit
+groups, or for-profit corporations? Figuring out *which organizations*
+might have collected and published the data can help point you to the
+digital or print materials they typically publish, and most appropriate
+tools to focus your search in that particular area.
 
-    Sometimes we have reframed questions by shifting the first word from "What is...[the answer]?" to "How has...[the process]?" BUT this needs richer well-formed examples of researchable questions, perhaps authentic examples with cites to data stories by specific journalists....
+*What level(s) of data are available?* Is information disaggregated by
+individual cases or aggregated into larger groups? Librarians can help
+us to decipher how and why different organizations publish data in
+different formats. For example, US Census seeks to collect data every
+ten years about each person residing in the nation, but under the law,
+this individual-level data is confidential and not released to the
+public for 72 years. You can look up individual census data for 1940 and
+earlier decades at the [US National
+Archives](https://www.archives.gov/research/genealogy/census/about) and
+other websites. But the US Census publishes current data for larger
+areas, such as neighborhood-level block groups, census tracts, cities,
+and states, by aggregating individual records into data tables, and
+suppressing small-numbered cells to protect people’s privacy. Librarians
+can help us understand organization’s guidelines on when and how they
+make data available at different levels
 
-    Also, it's perfectly normal to revise your question as your research evolves. For example, we once began a project by asking "What were school test scores in the 1960s?" Gradually, we realized that standardized state-level school testing did not arise in places like Connecticut until the mid-1980s accountability movement, and even then results were not widely accessible to the public until newspapers began to publish them once a year in print in the 1990s, and then continuously on the internet around the 2000s. So our data question shifted to "When and how did the Connecticut residents become aware of standardized school-level test scores?" [ADD CITE]
+*Have prior publications drawn on similar data, and if so, how can we
+trace their sources?* Some of our best ideas began when reading an
+article or book that described its source of evidence, and we imagined
+new ways to visualize that data. Several times we have stumbled across a
+data table in a print publication, or perhaps an old web page, which
+sparked our interest in tracking down a newer version to explore. Even
+*outdated* data helps by demonstrating how someone or some organization
+collected it at one point in time. Follow the footnotes to track down
+its origins. Use [Google Scholar](https://google.com/scholar) and more
+specialized research databases (ask librarians for assistance if needed)
+to track down the source of previously-published data. One bonus is that
+if you can locate more current data, you may be able to design a
+visualization that compares change over time.
 
--   What types of organizations may have collected or published the data
-    you seek? If a governmental organization may have been involved,
-    then at what level (national, state/provincial, regional, or
-    municipal), and which branch or agency? Or might data have been
-    compiled by a non-governmental organization, such as academic
-    institutions, journalists, for-profit corporations, or non-profit
-    groups? Figuring out *which organizations* might have collected the
-    data can help point you to the digital or print materials they
-    typically publish, and most appropriate tools to focus your search
-    in that particular area.
+*What if no one has collected the data you’re looking for?* Sometimes
+this happens due to more than a simple oversight. In *[Data
+Feminism](https://data-feminism.mitpress.mit.edu/)*, Catherine D’Ignazio
+and Lauren Klein underscore how issues of data collection “are directly
+connected to larger issues of power and privilege” by recounting a story
+about tennis star Serena Williams. When Williams experienced
+life-threatening complications while giving birth to her daughter in
+2017, she called public attention to the way that she, a Black woman,
+needed to advocate for herself in the hospital. After her experience,
+she wrote on social media that “Black women are over 3 times more likely
+than white women to die from pregnancy- or childbirth-related causes,”
+citing the US Centers for Disease Control and Prevention (CDC). When
+journalists followed up to investigate further, they discovered the
+absence of detailed data on maternal mortality, and what a 2014 United
+Nations report described as a “particularly weak” aspect of data
+collection in the US healthcare system. Journalists reported that “there
+was still no national system for tracking complications sustained in
+pregnancy and childbirth,” despite comparable systems for other health
+issues such as heart attacks or hip replacements. Power structures are
+designed to count people whose lives either are highly valued, or under
+a high degree of surveillance. D’Ignazio and Klein call on us critically
+examine these power systems, collect data to counter their effects, and
+make everyone’s labor in this process more visible.[3] If no one has
+collected the data you’re looking for, perhaps you can make valuable
+steps to publicly recognize the issue and contribute to positive change.
 
--   Have prior publications drawn on similar datasets, and if so, how
-    can we trace their sources? Some of our best visualization ideas
-    began while reading a textual description of data, or stumbling
-    across a table in a print publication or outdated web page. These
-    persuaded us that a previous version of the data existed, that the
-    data existed *somewhere*. With these valuable leads, librarians can
-    help you track down source notes on where the data originated, or
-    sometimes find more up-to-date versions of the data.
+Hunting for data involves much more than Googling keywords. Deepen your
+search by reflecting on the types of questions that librarians,
+journalists, and other researchers have taught us to ask: What types of
+organizations might—or might not—have collected the data? At what
+levels? At any prior point in time? And under what social and political
+contexts? In the next section, you’ll learn more about related issues to
+consider over public and private data.
 
--   What level(s) of data are available? Is information disaggregated by
-    individual cases or aggregated into larger groups? Librarians can
-    help us to decipher how and why different organizations publish data
-    in different formats. For example, US Census seeks to collect data
-    every ten years about each person residing in the nation, but under
-    the law, this individual-level data is confidential and not released
-    to the public for 72 years. You can look up individual census data
-    for 1940 and earlier decades at the [US National
-    Archives](https://www.archives.gov/research/genealogy/census/about)
-    and other websites. But the US Census publishes current data for
-    larger areas, such as neighborhood-level block groups, census
-    tracts, cities, and states, by aggregating individual records into
-    data tables, and suppressing small-numbered cells to protect
-    people’s privacy. Librarians can help us understand organization’s
-    guidelines on when and how they make data available at different
-    levels.
+Public and Private Data
+-----------------------
 
-ADD: Sometimes the data does not yet exist, or has not yet
-systematically collected and organized…. “missing data”
+When searching for data, you also need to be informed about debates
+about public and private data. Not only do these debates influence what
+kinds of search you will conduct, but they also involve you in deeper
+ethical issues about data collection and distribution. At stake are two
+major questions. The first asks: *To what extent should organizations be
+allowed to collect data about private individuals?* The second question
+is: *When our government collects data, to what extent should it be
+publicly available?* This section offers our general observations about
+these debates, based primarily on our context in the United States.
+Since we are not lawyers (thank goodness!), please consult with legal
+experts for advice about your specific case.
 
-Recognize Bad Data
-------------------
+Several critics of “big data” worry that governments are becoming more
+like a totalitarian “Big Brother” as they collect more data about
+individual citizens in the digital age. In the United States, concerns
+mounted in 2013 when whistleblower Eric Snowden disclosed how the
+National Security Agency conducted global surveillance using US citizen
+email and phone records provided by telecommunications companies.
+Shoshana Zuboff, a Harvard Business School professor and author of *The
+Age of Surveillance Capitalism*, warns of an equal threat posed by
+corporations that collect and commodify massive amounts of
+individually-identifiable data for profit.[4] Due to the rise of digital
+commerce, powerful technology companies own data that you and others
+consider to be private:
 
-A vital skill needed by all data visualization creators is the ability
-to recognize bad data. If you fail to catch a problem in your data at an
-early stage, someone else may discover it later, which could lead to
-false conclusions and diminish the credibility of all of your work.
-Fortunately, members of the data visualization community have shared
-multiple examples of issues we’ve encountered in our work, and newer
-members will benefit from our embarrassing mistakes. One popular
-crowd-sourced compilation by data journalists was [The Quartz Guide to
-Bad Data](https://github.com/Quartz/bad-data-guide), last updated in
-2018, which includes several of these helpful warning signs:
+-   Google knows what words you typed into their search engine, as shown
+    in aggregated form in [Google
+    Trends](https://trends.google.com/trends/). Also, Google’s Chrome
+    browser tracks your web activity through cookies, as described by
+    technology reporter [Geoffrey
+    Fowler](https://www.washingtonpost.com/technology/2019/06/21/google-chrome-has-become-surveillance-software-its-time-switch/).
+-   Amazon eavesdrops and records your conversations around its Alexa
+    home assistants, as [Fowler
+    describes](https://www.washingtonpost.com/technology/2019/05/06/alexa-has-been-eavesdropping-you-this-whole-time/).
+-   Facebook follows which friends and political causes you favor, but
+    also [tracks your off-Facebook
+    activity](https://www.washingtonpost.com/technology/2020/01/28/off-facebook-activity-page/),
+    such as purchases made at other businesses, to improve its targeted
+    advertising.
 
-Watch out for spreadsheets with “bad data”:
+Some point out that “big data” collected by large corporations can offer
+public benefits. For example, [Apple shared its aggregated mobility
+data](https://www.apple.com/covid19/mobility) collected from iPhone
+users to help public health officials compare which populations stayed
+home rather than travel during the Covid pandemic. But corporations are
+still setting their own terms for how they collect data and what they
+can do with it. Although California has begun to [implement its Consumer
+Privacy Act in
+2020](https://www.washingtonpost.com/technology/2020/01/21/ccpa-transparency/),
+which promises to allow individuals the right to review and delete the
+data that companies collect about them, US state and federal government
+has not fully entered this policy arena. If you work with data that was
+collected from individuals by public or private organizations, learn
+about these controversies to help you make wise and ethical choices in
+your visualizations.
 
--   Missing values: If you see blank or “null” entries, does that mean
-    data was not collected? Or maybe a respondent did not answer? If
-    you’re unsure, find out from the data creator. Also beware when
-    humans enter a `0` or `-1` to represent a missing value, without
-    thinking about the consequences of running calculations.
--   Missing leading zeros: The US Census Bureau lists every place using
-    a FIPS code, and some spreadsheet users may accidentally convert
-    text to numbers and strip out the leading zeroes. For example, the
-    FIPS code for Los Angeles County is `037`, but someone might
-    accidentally strip out the leading zero and convert it to `37`,
-    which represents North Carolina.
--   65536 rows or 255 columns: These are the maximum number of rows
-    supported by older-style Excel spreadsheets, or columns supported by
-    Apple Numbers spreadsheet, respectively. If your spreadsheet stops
-    exactly at either of these limits, you probably have only partial
-    data.
--   Inconsistent date formats: For example, November 3rd, 2020 is
-    commonly entered in spreadsheets by Americans as `11/3/2020`
-    (month-date-year), while many others around the globe type
-    `3/11/2020` (date-month-year). Check your source.
--   Dates such as January 1st 1900, 1904, or 1970: These are default
-    timestamps in Excel spreadsheets and Unix operating systems, which
-    may indicate the actual date was blank or overwritten.
--   Dates similar to `43891`: When you type `March 1` during the year
-    2020 into Microsoft Excel, it automatically displays as `1-Mar`, but
-    is saved using Excel’s internal date system as `43891`. If someone
-    converts this column from date to text format, you’ll see Excel’s
-    5-digit number, not the dates you’re expecting.
-
-TODO: ADD So when you encounter “bad data,” what should you do? Follow
-the source of your data stream to identify where the problem arose… If
-you cannot resolve the problem on your own, contact the data provider to
-ask about the issue….. And if no one can help you to resolve an
-important data issue, then decide whether you need can still work on
-your data and add a cautionary note, or whether it’s wiser to stop and
-reevaluate. …. So what should the reader do? Ignore the data set? Filter
-out rogue results? I think some advice needs to be given as to how to
-deal with this situation once they identify it.”
-
-Source Your Data
-----------------
-
-Another way to reduce “bad data” issues is to clarify the source every
-time you download or create a new spreadsheet file. Add details about
-where the data came from, so that someone other than you, several years
-in the future, has sufficient information to understand its origin and
-limitations.
-
-The first step is to label every data file that you download or create.
-All of us have experienced bad file names like these:
-
--   data.csv
--   file.xls
--   download.xlsx
-
-Write a short but meaningful file name. While there’s no perfect system,
-a good strategy is to abbreviate the source (such as `census` or
-`worldbank` or `eurostat`), with topic keywords, and a date or range. If
-you or co-workers will be working on different versions of a downloaded
-file, include the current date in YYYY-MM-DD (year-month-date) format.
-If you plan to upload files to the web, type names in all lower-case and
-replace blank spaces with dashes (`-`) or underscores (`_`). Better file
-names look like this:
-
--   town-demographics-2019-12-02.csv
--   census2010\_population\_by\_county.xls
--   eurostat-1999-2019-co2-emissions.xlsx
-
-The second step is to save more detailed source notes about the data on
-a separate tab inside the spreadsheet (which works for multi-tab
-spreadsheet tools such as Google Sheets, LibreOffice, and Excel). Add a
-new tab named *notes* that describes the origins of the data, a longer
-description for any abbreviated labels, and when it was last updated, as
-shown in Figure <a href="#fig:sheets-with-tabs">38</a>. Add your own
-name and give credit to collaborators who worked with you. For CSV
-files, which do not support multi-tabs sheets, create a text file using
-a parallel file name.
-
-<img src="images/03-find/sheets-with-tabs.png" alt="Create separate spreadsheet tabs for data, notes, and backup."  />
-<p class="caption">
-Figure 38: Create separate spreadsheet tabs for data, notes, and backup.
-</p>
-
-A third step is to make a backup of the original data before cleaning or
-editing it. For a simple one-sheet file in a multi-tab spreadsheet tool,
-right-click on the tab containing the data to make a duplicate copy in
-another tab, also shown in Figure
-<a href="#fig:sheets-with-tabs">38</a>. Clearly label the new tab as a
-backup and leave it alone! For CSV files or more complex spreadsheets,
-create a separate backup file.
-
-Make a habit of using these three sourcing strategies—filenames, notes,
-and backups—to reduce your chances of making “bad data” errors and to
-increase the credibility of your data visualizations. In the next
-section, we’ll address a related set of questions you should ask
-yourself regarding public versus private data.
-
-Public versus Private Data
---------------------------
-
-In addition to asking questions about the origins and limitations of
-your data, it’s also important for you to be aware of important
-distinctions between public versus private data, and their implications
-for designing your visualizations. This section offers some general
-observations about data privacy based on our context in the United
-States. Since we are not lawyers (thank goodness!), please consult with
-legal experts for advice about your specific case.
-
-In the United States, the 1966 [Freedom of Information
+The second area of debate asks: When our government collects data, to
+what extent should it be publicly available? In the United States, the
+1966 [Freedom of Information
 Act](https://en.wikipedia.org/wiki/Freedom_of_Information_Act) and its
 subsequent amendments have sought to open access to information in the
 federal government, with the view that increased transparency would
@@ -1970,59 +2106,59 @@ laws](https://en.wikipedia.org/wiki/Freedom_of_information_laws_by_country),
 with the oldest being Sweden’s 1766 Freedom of the Press Act, but these
 laws vary widely.
 
-What’s most important—and confusing—about access to US data is that
-individual-level data is usually considered private, except in certain
-areas where our governmental process has determined that a broader
-interest is served by making it public. On one hand, here are two
-categories where individual-level data is private under federal law:
+In most cases, individual-level data collected by US federal and state
+governments is considered private, except in cases where our
+governmental process has determined that a broader interest is served by
+making it public. To illustrate this distinction, let’s begin with two
+cases where US federal law protects the privacy of individual-level
+data:
 
 -   Patient-level health data is generally protected under the [Privacy
     Rule of the Health Insurance Portability and Accountability
     Act](https://en.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act#Privacy_Rule),
-    commonly known as HIPAA. Public health officials regularly aggregate
-    patient records into larger anonymized public datasets to track
-    progress about various illnesses. This process keeps
-    individual-level data about each patient private, but allows the
-    public to benefit from information about broad trends.
+    commonly known as HIPAA. In order for public health officials to
+    track broad trends about illness in the population, individual
+    patient data must be aggregated into larger anonymized datasets in
+    ways that protect specific people’s confidentiality.
 
--   Student-level education data is generally protected under the
-    [Family Educational Rights and Privacy
+-   Similarly, student-level education data is generally protected under
+    the [Family Educational Rights and Privacy
     Act](https://en.wikipedia.org/wiki/Family_Educational_Rights_and_Privacy_Act),
     commonly known as FERPA. Public education officials regularly
-    aggregate student records into larger anonymized public datasets to
-    track the progress of schools, districts, and states. Once again,
-    this process keeps individual-level data about each student private,
-    but allows the public to benefit from information about broad
-    trends.
+    aggregate individual student records into larger anonymized public
+    datasets to track the broad progress of schools, districts, and
+    states, without revealing individually-identifiable data.
 
-On the other hand, here are three categories where government has ruled
-that the public interest is served by making individual-level data
-available to all:
+On the other hand, here are three cases where government has ruled that
+the public interest is served by making individual-level data widely
+available:
 
 -   Individual contributions to political candidates are public
     information in the [US Federal Election Commission
-    database](https://www.fec.gov/data/receipts/individual-contributions/).
-    See related databases such as [Follow The
-    Money](https://www.followthemoney.org/) by the National Institute on
-    Money in Politics and [Open Secrets](http://www.opensecrets.org/) by
-    the Center for Responsive Politics, which both describe more details
-    about donations submitted through political action committees and
-    controversial exceptions to campaign finance laws. Across the US,
-    state-level political contribution laws vary widely, and public
-    records are stored in separate databases. For example, anyone can
-    search the [Connecticut Campaign Reporting Information
+    database](https://www.fec.gov/data/receipts/individual-contributions/),
+    and related databases by non-profit organizations, such as [Follow
+    The Money](https://www.followthemoney.org/) by the National
+    Institute on Money in Politics and [Open
+    Secrets](http://www.opensecrets.org/) by the Center for Responsive
+    Politics. The latter two sites describe more details about donations
+    submitted through political action committees and controversial
+    exceptions to campaign finance laws. Across the US, state-level
+    political contribution laws vary widely, and these public records
+    are stored in separate databases. For example, anyone can search the
+    [Connecticut Campaign Reporting Information
     System](https://seec.ct.gov/Portal/eCRIS/eCrisSearch) to find
     donations made by the first author to state-level political
     campaigns.
 
 -   Individual property ownership records are public, and increasingly
-    hosted online by many local governments. This privately-funded [US
-    public records directory](https://publicrecords.netronline.com/)
-    provides links to county and municipal property records, where
-    available. For example, anyone can search the [property assessment
-    database for the Town of West Hartford,
-    Connecticut](http://gis.vgsi.com/westhartfordct/) to find property
-    owned by the first author, its square footage, and purchase price.
+    hosted online by many local governments. A privately-funded company
+    compiled this [US public records
+    directory](https://publicrecords.netronline.com/) with links to
+    county and municipal property records, where available. For example,
+    anyone can search the [property assessment database for the Town of
+    West Hartford, Connecticut](http://gis.vgsi.com/westhartfordct/) to
+    find property owned by the first author, its square footage, and
+    purchase price.
 
 -   Individual salaries for officers of tax-exempt organizations are
     public, which they are required to file on Internal Revenue Service
@@ -2032,50 +2168,36 @@ available to all:
     salary and other compensation of the top officers of the first
     author’s employer, Trinity College in Hartford, Connecticut.
 
-The boundary between what types of individual-level data should remain
-private or become public is continually changing, and subject to
-political and social pressures. On one hand, critics of “[big
-data](https://en.wikipedia.org/wiki/Big_data)” and “[surveillance
-capitalism](https://en.wikipedia.org/wiki/Surveillance_capitalism)”
-charge that governments seek more power and corporations seek more
-profits by collecting and commodifying massive amounts of personal data
-about each individual. On the other hand, the Black Lives Matter
-movement has gradually made more individual-level data publicly
-available on violence by police officers. For example, New Jersey state
-law required local police departments to make “use of force” reports
-publicly available, but no one could easily search these paper forms
-until a team of journalists from from NJ Advance Media created [The
-Force Report public database](https://force.nj.com/), where anyone can
-look up individual officers and investigate possible patterns of violent
-behavior. Similarly, a team of ProPublica journalists created [The NYPD
-Files public database](https://projects.propublica.org/nypd-ccrb/),
+Social and political pressures are continually changing the boundary
+over what types of individual-level data collected by government should
+be made publicly available. For example, the Black Lives Matter movement
+has gradually made more individual-level data about violence by police
+officers more widely available. For example, in 2001 the State of New
+Jersey required local police departments to document any “use of force”
+by officers, whether minor or major, such as firing their gun. But no
+one could easily search these paper forms until a team of journalists
+from NJ Advance Media submitted over 500 public records requests and
+compiled [The Force Report digital database](https://force.nj.com/),
+where anyone can look up individual officers and investigate patterns of
+violent behavior. Similarly, a team of ProPublica journalists created
+[The NYPD Files database](https://projects.propublica.org/nypd-ccrb/),
 which now allows anyone to search closed cases of civilian complaints
-against New York City police officers, by name or precinct, for
-potential patterns of substantiated allegations. People working in the
-field of data visualization need to stay informed about the shifting
-boundary lines between private versus public individual-level data, and
-contribute to discussions about whose interests are served by making
-more data available.
+against New York City police officers, by name or precinct, for patterns
+of substantiated allegations.
 
-TODO: ADD TO ABOVE? Similarly, the Washington post. Up with the West
-Virginia newspaper to obtain privately owned drug records Through a
-court order, which they transformed into a public database that allows
-anyone to search individual doctors prescribing narcotics for potential
-patterns of substance abuse
-
-TODO: ADD – a deeper concern is privately-owned individual-level data
-The credit score companies know my purchases in my payment history on my
-mortgages and credit cards Amazon knows my purchase history Netflix
-knows viewing history Google knows my browsing history Apple knows my
-location history via iPhone When people criticize big data, are usually
-refer to private companies compiling individual data
+If you work with data, get informed about key debates over what should
+be public or private, become active in policy discussions about whose
+interests are being served, and contribute to making positive change. In
+the next section, you’ll learn how to explore datasets that governments
+and non-governmental organizations have intentionally shared with the
+public.
 
 Open Data Repositories
 ----------------------
 
 Over the past decade, an increasing number of governmental and
-non-governmental organizations in the US and around the globe have begun
-to pro-actively share public data through open data repositories. While
+non-governmental organizations around the globe have begun to
+pro-actively share public data through open data repositories. While
 some of these datasets were previously available as individual files on
 isolated websites, these growing networks have made open data easier to
 find, enabled more frequent agency updates, and sometimes support live
@@ -2102,7 +2224,8 @@ these features:
 Due to the recent growth of open data repositories, especially in
 governmental policy and scientific research, there is no single website
 that lists all of them. Instead, we list just a few sites from the US
-and around the globe to spark readers’ curiosity:
+and around the globe to spark readers’ curiosity and encourage you to
+dig deeper:
 
 -   [Data.gov](https://www.data.gov/), the official repository for US
     federal government agencies.
@@ -2113,20 +2236,22 @@ and around the globe to spark readers’ curiosity:
     three-year, or five-year estimates for different census geographies,
     with margins of error.
 -   [Eurostat](https://ec.europa.eu/eurostat), the statistical office of
-    the European Union
--   [Global Open Data Index](https://index.okfn.org/dataset/) by the
-    Open Knowledge Foundation
--   [Google Public Data](https://www.google.com/publicdata/directory)
--   [IPUMS](https://www.ipums.org), the Integrated Public Use Microdata
+    the European Union.
+-   [Global Open Data Index](https://index.okfn.org/dataset/), by the
+    Open Knowledge Foundation.
+-   [Google Public Data](https://www.google.com/publicdata/directory).
+-   [Google Dataset Search](https://datasetsearch.research.google.com/).
+-   [IPUMS](https://www.ipums.org), Integrated Public Use Microdata
     Series, the world’s largest individual-level population database,
     with microdata samples from US and international census records and
-    surveys, hosted by the University of Minnesota
--   [openAfrica](https://africaopendata.org/) by Code for Africa
--   [Open Data Inception](https://opendatainception.io/) a map-oriented
-    global directory
--   [Open Data Network](https://www.opendatanetwork.com/) directory of
-    primarily US state and municipal open data platforms by Socrata
--   [World Bank Open Data](https://data.worldbank.org/)
+    surveys, hosted by the University of Minnesota.
+-   [openAfrica](https://africaopendata.org/), by Code for Africa.
+-   [Open Data Inception](https://opendatainception.io/), a map-oriented
+    global directory.
+-   [Open Data Network](https://www.opendatanetwork.com/), a directory
+    by Socrata, primarily of US state and municipal open data platforms.
+-   [World Bank Open Data](https://data.worldbank.org/), a global
+    collection of economic development data.
 
 In addition, students, staff, and faculty at better-funded institutions
 of higher education also may have access to a paid library subscription
@@ -2137,51 +2262,231 @@ local and national geographies, primarily for the US, Canada, and
 Europe. Previously, Social Explorer made many files available to the
 public, but it now requires a paid subscription or 14-day free trial.
 
+Now that you’ve learned more about navigating open data repositories,
+the next section will teach you ways to properly source the data that
+you discover.
+
+Source Your Data
+----------------
+
+When you find data, write the source information inside the downloaded
+file or a new file you create. Add key details about its origins, so
+that you—or someone else in the future—can replicate your steps. We
+recommend doing this in two places: the spreadsheet file name and a
+source notes tab. As a third step, make a backup sheet of your data.
+
+The first step is to label every data file that you download or create.
+All of us have experienced “bad file names” like these, which you should
+avoid:
+
+-   data.csv
+-   file.ods
+-   download.xlsx
+
+Write a short but meaningful file name. While there’s no perfect system,
+a good strategy is to abbreviate the source (such as `census` or
+`worldbank` or `eurostat`), add topic keywords, and a date or range. If
+you or co-workers will be working on different versions of a downloaded
+file, include the current date in YYYY-MM-DD (year-month-date) format.
+If you plan to upload files to the web, type names in all lower-case and
+replace blank spaces with dashes (`-`) or underscores (`_`). Better file
+names look like this:
+
+-   town-demographics-2019-12-02.csv
+-   census2010\_population\_by\_county.ods
+-   eurostat-1999-2019-co2-emissions.xlsx
+
+The second step is to save more detailed source notes about the data on
+a separate tab inside the spreadsheet, which works for multi-tab
+spreadsheet tools such as Google Sheets, LibreOffice, and Excel. Add a
+new tab named *notes* that describes the origins of the data, a longer
+description for any abbreviated labels, and when it was last updated, as
+shown in Figure <a href="#fig:sheets-with-tabs">38</a>. Add your own
+name and give credit to collaborators who worked with you. If you need
+to create a CSV file from this data, give it a parallel name to your
+multi-tabbed spreadsheet file so that you can easily relocate the
+original source notes.
+
+     knitr::include_graphics("images/03-find/sheets-with-tabs.png")
+
+<img src="images/03-find/sheets-with-tabs.png" alt="Create separate spreadsheet tabs for data, notes, and backup."  />
+<p class="caption">
+Figure 38: Create separate spreadsheet tabs for data, notes, and backup.
+</p>
+
+A third step is to make a backup of the original data before cleaning or
+editing it. For a simple one-sheet file in a multi-tab spreadsheet tool,
+right-click on the tab containing the data to make a duplicate copy in
+another tab, also shown in Figure
+<a href="#fig:sheets-with-tabs">38</a>. Clearly label the new tab as a
+backup and leave it alone! For CSV files or more complex spreadsheets,
+create a separate backup file. To be clear, these simple backup strategy
+only helps you from making non-fixable edits to your original data. Make
+sure you have a broader strategy to backup your files from your computer
+or cloud account in case either of those are deleted or those systems
+crash.
+
+Make a habit of using these three sourcing strategies—filenames, notes,
+and backups—to increase the credibility and replicability of your data
+visualizations. In the next section, we’ll explore more ways to reduce
+your chances of making “bad data” errors.
+
+Recognize Bad Data
+------------------
+
+When your data search produces some results, another key step is to open
+the file, quickly scroll through the content, and look for any warning
+signs that it might contain “bad data.” If you fail to catch a problem
+in your data at an early stage, it could lead to false conclusions and
+diminish the credibility of all of your work. Fortunately, members of
+the data visualization community have shared multiple examples of
+problems we’ve previously encountered, to help save newer members from
+making the same embarrassing mistakes. One popular crowd-sourced
+compilation by data journalists was [The Quartz Guide to Bad
+Data](https://github.com/Quartz/bad-data-guide), last updated in 2018.
+Watch out for spreadsheets containing these “bad data” warning signs:
+
+-   Missing values: If you see blank or “null” entries, does that mean
+    data was not collected? Or maybe a respondent did not answer? If
+    you’re unsure, find out from the data creator. Also beware when
+    humans enter a `0` or `-1` to represent a missing value, without
+    thinking about its consequences on running spreadsheet calculations,
+    such as SUM or AVERAGE.
+-   Missing leading zeros: One of the zip codes for Hartford,
+    Connecticut is `06119`. If someone converts a column of zip codes to
+    numerical data, it will strip out the leading zero and appear as
+    `6119`. Similarly, the US Census Bureau lists every place using a
+    FIPS code, and some of these also begin with a meaningful zero
+    character. For example, the FIPS code for Los Angeles County,
+    California is `037`, but if someone accidentally converts a column
+    of text to numbers, it will strip out the leading zero and convert
+    that FIPS code to `37`, which represents the state of North
+    Carolina.
+-   65536 rows or 255 columns: These are the maximum number of rows
+    supported by older-style Excel spreadsheets, or columns supported by
+    Apple Numbers spreadsheet, respectively. If your spreadsheet stops
+    exactly at either of these limits, you probably have only partial
+    data.
+-   Inconsistent date formats: For example, November 3rd, 2020 is
+    commonly entered in spreadsheets in the US as `11/3/2020`
+    (month-date-year), while people in other locations around the globe
+    commonly type it as `3/11/2020` (date-month-year). Check your
+    source.
+-   Dates such as January 1st 1900, 1904, or 1970: These are default
+    timestamps in Excel spreadsheets and Unix operating systems, which
+    may indicate the actual date was blank or overwritten.
+-   Dates similar to `43891`: When you type `March 1` during the year
+    2020 into Microsoft Excel, it automatically displays as `1-Mar`, but
+    is saved using Excel’s internal date system as `43891`. If someone
+    converts this column from date to text format, you’ll see Excel’s
+    5-digit number, not the dates you’re expecting.
+
+Another way to review the quality of data entry in any column in a
+spreadsheet is to create [a filter](sort.html) or a [pivot
+table](pivot.html) as described in chapter 2. This allows you to quickly
+inspect the range of values that appear in that column, and whether they
+match what you expected to find.
+
+What should you do when you discover bad data in your project? Sometimes
+small issues are relatively straightforward, do not call into question
+the integrity of the entire dataset, and you can fix them using methods
+to [clean up messy data](clean.html) that we describe in chapter 4. But
+larger issues are more problematic. Follow the source of your data
+stream to try to identify where the issue began. If you cannot find and
+fix the issue on your own, contact the data provider to ask for their
+input, since they should have a strong interest in improving the quality
+of the data. If they cannot resolve an important data issue, then you
+need to pause and think carefully. In this case, is it wiser to continue
+working with problematic data and add a cautionary note to readers, or
+should you stop using the dataset entirely and call attention to its
+underlying problem? These are not easy decisions, and you should ask for
+opinions from colleagues. In any case, never ignore the warning signs of
+bad data.
+
+In the next section, you’ll learn more questions to help you know your
+data at a deeper level.
+
 Know Your Data
 --------------
 
-TODO: explain more about expectations about “knowing what you data
-means” in the scope of this chapter….
+Now that you’ve found, sourced, and inspected the file, the next step to
+*know your data* more deeply than what appears at its surface level.
+Read the source notes and examine the contents to reflect on what is
+explicitly stated—or unstated—to better understand its origin, context,
+and limitations. You cannot program a computer to do this step for you,
+as it requires critical-thinking skills to see beyond the characters and
+numbers appearing on your screen.
 
-If your search has produced some results, the next step is to get to
-know your data. Closely examine your files and ask questions about their
-origin, meaning, and limitations:
+One place to start is to ask: *What do the data labels really mean?* and
+to consider these potential issues:
 
--   Who collected and published this data, and for what purpose? Since
-    individuals and organizations require time and resources to do this
-    work, seek to clarify their motivations and assumptions, both
-    explicit and implicit ones. Who was the intended audience of the
-    work? Whose perspectives does the data privilege? Whose stories
-    remain untold? As practitioners of data visualization, we strongly
-    favor evidence-based reasoning over its less-informed alternatives.
-    But we also caution against embracing so-called data objectivity.
-    Numbers are *not* neutral, and we always need to consider the
-    broader contexts in which people created them.
+-   Abbreviated column headers, such as *Elevation* or *Income*, often
+    appear in spreadsheets. Sometimes the original software limited the
+    number of characters that could be entered, or the people who
+    created the header names preferred to keep them short. But was
+    *Elevation* entered in meters or feet? An abbreviated data label
+    does not answer that key question, so you’ll need to check the
+    source notes, or if that’s not available, compare elevation data for
+    a specific point in the dataset to a known source that includes the
+    measurement unit. Similarly, if you’re working with US Census data,
+    does the *Income* abbreviation refer to per person, per family, or
+    per household? Also, does it reflect the median or the average
+    level? Check the source notes.
 
--   What do the data labels *really* mean? Most spreadsheets contain
-    abbreviated column headers, particularly due to software character
-    limits, but some questions of data interpretation run much deeper.
-    For example, socially-constructed labels such as “race” or “gender”
-    may not clarify how the creators defined their terms, or what role
-    respondents played in the collection process. Even seemingly
-    objective labels such as “income” or “population” or “elevation” may
-    not adequately describe exactly what was counted, how it was
-    measured, and the margins of error. Better-quality datasets include
-    detailed definitions of the collection process to help you to
-    understand the decisions made by its creators. If not, then your
-    next best option may be to go out into the field, if feasible, and
-    directly observe how the data is measured and collected.
+-   Exactly how was the data recorded? For example, was *Elevation* for
+    a specific location measured by a GPS unit on the ground? Or was the
+    location geocoded on a digital map that contains elevation data? In
+    most cases the two methods will yield different results, and whether
+    it matters to you depends on the degree of precision required in
+    your work. Similarly, when working with US Census data, it’s
+    important to know that *Income* is a self-reported measure. In
+    addition, be cautious if you’re working with the American Community
+    Survey estimated data, which relies on small samples for lower
+    levels of geography, such as a neighborhood-level census tract,
+    which sometimes generates high margins of error that make the data
+    meaningless. Check the source notes.
 
-TODO: Add examples above on how US census race and ethnicity categories
-changed over time? And how ACS measurements about income in small areas
-are subject to high margins of error?
+<!-- TODO: Ilya, can you locate in any ACS report on median household income for any Hartford census tract, where the margin of error is extremely high? I seem to recall seeing some in ACS 2009 where the MOE was as high as the income level. If this exists, please send me a link to the data so I can insert as an example in chapter 3. -->
+
+-   To what extent is the data socially constructed? In other words,
+    what do the data labels reveal or hide about how people defined
+    categories in different social and political contexts, which differ
+    across place and time? For example, we designed an [interactive
+    historical map of racial
+    change](https://ontheline.github.io/otl-racial-change/index-caption.html#10/41.7900/-72.6000/1900/100)
+    for Hartford County, Connecticut using over 100 years of US Census
+    data. But Census categories for race and ethnicity changed
+    dramatically during those decades because people in power redefined
+    these contested terms and moved who belonged in which group. For
+    example, through the 1930s, the US Census separated “Native White”
+    and “Foreign-born White” in its official reports, then combined and
+    generally reported these as “White” in later decades. Also, the
+    Census classified “Mexican” as “Other races” in 1930, then moved
+    this group back to “White” in 1940, then began to report “Puerto
+    Rican or Spanish surname” data in 1960, followed by “Hispanic or
+    Latino” in later decades, as an ethnic category that was distinct
+    from race. The Census finally replaced “Negro” with “Black” in 1980,
+    and in 2000 allow people to select more than one racial category,
+    such as both “White” and “Black,” unlike prior decades when these
+    terms were mutually exclusive and people could choose only one. As a
+    result, historical changes in the social construction of race and
+    ethnicity influenced how we designed our map to display “White” or
+    “White alone” over time, with additional census categories relevant
+    to each decade shown in the pop-up window, with our explanation of
+    our decisions in the caption and source notes. There is no single
+    definitive way to visualize socially-constructed data when
+    definitions change across decades. But when you make choices about
+    data, describe your thought process in the notes.
+
+<!-- TODO: Read and insert Margo Anderson's American Census 2nd edition 2015 here as background -->
 
 To be clear, you may never *truly know* your data if it was collected by
 someone else, particularly a different person in a distant place or
-time. But don’t let that philosophical obstacles stop you from asking
-good questions about the origins and limitations of your data. Only by
-clarifying what we know—and what we don’t know—can we create meaningful
-data visualizations that bring their inner-stories to life.
+time. But don’t let philosophical obstacles stop you from asking good
+questions about the origins, context, and limitations of your data. Only
+by clarifying what we know—and what we don’t know—can we create
+meaningful visualizations that bring people’s stories behind the data to
+the forefront.
 
 ### Summary
 
@@ -2189,12 +2494,11 @@ This chapter reviewed two broad questions that everyone should ask
 during the early stages of their visualization project: *Where can I
 find data?* and *What do I really know about it?* We broke down both
 questions into more specific parts to develop your knowledge and skills
-in recognizing bad data, sourcing the origins of your data,
-distinguishing between public versus private data, and navigating the
-growing number of open data repositories. As you leap into the next few
-chapters on cleaning data and creating interactive charts and maps,
-remember these lessons as you strive to create meaningful
-visualizations.
+in guiding questions for your search, engaging with debates over public
+and private data, navigating open data repositories, sourcing data
+origins, recognizing bad data, and understanding your data at a deeper
+level. Remember these lessons as you leap into the next few chapters on
+cleaning data and creating interactive charts and maps.
 
 <!--chapter:end:03-find.Rmd-->
 
@@ -2209,6 +2513,8 @@ Figure <a href="#fig:clean-up-messy-data">39</a> for inspiration). Don’t
 be surprised if you find yourself spending longer cleaning up data than
 actually analyzing and visualizing it—it is often the case for data
 analysts.
+
+    knitr::include_graphics("images/04-clean/clean-up-messy-data.png")
 
 <img src="images/04-clean/clean-up-messy-data.png" alt="More often than not, raw data looks like this."  />
 <p class="caption">
@@ -2290,6 +2596,10 @@ exercise.
 8.  Inspect the resulting sheet. Make sure town names such as *Newtown*
     remained untouched.
 
+<!-- -->
+
+    knitr::include_graphics("images/04-clean/sheets-find-replace-annotated.png")
+
 <img src="images/04-clean/sheets-find-replace-annotated.png" alt="Find and Replace window in Google Sheets."  />
 <p class="caption">
 Figure 40: Find and Replace window in Google Sheets.
@@ -2329,6 +2639,10 @@ line.
     section).
 5.  You can rename columns into *Longitude* (first number) and
     *Latitude* (second number).
+
+<!-- -->
+
+    knitr::include_graphics("images/04-clean/sheets-split-annotated.png")
 
 <img src="images/04-clean/sheets-split-annotated.png" alt="Select *Data - Split text to columns* to automatically separate data." width="350" />
 <p class="caption">
@@ -2406,6 +2720,8 @@ format, to combine the items using ampersands (`&`) and separating them
 with commas (`", "`) or quoted spaces (`" "`), like this:
 `=A2 & ", " & B2 & ", " & C2 & " " & D2`.
 
+     knitr::include_graphics("images/04-clean/sheets-combine.png")
+
 <img src="images/04-clean/sheets-combine.png" alt="Use ampersands to combine items and separate them with spaces."  />
 <p class="caption">
 Figure 42: Use ampersands to combine items and separate them with
@@ -2466,6 +2782,8 @@ port—most likely because 8080 was taken by some other program running on
 your computer). If for any reason you decide to use a different browser,
 just copy-paste the URL.
 
+    knitr::include_graphics("images/04-clean/tabula-welcome.png")
+
 <img src="images/04-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
 Figure 43: Tabula welcome page.
@@ -2488,6 +2806,10 @@ PDFs](data/ct-dph-covid-2020-05-31.pdf) from May 31, 2020.
     relevant button in the header. You will see that each table is
     highlighted in red, like shown in Figure
     <a href="#fig:tabula-autodetect">44</a>.
+
+<!-- -->
+
+    knitr::include_graphics("images/04-clean/tabula-autodetect.png")
 
 <img src="images/04-clean/tabula-autodetect.png" alt="Selected tables are highlighted in red."  />
 <p class="caption">
@@ -2529,6 +2851,8 @@ Clean Data with OpenRefine
 Consider a dataset that looks like the one in Figure
 <a href="#fig:openrefine-dataset">45</a>. Can you spot any problems with
 it?
+
+    knitr::include_graphics("images/04-clean/openrefine-dataset.png")
 
 <img src="images/04-clean/openrefine-dataset.png" alt="First 20 rows of the sample dataset. Can you spot any problems with it?"  />
 <p class="caption">
@@ -2578,6 +2902,8 @@ Once launched, you should see OpenRefine in your browser with
 `127.0.0.1:3333` address (localhost, port 3333), like shown in Figure
 <a href="#fig:openrefine-welcome">46</a>.
 
+    knitr::include_graphics("images/04-clean/openrefine-welcome-annotated.png")
+
 <img src="images/04-clean/openrefine-welcome-annotated.png" alt="OpenRefine starting page."  />
 <p class="caption">
 Figure 46: OpenRefine starting page.
@@ -2602,6 +2928,10 @@ using your own file), so let’s load it from your computer.
     the bottom of the page until it starts looking meaningful, like
     shown in Figure <a href="#fig:openrefine-parse">47</a>.
 3.  Hit *Create Project* in the upper-right corner.
+
+<!-- -->
+
+    knitr::include_graphics("images/04-clean/openrefine-parse.png")
 
 <img src="images/04-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
@@ -2647,6 +2977,10 @@ to be transformed into numeric format.
     popup window, make sure to change *Data type* to *number*, and hit
     *Apply*, like in Figure
     <a href="#fig:openrefine-manual-edit">48</a>).
+
+<!-- -->
+
+    knitr::include_graphics("images/04-clean/openrefine-manual-edit-annotated.png")
 
 <img src="images/04-clean/openrefine-manual-edit-annotated.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
 <p class="caption">
@@ -2695,6 +3029,8 @@ distinct values, North Korea and South Korea!
 
 Spend some time playing with *Keying function* parameters, and notice
 how they produce clusters of different sizes and accuracy.
+
+    knitr::include_graphics("images/04-clean/openrefine-cluster-annotated.png")
 
 <img src="images/04-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
 <p class="caption">
@@ -2834,6 +3170,8 @@ Let’s take a look at Figure
 <a href="#fig:design-principles-chart-components">50</a>. It shows basic
 chart components that are shared among most chart types.
 
+    knitr::include_graphics("images/05-chart/design-principles-chart-components.png")
+
 <img src="images/05-chart/design-principles-chart-components.png" alt="Common chart components."  />
 <p class="caption">
 Figure 50: Common chart components.
@@ -2905,6 +3243,8 @@ twice its value. The Figure
 <a href="#fig:design-principles-start-at-zero">51</a> shows a good and a
 bad example.
 
+    knitr::include_graphics("images/05-chart/design-principles-start-at-zero.png")
+
 <img src="images/05-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
 <p class="caption">
 Figure 51: Start your bar chart at zero.
@@ -2949,6 +3289,8 @@ stay away from them today. Chart junk distracts the viewer and reduces
 chart readability and comprehension. It also looks unprofessional and
 doesn’t add credibility to you as a storyteller.
 
+    knitr::include_graphics("images/05-chart/design-principles-junk.png")
+
 <img src="images/05-chart/design-principles-junk.png" alt="Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements."  />
 <p class="caption">
 Figure 52: Chart junk distracts the viewer, so stay away from shadows,
@@ -2975,6 +3317,8 @@ Arrange slices from largest to smallest, clockwise, and put the largest
 slice at 12 o’clock. Figure <a href="#fig:design-principles-pie">53</a>
 illustrates that.
 
+    knitr::include_graphics("images/05-chart/design-principles-pie.png")
+
 <img src="images/05-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o'clock."  />
 <p class="caption">
 Figure 53: Sort slices in pie charts from largest to smallest, and start
@@ -2984,6 +3328,8 @@ at 12 o’clock.
 If your pie chart has more than five slices, consider showing your data
 in a bar chart, either stacked or separated, like Figure
 <a href="#fig:design-principles-pie-to-bar">54</a> shows.
+
+    knitr::include_graphics("images/05-chart/design-principles-pie-to-bar.png")
 
 <img src="images/05-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
 <p class="caption">
@@ -2997,6 +3343,8 @@ When your column chart has long x-axis labels that have to be rotated
 it becomes a horizontal bar chart. Take a look at Figure
 <a href="#fig:design-principles-turn-bar">55</a> to see how much easier
 it is to read horizontally-oriented labels.
+
+    knitr::include_graphics("images/05-chart/design-principles-turn-bar.png")
 
 <img src="images/05-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
@@ -3013,6 +3361,8 @@ to be able to quickly look up an item, such as their town. Ordering
 categories by value is another common technique that makes comparisons
 possible. If your columns represent a value of something at a particular
 time, they have to be ordered sequentially, of course.
+
+    knitr::include_graphics("images/05-chart/design-principles-order-categories.png")
 
 <img src="images/05-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
@@ -3046,6 +3396,8 @@ people, like green/red or yellow/blue, so be very careful with those.
 Figure <a href="#fig:design-principles-color">57</a> shows some good and
 bad examples of color use.
 
+    knitr::include_graphics("images/05-chart/design-principles-color.png")
+
 <img src="images/05-chart/design-principles-color.png" alt="Don't use colors just for the sake of it."  />
 <p class="caption">
 Figure 57: Don’t use colors just for the sake of it.
@@ -3055,6 +3407,8 @@ If you follow the advice, you should end up with a de-cluttered chart as
 shown in Figure <a href="#fig:design-principles-decluttered">58</a>.
 Notice how your eyes are drawn to the bars and their corresponding
 values, not bright colors or secondary components like the axes lines.
+
+    knitr::include_graphics("images/05-chart/design-principles-decluttered.png")
 
 <img src="images/05-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
 <p class="caption">
@@ -3106,6 +3460,8 @@ between men and women, grouped together in three age brackets to allow
 for easier gender comparisons across the same ages. In the interactive
 web version, hover over columns and see tooltips with data.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-grouped.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3129,6 +3485,10 @@ The following steps will help you recreate an interactive grouped column
 3.  Select File &gt; Make a Copy to save your own version to your Google
     Drive, as shown in Figure <a href="#fig:file-make-copy2">60</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/file-make-copy2.png")
+
 <img src="images/05-chart/file-make-copy2.png" alt="Make your own copy of the Google Sheet template." width="250px" />
 <p class="caption">
 Figure 60: Make your own copy of the Google Sheet template.
@@ -3138,6 +3498,10 @@ Figure 60: Make your own copy of the Google Sheet template.
     your cursor to the top-right corner of the chart to make the 3-dot
     (kebab) menu appear, and select Delete, as shown in Figure
     <a href="#fig:delete-chart">61</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/delete-chart.png")
 
 <img src="images/05-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete." width="180px" />
 <p class="caption">
@@ -3150,6 +3514,8 @@ it resembles Middle Eastern food cooked on a skewer, in contrast to the
 three-line “hamburger menu” on many mobile devices, as shown in Figure
 <a href="#fig:menu-hamburger-kebab">62</a>.
 
+    knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
+
 <img src="images/05-chart/menu-hamburger-kebab.png" alt="You should be able to distinguish kebab from hamburger menu icons."  />
 <p class="caption">
 Figure 62: You should be able to distinguish kebab from hamburger menu
@@ -3159,6 +3525,10 @@ icons.
 1.  Format your data to make each column a data series, as shown in
     Figure <a href="#fig:column-grouped-data">63</a>, which means it
     will display as a separate color in the chart.
+
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/column-grouped-data.png")
 
 <img src="images/05-chart/column-grouped-data.png" alt="Format data in columns to make colored grouped columns in your chart." width="350px" />
 <p class="caption">
@@ -3170,6 +3540,10 @@ your chart.
     to the Insert menu and select Chart, as shown in Figure
     <a href="#fig:column-grouped-insert">64</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/column-grouped-insert.png")
+
 <img src="images/05-chart/column-grouped-insert.png" alt="Select your data and then Insert the Chart." width="250px" />
 <p class="caption">
 Figure 64: Select your data and then Insert the Chart.
@@ -3180,6 +3554,10 @@ Figure 64: Select your data and then Insert the Chart.
     <a href="#fig:column-grouped-editor">65</a>. Or select *Horizontal
     bar chart* if you have longer labels.
 
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/column-grouped-editor.png")
+
 <img src="images/05-chart/column-grouped-editor.png" alt="Change the default to Column chart, with Stacking none." width="250px" />
 <p class="caption">
 Figure 65: Change the default to Column chart, with Stacking none.
@@ -3188,6 +3566,10 @@ Figure 65: Change the default to Column chart, with Stacking none.
 1.  To customize title, labels, and more, in the Chart Editor select
     Customize, as shown in Figure
     <a href="#fig:chart-editor-customize">66</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/chart-editor-customize.png")
 
 <img src="images/05-chart/chart-editor-customize.png" alt="Select Customize to edit title, labels, and more." width="250px" />
 <p class="caption">
@@ -3201,6 +3583,10 @@ Figure 66: Select Customize to edit title, labels, and more.
     no longer Restricted to only you, but can be viewed by anyone with
     the link. See additional options.
 
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/share-button-sheet-annotated.png")
+
 <img src="images/05-chart/share-button-sheet-annotated.png" alt="Click the Share button and then click *Change to anyone with the link* to make your data public." width="350px" />
 <p class="caption">
 Figure 67: Click the Share button and then click *Change to anyone with
@@ -3213,6 +3599,10 @@ the link* to make your data public.
     <a href="#fig:chart-publish">68</a>. In the next screen, select
     Embed and press the Publish button. See [Chapter 7 Embed on the
     Web](embed.html) to learn what to do with the iframe code.
+
+<!-- -->
+
+     knitr::include_graphics("images/05-chart/chart-publish.png")
 
 <img src="images/05-chart/chart-publish.png" alt="Select Publish Chart to embed an interactive chart on another web page, as described in Chapter 7." width="200px" />
 <p class="caption">
@@ -3237,6 +3627,8 @@ and McDonald’s. Unlike the grouped column chart in Figure
 each other, because we do not need to make comparisons between
 sub-groups.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive") else knitr::include_graphics("images/05-chart/bar-separated.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3251,6 +3643,8 @@ how you structure your data. To make Google Sheets separate columns or
 bars, you need to leave some cells blank, as shown in Figure
 <a href="#fig:bar-separated-data">70</a>. The rest of the steps remain
 the same as above.
+
+     knitr::include_graphics("images/05-chart/bar-separated-data.png")
 
 <img src="images/05-chart/bar-separated-data.png" alt="Create a separated column or bar chart by leaving some cells blank."  />
 <p class="caption">
@@ -3271,6 +3665,8 @@ For example, the stacked column chart in Figure
 overweight residents across nations, where colors allow for easy
 comparisons of weight-group subcategories across nations.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-stacked.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3285,6 +3681,8 @@ each column will become a new series with its own color, as shown in
 Figure <a href="#fig:column-stacked-data">72</a>. Then in the Chart
 Editor window, choose Chart Type &gt; Stacked column chart (or Stacked
 bar chart). The rest of the steps are similar to the ones above.
+
+     knitr::include_graphics("images/05-chart/column-stacked-data.png")
 
 <img src="images/05-chart/column-stacked-data.png" alt="Create a stacked column or bar chart by structuring your data as shown." width="350px" />
 <p class="caption">
@@ -3335,6 +3733,8 @@ Select two columns with the data you want to visualize, and go to Insert
 type &gt; Column chart. See the result in Figure
 <a href="#fig:histogram">73</a>
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive") else knitr::include_graphics("images/05-chart/histogram.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3384,6 +3784,8 @@ approximately 55% were bananas. This example is illustrated in Figure
 all* other items that your store has sold (for example, you include
 pizzas but exclude ice cream), your pie chart would not make sense.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive") else knitr::include_graphics("images/05-chart/pie.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3424,6 +3826,8 @@ in the US for the past 110 years. You can see that the level of chicken
 (shown in light-green) rises steadily and surpasses beef (blue) and pork
 (gray).
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive") else knitr::include_graphics("images/05-chart/line.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3438,6 +3842,8 @@ The simplest way to organize your data is to use the first column as
 x-axis labels, and each additional column as a new series (which will
 become its own line). For example, the meat data from the line chart is
 structured as shown in Figure <a href="#fig:line-data">76</a>.
+
+    knitr::include_graphics("images/05-chart/line-data.png")
 
 <img src="images/05-chart/line-data.png" alt="Data for the line chart shown in Figure 75." width="250px" />
 <p class="caption">
@@ -3468,6 +3874,8 @@ Figure <a href="#fig:stacked-area">77</a>. Here, we can still see that
 chicken has been on the rise since the 1970s. We can also see that the
 total availability was on the rise between 1910 and 1970 with a small
 dip around 1930s, and it didn’t change much between 1970 and 2017.
+
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive") else knitr::include_graphics("images/05-chart/stacked-area.png")
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
@@ -3524,6 +3932,8 @@ have lower fertility. Remember that correlation does not mean causation,
 so you cannot use this chart to argue that fewer births result in longer
 lives, or that longer-living females give birth to fewer children.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;format=interactive") else knitr::include_graphics("images/05-chart/scatter.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3545,6 +3955,8 @@ the dataset. Notice that the data is structured in three columns. The
 first column, *Life Expectancy*, is plotted on the x-axis (horizontal).
 The second column, *Fertility*, is plotted on the y-axis (vertical). The
 third column contains *Country* labels.
+
+    knitr::include_graphics("images/05-chart/scatter-data.png")
 
 <img src="images/05-chart/scatter-data.png" alt="Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels." width="350px" />
 <p class="caption">
@@ -3574,6 +3986,8 @@ Expectancy), then *Select a data range* button in the upper-right corner
 of the dropdown, and choose cells in the relevant columns. Make sure to
 include the header (first row) if all other data ranges include it.
 
+    knitr::include_graphics("images/05-chart/scatter-labels-annotated.png")
+
 <img src="images/05-chart/scatter-labels-annotated.png" alt="In the chart's Setup window, choose *Add labels* to the Series." width="350px" />
 <p class="caption">
 Figure 80: In the chart’s Setup window, choose *Add labels* to the
@@ -3601,6 +4015,8 @@ data as our scatterplot on life expectancy vs fertility.
 In the interactive version of the chart, hover your cursor over each
 bubble (dot) to reveal a tooltip with the country name and the two data
 points.
+
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive") else knitr::include_graphics("images/05-chart/bubble-3.png")
 
 <iframe src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
@@ -3647,6 +4063,8 @@ population (shown by bubble size) and region (shown by bubble color).
 Float your cursor over bubbles to view data details in the interactive
 version of the chart.
 
+    if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive") else knitr::include_graphics("images/05-chart/bubble-5.png")
+
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;amp;format=interactive" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -3663,6 +4081,8 @@ with 5 columns
 template](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/).
 The columns are arranged in the following order: country label, x-axis
 value, y-axis value, color, and bubble size.
+
+    knitr::include_graphics("images/05-chart/bubble-5-data.png")
 
 <img src="images/05-chart/bubble-5-data.png" alt="Bubble chart data. Bubble size represents population, color – region." width="400px" />
 <p class="caption">
@@ -3721,6 +4141,8 @@ over points to view specific details.
 Figure <a href="#fig:tableau-xy-demo">84</a> illustrates a strong
 relationship between Connecticut school district income and test scores.
 
+    if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-xy-demo.png")
+
 <iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="100%" height="500px">
 </iframe>
 <p class="caption">
@@ -3768,6 +4190,10 @@ and Discover.
     successfully connected one data source to Tableau Public, and you
     are ready to build your first chart.
 
+<!-- -->
+
+    knitr::include_graphics("images/05-chart/tableau-connect-annotated.png")
+
 <img src="images/05-chart/tableau-connect-annotated.png" alt="Drag `data` sheet into *Drag tables here* area."  />
 <p class="caption">
 Figure 85: Drag `data` sheet into *Drag tables here* area.
@@ -3803,6 +4229,10 @@ Figure 85: Drag `data` sheet into *Drag tables here* area.
     chart in the charting area. If you hover over points, you will see
     all three values associated with it.
 
+<!-- -->
+
+    knitr::include_graphics("images/05-chart/tableau-xy-dragging-annotated.png")
+
 <img src="images/05-chart/tableau-xy-dragging-annotated.png" alt="Drag data fields to the right places in Tableau."  />
 <p class="caption">
 Figure 86: Drag data fields to the right places in Tableau.
@@ -3822,6 +4252,8 @@ appeared, and edit the text.
 
 As a result, your final worksheet will look like shown in Figure
 <a href="#fig:tableau-xy-final">87</a>.
+
+    knitr::include_graphics("images/05-chart/tableau-xy-final-annotated.png")
 
 <img src="images/05-chart/tableau-xy-final-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
@@ -3849,6 +4281,10 @@ To publish the chart to the web,
     <a href="#fig:tableau-toolbar-settings">88</a>), and enable/disable
     it as you think is appropriate. As advocates for open and accessible
     data, we recommend leaving the box checked.
+
+<!-- -->
+
+    knitr::include_graphics("images/05-chart/tableau-toolbar-settings-annotated.png")
 
 <img src="images/05-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
@@ -3886,6 +4322,8 @@ attached to it.
 We will use % Population with Internet Access by the World Bank. You can
 download the dataset
 [here](data/world-bank-internet-users-1995-2018.csv).
+
+    if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-filtered-demo.png")
 
 <iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="100%" height="500px">
 </iframe>
@@ -3935,6 +4373,10 @@ To build a line chart,
     options, and add a few of your favorite countries to see how the
     interactive filtering works.
 
+<!-- -->
+
+    knitr::include_graphics("images/05-chart/tableau-filtered-show-filter.png")
+
 <img src="images/05-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
 <p class="caption">
 Figure 90: After you drag Country Name to the Filters card, make sure
@@ -3960,6 +4402,8 @@ empty space on the edges has disappeared.
 
 Once your filtered line chart looks like the one shown in Figure
 <a href="#fig:tableau-filtered-ready">91</a>, you are ready to publish.
+
+    knitr::include_graphics("images/05-chart/tableau-filtered-ready.png")
 
 <img src="images/05-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
 <p class="caption">
@@ -4279,6 +4723,10 @@ errors](images/06-map/mymaps-fix-errors.png)
 1.  To style the map markers, click Individual Styles. In this sample
     data, you can select Group Places By &gt; Style By &gt; Group. This
     will color markers according to the three categories.
+
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/06-map/mymaps-style-groups-640w.gif") else knitr::include_graphics("images/placeholder.jpg")
 
 <iframe src="images/06-map/mymaps-style-groups-640w.gif" width="100%" height="400px">
 </iframe>
@@ -5428,6 +5876,8 @@ Your goal is to create your own version of this simple interactive map,
 with your edits, as shown in Figure
 <a href="#fig:leaflet-simple">92</a>.
 
+    if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-map-simple/") else knitr::include_graphics("images/08-github/leaflet-simple.png")
+
 <iframe src="https://handsondataviz.github.io/leaflet-map-simple/" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -5452,6 +5902,10 @@ wisest choice for a username, if `BrownieChef` is also available.
     our repo, as shown in Figure
     <a href="#fig:leaflet-simple-template">93</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-template.png")
+
 <img src="images/08-github/leaflet-simple-template.png" alt="Click *Use this template* to make your own copy."  />
 <p class="caption">
 Figure 93: Click *Use this template* to make your own copy.
@@ -5461,6 +5915,10 @@ Figure 93: Click *Use this template* to make your own copy.
     copy of the repo `leaflet-map-simple`, the same as ours, as shown in
     Figure <a href="#fig:leaflet-simple-name">94</a>. Click the green
     *Create repository from template* button.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-name.png")
 
 <img src="images/08-github/leaflet-simple-name.png" alt="Name your copied repo `leaflet-map-simple`." width="600" />
 <p class="caption">
@@ -5495,6 +5953,10 @@ your GitHub account, and it contains only three files:
 1.  Click on the `index.html` file to view the code, as shown in Figure
     <a href="#fig:leaflet-simple-index">95</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-index.png")
+
 <img src="images/08-github/leaflet-simple-index.png" alt="Click the index.html file to view the code." width="250" />
 <p class="caption">
 Figure 95: Click the index.html file to view the code.
@@ -5517,6 +5979,10 @@ below.
     corner, as shown in Figure
     <a href="#fig:leaflet-simple-edit">96</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-edit.png")
+
 <img src="images/08-github/leaflet-simple-edit.png" alt="Click the pencil button to edit the code."  />
 <p class="caption">
 Figure 96: Click the pencil button to edit the code.
@@ -5534,6 +6000,10 @@ HTML division tag block around lines 21-23.
 2.  To save your edit, scroll to the bottom of the page and click the
     green *Commit Changes* button, as shown in Figure
     <a href="#fig:leaflet-simple-commit">97</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-commit.png")
 
 <img src="images/08-github/leaflet-simple-commit.png" alt="Click the green *Commit Changes* button to save your edits." width="450" />
 <p class="caption">
@@ -5566,6 +6036,10 @@ host it online.
     click the *Settings* button as shown in Figure
     <a href="#fig:leaflet-simple-settings">98</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-simple-settings.png")
+
 <img src="images/08-github/leaflet-simple-settings.png" alt="Click the *Settings* button to access GitHub Pages and publish your work on the web."  />
 <p class="caption">
 Figure 98: Click the *Settings* button to access GitHub Pages and
@@ -5580,6 +6054,10 @@ publish your work on the web.
     step tells GitHub to publish a live version of your map on the
     public web, where anyone can access it in their browser, if they
     have the web address.
+
+<!-- -->
+
+    knitr::include_graphics("images/08-github/leaflet-github-pages.png")
 
 <img src="images/08-github/leaflet-github-pages.png" alt="In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Master*." width="500" />
 <p class="caption">
@@ -5598,6 +6076,10 @@ and screenshots. See more at
     address where your live map has been published online, and
     right-click it to open in a new browser tab, as shown in Figure
     <a href="#fig:leaflet-github-pages-link">100</a>.
+
+<!-- -->
+
+    knitr::include_graphics("images/08-github/leaflet-github-pages-link.png")
 
 <img src="images/08-github/leaflet-github-pages-link.png" alt="In *Settings* for *GitHub Pages*, right-click your published map link to open in a new tab." width="600" />
 <p class="caption">
@@ -5651,6 +6133,10 @@ live map, instead of *our* live map.
     on the repo title to return to its home page, as shown in Figure
     <a href="#fig:leaflet-click-title">101</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-click-title.png")
+
 <img src="images/08-github/leaflet-click-title.png" alt="On your first browser tab, click the repo title." width="450" />
 <p class="caption">
 Figure 101: On your first browser tab, click the repo title.
@@ -5661,6 +6147,10 @@ Figure 101: On your first browser tab, click the repo title.
     <a href="#fig:leaflet-paste-link">102</a>. Paste your live web link
     under the label *(replace with link to your site)* and scroll down
     to commit the change.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/leaflet-paste-link.png")
 
 <img src="images/08-github/leaflet-paste-link.png" alt="Open and edit the `README` file to paste the link to your live map." width="600" />
 <p class="caption">
@@ -5777,6 +6267,10 @@ summarized in these three steps:
     contents of the repo to your local computer, and it may ask you
     where you wish to save it. Decide on a location and click OK.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/repo-code-download.png")
+
 <img src="images/08-github/repo-code-download.png" alt="Click *Code* and select *Download Zip* to create a compressed folder of a repo on your computer." width="350" />
 <p class="caption">
 Figure 103: Click *Code* and select *Download Zip* to create a
@@ -5795,6 +6289,10 @@ compressed folder of a repo on your computer.
     plus (+) symbol in the upper-right corner of your account, and
     select *New repository*, as shown in Figure
     <a href="#fig:repo-create-new">104</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/repo-create-new.png")
 
 <img src="images/08-github/repo-create-new.png" alt="Click the plus (+) symbol in upper-right corner to create a new repo." width="300" />
 <p class="caption">
@@ -5815,6 +6313,8 @@ which in this case is *MIT License*. Other fields are optional. Click
 the green *Create Repository* button at the bottom when done, as shown
 in Figure <a href="#fig:repo-create-options">105</a>.
 
+     knitr::include_graphics("images/08-github/repo-create-options.png")
+
 <img src="images/08-github/repo-create-options.png" alt="Name your new repo *practice*, check the box to *Initialize this repo with a README*, and *Add a license* (select *MIT*) to match any code you plan to upload." width="400" />
 <p class="caption">
 Figure 105: Name your new repo *practice*, check the box to *Initialize
@@ -5829,6 +6329,10 @@ Your new repo will have a web address similar to
     drop-down menu button, near the middle of the screen, as shown in
     Figure <a href="#fig:repo-upload-files">106</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/repo-upload-files.png")
+
 <img src="images/08-github/repo-upload-files.png" alt="Click the *Upload Files* button." width="350" />
 <p class="caption">
 Figure 106: Click the *Upload Files* button.
@@ -5840,6 +6344,10 @@ Figure 106: Click the *Upload Files* button.
     <a href="#fig:repo-drag-index">107</a>. Do not upload `LICENSE` or
     `README.md` because your new repo already contains those two files.
     Scroll down to click the green *Commit Changes* button.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/repo-drag-index-annotated.png")
 
 <img src="images/08-github/repo-drag-index-annotated.png" alt="Drag-and-drop the `index.html` file to the upload screen."  />
 <p class="caption">
@@ -5865,6 +6373,10 @@ chapter.
     <a href="#fig:repo-delete">108</a>. GitHub will ask you to type in
     your username and repo name to ensure that you really want to delete
     the repo, to prove you are not a drunken brownie chef.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/repo-delete.png")
 
 <img src="images/08-github/repo-delete.png" alt="After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm." width="600" />
 <p class="caption">
@@ -5918,6 +6430,10 @@ push your commits back up to GitHub.
     show a link to the GitHub Desktop web page, and you should download
     and install the application.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-open.png")
+
 <img src="images/08-github/desktop-open.png" alt="In your GitHub repo on the web, click *Add file* to *Open with GitHub Desktop* to download and install GitHub Desktop." width="350" />
 <p class="caption">
 Figure 109: In your GitHub repo on the web, click *Add file* to *Open
@@ -5933,6 +6449,10 @@ with GitHub Desktop* to download and install GitHub Desktop.
     click the green *Authorize desktop* button to confirm that you wish
     to connect to your account.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-signin.png")
+
 <img src="images/08-github/desktop-signin.png" alt="Click the blue *Sign in to GitHub.com* button to link GitHub Desktop to your GitHub account." width="500" />
 <p class="caption">
 Figure 110: Click the blue *Sign in to GitHub.com* button to link GitHub
@@ -5943,6 +6463,10 @@ Desktop to your GitHub account.
     the underlying software that runs GitHub. Confirm that it displays
     your username and click *Continue*, as shown in Figure
     <a href="#fig:desktop-configure">111</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-configure.png")
 
 <img src="images/08-github/desktop-configure.png" alt="Click the *Continue* button to authorize GitHub Desktop to send commits to your GitHub account." width="500" />
 <p class="caption">
@@ -5955,6 +6479,10 @@ send commits to your GitHub account.
     `leaflet-map-sample`, and further below click the blue button to
     *Clone* it to your local computer, as shown in Figure
     <a href="#fig:desktop-start">112</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-start-annotated.png")
 
 <img src="images/08-github/desktop-start-annotated.png" alt="Select your *leaflet-map-simple* repo and click the *Clone* button to copy it to your local computer."  />
 <p class="caption">
@@ -5969,6 +6497,10 @@ button to copy it to your local computer.
     *Clone* button, remember the path to this location, since you’ll
     need to find it later.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-clone-path.png")
+
 <img src="images/08-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click *Clone*." width="500" />
 <p class="caption">
 Figure 113: Select the Local Path where your repo will be stored on your
@@ -5981,6 +6513,10 @@ computer, then click *Clone*.
     your GitHub web account, and click *Continue*, as shown in Figure
     <a href="#fig:desktop-fork">114</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-fork.png")
+
 <img src="images/08-github/desktop-fork.png" alt="If asked how you plan to use this fork, select the default *To contribute to the parent project* and click *Continue*." width="500" />
 <p class="caption">
 Figure 114: If asked how you plan to use this fork, select the default
@@ -5992,6 +6528,10 @@ Figure 114: If asked how you plan to use this fork, select the default
     <a href="#fig:desktop-finder">115</a>. Your screen may look
     different, depending on whether you use Windows or Mac, and the
     Local Path you selected to store your files.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-finder.png")
 
 <img src="images/08-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different." width="500" />
 <p class="caption">
@@ -6006,6 +6546,10 @@ in the Mac Finder). Windows screens will look different.
     `leaflet-map-simple`, and click the *Open in Atom* button as shown
     in Figure <a href="#fig:desktop-atom">116</a>.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/desktop-atom-annotated.png")
+
 <img src="images/08-github/desktop-atom-annotated.png" alt="In GitHub Desktop, confirm the Current Repo and click the *Open in Atom* button to edit the code."  />
 <p class="caption">
 Figure 116: In GitHub Desktop, confirm the Current Repo and click the
@@ -6018,6 +6562,10 @@ Figure 116: In GitHub Desktop, confirm the Current Repo and click the
     Figure <a href="#fig:atom-project">117</a>. Open your `index.html`
     file and edit the title of your map, around line 22, then save your
     work.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/atom-project-annotated.png")
 
 <img src="images/08-github/atom-project-annotated.png" alt="Atom Editor opens your repo as a *project*, where you can click files to view code. Edit your map title."  />
 <p class="caption">
@@ -6032,6 +6580,10 @@ click files to view code. Edit your map title.
     Atom Editor, you can right-click to *Add Project Folder*, and choose
     any GitHub repo that you have copied to your local computer.
 
+<!-- -->
+
+     knitr::include_graphics("images/08-github/atom-remove-project-annotated.png")
+
 <img src="images/08-github/atom-remove-project-annotated.png" alt="To clean up your Atom Editor workspace, right-click to *Remove Project Folder*."  />
 <p class="caption">
 Figure 118: To clean up your Atom Editor workspace, right-click to
@@ -6044,6 +6596,10 @@ Figure 118: To clean up your Atom Editor workspace, right-click to
     right-click the `index.html` file, select Open With, and choose your
     preferred web browser, as shown in Figure
     <a href="#fig:finder-open-with">119</a>.
+
+<!-- -->
+
+     knitr::include_graphics("images/08-github/finder-open-with.png")
 
 <img src="images/08-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
 <p class="caption">
@@ -6073,6 +6629,10 @@ Desktop.
     transfer those edits to the parent copy of your repo on your GitHub
     web account. Both steps are shown in Figure
     <a href="#fig:desktop-commit-push">120</a>.
+
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/08-github/desktop-commit-push.gif", height = "500px") else knitr::include_graphics("images/08-github/desktop-commit-push-annotated.png")
 
 <iframe src="images/08-github/desktop-commit-push.gif" width="100%" height="500px">
 </iframe>
@@ -6124,6 +6684,8 @@ other made, line-by-line in green and red (showing additions and
 deletions), by selecting the GitHub repo *Code* tab and clicking on one
 of our commits, as shown in Figure
 <a href="#fig:compare-commits">121</a>.
+
+     knitr::include_graphics("images/08-github/compare-commits.png")
 
 <img src="images/08-github/compare-commits.png" alt="Drag-and-drop the file to the upload screen."  />
 <p class="caption">
@@ -6821,6 +7383,8 @@ GitHub](create-repo.html) chapter in this book.
 
     https://USERNAME.github.io/leaflet-maps-with-google-sheets
 
+    if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-1-fork-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+
 <iframe src="images/10-leaflet/lmwgs-1-fork-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -6855,6 +7419,10 @@ Figure 122: Screencast: Fork
     to Anyone with the link &gt; Can View the Sheet. This will make your
     public data easier to view in your map.
 
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-2-make-copy-640.gif") else knitr::include_graphics("images/placeholder.jpg")
+
 <iframe src="images/10-leaflet/lmwgs-2-make-copy-640.gif" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -6887,6 +7455,10 @@ URL](images/10-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
 
 4.  Scroll to bottom of page and press Commit to save your changes. Now
     the Leaflet Map code can locate your published Google Sheet.
+
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif") else knitr::include_graphics("images/placeholder.jpg")
 
 <iframe src="images/10-leaflet/lmwgs-paste-google-sheet-into-code.gif" width="100%" height="400px">
 </iframe>
@@ -7779,6 +8351,8 @@ before creating choropleth maps. These map transformations happen inside
 spreadsheets, so you won’t directly deal with map data until you are
 halfway through the chapter.
 
+    knitr::include_graphics("images/11-transform/transform-data.png")
+
 <img src="images/11-transform/transform-data.png" alt="To map addresses, you need to geocode them first."  />
 <p class="caption">
 Figure 125: To map addresses, you need to geocode them first.
@@ -7818,6 +8392,8 @@ window with its latitude and longitude, as shown in Figure
 coordinates into your spreadsheet. Similar tools also geocode one place
 at a time, such as [LatLong.net](https://www.latlong.net/).
 
+    knitr::include_graphics("images/11-transform/gmaps-whats-here.png")
+
 <img src="images/11-transform/gmaps-whats-here.png" alt="To geocode one address, search in Google Maps and right-click *What's here?* to show coordinates."  />
 <p class="caption">
 Figure 126: To geocode one address, search in Google Maps and
@@ -7854,6 +8430,8 @@ The spreadsheet contains six columns. Populate the first column,
 filled by the geocoding script. Select all six columns, go to *Geocoder*
 in the menu, and choose which geocoding utility to use, like is shown in
 Figure <a href="#fig:sheets-geocoder">127</a>.
+
+    if(knitr::is_html_output()) knitr::include_url("images/11-transform/sheets-geocoder.gif", height="280px") else knitr::include_graphics("images/11-transform/sheets-geocoder.png")
 
 <iframe src="images/11-transform/sheets-geocoder.gif" width="100%" height="280px">
 </iframe>
@@ -7918,6 +8496,8 @@ for permission to run, and will possibly warn you that this script is
 unsafe. Once again, you shouldn’t worry. The plugin is open-source and
 you can inspect it to make sure it doesn’t steal or retain your personal
 data.
+
+    if(knitr::is_html_output()) knitr::include_url("images/11-transform/sheets-geocoder-censusgeo.gif", height="330px") else knitr::include_graphics("images/11-transform/sheets-geocoder-censusgeo.png")
 
 <iframe src="images/11-transform/sheets-geocoder-censusgeo.gif" width="100%" height="330px">
 </iframe>
@@ -8042,6 +8622,8 @@ shades of blue to represent states with more hospitals (as in Figure
 
 or choropleth, maps instead of point maps.
 
+    knitr::include_graphics("images/11-transform/pivot-address-annotated.png")
+
 <img src="images/11-transform/pivot-address-annotated.png" alt="You can count addresses by state (or other area) to produce polygon,"  />
 <p class="caption">
 Figure 129: You can count addresses by state (or other area) to produce
@@ -8052,6 +8634,8 @@ First, save the database to your local machine by going to *Export &gt;
 Download &gt; CSV* of Socrata interface. Figure
 <a href="#fig:pivot-address-export">130</a> shows where you can find the
 Export button.
+
+    knitr::include_graphics("images/11-transform/pivot-address-export.png")
 
 <img src="images/11-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
 <p class="caption">
@@ -8066,6 +8650,8 @@ data range is selected, and click *Create*). In the pivot table, set
 *Rows* to *State*, because we want to get counts by state. Next, set
 pivot table’s *Values* to *State*—or really any other column that has no
 missing values—and choose *Summarize by: COUNTA*. Voila!
+
+    knitr::include_graphics("images/11-transform/pivot-address-sheet.png")
 
 <img src="images/11-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
@@ -8095,6 +8681,8 @@ number of recorded cases per state, and Figure
 <a href="#fig:normalize-map-data">132</a>b shows Covid-19 cases adjusted
 by the state’s population. Darker colors represent higher values. Do you
 notice any differences in spatial patterns?
+
+    knitr::include_graphics("images/11-transform/normalize-map-data-annotated.png")
 
 <img src="images/11-transform/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
 <p class="caption">
@@ -8216,6 +8804,8 @@ lakes, roads, and other objects. These outlines become vector data. For
 example, most of [OpenStreetMap](https://www.openstreetmap.org) was
 built by volunteers tracing outlines of objects from satellite images.
 
+    knitr::include_graphics("images/11-transform/geospatial-raster-vector-annotated.png")
+
 <img src="images/11-transform/geospatial-raster-vector-annotated.png" alt="Geospatial data can be raster or vector."  />
 <p class="caption">
 Figure 133: Geospatial data can be raster or vector.
@@ -8266,6 +8856,8 @@ GIS software installed.
 Also, your GitHub repository will automatically display any GeoJSON
 files in a map view, like is shown in Figure
 <a href="#fig:geojson-github">134</a>.
+
+    knitr::include_graphics("images/11-transform/geojson-github.png")
 
 <img src="images/11-transform/geojson-github.png" alt="GitHub can show previews of GeoJSON files stored in repositories."  />
 <p class="caption">
@@ -8375,6 +8967,8 @@ Note: If GeoJson.io couldn’t import your file, you will see a red popup
 saying it “Could not detect file type”. You will need to use a different
 tool, such as Mapshaper or QGIS, to convert your file to GeoJSON.
 
+    knitr::include_graphics("images/11-transform/geojson-io-import.png")
+
 <img src="images/11-transform/geojson-io-import.png" alt="GeoJson.io successfully imported Hartford parks KML file."  />
 <p class="caption">
 Figure 135: GeoJson.io successfully imported Hartford parks KML file.
@@ -8392,6 +8986,8 @@ than *lat* and *lon* become *attributes* (or *properties*) of point
 features. An example of such spreadsheet is shown in Figure
 <a href="#fig:geojson-io-csv-data">136</a>. You can [download
 it](data/hartford-and-suburbs.csv) for the exercise.
+
+    knitr::include_graphics("images/11-transform/geojson-io-csv-data.png")
 
 <img src="images/11-transform/geojson-io-csv-data.png" alt="A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features."  />
 <p class="caption">
@@ -8430,6 +9026,10 @@ feature* button.
     GeoJson.io with your GitHub account and save directly to your
     repository.
 
+<!-- -->
+
+    if(knitr::is_html_output()) knitr::include_url("images/11-transform/dataviz-geojsonio-640.gif", height="466px")
+
 <iframe src="images/11-transform/dataviz-geojsonio-640.gif" width="100%" height="466px">
 </iframe>
 <p class="caption">
@@ -8451,6 +9051,10 @@ GeoJSON file and add markers, lines, and polygons to it.
     the area you’re interested in mapping. For this exercise, we will
     use tennis courts at Trinity College, Hartford, as shown in Figure
     <a href="#fig:geojson-io-draw">138</a>.
+
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/geojson-io-draw.png")
 
 <img src="images/11-transform/geojson-io-draw.png" alt="Use drawing tools to create points, lines, and polygons in GeoJson.io."  />
 <p class="caption">
@@ -8550,6 +9154,10 @@ or create a `.zip` archive.
     time, Mapshaper will archive them first, and you will download an
     `output.zip` that contains all exported layers.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-export.png")
+
 <img src="images/11-transform/mapshaper-export.png" alt="You can use Mapshaper to quickly convert between geospatial file formats."  />
 <p class="caption">
 Figure 139: You can use Mapshaper to quickly convert between geospatial
@@ -8573,6 +9181,10 @@ you how.
 5.  When you are done, export your geospatial file by clicking *Export*
     and choosing the desired file format.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-edit.png")
+
 <img src="images/11-transform/mapshaper-edit.png" alt="Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points."  />
 <p class="caption">
 Figure 140: Use *edit attributes* tool (under Cursor tool) to edit
@@ -8592,6 +9204,8 @@ Figure <a href="#fig:mapshaper-simplify-demo">141</a>. The map in Figure
 about 230 kilobytes, but the map in Figure
 <a href="#fig:mapshaper-simplify-demo">141</a>b is only 37 kilobytes, 6
 times smaller!
+
+    knitr::include_graphics("images/11-transform/mapshaper-simplify-demo-annotated.png")
 
 <img src="images/11-transform/mapshaper-simplify-demo-annotated.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
 <p class="caption">
@@ -8616,6 +9230,10 @@ To simplify map boundaries in Mapshaper, follow the steps below.
     corner. Click *Repair*.
 5.  You can now export your file using the *Export* feature.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-simplify.png")
+
 <img src="images/11-transform/mapshaper-simplify.png" alt="Use Simplify & Repair tools in Mapshaper."  />
 <p class="caption">
 Figure 142: Use Simplify & Repair tools in Mapshaper.
@@ -8633,6 +9251,8 @@ such tasks is to create an outline map by removing the internal
 boundaries. For example, you can dissolve state boundaries of the US map
 in the previous exercise to get the outline of the country, like is
 shown in Figure <a href="#fig:mapshaper-dissolve">143</a>.
+
+    knitr::include_graphics("images/11-transform/mapshaper-dissolve.png")
 
 <img src="images/11-transform/mapshaper-dissolve.png" alt="Mapshaper lets you dissolve boundaries to create an outline shape."  />
 <p class="caption">
@@ -8686,6 +9306,10 @@ Mapshaper allows you to do just that using one simple `-clip` command.
 1.  Your Mapshaper state should look like pictured in Figure
     <a href="#fig:mapshaper-clip">144</a>. You can now save the file on
     your computer using the *Export* button.
+
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-clip.png")
 
 <img src="images/11-transform/mapshaper-clip.png" alt="When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature iteslf."  />
 <p class="caption">
@@ -8753,6 +9377,10 @@ attribute of the map file, and `town` column of the CSV file.
 3.  You can now save the file to your computer by clicking the *Export*
     button.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-join.png")
+
 <img src="images/11-transform/mapshaper-join.png" alt="Mapshaper lets you join spatial and CSV files using common keys (for example, town names)."  />
 <p class="caption">
 Figure 145: Mapshaper lets you join spatial and CSV files using common
@@ -8801,6 +9429,10 @@ state, in our case).
 
 2.  Save the new file using *Export* button and choosing the desired
     output format.
+
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-count-points.png")
 
 <img src="images/11-transform/mapshaper-count-points.png" alt="Mapshaper's -join can count points in polygons."  />
 <p class="caption">
@@ -8881,6 +9513,10 @@ town boundaries, let’s extract a list of towns from it.
     stop right here and move to the next step, or keep assigning
     district names to a few other neighboring towns.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/mapshaper-merge-csv.png")
+
 <img src="images/11-transform/mapshaper-merge-csv.png" alt="Create a two-column crosswalk of towns and which districts they should be merged to." width="250px" />
 <p class="caption">
 Figure 147: Create a two-column crosswalk of towns and which districts
@@ -8912,6 +9548,8 @@ combined “Bloomfield-West Hartford” regional health district (with the
 shared boundary between towns becoming grayed out), and all of the other
 polygons remain the same. Figure <a href="#fig:mapshaper-merge">148</a>
 shows the final result.
+
+    knitr::include_graphics("images/11-transform/mapshaper-merge.png")
 
 <img src="images/11-transform/mapshaper-merge.png" alt="Merge polygons based on a predefined crosswalk."  />
 <p class="caption">
@@ -8954,6 +9592,10 @@ Google Earth).
     and select *Save Place As…*, like is shown in Figure
     <a href="#fig:kmz-earth">149</a>.
 
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/kmz-earth.png")
+
 <img src="images/11-transform/kmz-earth.png" alt="In Google Earth Pro, right-click the KMZ layer and choose *Save Place As*." width="400px" />
 <p class="caption">
 Figure 149: In Google Earth Pro, right-click the KMZ layer and choose
@@ -8962,6 +9604,10 @@ Figure 149: In Google Earth Pro, right-click the KMZ layer and choose
 
 1.  In the dropdown menu of *Save file…* window, choose KML format, like
     is shown in Figure <a href="#fig:kmz-save-as">150</a>.
+
+<!-- -->
+
+    knitr::include_graphics("images/11-transform/kmz-save-as.png")
 
 <img src="images/11-transform/kmz-save-as.png" alt="Save as KML, not KMZ." width="350px" />
 <p class="caption">
@@ -9198,6 +9844,8 @@ Mac computer operating system hides these by default, so you need to
 turn them on by going to Finder &gt; Preferences &gt; Advanced, and
 check the box to *Show all filename extensions*, as shown in Figure
 <a href="#fig:mac-file-extensions2">151</a>.
+
+     knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
 
 <img src="images/02-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to *Finder* then *Preferences* then *Advanced* and check the box to *Show all filename extensions*."  />
 <p class="caption">
@@ -9982,7 +10630,7 @@ tools—primarily [Bookdown](https://bookdown.org),
 chapter explains how, so that readers may do it themselves and share
 their knowledge to improve the process. In addition to our notes below,
 see also Yihui Xie’s more comprehensive [Bookdown
-guide](https://bookdown.org/yihui/bookdown/).[1]
+guide](https://bookdown.org/yihui/bookdown/).[5]
 
 Our broad goal is an efficient workflow to compose one document in the
 easy-to-write [Markdown format](https://en.wikipedia.org/wiki/Markdown)
@@ -10467,6 +11115,8 @@ Read more about these options in this Bookdown chapter:
 Small is defined as each side less than 300px, as shown in Figure
 <a href="#fig:tiger">152</a>.
 
+     knitr::include_graphics("images/17-bookdown/tiger.png")
+
 <img src="images/17-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
 Figure 152: Caption here. Markdown embedded links are acceptable.
@@ -10480,6 +11130,8 @@ optional to reduce float in PDF: `fig.pos='h',`. If necessary, copy the
 image, use Photoshop to create a smaller image size, and save with same
 file name and a .pdf extension for auto-substitution in the PDF output
 …as shown in Figure <a href="#fig:screenshot-tall">153</a>.
+
+     knitr::include_graphics("images/17-bookdown/screenshot-tall.png")
 
 <img src="images/17-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
 <p class="caption">
@@ -10498,6 +11150,8 @@ add a line in a `custom-scripts.html` file.
 
 …as shown in Figure <a href="#fig:sample-map">154</a>.
 
+    if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "600px") else knitr::include_graphics("images/17-bookdown/sample-map.jpg")
+
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="100%" height="600px">
 </iframe>
 <p class="caption">
@@ -10512,6 +11166,8 @@ When appropriate, create animated GIF files using Camtasia, and add
 fade-to-black to mark the end-point in the looped version. Add …as shown
 in Figure <a href="#fig:sheets-option-drag">155</a>.
 
+    if(knitr::is_html_output()) knitr::include_url("images/17-bookdown/sheets-option-drag.gif", height = "250px") else knitr::include_graphics("images/17-bookdown/sheets-option-drag.png")
+
 <iframe src="images/17-bookdown/sheets-option-drag.gif" width="100%" height="250px">
 </iframe>
 <p class="caption">
@@ -10525,6 +11181,8 @@ Be sure to use the *embed* link from the YouTube *share* button.
 
 …as shown in the video <a href="#fig:video-sample">156</a>.
 
+    if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-nGdrzMuUnI") else knitr::include_graphics("images/17-bookdown/video-sample.png")
+
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="100%" height="400px">
 </iframe>
 <p class="caption">
@@ -10537,6 +11195,8 @@ video](https://youtu.be/-nGdrzMuUnI).
 This option may be relevant when you wish to display a video only in the
 HMTL edition, with no screenshot of it in the PDF edition. Note that
 this will alter figure-numbering between the HTML and PDF editions.
+
+    if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/w6dQ-RIQ5bc")
 
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="100%" height="400px">
 </iframe>
@@ -10657,14 +11317,14 @@ and PDF formats, as shown in these excerpts:
         citation_package: none
         pandoc_args: [ "--csl", "chicago-fullnote-bibliography.csl" ]
 
-Here’s a text-only note, with no Zotero citation.[2]
+Here’s a text-only note, with no Zotero citation.[6]
 
 To create a note with citations only, separate Zotero/BibTeX citation
-keys with semi-colons:[3]
+keys with semi-colons:[7]
 
 Since notes also may include text and punctuation in Markdown syntax,
 always insert a caret symbol prior to the brackets to demarcate a
-note:[4]
+note:[8]
 
 Note that the `chicago-fullnote-bibliography.csl` format automatically
 shortens the note after it its first reference.
@@ -10728,8 +11388,17 @@ References
 
 <!--chapter:end:18-references.Rmd-->
 
+D’Ignazio, Catherine, and Lauren F. Klein. *Data Feminism*. MIT Press,
+2020. <https://data-feminism.mitpress.mit.edu/>.
+
+Dougherty, Jack, Jeffrey Harrelson, Laura Maloney, Drew Murphy, Russell
+Smith, Michael Snow, and Diane Zannoni. “School Choice in Suburbia: Test
+Scores, Race, and Housing Markets.” *American Journal of Education* 115,
+no. 4 (August 2009): 523–48.
+<http://digitalrepository.trincoll.edu/cssp_papers/1>.
+
 Huff, Darrell. *How to Lie with Statistics*. W. W. Norton & Company,
-1954–2010. <http://books.google.com/books?isbn=0393070875>.
+1954. <http://books.google.com/books?isbn=0393070875>.
 
 Monmonier, Mark S. *How to Lie with Maps*. 2nd ed. University of Chicago
 Press, 1996. <http://books.google.com/books?isbn=0226534219>.
@@ -10737,15 +11406,33 @@ Press, 1996. <http://books.google.com/books?isbn=0226534219>.
 Xie, Yihui. *Bookdown: Authoring Books and Technical Documents with R
 Markdown*, 2018. <https://bookdown.org/yihui/bookdown/>.
 
-[1] Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R
+Zuboff, Shoshana. *The Age of Surveillance Capitalism: The Fight for a
+Human Future at the New Frontier of Power*. PublicAffairs, 2019.
+<https://www.google.com/books/edition/The_Age_of_Surveillance_Capitalism/lRqrDQAAQBAJ>.
+
+[1] Catherine D’Ignazio and Lauren F. Klein, *Data Feminism* (MIT Press,
+2020), <https://data-feminism.mitpress.mit.edu/>.
+
+[2] Jack Dougherty et al., “School Choice in Suburbia: Test Scores,
+Race, and Housing Markets,” *American Journal of Education* 115, no. 4
+(August 2009): 523–48,
+<http://digitalrepository.trincoll.edu/cssp_papers/1>.
+
+[3] D’Ignazio and Klein, *Data Feminism*, chap. 1.
+
+[4] Shoshana Zuboff, *The Age of Surveillance Capitalism: The Fight for
+a Human Future at the New Frontier of Power* (PublicAffairs, 2019),
+<https://www.google.com/books/edition/The_Age_of_Surveillance_Capitalism/lRqrDQAAQBAJ>.
+
+[5] Yihui Xie, *Bookdown: Authoring Books and Technical Documents with R
 Markdown*, 2018, <https://bookdown.org/yihui/bookdown/>
 
-[2] This is a note, with no bibliographic reference.
+[6] This is a note, with no bibliographic reference.
 
-[3] Darrell Huff, *How to Lie with Statistics* (W. W. Norton & Company,
-1954–2010), <http://books.google.com/books?isbn=0393070875>; Mark S.
+[7] Darrell Huff, *How to Lie with Statistics* (W. W. Norton & Company,
+1954), <http://books.google.com/books?isbn=0393070875>; Mark S.
 Monmonier, *How to Lie with Maps*, 2nd ed. (University of Chicago Press,
 1996), <http://books.google.com/books?isbn=0226534219>
 
-[4] Compare how “lying” is justified by Huff, *How to Lie with
+[8] Compare how “lying” is justified by Huff, *How to Lie with
 Statistics*, pp. 10-11 and Monmonier, *How to Lie with Maps*, pp. 11-12.

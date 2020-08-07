@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-07-30" />
+<meta name="date" content="2020-08-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="opendata.html"/>
+<link rel="prev" href="bad.html"/>
 <link rel="next" href="clean.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -175,10 +175,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Know Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for your Data Search</a></li>
-<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
-<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
-<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public versus Private Data</a></li>
+<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public and Private Data</a></li>
 <li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
+<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="know.html"><a href="know.html"><i class="fa fa-check"></i>Know Your Data</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
@@ -303,18 +303,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="know" class="section level2 unnumbered" number="">
 <h2>Know Your Data</h2>
-<p>TODO: explain more about expectations about “knowing what you data means” in the scope of this chapter….</p>
-<p>If your search has produced some results, the next step is to get to know your data. Closely examine your files and ask questions about their origin, meaning, and limitations:</p>
+<p>Now that you’ve found, sourced, and inspected the file, the next step to <em>know your data</em> more deeply than what appears at its surface level. Read the source notes and examine the contents to reflect on what is explicitly stated—or unstated—to better understand its origin, context, and limitations. You cannot program a computer to do this step for you, as it requires critical-thinking skills to see beyond the characters and numbers appearing on your screen.</p>
+<p>One place to start is to ask: <em>What do the data labels really mean?</em> and to consider these potential issues:</p>
 <ul>
-<li><p>Who collected and published this data, and for what purpose? Since individuals and organizations require time and resources to do this work, seek to clarify their motivations and assumptions, both explicit and implicit ones.
-Who was the intended audience of the work? Whose perspectives does the data privilege? Whose stories remain untold? As practitioners of data visualization, we strongly favor evidence-based reasoning over its less-informed alternatives. But we also caution against embracing so-called data objectivity. Numbers are <em>not</em> neutral, and we always need to consider the broader contexts in which people created them.</p></li>
-<li><p>What do the data labels <em>really</em> mean? Most spreadsheets contain abbreviated column headers, particularly due to software character limits, but some questions of data interpretation run much deeper. For example, socially-constructed labels such as “race” or “gender” may not clarify how the creators defined their terms, or what role respondents played in the collection process. Even seemingly objective labels such as “income” or “population” or “elevation” may not adequately describe exactly what was counted, how it was measured, and the margins of error. Better-quality datasets include detailed definitions of the collection process to help you to understand the decisions made by its creators. If not, then your next best option may be to go out into the field, if feasible, and directly observe how the data is measured and collected.</p></li>
+<li><p>Abbreviated column headers, such as <em>Elevation</em> or <em>Income</em>, often appear in spreadsheets. Sometimes the original software limited the number of characters that could be entered, or the people who created the header names preferred to keep them short. But was <em>Elevation</em> entered in meters or feet? An abbreviated data label does not answer that key question, so you’ll need to check the source notes, or if that’s not available, compare elevation data for a specific point in the dataset to a known source that includes the measurement unit. Similarly, if you’re working with US Census data, does the <em>Income</em> abbreviation refer to per person, per family, or per household? Also, does the value reflect the <em>median</em> (the mid-point in a range of numbers) or the <em>mean</em> (the average, calculated by adding up the sum and dividing by the number of values). Check definitions in the source notes.</p></li>
+<li><p>Exactly how was the data recorded? For example, was <em>Elevation</em> for a specific location measured by a GPS unit on the ground? Or was the location geocoded on a digital map that contains elevation data? In most cases the two methods will yield different results, and whether that matters depends on the degree of precision required in your work. Similarly, when the US Census reports data from its annual American Community Survey (ACS) estimates for <em>Income</em> and other variables, these are drawn from small samples of respondents for lower levels of geography, such as a census tract with roughly 4,000 residents, which can generate very high margins of error. For example, it’s <a href="https://handsondataviz.org/data/ct-tract-income-moe-acs2018.xlsx">not uncommon to see ACS estimates</a> for a census tract with a mean family income of $50,000—but also with a $25,000 margin of error—which tells you that the actual value is somewhere between $25,000 and $75,000. As a result, some ACS estimates for small geographic units are effectively meaningless. Check how data was recorded, and any reported margins of error, in the source notes.</p></li>
+<li><p>To what extent is the data socially constructed? In other words, what do the data labels reveal or hide about how people defined categories in different social and political contexts, which differ across place and time? For example, we designed an <a href="https://ontheline.github.io/otl-racial-change/index-caption.html#10/41.7900/-72.6000/1900/100">interactive historical map of racial change</a> for Hartford County, Connecticut using over 100 years of US Census data. But Census categories for race and ethnicity changed dramatically during those decades because people in power redefined these contested terms and moved who belonged in which group. For example, through the 1930s, the US Census separated “Native White” and “Foreign-born White” in its official reports, then combined and generally reported these as “White” in later decades. Also, the Census classified “Mexican” as “Other races” in 1930, then moved this group back to “White” in 1940, then began to report “Puerto Rican or Spanish surname” data in 1960, followed by “Hispanic or Latino” in later decades, as an ethnic category that was distinct from race. The Census finally replaced “Negro” with “Black” in 1980, and in 2000 allow people to select more than one racial category, such as both “White” and “Black,” unlike prior decades when these terms were mutually exclusive and people could choose only one. As a result, historical changes in the social construction of race and ethnicity influenced how we designed our map to display “White” or “White alone” over time, with additional census categories relevant to each decade shown in the pop-up window, with our explanation of our decisions in the caption and source notes. There is no single definitive way to visualize socially-constructed data when definitions change across decades. But when you make choices about data, describe your thought process in the notes.</p></li>
 </ul>
-<p>TODO: Add examples above on how US census race and ethnicity categories changed over time? And how ACS measurements about income in small areas are subject to high margins of error?</p>
-<p>To be clear, you may never <em>truly know</em> your data if it was collected by someone else, particularly a different person in a distant place or time. But don’t let that philosophical obstacles stop you from asking good questions about the origins and limitations of your data. Only by clarifying what we know—and what we don’t know—can we create meaningful data visualizations that bring their inner-stories to life.</p>
+<!-- TODO: Read and insert Margo Anderson's American Census 2nd edition 2015 here as background -->
+<p>To be clear, you may never <em>truly know</em> your data if it was collected by someone else, particularly a different person in a distant place or time. But don’t let philosophical obstacles stop you from asking good questions about the origins, context, and limitations of your data. Only by clarifying what we know—and what we don’t know—can we create meaningful visualizations that bring people’s stories behind the data to the forefront.</p>
 <div id="summary3" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
-<p>This chapter reviewed two broad questions that everyone should ask during the early stages of their visualization project: <em>Where can I find data?</em> and <em>What do I really know about it?</em> We broke down both questions into more specific parts to develop your knowledge and skills in recognizing bad data, sourcing the origins of your data, distinguishing between public versus private data, and navigating the growing number of open data repositories. As you leap into the next few chapters on cleaning data and creating interactive charts and maps, remember these lessons as you strive to create meaningful visualizations.</p>
+<p>This chapter reviewed two broad questions that everyone should ask during the early stages of their visualization project: <em>Where can I find data?</em> and <em>What do I really know about it?</em> We broke down both questions into more specific parts to develop your knowledge and skills in guiding questions for your search, engaging with debates over public and private data, navigating open data repositories, sourcing data origins, recognizing bad data, and understanding your data at a deeper level. Remember these lessons as you leap into the next few chapters on cleaning data and creating interactive charts and maps.</p>
 
 </div>
 </div>
@@ -324,7 +324,7 @@ Who was the intended audience of the work? Whose perspectives does the data priv
           </div>
         </div>
       </div>
-<a href="opendata.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bad.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="clean.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

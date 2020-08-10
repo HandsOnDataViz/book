@@ -437,28 +437,81 @@ TODO: write out all steps from notes below
 
 TODO: Explain why you need to create a free Google Sheets API Key to allow the code template to read data from your Google Sheet. (This is a new requirement with version X of our template, beginning in August 2020, in order to work with Google Sheets API version 4.)
 
+In the steps below, you will create and name your Google Cloud project, enable the Google Sheets API to allow a computer to read data from your Google Sheet, copy your new API key, and paste it into the Leaflet code in place of our key.
+
 Reminders:
 
 - you need a personal Google account, not a Google Suite account issued by your school or business
 - if you already did this step for another Leaflet Map, you can copy and use your existing Google Sheets API key
 
 
-- Visit https://console.developers.google.com/ and log in to your Google account. The Google Cloud Platform may ask you to identify your country and agree to terms of service.
+1. Go to the Google Developers Console at https://console.developers.google.com/ and log in to your Google account. Google may ask you to identify your country and agree to its terms of service.
 
-- Click on *Create a Project* on the opening screen. Or if you don't see that option, go to the upper-left drop-down menu to *Select a project > New project*. IMAGE google-api-create.png
+2. Click on *Create a Project* on the opening screen, as shown in Figure \@ref(fig:google-api-create). Or alternatively, go to the upper-left drop-down menu to *Select a project > New project*.
 
-- Give your new project a meaningful short name to remind you of its purpose, such as `handsondataviz`. You do not need to create an organization or parent folder. Click Create. IMAGE google-api-name.png
+(ref:google-api-create) Select *Create a Project* or use the menu to select a new project.
 
-- Enable Google Sheets API inside your Google cloud project. To do so,
-    - From the top menu, press `+ Enable APIs and Services`   IMG google-api-enable.png
-    - Use the search bar to find Google Sheets API and select it.   IMG google-api-search.png
-    - In the next screen click Click Enable.   IMG google-api-select.png
+```{r google-api-create, fig.cap="(ref:google-api-create)"}
+ knitr::include_graphics("images/10-leaflet/google-api-create.png")
+```
 
-  - In the left sidebar menu, click *Credentials*, then click *+ Create Credentials* and select *API key*. IMG google-api-credentials.png
+3. In the next screen, give your new project a meaningful short name to remind you of its purpose, such as `handsondataviz`. You do not need to create an organization or parent folder. Then click *Create*, as shown in Figure \@ref(fig:google-api-name).
 
-- A window with the generated API key will appear. Copy it. IMG google-api-key.png
+(ref:google-api-name) Give your project a meaningful short name.
 
-- In that window, click Restrict key. In the new window, under API restrictions, choose Restrict key radio button. In the dropdown that appears, choose Google Sheets API. Click Save. IMG google-api-restrict.png
+```{r google-api-name, fig.cap="(ref:google-api-name)"}
+ knitr::include_graphics("images/10-leaflet/google-api-name.png")
+```
+
+4. In the next screen, press the *+ Enable APIs and Services* at the top of the menu, as shown in Figure \@ref(fig:google-api-enable). Make sure that your new project name appears near the top.
+
+(ref:google-api-name) Press the *+ Enable APIs and Services* button.
+
+```{r google-api-enable, fig.cap="(ref:google-api-enable)"}
+ knitr::include_graphics("images/10-leaflet/google-api-enable.png")
+```
+
+5. In the next screen, enter *Google Sheets* into the search bar, and select this result, as shown in Figure \@ref(fig:google-api-search).
+
+(ref:google-api-search) Search for *Google Sheets* and select this result.
+
+```{r google-api-search, fig.cap="(ref:google-api-search)"}
+ knitr::include_graphics("images/10-leaflet/google-api-search.png")
+```
+
+6. In the next screen, select the *Enable* button to turn on the Google Sheets API for your project, as shown in Figure \@ref(fig:google-api-select).
+
+(ref:google-api-select) Select the *Enable* button for Google Sheets API.
+
+```{r google-api-select, fig.cap="(ref:google-api-select)"}
+ knitr::include_graphics("images/10-leaflet/google-api-select.png")
+```
+
+7. In the left sidebar menu, click *Credentials*, then click *+ Create Credentials* and select *API key*, as shown in Figure \@ref(fig:google-api-credentials).
+
+(ref:google-api-credentials) Select *Credentials - Create Credentials - API key*.
+
+```{r google-api-credentials, fig.cap="(ref:google-api-credentials)"}
+ knitr::include_graphics("images/10-leaflet/google-api-credentials.png")
+```
+
+8. In the next screen, the console will generate your API key. Copy it, then press *Restrict key*, as shown in Figure \@ref(fig:google-api-key).   
+
+(ref:google-api-key) Copy your API key and press *Restrict key*.
+
+```{r google-api-key, fig.cap="(ref:google-api-key)"}
+ knitr::include_graphics("images/10-leaflet/google-api-key.png")
+```
+
+9. In the new window, under *API restrictions*, choose the *Restrict key* radio button. In the dropdown that appears, choose *Google Sheets API*, then click *Save*, as shown in Figure \@ref(fig:google-api-restrict).
+
+(ref:google-api-restrict) Choose *API restrictions - Restrict key - Google Sheets API*
+
+```{r google-api-restrict, fig.cap="(ref:google-api-restrict)"}
+ knitr::include_graphics("images/10-leaflet/google-api-restrict.png")
+```
+
+
 
 - COPY see text below -- IMG google-api-copy.png
 

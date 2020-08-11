@@ -129,9 +129,15 @@ Our next task is to link your Google Sheet to your Leaflet code in GitHub, so th
 
 1. At the top of your GitHub repo, click to open the file named `google-doc-url.js`, and click the pencil symbol to edit it.
 
-2. Paste *your* Google Sheet address or URL (which usually ends in `...XYZ/edit#gid=0`) to replace the existing URL, as shown in Figure TODO. Be careful *NOT* to erase the single quotation marks or the semicolon at the end.
+2. Paste *your* Google Sheet address or URL (which usually ends in `...XYZ/edit#gid=0`) to replace the existing URL, as shown in Figure \@ref(fig:google-doc-url). Be careful *NOT* to erase the single quotation marks or the semicolon at the end. See separate instructions about the Google API key further below.
 
-TODO: Insert image google-doc-url.png
+(ref:google-doc-url) Paste in *your* Google Sheet URL to replace *our* URL.
+
+```{r google-doc-url, fig.cap="(ref:google-doc-url)"}
+ knitr::include_graphics("images/10-leaflet/google-doc-url-annotated.png")
+```
+
+<!-- TODO: Update image when new code is done -->
 
 3. Scroll to bottom of page and press *Commit* to save your changes. Now your published Google Sheet is linked to your published Leaflet map code.
 
@@ -431,19 +437,18 @@ Learn more:
 To solve problems, see [Fix Common Mistakes](fix.html) section of the appendix.
 
 
-
 ## Get Your Google Sheets API Key {- #google-sheets-api-key}
-TODO: write out all steps from notes below
+After you've created your own version of [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) or [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html), there are two ways to finalize your map, as described above: either save your Google Sheet tabs in CSV format, or get your own Google Sheets API key and paste it into your Leaflet code on GitHub. You'll learn about the latter method in this section.
 
-TODO: Explain why you need to create a free Google Sheets API Key to allow the code template to read data from your Google Sheet. (This is a new requirement with version X of our template, beginning in August 2020, in order to work with Google Sheets API version 4.)
+Google requires a API (application program interface) key to allow your computer code to read data from your Google Sheets, beginning with version 4 in September 2020. (If you created your own Leaflet Maps or Storymaps with Google Sheets using our template prior to September 2020, and you want to continue to pull data from your Google Sheet, you'll need to update your code to make sure it keeps working **TODO: explain pull request**.) Google requires this API key to [maintain reasonable limits](https://developers.google.com/sheets/api/limits) on use of its services. For Google Sheets, the limit is 500 requests per 100 seconds per project, and 100 requests per 100 seconds per user. There is no daily usage limit.
 
-In the steps below, you will create and name your Google Cloud project, enable the Google Sheets API to allow a computer to read data from your Google Sheet, copy your new API key, and paste it into the Leaflet code in place of our key.
+You can get your own API key for free by following the steps below. Overall, you will create and name your Google Cloud project, enable the Google Sheets API to allow a computer to read data from your Google Sheet, copy your new API key, and paste it into the Leaflet code in place of our key.
 
-Reminders:
+Before you begin:
 
-- you need a personal Google account, not a Google Suite account issued by your school or business
-- if you already did this step for another Leaflet Map, you can copy and use your existing Google Sheets API key
-
+- You need a personal Google account, *not* a Google Suite account issued by your school or business.
+- This tutorial presumes that you have already have completed the [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) or [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) template above, and wish to finalize your map.
+- If you already created a Google Sheets API key for one template above, you can also use that key for another template. 
 
 1. Go to the Google Developers Console at https://console.developers.google.com/ and log in to your Google account. Google may ask you to identify your country and agree to its terms of service.
 
@@ -511,13 +516,17 @@ Reminders:
  knitr::include_graphics("images/10-leaflet/google-api-restrict.png")
 ```
 
+10. In your Leaflet map code on your GitHub repo, open the `google-doc-url.js` file, click the pencil symbol to edit it, and paste in *your* Google Sheets API key to replace *our* key, as shown in Figure \@ref(fig:google-api-paste). Be careful not to erase the single-quote marks or the semicolon. Scroll down to *Commit* your changes.
 
+(ref:google-api-paste) Paste in *your* Google Sheets API key to replace *our* key.
 
-- COPY see text below -- IMG google-api-copy.png
+```{r google-api-paste, fig.cap="(ref:google-api-paste)"}
+ knitr::include_graphics("images/10-leaflet/google-api-paste-annotated.png")
+```
 
-Copy your Google API key to `google-doc-url.js` file inside a GoogleApiKey variable. Once you save it go GitHub you may get a notification from GitHub’s GitGuardian bot saying you have an exposed API key. Don’t worry about it – this key can only be used with Google Sheets, and it’s free. You did not attach billing information to it, so there is no way you can get charged.
+You might receive a notification from GitHub stating that you have an exposed API key, but don't worry. This key can only be used with Google Sheets, you received it for free, and you did not attach any billing information to it, so Google cannot charge you for its use.
 
-
+Now that you've learned how to create a Google Sheets API key to use with Leaflet Maps with Google Sheets or Leaflet Storymaps with Google Sheets, in the next sections you'll learn more about other types of Leaflet map templates.
 
 
 ## Leaflet Maps with CSV Data {- #leaflet-maps-with-csv}

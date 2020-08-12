@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-07" />
+<meta name="date" content="2020-08-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -418,9 +418,16 @@ Figure 10.4: Copy the Google Sheet address at the top of the browser, NOT the <e
 <p>Our next task is to link your Google Sheet to your Leaflet code in GitHub, so that content from your Sheet will appear in your map.</p>
 <ol style="list-style-type: decimal">
 <li><p>At the top of your GitHub repo, click to open the file named <code>google-doc-url.js</code>, and click the pencil symbol to edit it.</p></li>
-<li><p>Paste <em>your</em> Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>) to replace the existing URL, as shown in Figure TODO. Be careful <em>NOT</em> to erase the single quotation marks or the semicolon at the end.</p></li>
+<li><p>Paste <em>your</em> Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>) to replace the existing URL, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:google-doc-url">10.5</a>. Be careful <em>NOT</em> to erase the single quotation marks or the semicolon at the end. See separate instructions about the Google API key further below.</p></li>
 </ol>
-<p>TODO: Insert image google-doc-url.png</p>
+
+<div class="figure"><span id="fig:google-doc-url"></span>
+<img src="images/10-leaflet/google-doc-url-annotated.png" alt="Paste in your Google Sheet URL to replace our URL."  />
+<p class="caption">
+Figure 10.5: Paste in <em>your</em> Google Sheet URL to replace <em>our</em> URL.
+</p>
+</div>
+<!-- TODO: Update image when new code is done -->
 <ol start="3" style="list-style-type: decimal">
 <li><p>Scroll to bottom of page and press <em>Commit</em> to save your changes. Now your published Google Sheet is linked to your published Leaflet map code.</p></li>
 <li><p>Also, let’s paste your Google Sheets browser address in a second place to keep track of it. In your GitHub repo, click to open the README.md file, click the pencil symbol to edit it, and paste <em>your</em> Google Sheet browser address to replace the existing address. Scroll down and commit to save your changes.</p></li>
@@ -453,20 +460,20 @@ Figure 10.4: Copy the Google Sheet address at the top of the browser, NOT the <e
 - Name: Add a title to display in the marker pop-up window.
 - Image: Insert link to an external image link, or upload a small image to the <em>media</em> folder in your GitHub repo and add its pathname, such as <code>media/trinity-college.jpg</code>. TODO: add this to GSheet after code update
 - Description: Add text to appear in the marker pop-up window. You may include HTML web links in this format: <code>&lt;a href="url"&gt;link text&lt;/a&gt;</code>. If a map link should open in a new browser tab, set the <em>target</em> attribute to <code>_blank</code>. Learn about HTML syntax at <a href="https://www.w3schools.com/html/html_links.asp">W3Schools</a>.</p>
-<p>The next six columns help to place the Location of your marker on the map. The Leaflet code requires you to fill-in the Latitude and Longitude columns, which you can do using the built-in Geocoder menu in our Google Sheet template, which we introduced in chapter TODO: INSERT GEOCODER CHAPTER. Click the cell(s) you wish to geocode, and use shift-click to select all six columns from Location to Source (columns I to N). In the Geocoder menu, select either US Census or Google, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:google-sheets-geocoder2">10.5</a>. The first time you run the Geocoder script, it will ask for your permission. TODO: since we still need Google to authorize our script, you will need to click <em>Advanced</em> and then <em>Go to Geocoder (unsafe)</em> near the bottom of the next screen. Trust us – it’s safe to use! Sorry for the inconvenience. Always inspect the accuracy of your geocoded results.</p>
+<p>The next six columns help to place the Location of your marker on the map. The Leaflet code requires you to fill-in the Latitude and Longitude columns, which you can do using the built-in Geocoder menu in our Google Sheet template, which we introduced in chapter TODO: INSERT GEOCODER CHAPTER. Click the cell(s) you wish to geocode, and use shift-click to select all six columns from Location to Source (columns I to N). In the Geocoder menu, select either US Census or Google, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:google-sheets-geocoder2">10.6</a>. The first time you run the Geocoder script, it will ask for your permission. TODO: since we still need Google to authorize our script, you will need to click <em>Advanced</em> and then <em>Go to Geocoder (unsafe)</em> near the bottom of the next screen. Trust us – it’s safe to use! Sorry for the inconvenience. Always inspect the accuracy of your geocoded results.</p>
 
 <div class="figure"><span id="fig:google-sheets-geocoder2"></span>
 <img src="images/10-leaflet/google-sheets-geocoder2.png" alt="To use our built-in Geocoder menu, shift-click to select all columns from Location through Source."  />
 <p class="caption">
-Figure 10.5: To use our built-in Geocoder menu, shift-click to select all columns from Location through Source.
+Figure 10.6: To use our built-in Geocoder menu, shift-click to select all columns from Location through Source.
 </p>
 </div>
-<p>Optional: You can display a table of viewable markers at the bottom of your map, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-with-table">10.6</a>. In the <em>Options</em> tab, set <em>Display Table</em> (cell B30) to <em>On</em>. You can also adjust the <em>Table Height</em>, and modify the display of <em>Table Columns</em> by entering the column headers, separated with commas.</p>
+<p>Optional: You can display a table of viewable markers at the bottom of your map, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-with-table">10.7</a>. In the <em>Options</em> tab, set <em>Display Table</em> (cell B30) to <em>On</em>. You can also adjust the <em>Table Height</em>, and modify the display of <em>Table Columns</em> by entering the column headers, separated with commas.</p>
 
 <div class="figure"><span id="fig:leaflet-map-with-table"></span>
-<img src="images/10-leaflet/leaflet-map-with-table.png" alt="One option is to display a table of viewable markers at the bottom of your map."  />
+<img src="images/10-leaflet/leaflet-map-with-table.png" alt="One option is to display a table of viewable markers at the bottom of your map." width="500" />
 <p class="caption">
-Figure 10.6: One option is to display a table of viewable markers at the bottom of your map.
+Figure 10.7: One option is to display a table of viewable markers at the bottom of your map.
 </p>
 </div>
 <p>Optional: You can create your own custom marker, such as the Trinity College Bantam mascot in the demo. Use an image editing tool to create a square image, 64 x 64 pixels or smaller, with a transparent background. Save it in PNG format with a filename using all lower-case letters with no spaces. Upload the image to the <em>markers</em> folder in your GitHub repo. In the Marker Icon column, set the pathname in this format: <code>markers/custom-trinity-64.png</code>. In the Custom Size column, set to <code>64x64</code> or similar.</p>
@@ -515,7 +522,7 @@ Figure 10.6: One option is to display a table of viewable markers at the bottom 
 <div id="g-save-each-google-sheets-tab-as-a-csv-file-and-upload-to-github" class="section level4 unnumbered" number="">
 <h4>G) Save each Google Sheets tab as a CSV file and upload to GitHub</h4>
 <p>If you have finished entering most of your data into your Google Sheets, save each tab as a CSV file and upload them to GitHub. The Leaflet map code will pull data directly from your CSV files, rather than your Google Sheets. And you can <em>still</em> edit your CSV files in GitHub. Moving your data from Google Sheets to CSV format is the <em>best</em> long-term preservation strategy, because it keeps your map and data together in the same GitHub folder, and removes the risk that your map will break due to an interruption to Google services, as described in Step H.</p>
-<p>To move your map data from Google Sheets to CSV format, go to each tab and select <em>File &gt; Download As</em> into CSV format, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-download-csv">10.7</a>, using these file names: <strong>TODO: should we warn to keep the first letter upper-case?</strong></p>
+<p>To move your map data from Google Sheets to CSV format, go to each tab and select <em>File &gt; Download As</em> into CSV format, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-download-csv">10.8</a>, using these file names: <strong>TODO: should we warn to keep the first letter upper-case?</strong></p>
 <ul>
 <li>Options.csv</li>
 <li>Points.csv</li>
@@ -526,9 +533,9 @@ Figure 10.6: One option is to display a table of viewable markers at the bottom 
 <p>Upload all of these CSV files into the main level (or root level) of your GitHub repository. The Leaflet code looks here first for the data, and when it locates them, will pull the data directly from the CSV files into your map, skipping over the Google Sheets. TODO: Confirm this code request is working</p>
 
 <div class="figure"><span id="fig:sheets-download-csv"></span>
-<img src="images/10-leaflet/sheets-download-csv.png" alt="One way to finalize your map is to download each Google Sheets tab as a CSV file."  />
+<img src="images/10-leaflet/sheets-download-csv.png" alt="One way to finalize your map is to download each Google Sheets tab as a CSV file." width="350" />
 <p class="caption">
-Figure 10.7: One way to finalize your map is to download each Google Sheets tab as a CSV file.
+Figure 10.8: One way to finalize your map is to download each Google Sheets tab as a CSV file.
 </p>
 </div>
 </div>

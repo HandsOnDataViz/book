@@ -183,7 +183,7 @@ Optional: You can display a table of viewable markers at the bottom of your map,
 
 (ref:leaflet-map-with-table) One option is to display a table of viewable markers at the bottom of your map.
 
-```{r leaflet-map-with-table, fig.cap="(ref:leaflet-map-with-table)"}
+```{r leaflet-map-with-table, out.width=500, fig.cap="(ref:leaflet-map-with-table)"}
 knitr::include_graphics("images/10-leaflet/leaflet-map-with-table.png")
 ```
 
@@ -246,7 +246,7 @@ Upload all of these CSV files into the main level (or root level) of your GitHub
 
 (ref:sheets-download-csv) One way to finalize your map is to download each Google Sheets tab as a CSV file.
 
-```{r sheets-download-csv, fig.cap="(ref:sheets-download-csv)"}
+```{r sheets-download-csv, out.width=350, fig.cap="(ref:sheets-download-csv)"}
  knitr::include_graphics("images/10-leaflet/sheets-download-csv.png")
 ```
 
@@ -448,7 +448,7 @@ Before you begin:
 
 - You need a personal Google account, *not* a Google Suite account issued by your school or business.
 - This tutorial presumes that you have already have completed the [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) or [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) template above, and wish to finalize your map.
-- If you already created a Google Sheets API key for one template above, you can also use that key for another template. 
+- If you already created a Google Sheets API key for one template above, you can also use that key for another template.
 
 1. Go to the Google Developers Console at https://console.developers.google.com/ and log in to your Google account. Google may ask you to identify your country and agree to its terms of service.
 
@@ -456,7 +456,7 @@ Before you begin:
 
 (ref:google-api-create) Select *Create a Project* or use the menu to select a new project.
 
-```{r google-api-create, fig.cap="(ref:google-api-create)"}
+```{r google-api-create, out.width=600, fig.cap="(ref:google-api-create)"}
  knitr::include_graphics("images/10-leaflet/google-api-create.png")
 ```
 
@@ -464,13 +464,13 @@ Before you begin:
 
 (ref:google-api-name) Give your project a meaningful short name.
 
-```{r google-api-name, fig.cap="(ref:google-api-name)"}
+```{r google-api-name, out.width=450, fig.cap="(ref:google-api-name)"}
  knitr::include_graphics("images/10-leaflet/google-api-name.png")
 ```
 
 4. In the next screen, press the *+ Enable APIs and Services* at the top of the menu, as shown in Figure \@ref(fig:google-api-enable). Make sure that your new project name appears near the top.
 
-(ref:google-api-name) Press the *+ Enable APIs and Services* button.
+(ref:google-api-enable) Press the *+ Enable APIs and Services* button.
 
 ```{r google-api-enable, fig.cap="(ref:google-api-enable)"}
  knitr::include_graphics("images/10-leaflet/google-api-enable.png")
@@ -488,7 +488,7 @@ Before you begin:
 
 (ref:google-api-select) Select the *Enable* button for Google Sheets API.
 
-```{r google-api-select, fig.cap="(ref:google-api-select)"}
+```{r google-api-select, out.width=350, fig.cap="(ref:google-api-select)"}
  knitr::include_graphics("images/10-leaflet/google-api-select.png")
 ```
 
@@ -504,15 +504,15 @@ Before you begin:
 
 (ref:google-api-key) Copy your API key and press *Restrict key*.
 
-```{r google-api-key, fig.cap="(ref:google-api-key)"}
- knitr::include_graphics("images/10-leaflet/google-api-key.png")
+```{r google-api-key, out.width=500, fig.cap="(ref:google-api-key)"}
+ knitr::include_graphics("images/10-leaflet/google-api-key-annotated.png")
 ```
 
 9. In the new window, under *API restrictions*, choose the *Restrict key* radio button. In the dropdown that appears, choose *Google Sheets API*, then click *Save*, as shown in Figure \@ref(fig:google-api-restrict).
 
 (ref:google-api-restrict) Choose *API restrictions - Restrict key - Google Sheets API*
 
-```{r google-api-restrict, fig.cap="(ref:google-api-restrict)"}
+```{r google-api-restrict, out.width=600, fig.cap="(ref:google-api-restrict)"}
  knitr::include_graphics("images/10-leaflet/google-api-restrict.png")
 ```
 

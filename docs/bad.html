@@ -311,7 +311,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Dates similar to <code>43891</code>: When you type <code>March 1</code> during the year 2020 into Microsoft Excel, it automatically displays as <code>1-Mar</code>, but is saved using Excel’s internal date system as <code>43891</code>. If someone converts this column from date to text format, you’ll see Excel’s 5-digit number, not the dates you’re expecting.</li>
 </ul>
 <p>Another way to review the quality of data entry in any column in a spreadsheet is to create <a href="sort.html">a filter</a> or a <a href="pivot.html">pivot table</a> as described in chapter 2. This allows you to quickly inspect the range of values that appear in that column, and whether they match what you expected to find.</p>
-<p>What should you do when you discover bad data in your project? Sometimes small issues are relatively straightforward, do not call into question the integrity of the entire dataset, and you can fix them using methods to <a href="clean.html">clean up messy data</a> that we describe in chapter 4. But larger issues are more problematic. Follow the source of your data stream to try to identify where the issue began. If you cannot find and fix the issue on your own, contact the data provider to ask for their input, since they should have a strong interest in improving the quality of the data. If they cannot resolve an important data issue, then you need to pause and think carefully. In this case, is it wiser to continue working with problematic data and add a cautionary note to readers, or should you stop using the dataset entirely and call attention to its underlying problem? These are not easy decisions, and you should ask for opinions from colleagues. In any case, never ignore the warning signs of bad data.</p>
+<p>What should you do when you discover bad data in your project? Sometimes small issues are relatively straightforward and do not call into question the integrity of the entire dataset. Sometimes you can fix these using methods we describe in <a href="clean.html">Chapter 4: Clean Up Messy Data</a>. But larger issues can be more problematic. Follow the source of your data stream to try to identify where the issue began. If you cannot find and fix the issue on your own, contact the data provider to ask for their input, since they should have a strong interest in improving the quality of the data. If they cannot resolve an important data issue, then you need to pause and think carefully. In this case, is it wiser to continue working with problematic data and add a cautionary note to readers, or should you stop using the dataset entirely and call attention to its underlying problem? These are not easy decisions, and you should ask for opinions from colleagues. In any case, never ignore the warning signs of bad data.</p>
+<p>Finally, you can help to prevent bad data from occurring by following key steps we’ve outlined above. Give meaningful names to your data files, and add source notes in a separate tab about when and where you obtained it, along with any definitions or details about what it claims to measure and how it was recorded. Explain what any blanks or null values mean, and avoid replacing those with zeroes or other symbols. Always watch out for formatting issues when entering data or running calculations in spreadsheets.</p>
 <p>In the next section, you’ll learn more questions to help you understand your data at a deeper level.</p>
 </div>
             </section>
@@ -362,7 +363,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/03-find.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

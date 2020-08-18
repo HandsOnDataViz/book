@@ -330,8 +330,7 @@ which contains 169 Connecticut towns and their population, for the exercise.</p>
 <li>Select the column you want to modify by clicking on the column header. If you don’t,
 you will be searching and replacing in the entire spreadsheet.</li>
 <li>From <em>Edit</em> menu, choose <em>Find and replace</em> item. You will see the window like is shown in Figure <a href="clean-spreadsheets.html#fig:sheets-find-replace">4.2</a>.</li>
-<li>In the <em>Find</em> field, type <code>town</code>, without quotation marks <strong>and leave a space before the word</strong>. If you don’t leave the space,
-you will accidentally remove <em>town</em> from <em>Newtown</em>, and you will end up with trailing spaces which can cause troubles in the future.</li>
+<li>In the <em>Find</em> field, type <code>town</code>, and be sure to <em>insert a blank space</em> before the word. If you do not insert a space, you will accidentally remove <em>town</em> from places such as <em>Newtown</em>, and you’ll also end up with trailing spaces that can cause troubles in the future.</li>
 <li>Leave the <em>Replace with</em> field blank.</li>
 <li><em>Search</em> field should be set to the range you selected in step 1, or <em>All sheets</em> if you didn’t
 select anything.</li>
@@ -339,7 +338,7 @@ select anything.</li>
 For our purpose, you can leave <em>match case</em> unchecked.</li>
 <li>Press the <em>Replace all</em> button. Since this sample file contains 169 towns, the window
 will state that 169 instances of “town” have been replaced.</li>
-<li>Inspect the resulting sheet. Make sure town names such as <em>Newtown</em> remained untouched.</li>
+<li>Inspect the resulting sheet. Make sure that places that include <em>town</em> in their name, such as <em>Newtown</em>, remained untouched.</li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-find-replace"></span>
@@ -503,7 +502,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/04-clean.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

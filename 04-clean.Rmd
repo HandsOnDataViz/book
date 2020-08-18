@@ -70,8 +70,7 @@ which contains 169 Connecticut towns and their population, for the exercise.
 1. Select the column you want to modify by clicking on the column header. If you don't,
 you will be searching and replacing in the entire spreadsheet.
 2. From *Edit* menu, choose *Find and replace* item. You will see the window like is shown in Figure \@ref(fig:sheets-find-replace).
-3. In the *Find* field, type ` town`, without quotation marks **and leave a space before the word**. If you don't leave the space,
-you will accidentally remove *town* from *Newtown*, and you will end up with trailing spaces which can cause troubles in the future.
+3. In the *Find* field, type ` town`, and be sure to *insert a blank space* before the word. If you do not insert a space, you will accidentally remove *town* from places such as *Newtown*, and you'll also end up with trailing spaces that can cause troubles in the future.
 4. Leave the *Replace with* field blank.
 5. *Search* field should be set to the range you selected in step 1, or *All sheets* if you didn't
 select anything.
@@ -79,7 +78,7 @@ select anything.
 For our purpose, you can leave *match case* unchecked.
 7. Press the *Replace all* button. Since this sample file contains 169 towns, the window
 will state that 169 instances of "town" have been replaced.
-8. Inspect the resulting sheet. Make sure town names such as *Newtown* remained untouched.
+8. Inspect the resulting sheet. Make sure that places that include *town* in their name, such as *Newtown*, remained untouched.
 
 (ref:sheets-find-replace) Find and Replace window in Google Sheets.
 

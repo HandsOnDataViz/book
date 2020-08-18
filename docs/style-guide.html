@@ -316,8 +316,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Sidebar: Use this to note where the editor has requested a boxed sidebar. If longer than one paragraph, add “End Sidebar” to close it.</li>
 </ul>
-<p>Insert an embedded link to <a href="https://www.oreilly.com/">O’Reilly</a>. This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O’Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.</p>
-<p>Also, embed the link directly in the sentence, such as <a href="https://handsondataviz.org/data/ct-dph-covid-2020-05-31.pdf">download this sample PDF</a>. Avoid linking words such as “here” or “this web page.” Also, avoid writing “Click on this…” in the main text, such as when downloading a sample file, since readers cannot click on the print edition. However, it is acceptable to write “click on” or “right-click on” in a tutorial on interacting with software.</p>
+<p>Insert an embedded external link to <a href="https://www.oreilly.com/">O’Reilly</a>. This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O’Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.</p>
+<p>Insert an embedded internal link to the book, using the short pathname, such as <a href="data/data.csv">download this sample CSV file</a>, to ensure that Bookdown copies the file from the <code>data</code> subfolder over to the <code>docs</code> subfolder.</p>
+<p>Embed links directly in the sentence, such as <a href="data/ct-dph-covid-2020-05-31.pdf">download this sample PDF</a>. Avoid linking words such as “here” or “this web page.” Also, avoid writing “Click on this…” in the main text, such as when downloading a sample file, since readers cannot click on the print edition. However, it is acceptable to write “click on” or “right-click on” in a tutorial on interacting with software.</p>
 <p>When instructions refer to software menu items, use italics. Example: Select <em>File &gt; Make a Copy</em> to save your own version to your Google Drive.</p>
 <p>For lists, always insert a blank line <em>before</em> the items, unless they appear directly after hashtag header.</p>
 <ul>
@@ -335,7 +336,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Use an em-dash (3 dashes) to insert an additional thought—like this—in a sentence.</li>
 </ul>
 <p>Insert <code>TODO</code> to note items to finish or review with co-author or editor.</p>
-<p>Insert three back tics to insert a code block. Check character line length limits in <a href="http://oreillymedia.github.io/production-resources/styleguide/#line-length">O’Reilly style guide</a>:</p>
+<p>Use single back tics to designate <code>code</code>.</p>
+<p>Insert three back tics to insert a code block, limited to 81 character line length for Animal style book body in <a href="http://oreillymedia.github.io/production-resources/styleguide/#line-length">O’Reilly style guide</a>. TODO: Check to see if triple back tics render correctly in the Markdown full-book output.</p>
 <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet@1.6.0/dist/leaflet.css&quot; /&gt;
 &lt;script src=&quot;https://unpkg.com/leaflet@1.6.0/dist/leaflet.js&quot;&gt;&lt;/script&gt;</code></pre>
 <div id="conditional-formatting" class="section level3 unnumbered" number="">
@@ -443,7 +445,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/18-bookdown.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

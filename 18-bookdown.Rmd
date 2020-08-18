@@ -111,9 +111,11 @@ Also:
 
 - Sidebar: Use this to note where the editor has requested a boxed sidebar. If longer than one paragraph, add "End Sidebar" to close it.
 
-Insert an embedded link to [O'Reilly](https://www.oreilly.com/). This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O'Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.
+Insert an embedded external link to [O'Reilly](https://www.oreilly.com/). This appears as a colored clickable link in HTML and Word editions, and a non-colored but clickable link in the PDF edition. According to O'Reilly Atlas documentation, the AsciiDoc version should automatically unfurl for the printed edition.
 
-Also, embed the link directly in the sentence, such as [download this sample PDF](https://handsondataviz.org/data/ct-dph-covid-2020-05-31.pdf). Avoid linking words such as "here" or "this web page." Also, avoid writing "Click on this..." in the main text, such as when downloading a sample file, since readers cannot click on the print edition. However, it is acceptable to write "click on" or "right-click on" in a tutorial on interacting with software.
+Insert an embedded internal link to the book, using the short pathname, such as [download this sample CSV file](data/data.csv), to ensure that Bookdown copies the file from the `data` subfolder over to the `docs` subfolder.
+
+Embed links directly in the sentence, such as [download this sample PDF](data/ct-dph-covid-2020-05-31.pdf). Avoid linking words such as "here" or "this web page." Also, avoid writing "Click on this..." in the main text, such as when downloading a sample file, since readers cannot click on the print edition. However, it is acceptable to write "click on" or "right-click on" in a tutorial on interacting with software.
 
 When instructions refer to software menu items, use italics. Example: Select *File > Make a Copy* to save your own version to your Google Drive.
 
@@ -133,7 +135,9 @@ Dashes:
 
 Insert `TODO` to note items to finish or review with co-author or editor.
 
-Insert three back tics to insert a code block. Check character line length limits in [O'Reilly style guide](http://oreillymedia.github.io/production-resources/styleguide/#line-length):
+Use single back tics to designate `code`.
+
+Insert three back tics to insert a code block, limited to 81 character line length for Animal style book body in [O'Reilly style guide](http://oreillymedia.github.io/production-resources/styleguide/#line-length). TODO: Check to see if triple back tics render correctly in the Markdown full-book output.
 
 ```
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
@@ -404,6 +408,8 @@ We need to do a bit of manual cleanup before ORM production team can convert the
 - Manually replace any `<iframe...` HTML or GIF elements with their PNG substitutes, and new ALT text (unless authors come up with a better way to automate this)
 - Manually delete any remaining `<iframe...` elements (unless they are non-executable code snippets)
 - Save and push the modified Markdown file up to GitHub repo
+
+TODO: Check to see if triple back tics render correctly in the Markdown full-book output.
 
 Note: Previously, we tried to use [Pandoc](http://pandoc.org) to convert the modified.md file to asciidoc, but encountered many errors.
 

@@ -7,22 +7,22 @@ language:
     tab: "Table "
 chapter_name: "Chapter "
 
-rmd_files: [
-  "index.Rmd",
-  "01-choose.Rmd",
-  "02-spreadsheet.Rmd",
-  "03-find.Rmd",
-  "04-clean.Rmd",
-  "05-table.Rmd",
-  "06-chart.Rmd",
-  "07-map.Rmd",
-  "08-embed.Rmd",
-  "09-github.Rmd",
-  "10-chartcode.Rmd",
-  "11-leaflet.Rmd",
-  "12-transform.Rmd",
-  "13-detect.Rmd",
-  "14-story.Rmd",
-  "15-fix.Rmd",
-  "19-references.Rmd"
-]
+# rmd_files: [
+#   "index.Rmd",
+#   "01-choose.Rmd",
+#   "02-spreadsheet.Rmd",
+#   "03-find.Rmd",
+#   "04-clean.Rmd",
+#   "05-table.Rmd",
+#   "06-chart.Rmd",
+#   "07-map.Rmd",
+#   "08-embed.Rmd",
+#   "09-github.Rmd",
+#   "10-chartcode.Rmd",
+#   "11-leaflet.Rmd",
+#   "12-transform.Rmd",
+#   "13-detect.Rmd",
+#   "14-story.Rmd",
+#   "15-fix.Rmd",
+#   "19-references.Rmd"
+# ]

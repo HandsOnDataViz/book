@@ -125,11 +125,11 @@ Google Fusion Tables displays an iframe embed code. Modify the map width and hei
 
 ![](GFTPoly14.png)
 
-In the Trinity self-hosted WordPress site for my classes, I have already activated <a href="http://wordpress.org/plugins/iframe/" target="_blank">a special plugin ("iframe")</a> to correctly process the HMTL embedded map code for students with regular authoring privileges. (If you have administrative privileges or your own self-hosted WordPress.org site, this step may not be necessary. Currently, iframes do NOT work in most WordPress.com sites.)
+In the Trinity self-hosted WordPress site for my classes, I have already activated <a href="http://wordpress.org/plugins/iframe/" target="_blank">a special plugin ("iframe")</a> to correctly process the html embedded map code for students with regular authoring privileges. (If you have administrative privileges or your own self-hosted WordPress.org site, this step may not be necessary. Currently, iframes do NOT work in most WordPress.com sites.)
 
 <a href="http://commons.trincoll.edu/jackdougherty/files/2012/11/PluginActiveIFrame.jpg"><img class="aligncenter size-full wp-image-896" alt="" src="http://commons.trincoll.edu/jackdougherty/files/2012/11/PluginActiveIFrame.jpg" width="360" height="86" /></a>
 
-Go to WordPress and create a new post. In the editor, switch from the Visual to the Text tab, which allows users to insert and modify HMTL code. Paste the long string that you copied from the step above. Add square brackets at beginning and end, and edit a few characters to match this format (called a "shortcode"), then publish to view your post.
+Go to WordPress and create a new post. In the editor, switch from the Visual to the Text tab, which allows users to insert and modify html code. Paste the long string that you copied from the step above. Add square brackets at beginning and end, and edit a few characters to match this format (called a "shortcode"), then publish to view your post.
 
 <a href="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iframeEmbedCode.png"><img class="aligncenter size-full wp-image-1700" alt="GFT_iframeEmbedCode" src="http://commons.trincoll.edu/jackdougherty/files/2013/10/GFT_iframeEmbedCode.png" width="599" height="449" /></a>
 

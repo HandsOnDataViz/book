@@ -91,11 +91,11 @@ Embed the interactive map in a WordPress post (or any web page)
 
 ![](GFTPoint14.png)
 
-15) In the Trinity College self-hosted WordPress.org site for my courses, I have already activated a special plugin ("iframe") to correctly process the HMTL embedded map code for students with regular authoring privileges. (If you have administrative privileges or your own self-hosted WordPress.org site, this step may not be necessary. Currently, inserting an iframe will NOT work in most WordPress.com sites.)
+15) In the Trinity College self-hosted WordPress.org site for my courses, I have already activated a special plugin ("iframe") to correctly process the html embedded map code for students with regular authoring privileges. (If you have administrative privileges or your own self-hosted WordPress.org site, this step may not be necessary. Currently, inserting an iframe will NOT work in most WordPress.com sites.)
 
 ![](GFTPoint15.png)
 
-16) Go to WordPress and create a new post. In the editor, switch from the Visual to the Text tab, which allows users to insert and modify HMTL code. Paste the long string that you copied from the step above. Add square brackets at beginning and end, and edit a few characters to match this format (called a "shortcode"), then publish to view your post.
+16) Go to WordPress and create a new post. In the editor, switch from the Visual to the Text tab, which allows users to insert and modify html code. Paste the long string that you copied from the step above. Add square brackets at beginning and end, and edit a few characters to match this format (called a "shortcode"), then publish to view your post.
 
 ![](GFTPoint17.png)
 

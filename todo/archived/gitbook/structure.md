@@ -13,7 +13,7 @@
 GitBook requires a SUMMARY.md file, which organizes the table of contents. View the SUMMARY.md file for this GitBook at: https://github.com/JackDougherty//blob/master/SUMMARY.md
 
 ## Compose in Markdown for GitHub/GitBook
-Markdown is an easy-to-read syntax that is simpler than HMTL and growing in popularity across many digital platforms. GitBook follows most of GitHub Flavored Markdown syntax: https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/
+Markdown is an easy-to-read syntax that is simpler than html and growing in popularity across many digital platforms. GitBook follows most of GitHub Flavored Markdown syntax: https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/
 
 See also GitBook Markdown guide: https://help.gitbook.com/format/markdown.html
 

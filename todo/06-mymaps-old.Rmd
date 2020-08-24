@@ -25,39 +25,39 @@ Let's build a simple point map with sample data, using Google My Maps <https://w
 
 3) Click the red + symbol to create a new map, which will be saved automatically to your Google Drive folder.
 
-![Image: Create a new map](images/07-map/mymaps-create-map.png)
+![Image: Create a new map](images/06-map/mymaps-create-map.png)
 
 4) In the map layers area, click the blue Import link. Drag-and-drop the CSV address data file into the web interface to import it.
 
-![Image: Import a data layer](images/07-map/mymaps-import.png)
+![Image: Import a data layer](images/06-map/mymaps-import.png)
 
-![Image: Drag-and-drop data into My Maps](images/07-map/mymaps-choose-import.png)
+![Image: Drag-and-drop data into My Maps](images/06-map/mymaps-choose-import.png)
 
 5) Choose columns to position your placements. Select "Address" for this sample data, then Continue.
 
-![Image: Choose columns to position placemarks ](images/07-map/mymaps-choose-position.png)
+![Image: Choose columns to position placemarks ](images/06-map/mymaps-choose-position.png)
 
 6) Choose a column to title your markers. Select "Description" for this sample data, then Finish.
 
-![Image: Choose column to title markers](images/07-map/mymaps-choose-title.png)
+![Image: Choose column to title markers](images/06-map/mymaps-choose-title.png)
 
 7) After My Maps uploads and geocodes your sample data, click Open Data Table to inspect the results.
 
-![Image: Open Data Table to inspect geocoding errors](images/07-map/mymaps-fix-errors.png)
+![Image: Open Data Table to inspect geocoding errors](images/06-map/mymaps-fix-errors.png)
 
 8) To style the map markers, click Individual Styles. In this sample data, you can select Group Places By > Style By > Group. This will color markers according to the three categories.
 
 ```{r style-markers}
-if(knitr::is_html_output()) knitr::include_url("images/07-map/mymaps-style-groups-640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+if(knitr::is_html_output()) knitr::include_url("images/06-map/mymaps-style-groups-640w.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
 9) To publish your map on the web, click Share, add a map title, change from Private to Public on the Web, so that anyone can view your map. Click Save and Done.
 
-![Image: Share link](images/07-map/mymaps-share.png)
+![Image: Share link](images/06-map/mymaps-share.png)
 
 10) To embed the map on your own website, click the three vertical dots next to the map title for more options, and select Embed On My Site. The tool will generate an iframe code for you to copy. For next steps, go to the [Embed on Your Web](embed.html) chapters in this book.
 
-![Image: Embed map on your site](images/07-map/mymaps-embed.png)
+![Image: Embed map on your site](images/06-map/mymaps-embed.png)
 
 Learn more:
 - Google My Maps Help Page <https://support.google.com/mymaps/answer/3024396>

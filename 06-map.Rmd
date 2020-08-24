@@ -14,11 +14,11 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 
 | Map | Best use and tutorials in this book |
 | --- | --- |
-| Point map        <br> ![](images/07-map/map-point.png) | Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: [Google My Maps tutorial](mymaps.html)<br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
-| Polygon map      <br> ![](images/07-map/map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tools: [Tableau Public](tableau-polygon.html) or [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
-| Polyline map     <br> ![](images/07-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)|
-| Combination map   <br> ![](images/07-map/map-point-polygon-polyline.png) | Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)  |
-| Storymap <br> ![](images/07-map/map-storymap.png) | Best for guided point-by-point journey through a historical narrative, with optional photos, audio, or video on an interactive map. <br> Easy tool: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/) <br> Power tool: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
+| Point map        <br> ![](images/06-map/map-point.png) | Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: [Google My Maps tutorial](mymaps.html)<br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
+| Polygon map      <br> ![](images/06-map/map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tools: [Tableau Public](tableau-polygon.html) or [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
+| Polyline map     <br> ![](images/06-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)|
+| Combination map   <br> ![](images/06-map/map-point-polygon-polyline.png) | Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)  |
+| Storymap <br> ![](images/06-map/map-storymap.png) | Best for guided point-by-point journey through a historical narrative, with optional photos, audio, or video on an interactive map. <br> Easy tool: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/) <br> Power tool: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
 
 TODO ABOVE:
 
@@ -57,7 +57,7 @@ gives a bit of context about what the map is showing.
 (ref:map-principles-map) Map elements.
 
 ```{r map-principles-map, fig.cap="(ref:map-principles-map)"}
-knitr::include_graphics("images/07-map/map-principles-map.png")
+knitr::include_graphics("images/06-map/map-principles-map.png")
 ```
 
 The data in the map is presented as layers. A base layer is often satellite imagery of the earth
@@ -90,7 +90,7 @@ The examples are shown in Figure \@ref(fig:map-principles-color-schemes).
 (ref:map-principles-color-schemes) Examples of sequential, diverging, and qualitative color schemes from [ColorBrewer](https://colorbrewer2.org/).
 
 ```{r map-principles-color-schemes, fig.cap="(ref:map-principles-color-schemes)"}
-knitr::include_graphics("images/07-map/map-principles-color-schemes.png")
+knitr::include_graphics("images/06-map/map-principles-color-schemes.png")
 ```
 
 Sequential palettes are used to represent continuous numeric values, in other words, anything that can be placed
@@ -137,7 +137,7 @@ Figure \@ref(fig:map-principles-classification)c.
 (ref:map-principles-classification) Representing per capita income in US states using three different classifications.
 
 ```{r map-principles-classification, fig.cap="(ref:map-principles-classification)"}
-knitr::include_graphics("images/07-map/map-principles-classification.png")
+knitr::include_graphics("images/06-map/map-principles-classification.png")
 ```
 
 ### ColorBrewer {-}
@@ -149,7 +149,7 @@ Mark Harrower. You can see ColorBrewer's interface in Figure \@ref(fig:map-princ
 (ref:map-principles-colorbrewer) ColorBrewer interface.
 
 ```{r map-principles-colorbrewer, fig.cap="(ref:map-principles-colorbrewer)"}
-knitr::include_graphics("images/07-map/map-principles-colorbrewer-annotated.png")
+knitr::include_graphics("images/06-map/map-principles-colorbrewer-annotated.png")
 ```
 
 ColorBrewer can generate color palettes for a specified number of classes - between three
@@ -188,7 +188,7 @@ create a map, change a baselayer, import point data, style points, and share the
 (ref:mymaps-final) A map of airports in Nigeria built using Google My Maps.
 
 ```{r mymaps-final, fig.cap="(ref:mymaps-final)"}
-if(knitr::is_html_output()) knitr::include_url("https://www.google.com/maps/d/u/0/embed?mid=1v1ZNrpfBtq_p4wTRyj2hIKBtTnkmhnMF", height="500px") else knitr::include_graphics("images/07-map/mymaps-final.png")
+if(knitr::is_html_output()) knitr::include_url("https://www.google.com/maps/d/u/0/embed?mid=1v1ZNrpfBtq_p4wTRyj2hIKBtTnkmhnMF", height="500px") else knitr::include_graphics("images/06-map/mymaps-final.png")
 ```
 
 ### Create a New Map in My Maps {-}
@@ -200,7 +200,7 @@ as shown in Figure \@ref(fig:mymaps-create-new).
 (ref:mymaps-create-new) A map of airports in Nigeria built using Google My Maps.
 
 ```{r mymaps-create-new, out.width=300, fig.cap="(ref:mymaps-create-new)"}
-knitr::include_graphics("images/07-map/mymaps-create-new.png")
+knitr::include_graphics("images/06-map/mymaps-create-new.png")
 ```
 
 You will see a typical Google Maps with no data. Click on the current title (`Untitled map`),
@@ -210,7 +210,7 @@ and add appropriate title and description in the modal window that appeared
 (ref:mymaps-edit-title) Add title and description to your map.
 
 ```{r mymaps-edit-title, out.width=300, fig.cap="(ref:mymaps-edit-title)"}
-knitr::include_graphics("images/07-map/mymaps-edit-title.png")
+knitr::include_graphics("images/06-map/mymaps-edit-title.png")
 ```
 
 Before we add any points, let's change the basemap to something less boring.
@@ -228,7 +228,7 @@ In our case, these are *LATITUDE* and *LONGITUDE* columns, as shown in Figure \@
 (ref:mymaps-lat-lon) Check LATITUDE and LONGITUDE as your location columns.
 
 ```{r mymaps-lat-lon, out.width=300, fig.cap="(ref:mymaps-lat-lon)"}
-knitr::include_graphics("images/07-map/mymaps-lat-lon-annotated.png")
+knitr::include_graphics("images/06-map/mymaps-lat-lon-annotated.png")
 ```
 
 Once the two boxes are checked, click *Continue*. Another window will pop up, asking
@@ -238,7 +238,7 @@ and then *Finish*.
 (ref:mymaps-column-title) Choose City as the title for your markers.
 
 ```{r mymaps-column-title, out.width=300, fig.cap="(ref:mymaps-column-title)"}
-knitr::include_graphics("images/07-map/mymaps-column-title-annotated.png")
+knitr::include_graphics("images/06-map/mymaps-column-title-annotated.png")
 ```
 
 It will take a few moments for My Maps to create a new layer, which
@@ -256,7 +256,7 @@ as shown in Figure \@ref(fig:mymaps-color).
 (ref:mymaps-color) In My Maps, you can change marker colors and icons.
 
 ```{r mymaps-color, out.width=300, fig.cap="(ref:mymaps-color)"}
-knitr::include_graphics("images/07-map/mymaps-color-annotated.png")
+knitr::include_graphics("images/06-map/mymaps-color-annotated.png")
 ```
 
 Click on the layer name, which by default is set to the name of imported file (`nigeria-airports.csv`),
@@ -277,7 +277,7 @@ just as you would with any other Google Drive document.
 (ref:mymaps-share) Make sure anyone with the link can view your map before you share it.
 
 ```{r mymaps-share, out.width=400, fig.cap="(ref:mymaps-share)"}
-knitr::include_graphics("images/07-map/mymaps-share.png")
+knitr::include_graphics("images/06-map/mymaps-share.png")
 ```
 
 You can now generate a code snippet to embed the map as an iframe.
@@ -288,7 +288,7 @@ your Wordpress, Squarespace, or any other website.
 (ref:mymaps-embed) My Maps can generate an iframe code to include the map on your own website.
 
 ```{r mymaps-embed, out.width=300, fig.cap="(ref:mymaps-embed)"}
-knitr::include_graphics("images/07-map/mymaps-embed-annotated.png")
+knitr::include_graphics("images/06-map/mymaps-embed-annotated.png")
 ```
 
 ### Going Beyond Points {-}
@@ -321,7 +321,7 @@ We calculated average 2019 prices for 50 US states and DC, and put them in a spr
 (ref:datawrapper-map-final) This choropleth map is created in Datawrapper
 
 ```{r datawrapper-map-final, fig.cap="(ref:datawrapper-map-final)"}
-if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/uX2Yx/2/", height="513px") else knitr::include_graphics("images/07-map/datawrapper-map-final.png")
+if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/uX2Yx/2/", height="513px") else knitr::include_graphics("images/06-map/datawrapper-map-final.png")
 ```
 
 ### Create a New Choropleth Map {-}
@@ -334,7 +334,7 @@ Go ahead and choose *choropleth*.
 (ref:datawrapper-map-choose) Sign in to Datawrapper, click *New Map*, and choose *Choropleth*.
 
 ```{r datawrapper-map-choose, fig.cap="(ref:datawrapper-map-choose)"}
-knitr::include_graphics("images/07-map/datawrapper-map-choose-annotated.png")
+knitr::include_graphics("images/06-map/datawrapper-map-choose-annotated.png")
 ```
 
 Datawrapper splits the process of creating a map into four steps.
@@ -350,7 +350,7 @@ as shown in Figure \@ref(fig:datawrapper-map-us-states), and hit *Next* to go to
 (ref:datawrapper-map-us-states) To map home prices by US state, choose appropriate boundaries.
 
 ```{r datawrapper-map-us-states, fig.cap="(ref:datawrapper-map-us-states)"}
-knitr::include_graphics("images/07-map/datawrapper-map-us-states-annotated.png")
+knitr::include_graphics("images/06-map/datawrapper-map-us-states-annotated.png")
 ```
 
 In the second step, you can attach data to the chosen boundaries.
@@ -375,7 +375,7 @@ scroll down and click *Next*, as shown in Figure \@ref(fig:datawrapper-map-match
 (ref:datawrapper-map-match) Tell Datawrapper which column contains geography names (ISO-Codes of states).
 
 ```{r datawrapper-map-match, out.width=350, fig.cap="(ref:datawrapper-map-match)"}
-knitr::include_graphics("images/07-map/datawrapper-map-match.png")
+knitr::include_graphics("images/06-map/datawrapper-map-match.png")
 ```
 
 In a similar fashion, you will then be asked to identify a column that contains *values* to be mapped.
@@ -391,7 +391,7 @@ from the Stops dropdown, as shown in Figure \@ref(fig:datawrapper-map-color).
 (ref:datawrapper-map-color) Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value.
 
 ```{r datawrapper-map-color, out.width=350, fig.cap="(ref:datawrapper-map-color)"}
-knitr::include_graphics("images/07-map/datawrapper-map-color.png")
+knitr::include_graphics("images/06-map/datawrapper-map-color.png")
 ```
 
 When finished with colors, scroll down to **Tooltips** section and
@@ -404,7 +404,7 @@ and hover over the map to make sure your tooltip displays the state name and the
 (ref:datawrapper-map-tooltip) To reference values from the spreadsheet, add column names in double curly brackets.
 
 ```{r datawrapper-map-tooltip, out.width=450, fig.cap="(ref:datawrapper-map-tooltip)"}
-knitr::include_graphics("images/07-map/datawrapper-map-tooltip-annotated.png")
+knitr::include_graphics("images/06-map/datawrapper-map-tooltip-annotated.png")
 ```
 
 You can now move to the *Annotate* tab and set values for the map's title and description,
@@ -436,7 +436,7 @@ which you can see in Figure \@ref(fig:socrata-final).
 (ref:socrata-final) In this tutorial, we will build a point map of hospitals in Texas using Socrata.
 
 ```{r socrata-final, fig.cap="(ref:socrata-final)"}
-if(knitr::is_html_output()) knitr::include_url("https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&height=500", height="500px") else knitr::include_graphics("images/07-map/socrata-final.png")
+if(knitr::is_html_output()) knitr::include_url("https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&height=500", height="500px") else knitr::include_graphics("images/06-map/socrata-final.png")
 ```
 
 Generally, in order to create a map in Socrata, you need to be a registered user,
@@ -470,7 +470,7 @@ a *Configure Visualization* studio where you can create the map.
 (ref:socrata-launch-new-viz) Go to Visualize > Launch New Visualization.
 
 ```{r socrata-launch-new-viz, out.width=300, fig.cap="(ref:socrata-launch-new-viz)"}
-knitr::include_graphics("images/07-map/socrata-launch-new-viz-annotated.png")
+knitr::include_graphics("images/06-map/socrata-launch-new-viz-annotated.png")
 ```
 
 In the top menu, click *Map* (globe icon between a scatter chart icon and a calendar). You will
@@ -489,7 +489,7 @@ and click Apply. Socrata should zoom in on the map and center on Texas. Close *F
 (ref:socrata-filter) Select Texas as the only value for State field.
 
 ```{r socrata-filter, out.width=300, fig.cap="(ref:socrata-filter)"}
-knitr::include_graphics("images/07-map/socrata-filter-annotated.png")
+knitr::include_graphics("images/06-map/socrata-filter-annotated.png")
 ```
 
 Let's now **disaggregate** the map so that we can see individual hospitals instead of clusters.
@@ -500,7 +500,7 @@ You will see the map now shows individual points.
 (ref:socrata-uncluster) To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1.
 
 ```{r socrata-uncluster, out.width=300, fig.cap="(ref:socrata-uncluster)"}
-knitr::include_graphics("images/07-map/socrata-uncluster-annotated.png")
+knitr::include_graphics("images/06-map/socrata-uncluster-annotated.png")
 ```
 
 In the same accordion menu, change *Basemap > Type* to *Dark* to bring the map a fashionable 2020 look.
@@ -519,7 +519,7 @@ Let's stick with *Hospital Type*, as is illustrated in Figure \@ref(fig:socrata-
 (ref:socrata-style) Let's display different types of hospitals in different colors.
 
 ```{r socrata-style, out.width=300, fig.cap="(ref:socrata-style)"}
-knitr::include_graphics("images/07-map/socrata-style-annotated.png")
+knitr::include_graphics("images/06-map/socrata-style-annotated.png")
 ```
 
 If you look at the bottom-right corner of the map, you should notice a minimized *Legend* control.
@@ -537,7 +537,7 @@ adding city and phone number as additional flyout values, as is shown in Figure
 (ref:socrata-flyout) To edit tooltip information, use Flyout Details menu item.
 
 ```{r socrata-flyout, out.width=300, fig.cap="(ref:socrata-flyout)"}
-knitr::include_graphics("images/07-map/socrata-flyout.png")
+knitr::include_graphics("images/06-map/socrata-flyout.png")
 ```
 
 At this point you should have a fully-functional interactive map
@@ -552,18 +552,18 @@ and you can go ahead and *Publish...* it.
 
 Now you can embed the map on your website as an iframe. To do so, click the *Share* button in the upper-right side of your map (see Figure \@ref(fig:socrata-share)),
 and copy the generated code from *Embed Code* text area (Figure \@ref(fig:socrata-share-embed)).
-See Chapter 7 of this book for further instructions about embedding.
+Learn more in [Chapter 8: Embed on Your Web](embed.html).
 
 (ref:socrata-share) Click *Share* button to bring up *Share and Embed* window.
 
 ```{r socrata-share, out.width=400, fig.cap="(ref:socrata-share)"}
-knitr::include_graphics("images/07-map/socrata-share-annotated.png")
+knitr::include_graphics("images/06-map/socrata-share-annotated.png")
 ```
 
 (ref:socrata-share-embed) Copy iframe code to embed this map in another website.
 
 ```{r socrata-share-embed, fig.cap="(ref:socrata-share-embed)"}
-knitr::include_graphics("images/07-map/socrata-share-embed.png")
+knitr::include_graphics("images/06-map/socrata-share-embed.png")
 ```
 
 ### Limitations of Socrata {-}
@@ -601,7 +601,7 @@ including military spending.
 (ref:tableau-polygon-final) This choropleth map is made in Tableau Public
 
 ```{r tableau-polygon-final, fig.cap="(ref:tableau-polygon-final)"}
-if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/07-map/tableau-polygon-final.png")
+if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/06-map/tableau-polygon-final.png")
 ```
 
 To create maps in Tableau, you do not always need geospatial files. Tableau can recognize
@@ -625,7 +625,7 @@ Notice that some values are set to *null* (not available).
 (ref:tableau-polygon-connect) When finished inspecting the connected file, go to Sheet 1.
 
 ```{r tableau-polygon-connect, fig.cap="(ref:tableau-polygon-connect)"}
-knitr::include_graphics("images/07-map/tableau-polygon-connect-annotated.png")
+knitr::include_graphics("images/06-map/tableau-polygon-connect-annotated.png")
 ```
 
 In the variables list on the left, notice how Tableau generated *Latitude* and *Longitude*
@@ -641,7 +641,7 @@ to the **Size** box of the Marks card. You will see that country outlines turned
 (ref:tableau-polygon-drag) Drag and drop variables to the right places.
 
 ```{r tableau-polygon-drag, fig.cap="(ref:tableau-polygon-drag)"}
-knitr::include_graphics("images/07-map/tableau-polygon-drag-annotated.png")
+knitr::include_graphics("images/06-map/tableau-polygon-drag-annotated.png")
 ```
 
 We want colors to represent military spending values, so drag *Value* variable to
@@ -657,7 +657,7 @@ in Figure \@ref(fig:tableau-polygon-filter)).
 (ref:tableau-polygon-filter) Filter values to remove countries with no data from display.
 
 ```{r tableau-polygon-filter, out.width=400, fig.cap="(ref:tableau-polygon-filter)"}
-knitr::include_graphics("images/07-map/tableau-polygon-filter-annotated.png")
+knitr::include_graphics("images/06-map/tableau-polygon-filter-annotated.png")
 ```
 
 You can change the color scheme by clicking the Color box of the Marks card, and
@@ -667,7 +667,7 @@ as shown in Figure \@ref(fig:tableau-polygon-color).
 (ref:tableau-polygon-color) Change the color scheme to Reds with 5 steps.
 
 ```{r tableau-polygon-color, out.width=400, fig.cap="(ref:tableau-polygon-color)"}
-knitr::include_graphics("images/07-map/tableau-polygon-color.png")
+knitr::include_graphics("images/06-map/tableau-polygon-color.png")
 ```
 
 You may notice the tooltip calls values *Value* when hovering over countries.
@@ -679,7 +679,7 @@ Make sure not to change values between
 (ref:tableau-polygon-tooltip) Change tooltip text to make it more user-friendly.
 
 ```{r tableau-polygon-tooltip, out.width=400, fig.cap="(ref:tableau-polygon-tooltip)"}
-knitr::include_graphics("images/07-map/tableau-polygon-tooltip.png")
+knitr::include_graphics("images/06-map/tableau-polygon-tooltip.png")
 ```
 
 And finally, let's add a proper title to the map. Double-click the default *Sheet 1* name

@@ -224,10 +224,10 @@ In some cases (such as images inside Markdown tables, or static screenshots to a
 Overall, sometimes the folder will contain only one version of a simple image, but in other cases it may contain up to 3-4 versions of an image:
 
 ```
-images/06-chart/design-setup.png
-images/06-chart/design-setup-ann.png
-images/06-chart/design-setup-ann.pdf
-images/06-chart/design-setup-original.png
+images/05-chart/design-setup.png
+images/05-chart/design-setup-ann.png
+images/05-chart/design-setup-ann.pdf
+images/05-chart/design-setup-original.png
 ```
 
 If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:
@@ -257,7 +257,7 @@ Write R code-chunk labels that follow the image file name, and avoid duplicate l
 ```
 ref:design-setup
 
-images/06-chart/design-setup.png
+images/05-chart/design-setup.png
 ```
 
 Do not insert spaces inside the `ref:chunk-label` for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add *another* blank line to avoid "undefined reference" Bookdown errors.
@@ -324,7 +324,7 @@ if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-n
 ```
 
 ### Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF {-}
-This option may be relevant when you wish to display a video only in the HMTL edition, with no screenshot of it in the PDF edition. Note that this will alter figure-numbering between the HTML and PDF editions.
+This option may be relevant when you wish to display a video only in the html edition, with no screenshot of it in the PDF edition. Note that this will alter figure-numbering between the HTML and PDF editions.
 
 (ref:video-sample2) Caption **only** for HTML version, with embedded link to the [YouTube video](https://youtu.be/w6dQ-RIQ5bc).
 
@@ -404,7 +404,7 @@ We need to do a bit of manual cleanup before ORM production team can convert the
 - Manually rename it as HandsOnDataViz-modified.md
 - Manually paste in these Markdown tables to replace HTML tables (unless ORM can handle this part)
   - from index.Rmd, table of authors
-  - from 06-chart.Rmd, Table 1: Chart types covered in this book
+  - from 05-chart.Rmd, Table 1: Chart types covered in this book
 - Manually replace any `<iframe...` HTML or GIF elements with their PNG substitutes, and new ALT text (unless authors come up with a better way to automate this)
 - Manually delete any remaining `<iframe...` elements (unless they are non-executable code snippets)
 - Save and push the modified Markdown file up to GitHub repo

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -187,8 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>5</b> Table Your Data</a></li>
-<li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
@@ -199,13 +198,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>7</b> Map Your Data</a>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Interactive Table with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="datawrapper-table-sparklines.html"><a href="datawrapper-table-sparklines.html"><i class="fa fa-check"></i>Add Sparklines to Datawrapper Table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
 <ul>
@@ -307,10 +311,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>If an image is larger than approximately 300px on either side, one more option is to reduce the image size in the PDF version. Use Photoshop (<em>not</em> Preview) to reduce the image size, and save a copy with the same file name with the .pdf extension into the folder.</p>
 <p>In some cases (such as images inside Markdown tables, or static screenshots to accompany iframes), it may make sense to save a full-size version, with <code>-original</code> in the file name, for the publisher to use when creating the print book.</p>
 <p>Overall, sometimes the folder will contain only one version of a simple image, but in other cases it may contain up to 3-4 versions of an image:</p>
-<pre><code>images/06-chart/design-setup.png
-images/06-chart/design-setup-ann.png
-images/06-chart/design-setup-ann.pdf
-images/06-chart/design-setup-original.png</code></pre>
+<pre><code>images/05-chart/design-setup.png
+images/05-chart/design-setup-ann.png
+images/05-chart/design-setup-ann.pdf
+images/05-chart/design-setup-original.png</code></pre>
 <p>If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:</p>
 <p><code>&lt;!-- Images below are 200x200 at 300 resolution --&gt;</code></p>
 <p>In this book, use <em>Markdown formatting only for images that appear inside tables</em> or <em>do not require captions or figure numbering</em>, and leave the caption field blank, like this example:</p>
@@ -342,7 +346,7 @@ images/06-chart/design-setup-original.png</code></pre>
 <p>Write R code-chunk labels that follow the image file name, and avoid duplicate labels across the book:</p>
 <pre><code>ref:design-setup
 
-images/06-chart/design-setup.png</code></pre>
+images/05-chart/design-setup.png</code></pre>
 <p>Do not insert spaces inside the <code>ref:chunk-label</code> for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add <em>another</em> blank line to avoid “undefined reference” Bookdown errors.</p>
 <p>Inside the R code-chunk ref caption, do NOT use mischievous characters (such as <code>&lt;</code> or <code>&gt;</code> or <code>"</code>) that will throw HTML errors into the Markdown output images. Instead, use safe characters such as (<code>*</code> and <code>-</code>) to designate computer instructions, such as <em>File - Make a Copy</em>.</p>
 <p>For each figure, manually add a cross-reference call-out and insert <code>fig.pos='h'</code> to place the image “here” on the page in the PDF output, to <em>attempt</em> to avoid PDF floating. Ignore the Bookdown LaTeX warning message “h float specifier changed to ht.” See more at <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a> and <a href="https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html</a></p>
@@ -413,7 +417,7 @@ Figure D.5: Caption here, with embedded link to the <a href="https://youtu.be/-n
 </div>
 <div id="demo-r-code-chunk-for-youtube-video-in-html-with-no-static-image-in-pdf" class="section level3 unnumbered" number="">
 <h3>Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF</h3>
-<p>This option may be relevant when you wish to display a video only in the HMTL edition, with no screenshot of it in the PDF edition. Note that this will alter figure-numbering between the HTML and PDF editions.</p>
+<p>This option may be relevant when you wish to display a video only in the html edition, with no screenshot of it in the PDF edition. Note that this will alter figure-numbering between the HTML and PDF editions.</p>
 
 <div class="figure"><span id="fig:video-sample2"></span>
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="672" height="400px">

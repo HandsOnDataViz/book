@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -187,8 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>5</b> Table Your Data</a></li>
-<li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
@@ -199,13 +198,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>7</b> Map Your Data</a>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Interactive Table with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="datawrapper-table-sparklines.html"><a href="datawrapper-table-sparklines.html"><i class="fa fa-check"></i>Add Sparklines to Datawrapper Table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
 <ul>
@@ -307,7 +311,7 @@ In other words, an interactive visualization can be made into a data-exploration
 that won’t overwhelm the viewer at first sight, but will allow the viewer
 to “dig” and find specific data points and patterns.</p>
 <p>In this tutorial, we will build an interactive filtered line chart with Tableau Public
-like is shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-demo">6.40</a>.
+like is shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-demo">5.40</a>.
 The filter will be a collection of checkboxes that allow to add/remove lines
 from the chart. Viewers can hover over each line to identify the school
 name and data attached to it.</p>
@@ -318,7 +322,7 @@ name and data attached to it.</p>
 <iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 6.40: Internet Access by Country, 1995–2018.
+Figure 5.40: Internet Access by Country, 1995–2018.
 </p>
 </div>
 <p>We assume that you have Tableau installed. If not, see the previous tutorial, <a href="scatter-chart-tableau.html">Create XY Scatter Chart with Tableau Public</a>.</p>
@@ -343,16 +347,16 @@ we don’t care about it much. So go ahead and press <em>Add all members</em> bu
 <li>Now you should see an absolute spaghetti plate of lines and colors. To add filtering,
 drag <em>Country Name</em> to the Filters card. In the Filter window, make sure all countries
 are checked, and click <em>OK</em>.</li>
-<li>Right-click on <em>Country Name</em> pill in Filters card, and check Show Filter (see Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-show-filter">6.41</a>)</li>
+<li>Right-click on <em>Country Name</em> pill in Filters card, and check Show Filter (see Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-show-filter">5.41</a>)</li>
 <li>You will see a list of options with all checkboxes on have appeared to the right of the visualization.
 Click <em>(All)</em> to add/remove all options, and add a few of your favorite countries to see
 how the interactive filtering works.</li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-filtered-show-filter"></span>
-<img src="images/06-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
+<img src="images/05-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
 <p class="caption">
-Figure 6.41: After you drag Country Name to the Filters card, make sure the Filter is displayed.
+Figure 5.41: After you drag Country Name to the Filters card, make sure the Filter is displayed.
 </p>
 </div>
 </div>
@@ -367,13 +371,13 @@ the author of this visualization.</p>
 although our data is for 1995–2018. Double-click on the x-axis, and change
 <em>Range</em> from <em>Automatic</em> to <em>Fixed</em>, with the Fixed start of <code>1995</code>, and the Fixed end of <code>2018</code>.
 Close the window and see that the empty space on the edges has disappeared.</p>
-<p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-ready">6.42</a>,
+<p>Once your filtered line chart looks like the one shown in Figure <a href="filtered-line-chart-tableau.html#fig:tableau-filtered-ready">5.42</a>,
 you are ready to publish.</p>
 
 <div class="figure"><span id="fig:tableau-filtered-ready"></span>
-<img src="images/06-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
+<img src="images/05-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
 <p class="caption">
-Figure 6.42: This workbook is ready to be published.
+Figure 5.42: This workbook is ready to be published.
 </p>
 </div>
 <p>To publish the filtered line chart to the web, go to <em>File &gt; Save to Tableau Public As…</em>.
@@ -438,7 +442,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/06-chart.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/05-chart.Rmd",
 "text": null
 },
 "download": null,

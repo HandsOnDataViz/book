@@ -1,0 +1,35 @@
+# Table Your Data {#table}
+
+You might be surprised that a data visualization book which emphasizes charts and maps also includes a chapter on creating tables. We don't normally think about data tables as a type of visualization. But depending on your data and the story you wish to tell about it, sometimes a table is the best way to present detailed information. Tables make sense when readers want to look up a specific row of data that's highly relevant to them, such as their local community or an organization they belong to, which can be too hard to identify inside a large chart or map. Also, tables work best when readers want to precisely compare individual values to one another, but not necessarily to the rest of the dataset. Finally, tables may be more appropriate than charts when there is no broad visual pattern you wish to emphasize, and more appropriate than maps when there is no spatial pattern to highlight. Before you start designing a chart or map, consider whether it makes more sense to create a table.
+
+In this chapter, you'll learn how to use [Datawrapper](http://datawrapper.de), a tool we introduced in [Chapter 5: Chart Your Data](chart.html) and [Chapter 6: Map Your Data](map.html), to create an interactive table that you can [embed on your website](embed.html), which we'll describe in chapter 8. Interactive tables have many advantages over static tables when you publish your information online rather than print-only. First, interactive tables allow readers to search by keyword for specific details that interest them, which is vital when you present long tables with lots of rows. Second, readers can sort interactive tables in ascending or descending order for any column, which enables them to quickly scan those near the top or bottom of a long list.
+
+Finally, with Datawrapper you'll also learn how to insert *sparklines*, or tiny charts that visually summarize data trends in each row, and automatically place them inside your table, as shown in FIGURE TODO. Sparklines blend the best qualities of tables and charts by making it easier for readers to visually scan for patterns while skimming down the rows and columns of your data table. In the tutorial below, you'll see how sparklines make it easier to spot different changes in life expectancy from 1960 to the present for over 180 nations around the world. While it's possible to present this data in a [filtered line chart as shown in chapter 5](filtered-line-chart-tableau.html), it would be difficult for readers to spot differences when shown over 180 lines at the same time. Likewise, it's possible to present this data in a [choropleth map as shown in chapter 6](map-with-datawrapper.html), but it would be hard for readers to see data for nations with smaller geographies compared to larger ones. In this case, we'll blend sparklines about longitudinal data trends into our interactive table to help readers spot subtle differences in changes to life expectancy for nations, categorized by continent. You'll discover how an interactive table with sparklines helps to tell the story.
+
+TODO: Embed life expectancy interactive table with sparklines
+
+## Interactive Table with Datawrapper {- #datawrapper-table}
+
+TODO: all
+
+This tutorial was adapted from the excellent [Datawrapper training materials](https://www.datawrapper.de/training-materials/) and [gallery of examples](https://www.datawrapper.de/tables/).
+
+TODO: CHECK THIS -- To simplify this tutorial, we obtained life expectancy data from the World Bank (link), cleaned it up a bit, and added three additional columns: two-letter nation codes, a blank header called "range", and a "change" column that calculates the difference between 1960 and the present. Also, we removed ?? nations that did not have sufficient data??? Note that some nations changed names and borders since 1960s.... so......  
+
+https://data.worldbank.org/indicator/SP.DYN.LE00.IN
+
+https://www.datawrapper.de/tables/
+
+slides 52-53 https://docs.google.com/presentation/d/1b6hvapW1CTqok_r8kI2E4teO2ziG16ZcNTD5XHZfufU/edit#slide=id.g5141d9ea3671b15c_43
+
+## Add Sparklines to Datawrapper Table {- #datawrapper-table-sparklines}
+
+TODO: all
+
+https://academy.datawrapper.de/article/144-how-to-insert-flag-icons-in-tables
+
+https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons
+
+
+
+Summary: Transition to Embed chapter for how to place these in a web page

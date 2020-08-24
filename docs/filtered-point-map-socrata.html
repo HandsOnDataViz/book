@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -187,8 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>5</b> Table Your Data</a></li>
-<li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
@@ -199,13 +198,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>7</b> Map Your Data</a>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Interactive Table with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="datawrapper-table-sparklines.html"><a href="datawrapper-table-sparklines.html"><i class="fa fa-check"></i>Add Sparklines to Datawrapper Table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
 <ul>
@@ -312,13 +316,13 @@ This may be especially useful for “live” data that is continuously updated b
 such as fires, crimes, and property data.</p>
 <p>In this section, we will build an interactive point map of hospitals in Texas
 using <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">General Hospital Information</a> dataset by Medicare,
-which you can see in Figure <a href="filtered-point-map-socrata.html#fig:socrata-final">7.19</a>.</p>
+which you can see in Figure <a href="filtered-point-map-socrata.html#fig:socrata-final">6.19</a>.</p>
 
 <div class="figure"><span id="fig:socrata-final"></span>
 <iframe src="https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&amp;height=500" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 7.19: In this tutorial, we will build a point map of hospitals in Texas using Socrata.
+Figure 6.19: In this tutorial, we will build a point map of hospitals in Texas using Socrata.
 </p>
 </div>
 <p>Generally, in order to create a map in Socrata, you need to be a registered user,
@@ -341,13 +345,13 @@ that use Socrata.</p>
 <div id="create-your-first-socrata-point-map" class="section level3 unnumbered" number="">
 <h3>Create Your First Socrata Point Map</h3>
 <p>Navigate to the <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">Hospital General Dataset</a>,
-and in the menu on the right-hand side choose <em>Visualize &gt; Launch New Visualization</em>, as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-launch-new-viz">7.20</a>. This will open up
+and in the menu on the right-hand side choose <em>Visualize &gt; Launch New Visualization</em>, as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-launch-new-viz">6.20</a>. This will open up
 a <em>Configure Visualization</em> studio where you can create the map.</p>
 
 <div class="figure"><span id="fig:socrata-launch-new-viz"></span>
-<img src="images/07-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize &gt; Launch New Visualization." width="300" />
+<img src="images/06-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize &gt; Launch New Visualization." width="300" />
 <p class="caption">
-Figure 7.20: Go to Visualize &gt; Launch New Visualization.
+Figure 6.20: Go to Visualize &gt; Launch New Visualization.
 </p>
 </div>
 <p>In the top menu, click <em>Map</em> (globe icon between a scatter chart icon and a calendar). You will
@@ -358,24 +362,24 @@ set Geo Column value to <em>Location</em> in the <em>Layer List</em> menu. By de
 so instead of seeing individual hospital locations, you see bubbles with numbers (such as <code>12</code> in Alaska).</p>
 <p>Let’s first select only hospitals that are located in the southern state of Texas.
 To do so, go to <em>Filters &gt; Add filter</em>. The dropdown menu lists all columns (or fields) of the dataset,
-where we should choose <em>State</em>. In the newly appeared State dropdown, choose TX (for Texas) as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-filter">7.21</a>, and scroll down
+where we should choose <em>State</em>. In the newly appeared State dropdown, choose TX (for Texas) as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-filter">6.21</a>, and scroll down
 and click Apply. Socrata should zoom in on the map and center on Texas. Close <em>Filters</em> window to free screen space.</p>
 
 <div class="figure"><span id="fig:socrata-filter"></span>
-<img src="images/07-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
+<img src="images/06-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
 <p class="caption">
-Figure 7.21: Select Texas as the only value for State field.
+Figure 6.21: Select Texas as the only value for State field.
 </p>
 </div>
 <p>Let’s now <strong>disaggregate</strong> the map so that we can see individual hospitals instead of clusters.
 Go to <em>Map Settings &gt; Cluster</em>, and bring the <em>Stop Clustering at Zoom Level</em> slider to 1,
-as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-uncluster">7.22</a>.
+as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-uncluster">6.22</a>.
 You will see the map now shows individual points.</p>
 
 <div class="figure"><span id="fig:socrata-uncluster"></span>
-<img src="images/07-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
+<img src="images/06-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
 <p class="caption">
-Figure 7.22: To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1.
+Figure 6.22: To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1.
 </p>
 </div>
 <p>In the same accordion menu, change <em>Basemap &gt; Type</em> to <em>Dark</em> to bring the map a fashionable 2020 look.
@@ -388,12 +392,12 @@ is grayed out. That is because the dataset doesn’t contain columns with contin
 that can be transformed to point sizes. Instead, we can use <em>Style by Value</em> option to
 classify categorical points. The dataset contains multiple variables that can be effectively visualized,
 such as <em>Hospital Type</em>, <em>Emergency Services</em> (a yes/no category), <em>Mortality national comparison</em> and others.
-Let’s stick with <em>Hospital Type</em>, as is illustrated in Figure <a href="filtered-point-map-socrata.html#fig:socrata-style">7.23</a>.</p>
+Let’s stick with <em>Hospital Type</em>, as is illustrated in Figure <a href="filtered-point-map-socrata.html#fig:socrata-style">6.23</a>.</p>
 
 <div class="figure"><span id="fig:socrata-style"></span>
-<img src="images/07-map/socrata-style-annotated.png" alt="Let’s display different types of hospitals in different colors." width="300" />
+<img src="images/06-map/socrata-style-annotated.png" alt="Let’s display different types of hospitals in different colors." width="300" />
 <p class="caption">
-Figure 7.23: Let’s display different types of hospitals in different colors.
+Figure 6.23: Let’s display different types of hospitals in different colors.
 </p>
 </div>
 <p>If you look at the bottom-right corner of the map, you should notice a minimized <em>Legend</em> control.
@@ -404,12 +408,12 @@ item to set individual colors, as well as change the order of categories in the 
 <p>To change what is shown in tooltips when you hover or click on points,
 go to <strong>Flyout Details</strong>, and set Flyout Title to <em>Facility Name</em>,
 adding city and phone number as additional flyout values, as is shown in Figure
-<a href="filtered-point-map-socrata.html#fig:socrata-flyout">7.24</a>.</p>
+<a href="filtered-point-map-socrata.html#fig:socrata-flyout">6.24</a>.</p>
 
 <div class="figure"><span id="fig:socrata-flyout"></span>
-<img src="images/07-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
+<img src="images/06-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
 <p class="caption">
-Figure 7.24: To edit tooltip information, use Flyout Details menu item.
+Figure 6.24: To edit tooltip information, use Flyout Details menu item.
 </p>
 </div>
 <p>At this point you should have a fully-functional interactive map
@@ -420,21 +424,21 @@ Before you can share it, you need to save it as a draft, and publish.</p>
 <p>In the lower-right corner, click <em>Save Draft</em> button. Give your map a name,
 and hit <em>Save</em>. The gray ribbon at the top will tell you it is still a draft,
 and you can go ahead and <em>Publish…</em> it.</p>
-<p>Now you can embed the map on your website as an iframe. To do so, click the <em>Share</em> button in the upper-right side of your map (see Figure <a href="filtered-point-map-socrata.html#fig:socrata-share">7.25</a>),
-and copy the generated code from <em>Embed Code</em> text area (Figure <a href="filtered-point-map-socrata.html#fig:socrata-share-embed">7.26</a>).
-See Chapter 7 of this book for further instructions about embedding.</p>
+<p>Now you can embed the map on your website as an iframe. To do so, click the <em>Share</em> button in the upper-right side of your map (see Figure <a href="filtered-point-map-socrata.html#fig:socrata-share">6.25</a>),
+and copy the generated code from <em>Embed Code</em> text area (Figure <a href="filtered-point-map-socrata.html#fig:socrata-share-embed">6.26</a>).
+Learn more in <a href="embed.html">Chapter 8: Embed on Your Web</a>.</p>
 
 <div class="figure"><span id="fig:socrata-share"></span>
-<img src="images/07-map/socrata-share-annotated.png" alt="Click Share button to bring up Share and Embed window." width="400" />
+<img src="images/06-map/socrata-share-annotated.png" alt="Click Share button to bring up Share and Embed window." width="400" />
 <p class="caption">
-Figure 7.25: Click <em>Share</em> button to bring up <em>Share and Embed</em> window.
+Figure 6.25: Click <em>Share</em> button to bring up <em>Share and Embed</em> window.
 </p>
 </div>
 
 <div class="figure"><span id="fig:socrata-share-embed"></span>
-<img src="images/07-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website."  />
+<img src="images/06-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website."  />
 <p class="caption">
-Figure 7.26: Copy iframe code to embed this map in another website.
+Figure 6.26: Copy iframe code to embed this map in another website.
 </p>
 </div>
 </div>
@@ -499,7 +503,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/07-map.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/06-map.Rmd",
 "text": null
 },
 "download": null,

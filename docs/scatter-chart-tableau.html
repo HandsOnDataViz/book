@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -187,8 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>5</b> Table Your Data</a></li>
-<li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
@@ -199,13 +198,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>7</b> Map Your Data</a>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Interactive Table with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="datawrapper-table-sparklines.html"><a href="datawrapper-table-sparklines.html"><i class="fa fa-check"></i>Add Sparklines to Datawrapper Table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
 <ul>
@@ -305,7 +309,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 against each other, on x- and y-axis, revealing possible correlations.
 With Tableau Public, you can create an interactive scatter chart,
 letting users hover over points to view specific details.</p>
-<p>Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-demo">6.35</a> illustrates a
+<p>Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-demo">5.35</a> illustrates a
 strong relationship between Connecticut school district income and
 test scores.</p>
 
@@ -313,14 +317,14 @@ test scores.</p>
 <iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 6.35: This scatterplot is made in Tableau Public an shows the relationship between household income and test scores in Connecticut school districts.
+Figure 5.35: This scatterplot is made in Tableau Public an shows the relationship between household income and test scores in Connecticut school districts.
 </p>
 </div>
 <div id="install-tableau-and-get-data" class="section level4 unnumbered" number="">
 <h4>Install Tableau and Get Data</h4>
 <p>You can download Tableau Public for Windows or Mac from Tableau’s <a href="https://public.tableau.com">official
 website</a>. You will need to provide your email address.</p>
-<p>If you wish to use the dataset from the scatter plot in Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-demo">6.35</a>,
+<p>If you wish to use the dataset from the scatter plot in Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-demo">5.35</a>,
 you can <a href="data/ct-districts-income-grades-2009-13.xlsx">download the sample Excel file</a>.
 This data file consists of three columns: district, median household income, and grade levels
 (above/below national average for 6th grade Math and English test scores).
@@ -339,16 +343,16 @@ or your own Excel file. To load a CSV file, choose <em>Text file</em>.
 If your data is in Google Sheets, click <em>More…</em> and choose Google Sheets.
 Once you successfully connect to your data source, you will see it under Connections
 in the Data Source tab. Under Sheets, you will see two tables, <code>data</code> and <code>notes</code>.</p></li>
-<li><p>Drag <code>data</code> sheet into <em>Drag tables here</em> area, like is shown in Figure <a href="scatter-chart-tableau.html#fig:tableau-connect">6.36</a>.
+<li><p>Drag <code>data</code> sheet into <em>Drag tables here</em> area, like is shown in Figure <a href="scatter-chart-tableau.html#fig:tableau-connect">5.36</a>.
 You will see the preview of the table under the drag-and-drop area.
 You have successfully connected one data source to Tableau Public, and you are ready
 to build your first chart.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-connect"></span>
-<img src="images/06-chart/tableau-connect-annotated.png" alt="Drag data sheet into Drag tables here area."  />
+<img src="images/05-chart/tableau-connect-annotated.png" alt="Drag data sheet into Drag tables here area."  />
 <p class="caption">
-Figure 6.36: Drag <code>data</code> sheet into <em>Drag tables here</em> area.
+Figure 5.36: Drag <code>data</code> sheet into <em>Drag tables here</em> area.
 </p>
 </div>
 <!-- TODO: Let's find out whether real first-time users can follow these steps! -->
@@ -359,7 +363,7 @@ where to drag items from the Data pane (left) into the main worksheet.
 Tableau marks all data fields as blue (discrete values, mostly text fields or numeric labels)
 or green (continuous values, mostly numbers).</p></li>
 <li><p>Drag the <em>Grade Levels</em> field into the <em>Rows</em> field above the charting area, which
-for now is just empty space. You can consult Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-dragging">6.37</a> for this
+for now is just empty space. You can consult Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-dragging">5.37</a> for this
 and two following steps.
 Tableau will apply a summation function to it, and you will see the <code>SUM(Grade Levels)</code> appearing
 in the Rows row, and a blue bar in the charting area. It makes little sense so far, so let’s
@@ -375,9 +379,9 @@ values associated with it.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-xy-dragging"></span>
-<img src="images/06-chart/tableau-xy-dragging-annotated.png" alt="Drag data fields to the right places in Tableau."  />
+<img src="images/05-chart/tableau-xy-dragging-annotated.png" alt="Drag data fields to the right places in Tableau."  />
 <p class="caption">
-Figure 6.37: Drag data fields to the right places in Tableau.
+Figure 5.37: Drag data fields to the right places in Tableau.
 </p>
 </div>
 </div>
@@ -390,12 +394,12 @@ such as source of the data, who built the visualization and when, and other
 important things. You can do so inside a Caption, a text block that accompanies
 your Tableau visualization. In the menu, go to <em>Worksheet &gt; Show Caption</em>. Double-click
 the Caption block that appeared, and edit the text.</p>
-<p>As a result, your final worksheet will look like shown in Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-final">6.38</a>.</p>
+<p>As a result, your final worksheet will look like shown in Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-final">5.38</a>.</p>
 
 <div class="figure"><span id="fig:tableau-xy-final"></span>
-<img src="images/06-chart/tableau-xy-final-annotated.png" alt="This scatter chart is ready to be published."  />
+<img src="images/05-chart/tableau-xy-final-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 6.38: This scatter chart is ready to be published.
+Figure 5.38: This scatter chart is ready to be published.
 </p>
 </div>
 <p>Tip: In the dropdown above Columns section, change <em>Standard</em> to <em>Fit Width</em>
@@ -410,15 +414,15 @@ to something meaningful, as this name will appear in the URL for your published 
 with the visualization. In the green ribbon above the chart, click <em>Edit Details</em>
 to edit the title or description. Under <em>Toolbar Settings</em>, see checkbox to
 <em>Allow others to download or explore and copy this workbook and its data</em>
-(Figure <a href="scatter-chart-tableau.html#fig:tableau-toolbar-settings">6.39</a>), and enable/disable
+(Figure <a href="scatter-chart-tableau.html#fig:tableau-toolbar-settings">5.39</a>), and enable/disable
 it as you think is appropriate. As advocates for open and accessible data, we recommend
 leaving the box checked.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-toolbar-settings"></span>
-<img src="images/06-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
+<img src="images/05-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 6.39: This scatter chart is ready to be published.
+Figure 5.39: This scatter chart is ready to be published.
 </p>
 </div>
 <p>See the <a href="embed-tableau.html">Embed Tableau Public on Your Website</a> section of this book to insert the interactive version of your chart on a web page that you control.</p>
@@ -472,7 +476,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/06-chart.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/05-chart.Rmd",
 "text": null
 },
 "download": null,

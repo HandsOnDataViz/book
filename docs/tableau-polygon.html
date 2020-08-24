@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="filtered-point-map-socrata.html"/>
-<link rel="next" href="embed.html"/>
+<link rel="next" href="table.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -187,8 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>5</b> Table Your Data</a></li>
-<li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
@@ -199,13 +198,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>7</b> Map Your Data</a>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Interactive Table with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="datawrapper-table-sparklines.html"><a href="datawrapper-table-sparklines.html"><i class="fa fa-check"></i>Add Sparklines to Datawrapper Table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
 <ul>
@@ -305,7 +309,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a href="scatter-chart-tableau.html#scatter-chart-tableau">scatterplots</a> and <a href="filtered-line-chart-tableau.html#filtered-line-chart-tableau">filtered line charts</a>.
 Tableau can also be used to create point and polygon maps.</p>
 <p>In this tutorial, we will create a choropleth map of military spending per country
-as percentage of gross dometic product as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-final">7.27</a>.
+as percentage of gross dometic product as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-final">6.27</a>.
 Remember that choropleth maps work best when
 they show relative, not absolute numbers.
 Displaying total spending per country is a bad idea, as bigger countries tend
@@ -316,7 +320,7 @@ including military spending.</p>
 <iframe src="https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 7.27: This choropleth map is made in Tableau Public
+Figure 6.27: This choropleth map is made in Tableau Public
 </p>
 </div>
 <p>To create maps in Tableau, you do not always need geospatial files. Tableau can recognize
@@ -332,28 +336,28 @@ article from the official Tableau documentation.</p>
 <p>Launch Tableau. In <strong>Connect</strong> section on start up, choose <em>Text file</em>, and select <code>military-spending-2018.csv</code>.
 From Data Source tab, inspect the dataset contents. It contains four columns: Country Name, which includes
 countries and territories defined by the World Bank, the three-digit Country Code,
-Indicator Name (same for all rows), and percent value, as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-connect">7.28</a>.
+Indicator Name (same for all rows), and percent value, as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-connect">6.28</a>.
 Notice that some values are set to <em>null</em> (not available).</p>
 
 <div class="figure"><span id="fig:tableau-polygon-connect"></span>
-<img src="images/07-map/tableau-polygon-connect-annotated.png" alt="When finished inspecting the connected file, go to Sheet 1."  />
+<img src="images/06-map/tableau-polygon-connect-annotated.png" alt="When finished inspecting the connected file, go to Sheet 1."  />
 <p class="caption">
-Figure 7.28: When finished inspecting the connected file, go to Sheet 1.
+Figure 6.28: When finished inspecting the connected file, go to Sheet 1.
 </p>
 </div>
 <p>In the variables list on the left, notice how Tableau generated <em>Latitude</em> and <em>Longitude</em>
 fields based on country names and country codes (by the way, you only need one or the other, not both).</p>
 <p>Drag and drop Longitude to <strong>Columns</strong>, and <em>Latitude</em> to <strong>Rows</strong>,
-as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-drag">7.29</a>.
+as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-drag">6.29</a>.
 You should see that the chart area shows an empty map of the world
 (if not, double-check that Latitude is indeed in Rows, not Columns).
 In Marks box, change <em>Automatic</em> to <em>Map</em>, and drag <em>Country Name</em> variable
 to the <strong>Size</strong> box of the Marks card. You will see that country outlines turned blue.</p>
 
 <div class="figure"><span id="fig:tableau-polygon-drag"></span>
-<img src="images/07-map/tableau-polygon-drag-annotated.png" alt="Drag and drop variables to the right places."  />
+<img src="images/06-map/tableau-polygon-drag-annotated.png" alt="Drag and drop variables to the right places."  />
 <p class="caption">
-Figure 7.29: Drag and drop variables to the right places.
+Figure 6.29: Drag and drop variables to the right places.
 </p>
 </div>
 <p>We want colors to represent military spending values, so drag <em>Value</em> variable to
@@ -363,34 +367,34 @@ painted with the lightest color, which is misleading. To remove countries with <
 from the map, drag <em>Values</em> to the <em>Filters</em> card. A popup window will ask you how
 you want to filter, just leave everything unchanged. This will leave the whole range of values,
 and exclude <em>null</em> values (see the checkbox in the lower-right corner of the Filter window
-in Figure <a href="tableau-polygon.html#fig:tableau-polygon-filter">7.30</a>).</p>
+in Figure <a href="tableau-polygon.html#fig:tableau-polygon-filter">6.30</a>).</p>
 
 <div class="figure"><span id="fig:tableau-polygon-filter"></span>
-<img src="images/07-map/tableau-polygon-filter-annotated.png" alt="Filter values to remove countries with no data from display." width="400" />
+<img src="images/06-map/tableau-polygon-filter-annotated.png" alt="Filter values to remove countries with no data from display." width="400" />
 <p class="caption">
-Figure 7.30: Filter values to remove countries with no data from display.
+Figure 6.30: Filter values to remove countries with no data from display.
 </p>
 </div>
 <p>You can change the color scheme by clicking the Color box of the Marks card, and
 then <em>Edit colors</em>. Change the palette to <em>Reds</em>, and make it stepped rather than continuous,
-as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-color">7.31</a>.</p>
+as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-color">6.31</a>.</p>
 
 <div class="figure"><span id="fig:tableau-polygon-color"></span>
-<img src="images/07-map/tableau-polygon-color.png" alt="Change the color scheme to Reds with 5 steps." width="400" />
+<img src="images/06-map/tableau-polygon-color.png" alt="Change the color scheme to Reds with 5 steps." width="400" />
 <p class="caption">
-Figure 7.31: Change the color scheme to Reds with 5 steps.
+Figure 6.31: Change the color scheme to Reds with 5 steps.
 </p>
 </div>
 <p>You may notice the tooltip calls values <em>Value</em> when hovering over countries.
 Click the Tooltip box of the Marks card to change text to <em>Military spending</em>,
-and add a percentage sign after the value itself, as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-tooltip">7.32</a>.
+and add a percentage sign after the value itself, as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-tooltip">6.32</a>.
 Make sure not to change values between
 <code>&lt;</code> and <code>&gt;</code>, as these are references to variables.</p>
 
 <div class="figure"><span id="fig:tableau-polygon-tooltip"></span>
-<img src="images/07-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
+<img src="images/06-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
-Figure 7.32: Change tooltip text to make it more user-friendly.
+Figure 6.32: Change tooltip text to make it more user-friendly.
 </p>
 </div>
 <p>And finally, let’s add a proper title to the map. Double-click the default <em>Sheet 1</em> name
@@ -427,7 +431,7 @@ how it can be obtained, stored, modified, and shared.</p>
         </div>
       </div>
 <a href="filtered-point-map-socrata.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="embed.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="table.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -466,7 +470,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/07-map.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/06-map.Rmd",
 "text": null
 },
 "download": null,

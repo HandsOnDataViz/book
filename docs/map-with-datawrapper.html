@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -187,8 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>5</b> Table Your Data</a></li>
-<li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
@@ -199,13 +198,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>7</b> Map Your Data</a>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Interactive Table with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="datawrapper-table-sparklines.html"><a href="datawrapper-table-sparklines.html"><i class="fa fa-check"></i>Add Sparklines to Datawrapper Table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
 <ul>
@@ -305,7 +309,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 stylish and interactive point and polygon maps.
 In this section, we will create a choropleth map of average home values in US states
 in 2019 according to <a href="https://www.zillow.com/research/data/">Zillow data</a>,
-as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-final">7.13</a>.</p>
+as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-final">6.13</a>.</p>
 <p>We calculated average 2019 prices for 50 US states and DC, and put them in a spreadsheet, which
 <a href="data/us-states-home-values-zillow-2019.csv">you can download</a> for this tutorial.</p>
 
@@ -313,20 +317,20 @@ as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-final"
 <iframe src="https://datawrapper.dwcdn.net/uX2Yx/2/" width="672" height="513px">
 </iframe>
 <p class="caption">
-Figure 7.13: This choropleth map is created in Datawrapper
+Figure 6.13: This choropleth map is created in Datawrapper
 </p>
 </div>
 <div id="create-a-new-choropleth-map" class="section level3 unnumbered" number="">
 <h3>Create a New Choropleth Map</h3>
 <p>Sign in to your <a href="https://app.datawrapper.de/signin">Datawrapper account</a>
 and click <em>New Map</em> in the header. Datawrapper will offer a choice of
-a <em>Choropleth</em>, <em>Symbol</em>, and <em>Locator</em> maps, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-choose">7.14</a>.
+a <em>Choropleth</em>, <em>Symbol</em>, and <em>Locator</em> maps, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-choose">6.14</a>.
 Go ahead and choose <em>choropleth</em>.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-choose"></span>
-<img src="images/07-map/datawrapper-map-choose-annotated.png" alt="Sign in to Datawrapper, click New Map, and choose Choropleth."  />
+<img src="images/06-map/datawrapper-map-choose-annotated.png" alt="Sign in to Datawrapper, click New Map, and choose Choropleth."  />
 <p class="caption">
-Figure 7.14: Sign in to Datawrapper, click <em>New Map</em>, and choose <em>Choropleth</em>.
+Figure 6.14: Sign in to Datawrapper, click <em>New Map</em>, and choose <em>Choropleth</em>.
 </p>
 </div>
 <p>Datawrapper splits the process of creating a map into four steps.
@@ -337,12 +341,12 @@ and zip code and census tract areas for the United States. But you are not limit
 to the boundaries that Datawrapper already has. You can also upload your own custom geographies
 as a TopoJSON or GeoJSON file, and you will learn more about that in the <a href="convert-geojson.html">Convert to GeoJSON section of chapter 12</a>.
 Because we are mapping average home prices by US state, choose <em>United States &gt; States</em>,
-as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-us-states">7.15</a>, and hit <em>Next</em> to go to step 2.</p>
+as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-us-states">6.15</a>, and hit <em>Next</em> to go to step 2.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-us-states"></span>
-<img src="images/07-map/datawrapper-map-us-states-annotated.png" alt="To map home prices by US state, choose appropriate boundaries."  />
+<img src="images/06-map/datawrapper-map-us-states-annotated.png" alt="To map home prices by US state, choose appropriate boundaries."  />
 <p class="caption">
-Figure 7.15: To map home prices by US state, choose appropriate boundaries.
+Figure 6.15: To map home prices by US state, choose appropriate boundaries.
 </p>
 </div>
 <p>In the second step, you can attach data to the chosen boundaries.
@@ -360,12 +364,12 @@ or upload a CSV file. We recommend uploading a file, so click the link and choos
 <code>us-states-home-values-zillow-2019.csv</code>. The table will then get populated,
 and Datawrapper will ask for help identifying the relevant column with geographical names.
 Make sure your <em>Matched as ISO-Codes</em> tooltip is blue above the <em>StateAbbr</em> column,
-scroll down and click <em>Next</em>, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-match">7.16</a>.</p>
+scroll down and click <em>Next</em>, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-match">6.16</a>.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-match"></span>
-<img src="images/07-map/datawrapper-map-match.png" alt="Tell Datawrapper which column contains geography names (ISO-Codes of states)." width="350" />
+<img src="images/06-map/datawrapper-map-match.png" alt="Tell Datawrapper which column contains geography names (ISO-Codes of states)." width="350" />
 <p class="caption">
-Figure 7.16: Tell Datawrapper which column contains geography names (ISO-Codes of states).
+Figure 6.16: Tell Datawrapper which column contains geography names (ISO-Codes of states).
 </p>
 </div>
 <p>In a similar fashion, you will then be asked to identify a column that contains <em>values</em> to be mapped.
@@ -376,25 +380,25 @@ Make sure it is <em>HomeValue2019</em> that is <em>Matched As Values</em>.</p>
 <p>When finished uploading data, go to step 3 to begin visualizing. Start with the <em>Refine</em> tab and choose
 a diverging color palette, from reds to blues. Make sure your “middle” color value
 corresponds to the state with the median home price by choosing <em>min/median/max</em> value
-from the Stops dropdown, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-color">7.17</a>.</p>
+from the Stops dropdown, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-color">6.17</a>.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-color"></span>
-<img src="images/07-map/datawrapper-map-color.png" alt="Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value." width="350" />
+<img src="images/06-map/datawrapper-map-color.png" alt="Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value." width="350" />
 <p class="caption">
-Figure 7.17: Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value.
+Figure 6.17: Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value.
 </p>
 </div>
 <p>When finished with colors, scroll down to <strong>Tooltips</strong> section and
 clikc <em>Customize tooltips</em> button. In a popup window, set Title to the state name
-and Body to the average home value, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-tooltip">7.18</a>.
+and Body to the average home value, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-tooltip">6.18</a>.
 Note that references to variables are put in double curly brackets (<code>{{ ColumnNameGoesHere }}</code>).
 Make sure your dollar symbol (<code>$</code>) in outside of the curly brackets. Click <em>Save</em>,
 and hover over the map to make sure your tooltip displays the state name and the average home price.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-tooltip"></span>
-<img src="images/07-map/datawrapper-map-tooltip-annotated.png" alt="To reference values from the spreadsheet, add column names in double curly brackets." width="450" />
+<img src="images/06-map/datawrapper-map-tooltip-annotated.png" alt="To reference values from the spreadsheet, add column names in double curly brackets." width="450" />
 <p class="caption">
-Figure 7.18: To reference values from the spreadsheet, add column names in double curly brackets.
+Figure 6.18: To reference values from the spreadsheet, add column names in double curly brackets.
 </p>
 </div>
 <p>You can now move to the <em>Annotate</em> tab and set values for the map’s title and description,
@@ -450,7 +454,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/07-map.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/06-map.Rmd",
 "text": null
 },
 "download": null,

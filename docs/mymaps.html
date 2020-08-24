@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -187,8 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>5</b> Table Your Data</a></li>
-<li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
@@ -199,13 +198,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>7</b> Map Your Data</a>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Interactive Table with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="datawrapper-table-sparklines.html"><a href="datawrapper-table-sparklines.html"><i class="fa fa-check"></i>Add Sparklines to Datawrapper Table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
 <ul>
@@ -309,36 +313,36 @@ it limits your styling options.</p>
 within Google Drive, and so allows you to invite
 other users with Google accounts to work on the map.</p>
 <p>In this section, we will look at building a point map of airports in Nigeria, as is shown
-in Figure <a href="mymaps.html#fig:mymaps-final">7.5</a>. We will
+in Figure <a href="mymaps.html#fig:mymaps-final">6.5</a>. We will
 create a map, change a baselayer, import point data, style points, and share the map.</p>
 
 <div class="figure"><span id="fig:mymaps-final"></span>
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1v1ZNrpfBtq_p4wTRyj2hIKBtTnkmhnMF" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 7.5: A map of airports in Nigeria built using Google My Maps.
+Figure 6.5: A map of airports in Nigeria built using Google My Maps.
 </p>
 </div>
 <div id="create-a-new-map-in-my-maps" class="section level3 unnumbered" number="">
 <h3>Create a New Map in My Maps</h3>
 <p>Navigate to <a href="https://www.google.com/mymaps/">Google My Maps</a>.
 In the upper-right corner, click <code>+ Create a New Map</code> button,
-as shown in Figure <a href="mymaps.html#fig:mymaps-create-new">7.6</a>.</p>
+as shown in Figure <a href="mymaps.html#fig:mymaps-create-new">6.6</a>.</p>
 
 <div class="figure"><span id="fig:mymaps-create-new"></span>
-<img src="images/07-map/mymaps-create-new.png" alt="A map of airports in Nigeria built using Google My Maps." width="300" />
+<img src="images/06-map/mymaps-create-new.png" alt="A map of airports in Nigeria built using Google My Maps." width="300" />
 <p class="caption">
-Figure 7.6: A map of airports in Nigeria built using Google My Maps.
+Figure 6.6: A map of airports in Nigeria built using Google My Maps.
 </p>
 </div>
 <p>You will see a typical Google Maps with no data. Click on the current title (<code>Untitled map</code>),
 and add appropriate title and description in the modal window that appeared
-(see Figure <a href="mymaps.html#fig:mymaps-edit-title">7.7</a> for inspiration).</p>
+(see Figure <a href="mymaps.html#fig:mymaps-edit-title">6.7</a> for inspiration).</p>
 
 <div class="figure"><span id="fig:mymaps-edit-title"></span>
-<img src="images/07-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
+<img src="images/06-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
 <p class="caption">
-Figure 7.7: Add title and description to your map.
+Figure 6.7: Add title and description to your map.
 </p>
 </div>
 <p>Before we add any points, let’s change the basemap to something less boring.
@@ -349,22 +353,22 @@ a dataset of Nigerian airports that we got <a href="https://datacatalog.worldban
 as a Shapefile and then converted to a CSV.</p>
 <p>Under <em>Untitled layer</em> item, click <em>Import</em> button, and drag-and-drop the CSV file.
 Once the data file is uploaded, My Maps will ask which columns contain location data.
-In our case, these are <em>LATITUDE</em> and <em>LONGITUDE</em> columns, as shown in Figure <a href="mymaps.html#fig:mymaps-lat-lon">7.8</a>.</p>
+In our case, these are <em>LATITUDE</em> and <em>LONGITUDE</em> columns, as shown in Figure <a href="mymaps.html#fig:mymaps-lat-lon">6.8</a>.</p>
 
 <div class="figure"><span id="fig:mymaps-lat-lon"></span>
-<img src="images/07-map/mymaps-lat-lon-annotated.png" alt="Check LATITUDE and LONGITUDE as your location columns." width="300" />
+<img src="images/06-map/mymaps-lat-lon-annotated.png" alt="Check LATITUDE and LONGITUDE as your location columns." width="300" />
 <p class="caption">
-Figure 7.8: Check LATITUDE and LONGITUDE as your location columns.
+Figure 6.8: Check LATITUDE and LONGITUDE as your location columns.
 </p>
 </div>
 <p>Once the two boxes are checked, click <em>Continue</em>. Another window will pop up, asking
-which column to use to annotate points. Choose <em>City</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-column-title">7.9</a>,
+which column to use to annotate points. Choose <em>City</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-column-title">6.9</a>,
 and then <em>Finish</em>.</p>
 
 <div class="figure"><span id="fig:mymaps-column-title"></span>
-<img src="images/07-map/mymaps-column-title-annotated.png" alt="Choose City as the title for your markers." width="300" />
+<img src="images/06-map/mymaps-column-title-annotated.png" alt="Choose City as the title for your markers." width="300" />
 <p class="caption">
-Figure 7.9: Choose City as the title for your markers.
+Figure 6.9: Choose City as the title for your markers.
 </p>
 </div>
 <p>It will take a few moments for My Maps to create a new layer, which
@@ -376,12 +380,12 @@ on the right. Change “All items” text to “Airports”,
 choose orange color, and click on <em>More icons</em> to find an airport symbol
 (we recommend using Filter to search for “airport”, or simply scroll down to Transportation section).
 The marker in the layers menu will change to an orange airplane,
-as shown in Figure <a href="mymaps.html#fig:mymaps-color">7.10</a>.</p>
+as shown in Figure <a href="mymaps.html#fig:mymaps-color">6.10</a>.</p>
 
 <div class="figure"><span id="fig:mymaps-color"></span>
-<img src="images/07-map/mymaps-color-annotated.png" alt="In My Maps, you can change marker colors and icons." width="300" />
+<img src="images/06-map/mymaps-color-annotated.png" alt="In My Maps, you can change marker colors and icons." width="300" />
 <p class="caption">
-Figure 7.10: In My Maps, you can change marker colors and icons.
+Figure 6.10: In My Maps, you can change marker colors and icons.
 </p>
 </div>
 <p>Click on the layer name, which by default is set to the name of imported file (<code>nigeria-airports.csv</code>),
@@ -394,24 +398,24 @@ to the right of the markers.</p>
 <div id="share-your-google-map" class="section level3 unnumbered" number="">
 <h3>Share Your Google Map</h3>
 <p>If you are happy with the result, click <em>Share</em>, and click <em>Change to anyone with the link</em>
-(see Figure <a href="mymaps.html#fig:mymaps-share">7.11</a>),
+(see Figure <a href="mymaps.html#fig:mymaps-share">6.11</a>),
 just as you would with any other Google Drive document.</p>
 
 <div class="figure"><span id="fig:mymaps-share"></span>
-<img src="images/07-map/mymaps-share.png" alt="Make sure anyone with the link can view your map before you share it." width="400" />
+<img src="images/06-map/mymaps-share.png" alt="Make sure anyone with the link can view your map before you share it." width="400" />
 <p class="caption">
-Figure 7.11: Make sure anyone with the link can view your map before you share it.
+Figure 6.11: Make sure anyone with the link can view your map before you share it.
 </p>
 </div>
 <p>You can now generate a code snippet to embed the map as an iframe.
-From the main kebab menu to the right of the map title, choose <em>Embed on my site</em> (Figure <a href="mymaps.html#fig:mymaps-embed">7.12</a>).
+From the main kebab menu to the right of the map title, choose <em>Embed on my site</em> (Figure <a href="mymaps.html#fig:mymaps-embed">6.12</a>).
 You can use now use this iframe code to embed your map to
 your Wordpress, Squarespace, or any other website.</p>
 
 <div class="figure"><span id="fig:mymaps-embed"></span>
-<img src="images/07-map/mymaps-embed-annotated.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
+<img src="images/06-map/mymaps-embed-annotated.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
 <p class="caption">
-Figure 7.12: My Maps can generate an iframe code to include the map on your own website.
+Figure 6.12: My Maps can generate an iframe code to include the map on your own website.
 </p>
 </div>
 </div>
@@ -475,7 +479,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/07-map.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/06-map.Rmd",
 "text": null
 },
 "download": null,

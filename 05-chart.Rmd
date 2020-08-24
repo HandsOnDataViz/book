@@ -12,16 +12,16 @@ Table: (\#tab:chart-types) Basic Chart Types and Tutorials
 
 | Chart | Best use and tutorials in this book |
 | --- | --- |
-| Grouped column or bar<br> ![](images/06-chart/chart-grouped-column.png) | Best to compare categories side-by-side. Vertical columns, or horizontal bars for long labels. <br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
-| Separated column or bar<br> ![](images/06-chart/chart-separated-column.png) | Best to compare categories in separate clusters. Vertical columns, or horizontal bars for long labels.<br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
-| Stacked column or bar<br> ![](images/06-chart/chart-stacked-column.png) | Best to compare sub-categories, or parts of a whole. Vertical columns, or horizontal bars for long labels.<br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
-| Histogram<br> ![](images/06-chart/chart-histogram.png) | Best to show distribution of raw data, with number of values in each bucket.<br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
-| Pie chart<br> ![](images/06-chart/chart-pie.png) | Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tool: [Google Sheets pie chart tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
-| Line chart<br> ![](images/06-chart/chart-line.png) | Best to show continuous data, such as change over time.<br>Easy tool: [Google Sheets line chart tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
-| Filtered line chart <br> ![](images/06-chart/chart-filtered-line.png) | Best to show multiple lines of continuous data, with on-off toggle buttons. <br>Easy tool: [Tableau Public filtered line chart tutorial](filtered-line-chart-tableau.html) |
-| Stacked area chart<br> ![](images/06-chart/chart-stacked-area.png) | Best to show parts of a whole, with change over time. <br>Easy tool: [Google Sheets stacked area tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
-| XY Scatter chart <br> ![](images/06-chart/chart-scatter.png) | Best to show the relationship between two sets of data. <br>Easy tool: [Google Sheets scatter chart tutorial](scatter-bubble-google.html) or [Tableau Public scatter chart tutorial](scatter-chart-tableau.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
-| Bubble chart <br> ![](images/06-chart/chart-bubble.png) | Best to show the relationship between three or four sets of data, using bubble size and color.<br>Easy tool: [Google Sheets bubble chart tutorial](scatter-bubble-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| Grouped column or bar<br> ![](images/05-chart/chart-grouped-column.png) | Best to compare categories side-by-side. Vertical columns, or horizontal bars for long labels. <br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| Separated column or bar<br> ![](images/05-chart/chart-separated-column.png) | Best to compare categories in separate clusters. Vertical columns, or horizontal bars for long labels.<br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| Stacked column or bar<br> ![](images/05-chart/chart-stacked-column.png) | Best to compare sub-categories, or parts of a whole. Vertical columns, or horizontal bars for long labels.<br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| Histogram<br> ![](images/05-chart/chart-histogram.png) | Best to show distribution of raw data, with number of values in each bucket.<br>Easy tool: [Google Sheets bar and column tutorial](column-bar-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| Pie chart<br> ![](images/05-chart/chart-pie.png) | Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tool: [Google Sheets pie chart tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| Line chart<br> ![](images/05-chart/chart-line.png) | Best to show continuous data, such as change over time.<br>Easy tool: [Google Sheets line chart tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| Filtered line chart <br> ![](images/05-chart/chart-filtered-line.png) | Best to show multiple lines of continuous data, with on-off toggle buttons. <br>Easy tool: [Tableau Public filtered line chart tutorial](filtered-line-chart-tableau.html) |
+| Stacked area chart<br> ![](images/05-chart/chart-stacked-area.png) | Best to show parts of a whole, with change over time. <br>Easy tool: [Google Sheets stacked area tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| XY Scatter chart <br> ![](images/05-chart/chart-scatter.png) | Best to show the relationship between two sets of data. <br>Easy tool: [Google Sheets scatter chart tutorial](scatter-bubble-google.html) or [Tableau Public scatter chart tutorial](scatter-chart-tableau.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| Bubble chart <br> ![](images/05-chart/chart-bubble.png) | Best to show the relationship between three or four sets of data, using bubble size and color.<br>Easy tool: [Google Sheets bubble chart tutorial](scatter-bubble-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
 
 <!-- TODO: Add chart with error bars to acknowledge data uncertainty (such as margins of error), and also consider mentioning this in chart design principles -->
 
@@ -43,7 +43,7 @@ It shows basic chart components that are shared among most chart types.
 (ref:design-principles-chart-components) Common chart components.
 
 ```{r design-principles-chart-components, fig.cap="(ref:design-principles-chart-components)"}
-knitr::include_graphics("images/06-chart/design-principles-chart-components.png")
+knitr::include_graphics("images/05-chart/design-principles-chart-components.png")
 ```
 
 A *title* is perhaps the most important element of any chart. A good title is short, clear,
@@ -104,7 +104,7 @@ The Figure \@ref(fig:design-principles-start-at-zero) shows a good and a bad exa
 (ref:design-principles-start-at-zero) Start your bar chart at zero.
 
 ```{r design-principles-start-at-zero, fig.cap="(ref:design-principles-start-at-zero)"}
-knitr::include_graphics("images/06-chart/design-principles-start-at-zero.png")
+knitr::include_graphics("images/05-chart/design-principles-start-at-zero.png")
 ```
 
 Starting y-axis at anything other than zero is a common trick used by some media
@@ -143,7 +143,7 @@ It also looks unprofessional and doesn't add credibility to you as a storyteller
 (ref:design-principles-junk) Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements.
 
 ```{r design-principles-junk, fig.cap="(ref:design-principles-junk)"}
-knitr::include_graphics("images/06-chart/design-principles-junk.png")
+knitr::include_graphics("images/05-chart/design-principles-junk.png")
 ```
 
 Do not use shadows or thick outlines with bar charts, because the reader might think
@@ -165,7 +165,7 @@ Figure \@ref(fig:design-principles-pie) illustrates that.
 (ref:design-principles-pie) Sort slices in pie charts from largest to smallest, and start at 12 o'clock.
 
 ```{r design-principles-pie, fig.cap="(ref:design-principles-pie)"}
-knitr::include_graphics("images/06-chart/design-principles-pie.png")
+knitr::include_graphics("images/05-chart/design-principles-pie.png")
 ```
 
 If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or separated, like Figure \@ref(fig:design-principles-pie-to-bar) shows.
@@ -173,7 +173,7 @@ If your pie chart has more than five slices, consider showing your data in a bar
 (ref:design-principles-pie-to-bar) Consider using bar charts instead of pies.
 
 ```{r design-principles-pie-to-bar, fig.cap="(ref:design-principles-pie-to-bar)"}
-knitr::include_graphics("images/06-chart/design-principles-pie-to-bar.png")
+knitr::include_graphics("images/05-chart/design-principles-pie-to-bar.png")
 ```
 
 #### Don't make people turn their heads to read labels {-}
@@ -182,7 +182,7 @@ When your column chart has long x-axis labels that have to be rotated (often 90 
 (ref:design-principles-turn-bar) For long labels, use horizontal bar charts.
 
 ```{r design-principles-turn-bar, fig.cap="(ref:design-principles-turn-bar)"}
-knitr::include_graphics("images/06-chart/design-principles-turn-bar.png")
+knitr::include_graphics("images/05-chart/design-principles-turn-bar.png")
 ```
 
 #### Arrange elements logically {-}
@@ -191,7 +191,7 @@ If your bar chart shows different categories, consider ordering them, like is sh
 (ref:design-principles-order-categories) For long labels, use horizontal bar charts.
 
 ```{r design-principles-order-categories, fig.cap="(ref:design-principles-order-categories)"}
-knitr::include_graphics("images/06-chart/design-principles-order-categories.png")
+knitr::include_graphics("images/05-chart/design-principles-order-categories.png")
 ```
 
 #### Do not overload your chart {-}
@@ -208,7 +208,7 @@ Whatever colors you end up choosing, they need to be distinguishable (otherwise 
 (ref:design-principles-color) Don't use colors just for the sake of it.
 
 ```{r design-principles-color, fig.cap="(ref:design-principles-color)"}
-knitr::include_graphics("images/06-chart/design-principles-color.png")
+knitr::include_graphics("images/05-chart/design-principles-color.png")
 ```
 
 If you follow the advice, you should end up with a de-cluttered chart as shown in
@@ -217,7 +217,7 @@ Figure \@ref(fig:design-principles-decluttered). Notice how your eyes are drawn 
 (ref:design-principles-decluttered) Make sure important things catch the eye first.
 
 ```{r design-principles-decluttered, fig.cap="(ref:design-principles-decluttered)"}
-knitr::include_graphics("images/06-chart/design-principles-decluttered.png")
+knitr::include_graphics("images/05-chart/design-principles-decluttered.png")
 ```
 
 ## Google Sheets Charts {- #chart-google-sheets}
@@ -261,7 +261,7 @@ Figure \@ref(fig:column-grouped) shows differences in obesity between men and wo
 (ref:column-grouped) Grouped column chart with data from [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
 
 ```{r column-grouped, fig.cap="(ref:column-grouped)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive") else knitr::include_graphics("images/06-chart/column-grouped.png")
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-grouped.png")
 ```
 
 The following steps will help you recreate an interactive grouped column (or horizontal bar) chart.
@@ -275,7 +275,7 @@ The following steps will help you recreate an interactive grouped column (or hor
 (ref:file-make-copy2) Make your own copy of the Google Sheet template.
 
 ```{r file-make-copy2, out.width="250px", fig.cap="(ref:file-make-copy2)"}
- knitr::include_graphics("images/06-chart/file-make-copy2.png")
+ knitr::include_graphics("images/05-chart/file-make-copy2.png")
 ```
 
 4. To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete, as shown in Figure \@ref(fig:delete-chart).
@@ -283,7 +283,7 @@ The following steps will help you recreate an interactive grouped column (or hor
 (ref:delete-chart) Float cursor in top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete.
 
 ```{r delete-chart, out.width="180px", fig.cap="(ref:delete-chart)"}
- knitr::include_graphics("images/06-chart/delete-chart.png")
+ knitr::include_graphics("images/05-chart/delete-chart.png")
 ```
 
 Note: Another name for the 3-dot menu symbol is the "kebab menu" because it resembles Middle Eastern
@@ -293,7 +293,7 @@ as shown in Figure \@ref(fig:menu-hamburger-kebab).
 (ref:menu-hamburger-kebab) You should be able to distinguish kebab from hamburger menu icons.
 
 ```{r menu-hamburger-kebab, fig.cap="(ref:menu-hamburger-kebab)"}
-knitr::include_graphics("images/06-chart/menu-hamburger-kebab.png")
+knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
 ```
 
 5. Format your data to make each column a data series, as shown in Figure \@ref(fig:column-grouped-data), which means it will display as a separate color in the chart.
@@ -301,7 +301,7 @@ knitr::include_graphics("images/06-chart/menu-hamburger-kebab.png")
 (ref:column-grouped-data) Format data in columns to make colored grouped columns in your chart.
 
 ```{r column-grouped-data, out.width="350px", fig.cap="(ref:column-grouped-data)"}
- knitr::include_graphics("images/06-chart/column-grouped-data.png")
+ knitr::include_graphics("images/05-chart/column-grouped-data.png")
 ```
 
 6. Use your cursor to select only the data you wish to chart, then go to the Insert menu and select Chart, as shown in Figure \@ref(fig:column-grouped-insert).
@@ -309,7 +309,7 @@ knitr::include_graphics("images/06-chart/menu-hamburger-kebab.png")
 (ref:column-grouped-insert) Select your data and then Insert the Chart.
 
 ```{r column-grouped-insert, out.width="250px", fig.cap="(ref:column-grouped-insert)"}
- knitr::include_graphics("images/06-chart/column-grouped-insert.png")
+ knitr::include_graphics("images/05-chart/column-grouped-insert.png")
 ```
 
 7. In the Chart Editor, change the default selection to Column chart, with Stacking none, to display Grouped Columns, as shown in Figure \@ref(fig:column-grouped-editor). Or select *Horizontal bar chart* if you have longer labels.
@@ -317,7 +317,7 @@ knitr::include_graphics("images/06-chart/menu-hamburger-kebab.png")
 (ref:column-grouped-editor) Change the default to Column chart, with Stacking none.
 
 ```{r column-grouped-editor, out.width="250px", fig.cap="(ref:column-grouped-editor)"}
- knitr::include_graphics("images/06-chart/column-grouped-editor.png")
+ knitr::include_graphics("images/05-chart/column-grouped-editor.png")
 ```
 
 8. To customize title, labels, and more, in the Chart Editor select Customize, as shown in Figure \@ref(fig:chart-editor-customize).
@@ -325,7 +325,7 @@ knitr::include_graphics("images/06-chart/menu-hamburger-kebab.png")
 (ref:chart-editor-customize) Select Customize to edit title, labels, and more.
 
 ```{r chart-editor-customize, out.width="250px", fig.cap="(ref:chart-editor-customize)"}
- knitr::include_graphics("images/06-chart/chart-editor-customize.png")
+ knitr::include_graphics("images/05-chart/chart-editor-customize.png")
 ```
 
 9. To make your data public, go to the upper-right corner of your sheet to click the Share button, and in the next screen, click the words "Change to anyone with the link," as shown in Figure \@ref(fig:share-button-sheet). This means your sheet is no longer Restricted to only you, but can be viewed by anyone with the link. See additional options.
@@ -333,7 +333,7 @@ knitr::include_graphics("images/06-chart/menu-hamburger-kebab.png")
 (ref:share-button-sheet) Click the Share button and then click *Change to anyone with the link* to make your data public.
 
 ```{r share-button-sheet, out.width="350px", fig.cap="(ref:share-button-sheet)"}
- knitr::include_graphics("images/06-chart/share-button-sheet-annotated.png")
+ knitr::include_graphics("images/05-chart/share-button-sheet-annotated.png")
 ```
 
 10. To embed an interactive version of your chart in another web page, click the kebab menu in the upper-right corner of your chart, and select Publish Chart, as shown in Figure \@ref(fig:chart-publish). In the next screen, select Embed and press the Publish button. See [Chapter 8: Embed on the Web](embed.html) to learn what to do with the iframe code.
@@ -341,7 +341,7 @@ knitr::include_graphics("images/06-chart/menu-hamburger-kebab.png")
 (ref:chart-publish) Select Publish Chart to embed an interactive chart on another web page.
 
 ```{r chart-publish, out.width="200px", fig.cap="(ref:chart-publish)"}
- knitr::include_graphics("images/06-chart/chart-publish.png")
+ knitr::include_graphics("images/05-chart/chart-publish.png")
 ```
 
 Note: Currently, there is no easy way to cite or link to your source data inside a Google Sheets chart.
@@ -355,7 +355,7 @@ When you visualize independent categories of data, and you don't want them to ap
 (ref:bar-separated) Separated bar chart with data from [Starbucks and McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
 
 ```{r bar-separated, fig.cap="(ref:bar-separated)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive") else knitr::include_graphics("images/06-chart/bar-separated.png")
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive") else knitr::include_graphics("images/05-chart/bar-separated.png")
 ```
 
 The only difference between making a grouped versus a separated chart is how you structure your data.
@@ -365,7 +365,7 @@ The rest of the steps remain the same as above.
 (ref:bar-separated-data) Create a separated column or bar chart by leaving some cells blank.
 
 ```{r bar-separated-data, fig.cap="(ref:bar-separated-data)"}
- knitr::include_graphics("images/06-chart/bar-separated-data.png")
+ knitr::include_graphics("images/05-chart/bar-separated-data.png")
 ```
 
 To create your own separated column or bar chart using the fast-food example,
@@ -379,7 +379,7 @@ to represent parts of a whole instead of pie charts. For example, the stacked co
 (ref:column-stacked) Stacked column chart with data from [WHO and CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive).
 
 ```{r column-stacked, fig.cap="(ref:column-stacked)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive") else knitr::include_graphics("images/06-chart/column-stacked.png")
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-stacked.png")
 ```
 
 To create a stacked column or bar chart, structure your data so that each column will become a new series with its own color, as shown in Figure \@ref(fig:column-stacked-data). Then in the Chart Editor window, choose Chart Type > Stacked column chart (or Stacked bar chart). The rest of the steps are similar to the ones above.
@@ -387,7 +387,7 @@ To create a stacked column or bar chart, structure your data so that each column
 (ref:column-stacked-data) Create a stacked column or bar chart by structuring your data as shown.
 
 ```{r column-stacked-data, out.width="350px", fig.cap="(ref:column-stacked-data)"}
- knitr::include_graphics("images/06-chart/column-stacked-data.png")
+ knitr::include_graphics("images/05-chart/column-stacked-data.png")
 ```
 
 To create your own stacked column or bar chart using the international weight level example,
@@ -431,7 +431,7 @@ and go to Insert > Chart. In the Chart editor window, in the Setup tab, select C
 (ref:histogram) Histogram chart with [fictitious source data](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=0). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive).
 
 ```{r histogram, fig.cap="(ref:histogram)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive") else knitr::include_graphics("images/06-chart/histogram.png")
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive") else knitr::include_graphics("images/05-chart/histogram.png")
 ```
 
 If you wish to use our fictional email dataset to create your own histogram, you can make a copy of the
@@ -470,7 +470,7 @@ you include pizzas but exclude ice cream), your pie chart would not make sense.
 (ref:pie) Pie chart with [fictitious source data](https://docs.google.com/spreadsheets/d/11cn0eysXqXIwhcTKmGuzMDw_RmpDpYLKZN3TeevT-Vg/edit?usp=sharing). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive).
 
 ```{r pie, fig.cap="(ref:pie)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive") else knitr::include_graphics("images/06-chart/pie.png")
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive") else knitr::include_graphics("images/05-chart/pie.png")
 ```
 
 To make a pie chart with Google Sheets, arrange your data in two columns, *Label* and *Value*.
@@ -503,7 +503,7 @@ the level of chicken (shown in light-green) rises steadily and surpasses beef (b
 (ref:line) Line chart showing meat availability per capita in the US, according to the [US Department of Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive).
 
 ```{r line, fig.cap="(ref:line)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive") else knitr::include_graphics("images/06-chart/line.png")
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive") else knitr::include_graphics("images/05-chart/line.png")
 ```
 
 The simplest way to organize your data is to use the first column as x-axis labels,
@@ -514,7 +514,7 @@ structured as shown in Figure \@ref(fig:line-data).
 (ref:line-data) Data for the line chart shown in Figure \@ref(fig:line).
 
 ```{r line-data, out.width="250px", fig.cap="(ref:line-data)"}
-knitr::include_graphics("images/06-chart/line-data.png")
+knitr::include_graphics("images/05-chart/line-data.png")
 ```
 
 The data is available in the [Google Sheet Line chart template](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/).
@@ -537,7 +537,7 @@ rise between 1910 and 1970 with a small dip around 1930s, and it didn't change m
 (ref:stacked-area) In addition to individual meat availability, stacked area charts show the overall availability. See data by [US Department of Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive).
 
 ```{r stacked-area, fig.cap="(ref:stacked-area)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive") else knitr::include_graphics("images/06-chart/stacked-area.png")
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive") else knitr::include_graphics("images/05-chart/stacked-area.png")
 ```
 
 The data for the stacked area chart is available from the [Google Sheet Stacked area chart template](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/),
@@ -574,7 +574,7 @@ births result in longer lives, or that longer-living females give birth to fewer
 (ref:scatter) This scatter chart shows that nations with lower fertility tend to have higher life expectancy. [See data](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/) by World Bank. Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&format=interactive).
 
 ```{r scatter, fig.cap="(ref:scatter)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;format=interactive") else knitr::include_graphics("images/06-chart/scatter.png")
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;format=interactive") else knitr::include_graphics("images/05-chart/scatter.png")
 ```
 
 The data used in Figure \@ref(fig:scatter) is available from our
@@ -589,7 +589,7 @@ The third column contains *Country* labels.
 (ref:scatter-data) Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels.
 
 ```{r scatter-data, out.width="350px", fig.cap="(ref:scatter-data)"}
-knitr::include_graphics("images/06-chart/scatter-data.png")
+knitr::include_graphics("images/05-chart/scatter-data.png")
 ```
 
 To build a scatter chart, select the *two* columns that contain your numeric data,
@@ -613,7 +613,7 @@ all other data ranges include it.
 (ref:scatter-labels) In the chart's Setup window, choose *Add labels* to the Series.
 
 ```{r scatter-labels, out.width="350px", fig.cap="(ref:scatter-labels)"}
-knitr::include_graphics("images/06-chart/scatter-labels-annotated.png")
+knitr::include_graphics("images/05-chart/scatter-labels-annotated.png")
 ```
 
 Tip: You may notice that some data points are too close to edges, and their labels are cut off.
@@ -636,7 +636,7 @@ with the country name and the two data points.
 (ref:bubble-3) This bubble chart is essentially a scatter chart, because no other dimensions (colors, sizes) are used. [See data](https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit?usp=sharing) by World Bank. Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/u/3/d/e/2PACX-1vQtMosshgyX6YoPpHo9QhSPk-ckOw1_yRryTF_vYJooBeWF13RaPv2IrGffcpaiqHPwfKFJAWY0HwA3/pubchart?oid=2105121864&format=interactive).
 
 ```{r bubble-3, fig.cap="(ref:bubble-3)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive") else knitr::include_graphics("images/06-chart/bubble-3.png")
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive") else knitr::include_graphics("images/05-chart/bubble-3.png")
 ```
 
 The data for this example is available in [Google Sheets Bubble chart with 3 columns template](https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/).
@@ -667,7 +667,7 @@ Float your cursor over bubbles to view data details in the interactive version o
 (ref:bubble-5) This bubble chart shows fertility and life expectancy for several countries, including their population (shown by bubble size) and region (shown by bubble color). [See data](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/) by World Bank. Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&format=interactive).
 
 ```{r bubble-5, fig.cap="(ref:bubble-5)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive") else knitr::include_graphics("images/06-chart/bubble-5.png")
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive") else knitr::include_graphics("images/05-chart/bubble-5.png")
 ```
 
 The five-column dataset is available in this [Google Sheets Bubble chart with 5 columns template](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/).
@@ -677,7 +677,7 @@ y-axis value, color, and bubble size.
 (ref:bubble-5-data) Bubble chart data. Bubble size represents population, color – region.
 
 ```{r bubble-5-data, out.width="400px", fig.cap="(ref:bubble-5-data)"}
-knitr::include_graphics("images/06-chart/bubble-5-data.png")
+knitr::include_graphics("images/05-chart/bubble-5-data.png")
 ```
 
 Select all data and go to *Insert > Chart*, and choose Bubble as the Chart type.
@@ -720,7 +720,7 @@ test scores.
 (ref:tableau-xy-demo) This scatterplot is made in Tableau Public an shows the relationship between household income and test scores in Connecticut school districts.
 
 ```{r tableau-xy-demo, fig.cap="(ref:tableau-xy-demo)"}
-if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/06-chart/tableau-xy-demo.png")
+if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-xy-demo.png")
 ```
 
 #### Install Tableau and Get Data {-}
@@ -756,7 +756,7 @@ to build your first chart.
 (ref:tableau-connect) Drag `data` sheet into *Drag tables here* area.
 
 ```{r tableau-connect, fig.cap="(ref:tableau-connect)"}
-knitr::include_graphics("images/06-chart/tableau-connect-annotated.png")
+knitr::include_graphics("images/05-chart/tableau-connect-annotated.png")
 ```
 
 <!-- TODO: Let's find out whether real first-time users can follow these steps! -->
@@ -787,7 +787,7 @@ values associated with it.
 (ref:tableau-xy-dragging) Drag data fields to the right places in Tableau.
 
 ```{r tableau-xy-dragging, fig.cap="(ref:tableau-xy-dragging)"}
-knitr::include_graphics("images/06-chart/tableau-xy-dragging-annotated.png")
+knitr::include_graphics("images/05-chart/tableau-xy-dragging-annotated.png")
 ```
 
 #### Add Title and Caption, and Publish {-}
@@ -806,7 +806,7 @@ As a result, your final worksheet will look like shown in Figure \@ref(fig:table
 (ref:tableau-xy-final) This scatter chart is ready to be published.
 
 ```{r tableau-xy-final, fig.cap="(ref:tableau-xy-final)"}
-knitr::include_graphics("images/06-chart/tableau-xy-final-annotated.png")
+knitr::include_graphics("images/05-chart/tableau-xy-final-annotated.png")
 ```
 
 Tip: In the dropdown above Columns section, change *Standard* to *Fit Width*
@@ -831,7 +831,7 @@ leaving the box checked.
 (ref:tableau-toolbar-settings) This scatter chart is ready to be published.
 
 ```{r tableau-toolbar-settings, fig.cap="(ref:tableau-toolbar-settings)"}
-knitr::include_graphics("images/06-chart/tableau-toolbar-settings-annotated.png")
+knitr::include_graphics("images/05-chart/tableau-toolbar-settings-annotated.png")
 ```
 
 See the [Embed Tableau Public on Your Website](embed-tableau.html) section of this book to insert the interactive version of your chart on a web page that you control.
@@ -862,7 +862,7 @@ We will use % Population with Internet Access by the World Bank. You can downloa
 (ref:tableau-filtered-demo) Internet Access by Country, 1995–2018.
 
 ```{r tableau-filtered-demo, fig.cap="(ref:tableau-filtered-demo)"}
-if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/06-chart/tableau-filtered-demo.png")
+if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-filtered-demo.png")
 ```
 
 We assume that you have Tableau installed. If not, see the previous tutorial, [Create XY Scatter Chart with Tableau Public](scatter-chart-tableau.html).
@@ -899,7 +899,7 @@ how the interactive filtering works.
 (ref:tableau-filtered-show-filter) After you drag Country Name to the Filters card, make sure the Filter is displayed.
 
 ```{r tableau-filtered-show-filter, out.width="220px", fig.cap="(ref:tableau-filtered-show-filter)"}
-knitr::include_graphics("images/06-chart/tableau-filtered-show-filter.png")
+knitr::include_graphics("images/05-chart/tableau-filtered-show-filter.png")
 ```
 
 ### Add Title and Caption, and Publish {-}
@@ -922,7 +922,7 @@ you are ready to publish.
 (ref:tableau-filtered-ready) This workbook is ready to be published.
 
 ```{r tableau-filtered-ready, fig.cap="(ref:tableau-filtered-ready)"}
-knitr::include_graphics("images/06-chart/tableau-filtered-ready.png")
+knitr::include_graphics("images/05-chart/tableau-filtered-ready.png")
 ```
 
 To publish the filtered line chart to the web, go to *File > Save to Tableau Public As...*.

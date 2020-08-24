@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -187,8 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>5</b> Table Your Data</a></li>
-<li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
@@ -199,13 +198,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>7</b> Map Your Data</a>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Interactive Table with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="datawrapper-table-sparklines.html"><a href="datawrapper-table-sparklines.html"><i class="fa fa-check"></i>Add Sparklines to Datawrapper Table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
 <ul>
@@ -309,13 +313,13 @@ Or would a table or text alone do a better job? Making a good chart takes time a
 so make sure it enhances your story.</p>
 <div id="deconstructing-a-chart" class="section level3 unnumbered" number="">
 <h3>Deconstructing a Chart</h3>
-<p>Let’s take a look at Figure <a href="chart-design.html#fig:design-principles-chart-components">6.1</a>.
+<p>Let’s take a look at Figure <a href="chart-design.html#fig:design-principles-chart-components">5.1</a>.
 It shows basic chart components that are shared among most chart types.</p>
 
 <div class="figure"><span id="fig:design-principles-chart-components"></span>
-<img src="images/06-chart/design-principles-chart-components.png" alt="Common chart components."  />
+<img src="images/05-chart/design-principles-chart-components.png" alt="Common chart components."  />
 <p class="caption">
-Figure 6.1: Common chart components.
+Figure 5.1: Common chart components.
 </p>
 </div>
 <p>A <em>title</em> is perhaps the most important element of any chart. A good title is short, clear,
@@ -358,12 +362,12 @@ there are some that are hard to bend.</p>
 <p>Bar charts use <em>length</em> to represent value, therefore their value axis <em>must start at zero</em>.
 That applies to column and area charts as well.
 This is to ensure that a bar twice the length of another bar represents twice its value.
-The Figure <a href="chart-design.html#fig:design-principles-start-at-zero">6.2</a> shows a good and a bad example.</p>
+The Figure <a href="chart-design.html#fig:design-principles-start-at-zero">5.2</a> shows a good and a bad example.</p>
 
 <div class="figure"><span id="fig:design-principles-start-at-zero"></span>
-<img src="images/06-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
+<img src="images/05-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
 <p class="caption">
-Figure 6.2: Start your bar chart at zero.
+Figure 5.2: Start your bar chart at zero.
 </p>
 </div>
 <p>Starting y-axis at anything other than zero is a common trick used by some media
@@ -394,16 +398,16 @@ and do the math for your readers.</p>
 You should be able to justify each element you add. To do so, ask yourself:
 Does this element improve the chart, or can I drop it without decreasing readability?
 This way you won’t end up with so-called “chart junk” as shown
-in Figure <a href="chart-design.html#fig:design-principles-junk">6.3</a>, which includes 3D perspectives,
+in Figure <a href="chart-design.html#fig:design-principles-junk">5.3</a>, which includes 3D perspectives,
 shadows, and unnecessary elements. They might have looked cool in
 early versions of Microsoft Office, but let’s stay away from them today.
 Chart junk distracts the viewer and reduces chart readability and comprehension.
 It also looks unprofessional and doesn’t add credibility to you as a storyteller.</p>
 
 <div class="figure"><span id="fig:design-principles-junk"></span>
-<img src="images/06-chart/design-principles-junk.png" alt="Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements."  />
+<img src="images/05-chart/design-principles-junk.png" alt="Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements."  />
 <p class="caption">
-Figure 6.3: Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements.
+Figure 5.3: Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements.
 </p>
 </div>
 <p>Do not use shadows or thick outlines with bar charts, because the reader might think
@@ -420,42 +424,42 @@ with varying shapes and/or colors.</p>
 <h4>Beware of pie charts</h4>
 <p>Remember that pie charts only show part-to-whole relationship, so all slices need to add up to 100%. Generally, the fewer slices—the better. Arrange slices from largest
 to smallest, clockwise, and put the largest slice at 12 o’clock.
-Figure <a href="chart-design.html#fig:design-principles-pie">6.4</a> illustrates that.</p>
+Figure <a href="chart-design.html#fig:design-principles-pie">5.4</a> illustrates that.</p>
 
 <div class="figure"><span id="fig:design-principles-pie"></span>
-<img src="images/06-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o’clock."  />
+<img src="images/05-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o’clock."  />
 <p class="caption">
-Figure 6.4: Sort slices in pie charts from largest to smallest, and start at 12 o’clock.
+Figure 5.4: Sort slices in pie charts from largest to smallest, and start at 12 o’clock.
 </p>
 </div>
-<p>If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or separated, like Figure <a href="chart-design.html#fig:design-principles-pie-to-bar">6.5</a> shows.</p>
+<p>If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or separated, like Figure <a href="chart-design.html#fig:design-principles-pie-to-bar">5.5</a> shows.</p>
 
 <div class="figure"><span id="fig:design-principles-pie-to-bar"></span>
-<img src="images/06-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
+<img src="images/05-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
 <p class="caption">
-Figure 6.5: Consider using bar charts instead of pies.
+Figure 5.5: Consider using bar charts instead of pies.
 </p>
 </div>
 </div>
 <div id="dont-make-people-turn-their-heads-to-read-labels" class="section level4 unnumbered" number="">
 <h4>Don’t make people turn their heads to read labels</h4>
-<p>When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit, consider turning the chart 90 degrees so that it becomes a horizontal bar chart. Take a look at Figure <a href="chart-design.html#fig:design-principles-turn-bar">6.6</a> to see how much easier it is to read horizontally-oriented labels.</p>
+<p>When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit, consider turning the chart 90 degrees so that it becomes a horizontal bar chart. Take a look at Figure <a href="chart-design.html#fig:design-principles-turn-bar">5.6</a> to see how much easier it is to read horizontally-oriented labels.</p>
 
 <div class="figure"><span id="fig:design-principles-turn-bar"></span>
-<img src="images/06-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
+<img src="images/05-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 6.6: For long labels, use horizontal bar charts.
+Figure 5.6: For long labels, use horizontal bar charts.
 </p>
 </div>
 </div>
 <div id="arrange-elements-logically" class="section level4 unnumbered" number="">
 <h4>Arrange elements logically</h4>
-<p>If your bar chart shows different categories, consider ordering them, like is shown in Figure <a href="chart-design.html#fig:design-principles-order-categories">6.7</a>. You might want to sort them alphabetically, which can be useful if you want the reader to be able to quickly look up an item, such as their town. Ordering categories by value is another common technique that makes comparisons possible. If your columns represent a value of something at a particular time, they have to be ordered sequentially, of course.</p>
+<p>If your bar chart shows different categories, consider ordering them, like is shown in Figure <a href="chart-design.html#fig:design-principles-order-categories">5.7</a>. You might want to sort them alphabetically, which can be useful if you want the reader to be able to quickly look up an item, such as their town. Ordering categories by value is another common technique that makes comparisons possible. If your columns represent a value of something at a particular time, they have to be ordered sequentially, of course.</p>
 
 <div class="figure"><span id="fig:design-principles-order-categories"></span>
-<img src="images/06-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
+<img src="images/05-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 6.7: For long labels, use horizontal bar charts.
+Figure 5.7: For long labels, use horizontal bar charts.
 </p>
 </div>
 </div>
@@ -469,21 +473,21 @@ Consider using commas as thousands separators for readability (<code>1,000,000</
 <h4>Be careful with the colors</h4>
 <p>The use of color is a complex topic, and there are plenty
 of books and research devoted to it. But some principles are fairly universal. First, do not use colors just for the sake of it, most charts are fine being monochromatic. Second, remember that colors come with some meaning attached, which can vary among cultures. In the world of business, red is conventionally used to represent loss, and it would be unwise to use this color to show profit. Make sure you avoid random colors.</p>
-<p>Whatever colors you end up choosing, they need to be distinguishable (otherwise what is the point?). Do not use colors that are too similar in hue (for example, various shades of green––leave them for choropleth maps). Certain color combinations are hard to interpret for color-blind people, like green/red or yellow/blue, so be very careful with those. Figure <a href="chart-design.html#fig:design-principles-color">6.8</a> shows some good and bad examples of color use.</p>
+<p>Whatever colors you end up choosing, they need to be distinguishable (otherwise what is the point?). Do not use colors that are too similar in hue (for example, various shades of green––leave them for choropleth maps). Certain color combinations are hard to interpret for color-blind people, like green/red or yellow/blue, so be very careful with those. Figure <a href="chart-design.html#fig:design-principles-color">5.8</a> shows some good and bad examples of color use.</p>
 
 <div class="figure"><span id="fig:design-principles-color"></span>
-<img src="images/06-chart/design-principles-color.png" alt="Don’t use colors just for the sake of it."  />
+<img src="images/05-chart/design-principles-color.png" alt="Don’t use colors just for the sake of it."  />
 <p class="caption">
-Figure 6.8: Don’t use colors just for the sake of it.
+Figure 5.8: Don’t use colors just for the sake of it.
 </p>
 </div>
 <p>If you follow the advice, you should end up with a de-cluttered chart as shown in
-Figure <a href="chart-design.html#fig:design-principles-decluttered">6.9</a>. Notice how your eyes are drawn to the bars and their corresponding values, not bright colors or secondary components like the axes lines.</p>
+Figure <a href="chart-design.html#fig:design-principles-decluttered">5.9</a>. Notice how your eyes are drawn to the bars and their corresponding values, not bright colors or secondary components like the axes lines.</p>
 
 <div class="figure"><span id="fig:design-principles-decluttered"></span>
-<img src="images/06-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
+<img src="images/05-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
 <p class="caption">
-Figure 6.9: Make sure important things catch the eye first.
+Figure 5.9: Make sure important things catch the eye first.
 </p>
 </div>
 </div>
@@ -534,7 +538,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/06-chart.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/05-chart.Rmd",
 "text": null
 },
 "download": null,

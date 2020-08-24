@@ -15,9 +15,9 @@ See also the Tableau Public support page <https://www.tableau.com/support/public
 
 5) At first, Tableau Public does **NOT** recognize the names of US areas, which initially appear simply as "text" values (with the "Abc" symbol). Click and hold down the mouse directly on the "Abc" symbol, and use the drop-down menu to convert to Geographic role > State/Province. A tiny globe symbol will appear to show that Tableau Public now recognizes this column as geographic data, which is essential in order to make a map.
 
-![Column displayed as text data](images/07-map/tableau-polygon-1.png)
+![Column displayed as text data](images/06-map/tableau-polygon-1.png)
 
-![Column converted to geographic data](images/07-map/tableau-polygon-2.png)
+![Column converted to geographic data](images/06-map/tableau-polygon-2.png)
 
 6) Go to the Worksheet view, by clicking on "Sheet 1" in the bottom-left corner. The goal is to build a polygon map, based on the dimensions and variables provided by Tableau Public.
 
@@ -27,7 +27,7 @@ Step B - In the "Marks" panel, change the drop-down menu from "Automatic" to "Ma
 
 Step C - Drag the "Type" dimension into the "Color" box of the Marks panel to show polygon colors according to type
 
-![Steps A-B-C above](images/07-map/tableau-polygon-3.png)
+![Steps A-B-C above](images/06-map/tableau-polygon-3.png)
 
 Optional: Add more items, such as "Abbreviation" dimension to "Label" box to display state abbreviations, or "Area" dimension to "tooltips" to display on mouseover.
 

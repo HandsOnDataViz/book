@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-18" />
+<meta name="date" content="2020-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -187,8 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>5</b> Table Your Data</a></li>
-<li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
@@ -199,13 +198,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>7</b> Map Your Data</a>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Interactive Table with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="datawrapper-table-sparklines.html"><a href="datawrapper-table-sparklines.html"><i class="fa fa-check"></i>Add Sparklines to Datawrapper Table</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
 <ul>
@@ -320,14 +324,14 @@ should be easy to read in both black-and-white (as is often the case with printe
 and color.</p>
 <div id="understand-the-vocabulary" class="section level3 unnumbered" number="">
 <h3>Understand the Vocabulary</h3>
-<p>Take a look at Figure <a href="map-design.html#fig:map-principles-map">7.1</a> to get familiar with main
+<p>Take a look at Figure <a href="map-design.html#fig:map-principles-map">6.1</a> to get familiar with main
 basic elements of an interactive map. Similar to a chart, a good maps should have a title and a description that
 gives a bit of context about what the map is showing.</p>
 
 <div class="figure"><span id="fig:map-principles-map"></span>
-<img src="images/07-map/map-principles-map.png" alt="Map elements."  />
+<img src="images/06-map/map-principles-map.png" alt="Map elements."  />
 <p class="caption">
-Figure 7.1: Map elements.
+Figure 6.1: Map elements.
 </p>
 </div>
 <p>The data in the map is presented as layers. A base layer is often satellite imagery of the earth
@@ -350,12 +354,12 @@ users to inspect data from various “distances”.</p>
 <p>If you build a choropleth map, the choice of colors is very important
 as color is the main way to represent values. So let’s talk about color palettes.</p>
 <p>Color palettes can be grouped into sequential, diverging, and qualitative.
-The examples are shown in Figure <a href="map-design.html#fig:map-principles-color-schemes">7.2</a>.</p>
+The examples are shown in Figure <a href="map-design.html#fig:map-principles-color-schemes">6.2</a>.</p>
 
 <div class="figure"><span id="fig:map-principles-color-schemes"></span>
-<img src="images/07-map/map-principles-color-schemes.png" alt="Examples of sequential, diverging, and qualitative color schemes from ColorBrewer."  />
+<img src="images/06-map/map-principles-color-schemes.png" alt="Examples of sequential, diverging, and qualitative color schemes from ColorBrewer."  />
 <p class="caption">
-Figure 7.2: Examples of sequential, diverging, and qualitative color schemes from <a href="https://colorbrewer2.org/">ColorBrewer</a>.
+Figure 6.2: Examples of sequential, diverging, and qualitative color schemes from <a href="https://colorbrewer2.org/">ColorBrewer</a>.
 </p>
 </div>
 <p>Sequential palettes are used to represent continuous numeric values, in other words, anything that can be placed
@@ -377,13 +381,13 @@ of countries by income. The organization groups countries and territories into �
 <p>It is important you choose an appropriate classification for your choropleth map.
 While the nature of certain datasets will make the choice of a color palette obvious,
 most of the time you will have to actively choose <em>how</em> to display your data.</p>
-<p>In Figure <a href="map-design.html#fig:map-principles-classification">7.3</a>a, we presented the same dataset using three
-differnet color palettes. The map in Figure <a href="map-design.html#fig:map-principles-classification">7.3</a>a
+<p>In Figure <a href="map-design.html#fig:map-principles-classification">6.3</a>a, we presented the same dataset using three
+differnet color palettes. The map in Figure <a href="map-design.html#fig:map-principles-classification">6.3</a>a
 represents per capita income for the contiguous US states using a sequential color scheme
 consisting of five shades of blue. The darker the color, the higher the income. You can quickly
 see that states in the north-east, such as Connecticut, Massachusettes, New Jersey,
 and Maryland have the highest per capita income.</p>
-<p>In Figure <a href="map-design.html#fig:map-principles-classification">7.3</a>b, we used a divergent color scheme to show
+<p>In Figure <a href="map-design.html#fig:map-principles-classification">6.3</a>b, we used a divergent color scheme to show
 whether states have higher or lower per capita incomes than the United States as a whole.
 We subtracted the US per capita income value of $33,831 from each state’s value. This new relative measure
 is positive for states with higher per capita income, and negative for the states whose per capita income
@@ -391,12 +395,12 @@ is lower than in the US. In the map, sub-zero values are painted in orange, and 
 in purple. Such color palette could be appropriate for a story about the north-south divide.</p>
 <p>You can also split the 48 states into three groups of 16 based on their per capita income, and group them in three
 thirds, as “low”, “middle”, and “top” third. This is what we did in the map shown in
-Figure <a href="map-design.html#fig:map-principles-classification">7.3</a>c.</p>
+Figure <a href="map-design.html#fig:map-principles-classification">6.3</a>c.</p>
 
 <div class="figure"><span id="fig:map-principles-classification"></span>
-<img src="images/07-map/map-principles-classification.png" alt="Representing per capita income in US states using three different classifications."  />
+<img src="images/06-map/map-principles-classification.png" alt="Representing per capita income in US states using three different classifications."  />
 <p class="caption">
-Figure 7.3: Representing per capita income in US states using three different classifications.
+Figure 6.3: Representing per capita income in US states using three different classifications.
 </p>
 </div>
 </div>
@@ -404,12 +408,12 @@ Figure 7.3: Representing per capita income in US states using three different cl
 <h3>ColorBrewer</h3>
 <p>One of the most useful color picking tools for meaningful choropleth
 maps is <a href="https://colorbrewer2.org/">ColorBrewer</a>, created by Cynthia Brewer and
-Mark Harrower. You can see ColorBrewer’s interface in Figure <a href="map-design.html#fig:map-principles-colorbrewer">7.4</a>.</p>
+Mark Harrower. You can see ColorBrewer’s interface in Figure <a href="map-design.html#fig:map-principles-colorbrewer">6.4</a>.</p>
 
 <div class="figure"><span id="fig:map-principles-colorbrewer"></span>
-<img src="images/07-map/map-principles-colorbrewer-annotated.png" alt="ColorBrewer interface."  />
+<img src="images/06-map/map-principles-colorbrewer-annotated.png" alt="ColorBrewer interface."  />
 <p class="caption">
-Figure 7.4: ColorBrewer interface.
+Figure 6.4: ColorBrewer interface.
 </p>
 </div>
 <p>ColorBrewer can generate color palettes for a specified number of classes - between three
@@ -473,7 +477,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/07-map.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/06-map.Rmd",
 "text": null
 },
 "download": null,

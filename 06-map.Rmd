@@ -395,9 +395,9 @@ knitr::include_graphics("images/06-map/datawrapper-map-color.png")
 ```
 
 When finished with colors, scroll down to **Tooltips** section and
-clikc *Customize tooltips* button. In a popup window, set Title to the state name
+click *Customize tooltips* button. In a popup window, set Title to the state name
 and Body to the average home value, as shown in Figure \@ref(fig:datawrapper-map-tooltip).
-Note that references to variables are put in double curly brackets (`{{ ColumnNameGoesHere }}`).
+The easiest way to do this is to click on column names in the upper-right corner of the popup window, where all available names are listed, which is circled in Figure \@ref(fig:datawrapper-map-tooltip). Note that references to variables are put in double curly brackets (`{{ ColumnNameGoesHere }}`).
 Make sure your dollar symbol (`$`) in outside of the curly brackets. Click *Save*,
 and hover over the map to make sure your tooltip displays the state name and the average home price.
 

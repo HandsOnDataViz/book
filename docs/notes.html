@@ -209,6 +209,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="table-design.html"><a href="table-design.html"><i class="fa fa-check"></i>Table Design Principles</a></li>
 <li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Datawrapper Table with Sparklines</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
@@ -319,17 +320,17 @@ output:
     ...
     citation_package: none
     pandoc_args: [ &quot;--csl&quot;, &quot;chicago-fullnote-bibliography.csl&quot; ]</code></pre>
-<p>Here’s a text-only note, with no Zotero citation.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
-<p>To create a note with citations only, separate Zotero/BibTeX citation keys with semi-colons:<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
-<p>Since notes also may include text and punctuation in Markdown syntax, always insert a caret symbol prior to the brackets to demarcate a note:<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
+<p>Here’s a text-only note, with no Zotero citation.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<p>To create a note with citations only, separate Zotero/BibTeX citation keys with semi-colons:<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
+<p>Since notes also may include text and punctuation in Markdown syntax, always insert a caret symbol prior to the brackets to demarcate a note:<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
 <p>Note that the <code>chicago-fullnote-bibliography.csl</code> format automatically shortens the note after it its first reference.</p>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="6">
-<li id="fn6"><p>This is a note, with no bibliographic reference.<a href="notes.html#fnref6" class="footnote-back">↩︎</a></p></li>
-<li id="fn7"><p><span class="citation">Darrell Huff, <em>How to Lie with Statistics</em> (W. W. Norton &amp; Company, 1954), <a href="http://books.google.com/books?isbn=0393070875" role="doc-biblioref">http://books.google.com/books?isbn=0393070875</a></span>; <span class="citation">Mark S. Monmonier, <em>How to Lie with Maps</em>, 2nd ed. (University of Chicago Press, 1996), <a href="http://books.google.com/books?isbn=0226534219" role="doc-biblioref">http://books.google.com/books?isbn=0226534219</a></span><a href="notes.html#fnref7" class="footnote-back">↩︎</a></p></li>
-<li id="fn8"><p>Compare how “lying” is justified by <span class="citation">Huff, <em>How to Lie with Statistics</em></span>, pp. 10-11 and <span class="citation">Monmonier, <em>How to Lie with Maps</em></span>, pp. 11-12.<a href="notes.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<ol start="7">
+<li id="fn7"><p>This is a note, with no bibliographic reference.<a href="notes.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p><span class="citation">Darrell Huff, <em>How to Lie with Statistics</em> (W. W. Norton &amp; Company, 1954), <a href="http://books.google.com/books?isbn=0393070875" role="doc-biblioref">http://books.google.com/books?isbn=0393070875</a></span>; <span class="citation">Mark S. Monmonier, <em>How to Lie with Maps</em>, 2nd ed. (University of Chicago Press, 1996), <a href="http://books.google.com/books?isbn=0226534219" role="doc-biblioref">http://books.google.com/books?isbn=0226534219</a></span><a href="notes.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>Compare how “lying” is justified by <span class="citation">Huff, <em>How to Lie with Statistics</em></span>, pp. 10-11 and <span class="citation">Monmonier, <em>How to Lie with Maps</em></span>, pp. 11-12.<a href="notes.html#fnref9" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -380,7 +381,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/18-bookdown.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

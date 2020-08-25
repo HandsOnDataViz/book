@@ -885,7 +885,7 @@ knitr::include_graphics("images/12-transform/kmz-save-as.png")
 Alternatively, you can use any zip-utility to extract a KML file from KMZ.
 KMZ is simply a 'zipped' version of a KML file!
 
-### Summary {- #summary11}
+### Summary {- #summary12}
 
 In this chapter, you learned to use pivot tables to count addresses (points)
 by geographical area, such as states or cities (polygons).

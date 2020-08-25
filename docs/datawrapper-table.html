@@ -32,7 +32,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="table.html"/>
+<link rel="prev" href="table-design.html"/>
 <link rel="next" href="embed.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -209,6 +209,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="table-design.html"><a href="table-design.html"><i class="fa fa-check"></i>Table Design Principles</a></li>
 <li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Datawrapper Table with Sparklines</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
@@ -305,18 +306,89 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="datawrapper-table" class="section level2 unnumbered" number="">
 <h2>Datawrapper Table with Sparklines</h2>
-<p>In this tutorial, you’ll learn how to create an interactive table with sparklines, which makes it easier to spot different changes in this life expectancy dataset from 1960 to 2018 for over 195 nations around the world. While it’s possible to present this data in a <a href="filtered-line-chart-tableau.html">filtered line chart as shown in chapter 5</a>, it would be difficult for readers to spot differences when shown over 180 lines at the same time. Likewise, it’s possible to present this data in a <a href="map-with-datawrapper.html">choropleth map as shown in chapter 6</a>, but it would be hard for readers to identify data for nations with smaller geographies compared to larger ones. In this case, we’ll blend sparklines for longitudinal data trends into our interactive table to help readers spot subtle differences in changes over time for life expectancy by nation, categorized by continent.</p>
-<p>This tutorial was adapted from the <a href="https://www.datawrapper.de/training-materials/">Datawrapper training materials</a> and <a href="https://www.datawrapper.de/tables/">gallery of examples</a>, which we highly recommend.</p>
-<p>To simplify this tutorial, we downloaded <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN">World Bank data on life expectancy at birth from 1960 to 2018 by nation</a>. We</p>
-<p>TODO: CHECK THIS – To simplify this tutorial, we obtained life expectancy data from the World Bank (link), cleaned it up a bit, and added three additional columns: two-letter nation codes, a blank header called “range”, and a “change” column that calculates the difference between 1960 and the present. Also, we removed ?? nations that did not have sufficient data??? Note that some nations changed names and borders since 1960s…. so……</p>
-<p><a href="https://docs.google.com/spreadsheets/d/1Wev14VaXyq7d7yuYo-7FwRoAjyyaY1v6z_qBoo_4VSo/edit#gid=3466257" class="uri">https://docs.google.com/spreadsheets/d/1Wev14VaXyq7d7yuYo-7FwRoAjyyaY1v6z_qBoo_4VSo/edit#gid=3466257</a></p>
-<p><a href="https://www.datawrapper.de/tables/" class="uri">https://www.datawrapper.de/tables/</a></p>
-<p>slides 52-53 <a href="https://docs.google.com/presentation/d/1b6hvapW1CTqok_r8kI2E4teO2ziG16ZcNTD5XHZfufU/edit#slide=id.g5141d9ea3671b15c_43" class="uri">https://docs.google.com/presentation/d/1b6hvapW1CTqok_r8kI2E4teO2ziG16ZcNTD5XHZfufU/edit#slide=id.g5141d9ea3671b15c_43</a></p>
-<p>TODO: all</p>
-<p><a href="https://academy.datawrapper.de/article/144-how-to-insert-flag-icons-in-tables" class="uri">https://academy.datawrapper.de/article/144-how-to-insert-flag-icons-in-tables</a></p>
-<p><a href="https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons" class="uri">https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons</a></p>
-<p>Summary: Transition to Embed chapter for how to place these in a web page</p>
+<p>In this tutorial, you’ll learn how to create an interactive table with sparklines, which makes it easier to spot different changes in this life expectancy dataset from 1960 to 2018 for over 195 nations around the world. While it’s possible to present this data in a <a href="filtered-line-chart-tableau.html">filtered line chart as shown in chapter 5</a>, it would be difficult for readers to spot differences when shown over 180 lines at the same time. Likewise, it’s possible to present this data in a <a href="map-with-datawrapper.html">choropleth map as shown in chapter 6</a>, but it would be hard for readers to identify data for nations with smaller geographies compared to larger ones. In this case, we’ll blend sparklines for longitudinal data trends into our interactive table to help readers spot subtle differences in changes over time for life expectancy by nation, categorized by continent. This tutorial was adapted from the <a href="https://www.datawrapper.de/training-materials/">Datawrapper training materials</a> and <a href="https://www.datawrapper.de/tables/">gallery of examples</a>, which we highly recommend.</p>
+<p>To simplify this tutorial, we downloaded <a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN">World Bank data on life expectancy at birth from 1960 to 2018 by nation</a>, one of the open data repositories we listed in <a href="find.html">Chapter 3: Find and Question Your Data</a>. Then we cleaned up the data, such as removing nations with 5 or fewer years of data reported over a half-century, as described in the Notes. Using the <a href="vlookup.html">VLookup spreadsheet method from chapter 2</a>, we merged in columns of <a href="https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons">two-letter nation codes and continents from Datawrapper</a>. We also created two new columns: one named <em>Life Expectancy 1960</em> (intentionally blank for the sparkline to come) and <em>Difference</em> (which calculates the difference between the earliest and the most recent year of data available, in most cases from 1960 to 2018). See the Notes tab for more details.</p>
+<ol style="list-style-type: decimal">
+<li><p>Open our <a href="https://docs.google.com/spreadsheets/d/1Wev14VaXyq7d7yuYo-7FwRoAjyyaY1v6z_qBoo_4VSo/edit#gid=3466257">cleaned-up World Bank data on life expectancy at birth, 1960 to 2018, in this Google Sheet</a>.</p></li>
+<li><p>Go to <a href="https://datawrapper.de">Datawrapper</a> and select <em>New Table</em>. You are not required to sign in, but if you wish to save your work, we recommend that you create a free account.</p></li>
+<li><p>In the <em>Upload Data</em> screen, select that you wish to import your data from a Google Spreadsheet. Paste in the web address of our cleaned-up Google Sheet and click <em>Proceed.</em></p></li>
+<li><p>Inspect the data in the <em>Check and Describe</em> screen. Make sure that the <em>First row as label</em> box is checked, then click <em>Proceed</em>.</p></li>
+<li><p>In the <em>Visualize</em> screen, under <em>Customize Table</em>, check two additional boxes: <em>Make Searchable</em> (so that users can search for nations by keyword) and <em>Stripe Table</em> (to make lines more readable).</p></li>
+<li><p>Let’s use a special Datawrapper code to display tiny flags before each country’s name. In the <em>Nation</em> column, each entry begins with a two-letter country code, surrounded by colons, followed by the country name, such as <code>:af: Afghanistan</code>. We created the <em>Nation</em> column by <a href="clean-spreadsheets.html">combining separate items from the first two columns</a>, as described in Chapter 4: Clean Up Messy Data. To learn more flag icons, read the <a href="https://academy.datawrapper.de/article/144-how-to-insert-flag-icons-in-tables">Datawrapper post on this topic</a> and their <a href="https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons">list of country codes and flags on GitHub</a>.</p></li>
+</ol>
+<p>In the <em>Visualize</em> screen, under <em>Customize columns</em>, select the third line named <em>Nation</em>. Then scroll down and push the slider to <em>Replace country codes with flags</em>, as shown in Figure <a href="datawrapper-table.html#fig:datawrapper-flag">7.2</a>.</p>
 
+<div class="figure"><span id="fig:datawrapper-flag"></span>
+<img src="images/07-table/datawrapper-flag.png" alt="Customize the Nation column and push slider to replace codes with flags."  />
+<p class="caption">
+Figure 7.2: Customize the <em>Nation</em> column and push slider to replace codes with flags.
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Let’s hide the first two columns, since they’re no longer necessary to display. In the <em>Visualize</em> screen under <em>Customize columns</em>, select the <em>Name</em> column, then scroll down and un-check the boxes to <em>Show on desktop and mobile</em>. Repeat this step for the <em>Code</em> column. A “not visible” symbol (an eye with a slash through it) appears next to each customized column to remind us that we’ve hidden it.</p></li>
+<li><p>Now let’s color-code the <em>Continent</em> column to make it easier for readers to sort by category it in the interactive table. In the <em>Visualize</em> screen under <em>Customize columns</em>, select the <em>Continent</em> column, then scroll down and push the slider to select <em>Color cells based on categories</em>. In the drop-down menu, select the column <em>Continent</em>, and click on the <em>Background: customize colors</em> button. Select each continent and assign them different colors, as shown in Figure <a href="datawrapper-table.html#fig:datawrapper-colors">7.3</a>.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:datawrapper-colors"></span>
+<img src="images/07-table/datawrapper-colors.png" alt="Customize the Continent column and push slider to color cells based on categories."  />
+<p class="caption">
+Figure 7.3: Customize the <em>Continent</em> column and push slider to color cells based on categories.
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>Now let’s prepare our data for sparklines, or tiny line charts, to visually represent change in the <em>Life expectancy 1960</em> column, which we intentionally left blank. Before you begin, you must change this column from textual data (represented by the A symbol in the <em>Customize columns</em> window) to numerical data (represented by the # symbol). At the top of the screen, click on the <em>2. Check and Describe</em> arrow to go back a step. (Datawrapper will save your work.) Now click on the table header to edit the properties for <em>column E: Life Expectancy 1960</em>. On the left side, use the drop-down menu to change its properties from <em>auto (text)</em> to <em>Number</em>, as shown in Figure <a href="datawrapper-table.html#fig:datawrapper-edit-column">7.4</a>. Then click <em>Proceed</em> to return to the <em>Visualize</em> window.</li>
+</ol>
+
+<div class="figure"><span id="fig:datawrapper-edit-column"></span>
+<img src="images/07-table/datawrapper-edit-column.png" alt="Go back to Check &amp; Describe to change the properties of column E from textual to numerical data."  />
+<p class="caption">
+Figure 7.4: Go back to <em>Check &amp; Describe</em> to change the properties of column E from textual to numerical data.
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>To create the sparklines, in the <em>Visualize</em> screen under <em>Customize columns</em>, select <em>all</em> of the columns from <em>Life expectancy 1960</em> down to <em>2018</em>. To select all at once, click on one column, then scroll down and shift-click on the next-to-last column. Then scroll down the page and click the <em>Show selected columns as tiny chart</em> button, as shown in Figure <a href="datawrapper-table.html#fig:datawrapper-tiny-chart">7.5</a>. These steps will create the sparklines in the column, renamed <em>Life expectancy 1960–2018</em>, as shown in Figure <a href="datawrapper-table.html#fig:datawrapper-bar-chart">7.6</a>.</li>
+</ol>
+<p>Tip: By design, we initially named this column <em>Life expectancy 1960</em>, because when we selected several columns to create sparklines, the tool added <em>–2018</em> to the end of the new column name.</p>
+
+<div class="figure"><span id="fig:datawrapper-tiny-chart"></span>
+<img src="images/07-table/datawrapper-tiny-chart.png" alt="Shift-click to select all columns from Life expectancy 1960–2018 down to 2018, then click on Show selected columns as tiny chart." width="300" />
+<p class="caption">
+Figure 7.5: Shift-click to select all columns from <em>Life expectancy 1960–2018</em> down to <em>2018</em>, then click on <em>Show selected columns as tiny chart</em>.
+</p>
+</div>
+<ol start="11" style="list-style-type: decimal">
+<li>Let’s add one more visual element: a bar chart to visually represent the <em>Difference</em> column in the table. In the <em>Visualize</em> screen under <em>Customize columns</em>, select <em>Difference</em>. Then scroll down and push the slider to select <em>Show as bar chart</em>, as shown in Figure <a href="datawrapper-table.html#fig:datawrapper-bar-chart">7.6</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:datawrapper-bar-chart"></span>
+<img src="images/07-table/datawrapper-bar-chart.png" alt="Select the Difference column and Show as bar chart."  />
+<p class="caption">
+Figure 7.6: Select the <em>Difference</em> column and <em>Show as bar chart</em>.
+</p>
+</div>
+<ol start="12" style="list-style-type: decimal">
+<li><p>In the <em>Visualize</em> screen, click the <em>Annotate</em> tab to add a title, data source, and byline.</p></li>
+<li><p>Click on <em>Publish &amp; Embed</em> to share the link to your visualization, which is also shown in Figure <a href="datawrapper-table.html#fig:datawrapper-table">7.7</a>. In the <a href="https://datawrapper.dwcdn.net/0HK4f/2/">interactive version of the table</a>, readers can explore the data in several ways:</p></li>
+</ol>
+<ul>
+<li>Search by keyword to display a specific nation or an entire continent.</li>
+<li>Sort each column in ascending or descending order.</li>
+<li>Scroll through pages of sparklines to quickly identify differences that would be hard to spot in the raw data table. Overall, life expectancy gradually rises in most nations, but a few display “dips” that stand out in the tiny line charts. For example, Cambodia and Vietnam both experienced a significant decrease in life expectancy, which corresponds with the deadly wars and refugee crises in both nations from the late 1960s to the mid-1970s. Sparklines help us to visually detect patterns like these, which anyone can investigate further by downloading the raw data through the link at the bottom of the interactive table.</li>
+</ul>
+
+<div class="figure"><span id="fig:datawrapper-table"></span>
+<iframe src="https://datawrapper.dwcdn.net/0HK4f/2/" width="672" height="1007px">
+</iframe>
+<p class="caption">
+Figure 7.7: Explore the <a href="https://datawrapper.dwcdn.net/0HK4f/2/">interactive table with sparklines</a>.
+</p>
+</div>
+<p>Also on the <em>Publish &amp; Embed</em> screen, you’ll see a blue <em>Publish chart</em> button to obtain the embed code to place your visualization on the web, which you’ll learn about in <a href="embed.html">Chapter 8: Embed On Your Web</a>.</p>
+<div id="summary7" class="section level3 unnumbered" number="">
+<h3>Summary</h3>
+<p>In this chapter you reviewed principles about table design, and how to create an interactive table with sparklines using Datawrapper. In the next chapter, you’ll learn how to embed interactive charts, maps, and tables on your website so that readers can explore your data and engage with your stories.</p>
+
+</div>
 </div>
 <!-- </div> -->
             </section>
@@ -324,7 +396,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="table.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="table-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="embed.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -367,7 +439,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/07-table.Rmd",
 "text": null
 },
-"download": null,
+"download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

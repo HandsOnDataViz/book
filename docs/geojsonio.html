@@ -165,6 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Addresses with Google Sheets Add-On</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Google Forms</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas</a></li>
@@ -243,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="12" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>12</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with the US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
@@ -324,7 +325,7 @@ If you don’t have a geospatial file, download <a href="data/hartford-parks.kml
 in KML format. If GeoJson.io was able to recognize and import the file,
 you will see a green popup message in the upper-left corner saying how many
 features (in case of Hartford parks, polygons) were imported.
-Figure <a href="geojsonio.html#fig:geojson-io-import">12.11</a> shows us that 62 features were imported from
+Figure <a href="geojsonio.html#fig:geojson-io-import">12.7</a> shows us that 62 features were imported from
 the sample Hartford parks file. You can see that the polygons appeared
 on top of the Mapbox world layer.</p>
 <p>Note: If GeoJson.io couldn’t import your file, you will see a red
@@ -334,7 +335,7 @@ tool, such as Mapshaper or QGIS, to convert your file to GeoJSON.</p>
 <div class="figure"><span id="fig:geojson-io-import"></span>
 <img src="images/12-transform/geojson-io-import.png" alt="GeoJson.io successfully imported Hartford parks KML file."  />
 <p class="caption">
-Figure 12.11: GeoJson.io successfully imported Hartford parks KML file.
+Figure 12.7: GeoJson.io successfully imported Hartford parks KML file.
 </p>
 </div>
 <p>You can now save your file to GeoJSON. Go to <em>Save &gt; GeoJSON</em> to download
@@ -346,13 +347,13 @@ a converted GeoJSON file to your computer.</p>
 columns into a GeoJSON file of point features. Each row in the spreadsheet
 becomes its own point, and all columns other than <em>lat</em> and <em>lon</em>
 become <em>attributes</em> (or <em>properties</em>) of point features. An example of
-such spreadsheet is shown in Figure <a href="geojsonio.html#fig:geojson-io-csv-data">12.12</a>. You
+such spreadsheet is shown in Figure <a href="geojsonio.html#fig:geojson-io-csv-data">12.8</a>. You
 can <a href="data/hartford-and-suburbs.csv">download it</a> for the exercise.</p>
 
 <div class="figure"><span id="fig:geojson-io-csv-data"></span>
 <img src="images/12-transform/geojson-io-csv-data.png" alt="A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features."  />
 <p class="caption">
-Figure 12.12: A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features.
+Figure 12.8: A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features.
 </p>
 </div>
 <ol style="list-style-type: decimal">
@@ -385,7 +386,7 @@ You can also log into GeoJson.io with your GitHub account and save directly to y
 <iframe src="images/12-transform/dataviz-geojsonio-640.gif" width="672" height="466px">
 </iframe>
 <p class="caption">
-Figure 12.13: A spreadsheet with coordinates columns can be transformed into a GeoJSON with point features.
+Figure 12.9: A spreadsheet with coordinates columns can be transformed into a GeoJSON with point features.
 </p>
 </div>
 </div>
@@ -401,13 +402,13 @@ to it.</p>
 to Satellite.</li>
 <li>In the upper-right corner of the map, use the Search tool to find the area you’re interested in mapping.
 For this exercise, we will use tennis courts at Trinity College, Hartford, as shown in
-Figure <a href="geojsonio.html#fig:geojson-io-draw">12.14</a>.</li>
+Figure <a href="geojsonio.html#fig:geojson-io-draw">12.10</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:geojson-io-draw"></span>
 <img src="images/12-transform/geojson-io-draw.png" alt="Use drawing tools to create points, lines, and polygons in GeoJson.io."  />
 <p class="caption">
-Figure 12.14: Use drawing tools to create points, lines, and polygons in GeoJson.io.
+Figure 12.10: Use drawing tools to create points, lines, and polygons in GeoJson.io.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">

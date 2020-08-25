@@ -165,6 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Addresses with Google Sheets Add-On</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Google Forms</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas</a></li>
@@ -243,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="12" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>12</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with the US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
@@ -306,33 +307,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="normalize" class="section level2 unnumbered" number="">
 <h2>Normalize Data to Create Meaningful Choropleth Maps</h2>
 <p>Choropleth maps are best when they represent relative, not absolute values.
-Consider two maps shown in Figure <a href="normalize.html#fig:normalize-map-data">12.8</a>. They both are
+Consider two maps shown in Figure <a href="normalize.html#fig:normalize-map-data">12.4</a>. They both are
 about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of
-June 26, 2020. Figure <a href="normalize.html#fig:normalize-map-data">12.8</a>a shows total number of recorded cases per state,
-and Figure <a href="normalize.html#fig:normalize-map-data">12.8</a>b shows Covid-19 cases adjusted by the state’s population.
+June 26, 2020. Figure <a href="normalize.html#fig:normalize-map-data">12.4</a>a shows total number of recorded cases per state,
+and Figure <a href="normalize.html#fig:normalize-map-data">12.4</a>b shows Covid-19 cases adjusted by the state’s population.
 Darker colors represent higher values. Do you notice any differences in spatial patterns?</p>
 
 <div class="figure"><span id="fig:normalize-map-data"></span>
 <img src="images/12-transform/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
 <p class="caption">
-Figure 12.8: Choropleth maps work best with normalized values.
+Figure 12.4: Choropleth maps work best with normalized values.
 </p>
 </div>
 <p>Both maps show Covid-19 data collected by the New York Times and published
 <a href="https://github.com/nytimes/covid-19-data">on GitHub</a>.
-In the map in Figure <a href="normalize.html#fig:normalize-map-data">12.8</a>b, we normalized (divided) values by population in each state,
+In the map in Figure <a href="normalize.html#fig:normalize-map-data">12.4</a>b, we normalized (divided) values by population in each state,
 according to the 2018 US Census American Community Survey,
 the most recent data available on the day of writing. We didn’t
 add legends and other important cartographic elements so that you can
 better focus on interpreting spatial patterns. In both cases,
 we used Jenks natural breaks for classification.</p>
 <p>What are the worst-hit states according to the map showing total Covid-19 counts
-(shown in Figure <a href="normalize.html#fig:normalize-map-data">12.8</a>a)?
+(shown in Figure <a href="normalize.html#fig:normalize-map-data">12.4</a>a)?
 If you are familiar with the US geography, you can quickly tell that these are
 New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California.
 But five of these happen to be some of the most populous states in the US,
 so it makes sense that they will also have higher Covid-19 cases.</p>
-<p>Now, how about the map in Figure <a href="normalize.html#fig:normalize-map-data">12.8</a>b?
+<p>Now, how about the map in Figure <a href="normalize.html#fig:normalize-map-data">12.4</a>b?
 You can see that New York and its neighbors,
 including New Jersey and Massachusetts, have by far the highest rates per capita
 (per person), which we saw in the first map. But you can also see

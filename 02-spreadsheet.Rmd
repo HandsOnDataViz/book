@@ -9,7 +9,7 @@ The interactive charts and maps that we'll construct later this book are built o
  knitr::include_graphics("images/02-spreadsheet/spreadsheet-terms-annotated.png")
 ```
 
-In this chapter, we'll start by reviewing basic steps, such as [sharing](share.html), [uploading](upload.html), and [collecting data with online forms](forms.html). Then we'll move on to ways of organizing and analyzing your data, such as [sorting and filtering](sort.html), [calculating with formulas](calculate.html), and [summarizing with pivot tables](pivot.html). Finally, we'll examine ways to connect different sheets, such as [matching columns with lookup tables](vlookup.html), and [relational databases](database.html). We illustrate all of these methods with beginner-level users in mind, meaning they do not require any prior background.
+In this chapter, we'll start by reviewing basic steps, such as [sharing](share.html), [uploading](upload.html), [geocoding with add-on tools](geocode.html), and [collecting data with online forms](forms.html). Then we'll move on to ways of organizing and analyzing your data, such as [sorting and filtering](sort.html), [calculating with formulas](calculate.html), and [summarizing with pivot tables](pivot.html). Finally, we'll examine ways to connect different sheets, such as [matching columns with lookup tables](vlookup.html), and [relational databases](database.html). We illustrate all of these methods with beginner-level users in mind, meaning they do not require any prior background.
 
 If you want to learn ways to make your computer do more of the tedious data preparation work for you, this chapter is definitely for you. Or if you already feel very familiar with spreadsheets, you should at least skim this chapter, and perhaps you'll learn a trick or two that will help you to create charts and maps more efficiently later in the book.
 
@@ -163,7 +163,60 @@ If you forget to check the *Convert uploads* box, Google Drive will keep uploade
 
 Tip: Google Drive now allows you to edit Microsoft Office file formats, but not all features are guaranteed to work across platforms. Also, Google Drive now allows you to convert a specific uploaded Excel file into its Google format by using the *File > Save as Google Sheets* menu. Finally, to convert individual files to your Google Drive, while keeping the global conversion setting off, from inside any Google Sheet you can select *File > Import > Upload*. But we recommend that most people turn on the global conversion setting as described above, except in cases where you intentionally use Google Drive to edit an Excel-formatted file, and understand that some features may not work.
 
-Now that you know how to upload and convert an existing dataset, in the next section you will learn how to collect data using an online form, and access it as a spreadsheet.
+Now that you know how to upload and convert an existing dataset, in the next section you'll learn how to install and use a Google Sheets add-on tool to geocode address data into latitude and longitude coordinates.
+
+## Geocode Addresses with Google Sheets Add-On {- #geocode}
+In this section, you'll learn how to geocode data by installing a free Google Sheets add-on tool. This allows you to geocode addresses directly inside your spreadsheet, which will be very useful when using [Leaflet map code templates in chapter 11](leaflet.html).
+
+Geocoding means converting addresses or location names into geographic coordinates (or x- and y-coordinates) that can be plotted on a map, as shown in Figure \@ref(fig:transform-data). For example, the Statue of Liberty in the New York City area is located at *40.69, -74.04*. The first number is the latitude and the second is the longitude. Since the equator is 0 degrees latitude, positive latitude is the northern hemisphere, and negative latitude is in the southern hemisphere. Similarly, the prime meridian is 0 degrees longitude, which passes through Greenwich, England. So positive longitude is east of the meridian, and negative longitude is west, until you reach the opposite side of the globe, roughly near the International Date Line in the Pacific Ocean.
+
+(ref:transform-data) To map addresses, you first need to geocode them.
+
+```{r transform-data, fig.cap="(ref:transform-data)"}
+knitr::include_graphics("images/02-spreadsheet/geocode-data.png")
+```
+
+If you have just one or two addresses, you can quickly geocode them with [Google Maps](https://www.google.com/maps).
+Search for an address, right-click on that point, and select *What's here?* to reveal a popup window with its latitude and longitude, as shown in Figure \@ref(fig:gmaps-whats-here). But what if you need to geocode a dozen or a hundred addresses?
+
+(ref:gmaps-whats-here) To geocode one address, search in Google Maps and right-click *What's here?* to show coordinates.
+
+```{r gmaps-whats-here, fig.cap="(ref:gmaps-whats-here)"}
+knitr::include_graphics("images/02-spreadsheet/gmaps-whats-here.png")
+```
+
+To geocode multiple addresses inside your spreadsheet, install a free Google Sheets Add-on called [Geocoding by SmartMonkey](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312), created by Xavier Ruiz, the CEO of SmartMonkey, a geographic route-planning company in Barcelona, Spain. Add-ons are created by third-party companies to expand features for Google Sheets, Google Documents, and related tools. Add-ons are verified to meet Google's requirements and distributed through its [G Suite Marketplace](https://gsuite.google.com/marketplace).
+
+First, sign into your Google Drive account, go to the [Geocoding by SmartMonkey Add-on page](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312), and click the blue button to install it in your Google Sheets. The Add-on will ask for your permission before installing, and if you agree, press *Continue*. In the next window, choose your Google Drive account, and if you agree with the terms, click *Allow* to complete the installation. Google will email you to confirm that you have installed this third-party app with access to your account. You can always [review permissions and revoke access](https://myaccount.google.com/permissions) in the future, if desired.
+
+Second, go to your [Google Drive](https://drive.google.com) and create a new Google Sheet. Select the *Add-ons* menu to see the new *Geocoding by SmartMonkey* options, and select *Create Template*. The Add-on will create a new tab, named *Geocoding*, and automatically insert 3 sample addresses, as shown in Figure \@ref(fig:geocoding-create-template).
+
+(ref:geocoding-create-template) In the Google Sheets *Add-On* menu, select *Geocoding by SmartMonkey -- Create Template*.
+
+```{r geocoding-create-template, fig.cap="(ref:geocoding-create-template)"}
+knitr::include_graphics("images/02-spreadsheet/geocoding-create-template.png")
+```
+
+Third, select the *Geocoding by SmartMonkey > Geocode Details* menu. The Add-on will create another spreadsheet tab, called *Geocoding Details*, and display the results from Google services for three new columns---latitude, longitude, and address found---as shown in Figure \@ref(fig:geocode-details). Always review the quality of geocoded results by comparing the *Address found* column to the original *Address* entered.
+
+(ref:geocode-details) Select *Geocode Details* to view latitude, longitude, and address found for each entry.
+
+```{r geocode-details, fig.cap="(ref:geocode-details)"}
+ knitr::include_graphics("images/02-spreadsheet/geocode-details.png")
+```
+
+Finally, paste your own address data into the spreadsheet to geocode it, and follow these guidelines:
+
+- Each cell requires a full address. If your original data splits street, city, state, and zip code into different columns, see [how to combine separate columns into one](clean-spreadsheets.html) in Chapter 4: Clean Up Messy Data.
+- The address should follow the format of the national postal service of the country where it is located. Separate terms with spaces.
+- Do not skip any rows in the *Address* column.
+- You can leave the *Country* column blank, but its default value is the United States. To specify other nations, use their [top-level Internet domain code](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains), such as `es` for Spain.
+- Give the tool time to work. For example, if you enter 50 addresses, expect to wait at least 15 seconds for your geocoded results.
+- Always inspect the quality of your results, and never assume that geocoding services from any provider are accurate.
+
+If you need a faster geocoding service for US addresses, which can handle up to 10,000 requests in one upload, see [bulk geocoding with the US Census](bulk-geocode.html) in Chapter 11: Transform Your Map Data.
+
+Now that you know how to use a Google Sheets Add-on to geocode addresses, in the next section you will learn how to collect data using an online form, and access it as a spreadsheet.
 
 ## Collect Data with Google Forms {- #forms}
 As you saw in prior sections, we invite readers of this book to fill out a [quick online form](https://forms.gle/yn5QwTzfQkYcppQn9) so that we can learn more about people like you, and to continue to make revisions to match your expectations. So far about 3,000 readers have responded, and you can view this [public spreadsheet of survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) about their generation location, prior level of experience and education, and goals for learning data visualization. In this section, you'll learn how to create an online form and link the results to a live Google Sheet.
@@ -472,4 +525,4 @@ It's important to understand the conceptual differences between a "flat-file" sp
 ### Summary {- #summary2}
 If you're one of the many people who "never really learned" about spreadsheets in school or on the job, or if you've taught yourself bits and pieces along the way, we hope that this chapter has successfully strengthened your skills. All of the subsequent chapters in this book, especially those on designing [interactive charts in Chapter 5](chart.html) and [interactive maps in Chapter 6](map.html), require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, pivot, and lookup matching data, with the broader goal of visualizing your data stories.
 
-The next chapter describes strategies for finding data, particularly on open data sites operated by governmental and non-profit organizations, where you'll also need spreadsheet skills to download and organize public information.
+The next chapter describes strategies for finding and questioning your data, particularly on open data sites operated by governmental and non-profit organizations, where you'll also need spreadsheet skills to download and organize public information.

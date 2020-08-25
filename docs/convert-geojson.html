@@ -165,6 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Addresses with Google Sheets Add-On</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Google Forms</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas</a></li>
@@ -243,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="12" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>12</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with the US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
@@ -320,8 +321,8 @@ are your location component.
 The name of the restaurant, its human-friendly address, and guest reviews
 are the attributes, which bring value to your location data.</p>
 <p>Second, geospatial data can be <em>raster</em> or <em>vector</em>,
-as illustrated in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">12.9</a>.
-Raster data, as shown in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">12.9</a>a, is a grid of cells (“pixels”) of a certain size
+as illustrated in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">12.5</a>.
+Raster data, as shown in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">12.5</a>a, is a grid of cells (“pixels”) of a certain size
 (for example, 1 meter by 1 meter). For example, satellite images
 of the Earth that you see on Google Maps are raster geospatial data.
 Each pixel contains the color of Earth that satellite cameras
@@ -334,11 +335,11 @@ by volunteers tracing outlines of objects from satellite images.</p>
 <div class="figure"><span id="fig:geospatial-raster-vector"></span>
 <img src="images/12-transform/geospatial-raster-vector-annotated.png" alt="Geospatial data can be raster or vector."  />
 <p class="caption">
-Figure 12.9: Geospatial data can be raster or vector.
+Figure 12.5: Geospatial data can be raster or vector.
 </p>
 </div>
 <p>In this book, we will focus on vector data, which is based on
-points, lines, and polygons, as shown in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">12.9</a>b. Vector data can be
+points, lines, and polygons, as shown in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">12.5</a>b. Vector data can be
 much more precise than raster data, because points’ coordinates
 can be expressed with precise decimals. In addition, vector
 data can contain as much extra <em>attribute</em> information about each object as desired,
@@ -374,12 +375,12 @@ and shared in GeoJSON, you ensure you can use it on the web with nearly any mapp
 You can also be confident that other people will be able to use and extract data
 from the file without bulky and often expensive GIS software installed.</p>
 <p>Also, your GitHub repository will automatically display any GeoJSON files in a map view,
-like is shown in Figure <a href="convert-geojson.html#fig:geojson-github">12.10</a>.</p>
+like is shown in Figure <a href="convert-geojson.html#fig:geojson-github">12.6</a>.</p>
 
 <div class="figure"><span id="fig:geojson-github"></span>
 <img src="images/12-transform/geojson-github.png" alt="GitHub can show previews of GeoJSON files stored in repositories."  />
 <p class="caption">
-Figure 12.10: GitHub can show previews of GeoJSON files stored in repositories.
+Figure 12.6: GitHub can show previews of GeoJSON files stored in repositories.
 </p>
 </div>
 <p>Warning: In GeoJSON, coordinates are ordered in <em>longitude-latitude</em> format,

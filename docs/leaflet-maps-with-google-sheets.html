@@ -165,6 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Addresses with Google Sheets Add-On</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Google Forms</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas</a></li>
@@ -243,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="12" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>12</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with the US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
@@ -465,20 +466,13 @@ Figure 11.5: Paste in <em>your</em> Google Sheet URL to replace <em>our</em> URL
 - Name: Add a title to display in the marker pop-up window.
 - Image: Insert link to an external image link, or upload a small image to the <em>media</em> folder in your GitHub repo and add its pathname, such as <code>media/trinity-college.jpg</code>. TODO: add this to GSheet after code update
 - Description: Add text to appear in the marker pop-up window. You may include HTML web links in this format: <code>&lt;a href="url"&gt;link text&lt;/a&gt;</code>. If a map link should open in a new browser tab, set the <em>target</em> attribute to <code>_blank</code>. Learn about HTML syntax at <a href="https://www.w3schools.com/html/html_links.asp">W3Schools</a>.</p>
-<p>The next six columns help to place the Location of your marker on the map. The Leaflet code requires you to fill-in the Latitude and Longitude columns, which you can do using the built-in Geocoder menu in our Google Sheet template, which we introduced in chapter TODO: INSERT GEOCODER CHAPTER. Click the cell(s) you wish to geocode, and use shift-click to select all six columns from Location to Source (columns I to N). In the Geocoder menu, select either US Census or Google, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:google-sheets-geocoder2">11.6</a>. The first time you run the Geocoder script, it will ask for your permission. TODO: since we still need Google to authorize our script, you will need to click <em>Advanced</em> and then <em>Go to Geocoder (unsafe)</em> near the bottom of the next screen. Trust us – it’s safe to use! Sorry for the inconvenience. Always inspect the accuracy of your geocoded results.</p>
-
-<div class="figure"><span id="fig:google-sheets-geocoder2"></span>
-<img src="images/11-leaflet/google-sheets-geocoder2.png" alt="To use our built-in Geocoder menu, shift-click to select all columns from Location through Source."  />
-<p class="caption">
-Figure 11.6: To use our built-in Geocoder menu, shift-click to select all columns from Location through Source.
-</p>
-</div>
-<p>Optional: You can display a table of viewable markers at the bottom of your map, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-with-table">11.7</a>. In the <em>Options</em> tab, set <em>Display Table</em> (cell B30) to <em>On</em>. You can also adjust the <em>Table Height</em>, and modify the display of <em>Table Columns</em> by entering the column headers, separated with commas.</p>
+<p>The next three columns—Location, Latitude, and Longitude—help to place your marker on the map. Although the Leaflet code only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on</a> that we introduced in Chapter 2 to convert addresses to x- and y-coordinates in a separate tab of your Google Sheet, and paste the results of those three columns into Location, Latitude, and Longitude.</p>
+<p>Optional: You can display a table of viewable markers at the bottom of your map, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-with-table">11.6</a>. In the <em>Options</em> tab, set <em>Display Table</em> (cell B30) to <em>On</em>. You can also adjust the <em>Table Height</em>, and modify the display of <em>Table Columns</em> by entering the column headers, separated with commas.</p>
 
 <div class="figure"><span id="fig:leaflet-map-with-table"></span>
 <img src="images/11-leaflet/leaflet-map-with-table.png" alt="One option is to display a table of viewable markers at the bottom of your map." width="500" />
 <p class="caption">
-Figure 11.7: One option is to display a table of viewable markers at the bottom of your map.
+Figure 11.6: One option is to display a table of viewable markers at the bottom of your map.
 </p>
 </div>
 <p>Optional: You can create your own custom marker, such as the Trinity College Bantam mascot in the demo. Use an image editing tool to create a square image, 64 x 64 pixels or smaller, with a transparent background. Save it in PNG format with a filename using all lower-case letters with no spaces. Upload the image to the <em>markers</em> folder in your GitHub repo. In the Marker Icon column, set the pathname in this format: <code>markers/custom-trinity-64.png</code>. In the Custom Size column, set to <code>64x64</code> or similar.</p>
@@ -527,7 +521,7 @@ Figure 11.7: One option is to display a table of viewable markers at the bottom 
 <div id="g-save-each-google-sheets-tab-as-a-csv-file-and-upload-to-github" class="section level4 unnumbered" number="">
 <h4>G) Save each Google Sheets tab as a CSV file and upload to GitHub</h4>
 <p>If you have finished entering most of your data into your Google Sheets, save each tab as a CSV file and upload them to GitHub. The Leaflet map code will pull data directly from your CSV files, rather than your Google Sheets. And you can <em>still</em> edit your CSV files in GitHub. Moving your data from Google Sheets to CSV format is the <em>best</em> long-term preservation strategy, because it keeps your map and data together in the same GitHub folder, and removes the risk that your map will break due to an interruption to Google services, as described in Step H.</p>
-<p>To move your map data from Google Sheets to CSV format, go to each tab and select <em>File &gt; Download As</em> into CSV format, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-download-csv">11.8</a>, using these file names: <strong>TODO: should we warn to keep the first letter upper-case?</strong></p>
+<p>To move your map data from Google Sheets to CSV format, go to each tab and select <em>File &gt; Download As</em> into CSV format, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-download-csv">11.7</a>, using these file names: <strong>TODO: should we warn to keep the first letter upper-case?</strong></p>
 <ul>
 <li>Options.csv</li>
 <li>Points.csv</li>
@@ -540,7 +534,7 @@ Figure 11.7: One option is to display a table of viewable markers at the bottom 
 <div class="figure"><span id="fig:sheets-download-csv"></span>
 <img src="images/11-leaflet/sheets-download-csv.png" alt="One way to finalize your map is to download each Google Sheets tab as a CSV file." width="350" />
 <p class="caption">
-Figure 11.8: One way to finalize your map is to download each Google Sheets tab as a CSV file.
+Figure 11.7: One way to finalize your map is to download each Google Sheets tab as a CSV file.
 </p>
 </div>
 </div>

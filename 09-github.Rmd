@@ -97,7 +97,7 @@ Let's start by making one simple change to prove to everyone that you're now edi
 
 In the language of coders, we "commit" our changes in the same way that most people "save" a document, and later you'll see how GitHub tracks each code commit so that you can roll them back if needed. By default, GitHub inserts a short description of your commit as "Update index.html", and you have the option to customize that description when you start making lots of commits to keep track of your work. Also, GitHub commits your changes directly to the default branch of your code, which we'll explain later.
 
-Now let's publish your edited map to the public web to see how it looks in a web browser. GitHub not only stores open-source code, but its built-in [GitHub Pages](https://pages.github.com/) feature allows you to host a live online version of your HTML-based code, which anyone with the web address can view in their browser. While GitHub Pages is free to use, there are [some restrictions on size and content](https://help.github.com/en/github/working-with-github-pages/about-github-pages) and it is not intended for running an online business or commercial transactions. But one advantage of code templates is that you can host them on any web server you control. Since we're already using GitHub to store and edit our code template, it's easy to turn on GitHub Pages to host it online.
+Now let's publish your edited map to the public web to see how it looks in a web browser. GitHub not only stores open-source code, but its built-in [GitHub Pages](https://pages.github.com/) feature allows you to host a live online version of your HTML-based code, which anyone with the web address can view in their browser. While GitHub Pages is free to use, there are [some restrictions on usage, file size, and content](https://help.github.com/en/github/working-with-github-pages/about-github-pages) and it is not intended for running an online business or commercial transactions. But one advantage of code templates is that you can host them on any web server you control. Since we're already using GitHub to store and edit our code template, it's easy to turn on GitHub Pages to host it online.
 
 9. To access GitHub Pages, scroll to the top of your repo page and click the *Settings* button as shown in Figure \@ref(fig:leaflet-simple-settings).
 
@@ -170,7 +170,7 @@ Now that you've successfully made simple edits and published your live map, let'
 
 15. On your repo home page, click to open the `index.html` file, and click the pencil symbol to edit more code.
 
-Wherever you see the `EDIT` code comment, this points out a line that you can easily modify. For example, look for the code block shown below that sets up the initial center point of the map and its zoom level. Insert a new latitude and longitude coordinate to set a new center point. To find coordinates, right-click on any point in [Google Maps](https://google.com/maps) and select *What's here?*, as described in the [Geocode Locations into Coordinates section of Chapter 12](geocode.html).
+Wherever you see the `EDIT` code comment, this points out a line that you can easily modify. For example, look for the code block shown below that sets up the initial center point of the map and its zoom level. Insert a new latitude and longitude coordinate to set a new center point. To find coordinates, right-click on any point in [Google Maps](https://google.com/maps) and select *What's here?*, as described in the [geocoding section in chapter 2](geocode.html).
 
 ```
   var map = L.map('map', {
@@ -221,7 +221,7 @@ So how do you make a second fork of a GitHub repo, if there's no *Use this templ
  knitr::include_graphics("images/09-github/repo-code-download.png")
 ```
 
-2. Navigate to the location on your computer where you saved the folder. Its file name should end with `.zip`, which means you need to double-click to "unzip" or de-compress the folder. After you unzip it, a new folder will appear named in this format, `REPOSITORY-BRANCH`, which refers to the repository name (such as `leaflet-map-simple`) and the branch name (such as `master` or `main`), and it will contain the repo files.
+2. Navigate to the location on your computer where you saved the folder. Its file name should end with `.zip`, which means you need to double-click to "unzip" or de-compress the folder. After you unzip it, a new folder will appear named in this format, `REPOSITORY-BRANCH`, which refers to the repository name (such as `leaflet-map-simple`) and the branch name (such as `master` or `main`), and it will contain the repo files. One of those files is named `index.html`, which you'll use in a few steps below.
 
 3. Go back to your GitHub account in your web browser, click on the plus (+) symbol in the upper-right corner of your account, and select *New repository*, as shown in Figure \@ref(fig:repo-create-new).
 
@@ -253,7 +253,7 @@ Your new repo will have a web address similar to `https://github.com/USERNAME/pr
  knitr::include_graphics("images/09-github/repo-upload-files.png")
 ```
 
-6. Drag-and-drop the `index.html` file that you previously downloaded to your local computer into the upload screen of your GitHub repo in your browser, as shown in Figure \@ref(fig:repo-drag-index). Do not upload `LICENSE` or `README.md` because your new repo already contains those two files. Scroll down to click the green *Commit Changes* button.
+6. Inside the repo folder that you previously downloaded and unzipped on your local computer, drag-and-drop the `index.html` file to the upload screen of your GitHub repo in your browser, as shown in Figure \@ref(fig:repo-drag-index). Do not upload `LICENSE` or `README.md` because your new repo already contains those two files. Scroll down to click the green *Commit Changes* button.
 
 (ref:repo-drag-index) Drag-and-drop the `index.html` file to the upload screen.
 
@@ -276,7 +276,7 @@ Optionally, you could use GitHub Pages to publish a live version of the code onl
 So far, you've learned how to copy, edit, and host code using the GitHub web interface, which is a great introduction for beginners. Now you're ready to move up to tools that will allow you to work more efficiently with GitHub, such as GitHub Desktop and Atom Editor, to quickly move entire repos to your local computer, edit the code, and move them back online.
 
 ## GitHub Desktop and Atom Editor to Code Efficiently {- #github-desktop-atom}
-Editing your code through the GitHub web interface is a good way to start, but it can be very slow, especially if you need to modify or upload multiple files in your repo. To speed up your work, we recommend that you download two free tools---[GitHub Desktop](https://desktop.github.com) and [Atom Text Editor](https://atom.io)---which run on Mac or Windows computers. When you connect your GitHub web account to GitHub Desktop, it allows you to "pull" the most recent version of the code to your local computer's hard drive, make and test your edits, and "push" your commits back to your GitHub web account. Atom Text Editor, which is also created by the makers of GitHub, allows you to view and edit code repos on your local computer more easily than the GitHub web interface. While there are many text editors for coders, Atom is designed to work well with GitHub Desktop.
+Editing your code through the GitHub web interface is a good way to start, especially if you only need to make a few edits or upload a couple of files to your repo. But the web interface will feel very slow if you edit or upload multiple files in your repo. To speed up your work, we recommend that you download two free tools---[GitHub Desktop](https://desktop.github.com) and [Atom Text Editor](https://atom.io)---which run on Mac or Windows computers. When you connect your GitHub web account to GitHub Desktop, it allows you to "pull" the most recent version of the code to your local computer's hard drive, make and test your edits, and "push" your commits back to your GitHub web account. Atom Text Editor, which is also created by the makers of GitHub, allows you to view and edit code repos on your local computer more easily than the GitHub web interface. While there are many text editors for coders, Atom is designed to work well with GitHub Desktop.
 
 Tip: Currently, neither GitHub Desktop nor Atom Editor are supported for Chromebooks, but [Google's Web Store](https://chrome.google.com/webstore) offers several text editors, such as Text and Caret, which offer some of the functionality described below.)
 

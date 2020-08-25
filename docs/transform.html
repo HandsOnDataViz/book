@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="leaflet-maps-with-api.html"/>
-<link rel="next" href="geocode.html"/>
+<link rel="next" href="bulk-geocode.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -165,6 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Addresses with Google Sheets Add-On</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Google Forms</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas</a></li>
@@ -243,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="12" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>12</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with the US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
@@ -310,18 +311,10 @@ These are background basemaps, colored or shaded polygons (also known as <em>cho
 and point data that are often represented as markers.</p>
 <p>In this chapter, we will look at multiple ways to convert and edit geospatial data
 to create layers (files) that you can use in your favorite mapping tools.</p>
-<p>We will begin by looking at the process of geocoding, or transforming human-friendly
-address lines into points that can be plotted on the map (see Figure <a href="transform.html#fig:transform-data">12.1</a> for inspiration).
+<p>We will begin by looking at strategies to geocode large datasets, such as 10,000 addresses, with US Census tools.
 We will then talk about polygons and why you should normalize your data before creating choropleth maps.
 These map transformations happen inside spreadsheets, so you won’t directly deal
 with map data until you are halfway through the chapter.</p>
-
-<div class="figure"><span id="fig:transform-data"></span>
-<img src="images/12-transform/transform-data.png" alt="To map addresses, you need to geocode them first."  />
-<p class="caption">
-Figure 12.1: To map addresses, you need to geocode them first.
-</p>
-</div>
 <p>Before you can dive into creating shapes and dealing with boundaries in the map, we will
 introduce various file formats (most notably GeoJSON) and talk about geospatial data in general.
 You will learn that map data can be raster and vector, that geospatial data consists of location
@@ -339,7 +332,7 @@ overwhelming world of geospatial data.</p>
         </div>
       </div>
 <a href="leaflet-maps-with-api.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="geocode.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bulk-geocode.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

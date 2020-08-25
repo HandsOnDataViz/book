@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Geocode Locations into Coordinates with US Census or Google | Hands-On Data Visualization</title>
+  <title>Geocode Addresses with Google Sheets Add-On | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Geocode Locations into Coordinates with US Census or Google | Hands-On Data Visualization" />
+  <meta property="og:title" content="Geocode Addresses with Google Sheets Add-On | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Geocode Locations into Coordinates with US Census or Google | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Geocode Addresses with Google Sheets Add-On | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="transform.html"/>
-<link rel="next" href="pivot-point-to-polygon.html"/>
+<link rel="prev" href="upload.html"/>
+<link rel="next" href="forms.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -165,6 +165,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy of a Google Sheet</a></li>
 <li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Addresses with Google Sheets Add-On</a></li>
 <li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Google Forms</a></li>
 <li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
 <li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas</a></li>
@@ -243,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="12" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>12</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Locations into Coordinates with US Census or Google</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with the US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
@@ -304,146 +305,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="geocode" class="section level2 unnumbered" number="">
-<h2>Geocode Locations into Coordinates with US Census or Google</h2>
-<p>Before addresses can be mapped, they need to be geocoded.
-Geocoding is a process of transforming a human-readable address, such as <em>300 Summit St, Hartford, CT</em>
-into a latitude-longitude pair, such as <em>41.747,-72.692</em>. These numbers are x- and y-coordinates
-that maps understand.</p>
-<p>If you have just a few addresses, it might be faster to geocode them with <a href="https://www.google.com/maps">Google Maps</a>.
-Search for an address, right-click on that point, and select <em>What’s here?</em> to reveal a popup window with its latitude and longitude, as shown in Figure <a href="geocode.html#fig:gmaps-whats-here">12.2</a>. You can copy and paste the coordinates into your spreadsheet. Similar tools also geocode one place at a time, such as <a href="https://www.latlong.net/">LatLong.net</a>.</p>
+<h2>Geocode Addresses with Google Sheets Add-On</h2>
+<p>In this section, you’ll learn how to geocode data by installing a free Google Sheets add-on tool. This allows you to geocode addresses directly inside your spreadsheet, which will be very useful when using <a href="leaflet.html">Leaflet map code templates in chapter 11</a>.</p>
+<p>Geocoding means converting addresses or location names into geographic coordinates (or x- and y-coordinates) that can be plotted on a map, as shown in Figure <a href="geocode.html#fig:transform-data">2.13</a>. For example, the Statue of Liberty in the New York City area is located at <em>40.69, -74.04</em>. The first number is the latitude and the second is the longitude. Since the equator is 0 degrees latitude, positive latitude is the northern hemisphere, and negative latitude is in the southern hemisphere. Similarly, the prime meridian is 0 degrees longitude, which passes through Greenwich, England. So positive longitude is east of the meridian, and negative longitude is west, until you reach the opposite side of the globe, roughly near the International Date Line in the Pacific Ocean.</p>
+
+<div class="figure"><span id="fig:transform-data"></span>
+<img src="images/02-spreadsheet/geocode-data.png" alt="To map addresses, you first need to geocode them."  />
+<p class="caption">
+Figure 2.13: To map addresses, you first need to geocode them.
+</p>
+</div>
+<p>If you have just one or two addresses, you can quickly geocode them with <a href="https://www.google.com/maps">Google Maps</a>.
+Search for an address, right-click on that point, and select <em>What’s here?</em> to reveal a popup window with its latitude and longitude, as shown in Figure <a href="geocode.html#fig:gmaps-whats-here">2.14</a>. But what if you need to geocode a dozen or a hundred addresses?</p>
 
 <div class="figure"><span id="fig:gmaps-whats-here"></span>
-<img src="images/12-transform/gmaps-whats-here.png" alt="To geocode one address, search in Google Maps and right-click What’s here? to show coordinates."  />
+<img src="images/02-spreadsheet/gmaps-whats-here.png" alt="To geocode one address, search in Google Maps and right-click What’s here? to show coordinates."  />
 <p class="caption">
-Figure 12.2: To geocode one address, search in Google Maps and right-click <em>What’s here?</em> to show coordinates.
+Figure 2.14: To geocode one address, search in Google Maps and right-click <em>What’s here?</em> to show coordinates.
 </p>
 </div>
-<p>But what if you need to geocode dozens, hundreds, or even thousands of addresses?
-In this section, we will look at two ways to geocode larger lists of addresses.
-First, you’ll learn how to use our custom-built
-<a href="https://github.com/HandsOnDataViz/google-sheets-geocoder">Google Sheets Geocoder</a>,
-which lets you convert addresses using Google Geocoder (available pretty much worldwide)
-and the US Census Geocoder (for US addresses only).
-Second, you’ll learn how to use a stand-alone US Census Geocoder that allows you
-to upload a file with up to 10,000 addresses within the US, and download geocoded results.</p>
-<p>Note: Using Google Maps Geocoder within Google Sheets (App Script) does not require
-an API key. In the past, free tier was restricted by 1,000 geocoding requests in 24 hours.
-Since 2018, <a href="https://developers.google.com/apps-script/guides/services/quotas">use quotas are unclear</a>,
-but we believe the new limit is <a href="https://developers.google.com/maps/documentation/geocoding/usage-and-billing#other-usage-limits">up to 50 requests per minute</a>.</p>
-<div id="geocode-addresses-with-google-sheets-geocoder" class="section level4 unnumbered" number="">
-<h4>Geocode addresses with Google Sheets Geocoder</h4>
-<p>The Google Sheets Geocoder script lives inside <a href="https://docs.google.com/spreadsheets/d/1XvtkzuVyQ_7Ud47ypDJ4KOmz_5lOpC9sqeEDBbJ5Pbg/edit#gid=0">a special Google Sheet</a>
-that you should <em>copy</em> to your own Google Drive (you don’t need editing access, just go to <em>File &gt; Make a copy</em>).</p>
-<p>The spreadsheet contains six columns. Populate the first column, <em>Location</em>, with your addresses.
-The remaining five columns will be filled by the geocoding script. Select all six columns,
-go to <em>Geocoder</em> in the menu, and choose which geocoding utility to use, like is shown in Figure <a href="geocode.html#fig:sheets-geocoder">12.3</a>.</p>
+<p>To geocode multiple addresses inside your spreadsheet, install a free Google Sheets Add-on called <a href="https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312">Geocoding by SmartMonkey</a>, created by Xavier Ruiz, the CEO of SmartMonkey, a geographic route-planning company in Barcelona, Spain. Add-ons are created by third-party companies to expand features for Google Sheets, Google Documents, and related tools. Add-ons are verified to meet Google’s requirements and distributed through its <a href="https://gsuite.google.com/marketplace">G Suite Marketplace</a>.</p>
+<p>First, sign into your Google Drive account, go to the <a href="https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312">Geocoding by SmartMonkey Add-on page</a>, and click the blue button to install it in your Google Sheets. The Add-on will ask for your permission before installing, and if you agree, press <em>Continue</em>. In the next window, choose your Google Drive account, and if you agree with the terms, click <em>Allow</em> to complete the installation. Google will email you to confirm that you have installed this third-party app with access to your account. You can always <a href="https://myaccount.google.com/permissions">review permissions and revoke access</a> in the future, if desired.</p>
+<p>Second, go to your <a href="https://drive.google.com">Google Drive</a> and create a new Google Sheet. Select the <em>Add-ons</em> menu to see the new <em>Geocoding by SmartMonkey</em> options, and select <em>Create Template</em>. The Add-on will create a new tab, named <em>Geocoding</em>, and automatically insert 3 sample addresses, as shown in Figure <a href="geocode.html#fig:geocoding-create-template">2.15</a>.</p>
 
-<div class="figure"><span id="fig:sheets-geocoder"></span>
-<iframe src="images/12-transform/sheets-geocoder.gif" width="672" height="280px">
-</iframe>
+<div class="figure"><span id="fig:geocoding-create-template"></span>
+<img src="images/02-spreadsheet/geocoding-create-template.png" alt="In the Google Sheets Add-On menu, select Geocoding by SmartMonkey – Create Template."  />
 <p class="caption">
-Figure 12.3: Put addresses in the first column, and use Geocoder to fill in the remaining five.
+Figure 2.15: In the Google Sheets <em>Add-On</em> menu, select <em>Geocoding by SmartMonkey – Create Template</em>.
 </p>
 </div>
-<p>Note: If your address data is split into multiple columns (such as <em>Street</em>, <em>City</em>, and <em>State</em>),
-revisit <a href="clean-spreadsheets.html">Clean Data with Spreadsheets</a> section to remind yourself
-how to “glue” multiple cells into one.</p>
-<p>The first time you run the Geocoder script, it will ask for your permission. TODO: since we still need Google to authorize our script, you will need to click <em>Advanced</em> and then <em>Go to Geocoder (unsafe)</em> near the bottom of the next screen. Trust us – our script is safe to use! The code is open-source and is available <a href="https://github.com/HandsOnDataViz/google-sheets-geocoder">on GitHub</a>, so you or your programmer friend can make sure it doesn’t steal your personal data. Sorry for the inconvenience.</p>
-<p>Once the script finishes executing, you will get a pop-up notification that will tell you how many addresses
-were successfully geocoded, and how many failed. Inspect <em>Found</em> and <em>Quality</em> columns to ensure the geocoder matched your addresses correctly.
-Then look at the failed addresses and see if you can spot problems with them. For tips about
-using Google geocoder, see <a href="https://developers.google.com/maps/faq#geocoder_queryformat">documentation</a>.</p>
-<p>Note: The Geocoder plugin is a small Apps Script program that is connected to your Google sheet.
-It sends your addresses to either <a href="https://geocoding.geo.census.gov/geocoder">US Census Geocoder</a>,
-or <a href="https://developers.google.com/apps-script/reference/maps/geocoder">Google Geocoding API</a>,
-and gets geocoded results as a response.</p>
-</div>
-<div id="geocode-us-addresses-to-census-tracts-with-google-sheets-geocoder" class="section level4 unnumbered" number="">
-<h4>Geocode US addresses to census tracts with Google Sheets Geocoder</h4>
-<p>You can use a modified version of the Google Sheets Geocoder, available in
-<a href="https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0">its own spreadsheet</a>,
-to assign census tracts and GeoIDs to addresses within the United States.</p>
-<p>A GeoID is a unique identifier of a place according to the US Census. A sample 15-digit
-GeoID, <code>090035245022001</code>, consists of a state (09), followed by county (003),
-followed by census tract (524502, or more conventional 5245.02),
-followed by a census block group (2), and finally a census block (001).</p>
-<p>Make a copy of the <a href="https://docs.google.com/spreadsheets/d/1x_E9KwZ88c_kZvhZ13IF7BNwYKTJFxbfDu77sU1vn5w/edit#gid=0">template spreadsheet</a>
-into your own Google Drive by going to <em>File &gt; Make a copy</em>.</p>
-<p>You only need to populate the first column, <em>Location</em>. The rest seven columns
-will be populated by the Geocoder. Similar to the previous template, select all eight columns,
-and go to <em>Geocoder &gt; US Census 2010 Geographies</em>, like is shown in Figure <a href="geocode.html#fig:sheets-geocoder-censusgeo">12.4</a>.</p>
-<p>If you run this script for the first time, Google Sheets will ask you for permission to run,
-and will possibly warn you that this script is unsafe. Once again, you shouldn’t worry. The plugin
-is open-source and you can inspect it to make sure it doesn’t steal or retain your personal data.</p>
+<p>Third, select the <em>Geocoding by SmartMonkey &gt; Geocode Details</em> menu. The Add-on will create another spreadsheet tab, called <em>Geocoding Details</em>, and display the results from Google services for three new columns—latitude, longitude, and address found—as shown in Figure <a href="geocode.html#fig:geocode-details">2.16</a>. Always review the quality of geocoded results by comparing the <em>Address found</em> column to the original <em>Address</em> entered.</p>
 
-<div class="figure"><span id="fig:sheets-geocoder-censusgeo"></span>
-<iframe src="images/12-transform/sheets-geocoder-censusgeo.gif" width="672" height="330px">
-</iframe>
+<div class="figure"><span id="fig:geocode-details"></span>
+<img src="images/02-spreadsheet/geocode-details.png" alt="Select Geocode Details to view latitude, longitude, and address found for each entry."  />
 <p class="caption">
-Figure 12.4: Put addresses in the first column, and use Geocoder to fill in the remaining seven.
+Figure 2.16: Select <em>Geocode Details</em> to view latitude, longitude, and address found for each entry.
 </p>
 </div>
-</div>
-<div id="insert-google-sheets-geocoder-script-into-your-own-spreadsheet" class="section level4 unnumbered" number="">
-<h4>Insert Google Sheets Geocoder script into your own spreadsheet</h4>
-<p>If you don’t want to make a copy of the Google Sheet templates from the previous examples,
-you can insert the open-source Geocoder scripts into your own Google sheet.</p>
-<ol style="list-style-type: decimal">
-<li>In your personal Google spreadsheet, go to <em>Tools &gt; Script Editor</em>. This should open up a new tab.</li>
-<li>Replace the empty <code>function myFunction()</code> with the contents of <code>geocoder-census-google.gs</code> from the plugin’s <a href="https://github.com/handsondataviz/google-sheets-geocoder">repo on GitHub</a>.</li>
-<li>In Script Editor, click <em>File &gt; Save</em>. An <em>Edit Project Name</em> window will pop up, where you should give the script a meaningful name, such as “Geocoder”.</li>
-<li>Close the Script Editor, and go back to your spreadsheet. Refresh and wait for a couple of seconds. <em>Geocoder</em> should appear in the menu.</li>
-</ol>
-</div>
-<div id="geocode-up-to-10000-us-addresses-with-us-census-geocoder" class="section level4 unnumbered" number="">
-<h4>Geocode up to 10,000 US addresses with US Census Geocoder</h4>
-<p>One of the fastest ways to geocode up to 10,000 US addresses at a time is to create
-a CSV file with 5 columns and upload it to Address Batch form of the <a href="https://geocoding.geo.census.gov/geocoder/locations/addressbatch?form">US Census Geocoder</a>.
-In the menu on the left-hand side, you can switch from <em>Find Locations</em> to <em>Find Geographies</em>
-if you wish to include census tract and GeoID data in addition to the coordinates.</p>
-<p>Your CSV file <strong>must not contain a header row</strong>. It needs to be formatted the following way:</p>
-<pre><code>| 1 | 300 Summit St | Hartford | CT | 06106 |
-| 2 | 1012 Broad St | Hartford | CT | 06106 |</code></pre>
-<p>Here, the first column is unique IDs (make sure it is unique to each address, but they don’t have to
-start at 1 or be in an increasing order). The second column is street address. The third column is city.
-Column four is state, and the final fifth column is zip code.</p>
-<p>Upload the file using the <em>Browse…</em> button of <em>Select Address File</em>,
-use <em>Public_AR_Current</em> Benchmark, and hit <em>Get Results</em>.</p>
-<p>In a few moments (it usually takes longer for larger files), the tool will return a
-file named <em>GeocodeResults.csv</em> with geocoded results.
-Save it, and inspect it in your favorite spreadsheet tool. The resulting file is
-an eight-column CSV file with the original ID and address, match type (exact, non-exact, tie, or no match),
-and latitude/longitude coordinates.</p>
-<p>Getting a <em>tie</em> matching means there are multiple possible results for your address. To see all possible matches of an address that
-got a <em>tie</em>, use <em>One Line</em> or <em>Address</em> tools in the left-hand side menu and search for that address.</p>
-<p>Tip: If you see some unmatched addresses, use a filtering functionality of your
-spreadsheet to filter for unmatched addresses, then manually correct them,
-save as a separate CSV file, and re-upload. You can use the US Census Geocoder as many
-times as you want, as long as a single file doesn’t exceed 10,000 records.</p>
-<p>In reality only the first two columns, <em>unique ID</em> and <em>street address</em>,
-are required for the US Census Geocoder to accept your file for processing.
-City, state, and zip code values may be left blank if you don’t have that data.
-But to ensure you get exact matches, you should provide as much data as is available to you.</p>
-<p>If your data lacks ID values, you can create a column of consecutive numbers.
-See <a href="calculate.html">Calculate with Formulas and Functions</a> section of this book to see how.</p>
-<p>Make sure your street addresses don’t contain city, state, and zip code data. If they do,
-use splitting text to columns technique, described in the <a href="clean-spreadsheets.html">Clean Data with Spreadsheets</a> section
-of the book, to get rid of that extra data. But if your street addresses contain apartment numbers, you can leave them in.</p>
-<p>Note: US Census Geocoder has a comprehensive
-<a href="https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/census-geocoder.html">overview and documentation</a>
-that you can refer to if you encounter issues not covered here.</p>
-<p>If for some reason you cannot geocode address-level data, but you need to produce some mapping output,
-you can use pivot tables to get counts of points for specific areas, such as towns or states. In the next section,
-we will look at hospital addresses in the US and how we can count them by state using pivot tables.</p>
-</div>
+<p>Finally, paste your own address data into the spreadsheet to geocode it, and follow these guidelines:</p>
+<ul>
+<li>Each cell requires a full address. If your original data splits street, city, state, and zip code into different columns, see <a href="clean-spreadsheets.html">how to combine separate columns into one</a> in Chapter 4: Clean Up Messy Data.</li>
+<li>The address should follow the format of the national postal service of the country where it is located. Separate terms with spaces.</li>
+<li>Do not skip any rows in the <em>Address</em> column.</li>
+<li>You can leave the <em>Country</em> column blank, but its default value is the United States. To specify other nations, use their <a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains">top-level Internet domain code</a>, such as <code>es</code> for Spain.</li>
+<li>Give the tool time to work. For example, if you enter 50 addresses, expect to wait at least 15 seconds for your geocoded results.</li>
+<li>Always inspect the quality of your results, and never assume that geocoding services from any provider are accurate.</li>
+</ul>
+<p>If you need a faster geocoding service for US addresses, which can handle up to 10,000 requests in one upload, see <a href="bulk-geocode.html">bulk geocoding with the US Census</a> in Chapter 11: Transform Your Map Data.</p>
+<p>Now that you know how to use a Google Sheets Add-on to geocode addresses, in the next section you will learn how to collect data using an online form, and access it as a spreadsheet.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="transform.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="pivot-point-to-polygon.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="upload.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="forms.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -482,7 +399,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/12-transform.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/02-spreadsheet.Rmd",
 "text": null
 },
 "download": null,

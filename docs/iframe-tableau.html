@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Embed Tableau Public on your Website | Hands-On Data Visualization</title>
+  <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Embed Tableau Public on your Website | Hands-On Data Visualization" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://handsondataviz.github.io/" />
+  
+  <meta property="og:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
+  <meta name="github-repo" content="handsondataviz/book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Embed Tableau Public on your Website | Hands-On Data Visualization" />
+  <meta name="twitter:site" content="@handsondataviz" />
+  <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
+  
+
+<meta name="author" content="Jack Dougherty" />
+<meta name="author" content="Ilya Ilyankou" />
+
+
+<meta name="date" content="2020-08-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="iframe-wordpress.html"/>
+<link rel="next" href="github.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5488840-29');
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
+<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
+<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
+<ul>
+<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
+<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
+<ul>
+<li class="chapter" data-level="" data-path="spreadsheet-tools.html"><a href="spreadsheet-tools.html"><i class="fa fa-check"></i>Select your Spreadsheet Tools</a></li>
+<li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download to CSV or ODS Format</a></li>
+<li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy of a Google Sheet</a></li>
+<li class="chapter" data-level="" data-path="share.html"><a href="share.html"><i class="fa fa-check"></i>Share Your Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="upload.html"><a href="upload.html"><i class="fa fa-check"></i>Upload and Convert to Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="geocode.html"><a href="geocode.html"><i class="fa fa-check"></i>Geocode Addresses with Google Sheets Add-On</a></li>
+<li class="chapter" data-level="" data-path="forms.html"><a href="forms.html"><i class="fa fa-check"></i>Collect Data with Google Forms</a></li>
+<li class="chapter" data-level="" data-path="sort.html"><a href="sort.html"><i class="fa fa-check"></i>Sort and Filter Data</a></li>
+<li class="chapter" data-level="" data-path="calculate.html"><a href="calculate.html"><i class="fa fa-check"></i>Calculate with Formulas</a></li>
+<li class="chapter" data-level="" data-path="pivot.html"><a href="pivot.html"><i class="fa fa-check"></i>Summarize Data with Pivot Tables</a></li>
+<li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
+<li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with a Relational Database</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Question Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for your Data Search</a></li>
+<li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public and Private Data</a></li>
+<li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
+<li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
+<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
+<li class="chapter" data-level="" data-path="question.html"><a href="question.html"><i class="fa fa-check"></i>Question Your Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
+<li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
+<li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
+<li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
+<li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
+<li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="datawrapper-table.html"><a href="datawrapper-table.html"><i class="fa fa-check"></i>Datawrapper Table with Sparklines</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
+<ul>
+<li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
+<li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
+<li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an Iframe</a></li>
+<li class="chapter" data-level="" data-path="iframe-github.html"><a href="iframe-github.html"><i class="fa fa-check"></i>Embed an Iframe in GitHub Pages</a></li>
+<li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
+<li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>9</b> Edit and Host Code with GitHub</a>
+<ul>
+<li class="chapter" data-level="" data-path="copy-leaflet.html"><a href="copy-leaflet.html"><i class="fa fa-check"></i>Copy, Edit, and Host a Simple Leaflet Map Template</a></li>
+<li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
+<li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="chartcode.html"><a href="chartcode.html"><i class="fa fa-check"></i><b>10</b> Chart.js and Highcharts Templates</a>
+<ul>
+<li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i>Scatter Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i>Bubble Chart.js with CSV Data</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>11</b> Leaflet Map Templates</a>
+<ul>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets</a></li>
+<li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>12</b> Transform Your Map Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with the US Census</a></li>
+<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
+<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
+<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify a Digitized Map with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>13</b> Detect Bias in Data Stories</a>
+<ul>
+<li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>14</b> Tell Your Data Story</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="fix.html"><a href="fix.html"><i class="fa fa-check"></i><b>A</b> Fix Common Mistakes</a></li>
+<li class="chapter" data-level="B" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i><b>B</b> Find Connecticut Data</a></li>
+<li class="chapter" data-level="C" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i><b>C</b> Peer Review Samples</a>
+<ul>
+<li class="chapter" data-level="" data-path="peer-2-chart-1.html"><a href="peer-2-chart-1.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample</a></li>
+<li class="chapter" data-level="" data-path="peer-2-chart-1-notes.html"><a href="peer-2-chart-1-notes.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample with Notes</a></li>
+<li class="chapter" data-level="" data-path="peer-2-chart-2.html"><a href="peer-2-chart-2.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample</a></li>
+<li class="chapter" data-level="" data-path="peer-2-chart-2-notes.html"><a href="peer-2-chart-2-notes.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample with Notes</a></li>
+<li class="chapter" data-level="" data-path="peer-3-sample-1.html"><a href="peer-3-sample-1.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 1</a></li>
+<li class="chapter" data-level="" data-path="peer-3-sample-1-notes.html"><a href="peer-3-sample-1-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 1 with Notes</a></li>
+<li class="chapter" data-level="" data-path="peer-3-sample-2.html"><a href="peer-3-sample-2.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2</a></li>
+<li class="chapter" data-level="" data-path="peer-3-sample-2-notes.html"><a href="peer-3-sample-2-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2 with Notes</a></li>
+</ul></li>
+<li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
+<ul>
+<li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
+<li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
+<li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
+<li class="chapter" data-level="" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i>Notes and Bibliography</a></li>
+<li class="chapter" data-level="" data-path="modify-markdown.html"><a href="modify-markdown.html"><i class="fa fa-check"></i>Manually Modify Markdown Output</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li style="padding: 10px 15px; font-weight: bold;">Open access book-in-progress</li>
+<li><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></li>
+<li><a href="https://bookdown.org" target="_blank">Built with Bookdown + RStudio</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Hands-On Data Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="iframe-tableau" class="section level2 unnumbered" number="">
+<h2>Embed Tableau Public on your Website</h2>
+<p>Question: After learning <a href="tableau-public.html">how to create an interactive data visualization with Tableau Public</a> in this book, how do I embed it on my website?</p>
+<p>Answer: Tableau Public supports two embedding methods, and your choice depends on your type of website.</p>
+<ul>
+<li><ol style="list-style-type: upper-alpha">
+<li>Embed code: if you can paste directly into an HTML web page</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: upper-alpha">
+<li>Convert Link to iframe: to paste into WordPress.org, Wix, SquareSpace, Weebly, and many other web platforms</li>
+</ol></li>
+</ul>
+<p>Try it:</p>
+<p>Both methods produce an embedded visualization like the one below. Float your cursor over points to view data details.</p>
+<p>TODO: convert to code-chunk iframe: <a href="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a>?:showVizHome=no&amp;:embed=true</p>
+<div id="a-embed-code-method-for-html-web-pages" class="section level4 unnumbered" number="">
+<h4>A) Embed code method for HTML web pages</h4>
+<ol style="list-style-type: decimal">
+<li><p>Use this method if you can paste HTML and JavaScript code directly into a website with HTML pages.</p></li>
+<li><p>Go to the public web page of any Tableau Public visualization, such as this sample: <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a></p></li>
+<li><p>Before you begin the embed process, click the upper-right Edit Details button to make any final modifications to the title or toolbar settings.</p></li>
+<li><p>Click the bottom-right Share button, click inside the <strong>Embed Code</strong> field, and copy its contents. A typical embed code is a long string of HTML and JavaScript instructions to display the visualization.</p></li>
+</ol>
+<div class="figure">
+<img src="images/08-embed/tableau-edit-share.png" alt="" />
+<p class="caption">Screenshot: Edit and Share buttons in Tableau Public web page</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Open an HTML page on your website and paste the embed code in the body section. Below is an example of a sample Tableau Public embed code pasted between the body tags of a simple HTML page.</li>
+</ol>
+<p>TODO: find a way to replace this triple backtic code snippet, since it may throw errors into Markdown output.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="iframe-tableau.html#cb12-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb12-2"><a href="iframe-tableau.html#cb12-2"></a><span class="kw">&lt;html&gt;</span></span>
+<span id="cb12-3"><a href="iframe-tableau.html#cb12-3"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb12-4"><a href="iframe-tableau.html#cb12-4"></a>  <span class="kw">&lt;title&gt;</span>sample web page<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb12-5"><a href="iframe-tableau.html#cb12-5"></a>  <span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content=</span><span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb12-6"><a href="iframe-tableau.html#cb12-6"></a>  <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb12-7"><a href="iframe-tableau.html#cb12-7"></a><span class="kw">&lt;/head&gt;</span></span>
+<span id="cb12-8"><a href="iframe-tableau.html#cb12-8"></a><span class="kw">&lt;body&gt;</span></span>
+<span id="cb12-9"><a href="iframe-tableau.html#cb12-9"></a>  <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&#39;tableauPlaceholder&#39;</span><span class="ot"> id=</span><span class="st">&#39;viz1489158014225&#39;</span><span class="ot"> style=</span><span class="st">&#39;position: relative&#39;</span><span class="kw">&gt;&lt;noscript&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&#39;https:</span><span class="dv">&amp;#47;&amp;#47;</span><span class="st">handsondataviz.org</span><span class="dv">&amp;#47;</span><span class="st">chart</span><span class="dv">&amp;#47;</span><span class="st">scatter-chart-tableau</span><span class="dv">&amp;#47;</span><span class="st">&#39;</span><span class="kw">&gt;&lt;img</span><span class="ot"> alt=</span><span class="st">&#39;CT School Districts by Income and Grade Level Equivalents, 2009-13 &#39;</span><span class="ot"> src=</span><span class="st">&#39;https:</span><span class="dv">&amp;#47;&amp;#47;</span><span class="st">public.tableau.com</span><span class="dv">&amp;#47;</span><span class="st">static</span><span class="dv">&amp;#47;</span><span class="st">images</span><span class="dv">&amp;#47;</span><span class="st">CT</span><span class="dv">&amp;#47;</span><span class="st">CTSchoolDistrictsbyIncomeandGradeLevels2009-13</span><span class="dv">&amp;#47;</span><span class="st">Sheet1</span><span class="dv">&amp;#47;</span><span class="st">1_rss.png&#39;</span><span class="ot"> style=</span><span class="st">&#39;border: none&#39;</span> <span class="kw">/&gt;&lt;/a&gt;&lt;/noscript&gt;&lt;object</span><span class="ot"> class=</span><span class="st">&#39;tableauViz&#39;</span><span class="ot">  style=</span><span class="st">&#39;display:none;&#39;</span><span class="kw">&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;host_url&#39;</span><span class="ot"> value=</span><span class="st">&#39;https%3A%2F%2Fpublic.tableau.com%2F&#39;</span> <span class="kw">/&gt;</span> <span class="kw">&lt;param</span><span class="ot"> name=</span><span class="st">&#39;site_root&#39;</span><span class="ot"> value=</span><span class="st">&#39;&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;name&#39;</span><span class="ot"> value=</span><span class="st">&#39;CTSchoolDistrictsbyIncomeandGradeLevels2009-13</span><span class="dv">&amp;#47;</span><span class="st">Sheet1&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;tabs&#39;</span><span class="ot"> value=</span><span class="st">&#39;no&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;toolbar&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;static_image&#39;</span><span class="ot"> value=</span><span class="st">&#39;https:</span><span class="dv">&amp;#47;&amp;#47;</span><span class="st">public.tableau.com</span><span class="dv">&amp;#47;</span><span class="st">static</span><span class="dv">&amp;#47;</span><span class="st">images</span><span class="dv">&amp;#47;</span><span class="st">CT</span><span class="dv">&amp;#47;</span><span class="st">CTSchoolDistrictsbyIncomeandGradeLevels2009-13</span><span class="dv">&amp;#47;</span><span class="st">Sheet1</span><span class="dv">&amp;#47;</span><span class="st">1.png&#39;</span> <span class="kw">/&gt;</span> <span class="kw">&lt;param</span><span class="ot"> name=</span><span class="st">&#39;animate_transition&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_static_image&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_spinner&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_overlay&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_count&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;/object&gt;&lt;/div&gt;</span>                <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&#39;text/javascript&#39;</span><span class="kw">&gt;</span>                    <span class="kw">var</span> divElement <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&#39;viz1489158014225&#39;</span>)<span class="op">;</span>                    <span class="kw">var</span> vizElement <span class="op">=</span> divElement<span class="op">.</span><span class="fu">getElementsByTagName</span>(<span class="st">&#39;object&#39;</span>)[<span class="dv">0</span>]<span class="op">;</span>                    vizElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">width</span><span class="op">=</span><span class="st">&#39;100%&#39;</span><span class="op">;</span>vizElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">height</span><span class="op">=</span>(divElement<span class="op">.</span><span class="at">offsetWidth</span><span class="op">*</span><span class="fl">0.75</span>)<span class="op">+</span><span class="st">&#39;px&#39;</span><span class="op">;</span>                    <span class="kw">var</span> scriptElement <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">&#39;script&#39;</span>)<span class="op">;</span>                    scriptElement<span class="op">.</span><span class="at">src</span> <span class="op">=</span> <span class="st">&#39;https://public.tableau.com/javascripts/api/viz_v1.js&#39;</span><span class="op">;</span>                    vizElement<span class="op">.</span><span class="at">parentNode</span><span class="op">.</span><span class="fu">insertBefore</span>(scriptElement<span class="op">,</span> vizElement)<span class="op">;</span>                <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb12-10"><a href="iframe-tableau.html#cb12-10"></a><span class="kw">&lt;/body&gt;</span></span>
+<span id="cb12-11"><a href="iframe-tableau.html#cb12-11"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+</div>
+<div id="b-convert-link-to-iframe-method" class="section level4 unnumbered" number="">
+<h4>B) Convert Link to iframe method</h4>
+<ol style="list-style-type: decimal">
+<li><p>Use this method if you need to paste an iframe into common web authoring platforms (such as WordPress.org, Squarespace, Wix, Weebly, etc.), since these platforms typically do not support HTML and JavaScript code pasted directly into content.</p></li>
+<li><p>Go to the public web page of any Tableau Public visualization, such as this sample: <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a></p></li>
+<li><p>Before you begin the embed process, click the upper-right Edit Details button to make any final modifications to the title or toolbar settings.</p></li>
+<li><p>Click the bottom-right Share button, click inside the <strong>Link</strong> field (NOT the Embed Code field), and copy its contents.</p></li>
+</ol>
+<div class="figure">
+<img src="images/08-embed/tableau-edit-share.png" alt="" />
+<p class="caption">Screenshot: Edit and Share buttons in Tableau Public web page</p>
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>A typical link will look similar to this example (scroll to right to see all):</li>
+</ol>
+<p><code>https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:embed=y&amp;:display_count=yes</code></p>
+<ol start="6" style="list-style-type: decimal">
+<li>We need to edit the link to convert it into an iframe format. First, delete any code that appears after the question mark, to make it look like this (scroll to right to see all):</li>
+</ol>
+<p><code>https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?</code></p>
+<ol start="7" style="list-style-type: decimal">
+<li>Add this snippet of code to the end, to replace what you deleted above:</li>
+</ol>
+<p><code>:showVizHome=no&amp;:embed=true</code></p>
+<ol start="8" style="list-style-type: decimal">
+<li>Now your edited link should look similar to this (scroll to right to see all):</li>
+</ol>
+<p><code>https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true</code></p>
+<ol start="9" style="list-style-type: decimal">
+<li>Enclose the link inside an iframe source tag <code>src=</code> with quotes, to make it look similar to this (scroll to right to see all):</li>
+</ol>
+<p><code>src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true"</code></p>
+<ol start="10" style="list-style-type: decimal">
+<li>Add iframe tags for <code>width</code> and <code>height</code> in percentages or pixels (default), to make it look similar to this (scroll to right to see all):</li>
+</ol>
+<p><code>src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500"</code></p>
+<p>Hint: Insert 90% width, rather than 100, to help readers easily scroll down your web page</p>
+<ol start="11" style="list-style-type: decimal">
+<li>Add iframe tags at the beginning and end, to make it look similar to this (scroll to right to see all):</li>
+</ol>
+<p><code>&lt;iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500"&gt;&lt;/iframe&gt;</code></p>
+<p>Exceptions to the last step above. As described in the <a href="embed.html#iframe-wordpress">Embed iframe on WordPress</a> chapter in this book, in a self-hosted WordPress.org site, with the iframe plugin, insert iframe brackets rather than HTML tags to make a shortcode like this (scroll to right to see all):</p>
+<p><code>[iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500"]</code></p>
+<p>Learn more:
+Embedding Tableau Public Views in iframe, Tableau Support page <a href="http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes" class="uri">http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes</a></p>
+
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="iframe-wordpress.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/handsondataviz/book/blob/master/08-embed.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"search": true
+});
+});
+</script>
+
+</body>
+
+</html>

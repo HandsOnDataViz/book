@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-08-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,7 +184,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
+<li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
+<li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
+<li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
@@ -314,7 +316,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>In the <em>Upload Data</em> screen, select that you wish to import your data from a Google Spreadsheet. Paste in the web address of our cleaned-up Google Sheet and click <em>Proceed.</em></p></li>
 <li><p>Inspect the data in the <em>Check and Describe</em> screen. Make sure that the <em>First row as label</em> box is checked, then click <em>Proceed</em>.</p></li>
 <li><p>In the <em>Visualize</em> screen, under <em>Customize Table</em>, check two additional boxes: <em>Make Searchable</em> (so that users can search for nations by keyword) and <em>Stripe Table</em> (to make lines more readable).</p></li>
-<li><p>Let’s use a special Datawrapper code to display tiny flags before each country’s name. In the <em>Nation</em> column, each entry begins with a two-letter country code, surrounded by colons, followed by the country name, such as <code>:af: Afghanistan</code>. We created the <em>Nation</em> column by <a href="clean-spreadsheets.html">combining separate items from the first two columns</a>, as described in Chapter 4: Clean Up Messy Data. To learn more flag icons, read the <a href="https://academy.datawrapper.de/article/144-how-to-insert-flag-icons-in-tables">Datawrapper post on this topic</a> and their <a href="https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons">list of country codes and flags on GitHub</a>.</p></li>
+<li><p>Let’s use a special Datawrapper code to display tiny flags before each country’s name. In the <em>Nation</em> column, each entry begins with a two-letter country code, surrounded by colons, followed by the country name, such as <code>:af: Afghanistan</code>. We created the <em>Nation</em> column according to the <a href="combine-data.html">Combine Data into One Column section of Chapter 4: Clean Up Messy Data</a>. To learn more flag icons, read the <a href="https://academy.datawrapper.de/article/144-how-to-insert-flag-icons-in-tables">Datawrapper post on this topic</a> and their <a href="https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons">list of country codes and flags on GitHub</a>.</p></li>
 </ol>
 <p>In the <em>Visualize</em> screen, under <em>Customize columns</em>, select the third line named <em>Nation</em>. Then scroll down and push the slider to <em>Replace country codes with flags</em>, as shown in Figure <a href="datawrapper-table.html#fig:datawrapper-flag">7.2</a>.</p>
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-08-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,7 +184,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
+<li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
+<li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
+<li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
@@ -341,7 +343,7 @@ Figure 2.36: Paste the last four column headers from the <em>addresses</em> shee
 <li>[is_sorted] = Enter <code>false</code> to find exact matches only, which makes sense in this case. Otherwise, enter <code>true</code> if the first column of the 2nd sheet range is sorted and you will accept the closest match, even if not an exact one.</li>
 </ul>
 <ol start="4" style="list-style-type: decimal">
-<li>You can either type in the formula with comma separators <code>=VLOOKUP(B2,'addresses'!A:E,2,false)</code>, or click on the relevant cells, columns, and sheets for the tool to automatically enter it for you, as shown in Figure <a href="vlookup.html#fig:vlookup-solution">2.37</a>. What’s new here is that this formula in the <em>names</em> sheet refers to a range of columns A to E in the <em>addresses</em> sheet. Press <em>Return</em> or <em>Enter</em> on your keyboard.</li>
+<li>One option is to directly type this formula into cell C2, using comma separators: <code>=VLOOKUP(B2,'addresses'!A:E,2,false)</code>. Another option is to click on the <em>VLOOKUP Vertical lookup</em> grey box that Google Sheets suggests, and click on the relevant cells, columns, and sheets for the formula to be automatically entered for you, as shown in Figure <a href="vlookup.html#fig:vlookup-solution">2.37</a>. What’s new here is that this formula in the <em>names</em> sheet refers to a range of columns A to E in the <em>addresses</em> sheet. Press <em>Return</em> or <em>Enter</em> on your keyboard.</li>
 </ol>
 
 <div class="figure"><span id="fig:vlookup-solution"></span>

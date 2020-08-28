@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-08-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="question.html"/>
-<link rel="next" href="clean-spreadsheets.html"/>
+<link rel="next" href="find-and-replace.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -184,7 +184,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
+<li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
+<li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
+<li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
@@ -307,31 +309,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="clean" class="section level1" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Clean Up Messy Data</h1>
 <p>More often than not, datasets will be messy and hard to visualize right away.
-They will have missing values, various spelling of the same categories,
-dates in different formats, text in numeric-only columns, multiple things in the same columns,
-and other unexpected things (see Figure <a href="clean.html#fig:clean-up-messy-data">4.1</a> for inspiration).
-Don’t be surprised if you find yourself spending longer cleaning up data than
-actually analyzing and visualizing it—it is often the case for data analysts.</p>
+They will have missing values, dates in different formats, text in numeric-only columns, multiple items in the same columns, various spellings of the same name, and other unexpected things. See Figure <a href="clean.html#fig:clean-up-messy-data">4.1</a> for inspiration. Don’t be surprised if you find yourself spending more time cleaning up data than you do analyzing and visualizing it.</p>
 
 <div class="figure"><span id="fig:clean-up-messy-data"></span>
-<img src="images/04-clean/clean-up-messy-data.png" alt="More often than not, raw data looks like this."  />
+<img src="images/04-clean/clean-up-messy-data.png" alt="More often than not, raw data looks messy."  />
 <p class="caption">
-Figure 4.1: More often than not, raw data looks like this.
+Figure 4.1: More often than not, raw data looks messy.
 </p>
 </div>
-<p>It is important to learn several tools in order to know which one to use
-to clean your data efficiently.
-We will start by looking at fairly basic data cleanup using Google Sheets.
-Keep in mind that the same principles (and in most cases
-even the same formulas) can be use in Microsoft Excel, LibreOffice Calc, Mac’s Numbers,
-or other spreadsheet packages.</p>
-<p>We will then show you how to extract table data from PDF documents using a free tool called Tabula.
-Tabula is used by data journalists and researchers worldwide
-to analyze government spendings, procurement records and all sorts of other datasets
-that get trapped in PDFs.</p>
-<p>At the end, we will introduce OpenRefine, an extremely powerful and versatile tool
-to clean up the messiest spreadsheets, such as those containing dozens of misspelled versions
-of universities or town names.</p>
+<p>In this chapter you’ll learn about different tools, in order to help you make decisions about which one to use to clean up your data efficiently. First, we’ll start with basic cleanup methods using spreadsheets, such as find and replace with a blank, split data into separate columns, and combine columns into one. While we feature Google Sheets in our examples, the same principles (and in most cases the same formulas) can be use in Microsoft Excel, LibreOffice Calc, Mac’s Numbers, or other spreadsheet packages. Next, you will learn how to extract table data from text-based PDF documents using a free tool, Tabula, used by data journalists and researchers worldwide to analyze spending data, health reports, and all sorts of other datasets that get trapped in PDFs. Finally, we will introduce OpenRefine, an extremely powerful and versatile tool to clean up the messiest spreadsheets, such as those containing dozens of different spellings of the same name.</p>
 </div>
             </section>
 
@@ -339,7 +325,7 @@ of universities or town names.</p>
         </div>
       </div>
 <a href="question.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="clean-spreadsheets.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="find-and-replace.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

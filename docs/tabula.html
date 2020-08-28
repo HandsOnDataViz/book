@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-08-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="clean-spreadsheets.html"/>
+<link rel="prev" href="combine-data.html"/>
 <link rel="next" href="open-refine.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -184,7 +184,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
+<li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
+<li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
+<li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
@@ -307,62 +309,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="tabula" class="section level2 unnumbered" number="">
 <h2>Extract Tables from PDFs with Tabula</h2>
 <p>It sometimes happens that the dataset you are interested in is only available as a PDF document.
-Don’t despair, you can <em>likely</em> use Tabula to extract tables and save them as CSV files.</p>
-<p>Tabula is a free tool that runs on Java, and is available for Mac, Windows, and Linux computers. It runs on your
-local machine and does not send your data to the cloud, so you can also use it for sensitive documents.</p>
-<p>Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based.
-You know your PDF is text-based if you can use cursor to select and copy-paste text. These are great for Tabula.
-Image-based PDFs are those that were created from scanning documents. Before they can be processed with Tabula,
-you will need to use an optical character recognition (OCR) software, such as Adobe Acrobat,
-to create a text-based PDF.</p>
-<div id="set-up-tabula" class="section level3 unnumbered" number="">
-<h3>Set Up Tabula</h3>
-<p><a href="https://tabula.technology/">Download the newest version of Tabula</a>.
-You can use download buttons on the left-hand side, or scroll down to the <em>Download &amp; Install Tabula</em>
-section to download a copy for your platform.</p>
-<p>Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive,
-and double-click the icon. If prompted with a security message (such as
-“Tabula is an app downloaded from the internet. Are you sure you want to open it?”),
-follow the instruction to proceed (on a Mac, click <em>Open</em>; you might have to go to
-System Preferences &gt; Security &amp; Privacy, and resolve the issue there).</p>
-<p>Your default system browser should open, like shown in Figure <a href="tabula.html#fig:tabula-welcome">4.5</a>.
-The URL will be something like <code>http://127.0.0.1:8080/</code>, meaning Tabula is running on your local machine.
-127.0.0.1, also known as <code>localhost</code>, is the hostname for your machine. <code>8080</code> is called port
-(it’s okay if you see a different port—most likely because 8080 was taken by some other
-program running on your computer). If for any reason you decide to use a different browser,
-just copy-paste the URL.</p>
+Don’t despair, you can <em>likely</em> use Tabula to extract tables and save them as CSV files. Keep in mind that PDFs generally come in two flavors: text-based and image-based. If you can use cursor to select and copy-paste text in your PDF, then it’s text-based, which is great because you can process it with Tabula. But if you cannot select and copy-paste items inside a PDF, then it’s image-based, meaning it was probably created as a scanned version of the original document. You need to use optical character recognition (OCR) software, such as Adobe Acrobat Pro or another OCR tool, to convert an image-based PDF into a text-based PDF. Furthermore, Tabula can only extract data from tables, not charts or other types of visualizations.</p>
+<p>Tabula is a free tool that runs on Java in your browser, and is available for Mac, Windows, and Linux computers. It runs on your local machine and does not send your data to the cloud, so you can also use it for sensitive documents.</p>
+<p>To get started, <a href="https://tabula.technology/">download the newest version of Tabula</a>.
+You can use download buttons on the left-hand side, or scroll down to the <em>Download &amp; Install Tabula</em> section to download a copy for your platform. Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive,
+and double-click the icon. If you work on a Mac, you may see a warning that states,
+“Tabula is an app downloaded from the internet. Are you sure you want to open it?” If so, click <em>Open</em>. Or you may have to go to <em>System Preferences &gt; Security &amp; Privacy &gt; General tab</em>, and
+click the <em>Open Anyway</em> button in the lower half of the window to open the app the first time.</p>
+<p>When you start up Tabula, the default system browser will open, as shown in Figure <a href="tabula.html#fig:tabula-welcome">4.6</a>. Tabula runs on your local computer, not the internet. The URL in the browser will be something like <code>http://127.0.0.1:8080/</code>. The first portion is the localhost or hostname for your computer, and <code>8080</code> refers to the port number. If you see a different port number, that’s fine, and just means that the initial number is already in use by some other program on your computer. If for any reason you decide to use a different browser, just copy-and-paste the URL.</p>
 
 <div class="figure"><span id="fig:tabula-welcome"></span>
 <img src="images/04-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
-Figure 4.5: Tabula welcome page.
+Figure 4.6: Tabula welcome page.
 </p>
 </div>
-</div>
-<div id="load-a-pdf-and-autodetect-tables" class="section level3 unnumbered" number="">
-<h3>Load a PDF and Autodetect Tables</h3>
-<p>Since the beginning of the Covid-19 pandemic, the Department of Public Health in Connecticut
-has been issuing daily PDFs with case and death count by town.
-For the demonstration, we will use <a href="data/ct-dph-covid-2020-05-31.pdf">one of those PDFs</a>
-from May 31, 2020.</p>
+<p>Now let’s upload a sample text-based PDF and detect any tables we wish to extract. In the beginning of the Covid-19 pandemic, the Department of Public Health in Connecticut
+issued data on cases and deaths only in PDF document format.
+For this demonstration, you can use <a href="data/ct-dph-covid-2020-05-31.pdf">our sample text-based PDF</a>
+from May 31, 2020, or provide your own.</p>
 <ol style="list-style-type: decimal">
 <li>Select the PDF you want to extract data from by clicking the blue <em>Browse…</em> button.</li>
 <li>Click <em>Import</em>. Tabula will begin analyzing the file.</li>
 <li>As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly clean, with only four buttons in the header.</li>
-<li>The easiest first step is to let Tabula autodetect tables. Click the relevant button in the header.
-You will see that each table is highlighted in red, like shown in Figure <a href="tabula.html#fig:tabula-autodetect">4.6</a>.</li>
+<li>Click the <em>Autodetect Tables</em> button to let Tabula look for relevant data. The tool highlights each table it detects in red, as shown in Figure <a href="tabula.html#fig:tabula-autodetect">4.7</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:tabula-autodetect"></span>
-<img src="images/04-clean/tabula-autodetect.png" alt="Selected tables are highlighted in red."  />
+<img src="images/04-clean/tabula-autodetect.png" alt="Click Autodetect Tables, which Tabula will highlight in red."  />
 <p class="caption">
-Figure 4.6: Selected tables are highlighted in red.
+Figure 4.7: Click <em>Autodetect Tables</em>, which Tabula will highlight in red.
 </p>
 </div>
-</div>
-<div id="manually-adjust-selections-and-export" class="section level3 unnumbered" number="">
-<h3>Manually Adjust Selections and Export </h3>
-<ol style="list-style-type: decimal">
+<p>Now let’s manually adjust our selected tables and export the data.</p>
+<ol start="5" style="list-style-type: decimal">
 <li>Click <em>Preview &amp; Export Extracted Data</em> green button to see how Tabula thinks the data should be exported.</li>
 <li>If the preview tables don’t contain the data you want, try switching between <em>Stream</em> and <em>Lattice</em> extraction methods in the left-hand-side bar.</li>
 <li>If the tables still don’t look right, or you with to remove some tables that Tabula auto-detected, hit <em>Revise selection</em> button.
@@ -373,20 +353,17 @@ tables of interest. Use drag-and-drop movements to select tables of interest (or
 in the lower-right corner of your selections, to propagate changes. This is extremely useful if your PDF consists of
 many similarly-formatted pages.</li>
 <li>Once you are happy with the result, you can export it. If you have only one table, we recommend using CSV as export format.
-If you have more than one table, consider switching export format to <em>zip of CSVs</em>.
-This way each table will be saved as an individual file, rather than all tables inside one CSV file.</li>
+If you have more than one table, consider switching export format in the drop-down menu to <em>zip of CSVs</em>.This way each table will be saved as an individual file, rather than all tables inside one CSV file.</li>
 </ol>
-<p>Once you exported your data, you can find it in a Downloads folder on your computer (or wherever you chose to save it).
-It is ready to be opened in Google Sheets or Microsoft Excel, analyzed, and visualized!
-In the following section, we are going to look how to clean up messy datasets with OpenRefine.</p>
-</div>
+<p>Once you exported your data, you can find it in the Downloads folder on your computer (or wherever you chose to save it), where it is ready to open with a spreadsheet tool to analyze and visualize.</p>
+<p>In the following section, we are going to look how to clean up messy datasets with OpenRefine.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="clean-spreadsheets.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="combine-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="open-refine.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

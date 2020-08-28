@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-08-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,7 +184,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
+<li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
+<li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
+<li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
@@ -350,14 +352,14 @@ Figure 2.32: In the <em>Pivot table editor</em>, click the Values <em>Add</em> b
 Figure 2.33: In the <em>Pivot table editor</em>, click the Columns <em>Add</em> button and select <em>Experience with data visualization</em>.
 </p>
 </div>
-<p>To go one step further, <em>Filter</em> the data to limit the pivot table results by another category. For example, you can click the Filters <em>Add</em> button and select <em>Years of school</em> to display only readers who listed 20 or more years.</p>
+<p>To go one step further, <em>Filter</em> the data to limit the pivot table results by another category. For example, in the drop-down menu, you can click the Filters <em>Add</em> button, select <em>Years of school</em>, then under <em>Filter by values</em> select <em>Clear</em>, then check <em>20</em> to display only readers who listed 20 or more years.</p>
 <p>Deciding how to add <em>Values</em> in the <em>Pivot table editor</em> can be challenging, because there are multiple options to summarize the data, as shown in Figure <a href="pivot.html#fig:sheets-pivot-summarize">2.34</a>. Google Sheets will offer its automated guess based on the context, but you may need to manually select the best option to represent your data as desired. Three of the most common options to summarize values are:</p>
 <ul>
 <li>SUM: the total value of numeric responses (What is the total years of schooling for readers?)</li>
 <li>COUNT: frequency of numeric responses (How many readers listed 20 years of schooling?)</li>
 <li>COUNTA: frequency of text responses (How many readers listed occupation as “educator”)</li>
 </ul>
-<p>Although Google Sheets pivot tables show raw numbers by default, you also can choose to display them as percentages of the row, of the column, or of the grand total.</p>
+<p>Although Google Sheets pivot tables display raw numbers by default, under the <em>Show as</em> drop-down menu you can choose to display them as percentages of the row, of the column, or of the grand total.</p>
 
 <div class="figure"><span id="fig:sheets-pivot-summarize"></span>
 <img src="images/02-spreadsheet/sheets-pivot-summarize.png" alt="In the Pivot table editor, see multiple options to summarize Values." width="250" />

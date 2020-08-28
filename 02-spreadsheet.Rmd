@@ -207,7 +207,7 @@ Third, select the *Geocoding by SmartMonkey > Geocode Details* menu. The Add-on 
 
 Finally, paste your own address data into the spreadsheet to geocode it, and follow these guidelines:
 
-- Each cell requires a full address. If your original data splits street, city, state, and zip code into different columns, see [how to combine separate columns into one](clean-spreadsheets.html) in Chapter 4: Clean Up Messy Data.
+- Each cell requires a full address. If your original data splits street, city, state, and zip code into different columns, see how to [Combine Data into One Column in Chapter 4: Clean Up Messy Data](combine-data.html).
 - The address should follow the format of the national postal service of the country where it is located. Separate terms with spaces.
 - Do not skip any rows in the *Address* column.
 - You can leave the *Country* column blank, but its default value is the United States. To specify other nations, use their [top-level Internet domain code](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains), such as `es` for Spain.
@@ -355,7 +355,9 @@ if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-dra
  knitr::include_graphics("images/02-spreadsheet/sheets-countif.png")
 ```
 
-Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text. Read more about functions in this support pages for [Google Sheets](https://support.google.com/docs/topic/9054603), [LibreOffice](https://help.libreoffice.org/Calc/Functions_by_Category), or [Microsoft Excel support page](https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb). See additional spreadsheet skills in later chapters of the book. [Chapter 4: Clean Up Messy Data](clean.html) demonstrates how to find and replace, split data into columns, and combine columns of data (such as when you need the street address, city, and postal code all in one line). [Chapter 12: Transform Your Map Data](transform.html) also features more advanced spreadsheet skills and tools, such as how to geocode addresses, pivot address points into polygons, and how to normalize data to create more meaningful polygon maps.
+Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text. Read more about functions in this support pages for [Google Sheets](https://support.google.com/docs/topic/9054603), [LibreOffice](https://help.libreoffice.org/Calc/Functions_by_Category), or [Microsoft Excel support page](https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb).
+
+See additional spreadsheet skills in later chapters of the book, such as how to [find and replace with blank](find-and-replace.html), [split data into separate columns](split-data.html), and [combine data into one column](combine-data.html) in [Chapter 4: Clean Up Messy Data](clean.html). See also how to [pivot address points into polygons](pivot-point-to-polygon.html) and [how to normalize data](normalize.html) in [Chapter 12: Transform Your Map Data](transform.html).
 
 Now that you've learned how to count one type of survey response, the next section will teach you how to regroup data with pivot tables that summarize all responses by different categories.
 

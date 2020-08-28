@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-25" />
+<meta name="date" content="2020-08-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -184,7 +184,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="clean-spreadsheets.html"><a href="clean-spreadsheets.html"><i class="fa fa-check"></i>Clean Data with Spreadsheets</a></li>
+<li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
+<li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
+<li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
@@ -311,7 +313,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol style="list-style-type: decimal">
 <li><p>Open this <a href="https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo">Google Sheet of Hands-On Data Visualization reader public survey responses</a> in a new tab in your browser.</p></li>
 <li><p>Login to your Google Sheets account, and go to <em>File &gt; Make a Copy</em> to create your own version that you can edit.</p></li>
-<li><p>Before sorting, click the upper-left corner of the sheet to select all cells, as shown in Figure <a href="sort.html#fig:sheets-select-all">2.22</a>. The entire sheet should become light blue to show you’ve selected all cells.</p></li>
+<li><p>Before sorting, click the upper-left corner of the sheet to select all cells, as shown in Figure <a href="sort.html#fig:sheets-select-all">2.22</a>. When the entire sheet becomes light blue, and all of the alphabetical column and numerical row headers become dark grey, this confirms you’ve selected all cells.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-select-all"></span>
@@ -322,7 +324,7 @@ Figure 2.22: Click the upper-left corner to select all cells before sorting.
 </div>
 <p>Warning: If you forget to select all cells, you might accidentally sort one column independently of the others, which will scramble your dataset and make it meaningless. Always select all cells before sorting!</p>
 <ol start="4" style="list-style-type: decimal">
-<li>Go to <em>Data &gt; Sort Range</em> to review all of your sort options. In the next screen, check the <em>Data has header row</em> box to view the column headers in your data. Let’s sort the <em>Experience with data visualization</em> column in ascending order (from A-Z), as shown in Figure <a href="sort.html#fig:sheets-sort-range">2.23</a>, to display the minimum at the top, the maximum at the bottom, and the range in between.</li>
+<li>In the top menu, go to <em>Data &gt; Sort Range</em> to review all of your sort options. In the next screen, check the <em>Data has header row</em> box to view the column headers in your data. Let’s sort the <em>Experience with data visualization</em> column in ascending order (from A-Z), as shown in Figure <a href="sort.html#fig:sheets-sort-range">2.23</a>, to display the minimum at the top, the maximum at the bottom, and the range in between.</li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-sort-range"></span>
@@ -341,7 +343,7 @@ Figure 2.24: In Google Sheets, go to <em>View - Freeze</em> to select the number
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>Now let’s try filtering your sheet. Go to <em>Data &gt; Create a Filter</em>, which inserts downward arrows in each column header. Click on the downward arrow in the <em>Occupation</em> column, and see options to display or hide rows of data. For example, click the “Clear” button to undo all options, then click only <em>educator</em> to display only rows with that response, as shown in Figure <a href="sort.html#fig:sheets-filter">2.25</a>. Click “OK”.</li>
+<li>Now let’s try filtering your sheet. Go to <em>Data &gt; Create a Filter</em>, which inserts downward arrows in each column header. Click on the downward arrow-shaped toggle in the <em>Occupation</em> column, and see options to display or hide rows of data. For example, look under <em>Filter by values</em>, then click the “Clear” button to undo all options, then click only <em>educator</em> to display only rows with that response, as shown in Figure <a href="sort.html#fig:sheets-filter">2.25</a>. Click “OK”.</li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-filter"></span>

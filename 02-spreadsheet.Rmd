@@ -53,7 +53,7 @@ In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned th
 
 Warning: If you're working in any spreadsheet with multiple tabs and formulas, a CSV export will save only the *active* sheet (meaning the one you're currently viewing), and only the *data* in that sheet (meaning that if you inserted formulas to run calculations, only the results would appear, not the formulas). Later in this book you may need to create a CSV file to import into a data visualization tool, so if the source was a multi-tabbed spreadsheet with formulas, keep track of the original.
 
-One reason we feature Google Sheets in this book is because it exports data in several common formats. To try it, open this [Google Sheets sample data file](https://docs.google.com/spreadsheets/d/1eXWG6sSb6ZL4pKvCsCjcqeJ8l4vqbckuYEBj8T-uefo/) in a new tab, and go to *File > Download As* to export in CSV format (for only the data in the active sheet) or ODS format (which keeps data and most formulas in multi-tab spreadsheets), or other formats such as Excel, as shown in Figure \@ref(fig:sheets-download). Similarly, in the downloadable LibreOffice and its Calc spreadsheet tool, select *File > Save As* to save data in its native ODS format, or to export to CSV, Excel, or other formats.
+One reason we feature Google Sheets in this book is because it exports data in several common formats. To try it, open this [Google Sheets sample data file](https://docs.google.com/spreadsheets/d/1eXWG6sSb6ZL4pKvCsCjcqeJ8l4vqbckuYEBj8T-uefo/) in a new tab, and go to *File > Download* to export in CSV format (for only the data in the active sheet) or ODS format (which keeps data and most formulas in multi-tab spreadsheets), or other formats such as Excel, as shown in Figure \@ref(fig:sheets-download). Similarly, in the downloadable LibreOffice and its Calc spreadsheet tool, select *File > Save As* to save data in its native ODS format, or to export to CSV, Excel, or other formats.
 
 (ref:sheets-download) In Google Sheets, go to *File - Download As* to export data in several common formats.
 
@@ -100,7 +100,7 @@ If you're working on a collaborative project with other people, Google Sheets of
 
 2. Click the *Share* button in the upper-right corner, and your options will appear on the *Share with people and groups* screen, as shown in Figure \@ref(fig:share-screen).
 
-3. In the top half of the screen, you can share access with specific individuals by typing their Google usernames into the *Add people and groups* field. For each person or group you add, on the next screen select the drop-down menu to choose if they can *View*, *Comment* on, or *Edit* the file. Decide if you wish to notify them with a link to the file and optional message.
+3. In the top half of the screen, you can share access with specific individuals by typing their Google usernames into the *Add people and groups* field. For each person or group you add, on the next screen select the drop-down menu to assign them to be *Viewer*, *Commenter*, or *Editor* of the file. Decide if you wish to notify them with a link to the file and optional message.
 
 4. In the lower half of the screen, you can share access more widely by clicking on *Change to anyone with the link*. On the next screen, the default option is to allow anyone who has the link to *View* the file, but you can change this to allow anyone to *Comment* on or *Edit* it. Also, you can click *Copy link* to paste the web address to your data in an email or public website.
 
@@ -229,7 +229,7 @@ Inside your Google Drive account, one tool that's often overlooked is Google For
  knitr::include_graphics("images/02-spreadsheet/forms-new.png")
 ```
 
-The Google Forms *Questions* tab allows you to design questions with different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure \@ref(fig:forms-questions).
+The Google Forms *Questions* tab allows you to design questions with different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure \@ref(fig:forms-questions). Furthermore, Google Forms attempts to interpret questions you enter in order to predictively assign them to a type.
 
 (ref:forms-questions) The Google Forms *Questions* tab allows you to designate different types of responses.
 
@@ -237,7 +237,7 @@ The Google Forms *Questions* tab allows you to design questions with different t
  knitr::include_graphics("images/02-spreadsheet/forms-questions.png")
 ```
 
-Give each question a very short title, since these will appear as column headers in the linked spreadsheet you'll create further below. If a question needs more explanation or examples, click the three-dot kebob menu in the bottom-right corner to *Show > Description*, which opens a text box where you can type in more details, as shown in Figure \@ref(fig:forms-description). Also, you can *Show > Response validation*, which requires users to follow a particular format, such as an email address or phone number.
+Give each question a very short title, since these will appear as column headers in the linked spreadsheet you'll create further below. If a question needs more explanation or examples, click the three-dot kebob menu in the bottom-right corner to *Show > Description*, which opens a text box where you can type in more details, as shown in Figure \@ref(fig:forms-description). Also, you can *Show > Response validation*, which requires users to follow a particular format, such as an email address or phone number. Furthermore, you can select the *Required* field to require users to respond to a question before proceeding. See additional options on the [Google Forms support page](https://support.google.com/a/users/answer/9991170).
 
 (ref:forms-description) Click the three-dot kebab menu to *Show - Description* to add details for any question.
 
@@ -272,7 +272,7 @@ To learn how to sort and filter, let's explore a large dataset of around 3,000 r
 
 2. Login to your Google Sheets account, and go to *File > Make a Copy* to create your own version that you can edit.
 
-3. Before sorting, click the upper-left corner of the sheet to select all cells, as shown in Figure \@ref(fig:sheets-select-all). The entire sheet should become light blue to show you've selected all cells.
+3. Before sorting, click the upper-left corner of the sheet to select all cells, as shown in Figure \@ref(fig:sheets-select-all). When the entire sheet becomes light blue, and all of the alphabetical column and numerical row headers become dark grey, this confirms you've selected all cells.
 
 (ref:sheets-select-all) Click the upper-left corner to select all cells before sorting.
 
@@ -282,7 +282,7 @@ To learn how to sort and filter, let's explore a large dataset of around 3,000 r
 
 Warning: If you forget to select all cells, you might accidentally sort one column independently of the others, which will scramble your dataset and make it meaningless. Always select all cells before sorting!
 
-4. Go to *Data > Sort Range* to review all of your sort options. In the next screen, check the *Data has header row* box to view the column headers in your data. Let's sort the *Experience with data visualization* column in ascending order (from A-Z), as shown in Figure \@ref(fig:sheets-sort-range), to display the minimum at the top, the maximum at the bottom, and the range in between.
+4. In the top menu, go to *Data > Sort Range* to review all of your sort options. In the next screen, check the *Data has header row* box to view the column headers in your data. Let's sort the *Experience with data visualization* column in ascending order (from A-Z), as shown in Figure \@ref(fig:sheets-sort-range), to display the minimum at the top, the maximum at the bottom, and the range in between.
 
 (ref:sheets-sort-range) Go to *Data - Sort Range*, check the header row box, and sort by *Experience with dataviz* in ascending order.
 
@@ -300,7 +300,7 @@ Tip: When working with large spreadsheets, you can "freeze" the first row so tha
  knitr::include_graphics("images/02-spreadsheet/sheets-view-freeze.png")
 ```
 
-5. Now let's try filtering your sheet. Go to *Data > Create a Filter*, which inserts downward arrows in each column header. Click on the downward arrow in the *Occupation* column, and see options to display or hide rows of data. For example, click the "Clear" button to undo all options, then click only *educator* to display only rows with that response, as shown in Figure \@ref(fig:sheets-filter). Click "OK".
+5. Now let's try filtering your sheet. Go to *Data > Create a Filter*, which inserts downward arrows in each column header. Click on the downward arrow-shaped toggle in the *Occupation* column, and see options to display or hide rows of data. For example, look under *Filter by values*, then click the "Clear" button to undo all options, then click only *educator* to display only rows with that response, as shown in Figure \@ref(fig:sheets-filter). Click "OK".
 
 (ref:sheets-filter) Go to *Data - Create a Filter*, click the downward arrow in the *Occupation* column, select only *educator*.
 
@@ -400,7 +400,7 @@ Currently, the top three occupations listed by readers are information technolog
  knitr::include_graphics("images/02-spreadsheet/sheets-pivot-columns.png")
 ```
 
-To go one step further, *Filter* the data to limit the pivot table results by another category. For example, you can click the Filters *Add* button and select *Years of school* to display only readers who listed 20 or more years.
+To go one step further, *Filter* the data to limit the pivot table results by another category. For example, in the drop-down menu, you can click the Filters *Add* button, select *Years of school*, then under *Filter by values* select *Clear*, then check *20* to display only readers who listed 20 or more years.
 
 Deciding how to add *Values* in the *Pivot table editor* can be challenging, because there are multiple options to summarize the data, as shown in Figure \@ref(fig:sheets-pivot-summarize). Google Sheets will offer its automated guess based on the context, but you may need to manually select the best option to represent your data as desired. Three of the most common options to summarize values are:
 
@@ -408,7 +408,7 @@ Deciding how to add *Values* in the *Pivot table editor* can be challenging, bec
 - COUNT: frequency of numeric responses (How many readers listed 20 years of schooling?)
 - COUNTA: frequency of text responses (How many readers listed occupation as "educator")
 
-Although Google Sheets pivot tables show raw numbers by default, you also can choose to display them as percentages of the row, of the column, or of the grand total.
+Although Google Sheets pivot tables display raw numbers by default, under the *Show as* drop-down menu you can choose to display them as percentages of the row, of the column, or of the grand total.
 
 (ref:sheets-pivot-summarize) In the *Pivot table editor*, see multiple options to summarize *Values*.
 
@@ -457,7 +457,7 @@ Here's what each part means:
 - index = The column in the 2nd sheet range that contains your desired result, where 1 = first column, 2 = second column, etc.
 - [is_sorted] = Enter `false` to find exact matches only, which makes sense in this case. Otherwise, enter `true` if the first column of the 2nd sheet range is sorted and you will accept the closest match, even if not an exact one.
 
-4. You can either type in the formula with comma separators `=VLOOKUP(B2,'addresses'!A:E,2,false)`, or click on the relevant cells, columns, and sheets for the tool to automatically enter it for you, as shown in Figure \@ref(fig:vlookup-solution). What's new here is that this formula in the *names* sheet refers to a range of columns A to E in the *addresses* sheet. Press *Return* or *Enter* on your keyboard.
+4. One option is to directly type this formula into cell C2, using comma separators: `=VLOOKUP(B2,'addresses'!A:E,2,false)`. Another option is to click on the *VLOOKUP Vertical lookup* grey box that Google Sheets suggests, and click on the relevant cells, columns, and sheets for the formula to be automatically entered for you, as shown in Figure \@ref(fig:vlookup-solution). What's new here is that this formula in the *names* sheet refers to a range of columns A to E in the *addresses* sheet. Press *Return* or *Enter* on your keyboard.
 
 (ref:vlookup-solution) The VLOOKUP formula in cell C2 of the *names* sheet (top) searches for matches across columns A to E in the *addresses* sheet (bottom).
 
@@ -504,7 +504,7 @@ Instead of a single spreadsheet, consider using a relational database, which org
 
 Although Google Sheets is a great spreadsheet, it's not a relational database. Instead, consider a better tool such as [Airtable](https://airtable.com), which allows you to create relational databases in your web browser with up to 1,200 free records (or more with the paid version), using existing templates or your own designs. Airtable enables data migration by importing or exporting all records in CSV format, and it also supports real-time editor collaboration with co-workers.
 
-To demonstrate, we imported both of the Google Sheets above into this [live Airtable database called Food Banks sample](https://airtable.com/shrOlb4XT11Xy2LP2), which anyone with the link can view, but not edit. At the top are tabs to view each sheet, named *people* and *food banks*. To transform this into a relational database, we used Airtable settings to link the *organization* column in the *people* sheet to the *food banks* sheet, where the addresses are stored, as shown in Figure \@ref(fig:airtable-link).
+To demonstrate, we imported both of the Google Sheets above into this [live Airtable database called Food Banks sample](https://airtable.com/shrOlb4XT11Xy2LP2), which anyone with the link can view, but only we can edit. At the top are tabs to view each sheet, named *people* and *food banks*. To transform this into a relational database, we used Airtable settings to link the *organization* column in the *people* sheet to the *food banks* sheet, where the addresses are stored, as shown in Figure \@ref(fig:airtable-link). In our editable version, we double-clicked on the column name, then selected *Link to another record* in the drop-down menu, to connect it to another tab.
 
 (ref:airtable-link) In this Airtable sample, we linked the *organization* column in the *people* sheet to the *food banks* sheet.
 
@@ -512,7 +512,7 @@ To demonstrate, we imported both of the Google Sheets above into this [live Airt
  knitr::include_graphics("images/02-spreadsheet/airtable-link.png")
 ```
 
-In Airtable, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the *people* sheet, their organization's full address appears from the *food banks* sheet, as shown in Figure \@ref(fig:airtable-expand). In our editable version, if we update the address for one organization in the *food banks* sheet, it's automatically changed for all employees linked to that organization in the *people* sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we'll cover in [Chapter 8: Embed on your Web](embed.html). See more about its features in the [Airtable Support page](https://support.airtable.com).
+In our Airtable sample, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the *people* sheet, their organization's full address appears from the *food banks* sheet, as shown in Figure \@ref(fig:airtable-expand). In our editable version, if we update the address for one organization in the *food banks* sheet, it's automatically changed for all employees linked to that organization in the *people* sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we'll cover in [Chapter 8: Embed on your Web](embed.html). See more about its features in the [Airtable Support page](https://support.airtable.com).
 
 (ref:airtable-expand) In this [Airtable demo](https://airtable.com/shrOlb4XT11Xy2LP2), click on a row in one sheet to expand and view its linked data in another sheet.
 

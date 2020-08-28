@@ -63,22 +63,19 @@ New Haven
 Stamford
 ```
 
-We can use *Find and Replace* tool to remove the unwanted "town" part.
-You can download our [sample file](data/find-replace-town-geonames.csv),
-which contains 169 Connecticut towns and their population, for the exercise.
+We can use *Find and Replace* tool in a sample US Census file we downloaded with 169 Connecticut town names and their populations, to remove the unwanted "town" label after each place name.
 
-1. Select the column you want to modify by clicking on the column header. If you don't,
+1. Open the [CT Town Geonames file in Google Sheets](https://docs.google.com/spreadsheets/d/1kJI0xFedPUQBRfT9CEMAfIsggOmJv4wz_AdenraFDP4/edit#gid=1055822816), sign in with your account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
+2. Select the column you want to modify by clicking on the column header. If you don't,
 you will be searching and replacing in the entire spreadsheet.
-2. From *Edit* menu, choose *Find and replace* item. You will see the window like is shown in Figure \@ref(fig:sheets-find-replace).
-3. In the *Find* field, type ` town`, and be sure to *insert a blank space* before the word. If you do not insert a space, you will accidentally remove *town* from places such as *Newtown*, and you'll also end up with trailing spaces that can cause troubles in the future.
-4. Leave the *Replace with* field blank.
-5. *Search* field should be set to the range you selected in step 1, or *All sheets* if you didn't
-select anything.
-6. You have the option to *match case*. If checked, `town` and `Town` and `tOwN` will be treated differently.
-For our purpose, you can leave *match case* unchecked.
-7. Press the *Replace all* button. Since this sample file contains 169 towns, the window
+3. From *Edit* menu, choose *Find and replace* item. You will see the window like is shown in Figure \@ref(fig:sheets-find-replace).
+4. In the *Find* field, type ` town`, and be sure to *insert a blank space* before the word. If you do not insert a space, you will accidentally remove *town* from places such as *Newtown*, and you'll also end up with trailing spaces that can cause troubles in the future.
+5. Leave the *Replace with* field blank.
+6. The *Search* field should be set to the range you selected in step 2, or *All sheets* if you didn't select anything.
+7. You have the option to *match case*. If checked, `town` and `Town` and `tOwN` will be treated differently. For our purpose, you can leave *match case* unchecked.
+8. Press the *Replace all* button. Since this sample file contains 169 towns, the window
 will state that 169 instances of "town" have been replaced.
-8. Inspect the resulting sheet. Make sure that places that include *town* in their name, such as *Newtown*, remained untouched.
+9. Inspect the resulting sheet. Make sure that places that include *town* in their name, such as *Newtown*, remained untouched.
 
 (ref:sheets-find-replace) Find and Replace window in Google Sheets.
 
@@ -98,21 +95,19 @@ coordinates become *Latitude* and *Longitude* columns, and your *FullAddress* co
 
 ##### Example 1 {-}
 
-Let's begin with a simple example of coordinate pairs. You can use our
-[sample file](data/split-coordinate-pairs.csv),
-which is a collection of latitude-longitude pairs separated by a comma,
-with each pair on a new line.
+Let's begin with a simple example of splitting pairs of longitude and latitude coordinates, separated by commas, into separate columns.
 
-1. Select the data you wish to split, either the full column or just several rows.
+1. Open the [Split Coordinate Pairs sample data in Google Sheets](https://docs.google.com/spreadsheets/d/1VmY9aS7I7UstXeI2xsJ-Ep2Q0CW8tnFHWTCga4EaJRk/edit#gid=1670822958), sign in with your account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
+2. Select the data you wish to split, either the full column or just several rows.
 Note that you can only split data from one column at a time.
-2. Make sure there is no data in the column to the right of the one you're splitting, because
+3. Make sure there is no data in the column to the right of the one you're splitting, because
 all data there will be written over.
-3. Go to *Data* and select *Split text to columns*, as in Figure \@ref(fig:sheets-split).
-4. Google Sheets will try to guess your separator automatically. You will see that your coordinates
+4. Go to *Data* and select *Split text to columns*, as in Figure \@ref(fig:sheets-split).
+5. Google Sheets will automatically try to guess your separator. You will see that your coordinates
 are now split with the comma, and the Separator is set to *Detect automatically* in the dropdown.
 You can manually change it to a comma (`,`), a semicolon (`;`), a period (`.`), a space character,
-or any other custom character (or even a sequence of characters — more about that in Example 2 of this section).
-5. You can rename columns into *Longitude* (first number) and *Latitude* (second number).
+or any other custom character (or even a sequence of characters, which we'll discuss in Example 2 of this section).
+6. You can rename the new columns into *Longitude* (first number) and *Latitude* (second number).
 
 (ref:sheets-split) Select *Data - Split text to columns* to automatically separate data.
 
@@ -122,8 +117,7 @@ knitr::include_graphics("images/04-clean/sheets-split-annotated.png")
 
 ##### Example 2 {-}
 
-Now, let's look at a slightly more complicated example.
-Imagine your dataset is structured as follows:
+Now, let's look at a slightly more complicated example. Each cell contains a full address, which you want to split into four columns: street, city, state, and zipcode (postcode). But notice how the separators differ: a comma between street and city, a space between city and state, and two dashes between state and the zipcode. In this case, you'll need to manually add some instructions to properly split the text into four columns.
 
 ```
 | Location                          |
@@ -133,30 +127,26 @@ Imagine your dataset is structured as follows:
 | 37 Alden St, Hartford CT--06114   |
 ```
 
-Each cell contains a full address, but you want to split it into four cells:
-street address (300 Summit St), city (Hartford), state (CT), and zipcode (06106).
-Notice that the separator between the street and the rest of the address is a comma,
-a separator between the city and state is a space, and there are two dash
-lines between state and zipcode.
 
-1. Start splitting left to right. So your first separator will be a comma.
-Select your column (or one or more cells within that column), and go to *Data* > *Split text to columns*.
-2. Google Sheets should automatically split your cell into two parts, `300 Summit St` and `Hartford CT--06106`,
-using comma as a separator. (If it didn't, just select *Comma* from the dropdown menu that appeared).
-3. Now, select only the second column and perform *Split text to columns*. You will see that the city
-is now separate from the state and zipcode, and Google Sheets chose space as a separator (if it didn't, choose *Space* from the dropdown menu).
-4. Next, select only the third column and perform *Split text to columns* again. Google Sheets won't recognize `--`
-as a separator, so you will have to manually select *Custom*, type `--` in the text field,
-and hit Enter. You should now have four columns.
+1. Open the [Split Complex Address sample file in Google Sheets](https://docs.google.com/spreadsheets/d/1XkWrHBCK5HedAWskkb5lligWoozBVXc6w7_FRuYebPI/edit#gid=0), sign in to your account, and go to *File > Make a Copy* to save a version in your Google Drive that you can edit.
+2. Select the column and go to *Data* > *Split text to columns* to start splitting from left to right.
+3. Google Sheets will automatically split your cell into two parts, `300 Summit St` and `Hartford CT--06106`, using comma as a separator. (If it didn't, just select *Comma* from the dropdown menu that appeared).
+4. Now select only the second column and perform *Split text to columns* again. Google Sheets will automatically separate the city from the state and zip code, because it automatically chose a space as the separator. (If it did not, choose *Space* from the dropdown menu).
+4. Finally, select only the third column and perform *Split text to columns* again. Google Sheets won't recognize the two dashes as a separator, so you need to manually select *Custom*, type those two dashes (`--`) in the *Custom separator* field, as shown in Figure \@ref(fig:sheets-split-complex), and press Enter. Now you have successfully split the full address into four columns.
 
-Tip: Google Sheets will treat zipcodes as numbers and will delete leading zeros (so 06106 will become 6106).
+(ref:sheets-split-complex) To split the last column, select a *Custom* separator and manually type in two dashes.
+
+```{r sheets-split-complex, out.width=500, fig.cap="(ref:sheets-split-complex)"}
+knitr::include_graphics("images/04-clean/sheets-split-complex.png")
+```
+
+Tip: Google Sheets will treat zip codes as numbers and will delete leading zeros (so 06106 will become 6106).
 To fix that, select the column, and go to *Format > Number > Plain text*. Now you can manually re-add zeros.
 If your dataset is large, consider concatenating 0s using the formula introduced in the [following section](#combine-separate-columns-into-one).
 
 #### Combine separate columns into one {-}
-
-Now, let's see how to perform the reverse action.
-Imagine you receive address data in separate columns, formatted like this:
+Let's perform the reverse action by combining separate columns into one.
+Imagine you receive address data in four separate columns: street address, city, state, and zip code.
 
 ```
 | Street        | City       | State  | Zip   |
@@ -164,9 +154,8 @@ Imagine you receive address data in separate columns, formatted like this:
 | 300 Summit St | Hartford   | CT     | 06106 |
 ```
 
-The data comes is four columns: street address, city, state, and zipcode.
-Let's say your mapping tool requires you to combine all of this terms into
-one location column, like that:
+But imagine your mapping tool requires you to combine all of these terms into
+one location column like this:
 
 ```
 | Location                          |
@@ -174,20 +163,17 @@ one location column, like that:
 | 300 Summit St, Hartford, CT 06106 |
 ```
 
-You can write a simple formula to combine (or concatenate) terms
-using ampersands (`&`) as cells values connectors,
-and quoted spaces (`" "`), or spaces with commas (`", "`),
-or a dash with spaces on both sides (`" - "`), or anything
-else as term separators.
+In any spreadsheet tool, you can write a simple formula to combine (or concatenate) terms
+using ampersands (`&`) to fuse items together. Also, you can add separators into your formula, such as quoted spaces (`" "`), spaces with commas (`", "`), or any combination of characters.
+or a dash with spaces on both sides (`" - "`). Let's try it with some sample data.
 
-For example, imagine that a spreadsheet contains an address that is separated into
-four columns---*Address, City, State,* and *Zip*---as shown in columns A-D in
-Figure \@ref(fig:sheets-combine). In column E, you can add new header named
-*Location* and insert a formula in this format, to combine the items using
-ampersands (`&`) and separating them with commas (`", "`) or quoted spaces (`" "`), like
-this: `=A2 & ", " & B2 & ", " & C2 & " " & D2`.
+1. Open the [Combine Separate Columns sample data in Google Sheets](https://docs.google.com/spreadsheets/d/1DGKYquQ0nKiBCE_KbQk24Zvjrxb0zKk8gC-FpObY7LM/edit#gid=0), sign in with your account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive. The sheet contains addresses that are separated into four columns: street, city, state, and zip.
+2. In column E, type a new header named *location*.
+3. In cell E2, type in the following formula, which combines the four items using ampersands, and separates them with quoted commas and spaces, as shown in Figure \@ref(fig:sheets-combine), and press *Enter*.
+`=A2 & ", " & B2 & ", " & C2 & " " & D2`
+4. Click cell E2 and drag the bottom-right corner cross-hair downward to fill in the rest of the column.
 
-(ref:sheets-combine) Use ampersands to combine items and separate them with spaces.
+(ref:sheets-combine) Use ampersands to combine items, and insert quoted spaces with commas as separators.
 
 ```{r sheets-combine, fig.cap="(ref:sheets-combine)"}
  knitr::include_graphics("images/04-clean/sheets-combine.png")
@@ -206,35 +192,19 @@ Microsoft Excel, or similar packages.
 ## Extract Tables from PDFs with Tabula {- #tabula}
 
 It sometimes happens that the dataset you are interested in is only available as a PDF document.
-Don't despair, you can *likely* use Tabula to extract tables and save them as CSV files.
+Don't despair, you can *likely* use Tabula to extract tables and save them as CSV files. Keep in mind that PDFs generally come in two flavors: text-based and image-based.
+If you can use cursor to select and copy-paste text in your PDF, then it's text-based, which is great because you can process it with Tabula. But if you cannot select and copy-paste items inside a PDF, then it's image-based, meaning it was probably created as a scanned version of the original document. You need to use optical character recognition (OCR) software, such as Adobe Acrobat Pro or another OCR tool, to convert an image-based PDF into a text-based PDF. Furthermore, Tabula can only extract data from tables, not charts or other types of visualizations.
 
-Tabula is a free tool that runs on Java, and is available for Mac, Windows, and Linux computers. It runs on your
-local machine and does not send your data to the cloud, so you can also use it for sensitive documents.
+Tabula is a free tool that runs on Java in your browser, and is available for Mac, Windows, and Linux computers. It runs on your local machine and does not send your data to the cloud, so you can also use it for sensitive documents.
 
-Note: Keep in mind that PDFs generally come in two flavors, image-based and text-based.
-You know your PDF is text-based if you can use cursor to select and copy-paste text. These are great for Tabula.
-Image-based PDFs are those that were created from scanning documents. Before they can be processed with Tabula,
-you will need to use an optical character recognition (OCR) software, such as Adobe Acrobat,
-to create a text-based PDF.
-
-### Set Up Tabula {-}
-
-[Download the newest version of Tabula](https://tabula.technology/).
-You can use download buttons on the left-hand side, or scroll down to the *Download & Install Tabula*
-section to download a copy for your platform.
-
-Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive,
+To get started, [download the newest version of Tabula](https://tabula.technology/).
+You can use download buttons on the left-hand side, or scroll down to the *Download & Install Tabula* section to download a copy for your platform. Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive,
 and double-click the icon. If prompted with a security message (such as
 "Tabula is an app downloaded from the internet. Are you sure you want to open it?"),
 follow the instruction to proceed (on a Mac, click *Open*; you might have to go to
 System Preferences > Security & Privacy, and resolve the issue there).
 
-Your default system browser should open, like shown in Figure \@ref(fig:tabula-welcome).
-The URL will be something like `http://127.0.0.1:8080/`, meaning Tabula is running on your local machine.
-127.0.0.1, also known as `localhost`, is the hostname for your machine. `8080` is called port
-(it's okay if you see a different port—most likely because 8080 was taken by some other
-program running on your computer). If for any reason you decide to use a different browser,
-just copy-paste the URL.
+When you start up Tabula, the default system browser will open, as shown in Figure \@ref(fig:tabula-welcome). Tabula runs on your local computer, not the internet. The URL in the browser will be something like `http://127.0.0.1:8080/`. The first portion is the localhost or hostname for your computer, and `8080` refers to the port number. If you see a different port number, that's fine, and just means that the initial number is already in use by some other program on your computer. If for any reason you decide to use a different browser, just copy-paste the URL.
 
 (ref:tabula-welcome) Tabula welcome page.
 
@@ -242,43 +212,40 @@ just copy-paste the URL.
 knitr::include_graphics("images/04-clean/tabula-welcome.png")
 ```
 
-### Load a PDF and Autodetect Tables {-}
-Since the beginning of the Covid-19 pandemic, the Department of Public Health in Connecticut
-has been issuing daily PDFs with case and death count by town.
-For the demonstration, we will use [one of those PDFs](data/ct-dph-covid-2020-05-31.pdf)
-from May 31, 2020.
+Now let's upload a sample text-based PDF and detect any tables we wish to extract. In the beginning of the Covid-19 pandemic, the Department of Public Health in Connecticut
+issued data on cases and deaths only in PDF document format.
+For this demonstration, you can use [our sample text-based PDF](data/ct-dph-covid-2020-05-31.pdf)
+from May 31, 2020, or provide your own.
 
 1. Select the PDF you want to extract data from by clicking the blue *Browse...* button.
 2. Click *Import*. Tabula will begin analyzing the file.
 3. As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly clean, with only four buttons in the header.
-4. The easiest first step is to let Tabula autodetect tables. Click the relevant button in the header.
-You will see that each table is highlighted in red, like shown in Figure \@ref(fig:tabula-autodetect).
+4. Click the *Autodetect Tables* button to let Tabula look for relevant data. The tool highlights each table it detects in red, as shown in Figure \@ref(fig:tabula-autodetect).
 
-(ref:tabula-autodetect) Selected tables are highlighted in red.
+(ref:tabula-autodetect) Click *Autodetect Tables*, which Tabula will highlight in red.
 
 ```{r tabula-autodetect, fig.cap="(ref:tabula-autodetect)"}
 knitr::include_graphics("images/04-clean/tabula-autodetect.png")
 ```
 
-### Manually Adjust Selections and Export {-}
+Now let's manually adjust our selected tables and export the data.
 
-1. Click *Preview & Export Extracted Data* green button to see how Tabula thinks the data should be exported.
-2. If the preview tables don't contain the data you want, try switching between *Stream* and *Lattice* extraction methods in the left-hand-side bar.
-3. If the tables still don't look right, or you with to remove some tables that Tabula auto-detected, hit *Revise selection* button.
+5. Click *Preview & Export Extracted Data* green button to see how Tabula thinks the data should be exported.
+6. If the preview tables don't contain the data you want, try switching between *Stream* and *Lattice* extraction methods in the left-hand-side bar.
+7. If the tables still don't look right, or you with to remove some tables that Tabula auto-detected, hit *Revise selection* button.
 That will bring you back to the PDF viewer.
-4. Now you can *Clear All Selections* and manually select
+8. Now you can *Clear All Selections* and manually select
 tables of interest. Use drag-and-drop movements to select tables of interest (or parts of tables).
-5. If you want to "copy" selection to some or all pages, you can use *Repeat this Selection* dropdown, which appears
+9. If you want to "copy" selection to some or all pages, you can use *Repeat this Selection* dropdown, which appears
 in the lower-right corner of your selections, to propagate changes. This is extremely useful if your PDF consists of
 many similarly-formatted pages.
-6. Once you are happy with the result, you can export it. If you have only one table, we recommend using CSV as export format.
+10. Once you are happy with the result, you can export it. If you have only one table, we recommend using CSV as export format.
 If you have more than one table, consider switching export format to *zip of CSVs*.
 This way each table will be saved as an individual file, rather than all tables inside one CSV file.
 
-Once you exported your data, you can find it in a Downloads folder on your computer (or wherever you chose to save it).
-It is ready to be opened in Google Sheets or Microsoft Excel, analyzed, and visualized!
-In the following section, we are going to look how to clean up messy datasets with OpenRefine.
+Once you exported your data, you can find it in the Downloads folder on your computer (or wherever you chose to save it), where it is ready to open with a spreadsheet tool to analyze and visualize.
 
+In the following section, we are going to look how to clean up messy datasets with OpenRefine.
 
 ## Clean Data with OpenRefine {- #open-refine}
 

@@ -4,9 +4,9 @@ sometimes a chart tells your story better than a map. But designing meaningful, 
 requires careful thought about how to communicate your data story with your audience.
 
 In this chapter, we will look at main [principles of chart design](chart-design.html), and
-learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. In addition to static chart images, this book focuses on interactive charts that display more data when you float your cursor over them in your web browser. Later you'll learn how to [embed interactive charts on your website](embed.html) in chapter 8.
+learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. In addition to static chart images, this book focuses on interactive charts that display more data when you float your cursor over them in your web browser. Later you'll learn how to [embed interactive charts on your website in chapter 8](embed.html).
 
-To begin, this grid of basic chart types will help you decide which type you wish to create. Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader's attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools, such as the [Google Sheets chart tool](chart-google-sheets.html), and for more advanced charts, [Tableau Public](tableau-public.html), the free version of the powerful software used by many data analysts and visualization practitioners. The grid also refers to more powerful chart tools, such as [Chart.js and Highcharts templates](chartcode.html) in chapter 10, which give you ever more control over how your design and display your data, but also require learning how to [edit and host code templates with GitHub](github.html) in chapter 9.
+To begin, decide which type of chart you wish to create in Table \@ref(tab:chart-types). Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader's attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools to create charts, such as [Google Sheets](chart-google-sheets.html), [Datawrapper](chart-datawrapper.html), and [Tableau Public](chart-tableau-public.html). But Table \@ref(tab:chart-types) also refers to more powerful and customizable chart code templates, such as [Chart.js and Highcharts templates in chapter 10](chartcode.html), which give you ever more control over how your design and display your data, but first require learning how to [edit and host code templates with GitHub in chapter 9](github.html).
 
 Table: (\#tab:chart-types) Basic Chart Types and Tutorials
 
@@ -23,7 +23,7 @@ Table: (\#tab:chart-types) Basic Chart Types and Tutorials
 | XY Scatter chart <br> ![](images/05-chart/chart-scatter.png) | Best to show the relationship between two sets of data. <br>Easy tool: [Google Sheets scatter chart tutorial](scatter-bubble-google.html) or [Tableau Public scatter chart tutorial](scatter-chart-tableau.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
 | Bubble chart <br> ![](images/05-chart/chart-bubble.png) | Best to show the relationship between three or four sets of data, using bubble size and color.<br>Easy tool: [Google Sheets bubble chart tutorial](scatter-bubble-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
 
-<!-- TODO: Add chart with error bars to acknowledge data uncertainty (such as margins of error), and also consider mentioning this in chart design principles -->
+<!-- TODO: Add Datawrapper tutorial links; Add chart with error bars to acknowledge data uncertainty (such as margins of error), and also consider mentioning this in chart design principles -->
 
 ## Chart Design Principles {- #chart-design}
 
@@ -221,56 +221,32 @@ knitr::include_graphics("images/05-chart/design-principles-decluttered.png")
 ```
 
 ## Google Sheets Charts {- #chart-google-sheets}
-
 In addition to powerful data wrangling capabilities, [Google Sheets](https://sheets.google.com)
-has robust support for charting. Most people who create charts with Google Sheets export
-them as static *png* images. But in fact these interactive charts can be
-easily [embedded on your website](embed.html), as you'll learn in chapter 8.
+has robust support for charting. In this section, we will start by creating three different types of column and bar charts: grouped, separated, and stacked. Then we'll move on to making histogram, pie, line, area, and scatter charts, and learn to visualize three-dimensional data using bubble charts. See all of the [types of charts you can create with Google Sheets](https://support.google.com/docs/answer/190718). Although many people export charts as static images in *JPG* or *PNG* format, we'll focus on designing interactive charts that display tooltips when you hover over the data, which you'll learn how to easily [embed on your website in chapter 8](embed.html).
 
-In this section, we will look at creating column and bar charts that are separated,
-grouped, and stacked. We will also look at making pie, line, area, and scatter charts,
-and learn to visualize three-dimensional data using bubble charts.
+Like most easy-to-use tools, Google Sheets has its shortcomings. You won't be able to annotate or highlight items inside your charts, and there's no easy way to cite your source or link to your Google Sheets data inside your chart. Furthermore, there are limitations within certain types of charts, such as the inability to control the data that appears in the tooltips for XY scatter charts. But Google Sheets excels at helping you to *quickly* create good-looking interactive charts from your data. But you *will* be able to *quickly* make good-looking interactive charts. If Google Sheets does not meet your needs, refer back to Table \@ref(tab:chart-types) for other types of chart tools and tutorials.
 
-As most easy-to-use tools, Google Sheets has its shortcomings.
-You won't be able to control tooltips of scatterplot tooltips,
-or cite or link to source data inside charts.
-You won't be able to annotate or highlight items.
-But you *will* be able to *quickly* make good-looking interactive charts
-*quickly*.
+### Column and Bar Charts with Google Sheets {- #column-bar-google}
+Column and bar charts are some of the most common visualization techniques to compare values across categories. Remember to use columns to display data vertically, and bars to display it horizontally, when you need to display long data labels. This section focuses on why and how to use Google Sheets to build different types of interactive column (or bar) charts: grouped, separated, and stacked.
 
-Tip: Visit [Types of charts & graphs in Google Sheets](https://support.google.com/docs/answer/190718)
-for an overview of the various chart types supported by this tool.
+#### Grouped Column and Bar Charts {-}
+A grouped column (or bar) chart is best to compare categories side-by-side. For example, if you wish to emphasize gender differences in obesity across age brackets, then format the male and female data series together in vertical columns in your Google Sheet, as shown in Figure \@ref(fig:column-grouped-data). Now you can easily create a grouped column chart to displays these data series side-by-side, as shown in Figure \@ref(fig:column-grouped).  
 
-## Column and Bar Charts with Google Sheets {- #column-bar-google}
+(ref:column-grouped-data) To create a grouped column (or bar) chart, format each data series vertically in Google Sheets.
 
-Column and bar charts are some of the most common types of charts
-in data visualization (column charts are just vertical bar charts).
-They are used to compare values across categories.
+```{r column-grouped-data, out.width="350px", fig.cap="(ref:column-grouped-data)"}
+ knitr::include_graphics("images/05-chart/column-grouped-data.png")
+```
 
-In this tutorial, we will use three small datasets to build interactive
-separated, grouped, and stacked bar charts in Google Sheets:
-
-* Obesity in the US (by US CDC and StateOfObesity.org project)
-* High-Calorie Fast-Food Items
-* Global Database on Body Mass Index by World Health Organization
-
-### Grouped Column and Bar Charts {-}
-
-Figure \@ref(fig:column-grouped) shows differences in obesity between men and women, grouped together in three age brackets to allow for easier gender comparisons across the same ages. In the interactive web version, hover over columns and see tooltips with data.
-
-(ref:column-grouped) Grouped column chart with data from [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
+(ref:column-grouped) Grouped column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf).
 
 ```{r column-grouped, fig.cap="(ref:column-grouped)"}
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-grouped.png")
 ```
 
-The following steps will help you recreate an interactive grouped column (or horizontal bar) chart.
+To create your own interactive grouped column (or bar) chart, use our template and follow these steps.
 
-1. Open [Google Sheet Column chart with grouped data template](https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/) in your browser.
-
-2. Sign in to continue to Google Sheets (which is part of Google Drive). If you don't already have a Google account, you can create one.
-
-3. Select File > Make a Copy to save your own version to your Google Drive, as shown in Figure \@ref(fig:file-make-copy2).
+1. Open our [Grouped Column chart template in Google Sheets](https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/) with US obesity data by gender and age. Sign in to your account, and go to *File > Make a Copy* to save a version you can edit to your own Google Drive, as shown in Figure \@ref(fig:file-make-copy2).
 
 (ref:file-make-copy2) Make your own copy of the Google Sheet template.
 
@@ -278,9 +254,9 @@ The following steps will help you recreate an interactive grouped column (or hor
  knitr::include_graphics("images/05-chart/file-make-copy2.png")
 ```
 
-4. To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete, as shown in Figure \@ref(fig:delete-chart).
+2. To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot kebab menu appear, and select *Delete*, as shown in Figure \@ref(fig:delete-chart).
 
-(ref:delete-chart) Float cursor in top-right corner of the chart to make the 3-dot (kebab) menu appear, and select Delete.
+(ref:delete-chart) Float cursor in top-right corner of the chart to make the 3-dot kebab menu appear, and select Delete.
 
 ```{r delete-chart, out.width="180px", fig.cap="(ref:delete-chart)"}
  knitr::include_graphics("images/05-chart/delete-chart.png")
@@ -288,31 +264,25 @@ The following steps will help you recreate an interactive grouped column (or hor
 
 Note: Another name for the 3-dot menu symbol is the "kebab menu" because it resembles Middle Eastern
 food cooked on a skewer, in contrast to the three-line "hamburger menu" on many mobile devices,
-as shown in Figure \@ref(fig:menu-hamburger-kebab).
+as shown in Figure \@ref(fig:menu-hamburger-kebab). Software developers must be hungry.
 
-(ref:menu-hamburger-kebab) You should be able to distinguish kebab from hamburger menu icons.
+(ref:menu-hamburger-kebab) Distinguish between the kebab verus hamburger menu icons.
 
 ```{r menu-hamburger-kebab, fig.cap="(ref:menu-hamburger-kebab)"}
 knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
 ```
 
-5. Format your data to make each column a data series, as shown in Figure \@ref(fig:column-grouped-data), which means it will display as a separate color in the chart.
+3. Format your data to make each column a data series (such as male and female), as shown in Figure \@ref(fig:column-grouped-data), which means it will display as a separate color in the chart. Feel free to add more than two columns.
 
-(ref:column-grouped-data) Format data in columns to make colored grouped columns in your chart.
+4. Use your cursor to select only the data you wish to chart, then go to the *Insert* menu and select *Chart*, as shown in Figure \@ref(fig:column-grouped-insert).
 
-```{r column-grouped-data, out.width="350px", fig.cap="(ref:column-grouped-data)"}
- knitr::include_graphics("images/05-chart/column-grouped-data.png")
-```
-
-6. Use your cursor to select only the data you wish to chart, then go to the Insert menu and select Chart, as shown in Figure \@ref(fig:column-grouped-insert).
-
-(ref:column-grouped-insert) Select your data and then Insert the Chart.
+(ref:column-grouped-insert) Select your data and Insert the Chart.
 
 ```{r column-grouped-insert, out.width="250px", fig.cap="(ref:column-grouped-insert)"}
  knitr::include_graphics("images/05-chart/column-grouped-insert.png")
 ```
 
-7. In the Chart Editor, change the default selection to Column chart, with Stacking none, to display Grouped Columns, as shown in Figure \@ref(fig:column-grouped-editor). Or select *Horizontal bar chart* if you have longer labels.
+7. In the Chart Editor, change the default selection to *Column chart*, with *Stacking none*, to display Grouped Columns, as shown in Figure \@ref(fig:column-grouped-editor). Or select *Horizontal bar chart* if you have longer labels.
 
 (ref:column-grouped-editor) Change the default to Column chart, with Stacking none.
 
@@ -320,7 +290,7 @@ knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
  knitr::include_graphics("images/05-chart/column-grouped-editor.png")
 ```
 
-8. To customize title, labels, and more, in the Chart Editor select Customize, as shown in Figure \@ref(fig:chart-editor-customize).
+8. To customize title, labels, and more, in the Chart Editor select *Customize*, as shown in Figure \@ref(fig:chart-editor-customize). Also, you can select the chart and axis titles to edit them.
 
 (ref:chart-editor-customize) Select Customize to edit title, labels, and more.
 
@@ -348,61 +318,54 @@ Note: Currently, there is no easy way to cite or link to your source data inside
 Instead, cite and link to your source data in the text of the web page. Remember that citing your sources
 adds credibility to your work.
 
-### Separated Column and Bar Charts {-}
+#### Separated Column and Bar Charts with Google Sheets {-}
+A separated column (or bar) chart is best to compare categories in separate clusters. For example, imagine you wish to emphasize calorie counts for selected foods offered at two different restaurants, Starbucks and McDonalds. Format the restaurant data in vertical columns in your Google Sheet, as shown in Figure \@ref(fig:bar-separated-data). Since food items are unique to each restaurant, only enter calorie data in the appropriate column, and leave other cells blank. Now you can easily create a separated bar (or column) chart that displays the restaurant data in different clusters, as shown in Figure \@ref(fig:bar-separated). Unlike the grouped column chart previously shown in Figure \@ref(fig:column-grouped), here the bars are separated from each other, because we do not wish to draw comparisons between food items that are unique to each restaurant. Also, our chart displays horizontal bars (not columns) because our some data labels are long.
 
-When you visualize independent categories of data, and you don't want them to appear grouped together, then create a chart with separated columns (or horizontal bars, if you have long data labels). For example, Figure \@ref(fig:bar-separated) is a separated bar chart of calorie counts of fast food items for two restaurant chains, Starbucks and McDonald's. Unlike the grouped column chart in Figure \@ref(fig:column-grouped), here the bars are separated from each other, because we do not need to make comparisons between sub-groups.
-
-(ref:bar-separated) Separated bar chart with data from [Starbucks and McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
-
-```{r bar-separated, fig.cap="(ref:bar-separated)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive") else knitr::include_graphics("images/05-chart/bar-separated.png")
-```
-
-The only difference between making a grouped versus a separated chart is how you structure your data.
-To make Google Sheets separate columns or bars, you need to leave some cells blank, as shown in Figure \@ref(fig:bar-separated-data).
-The rest of the steps remain the same as above.
-
-(ref:bar-separated-data) Create a separated column or bar chart by leaving some cells blank.
+(ref:bar-separated-data) To create a separated bar (or column) chart, format each data series vertically, and leave cells blank where appropriate.
 
 ```{r bar-separated-data, fig.cap="(ref:bar-separated-data)"}
  knitr::include_graphics("images/05-chart/bar-separated-data.png")
 ```
 
-To create your own separated column or bar chart using the fast-food example,
-make a copy of [Google Sheet Separated Bar Chart template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/).
+(ref:bar-separated) Separated bar chart: Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [Starbucks and McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126).
 
-### Stacked Column and Bar Charts {-}
-
-Stacked column and bar charts can be used to compare subcategories. They can also be used
-to represent parts of a whole instead of pie charts. For example, the stacked column chart in Figure \@ref(fig:column-stacked) compares the percentage of overweight residents across nations, where colors allow for easy comparisons of weight-group subcategories across nations.
-
-(ref:column-stacked) Stacked column chart with data from [WHO and CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive).
-
-```{r column-stacked, fig.cap="(ref:column-stacked)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-stacked.png")
+```{r bar-separated, fig.cap="(ref:bar-separated)"}
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive") else knitr::include_graphics("images/05-chart/bar-separated.png")
 ```
 
-To create a stacked column or bar chart, structure your data so that each column will become a new series with its own color, as shown in Figure \@ref(fig:column-stacked-data). Then in the Chart Editor window, choose Chart Type > Stacked column chart (or Stacked bar chart). The rest of the steps are similar to the ones above.
+Create your own version using our [Separated Bar Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/) with Starbucks and McDonalds data. Organize each data series vertically so that it becomes its own color in the chart. Leave cells blank when no direct comparisons are appropriate. The remainder of the steps are similar to the grouped column chart tutorial above.
 
-(ref:column-stacked-data) Create a stacked column or bar chart by structuring your data as shown.
+#### Stacked Column and Bar Charts with Google Sheets {-}
+Stacked column (or bar) charts are best to compare subcategories, or parts of a whole.  For example, if you wish to compare the percentage of overweight residents across nations, format each weight-level data series in vertical columns in your Google Sheet, as shown in Figure \@ref(fig:column-stacked-data). Now you can easily create a stacked column (or bar) chart that displays comparisons of weight-level subcategories across nations, as shown in Figure \@ref(fig:column-stacked). Often it's better to use a stacked chart instead of multiple pie charts, because people can see differences more precisely in rectangular stacks than in circular pie slices.
+
+(ref:column-stacked-data) To create a stacked column (or bar) chart, format each data series vertically in Google Sheets.
 
 ```{r column-stacked-data, out.width="350px", fig.cap="(ref:column-stacked-data)"}
  knitr::include_graphics("images/05-chart/column-stacked-data.png")
 ```
 
-To create your own stacked column or bar chart using the international weight level example,
-visit the [Google Sheets Stacked Column Chart template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/)
-and make a copy of the spreadsheet.
+(ref:column-stacked) Stacked column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive). Data from [WHO and CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691).
 
-To change colors of series (for example, to show Overweight category in red),
-click the kebab menu in the top-right corner of the chart, then
-go to *Edit Chart > Customize > Series*. There, choose the appropriate series
-from the dropdown menu, and set its color from the Color dropdown menu that appears.
+```{r column-stacked, fig.cap="(ref:column-stacked)"}
+if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-stacked.png")
+```
 
+Create your own version using our [Stacked Column Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/) with international weight-level data.
+Organize each data series vertically so that it becomes its own color in the chart. In the Chart Editor window, choose *Chart Type > Stacked column chart* (or choose *Stacked bar chart* if you have long data labels). The rest of the steps are similar to the ones above.
 
-### Histograms {-}
+To change the color of a data series (for example, to show Overweight category in red), click the kebab menu in the top-right corner of the chart, then go to *Edit Chart > Customize > Series*. Then choose the appropriate series from the dropdown menu, and set its color in the dropdown menu, as shown in Figure \@ref(fig:column-stacked-edit-series).
 
-Histogram is a type of bar chart that represents distribution of items, whether numerical
+(ref:column-stacked-edit-series) To edit a column color, select *Edit Chart - Customize - Series*.
+
+```{r column-stacked-edit-series, out.width="550px", fig.cap="(ref:column-stacked-edit-series)"}
+ knitr::include_graphics("images/05-chart/column-stacked-edit-series.png")
+```
+
+### Histograms with Google Sheets {-}
+
+TODO: START AGAIN HERE to make screenshots and templates more consistent with above.
+
+A histogram is a specific type of bar chart that represents distribution of items, whether numerical
 or categorical. To build a histogram, you need to assign each data point to one of
 the non-overlapping *buckets* (or *bins*).
 
@@ -452,7 +415,7 @@ to cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively. Then yo
 | Night     | 37     |
 ```
 
-## Pie, Line, and Area Charts with Google Sheets {- #pie-line-area-google}
+### Pie, Line, and Area Charts with Google Sheets {- #pie-line-area-google}
 
 #### Pie Chart {-}
 As we mentioned in the [Chart Aesthetics section](chart-design.html), you need to be careful when using pie charts.
@@ -547,7 +510,7 @@ Set up the data exactly as you would with a line chart (first column is labels f
 second and following columns are series, or lines). Select it, and choose *Insert > Chart*.
 In the Chart editor, in tab Setup, select  *Stacked area chart* from the Chart type dropdown list.
 
-## XY Scatter and Bubble Charts with Google Sheets {- #scatter-bubble-google}
+### XY Scatter and Bubble Charts with Google Sheets {- #scatter-bubble-google}
 Consider using XY scatter charts, also known as scatterplots, to display data coordinates to show the relationship between
 two variables. The first example below compares the relationships between life expectancy (shown on the X axis) and fertility (shown on the Y axis),
 which each nation is represented as a dot (an X-Y coordinate).
@@ -690,7 +653,11 @@ Make it gray or black, so that it won't interfere with the bubble colors themsel
 Tip: If some of your bubbles are too close to the borders, set Min and Max values for the axis manually
 under Horizontal axis and Vertical axis menus.
 
-## Create Charts with Tableau Public {- #tableau-public}
+
+## Datawrapper Charts {- #chart-datawrapper}
+TODO
+
+## Tableau Public Charts {- #chart-tableau-public}
 
 Tableau is powerful data visualization software used by many professionals and organizations
 to analyze and present data. Tableau can combine multiple datasets to show in a single chart (or a map),
@@ -707,7 +674,7 @@ dive further, there are many great books on Tableau available.
 In this book, we will show you how to add datasets to Tableau Public, and how to [create a scatterplot](scatter-chart-tableau.html)
 and a [filtered line chart](filtered-line-chart-tableau.html).
 
-## Create XY Scatter Chart with Tableau Public {- #scatter-chart-tableau}
+### XY Scatter Chart with Tableau Public {- #scatter-chart-tableau}
 Just to remind you, scatter charts plot two variables
 against each other, on x- and y-axis, revealing possible correlations.
 With Tableau Public, you can create an interactive scatter chart,
@@ -842,7 +809,7 @@ where `USERNAME` is your unique username.
 To learn more, see [Tableau Public resources page](https://public.tableau.com/en-us/s/resources).
 
 
-## Create Filtered Line Chart with Tableau Public {- #filtered-line-chart-tableau}
+### Filtered Line Chart with Tableau Public {- #filtered-line-chart-tableau}
 
 One of the advantages of interactive visualizations over static (including printed)
 is the ability to store a lot more data, and show it only when required.
@@ -867,7 +834,7 @@ if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views
 
 We assume that you have Tableau installed. If not, see the previous tutorial, [Create XY Scatter Chart with Tableau Public](scatter-chart-tableau.html).
 
-### Connect Text File and Build a Line Chart {-}
+#### Connect Text File and Build a Line Chart {-}
 
 Open Tableau Public, and under Connect menu, choose *Text file*.
 Tableau may or may not have imported the table automatically. If you see the preview of the table
@@ -902,7 +869,7 @@ how the interactive filtering works.
 knitr::include_graphics("images/05-chart/tableau-filtered-show-filter.png")
 ```
 
-### Add Title and Caption, and Publish {-}
+#### Add Title and Caption, and Publish {-}
 
 Replace *Sheet 1* title (above the chart) with "Internet Access by Country, 1995–2018" by double-clicking on it.
 In the menu, go to *Worksheet > Show Caption* to add a Caption block under the chart.

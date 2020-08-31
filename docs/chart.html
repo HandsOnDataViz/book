@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-28" />
+<meta name="date" content="2020-08-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -194,12 +194,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
-<li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>Column and Bar Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>Pie, Line, and Area Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>XY Scatter and Bubble Charts with Google Sheets</a></li>
-<li class="chapter" data-level="" data-path="tableau-public.html"><a href="tableau-public.html"><i class="fa fa-check"></i>Create Charts with Tableau Public</a></li>
-<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>Create XY Scatter Chart with Tableau Public</a></li>
-<li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>Create Filtered Line Chart with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
+<li class="chapter" data-level="" data-path="chart-tableau-public.html"><a href="chart-tableau-public.html"><i class="fa fa-check"></i>Tableau Public Charts</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -312,8 +308,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 sometimes a chart tells your story better than a map. But designing meaningful, interactive charts
 requires careful thought about how to communicate your data story with your audience.</p>
 <p>In this chapter, we will look at main <a href="chart-design.html">principles of chart design</a>, and
-learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. In addition to static chart images, this book focuses on interactive charts that display more data when you float your cursor over them in your web browser. Later you’ll learn how to <a href="embed.html">embed interactive charts on your website</a> in chapter 8.</p>
-<p>To begin, this grid of basic chart types will help you decide which type you wish to create. Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader’s attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools, such as the <a href="chart-google-sheets.html">Google Sheets chart tool</a>, and for more advanced charts, <a href="tableau-public.html">Tableau Public</a>, the free version of the powerful software used by many data analysts and visualization practitioners. The grid also refers to more powerful chart tools, such as <a href="chartcode.html">Chart.js and Highcharts templates</a> in chapter 10, which give you ever more control over how your design and display your data, but also require learning how to <a href="github.html">edit and host code templates with GitHub</a> in chapter 9.</p>
+learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. In addition to static chart images, this book focuses on interactive charts that display more data when you float your cursor over them in your web browser. Later you’ll learn how to <a href="embed.html">embed interactive charts on your website in chapter 8</a>.</p>
+<p>To begin, decide which type of chart you wish to create in Table <a href="chart.html#tab:chart-types">5.1</a>. Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader’s attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools to create charts, such as <a href="chart-google-sheets.html">Google Sheets</a>, <a href="chart-datawrapper.html">Datawrapper</a>, and <a href="chart-tableau-public.html">Tableau Public</a>. But Table <a href="chart.html#tab:chart-types">5.1</a> also refers to more powerful and customizable chart code templates, such as <a href="chartcode.html">Chart.js and Highcharts templates in chapter 10</a>, which give you ever more control over how your design and display your data, but first require learning how to <a href="github.html">edit and host code templates with GitHub in chapter 9</a>.</p>
 <table>
 <caption><span id="tab:chart-types">Table 5.1: </span> Basic Chart Types and Tutorials</caption>
 <colgroup>
@@ -369,7 +365,7 @@ learn to identify good charts from bad ones. You will learn important rules that
 </tr>
 </tbody>
 </table>
-<!-- TODO: Add chart with error bars to acknowledge data uncertainty (such as margins of error), and also consider mentioning this in chart design principles -->
+<!-- TODO: Add Datawrapper tutorial links; Add chart with error bars to acknowledge data uncertainty (such as margins of error), and also consider mentioning this in chart design principles -->
 </div>
             </section>
 
@@ -419,7 +415,7 @@ gitbook.start({
 "link": "https://github.com/handsondataviz/book/blob/master/05-chart.Rmd",
 "text": null
 },
-"download": ["HandsOnDataViz.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

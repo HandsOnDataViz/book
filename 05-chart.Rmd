@@ -380,119 +380,70 @@ Create your own version using our [Histogram Chart in Google Sheets template](ht
 Tip: We set a custom number format to display *8 AM* and other times as desired in the *Hour* column. In Google Sheets, select a column, then go to *Format > Number > More Formats > Custom Number Formats* to define your preferred format.
 
 ## --Pie, Line, and Area Charts {- #pie-line-area-google}
-TODO Expand: This section focuses on why and how to use Google Sheets to build different types of charts: pie, line, and stacks area.
+This section focuses on why and how to use Google Sheets to build more types of interactive charts: pie charts (to show parts of a whole), line charts (to show change over time), and stacked area charts (to combine showing parts of a whole, with change over time).
 
 ### Pie Charts {-}
-As we mentioned in the [Chart Aesthetics section](chart-design.html), you need to be careful when using pie charts.
-First, remember to not have too many slices (ideally you should limit slices to 5). They should be arranged
-from largest to smallest and start at 12 o'clock. To separate slices, you can use different slice colors,
-or lines.
+Some people use pie charts to show parts of a whole, but we urge caution with this type of chart for reasons explained further below. For example, if you wish to show the number of different fruits sold by a store in one day, as a proportion of total fruit sold, then format the labels and values in vertical columns in your Google Sheet, as shown in Figure \@ref(fig:pie-data). Values can be expressed as either raw numbers or percentages. Now you can easily create a pie chart that displays these values as colored slices of a circle, as shown in Figure \@ref(fig:pie). Viewers can see that bananas made up slightly over half of the fruit sold, followed by apples and oranges.
 
-Make sure your data adds up to 100%. For example, if you want to show a pie chart with the number of fruit your store had
-sold in a day—--21 apples, 5 oranges, and 32 bananas—--the sum of all fruit, 58, is your 100%.
-Then a reader can figure out that of all fruits sold, approximately 55% were bananas.
-This example is illustrated in Figure \@ref(fig:pie).
-If you decided to include *some*, but *not all* other items that your store has sold (for example,
-you include pizzas but exclude ice cream), your pie chart would not make sense.
+(ref:pie-data) To create a pie chart, format the data values vertically in Google Sheets.
 
-(ref:pie) Pie chart with [fictitious source data](https://docs.google.com/spreadsheets/d/11cn0eysXqXIwhcTKmGuzMDw_RmpDpYLKZN3TeevT-Vg/edit?usp=sharing). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive).
+```{r pie-data, out.width=250, fig.cap="(ref:pie-data)"}
+ knitr::include_graphics("images/05-chart/pie-data.png")
+```
+
+(ref:pie) Pie chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive). Data is fictitious.
 
 ```{r pie, fig.cap="(ref:pie)"}
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive") else knitr::include_graphics("images/05-chart/pie.png")
 ```
 
-To make a pie chart with Google Sheets, arrange your data in two columns, *Label* and *Value*.
-Values can be expressed as either percentages or counts.
-For example,
+But you need to be careful when using pie charts, as we described in the [Chart Design section](chart-design.html) of this chapter. First, make sure your data adds up to 100 percent. If you created a pie chart that displayed *some* but *not all* of the fruits sold, it would not make sense. Second, avoid creating too many slices, since people cannot easily distinguish smaller ones. Ideally, use no more than 5 slices in a pie chart. Finally, start the pie at the top of the circle (12 o'clock) and arrange the slices clockwise, from largest to smallest.
 
-```
-| Apple  |  21 |
-| Orange |   5 |
-| Banana |  32 |
-```
+Create your own version using our [Pie Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/11cn0eysXqXIwhcTKmGuzMDw_RmpDpYLKZN3TeevT-Vg/). The steps are similar to those in prior Google Sheets chart tutorials in this chapter. Go to *File > Make a Copy* to create a version you can edit in your Google Drive. Select all of the cells and go to *Insert > Chart*. If Google Sheets does not correctly guess that you wish to create a pie chart, then in the Chart editor window, in the Setup tab, select *Pie chart* from the *Chart type* dropdown list.
 
-Select all cells and go to *Insert > Chart*. Google Sheets is good at guessing chart types,
-so it is possible the chart you will see right away will be a pie. If not, in Chart editor in tab Setup,
-select  *Pie chart* from the Chart type dropdown list.
-
-Notice that slices are ordered the same way they appear in the spreadsheet. We highly recommend you
-sort values from largest to smallest: right-click the header of your values column, and choose `Sort sheet Z-A`.
-You will see that the chart updates automatically.
-
-Right-click on the chart, and choose *Chart & axis titles > Chart title* to add a meaningful title.
-In *Customize* tab of the Chart editor, you can also change colors and add borders to slices.
+Note that slices are ordered the same way they appear in the spreadsheet. Select the entire sheet and *Sort* the values column from largest to smallest, or from Z to A. In *Customize* tab of the Chart editor, you can change colors and add borders to slices. Then add a meaningful title and labels as desired.
 
 ### Line Charts {-}
-The most common use of line charts is to represent values at different points in time,
-in other words to show change over time. The line chart in Figure \@ref(fig:line) shows per-capita
-meat availability in the US for the past 110 years. You can see that
-the level of chicken (shown in light-green) rises steadily and surpasses beef (blue) and pork (gray).
+A line chart is the best way to represent continuous data, such as change over time. For example, imagine you wish to compare the availability of different meats per capita in the US over the past century. In your Google Sheet, organize the time units (such as years) into the first column, since these will appear on the horizontal X-axis. Also, place each data series (such as beef, pork, chicken) alongside the vertical time-unit column, and each series will become its own line, as shown in Figure \@ref(fig:line-data). Now you can easily create a line chart that emphasizes each data series changed over time, as shown in Figure \@ref(fig:line). In the US, the amount of chicken per capita steadily rose and surpassed pork and beef around 2000.
 
-(ref:line) Line chart showing meat availability per capita in the US, according to the [US Department of Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive).
+(ref:line-data) To create a line chart, format the time units and each data series in vertical columns.
+
+```{r line-data, out.width=300, fig.cap="(ref:line-data)"}
+knitr::include_graphics("images/05-chart/line-data.png")
+```
+
+(ref:line) Line chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive). Data from [US Department of Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing).
 
 ```{r line, fig.cap="(ref:line)"}
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive") else knitr::include_graphics("images/05-chart/line.png")
 ```
 
-The simplest way to organize your data is to use the first column as x-axis labels,
-and each additional column as a new series (which will become its own line).
-For example, the meat data from the line chart is
-structured as shown in Figure \@ref(fig:line-data).
-
-(ref:line-data) Data for the line chart shown in Figure \@ref(fig:line).
-
-```{r line-data, out.width="250px", fig.cap="(ref:line-data)"}
-knitr::include_graphics("images/05-chart/line-data.png")
-```
-
-The data is available in the [Google Sheet Line chart template](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/).
-If you wish to use it, just make a copy to your own Google Drive from the File menu.
-
-Select the data, and choose *Insert > Chart*. It is possible Google Sheets will create a line chart right away.
-If not, in Chart editor in tab Setup, select  *Line chart* from the Chart type dropdown list.
+Create your own version using our [Line Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/). The steps are similar to those in prior Google Sheets chart tutorials in this chapter. Go to *File > Make a Copy* to create a version you can edit in your Google Drive. Select the data, and choose *Insert > Chart*. If Google Sheets does not correctly guess that you wish to create a line chart, in the Chart editor, Setup tab, select *Line chart* from the Chart type dropdown list.
 
 ### Stacked Area Charts {-}
-The line chart in the previous example made it possible to see how individual meat availability changed over time.
-It was hard, however, to estimate if the overall meat availability went up or down.
-(That is, of course, if we assume that beef, pork, and chicken are the only meats we eat).
+A stacked line chart is best for combining two concepts from above: showing parts of the whole (like a pie chart) and continuous data over time (like a line chart). For example, the line chart above shows how the availability of three different meats changed over time. But it's hard to estimate if the total availability of these three meets went up or down over time in a line chart. However, a stacked line chart shows the availability of each meat *and* the total meet availability per capita over time.
 
-We can see how availability of individual meat types, *and* the total meat availability over time
-using a stacked area chart, like shown in Figure \@ref(fig:stacked-area). Here, we can still see that chicken
-has been on the rise since the 1970s. We can also see that the total availability was on the
-rise between 1910 and 1970 with a small dip around 1930s, and it didn't change much between
-1970 and 2017.
+Organize the data in the same way as you did for the line chart in Figure \@ref(fig:line-data). Now you can easily create a stacked line chart that displays the availability of each meat---and their combined total---over time, as shown in Figure \@ref(fig:stacked-area). Overall, we can see that total available meat per capita increased after the 1930s Depression, and chicken steadily became a larger portion of the total after 1970.
 
-(ref:stacked-area) In addition to individual meat availability, stacked area charts show the overall availability. See data by [US Department of Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive).
+(ref:stacked-area) Stacked area chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive). Data from [US Department of Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing).
 
 ```{r stacked-area, fig.cap="(ref:stacked-area)"}
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive") else knitr::include_graphics("images/05-chart/stacked-area.png")
 ```
 
-The data for the stacked area chart is available from the [Google Sheet Stacked area chart template](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/),
-which you copy to your own Drive.
-
-Set up the data exactly as you would with a line chart (first column is labels for the x-axis,
-second and following columns are series, or lines). Select it, and choose *Insert > Chart*.
-In the Chart editor, in tab Setup, select  *Stacked area chart* from the Chart type dropdown list.
+Create your own version using our [Stacked Area Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/). The steps are similar to those in prior Google Sheets chart tutorials in this chapter. Go to *File > Make a Copy* to create a version you can edit in your Google Drive. Set up the data exactly as you would for a line chart, with the first column for time units in the X-axis, and place each data series in its own column. Select the data, and choose *Insert > Chart*. In the Chart editor, in tab Setup, select  *Stacked area chart* from the Chart type dropdown list.
 
 ## --XY Scatter and Bubble Charts {- #scatter-bubble-google}
-Consider using XY scatter charts, also known as scatterplots, to display data coordinates to show the relationship between
-two variables. The first example below compares the relationships between life expectancy (shown on the X axis) and fertility (shown on the Y axis),
-which each nation is represented as a dot (an X-Y coordinate).
-Bubble charts are basically scatter charts on steroids, meaning that they can display the relationship of up to five variables.
-Further below you'll build a bubble chart based on the same XY life expectancy-fertility dataset, with added variables for population (displayed as circle size) and region of the world (displayed as circle color).
+Scatter charts (also known as XY charts or scatter plots) and bubble charts are best to show the relationship between two, three, or four sets of data. Scatter charts display dots on a grid to represent the XY coordinates of two variables. In the scatter chart example below, each dot represents a nation, with its life expectancy on the horizontal X axis and its fertility rate on the vertical Y axis. The overall dot pattern illustrates the relationship between these two datasets: life expectancy and fertility.
 
-TODO Expand: This section focuses on why and how to use Google Sheets to build different types of scatter or bubble charts with two, three, or five variables.
+Bubble charts go beyond scatter charts by adding two more visual elements---dot size and color---to represent a third or fourth dataset. Further below, the bubble chart begins with the same XY coordinates to represent life expectancy and fertility for each nation, then changes the size of each circular dot to represent population, and its color to indicate region of the world. As a result, a bubble chart can show relationships between four datasets. In this section, you'll learn how to create both scatter and bubble charts in Google Sheets, as well as some limitations of this tool.
 
-Fancier bubble charts animate the circles to represent one more variable: change over time.
-Such animated bubble charts were popularized by Hans Rosling, a renowned Swedish professor
-of global health.
-
-Note: We recommend you watch one of Hans Rosling's famous [TED talks](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen)
-to see animated bar charts in action. You can also visit [Gapminder Foundation website](https://www.gapminder.org/) to see more data visualizations
-and learn more about Hans's work and legacy.
+Fancier bubble charts introduce one more visual element---animation---to represent a fifth dataset for change over time. Although creating an animated bubble chart is beyond the scope of this book, watch a famous [TED talk by Hans Rosling](https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen),
+a renowned Swedish professor of global health, to see animated bubble charts in action, and learn more about his work at the [Gapminder Foundation website](https://www.gapminder.org/).
 
 ### XY Scatter Charts {-}
+TODO: START REVISIONS AGAIN HERE
+
 The scatter chart in Figure \@ref(fig:scatter) uses World Bank data to reveal a downward slope:
 nations with lower fertility (births per woman)
 tend to have higher life expectancy. You can also phrase is the other way,

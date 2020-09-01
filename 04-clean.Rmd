@@ -315,8 +315,12 @@ that should have just two distinct values, North Korea and South Korea!
 1. To begin standardizing spellings, click on the arrow-down button of Country column header,
 and choose *Edit cells* > *Cluster and edit*. You will see a window like the one shown in Figure
 \@ref(fig:openrefine-cluster).
-2. You will have a choice of two clustering methods, *key collision* or *nearest neighbor*. Both
-methods can be powered by different functions, but let's leave the default *key collision* with *fingerprint* function.
+2. You will have a choice of two clustering methods, *key collision* or *nearest neighbor*. Key collision
+clustering is a much faster technique that is appropriate for larger datasets, but it is less flexible.
+Nearest neighbor is a more computationally expensive approach and will be slow on larger datasets,
+but it allows for greater fine-tuning and precision. Both methods can be powered by different functions,
+which you can read about [on the project's Wiki page](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth).
+For the purpose of this exercise, let's leave the default *key collision* method with *fingerprint* function.
 3. OpenRefine will calculate a list of clusters. *Values in Cluster* column contains grouped spellings
 that OpenRefine considers the same. If you agree with a grouping, check the *Merge?* box, and assign
 the "true" value to the *New Cell Value* input box (see first cluster in Figure \@ref(fig:openrefine-cluster)).

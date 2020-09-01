@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Pivot Address-Level Point Data into Polygon Data | Hands-On Data Visualization</title>
+  <title>–XY Scatter and Bubble Charts | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Pivot Address-Level Point Data into Polygon Data | Hands-On Data Visualization" />
+  <meta property="og:title" content="–XY Scatter and Bubble Charts | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Pivot Address-Level Point Data into Polygon Data | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="–XY Scatter and Bubble Charts | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="bulk-geocode.html"/>
-<link rel="next" href="normalize.html"/>
+<link rel="prev" href="pie-line-area-google.html"/>
+<link rel="next" href="chart-datawrapper.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -305,69 +305,150 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="pivot-point-to-polygon" class="section level2 unnumbered" number="">
-<h2>Pivot Address-Level Point Data into Polygon Data</h2>
-<p>If you deal with geographical data, you may find yourself in a situation where
-you have a list of addresses which need to be counted (<em>aggregated</em>) by area
-and displayed as a polygon map. In this case, a simple pivot table in a spreadsheet
-software can solve the problem.</p>
-<p>Note: A special case of a polygon map is a <em>choropleth</em> map,
-which represents polygons that are colored in a particular way to represent underlying values.
-A lot of polygon maps end up being <em>choropleth</em> maps, so we will be using this term a lot in this book.</p>
-<p>Let’s take a look at a <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">list of all hospitals</a>
-that are registered with the Medicare program in the United States. The dataset is
-stored and displayed by Socrata, a web database popular among government agencies and city administrations.
-This particular dataset has information on each hospital’s name,
-location (nicely divided into Address, City, State, and ZIP Code columns),
-a phone number and some other indicators, such as mortality and patient experience.</p>
-<p>Now, imagine you are given a task to create a choropleth map of total hospitals by US state.
-Instead of showing individual hospitals as points (as in Figuere <a href="pivot-point-to-polygon.html#fig:pivot-address">12.1</a>a ),
-you want darker shades of blue to represent states with more hospitals (as in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address">12.1</a>b).</p>
-<p>(ref:pivot-address) You can count addresses by state (or other area) to produce polygon,
-or choropleth, maps instead of point maps.</p>
-<div class="figure"><span id="fig:pivot-address"></span>
-<img src="images/12-transform/pivot-address-annotated.png" alt="(ref:pivot-address)"  />
-<p class="caption">
-Figure 12.1: (ref:pivot-address)
-</p>
-</div>
-<p>First, save the database to your local machine by going to <em>Export &gt; Download &gt; CSV</em>
-of Socrata interface. Figure <a href="pivot-point-to-polygon.html#fig:pivot-address-export">12.2</a> shows where you can find the Export button.</p>
+<div id="scatter-bubble-google" class="section level2 unnumbered" number="">
+<h2>–XY Scatter and Bubble Charts</h2>
+<p>Consider using XY scatter charts, also known as scatterplots, to display data coordinates to show the relationship between
+two variables. The first example below compares the relationships between life expectancy (shown on the X axis) and fertility (shown on the Y axis),
+which each nation is represented as a dot (an X-Y coordinate).
+Bubble charts are basically scatter charts on steroids, meaning that they can display the relationship of up to five variables.
+Further below you’ll build a bubble chart based on the same XY life expectancy-fertility dataset, with added variables for population (displayed as circle size) and region of the world (displayed as circle color).</p>
+<p>TODO Expand: This section focuses on why and how to use Google Sheets to build different types of scatter or bubble charts with two, three, or five variables.</p>
+<p>Fancier bubble charts animate the circles to represent one more variable: change over time.
+Such animated bubble charts were popularized by Hans Rosling, a renowned Swedish professor
+of global health.</p>
+<p>Note: We recommend you watch one of Hans Rosling’s famous <a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen">TED talks</a>
+to see animated bar charts in action. You can also visit <a href="https://www.gapminder.org/">Gapminder Foundation website</a> to see more data visualizations
+and learn more about Hans’s work and legacy.</p>
+<div id="xy-scatter-charts" class="section level3 unnumbered" number="">
+<h3>XY Scatter Charts</h3>
+<p>The scatter chart in Figure <a href="scatter-bubble-google.html#fig:scatter">5.30</a> uses World Bank data to reveal a downward slope:
+nations with lower fertility (births per woman)
+tend to have higher life expectancy. You can also phrase is the other way,
+nations with higher life expectancy at birth have lower fertility.
+Remember that correlation does not
+mean causation, so you cannot use this chart to argue that fewer
+births result in longer lives, or that longer-living females give birth to fewer children.</p>
 
-<div class="figure"><span id="fig:pivot-address-export"></span>
-<img src="images/12-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
+<div class="figure"><span id="fig:scatter"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;amp;format=interactive" width="672" height="400px">
+</iframe>
 <p class="caption">
-Figure 12.2: In Socrata, you can export the entire dataset as a CSV.
+Figure 5.30: This scatter chart shows that nations with lower fertility tend to have higher life expectancy. <a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyKSe_dy3FURPuTllvmGBvI1b-J5_7Q3hR_6bdP20olDFA79OqoGOKEqtxfhv796NMXJO5vzhs_d0f/pubchart?oid=386475448&amp;format=interactive">full-screen interactive version</a>.
 </p>
 </div>
-<p>Next, open the file in your favorite spreadsheet tool. If you use Google Sheets,
-use <em>File &gt; Import &gt; Upload</em> to import CSV data. Make sure your address columns are present,
-and move on to creating a pivot table (in Google Sheets, go to <em>Data &gt; Pivot table</em>, make sure the entire data range
-is selected, and click <em>Create</em>). In the pivot table, set <em>Rows</em> to <em>State</em>, because
-we want to get counts by state. Next, set pivot table’s <em>Values</em> to <em>State</em>—or really any other
-column that has no missing values—and choose <em>Summarize by: COUNTA</em>. Voila!</p>
+<p>The data used in Figure <a href="scatter-bubble-google.html#fig:scatter">5.30</a> is available from our
+<a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/edit?usp=sharing">Google Sheets Scatter chart template</a>.
+You can copy it to your own Google Drive so that you’re able to edit it (go to <em>File &gt; Make a copy</em>).</p>
+<p>Figure <a href="scatter-bubble-google.html#fig:scatter-data">5.31</a> shows the first few rows of the dataset.
+Notice that the data is structured in three columns. The first column, <em>Life Expectancy</em>,
+is plotted on the x-axis (horizontal). The second column, <em>Fertility</em>, is plotted on the y-axis (vertical).
+The third column contains <em>Country</em> labels.</p>
 
-<div class="figure"><span id="fig:pivot-address-sheet"></span>
-<img src="images/12-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
+<div class="figure"><span id="fig:scatter-data"></span>
+<img src="images/05-chart/scatter-data.png" alt="Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels." width="350px" />
 <p class="caption">
-Figure 12.3: Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
+Figure 5.31: Data for a scatterplot is usually represented in 3 columns: x-values, y-values, and labels.
 </p>
 </div>
-<p>Your aggregated dataset is ready, so save it as a CSV. If you use Google Sheets,
-go to <em>File &gt; Download &gt; Comma-separated values (.csv, current sheet)</em>.
-You can now merge this dataset with your polygons manually using editing capabilities of
-<a href="geojsonio.html">GeoJson.io</a>, or merge it all in one go using powerful <a href="mapshaper.html">Mapshaper</a>.</p>
-<p>We will introduce both tools in the next few sections.
-But before we do that, let’s talk about data normalization and why showing
-counts of hospitals per state doesn’t really tell a good story.</p>
+<p>To build a scatter chart, select the <em>two</em> columns that contain your numeric data,
+and go to <em>Insert &gt; Chart</em>. Google Sheets will likely to guess the chart type and you will see a scatterplot,
+but if not, you can always manually pick Scatter chart from the <em>Chart type</em> dropdown.
+Make sure your x-axis is set to Life Expectancy, and your Series shows Fertility.
+Note that both Life Expectancy and Fertility have <code>123</code> icon, meaning they are numeric.</p>
+<p>You will see a lot of scatter charts out there that do not label data points, and that’s okay.
+Some scatter plots are designed to show whether or not there is a correlation, and knowing
+which points are which is not important. But sometimes labels are important for your storytelling.</p>
+<p>In Chart editor, open the kebab menu (3 dots) of your Series dataset (Fertility), and then <em>Add labels</em>
+(see Figure <a href="scatter-bubble-google.html#fig:scatter-labels">5.32</a>).
+The labels added by default will be the x-values of points. To make Google Sheets read
+labels from the third column (<em>Country</em>), click the name of your label dataset (Life Expectancy),
+then <em>Select a data range</em> button in the upper-right corner of the dropdown,
+and choose cells in the relevant columns. Make sure to include the header (first row) if
+all other data ranges include it.</p>
+
+<div class="figure"><span id="fig:scatter-labels"></span>
+<img src="images/05-chart/scatter-labels-annotated.png" alt="In the chart’s Setup window, choose Add labels to the Series." width="350px" />
+<p class="caption">
+Figure 5.32: In the chart’s Setup window, choose <em>Add labels</em> to the Series.
+</p>
+</div>
+<p>Tip: You may notice that some data points are too close to edges, and their labels are cut off.
+To fix this, go to Customize tab of the Chart editor. There, you can set minimum and maximum values
+for both horizontal and vertical axes. Unlike in bar charts, axes in scatter plots do not have to start at zero.
+You can set your minimum and maximum values to be a few units below and above the extreme points of your
+data range.</p>
+</div>
+<div id="bubble-charts-with-3-columns" class="section level3 unnumbered" number="">
+<h3>Bubble Charts with 3 columns</h3>
+<p>In this tutorial, we will show you a little trick that you can use if you want a scatter chart
+with both data values displayed in a tooltip. We will use the same
+World Bank dataset as we did for the scatter plot.</p>
+<p>The bubble chart (more about the <em>proper</em> use of bubble charts in the next section)
+in Figure <a href="scatter-bubble-google.html#fig:bubble-3">5.33</a> shows the same data as our scatterplot on life expectancy vs fertility.</p>
+<p>In the interactive version of the chart, hover your cursor over each bubble (dot) to reveal a tooltip
+with the country name and the two data points.</p>
+
+<div class="figure"><span id="fig:bubble-3"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;amp;format=interactive" width="672" height="400px">
+</iframe>
+<p class="caption">
+Figure 5.33: This bubble chart is essentially a scatter chart, because no other dimensions (colors, sizes) are used. <a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit?usp=sharing">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/u/3/d/e/2PACX-1vQtMosshgyX6YoPpHo9QhSPk-ckOw1_yRryTF_vYJooBeWF13RaPv2IrGffcpaiqHPwfKFJAWY0HwA3/pubchart?oid=2105121864&amp;format=interactive">full-screen interactive version</a>.
+</p>
+</div>
+<p>The data for this example is available in <a href="https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/">Google Sheets Bubble chart with 3 columns template</a>.</p>
+<p>Notice that we moved the labels column (<em>Country</em>) to be the first one in the dataset,
+but the order shouldn’t matter in this case. So our first column is the label for each bubble,
+the second column is the data to be plotted on horizontal x-axis, and the third column (fertility)
+will be placed on the y-axis.</p>
+<p>Select all three columns, and go to <em>Insert &gt; Chart</em>. Google Sheets will likely create a stacked
+column chart by default, so choose <em>Bubble</em> from the Chart type dropdown window.</p>
+<p>If you want to remove labels from the bubbles, remove the <em>ID</em> series (click on the kebab menu &gt; Remove).</p>
+<p>Unfortunately, there is no easy way to reduce all bubbles to a uniformly smaller size.
+In the following section, we will introduce you to the proper way of using bubble charts.</p>
+</div>
+<div id="bubble-charts-with-5-columns" class="section level3 unnumbered" number="">
+<h3>Bubble Charts with 5 columns</h3>
+<p>Bubble charts are a good alternative to scatter charts if you need to include
+one or two extra series in addition to your x- and y-coordinates. One of those
+can be expressed through bubble size (bigger bubbles represent larger values).
+Another one can make use of color (best for categorical data).</p>
+<p>The bubble chart in Figure <a href="scatter-bubble-google.html#fig:bubble-5">5.34</a> shows fertility and life expectancy for a subset of the nations,
+with population (shown by bubble size) and region (shown by bubble color).
+Float your cursor over bubbles to view data details in the interactive version of the chart.</p>
+
+<div class="figure"><span id="fig:bubble-5"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;amp;format=interactive" width="672" height="400px">
+</iframe>
+<p class="caption">
+Figure 5.34: This bubble chart shows fertility and life expectancy for several countries, including their population (shown by bubble size) and region (shown by bubble color). <a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/">See data</a> by World Bank. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive">full-screen interactive version</a>.
+</p>
+</div>
+<p>The five-column dataset is available in this <a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/">Google Sheets Bubble chart with 5 columns template</a>.
+The columns are arranged in the following order: country label, x-axis value,
+y-axis value, color, and bubble size.</p>
+
+<div class="figure"><span id="fig:bubble-5-data"></span>
+<img src="images/05-chart/bubble-5-data.png" alt="Bubble chart data. Bubble size represents population, color – region." width="400px" />
+<p class="caption">
+Figure 5.35: Bubble chart data. Bubble size represents population, color – region.
+</p>
+</div>
+<p>Select all data and go to <em>Insert &gt; Chart</em>, and choose Bubble as the Chart type.
+Make sure your <em>ID</em>, <em>X-axis</em>, <em>Y-axis</em>, <em>Series</em>, and <em>Size</em> fields
+contain the series you want to display, and make sure to have <em>Use row 1 as headers</em> option checked.</p>
+<p>To change labels color, go to Customize tab of the Chart editor, and set Text color under the Bubble menu.
+Make it gray or black, so that it won’t interfere with the bubble colors themselves.</p>
+<p>Tip: If some of your bubbles are too close to the borders, set Min and Max values for the axis manually
+under Horizontal axis and Vertical axis menus.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="bulk-geocode.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="normalize.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pie-line-area-google.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chart-datawrapper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -406,7 +487,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/12-transform.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/05-chart.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

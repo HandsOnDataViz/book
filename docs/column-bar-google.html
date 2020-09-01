@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Pivot Address-Level Point Data into Polygon Data | Hands-On Data Visualization</title>
+  <title>–Column and Bar Charts | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Pivot Address-Level Point Data into Polygon Data | Hands-On Data Visualization" />
+  <meta property="og:title" content="–Column and Bar Charts | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Pivot Address-Level Point Data into Polygon Data | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="–Column and Bar Charts | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="bulk-geocode.html"/>
-<link rel="next" href="normalize.html"/>
+<link rel="prev" href="chart-google-sheets.html"/>
+<link rel="next" href="pie-line-area-google.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -305,69 +305,215 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="pivot-point-to-polygon" class="section level2 unnumbered" number="">
-<h2>Pivot Address-Level Point Data into Polygon Data</h2>
-<p>If you deal with geographical data, you may find yourself in a situation where
-you have a list of addresses which need to be counted (<em>aggregated</em>) by area
-and displayed as a polygon map. In this case, a simple pivot table in a spreadsheet
-software can solve the problem.</p>
-<p>Note: A special case of a polygon map is a <em>choropleth</em> map,
-which represents polygons that are colored in a particular way to represent underlying values.
-A lot of polygon maps end up being <em>choropleth</em> maps, so we will be using this term a lot in this book.</p>
-<p>Let’s take a look at a <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">list of all hospitals</a>
-that are registered with the Medicare program in the United States. The dataset is
-stored and displayed by Socrata, a web database popular among government agencies and city administrations.
-This particular dataset has information on each hospital’s name,
-location (nicely divided into Address, City, State, and ZIP Code columns),
-a phone number and some other indicators, such as mortality and patient experience.</p>
-<p>Now, imagine you are given a task to create a choropleth map of total hospitals by US state.
-Instead of showing individual hospitals as points (as in Figuere <a href="pivot-point-to-polygon.html#fig:pivot-address">12.1</a>a ),
-you want darker shades of blue to represent states with more hospitals (as in Figure <a href="pivot-point-to-polygon.html#fig:pivot-address">12.1</a>b).</p>
-<p>(ref:pivot-address) You can count addresses by state (or other area) to produce polygon,
-or choropleth, maps instead of point maps.</p>
-<div class="figure"><span id="fig:pivot-address"></span>
-<img src="images/12-transform/pivot-address-annotated.png" alt="(ref:pivot-address)"  />
-<p class="caption">
-Figure 12.1: (ref:pivot-address)
-</p>
-</div>
-<p>First, save the database to your local machine by going to <em>Export &gt; Download &gt; CSV</em>
-of Socrata interface. Figure <a href="pivot-point-to-polygon.html#fig:pivot-address-export">12.2</a> shows where you can find the Export button.</p>
+<div id="column-bar-google" class="section level2 unnumbered" number="">
+<h2>–Column and Bar Charts</h2>
+<p>Column and bar charts are some of the most common visualization techniques to compare values across categories. Remember to use columns to display data vertically, and bars to display it horizontally when you have long data labels. This section focuses on why and how to use Google Sheets to build different types of interactive column (or bar) charts: grouped, separated, stacked, and histograms.</p>
+<div id="grouped-column-or-bar-charts" class="section level3 unnumbered" number="">
+<h3>Grouped Column or Bar Charts</h3>
+<p>A grouped column (or bar) chart is best to compare categories side-by-side. For example, if you wish to emphasize gender differences in obesity across age brackets, then format the male and female data series together in vertical columns in your Google Sheet, as shown in Figure <a href="column-bar-google.html#fig:column-grouped-data">5.10</a>. Now you can easily create a grouped column chart to displays these data series side-by-side, as shown in Figure <a href="column-bar-google.html#fig:column-grouped">5.11</a>.</p>
 
-<div class="figure"><span id="fig:pivot-address-export"></span>
-<img src="images/12-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
+<div class="figure"><span id="fig:column-grouped-data"></span>
+<img src="images/05-chart/column-grouped-data.png" alt="To create a grouped column (or bar) chart, format each data series vertically in Google Sheets." width="350px" />
 <p class="caption">
-Figure 12.2: In Socrata, you can export the entire dataset as a CSV.
+Figure 5.10: To create a grouped column (or bar) chart, format each data series vertically in Google Sheets.
 </p>
 </div>
-<p>Next, open the file in your favorite spreadsheet tool. If you use Google Sheets,
-use <em>File &gt; Import &gt; Upload</em> to import CSV data. Make sure your address columns are present,
-and move on to creating a pivot table (in Google Sheets, go to <em>Data &gt; Pivot table</em>, make sure the entire data range
-is selected, and click <em>Create</em>). In the pivot table, set <em>Rows</em> to <em>State</em>, because
-we want to get counts by state. Next, set pivot table’s <em>Values</em> to <em>State</em>—or really any other
-column that has no missing values—and choose <em>Summarize by: COUNTA</em>. Voila!</p>
 
-<div class="figure"><span id="fig:pivot-address-sheet"></span>
-<img src="images/12-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
+<div class="figure"><span id="fig:column-grouped"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;amp;format=interactive" width="672" height="400px">
+</iframe>
 <p class="caption">
-Figure 12.3: Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
+Figure 5.11: Grouped column chart: Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive">interactive version</a>. Data from <a href="http://stateofobesity.org/files/stateofobesity2016.pdf">StateOfObesity.org</a>.
 </p>
 </div>
-<p>Your aggregated dataset is ready, so save it as a CSV. If you use Google Sheets,
-go to <em>File &gt; Download &gt; Comma-separated values (.csv, current sheet)</em>.
-You can now merge this dataset with your polygons manually using editing capabilities of
-<a href="geojsonio.html">GeoJson.io</a>, or merge it all in one go using powerful <a href="mapshaper.html">Mapshaper</a>.</p>
-<p>We will introduce both tools in the next few sections.
-But before we do that, let’s talk about data normalization and why showing
-counts of hospitals per state doesn’t really tell a good story.</p>
+<p>To create your own interactive grouped column (or bar) chart, use our template and follow these steps.</p>
+<ol style="list-style-type: decimal">
+<li>Open our <a href="https://docs.google.com/spreadsheets/d/1ltA9siijVSDkTE3fzB3UaWHO7dotBIrGH4R9wI_Qyqw/">Grouped Column chart template in Google Sheets</a> with US obesity data by gender and age. Sign in to your account, and go to <em>File &gt; Make a Copy</em> to save a version you can edit to your own Google Drive, as shown in Figure <a href="column-bar-google.html#fig:file-make-copy2">5.12</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:file-make-copy2"></span>
+<img src="images/05-chart/file-make-copy2.png" alt="Make your own copy of the Google Sheet template." width="250px" />
+<p class="caption">
+Figure 5.12: Make your own copy of the Google Sheet template.
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>To remove the current chart from your copy of the spreadsheet, float your cursor to the top-right corner of the chart to make the 3-dot kebab menu appear, and select <em>Delete</em>, as shown in Figure <a href="column-bar-google.html#fig:delete-chart">5.13</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:delete-chart"></span>
+<img src="images/05-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot kebab menu appear, and select Delete." width="180px" />
+<p class="caption">
+Figure 5.13: Float cursor in top-right corner of the chart to make the 3-dot kebab menu appear, and select Delete.
+</p>
+</div>
+<p>Note: Another name for the 3-dot menu symbol is the “kebab menu” because it resembles Middle Eastern
+food cooked on a skewer, in contrast to the three-line “hamburger menu” on many mobile devices,
+as shown in Figure <a href="column-bar-google.html#fig:menu-hamburger-kebab">5.14</a>. Software developers must be hungry.</p>
+
+<div class="figure"><span id="fig:menu-hamburger-kebab"></span>
+<img src="images/05-chart/menu-hamburger-kebab.png" alt="Distinguish between the hamburger verus kebab menu icons."  />
+<p class="caption">
+Figure 5.14: Distinguish between the hamburger verus kebab menu icons.
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Format your data to make each column a data series (such as male and female), as shown in Figure <a href="column-bar-google.html#fig:column-grouped-data">5.10</a>, which means it will display as a separate color in the chart. Feel free to add more than two columns.</p></li>
+<li><p>Use your cursor to select only the data you wish to chart, then go to the <em>Insert</em> menu and select <em>Chart</em>, as shown in Figure <a href="column-bar-google.html#fig:column-grouped-insert">5.15</a>.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:column-grouped-insert"></span>
+<img src="images/05-chart/column-grouped-insert.png" alt="Select your data and Insert the Chart." width="250px" />
+<p class="caption">
+Figure 5.15: Select your data and Insert the Chart.
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>In the Chart Editor, change the default selection to <em>Column chart</em>, with <em>Stacking none</em>, to display Grouped Columns, as shown in Figure <a href="column-bar-google.html#fig:column-grouped-editor">5.16</a>. Or select <em>Horizontal bar chart</em> if you have longer labels.</li>
+</ol>
+
+<div class="figure"><span id="fig:column-grouped-editor"></span>
+<img src="images/05-chart/column-grouped-editor.png" alt="Change the default to Column chart, with Stacking none." width="250px" />
+<p class="caption">
+Figure 5.16: Change the default to Column chart, with Stacking none.
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>To customize title, labels, and more, in the Chart Editor select <em>Customize</em>, as shown in Figure <a href="column-bar-google.html#fig:chart-editor-customize">5.17</a>. Also, you can select the chart and axis titles to edit them.</li>
+</ol>
+
+<div class="figure"><span id="fig:chart-editor-customize"></span>
+<img src="images/05-chart/chart-editor-customize.png" alt="Select Customize to edit title, labels, and more." width="250px" />
+<p class="caption">
+Figure 5.17: Select Customize to edit title, labels, and more.
+</p>
+</div>
+<ol start="9" style="list-style-type: decimal">
+<li>To make your data public, go to the upper-right corner of your sheet to click the Share button, and in the next screen, click the words “Change to anyone with the link,” as shown in Figure <a href="column-bar-google.html#fig:share-button-sheet">5.18</a>. This means your sheet is no longer Restricted to only you, but can be viewed by anyone with the link. See additional options.</li>
+</ol>
+
+<div class="figure"><span id="fig:share-button-sheet"></span>
+<img src="images/05-chart/share-button-sheet-annotated.png" alt="Click the Share button and then click Change to anyone with the link to make your data public." width="350px" />
+<p class="caption">
+Figure 5.18: Click the Share button and then click <em>Change to anyone with the link</em> to make your data public.
+</p>
+</div>
+<ol start="10" style="list-style-type: decimal">
+<li>To embed an interactive version of your chart in another web page, click the kebab menu in the upper-right corner of your chart, and select Publish Chart, as shown in Figure <a href="column-bar-google.html#fig:chart-publish">5.19</a>. In the next screen, select Embed and press the Publish button. See <a href="embed.html">Chapter 8: Embed on the Web</a> to learn what to do with the iframe code.</li>
+</ol>
+
+<div class="figure"><span id="fig:chart-publish"></span>
+<img src="images/05-chart/chart-publish.png" alt="Select Publish Chart to embed an interactive chart on another web page." width="200px" />
+<p class="caption">
+Figure 5.19: Select Publish Chart to embed an interactive chart on another web page.
+</p>
+</div>
+<p>Note: Currently, there is no easy way to cite or link to your source data inside a Google Sheets chart.
+Instead, cite and link to your source data in the text of the web page. Remember that citing your sources
+adds credibility to your work.</p>
+</div>
+<div id="separated-column-or-bar-charts" class="section level3 unnumbered" number="">
+<h3>Separated Column or Bar Charts</h3>
+<p>A separated column (or bar) chart is best to compare categories in separate clusters. For example, imagine you wish to emphasize calorie counts for selected foods offered at two different restaurants, Starbucks and McDonalds. Format the restaurant data in vertical columns in your Google Sheet, as shown in Figure <a href="column-bar-google.html#fig:bar-separated-data">5.20</a>. Since food items are unique to each restaurant, only enter calorie data in the appropriate column, and leave other cells blank. Now you can easily create a separated bar (or column) chart that displays the restaurant data in different clusters, as shown in Figure <a href="column-bar-google.html#fig:bar-separated">5.21</a>. Unlike the grouped column chart previously shown in Figure <a href="column-bar-google.html#fig:column-grouped">5.11</a>, here the bars are separated from each other, because we do not wish to draw comparisons between food items that are unique to each restaurant. Also, our chart displays horizontal bars (not columns) because our some data labels are long.</p>
+
+<div class="figure"><span id="fig:bar-separated-data"></span>
+<img src="images/05-chart/bar-separated-data.png" alt="To create a separated bar (or column) chart, format each data series vertically, and leave cells blank where appropriate."  />
+<p class="caption">
+Figure 5.20: To create a separated bar (or column) chart, format each data series vertically, and leave cells blank where appropriate.
+</p>
+</div>
+
+<div class="figure"><span id="fig:bar-separated"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;amp;format=interactive" width="672" height="400px">
+</iframe>
+<p class="caption">
+Figure 5.21: Separated bar chart: Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive">full-screen interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126">Starbucks and McDonalds</a>.
+</p>
+</div>
+<p>Create your own version using our <a href="https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/">Separated Bar Chart in Google Sheets template</a> with Starbucks and McDonalds data. Organize each data series vertically so that it becomes its own color in the chart. Leave cells blank when no direct comparisons are appropriate. The remainder of the steps are similar to the grouped column chart tutorial above.</p>
+</div>
+<div id="stacked-column-or-bar-charts" class="section level3 unnumbered" number="">
+<h3>Stacked Column or Bar Charts</h3>
+<p>Stacked column (or bar) charts are best to compare subcategories, or parts of a whole. For example, if you wish to compare the percentage of overweight residents across nations, format each weight-level data series in vertical columns in your Google Sheet, as shown in Figure <a href="column-bar-google.html#fig:column-stacked-data">5.22</a>. Now you can easily create a stacked column (or bar) chart that displays comparisons of weight-level subcategories across nations, as shown in Figure <a href="column-bar-google.html#fig:column-stacked">5.23</a>. Often it’s better to use a stacked chart instead of multiple pie charts, because people can see differences more precisely in rectangular stacks than in circular pie slices.</p>
+
+<div class="figure"><span id="fig:column-stacked-data"></span>
+<img src="images/05-chart/column-stacked-data.png" alt="To create a stacked column (or bar) chart, format each data series vertically in Google Sheets." width="350px" />
+<p class="caption">
+Figure 5.22: To create a stacked column (or bar) chart, format each data series vertically in Google Sheets.
+</p>
+</div>
+
+<div class="figure"><span id="fig:column-stacked"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;amp;format=interactive" width="672" height="400px">
+</iframe>
+<p class="caption">
+Figure 5.23: Stacked column chart: Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive">interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691">WHO and CDC</a>.
+</p>
+</div>
+<p>Create your own version using our <a href="https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/">Stacked Column Chart in Google Sheets template</a> with international weight-level data.
+Organize each data series vertically so that it becomes its own color in the chart. In the Chart Editor window, choose <em>Chart Type &gt; Stacked column chart</em> (or choose <em>Stacked bar chart</em> if you have long data labels). The rest of the steps are similar to the ones above.</p>
+<p>To change the color of a data series (for example, to show Overweight category in red), click the kebab menu in the top-right corner of the chart, then go to <em>Edit Chart &gt; Customize &gt; Series</em>. Then choose the appropriate series from the dropdown menu, and set its color in the dropdown menu, as shown in Figure <a href="column-bar-google.html#fig:column-stacked-edit-series">5.24</a>.</p>
+
+<div class="figure"><span id="fig:column-stacked-edit-series"></span>
+<img src="images/05-chart/column-stacked-edit-series.png" alt="To edit a column color, select Edit Chart - Customize - Series." width="550px" />
+<p class="caption">
+Figure 5.24: To edit a column color, select <em>Edit Chart - Customize - Series</em>.
+</p>
+</div>
+</div>
+<div id="histograms" class="section level3 unnumbered" number="">
+<h3>Histograms</h3>
+<p>TODO: START AGAIN HERE to make screenshots and templates more consistent with above.</p>
+<p>A histogram is a specific type of bar chart that represents distribution of items, whether numerical
+or categorical. To build a histogram, you need to assign each data point to one of
+the non-overlapping <em>buckets</em> (or <em>bins</em>).</p>
+<p>Let’s say you want to know what time of day you are more likely to get an email.
+One approach would be to download metadata about all emails you received in 2020,
+and assign them to a bucket between 0 and 23 according to the email hour.
+Hours will become your bins, and email counts will be your frequency data.
+Then your final dataset would look something like this:</p>
+<pre><code>| Hour | Emails |
+| ---- | ------ |
+| 0    | 12     |
+| 1    | 11     |
+| 2    | 7      |
+.................
+| 22   | 34     |
+| 23   | 22     |</code></pre>
+<p>You can now make a histogram. The good news is, Google Sheets considers histograms to
+be regular column charts, so you should be able to use a previous tutorial to make one.</p>
+<p>Select two columns with the data you want to visualize,
+and go to Insert &gt; Chart. In the Chart editor window, in the Setup tab, select Chart type &gt; Column chart. See the result in Figure <a href="column-bar-google.html#fig:histogram">5.25</a></p>
+
+<div class="figure"><span id="fig:histogram"></span>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;amp;format=interactive" width="672" height="400px">
+</iframe>
+<p class="caption">
+Figure 5.25: Histogram chart with <a href="https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=0">fictitious source data</a>. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive">full-screen interactive version</a>.
+</p>
+</div>
+<p>If you wish to use our fictional email dataset to create your own histogram, you can make a copy of the
+<a href="https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit?usp=sharing">Histogram Chart template</a>.</p>
+<p>Bins in a histogram should span (in other words, “cover”) the entire range of values of your dataset.
+This way you don’t leave out any data. We recommend you use bins of the same size (like 24 1-hour bins, or four 6-hour bins) to ensure
+readers can compare across bars. For example, if you want to create a less detailed histogram, you can combine hours into larger bins, such as
+<em>Morning</em>, <em>Afternoon</em>, <em>Evening</em>, and <em>Night</em>
+to cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively. Then your dataset will look like:</p>
+<pre><code>| TimeOfDay | Emails |
+| --------- | ------ |
+| Morning   | 353    |
+| Afternoon | 497    |
+| Evening   | 279    |
+| Night     | 37     |</code></pre>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="bulk-geocode.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="normalize.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chart-google-sheets.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pie-line-area-google.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -406,7 +552,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/12-transform.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/05-chart.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

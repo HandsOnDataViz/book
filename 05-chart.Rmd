@@ -226,10 +226,10 @@ has robust support for charting. In this section, we will start by creating thre
 
 Like most easy-to-use tools, Google Sheets has its shortcomings. You won't be able to annotate or highlight items inside your charts, and there's no easy way to cite your source or link to your Google Sheets data inside your chart. Furthermore, there are limitations within certain types of charts, such as the inability to control the data that appears in the tooltips for XY scatter charts. But Google Sheets excels at helping you to *quickly* create good-looking interactive charts from your data. But you *will* be able to *quickly* make good-looking interactive charts. If Google Sheets does not meet your needs, refer back to Table \@ref(tab:chart-types) for other types of chart tools and tutorials.
 
-### Column and Bar Charts with Google Sheets {- #column-bar-google}
-Column and bar charts are some of the most common visualization techniques to compare values across categories. Remember to use columns to display data vertically, and bars to display it horizontally, when you need to display long data labels. This section focuses on why and how to use Google Sheets to build different types of interactive column (or bar) charts: grouped, separated, and stacked.
+## --Column and Bar Charts {- #column-bar-google}
+Column and bar charts are some of the most common visualization techniques to compare values across categories. Remember to use columns to display data vertically, and bars to display it horizontally when you have long data labels. This section focuses on why and how to use Google Sheets to build different types of interactive column (or bar) charts: grouped, separated, stacked, and histograms.
 
-#### Grouped Column and Bar Charts {-}
+### Grouped Column or Bar Charts {-}
 A grouped column (or bar) chart is best to compare categories side-by-side. For example, if you wish to emphasize gender differences in obesity across age brackets, then format the male and female data series together in vertical columns in your Google Sheet, as shown in Figure \@ref(fig:column-grouped-data). Now you can easily create a grouped column chart to displays these data series side-by-side, as shown in Figure \@ref(fig:column-grouped).  
 
 (ref:column-grouped-data) To create a grouped column (or bar) chart, format each data series vertically in Google Sheets.
@@ -266,7 +266,7 @@ Note: Another name for the 3-dot menu symbol is the "kebab menu" because it rese
 food cooked on a skewer, in contrast to the three-line "hamburger menu" on many mobile devices,
 as shown in Figure \@ref(fig:menu-hamburger-kebab). Software developers must be hungry.
 
-(ref:menu-hamburger-kebab) Distinguish between the kebab verus hamburger menu icons.
+(ref:menu-hamburger-kebab) Distinguish between the hamburger verus kebab menu icons.
 
 ```{r menu-hamburger-kebab, fig.cap="(ref:menu-hamburger-kebab)"}
 knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
@@ -318,7 +318,7 @@ Note: Currently, there is no easy way to cite or link to your source data inside
 Instead, cite and link to your source data in the text of the web page. Remember that citing your sources
 adds credibility to your work.
 
-#### Separated Column and Bar Charts with Google Sheets {-}
+### Separated Column or Bar Charts {-}
 A separated column (or bar) chart is best to compare categories in separate clusters. For example, imagine you wish to emphasize calorie counts for selected foods offered at two different restaurants, Starbucks and McDonalds. Format the restaurant data in vertical columns in your Google Sheet, as shown in Figure \@ref(fig:bar-separated-data). Since food items are unique to each restaurant, only enter calorie data in the appropriate column, and leave other cells blank. Now you can easily create a separated bar (or column) chart that displays the restaurant data in different clusters, as shown in Figure \@ref(fig:bar-separated). Unlike the grouped column chart previously shown in Figure \@ref(fig:column-grouped), here the bars are separated from each other, because we do not wish to draw comparisons between food items that are unique to each restaurant. Also, our chart displays horizontal bars (not columns) because our some data labels are long.
 
 (ref:bar-separated-data) To create a separated bar (or column) chart, format each data series vertically, and leave cells blank where appropriate.
@@ -335,7 +335,7 @@ if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsh
 
 Create your own version using our [Separated Bar Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/) with Starbucks and McDonalds data. Organize each data series vertically so that it becomes its own color in the chart. Leave cells blank when no direct comparisons are appropriate. The remainder of the steps are similar to the grouped column chart tutorial above.
 
-#### Stacked Column and Bar Charts with Google Sheets {-}
+### Stacked Column or Bar Charts {-}
 Stacked column (or bar) charts are best to compare subcategories, or parts of a whole.  For example, if you wish to compare the percentage of overweight residents across nations, format each weight-level data series in vertical columns in your Google Sheet, as shown in Figure \@ref(fig:column-stacked-data). Now you can easily create a stacked column (or bar) chart that displays comparisons of weight-level subcategories across nations, as shown in Figure \@ref(fig:column-stacked). Often it's better to use a stacked chart instead of multiple pie charts, because people can see differences more precisely in rectangular stacks than in circular pie slices.
 
 (ref:column-stacked-data) To create a stacked column (or bar) chart, format each data series vertically in Google Sheets.
@@ -361,7 +361,7 @@ To change the color of a data series (for example, to show Overweight category i
  knitr::include_graphics("images/05-chart/column-stacked-edit-series.png")
 ```
 
-### Histograms with Google Sheets {-}
+### Histograms {-}
 
 TODO: START AGAIN HERE to make screenshots and templates more consistent with above.
 
@@ -415,9 +415,10 @@ to cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively. Then yo
 | Night     | 37     |
 ```
 
-### Pie, Line, and Area Charts with Google Sheets {- #pie-line-area-google}
+## --Pie, Line, and Area Charts {- #pie-line-area-google}
+TODO Expand: This section focuses on why and how to use Google Sheets to build different types of charts: pie, line, and stacks area.
 
-#### Pie Chart {-}
+### Pie Charts {-}
 As we mentioned in the [Chart Aesthetics section](chart-design.html), you need to be careful when using pie charts.
 First, remember to not have too many slices (ideally you should limit slices to 5). They should be arranged
 from largest to smallest and start at 12 o'clock. To separate slices, you can use different slice colors,
@@ -457,7 +458,7 @@ You will see that the chart updates automatically.
 Right-click on the chart, and choose *Chart & axis titles > Chart title* to add a meaningful title.
 In *Customize* tab of the Chart editor, you can also change colors and add borders to slices.
 
-#### Line Chart {-}
+### Line Charts {-}
 The most common use of line charts is to represent values at different points in time,
 in other words to show change over time. The line chart in Figure \@ref(fig:line) shows per-capita
 meat availability in the US for the past 110 years. You can see that
@@ -486,7 +487,7 @@ If you wish to use it, just make a copy to your own Google Drive from the File m
 Select the data, and choose *Insert > Chart*. It is possible Google Sheets will create a line chart right away.
 If not, in Chart editor in tab Setup, select  *Line chart* from the Chart type dropdown list.
 
-#### Stacked Area Chart {-}
+### Stacked Area Charts {-}
 The line chart in the previous example made it possible to see how individual meat availability changed over time.
 It was hard, however, to estimate if the overall meat availability went up or down.
 (That is, of course, if we assume that beef, pork, and chicken are the only meats we eat).
@@ -510,12 +511,14 @@ Set up the data exactly as you would with a line chart (first column is labels f
 second and following columns are series, or lines). Select it, and choose *Insert > Chart*.
 In the Chart editor, in tab Setup, select  *Stacked area chart* from the Chart type dropdown list.
 
-### XY Scatter and Bubble Charts with Google Sheets {- #scatter-bubble-google}
+## --XY Scatter and Bubble Charts {- #scatter-bubble-google}
 Consider using XY scatter charts, also known as scatterplots, to display data coordinates to show the relationship between
 two variables. The first example below compares the relationships between life expectancy (shown on the X axis) and fertility (shown on the Y axis),
 which each nation is represented as a dot (an X-Y coordinate).
 Bubble charts are basically scatter charts on steroids, meaning that they can display the relationship of up to five variables.
 Further below you'll build a bubble chart based on the same XY life expectancy-fertility dataset, with added variables for population (displayed as circle size) and region of the world (displayed as circle color).
+
+TODO Expand: This section focuses on why and how to use Google Sheets to build different types of scatter or bubble charts with two, three, or five variables.
 
 Fancier bubble charts animate the circles to represent one more variable: change over time.
 Such animated bubble charts were popularized by Hans Rosling, a renowned Swedish professor
@@ -525,7 +528,7 @@ Note: We recommend you watch one of Hans Rosling's famous [TED talks](https://ww
 to see animated bar charts in action. You can also visit [Gapminder Foundation website](https://www.gapminder.org/) to see more data visualizations
 and learn more about Hans's work and legacy.
 
-#### XY Scatter chart {-}
+### XY Scatter Charts {-}
 The scatter chart in Figure \@ref(fig:scatter) uses World Bank data to reveal a downward slope:
 nations with lower fertility (births per woman)
 tend to have higher life expectancy. You can also phrase is the other way,
@@ -585,7 +588,7 @@ for both horizontal and vertical axes. Unlike in bar charts, axes in scatter plo
 You can set your minimum and maximum values to be a few units below and above the extreme points of your
 data range.
 
-#### Bubble chart with 3 columns {-}
+### Bubble Charts with 3 columns {-}
 In this tutorial, we will show you a little trick that you can use if you want a scatter chart
 with both data values displayed in a tooltip. We will use the same
 World Bank dataset as we did for the scatter plot.
@@ -617,7 +620,7 @@ If you want to remove labels from the bubbles, remove the *ID* series (click on 
 Unfortunately, there is no easy way to reduce all bubbles to a uniformly smaller size.
 In the following section, we will introduce you to the proper way of using bubble charts.
 
-#### Bubble chart with 5 columns {-}
+### Bubble Charts with 5 columns {-}
 Bubble charts are a good alternative to scatter charts if you need to include
 one or two extra series in addition to your x- and y-coordinates. One of those
 can be expressed through bubble size (bigger bubbles represent larger values).

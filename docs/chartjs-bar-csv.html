@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-31" />
+<meta name="date" content="2020-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -309,10 +309,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartjs-bar-csv" class="section level2 unnumbered" number="">
 <h2>Bar Chart.js with CSV Data</h2>
-<p>Bar charts (vertical bar charts are often called <em>column charts</em>) can be used to compare categorical data. The y-axis (or x-axis for horizontal bar chart) should always start at 0.</p>
-<p>TODO: add R code-chunk iframe of src below</p>
-<p>Demo: <a href="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html</a></p>
-<p>Source and instructions: <a href="https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart" class="uri">https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart</a></p>
+<p>Bar charts (vertical bar charts are often called <em>column charts</em>) can be used to compare categorical data.
+The y-axis (or x-axis for horizontal bar chart) should always start at 0.</p>
+
+<div class="figure"><span id="fig:chartjs-demo-bar"></span>
+<iframe src="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html" width="672" height="500px">
+</iframe>
+<p class="caption">
+Figure 10.1: Interactive bar chart with Chart.js. See <a href="https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart">detailed instructions on GitHub</a>.
+</p>
+</div>
+<div id="bar-chart.js-with-csv-data-with-error-bars" class="section level3 unnumbered" number="">
+<h3>Bar Chart.js with CSV Data (with Error Bars)</h3>
+<p>If your data comes with uncertainty (margins of error), we recommend you
+show it in your visualizations. The bar chart template shown in Figure <a href="chartjs-bar-csv.html#fig:chartjs-demo-bar-error-bars">10.2</a>
+shows median and mean (average) income for select US states. You can notice that error bars
+are larger for less populated states, such as Alaska, Vermont, and Wyoming. Data for the two of the most populous
+states, California and Texas, have tiny margins of error.</p>
+
+<div class="figure"><span id="fig:chartjs-demo-bar-error-bars"></span>
+<iframe src="https://handsondataviz.github.io/chartjs-templates/bar-chart-with-error-bars/index.html" width="672" height="500px">
+</iframe>
+<p class="caption">
+Figure 10.2: Interactive bar chart with error bars in Chart.js. See <a href="https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart-with-error-bars">detailed instructions on GitHub</a>.
+</p>
+</div>
+</div>
 </div>
             </section>
 

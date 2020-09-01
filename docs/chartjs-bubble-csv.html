@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-31" />
+<meta name="date" content="2020-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -311,9 +311,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Bubble Chart.js with CSV Data</h2>
 <p>Bubble charts are similar to <a href="chartjs-scatter-csv.html">scatter plots</a>. The size of each dot (marker) is used to represent an additional dimension.</p>
 <p>In the demo below, the bubble chart shows the relationship between median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut. The size of data point (marker) corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts.</p>
-<p>TODO: add R code-chunk iframe of src below</p>
-<p>Demo: <a href="https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html" class="uri">https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html</a></p>
-<p>Source and instructions: <a href="https://github.com/handsondataviz/chartjs-templates/tree/master/bubble-chart" class="uri">https://github.com/handsondataviz/chartjs-templates/tree/master/bubble-chart</a></p>
+
+<div class="figure"><span id="fig:chartjs-demo-bubble"></span>
+<iframe src="https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html" width="672" height="500px">
+</iframe>
+<p class="caption">
+Figure 10.5: Interactive bubble chart with Chart.js. See <a href="https://github.com/handsondataviz/chartjs-templates/tree/master/bubble-chart">detailed instructions on GitHub</a>.
+</p>
+</div>
 <div id="tip-use-semi-transparent-circles" class="section level4 unnumbered" number="">
 <h4>Tip: Use semi-transparent circles</h4>
 <p>Data points may obstruct each other. To avoid this, play with color transparency. For example, <code>rgba(160, 0, 0, 0.5)</code> is a semi-transparent red in RGBA color model. The <code>a</code> stands for <code>alpha</code>, and is a number between 0 and 1, where 1 is solid, and 0 is completely transparent. Using transparency, you will be able to see data points that are hidden behind bigger neighbors.</p>

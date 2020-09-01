@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-08-31" />
+<meta name="date" content="2020-09-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -416,8 +416,12 @@ that should have just two distinct values, North Korea and South Korea!</p>
 <li>To begin standardizing spellings, click on the arrow-down button of Country column header,
 and choose <em>Edit cells</em> &gt; <em>Cluster and edit</em>. You will see a window like the one shown in Figure
 <a href="open-refine.html#fig:openrefine-cluster">4.12</a>.</li>
-<li>You will have a choice of two clustering methods, <em>key collision</em> or <em>nearest neighbor</em>. Both
-methods can be powered by different functions, but let’s leave the default <em>key collision</em> with <em>fingerprint</em> function.</li>
+<li>You will have a choice of two clustering methods, <em>key collision</em> or <em>nearest neighbor</em>. Key collision
+clustering is a much faster technique that is appropriate for larger datasets, but it is less flexible.
+Nearest neighbor is a more computationally expensive approach and will be slow on larger datasets,
+but it allows for greater fine-tuning and precision. Both methods can be powered by different functions,
+which you can read about <a href="https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth">on the project’s Wiki page</a>.
+For the purpose of this exercise, let’s leave the default <em>key collision</em> method with <em>fingerprint</em> function.</li>
 <li>OpenRefine will calculate a list of clusters. <em>Values in Cluster</em> column contains grouped spellings
 that OpenRefine considers the same. If you agree with a grouping, check the <em>Merge?</em> box, and assign
 the “true” value to the <em>New Cell Value</em> input box (see first cluster in Figure <a href="open-refine.html#fig:openrefine-cluster">4.12</a>).

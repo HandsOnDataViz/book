@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Find and Replace with Blank | Hands-On Data Visualization</title>
+  <title>–XY Scatter Chart | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Find and Replace with Blank | Hands-On Data Visualization" />
+  <meta property="og:title" content="–XY Scatter Chart | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Find and Replace with Blank | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="–XY Scatter Chart | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="clean.html"/>
-<link rel="next" href="split-data.html"/>
+<link rel="prev" href="chart-tableau-public.html"/>
+<link rel="next" href="filtered-line-chart-tableau.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -307,37 +307,132 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="find-and-replace" class="section level2 unnumbered" number="">
-<h2>Find and Replace with Blank</h2>
-<p>One of the simplest and most powerful cleanup tools inside your spreadsheet is the <em>Find and Replace</em> command. You can also use it to bulk-change different spellings of the same name, such as shortening a country’s name (from <em>Republic of India</em> to <em>India</em>), or expanding a name (from <em>US</em> to <em>United States</em>), or translating names (from <em>Italy</em> to <em>Italia</em>). Also, you can use find and replace with a blank entry to remove units of measurement that sometimes reside in the same cells as the numbers (such as changing <em>321 kg</em> to <em>321</em>).</p>
-<p>Let’s look at <em>Find and Replace</em> in practice. A common problem with US Census data is that geographic names contain unnecessary words. For example, when you download data on the population of Connecticut towns, the location column will contain the word “town” after every name:</p>
-<pre><code>Hartford town
-New Haven town
-Stamford town</code></pre>
-<p>But usually you want a clean list of towns, either to display in a chart or to merge with another dataset, like this:</p>
-<pre><code>Hartford
-New Haven
-Stamford</code></pre>
-<p>Let’s use <em>Find and Replace</em> on a sample US Census file we downloaded with 169 Connecticut town names and their populations, to remove the unwanted “town” label after each place name.</p>
+<div id="scatter-chart-tableau" class="section level2 unnumbered" number="">
+<h2>–XY Scatter Chart</h2>
+<p>Just to remind you, scatter charts plot two variables
+against each other, on x- and y-axis, revealing possible correlations.
+With Tableau Public, you can create an interactive scatter chart,
+letting users hover over points to view specific details.</p>
+<p>Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-demo">5.36</a> illustrates a
+strong relationship between Connecticut school district income and
+test scores.</p>
+
+<div class="figure"><span id="fig:tableau-xy-demo"></span>
+<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
+</iframe>
+<p class="caption">
+Figure 5.36: This scatterplot is made in Tableau Public an shows the relationship between household income and test scores in Connecticut school districts.
+</p>
+</div>
+<div id="install-tableau-and-get-data" class="section level4 unnumbered" number="">
+<h4>Install Tableau and Get Data</h4>
+<p>You can download Tableau Public for Windows or Mac from Tableau’s <a href="https://public.tableau.com">official
+website</a>. You will need to provide your email address.</p>
+<p>If you wish to use the dataset from the scatter plot in Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-demo">5.36</a>,
+you can <a href="data/ct-districts-income-grades-2009-13.xlsx">download the sample Excel file</a>.
+This data file consists of three columns: district, median household income, and grade levels
+(above/below national average for 6th grade Math and English test scores).
+The Notes tab explains how this data is based on the work of Sean Reardon et al.
+at the <a href="http://purl.stanford.edu/db586ns4974">Stanford Education Data Archive</a>,
+Motoko Rich et al. at <a href="http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html">The New York Times</a>,
+Andrew Ba Tran at <a href="http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/">TrendCT</a>,
+and the American Community Survey 2009-13 via <a href="http://socialexplorer.com">Social Explorer</a>.</p>
+</div>
+<div id="connect-data-and-create-a-scatterplot" class="section level4 unnumbered" number="">
+<h4>Connect Data and Create a Scatterplot</h4>
+<p>Tableau Public’s welcome page includes three sections: Connect, Open, and Discover.</p>
 <ol style="list-style-type: decimal">
-<li>Open the <a href="https://docs.google.com/spreadsheets/d/1kJI0xFedPUQBRfT9CEMAfIsggOmJv4wz_AdenraFDP4/edit#gid=1055822816">CT Town Geonames file in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</li>
-<li>Select the column you want to modify by clicking its header. If you don’t select a column,
-you will be searching and replacing in the entire spreadsheet.</li>
-<li>In the <em>Edit</em> menu, choose <em>Find and replace</em>. You will see the window like is shown in Figure <a href="find-and-replace.html#fig:sheets-find-replace">4.2</a>.</li>
-<li>In the <em>Find</em> field, type <code>town</code>, and be sure to <em>insert a blank space</em> before the word. If you do not insert a space, you will accidentally remove <em>town</em> from places such as <em>Newtown</em>. Also, you’ll accidentally create trailing spaces, or whitespace at the end of a line without any other characters following it, which can cause troubles in the future.</li>
-<li>Leave the <em>Replace with</em> field blank. Do not insert a space. Just leave it empty.</li>
-<li>The <em>Search</em> field should be set to the range you selected in step 2, or <em>All sheets</em> if you didn’t select anything.</li>
-<li>You have the option to <em>match case</em>. If checked, <code>town</code> and <code>Town</code> and <code>tOwN</code> will be treated differently. For our purpose, you can leave <em>match case</em> unchecked.</li>
-<li>Press the <em>Replace all</em> button. Since this sample file contains 169 towns, the window
-will state that 169 instances of “town” have been replaced.</li>
-<li>Inspect the resulting sheet. Make sure that places that include <em>town</em> in their name, such as <em>Newtown</em>, remained untouched.</li>
+<li><p>Under Connect, choose Microsoft Excel if you decided to use the sample dataset
+or your own Excel file. To load a CSV file, choose <em>Text file</em>.
+If your data is in Google Sheets, click <em>More…</em> and choose Google Sheets.
+Once you successfully connect to your data source, you will see it under Connections
+in the Data Source tab. Under Sheets, you will see two tables, <code>data</code> and <code>notes</code>.</p></li>
+<li><p>Drag <code>data</code> sheet into <em>Drag tables here</em> area, like is shown in Figure <a href="scatter-chart-tableau.html#fig:tableau-connect">5.37</a>.
+You will see the preview of the table under the drag-and-drop area.
+You have successfully connected one data source to Tableau Public, and you are ready
+to build your first chart.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-find-replace"></span>
-<img src="images/04-clean/sheets-find-replace-annotated.png" alt="Find and Replace window in Google Sheets."  />
+<div class="figure"><span id="fig:tableau-connect"></span>
+<img src="images/05-chart/tableau-connect-annotated.png" alt="Drag data sheet into Drag tables here area."  />
 <p class="caption">
-Figure 4.2: Find and Replace window in Google Sheets.
+Figure 5.37: Drag <code>data</code> sheet into <em>Drag tables here</em> area.
 </p>
+</div>
+<!-- TODO: Let's find out whether real first-time users can follow these steps! -->
+<ol start="3" style="list-style-type: decimal">
+<li><p>Go to <em>Sheet 1</em> tab (in the lower-left corner of the window) to view your worksheet.
+Although it may feel overwhelming at first, the key is learning
+where to drag items from the Data pane (left) into the main worksheet.
+Tableau marks all data fields as blue (discrete values, mostly text fields or numeric labels)
+or green (continuous values, mostly numbers).</p></li>
+<li><p>Drag the <em>Grade Levels</em> field into the <em>Rows</em> field above the charting area, which
+for now is just empty space. You can consult Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-dragging">5.38</a> for this
+and two following steps.
+Tableau will apply a summation function to it, and you will see the <code>SUM(Grade Levels)</code> appearing
+in the Rows row, and a blue bar in the charting area. It makes little sense so far, so let’s
+plot another data field.</p></li>
+<li><p>Drag <em>Median Household Income</em> to the <em>Columns</em> field (just above the Rows field).
+Tableau will once again apply the summation function, so you will see <code>SUM(Median Household Income)</code>
+in the Columns. The bar chart will transform into a scatter chart with just one data point
+in the upper-right corner. That is because the data for both is aggregated (remember the <code>SUM</code> function).</p></li>
+<li><p>We want to tell Tableau to disaggregate the household and grade levels variables. To do so,
+drag <em>District</em> dimension into the <em>Detail</em> box of the Marks card. You will now see
+a real scatter chart in the charting area. If you hover over points, you will see all three
+values associated with it.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:tableau-xy-dragging"></span>
+<img src="images/05-chart/tableau-xy-dragging-annotated.png" alt="Drag data fields to the right places in Tableau."  />
+<p class="caption">
+Figure 5.38: Drag data fields to the right places in Tableau.
+</p>
+</div>
+</div>
+<div id="add-title-and-caption-and-publish" class="section level4 unnumbered" number="">
+<h4>Add Title and Caption, and Publish</h4>
+<p>Give your scatter chart a meaningful title by double-clicking on default <em>Sheet 1</em> title
+above the charting area.</p>
+<p>You will normally need to provide additional information about the chart,
+such as source of the data, who built the visualization and when, and other
+important things. You can do so inside a Caption, a text block that accompanies
+your Tableau visualization. In the menu, go to <em>Worksheet &gt; Show Caption</em>. Double-click
+the Caption block that appeared, and edit the text.</p>
+<p>As a result, your final worksheet will look like shown in Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-final">5.39</a>.</p>
+
+<div class="figure"><span id="fig:tableau-xy-final"></span>
+<img src="images/05-chart/tableau-xy-final-annotated.png" alt="This scatter chart is ready to be published."  />
+<p class="caption">
+Figure 5.39: This scatter chart is ready to be published.
+</p>
+</div>
+<p>Tip: In the dropdown above Columns section, change <em>Standard</em> to <em>Fit Width</em>
+to ensure your chart occupies 100% of available horizontal space.</p>
+<p>To publish the chart to the web,</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to <em>File &gt; Save to Tableau Public As…</em>. A window to sign in to your account will pop up.
+If you don’t have an account, click <em>Create one now for free</em> at the bottom.</p></li>
+<li><p>Once signed in, a window to set the workbook title will appear. Change the default <em>Book1</em> title
+to something meaningful, as this name will appear in the URL for your published work. Click Save.</p></li>
+<li><p>Once the dashboard is saved, Tableau Public will open up a window in your default browser
+with the visualization. In the green ribbon above the chart, click <em>Edit Details</em>
+to edit the title or description. Under <em>Toolbar Settings</em>, see checkbox to
+<em>Allow others to download or explore and copy this workbook and its data</em>
+(Figure <a href="scatter-chart-tableau.html#fig:tableau-toolbar-settings">5.40</a>), and enable/disable
+it as you think is appropriate. As advocates for open and accessible data, we recommend
+leaving the box checked.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:tableau-toolbar-settings"></span>
+<img src="images/05-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
+<p class="caption">
+Figure 5.40: This scatter chart is ready to be published.
+</p>
+</div>
+<p>See the <a href="embed-tableau.html">Embed Tableau Public on Your Website</a> section of this book to insert the interactive version of your chart on a web page that you control.</p>
+<p>Tip: Your entire portfolio of Tableau Public visualizations is online at <code>https://public.tableau.com/profile/USERNAME</code>,
+where <code>USERNAME</code> is your unique username.</p>
+<p>To learn more, see <a href="https://public.tableau.com/en-us/s/resources">Tableau Public resources page</a>.</p>
 </div>
 </div>
             </section>
@@ -345,8 +440,8 @@ Figure 4.2: Find and Replace window in Google Sheets.
           </div>
         </div>
       </div>
-<a href="clean.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="split-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chart-tableau-public.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="filtered-line-chart-tableau.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -385,7 +480,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/04-clean.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/05-chart.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

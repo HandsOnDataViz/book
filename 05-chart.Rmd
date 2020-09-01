@@ -658,7 +658,7 @@ under Horizontal axis and Vertical axis menus.
 
 
 ## Datawrapper Charts {- #chart-datawrapper}
-TODO
+TODO: probably annotated chart?
 
 ## Tableau Public Charts {- #chart-tableau-public}
 
@@ -677,7 +677,7 @@ dive further, there are many great books on Tableau available.
 In this book, we will show you how to add datasets to Tableau Public, and how to [create a scatterplot](scatter-chart-tableau.html)
 and a [filtered line chart](filtered-line-chart-tableau.html).
 
-### XY Scatter Chart with Tableau Public {- #scatter-chart-tableau}
+## --XY Scatter Chart {- #scatter-chart-tableau}
 Just to remind you, scatter charts plot two variables
 against each other, on x- and y-axis, revealing possible correlations.
 With Tableau Public, you can create an interactive scatter chart,
@@ -812,7 +812,7 @@ where `USERNAME` is your unique username.
 To learn more, see [Tableau Public resources page](https://public.tableau.com/en-us/s/resources).
 
 
-### Filtered Line Chart with Tableau Public {- #filtered-line-chart-tableau}
+## --Filtered Line Chart {- #filtered-line-chart-tableau}
 
 One of the advantages of interactive visualizations over static (including printed)
 is the ability to store a lot more data, and show it only when required.

@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="chart-datawrapper.html"/>
-<link rel="next" href="map.html"/>
+<link rel="next" href="scatter-chart-tableau.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -199,6 +199,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>–XY Scatter and Bubble Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-tableau-public.html"><a href="chart-tableau-public.html"><i class="fa fa-check"></i>Tableau Public Charts</a></li>
+<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>–XY Scatter Chart</a></li>
+<li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>–Filtered Line Chart</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -318,236 +320,14 @@ We will show you the very basics enough to get started, and if you want to
 dive further, there are many great books on Tableau available.</p>
 <p>In this book, we will show you how to add datasets to Tableau Public, and how to <a href="scatter-chart-tableau.html">create a scatterplot</a>
 and a <a href="filtered-line-chart-tableau.html">filtered line chart</a>.</p>
-<div id="scatter-chart-tableau" class="section level3 unnumbered" number="">
-<h3>XY Scatter Chart with Tableau Public</h3>
-<p>Just to remind you, scatter charts plot two variables
-against each other, on x- and y-axis, revealing possible correlations.
-With Tableau Public, you can create an interactive scatter chart,
-letting users hover over points to view specific details.</p>
-<p>Figure <a href="chart-tableau-public.html#fig:tableau-xy-demo">5.36</a> illustrates a
-strong relationship between Connecticut school district income and
-test scores.</p>
-
-<div class="figure"><span id="fig:tableau-xy-demo"></span>
-<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
-</iframe>
-<p class="caption">
-Figure 5.36: This scatterplot is made in Tableau Public an shows the relationship between household income and test scores in Connecticut school districts.
-</p>
 </div>
-<div id="install-tableau-and-get-data" class="section level4 unnumbered" number="">
-<h4>Install Tableau and Get Data</h4>
-<p>You can download Tableau Public for Windows or Mac from Tableau’s <a href="https://public.tableau.com">official
-website</a>. You will need to provide your email address.</p>
-<p>If you wish to use the dataset from the scatter plot in Figure <a href="chart-tableau-public.html#fig:tableau-xy-demo">5.36</a>,
-you can <a href="data/ct-districts-income-grades-2009-13.xlsx">download the sample Excel file</a>.
-This data file consists of three columns: district, median household income, and grade levels
-(above/below national average for 6th grade Math and English test scores).
-The Notes tab explains how this data is based on the work of Sean Reardon et al.
-at the <a href="http://purl.stanford.edu/db586ns4974">Stanford Education Data Archive</a>,
-Motoko Rich et al. at <a href="http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html">The New York Times</a>,
-Andrew Ba Tran at <a href="http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/">TrendCT</a>,
-and the American Community Survey 2009-13 via <a href="http://socialexplorer.com">Social Explorer</a>.</p>
-</div>
-<div id="connect-data-and-create-a-scatterplot" class="section level4 unnumbered" number="">
-<h4>Connect Data and Create a Scatterplot</h4>
-<p>Tableau Public’s welcome page includes three sections: Connect, Open, and Discover.</p>
-<ol style="list-style-type: decimal">
-<li><p>Under Connect, choose Microsoft Excel if you decided to use the sample dataset
-or your own Excel file. To load a CSV file, choose <em>Text file</em>.
-If your data is in Google Sheets, click <em>More…</em> and choose Google Sheets.
-Once you successfully connect to your data source, you will see it under Connections
-in the Data Source tab. Under Sheets, you will see two tables, <code>data</code> and <code>notes</code>.</p></li>
-<li><p>Drag <code>data</code> sheet into <em>Drag tables here</em> area, like is shown in Figure <a href="chart-tableau-public.html#fig:tableau-connect">5.37</a>.
-You will see the preview of the table under the drag-and-drop area.
-You have successfully connected one data source to Tableau Public, and you are ready
-to build your first chart.</p></li>
-</ol>
-
-<div class="figure"><span id="fig:tableau-connect"></span>
-<img src="images/05-chart/tableau-connect-annotated.png" alt="Drag data sheet into Drag tables here area."  />
-<p class="caption">
-Figure 5.37: Drag <code>data</code> sheet into <em>Drag tables here</em> area.
-</p>
-</div>
-<!-- TODO: Let's find out whether real first-time users can follow these steps! -->
-<ol start="3" style="list-style-type: decimal">
-<li><p>Go to <em>Sheet 1</em> tab (in the lower-left corner of the window) to view your worksheet.
-Although it may feel overwhelming at first, the key is learning
-where to drag items from the Data pane (left) into the main worksheet.
-Tableau marks all data fields as blue (discrete values, mostly text fields or numeric labels)
-or green (continuous values, mostly numbers).</p></li>
-<li><p>Drag the <em>Grade Levels</em> field into the <em>Rows</em> field above the charting area, which
-for now is just empty space. You can consult Figure <a href="chart-tableau-public.html#fig:tableau-xy-dragging">5.38</a> for this
-and two following steps.
-Tableau will apply a summation function to it, and you will see the <code>SUM(Grade Levels)</code> appearing
-in the Rows row, and a blue bar in the charting area. It makes little sense so far, so let’s
-plot another data field.</p></li>
-<li><p>Drag <em>Median Household Income</em> to the <em>Columns</em> field (just above the Rows field).
-Tableau will once again apply the summation function, so you will see <code>SUM(Median Household Income)</code>
-in the Columns. The bar chart will transform into a scatter chart with just one data point
-in the upper-right corner. That is because the data for both is aggregated (remember the <code>SUM</code> function).</p></li>
-<li><p>We want to tell Tableau to disaggregate the household and grade levels variables. To do so,
-drag <em>District</em> dimension into the <em>Detail</em> box of the Marks card. You will now see
-a real scatter chart in the charting area. If you hover over points, you will see all three
-values associated with it.</p></li>
-</ol>
-
-<div class="figure"><span id="fig:tableau-xy-dragging"></span>
-<img src="images/05-chart/tableau-xy-dragging-annotated.png" alt="Drag data fields to the right places in Tableau."  />
-<p class="caption">
-Figure 5.38: Drag data fields to the right places in Tableau.
-</p>
-</div>
-</div>
-<div id="add-title-and-caption-and-publish" class="section level4 unnumbered" number="">
-<h4>Add Title and Caption, and Publish</h4>
-<p>Give your scatter chart a meaningful title by double-clicking on default <em>Sheet 1</em> title
-above the charting area.</p>
-<p>You will normally need to provide additional information about the chart,
-such as source of the data, who built the visualization and when, and other
-important things. You can do so inside a Caption, a text block that accompanies
-your Tableau visualization. In the menu, go to <em>Worksheet &gt; Show Caption</em>. Double-click
-the Caption block that appeared, and edit the text.</p>
-<p>As a result, your final worksheet will look like shown in Figure <a href="chart-tableau-public.html#fig:tableau-xy-final">5.39</a>.</p>
-
-<div class="figure"><span id="fig:tableau-xy-final"></span>
-<img src="images/05-chart/tableau-xy-final-annotated.png" alt="This scatter chart is ready to be published."  />
-<p class="caption">
-Figure 5.39: This scatter chart is ready to be published.
-</p>
-</div>
-<p>Tip: In the dropdown above Columns section, change <em>Standard</em> to <em>Fit Width</em>
-to ensure your chart occupies 100% of available horizontal space.</p>
-<p>To publish the chart to the web,</p>
-<ol style="list-style-type: decimal">
-<li><p>Go to <em>File &gt; Save to Tableau Public As…</em>. A window to sign in to your account will pop up.
-If you don’t have an account, click <em>Create one now for free</em> at the bottom.</p></li>
-<li><p>Once signed in, a window to set the workbook title will appear. Change the default <em>Book1</em> title
-to something meaningful, as this name will appear in the URL for your published work. Click Save.</p></li>
-<li><p>Once the dashboard is saved, Tableau Public will open up a window in your default browser
-with the visualization. In the green ribbon above the chart, click <em>Edit Details</em>
-to edit the title or description. Under <em>Toolbar Settings</em>, see checkbox to
-<em>Allow others to download or explore and copy this workbook and its data</em>
-(Figure <a href="chart-tableau-public.html#fig:tableau-toolbar-settings">5.40</a>), and enable/disable
-it as you think is appropriate. As advocates for open and accessible data, we recommend
-leaving the box checked.</p></li>
-</ol>
-
-<div class="figure"><span id="fig:tableau-toolbar-settings"></span>
-<img src="images/05-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
-<p class="caption">
-Figure 5.40: This scatter chart is ready to be published.
-</p>
-</div>
-<p>See the <a href="embed-tableau.html">Embed Tableau Public on Your Website</a> section of this book to insert the interactive version of your chart on a web page that you control.</p>
-<p>Tip: Your entire portfolio of Tableau Public visualizations is online at <code>https://public.tableau.com/profile/USERNAME</code>,
-where <code>USERNAME</code> is your unique username.</p>
-<p>To learn more, see <a href="https://public.tableau.com/en-us/s/resources">Tableau Public resources page</a>.</p>
-</div>
-</div>
-<div id="filtered-line-chart-tableau" class="section level3 unnumbered" number="">
-<h3>Filtered Line Chart with Tableau Public</h3>
-<p>One of the advantages of interactive visualizations over static (including printed)
-is the ability to store a lot more data, and show it only when required.
-In other words, an interactive visualization can be made into a data-exploration tool
-that won’t overwhelm the viewer at first sight, but will allow the viewer
-to “dig” and find specific data points and patterns.</p>
-<p>In this tutorial, we will build an interactive filtered line chart with Tableau Public
-like is shown in Figure <a href="chart-tableau-public.html#fig:tableau-filtered-demo">5.41</a>.
-The filter will be a collection of checkboxes that allow to add/remove lines
-from the chart. Viewers can hover over each line to identify the school
-name and data attached to it.</p>
-<p>We will use % Population with Internet Access by the World Bank. You can download the dataset
-<a href="data/world-bank-internet-users-1995-2018.csv">here</a>.</p>
-
-<div class="figure"><span id="fig:tableau-filtered-demo"></span>
-<iframe src="https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
-</iframe>
-<p class="caption">
-Figure 5.41: Internet Access by Country, 1995–2018.
-</p>
-</div>
-<p>We assume that you have Tableau installed. If not, see the previous tutorial, <a href="scatter-chart-tableau.html">Create XY Scatter Chart with Tableau Public</a>.</p>
-<div id="connect-text-file-and-build-a-line-chart" class="section level4 unnumbered" number="">
-<h4>Connect Text File and Build a Line Chart</h4>
-<p>Open Tableau Public, and under Connect menu, choose <em>Text file</em>.
-Tableau may or may not have imported the table automatically. If you see the preview of the table
-with three columns: <em>Country Name</em>, <em>Year</em>, and <em>Percent Internet Users</em>, you can proceed to Sheet 1.</p>
-<p>If not, drag and drop the file (under Files section in the left) to the <em>Drag tables here</em> area.
-Once you see the preview, go to Sheet 1.</p>
-<p>Your variables will be listed under Tables in the left-hand side. The original variables
-are displayed in normal font, the <em>generated</em> variables will be shown in <em>italics</em>
-(such as <em>Latitude</em> and <em>Longitude</em> that Tableau guessed from the country names).</p>
-<p>To build a line chart,</p>
-<ol style="list-style-type: decimal">
-<li>Drag Year variable to <em>Columns</em>.</li>
-<li>Drag Percent Internet Users variable to <em>Rows</em>. The variable will change to <code>SUM(Percent Internet Users)</code>.
-You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let’s fix it.</li>
-<li>In order to “break” aggregation, drag and drop Country Name to the Color box of the Marks card.
-Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding filtering,
-we don’t care about it much. So go ahead and press <em>Add all members</em> button.</li>
-<li>Now you should see an absolute spaghetti plate of lines and colors. To add filtering,
-drag <em>Country Name</em> to the Filters card. In the Filter window, make sure all countries
-are checked, and click <em>OK</em>.</li>
-<li>Right-click on <em>Country Name</em> pill in Filters card, and check Show Filter (see Figure <a href="chart-tableau-public.html#fig:tableau-filtered-show-filter">5.42</a>)</li>
-<li>You will see a list of options with all checkboxes on have appeared to the right of the visualization.
-Click <em>(All)</em> to add/remove all options, and add a few of your favorite countries to see
-how the interactive filtering works.</li>
-</ol>
-
-<div class="figure"><span id="fig:tableau-filtered-show-filter"></span>
-<img src="images/05-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220px" />
-<p class="caption">
-Figure 5.42: After you drag Country Name to the Filters card, make sure the Filter is displayed.
-</p>
-</div>
-</div>
-<div id="add-title-and-caption-and-publish-1" class="section level4 unnumbered" number="">
-<h4>Add Title and Caption, and Publish</h4>
-<p>Replace <em>Sheet 1</em> title (above the chart) with “Internet Access by Country, 1995–2018” by double-clicking on it.
-In the menu, go to <em>Worksheet &gt; Show Caption</em> to add a Caption block under the chart.
-Use this space to add source of your data (World Bank), and perhaps credit yourself as
-the author of this visualization.</p>
-<p>Change <em>Standard</em> to <em>Fit Width</em> in the dropdown above the Columns field.</p>
-<p>You may notice that the x-axis (Year) starts with 1994 and ends with 2020,
-although our data is for 1995–2018. Double-click on the x-axis, and change
-<em>Range</em> from <em>Automatic</em> to <em>Fixed</em>, with the Fixed start of <code>1995</code>, and the Fixed end of <code>2018</code>.
-Close the window and see that the empty space on the edges has disappeared.</p>
-<p>Once your filtered line chart looks like the one shown in Figure <a href="chart-tableau-public.html#fig:tableau-filtered-ready">5.43</a>,
-you are ready to publish.</p>
-
-<div class="figure"><span id="fig:tableau-filtered-ready"></span>
-<img src="images/05-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
-<p class="caption">
-Figure 5.43: This workbook is ready to be published.
-</p>
-</div>
-<p>To publish the filtered line chart to the web, go to <em>File &gt; Save to Tableau Public As…</em>.
-You may be prompted with the window to log in to your account (or create one if you don’t have it yet).
-The next steps are fairly self-explanatory, and you can consult
-<a href="scatter-chart-tableau.html">the previous tutorial</a> for more information on publishing.</p>
-<p>See the <a href="embed-tableau.html">Embed Tableau Public on Your Website</a> section of this
-book to insert the interactive version of your chart on a web page that you control.</p>
-</div>
-</div>
-<div id="summary5" class="section level3 unnumbered" number="">
-<h3>Summary</h3>
-<p>Congratulations on creating interactive charts that pull readers deeper into your story, and encourage them to explore the underlying data! As you continue to create more, always match the chart type to your data format and the story you wish to emphasize. Also, design your charts based on the principles and aesthetic guidelines in this chapter.
-While anyone can click a few buttons to quickly create a chart nowadays, your audiences will greatly appreciate well-designed charts that thoughtfully call their attention to meaningful patterns in the data.</p>
-<p>The next chapter on <a href="map.html">Map Your Data</a> follows a similar format to introduce different map types, design principles, and hands-on tutorials to create interactive visualizations with spatial data. Later you’ll learn how to <a href="embed.html">embed interactive charts on your web</a> in chapter 8.</p>
-<p>To learn about more powerful charting tools, see <a href="chartcode.html">Chart.js and Highcharts templates</a> in chapter 9, which give you ever more control over how your design and display your data, but also requires learning how to <a href="github.html">edit and host code templates with GitHub</a> in chapter 9.</p>
-
-</div>
-</div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
 <a href="chart-datawrapper.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="map.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="scatter-chart-tableau.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -234,7 +234,7 @@ A grouped column (or bar) chart is best to compare categories side-by-side. For 
 
 (ref:column-grouped-data) To create a grouped column (or bar) chart, format each data series vertically in Google Sheets.
 
-```{r column-grouped-data, out.width="350px", fig.cap="(ref:column-grouped-data)"}
+```{r column-grouped-data, out.width=400, fig.cap="(ref:column-grouped-data)"}
  knitr::include_graphics("images/05-chart/column-grouped-data.png")
 ```
 
@@ -323,7 +323,7 @@ A separated column (or bar) chart is best to compare categories in separate clus
 
 (ref:bar-separated-data) To create a separated bar (or column) chart, format each data series vertically, and leave cells blank where appropriate.
 
-```{r bar-separated-data, fig.cap="(ref:bar-separated-data)"}
+```{r bar-separated-data, out.width=500, fig.cap="(ref:bar-separated-data)"}
  knitr::include_graphics("images/05-chart/bar-separated-data.png")
 ```
 
@@ -336,11 +336,11 @@ if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsh
 Create your own version using our [Separated Bar Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/) with Starbucks and McDonalds data. Organize each data series vertically so that it becomes its own color in the chart. Leave cells blank when no direct comparisons are appropriate. The remainder of the steps are similar to the grouped column chart tutorial above.
 
 ### Stacked Column or Bar Charts {-}
-Stacked column (or bar) charts are best to compare subcategories, or parts of a whole.  For example, if you wish to compare the percentage of overweight residents across nations, format each weight-level data series in vertical columns in your Google Sheet, as shown in Figure \@ref(fig:column-stacked-data). Now you can easily create a stacked column (or bar) chart that displays comparisons of weight-level subcategories across nations, as shown in Figure \@ref(fig:column-stacked). Often it's better to use a stacked chart instead of multiple pie charts, because people can see differences more precisely in rectangular stacks than in circular pie slices.
+Stacked column (or bar) charts are best to compare subcategories, or parts of a whole. For example, if you wish to compare the percentage of overweight residents across nations, format each weight-level data series in vertical columns in your Google Sheet, as shown in Figure \@ref(fig:column-stacked-data). Now you can easily create a stacked column (or bar) chart that displays comparisons of weight-level subcategories across nations, as shown in Figure \@ref(fig:column-stacked). Often it's better to use a stacked chart instead of multiple pie charts, because people can see differences more precisely in rectangular stacks than in circular pie slices.
 
 (ref:column-stacked-data) To create a stacked column (or bar) chart, format each data series vertically in Google Sheets.
 
-```{r column-stacked-data, out.width="350px", fig.cap="(ref:column-stacked-data)"}
+```{r column-stacked-data, out.width=450, fig.cap="(ref:column-stacked-data)"}
  knitr::include_graphics("images/05-chart/column-stacked-data.png")
 ```
 
@@ -350,8 +350,7 @@ Stacked column (or bar) charts are best to compare subcategories, or parts of a 
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive") else knitr::include_graphics("images/05-chart/column-stacked.png")
 ```
 
-Create your own version using our [Stacked Column Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/) with international weight-level data.
-Organize each data series vertically so that it becomes its own color in the chart. In the Chart Editor window, choose *Chart Type > Stacked column chart* (or choose *Stacked bar chart* if you have long data labels). The rest of the steps are similar to the ones above.
+Create your own version using our [Stacked Column Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/) with international weight-level data. Organize each data series vertically so that it becomes its own color in the chart. In the Chart Editor window, choose *Chart Type > Stacked column chart* (or choose *Stacked bar chart* if you have long data labels). The rest of the steps are similar to the ones above.
 
 To change the color of a data series (for example, to show Overweight category in red), click the kebab menu in the top-right corner of the chart, then go to *Edit Chart > Customize > Series*. Then choose the appropriate series from the dropdown menu, and set its color in the dropdown menu, as shown in Figure \@ref(fig:column-stacked-edit-series).
 
@@ -362,58 +361,23 @@ To change the color of a data series (for example, to show Overweight category i
 ```
 
 ### Histograms {-}
+A histogram is a specific type of column or bar chart that is best for showing the distribution of raw data, with the number of values in each bucket (or bin). To build a histogram, you need to assign each data point, whether numerical or categorical, into one of the non-overlapping buckets. For example, imagine that you wish to track the number of customers each hour in a local coffee shop. Format the raw customer data series in a vertical column in your Google Sheet, as shown in Figure \@ref(fig:histogram-data). Now you can easily create a histogram column chart that displays the number of customers per hour, as shown in Figure \@ref(fig:histogram), which resembles the "popular times" format for businesses in Google Maps. This coffee shop experiences a morning rush and an afternoon rush, but the middle of the day and late evenings are relatively quiet.
 
-TODO: START AGAIN HERE to make screenshots and templates more consistent with above.
+(ref:histogram-data) To create a histogram, format the raw data series vertically in Google Sheets.
 
-A histogram is a specific type of bar chart that represents distribution of items, whether numerical
-or categorical. To build a histogram, you need to assign each data point to one of
-the non-overlapping *buckets* (or *bins*).
-
-Let's say you want to know what time of day you are more likely to get an email.
-One approach would be to download metadata about all emails you received in 2020,
-and assign them to a bucket between 0 and 23 according to the email hour.
-Hours will become your bins, and email counts will be your frequency data.
-Then your final dataset would look something like this:
-
+```{r histogram-data, out.width=250, fig.cap="(ref:histogram-data)"}
+ knitr::include_graphics("images/05-chart/histogram-data.png")
 ```
-| Hour | Emails |
-| ---- | ------ |
-| 0    | 12     |
-| 1    | 11     |
-| 2    | 7      |
-.................
-| 22   | 34     |
-| 23   | 22     |
-```
-You can now make a histogram. The good news is, Google Sheets considers histograms to
-be regular column charts, so you should be able to use a previous tutorial to make one.
 
-Select two columns with the data you want to visualize,
-and go to Insert > Chart. In the Chart editor window, in the Setup tab, select Chart type > Column chart. See the result in Figure \@ref(fig:histogram)
-
-(ref:histogram) Histogram chart with [fictitious source data](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=0). Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive).
+(ref:histogram) Histogram: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive). Fictitious data on coffee shop customers.
 
 ```{r histogram, fig.cap="(ref:histogram)"}
 if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive") else knitr::include_graphics("images/05-chart/histogram.png")
 ```
 
-If you wish to use our fictional email dataset to create your own histogram, you can make a copy of the
-[Histogram Chart template](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit?usp=sharing).
+Create your own version using our [Histogram Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo) with coffee shop customer data. Google Sheets considers histograms to be regular column charts, so in the Chart Editor window, choose *Chart Type > Column chart* and follow the rest of the directions in the Column or Bar Chart tutorial above. Alternatively, you could choose to sort customers into larger bins, such as time of day (morning, afternoon, evening), as shown in the second tab of the template.
 
-Bins in a histogram should span (in other words, "cover") the entire range of values of your dataset.
-This way you don't leave out any data. We recommend you use bins of the same size (like 24 1-hour bins, or four 6-hour bins) to ensure
-readers can compare across bars. For example, if you want to create a less detailed histogram, you can combine hours into larger bins, such as
-*Morning*, *Afternoon*, *Evening*, and *Night*
-to cover the hours of 6–11, 12–17, 18–23, and 0–5, respectively. Then your dataset will look like:
-
-```
-| TimeOfDay | Emails |
-| --------- | ------ |
-| Morning   | 353    |
-| Afternoon | 497    |
-| Evening   | 279    |
-| Night     | 37     |
-```
+Tip: We set a custom number format to display *8 AM* and other times as desired in the *Hour* column. In Google Sheets, select a column, then go to *Format > Number > More Formats > Custom Number Formats* to define your preferred format.
 
 ## --Pie, Line, and Area Charts {- #pie-line-area-google}
 TODO Expand: This section focuses on why and how to use Google Sheets to build different types of charts: pie, line, and stacks area.

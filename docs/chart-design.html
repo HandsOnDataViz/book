@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-01" />
+<meta name="date" content="2020-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="chart.html"/>
-<link rel="next" href="chart-google-sheets.html"/>
+<link rel="next" href="charts-google.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -193,13 +193,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
-<li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
-<li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>–Column and Bar Charts</a></li>
+<li class="chapter" data-level="" data-path="charts-google.html"><a href="charts-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>–Bar and Column Charts</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>–Pie, Line, and Area Charts</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>–XY Scatter and Bubble Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
-<li class="chapter" data-level="" data-path="chart-tableau-public.html"><a href="chart-tableau-public.html"><i class="fa fa-check"></i>Tableau Public Charts</a></li>
-<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>–XY Scatter Chart</a></li>
+<li class="chapter" data-level="" data-path="annotated-datawrapper.html"><a href="annotated-datawrapper.html"><i class="fa fa-check"></i>–Annotated Charts</a></li>
+<li class="chapter" data-level="" data-path="range-datawrapper.html"><a href="range-datawrapper.html"><i class="fa fa-check"></i>–Range Charts</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-datawrapper.html"><a href="scatter-bubble-datawrapper.html"><i class="fa fa-check"></i>–Scatter and Bubble Charts</a></li>
+<li class="chapter" data-level="" data-path="chart-tableau.html"><a href="chart-tableau.html"><i class="fa fa-check"></i>Tableau Public Charts</a></li>
+<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>REMOVE????–XY Scatter Chart</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>–Filtered Line Chart</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
@@ -327,15 +329,10 @@ Figure 5.1: Common chart components.
 </p>
 </div>
 <p>A <em>title</em> is perhaps the most important element of any chart. A good title is short, clear,
-and tells a story on its own. For example, “Black and Asian Population More Likely to Die of Covid-19”,
-or “Millions of Tons of Plastic Enter the Ocean Every Year” are both clear titles.</p>
-<p>Sometimes a more “dry” and “technical” title is preferred. Our two titles can then be changed to
-“Covid-19 Deaths by Race in New York City, March 2020” and “Tons of Plastic Entering the Ocean, 1950–2020”, respectively.</p>
-<p>Often these two styles are combined into a title (“story”) and a subtitle (“technical”), like that:</p>
-<pre><code>Black and Asian Population More Likely to Die of Covid-19
-Covid-19 Deaths by Race in New York City, March 2020</code></pre>
-<p>Make sure your subtitle is less prominent than the title. You can achieve this by decreasing font size,
-or changing font color (or both).</p>
+and tells a story on its own. For example, “Pandemic Hits Black and Latino Population Hardest”,
+or “Millions of Tons of Plastic Enter the Ocean Every Year” are both clear titles that quickly convey a larger story.</p>
+<p>Sometimes your editor or audience will prefer a more technical title for your chart. If so, the two titles above could be changed, respectively, to “Covid-19 Deaths by Race in New York City, Spring 2020” and “Tons of Plastic Entering the Ocean, 1950–2020.”</p>
+<p>A hybrid strategy is to combine a story-oriented title with a more technical subtitle, such as: “Pandemic Hits Black and Latino Population Hardest: Covid-19 Deaths by Race in New York City, Spring 2020.” If you follow this model, make your subtitle less prominent than your title by decreasing its font size, or changing its font style or color, or both.</p>
 <p>Horizontal (x) and vertical (y) <em>axes</em> define the scale and units of measure.</p>
 <p>A <em>data series</em> is a collection of observations, which is usually a row or
 a column of numbers, or <em>data points</em>, in your dataset.</p>
@@ -436,7 +433,7 @@ Figure <a href="chart-design.html#fig:design-principles-pie">5.4</a> illustrates
 Figure 5.4: Sort slices in pie charts from largest to smallest, and start at 12 o’clock.
 </p>
 </div>
-<p>If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or separated, like Figure <a href="chart-design.html#fig:design-principles-pie-to-bar">5.5</a> shows.</p>
+<p>If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or split, like Figure <a href="chart-design.html#fig:design-principles-pie-to-bar">5.5</a> shows.</p>
 
 <div class="figure"><span id="fig:design-principles-pie-to-bar"></span>
 <img src="images/05-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
@@ -470,7 +467,7 @@ Figure 5.7: For long labels, use horizontal bar charts.
 <div id="do-not-overload-your-chart" class="section level4 unnumbered" number="">
 <h4>Do not overload your chart</h4>
 <p>When labelling axes, choose natural increments that space equally, such as [0, 20, 40, 60, 80, 100], or [1, 10, 100, 1000] for a logarithmic scale. Do not overload your scales.
-Keep your typography simple, and use (but do not overuse) <strong>bolding</strong> to highlight major insights.
+Keep your typography simple, and use (but do not overuse) <strong>bold type</strong> to highlight major insights.
 Consider using commas as thousands separators for readability (<code>1,000,000</code> is much easier to read than <code>1000000</code>).</p>
 </div>
 <div id="be-careful-with-the-colors" class="section level4 unnumbered" number="">
@@ -509,7 +506,7 @@ Figure 5.9: Make sure important things catch the eye first.
         </div>
       </div>
 <a href="chart.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="chart-google-sheets.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="charts-google.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

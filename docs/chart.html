@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-01" />
+<meta name="date" content="2020-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -193,13 +193,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
-<li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
-<li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>–Column and Bar Charts</a></li>
+<li class="chapter" data-level="" data-path="charts-google.html"><a href="charts-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>–Bar and Column Charts</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>–Pie, Line, and Area Charts</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>–XY Scatter and Bubble Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
-<li class="chapter" data-level="" data-path="chart-tableau-public.html"><a href="chart-tableau-public.html"><i class="fa fa-check"></i>Tableau Public Charts</a></li>
-<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>–XY Scatter Chart</a></li>
+<li class="chapter" data-level="" data-path="annotated-datawrapper.html"><a href="annotated-datawrapper.html"><i class="fa fa-check"></i>–Annotated Charts</a></li>
+<li class="chapter" data-level="" data-path="range-datawrapper.html"><a href="range-datawrapper.html"><i class="fa fa-check"></i>–Range Charts</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-datawrapper.html"><a href="scatter-bubble-datawrapper.html"><i class="fa fa-check"></i>–Scatter and Bubble Charts</a></li>
+<li class="chapter" data-level="" data-path="chart-tableau.html"><a href="chart-tableau.html"><i class="fa fa-check"></i>Tableau Public Charts</a></li>
+<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>REMOVE????–XY Scatter Chart</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>–Filtered Line Chart</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
@@ -313,8 +315,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 sometimes a chart tells your story better than a map. But designing meaningful, interactive charts
 requires careful thought about how to communicate your data story with your audience.</p>
 <p>In this chapter, we will look at main <a href="chart-design.html">principles of chart design</a>, and
-learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. In addition to static chart images, this book focuses on interactive charts that display more data when you float your cursor over them in your web browser. Later you’ll learn how to <a href="embed.html">embed interactive charts on your website in chapter 8</a>.</p>
-<p>To begin, decide which type of chart you wish to create in Table <a href="chart.html#tab:chart-types">5.1</a>. Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader’s attention. Once you choose your chart type, follow our tool recommendations to create it. This chapter features easy-to-learn drag-and-drop tools to create charts, such as <a href="chart-google-sheets.html">Google Sheets</a>, <a href="chart-datawrapper.html">Datawrapper</a>, and <a href="chart-tableau-public.html">Tableau Public</a>. But Table <a href="chart.html#tab:chart-types">5.1</a> also refers to more powerful and customizable chart code templates, such as <a href="chartcode.html">Chart.js and Highcharts templates in chapter 10</a>, which give you ever more control over how your design and display your data, but first require learning how to <a href="github.html">edit and host code templates with GitHub in chapter 9</a>.</p>
+learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. While all of the tools we describe allow you to create <em>static</em> charts that you can download as PNG or JPG files, this book focuses on creating <em>interactive</em> charts that reveal more details about your data when you float your cursor over them in your web browser. Later you’ll learn how to <a href="embed.html">embed interactive charts on your website in chapter 8</a>.</p>
+<p>To begin, decide which type of chart you wish to create in Table <a href="chart.html#tab:chart-types">5.1</a>. Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader’s attention. Once you choose your chart type, follow our tool recommendations and step-by-step tutorials. This chapter features easy drag-and-drop tools such as <a href="chart-google.html">Google Sheets</a>, <a href="chart-datawrapper.html">Datawrapper</a>, and <a href="chart-tableau-public.html">Tableau Public</a>. But Table <a href="chart.html#tab:chart-types">5.1</a> also refers to more powerful and customizable chart code templates, such as <a href="chartcode.html">Chart.js and Highcharts templates in chapter 10</a>, which give you ever more control over customizing your design and storing your data, but request you to learn how to <a href="github.html">edit and host code templates with GitHub in chapter 9</a>.</p>
+<p>Note that we blend our tutorials for <em>bar and column charts</em> because they’re essentially the same, except that bars are oriented horizontally and columns vertically. Look at your data labels when deciding which type to create. If you need to display long labels, such as “Mocha Frappuccino 24-ounce” and “Double Quarter Pounder with cheese,” make a horizontal bar chart to create sufficient space to make them readable. Or if you have short labels, such as “US” and “Canada”, you can create either a bar or column chart.</p>
 <table>
 <caption><span id="tab:chart-types">Table 5.1: </span> Basic Chart Types and Tutorials</caption>
 <colgroup>
@@ -329,48 +332,51 @@ learn to identify good charts from bad ones. You will learn important rules that
 </thead>
 <tbody>
 <tr class="odd">
-<td>Grouped column or bar<br> <img src="images/05-chart/chart-grouped-column.png" /></td>
-<td>Best to compare categories side-by-side. Vertical columns, or horizontal bars for long labels. <br>Easy tool: <a href="column-bar-google.html">Google Sheets bar and column tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Grouped bar or column<br> <img src="images/05-chart/chart-grouped-column.png" /></td>
+<td>Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
-<td>Separated column or bar<br> <img src="images/05-chart/chart-separated-column.png" /></td>
-<td>Best to compare categories in separate clusters. Vertical columns, or horizontal bars for long labels.<br>Easy tool: <a href="column-bar-google.html">Google Sheets bar and column tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Split bar or column <br> <img src="images/05-chart/chart-split-column.png" /></td>
+<td>Best to compare categories in separate clusters. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
-<td>Stacked column or bar<br> <img src="images/05-chart/chart-stacked-column.png" /></td>
-<td>Best to compare sub-categories, or parts of a whole. Vertical columns, or horizontal bars for long labels.<br>Easy tool: <a href="column-bar-google.html">Google Sheets bar and column tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Stacked bar or column<br> <img src="images/05-chart/chart-stacked-column.png" /></td>
+<td>Best to compare sub-categories, or parts of a whole. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Histogram<br> <img src="images/05-chart/chart-histogram.png" /></td>
-<td>Best to show distribution of raw data, with number of values in each bucket.<br>Easy tool: <a href="column-bar-google.html">Google Sheets bar and column tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show distribution of raw data, with number of values in each bucket. If labels are long, use horizontal bars instead of vertical columns..<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Pie chart<br> <img src="images/05-chart/chart-pie.png" /></td>
-<td>Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tool: <a href="pie-line-area-google.html">Google Sheets pie chart tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: <a href="pie-line-area-google.html">Pie Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Line chart<br> <img src="images/05-chart/chart-line.png" /></td>
-<td>Best to show continuous data, such as change over time.<br>Easy tool: <a href="pie-line-area-google.html">Google Sheets line chart tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show continuous data, such as change over time.<br>Easy tools: <a href="pie-line-area-google.html">Line Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Filtered line chart <br> <img src="images/05-chart/chart-filtered-line.png" /></td>
-<td>Best to show multiple lines of continuous data, with on-off toggle buttons. <br>Easy tool: <a href="filtered-line-chart-tableau.html">Tableau Public filtered line chart tutorial</a></td>
+<td>Best to show multiple lines of continuous data, with on-off toggle buttons. <br>Easy tool: <a href="filtered-line-chart-tableau.html">Filtered Line Chart in Tableau Public tutorial</a></td>
 </tr>
 <tr class="even">
 <td>Stacked area chart<br> <img src="images/05-chart/chart-stacked-area.png" /></td>
-<td>Best to show parts of a whole, with change over time. <br>Easy tool: <a href="pie-line-area-google.html">Google Sheets stacked area tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show parts of a whole, with continuous data such as change over time. <br>Easy tools: <a href="pie-line-area-google.html">Stacked Area Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
-<td>XY Scatter chart <br> <img src="images/05-chart/chart-scatter.png" /></td>
-<td>Best to show the relationship between two sets of data. <br>Easy tool: <a href="scatter-bubble-google.html">Google Sheets scatter chart tutorial</a> or <a href="scatter-chart-tableau.html">Tableau Public scatter chart tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Scatter chart <br> <img src="images/05-chart/chart-scatter.png" /></td>
+<td>Best to show the relationship between two sets of data. <br>Easy tool: <a href="scatter-bubble-datawrapper.html">Scatter and Bubble Chart in Datawrapper tutorial</a>. <br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Bubble chart <br> <img src="images/05-chart/chart-bubble.png" /></td>
-<td>Best to show the relationship between three or four sets of data, using bubble size and color.<br>Easy tool: <a href="scatter-bubble-google.html">Google Sheets bubble chart tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show the relationship between three or four sets of data, using bubble size and color.<br>Easy tool: <a href="scatter-bubble-datawrapper.html">Scatter and Bubble Chart in Datawrapper tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 </tbody>
 </table>
-<!-- TODO: Add Datawrapper tutorial links; Add chart with error bars to acknowledge data uncertainty (such as margins of error), and also consider mentioning this in chart design principles -->
+<!-- TODO: Add chart with error bars to acknowledge data uncertainty (such as margins of error), and also consider mentioning this in chart design principles
+Add annotated charts (or annotated line chart?) in Datawrapper
+Add range charts in Datawrapper - best for showing gaps between two data categories, such as inequalities
+Change Scatter and Bubble charts to Datawrapper -->
 </div>
             </section>
 

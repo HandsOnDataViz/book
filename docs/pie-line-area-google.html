@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-01" />
+<meta name="date" content="2020-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="column-bar-google.html"/>
-<link rel="next" href="scatter-bubble-google.html"/>
+<link rel="prev" href="bar-column-google.html"/>
+<link rel="next" href="chart-datawrapper.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -193,13 +193,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
-<li class="chapter" data-level="" data-path="chart-google-sheets.html"><a href="chart-google-sheets.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
-<li class="chapter" data-level="" data-path="column-bar-google.html"><a href="column-bar-google.html"><i class="fa fa-check"></i>–Column and Bar Charts</a></li>
+<li class="chapter" data-level="" data-path="charts-google.html"><a href="charts-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>–Bar and Column Charts</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>–Pie, Line, and Area Charts</a></li>
-<li class="chapter" data-level="" data-path="scatter-bubble-google.html"><a href="scatter-bubble-google.html"><i class="fa fa-check"></i>–XY Scatter and Bubble Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
-<li class="chapter" data-level="" data-path="chart-tableau-public.html"><a href="chart-tableau-public.html"><i class="fa fa-check"></i>Tableau Public Charts</a></li>
-<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>–XY Scatter Chart</a></li>
+<li class="chapter" data-level="" data-path="annotated-datawrapper.html"><a href="annotated-datawrapper.html"><i class="fa fa-check"></i>–Annotated Charts</a></li>
+<li class="chapter" data-level="" data-path="range-datawrapper.html"><a href="range-datawrapper.html"><i class="fa fa-check"></i>–Range Charts</a></li>
+<li class="chapter" data-level="" data-path="scatter-bubble-datawrapper.html"><a href="scatter-bubble-datawrapper.html"><i class="fa fa-check"></i>–Scatter and Bubble Charts</a></li>
+<li class="chapter" data-level="" data-path="chart-tableau.html"><a href="chart-tableau.html"><i class="fa fa-check"></i>Tableau Public Charts</a></li>
+<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i>REMOVE????–XY Scatter Chart</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i>–Filtered Line Chart</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
@@ -309,7 +311,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="pie-line-area-google" class="section level2 unnumbered" number="">
 <h2>–Pie, Line, and Area Charts</h2>
-<p>This section focuses on why and how to use Google Sheets to build more types of interactive charts: pie charts (to show parts of a whole), line charts (to show change over time), and stacked area charts (to combine showing parts of a whole, with change over time).</p>
+<p>Before starting this section, be sure to review the <a href="chart-google.html">pros and cons of designing charts with Google Sheets</a>, as well as <a href="bar-column-google.html">beginner-level step-by-step instructions for creating bar and column charts</a>, in the previous sections of this chapter. In this section, you’ll learn why and how to use Google Sheets to build three more types of interactive visualizations: pie charts (to show parts of a whole), line charts (to show change over time), and stacked area charts (to combine showing parts of a whole, with change over time). If Google Sheets or these chart types do not meet your needs, refer back to Table <a href="chart.html#tab:chart-types">5.1</a> for other tools and tutorials.</p>
 <div id="pie-charts" class="section level3 unnumbered" number="">
 <h3>Pie Charts</h3>
 <p>Some people use pie charts to show parts of a whole, but we urge caution with this type of chart for reasons explained further below. For example, if you wish to show the number of different fruits sold by a store in one day, as a proportion of total fruit sold, then format the labels and values in vertical columns in your Google Sheet, as shown in Figure <a href="pie-line-area-google.html#fig:pie-data">5.27</a>. Values can be expressed as either raw numbers or percentages. Now you can easily create a pie chart that displays these values as colored slices of a circle, as shown in Figure <a href="pie-line-area-google.html#fig:pie">5.28</a>. Viewers can see that bananas made up slightly over half of the fruit sold, followed by apples and oranges.</p>
@@ -354,8 +356,8 @@ Figure 5.30: Line chart: Explore the <a href="https://docs.google.com/spreadshee
 </div>
 <div id="stacked-area-charts" class="section level3 unnumbered" number="">
 <h3>Stacked Area Charts</h3>
-<p>A stacked line chart is best for combining two concepts from above: showing parts of the whole (like a pie chart) and continuous data over time (like a line chart). For example, the line chart above shows how the availability of three different meats changed over time. But it’s hard to estimate if the total availability of these three meets went up or down over time in a line chart. However, a stacked line chart shows the availability of each meat <em>and</em> the total meet availability per capita over time.</p>
-<p>Organize the data in the same way as you did for the line chart in Figure <a href="pie-line-area-google.html#fig:line-data">5.29</a>. Now you can easily create a stacked line chart that displays the availability of each meat—and their combined total—over time, as shown in Figure <a href="pie-line-area-google.html#fig:stacked-area">5.31</a>. Overall, we can see that total available meat per capita increased after the 1930s Depression, and chicken steadily became a larger portion of the total after 1970.</p>
+<p>Area charts resemble line charts with filled space underneath. The most useful type is a stacked area chart, which is best for combining two concepts from above: showing parts of the whole (like a pie chart) and continuous data over time (like a line chart). For example, the line chart above shows how the availability of three different meats changed over time. However, if you also wish to show how the total availability of these combined meats went up or down over time, it’s hard to see this in a line chart. Instead, use a stacked line chart to visualize the availability of each meat <em>and</em> the total combined availability per capita over time. Stacked line charts show both aspects of your data simultaneously.</p>
+<p>To create a stacked area chart, organize the data in the same way as you did for the line chart in Figure <a href="pie-line-area-google.html#fig:line-data">5.29</a>. Now you can easily create a stacked line chart that displays the availability of each meat—and their combined total—over time, as shown in Figure <a href="pie-line-area-google.html#fig:stacked-area">5.31</a>. Overall, we can see that total available meat per capita increased after the 1930s Depression, and chicken steadily became a larger portion of the total after 1970.</p>
 
 <div class="figure"><span id="fig:stacked-area"></span>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;amp;format=interactive" width="672" height="400px">
@@ -372,8 +374,8 @@ Figure 5.31: Stacked area chart: Explore the <a href="https://docs.google.com/sp
           </div>
         </div>
       </div>
-<a href="column-bar-google.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="scatter-bubble-google.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bar-column-google.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chart-datawrapper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

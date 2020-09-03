@@ -223,7 +223,7 @@ But Google Sheets also has limitations. First, there is no easy way to cite or l
 
 In the next two sections, we'll review the most appropriate cases to use [bar and column charts](bar-column-google.html), followed by [pie, line, and area charts](pie-line-area-google.html). Each section features hands-on examples and step-by-step instructions with sample datasets to help you learn.
 
-## --Bar and Column Charts {- #bar-column-google}
+## &emsp;Bar and Column Charts {- #bar-column-google}
 Before you begin, be sure to review the [pros and cons of designing charts with Google Sheets in the prior section](charts-google.html). In this section, you'll learn how to create bar and column charts, the most common visualization methods to compare values across categories. We'll focus on why and how to create four different types: grouped, split, stacked, and histograms. For all of these, we blend the instructions for bar and column charts because they're essentially the same, though oriented in different directions. If your data contains long labels, create a horizontal bar chart, instead of a vertical column chart, to give them more space for readability.
 
 ### Grouped Bar and Column Charts {-}
@@ -374,7 +374,7 @@ Create your own version using our [Histogram Chart in Google Sheets template](ht
 
 Tip: We set a custom number format to display *8 AM* and other times as desired in the *Hour* column. In Google Sheets, select a column, then go to *Format > Number > More Formats > Custom Number Formats* to define your preferred format.
 
-## --Pie, Line, and Area Charts {- #pie-line-area-google}
+## &emsp;Pie, Line, and Area Charts {- #pie-line-area-google}
 Before starting this section, be sure to review the [pros and cons of designing charts with Google Sheets](chart-google.html), as well as [beginner-level step-by-step instructions for creating bar and column charts](bar-column-google.html), in the previous sections of this chapter. In this section, you'll learn why and how to use Google Sheets to build three more types of interactive visualizations: pie charts (to show parts of a whole), line charts (to show change over time), and stacked area charts (to combine showing parts of a whole, with change over time). If Google Sheets or these chart types do not meet your needs, refer back to Table \@ref(tab:chart-types) for other tools and tutorials.
 
 ### Pie Charts {-}
@@ -438,14 +438,14 @@ https://academy.datawrapper.de/
 
 If Datawrapper or these chart types do not meet your needs, refer back to Table \@ref(tab:chart-types) for other tools and tutorials.
 
-## --Annotated Charts {- #annotated-datawrapper}
+## &emsp;Annotated Charts {- #annotated-datawrapper}
 TODO: maybe annotated line chart?
 
-## --Range Charts {- #range-datawrapper}
+## &emsp;Range Charts {- #range-datawrapper}
 TODO
 
 
-## --Scatter and Bubble Charts {- #scatter-bubble-datawrapper}
+## &emsp;Scatter and Bubble Charts {- #scatter-bubble-datawrapper}
 Scatter charts (also known as XY charts or scatter plots) are best to show the relationship between two datasets, by displaying dots on a grid to represent their XY coordinates. In the scatter chart example below, each dot represents a nation, with its life expectancy on the horizontal X axis and its fertility rate on the vertical Y axis. The overall dot pattern illustrates a correlation between these two datasets: life expectancy increases while fertility decreases.
 
 Bubble charts go further than scatter charts by adding two more visual elements---dot size and color---to represent a third or fourth dataset. The bubble chart example further below begins with the same life expectancy and fertility data for each nation that we previously saw in the scatter chart, but now the size of each circular dot represents a third dataset (population) and its color indicates a fourth dataset (region of the world). As a result, bubble charts are scatter charts on steroids, because they pack more information into the visualization.
@@ -583,7 +583,8 @@ test scores.
 if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/05-chart/tableau-xy-demo.png")
 ```
 
-## REMOVE????--XY Scatter Chart {- #scatter-chart-tableau}
+## &emsp;Scatter Chart {- #scatter-chart-tableau}
+REMOVE?
 
 If you wish to use the dataset from the scatter plot in Figure \@ref(fig:tableau-xy-demo),
 you can [download the sample Excel file](data/ct-districts-income-grades-2009-13.xlsx).
@@ -699,7 +700,7 @@ where `USERNAME` is your unique username.
 To learn more, see [Tableau Public resources page](https://public.tableau.com/en-us/s/resources).
 
 
-## --Filtered Line Chart {- #filtered-line-chart-tableau}
+## &emsp;Filtered Line Chart {- #filtered-line-chart-tableau}
 
 One of the advantages of interactive visualizations over static (including printed)
 is the ability to store a lot more data, and show it only when required.

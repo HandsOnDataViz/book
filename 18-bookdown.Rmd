@@ -407,6 +407,7 @@ We need to do a bit of manual cleanup before ORM production team can convert the
   - from 05-chart.Rmd, Table 1: Chart types covered in this book
 - Manually replace any `<iframe...` HTML or GIF elements with their PNG substitutes, and new ALT text (unless authors come up with a better way to automate this)
 - Manually delete any remaining `<iframe...` elements (unless they are non-executable code snippets)
+- Manually remove any `&emsp;` or four-whitespace characters that are appendeded to level 3 subheads in chap 5
 - Save and push the modified Markdown file up to GitHub repo
 
 TODO: Check to see if triple back tics render correctly in the Markdown full-book output.

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-03" />
+<meta name="date" content="2020-09-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   
 <link rel="prev" href="scatter-bubble-datawrapper.html"/>
-<link rel="next" href="scatter-chart-tableau.html"/>
+<link rel="next" href="scatter-tableau.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -201,8 +201,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="range-datawrapper.html"><a href="range-datawrapper.html"><i class="fa fa-check"></i> Range Charts</a></li>
 <li class="chapter" data-level="" data-path="scatter-bubble-datawrapper.html"><a href="scatter-bubble-datawrapper.html"><i class="fa fa-check"></i> Scatter and Bubble Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-tableau.html"><a href="chart-tableau.html"><i class="fa fa-check"></i>Tableau Public Charts</a></li>
-<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i> Scatter Chart</a></li>
-<li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i> Filtered Line Chart</a></li>
+<li class="chapter" data-level="" data-path="scatter-tableau.html"><a href="scatter-tableau.html"><i class="fa fa-check"></i> Scatter Chart</a></li>
+<li class="chapter" data-level="" data-path="filtered-line-tableau.html"><a href="filtered-line-tableau.html"><i class="fa fa-check"></i> Filtered Line Chart</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -311,36 +311,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chart-tableau" class="section level2 unnumbered" number="">
 <h2>Tableau Public Charts</h2>
-<p>TODO: Start again here</p>
-<p>Tableau is powerful data visualization software used by many professionals and organizations
-to analyze and present data. Tableau can combine multiple datasets to show in a single chart (or a map),
-and allows to create dashboards with multiple visualizations. Individual visualizations
-and dashboards can be published and embedded on your website through an iframe.</p>
-<p>This book focuses on the free <a href="https://public.tableau.com">Tableau Public tool</a>, available to download for Mac or Windows. This free version of Tableau Public is very similar to the pricier versions that the company sells, but one constraint is that the data visualizations you create will be public, as the name suggests, so do not use it for any sensitive or confidential data that should not be shared with others.</p>
-<p>TODO: REFRAME into pros and cons…</p>
-<p>You might be overwhelmed
-by the amount of options and features Tableau provides through its interface.
-We will show you the very basics enough to get started, and if you want to
-dive further, there are many great books on Tableau available.</p>
-<p>You can download Tableau Public for Windows or Mac from Tableau’s <a href="https://public.tableau.com">official
-website</a>. You will need to provide your email address.</p>
-<p>In this book, we will show you how to add datasets to Tableau Public, and how to <a href="scatter-chart-tableau.html">create a scatterplot</a>
-and a <a href="filtered-line-chart-tableau.html">filtered line chart</a>.</p>
-<p>Just to remind you, scatter charts plot two variables
-against each other, on x- and y-axis, revealing possible correlations.
-With Tableau Public, you can create an interactive scatter chart,
-letting users hover over points to view specific details.</p>
-<p>Figure <a href="chart-tableau.html#fig:tableau-xy-demo">5.40</a> illustrates a
-strong relationship between Connecticut school district income and
-test scores.</p>
-
-<div class="figure"><span id="fig:tableau-xy-demo"></span>
-<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
-</iframe>
-<p class="caption">
-Figure 5.40: This scatterplot is made in Tableau Public an shows the relationship between household income and test scores in Connecticut school districts.
-</p>
-</div>
+<p>Tableau is a powerful data visualization tool used by many professionals and organizations
+to analyze and present data. Our book focuses on the free version, <a href="https://public.tableau.com">Tableau Public</a>, a desktop application for Mac or Windows computers, which you can download at no cost by providing an email address. The free Tableau Public tool is very similar to the pricier Tableau versions sold by the company, with one important constraint. Everyon data visualization you publish becomes public, as the product name suggests, so do not use Tableau Public for any sensitive or confidential data that you do not wish to share with others.</p>
+<p>Tableau Public has several features that make it stand out from other drag-and-drop tools in this book. First, you can prepare, pivot, and join data inside Tableau Public, similar to some of the <a href="spreadsheet.html">spreadsheet skills in chapter 2</a>, <a href="clean.html">data cleaning methods in chapter 4</a>, and tools to <a href="transform.html">transform map data coming up in chapter 12</a>. Second, Tableau Public offers a wider array of chart types than other free tools. Finally, with Tableau Public you can combine multiple visualizations (including tables, charts, and maps) into interactive dashboards or stories, which you can publish and embed on your website. Learn more about all of these features in the <a href="https://public.tableau.com/en-us/s/resources">Tableau Public resources page</a>.</p>
+<p>But Tableau Public also has some drawbacks. First, it may take several minutes to install and start up the application the first time. Second, if you feel overwhelmed by its design interface, you’re not alone. Its drag-and-drop layout to build charts and maps initially can be confusing at first glance, and its internal vocabulary of data terms may seem unfamiliar. While Tableau Public is a powerful tool, perhaps it offers too many options.</p>
+<p>In the next section we’ll keep things simple by starting with the basics of Tableau Public, with step-by-step tutorials to create two different types of charts. First, you’ll build on skills you already learned in the section above by building a <a href="scatter-tableau.html">scatter chart in Tableau Public</a>. Second, you’ll learn how to create a <a href="filtered-line-tableau.html">filtered line chart</a>, which demonstrates more of the tool’s strengths in interactive visualization design.</p>
 </div>
             </section>
 
@@ -348,7 +323,7 @@ Figure 5.40: This scatterplot is made in Tableau Public an shows the relationshi
         </div>
       </div>
 <a href="scatter-bubble-datawrapper.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="scatter-chart-tableau.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="scatter-tableau.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

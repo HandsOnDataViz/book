@@ -598,7 +598,7 @@ Displaying total spending per country is a bad idea, as bigger countries tend
 to have larger populations and as a result larger values for a lot of measures,
 including military spending.
 
-(ref:tableau-polygon-final) This choropleth map is made in Tableau Public
+(ref:tableau-polygon-final) Filled Polygon (Choropleth) map: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from TODO.
 
 ```{r tableau-polygon-final, fig.cap="(ref:tableau-polygon-final)"}
 if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/06-map/tableau-polygon-final.png")

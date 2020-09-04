@@ -20,14 +20,15 @@ Table: (\#tab:chart-types) Basic Chart Types and Tutorials
 | Histogram<br> ![](images/05-chart/chart-histogram.png) | Best to show distribution of raw data, with number of values in each bucket. If labels are long, use horizontal bars instead of vertical columns..<br>Easy tools: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
 | Pie chart<br> ![](images/05-chart/chart-pie.png) | Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: [Pie Chart in Google Sheets tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
 | Line chart<br> ![](images/05-chart/chart-line.png) | Best to show continuous data, such as change over time.<br>Easy tools: [Line Chart in Google Sheets tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| Annotated chart<br> ![](images/05-chart/chart-annotated.png) | Best to highlight data or add notes inside the chart.<br>Easy tools: [Annotated Chart in Datawrapper tutorial](annotated-datawrapper.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
 | Filtered line chart <br> ![](images/05-chart/chart-filtered-line.png) | Best to show multiple lines of continuous data, which users can toggle on and off. <br>Easy tool: [Filtered Line Chart in Tableau Public tutorial](filtered-line-tableau.html) |
 | Stacked area chart<br> ![](images/05-chart/chart-stacked-area.png) | Best to show parts of a whole, with continuous data such as change over time. <br>Easy tools: [Stacked Area Chart in Google Sheets tutorial](pie-line-area-google.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
+| Range chart<br> ![](images/05-chart/chart-range.png) | Best to show gaps between data points, such as inequalities.<br>Easy tools: [Range Chart in Datawrapper tutorial](annotated-datawrapper.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
 | Scatter chart <br> ![](images/05-chart/chart-scatter.png) | Best to show the relationship between two datasets as XY coordinates to reveal possible correlations. <br>Easy tool: [Scatter and Bubble Chart in Datawrapper tutorial](scatter-bubble-datawrapper.html) or [Scatter Chart in Tableau Public tutorial](scatter-tableau.html). <br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
 | Bubble chart <br> ![](images/05-chart/chart-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color.<br>Easy tool: [Scatter and Bubble Chart in Datawrapper tutorial](scatter-bubble-datawrapper.html)<br>Power tool: [Chart.js and Highcharts templates](chartcode.html) |
 
 <!-- TODO: Add chart with error bars to acknowledge data uncertainty (such as margins of error), and also consider mentioning this in chart design principles
-Add annotated charts (or annotated line chart?) in Datawrapper
-Add range charts in Datawrapper - best for showing gaps between two data categories, such as inequalities
+REDO range chart example?
 -->
 
 ## Chart Design Principles {- #chart-design}
@@ -439,13 +440,109 @@ While Datawrapper is fabulous, it cannot fulfill all of your data visualization 
 Now you're ready to use Datawrapper to create new types of charts that step beyond the basics. But if Datawrapper or the chart types in this section do not meet your needs, refer back to Table \@ref(tab:chart-types) for other tools and tutorials, or prior chapters on spreadsheets, sourcing, and cleaning up data.
 
 ## &emsp;Annotated Charts {- #annotated-datawrapper}
-TODO: maybe annotated line chart?
+An annotated chart is best to highlight specific data or add contextual notes inside the visualization. Well-designed annotations can help answer the "so what?" question by briefly noting the significance of data in the chart, with greater detail in the sentences or paragraphs that follow. Be cautious with annotations, because it's important to avoid adding unnecessary "chart junk," as described in [Chart Design Principles section of this chapter](chart-design.html).
 
-Mention how updating Google Sheets will update the table... prior to publishing it?
+You can add annotations to any chart created with Datawrapper, and we'll illustrate how with a line chart about US unemployment data from 2000-2020, since adding a bit of historical context often helps readers to better understand data stories about change over time. To create a line chart in Datawrapper, organize your data the same way you did in the [Google Sheets line chart tutorial](pie-line-area-google.html) above. Place units of time (such as months-years) in the first column, and numerical data values (such as the unemployment rate) in the second column. Now you're ready to create an interactive line chart with annotations, as shown in Figure \@ref(fig:datawrapper-annotated). Since 2000, the unemployment rate has peaked three times, but the tallest peak occured during the 2020 economic crisis during the Covid pandemic.
+
+(ref:datawrapper-annotated) Line chart with annotation: Explore the [interactive version](https://datawrapper.dwcdn.net/vHuob/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972).
+
+```{r datawrapper-annotated, fig.cap="(ref:datawrapper-annotated)"}
+if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/vHuob/1/") else knitr::include_graphics("images/05-chart/datawrapper-annotated.png")
+```
+
+Create your own annotated line chart in Datawrapper by following this tutorial:
+
+1. Open the [US Unemployment Seasonally Adjusted 2000-2020 sample data in Google Sheets](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972) and go to *File > Make a Copy* to create your own version in your Google Drive. Or download the [sample data in Excel format](data/us-unemployment-adj-2000-2020.xlsx) to your computer.
+
+2. Open [Datawrapper](https://www.datawrapper.de) in your browser and click *Start Creating*. We recommend that you create a free account to better manage your visualizations, but it's not required.
+
+3. In the *Upload Data* screen, click *Import Google Spreadsheet* and paste the link to the data in the shared Google Sheet above, as shown in Figure \@ref(fig:datawrapper-annotated-upload), then click *Proceed*. To upload a Google Sheet, the Share setting must be changed from *Private*, the default setting, to *Anyone with the link can view* at minimum. Also, if you update cells in your Google Sheet, they will be updated automatically in a linked Datawrapper chart, but not after your chart is published online. Alternatively, you can upload data by copying and pasting it into the data table window, or uploading an Excel or CSV file.
+
+(ref:datawrapper-annotated-upload) To upload data from a shared Google Sheet, click the button and paste the link.
+
+```{r datawrapper-annotated-upload, fig.cap="(ref:datawrapper-annotated-upload)"}
+knitr::include_graphics("images/05-chart/datawrapper-annotated-upload.png")
+```
+
+4. In the *Check and Describe* screen, inspect your data to make sure that numbers appear in blue, dates in green, and text in black type, and click *Proceed*.
+
+Tip: If needed, at the bottom of the *Check and Describe* screen there is a button that will transpose your data (swap rows and columns), which is useful in cases where the data you receive is organized in the opposite direction from what Datawrapper expects. But our sample data does not need to be transposed, since it's organized correctly.
+
+5. In the *Visualize* screen, Datawrapper will attempt to guess the chart type you desire, based on the data format. If you entered our sample data correctly, it will correctly display a line chart. But if not, you can select a different chart type.
+
+6. Click the *Annotate* tab near the top-left of the *Visualize* screen. Type in a meaningful title, such as "US Unemployment Rate, Seasonally Adjusted, 2000-2020." Also, add a data source, such as "US Federal Reserve Open Data", and a link to the source, such as the [shared Google Sheet](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972) or the [Federal Reserve Open Data web page](https://fred.stlouisfed.org/series/UNRATE). Finally, in the byline line, add your name or organization to credit the people who created this chart. You'll see all of these details and links appear automatically at the bottom of your chart, to add credibility to your work.
+
+7. Scroll down further in the *Annotate* tab to the *Text annotations* section, and click the button to add one to the chart. Type "Great Recession" into the text field of your first annotation, and move your cursor to place it around the unemployment peak in 2009, as shown in Figure \@ref(fig:datawrapper-annotated-text). This helps readers to place the [Great Recession](https://en.wikipedia.org/wiki/Great_Recession_in_the_United_States) in historical context. Click to add another text annotation, type "Covid Pandemic" into the text field, and place it around the second unemployment peak in early 2000 for comparison. You can fine-tune the positioning of a label by typing its year-month code into the x-axis coordinate text field, or its unemployment rate into the y-axis text field. To change the appearance or delete an annotation, click its downward arrow symbol for options.
+
+(ref:datawrapper-annotated-text) Add text annotations by typing a label and positioning it on the chart.
+
+```{r datawrapper-annotated-text, fig.cap="(ref:datawrapper-annotated-text)"}
+knitr::include_graphics("images/05-chart/datawrapper-annotated-text.png")
+```
+
+8. Scroll down further in the *Annotate* tab to the *Highlight value ranges* section, and click the button to add one to the chart. Click inside the chart to "draw" a bar from December 2007 to June 2009, as shown in Figure \@ref(fig:datawrapper-annotated-range). This period represents the official beginning and ending of the US Great Recession in the eyes of economists, although unemployment continued to grow for the population at large. When you finish "drawing" on the chart, the red bar will become light gray. Once again, you can fine-tune the positioning of a highlighted range by typing its year-month codes into the date fields, and change its appearance or delete it by clicking the downward arrow symbol for more options. To highlight other official recession periods, draw two more ranges: March--November 2001 and February--August 2020 (the most current data as we write this).
+
+(ref:datawrapper-annotated-range) Add a range highlight by "drawing" a rectangular bar on the chart.
+
+```{r datawrapper-annotated-range, fig.cap="(ref:datawrapper-annotated-range)"}
+knitr::include_graphics("images/05-chart/datawrapper-annotated-range.png")
+```
+
+9. Click *Proceed* or advance to the *Publish & Embed* screen to share your chart with others. If you are logged into your free Datawrapper account, click the blue *Publish chart* button to generate the code to embed the interactive chart on your website, and read more in [Chapter 8: Embed on Your Web](embed.html). Also, click the *add your chart to River* if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse your chart. Finally, scroll all the way down and click the *Download PNG* button to export a static image of your chart. Additional exporting and publishing options require a paid Datawrapper account.
+
+Congratulations on creating your first interactive Datawrapper chart. If you logged into your free Datawrapper account, all of your charts are stored in the *My Charts* menu in the top-right corner of the screen. Now let's use Datawrapper to create a new type of chart, called a range chart.
 
 ## &emsp;Range Charts {- #range-datawrapper}
-TODO
 
+A range chart (also known as a specific type of dot chart) is best to show gaps between data points, such as inequalities. The line chart above illustrated how the overall US unemployment rate changed over time. But if we wish to look at differences in gender and race/ethnicity for a specific point in time, a range chart will highlight any gaps. Organize the data for a range chart into rows and columns, as shown in Figure \@ref(fig:datawrapper-range-data). The column headers contain data labels you wish to highlight, such *Men* and *Women*. The first column contains your categories, such as racial/ethnic groups, followed by the numerical values under each header. Now you can easily create an interactive range chart as shown in Figure \@ref(fig:datawrapper-range). The employment gender gap is visible in all three racial/ethnic groups, but the gap was widest between Hispanic men and women in May 2020.
+
+(ref:datawrapper-range-data) Organize your range chart data labels into column headers, with categories and values in each row.
+
+```{r datawrapper-range-data, fig.cap="(ref:datawrapper-range-data)"}
+knitr::include_graphics("images/05-chart/datawrapper-range-data.png")
+```
+
+(ref:datawrapper-range) Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/v8D2z/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
+
+```{r datawrapper-range, fig.cap="(ref:datawrapper-range)"}
+if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/v8D2z/1/") else knitr::include_graphics("images/05-chart/datawrapper-range.png")
+```
+
+To create your own range chart with our sample data, follow this tutorial. Since we assume that you're already familiar with Datawrapper from the previous tutorial on annotated line charts, these steps are abbreviated. So if you get lost, see more details and images above.
+
+1. Open the [US Unemployment by Gender and Race/Ethnicity May 2020 sample data in Google Sheets](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0) and go to *File > Make a Copy* to create your own version in your Google Drive. Or download the [sample data in Excel format](data/us-unemployment-gender-race-ethnicity-may2020.xlsx) to your computer.
+
+2. Open [Datawrapper](https://www.datawrapper.de) in your browser and click *Start Creating*. We recommend that you create a free account to better manage your visualizations, but it's not required.
+
+3. In the *Upload Data* screen, click *Import Google Spreadsheet* and paste the link to the data in the shared Google Sheet above, then click *Proceed*. Alternatively, you can upload data by copying and pasting it into the data table window, or uploading an Excel or CSV file.
+
+4. In the *Check and Describe* screen, inspect your data, then click *Proceed*.
+
+5. In the *Visualize* screen, Datawrapper will attempt to guess the chart type you desire, based on the data format, but you will need to select *Range Plot*.
+
+6. Click the *Annotate* tab near the top-left of the *Visualize* screen to add a meaningful title, data source, and byline credits.
+
+7. Click the *Refine* tab of the *Visualize* screen to modify the range chart appearance. You have several options, but here's the most important ones in this case. First, in the *Labels* section, change the visibility of the values from *start* to *both*, which places numbers at both ends of each range. Second, push the slider to *Label first range*, which places the word *Men* and *Women* above the first range, as shown in Figure \@ref(fig:datawrapper-range-labels).
+
+(ref:datawrapper-range-labels) Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range.
+
+```{r datawrapper-range-labels, fig.cap="(ref:datawrapper-range-labels)"}
+knitr::include_graphics("images/05-chart/datawrapper-range-labels.png")
+```
+
+8. Still in the *Refine* tab, scroll down to the *Appearance* section to improve the colors. Select the *Range end* drop-down menu to select a better color, such as red. Also, change the *Range color* setting to *gradient* to emphasize the range, as shown in Figure \@ref(fig:datawrapper-range-appearance).
+
+(ref:datawrapper-range-appearance) Modify the appearance settings to improve the color and add a gradient.
+
+```{r datawrapper-range-appearance, fig.cap="(ref:datawrapper-range-appearance)"}
+knitr::include_graphics("images/05-chart/datawrapper-range-appearance.png")
+```
+
+Tip: The *Refine* tab also includes options to resort or group data rows, change the chart size for different devices, and check visibility for colorblind readers.
+
+9. After modifying your visualization, proceed to the *Publish and Embed* screen, and follow the prompts or refer to the more detailed tutorial above.
+
+Now that you've completed a range chart, let's create another new chart type, scatter and bubble charts, which are relatively easy to design in Datawrapper.
 
 ## &emsp;Scatter and Bubble Charts {- #scatter-bubble-datawrapper}
 Scatter charts (also known as scatter plots) are best to show the relationship between two datasets by displaying their XY coordinates as dots to reveal possible correlations. In the scatter chart example below, each dot represents a nation, with its life expectancy on the horizontal X axis and its fertility rate (births per woman) on the vertical Y axis. The overall dot pattern illustrates a correlation between these two datasets: life expectancy tends to increase as fertility decreases.

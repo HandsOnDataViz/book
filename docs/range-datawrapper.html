@@ -311,7 +311,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="range-datawrapper" class="section level2 unnumbered" number="">
 <h2> Range Charts</h2>
-<p>TODO</p>
+<p>A range chart (also known as a specific type of dot chart) is best to show gaps between data points, such as inequalities. The line chart above illustrated how the overall US unemployment rate changed over time. But if we wish to look at differences in gender and race/ethnicity for a specific point in time, a range chart will highlight any gaps. Organize the data for a range chart into rows and columns, as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range-data">5.36</a>. The column headers contain data labels you wish to highlight, such <em>Men</em> and <em>Women</em>. The first column contains your categories, such as racial/ethnic groups, followed by the numerical values under each header. Now you can easily create an interactive range chart as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range">5.37</a>. The employment gender gap is visible in all three racial/ethnic groups, but the gap was widest between Hispanic men and women in May 2020.</p>
+
+<div class="figure"><span id="fig:datawrapper-range-data"></span>
+<img src="images/05-chart/datawrapper-range-data.png" alt="Organize your range chart data labels into column headers, with categories and values in each row."  />
+<p class="caption">
+Figure 5.36: Organize your range chart data labels into column headers, with categories and values in each row.
+</p>
+</div>
+
+<div class="figure"><span id="fig:datawrapper-range"></span>
+<iframe src="https://datawrapper.dwcdn.net/v8D2z/1/" width="672" height="400px">
+</iframe>
+<p class="caption">
+Figure 5.37: Range chart: Explore the <a href="https://datawrapper.dwcdn.net/v8D2z/1/">interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0">US Federal Reserve Open Data</a>.
+</p>
+</div>
+<p>To create your own range chart with our sample data, follow this tutorial. Since we assume that you’re already familiar with Datawrapper from the previous tutorial on annotated line charts, these steps are abbreviated. So if you get lost, see more details and images above.</p>
+<ol style="list-style-type: decimal">
+<li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0">US Unemployment by Gender and Race/Ethnicity May 2020 sample data in Google Sheets</a> and go to <em>File &gt; Make a Copy</em> to create your own version in your Google Drive. Or download the <a href="data/us-unemployment-gender-race-ethnicity-may2020.xlsx">sample data in Excel format</a> to your computer.</p></li>
+<li><p>Open <a href="https://www.datawrapper.de">Datawrapper</a> in your browser and click <em>Start Creating</em>. We recommend that you create a free account to better manage your visualizations, but it’s not required.</p></li>
+<li><p>In the <em>Upload Data</em> screen, click <em>Import Google Spreadsheet</em> and paste the link to the data in the shared Google Sheet above, then click <em>Proceed</em>. Alternatively, you can upload data by copying and pasting it into the data table window, or uploading an Excel or CSV file.</p></li>
+<li><p>In the <em>Check and Describe</em> screen, inspect your data, then click <em>Proceed</em>.</p></li>
+<li><p>In the <em>Visualize</em> screen, Datawrapper will attempt to guess the chart type you desire, based on the data format, but you will need to select <em>Range Plot</em>.</p></li>
+<li><p>Click the <em>Annotate</em> tab near the top-left of the <em>Visualize</em> screen to add a meaningful title, data source, and byline credits.</p></li>
+<li><p>Click the <em>Refine</em> tab of the <em>Visualize</em> screen to modify the range chart appearance. You have several options, but here’s the most important ones in this case. First, in the <em>Labels</em> section, change the visibility of the values from <em>start</em> to <em>both</em>, which places numbers at both ends of each range. Second, push the slider to <em>Label first range</em>, which places the word <em>Men</em> and <em>Women</em> above the first range, as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range-labels">5.38</a>.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:datawrapper-range-labels"></span>
+<img src="images/05-chart/datawrapper-range-labels.png" alt="Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range."  />
+<p class="caption">
+Figure 5.38: Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range.
+</p>
+</div>
+<ol start="8" style="list-style-type: decimal">
+<li>Still in the <em>Refine</em> tab, scroll down to the <em>Appearance</em> section to improve the colors. Select the <em>Range end</em> drop-down menu to select a better color, such as red. Also, change the <em>Range color</em> setting to <em>gradient</em> to emphasize the range, as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range-appearance">5.39</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:datawrapper-range-appearance"></span>
+<img src="images/05-chart/datawrapper-range-appearance.png" alt="Modify the appearance settings to improve the color and add a gradient."  />
+<p class="caption">
+Figure 5.39: Modify the appearance settings to improve the color and add a gradient.
+</p>
+</div>
+<p>Tip: The <em>Refine</em> tab also includes options to resort or group data rows, change the chart size for different devices, and check visibility for colorblind readers.</p>
+<ol start="9" style="list-style-type: decimal">
+<li>After modifying your visualization, proceed to the <em>Publish and Embed</em> screen, and follow the prompts or refer to the more detailed tutorial above.</li>
+</ol>
+<p>Now that you’ve completed a range chart, let’s create another new chart type, scatter and bubble charts, which are relatively easy to design in Datawrapper.</p>
 </div>
             </section>
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-04" />
+<meta name="date" content="2020-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -234,10 +234,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="chartcode.html"><a href="chartcode.html"><i class="fa fa-check"></i><b>10</b> Chart.js and Highcharts Templates</a>
 <ul>
-<li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i>Scatter Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i>Bubble Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar or Column Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="highcharts-annotated-line-csv.html"><a href="highcharts-annotated-line-csv.html"><i class="fa fa-check"></i>Annotated Line Chart with Highcharts</a></li>
+<li class="chapter" data-level="" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i>Scatter Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i>Bubble Chart with Chart.js</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>11</b> Leaflet Map Templates</a>
 <ul>
@@ -311,55 +312,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartcode" class="section level1" number="10">
 <h1><span class="header-section-number">Chapter 10</span> Chart.js and Highcharts Templates</h1>
-<p>TODO: Rewrite chapter to include Highcharts</p>
-<p>While beginners appreciate the drag-and-drop chart tools and tutorials described earlier in this book, such as <a href="google-sheets.html">Google Sheets</a> and <a href="tableau-public.html">Tableau Public</a>, more advanced users may wish to customize their visualizations, add more complex data, and control exactly how and where their work appears on the web. A more powerful and relatively easy-to-learn solution is to use code templates built with Chart.js <a href="https://www.chartjs.org/" class="uri">https://www.chartjs.org/</a>, an open-source library, which you can <a href="github.html">modify and host on GitHub</a>, as described in this book.</p>
-<div id="working-with-chart.js" class="section level4 unnumbered" number="">
-<h4>Working with Chart.js</h4>
-<div id="pros" class="section level5 unnumbered" number="">
-<h5>Pros</h5>
-<ul>
-<li>Open-source code that is distributed under MIT license and is free for all and</li>
-<li>Easier for beginners to understand than more complex visualization code libraries such as D3.js</li>
-</ul>
-</div>
-<div id="cons" class="section level5" number="10.0.0.0.1">
-<h5><span class="header-section-number">10.0.0.0.1</span> Cons</h5>
-<ul>
-<li>Must host your own code repositories to publish to the web (with a free service such as GitHub Pages)</li>
-</ul>
+<p>We recommend that you start creating interactive charts with easy drag-and-drop tools we described in <a href="chart.html">Chapter 5: Chart Your Data</a>, such as <a href="chart-google.html">Google Sheets</a>, <a href="chart-tableau-public.html">Datawrapper</a> and <a href="chart-tableau-public.html">Tableau Public</a>. But when you’re ready to explore more powerful tools, this chapter features Chart.js and Highcharts code templates, which offer many benefits for more advanced users. By copying and modifying our templates, you can customize the appearance and interactivity of your visualizations, upload your data in CSV format, and freely publish it with your code on GitHub Pages or any server you choose, without relying on a drag-and-drop tool platform to continue its service into the future. But in order to work with our templates, you first need to learn how to <a href="github.html">edit and host code with GitHub in chapter 9</a>.</p>
+<p>Most of the templates we feature are designed with <a href="https://www.chartjs.org/">Chart.js</a>, an open-source code library that is freely distributed under an MIT license, which anyone can use and modify. This means that the code library is extensible by other users, who have created <a href="https://github.com/chartjs/awesome">awesome Chart.js resources</a>, such as additional chart types and plugins that provide more features. Also, we include some templates designed with <a href="https://highcharts.com">Highcharts</a> to expand the range of chart types and features not fully covered by Chart.js. Although Highcharts code is open-source, its licensing terms differ. <a href="https://www.highcharts.com/products/highcharts/#non-commercial">Highcharts is free for non-commerical use</a>, such as a personal, school, or non-profit organization website. But if you create charts for commercial or governmental use, you’ll need to purchase a <a href="https://shop.highsoft.com/">Highcharts license</a>. In either case, we designed our Chart.js and Highcharts code templates to make them easier for beginners to understand. See the various types of charts and follow the links to the templates and tutorials in Table <a href="chartcode.html#tab:chart-templates">10.1</a>.</p>
 <table>
-<caption><span id="tab:chart-templates">Table 10.1: </span> Chart Templates and Tutorials</caption>
+<caption><span id="tab:chart-templates">Table 10.1: </span> Chart Code Templates and Tutorials</caption>
 <colgroup>
 <col width="50%" />
 <col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Chart Templates</th>
+<th>Chart</th>
 <th>Best use and tutorials in this book</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Chart.js Bar Chart<br> <img src="images/10-chartcode/chartjs-bar.png" /></td>
-<td>Bar charts (vertical bar charts are often called column charts) can be used to compare categorical data. <br>Template with tutorial: <a href="chartjs-bar-csv.html">Bar Chart.js with CSV Data</a></td>
+<td>Bar or Column Chart<br> <img src="images/10-chartcode/chartjs-column.png" /></td>
+<td>Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: <a href="chartjs-bar-csv.html">Bar or Column Chart with CSV data in Chart.js code template and tutorial</a></td>
 </tr>
 <tr class="even">
-<td>Chart.js Line Chart<br> <img src="images/10-chartcode/chartjs-line.png" /></td>
-<td>Line charts are normally used to show trends (temporal data). <br>Template with tutorial: <a href="chartjs-line-csv.html">Line Chart with CSV Data</a></td>
+<td>Error Bar or Column Chart<br> <img src="images/10-chartcode/chartjs-error-column.png" /></td>
+<td>Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: <a href="chartjs-error-bar-csv.html">Error Bar or Column Chart with CSV data in Chart.js code template and tutorial</a></td>
 </tr>
 <tr class="odd">
-<td>Chart.js Scatter Chart<br> <img src="images/10-chartcode/chartjs-scatter.png" /></td>
-<td>Scatter charts (also scatterplots) are used to display data of 2 or more dimensions. <br>Template with tutorial: <a href="chartjs-scatter-csv.html">Scatter Chart with CSV Data</a></td>
+<td>Line Chart<br> <img src="images/10-chartcode/chartjs-line.png" /></td>
+<td>Best to show continuous data, such as change over time.<br>Power tool: <a href="chartjs-line-csv.html">Line Chart with CSV data in Chart.js code template and tutorial</a></td>
 </tr>
 <tr class="even">
-<td>Chart.js Bubble Chart<br> <img src="images/10-chartcode/chartjs-bubble.png" /></td>
-<td>Bubble charts are used to display data of 3 or more dimensions. <br>Template with tutorial: <a href="chartjs-bubble-csv.html">Bubble Chart with CSV Data</a></td>
+<td>Annotated Line Chart<br> <img src="images/10-chartcode/highcharts-annotated-line.png" /></td>
+<td>Best to add contextual notes inside chart of continuous data, such as change over time.<br>Power tool: <a href="highcharts-annotated-line-csv.html">Annotated Line Chart with CSV data in Highcharts code template and tutorial</a></td>
+</tr>
+<tr class="odd">
+<td>Scatter Chart<br> <img src="images/10-chartcode/chartjs-scatter.png" /></td>
+<td>Best to show the relationship between two datasets as XY coordinates to reveal possible correlations.<br>Power tool: <a href="chartjs-scatter-csv.html">Scatter Chart with CSV data in Chart.js code template and tutorial</a></td>
+</tr>
+<tr class="even">
+<td>Bubble Chart<br> <img src="images/10-chartcode/chartjs-bubble.png" /></td>
+<td>Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color. <br>Power tool: <a href="chartjs-bubble-csv.html">Bubble Chart with CSV data in Chart.js code template and tutorial</a></td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+<p>See also easy drag-and-drop chart tools in <a href="chart.html">Chapter 5: Chart Your Data</a>.</p>
+<!-- TODO: update all chart images to show tooltips; decide if we're happy with names and labels -->
 <div id="inside-the-templates" class="section level4 unnumbered" number="">
 <h4>Inside the templates</h4>
 <p>The templates featured above vary from simple to complex, but all of them rely on four basic pillars:</p>
@@ -374,8 +369,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>library: link to online instructions to complete routine tasks (example: Chart.js)</li>
 <li>data: content to appear in chart, typically in CSV format (example: data.csv) or pulled from Google Sheets</li>
 </ul>
-<p>Learn more:
-- Chart.js Samples, <a href="https://www.chartjs.org/samples/latest/" class="uri">https://www.chartjs.org/samples/latest/</a></p>
+<p>To learn more, see <a href="https://www.chartjs.org/samples/latest/">Chart.js samples</a> and <a href="https://www.highcharts.com/demo">Highcharts Demos</a>.</p>
 </div>
 </div>
             </section>

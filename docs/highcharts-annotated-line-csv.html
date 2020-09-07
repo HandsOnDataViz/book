@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title> Scatter Chart | Hands-On Data Visualization</title>
+  <title>Annotated Line Chart with Highcharts | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content=" Scatter Chart | Hands-On Data Visualization" />
+  <meta property="og:title" content="Annotated Line Chart with Highcharts | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content=" Scatter Chart | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Annotated Line Chart with Highcharts | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-03" />
+<meta name="date" content="2020-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="chart-tableau.html"/>
-<link rel="next" href="filtered-line-chart-tableau.html"/>
+<link rel="prev" href="chartjs-line-csv.html"/>
+<link rel="next" href="chartjs-scatter-csv.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -201,8 +201,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="range-datawrapper.html"><a href="range-datawrapper.html"><i class="fa fa-check"></i> Range Charts</a></li>
 <li class="chapter" data-level="" data-path="scatter-bubble-datawrapper.html"><a href="scatter-bubble-datawrapper.html"><i class="fa fa-check"></i> Scatter and Bubble Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-tableau.html"><a href="chart-tableau.html"><i class="fa fa-check"></i>Tableau Public Charts</a></li>
-<li class="chapter" data-level="" data-path="scatter-chart-tableau.html"><a href="scatter-chart-tableau.html"><i class="fa fa-check"></i> Scatter Chart</a></li>
-<li class="chapter" data-level="" data-path="filtered-line-chart-tableau.html"><a href="filtered-line-chart-tableau.html"><i class="fa fa-check"></i> Filtered Line Chart</a></li>
+<li class="chapter" data-level="" data-path="scatter-tableau.html"><a href="scatter-tableau.html"><i class="fa fa-check"></i> Scatter Chart</a></li>
+<li class="chapter" data-level="" data-path="filtered-line-tableau.html"><a href="filtered-line-tableau.html"><i class="fa fa-check"></i> Filtered Line Chart</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
 <ul>
@@ -234,10 +234,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="chartcode.html"><a href="chartcode.html"><i class="fa fa-check"></i><b>10</b> Chart.js and Highcharts Templates</a>
 <ul>
-<li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i>Scatter Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i>Bubble Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar or Column Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="highcharts-annotated-line-csv.html"><a href="highcharts-annotated-line-csv.html"><i class="fa fa-check"></i>Annotated Line Chart with Highcharts</a></li>
+<li class="chapter" data-level="" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i>Scatter Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i>Bubble Chart with Chart.js</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>11</b> Leaflet Map Templates</a>
 <ul>
@@ -309,113 +310,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="scatter-chart-tableau" class="section level2 unnumbered" number="">
-<h2> Scatter Chart</h2>
-<p>REMOVE?</p>
-<p>If you wish to use the dataset from the scatter plot in Figure <a href="chart-tableau.html#fig:tableau-xy-demo">5.40</a>,
-you can <a href="data/ct-districts-income-grades-2009-13.xlsx">download the sample Excel file</a>.
-This data file consists of three columns: district, median household income, and grade levels
-(above/below national average for 6th grade Math and English test scores).
-The Notes tab explains how this data is based on the work of Sean Reardon et al.
-at the <a href="http://purl.stanford.edu/db586ns4974">Stanford Education Data Archive</a>,
-Motoko Rich et al. at <a href="http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html">The New York Times</a>,
-Andrew Ba Tran at <a href="http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/">TrendCT</a>,
-and the American Community Survey 2009-13 via <a href="http://socialexplorer.com">Social Explorer</a>.</p>
-<div id="connect-data-and-create-a-scatterplot" class="section level4 unnumbered" number="">
-<h4>Connect Data and Create a Scatterplot</h4>
-<p>Tableau Public’s welcome page includes three sections: Connect, Open, and Discover.</p>
-<ol style="list-style-type: decimal">
-<li><p>Under Connect, choose Microsoft Excel if you decided to use the sample dataset
-or your own Excel file. To load a CSV file, choose <em>Text file</em>.
-If your data is in Google Sheets, click <em>More…</em> and choose Google Sheets.
-Once you successfully connect to your data source, you will see it under Connections
-in the Data Source tab. Under Sheets, you will see two tables, <code>data</code> and <code>notes</code>.</p></li>
-<li><p>Drag <code>data</code> sheet into <em>Drag tables here</em> area, like is shown in Figure <a href="scatter-chart-tableau.html#fig:tableau-connect">5.41</a>.
-You will see the preview of the table under the drag-and-drop area.
-You have successfully connected one data source to Tableau Public, and you are ready
-to build your first chart.</p></li>
-</ol>
+<div id="highcharts-annotated-line-csv" class="section level2 unnumbered" number="">
+<h2>Annotated Line Chart with Highcharts</h2>
+<p>Annotated charts are best for displaying additional notes directly inside the chart to provide more context, such as key events in a line chart about change over time. TODO: add more detail here… Upload data to CSV file…</p>
 
-<div class="figure"><span id="fig:tableau-connect"></span>
-<img src="images/05-chart/tableau-connect-annotated.png" alt="Drag data sheet into Drag tables here area."  />
+<div class="figure"><span id="fig:highcharts-demo-annotated-line"></span>
+<iframe src="https://handsondataviz.github.io/highcharts-line-annotated/index.html" width="672" height="500px">
+</iframe>
 <p class="caption">
-Figure 5.41: Drag <code>data</code> sheet into <em>Drag tables here</em> area.
+Figure 10.4: Interactive annotated chart with Highcharts. See <a href="https://github.com/HandsOnDataViz/highcharts-line-annotated">detailed instructions on GitHub</a>.
 </p>
-</div>
-<!-- TODO: Let's find out whether real first-time users can follow these steps! -->
-<ol start="3" style="list-style-type: decimal">
-<li><p>Go to <em>Sheet 1</em> tab (in the lower-left corner of the window) to view your worksheet.
-Although it may feel overwhelming at first, the key is learning
-where to drag items from the Data pane (left) into the main worksheet.
-Tableau marks all data fields as blue (discrete values, mostly text fields or numeric labels)
-or green (continuous values, mostly numbers).</p></li>
-<li><p>Drag the <em>Grade Levels</em> field into the <em>Rows</em> field above the charting area, which
-for now is just empty space. You can consult Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-dragging">5.42</a> for this
-and two following steps.
-Tableau will apply a summation function to it, and you will see the <code>SUM(Grade Levels)</code> appearing
-in the Rows row, and a blue bar in the charting area. It makes little sense so far, so let’s
-plot another data field.</p></li>
-<li><p>Drag <em>Median Household Income</em> to the <em>Columns</em> field (just above the Rows field).
-Tableau will once again apply the summation function, so you will see <code>SUM(Median Household Income)</code>
-in the Columns. The bar chart will transform into a scatter chart with just one data point
-in the upper-right corner. That is because the data for both is aggregated (remember the <code>SUM</code> function).</p></li>
-<li><p>We want to tell Tableau to disaggregate the household and grade levels variables. To do so,
-drag <em>District</em> dimension into the <em>Detail</em> box of the Marks card. You will now see
-a real scatter chart in the charting area. If you hover over points, you will see all three
-values associated with it.</p></li>
-</ol>
-
-<div class="figure"><span id="fig:tableau-xy-dragging"></span>
-<img src="images/05-chart/tableau-xy-dragging-annotated.png" alt="Drag data fields to the right places in Tableau."  />
-<p class="caption">
-Figure 5.42: Drag data fields to the right places in Tableau.
-</p>
-</div>
-</div>
-<div id="add-title-and-caption-and-publish" class="section level4 unnumbered" number="">
-<h4>Add Title and Caption, and Publish</h4>
-<p>Give your scatter chart a meaningful title by double-clicking on default <em>Sheet 1</em> title
-above the charting area.</p>
-<p>You will normally need to provide additional information about the chart,
-such as source of the data, who built the visualization and when, and other
-important things. You can do so inside a Caption, a text block that accompanies
-your Tableau visualization. In the menu, go to <em>Worksheet &gt; Show Caption</em>. Double-click
-the Caption block that appeared, and edit the text.</p>
-<p>As a result, your final worksheet will look like shown in Figure <a href="scatter-chart-tableau.html#fig:tableau-xy-final">5.43</a>.</p>
-
-<div class="figure"><span id="fig:tableau-xy-final"></span>
-<img src="images/05-chart/tableau-xy-final-annotated.png" alt="This scatter chart is ready to be published."  />
-<p class="caption">
-Figure 5.43: This scatter chart is ready to be published.
-</p>
-</div>
-<p>Tip: In the dropdown above Columns section, change <em>Standard</em> to <em>Fit Width</em>
-to ensure your chart occupies 100% of available horizontal space.</p>
-<p>To publish the chart to the web,</p>
-<ol style="list-style-type: decimal">
-<li><p>Go to <em>File &gt; Save to Tableau Public As…</em>. A window to sign in to your account will pop up.
-If you don’t have an account, click <em>Create one now for free</em> at the bottom.</p></li>
-<li><p>Once signed in, a window to set the workbook title will appear. Change the default <em>Book1</em> title
-to something meaningful, as this name will appear in the URL for your published work. Click Save.</p></li>
-<li><p>Once the dashboard is saved, Tableau Public will open up a window in your default browser
-with the visualization. In the green ribbon above the chart, click <em>Edit Details</em>
-to edit the title or description. Under <em>Toolbar Settings</em>, see checkbox to
-<em>Allow others to download or explore and copy this workbook and its data</em>
-(Figure <a href="scatter-chart-tableau.html#fig:tableau-toolbar-settings">5.44</a>), and enable/disable
-it as you think is appropriate. As advocates for open and accessible data, we recommend
-leaving the box checked.</p></li>
-</ol>
-
-<div class="figure"><span id="fig:tableau-toolbar-settings"></span>
-<img src="images/05-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
-<p class="caption">
-Figure 5.44: This scatter chart is ready to be published.
-</p>
-</div>
-<p>See the <a href="embed-tableau.html">Embed Tableau Public on Your Website</a> section of this book to insert the interactive version of your chart on a web page that you control.</p>
-<p>Tip: Your entire portfolio of Tableau Public visualizations is online at <code>https://public.tableau.com/profile/USERNAME</code>,
-where <code>USERNAME</code> is your unique username.</p>
-<p>To learn more, see <a href="https://public.tableau.com/en-us/s/resources">Tableau Public resources page</a>.</p>
 </div>
 </div>
             </section>
@@ -423,8 +327,8 @@ where <code>USERNAME</code> is your unique username.</p>
           </div>
         </div>
       </div>
-<a href="chart-tableau.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="filtered-line-chart-tableau.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chartjs-line-csv.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chartjs-scatter-csv.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -463,7 +367,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/05-chart.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/10-chartcode.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

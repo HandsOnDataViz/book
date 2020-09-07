@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Bar Chart.js with CSV Data | Hands-On Data Visualization</title>
+  <title>Bar or Column Chart with Chart.js | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Bar Chart.js with CSV Data | Hands-On Data Visualization" />
+  <meta property="og:title" content="Bar or Column Chart with Chart.js | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Bar Chart.js with CSV Data | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Bar or Column Chart with Chart.js | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-04" />
+<meta name="date" content="2020-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -234,10 +234,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="chartcode.html"><a href="chartcode.html"><i class="fa fa-check"></i><b>10</b> Chart.js and Highcharts Templates</a>
 <ul>
-<li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i>Scatter Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i>Bubble Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar or Column Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="highcharts-annotated-line-csv.html"><a href="highcharts-annotated-line-csv.html"><i class="fa fa-check"></i>Annotated Line Chart with Highcharts</a></li>
+<li class="chapter" data-level="" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i>Scatter Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i>Bubble Chart with Chart.js</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>11</b> Leaflet Map Templates</a>
 <ul>
@@ -310,9 +311,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="chartjs-bar-csv" class="section level2 unnumbered" number="">
-<h2>Bar Chart.js with CSV Data</h2>
+<h2>Bar or Column Chart with Chart.js</h2>
 <p>Bar charts (vertical bar charts are often called <em>column charts</em>) can be used to compare categorical data.
-The y-axis (or x-axis for horizontal bar chart) should always start at 0.</p>
+The y-axis (or x-axis for horizontal bar chart) should always start at 0. Upload data to CSV file…</p>
 
 <div class="figure"><span id="fig:chartjs-demo-bar"></span>
 <iframe src="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html" width="672" height="500px">
@@ -321,13 +322,11 @@ The y-axis (or x-axis for horizontal bar chart) should always start at 0.</p>
 Figure 10.1: Interactive bar chart with Chart.js. See <a href="https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart">detailed instructions on GitHub</a>.
 </p>
 </div>
-<div id="bar-chart.js-with-csv-data-with-error-bars" class="section level3 unnumbered" number="">
-<h3>Bar Chart.js with CSV Data (with Error Bars)</h3>
+<div id="chartjs-error-bar-csv" class="section level3 unnumbered" number="">
+<h3>Error Bar or Column Chart with Chart.js</h3>
 <p>If your data comes with uncertainty (margins of error), we recommend you
 show it in your visualizations. The bar chart template shown in Figure <a href="chartjs-bar-csv.html#fig:chartjs-demo-bar-error-bars">10.2</a>
-shows median and mean (average) income for select US states. You can notice that error bars
-are larger for less populated states, such as Alaska, Vermont, and Wyoming. Data for the two of the most populous
-states, California and Texas, have tiny margins of error.</p>
+shows median and mean (average) income for different-sized geographies: the US state of Colorado, Boulder County, Boulder city, and a census tract in the city. Upload data to CSV file…</p>
 
 <div class="figure"><span id="fig:chartjs-demo-bar-error-bars"></span>
 <iframe src="https://handsondataviz.github.io/chartjs-templates/bar-chart-with-error-bars/index.html" width="672" height="500px">

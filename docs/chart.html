@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-04" />
+<meta name="date" content="2020-09-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -234,10 +234,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="chartcode.html"><a href="chartcode.html"><i class="fa fa-check"></i><b>10</b> Chart.js and Highcharts Templates</a>
 <ul>
-<li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i>Scatter Chart.js with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i>Bubble Chart.js with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bar-csv.html"><a href="chartjs-bar-csv.html"><i class="fa fa-check"></i>Bar or Column Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="chartjs-line-csv.html"><a href="chartjs-line-csv.html"><i class="fa fa-check"></i>Line Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="highcharts-annotated-line-csv.html"><a href="highcharts-annotated-line-csv.html"><i class="fa fa-check"></i>Annotated Line Chart with Highcharts</a></li>
+<li class="chapter" data-level="" data-path="chartjs-scatter-csv.html"><a href="chartjs-scatter-csv.html"><i class="fa fa-check"></i>Scatter Chart with Chart.js</a></li>
+<li class="chapter" data-level="" data-path="chartjs-bubble-csv.html"><a href="chartjs-bubble-csv.html"><i class="fa fa-check"></i>Bubble Chart with Chart.js</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>11</b> Leaflet Map Templates</a>
 <ul>
@@ -348,42 +349,44 @@ learn to identify good charts from bad ones. You will learn important rules that
 <td>Best to show distribution of raw data, with number of values in each bucket. If labels are long, use horizontal bars instead of vertical columns..<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
+<td>Error Bar or Column Chart<br> <img src="images/05-chart/chart-error-column.png" /></td>
+<td>Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: TODO DECIDE <br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+</tr>
+<tr class="even">
 <td>Pie chart<br> <img src="images/05-chart/chart-pie.png" /></td>
 <td>Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: <a href="pie-line-area-google.html">Pie Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Line chart<br> <img src="images/05-chart/chart-line.png" /></td>
 <td>Best to show continuous data, such as change over time.<br>Easy tools: <a href="pie-line-area-google.html">Line Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Annotated chart<br> <img src="images/05-chart/chart-annotated.png" /></td>
 <td>Best to highlight data or add notes inside the chart.<br>Easy tools: <a href="annotated-datawrapper.html">Annotated Chart in Datawrapper tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Filtered line chart <br> <img src="images/05-chart/chart-filtered-line.png" /></td>
 <td>Best to show multiple lines of continuous data, which users can toggle on and off. <br>Easy tool: <a href="filtered-line-tableau.html">Filtered Line Chart in Tableau Public tutorial</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Stacked area chart<br> <img src="images/05-chart/chart-stacked-area.png" /></td>
-<td>Best to show parts of a whole, with continuous data such as change over time. <br>Easy tools: <a href="pie-line-area-google.html">Stacked Area Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show parts of a whole, with continuous data such as change over time. <br>Easy tools: <a href="pie-line-area-google.html">Stacked Area Chart in Google Sheets tutorial</a><br>Power tool: TODO DECIDE</td>
+</tr>
+<tr class="odd">
+<td>Range chart<br> <img src="images/05-chart/chart-range.png" /></td>
+<td>Best to show gaps between data points, such as inequalities.<br>Easy tools: <a href="annotated-datawrapper.html">Range Chart in Datawrapper tutorial</a><br>Power tool: TODO DECIDE</td>
 </tr>
 <tr class="even">
-<td>Range chart<br> <img src="images/05-chart/chart-range.png" /></td>
-<td>Best to show gaps between data points, such as inequalities.<br>Easy tools: <a href="annotated-datawrapper.html">Range Chart in Datawrapper tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
-</tr>
-<tr class="odd">
 <td>Scatter chart <br> <img src="images/05-chart/chart-scatter.png" /></td>
 <td>Best to show the relationship between two datasets as XY coordinates to reveal possible correlations. <br>Easy tool: <a href="scatter-bubble-datawrapper.html">Scatter and Bubble Chart in Datawrapper tutorial</a> or <a href="scatter-tableau.html">Scatter Chart in Tableau Public tutorial</a>. <br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Bubble chart <br> <img src="images/05-chart/chart-bubble.png" /></td>
 <td>Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color.<br>Easy tool: <a href="scatter-bubble-datawrapper.html">Scatter and Bubble Chart in Datawrapper tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
 </tr>
 </tbody>
 </table>
-<!-- TODO: Add chart with error bars to acknowledge data uncertainty (such as margins of error), and also consider mentioning this in chart design principles
-REDO range chart example?
--->
+<!-- TODO: Are we happy with "error bar or column chart" name? REDO range chart example?; DECIDE on power tools in cases noted above?-->
 </div>
             </section>
 

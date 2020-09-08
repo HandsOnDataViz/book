@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-07" />
+<meta name="date" content="2020-09-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="find-and-replace.html"/>
+<link rel="prev" href="transpose.html"/>
 <link rel="next" href="combine-data.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -185,6 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
+<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
@@ -328,7 +329,7 @@ coordinates become <em>Latitude</em> and <em>Longitude</em> columns, and your <e
 Note that you can only split data from one column at a time.</li>
 <li>Make sure there is no data in the column to the right of the one you’re splitting, because
 all data there will be written over.</li>
-<li>Go to <em>Data</em> and select <em>Split text to columns</em>, as in Figure <a href="split-data.html#fig:sheets-split">4.3</a>.</li>
+<li>Go to <em>Data</em> and select <em>Split text to columns</em>, as in Figure <a href="split-data.html#fig:sheets-split">4.6</a>.</li>
 <li>Google Sheets will automatically try to guess your separator. You will see that your coordinates
 are now split with the comma, and the Separator is set to <em>Detect automatically</em> in the dropdown.
 You can manually change it to a comma (<code>,</code>), a semicolon (<code>;</code>), a period (<code>.</code>), a space character,
@@ -339,7 +340,7 @@ or any other custom character (or even a sequence of characters, which we’ll d
 <div class="figure"><span id="fig:sheets-split"></span>
 <img src="images/04-clean/sheets-split-annotated.png" alt="Select Data - Split text to columns to automatically separate data." width="350" />
 <p class="caption">
-Figure 4.3: Select <em>Data - Split text to columns</em> to automatically separate data.
+Figure 4.6: Select <em>Data - Split text to columns</em> to automatically separate data.
 </p>
 </div>
 </div>
@@ -356,13 +357,13 @@ Figure 4.3: Select <em>Data - Split text to columns</em> to automatically separa
 <li>Select the column and go to <em>Data</em> &gt; <em>Split text to columns</em> to start splitting from left to right.</li>
 <li>Google Sheets will automatically split your cell into two parts, <code>300 Summit St</code> and <code>Hartford CT--06106</code>, using comma as a separator. (If it didn’t, just select <em>Comma</em> from the dropdown menu that appeared).</li>
 <li>Now select only the second column and perform <em>Split text to columns</em> again. Google Sheets will automatically separate the city from the state and zip code, because it automatically chose a space as the separator. (If it did not, choose <em>Space</em> from the dropdown menu).</li>
-<li>Finally, select only the third column and perform <em>Split text to columns</em> again. Google Sheets won’t recognize the two dashes as a separator, so you need to manually select <em>Custom</em>, type those two dashes (<code>--</code>) in the <em>Custom separator</em> field, as shown in Figure <a href="split-data.html#fig:sheets-split-complex">4.4</a>, and press Enter. Now you have successfully split the full address into four columns.</li>
+<li>Finally, select only the third column and perform <em>Split text to columns</em> again. Google Sheets won’t recognize the two dashes as a separator, so you need to manually select <em>Custom</em>, type those two dashes (<code>--</code>) in the <em>Custom separator</em> field, as shown in Figure <a href="split-data.html#fig:sheets-split-complex">4.7</a>, and press Enter. Now you have successfully split the full address into four columns.</li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-split-complex"></span>
 <img src="images/04-clean/sheets-split-complex.png" alt="To split the last column, select a Custom separator and manually type in two dashes." width="500" />
 <p class="caption">
-Figure 4.4: To split the last column, select a <em>Custom</em> separator and manually type in two dashes.
+Figure 4.7: To split the last column, select a <em>Custom</em> separator and manually type in two dashes.
 </p>
 </div>
 <p>Tip: Google Sheets will treat zip codes as numbers and will delete leading zeros (so 06106 will become 6106). To fix that, select the column, and go to <em>Format &gt; Number &gt; Plain text</em>. Now you can manually re-add zeros. If your dataset is large, consider adding zeros using the formula introduced in the <a href="#combine-separate-columns">following section</a>.</p>
@@ -373,7 +374,7 @@ Figure 4.4: To split the last column, select a <em>Custom</em> separator and man
           </div>
         </div>
       </div>
-<a href="find-and-replace.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="transpose.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="combine-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

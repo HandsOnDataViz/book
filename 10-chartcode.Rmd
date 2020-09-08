@@ -15,13 +15,11 @@ Table: (\#tab:chart-templates) Chart Code Templates and Tutorials
 | Scatter Chart<br> ![](images/10-chartcode/chartjs-scatter.png) | Best to show the relationship between two datasets as XY coordinates to reveal possible correlations.<br>Power tool: [Scatter Chart with CSV data in Chart.js code template and tutorial](chartjs-scatter-csv.html) |
 | Bubble Chart<br> ![](images/10-chartcode/chartjs-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color. <br>Power tool: [Bubble Chart with CSV data in Chart.js code template and tutorial](chartjs-bubble-csv.html) |
 
-See also easy drag-and-drop chart tools in [Chapter 5: Chart Your Data](chart.html).
-
 <!-- TODO: update all chart images to show tooltips; decide if we're happy with names and labels -->
 
+For additional chart types, see [Chart.js samples](https://www.chartjs.org/samples/latest/) and [Highcharts Demos](https://www.highcharts.com/demo).
 
-#### Inside the templates {-}
-The templates featured above vary from simple to complex, but all of them rely on four basic pillars:
+These code templates vary from simple to complex, but all of them rely on four basic pillars:
 
   * HTML: language to structure content on the web (example: index.html)
   * CSS, or Cascading Style Sheet: to shape how content appears on the web (example: style.css)
@@ -31,19 +29,64 @@ The templates featured above vary from simple to complex, but all of them rely o
 Also, these templates refer to other code elements:
 
   * library: link to online instructions to complete routine tasks (example: Chart.js)
-  * data: content to appear in chart, typically in CSV format (example: data.csv) or pulled from Google Sheets
+  * data: content to appear in chart, typically in CSV format (example: data.csv)
 
-To learn more, see [Chart.js samples](https://www.chartjs.org/samples/latest/) and [Highcharts Demos](https://www.highcharts.com/demo).
 
 ## Bar or Column Chart with Chart.js {- #chartjs-bar-csv}
-Bar charts (vertical bar charts are often called *column charts*) can be used to compare categorical data.
-The y-axis (or x-axis for horizontal bar chart) should always start at 0. Upload data to CSV file...
 
-(ref:chartjs-demo-bar) Interactive bar chart with Chart.js. See [detailed instructions on GitHub](https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart).
+<!-- TODO: Ilya, here's the general format I recommend for each template below (which I have matched up with the README file and the code comments). While I really like how you combined all of the chart.js templates into one repo, it adds a bit of complexity for GitHub web-interface users who wish to use the template to make one chart type, since it's a subfolder. Either we need to add extra steps between #1 and #2 below, or we need to split the unified repo into separate ones. What do you think? -->
+
+Bar or column charts are best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. Always start the x-axis (for a horizontal bar chart) or y-axis (for a vertical column chart) at zero. This interactive Chart.js code template pulls the data from a CSV file, as shown in Figure \@ref(fig:chartjs-demo-bar).
+
+(ref:chartjs-demo-bar) Bar chart with Chart.js: explore the [interactive version](https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html).
 
 ```{r chartjs-demo-bar, fig.cap="(ref:chartjs-demo-bar)"}
 if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html", height="500px") else knitr::include_graphics("images/10-chartcode/chartjs-demo-bar.png")
 ```
+
+To create your own bar or column chart with CSV data using our Chart.js template:
+
+1. Go to [our GitHub repo for Chart.js templates](https://github.com/HandsOnDataViz/chartjs-templates), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 9: Edit and Host Code with GitHub](github.html).
+
+2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish.
+
+```
+| district  | nonlearner | learner |
+| Hartford  | 15656      | 4111    |
+| New Haven | 17730      | 3534    |
+```
+
+3. In `script.js`, customize the values of variables shown in the code snippet below:
+
+```javascript
+  var HORIZONTAL = false;   // `false` for vertical column chart, `true` for horizontal bar chart
+  var STACKED = false;  // `false` for individual bars, `true` for stacked bars
+
+  var TITLE = 'English Learners by Select School Districts in Connecticut, 2018-19';
+
+  var LABELS = 'district';  // Column to define 'bucket' names on x-axis (for vertical column chart) or y-axis (for horizontal bar chart)
+
+  var SERIES = [  // For each column representing a data series, define its name and color
+    {
+      column: 'nonlearner',
+      name: 'Non-Learners',
+      color: 'grey'
+    },
+    {
+      column: 'learner',
+      name: 'Learners',
+      color: 'blue'
+    }
+  ];
+
+  var X_AXIS = 'School Districts';  // x-axis label and label in tooltip
+  var Y_AXIS = 'Number of Enrolled Students'; // y-axis label and label in tooltip
+
+  var SHOW_GRID = true; // `true` to show the grid, `false` to hide
+  var SHOW_LEGEND = true; // `true` to show the legend, `false` to hide
+```
+
+For more customization, see [Chart.js documentation](https://www.chartjs.org/docs/latest/).
 
 ### Error Bar or Column Chart with Chart.js {- #chartjs-error-bar-csv}
 If your data comes with uncertainty (margins of error), we recommend you
@@ -57,6 +100,8 @@ if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io
 ```
 
 ## Line Chart with Chart.js {- #chartjs-line-csv}
+TODO: Match formatting above
+
 Line charts are often used to show temporal data (trends).
 The x-axis often represents time intervals.
 Unlike column or bar charts, y-axes of line charts do not necessarily start at 0. Upload data to CSV file...
@@ -68,6 +113,8 @@ if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io
 ```
 
 ## Annotated Line Chart with Highcharts {- #highcharts-annotated-line-csv}
+TODO: Match formatting above
+
 Annotated charts are best for displaying additional notes directly inside the chart to provide more context, such as key events in a line chart about change over time. TODO: add more detail here... Upload data to CSV file...
 
 (ref:highcharts-demo-annotated-line) Interactive annotated chart with Highcharts. See [detailed instructions on GitHub](https://github.com/HandsOnDataViz/highcharts-line-annotated).
@@ -77,6 +124,8 @@ if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io
 ```
 
 ## Scatter Chart with Chart.js {- #chartjs-scatter-csv}
+TODO: Match formatting above
+
 Scatter charts (also *scatterplots*) are used to display data of 2 or more dimensions.
 The scatter chart below shows the relationship between household income and test performance
 for school districts in Connecticut. Using x- and y-axes to show two dimensions, it is
@@ -89,6 +138,8 @@ if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io
 ```
 
 #### Going beyond two dimensions {-}
+TODO: Match formatting above
+
 To show more than two dimensions in scatter charts, one can:
 
 * **color** each data point differently to show third dimension, eg use shades of red and green to show 5-year trend in test performance;
@@ -98,6 +149,8 @@ To show more than two dimensions in scatter charts, one can:
 Remember not to overwhelm the viewer and communicate only the data that are necessary to prove or illustrate your idea.
 
 ## Bubble Chart with Chart.js {- #chartjs-bubble-csv}
+TODO: Match formatting above
+
 Bubble charts are similar to [scatter plots](chartjs-scatter-csv.html). The size of each dot (marker) is used to represent an additional dimension.
 
 In the demo below, the bubble chart shows the relationship between median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut. The size of data point (marker) corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts. Upload data to CSV file...

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-07" />
+<meta name="date" content="2020-09-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -185,6 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
+<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
@@ -312,12 +313,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="open-refine" class="section level2 unnumbered" number="">
 <h2>Clean Data with OpenRefine</h2>
-<p>Look at the <a href="https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503">sample US Foreign Aid dataset</a> shown in Figure <a href="open-refine.html#fig:openrefine-dataset">4.8</a>. Can you spot any problems with it?</p>
+<p>Look at the <a href="https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503">sample US Foreign Aid dataset</a> shown in Figure <a href="open-refine.html#fig:openrefine-dataset">4.11</a>. Can you spot any problems with it?</p>
 
 <div class="figure"><span id="fig:openrefine-dataset"></span>
 <img src="images/04-clean/openrefine-dataset.png" alt="Can you spot any problems with this sample data?"  />
 <p class="caption">
-Figure 4.8: Can you spot any problems with this sample data?
+Figure 4.11: Can you spot any problems with this sample data?
 </p>
 </div>
 <p>Notice how the <em>Country</em> column various spellings of North and South Korea. Also note how the <em>FundingAmount</em> column is not standardized. Some amounts use commas to separate thousands, while some uses spaces. Some amounts start with a dollar sign, and some do not. Datasets like this can be an absolute nightmare to analyze. Luckily, OpenRefine provides powerful tools to clean up and standardize data.</p>
@@ -333,12 +334,12 @@ a security message that will prevent OpenRefine from launching because Apple can
 click the <em>Open Anyway</em> button in the lower half of the window. If prompted with another window, click <em>Open</em>.</p>
 <p>If you use Windows, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
 open in your default browser.</p>
-<p>Once launched, you should see OpenRefine in your browser with <code>127.0.0.1:3333</code> address (localhost, port 3333), as shown in Figure <a href="open-refine.html#fig:openrefine-welcome">4.9</a>.</p>
+<p>Once launched, you should see OpenRefine in your browser with <code>127.0.0.1:3333</code> address (localhost, port 3333), as shown in Figure <a href="open-refine.html#fig:openrefine-welcome">4.12</a>.</p>
 
 <div class="figure"><span id="fig:openrefine-welcome"></span>
 <img src="images/04-clean/openrefine-welcome-annotated.png" alt="OpenRefine starting page."  />
 <p class="caption">
-Figure 4.9: OpenRefine starting page.
+Figure 4.12: OpenRefine starting page.
 </p>
 </div>
 </div>
@@ -352,14 +353,14 @@ Figure 4.9: OpenRefine starting page.
 In our case, parsing means the way the data is split into columns.
 Make sure OpenRefine assigned values to the right columns,
 or change setting in <em>Parse data as</em> block at the bottom of the page until it starts looking meaningful,
-like shown in Figure <a href="open-refine.html#fig:openrefine-parse">4.10</a>.</li>
+like shown in Figure <a href="open-refine.html#fig:openrefine-parse">4.13</a>.</li>
 <li>Hit <em>Create Project</em> in the upper-right corner.</li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-parse"></span>
 <img src="images/04-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
-Figure 4.10: OpenRefine parsing options.
+Figure 4.13: OpenRefine parsing options.
 </p>
 </div>
 <p>Now when you’ve successfully read the data into a new project, let’s start
@@ -392,13 +393,13 @@ cells turning green (successfully converting to numeric).
 Now we need to remove spaces and an <code>a</code> character at the end of one number.
 Fix those manually by hovering over cells, and clicking the <code>edit</code> button
 (in the new popup window, make sure to change <em>Data type</em> to <em>number</em>, and hit <em>Apply</em>,
-like in Figure <a href="open-refine.html#fig:openrefine-manual-edit">4.11</a>).</li>
+like in Figure <a href="open-refine.html#fig:openrefine-manual-edit">4.14</a>).</li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-manual-edit"></span>
 <img src="images/04-clean/openrefine-manual-edit-annotated.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
 <p class="caption">
-Figure 4.11: Manually remove spaces and extra characters, and change data type to number.
+Figure 4.14: Manually remove spaces and extra characters, and change data type to number.
 </p>
 </div>
 <p>At this point, all funding amounts should be clean numbers, right-aligned and colored in green.
@@ -418,7 +419,7 @@ that should have just two distinct values, North Korea and South Korea!</p>
 <ol style="list-style-type: decimal">
 <li>To begin standardizing spellings, click on the arrow-down button of Country column header,
 and choose <em>Edit cells</em> &gt; <em>Cluster and edit</em>. You will see a window like the one shown in Figure
-<a href="open-refine.html#fig:openrefine-cluster">4.12</a>.</li>
+<a href="open-refine.html#fig:openrefine-cluster">4.15</a>.</li>
 <li>You will have a choice of two clustering methods, <em>key collision</em> or <em>nearest neighbor</em>. Key collision
 clustering is a much faster technique that is appropriate for larger datasets, but it is less flexible.
 Nearest neighbor is a more computationally expensive approach and will be slow on larger datasets,
@@ -427,7 +428,7 @@ which you can read about <a href="https://github.com/OpenRefine/OpenRefine/wiki/
 For the purpose of this exercise, let’s leave the default <em>key collision</em> method with <em>fingerprint</em> function.</li>
 <li>OpenRefine will calculate a list of clusters. <em>Values in Cluster</em> column contains grouped spellings
 that OpenRefine considers the same. If you agree with a grouping, check the <em>Merge?</em> box, and assign
-the “true” value to the <em>New Cell Value</em> input box (see first cluster in Figure <a href="open-refine.html#fig:openrefine-cluster">4.12</a>).
+the “true” value to the <em>New Cell Value</em> input box (see first cluster in Figure <a href="open-refine.html#fig:openrefine-cluster">4.15</a>).
 In our example, this would be either <code>North Korea</code> or <code>South Korea</code>.</li>
 <li>You can go through all groupings, or stop after one or two and click <em>Merge Selected &amp; Re-Cluster</em> button.
 The clusters you chose to merge will be merged, and grouping will be re-calculated
@@ -439,7 +440,7 @@ how they produce clusters of different sizes and accuracy.</p>
 <div class="figure"><span id="fig:openrefine-cluster"></span>
 <img src="images/04-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
 <p class="caption">
-Figure 4.12: Cluster similar text values.
+Figure 4.15: Cluster similar text values.
 </p>
 </div>
 </div>

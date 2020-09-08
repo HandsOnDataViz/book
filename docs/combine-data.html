@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-07" />
+<meta name="date" content="2020-09-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -185,6 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
+<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
@@ -325,7 +326,7 @@ using the ampersand (<code>&amp;</code>) symbol. Also, you can add separators in
 <ol style="list-style-type: decimal">
 <li>Open the <a href="https://docs.google.com/spreadsheets/d/1DGKYquQ0nKiBCE_KbQk24Zvjrxb0zKk8gC-FpObY7LM/edit#gid=0">Combine Separate Columns sample data in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive. The sheet contains addresses that are separated into four columns: street, city, state, and zip.</li>
 <li>In column E, type a new header named <em>location</em>.</li>
-<li>In cell E2, type in the following formula, which combines the four items using ampersands, and separates them with quoted commas and spaces, as shown in Figure <a href="combine-data.html#fig:sheets-combine">4.5</a>, and press <em>Enter</em>.
+<li>In cell E2, type in the following formula, which combines the four items using ampersands, and separates them with quoted commas and spaces, as shown in Figure <a href="combine-data.html#fig:sheets-combine">4.8</a>, and press <em>Enter</em>.
 <code>=A2 &amp; ", " &amp; B2 &amp; ", " &amp; C2 &amp; " " &amp; D2</code></li>
 <li>Click cell E2 and drag the bottom-right corner cross-hair downward to fill in the rest of the column.</li>
 </ol>
@@ -333,7 +334,7 @@ using the ampersand (<code>&amp;</code>) symbol. Also, you can add separators in
 <div class="figure"><span id="fig:sheets-combine"></span>
 <img src="images/04-clean/sheets-combine.png" alt="Use ampersands to combine items, and insert quoted spaces with commas as separators."  />
 <p class="caption">
-Figure 4.5: Use ampersands to combine items, and insert quoted spaces with commas as separators.
+Figure 4.8: Use ampersands to combine items, and insert quoted spaces with commas as separators.
 </p>
 </div>
 <p>Now that you have successfully combined the terms into one location column, you can use the <a href="geocode.html">Geocoding by SmartMonkey Google Sheets Add-on we described in chapter 2</a> to find the latitude and longitude coordinates, in order to <a href="map.html">map your data as we’ll discuss in chapter 6</a></p>

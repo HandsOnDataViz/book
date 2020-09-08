@@ -9,7 +9,7 @@ They will have missing values, dates in different formats, text in numeric-only 
 knitr::include_graphics("images/04-clean/clean-up-messy-data.png")
 ```
 
-In this chapter you'll learn about different tools, in order to help you make decisions about which one to use to clean up your data efficiently. First, we'll start with basic cleanup methods using spreadsheets, such as find and replace with a blank, split data into separate columns, and combine columns into one. While we feature Google Sheets in our examples, the same principles (and in most cases the same formulas) can be use in Microsoft Excel, LibreOffice Calc, Mac's Numbers, or other spreadsheet packages. Next, you will learn how to extract table data from text-based PDF documents using a free tool, Tabula, used by data journalists and researchers worldwide to analyze spending data, health reports, and all sorts of other datasets that get trapped in PDFs. Finally, we will introduce OpenRefine, an extremely powerful and versatile tool to clean up the messiest spreadsheets, such as those containing dozens of different spellings of the same name.
+In this chapter you'll learn about different tools, in order to help you make decisions about which one to use to clean up your data efficiently. First, we'll start with basic cleanup methods using spreadsheets, such as [find and replace with a blank](find-and-replace.html), [tranpose or swap rows and columns of data](transpose.html), [split data into separate columns](split-data.html), and [combine columns into one](combine-data.html). While we feature Google Sheets in our examples, the same principles (and in most cases the same formulas) can be use in Microsoft Excel, LibreOffice Calc, Mac's Numbers, or other spreadsheet packages. Next, you will learn how to [extract table data from text-based PDF documents with Tabula](tabula.html), a free tool used by data journalists and researchers worldwide to analyze spending data, health reports, and all sorts of other datasets that get trapped in PDFs. Finally, we will [introduce OpenRefine, a powerful and versatile tool to clean up the messiest spreadsheets](open-refine.html), such as those containing dozens of different spellings of the same name.
 
 ## Find and Replace with Blank {- #find-and-replace}
 
@@ -50,6 +50,39 @@ will state that 169 instances of "town" have been replaced.
 ```{r sheets-find-replace, fig.cap="(ref:sheets-find-replace)"}
 knitr::include_graphics("images/04-clean/sheets-find-replace-annotated.png")
 ```
+
+## Transpose or Swap Rows and Columns {- #transpose}
+Sometimes you download good data, but your visualization tool requires you to transpose, or swap the rows and the columns, in order to create the chart or map you desire. This problem often comes up when working with longitudinal or historical data. For example, you often find the data organized with years placed horizontally as column headers, as shown in Figure \@ref(fig:sheets-years-row).
+
+(ref:sheets-years-row) We often find data with years placed in horizontal column headers.
+
+```{r sheets-years-row, fig.cap="(ref:sheets-years-row)"}
+knitr::include_graphics("images/04-clean/sheets-years-row.png")
+```
+
+But if you wish to create a line chart, which you'll learn in [Chapter 5: Chart Your Data](chart.html), you need to transpose the data above, so that the years run down the first vertical column, as shown in Figure \@ref(fig:sheets-years-column).
+
+(ref:sheets-years-column) But we need to transpose the data to place years in the first vertical column.
+
+```{r sheets-years-column, fig.cap="(ref:sheets-years-column)"}
+knitr::include_graphics("images/04-clean/sheets-years-column.png")
+```
+
+Let's transpose some sample data:
+
+1. Open the [Transpose sample data file in Google Sheets](https://docs.google.com/spreadsheets/d/1s7MwJMY_vNkvNNJDAl0HJMO6fzxCNj4eMA5fBZ1pZgU/edit#gid=0), sign in with your account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
+
+2. Select all of the rows and columns you wish to transpose, and go to *Edit > Copy*.
+
+3. Scroll further down the spreadsheet and click on a cell, or open a new spreadsheet tab, and go to *Edit > Paste Special > Paste Transposed*, as shown in Figure \@ref(fig:sheets-transpose).
+
+(ref:sheets-transpose) Go to *Edit - Paste Special - Paste Transposed* to swap rows and columns.
+
+```{r sheets-transpose, fig.cap="(ref:sheets-transpose)"}
+knitr::include_graphics("images/04-clean/sheets-transpose.png")
+```
+
+Now that you know how to clean up data by transposing rows and columns, in the next section you'll learn how to split data into separate columns.
 
 ## Split Data into Separate Columns {- #split-data}
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-08" />
+<meta name="date" content="2020-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -175,8 +175,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Question Your Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for your Data Search</a></li>
+<li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for Your Search</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public and Private Data</a></li>
+<li class="chapter" data-level="" data-path="mask-aggregate.html"><a href="mask-aggregate.html"><i class="fa fa-check"></i>Mask or Aggregate Sensitive Data</a></li>
 <li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
 <li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
@@ -313,7 +314,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="copy-leaflet" class="section level2 unnumbered" number="">
 <h2>Copy, Edit, and Host a Simple Leaflet Map Template</h2>
-<p>Now that you understand how <a href="http://github.com">GitHub</a> code repositories are like a public cookbook of recipes, which anyone can copy and modify, let’s get into the kitchen and start baking! In this section, we’ll introduce you to a very simple code template that creates an interactive map using <a href="http://leafletjs.com">Leaflet</a>, an open-source code library that’s very popular with coders, journalists, businesses, and government agencies. Many people chose Leaflet because the code is freely available to everyone, relatively easy to use, and has an active community of supporters who regularly update it. But unlike drag-and-drop tools that we covered in previous chapters, such as Google My Maps or Tableau Public, Leaflet requires you to write (or copy and paste) several lines of code, which need to be hosted on a web server so that other people can view your map in their web browser. Fortunately, we can do all of these steps in our web browser on GitHub. This means you can do this on any type of computer: Mac, Windows, Chromebook, etc.</p>
+<p>Now that you understand how <a href="http://github.com">GitHub</a> code repositories are like a public cookbook of recipes, which anyone can copy and modify, let’s get into the kitchen and start baking! In this section, we’ll introduce you to a very simple code template based on <a href="http://leafletjs.com">Leaflet</a>, an open-source code library for creating interactive maps that are very popular in journalism, business, government, and higher education. Many people choose Leaflet because the code is freely available to everyone, relatively easy to use, and has an active community of supporters who regularly update it. But unlike drag-and-drop tools that we previously covered in <a href="map.html">Chapter 6: Map Your Data</a>, working with our Leaflet templates requires you to copy and edit a few lines of code before hosting it on the web. While no prior coding experience is necessary, it’s helpful to know that these code templates as based on the three core languages that communicate with browsers: HyperText Markup Language (HTML), Cascading Style Sheets (CSS), and JavaScript. Furthermore, we can edit these code templates using the GitHub web interface, which means you can do this on any type of computer (Mac, Windows, Chromebook, etc.) with any modern web browser.</p>
 <p>Here’s an overview of the key steps you’ll learn about GitHub in this section:</p>
 <ul>
 <li>Make a copy of our simple Leaflet map code template</li>
@@ -371,7 +372,7 @@ Figure 9.3: Name your copied repo <code>leaflet-map-simple</code>.
 Figure 9.4: Click the index.html file to view the code.
 </p>
 </div>
-<p>If this is the first time you’re looking at computer code, it may feel overwhelming, but relax! We’ve inserted several “code comments” to explain what’s happening. The first block you see is written in HyperText Markup Language (HTML) that tells web browsers the formatting to read the rest of the page of code. The second block instructs the browser to load the <a href="http://leafletjs.com">Leaflet</a> code library, the open-source software that constructs the interactive map. The third block describes where the map and title should be positioned on the screen, written in a language called Cascading Style Sheet (CSS). The good news is that you don’t need to touch any of those blocks of code, so leave them as-is. But you do want to modify a few lines further below.</p>
+<p>If this is the first time you’re looking at computer code, it may feel overwhelming, but relax! We’ve inserted several “code comments” to explain what’s happening. The first block tells web browsers the formatting to read the rest of the page of code. The second block instructs the browser to load the <a href="http://leafletjs.com">Leaflet</a> code library, the open-source software that constructs the interactive map. The third block describes where the map and title should be positioned on the screen. The good news is that you don’t need to touch any of those blocks of code, so leave them as-is. But you do want to modify a few lines further below.</p>
 <ol start="6" style="list-style-type: decimal">
 <li>To edit the code, click on the the pencil symbol in the upper-right corner, as shown in Figure <a href="copy-leaflet.html#fig:leaflet-simple-edit">9.5</a>.</li>
 </ol>
@@ -481,6 +482,7 @@ Figure 9.11: Open and edit the <code>README</code> file to paste the link to you
 <p>The last code block displays a single point marker on the map, colored blue by default in Leaflet, with a pop-up message when users click it. You can edit the marker coordinates, insert the pop-up text, or copy and paste the code block to create a second marker.</p>
 <pre><code>L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
 .bindPopup(&quot;Insert pop-up text here&quot;); // EDIT pop-up text message</code></pre>
+<p>Warning: Be careful when editing your code. Accidentally removing or adding extra punctuation (such as quotation marks, commas, or semicolons) can stop your map from working. But breaking your code—and fixing it—can also be a great way to learn.</p>
 <ol start="15" style="list-style-type: decimal">
 <li>After making edits, remember to scroll down and press the <em>Commit</em> button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires up to 30 seconds to process code edits. If you have problems, see the <a href="fix.html">Fix Common Mistakes</a> section in the appendix.</li>
 </ol>

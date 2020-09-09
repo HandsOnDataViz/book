@@ -323,7 +323,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>| Date | Masked Address | Category |
 | Jan 1 | 1XXX Main St | Aggravated Assault |</code></pre>
 <p>You can also mask individual-level data when appropriate, using methods similar to the Find and Replace method with your spreadsheet tool as in <a href="clean.html">Chapter 4: Clean Up Messy Data</a>.</p>
-<p>Another strategy is to <em>aggregate</em> individual-level data into larger groups, which can protect privacy while showing broader patterns. In the example above, if you’re exploring crime data across different neighborhoods, grouping individual 911 calls into larger geographic areas, such as census tracts or area names, also is a better way to tell a data story about the bigger picture. To aggregate simple spreadsheet data, see the <a href="pivot.html">summarizing with pivot tables section in Chapter 2</a>. To <a href="bulk-geocode.html">geocode US addresses into census areas</a>, or to <a href="pivot-point-to-polygon.html">pivot address points into a polygon map</a>, see <a href="transform.html">Chapter 12: Transform Your Map Data</a>.</p>
+<p>Another strategy is to <em>aggregate</em> individual-level data into larger groups, which can protect privacy while showing broader patterns. In the example above, if you’re exploring crime data across different neighborhoods, grouping individual 911 calls into larger geographic areas, such as census tracts or area names, in a format like this:</p>
+<pre><code>| Neighborhood | Crime Category | Frequency |
+| East Side | Aggravated Assault | 13 |
+| West Side | Aggravated Assault | 21 |</code></pre>
+<p>Aggregating individual-level details into larger, yet meaningful categories, is also a better way to tell data stories about the bigger picture. To aggregate simple spreadsheet data, see the <a href="pivot.html">summarizing with pivot tables section in Chapter 2</a>. To <a href="bulk-geocode.html">geocode US addresses into census areas</a>, or to <a href="pivot-point-to-polygon.html">pivot address points into a polygon map</a>, or to <a href="normalize.html">normalize data</a> to create more meaningful maps, see <a href="transform.html">Chapter 12: Transform Your Map Data</a>.</p>
 <p>In the next section, you’ll learn how to explore datasets that governments and non-governmental organizations have intentionally shared with the public.</p>
 </div>
             </section>

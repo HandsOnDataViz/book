@@ -88,7 +88,15 @@ One alternative is to *mask* details in sensitive data. For example, some police
 
 You can also mask individual-level data when appropriate, using methods similar to the Find and Replace method with your spreadsheet tool as in [Chapter 4: Clean Up Messy Data](clean.html).
 
-Another strategy is to *aggregate* individual-level data into larger groups, which can protect privacy while showing broader patterns. In the example above, if you're exploring crime data across different neighborhoods, grouping individual 911 calls into larger geographic areas, such as census tracts or area names, also is a better way to tell a data story about the bigger picture. To aggregate simple spreadsheet data, see the [summarizing with pivot tables section in Chapter 2](pivot.html). To [geocode US addresses into census areas](bulk-geocode.html), or to [pivot address points into a polygon map](pivot-point-to-polygon.html), see [Chapter 12: Transform Your Map Data](transform.html).
+Another strategy is to *aggregate* individual-level data into larger groups, which can protect privacy while showing broader patterns. In the example above, if you're exploring crime data across different neighborhoods, grouping individual 911 calls into larger geographic areas, such as census tracts or area names, in a format like this:
+
+```
+| Neighborhood | Crime Category | Frequency |
+| East Side | Aggravated Assault | 13 |
+| West Side | Aggravated Assault | 21 |
+```
+
+Aggregating individual-level details into larger, yet meaningful categories, is also a better way to tell data stories about the bigger picture. To aggregate simple spreadsheet data, see the [summarizing with pivot tables section in Chapter 2](pivot.html). To [geocode US addresses into census areas](bulk-geocode.html), or to [pivot address points into a polygon map](pivot-point-to-polygon.html), or to [normalize data](normalize.html) to create more meaningful maps, see [Chapter 12: Transform Your Map Data](transform.html).
 
 In the next section, you'll learn how to explore datasets that governments and non-governmental organizations have intentionally shared with the public.
 

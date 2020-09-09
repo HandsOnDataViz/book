@@ -8,12 +8,12 @@ Table: (\#tab:chart-templates) Chart Code Templates and Tutorials
 
 | Chart | Best use and tutorials in this book |
 | --- | --- |
-| Bar or Column Chart<br> ![](images/10-chartcode/chartjs-column.png) | Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: [Bar or Column Chart with CSV data in Chart.js code template and tutorial](chartjs-bar-csv.html)  |
-| Error Bar or Column Chart<br> ![](images/10-chartcode/chartjs-error-column.png) | Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: [Error Bar or Column Chart with CSV data in Chart.js code template and tutorial](chartjs-error-bar-csv.html)  |
-| Line Chart<br> ![](images/10-chartcode/chartjs-line.png) | Best to show continuous data, such as change over time.<br>Power tool: [Line Chart with CSV data in Chart.js code template and tutorial](chartjs-line-csv.html) |
-| Annotated Line Chart<br> ![](images/10-chartcode/highcharts-annotated-line.png) | Best to add contextual notes inside chart of continuous data, such as change over time.<br>Power tool: [Annotated Line Chart with CSV data in Highcharts code template and tutorial](highcharts-annotated-line-csv.html) |
-| Scatter Chart<br> ![](images/10-chartcode/chartjs-scatter.png) | Best to show the relationship between two datasets as XY coordinates to reveal possible correlations.<br>Power tool: [Scatter Chart with CSV data in Chart.js code template and tutorial](chartjs-scatter-csv.html) |
-| Bubble Chart<br> ![](images/10-chartcode/chartjs-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color. <br>Power tool: [Bubble Chart with CSV data in Chart.js code template and tutorial](chartjs-bubble-csv.html) |
+| Bar or Column Chart<br> ![](images/10-chartcode/chartjs-column.png) | Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: [Bar or Column Chart with CSV data in Chart.js code template and tutorial](chartjs-bar-column.html)  |
+| Error Bars in a Bar/Column Chart<br> ![](images/10-chartcode/chartjs-error-bars.png) | Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: [Error Bars in Bar/Column Chart with CSV data in Chart.js code template and tutorial](chartjs-error-bars.html)  |
+| Line Chart<br> ![](images/10-chartcode/chartjs-line.png) | Best to show continuous data, such as change over time.<br>Power tool: [Line Chart with CSV data in Chart.js code template and tutorial](chartjs-line.html) |
+| Annotated Line Chart<br> ![](images/10-chartcode/highcharts-annotated-line.png) | Best to add contextual notes inside chart of continuous data, such as change over time.<br>Power tool: [Annotated Line Chart with CSV data in Highcharts code template and tutorial](highcharts-annotated-line.html) |
+| Scatter Chart<br> ![](images/10-chartcode/chartjs-scatter.png) | Best to show the relationship between two datasets as XY coordinates to reveal possible correlations.<br>Power tool: [Scatter Chart with CSV data in Chart.js code template and tutorial](chartjs-scatter.html) |
+| Bubble Chart<br> ![](images/10-chartcode/chartjs-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color. <br>Power tool: [Bubble Chart with CSV data in Chart.js code template and tutorial](chartjs-bubble.html) |
 
 <!-- TODO: update all chart images to show tooltips; decide if we're happy with names and labels -->
 
@@ -32,7 +32,7 @@ Also, these templates refer to other code elements:
   * data: content to appear in chart, typically in CSV format (example: data.csv)
 
 
-## Bar or Column Chart with Chart.js {- #chartjs-bar-csv}
+## Bar or Column Chart with Chart.js {- #chartjs-bar-column}
 
 <!-- TODO: Ilya, here's the general format I recommend for each template below, which I have matched up with the README file and the code comments, but only for the first demo: https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart. While I really like how you combined all of the chart.js templates into one repo, it adds a bit of complexity for GitHub web-interface users who wish to use the template to make one chart type, since it's a subfolder. Either we need to add extra steps between #1 and #2 below, or we need to split the unified repo into separate ones. What do you think? -->
 
@@ -88,18 +88,18 @@ To create your own bar or column chart with CSV data using our Chart.js template
 
 For more customization, see [Chart.js documentation](https://www.chartjs.org/docs/latest/).
 
-### Error Bar or Column Chart with Chart.js {- #chartjs-error-bar-csv}
+## Error Bars with Chart.js {- #chartjs-error-bars}
 If your data comes with uncertainty (margins of error), we recommend you
-show it in your visualizations. The bar chart template shown in Figure \@ref(fig:chartjs-demo-bar-error-bars)
+show it in your visualizations. The bar chart template shown in Figure \@ref(fig:chartjs-demo-error-bars)
 shows median and mean (average) income for different-sized geographies: the US state of Colorado, Boulder County, Boulder city, and a census tract in the city. Upload data to CSV file...
 
-(ref:chartjs-demo-bar-error-bars) Interactive bar chart with error bars in Chart.js. See [detailed instructions on GitHub](https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart-with-error-bars).
+(ref:chartjs-demo-error-bars) Interactive bar chart with error bars in Chart.js. See [detailed instructions on GitHub](https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart-with-error-bars).
 
-```{r chartjs-demo-bar-error-bars, fig.cap="(ref:chartjs-demo-bar-error-bars)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/bar-chart-with-error-bars/index.html", height="500px") else knitr::include_graphics("images/10-chartcode/chartjs-demo-bar-error-bars.png")
+```{r chartjs-demo-error-bars, fig.cap="(ref:chartjs-demo-error-bars)"}
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/bar-chart-with-error-bars/index.html", height="500px") else knitr::include_graphics("images/10-chartcode/chartjs-demo-error-bars.png")
 ```
 
-## Line Chart with Chart.js {- #chartjs-line-csv}
+## Line Chart with Chart.js {- #chartjs-line}
 TODO: Match formatting above
 
 Line charts are often used to show temporal data (trends).
@@ -112,7 +112,7 @@ Unlike column or bar charts, y-axes of line charts do not necessarily start at 0
 if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/line-chart/index.html", height="500px") else knitr::include_graphics("images/10-chartcode/chartjs-demo-line.png")
 ```
 
-## Annotated Line Chart with Highcharts {- #highcharts-annotated-line-csv}
+## Annotated Line Chart with Highcharts {- #highcharts-annotated-line}
 TODO: Match formatting above
 
 Annotated charts are best for displaying additional notes directly inside the chart to provide more context, such as key events in a line chart about change over time. TODO: add more detail here... Upload data to CSV file...
@@ -123,7 +123,7 @@ Annotated charts are best for displaying additional notes directly inside the ch
 if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/highcharts-line-annotated/index.html", height="500px") else knitr::include_graphics("images/10-chartcode/highcharts-demo-annotated-line.png")
 ```
 
-## Scatter Chart with Chart.js {- #chartjs-scatter-csv}
+## Scatter Chart with Chart.js {- #chartjs-scatter}
 TODO: Match formatting above
 
 Scatter charts (also *scatterplots*) are used to display data of 2 or more dimensions.
@@ -148,7 +148,7 @@ To show more than two dimensions in scatter charts, one can:
 
 Remember not to overwhelm the viewer and communicate only the data that are necessary to prove or illustrate your idea.
 
-## Bubble Chart with Chart.js {- #chartjs-bubble-csv}
+## Bubble Chart with Chart.js {- #chartjs-bubble}
 TODO: Match formatting above
 
 Bubble charts are similar to [scatter plots](chartjs-scatter-csv.html). The size of each dot (marker) is used to represent an additional dimension.

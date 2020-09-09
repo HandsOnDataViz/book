@@ -69,7 +69,7 @@ The upper-left corner of the next screen will say `USERNAME/leaflet-map-simple` 
 
 (ref:leaflet-simple-index) Click the index.html file to view the code.
 
-```{r leaflet-simple-index, out.width=250, fig.cap="(ref:leaflet-simple-index)"}
+```{r leaflet-simple-index, out.width=200, fig.cap="(ref:leaflet-simple-index)"}
  knitr::include_graphics("images/09-github/leaflet-simple-index.png")
 ```
 

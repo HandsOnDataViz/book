@@ -407,11 +407,12 @@ We need to do a bit of manual cleanup before ORM production team can convert the
   - from 05-chart.Rmd, Table 1: Chart types covered in this book
 - Manually replace any `<iframe...` HTML or GIF elements with their PNG substitutes, and new ALT text (unless authors come up with a better way to automate this)
 - Manually delete any remaining `<iframe...` elements (unless they are non-executable code snippets)
-- Manually remove any `&emsp;` or four-whitespace characters that are appended to level 3 subheads in chap 5
-- Check if HTML and CSS coding for indented variable list in chap 5 appears correctly in PDF and full-length Markdown; if not, manually mark it as "Variable List:" for production team
+- Manually mark up "Variable List:" for production team in two places in chapter 3
 - Save and push the modified Markdown file up to GitHub repo
 
 TODO: Check to see if triple back tics render correctly in the Markdown full-book output.
+
+NOTE: Tried to insert unicode character `&emsp;` for four-whitespace characters appended to level 3 subheads in chap 5, but PDF engine Latex could not process. Then tried to switch to `latex_engine: xelatex` to deal with unicode characters, but received different error. Replaced unicode symbol with hyphen-space, which is good enough.
 
 Note: Previously, we tried to use [Pandoc](http://pandoc.org) to convert the modified.md file to asciidoc, but encountered many errors.
 

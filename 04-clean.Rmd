@@ -56,7 +56,7 @@ Sometimes you download good data, but your visualization tool requires you to tr
 
 (ref:sheets-years-row) We often find data with years placed in horizontal column headers.
 
-```{r sheets-years-row, fig.cap="(ref:sheets-years-row)"}
+```{r sheets-years-row, out.width=400, fig.cap="(ref:sheets-years-row)"}
 knitr::include_graphics("images/04-clean/sheets-years-row.png")
 ```
 
@@ -64,7 +64,7 @@ But if you wish to create a line chart, which you'll learn in [Chapter 5: Chart 
 
 (ref:sheets-years-column) But we need to transpose the data to place years in the first vertical column.
 
-```{r sheets-years-column, fig.cap="(ref:sheets-years-column)"}
+```{r sheets-years-column, out.width=300, fig.cap="(ref:sheets-years-column)"}
 knitr::include_graphics("images/04-clean/sheets-years-column.png")
 ```
 
@@ -78,7 +78,7 @@ Let's transpose some sample data:
 
 (ref:sheets-transpose) Go to *Edit - Paste Special - Paste Transposed* to swap rows and columns.
 
-```{r sheets-transpose, fig.cap="(ref:sheets-transpose)"}
+```{r sheets-transpose, out.width=450, fig.cap="(ref:sheets-transpose)"}
 knitr::include_graphics("images/04-clean/sheets-transpose.png")
 ```
 
@@ -135,7 +135,7 @@ Now, let's look at a slightly more complicated example. Each cell contains a ful
 
 (ref:sheets-split-complex) To split the last column, select a *Custom* separator and manually type in two dashes.
 
-```{r sheets-split-complex, out.width=500, fig.cap="(ref:sheets-split-complex)"}
+```{r sheets-split-complex, out.width=550, fig.cap="(ref:sheets-split-complex)"}
 knitr::include_graphics("images/04-clean/sheets-split-complex.png")
 ```
 

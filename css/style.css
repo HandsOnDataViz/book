@@ -3,11 +3,6 @@ iframe {
   border: 0;
 }
 
-/* indented variable list without symbols for ORM */
-.variablelist li {
-  list-style-type: none;
-}
-
 p.caption {
   margin-top: 10px;
   margin-left: 20px;

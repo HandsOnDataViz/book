@@ -78,7 +78,7 @@ Let's begin by making a copy of a real dataset that may interest you, because it
 
 (ref:file-make-copy) Go to *File - Make a Copy* to create your own version of this Google Sheet.
 
-```{r file-make-copy, out.width=250, fig.cap="(ref:file-make-copy)"}
+```{r file-make-copy, out.width=200, fig.cap="(ref:file-make-copy)"}
  knitr::include_graphics("images/02-spreadsheet/file-make-copy.png")
 ```
 

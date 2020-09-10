@@ -321,8 +321,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Figure 2.13: To map addresses, you first need to geocode them.
 </p>
 </div>
-<p>If you have just one or two addresses, you can quickly geocode them with <a href="https://www.google.com/maps">Google Maps</a>.
-Search for an address, right-click on that point, and select <em>What’s here?</em> to reveal a popup window with its latitude and longitude, as shown in Figure <a href="geocode.html#fig:gmaps-whats-here">2.14</a>. But what if you need to geocode a dozen or a hundred addresses?</p>
+<p>If you have just one or two addresses, you can quickly geocode them with <a href="https://www.google.com/maps">Google Maps</a>. Search for an address, right-click on that point, and select <em>What’s here?</em> to reveal a popup window with its latitude and longitude, as shown in Figure <a href="geocode.html#fig:gmaps-whats-here">2.14</a>.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:gmaps-whats-here"></span>
 <img src="images/02-spreadsheet/gmaps-whats-here.png" alt="To geocode one address, search in Google Maps and right-click What’s here? to show coordinates."  />
@@ -330,9 +329,11 @@ Search for an address, right-click on that point, and select <em>What’s here?<
 Figure 2.14: To geocode one address, search in Google Maps and right-click <em>What’s here?</em> to show coordinates.
 </p>
 </div>
-<p>To geocode multiple addresses inside your spreadsheet, install a free Google Sheets Add-on called <a href="https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312">Geocoding by SmartMonkey</a>, created by Xavier Ruiz, the CEO of <a href="https://www.smartmonkey.io/">SmartMonkey</a>, a geographic route-planning company in Barcelona, Spain. Add-ons are created by third-party companies to expand features for Google Sheets, Google Documents, and related tools. Add-ons are verified to meet Google’s requirements and distributed through its <a href="https://gsuite.google.com/marketplace">G Suite Marketplace</a>.</p>
-<p>First, sign into your Google Drive account, go to the <a href="https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312">Geocoding by SmartMonkey Add-on page</a>, and click the blue button to install it in your Google Sheets. The Add-on will ask for your permission before installing, and if you agree, press <em>Continue</em>. In the next window, choose your Google Drive account, and if you agree with the terms, click <em>Allow</em> to complete the installation. Google will email you to confirm that you have installed this third-party app with access to your account. You can always <a href="https://myaccount.google.com/permissions">review permissions and revoke access</a> in the future, if desired.</p>
-<p>Second, go to your <a href="https://drive.google.com">Google Drive</a> and create a new Google Sheet. Select the <em>Add-ons</em> menu to see the new <em>Geocoding by SmartMonkey</em> options, and select <em>Create Template</em>. The Add-on will create a new tab, named <em>Geocoding</em>, and automatically insert 3 sample addresses, as shown in Figure <a href="geocode.html#fig:geocoding-create-template">2.15</a>.</p>
+<p>But what if you need to geocode a dozen or a hundred addresses? To geocode multiple addresses inside your spreadsheet, install a free Google Sheets Add-on called <a href="https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312">Geocoding by SmartMonkey</a>, created by Xavier Ruiz, the CEO of <a href="https://www.smartmonkey.io/">SmartMonkey</a>, a geographic route-planning company in Barcelona, Spain. Add-ons are created by third-party companies to expand features for Google Sheets, Google Documents, and related tools. Add-ons are verified to meet Google’s requirements and distributed through its <a href="https://gsuite.google.com/marketplace">G Suite Marketplace</a>.</p>
+<ol style="list-style-type: decimal">
+<li><p>Sign into your Google Drive account, go to the <a href="https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312">Geocoding by SmartMonkey Add-on page</a>, and click the blue button to install it in your Google Sheets. The Add-on will ask for your permission before installing, and if you agree, press <em>Continue</em>. In the next window, choose your Google Drive account, and if you agree with the terms, click <em>Allow</em> to complete the installation. Google will email you to confirm that you have installed this third-party app with access to your account. You can always <a href="https://myaccount.google.com/permissions">review permissions and revoke access</a> in the future, if desired.</p></li>
+<li><p>Go to your <a href="https://drive.google.com">Google Drive</a> and create a new Google Sheet. Select the <em>Add-ons</em> menu to see the new <em>Geocoding by SmartMonkey</em> options, and select <em>Create Template</em>. The Add-on will create a new tab, named <em>Geocoding</em>, and automatically insert three sample addresses, as shown in Figure <a href="geocode.html#fig:geocoding-create-template">2.15</a>.</p></li>
+</ol>
 
 <div class="figure" style="text-align: center"><span id="fig:geocoding-create-template"></span>
 <img src="images/02-spreadsheet/geocoding-create-template.png" alt="In the Google Sheets Add-On menu, select Geocoding by SmartMonkey – Create Template."  />
@@ -340,7 +341,9 @@ Figure 2.14: To geocode one address, search in Google Maps and right-click <em>W
 Figure 2.15: In the Google Sheets <em>Add-On</em> menu, select <em>Geocoding by SmartMonkey – Create Template</em>.
 </p>
 </div>
-<p>Third, select the <em>Geocoding by SmartMonkey &gt; Geocode Details</em> menu. The Add-on will create another spreadsheet tab, called <em>Geocoding Details</em>, and display the results from Google services for three new columns—latitude, longitude, and address found—as shown in Figure <a href="geocode.html#fig:geocode-details">2.16</a>. Always review the quality of geocoded results by comparing the <em>Address found</em> column to the original <em>Address</em> entered.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Select the <em>Geocoding by SmartMonkey &gt; Geocode Details</em> menu. The Add-on will create another spreadsheet tab, called <em>Geocoding Details</em>, and display the results from Google services for three new columns—latitude, longitude, and address found—as shown in Figure <a href="geocode.html#fig:geocode-details">2.16</a>. Always review the quality of geocoded results by comparing the <em>Address found</em> column to the original <em>Address</em> entered.</li>
+</ol>
 
 <div class="figure" style="text-align: center"><span id="fig:geocode-details"></span>
 <img src="images/02-spreadsheet/geocode-details.png" alt="Select Geocode Details to view latitude, longitude, and address found for each entry."  />
@@ -348,7 +351,7 @@ Figure 2.15: In the Google Sheets <em>Add-On</em> menu, select <em>Geocoding by 
 Figure 2.16: Select <em>Geocode Details</em> to view latitude, longitude, and address found for each entry.
 </p>
 </div>
-<p>Finally, paste your own address data into the spreadsheet to geocode it, and follow these guidelines:</p>
+<p>When you paste your own address data into the spreadsheet to geocode it, follow these guidelines:</p>
 <ul>
 <li>Each cell requires a full address. If your original data splits street, city, state, and zip code into different columns, see how to <a href="combine-data.html">Combine Data into One Column in Chapter 4: Clean Up Messy Data</a>.</li>
 <li>The address should follow the format of the national postal service of the country where it is located. Separate terms with spaces.</li>

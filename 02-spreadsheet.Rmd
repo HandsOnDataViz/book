@@ -11,6 +11,8 @@ The interactive charts and maps that we'll construct later this book are built o
 
 In this chapter, we'll start by reviewing basic steps, such as [sharing](share.html), [uploading](upload.html), [geocoding with add-on tools](geocode.html), and [collecting data with online forms](forms.html). Then we'll move on to ways of organizing and analyzing your data, such as [sorting and filtering](sort.html), [calculating with formulas](calculate.html), and [summarizing with pivot tables](pivot.html). Finally, we'll examine ways to connect different sheets, such as [matching columns with lookup tables](vlookup.html), and [relational databases](database.html). We illustrate all of these methods with beginner-level users in mind, meaning they do not require any prior background.
 
+We'll practice several of these skills using sample data that may interest you, because it includes people like you. So far about 3,000 readers of this book have responded to a quick public survey about their general location, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed, then see the results in the [public sample dataset](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo).
+
 If you want to learn ways to make your computer do more of the tedious data preparation work for you, this chapter is definitely for you. Or if you already feel very familiar with spreadsheets, you should at least skim this chapter, and perhaps you'll learn a trick or two that will help you to create charts and maps more efficiently later in the book.
 
 ## Select your Spreadsheet Tools {- #spreadsheet-tools}
@@ -68,9 +70,7 @@ Once you've learned how to export your spreadsheet data into an open format, you
 ## Make a Copy of a Google Sheet {- #copy}
 In this book we provide several data files using Google Sheets. Our links point to the online files, and we set the sharing settings to allow anyone to view---but not edit---the original version. This allows everyone to have access to the data, but no one can accidentally modify the contents. In order for you to complete several exercises in this chapter, you need to learn how to make your own copy of our Google Sheets---which you can edit---without changing our originals.
 
-Let's begin by making a copy of a real dataset that may interest you, because it includes people like you. So far about 3,000 readers of this book have responded to a quick public survey about their general location, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed. Later in this chapter you'll learn how to create your own online form with a link to spreadsheet results.
-
-1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser. We set it to "View only" so that anyone on the internet can see the contents, but not edit the original file.
+1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser. We set it to "View only" so that anyone on the internet can see the contents, but not edit the original file. Learn more about the survey at the top of the chapter.
 
 2. Sign in to your Google account by clicking the blue button in the upper-right corner.
 
@@ -91,7 +91,6 @@ Let's begin by making a copy of a real dataset that may interest you, because it
 ```
 
 Your copy of the Google Sheet will be private to you only, by default. In the next section we'll learn about different options for sharing your Google Sheet data with others.
-
 
 ## Share Your Google Sheets {- #share}
 If you're working on a collaborative project with other people, Google Sheets offers several ways to share your data online, even with people who do not own a Google account. When you create a new Sheet, its default setting is private, meaning only you can view or edit its contents. In this section, you'll learn how to expand those options using the *Share* button.
@@ -127,7 +126,7 @@ Now that you have different options for sharing a Google Sheet, let's learn how 
 ## Upload and Convert to Google Sheets {- #upload}
 We feature Google Sheets in this book partly because it supports data migration, meaning the ability to import and export files in many common formats. But imports work best when you check the *Convert uploads* box, which is hidden inside the Google Drive Settings gear symbol as shown in Figure \@ref(fig:drive-settings). Checking this box automatically transforms Microsoft Excel sheets into Google Sheets format (and also Microsoft Word and PowerPoint files into Google Documents and Slides formats), which allows easier editing. If you don't check this box, then Google will keep your files in their original format, which makes them harder to edit. Google turns off this conversion setting by default on new accounts, but we'll teach you how to turn it on, and the benefits of doing so.
 
-1. Find a sample Excel file you can use on your computer. If you don't have one, open and save to download to your computer this [Excel file of a subset of the Hands-On Data Visualization reader public survey responses](data/subset-reader-survey.xlsx)
+1. Find a sample Excel file you can use on your computer. If you don't have one, open and save to download to your computer this [Excel file of a subset of the Hands-On Data Visualization reader public survey responses](data/subset-reader-survey.xlsx).
 
 2. Log into your [Google Drive](https://drive.google.com) account, and click the *Gear symbol* in the upper-right corner, as shown in Figure \@ref(fig:drive-settings), to open the Settings screen. Note that this global *Gear symbol > Settings* appears at Google Drive level, *not* inside each Google Sheet.
 
@@ -176,8 +175,7 @@ Geocoding means converting addresses or location names into geographic coordinat
 knitr::include_graphics("images/02-spreadsheet/geocode-data.png")
 ```
 
-If you have just one or two addresses, you can quickly geocode them with [Google Maps](https://www.google.com/maps).
-Search for an address, right-click on that point, and select *What's here?* to reveal a popup window with its latitude and longitude, as shown in Figure \@ref(fig:gmaps-whats-here). But what if you need to geocode a dozen or a hundred addresses?
+If you have just one or two addresses, you can quickly geocode them with [Google Maps](https://www.google.com/maps). Search for an address, right-click on that point, and select *What's here?* to reveal a popup window with its latitude and longitude, as shown in Figure \@ref(fig:gmaps-whats-here).
 
 (ref:gmaps-whats-here) To geocode one address, search in Google Maps and right-click *What's here?* to show coordinates.
 
@@ -185,11 +183,11 @@ Search for an address, right-click on that point, and select *What's here?* to r
 knitr::include_graphics("images/02-spreadsheet/gmaps-whats-here.png")
 ```
 
-To geocode multiple addresses inside your spreadsheet, install a free Google Sheets Add-on called [Geocoding by SmartMonkey](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312), created by Xavier Ruiz, the CEO of [SmartMonkey](https://www.smartmonkey.io/), a geographic route-planning company in Barcelona, Spain. Add-ons are created by third-party companies to expand features for Google Sheets, Google Documents, and related tools. Add-ons are verified to meet Google's requirements and distributed through its [G Suite Marketplace](https://gsuite.google.com/marketplace).
+But what if you need to geocode a dozen or a hundred addresses? To geocode multiple addresses inside your spreadsheet, install a free Google Sheets Add-on called [Geocoding by SmartMonkey](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312), created by Xavier Ruiz, the CEO of [SmartMonkey](https://www.smartmonkey.io/), a geographic route-planning company in Barcelona, Spain. Add-ons are created by third-party companies to expand features for Google Sheets, Google Documents, and related tools. Add-ons are verified to meet Google's requirements and distributed through its [G Suite Marketplace](https://gsuite.google.com/marketplace).
 
-First, sign into your Google Drive account, go to the [Geocoding by SmartMonkey Add-on page](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312), and click the blue button to install it in your Google Sheets. The Add-on will ask for your permission before installing, and if you agree, press *Continue*. In the next window, choose your Google Drive account, and if you agree with the terms, click *Allow* to complete the installation. Google will email you to confirm that you have installed this third-party app with access to your account. You can always [review permissions and revoke access](https://myaccount.google.com/permissions) in the future, if desired.
+1. Sign into your Google Drive account, go to the [Geocoding by SmartMonkey Add-on page](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312), and click the blue button to install it in your Google Sheets. The Add-on will ask for your permission before installing, and if you agree, press *Continue*. In the next window, choose your Google Drive account, and if you agree with the terms, click *Allow* to complete the installation. Google will email you to confirm that you have installed this third-party app with access to your account. You can always [review permissions and revoke access](https://myaccount.google.com/permissions) in the future, if desired.
 
-Second, go to your [Google Drive](https://drive.google.com) and create a new Google Sheet. Select the *Add-ons* menu to see the new *Geocoding by SmartMonkey* options, and select *Create Template*. The Add-on will create a new tab, named *Geocoding*, and automatically insert 3 sample addresses, as shown in Figure \@ref(fig:geocoding-create-template).
+2. Go to your [Google Drive](https://drive.google.com) and create a new Google Sheet. Select the *Add-ons* menu to see the new *Geocoding by SmartMonkey* options, and select *Create Template*. The Add-on will create a new tab, named *Geocoding*, and automatically insert three sample addresses, as shown in Figure \@ref(fig:geocoding-create-template).
 
 (ref:geocoding-create-template) In the Google Sheets *Add-On* menu, select *Geocoding by SmartMonkey -- Create Template*.
 
@@ -197,7 +195,7 @@ Second, go to your [Google Drive](https://drive.google.com) and create a new Goo
 knitr::include_graphics("images/02-spreadsheet/geocoding-create-template.png")
 ```
 
-Third, select the *Geocoding by SmartMonkey > Geocode Details* menu. The Add-on will create another spreadsheet tab, called *Geocoding Details*, and display the results from Google services for three new columns---latitude, longitude, and address found---as shown in Figure \@ref(fig:geocode-details). Always review the quality of geocoded results by comparing the *Address found* column to the original *Address* entered.
+3. Select the *Geocoding by SmartMonkey > Geocode Details* menu. The Add-on will create another spreadsheet tab, called *Geocoding Details*, and display the results from Google services for three new columns---latitude, longitude, and address found---as shown in Figure \@ref(fig:geocode-details). Always review the quality of geocoded results by comparing the *Address found* column to the original *Address* entered.
 
 (ref:geocode-details) Select *Geocode Details* to view latitude, longitude, and address found for each entry.
 
@@ -205,7 +203,7 @@ Third, select the *Geocoding by SmartMonkey > Geocode Details* menu. The Add-on 
  knitr::include_graphics("images/02-spreadsheet/geocode-details.png")
 ```
 
-Finally, paste your own address data into the spreadsheet to geocode it, and follow these guidelines:
+When you paste your own address data into the spreadsheet to geocode it, follow these guidelines:
 
 - Each cell requires a full address. If your original data splits street, city, state, and zip code into different columns, see how to [Combine Data into One Column in Chapter 4: Clean Up Messy Data](combine-data.html).
 - The address should follow the format of the national postal service of the country where it is located. Separate terms with spaces.
@@ -219,7 +217,7 @@ If you need a faster geocoding service for US addresses, which can handle up to 
 Now that you know how to use a Google Sheets Add-on to geocode addresses, in the next section you will learn how to collect data using an online form, and access it as a spreadsheet.
 
 ## Collect Data with Google Forms {- #forms}
-As you saw in prior sections, we invite readers of this book to fill out a [quick online form](https://forms.gle/yn5QwTzfQkYcppQn9) so that we can learn more about people like you, and to continue to make revisions to match your expectations. So far about 3,000 readers have responded, and you can view this [public spreadsheet of survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) about their generation location, prior level of experience and education, and goals for learning data visualization. In this section, you'll learn how to create an online form and link the results to a live Google Sheet.
+At the top of this chapter, we invited you and other readers of this book to fill out a [quick online survey](https://forms.gle/yn5QwTzfQkYcppQn9), which [publicly shares all of the responses in a sample dataset](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo), so that we can learn more about people like you, and to continue to make revisions to match your expectations. In this section, you'll learn how to create your own online form and link the results to a live Google Sheet.
 
 Inside your Google Drive account, one tool that's often overlooked is Google Forms, which is partially hidden under *New > More > Google Forms*, as shown in Figure \@ref(fig:forms-new).
 
@@ -264,9 +262,7 @@ The Google Forms *Responses* tab will show individual results you receive, and a
 Now that you've learned how to collect data with an online form and linked spreadsheet, the next two sections will teach you how to sort, filter, and pivot tables to begin analyzing their contents and the stories they reveal.
 
 ## Sort and Filter Data {- #sort}
-Spreadsheet tools help you to dig deeper into your data and raise the stories you find to the surface. A basic step in organizing your data is to *sort* a table by a particular column, to quickly view its minimum and maximum values, and the range that lies in between. A related method is to *filter* an entire table to display only rows that contain certain values, to help them stand out for further study among all of the other entries. Both of these methods become more powerful when your spreadsheets contain hundreds or thousands of rows of data.
-
-To learn how to sort and filter, let's explore a large dataset of around 3,000 readers of this book who responded to a quick public survey about their general location, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed.
+Spreadsheet tools help you to dig deeper into your data and raise the stories you find to the surface. A basic step in organizing your data is to *sort* a table by a particular column, to quickly view its minimum and maximum values, and the range that lies in between. A related method is to *filter* an entire table to display only rows that contain certain values, to help them stand out for further study among all of the other entries. Both of these methods become more powerful when your spreadsheets contain hundreds or thousands of rows of data. To learn how to sort and filter, let's explore the reader survey sample dataset we described at the top of the chapter.
 
 1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser.
 
@@ -311,9 +307,7 @@ Tip: When working with large spreadsheets, you can "freeze" the first row so tha
 Now your view of reader responses is sorted by experience, and filtered to show only educators. Scroll through their one-sentence goals for learning about data visualization. How to do they compare to your own goals? In the next section, we'll learn how to start analyzing your data with simple formulas and functions.
 
 ## Calculate with Formulas {- #calculate}
-Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. Formulas always begin with an equal sign, and may simply add up other cells (such as `=C2+C3+C4`), or may contain a function that performs a specific operation (such as calculating the sum of a range of cells: `=SUM(C2:C100)`). In this section you'll learn how to write two formulas with functions: one to calculate an average numeric value, and another to count the frequency of a specific text response.
-
-Let's explore a large dataset of around 3,000 readers of this book who responded to a quick public survey about their general location, prior level of experience and education, and goals for learning data visualization. If you haven't already done so, [fill out the quick survey form](https://forms.gle/yn5QwTzfQkYcppQn9) to contribute your own response, and also to give you a better sense of how the questions were posed.
+Spreadsheet tools can save you lots of time when you insert simple formulas and functions to automatically perform calculations across entire rows and columns of data. Formulas always begin with an equal sign, and may simply add up other cells (such as `=C2+C3+C4`), or may contain a function that performs a specific operation (such as calculating the sum of a range of cells: `=SUM(C2:C100)`). In this section you'll learn how to write two formulas with functions: one to calculate an average numeric value, and another to count the frequency of a specific text response. Once again, let's learn this skill using the reader survey sample dataset we described at the top of the chapter.
 
 1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser.
 
@@ -362,7 +356,7 @@ See additional spreadsheet skills in later chapters of the book, such as how to 
 Now that you've learned how to count one type of survey response, the next section will teach you how to regroup data with pivot tables that summarize all responses by different categories.
 
 ## Summarize Data with Pivot Tables {- #pivot}
-Pivot tables are another powerful feature built into spreadsheet tools to help you reorganize your data and summarize it in a new way, hence the name "pivot." Yet pivot tables are often overlooked by people who were never taught about them, or have not yet discovered how to use them. In this section, we'll start with a large dataset of around 3,000 readers of this book who responded to a [quick public survey](https://forms.gle/yn5QwTzfQkYcppQn9). Each row represents an individual reader, including their occupation and prior level of experience with data visualization. You'll learn how to "pivot" this individual-level data into a new table that displays the total number of reader responses by two categories: occupation and experience level.
+Pivot tables are another powerful feature built into spreadsheet tools to help you reorganize your data and summarize it in a new way, hence the name "pivot." Yet pivot tables are often overlooked by people who were never taught about them, or have not yet discovered how to use them. Let's learn this skill using the reader survey sample dataset we described at the top of the chapter. Each row represents an individual reader, including their occupation and prior level of experience with data visualization. You'll learn how to "pivot" this individual-level data into a new table that displays the total number of reader responses by two categories: occupation and experience level.
 
 1. Open this [Google Sheet of Hands-On Data Visualization reader public survey responses](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo) in a new tab in your browser. Log into your Google Drive account, and go to *File > Make a Copy* to edit your own version.
 

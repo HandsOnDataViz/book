@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-09" />
+<meta name="date" content="2020-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,19 +144,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
-<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
-<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+<li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Your Digital Tools</a></li>
+<li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
 <ul>
@@ -320,14 +317,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Pie Charts</h3>
 <p>Some people use pie charts to show parts of a whole, but we urge caution with this type of chart for reasons explained further below. For example, if you wish to show the number of different fruits sold by a store in one day, as a proportion of total fruit sold, then format the labels and values in vertical columns in your Google Sheet, as shown in Figure <a href="pie-line-area-google.html#fig:pie-data">5.27</a>. Values can be expressed as either raw numbers or percentages. Now you can easily create a pie chart that displays these values as colored slices of a circle, as shown in Figure <a href="pie-line-area-google.html#fig:pie">5.28</a>. Viewers can see that bananas made up slightly over half of the fruit sold, followed by apples and oranges.</p>
 
-<div class="figure"><span id="fig:pie-data"></span>
+<div class="figure" style="text-align: center"><span id="fig:pie-data"></span>
 <img src="images/05-chart/pie-data.png" alt="To create a pie chart, format the data values vertically in Google Sheets." width="300" />
 <p class="caption">
 Figure 5.27: To create a pie chart, format the data values vertically in Google Sheets.
 </p>
 </div>
 
-<div class="figure"><span id="fig:pie"></span>
+<div class="figure" style="text-align: center"><span id="fig:pie"></span>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
 <p class="caption">
@@ -342,14 +339,14 @@ Figure 5.28: Pie chart: Explore the <a href="https://docs.google.com/spreadsheet
 <h3>Line Charts</h3>
 <p>A line chart is the best way to represent continuous data, such as change over time. For example, imagine you wish to compare the availability of different meats per capita in the US over the past century. In your Google Sheet, organize the time units (such as years) into the first column, since these will appear on the horizontal X-axis. Also, place each data series (such as beef, pork, chicken) alongside the vertical time-unit column, and each series will become its own line, as shown in Figure <a href="pie-line-area-google.html#fig:line-data">5.29</a>. Now you can easily create a line chart that emphasizes each data series changed over time, as shown in Figure <a href="pie-line-area-google.html#fig:line">5.30</a>. In the US, the amount of chicken per capita steadily rose and surpassed pork and beef around 2000.</p>
 
-<div class="figure"><span id="fig:line-data"></span>
+<div class="figure" style="text-align: center"><span id="fig:line-data"></span>
 <img src="images/05-chart/line-data.png" alt="To create a line chart, format the time units and each data series in vertical columns." width="300" />
 <p class="caption">
 Figure 5.29: To create a line chart, format the time units and each data series in vertical columns.
 </p>
 </div>
 
-<div class="figure"><span id="fig:line"></span>
+<div class="figure" style="text-align: center"><span id="fig:line"></span>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
 <p class="caption">
@@ -363,7 +360,7 @@ Figure 5.30: Line chart: Explore the <a href="https://docs.google.com/spreadshee
 <p>Area charts resemble line charts with filled space underneath. The most useful type is a stacked area chart, which is best for combining two concepts from above: showing parts of the whole (like a pie chart) and continuous data over time (like a line chart). For example, the line chart above shows how the availability of three different meats changed over time. However, if you also wish to show how the total availability of these combined meats went up or down over time, it’s hard to see this in a line chart. Instead, use a stacked line chart to visualize the availability of each meat <em>and</em> the total combined availability per capita over time. Stacked line charts show both aspects of your data simultaneously.</p>
 <p>To create a stacked area chart, organize the data in the same way as you did for the line chart in Figure <a href="pie-line-area-google.html#fig:line-data">5.29</a>. Now you can easily create a stacked line chart that displays the availability of each meat—and their combined total—over time, as shown in Figure <a href="pie-line-area-google.html#fig:stacked-area">5.31</a>. Overall, we can see that total available meat per capita increased after the 1930s Depression, and chicken steadily became a larger portion of the total after 1970.</p>
 
-<div class="figure"><span id="fig:stacked-area"></span>
+<div class="figure" style="text-align: center"><span id="fig:stacked-area"></span>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;amp;format=interactive" width="672" height="400px">
 </iframe>
 <p class="caption">

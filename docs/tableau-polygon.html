@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-09" />
+<meta name="date" content="2020-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,19 +144,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
-<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
-<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+<li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Your Digital Tools</a></li>
+<li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
 <ul>
@@ -326,7 +323,7 @@ Displaying total spending per country is a bad idea, as bigger countries tend
 to have larger populations and as a result larger values for a lot of measures,
 including military spending.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-final"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-polygon-final"></span>
 <iframe src="https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
@@ -349,7 +346,7 @@ countries and territories defined by the World Bank, the three-digit Country Cod
 Indicator Name (same for all rows), and percent value, as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-connect">6.28</a>.
 Notice that some values are set to <em>null</em> (not available).</p>
 
-<div class="figure"><span id="fig:tableau-polygon-connect"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-polygon-connect"></span>
 <img src="images/06-map/tableau-polygon-connect-annotated.png" alt="When finished inspecting the connected file, go to Sheet 1."  />
 <p class="caption">
 Figure 6.28: When finished inspecting the connected file, go to Sheet 1.
@@ -364,7 +361,7 @@ You should see that the chart area shows an empty map of the world
 In Marks box, change <em>Automatic</em> to <em>Map</em>, and drag <em>Country Name</em> variable
 to the <strong>Size</strong> box of the Marks card. You will see that country outlines turned blue.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-drag"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-polygon-drag"></span>
 <img src="images/06-map/tableau-polygon-drag-annotated.png" alt="Drag and drop variables to the right places."  />
 <p class="caption">
 Figure 6.29: Drag and drop variables to the right places.
@@ -379,7 +376,7 @@ you want to filter, just leave everything unchanged. This will leave the whole r
 and exclude <em>null</em> values (see the checkbox in the lower-right corner of the Filter window
 in Figure <a href="tableau-polygon.html#fig:tableau-polygon-filter">6.30</a>).</p>
 
-<div class="figure"><span id="fig:tableau-polygon-filter"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-polygon-filter"></span>
 <img src="images/06-map/tableau-polygon-filter-annotated.png" alt="Filter values to remove countries with no data from display." width="400" />
 <p class="caption">
 Figure 6.30: Filter values to remove countries with no data from display.
@@ -389,7 +386,7 @@ Figure 6.30: Filter values to remove countries with no data from display.
 then <em>Edit colors</em>. Change the palette to <em>Reds</em>, and make it stepped rather than continuous,
 as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-color">6.31</a>.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-color"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-polygon-color"></span>
 <img src="images/06-map/tableau-polygon-color.png" alt="Change the color scheme to Reds with 5 steps." width="400" />
 <p class="caption">
 Figure 6.31: Change the color scheme to Reds with 5 steps.
@@ -401,7 +398,7 @@ and add a percentage sign after the value itself, as shown in Figure <a href="ta
 Make sure not to change values between
 <code>&lt;</code> and <code>&gt;</code>, as these are references to variables.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-tooltip"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-polygon-tooltip"></span>
 <img src="images/06-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
 Figure 6.32: Change tooltip text to make it more user-friendly.

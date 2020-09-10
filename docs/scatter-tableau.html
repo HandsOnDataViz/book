@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-09" />
+<meta name="date" content="2020-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,19 +144,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
-<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
-<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+<li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Your Digital Tools</a></li>
+<li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
 <ul>
@@ -318,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Scatter charts are best to show the relationship between two datasets, placed on the x- and y-axis, to reveal possible correlations. With Tableau Public, you can create an interactive scatter chart, where you can hover your cursor over points to view more details about the data. Organize your data in three columns, the same way as the <a href="scatter-datawrapper.html">Datawrapper scatter chart tutorial</a>: the first column for data labels, the second column for the x-axis, and the third column for the y-axis. Then you can create an interactive scatter chart as shown in Figure <a href="scatter-tableau.html#fig:tableau-scatter">5.48</a>, which illustrates a strong relationship between household income and test scores (above or below the national average for 6th grade math and English) in Connecticut public school districts. To learn more about the data and related visualizations, see Sean Reardon et al. at the <a href="http://purl.stanford.edu/db586ns4974">Stanford Education Data Archive</a>, Motoko Rich et al. at <a href="http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html">The New York Times</a>, Andrew Ba Tran at <a href="https://web.archive.org/web/20190129101923/http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/">CT Mirror/TrendCT</a>, and this <a href="https://github.com/trendct-data/stanford-cepa">TrendCT GitHub repo</a>.</p>
 <!-- TODO: Reminder: this Tableau Public visualization is stored in Jack.Dougherty@trincoll.edu account -->
 
-<div class="figure"><span id="fig:tableau-scatter"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-scatter"></span>
 <iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
@@ -335,7 +332,7 @@ Figure 5.48: Scatter chart in Tableau Public: Explore the <a href="https://publi
 <li><p>Drag the <code>data</code> sheet into <em>Drag tables here</em> area, as shown in Figure <a href="scatter-tableau.html#fig:tableau-connect">5.49</a>. You will see the preview of the table under the drag-and-drop area. You have successfully connected one data source to Tableau Public, and you are ready to build your first chart.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-connect"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-connect"></span>
 <img src="images/05-chart/tableau-connect-annotated.png" alt="Drag data sheet into Drag tables here area."  />
 <p class="caption">
 Figure 5.49: Drag <code>data</code> sheet into <em>Drag tables here</em> area.
@@ -361,7 +358,7 @@ in the upper-right corner, because the data for both is aggregated (remember the
 drag the <em>District</em> dimension into the <em>Detail</em> box of the <em>Marks</em> card. Now a real scatter chart will appear in the charting area. If you hover over points, you will see all three values associated with it.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-scatter-dragging"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-scatter-dragging"></span>
 <img src="images/05-chart/tableau-scatter-dragging-annotated.png" alt="Drag data fields to the right locations in Tableau Public."  />
 <p class="caption">
 Figure 5.50: Drag data fields to the right locations in Tableau Public.
@@ -374,7 +371,7 @@ Figure 5.50: Drag data fields to the right locations in Tableau Public.
 above the charting area. Add more information about the chart, such as source of the data, who built the visualization and when, and other details to add credibility to your work. You can do so inside a <em>Caption</em>, a text block that accompanies your Tableau chart. In the menu, go to <em>Worksheet &gt; Show Caption</em>. Double-click
 the Caption block that appears, and edit the text. As a result, your final worksheet will look like shown in Figure <a href="scatter-tableau.html#fig:tableau-scatter-final">5.51</a>.</p>
 
-<div class="figure"><span id="fig:tableau-scatter-final"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-scatter-final"></span>
 <img src="images/05-chart/tableau-scatter-final-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
 Figure 5.51: This scatter chart is ready to be published.
@@ -392,7 +389,7 @@ to edit the title or description. Under <em>Toolbar Settings</em>, see the check
 <em>Allow others to download or explore and copy this workbook and its data</em>, and select the setting you wish, as shown in Figure @ref(fig:tableau-toolbar-settings. If you are publishing your visualization on the web, we also recommend that you keep this box checked so that others can download your data and see how you constructed it, to improve data accessibility for all.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:tableau-toolbar-settings"></span>
+<div class="figure" style="text-align: center"><span id="fig:tableau-toolbar-settings"></span>
 <img src="images/05-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
 Figure 5.52: This scatter chart is ready to be published.

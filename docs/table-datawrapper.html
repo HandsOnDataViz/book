@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-09" />
+<meta name="date" content="2020-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,19 +144,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
-<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
-<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+<li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Your Digital Tools</a></li>
+<li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
 <ul>
@@ -318,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In this section, you’ll learn how to create an interactive table with <a href="https://datawrapper.de">Datawrapper</a>, the free online drag-and-drop visualization tool we previously introduced <a href="chart-design.html">to create charts in Chapter 5</a> and <a href="map-design.html">maps in chapter 6</a>. You can start creating in Datawrapper right away in your browser, even without an account, but signing up for a free one will help you to keep your visualizations organized. Remember that you’ll probably still need a spreadsheet tool, such as Google Sheets, to compile and clean up data for large tables, but Datawrapper is the best tool to create and publish the interactive table online.</p>
 <p>You’ll also learn how to create sparklines, or tiny line charts that quickly summarize data trends. This chart type was refined by Edward Tufte, a Yale professor and data visualization pioneer, who described sparklines as “datawords… intense, simple, word-sized graphics.”<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> While Tufte envisioned sparklines on a static sheet of paper or PDF document, you’ll create them inside an interactive table, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-table">7.2</a>. Readers can search by keyword, sort columns in ascending or descending order, and scroll through pages of sparklines to quickly identify data trends that would be difficult to spot in a traditional numbers-only table.</p>
 
-<div class="figure"><span id="fig:datawrapper-table"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-table"></span>
 <iframe src="https://datawrapper.dwcdn.net/0HK4f/2/" width="672" height="1007px">
 </iframe>
 <p class="caption">
@@ -344,7 +341,7 @@ Figure 7.2: Table with sparklines. Explore the <a href="https://datawrapper.dwcd
 <li>In the <em>Visualize</em> screen, under <em>Customize columns</em>, select the third line named <em>Nation</em>. Then scroll down and push the slider to <em>Replace country codes with flags</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-flag">7.3</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-flag"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-flag"></span>
 <img src="images/07-table/datawrapper-flag.png" alt="Customize the Nation column and push slider to replace codes with flags."  />
 <p class="caption">
 Figure 7.3: Customize the <em>Nation</em> column and push slider to replace codes with flags.
@@ -355,7 +352,7 @@ Figure 7.3: Customize the <em>Nation</em> column and push slider to replace code
 <li><p>Now let’s color-code the <em>Continent</em> column to make it easier for readers to sort by category it in the interactive table. In the <em>Visualize</em> screen under <em>Customize columns</em>, select the <em>Continent</em> column, then scroll down and push the slider to select <em>Color cells based on categories</em>. In the drop-down menu, select the column <em>Continent</em>, and click on the <em>Background: customize colors</em> button. Select each continent and assign them different colors, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-colors">7.4</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-colors"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-colors"></span>
 <img src="images/07-table/datawrapper-colors.png" alt="Customize the Continent column and push slider to color cells based on categories." width="600" />
 <p class="caption">
 Figure 7.4: Customize the <em>Continent</em> column and push slider to color cells based on categories.
@@ -365,7 +362,7 @@ Figure 7.4: Customize the <em>Continent</em> column and push slider to color cel
 <li>Now let’s prepare our data to add sparklines, or tiny line charts, to visually represent change in the <em>Life expectancy 1960</em> column, which we intentionally left blank for this step. Before you begin, you must change this column from textual data (represented by the A symbol in the <em>Customize columns</em> window) to numerical data (represented by the # symbol). At the top of the screen, click on the <em>2. Check and Describe</em> arrow to go back a step. (Datawrapper will save your work.) Now click on the table header to edit the properties for <em>column E: Life Expectancy 1960</em>. On the left side, use the drop-down menu to change its properties from <em>auto (text)</em> to <em>Number</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-edit-column">7.5</a>. Then click <em>Proceed</em> to return to the <em>Visualize</em> window.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-edit-column"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-edit-column"></span>
 <img src="images/07-table/datawrapper-edit-column.png" alt="Go back to Check &amp; Describe to change the properties of column E from textual to numerical data."  />
 <p class="caption">
 Figure 7.5: Go back to <em>Check &amp; Describe</em> to change the properties of column E from textual to numerical data.
@@ -376,7 +373,7 @@ Figure 7.5: Go back to <em>Check &amp; Describe</em> to change the properties of
 </ol>
 <p>Tip: By design, we initially named this column <em>Life expectancy 1960</em>, because when we selected several columns to create sparklines, the tool added <em>–2018</em> to the end of the new column name.</p>
 
-<div class="figure"><span id="fig:datawrapper-tiny-chart"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-tiny-chart"></span>
 <img src="images/07-table/datawrapper-tiny-chart.png" alt="Shift-click to select all columns from Life expectancy 1960–2018 down to 2018, then click on Show selected columns as tiny chart." width="300" />
 <p class="caption">
 Figure 7.6: Shift-click to select all columns from <em>Life expectancy 1960–2018</em> down to <em>2018</em>, then click on <em>Show selected columns as tiny chart</em>.
@@ -386,7 +383,7 @@ Figure 7.6: Shift-click to select all columns from <em>Life expectancy 1960–20
 <li>Let’s add one more visual element: a bar chart to visually represent the <em>Difference</em> column in the table. In the <em>Visualize</em> screen under <em>Customize columns</em>, select <em>Difference</em>. Then scroll down and push the slider to select <em>Show as bar chart</em>, as shown in Figure <a href="table-datawrapper.html#fig:datawrapper-bar-chart">7.7</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:datawrapper-bar-chart"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-bar-chart"></span>
 <img src="images/07-table/datawrapper-bar-chart.png" alt="Select the Difference column and Show as bar chart."  />
 <p class="caption">
 Figure 7.7: Select the <em>Difference</em> column and <em>Show as bar chart</em>.

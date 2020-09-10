@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-09" />
+<meta name="date" content="2020-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,19 +144,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
-<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
-<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+<li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Your Digital Tools</a></li>
+<li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
 <ul>
@@ -328,7 +325,7 @@ such as fires, crimes, and property data.</p>
 using <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">General Hospital Information</a> dataset by Medicare,
 which you can see in Figure <a href="filtered-point-map-socrata.html#fig:socrata-final">6.19</a>.</p>
 
-<div class="figure"><span id="fig:socrata-final"></span>
+<div class="figure" style="text-align: center"><span id="fig:socrata-final"></span>
 <iframe src="https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&amp;height=500" width="672" height="500px">
 </iframe>
 <p class="caption">
@@ -358,7 +355,7 @@ that use Socrata.</p>
 and in the menu on the right-hand side choose <em>Visualize &gt; Launch New Visualization</em>, as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-launch-new-viz">6.20</a>. This will open up
 a <em>Configure Visualization</em> studio where you can create the map.</p>
 
-<div class="figure"><span id="fig:socrata-launch-new-viz"></span>
+<div class="figure" style="text-align: center"><span id="fig:socrata-launch-new-viz"></span>
 <img src="images/06-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize &gt; Launch New Visualization." width="300" />
 <p class="caption">
 Figure 6.20: Go to Visualize &gt; Launch New Visualization.
@@ -375,7 +372,7 @@ To do so, go to <em>Filters &gt; Add filter</em>. The dropdown menu lists all co
 where we should choose <em>State</em>. In the newly appeared State dropdown, choose TX (for Texas) as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-filter">6.21</a>, and scroll down
 and click Apply. Socrata should zoom in on the map and center on Texas. Close <em>Filters</em> window to free screen space.</p>
 
-<div class="figure"><span id="fig:socrata-filter"></span>
+<div class="figure" style="text-align: center"><span id="fig:socrata-filter"></span>
 <img src="images/06-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
 <p class="caption">
 Figure 6.21: Select Texas as the only value for State field.
@@ -386,7 +383,7 @@ Go to <em>Map Settings &gt; Cluster</em>, and bring the <em>Stop Clustering at Z
 as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-uncluster">6.22</a>.
 You will see the map now shows individual points.</p>
 
-<div class="figure"><span id="fig:socrata-uncluster"></span>
+<div class="figure" style="text-align: center"><span id="fig:socrata-uncluster"></span>
 <img src="images/06-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
 <p class="caption">
 Figure 6.22: To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1.
@@ -404,7 +401,7 @@ classify categorical points. The dataset contains multiple variables that can be
 such as <em>Hospital Type</em>, <em>Emergency Services</em> (a yes/no category), <em>Mortality national comparison</em> and others.
 Let’s stick with <em>Hospital Type</em>, as is illustrated in Figure <a href="filtered-point-map-socrata.html#fig:socrata-style">6.23</a>.</p>
 
-<div class="figure"><span id="fig:socrata-style"></span>
+<div class="figure" style="text-align: center"><span id="fig:socrata-style"></span>
 <img src="images/06-map/socrata-style-annotated.png" alt="Let’s display different types of hospitals in different colors." width="300" />
 <p class="caption">
 Figure 6.23: Let’s display different types of hospitals in different colors.
@@ -420,7 +417,7 @@ go to <strong>Flyout Details</strong>, and set Flyout Title to <em>Facility Name
 adding city and phone number as additional flyout values, as is shown in Figure
 <a href="filtered-point-map-socrata.html#fig:socrata-flyout">6.24</a>.</p>
 
-<div class="figure"><span id="fig:socrata-flyout"></span>
+<div class="figure" style="text-align: center"><span id="fig:socrata-flyout"></span>
 <img src="images/06-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
 <p class="caption">
 Figure 6.24: To edit tooltip information, use Flyout Details menu item.
@@ -438,14 +435,14 @@ and you can go ahead and <em>Publish…</em> it.</p>
 and copy the generated code from <em>Embed Code</em> text area (Figure <a href="filtered-point-map-socrata.html#fig:socrata-share-embed">6.26</a>).
 Learn more in <a href="embed.html">Chapter 8: Embed on Your Web</a>.</p>
 
-<div class="figure"><span id="fig:socrata-share"></span>
+<div class="figure" style="text-align: center"><span id="fig:socrata-share"></span>
 <img src="images/06-map/socrata-share-annotated.png" alt="Click Share button to bring up Share and Embed window." width="400" />
 <p class="caption">
 Figure 6.25: Click <em>Share</em> button to bring up <em>Share and Embed</em> window.
 </p>
 </div>
 
-<div class="figure"><span id="fig:socrata-share-embed"></span>
+<div class="figure" style="text-align: center"><span id="fig:socrata-share-embed"></span>
 <img src="images/06-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website."  />
 <p class="caption">
 Figure 6.26: Copy iframe code to embed this map in another website.

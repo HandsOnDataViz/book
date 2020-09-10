@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-09" />
+<meta name="date" content="2020-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,19 +144,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
-<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
-<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+<li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Your Digital Tools</a></li>
+<li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
 <ul>
@@ -318,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Spreadsheet tools also allow you to “look up” data in one sheet and automatically find and paste matching data from another sheet. This section introduces the VLOOKUP function, where the “V” stands for “vertical,” meaning matches across columns, which is the most common way to look up data. You’ll learn how to write a function in one sheet that looks for matching cells in select columns in a second sheet, and pastes the relevant data into a new column in the first sheet. If you’ve ever faced the tedious task of manually looking up and matching data between two different spreadsheets, this automated method will save you lots of time.</p>
 <p>Here’s a scenario that illustrates why and how to use the VLOOKUP function. Figure <a href="vlookup.html#fig:vlookup-setup">2.35</a> shows two different sheets with sample data about food banks that help feed hungry people in different parts of the US, drawn from <a href="https://www.feedingamerica.org/find-your-local-foodbank">Feeding America: Find Your Local Food Bank</a>. The first sheet lists individual people at each food bank, the second sheet lists the address for each food bank, and the two share a common column named <em>organization</em>. Your goal is to produce one sheet that serves as a mailing list, where each row contains one individual’s name, organization, and full mailing address. Since we’re using a small data sample to simplify this tutorial, it may be tempting to manually copy and paste in the data. But imagine an actual case that includes over 200 US food banks and many more individuals, where using an automated method to match and paste data is essential.</p>
 
-<div class="figure"><span id="fig:vlookup-setup"></span>
+<div class="figure" style="text-align: center"><span id="fig:vlookup-setup"></span>
 <img src="images/02-spreadsheet/vlookup-setup.png" alt="Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet." width="750" />
 <p class="caption">
 Figure 2.35: Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet.
@@ -332,7 +329,7 @@ Figure 2.35: Your goal is to create one mailing list that matches individual nam
 <li>In your editable copy of the Google Sheet, the <em>names</em> tab will be our destination for the mailing list we will create. Go to the <em>addresses</em> sheet, copy the column headers for <em>street - city - state - zip</em>, and paste them into cells C1 through F1 on the <em>names</em> sheet, as shown in Figure <a href="vlookup.html#fig:vlookup-headers">2.36</a>. This creates new column headers where our lookup results will be automatically pasted.</li>
 </ol>
 
-<div class="figure"><span id="fig:vlookup-headers"></span>
+<div class="figure" style="text-align: center"><span id="fig:vlookup-headers"></span>
 <img src="images/02-spreadsheet/vlookup-headers.png" alt="Paste the last four column headers from the addresses sheet into the names sheet." width="500" />
 <p class="caption">
 Figure 2.36: Paste the last four column headers from the <em>addresses</em> sheet into the <em>names</em> sheet.
@@ -353,7 +350,7 @@ Figure 2.36: Paste the last four column headers from the <em>addresses</em> shee
 <li>One option is to directly type this formula into cell C2, using comma separators: <code>=VLOOKUP(B2,'addresses'!A:E,2,false)</code>. Another option is to click on the <em>VLOOKUP Vertical lookup</em> grey box that Google Sheets suggests, and click on the relevant cells, columns, and sheets for the formula to be automatically entered for you, as shown in Figure <a href="vlookup.html#fig:vlookup-solution">2.37</a>. What’s new here is that this formula in the <em>names</em> sheet refers to a range of columns A to E in the <em>addresses</em> sheet. Press <em>Return</em> or <em>Enter</em> on your keyboard.</li>
 </ol>
 
-<div class="figure"><span id="fig:vlookup-solution"></span>
+<div class="figure" style="text-align: center"><span id="fig:vlookup-solution"></span>
 <img src="images/02-spreadsheet/vlookup-solution.png" alt="The VLOOKUP formula in cell C2 of the names sheet (top) searches for matches across columns A to E in the addresses sheet (bottom)." width="700" />
 <p class="caption">
 Figure 2.37: The VLOOKUP formula in cell C2 of the <em>names</em> sheet (top) searches for matches across columns A to E in the <em>addresses</em> sheet (bottom).
@@ -370,7 +367,7 @@ Figure 2.37: The VLOOKUP formula in cell C2 of the <em>names</em> sheet (top) se
 <li>After you enter the full VLOOKUP formula, it will display the exact match for the first organization, the Central Texas Food Bank, whose address is 6500 Metropolis Dr. Click and hold down on the blue dot in the bottom-right corner of cell C2, and drag your crosshair cursor across columns D to F and let go, which will automatically paste and update the formula for the city, state, and zip columns, as shown in Figure <a href="vlookup.html#fig:vlookup-drag">2.38</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:vlookup-drag"></span>
+<div class="figure" style="text-align: center"><span id="fig:vlookup-drag"></span>
 <img src="images/02-spreadsheet/vlookup-drag.png" alt="Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
 Figure 2.38: Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula.
@@ -380,7 +377,7 @@ Figure 2.38: Click on cell C2, then hold-and-drag the bottom-right blue dot acro
 <li>Finally, use the same hold-and-drag method to paste and update the formula downward to fill in all rows, as shown in Figure <a href="vlookup.html#fig:vlookup-final">2.39</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:vlookup-final"></span>
+<div class="figure" style="text-align: center"><span id="fig:vlookup-final"></span>
 <img src="images/02-spreadsheet/vlookup-final.png" alt="Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
 Figure 2.39: Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula.

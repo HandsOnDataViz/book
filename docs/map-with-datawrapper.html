@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-09" />
+<meta name="date" content="2020-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,19 +144,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
-<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
-<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+<li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Your Digital Tools</a></li>
+<li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
 <ul>
@@ -323,7 +320,7 @@ as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-final"
 <p>We calculated average 2019 prices for 50 US states and DC, and put them in a spreadsheet, which
 <a href="data/us-states-home-values-zillow-2019.csv">you can download</a> for this tutorial.</p>
 
-<div class="figure"><span id="fig:datawrapper-map-final"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-map-final"></span>
 <iframe src="https://datawrapper.dwcdn.net/uX2Yx/2/" width="672" height="513px">
 </iframe>
 <p class="caption">
@@ -337,7 +334,7 @@ and click <em>New Map</em> in the header. Datawrapper will offer a choice of
 a <em>Choropleth</em>, <em>Symbol</em>, and <em>Locator</em> maps, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-choose">6.14</a>.
 Go ahead and choose <em>choropleth</em>.</p>
 
-<div class="figure"><span id="fig:datawrapper-map-choose"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-map-choose"></span>
 <img src="images/06-map/datawrapper-map-choose-annotated.png" alt="Sign in to Datawrapper, click New Map, and choose Choropleth."  />
 <p class="caption">
 Figure 6.14: Sign in to Datawrapper, click <em>New Map</em>, and choose <em>Choropleth</em>.
@@ -353,7 +350,7 @@ as a TopoJSON or GeoJSON file, and you will learn more about that in the <a href
 Because we are mapping average home prices by US state, choose <em>United States &gt; States</em>,
 as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-us-states">6.15</a>, and hit <em>Next</em> to go to step 2.</p>
 
-<div class="figure"><span id="fig:datawrapper-map-us-states"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-map-us-states"></span>
 <img src="images/06-map/datawrapper-map-us-states-annotated.png" alt="To map home prices by US state, choose appropriate boundaries."  />
 <p class="caption">
 Figure 6.15: To map home prices by US state, choose appropriate boundaries.
@@ -376,7 +373,7 @@ and Datawrapper will ask for help identifying the relevant column with geographi
 Make sure your <em>Matched as ISO-Codes</em> tooltip is blue above the <em>StateAbbr</em> column,
 scroll down and click <em>Next</em>, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-match">6.16</a>.</p>
 
-<div class="figure"><span id="fig:datawrapper-map-match"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-map-match"></span>
 <img src="images/06-map/datawrapper-map-match.png" alt="Tell Datawrapper which column contains geography names (ISO-Codes of states)." width="350" />
 <p class="caption">
 Figure 6.16: Tell Datawrapper which column contains geography names (ISO-Codes of states).
@@ -392,7 +389,7 @@ a diverging color palette, from reds to blues. Make sure your “middle” color
 corresponds to the state with the median home price by choosing <em>min/median/max</em> value
 from the Stops dropdown, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-color">6.17</a>.</p>
 
-<div class="figure"><span id="fig:datawrapper-map-color"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-map-color"></span>
 <img src="images/06-map/datawrapper-map-color.png" alt="Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value." width="350" />
 <p class="caption">
 Figure 6.17: Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value.
@@ -405,7 +402,7 @@ The easiest way to do this is to click on column names in the upper-right corner
 Make sure your dollar symbol (<code>$</code>) in outside of the curly brackets. Click <em>Save</em>,
 and hover over the map to make sure your tooltip displays the state name and the average home price.</p>
 
-<div class="figure"><span id="fig:datawrapper-map-tooltip"></span>
+<div class="figure" style="text-align: center"><span id="fig:datawrapper-map-tooltip"></span>
 <img src="images/06-map/datawrapper-map-tooltip-annotated.png" alt="To reference values from the spreadsheet, add column names in double curly brackets." width="450" />
 <p class="caption">
 Figure 6.18: To reference values from the spreadsheet, add column names in double curly brackets.

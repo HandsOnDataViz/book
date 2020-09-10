@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-09" />
+<meta name="date" content="2020-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,19 +144,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
-<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
-<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+<li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Your Digital Tools</a></li>
+<li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
 <ul>
@@ -369,7 +366,7 @@ options(knitr.graphics.auto_pdf = TRUE)</code></pre>
 <h3>Demo: R code-chunk for small static image for HTML and PDF editions</h3>
 <p>Small is defined as each side less than 300px, as shown in Figure <a href="images.html#fig:tiger">D.1</a>.</p>
 
-<div class="figure"><span id="fig:tiger"></span>
+<div class="figure" style="text-align: center"><span id="fig:tiger"></span>
 <img src="images/18-bookdown/tiger.png" alt="Caption here. Markdown embedded links are acceptable."  />
 <p class="caption">
 Figure D.1: Caption here. Markdown embedded links are acceptable.
@@ -380,7 +377,7 @@ Figure D.1: Caption here. Markdown embedded links are acceptable.
 <h3>R code-chunk for larger static image using out.width and PDF img</h3>
 <p>For larger images, where one side is greater than 300px, set the out.width to a pixel number for ideal display in the HTML edition. Also optional to reduce float in PDF: <code>fig.pos='h',</code>. If necessary, copy the image, use Photoshop to create a smaller image size, and save with same file name and a .pdf extension for auto-substitution in the PDF output …as shown in Figure <a href="images.html#fig:screenshot-tall">D.2</a>.</p>
 
-<div class="figure"><span id="fig:screenshot-tall"></span>
+<div class="figure" style="text-align: center"><span id="fig:screenshot-tall"></span>
 <img src="images/18-bookdown/screenshot-tall.png" alt="Using out.width=200 and smaller PDF image size." width="200" />
 <p class="caption">
 Figure D.2: Using out.width=200 and smaller PDF image size.
@@ -392,7 +389,7 @@ Figure D.2: Using out.width=200 and smaller PDF image size.
 <h3>Demo: R code-chunk for iframe in HTML and static image in PDF</h3>
 <p>…as shown in Figure <a href="images.html#fig:sample-map">D.3</a>.</p>
 
-<div class="figure"><span id="fig:sample-map"></span>
+<div class="figure" style="text-align: center"><span id="fig:sample-map"></span>
 <iframe src="https://handsondataviz.github.io/leaflet-maps-with-google-sheets/" width="672" height="600px">
 </iframe>
 <p class="caption">
@@ -404,7 +401,7 @@ Figure D.3: Caption here, and add embedded link to explore the <a href="https://
 <h3>Demo: R code-chunk for animated GIF in HTML and static image in PDF</h3>
 <p>When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. Add …as shown in Figure <a href="images.html#fig:sheets-option-drag">D.4</a>.</p>
 
-<div class="figure"><span id="fig:sheets-option-drag"></span>
+<div class="figure" style="text-align: center"><span id="fig:sheets-option-drag"></span>
 <iframe src="images/18-bookdown/sheets-option-drag.gif" width="672" height="250px">
 </iframe>
 <p class="caption">
@@ -417,7 +414,7 @@ Figure D.4: Caption here, with embedded link to the <a href="https://handsondata
 <p>Be sure to use the <em>embed</em> link from the YouTube <em>share</em> button.</p>
 <p>…as shown in the video <a href="images.html#fig:video-sample">D.5</a>.</p>
 
-<div class="figure"><span id="fig:video-sample"></span>
+<div class="figure" style="text-align: center"><span id="fig:video-sample"></span>
 <iframe src="https://www.youtube.com/embed/-nGdrzMuUnI" width="672" height="400px">
 </iframe>
 <p class="caption">
@@ -429,7 +426,7 @@ Figure D.5: Caption here, with embedded link to the <a href="https://youtu.be/-n
 <h3>Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF</h3>
 <p>This option may be relevant when you wish to display a video only in the html edition, with no screenshot of it in the PDF edition. Note that this will alter figure-numbering between the HTML and PDF editions.</p>
 
-<div class="figure"><span id="fig:video-sample2"></span>
+<div class="figure" style="text-align: center"><span id="fig:video-sample2"></span>
 <iframe src="https://www.youtube.com/embed/w6dQ-RIQ5bc" width="672" height="400px">
 </iframe>
 <p class="caption">

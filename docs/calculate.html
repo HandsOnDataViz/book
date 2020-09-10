@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-09" />
+<meta name="date" content="2020-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,19 +144,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
-<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors</a></li>
-<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="what.html"><a href="what.html"><i class="fa fa-check"></i>What is Data Visualization?</a></li>
-<li class="chapter" data-level="" data-path="why.html"><a href="why.html"><i class="fa fa-check"></i>Why this book?</a></li>
-<li class="chapter" data-level="" data-path="how-to-read.html"><a href="how-to-read.html"><i class="fa fa-check"></i>How to Read on the Web</a></li>
+<li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>1</b> Choose Tools to Tell Your Data Story</a>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
-<li class="chapter" data-level="" data-path="draw.html"><a href="draw.html"><i class="fa fa-check"></i>Draw and Write Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="ask.html"><a href="ask.html"><i class="fa fa-check"></i>Ask Questions When Choosing Tools</a></li>
-<li class="chapter" data-level="" data-path="rate.html"><a href="rate.html"><i class="fa fa-check"></i>Rate Three Simple Map Tools</a></li>
+<li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
+<li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Your Digital Tools</a></li>
+<li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
 <ul>
@@ -323,7 +320,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Add a blank row immediately below the header to make space for our calculations. Right-click on row number 1 and select <em>Insert 1 below</em> to add a new row, as shown in Figure <a href="calculate.html#fig:sheets-insert-row">2.26</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-insert-row"></span>
+<div class="figure" style="text-align: center"><span id="fig:sheets-insert-row"></span>
 <img src="images/02-spreadsheet/sheets-insert-row.png" alt="Right-click on row number 1 and select Insert 1 below." width="200" />
 <p class="caption">
 Figure 2.26: Right-click on row number 1 and select <em>Insert 1 below</em>.
@@ -333,7 +330,7 @@ Figure 2.26: Right-click on row number 1 and select <em>Insert 1 below</em>.
 <li>Let’s calculate the average level of reader experience with data visualization. Click on cell E2 in the new blank row you just created, and type an equal symbol (<code>=</code>) to start a formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the average for current values in the column, such as <code>=AVERAGE(E3:E2894)</code>, then press <em>Return</em> or <em>Enter</em> on your keyboard, as shown in Figure <a href="calculate.html#fig:sheets-average">2.27</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-average"></span>
+<div class="figure" style="text-align: center"><span id="fig:sheets-average"></span>
 <img src="images/02-spreadsheet/sheets-average.png" alt="Type = to start a formula and select the suggestion for average, or type it directly in with the correct range." width="300" />
 <p class="caption">
 Figure 2.27: Type <code>=</code> to start a formula and select the suggestion for average, or type it directly in with the correct range.
@@ -345,7 +342,7 @@ Figure 2.27: Type <code>=</code> to start a formula and select the suggestion fo
 <li>Part of the magic of spreadsheets is that you can use the built-in hold-and-drag feature to copy and paste a formula across other columns or rows, and it will automatically update its cell references. Click in cell E2, and then press and hold down on the blue dot in the bottom-right corner of that cell, which transforms your cursor into a crosshair symbol. Drag your cursor to cell F2 and let go, and show in Figure <a href="calculate.html#fig:sheets-drag-calc">2.28</a>. The formula will be automatically pasted and updated for the new column to <code>=AVERAGE(F3:F2894)</code> or <code>AVERAGE(F3:F)</code>, depending on which way you entered it above. Once again, since this is a live spreadsheet with a growing number of responses, your sheet will have a larger number in the last cell reference.</li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-drag-calc"></span>
+<div class="figure" style="text-align: center"><span id="fig:sheets-drag-calc"></span>
 <iframe src="images/02-spreadsheet/sheets-drag-calc.gif" width="672" height="185px">
 </iframe>
 <p class="caption">
@@ -356,7 +353,7 @@ Figure 2.28: Click on the blue bottom-right dot in cell E2, then hold-and-drag y
 <li>Since the <em>Occupation</em> column contains a defined set of text responses, let’s use a different function to count them using an <em>if statement</em>, such as the number of responses if a reader listed “educator”. Click in cell G2 and type the equal symbol (<code>=</code>) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is <em>educator</em> for current values in the entire column. You can directly type in the formula <code>=COUNTIF(G3:G2894,"=educator")</code>, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax <code>=COUNTIF(G3:G,"=educator")</code> that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure <a href="calculate.html#fig:sheets-countif">2.29</a>.</li>
 </ol>
 
-<div class="figure"><span id="fig:sheets-countif"></span>
+<div class="figure" style="text-align: center"><span id="fig:sheets-countif"></span>
 <img src="images/02-spreadsheet/sheets-countif.png" alt="Select or enter a formula that counts responses if the entry is educator." width="250" />
 <p class="caption">
 Figure 2.29: Select or enter a formula that counts responses if the entry is <em>educator</em>.

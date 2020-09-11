@@ -56,7 +56,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE, fig.align = 'center')
 options(knitr.graphics.auto_pdf = TRUE)
 ```
-![Book cover: Read about the [hoatzin "reptile bird"](https://en.wikipedia.org/wiki/Hoatzin)](images/0-introduction/cover-400wide.jpg)
+![Book cover: Read about the [hoatzin "reptile bird"](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
 **This BOOK-IN-PROGRESS was last updated on: `r format (Sys.Date(), '%d %b %Y')`**.
 
@@ -83,8 +83,8 @@ You may freely share this content for non-commercial purposes, with a source cre
 
 | Authors      | About Us     |
 | ------------ | ------------ |
-| ![](images/0-introduction/dougherty-jack.jpg) | [Jack Dougherty](http://jackdougherty.org) is Professor of Educational Studies at Trinity College in Hartford, Connecticut, where he and his students partner with community organizations to help tell their data stories on the web. Follow him on [Twitter](https://twitter.com/doughertyjack) and [on GitHub](https://github/com/jackdougherty). |
-| ![](images/0-introduction/ilyankou-ilya.jpg) | [Ilya Ilyankou](https://www.linkedin.com/in/ilya-ilyankou-a64675ab) is a Civic Technologist at Connecticut Data Collaborative. He has completed a double major in Computer Science and Studio Arts in the Class of 2018 at Trinity College. Visit [his website](http://ilyankou.com) or follow him [on GitHub](https://github.com/ilyankou). |   
+| ![](images/0-preface/dougherty-jack.jpg) | [Jack Dougherty](http://jackdougherty.org) is Professor of Educational Studies at Trinity College in Hartford, Connecticut, where he and his students partner with community organizations to help tell their data stories on the web. Follow him on [Twitter](https://twitter.com/doughertyjack) and [on GitHub](https://github/com/jackdougherty). |
+| ![](images/0-preface/ilyankou-ilya.jpg) | [Ilya Ilyankou](https://www.linkedin.com/in/ilya-ilyankou-a64675ab) is a Civic Technologist at Connecticut Data Collaborative. He has completed a double major in Computer Science and Studio Arts in the Class of 2018 at Trinity College. Visit [his website](http://ilyankou.com) or follow him [on GitHub](https://github.com/ilyankou). |   
 
 ### Acknowledgements {-}
 We originally launched an earlier draft of this book under a different title, *Data Visualization For All*, to accompany a [free online edX course](https://www.edx.org/course/data-visualization-for-all) by the same name, sponsored by Trinity College. Co-instructors Stacy Lam (Trinity Class of 2019) and David Tatem (Instructional Technologist) contributed valuable ideas and energy as we created content for that course in Spring 2017, which to date has enrolled over 23,000 students, though [only a fraction actually complete the 6-week curriculum](https://jackdougherty.org/2017/11/21/tough-questions-to-ask-about-trinity-edx/). Thanks also to the Trinity Information Technology staff and friends who produced the edX course videos: Angie Wolf, Sean Donnelly, Ron Perkins, Samuel Oyebefun, Phil Duffy, and Christopher Brown. Also, Veronica X. Armendariz (Trinity Class of 2016) made valuable contributions to the early version of the book while serving as a teaching assistant for the [Data Visualization internship seminar](http://commons.trincoll.edu/dataviz/) that brought together Trinity undergraduates and Hartford community partners. Funding for students who worked on the earlier draft was generously provided by the [Office of Community Learning](https://cher.trincoll.edu/community-learning/) and [Information Technology Services](https://www.trincoll.edu/LITC/its/) at Trinity College.

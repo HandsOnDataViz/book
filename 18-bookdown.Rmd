@@ -405,7 +405,7 @@ We need to do a bit of manual cleanup before ORM production team can convert the
 - Manually paste in these Markdown tables to replace HTML tables (unless ORM can handle this part)
   - from index.Rmd, table of authors
   - from 05-chart.Rmd, Table 1: Chart types covered in this book
-- Manually replace any `<iframe...` HTML or GIF elements with their PNG substitutes, and new ALT text (unless authors come up with a better way to automate this)
+- Manually find and replace any `<iframe...` HTML or GIF elements with their `<img...` PNG substitutes, and new ALT text (unless authors come up with a better way to automate this)
 - Manually delete any remaining `<iframe...` elements (unless they are non-executable code snippets)
 - Manually mark up "Variable List:" for production team in two places in chapter 3
 - Save and push the modified Markdown file up to GitHub repo

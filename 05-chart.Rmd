@@ -682,7 +682,7 @@ To create your own scatter chart using this sample data in Tableau Public, follo
 knitr::include_graphics("images/05-chart/tableau-connect-annotated.png")
 ```
 
-#### Create Scatter Chart in the Worksheet
+#### Create Scatter Chart in the Worksheet {-}
 
 1. In the *Data source* screen, click on the orange *Sheet 1* tab (in the lower-left corner) to go to your worksheet, where you will build the chart.
 
@@ -690,16 +690,11 @@ Although it may feel overwhelming at first, the key is learning where to drag it
 
 2. In your worksheet, drag the *Grade Levels* field into the *Rows* field above the charting area, which
 for now is just empty space. See Figure \@ref(fig:tableau-scatter-dragging) for this dragging step and the following two steps. Tableau will apply a summation function to it, and you will see `SUM(Grade Levels)` appear
-in the *Rows* row, and a blue bar in the charting area. It makes little sense so far, so let's
-plot another data field.
+in the *Rows* row, and a blue bar in the charting area. It makes little sense so far, so let's plot another data field.
 
-3. Drag *Median Household Income* to the *Columns* field, just above the *Rows* field.
-Once again, Tableau will apply the summation function, so you will see `SUM(Median Household Income)`
-in the *Columns*. The bar chart will automatically transform into a scatter chart with just one data point
-in the upper-right corner, because the data for both is aggregated (remember the `SUM` function).
+3. Drag *Median Household Income* to the *Columns* field, just above the *Rows* field. In general, choosing between Rows and Columns shelves can be challenging, but it is convenient to think of *Columns* shelf as representing your x-axis, and *Rows* as y-axis. Once again, Tableau will apply the summation function, so you will see `SUM(Median Household Income)` in the *Columns* shelf. The bar chart will automatically transform into a scatter chart with just one data point in the upper-right corner, because the data for both is aggregated (remember the `SUM` function).
 
-6. We want to tell Tableau to disaggregate the household and grade levels variables. To do so,
-drag the *District* dimension into the *Detail* box of the *Marks* card. Now a real scatter chart will appear in the charting area. If you hover over points, you will see all three values associated with it.
+6. We want to tell Tableau to disaggregate the household and grade levels variables. In other words, we want to introduce an extra level of granuality, or *deatil* to our visualization. To do so, drag the *District* dimension into the *Detail* shelf of the *Marks* card. Now a real scatter chart will appear in the charting area. If you hover over points, you will see all three values associated with these points.
 
 (ref:tableau-scatter-dragging) Drag data fields to the right locations in Tableau Public.
 
@@ -718,8 +713,7 @@ the Caption block that appears, and edit the text. As a result, your final works
 knitr::include_graphics("images/05-chart/tableau-scatter-final-annotated.png")
 ```
 
-Tip: In the dropdown above the *Columns* section, change *Standard* to *Fit Width*
-to ensure your chart occupies 100 percent of available horizontal space.
+Tip: In the dropdown above the *Columns* shelf, change *Standard* to *Fit Width* to ensure your chart occupies 100 percent of available horizontal space.
 
 1. To publish your interactive chart on the public web, go to *File > Save to Tableau Public As...*. A window to sign in to your account will pop up. If you don't have an account, click *Create one now for free* at the bottom, and save the login details in your password manager.
 
@@ -727,9 +721,7 @@ to ensure your chart occupies 100 percent of available horizontal space.
 to something meaningful, as this name will appear in the public web address for your published work. Click *Save*.
 
 3. After saving your workbook on the public web, Tableau Public will open up a window in your default browser
-with the visualization. In the green ribbon above the chart, click *Edit Details*
-to edit the title or description. Under *Toolbar Settings*, see the checkbox to
-*Allow others to download or explore and copy this workbook and its data*, and select the setting you wish, as shown in Figure \@ref(fig:tableau-toolbar-settings. If you are publishing your visualization on the web, we also recommend that you keep this box checked so that others can download your data and see how you constructed it, to improve data accessibility for all.
+with the visualization. In the green banner above the chart, click *Edit Details* to edit the title or description. Under *Toolbar Settings*, see the checkbox to *Allow others to download or explore and copy this workbook and its data*, and select the setting you wish, as shown in Figure \@ref(fig:tableau-toolbar-settings. If you are publishing your visualization on the web, we also recommend that you keep this box checked so that others can download your data and see how you constructed it, to improve data accessibility for all.
 
 (ref:tableau-toolbar-settings) This scatter chart is ready to be published.
 
@@ -771,24 +763,22 @@ To create your own filtered line chart using this sample data in Tableau Public,
 
 3. In the *Data source* screen, click on the orange *Sheet 1* tab (in the lower-left corner) to go to your worksheet, where you will build the chart.
 
-In your worksheet, your variables will be listed under *Tables* in the left-hand side. The original variables
-are displayed in normal font, the *generated* variables will be shown in *italics*
-(such as *Latitude* and *Longitude*, which Tableau guessed from the country names). Now you are ready to begin building your interactive chart.
+In your worksheet, your variables will be listed under *Tables* in the left-hand side. The original variables are displayed in normal font, the *generated* variables will be shown in *italics* (such as *Latitude* and *Longitude*, which Tableau guessed from the country names). Now you are ready to begin building your interactive chart.
 
 #### Build and Publish a Filtered Line Chart {-}
 
-1. Drag the *Year* variable to *Columns*.
-2. Drag the *Percent Internet Users* variable to *Rows*. The variable will change to `SUM(Percent Internet Users)`.
-You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let's fix it.
-3. In order to "break" aggregation, drag-and-drop *Country Name* to the *Color* box of the *Marks* card.
+1. Drag the *Year* variable to *Columns* shelf. This will place years along the x-axis.
+2. Drag the *Percent Internet Users* variable to *Rows* shelf to place them on the y-axis. The value in the shelf will change to `SUM(Percent Internet Users)`. You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let's fix it.
+3. In order to "break" aggregation, drag-and-drop *Country Name* to the *Color* shelf of the *Marks* card.
 Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding checkbox filtering, ignore this warning, and go ahead and press the *Add all members* button.
 4. At first, everything will look like a spaghetti plate of lines and colors! To add filtering,
 drag *Country Name* to the *Filters* card. In the Filter window, make sure all countries
 are checked, and click *OK*.
-5. Right-click on *Country Name* symbol in the *Filters* card, and check *Show Filter*, as shown in Figure \@ref(fig:tableau-filtered-show-filter).
+5. In the *Filters* card, click the dropdown arrow of the **Country Name** symbol, then scroll down and select Show Filter, as shown in Figure \@ref(fig:tableau-filtered-show-filter).
 6. You will see a list of options with all checkboxes to appear on the right side of the chart.
 Click *(All)* to add/remove all options, and select a few countries to see
 how the interactive filtering works. The checkboxes you select at this stage will appear "on" in the published map.
+You may notice that some countries from your "on" selection got assigned the same value. The good news is, Tableau lets you change colors of individual datapoints (in our case, countries). From the *Marks* card, click *Color* shelf, and then *Edit Colors...*. Double-click a country from the *Select Data Item:* list to bring up a color picker window, pick your favorite color, and click OK. Although you can ensure that your pre-selected countries are painted in unique colors, there will be repetitions among other countries as your palette is limited to 20 colors. Unfortunately, there is little you can do to go around this.
 
 (ref:tableau-filtered-show-filter) After you drag Country Name to the Filters card, make sure the Filter is displayed.
 
@@ -800,7 +790,7 @@ knitr::include_graphics("images/05-chart/tableau-filtered-show-filter.png")
 Use this space to add source of your data (World Bank), and perhaps credit yourself as
 the author of this visualization.
 
-8. Change *Standard* to *Fit Width* in the drop-down menu above the *Columns* field.
+8. Change *Standard* to *Fit Width* in the drop-down menu above the *Columns* shelf.
 
 9. You may notice that the x-axis (Year) starts with 1994 and ends with 2020,
 although our data is for 1995–2018. Double-click on the x-axis, and change

@@ -98,6 +98,8 @@ on a scale. For example, average income, population counts, percent unemployed, 
 Usually such palettes are single-hue (for example, different shades of blue), and
 typically darker colors represent higher values (but not always).
 
+Note: See [Normalize Data to Create Meaningful Choropleth Maps](normalize.html) section to see an example of sequential palette use, and learn why representing normalized instead of absolute values may be a better idea.
+
 Diverging palettes also represent continuous values.
 Unlike sequential palettes, however, diverging colors represent "direction" from some reference value,
 such as below or above zero, or below or above the average value.
@@ -378,8 +380,9 @@ scroll down and click *Next*, as shown in Figure \@ref(fig:datawrapper-map-match
 knitr::include_graphics("images/06-map/datawrapper-map-match.png")
 ```
 
-In a similar fashion, you will then be asked to identify a column that contains *values* to be mapped.
-Make sure it is *HomeValue2019* that is *Matched As Values*.
+In a similar fashion, you will then be asked to identify a column that contains *values* to be mapped. Make sure it is *HomeValue2019* that is *Matched As Values*.
+
+Note: See [Normalize Data to Create Meaningful Choropleth Maps](normalize.html) section to learn why you should avoid displaying absolute values or counts in choropleth maps.
 
 ### Style and publish your map {-}
 

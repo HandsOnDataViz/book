@@ -19,7 +19,7 @@ and attribute components, and how GeoJSON is different from Shapefiles and other
 
 With our tutorials, you will learn how to convert or draw your own layer of map polygons or polylines on top of satellite imagery
 using [the GeoJson.io tool](geojsonio.html), and also how to edit geospatial data and join it with spreadsheet data using [the Mapshaper tool](mapshaper.html).
-Both are powerful, web-based open-source geodata tools that for common tasks can substitute for more complex geographic information system tools, such as ArcGIS or QGIS.
+Both are powerful, web-based open-source geodata tools that for common tasks can substitute for more complex geographic information system tools, such as ArcGIS, a Windows-only de-facto industry standard in geospatial software, or QGIS, a free and open-source alternative available for Mac, Linux, and Windows.
 Finally, you'll also learn how to georectify a digitized map to display as a background overlay using [the MapWarper tool](mapwarper.html).
 
 By the end of this chapter, you should feel much more confident navigating the
@@ -35,11 +35,13 @@ One of the fastest ways to geocode up to 10,000 US addresses at a time is to use
 | 2 | 1012 Broad St | Hartford | CT | 06106 |
 ```
 
-- Column 1: Unique IDs for each address, such as 1, 2, 3, etc. While it does not necessarily have to start at 1 or be in consecutive order, this is the easiest. To quickly create a column of consecutive numbers in most spreadsheets, enter `1`, select the bottom-right corner of the cell, hold down the Option or Control key and drag your mouse downward. TODO: See if this method works in Excel for Windows, Chromebook.
+- Column 1: Unique IDs for each address, such as 1, 2, 3, etc. While it does not necessarily have to start at 1 or be in consecutive order, this is the easiest. To quickly create a column of consecutive numbers in most spreadsheets, enter `1`, select the bottom-right corner of the cell, hold down the Option or Control key and drag your mouse downward.
 - Column 2: Street address.
 - Column 3: City.
 - Column 4: State.
 - Column 5: Zip Code.
+
+Although some of your data, such as zipcodes or states, may be missing and the geocoder may still be able to recognize and geocode the location, unique IDs are absolutely necessary to include for each row (address).
 
 Tip: If your original data combines address, city, state, and zip into one cell, then see how to [Split Data into Separate Columns in Chapter 4: Clean Up Messy Data](split-data.html). But if your street addresses contain apartment numbers, you can leave them in.
 
@@ -253,15 +255,15 @@ by volunteers tracing outlines of objects from satellite images.
 knitr::include_graphics("images/12-transform/geospatial-raster-vector-annotated.png")
 ```
 
-In this book, we will focus on vector data, which is based on
+In this book, we will focus on vector data, which is based on features, which can be
 points, lines, and polygons, as shown in Figure \@ref(fig:geospatial-raster-vector)b. Vector data can be
-much more precise than raster data, because points' coordinates
+much more precise than raster data, because point coordinates
 can be expressed with precise decimals. In addition, vector
 data can contain as much extra *attribute* information about each object as desired,
 whereas raster data is generally limited to 1 value per cell,
-whether it is the Earth color, or temperature, or altitude.
-Moreover, vector map files are usually much smaller in size
-than raster ones.
+whether it is the surface color (as is the case with satellite imagery), temperature, or altitude.
+Moreover, vector map files tend to be smaller in size than raster ones, which is important if you
+share files on the web.
 
 Let's take a look at some of the most common vector file formats.
 
@@ -270,7 +272,7 @@ Let's take a look at some of the most common vector file formats.
 that comes in `.geojson` or `.json` files.
 It was first developed in 2008, and then standardized in 2016 by
 the Internet Engineering Task Force (IETF). The code snippet below
-represents a single point (feature) with latitude of 41.76 and longitude of -72.67
+represents a single point with latitude of 41.76 and longitude of -72.67
 in GeoJSON format. That point has a *name* attribute (property) whose value is *Hartford*.
 
 ```
@@ -285,6 +287,9 @@ in GeoJSON format. That point has a *name* attribute (property) whose value is *
   }
 }
 ```
+
+Other feature types in GeoJSON can be polygons (`Polygon`) and line strings (`LineString`, also known as polylines),
+which are represented as arrays of points.
 
 The simplicity and readability of GeoJSON allows you to edit it even in the most
 simple text editor. We strongly recommend you use and share your map data in GeoJSON.
@@ -376,14 +381,15 @@ and creating them from scratch by tracing satellite imagery.
 
 Navigate to [GeoJson.io](https://geojson.io). You will see
 a map on the left, and a Table/JSON attribute view area on the right. At the start,
-it represents an empty feature collection (features are your points, lines, and polygons).
+it represents an empty feature collection. Remember that features
+are your points, polylines, and polygons.
 
 Drag and drop your geospatial data file into the map area on the left.
 Alternatively, you can also import a file from *Open > File* menu.
 If you don't have a geospatial file, download [Hartford parks](data/hartford-parks.kml)
 in KML format. If GeoJson.io was able to recognize and import the file,
 you will see a green popup message in the upper-left corner saying how many
-features (in case of Hartford parks, polygons) were imported.
+features (in case of Hartford parks, only polygons) were imported.
 Figure \@ref(fig:geojson-io-import) shows us that 62 features were imported from
 the sample Hartford parks file. You can see that the polygons appeared
 on top of the Mapbox world layer.
@@ -742,7 +748,8 @@ per state, in our case).
 4. Use the *Cursor > inspect attributes* tool to make sure polygons obtained a new field with the recorded count of points,
 like is shown in Figure \@ref(fig:mapshaper-count-points).
 
-5. Save the new file using *Export* button and choosing the desired output format.
+5. Save the new file using *Export* button and choosing the desired output format. In the section below,
+we will talk about what happens to objects that don't join.
 
 (ref:mapshaper-count-points) Mapshaper's -join can count points in polygons.
 

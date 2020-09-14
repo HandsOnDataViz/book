@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-11" />
+<meta name="date" content="2020-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -339,8 +339,8 @@ Figure 5.49: Drag <code>data</code> sheet into <em>Drag tables here</em> area.
 </p>
 </div>
 </div>
-<div id="create-scatter-chart-in-the-worksheet" class="section level4" number="5.0.0.1">
-<h4><span class="header-section-number">5.0.0.1</span> Create Scatter Chart in the Worksheet</h4>
+<div id="create-scatter-chart-in-the-worksheet" class="section level4 unnumbered" number="">
+<h4>Create Scatter Chart in the Worksheet</h4>
 <ol style="list-style-type: decimal">
 <li>In the <em>Data source</em> screen, click on the orange <em>Sheet 1</em> tab (in the lower-left corner) to go to your worksheet, where you will build the chart.</li>
 </ol>
@@ -348,14 +348,9 @@ Figure 5.49: Drag <code>data</code> sheet into <em>Drag tables here</em> area.
 <ol start="2" style="list-style-type: decimal">
 <li><p>In your worksheet, drag the <em>Grade Levels</em> field into the <em>Rows</em> field above the charting area, which
 for now is just empty space. See Figure <a href="scatter-tableau.html#fig:tableau-scatter-dragging">5.50</a> for this dragging step and the following two steps. Tableau will apply a summation function to it, and you will see <code>SUM(Grade Levels)</code> appear
-in the <em>Rows</em> row, and a blue bar in the charting area. It makes little sense so far, so let’s
-plot another data field.</p></li>
-<li><p>Drag <em>Median Household Income</em> to the <em>Columns</em> field, just above the <em>Rows</em> field.
-Once again, Tableau will apply the summation function, so you will see <code>SUM(Median Household Income)</code>
-in the <em>Columns</em>. The bar chart will automatically transform into a scatter chart with just one data point
-in the upper-right corner, because the data for both is aggregated (remember the <code>SUM</code> function).</p></li>
-<li><p>We want to tell Tableau to disaggregate the household and grade levels variables. To do so,
-drag the <em>District</em> dimension into the <em>Detail</em> box of the <em>Marks</em> card. Now a real scatter chart will appear in the charting area. If you hover over points, you will see all three values associated with it.</p></li>
+in the <em>Rows</em> row, and a blue bar in the charting area. It makes little sense so far, so let’s plot another data field.</p></li>
+<li><p>Drag <em>Median Household Income</em> to the <em>Columns</em> field, just above the <em>Rows</em> field. In general, choosing between Rows and Columns shelves can be challenging, but it is convenient to think of <em>Columns</em> shelf as representing your x-axis, and <em>Rows</em> as y-axis. Once again, Tableau will apply the summation function, so you will see <code>SUM(Median Household Income)</code> in the <em>Columns</em> shelf. The bar chart will automatically transform into a scatter chart with just one data point in the upper-right corner, because the data for both is aggregated (remember the <code>SUM</code> function).</p></li>
+<li><p>We want to tell Tableau to disaggregate the household and grade levels variables. In other words, we want to introduce an extra level of granuality, or <em>deatil</em> to our visualization. To do so, drag the <em>District</em> dimension into the <em>Detail</em> shelf of the <em>Marks</em> card. Now a real scatter chart will appear in the charting area. If you hover over points, you will see all three values associated with these points.</p></li>
 </ol>
 
 <div class="figure" style="text-align: center"><span id="fig:tableau-scatter-dragging"></span>
@@ -377,16 +372,13 @@ the Caption block that appears, and edit the text. As a result, your final works
 Figure 5.51: This scatter chart is ready to be published.
 </p>
 </div>
-<p>Tip: In the dropdown above the <em>Columns</em> section, change <em>Standard</em> to <em>Fit Width</em>
-to ensure your chart occupies 100 percent of available horizontal space.</p>
+<p>Tip: In the dropdown above the <em>Columns</em> shelf, change <em>Standard</em> to <em>Fit Width</em> to ensure your chart occupies 100 percent of available horizontal space.</p>
 <ol style="list-style-type: decimal">
 <li><p>To publish your interactive chart on the public web, go to <em>File &gt; Save to Tableau Public As…</em>. A window to sign in to your account will pop up. If you don’t have an account, click <em>Create one now for free</em> at the bottom, and save the login details in your password manager.</p></li>
 <li><p>After signing in, a window to set the workbook title will appear. Change the default <em>Book1</em> title
 to something meaningful, as this name will appear in the public web address for your published work. Click <em>Save</em>.</p></li>
 <li><p>After saving your workbook on the public web, Tableau Public will open up a window in your default browser
-with the visualization. In the green ribbon above the chart, click <em>Edit Details</em>
-to edit the title or description. Under <em>Toolbar Settings</em>, see the checkbox to
-<em>Allow others to download or explore and copy this workbook and its data</em>, and select the setting you wish, as shown in Figure @ref(fig:tableau-toolbar-settings. If you are publishing your visualization on the web, we also recommend that you keep this box checked so that others can download your data and see how you constructed it, to improve data accessibility for all.</p></li>
+with the visualization. In the green banner above the chart, click <em>Edit Details</em> to edit the title or description. Under <em>Toolbar Settings</em>, see the checkbox to <em>Allow others to download or explore and copy this workbook and its data</em>, and select the setting you wish, as shown in Figure @ref(fig:tableau-toolbar-settings. If you are publishing your visualization on the web, we also recommend that you keep this box checked so that others can download your data and see how you constructed it, to improve data accessibility for all.</p></li>
 </ol>
 
 <div class="figure" style="text-align: center"><span id="fig:tableau-toolbar-settings"></span>

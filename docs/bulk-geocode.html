@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-11" />
+<meta name="date" content="2020-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -317,12 +317,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>| 1 | 300 Summit St | Hartford | CT | 06106 |
 | 2 | 1012 Broad St | Hartford | CT | 06106 |</code></pre>
 <ul>
-<li>Column 1: Unique IDs for each address, such as 1, 2, 3, etc. While it does not necessarily have to start at 1 or be in consecutive order, this is the easiest. To quickly create a column of consecutive numbers in most spreadsheets, enter <code>1</code>, select the bottom-right corner of the cell, hold down the Option or Control key and drag your mouse downward. TODO: See if this method works in Excel for Windows, Chromebook.</li>
+<li>Column 1: Unique IDs for each address, such as 1, 2, 3, etc. While it does not necessarily have to start at 1 or be in consecutive order, this is the easiest. To quickly create a column of consecutive numbers in most spreadsheets, enter <code>1</code>, select the bottom-right corner of the cell, hold down the Option or Control key and drag your mouse downward.</li>
 <li>Column 2: Street address.</li>
 <li>Column 3: City.</li>
 <li>Column 4: State.</li>
 <li>Column 5: Zip Code.</li>
 </ul>
+<p>Although some of your data, such as zipcodes or states, may be missing and the geocoder may still be able to recognize and geocode the location, unique IDs are absolutely necessary to include for each row (address).</p>
 <p>Tip: If your original data combines address, city, state, and zip into one cell, then see how to <a href="split-data.html">Split Data into Separate Columns in Chapter 4: Clean Up Messy Data</a>. But if your street addresses contain apartment numbers, you can leave them in.</p>
 <p>Second, upload your CSV file to the <a href="https://geocoding.geo.census.gov/geocoder/locations/addressbatch?form">US Census Geocoder address batch form</a>. Select <em>Find Locations Using… &gt; Address Batch</em>, then choose your file to upload. Select <em>Public_AR_Current</em> as the benchmark, and click <em>Get Results</em>.</p>
 <p>Note: In left-side menu, you can switch from <em>Find Locations</em> to <em>Find Geographies</em>

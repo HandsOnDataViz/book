@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-11" />
+<meta name="date" content="2020-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -344,15 +344,15 @@ by volunteers tracing outlines of objects from satellite images.</p>
 Figure 12.5: Geospatial data can be raster or vector.
 </p>
 </div>
-<p>In this book, we will focus on vector data, which is based on
+<p>In this book, we will focus on vector data, which is based on features, which can be
 points, lines, and polygons, as shown in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">12.5</a>b. Vector data can be
-much more precise than raster data, because points’ coordinates
+much more precise than raster data, because point coordinates
 can be expressed with precise decimals. In addition, vector
 data can contain as much extra <em>attribute</em> information about each object as desired,
 whereas raster data is generally limited to 1 value per cell,
-whether it is the Earth color, or temperature, or altitude.
-Moreover, vector map files are usually much smaller in size
-than raster ones.</p>
+whether it is the surface color (as is the case with satellite imagery), temperature, or altitude.
+Moreover, vector map files tend to be smaller in size than raster ones, which is important if you
+share files on the web.</p>
 <p>Let’s take a look at some of the most common vector file formats.</p>
 </div>
 <div id="geojson" class="section level4 unnumbered" number="">
@@ -361,7 +361,7 @@ than raster ones.</p>
 that comes in <code>.geojson</code> or <code>.json</code> files.
 It was first developed in 2008, and then standardized in 2016 by
 the Internet Engineering Task Force (IETF). The code snippet below
-represents a single point (feature) with latitude of 41.76 and longitude of -72.67
+represents a single point with latitude of 41.76 and longitude of -72.67
 in GeoJSON format. That point has a <em>name</em> attribute (property) whose value is <em>Hartford</em>.</p>
 <pre><code>{
   &quot;type&quot;: &quot;Feature&quot;,
@@ -373,6 +373,8 @@ in GeoJSON format. That point has a <em>name</em> attribute (property) whose val
     &quot;name&quot;: &quot;Hartford&quot;
   }
 }</code></pre>
+<p>Other feature types in GeoJSON can be polygons (<code>Polygon</code>) and line strings (<code>LineString</code>, also known as polylines),
+which are represented as arrays of points.</p>
 <p>The simplicity and readability of GeoJSON allows you to edit it even in the most
 simple text editor. We strongly recommend you use and share your map data in GeoJSON.
 Web-based maps, such as those built with Leaflet, Mapbox, Google Maps JS API, and Carto,

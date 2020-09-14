@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-11" />
+<meta name="date" content="2020-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -324,13 +324,14 @@ and creating them from scratch by tracing satellite imagery.</p>
 <h4>Convert KML, GPX, and other formats into GeoJSON</h4>
 <p>Navigate to <a href="https://geojson.io">GeoJson.io</a>. You will see
 a map on the left, and a Table/JSON attribute view area on the right. At the start,
-it represents an empty feature collection (features are your points, lines, and polygons).</p>
+it represents an empty feature collection. Remember that features
+are your points, polylines, and polygons.</p>
 <p>Drag and drop your geospatial data file into the map area on the left.
 Alternatively, you can also import a file from <em>Open &gt; File</em> menu.
 If you don’t have a geospatial file, download <a href="data/hartford-parks.kml">Hartford parks</a>
 in KML format. If GeoJson.io was able to recognize and import the file,
 you will see a green popup message in the upper-left corner saying how many
-features (in case of Hartford parks, polygons) were imported.
+features (in case of Hartford parks, only polygons) were imported.
 Figure <a href="geojsonio.html#fig:geojson-io-import">12.7</a> shows us that 62 features were imported from
 the sample Hartford parks file. You can see that the polygons appeared
 on top of the Mapbox world layer.</p>

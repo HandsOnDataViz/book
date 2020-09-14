@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-11" />
+<meta name="date" content="2020-09-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -338,25 +338,23 @@ Figure 5.54: Filtered Line chart: Explore the <a href="https://public.tableau.co
 <li><p>Open Tableau Public, and under the <em>Connect</em> menu, you can upload your data as a Microsoft Excel file, or choose <em>Text file</em> to upload a CSV file, or click <em>More…</em> to connect to a server and upload a Google Sheet from your account. After you successfully connect to your data source, you will see it under <em>Connections</em> in the <em>Data Source</em> tab. Under <em>Sheets</em>, you will see two tables, <code>data</code> and <code>notes</code>. Drag the <code>data</code> sheet into <em>Drag tables here</em> area to preview it.</p></li>
 <li><p>In the <em>Data source</em> screen, click on the orange <em>Sheet 1</em> tab (in the lower-left corner) to go to your worksheet, where you will build the chart.</p></li>
 </ol>
-<p>In your worksheet, your variables will be listed under <em>Tables</em> in the left-hand side. The original variables
-are displayed in normal font, the <em>generated</em> variables will be shown in <em>italics</em>
-(such as <em>Latitude</em> and <em>Longitude</em>, which Tableau guessed from the country names). Now you are ready to begin building your interactive chart.</p>
+<p>In your worksheet, your variables will be listed under <em>Tables</em> in the left-hand side. The original variables are displayed in normal font, the <em>generated</em> variables will be shown in <em>italics</em> (such as <em>Latitude</em> and <em>Longitude</em>, which Tableau guessed from the country names). Now you are ready to begin building your interactive chart.</p>
 </div>
 <div id="build-and-publish-a-filtered-line-chart" class="section level4 unnumbered" number="">
 <h4>Build and Publish a Filtered Line Chart</h4>
 <ol style="list-style-type: decimal">
-<li>Drag the <em>Year</em> variable to <em>Columns</em>.</li>
-<li>Drag the <em>Percent Internet Users</em> variable to <em>Rows</em>. The variable will change to <code>SUM(Percent Internet Users)</code>.
-You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let’s fix it.</li>
-<li>In order to “break” aggregation, drag-and-drop <em>Country Name</em> to the <em>Color</em> box of the <em>Marks</em> card.
+<li>Drag the <em>Year</em> variable to <em>Columns</em> shelf. This will place years along the x-axis.</li>
+<li>Drag the <em>Percent Internet Users</em> variable to <em>Rows</em> shelf to place them on the y-axis. The value in the shelf will change to <code>SUM(Percent Internet Users)</code>. You should see a single line chart that sums up percentages for each year. That is completely incorrect, so let’s fix it.</li>
+<li>In order to “break” aggregation, drag-and-drop <em>Country Name</em> to the <em>Color</em> shelf of the <em>Marks</em> card.
 Tableau will warn you that the recommended number of colors should not exceed 20. Since we will be adding checkbox filtering, ignore this warning, and go ahead and press the <em>Add all members</em> button.</li>
 <li>At first, everything will look like a spaghetti plate of lines and colors! To add filtering,
 drag <em>Country Name</em> to the <em>Filters</em> card. In the Filter window, make sure all countries
 are checked, and click <em>OK</em>.</li>
-<li>Right-click on <em>Country Name</em> symbol in the <em>Filters</em> card, and check <em>Show Filter</em>, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-show-filter">5.55</a>.</li>
+<li>In the <em>Filters</em> card, click the dropdown arrow of the <strong>Country Name</strong> symbol, then scroll down and select Show Filter, as shown in Figure <a href="filtered-line-tableau.html#fig:tableau-filtered-show-filter">5.55</a>.</li>
 <li>You will see a list of options with all checkboxes to appear on the right side of the chart.
 Click <em>(All)</em> to add/remove all options, and select a few countries to see
-how the interactive filtering works. The checkboxes you select at this stage will appear “on” in the published map.</li>
+how the interactive filtering works. The checkboxes you select at this stage will appear “on” in the published map.
+You may notice that some countries from your “on” selection got assigned the same value. The good news is, Tableau lets you change colors of individual datapoints (in our case, countries). From the <em>Marks</em> card, click <em>Color</em> shelf, and then <em>Edit Colors…</em>. Double-click a country from the <em>Select Data Item:</em> list to bring up a color picker window, pick your favorite color, and click OK. Although you can ensure that your pre-selected countries are painted in unique colors, there will be repetitions among other countries as your palette is limited to 20 colors. Unfortunately, there is little you can do to go around this.</li>
 </ol>
 
 <div class="figure" style="text-align: center"><span id="fig:tableau-filtered-show-filter"></span>
@@ -369,7 +367,7 @@ Figure 5.55: After you drag Country Name to the Filters card, make sure the Filt
 <li><p>Double-click on the <em>Sheet 1</em> title (above the chart) and replace it with a more meaningful title, such as “Internet Access by Country, 1995–2018.” In the menu, go to <em>Worksheet &gt; Show Caption</em> to add a Caption block under the chart.
 Use this space to add source of your data (World Bank), and perhaps credit yourself as
 the author of this visualization.</p></li>
-<li><p>Change <em>Standard</em> to <em>Fit Width</em> in the drop-down menu above the <em>Columns</em> field.</p></li>
+<li><p>Change <em>Standard</em> to <em>Fit Width</em> in the drop-down menu above the <em>Columns</em> shelf.</p></li>
 <li><p>You may notice that the x-axis (Year) starts with 1994 and ends with 2020,
 although our data is for 1995–2018. Double-click on the x-axis, and change
 <em>Range</em> from <em>Automatic</em> to <em>Fixed</em>, with the Fixed start of <code>1995</code>, and the Fixed end of <code>2018</code>.

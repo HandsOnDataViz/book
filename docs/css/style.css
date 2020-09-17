@@ -1,0 +1,74 @@
+/* remove iframe border */
+iframe {
+  border: 0;
+}
+
+p.caption {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-style: italic;
+}
+
+.book .book-summary ul.summary li span {
+  cursor: default;
+}
+
+h3.subtitle {
+  margin-top: -20px !important;
+}
+
+h3.subtitle em {
+  font-style: normal !important;
+}
+
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+p.flushright {
+  text-align: right;
+}
+.book .book-body .page-wrapper .page-inner section.normal blockquote {
+    color: #4d4d4d;
+    border-left: 4px solid #e5e5e5;
+}
+blockquote > p:first-child {
+  text-align: inherit;
+}
+.h-icon-chevron-left {
+    background: white;
+        padding: 3px;
+        border: #eee 1px solid;
+        color: #666;
+      }
+
+.fa-rotate-315 {
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+
+.rmdreview {
+  padding: 1em 1em 1em 5em;
+  margin-bottom: 0px;
+  background: #f5f5f5 5px center/3em no-repeat;
+  position:relative;
+}
+
+.rmdreview:before {
+    content: "\f0e6";
+    font-family: FontAwesome;
+    left:10px;
+    position:absolute;
+    top:10px;
+    bottom: 0px;
+    font-size: 60px;
+ }

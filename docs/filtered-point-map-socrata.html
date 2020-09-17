@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xml:lang="en">
+<html  lang="en">
+
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Filtered Point Map with Socrata | Hands-On Data Visualization</title>
-  <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required.">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
   <meta property="og:title" content="Filtered Point Map with Socrata | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -21,20 +22,19 @@
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
 
-<meta name="author" content="Jack Dougherty" />
-<meta name="author" content="Ilya Ilyankou" />
+<meta name="author" content="Jack Dougherty">
+<meta name="author" content="Ilya Ilyankou">
 
 
-<meta name="date" content="2020-09-14" />
+<meta name="date" content="2020-09-17">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="map-with-datawrapper.html"/>
-<link rel="next" href="tableau-polygon.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<link rel="prev" href="map-with-datawrapper.html">
+<link rel="next" href="tableau-polygon.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -42,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
@@ -50,9 +49,6 @@
 
 
 
-
-
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-5488840-29"></script>
 <script>
@@ -65,67 +61,41 @@
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 </style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
@@ -144,19 +114,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./"><strong>Hands-On Data Visualization</strong><br>by Jack Dougherty & Ilya Ilyankou</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
-<ul>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i>Choose Your Digital Tools</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a>
-<ul>
+<li class="chapter" data-level="2" data-path="spreadsheet.html"><a href="spreadsheet.html"><i class="fa fa-check"></i><b>2</b> Strengthen Your Spreadsheet Skills</a><ul>
 <li class="chapter" data-level="" data-path="spreadsheet-tools.html"><a href="spreadsheet-tools.html"><i class="fa fa-check"></i>Select your Spreadsheet Tools</a></li>
 <li class="chapter" data-level="" data-path="csv.html"><a href="csv.html"><i class="fa fa-check"></i>Download to CSV or ODS Format</a></li>
 <li class="chapter" data-level="" data-path="copy.html"><a href="copy.html"><i class="fa fa-check"></i>Make a Copy of a Google Sheet</a></li>
@@ -170,8 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="vlookup.html"><a href="vlookup.html"><i class="fa fa-check"></i>Match Columns with VLOOKUP</a></li>
 <li class="chapter" data-level="" data-path="database.html"><a href="database.html"><i class="fa fa-check"></i>Connect Sheets with a Relational Database</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Question Your Data</a>
-<ul>
+<li class="chapter" data-level="3" data-path="find.html"><a href="find.html"><i class="fa fa-check"></i><b>3</b> Find and Question Your Data</a><ul>
 <li class="chapter" data-level="" data-path="guiding.html"><a href="guiding.html"><i class="fa fa-check"></i>Guiding Questions for Your Search</a></li>
 <li class="chapter" data-level="" data-path="public.html"><a href="public.html"><i class="fa fa-check"></i>Public and Private Data</a></li>
 <li class="chapter" data-level="" data-path="mask-aggregate.html"><a href="mask-aggregate.html"><i class="fa fa-check"></i>Mask or Aggregate Sensitive Data</a></li>
@@ -180,8 +146,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="question.html"><a href="question.html"><i class="fa fa-check"></i>Question Your Data</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a>
-<ul>
+<li class="chapter" data-level="4" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>4</b> Clean Up Messy Data</a><ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
@@ -189,8 +154,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a>
-<ul>
+<li class="chapter" data-level="5" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>5</b> Chart Your Data</a><ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="charts-google.html"><a href="charts-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>- Bar and Column Charts</a></li>
@@ -203,21 +167,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-tableau.html"><a href="scatter-tableau.html"><i class="fa fa-check"></i>- Scatter Chart</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-tableau.html"><a href="filtered-line-tableau.html"><i class="fa fa-check"></i>- Filtered Line Chart</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a>
-<ul>
+<li class="chapter" data-level="6" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>6</b> Map Your Data</a><ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a>
-<ul>
+<li class="chapter" data-level="7" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>7</b> Table Your Data</a><ul>
 <li class="chapter" data-level="" data-path="table-design.html"><a href="table-design.html"><i class="fa fa-check"></i>Table Design Principles</a></li>
 <li class="chapter" data-level="" data-path="table-datawrapper.html"><a href="table-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Table with Sparklines</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a>
-<ul>
+<li class="chapter" data-level="8" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>8</b> Embed On Your Web</a><ul>
 <li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
 <li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
 <li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an Iframe</a></li>
@@ -225,14 +186,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
 <li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>9</b> Edit and Host Code with GitHub</a>
-<ul>
+<li class="chapter" data-level="9" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>9</b> Edit and Host Code with GitHub</a><ul>
 <li class="chapter" data-level="" data-path="copy-leaflet.html"><a href="copy-leaflet.html"><i class="fa fa-check"></i>Copy, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="chartcode.html"><a href="chartcode.html"><i class="fa fa-check"></i><b>10</b> Chart.js and Highcharts Templates</a>
-<ul>
+<li class="chapter" data-level="10" data-path="chartcode.html"><a href="chartcode.html"><i class="fa fa-check"></i><b>10</b> Chart.js and Highcharts Templates</a><ul>
 <li class="chapter" data-level="" data-path="chartjs-bar-column.html"><a href="chartjs-bar-column.html"><i class="fa fa-check"></i>Bar or Column Chart with Chart.js</a></li>
 <li class="chapter" data-level="" data-path="chartjs-error-bars.html"><a href="chartjs-error-bars.html"><i class="fa fa-check"></i>Error Bars with Chart.js</a></li>
 <li class="chapter" data-level="" data-path="chartjs-line.html"><a href="chartjs-line.html"><i class="fa fa-check"></i>Line Chart with Chart.js</a></li>
@@ -240,16 +199,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chartjs-scatter.html"><a href="chartjs-scatter.html"><i class="fa fa-check"></i>Scatter Chart with Chart.js</a></li>
 <li class="chapter" data-level="" data-path="chartjs-bubble.html"><a href="chartjs-bubble.html"><i class="fa fa-check"></i>Bubble Chart with Chart.js</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>11</b> Leaflet Map Templates</a>
-<ul>
+<li class="chapter" data-level="11" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>11</b> Leaflet Map Templates</a><ul>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
+<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap</a></li>
+<li class="chapter" data-level="" data-path="searchable-map.html"><a href="searchable-map.html"><i class="fa fa-check"></i>Searchable Map</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>12</b> Transform Your Map Data</a>
-<ul>
+<li class="chapter" data-level="12" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>12</b> Transform Your Map Data</a><ul>
 <li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with the US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
@@ -259,8 +218,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify a Digitized Map with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>13</b> Detect Bias in Data Stories</a>
-<ul>
+<li class="chapter" data-level="13" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>13</b> Detect Bias in Data Stories</a><ul>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
 </ul></li>
@@ -268,8 +226,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="fix.html"><a href="fix.html"><i class="fa fa-check"></i><b>A</b> Fix Common Mistakes</a></li>
 <li class="chapter" data-level="B" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i><b>B</b> Find Connecticut Data</a></li>
-<li class="chapter" data-level="C" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i><b>C</b> Peer Review Samples</a>
-<ul>
+<li class="chapter" data-level="C" data-path="peer.html"><a href="peer.html"><i class="fa fa-check"></i><b>C</b> Peer Review Samples</a><ul>
 <li class="chapter" data-level="" data-path="peer-2-chart-1.html"><a href="peer-2-chart-1.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample</a></li>
 <li class="chapter" data-level="" data-path="peer-2-chart-1-notes.html"><a href="peer-2-chart-1-notes.html"><i class="fa fa-check"></i>Section 2 Chart 1 Peer Review Sample with Notes</a></li>
 <li class="chapter" data-level="" data-path="peer-2-chart-2.html"><a href="peer-2-chart-2.html"><i class="fa fa-check"></i>Section 2 Chart 2 Peer Review Sample</a></li>
@@ -279,8 +236,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="peer-3-sample-2.html"><a href="peer-3-sample-2.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2</a></li>
 <li class="chapter" data-level="" data-path="peer-3-sample-2-notes.html"><a href="peer-3-sample-2-notes.html"><i class="fa fa-check"></i>Section 3 Peer Review Sample 2 with Notes</a></li>
 </ul></li>
-<li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a>
-<ul>
+<li class="chapter" data-level="D" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>D</b> Publishing with Bookdown</a><ul>
 <li><a href="style-guide.html#style-guide">Style Guide for <em>Hands-On Data Visualization</em></a></li>
 <li class="chapter" data-level="" data-path="images.html"><a href="images.html"><i class="fa fa-check"></i>Images</a></li>
 <li class="chapter" data-level="" data-path="tables.html"><a href="tables.html"><i class="fa fa-check"></i>Tables</a></li>
@@ -310,20 +266,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="filtered-point-map-socrata" class="section level2 unnumbered" number="">
+<div id="filtered-point-map-socrata" class="section level2 unnumbered">
 <h2>Filtered Point Map with Socrata</h2>
-<p><a href="https://www.tylertech.com/products/socrata">Socrata</a> is a database service that is used by government agencies,
-cities and countries to make open data available to the public. It offers user-friendly ways to view, filter,
-and export data. In addition, the Socrata platform includes built-in support to create interactive charts and maps,
-which can be embedded in other websites (including your own).</p>
-<p>One advantage of creating data visualizations directly on an open data platform is that the chart
-or map is linked to the data repository. For example, if the Socrata platform administrator updates
-the data table, then a Socrata dataviz based on that data will be automatically updated, too.
-This may be especially useful for “live” data that is continuously updated by agency administrators
-such as fires, crimes, and property data.</p>
-<p>In this section, we will build an interactive point map of hospitals in Texas
-using <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">General Hospital Information</a> dataset by Medicare,
-which you can see in Figure <a href="filtered-point-map-socrata.html#fig:socrata-final">6.19</a>.</p>
+<p><a href="https://www.tylertech.com/products/socrata">Socrata</a> is a database service that is used by government agencies, cities and countries to make open data available to the public. It offers user-friendly ways to view, filter, and export data. In addition, the Socrata platform includes built-in support to create interactive charts and maps, which can be embedded in other websites (including your own).</p>
+<p>One advantage of creating data visualizations directly on an open data platform is that the chart or map is linked to the data repository. For example, if the Socrata platform administrator updates the data table, then a Socrata dataviz based on that data will be automatically updated, too. This may be especially useful for “live” data that is continuously updated by agency administrators such as fires, crimes, and property data.</p>
+<p>In this section, we will build an interactive point map of hospitals in Texas using <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">General Hospital Information</a> dataset by Medicare, which you can see in Figure <a href="filtered-point-map-socrata.html#fig:socrata-final">6.19</a>.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:socrata-final"></span>
 <iframe src="https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&amp;height=500" width="672" height="500px">
@@ -332,28 +279,17 @@ which you can see in Figure <a href="filtered-point-map-socrata.html#fig:socrata
 Figure 6.19: In this tutorial, we will build a point map of hospitals in Texas using Socrata.
 </p>
 </div>
-<p>Generally, in order to create a map in Socrata, you need to be a registered user,
-and the dataset you wish to visualize has to contain a column with location data.
-This is not just an address column (such as <code>3500 Gaston Avenue, Dallas, TX</code>), but
-a geocoded column that contains latitude and longitude values.</p>
-<div id="sign-up-for-socrata-account" class="section level3 unnumbered" number="">
+<p>Generally, in order to create a map in Socrata, you need to be a registered user, and the dataset you wish to visualize has to contain a column with location data. This is not just an address column (such as <code>3500 Gaston Avenue, Dallas, TX</code>), but a geocoded column that contains latitude and longitude values.</p>
+<div id="sign-up-for-socrata-account" class="section level3 unnumbered">
 <h3>Sign Up for Socrata Account</h3>
-<p>Navigate to <a href="https://data.medicare.gov/">Data.Medicare.gov</a> click <em>Sign In</em> button
-in the upper-right corner. Scroll down to <em>Sign Up</em> link. Follow the instructions,
-including setting up two-step authentication, to create a free account.</p>
-<p>Note: You can still practice creating a map in Socrata without being logged in.
-You won’t be able to save or share it, however.</p>
-<p>Once you have an account, log in using your credentials. Navigate to your profile
-by clicking your username in the upper-right corner and make sure you <strong>Accept Terms and Conditions</strong>,
-otherwise you won’t be able to save your draft map.</p>
-<p>This username and password are only valid for Data.Medicare.gov, not other websites
-that use Socrata.</p>
+<p>Navigate to <a href="https://data.medicare.gov/">Data.Medicare.gov</a> click <em>Sign In</em> button in the upper-right corner. Scroll down to <em>Sign Up</em> link. Follow the instructions, including setting up two-step authentication, to create a free account.</p>
+<p>Note: You can still practice creating a map in Socrata without being logged in. You won’t be able to save or share it, however.</p>
+<p>Once you have an account, log in using your credentials. Navigate to your profile by clicking your username in the upper-right corner and make sure you <strong>Accept Terms and Conditions</strong>, otherwise you won’t be able to save your draft map.</p>
+<p>This username and password are only valid for Data.Medicare.gov, not other websites that use Socrata.</p>
 </div>
-<div id="create-your-first-socrata-point-map" class="section level3 unnumbered" number="">
+<div id="create-your-first-socrata-point-map" class="section level3 unnumbered">
 <h3>Create Your First Socrata Point Map</h3>
-<p>Navigate to the <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">Hospital General Dataset</a>,
-and in the menu on the right-hand side choose <em>Visualize &gt; Launch New Visualization</em>, as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-launch-new-viz">6.20</a>. This will open up
-a <em>Configure Visualization</em> studio where you can create the map.</p>
+<p>Navigate to the <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">Hospital General Dataset</a>, and in the menu on the right-hand side choose <em>Visualize &gt; Launch New Visualization</em>, as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-launch-new-viz">6.20</a>. This will open up a <em>Configure Visualization</em> studio where you can create the map.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:socrata-launch-new-viz"></span>
 <img src="images/06-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize &gt; Launch New Visualization." width="300" />
@@ -361,16 +297,9 @@ a <em>Configure Visualization</em> studio where you can create the map.</p>
 Figure 6.20: Go to Visualize &gt; Launch New Visualization.
 </p>
 </div>
-<p>In the top menu, click <em>Map</em> (globe icon between a scatter chart icon and a calendar). You will
-see an updated layout of the studio, with the map in the middle, and <em>Map Layers</em> and <em>Map Settings</em>
-items in the side menu on the left.</p>
-<p>Socrata was able to determine which column contains geospatial value, and automatically
-set Geo Column value to <em>Location</em> in the <em>Layer List</em> menu. By default, points are clustered (grouped together),
-so instead of seeing individual hospital locations, you see bubbles with numbers (such as <code>12</code> in Alaska).</p>
-<p>Let’s first select only hospitals that are located in the southern state of Texas.
-To do so, go to <em>Filters &gt; Add filter</em>. The dropdown menu lists all columns (or fields) of the dataset,
-where we should choose <em>State</em>. In the newly appeared State dropdown, choose TX (for Texas) as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-filter">6.21</a>, and scroll down
-and click Apply. Socrata should zoom in on the map and center on Texas. Close <em>Filters</em> window to free screen space.</p>
+<p>In the top menu, click <em>Map</em> (globe icon between a scatter chart icon and a calendar). You will see an updated layout of the studio, with the map in the middle, and <em>Map Layers</em> and <em>Map Settings</em> items in the side menu on the left.</p>
+<p>Socrata was able to determine which column contains geospatial value, and automatically set Geo Column value to <em>Location</em> in the <em>Layer List</em> menu. By default, points are clustered (grouped together), so instead of seeing individual hospital locations, you see bubbles with numbers (such as <code>12</code> in Alaska).</p>
+<p>Let’s first select only hospitals that are located in the southern state of Texas. To do so, go to <em>Filters &gt; Add filter</em>. The dropdown menu lists all columns (or fields) of the dataset, where we should choose <em>State</em>. In the newly appeared State dropdown, choose TX (for Texas) as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-filter">6.21</a>, and scroll down and click Apply. Socrata should zoom in on the map and center on Texas. Close <em>Filters</em> window to free screen space.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:socrata-filter"></span>
 <img src="images/06-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
@@ -378,10 +307,7 @@ and click Apply. Socrata should zoom in on the map and center on Texas. Close <e
 Figure 6.21: Select Texas as the only value for State field.
 </p>
 </div>
-<p>Let’s now <strong>disaggregate</strong> the map so that we can see individual hospitals instead of clusters.
-Go to <em>Map Settings &gt; Cluster</em>, and bring the <em>Stop Clustering at Zoom Level</em> slider to 1,
-as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-uncluster">6.22</a>.
-You will see the map now shows individual points.</p>
+<p>Let’s now <strong>disaggregate</strong> the map so that we can see individual hospitals instead of clusters. Go to <em>Map Settings &gt; Cluster</em>, and bring the <em>Stop Clustering at Zoom Level</em> slider to 1, as shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-uncluster">6.22</a>. You will see the map now shows individual points.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:socrata-uncluster"></span>
 <img src="images/06-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
@@ -389,17 +315,8 @@ You will see the map now shows individual points.</p>
 Figure 6.22: To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1.
 </p>
 </div>
-<p>In the same accordion menu, change <em>Basemap &gt; Type</em> to <em>Dark</em> to bring the map a fashionable 2020 look.
-In <em>General</em>, set Title to <em>Texas Hospitals</em>, and hide data table below the map by unchecking the
-<em>Show data table below visualization</em> box. Under <em>Map Controls</em>, uncheck <em>Show Search Bar</em> and <em>Show Locate Button</em>
-to get rid of unnecessary elements. Feel free to experiment with other settings as well.</p>
-<p>Now, let’s return back to <strong>Map Layers</strong> menu and choose our <em>Hospitals General Information</em>
-point layer. You can notice that in <em>Data Selection</em> accordion menu, <em>Resize Points by Value</em>
-is grayed out. That is because the dataset doesn’t contain columns with continuous variables
-that can be transformed to point sizes. Instead, we can use <em>Style by Value</em> option to
-classify categorical points. The dataset contains multiple variables that can be effectively visualized,
-such as <em>Hospital Type</em>, <em>Emergency Services</em> (a yes/no category), <em>Mortality national comparison</em> and others.
-Let’s stick with <em>Hospital Type</em>, as is illustrated in Figure <a href="filtered-point-map-socrata.html#fig:socrata-style">6.23</a>.</p>
+<p>In the same accordion menu, change <em>Basemap &gt; Type</em> to <em>Dark</em> to bring the map a fashionable 2020 look. In <em>General</em>, set Title to <em>Texas Hospitals</em>, and hide data table below the map by unchecking the <em>Show data table below visualization</em> box. Under <em>Map Controls</em>, uncheck <em>Show Search Bar</em> and <em>Show Locate Button</em> to get rid of unnecessary elements. Feel free to experiment with other settings as well.</p>
+<p>Now, let’s return back to <strong>Map Layers</strong> menu and choose our <em>Hospitals General Information</em> point layer. You can notice that in <em>Data Selection</em> accordion menu, <em>Resize Points by Value</em> is grayed out. That is because the dataset doesn’t contain columns with continuous variables that can be transformed to point sizes. Instead, we can use <em>Style by Value</em> option to classify categorical points. The dataset contains multiple variables that can be effectively visualized, such as <em>Hospital Type</em>, <em>Emergency Services</em> (a yes/no category), <em>Mortality national comparison</em> and others. Let’s stick with <em>Hospital Type</em>, as is illustrated in Figure <a href="filtered-point-map-socrata.html#fig:socrata-style">6.23</a>.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:socrata-style"></span>
 <img src="images/06-map/socrata-style-annotated.png" alt="Let’s display different types of hospitals in different colors." width="300" />
@@ -407,15 +324,9 @@ Let’s stick with <em>Hospital Type</em>, as is illustrated in Figure <a href="
 Figure 6.23: Let’s display different types of hospitals in different colors.
 </p>
 </div>
-<p>If you look at the bottom-right corner of the map, you should notice a minimized <em>Legend</em> control.
-Click on it to see what each color represents.</p>
-<p>Change the color palette (in <em>Color</em> menu) from <em>Categorical 1</em> to <em>Categorical 2</em>,
-which includes a wider range of unique colors. You can also use <em>Custom…</em>
-item to set individual colors, as well as change the order of categories in the legend.</p>
-<p>To change what is shown in tooltips when you hover or click on points,
-go to <strong>Flyout Details</strong>, and set Flyout Title to <em>Facility Name</em>,
-adding city and phone number as additional flyout values, as is shown in Figure
-<a href="filtered-point-map-socrata.html#fig:socrata-flyout">6.24</a>.</p>
+<p>If you look at the bottom-right corner of the map, you should notice a minimized <em>Legend</em> control. Click on it to see what each color represents.</p>
+<p>Change the color palette (in <em>Color</em> menu) from <em>Categorical 1</em> to <em>Categorical 2</em>, which includes a wider range of unique colors. You can also use <em>Custom…</em> item to set individual colors, as well as change the order of categories in the legend.</p>
+<p>To change what is shown in tooltips when you hover or click on points, go to <strong>Flyout Details</strong>, and set Flyout Title to <em>Facility Name</em>, adding city and phone number as additional flyout values, as is shown in Figure <a href="filtered-point-map-socrata.html#fig:socrata-flyout">6.24</a>.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:socrata-flyout"></span>
 <img src="images/06-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
@@ -423,17 +334,11 @@ adding city and phone number as additional flyout values, as is shown in Figure
 Figure 6.24: To edit tooltip information, use Flyout Details menu item.
 </p>
 </div>
-<p>At this point you should have a fully-functional interactive map
-showing all hospitals in Texas, colored according to their type.
-Before you can share it, you need to save it as a draft, and publish.</p>
-<div id="save-draft-and-publish" class="section level4 unnumbered" number="">
+<p>At this point you should have a fully-functional interactive map showing all hospitals in Texas, colored according to their type. Before you can share it, you need to save it as a draft, and publish.</p>
+<div id="save-draft-and-publish" class="section level4 unnumbered">
 <h4>Save Draft and Publish</h4>
-<p>In the lower-right corner, click <em>Save Draft</em> button. Give your map a name,
-and hit <em>Save</em>. The gray ribbon at the top will tell you it is still a draft,
-and you can go ahead and <em>Publish…</em> it.</p>
-<p>Now you can embed the map on your website as an iframe. To do so, click the <em>Share</em> button in the upper-right side of your map (see Figure <a href="filtered-point-map-socrata.html#fig:socrata-share">6.25</a>),
-and copy the generated code from <em>Embed Code</em> text area (Figure <a href="filtered-point-map-socrata.html#fig:socrata-share-embed">6.26</a>).
-Learn more in <a href="embed.html">Chapter 8: Embed on Your Web</a>.</p>
+<p>In the lower-right corner, click <em>Save Draft</em> button. Give your map a name, and hit <em>Save</em>. The gray ribbon at the top will tell you it is still a draft, and you can go ahead and <em>Publish…</em> it.</p>
+<p>Now you can embed the map on your website as an iframe. To do so, click the <em>Share</em> button in the upper-right side of your map (see Figure <a href="filtered-point-map-socrata.html#fig:socrata-share">6.25</a>), and copy the generated code from <em>Embed Code</em> text area (Figure <a href="filtered-point-map-socrata.html#fig:socrata-share-embed">6.26</a>). Learn more in <a href="embed.html">Chapter 8: Embed on Your Web</a>.</p>
 
 <div class="figure" style="text-align: center"><span id="fig:socrata-share"></span>
 <img src="images/06-map/socrata-share-annotated.png" alt="Click Share button to bring up Share and Embed window." width="400" />
@@ -450,19 +355,11 @@ Figure 6.26: Copy iframe code to embed this map in another website.
 </div>
 </div>
 </div>
-<div id="limitations-of-socrata" class="section level3 unnumbered" number="">
+<div id="limitations-of-socrata" class="section level3 unnumbered">
 <h3>Limitations of Socrata</h3>
-<p>But there are limitations to creating your chart or map on an open data repository platform.
-First, if the agency stops using the platform, or changes the structure of the underlying data,
-your online map (or chart) may stop functioning. Second, you are generally limited to using datasets
-and geographic boundaries that already exist on that platform.</p>
-<p>If these limitations concern you, a simple alternative is to export data from the
-open repository (which means that any “live” data would become “static”), and
-import it into your preferred dataviz tool, such as Tableau.</p>
-<p>A second, more advanced alternative, is to learn to pull live data from Socrata using
-an API (Application Programming Interface). That requires
-coding skills that are beyond the scope of this book.
-Visit the <a href="https://dev.socrata.com/">official documentation</a> to learn more about Socrata API.</p>
+<p>But there are limitations to creating your chart or map on an open data repository platform. First, if the agency stops using the platform, or changes the structure of the underlying data, your online map (or chart) may stop functioning. Second, you are generally limited to using datasets and geographic boundaries that already exist on that platform.</p>
+<p>If these limitations concern you, a simple alternative is to export data from the open repository (which means that any “live” data would become “static”), and import it into your preferred dataviz tool, such as Tableau.</p>
+<p>A second, more advanced alternative, is to learn to pull live data from Socrata using an API (Application Programming Interface). That requires coding skills that are beyond the scope of this book. Visit the <a href="https://dev.socrata.com/">official documentation</a> to learn more about Socrata API.</p>
 </div>
 </div>
             </section>
@@ -476,13 +373,11 @@ Visit the <a href="https://dev.socrata.com/">official documentation</a> to learn
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -490,11 +385,12 @@ gitbook.start({
 "github": true,
 "facebook": true,
 "twitter": true,
+"google": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
 "vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -509,15 +405,12 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"view": {
-"link": "https://github.com/handsondataviz/book/blob/master/06-map.Rmd",
-"text": null
-},
 "download": ["HandsOnDataViz.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
+"view": "https://github.com/handsondataviz/book/blob/master/%s",
 "search": true
 });
 });

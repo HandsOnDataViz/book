@@ -827,5 +827,19 @@ $.getJSON("https://data.ct.gov/resource/v4tt-nt9n.geojson?&$$app_token=QVVY3I72S
 
 5) Fork a copy of this repo, play with the code, and try to insert GeoJSON endpoints from other open data repositories.
 
+## Leaflet Heatmap {- #leaflet-heatmap}
+Heatmaps turn individual points into hotspots or clusters, allowing viewers to explore
+spatial distributions of events, such as areas of high and low population density,
+or high-crime areas.
+
+(ref:leaflet-heatmap) Explore a [live demonstration of Leaflet Heatmap](https://handsondataviz.github.io/leaflet-heatmap/).
+
+```{r leaflet-heatmap, fig.cap="(ref:leaflet-heatmap)"}
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-heatmap/", height = "500px") else knitr::include_graphics("images/11-leaflet/leaflet-heatmap.png")
+```
+
+## Searchable Map {- #searchable-map}
+TODO
+
 ### Summary {- #summary11}
 TODO

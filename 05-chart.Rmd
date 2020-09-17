@@ -74,9 +74,13 @@ with bar charts. In that case, a relevant axis can be hidden and the chart will 
 
 A *legend* shows symbology, such as colors and shapes used in the chart, and their meaning (usually values that they represent).
 
-You should add any *Notes*, *Data Sources*, and *Credits* underneath the chart to give more context about
+You should add *Notes*, *Data Sources*, and *Credits* underneath the chart to give more context about
 where the data came from, how it was processed and analyzed, and who created the visualization.
 Remember that being open about these things helps build credibility and accountability.
+
+If your data comes with uncertainty (or margins of error), use *error bars* to show it, if possible.
+If not, accompany your chart with a statement like "the data comes with uncertainty of up to 20% of the value",
+or "for geographies X and Y, margins of error exceed 10%". This will help readers assess the reliability of the data source.
 
 In interactive charts, a *tooltip* is often used to provide more data or context
 once a user clicks or hovers over a data point or a data series.
@@ -310,6 +314,18 @@ knitr::include_graphics("images/05-chart/menu-hamburger-kebab.png")
 
 ```{r chart-publish, out.width=150, fig.cap="(ref:chart-publish)"}
  knitr::include_graphics("images/05-chart/chart-publish.png")
+```
+
+Unfortunately Google Sheets functionality is very limited when it comes to displaying error bars, or uncertainty.
+You can only assign either constant numbers or percent values as error bar values to individual series (not data points).
+To do so, in *Chart editor*, select *Customize* tab, scroll down to *Series* and select a series from the dropdown.
+Check *Error bars*, and customize its value as either percent or a constant value, as shown in Figure \@ref(fig:images/05-chart/chart-error-bar.png).
+This setting will then be applied to all data points from that series.
+
+(ref:chart-error-bar) Google Sheets is very limited when it comes to setting error bars.
+
+```{r chart-error-bar, out.width=150, fig.cap="(ref:chart-error-bar)"}
+ knitr::include_graphics("images/05-chart/chart-error-bar.png")
 ```
 
 Since there is no easy way to cite or link to your source data inside a Google Sheets chart, you will need to add this information to the text of the web page that contains your interactive chart. Remember that citing your data sources adds credibility to your work.

@@ -51,9 +51,9 @@ output:
     default
 ---
 # Preface {-}
-<!-- R global options: R chunk images display without code (no echo); align centered; show PDF image over JPG/PNG when available in PDF output -->
+<!-- R global options: R chunk images display without code (no echo); show PDF image over JPG/PNG when available in PDF output -->
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, fig.align = 'center')
+knitr::opts_chunk$set(echo = FALSE)
 options(knitr.graphics.auto_pdf = TRUE)
 ```
 ![Book cover: Read about the [hoatzin "reptile bird"](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)

@@ -6,7 +6,7 @@ They will have missing values, dates in different formats, text in numeric-only 
 (ref:clean-up-messy-data) More often than not, raw data looks messy.
 
 ```{r clean-up-messy-data, fig.cap="(ref:clean-up-messy-data)"}
-knitr::include_graphics("images/04-clean/clean-up-messy-data.png")
+knitr::include_graphics("images/05-clean/clean-up-messy-data.png")
 ```
 
 In this chapter you'll learn about different tools, in order to help you make decisions about which one to use to clean up your data efficiently. First, we'll start with basic cleanup methods using spreadsheets, such as [find and replace with a blank](find-and-replace.html), [tranpose or swap rows and columns of data](transpose.html), [split data into separate columns](split-data.html), and [combine columns into one](combine-data.html). While we feature Google Sheets in our examples, the same principles (and in most cases the same formulas) can be use in Microsoft Excel, LibreOffice Calc, Mac's Numbers, or other spreadsheet packages. Next, you will learn how to [extract table data from text-based PDF documents with Tabula](tabula.html), a free tool used by data journalists and researchers worldwide to analyze spending data, health reports, and all sorts of other datasets that get trapped in PDFs. Finally, we will [introduce OpenRefine, a powerful and versatile tool to clean up the messiest spreadsheets](open-refine.html), such as those containing dozens of different spellings of the same name.
@@ -48,7 +48,7 @@ will state that 169 instances of "town" have been replaced.
 (ref:sheets-find-replace) Find and Replace window in Google Sheets.
 
 ```{r sheets-find-replace, fig.cap="(ref:sheets-find-replace)"}
-knitr::include_graphics("images/04-clean/sheets-find-replace-annotated.png")
+knitr::include_graphics("images/05-clean/sheets-find-replace-annotated.png")
 ```
 
 ## Transpose or Swap Rows and Columns {- #transpose}
@@ -57,15 +57,15 @@ Sometimes you download good data, but your visualization tool requires you to tr
 (ref:sheets-years-row) We often find data with years placed in horizontal column headers.
 
 ```{r sheets-years-row, out.width=400, fig.cap="(ref:sheets-years-row)"}
-knitr::include_graphics("images/04-clean/sheets-years-row.png")
+knitr::include_graphics("images/05-clean/sheets-years-row.png")
 ```
 
-But if you wish to create a line chart, which you'll learn in [Chapter 5: Chart Your Data](chart.html), you need to transpose the data above, so that the years run down the first vertical column, as shown in Figure \@ref(fig:sheets-years-column).
+But if you wish to create a line chart, which you'll learn in [Chapter 6: Chart Your Data](chart.html), you need to transpose the data above, so that the years run down the first vertical column, as shown in Figure \@ref(fig:sheets-years-column).
 
 (ref:sheets-years-column) But we need to transpose the data to place years in the first vertical column.
 
 ```{r sheets-years-column, out.width=300, fig.cap="(ref:sheets-years-column)"}
-knitr::include_graphics("images/04-clean/sheets-years-column.png")
+knitr::include_graphics("images/05-clean/sheets-years-column.png")
 ```
 
 Let's transpose some sample data:
@@ -79,7 +79,7 @@ Let's transpose some sample data:
 (ref:sheets-transpose) Go to *Edit - Paste Special - Paste Transposed* to swap rows and columns.
 
 ```{r sheets-transpose, out.width=450, fig.cap="(ref:sheets-transpose)"}
-knitr::include_graphics("images/04-clean/sheets-transpose.png")
+knitr::include_graphics("images/05-clean/sheets-transpose.png")
 ```
 
 Now that you know how to clean up data by transposing rows and columns, in the next section you'll learn how to split data into separate columns.
@@ -113,7 +113,7 @@ or any other custom character (or even a sequence of characters, which we'll dis
 (ref:sheets-split) Select *Data - Split text to columns* to automatically separate data.
 
 ```{r sheets-split, out.width=350, fig.cap="(ref:sheets-split)"}
-knitr::include_graphics("images/04-clean/sheets-split-annotated.png")
+knitr::include_graphics("images/05-clean/sheets-split-annotated.png")
 ```
 
 ### Example 2: Complex Splitting {-}
@@ -136,7 +136,7 @@ Now, let's look at a slightly more complicated example. Each cell contains a ful
 (ref:sheets-split-complex) To split the last column, select a *Custom* separator and manually type in two dashes.
 
 ```{r sheets-split-complex, out.width=550, fig.cap="(ref:sheets-split-complex)"}
-knitr::include_graphics("images/04-clean/sheets-split-complex.png")
+knitr::include_graphics("images/05-clean/sheets-split-complex.png")
 ```
 
 Tip: Google Sheets will treat zip codes as numbers and will delete leading zeros (so 06106 will become 6106). To fix that, select the column, and go to *Format > Number > Plain text*. Now you can manually re-add zeros. If your dataset is large, consider adding zeros using the formula introduced in the [following section](#combine-separate-columns).
@@ -150,7 +150,7 @@ Let's perform the reverse action by combining data into one column with a spread
 | 300 Summit St | Hartford   | CT     | 06106 |
 ```
 
-But imagine you need to [geocode the addresses using a tool like the one we introduced in chapter 2](geocode.html), which requires all of the data to be combined into one column like this:
+But imagine you need to [geocode the addresses using a tool like the one we introduced in Chapter 3](geocode.html), which requires all of the data to be combined into one column like this:
 
 ```
 | Location                          |
@@ -170,10 +170,10 @@ using the ampersand (`&`) symbol. Also, you can add separators into your formula
 (ref:sheets-combine) Use ampersands to combine items, and insert quoted spaces with commas as separators.
 
 ```{r sheets-combine, fig.cap="(ref:sheets-combine)"}
- knitr::include_graphics("images/04-clean/sheets-combine.png")
+ knitr::include_graphics("images/05-clean/sheets-combine.png")
 ```
 
-Now that you have successfully combined the terms into one location column, you can use the [Geocoding by SmartMonkey Google Sheets Add-on we described in chapter 2](geocode.html) to find the latitude and longitude coordinates, in order to [map your data as we'll discuss in chapter 6](map.html)
+Now that you have successfully combined the terms into one location column, you can use the [Geocoding by SmartMonkey Google Sheets Add-on we described in Chapter 3](geocode.html) to find the latitude and longitude coordinates, in order to [map your data as we'll discuss in Chapter 7](map.html)
 
 Note: Lisa Charlotte Rost from Datawrapper has written a brilliant [blog post](https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/)
 about cleaning and preparing your spreadsheet data for analysis and visualization,
@@ -198,7 +198,7 @@ When you start up Tabula, the default system browser will open, as shown in Figu
 (ref:tabula-welcome) Tabula welcome page.
 
 ```{r tabula-welcome, fig.cap="(ref:tabula-welcome)"}
-knitr::include_graphics("images/04-clean/tabula-welcome.png")
+knitr::include_graphics("images/05-clean/tabula-welcome.png")
 ```
 
 Now let's upload a sample text-based PDF and detect any tables we wish to extract. In the beginning of the Covid-19 pandemic, the Department of Public Health in Connecticut
@@ -214,7 +214,7 @@ from May 31, 2020, or provide your own.
 (ref:tabula-autodetect) Click *Autodetect Tables*, which Tabula will highlight in red.
 
 ```{r tabula-autodetect, fig.cap="(ref:tabula-autodetect)"}
-knitr::include_graphics("images/04-clean/tabula-autodetect.png")
+knitr::include_graphics("images/05-clean/tabula-autodetect.png")
 ```
 
 Now let's manually adjust our selected tables and export the data.
@@ -242,7 +242,7 @@ Look at the [sample US Foreign Aid dataset](https://docs.google.com/spreadsheets
 (ref:openrefine-dataset) Can you spot any problems with this sample data?
 
 ```{r openrefine-dataset, fig.cap="(ref:openrefine-dataset)"}
-knitr::include_graphics("images/04-clean/openrefine-dataset.png")
+knitr::include_graphics("images/05-clean/openrefine-dataset.png")
 ```
 
 Notice how the *Country* column various spellings of North and South Korea. Also note how the *FundingAmount* column is not standardized. Some amounts use commas to separate thousands, while some uses spaces. Some amounts start with a dollar sign, and some do not. Datasets like this can be an absolute nightmare to analyze. Luckily, OpenRefine provides powerful tools to clean up and standardize data.
@@ -268,7 +268,7 @@ Once launched, you should see OpenRefine in your browser with `127.0.0.1:3333` a
 (ref:openrefine-welcome) OpenRefine starting page.
 
 ```{r openrefine-welcome, fig.cap="(ref:openrefine-welcome)"}
-knitr::include_graphics("images/04-clean/openrefine-welcome-annotated.png")
+knitr::include_graphics("images/05-clean/openrefine-welcome-annotated.png")
 ```
 
 ### Load Data and Start a New Project {-}
@@ -287,7 +287,7 @@ like shown in Figure \@ref(fig:openrefine-parse).
 (ref:openrefine-parse) OpenRefine parsing options.
 
 ```{r openrefine-parse, fig.cap="(ref:openrefine-parse)"}
-knitr::include_graphics("images/04-clean/openrefine-parse.png")
+knitr::include_graphics("images/05-clean/openrefine-parse.png")
 ```
 
 Now when you've successfully read the data into a new project, let's start
@@ -326,7 +326,7 @@ like in Figure \@ref(fig:openrefine-manual-edit)).
 (ref:openrefine-manual-edit) Manually remove spaces and extra characters, and change data type to number.
 
 ```{r openrefine-manual-edit, fig.cap="(ref:openrefine-manual-edit)"}
-knitr::include_graphics("images/04-clean/openrefine-manual-edit-annotated.png")
+knitr::include_graphics("images/05-clean/openrefine-manual-edit-annotated.png")
 ```
 
 At this point, all funding amounts should be clean numbers, right-aligned and colored in green.
@@ -368,7 +368,7 @@ how they produce clusters of different sizes and accuracy.
 (ref:openrefine-cluster) Cluster similar text values.
 
 ```{r openrefine-cluster, fig.cap="(ref:openrefine-cluster)"}
-knitr::include_graphics("images/04-clean/openrefine-cluster-annotated.png")
+knitr::include_graphics("images/05-clean/openrefine-cluster-annotated.png")
 ```
 
 ### Export {-}
@@ -378,7 +378,7 @@ by clicking *Export* button in the upper-right corner of OpenRefine window.
 You can choose your format (we recommend CSV, or comma-separated value).
 Now you have a clean dataset that is ready to be processed and visualized.
 
-### Summary {- #summary4}
+### Summary {- #summary5}
 
 In this chapter, we looked at cleaning up tables in Google Sheets,
 liberating tabular data trapped in PDFs using Tabula, and using

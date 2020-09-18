@@ -8,11 +8,10 @@ Sections in this chapter:
 - [How to Lie with Charts](how-to-lie-with-charts.html), inspired by Darrell Huff (1954)
 - [How to Lie with Maps](how-to-lie-with-maps.html), inspired by Mark Monmonier (1996)
 
-Enroll in our free online course *TO DO add link*, which introduces these topics in the brief video below, and offers more exercises and opportunities to interact with instructors and other learners.
 
-TODO: convert all to code-chunk iframes
+TODO: Build on themes from the new intro: Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors, other than a general dictum to make “honest and useful” decisions. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles) or intervals that vary according to patterns in the data (such as standard deviations from the mean).
+Just like charts, we can mislead and lie with maps, but we can also create very different pictures of the truth.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eWfI_ANQT2Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 Learn more:
 - Darrell Huff, How to Lie with Statistics (W. W. Norton & Company, 1954), http://books.google.com/books?isbn=0393070875
@@ -34,7 +33,7 @@ Select the data cells and Insert > Chart > Line chart, similar to the default ve
 
 In your Google Sheet chart, double-click the vertical y-axis to edit the Minimum and Maximum values.
 
-![Screenshot: Edit the Min and Max values of the Y-axis](images/13-detect/y-axis-min-max.png)
+![Screenshot: Edit the Min and Max values of the Y-axis](images/14-detect/y-axis-min-max.png)
 
 Make the line look "flatter" (slower economic growth) by lowering the minimum to $36,000, and increasing the maximum to $100,000, as shown below:
 
@@ -67,5 +66,5 @@ Create your own version...
 
 TODO: Add section on how interactive maps such as Google Maps change borders and data depending on the internet address of the user
 
-### Summary {- #summary13}
+### Summary {- #summary14}
 TODO

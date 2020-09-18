@@ -91,15 +91,15 @@ This tutorial focuses on the **second step**, and shows how to publish a Google 
 
 2) Click the drop-down menu in the upper-right corner of the interactive chart and select Publish chart. Click OK on next screen.
 
-![Screenshot: Drop-down menu to publish a Google Sheets chart](images/08-embed/google-sheets-chart-menu-publish.png)
+![Screenshot: Drop-down menu to publish a Google Sheets chart](images/09-embed/google-sheets-chart-menu-publish.png)
 
 3) Select the Embed tab, select the Interactive version, and click the blue Publish button. If you make changes to the chart, they will continue to be published to the web automatically, unless you click the Stop button or checkbox at the bottom.
 
-![Screenshot: Publish to the web for a Google Sheets chart](images/08-embed/google-sheets-publish.png)
+![Screenshot: Publish to the web for a Google Sheets chart](images/09-embed/google-sheets-publish.png)
 
 4) Copy the iframe embed code.
 
-![Screenshot: Copy the iframe code from a Google Sheets chart](images/08-embed/google-sheets-publish-copy-iframe.png)
+![Screenshot: Copy the iframe code from a Google Sheets chart](images/09-embed/google-sheets-publish-copy-iframe.png)
 
 No coding skills are necessary, but it helps to be code-curious. This iframe is a line of HTML code that contains these instructions:
 
@@ -214,7 +214,7 @@ The **general iframe concept** works across many data visualization tools and ma
 
 To embed your dataviz in a self-hosted Wordpress.org site, the [iframe plugin] (http://wordpress.org/plugins/iframe/) must be installed and activated. This plugin allows authors to embed iframe codes inside posts/pages, in a modified "shortcode" format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually "strip out" iframe codes for all users except the site administrator. **I have already installed and activated** the iframe plugin on my site, and the Dashboard view looks like this:
 
-![](images/08-embed/WordPressOrg-iframe-plugin-activate.jpg)
+![](images/09-embed/WordPressOrg-iframe-plugin-activate.jpg)
 
 Note that most WordPress.com sites do NOT support an iframe embed code.
 
@@ -225,7 +225,7 @@ But details vary, so read and experiment with the examples that follow.
 
 6) Log into your Wordpress.org site and create a new post. In the editor window, switch from the Visual to the Text tab, which allows users to modify the code behind your post. Paste the iframe code from your interactive dataviz.
 
-![](images/08-embed/WordPressOrg-text-tab-paste-iframe.png)
+![](images/09-embed/WordPressOrg-text-tab-paste-iframe.png)
 
 7) Initially, the code you pasted includes HTML iframe tags at the front `<iframe...` and the end `...></iframe>`, which looks like this:
 
@@ -233,7 +233,7 @@ But details vary, so read and experiment with the examples that follow.
 
 8) Modify the front end of the iframe code by replacing the less-than symbol ( < ) with a square opening bracket ( [ ). Modify the back end by erasing the greater-than symbol ( > ) and the end tag ( </iframe> ). Replace the back end with a square closing bracket ( ] ).
 
-![](images/08-embed/WordPressOrg-replace-with-bracket.png)
+![](images/09-embed/WordPressOrg-replace-with-bracket.png)
 
 Your modified code should look like this:
 
@@ -271,7 +271,7 @@ TODO: convert to code-chunk iframe: https://public.tableau.com/views/CTSchoolDis
 
 4) Click the bottom-right Share button, click inside the **Embed Code** field, and copy its contents. A typical embed code is a long string of HTML and JavaScript instructions to display the visualization.
 
-![Screenshot: Edit and Share buttons in Tableau Public web page](images/08-embed/tableau-edit-share.png)
+![Screenshot: Edit and Share buttons in Tableau Public web page](images/09-embed/tableau-edit-share.png)
 
 5) Open an HTML page on your website and paste the embed code in the body section. Below is an example of a sample Tableau Public embed code pasted between the body tags of a simple HTML page.
 
@@ -301,7 +301,7 @@ TODO: find a way to replace this triple backtic code snippet, since it may throw
 
 4) Click the bottom-right Share button, click inside the **Link** field (NOT the Embed Code field), and copy its contents.
 
-![Screenshot: Edit and Share buttons in Tableau Public web page](images/08-embed/tableau-edit-share.png)
+![Screenshot: Edit and Share buttons in Tableau Public web page](images/09-embed/tableau-edit-share.png)
 
 5) A typical link will look similar to this example (scroll to right to see all):
 
@@ -340,5 +340,5 @@ Exceptions to the last step above. As described in the [Embed iframe on WordPres
 Learn more:
 Embedding Tableau Public Views in iframe, Tableau Support page <http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes>
 
-### Summary {- #summary8}
+### Summary {- #summary9}
 TODO

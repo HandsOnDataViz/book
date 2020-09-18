@@ -6,7 +6,7 @@ The interactive charts and maps that we'll construct later this book are built o
 (ref:spreadsheet-terms) Screenshot of a typical spreadsheet, with headers, tabs, and the active cell displaying a formula.
 
 ```{r spreadsheet-terms, out.width=600, fig.cap="(ref:spreadsheet-terms)"}
- knitr::include_graphics("images/02-spreadsheet/spreadsheet-terms-annotated.png")
+ knitr::include_graphics("images/03-spreadsheet/spreadsheet-terms-annotated.png")
 ```
 
 In this chapter, we'll start by reviewing basic steps, such as [sharing](share.html), [uploading](upload.html), [geocoding with add-on tools](geocode.html), and [collecting data with online forms](forms.html). Then we'll move on to ways of organizing and analyzing your data, such as [sorting and filtering](sort.html), [calculating with formulas](calculate.html), and [summarizing with pivot tables](pivot.html). Finally, we'll examine ways to connect different sheets, such as [matching columns with lookup tables](vlookup.html), and [relational databases](database.html). We illustrate all of these methods with beginner-level users in mind, meaning they do not require any prior background.
@@ -16,7 +16,7 @@ We'll practice several of these skills using sample data that may interest you, 
 If you want to learn ways to make your computer do more of the tedious data preparation work for you, this chapter is definitely for you. Or if you already feel very familiar with spreadsheets, you should at least skim this chapter, and perhaps you'll learn a trick or two that will help you to create charts and maps more efficiently later in the book.
 
 ## Select your Spreadsheet Tools {- #spreadsheet-tools}
-Which spreadsheet tools should you use? As we describe in more detail in [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), the answer depends on how you respond to different questions about your work. First, is your data public or private? If private, consider using a downloadable spreadsheet tool that runs on your computer, to reduce the risk of an accidental data breach that might happen when using an online spreadsheet tool that automatically stores your data in the cloud. Second, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that's designed to allow other team members to simultaneously view or edit data. Third, do you need to import or export data in any specific format (which we'll describe in the next section), such as Comma Separated Values (CSV)? If yes, then choose a spreadsheet tool that supports that format. Finally, do you prefer a free tool, or are you willing to pay for it, or donate funds to support open-source development?
+Which spreadsheet tools should you use? As we describe in more detail in [Chapter 2: Choose Your Tools](choose.html), the answer depends on how you respond to different questions about your work. First, is your data public or private? If private, consider using a downloadable spreadsheet tool that runs on your computer, to reduce the risk of an accidental data breach that might happen when using an online spreadsheet tool that automatically stores your data in the cloud. Second, will you be working solo or with other people? For collaborative projects, consider using an online spreadsheet tool that's designed to allow other team members to simultaneously view or edit data. Third, do you need to import or export data in any specific format (which we'll describe in the next section), such as Comma Separated Values (CSV)? If yes, then choose a spreadsheet tool that supports that format. Finally, do you prefer a free tool, or are you willing to pay for it, or donate funds to support open-source development?
 
 Here's how three common spreadsheet tools compare on these questions:
 
@@ -39,7 +39,7 @@ Spreadsheet tools organize data in different formats. When you download spreadsh
 (ref:data-formats) Three data formats commonly seen on your computer---csv, ods, and xlsx---when displayed properly in the Mac Finder.
 
 ```{r data-formats, out.width=350, fig.cap="(ref:data-formats)"}
- knitr::include_graphics("images/02-spreadsheet/data-formats.png")
+ knitr::include_graphics("images/03-spreadsheet/data-formats.png")
 ```
 
 Warning: Several tools in this book may not work properly on a Mac computer that does not display the filename extensions, meaning the abbreviated file format after the period, such as `data.csv` or `map.geojson`. The Mac operating system hides these by default, so you need to turn them on by going to Finder > Preferences > Advanced, and check the box to *Show all filename extensions*, as shown in Figure \@ref(fig:mac-file-extensions).
@@ -47,11 +47,11 @@ Warning: Several tools in this book may not work properly on a Mac computer that
 (ref:mac-file-extensions) On a Mac, go to *Finder-Preferences-Advanced* and check the box to *Show all filename extensions*.
 
 ```{r mac-file-extensions, out.width=400, fig.cap="(ref:mac-file-extensions)"}
- knitr::include_graphics("images/02-spreadsheet/mac-file-extensions.png")
+ knitr::include_graphics("images/03-spreadsheet/mac-file-extensions.png")
 ```
 
 ## Download to CSV or ODS Format {- #csv}
-In [Chapter 1: Choose Tools to Tell Your Data Story](choose.html), we learned the advantages of selecting software tools that support data migration, so that you can export your work to other platforms. Since digital technology is always changing, it's a good rule of thumb to never upload important data into a tool if you can't easily get it back out. Ideally, spreadsheet tools should allow you to export your work in generic or open-data file formats, such as Comma Separated Values (CSV) and OpenDocument Spreadsheet (ODS), to maximize your options to migrate to other platforms.
+In [Chapter 2: Choose Your Tools](choose.html), we learned the advantages of selecting software tools that support data migration, so that you can export your work to other platforms. Since digital technology is always changing, it's a good rule of thumb to never upload important data into a tool if you can't easily get it back out. Ideally, spreadsheet tools should allow you to export your work in generic or open-data file formats, such as Comma Separated Values (CSV) and OpenDocument Spreadsheet (ODS), to maximize your options to migrate to other platforms.
 
 Warning: If you're working in any spreadsheet with multiple tabs and formulas, a CSV export will save only the *active* sheet (meaning the one you're currently viewing), and only the *data* in that sheet (meaning that if you inserted formulas to run calculations, only the results would appear, not the formulas). Later in this book you may need to create a CSV file to import into a data visualization tool, so if the source was a multi-tabbed spreadsheet with formulas, keep track of the original.
 
@@ -60,7 +60,7 @@ One reason we feature Google Sheets in this book is because it exports data in s
 (ref:sheets-download) In Google Sheets, go to *File - Download As* to export data in several common formats.
 
 ```{r sheets-download, out.width=600, fig.cap="(ref:sheets-download)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-download.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-download.png")
 ```
 
 But exporting data can be trickier in Microsoft Excel. Using the online Excel tool in your browser (either the free or paid version), you *cannot* save files in the generic single-sheet CSV format, a step required by some data visualization tools in later chapters of this book. Only the downloadable Excel tool (which now requires a paid subscription) will export in CSV format, a step required by some data visualization tools in later chapters of this book. And when using the downloadable Excel tool to save in CSV format, the steps sometimes confuse people. First, if you see multiple CSV options, choose *CSV UTF-8*, which should work best across different computer platforms. Second, if your Excel workbook contains multiple sheets or formulas, you may see a warning that it cannot be saved in CSV format, which only saves data (not formulas) contained in the active sheet (not all sheets). If you understand this, click *OK* to continue. Third, on the next screen, Excel may warn you about "Possible data loss" when saving an Excel file in CSV format, for reasons described above. Overall, when working with the downloadable Excel tool, first save the full-version of your Excel file in XLSX format before exporting a single sheet in CSV format.
@@ -79,7 +79,7 @@ In this book we provide several data files using Google Sheets. Our links point 
 (ref:file-make-copy) Go to *File - Make a Copy* to create your own version of this Google Sheet.
 
 ```{r file-make-copy, out.width=200, fig.cap="(ref:file-make-copy)"}
- knitr::include_graphics("images/02-spreadsheet/file-make-copy.png")
+ knitr::include_graphics("images/03-spreadsheet/file-make-copy.png")
 ```
 
 4. To keep your Google Drive files organized, save them in folders with relevant names to make them easier to find. For example, you can click the *My Drive* button and the *New folder* button to create a folder for your data, before clicking *OK*, as shown in Figure \@ref(fig:my-drive-new-folder).
@@ -87,7 +87,7 @@ In this book we provide several data files using Google Sheets. Our links point 
 (ref:my-drive-new-folder) Click the *My Drive* and *New folder* buttons to save your work in a folder.
 
 ```{r my-drive-new-folder, out.width=300, fig.cap="(ref:my-drive-new-folder)"}
- knitr::include_graphics("images/02-spreadsheet/my-drive-new-folder.png")
+ knitr::include_graphics("images/03-spreadsheet/my-drive-new-folder.png")
 ```
 
 Your copy of the Google Sheet will be private to you only, by default. In the next section we'll learn about different options for sharing your Google Sheet data with others.
@@ -106,7 +106,7 @@ If you're working on a collaborative project with other people, Google Sheets of
 (ref:share-screen) Click the *Share* button to grant access to individuals (top half) or anyone with the link (bottom half).
 
 ```{r share-screen, out.width=600, fig.cap="(ref:share-screen)"}
- knitr::include_graphics("images/02-spreadsheet/share-screen.png")
+ knitr::include_graphics("images/03-spreadsheet/share-screen.png")
 ```
 
 Tip: If you don't want to send people a really long and ugly Google Sheet web address such as:
@@ -118,7 +118,7 @@ then use a free link-shortening service. For example, by using our free [Bitly.c
 (ref:link-shortening) Use a free link-shortening service, such as Bitly.com, and customize its back-end.
 
 ```{r link-shortening, out.width=300, fig.cap="(ref:link-shortening)"}
- knitr::include_graphics("images/02-spreadsheet/link-shortening.png")
+ knitr::include_graphics("images/03-spreadsheet/link-shortening.png")
 ```
 
 Now that you have different options for sharing a Google Sheet, let's learn how to upload and convert data from different formats.
@@ -133,7 +133,7 @@ We feature Google Sheets in this book partly because it supports data migration,
 (ref:drive-settings) Click your Google Drive *Gear Symbol - Settings* in the upper-right corner.
 
 ```{r drive-settings, out.width=300, fig.cap="(ref:drive-settings)"}
- knitr::include_graphics("images/02-spreadsheet/drive-settings.png")
+ knitr::include_graphics("images/03-spreadsheet/drive-settings.png")
 ```
 
 3. On the Settings screen, check the box to *Convert uploaded files to Google Docs editor format*, as shown in Figure \@ref(fig:convert-uploads), and click *Done*. This turns on the conversion setting globally, meaning it will convert all possible files that you upload in the future---including Microsoft Excel, Word, PowerPoint, and more---unless you turn it off.
@@ -141,7 +141,7 @@ We feature Google Sheets in this book partly because it supports data migration,
 (ref:convert-uploads) Inside your Google Drive Settings, check the box to automatically convert all uploads.
 
 ```{r convert-uploads, out.width=750, fig.cap="(ref:convert-uploads)"}
- knitr::include_graphics("images/02-spreadsheet/convert-uploads.png")
+ knitr::include_graphics("images/03-spreadsheet/convert-uploads.png")
 ```
 
 4. Upload a sample Excel file from your computer to your Google Drive. Either drag-and-drop it to the desired folder, as shown in Figure \@ref(fig:upload-file), or use the *New* button and select *File upload*.
@@ -149,7 +149,7 @@ We feature Google Sheets in this book partly because it supports data migration,
 (ref:upload-file) Drag-and-drop your sample Excel file into your Google Drive to upload it.
 
 ```{r upload-file, out.width=300, fig.cap="(ref:upload-file)"}
- knitr::include_graphics("images/02-spreadsheet/upload-file.png")
+ knitr::include_graphics("images/03-spreadsheet/upload-file.png")
 ```
 
 If you forget to check the *Convert uploads* box, Google Drive will keep uploaded files in their original format, and display their icons and file name extensions such as `.xlsx` or `.csv`, as shown in Figure \@ref(fig:drive-file-icons).
@@ -157,7 +157,7 @@ If you forget to check the *Convert uploads* box, Google Drive will keep uploade
 (ref:drive-file-icons) If you forget to convert uploads, Google Drive will keep files in their original format with these icons.
 
 ```{r drive-file-icons, out.width=300, fig.cap="(ref:drive-file-icons)"}
- knitr::include_graphics("images/02-spreadsheet/drive-file-icons.png")
+ knitr::include_graphics("images/03-spreadsheet/drive-file-icons.png")
 ```
 
 Tip: Google Drive now allows you to edit Microsoft Office file formats, but not all features are guaranteed to work across platforms. Also, Google Drive now allows you to convert a specific uploaded Excel file into its Google format by using the *File > Save as Google Sheets* menu. Finally, to convert individual files to your Google Drive, while keeping the global conversion setting off, from inside any Google Sheet you can select *File > Import > Upload*. But we recommend that most people turn on the global conversion setting as described above, except in cases where you intentionally use Google Drive to edit an Excel-formatted file, and understand that some features may not work.
@@ -165,14 +165,14 @@ Tip: Google Drive now allows you to edit Microsoft Office file formats, but not 
 Now that you know how to upload and convert an existing dataset, in the next section you'll learn how to install and use a Google Sheets add-on tool to geocode address data into latitude and longitude coordinates.
 
 ## Geocode Addresses with Google Sheets Add-On {- #geocode}
-In this section, you'll learn how to geocode data by installing a free Google Sheets add-on tool. This allows you to geocode addresses directly inside your spreadsheet, which will be very useful when using [Leaflet map code templates in chapter 11](leaflet.html).
+In this section, you'll learn how to geocode data by installing a free Google Sheets add-on tool. This allows you to geocode addresses directly inside your spreadsheet, which will be very useful when using [Leaflet map code templates in Chapter 12](leaflet.html).
 
 Geocoding means converting addresses or location names into geographic coordinates (or x- and y-coordinates) that can be plotted on a map, as shown in Figure \@ref(fig:transform-data). For example, the Statue of Liberty in the New York City area is located at *40.69, -74.04*. The first number is the latitude and the second is the longitude. Since the equator is 0 degrees latitude, positive latitude is the northern hemisphere, and negative latitude is in the southern hemisphere. Similarly, the prime meridian is 0 degrees longitude, which passes through Greenwich, England. So positive longitude is east of the meridian, and negative longitude is west, until you reach the opposite side of the globe, roughly near the International Date Line in the Pacific Ocean.
 
 (ref:transform-data) To map addresses, you first need to geocode them.
 
 ```{r transform-data, fig.cap="(ref:transform-data)"}
-knitr::include_graphics("images/02-spreadsheet/geocode-data.png")
+knitr::include_graphics("images/03-spreadsheet/geocode-data.png")
 ```
 
 If you have just one or two addresses, you can quickly geocode them with [Google Maps](https://www.google.com/maps). Search for an address, right-click on that point, and select *What's here?* to reveal a popup window with its latitude and longitude, as shown in Figure \@ref(fig:gmaps-whats-here).
@@ -180,7 +180,7 @@ If you have just one or two addresses, you can quickly geocode them with [Google
 (ref:gmaps-whats-here) To geocode one address, search in Google Maps and right-click *What's here?* to show coordinates.
 
 ```{r gmaps-whats-here, fig.cap="(ref:gmaps-whats-here)"}
-knitr::include_graphics("images/02-spreadsheet/gmaps-whats-here.png")
+knitr::include_graphics("images/03-spreadsheet/gmaps-whats-here.png")
 ```
 
 But what if you need to geocode a dozen or a hundred addresses? To geocode multiple addresses inside your spreadsheet, install a free Google Sheets Add-on called [Geocoding by SmartMonkey](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312), created by Xavier Ruiz, the CEO of [SmartMonkey](https://www.smartmonkey.io/), a geographic route-planning company in Barcelona, Spain. Add-ons are created by third-party companies to expand features for Google Sheets, Google Documents, and related tools. Add-ons are verified to meet Google's requirements and distributed through its [G Suite Marketplace](https://gsuite.google.com/marketplace).
@@ -192,7 +192,7 @@ But what if you need to geocode a dozen or a hundred addresses? To geocode multi
 (ref:geocoding-create-template) In the Google Sheets *Add-On* menu, select *Geocoding by SmartMonkey -- Create Template*.
 
 ```{r geocoding-create-template, fig.cap="(ref:geocoding-create-template)"}
-knitr::include_graphics("images/02-spreadsheet/geocoding-create-template.png")
+knitr::include_graphics("images/03-spreadsheet/geocoding-create-template.png")
 ```
 
 3. Select the *Geocoding by SmartMonkey > Geocode Details* menu. The Add-on will create another spreadsheet tab, called *Geocoding Details*, and display the results from Google services for three new columns---latitude, longitude, and address found---as shown in Figure \@ref(fig:geocode-details). Always review the quality of geocoded results by comparing the *Address found* column to the original *Address* entered.
@@ -200,19 +200,19 @@ knitr::include_graphics("images/02-spreadsheet/geocoding-create-template.png")
 (ref:geocode-details) Select *Geocode Details* to view latitude, longitude, and address found for each entry.
 
 ```{r geocode-details, fig.cap="(ref:geocode-details)"}
- knitr::include_graphics("images/02-spreadsheet/geocode-details.png")
+ knitr::include_graphics("images/03-spreadsheet/geocode-details.png")
 ```
 
 When you paste your own address data into the spreadsheet to geocode it, follow these guidelines:
 
-- Each cell requires a full address. If your original data splits street, city, state, and zip code into different columns, see how to [Combine Data into One Column in Chapter 4: Clean Up Messy Data](combine-data.html).
+- Each cell requires a full address. If your original data splits street, city, state, and zip code into different columns, see how to [Combine Data into One Column in Chapter 5: Clean Up Messy Data](combine-data.html).
 - The address should follow the format of the national postal service of the country where it is located. Separate terms with spaces.
 - Do not skip any rows in the *Address* column.
 - You can leave the *Country* column blank, but its default value is the United States. To specify other nations, use their [top-level Internet domain code](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains), such as `es` for Spain.
 - Give the tool time to work. For example, if you enter 50 addresses, expect to wait at least 15 seconds for your geocoded results.
 - Always inspect the quality of your results, and never assume that geocoding services from any provider are accurate.
 
-If you need a faster geocoding service for US addresses, which can handle up to 10,000 requests in one upload, see [bulk geocoding with the US Census](bulk-geocode.html) in Chapter 12: Transform Your Map Data.
+If you need a faster geocoding service for US addresses, which can handle up to 10,000 requests in one upload, see [bulk geocoding with the US Census](bulk-geocode.html) in Chapter 13: Transform Your Map Data.
 
 Now that you know how to use a Google Sheets Add-on to geocode addresses, in the next section you will learn how to collect data using an online form, and access it as a spreadsheet.
 
@@ -224,7 +224,7 @@ Inside your Google Drive account, one tool that's often overlooked is Google For
 (ref:forms-new) The Google Forms tool is partially hidden in the Google Drive *New - More* menu.
 
 ```{r forms-new, out.width=500, fig.cap="(ref:forms-new)"}
- knitr::include_graphics("images/02-spreadsheet/forms-new.png")
+ knitr::include_graphics("images/03-spreadsheet/forms-new.png")
 ```
 
 The Google Forms *Questions* tab allows you to design questions with different types of responses: short- and paragraph-length answers, multiple choice, checkboxes, file uploads, etc., as shown in Figure \@ref(fig:forms-questions). Furthermore, Google Forms attempts to interpret questions you enter in order to predictively assign them to a type.
@@ -232,7 +232,7 @@ The Google Forms *Questions* tab allows you to design questions with different t
 (ref:forms-questions) The Google Forms *Questions* tab allows you to designate different types of responses.
 
 ```{r forms-questions, out.width=700, fig.cap="(ref:forms-questions)"}
- knitr::include_graphics("images/02-spreadsheet/forms-questions.png")
+ knitr::include_graphics("images/03-spreadsheet/forms-questions.png")
 ```
 
 Give each question a very short title, since these will appear as column headers in the linked spreadsheet you'll create further below. If a question needs more explanation or examples, click the three-dot kebob menu in the bottom-right corner to *Show > Description*, which opens a text box where you can type in more details, as shown in Figure \@ref(fig:forms-description). Also, you can *Show > Response validation*, which requires users to follow a particular format, such as an email address or phone number. Furthermore, you can select the *Required* field to require users to respond to a question before proceeding. See additional options on the [Google Forms support page](https://support.google.com/a/users/answer/9991170).
@@ -240,15 +240,15 @@ Give each question a very short title, since these will appear as column headers
 (ref:forms-description) Click the three-dot kebab menu to *Show - Description* to add details for any question.
 
 ```{r forms-description, out.width=700, fig.cap="(ref:forms-description)"}
- knitr::include_graphics("images/02-spreadsheet/forms-description.png")
+ knitr::include_graphics("images/03-spreadsheet/forms-description.png")
  ```
 
-To preview how your online will appear to recipients, click the *Eyeball symbol* near the top of the page, as shown in Figure \@ref(fig:forms-preview). When your form is complete, click the *Send* button to distribute it via email, a link, or to embed the live form as an iframe on a web page. Learn more about the latter option in [Chapter 8: Embed On Your Web](embed.html).
+To preview how your online will appear to recipients, click the *Eyeball symbol* near the top of the page, as shown in Figure \@ref(fig:forms-preview). When your form is complete, click the *Send* button to distribute it via email, a link, or to embed the live form as an iframe on a web page. Learn more about the latter option in [Chapter 9: Embed On Your Web](embed.html).
 
 (ref:forms-preview) Click the *Eyeball symbol* to preview your form.
 
 ```{r forms-preview, out.width=350, fig.cap="(ref:forms-preview)"}
- knitr::include_graphics("images/02-spreadsheet/forms-preview.png")
+ knitr::include_graphics("images/03-spreadsheet/forms-preview.png")
  ```
 
 The Google Forms *Responses* tab will show individual results you receive, and also includes a powerful button to open the data in a linked Google Sheet, as shown in Figure \@ref(fig:forms-responses).
@@ -256,7 +256,7 @@ The Google Forms *Responses* tab will show individual results you receive, and a
 (ref:forms-responses) The Google Forms *Responses* tab includes a button to open results in a linked Google Sheet.
 
 ```{r forms-responses, out.width=500, fig.cap="(ref:forms-responses)"}
- knitr::include_graphics("images/02-spreadsheet/forms-responses.png")
+ knitr::include_graphics("images/03-spreadsheet/forms-responses.png")
 ```
 
 Now that you've learned how to collect data with an online form and linked spreadsheet, the next two sections will teach you how to sort, filter, and pivot tables to begin analyzing their contents and the stories they reveal.
@@ -273,7 +273,7 @@ Spreadsheet tools help you to dig deeper into your data and raise the stories yo
 (ref:sheets-select-all) Click the upper-left corner to select all cells before sorting.
 
 ```{r sheets-select-all, out.width=400, fig.cap="(ref:sheets-select-all)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-select-all.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-select-all.png")
 ```
 
 Warning: If you forget to select all cells, you might accidentally sort one column independently of the others, which will scramble your dataset and make it meaningless. Always select all cells before sorting!
@@ -283,7 +283,7 @@ Warning: If you forget to select all cells, you might accidentally sort one colu
 (ref:sheets-sort-range) Go to *Data - Sort Range*, check the header row box, and sort by *Experience with dataviz* in ascending order.
 
 ```{r sheets-sort-range, out.width=400, fig.cap="(ref:sheets-sort-range)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-sort-range.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-sort-range.png")
 ```
 
 Scroll through your sorted data and you'll see that over 1,000 readers rated themselves as beginners (level 1) with data visualization.
@@ -293,7 +293,7 @@ Tip: When working with large spreadsheets, you can "freeze" the first row so tha
 (ref:sheets-view-freeze) In Google Sheets, go to *View - Freeze* to select the number of rows to continuously display when scrolling downward.
 
 ```{r sheets-view-freeze, out.width=500, fig.cap="(ref:sheets-view-freeze)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-view-freeze.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-view-freeze.png")
 ```
 
 5. Now let's try filtering your sheet. Go to *Data > Create a Filter*, which inserts downward arrows in each column header. Click on the downward arrow-shaped toggle in the *Occupation* column, and see options to display or hide rows of data. For example, look under *Filter by values*, then click the "Clear" button to undo all options, then click only *educator* to display only rows with that response, as shown in Figure \@ref(fig:sheets-filter). Click "OK".
@@ -301,7 +301,7 @@ Tip: When working with large spreadsheets, you can "freeze" the first row so tha
 (ref:sheets-filter) Go to *Data - Create a Filter*, click the downward arrow in the *Occupation* column, select only *educator*.
 
 ```{r sheets-filter, out.width=300, fig.cap="(ref:sheets-filter)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-filter.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-filter.png")
 ```
 
 Now your view of reader responses is sorted by experience, and filtered to show only educators. Scroll through their one-sentence goals for learning about data visualization. How to do they compare to your own goals? In the next section, we'll learn how to start analyzing your data with simple formulas and functions.
@@ -318,7 +318,7 @@ Spreadsheet tools can save you lots of time when you insert simple formulas and 
 (ref:sheets-insert-row) Right-click on row number 1 and select *Insert 1 below*.
 
 ```{r sheets-insert-row, out.width=200, fig.cap="(ref:sheets-insert-row)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-insert-row.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-insert-row.png")
 ```
 
 4. Let's calculate the average level of reader experience with data visualization. Click on cell E2 in the new blank row you just created, and type an equal symbol (`=`) to start a formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the average for current values in the column, such as `=AVERAGE(E3:E2894)`, then press *Return* or *Enter* on your keyboard, as shown in Figure \@ref(fig:sheets-average).
@@ -326,7 +326,7 @@ Spreadsheet tools can save you lots of time when you insert simple formulas and 
 (ref:sheets-average) Type `=` to start a formula and select the suggestion for average, or type it directly in with the correct range.
 
 ```{r sheets-average, out.width=300, fig.cap="(ref:sheets-average)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-average.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-average.png")
 ```
 
 Since our live spreadsheet has a growing number of survey responses, you will have a larger number in the last cell reference to include all of the entries in your version. Currently, the average level of reader experience with data visualization is around 2 on a scale from 1 (beginner) to 5 (professional), but this may change as more readers fill out the survey. Note that if any readers leave this question blank, spreadsheet tools ignore empty cells when performing calculations.
@@ -338,7 +338,7 @@ Tip: In Google Sheets, another way to write the formula above is `=AVERAGE(E3:E)
 (ref:sheets-drag-calc) Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula.
 
 ```{r sheets-drag-calc, fig.cap="(ref:sheets-drag-calc)"}
-if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-drag-calc.gif", height = "185px") else knitr::include_graphics("images/02-spreadsheet/sheets-drag-calc.png")
+if(knitr::is_html_output()) knitr::include_url("images/03-spreadsheet/sheets-drag-calc.gif", height = "185px") else knitr::include_graphics("images/03-spreadsheet/sheets-drag-calc.png")
 ```
 
 6. Since the *Occupation* column contains a defined set of text responses, let's use a different function to count them using an *if statement*, such as the number of responses if a reader listed "educator". Click in cell G2 and type the equal symbol (`=`) to start a new formula. Google Sheets will automatically suggest possible formulas based on the context, and you can select one that displays the count if the response is *educator* for current values in the entire column. You can directly type in the formula `=COUNTIF(G3:G2894,"=educator")`, where your last cell reference will be a larger number to reflect all of the rows in your version, or type in the Google Sheets syntax `=COUNTIF(G3:G,"=educator")` that runs the calculation on the entire column without naming a specific endpoint, as shown in Figure \@ref(fig:sheets-countif).
@@ -346,12 +346,12 @@ if(knitr::is_html_output()) knitr::include_url("images/02-spreadsheet/sheets-dra
 (ref:sheets-countif) Select or enter a formula that counts responses if the entry is *educator*.
 
 ```{r sheets-countif, out.width=250, fig.cap="(ref:sheets-countif)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-countif.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-countif.png")
 ```
 
 Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text. Read more about functions in this support pages for [Google Sheets](https://support.google.com/docs/topic/9054603), [LibreOffice](https://help.libreoffice.org/Calc/Functions_by_Category), or [Microsoft Excel support page](https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb).
 
-See additional spreadsheet skills in later chapters of the book, such as how to [find and replace with blank](find-and-replace.html), [split data into separate columns](split-data.html), and [combine data into one column](combine-data.html) in [Chapter 4: Clean Up Messy Data](clean.html). See also how to [pivot address points into polygons](pivot-point-to-polygon.html) and [how to normalize data](normalize.html) in [Chapter 12: Transform Your Map Data](transform.html).
+See additional spreadsheet skills in later chapters of the book, such as how to [find and replace with blank](find-and-replace.html), [split data into separate columns](split-data.html), and [combine data into one column](combine-data.html) in [Chapter 5: Clean Up Messy Data](clean.html). See also how to [pivot address points into polygons](pivot-point-to-polygon.html) and [how to normalize data](normalize.html) in [Chapter 13: Transform Your Map Data](transform.html).
 
 Now that you've learned how to count one type of survey response, the next section will teach you how to regroup data with pivot tables that summarize all responses by different categories.
 
@@ -367,7 +367,7 @@ Pivot tables are another powerful feature built into spreadsheet tools to help y
 (ref:sheets-pivot-create) Go to *Data - Pivot Table*, and create in a new sheet.
 
 ```{r sheets-pivot-create, out.width=450, fig.cap="(ref:sheets-pivot-create)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-pivot-create.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-pivot-create.png")
 ```
 
 4. In the *Pivot table editor* screen, you can regroup data from the first sheet by adding rows, columns, and values. First, click the Rows *Add* button and select *Occupation*, which displays the unique entries in that column, as shown in Figure \@ref(fig:sheets-pivot-rows).
@@ -375,7 +375,7 @@ Pivot tables are another powerful feature built into spreadsheet tools to help y
 (ref:sheets-pivot-rows) In the *Pivot table editor*, click the Rows *Add* button and select *Occupation*.
 
 ```{r sheets-pivot-rows, out.width=600, fig.cap="(ref:sheets-pivot-rows)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-pivot-rows.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-pivot-rows.png")
 ```
 
 5. Next, to count the number of responses for each entry, click the Values *Add* button and select *Occupation* again. Google Sheets will automatically summarize the values by *COUNTA*, meaning it displays the frequency of each textual response, as shown in Figure \@ref(fig:sheets-pivot-values).
@@ -383,7 +383,7 @@ Pivot tables are another powerful feature built into spreadsheet tools to help y
 (ref:sheets-pivot-values) In the *Pivot table editor*, click the Values *Add* button and select *Occupation*.
 
 ```{r sheets-pivot-values, out.width=600, fig.cap="(ref:sheets-pivot-values)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-pivot-values.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-pivot-values.png")
 ```
 
 Currently, the top three occupations listed by readers are information technology, for-profit business, and student. Since this is a live spreadsheet, these rankings may change as more readers respond to the survey.
@@ -393,7 +393,7 @@ Currently, the top three occupations listed by readers are information technolog
 (ref:sheets-pivot-columns) In the *Pivot table editor*, click the Columns *Add* button and select *Experience with data visualization*.
 
 ```{r sheets-pivot-columns, fig.cap="(ref:sheets-pivot-columns)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-pivot-columns.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-pivot-columns.png")
 ```
 
 To go one step further, *Filter* the data to limit the pivot table results by another category. For example, in the drop-down menu, you can click the Filters *Add* button, select *Years of school*, then under *Filter by values* select *Clear*, then check *20* to display only readers who listed 20 or more years.
@@ -409,7 +409,7 @@ Although Google Sheets pivot tables display raw numbers by default, under the *S
 (ref:sheets-pivot-summarize) In the *Pivot table editor*, see multiple options to summarize *Values*.
 
 ```{r sheets-pivot-summarize, out.width=250, fig.cap="(ref:sheets-pivot-summarize)"}
- knitr::include_graphics("images/02-spreadsheet/sheets-pivot-summarize.png")
+ knitr::include_graphics("images/03-spreadsheet/sheets-pivot-summarize.png")
 ```
 
 While designing pivot tables may look differently across other spreadsheet tools, the concept is the same. Learn more about how pivot tables work in the [support pages for Google Sheets](https://support.google.com/docs/topic/9054603) or [LibreOffice](https://help.libreoffice.org/Calc/Creating_Pivot_Tables) or [Microsoft Excel](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576). Remember that you can download the Google Sheets data and export to ODS or Excel format to experiment with pivot tables in other tools.
@@ -425,7 +425,7 @@ Here's a scenario that illustrates why and how to use the VLOOKUP function. Figu
 (ref:vlookup-setup) Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet.
 
 ```{r vlookup-setup, out.width=750, fig.cap="(ref:vlookup-setup)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-setup.png")
+ knitr::include_graphics("images/03-spreadsheet/vlookup-setup.png")
 ```
 
 1. Open this [Google Sheet of Food Bank sample names and addresses](https://docs.google.com/spreadsheets/d/1bcvOJayycijIbf8e-u_cMq0kPbEp29MFQr_FXK6igs4) in a new browser tab. Log into your Google Drive, and go to *File > Make a Copy* to create your own version that you can edit.
@@ -437,7 +437,7 @@ We simplified this two-sheet problem by placing both tables in the same Google S
 (ref:vlookup-headers) Paste the last four column headers from the *addresses* sheet into the *names* sheet.
 
 ```{r vlookup-headers, out.width=500, fig.cap="(ref:vlookup-headers)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-headers.png")
+ knitr::include_graphics("images/03-spreadsheet/vlookup-headers.png")
 ```
 
 3. In the *names* sheet, click in cell C2 and type `=VLOOKUP`, and Google Sheets will suggest that you complete the full formula in this format:
@@ -458,7 +458,7 @@ Here's what each part means:
 (ref:vlookup-solution) The VLOOKUP formula in cell C2 of the *names* sheet (top) searches for matches across columns A to E in the *addresses* sheet (bottom).
 
 ```{r vlookup-solution, out.width=700, fig.cap="(ref:vlookup-solution)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-solution.png")
+ knitr::include_graphics("images/03-spreadsheet/vlookup-solution.png")
 ```
 
 Let's break down each part of the formula you entered in cell C2 of the *names* sheet:
@@ -473,7 +473,7 @@ Let's break down each part of the formula you entered in cell C2 of the *names* 
 (ref:vlookup-drag) Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula.
 
 ```{r vlookup-drag, out.width=500, fig.cap="(ref:vlookup-drag)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-drag.png")
+ knitr::include_graphics("images/03-spreadsheet/vlookup-drag.png")
 ```
 
 6. Finally, use the same hold-and-drag method to paste and update the formula downward to fill in all rows, as shown in Figure \@ref(fig:vlookup-final).
@@ -481,7 +481,7 @@ Let's break down each part of the formula you entered in cell C2 of the *names* 
 (ref:vlookup-final) Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula.
 
 ```{r vlookup-final, out.width=500, fig.cap="(ref:vlookup-final)"}
- knitr::include_graphics("images/02-spreadsheet/vlookup-final.png")
+ knitr::include_graphics("images/03-spreadsheet/vlookup-final.png")
 ```
 
 Warning: If you save this spreadsheet in CSV format, your calculated results will appear in the CSV sheet, but any formulas you created to produce those results will disappear. Always keep track of your original spreadsheet to remind yourself how you constructed formulas.
@@ -505,20 +505,20 @@ To demonstrate, we imported both of the Google Sheets above into this [live Airt
 (ref:airtable-link) In this Airtable sample, we linked the *organization* column in the *people* sheet to the *food banks* sheet.
 
 ```{r airtable-link, out.width=500, fig.cap="(ref:airtable-link)"}
- knitr::include_graphics("images/02-spreadsheet/airtable-link.png")
+ knitr::include_graphics("images/03-spreadsheet/airtable-link.png")
 ```
 
-In our Airtable sample, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the *people* sheet, their organization's full address appears from the *food banks* sheet, as shown in Figure \@ref(fig:airtable-expand). In our editable version, if we update the address for one organization in the *food banks* sheet, it's automatically changed for all employees linked to that organization in the *people* sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we'll cover in [Chapter 8: Embed on your Web](embed.html). See more about its features in the [Airtable Support page](https://support.airtable.com).
+In our Airtable sample, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the *people* sheet, their organization's full address appears from the *food banks* sheet, as shown in Figure \@ref(fig:airtable-expand). In our editable version, if we update the address for one organization in the *food banks* sheet, it's automatically changed for all employees linked to that organization in the *people* sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we'll cover in [Chapter 9: Embed on your Web](embed.html). See more about its features in the [Airtable Support page](https://support.airtable.com).
 
 (ref:airtable-expand) In this [Airtable demo](https://airtable.com/shrOlb4XT11Xy2LP2), click on a row in one sheet to expand and view its linked data in another sheet.
 
 ```{r airtable-expand, out.width=600, fig.cap="(ref:airtable-expand)"}
-if(knitr::is_html_output()) knitr::include_url("https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow", height = "533px") else knitr::include_graphics("images/02-spreadsheet/airtable-expand.png")
+if(knitr::is_html_output()) knitr::include_url("https://airtable.com/embed/shrOlb4XT11Xy2LP2?backgroundColor=yellow", height = "533px") else knitr::include_graphics("images/03-spreadsheet/airtable-expand.png")
 ```
 
 It's important to understand the conceptual differences between a "flat-file" spreadsheet and a relational database to help you determine when to use one tool versus another. As you've learned in the sections above, spreadsheets are your best choice to begin organizing and analyzing your data, using methods such as sorting, filtering, pivoting, and lookup, to help reveal the underlying stories that you may wish to visualize. But relational databases are your best choice when maintaining large amounts of data with internal links, like one-to-many relationships, such as an organization with several employees.  
 
-### Summary {- #summary2}
-If you're one of the many people who "never really learned" about spreadsheets in school or on the job, or if you've taught yourself bits and pieces along the way, we hope that this chapter has successfully strengthened your skills. All of the subsequent chapters in this book, especially those on designing [interactive charts in Chapter 5](chart.html) and [interactive maps in Chapter 6](map.html), require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, pivot, and lookup matching data, with the broader goal of visualizing your data stories.
+### Summary {- #summary3}
+If you're one of the many people who "never really learned" about spreadsheets in school or on the job, or if you've taught yourself bits and pieces along the way, we hope that this chapter has successfully strengthened your skills. All of the subsequent chapters in this book, especially those on designing [interactive charts in Chapter 6](chart.html) and [interactive maps in Chapter 7](map.html), require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, pivot, and lookup matching data, with the broader goal of visualizing your data stories.
 
 The next chapter describes strategies for finding and questioning your data, particularly on open data sites operated by governmental and non-profit organizations, where you'll also need spreadsheet skills to download and organize public information.

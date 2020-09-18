@@ -91,13 +91,13 @@ output:
 ```
 
 ## Style Guide for *Hands-On Data Visualization* {- #style-guide}
-View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/18-bookdown.Rmd
+View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/19-bookdown.Rmd
 
 This book is composed in R-flavored Markdown (.Rmd), and each paragraph begins on a separate line. O'Reilly style guide prefers *italics* rather than bold. Use single back tics to display a monospaced `code` word.
 
 O'Reilly guidelines recommend making your writing as conversational as possible. Imagine you're speaking to someone one on one, not giving a formal lecture to a large group. Refer to the reader as "you" and to yourself as "I" for a single-author book, and refer to yourselves as "we" for a co-authored book. Use active voice, not passive voice.
 
-More from O'Reilly about chapter structure: Each chapter should begin with a paragraph or two that summarizes what the chapter is about and why that information is important to the overall topic of your book. Subsequent sections should walk readers through the information you're presenting. Keep readers oriented by including signposts like "As you learned in Chapter 3" and "I'll discuss this topic in more detail later in this chapter."
+More from O'Reilly about chapter structure: Each chapter should begin with a paragraph or two that summarizes what the chapter is about and why that information is important to the overall topic of your book. Subsequent sections should walk readers through the information you're presenting. Keep readers oriented by including signposts like "As you learned in Chapter 4" and "I'll discuss this topic in more detail later in this chapter."
 
 More from O'Reilly about transitions: End section X by saying something like, "Now that you understand X, you're ready to dig into topic Y," and start section Y by explaining how it relates to topic X. Daisy-chaining helps readers understand how concepts are connected and why you're covering them in this order. Finally, at the end of each chapter, summarize what you discussed in that chapter, and mention what the following chapter is going to cover.
 
@@ -211,7 +211,7 @@ Cross-reference interactivity varies by output:
 When writing cross-references in the text, the [O'Reilly Style Guide](http://oreillymedia.github.io/production-resources/styleguide/#considering_electronic_formats) prefers live cross references (e.g., "see Figure 2-1"), but if not feasible, use "preceding" or "following" because physical placement of elements may vary across print and digital formats. *Avoid* using "above" or "below."
 
 ## Images {- #images}
-View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/18-bookdown.Rmd
+View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/19-bookdown.Rmd
 
 Create high-resolution color screenshots and other static images in .png or .jpg format, with tight cropping on a high-resolution Retina monitor, typically at 144 ppi. Save items into the `images` subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.
 
@@ -224,10 +224,10 @@ In some cases (such as images inside Markdown tables, or static screenshots to a
 Overall, sometimes the folder will contain only one version of a simple image, but in other cases it may contain up to 3-4 versions of an image:
 
 ```
-images/05-chart/design-setup.png
-images/05-chart/design-setup-ann.png
-images/05-chart/design-setup-ann.pdf
-images/05-chart/design-setup-original.png
+images/06-chart/design-setup.png
+images/06-chart/design-setup-ann.png
+images/06-chart/design-setup-ann.pdf
+images/06-chart/design-setup-original.png
 ```
 
 If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:
@@ -240,8 +240,8 @@ In this book, use *Markdown formatting only for images that appear inside tables
 
 | Co-Authors      | About Us      |
 | --------------- | ------------- |
-| ![](images/18-bookdown/dougherty-jack.jpg) | About [Jack Dougherty](http://jackdougherty.org) |
-| ![](images/18-bookdown/ilyankou-ilya.jpg) | About [Ilya Ilyankou](https://github.com/ilyankou) |   
+| ![](images/19-bookdown/dougherty-jack.jpg) | About [Jack Dougherty](http://jackdougherty.org) |
+| ![](images/19-bookdown/ilyankou-ilya.jpg) | About [Ilya Ilyankou](https://github.com/ilyankou) |   
 
 Although Markdown formatting offers a simple syntax that easily converts into other formats with Bookdown/Pandoc, there is no auto-numbering in the HTML edition, while auto-numbering appears in the PDF edition, and numbered figures are required by the publisher. Furthermore, Markdown formatting does not allow conditional output.
 
@@ -257,7 +257,7 @@ Write R code-chunk labels that follow the image file name, and avoid duplicate l
 ```
 ref:design-setup
 
-images/05-chart/design-setup.png
+images/06-chart/design-setup.png
 ```
 
 Do not insert spaces inside the `ref:chunk-label` for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add *another* blank line to avoid "undefined reference" Bookdown errors.
@@ -280,7 +280,7 @@ Small is defined as each side less than 300px, as shown in Figure \@ref(fig:tige
 (ref:tiger) Caption here. Markdown embedded links are acceptable.
 
 ```{r tiger, fig.cap="(ref:tiger)"}
- knitr::include_graphics("images/18-bookdown/tiger.png")
+ knitr::include_graphics("images/19-bookdown/tiger.png")
 ```
 
 ### R code-chunk for larger static image using out.width and PDF img {-}
@@ -289,7 +289,7 @@ For larger images, where one side is greater than 300px, set the out.width to a 
 (ref:screenshot-tall) Using out.width=200 and smaller PDF image size.
 
 ```{r screenshot-tall, out.width=200, fig.cap="(ref:screenshot-tall)"}
- knitr::include_graphics("images/18-bookdown/screenshot-tall.png")
+ knitr::include_graphics("images/19-bookdown/screenshot-tall.png")
 ```
 
 R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the web version, and a static image with an embedded link appears in the PDF and MS Word outputs. To change the height of the default 400px iframe, add the new height to `include_url` as shown in the examples. However, to change the width of the default 675px iframe to less than 100 percent, add a line in a `custom-scripts.html` file.
@@ -300,16 +300,16 @@ R code-chunks allow more complex conditional formatting, where an interactive ma
 (ref:sample-map) Caption here, and add embedded link to explore the [full-screen interactive map](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 
 ```{r sample-map, fig.cap="(ref:sample-map)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "600px") else knitr::include_graphics("images/18-bookdown/sample-map.jpg")
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "600px") else knitr::include_graphics("images/19-bookdown/sample-map.jpg")
 ```
 
 ### Demo: R code-chunk for animated GIF in HTML and static image in PDF {-}
 When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. Add ...as shown in Figure \@ref(fig:sheets-option-drag).
 
-(ref:sheets-option-drag) Caption here, with embedded link to the [animated GIF](https://handsondataviz.org/images/18-bookdown/sheets-option-drag.gif).
+(ref:sheets-option-drag) Caption here, with embedded link to the [animated GIF](https://handsondataviz.org/images/19-bookdown/sheets-option-drag.gif).
 
 ```{r sheets-option-drag, fig.cap="(ref:sheets-option-drag)"}
-if(knitr::is_html_output()) knitr::include_url("images/18-bookdown/sheets-option-drag.gif", height = "250px") else knitr::include_graphics("images/18-bookdown/sheets-option-drag.png")
+if(knitr::is_html_output()) knitr::include_url("images/19-bookdown/sheets-option-drag.gif", height = "250px") else knitr::include_graphics("images/19-bookdown/sheets-option-drag.png")
 ```
 
 ### Demo: R code-chunk for Youtube video in HTML and static image in PDF {-}
@@ -320,7 +320,7 @@ Be sure to use the *embed* link from the YouTube *share* button.
 (ref:video-sample) Caption here, with embedded link to the [YouTube video](https://youtu.be/-nGdrzMuUnI).
 
 ```{r video-sample, fig.cap="(ref:video-sample)"}
-if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-nGdrzMuUnI") else knitr::include_graphics("images/18-bookdown/video-sample.png")
+if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/-nGdrzMuUnI") else knitr::include_graphics("images/19-bookdown/video-sample.png")
 ```
 
 ### Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF {-}
@@ -333,7 +333,7 @@ if(knitr::is_html_output()) knitr::include_url("https://www.youtube.com/embed/w6
 ```
 
 ## Tables {- #tables}
-View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/18-bookdown.Rmd
+View the underlying source code to understand how this page was composed at: https://github.com/HandsOnDataViz/book/blob/master/19-bookdown.Rmd
 
 Create tables in Markdown format, since it produces good output for HTML, PDF, Word, and Markdown. Use a tool such as [Tables Generator](https://www.tablesgenerator.com/markdown_tables) to import significant table data in CSV format, format the column alignment as desired, and press Generate button to create table in Markdown format. For significant table data, save the CSV version in a GitHub repo for potential later use.
 
@@ -404,10 +404,10 @@ We need to do a bit of manual cleanup before ORM production team can convert the
 - Manually rename it as HandsOnDataViz-modified.md
 - Manually paste in these Markdown tables to replace HTML tables (unless ORM can handle this part)
   - from index.Rmd, table of authors
-  - from 05-chart.Rmd, Table 1: Chart types covered in this book
+  - from 06-chart.Rmd, Table 1: Chart types covered in this book
 - Manually find and replace any `<iframe...` HTML or GIF elements with their `<img...` PNG substitutes, and new ALT text (unless authors come up with a better way to automate this)
 - Manually delete any remaining `<iframe...` elements (unless they are non-executable code snippets)
-- Manually mark up "Variable List:" for production team in two places in chapter 3
+- Manually mark up "Variable List:" for production team in two places in Chapter 4
 - Save and push the modified Markdown file up to GitHub repo
 
 TODO: Check to see if triple back tics render correctly in the Markdown full-book output.

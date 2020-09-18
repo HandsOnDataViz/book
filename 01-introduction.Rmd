@@ -1,99 +1,98 @@
 # Introduction {#introduction}
-TO COME
+In this book, we will learn how to create data visualizations through a series of design principles and step-by-step tutorials, in order to make your information-based analysis and writing more insightful and compelling. Just as sentences become more persuasive with supporting evidence and source notes, your data-driven arguments can become more powerful when accompanied by appropriate tables, charts, or maps. While words tell us stories, visualizations show us *data stories* by transforming quantitative, relational, or spatial patterns into images. Data visualizations work best when they draw our attention to highly meaningful patterns that would be difficult to communicate through text alone, yet jump out at our eyes in pictures.
 
-Focus of this book is... Data visualization is broadly defined as a method of encoding quantitative, relational, or spatial information into images, which you can modify by updating the data.
+Our book features a growing number of free and easy-to-learn digital tools for creating data visualizations. Unlike infographics, which are typically created as one-time artwork, visualizations can be reused and modified multiple times by updating the underlying data. We also focus on creating interactive data visualizations that you can embed on your website. While static visualizations can be distributed on paper or PDF documents, interactive visualizations will engage wider audiences on the internet by encouraging them to interact with the data, explore patterns that interest them, and download files if desired.
 
-TODO: this book emphasizes interactive charts and maps, using free and easy-to-learn tools and code templates
+But the remarkable growth of data visualizations and the internet in recent decades also poses a serious problem. Today we encounter more words, numbers, and images than at any prior point in our lives, but much of it is not trustworthy. The “information age” has devolved into an “age of disinformation.” When presented with conflicting stories, who do you believe? How do you make wise decisions about what information to trust? In particular, for this book about data visualization, what types of evidence persuade you, and why?
 
+For example, how can you tell whether or not we---the authors of this book---are lying to you?
 
-## Sketch Your Data Story {- #sketch}
-Before you dive deeply into software, think about the most important item in your toolkit: **your story**. The primary reason we're designing visualizations is to improve how we communicate our data story to other people, so let's begin there.
+Let’s start with a simple one-sentence statement:
 
-Push away the computer and pick up some old-school tools:
+*Claim 1. Economic inequality has sharply risen in the United States since the 1970s.*
 
-  - colored markers or pencils
-  - lots of blank paper
-  - your imagination
+Do you believe this claim---or not? Perhaps you’ve never thought about the topic in this particular way before now (and if so, it’s time to wake up). It’s possible your response depends on whether this statement blends in with your prior beliefs, or pushes against them. Or perhaps you’ve been taught to be skeptical of claims lacking supporting evidence (and if so, thank your teachers).
 
-First, at the top of the page, write down your data story.
+So let’s move on to a more complex two-sentence statement that also cites a source:
 
-- Is it in the form of a question? If so, figure out how to pose the question. [Use some of this from ch 3? -- Start the process by writing down your question---literally in the form of a question, punctuated with a question mark---to clarify your own thinking, and also so that you can clearly communicate it to others who may be assisting you. All too often, our brains automatically jump ahead to try to identify the *answer*, without reflecting on the best way frame the *question* in a way that does not limit the range of possible results.]
-- Or maybe it's in the form of an answer to that question? If so, spell out your clearest statement.
-- If you're lucky, perhaps you already can envision a full story, with a beginning, middle, and end.
-- Whatever form it takes in your head, write out the words that come to mind.
+*Claim 2. In 1970, the top 10 percent of US adults received an average income of about $135,000 in today’s dollars, compared to the bottom 50 percent who earned around $16,500. This inequality gap grew sharply over the next five decades, as the top tier income climbed to about $350,000, while the bottom half barely moved to about $19,000, according to the World Inequality Database.*[@worldinequalitydatabaseIncomeInequalityUSA2020]
 
-Further down the page (or on a separate sheet), draw quick pictures of the visualizations that comes to your mind, even if you don't yet have any data. No artistic skills are required. Just use your imagination.
-- Do you envision some type of chart? Sketch a picture.
-- Or do you imagine some type of map? Show what it might look like.
-- Will your visualization be interactive? Insert arrows, buttons, whatever.
+Is this second claim more believable than the first one? It now makes a more descriptive claim by defining economic inequality in terms of average income for the upper 10 percent versus the bottom 50 percent over time. Also, this sentence pins its claims to a specific source, and invites us to read further by following the footnote. But how do these factors influence its persuasiveness? Does the wording of the claim make you wonder about the 40 percent of the population in between the two extremes? Or, what about the authority of the source? Who is responsible for creating the World Inequality Database, and do you trust them?
 
-Finally, share your data story with someone else and talk through your preliminary ideas. Does your sketch and sentences help to convey the broader idea that you're trying to communicate? If so, this is one good sign that your data story is worth pursuing, with the visualization tools, templates, and techniques in other chapters of this book.
+To answer some of those questions, let’s supplement the second claim with a bit more information, as shown in Table \@ref(tab:us-income).
 
-Now that you have a clearer idea of the data story you wish to tell, let's explore some of the free digital tools featured in this book, and questions you should ask yourself when choosing among them.
+Table: (\#tab:us-income) Average US Adult Income, 1970-2019
 
-## Choose Your Digital Tools {- #choose}
+| Year | Top 10 Percent | Middle 40 Percent | Bottom 50 Percent |
+|-----:|-----:|-----:|-----:|
+| 1970 | $136,308 | $44,353 | $16,515 |
+| 2019 | $352,815 | $76,462 | $19,117 |
 
-TODO: Rewrite section
+Note: Shown in constant 2019 US dollars. National income for individuals aged 20 and over, prior to taxes and transfers, but includes pension contributions and distributions.
+Source: [World Inequality Database 2020](https://wid.world/share/#0/countrytimeseries/aptinc_p50p90_z;aptinc_p90p100_z;aptinc_p0p50_z/US/2015/kk/k/x/yearly/a/false/0/400000/curve/false)
 
-Do you feel overwhelmed by the enormous range of data visualization tools? There's been so many different tools released in recent years that anyone would have a hard time deciding which ones to use. Even if you limit your choices to the dozen or so tools specifically mentioned in this book, how do you make wise decisions?
+Does Table \@ref(tab:us-income) make Claim 2 more persuasive? Since the table contains essentially the same information as the two sentences about top and bottom income levels, it shouldn’t make any difference. But the table communicates the evidence more effectively, and makes a more compelling case. For many people, it’s easier to read and grasp the relationship between numbers when they’re organized in a grid, rather than complex sentences. As your eyes skim down the columns, you automatically notice the huge jump in income for the top 10 percent, which nearly tripled over time, while the bottom 50 percent barely budged. In addition, the table fills in more information that was missing from the text about the middle 40 percent, whose income grew over time, but not nearly as much as the top tier. Furthermore, the note at the bottom of the table adds a bit more context about how the data is “shown in constant 2019 US dollars,” which means that the 1970s numbers were adjusted to account for changes to the cost of living and purchasing power of dollars over a half-century. The note also briefly mentions other terms used by the World Inequality Database to calculate income (such as taxes, transfers, and pensions), though you would need to consult the source for clearer definitions. Social scientists use different methods to measure income inequality, but generally report findings similar to those shown here.^[The World Inequality Database builds on the work of economists Thomas Piketty, Emmanuel Saez, and their colleagues, who have constructed US historical income data based not only on self-reported surveys, but also large samples of tax returns submitted to the Internal Revenue Service. See WID methods at @worldinequalitydatabaseMethodology2020. See overview of methodological approaches in @stoneGuideStatisticsHistorical2020. See comparable findings on US income inequality by the Pew Charitable Trust in @menascehorowitzTrendsIncomeWealth2020]
 
-...lists several criteria to consider when making software decisions. Many of us look for free or affordable tools in the perfect sweet spot---easy-to-learn, yet powerful---and that's the focus of this book.
+Now let’s substitute a data visualization---specifically the line chart in Figure \@ref(fig:us-income-chart1)---in place of the table, to compare which one is more persuasive.
 
-When each of us decides which digital tools best fit our needs, we often face trade-offs. On one hand, many of us prefer easy-to-learn tools, especially those with a drag-and-drop interface, but they often force us to settle for limited options. On the other hand, we also favor powerful tools that allow us to control and customize our work, yet most of these require higher-level coding skills. The goal of this book is to find the best of both worlds: that "sweet spot" where tools are both friendly and flexible.
+(ref:us-income-chart1) Explore the [interactive line chart](https://datawrapper.dwcdn.net/LtRbj/) of US adult income inequality over time.
 
-Before testing out new tools, try listing the criteria that guide your decision-making process. What are the most important factors that influence whether or not you add another item to your digital toolkit? Here's the list that came to our minds:
+```{r us-income-chart1, fig.cap="(ref:us-income-chart1)"}
+if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/LtRbj/") else knitr::include_graphics("images/01-introduction/us-income-chart1.png")
+```
 
-TODO: reduce and prioritize list; insert tool examples to highlight issues (eg BatchGeo vs Datawrapper)
+Is Figure \@ref(fig:us-income-chart1) more persuasive than Table \@ref(tab:us-income)? Since the line chart contains the same historical start and stop points as the table, it should not make any difference. But the line chart also communicates a powerful, visualized story about income gaps that grabs our attention more effectively than the table. As your eyes follow the colored lines horizontally across the page, the widening inequality between the top versus the middle and bottom tiers is striking. The chart also packs so much granular information into one image. Looking closely, you also notice how the top-tier income level was relatively stable during the 1970s, then spiked upward from the 1980s to the present, far distant from the other lines. Meanwhile, as the middle-tier income line rose slightly over time, the lowest-tier slightly declined, meaning that the bottom half of the population has less purchasing power in 2019 than they did at their peak in the early 2000s. The rich got richer, and the poor got poorer, as they saying goes. But the chart reveals how rapidly those riches grew, and how poverty became even worse, over time.
 
-1. Price: Is the tool free, or is there a “freemium” model to pay for more features or higher usage?
-2. Easy-to-learn: Is the tool relatively simple for new users without coding skills?
-3. Power: Does the tool support large amounts of data, and various types of visualizations?
-4. Customization: Can I modify details about how my work appears?
-5. Data Migration: Can I easily move my data in and out, in case I switch to a different tool? Hint for historians: Future-proof your digital history projects! Choose tools that allow you to easily export and migrate data to other platforms. Design projects to keep your data separate from its digital presentation.
-6. Hosting: Can I decide exactly where my data and visualizations will be stored online?
-7. Support: Is the tool actively maintained by its creators, and do they answer questions?
-8. Open Source: Is the tool’s software visible, can it be modified, and redistributed?
-9. Security: Is the tool and my data protected from malicious hackers and malware?
-10. Collaborative: Does the tool allow several people to work together on one shared product?
-11. Privacy: Under the terms of service, is my data and work private or public?
-12. Error-friendly: When something fails, does the tool point out possible problems and solutions?
-13. Cross-platform: Does this tool work across different computer operating systems?
-14. Mobile-friendly: Will it correctly display my work on various mobile devices and browsers?
+Now let’s insert Figure \@ref(fig:us-income-chart2), which contains the same data as Figure \@ref(fig:us-income-chart1), but presented in a different format. Which chart should you believe? Remember, we warned you to watch out for liars.
 
-That's a long list! It's even longer than the number of tools we'll mention in this book. But don't let it overwhelm you. The diagram at the top of the page illustrates the two most important criteria for the many free tools that are currently available: easy-to-learn and powerful features.
+(ref:us-income-chart2) Explore the [alternative version of the interactive line chart](https://datawrapper.dwcdn.net/JsxEp/) of US adult income inequality over time, using the same data as the first version.
 
-TODO: expand on privacy to review sample "terms of service" to use free tools such as Google Drive
-- https://support.google.com/drive/answer/2450387?hl=en#:~:text=As%20our%20Terms%20of%20Service,store%20in%20your%20Drive%20account.
-- See alimSpyingStudentsSchool2017
-- Many of the free web-based tools in this book require that your publicly share your data. Check each tool and decide whether it is appropriate for your data, which may have some privacy restrictions.
+```{r us-income-chart2, fig.cap="(ref:us-income-chart2)"}
+if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/JsxEp/") else knitr::include_graphics("images/01-introduction/us-income-chart2.png")
+```
 
+What’s going on? If Figure \@ref(fig:us-income-chart2) contains the same data as Figure \@ref(fig:us-income-chart1), why do they look so different? What happened to the striking growth in inequality gaps, which now seem to be smoothed away? Did the crisis suddenly disappear? Was it a hoax?
 
-TODO: Insert Table: Tools featured in this book, with links to relevant chapters, and how they rate on various criteria above
+Although the chart in Figure \@ref(fig:us-income-chart2) is technically accurate, it misleads readers. Look closely at the labels in the vertical axis. The distance between the first and second figures ($1,000 to $10,000) is the same as the distance between the second and the third ($10,000 to $100,000), but those jumps represent very different amounts of money ($9,000 versus $90,000). That’s because this chart was constructed with a [logarithmic scale](https://en.wikipedia.org/wiki/Logarithmic_scale), which is most appropriate for showing exponential growth. You may recall seeing logarithmic scales during the early months of the Covid pandemic, when they were appropriately used to illustrate very high growth rates, which are difficult to display with a traditional linear scale. This second chart is technically accurate, because the data points and scale labels match up, but it’s misleading because there is no good reason to interpret this income data using a logarithmic scale, other than to disguise the crisis. We have the ability to illuminate the truth with charts, but we can also use charts to lie.
 
-Resources to consider integrating into above:
+Let’s expand our analysis of income inequality beyond national borders. Here’s a new claim that introduces comparative evidence and its source. Unlike the prior US examples that showed historical data for three income tiers, this global example focuses on the most current year of data available for the top 1 percent in each nation. Also, instead of measuring income in US dollars, this international comparison measures the percentage share of the national income received by the top 1 percent. In other words, how large a slice of the pie goes to the richest 1 percent in each nation?
 
-Lisa Charlotte Rost, “What I Learned Recreating One Chart Using 24 Tools,” Source, December 8, 2016, https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/
+*Claim 3. Income inequality is more severe in the United States, where the richest 1 percent of the population currently receives 20 percent of the national income. By contrast, in most European nations the richest 1 percent receives a smaller share, ranging between 6 to 15 percent of the national income.*[@worldinequalitydatabaseTopNationalIncome2020]
 
-Lincoln Mullen, "How to Make Prudent Choices About Your Tools," ProfHacker blog, Chronicle of Higher Education, August 14, 2013, http://www.chronicle.com/blogs/profhacker/how-to-make-prudent-choices-about-your-tools
+Following the same train of thought above, let’s supplement this claim with a visualization to evaluate its persuasiveness. While we could create a table or a chart, those would not be the most effective ways to quickly display data for all of the nations featured in our claim, and we also want to encourage readers to explore information around the globe. Since this is spatial data, let’s transform it into a map, as shown in Figure \@ref(fig:world-income-map1).
 
-Carl V. Lewis, Dataviz.tools: A curated guide to the best tools, resources and technologies for data visualization, http://dataviz.tools
+TODO: clean up styling in both maps below, then redo static screenshots
 
-Lisa Spiro and colleagues, DiRT: Digital Research Tools Directory (formerly Bamboo), http://dirtdirectory.org
+(ref:world-income-map1) Explore the [interactive map](https://handsondataviz.github.io/leaflet-world-income-share/index.html) of world income inequality, measured by the share of national income received by the top 1 percent of the population, based on the most recent data available. Source: [World Inequality Database 2020](https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country).
 
-Audrey Watters, “‘The Audrey Test’: Or, What Should Every Techie Know About Education?,” Hack Education, March 17, 2012, http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education
+```{r world-income-map1, fig.cap="(ref:world-income-map1)"}
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-world-income-share/index.html") else knitr::include_graphics("images/01-introduction/world-income-map1.png")
+```
 
-## Follow Along on a Computer {- #computer}
-To follow the steps in this book, we recommend either a desktop or laptop computer, running either the Mac or Windows or Linux operating system, with an internet connection and a modern web browser such as Chrome, Firefox, Safari, or Edge. Another good option is a Chromebook laptop, which enables you to complete *most* of the steps in this book, and we'll point out any limitations in specific chapters. While it's possible to use a tablet or smartphone device, we do not recommend it because you cannot follow all of the steps, and you'll also get frustrated with the small screen and perhaps throw your device (or this book) across the room, and possibly injure someone (and we will not be held responsible!)
+Is Figure \@ref(fig:world-income-map1) more persuasive than Claim 3? While the map and the text present the same data about income inequality in the US versus Europe, there should be no difference. But the map pulls you into a powerful story that vividly illustrates gaps between the rich and poor, similar to the chart example above. Colors in the map signal a crisis. The US and some other nations stand out in dark red, at the highest level of the legend, where the top 1 percent of the population receives 20 percent or more of the national income. By contrast, as your eye floats across the Atlantic, nearly all of the European nations appear in lighter beige and orange colors, showing that their top-tier receive a smaller share of the national income, typically between 5 and 15 percent. Income inequality burns red in the US, while Europe appears calm.
 
-If you're working on a laptop, consider buying or borrowing an external mouse that can plug into your machine. We've met several people who found it much easier to click, hover, and scroll with a mouse rather than a laptop's built-in trackpad.
+Now let's introduce the map in Figure \@ref(fig:world-income-map2), which contains the same data as shown in Figure \@ref(fig:world-income-map1), but is displayed in a different format. Which map should you believe?
 
-If you're new to working with computers---or teaching new users with this book---consider starting with [mouse exercises](http://www.pbclibrary.org/mousing/mousercise.htm). All of the tools in this book assume that users already know how to click tiny buttons, hover over links, and scroll web pages, but rarely are these skills taught, and everyone needs to learn them at some point in our lives.
+(ref:world-income-map2) Explore the [alternative version of the interactive map](https://handsondataviz.github.io/leaflet-world-income-share/index-version2.html) of world income inequality, using the same data as the map above.
 
-<!-- TODO: I added the tips above because these are huge yet surmountable obstacles for many people I've worked with, especially older generations and incarcerated people. But I'm uncertain about the link to the mouse exercises. Perhaps I should tweet at public library staff and instructors to find better beginning resources? -->
+```{r world-income-map2, fig.cap="(ref:world-income-map2)"}
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-world-income-share/index-version2.html") else knitr::include_graphics("images/01-introduction/world-income-map2.png")
+```
 
-TODO: add password manager tutorial to keep track of your accounts for the online tools you'll use in this book. The free and open-source BitWarden.com tool nicely integrates with most browsers and even smartphones.
+Why does the second map in Figure \@ref(fig:world-income-map2) look different than the first map in Figure \@ref(fig:world-income-map1)? The US is now shaded in a lighter purple color, similar to that of Europe. Did the inequality crisis simply fade away from the US? Which map tells the truth?
+
+This time, neither map is misleading. Both make valid interpretations of the data with reasonable design choices, even though they create very different impressions in our eyes. To understand why, look closely at the legend in the bottom-left corner of both maps. The first map sorts nations in three ranges (0-10, 10-20, 20+), while the second map uses slightly different range cutoffs (0-9, 9-21, 21+). Since the US share is 20.5 percent, in the first map it falls into the top bucket with the darkest color, but in the second map it falls into the middle bucket with a lighter color. Yet both ranges are equally valid, as there is no clear rule about using one versus the other in this case. In the same way, the first map displays three shades of red, while the second map uses purple. Based on design principles discussed later in the book, both are equally valid color choices.
+
+To summarize, people can lie with charts and maps, and some design choices can intentionally mislead. But data visualization is also interpretive and open-ended. It’s common to create more than one picture of the truth.
+
+That poses a challenge for us as authors of this book. Data visualizations do not always represent the truth. Like words, they can be manipulated to mislead your audience. To help you create true and meaningful charts and maps, we’ll point you toward principles of good design, encourage thoughtful habits of mind, and in some cases specifically tell you what *not* to do. But data visualization can be a slippery subject, sometimes more art than science. Often there is no *single* correct answer to a visualization problem, but rather *several* plausible ones, each with their own strengths and weaknesses. As a reader of this book who’s learning about data visualization, your job is to search for *good answers* without necessarily expecting to find *the one right answer*, especially as visualization tools and methods continue to evolve. Also, keep your guard up and continue to watch out for data visualizations that lie.
+
+## Organization of the Book {- #organization}
+TODO
+
+ADD intended audience
+
+ADD what this book will and will not do....
 
 ### Summary {- #summary1}
-TODO
-Now you have a better sense of different types of data visualization tools, and how to make wise decisions when choosing among them...
-The next chapter is designed to strengthen your skills for using the most common tool in our data toolkit: spreadsheets.
+TODO: do we need this here?

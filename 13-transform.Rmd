@@ -26,7 +26,7 @@ By the end of this chapter, you should feel much more confident navigating the
 overwhelming world of geospatial data.
 
 ## Bulk Geocode with the US Census {- #bulk-geocode}
-In Chapter 2: Strengthen Your Spreadsheet Skills, you learned [how to geocode addresses with a Google Sheets Add-On](geocode.html) called [Geocoding by SmartMonkey](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). Geocoding converts street addresses to latitude-longitude coordinates (such as *300 Summit St, Hartford CT, USA* to *41.75, -72.69*) that can be placed on maps. While the Geocoding by SmartMonkey Add-On for Google Sheets works well for medium-sized batches of addresses, sometimes you need a faster geocoding service for larger jobs.
+In Chapter 3: Strengthen Your Spreadsheet Skills, you learned [how to geocode addresses with a Google Sheets Add-On](geocode.html) called [Geocoding by SmartMonkey](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). Geocoding converts street addresses to latitude-longitude coordinates (such as *300 Summit St, Hartford CT, USA* to *41.75, -72.69*) that can be placed on maps. While the Geocoding by SmartMonkey Add-On for Google Sheets works well for medium-sized batches of addresses, sometimes you need a faster geocoding service for larger jobs.
 
 One of the fastest ways to geocode up to 10,000 US addresses at a time is to use the [US Census Geocoder](https://geocoding.geo.census.gov/geocoder/locations/addressbatch?form). First, create a CSV file with 5 columns. Your file must *not* contain a header row, and needs to be formatted the following way:
 
@@ -43,7 +43,7 @@ One of the fastest ways to geocode up to 10,000 US addresses at a time is to use
 
 Although some of your data, such as zipcodes or states, may be missing and the geocoder may still be able to recognize and geocode the location, unique IDs are absolutely necessary to include for each row (address).
 
-Tip: If your original data combines address, city, state, and zip into one cell, then see how to [Split Data into Separate Columns in Chapter 4: Clean Up Messy Data](split-data.html). But if your street addresses contain apartment numbers, you can leave them in.
+Tip: If your original data combines address, city, state, and zip into one cell, then see how to [Split Data into Separate Columns in Chapter 5: Clean Up Messy Data](split-data.html). But if your street addresses contain apartment numbers, you can leave them in.
 
 Second, upload your CSV file to the [US Census Geocoder address batch form](https://geocoding.geo.census.gov/geocoder/locations/addressbatch?form). Select *Find Locations Using... > Address Batch*, then choose your file to upload. Select *Public_AR_Current* as the benchmark, and click *Get Results*.
 
@@ -95,7 +95,7 @@ you want darker shades of blue to represent states with more hospitals (as in Fi
 or choropleth, maps instead of point maps.
 
 ```{r pivot-address, fig.cap="(ref:pivot-address)"}
-knitr::include_graphics("images/12-transform/pivot-address-annotated.png")
+knitr::include_graphics("images/13-transform/pivot-address-annotated.png")
 ```
 
 First, save the database to your local machine by going to *Export > Download > CSV*
@@ -104,7 +104,7 @@ of Socrata interface. Figure \@ref(fig:pivot-address-export) shows where you can
 (ref:pivot-address-export) In Socrata, you can export the entire dataset as a CSV.
 
 ```{r pivot-address-export, fig.cap="(ref:pivot-address-export)"}
-knitr::include_graphics("images/12-transform/pivot-address-export.png")
+knitr::include_graphics("images/13-transform/pivot-address-export.png")
 ```
 
 Next, open the file in your favorite spreadsheet tool. If you use Google Sheets,
@@ -117,7 +117,7 @@ column that has no missing values—and choose *Summarize by: COUNTA*. Voila!
 (ref:pivot-address-sheet) Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code).
 
 ```{r pivot-address-sheet, fig.cap="(ref:pivot-address-sheet)"}
-knitr::include_graphics("images/12-transform/pivot-address-sheet.png")
+knitr::include_graphics("images/13-transform/pivot-address-sheet.png")
 ```
 
 Your aggregated dataset is ready, so save it as a CSV. If you use Google Sheets,
@@ -141,7 +141,7 @@ Darker colors represent higher values. Do you notice any differences in spatial 
 (ref:normalize-map-data) Choropleth maps work best with normalized values.
 
 ```{r normalize-map-data, fig.cap="(ref:normalize-map-data)"}
-knitr::include_graphics("images/12-transform/normalize-map-data-annotated.png")
+knitr::include_graphics("images/13-transform/normalize-map-data-annotated.png")
 ```
 
 Both maps show Covid-19 data collected by the New York Times and published
@@ -252,7 +252,7 @@ by volunteers tracing outlines of objects from satellite images.
 (ref:geospatial-raster-vector) Geospatial data can be raster or vector.
 
 ```{r geospatial-raster-vector, fig.cap="(ref:geospatial-raster-vector)"}
-knitr::include_graphics("images/12-transform/geospatial-raster-vector-annotated.png")
+knitr::include_graphics("images/13-transform/geospatial-raster-vector-annotated.png")
 ```
 
 In this book, we will focus on vector data, which is based on features, which can be
@@ -305,7 +305,7 @@ like is shown in Figure \@ref(fig:geojson-github).
 (ref:geojson-github) GitHub can show previews of GeoJSON files stored in repositories.
 
 ```{r geojson-github, fig.cap="(ref:geojson-github)"}
-knitr::include_graphics("images/12-transform/geojson-github.png")
+knitr::include_graphics("images/13-transform/geojson-github.png")
 ```
 
 Warning: In GeoJSON, coordinates are ordered in *longitude-latitude* format,
@@ -401,7 +401,7 @@ tool, such as Mapshaper or QGIS, to convert your file to GeoJSON.
 (ref:geojson-io-import) GeoJson.io successfully imported Hartford parks KML file.
 
 ```{r geojson-io-import, fig.cap="(ref:geojson-io-import)"}
-knitr::include_graphics("images/12-transform/geojson-io-import.png")
+knitr::include_graphics("images/13-transform/geojson-io-import.png")
 ```
 
 You can now save your file to GeoJSON. Go to *Save > GeoJSON* to download
@@ -419,7 +419,7 @@ can [download it](data/hartford-and-suburbs.csv) for the exercise.
 (ref:geojson-io-csv-data) A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features.
 
 ```{r geojson-io-csv-data, fig.cap="(ref:geojson-io-csv-data)"}
-knitr::include_graphics("images/12-transform/geojson-io-csv-data.png")
+knitr::include_graphics("images/13-transform/geojson-io-csv-data.png")
 ```
 
 1. Save your spreadsheet as a CSV file, and drag-and-drop it to the map area of GeoJson.io.
@@ -448,7 +448,7 @@ Table cells are also modifiable, so you can edit your data there.
 You can also log into GeoJson.io with your GitHub account and save directly to your repository.
 
 ```{r geojsonio-gif, fig.cap="A spreadsheet with coordinates columns can be transformed into a GeoJSON with point features."}
-if(knitr::is_html_output()) knitr::include_url("images/12-transform/dataviz-geojsonio-640.gif", height="466px")
+if(knitr::is_html_output()) knitr::include_url("images/13-transform/dataviz-geojsonio-640.gif", height="466px")
 ```
 
 #### Create a GeoJSON from scratch using drawing tools {-}
@@ -468,7 +468,7 @@ Figure \@ref(fig:geojson-io-draw).
 (ref:geojson-io-draw) Use drawing tools to create points, lines, and polygons in GeoJson.io.
 
 ```{r geojson-io-draw, fig.cap="(ref:geojson-io-draw)"}
-knitr::include_graphics("images/12-transform/geojson-io-draw.png")
+knitr::include_graphics("images/13-transform/geojson-io-draw.png")
 ```
 
 3. In the toolbar, you have a choice of four drawing tools: a polyline (which is a series
@@ -548,7 +548,7 @@ all exported layers.
 (ref:mapshaper-export) You can use Mapshaper to quickly convert between geospatial file formats.
 
 ```{r mapshaper-export, fig.cap="(ref:mapshaper-export)"}
-knitr::include_graphics("images/12-transform/mapshaper-export.png")
+knitr::include_graphics("images/13-transform/mapshaper-export.png")
 ```
 
 Tip: Mapshaper doesn't work with KML or KMZ files, but you can use [GeoJson.io](#geojson.html) to convert these.
@@ -570,7 +570,7 @@ choosing the desired file format.
 (ref:mapshaper-edit) Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points.
 
 ```{r mapshaper-edit, fig.cap="(ref:mapshaper-edit)"}
-knitr::include_graphics("images/12-transform/mapshaper-edit.png")
+knitr::include_graphics("images/13-transform/mapshaper-edit.png")
 ```
 
 
@@ -588,7 +588,7 @@ is only 37 kilobytes, 6 times smaller!
 (ref:mapshaper-simplify-demo) Consider simplifying geometries with Mapshaper to make your web maps faster.
 
 ```{r mapshaper-simplify-demo, fig.cap="(ref:mapshaper-simplify-demo)"}
-knitr::include_graphics("images/12-transform/mapshaper-simplify-demo-annotated.png")
+knitr::include_graphics("images/13-transform/mapshaper-simplify-demo-annotated.png")
 ```
 
 To simplify map boundaries in Mapshaper, follow the steps below.
@@ -606,7 +606,7 @@ the map looks appropriate (when the shapes are still recognizable).
 (ref:mapshaper-simplify) Use Simplify & Repair tools in Mapshaper.
 
 ```{r mapshaper-simplify, fig.cap="(ref:mapshaper-simplify)"}
-knitr::include_graphics("images/12-transform/mapshaper-simplify.png")
+knitr::include_graphics("images/13-transform/mapshaper-simplify.png")
 ```
 
 Tip: You may find the US shape a bit unusual and vertically "shrunk".
@@ -623,7 +623,7 @@ Figure \@ref(fig:mapshaper-dissolve).
 (ref:mapshaper-dissolve) Mapshaper lets you dissolve boundaries to create an outline shape.
 
 ```{r mapshaper-dissolve, fig.cap="(ref:mapshaper-dissolve)"}
-knitr::include_graphics("images/12-transform/mapshaper-dissolve.png")
+knitr::include_graphics("images/13-transform/mapshaper-dissolve.png")
 ```
 
 Click the Console button, which opens a window to type in commands. Enter the command below, then press return (Enter).
@@ -662,7 +662,7 @@ If that is the case, use the `-filter-slivers` command to remove them, like that
 (ref:mapshaper-clip) When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature iteslf.
 
 ```{r mapshaper-clip, fig.cap="(ref:mapshaper-clip)"}
-knitr::include_graphics("images/12-transform/mapshaper-clip.png")
+knitr::include_graphics("images/13-transform/mapshaper-clip.png")
 ```
 
 #### Remove unwanted data fields {-}
@@ -717,7 +717,7 @@ of the CSV file.
 (ref:mapshaper-join) Mapshaper lets you join spatial and CSV files using common keys (for example, town names).
 
 ```{r mapshaper-join, fig.cap="(ref:mapshaper-join)"}
-knitr::include_graphics("images/12-transform/mapshaper-join.png")
+knitr::include_graphics("images/13-transform/mapshaper-join.png")
 ```
 
 Tip: To avoid confusion, it may be useful to re-name your CSV column that contains key values to match the key attribute name of your map.
@@ -754,7 +754,7 @@ we will talk about what happens to objects that don't join.
 (ref:mapshaper-count-points) Mapshaper's -join can count points in polygons.
 
 ```{r mapshaper-count-points, fig.cap="(ref:mapshaper-count-points)"}
-knitr::include_graphics("images/12-transform/mapshaper-count-points.png")
+knitr::include_graphics("images/13-transform/mapshaper-count-points.png")
 ```
 
 #### More about joins {-}
@@ -815,7 +815,7 @@ to a few other neighboring towns.
 (ref:mapshaper-merge-csv) Create a two-column crosswalk of towns and which districts they should be merged to.
 
 ```{r mapshaper-merge-csv, out.width="250px", fig.cap="(ref:mapshaper-merge-csv)"}
-knitr::include_graphics("images/12-transform/mapshaper-merge-csv.png")
+knitr::include_graphics("images/13-transform/mapshaper-merge-csv.png")
 ```
 
 6. Save this new file as *ct-towns-merged.csv*, and drag-and-drop it to Mapshaper on top of your *ct-towns* layer. Click *Import*.
@@ -838,7 +838,7 @@ and all of the other polygons remain the same. Figure \@ref(fig:mapshaper-merge)
 (ref:mapshaper-merge) Merge polygons based on a predefined crosswalk.
 
 ```{r mapshaper-merge, fig.cap="(ref:mapshaper-merge)"}
-knitr::include_graphics("images/12-transform/mapshaper-merge.png")
+knitr::include_graphics("images/13-transform/mapshaper-merge.png")
 ```
 
 You can inspect attribute data of polygons using *Cursor > inspect attributes* tool, and save the resulting file
@@ -879,20 +879,20 @@ like is shown in Figure \@ref(fig:kmz-earth).
 (ref:kmz-earth) In Google Earth Pro, right-click the KMZ layer and choose *Save Place As*.
 
 ```{r kmz-earth, out.width="400px", fig.cap="(ref:kmz-earth)"}
-knitr::include_graphics("images/12-transform/kmz-earth.png")
+knitr::include_graphics("images/13-transform/kmz-earth.png")
 ```
 4. In the dropdown menu of *Save file...* window, choose KML format, like is shown in Figure \@ref(fig:kmz-save-as).
 
 (ref:kmz-save-as) Save as KML, not KMZ.
 
 ```{r kmz-save-as, out.width="350px", fig.cap="(ref:kmz-save-as)"}
-knitr::include_graphics("images/12-transform/kmz-save-as.png")
+knitr::include_graphics("images/13-transform/kmz-save-as.png")
 ```
 
 Alternatively, you can use any zip-utility to extract a KML file from KMZ.
 KMZ is simply a 'zipped' version of a KML file!
 
-### Summary {- #summary12}
+### Summary {- #summary13}
 
 In this chapter, you learned to use pivot tables to count addresses (points)
 by geographical area, such as states or cities (polygons).

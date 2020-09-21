@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Make a Copy of a Google Sheet | Hands-On Data Visualization</title>
+  <title>Ten Questions About Tools and Tradeoffs | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Make a Copy of a Google Sheet | Hands-On Data Visualization" />
+  <meta property="og:title" content="Ten Questions About Tools and Tradeoffs | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Make a Copy of a Google Sheet | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Ten Questions About Tools and Tradeoffs | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="csv.html"/>
-<link rel="next" href="share.html"/>
+<link rel="prev" href="sketch.html"/>
+<link rel="next" href="featured-tools.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -318,40 +318,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="copy" class="section level2 unnumbered" number="">
-<h2>Make a Copy of a Google Sheet</h2>
-<p>In this book we provide several data files using Google Sheets. Our links point to the online files, and we set the sharing settings to allow anyone to view—but not edit—the original version. This allows everyone to have access to the data, but no one can accidentally modify the contents. In order for you to complete several exercises in this chapter, you need to learn how to make your own copy of our Google Sheets—which you can edit—without changing our originals.</p>
-<ol style="list-style-type: decimal">
-<li><p>Open this <a href="https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo">Google Sheet of Hands-On Data Visualization reader public survey responses</a> in a new tab in your browser. We set it to “View only” so that anyone on the internet can see the contents, but not edit the original file. Learn more about the survey at the top of the chapter.</p></li>
-<li><p>Sign in to your Google account by clicking the blue button in the upper-right corner.</p></li>
-<li><p>Go to <em>File &gt; Make a Copy</em> to create a duplicate of this Google Sheet in your Google Drive, as shown in Figure <a href="copy.html#fig:file-make-copy">3.5</a>. You can rename the file to remove “Copy of…”.</p></li>
-</ol>
-
-<div class="figure"><span id="fig:file-make-copy"></span>
-<img src="images/03-spreadsheet/file-make-copy.png" alt="Go to File - Make a Copy to create your own version of this Google Sheet." width="200" />
-<p class="caption">
-Figure 3.5: Go to <em>File - Make a Copy</em> to create your own version of this Google Sheet.
-</p>
-</div>
-<ol start="4" style="list-style-type: decimal">
-<li>To keep your Google Drive files organized, save them in folders with relevant names to make them easier to find. For example, you can click the <em>My Drive</em> button and the <em>New folder</em> button to create a folder for your data, before clicking <em>OK</em>, as shown in Figure <a href="copy.html#fig:my-drive-new-folder">3.6</a>.</li>
-</ol>
-
-<div class="figure"><span id="fig:my-drive-new-folder"></span>
-<img src="images/03-spreadsheet/my-drive-new-folder.png" alt="Click the My Drive and New folder buttons to save your work in a folder." width="300" />
-<p class="caption">
-Figure 3.6: Click the <em>My Drive</em> and <em>New folder</em> buttons to save your work in a folder.
-</p>
-</div>
-<p>Your copy of the Google Sheet will be private to you only, by default. In the next section we’ll learn about different options for sharing your Google Sheet data with others.</p>
+<div id="tool-tradeoffs" class="section level2 unnumbered" number="">
+<h2>Ten Questions About Tools and Tradeoffs</h2>
+<p>If you feel overwhelmed by the growing number of digital tools, you’re not alone. Trying to keep track of all of the different software applications to get your regular work done sometimes feels like an additional part-time job that you didn’t realize you signed up for. Digital tools are continuously evolving. That’s good news if you like to choose among many options, but bad news if you don’t have time to make complex decisions.</p>
+<p>When you’re comparing digital tools, every decision involves some type of tradeoff, or balancing of competing wants and needs. To help you navigate this decision-making process, here’s our list of ten important factors that go through our minds when we consider using a new piece of software or online service. We worded our categories very broadly, since they can be applied to other realms of your digital world, but for each one we’ll offer more context about data visualization in particular.</p>
+<p><em>1. Easy-to-learn</em></p>
+<p>How much of your time will learning a new tool require? This may be the most important factor in our busy lives, but also one that varies a great deal, as your personal investment of time and energy depends largely on your prior level of skills using similar tools, and your pace in grasping related concepts. In the next few chapters, we highlight several we label as <em>Easy Tools</em> because most novices describe them as relatively straightforward for getting started on with data visualization projects, and provide helpful error messages when things go wrong. Easier tools usually feature a graphical user interface, meaning you operate them with pull-down menus or drag-and-drop steps, rather than memorizing a set of commands to be typed into a blank box. Later in the book, we’ll introduce ways to create more advanced visualizations through code templates, which you can copy and edit more easily than writing computer code from scratch. When deciding which tools to include to this book, we placed easy-to-learn at the top of our list. In fact, we removed a popular drag-and-drop tool from an earlier version of this book because it required far too many steps to create a map, and even we had trouble following our own instructions. When faced with several good options, choose simplicity.</p>
+<p><em>2. Affordable</em></p>
+<p>Is the tool entirely free to use? Or is based on a <em>freemium</em> model that offers basic features for free, with premium features at a price? Or does it require making a one-time purchase, or a monthly subscription fee? Of course, the answer to what is affordable will vary for each person. Of course, we fully understand that some software developers require user fees to stay in business, and both of us happily pay to use some specific tools in our work. If you regularly rely on a particular tool to do your job, with no viable alternative, it’s in your best interest to financially support their continued existence. But when selecting tools to feature in this data visualization book, we chose those that are entirely free, or offer most of their features at the free level, to increase access for readers around the globe. We’re both impressed by what newcomers to the field can accomplish with a wide array of free tools.</p>
+<p><em>3. Powerful</em></p>
+<p>Does the tool provide all of the features you anticipate needing? In the realm of data visualization, does the tool support a wide variety of chart types? More usually is better, but some types are obscure and rarely used, such as <a href="https://en.wikipedia.org/wiki/Radar_chart">radar charts</a> and <a href="https://en.wikipedia.org/wiki/Waterfall_chart">waterfall charts</a>. Similarly, are there significant limits on the amount of data you can upload, or the products it creates? For example, once we removed a freemium tool from an earlier version of this book because the company began to require that maps viewed more than 100 times on the web require the paid license. Finally, to what extent can you customize the style or appearance of your visualizations? It’s common for drag-and-drop or freemium tools to limit your display options, so you may need to make tradeoffs between easy-to-learn and affordable versus more powerful and customizable ones. In this book, we gradually introduce more advanced tools in each chapter, to help you identify tools that fit your ideal combination of simplicity and power.</p>
+<p><em>4. Supported</em></p>
+<p>Does the software developer regularly maintain and update the tool, and respond to questions or issues? Is there an active user community that supports the tool and shares their knowledge? If you’ve worked with digital tools as long as we have, you’ll recognize our pain in losing those we regularly relied on, yet whose developers pulled the plug. For example, the <a href="http://killedbygoogle.com">Killed By Google</a> lists nearly 200 applications and online services that this multi-billion dollar corporation closed down. One of these was a popular data visualization tool, <a href="https://en.wikipedia.org/wiki/Google_Fusion_Tables">Google Fusion Tables</a>, which previously occupied a full chapter in an earlier version of this book until we removed it when Google shut down the tool after a ten-year run in 2019. Although none of us can predict which online tools will persist in future years, we always look for signs of active support—such as regular updates, stars earned on a <a href="http://github.com">GitHub</a> developer’s site, and questions answered in the <a href="http://stackoverflow.com">StackOverflow</a> user forum—when deciding which ones to feature in this book.</p>
+<p><em>5. Transferable</em></p>
+<p>How easily can you migrate your data <em>into</em> and <em>out</em> of an online platform? Even the best visualization tools do not last forever in the rapidly-evolving digital age. Eventually, all data needs to migrate to another platform, and it’s your job to be prepared for this inevitable transition. For example, we stopped recommending an online story map tool by a well-known software company, because while users can upload locations, text, and photos, there is no simple way to export all of their work! One the best ways to future-proof your visualization projects is to ensure that your data files are easily separated from the presentation software that generates the charts or maps. If your current tool or online service announced it would stop working next week, could you easily extract all of the underlying data in a common file format that you can upload to a different platform? When selecting tools to highlight in this book, we favored those that supported easy data downloads for future migrations.</p>
+<p>TODO: finish these…</p>
+<p><em>6. Secure</em></p>
+<p>This category covers several questions.
+Does the platform take reasonable precautions to protect my information from malicious hackers and malware?
+Also, does it clearly explain whether my data and visualization will remain private or become public? Check terms of service…. Also,
+TODO: expand on privacy to review sample “terms of service” to use free tools such as Google Drive
+- <a href="https://support.google.com/drive/answer/2450387?hl=en#" class="uri">https://support.google.com/drive/answer/2450387?hl=en#</a>:~:text=As%20our%20Terms%20of%20Service,store%20in%20your%20Drive%20account.
+- See alimSpyingStudentsSchool2017
+- Many of the free web-based tools in this book require that your publicly share your data. Check each tool and decide whether it is appropriate for your data, which may have some privacy restrictions.</p>
+<p><em>7. Collaborative</em></p>
+<p>Does the tool allow several people to work together on one shared product? Think about this at the same time as you consider “secure” above</p>
+<p><em>8. Cross-Platform</em></p>
+<p>Does this tool work across different computer operating systems? On a related note, are the visualizations responsive to screen size, meaning that they display acceptably on smartphones or tablet devices?</p>
+<p><em>9. Open-Source</em></p>
+<p>Is the tool’s software code viewable? Can it be modified and redistributed, so that other software developers can build upon it and add new extensions?</p>
+<p><em>10. Accessible</em>
+Does this visualization platform create accessible information for visually-impaired users? While X years have passed since the Americans with Disabilities Act (ADA) and similar laws were signed, accessibility still remains relatively new terrain…. Explain why and how this affected our choices in tool selection for this book.</p>
+<p>That’s our list of ten questions to ask yourself when considering whether to add another item to your digital toolkit. You may have others, such as…ethical business practices……</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="csv.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="share.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="sketch.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="featured-tools.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -390,7 +396,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/03-spreadsheet.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/02-choose.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

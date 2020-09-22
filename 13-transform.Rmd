@@ -25,7 +25,7 @@ Finally, you'll also learn how to georectify a digitized map to display as a bac
 By the end of this chapter, you should feel much more confident navigating the
 overwhelming world of geospatial data.
 
-## Bulk Geocode with the US Census {- #bulk-geocode}
+## Bulk Geocode with US Census {- #bulk-geocode}
 In Chapter 3: Strengthen Your Spreadsheet Skills, you learned [how to geocode addresses with a Google Sheets Add-On](geocode.html) called [Geocoding by SmartMonkey](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). Geocoding converts street addresses to latitude-longitude coordinates (such as *300 Summit St, Hartford CT, USA* to *41.75, -72.69*) that can be placed on maps. While the Geocoding by SmartMonkey Add-On for Google Sheets works well for medium-sized batches of addresses, sometimes you need a faster geocoding service for larger jobs.
 
 One of the fastest ways to geocode up to 10,000 US addresses at a time is to use the [US Census Geocoder](https://geocoding.geo.census.gov/geocoder/locations/addressbatch?form). First, create a CSV file with 5 columns. Your file must *not* contain a header row, and needs to be formatted the following way:
@@ -69,7 +69,7 @@ If for some reason you cannot geocode address-level data, but you need to produc
 you can use pivot tables to get counts of points for specific areas, such as towns or states. In the next section,
 we will look at hospital addresses in the US and how we can count them by state using pivot tables.
 
-## Pivot Address-Level Point Data into Polygon Data {- #pivot-point-to-polygon}
+## Pivot Points into Polygon Data {- #pivot-point-to-polygon}
 
 If you deal with geographical data, you may find yourself in a situation where
 you have a list of addresses which need to be counted (*aggregated*) by area
@@ -129,7 +129,7 @@ We will introduce both tools in the next few sections.
 But before we do that, let's talk about data normalization and why showing
 counts of hospitals per state doesn't really tell a good story.
 
-## Normalize Data to Create Meaningful Choropleth Maps {- #normalize}
+## Normalize Data for Meaningful Maps {- #normalize}
 
 Choropleth maps are best when they represent relative, not absolute values.
 Consider two maps shown in Figure \@ref(fig:normalize-map-data). They both are
@@ -365,7 +365,7 @@ and we strongly recommend to store and share your map data in GeoJSON.
 In the next section, we will look at free online tools to create, convert, join, crop,
 and in other ways manipulate GeoJSON files.
 
-## GeoJson.io to Convert, Edit, and Create Map Data {- #geojsonio}
+## Draw and Edit with GeoJson.io {- #geojsonio}
 
 [GeoJson.io](https://geojson.io) is a popular open-source web tool to convert,
 edit, and create GeoJSON files. The tool was originally developed by
@@ -500,7 +500,7 @@ too "simplified", and make them more precise with the satellite imagery.
 In the next section, we will introduce Mapshaper, another free online tool
 to convert and modify geospatial files.
 
-## Mapshaper to Convert, Edit, and Join Data {- #mapshaper}
+## Edit and Join with Mapshaper {- #mapshaper}
 
 Like [GeoJson.io](geojsonio.html), [Mapshaper](https://mapshaper.org)
 is a free, open-source editor that can convert geospatial files, edit attribute
@@ -851,7 +851,7 @@ There are many more commands within Mapshaper that are worth exploring if you ar
 features using JavaScript expressions, assigning colors to polygons based on values, and many more. Explore the [Wiki](https://github.com/mbloch/mapshaper/wiki/Command-Reference) of Mapshaper project on GitHub for more commands and examples.
 
 
-## Georectify a Digitized Map with MapWarper {- #mapwarper}
+## Georectify with MapWarper {- #mapwarper}
 TODO: write this section about using [MapWarper](http://mapwarper.net), a tool created and hosted by Tim Waters, to upload and georectify a scanned map. This means to properly position a scanned map based on standard coordinates, so that you can place it as an overlay on an interactive map, such as [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html).
 
 Anyone can upload and georectify a map on the developer's public site at http://mapwarper.net, and also see how it's used by organizations such as the New York Public Library at http://maps.nypl.org.
@@ -859,7 +859,7 @@ Anyone can upload and georectify a map on the developer's public site at http://
 Warning: MapWarper is a wonderful open-source tool and platform, but service may be interrupted. As of July 2020, the site warns: "Ran out of disk space. Maps older than 2 years will need re-warping to work. Downtime will happen again."
 
 
-## Convert a Compressed KMZ file to KML format {- #convert-kmz}
+## Convert Compressed KMZ to KML {- #convert-kmz}
 
 In the previous sections, we looked at using Geojson.io and Mapshaper
 to convert geospatial files. However, not all file types can be converted with these tools.

@@ -12,6 +12,11 @@ Sections in this chapter:
 TODO: Build on themes from the new intro: Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors, other than a general dictum to make “honest and useful” decisions. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles) or intervals that vary according to patterns in the data (such as standard deviations from the mean).
 Just like charts, we can mislead and lie with maps, but we can also create very different pictures of the truth.
 
+TODO: Add new sections on other types of bias.
+
+Example: Map with “empty” land ignoring indigenous people https://twitter.com/indigenia/status/1308406887231246337?s=12
+
+Example: Watch for negative versus positive framing and how it affects readers. For example, British statistician David Spiegelhalter notes that US hospitals report *mortality rates*, while UK hospitals report *survival* rates. When considering the risks of a surgical procedure for member of your family, a 5 percent mortality rate sounds worse than a 95 percent survival rate, even they're mathematically identical. Furthermore, augmenting the rate with raw numbers (such as 20 deaths out of 400 patients) raises the impression of risk even higher, because we begin to imagine real people's lives, not abstract percentages.^[@spiegelhalterArtStatisticsLearning2019, pp. 22-5]
 
 Learn more:
 - Darrell Huff, How to Lie with Statistics (W. W. Norton & Company, 1954), http://books.google.com/books?isbn=0393070875

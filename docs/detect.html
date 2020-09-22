@@ -156,8 +156,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Your Tools</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Sketch Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="tool-tradeoffs.html"><a href="tool-tradeoffs.html"><i class="fa fa-check"></i>Ten Questions About Tools and Tradeoffs</a></li>
-<li class="chapter" data-level="" data-path="featured-tools.html"><a href="featured-tools.html"><i class="fa fa-check"></i>Featured Tools In This Book</a></li>
+<li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
+<li class="chapter" data-level="" data-path="recommended-tools.html"><a href="recommended-tools.html"><i class="fa fa-check"></i>Recommended Tools In This Book</a></li>
 <li class="chapter" data-level="" data-path="password-manager.html"><a href="password-manager.html"><i class="fa fa-check"></i>Use a Password Manager</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 </ul></li>
@@ -258,14 +258,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="13" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>13</b> Transform Your Map Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with the US Census</a></li>
-<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Address-Level Point Data into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data to Create Meaningful Choropleth Maps</a></li>
+<li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
+<li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data for Meaningful Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
-<li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>GeoJson.io to Convert, Edit, and Create Map Data</a></li>
-<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Mapshaper to Convert, Edit, and Join Data</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify a Digitized Map with MapWarper</a></li>
-<li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert a Compressed KMZ file to KML format</a></li>
+<li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
+<li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect Bias in Data Stories</a>
 <ul>
@@ -329,10 +329,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>TODO: Build on themes from the new intro: Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors, other than a general dictum to make “honest and useful” decisions. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles) or intervals that vary according to patterns in the data (such as standard deviations from the mean).
 Just like charts, we can mislead and lie with maps, but we can also create very different pictures of the truth.</p>
+<p>TODO: Add new sections on other types of bias.</p>
+<p>Example: Map with “empty” land ignoring indigenous people <a href="https://twitter.com/indigenia/status/1308406887231246337?s=12" class="uri">https://twitter.com/indigenia/status/1308406887231246337?s=12</a></p>
+<p>Example: Watch for negative versus positive framing and how it affects readers. For example, British statistician David Spiegelhalter notes that US hospitals report <em>mortality rates</em>, while UK hospitals report <em>survival</em> rates. When considering the risks of a surgical procedure for member of your family, a 5 percent mortality rate sounds worse than a 95 percent survival rate, even they’re mathematically identical. Furthermore, augmenting the rate with raw numbers (such as 20 deaths out of 400 patients) raises the impression of risk even higher, because we begin to imagine real people’s lives, not abstract percentages.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
 <p>Learn more:
 - Darrell Huff, How to Lie with Statistics (W. W. Norton &amp; Company, 1954), <a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a>
 - Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of Chicago Press, 1996), <a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a>
 - Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9, 2017, <a href="http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/" class="uri">http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/</a></p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="16">
+<li id="fn16"><p><span class="citation">David Spiegelhalter, <em>The Art of Statistics: Learning from Data</em> (Penguin UK, 2019), <a href="https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ</a></span>, pp. 22-5<a href="detect.html#fnref16" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

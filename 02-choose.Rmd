@@ -57,32 +57,26 @@ Does the software developer regularly maintain and update the tool, and respond 
 
 How easily can you migrate your data *into* and *out* of an online platform? Even the best visualization tools do not last forever in the rapidly-evolving digital age. Eventually, all data needs to migrate to another platform, and it's your job to be prepared for this inevitable transition. For example, we stopped recommending an online story map tool by a well-known software company, because while users can upload locations, text, and photos, there is no simple way to export all of their work! One the best ways to future-proof your visualization projects is to ensure that your data files are easily separated from the presentation software that generates the charts or maps. If your current tool or online service announced it would stop working next week, could you easily extract all of the underlying data in a common file format that you can upload to a different platform? When selecting tools to highlight in this book, we favored those that supported easy data downloads for future migrations.
 
-TODO: finish these...
+*6. Secure and Private*
 
-*6. Secure*
-
-This category covers several questions.
-Does the platform take reasonable precautions to protect my information from malicious hackers and malware?
-Also, does it clearly explain whether my data and visualization will remain private or become public? Check terms of service.... Also,
-TODO: expand on privacy to review sample "terms of service" to use free tools such as Google Drive
-- https://support.google.com/drive/answer/2450387?hl=en#:~:text=As%20our%20Terms%20of%20Service,store%20in%20your%20Drive%20account.
-- See alimSpyingStudentsSchool2017
-- Many of the free web-based tools in this book require that your publicly share your data. Check each tool and decide whether it is appropriate for your data, which may have some privacy restrictions.
+This category combines related questions about security and privacy. First, does the online tool or service take reasonable precautions to protect your personal information from malicious hackers and malware? Review a [list of data breaches on Wikipedia](https://en.wikipedia.org/wiki/List_of_data_breaches) to help you make informed decisions. Second, if you access the tool through your browser, does it track your web activity across different sites? Consider installing the free [Privacy Badger browser extension from the Electronic Frontier Foundation](https://privacybadger.org/) to view and exercise some control over who's tracking you, and also review the [EFF's Surveillance Self-Defense Guide](https://ssd.eff.org/). Also be aware of [internet censorship by different governments around the globe](https://en.wikipedia.org/wiki/Internet_censorship_and_surveillance_by_country), as compiled by Wikipedia, unless you are reading this in China, which has [blocked access to all of Wikipedia since April 2019](https://en.wikipedia.org/wiki/Censorship_of_Wikipedia). Finally, does the tool clearly explain whether the data you enter or the products you create will stay private or become public? For example, some companies offer free access to their visualization tools, but in exchange, require you to make your data, charts, and maps publicly accessible. That tradeoff may be acceptable if you're working with open-access data and already plan to freely share your visualizations. But make sure the terms of service are clearly defined before you start using a tool.
 
 *7. Collaborative*
 
-Does the tool allow several people to work together on one shared product?   Think about this at the same time as you consider "secure" above
+Does the tool allow people to work together and co-create a data visualization? Prior generations of digital tools were designed primarily for solo users, in part to address security and privacy issues raised above. But as co-authors, who jointly created this book and the visualizations featured in it, we favor a newer generation of tools designed for collaborative work environments.
 
 *8. Cross-Platform*
 
-Does this tool work across different computer operating systems? On a related note, are the visualizations responsive to screen size, meaning that they display acceptably on smartphones or tablet devices?
+This category refers to both creating and consuming digital content. First, does the tool work across different computer operating systems? In this book, we highlight several tools that run inside any modern web browser, which usually means they will operate on all major desktop and laptop computer platforms, such as Windows, Mac, Chromebook, and Linux. At other times, we specify that a tool will only run on specific computer operating systems, which reduces access, most often to people with lower-cost computers. Second, does the tool create visualizations that are responsive to different screen sizes? In other words, does it produce charts and maps that display acceptably on smartphones and tablet devices? In this book, we favor tools that operate across desktop/laptop computer platforms, and display content responsively on smaller devices. But we do not expect that tools are designed to create data visualizations on smaller devices.
 
 *9. Open-Source*
 
-Is the tool’s software code viewable? Can it be modified and redistributed, so that other software developers can build upon it and add new extensions?
+Is the tool’s software code publicly viewable? Can the code be modified and redistributed, so that other developers can suggest improvements, or build new features or extensions? We recognize that many companies rely on non-public proprietary code to sell their tools at a profit, and several of those tools appear in this book. But we favor open-source code when feasible, and have been impressed with the growing number of tools offered under different types of open-source licensing arrangements by for-profit companies, non-profit organizations, and sustainable communities of volunteer developers.
 
 *10. Accessible*
-Does this visualization platform create accessible information for visually-impaired users? While X years have passed since the Americans with Disabilities Act (ADA) and similar laws were signed, accessibility still remains relatively new terrain.... Explain why and how this affected our choices in tool selection for this book.
+
+Does the tool create accessible visualizations for visually-impaired users? Although disability advocacy laws were passed decades ago, web technology is still behind and slowly catching up, especially in the field of data visualization. But when selecting tools for this book, we highlight some such as [Datawrapper, which includes a built-in check for colorblindness](https://blog.datawrapper.de/colorblind-check/), and [Highcharts, which offers some chart types designed for low-vision accessible screen readers](https://www.highcharts.com/demo/accessible-line).
+
 
 That's our list of ten questions to ask yourself when considering whether to add another item to your digital toolkit. You may have others, such as...ethical business practices......
 

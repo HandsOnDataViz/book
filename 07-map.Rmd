@@ -19,11 +19,12 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 | Polyline map     <br> ![](images/07-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)|
 | Heat map     <br> ![](images/07-map/map-heat.png) | Used to show hotspots or clusters of events, such as high-crime areas. <br>Easy tool: n/a <br>Power tool: [Leaflet Heatmap template](leaflet-heatmap.html) |
 | Combination map   <br> ![](images/07-map/map-point-polygon-polyline.png) | Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)  |
-| Storymap <br> ![](images/07-map/map-storymap.png) | Best for guided point-by-point journey through a historical narrative, with optional photos, audio, or video on an interactive map. <br> Easy tool: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/) <br> Power tool: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
+| Storymap <br> ![](images/07-map/map-storymap.png) | Best for guided point-by-point journey through a historical narrative, with optional photos, audio, or video on an interactive map. <br> Power tool: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
 
 TODO ABOVE:
 
 - UPDATE table to match chapter contents.
+- Decide about removing Storymap "easy tools" because neither allow you to export data you enter: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/)
 - Add tab-view map for historical change template?
 - Add synchronized side-by-side map template?
 
@@ -601,6 +602,8 @@ they show relative, not absolute numbers.
 Displaying total spending per country is a bad idea, as bigger countries tend
 to have larger populations and as a result larger values for a lot of measures,
 including military spending.
+
+<!-- TODO: reminder that this Tableau visualization is stored in Ilya's account at https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1 -->
 
 (ref:tableau-polygon-final) Filled Polygon (Choropleth) map: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from TODO.
 

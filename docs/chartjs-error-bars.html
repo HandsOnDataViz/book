@@ -147,12 +147,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="organization.html"><a href="organization.html"><i class="fa fa-check"></i>Organization of the Book</a></li>
+<li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 <li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Your Tools</a>
+<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
@@ -187,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
-<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
+<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
@@ -320,15 +320,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Error Bars with Chart.js</h2>
 <p>If your data comes with uncertainty (margins of error), we recommend you
 show it in your visualizations. The bar chart template shown in Figure <a href="chartjs-error-bars.html#fig:chartjs-demo-error-bars">11.2</a>
-shows median and mean (average) income for different-sized geographies: the US state of Colorado, Boulder County, Boulder city, and a census tract in the city. Upload data to CSV file…</p>
+shows median and mean (average) income for different-sized geographies: the US state of Colorado, Boulder County, Boulder city, and a census tract in the city.</p>
 
 <div class="figure"><span id="fig:chartjs-demo-error-bars"></span>
 <iframe src="https://handsondataviz.github.io/chartjs-templates/bar-chart-with-error-bars/index.html" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 11.2: Interactive bar chart with error bars in Chart.js. See <a href="https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart-with-error-bars">detailed instructions on GitHub</a>.
+Figure 11.2: Interactive bar chart with error bars in Chart.js. Explore the <a href="https://handsondataviz.github.io/chartjs-error-bars/index.html">interactive version</a>.
 </p>
 </div>
+<p>To create your own bar or column chart with error bars, with data loaded from a CSV file, using our Chart.js template:</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-error-bars">our GitHub repo for this Chart.js template</a> that contains the code for the chart in Figure <a href="chartjs-error-bars.html#fig:chartjs-demo-error-bars">11.2</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 10: Edit and Host Code with GitHub</a>.</p></li>
+<li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. Place labels that will appear along the axis in the first column, and each data series in its own column (accompanied by a column with uncertainty values). Your CSV must contain at least three columns (labels and one data series with associated uncertainty values). You can add as many data series columns as you wish.</p></li>
+</ol>
+<pre><code>| geo            | median | median_moe | mean   | mean_moe |
+| Colorado       | 68811  | 364        | 92520  | 416      |
+| Boulder County | 78642  | 1583       | 109466 | 2061     |
+| Boulder city   | 66117  | 2590       | 102803 | 3614     |
+| Tract 121.02   | 73396  | 10696      | 120588 | 19322    |</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
+</ol>
+<div class="sourceCode" id="cb18"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb18-1"><a href="chartjs-error-bars.html#cb18-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Household Income for Select US Geographies, 2018&#39;</span><span class="op">;</span></span>
+<span id="cb18-2"><a href="chartjs-error-bars.html#cb18-2"></a></span>
+<span id="cb18-3"><a href="chartjs-error-bars.html#cb18-3"></a><span class="co">// `false` for vertical (column) chart, `true` for horizontal bar</span></span>
+<span id="cb18-4"><a href="chartjs-error-bars.html#cb18-4"></a><span class="kw">var</span> HORIZONTAL <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb18-5"><a href="chartjs-error-bars.html#cb18-5"></a></span>
+<span id="cb18-6"><a href="chartjs-error-bars.html#cb18-6"></a><span class="co">// `false` for individual bars, `true` for stacked bars</span></span>
+<span id="cb18-7"><a href="chartjs-error-bars.html#cb18-7"></a><span class="kw">var</span> STACKED <span class="op">=</span> <span class="kw">false</span><span class="op">;</span>  </span>
+<span id="cb18-8"><a href="chartjs-error-bars.html#cb18-8"></a></span>
+<span id="cb18-9"><a href="chartjs-error-bars.html#cb18-9"></a><span class="co">// Which column defines &quot;bucket&quot; names?</span></span>
+<span id="cb18-10"><a href="chartjs-error-bars.html#cb18-10"></a><span class="kw">var</span> LABELS <span class="op">=</span> <span class="st">&#39;geo&#39;</span><span class="op">;</span></span>
+<span id="cb18-11"><a href="chartjs-error-bars.html#cb18-11"></a></span>
+<span id="cb18-12"><a href="chartjs-error-bars.html#cb18-12"></a><span class="co">// For each column representing a series, define its name and color</span></span>
+<span id="cb18-13"><a href="chartjs-error-bars.html#cb18-13"></a><span class="kw">var</span> SERIES <span class="op">=</span> [</span>
+<span id="cb18-14"><a href="chartjs-error-bars.html#cb18-14"></a>  {</span>
+<span id="cb18-15"><a href="chartjs-error-bars.html#cb18-15"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;median&#39;</span><span class="op">,</span></span>
+<span id="cb18-16"><a href="chartjs-error-bars.html#cb18-16"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Median Income&#39;</span><span class="op">,</span></span>
+<span id="cb18-17"><a href="chartjs-error-bars.html#cb18-17"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;grey&#39;</span><span class="op">,</span></span>
+<span id="cb18-18"><a href="chartjs-error-bars.html#cb18-18"></a>    <span class="dt">errorColumn</span><span class="op">:</span> <span class="st">&#39;median_moe&#39;</span></span>
+<span id="cb18-19"><a href="chartjs-error-bars.html#cb18-19"></a>  }<span class="op">,</span></span>
+<span id="cb18-20"><a href="chartjs-error-bars.html#cb18-20"></a>  {</span>
+<span id="cb18-21"><a href="chartjs-error-bars.html#cb18-21"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;mean&#39;</span><span class="op">,</span></span>
+<span id="cb18-22"><a href="chartjs-error-bars.html#cb18-22"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Mean Income&#39;</span><span class="op">,</span></span>
+<span id="cb18-23"><a href="chartjs-error-bars.html#cb18-23"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;#cc9999&#39;</span><span class="op">,</span></span>
+<span id="cb18-24"><a href="chartjs-error-bars.html#cb18-24"></a>    <span class="dt">errorColumn</span><span class="op">:</span> <span class="st">&#39;mean_moe&#39;</span></span>
+<span id="cb18-25"><a href="chartjs-error-bars.html#cb18-25"></a>  }</span>
+<span id="cb18-26"><a href="chartjs-error-bars.html#cb18-26"></a>]<span class="op">;</span></span>
+<span id="cb18-27"><a href="chartjs-error-bars.html#cb18-27"></a></span>
+<span id="cb18-28"><a href="chartjs-error-bars.html#cb18-28"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb18-29"><a href="chartjs-error-bars.html#cb18-29"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Geography&#39;</span><span class="op">;</span></span>
+<span id="cb18-30"><a href="chartjs-error-bars.html#cb18-30"></a></span>
+<span id="cb18-31"><a href="chartjs-error-bars.html#cb18-31"></a><span class="co">// y-axis label and label in tooltip</span></span>
+<span id="cb18-32"><a href="chartjs-error-bars.html#cb18-32"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;US Dollars&#39;</span><span class="op">;</span></span>
+<span id="cb18-33"><a href="chartjs-error-bars.html#cb18-33"></a></span>
+<span id="cb18-34"><a href="chartjs-error-bars.html#cb18-34"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
+<span id="cb18-35"><a href="chartjs-error-bars.html#cb18-35"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb18-36"><a href="chartjs-error-bars.html#cb18-36"></a></span>
+<span id="cb18-37"><a href="chartjs-error-bars.html#cb18-37"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb18-38"><a href="chartjs-error-bars.html#cb18-38"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
+<p>For more customization, see <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a>.</p>
 </div>
             </section>
 

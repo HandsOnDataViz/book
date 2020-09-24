@@ -147,12 +147,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="organization.html"><a href="organization.html"><i class="fa fa-check"></i>Organization of the Book</a></li>
+<li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 <li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Your Tools</a>
+<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
@@ -187,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
-<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
+<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
@@ -318,19 +318,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartjs-bar-column" class="section level2 unnumbered" number="">
 <h2>Bar or Column Chart with Chart.js</h2>
-<!-- TODO: Ilya, here's the general format I recommend for each template below, which I have matched up with the README file and the code comments, but only for the first demo: https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart. While I really like how you combined all of the chart.js templates into one repo, it adds a bit of complexity for GitHub web-interface users who wish to use the template to make one chart type, since it's a subfolder. Either we need to add extra steps between #1 and #2 below, or we need to split the unified repo into separate ones. What do you think? -->
 <p>Bar or column charts are best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. Always start the x-axis (for a horizontal bar chart) or y-axis (for a vertical column chart) at zero. This interactive Chart.js code template pulls the data from a CSV file, as shown in Figure <a href="chartjs-bar-column.html#fig:chartjs-demo-bar">11.1</a>.</p>
 
 <div class="figure"><span id="fig:chartjs-demo-bar"></span>
-<iframe src="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html" width="672" height="500px">
+<iframe src="https://handsondataviz.github.io/chartjs-bar/index.html" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 11.1: Bar chart with Chart.js: explore the <a href="https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html">interactive version</a>.
+Figure 11.1: Bar chart with Chart.js: explore the <a href="https://handsondataviz.github.io/chartjs-bar/index.html">interactive version</a>.
 </p>
 </div>
 <p>To create your own bar or column chart with CSV data using our Chart.js template:</p>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-templates">our GitHub repo for Chart.js templates</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 10: Edit and Host Code with GitHub</a>.</p></li>
+<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-templates">our GitHub repo for Chart.js template</a> that contains the code for the chart in Figure <a href="chartjs-bar-column.html#fig:chartjs-demo-bar">11.1</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 10: Edit and Host Code with GitHub</a>.</p></li>
 <li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish.</p></li>
 </ol>
 <pre><code>| district  | nonlearner | learner |
@@ -339,31 +338,42 @@ Figure 11.1: Bar chart with Chart.js: explore the <a href="https://handsondatavi
 <ol start="3" style="list-style-type: decimal">
 <li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
 </ol>
-<div class="sourceCode" id="cb16"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb16-1"><a href="chartjs-bar-column.html#cb16-1"></a>  <span class="kw">var</span> HORIZONTAL <span class="op">=</span> <span class="kw">false</span><span class="op">;</span>   <span class="co">// `false` for vertical column chart, `true` for horizontal bar chart</span></span>
-<span id="cb16-2"><a href="chartjs-bar-column.html#cb16-2"></a>  <span class="kw">var</span> STACKED <span class="op">=</span> <span class="kw">false</span><span class="op">;</span>  <span class="co">// `false` for individual bars, `true` for stacked bars</span></span>
-<span id="cb16-3"><a href="chartjs-bar-column.html#cb16-3"></a></span>
-<span id="cb16-4"><a href="chartjs-bar-column.html#cb16-4"></a>  <span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;English Learners by Select School Districts in Connecticut, 2018-19&#39;</span><span class="op">;</span></span>
+<div class="sourceCode" id="cb16"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb16-1"><a href="chartjs-bar-column.html#cb16-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;English Learners by Select School Districts in CT, 2018-19&#39;</span><span class="op">;</span></span>
+<span id="cb16-2"><a href="chartjs-bar-column.html#cb16-2"></a></span>
+<span id="cb16-3"><a href="chartjs-bar-column.html#cb16-3"></a><span class="co">// `false` for vertical column chart, `true` for horizontal bar chart</span></span>
+<span id="cb16-4"><a href="chartjs-bar-column.html#cb16-4"></a><span class="kw">var</span> HORIZONTAL <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
 <span id="cb16-5"><a href="chartjs-bar-column.html#cb16-5"></a></span>
-<span id="cb16-6"><a href="chartjs-bar-column.html#cb16-6"></a>  <span class="kw">var</span> LABELS <span class="op">=</span> <span class="st">&#39;district&#39;</span><span class="op">;</span>  <span class="co">// Column to define &#39;bucket&#39; names on x-axis (for vertical column chart) or y-axis (for horizontal bar chart)</span></span>
-<span id="cb16-7"><a href="chartjs-bar-column.html#cb16-7"></a></span>
-<span id="cb16-8"><a href="chartjs-bar-column.html#cb16-8"></a>  <span class="kw">var</span> SERIES <span class="op">=</span> [  <span class="co">// For each column representing a data series, define its name and color</span></span>
-<span id="cb16-9"><a href="chartjs-bar-column.html#cb16-9"></a>    {</span>
-<span id="cb16-10"><a href="chartjs-bar-column.html#cb16-10"></a>      <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;nonlearner&#39;</span><span class="op">,</span></span>
-<span id="cb16-11"><a href="chartjs-bar-column.html#cb16-11"></a>      <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Non-Learners&#39;</span><span class="op">,</span></span>
-<span id="cb16-12"><a href="chartjs-bar-column.html#cb16-12"></a>      <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;grey&#39;</span></span>
-<span id="cb16-13"><a href="chartjs-bar-column.html#cb16-13"></a>    }<span class="op">,</span></span>
-<span id="cb16-14"><a href="chartjs-bar-column.html#cb16-14"></a>    {</span>
-<span id="cb16-15"><a href="chartjs-bar-column.html#cb16-15"></a>      <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;learner&#39;</span><span class="op">,</span></span>
-<span id="cb16-16"><a href="chartjs-bar-column.html#cb16-16"></a>      <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Learners&#39;</span><span class="op">,</span></span>
-<span id="cb16-17"><a href="chartjs-bar-column.html#cb16-17"></a>      <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;blue&#39;</span></span>
-<span id="cb16-18"><a href="chartjs-bar-column.html#cb16-18"></a>    }</span>
-<span id="cb16-19"><a href="chartjs-bar-column.html#cb16-19"></a>  ]<span class="op">;</span></span>
-<span id="cb16-20"><a href="chartjs-bar-column.html#cb16-20"></a></span>
-<span id="cb16-21"><a href="chartjs-bar-column.html#cb16-21"></a>  <span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;School Districts&#39;</span><span class="op">;</span>  <span class="co">// x-axis label and label in tooltip</span></span>
-<span id="cb16-22"><a href="chartjs-bar-column.html#cb16-22"></a>  <span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Number of Enrolled Students&#39;</span><span class="op">;</span> <span class="co">// y-axis label and label in tooltip</span></span>
-<span id="cb16-23"><a href="chartjs-bar-column.html#cb16-23"></a></span>
-<span id="cb16-24"><a href="chartjs-bar-column.html#cb16-24"></a>  <span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// `true` to show the grid, `false` to hide</span></span>
-<span id="cb16-25"><a href="chartjs-bar-column.html#cb16-25"></a>  <span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// `true` to show the legend, `false` to hide</span></span></code></pre></div>
+<span id="cb16-6"><a href="chartjs-bar-column.html#cb16-6"></a><span class="co">// `false` for individual bars, `true` for stacked bars</span></span>
+<span id="cb16-7"><a href="chartjs-bar-column.html#cb16-7"></a><span class="kw">var</span> STACKED <span class="op">=</span> <span class="kw">false</span><span class="op">;</span>  </span>
+<span id="cb16-8"><a href="chartjs-bar-column.html#cb16-8"></a></span>
+<span id="cb16-9"><a href="chartjs-bar-column.html#cb16-9"></a><span class="co">// Which column defines &#39;bucket&#39; names?</span></span>
+<span id="cb16-10"><a href="chartjs-bar-column.html#cb16-10"></a><span class="kw">var</span> LABELS <span class="op">=</span> <span class="st">&#39;district&#39;</span><span class="op">;</span>  </span>
+<span id="cb16-11"><a href="chartjs-bar-column.html#cb16-11"></a></span>
+<span id="cb16-12"><a href="chartjs-bar-column.html#cb16-12"></a><span class="co">// For each column representing a data series, define its name and color</span></span>
+<span id="cb16-13"><a href="chartjs-bar-column.html#cb16-13"></a><span class="kw">var</span> SERIES <span class="op">=</span> [  </span>
+<span id="cb16-14"><a href="chartjs-bar-column.html#cb16-14"></a>  {</span>
+<span id="cb16-15"><a href="chartjs-bar-column.html#cb16-15"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;nonlearner&#39;</span><span class="op">,</span></span>
+<span id="cb16-16"><a href="chartjs-bar-column.html#cb16-16"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Non-Learners&#39;</span><span class="op">,</span></span>
+<span id="cb16-17"><a href="chartjs-bar-column.html#cb16-17"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;grey&#39;</span></span>
+<span id="cb16-18"><a href="chartjs-bar-column.html#cb16-18"></a>  }<span class="op">,</span></span>
+<span id="cb16-19"><a href="chartjs-bar-column.html#cb16-19"></a>  {</span>
+<span id="cb16-20"><a href="chartjs-bar-column.html#cb16-20"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;learner&#39;</span><span class="op">,</span></span>
+<span id="cb16-21"><a href="chartjs-bar-column.html#cb16-21"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Learners&#39;</span><span class="op">,</span></span>
+<span id="cb16-22"><a href="chartjs-bar-column.html#cb16-22"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;blue&#39;</span></span>
+<span id="cb16-23"><a href="chartjs-bar-column.html#cb16-23"></a>  }</span>
+<span id="cb16-24"><a href="chartjs-bar-column.html#cb16-24"></a>]<span class="op">;</span></span>
+<span id="cb16-25"><a href="chartjs-bar-column.html#cb16-25"></a></span>
+<span id="cb16-26"><a href="chartjs-bar-column.html#cb16-26"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb16-27"><a href="chartjs-bar-column.html#cb16-27"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;School Districts&#39;</span><span class="op">;</span></span>
+<span id="cb16-28"><a href="chartjs-bar-column.html#cb16-28"></a></span>
+<span id="cb16-29"><a href="chartjs-bar-column.html#cb16-29"></a><span class="co">// y-axis label, label in tooltip</span></span>
+<span id="cb16-30"><a href="chartjs-bar-column.html#cb16-30"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Number of Enrolled Students&#39;</span><span class="op">;</span></span>
+<span id="cb16-31"><a href="chartjs-bar-column.html#cb16-31"></a></span>
+<span id="cb16-32"><a href="chartjs-bar-column.html#cb16-32"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
+<span id="cb16-33"><a href="chartjs-bar-column.html#cb16-33"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb16-34"><a href="chartjs-bar-column.html#cb16-34"></a></span>
+<span id="cb16-35"><a href="chartjs-bar-column.html#cb16-35"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb16-36"><a href="chartjs-bar-column.html#cb16-36"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
 <p>For more customization, see <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a>.</p>
 </div>
             </section>

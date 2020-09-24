@@ -147,12 +147,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="organization.html"><a href="organization.html"><i class="fa fa-check"></i>Organization of the Book</a></li>
+<li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 <li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Your Tools</a>
+<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
@@ -187,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
-<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
+<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
@@ -318,22 +318,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartjs-scatter" class="section level2 unnumbered" number="">
 <h2>Scatter Chart with Chart.js</h2>
-<p>TODO: Match formatting above</p>
 <p>Scatter charts (also <em>scatterplots</em>) are used to display data of 2 or more dimensions.
-The scatter chart below shows the relationship between household income and test performance
+The scatter chart in Figure <a href="chartjs-scatter.html#fig:chartjs-demo-scatter">11.5</a> shows the relationship between household income and test performance
 for school districts in Connecticut. Using x- and y-axes to show two dimensions, it is
-easy to see that test performance improves as household income goes up. Upload data to CSV file…</p>
+easy to see that test performance improves as household income goes up.</p>
 
 <div class="figure"><span id="fig:chartjs-demo-scatter"></span>
-<iframe src="https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html" width="672" height="500px">
+<iframe src="https://handsondataviz.github.io/chartjs-scatter/" width="672" height="450px">
 </iframe>
 <p class="caption">
-Figure 11.5: Interactive scatter chart with Chart.js. See <a href="https://github.com/handsondataviz/chartjs-templates/tree/master/scatter-chart">detailed instructions on GitHub</a>.
+Figure 11.5: Interactive scatter chart with Chart.js. Explore the <a href="https://handsondataviz.github.io/chartjs-scatter/">interactive version</a>.
 </p>
 </div>
+<p>To create your own scatter plot with Chart.js, with data loaded from a CSV file, you can:</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-scatter">our GitHub repo</a> that contains the code for the chart shown in Figure <a href="chartjs-scatter.html#fig:chartjs-demo-scatter">11.5</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 10: Edit and Host Code with GitHub</a>.</p></li>
+<li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. The first two columns should contain x- and y-values respectively, and the third column should contain the point name that will appear on mouse hover.</p></li>
+</ol>
+<pre><code>| income | grades | district |
+| 88438  | 1.7    | Andover  |
+| 45505  | -0.4   | Ansonia  |
+| 75127  | 0.5    | Ashford  |
+| 115571 | 2.6    | Avon     |</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
+</ol>
+<div class="sourceCode" id="cb24"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb24-1"><a href="chartjs-scatter.html#cb24-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Income and Test Scores in Connecticut School Districts, 2009-13&#39;</span><span class="op">;</span></span>
+<span id="cb24-2"><a href="chartjs-scatter.html#cb24-2"></a></span>
+<span id="cb24-3"><a href="chartjs-scatter.html#cb24-3"></a><span class="kw">var</span> POINT_X <span class="op">=</span> <span class="st">&#39;income&#39;</span><span class="op">;</span> <span class="co">// column name for x values in data.csv</span></span>
+<span id="cb24-4"><a href="chartjs-scatter.html#cb24-4"></a><span class="kw">var</span> POINT_X_PREFIX <span class="op">=</span> <span class="st">&#39;$&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;$&#39;</span></span>
+<span id="cb24-5"><a href="chartjs-scatter.html#cb24-5"></a><span class="kw">var</span> POINT_X_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39;%&#39;</span></span>
+<span id="cb24-6"><a href="chartjs-scatter.html#cb24-6"></a></span>
+<span id="cb24-7"><a href="chartjs-scatter.html#cb24-7"></a><span class="kw">var</span> POINT_Y <span class="op">=</span> <span class="st">&#39;grades&#39;</span><span class="op">;</span> <span class="co">// column name for y values in data.csv</span></span>
+<span id="cb24-8"><a href="chartjs-scatter.html#cb24-8"></a><span class="kw">var</span> POINT_Y_PREFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;USD &#39;</span></span>
+<span id="cb24-9"><a href="chartjs-scatter.html#cb24-9"></a><span class="kw">var</span> POINT_Y_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39; kg&#39;</span></span>
+<span id="cb24-10"><a href="chartjs-scatter.html#cb24-10"></a></span>
+<span id="cb24-11"><a href="chartjs-scatter.html#cb24-11"></a><span class="kw">var</span> POINT_NAME <span class="op">=</span> <span class="st">&#39;district&#39;</span><span class="op">;</span> <span class="co">// point names that appear in tooltip</span></span>
+<span id="cb24-12"><a href="chartjs-scatter.html#cb24-12"></a><span class="kw">var</span> POINT_COLOR <span class="op">=</span> <span class="st">&#39;rgba(0,0,255,0.7)&#39;</span><span class="op">;</span> <span class="co">// eg `black` or `rgba(10,100,44,0.8)`</span></span>
+<span id="cb24-13"><a href="chartjs-scatter.html#cb24-13"></a><span class="kw">var</span> POINT_RADIUS <span class="op">=</span> <span class="dv">5</span><span class="op">;</span> <span class="co">// radius of each data point</span></span>
+<span id="cb24-14"><a href="chartjs-scatter.html#cb24-14"></a></span>
+<span id="cb24-15"><a href="chartjs-scatter.html#cb24-15"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Median Household Income, USD&#39;</span><span class="op">;</span> <span class="co">// x-axis label, label in tooltip</span></span>
+<span id="cb24-16"><a href="chartjs-scatter.html#cb24-16"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Grade, Relative to Average&#39;</span><span class="op">;</span> <span class="co">// y-axis label, label in tooltip</span></span>
+<span id="cb24-17"><a href="chartjs-scatter.html#cb24-17"></a></span>
+<span id="cb24-18"><a href="chartjs-scatter.html#cb24-18"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// `true` to show the grid, `false` to hide</span></span></code></pre></div>
+<p>For more customization, see <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a>.</p>
 <div id="going-beyond-two-dimensions" class="section level4 unnumbered" number="">
 <h4>Going beyond two dimensions</h4>
-<p>TODO: Match formatting above</p>
 <p>To show more than two dimensions in scatter charts, one can:</p>
 <ul>
 <li><strong>color</strong> each data point differently to show third dimension, eg use shades of red and green to show 5-year trend in test performance;</li>

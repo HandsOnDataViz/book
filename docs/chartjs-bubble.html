@@ -147,12 +147,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="organization.html"><a href="organization.html"><i class="fa fa-check"></i>Organization of the Book</a></li>
+<li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 <li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Your Tools</a>
+<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
@@ -187,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
-<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
+<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
@@ -318,21 +318,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartjs-bubble" class="section level2 unnumbered" number="">
 <h2>Bubble Chart with Chart.js</h2>
-<p>TODO: Match formatting above</p>
-<p>Bubble charts are similar to <a href="chartjs-scatter-csv.html">scatter plots</a>. The size of each dot (marker) is used to represent an additional dimension.</p>
-<p>In the demo below, the bubble chart shows the relationship between median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut. The size of data point (marker) corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts. Upload data to CSV file…</p>
+<p>Bubble charts are similar to <a href="chartjs-scatter-csv.html">scatter plots</a>, but it adds one more dimension: the size of each point (marker) also represents a value.</p>
+<p>The bubble chart in Figure <a href="chartjs-bubble.html#fig:chartjs-demo-bubble">11.6</a> shows how median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut are related. The size of data point corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts.</p>
 
 <div class="figure"><span id="fig:chartjs-demo-bubble"></span>
-<iframe src="https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html" width="672" height="500px">
+<iframe src="https://handsondataviz.github.io/chartjs-bubble/" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 11.6: Interactive bubble chart with Chart.js. See <a href="https://github.com/handsondataviz/chartjs-templates/tree/master/bubble-chart">detailed instructions on GitHub</a>.
+Figure 11.6: Interactive bubble chart with Chart.js. Explore the <a href="https://handsondataviz.github.io/chartjs-bubble/">interactive version</a>.
 </p>
 </div>
-<div id="tip-use-semi-transparent-circles" class="section level4 unnumbered" number="">
-<h4>Tip: Use semi-transparent circles</h4>
-<p>Data points may obstruct each other. To avoid this, play with color transparency. For example, <code>rgba(160, 0, 0, 0.5)</code> is a semi-transparent red in RGBA color model. The <code>a</code> stands for <code>alpha</code>, and is a number between 0 and 1, where 1 is solid, and 0 is completely transparent. Using transparency, you will be able to see data points that are hidden behind bigger neighbors.</p>
-</div>
+<p>To create your own bubble chart with Chart.js, with data loaded from a CSV file, you can:</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-bubble">our GitHub repo for this template</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 10: Edit and Host Code with GitHub</a>.</p></li>
+<li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. The first two columns should contain x- and y-values respectively. The third column should contain bubble names that will appear on mouse hover. The final, fourth column, represents the size of your bubble.</p></li>
+</ol>
+<pre><code>| income | grades | district      | enrollment |
+| 29430  | -1.7   | Hartford      | 21965      |
+| 82322  | 1.5    | West Hartford | 10078      |
+| 50400  | -1.4   | East Hartford | 7053       |</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
+</ol>
+<div class="sourceCode" id="cb26"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb26-1"><a href="chartjs-bubble.html#cb26-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Income, Test Scores, and Enrollment in Select </span><span class="sc">\</span></span>
+<span id="cb26-2"><a href="chartjs-bubble.html#cb26-2"></a><span class="st">  Connecticut School Districts, 2009-13&#39;</span><span class="op">;</span></span>
+<span id="cb26-3"><a href="chartjs-bubble.html#cb26-3"></a></span>
+<span id="cb26-4"><a href="chartjs-bubble.html#cb26-4"></a><span class="kw">var</span> POINT_X <span class="op">=</span> <span class="st">&#39;income&#39;</span><span class="op">;</span> <span class="co">// column name for x values in data.csv</span></span>
+<span id="cb26-5"><a href="chartjs-bubble.html#cb26-5"></a><span class="kw">var</span> POINT_X_PREFIX <span class="op">=</span> <span class="st">&#39;$&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;$&#39;</span></span>
+<span id="cb26-6"><a href="chartjs-bubble.html#cb26-6"></a><span class="kw">var</span> POINT_X_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39;%&#39;</span></span>
+<span id="cb26-7"><a href="chartjs-bubble.html#cb26-7"></a></span>
+<span id="cb26-8"><a href="chartjs-bubble.html#cb26-8"></a><span class="kw">var</span> POINT_Y <span class="op">=</span> <span class="st">&#39;grades&#39;</span><span class="op">;</span> <span class="co">// column name for y values in data.csv</span></span>
+<span id="cb26-9"><a href="chartjs-bubble.html#cb26-9"></a><span class="kw">var</span> POINT_Y_PREFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;USD &#39;</span></span>
+<span id="cb26-10"><a href="chartjs-bubble.html#cb26-10"></a><span class="kw">var</span> POINT_Y_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39; kg&#39;</span></span>
+<span id="cb26-11"><a href="chartjs-bubble.html#cb26-11"></a></span>
+<span id="cb26-12"><a href="chartjs-bubble.html#cb26-12"></a><span class="kw">var</span> POINT_R <span class="op">=</span> <span class="st">&#39;enrollment&#39;</span><span class="op">;</span> <span class="co">// column name for radius in data.csv</span></span>
+<span id="cb26-13"><a href="chartjs-bubble.html#cb26-13"></a><span class="kw">var</span> POINT_R_DESCRIPTION <span class="op">=</span> <span class="st">&#39;Enrollment&#39;</span><span class="op">;</span> <span class="co">// description of radius value</span></span>
+<span id="cb26-14"><a href="chartjs-bubble.html#cb26-14"></a><span class="kw">var</span> POINT_R_PREFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// prefix for radius values, eg &#39;USD &#39;</span></span>
+<span id="cb26-15"><a href="chartjs-bubble.html#cb26-15"></a><span class="kw">var</span> POINT_R_POSTFIX <span class="op">=</span> <span class="st">&#39; students&#39;</span><span class="op">;</span> <span class="co">// postfix for radius values, eg &#39; kg&#39;</span></span>
+<span id="cb26-16"><a href="chartjs-bubble.html#cb26-16"></a><span class="kw">var</span> R_DENOMINATOR <span class="op">=</span> <span class="dv">800</span><span class="op">;</span>  <span class="co">// use this to scale the dot sizes, or set to 1</span></span>
+<span id="cb26-17"><a href="chartjs-bubble.html#cb26-17"></a>                          <span class="co">// if your dataset contains precise radius values</span></span>
+<span id="cb26-18"><a href="chartjs-bubble.html#cb26-18"></a></span>
+<span id="cb26-19"><a href="chartjs-bubble.html#cb26-19"></a><span class="kw">var</span> POINT_NAME <span class="op">=</span> <span class="st">&#39;district&#39;</span><span class="op">;</span> <span class="co">// point names that appear in tooltip</span></span>
+<span id="cb26-20"><a href="chartjs-bubble.html#cb26-20"></a><span class="kw">var</span> POINT_COLOR <span class="op">=</span> <span class="st">&#39;rgba(0,0,255,0.7)&#39;</span><span class="op">;</span> <span class="co">// eg `black` or `rgba(10,100,44,0.8)`</span></span>
+<span id="cb26-21"><a href="chartjs-bubble.html#cb26-21"></a></span>
+<span id="cb26-22"><a href="chartjs-bubble.html#cb26-22"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Median Household Income, USD&#39;</span><span class="op">;</span> <span class="co">// x-axis label, label in tooltip</span></span>
+<span id="cb26-23"><a href="chartjs-bubble.html#cb26-23"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Grade, Relative to Average&#39;</span><span class="op">;</span> <span class="co">// y-axis label, label in tooltip</span></span>
+<span id="cb26-24"><a href="chartjs-bubble.html#cb26-24"></a></span>
+<span id="cb26-25"><a href="chartjs-bubble.html#cb26-25"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// `true` to show the grid, `false` to hide</span></span></code></pre></div>
+<p>Tip: To display smaller data points that may be hidden behind larger neighbors, use semi-transparent circles with RGBA color codes. The first three characters represent red, green, and blue, while the <code>a</code> stands for <code>alpha</code> and represents the level of transparency on a scale from 0.0 (full transparent) to 1.0 (fully opaque). For example, <code>rgba(160, 0, 0, 0.5)</code> creates a red color that is semi-transparent. Learn more by playing with <a href="https://www.w3schools.com/css/css_colors_rgb.asp">RGBA color values at W3Schools</a>.</p>
 <div id="going-beyond-three-dimensions" class="section level4 unnumbered" number="">
 <h4>Going beyond three dimensions</h4>
 <p>To show more than three dimensions in bubble charts, one can:</p>
@@ -344,7 +377,12 @@ Figure 11.6: Interactive bubble chart with Chart.js. See <a href="https://github
 </div>
 <div id="summary11" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
-<p>TODO</p>
+<p>In this chapter, we introduced Chart.js and Highcharts templates for basic chart types.
+You can use them as a base to kickstart your interactive visualization. Both
+Chart.js and Highcharts have many more customizations than we suggested in code snippets.
+Look at the additional documentation</p>
+<p>In the next chapter, we will introduce Leaflet.js map templates that you can as easily
+copy from GitHub to develop your own.</p>
 
 </div>
 </div>

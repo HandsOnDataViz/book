@@ -87,7 +87,7 @@ var X_AXIS = 'School Districts';
 var Y_AXIS = 'Number of Enrolled Students';
 
 // `true` to show the grid, `false` to hide
-var SHOW_GRID = true; 
+var SHOW_GRID = true;
 
 // `true` to show the legend, `false` to hide
 var SHOW_LEGEND = true;
@@ -151,7 +151,7 @@ var SERIES = [
 ];
 
 // x-axis label and label in tooltip
-var X_AXIS = 'Geography'; 
+var X_AXIS = 'Geography';
 
 // y-axis label and label in tooltip
 var Y_AXIS = 'US Dollars';
@@ -207,7 +207,7 @@ var TITLE = 'Hartford School District is No Longer Largest in Connecticut';
 var X_AXIS = 'Academic Year';
 
 // y-axis label and label in tooltip
-var Y_AXIS = 'Number of Students'; 
+var Y_AXIS = 'Number of Students';
 
 // Should y-axis start from 0? `true` or `false`
 var BEGIN_AT_ZERO = false;
@@ -392,8 +392,7 @@ var Y_AXIS = 'Grade, Relative to Average'; // y-axis label, label in tooltip
 var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 ```
 
-#### Tip: Use semi-transparent circles {-}
-Data points may obstruct each other. To avoid this, play with color transparency. For example, `rgba(160, 0, 0, 0.5)` is a semi-transparent red in RGBA color model. The `a` stands for `alpha`, and is a number between 0 and 1, where 1 is solid, and 0 is completely transparent. Using transparency, you will be able to see data points that are hidden behind bigger neighbors.
+Tip: To display smaller data points that may be hidden behind larger neighbors, use semi-transparent circles with RGBA color codes. The first three characters represent red, green, and blue, while the `a` stands for `alpha` and represents the level of transparency on a scale from 0.0 (full transparent) to 1.0 (fully opaque). For example, `rgba(160, 0, 0, 0.5)` creates a red color that is semi-transparent. Learn more by playing with [RGBA color values at W3Schools](https://www.w3schools.com/css/css_colors_rgb.asp).
 
 #### Going beyond three dimensions {-}
 To show more than three dimensions in bubble charts, one can:
@@ -408,7 +407,7 @@ Remember not to overwhelm the viewer and communicate only the data that are nece
 In this chapter, we introduced Chart.js and Highcharts templates for basic chart types.
 You can use them as a base to kickstart your interactive visualization. Both
 Chart.js and Highcharts have many more customizations than we suggested in code snippets.
-Look at the additional documentation 
+Look at the additional documentation
 
 In the next chapter, we will introduce Leaflet.js map templates that you can as easily
 copy from GitHub to develop your own.

@@ -147,12 +147,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="organization.html"><a href="organization.html"><i class="fa fa-check"></i>Organization of the Book</a></li>
+<li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 <li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Your Tools</a>
+<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
@@ -187,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
-<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
+<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
@@ -318,16 +318,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="highcharts-annotated-line" class="section level2 unnumbered" number="">
 <h2>Annotated Line Chart with Highcharts</h2>
-<p>TODO: Match formatting above</p>
-<p>Annotated charts are best for displaying additional notes directly inside the chart to provide more context, such as key events in a line chart about change over time. TODO: add more detail here… Upload data to CSV file…</p>
+<p>Although annotations are common elements of various type charts, they are especially
+important in line charts. Annotations help give historic context to the lines,
+explain sudden dips or raises in values. Figure <a href="highcharts-annotated-line.html#fig:highcharts-demo-annotated-line">11.4</a>
+shows change in air passenger traffic for Australia and Canada between 1970
+and 2018 (according to the World Bank). You can notice that both countries experienced
+a dip in 2009, the year after the 2008 financial crisis as suggested by the annotation.</p>
 
 <div class="figure"><span id="fig:highcharts-demo-annotated-line"></span>
-<iframe src="https://handsondataviz.github.io/highcharts-line-annotated/index.html" width="672" height="500px">
+<iframe src="https://handsondataviz.github.io/highcharts-line-annotated/index.html" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure 11.4: Interactive annotated chart with Highcharts. See <a href="https://github.com/HandsOnDataViz/highcharts-line-annotated">detailed instructions on GitHub</a>.
+Figure 11.4: Interactive annotated chart with Highcharts. Explore the <a href="https://handsondataviz.github.io/highcharts-line-annotated/">interactive version</a>.
 </p>
 </div>
+<p>To create your own annotated line chart with Highcharts, with data loaded from a CSV file, you can:</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://github.com/HandsOnDataViz/highcharts-line-annotated">our GitHub repo</a> that contains code for the chart shown in Figure <a href="highcharts-annotated-line.html#fig:highcharts-demo-annotated-line">11.4</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 10: Edit and Host Code with GitHub</a>.</p></li>
+<li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least three columns (labels, one data series, and notes). You can add as many data series columns as you wish, but you can only have one annotation (final column) per row.</p></li>
+</ol>
+<pre><code>| Year | Canada   | Australia | Note                  |
+| 1980 | 22453000 | 13648800  |                       |
+| 1981 | 22097100 | 13219500  |                       |
+| 1982 | 19653800 | 13187900  | Early 1980s recession |</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
+</ol>
+<div class="sourceCode" id="cb22"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb22-1"><a href="highcharts-annotated-line.html#cb22-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Air Transport, Passengers Carried (1970–2018)&#39;</span><span class="op">;</span></span>
+<span id="cb22-2"><a href="highcharts-annotated-line.html#cb22-2"></a></span>
+<span id="cb22-3"><a href="highcharts-annotated-line.html#cb22-3"></a><span class="co">// Caption underneath the chart</span></span>
+<span id="cb22-4"><a href="highcharts-annotated-line.html#cb22-4"></a><span class="kw">var</span> CAPTION <span class="op">=</span> <span class="st">&#39;Source: The World Bank&#39;</span><span class="op">;</span></span>
+<span id="cb22-5"><a href="highcharts-annotated-line.html#cb22-5"></a></span>
+<span id="cb22-6"><a href="highcharts-annotated-line.html#cb22-6"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb22-7"><a href="highcharts-annotated-line.html#cb22-7"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Year&#39;</span><span class="op">;</span></span>
+<span id="cb22-8"><a href="highcharts-annotated-line.html#cb22-8"></a></span>
+<span id="cb22-9"><a href="highcharts-annotated-line.html#cb22-9"></a><span class="co">// y-axis label and label in tooltip</span></span>
+<span id="cb22-10"><a href="highcharts-annotated-line.html#cb22-10"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Passengers&#39;</span><span class="op">;</span></span>
+<span id="cb22-11"><a href="highcharts-annotated-line.html#cb22-11"></a></span>
+<span id="cb22-12"><a href="highcharts-annotated-line.html#cb22-12"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
+<span id="cb22-13"><a href="highcharts-annotated-line.html#cb22-13"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb22-14"><a href="highcharts-annotated-line.html#cb22-14"></a></span>
+<span id="cb22-15"><a href="highcharts-annotated-line.html#cb22-15"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb22-16"><a href="highcharts-annotated-line.html#cb22-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
+<p>For additional customization, see <a href="https://api.highcharts.com/highcharts/">Highcharts API reference</a>.</p>
 </div>
             </section>
 

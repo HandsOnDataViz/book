@@ -147,12 +147,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="organization.html"><a href="organization.html"><i class="fa fa-check"></i>Organization of the Book</a></li>
+<li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 <li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Your Tools</a>
+<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
@@ -187,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
-<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
+<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
@@ -450,27 +450,27 @@ Explore the map below or <a href="https://handsondataviz.github.io/leaflet-data-
 <ol start="5" style="list-style-type: decimal">
 <li>In this section of the Leaflet map template, the code includes a jQuery function <code>$.getJSON</code> to call the open data endpoint in GeoJSON format: <code>https://data.ct.gov/resource/v4tt-nt9n.geojson</code>. It also requires a Socrata app token, and you can get your own token for free at: <a href="https://dev.socrata.com/register" class="uri">https://dev.socrata.com/register</a>. Each geocoded school in the Socrata data repository is displayed as a blue circle, with data properties (such as: name) in a clickable pop-up.</li>
 </ol>
-<div class="sourceCode" id="cb26"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb26-1"><a href="leaflet-maps-with-api.html#cb26-1"></a><span class="co">// load open data from Socrata endpoint in GeoJSON format</span></span>
-<span id="cb26-2"><a href="leaflet-maps-with-api.html#cb26-2"></a><span class="co">// with simple marker styling: blue circles</span></span>
-<span id="cb26-3"><a href="leaflet-maps-with-api.html#cb26-3"></a><span class="co">// register your own Socrata app token at https://dev.socrata.com/register</span></span>
-<span id="cb26-4"><a href="leaflet-maps-with-api.html#cb26-4"></a><span class="co">// Connecticut School Directory, CT Open Data, https://data.ct.gov/resource/v4tt-nt9n</span></span>
-<span id="cb26-5"><a href="leaflet-maps-with-api.html#cb26-5"></a>$<span class="op">.</span><span class="fu">getJSON</span>(<span class="st">&quot;https://data.ct.gov/resource/v4tt-nt9n.geojson?&amp;$$app_token=QVVY3I72SVPbxBYlTM8fA7eet&quot;</span><span class="op">,</span> <span class="kw">function</span> (data){</span>
-<span id="cb26-6"><a href="leaflet-maps-with-api.html#cb26-6"></a>  <span class="kw">var</span> geoJsonLayer <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJson</span>(data<span class="op">,</span> {</span>
-<span id="cb26-7"><a href="leaflet-maps-with-api.html#cb26-7"></a>    <span class="dt">pointToLayer</span><span class="op">:</span> <span class="kw">function</span>( feature<span class="op">,</span> latlng) {</span>
-<span id="cb26-8"><a href="leaflet-maps-with-api.html#cb26-8"></a>      <span class="kw">var</span> circle <span class="op">=</span> L<span class="op">.</span><span class="fu">circleMarker</span>(latlng<span class="op">,</span> {</span>
-<span id="cb26-9"><a href="leaflet-maps-with-api.html#cb26-9"></a>        <span class="dt">radius</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span></span>
-<span id="cb26-10"><a href="leaflet-maps-with-api.html#cb26-10"></a>        <span class="dt">fillColor</span><span class="op">:</span> <span class="st">&quot;blue&quot;</span><span class="op">,</span></span>
-<span id="cb26-11"><a href="leaflet-maps-with-api.html#cb26-11"></a>        <span class="dt">color</span><span class="op">:</span> <span class="st">&quot;blue&quot;</span><span class="op">,</span></span>
-<span id="cb26-12"><a href="leaflet-maps-with-api.html#cb26-12"></a>        <span class="dt">weight</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
-<span id="cb26-13"><a href="leaflet-maps-with-api.html#cb26-13"></a>        <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb26-14"><a href="leaflet-maps-with-api.html#cb26-14"></a>        <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.7</span></span>
-<span id="cb26-15"><a href="leaflet-maps-with-api.html#cb26-15"></a>      })<span class="op">;</span></span>
-<span id="cb26-16"><a href="leaflet-maps-with-api.html#cb26-16"></a>      circle<span class="op">.</span><span class="fu">bindPopup</span>(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">name</span> <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">district_name</span>)<span class="op">;</span> <span class="co">// replace last term with property data labels to display from GeoJSON file</span></span>
-<span id="cb26-17"><a href="leaflet-maps-with-api.html#cb26-17"></a>      <span class="cf">return</span> circle<span class="op">;</span></span>
-<span id="cb26-18"><a href="leaflet-maps-with-api.html#cb26-18"></a>    }</span>
-<span id="cb26-19"><a href="leaflet-maps-with-api.html#cb26-19"></a>  })<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span> <span class="co">// display by default</span></span>
-<span id="cb26-20"><a href="leaflet-maps-with-api.html#cb26-20"></a>  controlLayers<span class="op">.</span><span class="fu">addOverlay</span>(geoJsonLayer<span class="op">,</span> <span class="st">&#39;Public Schools (CT Open Data-Socrata)&#39;</span>)<span class="op">;</span></span>
-<span id="cb26-21"><a href="leaflet-maps-with-api.html#cb26-21"></a>})<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb36-1"><a href="leaflet-maps-with-api.html#cb36-1"></a><span class="co">// load open data from Socrata endpoint in GeoJSON format</span></span>
+<span id="cb36-2"><a href="leaflet-maps-with-api.html#cb36-2"></a><span class="co">// with simple marker styling: blue circles</span></span>
+<span id="cb36-3"><a href="leaflet-maps-with-api.html#cb36-3"></a><span class="co">// register your own Socrata app token at https://dev.socrata.com/register</span></span>
+<span id="cb36-4"><a href="leaflet-maps-with-api.html#cb36-4"></a><span class="co">// Connecticut School Directory, CT Open Data, https://data.ct.gov/resource/v4tt-nt9n</span></span>
+<span id="cb36-5"><a href="leaflet-maps-with-api.html#cb36-5"></a>$<span class="op">.</span><span class="fu">getJSON</span>(<span class="st">&quot;https://data.ct.gov/resource/v4tt-nt9n.geojson?&amp;$$app_token=QVVY3I72SVPbxBYlTM8fA7eet&quot;</span><span class="op">,</span> <span class="kw">function</span> (data){</span>
+<span id="cb36-6"><a href="leaflet-maps-with-api.html#cb36-6"></a>  <span class="kw">var</span> geoJsonLayer <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJson</span>(data<span class="op">,</span> {</span>
+<span id="cb36-7"><a href="leaflet-maps-with-api.html#cb36-7"></a>    <span class="dt">pointToLayer</span><span class="op">:</span> <span class="kw">function</span>( feature<span class="op">,</span> latlng) {</span>
+<span id="cb36-8"><a href="leaflet-maps-with-api.html#cb36-8"></a>      <span class="kw">var</span> circle <span class="op">=</span> L<span class="op">.</span><span class="fu">circleMarker</span>(latlng<span class="op">,</span> {</span>
+<span id="cb36-9"><a href="leaflet-maps-with-api.html#cb36-9"></a>        <span class="dt">radius</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span></span>
+<span id="cb36-10"><a href="leaflet-maps-with-api.html#cb36-10"></a>        <span class="dt">fillColor</span><span class="op">:</span> <span class="st">&quot;blue&quot;</span><span class="op">,</span></span>
+<span id="cb36-11"><a href="leaflet-maps-with-api.html#cb36-11"></a>        <span class="dt">color</span><span class="op">:</span> <span class="st">&quot;blue&quot;</span><span class="op">,</span></span>
+<span id="cb36-12"><a href="leaflet-maps-with-api.html#cb36-12"></a>        <span class="dt">weight</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb36-13"><a href="leaflet-maps-with-api.html#cb36-13"></a>        <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb36-14"><a href="leaflet-maps-with-api.html#cb36-14"></a>        <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.7</span></span>
+<span id="cb36-15"><a href="leaflet-maps-with-api.html#cb36-15"></a>      })<span class="op">;</span></span>
+<span id="cb36-16"><a href="leaflet-maps-with-api.html#cb36-16"></a>      circle<span class="op">.</span><span class="fu">bindPopup</span>(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">name</span> <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">district_name</span>)<span class="op">;</span> <span class="co">// replace last term with property data labels to display from GeoJSON file</span></span>
+<span id="cb36-17"><a href="leaflet-maps-with-api.html#cb36-17"></a>      <span class="cf">return</span> circle<span class="op">;</span></span>
+<span id="cb36-18"><a href="leaflet-maps-with-api.html#cb36-18"></a>    }</span>
+<span id="cb36-19"><a href="leaflet-maps-with-api.html#cb36-19"></a>  })<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span> <span class="co">// display by default</span></span>
+<span id="cb36-20"><a href="leaflet-maps-with-api.html#cb36-20"></a>  controlLayers<span class="op">.</span><span class="fu">addOverlay</span>(geoJsonLayer<span class="op">,</span> <span class="st">&#39;Public Schools (CT Open Data-Socrata)&#39;</span>)<span class="op">;</span></span>
+<span id="cb36-21"><a href="leaflet-maps-with-api.html#cb36-21"></a>})<span class="op">;</span></span></code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li>Fork a copy of this repo, play with the code, and try to insert GeoJSON endpoints from other open data repositories.</li>
 </ol>

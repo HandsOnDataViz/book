@@ -147,12 +147,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
-<li class="chapter" data-level="" data-path="organization.html"><a href="organization.html"><i class="fa fa-check"></i>Organization of the Book</a></li>
+<li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
 <li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Your Tools</a>
+<li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
 <li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
@@ -187,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
-<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose or Swap Rows and Columns</a></li>
+<li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
 <li class="chapter" data-level="" data-path="combine-data.html"><a href="combine-data.html"><i class="fa fa-check"></i>Combine Data into One Column</a></li>
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
@@ -318,18 +318,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartjs-line" class="section level2 unnumbered" number="">
 <h2>Line Chart with Chart.js</h2>
-<p>TODO: Match formatting above</p>
-<p>Line charts are often used to show temporal data (trends).
-The x-axis often represents time intervals.
-Unlike column or bar charts, y-axes of line charts do not necessarily start at 0. Upload data to CSV file…</p>
+<p>Line charts are often used to show temporal data, or change of values over time.
+The x-axis represents time intervals, and the y-axis represents observed values.
+Note that unlike column or bar charts, y-axes of line charts do not have to start at zero.
+The line chart in Figure <a href="chartjs-line.html#fig:chartjs-demo-line">11.3</a> shows the number of students
+in select school districts in Connecticut from 2012-2013 to 2018-19 academic years.
+Each line has a distinct color, and the legend helps establish the color-district relations.</p>
 
 <div class="figure"><span id="fig:chartjs-demo-line"></span>
-<iframe src="https://handsondataviz.github.io/chartjs-templates/line-chart/index.html" width="672" height="500px">
+<iframe src="https://handsondataviz.github.io/chartjs-line/" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 11.3: Interactive line chart with Chart.js. See <a href="https://github.com/handsondataviz/chartjs-templates/tree/master/line-chart">detailed instructions on GitHub</a>.
+Figure 11.3: Interactive line chart with Chart.js. Explore the <a href="https://handsondataviz.github.io/chartjs-line/">interactive version</a>.
 </p>
 </div>
+<p>To create your own line chart with Chart.js, with data loaded from a CSV file, you can:</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-line">our GitHub repo for the Chart.js template</a> that contains the code of the line chart shown in Figure <a href="chartjs-line.html#fig:chartjs-demo-line">11.3</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 10: Edit and Host Code with GitHub</a>.</p></li>
+<li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish, but do not overload your chart with lines as humans can distinguish a limited number of colors.</p></li>
+</ol>
+<pre><code>| year    | Hartford | New Haven | Bridgeport | Stamford | Waterbury |
+| 2013-14 | 21820    | 21420     | 20929      | 15927    | 18706     |
+| 2014-15 | 21953    | 21711     | 21244      | 16085    | 18878     |
+| 2015-16 | 21463    | 21725     | 21191      | 15946    | 18862     |
+| 2016-17 | 20891    | 21981     | 21222      | 16100    | 19001     |
+| 2017-18 | 20142    | 21518     | 20896      | 15931    | 19007     |
+| 2018-19 | 19767    | 21264     | 20572      | 16053    | 18847     |</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
+</ol>
+<div class="sourceCode" id="cb20"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb20-1"><a href="chartjs-line.html#cb20-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Hartford School District is No Longer Largest in Connecticut&#39;</span><span class="op">;</span></span>
+<span id="cb20-2"><a href="chartjs-line.html#cb20-2"></a></span>
+<span id="cb20-3"><a href="chartjs-line.html#cb20-3"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb20-4"><a href="chartjs-line.html#cb20-4"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Academic Year&#39;</span><span class="op">;</span></span>
+<span id="cb20-5"><a href="chartjs-line.html#cb20-5"></a></span>
+<span id="cb20-6"><a href="chartjs-line.html#cb20-6"></a><span class="co">// y-axis label and label in tooltip</span></span>
+<span id="cb20-7"><a href="chartjs-line.html#cb20-7"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Number of Students&#39;</span><span class="op">;</span></span>
+<span id="cb20-8"><a href="chartjs-line.html#cb20-8"></a></span>
+<span id="cb20-9"><a href="chartjs-line.html#cb20-9"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
+<span id="cb20-10"><a href="chartjs-line.html#cb20-10"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb20-11"><a href="chartjs-line.html#cb20-11"></a></span>
+<span id="cb20-12"><a href="chartjs-line.html#cb20-12"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
+<span id="cb20-13"><a href="chartjs-line.html#cb20-13"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb20-14"><a href="chartjs-line.html#cb20-14"></a></span>
+<span id="cb20-15"><a href="chartjs-line.html#cb20-15"></a> <span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb20-16"><a href="chartjs-line.html#cb20-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
+<p>For more customization, see <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a>.</p>
 </div>
             </section>
 

@@ -15,8 +15,6 @@ Table: (\#tab:chart-templates) Chart Code Templates and Tutorials
 | Scatter Chart<br> ![](images/11-chartcode/chartjs-scatter.png) | Best to show the relationship between two datasets as XY coordinates to reveal possible correlations.<br>Power tool: [Scatter Chart with CSV data in Chart.js code template and tutorial](chartjs-scatter.html) |
 | Bubble Chart<br> ![](images/11-chartcode/chartjs-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color. <br>Power tool: [Bubble Chart with CSV data in Chart.js code template and tutorial](chartjs-bubble.html) |
 
-<!-- TODO: update all chart images to show tooltips; decide if we're happy with names and labels -->
-
 For additional chart types, see [Chart.js samples](https://www.chartjs.org/samples/latest/) and [Highcharts Demos](https://www.highcharts.com/demo).
 
 These code templates vary from simple to complex, but all of them rely on four basic pillars:
@@ -34,19 +32,17 @@ Also, these templates refer to other code elements:
 
 ## Bar or Column Chart with Chart.js {- #chartjs-bar-column}
 
-<!-- TODO: Ilya, here's the general format I recommend for each template below, which I have matched up with the README file and the code comments, but only for the first demo: https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart. While I really like how you combined all of the chart.js templates into one repo, it adds a bit of complexity for GitHub web-interface users who wish to use the template to make one chart type, since it's a subfolder. Either we need to add extra steps between #1 and #2 below, or we need to split the unified repo into separate ones. What do you think? -->
-
 Bar or column charts are best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. Always start the x-axis (for a horizontal bar chart) or y-axis (for a vertical column chart) at zero. This interactive Chart.js code template pulls the data from a CSV file, as shown in Figure \@ref(fig:chartjs-demo-bar).
 
-(ref:chartjs-demo-bar) Bar chart with Chart.js: explore the [interactive version](https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html).
+(ref:chartjs-demo-bar) Bar chart with Chart.js: explore the [interactive version](https://handsondataviz.github.io/chartjs-bar/index.html).
 
 ```{r chartjs-demo-bar, fig.cap="(ref:chartjs-demo-bar)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/bar-chart/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-bar.png")
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-bar/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-bar.png")
 ```
 
 To create your own bar or column chart with CSV data using our Chart.js template:
 
-1. Go to [our GitHub repo for Chart.js templates](https://github.com/HandsOnDataViz/chartjs-templates), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+1. Go to [our GitHub repo for Chart.js template](https://github.com/HandsOnDataViz/chartjs-templates) that contains the code for the chart in Figure \@ref(fig:chartjs-demo-bar), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
 
 2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish.
 
@@ -59,31 +55,42 @@ To create your own bar or column chart with CSV data using our Chart.js template
 3. In `script.js`, customize the values of variables shown in the code snippet below:
 
 ```javascript
-  var HORIZONTAL = false;   // `false` for vertical column chart, `true` for horizontal bar chart
-  var STACKED = false;  // `false` for individual bars, `true` for stacked bars
+var TITLE = 'English Learners by Select School Districts in CT, 2018-19';
 
-  var TITLE = 'English Learners by Select School Districts in Connecticut, 2018-19';
+// `false` for vertical column chart, `true` for horizontal bar chart
+var HORIZONTAL = false;
 
-  var LABELS = 'district';  // Column to define 'bucket' names on x-axis (for vertical column chart) or y-axis (for horizontal bar chart)
+// `false` for individual bars, `true` for stacked bars
+var STACKED = false;  
 
-  var SERIES = [  // For each column representing a data series, define its name and color
-    {
-      column: 'nonlearner',
-      name: 'Non-Learners',
-      color: 'grey'
-    },
-    {
-      column: 'learner',
-      name: 'Learners',
-      color: 'blue'
-    }
-  ];
+// Which column defines 'bucket' names?
+var LABELS = 'district';  
 
-  var X_AXIS = 'School Districts';  // x-axis label and label in tooltip
-  var Y_AXIS = 'Number of Enrolled Students'; // y-axis label and label in tooltip
+// For each column representing a data series, define its name and color
+var SERIES = [  
+  {
+    column: 'nonlearner',
+    name: 'Non-Learners',
+    color: 'grey'
+  },
+  {
+    column: 'learner',
+    name: 'Learners',
+    color: 'blue'
+  }
+];
 
-  var SHOW_GRID = true; // `true` to show the grid, `false` to hide
-  var SHOW_LEGEND = true; // `true` to show the legend, `false` to hide
+// x-axis label and label in tooltip
+var X_AXIS = 'School Districts';
+
+// y-axis label, label in tooltip
+var Y_AXIS = 'Number of Enrolled Students';
+
+// `true` to show the grid, `false` to hide
+var SHOW_GRID = true; 
+
+// `true` to show the legend, `false` to hide
+var SHOW_LEGEND = true;
 ```
 
 For more customization, see [Chart.js documentation](https://www.chartjs.org/docs/latest/).
@@ -91,54 +98,236 @@ For more customization, see [Chart.js documentation](https://www.chartjs.org/doc
 ## Error Bars with Chart.js {- #chartjs-error-bars}
 If your data comes with uncertainty (margins of error), we recommend you
 show it in your visualizations. The bar chart template shown in Figure \@ref(fig:chartjs-demo-error-bars)
-shows median and mean (average) income for different-sized geographies: the US state of Colorado, Boulder County, Boulder city, and a census tract in the city. Upload data to CSV file...
+shows median and mean (average) income for different-sized geographies: the US state of Colorado, Boulder County, Boulder city, and a census tract in the city.
 
-(ref:chartjs-demo-error-bars) Interactive bar chart with error bars in Chart.js. See [detailed instructions on GitHub](https://github.com/handsondataviz/chartjs-templates/tree/master/bar-chart-with-error-bars).
+(ref:chartjs-demo-error-bars) Interactive bar chart with error bars in Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-error-bars/index.html).
 
 ```{r chartjs-demo-error-bars, fig.cap="(ref:chartjs-demo-error-bars)"}
 if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/bar-chart-with-error-bars/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-error-bars.png")
 ```
 
+To create your own bar or column chart with error bars, with data loaded from a CSV file, using our Chart.js template:
+
+1. Go to [our GitHub repo for this Chart.js template](https://github.com/HandsOnDataViz/chartjs-error-bars) that contains the code for the chart in Figure \@ref(fig:chartjs-demo-error-bars), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+
+2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column (accompanied by a column with uncertainty values). Your CSV must contain at least three columns (labels and one data series with associated uncertainty values). You can add as many data series columns as you wish.
+
+```
+| geo            | median | median_moe | mean   | mean_moe |
+| Colorado       | 68811  | 364        | 92520  | 416      |
+| Boulder County | 78642  | 1583       | 109466 | 2061     |
+| Boulder city   | 66117  | 2590       | 102803 | 3614     |
+| Tract 121.02   | 73396  | 10696      | 120588 | 19322    |
+```
+
+3. In `script.js`, customize the values of variables shown in the code snippet below:
+
+```javascript
+var TITLE = 'Household Income for Select US Geographies, 2018';
+
+// `false` for vertical (column) chart, `true` for horizontal bar
+var HORIZONTAL = false;
+
+// `false` for individual bars, `true` for stacked bars
+var STACKED = false;  
+
+// Which column defines "bucket" names?
+var LABELS = 'geo';
+
+// For each column representing a series, define its name and color
+var SERIES = [
+  {
+    column: 'median',
+    name: 'Median Income',
+    color: 'grey',
+    errorColumn: 'median_moe'
+  },
+  {
+    column: 'mean',
+    name: 'Mean Income',
+    color: '#cc9999',
+    errorColumn: 'mean_moe'
+  }
+];
+
+// x-axis label and label in tooltip
+var X_AXIS = 'Geography'; 
+
+// y-axis label and label in tooltip
+var Y_AXIS = 'US Dollars';
+
+// `true` to show the grid, `false` to hide
+var SHOW_GRID = true;
+
+// `true` to show the legend, `false` to hide
+var SHOW_LEGEND = true;
+```
+
+For more customization, see [Chart.js documentation](https://www.chartjs.org/docs/latest/).
+
+
+
 ## Line Chart with Chart.js {- #chartjs-line}
-TODO: Match formatting above
 
-Line charts are often used to show temporal data (trends).
-The x-axis often represents time intervals.
-Unlike column or bar charts, y-axes of line charts do not necessarily start at 0. Upload data to CSV file...
+Line charts are often used to show temporal data, or change of values over time.
+The x-axis represents time intervals, and the y-axis represents observed values.
+Note that unlike column or bar charts, y-axes of line charts do not have to start at zero.
+The line chart in Figure \@ref(fig:chartjs-demo-line) shows the number of students
+in select school districts in Connecticut from 2012-2013 to 2018-19 academic years.
+Each line has a distinct color, and the legend helps establish the color-district relations.
 
-(ref:chartjs-demo-line) Interactive line chart with Chart.js. See [detailed instructions on GitHub](https://github.com/handsondataviz/chartjs-templates/tree/master/line-chart).
+(ref:chartjs-demo-line) Interactive line chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-line/).
 
 ```{r chartjs-demo-line, fig.cap="(ref:chartjs-demo-line)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/line-chart/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-line.png")
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-line/", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-line.png")
 ```
+
+To create your own line chart with Chart.js, with data loaded from a CSV file, you can:
+
+1. Go to [our GitHub repo for the Chart.js template](https://github.com/HandsOnDataViz/chartjs-line) that contains the code of the line chart shown in Figure \@ref(fig:chartjs-demo-line), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+
+2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish, but do not overload your chart with lines as humans can distinguish a limited number of colors.
+
+```
+| year    | Hartford | New Haven | Bridgeport | Stamford | Waterbury |
+| 2013-14 | 21820    | 21420     | 20929      | 15927    | 18706     |
+| 2014-15 | 21953    | 21711     | 21244      | 16085    | 18878     |
+| 2015-16 | 21463    | 21725     | 21191      | 15946    | 18862     |
+| 2016-17 | 20891    | 21981     | 21222      | 16100    | 19001     |
+| 2017-18 | 20142    | 21518     | 20896      | 15931    | 19007     |
+| 2018-19 | 19767    | 21264     | 20572      | 16053    | 18847     |
+```
+
+3. In `script.js`, customize the values of variables shown in the code snippet below:
+
+```javascript
+var TITLE = 'Hartford School District is No Longer Largest in Connecticut';
+
+// x-axis label and label in tooltip
+var X_AXIS = 'Academic Year';
+
+// y-axis label and label in tooltip
+var Y_AXIS = 'Number of Students'; 
+
+// Should y-axis start from 0? `true` or `false`
+var BEGIN_AT_ZERO = false;
+
+// `true` to show the grid, `false` to hide
+var SHOW_GRID = true;
+
+ // `true` to show the legend, `false` to hide
+var SHOW_LEGEND = true;
+```
+
+For more customization, see [Chart.js documentation](https://www.chartjs.org/docs/latest/).
 
 ## Annotated Line Chart with Highcharts {- #highcharts-annotated-line}
-TODO: Match formatting above
 
-Annotated charts are best for displaying additional notes directly inside the chart to provide more context, such as key events in a line chart about change over time. TODO: add more detail here... Upload data to CSV file...
+Although annotations are common elements of various type charts, they are especially
+important in line charts. Annotations help give historic context to the lines,
+explain sudden dips or raises in values. Figure \@ref(fig:highcharts-demo-annotated-line)
+shows change in air passenger traffic for Australia and Canada between 1970
+and 2018 (according to the World Bank). You can notice that both countries experienced
+a dip in 2009, the year after the 2008 financial crisis as suggested by the annotation.
 
-(ref:highcharts-demo-annotated-line) Interactive annotated chart with Highcharts. See [detailed instructions on GitHub](https://github.com/HandsOnDataViz/highcharts-line-annotated).
+(ref:highcharts-demo-annotated-line) Interactive annotated chart with Highcharts. Explore the [interactive version](https://handsondataviz.github.io/highcharts-line-annotated/).
 
 ```{r highcharts-demo-annotated-line, fig.cap="(ref:highcharts-demo-annotated-line)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/highcharts-line-annotated/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/highcharts-demo-annotated-line.png")
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/highcharts-line-annotated/index.html", height="400px") else knitr::include_graphics("images/11-chartcode/highcharts-demo-annotated-line.png")
 ```
+
+To create your own annotated line chart with Highcharts, with data loaded from a CSV file, you can:
+
+1. Go to [our GitHub repo](https://github.com/HandsOnDataViz/highcharts-line-annotated) that contains code for the chart shown in Figure \@ref(fig:highcharts-demo-annotated-line), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+
+2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least three columns (labels, one data series, and notes). You can add as many data series columns as you wish, but you can only have one annotation (final column) per row.
+
+```
+| Year | Canada   | Australia | Note                  |
+| 1980 | 22453000 | 13648800  |                       |
+| 1981 | 22097100 | 13219500  |                       |
+| 1982 | 19653800 | 13187900  | Early 1980s recession |
+```
+
+3. In `script.js`, customize the values of variables shown in the code snippet below:
+
+```javascript
+var TITLE = 'Air Transport, Passengers Carried (1970–2018)';
+
+// Caption underneath the chart
+var CAPTION = 'Source: The World Bank';
+
+// x-axis label and label in tooltip
+var X_AXIS = 'Year';
+
+// y-axis label and label in tooltip
+var Y_AXIS = 'Passengers';
+
+// Should y-axis start from 0? `true` or `false`
+var BEGIN_AT_ZERO = true;
+
+// `true` to show the legend, `false` to hide
+var SHOW_LEGEND = true;
+```
+
+For additional customization, see [Highcharts API reference](https://api.highcharts.com/highcharts/).
+
+
 
 ## Scatter Chart with Chart.js {- #chartjs-scatter}
-TODO: Match formatting above
 
 Scatter charts (also *scatterplots*) are used to display data of 2 or more dimensions.
-The scatter chart below shows the relationship between household income and test performance
+The scatter chart in Figure \@ref(fig:chartjs-demo-scatter) shows the relationship between household income and test performance
 for school districts in Connecticut. Using x- and y-axes to show two dimensions, it is
-easy to see that test performance improves as household income goes up. Upload data to CSV file...
+easy to see that test performance improves as household income goes up.
 
-(ref:chartjs-demo-scatter) Interactive scatter chart with Chart.js. See [detailed instructions on GitHub](https://github.com/handsondataviz/chartjs-templates/tree/master/scatter-chart).
+(ref:chartjs-demo-scatter) Interactive scatter chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-scatter/).
 
 ```{r chartjs-demo-scatter, fig.cap="(ref:chartjs-demo-scatter)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/scatter-chart/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-scatter.png")
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-scatter/", height="450px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-scatter.png")
 ```
 
+To create your own scatter plot with Chart.js, with data loaded from a CSV file, you can:
+
+1. Go to [our GitHub repo](https://github.com/HandsOnDataViz/chartjs-scatter) that contains the code for the chart shown in Figure \@ref(fig:chartjs-demo-scatter), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+
+2. Prepare your data in CSV format and upload into a `data.csv` file. The first two columns should contain x- and y-values respectively, and the third column should contain the point name that will appear on mouse hover.
+
+```
+| income | grades | district |
+| 88438  | 1.7    | Andover  |
+| 45505  | -0.4   | Ansonia  |
+| 75127  | 0.5    | Ashford  |
+| 115571 | 2.6    | Avon     |
+```
+
+3. In `script.js`, customize the values of variables shown in the code snippet below:
+
+```javascript
+var TITLE = 'Income and Test Scores in Connecticut School Districts, 2009-13';
+
+var POINT_X = 'income'; // column name for x values in data.csv
+var POINT_X_PREFIX = '$'; // prefix for x values, eg '$'
+var POINT_X_POSTFIX = ''; // postfix for x values, eg '%'
+
+var POINT_Y = 'grades'; // column name for y values in data.csv
+var POINT_Y_PREFIX = ''; // prefix for x values, eg 'USD '
+var POINT_Y_POSTFIX = ''; // postfix for x values, eg ' kg'
+
+var POINT_NAME = 'district'; // point names that appear in tooltip
+var POINT_COLOR = 'rgba(0,0,255,0.7)'; // eg `black` or `rgba(10,100,44,0.8)`
+var POINT_RADIUS = 5; // radius of each data point
+
+var X_AXIS = 'Median Household Income, USD'; // x-axis label, label in tooltip
+var Y_AXIS = 'Grade, Relative to Average'; // y-axis label, label in tooltip
+
+var SHOW_GRID = true; // `true` to show the grid, `false` to hide
+```
+
+For more customization, see [Chart.js documentation](https://www.chartjs.org/docs/latest/).
+
+
 #### Going beyond two dimensions {-}
-TODO: Match formatting above
 
 To show more than two dimensions in scatter charts, one can:
 
@@ -149,16 +338,58 @@ To show more than two dimensions in scatter charts, one can:
 Remember not to overwhelm the viewer and communicate only the data that are necessary to prove or illustrate your idea.
 
 ## Bubble Chart with Chart.js {- #chartjs-bubble}
-TODO: Match formatting above
 
-Bubble charts are similar to [scatter plots](chartjs-scatter-csv.html). The size of each dot (marker) is used to represent an additional dimension.
+Bubble charts are similar to [scatter plots](chartjs-scatter-csv.html), but it adds one more dimension: the size of each point (marker) also represents a value.
 
-In the demo below, the bubble chart shows the relationship between median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut. The size of data point (marker) corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts. Upload data to CSV file...
+The bubble chart in Figure \@ref(fig:chartjs-demo-bubble) shows how median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut are related. The size of data point corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts.
 
-(ref:chartjs-demo-bubble) Interactive bubble chart with Chart.js. See [detailed instructions on GitHub](https://github.com/handsondataviz/chartjs-templates/tree/master/bubble-chart).
+(ref:chartjs-demo-bubble) Interactive bubble chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-bubble/).
 
 ```{r chartjs-demo-bubble, fig.cap="(ref:chartjs-demo-bubble)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/bubble-chart/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-bubble.png")
+if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-bubble/", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-bubble.png")
+```
+
+To create your own bubble chart with Chart.js, with data loaded from a CSV file, you can:
+
+1. Go to [our GitHub repo for this template](https://github.com/HandsOnDataViz/chartjs-bubble), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+
+2. Prepare your data in CSV format and upload into a `data.csv` file. The first two columns should contain x- and y-values respectively. The third column should contain bubble names that will appear on mouse hover. The final, fourth column, represents the size of your bubble.
+
+```
+| income | grades | district      | enrollment |
+| 29430  | -1.7   | Hartford      | 21965      |
+| 82322  | 1.5    | West Hartford | 10078      |
+| 50400  | -1.4   | East Hartford | 7053       |
+```
+
+3. In `script.js`, customize the values of variables shown in the code snippet below:
+
+```javascript
+var TITLE = 'Income, Test Scores, and Enrollment in Select \
+  Connecticut School Districts, 2009-13';
+
+var POINT_X = 'income'; // column name for x values in data.csv
+var POINT_X_PREFIX = '$'; // prefix for x values, eg '$'
+var POINT_X_POSTFIX = ''; // postfix for x values, eg '%'
+
+var POINT_Y = 'grades'; // column name for y values in data.csv
+var POINT_Y_PREFIX = ''; // prefix for x values, eg 'USD '
+var POINT_Y_POSTFIX = ''; // postfix for x values, eg ' kg'
+
+var POINT_R = 'enrollment'; // column name for radius in data.csv
+var POINT_R_DESCRIPTION = 'Enrollment'; // description of radius value
+var POINT_R_PREFIX = ''; // prefix for radius values, eg 'USD '
+var POINT_R_POSTFIX = ' students'; // postfix for radius values, eg ' kg'
+var R_DENOMINATOR = 800;  // use this to scale the dot sizes, or set to 1
+                          // if your dataset contains precise radius values
+
+var POINT_NAME = 'district'; // point names that appear in tooltip
+var POINT_COLOR = 'rgba(0,0,255,0.7)'; // eg `black` or `rgba(10,100,44,0.8)`
+
+var X_AXIS = 'Median Household Income, USD'; // x-axis label, label in tooltip
+var Y_AXIS = 'Grade, Relative to Average'; // y-axis label, label in tooltip
+
+var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 ```
 
 #### Tip: Use semi-transparent circles {-}
@@ -173,4 +404,11 @@ To show more than three dimensions in bubble charts, one can:
 Remember not to overwhelm the viewer and communicate only the data that are necessary to prove or illustrate your idea.
 
 ### Summary {- #summary11}
-TODO
+
+In this chapter, we introduced Chart.js and Highcharts templates for basic chart types.
+You can use them as a base to kickstart your interactive visualization. Both
+Chart.js and Highcharts have many more customizations than we suggested in code snippets.
+Look at the additional documentation 
+
+In the next chapter, we will introduce Leaflet.js map templates that you can as easily
+copy from GitHub to develop your own.

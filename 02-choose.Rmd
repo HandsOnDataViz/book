@@ -2,7 +2,7 @@
 
 If you feel overwhelmed by the avalanche of digital tools available today, you're not alone. When you're simply trying to do your regular work, keeping up with the latest software developments can feel like an additional part-time job you didn't sign up for. Digital tools are constantly changing and evolving. That's good news if you like to experiment and choose among different options, but not-so-good news if you lack the time to make complex decisions.
 
-In this chapter, we'll help you navigate your way through the decision-making process. We'll begin with the most important step---[sketching out your data story](sketch.html)---to help identify the types of tools you need to tell it effectively. Next, we'll review [ten factors to consider when choosing digital tools and the tradeoffs involved](tools-tradeoffs.html). Finally, we'll present our [list of recommended data visualization tools](recommended-tools.html), plus one extra to help you get organized: [a password manager](password-manager.html). All of these tools are free to use, and the book introduces them gradually, from easy-to-learn beginner tools to more advanced and powerful ones.
+In this chapter, we'll help you navigate your way through the decision-making process. We'll begin with the most important step---[sketching out your data story](sketch.html)---to help identify the types of tools you need to tell it effectively. Next, we'll review [ten factors to consider when choosing digital tools and the tradeoffs involved](tool-factors.html). Finally, we'll present our [list of recommended data visualization tools](recommended-tools.html), plus one extra to help you get organized: [a password manager](password-manager.html). All of these tools are free to use, and the book introduces them gradually, from easy-to-learn beginner tools to more advanced and powerful ones.
 
 ## Start Sketching Your Data Story {- #sketch}
 Before we dive into digital tools, let's focus on what's most important: our *data story*. We build visualizations to help us tell a story about the information we've gathered, a narrative that draws the audience's attention to meaningful patterns and key insights amid all of the pieces of data. Help them to see the forest, rather than listing every single tree.
@@ -41,7 +41,7 @@ Finally, this sketching exercise can help you identify which chapters you should
 
 Now that you have a clearer sense of the story you wish to tell, and some initial ideas about the visualizations you wish to create, in the next two sections we'll discuss tools to do the job, and factors you should consider when deciding among them.
 
-## Tools and Tradeoffs {- #tools-tradeoffs}
+## Tools and Tradeoffs {- #tool-factors}
 
 Making decisions between the seemingly endless number of digital tools can feel overwhelming. To help you navigate your decision-making process, below we list ten key factors that we consider when evaluating new visualization tools or online services. When comparing options, many decisions involve some type of tradeoff, a balance between competing wants and needs, such as ease-of-use versus extensive features. By identifying key factors, we believe that each reader can make a more informed decision about which tools offer the best tradeoff for you, since all of us are different. Furthermore, we worded our categories broadly, because the concepts can be applied to other areas of your digital life, but followed up with more context about data visualization in particular.
 
@@ -99,14 +99,34 @@ Now that you understand the factors driving our decisions, in the next section y
 
 ## Recommended Tools {- #recommended-tools}
 
-When creating this book, we aimed to identify the most essential data visualization tasks that beginners are likely to face, and the digital toolkit needed to complete those tasks. In the prior section we listed ten factors that influenced our tool recommendations, such as being easy-to-learn, free or affordable, with powerful capacity. In this section, we'll list all of the tools recommended in the pages of this book, with a brief description and a reference to the chapter that discusses each in more detail.
+When creating this book, we aimed to identify the most essential data visualization tasks that beginners are likely to face, and the digital toolkit needed to complete those tasks. In the prior section we listed ten factors that influenced our tool recommendations, such as being easy-to-learn, free or affordable, with powerful capacity. In this section, we have listed all of the tools featured in this book, with recommended uses and references to chapters where they appear, as shown in Table \@ref(tab:tools). Your data visualization projects may only require you to use only a small number of these, or perhaps even just one tool. But it's important to be aware of the different types of tools, because you may not realize how they can help you if don't know that they exist.
 
-Although we tried to minimize the size of our digital toolkit, we were surprised to discover that the final roster includes ZZZ [TODO INSERT NUMBER] tools! We agree that this number may still seem overwhelming at first to beginners. Let's be clear: your data visualization projects may only require you to use only a small number of these, or perhaps even just one tool. But it's important to be aware of the different types of tools, because you may not realize how they can help you if don't know that they exist.
+<!-- TODO: See table data in Google Sheet https://docs.google.com/spreadsheets/d/1HHKRw_Og38lCK9eKAvQTF_6GHdrSE5YU1ioStPsvxII/edit#gid=0 -->
 
-TODO: Insert Table: Tools featured in this book, with links to relevant chapters, and how they rate on various criteria above
+Table: (\#tab:tools) Recommended Tools and Uses, with Chapter References
 
+|Tools|Data|Clean|Chart|Geocode|Map|Table|Code|Transform|
+|---|---|---|---|---|---|---|---|---|
+|Google Sheets<br> spreadsheet/charts |[Ch3](spreadsheet-tools.html)|[Ch5](clean.html)|[Ch6](chart-google.html)|[Ch3](geocode.html)| |[Ch8](table.html)|  |  |
+|LibreOffice Calc<br> spreadsheet/charts   |[Ch3](spreadsheet-tools.html)|  |   |  |   |   |  |  |
+|Airtable<br> relational database     |[Ch3](database.html)|  |   |   |   |   |   |   |
+|Tabula PDF<br>table extractor  |   |[Ch5](tabula.html)|   |   |   |   |    |    |
+|OpenRefine<br> data cleaner          |   |[Ch5](open-refine.html)|   |     |    |    |     |    |
+|Datawrapper<br> charts/maps/tables   |   |   |[Ch6](chart-datawrapper.html)|[Ch7](map-datawrapper.html)|[Ch7](map-datawrapper.html)|[Ch8](table-datawrapper.html)|  |  |
+|Tableau Public<br> charts/maps/tables|   |   |[Ch6](chart-tableau.html)|   |[Ch7](map-tableau.html)|[Ch8](table.html)|    |  |
+|Chart.js<br> code templates          |   |   |[Ch11](chartcode.html)| |   |   |  |   |
+|Highcharts<br> code templates        |   |   |[Ch11](chartcode.html)|   |    |   |    |   |
+|Google My Maps<br> point map maker   |   |   |   |[Ch7](mymaps.html)|[Ch7](mymaps.html)| |   |   |
+|Leaflet map<br> code templates       |   |   |   |   |[Ch12](leaflet.html)|  |  |   |
+|GitHub<br> edit & host code |   |   |   |    |   |   |[Ch10](github.html)|   |
+|GitHub Desktop &<br>Atom code editor|   |   |   |    |   |   |[Ch10](github-desktop-atom.html)| |
+|GeoJson.io edit<br> & draw geodata   |   |   |   |    |   |   |     |[Ch13](geojsonio.html)|
+|Mapshaper<br> edit & join geodata    |   |   |   |    |   |   |     |[Ch13](mapshaper.html)|
+|MapWarper<br> georectify images   |   |   |   |    |   |   |     |[Ch13](mapwarper.html)|
 
-You may have other tool recommendations...and as we stated, tools change and evolve over time. So if you'd like us to consider another tool that's not already on the list, email or tweet us... explain what your recommendation would replace in the toolkit, and how it rates better on our criteria above.
+TODO: Acknowledge that the book also mentions other useful tools that are not featured in the table, but you'll find them in the text...ColorBrewer, Geocoding by SmartMonkey, US Census Geocoder, Google Maps, Google Forms, Socrata repository chart & map tools, etc...
+
+TODO: As we've stated, digital tools change and evolve over time. If you recommend a tool that's not on our list, email or tweet us and explain how it rates on the ten factors that guided our selection process above.
 
 ## Use a Password Manager {- #password-manager}
 

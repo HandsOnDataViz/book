@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-24" />
+<meta name="date" content="2020-09-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -155,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
+<li class="chapter" data-level="" data-path="tool-factors.html"><a href="tool-factors.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
 <li class="chapter" data-level="" data-path="recommended-tools.html"><a href="recommended-tools.html"><i class="fa fa-check"></i>Recommended Tools</a></li>
 <li class="chapter" data-level="" data-path="password-manager.html"><a href="password-manager.html"><i class="fa fa-check"></i>Use a Password Manager</a></li>
 </ul></li>
@@ -196,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
-<li class="chapter" data-level="" data-path="charts-google.html"><a href="charts-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="chart-google.html"><a href="chart-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>- Bar and Column Charts</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>- Pie, Line, and Area Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
@@ -211,9 +211,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="map-datawrapper.html"><a href="map-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
-<li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>8</b> Table Your Data</a>
 <ul>
@@ -329,7 +329,7 @@ Figure 8.2: Table with sparklines. Explore the <a href="https://datawrapper.dwcd
 </p>
 </div>
 <p>In this tutorial, you’ll create an interactive table with sparklines to visualize differences in life expectancy at birth from 1960 to 2018 for over 195 nations around the world. Overall, life expectancy gradually rises in most nations, but a few display “dips” that stand out in the tiny line charts. For example, Cambodia and Vietnam both experienced a significant decrease in life expectancy, which corresponds with the deadly wars and refugee crises in both nations from the late 1960s to the mid-1970s. Sparklines help us to visually detect patterns like these, which anyone can investigate further by downloading the raw data through the link at the bottom of the interactive table.</p>
-<p>While it’s possible to present the same data in a <a href="filtered-line-chart-tableau.html">filtered line chart as shown in Chapter 6</a>, it would be difficult for readers to spot differences when shown over 180 lines at the same time. Likewise, it’s also possible to present this data in a <a href="map-with-datawrapper.html">choropleth map as shown in Chapter 7</a>, though it would be hard for readers to identify data for nations with smaller geographies compared to larger ones. In this particular case, when we want readers to be able to search, sort, or scroll through sparklines for all nations, the best visualization is a good table.</p>
+<p>While it’s possible to present the same data in a <a href="filtered-line-chart-tableau.html">filtered line chart as shown in Chapter 6</a>, it would be difficult for readers to spot differences when shown over 180 lines at the same time. Likewise, it’s also possible to present this data in a <a href="map-datawrapper.html">choropleth map as shown in Chapter 7</a>, though it would be hard for readers to identify data for nations with smaller geographies compared to larger ones. In this particular case, when we want readers to be able to search, sort, or scroll through sparklines for all nations, the best visualization is a good table.</p>
 <p>To create your own interactive table with sparklines, follow this tutorial, which we adapted from <a href="https://www.datawrapper.de/training-materials/">Datawrapper training materials</a> and their <a href="https://www.datawrapper.de/tables/">gallery of examples</a>:</p>
 <ol style="list-style-type: decimal">
 <li>Open our <a href="https://docs.google.com/spreadsheets/d/1Wev14VaXyq7d7yuYo-7FwRoAjyyaY1v6z_qBoo_4VSo/edit#gid=3466257">cleaned-up World Bank data on life expectancy at birth, 1960 to 2018 in Google Sheets</a>.</li>

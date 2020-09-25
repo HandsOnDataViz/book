@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Polygon Map with Tableau Public | Hands-On Data Visualization</title>
+  <title>Choropleth Map with Datawrapper | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Polygon Map with Tableau Public | Hands-On Data Visualization" />
+  <meta property="og:title" content="Choropleth Map with Datawrapper | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Polygon Map with Tableau Public | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Choropleth Map with Datawrapper | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-24" />
+<meta name="date" content="2020-09-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="filtered-point-map-socrata.html"/>
-<link rel="next" href="table.html"/>
+<link rel="prev" href="mymaps.html"/>
+<link rel="next" href="filtered-point-map-socrata.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -155,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
+<li class="chapter" data-level="" data-path="tool-factors.html"><a href="tool-factors.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
 <li class="chapter" data-level="" data-path="recommended-tools.html"><a href="recommended-tools.html"><i class="fa fa-check"></i>Recommended Tools</a></li>
 <li class="chapter" data-level="" data-path="password-manager.html"><a href="password-manager.html"><i class="fa fa-check"></i>Use a Password Manager</a></li>
 </ul></li>
@@ -196,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
-<li class="chapter" data-level="" data-path="charts-google.html"><a href="charts-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="chart-google.html"><a href="chart-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>- Bar and Column Charts</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>- Pie, Line, and Area Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
@@ -211,9 +211,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="map-datawrapper.html"><a href="map-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
-<li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>8</b> Table Your Data</a>
 <ul>
@@ -316,136 +316,119 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="tableau-polygon" class="section level2 unnumbered" number="">
-<h2>Polygon Map with Tableau Public</h2>
-<p>In the previous chapter, we looked at using Tableau Public to build
-<a href="#scatter-chart-tableau">scatterplots</a> and <a href="#filtered-line-chart-tableau">filtered line charts</a>.
-Tableau can also be used to create point and polygon maps.</p>
-<p>In this tutorial, we will create a choropleth map of military spending per country
-as percentage of gross dometic product as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-final">7.27</a>.
-Remember that choropleth maps work best when
-they show relative, not absolute numbers.
-Displaying total spending per country is a bad idea, as bigger countries tend
-to have larger populations and as a result larger values for a lot of measures,
-including military spending.</p>
-<!-- TODO: reminder that this Tableau visualization is stored in Ilya's account at https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1 -->
+<div id="map-datawrapper" class="section level2 unnumbered" number="">
+<h2>Choropleth Map with Datawrapper</h2>
+<p>In addition to creating wonderful interactive charts, Datawrapper lets you create
+stylish and interactive point and polygon maps.
+In this section, we will create a choropleth map of average home values in US states
+in 2019 according to <a href="https://www.zillow.com/research/data/">Zillow data</a>,
+as shown in Figure <a href="map-datawrapper.html#fig:datawrapper-map-final">7.13</a>.</p>
+<p>We calculated average 2019 prices for 50 US states and DC, and put them in a spreadsheet, which
+<a href="data/us-states-home-values-zillow-2019.csv">you can download</a> for this tutorial.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-final"></span>
-<iframe src="https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
+<div class="figure"><span id="fig:datawrapper-map-final"></span>
+<iframe src="https://datawrapper.dwcdn.net/uX2Yx/2/" width="672" height="513px">
 </iframe>
 <p class="caption">
-Figure 7.27: Filled Polygon (Choropleth) map: Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1">interactive version</a>. Data from TODO.
+Figure 7.13: This choropleth map is created in Datawrapper
 </p>
 </div>
-<p>To create maps in Tableau, you do not always need geospatial files. Tableau can recognize
-of a lot of locations, including boundaries for countries and territories, counties within countries,
-states, US zip codes, airport codes, city locations, and some others. A simple spreadsheet that references
-these locations can suffice. In this tutorial, we will rely on Tableau to automatically recognize country
-names. If you require custom boundaries or points (such as town names in your local language),
-take a look at <a href="https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm">Create Tableau Maps from Spatial Files</a>
-article from the official Tableau documentation.</p>
-<p>Before we begin, <a href="data/military-spending-2018.csv">download the 2018 data</a> that we obtained from the World Bank.</p>
-<div id="create-a-choropleth-map-in-tableau" class="section level3 unnumbered" number="">
-<h3>Create a Choropleth Map in Tableau</h3>
-<p>Launch Tableau. In <strong>Connect</strong> section on start up, choose <em>Text file</em>, and select <code>military-spending-2018.csv</code>.
-From Data Source tab, inspect the dataset contents. It contains four columns: Country Name, which includes
-countries and territories defined by the World Bank, the three-digit Country Code,
-Indicator Name (same for all rows), and percent value, as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-connect">7.28</a>.
-Notice that some values are set to <em>null</em> (not available).</p>
+<div id="create-a-new-choropleth-map" class="section level3 unnumbered" number="">
+<h3>Create a New Choropleth Map</h3>
+<p>Sign in to your <a href="https://app.datawrapper.de/signin">Datawrapper account</a>
+and click <em>New Map</em> in the header. Datawrapper will offer a choice of
+a <em>Choropleth</em>, <em>Symbol</em>, and <em>Locator</em> maps, as shown in Figure <a href="map-datawrapper.html#fig:datawrapper-map-choose">7.14</a>.
+Go ahead and choose <em>choropleth</em>.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-connect"></span>
-<img src="images/07-map/tableau-polygon-connect-annotated.png" alt="When finished inspecting the connected file, go to Sheet 1."  />
+<div class="figure"><span id="fig:datawrapper-map-choose"></span>
+<img src="images/07-map/datawrapper-map-choose-annotated.png" alt="Sign in to Datawrapper, click New Map, and choose Choropleth."  />
 <p class="caption">
-Figure 7.28: When finished inspecting the connected file, go to Sheet 1.
+Figure 7.14: Sign in to Datawrapper, click <em>New Map</em>, and choose <em>Choropleth</em>.
 </p>
 </div>
-<p>In the variables list on the left, notice how Tableau generated <em>Latitude</em> and <em>Longitude</em>
-fields based on country names and country codes (by the way, you only need one or the other, not both).</p>
-<p>Drag and drop Longitude to <strong>Columns</strong>, and <em>Latitude</em> to <strong>Rows</strong>,
-as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-drag">7.29</a>.
-You should see that the chart area shows an empty map of the world
-(if not, double-check that Latitude is indeed in Rows, not Columns).
-In Marks box, change <em>Automatic</em> to <em>Map</em>, and drag <em>Country Name</em> variable
-to the <strong>Size</strong> box of the Marks card. You will see that country outlines turned blue.</p>
+<p>Datawrapper splits the process of creating a map into four steps.
+In step one, you need to choose your map boundaries. Datawrapper has a
+wide collection of most common geographical boundaries, including
+states and counties and municipalities for most countries in the world,
+and zip code and census tract areas for the United States. But you are not limited
+to the boundaries that Datawrapper already has. You can also upload your own custom geographies
+as a TopoJSON or GeoJSON file, and you will learn more about that in the <a href="convert-geojson.html">Convert to GeoJSON section of Chapter 13</a>.
+Because we are mapping average home prices by US state, choose <em>United States &gt; States</em>,
+as shown in Figure <a href="map-datawrapper.html#fig:datawrapper-map-us-states">7.15</a>, and hit <em>Next</em> to go to step 2.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-drag"></span>
-<img src="images/07-map/tableau-polygon-drag-annotated.png" alt="Drag and drop variables to the right places."  />
+<div class="figure"><span id="fig:datawrapper-map-us-states"></span>
+<img src="images/07-map/datawrapper-map-us-states-annotated.png" alt="To map home prices by US state, choose appropriate boundaries."  />
 <p class="caption">
-Figure 7.29: Drag and drop variables to the right places.
+Figure 7.15: To map home prices by US state, choose appropriate boundaries.
 </p>
 </div>
-<p>We want colors to represent military spending values, so drag <em>Value</em> variable to
-the <strong>Color</strong> box of the Marks card. You should now see a proper choropleth map.</p>
-<p>Places like Greenland and Libya do not have available values, but they are still
-painted with the lightest color, which is misleading. To remove countries with <em>null</em> values
-from the map, drag <em>Values</em> to the <em>Filters</em> card. A popup window will ask you how
-you want to filter, just leave everything unchanged. This will leave the whole range of values,
-and exclude <em>null</em> values (see the checkbox in the lower-right corner of the Filter window
-in Figure <a href="tableau-polygon.html#fig:tableau-polygon-filter">7.30</a>).</p>
+<p>In the second step, you can attach data to the chosen boundaries.
+You can set values manually in the interactive table that Datawrapper offers.
+This is fine for several values, but is too time-consuming for all 50 values
+(District of Columbia is not a US state, so is not present in the boundaries).
+Instead, click <em>Import your dataset</em> button under the table.</p>
+<p>Datawrapper will warn you that you need either <em>Names</em> (full state names, such as <code>Connecticut</code>),
+or <em>ISO-Codes</em> (the standardized two-letter codes for the state, such as <code>CT</code> for Connecticut)
+columns in order to perform merging.
+Since the dataset that we prepared contains both columns (titled <em>State</em> and <em>StateAbbr</em>),
+you can confidently press the <em>Start import</em> button.</p>
+<p>In the following window, you can either copy/paste values from the spreadsheet,
+or upload a CSV file. We recommend uploading a file, so click the link and choose the file
+<code>us-states-home-values-zillow-2019.csv</code>. The table will then get populated,
+and Datawrapper will ask for help identifying the relevant column with geographical names.
+Make sure your <em>Matched as ISO-Codes</em> tooltip is blue above the <em>StateAbbr</em> column,
+scroll down and click <em>Next</em>, as shown in Figure <a href="map-datawrapper.html#fig:datawrapper-map-match">7.16</a>.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-filter"></span>
-<img src="images/07-map/tableau-polygon-filter-annotated.png" alt="Filter values to remove countries with no data from display." width="400" />
+<div class="figure"><span id="fig:datawrapper-map-match"></span>
+<img src="images/07-map/datawrapper-map-match.png" alt="Tell Datawrapper which column contains geography names (ISO-Codes of states)." width="350" />
 <p class="caption">
-Figure 7.30: Filter values to remove countries with no data from display.
+Figure 7.16: Tell Datawrapper which column contains geography names (ISO-Codes of states).
 </p>
 </div>
-<p>You can change the color scheme by clicking the Color box of the Marks card, and
-then <em>Edit colors</em>. Change the palette to <em>Reds</em>, and make it stepped rather than continuous,
-as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-color">7.31</a>.</p>
+<p>In a similar fashion, you will then be asked to identify a column that contains <em>values</em> to be mapped. Make sure it is <em>HomeValue2019</em> that is <em>Matched As Values</em>.</p>
+<p>Note: See <a href="normalize.html">Normalize Data to Create Meaningful Choropleth Maps</a> section to learn why you should avoid displaying absolute values or counts in choropleth maps.</p>
+</div>
+<div id="style-and-publish-your-map" class="section level3 unnumbered" number="">
+<h3>Style and publish your map</h3>
+<p>When finished uploading data, go to step 3 to begin visualizing. Start with the <em>Refine</em> tab and choose
+a diverging color palette, from reds to blues. Make sure your “middle” color value
+corresponds to the state with the median home price by choosing <em>min/median/max</em> value
+from the Stops dropdown, as shown in Figure <a href="map-datawrapper.html#fig:datawrapper-map-color">7.17</a>.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-color"></span>
-<img src="images/07-map/tableau-polygon-color.png" alt="Change the color scheme to Reds with 5 steps." width="400" />
+<div class="figure"><span id="fig:datawrapper-map-color"></span>
+<img src="images/07-map/datawrapper-map-color.png" alt="Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value." width="350" />
 <p class="caption">
-Figure 7.31: Change the color scheme to Reds with 5 steps.
+Figure 7.17: Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value.
 </p>
 </div>
-<p>You may notice the tooltip calls values <em>Value</em> when hovering over countries.
-Click the Tooltip box of the Marks card to change text to <em>Military spending</em>,
-and add a percentage sign after the value itself, as shown in Figure <a href="tableau-polygon.html#fig:tableau-polygon-tooltip">7.32</a>.
-Make sure not to change values between
-<code>&lt;</code> and <code>&gt;</code>, as these are references to variables.</p>
+<p>When finished with colors, scroll down to <strong>Tooltips</strong> section and
+click <em>Customize tooltips</em> button. In a popup window, set Title to the state name
+and Body to the average home value, as shown in Figure <a href="map-datawrapper.html#fig:datawrapper-map-tooltip">7.18</a>.
+The easiest way to do this is to click on column names in the upper-right corner of the popup window, where all available names are listed, which is circled in Figure <a href="map-datawrapper.html#fig:datawrapper-map-tooltip">7.18</a>. Note that references to variables are put in double curly brackets (<code>{{ ColumnNameGoesHere }}</code>).
+Make sure your dollar symbol (<code>$</code>) in outside of the curly brackets. Click <em>Save</em>,
+and hover over the map to make sure your tooltip displays the state name and the average home price.</p>
 
-<div class="figure"><span id="fig:tableau-polygon-tooltip"></span>
-<img src="images/07-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
+<div class="figure"><span id="fig:datawrapper-map-tooltip"></span>
+<img src="images/07-map/datawrapper-map-tooltip-annotated.png" alt="To reference values from the spreadsheet, add column names in double curly brackets." width="450" />
 <p class="caption">
-Figure 7.32: Change tooltip text to make it more user-friendly.
+Figure 7.18: To reference values from the spreadsheet, add column names in double curly brackets.
 </p>
 </div>
-<p>And finally, let’s add a proper title to the map. Double-click the default <em>Sheet 1</em> name
-to bring up the <em>Edit Title</em> window, and change the name of your chart to a more meaningful
-<em>Military Spending as % of GDP (2018)</em>.</p>
-</div>
-<div id="publish-your-tableau-map" class="section level3 unnumbered" number="">
-<h3>Publish Your Tableau Map</h3>
-<p>Once you are ready to publish and share the map, go to <em>File &gt; Save to Tableau Public</em>.
-In the pop-up window, log in to your account if requested. Give it a title, such
-as <em>Military Spending</em>, and click Save.</p>
-</div>
-<div id="summary7" class="section level3 unnumbered" number="">
-<h3>Summary</h3>
-<p>In this chapter, we looked at free mapping platforms to create simple point and polygon maps.
-Google My Maps is a good choice for point maps that can be created in collaboration with others.
-If the data you are interested in lives on Socrata platform, you might be able to create a point
-map within the platform itself, and embed it as an iframe in your own website.
-Tableau is another very powerful tool to build and share polygon and point maps.</p>
-<p>In reviewing all these tools, we only scratched the surface and showed simple examples
-to get you started quickly. All platforms allow layering data to create powerful exploration
-mapping visualizations.</p>
-<p>None of the platforms required special geospatial data, as all were smart enough to perform
-geocoding and know the boundaries and coordinates of objects given to them.
-In <a href="transform.html">Chapter 13</a>, we will talk more about geospatial data,
-how it can be obtained, stored, modified, and shared.</p>
-
+<p>You can now move to the <em>Annotate</em> tab and set values for the map’s title and description,
+which is the line just below the title. Make sure you reference <em>Zillow Data</em> as data source.
+Being transparent about your sources and methods adds credibility to your work.</p>
+<p>In the final, fourth step, you can publish the chart and copy the iframe code that
+Datawrapper generated for you.</p>
+<p>In the following section, we will create a point map inside Socrata data platform.</p>
 </div>
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="filtered-point-map-socrata.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="table.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="mymaps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="filtered-point-map-socrata.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

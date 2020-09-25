@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-24" />
+<meta name="date" content="2020-09-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="tools-tradeoffs.html"/>
+<link rel="prev" href="tool-factors.html"/>
 <link rel="next" href="password-manager.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -155,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
+<li class="chapter" data-level="" data-path="tool-factors.html"><a href="tool-factors.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
 <li class="chapter" data-level="" data-path="recommended-tools.html"><a href="recommended-tools.html"><i class="fa fa-check"></i>Recommended Tools</a></li>
 <li class="chapter" data-level="" data-path="password-manager.html"><a href="password-manager.html"><i class="fa fa-check"></i>Use a Password Manager</a></li>
 </ul></li>
@@ -196,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
-<li class="chapter" data-level="" data-path="charts-google.html"><a href="charts-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="chart-google.html"><a href="chart-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>- Bar and Column Charts</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>- Pie, Line, and Area Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
@@ -211,9 +211,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="map-datawrapper.html"><a href="map-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
-<li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>8</b> Table Your Data</a>
 <ul>
@@ -318,17 +318,211 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="recommended-tools" class="section level2 unnumbered" number="">
 <h2>Recommended Tools</h2>
-<p>When creating this book, we aimed to identify the most essential data visualization tasks that beginners are likely to face, and the digital toolkit needed to complete those tasks. In the prior section we listed ten factors that influenced our tool recommendations, such as being easy-to-learn, free or affordable, with powerful capacity. In this section, we’ll list all of the tools recommended in the pages of this book, with a brief description and a reference to the chapter that discusses each in more detail.</p>
-<p>Although we tried to minimize the size of our digital toolkit, we were surprised to discover that the final roster includes ZZZ [TODO INSERT NUMBER] tools! We agree that this number may still seem overwhelming at first to beginners. Let’s be clear: your data visualization projects may only require you to use only a small number of these, or perhaps even just one tool. But it’s important to be aware of the different types of tools, because you may not realize how they can help you if don’t know that they exist.</p>
-<p>TODO: Insert Table: Tools featured in this book, with links to relevant chapters, and how they rate on various criteria above</p>
-<p>You may have other tool recommendations…and as we stated, tools change and evolve over time. So if you’d like us to consider another tool that’s not already on the list, email or tweet us… explain what your recommendation would replace in the toolkit, and how it rates better on our criteria above.</p>
+<p>When creating this book, we aimed to identify the most essential data visualization tasks that beginners are likely to face, and the digital toolkit needed to complete those tasks. In the prior section we listed ten factors that influenced our tool recommendations, such as being easy-to-learn, free or affordable, with powerful capacity. In this section, we have listed all of the tools featured in this book, with recommended uses and references to chapters where they appear, as shown in Table <a href="recommended-tools.html#tab:tools">2.1</a>. Your data visualization projects may only require you to use only a small number of these, or perhaps even just one tool. But it’s important to be aware of the different types of tools, because you may not realize how they can help you if don’t know that they exist.</p>
+<!-- TODO: See table data in Google Sheet https://docs.google.com/spreadsheets/d/1HHKRw_Og38lCK9eKAvQTF_6GHdrSE5YU1ioStPsvxII/edit#gid=0 -->
+<table>
+<caption><span id="tab:tools">Table 2.1: </span> Recommended Tools and Uses, with Chapter References</caption>
+<thead>
+<tr class="header">
+<th>Tools</th>
+<th>Data</th>
+<th>Clean</th>
+<th>Chart</th>
+<th>Geocode</th>
+<th>Map</th>
+<th>Table</th>
+<th>Code</th>
+<th>Transform</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Google Sheets<br> spreadsheet/charts</td>
+<td><a href="spreadsheet-tools.html">Ch3</a></td>
+<td><a href="clean.html">Ch5</a></td>
+<td><a href="chart-google.html">Ch6</a></td>
+<td><a href="geocode.html">Ch3</a></td>
+<td></td>
+<td><a href="table.html">Ch8</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>LibreOffice Calc<br> spreadsheet/charts</td>
+<td><a href="spreadsheet-tools.html">Ch3</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Airtable<br> relational database</td>
+<td><a href="database.html">Ch3</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Tabula PDF<br>table extractor</td>
+<td></td>
+<td><a href="tabula.html">Ch5</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>OpenRefine<br> data cleaner</td>
+<td></td>
+<td><a href="open-refine.html">Ch5</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Datawrapper<br> charts/maps/tables</td>
+<td></td>
+<td></td>
+<td><a href="chart-datawrapper.html">Ch6</a></td>
+<td><a href="map-datawrapper.html">Ch7</a></td>
+<td><a href="map-datawrapper.html">Ch7</a></td>
+<td><a href="table-datawrapper.html">Ch8</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Tableau Public<br> charts/maps/tables</td>
+<td></td>
+<td></td>
+<td><a href="chart-tableau.html">Ch6</a></td>
+<td></td>
+<td><a href="map-tableau.html">Ch7</a></td>
+<td><a href="table.html">Ch8</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Chart.js<br> code templates</td>
+<td></td>
+<td></td>
+<td><a href="chartcode.html">Ch11</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Highcharts<br> code templates</td>
+<td></td>
+<td></td>
+<td><a href="chartcode.html">Ch11</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Google My Maps<br> point map maker</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="mymaps.html">Ch7</a></td>
+<td><a href="mymaps.html">Ch7</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Leaflet map<br> code templates</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="leaflet.html">Ch12</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>GitHub<br> edit &amp; host code</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="github.html">Ch10</a></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>GitHub Desktop &amp;<br>Atom code editor</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="github-desktop-atom.html">Ch10</a></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>GeoJson.io edit<br> &amp; draw geodata</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="geojsonio.html">Ch13</a></td>
+</tr>
+<tr class="odd">
+<td>Mapshaper<br> edit &amp; join geodata</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="mapshaper.html">Ch13</a></td>
+</tr>
+<tr class="even">
+<td>MapWarper<br> georectify images</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="mapwarper.html">Ch13</a></td>
+</tr>
+</tbody>
+</table>
+<p>TODO: Acknowledge that the book also mentions other useful tools that are not featured in the table, but you’ll find them in the text…ColorBrewer, Geocoding by SmartMonkey, US Census Geocoder, Google Maps, Google Forms, Socrata repository chart &amp; map tools, etc…</p>
+<p>TODO: As we’ve stated, digital tools change and evolve over time. If you recommend a tool that’s not on our list, email or tweet us and explain how it rates on the ten factors that guided our selection process above.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="tools-tradeoffs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tool-factors.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="password-manager.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Choropleth Map with Datawrapper | Hands-On Data Visualization</title>
+  <title>Google Sheets Charts | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Choropleth Map with Datawrapper | Hands-On Data Visualization" />
+  <meta property="og:title" content="Google Sheets Charts | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Choropleth Map with Datawrapper | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Google Sheets Charts | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-24" />
+<meta name="date" content="2020-09-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="mymaps.html"/>
-<link rel="next" href="filtered-point-map-socrata.html"/>
+<link rel="prev" href="chart-design.html"/>
+<link rel="next" href="bar-column-google.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -155,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2" data-path="choose.html"><a href="choose.html"><i class="fa fa-check"></i><b>2</b> Choose Tools to Tell Your Story</a>
 <ul>
 <li class="chapter" data-level="" data-path="sketch.html"><a href="sketch.html"><i class="fa fa-check"></i>Start Sketching Your Data Story</a></li>
-<li class="chapter" data-level="" data-path="tools-tradeoffs.html"><a href="tools-tradeoffs.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
+<li class="chapter" data-level="" data-path="tool-factors.html"><a href="tool-factors.html"><i class="fa fa-check"></i>Tools and Tradeoffs</a></li>
 <li class="chapter" data-level="" data-path="recommended-tools.html"><a href="recommended-tools.html"><i class="fa fa-check"></i>Recommended Tools</a></li>
 <li class="chapter" data-level="" data-path="password-manager.html"><a href="password-manager.html"><i class="fa fa-check"></i>Use a Password Manager</a></li>
 </ul></li>
@@ -196,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
-<li class="chapter" data-level="" data-path="charts-google.html"><a href="charts-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
+<li class="chapter" data-level="" data-path="chart-google.html"><a href="chart-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>- Bar and Column Charts</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>- Pie, Line, and Area Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
@@ -211,9 +211,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="map-with-datawrapper.html"><a href="map-with-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="map-datawrapper.html"><a href="map-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
-<li class="chapter" data-level="" data-path="tableau-polygon.html"><a href="tableau-polygon.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>8</b> Table Your Data</a>
 <ul>
@@ -316,119 +316,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="map-with-datawrapper" class="section level2 unnumbered" number="">
-<h2>Choropleth Map with Datawrapper</h2>
-<p>In addition to creating wonderful interactive charts, Datawrapper lets you create
-stylish and interactive point and polygon maps.
-In this section, we will create a choropleth map of average home values in US states
-in 2019 according to <a href="https://www.zillow.com/research/data/">Zillow data</a>,
-as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-final">7.13</a>.</p>
-<p>We calculated average 2019 prices for 50 US states and DC, and put them in a spreadsheet, which
-<a href="data/us-states-home-values-zillow-2019.csv">you can download</a> for this tutorial.</p>
-
-<div class="figure"><span id="fig:datawrapper-map-final"></span>
-<iframe src="https://datawrapper.dwcdn.net/uX2Yx/2/" width="672" height="513px">
-</iframe>
-<p class="caption">
-Figure 7.13: This choropleth map is created in Datawrapper
-</p>
-</div>
-<div id="create-a-new-choropleth-map" class="section level3 unnumbered" number="">
-<h3>Create a New Choropleth Map</h3>
-<p>Sign in to your <a href="https://app.datawrapper.de/signin">Datawrapper account</a>
-and click <em>New Map</em> in the header. Datawrapper will offer a choice of
-a <em>Choropleth</em>, <em>Symbol</em>, and <em>Locator</em> maps, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-choose">7.14</a>.
-Go ahead and choose <em>choropleth</em>.</p>
-
-<div class="figure"><span id="fig:datawrapper-map-choose"></span>
-<img src="images/07-map/datawrapper-map-choose-annotated.png" alt="Sign in to Datawrapper, click New Map, and choose Choropleth."  />
-<p class="caption">
-Figure 7.14: Sign in to Datawrapper, click <em>New Map</em>, and choose <em>Choropleth</em>.
-</p>
-</div>
-<p>Datawrapper splits the process of creating a map into four steps.
-In step one, you need to choose your map boundaries. Datawrapper has a
-wide collection of most common geographical boundaries, including
-states and counties and municipalities for most countries in the world,
-and zip code and census tract areas for the United States. But you are not limited
-to the boundaries that Datawrapper already has. You can also upload your own custom geographies
-as a TopoJSON or GeoJSON file, and you will learn more about that in the <a href="convert-geojson.html">Convert to GeoJSON section of Chapter 13</a>.
-Because we are mapping average home prices by US state, choose <em>United States &gt; States</em>,
-as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-us-states">7.15</a>, and hit <em>Next</em> to go to step 2.</p>
-
-<div class="figure"><span id="fig:datawrapper-map-us-states"></span>
-<img src="images/07-map/datawrapper-map-us-states-annotated.png" alt="To map home prices by US state, choose appropriate boundaries."  />
-<p class="caption">
-Figure 7.15: To map home prices by US state, choose appropriate boundaries.
-</p>
-</div>
-<p>In the second step, you can attach data to the chosen boundaries.
-You can set values manually in the interactive table that Datawrapper offers.
-This is fine for several values, but is too time-consuming for all 50 values
-(District of Columbia is not a US state, so is not present in the boundaries).
-Instead, click <em>Import your dataset</em> button under the table.</p>
-<p>Datawrapper will warn you that you need either <em>Names</em> (full state names, such as <code>Connecticut</code>),
-or <em>ISO-Codes</em> (the standardized two-letter codes for the state, such as <code>CT</code> for Connecticut)
-columns in order to perform merging.
-Since the dataset that we prepared contains both columns (titled <em>State</em> and <em>StateAbbr</em>),
-you can confidently press the <em>Start import</em> button.</p>
-<p>In the following window, you can either copy/paste values from the spreadsheet,
-or upload a CSV file. We recommend uploading a file, so click the link and choose the file
-<code>us-states-home-values-zillow-2019.csv</code>. The table will then get populated,
-and Datawrapper will ask for help identifying the relevant column with geographical names.
-Make sure your <em>Matched as ISO-Codes</em> tooltip is blue above the <em>StateAbbr</em> column,
-scroll down and click <em>Next</em>, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-match">7.16</a>.</p>
-
-<div class="figure"><span id="fig:datawrapper-map-match"></span>
-<img src="images/07-map/datawrapper-map-match.png" alt="Tell Datawrapper which column contains geography names (ISO-Codes of states)." width="350" />
-<p class="caption">
-Figure 7.16: Tell Datawrapper which column contains geography names (ISO-Codes of states).
-</p>
-</div>
-<p>In a similar fashion, you will then be asked to identify a column that contains <em>values</em> to be mapped. Make sure it is <em>HomeValue2019</em> that is <em>Matched As Values</em>.</p>
-<p>Note: See <a href="normalize.html">Normalize Data to Create Meaningful Choropleth Maps</a> section to learn why you should avoid displaying absolute values or counts in choropleth maps.</p>
-</div>
-<div id="style-and-publish-your-map" class="section level3 unnumbered" number="">
-<h3>Style and publish your map</h3>
-<p>When finished uploading data, go to step 3 to begin visualizing. Start with the <em>Refine</em> tab and choose
-a diverging color palette, from reds to blues. Make sure your “middle” color value
-corresponds to the state with the median home price by choosing <em>min/median/max</em> value
-from the Stops dropdown, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-color">7.17</a>.</p>
-
-<div class="figure"><span id="fig:datawrapper-map-color"></span>
-<img src="images/07-map/datawrapper-map-color.png" alt="Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value." width="350" />
-<p class="caption">
-Figure 7.17: Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value.
-</p>
-</div>
-<p>When finished with colors, scroll down to <strong>Tooltips</strong> section and
-click <em>Customize tooltips</em> button. In a popup window, set Title to the state name
-and Body to the average home value, as shown in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-tooltip">7.18</a>.
-The easiest way to do this is to click on column names in the upper-right corner of the popup window, where all available names are listed, which is circled in Figure <a href="map-with-datawrapper.html#fig:datawrapper-map-tooltip">7.18</a>. Note that references to variables are put in double curly brackets (<code>{{ ColumnNameGoesHere }}</code>).
-Make sure your dollar symbol (<code>$</code>) in outside of the curly brackets. Click <em>Save</em>,
-and hover over the map to make sure your tooltip displays the state name and the average home price.</p>
-
-<div class="figure"><span id="fig:datawrapper-map-tooltip"></span>
-<img src="images/07-map/datawrapper-map-tooltip-annotated.png" alt="To reference values from the spreadsheet, add column names in double curly brackets." width="450" />
-<p class="caption">
-Figure 7.18: To reference values from the spreadsheet, add column names in double curly brackets.
-</p>
-</div>
-<p>You can now move to the <em>Annotate</em> tab and set values for the map’s title and description,
-which is the line just below the title. Make sure you reference <em>Zillow Data</em> as data source.
-Being transparent about your sources and methods adds credibility to your work.</p>
-<p>In the final, fourth step, you can publish the chart and copy the iframe code that
-Datawrapper generated for you.</p>
-<p>In the following section, we will create a point map inside Socrata data platform.</p>
-</div>
+<div id="chart-google" class="section level2 unnumbered" number="">
+<h2>Google Sheets Charts</h2>
+<p>In this section, you’ll learn about the pros and cons of creating interactive charts in <a href="https://sheets.google.com">Google Sheets</a>, the powerful <a href="spreadsheet.html">spreadsheet tool we introduced in Chapter 3</a>. Google Sheets has many advantages for newcomers to data visualization. First, Google Sheets allows you to clean, analyze, share, and publish charts, all in the same platform. One tool does it all, which makes it easier to organize your work by keeping it all together in one place. Second, Google Sheets is familiar and easy to learn to many users, so it will help you to <em>quickly</em> create good-looking interactive charts. See all of the <a href="https://support.google.com/docs/answer/190718">types of charts you can create with Google Sheets</a>. Although some people export charts as static images in <em>JPG</em> or <em>PNG</em> format, this chapter focuses on creating interactive charts that display more info about your data when you hover over them in your browser. Later, you’ll learn <a href="embed.html">how to embed an interactive chart on your website in Chapter 9</a>.</p>
+<p>But Google Sheets also has limitations. First, there is no easy way to cite or link to your source data inside a Google Sheets chart, so you will need to add this key information to the text of a web page that contains your embedded interactive chart. Second, you cannot add text annotations or highlight specific items inside your charts. Finally, you are limited in customizing your chart design, especially tooltips when hovering over data visualizations. If Google Sheets does not meet your needs, refer back to Table <a href="chart.html#tab:chart-types">6.1</a> for other tools and tutorials, such as <a href="chart-datawrapper.html">Datawrapper</a>, <a href="chart-tableau.html">Tableau Public</a>, and <a href="chartcode.html">Chart.js and Highcharts code templates</a>.</p>
+<p>In the next two sections, we’ll review the most appropriate cases to use <a href="bar-column-google.html">bar and column charts</a>, followed by <a href="pie-line-area-google.html">pie, line, and area charts</a>. Each section features hands-on examples and step-by-step instructions with sample datasets to help you learn.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="mymaps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="filtered-point-map-socrata.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chart-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bar-column-google.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -467,7 +367,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/07-map.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/06-chart.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

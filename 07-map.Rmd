@@ -15,7 +15,7 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 | Map | Best use and tutorials in this book |
 | --- | --- |
 | Point map        <br> ![](images/07-map/map-point.png) | Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: [Google My Maps tutorial](mymaps.html)<br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
-| Polygon map      <br> ![](images/07-map/map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tools: [Tableau Public](tableau-polygon.html) or [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
+| Polygon map      <br> ![](images/07-map/map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tools: [Tableau Public](map-tableau.html) or [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
 | Polyline map     <br> ![](images/07-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)|
 | Heat map     <br> ![](images/07-map/map-heat.png) | Used to show hotspots or clusters of events, such as high-crime areas. <br>Easy tool: n/a <br>Power tool: [Leaflet Heatmap template](leaflet-heatmap.html) |
 | Combination map   <br> ![](images/07-map/map-point-polygon-polyline.png) | Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)  |
@@ -23,8 +23,9 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 
 TODO ABOVE:
 
-- UPDATE table to match chapter contents.
-- Decide about removing Storymap "easy tools" because neither allow you to export data you enter: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/)
+- UPDATE table to match chapter contents, and reorganize to feature easier tools at top.
+- Consider replacing Google My Maps point map with Datawrapper map, if achieves same result and easier
+- Confirm removing Storymap "easy tools" because neither allow you to export data you enter: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/)
 - Add tab-view map for historical change template?
 - Add synchronized side-by-side map template?
 
@@ -311,7 +312,7 @@ so you have to explore the studio yourself if you want to create
 more complex projects.
 
 
-## Choropleth Map with Datawrapper {- #map-with-datawrapper}
+## Choropleth Map with Datawrapper {- #map-datawrapper}
 
 In addition to creating wonderful interactive charts, Datawrapper lets you create
 stylish and interactive point and polygon maps.
@@ -589,7 +590,9 @@ Visit the [official documentation](https://dev.socrata.com/) to learn more about
 
 
 
-## Polygon Map with Tableau Public {- #tableau-polygon}
+## Polygon Map with Tableau Public {- #map-tableau}
+
+TODO: revise to make polygon/choropleth map vocab more consistent in this chapter; also emphasize how Tableau is not ideal for point maps because you cannot geocode addresses
 
 In the previous chapter, we looked at using Tableau Public to build
 [scatterplots](#scatter-chart-tableau) and [filtered line charts](#filtered-line-chart-tableau).

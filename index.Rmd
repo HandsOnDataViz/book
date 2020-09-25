@@ -13,13 +13,14 @@ citation-style: chicago-fullnote-bibliography.csl
 url: 'http\://handsondataviz.github.io/'
 github-repo: handsondataviz/book
 description: 'Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required.'
+cover-image: images/cover-400wide.jpg
 favicon: images/favicon.png
 output:
   bookdown::gitbook:
     dev: svglite
     css: css/style.css
     includes:
-      in_header: google-analytics-dataviz.html
+      in_header: header-dataviz.html
     toc_depth: 2
     split_by: section
     number_sections: true
@@ -37,9 +38,10 @@ output:
       view: https://github.com/handsondataviz/book/blob/master/%s
       search: yes
       sharing:
-        facebook: yes
-        github: yes
         twitter: yes
+        facebook: no
+        github: yes
+        all: no
 
   bookdown::pdf_book:
     toc_depth: 2

@@ -72,3 +72,16 @@ blockquote > p:first-child {
     bottom: 0px;
     font-size: 60px;
  }
+
+ /* The next two rules make the horizontal line DISAPPEAR in top navbar */
+ /* https://rstudio4edu.github.io/rstudio4edu-book/book-fancy.html#align-tool */
+
+ .summary > li:first-child {
+     height: 50px;
+     padding-top: 10px;
+     border-bottom: 0px solid rgba(0,0,0,0);
+ }
+
+ .book .book-summary ul.summary li.divider {
+     height: 0px;
+ }

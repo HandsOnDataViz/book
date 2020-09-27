@@ -193,7 +193,7 @@ create a map, change a baselayer, import point data, style points, and share the
 (ref:mymaps-final) A map of airports in Nigeria built using Google My Maps.
 
 ```{r mymaps-final, fig.cap="(ref:mymaps-final)"}
-if(knitr::is_html_output()) knitr::include_url("https://www.google.com/maps/d/u/0/embed?mid=1v1ZNrpfBtq_p4wTRyj2hIKBtTnkmhnMF", height="500px") else knitr::include_graphics("images/07-map/mymaps-final.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.google.com/maps/d/u/0/embed?mid=1v1ZNrpfBtq_p4wTRyj2hIKBtTnkmhnMF", height="500px") else knitr::include_graphics("images/07-map/mymaps-final.png")
 ```
 
 ### Create a New Map in My Maps {-}
@@ -326,7 +326,7 @@ We calculated average 2019 prices for 50 US states and DC, and put them in a spr
 (ref:datawrapper-map-final) This choropleth map is created in Datawrapper
 
 ```{r datawrapper-map-final, fig.cap="(ref:datawrapper-map-final)"}
-if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/uX2Yx/2/", height="513px") else knitr::include_graphics("images/07-map/datawrapper-map-final.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/uX2Yx/2/", height="513px") else knitr::include_graphics("images/07-map/datawrapper-map-final.png")
 ```
 
 ### Create a New Choropleth Map {-}
@@ -442,7 +442,7 @@ which you can see in Figure \@ref(fig:socrata-final).
 (ref:socrata-final) In this tutorial, we will build a point map of hospitals in Texas using Socrata.
 
 ```{r socrata-final, fig.cap="(ref:socrata-final)"}
-if(knitr::is_html_output()) knitr::include_url("https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&height=500", height="500px") else knitr::include_graphics("images/07-map/socrata-final.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&height=500", height="500px") else knitr::include_graphics("images/07-map/socrata-final.png")
 ```
 
 Generally, in order to create a map in Socrata, you need to be a registered user,
@@ -611,7 +611,7 @@ including military spending.
 (ref:tableau-polygon-final) Filled Polygon (Choropleth) map: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from TODO.
 
 ```{r tableau-polygon-final, fig.cap="(ref:tableau-polygon-final)"}
-if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/07-map/tableau-polygon-final.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/07-map/tableau-polygon-final.png")
 ```
 
 To create maps in Tableau, you do not always need geospatial files. Tableau can recognize

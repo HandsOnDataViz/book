@@ -48,7 +48,7 @@ Let's build a simple point map with sample data, using Google My Maps <https://w
 8) To style the map markers, click Individual Styles. In this sample data, you can select Group Places By > Style By > Group. This will color markers according to the three categories.
 
 ```{r style-markers}
-if(knitr::is_html_output()) knitr::include_url("images/07-map/mymaps-style-groups-640w.gif") else knitr::include_graphics("images/placeholder.jpg")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/07-map/mymaps-style-groups-640w.gif") else knitr::include_graphics("images/placeholder.jpg")
 ```
 
 9) To publish your map on the web, click Share, add a map title, change from Private to Public on the Web, so that anyone can view your map. Click Save and Done.

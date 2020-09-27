@@ -41,7 +41,7 @@ You'll also learn how to create sparklines, or tiny line charts that quickly sum
 (ref:datawrapper-table) Table with sparklines. Explore the [interactive version](https://datawrapper.dwcdn.net/0HK4f/2/).
 
 ```{r datawrapper-table, fig.cap="(ref:datawrapper-table)"}
-if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/0HK4f/2/", height = "1007px") else
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/0HK4f/2/", height = "1007px") else
 knitr::include_graphics("images/08-table/datawrapper-table.png")
 ```
 

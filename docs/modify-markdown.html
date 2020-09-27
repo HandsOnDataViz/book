@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-25" />
+<meta name="date" content="2020-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -324,16 +324,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>See this not-fully-documented Bookdown solution about generating Markdown output: <a href="https://stackoverflow.com/questions/58164239/compile-bookdown-to-markdown" class="uri">https://stackoverflow.com/questions/58164239/compile-bookdown-to-markdown</a>. We experimented to see if “strict” Markdown would produce cleaner output, following this RMarkdown guide <a href="https://bookdown.org/yihui/rmarkdown/markdown-document.html" class="uri">https://bookdown.org/yihui/rmarkdown/markdown-document.html</a>, but saw no difference when compared to the default settings.</p>
 <p>We need to do a bit of manual cleanup before ORM production team can convert the full-book Markdown file into <a href="https://docs.atlas.oreilly.com/writing_in_asciidoc.html">AsciiDoc format for their Atlas platform</a>, unless we find a way to automate these steps. See workaround notes in the Images and Tables sections above. Remember to avoid mischievous characters in R code-chunk image captions (such as <code>&lt;</code> or <code>&gt;</code> or <code>"</code>) that will throw HTML errors into the Markdown output images.</p>
 <ul>
-<li>Build the book with Bookdown, including one large Markdown file (docs folder, suffix .md)</li>
+<li>Build the book with Bookdown, including one full-length Markdown file (docs folder, suffix .md)</li>
 <li>Manually rename it as HandsOnDataViz-modified.md</li>
 <li>Manually paste in these Markdown tables to replace HTML tables (unless ORM can handle this part)
 <ul>
 <li>from index.Rmd, table of authors</li>
 <li>from 06-chart.Rmd, Table 1: Chart types covered in this book</li>
 </ul></li>
-<li>Manually find and replace any <code>&lt;iframe...</code> HTML or GIF elements with their <code>&lt;img...</code> PNG substitutes, and new ALT text (unless authors come up with a better way to automate this)</li>
 <li>Manually delete any remaining <code>&lt;iframe...</code> elements (unless they are non-executable code snippets)</li>
-<li>Manually mark up “Variable List:” for production team in two places in Chapter 4</li>
+<li>Manually mark up “Variable List:” for production team in two places in Chapter 5 (and chapter 2?)</li>
 <li>Save and push the modified Markdown file up to GitHub repo</li>
 </ul>
 <p>TODO: Check to see if triple back tics render correctly in the Markdown full-book output.</p>

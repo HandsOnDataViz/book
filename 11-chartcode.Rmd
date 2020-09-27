@@ -37,7 +37,7 @@ Bar or column charts are best to compare categories side-by-side. If labels are 
 (ref:chartjs-demo-bar) Bar chart with Chart.js: explore the [interactive version](https://handsondataviz.github.io/chartjs-bar/index.html).
 
 ```{r chartjs-demo-bar, fig.cap="(ref:chartjs-demo-bar)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-bar/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-bar.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-bar/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-bar.png")
 ```
 
 To create your own bar or column chart with CSV data using our Chart.js template:
@@ -103,7 +103,7 @@ shows median and mean (average) income for different-sized geographies: the US s
 (ref:chartjs-demo-error-bars) Interactive bar chart with error bars in Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-error-bars/index.html).
 
 ```{r chartjs-demo-error-bars, fig.cap="(ref:chartjs-demo-error-bars)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/bar-chart-with-error-bars/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-error-bars.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/bar-chart-with-error-bars/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-error-bars.png")
 ```
 
 To create your own bar or column chart with error bars, with data loaded from a CSV file, using our Chart.js template:
@@ -179,7 +179,7 @@ Each line has a distinct color, and the legend helps establish the color-distric
 (ref:chartjs-demo-line) Interactive line chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-line/).
 
 ```{r chartjs-demo-line, fig.cap="(ref:chartjs-demo-line)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-line/", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-line.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-line/", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-line.png")
 ```
 
 To create your own line chart with Chart.js, with data loaded from a CSV file, you can:
@@ -233,7 +233,7 @@ a dip in 2009, the year after the 2008 financial crisis as suggested by the anno
 (ref:highcharts-demo-annotated-line) Interactive annotated chart with Highcharts. Explore the [interactive version](https://handsondataviz.github.io/highcharts-line-annotated/).
 
 ```{r highcharts-demo-annotated-line, fig.cap="(ref:highcharts-demo-annotated-line)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/highcharts-line-annotated/index.html", height="400px") else knitr::include_graphics("images/11-chartcode/highcharts-demo-annotated-line.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/highcharts-line-annotated/index.html", height="400px") else knitr::include_graphics("images/11-chartcode/highcharts-demo-annotated-line.png")
 ```
 
 To create your own annotated line chart with Highcharts, with data loaded from a CSV file, you can:
@@ -284,7 +284,7 @@ easy to see that test performance improves as household income goes up.
 (ref:chartjs-demo-scatter) Interactive scatter chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-scatter/).
 
 ```{r chartjs-demo-scatter, fig.cap="(ref:chartjs-demo-scatter)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-scatter/", height="450px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-scatter.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-scatter/", height="450px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-scatter.png")
 ```
 
 To create your own scatter plot with Chart.js, with data loaded from a CSV file, you can:
@@ -346,7 +346,7 @@ The bubble chart in Figure \@ref(fig:chartjs-demo-bubble) shows how median house
 (ref:chartjs-demo-bubble) Interactive bubble chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-bubble/).
 
 ```{r chartjs-demo-bubble, fig.cap="(ref:chartjs-demo-bubble)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/chartjs-bubble/", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-bubble.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-bubble/", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-bubble.png")
 ```
 
 To create your own bubble chart with Chart.js, with data loaded from a CSV file, you can:

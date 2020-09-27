@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.22)  25 SEP 2020 13:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.22)  26 SEP 2020 23:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -620,17 +620,17 @@ Overfull \hbox (19.38258pt too wide) in paragraph at lines 470--470
  []
 
 [27] [28 <./images/02-choose/colorblind-accessible-combined.pdf>]
-Overfull \hbox (138.30435pt too wide) in alignment at lines 485--490
+Overfull \hbox (134.97102pt too wide) in alignment at lines 485--490
  [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (138.30435pt too wide) in alignment at lines 490--494
+Overfull \hbox (134.97102pt too wide) in alignment at lines 490--494
  [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (138.30435pt too wide) in alignment at lines 494--512
+Overfull \hbox (134.97102pt too wide) in alignment at lines 494--512
  [] [] [] [] [] [] [] [] [] 
  []
 
@@ -3598,7 +3598,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 9398.
 Here is how much of TeX's memory you used:
  15895 strings out of 482824
  280289 string characters out of 5955096
- 510348 words of memory out of 5000000
+ 511347 words of memory out of 5000000
  29137 multiletter control sequences out of 15000+600000
  619127 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -3632,7 +3632,7 @@ t/fonts/type1/public/lm/lmro10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dist/
 fonts/type1/public/lm/lmtk10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dist/fo
 nts/type1/public/lm/lmtt10.pfb></Users/jdoughe2/Library/TinyTeX/texmf-dist/font
 s/type1/public/lm/lmtti10.pfb>
-Output written on HandsOnDataViz.pdf (354 pages, 39590495 bytes).
+Output written on HandsOnDataViz.pdf (354 pages, 39590468 bytes).
 PDF statistics:
  6381 PDF objects out of 7423 (max. 8388607)
  5139 compressed objects within 52 object streams

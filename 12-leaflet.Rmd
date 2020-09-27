@@ -33,13 +33,13 @@ TODO: Create and insert a new version of the demo, featuring ECGreenway route th
 (ref:lmwgs-map) Explore a [live demonstration of Leaflet Maps with Google Sheets](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 
 ```{r lmwgs-map, fig.cap="(ref:lmwgs-map)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "500px") else knitr::include_graphics("images/12-leaflet/lmwgs-map.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "500px") else knitr::include_graphics("images/12-leaflet/lmwgs-map.png")
 ```
 
 (ref:lmwgs-sheet) Explore the [live Google Sheet template](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g) that feeds data into the Leaflet map above.
 
 ```{r lmwgs-sheet, fig.cap="(ref:lmwgs-sheet)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false", height = "500px") else knitr::include_graphics("images/12-leaflet/lmwgs-sheet.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false", height = "500px") else knitr::include_graphics("images/12-leaflet/lmwgs-sheet.png")
 ```
 
 ### Tutorial Outline {-}
@@ -835,7 +835,7 @@ or high-crime areas.
 (ref:leaflet-heatmap) Explore a [live demonstration of Leaflet Heatmap](https://handsondataviz.github.io/leaflet-heatmap/).
 
 ```{r leaflet-heatmap, fig.cap="(ref:leaflet-heatmap)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-heatmap/", height = "500px") else knitr::include_graphics("images/12-leaflet/leaflet-heatmap.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-heatmap/", height = "500px") else knitr::include_graphics("images/12-leaflet/leaflet-heatmap.png")
 ```
 
 ## Searchable Map {- #searchable-map}

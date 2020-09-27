@@ -448,7 +448,7 @@ Table cells are also modifiable, so you can edit your data there.
 You can also log into GeoJson.io with your GitHub account and save directly to your repository.
 
 ```{r geojsonio-gif, fig.cap="A spreadsheet with coordinates columns can be transformed into a GeoJSON with point features."}
-if(knitr::is_html_output()) knitr::include_url("images/13-transform/dataviz-geojsonio-640.gif", height="466px")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/13-transform/dataviz-geojsonio-640.gif", height="466px")
 ```
 
 #### Create a GeoJSON from scratch using drawing tools {-}

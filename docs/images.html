@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-25" />
+<meta name="date" content="2020-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -320,14 +320,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Images</h2>
 <p>View the underlying source code to understand how this page was composed at: <a href="https://github.com/HandsOnDataViz/book/blob/master/19-bookdown.Rmd" class="uri">https://github.com/HandsOnDataViz/book/blob/master/19-bookdown.Rmd</a></p>
 <p>Create high-resolution color screenshots and other static images in .png or .jpg format, with tight cropping on a high-resolution Retina monitor, typically at 144 ppi. Save items into the <code>images</code> subfolder by chapter. Make sure that color images include high contrast and/or shading, because they will be converted to grayscale by the publisher for the print book. Write file names in lowercase with dashes (not spaces) and begin with keyword of relevant section to keep related images grouped together. Despite being in separate folders, avoid duplicate image file names across the book. Avoid numbering images since they may not match the final sequence.</p>
-<p>If a screenshot requires additional artwork or text for the HTML edition, make a copy of the original and add <code>-ann</code> to note that this version is annotated, save into the same folder with the same root file name, and use in the code-chunk image pathnames. The publisher will use the original image and add their own artwork for their editions.</p>
-<p>If an image is larger than approximately 300px on either side, one more option is to reduce the image size in the PDF version. Use Photoshop (<em>not</em> Preview) to reduce the image size, and save a copy with the same file name with the .pdf extension into the folder.</p>
-<p>In some cases (such as images inside Markdown tables, or static screenshots to accompany iframes), it may make sense to save a full-size version, with <code>-original</code> in the file name, for the publisher to use when creating the print book.</p>
+<p>If a screenshot requires additional artwork or text for the HTML edition, make a copy of the original and add <code>-annotated</code> to note that this version is annotated, save into the same folder with the same root file name, and use in the code-chunk image pathnames. The publisher will use the original image and add their own artwork for their editions.</p>
+<p>Typically, we need to convert PNG images into smaller PDF images to fit them in the PDF edition. To batch process this for a folder of images:</p>
+<ul>
+<li>create duplicates of all PNGs and drag to a separate folder</li>
+<li>select all of the duplicated PNG files and open with Mac Preview to view all</li>
+<li>select all image thumbnails in Preview, reduce image size for all by 50% (or more)</li>
+<li>select all image thumbnails in Preview again, and File &gt; Export, with Option to change file format to PDF, but keep same file name as PNG</li>
+<li>move all reduced-size PDFs back to the original images folder</li>
+</ul>
 <p>Overall, sometimes the folder will contain only one version of a simple image, but in other cases it may contain up to 3-4 versions of an image:</p>
 <pre><code>images/06-chart/design-setup.png
-images/06-chart/design-setup-ann.png
-images/06-chart/design-setup-ann.pdf
-images/06-chart/design-setup-original.png</code></pre>
+images/06-chart/design-setup-annotated.png
+images/06-chart/design-setup-annotated.pdf</code></pre>
 <p>If creating images to appear as the same size in sequence, add a code-comment with the image width, height, and resolution as a reminder to make others match up, like this:</p>
 <p><code>&lt;!-- Images below are 200x200 at 300 resolution --&gt;</code></p>
 <p>In this book, use <em>Markdown formatting only for images that appear inside tables</em> or <em>do not require captions or figure numbering</em>, and leave the caption field blank, like this example:</p>
@@ -351,9 +356,13 @@ images/06-chart/design-setup-original.png</code></pre>
 </tbody>
 </table>
 <p>Although Markdown formatting offers a simple syntax that easily converts into other formats with Bookdown/Pandoc, there is no auto-numbering in the HTML edition, while auto-numbering appears in the PDF edition, and numbered figures are required by the publisher. Furthermore, Markdown formatting does not allow conditional output.</p>
-<div id="images-using-r-code-chunks" class="section level3 unnumbered" number="">
-<h3>Images using R code-chunks</h3>
-<p>For these reasons, this book <em>primarily uses R code-chunk formatting for images</em>. The syntax is more complex but supports auto-numbering in HTML and PDF, and conditional output for interactive and static images. Note that <em>static</em> R code-chunk images convert to Markdown, but <em>interactive</em> images do <em>NOT</em> convert and need to be manually edited in the <em>modified</em> file, described further below.</p>
+<div id="images-with-r-code-chunks-for-auto-numbering-and-conditional-formatting" class="section level3 unnumbered" number="">
+<h3>Images with R code-chunks for auto-numbering and conditional formatting</h3>
+<p>For these reasons, this book <em>primarily uses R code-chunk formatting for images</em>. The syntax is more complex but supports auto-numbering in HTML and PDF. Also, the syntax supports conditional output for interactive images in HTML versus static images in PDF and full-length Markdown, which we accomplish using this <em>general</em> format:</p>
+<pre><code>if(knitr::is_html_output(excludes=&quot;markdown&quot;)) knitr::include_url(&quot;PATHNAME-TO-INTERACTIVE&quot;)
+else knitr::include_graphics(&quot;PATHNAME-TO-STATIC&quot;)</code></pre>
+<p>We need to exclude <code>markdown</code> because it is considered an HTML format, as described here:
+<a href="https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/latex-html.html</a></p>
 <p>Auto-numbering appears in <code>Figure x.x</code> format in HTML and PDF, but <code>Figure x</code> format in MS Word and Markdown. Note that Word formatting can be changed with reference.docx.</p>
 <p>Note that images in PDF output will “float” by design and may appear before or after the desired page, so always add a cross-reference call-out.</p>
 <p>Write R code-chunk labels that follow the image file name, and avoid duplicate labels across the book:</p>
@@ -362,14 +371,14 @@ images/06-chart/design-setup-original.png</code></pre>
 images/06-chart/design-setup.png</code></pre>
 <p>Do not insert spaces inside the <code>ref:chunk-label</code> for the caption, but add a blank line to separate it from the code-chunk. After the code-chunk, add <em>another</em> blank line to avoid “undefined reference” Bookdown errors.</p>
 <p>Inside the R code-chunk ref caption, do NOT use mischievous characters (such as <code>&lt;</code> or <code>&gt;</code> or <code>"</code>) that will throw HTML errors into the Markdown output images. Instead, use safe characters such as (<code>*</code> and <code>-</code>) to designate computer instructions, such as <em>File - Make a Copy</em>.</p>
-<p>For each figure, manually add a cross-reference call-out and insert <code>fig.pos='h'</code> to place the image “here” on the page in the PDF output, to <em>attempt</em> to avoid PDF floating. Ignore the Bookdown LaTeX warning message “h float specifier changed to ht.” See more at <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a> and <a href="https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html</a></p>
+<p>For each figure, manually add a cross-reference call-out and optionally, insert <code>fig.pos='h'</code> to place the image “here” on the page in the PDF output, to <em>attempt</em> to avoid PDF floating. Ignore the Bookdown LaTeX warning message “h float specifier changed to ht.” See more at <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a> and <a href="https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/figure-placement.html</a></p>
 <p>This Bookdown <code>index.Rmd</code> file includes two global R code-chunk settings immediately after the first header. One setting displays each code-chunk image without a code echo. The other setting automatically inserts the PDF version of an PNG/JPG image, whenever it exists, in the PDF output, which allows us to manually reduce the image sizes for the PDF book. Read more about these options in this Bookdown chapter: <a href="https://bookdown.org/yihui/bookdown/figures.html" class="uri">https://bookdown.org/yihui/bookdown/figures.html</a>.</p>
 <pre><code>{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 options(knitr.graphics.auto_pdf = TRUE)</code></pre>
 </div>
-<div id="demo-r-code-chunk-for-small-static-image-for-html-and-pdf-editions" class="section level3 unnumbered" number="">
-<h3>Demo: R code-chunk for small static image for HTML and PDF editions</h3>
+<div id="demo-r-code-chunk-for-small-static-image-for-html-pdf-full-length-markdown-editions" class="section level3 unnumbered" number="">
+<h3>Demo: R code-chunk for small static image for HTML, PDF, full-length Markdown editions</h3>
 <p>Small is defined as each side less than 300px, as shown in Figure <a href="images.html#fig:tiger">D.1</a>.</p>
 
 <div class="figure"><span id="fig:tiger"></span>
@@ -389,10 +398,10 @@ Figure D.1: Caption here. Markdown embedded links are acceptable.
 Figure D.2: Using out.width=200 and smaller PDF image size.
 </p>
 </div>
-<p>R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the web version, and a static image with an embedded link appears in the PDF and MS Word outputs. To change the height of the default 400px iframe, add the new height to <code>include_url</code> as shown in the examples. However, to change the width of the default 675px iframe to less than 100 percent, add a line in a <code>custom-scripts.html</code> file.</p>
+<p>R code-chunks allow more complex conditional formatting, where an interactive map or animated GIF or YouTube video clip appears in the HTML version, and a static image with an embedded link appears in the PDF, MS Word, and full-length Markdown outputs. To change the height of the default 400px iframe, add the new height to <code>include_url</code> as shown in the examples. However, to change the width of the default 675px iframe to less than 100 percent, add a line in a <code>custom-scripts.html</code> file.</p>
 </div>
-<div id="demo-r-code-chunk-for-iframe-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
-<h3>Demo: R code-chunk for iframe in HTML and static image in PDF</h3>
+<div id="demo-r-code-chunk-for-iframe-in-html-and-static-image-in-pdf-and-markdown" class="section level3 unnumbered" number="">
+<h3>Demo: R code-chunk for iframe in HTML and static image in PDF and Markdown</h3>
 <p>…as shown in Figure <a href="images.html#fig:sample-map">D.3</a>.</p>
 
 <div class="figure"><span id="fig:sample-map"></span>
@@ -403,8 +412,8 @@ Figure D.3: Caption here, and add embedded link to explore the <a href="https://
 </p>
 </div>
 </div>
-<div id="demo-r-code-chunk-for-animated-gif-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
-<h3>Demo: R code-chunk for animated GIF in HTML and static image in PDF</h3>
+<div id="demo-r-code-chunk-for-animated-gif-in-html-and-static-image-in-pdf-and-markdown" class="section level3 unnumbered" number="">
+<h3>Demo: R code-chunk for animated GIF in HTML and static image in PDF and Markdown</h3>
 <p>When appropriate, create animated GIF files using Camtasia, and add fade-to-black to mark the end-point in the looped version. Add …as shown in Figure <a href="images.html#fig:sheets-option-drag">D.4</a>.</p>
 
 <div class="figure"><span id="fig:sheets-option-drag"></span>
@@ -415,8 +424,8 @@ Figure D.4: Caption here, with embedded link to the <a href="https://handsondata
 </p>
 </div>
 </div>
-<div id="demo-r-code-chunk-for-youtube-video-in-html-and-static-image-in-pdf" class="section level3 unnumbered" number="">
-<h3>Demo: R code-chunk for Youtube video in HTML and static image in PDF</h3>
+<div id="demo-r-code-chunk-for-youtube-video-in-html-and-static-image-in-pdf-and-markdown" class="section level3 unnumbered" number="">
+<h3>Demo: R code-chunk for Youtube video in HTML and static image in PDF and Markdown</h3>
 <p>Be sure to use the <em>embed</em> link from the YouTube <em>share</em> button.</p>
 <p>…as shown in the video <a href="images.html#fig:video-sample">D.5</a>.</p>
 
@@ -428,8 +437,8 @@ Figure D.5: Caption here, with embedded link to the <a href="https://youtu.be/-n
 </p>
 </div>
 </div>
-<div id="demo-r-code-chunk-for-youtube-video-in-html-with-no-static-image-in-pdf" class="section level3 unnumbered" number="">
-<h3>Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF</h3>
+<div id="demo-r-code-chunk-for-youtube-video-in-html-with-no-static-image-in-pdf-or-markdown" class="section level3 unnumbered" number="">
+<h3>Demo: R code-chunk for YouTube video in HTML, with NO static image in PDF or Markdown</h3>
 <p>This option may be relevant when you wish to display a video only in the html edition, with no screenshot of it in the PDF edition. Note that this will alter figure-numbering between the HTML and PDF editions.</p>
 
 <div class="figure"><span id="fig:video-sample2"></span>

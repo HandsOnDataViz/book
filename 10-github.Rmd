@@ -32,7 +32,7 @@ Your goal is to create your own version of this simple interactive map, with you
 (ref:leaflet-simple) Create your own version of this [simple interactive Leaflet map](https://handsondataviz.github.io/leaflet-map-simple/).
 
 ```{r leaflet-simple, fig.cap="(ref:leaflet-simple)"}
-if(knitr::is_html_output()) knitr::include_url("https://handsondataviz.github.io/leaflet-map-simple/") else knitr::include_graphics("images/10-github/leaflet-simple.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-map-simple/") else knitr::include_graphics("images/10-github/leaflet-simple.png")
 ```
 
 1. Create your own free account on [GitHub](http://github.com). It may ask you to do a simple quiz to prove you're a human! If you don't see a confirmation message in your email, check your spam folder.
@@ -381,7 +381,7 @@ Now let's transfer your edits from your local computer to your GitHub web accoun
 (ref:desktop-commit-push) In this two-step process, click *Commit to Master*, then click *Push origin* to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://handsondataviz.org/images/10-github/desktop-commit-push.gif).
 
 ```{r desktop-commit-push, fig.cap="(ref:desktop-commit-push)"}
-if(knitr::is_html_output()) knitr::include_url("images/10-github/desktop-commit-push.gif", height = "500px") else knitr::include_graphics("images/10-github/desktop-commit-push-annotated.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/10-github/desktop-commit-push.gif", height = "500px") else knitr::include_graphics("images/10-github/desktop-commit-push-annotated.png")
 ```
 
 Congratulations! You've successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format `https://USERNAME.github.io/REPOSITORY`, substituting your GitHub username and repo name.

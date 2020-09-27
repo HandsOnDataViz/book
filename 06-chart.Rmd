@@ -243,7 +243,7 @@ A grouped bar or column chart is best to compare categories side-by-side. For ex
 (ref:column-grouped) Grouped Column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf).
 
 ```{r column-grouped, fig.cap="(ref:column-grouped)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive") else knitr::include_graphics("images/06-chart/column-grouped.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&amp;format=interactive") else knitr::include_graphics("images/06-chart/column-grouped.png")
 ```
 
 To create your own interactive grouped column (or bar) chart, use our template and follow these steps.
@@ -342,7 +342,7 @@ A split column (or bar) chart is best to compare categories in separate clusters
 (ref:bar-split) Split bar chart: Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [Starbucks and McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126).
 
 ```{r bar-split, fig.cap="(ref:bar-split)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive") else knitr::include_graphics("images/06-chart/bar-split.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/pubchart?oid=1270431574&amp;format=interactive") else knitr::include_graphics("images/06-chart/bar-split.png")
 ```
 
 Create your own version using our [Split Bar Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/) with Starbucks and McDonalds data. Organize each data series vertically so that it becomes its own color in the chart. Leave cells blank when no direct comparisons are appropriate. The remainder of the steps are similar to the grouped column chart tutorial above.
@@ -359,7 +359,7 @@ Stacked column (or bar) charts are best to compare subcategories, or parts of a 
 (ref:column-stacked) Stacked column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive). Data from [WHO and CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691).
 
 ```{r column-stacked, fig.cap="(ref:column-stacked)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive") else knitr::include_graphics("images/06-chart/column-stacked.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&amp;format=interactive") else knitr::include_graphics("images/06-chart/column-stacked.png")
 ```
 
 Create your own version using our [Stacked Column Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/) with international weight-level data. Organize each data series vertically so that it becomes its own color in the chart. In the Chart Editor window, choose *Chart Type > Stacked column chart* (or choose *Stacked bar chart* if you have long data labels). The rest of the steps are similar to the ones above.
@@ -384,7 +384,7 @@ A histogram is a specific type of bar or column chart that is best for showing t
 (ref:histogram) Histogram: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive). Fictitious data on coffee shop customers.
 
 ```{r histogram, fig.cap="(ref:histogram)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive") else knitr::include_graphics("images/06-chart/histogram.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&amp;format=interactive") else knitr::include_graphics("images/06-chart/histogram.png")
 ```
 
 Create your own version using our [Histogram Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo) with coffee shop customer data. Google Sheets considers histograms to be regular column charts, so in the Chart Editor window, choose *Chart Type > Column chart* and follow the rest of the directions in the Bar and Column Chart tutorial above. Alternatively, you could choose to sort customers into larger bins, such as time of day (morning, afternoon, evening), as shown in the second tab of the template.
@@ -406,7 +406,7 @@ Some people use pie charts to show parts of a whole, but we urge caution with th
 (ref:pie) Pie chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive). Data is fictitious.
 
 ```{r pie, fig.cap="(ref:pie)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive") else knitr::include_graphics("images/06-chart/pie.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&amp;format=interactive") else knitr::include_graphics("images/06-chart/pie.png")
 ```
 
 But you need to be careful when using pie charts, as we described in the [Chart Design section](chart-design.html) of this chapter. First, make sure your data adds up to 100 percent. If you created a pie chart that displayed *some* but *not all* of the fruits sold, it would not make sense. Second, avoid creating too many slices, since people cannot easily distinguish smaller ones. Ideally, use no more than 5 slices in a pie chart. Finally, start the pie at the top of the circle (12 o'clock) and arrange the slices clockwise, from largest to smallest.
@@ -427,7 +427,7 @@ knitr::include_graphics("images/06-chart/line-data.png")
 (ref:line) Line chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive). Data from [US Department of Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing).
 
 ```{r line, fig.cap="(ref:line)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive") else knitr::include_graphics("images/06-chart/line.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&amp;format=interactive") else knitr::include_graphics("images/06-chart/line.png")
 ```
 
 Create your own version using our [Line Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/). The steps are similar to those in prior Google Sheets chart tutorials in this chapter. Go to *File > Make a Copy* to create a version you can edit in your Google Drive. Select the data, and choose *Insert > Chart*. If Google Sheets does not correctly guess that you wish to create a line chart, in the Chart editor, Setup tab, select *Line chart* from the Chart type dropdown list.
@@ -440,7 +440,7 @@ To create a stacked area chart, organize the data in the same way as you did for
 (ref:stacked-area) Stacked area chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive). Data from [US Department of Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing).
 
 ```{r stacked-area, fig.cap="(ref:stacked-area)"}
-if(knitr::is_html_output()) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive") else knitr::include_graphics("images/06-chart/stacked-area.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&amp;format=interactive") else knitr::include_graphics("images/06-chart/stacked-area.png")
 ```
 
 Create your own version using our [Stacked Area Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/). The steps are similar to those in prior Google Sheets chart tutorials in this chapter. Go to *File > Make a Copy* to create a version you can edit in your Google Drive. Set up the data exactly as you would for a line chart, with the first column for time units in the X-axis, and place each data series in its own column. Select the data, and choose *Insert > Chart*. In the Chart editor, in tab Setup, select  *Stacked area chart* from the Chart type dropdown list.
@@ -463,7 +463,7 @@ You can add annotations to any chart created with Datawrapper, and we'll illustr
 (ref:datawrapper-annotated) Line chart with annotation: Explore the [interactive version](https://datawrapper.dwcdn.net/vHuob/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972).
 
 ```{r datawrapper-annotated, fig.cap="(ref:datawrapper-annotated)"}
-if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/vHuob/1/") else knitr::include_graphics("images/06-chart/datawrapper-annotated.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/vHuob/1/") else knitr::include_graphics("images/06-chart/datawrapper-annotated.png")
 ```
 
 Create your own annotated line chart in Datawrapper by following this tutorial:
@@ -521,7 +521,7 @@ knitr::include_graphics("images/06-chart/datawrapper-range-data.png")
 (ref:datawrapper-range) Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/v8D2z/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
 
 ```{r datawrapper-range, fig.cap="(ref:datawrapper-range)"}
-if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/v8D2z/1/") else knitr::include_graphics("images/06-chart/datawrapper-range.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/v8D2z/1/") else knitr::include_graphics("images/06-chart/datawrapper-range.png")
 ```
 
 To create your own range chart with our sample data, follow this tutorial. Since we assume that you're already familiar with Datawrapper from the previous tutorial on annotated line charts, these steps are abbreviated. So if you get lost, see more details and images above.
@@ -581,7 +581,7 @@ knitr::include_graphics("images/06-chart/scatter-data.png")
 (ref:scatter) Scatter chart: Explore the [interactive version](https://datawrapper.dwcdn.net/8OQz7/1/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/).
 
 ```{r scatter, fig.cap="(ref:scatter)"}
-if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/8OQz7/1/") else knitr::include_graphics("images/06-chart/scatter.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/8OQz7/1/") else knitr::include_graphics("images/06-chart/scatter.png")
 ```
 
 Create your own interactive scatter chart in Datawrapper, and edit the tooltips to properly display your data:
@@ -626,7 +626,7 @@ knitr::include_graphics("images/06-chart/bubble-data.png")
 (ref:bubble) Bubble chart: Explore the [interactive version](https://datawrapper.dwcdn.net/ZX9QR/2/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg).
 
 ```{r bubble, fig.cap="(ref:bubble)"}
-if(knitr::is_html_output()) knitr::include_url("https://datawrapper.dwcdn.net/ZX9QR/2/") else knitr::include_graphics("images/06-chart/bubble.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/ZX9QR/2/") else knitr::include_graphics("images/06-chart/bubble.png")
 ```
 
 Create your own interactive bubble chart in Datawrapper, and edit the tooltips, bubble sizes, and colors to display your data:
@@ -677,7 +677,7 @@ Scatter charts are best to show the relationship between two datasets, placed on
 (ref:tableau-scatter) Scatter chart in Tableau Public: Explore the [interactive version](https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1). Data by [CT Mirror/TrendCT and Stanford CEPA](https://github.com/trendct-data/stanford-cepa).
 
 ```{r tableau-scatter, fig.cap="(ref:tableau-scatter)"}
-if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/06-chart/tableau-scatter.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/06-chart/tableau-scatter.png")
 ```
 
 To create your own scatter chart using this sample data in Tableau Public, follow this tutorial.
@@ -766,7 +766,7 @@ knitr::include_graphics("images/06-chart/tableau-filtered-data.png")
 (ref:tableau-filtered) Filtered Line chart: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1). Data from [World Bank](https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793).
 
 ```{r tableau-filtered, fig.cap="(ref:tableau-filtered)"}
-if(knitr::is_html_output()) knitr::include_url("https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/06-chart/tableau-filtered.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://public.tableau.com/views/InternetAccessbyCountry/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/06-chart/tableau-filtered.png")
 ```
 
 To create your own filtered line chart using this sample data in Tableau Public, follow this tutorial. We assume that you have already installed the free [Tableau Public](https://public.tableau.com) desktop application for Mac or Windows, and have already become familiar with the tool by completing the previous [Scatter Chart with Tableau Public tutorial](scatter-tableau.html), since the steps below are abbreviated.

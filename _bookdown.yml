@@ -7,7 +7,7 @@ language:
     tab: "Table "
 chapter_name: "Chapter "
 
-# comment-out below when building Web book, un-comment for PDF and Markdown
+# comment-out below when building Web book, un-comment for PDF and full-length Markdown
 # rmd_files: [
 #   "index.Rmd",
 #   "01-introduction.Rmd",

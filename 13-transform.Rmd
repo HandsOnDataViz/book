@@ -131,6 +131,8 @@ counts of hospitals per state doesn't really tell a good story.
 
 ## Normalize Data for Meaningful Maps {- #normalize}
 
+TODO: Consider moving "Normalize" section out of Ch11: Transform and into a new short chapter called "Compare Appropriate Data" or "Compare Meaningful Data" or "Make Meaningful Comparisons." Expand the chapter to address numerical data in any format: text, tables, charts, or maps. Explain the initial problem as one about raw data versus rates (see Alberto Cairo's example about highway deaths by state: raw data, or as percent of population, or as percent of miles driven). Broaden to discuss non-adjusted data versus adjusted data for various dimensions, such as population (see prior example), time (inflation, seasonal employment), geographic area (rural/suburban/urban), etc. On a related point about rates, avoid confusing "percent change" with "percentage point difference" and explain the two. The ideal location for this new chapter would be between Ch5: Clean and Ch6: Chart, because we want people to consider adjusting their data after finding and cleaning it, but before charting or mapping it.
+
 Choropleth maps are best when they represent relative, not absolute values.
 Consider two maps shown in Figure \@ref(fig:normalize-map-data). They both are
 about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of

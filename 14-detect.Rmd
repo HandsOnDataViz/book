@@ -1,29 +1,61 @@
-# Detect Bias in Data Stories {#detect}
-TODO: Rewrite chapter
+# Detect and Reduce Data Bias {#detect}
+TODO: Revise chapter; rename Detect and Reduce Data Bias, or ...Reduce Chart and Map Bias (?)
 
-While we like to believe data visualizations simply "tell the truth," when you dig further into this topic, you realize that there are multiple ways to represent reality. In this chapter, you will learn how visualizations display the biases of the people and the software that create them. Although we cannot stop bias, we can teach people to look for and detect it, and be aware of our own.
+In the introduction, we lied to you... intentionally... by showing you visualizations that portrayed reality is very different ways.
 
-Sections in this chapter:
+While we like to believe data visualizations simply "tell the truth," when you dig further into this topic, you realize that there are multiple ways to represent reality.
 
-- [How to Lie with Charts](how-to-lie-with-charts.html), inspired by Darrell Huff (1954)
-- [How to Lie with Maps](how-to-lie-with-maps.html), inspired by Mark Monmonier (1996)
+People can mislead with charts and maps, but we can also create very different pictures of the truth....
 
+You may be surprised to learn that there's not one *right* way to create a chart or a map. In the field of data visualization, we have only a few hard rules about how *not* to design, such as [REFER to chart and map design sections]. Even some of those "rules" are disputed.
 
-TODO: Build on themes from the new intro: Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors, other than a general dictum to make “honest and useful” decisions. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles) or intervals that vary according to patterns in the data (such as standard deviations from the mean).
-Just like charts, we can mislead and lie with maps, but we can also create very different pictures of the truth.
+In general, data visualization is guided by a general dictum to make "honest and useful decisions" (cite Datawrapper); Alberto Cairo adds that visualizations should be "truthful...functional....beautiful...insightful...."
 
-TODO: Add new sections on other types of bias.
+That leaves a lot of room for interpretation... some of which is intentionally misleading, and some of it is thoughtlessly misinformed....unintentional.... but nevertheless sways how people view our visualizations...
 
-Example: Map with “empty” land ignoring indigenous people https://twitter.com/indigenia/status/1308406887231246337?s=12
+In this chapter, you will learn how visualizations display the biases of the people and the software that create them.
 
-Example: Watch for negative versus positive framing and how it affects readers. For example, British statistician David Spiegelhalter notes that US hospitals report *mortality rates*, while UK hospitals report *survival* rates. When considering the risks of a surgical procedure for member of your family, a 5 percent mortality rate sounds worse than a 95 percent survival rate, even they're mathematically identical. Furthermore, augmenting the rate with raw numbers (such as 20 deaths out of 400 patients) raises the impression of risk even higher, because we begin to imagine real people's lives, not abstract percentages.^[@spiegelhalterArtStatisticsLearning2019, pp. 22-5]
+Bias occurs when we unfairly favor one view over another. Different types of bias....We use the term to refer to biased people who prejudge something before evaluating the evidence. While some forms of bias are clearer to recognize, such as racial or gender bias,....Some biases are baked into human cognition and hard to avoid in data viz, unless you call it out
 
-Learn more:
+- Pattern Bias: tendency to see patterns in random data. Avoid it by remind readers that data is noisy and use statistical tests to determine likelihood of results due to change, covered in many books on statistical analysis.
+- Confirmation Bias: accept claims that fit our preconceived notions...(see dataviz experiments in Cario book, Thaler?). Avoid it by looking at data with open eyes, and search out competing interpretations
+
+We also refer to biased processes, such as a statistical sampling method that regularly yields inaccurate results. Sometimes bias arises due to a combination of human behavior and poor numerical reasoning.
+
+- Reporting bias: on surveys, people may over-report positive behavior, or under-report attitudes deemed negative by broader society. how to address: see chapter on find and question your data, make appropriate comparisons, and clarify problems in text that accompanies visualization
+- Selection bias: comparing samples as if they were truly representative of the broader population, but in fact are not: common to mistakenly compare student academic performance in different types of schools, such as public versus private, or traditional public versus charter school, without recognizing how pools of applicants may differ.... how to address: carefully examine the underlying selection processes, and make appropriate comparisons between groups, and clarify problems in text that accompanies visualization
+- Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html; https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/
+
+While we cannot stop bias entirely, we can teach you to detect it in charts and maps made by other people, as well as those that you make, to improve your interpretation...
+
+Since our book features hands-on lessons, in each section you'll learn how to create *biased* visualizations, so that you'll know how to make *better* ones. Just like it takes a thief to catch a thief... you need to learn how to lie in order to be more truthful in your visualizations...
+
+Inspirations for this chapter:
+
 - Darrell Huff, How to Lie with Statistics (W. W. Norton & Company, 1954), http://books.google.com/books?isbn=0393070875
 - Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
 - Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9, 2017, http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/
+- Alberto Cairo 2016
+- Alberto Cairo 2019
+
+## Avoid Bad Visualizations {- #bad}
+Some visualizations are so poorly designed, with obvious errors, that we *can* declare these to be *wrong*.
+Whether intentional or otherwise, no room for interpretation here... We warned you about some of these mistakes in the chart design and map design sections of this book.
+
+- Examples: pie charts that add up to more than 100%
+
+## How to Lie with Words {- #how-to-lie-with-words}
+
+Before we turn to charts and maps, think more carefully about the words we choose when designing our visualizations...
+
+Framing Bias: Watch for negative versus positive framing and how it affects readers. For example, British statistician David Spiegelhalter notes that US hospitals report *mortality rates*, while UK hospitals report *survival* rates. When considering the risks of a surgical procedure for member of your family, a 5 percent mortality rate sounds worse than a 95 percent survival rate, even they're mathematically identical. Furthermore, augmenting the rate with raw numbers (such as 20 deaths out of 400 patients) raises the impression of risk even higher, because we begin to imagine real people's lives, not abstract percentages.^[@spiegelhalterArtStatisticsLearning2019, pp. 22-5]
+
+Insert more examples on racial bias and white privilege here
 
 ## How to Lie with Charts {- #how-to-lie-with-charts}
+- vertical axis bias
+- bucket size bias in histograms (for transition to map ranges)
+
 One of the best ways to learn how to detect bias in data visualization is to intentionally manipulate a chart, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s charts, and think more carefully about the ethical issues when you design your own.
 
 This exercise was inspired by a classic book published more than fifty years ago: Darrell Huff, *How to Lie with Statistics* (W. W. Norton & Company, 1954), http://books.google.com/books?isbn=0393070875
@@ -51,7 +83,14 @@ Make the line look like a "sharper increase" (faster economic growth) by increas
 ** TO DO -- add conclusion **
 
 ## How to Lie with Maps {- #how-to-lie-with-maps}
+- range bias (transition from bucket size in histogram charts)
+- color bias
+- map area bias
+- projection bias
+
 One of the best ways to learn how to detect bias in data visualization is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own.
+
+Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors, other than a general dictum to make “honest and useful” decisions. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles) or intervals that vary according to patterns in the data (such as standard deviations from the mean).
 
 This exercise was inspired by Mark S. Monmonier, *How to Lie with Maps, 2nd ed.* (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
 
@@ -70,6 +109,12 @@ Why are these two maps portray the same data so differently? To see the answer, 
 Create your own version...
 
 TODO: Add section on how interactive maps such as Google Maps change borders and data depending on the internet address of the user
+
+## Reducing Racial Bias in Visualizations {- #racial-bias}
+- Example: Map with “empty” land ignoring indigenous people https://twitter.com/indigenia/status/1308406887231246337?s=12
+- sidenote: that wasn't how the original map creator designed or labeled the map, but others interpreted it this way
+- how to address: clarify map biases....
+
 
 ### Summary {- #summary14}
 TODO

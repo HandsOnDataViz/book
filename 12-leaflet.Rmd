@@ -524,313 +524,179 @@ Now that you've learned how to create a Google Sheets API key to use with Leafle
 
 
 ## Leaflet Maps with CSV Data {- #leaflet-maps-with-csv}
-TODO: REWRITE this to serve as a more advanced version using repo https://github.com/HandsOnDataViz/leaflet-map-csv rather than leaflet-map-simple (used in ch8)
 
-This tutorial introduces more sophisticated Leaflet map code templates (http://leafletjs.com) that you can modify and host online with GitHub in your browser (http://github.com). You will learn how to:
+Figure \@ref(fig:leaflet-map-csv) shows a simple point map of some colleges and universities
+in Connecticut. But instead of individually creating markers in JavaScript using Leaflet's `L.marker()`
+function, the point data is stored in a local CSV file (`data.csv`) that is easy
+to modify in Excel or any text editor. Each time the map is loaded by the browser,
+point data from the CSV file is read and markers are generated "on the fly".
 
-- A) Fork (copy) Leaflet template to your GitHub account
-- B) Publish your live map to public web with GitHub Pages
-- C) Modify your map title and add layer controls
-- D) Geocode addresses [in a Google Sheet](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/) and upload points from data.csv
+(ref:leaflet-map-csv) Explore a [live demonstration of Leaflet point map with CSV data](https://handsondataviz.github.io/leaflet-map-csv/).
 
-Code templates help us to move beyond the limits of drag-and-drop web mapping services (such as Google MyMaps) and to create more customized visualizations on a web server that you control. Before you begin, learn the broad concepts in the chapter introduction [Edit and Host Code with GitHub](github.html). If you have problems with this tutorial, go to the [Fix Common Mistakes](fix.html) section of the appendix.
-
-TODO: add demo, remove unnecessary basic steps from below (covered in prior chapter)
-
-[Video](https://youtube.be/7iUocaxTYqk)
-
-#### A) Fork (copy) Leaflet template to your GitHub account {-}
-Before you begin, sign up for a free GitHub account: http://github.com
-
-1) Right-click to open this GitHub code template in a new tab: https://github.com/handsondataviz/leaflet-map-csv
-
-2) In the upper-right corner of the code template, sign in to your free GitHub account
-
-3) In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your GitHub account. The web address (URL) of the new copy in your account will follow this format:
-
-`https://github.com/USERNAME/REPOSITORY`
-
-Reminder: You can only fork a GitHub repo **one time**. If needed, see how to make a second copy in the [Create a New Repo in GitHub](create-repo.html) chapter in this book.
-
-#### B) Publish your live map to public web with GitHub Pages {-}
-
-4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code template to a live map on a public website that you control.
-
-5) Scroll down to GitHub Pages section again, to select and copy the link to your published web site, which will follow this format:
-
-`https://USERNAME.github.io/REPOSITORY`
-
-6) Scroll up to the top, and click on your repo name to go back to its main page.
-
-7) At the top level of your repo main page, click on README.md, and click the pencil icon to edit this file, written in easy-to-read Markdown code.
-
-8) Delete the link to the current live site, and paste in the link to your site. Scroll down and Commit to save your edits.
-
-9) On your repo main page, right-click on the link to your published site to open in a new tab. **Be patient** during busy periods, because your website may take up to 1 minute to appear the first time.
-
-#### C) Modify your map title and add layer controls {-}
-
-10) Go back to your browser tab for your code repo. Click on the index.html file (which contains the map code), and click the pencil icon to edit it.
-
-11) Explore the map code, which contains HTML, CSS, and JavaScript. Look for sections that begin with "EDIT" for items that you can easily change. Scroll down to Commit your changes.
-
-12) Go to your live website browser tab and refresh the page to view your edits. **Be patient** during busy periods, when some edits may take up to 1 minute to appear.
-
-13) To change your map title in the index.html file, click the pencil symbol (to edit) and go to lines 23-25. Replace "EDIT your map title" with your new title:
-
-TODO: decide if these triple backtic snippets will stay, or if they will throw errors into Markdown output
-
-```HTML
-<!-- Display the map and title with HTML division tags  -->
-<div id="map-title">EDIT your map title</div>
-<div id="map"></div>
+```{r leaflet-map-csv, fig.cap="(ref:leaflet-map-csv)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-map-csv/", height = "500px") else knitr::include_graphics("images/12-leaflet/leaflet-map-csv.png")
 ```
 
-14) To change your initial map zoom level, edit the index.html file and go to line 33. The zoom range for this map is from 1 (max zoom out) to 18 (max zoom in).
-```JavaScript
-// Set up initial map center and zoom level
+You can adapt this template to create your own point map. To do so,
+
+1. Visit the [GitHub repo](https://github.com/HandsOnDataViz/leaflet-map-csv) that stores the code for this template. Make sure you are logged in, and
+press *Use this template button* to create a copy of this repository in your own GitHub account.
+2. Put your point data data inside `data.csv`. The only relevant columns that will be read by the template are *Latitude*, *Longitude*, and *Title*.
+The first two determine the location of the marker, and the last one is displayed in a popup. The order of columns does not matter. There can be other columns in the dataset,
+but they will be ignored.
+
+Your data can look like the following:
+```
+Title,Latitude,Longitude
+Trinity College,41.745167,-72.69263
+Wesleyan University,41.55709,-72.65691
+```
+
+3. Depending on the geography of your points, you will want to change the default position
+of the map on start. In `index.html`, find the `<script>` tag, and edit the following
+chunk of code:
+
+```javascript
 var map = L.map('map', {
-  center: [41.77, -72.69], // EDIT latitude, longitude to re-center map
-  zoom: 12,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
+  center: [41.57, -72.69], // Default latitude and longitude on start
+  zoom: 9,  // Between 1 and 18; decrease to zoom out, increase to zoom in
   scrollWheelZoom: false
 });
 ```
 
-15) To change the default basemap, edit lines 46 and 52 to delete “.addTo(map)” from the Carto light layer, then add it to the Stamen colored terrain layer. DO NOT erase the semicolons!
+We used default Leaflet markers for code simplicity, but you may want to use
+custom icons instead. The code snippet below can give you an idea how to 
 
-Your original code looks like this (scroll to right to see all):
-```JavaScript
-/* Carto light-gray basemap tiles with labels */
-  var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-  }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  // controlLayers.addBaseLayer(light, 'Carto Light basemap');
-  /* Stamen colored terrain basemap tiles with labels */
-  var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-  }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-  // controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
+```javascript
+var marker = L.marker([row.Latitude, row.Longitude], {
+  opacity: 1,
+  // Customize your icon
+  icon: L.icon({
+    iconUrl: 'path/to/your/icon.png',
+    iconSize: [40, 60]
+  })
+}).bindPopup(row.Title);
 ```
 
-After you edit the code, it should look like this (scroll to right to see all):
-```JavaScript
-/* Carto light-gray basemap tiles with labels */
-var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-}); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-// controlLayers.addBaseLayer(light, 'Carto Light basemap');
-/* Stamen colored terrain basemap tiles with labels */
-var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-}).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
-// controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
-```
-
-16) To add a control panel that turns on/off map layers, delete the code comment symbols (//) that appear in front of lines 38-41, 47, and 53 to activate these sections. When you remove code comments in GitHub, the color changes from gray text (inactive code) to colored text (active code). After you remove the code comments, your file should look like this (scroll to right to see all):
-```JavaScript
-/* Control panel to display map layers */
- var controlLayers = L.control.layers( null, null, {
-  position: "topright",
-  collapsed: false
- }).addTo(map);
-
-/* Carto light-gray basemap tiles with labels */
-var light = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
-}); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
- controlLayers.addBaseLayer(light, 'Carto Light basemap');
-/* Stamen colored terrain basemap tiles with labels */
-var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
-}).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
- controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
-```
-17) To change one point on the map, you could edit the latitude and longitude coordinates of the single marker in lines 55-57. To find coordinates for any location and to learn more, go to http://www.latlong.net
-
-```JavaScript
-/* Display a blue point marker with pop-up text */
-L.marker([41.77, -72.69]).addTo(map) // EDIT latitude, longitude to re-position marker
-.bindPopup("Insert pop-up text here"); // EDIT pop-up text message
-```
-But a better way to display several points is to remove the code comment symbols (//) in front of lines 60-69 to activate this section of code, which pulls map points from the data.csv file in your GitHub repository. After your edits, this section should look like this (scroll right to see all):
-```JavaScript
-/* Upload Latitude/Longitude markers from data.csv file, show Title in pop-up, and override initial center and zoom to fit all in map */
- var customLayer = L.geoJson(null, {
-  onEachFeature: function(feature, layer) {
-    layer.bindPopup(feature.properties.Title);
-  }
- });
- var runLayer = omnivore.csv('data.csv', null, customLayer)
- .on('ready', function() {
-  map.fitBounds(runLayer.getBounds());
- }).addTo(map);
- controlLayers.addOverlay(customLayer, 'Markers from data.csv');
-```
-
-#### D) Geocode addresses in Google Sheet and upload points from data.csv {-}
-
-18) A better way to display multiple points on your map is to prepare and upload a new data.csv file to your GitHub repository. First, right-click to open this Google Sheets template in a new tab: [Leaflet Maps Simple data points with Geocoder](https://docs.google.com/spreadsheets/d/1z_0hKbw8Ff_fdp-XRoRL4YWe6ue0c0EpITveZ2rz1e8/)
-
-19) Since this sheet is view-only, you cannot edit it. Instead, sign in to your Google account in the upper-right corner.
-
-20) Go to File > Make a Copy, which will save a duplicate version to your Google Drive, which you can edit.
-
-21) In your copy of the Google Sheet, select any cells and press Delete on your keyboard to erase contents. Type new titles and addresses into columns A and B.
-
-22) To geocode your new addresses (which means converting them into latitude and longitude coordinates), select all of the contents across 6 columns, from Address (B) to Source (G).
-
-23) Go to the Geocoder menu that appears in this special Google Sheet template, and select any service, such as US Census (for US addresses) or Google Maps. The first time you run the geocoder, the script will ask for permission.
-
-24) After you have geocoded your addresses, go to File > Download As > Comma-separated values (.CSV format) to save the file to your computer.
-
-25) In your computer, right-click the downloaded file to rename it to: data.csv
-
-26) In your GitHub repository, click Upload Files, then drag-and-drop your new data.csv file, and Commit to upload it. Go to your live map browser tab and refresh to view changes. **Be patient* during busy periods, when some edits may take up to 1 minute to appear.**
+For more information on icon customization, see [this helpful Leaflet example](https://leafletjs.com/examples/custom-icons/).
 
 
 ## Leaflet Maps with Open Data API {- #leaflet-maps-with-api}
-TODO:
 
-- Note this new title and URL, which is more general than the older title and "leaflet-maps-with-socrata" URL
-- Blend in other section below this one
-- Update the example to pull map data from a continuously updated map, since the current example has not been updated since 2018
-- Decide if there's anything useful to borrow from the other example repo, such as a non-Socrata endpoint?: https://github.com/HandsOnDataViz/leaflet-data-apis
-- write intro to connect more directly to the [Open Data section](opendata.html) in ch 3, and describe open data APIs in general, with Socrata API serving as a convenient example.
+Leaflet maps can pull and display data from various open data repositories using APIs.
+Figure \@ref(fig:leaflet-open-data) shows an interactive map of North Dakota counties,
+colored by population density, with hospitals and EMS stations locations.
+Hospital information is pulled directly from [Medicare.org Socrata database](https://data.medicare.gov/).
+County boundaries and population density are pulled from [North Dakota GIS](https://www.gis.nd.gov/) ArcGIS server.
+EMS stations are fetched from [Homeland Infrastructure Foundation-Level Data](https://hifld-geoplatform.opendata.arcgis.com/) ArcGIS server.
 
-<iframe src="https://handsondataviz.github.io/leaflet-socrata/index.html" style="width: 100%; height: 450px; border: 0 none;"></iframe>
-Source: [Current Class 1 - Class 4 Food Establishments](https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8), City of Hartford
+(ref:leaflet-open-data) Explore a [live demonstration of Leaflet Heatmap](https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html).
 
-#### Why pair Leaflet maps with Socrata data? {-}
-Leaflet, a friendly and flexible open-source code library for creating interactive web maps, plays nicely with Socrata, an open data platform used by several government agencies and organizations. Benefits of pairing Leaflet and Socrata:
-
-- Although the Socrata data platform includes built-in visualization tools for anyone to create charts and maps, Leaflet gives you more control over your map design. Furthermore, Leaflet allows you to create maps that bring together data from both Socrata and non-Socrata sources.
-- Socrata datasets include an API (application program interface) endpoint, in the form of a web address. This endpoint enables other computers to easily access the most recent data online, instead of a static version that was manually downloaded.
-- Newer Socrata datasets that include locations (such as latitude and longitude coordinates) also provide endpoints in GeoJSON format. Since Leaflet maps easily process GeoJSON data, only a few lines of code are required.
-
-- However, Socrata GeoJSON endpoints do not currently support "real-time" data, such as up-to-the-minute locations of public transportation, etc. In these cases, you may need to access data through a provider other than Socrata, most likely in a different format, which may require more coding skills.
-
-#### About Socrata API endpoints {-}
-
-Go to any Socrata open data platform, find a dataset, and click the API tab. As an example, you can use City of Hartford's [Police Incidents dataset](https://data.hartford.gov/Public-Safety/Police-Incidents-01012005-to-Current/889t-nwfu).
-
-![Police Incidents dataset on Hartford Open Data portal](images/12-leaflet/data-hartford-api.png)
-
-Copy the API endpoint. The default version is JSON.
-
-If you're new to APIs, test the endpoint by pasting it into your browser address line. Ideally you would see a formatted JSON view (use Chrome or Firefox for better results).
-
-![Formatted JSON example in Firefox](images/12-leaflet/data-hartford-api-json.png)
-
-If your browser does not support JSON view, you will see the raw JSON stream only, like the one shown below.
-
-![Unformatted JSON example in Firefox](images/12-leaflet/data-hartford-api-json-not-formatted.png)
-
-Test if this Socrata endpoint supports GeoJSON format by changing the extention in the API dropdown menu from `JSON` to `GeoJSON`. GeoJSON format works best with Leaflet because the coding is simpler.
-
-If your endpoint supports GeoJSON format, your browser will display a data stream similar to the one below.
-
-![Formatted GeoJSON example in Firefox](images/12-leaflet/data-hartford-api-geojson.png)
-
-If your Socrata endpoint only supports JSON format, but includes data columns with latitude and longitude, see other Leaflet examples further below.
-
-#### Register for Socrata App Token {-}
-- Socrata requires developers to register for a free app token at https://opendata.socrata.com/signup
-
-#### Demonstration Maps {-}
-
-#### GeoJSON endpoint with circle markers and tooltips {-}
-- map https://handsondataviz.github.io/leaflet-socrata/index.html
-- code https://github.com/handsondataviz/leaflet-socrata/index.html
-- data https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8
-- note: location data appears as latitude and longitude coordinates in the `geom` column
-
-- steps to create your own   (MORE TODO HERE)
-
-  - select API button, copy endpoint, and change suffix from .json to .geojson
-
-  - copy this Leaflet map template, which includes this key section of code:
-
-  - paste and explain the code
-
-#### GeoJSON endpoint with simple data filter, default marker styling and pop-up info {-}
-- map https://handsondataviz.github.io/leaflet-socrata/index-geojson-filter
-- code https://github.com/handsondataviz/leaflet-socrata/
-- data https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98
-
-#### Multiple Socrata datasets with Leaflet control layers legend {-}
-- map https://handsondataviz.github.io/leaflet-socrata/index-control-layers.html
-- code https://github.com/handsondataviz/leaflet-socrata/index-control-layers.html
-
-#### Older JSON-only endpoint, with separate columns for latitude, longitude {-}
-- map https://handsondataviz.github.io/leaflet-socrata/index-json.html
-- code https://github.com/handsondataviz/leaflet-socrata/index-json.html
-- data https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7
-
-Learn more:
-- https://dev.socrata.com/
-- https://github.com/chriswhong/simpleSodaLeaflet
-
-#### Thanks to {-}
-- Chris Metcalf https://github.com/chrismetcalf
-- Tyler Klyeklamp https://data.ct.gov/
-
-
-**TODO: blend this section into the one above**
-
-Pull Open Data into Leaflet Map with APIs {- #leaflet-maps-open-apis}
-TODO: Decide whether to keep or not. Up to this point in the book, we’ve built charts and maps using static data that you have downloaded from other sites. But some open data repositories have APIs, or application program interfaces, which means the software that allows computers to communicate with one another. Below is a Leaflet Map template that uses APIs to pull in the most current data from three different open repository platforms: Socrata, Esri ArcGIS Online, and USGS.
-
-Try it:
-Explore the map below or [view full-screen version in a new tab](https://handsondataviz.github.io/leaflet-data-apis)
-
-<iframe src="https://handsondataviz.github.io/leaflet-data-apis/" width="90%" height=550></iframe>
-
-#### How it works {-}
-
-1) Go to the GitHub repo for the map above: https://github.com/handsondataviz/leaflet-data-apis
-
-2) Explore the code to see how different APIs work. For example, see the first map overlay, which pulls Connecticut School Directory data from the CT Open Data repository on a Socrata open data platform: https://data.ct.gov/resource/v4tt-nt9n
-
-3) Inside the open data repo, look for an API button and copy the endpoint.
-
-![Screenshot: Sample API endpoint in Socrata open data repo](images/12-leaflet/ct-open-data-api-endpoint.png)
-
-4) Paste the endpoint link into your browser, change the suffix from `.json` to `.geojson` and press return. In order to show the endpoint data as points on a map in this simple Leaflet template, the points must already be geocoded inside the open data repo, and the platform must support a GeoJSON endpoint. In your browser, one sign of success is a long stream of GeoJSON data like this:
-
-![Screenshot: API endpoint with .geojson suffix in Chrome browser](images/12-leaflet/ct-open-data-geojson.png)
-
-5) In this section of the Leaflet map template, the code includes a jQuery function `$.getJSON` to call the open data endpoint in GeoJSON format: `https://data.ct.gov/resource/v4tt-nt9n.geojson`. It also requires a Socrata app token, and you can get your own token for free at: https://dev.socrata.com/register. Each geocoded school in the Socrata data repository is displayed as a blue circle, with data properties (such as: name) in a clickable pop-up.
-
-```javascript
-// load open data from Socrata endpoint in GeoJSON format
-// with simple marker styling: blue circles
-// register your own Socrata app token at https://dev.socrata.com/register
-// Connecticut School Directory, CT Open Data, https://data.ct.gov/resource/v4tt-nt9n
-$.getJSON("https://data.ct.gov/resource/v4tt-nt9n.geojson?&$$app_token=QVVY3I72SVPbxBYlTM8fA7eet", function (data){
-  var geoJsonLayer = L.geoJson(data, {
-    pointToLayer: function( feature, latlng) {
-      var circle = L.circleMarker(latlng, {
-        radius: 6,
-        fillColor: "blue",
-        color: "blue",
-        weight: 2,
-        opacity: 1,
-        fillOpacity: 0.7
-      });
-      circle.bindPopup(feature.properties.name + '<br>' + feature.properties.district_name); // replace last term with property data labels to display from GeoJSON file
-      return circle;
-    }
-  }).addTo(map); // display by default
-  controlLayers.addOverlay(geoJsonLayer, 'Public Schools (CT Open Data-Socrata)');
-});
+```{r leaflet-open-data, fig.cap="(ref:leaflet-open-data)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html", height = "500px") else knitr::include_graphics("images/12-leaflet/leaflet-open-data.png")
 ```
 
-5) Fork a copy of this repo, play with the code, and try to insert GeoJSON endpoints from other open data repositories.
+You can enable Leaflet to pull data from ArcGIS servers using a free [`esri-leaflet`](https://github.com/Esri/esri-leaflet) plugin.
+Data from Socrata can be pulled using jQuery's `$.getJSON()` function,
+and then passed to Leaflet directly using `L.GeoJson()` function.
+
+To adapt this template for your own project:
+
+1. Visit the [GitHub repository](https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis) that contains the code for the map in Figure \@ref(fig:leaflet-open-data),
+and press the *Use this template* button to copy the repo to your own GitHub account.
+1. All data is pulled form the code inside the `<script>` tag of `index.html`. To pull
+data from Socrata or another JSON/GeoJSON endpoint, modify the following code snippet
+with the appropriate URL and icon:
+
+```javascript
+/*
+  From Medicare's Socrata database, add general hospitals in North Dakota
+  using simple filtering on the `state` column, and a GeoJSON endpoint.
+  Each point is a custom .png icon with a tooltip containing hospital's name,
+  city, and zipcode.
+*/
+$.getJSON("https://data.medicare.gov/resource/xubh-q36u.geojson?state=ND",
+  
+  function(data) {
+
+    var hospitals = L.geoJson(data, {
+      pointToLayer: function(feature, latlng) {
+        return L.marker(latlng, {
+          icon: L.icon({
+            iconUrl: 'images/hospital.png',
+            iconSize: [24, 24],
+            iconAnchor: [12, 12],
+            opacity: 0.5
+          })
+        }).bindTooltip(
+          feature.properties.hospital_name
+            + '<br>' + feature.properties.city
+            + '<br>' + feature.properties.zip_code
+        )
+      }
+    }).addTo(map)
+
+  }
+
+)
+```
+
+The following code snippet uses `esri-leaflet` plugin to pull polygon data
+from an ArcGIS server, and creates a choropleth layer based on population density
+(stored in `POP10_SQMI` variable of each feature, or polygon).
+
+```javascript
+var counties = L.esri.featureLayer({
+  url:'https://ndgishub.nd.gov/arcgis/rest/services/All_GovtBoundaries/MapServer/20',
+  style: function(feature) {
+    return {
+      fillOpacity: 0.5,
+      weight: 0.5,
+      color: 'silver',
+      fillColor: getDensityColor(feature.properties.POP10_SQMI)
+    }
+  }
+}).addTo(map)
+```
+
+Here, the `getDensityColor()` function returns a color for a given value
+based on pre-defined thresholds. In case of the North Dakota example,
+population density of over 100 people per square mile is assigned the darkest shade of red,
+while the density of 5 and under is shown with the lightest.
+
+```javascript
+var getDensityColor = function(d) {
+  return d > 100  ? '#7a0177' :
+          d > 50  ? '#c51b8a' :
+          d > 20  ? '#f768a1' :
+          d > 5   ? '#fbb4b9' :
+                    '#feebe2'
+}
+```
+
+While it is convenient to pull data directly from the source databases,
+remember that those resources are out of your control (unless you administer them, of course).
+Data changes often come unnanounced. For example, if the dataset owner decides
+to rename the population density field from `POP10_SQMI` to `Pop10_sqmi`,
+your map will stop showing values correctly. Datasets may get moved
+to a different domain name or get deleted entirely, so
+it is wise to have a back-up file saved locally.
+
+If you are more concerned about the long-term functioning of your map as opposed
+to displaying the most up-to-date version of the dataset, you may consider serving
+your data from local GeoJSON files instead (but ensure first that it is permitted by the data license).
+
 
 ## Leaflet Heatmap {- #leaflet-heatmap}
 Heatmaps turn individual points into hotspots or clusters, allowing viewers to explore
 spatial distributions of events, such as areas of high and low population density,
-or high-crime areas.
+or high-crime areas. Figure \@ref(fig:leaflet-heatmap) shows an interactive heatmap of 
+bike theft locations in London between January and July 2020. The underlying
+data are coordinate locations for each reported bike theft,
+which [`Leaflet.heat`](https://github.com/Leaflet/Leaflet.heat) plugin transforms
+into areas of various densities. Red shows areas of highest density, or areas
+where bike theft appeared most often. When you zoom in, areas are re-calculated
+into more distinct clusters.
 
 (ref:leaflet-heatmap) Explore a [live demonstration of Leaflet Heatmap](https://handsondataviz.github.io/leaflet-heatmap/).
 
@@ -838,8 +704,107 @@ or high-crime areas.
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-heatmap/", height = "500px") else knitr::include_graphics("images/12-leaflet/leaflet-heatmap.png")
 ```
 
+You can adapt the code we used for this London heatmap to create your own.
+
+1. Visit the [GitHub repository with our code](https://github.com/HandsOnDataViz/leaflet-heatmap),
+make sure you are logged in, and click *Use this template* button to make a personal copy of this repo.
+2. Modify map's title and description inside `index.html`.
+3. Put your point coordinates data inside `data.csv`. Don't use a header, and keep it one point per line. Use latitude,longitude (or y,x) order, like below:
+```
+51.506585,-0.139387
+51.505467,-0.14655
+51.507758,-0.141284
+```
+
+4. Depending on your data density, you might want to tweak *radius* and *blur* parameters
+inside the `<script>` tag of `index.html`:
+```javascript
+var heat = L.heatLayer(data, {
+  radius: 25,
+  blur: 15,
+})
+```
+
+Edit the following chunk of code to set your map's default position and zoom level:
+```javascript
+var map = L.map('map', {
+  center: [51.5, -0.1], // Initial map center
+  zoom: 10, // Initial zoom level
+})
+```
+
+If for some reason you cannot see clusters, make sure your point data is represented
+in `latitude,longitude` order, not the other way around. If you have few points,
+try increasing the value of `radius` property of `L.heatLayer`.
+
 ## Searchable Map {- #searchable-map}
-TODO
+
+Figure \@ref(fig:searchable-map) shows a powerful template of a searchable
+and filterable point map
+developed by [Derek Eder](https://derekeder.com/) from DataMade. This map allows
+you to show points of interest, filter them by using *Search by name* functionality,
+and show them as a list instead of points on a map. In addition, the *About* page
+gives you plenty of space to talk about your map.
+
+(ref:searchable-map) Explore a [live demonstration of Searchable Map template](https://searchable-map-template-csv.netlify.app/).
+
+```{r searchable-map, fig.cap="(ref:searchable-map)"}
+knitr::include_graphics("images/12-leaflet/searchable-map.png")
+```
+
+This template uses Leaflet.js in combination with Google Maps API to perform
+address search.
+
+To begin using the template for your own project, visit the [template's GitHub page](https://github.com/HandsOnDataViz/searchable-map-template-csv),
+and fork it so that you get your own copy (see [Edit and Host Code with GitHub](github.html)
+chapter to remind yourself about forks).
+
+### Step 1: Get and prep your data {-}
+
+This template will work with data in [csv](https://en.wikipedia.org/wiki/Comma-separated_values) and [geojson](https://en.wikipedia.org/wiki/GeoJSON) formats.
+
+If you have an `xls` or `xlsx` spreadsheet, you can save it as a `csv` file from Excel, Numbers, Libre Office or your spreadsheet tool of choice.
+
+The `csv` file must have a latitude column and longitude column and all rows must be geocoded. If you don't have this, but have information like a street address, you'll need to [geocode](https://en.wikipedia.org/wiki/Geocode) your data.
+
+Here's a few tools for geocoding:
+
+* Google has the best geocoder in terms of accuracy. They have an [API that you can use](https://developers.google.com/maps/documentation/geocoding/start), but may cost you money depending on how many rows you have to geocode.
+* To geocode addresses inside Google Sheets, install the [free Geocoding by SmartMonkey Add-On for Google Sheets](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). See [geocoding instructions in Hands-On Data Visualization](https://handsondataviz.org/geocode.html).
+* [Geocoding in QGIS](https://www.gislounge.com/how-to-geocode-addresses-using-qgis/) (uses OpenStreetMap)
+* [BatchGeo](https://www.batchgeo.com/) 
+* [Texas A&M](http://geoservices.tamu.edu/Services/Geocode/)
+
+### Step 2: Download and edit this template {-}
+
+1. Download or clone this project and fire up your text editor of choice. Open up `/js/map.js` and set your map options in the `SearchableMapLib.initialize` function:
+  - `map_centroid` -  the lat/long you want your map to center on ([find yours here](https://getlatlong.net/))
+  - `filePath` - Path to your map data file. This file needs to be in csv or geojson format and placed in the `data` folder. This file's first line must be the header, and it must have a latitude column and longitude column. 
+  - `fileType` - Set if you are loading in a `csv` or `geojson` file
+2. Edit the templates in the `templates` folder for how you want your data displayed. These templates use EJS, which allows the display of your variables with HTML, as well as conditional logic. [Documentation is here](https://ejs.co/#docs). 
+  - `/templates/hover.ejs` - template for when you hover over a dot on the map
+  - `/templates/popup.ejs` - template for when a dot on the map is clicked
+  - `/templates/table-row.ejs` - template for each row in the list view
+3. Remove the custom filters and add your own. 
+  -  `index.html` - custom HTML for filters starts around line 112
+  - `/js/searchable_map_lib.js` - logic for custom filters starts around line 265
+
+
+### Step 3: Publishing your map {-}
+
+1. Before you publish, you'll need to [get a Google API key](https://developers.google.com/maps/documentation/javascript/get-api-key). You can get on here. Replace the API key on this line of `index.html` with yours: `<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=[YOUR KEY HERE]"></script>`
+2. Upload this map and all the supporting files and folders to your site. This map requires no back-end code, so any host will work, including GitHub pages, Netlify or your own web server.
 
 ### Summary {- #summary12}
-TODO
+
+In this chapter, we introduced Leaflet map templates for common map problems,
+such as telling stories about places using scrollable interface,
+showing point data from databases like Socrata, and creating heatmaps
+to visualize areas of high event density.
+
+You can use these templates as a base to kickstart your own mapping projects.
+Leaflet.js is [well-documented](https://leafletjs.com/reference), and we recommend
+looking at [their tutorials](https://leafletjs.com/examples.html) for more inspiration.
+
+In the next chapter, we will talk about geospatial data and introduce several
+tools that can convert, create, and edit geospatial files.

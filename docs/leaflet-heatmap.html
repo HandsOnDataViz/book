@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Leaflet Heatmap | Hands-On Data Visualization</title>
+  <title>Leaflet Heatmap with CSV Point Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Leaflet Heatmap | Hands-On Data Visualization" />
+  <meta property="og:title" content="Leaflet Heatmap with CSV Point Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Leaflet Heatmap | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Leaflet Heatmap with CSV Point Data | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-26" />
+<meta name="date" content="2020-09-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="leaflet-maps-with-api.html"/>
-<link rel="next" href="searchable-map.html"/>
+<link rel="next" href="leaflet-searchable-map.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -181,7 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mask-aggregate.html"><a href="mask-aggregate.html"><i class="fa fa-check"></i>Mask or Aggregate Sensitive Data</a></li>
 <li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
-<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
+<li class="chapter" data-level="" data-path="bad-data.html"><a href="bad-data.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="question.html"><a href="question.html"><i class="fa fa-check"></i>Question Your Data</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
@@ -251,8 +251,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
-<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap</a></li>
-<li class="chapter" data-level="" data-path="searchable-map.html"><a href="searchable-map.html"><i class="fa fa-check"></i>Searchable Map</a></li>
+<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap with CSV Point Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-searchable-map.html"><a href="leaflet-searchable-map.html"><i class="fa fa-check"></i>Leaflet Searchable Map with CSV Points</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>13</b> Transform Your Map Data</a>
 <ul>
@@ -265,10 +265,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect Bias in Data Stories</a>
+<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect and Reduce Bias</a>
 <ul>
+<li class="chapter" data-level="" data-path="bad-visualizations.html"><a href="bad-visualizations.html"><i class="fa fa-check"></i>Avoid Bad Visualizations</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+<li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>15</b> Tell Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -317,18 +320,50 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="leaflet-heatmap" class="section level2 unnumbered" number="">
-<h2>Leaflet Heatmap</h2>
+<h2>Leaflet Heatmap with CSV Point Data</h2>
 <p>Heatmaps turn individual points into hotspots or clusters, allowing viewers to explore
 spatial distributions of events, such as areas of high and low population density,
-or high-crime areas.</p>
+or high-crime areas. Figure <a href="leaflet-heatmap.html#fig:leaflet-heatmap">12.19</a> shows an interactive heatmap of
+bike theft locations in London between January and July 2020. The underlying
+data are coordinate locations for each reported bike theft,
+which <a href="https://github.com/Leaflet/Leaflet.heat"><code>Leaflet.heat</code></a> plugin transforms
+into areas of various densities. Red shows areas of highest density, or areas
+where bike theft appeared most often. When you zoom in, areas are re-calculated
+into more distinct clusters.</p>
 
 <div class="figure"><span id="fig:leaflet-heatmap"></span>
 <iframe src="https://handsondataviz.github.io/leaflet-heatmap/" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 12.17: Explore a <a href="https://handsondataviz.github.io/leaflet-heatmap/">live demonstration of Leaflet Heatmap</a>.
+Figure 12.19: Explore a <a href="https://handsondataviz.github.io/leaflet-heatmap/">live demonstration of Leaflet Heatmap</a>.
 </p>
 </div>
+<p>You can adapt the code we used for this London heatmap to create your own.</p>
+<ol style="list-style-type: decimal">
+<li>Visit the <a href="https://github.com/HandsOnDataViz/leaflet-heatmap">GitHub repository with our code</a>,
+make sure you are logged in, and click <em>Use this template</em> button to make a personal copy of this repo.</li>
+<li>Modify map’s title and description inside <code>index.html</code>.</li>
+<li>Put your point coordinates data inside <code>data.csv</code>. Don’t use a header, and keep it one point per line. Use latitude,longitude (or y,x) order, like below:</li>
+</ol>
+<pre><code>51.506585,-0.139387
+51.505467,-0.14655
+51.507758,-0.141284</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Depending on your data density, you might want to tweak <em>radius</em> and <em>blur</em> parameters
+inside the <code>&lt;script&gt;</code> tag of <code>index.html</code>:</li>
+</ol>
+<div class="sourceCode" id="cb36"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb36-1"><a href="leaflet-heatmap.html#cb36-1"></a><span class="kw">var</span> heat <span class="op">=</span> L<span class="op">.</span><span class="fu">heatLayer</span>(data<span class="op">,</span> {</span>
+<span id="cb36-2"><a href="leaflet-heatmap.html#cb36-2"></a>  <span class="dt">radius</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
+<span id="cb36-3"><a href="leaflet-heatmap.html#cb36-3"></a>  <span class="dt">blur</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
+<span id="cb36-4"><a href="leaflet-heatmap.html#cb36-4"></a>})</span></code></pre></div>
+<p>Edit the following chunk of code to set your map’s default position and zoom level:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb37-1"><a href="leaflet-heatmap.html#cb37-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
+<span id="cb37-2"><a href="leaflet-heatmap.html#cb37-2"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">51.5</span><span class="op">,</span> <span class="fl">-0.1</span>]<span class="op">,</span> <span class="co">// Initial map center</span></span>
+<span id="cb37-3"><a href="leaflet-heatmap.html#cb37-3"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="co">// Initial zoom level</span></span>
+<span id="cb37-4"><a href="leaflet-heatmap.html#cb37-4"></a>})</span></code></pre></div>
+<p>If for some reason you cannot see clusters, make sure your point data is represented
+in <code>latitude,longitude</code> order, not the other way around. If you have few points,
+try increasing the value of <code>radius</code> property of <code>L.heatLayer</code>.</p>
 </div>
             </section>
 
@@ -336,7 +371,7 @@ Figure 12.17: Explore a <a href="https://handsondataviz.github.io/leaflet-heatma
         </div>
       </div>
 <a href="leaflet-maps-with-api.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="searchable-map.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="leaflet-searchable-map.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

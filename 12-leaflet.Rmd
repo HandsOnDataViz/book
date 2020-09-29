@@ -19,11 +19,10 @@ Table: (\#tab:map-templates) Map Templates and Tutorials
 | --- | --- |
 | Leaflet Maps with Google Sheets<br> ![](images/12-leaflet/leaflet-maps-with-google-sheets.png) | Best to show interactive points, polygons, or polylines, using your choice of colors, styles, and icons, based on data loaded into your linked Google Sheet (or CSV file) and GitHub repository. Includes option to display a table of point map markers next to your map.  <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) |
 | Leaflet Storymaps with Google Sheets<br> ![](images/12-leaflet/leaflet-storymaps-with-google-sheets.png) | Best to display your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to include paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
-| Leaflet Maps with CSV Data<br> ![](images/12-leaflet/leaflet-maps-with-csv.png) | Learn how to code your own Leaflet point map that pulls data from a CSV file in your GitHub repo.<br>Template with tutorial: [Leaflet Maps with CSV Data](leaflet-maps-with-csv.html)  |
-| Leaflet Maps with Open Data API<br> ![](images/12-leaflet/leaflet-socrata-api-control-layers.png) | Learn how to code your own Leaflet map with an application program interface (API) that pulls content directly from open data repositories, such as Socrata and others.<br>Template with tutorial: [Leaflet Maps with Open Data API](leaflet-maps-with-api.html) |
-
-TODO: decide whether to add any other Leaflet map templates we created for HandsOnDataViz or OnTheLine
-
+| Leaflet Point Map with CSV Data<br> ![](images/12-leaflet/leaflet-maps-with-csv.png) | Learn how to code your own Leaflet point map that pulls data from a CSV file in your GitHub repo.<br>Template with tutorial: [Leaflet Maps with CSV Data](leaflet-maps-with-csv.html)  |
+| Leaflet Maps with Open Data API<br> ![](images/12-leaflet/leaflet-open-data.png) | Learn how to code your own Leaflet map with an application program interface (API) that pulls content directly from open data repositories, such as Socrata and others.<br>Template with tutorial: [Leaflet Maps with Open Data API](leaflet-maps-with-api.html) |
+| Leaflet Heatmap with CSV Point Data <br> ![](images/12-leaflet/leaflet-heatmap.png) | Heatmaps transform individual points into hotspots or clusters, to display the spatial distribution of events.<br>Template with tutorial: [Leaflet Heatmap](leaflet-heatmap.html) |
+| Leaflet Searchable Map with CSV Point Data<br> ![](images/12-leaflet/searchable-map.png) | Searchable and filterable point map using CSV data, with optional list view, developed by [Derek Eder](https://derekeder.com/) from DataMade.<br>Template with tutorial: [Leaflet Searchable Map with CSV](leaflet-searchable-map.html) |
 
 ## Leaflet Maps with Google Sheets {- #leaflet-maps-with-google-sheets}
 Sometimes you need to create a map that cannot be made easily with drag-and-drop tools, because you need to customize its appearance or add new layers of point, polygon, or polyline data. In these cases, consider making a copy of our Leaflet Maps with Google Sheets template on GitHub. It gives you more control over choosing colors, icons, and images, and also the option to display a data table of point markers. To customize your interactive map, you enter data into a Google Sheet template, which you link directly to your copy of the Leaflet code repository, as shown in Figure \@ref(fig:lmwgs-map) and Figure \@ref(fig:lmwgs-sheet).
@@ -565,7 +564,7 @@ var map = L.map('map', {
 ```
 
 We used default Leaflet markers for code simplicity, but you may want to use
-custom icons instead. The code snippet below can give you an idea how to 
+custom icons instead. The code snippet below can give you an idea how to
 
 ```javascript
 var marker = L.marker([row.Latitude, row.Longitude], {
@@ -616,7 +615,7 @@ with the appropriate URL and icon:
   city, and zipcode.
 */
 $.getJSON("https://data.medicare.gov/resource/xubh-q36u.geojson?state=ND",
-  
+
   function(data) {
 
     var hospitals = L.geoJson(data, {
@@ -687,10 +686,10 @@ to displaying the most up-to-date version of the dataset, you may consider servi
 your data from local GeoJSON files instead (but ensure first that it is permitted by the data license).
 
 
-## Leaflet Heatmap {- #leaflet-heatmap}
+## Leaflet Heatmap with CSV Point Data {- #leaflet-heatmap}
 Heatmaps turn individual points into hotspots or clusters, allowing viewers to explore
 spatial distributions of events, such as areas of high and low population density,
-or high-crime areas. Figure \@ref(fig:leaflet-heatmap) shows an interactive heatmap of 
+or high-crime areas. Figure \@ref(fig:leaflet-heatmap) shows an interactive heatmap of
 bike theft locations in London between January and July 2020. The underlying
 data are coordinate locations for each reported bike theft,
 which [`Leaflet.heat`](https://github.com/Leaflet/Leaflet.heat) plugin transforms
@@ -737,9 +736,9 @@ If for some reason you cannot see clusters, make sure your point data is represe
 in `latitude,longitude` order, not the other way around. If you have few points,
 try increasing the value of `radius` property of `L.heatLayer`.
 
-## Searchable Map {- #searchable-map}
+## Leaflet Searchable Map with CSV Points {- #leaflet-searchable-map}
 
-Figure \@ref(fig:searchable-map) shows a powerful template of a searchable
+Figure \@ref(fig:searchable-map) shows a powerful Leaflet template of a searchable
 and filterable point map
 developed by [Derek Eder](https://derekeder.com/) from DataMade. This map allows
 you to show points of interest, filter them by using *Search by name* functionality,
@@ -772,20 +771,20 @@ Here's a few tools for geocoding:
 * Google has the best geocoder in terms of accuracy. They have an [API that you can use](https://developers.google.com/maps/documentation/geocoding/start), but may cost you money depending on how many rows you have to geocode.
 * To geocode addresses inside Google Sheets, install the [free Geocoding by SmartMonkey Add-On for Google Sheets](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). See [geocoding instructions in Hands-On Data Visualization](https://handsondataviz.org/geocode.html).
 * [Geocoding in QGIS](https://www.gislounge.com/how-to-geocode-addresses-using-qgis/) (uses OpenStreetMap)
-* [BatchGeo](https://www.batchgeo.com/) 
+* [BatchGeo](https://www.batchgeo.com/)
 * [Texas A&M](http://geoservices.tamu.edu/Services/Geocode/)
 
 ### Step 2: Download and edit this template {-}
 
 1. Download or clone this project and fire up your text editor of choice. Open up `/js/map.js` and set your map options in the `SearchableMapLib.initialize` function:
   - `map_centroid` -  the lat/long you want your map to center on ([find yours here](https://getlatlong.net/))
-  - `filePath` - Path to your map data file. This file needs to be in csv or geojson format and placed in the `data` folder. This file's first line must be the header, and it must have a latitude column and longitude column. 
+  - `filePath` - Path to your map data file. This file needs to be in csv or geojson format and placed in the `data` folder. This file's first line must be the header, and it must have a latitude column and longitude column.
   - `fileType` - Set if you are loading in a `csv` or `geojson` file
-2. Edit the templates in the `templates` folder for how you want your data displayed. These templates use EJS, which allows the display of your variables with HTML, as well as conditional logic. [Documentation is here](https://ejs.co/#docs). 
+2. Edit the templates in the `templates` folder for how you want your data displayed. These templates use EJS, which allows the display of your variables with HTML, as well as conditional logic. [Documentation is here](https://ejs.co/#docs).
   - `/templates/hover.ejs` - template for when you hover over a dot on the map
   - `/templates/popup.ejs` - template for when a dot on the map is clicked
   - `/templates/table-row.ejs` - template for each row in the list view
-3. Remove the custom filters and add your own. 
+3. Remove the custom filters and add your own.
   -  `index.html` - custom HTML for filters starts around line 112
   - `/js/searchable_map_lib.js` - logic for custom filters starts around line 265
 

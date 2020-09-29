@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-26" />
+<meta name="date" content="2020-09-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mask-aggregate.html"><a href="mask-aggregate.html"><i class="fa fa-check"></i>Mask or Aggregate Sensitive Data</a></li>
 <li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
-<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
+<li class="chapter" data-level="" data-path="bad-data.html"><a href="bad-data.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="question.html"><a href="question.html"><i class="fa fa-check"></i>Question Your Data</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
@@ -265,10 +265,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect Bias in Data Stories</a>
+<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect and Reduce Bias</a>
 <ul>
+<li class="chapter" data-level="" data-path="bad-visualizations.html"><a href="bad-visualizations.html"><i class="fa fa-check"></i>Avoid Bad Visualizations</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+<li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>15</b> Tell Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -318,10 +321,82 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="searchable-map" class="section level2 unnumbered" number="">
 <h2>Searchable Map</h2>
-<p>TODO</p>
+<p>Figure <a href="searchable-map.html#fig:searchable-map">12.20</a> shows a powerful template of a searchable
+and filterable point map
+developed by <a href="https://derekeder.com/">Derek Eder</a> from DataMade. This map allows
+you to show points of interest, filter them by using <em>Search by name</em> functionality,
+and show them as a list instead of points on a map. In addition, the <em>About</em> page
+gives you plenty of space to talk about your map.</p>
+
+<div class="figure"><span id="fig:searchable-map"></span>
+<img src="images/12-leaflet/searchable-map.png" alt="Explore a live demonstration of Searchable Map template."  />
+<p class="caption">
+Figure 12.20: Explore a <a href="https://searchable-map-template-csv.netlify.app/">live demonstration of Searchable Map template</a>.
+</p>
+</div>
+<p>This template uses Leaflet.js in combination with Google Maps API to perform
+address search.</p>
+<p>To begin using the template for your own project, visit the <a href="https://github.com/HandsOnDataViz/searchable-map-template-csv">template’s GitHub page</a>,
+and fork it so that you get your own copy (see <a href="github.html">Edit and Host Code with GitHub</a>
+chapter to remind yourself about forks).</p>
+<div id="step-1-get-and-prep-your-data" class="section level3 unnumbered" number="">
+<h3>Step 1: Get and prep your data</h3>
+<p>This template will work with data in <a href="https://en.wikipedia.org/wiki/Comma-separated_values">csv</a> and <a href="https://en.wikipedia.org/wiki/GeoJSON">geojson</a> formats.</p>
+<p>If you have an <code>xls</code> or <code>xlsx</code> spreadsheet, you can save it as a <code>csv</code> file from Excel, Numbers, Libre Office or your spreadsheet tool of choice.</p>
+<p>The <code>csv</code> file must have a latitude column and longitude column and all rows must be geocoded. If you don’t have this, but have information like a street address, you’ll need to <a href="https://en.wikipedia.org/wiki/Geocode">geocode</a> your data.</p>
+<p>Here’s a few tools for geocoding:</p>
+<ul>
+<li>Google has the best geocoder in terms of accuracy. They have an <a href="https://developers.google.com/maps/documentation/geocoding/start">API that you can use</a>, but may cost you money depending on how many rows you have to geocode.</li>
+<li>To geocode addresses inside Google Sheets, install the <a href="https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312">free Geocoding by SmartMonkey Add-On for Google Sheets</a>. See <a href="https://handsondataviz.org/geocode.html">geocoding instructions in Hands-On Data Visualization</a>.</li>
+<li><a href="https://www.gislounge.com/how-to-geocode-addresses-using-qgis/">Geocoding in QGIS</a> (uses OpenStreetMap)</li>
+<li><a href="https://www.batchgeo.com/">BatchGeo</a></li>
+<li><a href="http://geoservices.tamu.edu/Services/Geocode/">Texas A&amp;M</a></li>
+</ul>
+</div>
+<div id="step-2-download-and-edit-this-template" class="section level3 unnumbered" number="">
+<h3>Step 2: Download and edit this template</h3>
+<ol style="list-style-type: decimal">
+<li>Download or clone this project and fire up your text editor of choice. Open up <code>/js/map.js</code> and set your map options in the <code>SearchableMapLib.initialize</code> function:</li>
+</ol>
+<ul>
+<li><code>map_centroid</code> - the lat/long you want your map to center on (<a href="https://getlatlong.net/">find yours here</a>)</li>
+<li><code>filePath</code> - Path to your map data file. This file needs to be in csv or geojson format and placed in the <code>data</code> folder. This file’s first line must be the header, and it must have a latitude column and longitude column.</li>
+<li><code>fileType</code> - Set if you are loading in a <code>csv</code> or <code>geojson</code> file</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Edit the templates in the <code>templates</code> folder for how you want your data displayed. These templates use EJS, which allows the display of your variables with HTML, as well as conditional logic. <a href="https://ejs.co/#docs">Documentation is here</a>.</li>
+</ol>
+<ul>
+<li><code>/templates/hover.ejs</code> - template for when you hover over a dot on the map</li>
+<li><code>/templates/popup.ejs</code> - template for when a dot on the map is clicked</li>
+<li><code>/templates/table-row.ejs</code> - template for each row in the list view</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Remove the custom filters and add your own.</li>
+</ol>
+<ul>
+<li><code>index.html</code> - custom HTML for filters starts around line 112</li>
+<li><code>/js/searchable_map_lib.js</code> - logic for custom filters starts around line 265</li>
+</ul>
+</div>
+<div id="step-3-publishing-your-map" class="section level3 unnumbered" number="">
+<h3>Step 3: Publishing your map</h3>
+<ol style="list-style-type: decimal">
+<li>Before you publish, you’ll need to <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">get a Google API key</a>. You can get on here. Replace the API key on this line of <code>index.html</code> with yours: <code>&lt;script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&amp;key=[YOUR KEY HERE]"&gt;&lt;/script&gt;</code></li>
+<li>Upload this map and all the supporting files and folders to your site. This map requires no back-end code, so any host will work, including GitHub pages, Netlify or your own web server.</li>
+</ol>
+</div>
 <div id="summary12" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
-<p>TODO</p>
+<p>In this chapter, we introduced Leaflet map templates for common map problems,
+such as telling stories about places using scrollable interface,
+showing point data from databases like Socrata, and creating heatmaps
+to visualize areas of high event density.</p>
+<p>You can use these templates as a base to kickstart your own mapping projects.
+Leaflet.js is <a href="https://leafletjs.com/reference">well-documented</a>, and we recommend
+looking at <a href="https://leafletjs.com/examples.html">their tutorials</a> for more inspiration.</p>
+<p>In the next chapter, we will talk about geospatial data and introduce several
+tools that can convert, create, and edit geospatial files.</p>
 
 </div>
 </div>

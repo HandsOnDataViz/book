@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 14 Detect Bias in Data Stories | Hands-On Data Visualization</title>
+  <title>Chapter 14 Detect and Reduce Bias | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 14 Detect Bias in Data Stories | Hands-On Data Visualization" />
+  <meta property="og:title" content="Chapter 14 Detect and Reduce Bias | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 14 Detect Bias in Data Stories | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Chapter 14 Detect and Reduce Bias | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-26" />
+<meta name="date" content="2020-09-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="convert-kmz.html"/>
-<link rel="next" href="how-to-lie-with-charts.html"/>
+<link rel="next" href="bad-visualizations.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -181,7 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mask-aggregate.html"><a href="mask-aggregate.html"><i class="fa fa-check"></i>Mask or Aggregate Sensitive Data</a></li>
 <li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
-<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
+<li class="chapter" data-level="" data-path="bad-data.html"><a href="bad-data.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="question.html"><a href="question.html"><i class="fa fa-check"></i>Question Your Data</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
@@ -251,8 +251,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
-<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap</a></li>
-<li class="chapter" data-level="" data-path="searchable-map.html"><a href="searchable-map.html"><i class="fa fa-check"></i>Searchable Map</a></li>
+<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap with CSV Point Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-searchable-map.html"><a href="leaflet-searchable-map.html"><i class="fa fa-check"></i>Leaflet Searchable Map with CSV Points</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>13</b> Transform Your Map Data</a>
 <ul>
@@ -265,10 +265,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect Bias in Data Stories</a>
+<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect and Reduce Bias</a>
 <ul>
+<li class="chapter" data-level="" data-path="bad-visualizations.html"><a href="bad-visualizations.html"><i class="fa fa-check"></i>Avoid Bad Visualizations</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+<li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>15</b> Tell Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -317,29 +320,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="detect" class="section level1" number="14">
-<h1><span class="header-section-number">Chapter 14</span> Detect Bias in Data Stories</h1>
-<p>TODO: Rewrite chapter</p>
-<p>While we like to believe data visualizations simply “tell the truth,” when you dig further into this topic, you realize that there are multiple ways to represent reality. In this chapter, you will learn how visualizations display the biases of the people and the software that create them. Although we cannot stop bias, we can teach people to look for and detect it, and be aware of our own.</p>
-<p>Sections in this chapter:</p>
+<h1><span class="header-section-number">Chapter 14</span> Detect and Reduce Bias</h1>
+<p>TODO: Revise chapter</p>
+<p>In the introduction, we lied to you… intentionally… by showing you visualizations that portrayed reality is very different ways.</p>
+<p>While we like to believe data visualizations simply “tell the truth,” when you dig further into this topic, you realize that there are multiple ways to represent reality.</p>
+<p>People can mislead with charts and maps, but we can also create very different pictures of the truth….</p>
+<p>You may be surprised to learn that there’s not one <em>right</em> way to create a chart or a map. In the field of data visualization, we have only a few hard rules about how <em>not</em> to design, such as [REFER to chart and map design sections]. Even some of those “rules” are disputed.</p>
+<p>In general, data visualization is guided by a general dictum to make “honest and useful decisions” (cite Datawrapper); Alberto Cairo adds that visualizations should be “truthful…functional….beautiful…insightful….”</p>
+<p>That leaves a lot of room for interpretation… some of which is intentionally misleading, and some of it is thoughtlessly misinformed….unintentional…. but nevertheless sways how people view our visualizations…</p>
+<p>In this chapter, you will learn how visualizations display the biases of the people and the software that create them.</p>
+<p>Bias occurs when we unfairly favor one view over another. Different types of bias….We use the term to refer to biased people who prejudge something before evaluating the evidence. While some forms of bias are clearer to recognize, such as racial or gender bias,….Some biases are baked into human cognition and hard to avoid in data viz, unless you call it out</p>
 <ul>
-<li><a href="how-to-lie-with-charts.html">How to Lie with Charts</a>, inspired by Darrell Huff (1954)</li>
-<li><a href="how-to-lie-with-maps.html">How to Lie with Maps</a>, inspired by Mark Monmonier (1996)</li>
+<li>Pattern Bias: tendency to see patterns in random data. Avoid it by remind readers that data is noisy and use statistical tests to determine likelihood of results due to change, covered in many books on statistical analysis.</li>
+<li>Confirmation Bias: accept claims that fit our preconceived notions…(see dataviz experiments in Cario book, Thaler?). Avoid it by looking at data with open eyes, and search out competing interpretations</li>
 </ul>
-<p>TODO: Build on themes from the new intro: Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors, other than a general dictum to make “honest and useful” decisions. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles) or intervals that vary according to patterns in the data (such as standard deviations from the mean).
-Just like charts, we can mislead and lie with maps, but we can also create very different pictures of the truth.</p>
-<p>TODO: Add new sections on other types of bias.</p>
-<p>Example: Map with “empty” land ignoring indigenous people <a href="https://twitter.com/indigenia/status/1308406887231246337?s=12" class="uri">https://twitter.com/indigenia/status/1308406887231246337?s=12</a></p>
-<p>Example: Watch for negative versus positive framing and how it affects readers. For example, British statistician David Spiegelhalter notes that US hospitals report <em>mortality rates</em>, while UK hospitals report <em>survival</em> rates. When considering the risks of a surgical procedure for member of your family, a 5 percent mortality rate sounds worse than a 95 percent survival rate, even they’re mathematically identical. Furthermore, augmenting the rate with raw numbers (such as 20 deaths out of 400 patients) raises the impression of risk even higher, because we begin to imagine real people’s lives, not abstract percentages.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p>
-<p>Learn more:
-- Darrell Huff, How to Lie with Statistics (W. W. Norton &amp; Company, 1954), <a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a>
-- Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of Chicago Press, 1996), <a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a>
-- Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9, 2017, <a href="http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/" class="uri">http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/</a></p>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="17">
-<li id="fn17"><p><span class="citation">David Spiegelhalter, <em>The Art of Statistics: Learning from Data</em> (Penguin UK, 2019), <a href="https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ</a></span>, pp. 22-5<a href="detect.html#fnref17" class="footnote-back">↩︎</a></p></li>
-</ol>
+<p>We also refer to biased processes, such as a statistical sampling method that regularly yields inaccurate results. Sometimes bias arises due to a combination of human behavior and poor numerical reasoning.</p>
+<ul>
+<li>Reporting bias: on surveys, people may over-report positive behavior, or under-report attitudes deemed negative by broader society. how to address: see chapter on find and question your data, make appropriate comparisons, and clarify problems in text that accompanies visualization</li>
+<li>Selection bias: comparing samples as if they were truly representative of the broader population, but in fact are not: common to mistakenly compare student academic performance in different types of schools, such as public versus private, or traditional public versus charter school, without recognizing how pools of applicants may differ…. how to address: carefully examine the underlying selection processes, and make appropriate comparisons between groups, and clarify problems in text that accompanies visualization</li>
+<li>Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: <a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>; <a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a></li>
+</ul>
+<p>While we cannot stop bias entirely, we can teach you to detect it in charts and maps made by other people, as well as those that you make, to improve your interpretation…</p>
+<p>Since our book features hands-on lessons, in each section you’ll learn how to create <em>biased</em> visualizations, so that you’ll know how to make <em>better</em> ones. Just like it takes a thief to catch a thief… you need to learn how to lie in order to be more truthful in your visualizations…</p>
+<p>Inspirations for this chapter:</p>
+<ul>
+<li>Darrell Huff, How to Lie with Statistics (W. W. Norton &amp; Company, 1954), <a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a></li>
+<li>Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of Chicago Press, 1996), <a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a></li>
+<li>Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9, 2017, <a href="http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/" class="uri">http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/</a></li>
+<li>Alberto Cairo 2016</li>
+<li>Alberto Cairo 2019</li>
+</ul>
 </div>
             </section>
 
@@ -347,7 +357,7 @@ Just like charts, we can mislead and lie with maps, but we can also create very 
         </div>
       </div>
 <a href="convert-kmz.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="how-to-lie-with-charts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bad-visualizations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

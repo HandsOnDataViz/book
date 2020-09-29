@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-26" />
+<meta name="date" content="2020-09-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mask-aggregate.html"><a href="mask-aggregate.html"><i class="fa fa-check"></i>Mask or Aggregate Sensitive Data</a></li>
 <li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
-<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
+<li class="chapter" data-level="" data-path="bad-data.html"><a href="bad-data.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="question.html"><a href="question.html"><i class="fa fa-check"></i>Question Your Data</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
@@ -251,8 +251,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
-<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap</a></li>
-<li class="chapter" data-level="" data-path="searchable-map.html"><a href="searchable-map.html"><i class="fa fa-check"></i>Searchable Map</a></li>
+<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap with CSV Point Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-searchable-map.html"><a href="leaflet-searchable-map.html"><i class="fa fa-check"></i>Leaflet Searchable Map with CSV Points</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>13</b> Transform Your Map Data</a>
 <ul>
@@ -265,10 +265,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect Bias in Data Stories</a>
+<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect and Reduce Bias</a>
 <ul>
+<li class="chapter" data-level="" data-path="bad-visualizations.html"><a href="bad-visualizations.html"><i class="fa fa-check"></i>Avoid Bad Visualizations</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+<li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>15</b> Tell Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -318,163 +321,96 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="leaflet-maps-with-api" class="section level2 unnumbered" number="">
 <h2>Leaflet Maps with Open Data API</h2>
-<p>TODO:</p>
-<ul>
-<li>Note this new title and URL, which is more general than the older title and “leaflet-maps-with-socrata” URL</li>
-<li>Blend in other section below this one</li>
-<li>Update the example to pull map data from a continuously updated map, since the current example has not been updated since 2018</li>
-<li>Decide if there’s anything useful to borrow from the other example repo, such as a non-Socrata endpoint?: <a href="https://github.com/HandsOnDataViz/leaflet-data-apis" class="uri">https://github.com/HandsOnDataViz/leaflet-data-apis</a></li>
-<li>write intro to connect more directly to the <a href="opendata.html">Open Data section</a> in ch 3, and describe open data APIs in general, with Socrata API serving as a convenient example.</li>
-</ul>
-<iframe src="https://handsondataviz.github.io/leaflet-socrata/index.html" style="width: 100%; height: 450px; border: 0 none;">
+<p>Leaflet maps can pull and display data from various open data repositories using APIs.
+Figure <a href="leaflet-maps-with-api.html#fig:leaflet-open-data">12.18</a> shows an interactive map of North Dakota counties,
+colored by population density, with hospitals and EMS stations locations.
+Hospital information is pulled directly from <a href="https://data.medicare.gov/">Medicare.org Socrata database</a>.
+County boundaries and population density are pulled from <a href="https://www.gis.nd.gov/">North Dakota GIS</a> ArcGIS server.
+EMS stations are fetched from <a href="https://hifld-geoplatform.opendata.arcgis.com/">Homeland Infrastructure Foundation-Level Data</a> ArcGIS server.</p>
+
+<div class="figure"><span id="fig:leaflet-open-data"></span>
+<iframe src="https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html" width="672" height="500px">
 </iframe>
-<p>Source: <a href="https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8">Current Class 1 - Class 4 Food Establishments</a>, City of Hartford</p>
-<div id="why-pair-leaflet-maps-with-socrata-data" class="section level4 unnumbered" number="">
-<h4>Why pair Leaflet maps with Socrata data?</h4>
-<p>Leaflet, a friendly and flexible open-source code library for creating interactive web maps, plays nicely with Socrata, an open data platform used by several government agencies and organizations. Benefits of pairing Leaflet and Socrata:</p>
-<ul>
-<li><p>Although the Socrata data platform includes built-in visualization tools for anyone to create charts and maps, Leaflet gives you more control over your map design. Furthermore, Leaflet allows you to create maps that bring together data from both Socrata and non-Socrata sources.</p></li>
-<li><p>Socrata datasets include an API (application program interface) endpoint, in the form of a web address. This endpoint enables other computers to easily access the most recent data online, instead of a static version that was manually downloaded.</p></li>
-<li><p>Newer Socrata datasets that include locations (such as latitude and longitude coordinates) also provide endpoints in GeoJSON format. Since Leaflet maps easily process GeoJSON data, only a few lines of code are required.</p></li>
-<li><p>However, Socrata GeoJSON endpoints do not currently support “real-time” data, such as up-to-the-minute locations of public transportation, etc. In these cases, you may need to access data through a provider other than Socrata, most likely in a different format, which may require more coding skills.</p></li>
-</ul>
+<p class="caption">
+Figure 12.18: Explore a <a href="https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html">live demonstration of Leaflet Heatmap</a>.
+</p>
 </div>
-<div id="about-socrata-api-endpoints" class="section level4 unnumbered" number="">
-<h4>About Socrata API endpoints</h4>
-<p>Go to any Socrata open data platform, find a dataset, and click the API tab. As an example, you can use City of Hartford’s <a href="https://data.hartford.gov/Public-Safety/Police-Incidents-01012005-to-Current/889t-nwfu">Police Incidents dataset</a>.</p>
-<div class="figure">
-<img src="images/12-leaflet/data-hartford-api.png" alt="" />
-<p class="caption">Police Incidents dataset on Hartford Open Data portal</p>
-</div>
-<p>Copy the API endpoint. The default version is JSON.</p>
-<p>If you’re new to APIs, test the endpoint by pasting it into your browser address line. Ideally you would see a formatted JSON view (use Chrome or Firefox for better results).</p>
-<div class="figure">
-<img src="images/12-leaflet/data-hartford-api-json.png" alt="" />
-<p class="caption">Formatted JSON example in Firefox</p>
-</div>
-<p>If your browser does not support JSON view, you will see the raw JSON stream only, like the one shown below.</p>
-<div class="figure">
-<img src="images/12-leaflet/data-hartford-api-json-not-formatted.png" alt="" />
-<p class="caption">Unformatted JSON example in Firefox</p>
-</div>
-<p>Test if this Socrata endpoint supports GeoJSON format by changing the extention in the API dropdown menu from <code>JSON</code> to <code>GeoJSON</code>. GeoJSON format works best with Leaflet because the coding is simpler.</p>
-<p>If your endpoint supports GeoJSON format, your browser will display a data stream similar to the one below.</p>
-<div class="figure">
-<img src="images/12-leaflet/data-hartford-api-geojson.png" alt="" />
-<p class="caption">Formatted GeoJSON example in Firefox</p>
-</div>
-<p>If your Socrata endpoint only supports JSON format, but includes data columns with latitude and longitude, see other Leaflet examples further below.</p>
-</div>
-<div id="register-for-socrata-app-token" class="section level4 unnumbered" number="">
-<h4>Register for Socrata App Token</h4>
-<ul>
-<li>Socrata requires developers to register for a free app token at <a href="https://opendata.socrata.com/signup" class="uri">https://opendata.socrata.com/signup</a></li>
-</ul>
-</div>
-<div id="demonstration-maps" class="section level4 unnumbered" number="">
-<h4>Demonstration Maps</h4>
-</div>
-<div id="geojson-endpoint-with-circle-markers-and-tooltips" class="section level4 unnumbered" number="">
-<h4>GeoJSON endpoint with circle markers and tooltips</h4>
-<ul>
-<li><p>map <a href="https://handsondataviz.github.io/leaflet-socrata/index.html" class="uri">https://handsondataviz.github.io/leaflet-socrata/index.html</a></p></li>
-<li><p>code <a href="https://github.com/handsondataviz/leaflet-socrata/index.html" class="uri">https://github.com/handsondataviz/leaflet-socrata/index.html</a></p></li>
-<li><p>data <a href="https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8" class="uri">https://data.hartford.gov/Public-Health/Current-Class-1-Class-4-Food-Establishments/xkvv-76v8</a></p></li>
-<li><p>note: location data appears as latitude and longitude coordinates in the <code>geom</code> column</p></li>
-<li><p>steps to create your own (MORE TODO HERE)</p>
-<ul>
-<li><p>select API button, copy endpoint, and change suffix from .json to .geojson</p></li>
-<li><p>copy this Leaflet map template, which includes this key section of code:</p></li>
-<li><p>paste and explain the code</p></li>
-</ul></li>
-</ul>
-</div>
-<div id="geojson-endpoint-with-simple-data-filter-default-marker-styling-and-pop-up-info" class="section level4 unnumbered" number="">
-<h4>GeoJSON endpoint with simple data filter, default marker styling and pop-up info</h4>
-<ul>
-<li>map <a href="https://handsondataviz.github.io/leaflet-socrata/index-geojson-filter" class="uri">https://handsondataviz.github.io/leaflet-socrata/index-geojson-filter</a></li>
-<li>code <a href="https://github.com/handsondataviz/leaflet-socrata/" class="uri">https://github.com/handsondataviz/leaflet-socrata/</a></li>
-<li>data <a href="https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98" class="uri">https://data.ct.gov/Environment-and-Natural-Resources/Agricultural-Commoditites-Grown-By-Farmer/y6p2-px98</a></li>
-</ul>
-</div>
-<div id="multiple-socrata-datasets-with-leaflet-control-layers-legend" class="section level4 unnumbered" number="">
-<h4>Multiple Socrata datasets with Leaflet control layers legend</h4>
-<ul>
-<li>map <a href="https://handsondataviz.github.io/leaflet-socrata/index-control-layers.html" class="uri">https://handsondataviz.github.io/leaflet-socrata/index-control-layers.html</a></li>
-<li>code <a href="https://github.com/handsondataviz/leaflet-socrata/index-control-layers.html" class="uri">https://github.com/handsondataviz/leaflet-socrata/index-control-layers.html</a></li>
-</ul>
-</div>
-<div id="older-json-only-endpoint-with-separate-columns-for-latitude-longitude" class="section level4 unnumbered" number="">
-<h4>Older JSON-only endpoint, with separate columns for latitude, longitude</h4>
-<ul>
-<li>map <a href="https://handsondataviz.github.io/leaflet-socrata/index-json.html" class="uri">https://handsondataviz.github.io/leaflet-socrata/index-json.html</a></li>
-<li>code <a href="https://github.com/handsondataviz/leaflet-socrata/index-json.html" class="uri">https://github.com/handsondataviz/leaflet-socrata/index-json.html</a></li>
-<li>data <a href="https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7" class="uri">https://opendata.demo.socrata.com/Government/Kentucky-Farmers-Market-Map/3bfj-rqn7</a></li>
-</ul>
-<p>Learn more:
-- <a href="https://dev.socrata.com/" class="uri">https://dev.socrata.com/</a>
-- <a href="https://github.com/chriswhong/simpleSodaLeaflet" class="uri">https://github.com/chriswhong/simpleSodaLeaflet</a></p>
-</div>
-<div id="thanks-to" class="section level4 unnumbered" number="">
-<h4>Thanks to</h4>
-<ul>
-<li>Chris Metcalf <a href="https://github.com/chrismetcalf" class="uri">https://github.com/chrismetcalf</a></li>
-<li>Tyler Klyeklamp <a href="https://data.ct.gov/" class="uri">https://data.ct.gov/</a></li>
-</ul>
-<p><strong>TODO: blend this section into the one above</strong></p>
-<p>Pull Open Data into Leaflet Map with APIs {- #leaflet-maps-open-apis}
-TODO: Decide whether to keep or not. Up to this point in the book, we’ve built charts and maps using static data that you have downloaded from other sites. But some open data repositories have APIs, or application program interfaces, which means the software that allows computers to communicate with one another. Below is a Leaflet Map template that uses APIs to pull in the most current data from three different open repository platforms: Socrata, Esri ArcGIS Online, and USGS.</p>
-<p>Try it:
-Explore the map below or <a href="https://handsondataviz.github.io/leaflet-data-apis">view full-screen version in a new tab</a></p>
-<iframe src="https://handsondataviz.github.io/leaflet-data-apis/" width="90%" height="550">
-</iframe>
-</div>
-<div id="how-it-works" class="section level4 unnumbered" number="">
-<h4>How it works</h4>
+<p>You can enable Leaflet to pull data from ArcGIS servers using a free <a href="https://github.com/Esri/esri-leaflet"><code>esri-leaflet</code></a> plugin.
+Data from Socrata can be pulled using jQuery’s <code>$.getJSON()</code> function,
+and then passed to Leaflet directly using <code>L.GeoJson()</code> function.</p>
+<p>To adapt this template for your own project:</p>
 <ol style="list-style-type: decimal">
-<li><p>Go to the GitHub repo for the map above: <a href="https://github.com/handsondataviz/leaflet-data-apis" class="uri">https://github.com/handsondataviz/leaflet-data-apis</a></p></li>
-<li><p>Explore the code to see how different APIs work. For example, see the first map overlay, which pulls Connecticut School Directory data from the CT Open Data repository on a Socrata open data platform: <a href="https://data.ct.gov/resource/v4tt-nt9n" class="uri">https://data.ct.gov/resource/v4tt-nt9n</a></p></li>
-<li><p>Inside the open data repo, look for an API button and copy the endpoint.</p></li>
+<li>Visit the <a href="https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis">GitHub repository</a> that contains the code for the map in Figure <a href="leaflet-maps-with-api.html#fig:leaflet-open-data">12.18</a>,
+and press the <em>Use this template</em> button to copy the repo to your own GitHub account.</li>
+<li>All data is pulled form the code inside the <code>&lt;script&gt;</code> tag of <code>index.html</code>. To pull
+data from Socrata or another JSON/GeoJSON endpoint, modify the following code snippet
+with the appropriate URL and icon:</li>
 </ol>
-<div class="figure">
-<img src="images/12-leaflet/ct-open-data-api-endpoint.png" alt="" />
-<p class="caption">Screenshot: Sample API endpoint in Socrata open data repo</p>
-</div>
-<ol start="4" style="list-style-type: decimal">
-<li>Paste the endpoint link into your browser, change the suffix from <code>.json</code> to <code>.geojson</code> and press return. In order to show the endpoint data as points on a map in this simple Leaflet template, the points must already be geocoded inside the open data repo, and the platform must support a GeoJSON endpoint. In your browser, one sign of success is a long stream of GeoJSON data like this:</li>
-</ol>
-<div class="figure">
-<img src="images/12-leaflet/ct-open-data-geojson.png" alt="" />
-<p class="caption">Screenshot: API endpoint with .geojson suffix in Chrome browser</p>
-</div>
-<ol start="5" style="list-style-type: decimal">
-<li>In this section of the Leaflet map template, the code includes a jQuery function <code>$.getJSON</code> to call the open data endpoint in GeoJSON format: <code>https://data.ct.gov/resource/v4tt-nt9n.geojson</code>. It also requires a Socrata app token, and you can get your own token for free at: <a href="https://dev.socrata.com/register" class="uri">https://dev.socrata.com/register</a>. Each geocoded school in the Socrata data repository is displayed as a blue circle, with data properties (such as: name) in a clickable pop-up.</li>
-</ol>
-<div class="sourceCode" id="cb36"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb36-1"><a href="leaflet-maps-with-api.html#cb36-1"></a><span class="co">// load open data from Socrata endpoint in GeoJSON format</span></span>
-<span id="cb36-2"><a href="leaflet-maps-with-api.html#cb36-2"></a><span class="co">// with simple marker styling: blue circles</span></span>
-<span id="cb36-3"><a href="leaflet-maps-with-api.html#cb36-3"></a><span class="co">// register your own Socrata app token at https://dev.socrata.com/register</span></span>
-<span id="cb36-4"><a href="leaflet-maps-with-api.html#cb36-4"></a><span class="co">// Connecticut School Directory, CT Open Data, https://data.ct.gov/resource/v4tt-nt9n</span></span>
-<span id="cb36-5"><a href="leaflet-maps-with-api.html#cb36-5"></a>$<span class="op">.</span><span class="fu">getJSON</span>(<span class="st">&quot;https://data.ct.gov/resource/v4tt-nt9n.geojson?&amp;$$app_token=QVVY3I72SVPbxBYlTM8fA7eet&quot;</span><span class="op">,</span> <span class="kw">function</span> (data){</span>
-<span id="cb36-6"><a href="leaflet-maps-with-api.html#cb36-6"></a>  <span class="kw">var</span> geoJsonLayer <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJson</span>(data<span class="op">,</span> {</span>
-<span id="cb36-7"><a href="leaflet-maps-with-api.html#cb36-7"></a>    <span class="dt">pointToLayer</span><span class="op">:</span> <span class="kw">function</span>( feature<span class="op">,</span> latlng) {</span>
-<span id="cb36-8"><a href="leaflet-maps-with-api.html#cb36-8"></a>      <span class="kw">var</span> circle <span class="op">=</span> L<span class="op">.</span><span class="fu">circleMarker</span>(latlng<span class="op">,</span> {</span>
-<span id="cb36-9"><a href="leaflet-maps-with-api.html#cb36-9"></a>        <span class="dt">radius</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span></span>
-<span id="cb36-10"><a href="leaflet-maps-with-api.html#cb36-10"></a>        <span class="dt">fillColor</span><span class="op">:</span> <span class="st">&quot;blue&quot;</span><span class="op">,</span></span>
-<span id="cb36-11"><a href="leaflet-maps-with-api.html#cb36-11"></a>        <span class="dt">color</span><span class="op">:</span> <span class="st">&quot;blue&quot;</span><span class="op">,</span></span>
-<span id="cb36-12"><a href="leaflet-maps-with-api.html#cb36-12"></a>        <span class="dt">weight</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
-<span id="cb36-13"><a href="leaflet-maps-with-api.html#cb36-13"></a>        <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
-<span id="cb36-14"><a href="leaflet-maps-with-api.html#cb36-14"></a>        <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.7</span></span>
-<span id="cb36-15"><a href="leaflet-maps-with-api.html#cb36-15"></a>      })<span class="op">;</span></span>
-<span id="cb36-16"><a href="leaflet-maps-with-api.html#cb36-16"></a>      circle<span class="op">.</span><span class="fu">bindPopup</span>(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">name</span> <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">district_name</span>)<span class="op">;</span> <span class="co">// replace last term with property data labels to display from GeoJSON file</span></span>
-<span id="cb36-17"><a href="leaflet-maps-with-api.html#cb36-17"></a>      <span class="cf">return</span> circle<span class="op">;</span></span>
-<span id="cb36-18"><a href="leaflet-maps-with-api.html#cb36-18"></a>    }</span>
-<span id="cb36-19"><a href="leaflet-maps-with-api.html#cb36-19"></a>  })<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span> <span class="co">// display by default</span></span>
-<span id="cb36-20"><a href="leaflet-maps-with-api.html#cb36-20"></a>  controlLayers<span class="op">.</span><span class="fu">addOverlay</span>(geoJsonLayer<span class="op">,</span> <span class="st">&#39;Public Schools (CT Open Data-Socrata)&#39;</span>)<span class="op">;</span></span>
-<span id="cb36-21"><a href="leaflet-maps-with-api.html#cb36-21"></a>})<span class="op">;</span></span></code></pre></div>
-<ol start="5" style="list-style-type: decimal">
-<li>Fork a copy of this repo, play with the code, and try to insert GeoJSON endpoints from other open data repositories.</li>
-</ol>
-</div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb32-1"><a href="leaflet-maps-with-api.html#cb32-1"></a><span class="co">/*</span></span>
+<span id="cb32-2"><a href="leaflet-maps-with-api.html#cb32-2"></a><span class="co">  From Medicare&#39;s Socrata database, add general hospitals in North Dakota</span></span>
+<span id="cb32-3"><a href="leaflet-maps-with-api.html#cb32-3"></a><span class="co">  using simple filtering on the `state` column, and a GeoJSON endpoint.</span></span>
+<span id="cb32-4"><a href="leaflet-maps-with-api.html#cb32-4"></a><span class="co">  Each point is a custom .png icon with a tooltip containing hospital&#39;s name,</span></span>
+<span id="cb32-5"><a href="leaflet-maps-with-api.html#cb32-5"></a><span class="co">  city, and zipcode.</span></span>
+<span id="cb32-6"><a href="leaflet-maps-with-api.html#cb32-6"></a><span class="co">*/</span></span>
+<span id="cb32-7"><a href="leaflet-maps-with-api.html#cb32-7"></a>$<span class="op">.</span><span class="fu">getJSON</span>(<span class="st">&quot;https://data.medicare.gov/resource/xubh-q36u.geojson?state=ND&quot;</span><span class="op">,</span></span>
+<span id="cb32-8"><a href="leaflet-maps-with-api.html#cb32-8"></a></span>
+<span id="cb32-9"><a href="leaflet-maps-with-api.html#cb32-9"></a>  <span class="kw">function</span>(data) {</span>
+<span id="cb32-10"><a href="leaflet-maps-with-api.html#cb32-10"></a></span>
+<span id="cb32-11"><a href="leaflet-maps-with-api.html#cb32-11"></a>    <span class="kw">var</span> hospitals <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJson</span>(data<span class="op">,</span> {</span>
+<span id="cb32-12"><a href="leaflet-maps-with-api.html#cb32-12"></a>      <span class="dt">pointToLayer</span><span class="op">:</span> <span class="kw">function</span>(feature<span class="op">,</span> latlng) {</span>
+<span id="cb32-13"><a href="leaflet-maps-with-api.html#cb32-13"></a>        <span class="cf">return</span> L<span class="op">.</span><span class="fu">marker</span>(latlng<span class="op">,</span> {</span>
+<span id="cb32-14"><a href="leaflet-maps-with-api.html#cb32-14"></a>          <span class="dt">icon</span><span class="op">:</span> L<span class="op">.</span><span class="fu">icon</span>({</span>
+<span id="cb32-15"><a href="leaflet-maps-with-api.html#cb32-15"></a>            <span class="dt">iconUrl</span><span class="op">:</span> <span class="st">&#39;images/hospital.png&#39;</span><span class="op">,</span></span>
+<span id="cb32-16"><a href="leaflet-maps-with-api.html#cb32-16"></a>            <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">24</span><span class="op">,</span> <span class="dv">24</span>]<span class="op">,</span></span>
+<span id="cb32-17"><a href="leaflet-maps-with-api.html#cb32-17"></a>            <span class="dt">iconAnchor</span><span class="op">:</span> [<span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]<span class="op">,</span></span>
+<span id="cb32-18"><a href="leaflet-maps-with-api.html#cb32-18"></a>            <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.5</span></span>
+<span id="cb32-19"><a href="leaflet-maps-with-api.html#cb32-19"></a>          })</span>
+<span id="cb32-20"><a href="leaflet-maps-with-api.html#cb32-20"></a>        })<span class="op">.</span><span class="fu">bindTooltip</span>(</span>
+<span id="cb32-21"><a href="leaflet-maps-with-api.html#cb32-21"></a>          feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">hospital_name</span></span>
+<span id="cb32-22"><a href="leaflet-maps-with-api.html#cb32-22"></a>            <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">city</span></span>
+<span id="cb32-23"><a href="leaflet-maps-with-api.html#cb32-23"></a>            <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">zip_code</span></span>
+<span id="cb32-24"><a href="leaflet-maps-with-api.html#cb32-24"></a>        )</span>
+<span id="cb32-25"><a href="leaflet-maps-with-api.html#cb32-25"></a>      }</span>
+<span id="cb32-26"><a href="leaflet-maps-with-api.html#cb32-26"></a>    })<span class="op">.</span><span class="fu">addTo</span>(map)</span>
+<span id="cb32-27"><a href="leaflet-maps-with-api.html#cb32-27"></a></span>
+<span id="cb32-28"><a href="leaflet-maps-with-api.html#cb32-28"></a>  }</span>
+<span id="cb32-29"><a href="leaflet-maps-with-api.html#cb32-29"></a></span>
+<span id="cb32-30"><a href="leaflet-maps-with-api.html#cb32-30"></a>)</span></code></pre></div>
+<p>The following code snippet uses <code>esri-leaflet</code> plugin to pull polygon data
+from an ArcGIS server, and creates a choropleth layer based on population density
+(stored in <code>POP10_SQMI</code> variable of each feature, or polygon).</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33-1"><a href="leaflet-maps-with-api.html#cb33-1"></a><span class="kw">var</span> counties <span class="op">=</span> L<span class="op">.</span><span class="at">esri</span><span class="op">.</span><span class="fu">featureLayer</span>({</span>
+<span id="cb33-2"><a href="leaflet-maps-with-api.html#cb33-2"></a>  <span class="dt">url</span><span class="op">:</span><span class="st">&#39;https://ndgishub.nd.gov/arcgis/rest/services/All_GovtBoundaries/MapServer/20&#39;</span><span class="op">,</span></span>
+<span id="cb33-3"><a href="leaflet-maps-with-api.html#cb33-3"></a>  <span class="dt">style</span><span class="op">:</span> <span class="kw">function</span>(feature) {</span>
+<span id="cb33-4"><a href="leaflet-maps-with-api.html#cb33-4"></a>    <span class="cf">return</span> {</span>
+<span id="cb33-5"><a href="leaflet-maps-with-api.html#cb33-5"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
+<span id="cb33-6"><a href="leaflet-maps-with-api.html#cb33-6"></a>      <span class="dt">weight</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
+<span id="cb33-7"><a href="leaflet-maps-with-api.html#cb33-7"></a>      <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;silver&#39;</span><span class="op">,</span></span>
+<span id="cb33-8"><a href="leaflet-maps-with-api.html#cb33-8"></a>      <span class="dt">fillColor</span><span class="op">:</span> getDensityColor(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">POP10_SQMI</span>)</span>
+<span id="cb33-9"><a href="leaflet-maps-with-api.html#cb33-9"></a>    }</span>
+<span id="cb33-10"><a href="leaflet-maps-with-api.html#cb33-10"></a>  }</span>
+<span id="cb33-11"><a href="leaflet-maps-with-api.html#cb33-11"></a>})<span class="op">.</span><span class="fu">addTo</span>(map)</span></code></pre></div>
+<p>Here, the <code>getDensityColor()</code> function returns a color for a given value
+based on pre-defined thresholds. In case of the North Dakota example,
+population density of over 100 people per square mile is assigned the darkest shade of red,
+while the density of 5 and under is shown with the lightest.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb34-1"><a href="leaflet-maps-with-api.html#cb34-1"></a><span class="kw">var</span> getDensityColor <span class="op">=</span> <span class="kw">function</span>(d) {</span>
+<span id="cb34-2"><a href="leaflet-maps-with-api.html#cb34-2"></a>  <span class="cf">return</span> d <span class="op">&gt;</span> <span class="dv">100</span>  <span class="op">?</span> <span class="st">&#39;#7a0177&#39;</span> <span class="op">:</span></span>
+<span id="cb34-3"><a href="leaflet-maps-with-api.html#cb34-3"></a>          d <span class="op">&gt;</span> <span class="dv">50</span>  <span class="op">?</span> <span class="st">&#39;#c51b8a&#39;</span> <span class="op">:</span></span>
+<span id="cb34-4"><a href="leaflet-maps-with-api.html#cb34-4"></a>          d <span class="op">&gt;</span> <span class="dv">20</span>  <span class="op">?</span> <span class="st">&#39;#f768a1&#39;</span> <span class="op">:</span></span>
+<span id="cb34-5"><a href="leaflet-maps-with-api.html#cb34-5"></a>          d <span class="op">&gt;</span> <span class="dv">5</span>   <span class="op">?</span> <span class="st">&#39;#fbb4b9&#39;</span> <span class="op">:</span></span>
+<span id="cb34-6"><a href="leaflet-maps-with-api.html#cb34-6"></a>                    <span class="st">&#39;#feebe2&#39;</span></span>
+<span id="cb34-7"><a href="leaflet-maps-with-api.html#cb34-7"></a>}</span></code></pre></div>
+<p>While it is convenient to pull data directly from the source databases,
+remember that those resources are out of your control (unless you administer them, of course).
+Data changes often come unnanounced. For example, if the dataset owner decides
+to rename the population density field from <code>POP10_SQMI</code> to <code>Pop10_sqmi</code>,
+your map will stop showing values correctly. Datasets may get moved
+to a different domain name or get deleted entirely, so
+it is wise to have a back-up file saved locally.</p>
+<p>If you are more concerned about the long-term functioning of your map as opposed
+to displaying the most up-to-date version of the dataset, you may consider serving
+your data from local GeoJSON files instead (but ensure first that it is permitted by the data license).</p>
 </div>
             </section>
 

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Map Your Data | Hands-On Data Visualization</title>
+  <title>Leaflet Searchable Map with CSV Points | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Map Your Data | Hands-On Data Visualization" />
+  <meta property="og:title" content="Leaflet Searchable Map with CSV Points | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Map Your Data | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Leaflet Searchable Map with CSV Points | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="filtered-line-tableau.html"/>
-<link rel="next" href="map-design.html"/>
+<link rel="prev" href="leaflet-heatmap.html"/>
+<link rel="next" href="transform.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -319,70 +319,95 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="map" class="section level1" number="7">
-<h1><span class="header-section-number">Chapter 7</span> Map Your Data</h1>
-<p>Maps entice readers to explore your data story and develop a stronger sense of place.
-But good maps require careful thought about how to clearly communicate spatial
-concepts with your audience.</p>
-<p>We will begin this chapter by introducing key principles and definitions related to maps.
-We will then practice making interactive maps using free online tools, including Google My Maps,
-Socrata, Tableau, and Datawrapper. We will build two point maps and two choropleth maps.
-By the end of this chapter, you will be able to use four powerful tools to map your data.</p>
-<table>
-<caption><span id="tab:map-types">Table 7.1: </span> Basic Map Types and Tutorials</caption>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Map</th>
-<th>Best use and tutorials in this book</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Point map <br> <img src="images/07-map/map-point.png" /></td>
-<td>Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: <a href="mymaps.html">Google My Maps tutorial</a><br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="even">
-<td>Polygon map <br> <img src="images/07-map/map-polygon.png" /></td>
-<td>Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tools: <a href="map-tableau.html">Tableau Public</a> or <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="odd">
-<td>Polyline map <br> <img src="images/07-map/map-polyline.png" /></td>
-<td>Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: n/a <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="even">
-<td>Heat map <br> <img src="images/07-map/map-heat.png" /></td>
-<td>Used to show hotspots or clusters of events, such as high-crime areas. <br>Easy tool: n/a <br>Power tool: <a href="leaflet-heatmap.html">Leaflet Heatmap template</a></td>
-</tr>
-<tr class="odd">
-<td>Combination map <br> <img src="images/07-map/map-point-polygon-polyline.png" /></td>
-<td>Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="even">
-<td>Storymap <br> <img src="images/07-map/map-storymap.png" /></td>
-<td>Best for guided point-by-point journey through a historical narrative, with optional photos, audio, or video on an interactive map. <br> Power tool: <a href="leaflet-storymaps-with-google-sheets.html">Leaflet Storymaps with Google Sheets</a></td>
-</tr>
-</tbody>
-</table>
-<p>TODO ABOVE:</p>
+<div id="leaflet-searchable-map" class="section level2 unnumbered" number="">
+<h2>Leaflet Searchable Map with CSV Points</h2>
+<p>Figure <a href="leaflet-searchable-map.html#fig:searchable-map">12.20</a> shows a powerful Leaflet template of a searchable
+and filterable point map
+developed by <a href="https://derekeder.com/">Derek Eder</a> from DataMade. This map allows
+you to show points of interest, filter them by using <em>Search by name</em> functionality,
+and show them as a list instead of points on a map. In addition, the <em>About</em> page
+gives you plenty of space to talk about your map.</p>
+
+<div class="figure"><span id="fig:searchable-map"></span>
+<img src="images/12-leaflet/searchable-map.png" alt="Explore a live demonstration of Searchable Map template."  />
+<p class="caption">
+Figure 12.20: Explore a <a href="https://searchable-map-template-csv.netlify.app/">live demonstration of Searchable Map template</a>.
+</p>
+</div>
+<p>This template uses Leaflet.js in combination with Google Maps API to perform
+address search.</p>
+<p>To begin using the template for your own project, visit the <a href="https://github.com/HandsOnDataViz/searchable-map-template-csv">template’s GitHub page</a>,
+and fork it so that you get your own copy (see <a href="github.html">Edit and Host Code with GitHub</a>
+chapter to remind yourself about forks).</p>
+<div id="step-1-get-and-prep-your-data" class="section level3 unnumbered" number="">
+<h3>Step 1: Get and prep your data</h3>
+<p>This template will work with data in <a href="https://en.wikipedia.org/wiki/Comma-separated_values">csv</a> and <a href="https://en.wikipedia.org/wiki/GeoJSON">geojson</a> formats.</p>
+<p>If you have an <code>xls</code> or <code>xlsx</code> spreadsheet, you can save it as a <code>csv</code> file from Excel, Numbers, Libre Office or your spreadsheet tool of choice.</p>
+<p>The <code>csv</code> file must have a latitude column and longitude column and all rows must be geocoded. If you don’t have this, but have information like a street address, you’ll need to <a href="https://en.wikipedia.org/wiki/Geocode">geocode</a> your data.</p>
+<p>Here’s a few tools for geocoding:</p>
 <ul>
-<li>UPDATE table to match chapter contents, and reorganize to feature easier tools at top.</li>
-<li>Consider replacing Google My Maps point map with Datawrapper map, if achieves same result and easier</li>
-<li>Confirm removing Storymap “easy tools” because neither allow you to export data you enter: <a href="https://storymap.knightlab.com/">Knight Lab’s StoryMap</a>, <a href="https://storymaps.arcgis.com/en/">ESRI Story Maps</a></li>
-<li>Add tab-view map for historical change template?</li>
-<li>Add synchronized side-by-side map template?</li>
+<li>Google has the best geocoder in terms of accuracy. They have an <a href="https://developers.google.com/maps/documentation/geocoding/start">API that you can use</a>, but may cost you money depending on how many rows you have to geocode.</li>
+<li>To geocode addresses inside Google Sheets, install the <a href="https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312">free Geocoding by SmartMonkey Add-On for Google Sheets</a>. See <a href="https://handsondataviz.org/geocode.html">geocoding instructions in Hands-On Data Visualization</a>.</li>
+<li><a href="https://www.gislounge.com/how-to-geocode-addresses-using-qgis/">Geocoding in QGIS</a> (uses OpenStreetMap)</li>
+<li><a href="https://www.batchgeo.com/">BatchGeo</a></li>
+<li><a href="http://geoservices.tamu.edu/Services/Geocode/">Texas A&amp;M</a></li>
 </ul>
 </div>
+<div id="step-2-download-and-edit-this-template" class="section level3 unnumbered" number="">
+<h3>Step 2: Download and edit this template</h3>
+<ol style="list-style-type: decimal">
+<li>Download or clone this project and fire up your text editor of choice. Open up <code>/js/map.js</code> and set your map options in the <code>SearchableMapLib.initialize</code> function:</li>
+</ol>
+<ul>
+<li><code>map_centroid</code> - the lat/long you want your map to center on (<a href="https://getlatlong.net/">find yours here</a>)</li>
+<li><code>filePath</code> - Path to your map data file. This file needs to be in csv or geojson format and placed in the <code>data</code> folder. This file’s first line must be the header, and it must have a latitude column and longitude column.</li>
+<li><code>fileType</code> - Set if you are loading in a <code>csv</code> or <code>geojson</code> file</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Edit the templates in the <code>templates</code> folder for how you want your data displayed. These templates use EJS, which allows the display of your variables with HTML, as well as conditional logic. <a href="https://ejs.co/#docs">Documentation is here</a>.</li>
+</ol>
+<ul>
+<li><code>/templates/hover.ejs</code> - template for when you hover over a dot on the map</li>
+<li><code>/templates/popup.ejs</code> - template for when a dot on the map is clicked</li>
+<li><code>/templates/table-row.ejs</code> - template for each row in the list view</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Remove the custom filters and add your own.</li>
+</ol>
+<ul>
+<li><code>index.html</code> - custom HTML for filters starts around line 112</li>
+<li><code>/js/searchable_map_lib.js</code> - logic for custom filters starts around line 265</li>
+</ul>
+</div>
+<div id="step-3-publishing-your-map" class="section level3 unnumbered" number="">
+<h3>Step 3: Publishing your map</h3>
+<ol style="list-style-type: decimal">
+<li>Before you publish, you’ll need to <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">get a Google API key</a>. You can get on here. Replace the API key on this line of <code>index.html</code> with yours: <code>&lt;script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&amp;key=[YOUR KEY HERE]"&gt;&lt;/script&gt;</code></li>
+<li>Upload this map and all the supporting files and folders to your site. This map requires no back-end code, so any host will work, including GitHub pages, Netlify or your own web server.</li>
+</ol>
+</div>
+<div id="summary12" class="section level3 unnumbered" number="">
+<h3>Summary</h3>
+<p>In this chapter, we introduced Leaflet map templates for common map problems,
+such as telling stories about places using scrollable interface,
+showing point data from databases like Socrata, and creating heatmaps
+to visualize areas of high event density.</p>
+<p>You can use these templates as a base to kickstart your own mapping projects.
+Leaflet.js is <a href="https://leafletjs.com/reference">well-documented</a>, and we recommend
+looking at <a href="https://leafletjs.com/examples.html">their tutorials</a> for more inspiration.</p>
+<p>In the next chapter, we will talk about geospatial data and introduce several
+tools that can convert, create, and edit geospatial files.</p>
+
+</div>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="filtered-line-tableau.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="map-design.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="leaflet-heatmap.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="transform.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -421,7 +446,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/07-map.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/12-leaflet.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

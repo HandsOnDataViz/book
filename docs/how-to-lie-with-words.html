@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Map Your Data | Hands-On Data Visualization</title>
+  <title>How to Lie with Words | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Map Your Data | Hands-On Data Visualization" />
+  <meta property="og:title" content="How to Lie with Words | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Map Your Data | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="How to Lie with Words | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="filtered-line-tableau.html"/>
-<link rel="next" href="map-design.html"/>
+<link rel="prev" href="bad-visualizations.html"/>
+<link rel="next" href="how-to-lie-with-charts.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -319,70 +319,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="map" class="section level1" number="7">
-<h1><span class="header-section-number">Chapter 7</span> Map Your Data</h1>
-<p>Maps entice readers to explore your data story and develop a stronger sense of place.
-But good maps require careful thought about how to clearly communicate spatial
-concepts with your audience.</p>
-<p>We will begin this chapter by introducing key principles and definitions related to maps.
-We will then practice making interactive maps using free online tools, including Google My Maps,
-Socrata, Tableau, and Datawrapper. We will build two point maps and two choropleth maps.
-By the end of this chapter, you will be able to use four powerful tools to map your data.</p>
-<table>
-<caption><span id="tab:map-types">Table 7.1: </span> Basic Map Types and Tutorials</caption>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Map</th>
-<th>Best use and tutorials in this book</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Point map <br> <img src="images/07-map/map-point.png" /></td>
-<td>Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: <a href="mymaps.html">Google My Maps tutorial</a><br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="even">
-<td>Polygon map <br> <img src="images/07-map/map-polygon.png" /></td>
-<td>Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tools: <a href="map-tableau.html">Tableau Public</a> or <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="odd">
-<td>Polyline map <br> <img src="images/07-map/map-polyline.png" /></td>
-<td>Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: n/a <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="even">
-<td>Heat map <br> <img src="images/07-map/map-heat.png" /></td>
-<td>Used to show hotspots or clusters of events, such as high-crime areas. <br>Easy tool: n/a <br>Power tool: <a href="leaflet-heatmap.html">Leaflet Heatmap template</a></td>
-</tr>
-<tr class="odd">
-<td>Combination map <br> <img src="images/07-map/map-point-polygon-polyline.png" /></td>
-<td>Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="even">
-<td>Storymap <br> <img src="images/07-map/map-storymap.png" /></td>
-<td>Best for guided point-by-point journey through a historical narrative, with optional photos, audio, or video on an interactive map. <br> Power tool: <a href="leaflet-storymaps-with-google-sheets.html">Leaflet Storymaps with Google Sheets</a></td>
-</tr>
-</tbody>
-</table>
-<p>TODO ABOVE:</p>
-<ul>
-<li>UPDATE table to match chapter contents, and reorganize to feature easier tools at top.</li>
-<li>Consider replacing Google My Maps point map with Datawrapper map, if achieves same result and easier</li>
-<li>Confirm removing Storymap “easy tools” because neither allow you to export data you enter: <a href="https://storymap.knightlab.com/">Knight Lab’s StoryMap</a>, <a href="https://storymaps.arcgis.com/en/">ESRI Story Maps</a></li>
-<li>Add tab-view map for historical change template?</li>
-<li>Add synchronized side-by-side map template?</li>
-</ul>
+<div id="how-to-lie-with-words" class="section level2 unnumbered" number="">
+<h2>How to Lie with Words</h2>
+<p>Before we turn to charts and maps, think more carefully about the words we choose when designing our visualizations…</p>
+<p>Framing Bias: Watch for negative versus positive framing and how it affects readers. For example, British statistician David Spiegelhalter notes that US hospitals report <em>mortality rates</em>, while UK hospitals report <em>survival</em> rates. When considering the risks of a surgical procedure for member of your family, a 5 percent mortality rate sounds worse than a 95 percent survival rate, even they’re mathematically identical. Furthermore, augmenting the rate with raw numbers (such as 20 deaths out of 400 patients) raises the impression of risk even higher, because we begin to imagine real people’s lives, not abstract percentages.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p>
+<p>Insert more examples on racial bias and white privilege here</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="17">
+<li id="fn17"><p><span class="citation">David Spiegelhalter, <em>The Art of Statistics: Learning from Data</em> (Penguin UK, 2019), <a href="https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ</a></span>, pp. 22-5<a href="how-to-lie-with-words.html#fnref17" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="filtered-line-tableau.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="map-design.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bad-visualizations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="how-to-lie-with-charts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -421,7 +376,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/07-map.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/14-detect.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

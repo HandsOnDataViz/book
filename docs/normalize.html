@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-26" />
+<meta name="date" content="2020-09-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mask-aggregate.html"><a href="mask-aggregate.html"><i class="fa fa-check"></i>Mask or Aggregate Sensitive Data</a></li>
 <li class="chapter" data-level="" data-path="opendata.html"><a href="opendata.html"><i class="fa fa-check"></i>Open Data Repositories</a></li>
 <li class="chapter" data-level="" data-path="source.html"><a href="source.html"><i class="fa fa-check"></i>Source Your Data</a></li>
-<li class="chapter" data-level="" data-path="bad.html"><a href="bad.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
+<li class="chapter" data-level="" data-path="bad-data.html"><a href="bad-data.html"><i class="fa fa-check"></i>Recognize Bad Data</a></li>
 <li class="chapter" data-level="" data-path="question.html"><a href="question.html"><i class="fa fa-check"></i>Question Your Data</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
@@ -251,8 +251,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
-<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap</a></li>
-<li class="chapter" data-level="" data-path="searchable-map.html"><a href="searchable-map.html"><i class="fa fa-check"></i>Searchable Map</a></li>
+<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap with CSV Point Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-searchable-map.html"><a href="leaflet-searchable-map.html"><i class="fa fa-check"></i>Leaflet Searchable Map with CSV Points</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>13</b> Transform Your Map Data</a>
 <ul>
@@ -265,10 +265,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect Bias in Data Stories</a>
+<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect and Reduce Bias</a>
 <ul>
+<li class="chapter" data-level="" data-path="bad-visualizations.html"><a href="bad-visualizations.html"><i class="fa fa-check"></i>Avoid Bad Visualizations</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+<li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>15</b> Tell Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -318,6 +321,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="normalize" class="section level2 unnumbered" number="">
 <h2>Normalize Data for Meaningful Maps</h2>
+<p>TODO: Consider moving “Normalize” section out of Ch11: Transform and into a new short chapter called “Compare Appropriate Data” or “Compare Meaningful Data” or “Make Meaningful Comparisons.” Expand the chapter to address numerical data in any format: text, tables, charts, or maps. Explain the initial problem as one about raw data versus rates (see Alberto Cairo’s example about highway deaths by state: raw data, or as percent of population, or as percent of miles driven). Broaden to discuss non-adjusted data versus adjusted data for various dimensions, such as population (see prior example), time (inflation, seasonal employment), geographic area (rural/suburban/urban), etc. On a related point about rates, avoid confusing “percent change” with “percentage point difference” and explain the two. The ideal location for this new chapter would be between Ch5: Clean and Ch6: Chart, because we want people to consider adjusting their data after finding and cleaning it, but before charting or mapping it.</p>
 <p>Choropleth maps are best when they represent relative, not absolute values.
 Consider two maps shown in Figure <a href="normalize.html#fig:normalize-map-data">13.4</a>. They both are
 about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of

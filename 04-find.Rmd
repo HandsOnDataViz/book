@@ -156,7 +156,7 @@ A third step is to make a backup of the original data before cleaning or editing
 
 Make a habit of using these three sourcing strategies---filenames, notes, and backups---to increase the credibility and replicability of your data visualizations. In the next section, we'll explore more ways to reduce your chances of making "bad data" errors.
 
-## Recognize Bad Data {- #bad}
+## Recognize Bad Data {- #bad-data}
 When your data search produces some results, another key step is to open the file, quickly scroll through the content, and look for any warning signs that it might contain "bad data." If you fail to catch a problem in your data at an early stage, it could lead to false conclusions and diminish the credibility of all of your work. Fortunately, members of the data visualization community have shared multiple examples of problems we've previously encountered, to help save newer members from making the same embarrassing mistakes. One popular crowd-sourced compilation by data journalists was [The Quartz Guide to Bad Data](https://github.com/Quartz/bad-data-guide), last updated in 2018. Watch out for spreadsheets containing these "bad data" warning signs:
 
 - Missing values: If you see blank or "null" entries, does that mean data was not collected? Or maybe a respondent did not answer? If you're unsure, find out from the data creator. Also beware when humans enter a `0` or `-1` to represent a missing value, without thinking about its consequences on running spreadsheet calculations, such as SUM or AVERAGE.

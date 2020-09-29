@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Map Your Data | Hands-On Data Visualization</title>
+  <title>Recognize Bad Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 7 Map Your Data | Hands-On Data Visualization" />
+  <meta property="og:title" content="Recognize Bad Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Map Your Data | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Recognize Bad Data | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="filtered-line-tableau.html"/>
-<link rel="next" href="map-design.html"/>
+<link rel="prev" href="source.html"/>
+<link rel="next" href="question.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -319,70 +319,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="map" class="section level1" number="7">
-<h1><span class="header-section-number">Chapter 7</span> Map Your Data</h1>
-<p>Maps entice readers to explore your data story and develop a stronger sense of place.
-But good maps require careful thought about how to clearly communicate spatial
-concepts with your audience.</p>
-<p>We will begin this chapter by introducing key principles and definitions related to maps.
-We will then practice making interactive maps using free online tools, including Google My Maps,
-Socrata, Tableau, and Datawrapper. We will build two point maps and two choropleth maps.
-By the end of this chapter, you will be able to use four powerful tools to map your data.</p>
-<table>
-<caption><span id="tab:map-types">Table 7.1: </span> Basic Map Types and Tutorials</caption>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Map</th>
-<th>Best use and tutorials in this book</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Point map <br> <img src="images/07-map/map-point.png" /></td>
-<td>Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: <a href="mymaps.html">Google My Maps tutorial</a><br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="even">
-<td>Polygon map <br> <img src="images/07-map/map-polygon.png" /></td>
-<td>Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tools: <a href="map-tableau.html">Tableau Public</a> or <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="odd">
-<td>Polyline map <br> <img src="images/07-map/map-polyline.png" /></td>
-<td>Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: n/a <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="even">
-<td>Heat map <br> <img src="images/07-map/map-heat.png" /></td>
-<td>Used to show hotspots or clusters of events, such as high-crime areas. <br>Easy tool: n/a <br>Power tool: <a href="leaflet-heatmap.html">Leaflet Heatmap template</a></td>
-</tr>
-<tr class="odd">
-<td>Combination map <br> <img src="images/07-map/map-point-polygon-polyline.png" /></td>
-<td>Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
-</tr>
-<tr class="even">
-<td>Storymap <br> <img src="images/07-map/map-storymap.png" /></td>
-<td>Best for guided point-by-point journey through a historical narrative, with optional photos, audio, or video on an interactive map. <br> Power tool: <a href="leaflet-storymaps-with-google-sheets.html">Leaflet Storymaps with Google Sheets</a></td>
-</tr>
-</tbody>
-</table>
-<p>TODO ABOVE:</p>
+<div id="bad-data" class="section level2 unnumbered" number="">
+<h2>Recognize Bad Data</h2>
+<p>When your data search produces some results, another key step is to open the file, quickly scroll through the content, and look for any warning signs that it might contain “bad data.” If you fail to catch a problem in your data at an early stage, it could lead to false conclusions and diminish the credibility of all of your work. Fortunately, members of the data visualization community have shared multiple examples of problems we’ve previously encountered, to help save newer members from making the same embarrassing mistakes. One popular crowd-sourced compilation by data journalists was <a href="https://github.com/Quartz/bad-data-guide">The Quartz Guide to Bad Data</a>, last updated in 2018. Watch out for spreadsheets containing these “bad data” warning signs:</p>
 <ul>
-<li>UPDATE table to match chapter contents, and reorganize to feature easier tools at top.</li>
-<li>Consider replacing Google My Maps point map with Datawrapper map, if achieves same result and easier</li>
-<li>Confirm removing Storymap “easy tools” because neither allow you to export data you enter: <a href="https://storymap.knightlab.com/">Knight Lab’s StoryMap</a>, <a href="https://storymaps.arcgis.com/en/">ESRI Story Maps</a></li>
-<li>Add tab-view map for historical change template?</li>
-<li>Add synchronized side-by-side map template?</li>
+<li>Missing values: If you see blank or “null” entries, does that mean data was not collected? Or maybe a respondent did not answer? If you’re unsure, find out from the data creator. Also beware when humans enter a <code>0</code> or <code>-1</code> to represent a missing value, without thinking about its consequences on running spreadsheet calculations, such as SUM or AVERAGE.</li>
+<li>Missing leading zeros: One of the zip codes for Hartford, Connecticut is <code>06119</code>. If someone converts a column of zip codes to numerical data, it will strip out the leading zero and appear as <code>6119</code>. Similarly, the US Census Bureau lists every place using a FIPS code, and some of these also begin with a meaningful zero character. For example, the FIPS code for Los Angeles County, California is <code>037</code>, but if someone accidentally converts a column of text to numbers, it will strip out the leading zero and convert that FIPS code to <code>37</code>, which represents the state of North Carolina.</li>
+<li>65536 rows or 255 columns: These are the maximum number of rows supported by older-style Excel spreadsheets, or columns supported by Apple Numbers spreadsheet, respectively. If your spreadsheet stops exactly at either of these limits, you probably have only partial data.</li>
+<li>Inconsistent date formats: For example, November 3rd, 2020 is commonly entered in spreadsheets in the US as <code>11/3/2020</code> (month-date-year), while people in other locations around the globe commonly type it as <code>3/11/2020</code> (date-month-year). Check your source.</li>
+<li>Dates such as January 1st 1900, 1904, or 1970: These are default timestamps in Excel spreadsheets and Unix operating systems, which may indicate the actual date was blank or overwritten.</li>
+<li>Dates similar to <code>43891</code>: When you type <code>March 1</code> during the year 2020 into Microsoft Excel, it automatically displays as <code>1-Mar</code>, but is saved using Excel’s internal date system as <code>43891</code>. If someone converts this column from date to text format, you’ll see Excel’s 5-digit number, not the dates you’re expecting.</li>
 </ul>
+<p>Another way to review the quality of data entry in any column in a spreadsheet is to create <a href="sort.html">a filter</a> or a <a href="pivot.html">pivot table</a> as described in Chapter 3. This allows you to quickly inspect the range of values that appear in that column, and whether they match what you expected to find.</p>
+<p>What should you do when you discover bad data in your project? Sometimes small issues are relatively straightforward and do not call into question the integrity of the entire dataset. Sometimes you can fix these using methods we describe in <a href="clean.html">Chapter 5: Clean Up Messy Data</a>. But larger issues can be more problematic. Follow the source of your data stream to try to identify where the issue began. If you cannot find and fix the issue on your own, contact the data provider to ask for their input, since they should have a strong interest in improving the quality of the data. If they cannot resolve an important data issue, then you need to pause and think carefully. In this case, is it wiser to continue working with problematic data and add a cautionary note to readers, or should you stop using the dataset entirely and call attention to its underlying problem? These are not easy decisions, and you should ask for opinions from colleagues. In any case, never ignore the warning signs of bad data.</p>
+<p>Finally, you can help to prevent bad data from occurring by following key steps we’ve outlined above. Give meaningful names to your data files, and add source notes in a separate tab about when and where you obtained it, along with any definitions or details about what it claims to measure and how it was recorded. Explain what any blanks or null values mean, and avoid replacing those with zeroes or other symbols. Always watch out for formatting issues when entering data or running calculations in spreadsheets.</p>
+<p>In the next section, you’ll learn more questions to help you understand your data at a deeper level.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="filtered-line-tableau.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="map-design.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="source.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="question.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -421,7 +380,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/07-map.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/04-find.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

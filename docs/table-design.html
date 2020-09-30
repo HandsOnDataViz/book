@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-29" />
+<meta name="date" content="2020-09-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -265,12 +265,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect and Reduce Bias</a>
+<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect Lies and Reduce Bias</a>
 <ul>
 <li class="chapter" data-level="" data-path="bad-visualizations.html"><a href="bad-visualizations.html"><i class="fa fa-check"></i>Avoid Bad Visualizations</a></li>
-<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
+<li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Different Types of Data Bias</a></li>
 <li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>15</b> Tell Your Data Story</a></li>
@@ -321,7 +322,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="table-design" class="section level2 unnumbered" number="">
 <h2>Table Design Principles</h2>
-<p>Let’s begin with some principles of good table design, similar to how we learned about <a href="chart-design.html">chart design in Chapter 6</a> and <a href="map-design.html">map design in Chapter 7</a>. Jonathan Schwabish, an economist who specializes in creating policy-relevant data visualizations, offers his advice in recent publications about creating tables that communicate well with multiple audiences.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a>. Here’s a summary of several of his key points, which also appear in Figure <a href="table-design.html#fig:table-design">8.1</a>.</p>
+<p>Let’s begin with some principles of good table design, similar to how we learned about <a href="chart-design.html">chart design in Chapter 6</a> and <a href="map-design.html">map design in Chapter 7</a>. Jonathan Schwabish, an economist who specializes in creating policy-relevant data visualizations, offers his advice in recent publications about creating tables that communicate well with multiple audiences.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a>. Here’s a summary of several of his key points, which also appear in Figure <a href="table-design.html#fig:table-design">8.1</a>.</p>
 <ol style="list-style-type: decimal">
 <li>Make column headers stand out above the data.</li>
 <li>Use light shading to separate rows or columns.</li>
@@ -342,8 +343,8 @@ Figure 8.1: A sample table that illustrates selected design principles.
 </div>
 <div class="footnotes">
 <hr />
-<ol start="15">
-<li id="fn15"><p><span class="citation">Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better Tables’,” Twitter, August 3, 2020, <a href="https://twitter.com/jschwabish/status/1290323581881266177" role="doc-biblioref">https://twitter.com/jschwabish/status/1290323581881266177</a></span>; <span class="citation">Jonathan A. Schwabish, “Ten Guidelines for Better Tables,” <em>Journal of Benefit-Cost Analysis</em> 11, no. 2: 151–78, accessed August 25, 2020, <a href="https://doi.org/10.1017/bca.2020.11" role="doc-biblioref">https://doi.org/10.1017/bca.2020.11</a></span>; <span class="citation">Jonathan Schwabish, <em>Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks</em> (Columbia University Press, 2021), <a href="https://cup.columbia.edu/book/better-data-visualizations/9780231193115" role="doc-biblioref">https://cup.columbia.edu/book/better-data-visualizations/9780231193115</a></span><a href="table-design.html#fnref15" class="footnote-back">↩︎</a></p></li>
+<ol start="17">
+<li id="fn17"><p><span class="citation">Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better Tables’,” Twitter, August 3, 2020, <a href="https://twitter.com/jschwabish/status/1290323581881266177" role="doc-biblioref">https://twitter.com/jschwabish/status/1290323581881266177</a></span>; <span class="citation">Jonathan A. Schwabish, “Ten Guidelines for Better Tables,” <em>Journal of Benefit-Cost Analysis</em> 11, no. 2: 151–78, accessed August 25, 2020, <a href="https://doi.org/10.1017/bca.2020.11" role="doc-biblioref">https://doi.org/10.1017/bca.2020.11</a></span>; <span class="citation">Jonathan Schwabish, <em>Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks</em> (Columbia University Press, 2021), <a href="https://cup.columbia.edu/book/better-data-visualizations/9780231193115" role="doc-biblioref">https://cup.columbia.edu/book/better-data-visualizations/9780231193115</a></span><a href="table-design.html#fnref17" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

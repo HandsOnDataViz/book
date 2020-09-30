@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-29" />
+<meta name="date" content="2020-09-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -265,12 +265,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect and Reduce Bias</a>
+<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect Lies and Reduce Bias</a>
 <ul>
 <li class="chapter" data-level="" data-path="bad-visualizations.html"><a href="bad-visualizations.html"><i class="fa fa-check"></i>Avoid Bad Visualizations</a></li>
-<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
+<li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Different Types of Data Bias</a></li>
 <li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>15</b> Tell Your Data Story</a></li>
@@ -373,10 +374,7 @@ is visible without any user interaction.</p>
 there are some that are hard to bend.</p>
 <div id="bar-charts-must-start-at-zero" class="section level4 unnumbered" number="">
 <h4>Bar charts must start at zero</h4>
-<p>Bar charts use <em>length</em> to represent value, therefore their value axis <em>must start at zero</em>.
-That applies to column and area charts as well.
-This is to ensure that a bar twice the length of another bar represents twice its value.
-The Figure <a href="chart-design.html#fig:design-principles-start-at-zero">6.2</a> shows a good and a bad example.</p>
+<p>Bar charts use <em>length</em> to represent value, therefore their value axis <em>must start at zero</em>. This ensures that a bar twice the length of another bar represents twice its value. Figure <a href="chart-design.html#fig:design-principles-start-at-zero">6.2</a> contrasts a good and a bad example. Starting the baseline at a number other than zero is a trick commonly used to exaggerate differences in opinion polls and election results, as we describe later in <a href="detect.html">Chapter 14: Detect Lies and Reduce Bias</a></p>
 
 <div class="figure"><span id="fig:design-principles-start-at-zero"></span>
 <img src="images/06-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
@@ -384,8 +382,8 @@ The Figure <a href="chart-design.html#fig:design-principles-start-at-zero">6.2</
 Figure 6.2: Start your bar chart at zero.
 </p>
 </div>
-<p>Starting y-axis at anything other than zero is a common trick used by some media
-and politicians to exaggerate differences in surveys and election results. Learn more about how to <a href="detect.html">detect bias in data stories</a> in Chapter 14.</p>
+<p>The zero baseline rule also applies to column charts and area charts, which represent values using <em>height</em>. But this rule does not necessarily apply to line charts, which represent values through the <em>position</em> and <em>angle</em> of the line, rather than the area underneath them. Visualization expert Alberto Cairo demonstrates that starting a line chart at a number other than zero does not, by itself, distort its encoded information because we do not rely on its height.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></p>
+<p>TODO: Add visual here of line chart baseline at zero versus higher number to illustrate the argument?</p>
 </div>
 <div id="pie-charts-represent-100" class="section level4 unnumbered" number="">
 <h4>Pie Charts Represent 100%</h4>
@@ -486,7 +484,7 @@ Consider using commas as thousands separators for readability (<code>1,000,000</
 <div id="be-careful-with-the-colors" class="section level4 unnumbered" number="">
 <h4>Be careful with the colors</h4>
 <p>The use of color is a complex topic, and there are plenty
-of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” blog post for Datawrapper.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> But some principles are fairly universal. First, do not use colors just for the sake of it, most charts are fine being monochromatic. Second, remember that colors come with some meaning attached, which can vary among cultures. In the world of business, red is conventionally used to represent loss, and it would be unwise to use this color to show profit. Make sure you avoid random colors.</p>
+of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” blog post for Datawrapper.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a> But some principles are fairly universal. First, do not use colors just for the sake of it, most charts are fine being monochromatic. Second, remember that colors come with some meaning attached, which can vary among cultures. In the world of business, red is conventionally used to represent loss, and it would be unwise to use this color to show profit. Make sure you avoid random colors.</p>
 <p>Whatever colors you end up choosing, they need to be distinguishable (otherwise what is the point?). Do not use colors that are too similar in hue (for example, various shades of green––leave them for choropleth maps). Certain color combinations are hard to interpret for color-blind people, like green/red or yellow/blue, so be very careful with those. Figure <a href="chart-design.html#fig:design-principles-color">6.8</a> shows some good and bad examples of color use.</p>
 
 <div class="figure"><span id="fig:design-principles-color"></span>
@@ -509,8 +507,9 @@ Figure 6.9: Make sure important things catch the eye first.
 </div>
 <div class="footnotes">
 <hr />
-<ol start="14">
-<li id="fn14"><p><span class="citation">Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation,” Chartable: A Blog by Datawrapper, July 31, 2018, <a href="https://blog.datawrapper.de/colorguide/" role="doc-biblioref">https://blog.datawrapper.de/colorguide/</a></span><a href="chart-design.html#fnref14" class="footnote-back">↩︎</a></p></li>
+<ol start="15">
+<li id="fn15"><p><span class="citation">Alberto Cairo, <em>How Charts Lie: Getting Smarter About Visual Information</em> (W. W. Norton &amp; Company, 2019), <a href="https://www.google.com/books/edition/How_Charts_Lie_Getting_Smarter_about_Vis/qP2KDwAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/How_Charts_Lie_Getting_Smarter_about_Vis/qP2KDwAAQBAJ</a></span>, p. 61.<a href="chart-design.html#fnref15" class="footnote-back">↩︎</a></p></li>
+<li id="fn16"><p><span class="citation">Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation,” Chartable: A Blog by Datawrapper, July 31, 2018, <a href="https://blog.datawrapper.de/colorguide/" role="doc-biblioref">https://blog.datawrapper.de/colorguide/</a></span><a href="chart-design.html#fnref16" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

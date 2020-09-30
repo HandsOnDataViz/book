@@ -131,7 +131,20 @@ counts of hospitals per state doesn't really tell a good story.
 
 ## Normalize Data for Meaningful Maps {- #normalize}
 
-TODO: Consider moving "Normalize" section out of Ch11: Transform and into a new short chapter called "Compare Appropriate Data" or "Compare Meaningful Data" or "Make Meaningful Comparisons." Expand the chapter to address numerical data in any format: text, tables, charts, or maps. Explain the initial problem as one about raw data versus rates (see Alberto Cairo's example about highway deaths by state: raw data, or as percent of population, or as percent of miles driven). Broaden to discuss non-adjusted data versus adjusted data for various dimensions, such as population (see prior example), time (inflation, seasonal employment), geographic area (rural/suburban/urban), etc. On a related point about rates, avoid confusing "percent change" with "percentage point difference" and explain the two. The ideal location for this new chapter would be between Ch5: Clean and Ch6: Chart, because we want people to consider adjusting their data after finding and cleaning it, but before charting or mapping it.
+TODO: Consider moving "Normalize" section out of Ch11: Transform and into a new short chapter called "Compare Appropriate Data" or "Compare Meaningful Data" or "Make Meaningful Comparisons." Expand the chapter to address numerical data in any format: text, tables, charts, or maps. Use denominators to put data into context. Explain the initial problem as one about raw versus adjusted data (see Alberto Cairo's example about highway deaths by state: raw data, or as percent of population, or as percent of miles driven). Broaden to discuss non-adjusted data versus adjusted data for various dimensions, such as population (see prior example), time (inflation, seasonal employment), geographic area (rural/suburban/urban), etc. On a related point about rates, avoid confusing "percent change" with "percentage point difference" and explain the two. The ideal location for this new chapter would be between Ch5: Clean and Ch6: Chart, because we want people to consider adjusting their data after finding and cleaning it, but before charting or mapping it.
+ALSO ADD:
+- avoid cherry-picking data
+- beware individual versus aggregated data (people vs counties)
+- use resistant statistics (median and percentile) vs non-resistant ones that fluctuate with outliers (average mean and standard deviation). To update old joke, when a billionaire walks into a room, everyone becomes a millionaire, on average. But the median income barely changes.
+- isolate confounding variables
+ADD
+Be aware of statistically biased processes, such as a statistical sampling method that regularly yields inaccurate results. Sometimes bias arises due to a combination of human behavior and poor numerical reasoning.
+- Reporting bias: on surveys, people may over-report positive behavior, or under-report attitudes deemed negative by broader society. how to address: see chapter on find and question your data, make appropriate comparisons, and clarify problems in text that accompanies visualization
+- Selection bias: comparing samples as if they were truly representative of the broader population, but in fact are not: common to mistakenly compare student academic performance in different types of schools, such as public versus private, or traditional public versus charter school, without recognizing how pools of applicants may differ.... how to address: carefully examine the underlying selection processes, and make appropriate comparisons between groups, and clarify problems in text that accompanies visualization
+- Later in book we'll discuss cognitive biases that may be baked into human behavior, and algorithmic biases that we sometimes build into our software...
+
+
+
 
 Choropleth maps are best when they represent relative, not absolute values.
 Consider two maps shown in Figure \@ref(fig:normalize-map-data). They both are

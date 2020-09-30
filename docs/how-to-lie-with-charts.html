@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-29" />
+<meta name="date" content="2020-09-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="how-to-lie-with-words.html"/>
+<link rel="prev" href="bad-visualizations.html"/>
 <link rel="next" href="how-to-lie-with-maps.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -265,12 +265,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect and Reduce Bias</a>
+<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect Lies and Reduce Bias</a>
 <ul>
 <li class="chapter" data-level="" data-path="bad-visualizations.html"><a href="bad-visualizations.html"><i class="fa fa-check"></i>Avoid Bad Visualizations</a></li>
-<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
+<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
+<li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Different Types of Data Bias</a></li>
 <li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>15</b> Tell Your Data Story</a></li>
@@ -321,12 +322,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="how-to-lie-with-charts" class="section level2 unnumbered" number="">
 <h2>How to Lie with Charts</h2>
-<ul>
-<li>vertical axis bias</li>
-<li>bucket size bias in histograms (for transition to map ranges)</li>
-</ul>
 <p>One of the best ways to learn how to detect bias in data visualization is to intentionally manipulate a chart, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s charts, and think more carefully about the ethical issues when you design your own.</p>
 <p>This exercise was inspired by a classic book published more than fifty years ago: Darrell Huff, <em>How to Lie with Statistics</em> (W. W. Norton &amp; Company, 1954), <a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a></p>
+<p>TODO: redesign exercise parts and sample data for all or most</p>
+<ul>
+<li><p>Ex #1: Lie (or Mislead?) by reducing appearance of increasing (either inequality data from intro, or climate change temp data from Cairo 2019 p65)</p></li>
+<li><p>start with Google Sheet default, but don’t accept defaults!</p></li>
+<li><p>lie by dropping meaningful comparisons (lower-income lines)</p></li>
+<li><p>lie by hiding data on horizontal X-axis (show only low-growth years)</p></li>
+<li><p>lie by extending vertical Y-axis scale above and below the data range</p></li>
+<li><p>lie by reducing the chart aspect ratio to flatten appearance</p></li>
+<li><p>lie by adding a 2nd line and a dual axis</p></li>
+<li><p>Ex #2: use column chart data and goal is to exaggerate small diffs</p></li>
+<li><p>lie by starting the vertical axis at level higher than 0%</p></li>
+<li><p>lie with 3D and perspective (see Cairo 2019 p58)</p></li>
+</ul>
 <p>Right-click this link and Save to download this sample data in CSV format to your computer: <a href="data/us-gross-domestic-product-per-capita.csv">us-gross-domestic-product-per-capita</a>. This historical data on economic productivity comes from the World Bank, World Development Indicators, <a href="http://data.worldbank.org/data-catalog/world-development-indicators" class="uri">http://data.worldbank.org/data-catalog/world-development-indicators</a></p>
 <p>Upload the CSV file to your Google Drive (with Settings to Convert to Google format) to create a Google Sheet.</p>
 <p>Select the data cells and Insert &gt; Chart &gt; Line chart, similar to the default version shown below:</p>
@@ -350,7 +360,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="how-to-lie-with-words.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bad-visualizations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="how-to-lie-with-maps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

@@ -1,7 +1,9 @@
-# Detect and Reduce Bias {#detect}
+# Detect Lies and Reduce Bias {#detect}
 TODO: Revise chapter
 
 In the introduction, we lied to you... intentionally... by showing you visualizations that portrayed reality is very different ways.
+
+In this chapter, you'll improve your lie detector skills in the realm of dataviz, and also work to reduce more subtle biases in your own dataviz.
 
 While we like to believe data visualizations simply "tell the truth," when you dig further into this topic, you realize that there are multiple ways to represent reality.
 
@@ -15,16 +17,7 @@ That leaves a lot of room for interpretation... some of which is intentionally m
 
 In this chapter, you will learn how visualizations display the biases of the people and the software that create them.
 
-Bias occurs when we unfairly favor one view over another. Different types of bias....We use the term to refer to biased people who prejudge something before evaluating the evidence. While some forms of bias are clearer to recognize, such as racial or gender bias,....Some biases are baked into human cognition and hard to avoid in data viz, unless you call it out
 
-- Pattern Bias: tendency to see patterns in random data. Avoid it by remind readers that data is noisy and use statistical tests to determine likelihood of results due to change, covered in many books on statistical analysis.
-- Confirmation Bias: accept claims that fit our preconceived notions...(see dataviz experiments in Cario book, Thaler?). Avoid it by looking at data with open eyes, and search out competing interpretations
-
-We also refer to biased processes, such as a statistical sampling method that regularly yields inaccurate results. Sometimes bias arises due to a combination of human behavior and poor numerical reasoning.
-
-- Reporting bias: on surveys, people may over-report positive behavior, or under-report attitudes deemed negative by broader society. how to address: see chapter on find and question your data, make appropriate comparisons, and clarify problems in text that accompanies visualization
-- Selection bias: comparing samples as if they were truly representative of the broader population, but in fact are not: common to mistakenly compare student academic performance in different types of schools, such as public versus private, or traditional public versus charter school, without recognizing how pools of applicants may differ.... how to address: carefully examine the underlying selection processes, and make appropriate comparisons between groups, and clarify problems in text that accompanies visualization
-- Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html; https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/
 
 While we cannot stop bias entirely, we can teach you to detect it in charts and maps made by other people, as well as those that you make, to improve your interpretation...
 
@@ -39,26 +32,32 @@ Inspirations for this chapter:
 - Alberto Cairo 2019
 
 ## Avoid Bad Visualizations {- #bad-visualizations}
+TODO: can this be reduced to 1-2 paragraphs with refs to chart and map design sections, rather than its own section?
 Some visualizations are so poorly designed, with obvious errors, that we *can* declare these to be *wrong*.
 Whether intentional or otherwise, no room for interpretation here... We warned you about some of these mistakes in the chart design and map design sections of this book.
-
 - Examples: pie charts that add up to more than 100%
 
-## How to Lie with Words {- #how-to-lie-with-words}
-
-Before we turn to charts and maps, think more carefully about the words we choose when designing our visualizations...
-
-Framing Bias: Watch for negative versus positive framing and how it affects readers. For example, British statistician David Spiegelhalter notes that US hospitals report *mortality rates*, while UK hospitals report *survival* rates. When considering the risks of a surgical procedure for member of your family, a 5 percent mortality rate sounds worse than a 95 percent survival rate, even they're mathematically identical. Furthermore, augmenting the rate with raw numbers (such as 20 deaths out of 400 patients) raises the impression of risk even higher, because we begin to imagine real people's lives, not abstract percentages.^[@spiegelhalterArtStatisticsLearning2019, pp. 22-5]
-
-Insert more examples on racial bias and white privilege here
 
 ## How to Lie with Charts {- #how-to-lie-with-charts}
-- vertical axis bias
-- bucket size bias in histograms (for transition to map ranges)
 
 One of the best ways to learn how to detect bias in data visualization is to intentionally manipulate a chart, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s charts, and think more carefully about the ethical issues when you design your own.
 
 This exercise was inspired by a classic book published more than fifty years ago: Darrell Huff, *How to Lie with Statistics* (W. W. Norton & Company, 1954), http://books.google.com/books?isbn=0393070875
+
+TODO: redesign exercise parts and sample data for all or most
+
+- Ex #1: Lie (or Mislead?) by reducing appearance of increasing (either inequality data from intro, or climate change temp data from Cairo 2019 p65)
+- start with Google Sheet default, but don't accept defaults!
+- lie by dropping meaningful comparisons (lower-income lines)
+- lie by hiding data on horizontal X-axis (show only low-growth years)
+- lie by extending vertical Y-axis scale above and below the data range
+- lie by reducing the chart aspect ratio to flatten appearance
+- lie by adding a 2nd line and a dual axis
+
+- Ex #2: use column chart data and goal is to exaggerate small diffs
+- lie by starting the vertical axis at level higher than 0%
+- lie with 3D and perspective (see Cairo 2019 p58)
+
 
 Right-click this link and Save to download this sample data in CSV format to your computer: [us-gross-domestic-product-per-capita](data/us-gross-domestic-product-per-capita.csv). This historical data on economic productivity comes from the World Bank, World Development Indicators, http://data.worldbank.org/data-catalog/world-development-indicators
 
@@ -83,10 +82,12 @@ Make the line look like a "sharper increase" (faster economic growth) by increas
 ** TO DO -- add conclusion **
 
 ## How to Lie with Maps {- #how-to-lie-with-maps}
-- range bias (transition from bucket size in histogram charts)
-- color bias
-- map area bias
-- projection bias
+- TODO: reorganize exercise into more distinctive parts and sample data
+- Lie with raw counts rather than percentages in choropleth map (which will show pop density; Cairo 2019 p132); need to normalize data
+- Lie (or mislead?) with ranges (make analogy with histogram chart buckets & sizes)
+- lie with color choices
+- Lie with map area
+- Lie with projection (or discuss as related to map area?)
 
 One of the best ways to learn how to detect bias in data visualization is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own.
 
@@ -109,6 +110,26 @@ Why are these two maps portray the same data so differently? To see the answer, 
 Create your own version...
 
 TODO: Add section on how interactive maps such as Google Maps change borders and data depending on the internet address of the user
+
+## How to Lie with Words {- #how-to-lie-with-words}
+
+Now that we've focused on charts and maps, think more carefully about the words we choose when designing our visualizations...
+
+Framing Bias: Watch for negative versus positive framing and how it affects readers. For example, British statistician David Spiegelhalter notes that US hospitals report *mortality rates*, while UK hospitals report *survival* rates. When considering the risks of a surgical procedure for member of your family, a 5 percent mortality rate sounds worse than a 95 percent survival rate, even they're mathematically identical. Furthermore, augmenting the rate with raw numbers (such as 20 deaths out of 400 patients) raises the impression of risk even higher, because we begin to imagine real people's lives, not abstract percentages.^[@spiegelhalterArtStatisticsLearning2019, pp. 22-5]
+
+Poorly-worded percentages: Percent Change versus Percentage Point Difference
+
+## Different Types of Data Bias {- #data-bias}
+
+Bias occurs when we unfairly favor one view over another. Different types of bias....(we already mentioned statistical biases in the Compare Appropriate Data chapter...)
+
+We use the term to refer to biased people who prejudge something before evaluating the evidence. While some forms of bias are clearer to recognize, such as racial or gender bias,....Some biases are baked into human cognition and hard to avoid in data viz, unless you call it out
+
+- Pattern Bias: tendency to see patterns in random data. Avoid it by remind readers that data is noisy and use statistical tests to determine likelihood of results due to change, covered in many books on statistical analysis.
+- Confirmation Bias: accept claims that fit our preconceived notions...(see dataviz experiments in Cario book, Thaler?). Avoid it by looking at data with open eyes, and search out competing interpretations
+
+We also refer to biases that are baked into the software that humans create.
+- Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html; https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/
 
 ## Reducing Racial Bias in Visualizations {- #racial-bias}
 - Example: Map with “empty” land ignoring indigenous people https://twitter.com/indigenia/status/1308406887231246337?s=12

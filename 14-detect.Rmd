@@ -21,9 +21,13 @@ In this chapter, you will learn how visualizations display the biases of the peo
 
 While we cannot stop bias entirely, we can teach you to detect it in charts and maps made by other people, as well as those that you make, to improve your interpretation...
 
+The best way to improve your lie detector skills is to learn various ways to intentionally manipulate data visualizations, to better understand how people might be lying to you. Since our book features hands-on tutorials, in the sections below we'll walk you through the steps of creating *biased* charts and maps, so that you'll know how to make *better* ones.
+
+As the saying goes, it takes a thief to catch a thief: learn *how to lie* to avoid being fooled by other people's misleading charts and maps, and also so that you *tell the truth* in your own visualizations.
+
 Since our book features hands-on lessons, in each section you'll learn how to create *biased* visualizations, so that you'll know how to make *better* ones. Just like it takes a thief to catch a thief... you need to learn how to lie in order to be more truthful in your visualizations...
 
-Inspirations for this chapter:
+These tutorials on "how to lie" were inspired by several sources....
 
 - Darrell Huff, How to Lie with Statistics (W. W. Norton & Company, 1954), http://books.google.com/books?isbn=0393070875
 - Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
@@ -39,16 +43,23 @@ Whether intentional or otherwise, no room for interpretation here... We warned y
 
 
 ## How to Lie with Charts {- #how-to-lie-with-charts}
+In this section, you'll learn how to avoid being fooled by misleading charts, and also how to make your own charts more honest, by intentionally manipulating data to tell two (or more) opposing stories. This tutorial will teach you to watch out for several details when viewing other people's charts, including [TODO LIST ELEMENTS HERE]. By learning you *how to lie*, our goal is to make you think about the ethics of *telling the truth* when you design your data stories.
 
-One of the best ways to learn how to detect bias in data visualization is to intentionally manipulate a chart, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s charts, and think more carefully about the ethical issues when you design your own.
+Climate change is one of the most pressing issues we face on our planet, and it's also a topic where data has been manipulated by those who deny the problem.[TODO: Cite Cairo examples]. In this tutorial, we'll examine global temperature data from 1880 to the present, compiled by the US National Aeronautics and Space Administration (NASA). First, you'll create a *truthful* chart that shows how the mean global temperature has risen about 1 degree Celsius (or about 2 degrees Fahrenheit) during the past fifty years, which has already begun to cause glacial melt and rising sea levels [TODO: check wording]. Next, you'll use the same data to create *misleading* charts that use different strategies to *diminish* the appearance of temperature change. The inspiration for this specific tutorial came from a [high school classroom activity](https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/) created by the NASA Jet Propulsion Laboratory (JPL), as well as visualization expert Alberto Cairo's analysis of charts by climate change deniers.^[@nasajplEducatorGuideGraphing2017; @cairoHowChartsLie2019, pp. 65-67, 135-141]
 
-This exercise was inspired by a classic book published more than fifty years ago: Darrell Huff, *How to Lie with Statistics* (W. W. Norton & Company, 1954), http://books.google.com/books?isbn=0393070875
+1. Open the [global temperature change 1880-2019 data in Google Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0), and go to *File > Save As* to create a copy that you can edit in your own Google Drive. We'll create the charts in Google Sheets, but you can also download the data to use in a different chart tool if you prefer.
+
+2. Examine the data and read the notes. Temperature change refers to the mean global land-ocean surface temperature in degrees Celsius, estimated from many samples around the earth, relative to the temperature in 1951-1980, about 14°C (or 57°F). In other words, the 0.98 value for 2019 means that global temperatures were about 1°C above normal that year. Scientists define the 1951-80 period as "normal" based on standards from NASA and the US National Weather Service, and also because it's a familiar reference for many of today's adults who grew up during those decades. While there's other ways to measure temperature change, this data from NASA's Goddard Institute for Space Studies (NASA/GISS) is generally consistent with data compiled by other scientists at the [Climatic Research Unit](http://www.cru.uea.ac.uk/) and the [National Oceanic and Atmospheric Adminstration](https://www.ncdc.noaa.gov/cag/global/time-series) (NOAA).
+
+3. Let's see the *default* chart created by Google Sheets... While we never automatically accept a default chart as the truth, it's a good place to begin. Add a title and better vertical axis labels from the notes to clarify how temperature change is measured. ....
+
+temp-default.png
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=1337832361&format=interactive
 
 TODO: redesign exercise parts and sample data for all or most
 
 - Ex #1: Lie (or Mislead?) by reducing appearance of increasing (either inequality data from intro, or climate change temp data from Cairo 2019 p65)
 - start with Google Sheet default, but don't accept defaults!
-- lie by dropping meaningful comparisons (lower-income lines)
 - lie by hiding data on horizontal X-axis (show only low-growth years)
 - lie by extending vertical Y-axis scale above and below the data range
 - lie by reducing the chart aspect ratio to flatten appearance

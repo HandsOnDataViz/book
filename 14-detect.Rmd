@@ -40,6 +40,7 @@ TODO: can this be reduced to 1-2 paragraphs with refs to chart and map design se
 Some visualizations are so poorly designed, with obvious errors, that we *can* declare these to be *wrong*.
 Whether intentional or otherwise, no room for interpretation here... We warned you about some of these mistakes in the chart design and map design sections of this book.
 - Examples: pie charts that add up to more than 100%
+- hiding data by removing it from the chart (showing only high values, and omitting years with lower ones)
 
 
 ## How to Lie with Charts {- #how-to-lie-with-charts}
@@ -51,19 +52,40 @@ Climate change is one of the most pressing issues we face on our planet, and it'
 
 2. Examine the data and read the notes. Temperature change refers to the mean global land-ocean surface temperature in degrees Celsius, estimated from many samples around the earth, relative to the temperature in 1951-1980, about 14°C (or 57°F). In other words, the 0.98 value for 2019 means that global temperatures were about 1°C above normal that year. Scientists define the 1951-80 period as "normal" based on standards from NASA and the US National Weather Service, and also because it's a familiar reference for many of today's adults who grew up during those decades. While there's other ways to measure temperature change, this data from NASA's Goddard Institute for Space Studies (NASA/GISS) is generally consistent with data compiled by other scientists at the [Climatic Research Unit](http://www.cru.uea.ac.uk/) and the [National Oceanic and Atmospheric Adminstration](https://www.ncdc.noaa.gov/cag/global/time-series) (NOAA).
 
-3. Let's see the *default* chart created by Google Sheets... While we never automatically accept a default chart as the truth, it's a good place to begin. Add a title and better vertical axis labels from the notes to clarify how temperature change is measured. ....
+3. Let's create a Google Sheets line chart in the same sheet using the *default* settings. While we never automatically accept a default chart as the best representation of the truth, it's a good place to start this exercise. In the *data* tab, select the two columns, and go to *Insert > Chart*, as you learned when we introduced [charts with Google Sheets in Chapter 6](chart-google.html). The tool should recognize your time-series data and automatically produce a line chart. Click on the three-dot kebab menu to open the *Chart editor* and customize it. Add a better title and vertical axis label, using the notes to clarify the source and how temperature change is measured, as shown in FIG TODO
 
-temp-default.png
-https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=1337832361&format=interactive
+temperature-default.png
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&format=interactive
 
-TODO: redesign exercise parts and sample data for all or most
+Now let's create three *misleading* charts that intentionally try to diminish the appearance of the rising global temperature line chart in viewers' eyes.
 
-- Ex #1: Lie (or Mislead?) by reducing appearance of increasing (either inequality data from intro, or climate change temp data from Cairo 2019 p65)
-- start with Google Sheet default, but don't accept defaults!
-- lie by hiding data on horizontal X-axis (show only low-growth years)
-- lie by extending vertical Y-axis scale above and below the data range
-- lie by reducing the chart aspect ratio to flatten appearance
-- lie by adding a 2nd line and a dual axis
+4. *Lie by stretching the chart to change its aspect ratio.* In your Google Sheet, click the chart and drag the sides to make it very short and wide, as shown in FIG TODO. The default chart was about 600 x 370 pixels (width x height) with a ratio of about 1.6 to 1. But this stretched-out version is 1090 x 191 pixels with a ratio of about 5.7 to 1. By increasing the aspect ratio, you have flattened our perception of the line, and cancelled our climate emergency.
+
+temperature-aspect-annotated.png
+
+5. *Lie by lengthening the vertical axis.* In the Google Sheets chart editor, customize the vertical axis by changing the minimum value to negative 5 and the maximum to positive 5, as shown in FIG TODO. By increasing the length of the vertical scale, you have flattened our perception of the line, and cancelled our climate crisis again.
+
+temperature-axis-annotated.png
+
+Now let's add more data to make our chart even more misleading! In the Google Sheet, go to the tab named *temp+GDP*, where you will see temperature change plus a new column: US Gross Domestic Product (GDP) in billions of dollars from 1929 to 2019, downloaded from the [US Federal Reserve](https://fred.stlouisfed.org/series/GDPA). Since this source offers US GDP data beginning in 1929, we deleted prior rows of global temperature change data to match it.
+
+6. *Lie by adding data with a dual vertical axis.* In the *temp+data* tab of the Google Sheet, select all three columns and *Insert > Chart* to produce a default line chart with two data series: temperature (in blue) and US GDP (in red).
+
+7. In the *Chart editor*, select *Customize* and scroll down to *Series*. Change the drop-down menu from *Apply to all series* to *US GDP*. Just below that in the *Format* area, change the *Axis* menu from *Left axis* to *Right Axis*, which creates another vertical axis on the right side of the chart, connected only to the US GDP data, as shown in FIG TODO
+
+temperature-gdp-axis-setup.png
+
+8. In the *Chart editor > Customize* tab, scroll down and you will now see separate controls for *Vertical Axis* (the left side, for temperature change only), and a brand-new menu for *Right Axis* (for US GDP only), as shown in FIG TODO
+
+temperature-right-axis.png
+
+9. Finish your deceptive chart by adjusting *Vertical Axis* for temperature change, but with even more exaggeration than you did in step 5 above. This time, change the minimum value to 0 (to match the right-axis baseline for US GDP) and the maximum to 10, to flatten the temperature line even further. Add a title, source, and labels to make it look more authoritative, as shown in FIG TODO. By lowering our perception of the temperature line in comparison to the steadily rising GDP line, you've misled us into ignoring the consequences of climate change while enjoying a long-term economic boom! By the way, the GDP data is *not* adjusted for inflation, so you've double-misled us by comparing 1929 dollars to 2019 dollars.
+
+temperature-gdp-final-annotated.png
+
+TODO: point to news publication that actually published a chart like this!
+
+So what is the *best* way to chart this data? The Google Sheet default chart is a pretty good representation.... But see Cairo on aspect ratio...
 
 - Ex #2: use column chart data and goal is to exaggerate small diffs
 - lie by starting the vertical axis at level higher than 0%

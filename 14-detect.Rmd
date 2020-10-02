@@ -73,82 +73,65 @@ https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5Rj
 
 Now let's use three methods to create *misleading* charts:
 
-4. *Lie by stretching the chart to change its aspect ratio.* In your Google Sheet, click the chart and drag the sides to make it very short and wide, as shown in FIG TODO. The default chart was about 600 x 370 pixels (width x height) with a ratio of about 1.6 to 1. But this stretched-out version is 1090 x 191 pixels with a ratio of about 5.7 to 1. By increasing the aspect ratio, you have flattened our perception of the line, and cancelled our climate emergency...but not really.
-
-temperature-aspect-annotated.png
-
-5. *Lie by lengthening the vertical axis.* Here we'll use the same method as shown in the first half of this tutorial, but in the opposite direction. In the Google Sheets chart editor, customize the vertical axis by changing the minimum value to negative 5 and the maximum to positive 5, as shown in FIG TODO. By increasing the length of the vertical scale, you have flattened our perception of the line, and cancelled our climate crisis once again...but not really.
+5. *Lie by lengthening the vertical axis.* We'll use the same method as shown in the first half of this tutorial, but in the opposite direction. In the Google Sheets chart editor, customize the vertical axis by changing the minimum value to negative 5 and the maximum to positive 5, as shown in FIG TODO. By increasing the length of the vertical scale, you flattened our perception of the rising line, and cancelled our climate emergency...but not really.
 
 temperature-axis-annotated.png
 
-Now add more data to make your chart even more misleading! In the Google Sheet, go to the tab named *temp+GDP*, where you will see temperature change plus a new column: US Gross Domestic Product (GDP) in billions of dollars from 1929 to 2019, downloaded from the [US Federal Reserve](https://fred.stlouisfed.org/series/GDPA). Since this source offers US GDP data beginning in 1929, we deleted prior rows of global temperature change data to match it.
+4. *Lie by stretching the chart to change its aspect ratio.* In your Google Sheet, click the chart and drag the sides to make it very short and wide, as shown in FIG TODO. Image measurements as listed in width by height, and we calculate the aspect ratio as width divided by height. Since the default chart is 600 x 370 pixels, its aspect ratio is about 1.6 to 1. But the stretched-out chart is 1090 x 191 pixels, and its ratio is about 5.7 to 1. By increasing the aspect ratio, you have flattened our perception of the rising line, and cancelled our climate crisis once again...but not really.
 
-6. *Lie by adding data with a dual vertical axis.* In the *temp+GDP* tab of the Google Sheet, select all three columns and *Insert > Chart* to produce a default line chart with two data series: temperature (in blue) and US GDP (in red).
+temperature-aspect-annotated.png
 
-7. In the *Chart editor*, select *Customize* and scroll down to *Series*. Change the drop-down menu from *Apply to all series* to *US GDP*. Just below that in the *Format* area, change the *Axis* menu from *Left axis* to *Right Axis*, which creates another vertical axis on the right side of the chart, connected only to the US GDP data, as shown in FIG TODO
+5. *Lie by adding more data and a dual vertical axis* Let's add more data to make your chart even more misleading! In the Google Sheet, go to the tab named *temp+GDP*, where you will see temperature change plus a new column: US Gross Domestic Product (GDP) in billions of dollars from 1929 to 2019, downloaded from the [US Federal Reserve](https://fred.stlouisfed.org/series/GDPA). (We deleted temperature rows prior to 1929 to make them match with available GDP data.) Select all three columns and *Insert > Chart* to produce a default line chart with two data series: temperature (in blue) and US GDP (in red).
+
+6. In the *Chart editor*, select *Customize* and scroll down to *Series*. Change the drop-down menu from *Apply to all series* to *US GDP*. Just below that in the *Format* area, change the *Axis* menu from *Left axis* to *Right Axis*, which creates another vertical axis on the right side of the chart, connected only to the US GDP data, as shown in FIG TODO
 
 temperature-gdp-axis-setup.png
 
-8. In the *Chart editor > Customize* tab, scroll down and you will now see separate controls for *Vertical Axis* (the left side, for temperature change only), and a brand-new menu for *Right Axis* (for US GDP only), as shown in FIG TODO
+7. In the *Chart editor > Customize* tab, scroll down and you will now see separate controls for *Vertical Axis* (the left side, for temperature change only), and a brand-new menu for *Right Axis* (for US GDP only), as shown in FIG TODO
 
 temperature-right-axis.png
 
-9. Finish your deceptive chart by adjusting *Vertical Axis* for temperature change, but with even more exaggeration than you did in step 5 above. This time, change the minimum value to 0 (to match the right-axis baseline for US GDP) and the maximum to 10, to flatten the temperature line even further. Add a title, source, and labels to make it look more authoritative, as shown in FIG TODO. By lowering our perception of the temperature line in comparison to the steadily rising GDP line, you've misled us into ignoring the consequences of climate change while we enjoy a long-term economic boom! By the way, the GDP data is *not* adjusted for inflation, so you've double-misled us by comparing 1929 dollars to 2019 dollars.
+8. Finish your misleading chart by adjusting *Vertical Axis* for temperature change, but with even more exaggeration than you did in step 5 above. This time, change the minimum value to 0 (to match the right-axis baseline for US GDP) and the maximum to 10, to flatten the temperature line even further. Add a title, source, and labels to make it look more authoritative, as shown in FIG TODO. By lowering our perception of the temperature line in comparison to the steadily rising GDP line, you've misled us into ignoring the consequences of climate change while we enjoy a long-term economic boom! Furthermore, the GDP data is *not* adjusted for inflation, so you've double-misled us by comparing 1929 dollars to 2019 dollars. Finally, since you accepted the default colors assigned by Google Sheets, the climate data is displayed in a "cool" blue, which sends our brain the opposite message of rising temperatures and glacial melt. So we'll count this as a triple! TODO: Decide whether to break non-comparable data and color into separate paragraphs.
 
 temperature-gdp-final-annotated.png
 
-So what is the *best* way to chart this data? The Google Sheet default chart is a pretty good representation.... But see Cairo on aspect ratio...
+TODO: There are many other ways to lie with charts.... for example, lie with 3D and perspective (see Cairo 2019 p58)...
 
-For example, Google Sheets designates the first data series to be blue, but this color also sends "cool" signals to our brain, which is the opposite of rising temperatures.
+Now you've created three *misleading* charts. But are any of them *wrong*? Do they violate any rules of data visualization? If you're the type of person who prefers to clearly divide things into *good* versus *bad*, our answer may disappoint you. Alberto Cairo warns us that [TODO insert quote here about visualization is more of an art than a science... all visualizations are simply models of reality, not the truth... we can only make better representations of the truth...].
 
+In the first half of the tutorial with the US GDP column chart, you clearly violated the zero-baseline rule when you started the vertical axis at a number other than zero. Column (and bar) charts *must* begin at zero, because they use *height* (and *length*) to represent value, as we described in the [chart design section of Chapter 6](chart-design.html). Readers cannot determine if a column is twice as high as another column unless both begin at the zero baseline.
 
+But the zero-baseline rule does *not* apply to line charts, Cairo reminds us, because those represent the *position* and *angle* of the line. Readers determine the meaning of line charts by their shape, rather than their height, so the baseline is irrelevant. This means that the flattened line chart for temperature change you created in step 5 may mislead readers, but it's not wrong, as long as you labeled it correctly for readers who inspect these details.^[@cairoHowChartsLie2019, p. 61.]
 
+What about the warped aspect ratio you applied to the temperature chart in step 6? While it's certainly designed to mislead readers, Cairo acknowledges that it is not *wrong* because it does not violate a clearly-defined rule of data visualization. Cairo prefers to set the aspect ratio to be similar to the rate of change shown in the line chart....[TODO describe and cite passage about this... and there's no set rule....]
 
+What about the dual-axis chart you created in step 7 to compare global temperature change versus US GDP? We agree with many visualization experts who discourage using dual-axis charts because they confuse most readers and create mischief. Even though both axes began at zero, the left-side temperature scale has a top level of 10 degrees Celsius, which is not reasonable given the context of the data. A *scatter or bubble chart*, which is designed to compare two or more variables, would be a better way to plot global temperature change and US GDP over time. [TODO: Should we show this chart here?] Furthermore, a better chart would compare appropriate data, such as real GDP that has been adjusted into constant dollars.
 
+TODO:FINISH IDEA: So if none of the temperature change charts are technically *wrong*, are any of them *right*? Or in Cairo's definition, which chart offers the most truthful representation of global temperature change? ... interestingly, the Google Sheet default chart you created in step 3 meets most of our criteria: [check aspect ratio]. In any case, never accept the defaults automatically....
 
-- Ex #2: use column chart data and goal is to exaggerate small diffs
-- lie by starting the vertical axis at level higher than 0%
-- lie with 3D and perspective (see Cairo 2019 p58)
-
-
-
-
-
-Right-click this link and Save to download this sample data in CSV format to your computer: [us-gross-domestic-product-per-capita](data/us-gross-domestic-product-per-capita.csv). This historical data on economic productivity comes from the World Bank, World Development Indicators, http://data.worldbank.org/data-catalog/world-development-indicators
-
-Upload the CSV file to your Google Drive (with Settings to Convert to Google format) to create a Google Sheet.
-
-Select the data cells and Insert > Chart > Line chart, similar to the default version shown below:
-
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/11yrhgBX16JL3O99EfK6mjiRwA6CGZkfuSGXbXhrBLEQ/pubchart?oid=1711889200&amp;format=interactive"></iframe>
-
-In your Google Sheet chart, double-click the vertical y-axis to edit the Minimum and Maximum values.
-
-![Screenshot: Edit the Min and Max values of the Y-axis](images/14-detect/y-axis-min-max.png)
-
-Make the line look "flatter" (slower economic growth) by lowering the minimum to $36,000, and increasing the maximum to $100,000, as shown below:
-
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/11yrhgBX16JL3O99EfK6mjiRwA6CGZkfuSGXbXhrBLEQ/pubchart?oid=1294345990&amp;format=interactive"></iframe>
-
-Make the line look like a "sharper increase" (faster economic growth) by increasing the minimum to $38,000, and lowering maximum to $52,000, as shown below:
-
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/11yrhgBX16JL3O99EfK6mjiRwA6CGZkfuSGXbXhrBLEQ/pubchart?oid=534244967&amp;format=interactive"></iframe>
-
-** TO DO -- add conclusion **
+Now that you've learned about how to lie with charts, you'll build on these skills in the next section about lying with maps.
 
 ## How to Lie with Maps {- #how-to-lie-with-maps}
 - TODO: reorganize exercise into more distinctive parts and sample data
-- Lie with raw counts rather than percentages in choropleth map (which will show pop density; Cairo 2019 p132); need to normalize data
-- Lie (or mislead?) with ranges (make analogy with histogram chart buckets & sizes)
+
+Before we leap into lying, let's make sure we avoid common mistakes when making maps, especially choropleth maps that use shading or color to represent values in geographic areas. The most common mistake is to use raw counts rather than rates or percentages... You need to normalize the data, as we describe in chapter.... .forgetting this will simply show pop density; Cairo 2019 p132)
+
+One of the best ways to learn how to detect bias in data visualization is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own. This exercise was inspired by Mark S. Monmonier, *How to Lie with Maps, 2nd ed.* (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
+
+- Lie (or mislead?) with ranges
 - lie with color choices
+
+Other ways to lie with maps (which may be too hard to display here?)
 - Lie with map area
 - Lie with projection (or discuss as related to map area?)
 
-One of the best ways to learn how to detect bias in data visualization is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own.
 
+which map is right?
 Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors, other than a general dictum to make “honest and useful” decisions. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles) or intervals that vary according to patterns in the data (such as standard deviations from the mean).
 
-This exercise was inspired by Mark S. Monmonier, *How to Lie with Maps, 2nd ed.* (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
+Cairo advises: make multiple histogram charts, with different numbers of buckets & bucket sizes -- TODO: rewrite Map chapter to include this advise and insert histogram exercise there
+
+
 
 First, scroll through this data on Median Household Income for Hartford-area towns, 2011-15, from American Community Survey 5-year estimates. Or right-click to [open this Google Sheet in a new tab](https://docs.google.com/spreadsheets/d/13bFHsXJtADIkUCGgjpO76RjrV0OAu62hzK-J3bXEVsk/edit#gid=556312122).
 

@@ -110,7 +110,7 @@ knitr::include_graphics("images/06-chart/design-principles-start-at-zero.png")
 
 The zero baseline rule also applies to column charts and area charts, which represent values using *height*. But this rule does not necessarily apply to line charts, which represent values through the *position* and *angle* of the line, rather than the area underneath them. Visualization expert Alberto Cairo demonstrates that starting a line chart at a number other than zero does not, by itself, distort its encoded information because we do not rely on its height.^[@cairoHowChartsLie2019, p. 61.]
 
-TODO: Add visual here of line chart baseline at zero versus higher number to illustrate the argument?
+TODO: Confirm revision with Ilya; Add visual here of line chart baseline at zero versus higher number to illustrate the argument?
 
 #### Pie Charts Represent 100% {-}
 Pie charts is one of the most contentious issues in data visualization.

@@ -1,5 +1,7 @@
 # Map Your Data {#map}
 
+TODO: Expand intro
+
 Maps entice readers to explore your data story and develop a stronger sense of place.
 But good maps require careful thought about how to clearly communicate spatial
 concepts with your audience.
@@ -8,7 +10,6 @@ We will begin this chapter by introducing key principles and definitions related
 We will then practice making interactive maps using free online tools, including Google My Maps,
 Socrata, Tableau, and Datawrapper. We will build two point maps and two choropleth maps.
 By the end of this chapter, you will be able to use four powerful tools to map your data.
-
 
 Table: (\#tab:map-types) Basic Map Types and Tutorials
 
@@ -24,7 +25,7 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 TODO ABOVE:
 
 - UPDATE table to match chapter contents, and reorganize to feature easier tools at top.
-- Consider replacing Google My Maps point map with Datawrapper map, if achieves same result and easier
+- Keep Google My Maps point map tool; perhaps mention BatchGeo again? Datawrapper symbol map?
 - Confirm removing Storymap "easy tools" because neither allow you to export data you enter: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/)
 - Add tab-view map for historical change template?
 - Add synchronized side-by-side map template?
@@ -81,6 +82,48 @@ that appear when you click or hover over map elements.
 Interactive web maps often have zoom controls (`+` and `-` buttons) to allow
 users to inspect data from various "distances".
 
+## Normalize Your Map Data {- #normalize-map-data}
+
+TODO: cross-ref back to Normalize data section in Compare chapter, then build on it here
+
+Choropleth maps are best when they represent relative values (such as percentages or per capita rates), not absolute values (such as the raw number of people).
+Consider two maps shown in Figure \@ref(fig:normalize-map-data). They both are
+about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of
+June 26, 2020. Figure \@ref(fig:normalize-map-data)a shows total number of recorded cases per state,
+and Figure \@ref(fig:normalize-map-data)b shows Covid-19 cases adjusted by the state's population.
+Darker colors represent higher values. Do you notice any differences in spatial patterns?
+
+(ref:normalize-map-data) Choropleth maps work best with normalized values.
+
+```{r normalize-map-data, fig.cap="(ref:normalize-map-data)"}
+knitr::include_graphics("images/13-transform/normalize-map-data-annotated.png")
+```
+
+Both maps show Covid-19 data collected by the New York Times and published
+[on GitHub](https://github.com/nytimes/covid-19-data).
+In the map in Figure \@ref(fig:normalize-map-data)b, we normalized (divided) values by population in each state,
+according to the 2018 US Census American Community Survey,
+the most recent data available on the day of writing. We didn't
+add legends and other important cartographic elements so that you can
+better focus on interpreting spatial patterns. In both cases,
+we used Jenks natural breaks for classification.
+
+What are the worst-hit states according to the map showing total Covid-19 counts
+(shown in Figure \@ref(fig:normalize-map-data)a)?
+If you are familiar with the US geography, you can quickly tell that these are
+New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California.
+But five of these happen to be some of the most populous states in the US,
+so it makes sense that they will also have higher Covid-19 cases.
+
+Now, how about the map in Figure \@ref(fig:normalize-map-data)b?
+You can see that New York and its neighbors,
+including New Jersey and Massachusetts, have by far the highest rates per capita
+(per person), which we saw in the first map. But you can also see
+that in fact California, Texas, and Florida were impacted to a lesser extent
+than the map on the left had suggested. So the map with per-capita values is a
+much better illustration to the story about New York being the *first* epicenter of the Covid-19
+crisis in the United States.
+
 
 ### Color Palettes: Sequential, Diverging, and Qualitative {-}
 
@@ -122,10 +165,10 @@ While the nature of certain datasets will make the choice of a color palette obv
 most of the time you will have to actively choose *how* to display your data.
 
 In Figure \@ref(fig:map-principles-classification)a, we presented the same dataset using three
-differnet color palettes. The map in Figure \@ref(fig:map-principles-classification)a
+different color palettes. The map in Figure \@ref(fig:map-principles-classification)a
 represents per capita income for the contiguous US states using a sequential color scheme
 consisting of five shades of blue. The darker the color, the higher the income. You can quickly
-see that states in the north-east, such as Connecticut, Massachusettes, New Jersey,
+see that states in the north-east, such as Connecticut, Massachusetts, New Jersey,
 and Maryland have the highest per capita income.
 
 In Figure \@ref(fig:map-principles-classification)b, we used a divergent color scheme to show
@@ -314,6 +357,8 @@ more complex projects.
 
 ## Choropleth Map with Datawrapper {- #map-datawrapper}
 
+TODO: Review steps due to recent Datawrapper updates: see their new Academy pages on Choropleth interpolation (ranges) and colors
+
 In addition to creating wonderful interactive charts, Datawrapper lets you create
 stylish and interactive point and polygon maps.
 In this section, we will create a choropleth map of average home values in US states
@@ -322,6 +367,8 @@ as shown in Figure \@ref(fig:datawrapper-map-final).
 
 We calculated average 2019 prices for 50 US states and DC, and put them in a spreadsheet, which
 [you can download](data/us-states-home-values-zillow-2019.csv) for this tutorial.
+
+TODO: Move this here? Note: See [Normalize Data to Create Meaningful Choropleth Maps](normalize.html) section to learn why you should avoid displaying absolute values or counts in choropleth maps.
 
 (ref:datawrapper-map-final) This choropleth map is created in Datawrapper
 
@@ -384,8 +431,6 @@ knitr::include_graphics("images/07-map/datawrapper-map-match.png")
 ```
 
 In a similar fashion, you will then be asked to identify a column that contains *values* to be mapped. Make sure it is *HomeValue2019* that is *Matched As Values*.
-
-Note: See [Normalize Data to Create Meaningful Choropleth Maps](normalize.html) section to learn why you should avoid displaying absolute values or counts in choropleth maps.
 
 ### Style and publish your map {-}
 

@@ -186,9 +186,11 @@ One place to start is to ask: *What do the data labels really mean?* and to cons
 
 Spreadsheets often contain abbreviated column headers, such as *Elevation* or *Income*. Sometimes the original software limited the number of characters that could be entered, or the people who created the header names preferred to keep them short. But was *Elevation* entered in meters or feet? An abbreviated data label does not answer that key question, so you'll need to check the source notes, or if that's not available, compare elevation data for a specific point in the dataset to a known source that includes the measurement unit. Similarly, if you're working with US Census data, does the *Income* abbreviation refer to per person, per family, or per household? Also, does the value reflect the *median* (the mid-point in a range of numbers) or the *mean* (the average, calculated by adding up the sum and dividing by the number of values). Check definitions in the source notes.
 
-*How exactly was the data recorded?*
+*How exactly was the data collected?*
 
 For example, was *Elevation* for a specific location measured by a GPS unit on the ground? Or was the location geocoded on a digital map that contains elevation data? In most cases the two methods will yield different results, and whether that matters depends on the degree of precision required in your work. Similarly, when the US Census reports data from its annual American Community Survey (ACS) estimates for *Income* and other variables, these are drawn from small samples of respondents for lower levels of geography, such as a census tract with roughly 4,000 residents, which can generate very high margins of error. For example, it's [not uncommon to see ACS estimates](data/ct-tract-income-moe-acs2018.xlsx) for a census tract with a mean family income of $50,000---but also with a $25,000 margin of error---which tells you that the actual value is somewhere between $25,000 and $75,000. As a result, some ACS estimates for small geographic units are effectively meaningless. Check how data was recorded, and note any reported margins of error, in the source notes. See also [how to create error bars in Chapter 6: Chart Your Data](chart.html).
+
+TODO: Merge in potential reporting bias: on surveys, people may over-report positive behavior, or under-report attitudes deemed negative by broader society.
 
 *To what extent is the data socially constructed?*
 

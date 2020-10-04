@@ -1,0 +1,115 @@
+# Compare Appropriate Data {#compare}
+
+TODO: Write this chapter; also considered titles "Compare Meaningful Data" or "Make Meaningful Comparisons."
+
+Now that you've found data and cleaned it up, this chapter focuses on making meaningful data comparisons prior to communicating results in any format: text, tables, charts, or maps. Although this book does not claim to cover statistical data analysis (as many textbooks are already devoted to this topic), we do offer several common-sense guidelines to help make sure you're presenting appropriate data in your visualizations...
+
+Whenever someone explains something by showing you data, the correct response is to ask "compared to what?" (Cairo cites Tufte). In order to make meaningful data comparisons, you need to avoid common problems with making meaningless ones.
+
+Imagine the topic is traffic safety, and comparisons across US states. What kind of data would you find most meaningful? (Cairo uses this example, and we can cite and simplify, or create parallel version with other data)
+
+1. Total traffic deaths by state (show bar chart of 5 most deadly): Good start, but these absolute numbers (aka raw numbers) ignore the fact that states have different populations. Far more people live in CA and TX than VT and WY. Simply comparing total deaths does not take into account the different denominators...
+
+2. Traffic deaths per capita by state (show bar chart of 5 most deadly): Better, because it shows a relative number, rather than an absolute. Show how we arrived at this by dividing the total traffic deaths by total population. Since those numbers are small, we multiply them by 100,000 (or other figure) to express them per capita. Out of 100,000 people residents in the state, about X die in highway deaths. But is the most meaningful way to compare states? In large cities with public transit, fewer people drive. In rural areas, people who drive often spend more time in the
+
+3. Traffic deaths per capita per mile-hours driven (show bar chart of 5 most deadly): Explain how we arrived...
+
+Cairo argues that when we make more appropriate data comparisons, we get closer to the truth....
+
+After finding and cleaning your data, you often need to "normalize" or "adjust" your data before making meaningful claims in text, tables, charts, or maps...
+
+## Normalize Your Data {- #normalize}
+
+At first glance, "normalizing" or "adjusting" your data may sound like your fudging the numbers, or bending the truth. But we often cannot get closer to the truth without adjusting data to make more meaningful comparisons. Normalization is defined as adjust data collected using different scales into a common scale, in order to make more meaningful comparisons. Here are common ways to normalize:
+
+- Adjust Absolute into Relative Numbers: as you saw above, raw numbers can be less meaningful than percentages or per capita...
+
+- Adjust for Change over Time: We cannot compare median household income in 1960 versus 2019 without adjustment, because dollars had different levels of purchasing power over time, due to price inflation and related factors. If you need to make economic comparisons over time, look for data that has already been converted into "constant dollars," such as median household income "in 2019 dollars." Economists often refer to this difference as "nominal" data (un-adjusted) versus "real" data (adjusted). See example about real wages over time, which adjusts the dollar figures for each year into constant dollars, consumer price index... https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing
+It's also common for economic data to have "seasonal adjustments" because...[TODO move relevant sentences from Detect Bias chapter to here, and cross-ref back]
+
+- Adjust by Creating an Index... explain
+
+See books on statistical data analysis for more advanced techniques, such as comparing data through z-scores
+
+- TODO: Explain how map designers face several issues with normalization... cross-ref to Normalize Map Data in Map chapter
+- Adjust for Geographic Area?
+
+TODO: DECIDE if any of this prior text should be integrated into above
+
+Different ways to normalize data: You can normalize data in many ways, and there is not necessarily one
+acceptable way of doing it.
+
+One of the most common ways of normalization is deriving "per capita", or "per person" values.
+If values are small, such as rare disease cases or lottery winners, they can be presented as "per 1,000" or "per 100,000" people.
+Divide your quantity by population in that area to derive per capita values.
+
+Choropleth maps work well with percentages. The good news is, humans like percentages too.
+It is quite natural for us to understand that a 9% unemployment rate means that of 100 people
+who were willing to work, nine were unable to find a job. To derive a percentage for unemployment,
+divide the number of unemployed people by labor force size (adult
+population who are willing and able to work), and multiply by 100.
+
+Unlike counts, most *measured* variables do not need normalization because
+they belong to a scale. For example, median age (the age of the "middle"
+person in a population, when sorted from youngest to oldest) can be directly compared
+among populations. We know that humans live anywhere between 0 and 120 years or so,
+and we wouldn't expect median ages to be vastly different from one country to another (maybe twice,
+but not tenfold). Median incomes, if measured in the same currency, also belong to the same scale
+and can be compared directly.
+
+How not to normalize values: Absolute values are very important for context. Saying that "20% of blond men living in
+in town X won the lottery" may sound like a catchy headline, but in reality
+the town has 450 residents, of those 200 are men, and of those only 5 have light hair color.
+One of those five (and here comes the 20%) was lucky to win the lottery, so technically
+the headline didn't lie.
+
+This is, of course, an extreme and comic example, but exaggerations in this spirit are not uncommon.
+If you want readers to trust you, make sure you are open about total counts when reporting
+normalized values (such as percentages or per capita values).
+
+Absolute values are important for another reason: behind numbers there are often people,
+and smaller, normalized values may hide the scale of the problem.
+Saying that "the unemployment rate is only 5%" is valid, but the 5%
+of, say, Indian labor force (around 522 million) is about 26 million, which is
+pretty much the total population of Australia.
+
+Exercise your best judgement when you normalize values. Make sure you don't
+blow numbers out of proportion by normalizing values in smaller populations.
+But also don't hide large counts behind smaller percentages for larger populations.
+
+At this point, you should have enough geocoding and spreadsheet skills to aid you
+with map making. In the following section, we will talk about geographical data in general and
+will introduce different geospatial file formats to ensure you are
+ready to create, use, and share map data.
+
+# Avoid Confusing Averages and Percentages {- #averages-percentages}
+
+Sometimes we make poor comparisons because we communicate poorly about common terms, such as averages and percentages
+
+Briefly explain average, mean, median, and percentiles
+
+- use resistant statistics (median and percentile) vs non-resistant ones that fluctuate with outliers (average mean and standard deviation). To update old joke, when a billionaire walks into a room, everyone becomes a millionaire, on average. But the median income barely changes.
+
+Also explain "percent change" with "percentage point difference" ... explain the difference between the two with clear examples.
+
+## Comparing Individuals versus Groups {- #individuals-groups}
+Beware individual versus aggregated data (example from Cairo: voting data about individual people vs voting trends of entire counties may differ because not all residents vote)
+
+If you're looking to make sense of individual behavior, use individual-level data. But if you're looking to generalize about larger groups (states, nations, etc.), aggregated data may be more useful.
+
+
+## Avoid Selection Bias {- #selection-bias}
+TODO: Decide whether to keep section title as-is or broaden to "Avoid Biased Comparisons"
+
+Everyone should avoid cherry-picking data, which means selecting only the evidence that arrives at a pre-determined conclusion.
+Also avoid statistically biased processes, such as sampling methods that regularly yields inaccurate results.... example of opinion data about socially inappropriate topics...
+Sometimes bias arises due to a combination of human behavior and poor numerical reasoning.
+
+But sometimes we compare different groups of data without realizing that that they are inappropriate comparisons; they seem like random samples, but due to underlying processes they are not random. Selection bias: comparing samples as if they were truly representative of the broader population, but in fact are not: common to mistakenly compare student academic performance in different types of schools, such as public versus private, or traditional public versus charter school, without recognizing how pools of applicants may differ.... how to address: carefully examine the underlying selection processes, and make appropriate comparisons between groups, and clarify problems in text that accompanies visualization
+
+Also be aware of algorithmic biases that we sometimes build into our software...Cairo's example about IP data thru VPN converted to geographic center of US, near Kansas...
+
+## Be Cautious about Correlation, Causation, and Confounding Variables {- #correlation}
+- do not let association drift into causation... and isolate confounding variables that may influence relationships between data
+
+See books on data analysis to understand the logic and use of statistical tests

@@ -22,23 +22,23 @@ Leaflet, a friendly and flexible open-source code library for creating interacti
 
 Go to any Socrata open data platform, find a dataset, and click the API tab. As an example, you can use City of Hartford's [Police Incidents dataset](https://data.hartford.gov/Public-Safety/Police-Incidents-01012005-to-Current/889t-nwfu).
 
-![Police Incidents dataset on Hartford Open Data portal](images/12-leaflet/data-hartford-api.png)
+![Police Incidents dataset on Hartford Open Data portal](images/13-leaflet/data-hartford-api.png)
 
 Copy the API endpoint. The default version is JSON.
 
 If you're new to APIs, test the endpoint by pasting it into your browser address line. Ideally you would see a formatted JSON view (use Chrome or Firefox for better results).
 
-![Formatted JSON example in Firefox](images/12-leaflet/data-hartford-api-json.png)
+![Formatted JSON example in Firefox](images/13-leaflet/data-hartford-api-json.png)
 
 If your browser does not support JSON view, you will see the raw JSON stream only, like the one shown below.
 
-![Unformatted JSON example in Firefox](images/12-leaflet/data-hartford-api-json-not-formatted.png)
+![Unformatted JSON example in Firefox](images/13-leaflet/data-hartford-api-json-not-formatted.png)
 
 Test if this Socrata endpoint supports GeoJSON format by changing the extention in the API dropdown menu from `JSON` to `GeoJSON`. GeoJSON format works best with Leaflet because the coding is simpler.
 
 If your endpoint supports GeoJSON format, your browser will display a data stream similar to the one below.
 
-![Formatted GeoJSON example in Firefox](images/12-leaflet/data-hartford-api-geojson.png)
+![Formatted GeoJSON example in Firefox](images/13-leaflet/data-hartford-api-geojson.png)
 
 If your Socrata endpoint only supports JSON format, but includes data columns with latitude and longitude, see other Leaflet examples further below.
 
@@ -102,11 +102,11 @@ Explore the map below or [view full-screen version in a new tab](https://handson
 
 3) Inside the open data repo, look for an API button and copy the endpoint.
 
-![Screenshot: Sample API endpoint in Socrata open data repo](images/12-leaflet/ct-open-data-api-endpoint.png)
+![Screenshot: Sample API endpoint in Socrata open data repo](images/13-leaflet/ct-open-data-api-endpoint.png)
 
 4) Paste the endpoint link into your browser, change the suffix from `.json` to `.geojson` and press return. In order to show the endpoint data as points on a map in this simple Leaflet template, the points must already be geocoded inside the open data repo, and the platform must support a GeoJSON endpoint. In your browser, one sign of success is a long stream of GeoJSON data like this:
 
-![Screenshot: API endpoint with .geojson suffix in Chrome browser](images/12-leaflet/ct-open-data-geojson.png)
+![Screenshot: API endpoint with .geojson suffix in Chrome browser](images/13-leaflet/ct-open-data-geojson.png)
 
 5) In this section of the Leaflet map template, the code includes a jQuery function `$.getJSON` to call the open data endpoint in GeoJSON format: `https://data.ct.gov/resource/v4tt-nt9n.geojson`. It also requires a Socrata app token, and you can get your own token for free at: https://dev.socrata.com/register. Each geocoded school in the Socrata data repository is displayed as a blue circle, with data properties (such as: name) in a clickable pop-up.
 

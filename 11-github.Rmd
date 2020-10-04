@@ -19,7 +19,7 @@ This chapter introduces GitHub using its web browser interface, which works best
 If problems arise, turn to the [Fix Common Mistakes](fix.html) section in the appendix. All of us make mistakes and accidentally "break our code" from time to time, and it's a great way to learn how things work---and what to do when it doesn't work!
 
 ## Copy, Edit, and Host a Simple Leaflet Map Template {- #copy-leaflet}
-Now that you understand how [GitHub](http://github.com) code repositories are like a public cookbook of recipes, which anyone can copy and modify, let's get into the kitchen and start baking! In this section, we'll introduce you to a very simple code template based on [Leaflet](http://leafletjs.com), an open-source code library for creating interactive maps that are very popular in journalism, business, government, and higher education. Many people choose Leaflet because the code is freely available to everyone, relatively easy to use, and has an active community of supporters who regularly update it. But unlike drag-and-drop tools that we previously covered in [Chapter 7: Map Your Data](map.html), working with our Leaflet templates requires you to copy and edit a few lines of code before hosting it on the web. While no prior coding experience is necessary, it's helpful to know that these code templates as based on the three core languages that communicate with browsers: HyperText Markup Language (HTML), Cascading Style Sheets (CSS), and JavaScript. Furthermore, we can edit these code templates using the GitHub web interface, which means you can do this on any type of computer (Mac, Windows, Chromebook, etc.) with any modern web browser.
+Now that you understand how [GitHub](http://github.com) code repositories are like a public cookbook of recipes, which anyone can copy and modify, let's get into the kitchen and start baking! In this section, we'll introduce you to a very simple code template based on [Leaflet](http://leafletjs.com), an open-source code library for creating interactive maps that are very popular in journalism, business, government, and higher education. Many people choose Leaflet because the code is freely available to everyone, relatively easy to use, and has an active community of supporters who regularly update it. But unlike drag-and-drop tools that we previously covered in [Chapter 8: Map Your Data](map.html), working with our Leaflet templates requires you to copy and edit a few lines of code before hosting it on the web. While no prior coding experience is necessary, it's helpful to know that these code templates as based on the three core languages that communicate with browsers: HyperText Markup Language (HTML), Cascading Style Sheets (CSS), and JavaScript. Furthermore, we can edit these code templates using the GitHub web interface, which means you can do this on any type of computer (Mac, Windows, Chromebook, etc.) with any modern web browser.
 
 Here's an overview of the key steps you'll learn about GitHub in this section:
 
@@ -32,7 +32,7 @@ Your goal is to create your own version of this simple interactive map, with you
 (ref:leaflet-simple) Create your own version of this [simple interactive Leaflet map](https://handsondataviz.github.io/leaflet-map-simple/).
 
 ```{r leaflet-simple, fig.cap="(ref:leaflet-simple)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-map-simple/") else knitr::include_graphics("images/10-github/leaflet-simple.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-map-simple/") else knitr::include_graphics("images/11-github/leaflet-simple.png")
 ```
 
 1. Create your own free account on [GitHub](http://github.com). It may ask you to do a simple quiz to prove you're a human! If you don't see a confirmation message in your email, check your spam folder.
@@ -46,7 +46,7 @@ Tip: Choose a GitHub username that's relatively short, and one that you'll be ha
 (ref:leaflet-simple-template) Click *Use this template* to make your own copy.
 
 ```{r leaflet-simple-template, fig.cap="(ref:leaflet-simple-template)"}
- knitr::include_graphics("images/10-github/leaflet-simple-template.png")
+ knitr::include_graphics("images/11-github/leaflet-simple-template.png")
 ```
 
 4. On the next screen, your account will appear as the owner. Name your copy of the repo `leaflet-map-simple`, the same as ours, as shown in Figure \@ref(fig:leaflet-simple-name). Click the green *Create repository from template* button.
@@ -54,7 +54,7 @@ Tip: Choose a GitHub username that's relatively short, and one that you'll be ha
 (ref:leaflet-simple-name) Name your copied repo `leaflet-map-simple`.
 
 ```{r leaflet-simple-name, out.width=600, fig.cap="(ref:leaflet-simple-name)"}
- knitr::include_graphics("images/10-github/leaflet-simple-name.png")
+ knitr::include_graphics("images/11-github/leaflet-simple-name.png")
 ```
 
 Note: We set up our repo using GitHub's template feature to make it easier for users to create their own copies. If you're trying to copy someone else's GitHub repo and don't see a *Template* button, then click the *Fork* button, which makes a copy a different way. Here's the difference: *Template* allows you to make *multiple* copies of the same repo by giving them different names, while *Fork* allows you to create *only one copy* of a repo because it uses the same name as the original, and GitHub prevents you from creating two repos with the same name. If you need to create a second fork of a GitHub repo, go to the [Create a New Repo and Upload Files on GitHub](create-repo.html) section of this chapter.
@@ -70,7 +70,7 @@ The upper-left corner of the next screen will say `USERNAME/leaflet-map-simple` 
 (ref:leaflet-simple-index) Click the index.html file to view the code.
 
 ```{r leaflet-simple-index, out.width=200, fig.cap="(ref:leaflet-simple-index)"}
- knitr::include_graphics("images/10-github/leaflet-simple-index.png")
+ knitr::include_graphics("images/11-github/leaflet-simple-index.png")
 ```
 
 If this is the first time you're looking at computer code, it may feel overwhelming, but relax! We've inserted several "code comments" to explain what's happening. The first block tells web browsers the formatting to read the rest of the page of code. The second block instructs the browser to load the [Leaflet](http://leafletjs.com) code library, the open-source software that constructs the interactive map. The third block describes where the map and title should be positioned on the screen. The good news is that you don't need to touch any of those blocks of code, so leave them as-is. But you do want to modify a few lines further below.
@@ -80,7 +80,7 @@ If this is the first time you're looking at computer code, it may feel overwhelm
 (ref:leaflet-simple-edit) Click the pencil button to edit the code.
 
 ```{r leaflet-simple-edit, fig.cap="(ref:leaflet-simple-edit)"}
- knitr::include_graphics("images/10-github/leaflet-simple-edit.png")
+ knitr::include_graphics("images/11-github/leaflet-simple-edit.png")
 ```
 
 Let's start by making one simple change to prove to everyone that you're now editing *your* map, by modifying the map title, which appears in the HTML division tag block around lines 21-23.
@@ -92,7 +92,7 @@ Let's start by making one simple change to prove to everyone that you're now edi
 (ref:leaflet-simple-commit) Click the green *Commit Changes* button to save your edits.
 
 ```{r leaflet-simple-commit, out.width=450, fig.cap="(ref:leaflet-simple-commit)"}
- knitr::include_graphics("images/10-github/leaflet-simple-commit.png")
+ knitr::include_graphics("images/11-github/leaflet-simple-commit.png")
 ```
 
 In the language of coders, we "commit" our changes in the same way that most people "save" a document, and later you'll see how GitHub tracks each code commit so that you can roll them back if needed. By default, GitHub inserts a short description of your commit as "Update index.html", and you have the option to customize that description when you start making lots of commits to keep track of your work. Also, GitHub commits your changes directly to the default branch of your code, which we'll explain later.
@@ -104,7 +104,7 @@ Now let's publish your edited map to the public web to see how it looks in a web
 (ref:leaflet-simple-settings) Click the *Settings* button to access GitHub Pages and publish your work on the web.
 
 ```{r leaflet-simple-settings, fig.cap="(ref:leaflet-simple-settings)"}
- knitr::include_graphics("images/10-github/leaflet-simple-settings.png")
+ knitr::include_graphics("images/11-github/leaflet-simple-settings.png")
 ```
 
 10. In the Settings screen, scroll way down to the GitHub Pages area. In the drop-down menu, change *Source* from *None* to *Master*, keep the default */(root)* option in the middle, and press *Save* as shown in Figure \@ref(fig:leaflet-github-pages). This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
@@ -112,7 +112,7 @@ Now let's publish your edited map to the public web to see how it looks in a web
 (ref:leaflet-github-pages) In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Master*.
 
 ```{r leaflet-github-pages, out.width=500, fig.cap="(ref:leaflet-github-pages)"}
-knitr::include_graphics("images/10-github/leaflet-github-pages.png")
+knitr::include_graphics("images/11-github/leaflet-github-pages.png")
 ```
 
 Note: **TODO:** GitHub recently announced it plans to change the default branch from *Master* to *Main* to eliminate its master-slave metaphor. GitHub recommends waiting until later in 2020 for their system to support this change. When that happens, we need to update repos, text, and screenshots. See more at https://github.com/github/renaming
@@ -122,7 +122,7 @@ Note: **TODO:** GitHub recently announced it plans to change the default branch 
 (ref:leaflet-github-pages-link) In *Settings* for *GitHub Pages*, right-click your published map link to open in a new tab.
 
 ```{r leaflet-github-pages-link, out.width=600, fig.cap="(ref:leaflet-github-pages-link)"}
-knitr::include_graphics("images/10-github/leaflet-github-pages-link.png")
+knitr::include_graphics("images/11-github/leaflet-github-pages-link.png")
 ```
 
 Now you should have at least two tabs open in your browser. The first tab contains your GitHub repo, where you edit your code, with a web address in this format, and replace `USERNAME` and `REPOSITORY` with your own:
@@ -155,7 +155,7 @@ Now let's edit your the GitHub repo so that the link points to *your* live map, 
 (ref:leaflet-click-title) On your first browser tab, click the repo title.
 
 ```{r leaflet-click-title, out.width=450, fig.cap="(ref:leaflet-click-title)"}
- knitr::include_graphics("images/10-github/leaflet-click-title.png")
+ knitr::include_graphics("images/11-github/leaflet-click-title.png")
 ```
 
 14. On your repo page, click to open the `README.md` file, and click the pencil again to edit it, as shown in Figure \@ref(fig:leaflet-paste-link). Paste your live web link under the label *(replace with link to your site)* and scroll down to commit the change.
@@ -163,7 +163,7 @@ Now let's edit your the GitHub repo so that the link points to *your* live map, 
 (ref:leaflet-paste-link) Open and edit the `README` file to paste the link to your live map.
 
 ```{r leaflet-paste-link, out.width=600, fig.cap="(ref:leaflet-paste-link)"}
- knitr::include_graphics("images/10-github/leaflet-paste-link.png")
+ knitr::include_graphics("images/11-github/leaflet-paste-link.png")
 ```
 
 Now that you've successfully made simple edits and published your live map, let's make more edits to jazz it up and help you learn more about how Leaflet code works.
@@ -200,12 +200,12 @@ Warning: Be careful when editing your code. Accidentally removing or adding extr
 
 15. After making edits, remember to scroll down and press the *Commit* button to save changes. Then go to your browser tab with the live map, and do a hard-refresh to view changes. If your map edits do not appear right away, remember that GitHub Pages sometimes requires up to 30 seconds to process code edits. If you have problems, see the [Fix Common Mistakes](fix.html) section in the appendix.
 
-Congratulations! If this is the first time that you've edited computer code and hosted it online, you can now call yourself a "coder". The process is similar to following and modifying a cookbook recipe, just like you also can call yourself a "chef" after baking your first batch of brownies! Although no one is likely to hire you as a full-time paid coder (or chef) at this early stage, you now understand several of the basic skills needed to copy, edit, and host code online, and you're ready to dive into the more advanced versions, such as [Chart.js and Highcharts templates in Chapter 11](chartcode.html) and [Leaflet map templates in Chapter 12](leaflet.html).
+Congratulations! If this is the first time that you've edited computer code and hosted it online, you can now call yourself a "coder". The process is similar to following and modifying a cookbook recipe, just like you also can call yourself a "chef" after baking your first batch of brownies! Although no one is likely to hire you as a full-time paid coder (or chef) at this early stage, you now understand several of the basic skills needed to copy, edit, and host code online, and you're ready to dive into the more advanced versions, such as [Chart.js and Highcharts templates in Chapter 12](chartcode.html) and [Leaflet map templates in Chapter 13](leaflet.html).
 
 The next section describes how to enhance your GitHub skills by creating new repos and uploading your files. These are essential steps to create a second copy of a code template or to work with more advanced templates in the next two chapters.
 
 ## Create a New Repo and Upload Files on GitHub {- #create-repo}
-Now that you've made a copy of our GitHub template, the next step is to learn how to create a brand-new repo and upload files. These skills will be helpful for several scenarios. First, if you have to fork a repo, which GitHub allows you to do only one time, this method will allow you to create additional copies. Second, you'll need to upload some of your own files when creating data visualizations using [Chart.js and Highcharts templates in Chapter 11](chartcode.html) and [Leaflet map templates in Chapter 12](leaflet.html). Once again, we'll demonstrate how to do all of these steps in GitHub's beginner-level browser interface, but see the next section on [GitHub Desktop](github-desktop-atom.html) for an intermediate-level interface that's more efficient for working with code templates.
+Now that you've made a copy of our GitHub template, the next step is to learn how to create a brand-new repo and upload files. These skills will be helpful for several scenarios. First, if you have to fork a repo, which GitHub allows you to do only one time, this method will allow you to create additional copies. Second, you'll need to upload some of your own files when creating data visualizations using [Chart.js and Highcharts templates in Chapter 12](chartcode.html) and [Leaflet map templates in Chapter 13](leaflet.html). Once again, we'll demonstrate how to do all of these steps in GitHub's beginner-level browser interface, but see the next section on [GitHub Desktop](github-desktop-atom.html) for an intermediate-level interface that's more efficient for working with code templates.
 
 In the previous section, you created a copy of our GitHub repo with the *Use this template* button, and we intentionally set up our repos with this newer feature because it allows the user to make *multiple* copies and assign each one a different name. Many other GitHub repos do not include a *Template* button, so to copy those you'll need to click the *Fork* button, which automatically generates a copy with the same repo name as the original. But what if you wish to fork someone's repo a second time? GitHub prevents you from creating a second fork to avoid violating one of its important rules: every repo in your account must have a unique name, to avoid overwriting and erasing your work.
 
@@ -220,7 +220,7 @@ So how do you make a second fork of a GitHub repo, if there's no *Use this templ
 (ref:repo-code-download) Click *Code* and select *Download Zip* to create a compressed folder of a repo on your computer.
 
 ```{r repo-code-download, out.width=350, fig.cap="(ref:repo-code-download)"}
- knitr::include_graphics("images/10-github/repo-code-download.png")
+ knitr::include_graphics("images/11-github/repo-code-download.png")
 ```
 
 2. Navigate to the location on your computer where you saved the folder. Its file name should end with `.zip`, which means you need to double-click to "unzip" or de-compress the folder. After you unzip it, a new folder will appear named in this format, `REPOSITORY-BRANCH`, which refers to the repository name (such as `leaflet-map-simple`) and the branch name (such as `master` or `main`), and it will contain the repo files. One of those files is named `index.html`, which you'll use in a few steps below.
@@ -230,7 +230,7 @@ So how do you make a second fork of a GitHub repo, if there's no *Use this templ
 (ref:repo-create-new) Click the plus (+) symbol in upper-right corner to create a new repo.
 
 ```{r repo-create-new, out.width=300, fig.cap="(ref:repo-create-new)"}
- knitr::include_graphics("images/10-github/repo-create-new.png")
+ knitr::include_graphics("images/11-github/repo-create-new.png")
 ```
 
 4. On the next screen, GitHub will ask you to enter a new repo name. Choose a short one, preferably all lower-case, and separate words with hyphens if needed. Let's name it `practice` because we'll delete it at the end of this tutorial.
@@ -242,7 +242,7 @@ Also, select *Add a license* that matches the code you plan to upload, which in 
 (ref:repo-create-options) Name your new repo *practice*, check the box to *Initialize this repo with a README*, and *Add a license* (select *MIT*) to match any code you plan to upload.
 
 ```{r repo-create-options, out.width=400, fig.cap="(ref:repo-create-options)"}
- knitr::include_graphics("images/10-github/repo-create-options.png")
+ knitr::include_graphics("images/11-github/repo-create-options.png")
 ```
 
 Your new repo will have a web address similar to `https://github.com/USERNAME/practice`.
@@ -252,7 +252,7 @@ Your new repo will have a web address similar to `https://github.com/USERNAME/pr
 (ref:repo-upload-files) Click the *Upload Files* button.
 
 ```{r repo-upload-files, out.width=350, fig.cap="(ref:repo-upload-files)"}
- knitr::include_graphics("images/10-github/repo-upload-files.png")
+ knitr::include_graphics("images/11-github/repo-upload-files.png")
 ```
 
 6. Inside the repo folder that you previously downloaded and unzipped on your local computer, drag-and-drop the `index.html` file to the upload screen of your GitHub repo in your browser, as shown in Figure \@ref(fig:repo-drag-index). Do not upload `LICENSE` or `README.md` because your new repo already contains those two files. Scroll down to click the green *Commit Changes* button.
@@ -260,7 +260,7 @@ Your new repo will have a web address similar to `https://github.com/USERNAME/pr
 (ref:repo-drag-index) Drag-and-drop the `index.html` file to the upload screen.
 
 ```{r repo-drag-index, fig.cap="(ref:repo-drag-index)"}
- knitr::include_graphics("images/10-github/repo-drag-index-annotated.png")
+ knitr::include_graphics("images/11-github/repo-drag-index-annotated.png")
 ```
 
 When the upload is complete, your repo should contain three files, now including a copy of the `index.html` code that you previously downloaded from the `leaflet-map-simple` template. This achieved our goal of working around GitHub's one-fork rule, by creating a new repo and manually uploading a second copy of the code.
@@ -272,7 +272,7 @@ Optionally, you could use GitHub Pages to publish a live version of the code onl
 (ref:repo-delete) After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm.
 
 ```{r repo-delete, out.width=600, fig.cap="(ref:repo-delete)"}
- knitr::include_graphics("images/10-github/repo-delete.png")
+ knitr::include_graphics("images/11-github/repo-delete.png")
 ```
 
 So far, you've learned how to copy, edit, and host code using the GitHub web interface, which is a great introduction for beginners. Now you're ready to move up to tools that will allow you to work more efficiently with GitHub, such as GitHub Desktop and Atom Editor, to quickly move entire repos to your local computer, edit the code, and move them back online.
@@ -289,7 +289,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:desktop-open) In your GitHub repo on the web, click *Code* to *Open with GitHub Desktop* to download and install GitHub Desktop.
 
 ```{r desktop-open, out.width=350, fig.cap="(ref:desktop-open)"}
- knitr::include_graphics("images/10-github/desktop-open.png")
+ knitr::include_graphics("images/11-github/desktop-open.png")
 ```
 
 2. When you open GitHub Desktop for the first time, you'll need to connect it to the GitHub web account you previously created in this chapter. On the welcome screen, click the blue *Sign in to GitHub.com* button, as shown in Figure \@ref(fig:desktop-signin), and login with your GitHub username and password. On the next screen, GitHub will ask you to click the green *Authorize desktop* button to confirm that you wish to connect to your account.
@@ -297,7 +297,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:desktop-signin) Click the blue *Sign in to GitHub.com* button to link GitHub Desktop to your GitHub account.
 
 ```{r desktop-signin, out.width=500, fig.cap="(ref:desktop-signin)"}
- knitr::include_graphics("images/10-github/desktop-signin.png")
+ knitr::include_graphics("images/11-github/desktop-signin.png")
 ```
 
 3. In the next setup screen, GitHub Desktop asks you to configure Git, the underlying software that runs GitHub. Confirm that it displays your username and click *Continue*, as shown in Figure \@ref(fig:desktop-configure).
@@ -305,7 +305,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:desktop-configure) Click the *Continue* button to authorize GitHub Desktop to send commits to your GitHub account.
 
 ```{r desktop-configure, out.width=500, fig.cap="(ref:desktop-configure)"}
- knitr::include_graphics("images/10-github/desktop-configure.png")
+ knitr::include_graphics("images/11-github/desktop-configure.png")
 ```
 
 4. On the "Let's Get Started" with GitHub Desktop screen, click on *Your Repositories* on the right side to select your `leaflet-map-sample`, and further below click the blue button to *Clone* it to your local computer, as shown in Figure \@ref(fig:desktop-start).
@@ -313,7 +313,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:desktop-start) Select your *leaflet-map-simple* repo and click the *Clone* button to copy it to your local computer.
 
 ```{r desktop-start, fig.cap="(ref:desktop-start)"}
- knitr::include_graphics("images/10-github/desktop-start-annotated.png")
+ knitr::include_graphics("images/11-github/desktop-start-annotated.png")
 ```
 
 5. When you clone a repo, GitHub Desktop asks you to select the Local Path, meaning the location where you wish to store a copy of your GitHub repo on your local computer, as shown in Figure \@ref(fig:desktop-clone-path). Before you click the *Clone* button, remember the path to this location, since you'll need to find it later.
@@ -321,7 +321,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:desktop-clone-path) Select the Local Path where your repo will be stored on your computer, then click *Clone*.
 
 ```{r desktop-clone-path, out.width=500, fig.cap="(ref:desktop-clone-path)"}
- knitr::include_graphics("images/10-github/desktop-clone-path.png")
+ knitr::include_graphics("images/11-github/desktop-clone-path.png")
 ```
 
 6. On the next screen, GitHub Desktop may ask, "How are you planning to use this fork?" Select the default entry "To contribute to the parent project," which means you plan to send your edits back to your GitHub web account, and click *Continue*, as shown in Figure \@ref(fig:desktop-fork).
@@ -329,7 +329,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:desktop-fork) If asked how you plan to use this fork, select the default *To contribute to the parent project* and click *Continue*.
 
 ```{r desktop-fork, out.width=500, fig.cap="(ref:desktop-fork)"}
- knitr::include_graphics("images/10-github/desktop-fork.png")
+ knitr::include_graphics("images/11-github/desktop-fork.png")
 ```
 
 7. Now you have copies of your GitHub repo in two places---in your GitHub web account and on your local computer---as shown in Figure \@ref(fig:desktop-finder). Your screen may look different, depending on whether you use Windows or Mac, and the Local Path you selected to store your files.
@@ -337,7 +337,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:desktop-finder) Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different.
 
 ```{r desktop-finder, out.width=500, fig.cap="(ref:desktop-finder)"}
- knitr::include_graphics("images/10-github/desktop-finder.png")
+ knitr::include_graphics("images/11-github/desktop-finder.png")
 ```
 
 8. Before we can edit the code in your local computer, [download and install the Atom Editor application](https://atom.io). Then go to your GitHub Desktop screen, confirm that the Current Repository is `leaflet-map-simple`, and click the *Open in Atom* button as shown in Figure \@ref(fig:desktop-atom).
@@ -345,7 +345,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:desktop-atom) In GitHub Desktop, confirm the Current Repo and click the *Open in Atom* button to edit the code.
 
 ```{r desktop-atom, fig.cap="(ref:desktop-atom)"}
- knitr::include_graphics("images/10-github/desktop-atom-annotated.png")
+ knitr::include_graphics("images/11-github/desktop-atom-annotated.png")
 ```
 
 9. Since Atom Editor is integrated with GitHub Desktop, it opens up your entire repo as a "project," where you can click files in the left window to open as new tabs to view and edit code, as shown in Figure \@ref(fig:atom-project). Open your `index.html` file and edit the title of your map, around line 22, then save your work.
@@ -353,7 +353,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:atom-project) Atom Editor opens your repo as a *project*, where you can click files to view code. Edit your map title.
 
 ```{r atom-project, fig.cap="(ref:atom-project)"}
- knitr::include_graphics("images/10-github/atom-project-annotated.png")
+ knitr::include_graphics("images/11-github/atom-project-annotated.png")
 ```
 
 10. After saving your code edit, it's a good habit to clean up your Atom Editor workspace. Right-click on the current Project and select *Remove Project Folder* in the menu, as shown in Figure \@ref(fig:atom-remove-project). Next time you open up Atom Editor, you can right-click to *Add Project Folder*, and choose any GitHub repo that you have copied to your local computer.
@@ -361,7 +361,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:atom-remove-project) To clean up your Atom Editor workspace, right-click to *Remove Project Folder*.
 
 ```{r atom-remove-project, fig.cap="(ref:atom-remove-project)"}
- knitr::include_graphics("images/10-github/atom-remove-project-annotated.png")
+ knitr::include_graphics("images/11-github/atom-remove-project-annotated.png")
 ```
 
 11. Now that you've edited the code for your map on your local computer, let's test how it looks before uploading it to GitHub. Go to the location where you saved the repo on your local computer, and right-click the `index.html` file, select Open With, and choose your preferred web browser, as shown in Figure \@ref(fig:finder-open-with).  
@@ -369,7 +369,7 @@ Let's use GitHub Desktop to pull a copy of your `leaflet-map-simple` template to
 (ref:finder-open-with) Right-click the index.html file on your local computer and open with a browser to check your edits.
 
 ```{r finder-open-with, fig.cap="(ref:finder-open-with)"}
- knitr::include_graphics("images/10-github/finder-open-with.png")
+ knitr::include_graphics("images/11-github/finder-open-with.png")
 ```
 
 Note: Since your browser is displaying only the *local computer* version of your code, the web address will begin with `file:///...` rather than `https://...`, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.
@@ -378,10 +378,10 @@ Now let's transfer your edits from your local computer to your GitHub web accoun
 
 11. Go to GitHub Desktop, confirm that your Current Repo is `leaflet-map-simple`, and you will see your code edits summarized on the screen. In this two-step process, first click the blue *Commit to Master* button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue *Push origin* button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure \@ref(fig:desktop-commit-push).
 
-(ref:desktop-commit-push) In this two-step process, click *Commit to Master*, then click *Push origin* to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://handsondataviz.org/images/10-github/desktop-commit-push.gif).
+(ref:desktop-commit-push) In this two-step process, click *Commit to Master*, then click *Push origin* to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://handsondataviz.org/images/11-github/desktop-commit-push.gif).
 
 ```{r desktop-commit-push, fig.cap="(ref:desktop-commit-push)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/10-github/desktop-commit-push.gif", height = "500px") else knitr::include_graphics("images/10-github/desktop-commit-push-annotated.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/11-github/desktop-commit-push.gif", height = "500px") else knitr::include_graphics("images/11-github/desktop-commit-push-annotated.png")
 ```
 
 Congratulations! You've successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format `https://USERNAME.github.io/REPOSITORY`, substituting your GitHub username and repo name.
@@ -395,7 +395,7 @@ GitHub also offers a powerful platform for collaborative projects, such as *Hand
 (ref:compare-commits) Drag-and-drop the file to the upload screen.
 
 ```{r compare-commits, fig.cap="(ref:compare-commits)"}
- knitr::include_graphics("images/10-github/compare-commits.png")
+ knitr::include_graphics("images/11-github/compare-commits.png")
 ```
 
 Although GitHub does not operate like Google Documents, which displays live edits, the platform has several advantages when working collaboratively with code. First, since GitHub tracks every commit we make, it allows us to go back and restore a very specific past version of the code if needed. Second, when GitHub repos are public, anyone can view your code and submit an "issue" to notify the owner about an idea or problem, or send a "pull request" of suggested code edits, which the owner can accept or reject. Third, GitHub allows collaborators to create different "branches" of a repo in order to make edits, and then "merge" the branches back together if desired. Occasionally, if two or more coders attempt to push incompatible commits to the same repo, GitHub will warn about a "Merge Conflict," and ask you to resolve these conflicts in order to preserve everyone's work.
@@ -403,4 +403,4 @@ Although GitHub does not operate like Google Documents, which displays live edit
 Many coders prefer to work on GitHub using its Command Line Interface (CLI), which means memorizing and typing specific commands directly into the Terminal application on Mac or Windows, but this is beyond the scope of this introductory book.
 
 ### Summary {- #summary10}
-If this is the first time you've forked, edited, and hosted live code on the public web, welcome to the coding family! We hope you agree that GitHub is a powerful platform for engaging in this work and sharing with others. While beginners will appreciate the web interface, you'll find that the GitHub Desktop and Atom Editor tools makes it much easier to work with [Chart.js and Highcharts code templates in Chapter 11](chartcode.html) and the [Leaflet map code templates in Chapter 12](leaflet.html). Let's build on your brand-new coding skills to create more customized charts and maps in the next two chapters.
+If this is the first time you've forked, edited, and hosted live code on the public web, welcome to the coding family! We hope you agree that GitHub is a powerful platform for engaging in this work and sharing with others. While beginners will appreciate the web interface, you'll find that the GitHub Desktop and Atom Editor tools makes it much easier to work with [Chart.js and Highcharts code templates in Chapter 12](chartcode.html) and the [Leaflet map code templates in Chapter 13](leaflet.html). Let's build on your brand-new coding skills to create more customized charts and maps in the next two chapters.

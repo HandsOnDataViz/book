@@ -1,6 +1,6 @@
 # Chart.js and Highcharts Templates {#chartcode}
 
-We recommend that you start creating interactive charts with easy drag-and-drop tools we described in [Chapter 6: Chart Your Data](chart.html), such as [Google Sheets](chart-google.html), [Datawrapper](chart-tableau-public.html) and [Tableau Public](chart-tableau-public.html). But when you're ready to explore more powerful tools, this chapter features Chart.js and Highcharts code templates, which offer many benefits for more advanced users. By copying and modifying our templates, you can customize the appearance and interactivity of your visualizations, upload your data in CSV format, and freely publish it with your code on GitHub Pages or any server you choose, without relying on a drag-and-drop tool platform to continue its service into the future. But in order to work with our templates, you first need to learn how to [edit and host code with GitHub in Chapter 10](github.html).
+We recommend that you start creating interactive charts with easy drag-and-drop tools we described in [Chapter 7: Chart Your Data](chart.html), such as [Google Sheets](chart-google.html), [Datawrapper](chart-tableau-public.html) and [Tableau Public](chart-tableau-public.html). But when you're ready to explore more powerful tools, this chapter features Chart.js and Highcharts code templates, which offer many benefits for more advanced users. By copying and modifying our templates, you can customize the appearance and interactivity of your visualizations, upload your data in CSV format, and freely publish it with your code on GitHub Pages or any server you choose, without relying on a drag-and-drop tool platform to continue its service into the future. But in order to work with our templates, you first need to learn how to [edit and host code with GitHub in Chapter 11](github.html).
 
 Most of the templates we feature are designed with [Chart.js](https://www.chartjs.org/), an open-source code library that is freely distributed under an MIT license, which anyone can use and modify. This means that the code library is extensible by other users, who have created [awesome Chart.js resources](https://github.com/chartjs/awesome), such as additional chart types and plugins that provide more features. Also, we include some templates designed with [Highcharts](https://highcharts.com) to expand the range of chart types and features not fully covered by Chart.js. Although Highcharts code is open-source, its licensing terms differ. [Highcharts is free for non-commerical use](https://www.highcharts.com/products/highcharts/#non-commercial), such as a personal, school, or non-profit organization website. But if you create charts for commercial or governmental use, you'll need to purchase a [Highcharts license](https://shop.highsoft.com/). In either case, we designed our Chart.js and Highcharts code templates to make them easier for beginners to understand. See the various types of charts and follow the links to the templates and tutorials in Table \@ref(tab:chart-templates).
 
@@ -8,12 +8,12 @@ Table: (\#tab:chart-templates) Chart Code Templates and Tutorials
 
 | Chart | Best use and tutorials in this book |
 | --- | --- |
-| Bar or Column Chart<br> ![](images/11-chartcode/chartjs-column.png) | Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: [Bar or Column Chart with CSV data in Chart.js code template and tutorial](chartjs-bar-column.html)  |
-| Error Bars in a Bar/Column Chart<br> ![](images/11-chartcode/chartjs-error-bars.png) | Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: [Error Bars in Bar/Column Chart with CSV data in Chart.js code template and tutorial](chartjs-error-bars.html)  |
-| Line Chart<br> ![](images/11-chartcode/chartjs-line.png) | Best to show continuous data, such as change over time.<br>Power tool: [Line Chart with CSV data in Chart.js code template and tutorial](chartjs-line.html) |
-| Annotated Line Chart<br> ![](images/11-chartcode/highcharts-annotated-line.png) | Best to add contextual notes inside chart of continuous data, such as change over time.<br>Power tool: [Annotated Line Chart with CSV data in Highcharts code template and tutorial](highcharts-annotated-line.html) |
-| Scatter Chart<br> ![](images/11-chartcode/chartjs-scatter.png) | Best to show the relationship between two datasets as XY coordinates to reveal possible correlations.<br>Power tool: [Scatter Chart with CSV data in Chart.js code template and tutorial](chartjs-scatter.html) |
-| Bubble Chart<br> ![](images/11-chartcode/chartjs-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color. <br>Power tool: [Bubble Chart with CSV data in Chart.js code template and tutorial](chartjs-bubble.html) |
+| Bar or Column Chart<br> ![](images/12-chartcode/chartjs-column.png) | Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: [Bar or Column Chart with CSV data in Chart.js code template and tutorial](chartjs-bar-column.html)  |
+| Error Bars in a Bar/Column Chart<br> ![](images/12-chartcode/chartjs-error-bars.png) | Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Power tool: [Error Bars in Bar/Column Chart with CSV data in Chart.js code template and tutorial](chartjs-error-bars.html)  |
+| Line Chart<br> ![](images/12-chartcode/chartjs-line.png) | Best to show continuous data, such as change over time.<br>Power tool: [Line Chart with CSV data in Chart.js code template and tutorial](chartjs-line.html) |
+| Annotated Line Chart<br> ![](images/12-chartcode/highcharts-annotated-line.png) | Best to add contextual notes inside chart of continuous data, such as change over time.<br>Power tool: [Annotated Line Chart with CSV data in Highcharts code template and tutorial](highcharts-annotated-line.html) |
+| Scatter Chart<br> ![](images/12-chartcode/chartjs-scatter.png) | Best to show the relationship between two datasets as XY coordinates to reveal possible correlations.<br>Power tool: [Scatter Chart with CSV data in Chart.js code template and tutorial](chartjs-scatter.html) |
+| Bubble Chart<br> ![](images/12-chartcode/chartjs-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color. <br>Power tool: [Bubble Chart with CSV data in Chart.js code template and tutorial](chartjs-bubble.html) |
 
 For additional chart types, see [Chart.js samples](https://www.chartjs.org/samples/latest/) and [Highcharts Demos](https://www.highcharts.com/demo).
 
@@ -37,12 +37,12 @@ Bar or column charts are best to compare categories side-by-side. If labels are 
 (ref:chartjs-demo-bar) Bar chart with Chart.js: explore the [interactive version](https://handsondataviz.github.io/chartjs-bar/index.html).
 
 ```{r chartjs-demo-bar, fig.cap="(ref:chartjs-demo-bar)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-bar/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-bar.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-bar/index.html", height="500px") else knitr::include_graphics("images/12-chartcode/chartjs-demo-bar.png")
 ```
 
 To create your own bar or column chart with CSV data using our Chart.js template:
 
-1. Go to [our GitHub repo for Chart.js template](https://github.com/HandsOnDataViz/chartjs-templates) that contains the code for the chart in Figure \@ref(fig:chartjs-demo-bar), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+1. Go to [our GitHub repo for Chart.js template](https://github.com/HandsOnDataViz/chartjs-templates) that contains the code for the chart in Figure \@ref(fig:chartjs-demo-bar), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 11: Edit and Host Code with GitHub](github.html).
 
 2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish.
 
@@ -103,12 +103,12 @@ shows median and mean (average) income for different-sized geographies: the US s
 (ref:chartjs-demo-error-bars) Interactive bar chart with error bars in Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-error-bars/index.html).
 
 ```{r chartjs-demo-error-bars, fig.cap="(ref:chartjs-demo-error-bars)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/bar-chart-with-error-bars/index.html", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-error-bars.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-templates/bar-chart-with-error-bars/index.html", height="500px") else knitr::include_graphics("images/12-chartcode/chartjs-demo-error-bars.png")
 ```
 
 To create your own bar or column chart with error bars, with data loaded from a CSV file, using our Chart.js template:
 
-1. Go to [our GitHub repo for this Chart.js template](https://github.com/HandsOnDataViz/chartjs-error-bars) that contains the code for the chart in Figure \@ref(fig:chartjs-demo-error-bars), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+1. Go to [our GitHub repo for this Chart.js template](https://github.com/HandsOnDataViz/chartjs-error-bars) that contains the code for the chart in Figure \@ref(fig:chartjs-demo-error-bars), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 11: Edit and Host Code with GitHub](github.html).
 
 2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column (accompanied by a column with uncertainty values). Your CSV must contain at least three columns (labels and one data series with associated uncertainty values). You can add as many data series columns as you wish.
 
@@ -179,12 +179,12 @@ Each line has a distinct color, and the legend helps establish the color-distric
 (ref:chartjs-demo-line) Interactive line chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-line/).
 
 ```{r chartjs-demo-line, fig.cap="(ref:chartjs-demo-line)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-line/", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-line.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-line/", height="500px") else knitr::include_graphics("images/12-chartcode/chartjs-demo-line.png")
 ```
 
 To create your own line chart with Chart.js, with data loaded from a CSV file, you can:
 
-1. Go to [our GitHub repo for the Chart.js template](https://github.com/HandsOnDataViz/chartjs-line) that contains the code of the line chart shown in Figure \@ref(fig:chartjs-demo-line), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+1. Go to [our GitHub repo for the Chart.js template](https://github.com/HandsOnDataViz/chartjs-line) that contains the code of the line chart shown in Figure \@ref(fig:chartjs-demo-line), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 11: Edit and Host Code with GitHub](github.html).
 
 2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish, but do not overload your chart with lines as humans can distinguish a limited number of colors.
 
@@ -233,12 +233,12 @@ a dip in 2009, the year after the 2008 financial crisis as suggested by the anno
 (ref:highcharts-demo-annotated-line) Interactive annotated chart with Highcharts. Explore the [interactive version](https://handsondataviz.github.io/highcharts-line-annotated/).
 
 ```{r highcharts-demo-annotated-line, fig.cap="(ref:highcharts-demo-annotated-line)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/highcharts-line-annotated/index.html", height="400px") else knitr::include_graphics("images/11-chartcode/highcharts-demo-annotated-line.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/highcharts-line-annotated/index.html", height="400px") else knitr::include_graphics("images/12-chartcode/highcharts-demo-annotated-line.png")
 ```
 
 To create your own annotated line chart with Highcharts, with data loaded from a CSV file, you can:
 
-1. Go to [our GitHub repo](https://github.com/HandsOnDataViz/highcharts-line-annotated) that contains code for the chart shown in Figure \@ref(fig:highcharts-demo-annotated-line), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+1. Go to [our GitHub repo](https://github.com/HandsOnDataViz/highcharts-line-annotated) that contains code for the chart shown in Figure \@ref(fig:highcharts-demo-annotated-line), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 11: Edit and Host Code with GitHub](github.html).
 
 2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least three columns (labels, one data series, and notes). You can add as many data series columns as you wish, but you can only have one annotation (final column) per row.
 
@@ -284,12 +284,12 @@ easy to see that test performance improves as household income goes up.
 (ref:chartjs-demo-scatter) Interactive scatter chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-scatter/).
 
 ```{r chartjs-demo-scatter, fig.cap="(ref:chartjs-demo-scatter)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-scatter/", height="450px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-scatter.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-scatter/", height="450px") else knitr::include_graphics("images/12-chartcode/chartjs-demo-scatter.png")
 ```
 
 To create your own scatter plot with Chart.js, with data loaded from a CSV file, you can:
 
-1. Go to [our GitHub repo](https://github.com/HandsOnDataViz/chartjs-scatter) that contains the code for the chart shown in Figure \@ref(fig:chartjs-demo-scatter), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+1. Go to [our GitHub repo](https://github.com/HandsOnDataViz/chartjs-scatter) that contains the code for the chart shown in Figure \@ref(fig:chartjs-demo-scatter), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 11: Edit and Host Code with GitHub](github.html).
 
 2. Prepare your data in CSV format and upload into a `data.csv` file. The first two columns should contain x- and y-values respectively, and the third column should contain the point name that will appear on mouse hover.
 
@@ -346,12 +346,12 @@ The bubble chart in Figure \@ref(fig:chartjs-demo-bubble) shows how median house
 (ref:chartjs-demo-bubble) Interactive bubble chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-bubble/).
 
 ```{r chartjs-demo-bubble, fig.cap="(ref:chartjs-demo-bubble)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-bubble/", height="500px") else knitr::include_graphics("images/11-chartcode/chartjs-demo-bubble.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/chartjs-bubble/", height="500px") else knitr::include_graphics("images/12-chartcode/chartjs-demo-bubble.png")
 ```
 
 To create your own bubble chart with Chart.js, with data loaded from a CSV file, you can:
 
-1. Go to [our GitHub repo for this template](https://github.com/HandsOnDataViz/chartjs-bubble), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 10: Edit and Host Code with GitHub](github.html).
+1. Go to [our GitHub repo for this template](https://github.com/HandsOnDataViz/chartjs-bubble), log into your GitHub account, and click *Use this template* to create a copy that you can edit, as described in [Chapter 11: Edit and Host Code with GitHub](github.html).
 
 2. Prepare your data in CSV format and upload into a `data.csv` file. The first two columns should contain x- and y-values respectively. The third column should contain bubble names that will appear on mouse hover. The final, fourth column, represents the size of your bubble.
 

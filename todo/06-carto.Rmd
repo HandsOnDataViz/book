@@ -33,7 +33,7 @@ Let's build a simple point map with sample data, using Carto Builder <https:/car
 
 3) The Carto Dashboard displays two views: Maps and Datasets. Always begin with Datasets, then move to Maps. (Hint: If your dashboard looks very different than mine, then you might still be using the older Carto Editor, rather than the newer Carto Builder.)
 
-![Image: Carto Builder dashboard: Begin with Datasets](images/07-map/carto-dashboard-maps-datasets.png)
+![Image: Carto Builder dashboard: Begin with Datasets](images/08-map/carto-dashboard-maps-datasets.png)
 
 4) First, connect your dataset, and soon we'll turn it into a map. Click blue button to add New Dataset.
 
@@ -64,7 +64,7 @@ Let's build a simple point map with sample data, using Carto Builder <https:/car
 - select Fill Color to change circle color
 - switch from Solid (all points are same color) to By Value, and scroll down to Group (at the bottom) to automatically color by categories for this sample data. (Hint: If you don't see Group in the menu, click somewhere else and try it again.)
 
-![Image: Style points by value](images/07-map/carto-point-style-value.png)
+![Image: Style points by value](images/08-map/carto-point-style-value.png)
 
 16) In the Pop-up tab, select a Window Style, then select boxes in Show Items to display.
 
@@ -74,7 +74,7 @@ Let's build a simple point map with sample data, using Carto Builder <https:/car
 
 19) To publish your map on the web: Next to your map file name, click the blue “back” arrow (NOT your browser back button) to return to the data layer. Click the green Public button, and on the next screen, click the blue Publish button.
 
-![Image: Click to rename or publish your map](images/07-map/carto-publish-map.png)
+![Image: Click to rename or publish your map](images/08-map/carto-publish-map.png)
 
 20) On the next screen, Get The Link generates a weblink to your map, and Embed It generates an iframe code to insert the live map in your website. For next steps, go to the [Embed on Your Web](../../embed) chapters in this book.
 

@@ -17,7 +17,7 @@ all other data ranges include it.
 (ref:scatter-labels) In the chart's Setup window, choose *Add labels* to the Series.
 
 ```{r scatter-labels, out.width="350px", fig.cap="(ref:scatter-labels)"}
-knitr::include_graphics("images/06-chart/scatter-labels-annotated.png")
+knitr::include_graphics("images/07-chart/scatter-labels-annotated.png")
 ```
 
 Tip: You may notice that some data points are too close to edges, and their labels are cut off.
@@ -40,7 +40,7 @@ with the country name and the two data points.
 (ref:bubble-3) This bubble chart is essentially a scatter chart, because no other dimensions (colors, sizes) are used. [See data](https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/edit?usp=sharing) by World Bank. Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/u/3/d/e/2PACX-1vQtMosshgyX6YoPpHo9QhSPk-ckOw1_yRryTF_vYJooBeWF13RaPv2IrGffcpaiqHPwfKFJAWY0HwA3/pubchart?oid=2105121864&format=interactive).
 
 ```{r bubble-3, fig.cap="(ref:bubble-3)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive") else knitr::include_graphics("images/06-chart/bubble-3.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/pubchart?oid=2105121864&amp;format=interactive") else knitr::include_graphics("images/07-chart/bubble-3.png")
 ```
 
 The data for this example is available in [Google Sheets Bubble chart with 3 columns template](https://docs.google.com/spreadsheets/d/1CL7joH_3wvMYo9HIiSuFP0Ykv_Nl5DK6DYYcd3_gFnU/).
@@ -71,7 +71,7 @@ Float your cursor over bubbles to view data details in the interactive version o
 (ref:bubble-5) This bubble chart shows fertility and life expectancy for several countries, including their population (shown by bubble size) and region (shown by bubble color). [See data](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/) by World Bank. Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&format=interactive).
 
 ```{r bubble-5, fig.cap="(ref:bubble-5)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive") else knitr::include_graphics("images/06-chart/bubble-5.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vQV0lrK1Lomxg-2IJJAYrB8Dvb9uc9mu5bKM2S8sWHzY9-E6ajoZwU4fRSghe2kXIHcmK4SfZO2NG4B/pubchart?oid=200651442&amp;format=interactive") else knitr::include_graphics("images/07-chart/bubble-5.png")
 ```
 
 The five-column dataset is available in this [Google Sheets Bubble chart with 5 columns template](https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/).
@@ -81,7 +81,7 @@ y-axis value, color, and bubble size.
 (ref:bubble-5-data) Bubble chart data. Bubble size represents population, color – region.
 
 ```{r bubble-5-data, out.width="400px", fig.cap="(ref:bubble-5-data)"}
-knitr::include_graphics("images/06-chart/bubble-5-data.png")
+knitr::include_graphics("images/07-chart/bubble-5-data.png")
 ```
 
 Select all data and go to *Insert > Chart*, and choose Bubble as the Chart type.

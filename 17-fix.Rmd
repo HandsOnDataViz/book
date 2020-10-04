@@ -30,7 +30,7 @@ Several tools in this book will not work properly if your computer does not disp
 
 Avoid typing blank spaces after column headers---or any spreadsheet entries---since some data visualization tools will not match them with headers lacking a blank character.
 
-![](images/16-fix/avoid-header-blank-space.png)
+![](images/17-fix/avoid-header-blank-space.png)
 
 #### Problems with iframes {-}
 
@@ -47,11 +47,11 @@ Avoid typing blank spaces after column headers---or any spreadsheet entries---si
 
 - Use only `https` (the extra 's' means 'secure'), not `http`. Some web browsers will block content if it mixes http and https resources, and some code templates in this book require https.
 
-![Screenshot: Replace http with https](images/16-fix/http-vs-https.png)
+![Screenshot: Replace http with https](images/17-fix/http-vs-https.png)
 
 - Use only straight quotes, not curly quotes. Avoid pasting text from a word-processor into GitHub, which can accidentally carry over curly quotes. Typing directly into the GitHub editor will create straight quotes.
 
-![Screenshot: Curly quotes versus straight quotes](images/16-fix/curly-vs-straight-quotes.png)
+![Screenshot: Curly quotes versus straight quotes](images/17-fix/curly-vs-straight-quotes.png)
 
 
 
@@ -101,7 +101,7 @@ If your map does *not* appear right away, wait up to 30 seconds for GitHub Pages
   - Ideally, your README.md should be the ONLY file in this GitHub repository
   - Any other files in your repo (such as index.html, default.html, or index.md) will block the iframe HTML code in your README.md from being published on the web. If you accidentally selected a GitHub Pages Theme, you need to delete any extra files it created: click each file, select trash can to delete it, and commit changes.
 
-![Screenshot: Extra files in GitHub repo will block iframe in your README](images/16-fix/extra-files-block-readme-iframe.png)
+![Screenshot: Extra files in GitHub repo will block iframe in your README](images/17-fix/extra-files-block-readme-iframe.png)
 
 
 
@@ -118,11 +118,11 @@ If your map does *not* appear right away, wait up to 30 seconds for GitHub Pages
 2) Check your Google Sheet for errors:
 - Do NOT rename column headers (in row 1) of any sheet, because the Leaflet Map code looks for these exact words.
 
-![Screenshot: User accidentally renamed column headers in the Points tab](images/16-fix/lmwgs-fix-column-headers.png)
+![Screenshot: User accidentally renamed column headers in the Points tab](images/17-fix/lmwgs-fix-column-headers.png)
 
 - Do NOT rename row labels (in column A) of any sheet, due to the same reason above.
 
-![Screenshot: Do not rename or delete](images/16-fix/lmwgs-do-not-rename-labels.png)
+![Screenshot: Do not rename or delete](images/17-fix/lmwgs-do-not-rename-labels.png)
 
 - In your Points tab, DO NOT leave any blank rows
 
@@ -143,8 +143,8 @@ Peek inside any website and view the web code under the hood with the browser de
 
 In Chrome for Mac, go to View > Developer > Developer Tools
 
-![](images/16-fix/Chrome-developer-tools.png)
+![](images/17-fix/Chrome-developer-tools.png)
 
 In Firefox for Mac, go to Tools > Web Developer > Inspector
 
-![](images/16-fix/Firefox-tools-inspector.png)
+![](images/17-fix/Firefox-tools-inspector.png)

@@ -60,7 +60,7 @@ Sometimes you download good data, but your visualization tool requires you to tr
 knitr::include_graphics("images/05-clean/sheets-years-row.png")
 ```
 
-But if you wish to create a line chart, which you'll learn in [Chapter 6: Chart Your Data](chart.html), you need to transpose the data above, so that the years run down the first vertical column, as shown in Figure \@ref(fig:sheets-years-column).
+But if you wish to create a line chart, which you'll learn in [Chapter 7: Chart Your Data](chart.html), you need to transpose the data above, so that the years run down the first vertical column, as shown in Figure \@ref(fig:sheets-years-column).
 
 (ref:sheets-years-column) But we need to transpose the data to place years in the first vertical column.
 
@@ -173,7 +173,7 @@ using the ampersand (`&`) symbol. Also, you can add separators into your formula
  knitr::include_graphics("images/05-clean/sheets-combine.png")
 ```
 
-Now that you have successfully combined the terms into one location column, you can use the [Geocoding by SmartMonkey Google Sheets Add-on we described in Chapter 3](geocode.html) to find the latitude and longitude coordinates, in order to [map your data as we'll discuss in Chapter 7](map.html)
+Now that you have successfully combined the terms into one location column, you can use the [Geocoding by SmartMonkey Google Sheets Add-on we described in Chapter 3](geocode.html) to find the latitude and longitude coordinates, in order to [map your data as we'll discuss in Chapter 8](map.html)
 
 Note: Lisa Charlotte Rost from Datawrapper has written a brilliant [blog post](https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/)
 about cleaning and preparing your spreadsheet data for analysis and visualization,

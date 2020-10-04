@@ -4,15 +4,15 @@ You might be surprised that a data visualization book which emphasizes charts an
 
 TODO: Break this out into two separate sections and place in the body of the chapter, before Datawrapper?
 
-Of course, you can create tables with spreadsheet tools. For example, with Google Sheets you can format rows and columns of data, and download the table as a static PDF image that you can place in a document, or convert into a PNG or JPG image to easily insert on a web page. Sometimes this simple approach makes sense. Also, you can use the [spreadsheet pivot table feature in Chapter 3](pivot.html) to create a more sophisticated cross-tabulation, and export it as an image to insert in a document or website. With Google Sheets, you can can also publish any of your tables online, and [embed them on a web page as we'll discuss in Chapter 9](embed.html), so that whenever you update your Google Sheet, the current data will automatically appear on the web page. Furthermore, you can also use Tableau Public, a tool we previously introduced in [chapter 6](chart-tableau.html) and [chapter 7](map-tableau.html) to create a highlight table, which automatically colors the backgrounds of cells to draw your eye to higher versus lower values.
+Of course, you can create tables with spreadsheet tools. For example, with Google Sheets you can format rows and columns of data, and download the table as a static PDF image that you can place in a document, or convert into a PNG or JPG image to easily insert on a web page. Sometimes this simple approach makes sense. Also, you can use the [spreadsheet pivot table feature in Chapter 3](pivot.html) to create a more sophisticated cross-tabulation, and export it as an image to insert in a document or website. With Google Sheets, you can can also publish any of your tables online, and [embed them on a web page as we'll discuss in Chapter 10](embed.html), so that whenever you update your Google Sheet, the current data will automatically appear on the web page. Furthermore, you can also use Tableau Public, a tool we previously introduced in [Chapter 7](chart-tableau.html) and [Chapter 8](map-tableau.html) to create a highlight table, which automatically colors the backgrounds of cells to draw your eye to higher versus lower values.
 
-In this chapter, we'll focus on creating interactive tables, which have many advantages over static tables when publishing your information online, rather than only in print. First, interactive tables allow readers to search by keyword for specific details that interest them, which is vital when you present long tables with lots of rows. Second, readers can sort interactive tables in ascending or descending order for any column, which enables them to quickly scan those near the top or bottom of a long list. Finally, you'll also learn how to insert *sparklines*, or tiny charts that visually summarize data trends in each row, and automatically place them inside your interactive table. Sparklines blend the best qualities of tables and charts by making it easier for readers to visually scan for patterns while skimming down the rows and columns of your data table. Later in [Chapter 9: Embed On Your Web](embed.html), you'll learn how to integrate your interactive table into your website.
+In this chapter, we'll focus on creating interactive tables, which have many advantages over static tables when publishing your information online, rather than only in print. First, interactive tables allow readers to search by keyword for specific details that interest them, which is vital when you present long tables with lots of rows. Second, readers can sort interactive tables in ascending or descending order for any column, which enables them to quickly scan those near the top or bottom of a long list. Finally, you'll also learn how to insert *sparklines*, or tiny charts that visually summarize data trends in each row, and automatically place them inside your interactive table. Sparklines blend the best qualities of tables and charts by making it easier for readers to visually scan for patterns while skimming down the rows and columns of your data table. Later in [Chapter 10: Embed On Your Web](embed.html), you'll learn how to integrate your interactive table into your website.
 
-In this chapter, you'll learn about table design principles and how to use [Datawrapper](http://datawrapper.de), a tool we introduced in [Chapter 6: Chart Your Data](chart.html) and [Chapter 7: Map Your Data](map.html) to create an interactive table with sparklines.
+In this chapter, you'll learn about table design principles and how to use [Datawrapper](http://datawrapper.de), a tool we introduced in [Chapter 7: Chart Your Data](chart.html) and [Chapter 8: Map Your Data](map.html) to create an interactive table with sparklines.
 
 ## Table Design Principles {- #table-design}
 
-Let's begin with some principles of good table design, similar to how we learned about [chart design in Chapter 6](chart-design.html) and [map design in Chapter 7](map-design.html). Jonathan Schwabish, an economist who specializes in creating policy-relevant data visualizations, offers his advice in recent publications about creating tables that communicate well with multiple audiences.^[@schwabishThreadSummarizingTen2020; @schwabishTenGuidelinesBetter2020; @schwabishBetterDataVisualizations2021]. Here's a summary of several of his key points, which also appear in Figure \@ref(fig:table-design).
+Let's begin with some principles of good table design, similar to how we learned about [chart design in Chapter 7](chart-design.html) and [map design in Chapter 8](map-design.html). Jonathan Schwabish, an economist who specializes in creating policy-relevant data visualizations, offers his advice in recent publications about creating tables that communicate well with multiple audiences.^[@schwabishThreadSummarizingTen2020; @schwabishTenGuidelinesBetter2020; @schwabishBetterDataVisualizations2021]. Here's a summary of several of his key points, which also appear in Figure \@ref(fig:table-design).
 
 1. Make column headers stand out above the data.
 2. Use light shading to separate rows or columns.
@@ -23,10 +23,10 @@ Let's begin with some principles of good table design, similar to how we learned
 (ref:table-design) A sample table that illustrates selected design principles.
 
 ```{r table-design, out.width=600, fig.cap="(ref:table-design)"}
-knitr::include_graphics("images/08-table/table-design.png")
+knitr::include_graphics("images/09-table/table-design.png")
 ```
 
-In addition, Schwabish and others recommend using color to highlight key items or outliers in your data, a topic we'll discuss later in [Chapter 15: Tell Your Data Story](story.html).
+In addition, Schwabish and others recommend using color to highlight key items or outliers in your data, a topic we'll discuss later in [Chapter 16: Tell Your Data Story](story.html).
 
 Overall, the core principles of table design reflect similar concepts we previously discussed in chart and map design. Organize your presentation of the data with the readers' eyes in mind, to focus their attention on the most important elements of the story, so that they "take away" the most meaningful interpretation of the information. Do the visualization work for them, so that you don't have to rely on them to draw the same mental connections in their own minds. Remove any clutter or unnecessary repetition that stands in the way of these goals.
 
@@ -34,7 +34,7 @@ Now that you understand key principles of table design, see how several of them 
 
 ## Datawrapper Table with Sparklines {- #table-datawrapper}
 
-In this section, you'll learn how to create an interactive table with [Datawrapper](https://datawrapper.de), the free online drag-and-drop visualization tool we previously introduced [to create charts in Chapter 6](chart-design.html) and [maps in Chapter 7](map-design.html). You can start creating in Datawrapper right away in your browser, even without an account, but signing up for a free one will help you to keep your visualizations organized. Remember that you'll probably still need a spreadsheet tool, such as Google Sheets, to compile and clean up data for large tables, but Datawrapper is the best tool to create and publish the interactive table online.
+In this section, you'll learn how to create an interactive table with [Datawrapper](https://datawrapper.de), the free online drag-and-drop visualization tool we previously introduced [to create charts in Chapter 7](chart-design.html) and [maps in Chapter 8](map-design.html). You can start creating in Datawrapper right away in your browser, even without an account, but signing up for a free one will help you to keep your visualizations organized. Remember that you'll probably still need a spreadsheet tool, such as Google Sheets, to compile and clean up data for large tables, but Datawrapper is the best tool to create and publish the interactive table online.
 
 You'll also learn how to create sparklines, or tiny line charts that quickly summarize data trends. This chart type was refined by Edward Tufte, a Yale professor and data visualization pioneer, who described sparklines as "datawords... intense, simple, word-sized graphics."^[@tufteBeautifulEvidence2006, pp. 46-63.] While Tufte envisioned sparklines on a static sheet of paper or PDF document, you'll create them inside an interactive table, as shown in Figure \@ref(fig:datawrapper-table). Readers can search by keyword, sort columns in ascending or descending order, and scroll through pages of sparklines to quickly identify data trends that would be difficult to spot in a traditional numbers-only table.
 
@@ -42,12 +42,12 @@ You'll also learn how to create sparklines, or tiny line charts that quickly sum
 
 ```{r datawrapper-table, fig.cap="(ref:datawrapper-table)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/0HK4f/2/", height = "1007px") else
-knitr::include_graphics("images/08-table/datawrapper-table.png")
+knitr::include_graphics("images/09-table/datawrapper-table.png")
 ```
 
 In this tutorial, you'll create an interactive table with sparklines to visualize differences in life expectancy at birth from 1960 to 2018 for over 195 nations around the world. Overall, life expectancy gradually rises in most nations, but a few display "dips" that stand out in the tiny line charts. For example, Cambodia and Vietnam both experienced a significant decrease in life expectancy, which corresponds with the deadly wars and refugee crises in both nations from the late 1960s to the mid-1970s. Sparklines help us to visually detect patterns like these, which anyone can investigate further by downloading the raw data through the link at the bottom of the interactive table.
 
-While it's possible to present the same data in a [filtered line chart as shown in Chapter 6](filtered-line-chart-tableau.html), it would be difficult for readers to spot differences when shown over 180 lines at the same time. Likewise, it's also possible to present this data in a [choropleth map as shown in Chapter 7](map-datawrapper.html), though it would be hard for readers to identify data for nations with smaller geographies compared to larger ones. In this particular case, when we want readers to be able to search, sort, or scroll through sparklines for all nations, the best visualization is a good table.
+While it's possible to present the same data in a [filtered line chart as shown in Chapter 7](filtered-line-chart-tableau.html), it would be difficult for readers to spot differences when shown over 180 lines at the same time. Likewise, it's also possible to present this data in a [choropleth map as shown in Chapter 8](map-datawrapper.html), though it would be hard for readers to identify data for nations with smaller geographies compared to larger ones. In this particular case, when we want readers to be able to search, sort, or scroll through sparklines for all nations, the best visualization is a good table.
 
 To create your own interactive table with sparklines, follow this tutorial, which we adapted from  [Datawrapper training materials](https://www.datawrapper.de/training-materials/) and their [gallery of examples](https://www.datawrapper.de/tables/):
 
@@ -72,7 +72,7 @@ Note: To learn more about flag icons, read the [Datawrapper post on this topic](
 (ref:datawrapper-flag) Customize the *Nation* column and push slider to replace codes with flags.
 
 ```{r datawrapper-flag, fig.cap="(ref:datawrapper-flag)"}
-knitr::include_graphics("images/08-table/datawrapper-flag.png")
+knitr::include_graphics("images/09-table/datawrapper-flag.png")
 ```
 
 8. Let's hide the first two columns, since they're no longer necessary to display. In the *Visualize* screen under *Customize columns*, select the *Name* column, then scroll down and un-check the boxes to *Show on desktop and mobile*. Repeat this step for the *Code* column. A "not visible" symbol (an eye with a slash through it) appears next to each customized column to remind us that we've hidden it.
@@ -82,7 +82,7 @@ knitr::include_graphics("images/08-table/datawrapper-flag.png")
 (ref:datawrapper-colors) Customize the *Continent* column and push slider to color cells based on categories.
 
 ```{r datawrapper-colors, out.width=600, fig.cap="(ref:datawrapper-colors)"}
-knitr::include_graphics("images/08-table/datawrapper-colors.png")
+knitr::include_graphics("images/09-table/datawrapper-colors.png")
 ```
 
 10. Now let's prepare our data to add sparklines, or tiny line charts, to visually represent change in the *Life expectancy 1960* column, which we intentionally left blank for this step. Before you begin, you must change this column from textual data (represented by the A symbol in the *Customize columns* window) to numerical data (represented by the # symbol). At the top of the screen, click on the *2. Check and Describe* arrow to go back a step. (Datawrapper will save your work.) Now click on the table header to edit the properties for *column E: Life Expectancy 1960*. On the left side, use the drop-down menu to change its properties from *auto (text)* to *Number*, as shown in Figure \@ref(fig:datawrapper-edit-column). Then click *Proceed* to return to the *Visualize* window.
@@ -90,7 +90,7 @@ knitr::include_graphics("images/08-table/datawrapper-colors.png")
 (ref:datawrapper-edit-column) Go back to *Check & Describe* to change the properties of column E from textual to numerical data.
 
 ```{r datawrapper-edit-column, fig.cap="(ref:datawrapper-edit-column)"}
-knitr::include_graphics("images/08-table/datawrapper-edit-column.png")
+knitr::include_graphics("images/09-table/datawrapper-edit-column.png")
 ```
 
 11. To create the sparklines, in the *Visualize* screen under *Customize columns*, select *all* of the columns from *Life expectancy 1960* down to *2018*. To select all at once, click on one column, then scroll down and shift-click on the next-to-last column. Then scroll down the page and click the *Show selected columns as tiny chart* button, as shown in Figure \@ref(fig:datawrapper-tiny-chart). These steps will create the sparklines in the column, renamed *Life expectancy 1960--2018*, as shown in Figure \@ref(fig:datawrapper-bar-chart).
@@ -100,7 +100,7 @@ Tip: By design, we initially named this column *Life expectancy 1960*, because w
 (ref:datawrapper-tiny-chart) Shift-click to select all columns from *Life expectancy 1960--2018* down to *2018*, then click on *Show selected columns as tiny chart*.
 
 ```{r datawrapper-tiny-chart, out.width=300, fig.cap="(ref:datawrapper-tiny-chart)"}
-knitr::include_graphics("images/08-table/datawrapper-tiny-chart.png")
+knitr::include_graphics("images/09-table/datawrapper-tiny-chart.png")
 ```
 
 12. Let's add one more visual element: a bar chart to visually represent the *Difference* column in the table. In the *Visualize* screen under *Customize columns*, select *Difference*. Then scroll down and push the slider to select *Show as bar chart*, as shown in Figure \@ref(fig:datawrapper-bar-chart).
@@ -108,12 +108,12 @@ knitr::include_graphics("images/08-table/datawrapper-tiny-chart.png")
 (ref:datawrapper-bar-chart) Select the *Difference* column and *Show as bar chart*.
 
 ```{r datawrapper-bar-chart, fig.cap="(ref:datawrapper-bar-chart)"}
-knitr::include_graphics("images/08-table/datawrapper-bar-chart.png")
+knitr::include_graphics("images/09-table/datawrapper-bar-chart.png")
 ```
 
 13. In the *Visualize* screen, click the *Annotate* tab to add a title, data source, and byline.
 
-14. Click on *Publish & Embed* to share the link to your [interactive table](https://datawrapper.dwcdn.net/0HK4f/2/), as previously shown in Figure \@ref(fig:datawrapper-table). Click the blue *Publish chart* button to obtain the embed code to place your visualization on the web, which you'll learn about in [Chapter 9: Embed On Your Web](embed.html).
+14. Click on *Publish & Embed* to share the link to your [interactive table](https://datawrapper.dwcdn.net/0HK4f/2/), as previously shown in Figure \@ref(fig:datawrapper-table). Click the blue *Publish chart* button to obtain the embed code to place your visualization on the web, which you'll learn about in [Chapter 10: Embed On Your Web](embed.html).
 
 To learn more, we highly recommend the [Datawrapper Academy support pages](https://academy.datawrapper.de/), the extensive [gallery of examples](https://www.datawrapper.de/tables/), and well-designed [training materials](https://www.datawrapper.de/training-materials/).
 

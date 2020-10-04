@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Normalize Data for Meaningful Maps | Hands-On Data Visualization</title>
+  <title>Normalize Your Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Normalize Data for Meaningful Maps | Hands-On Data Visualization" />
+  <meta property="og:title" content="Normalize Your Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Normalize Data for Meaningful Maps | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Normalize Your Data | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -25,16 +25,16 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-09-30" />
+<meta name="date" content="2020-10-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="pivot-point-to-polygon.html"/>
-<link rel="next" href="convert-geojson.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<link rel="prev" href="compare.html"/>
+<link rel="next" href="averages-percentages.html"/>
+<script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -193,7 +193,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tabula.html"><a href="tabula.html"><i class="fa fa-check"></i>Extract Tables from PDFs with Tabula</a></li>
 <li class="chapter" data-level="" data-path="open-refine.html"><a href="open-refine.html"><i class="fa fa-check"></i>Clean Data with OpenRefine</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>6</b> Chart Your Data</a>
+<li class="chapter" data-level="6" data-path="compare.html"><a href="compare.html"><i class="fa fa-check"></i><b>6</b> Compare Appropriate Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
+<li class="chapter" data-level="" data-path="averages-percentages.html"><a href="averages-percentages.html"><i class="fa fa-check"></i>Clarify Averages and Percentages</a></li>
+<li class="chapter" data-level="" data-path="individuals-groups.html"><a href="individuals-groups.html"><i class="fa fa-check"></i>Comparing Individuals versus Groups</a></li>
+<li class="chapter" data-level="" data-path="selection-bias.html"><a href="selection-bias.html"><i class="fa fa-check"></i>Avoid Selection Bias</a></li>
+<li class="chapter" data-level="" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i>Be Cautious about Correlation, Causation, and Confounding Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>7</b> Chart Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google.html"><a href="chart-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
@@ -207,20 +215,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="scatter-tableau.html"><a href="scatter-tableau.html"><i class="fa fa-check"></i>- Scatter Chart</a></li>
 <li class="chapter" data-level="" data-path="filtered-line-tableau.html"><a href="filtered-line-tableau.html"><i class="fa fa-check"></i>- Filtered Line Chart</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>7</b> Map Your Data</a>
+<li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-map-data.html"><a href="normalize-map-data.html"><i class="fa fa-check"></i>Normalize Your Map Data</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-datawrapper.html"><a href="map-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
 <li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Polygon Map with Tableau Public</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>8</b> Table Your Data</a>
+<li class="chapter" data-level="9" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>9</b> Table Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="table-design.html"><a href="table-design.html"><i class="fa fa-check"></i>Table Design Principles</a></li>
 <li class="chapter" data-level="" data-path="table-datawrapper.html"><a href="table-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Table with Sparklines</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>9</b> Embed On Your Web</a>
+<li class="chapter" data-level="10" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>10</b> Embed On Your Web</a>
 <ul>
 <li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
 <li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
@@ -229,13 +238,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
 <li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>10</b> Edit and Host Code with GitHub</a>
+<li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> Edit and Host Code with GitHub</a>
 <ul>
 <li class="chapter" data-level="" data-path="copy-leaflet.html"><a href="copy-leaflet.html"><i class="fa fa-check"></i>Copy, Edit, and Host a Simple Leaflet Map Template</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="chartcode.html"><a href="chartcode.html"><i class="fa fa-check"></i><b>11</b> Chart.js and Highcharts Templates</a>
+<li class="chapter" data-level="12" data-path="chartcode.html"><a href="chartcode.html"><i class="fa fa-check"></i><b>12</b> Chart.js and Highcharts Templates</a>
 <ul>
 <li class="chapter" data-level="" data-path="chartjs-bar-column.html"><a href="chartjs-bar-column.html"><i class="fa fa-check"></i>Bar or Column Chart with Chart.js</a></li>
 <li class="chapter" data-level="" data-path="chartjs-error-bars.html"><a href="chartjs-error-bars.html"><i class="fa fa-check"></i>Error Bars with Chart.js</a></li>
@@ -244,7 +253,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chartjs-scatter.html"><a href="chartjs-scatter.html"><i class="fa fa-check"></i>Scatter Chart with Chart.js</a></li>
 <li class="chapter" data-level="" data-path="chartjs-bubble.html"><a href="chartjs-bubble.html"><i class="fa fa-check"></i>Bubble Chart with Chart.js</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>12</b> Leaflet Map Templates</a>
+<li class="chapter" data-level="13" data-path="leaflet.html"><a href="leaflet.html"><i class="fa fa-check"></i><b>13</b> Leaflet Map Templates</a>
 <ul>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-google-sheets.html"><a href="leaflet-maps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Maps with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets</a></li>
@@ -254,18 +263,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap with CSV Point Data</a></li>
 <li class="chapter" data-level="" data-path="leaflet-searchable-map.html"><a href="leaflet-searchable-map.html"><i class="fa fa-check"></i>Leaflet Searchable Map with CSV Points</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>13</b> Transform Your Map Data</a>
+<li class="chapter" data-level="14" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>14</b> Transform Your Map Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Data for Meaningful Maps</a></li>
 <li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
 <li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>14</b> Detect Lies and Reduce Bias</a>
+<li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Bias</a>
 <ul>
 <li class="chapter" data-level="" data-path="bad-visualizations.html"><a href="bad-visualizations.html"><i class="fa fa-check"></i>Avoid Bad Visualizations</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
@@ -274,7 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Different Types of Data Bias</a></li>
 <li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>15</b> Tell Your Data Story</a></li>
+<li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="fix.html"><a href="fix.html"><i class="fa fa-check"></i><b>A</b> Fix Common Mistakes</a></li>
 <li class="chapter" data-level="B" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i><b>B</b> Find Connecticut Data</a></li>
@@ -321,56 +329,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="normalize" class="section level2 unnumbered" number="">
-<h2>Normalize Data for Meaningful Maps</h2>
-<p>TODO: Consider moving “Normalize” section out of Ch11: Transform and into a new short chapter called “Compare Appropriate Data” or “Compare Meaningful Data” or “Make Meaningful Comparisons.” Expand the chapter to address numerical data in any format: text, tables, charts, or maps. Use denominators to put data into context. Explain the initial problem as one about raw versus adjusted data (see Alberto Cairo’s example about highway deaths by state: raw data, or as percent of population, or as percent of miles driven). Broaden to discuss non-adjusted data versus adjusted data for various dimensions, such as population (see prior example), time (inflation, seasonal employment), geographic area (rural/suburban/urban), etc. On a related point about rates, avoid confusing “percent change” with “percentage point difference” and explain the two. The ideal location for this new chapter would be between Ch5: Clean and Ch6: Chart, because we want people to consider adjusting their data after finding and cleaning it, but before charting or mapping it.
-ALSO ADD:
-- avoid cherry-picking data
-- beware individual versus aggregated data (people vs counties)
-- use resistant statistics (median and percentile) vs non-resistant ones that fluctuate with outliers (average mean and standard deviation). To update old joke, when a billionaire walks into a room, everyone becomes a millionaire, on average. But the median income barely changes.
-- isolate confounding variables
-ADD
-Be aware of statistically biased processes, such as a statistical sampling method that regularly yields inaccurate results. Sometimes bias arises due to a combination of human behavior and poor numerical reasoning.
-- Reporting bias: on surveys, people may over-report positive behavior, or under-report attitudes deemed negative by broader society. how to address: see chapter on find and question your data, make appropriate comparisons, and clarify problems in text that accompanies visualization
-- Selection bias: comparing samples as if they were truly representative of the broader population, but in fact are not: common to mistakenly compare student academic performance in different types of schools, such as public versus private, or traditional public versus charter school, without recognizing how pools of applicants may differ…. how to address: carefully examine the underlying selection processes, and make appropriate comparisons between groups, and clarify problems in text that accompanies visualization
-- Later in book we’ll discuss cognitive biases that may be baked into human behavior, and algorithmic biases that we sometimes build into our software…</p>
-<p>Choropleth maps are best when they represent relative, not absolute values.
-Consider two maps shown in Figure <a href="normalize.html#fig:normalize-map-data">13.4</a>. They both are
-about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of
-June 26, 2020. Figure <a href="normalize.html#fig:normalize-map-data">13.4</a>a shows total number of recorded cases per state,
-and Figure <a href="normalize.html#fig:normalize-map-data">13.4</a>b shows Covid-19 cases adjusted by the state’s population.
-Darker colors represent higher values. Do you notice any differences in spatial patterns?</p>
-
-<div class="figure"><span id="fig:normalize-map-data"></span>
-<img src="images/13-transform/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
-<p class="caption">
-Figure 13.4: Choropleth maps work best with normalized values.
-</p>
-</div>
-<p>Both maps show Covid-19 data collected by the New York Times and published
-<a href="https://github.com/nytimes/covid-19-data">on GitHub</a>.
-In the map in Figure <a href="normalize.html#fig:normalize-map-data">13.4</a>b, we normalized (divided) values by population in each state,
-according to the 2018 US Census American Community Survey,
-the most recent data available on the day of writing. We didn’t
-add legends and other important cartographic elements so that you can
-better focus on interpreting spatial patterns. In both cases,
-we used Jenks natural breaks for classification.</p>
-<p>What are the worst-hit states according to the map showing total Covid-19 counts
-(shown in Figure <a href="normalize.html#fig:normalize-map-data">13.4</a>a)?
-If you are familiar with the US geography, you can quickly tell that these are
-New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California.
-But five of these happen to be some of the most populous states in the US,
-so it makes sense that they will also have higher Covid-19 cases.</p>
-<p>Now, how about the map in Figure <a href="normalize.html#fig:normalize-map-data">13.4</a>b?
-You can see that New York and its neighbors,
-including New Jersey and Massachusetts, have by far the highest rates per capita
-(per person), which we saw in the first map. But you can also see
-that in fact California, Texas, and Florida were impacted to a lesser extent
-than the map on the left had suggested. So the map with per-capita values is a
-much better illustration to the story about New York being the <em>first</em> epicenter of the Covid-19
-crisis in the United States.</p>
-<div id="different-ways-to-normalize-data" class="section level4 unnumbered" number="">
-<h4>Different ways to normalize data</h4>
-<p>You can normalize data in many ways, and there is not necessarily one
+<h2>Normalize Your Data</h2>
+<p>At first glance, “normalizing” or “adjusting” your data may sound like your fudging the numbers, or bending the truth. But we often cannot get closer to the truth without adjusting data to make more meaningful comparisons. Normalization is defined as adjust data collected using different scales into a common scale, in order to make more meaningful comparisons. Here are common ways to normalize:</p>
+<ul>
+<li><p>Adjust Absolute into Relative Numbers: as you saw above, raw numbers can be less meaningful than percentages or per capita…</p></li>
+<li><p>Adjust for Change over Time: We cannot compare median household income in 1960 versus 2019 without adjustment, because dollars had different levels of purchasing power over time, due to price inflation and related factors. If you need to make economic comparisons over time, look for data that has already been converted into “constant dollars,” such as median household income “in 2019 dollars.” Economists often refer to this difference as “nominal” data (un-adjusted) versus “real” data (adjusted). See example about real wages over time, which adjusts the dollar figures for each year into constant dollars, consumer price index… <a href="https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing" class="uri">https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing</a>
+It’s also common for economic data to have “seasonal adjustments” because…[TODO move relevant sentences from Detect Bias chapter to here, and cross-ref back]</p></li>
+<li><p>Adjust by Creating an Index… explain</p></li>
+</ul>
+<p>See books on statistical data analysis for more advanced techniques, such as comparing data through z-scores</p>
+<ul>
+<li>TODO: Explain how map designers face several issues with normalization… cross-ref to Normalize Map Data in Map chapter</li>
+<li>Adjust for Geographic Area?</li>
+</ul>
+<p>TODO: DECIDE if any of this prior text should be integrated into above</p>
+<p>Different ways to normalize data: You can normalize data in many ways, and there is not necessarily one
 acceptable way of doing it.</p>
 <p>One of the most common ways of normalization is deriving “per capita”, or “per person” values.
 If values are small, such as rare disease cases or lottery winners, they can be presented as “per 1,000” or “per 100,000” people.
@@ -387,10 +360,7 @@ among populations. We know that humans live anywhere between 0 and 120 years or 
 and we wouldn’t expect median ages to be vastly different from one country to another (maybe twice,
 but not tenfold). Median incomes, if measured in the same currency, also belong to the same scale
 and can be compared directly.</p>
-</div>
-<div id="how-not-to-normalize-values" class="section level4 unnumbered" number="">
-<h4>How not to normalize values</h4>
-<p>Absolute values are very important for context. Saying that “20% of blond men living in
+<p>How not to normalize values: Absolute values are very important for context. Saying that “20% of blond men living in
 in town X won the lottery” may sound like a catchy headline, but in reality
 the town has 450 residents, of those 200 are men, and of those only 5 have light hair color.
 One of those five (and here comes the 20%) was lucky to win the lottery, so technically
@@ -411,14 +381,13 @@ with map making. In the following section, we will talk about geographical data 
 will introduce different geospatial file formats to ensure you are
 ready to create, use, and share map data.</p>
 </div>
-</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="pivot-point-to-polygon.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="convert-geojson.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="compare.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="averages-percentages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -457,7 +426,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/13-transform.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/06-compare.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

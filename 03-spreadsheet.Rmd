@@ -165,7 +165,7 @@ Tip: Google Drive now allows you to edit Microsoft Office file formats, but not 
 Now that you know how to upload and convert an existing dataset, in the next section you'll learn how to install and use a Google Sheets add-on tool to geocode address data into latitude and longitude coordinates.
 
 ## Geocode Addresses with Google Sheets Add-On {- #geocode}
-In this section, you'll learn how to geocode data by installing a free Google Sheets add-on tool. This allows you to geocode addresses directly inside your spreadsheet, which will be very useful when using [Leaflet map code templates in Chapter 12](leaflet.html).
+In this section, you'll learn how to geocode data by installing a free Google Sheets add-on tool. This allows you to geocode addresses directly inside your spreadsheet, which will be very useful when using [Leaflet map code templates in Chapter 13](leaflet.html).
 
 Geocoding means converting addresses or location names into geographic coordinates (or x- and y-coordinates) that can be plotted on a map, as shown in Figure \@ref(fig:transform-data). For example, the Statue of Liberty in the New York City area is located at *40.69, -74.04*. The first number is the latitude and the second is the longitude. Since the equator is 0 degrees latitude, positive latitude is the northern hemisphere, and negative latitude is in the southern hemisphere. Similarly, the prime meridian is 0 degrees longitude, which passes through Greenwich, England. So positive longitude is east of the meridian, and negative longitude is west, until you reach the opposite side of the globe, roughly near the International Date Line in the Pacific Ocean.
 
@@ -212,7 +212,7 @@ When you paste your own address data into the spreadsheet to geocode it, follow 
 - Give the tool time to work. For example, if you enter 50 addresses, expect to wait at least 15 seconds for your geocoded results.
 - Always inspect the quality of your results, and never assume that geocoding services from any provider are accurate.
 
-If you need a faster geocoding service for US addresses, which can handle up to 10,000 requests in one upload, see [bulk geocoding with the US Census](bulk-geocode.html) in Chapter 13: Transform Your Map Data.
+If you need a faster geocoding service for US addresses, which can handle up to 10,000 requests in one upload, see [bulk geocoding with the US Census](bulk-geocode.html) in Chapter 14: Transform Your Map Data.
 
 Now that you know how to use a Google Sheets Add-on to geocode addresses, in the next section you will learn how to collect data using an online form, and access it as a spreadsheet.
 
@@ -243,7 +243,7 @@ Give each question a very short title, since these will appear as column headers
  knitr::include_graphics("images/03-spreadsheet/forms-description.png")
  ```
 
-To preview how your online will appear to recipients, click the *Eyeball symbol* near the top of the page, as shown in Figure \@ref(fig:forms-preview). When your form is complete, click the *Send* button to distribute it via email, a link, or to embed the live form as an iframe on a web page. Learn more about the latter option in [Chapter 9: Embed On Your Web](embed.html).
+To preview how your online will appear to recipients, click the *Eyeball symbol* near the top of the page, as shown in Figure \@ref(fig:forms-preview). When your form is complete, click the *Send* button to distribute it via email, a link, or to embed the live form as an iframe on a web page. Learn more about the latter option in [Chapter 10: Embed On Your Web](embed.html).
 
 (ref:forms-preview) Click the *Eyeball symbol* to preview your form.
 
@@ -351,7 +351,7 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/03-spr
 
 Spreadsheet tools contain many more functions to perform numerical calculations and also to modify text. Read more about functions in this support pages for [Google Sheets](https://support.google.com/docs/topic/9054603), [LibreOffice](https://help.libreoffice.org/Calc/Functions_by_Category), or [Microsoft Excel support page](https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb).
 
-See additional spreadsheet skills in later chapters of the book, such as how to [find and replace with blank](find-and-replace.html), [split data into separate columns](split-data.html), and [combine data into one column](combine-data.html) in [Chapter 5: Clean Up Messy Data](clean.html). See also how to [pivot address points into polygons](pivot-point-to-polygon.html) and [how to normalize data](normalize.html) in [Chapter 13: Transform Your Map Data](transform.html).
+See additional spreadsheet skills in later chapters of the book, such as how to [find and replace with blank](find-and-replace.html), [split data into separate columns](split-data.html), and [combine data into one column](combine-data.html) in [Chapter 5: Clean Up Messy Data](clean.html). See also how to [pivot address points into polygons](pivot-point-to-polygon.html) and [how to normalize data](normalize.html) in [Chapter 14: Transform Your Map Data](transform.html).
 
 Now that you've learned how to count one type of survey response, the next section will teach you how to regroup data with pivot tables that summarize all responses by different categories.
 
@@ -508,7 +508,7 @@ To demonstrate, we imported both of the Google Sheets above into this [live Airt
  knitr::include_graphics("images/03-spreadsheet/airtable-link.png")
 ```
 
-In our Airtable sample, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the *people* sheet, their organization's full address appears from the *food banks* sheet, as shown in Figure \@ref(fig:airtable-expand). In our editable version, if we update the address for one organization in the *food banks* sheet, it's automatically changed for all employees linked to that organization in the *people* sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we'll cover in [Chapter 9: Embed on your Web](embed.html). See more about its features in the [Airtable Support page](https://support.airtable.com).
+In our Airtable sample, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the *people* sheet, their organization's full address appears from the *food banks* sheet, as shown in Figure \@ref(fig:airtable-expand). In our editable version, if we update the address for one organization in the *food banks* sheet, it's automatically changed for all employees linked to that organization in the *people* sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we'll cover in [Chapter 10: Embed on your Web](embed.html). See more about its features in the [Airtable Support page](https://support.airtable.com).
 
 (ref:airtable-expand) In this [Airtable demo](https://airtable.com/shrOlb4XT11Xy2LP2), click on a row in one sheet to expand and view its linked data in another sheet.
 
@@ -519,6 +519,6 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://airta
 It's important to understand the conceptual differences between a "flat-file" spreadsheet and a relational database to help you determine when to use one tool versus another. As you've learned in the sections above, spreadsheets are your best choice to begin organizing and analyzing your data, using methods such as sorting, filtering, pivoting, and lookup, to help reveal the underlying stories that you may wish to visualize. But relational databases are your best choice when maintaining large amounts of data with internal links, like one-to-many relationships, such as an organization with several employees.  
 
 ### Summary {- #summary3}
-If you're one of the many people who "never really learned" about spreadsheets in school or on the job, or if you've taught yourself bits and pieces along the way, we hope that this chapter has successfully strengthened your skills. All of the subsequent chapters in this book, especially those on designing [interactive charts in Chapter 6](chart.html) and [interactive maps in Chapter 7](map.html), require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, pivot, and lookup matching data, with the broader goal of visualizing your data stories.
+If you're one of the many people who "never really learned" about spreadsheets in school or on the job, or if you've taught yourself bits and pieces along the way, we hope that this chapter has successfully strengthened your skills. All of the subsequent chapters in this book, especially those on designing [interactive charts in Chapter 7](chart.html) and [interactive maps in Chapter 8](map.html), require a basic level of familiarity with spreadsheets. In addition to serving as incredible time-savers when it comes to tedious data tasks, the spreadsheet tools and methods featured above are designed to help you share, sort, calculate, pivot, and lookup matching data, with the broader goal of visualizing your data stories.
 
 The next chapter describes strategies for finding and questioning your data, particularly on open data sites operated by governmental and non-profit organizations, where you'll also need spreadsheet skills to download and organize public information.

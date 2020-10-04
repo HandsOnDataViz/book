@@ -7,7 +7,7 @@ language:
     tab: "Table "
 chapter_name: "Chapter "
 
-# comment-out below when building Web book, un-comment for PDF and full-length Markdown
+# comment-out below when building HTML book, un-comment for PDF and full-length Markdown
 # rmd_files: [
 #   "index.Rmd",
 #   "01-introduction.Rmd",
@@ -15,16 +15,17 @@ chapter_name: "Chapter "
 #   "03-spreadsheet.Rmd",
 #   "04-find.Rmd",
 #   "05-clean.Rmd",
-#   "06-chart.Rmd",
-#   "07-map.Rmd",
-#   "08-table.Rmd",
-#   "09-embed.Rmd",
-#   "10-github.Rmd",
-#   "11-chartcode.Rmd",
-#   "12-leaflet.Rmd",
-#   "13-transform.Rmd",
-#   "14-detect.Rmd",
-#   "15-story.Rmd",
-#   "16-fix.Rmd",
-#   "20-references.Rmd"
+#   "06-compare.Rmd",
+#   "07-chart.Rmd",
+#   "08-map.Rmd",
+#   "09-table.Rmd",
+#   "10-embed.Rmd",
+#   "11-github.Rmd",
+#   "12-chartcode.Rmd",
+#   "13-leaflet.Rmd",
+#   "14-transform.Rmd",
+#   "15-detect.Rmd",
+#   "16-story.Rmd",
+#   "17-fix.Rmd",
+#   "21-references.Rmd"
 # ]

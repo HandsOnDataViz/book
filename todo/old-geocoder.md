@@ -25,7 +25,7 @@ go to *Geocoder* in the menu, and choose which geocoding utility to use, like is
 (ref:sheets-geocoder) Put addresses in the first column, and use Geocoder to fill in the remaining five.
 
 ```{r sheets-geocoder, fig.cap="(ref:sheets-geocoder)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/13-transform/sheets-geocoder.gif", height="280px") else knitr::include_graphics("images/13-transform/sheets-geocoder.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/14-transform/sheets-geocoder.gif", height="280px") else knitr::include_graphics("images/14-transform/sheets-geocoder.png")
 ```
 
 Note: If your address data is split into multiple columns (such as *Street*, *City*, and *State*),
@@ -69,7 +69,7 @@ is open-source and you can inspect it to make sure it doesn't steal or retain yo
 (ref:sheets-geocoder-censusgeo) Put addresses in the first column, and use Geocoder to fill in the remaining seven.
 
 ```{r sheets-geocoder-censusgeo, fig.cap="(ref:sheets-geocoder-censusgeo)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/13-transform/sheets-geocoder-censusgeo.gif", height="330px") else knitr::include_graphics("images/13-transform/sheets-geocoder-censusgeo.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/14-transform/sheets-geocoder-censusgeo.gif", height="330px") else knitr::include_graphics("images/14-transform/sheets-geocoder-censusgeo.png")
 ```
 
 #### Insert Google Sheets Geocoder script into your own spreadsheet {-}

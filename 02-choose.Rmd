@@ -105,24 +105,24 @@ When creating this book, we aimed to identify the most essential data visualizat
 
 Table: (\#tab:tools) Recommended Tools and Uses, with Chapter References
 
-|Tools|Organize|Clean|Chart|Geocode|Map|Table|Code|Transform|
-|---|---|---|---|---|---|---|---|---|
-|Google Sheets<br> spreadsheet/charts |[Ch3](spreadsheet-tools.html)|[Ch5](clean.html)|[Ch6](chart-google.html)|[Ch3](geocode.html)| |[Ch8](table.html)|  |  |
-|LibreOffice Calc<br> spreadsheet/charts   |[Ch3](spreadsheet-tools.html)|  |   |  |   |   |  |  |
-|Airtable<br> relational database     |[Ch3](database.html)|  |   |   |   |   |   |   |
-|Tabula PDF<br>table extractor  |   |[Ch5](tabula.html)|   |   |   |   |    |    |
-|OpenRefine<br> data cleaner          |   |[Ch5](open-refine.html)|   |     |    |    |     |    |
-|Datawrapper<br> charts/maps/tables   |   |   |[Ch6](chart-datawrapper.html)|[Ch7](map-datawrapper.html)|[Ch7](map-datawrapper.html)|[Ch8](table-datawrapper.html)|  |  |
-|Tableau Public<br> charts/maps/tables|   |   |[Ch6](chart-tableau.html)|   |[Ch7](map-tableau.html)|[Ch8](table.html)|    |  |
-|Chart.js<br> code templates          |   |   |[Ch11](chartcode.html)| |   |   |  |   |
-|Highcharts<br> code templates        |   |   |[Ch11](chartcode.html)|   |    |   |    |   |
-|Google My Maps<br> point map maker   |   |   |   |[Ch7](mymaps.html)|[Ch7](mymaps.html)| |   |   |
-|Leaflet map<br> code templates       |   |   |   |   |[Ch12](leaflet.html)|  |  |   |
-|GitHub<br> edit & host code |   |   |   |    |   |   |[Ch10](github.html)|   |
-|GitHub Desktop &<br>Atom code editor|   |   |   |    |   |   |[Ch10](github-desktop-atom.html)| |
-|GeoJson.io edit<br> & draw geodata   |   |   |   |    |   |   |     |[Ch13](geojsonio.html)|
-|Mapshaper<br> edit & join geodata    |   |   |   |    |   |   |     |[Ch13](mapshaper.html)|
-|MapWarper<br> georectify images   |   |   |   |    |   |   |     |[Ch13](mapwarper.html)|
+| Tools | Collect | Clean | Chart | Geocode | Map | Table | Code | Transform |
+|-|-|-|-|-|-|-|-|-|
+| Google Sheets  spreadsheet/charts | [Ch3](spreadsheet-tools.html) | [Ch5](clean.html) | [Ch7](chart-google.html) | [Ch3](geocode.html) |  | [Ch9](table.html) |  |  |
+| LibreOffice Calc  spreadsheet/charts | [Ch3](spreadsheet-tools.html) |  |  |  |  |  |  |  |
+| Airtable  relational database | [Ch3](database.html) |  |  |  |  |  |  |  |
+| Tabula PDF table extractor |  | [Ch5](tabula.html) |  |  |  |  |  |  |
+| OpenRefine  data cleaner |  | [Ch5](open-refine.html) |  |  |  |  |  |  |
+| Datawrapper  charts/maps/tables |  |  | [Ch7](chart-datawrapper.html) | [Ch8](map-datawrapper.html) | [Ch8](map-datawrapper.html) | [Ch9](table-datawrapper.html) |  |  |
+| Tableau Public  charts/maps/tables |  |  | [Ch7](chart-tableau.html) |  | [Ch8](map-tableau.html) | [Ch8](table.html) |  |  |
+| Chart.js  code templates |  |  | [Ch12](chartcode.html) |  |  |  |  |  |
+| Highcharts  code templates |  |  | [Ch12](chartcode.html) |  |  |  |  |  |
+| Google My Maps  point map maker |  |  |  | [Ch8](mymaps.html) | [Ch8](mymaps.html) |  |  |  |
+| Leaflet map  code templates |  |  |  |  | [Ch13](leaflet.html) |  |  |  |
+| GitHub  edit & host code |  |  |  |  |  |  | [Ch11](github.html) |  |
+| GitHub Desktop & Atom code editor |  |  |  |  |  |  | [Ch11](github-desktop-atom.html) |  |
+| GeoJson.io edit  & draw geodata |  |  |  |  |  |  |  | [Ch14](geojsonio.html) |
+| Mapshaper  edit & join geodata |  |  |  |  |  |  |  | [Ch14](mapshaper.html) |
+| MapWarper  georectify images |  |  |  |  |  |  |  | [Ch14](mapwarper.html) |
 
 TODO: Acknowledge that the book also mentions other useful tools that are not featured in the table, but you'll find them in the text...ColorBrewer, Geocoding by SmartMonkey, US Census Geocoder, Google Maps, Google Forms, Socrata repository chart & map tools, etc...
 

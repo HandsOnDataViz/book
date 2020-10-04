@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="map.html"/>
-<link rel="next" href="normalize-map-data.html"/>
+<link rel="next" href="mymaps.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -218,7 +218,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
-<li class="chapter" data-level="" data-path="normalize-map-data.html"><a href="normalize-map-data.html"><i class="fa fa-check"></i>Normalize Your Map Data</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="map-datawrapper.html"><a href="map-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
@@ -374,6 +373,128 @@ that appear when you click or hover over map elements.</p>
 <p>Interactive web maps often have zoom controls (<code>+</code> and <code>-</code> buttons) to allow
 users to inspect data from various “distances”.</p>
 </div>
+<div id="normalize-your-map-data" class="section level3 unnumbered" number="">
+<h3>Normalize Your Map Data</h3>
+<p>TODO: cross-ref back to Normalize data section in Compare chapter, then build on it here</p>
+<p>Choropleth maps are best when they represent relative values (such as percentages or per capita rates), not absolute values (such as the raw number of people).
+Consider two maps shown in Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>. They both are
+about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of
+June 26, 2020. Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>a shows total number of recorded cases per state,
+and Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>b shows Covid-19 cases adjusted by the state’s population.
+Darker colors represent higher values. Do you notice any differences in spatial patterns?</p>
+
+<div class="figure"><span id="fig:normalize-map-data"></span>
+<img src="images/14-transform/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
+<p class="caption">
+Figure 8.2: Choropleth maps work best with normalized values.
+</p>
+</div>
+<p>Both maps show Covid-19 data collected by the New York Times and published
+<a href="https://github.com/nytimes/covid-19-data">on GitHub</a>.
+In the map in Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>b, we normalized (divided) values by population in each state,
+according to the 2018 US Census American Community Survey,
+the most recent data available on the day of writing. We didn’t
+add legends and other important cartographic elements so that you can
+better focus on interpreting spatial patterns. In both cases,
+we used Jenks natural breaks for classification.</p>
+<p>What are the worst-hit states according to the map showing total Covid-19 counts
+(shown in Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>a)?
+If you are familiar with the US geography, you can quickly tell that these are
+New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California.
+But five of these happen to be some of the most populous states in the US,
+so it makes sense that they will also have higher Covid-19 cases.</p>
+<p>Now, how about the map in Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>b?
+You can see that New York and its neighbors,
+including New Jersey and Massachusetts, have by far the highest rates per capita
+(per person), which we saw in the first map. But you can also see
+that in fact California, Texas, and Florida were impacted to a lesser extent
+than the map on the left had suggested. So the map with per-capita values is a
+much better illustration to the story about New York being the <em>first</em> epicenter of the Covid-19
+crisis in the United States.</p>
+</div>
+<div id="color-palettes-sequential-diverging-and-qualitative" class="section level3 unnumbered" number="">
+<h3>Color Palettes: Sequential, Diverging, and Qualitative</h3>
+<p>If you build a choropleth map, the choice of colors is very important
+as color is the main way to represent values. So let’s talk about color palettes.</p>
+<p>Color palettes can be grouped into sequential, diverging, and qualitative.
+The examples are shown in Figure <a href="map-design.html#fig:map-principles-color-schemes">8.3</a>.</p>
+
+<div class="figure"><span id="fig:map-principles-color-schemes"></span>
+<img src="images/08-map/map-principles-color-schemes.png" alt="Examples of sequential, diverging, and qualitative color schemes from ColorBrewer."  />
+<p class="caption">
+Figure 8.3: Examples of sequential, diverging, and qualitative color schemes from <a href="https://colorbrewer2.org/">ColorBrewer</a>.
+</p>
+</div>
+<p>Sequential palettes are used to represent continuous numeric values, in other words, anything that can be placed
+on a scale. For example, average income, population counts, percent unemployed, etc.
+Usually such palettes are single-hue (for example, different shades of blue), and
+typically darker colors represent higher values (but not always).</p>
+<p>Note: See <a href="normalize.html">Normalize Data to Create Meaningful Choropleth Maps</a> section to see an example of sequential palette use, and learn why representing normalized instead of absolute values may be a better idea.</p>
+<p>Diverging palettes also represent continuous values.
+Unlike sequential palettes, however, diverging colors represent “direction” from some reference value,
+such as below or above zero, or below or above the average value.
+Diverging palettes typically have two distinct hues for “positive” and “negative” values,
+with a neutral color in the middle.</p>
+<p>Qualitative palettes typically consist of distinct hues that represent distinct classes.
+For example, the US Department of State issues travel advisory to foreign destinations
+ranging from “exercise normal precautions” to “do not travel” relying on a series of qualitative
+and quantitative measures, such as the likelihood of terror attacks, political and criminal situation, etc.
+But classes can also be derived from numerical values, as is the case with the World Bank’s classification
+of countries by income. The organization groups countries and territories into “low”, “lower-middle”,
+“higher-middle”, and “high” income categories based on gross national income per capita.</p>
+<p>It is important you choose an appropriate classification for your choropleth map.
+While the nature of certain datasets will make the choice of a color palette obvious,
+most of the time you will have to actively choose <em>how</em> to display your data.</p>
+<p>In Figure <a href="map-design.html#fig:map-principles-classification">8.4</a>a, we presented the same dataset using three
+different color palettes. The map in Figure <a href="map-design.html#fig:map-principles-classification">8.4</a>a
+represents per capita income for the contiguous US states using a sequential color scheme
+consisting of five shades of blue. The darker the color, the higher the income. You can quickly
+see that states in the north-east, such as Connecticut, Massachusetts, New Jersey,
+and Maryland have the highest per capita income.</p>
+<p>In Figure <a href="map-design.html#fig:map-principles-classification">8.4</a>b, we used a divergent color scheme to show
+whether states have higher or lower per capita incomes than the United States as a whole.
+We subtracted the US per capita income value of $33,831 from each state’s value. This new relative measure
+is positive for states with higher per capita income, and negative for the states whose per capita income
+is lower than in the US. In the map, sub-zero values are painted in orange, and above-zero values are
+in purple. Such color palette could be appropriate for a story about the north-south divide.</p>
+<p>You can also split the 48 states into three groups of 16 based on their per capita income, and group them in three
+thirds, as “low”, “middle”, and “top” third. This is what we did in the map shown in
+Figure <a href="map-design.html#fig:map-principles-classification">8.4</a>c.</p>
+
+<div class="figure"><span id="fig:map-principles-classification"></span>
+<img src="images/08-map/map-principles-classification.png" alt="Representing per capita income in US states using three different classifications."  />
+<p class="caption">
+Figure 8.4: Representing per capita income in US states using three different classifications.
+</p>
+</div>
+</div>
+<div id="colorbrewer" class="section level3 unnumbered" number="">
+<h3>ColorBrewer</h3>
+<p>One of the most useful color picking tools for meaningful choropleth
+maps is <a href="https://colorbrewer2.org/">ColorBrewer</a>, created by Cynthia Brewer and
+Mark Harrower. You can see ColorBrewer’s interface in Figure <a href="map-design.html#fig:map-principles-colorbrewer">8.5</a>.</p>
+
+<div class="figure"><span id="fig:map-principles-colorbrewer"></span>
+<img src="images/08-map/map-principles-colorbrewer-annotated.png" alt="ColorBrewer interface."  />
+<p class="caption">
+Figure 8.5: ColorBrewer interface.
+</p>
+</div>
+<p>ColorBrewer can generate color palettes for a specified number of classes - between three
+and nine for sequential, three and elevel for diverging, and three and twelve for qualitative.
+You can also choose palettes that are colorblind safe and print friendly.</p>
+<p>Remember that more colors (or “buckets”) does not equal better maps.
+People are quite bad at distinguishing hues, and an excessive number of
+buckets will make it harder for reader to compare map values with the legend.
+If you build a sequential color palette, we recommend you start with <em>five</em> buckets,
+then try four and six and decide what is appropriate for your data <em>and</em> your story.</p>
+<p>Fewer colors create a <em>coarse</em> map with differences in colored ranges becoming more visible.
+More colors create a more <em>granular</em> map, but differences in
+colored ranges become less visible.</p>
+<p>At this point, you should have some understanding of how maps work.
+So let’s move to the first practical exercise of creating a point map
+with Google My Maps.</p>
+</div>
 </div>
             </section>
 
@@ -381,7 +502,7 @@ users to inspect data from various “distances”.</p>
         </div>
       </div>
 <a href="map.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="normalize-map-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="mymaps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

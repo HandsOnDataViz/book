@@ -16,7 +16,7 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 | Map | Best use and tutorials in this book |
 | --- | --- |
 | Point map        <br> ![](images/08-map/map-point.png) | Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: [Google My Maps tutorial](mymaps.html)<br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
-| Polygon map      <br> ![](images/08-map/map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tools: [Tableau Public](map-tableau.html) or [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
+| Polygon or Choropleth map      <br> ![](images/08-map/map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. <br>Easy tool: [Datawrapper](map-datawrapper.html) <br>Power tools: [Tableau Public](map-tableau.html) or [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
 | Polyline map     <br> ![](images/08-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)|
 | Heat map     <br> ![](images/08-map/map-heat.png) | Used to show hotspots or clusters of events, such as high-crime areas. <br>Easy tool: n/a <br>Power tool: [Leaflet Heatmap template](leaflet-heatmap.html) |
 | Combination map   <br> ![](images/08-map/map-point-polygon-polyline.png) | Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)  |
@@ -24,11 +24,15 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 
 TODO ABOVE:
 
-- UPDATE table to match chapter contents, and reorganize to feature easier tools at top.
+- UPDATE table text and images to match chapter contents, and reorganize to feature easier tools at top.
+- DECIDE on consistent language for Colored Polygon and/or Choropleth map
 - Keep Google My Maps point map tool; perhaps mention BatchGeo again? Datawrapper symbol map?
-- Confirm removing Storymap "easy tools" because neither allow you to export data you enter: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/)
+- Confirm removing Storymap "easy tools" because neither allow you to export data you enter: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/) OR mention (but do not recommend) Storymap.js as an easy tool, but cannot easily migrate data out, then Leaflet Storymaps with GS as a power tool
+- mention HistoryPin.org as another storytelling type of map?
+
 - Add tab-view map for historical change template?
 - Add synchronized side-by-side map template?
+- Remind readers to see GitHub chapter before using code templates
 
 ## Map Design Principles {- #map-design}
 
@@ -355,7 +359,7 @@ so you have to explore the studio yourself if you want to create
 more complex projects.
 
 
-## Choropleth Map with Datawrapper {- #map-datawrapper}
+## Polygon Choropleth Map with Datawrapper {- #map-datawrapper}
 
 TODO: Review steps due to recent Datawrapper updates: see their new Academy pages on Choropleth interpolation (ranges) and colors
 
@@ -417,6 +421,8 @@ columns in order to perform merging.
 Since the dataset that we prepared contains both columns (titled *State* and *StateAbbr*),
 you can confidently press the *Start import* button.
 
+TODO: convert this CSV file into a Google Sheet with data and notes tabs, which requires users to look at the data (even briefly) before downloading it
+
 In the following window, you can either copy/paste values from the spreadsheet,
 or upload a CSV file. We recommend uploading a file, so click the link and choose the file
 `us-states-home-values-zillow-2019.csv`. The table will then get populated,
@@ -432,7 +438,14 @@ knitr::include_graphics("images/08-map/datawrapper-map-match.png")
 
 In a similar fashion, you will then be asked to identify a column that contains *values* to be mapped. Make sure it is *HomeValue2019* that is *Matched As Values*.
 
-### Style and publish your map {-}
+### Select the color range {-}
+
+TODO: Update and expand this section to match recent changes to Datawrapper
+
+- Color palette: explain difference and best cases for using sequential, diverging, categorical colors, and refer back to ColorBrewer section above.
+- Color type: steps vs continuous
+- Interpolation (see below)
+- see also Data Academy choropleth map design page
 
 When finished uploading data, go to step 3 to begin visualizing. Start with the *Refine* tab and choose
 a diverging color palette, from reds to blues. Make sure your "middle" color value
@@ -444,6 +457,28 @@ from the Stops dropdown, as shown in Figure \@ref(fig:datawrapper-map-color).
 ```{r datawrapper-map-color, out.width=350, fig.cap="(ref:datawrapper-map-color)"}
 knitr::include_graphics("images/08-map/datawrapper-map-color.png")
 ```
+
+In the *Visualize* screen, next to *Select palette*, click the *wrench symbol* to open up the color settings, as shown in FIG TODO.
+
+INSERT wide screenshot here
+
+Below the color palette, experiment with the two *Types* of color ranges, as shown in FIG TODO. Click *Steps* to display values in the same range with the same color, like a staircase of steps at different heights. Now click *Continuous* to assign each value a color on the gradient, like a ramp that gradually goes up. Notice how the map menu and coloring changes according to type. For now, we'll use the default *Continuous* setting.
+
+datawrapper-color-type.png
+
+Experiment with the *Interpolation* menu, which refers to the method of assigning values along the color range you selected above.
+
+- *Linear* means placing the values in a straight line, from lowest to highest. This method is best when the data are evenly distributed, because it draws attention to the outliers at the light-colored low and dark-colored high ends.
+- *Quantiles* means dividing the values into equal-sized groups, *Quartiles*, *quintiles*, and *deciles* means equally-sized groups of four, five, or ten, respectively. This method is best when the data are not evenly distributed, because it draws more attention by diversifying colors assigned to groups inside the range, not just the ends.
+- *Rounded values* are similar to quantiles but replace decimals in the menu with nicer-looking rounded numbers.
+- *Natural breaks (Jenks)* is a compromise between showing linear outliers versus equal-count quantiles.
+- *Custom* allows you to choose the number of stops and place them where you wish in the color range.
+
+Notice how the menu options change depending on whether you select the *Type* to be *Steps* or *Continuous*, as shown in FIG TODO
+
+BLEND or SIDE-BY-SIDE: datawrapper-continuous-interpolation.png and datawrapper-steps-interpolation.png
+
+### Style and publish your map {-}
 
 When finished with colors, scroll down to **Tooltips** section and
 click *Customize tooltips* button. In a popup window, set Title to the state name
@@ -635,7 +670,7 @@ Visit the [official documentation](https://dev.socrata.com/) to learn more about
 
 
 
-## Polygon Map with Tableau Public {- #map-tableau}
+## Polygon Choropleth Map with Tableau Public {- #map-tableau}
 
 TODO: revise to make polygon/choropleth map vocab more consistent in this chapter; also emphasize how Tableau is not ideal for point maps because you cannot geocode addresses
 

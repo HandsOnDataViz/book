@@ -111,36 +111,67 @@ Now that you've learned about how to lie with charts, you'll build on these skil
 ## How to Lie with Maps {- #how-to-lie-with-maps}
 One of the best ways to learn how to detect lies is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own. We'll focus our attention on choropleth maps that use shading or color to represent values in geographic areas, because they are a topic of considerable mischief. This exercise was inspired by Mark S. Monmonier, *How to Lie with Maps, 2nd ed.* (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
 
-Before we get started, review the map design principles in Chapter 8 to avoid common choropleth map mistakes. For example, in most cases you want to avoid mapping absolute numbers (such as the raw number of people who voted for a candidate), and instead map relative data (such as the percentage of the population that voted for a candidate). Mapping absolute numbers of voters would simply show you where most people live, rather than different rates of voter preferences across geographic areas, which is usually what map makers wish to emphasize.
+Before we get started, review the map design principles in Chapter 8 to avoid common mistakes when designing colored polygon (or choropleth) maps. For example, in most cases you want to avoid mapping absolute numbers (such as the raw number of people who voted for a candidate), and instead map relative data (such as the percentage of the population that voted for a candidate). Mapping absolute numbers of voters would simply show you where most people live, rather than different rates of voter preferences across geographic areas, which is usually what map makers wish to emphasize.
+
+Also, this section assumes that you're already familiar with the steps for creating a [Colored Polygon or Choropleth map with Datawrapper in Chapter 8](map-datawrapper.html)...
 
 Let's return to the world income inequality map data that we began with in the Introduction, where we created two different maps, and confessed that both were valid interpretations....
 
 1. Open the [world income top 1 percent data in Google Sheets](https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565), and go to *File > Save As* to create a copy that you can edit in your own Google Drive.
 
-2. Examine the data and read the notes. Overall, this data offers one way to make international comparisons about income distribution by showing "how big a slice of the pie" is held by the richest 1 percent in each nation. Each row lists a nation and its three-letter ISO code, along with the percent share of pre-tax national income held by the top 1 percent of the population, and the most recent year when this data was collected by the World Inequality Database. For example, in Brazil, the top 1 percent of the population held 28.3 percent of the nation's income in 2015, while in the United States, the top 1 percent held 20.5 percent in 2018. To be clear, there are other ways to compare the distribution of income or wealth across nations, but this is one of the better datasets available that capture this concept using one easy-to-understand variable.
+2. Examine the data and read the notes. Overall, this data offers one way to make international comparisons about income distribution by showing "how big a slice of the pie" is held by the richest 1 percent in each nation. Each row lists a nation and its three-letter code, along with the percent share of pre-tax national income held by the top 1 percent of the population, and the most recent year when this data was collected by the World Inequality Database. For example, in Brazil, the top 1 percent of the population held 28.3 percent of the nation's income in 2015, while in the United States, the top 1 percent held 20.5 percent in 2018. To be clear, there are other ways to compare the distribution of income or wealth across nations, but this is one of the better datasets available that capture this concept using one easy-to-understand variable.
 
 3. Since we cannot directly import this Google Sheet into our Datawrapper mapping tool, go to *File > Download* to export the first tab in *CSV format* to your computer.
 
-4. Start up the [Datawrapper visualization tool](https://datawrapper.de) and select *Create a map*....Select a choropleth map... upload the CSV.... Check the data.... If you need help with these steps, review the Choropleth map with Datawrapper section in Chapter 8....
+4. Open the [Datawrapper visualization tool](https://datawrapper.de) in your browser and upload your CSV map data.  Select *New Map*, select *Choropleth map*, and select *World*, then *Proceed*. In the *Add your data* screen, scroll down below the table and select the *Import your dataset* button, then the *Start Import* button, then *click here to upload a CSV file*, and upload the CSV file you created in the step above. Click to confirm that the first column is *Matched as ISO code*, click *Continue*, then click to confirm that the *Percent Share* column is *Matched as Values*, then click *Go* and *Proceed* to visualize your map.
 
-5. View your map data using the built-in histogram in screen.... Note the mean value and the shape of the distribution. Most nations are below the mean, with a handful of outliers far above the mean....
+5. In the *Visualize* screen, next to *Select palette*, click the *wrench symbol* to open up the color settings, as shown in FIG TODO.
 
-INSERT FIG of histogram screen
+6. Below the light-green-to-blue color palette, experiment with the two *Types* of color ranges, as shown in FIG TODO. Click *Steps* to display values in the same range with the same color, like a staircase of steps at different heights. Now click *Continuous* to assign each value a color on the gradient, like a ramp that gradually goes up. Notice how the map menu and coloring changes according to type. For now, we'll use the default *Continuous* setting.
 
-6. *Mislead with map ranges*. Go to the next screen to the *interpolation* section for options to set the map range style and cut-off points. Use the default color... Select 4 steps and the *linear* .... means.... notice that US (at 20.5%) is displayed in the 3rd out of 4 buckets, not the darkest color....
+map-color-settings.png  (FOR ALL SETTINGS)
+
+7. Now experiment with the *Interpolation* menu, which refers to the method of assigning values along the color range you selected above.
+
+- *Linear* means placing the values in a straight line, from lowest to highest. This method is best when the data are evenly distributed, because it draws attention to the outliers at the light-colored low and dark-colored high ends.
+- *Quantiles* means dividing the values into equal-sized groups, *Quartiles*, *quintiles*, and *deciles* means equally-sized groups of four, five, or ten, respectively. This method is best when the data are not evenly distributed, because it draws more attention by diversifying colors assigned to groups inside the range, not just the ends.
+- *Rounded values* are similar to quantiles but replace decimals in the menu with nicer-looking rounded numbers.
+- *Natural breaks (Jenks)* is a compromise between showing linear outliers versus equal-count quantiles.
+- *Custom* allows you to choose the number of stops and place them where you wish in the color range.
+
+Notice how the menu options change depending on whether you select the *Type* to be *Steps* or *Continuous*, as shown in FIG TODO
+
+BLEND or SIDE-BY-SIDE: map-continuous-interpolation.png and map-steps-interpolation.png
+
+
+next to Go to the next screen to the *interpolation* section for options to set the map range style and cut-off points. Use the default color... Select 4 steps and the *linear* .... means.... notice that US (at 20.5%) is displayed in the 3rd out of 4 buckets, not the darkest color....
+
+"The linear interpolation takes every value between the minimum and the maximum value and assigns it a color between the brightest and the darkest color in a linear way. Because of our uneven distribution and the outliers, our map looks like this..." and draws attention to extreme values...
+
+https://academy.datawrapper.de/article/117-color-palette-for-your-map
+
+map-continuous-linear.png
+https://datawrapper.dwcdn.net/aetEM/
+
+map-3steps-naturalbreaks.png
+https://datawrapper.dwcdn.net/VSfdZ/
+
+*Mislead with map range cutoffs*.
 
 7. Make duplicate? map and title it linear scale so that we can compare it with other...
 
 8. Go to duplicate map and select 4 steps and *quantile* scale... means.... notice that US (still at 20.5%) is now shown in the 4th bucket, the darkest color on this scale.... title this *quantile* map.
 
-Which map is misleading? Which map is right? Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors, other than a general dictum to make “honest and useful” decisions. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles) or intervals that vary according to patterns in the data (such as standard deviations from the mean).
+Which map is misleading? Which map is right? Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors.. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles).... or Natural Breaks....
+
+In general, Datawrapper Academy recommends making compromises between "honesty and usefulness" https://academy.datawrapper.de/article/117-color-palette-for-your-map
 
 Cairo advises: make multiple histogram charts, with different numbers of buckets & bucket sizes -- TODO: rewrite Map chapter to include this advise and insert histogram exercise there
 
 9. *Mislead with color choice* .... describe
 
 
-10. *Mislead with map area* .... do I have a world cartogram? 
+10. *Mislead with map area* .... do I have a world cartogram?
 
 
 - lie with map area - compare US 2016 electoral vote in standard state map (which exaggerates influence of rural states with larger geographic area) versus a cartogram (need to upload in Datawrapper?, which equalizes states of geographic area, but requires viewers to be more familiar with location)
@@ -173,7 +204,7 @@ Now that we've focused on charts and maps, think more carefully about the words 
 
 Framing Bias: Watch for negative versus positive framing and how it affects readers. For example, British statistician David Spiegelhalter notes that US hospitals report *mortality rates*, while UK hospitals report *survival* rates. When considering the risks of a surgical procedure for member of your family, a 5 percent mortality rate sounds worse than a 95 percent survival rate, even they're mathematically identical. Furthermore, augmenting the rate with raw numbers (such as 20 deaths out of 400 patients) raises the impression of risk even higher, because we begin to imagine real people's lives, not abstract percentages.^[@spiegelhalterArtStatisticsLearning2019, pp. 22-5]
 
-Poorly-worded percentages: Percent Change versus Percentage Point Difference
+
 
 ## Different Types of Data Bias {- #data-bias}
 
@@ -191,6 +222,8 @@ We also refer to biases that are baked into the software that humans create.
 - Example: Map with “empty” land ignoring indigenous people https://twitter.com/indigenia/status/1308406887231246337?s=12
 - sidenote: that wasn't how the original map creator designed or labeled the map, but others interpreted it this way
 - how to address: clarify map biases....
+- See also John Schwabish, avoid whiteness bias...
+https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff
 
 
 ### Summary {- #summary14}

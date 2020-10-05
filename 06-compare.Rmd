@@ -92,16 +92,18 @@ Briefly explain average, mean, median, and percentiles
 
 Also explain "percent change" with "percentage point difference" ... explain the difference between the two with clear examples.
 
-## Comparing Individuals versus Groups {- #individuals-groups}
-Beware individual versus aggregated data (example from Cairo: voting data about individual people vs voting trends of entire counties may differ because not all residents vote)
+## Comparing Smaller versus Larger Units {- #smaller-larger-units}
+Beware of comparisons between smaller versus larger groups of data. Example from Cairo: voting data about entire US states will vary from voting data for smaller geographic units within those states, such as counties, cities, or neighborhood-level voting precincts, for at least two reasons. First, voting patterns vary across smaller geographic units... Second, not all residents vote....  
 
-If you're looking to make sense of individual behavior, use individual-level data. But if you're looking to generalize about larger groups (states, nations, etc.), aggregated data may be more useful.
+In most cases, use the smallest unit of data you can obtain to allow you to produce more granular visualizations. While you cannot obtain data about how each individual voted, you can obtain data at the precinct, city, or county level inside each state.
 
+But there are other cases when using a larger unit of data makes more sense than a smaller unit. For example, US presidential elections are determined by state-level electoral votes (except for Maine and Nebraska?). So if you wish to emphasize patterns in electoral votes, compare data for larger geographic units
 
 ## Avoid Selection Bias {- #selection-bias}
-TODO: Decide whether to keep section title as-is or broaden to "Avoid Biased Comparisons"
+TODO: Decide whether to keep section title as-is or broaden to "Beware of Biased Comparisons"
 
 Everyone should avoid cherry-picking data, which means selecting only the evidence that arrives at a pre-determined conclusion.
+
 Also avoid statistically biased processes, such as sampling methods that regularly yields inaccurate results.... example of opinion data about socially inappropriate topics...
 Sometimes bias arises due to a combination of human behavior and poor numerical reasoning.
 
@@ -109,7 +111,13 @@ But sometimes we compare different groups of data without realizing that that th
 
 Also be aware of algorithmic biases that we sometimes build into our software...Cairo's example about IP data thru VPN converted to geographic center of US, near Kansas...
 
-## Be Cautious about Correlation, Causation, and Confounding Variables {- #correlation}
-- do not let association drift into causation... and isolate confounding variables that may influence relationships between data
+## Correlation, Causation, and Confounding Variables {- #correlation}
+Be cautious...
+
+- do not let association drift into causation...
+
+- identify and isolate confounding variables that may influence relationships within your data...
+
+TODO: choose illustrative examples for above
 
 See books on data analysis to understand the logic and use of statistical tests

@@ -1,5 +1,5 @@
 # Detect Lies and Reduce Bias {#detect}
-TODO: Revise chapter
+TODO: Finish writing chapter; consider alternative title: Detect Data Lies and Reduce Bias, or Detect Lies and Reduce Data Bias
 
 In the introduction, we lied to you... intentionally... by showing you visualizations that portrayed reality is very different ways.
 
@@ -15,9 +15,14 @@ In general, data visualization is guided by a general dictum to make "honest and
 
 That leaves a lot of room for interpretation... some of which is intentionally misleading, and some of it is thoughtlessly misinformed....unintentional.... but nevertheless sways how people view our visualizations...
 
+TODO: strengthen this distinction between *clearly mistaken* versus *misleading interpretations*
+
+There's a difference between poorly-designed visualizations that confuse or misinform readers versus those that are intentionally designed to mislead viewers. When we introduced chart design in Chapter 7 and map design in Chapter 8, we identified a handful of firm rules, such as: pie charts cannot add up to more than 100 percent...  When you violate those firm design rules, whether intentionally or not, there is no room for interpretation: your visualizations are simply *wrong*.
+
+But this chapter focuses on the broader terrain of interpretation... since visualizations can be misleading without violating specific rules of design....
+
+
 In this chapter, you will learn how visualizations display the biases of the people and the software that create them.
-
-
 
 While we cannot stop bias entirely, we can teach you to detect it in charts and maps made by other people, as well as those that you make, to improve your interpretation...
 
@@ -34,14 +39,6 @@ These tutorials on "how to lie" were inspired by several sources....
 - Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9, 2017, http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/
 - Alberto Cairo 2016
 - Alberto Cairo 2019
-
-## Avoid Bad Visualizations {- #bad-visualizations}
-TODO: can this be reduced to 1-2 paragraphs with refs to chart and map design sections, rather than its own section?
-Some visualizations are so poorly designed, with obvious errors, that we *can* declare these to be *wrong*.
-Whether intentional or otherwise, no room for interpretation here... We warned you about some of these mistakes in the chart design and map design sections of this book.
-- Examples: pie charts that add up to more than 100%
-- hiding data by removing it from the chart (showing only high values, and omitting years with lower ones)
-
 
 ## How to Lie with Charts {- #how-to-lie-with-charts}
 In this section, you'll learn how to avoid being fooled by misleading charts, and also how to make your own charts more honest, by intentionally manipulating the same data to tell opposing stories. In the first half, you will *exaggerate* small differences in a column chart to make them seem larger. In the second, half, you will *diminish* the rate of growth in a line chart to make it appear more gradual. Together, these tutorials will teach you to watch out for key details when reading other people's charts, such as the vertical axis and aspect ratio. Paradoxically, by demonstrating *how to lie*, our goal is to teach you to *tell the truth* and to think more carefully about the ethics of designing your data stories.
@@ -112,24 +109,45 @@ TODO:FINISH IDEA: So if none of the temperature change charts are technically *w
 Now that you've learned about how to lie with charts, you'll build on these skills in the next section about lying with maps.
 
 ## How to Lie with Maps {- #how-to-lie-with-maps}
-- TODO: reorganize exercise into more distinctive parts and sample data
+One of the best ways to learn how to detect lies is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own. We'll focus our attention on choropleth maps that use shading or color to represent values in geographic areas, because they are a topic of considerable mischief. This exercise was inspired by Mark S. Monmonier, *How to Lie with Maps, 2nd ed.* (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
 
-Before we leap into lying, let's make sure we avoid common mistakes when making maps, especially choropleth maps that use shading or color to represent values in geographic areas. The most common mistake is to use raw counts rather than rates or percentages... You need to normalize the data, as we describe in chapter.... .forgetting this will simply show pop density; Cairo 2019 p132)
+Before we get started, review the map design principles in Chapter 8 to avoid common choropleth map mistakes. For example, in most cases you want to avoid mapping absolute numbers (such as the raw number of people who voted for a candidate), and instead map relative data (such as the percentage of the population that voted for a candidate). Mapping absolute numbers of voters would simply show you where most people live, rather than different rates of voter preferences across geographic areas, which is usually what map makers wish to emphasize.
 
-One of the best ways to learn how to detect bias in data visualization is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own. This exercise was inspired by Mark S. Monmonier, *How to Lie with Maps, 2nd ed.* (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
+Let's return to the world income inequality map data that we began with in the Introduction, where we created two different maps, and confessed that both were valid interpretations....
 
-- Lie (or mislead?) with ranges
-- lie with color choices
+1. Open the [world income top 1 percent data in Google Sheets](https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565), and go to *File > Save As* to create a copy that you can edit in your own Google Drive.
 
-Other ways to lie with maps (which may be too hard to display here?)
-- Lie with map area
-- Lie with projection (or discuss as related to map area?)
+2. Examine the data and read the notes. Overall, this data offers one way to make international comparisons about income distribution by showing "how big a slice of the pie" is held by the richest 1 percent in each nation. Each row lists a nation and its three-letter ISO code, along with the percent share of pre-tax national income held by the top 1 percent of the population, and the most recent year when this data was collected by the World Inequality Database. For example, in Brazil, the top 1 percent of the population held 28.3 percent of the nation's income in 2015, while in the United States, the top 1 percent held 20.5 percent in 2018. To be clear, there are other ways to compare the distribution of income or wealth across nations, but this is one of the better datasets available that capture this concept using one easy-to-understand variable.
 
+3. Since we cannot directly import this Google Sheet into our Datawrapper mapping tool, go to *File > Download* to export the first tab in *CSV format* to your computer.
 
-which map is right?
-Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors, other than a general dictum to make “honest and useful” decisions. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles) or intervals that vary according to patterns in the data (such as standard deviations from the mean).
+4. Start up the [Datawrapper visualization tool](https://datawrapper.de) and select *Create a map*....Select a choropleth map... upload the CSV.... Check the data.... If you need help with these steps, review the Choropleth map with Datawrapper section in Chapter 8....
+
+5. View your map data using the built-in histogram in screen.... Note the mean value and the shape of the distribution. Most nations are below the mean, with a handful of outliers far above the mean....
+
+INSERT FIG of histogram screen
+
+6. *Mislead with map ranges*. Go to the next screen to the *interpolation* section for options to set the map range style and cut-off points. Use the default color... Select 4 steps and the *linear* .... means.... notice that US (at 20.5%) is displayed in the 3rd out of 4 buckets, not the darkest color....
+
+7. Make duplicate? map and title it linear scale so that we can compare it with other...
+
+8. Go to duplicate map and select 4 steps and *quantile* scale... means.... notice that US (still at 20.5%) is now shown in the 4th bucket, the darkest color on this scale.... title this *quantile* map.
+
+Which map is misleading? Which map is right? Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors, other than a general dictum to make “honest and useful” decisions. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles) or intervals that vary according to patterns in the data (such as standard deviations from the mean).
 
 Cairo advises: make multiple histogram charts, with different numbers of buckets & bucket sizes -- TODO: rewrite Map chapter to include this advise and insert histogram exercise there
+
+9. *Mislead with color choice* .... describe
+
+
+10. *Mislead with map area* .... do I have a world cartogram? 
+
+
+- lie with map area - compare US 2016 electoral vote in standard state map (which exaggerates influence of rural states with larger geographic area) versus a cartogram (need to upload in Datawrapper?, which equalizes states of geographic area, but requires viewers to be more familiar with location)
+- lying with map area is similar to map projection bias.... some projections create the appearance of larger sizes for nations in the North hemisphere than those in the South... When using map tools, understand the default projection, because few drag-and-drop tools allow you to change it.... See Leaflet?
+
+which map is right?
+
 
 
 

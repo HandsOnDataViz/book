@@ -29,7 +29,6 @@ TODO ABOVE:
 - Keep Google My Maps point map tool; perhaps mention BatchGeo again? Datawrapper symbol map?
 - Confirm removing Storymap "easy tools" because neither allow you to export data you enter: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/) OR mention (but do not recommend) Storymap.js as an easy tool, but cannot easily migrate data out, then Leaflet Storymaps with GS as a power tool
 - mention HistoryPin.org as another storytelling type of map?
-
 - Add tab-view map for historical change template?
 - Add synchronized side-by-side map template?
 - Remind readers to see GitHub chapter before using code templates
@@ -89,6 +88,8 @@ users to inspect data from various "distances".
 ### Normalize Your Map Data {-}
 
 TODO: cross-ref back to Normalize data section in Compare chapter, then build on it here
+
+TODO: The rest of this map design section is really about choropleth maps, so consider labeling it this way. Also, incorporate more design guidelines from https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps
 
 Choropleth maps are best when they represent relative values (such as percentages or per capita rates), not absolute values (such as the raw number of people).
 Consider two maps shown in Figure \@ref(fig:normalize-map-data). They both are
@@ -468,11 +469,13 @@ datawrapper-color-type.png
 
 Experiment with the *Interpolation* menu, which refers to the method of assigning values along the color range you selected above.
 
-- *Linear* means placing the values in a straight line, from lowest to highest. This method is best when the data are evenly distributed, because it draws attention to the outliers at the light-colored low and dark-colored high ends.
-- *Quantiles* means dividing the values into equal-sized groups, *Quartiles*, *quintiles*, and *deciles* means equally-sized groups of four, five, or ten, respectively. This method is best when the data are not evenly distributed, because it draws more attention by diversifying colors assigned to groups inside the range, not just the ends.
-- *Rounded values* are similar to quantiles but replace decimals in the menu with nicer-looking rounded numbers.
-- *Natural breaks (Jenks)* is a compromise between showing linear outliers versus equal-count quantiles.
-- *Custom* allows you to choose the number of stops and place them where you wish in the color range.
+TODO: consider using a simple dataset or histogram to illustrate the concepts below, similar to this Data Academy post https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales
+
+- *Linear* means that the values are placed in a straight line, from lowest to highest. This method is best when the data are evenly distributed, because the colors draw attention to the outliers at the low and high ends.
+- *Quantiles* means that the values are divided into equal-count groups. More specifically, *quartiles*, *quintiles*, and *deciles* means dividing the values into four, five, or ten groups, where each group has an equal count. This method is best when the data are not evenly distributed, because the colors draw more attention to the diversity of groups inside the range, not just those at the ends.
+- *Rounded values* are similar to quantiles, but decimals in the color range are replaced with nicer-looking rounded numbers.
+- *Natural breaks (Jenks)* offers a compromise between linear (which emphasizes the extreme ends of the range) and quantiles (which emphasizes diversity inside the range).
+- *Custom* allows you to manually place stops where you wish in the color range.
 
 Notice how the menu options change depending on whether you select the *Type* to be *Steps* or *Continuous*, as shown in FIG TODO
 
@@ -499,6 +502,8 @@ Being transparent about your sources and methods adds credibility to your work.
 
 In the final, fourth step, you can publish the chart and copy the iframe code that
 Datawrapper generated for you.
+
+Learn more about [choropleth map design in this excellent series of posts by the Datawrapper Academy](https://academy.datawrapper.de/category/93-maps).
 
 In the following section, we will create a point map inside Socrata data platform.
 

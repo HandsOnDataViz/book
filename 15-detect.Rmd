@@ -111,7 +111,7 @@ Now that you've learned about how to lie with charts, you'll build on these skil
 ## How to Lie with Maps {- #how-to-lie-with-maps}
 One of the best ways to learn how to detect lies is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own. We'll focus our attention on choropleth maps that use shading or color to represent values in geographic areas, because they are a topic of considerable mischief. This exercise was inspired by Mark S. Monmonier, *How to Lie with Maps, 2nd ed.* (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
 
-Before we get started, review the map design principles in Chapter 8 to avoid common mistakes when designing colored polygon (or choropleth) maps. For example, in most cases you want to avoid mapping absolute numbers (such as the raw number of people who voted for a candidate), and instead map relative data (such as the percentage of the population that voted for a candidate). Mapping absolute numbers of voters would simply show you where most people live, rather than different rates of voter preferences across geographic areas, which is usually what map makers wish to emphasize.
+Before we get started, review the map design principles in Chapter 8 to avoid common mistakes when designing colored polygon (or choropleth) maps. For example, in most cases you want to avoid mapping absolute numbers (such as the raw number of a group of people), and instead show relative data (such as the percentage of people who belong to a group). Mapping absolute numbers of voters would simply show you where most people live, rather than different rates of voter preferences across geographic areas, which is usually what map makers wish to emphasize.
 
 Also, this section assumes that you're already familiar with the steps for creating a [Colored Polygon or Choropleth map with Datawrapper in Chapter 8](map-datawrapper.html)...
 
@@ -125,78 +125,53 @@ Let's return to the world income inequality map data that we began with in the I
 
 4. Open the [Datawrapper visualization tool](https://datawrapper.de) in your browser and upload your CSV map data.  Select *New Map*, select *Choropleth map*, and select *World*, then *Proceed*. In the *Add your data* screen, scroll down below the table and select the *Import your dataset* button, then the *Start Import* button, then *click here to upload a CSV file*, and upload the CSV file you created in the step above. Click to confirm that the first column is *Matched as ISO code*, click *Continue*, then click to confirm that the *Percent Share* column is *Matched as Values*, then click *Go* and *Proceed* to visualize your map.
 
-5. In the *Visualize* screen, next to *Select palette*, click the *wrench symbol* to open up the color settings, as shown in FIG TODO.
+5. In the *Visualize* screen, in the *Colors* section of the *Refine* tab *Select palette*, click the *wrench symbol* to open up the color settings, as shown in FIG TODO. Let's skip past the light-green-to-blue color palette, which you can modify later, and let's focus on settings for color ranges.
 
-6. Below the light-green-to-blue color palette, experiment with the two *Types* of color ranges, as shown in FIG TODO. Click *Steps* to display values in the same range with the same color, like a staircase of steps at different heights. Now click *Continuous* to assign each value a color on the gradient, like a ramp that gradually goes up. Notice how the map menu and coloring changes according to type. For now, we'll use the default *Continuous* setting.
+map-color-settings.png
 
-map-color-settings.png  (FOR ALL SETTINGS)
+### Beware of color range bias {-}
+TODO: decide if this wording is better than "mislead with..."
 
-7. Now experiment with the *Interpolation* menu, which refers to the method of assigning values along the color range you selected above.
-
-- *Linear* means placing the values in a straight line, from lowest to highest. This method is best when the data are evenly distributed, because it draws attention to the outliers at the light-colored low and dark-colored high ends.
-- *Quantiles* means dividing the values into equal-sized groups, *Quartiles*, *quintiles*, and *deciles* means equally-sized groups of four, five, or ten, respectively. This method is best when the data are not evenly distributed, because it draws more attention by diversifying colors assigned to groups inside the range, not just the ends.
-- *Rounded values* are similar to quantiles but replace decimals in the menu with nicer-looking rounded numbers.
-- *Natural breaks (Jenks)* is a compromise between showing linear outliers versus equal-count quantiles.
-- *Custom* allows you to choose the number of stops and place them where you wish in the color range.
-
-Notice how the menu options change depending on whether you select the *Type* to be *Steps* or *Continuous*, as shown in FIG TODO
-
-BLEND or SIDE-BY-SIDE: map-continuous-interpolation.png and map-steps-interpolation.png
-
-
-next to Go to the next screen to the *interpolation* section for options to set the map range style and cut-off points. Use the default color... Select 4 steps and the *linear* .... means.... notice that US (at 20.5%) is displayed in the 3rd out of 4 buckets, not the darkest color....
-
-"The linear interpolation takes every value between the minimum and the maximum value and assigns it a color between the brightest and the darkest color in a linear way. Because of our uneven distribution and the outliers, our map looks like this..." and draws attention to extreme values...
-
-https://academy.datawrapper.de/article/117-color-palette-for-your-map
+While we never automatically accept the default visualization, it's a good place to begin. The default map displays a *continuous* type of range, with a *linear* interpolation of data values. This means that the map places all of the values in a straight line, from the minimum of 5% to the maximum of 31%, and assigns each value to a color along the gradient, as shown in FIG TODO. Notice that the US (20.5%) blends in with a medium blue color, just above the midpoint in this range.
 
 map-continuous-linear.png
 https://datawrapper.dwcdn.net/aetEM/
 
+Create a second map with the same data but different settings. Change the *Type* setting to *steps*, and adjust to *3* steps, using *Natural breaks (Jenks)* interpolation, as shown in FIG TODO. This means that the map now places all of the values in three ascending groups. Natural breaks offers a compromise between using colors to highlight the outliers versus diversity inside the range. Notice that the US (still 20.5%) now stands out in a dark blue color at the top third of this range (19% or above).
+
 map-3steps-naturalbreaks.png
 https://datawrapper.dwcdn.net/VSfdZ/
 
-*Mislead with map range cutoffs*.
+Which map is misleading? Which one is correct? Is US income inequality about the same as other nations, or at the higher end of the scale? If you prefer clear and definitive rules in data visualization, this answer may frustrate you. Both maps offer defensible interpretations of the data, even though they generate very different impressions in our eyes.
 
-7. Make duplicate? map and title it linear scale so that we can compare it with other...
+To understand what's happening behind the scenes with your choropleth map, visualization expert Alberto Cairo recommends creating a histogram to better understand the data distribution. [Cite Cairo; add that he recommends multiple histograms with different bucket sizes?] Go back to the original Google Sheet [link again?] and create a [histogram, as we described in chapter 7](chart-histogram.html) to view the frequency of nations when sorted into "buckets" by percent share, as shown in FIG TODO. This is not a normal distribution curve, because a handful of nations are outliers around the 30 percent mark. In the first map, which used continuous type and linear interpolation, the US appears closer to the midpoint of the range and blended in with a medium blue. In the second map, which used 3 steps and natural breaks, the US appears in the top range was stood out with a dark blue. Since both maps are consistently labeled...(more?), there is no definitive answer that makes one map more correct than the other. [TODO: check wording]
 
-8. Go to duplicate map and select 4 steps and *quantile* scale... means.... notice that US (still at 20.5%) is now shown in the 4th bucket, the darkest color on this scale.... title this *quantile* map.
+map-data-histogram.png
 
-Which map is misleading? Which map is right? Both maps make valid interpretations of the data, but generate very different impressions. You may be surprised to learn that mapmakers have few universal guidelines when selecting ranges or colors.. Different mapmakers could choose to divide the legend into three, or four, or five ranges, and all would be correct. Furthermore, they could choose to divide ranges into equal intervals (such as quartiles or quintiles).... or Natural Breaks....
+So how *should* you make decisions when designing choropleth maps? Can you simply place the cutoffs anywhere you choose? Absolutely not. Mapmakers offer guidelines about ways to make *better* visualizations. For example, Datawrapper Academy recommends finding "a compromise between honesty and usefulness" when designing maps [TODO cite https://academy.datawrapper.de/article/117-color-palette-for-your-map]. "Useful" means that it's acceptable to use design choices to communicate different interpretations of the data. For example, a linear interpolation is best for emphasizing the extreme lows and highs, while quantiles are best for identifying geographic patterns in the middle ranges. "Honesty" means telling the truth, and not intentionally creating misleading impressions of the data. For example, increasing the number of steps in your color range will increase the level of contrast in the map, but it can also mistakenly give the impression that light- and dark-colored regions are very different, while their numbers may vary only slightly. In general, Datawrapper recommends choosing ranges to make sure readers "see all the differences in the data," rather than hiding them out of sight.[TODO cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps] They also recommend using a continuous color range to show nuances in the data, unless your data story has a compelling reason to display discrete color steps [TODO add "such as...example" and cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps]. Finally, Datawrapper Academy strongly warns against using the manual custom settings to manipulate a map's appearance to fit a preconceived point of view.[Cite https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool]. Show readers the story and tell the truth.
 
-In general, Datawrapper Academy recommends making compromises between "honesty and usefulness" https://academy.datawrapper.de/article/117-color-palette-for-your-map
+TODO: is the block above too dense? Does it contradict the argument that either map above is defensible?
 
-Cairo advises: make multiple histogram charts, with different numbers of buckets & bucket sizes -- TODO: rewrite Map chapter to include this advise and insert histogram exercise there
+### Beware of map area bias {-}
+Another way that choropleth maps mislead readers is because larger regions draw too much attention and divert the focus from *population size* to *geographic area*. In the United States, this problem arises during every national election. Typical maps of US electoral votes exaggerate the influence of rural states with larger geographic areas (such as enormous Wyoming, with about 590,000 people), and diminish the influence of urban states with small areas (such as tiny Rhode Island, with over 1,000,000 people).
 
-9. *Mislead with color choice* .... describe
+TODO: DECIDE whether to include US electoral vote map, with standard projection vs cartogram side-by-side?
 
+This problem is related to the larger issue of map projection bias. Some projections create the appearance of larger sizes for nations in the North hemisphere than those in the South hemisphere. [TODO give examples and illustrate difference...]
 
-10. *Mislead with map area* .... do I have a world cartogram?
+One solution to this problem is to replace standard map outlines with *cartograms* OR *population squares*, which [TODO: add precise definitions of the two]. One drawback is that both alternatives require readers to be familiar with the general geographic outline of the region shown, since the visualizations do not match standard maps.
 
+To create a population square map in Datawrapper:
 
-- lie with map area - compare US 2016 electoral vote in standard state map (which exaggerates influence of rural states with larger geographic area) versus a cartogram (need to upload in Datawrapper?, which equalizes states of geographic area, but requires viewers to be more familiar with location)
-- lying with map area is similar to map projection bias.... some projections create the appearance of larger sizes for nations in the North hemisphere than those in the South... When using map tools, understand the default projection, because few drag-and-drop tools allow you to change it.... See Leaflet?
+1. Create a new map and go to *Select your map* .... or if you saved world inequality maps in your Datawrapper account, go to My Charts, select and duplicate one of them, and edit it.
 
-which map is right?
+2. Under type of map to create, type "hexagons" to see all of the cartograms available (including US States) or type "squares" to see all of those available (including World population squares). Select your preferred map and data, and proceed to visualize in the same way as above, as shown in FIG TODO
 
+map-world-pop-square.png
+https://datawrapper.dwcdn.net/YfNDe/1/
 
+TODO: mention other types of map bias? Interactive maps such as Google Maps change borders and data depending on the internet address of the user (eg China). Also map color bias....
 
-
-First, scroll through this data on Median Household Income for Hartford-area towns, 2011-15, from American Community Survey 5-year estimates. Or right-click to [open this Google Sheet in a new tab](https://docs.google.com/spreadsheets/d/13bFHsXJtADIkUCGgjpO76RjrV0OAu62hzK-J3bXEVsk/edit#gid=556312122).
-
-<iframe src="https://docs.google.com/spreadsheets/d/13bFHsXJtADIkUCGgjpO76RjrV0OAu62hzK-J3bXEVsk/pubhtml?gid=556312122&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-
-Next, explore two different polygon maps of the same data. Use the drop-down menu to compare "Extreme Differences" versus "Uniform Equality"
-
-<iframe src="https://handsondataviz.github.io/leaflet-how-to-lie-with-maps/" width="90%" height="500"></iframe>
-
-Why are these two maps portray the same data so differently? To see the answer, look at the data ranges. . ..
-
-** TO DO **
-
-Create your own version...
-
-TODO: Add section on how interactive maps such as Google Maps change borders and data depending on the internet address of the user
 
 ## How to Lie with Words {- #how-to-lie-with-words}
 

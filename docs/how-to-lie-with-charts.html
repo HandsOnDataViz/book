@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-05" />
+<meta name="date" content="2020-10-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -282,8 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
-<li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Different Types of Data Bias</a></li>
-<li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
+<li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Recognize and Reduce Data Bias</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -339,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1teB2Pw2lNpFjE_GCNmeqVNURSid36IMrWUROpPZMScA/edit#gid=0">US GDP mid-2019 data in Google Sheets</a>, and go to <em>File &gt; Save As</em> to create a copy that you can edit in your own Google Drive. We’ll create charts in Google Sheets, but you can also download the data to use in a different chart tool if you prefer.</p></li>
 <li><p>Examine the data and read the notes. To simplify this example, we show only two figures: the US GDP for the 2nd quarter (April-June) and the 3rd quarter (July-September) in 2019. The 2nd quarter was about $21.5 trillion, and the third quarter was slightly higher at $21.7 trillion. TODO: DECIDE whether to add this: If we calculated the percent change, or (21747 - 21540)/21540 = 0.0096 = 0.96%, that’s a growth rate of just under 1 percent.</p></li>
 <li><p>Create a Google Sheets column chart in the same sheet using the <em>default</em> settings, although we never automatically accept them as the best representation of the truth. In the <em>data</em> tab, select the two columns, and go to <em>Insert &gt; Chart</em>, as you learned when we introduced <a href="chart-google.html">charts with Google Sheets in Chapter 7</a>. The tool should recognize your data and automatically produce a column chart, as shown in the left side of Figure <a href="how-to-lie-with-charts.html#fig:gdp-baseline-merged">15.1</a>. In this default view, with the zero baseline for the vertical axis, the difference between $21.5 versus $21.7 trillion looks relatively small to the reader.</p></li>
-<li><p><em>Lie by reducing the vertical axis.</em> Click on the three-dot kebab menu to open the <em>Chart editor</em> and select the <em>Customize</em> tab. Scroll down to the vertical axis settings, and change the minimum to 21500 and the maximum to 21800, as shown in the right side of Figure <a href="how-to-lie-with-charts.html#fig:gdp-baseline-merged">15.1</a>. Although the data remains the same, those small differences now appear much larger in our eyes because you’ve manipulated the vertical scale. Only people who read charts closely will notice this trick. The political candidate who’s campaigning on rising economic growth will thank you!</p></li>
+<li><p><em>Reduce the vertical axis.</em> Click on the three-dot kebab menu to open the <em>Chart editor</em> and select the <em>Customize</em> tab. Scroll down to the vertical axis settings, and change the minimum to 21500 and the maximum to 21800, as shown in the right side of Figure <a href="how-to-lie-with-charts.html#fig:gdp-baseline-merged">15.1</a>. Although the data remains the same, those small differences now appear much larger in our eyes because you’ve manipulated the vertical scale. Only people who read charts closely will notice this trick. The political candidate who’s campaigning on rising economic growth will thank you!</p></li>
 </ol>
 
 <div class="figure"><span id="fig:gdp-baseline-merged"></span>
@@ -348,7 +347,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Figure 15.1: The default GDP line chart on the left, and the reduced-axis chart on the right.
 </p>
 </div>
-<p>However, you’ve also violated one of the <a href="chart-design.html">cardinal rules about chart design in Chapter 7</a>: bar and column charts <em>must</em> start at the zero baseline, because they represent value using <em>length</em>. Therefore, in the eyes of data visualization experts, your misleading chart is wrong, and the default chart with the zero baseline is a better representation of the truth. But let’s move on to a different example where the rules are not as clear.</p>
+<p>TODO: Placed images above side-by-side to allow for easier comparison. Rethink if “zero baseline” and “truncated baseline” are best titles.</p>
+<p>However, your chart is clearly <em>wrong</em> because you’ve violated one of the <a href="chart-design.html">cardinal rules about chart design in Chapter 7</a>. Column (and bar) charts <em>must</em> start at the zero baseline, because they represent value using <em>height</em> (and <em>length</em>). Readers cannot determine if a column is twice as high as another column unless both begin at the zero baseline. By contrast, the default chart with the zero baseline is truthful. But let’s move on to a different example where the rules are not as clear.</p>
 <p>In the second half of this tutorial, we’ll examine data about climate change, one of the most pressing issues we face on our planet, yet deniers continue to resist the new reality, and some of them twist the facts.[TODO: Cite Cairo examples]. In this tutorial, we’ll examine global temperature data from 1880 to the present, <a href="https://climate.nasa.gov/vital-signs/global-temperature/">downloaded from the NASA, the US National Aeronautics and Space Administration</a>. It shows that the mean global temperature has risen about 1 degree Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and this warming has already begun to cause glacial melt and rising sea levels. Your task is to create <em>misleading</em> line charts that <em>diminish</em> the appearance of rising global temperature change in the reader’s eye.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
 <ol style="list-style-type: decimal">
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0">global temperature change 1880-2019 data in Google Sheets</a>, and go to <em>File &gt; Save As</em> to create a copy that you can edit in your own Google Drive.</p></li>
@@ -363,10 +363,10 @@ Figure 15.1: The default GDP line chart on the left, and the reduced-axis chart 
 Figure 15.2: Default line chart of global temperature change. Explore the <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&amp;format=interactive">interactive version</a>.
 </p>
 </div>
-<p>Now let’s use three methods to create <em>misleading</em> charts:</p>
-<ol start="5" style="list-style-type: decimal">
-<li><em>Lie by lengthening the vertical axis.</em> We’ll use the same method as shown in the first half of this tutorial, but in the opposite direction. In the Google Sheets chart editor, customize the vertical axis by changing the minimum value to negative 5 and the maximum to positive 5, as shown in Figure <a href="how-to-lie-with-charts.html#fig:temperature-axis-annotated">15.3</a>. By increasing the length of the vertical scale, you flattened our perception of the rising line, and cancelled our climate emergency…but not really.</li>
-</ol>
+<p>Now let’s create three more charts using the same data but different methods, and discuss why they are <em>not wrong</em> from a technical perspective, but nevertheless <em>very misleading</em>.</p>
+<div id="lengthen-the-vertical-axis-to-flatten-the-line" class="section level3 unnumbered" number="">
+<h3>Lengthen the vertical axis to flatten the line</h3>
+<p>We’ll use the same method as shown in the first half of this tutorial, but in the opposite direction. In the Google Sheets chart editor, customize the vertical axis by changing the minimum value to negative 5 and the maximum to positive 5, as shown in Figure <a href="how-to-lie-with-charts.html#fig:temperature-axis-annotated">15.3</a>. By increasing the length of the vertical scale, you flattened our perception of the rising line, and cancelled our climate emergency…but not really.</p>
 
 <div class="figure"><span id="fig:temperature-axis-annotated"></span>
 <img src="images/15-detect/temperature-axis-annotated.png" alt="Misleading chart with a lengthened vertical axis."  />
@@ -374,9 +374,12 @@ Figure 15.2: Default line chart of global temperature change. Explore the <a hre
 Figure 15.3: Misleading chart with a lengthened vertical axis.
 </p>
 </div>
-<ol start="4" style="list-style-type: decimal">
-<li><em>Lie by stretching the chart to change its aspect ratio.</em> In your Google Sheet, click the chart and drag the sides to make it very short and wide, as shown in Figure <a href="how-to-lie-with-charts.html#fig:temperature-aspect-annotated">15.4</a>. Image measurements as listed in width by height, and we calculate the aspect ratio as width divided by height. Since the default chart is 600 x 370 pixels, its aspect ratio is about 1.6 to 1. But the stretched-out chart is 1090 x 191 pixels, and its ratio is about 5.7 to 1. By increasing the aspect ratio, you have flattened our perception of the rising line, and cancelled our climate crisis once again…but not really.</li>
-</ol>
+<p>What makes this flattened line chart <em>misleading</em> rather than <em>wrong</em>? In the first half of the tutorial, when you reduced the vertical axis of the US GDP chart, you violated the zero-baseline rule, because column and bar charts <em>must</em> begin at zero since they require readers to judge <em>height</em> and <em>length</em>, as described in the <a href="chart-design.html">chart design section of Chapter 7</a>. But you may be surprised to learn that the zero-baseline rule does <em>not</em> apply to line charts. Visualization expert Albert Cairo reminds us that line charts represent values in the <em>position</em> and <em>angle</em> of the line. Readers interpret the meaning of line charts by their shape, rather than their height, so the baseline is irrelevant. Therefore, flattening the line chart for temperature change may mislead readers, but it’s technically not wrong, as long as it is labelled correctly.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a></p>
+<p>TODO: While the text asks “wrong or misleading?” the chart and caption are clearly labeled “misleading” to avoid confusion among readers who just skim the text. Maybe rephrase the question: What makes this chart</p>
+</div>
+<div id="widen-the-chart-to-warp-its-aspect-ratio" class="section level3 unnumbered" number="">
+<h3>Widen the chart to warp its aspect ratio</h3>
+<p>In your Google Sheet, click the chart and drag the sides to make it very short and wide, as shown in Figure <a href="how-to-lie-with-charts.html#fig:temperature-aspect-annotated">15.4</a>. Image measurements as listed in width by height, and we calculate the aspect ratio as width divided by height. Since the default chart is 600 x 370 pixels, its aspect ratio is about 1.6 to 1. But the stretched-out chart is 1090 x 191 pixels, and its ratio is about 5.7 to 1. By increasing the aspect ratio, you have flattened our perception of the rising line, and cancelled our climate crisis once again…but not really.</p>
 
 <div class="figure"><span id="fig:temperature-aspect-annotated"></span>
 <img src="images/15-detect/temperature-aspect-annotated.png" alt="Misleading chart with a stretched aspect ratio."  />
@@ -384,8 +387,13 @@ Figure 15.3: Misleading chart with a lengthened vertical axis.
 Figure 15.4: Misleading chart with a stretched aspect ratio.
 </p>
 </div>
-<ol start="5" style="list-style-type: decimal">
-<li><p><em>Lie by adding more data and a dual vertical axis</em> Let’s add more data to make your chart even more misleading! In the Google Sheet, go to the tab named <em>temp+GDP</em>, where you will see temperature change plus a new column: US Gross Domestic Product (GDP) in billions of dollars from 1929 to 2019, downloaded from the <a href="https://fred.stlouisfed.org/series/GDPA">US Federal Reserve</a>. (We deleted temperature rows prior to 1929 to make them match with available GDP data.) Select all three columns and <em>Insert &gt; Chart</em> to produce a default line chart with two data series: temperature (in blue) and US GDP (in red).</p></li>
+<p>What makes this warped line chart <em>misleading</em> rather than <em>wrong</em>? Once again, since changing the aspect ratio of a line chart does not violate a clearly-defined rule of data visualization, it’s not technically wrong, as long as it’s accurately labeled. But it’s definitely misleading. This is a case of designer preference. Alberto Cairo prefers to set the aspect ratio to be similar to the rate of change shown in the line chart….[TODO describe and cite passage about this… but it’s not a clearly-defined rule, as publications often require visualizations to fit into specific spaces….]</p>
+</div>
+<div id="add-more-data-and-a-dual-vertical-axis" class="section level3 unnumbered" number="">
+<h3>Add more data and a dual vertical axis</h3>
+<p>Let’s add more data to make your chart even more misleading! In the Google Sheet, go to the tab named <em>temp+GDP</em>, where you will see temperature change plus a new column: US Gross Domestic Product (GDP) in billions of dollars from 1929 to 2019, downloaded from the <a href="https://fred.stlouisfed.org/series/GDPA">US Federal Reserve</a>. We deleted temperature rows prior to 1929 to make them match with available GDP data.</p>
+<ol style="list-style-type: decimal">
+<li><p>Select all three columns and <em>Insert &gt; Chart</em> to produce a default line chart with two data series: temperature (in blue) and US GDP (in red).</p></li>
 <li><p>In the <em>Chart editor</em>, select <em>Customize</em> and scroll down to <em>Series</em>. Change the drop-down menu from <em>Apply to all series</em> to <em>US GDP</em>. Just below that in the <em>Format</em> area, change the <em>Axis</em> menu from <em>Left axis</em> to <em>Right Axis</em>, which creates another vertical axis on the right side of the chart, connected only to the US GDP data, as shown in Figure <a href="how-to-lie-with-charts.html#fig:temperature-gdp-axis-setup">15.5</a>.</p></li>
 </ol>
 
@@ -395,18 +403,18 @@ Figure 15.4: Misleading chart with a stretched aspect ratio.
 Figure 15.5: Add another vertical axis to the right side of the chart.
 </p>
 </div>
-<ol start="7" style="list-style-type: decimal">
+<ol start="3" style="list-style-type: decimal">
 <li>In the <em>Chart editor &gt; Customize</em> tab, scroll down and you will now see separate controls for <em>Vertical Axis</em> (the left side, for temperature change only), and a brand-new menu for the <em>Right Axis</em> (for US GDP only), as shown in Figure <a href="how-to-lie-with-charts.html#fig:temperature-right-axis">15.6</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:temperature-right-axis"></span>
-<img src="images/15-detect/temperature-right-axis.png" alt="Brand-new menu for the right axis."  />
+<img src="images/15-detect/temperature-right-axis.png" alt="Brand-new menu for the right axis." width="250" />
 <p class="caption">
 Figure 15.6: Brand-new menu for the right axis.
 </p>
 </div>
-<ol start="8" style="list-style-type: decimal">
-<li>Finish your misleading chart by adjusting <em>Vertical Axis</em> for temperature change, but with even more exaggeration than you did in step 5 above. This time, change the minimum value to 0 (to match the right-axis baseline for US GDP) and the maximum to 10, to flatten the temperature line even further. Add a title, source, and labels to make it look more authoritative, as shown in Figure <a href="how-to-lie-with-charts.html#fig:temperature-gdp-final-annotated">15.7</a>. By lowering our perception of the temperature line in comparison to the steadily rising GDP line, you’ve misled us into ignoring the consequences of climate change while we enjoy a long-term economic boom! Furthermore, the GDP data is <em>not</em> adjusted for inflation, so you’ve double-misled us by comparing 1929 dollars to 2019 dollars. Finally, since you accepted the default colors assigned by Google Sheets, the climate data is displayed in a “cool” blue, which sends our brain the opposite message of rising temperatures and glacial melt. So we’ll count this as a triple! TODO: Decide whether to break non-comparable data and color into separate paragraphs.</li>
+<ol start="4" style="list-style-type: decimal">
+<li>Finish your chart by adjusting <em>Vertical Axis</em> for temperature change, but with even more exaggeration than you did in step 5 above. This time, change the minimum value to 0 (to match the right-axis baseline for US GDP) and the maximum to 10, to flatten the temperature line even further. Add a title, source, and labels to make it look more authoritative, as shown in Figure <a href="how-to-lie-with-charts.html#fig:temperature-gdp-final-annotated">15.7</a>. By lowering our perception of the temperature line in comparison to the steadily rising GDP line, you’ve misled us into ignoring the consequences of climate change while we enjoy a long-term economic boom! Furthermore, the GDP data is <em>not</em> adjusted for inflation, so you’ve double-misled us by comparing 1929 dollars to 2019 dollars. Finally, since you accepted the default colors assigned by Google Sheets, the climate data is displayed in a “cool” blue, which sends our brain the opposite message of rising temperatures and glacial melt. So we’ll count this as a triple! TODO: Decide whether to break non-comparable data and color into separate paragraphs.</li>
 </ol>
 
 <div class="figure"><span id="fig:temperature-gdp-final-annotated"></span>
@@ -415,14 +423,11 @@ Figure 15.6: Brand-new menu for the right axis.
 Figure 15.7: Misleading dual-axis chart of US GDP and global temperature change.
 </p>
 </div>
-<p>TODO: There are many other ways to lie with charts…. for example, lie with 3D and perspective (see Cairo 2019 p58)…</p>
-<p>Now you’ve created three <em>misleading</em> charts. But are any of them <em>wrong</em>? Do they violate any rules of data visualization? If you’re the type of person who prefers to clearly divide things into <em>good</em> versus <em>bad</em>, our answer may disappoint you. Alberto Cairo warns us that [TODO insert quote here about visualization is more of an art than a science… all visualizations are simply models of reality, not the truth… we can only make better representations of the truth…].</p>
-<p>In the first half of the tutorial with the US GDP column chart, you clearly violated the zero-baseline rule when you started the vertical axis at a number other than zero. Column (and bar) charts <em>must</em> begin at zero, because they use <em>height</em> (and <em>length</em>) to represent value, as we described in the <a href="chart-design.html">chart design section of Chapter 7</a>. Readers cannot determine if a column is twice as high as another column unless both begin at the zero baseline.</p>
-<p>But the zero-baseline rule does <em>not</em> apply to line charts, Cairo reminds us, because those represent the <em>position</em> and <em>angle</em> of the line. Readers determine the meaning of line charts by their shape, rather than their height, so the baseline is irrelevant. This means that the flattened line chart for temperature change you created in step 5 may mislead readers, but it’s not wrong, as long as you labeled it correctly for readers who inspect these details.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a></p>
-<p>What about the warped aspect ratio you applied to the temperature chart in step 6? While it’s certainly designed to mislead readers, Cairo acknowledges that it is not <em>wrong</em> because it does not violate a clearly-defined rule of data visualization. Cairo prefers to set the aspect ratio to be similar to the rate of change shown in the line chart….[TODO describe and cite passage about this… and there’s no set rule….]</p>
-<p>What about the dual-axis chart you created in step 7 to compare global temperature change versus US GDP? We agree with many visualization experts who discourage using dual-axis charts because they confuse most readers and create mischief. Even though both axes began at zero, the left-side temperature scale has a top level of 10 degrees Celsius, which is not reasonable given the context of the data. A <em>scatter or bubble chart</em>, which is designed to compare two or more variables, would be a better way to plot global temperature change and US GDP over time. [TODO: Should we show this chart here?] Furthermore, a better chart would compare appropriate data, such as real GDP that has been adjusted into constant dollars.</p>
-<p>TODO:FINISH IDEA: So if none of the temperature change charts are technically <em>wrong</em>, are any of them <em>right</em>? Or in Cairo’s definition, which chart offers the most truthful representation of global temperature change? … interestingly, the Google Sheet default chart you created in step 3 meets most of our criteria: [check aspect ratio]. In any case, never accept the defaults automatically….</p>
-<p>Now that you’ve learned about how to lie with charts, you’ll build on these skills in the next section about lying with maps.</p>
+<p>Is this dual axis chart <em>misleading</em> rather than <em>wrong</em>? Once again, since it does not violate a clearly-defined visualization design rule, the chart is not wrong, but very misleading. In fact, many visualization experts strongly discourage using dual-axis charts because they confuse most readers and create mischief. Even though both axes began at zero, the left-side temperature scale has a top level of 10 degrees Celsius, which is not reasonable given the context of the data. [TODO: ADD THIS? Perhaps a better way to plot global temperature change and US GDP over time would be a scatter or bubble chart, which are designed to compare two or more variables. TODO: Should we show a scatter of this here?] Furthermore, a better chart would compare appropriate data, such as real GDP that has been adjusted into constant dollars.</p>
+<p>To sum up, in this tutorial you created four charts about global temperature change. None of them were technically wrong, but only the default chart was truthful, while the other three charts were unreasonably manipulated to mislead readers by hiding relevant patterns in the data. Although we never accept automatically accept the default chart generated by a visualization tool, in this case it was the best representation of the truth among the four candidates.</p>
+<p>TODO: FINISH There are many other ways to lie with charts…. for example, lie with 3D and perspective (see Cairo 2019 p58)…
+Now that you’ve learned about how to lie with charts, you’ll build on these skills in the next section about lying with maps.</p>
+</div>
 </div>
 <div class="footnotes">
 <hr />

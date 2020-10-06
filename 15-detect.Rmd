@@ -30,6 +30,8 @@ In the first half of this tutorial, we'll examine data about the economy, a topi
  knitr::include_graphics("images/15-detect/gdp-baseline-merged.png")
 ```
 
+TODO: Placed images above side-by-side to allow for easier comparison. Rethink if "zero baseline" and "truncated baseline" are best titles.
+
 However, your chart is clearly *wrong* because you've violated one of the [cardinal rules about chart design in Chapter 7](chart-design.html). Column (and bar) charts *must* start at the zero baseline, because they represent value using *height* (and *length*). Readers cannot determine if a column is twice as high as another column unless both begin at the zero baseline. By contrast, the default chart with the zero baseline is truthful. But let's move on to a different example where the rules are not as clear.
 
 In the second half of this tutorial, we'll examine data about climate change, one of the most pressing issues we face on our planet, yet deniers continue to resist the new reality, and some of them twist the facts.[TODO: Cite Cairo examples]. In this tutorial, we'll examine global temperature data from 1880 to the present, [downloaded from the NASA, the US National Aeronautics and Space Administration](https://climate.nasa.gov/vital-signs/global-temperature/). It shows that the mean global temperature has risen about 1 degree Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and this warming has already begun to cause glacial melt and rising sea levels. Your task is to create *misleading* line charts that *diminish* the appearance of rising global temperature change in the reader's eye.^[The inspiration for this specific tutorial came from a high school classroom activity created by the NASA Jet Propulsion Laboratory (JPL), as well as visualization expert Alberto Cairo's analysis of charts by climate change deniers. @nasajplEducatorGuideGraphing2017; @cairoHowChartsLie2019, pp. 65-67, 135-141.]
@@ -46,9 +48,10 @@ In the second half of this tutorial, we'll examine data about climate change, on
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&amp;format=interactive") else knitr::include_graphics("images/15-detect/temperature-default.png")
 ```
 
-Now let's create three more charts, and discuss why they are *not wrong* from a technical perspective, but nevertheless *very misleading*:
+Now let's create three more charts using the same data but different methods, and discuss why they are *not wrong* from a technical perspective, but nevertheless *very misleading*.
 
-4. *Lengthen the vertical axis.* We'll use the same method as shown in the first half of this tutorial, but in the opposite direction. In the Google Sheets chart editor, customize the vertical axis by changing the minimum value to negative 5 and the maximum to positive 5, as shown in Figure \@ref(fig:temperature-axis-annotated). By increasing the length of the vertical scale, you flattened our perception of the rising line, and cancelled our climate emergency...but not really.
+### Lengthen the vertical axis to flatten the line {-}
+We'll use the same method as shown in the first half of this tutorial, but in the opposite direction. In the Google Sheets chart editor, customize the vertical axis by changing the minimum value to negative 5 and the maximum to positive 5, as shown in Figure \@ref(fig:temperature-axis-annotated). By increasing the length of the vertical scale, you flattened our perception of the rising line, and cancelled our climate emergency...but not really.
 
 (ref:temperature-axis-annotated) Misleading chart with a lengthened vertical axis.
 
@@ -56,9 +59,12 @@ Now let's create three more charts, and discuss why they are *not wrong* from a 
  knitr::include_graphics("images/15-detect/temperature-axis-annotated.png")
 ```
 
-Is this flattened line chart *wrong* or *misleading*? In the first half of the tutorial, when you reduced the vertical axis of the US GDP chart, you violated the zero-baseline rule, because column and bar charts *must* begin at zero since they require readers to judge *height* and *length*, as described in the [chart design section of Chapter 7](chart-design.html). But you may be surprised to learn that the zero-baseline rule does *not* apply to line charts. Visualization expert Albert Cairo reminds us that line charts represent values in the *position* and *angle* of the line. Readers interpret the meaning of line charts by their shape, rather than their height, so the baseline is irrelevant. Therefore, flattening the line chart for temperature change may mislead readers, but it's technically not wrong, as long as it is labelled correctly.^[@cairoHowChartsLie2019, p. 61.]
+What makes this flattened line chart *misleading* rather than *wrong*? In the first half of the tutorial, when you reduced the vertical axis of the US GDP chart, you violated the zero-baseline rule, because column and bar charts *must* begin at zero since they require readers to judge *height* and *length*, as described in the [chart design section of Chapter 7](chart-design.html). But you may be surprised to learn that the zero-baseline rule does *not* apply to line charts. Visualization expert Albert Cairo reminds us that line charts represent values in the *position* and *angle* of the line. Readers interpret the meaning of line charts by their shape, rather than their height, so the baseline is irrelevant. Therefore, flattening the line chart for temperature change may mislead readers, but it's technically not wrong, as long as it is labelled correctly.^[@cairoHowChartsLie2019, p. 61.]
 
-5. *Stretch the chart to change its aspect ratio.* In your Google Sheet, click the chart and drag the sides to make it very short and wide, as shown in Figure \@ref(fig:temperature-aspect-annotated). Image measurements as listed in width by height, and we calculate the aspect ratio as width divided by height. Since the default chart is 600 x 370 pixels, its aspect ratio is about 1.6 to 1. But the stretched-out chart is 1090 x 191 pixels, and its ratio is about 5.7 to 1. By increasing the aspect ratio, you have flattened our perception of the rising line, and cancelled our climate crisis once again...but not really.
+TODO: While the text asks "wrong or misleading?" the chart and caption are clearly labeled "misleading" to avoid confusion among readers who just skim the text. Maybe rephrase the question: What makes this chart
+
+### Widen the chart to warp its aspect ratio {-}
+In your Google Sheet, click the chart and drag the sides to make it very short and wide, as shown in Figure \@ref(fig:temperature-aspect-annotated). Image measurements as listed in width by height, and we calculate the aspect ratio as width divided by height. Since the default chart is 600 x 370 pixels, its aspect ratio is about 1.6 to 1. But the stretched-out chart is 1090 x 191 pixels, and its ratio is about 5.7 to 1. By increasing the aspect ratio, you have flattened our perception of the rising line, and cancelled our climate crisis once again...but not really.
 
 (ref:temperature-aspect-annotated) Misleading chart with a stretched aspect ratio.
 
@@ -66,11 +72,14 @@ Is this flattened line chart *wrong* or *misleading*? In the first half of the t
  knitr::include_graphics("images/15-detect/temperature-aspect-annotated.png")
 ```
 
-Is this warped line chart *wrong* or *misleading*? Once again, since changing the aspect ratio of a line chart does not violate a clearly-defined rule of data visualization, it's not technically wrong, as long as it's accurately labeled. But it's definitely misleading. This is a case of designer preference. Alberto Cairo prefers to set the aspect ratio to be similar to the rate of change shown in the line chart....[TODO describe and cite passage about this... but it's not a clearly-defined rule, as publications often require visualizations to fit into specific spaces....]
+What makes this warped line chart *misleading* rather than *wrong*? Once again, since changing the aspect ratio of a line chart does not violate a clearly-defined rule of data visualization, it's not technically wrong, as long as it's accurately labeled. But it's definitely misleading. This is a case of designer preference. Alberto Cairo prefers to set the aspect ratio to be similar to the rate of change shown in the line chart....[TODO describe and cite passage about this... but it's not a clearly-defined rule, as publications often require visualizations to fit into specific spaces....]
 
-5. *Add more data and a dual vertical axis* Let's add more data to make your chart even more misleading! In the Google Sheet, go to the tab named *temp+GDP*, where you will see temperature change plus a new column: US Gross Domestic Product (GDP) in billions of dollars from 1929 to 2019, downloaded from the [US Federal Reserve](https://fred.stlouisfed.org/series/GDPA). (We deleted temperature rows prior to 1929 to make them match with available GDP data.) Select all three columns and *Insert > Chart* to produce a default line chart with two data series: temperature (in blue) and US GDP (in red).
+### Add more data and a dual vertical axis {-}
+Let's add more data to make your chart even more misleading! In the Google Sheet, go to the tab named *temp+GDP*, where you will see temperature change plus a new column: US Gross Domestic Product (GDP) in billions of dollars from 1929 to 2019, downloaded from the [US Federal Reserve](https://fred.stlouisfed.org/series/GDPA). We deleted temperature rows prior to 1929 to make them match with available GDP data.
 
-6. In the *Chart editor*, select *Customize* and scroll down to *Series*. Change the drop-down menu from *Apply to all series* to *US GDP*. Just below that in the *Format* area, change the *Axis* menu from *Left axis* to *Right Axis*, which creates another vertical axis on the right side of the chart, connected only to the US GDP data, as shown in Figure \@ref(fig:temperature-gdp-axis-setup).
+1. Select all three columns and *Insert > Chart* to produce a default line chart with two data series: temperature (in blue) and US GDP (in red).
+
+2. In the *Chart editor*, select *Customize* and scroll down to *Series*. Change the drop-down menu from *Apply to all series* to *US GDP*. Just below that in the *Format* area, change the *Axis* menu from *Left axis* to *Right Axis*, which creates another vertical axis on the right side of the chart, connected only to the US GDP data, as shown in Figure \@ref(fig:temperature-gdp-axis-setup).
 
 (ref:temperature-gdp-axis-setup) Add another vertical axis to the right side of the chart.
 
@@ -78,15 +87,15 @@ Is this warped line chart *wrong* or *misleading*? Once again, since changing th
  knitr::include_graphics("images/15-detect/temperature-gdp-axis-setup.png")
 ```
 
-7. In the *Chart editor > Customize* tab, scroll down and you will now see separate controls for *Vertical Axis* (the left side, for temperature change only), and a brand-new menu for the *Right Axis* (for US GDP only), as shown in Figure \@ref(fig:temperature-right-axis).
+3. In the *Chart editor > Customize* tab, scroll down and you will now see separate controls for *Vertical Axis* (the left side, for temperature change only), and a brand-new menu for the *Right Axis* (for US GDP only), as shown in Figure \@ref(fig:temperature-right-axis).
 
 (ref:temperature-right-axis) Brand-new menu for the right axis.
 
-```{r temperature-right-axis, fig.cap="(ref:temperature-right-axis)"}
+```{r temperature-right-axis, out.width=250, fig.cap="(ref:temperature-right-axis)"}
  knitr::include_graphics("images/15-detect/temperature-right-axis.png")
 ```
 
-8. Finish your chart by adjusting *Vertical Axis* for temperature change, but with even more exaggeration than you did in step 5 above. This time, change the minimum value to 0 (to match the right-axis baseline for US GDP) and the maximum to 10, to flatten the temperature line even further. Add a title, source, and labels to make it look more authoritative, as shown in Figure \@ref(fig:temperature-gdp-final-annotated). By lowering our perception of the temperature line in comparison to the steadily rising GDP line, you've misled us into ignoring the consequences of climate change while we enjoy a long-term economic boom! Furthermore, the GDP data is *not* adjusted for inflation, so you've double-misled us by comparing 1929 dollars to 2019 dollars. Finally, since you accepted the default colors assigned by Google Sheets, the climate data is displayed in a "cool" blue, which sends our brain the opposite message of rising temperatures and glacial melt. So we'll count this as a triple! TODO: Decide whether to break non-comparable data and color into separate paragraphs.
+4. Finish your chart by adjusting *Vertical Axis* for temperature change, but with even more exaggeration than you did in step 5 above. This time, change the minimum value to 0 (to match the right-axis baseline for US GDP) and the maximum to 10, to flatten the temperature line even further. Add a title, source, and labels to make it look more authoritative, as shown in Figure \@ref(fig:temperature-gdp-final-annotated). By lowering our perception of the temperature line in comparison to the steadily rising GDP line, you've misled us into ignoring the consequences of climate change while we enjoy a long-term economic boom! Furthermore, the GDP data is *not* adjusted for inflation, so you've double-misled us by comparing 1929 dollars to 2019 dollars. Finally, since you accepted the default colors assigned by Google Sheets, the climate data is displayed in a "cool" blue, which sends our brain the opposite message of rising temperatures and glacial melt. So we'll count this as a triple! TODO: Decide whether to break non-comparable data and color into separate paragraphs.
 
 (ref:temperature-gdp-final-annotated) Misleading dual-axis chart of US GDP and global temperature change.
 
@@ -94,7 +103,7 @@ Is this warped line chart *wrong* or *misleading*? Once again, since changing th
  knitr::include_graphics("images/15-detect/temperature-gdp-final-annotated.png")
 ```
 
-Is this dual axis chart *wrong* or *misleading*? Once again, since it does not violate a clearly-defined visualization design rule, the chart is not wrong, but very misleading. In fact, many visualization experts strongly discourage using dual-axis charts because they confuse most readers and create mischief. Even though both axes began at zero, the left-side temperature scale has a top level of 10 degrees Celsius, which is not reasonable given the context of the data. [TODO: ADD THIS? Perhaps a better way to plot global temperature change and US GDP over time would be a scatter or bubble chart, which are designed to compare two or more variables. TODO: Should we show a scatter of this here?] Furthermore, a better chart would compare appropriate data, such as real GDP that has been adjusted into constant dollars.
+Is this dual axis chart *misleading* rather than *wrong*? Once again, since it does not violate a clearly-defined visualization design rule, the chart is not wrong, but very misleading. In fact, many visualization experts strongly discourage using dual-axis charts because they confuse most readers and create mischief. Even though both axes began at zero, the left-side temperature scale has a top level of 10 degrees Celsius, which is not reasonable given the context of the data. [TODO: ADD THIS? Perhaps a better way to plot global temperature change and US GDP over time would be a scatter or bubble chart, which are designed to compare two or more variables. TODO: Should we show a scatter of this here?] Furthermore, a better chart would compare appropriate data, such as real GDP that has been adjusted into constant dollars.
 
 To sum up, in this tutorial you created four charts about global temperature change. None of them were technically wrong, but only the default chart was truthful, while the other three charts were unreasonably manipulated to mislead readers by hiding relevant patterns in the data. Although we never accept automatically accept the default chart generated by a visualization tool, in this case it was the best representation of the truth among the four candidates.
 
@@ -104,11 +113,9 @@ Now that you've learned about how to lie with charts, you'll build on these skil
 ## How to Lie with Maps {- #how-to-lie-with-maps}
 One of the best ways to learn how to detect lies is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own. We'll focus our attention on choropleth maps that use shading or color to represent values in geographic areas, because they are a topic of considerable mischief. This exercise was inspired by geographer Mark Monmonier's classic book by the same name, *How to Lie with Maps*, originally published in 1991, now in its third edition.[@monmonierHowLieMaps2018]
 
-Before we get started, review the [map design principles in Chapter 8](map-design.html) to avoid common mistakes when designing colored polygon (or choropleth) maps. For example, in most cases you want to avoid mapping absolute numbers (such as the total number of people in a group), and instead show relative data (such as the percentage of people in a group). Mapping absolute numbers of voters would simply show you where most people live, rather than how rates vary across geographic areas, which is usually what map makers wish to emphasize.
+Before we get started, review the [map design principles in Chapter 8](map-design.html) to avoid common mistakes when designing colored polygon (or choropleth) maps. For example, in most cases you want to avoid mapping absolute numbers (such as the total number of people in a group), and instead show relative data (such as the percentage of people in a group). Mapping absolute numbers of voters would simply show you where most people live, rather than how rates vary across geographic areas, which is usually what map makers wish to emphasize. Also, this section assumes that you're already familiar with the steps for creating a [Colored Polygon or Choropleth map with Datawrapper in Chapter 8](map-datawrapper.html).
 
-Also, this section assumes that you're already familiar with the steps for creating a [Colored Polygon or Choropleth map with Datawrapper in Chapter 8](map-datawrapper.html)...
-
-Let's return to the world income inequality map data that we began with in the Introduction, where we created two different maps, and argued that both were truthful interpretations. You'll understand the concepts more clearly by follow this hands-on tutorial to recreate both maps, plus one more.
+Let's return to the two maps in the [Introduction](introduction.html) of this book, which presented two different interpretations of world income inequality. In particular, the first map colored the US in medium blue which suggested its level of inequality was similar to other nations, while the second map made the US stand out in dark blue at the highest tier of inequality. We argued that both were *truthful* interpretations. You'll understand the concepts more clearly by follow this hands-on tutorial to recreate both maps, plus one more. First, let's examine the data and upload it to Datawrapper to start making our choropleth maps.
 
 1. Open the [world income top 1 percent data in Google Sheets](https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565), and go to *File > Save As* to create a copy that you can edit in your own Google Drive.
 
@@ -122,17 +129,17 @@ Let's return to the world income inequality map data that we began with in the I
 
 (ref:map-color-settings) Click the *wrench symbol* to open the color settings.
 
-```{r map-color-settings, fig.cap="(ref:map-color-settings)"}
+```{r map-color-settings, out.width=350, fig.cap="(ref:map-color-settings)"}
  knitr::include_graphics("images/15-detect/map-color-settings.png")
 ```
 
-### Beware of color range bias {-}
+### Modify the map color ranges {-}
 While we never automatically accept the default visualization, it's a good place to begin. The default map displays a *continuous* type of range, with a *linear* interpolation of data values. This means that the map places all of the values in a straight line, from the minimum of 5% to the maximum of 31%, and assigns each value to a color along the gradient, as shown in Figure \@ref(fig:map-continuous-linear). Notice that the US (20.5%) blends in with a medium blue color, just above the midpoint in this range.
 
 (ref:map-continuous-linear) Income inequality map with continuous range and linear interpolation. Explore the [interactive version](https://datawrapper.dwcdn.net/aetEM/).
 
 ```{r map-continuous-linear, fig.cap="(ref:map-continuous-linear)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/aetEM/") else knitr::include_graphics("images/15-detect/map-continuous-linear.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/aetEM/", height="450px") else knitr::include_graphics("images/15-detect/map-continuous-linear.png")
 ```
 
 Create a second map with the same data but different settings. Change the *Type* setting to *steps*, and adjust to *3* steps, using *Natural breaks (Jenks)* interpolation, as shown in Figure \@ref(fig:map-3steps-naturalbreaks). This means that the map now places all of the values in three ascending groups. Natural breaks offers a compromise between using colors to highlight the outliers versus diversity inside the range. Notice that the US (still 20.5%) now stands out in a dark blue color at the top third of this range (19% or above).
@@ -140,7 +147,7 @@ Create a second map with the same data but different settings. Change the *Type*
 (ref:map-3steps-naturalbreaks) Income inequality map with 3 steps and natural breaks interpolation. Explore the [interactive version](https://datawrapper.dwcdn.net/VSfdZ/).
 
 ```{r map-3steps-naturalbreaks, fig.cap="(ref:map-3steps-naturalbreaks)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/VSfdZ/") else knitr::include_graphics("images/15-detect/map-3steps-naturalbreaks.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/VSfdZ/", height="450px") else knitr::include_graphics("images/15-detect/map-3steps-naturalbreaks.png")
 ```
 
 The first map portrays US income inequality to be similar to most nations, while the second map places the US at the higher end of the color scale. Which map is misleading? Which one is truthful? If you prefer clear and definitive rules in map design, this answer may frustrate you. Although the two maps generate very different impressions in our eyes, both maps offer reasonable and truthful interpretations of the data.
@@ -157,7 +164,7 @@ So how *should* you make decisions when designing choropleth maps? Can you simpl
 
 [TODO: Where to insert this?] Based on these general guidelines, some may argue that the first map is *better* because it displays a continuous color range, but that does *not* make the second map wrong nor misleading.  
 
-### Beware of map area bias {-}
+### Modify the map area {-}
 Another way that choropleth maps mislead readers is because larger regions draw too much attention and divert the focus from *population size* to *geographic area*. In the United States, this problem arises during every national election. Typical maps of US electoral votes exaggerate the influence of rural states with larger geographic areas (such as enormous Wyoming, with about 590,000 people), and diminish the influence of urban states with small areas (such as tiny Rhode Island, with over 1,000,000 people).
 
 TODO: DECIDE whether to include US electoral vote map, with standard projection vs cartogram side-by-side?
@@ -175,11 +182,12 @@ To create a population square map in Datawrapper:
 (ref:map-world-pop-square) World population square map with income inequality data. Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/).
 
 ```{r map-world-pop-square, fig.cap="(ref:map-world-pop-square)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/YfNDe/") else knitr::include_graphics("images/15-detect/map-world-pop-square.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/YfNDe/", height="600px") else knitr::include_graphics("images/15-detect/map-world-pop-square.png")
 ```
 
 TODO: mention other types of map bias? Interactive maps such as Google Maps change borders and data depending on the internet address of the user (eg China). Also map color bias....
 
+Now that you have a clearer idea of how to lie with charts and maps, let's look at the related problem of lying about data using words.
 
 ## How to Lie with Words {- #how-to-lie-with-words}
 

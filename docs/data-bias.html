@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Different Types of Data Bias | Hands-On Data Visualization</title>
+  <title>Recognize and Reduce Data Bias | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Different Types of Data Bias | Hands-On Data Visualization" />
+  <meta property="og:title" content="Recognize and Reduce Data Bias | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Different Types of Data Bias | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Recognize and Reduce Data Bias | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-05" />
+<meta name="date" content="2020-10-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="how-to-lie-with-words.html"/>
-<link rel="next" href="racial-bias.html"/>
+<link rel="next" href="story.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -282,8 +282,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
-<li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Different Types of Data Bias</a></li>
-<li class="chapter" data-level="" data-path="racial-bias.html"><a href="racial-bias.html"><i class="fa fa-check"></i>Reducing Racial Bias in Visualizations</a></li>
+<li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Recognize and Reduce Data Bias</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -332,23 +331,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="data-bias" class="section level2 unnumbered" number="">
-<h2>Different Types of Data Bias</h2>
+<h2>Recognize and Reduce Data Bias</h2>
 <p>Bias occurs when we unfairly favor one view over another. Different types of bias….(we already mentioned statistical biases in the Compare Appropriate Data chapter…)</p>
 <p>We use the term to refer to biased people who prejudge something before evaluating the evidence. While some forms of bias are clearer to recognize, such as racial or gender bias,….Some biases are baked into human cognition and hard to avoid in data viz, unless you call it out</p>
 <ul>
-<li>Pattern Bias: tendency to see patterns in random data. Avoid it by remind readers that data is noisy and use statistical tests to determine likelihood of results due to change, covered in many books on statistical analysis.</li>
-<li>Confirmation Bias: accept claims that fit our preconceived notions…(see dataviz experiments in Cario book, Thaler?). Avoid it by looking at data with open eyes, and search out competing interpretations</li>
+<li>Privileged majority biases… such as whiteness bias, male bias, heterosexual bias….</li>
+<li>Example: Map with “empty” land ignoring indigenous people <a href="https://twitter.com/indigenia/status/1308406887231246337?s=12" class="uri">https://twitter.com/indigenia/status/1308406887231246337?s=12</a></li>
+<li>sidenote: that wasn’t how the original map creator designed or labeled the map, but others interpreted it this way</li>
+<li>how to address: clarify map biases….</li>
+<li>See also John Schwabish, avoid whiteness bias…
+<a href="https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff" class="uri">https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff</a></li>
+<li>Reduce by calling out white superiority or privilege, and changing how we design….</li>
 </ul>
+<p>Think also about the simple act of mapping data for the “United States”: How does your data and map represent the District of Columbia, where X people live but is not counted as a state? Similarly, how does it represent Puerto Rico….? Or other US territories in the Pacific, such as….? If you’re trying to create a map of all US data, seek to include people rather than ignoring their existence. If it’s hard to include non-contiguous areas in your US map, find better basemaps. If you don’t have data, mention this in the notes and/or text</p>
 <p>We also refer to biases that are baked into the software that humans create.
-- Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: <a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>; <a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a></p>
+- Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: <a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>; <a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a>
+- Reduce by calling it out, and not simply equating “digital” as “authoritative”…</p>
+<ul>
+<li><p>Confirmation Bias: accept claims that fit our preconceived notions…(see dataviz experiments in Cario book, Thaler?). Avoid it by looking at data with open eyes, and search out competing interpretations</p></li>
+<li><p>Pattern Bias: tendency to see patterns in random data. Avoid it by remind readers that data is noisy and use statistical tests to determine likelihood of results due to change, covered in many books on statistical analysis.</p></li>
+</ul>
+<div id="summary15" class="section level3 unnumbered" number="">
+<h3>Summary</h3>
+<p>TODO</p>
+
 </div>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
 <a href="how-to-lie-with-words.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="racial-bias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="story.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

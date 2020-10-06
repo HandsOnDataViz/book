@@ -82,7 +82,9 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://hands
 
 Why does the second map in Figure \@ref(fig:world-income-map2) look different than the first map in Figure \@ref(fig:world-income-map1)? The US is now shaded in a lighter purple color, similar to that of Europe. Did the inequality crisis simply fade away from the US? Which map tells the truth?
 
-This time, neither map is misleading. Both make valid interpretations of the data with reasonable design choices, even though they create very different impressions in our eyes. To understand why, look closely at the legend in the bottom-left corner of both maps. The first map sorts nations in three ranges (0-10, 10-20, 20+), while the second map uses slightly different range cutoffs (0-9, 9-21, 21+). Since the US share is 20.5 percent, in the first map it falls into the top bucket with the darkest color, but in the second map it falls into the middle bucket with a lighter color. Yet both ranges are equally valid, as there is no clear rule about using one versus the other in this case. In the same way, the first map displays three shades of red, while the second map uses purple. Based on design principles discussed later in the book, both are equally valid color choices.
+This time, neither map is misleading. Both make truthful interpretations of the data with reasonable design choices, even though they create very different impressions in our eyes. To understand why, look closely at the legend in the bottom-left corner of both maps. The first map sorts nations in three ranges (0-10, 10-20, 20+), while the second map uses slightly different range cutoffs (0-9, 9-21, 21+). Since the US share is 20.5 percent, in the first map it falls into the top bucket with the darkest color, but in the second map it falls into the middle bucket with a lighter color. Yet both ranges are equally valid, as there is no clear rule about using one versus the other in this case. In the same way, the first map displays three shades of red, while the second map uses purple. Based on design principles discussed later in the book, both are equally valid color choices.
+
+TODO: Update both maps and text to reflect guidelines raised in Ch15 Detect
 
 ### Summary {- #summary1}
 People can lie with charts and maps, and some design choices can intentionally mislead. But data visualization is also interpretive and open-ended. It’s common to create more than one picture of the truth.
@@ -91,5 +93,4 @@ That poses a challenge for us as authors of this book. Data visualizations do no
 
 TODO ABOVE:
 - add brief narrative overview of the book's organization, and how it will teach the reader to answer the questions posed in this introductory chapter
-- distinguish between "lying" versus "misleading" in word choice above
 - transition to major chapters/parts of the book, especially how to detect lies and reduce bias chapter

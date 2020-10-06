@@ -26,7 +26,7 @@ TODO ABOVE:
 
 - UPDATE table text and images to match chapter contents, and reorganize to feature easier tools at top.
 - DECIDE on consistent language for Colored Polygon and/or Choropleth map
-- Keep Google My Maps point map tool; perhaps mention BatchGeo again? Datawrapper symbol map?
+- DECIDE if Socrata point map really needs to be featured here
 - Confirm removing Storymap "easy tools" because neither allow you to export data you enter: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/) OR mention (but do not recommend) Storymap.js as an easy tool, but cannot easily migrate data out, then Leaflet Storymaps with GS as a power tool
 - mention HistoryPin.org as another storytelling type of map?
 - Add tab-view map for historical change template?

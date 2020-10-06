@@ -794,7 +794,7 @@ Here's a few tools for geocoding:
 1. Before you publish, you'll need to [get a Google API key](https://developers.google.com/maps/documentation/javascript/get-api-key). You can get on here. Replace the API key on this line of `index.html` with yours: `<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=[YOUR KEY HERE]"></script>`
 2. Upload this map and all the supporting files and folders to your site. This map requires no back-end code, so any host will work, including GitHub pages, Netlify or your own web server.
 
-### Summary {- #summary12}
+### Summary {- #summary13}
 
 In this chapter, we introduced Leaflet map templates for common map problems,
 such as telling stories about places using scrollable interface,

@@ -32,13 +32,7 @@ As the saying goes, it takes a thief to catch a thief: learn *how to lie* to avo
 
 Since our book features hands-on lessons, in each section you'll learn how to create *biased* visualizations, so that you'll know how to make *better* ones. Just like it takes a thief to catch a thief... you need to learn how to lie in order to be more truthful in your visualizations...
 
-These tutorials on "how to lie" were inspired by several sources....
-
-- Darrell Huff, How to Lie with Statistics (W. W. Norton & Company, 1954), http://books.google.com/books?isbn=0393070875
-- Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of Chicago Press, 1996), http://books.google.com/books?isbn=0226534219
-- Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9, 2017, http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/
-- Alberto Cairo 2016
-- Alberto Cairo 2019
+These tutorials on "how to lie" were inspired by several sources...^[@cairoTruthfulArtData2016; @cairoHowChartsLie2019; @huffHowLieStatistics1954; @monmonierHowLieMaps2018; @yauHowSpotVisualization2017; @nasajplEducatorGuideGraphing2017]
 
 ## How to Lie with Charts {- #how-to-lie-with-charts}
 In this section, you'll learn how to avoid being fooled by misleading charts, and also how to make your own charts more honest, by intentionally manipulating the same data to tell opposing stories. In the first half, you will *exaggerate* small differences in a column chart to make them seem larger. In the second, half, you will *diminish* the rate of growth in a line chart to make it appear more gradual. Together, these tutorials will teach you to watch out for key details when reading other people's charts, such as the vertical axis and aspect ratio. Paradoxically, by demonstrating *how to lie*, our goal is to teach you to *tell the truth* and to think more carefully about the ethics of designing your data stories.
@@ -49,11 +43,15 @@ In the first half of this tutorial, we'll examine data about the economy, a topi
 
 2. Examine the data and read the notes. To simplify this example, we show only two figures: the US GDP for the 2nd quarter (April-June) and the 3rd quarter (July-September) in 2019. The 2nd quarter was about $21.5 trillion, and the third quarter was slightly higher at $21.7 trillion. TODO: DECIDE whether to add this: If we calculated the percent change, or (21747 - 21540)/21540 = 0.0096 = 0.96%, that's a growth rate of just under 1 percent.
 
-3. Create a Google Sheets column chart in the same sheet using the *default* settings, although we never automatically accept them as the best representation of the truth. In the *data* tab, select the two columns, and go to *Insert > Chart*, as you learned when we introduced [charts with Google Sheets in Chapter 7](chart-google.html). The tool should recognize your data and automatically produce a column chart, as shown in FIG TODO. In this default view, with the zero baseline for the vertical axis, the difference between $21.5 versus $21.7 trillion looks relatively small to the reader.
+3. Create a Google Sheets column chart in the same sheet using the *default* settings, although we never automatically accept them as the best representation of the truth. In the *data* tab, select the two columns, and go to *Insert > Chart*, as you learned when we introduced [charts with Google Sheets in Chapter 7](chart-google.html). The tool should recognize your data and automatically produce a column chart, as shown in the left side of Figure \@ref(fig:gdp-baseline-merged). In this default view, with the zero baseline for the vertical axis, the difference between $21.5 versus $21.7 trillion looks relatively small to the reader.
 
-4. *Lie by reducing the vertical axis.* Click on the three-dot kebab menu to open the *Chart editor* and select the *Customize* tab. Scroll down to the vertical axis settings, and change the minimum to 21500 and the maximum to 21800, as shown on the right side of FIG TODO. Although the data remains the same, those small differences now appear much larger in our eyes because you've manipulated the vertical scale. Only people who read charts closely will notice this trick. The political candidate who's campaigning on rising economic growth will thank you!
+4. *Lie by reducing the vertical axis.* Click on the three-dot kebab menu to open the *Chart editor* and select the *Customize* tab. Scroll down to the vertical axis settings, and change the minimum to 21500 and the maximum to 21800, as shown in the right side of Figure \@ref(fig:gdp-baseline-merged). Although the data remains the same, those small differences now appear much larger in our eyes because you've manipulated the vertical scale. Only people who read charts closely will notice this trick. The political candidate who's campaigning on rising economic growth will thank you!
 
-FIG TODO MERGE
+(ref:gdp-baseline-merged) The default GDP line chart on the left, and the reduced-axis chart on the right.
+
+```{r gdp-baseline-merged, out.width=750, fig.cap="(ref:gdp-baseline-merged)"}
+ knitr::include_graphics("images/15-detect/gdp-baseline-merged.png")
+```
 
 However, you've also violated one of the [cardinal rules about chart design in Chapter 7](chart-design.html): bar and column charts *must* start at the zero baseline, because they represent value using *length*. Therefore, in the eyes of data visualization experts, your misleading chart is wrong, and the default chart with the zero baseline is a better representation of the truth. But let's move on to a different example where the rules are not as clear.
 
@@ -61,36 +59,59 @@ In the second half of this tutorial, we'll examine data about climate change, on
 
 1. Open the [global temperature change 1880-2019 data in Google Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0), and go to *File > Save As* to create a copy that you can edit in your own Google Drive.
 
-2. Examine the data and read the notes. Temperature change refers to the mean global land-ocean surface temperature in degrees Celsius, estimated from many samples around the earth, relative to the temperature in 1951-1980, about 14°C (or 57°F). In other words, the 0.98 value for 2019 means that global temperatures were about 1°C above normal that year. Scientists define the 1951-80 period as "normal" based on standards from NASA and the US National Weather Service, and also because it's a familiar reference for many of today's adults who grew up during those decades. While there's other ways to measure temperature change, this data from NASA's Goddard Institute for Space Studies (NASA/GISS) is generally consistent with data compiled by other scientists at the [Climatic Research Unit](http://www.cru.uea.ac.uk/) and the [National Oceanic and Atmospheric Adminstration](https://www.ncdc.noaa.gov/cag/global/time-series) (NOAA).
+2. Examine the data and read the notes. Temperature change refers to the mean global land-ocean surface temperature in degrees Celsius, estimated from many samples around the earth, relative to the temperature in 1951-1980, about 14°C (or 57°F). In other words, the 0.98 value for 2019 means that global temperatures were about 1°C above normal that year. Scientists define the 1951-80 period as "normal" based on standards from NASA and the US National Weather Service, and also because it's a familiar reference for many of today's adults who grew up during those decades. While there's other ways to measure temperature change, this data from NASA's Goddard Institute for Space Studies (NASA/GISS) is generally consistent with data compiled by other scientists at the [Climatic Research Unit](http://www.cru.uea.ac.uk/) and the [National Oceanic and Atmospheric Administration](https://www.ncdc.noaa.gov/cag/global/time-series) (NOAA).
 
-3. Create a Google Sheets line chart in the *data* tab by selecting the two columns in the *data* tab, then *Insert > Chart*. The tool should recognize your time-series data and produce a *default* line chart, though we never automatically accept it as the best representation of the truth. Click on the three-dot kebab menu to open the *Chart editor* and select the *Customize* tab. Add a better title and vertical axis label, using the notes to clarify the source and how temperature change is measured, as shown in FIG TODO
+3. Create a Google Sheets line chart in the *data* tab by selecting the two columns in the *data* tab, then *Insert > Chart*. The tool should recognize your time-series data and produce a *default* line chart, though we never automatically accept it as the best representation of the truth. Click on the three-dot kebab menu to open the *Chart editor* and select the *Customize* tab. Add a better title and vertical axis label, using the notes to clarify the source and how temperature change is measured, as shown in Figure \@ref(fig:temperature-default).
 
-temperature-default.png
-https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&format=interactive
+(ref:temperature-default) Default line chart of global temperature change. Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&format=interactive).
+
+```{r temperature-default, fig.cap="(ref:temperature-default)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&amp;format=interactive") else knitr::include_graphics("images/15-detect/temperature-default.png")
+```
 
 Now let's use three methods to create *misleading* charts:
 
-5. *Lie by lengthening the vertical axis.* We'll use the same method as shown in the first half of this tutorial, but in the opposite direction. In the Google Sheets chart editor, customize the vertical axis by changing the minimum value to negative 5 and the maximum to positive 5, as shown in FIG TODO. By increasing the length of the vertical scale, you flattened our perception of the rising line, and cancelled our climate emergency...but not really.
+5. *Lie by lengthening the vertical axis.* We'll use the same method as shown in the first half of this tutorial, but in the opposite direction. In the Google Sheets chart editor, customize the vertical axis by changing the minimum value to negative 5 and the maximum to positive 5, as shown in Figure \@ref(fig:temperature-axis-annotated). By increasing the length of the vertical scale, you flattened our perception of the rising line, and cancelled our climate emergency...but not really.
 
-temperature-axis-annotated.png
+(ref:temperature-axis-annotated) Misleading chart with a lengthened vertical axis.
 
-4. *Lie by stretching the chart to change its aspect ratio.* In your Google Sheet, click the chart and drag the sides to make it very short and wide, as shown in FIG TODO. Image measurements as listed in width by height, and we calculate the aspect ratio as width divided by height. Since the default chart is 600 x 370 pixels, its aspect ratio is about 1.6 to 1. But the stretched-out chart is 1090 x 191 pixels, and its ratio is about 5.7 to 1. By increasing the aspect ratio, you have flattened our perception of the rising line, and cancelled our climate crisis once again...but not really.
+```{r temperature-axis-annotated, fig.cap="(ref:temperature-axis-annotated)"}
+ knitr::include_graphics("images/15-detect/temperature-axis-annotated.png")
+```
 
-temperature-aspect-annotated.png
+4. *Lie by stretching the chart to change its aspect ratio.* In your Google Sheet, click the chart and drag the sides to make it very short and wide, as shown in Figure \@ref(fig:temperature-aspect-annotated). Image measurements as listed in width by height, and we calculate the aspect ratio as width divided by height. Since the default chart is 600 x 370 pixels, its aspect ratio is about 1.6 to 1. But the stretched-out chart is 1090 x 191 pixels, and its ratio is about 5.7 to 1. By increasing the aspect ratio, you have flattened our perception of the rising line, and cancelled our climate crisis once again...but not really.
+
+(ref:temperature-aspect-annotated) Misleading chart with a stretched aspect ratio.
+
+```{r temperature-aspect-annotated, fig.cap="(ref:temperature-aspect-annotated)"}
+ knitr::include_graphics("images/15-detect/temperature-aspect-annotated.png")
+```
 
 5. *Lie by adding more data and a dual vertical axis* Let's add more data to make your chart even more misleading! In the Google Sheet, go to the tab named *temp+GDP*, where you will see temperature change plus a new column: US Gross Domestic Product (GDP) in billions of dollars from 1929 to 2019, downloaded from the [US Federal Reserve](https://fred.stlouisfed.org/series/GDPA). (We deleted temperature rows prior to 1929 to make them match with available GDP data.) Select all three columns and *Insert > Chart* to produce a default line chart with two data series: temperature (in blue) and US GDP (in red).
 
-6. In the *Chart editor*, select *Customize* and scroll down to *Series*. Change the drop-down menu from *Apply to all series* to *US GDP*. Just below that in the *Format* area, change the *Axis* menu from *Left axis* to *Right Axis*, which creates another vertical axis on the right side of the chart, connected only to the US GDP data, as shown in FIG TODO
+6. In the *Chart editor*, select *Customize* and scroll down to *Series*. Change the drop-down menu from *Apply to all series* to *US GDP*. Just below that in the *Format* area, change the *Axis* menu from *Left axis* to *Right Axis*, which creates another vertical axis on the right side of the chart, connected only to the US GDP data, as shown in Figure \@ref(fig:temperature-gdp-axis-setup).
 
-temperature-gdp-axis-setup.png
+(ref:temperature-gdp-axis-setup) Add another vertical axis to the right side of the chart.
 
-7. In the *Chart editor > Customize* tab, scroll down and you will now see separate controls for *Vertical Axis* (the left side, for temperature change only), and a brand-new menu for *Right Axis* (for US GDP only), as shown in FIG TODO
+```{r temperature-gdp-axis-setup, fig.cap="(ref:temperature-gdp-axis-setup)"}
+ knitr::include_graphics("images/15-detect/temperature-gdp-axis-setup.png")
+```
 
-temperature-right-axis.png
+7. In the *Chart editor > Customize* tab, scroll down and you will now see separate controls for *Vertical Axis* (the left side, for temperature change only), and a brand-new menu for the *Right Axis* (for US GDP only), as shown in Figure \@ref(fig:temperature-right-axis).
 
-8. Finish your misleading chart by adjusting *Vertical Axis* for temperature change, but with even more exaggeration than you did in step 5 above. This time, change the minimum value to 0 (to match the right-axis baseline for US GDP) and the maximum to 10, to flatten the temperature line even further. Add a title, source, and labels to make it look more authoritative, as shown in FIG TODO. By lowering our perception of the temperature line in comparison to the steadily rising GDP line, you've misled us into ignoring the consequences of climate change while we enjoy a long-term economic boom! Furthermore, the GDP data is *not* adjusted for inflation, so you've double-misled us by comparing 1929 dollars to 2019 dollars. Finally, since you accepted the default colors assigned by Google Sheets, the climate data is displayed in a "cool" blue, which sends our brain the opposite message of rising temperatures and glacial melt. So we'll count this as a triple! TODO: Decide whether to break non-comparable data and color into separate paragraphs.
+(ref:temperature-right-axis) Brand-new menu for the right axis.
 
-temperature-gdp-final-annotated.png
+```{r temperature-right-axis, fig.cap="(ref:temperature-right-axis)"}
+ knitr::include_graphics("images/15-detect/temperature-right-axis.png")
+```
+
+8. Finish your misleading chart by adjusting *Vertical Axis* for temperature change, but with even more exaggeration than you did in step 5 above. This time, change the minimum value to 0 (to match the right-axis baseline for US GDP) and the maximum to 10, to flatten the temperature line even further. Add a title, source, and labels to make it look more authoritative, as shown in Figure \@ref(fig:temperature-gdp-final-annotated). By lowering our perception of the temperature line in comparison to the steadily rising GDP line, you've misled us into ignoring the consequences of climate change while we enjoy a long-term economic boom! Furthermore, the GDP data is *not* adjusted for inflation, so you've double-misled us by comparing 1929 dollars to 2019 dollars. Finally, since you accepted the default colors assigned by Google Sheets, the climate data is displayed in a "cool" blue, which sends our brain the opposite message of rising temperatures and glacial melt. So we'll count this as a triple! TODO: Decide whether to break non-comparable data and color into separate paragraphs.
+
+(ref:temperature-gdp-final-annotated) Misleading dual-axis chart of US GDP and global temperature change.
+
+```{r temperature-gdp-final-annotated, fig.cap="(ref:temperature-gdp-final-annotated)"}
+ knitr::include_graphics("images/15-detect/temperature-gdp-final-annotated.png")
+```
 
 TODO: There are many other ways to lie with charts.... for example, lie with 3D and perspective (see Cairo 2019 p58)...
 
@@ -115,7 +136,7 @@ Before we get started, review the map design principles in Chapter 8 to avoid co
 
 Also, this section assumes that you're already familiar with the steps for creating a [Colored Polygon or Choropleth map with Datawrapper in Chapter 8](map-datawrapper.html)...
 
-Let's return to the world income inequality map data that we began with in the Introduction, where we created two different maps, and confessed that both were valid interpretations....
+Let's return to the world income inequality map data that we began with in the Introduction, where we created two different maps, and argued that both were valid interpretations.... You'll understand the concepts more clearly by making both maps.
 
 1. Open the [world income top 1 percent data in Google Sheets](https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565), and go to *File > Save As* to create a copy that you can edit in your own Google Drive.
 
@@ -125,28 +146,42 @@ Let's return to the world income inequality map data that we began with in the I
 
 4. Open the [Datawrapper visualization tool](https://datawrapper.de) in your browser and upload your CSV map data.  Select *New Map*, select *Choropleth map*, and select *World*, then *Proceed*. In the *Add your data* screen, scroll down below the table and select the *Import your dataset* button, then the *Start Import* button, then *click here to upload a CSV file*, and upload the CSV file you created in the step above. Click to confirm that the first column is *Matched as ISO code*, click *Continue*, then click to confirm that the *Percent Share* column is *Matched as Values*, then click *Go* and *Proceed* to visualize your map.
 
-5. In the *Visualize* screen, in the *Colors* section of the *Refine* tab *Select palette*, click the *wrench symbol* to open up the color settings, as shown in FIG TODO. Let's skip past the light-green-to-blue color palette, which you can modify later, and let's focus on settings for color ranges.
+5. In the *Visualize* screen, in the *Colors* section of the *Refine* tab *Select palette*, click the *wrench symbol* to open up the color settings, as shown in Figure \@ref(fig:map-color-settings). Let's skip past the light-green-to-blue color palette, which you can modify later, and let's focus on settings for color ranges.
 
-map-color-settings.png
+(ref:map-color-settings) Click the *wrench symbol* to open the color settings.
+
+```{r map-color-settings, fig.cap="(ref:map-color-settings)"}
+ knitr::include_graphics("images/15-detect/map-color-settings.png")
+```
 
 ### Beware of color range bias {-}
 TODO: decide if this wording is better than "mislead with..."
 
-While we never automatically accept the default visualization, it's a good place to begin. The default map displays a *continuous* type of range, with a *linear* interpolation of data values. This means that the map places all of the values in a straight line, from the minimum of 5% to the maximum of 31%, and assigns each value to a color along the gradient, as shown in FIG TODO. Notice that the US (20.5%) blends in with a medium blue color, just above the midpoint in this range.
+While we never automatically accept the default visualization, it's a good place to begin. The default map displays a *continuous* type of range, with a *linear* interpolation of data values. This means that the map places all of the values in a straight line, from the minimum of 5% to the maximum of 31%, and assigns each value to a color along the gradient, as shown in Figure \@ref(fig:map-continuous-linear). Notice that the US (20.5%) blends in with a medium blue color, just above the midpoint in this range.
 
-map-continuous-linear.png
-https://datawrapper.dwcdn.net/aetEM/
+(ref:map-continuous-linear) Income inequality map with continuous range and linear interpolation. Explore the [interactive version](https://datawrapper.dwcdn.net/aetEM/).
 
-Create a second map with the same data but different settings. Change the *Type* setting to *steps*, and adjust to *3* steps, using *Natural breaks (Jenks)* interpolation, as shown in FIG TODO. This means that the map now places all of the values in three ascending groups. Natural breaks offers a compromise between using colors to highlight the outliers versus diversity inside the range. Notice that the US (still 20.5%) now stands out in a dark blue color at the top third of this range (19% or above).
+```{r map-continuous-linear, fig.cap="(ref:map-continuous-linear)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/aetEM/") else knitr::include_graphics("images/15-detect/map-continuous-linear.png")
+```
 
-map-3steps-naturalbreaks.png
-https://datawrapper.dwcdn.net/VSfdZ/
+Create a second map with the same data but different settings. Change the *Type* setting to *steps*, and adjust to *3* steps, using *Natural breaks (Jenks)* interpolation, as shown in Figure \@ref(fig:map-3steps-naturalbreaks). This means that the map now places all of the values in three ascending groups. Natural breaks offers a compromise between using colors to highlight the outliers versus diversity inside the range. Notice that the US (still 20.5%) now stands out in a dark blue color at the top third of this range (19% or above).
+
+(ref:map-3steps-naturalbreaks) Income inequality map with 3 steps and natural breaks interpolation. Explore the [interactive version](https://datawrapper.dwcdn.net/VSfdZ/).
+
+```{r map-3steps-naturalbreaks, fig.cap="(ref:map-3steps-naturalbreaks)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/VSfdZ/") else knitr::include_graphics("images/15-detect/map-3steps-naturalbreaks.png")
+```
 
 Which map is misleading? Which one is correct? Is US income inequality about the same as other nations, or at the higher end of the scale? If you prefer clear and definitive rules in data visualization, this answer may frustrate you. Both maps offer defensible interpretations of the data, even though they generate very different impressions in our eyes.
 
-To understand what's happening behind the scenes with your choropleth map, visualization expert Alberto Cairo recommends creating a histogram to better understand the data distribution. [Cite Cairo; add that he recommends multiple histograms with different bucket sizes?] Go back to the original Google Sheet [link again?] and create a [histogram, as we described in chapter 7](chart-histogram.html) to view the frequency of nations when sorted into "buckets" by percent share, as shown in FIG TODO. This is not a normal distribution curve, because a handful of nations are outliers around the 30 percent mark. In the first map, which used continuous type and linear interpolation, the US appears closer to the midpoint of the range and blended in with a medium blue. In the second map, which used 3 steps and natural breaks, the US appears in the top range was stood out with a dark blue. Since both maps are consistently labeled...(more?), there is no definitive answer that makes one map more correct than the other. [TODO: check wording]
+To understand what's happening behind the scenes with your choropleth map, visualization expert Alberto Cairo recommends creating a histogram to better understand the data distribution. [Cite Cairo; add that he recommends multiple histograms with different bucket sizes?] Go back to the original Google Sheet [link again?] and create a [histogram, as we described in chapter 7](chart-histogram.html) to view the frequency of nations when sorted into "buckets" by percent share, as shown in Figure \@ref(fig:map-data-histogram). This is not a normal distribution curve, because a handful of nations are outliers around the 30 percent mark. In the first map, which used continuous type and linear interpolation, the US appears closer to the midpoint of the range and blended in with a medium blue. In the second map, which used 3 steps and natural breaks, the US appears in the top range was stood out with a dark blue. Since both maps are consistently labeled...(more?), there is no definitive answer that makes one map more correct than the other. [TODO: check wording]
 
-map-data-histogram.png
+(ref:map-data-histogram) Histogram of income inequality map data.
+
+```{r map-data-histogram, fig.cap="(ref:map-data-histogram)"}
+ knitr::include_graphics("images/15-detect/map-data-histogram.png")
+```
 
 So how *should* you make decisions when designing choropleth maps? Can you simply place the cutoffs anywhere you choose? Absolutely not. Mapmakers offer guidelines about ways to make *better* visualizations. For example, Datawrapper Academy recommends finding "a compromise between honesty and usefulness" when designing maps [TODO cite https://academy.datawrapper.de/article/117-color-palette-for-your-map]. "Useful" means that it's acceptable to use design choices to communicate different interpretations of the data. For example, a linear interpolation is best for emphasizing the extreme lows and highs, while quantiles are best for identifying geographic patterns in the middle ranges. "Honesty" means telling the truth, and not intentionally creating misleading impressions of the data. For example, increasing the number of steps in your color range will increase the level of contrast in the map, but it can also mistakenly give the impression that light- and dark-colored regions are very different, while their numbers may vary only slightly. In general, Datawrapper recommends choosing ranges to make sure readers "see all the differences in the data," rather than hiding them out of sight.[TODO cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps] They also recommend using a continuous color range to show nuances in the data, unless your data story has a compelling reason to display discrete color steps [TODO add "such as...example" and cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps]. Finally, Datawrapper Academy strongly warns against using the manual custom settings to manipulate a map's appearance to fit a preconceived point of view.[Cite https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool]. Show readers the story and tell the truth.
 
@@ -165,10 +200,13 @@ To create a population square map in Datawrapper:
 
 1. Create a new map and go to *Select your map* .... or if you saved world inequality maps in your Datawrapper account, go to My Charts, select and duplicate one of them, and edit it.
 
-2. Under type of map to create, type "hexagons" to see all of the cartograms available (including US States) or type "squares" to see all of those available (including World population squares). Select your preferred map and data, and proceed to visualize in the same way as above, as shown in FIG TODO
+2. Under type of map to create, type "hexagons" to see all of the cartograms available (including US States) or type "squares" to see all of those available (including World population squares). Select your preferred map and data, and proceed to visualize in the same way as above, as shown in Figure \@ref(fig:map-world-pop-square).
 
-map-world-pop-square.png
-https://datawrapper.dwcdn.net/YfNDe/1/
+(ref:map-world-pop-square) World population square map with income inequality data. Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/).
+
+```{r map-world-pop-square, fig.cap="(ref:map-world-pop-square)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/YfNDe/") else knitr::include_graphics("images/15-detect/map-world-pop-square.png")
+```
 
 TODO: mention other types of map bias? Interactive maps such as Google Maps change borders and data depending on the internet address of the user (eg China). Also map color bias....
 
@@ -178,8 +216,6 @@ TODO: mention other types of map bias? Interactive maps such as Google Maps chan
 Now that we've focused on charts and maps, think more carefully about the words we choose when designing our visualizations...
 
 Framing Bias: Watch for negative versus positive framing and how it affects readers. For example, British statistician David Spiegelhalter notes that US hospitals report *mortality rates*, while UK hospitals report *survival* rates. When considering the risks of a surgical procedure for member of your family, a 5 percent mortality rate sounds worse than a 95 percent survival rate, even they're mathematically identical. Furthermore, augmenting the rate with raw numbers (such as 20 deaths out of 400 patients) raises the impression of risk even higher, because we begin to imagine real people's lives, not abstract percentages.^[@spiegelhalterArtStatisticsLearning2019, pp. 22-5]
-
-
 
 ## Different Types of Data Bias {- #data-bias}
 
@@ -201,5 +237,5 @@ We also refer to biases that are baked into the software that humans create.
 https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff
 
 
-### Summary {- #summary14}
+### Summary {- #summary15}
 TODO

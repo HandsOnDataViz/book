@@ -375,7 +375,7 @@ To change the color of a data series (for example, to show Overweight category i
 
 ### Histograms {-}
 
-TODO: Rewrite this section on histograms to use data that is not automatically sorted into buckets (such as my coffee shop customer data by hour). Find other food-related data that is not already sorted, such as average daily calorie consumption across nations: https://en.wikipedia.org/wiki/List_of_countries_by_food_energy_intake. Use default Google histogram (rather than column chart). Walk thru steps to modify bucket sizes in Chart Editor > Histogram > Show item dividers 
+TODO: Rewrite this section on histograms to use data that is not automatically sorted into buckets (such as my coffee shop customer data by hour). Find other food-related data that is not already sorted, such as average daily calorie consumption across nations: https://en.wikipedia.org/wiki/List_of_countries_by_food_energy_intake. Use default Google histogram (rather than column chart). Walk thru steps to modify bucket sizes in Chart Editor > Histogram > Show item dividers
 
 A histogram is a specific type of bar or column chart that is best for showing the distribution of raw data, with the number of values in each bucket (or bin). To build a histogram, you need to assign each data point, whether numerical or categorical, into one of the non-overlapping buckets. For example, imagine that you wish to track the number of customers each hour in a local coffee shop. Format the raw customer data series in a vertical column in your Google Sheet, as shown in Figure \@ref(fig:histogram-data). Now you can easily create a histogram column chart that displays the number of customers per hour, as shown in Figure \@ref(fig:histogram), which resembles the "popular times" format for businesses in Google Maps. This coffee shop experiences a morning rush and an afternoon rush, but the middle of the day and late evenings are relatively quiet.
 
@@ -829,7 +829,7 @@ knitr::include_graphics("images/07-chart/tableau-filtered-ready.png")
 See the [Embed Tableau Public on Your Website](embed-tableau.html) section of this
 book to insert the interactive version of your chart on a web page that you control.
 
-### Summary {- #summary6}
+### Summary {- #summary7}
 
 Congratulations on creating interactive charts that pull readers deeper into your story, and encourage them to explore the underlying data! As you continue to create more, always match the chart type to your data format and the story you wish to emphasize. Also, design your charts based on the principles and aesthetic guidelines outlined near the top of this chapter. While anyone can click a few buttons to quickly create a chart nowadays, your audiences will greatly appreciate well-designed charts that thoughtfully call their attention to meaningful patterns in the data.
 

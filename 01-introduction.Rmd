@@ -84,7 +84,7 @@ Why does the second map in Figure \@ref(fig:world-income-map2) look different th
 
 This time, neither map is misleading. Both make truthful interpretations of the data with reasonable design choices, even though they create very different impressions in our eyes. To understand why, look closely at the legend in the bottom-left corner of both maps. The first map sorts nations in three ranges (0-10, 10-20, 20+), while the second map uses slightly different range cutoffs (0-9, 9-21, 21+). Since the US share is 20.5 percent, in the first map it falls into the top bucket with the darkest color, but in the second map it falls into the middle bucket with a lighter color. Yet both ranges are equally valid, as there is no clear rule about using one versus the other in this case. In the same way, the first map displays three shades of red, while the second map uses purple. Based on design principles discussed later in the book, both are equally valid color choices.
 
-TODO: Update both maps and text to reflect guidelines raised in Ch15 Detect
+TODO: Update both maps and text to reflect guidelines raised in Ch15 Detect; refer readers to this chapter
 
 ### Summary {- #summary1}
 People can lie with charts and maps, and some design choices can intentionally mislead. But data visualization is also interpretive and open-ended. It’s common to create more than one picture of the truth.

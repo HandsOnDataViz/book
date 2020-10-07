@@ -1750,7 +1750,7 @@ symbol* near the top of the page, as shown in Figure
 <a href="#fig:forms-preview">26</a>. When your form is complete, click
 the *Send* button to distribute it via email, a link, or to embed the
 live form as an iframe on a web page. Learn more about the latter option
-in [Chapter 10: Embed On Your Web](embed.html).
+in [Chapter 10: Embed on the Web](embed.html).
 
 <img src="images/03-spreadsheet/forms-preview.png" alt="Click the *Eyeball symbol* to preview your form." width="350" />
 <p class="caption">
@@ -2813,7 +2813,7 @@ these features:
     tools for users to create interactive charts or maps on the platform
     site. Some also provide code snippets for users to embed these
     built-in visualizations into their own websites, which you’ll learn
-    more about in [Chapter 10: Embed on Your Web](embed.html).
+    more about in [Chapter 10: Embed on the Web](embed.html).
 -   Application Program Interface (APIs): Some repositories provide
     endpoints with code instructions that allow other computers to pull
     data directly from the platform into an external site or online
@@ -5022,7 +5022,7 @@ chart.
     your chart with others. If you are logged into your free Datawrapper
     account, click the blue *Publish chart* button to generate the code
     to embed the interactive chart on your website, and read more in
-    [Chapter 10: Embed on Your Web](embed.html). Also, click the *add
+    [Chapter 10: Embed on the Web](embed.html). Also, click the *add
     your chart to River* if you wish to share your work more widely by
     allowing other Datawrapper users to adapt and reuse your chart.
     Finally, scroll all the way down and click the *Download PNG* button
@@ -5335,7 +5335,7 @@ size to variable.
 
 1.  Test your visualization tooltips. Then finish the annotations to add
     your title and data source, and proceed to publish and embed your
-    chart, as described in [Chapter 10: Embed on Your Web](embed.html).
+    chart, as described in [Chapter 10: Embed on the Web](embed.html).
 
 For more information about creating scatter and bubble charts, see the
 [Datawrapper Academy support site](https://academy.datawrapper.de/).

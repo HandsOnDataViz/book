@@ -100,7 +100,7 @@ there are some that are hard to bend.
 
 #### Bar and Column Charts Must Begin at Zero {-}
 
-Bar and column charts use *length* and *height* to represent value, therefore their value axis *must start at the zero baseline*. This ensures that a bar twice the length of another bar represents twice its value. Figure \@ref(fig:design-principles-start-at-zero) contrasts a good and a bad example. The same rule applies to area charts, which display filled-in area underneath the line to represent value. Starting the baseline at a number other than zero is a trick commonly used to exaggerate differences in opinion polls and election results, as we describe later in [Chapter 15: Detect Lies and Reduce Bias](detect.html)
+Bar and column charts use *length* and *height* to represent value, therefore their value axis *must start at the zero baseline*. This ensures that a bar twice the length of another bar represents twice its value. Figure \@ref(fig:design-principles-start-at-zero) contrasts a good and a bad example. The same rule applies to area charts, which display filled-in area underneath the line to represent value. Starting the baseline at a number other than zero is a trick commonly used to exaggerate differences in opinion polls and election results, as we describe later in [Chapter 15: Detect Lies and Reduce Data Bias](detect.html)
 
 (ref:design-principles-start-at-zero) Start your bar chart at zero.
 
@@ -508,7 +508,7 @@ knitr::include_graphics("images/07-chart/datawrapper-annotated-text.png")
 knitr::include_graphics("images/07-chart/datawrapper-annotated-range.png")
 ```
 
-9. Click *Proceed* or advance to the *Publish & Embed* screen to share your chart with others. If you are logged into your free Datawrapper account, click the blue *Publish chart* button to generate the code to embed the interactive chart on your website, and read more in [Chapter 10: Embed on Your Web](embed.html). Also, click the *add your chart to River* if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse your chart. Finally, scroll all the way down and click the *Download PNG* button to export a static image of your chart. Additional exporting and publishing options require a paid Datawrapper account.
+9. Click *Proceed* or advance to the *Publish & Embed* screen to share your chart with others. If you are logged into your free Datawrapper account, click the blue *Publish chart* button to generate the code to embed the interactive chart on your website, and read more in [Chapter 10: Embed on the Web](embed.html). Also, click the *add your chart to River* if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse your chart. Finally, scroll all the way down and click the *Download PNG* button to export a static image of your chart. Additional exporting and publishing options require a paid Datawrapper account.
 
 Congratulations on creating your first interactive Datawrapper chart. If you logged into your free Datawrapper account, all of your charts are stored in the *My Charts* menu in the top-right corner of the screen. Now let's use Datawrapper to create a new type of chart, called a range chart.
 
@@ -616,7 +616,7 @@ knitr::include_graphics("images/07-chart/scatter-tooltip-editor.png")
 knitr::include_graphics("images/07-chart/scatter-tooltip.png")
 ```
 
-8. Finish the annotations to add your title and data source, then proceed to publish and embed your chart, as described in [Chapter 10: Embed on Your Web](embed.html).
+8. Finish the annotations to add your title and data source, then proceed to publish and embed your chart, as described in [Chapter 10: Embed on the Web](embed.html).
 
 ### Bubble Charts {-}
 In your scatter chart above, you learned how to visualize the relationship between two datasets: life expectancy (the X-axis coordinate) and fertility (the Y-axis coordinate). Now let's expand on this concept by creating a bubble chart that adds two more datasets: population (shown by the size of each point, or bubble) and region of the world (shown by the color of each bubble). We'll use similar World Bank data as before, with two additional columns, as shown in Figure \@ref(fig:bubble-data). Note that we're using numeric data (population) for bubble size, but categorical data (regions) for color. Now you can easily create a bubble chart that displays a relationship between these four datasets, as shown in Figure \@ref(fig:bubble).
@@ -657,7 +657,7 @@ knitr::include_graphics("images/07-chart/bubble-tooltip-editor.png")
 knitr::include_graphics("images/07-chart/bubble-color-size.png")
 ```
 
-6. Test your visualization tooltips. Then finish the annotations to add your title and data source, and proceed to publish and embed your chart, as described in [Chapter 10: Embed on Your Web](embed.html).
+6. Test your visualization tooltips. Then finish the annotations to add your title and data source, and proceed to publish and embed your chart, as described in [Chapter 10: Embed on the Web](embed.html).
 
 For more information about creating scatter and bubble charts, see the [Datawrapper Academy support site](https://academy.datawrapper.de/).
 

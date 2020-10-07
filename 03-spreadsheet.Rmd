@@ -243,7 +243,7 @@ Give each question a very short title, since these will appear as column headers
  knitr::include_graphics("images/03-spreadsheet/forms-description.png")
  ```
 
-To preview how your online will appear to recipients, click the *Eyeball symbol* near the top of the page, as shown in Figure \@ref(fig:forms-preview). When your form is complete, click the *Send* button to distribute it via email, a link, or to embed the live form as an iframe on a web page. Learn more about the latter option in [Chapter 10: Embed On Your Web](embed.html).
+To preview how your online will appear to recipients, click the *Eyeball symbol* near the top of the page, as shown in Figure \@ref(fig:forms-preview). When your form is complete, click the *Send* button to distribute it via email, a link, or to embed the live form as an iframe on a web page. Learn more about the latter option in [Chapter 10: Embed on the Web](embed.html).
 
 (ref:forms-preview) Click the *Eyeball symbol* to preview your form.
 
@@ -508,7 +508,7 @@ To demonstrate, we imported both of the Google Sheets above into this [live Airt
  knitr::include_graphics("images/03-spreadsheet/airtable-link.png")
 ```
 
-In our Airtable sample, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the *people* sheet, their organization's full address appears from the *food banks* sheet, as shown in Figure \@ref(fig:airtable-expand). In our editable version, if we update the address for one organization in the *food banks* sheet, it's automatically changed for all employees linked to that organization in the *people* sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we'll cover in [Chapter 10: Embed on your Web](embed.html). See more about its features in the [Airtable Support page](https://support.airtable.com).
+In our Airtable sample, click on a linked row to expand it and view related data. For example, if you click and expand on the first row the *people* sheet, their organization's full address appears from the *food banks* sheet, as shown in Figure \@ref(fig:airtable-expand). In our editable version, if we update the address for one organization in the *food banks* sheet, it's automatically changed for all employees linked to that organization in the *people* sheet. In addition, Airtable allows you to sort, filter, and create different views of your data that you can share with others, a topic we'll cover in [Chapter 10: Embed on the Web](embed.html). See more about its features in the [Airtable Support page](https://support.airtable.com).
 
 (ref:airtable-expand) In this [Airtable demo](https://airtable.com/shrOlb4XT11Xy2LP2), click on a row in one sheet to expand and view its linked data in another sheet.
 

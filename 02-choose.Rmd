@@ -22,9 +22,13 @@ Get ready to sketch out your data story in words and pictures. No artistic skill
 
 3. On the third sheet of paper, *draw pictures and arrows to show how you'll find data* to answer your question above. Are you conducting door-to-door interviews with neighborhood residents, or sending an online survey to customers, or downloading family income and county maps from the US Census? Sketch a picture of your data collection process, to show how you plan to bring together different pieces of information. For example, when writing the first draft of our book, we asked readers to fill out a quick online survey form, and reminded them not to insert any private data, because we shared back their collected responses in a public spreadsheet.
 
-4. On the fourth sheet of paper, *sketch at least one type of visualization you plan to create* after you obtain your data above. Do you envision some type of chart, like a bar, line, or scatter chart? Or do you imagine some type of map, maybe with points or polygons? If your visualizations will be interactive, try to show the concept using buttons and more than one sheet of paper. You can add *imaginary data* at this stage because it's just a preliminary sketch. Have fun!
+4. On the fourth sheet of paper, *sketch at least one type of visualization you plan to create* after you obtain your data above. Do you envision some type of chart, like a bar, line, or scatter chart? Or do you imagine some type of map, maybe with points or polygons? If your visualizations will be interactive, try to show the concept using buttons and more than one sheet of paper. You can add *imaginary data* at this stage because it's just a preliminary sketch, as shown in Figure \@ref(fig:data-story-panel). Have fun!
 
-TODO: Drafting sketches of problem, question, data, and visualization, to include as 4-panel compilation (2x2 landscape) after all four steps.
+(ref:data-story-panel) Sketch out your story idea on four pages: problem, question, find data, visualize.
+
+```{r data-story-panel, out.width=750, fig.cap="(ref:data-story-panel)"}
+ knitr::include_graphics("images/02-choose/data-story-panel.png")
+ ```
 
 This exercise can help you in multiple ways, whether you do it by yourself, or even better, with a team of co-workers, as shown in Figure \@ref(fig:data-story-photo-combined). First, by migrating ideas from your mind to paper, you'll make your thinking clearer not only for you, but also more visible for others. When ideas are sketched out, you can reflect on them, listen to feedback, cross-out not-so-good ones, and replace them with better ones on new sheets of paper. If your initial sketches are too complicated or confusing, break down those ideas into separate pages to make them more coherent.
 

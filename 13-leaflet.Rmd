@@ -1,5 +1,5 @@
 # Leaflet Map Templates {#leaflet}
-In [Chapter 8: Map Your Data](map.html), we described several drag-and-drop tools designed for beginners, such as [Google My Maps](mymaps.html) and [Datawrapper](map-datawrapper.html). In this chapter, we offer more advanced map tutorials using our open-source code templates, which you can copy and modify with skills you learned in [Chapter 11: Edit and Host Code with GitHub](github.html). We built all of the templates in this chapter with [Leaflet](https://leafletjs.com), a powerful open-source code library for creating interactive maps on desktop or mobile devices.
+In [Chapter 8: Map Your Data](map.html), we described several easy-to-learn drag-and-drop tools, such as [Google My Maps](mymaps.html) and [Datawrapper](symbolmap-datawrapper.html). In this chapter, we offer more advanced map tutorials using our open-source code templates, which you can copy and modify with skills you learned in [Chapter 11: Edit and Host Code with GitHub](github.html). We built all of the templates in this chapter with [Leaflet](https://leafletjs.com), a powerful open-source code library for creating interactive maps on desktop or mobile devices.
 
 No coding skills are required to use our first two easy-to-use templates because they pull your map data from a linked Google Sheet. The first template, [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets), is a general-purpose tool that can display points, polygons, or polylines, using your choice of colors, icons, and images, based on data uploaded into your linked Google Sheet and GitHub repository. It also includes the option to display a table of point markers next to your map. The second template, [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets), displays your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to display paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet and GitHub repo. If you wish to add some of these extra features, look back at Chapter 3 to [geocode addresses with a Google Sheets Add-on](geocode.html), or jump ahead to [Chapter 14: Transform Your Map Data](transform.html) to learn how to create and edit polygons and polylines [with the GeoJson.io tool](geojsonio.html), edit or join data with polygons [using the MapShaper tool](mapshaper.html), or georectify a scanned map to use as a background overlay [with the MapWarper tool](mapwarper.html).
 
@@ -20,9 +20,9 @@ Table: (\#tab:map-templates) Map Templates and Tutorials
 | Leaflet Maps with Google Sheets<br> ![](images/13-leaflet/leaflet-maps-with-google-sheets.png) | Best to show interactive points, polygons, or polylines, using your choice of colors, styles, and icons, based on data loaded into your linked Google Sheet (or CSV file) and GitHub repository. Includes option to display a table of point map markers next to your map.  <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) |
 | Leaflet Storymaps with Google Sheets<br> ![](images/13-leaflet/leaflet-storymaps-with-google-sheets.png) | Best to display your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to include paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
 | Leaflet Point Map with CSV Data<br> ![](images/13-leaflet/leaflet-maps-with-csv.png) | Learn how to code your own Leaflet point map that pulls data from a CSV file in your GitHub repo.<br>Template with tutorial: [Leaflet Maps with CSV Data](leaflet-maps-with-csv.html)  |
-| Leaflet Maps with Open Data API<br> ![](images/13-leaflet/leaflet-open-data.png) | Learn how to code your own Leaflet map with an application program interface (API) that pulls content directly from open data repositories, such as Socrata and others.<br>Template with tutorial: [Leaflet Maps with Open Data API](leaflet-maps-with-api.html) |
-| Leaflet Heatmap with CSV Point Data <br> ![](images/13-leaflet/leaflet-heatmap.png) | Heatmaps transform individual points into hotspots or clusters, to display the spatial distribution of events.<br>Template with tutorial: [Leaflet Heatmap](leaflet-heatmap.html) |
-| Leaflet Searchable Map with CSV Point Data<br> ![](images/13-leaflet/searchable-map.png) | Searchable and filterable point map using CSV data, with optional list view, developed by [Derek Eder](https://derekeder.com/) from DataMade.<br>Template with tutorial: [Leaflet Searchable Map with CSV](leaflet-searchable-map.html) |
+| Leaflet Heatmap Points with CSV Data <br> ![](images/13-leaflet/leaflet-heatmap.png) | Best to show clusters of points as hotspots to emphasize high frequency.<br>Template with tutorial: [Leaflet Heatmap](leaflet-heatmap.html) |
+| Leaflet Searchable Point Map with CSV Data<br> ![](images/13-leaflet/searchable-map.png) | Best to show multiple locations for users to search by name or proximity, or filter by category, with optional list view. Developed by [Derek Eder](https://derekeder.com/) from DataMade.<br>Template with tutorial: [Leaflet Searchable Map with CSV](leaflet-searchable-map.html) |
+| Leaflet Maps with Open Data APIs<br> ![](images/13-leaflet/leaflet-open-data.png) | Learn how to code your own Leaflet map with an application program interface (API) that continuously pulls the most current information directly from an open-data repository, such as Socrata and others.<br>Template with tutorial: [Leaflet Maps with Open Data APIs template](leaflet-maps-open-data-apis.html) |
 
 ## Leaflet Maps with Google Sheets {- #leaflet-maps-with-google-sheets}
 Sometimes you need to create a map that cannot be made easily with drag-and-drop tools, because you need to customize its appearance or add new layers of point, polygon, or polyline data. In these cases, consider making a copy of our Leaflet Maps with Google Sheets template on GitHub. It gives you more control over choosing colors, icons, and images, and also the option to display a data table of point markers. To customize your interactive map, you enter data into a Google Sheet template, which you link directly to your copy of the Leaflet code repository, as shown in Figure \@ref(fig:lmwgs-map) and Figure \@ref(fig:lmwgs-sheet).
@@ -579,8 +579,115 @@ var marker = L.marker([row.Latitude, row.Longitude], {
 
 For more information on icon customization, see [this helpful Leaflet example](https://leafletjs.com/examples/custom-icons/).
 
+## Leaflet Heatmap Points with CSV Data {- #leaflet-heatmap}
+Heatmaps turn individual points into hotspots or clusters, allowing viewers to explore
+spatial distributions of events, such as areas of high and low population density,
+or high-crime areas. Figure \@ref(fig:leaflet-heatmap) shows an interactive heatmap of
+bike theft locations in London between January and July 2020. The underlying
+data are coordinate locations for each reported bike theft,
+which [`Leaflet.heat`](https://github.com/Leaflet/Leaflet.heat) plugin transforms
+into areas of various densities. Red shows areas of highest density, or areas
+where bike theft appeared most often. When you zoom in, areas are re-calculated
+into more distinct clusters.
 
-## Leaflet Maps with Open Data API {- #leaflet-maps-with-api}
+(ref:leaflet-heatmap) Explore a [live demonstration of Leaflet Heatmap](https://handsondataviz.github.io/leaflet-heatmap/).
+
+```{r leaflet-heatmap, fig.cap="(ref:leaflet-heatmap)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-heatmap/", height = "500px") else knitr::include_graphics("images/13-leaflet/leaflet-heatmap.png")
+```
+
+You can adapt the code we used for this London heatmap to create your own.
+
+1. Visit the [GitHub repository with our code](https://github.com/HandsOnDataViz/leaflet-heatmap),
+make sure you are logged in, and click *Use this template* button to make a personal copy of this repo.
+2. Modify map's title and description inside `index.html`.
+3. Put your point coordinates data inside `data.csv`. Don't use a header, and keep it one point per line. Use latitude,longitude (or y,x) order, like below:
+```
+51.506585,-0.139387
+51.505467,-0.14655
+51.507758,-0.141284
+```
+
+4. Depending on your data density, you might want to tweak *radius* and *blur* parameters
+inside the `<script>` tag of `index.html`:
+```javascript
+var heat = L.heatLayer(data, {
+  radius: 25,
+  blur: 15,
+})
+```
+
+Edit the following chunk of code to set your map's default position and zoom level:
+```javascript
+var map = L.map('map', {
+  center: [51.5, -0.1], // Initial map center
+  zoom: 10, // Initial zoom level
+})
+```
+
+If for some reason you cannot see clusters, make sure your point data is represented
+in `latitude,longitude` order, not the other way around. If you have few points,
+try increasing the value of `radius` property of `L.heatLayer`.
+
+## Leaflet Searchable Point Map {- #leaflet-searchable-map}
+
+Figure \@ref(fig:searchable-map) shows a powerful Leaflet template of a searchable
+and filterable point map, which draws from a CSV data file,
+developed by [Derek Eder](https://derekeder.com/) from DataMade. This map allows
+you to show points of interest, filter them by using *Search by name* functionality,
+and show them as a list instead of points on a map. In addition, the *About* page
+gives you plenty of space to talk about your map.
+
+(ref:searchable-map) Explore a [live demonstration of Searchable Map template](https://searchable-map-template-csv.netlify.app/).
+
+```{r searchable-map, fig.cap="(ref:searchable-map)"}
+knitr::include_graphics("images/13-leaflet/searchable-map.png")
+```
+
+This template uses Leaflet.js in combination with Google Maps API to perform
+address search.
+
+To begin using the template for your own project, visit the [template's GitHub page](https://github.com/HandsOnDataViz/searchable-map-template-csv),
+and fork it so that you get your own copy (see [Edit and Host Code with GitHub](github.html)
+chapter to remind yourself about forks).
+
+### Step 1: Get and prep your data {-}
+
+This template will work with data in [csv](https://en.wikipedia.org/wiki/Comma-separated_values) and [geojson](https://en.wikipedia.org/wiki/GeoJSON) formats.
+
+If you have an `xls` or `xlsx` spreadsheet, you can save it as a `csv` file from Excel, Numbers, Libre Office or your spreadsheet tool of choice.
+
+The `csv` file must have a latitude column and longitude column and all rows must be geocoded. If you don't have this, but have information like a street address, you'll need to [geocode](https://en.wikipedia.org/wiki/Geocode) your data.
+
+Here's a few tools for geocoding:
+
+* Google has the best geocoder in terms of accuracy. They have an [API that you can use](https://developers.google.com/maps/documentation/geocoding/start), but may cost you money depending on how many rows you have to geocode.
+* To geocode addresses inside Google Sheets, install the [free Geocoding by SmartMonkey Add-On for Google Sheets](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). See [geocoding instructions in Hands-On Data Visualization](https://handsondataviz.org/geocode.html).
+* [Geocoding in QGIS](https://www.gislounge.com/how-to-geocode-addresses-using-qgis/) (uses OpenStreetMap)
+* [BatchGeo](https://www.batchgeo.com/)
+* [Texas A&M](http://geoservices.tamu.edu/Services/Geocode/)
+
+### Step 2: Download and edit this template {-}
+
+1. Download or clone this project and fire up your text editor of choice. Open up `/js/map.js` and set your map options in the `SearchableMapLib.initialize` function:
+  - `map_centroid` -  the lat/long you want your map to center on ([find yours here](https://getlatlong.net/))
+  - `filePath` - Path to your map data file. This file needs to be in csv or geojson format and placed in the `data` folder. This file's first line must be the header, and it must have a latitude column and longitude column.
+  - `fileType` - Set if you are loading in a `csv` or `geojson` file
+2. Edit the templates in the `templates` folder for how you want your data displayed. These templates use EJS, which allows the display of your variables with HTML, as well as conditional logic. [Documentation is here](https://ejs.co/#docs).
+  - `/templates/hover.ejs` - template for when you hover over a dot on the map
+  - `/templates/popup.ejs` - template for when a dot on the map is clicked
+  - `/templates/table-row.ejs` - template for each row in the list view
+3. Remove the custom filters and add your own.
+  -  `index.html` - custom HTML for filters starts around line 112
+  - `/js/searchable_map_lib.js` - logic for custom filters starts around line 265
+
+
+### Step 3: Publishing your map {-}
+
+1. Before you publish, you'll need to [get a Google API key](https://developers.google.com/maps/documentation/javascript/get-api-key). You can get on here. Replace the API key on this line of `index.html` with yours: `<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=[YOUR KEY HERE]"></script>`
+2. Upload this map and all the supporting files and folders to your site. This map requires no back-end code, so any host will work, including GitHub pages, Netlify or your own web server.
+
+## Leaflet Maps with Open Data APIs {- #leaflet-maps-open-data-apis}
 
 Leaflet maps can pull and display data from various open data repositories using APIs.
 Figure \@ref(fig:leaflet-open-data) shows an interactive map of North Dakota counties,
@@ -685,114 +792,6 @@ If you are more concerned about the long-term functioning of your map as opposed
 to displaying the most up-to-date version of the dataset, you may consider serving
 your data from local GeoJSON files instead (but ensure first that it is permitted by the data license).
 
-
-## Leaflet Heatmap with CSV Point Data {- #leaflet-heatmap}
-Heatmaps turn individual points into hotspots or clusters, allowing viewers to explore
-spatial distributions of events, such as areas of high and low population density,
-or high-crime areas. Figure \@ref(fig:leaflet-heatmap) shows an interactive heatmap of
-bike theft locations in London between January and July 2020. The underlying
-data are coordinate locations for each reported bike theft,
-which [`Leaflet.heat`](https://github.com/Leaflet/Leaflet.heat) plugin transforms
-into areas of various densities. Red shows areas of highest density, or areas
-where bike theft appeared most often. When you zoom in, areas are re-calculated
-into more distinct clusters.
-
-(ref:leaflet-heatmap) Explore a [live demonstration of Leaflet Heatmap](https://handsondataviz.github.io/leaflet-heatmap/).
-
-```{r leaflet-heatmap, fig.cap="(ref:leaflet-heatmap)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-heatmap/", height = "500px") else knitr::include_graphics("images/13-leaflet/leaflet-heatmap.png")
-```
-
-You can adapt the code we used for this London heatmap to create your own.
-
-1. Visit the [GitHub repository with our code](https://github.com/HandsOnDataViz/leaflet-heatmap),
-make sure you are logged in, and click *Use this template* button to make a personal copy of this repo.
-2. Modify map's title and description inside `index.html`.
-3. Put your point coordinates data inside `data.csv`. Don't use a header, and keep it one point per line. Use latitude,longitude (or y,x) order, like below:
-```
-51.506585,-0.139387
-51.505467,-0.14655
-51.507758,-0.141284
-```
-
-4. Depending on your data density, you might want to tweak *radius* and *blur* parameters
-inside the `<script>` tag of `index.html`:
-```javascript
-var heat = L.heatLayer(data, {
-  radius: 25,
-  blur: 15,
-})
-```
-
-Edit the following chunk of code to set your map's default position and zoom level:
-```javascript
-var map = L.map('map', {
-  center: [51.5, -0.1], // Initial map center
-  zoom: 10, // Initial zoom level
-})
-```
-
-If for some reason you cannot see clusters, make sure your point data is represented
-in `latitude,longitude` order, not the other way around. If you have few points,
-try increasing the value of `radius` property of `L.heatLayer`.
-
-## Leaflet Searchable Map with CSV Points {- #leaflet-searchable-map}
-
-Figure \@ref(fig:searchable-map) shows a powerful Leaflet template of a searchable
-and filterable point map
-developed by [Derek Eder](https://derekeder.com/) from DataMade. This map allows
-you to show points of interest, filter them by using *Search by name* functionality,
-and show them as a list instead of points on a map. In addition, the *About* page
-gives you plenty of space to talk about your map.
-
-(ref:searchable-map) Explore a [live demonstration of Searchable Map template](https://searchable-map-template-csv.netlify.app/).
-
-```{r searchable-map, fig.cap="(ref:searchable-map)"}
-knitr::include_graphics("images/13-leaflet/searchable-map.png")
-```
-
-This template uses Leaflet.js in combination with Google Maps API to perform
-address search.
-
-To begin using the template for your own project, visit the [template's GitHub page](https://github.com/HandsOnDataViz/searchable-map-template-csv),
-and fork it so that you get your own copy (see [Edit and Host Code with GitHub](github.html)
-chapter to remind yourself about forks).
-
-### Step 1: Get and prep your data {-}
-
-This template will work with data in [csv](https://en.wikipedia.org/wiki/Comma-separated_values) and [geojson](https://en.wikipedia.org/wiki/GeoJSON) formats.
-
-If you have an `xls` or `xlsx` spreadsheet, you can save it as a `csv` file from Excel, Numbers, Libre Office or your spreadsheet tool of choice.
-
-The `csv` file must have a latitude column and longitude column and all rows must be geocoded. If you don't have this, but have information like a street address, you'll need to [geocode](https://en.wikipedia.org/wiki/Geocode) your data.
-
-Here's a few tools for geocoding:
-
-* Google has the best geocoder in terms of accuracy. They have an [API that you can use](https://developers.google.com/maps/documentation/geocoding/start), but may cost you money depending on how many rows you have to geocode.
-* To geocode addresses inside Google Sheets, install the [free Geocoding by SmartMonkey Add-On for Google Sheets](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312). See [geocoding instructions in Hands-On Data Visualization](https://handsondataviz.org/geocode.html).
-* [Geocoding in QGIS](https://www.gislounge.com/how-to-geocode-addresses-using-qgis/) (uses OpenStreetMap)
-* [BatchGeo](https://www.batchgeo.com/)
-* [Texas A&M](http://geoservices.tamu.edu/Services/Geocode/)
-
-### Step 2: Download and edit this template {-}
-
-1. Download or clone this project and fire up your text editor of choice. Open up `/js/map.js` and set your map options in the `SearchableMapLib.initialize` function:
-  - `map_centroid` -  the lat/long you want your map to center on ([find yours here](https://getlatlong.net/))
-  - `filePath` - Path to your map data file. This file needs to be in csv or geojson format and placed in the `data` folder. This file's first line must be the header, and it must have a latitude column and longitude column.
-  - `fileType` - Set if you are loading in a `csv` or `geojson` file
-2. Edit the templates in the `templates` folder for how you want your data displayed. These templates use EJS, which allows the display of your variables with HTML, as well as conditional logic. [Documentation is here](https://ejs.co/#docs).
-  - `/templates/hover.ejs` - template for when you hover over a dot on the map
-  - `/templates/popup.ejs` - template for when a dot on the map is clicked
-  - `/templates/table-row.ejs` - template for each row in the list view
-3. Remove the custom filters and add your own.
-  -  `index.html` - custom HTML for filters starts around line 112
-  - `/js/searchable_map_lib.js` - logic for custom filters starts around line 265
-
-
-### Step 3: Publishing your map {-}
-
-1. Before you publish, you'll need to [get a Google API key](https://developers.google.com/maps/documentation/javascript/get-api-key). You can get on here. Replace the API key on this line of `index.html` with yours: `<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=[YOUR KEY HERE]"></script>`
-2. Upload this map and all the supporting files and folders to your site. This map requires no back-end code, so any host will work, including GitHub pages, Netlify or your own web server.
 
 ### Summary {- #summary13}
 

@@ -1,32 +1,27 @@
 # Map Your Data {#map}
+Maps draw your readers into data that includes a spatial dimension, while also developing a stronger sense of place. Seeing the relative distance between points on a map, or identifying geographic patterns in a *choropleth* map (where colored polygons represent data values), relays information to readers' eyes more effectively than text, tables, or charts. But creating meaningful maps that draw our attention to key insights in your data requires clear thinking about design choices.
 
-TODO: Expand intro
+In this chapter, we will examine [principles of map design](map-design.html) and distinguish between good and bad maps. You will learn about rules that apply to all maps, and specific guidelines for creating choropleth maps. While many tools allow you to download maps as *static* images, our book also demonstrates how to construct *interactive* charts that invite readers to zoom in and explore the data in their web browsers. Later you'll learn how to [embed interactive charts on your website in Chapter 10](embed.html).
 
-Maps entice readers to explore your data story and develop a stronger sense of place.
-But good maps require careful thought about how to clearly communicate spatial
-concepts with your audience.
-
-We will begin this chapter by introducing key principles and definitions related to maps.
-We will then practice making interactive maps using free online tools, including Google My Maps,
-Socrata, Tableau, and Datawrapper. We will build two point maps and two choropleth maps.
-By the end of this chapter, you will be able to use four powerful tools to map your data.
+Learn about different types of maps you can create in this book in Table \@ref(tab:map-types). Decisions about map types are based on two main factors: the format of your data, and the kind of story you wish to tell. For example, point maps work best to show specific locations with colored markers to represent categories (such as hospitals), while choropleth maps are best suited to display relative values for regions (such as birth rates across US states). After selecting your map type, follow our tool recommendations and step-by-step tutorials. This chapter features *Easy Tools* with drag-and-drop menus, such as [Google My Maps](mymaps.html), [Datawrapper](symbolmap-datawrapper.html), and [Tableau Public](map-tableau.html). But the table also points you to *Power Tools* that give you more control to customize and host your visualizations, such as [Leaflet code templates in Chapter 13](leaflet.html). These advanced tools require prior knowledge on how to [edit and host code templates with GitHub in Chapter 11](github.html).
 
 Table: (\#tab:map-types) Basic Map Types and Tutorials
 
 | Map | Best use and tutorials in this book |
 | --- | --- |
-| Point map        <br> ![](images/08-map/map-point.png) | Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: [Google My Maps tutorial](mymaps.html)<br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
-| Polygon or Choropleth map      <br> ![](images/08-map/map-polygon.png) | Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. <br>Easy tool: [Datawrapper](map-datawrapper.html) <br>Power tools: [Tableau Public](map-tableau.html) or [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html) |
-| Polyline map     <br> ![](images/08-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)|
-| Heat map     <br> ![](images/08-map/map-heat.png) | Used to show hotspots or clusters of events, such as high-crime areas. <br>Easy tool: n/a <br>Power tool: [Leaflet Heatmap template](leaflet-heatmap.html) |
-| Combination map   <br> ![](images/08-map/map-point-polygon-polyline.png) | Best to show any combination of points, polygons, or polylines. <br>Easy tool: n/a <br>Power tool: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) and other [Leaflet templates](leaflet.html)  |
-| Storymap <br> ![](images/08-map/map-storymap.png) | Best for guided point-by-point journey through a historical narrative, with optional photos, audio, or video on an interactive map. <br> Power tool: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
+| Point map<br> ![](images/08-map/map-point.png) | Best to show specific locations (such as addresses or geocoordinates) with colored icons for different categories, plus text and images in popup windows. <br>Easy tool: [Google My Maps tutorial](mymaps.html)<br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
+| Custom icon point map<br> ![](images/08-map/map-custom-icon.png) | Best to show specific locations with custom icons (such as thumbnail photos), plus text and images in popup windows. <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
+| Symbol point map<br> ![](images/placeholder.png) | Best to show specific locations (such as cities), with variable-sized circles to represent data values (such as population growth).<br>Easy tool: [Symbol Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
+| Choropleth colored polygon map <br> ![](images/08-map/map-polygon.png) | Best to show geographic regions (such as neighborhoods or nations) with colored polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
+| Heat point map <br> ![](images/08-map/map-heat.png) | Best to show clusters of points as hotspots to emphasize high frequency. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
+| Story map <br> ![](images/08-map/map-storymap.png) | Best to show a point-by-point guided tour, with a scrolling narrative to display images, audio, and video. <br> Power tool: [Ch 13: Leaflet Storymaps with Google Sheets tutorial](leaflet-storymaps-with-google-sheets.html) |
+| Polyline map <br> ![](images/08-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy Tool: [Google My Maps tutorial](mymaps.html) <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html)|
+| Combination point-polyline-polygon map <br> ![](images/08-map/map-point-polygon-polyline.png) | Best to show any combination of points, polylines, or polygons, with custom icons for categories, and colored regions to represent data values. <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
+| Searchable point map<br> ![](images/13-leaflet/map-searchable.png) | Best to show specific locations for users to search by name or proximity, or filter by category, with optional list view.<br> Power Tool: [Ch 13: Leaflet Searchable Point Map code template](leaflet-searchable-map.html) |
+| Current map from open-data repository<br> ![](images/08-map/map-open-data.png) | Best to show the most current information pulled directly from an open-data repository such as Socrata and others. <br>Easy tool: [Current map with Socrata open data tutorial](map-socrata.html)<br>Power tool: [Ch 13: Leaflet Maps with Open Data API tutorial](leaflet-maps-open-data-apis.html) |
 
 TODO ABOVE:
 
-- UPDATE table text and images to match chapter contents, and reorganize to feature easier tools at top.
-- DECIDE on consistent language for Colored Polygon and/or Choropleth map
-- DECIDE if Socrata point map really needs to be featured here
 - Confirm removing Storymap "easy tools" because neither allow you to export data you enter: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/) OR mention (but do not recommend) Storymap.js as an easy tool, but cannot easily migrate data out, then Leaflet Storymaps with GS as a power tool
 - mention HistoryPin.org as another storytelling type of map?
 - Add tab-view map for historical change template?
@@ -67,6 +62,8 @@ gives a bit of context about what the map is showing.
 knitr::include_graphics("images/08-map/map-principles-map.png")
 ```
 
+TODO: flip order to points.... layers
+
 The data in the map is presented as layers. A base layer is often satellite imagery of the earth
 or vector representations of buildings and streets (also known as vector tiles).
 A base layer provides the foundation of the map. The data displayed on the maps
@@ -74,6 +71,9 @@ can be generally described as points (such as marker locations of nearby restaur
 polylines (connected points, such as roads or trails), and polygons (polylines
 where the final point is connected with the initial one). Polygons represent areas,
 such as building footprints or country boundaries.
+
+
+
 
 The legend provides the mapping between shapes and colors and the values they represent.
 For example, you may wish to use blue markers to represent restaurants, and
@@ -84,6 +84,12 @@ that appear when you click or hover over map elements.
 
 Interactive web maps often have zoom controls (`+` and `-` buttons) to allow
 users to inspect data from various "distances".
+
+TODO ADD RULES HERE
+TODO: emphasize what format is your data in? What can you place on a map?
+a) think about what types of data you can place on a map: points, polygons, polylines (to include multi-part lines, or line-strings?)
+COMMON MISTAKE: location data (such as an address EXAMPLE or its geocoded latitude and longitude coordinates EXAMPLE) belongs on point maps (or symbol maps, or heat maps for clusters of points, or story maps for tours...)
+- regional data belongs on choropleth maps (which are colored polygons to match geographic outlines...)
 
 ### Normalize Your Map Data {-}
 
@@ -359,8 +365,10 @@ Unfortunately, Google My Maps has no comprehensive documentation,
 so you have to explore the studio yourself if you want to create
 more complex projects.
 
+## Symbol Map with Datawrapper {- #symbolmap-datawrapper}
+TODO: in progress https://academy.datawrapper.de/article/114-how-to-create-a-symbol-map-in-datawrapper
 
-## Polygon Choropleth Map with Datawrapper {- #map-datawrapper}
+## Choropleth Map with Datawrapper {- #choropleth-datawrapper}
 
 TODO: Review steps due to recent Datawrapper updates: see their new Academy pages on Choropleth interpolation (ranges) and colors
 
@@ -507,7 +515,124 @@ Learn more about [choropleth map design in this excellent series of posts by the
 
 In the following section, we will create a point map inside Socrata data platform.
 
-## Filtered Point Map with Socrata {- #filtered-point-map-socrata}
+
+
+
+
+## Choropleth Map with Tableau Public {- #map-tableau}
+
+TODO: revise to make polygon/choropleth map vocab more consistent in this chapter; also emphasize how Tableau is not ideal for point maps because you cannot geocode addresses
+
+In the previous chapter, we looked at using Tableau Public to build
+[scatterplots](#scatter-chart-tableau) and [filtered line charts](#filtered-line-chart-tableau).
+Tableau can also be used to create point and polygon maps.
+
+In this tutorial, we will create a choropleth map of military spending per country
+as percentage of gross dometic product as shown in Figure \@ref(fig:tableau-polygon-final).
+Remember that choropleth maps work best when
+they show relative, not absolute numbers.
+Displaying total spending per country is a bad idea, as bigger countries tend
+to have larger populations and as a result larger values for a lot of measures,
+including military spending.
+
+<!-- TODO: reminder that this Tableau visualization is stored in Ilya's account at https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1 -->
+
+(ref:tableau-polygon-final) Filled Polygon (Choropleth) map: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from TODO.
+
+```{r tableau-polygon-final, fig.cap="(ref:tableau-polygon-final)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/08-map/tableau-polygon-final.png")
+```
+
+To create maps in Tableau, you do not always need geospatial files. Tableau can recognize
+of a lot of locations, including boundaries for countries and territories, counties within countries,
+states, US zip codes, airport codes, city locations, and some others. A simple spreadsheet that references
+these locations can suffice. In this tutorial, we will rely on Tableau to automatically recognize country
+names. If you require custom boundaries or points (such as town names in your local language),
+take a look at [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
+article from the official Tableau documentation.
+
+Before we begin, [download the 2018 data](data/military-spending-2018.csv) that we obtained from the World Bank.
+
+### Create a Choropleth Map in Tableau {-}
+
+Launch Tableau. In **Connect** section on start up, choose *Text file*, and select `military-spending-2018.csv`.
+From Data Source tab, inspect the dataset contents. It contains four columns: Country Name, which includes
+countries and territories defined by the World Bank, the three-digit Country Code,
+Indicator Name (same for all rows), and percent value, as shown in Figure \@ref(fig:tableau-polygon-connect).
+Notice that some values are set to *null* (not available).
+
+(ref:tableau-polygon-connect) When finished inspecting the connected file, go to Sheet 1.
+
+```{r tableau-polygon-connect, fig.cap="(ref:tableau-polygon-connect)"}
+knitr::include_graphics("images/08-map/tableau-polygon-connect-annotated.png")
+```
+
+In the variables list on the left, notice how Tableau generated *Latitude* and *Longitude*
+fields based on country names and country codes (by the way, you only need one or the other, not both).
+
+Drag and drop Longitude to **Columns**, and *Latitude* to **Rows**,
+as shown in Figure \@ref(fig:tableau-polygon-drag).
+You should see that the chart area shows an empty map of the world
+(if not, double-check that Latitude is indeed in Rows, not Columns).
+In Marks box, change *Automatic* to *Map*, and drag *Country Name* variable
+to the **Size** box of the Marks card. You will see that country outlines turned blue.
+
+(ref:tableau-polygon-drag) Drag and drop variables to the right places.
+
+```{r tableau-polygon-drag, fig.cap="(ref:tableau-polygon-drag)"}
+knitr::include_graphics("images/08-map/tableau-polygon-drag-annotated.png")
+```
+
+We want colors to represent military spending values, so drag *Value* variable to
+the **Color** box of the Marks card. You should now see a proper choropleth map.
+
+Places like Greenland and Libya do not have available values, but they are still
+painted with the lightest color, which is misleading. To remove countries with *null* values
+from the map, drag *Values* to the *Filters* card. A popup window will ask you how
+you want to filter, just leave everything unchanged. This will leave the whole range of values,
+and exclude *null* values (see the checkbox in the lower-right corner of the Filter window
+in Figure \@ref(fig:tableau-polygon-filter)).
+
+(ref:tableau-polygon-filter) Filter values to remove countries with no data from display.
+
+```{r tableau-polygon-filter, out.width=400, fig.cap="(ref:tableau-polygon-filter)"}
+knitr::include_graphics("images/08-map/tableau-polygon-filter-annotated.png")
+```
+
+You can change the color scheme by clicking the Color box of the Marks card, and
+then *Edit colors*. Change the palette to *Reds*, and make it stepped rather than continuous,
+as shown in Figure \@ref(fig:tableau-polygon-color).
+
+(ref:tableau-polygon-color) Change the color scheme to Reds with 5 steps.
+
+```{r tableau-polygon-color, out.width=400, fig.cap="(ref:tableau-polygon-color)"}
+knitr::include_graphics("images/08-map/tableau-polygon-color.png")
+```
+
+You may notice the tooltip calls values *Value* when hovering over countries.
+Click the Tooltip box of the Marks card to change text to *Military spending*,
+and add a percentage sign after the value itself, as shown in Figure \@ref(fig:tableau-polygon-tooltip).
+Make sure not to change values between
+`<` and `>`, as these are references to variables.
+
+(ref:tableau-polygon-tooltip) Change tooltip text to make it more user-friendly.
+
+```{r tableau-polygon-tooltip, out.width=400, fig.cap="(ref:tableau-polygon-tooltip)"}
+knitr::include_graphics("images/08-map/tableau-polygon-tooltip.png")
+```
+
+And finally, let's add a proper title to the map. Double-click the default *Sheet 1* name
+to bring up the *Edit Title* window, and change the name of your chart to a more meaningful
+*Military Spending as % of GDP (2018)*.
+
+### Publish Your Tableau Map {-}
+
+Once you are ready to publish and share the map, go to *File > Save to Tableau Public*.
+In the pop-up window, log in to your account if requested. Give it a title, such
+as *Military Spending*, and click Save.
+
+## Current Map with Socrata Open Data {- #map-socrata}
+TODO: revise to emphasize how the map continuously pulls the most current information directly from the open-data repository; in this case, happens to be filtered point map of hospitals in Texas.... TODO: replace with a better example of frequently-updated "live" data?
 
 [Socrata](https://www.tylertech.com/products/socrata) is a database service that is used by government agencies,
 cities and countries to make open data available to the public. It offers user-friendly ways to view, filter,
@@ -550,7 +675,6 @@ otherwise you won't be able to save your draft map.
 
 This username and password are only valid for Data.Medicare.gov, not other websites
 that use Socrata.
-
 
 ### Create Your First Socrata Point Map {-}
 
@@ -672,120 +796,6 @@ A second, more advanced alternative, is to learn to pull live data from Socrata 
 an API (Application Programming Interface). That requires
 coding skills that are beyond the scope of this book.
 Visit the [official documentation](https://dev.socrata.com/) to learn more about Socrata API.
-
-
-
-## Polygon Choropleth Map with Tableau Public {- #map-tableau}
-
-TODO: revise to make polygon/choropleth map vocab more consistent in this chapter; also emphasize how Tableau is not ideal for point maps because you cannot geocode addresses
-
-In the previous chapter, we looked at using Tableau Public to build
-[scatterplots](#scatter-chart-tableau) and [filtered line charts](#filtered-line-chart-tableau).
-Tableau can also be used to create point and polygon maps.
-
-In this tutorial, we will create a choropleth map of military spending per country
-as percentage of gross dometic product as shown in Figure \@ref(fig:tableau-polygon-final).
-Remember that choropleth maps work best when
-they show relative, not absolute numbers.
-Displaying total spending per country is a bad idea, as bigger countries tend
-to have larger populations and as a result larger values for a lot of measures,
-including military spending.
-
-<!-- TODO: reminder that this Tableau visualization is stored in Ilya's account at https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1 -->
-
-(ref:tableau-polygon-final) Filled Polygon (Choropleth) map: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from TODO.
-
-```{r tableau-polygon-final, fig.cap="(ref:tableau-polygon-final)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/08-map/tableau-polygon-final.png")
-```
-
-To create maps in Tableau, you do not always need geospatial files. Tableau can recognize
-of a lot of locations, including boundaries for countries and territories, counties within countries,
-states, US zip codes, airport codes, city locations, and some others. A simple spreadsheet that references
-these locations can suffice. In this tutorial, we will rely on Tableau to automatically recognize country
-names. If you require custom boundaries or points (such as town names in your local language),
-take a look at [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
-article from the official Tableau documentation.
-
-Before we begin, [download the 2018 data](data/military-spending-2018.csv) that we obtained from the World Bank.
-
-### Create a Choropleth Map in Tableau {-}
-
-Launch Tableau. In **Connect** section on start up, choose *Text file*, and select `military-spending-2018.csv`.
-From Data Source tab, inspect the dataset contents. It contains four columns: Country Name, which includes
-countries and territories defined by the World Bank, the three-digit Country Code,
-Indicator Name (same for all rows), and percent value, as shown in Figure \@ref(fig:tableau-polygon-connect).
-Notice that some values are set to *null* (not available).
-
-(ref:tableau-polygon-connect) When finished inspecting the connected file, go to Sheet 1.
-
-```{r tableau-polygon-connect, fig.cap="(ref:tableau-polygon-connect)"}
-knitr::include_graphics("images/08-map/tableau-polygon-connect-annotated.png")
-```
-
-In the variables list on the left, notice how Tableau generated *Latitude* and *Longitude*
-fields based on country names and country codes (by the way, you only need one or the other, not both).
-
-Drag and drop Longitude to **Columns**, and *Latitude* to **Rows**,
-as shown in Figure \@ref(fig:tableau-polygon-drag).
-You should see that the chart area shows an empty map of the world
-(if not, double-check that Latitude is indeed in Rows, not Columns).
-In Marks box, change *Automatic* to *Map*, and drag *Country Name* variable
-to the **Size** box of the Marks card. You will see that country outlines turned blue.
-
-(ref:tableau-polygon-drag) Drag and drop variables to the right places.
-
-```{r tableau-polygon-drag, fig.cap="(ref:tableau-polygon-drag)"}
-knitr::include_graphics("images/08-map/tableau-polygon-drag-annotated.png")
-```
-
-We want colors to represent military spending values, so drag *Value* variable to
-the **Color** box of the Marks card. You should now see a proper choropleth map.
-
-Places like Greenland and Libya do not have available values, but they are still
-painted with the lightest color, which is misleading. To remove countries with *null* values
-from the map, drag *Values* to the *Filters* card. A popup window will ask you how
-you want to filter, just leave everything unchanged. This will leave the whole range of values,
-and exclude *null* values (see the checkbox in the lower-right corner of the Filter window
-in Figure \@ref(fig:tableau-polygon-filter)).
-
-(ref:tableau-polygon-filter) Filter values to remove countries with no data from display.
-
-```{r tableau-polygon-filter, out.width=400, fig.cap="(ref:tableau-polygon-filter)"}
-knitr::include_graphics("images/08-map/tableau-polygon-filter-annotated.png")
-```
-
-You can change the color scheme by clicking the Color box of the Marks card, and
-then *Edit colors*. Change the palette to *Reds*, and make it stepped rather than continuous,
-as shown in Figure \@ref(fig:tableau-polygon-color).
-
-(ref:tableau-polygon-color) Change the color scheme to Reds with 5 steps.
-
-```{r tableau-polygon-color, out.width=400, fig.cap="(ref:tableau-polygon-color)"}
-knitr::include_graphics("images/08-map/tableau-polygon-color.png")
-```
-
-You may notice the tooltip calls values *Value* when hovering over countries.
-Click the Tooltip box of the Marks card to change text to *Military spending*,
-and add a percentage sign after the value itself, as shown in Figure \@ref(fig:tableau-polygon-tooltip).
-Make sure not to change values between
-`<` and `>`, as these are references to variables.
-
-(ref:tableau-polygon-tooltip) Change tooltip text to make it more user-friendly.
-
-```{r tableau-polygon-tooltip, out.width=400, fig.cap="(ref:tableau-polygon-tooltip)"}
-knitr::include_graphics("images/08-map/tableau-polygon-tooltip.png")
-```
-
-And finally, let's add a proper title to the map. Double-click the default *Sheet 1* name
-to bring up the *Edit Title* window, and change the name of your chart to a more meaningful
-*Military Spending as % of GDP (2018)*.
-
-### Publish Your Tableau Map {-}
-
-Once you are ready to publish and share the map, go to *File > Save to Tableau Public*.
-In the pop-up window, log in to your account if requested. Give it a title, such
-as *Military Spending*, and click Save.
 
 ### Summary {- #summary8}
 

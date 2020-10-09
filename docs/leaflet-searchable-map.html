@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Leaflet Searchable Map with CSV Points | Hands-On Data Visualization</title>
+  <title>Leaflet Searchable Point Map | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Leaflet Searchable Map with CSV Points | Hands-On Data Visualization" />
+  <meta property="og:title" content="Leaflet Searchable Point Map | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Leaflet Searchable Map with CSV Points | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Leaflet Searchable Point Map | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="leaflet-heatmap.html"/>
-<link rel="next" href="transform.html"/>
+<link rel="next" href="leaflet-maps-open-data-apis.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -225,9 +225,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="map-datawrapper.html"><a href="map-datawrapper.html"><i class="fa fa-check"></i>Polygon Choropleth Map with Datawrapper</a></li>
-<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
-<li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Polygon Choropleth Map with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="map-socrata.html"><a href="map-socrata.html"><i class="fa fa-check"></i>Current Map with Socrata Open Data</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>9</b> Table Your Data</a>
 <ul>
@@ -264,9 +265,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
-<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap with CSV Point Data</a></li>
-<li class="chapter" data-level="" data-path="leaflet-searchable-map.html"><a href="leaflet-searchable-map.html"><i class="fa fa-check"></i>Leaflet Searchable Map with CSV Points</a></li>
+<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap Points with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-searchable-map.html"><a href="leaflet-searchable-map.html"><i class="fa fa-check"></i>Leaflet Searchable Point Map</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-open-data-apis.html"><a href="leaflet-maps-open-data-apis.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data APIs</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>14</b> Transform Your Map Data</a>
 <ul>
@@ -332,9 +333,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="leaflet-searchable-map" class="section level2 unnumbered" number="">
-<h2>Leaflet Searchable Map with CSV Points</h2>
-<p>Figure <a href="leaflet-searchable-map.html#fig:searchable-map">13.20</a> shows a powerful Leaflet template of a searchable
-and filterable point map
+<h2>Leaflet Searchable Point Map</h2>
+<p>Figure <a href="leaflet-searchable-map.html#fig:searchable-map">13.19</a> shows a powerful Leaflet template of a searchable
+and filterable point map, which draws from a CSV data file,
 developed by <a href="https://derekeder.com/">Derek Eder</a> from DataMade. This map allows
 you to show points of interest, filter them by using <em>Search by name</em> functionality,
 and show them as a list instead of points on a map. In addition, the <em>About</em> page
@@ -343,7 +344,7 @@ gives you plenty of space to talk about your map.</p>
 <div class="figure"><span id="fig:searchable-map"></span>
 <img src="images/13-leaflet/searchable-map.png" alt="Explore a live demonstration of Searchable Map template."  />
 <p class="caption">
-Figure 13.20: Explore a <a href="https://searchable-map-template-csv.netlify.app/">live demonstration of Searchable Map template</a>.
+Figure 13.19: Explore a <a href="https://searchable-map-template-csv.netlify.app/">live demonstration of Searchable Map template</a>.
 </p>
 </div>
 <p>This template uses Leaflet.js in combination with Google Maps API to perform
@@ -398,28 +399,14 @@ chapter to remind yourself about forks).</p>
 <li>Upload this map and all the supporting files and folders to your site. This map requires no back-end code, so any host will work, including GitHub pages, Netlify or your own web server.</li>
 </ol>
 </div>
-<div id="summary13" class="section level3 unnumbered" number="">
-<h3>Summary</h3>
-<p>In this chapter, we introduced Leaflet map templates for common map problems,
-such as telling stories about places using scrollable interface,
-showing point data from databases like Socrata, and creating heatmaps
-to visualize areas of high event density.</p>
-<p>You can use these templates as a base to kickstart your own mapping projects.
-Leaflet.js is <a href="https://leafletjs.com/reference">well-documented</a>, and we recommend
-looking at <a href="https://leafletjs.com/examples.html">their tutorials</a> for more inspiration.</p>
-<p>In the next chapter, we will talk about geospatial data and introduce several
-tools that can convert, create, and edit geospatial files.</p>
-
 </div>
-</div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
 <a href="leaflet-heatmap.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="transform.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="leaflet-maps-open-data-apis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -225,9 +225,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="map-datawrapper.html"><a href="map-datawrapper.html"><i class="fa fa-check"></i>Polygon Choropleth Map with Datawrapper</a></li>
-<li class="chapter" data-level="" data-path="filtered-point-map-socrata.html"><a href="filtered-point-map-socrata.html"><i class="fa fa-check"></i>Filtered Point Map with Socrata</a></li>
-<li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Polygon Choropleth Map with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
+<li class="chapter" data-level="" data-path="map-socrata.html"><a href="map-socrata.html"><i class="fa fa-check"></i>Current Map with Socrata Open Data</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="table.html"><a href="table.html"><i class="fa fa-check"></i><b>9</b> Table Your Data</a>
 <ul>
@@ -264,9 +265,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="leaflet-storymaps-with-google-sheets.html"><a href="leaflet-storymaps-with-google-sheets.html"><i class="fa fa-check"></i>Leaflet Storymaps with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="google-sheets-api-key.html"><a href="google-sheets-api-key.html"><i class="fa fa-check"></i>Get Your Google Sheets API Key</a></li>
 <li class="chapter" data-level="" data-path="leaflet-maps-with-csv.html"><a href="leaflet-maps-with-csv.html"><i class="fa fa-check"></i>Leaflet Maps with CSV Data</a></li>
-<li class="chapter" data-level="" data-path="leaflet-maps-with-api.html"><a href="leaflet-maps-with-api.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data API</a></li>
-<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap with CSV Point Data</a></li>
-<li class="chapter" data-level="" data-path="leaflet-searchable-map.html"><a href="leaflet-searchable-map.html"><i class="fa fa-check"></i>Leaflet Searchable Map with CSV Points</a></li>
+<li class="chapter" data-level="" data-path="leaflet-heatmap.html"><a href="leaflet-heatmap.html"><i class="fa fa-check"></i>Leaflet Heatmap Points with CSV Data</a></li>
+<li class="chapter" data-level="" data-path="leaflet-searchable-map.html"><a href="leaflet-searchable-map.html"><i class="fa fa-check"></i>Leaflet Searchable Point Map</a></li>
+<li class="chapter" data-level="" data-path="leaflet-maps-open-data-apis.html"><a href="leaflet-maps-open-data-apis.html"><i class="fa fa-check"></i>Leaflet Maps with Open Data APIs</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="transform.html"><a href="transform.html"><i class="fa fa-check"></i><b>14</b> Transform Your Map Data</a>
 <ul>
@@ -333,13 +334,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chart" class="section level1" number="7">
 <h1><span class="header-section-number">Chapter 7</span> Chart Your Data</h1>
-<p>Charts pull readers deeper into your story. Even if your data contains geographical information,
-sometimes a chart tells your story better than a map. But designing meaningful, interactive charts
-requires careful thought about how to communicate your data story with your audience.</p>
-<p>In this chapter, we will look at main <a href="chart-design.html">principles of chart design</a>, and
-learn to identify good charts from bad ones. You will learn important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. While all of the tools we describe allow you to create <em>static</em> charts that you can download as PNG or JPG files, this book focuses on creating <em>interactive</em> charts that reveal more details about your data when you float your cursor over them in your web browser. Later you’ll learn how to <a href="embed.html">embed interactive charts on your website in Chapter 10</a>.</p>
-<p>To begin, decide which type of chart you wish to create in Table <a href="chart.html#tab:chart-types">7.1</a>. Your decision will be based on the format of your data, and the story you wish to tell, such as the type of data comparison you wish to draw to your reader’s attention. Once you choose your chart type, follow our tool recommendations and step-by-step tutorials. This chapter features easy drag-and-drop tools such as <a href="chart-google.html">Google Sheets</a>, <a href="chart-datawrapper.html">Datawrapper</a>, and <a href="chart-tableau.html">Tableau Public</a>. But Table <a href="chart.html#tab:chart-types">7.1</a> also refers to more powerful and customizable chart code templates, such as <a href="chartcode.html">Chart.js and Highcharts templates in Chapter 12</a>, which give you ever more control over customizing your design and storing your data, but request you to learn how to <a href="github.html">edit and host code templates with GitHub in Chapter 11</a>.</p>
-<p>Note that we blend our tutorials for <em>bar and column charts</em> because they’re essentially the same, except that bars are oriented horizontally and columns vertically. Look at your data labels when deciding which type to create. If you need to display long labels, such as “Mocha Frappuccino 24-ounce” and “Double Quarter Pounder with cheese,” make a horizontal bar chart to create sufficient space to make them readable. Or if you have short labels, such as “Starbucks” and “McDonald’s,” you can create either a bar or column chart.</p>
+<p>Charts pull readers deeper into your story. Images such as the slope of a line chart, or clusterings of dots on a scatter chart, can communicate your evidence to readers’ eyes more effectively than text or tables. But creating meaningful charts that draw our attention to key insights in your data requires clear thinking about design choices.</p>
+<p>In this chapter, we will examine <a href="chart-design.html">principles of chart design</a>, and learn to identify good charts from bad ones. You will review important rules that apply to all charts, and also some aesthetic guidelines to follow when customizing your own designs. While many tools allow you to download charts as <em>static</em> images, our book also demonstrates how to construct <em>interactive</em> charts that invite readers to explore the data in their web browsers. Later you’ll learn how to <a href="embed.html">embed interactive charts on your website in Chapter 10</a>.</p>
+<p>Learn about different types of charts you can create in this book in Table <a href="chart.html#tab:chart-types">7.1</a>. Decisions about chart types are based on two main factors: the format of your data, and the kind of story you wish to tell. For example, line charts work best to show a series of continuous data points (such as change over time), while range charts are better suited to emphasize the distance between data categories (such as inequality gaps). After selecting your chart type, follow our tool recommendations and step-by-step tutorials. This chapter features <em>Easy Tools</em> with drag-and-drop menus, such as <a href="chart-google.html">Google Sheets</a>, <a href="chart-datawrapper.html">Datawrapper</a>, and <a href="chart-tableau.html">Tableau Public</a>. But the table also points you to <em>Power Tools</em> that give you more control to customize and host your visualizations, such as <a href="chartcode.html">Chart.js and Highcharts code templates in Chapter 12</a>. These advanced tools require prior knowledge on how to <a href="github.html">edit and host code templates with GitHub in Chapter 11</a>.</p>
+<p>A note about terminology: we jointly refer to <em>bar and column charts</em> because they’re essentially the same, except that bars are oriented horizontally and columns vertically. The main difference is the length of your data labels. Use bar charts to display longer labels (such as “Mocha Frappuccino 24-ounce” and “Double Quarter Pounder with cheese”) since they require more horizontal reading space. But you can use either bar or column charts for shorter labels that do not require as much room (such as “Starbucks” and “McDonald’s”). You’ll also notice that all of the examples in this chapter focus on food (because we were really hungry when writing it) and healthy eating (because we also need to lose weight).</p>
 <table>
 <caption><span id="tab:chart-types">Table 7.1: </span> Basic Chart Types and Tutorials</caption>
 <colgroup>
@@ -355,35 +353,35 @@ learn to identify good charts from bad ones. You will learn important rules that
 <tbody>
 <tr class="odd">
 <td>Grouped bar or column chart<br> <img src="images/07-chart/chart-grouped-column.png" /></td>
-<td>Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Split bar or column chart<br> <img src="images/07-chart/chart-split-column.png" /></td>
-<td>Best to compare categories in separate clusters. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to compare categories in separate clusters. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Stacked bar or column chart<br> <img src="images/07-chart/chart-stacked-column.png" /></td>
-<td>Best to compare sub-categories, or parts of a whole. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to compare sub-categories, or parts of a whole. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Histogram<br> <img src="images/07-chart/chart-histogram.png" /></td>
-<td>Best to show distribution of raw data, with number of values in each bucket. If labels are long, use horizontal bars instead of vertical columns..<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show distribution of raw data, with number of values in each bucket. If labels are long, use horizontal bars instead of vertical columns..<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Error bars in bar or column chart<br> <img src="images/07-chart/chart-error-column.png" /></td>
-<td>Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: TODO DECIDE <br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: TODO DECIDE <br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Pie chart<br> <img src="images/07-chart/chart-pie.png" /></td>
-<td>Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: <a href="pie-line-area-google.html">Pie Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: <a href="pie-line-area-google.html">Pie Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Line chart<br> <img src="images/07-chart/chart-line.png" /></td>
-<td>Best to show continuous data, such as change over time.<br>Easy tools: <a href="pie-line-area-google.html">Line Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show continuous data, such as change over time.<br>Easy tools: <a href="pie-line-area-google.html">Line Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Annotated line chart<br> <img src="images/07-chart/chart-annotated.png" /></td>
-<td>Best to add notes or highlight data inside a chart, such as historical context in a line chart.<br>Easy tools: <a href="annotated-datawrapper.html">Annotated Chart in Datawrapper tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to add notes or highlight data inside a chart, such as historical context in a line chart.<br>Easy tools: <a href="annotated-datawrapper.html">Annotated Chart in Datawrapper tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Filtered line chart <br> <img src="images/07-chart/chart-filtered-line.png" /></td>
@@ -399,22 +397,23 @@ learn to identify good charts from bad ones. You will learn important rules that
 </tr>
 <tr class="even">
 <td>Scatter chart <br> <img src="images/07-chart/chart-scatter.png" /></td>
-<td>Best to show the relationship between two datasets as XY coordinates to reveal possible correlations. <br>Easy tool: <a href="scatter-bubble-datawrapper.html">Scatter and Bubble Chart in Datawrapper tutorial</a> or <a href="scatter-tableau.html">Scatter Chart in Tableau Public tutorial</a>. <br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show the relationship between two variables, with each dot representing its X and Y coordinates. <br>Easy tool: <a href="scatter-bubble-datawrapper.html">Scatter and Bubble Chart in Datawrapper tutorial</a> or <a href="scatter-tableau.html">Scatter Chart in Tableau Public tutorial</a>. <br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="odd">
 <td>Bubble chart <br> <img src="images/07-chart/chart-bubble.png" /></td>
-<td>Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color.<br>Easy tool: <a href="scatter-bubble-datawrapper.html">Scatter and Bubble Chart in Datawrapper tutorial</a><br>Power tool: <a href="chartcode.html">Chart.js and Highcharts templates</a></td>
+<td>Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color.<br>Easy tool: <a href="scatter-bubble-datawrapper.html">Scatter and Bubble Chart in Datawrapper tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Sparklines<br> <img src="images/07-chart/chart-sparklines.png" /></td>
-<td>Best to compare data trends with tiny line or bar charts, aligned in a table column.<br>Easy tool: <a href="table-datawrapper.html">Interactive Table with Sparklines in Datawrapper tutorial</a></td>
+<td>Best to compare data trends with tiny line or bar charts, aligned in a table column.<br>Easy tool: <a href="table-datawrapper.html">Ch 9: Interactive Table with Sparklines in Datawrapper tutorial</a></td>
 </tr>
 </tbody>
 </table>
 <p>TODO above:
 - REDO range chart example?
 - DECIDE on power tools in cases noted above?
-- If showing gaps between data matters most to your story, then choose a chart type that emphasizes the gaps, such as range chart.</p>
+- If showing gaps between data matters most to your story, then choose a chart type that emphasizes the gaps, such as range chart.
+- WHERE to insert: Do you really need a chart? …Even if your data contains geographical information, sometimes a chart tells your story better than a map.</p>
 </div>
             </section>
 

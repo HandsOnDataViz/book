@@ -164,7 +164,7 @@ Tip: Google Drive now allows you to edit Microsoft Office file formats, but not 
 
 Now that you know how to upload and convert an existing dataset, in the next section you'll learn how to install and use a Google Sheets add-on tool to geocode address data into latitude and longitude coordinates.
 
-## Geocode Addresses with Google Sheets Add-On {- #geocode}
+## Geocode Addresses in Google Sheets {- #geocode}
 In this section, you'll learn how to geocode data by installing a free Google Sheets add-on tool. This allows you to geocode addresses directly inside your spreadsheet, which will be very useful when using [Leaflet map code templates in Chapter 13](leaflet.html).
 
 Geocoding means converting addresses or location names into geographic coordinates (or x- and y-coordinates) that can be plotted on a map, as shown in Figure \@ref(fig:transform-data). For example, the Statue of Liberty in the New York City area is located at *40.69, -74.04*. The first number is the latitude and the second is the longitude. Since the equator is 0 degrees latitude, positive latitude is the northern hemisphere, and negative latitude is in the southern hemisphere. Similarly, the prime meridian is 0 degrees longitude, which passes through Greenwich, England. So positive longitude is east of the meridian, and negative longitude is west, until you reach the opposite side of the globe, roughly near the International Date Line in the Pacific Ocean.
@@ -489,7 +489,7 @@ Warning: If you save this spreadsheet in CSV format, your calculated results wil
 You've successfully created a mailing list---including each person's name, organization, and full mailing address---using the VLOOKUP function to match and paste data from two sheets. Now that you understand how to use formulas to connect different spreadsheets, the next section will teach you how to manage multiple relationships between spreadsheets with the help of a relational database.
 
 
-## Connect Sheets with a Relational Database {- #database}
+## Spreadsheet vs. Relational Database {- #database}
 In the previous section, you learned how the VLOOKUP function can search for matching data in columns across spreadsheets and automatically paste results. Building on that concept, let's distinguish between a spreadsheet and a relational database, and under what circumstances it might be wiser to use the latter.
 
 A spreadsheet is sometimes called a "flat-file database" because all of the records are stored in rows and columns in a single table. For example, if you kept a single spreadsheet of US food bank staff, every row would list an individual person, organization, and addresses, just like the mailing list we created in Figure \@ref(fig:vlookup-final) in the prior section on VLOOKUP.

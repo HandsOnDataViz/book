@@ -1,5 +1,4 @@
 # Choose Tools to Tell Your Story {#choose}
-
 If you feel overwhelmed by the avalanche of digital tools available today, you're not alone. When you're simply trying to do your regular work, keeping up with the latest software developments can feel like an additional part-time job you didn't sign up for. Digital tools are constantly changing and evolving. That's good news if you like to experiment and choose among different options, but not-so-good news if you lack the time to make complex decisions.
 
 In this chapter, we'll help you navigate your way through the decision-making process. We'll begin with the most important step---[sketching out your data story](sketch.html)---to help identify the types of tools you need to tell it effectively. Next, we'll review [ten factors to consider when choosing digital tools and the tradeoffs involved](tool-factors.html). Finally, we'll present our [list of recommended data visualization tools](recommended-tools.html), plus one extra to help you get organized: [a password manager](password-manager.html). All of these tools are free to use, and the book introduces them gradually, from easy-to-learn beginner tools to more advanced and powerful ones.
@@ -25,7 +24,7 @@ Get ready to sketch out your data story in words and pictures. No artistic skill
 
 4. On the fourth sheet of paper, *sketch at least one type of visualization you plan to create* after you obtain your data above. Do you envision some type of chart, like a bar, line, or scatter chart? Or do you imagine some type of map, maybe with points or polygons? If your visualizations will be interactive, try to show the concept using buttons and more than one sheet of paper. You can add *imaginary data* at this stage because it's just a preliminary sketch. Have fun!
 
-TODO: decide whether to add amateur-styled sketches of problem, question, data, and visualization. We could place one image immediately after each step, or conclude with a smaller 4-panel compilation (2x2 landscape oriented page scans) after all four steps.
+TODO: Drafting sketches of problem, question, data, and visualization, to include as 4-panel compilation (2x2 landscape) after all four steps.
 
 This exercise can help you in multiple ways, whether you do it by yourself, or even better, with a team of co-workers, as shown in Figure \@ref(fig:data-story-photo-combined). First, by migrating ideas from your mind to paper, you'll make your thinking clearer not only for you, but also more visible for others. When ideas are sketched out, you can reflect on them, listen to feedback, cross-out not-so-good ones, and replace them with better ones on new sheets of paper. If your initial sketches are too complicated or confusing, break down those ideas into separate pages to make them more coherent.
 
@@ -35,14 +34,13 @@ This exercise can help you in multiple ways, whether you do it by yourself, or e
  knitr::include_graphics("images/02-choose/data-story-photo-combined.jpg")
  ```
 
-Second, look at your sheets like a storyboard. Spread them out on a table, move them around to potentially reorder the sequence, start to define the three essential stages of your story: the beginning, middle, and end. Also, these pages can help you organize your thinking about how you'll communicate your data story to larger audiences, such as a presentation slide deck, or paragraphs and pictures for your next report or web page. Don't throw them away, because we'll return to this exercise at the end of the book in [Chapter 16: Telling Your Data Story](story.html).
+Second, look at your sheets like a storyboard. Spread them out on a table, move them around to potentially reorder the sequence, start to define the three essential stages of your story: the beginning, middle, and end. Also, these pages can help you organize your thinking about how you'll communicate your data story to larger audiences, such as a presentation slide deck, or paragraphs and pictures for your next report or web page. Don't throw them away, because we'll return to this exercise at the end of the book in [Chapter 16: Tell and Show Your Data Story](story.html).
 
 Finally, this sketching exercise can help you identify which chapters you should focus on in the body of this book. If you're puzzled about where to search for data, check out [Chapter 4: Find and Question Your Data](find.html). If you're thinking about building a chart or map, but need examples of different types, look at the beginning of [Chapter 7: Chart Your Data](chart.html) and [Chapter 8: Map Your Data](map.html).
 
 Now that you have a clearer sense of the story you wish to tell, and some initial ideas about the visualizations you wish to create, in the next two sections we'll discuss tools to do the job, and factors you should consider when deciding among them.
 
-## Tools and Tradeoffs {- #tool-factors}
-
+## Ten Factors When Considering Tools {- #tool-factors}
 Making decisions between the seemingly endless number of digital tools can feel overwhelming. To help you navigate your decision-making process, below we list ten key factors that we consider when evaluating new visualization tools or online services. When comparing options, many decisions involve some type of tradeoff, a balance between competing wants and needs, such as ease-of-use versus extensive features. By identifying key factors, we believe that each reader can make a more informed decision about which tools offer the best tradeoff for you, since all of us are different. Furthermore, we worded our categories broadly, because the concepts can be applied to other areas of your digital life, but followed up with more context about data visualization in particular.
 
 *1. Easy-to-learn*
@@ -91,19 +89,16 @@ Does the tool create visualizations that are accessible for visually-impaired re
  knitr::include_graphics("images/02-choose/colorblind-accessible-combined.png")
 ```
 
-[TODO discuss with Amelia: I reduced the "recommendation" language in #10 as you suggested, but need to keep the visual examples here because they don't fit well anywhere else, as it would be odd to move them to the Recommendations section below. ]
-
 Those are ten factors we consider when deciding whether to add another item into our digital toolkit. Of course, your list may vary, and might include other values that are vitally important yet sometimes harder to judge, such as a software developer's ethical business practices or contribution to the public good. Whatever criteria you value, make them explicit in your decision-making process, and inform others about what influences your choices.
 
-Also consider alternative ways to make tool decisions. When visualization designer Lisa Charlotte Rost reflected on her [fascinating experiment in recreating one chart with 24 different tools](https://source.opennews.org/articles/what-i-learned-recreating-one-chart-using-24-tools/), she concluded that "there are no perfect tools, just good tools for people with certain goals." On a related note, when digital historian Lincoln Mullen offered advice on [making prudent choices about digital tools](https://lincolnmullen.com/blog/how-to-make-prudent-choices-about-your-tools/), his first recommendation was: "The best possible tool is the one you're already using to get work done." Don't fall into the familiar trap of believing that your productivity will increase if only you began to use yet another new tool. Mullen's second piece of advice was: "Prefer the tool that your local co-workers use." Even if different tool is objectively better, it may be outweighed by the benefits of mutual support and collaboration with people using a less-awesome application in your local setting.^[@rostWhatLearnedRecreating2016; @mullenHowMakePrudent2013. See also criteria of educational tools by @wattersAudreyTestWhat2012a]
+Also consider alternative ways to make tool decisions. When visualization designer Lisa Charlotte Rost reflected on her [fascinating experiment in recreating one chart with 24 different tools](https://source.opennews.org/articles/what-i-learned-recreating-one-chart-using-24-tools/), she concluded that "there are no perfect tools, just good tools for people with certain goals." On a related note, when digital historian Lincoln Mullen offered advice on [making prudent choices about digital tools](https://lincolnmullen.com/blog/how-to-make-prudent-choices-about-your-tools/), his first recommendation was: "The best possible tool is the one you're already using to get work done." Don't fall into the familiar trap of believing that your productivity will increase if only you began to use yet another new tool. Mullen's second piece of advice was: "Prefer the tool that your local co-workers use." Even if different tool is objectively better, it may be outweighed by the benefits of mutual support and collaboration with people using a less-awesome application in your local setting.^[@rostWhatLearnedRecreating2016; @mullenHowMakePrudent2013. See also criteria for educational tools by @wattersAudreyTestWhat2012a]
 
 Now that you understand the factors driving our decisions, in the next section you'll see an overview of our tool recommendations, with a quick description and link to the chapter where we introduce each of them.
 
-## Recommended Tools {- #recommended-tools}
-
+## Our Recommended Tools {- #recommended-tools}
 When creating this book, we aimed to identify the most essential data visualization tasks that beginners are likely to face, and the digital toolkit needed to complete those tasks. In the prior section we listed ten factors that influenced our tool recommendations, such as being easy-to-learn, free or affordable, with powerful capacity. In this section, we have listed all of the tools featured in this book, with recommended uses and references to chapters where they appear, as shown in Table \@ref(tab:tools). Your data visualization projects may only require you to use only a small number of these, or perhaps even just one tool. But it's important to be aware of the different types of tools, because you may not realize how they can help you if don't know that they exist.
 
-<!-- TODO: See table data in Google Sheet https://docs.google.com/spreadsheets/d/1HHKRw_Og38lCK9eKAvQTF_6GHdrSE5YU1ioStPsvxII/edit#gid=0 -->
+<!-- TODO: See table data in Google Sheet format: https://docs.google.com/spreadsheets/d/1HHKRw_Og38lCK9eKAvQTF_6GHdrSE5YU1ioStPsvxII/edit#gid=0 -->
 
 Table: (\#tab:tools) Recommended Tools and Uses, with Chapter References
 
@@ -126,19 +121,21 @@ Table: (\#tab:tools) Recommended Tools and Uses, with Chapter References
 | Mapshaper  edit & join geodata |  |  |  |  |  |  |  | [Ch14](mapshaper.html) |
 | MapWarper  georectify images |  |  |  |  |  |  |  | [Ch14](mapwarper.html) |
 
-TODO: Acknowledge that the book also mentions other useful tools that are not featured in the table, but you'll find them in the text...ColorBrewer, Geocoding by SmartMonkey, US Census Geocoder, Google Maps, Google Forms, Socrata repository chart & map tools, etc...
+In addition to the tools featured in Table \@ref(tab:tools), you'll find several other useful tools mentioned in the text, including [ColorBrewer to select map colors](map-design.html), the [Geocoding by SmartMonkey add-on for Google Sheets](geocode.html), [US Census Geocoder for bulk addresses and census geography][bulk-geocode.html], and the [Socrata open-repository chart and map tools](filtered-point-map-socrata.html). Also, consider enhancing your web security by installing the free [Privacy Badger browser extension from the Electronic Frontier Foundation](https://privacybadger.org/) to view and exercise some control over who's tracking you, and also review the [EFF's Surveillance Self-Defense Guide](https://ssd.eff.org/).
 
-In addition to the data visualization tools above, consider enhancing your web security installing the free [Privacy Badger browser extension from the Electronic Frontier Foundation](https://privacybadger.org/) to view and exercise some control over who's tracking you, and also review the [EFF's Surveillance Self-Defense Guide](https://ssd.eff.org/).
-
-TODO: As we've stated, digital tools change and evolve over time. If you recommend a tool that's not on our list, email or tweet us and explain how it rates on the ten factors that guided our selection process above.
+Of course, we recognize that digital tools are continually changing and evolving. As time goes by, we expect that some tools will no longer be available, and we also anticipate discovering newer ones that do a better job in telling our data stories. If you'd like to recommend a tool that's not currently on our list, email us at [handsondataviz@gmail.com](mailto:handsondataviz@gmail.com) or tweet us at [handsondataviz](https://twitter.com/handsondataviz), and tell us how it rates on the ten factors that guide our selection process above.
 
 ## Use a Password Manager {- #password-manager}
 
-TODO: If you don't already have one, start using a password manager. One tool to rule them all! ...add password manager tutorial to keep track of your accounts for the online tools you'll use in this book. The free and open-source BitWarden.com tool nicely integrates with most browsers and even smartphones.
+Finally, we highly recommend a password manager: think of it as one tool to rule them all! Password managers help you to keep track of all of the accounts you will create when using several of the online tools above. We recommend installing [BitWarden](https://bitwarden.com), an open-source password manager that offers its core features for free for Windows, Mac, and Linux computers, all major web browsers, and iOS and Android mobile devices. When you install BitWarden, you create one master password (be careful not to forget it) that grants you access to all of the account usernames and passwords you catalog. You also install the Bitwarden extension in your preferred web browsers. When you register for a new account in your browser, the password manager typically asks if you wish to store that information in your vault with end-to-end encryption. Also, when you visit that site in the future, the password manager usually recognizes it and enters your login credentials with one click, as shown in Figure \@ref(fig:bitwarden-annotated).
 
-TODO: Discuss with Amelia. Since this password manager will require a short tutorial to demonstrate *how* it works, I'd prefer to keep this as its own short section, rather than converting it into a sidebar. 
+(ref:bitwarden-annotated) The Bitwarden browser extension recognizes sites you have previously stored, and enters your credentials with one click.
+
+```{r bitwarden-annotated, out.width=500, fig.cap="(ref:bitwarden-annotated)"}
+ knitr::include_graphics("images/02-choose/bitwarden-annotated.png")
+```
+
+We recommend storing your passwords inside a tool like BitWarden, rather than in a specific web browser (such as Chrome or Firefox) for two reasons. First, you can set up BitWarden to sync and access your passwords across *different* browsers and *multiple* devices, including your laptop and mobile phone. Second, if your primary browser or computer crashes, you still have online access to your secure BitWarden vault, which means you can continue to work on a different computer.
 
 ### Summary {- #summary2}
-TODO
-Now you have a better sense of different types of data visualization tools, and how to make wise decisions when choosing among them...
-The next chapter is designed to strengthen your skills for using the most common tool in our data toolkit: spreadsheets.
+Now you have a better sense of the wide range of data visualization tools we recommend in this book, and how to make wise decisions when choosing among tools in general. Always keep the data story in the forefront of your mind, since the tools are simply means to help you achieve that end. The next chapter is designed to strengthen your skills regarding the most common tool in our data visualization toolkit: spreadsheets.

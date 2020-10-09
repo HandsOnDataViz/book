@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 04 Oct 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 08 Oct 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -189,57 +189,66 @@ contained in this book.
 
 <!--chapter:end:index.Rmd-->
 
-Introduction
-============
+Introduction: Why Data Visualization?
+=====================================
 
-In this book, we will learn how to create data visualizations through a
-series of design principles and step-by-step tutorials, in order to make
-your information-based analysis and writing more insightful and
-compelling. Just as sentences become more persuasive with supporting
-evidence and source notes, your data-driven arguments can become more
-powerful when accompanied by appropriate tables, charts, or maps. While
-words tell us stories, visualizations show us *data stories* by
-transforming quantitative, relational, or spatial patterns into images.
-Data visualizations work best when they draw our attention to highly
-meaningful patterns that would be difficult to communicate through text
-alone, yet jump out at our eyes in pictures.
+In this book, you’ll learn how to create true and meaningful data
+visualizations through chapters that blend design principles and
+step-by-step tutorials, in order to make your information-based analysis
+and arguments more insightful and compelling. Just as sentences become
+more persuasive with supporting evidence and source notes, your
+data-driven writing becomes more powerful when paired with appropriate
+tables, charts, or maps. Words tell us stories, but visualizations show
+us *data stories* by transforming quantitative, relational, or spatial
+patterns into images. When visualizations are well-designed, they draw
+our attention to what is most important in the data in ways that would
+be difficult to communicate through text alone.
 
 Our book features a growing number of free and easy-to-learn digital
-tools for creating *data visualizations*. We broadly define this term to
-include *charts* that encode data as images, *maps* that add a spatial
-dimension, and also *tables*, which do not illustrate data in the same
-way as charts and maps, but nevertheless rely on related visual design
-principles. Our definitions are primarily driven by a pragmatic need to
-orient new learners to different types of visualizations they can easily
-create and the labels most commonly used by our recommended tools. In
-our definition, data visualizations also can be reused and modified by
-updating their underlying information, typically stored in a digital
-data file, unlike *infographics* that are usually created as one-time
-artistic works. Be aware that other authors define their terms
-differently.[1]
+tools for creating *data visualizations*. We broadly define this term
+primarily as *charts*, which encode data as images, and *maps* which add
+a spatial dimension. While *tables* do not illustrate data in the same
+way, we include them in this book because of our pragmatic need to
+navigate new learners through a decision-making process that often
+results in building one of these three products. Furthermore, in this
+digital era we define data visualizations as images that can be easily
+re-used by modifying the underlying information, typically stored in a
+data file, in contrast to *infographics* that are generally designed as
+single-use artwork.[1]
 
-As educators, we designed *Hands-On Data Visualization* to teach key
-concepts and provide step-by-step tutorials for new learners. In
-particular, we emphasize how to create *interactive* data visualizations
-that you can embed on your website. While static visualizations can be
-distributed on paper or PDF documents, interactive visualizations engage
-wider audiences on the internet by encouraging them to interact with the
-data, explore patterns that interest them, and download files if
-desired.
+As educators, we designed *Hands-On Data Visualization* to introduce key
+concepts and provide step-by-step tutorials for new learners. You can
+teach yourself, or use the book to teach others. Also, unlike many
+technical books that focus solely on one tool, our book guides you on
+how to choose among over twenty free and easy-to-use visualization tools
+that we recommend. Finally, while some other books only focus on
+*static* visualizations that can be distributed only on paper or PDF
+documents, we demonstrate how to design *interactive* tables, charts,
+and maps, and embed them on the web. Interactive visualizations engage
+wider audiences on the internet by inviting them to interact with the
+data, explore patterns that interest them, download files if desired,
+and easily share your work on social media.
 
-But the remarkable growth of data visualizations and the internet in
-recent decades also poses a serious problem. Today we encounter more
-words, numbers, and images than at any prior point in our lives, but
-much of it is not trustworthy. The “information age” has devolved into
-an “age of disinformation.” When presented with conflicting stories, who
-do you believe? How do you make wise decisions about what information to
-trust? In particular, for this book about data visualization, what types
-of evidence persuade you, and why?
+Data visualizations have spread widely across on the internet over the
+last decade. Today in our web browsers we encounter more digital charts
+and maps than we previously saw in the print-only past. But rapid growth
+also raises serious problems. The “information age” now overlaps with
+the “age of disinformation.” Now that nearly anyone can post online, how
+do you make wise decisions about who to trust? When presented with
+conflicting data stories about divisive policy issues such as social
+inequality or climate change, which one do you believe? In the next
+section, we’ll delve into this thorny topic by exploring what types of
+evidence persuades you, and why. And we’ll share this dirty little
+secret about data visualization: it illuminates our path in pursuit of
+the truth, but it also empowers us to deceive and lie.
 
-For example, how can you tell whether or not we—the authors of this
-book—are lying to you?
+What Can You Believe?
+---------------------
 
-Let’s start with a simple one-sentence statement:
+To begin, how do you know whether or not to believe us, the authors of
+this book? Could we be lying to you? How do you determine what
+information is truthful? Let’s start with a simple one-sentence
+statement:
 
 *Claim 1. Economic inequality has sharply risen in the United States
 since the 1970s.*
@@ -262,14 +271,14 @@ while the bottom half barely moved to about $19,000, according to the
 World Inequality Database.*[2]
 
 Is this second claim more believable than the first one? It now makes a
-more descriptive claim by defining economic inequality in terms of
-average income for the upper 10 percent versus the bottom 50 percent
-over time. Also, this sentence pins its claims to a specific source, and
-invites us to read further by following the footnote. But how do these
-factors influence its persuasiveness? Does the wording of the claim make
-you wonder about the 40 percent of the population in between the two
-extremes? Or, what about the authority of the source? Who is responsible
-for creating the World Inequality Database, and do you trust them?
+more precise claim by defining economic inequality in terms of average
+income for the upper 10 percent versus the bottom 50 percent over time.
+Also, this sentence pins its claims to a specific source, and invites us
+to read further by following the footnote. But how do these factors
+influence its persuasiveness? Does the sentence lead you to ask about
+the trustworthiness of the source and how it defines “income”? Does the
+wording make you wonder about the other 40 percent of the population
+between the two extremes?
 
 To answer some of those questions, let’s supplement the second claim
 with a bit more information, as shown in Table
@@ -328,6 +337,9 @@ to consult the source for clearer definitions. Social scientists use
 different methods to measure income inequality, but generally report
 findings similar to those shown here.[3]
 
+Some Pictures Are More Persuasive
+---------------------------------
+
 Now let’s substitute a data visualization—specifically the line chart in
 Figure <a href="#fig:us-income-chart1">1</a>—in place of the table, to
 compare which one is more persuasive.
@@ -343,16 +355,16 @@ Is Figure <a href="#fig:us-income-chart1">1</a> more persuasive than
 Table <a href="#tab:us-income">1</a>? Since the line chart contains the
 same historical start and stop points as the table, it should not make
 any difference. But the line chart also communicates a powerful,
-visualized story about income gaps that grabs our attention more
+visualized data story about income gaps that grabs your attention more
 effectively than the table. As your eyes follow the colored lines
 horizontally across the page, the widening inequality between the top
 versus the middle and bottom tiers is striking. The chart also packs so
 much granular information into one image. Looking closely, you also
 notice how the top-tier income level was relatively stable during the
-1970s, then spiked upward from the 1980s to the present, far distant
-from the other lines. Meanwhile, as the middle-tier income line rose
+1970s, then spiked upward from the 1980s to the present, and grew more
+distant from other lines. Meanwhile, as the middle-tier income line rose
 slightly over time, the lowest-tier slightly declined, meaning that the
-bottom half of the population has less purchasing power in 2019 than
+bottom half of the population had less purchasing power in 2019 than
 they did at their peak in the early 2000s. The rich got richer, and the
 poor got poorer, as the saying goes. But the chart reveals how rapidly
 those riches grew, and how poverty became even worse, over time.
@@ -360,7 +372,8 @@ those riches grew, and how poverty became even worse, over time.
 Now let’s insert Figure <a href="#fig:us-income-chart2">2</a>, which
 contains the same data as Figure <a href="#fig:us-income-chart1">1</a>,
 but presented in a different format. Which chart should you believe?
-Remember, we warned you to watch out for liars.
+Remember, we warned you to watch out people using data visualizations to
+tell lies.
 
 <img src="images/01-introduction/us-income-chart2.png" alt="Explore the [alternative version of the interactive line chart](https://datawrapper.dwcdn.net/JsxEp/) of US adult income inequality over time, using the same data as the first version."  />
 <p class="caption">
@@ -376,12 +389,12 @@ inequality gaps, which now seem to be smoothed away? Did the crisis
 suddenly disappear? Was it a hoax?
 
 Although the chart in Figure <a href="#fig:us-income-chart2">2</a> is
-technically accurate, it misleads readers. Look closely at the labels in
-the vertical axis. The distance between the first and second figures
-($1,000 to $10,000) is the same as the distance between the second and
-the third ($10,000 to $100,000), but those jumps represent very
-different amounts of money ($9,000 versus $90,000). That’s because this
-chart was constructed with a [logarithmic
+technically accurate, it intentionally misleads readers. Look closely at
+the labels in the vertical axis. The distance between the first and
+second figures ($1,000 to $10,000) is the same as the distance between
+the second and the third ($10,000 to $100,000), but those jumps
+represent very different amounts of money ($9,000 versus $90,000).
+That’s because this chart was constructed with a [logarithmic
 scale](https://en.wikipedia.org/wiki/Logarithmic_scale), which is most
 appropriate for showing exponential growth. You may recall seeing
 logarithmic scales during the early months of the Covid pandemic, when
@@ -390,18 +403,21 @@ are difficult to display with a traditional linear scale. This second
 chart is technically accurate, because the data points and scale labels
 match up, but it’s misleading because there is no good reason to
 interpret this income data using a logarithmic scale, other than to
-disguise the crisis. We have the ability to illuminate the truth with
-charts, but we can also use charts to lie.
+deceive us about this crisis. People can use charts to illuminate the
+truth, but also can use them to disguise it.
 
-Let’s expand our analysis of income inequality beyond national borders.
-Here’s a new claim that introduces comparative evidence and its source.
-Unlike the prior US examples that showed historical data for three
-income tiers, this global example focuses on the most current year of
-data available for the top 1 percent in each nation. Also, instead of
+Different Shades of the Truth
+-----------------------------
+
+Let’s expand our analysis of income inequality beyond the borders of one
+nation. Here’s a new claim that introduces comparative evidence and its
+source. Unlike the prior US examples that showed historical data for
+three income tiers, this global example focuses on the most current year
+of data available for the top 1 percent in each nation. Also, instead of
 measuring income in US dollars, this international comparison measures
-the percentage share of the national income received by the top 1
-percent. In other words, how large a slice of the pie goes to the
-richest 1 percent in each nation?
+the percentage share of the national income held by the top 1 percent.
+In other words, how large a slice of the pie is eaten by the richest 1
+percent in each nation?
 
 *Claim 3. Income inequality is more severe in the United States, where
 the richest 1 percent of the population currently receives 20 percent of
@@ -412,18 +428,19 @@ national income.*[4]
 Following the same train of thought above, let’s supplement this claim
 with a visualization to evaluate its persuasiveness. While we could
 create a table or a chart, those would not be the most effective ways to
-quickly display data for all of the nations featured in our claim, and
-we also want to encourage readers to explore information around the
-globe. Since this is spatial data, let’s transform it into a map, as
-shown in Figure <a href="#fig:world-income-map1">3</a>.
+quickly display information for over 120 nations in our dataset. Since
+this is spatial data, let’s transform it into an interactive map to help
+us identify any geographic patterns and to encourage readers to explore
+income levels around the globe, as shown in Figure
+<a href="#fig:world-income-map1">3</a>.
 
-<img src="images/01-introduction/world-income-map1.png" alt="Explore the [interactive map](https://handsondataviz.github.io/leaflet-world-income-share/index.html) of world income inequality, measured by the share of national income received by the top 1 percent of the population, based on the most recent data available. Source: [World Inequality Database 2020](https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country)."  />
+<img src="images/01-introduction/world-income-map1.png" alt="Explore the [interactive map](https://datawrapper.dwcdn.net/NLMLg/1/) of world income inequality, measured by the share of national income held by the top 1 percent of the population, based on the most recent data available. Source: [World Inequality Database 2020](https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country)."  />
 <p class="caption">
 Figure 3: Explore the [interactive
-map](https://handsondataviz.github.io/leaflet-world-income-share/index.html)
-of world income inequality, measured by the share of national income
-received by the top 1 percent of the population, based on the most
-recent data available. Source: [World Inequality Database
+map](https://datawrapper.dwcdn.net/NLMLg/1/) of world income inequality,
+measured by the share of national income held by the top 1 percent of
+the population, based on the most recent data available. Source: [World
+Inequality Database
 2020](https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country).
 </p>
 
@@ -432,76 +449,123 @@ Claim 3? While the map and the text present the same data about income
 inequality in the US versus Europe, there should be no difference. But
 the map pulls you into a powerful story that vividly illustrates gaps
 between the rich and poor, similar to the chart example above. Colors in
-the map signal a crisis. The US and some other nations stand out in dark
-red, at the highest level of the legend, where the top 1 percent of the
-population receives 20 percent or more of the national income. By
+the map signal a crisis. Income inequality in the US (along with Russia
+and Brazil) stands out in dark red at the highest level of the legend,
+where the top 1 percent holds 19% or more of the national income. By
 contrast, as your eye floats across the Atlantic, nearly all of the
-European nations appear in lighter beige and orange colors, showing that
-their top-tier receive a smaller share of the national income, typically
-between 5 and 15 percent. Income inequality burns red in the US, while
-Europe appears calm.
+European nations appear in lighter beige and orange colors, indicating
+no urgent crisis as their top-tier holds a smaller share of the national
+income.
 
-Now let’s introduce the map in Figure
+Now let’s introduce the alternative map in Figure
 <a href="#fig:world-income-map2">4</a>, which contains the same data as
 shown in Figure <a href="#fig:world-income-map1">3</a>, but is displayed
 in a different format. Which map should you believe?
 
-<img src="images/01-introduction/world-income-map2.png" alt="Explore the [alternative version of the interactive map](https://handsondataviz.github.io/leaflet-world-income-share/index-version2.html) of world income inequality, using the same data as the map above."  />
+<img src="images/01-introduction/world-income-map2.png" alt="Explore an [alternative version of the interactive map](https://datawrapper.dwcdn.net/o5f9Q/) of world income inequality, using the same data as the map above."  />
 <p class="caption">
-Figure 4: Explore the [alternative version of the interactive
-map](https://handsondataviz.github.io/leaflet-world-income-share/index-version2.html)
-of world income inequality, using the same data as the map above.
+Figure 4: Explore an [alternative version of the interactive
+map](https://datawrapper.dwcdn.net/o5f9Q/) of world income inequality,
+using the same data as the map above.
 </p>
 
 Why does the second map in Figure <a href="#fig:world-income-map2">4</a>
 look different than the first map in Figure
-<a href="#fig:world-income-map1">3</a>? The US is now shaded in a
-lighter purple color, similar to that of Europe. Did the inequality
-crisis simply fade away from the US? Which map tells the truth?
+<a href="#fig:world-income-map1">3</a>? Instead of dark red, the US is
+now colored medium-blue, closer on the spectrum to Canada and most
+European nations. Did the inequality crisis simply fade away from the
+US, and move to dark-blue Brazil? Which map tells the truth?
 
-This time, neither map is misleading. Both make valid interpretations of
-the data with reasonable design choices, even though they create very
+This time, neither map is misleading. Both make truthful interpretations
+of the data with reasonable design choices, even though they create very
 different impressions in our eyes. To understand why, look closely at
-the legend in the bottom-left corner of both maps. The first map sorts
-nations in three ranges (0-10, 10-20, 20+), while the second map uses
-slightly different range cutoffs (0-9, 9-21, 21+). Since the US share is
-20.5 percent, in the first map it falls into the top bucket with the
-darkest color, but in the second map it falls into the middle bucket
-with a lighter color. Yet both ranges are equally valid, as there is no
-clear rule about using one versus the other in this case. In the same
-way, the first map displays three shades of red, while the second map
-uses purple. Based on design principles discussed later in the book,
-both are equally valid color choices.
+the map legends. The first map sorts nations in three categories (less
+than 13%, 13-19%, 19% and above), while the second map displays the
+entire range in a green-blue color gradient. Since the US share is 20.5
+percent, in the first map it falls into the top bucket with the darkest
+red color, but in the second map it falls somewhere closer to the middle
+as medium-blue color. Yet both maps are equally valid, because neither
+violates a definitive rule in map design nor intentionally disguises
+data. People can mislead with maps, but it’s also possible to make more
+than one portrait of the truth.
 
-To summarize, people can lie with charts and maps, and some design
-choices can intentionally mislead. But data visualization is also
-interpretive and open-ended. It’s common to create more than one picture
-of the truth.
+The interpretive nature of data visualization poses a serious challenge.
+As the authors of this book, our goal is to guide you in creating
+truthful and meaningful charts and maps. We’ll point you toward
+principles of good design, encourage thoughtful habits of mind, and try
+to show by example. Occasionally we’ll even tell you what *not* to do.
+But data visualization is a slippery subject to teach, sometimes more
+art than science. We know that charts and maps can be manipulated—just
+like words—to mislead your audience, and we’ll demonstrate common
+deception techniques to help you spot them in other people’s work, and
+consciously avoid them in your own. But newcomers may be frustrated by
+the somewhat fuzzy rules of data visualization. Often there is no
+*single* correct answer to a problem, but rather *several* plausible
+solutions, each with their own strengths and weaknesses. As a learner,
+your job is to continually search for *better answers* without
+necessarily expecting to find the *one right answer*, especially as
+visualization methods and tools continue to evolve, and people invent
+new ways to show the truth.
 
-That poses a challenge for us as authors of this book. Data
-visualizations do not always represent the truth. Like words, they can
-be manipulated to mislead your audience. To help you create true and
-meaningful charts and maps, we’ll point you toward principles of good
-design, encourage thoughtful habits of mind, and in some cases
-specifically tell you what *not* to do. But data visualization can be a
-slippery subject, sometimes more art than science. Often there is no
-*single* correct answer to a visualization problem, but rather *several*
-plausible ones, each with their own strengths and weaknesses. As a
-reader of this book who’s learning about data visualization, your job is
-to search for *good answers* without necessarily expecting to find *the
-one right answer*, especially as visualization tools and methods
-continue to evolve. Also, keep your guard up and continue to watch out
-for data visualizations that lie.
+Organization of the Book
+------------------------
 
-TODO ABOVE:
+We’ve organized the chapters of this book to serve as an introductory
+hands-on guide to data visualization, from spreadsheets to code. Also,
+we assume no prior skills other than general familiarity with operating
+a computer, along with an innate curiosity about telling stories with
+data. Imagine the book in four parts.
 
--   distinguish between “lying” versus “misleading” in word choice above
--   transition to major chapters/parts of the book, especially how to
-    detect lies and reduce bias chapter
+In part one, you’ll develop foundational skills about envisioning your
+data story, along with the tools and data you’ll need to tell it. We’ll
+gradually move from [Chapter 2: Choose Tools to Tell Your Data
+Story](choose.html) to [Chapter 3: Improve Your Spreadsheet
+Skills](spreadsheet.html) to [Chapter 4: Find and Question Your
+Data](find.html) to [Chapter 5: Clean Up Messy Data](clean.html) to
+[Chapter 6: Make Meaningful Comparisons](comparisons.html). These
+chapters feature hands-on tutorials to enrich learning by doing.
+
+In part two, you’ll build lots of visualizations with easy-to-learn
+drag-and-drop tools, and find out which types work best with different
+data stories. We’ll start with [Chapter 7: Chart Your Data](chart.html),
+[Chapter 8: Map Your Data](map.html), and [Chapter 9: Table Your
+Data](table.html) and develop your understanding of the interpretive
+style that each one emphasizes. In [Chapter 9: Embed on the
+Web](embed.html), you’ll learn how to insert all of these interactive
+visualizations on common web platforms, to invite readers to explore
+your data and share your work more widely.
+
+In part three, you’ll advance to working with more powerful tools,
+specifically code templates, that give you more control over customizing
+the appearance of your visualizations and where you host them online.
+We’ll start with [Chapter 11: Edit and Host Code with
+GitHub](github.html), and walk you through the easy web interface for
+this popular open-source coding platform. Then you’ll build using
+[Chapter 12: Chart.js and Highcharts Templates](chartcode.html) and
+[Chapter 13: Leaflet Map Templates](leaflet.html), and discover more
+advanced spatial tools in [Chapter 14: Transform Your Map
+Data](transform.html). At the end of the book we include an [Appendix:
+How to Fix Common Problems](fix.html) to consult when you accidentally
+break your code, which is also a great way to learn how it works.
+
+In part four, we’ll wrap up all of the visualization skills you’ve
+developed by returning to the central theme of this introduction:
+telling true and meaningful stories with data. In [Chapter 15: Detect
+Lies and Reduce Data Bias](detect.html), you’ll learn how to lie with
+charts and maps in order to do a better job of telling the truth.
+Finally, [Chapter 16: Tell and Show Your Data Story](story.html)
+emphasizes how the goal of data visualization is not simply to make
+pictures about numbers, but to craft a narrative that convinces readers
+how and why your interpretation matters.
 
 ### Summary
 
-TODO: do we need this here?
+Now you have a clearer sense of our primary goal for this book. We aim
+for you to learn how to tell true and meaningful stories with
+interactive data visualizations, while being mindful of the ways that
+people can use them to mislead. In the next chapter, let’s get started
+on clarifying the data story you wish to tell, and factors to consider
+when choosing tools to do the job.
 
 <!--chapter:end:01-introduction.Rmd-->
 
@@ -598,10 +662,8 @@ artistic skills are required.
     add *imaginary data* at this stage because it’s just a preliminary
     sketch. Have fun!
 
-TODO: decide whether to add amateur-styled sketches of problem,
-question, data, and visualization. We could place one image immediately
-after each step, or conclude with a smaller 4-panel compilation (2x2
-landscape oriented page scans) after all four steps.
+TODO: Drafting sketches of problem, question, data, and visualization,
+to include as 4-panel compilation (2x2 landscape) after all four steps.
 
 This exercise can help you in multiple ways, whether you do it by
 yourself, or even better, with a team of co-workers, as shown in Figure
@@ -628,7 +690,7 @@ and end. Also, these pages can help you organize your thinking about how
 you’ll communicate your data story to larger audiences, such as a
 presentation slide deck, or paragraphs and pictures for your next report
 or web page. Don’t throw them away, because we’ll return to this
-exercise at the end of the book in [Chapter 16: Telling Your Data
+exercise at the end of the book in [Chapter 16: Tell and Show Your Data
 Story](story.html).
 
 Finally, this sketching exercise can help you identify which chapters
@@ -643,8 +705,8 @@ some initial ideas about the visualizations you wish to create, in the
 next two sections we’ll discuss tools to do the job, and factors you
 should consider when deciding among them.
 
-Tools and Tradeoffs
--------------------
+Ten Factors When Considering Tools
+----------------------------------
 
 Making decisions between the seemingly endless number of digital tools
 can feel overwhelming. To help you navigate your decision-making
@@ -686,10 +748,10 @@ Is the tool free to use? Or is it based on a *freemium* model that
 offers basic functions for free, with premium features at a price? Or
 does it require paying a one-time purchase or monthly subscription fee?
 Of course, the answer to what is affordable will vary for each reader.
-Of course, we fully understand that the business model for many software
-developers requires steady revenue, and both of us willingly pay to use
-specific tools necessary for our work. If you regularly rely on a tool
-to do your job, with no clear alternative, it’s in your best interest to
+We fully understand that the business model for many software developers
+requires steady revenue, and both of us willingly pay to use specific
+tools necessary for our work. If you regularly rely on a tool to do your
+job, with no clear alternative, it’s in your best interest to
 financially support their continued existence. But when creating this
 book, we were impressed by the wide array of high-quality data
 visualization tools that are available at no cost to users. To increase
@@ -766,12 +828,8 @@ Wikipedia](https://en.wikipedia.org/wiki/List_of_data_breaches) to help
 you make informed decisions. If your tool developer recently experienced
 a malicious data hack, find out how they responded. Second, when you
 access tools through your browser, does they track your web activity
-across different sites? Consider installing the free [Privacy Badger
-browser extension from the Electronic Frontier
-Foundation](https://privacybadger.org/) to view and exercise some
-control over who’s tracking you, and also review the [EFF’s Surveillance
-Self-Defense Guide](https://ssd.eff.org/). Also be aware of [internet
-censorship by different governments around the
+across different sites? Also be aware of [internet censorship by
+different governments around the
 globe](https://en.wikipedia.org/wiki/Internet_censorship_and_surveillance_by_country),
 as compiled by Wikipedia, unless you happen to be reading this book in
 China, which has [blocked access to all of Wikipedia since April
@@ -838,12 +896,10 @@ open-source options when available.
 Does the tool create visualizations that are accessible for
 visually-impaired readers? Although disability advocacy laws were passed
 decades ago, digital technology still lags behind and is slowly catching
-up, especially in the field of data visualization. But when selecting
-tools for this book, we highlight those such as [Datawrapper, which
-includes a built-in check for
-colorblindness](https://blog.datawrapper.de/colorblind-check/), and
-[Highcharts, which offers some chart types designed for low-vision
-people using screen
+up, especially in the field of data visualization. But some tools
+include [a built-in check for
+colorblindness](https://blog.datawrapper.de/colorblind-check/) and offer
+[chart types designed for low-vision people using screen
 readers](https://www.highcharts.com/demo/accessible-line), as shown in
 Figure <a href="#fig:colorblind-accessible-combined">6</a>.
 
@@ -883,8 +939,8 @@ Now that you understand the factors driving our decisions, in the next
 section you’ll see an overview of our tool recommendations, with a quick
 description and link to the chapter where we introduce each of them.
 
-Recommended Tools
------------------
+Our Recommended Tools
+---------------------
 
 When creating this book, we aimed to identify the most essential data
 visualization tasks that beginners are likely to face, and the digital
@@ -899,14 +955,14 @@ even just one tool. But it’s important to be aware of the different
 types of tools, because you may not realize how they can help you if
 don’t know that they exist.
 
-<!-- TODO: See table data in Google Sheet https://docs.google.com/spreadsheets/d/1HHKRw_Og38lCK9eKAvQTF_6GHdrSE5YU1ioStPsvxII/edit#gid=0 -->
+<!-- TODO: See table data in Google Sheet format: https://docs.google.com/spreadsheets/d/1HHKRw_Og38lCK9eKAvQTF_6GHdrSE5YU1ioStPsvxII/edit#gid=0 -->
 
 <table>
 <caption>Table 2: Recommended Tools and Uses, with Chapter References</caption>
 <thead>
 <tr class="header">
 <th>Tools</th>
-<th>Organize</th>
+<th>Collect</th>
 <th>Clean</th>
 <th>Chart</th>
 <th>Geocode</th>
@@ -918,18 +974,18 @@ don’t know that they exist.
 </thead>
 <tbody>
 <tr class="odd">
-<td>Google Sheets<br> spreadsheet/charts</td>
+<td>Google Sheets spreadsheet/charts</td>
 <td><a href="spreadsheet-tools.html">Ch3</a></td>
 <td><a href="clean.html">Ch5</a></td>
-<td><a href="chart-google.html">Ch6</a></td>
+<td><a href="chart-google.html">Ch7</a></td>
 <td><a href="geocode.html">Ch3</a></td>
 <td></td>
-<td><a href="table.html">Ch8</a></td>
+<td><a href="table.html">Ch9</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>LibreOffice Calc<br> spreadsheet/charts</td>
+<td>LibreOffice Calc spreadsheet/charts</td>
 <td><a href="spreadsheet-tools.html">Ch3</a></td>
 <td></td>
 <td></td>
@@ -940,7 +996,7 @@ don’t know that they exist.
 <td></td>
 </tr>
 <tr class="odd">
-<td>Airtable<br> relational database</td>
+<td>Airtable relational database</td>
 <td><a href="database.html">Ch3</a></td>
 <td></td>
 <td></td>
@@ -951,7 +1007,7 @@ don’t know that they exist.
 <td></td>
 </tr>
 <tr class="even">
-<td>Tabula PDF<br>table extractor</td>
+<td>Tabula PDF table extractor</td>
 <td></td>
 <td><a href="tabula.html">Ch5</a></td>
 <td></td>
@@ -962,7 +1018,7 @@ don’t know that they exist.
 <td></td>
 </tr>
 <tr class="odd">
-<td>OpenRefine<br> data cleaner</td>
+<td>OpenRefine data cleaner</td>
 <td></td>
 <td><a href="open-refine.html">Ch5</a></td>
 <td></td>
@@ -973,32 +1029,32 @@ don’t know that they exist.
 <td></td>
 </tr>
 <tr class="even">
-<td>Datawrapper<br> charts/maps/tables</td>
+<td>Datawrapper charts/maps/tables</td>
 <td></td>
 <td></td>
-<td><a href="chart-datawrapper.html">Ch6</a></td>
-<td><a href="map-datawrapper.html">Ch7</a></td>
-<td><a href="map-datawrapper.html">Ch7</a></td>
-<td><a href="table-datawrapper.html">Ch8</a></td>
+<td><a href="chart-datawrapper.html">Ch7</a></td>
+<td><a href="map-datawrapper.html">Ch8</a></td>
+<td><a href="map-datawrapper.html">Ch8</a></td>
+<td><a href="table-datawrapper.html">Ch9</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Tableau Public<br> charts/maps/tables</td>
+<td>Tableau Public charts/maps/tables</td>
 <td></td>
 <td></td>
-<td><a href="chart-tableau.html">Ch6</a></td>
+<td><a href="chart-tableau.html">Ch7</a></td>
 <td></td>
-<td><a href="map-tableau.html">Ch7</a></td>
+<td><a href="map-tableau.html">Ch8</a></td>
 <td><a href="table.html">Ch8</a></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Chart.js<br> code templates</td>
+<td>Chart.js code templates</td>
 <td></td>
 <td></td>
-<td><a href="chartcode.html">Ch11</a></td>
+<td><a href="chartcode.html">Ch12</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1006,10 +1062,10 @@ don’t know that they exist.
 <td></td>
 </tr>
 <tr class="odd">
-<td>Highcharts<br> code templates</td>
+<td>Highcharts code templates</td>
 <td></td>
 <td></td>
-<td><a href="chartcode.html">Ch11</a></td>
+<td><a href="chartcode.html">Ch12</a></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1017,51 +1073,51 @@ don’t know that they exist.
 <td></td>
 </tr>
 <tr class="even">
-<td>Google My Maps<br> point map maker</td>
+<td>Google My Maps point map maker</td>
 <td></td>
 <td></td>
 <td></td>
-<td><a href="mymaps.html">Ch7</a></td>
-<td><a href="mymaps.html">Ch7</a></td>
+<td><a href="mymaps.html">Ch8</a></td>
+<td><a href="mymaps.html">Ch8</a></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Leaflet map<br> code templates</td>
+<td>Leaflet map code templates</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a href="leaflet.html">Ch12</a></td>
+<td><a href="leaflet.html">Ch13</a></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>GitHub<br> edit &amp; host code</td>
+<td>GitHub edit &amp; host code</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a href="github.html">Ch10</a></td>
+<td><a href="github.html">Ch11</a></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>GitHub Desktop &amp;<br>Atom code editor</td>
+<td>GitHub Desktop &amp; Atom code editor</td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 <td></td>
-<td><a href="github-desktop-atom.html">Ch10</a></td>
+<td><a href="github-desktop-atom.html">Ch11</a></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>GeoJson.io edit<br> &amp; draw geodata</td>
+<td>GeoJson.io edit &amp; draw geodata</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1069,10 +1125,10 @@ don’t know that they exist.
 <td></td>
 <td></td>
 <td></td>
-<td><a href="geojsonio.html">Ch13</a></td>
+<td><a href="geojsonio.html">Ch14</a></td>
 </tr>
 <tr class="odd">
-<td>Mapshaper<br> edit &amp; join geodata</td>
+<td>Mapshaper edit &amp; join geodata</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1080,10 +1136,10 @@ don’t know that they exist.
 <td></td>
 <td></td>
 <td></td>
-<td><a href="mapshaper.html">Ch13</a></td>
+<td><a href="mapshaper.html">Ch14</a></td>
 </tr>
 <tr class="even">
-<td>MapWarper<br> georectify images</td>
+<td>MapWarper georectify images</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1091,35 +1147,75 @@ don’t know that they exist.
 <td></td>
 <td></td>
 <td></td>
-<td><a href="mapwarper.html">Ch13</a></td>
+<td><a href="mapwarper.html">Ch14</a></td>
 </tr>
 </tbody>
 </table>
 
-TODO: Acknowledge that the book also mentions other useful tools that
-are not featured in the table, but you’ll find them in the
-text…ColorBrewer, Geocoding by SmartMonkey, US Census Geocoder, Google
-Maps, Google Forms, Socrata repository chart & map tools, etc…
+In addition to the tools featured in Table <a href="#tab:tools">2</a>,
+you’ll find several other useful tools mentioned in the text, including
+[ColorBrewer to select map colors](map-design.html), the [Geocoding by
+SmartMonkey add-on for Google Sheets](geocode.html), \[US Census
+Geocoder for bulk addresses and census geography\]\[bulk-geocode.html\],
+and the [Socrata open-repository chart and map
+tools](filtered-point-map-socrata.html). Also, consider enhancing your
+web security by installing the free [Privacy Badger browser extension
+from the Electronic Frontier Foundation](https://privacybadger.org/) to
+view and exercise some control over who’s tracking you, and also review
+the [EFF’s Surveillance Self-Defense Guide](https://ssd.eff.org/).
 
-TODO: As we’ve stated, digital tools change and evolve over time. If you
-recommend a tool that’s not on our list, email or tweet us and explain
-how it rates on the ten factors that guided our selection process above.
+Of course, we recognize that digital tools are continually changing and
+evolving. As time goes by, we expect that some tools will no longer be
+available, and we also anticipate discovering newer ones that do a
+better job in telling our data stories. If you’d like to recommend a
+tool that’s not currently on our list, email us at
+<handsondataviz@gmail.com> or tweet us at
+[handsondataviz](https://twitter.com/handsondataviz), and tell us how it
+rates on the ten factors that guide our selection process above.
 
 Use a Password Manager
 ----------------------
 
-TODO: If you don’t already have one, start using a password manager. One
-tool to rule them all! …add password manager tutorial to keep track of
-your accounts for the online tools you’ll use in this book. The free and
-open-source BitWarden.com tool nicely integrates with most browsers and
-even smartphones.
+Finally, we highly recommend a password manager: think of it as one tool
+to rule them all! Password managers help you to keep track of all of the
+accounts you will create when using several of the online tools above.
+We recommend installing [BitWarden](https://bitwarden.com), an
+open-source password manager that offers its core features for free for
+Windows, Mac, and Linux computers, all major web browsers, and iOS and
+Android mobile devices. When you install BitWarden, you create one
+master password (be careful not to forget it) that grants you access to
+all of the account usernames and passwords you catalog. You also install
+the Bitwarden extension in your preferred web browsers. When you
+register for a new account in your browser, the password manager
+typically asks if you wish to store that information in your vault with
+end-to-end encryption. Also, when you visit that site in the future, the
+password manager usually recognizes it and enters your login credentials
+with one click, as shown in Figure
+<a href="#fig:bitwarden-annotated">7</a>.
+
+<img src="images/02-choose/bitwarden-annotated.png" alt="The Bitwarden browser extension recognizes sites you have previously stored, and enters your credentials with one click." width="500" />
+<p class="caption">
+Figure 7: The Bitwarden browser extension recognizes sites you have
+previously stored, and enters your credentials with one click.
+</p>
+
+We recommend storing your passwords inside a tool like BitWarden, rather
+than in a specific web browser (such as Chrome or Firefox) for two
+reasons. First, you can set up BitWarden to sync and access your
+passwords across *different* browsers and *multiple* devices, including
+your laptop and mobile phone. Second, if your primary browser or
+computer crashes, you still have online access to your secure BitWarden
+vault, which means you can continue to work on a different computer.
 
 ### Summary
 
-TODO Now you have a better sense of different types of data
-visualization tools, and how to make wise decisions when choosing among
-them… The next chapter is designed to strengthen your skills for using
-the most common tool in our data toolkit: spreadsheets.
+Now you have a better sense of the wide range of data visualization
+tools we recommend in this book, and how to make wise decisions when
+choosing among tools in general. Always keep the data story in the
+forefront of your mind, since the tools are simply means to help you
+achieve that end. The next chapter is designed to strengthen your skills
+regarding the most common tool in our data visualization toolkit:
+spreadsheets.
 
 <!--chapter:end:02-choose.Rmd-->
 
@@ -1138,7 +1234,7 @@ The interactive charts and maps that we’ll construct later this book are
 built on data tables, which we typically open with spreadsheet tools,
 such as Google Sheets, LibreOffice, or Microsoft Excel. Spreadsheets
 typically contain columns and rows of numerical or textual data, as
-shown in Figure <a href="#fig:spreadsheet-terms">7</a>. The first row
+shown in Figure <a href="#fig:spreadsheet-terms">8</a>. The first row
 often contains headers, meaning labels describing the data in each
 column. Also, columns are automatically labeled with letters, and rows
 with numbers, so that every cell or box in the grid can be referenced,
@@ -1153,7 +1249,7 @@ specific sheet.
 
 <img src="images/03-spreadsheet/spreadsheet-terms-annotated.png" alt="Screenshot of a typical spreadsheet, with headers, tabs, and the active cell displaying a formula." width="600" />
 <p class="caption">
-Figure 7: Screenshot of a typical spreadsheet, with headers, tabs, and
+Figure 8: Screenshot of a typical spreadsheet, with headers, tabs, and
 the active cell displaying a formula.
 </p>
 
@@ -1217,10 +1313,11 @@ Here’s how three common spreadsheet tools compare on these questions:
     Drive](https://drive.google.com) account with the same username as
     your Google Mail account, or create a separate account under a new
     username to reduce Google’s invasion into your private life. Another
-    option is to pay for a [Google Suite](https://gsuite.google.com/)
-    business account subscription, which offers nearly identical tools,
-    but with sharing settings designed for larger organizations or
-    educational institutions.
+    option is to pay for a [Google
+    Workspace](https://workspace.google.com/) business account
+    subscription (formerly known as G Suite), which offers nearly
+    identical tools, but with sharing settings designed for larger
+    organizations or educational institutions.
 -   [LibreOffice](https://www.libreoffice.org/) is a free downloadable
     suite of tools, including its Calc spreadsheet, available for Mac,
     Windows, and Linux computers, and is an increasingly popular
@@ -1277,7 +1374,7 @@ Spreadsheet tools organize data in different formats. When you download
 spreadsheet data to your computer, you typically see its filename,
 followed by a period and a 3- or 4-character abbreviated extension,
 which represents the data format, as shown in Figure
-<a href="#fig:data-formats">8</a>. The most common data formats we use
+<a href="#fig:data-formats">9</a>. The most common data formats we use
 in this book are:
 
 -   `.csv` means Comma Separated Values, a generic format for a single
@@ -1292,7 +1389,7 @@ in this book are:
 
 <img src="images/03-spreadsheet/data-formats.png" alt="Three data formats commonly seen on your computer---csv, ods, and xlsx---when displayed properly in the Mac Finder." width="350" />
 <p class="caption">
-Figure 8: Three data formats commonly seen on your computer—csv, ods,
+Figure 9: Three data formats commonly seen on your computer—csv, ods,
 and xlsx—when displayed properly in the Mac Finder.
 </p>
 
@@ -1302,11 +1399,11 @@ abbreviated file format after the period, such as `data.csv` or
 `map.geojson`. The Mac operating system hides these by default, so you
 need to turn them on by going to Finder &gt; Preferences &gt; Advanced,
 and check the box to *Show all filename extensions*, as shown in Figure
-<a href="#fig:mac-file-extensions">9</a>.
+<a href="#fig:mac-file-extensions">10</a>.
 
 <img src="images/03-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to *Finder-Preferences-Advanced* and check the box to *Show all filename extensions*." width="400" />
 <p class="caption">
-Figure 9: On a Mac, go to *Finder-Preferences-Advanced* and check the
+Figure 10: On a Mac, go to *Finder-Preferences-Advanced* and check the
 box to *Show all filename extensions*.
 </p>
 
@@ -1338,14 +1435,14 @@ file](https://docs.google.com/spreadsheets/d/1eXWG6sSb6ZL4pKvCsCjcqeJ8l4vqbckuYE
 in a new tab, and go to *File &gt; Download* to export in CSV format
 (for only the data in the active sheet) or ODS format (which keeps data
 and most formulas in multi-tab spreadsheets), or other formats such as
-Excel, as shown in Figure <a href="#fig:sheets-download">10</a>.
+Excel, as shown in Figure <a href="#fig:sheets-download">11</a>.
 Similarly, in the downloadable LibreOffice and its Calc spreadsheet
 tool, select *File &gt; Save As* to save data in its native ODS format,
 or to export to CSV, Excel, or other formats.
 
 <img src="images/03-spreadsheet/sheets-download.png" alt="In Google Sheets, go to *File - Download As* to export data in several common formats." width="600" />
 <p class="caption">
-Figure 10: In Google Sheets, go to *File - Download As* to export data
+Figure 11: In Google Sheets, go to *File - Download As* to export data
 in several common formats.
 </p>
 
@@ -1399,12 +1496,12 @@ Sheets—which you can edit—without changing our originals.
 
 3.  Go to *File &gt; Make a Copy* to create a duplicate of this Google
     Sheet in your Google Drive, as shown in Figure
-    <a href="#fig:file-make-copy">11</a>. You can rename the file to
+    <a href="#fig:file-make-copy">12</a>. You can rename the file to
     remove “Copy of…”.
 
 <img src="images/03-spreadsheet/file-make-copy.png" alt="Go to *File - Make a Copy* to create your own version of this Google Sheet." width="200" />
 <p class="caption">
-Figure 11: Go to *File - Make a Copy* to create your own version of this
+Figure 12: Go to *File - Make a Copy* to create your own version of this
 Google Sheet.
 </p>
 
@@ -1412,11 +1509,11 @@ Google Sheet.
     relevant names to make them easier to find. For example, you can
     click the *My Drive* button and the *New folder* button to create a
     folder for your data, before clicking *OK*, as shown in Figure
-    <a href="#fig:my-drive-new-folder">12</a>.
+    <a href="#fig:my-drive-new-folder">13</a>.
 
 <img src="images/03-spreadsheet/my-drive-new-folder.png" alt="Click the *My Drive* and *New folder* buttons to save your work in a folder." width="300" />
 <p class="caption">
-Figure 12: Click the *My Drive* and *New folder* buttons to save your
+Figure 13: Click the *My Drive* and *New folder* buttons to save your
 work in a folder.
 </p>
 
@@ -1441,7 +1538,7 @@ using the *Share* button.
 
 2.  Click the *Share* button in the upper-right corner, and your options
     will appear on the *Share with people and groups* screen, as shown
-    in Figure <a href="#fig:share-screen">13</a>.
+    in Figure <a href="#fig:share-screen">14</a>.
 
 3.  In the top half of the screen, you can share access with specific
     individuals by typing their Google usernames into the *Add people
@@ -1459,7 +1556,7 @@ using the *Share* button.
 
 <img src="images/03-spreadsheet/share-screen.png" alt="Click the *Share* button to grant access to individuals (top half) or anyone with the link (bottom half)." width="600" />
 <p class="caption">
-Figure 13: Click the *Share* button to grant access to individuals (top
+Figure 14: Click the *Share* button to grant access to individuals (top
 half) or anyone with the link (bottom half).
 </p>
 
@@ -1475,7 +1572,7 @@ or [Firefox browser
 extension](https://addons.mozilla.org/en-US/firefox/user/13352154/), we
 can paste in a long URL and customize the back-end to something shorter,
 such as [bit.ly/reader-survey](https://bit.ly/reader-survey), as shown
-in Figure <a href="#fig:link-shortening">14</a>. If someone else has
+in Figure <a href="#fig:link-shortening">15</a>. If someone else has
 already claimed your preferred custom name, you’ll need to think up a
 different one. Beware that `bit.ly` links are case-sensitive, so we
 prefer to customize the back-end in all lower-case to match the
@@ -1483,7 +1580,7 @@ front-end.
 
 <img src="images/03-spreadsheet/link-shortening.png" alt="Use a free link-shortening service, such as Bitly.com, and customize its back-end." width="300" />
 <p class="caption">
-Figure 14: Use a free link-shortening service, such as Bitly.com, and
+Figure 15: Use a free link-shortening service, such as Bitly.com, and
 customize its back-end.
 </p>
 
@@ -1497,7 +1594,7 @@ We feature Google Sheets in this book partly because it supports data
 migration, meaning the ability to import and export files in many common
 formats. But imports work best when you check the *Convert uploads* box,
 which is hidden inside the Google Drive Settings gear symbol as shown in
-Figure <a href="#fig:drive-settings">15</a>. Checking this box
+Figure <a href="#fig:drive-settings">16</a>. Checking this box
 automatically transforms Microsoft Excel sheets into Google Sheets
 format (and also Microsoft Word and PowerPoint files into Google
 Documents and Slides formats), which allows easier editing. If you don’t
@@ -1513,48 +1610,48 @@ to turn it on, and the benefits of doing so.
 
 2.  Log into your [Google Drive](https://drive.google.com) account, and
     click the *Gear symbol* in the upper-right corner, as shown in
-    Figure <a href="#fig:drive-settings">15</a>, to open the Settings
+    Figure <a href="#fig:drive-settings">16</a>, to open the Settings
     screen. Note that this global *Gear symbol &gt; Settings* appears at
     Google Drive level, *not* inside each Google Sheet.
 
 <img src="images/03-spreadsheet/drive-settings.png" alt="Click your Google Drive *Gear Symbol - Settings* in the upper-right corner." width="300" />
 <p class="caption">
-Figure 15: Click your Google Drive *Gear Symbol - Settings* in the
+Figure 16: Click your Google Drive *Gear Symbol - Settings* in the
 upper-right corner.
 </p>
 
 1.  On the Settings screen, check the box to *Convert uploaded files to
     Google Docs editor format*, as shown in Figure
-    <a href="#fig:convert-uploads">16</a>, and click *Done*. This turns
+    <a href="#fig:convert-uploads">17</a>, and click *Done*. This turns
     on the conversion setting globally, meaning it will convert all
     possible files that you upload in the future—including Microsoft
     Excel, Word, PowerPoint, and more—unless you turn it off.
 
 <img src="images/03-spreadsheet/convert-uploads.png" alt="Inside your Google Drive Settings, check the box to automatically convert all uploads." width="750" />
 <p class="caption">
-Figure 16: Inside your Google Drive Settings, check the box to
+Figure 17: Inside your Google Drive Settings, check the box to
 automatically convert all uploads.
 </p>
 
 1.  Upload a sample Excel file from your computer to your Google Drive.
     Either drag-and-drop it to the desired folder, as shown in Figure
-    <a href="#fig:upload-file">17</a>, or use the *New* button and
+    <a href="#fig:upload-file">18</a>, or use the *New* button and
     select *File upload*.
 
 <img src="images/03-spreadsheet/upload-file.png" alt="Drag-and-drop your sample Excel file into your Google Drive to upload it." width="300" />
 <p class="caption">
-Figure 17: Drag-and-drop your sample Excel file into your Google Drive
+Figure 18: Drag-and-drop your sample Excel file into your Google Drive
 to upload it.
 </p>
 
 If you forget to check the *Convert uploads* box, Google Drive will keep
 uploaded files in their original format, and display their icons and
 file name extensions such as `.xlsx` or `.csv`, as shown in Figure
-<a href="#fig:drive-file-icons">18</a>.
+<a href="#fig:drive-file-icons">19</a>.
 
 <img src="images/03-spreadsheet/drive-file-icons.png" alt="If you forget to convert uploads, Google Drive will keep files in their original format with these icons." width="300" />
 <p class="caption">
-Figure 18: If you forget to convert uploads, Google Drive will keep
+Figure 19: If you forget to convert uploads, Google Drive will keep
 files in their original format with these icons.
 </p>
 
@@ -1573,8 +1670,8 @@ Now that you know how to upload and convert an existing dataset, in the
 next section you’ll learn how to install and use a Google Sheets add-on
 tool to geocode address data into latitude and longitude coordinates.
 
-Geocode Addresses with Google Sheets Add-On
--------------------------------------------
+Geocode Addresses in Google Sheets
+----------------------------------
 
 In this section, you’ll learn how to geocode data by installing a free
 Google Sheets add-on tool. This allows you to geocode addresses directly
@@ -1583,7 +1680,7 @@ map code templates in Chapter 13](leaflet.html).
 
 Geocoding means converting addresses or location names into geographic
 coordinates (or x- and y-coordinates) that can be plotted on a map, as
-shown in Figure <a href="#fig:transform-data">19</a>. For example, the
+shown in Figure <a href="#fig:transform-data">20</a>. For example, the
 Statue of Liberty in the New York City area is located at *40.69,
 -74.04*. The first number is the latitude and the second is the
 longitude. Since the equator is 0 degrees latitude, positive latitude is
@@ -1596,18 +1693,18 @@ Pacific Ocean.
 
 <img src="images/03-spreadsheet/geocode-data.png" alt="To map addresses, you first need to geocode them."  />
 <p class="caption">
-Figure 19: To map addresses, you first need to geocode them.
+Figure 20: To map addresses, you first need to geocode them.
 </p>
 
 If you have just one or two addresses, you can quickly geocode them with
 [Google Maps](https://www.google.com/maps). Search for an address,
 right-click on that point, and select *What’s here?* to reveal a popup
 window with its latitude and longitude, as shown in Figure
-<a href="#fig:gmaps-whats-here">20</a>.
+<a href="#fig:gmaps-whats-here">21</a>.
 
 <img src="images/03-spreadsheet/gmaps-whats-here.png" alt="To geocode one address, search in Google Maps and right-click *What's here?* to show coordinates."  />
 <p class="caption">
-Figure 20: To geocode one address, search in Google Maps and right-click
+Figure 21: To geocode one address, search in Google Maps and right-click
 *What’s here?* to show coordinates.
 </p>
 
@@ -1641,11 +1738,11 @@ Marketplace](https://gsuite.google.com/marketplace).
     SmartMonkey* options, and select *Create Template*. The Add-on will
     create a new tab, named *Geocoding*, and automatically insert three
     sample addresses, as shown in Figure
-    <a href="#fig:geocoding-create-template">21</a>.
+    <a href="#fig:geocoding-create-template">22</a>.
 
 <img src="images/03-spreadsheet/geocoding-create-template.png" alt="In the Google Sheets *Add-On* menu, select *Geocoding by SmartMonkey -- Create Template*."  />
 <p class="caption">
-Figure 21: In the Google Sheets *Add-On* menu, select *Geocoding by
+Figure 22: In the Google Sheets *Add-On* menu, select *Geocoding by
 SmartMonkey – Create Template*.
 </p>
 
@@ -1653,13 +1750,13 @@ SmartMonkey – Create Template*.
     Add-on will create another spreadsheet tab, called *Geocoding
     Details*, and display the results from Google services for three new
     columns—latitude, longitude, and address found—as shown in Figure
-    <a href="#fig:geocode-details">22</a>. Always review the quality of
+    <a href="#fig:geocode-details">23</a>. Always review the quality of
     geocoded results by comparing the *Address found* column to the
     original *Address* entered.
 
 <img src="images/03-spreadsheet/geocode-details.png" alt="Select *Geocode Details* to view latitude, longitude, and address found for each entry."  />
 <p class="caption">
-Figure 22: Select *Geocode Details* to view latitude, longitude, and
+Figure 23: Select *Geocode Details* to view latitude, longitude, and
 address found for each entry.
 </p>
 
@@ -1706,24 +1803,24 @@ Sheet.
 
 Inside your Google Drive account, one tool that’s often overlooked is
 Google Forms, which is partially hidden under *New &gt; More &gt; Google
-Forms*, as shown in Figure <a href="#fig:forms-new">23</a>.
+Forms*, as shown in Figure <a href="#fig:forms-new">24</a>.
 
 <img src="images/03-spreadsheet/forms-new.png" alt="The Google Forms tool is partially hidden in the Google Drive *New - More* menu." width="500" />
 <p class="caption">
-Figure 23: The Google Forms tool is partially hidden in the Google Drive
+Figure 24: The Google Forms tool is partially hidden in the Google Drive
 *New - More* menu.
 </p>
 
 The Google Forms *Questions* tab allows you to design questions with
 different types of responses: short- and paragraph-length answers,
 multiple choice, checkboxes, file uploads, etc., as shown in Figure
-<a href="#fig:forms-questions">24</a>. Furthermore, Google Forms
+<a href="#fig:forms-questions">25</a>. Furthermore, Google Forms
 attempts to interpret questions you enter in order to predictively
 assign them to a type.
 
 <img src="images/03-spreadsheet/forms-questions.png" alt="The Google Forms *Questions* tab allows you to designate different types of responses." width="700" />
 <p class="caption">
-Figure 24: The Google Forms *Questions* tab allows you to designate
+Figure 25: The Google Forms *Questions* tab allows you to designate
 different types of responses.
 </p>
 
@@ -1732,7 +1829,7 @@ headers in the linked spreadsheet you’ll create further below. If a
 question needs more explanation or examples, click the three-dot kebob
 menu in the bottom-right corner to *Show &gt; Description*, which opens
 a text box where you can type in more details, as shown in Figure
-<a href="#fig:forms-description">25</a>. Also, you can *Show &gt;
+<a href="#fig:forms-description">26</a>. Also, you can *Show &gt;
 Response validation*, which requires users to follow a particular
 format, such as an email address or phone number. Furthermore, you can
 select the *Required* field to require users to respond to a question
@@ -1741,30 +1838,30 @@ page](https://support.google.com/a/users/answer/9991170).
 
 <img src="images/03-spreadsheet/forms-description.png" alt="Click the three-dot kebab menu to *Show - Description* to add details for any question." width="700" />
 <p class="caption">
-Figure 25: Click the three-dot kebab menu to *Show - Description* to add
+Figure 26: Click the three-dot kebab menu to *Show - Description* to add
 details for any question.
 </p>
 
 To preview how your online will appear to recipients, click the *Eyeball
 symbol* near the top of the page, as shown in Figure
-<a href="#fig:forms-preview">26</a>. When your form is complete, click
+<a href="#fig:forms-preview">27</a>. When your form is complete, click
 the *Send* button to distribute it via email, a link, or to embed the
 live form as an iframe on a web page. Learn more about the latter option
 in [Chapter 10: Embed on the Web](embed.html).
 
 <img src="images/03-spreadsheet/forms-preview.png" alt="Click the *Eyeball symbol* to preview your form." width="350" />
 <p class="caption">
-Figure 26: Click the *Eyeball symbol* to preview your form.
+Figure 27: Click the *Eyeball symbol* to preview your form.
 </p>
 
 The Google Forms *Responses* tab will show individual results you
 receive, and also includes a powerful button to open the data in a
 linked Google Sheet, as shown in Figure
-<a href="#fig:forms-responses">27</a>.
+<a href="#fig:forms-responses">28</a>.
 
 <img src="images/03-spreadsheet/forms-responses.png" alt="The Google Forms *Responses* tab includes a button to open results in a linked Google Sheet." width="500" />
 <p class="caption">
-Figure 27: The Google Forms *Responses* tab includes a button to open
+Figure 28: The Google Forms *Responses* tab includes a button to open
 results in a linked Google Sheet.
 </p>
 
@@ -1797,14 +1894,14 @@ described at the top of the chapter.
 
 3.  Before sorting, click the upper-left corner of the sheet to select
     all cells, as shown in Figure
-    <a href="#fig:sheets-select-all">28</a>. When the entire sheet
+    <a href="#fig:sheets-select-all">29</a>. When the entire sheet
     becomes light blue, and all of the alphabetical column and numerical
     row headers become dark grey, this confirms you’ve selected all
     cells.
 
 <img src="images/03-spreadsheet/sheets-select-all.png" alt="Click the upper-left corner to select all cells before sorting." width="400" />
 <p class="caption">
-Figure 28: Click the upper-left corner to select all cells before
+Figure 29: Click the upper-left corner to select all cells before
 sorting.
 </p>
 
@@ -1816,13 +1913,13 @@ and make it meaningless. Always select all cells before sorting!
     sort options. In the next screen, check the *Data has header row*
     box to view the column headers in your data. Let’s sort the
     *Experience with data visualization* column in ascending order (from
-    A-Z), as shown in Figure <a href="#fig:sheets-sort-range">29</a>, to
+    A-Z), as shown in Figure <a href="#fig:sheets-sort-range">30</a>, to
     display the minimum at the top, the maximum at the bottom, and the
     range in between.
 
 <img src="images/03-spreadsheet/sheets-sort-range.png" alt="Go to *Data - Sort Range*, check the header row box, and sort by *Experience with dataviz* in ascending order." width="400" />
 <p class="caption">
-Figure 29: Go to *Data - Sort Range*, check the header row box, and sort
+Figure 30: Go to *Data - Sort Range*, check the header row box, and sort
 by *Experience with dataviz* in ascending order.
 </p>
 
@@ -1832,14 +1929,14 @@ rated themselves as beginners (level 1) with data visualization.
 Tip: When working with large spreadsheets, you can “freeze” the first
 row so that column headers will still appear as you scroll downward. In
 Google Sheets, go to *View &gt; Freeze* and select 1 row, as shown in
-Figure <a href="#fig:sheets-view-freeze">30</a>. You can also freeze one
+Figure <a href="#fig:sheets-view-freeze">31</a>. You can also freeze one
 or more columns to continuously display when scrolling sideways.
 LibreOffice has a same option to *View &gt; Freeze Rows and Columns*,
 but Excel has a different option called *Window &gt; Split*.
 
 <img src="images/03-spreadsheet/sheets-view-freeze.png" alt="In Google Sheets, go to *View - Freeze* to select the number of rows to continuously display when scrolling downward." width="500" />
 <p class="caption">
-Figure 30: In Google Sheets, go to *View - Freeze* to select the number
+Figure 31: In Google Sheets, go to *View - Freeze* to select the number
 of rows to continuously display when scrolling downward.
 </p>
 
@@ -1849,12 +1946,12 @@ of rows to continuously display when scrolling downward.
     see options to display or hide rows of data. For example, look under
     *Filter by values*, then click the “Clear” button to undo all
     options, then click only *educator* to display only rows with that
-    response, as shown in Figure <a href="#fig:sheets-filter">31</a>.
+    response, as shown in Figure <a href="#fig:sheets-filter">32</a>.
     Click “OK”.
 
 <img src="images/03-spreadsheet/sheets-filter.png" alt="Go to *Data - Create a Filter*, click the downward arrow in the *Occupation* column, select only *educator*." width="300" />
 <p class="caption">
-Figure 31: Go to *Data - Create a Filter*, click the downward arrow in
+Figure 32: Go to *Data - Create a Filter*, click the downward arrow in
 the *Occupation* column, select only *educator*.
 </p>
 
@@ -1889,11 +1986,11 @@ the reader survey sample dataset we described at the top of the chapter.
 3.  Add a blank row immediately below the header to make space for our
     calculations. Right-click on row number 1 and select *Insert 1
     below* to add a new row, as shown in Figure
-    <a href="#fig:sheets-insert-row">32</a>.
+    <a href="#fig:sheets-insert-row">33</a>.
 
 <img src="images/03-spreadsheet/sheets-insert-row.png" alt="Right-click on row number 1 and select *Insert 1 below*." width="200" />
 <p class="caption">
-Figure 32: Right-click on row number 1 and select *Insert 1 below*.
+Figure 33: Right-click on row number 1 and select *Insert 1 below*.
 </p>
 
 1.  Let’s calculate the average level of reader experience with data
@@ -1903,11 +2000,11 @@ Figure 32: Right-click on row number 1 and select *Insert 1 below*.
     context, and you can select one that displays the average for
     current values in the column, such as `=AVERAGE(E3:E2894)`, then
     press *Return* or *Enter* on your keyboard, as shown in Figure
-    <a href="#fig:sheets-average">33</a>.
+    <a href="#fig:sheets-average">34</a>.
 
 <img src="images/03-spreadsheet/sheets-average.png" alt="Type `=` to start a formula and select the suggestion for average, or type it directly in with the correct range." width="300" />
 <p class="caption">
-Figure 33: Type `=` to start a formula and select the suggestion for
+Figure 34: Type `=` to start a formula and select the suggestion for
 average, or type it directly in with the correct range.
 </p>
 
@@ -1931,7 +2028,7 @@ but it does *not* work with LibreOffice or Excel.
     references. Click in cell E2, and then press and hold down on the
     blue dot in the bottom-right corner of that cell, which transforms
     your cursor into a crosshair symbol. Drag your cursor to cell F2 and
-    let go, and show in Figure <a href="#fig:sheets-drag-calc">34</a>.
+    let go, and show in Figure <a href="#fig:sheets-drag-calc">35</a>.
     The formula will be automatically pasted and updated for the new
     column to `=AVERAGE(F3:F2894)` or `AVERAGE(F3:F)`, depending on
     which way you entered it above. Once again, since this is a live
@@ -1940,7 +2037,7 @@ but it does *not* work with LibreOffice or Excel.
 
 <img src="images/03-spreadsheet/sheets-drag-calc.png" alt="Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula."  />
 <p class="caption">
-Figure 34: Click on the blue bottom-right dot in cell E2, then
+Figure 35: Click on the blue bottom-right dot in cell E2, then
 hold-and-drag your crosshair cursor in cell F2, and let go to
 automatically paste and update the formula.
 </p>
@@ -1958,11 +2055,11 @@ automatically paste and update the formula.
     or type in the Google Sheets syntax `=COUNTIF(G3:G,"=educator")`
     that runs the calculation on the entire column without naming a
     specific endpoint, as shown in Figure
-    <a href="#fig:sheets-countif">35</a>.
+    <a href="#fig:sheets-countif">36</a>.
 
 <img src="images/03-spreadsheet/sheets-countif.png" alt="Select or enter a formula that counts responses if the entry is *educator*." width="250" />
 <p class="caption">
-Figure 35: Select or enter a formula that counts responses if the entry
+Figure 36: Select or enter a formula that counts responses if the entry
 is *educator*.
 </p>
 
@@ -2014,23 +2111,23 @@ by two categories: occupation and experience level.
 
 3.  Go to *Data &gt; Pivot Table*, and on the next screen, select
     *Create* in a new sheet, as shown in Figure
-    <a href="#fig:sheets-pivot-create">36</a>. The new sheet will
+    <a href="#fig:sheets-pivot-create">37</a>. The new sheet will
     include a Pivot Table tab at the bottom.
 
 <img src="images/03-spreadsheet/sheets-pivot-create.png" alt="Go to *Data - Pivot Table*, and create in a new sheet." width="450" />
 <p class="caption">
-Figure 36: Go to *Data - Pivot Table*, and create in a new sheet.
+Figure 37: Go to *Data - Pivot Table*, and create in a new sheet.
 </p>
 
 1.  In the *Pivot table editor* screen, you can regroup data from the
     first sheet by adding rows, columns, and values. First, click the
     Rows *Add* button and select *Occupation*, which displays the unique
     entries in that column, as shown in Figure
-    <a href="#fig:sheets-pivot-rows">37</a>.
+    <a href="#fig:sheets-pivot-rows">38</a>.
 
 <img src="images/03-spreadsheet/sheets-pivot-rows.png" alt="In the *Pivot table editor*, click the Rows *Add* button and select *Occupation*." width="600" />
 <p class="caption">
-Figure 37: In the *Pivot table editor*, click the Rows *Add* button and
+Figure 38: In the *Pivot table editor*, click the Rows *Add* button and
 select *Occupation*.
 </p>
 
@@ -2038,11 +2135,11 @@ select *Occupation*.
     Values *Add* button and select *Occupation* again. Google Sheets
     will automatically summarize the values by *COUNTA*, meaning it
     displays the frequency of each textual response, as shown in Figure
-    <a href="#fig:sheets-pivot-values">38</a>.
+    <a href="#fig:sheets-pivot-values">39</a>.
 
 <img src="images/03-spreadsheet/sheets-pivot-values.png" alt="In the *Pivot table editor*, click the Values *Add* button and select *Occupation*." width="600" />
 <p class="caption">
-Figure 38: In the *Pivot table editor*, click the Values *Add* button
+Figure 39: In the *Pivot table editor*, click the Values *Add* button
 and select *Occupation*.
 </p>
 
@@ -2054,11 +2151,11 @@ survey.
 1.  Furthermore, you can create a more advanced pivot cross-tabulation
     of occupation and experience among reader responses. Click on the
     *Columns* button to add *Experience with data visualization*, as
-    shown in Figure <a href="#fig:sheets-pivot-columns">39</a>.
+    shown in Figure <a href="#fig:sheets-pivot-columns">40</a>.
 
 <img src="images/03-spreadsheet/sheets-pivot-columns.png" alt="In the *Pivot table editor*, click the Columns *Add* button and select *Experience with data visualization*."  />
 <p class="caption">
-Figure 39: In the *Pivot table editor*, click the Columns *Add* button
+Figure 40: In the *Pivot table editor*, click the Columns *Add* button
 and select *Experience with data visualization*.
 </p>
 
@@ -2070,7 +2167,7 @@ readers who listed 20 or more years.
 
 Deciding how to add *Values* in the *Pivot table editor* can be
 challenging, because there are multiple options to summarize the data,
-as shown in Figure <a href="#fig:sheets-pivot-summarize">40</a>. Google
+as shown in Figure <a href="#fig:sheets-pivot-summarize">41</a>. Google
 Sheets will offer its automated guess based on the context, but you may
 need to manually select the best option to represent your data as
 desired. Three of the most common options to summarize values are:
@@ -2088,7 +2185,7 @@ percentages of the row, of the column, or of the grand total.
 
 <img src="images/03-spreadsheet/sheets-pivot-summarize.png" alt="In the *Pivot table editor*, see multiple options to summarize *Values*." width="250" />
 <p class="caption">
-Figure 40: In the *Pivot table editor*, see multiple options to
+Figure 41: In the *Pivot table editor*, see multiple options to
 summarize *Values*.
 </p>
 
@@ -2121,7 +2218,7 @@ two different spreadsheets, this automated method will save you lots of
 time.
 
 Here’s a scenario that illustrates why and how to use the VLOOKUP
-function. Figure <a href="#fig:vlookup-setup">41</a> shows two different
+function. Figure <a href="#fig:vlookup-setup">42</a> shows two different
 sheets with sample data about food banks that help feed hungry people in
 different parts of the US, drawn from [Feeding America: Find Your Local
 Food Bank](https://www.feedingamerica.org/find-your-local-foodbank). The
@@ -2137,7 +2234,7 @@ to match and paste data is essential.
 
 <img src="images/03-spreadsheet/vlookup-setup.png" alt="Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet." width="750" />
 <p class="caption">
-Figure 41: Your goal is to create one mailing list that matches
+Figure 42: Your goal is to create one mailing list that matches
 individual names and organizations on the left sheet with their
 addresses on the right sheet.
 </p>
@@ -2159,13 +2256,13 @@ the name of the other sheet.
     our destination for the mailing list we will create. Go to the
     *addresses* sheet, copy the column headers for *street - city -
     state - zip*, and paste them into cells C1 through F1 on the *names*
-    sheet, as shown in Figure <a href="#fig:vlookup-headers">42</a>.
+    sheet, as shown in Figure <a href="#fig:vlookup-headers">43</a>.
     This creates new column headers where our lookup results will be
     automatically pasted.
 
 <img src="images/03-spreadsheet/vlookup-headers.png" alt="Paste the last four column headers from the *addresses* sheet into the *names* sheet." width="500" />
 <p class="caption">
-Figure 42: Paste the last four column headers from the *addresses* sheet
+Figure 43: Paste the last four column headers from the *addresses* sheet
 into the *names* sheet.
 </p>
 
@@ -2194,14 +2291,14 @@ Here’s what each part means:
     option is to click on the *VLOOKUP Vertical lookup* grey box that
     Google Sheets suggests, and click on the relevant cells, columns,
     and sheets for the formula to be automatically entered for you, as
-    shown in Figure <a href="#fig:vlookup-solution">43</a>. What’s new
+    shown in Figure <a href="#fig:vlookup-solution">44</a>. What’s new
     here is that this formula in the *names* sheet refers to a range of
     columns A to E in the *addresses* sheet. Press *Return* or *Enter*
     on your keyboard.
 
 <img src="images/03-spreadsheet/vlookup-solution.png" alt="The VLOOKUP formula in cell C2 of the *names* sheet (top) searches for matches across columns A to E in the *addresses* sheet (bottom)." width="700" />
 <p class="caption">
-Figure 43: The VLOOKUP formula in cell C2 of the *names* sheet (top)
+Figure 44: The VLOOKUP formula in cell C2 of the *names* sheet (top)
 searches for matches across columns A to E in the *addresses* sheet
 (bottom).
 </p>
@@ -2223,22 +2320,22 @@ Let’s break down each part of the formula you entered in cell C2 of the
     in the bottom-right corner of cell C2, and drag your crosshair
     cursor across columns D to F and let go, which will automatically
     paste and update the formula for the city, state, and zip columns,
-    as shown in Figure <a href="#fig:vlookup-drag">44</a>.
+    as shown in Figure <a href="#fig:vlookup-drag">45</a>.
 
 <img src="images/03-spreadsheet/vlookup-drag.png" alt="Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
-Figure 44: Click on cell C2, then hold-and-drag the bottom-right blue
+Figure 45: Click on cell C2, then hold-and-drag the bottom-right blue
 dot across columns D to F, which automatically pastes and updates the
 formula.
 </p>
 
 1.  Finally, use the same hold-and-drag method to paste and update the
     formula downward to fill in all rows, as shown in Figure
-    <a href="#fig:vlookup-final">45</a>.
+    <a href="#fig:vlookup-final">46</a>.
 
 <img src="images/03-spreadsheet/vlookup-final.png" alt="Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
-Figure 45: Click on cell F2, then hold-and-drag the bottom-right blue
+Figure 46: Click on cell F2, then hold-and-drag the bottom-right blue
 dot down to row 11, which automatically pastes and updates the formula.
 </p>
 
@@ -2254,8 +2351,8 @@ formulas to connect different spreadsheets, the next section will teach
 you how to manage multiple relationships between spreadsheets with the
 help of a relational database.
 
-Connect Sheets with a Relational Database
------------------------------------------
+Spreadsheet vs. Relational Database
+-----------------------------------
 
 In the previous section, you learned how the VLOOKUP function can search
 for matching data in columns across spreadsheets and automatically paste
@@ -2268,7 +2365,7 @@ the records are stored in rows and columns in a single table. For
 example, if you kept a single spreadsheet of US food bank staff, every
 row would list an individual person, organization, and addresses, just
 like the mailing list we created in Figure
-<a href="#fig:vlookup-final">45</a> in the prior section on VLOOKUP.
+<a href="#fig:vlookup-final">46</a> in the prior section on VLOOKUP.
 
 But keeping all of your data in a single spreadsheet can raise problems.
 For example, it contains lots of duplicated entries. For people who all
@@ -2286,7 +2383,7 @@ Instead of a single spreadsheet, consider using a relational database,
 which organizes information into separate sheets (also known as tables),
 but continually maintains the relevant connections between them. Look
 back at the two-sheet problem we presented in Figure
-<a href="#fig:vlookup-setup">41</a> at the beginning of the VLOOKUP
+<a href="#fig:vlookup-setup">42</a> at the beginning of the VLOOKUP
 section. The first sheet lists individual people at each food bank, the
 second sheet lists the address for each food bank, and the two sheets
 share a column named *organization* that shows how they are related.
@@ -2312,31 +2409,31 @@ sheet, named *people* and *food banks*. To transform this into a
 relational database, we used Airtable settings to link the
 *organization* column in the *people* sheet to the *food banks* sheet,
 where the addresses are stored, as shown in Figure
-<a href="#fig:airtable-link">46</a>. In our editable version, we
+<a href="#fig:airtable-link">47</a>. In our editable version, we
 double-clicked on the column name, then selected *Link to another
 record* in the drop-down menu, to connect it to another tab.
 
 <img src="images/03-spreadsheet/airtable-link.png" alt="In this Airtable sample, we linked the *organization* column in the *people* sheet to the *food banks* sheet." width="500" />
 <p class="caption">
-Figure 46: In this Airtable sample, we linked the *organization* column
+Figure 47: In this Airtable sample, we linked the *organization* column
 in the *people* sheet to the *food banks* sheet.
 </p>
 
 In our Airtable sample, click on a linked row to expand it and view
 related data. For example, if you click and expand on the first row the
 *people* sheet, their organization’s full address appears from the *food
-banks* sheet, as shown in Figure <a href="#fig:airtable-expand">47</a>.
+banks* sheet, as shown in Figure <a href="#fig:airtable-expand">48</a>.
 In our editable version, if we update the address for one organization
 in the *food banks* sheet, it’s automatically changed for all employees
 linked to that organization in the *people* sheet. In addition, Airtable
 allows you to sort, filter, and create different views of your data that
 you can share with others, a topic we’ll cover in [Chapter 10: Embed on
-your Web](embed.html). See more about its features in the [Airtable
+the Web](embed.html). See more about its features in the [Airtable
 Support page](https://support.airtable.com).
 
 <img src="images/03-spreadsheet/airtable-expand.png" alt="In this [Airtable demo](https://airtable.com/shrOlb4XT11Xy2LP2), click on a row in one sheet to expand and view its linked data in another sheet." width="600" />
 <p class="caption">
-Figure 47: In this [Airtable
+Figure 48: In this [Airtable
 demo](https://airtable.com/shrOlb4XT11Xy2LP2), click on a row in one
 sheet to expand and view its linked data in another sheet.
 </p>
@@ -2917,7 +3014,7 @@ a separate tab inside the spreadsheet, which works for multi-tab
 spreadsheet tools such as Google Sheets, LibreOffice, and Excel. Add a
 new tab named *notes* that describes the origins of the data, a longer
 description for any abbreviated labels, and when it was last updated, as
-shown in Figure <a href="#fig:sheets-with-tabs">48</a>. Add your own
+shown in Figure <a href="#fig:sheets-with-tabs">49</a>. Add your own
 name and give credit to collaborators who worked with you. If you need
 to create a CSV file from this data, give it a parallel name to your
 multi-tabbed spreadsheet file so that you can easily find your original
@@ -2925,14 +3022,14 @@ source notes again in the future.
 
 <img src="images/04-find/sheets-with-tabs.png" alt="Create separate spreadsheet tabs for data, notes, and backup." width="600" />
 <p class="caption">
-Figure 48: Create separate spreadsheet tabs for data, notes, and backup.
+Figure 49: Create separate spreadsheet tabs for data, notes, and backup.
 </p>
 
 A third step is to make a backup of the original data before cleaning or
 editing it. For a simple one-sheet file in a multi-tab spreadsheet tool,
 right-click on the tab containing the data to make a duplicate copy in
 another tab, also shown in Figure
-<a href="#fig:sheets-with-tabs">48</a>. Clearly label the new tab as a
+<a href="#fig:sheets-with-tabs">49</a>. Clearly label the new tab as a
 backup and leave it alone! For CSV files or more complex spreadsheets,
 create a separate backup file. To be clear, these simple backup strategy
 only helps you from making non-fixable edits to your original data. Make
@@ -3133,8 +3230,8 @@ we begin to recognize the limitations of the data. When you create
 visualizations, your job is also to *acknowledge the limitations of the
 data* by making thoughtful decisions about its design, and how you
 describe what it does—and does not—tell us. We’ll return to these topics
-when discussing [chart design in Chapter 7](chart-design.html) and
-[telling your data story in Chapter 16](story.html).
+when discussing [chart design in Chapter 7](chart-design.html) as well
+as [telling and showing your data story in Chapter 16](story.html).
 
 ### Summary
 
@@ -3158,13 +3255,13 @@ More often than not, datasets will be messy and hard to visualize right
 away. They will have missing values, dates in different formats, text in
 numeric-only columns, multiple items in the same columns, various
 spellings of the same name, and other unexpected things. See Figure
-<a href="#fig:clean-up-messy-data">49</a> for inspiration. Don’t be
+<a href="#fig:clean-up-messy-data">50</a> for inspiration. Don’t be
 surprised if you find yourself spending more time cleaning up data than
 you do analyzing and visualizing it.
 
 <img src="images/05-clean/clean-up-messy-data.png" alt="More often than not, raw data looks messy."  />
 <p class="caption">
-Figure 49: More often than not, raw data looks messy.
+Figure 50: More often than not, raw data looks messy.
 </p>
 
 In this chapter you’ll learn about different tools, in order to help you
@@ -3225,7 +3322,7 @@ unwanted “town” label after each place name.
     entire spreadsheet.
 3.  In the *Edit* menu, choose *Find and replace*. You will see the
     window like is shown in Figure
-    <a href="#fig:sheets-find-replace">50</a>.
+    <a href="#fig:sheets-find-replace">51</a>.
 4.  In the *Find* field, type `town`, and be sure to *insert a blank
     space* before the word. If you do not insert a space, you will
     accidentally remove *town* from places such as *Newtown*. Also,
@@ -3247,7 +3344,7 @@ unwanted “town” label after each place name.
 
 <img src="images/05-clean/sheets-find-replace-annotated.png" alt="Find and Replace window in Google Sheets."  />
 <p class="caption">
-Figure 50: Find and Replace window in Google Sheets.
+Figure 51: Find and Replace window in Google Sheets.
 </p>
 
 Transpose Rows and Columns
@@ -3258,22 +3355,22 @@ you to transpose, or swap the rows and the columns, in order to create
 the chart or map you desire. This problem often comes up when working
 with longitudinal or historical data. For example, you often find the
 data organized with years placed horizontally as column headers, as
-shown in Figure <a href="#fig:sheets-years-row">51</a>.
+shown in Figure <a href="#fig:sheets-years-row">52</a>.
 
 <img src="images/05-clean/sheets-years-row.png" alt="We often find data with years placed in horizontal column headers." width="400" />
 <p class="caption">
-Figure 51: We often find data with years placed in horizontal column
+Figure 52: We often find data with years placed in horizontal column
 headers.
 </p>
 
 But if you wish to create a line chart, which you’ll learn in [Chapter
 7: Chart Your Data](chart.html), you need to transpose the data above,
 so that the years run down the first vertical column, as shown in Figure
-<a href="#fig:sheets-years-column">52</a>.
+<a href="#fig:sheets-years-column">53</a>.
 
 <img src="images/05-clean/sheets-years-column.png" alt="But we need to transpose the data to place years in the first vertical column." width="300" />
 <p class="caption">
-Figure 52: But we need to transpose the data to place years in the first
+Figure 53: But we need to transpose the data to place years in the first
 vertical column.
 </p>
 
@@ -3290,11 +3387,11 @@ Let’s transpose rows and columns in our sample data:
 3.  Scroll further down the spreadsheet and click on a cell, or open a
     new spreadsheet tab, and go to *Edit &gt; Paste Special &gt; Paste
     Transposed*, as shown in Figure
-    <a href="#fig:sheets-transpose">53</a>.
+    <a href="#fig:sheets-transpose">54</a>.
 
 <img src="images/05-clean/sheets-transpose.png" alt="Go to *Edit - Paste Special - Paste Transposed* to swap rows and columns." width="450" />
 <p class="caption">
-Figure 53: Go to *Edit - Paste Special - Paste Transposed* to swap rows
+Figure 54: Go to *Edit - Paste Special - Paste Transposed* to swap rows
 and columns.
 </p>
 
@@ -3329,7 +3426,7 @@ coordinates, separated by commas, into separate columns.
 3.  Make sure there is no data in the column to the right of the one
     you’re splitting, because all data there will be written over.
 4.  Go to *Data* and select *Split text to columns*, as in Figure
-    <a href="#fig:sheets-split">54</a>.
+    <a href="#fig:sheets-split">55</a>.
 5.  Google Sheets will automatically try to guess your separator. You
     will see that your coordinates are now split with the comma, and the
     Separator is set to *Detect automatically* in the dropdown. You can
@@ -3342,7 +3439,7 @@ coordinates, separated by commas, into separate columns.
 
 <img src="images/05-clean/sheets-split-annotated.png" alt="Select *Data - Split text to columns* to automatically separate data." width="350" />
 <p class="caption">
-Figure 54: Select *Data - Split text to columns* to automatically
+Figure 55: Select *Data - Split text to columns* to automatically
 separate data.
 </p>
 
@@ -3381,12 +3478,12 @@ into four columns.
     columns* again. Google Sheets won’t recognize the two dashes as a
     separator, so you need to manually select *Custom*, type those two
     dashes (`--`) in the *Custom separator* field, as shown in Figure
-    <a href="#fig:sheets-split-complex">55</a>, and press Enter. Now you
+    <a href="#fig:sheets-split-complex">56</a>, and press Enter. Now you
     have successfully split the full address into four columns.
 
 <img src="images/05-clean/sheets-split-complex.png" alt="To split the last column, select a *Custom* separator and manually type in two dashes." width="550" />
 <p class="caption">
-Figure 55: To split the last column, select a *Custom* separator and
+Figure 56: To split the last column, select a *Custom* separator and
 manually type in two dashes.
 </p>
 
@@ -3432,14 +3529,14 @@ with some sample data.
 2.  In column E, type a new header named *location*.
 3.  In cell E2, type in the following formula, which combines the four
     items using ampersands, and separates them with quoted commas and
-    spaces, as shown in Figure <a href="#fig:sheets-combine">56</a>, and
+    spaces, as shown in Figure <a href="#fig:sheets-combine">57</a>, and
     press *Enter*. `=A2 & ", " & B2 & ", " & C2 & " " & D2`
 4.  Click cell E2 and drag the bottom-right corner cross-hair downward
     to fill in the rest of the column.
 
 <img src="images/05-clean/sheets-combine.png" alt="Use ampersands to combine items, and insert quoted spaces with commas as separators."  />
 <p class="caption">
-Figure 56: Use ampersands to combine items, and insert quoted spaces
+Figure 57: Use ampersands to combine items, and insert quoted spaces
 with commas as separators.
 </p>
 
@@ -3494,7 +3591,7 @@ General tab*, and click the *Open Anyway* button in the lower half of
 the window to open the app the first time.
 
 When you start up Tabula, the default system browser will open, as shown
-in Figure <a href="#fig:tabula-welcome">57</a>. Tabula runs on your
+in Figure <a href="#fig:tabula-welcome">58</a>. Tabula runs on your
 local computer, not the internet. The URL in the browser will be
 something like `http://127.0.0.1:8080/`. The first portion is the
 localhost or hostname for your computer, and `8080` refers to the port
@@ -3505,7 +3602,7 @@ copy-and-paste the URL.
 
 <img src="images/05-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
-Figure 57: Tabula welcome page.
+Figure 58: Tabula welcome page.
 </p>
 
 Now let’s upload a sample text-based PDF and detect any tables we wish
@@ -3523,11 +3620,11 @@ provide your own.
     only four buttons in the header.
 4.  Click the *Autodetect Tables* button to let Tabula look for relevant
     data. The tool highlights each table it detects in red, as shown in
-    Figure <a href="#fig:tabula-autodetect">58</a>.
+    Figure <a href="#fig:tabula-autodetect">59</a>.
 
 <img src="images/05-clean/tabula-autodetect.png" alt="Click *Autodetect Tables*, which Tabula will highlight in red."  />
 <p class="caption">
-Figure 58: Click *Autodetect Tables*, which Tabula will highlight in
+Figure 59: Click *Autodetect Tables*, which Tabula will highlight in
 red.
 </p>
 
@@ -3566,12 +3663,12 @@ Clean Data with OpenRefine
 
 Look at the [sample US Foreign Aid
 dataset](https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503)
-shown in Figure <a href="#fig:openrefine-dataset">59</a>. Can you spot
+shown in Figure <a href="#fig:openrefine-dataset">60</a>. Can you spot
 any problems with it?
 
 <img src="images/05-clean/openrefine-dataset.png" alt="Can you spot any problems with this sample data?"  />
 <p class="caption">
-Figure 59: Can you spot any problems with this sample data?
+Figure 60: Can you spot any problems with this sample data?
 </p>
 
 Notice how the *Country* column various spellings of North and South
@@ -3609,11 +3706,11 @@ file, and OpenRefine should open in your default browser.
 
 Once launched, you should see OpenRefine in your browser with
 `127.0.0.1:3333` address (localhost, port 3333), as shown in Figure
-<a href="#fig:openrefine-welcome">60</a>.
+<a href="#fig:openrefine-welcome">61</a>.
 
 <img src="images/05-clean/openrefine-welcome-annotated.png" alt="OpenRefine starting page."  />
 <p class="caption">
-Figure 60: OpenRefine starting page.
+Figure 61: OpenRefine starting page.
 </p>
 
 ### Load Data and Start a New Project
@@ -3633,12 +3730,12 @@ of this book.
     the data is split into columns. Make sure OpenRefine assigned values
     to the right columns, or change setting in *Parse data as* block at
     the bottom of the page until it starts looking meaningful, like
-    shown in Figure <a href="#fig:openrefine-parse">61</a>.
+    shown in Figure <a href="#fig:openrefine-parse">62</a>.
 4.  Hit *Create Project* in the upper-right corner.
 
 <img src="images/05-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
-Figure 61: OpenRefine parsing options.
+Figure 62: OpenRefine parsing options.
 </p>
 
 Now when you’ve successfully read the data into a new project, let’s
@@ -3679,11 +3776,11 @@ to be transformed into numeric format.
     hovering over cells, and clicking the `edit` button (in the new
     popup window, make sure to change *Data type* to *number*, and hit
     *Apply*, like in Figure
-    <a href="#fig:openrefine-manual-edit">62</a>).
+    <a href="#fig:openrefine-manual-edit">63</a>).
 
 <img src="images/05-clean/openrefine-manual-edit-annotated.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
 <p class="caption">
-Figure 62: Manually remove spaces and extra characters, and change data
+Figure 63: Manually remove spaces and extra characters, and change data
 type to number.
 </p>
 
@@ -3709,7 +3806,7 @@ distinct values, North Korea and South Korea!
 1.  To begin standardizing spellings, click on the arrow-down button of
     Country column header, and choose *Edit cells* &gt; *Cluster and
     edit*. You will see a window like the one shown in Figure
-    <a href="#fig:openrefine-cluster">63</a>.
+    <a href="#fig:openrefine-cluster">64</a>.
 2.  You will have a choice of two clustering methods, *key collision* or
     *nearest neighbor*. Key collision clustering is a much faster
     technique that is appropriate for larger datasets, but it is less
@@ -3724,7 +3821,7 @@ distinct values, North Korea and South Korea!
     column contains grouped spellings that OpenRefine considers the
     same. If you agree with a grouping, check the *Merge?* box, and
     assign the “true” value to the *New Cell Value* input box (see first
-    cluster in Figure <a href="#fig:openrefine-cluster">63</a>). In our
+    cluster in Figure <a href="#fig:openrefine-cluster">64</a>). In our
     example, this would be either `North Korea` or `South Korea`.
 4.  You can go through all groupings, or stop after one or two and click
     *Merge Selected & Re-Cluster* button. The clusters you chose to
@@ -3737,7 +3834,7 @@ how they produce clusters of different sizes and accuracy.
 
 <img src="images/05-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
 <p class="caption">
-Figure 63: Cluster similar text values.
+Figure 64: Cluster similar text values.
 </p>
 
 ### Export
@@ -3766,11 +3863,14 @@ and embed them in your website.
 
 <!--chapter:end:05-clean.Rmd-->
 
-Compare Appropriate Data
-========================
+Make Meaningful Comparisons
+===========================
 
 TODO: Write this chapter; also considered titles “Compare Meaningful
-Data” or “Make Meaningful Comparisons.”
+Data” or “Compare Appropriate Data.”
+
+“At the heart of quantitative reasoning is a single question: Compared
+to what?”[15]
 
 Now that you’ve found data and cleaned it up, this chapter focuses on
 making meaningful data comparisons prior to communicating results in any
@@ -3925,29 +4025,40 @@ Briefly explain average, mean, median, and percentiles
 Also explain “percent change” with “percentage point difference” …
 explain the difference between the two with clear examples.
 
-Comparing Individuals versus Groups
------------------------------------
+Comparing Smaller versus Larger Units
+-------------------------------------
 
-Beware individual versus aggregated data (example from Cairo: voting
-data about individual people vs voting trends of entire counties may
-differ because not all residents vote)
+Beware of comparisons between smaller versus larger groups of data.
+Example from Cairo: voting data about entire US states will vary from
+voting data for smaller geographic units within those states, such as
+counties, cities, or neighborhood-level voting precincts, for at least
+two reasons. First, voting patterns vary across smaller geographic
+units… Second, not all residents vote….
 
-If you’re looking to make sense of individual behavior, use
-individual-level data. But if you’re looking to generalize about larger
-groups (states, nations, etc.), aggregated data may be more useful.
+In most cases, use the smallest unit of data you can obtain to allow you
+to produce more granular visualizations. While you cannot obtain data
+about how each individual voted, you can obtain data at the precinct,
+city, or county level inside each state.
+
+But there are other cases when using a larger unit of data makes more
+sense than a smaller unit. For example, US presidential elections are
+determined by state-level electoral votes (except for Maine and
+Nebraska?). So if you wish to emphasize patterns in electoral votes,
+compare data for larger geographic units
 
 Avoid Selection Bias
 --------------------
 
-TODO: Decide whether to keep section title as-is or broaden to “Avoid
-Biased Comparisons”
+TODO: Decide whether to keep section title as-is or broaden to “Beware
+of Biased Comparisons”
 
 Everyone should avoid cherry-picking data, which means selecting only
-the evidence that arrives at a pre-determined conclusion. Also avoid
-statistically biased processes, such as sampling methods that regularly
-yields inaccurate results…. example of opinion data about socially
-inappropriate topics… Sometimes bias arises due to a combination of
-human behavior and poor numerical reasoning.
+the evidence that arrives at a pre-determined conclusion.
+
+Also avoid statistically biased processes, such as sampling methods that
+regularly yields inaccurate results…. example of opinion data about
+socially inappropriate topics… Sometimes bias arises due to a
+combination of human behavior and poor numerical reasoning.
 
 But sometimes we compare different groups of data without realizing that
 that they are inappropriate comparisons; they seem like random samples,
@@ -3965,16 +4076,24 @@ Also be aware of algorithmic biases that we sometimes build into our
 software…Cairo’s example about IP data thru VPN converted to geographic
 center of US, near Kansas…
 
-Be Cautious about Correlation, Causation, and Confounding Variables
--------------------------------------------------------------------
+Correlation, Causation, and Confounding Variables
+-------------------------------------------------
 
--   do not let association drift into causation… and isolate confounding
-    variables that may influence relationships between data
+Be cautious…
+
+-   do not let association drift into causation…
+
+-   identify and isolate confounding variables that may influence
+    relationships within your data…
+
+TODO: choose illustrative examples for above
 
 See books on data analysis to understand the logic and use of
 statistical tests
 
-<!--chapter:end:06-compare.Rmd-->
+### Summary
+
+<!--chapter:end:06-comparisons.Rmd-->
 
 Chart Your Data
 ===============
@@ -4110,12 +4229,12 @@ good chart takes time and effort, so make sure it enhances your story.
 ### Deconstructing a Chart
 
 Let’s take a look at Figure
-<a href="#fig:design-principles-chart-components">64</a>. It shows basic
+<a href="#fig:design-principles-chart-components">65</a>. It shows basic
 chart components that are shared among most chart types.
 
 <img src="images/07-chart/design-principles-chart-components.png" alt="Common chart components."  />
 <p class="caption">
-Figure 64: Common chart components.
+Figure 65: Common chart components.
 </p>
 
 A *title* is perhaps the most important element of any chart. A good
@@ -4184,17 +4303,17 @@ interpretation, there are some that are hard to bend.
 Bar and column charts use *length* and *height* to represent value,
 therefore their value axis *must start at the zero baseline*. This
 ensures that a bar twice the length of another bar represents twice its
-value. Figure <a href="#fig:design-principles-start-at-zero">65</a>
+value. Figure <a href="#fig:design-principles-start-at-zero">66</a>
 contrasts a good and a bad example. The same rule applies to area
 charts, which display filled-in area underneath the line to represent
 value. Starting the baseline at a number other than zero is a trick
 commonly used to exaggerate differences in opinion polls and election
 results, as we describe later in [Chapter 15: Detect Lies and Reduce
-Bias](detect.html)
+Data Bias](detect.html)
 
 <img src="images/07-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
 <p class="caption">
-Figure 65: Start your bar chart at zero.
+Figure 66: Start your bar chart at zero.
 </p>
 
 But the zero-baseline rule does not apply to line charts, which
@@ -4202,7 +4321,7 @@ represent values through the *position* and *angle* of the line, not its
 height. Visualization expert Alberto Cairo demonstrates that starting a
 line chart at a number other than zero does not necessarily distort its
 encoded information because we rely on its shape, not its height, to
-determine its meaning.[15]
+determine its meaning.[16]
 
 TODO: Confirm revision with Ilya; Add visual here of line chart baseline
 at zero versus higher number to illustrate the argument?
@@ -4234,7 +4353,7 @@ Start with a white background and add elements as you see appropriate.
 You should be able to justify each element you add. To do so, ask
 yourself: Does this element improve the chart, or can I drop it without
 decreasing readability? This way you won’t end up with so-called “chart
-junk” as shown in Figure <a href="#fig:design-principles-junk">66</a>,
+junk” as shown in Figure <a href="#fig:design-principles-junk">67</a>,
 which includes 3D perspectives, shadows, and unnecessary elements. They
 might have looked cool in early versions of Microsoft Office, but let’s
 stay away from them today. Chart junk distracts the viewer and reduces
@@ -4243,7 +4362,7 @@ doesn’t add credibility to you as a storyteller.
 
 <img src="images/07-chart/design-principles-junk.png" alt="Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements."  />
 <p class="caption">
-Figure 66: Chart junk distracts the viewer, so stay away from shadows,
+Figure 67: Chart junk distracts the viewer, so stay away from shadows,
 3D perspectives, unnecessary colors and other fancy elements.
 </p>
 
@@ -4264,22 +4383,22 @@ scatterplot with varying shapes and/or colors.
 Remember that pie charts only show part-to-whole relationship, so all
 slices need to add up to 100%. Generally, the fewer slices—the better.
 Arrange slices from largest to smallest, clockwise, and put the largest
-slice at 12 o’clock. Figure <a href="#fig:design-principles-pie">67</a>
+slice at 12 o’clock. Figure <a href="#fig:design-principles-pie">68</a>
 illustrates that.
 
 <img src="images/07-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o'clock."  />
 <p class="caption">
-Figure 67: Sort slices in pie charts from largest to smallest, and start
+Figure 68: Sort slices in pie charts from largest to smallest, and start
 at 12 o’clock.
 </p>
 
 If your pie chart has more than five slices, consider showing your data
 in a bar chart, either stacked or split, like Figure
-<a href="#fig:design-principles-pie-to-bar">68</a> shows.
+<a href="#fig:design-principles-pie-to-bar">69</a> shows.
 
 <img src="images/07-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
 <p class="caption">
-Figure 68: Consider using bar charts instead of pies.
+Figure 69: Consider using bar charts instead of pies.
 </p>
 
 #### Don’t make people turn their heads to read labels
@@ -4287,19 +4406,19 @@ Figure 68: Consider using bar charts instead of pies.
 When your column chart has long x-axis labels that have to be rotated
 (often 90 degrees) to fit, consider turning the chart 90 degrees so that
 it becomes a horizontal bar chart. Take a look at Figure
-<a href="#fig:design-principles-turn-bar">69</a> to see how much easier
+<a href="#fig:design-principles-turn-bar">70</a> to see how much easier
 it is to read horizontally-oriented labels.
 
 <img src="images/07-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 69: For long labels, use horizontal bar charts.
+Figure 70: For long labels, use horizontal bar charts.
 </p>
 
 #### Arrange elements logically
 
 If your bar chart shows different categories, consider ordering them,
 like is shown in Figure
-<a href="#fig:design-principles-order-categories">70</a>. You might want
+<a href="#fig:design-principles-order-categories">71</a>. You might want
 to sort them alphabetically, which can be useful if you want the reader
 to be able to quickly look up an item, such as their town. Ordering
 categories by value is another common technique that makes comparisons
@@ -4308,7 +4427,7 @@ time, they have to be ordered sequentially, of course.
 
 <img src="images/07-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 70: For long labels, use horizontal bar charts.
+Figure 71: For long labels, use horizontal bar charts.
 </p>
 
 #### Do not overload your chart
@@ -4326,7 +4445,7 @@ The use of color is a complex topic, and there are plenty of books and
 research devoted to it. For an excellent overview, see Lisa Charlotte
 Rost’s “[A Friendly Guide to Colors in Data
 Visualization](https://blog.datawrapper.de/colorguide/)” blog post for
-Datawrapper.[16] But some principles are fairly universal. First, do not
+Datawrapper.[17] But some principles are fairly universal. First, do not
 use colors just for the sake of it, most charts are fine being
 monochromatic. Second, remember that colors come with some meaning
 attached, which can vary among cultures. In the world of business, red
@@ -4338,22 +4457,22 @@ Whatever colors you end up choosing, they need to be distinguishable
 in hue (for example, various shades of green––leave them for choropleth
 maps). Certain color combinations are hard to interpret for color-blind
 people, like green/red or yellow/blue, so be very careful with those.
-Figure <a href="#fig:design-principles-color">71</a> shows some good and
+Figure <a href="#fig:design-principles-color">72</a> shows some good and
 bad examples of color use.
 
 <img src="images/07-chart/design-principles-color.png" alt="Don't use colors just for the sake of it."  />
 <p class="caption">
-Figure 71: Don’t use colors just for the sake of it.
+Figure 72: Don’t use colors just for the sake of it.
 </p>
 
 If you follow the advice, you should end up with a de-cluttered chart as
-shown in Figure <a href="#fig:design-principles-decluttered">72</a>.
+shown in Figure <a href="#fig:design-principles-decluttered">73</a>.
 Notice how your eyes are drawn to the bars and their corresponding
 values, not bright colors or secondary components like the axes lines.
 
 <img src="images/07-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
 <p class="caption">
-Figure 72: Make sure important things catch the eye first.
+Figure 73: Make sure important things catch the eye first.
 </p>
 
 Google Sheets Charts
@@ -4415,19 +4534,19 @@ A grouped bar or column chart is best to compare categories
 side-by-side. For example, if you wish to emphasize gender differences
 in obesity across age brackets, then format the male and female data
 series together in vertical columns in your Google Sheet, as shown in
-Figure <a href="#fig:column-grouped-data">73</a>. Now you can easily
+Figure <a href="#fig:column-grouped-data">74</a>. Now you can easily
 create a grouped column chart to displays these data series
-side-by-side, as shown in Figure <a href="#fig:column-grouped">74</a>.
+side-by-side, as shown in Figure <a href="#fig:column-grouped">75</a>.
 
 <img src="images/07-chart/column-grouped-data.png" alt="To create a grouped bar or column chart, format each data series vertically in Google Sheets." width="400" />
 <p class="caption">
-Figure 73: To create a grouped bar or column chart, format each data
+Figure 74: To create a grouped bar or column chart, format each data
 series vertically in Google Sheets.
 </p>
 
 <img src="images/07-chart/column-grouped.png" alt="Grouped Column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf)."  />
 <p class="caption">
-Figure 74: Grouped Column chart: Explore the [interactive
+Figure 75: Grouped Column chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
 Data from
 [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf).
@@ -4441,93 +4560,93 @@ template and follow these steps.
     with US obesity data by gender and age. Sign in to your account, and
     go to *File &gt; Make a Copy* to save a version you can edit to your
     own Google Drive, as shown in Figure
-    <a href="#fig:file-make-copy2">75</a>.
+    <a href="#fig:file-make-copy2">76</a>.
 
 <img src="images/07-chart/file-make-copy2.png" alt="Make your own copy of the Google Sheet template." width="250px" />
 <p class="caption">
-Figure 75: Make your own copy of the Google Sheet template.
+Figure 76: Make your own copy of the Google Sheet template.
 </p>
 
 1.  To remove the current chart from your copy of the spreadsheet, float
     your cursor to the top-right corner of the chart to make the 3-dot
     kebab menu appear, and select *Delete*, as shown in Figure
-    <a href="#fig:delete-chart">76</a>.
+    <a href="#fig:delete-chart">77</a>.
 
 <img src="images/07-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot kebab menu appear, and select Delete." width="180px" />
 <p class="caption">
-Figure 76: Float cursor in top-right corner of the chart to make the
+Figure 77: Float cursor in top-right corner of the chart to make the
 3-dot kebab menu appear, and select Delete.
 </p>
 
 Note: Another name for the 3-dot menu symbol is the “kebab menu” because
 it resembles Middle Eastern food cooked on a skewer, in contrast to the
 three-line “hamburger menu” on many mobile devices, as shown in Figure
-<a href="#fig:menu-hamburger-kebab">77</a>. Software developers must be
+<a href="#fig:menu-hamburger-kebab">78</a>. Software developers must be
 hungry.
 
 <img src="images/07-chart/menu-hamburger-kebab.png" alt="Distinguish between the hamburger verus kebab menu icons."  />
 <p class="caption">
-Figure 77: Distinguish between the hamburger verus kebab menu icons.
+Figure 78: Distinguish between the hamburger verus kebab menu icons.
 </p>
 
 1.  Format your data to make each column a data series (such as male and
     female), as shown in Figure
-    <a href="#fig:column-grouped-data">73</a>, which means it will
+    <a href="#fig:column-grouped-data">74</a>, which means it will
     display as a separate color in the chart. Feel free to add more than
     two columns.
 
 2.  Use your cursor to select only the data you wish to chart, then go
     to the *Insert* menu and select *Chart*, as shown in Figure
-    <a href="#fig:column-grouped-insert">78</a>.
+    <a href="#fig:column-grouped-insert">79</a>.
 
 <img src="images/07-chart/column-grouped-insert.png" alt="Select your data and Insert the Chart." width="250px" />
 <p class="caption">
-Figure 78: Select your data and Insert the Chart.
+Figure 79: Select your data and Insert the Chart.
 </p>
 
 1.  In the Chart Editor, change the default selection to *Column chart*,
     with *Stacking none*, to display Grouped Columns, as shown in Figure
-    <a href="#fig:column-grouped-editor">79</a>. Or select *Horizontal
+    <a href="#fig:column-grouped-editor">80</a>. Or select *Horizontal
     bar chart* if you have longer labels.
 
 <img src="images/07-chart/column-grouped-editor.png" alt="Change the default to Column chart, with Stacking none." width="250px" />
 <p class="caption">
-Figure 79: Change the default to Column chart, with Stacking none.
+Figure 80: Change the default to Column chart, with Stacking none.
 </p>
 
 1.  To customize title, labels, and more, in the Chart Editor select
     *Customize*, as shown in Figure
-    <a href="#fig:chart-editor-customize">80</a>. Also, you can select
+    <a href="#fig:chart-editor-customize">81</a>. Also, you can select
     the chart and axis titles to edit them.
 
 <img src="images/07-chart/chart-editor-customize.png" alt="Select Customize to edit title, labels, and more." width="250px" />
 <p class="caption">
-Figure 80: Select Customize to edit title, labels, and more.
+Figure 81: Select Customize to edit title, labels, and more.
 </p>
 
 1.  To make your data public, go to the upper-right corner of your sheet
     to click the Share button, and in the next screen, click the words
     “Change to anyone with the link,” as shown in Figure
-    <a href="#fig:share-button-sheet">81</a>. This means your sheet is
+    <a href="#fig:share-button-sheet">82</a>. This means your sheet is
     no longer Restricted to only you, but can be viewed by anyone with
     the link. See additional options.
 
 <img src="images/07-chart/share-button-sheet-annotated.png" alt="Click the Share button and then click *Change to anyone with the link* to make your data public." width="350px" />
 <p class="caption">
-Figure 81: Click the Share button and then click *Change to anyone with
+Figure 82: Click the Share button and then click *Change to anyone with
 the link* to make your data public.
 </p>
 
 1.  To embed an interactive version of your chart in another web page,
     click the kebab menu in the upper-right corner of your chart, and
     select Publish Chart, as shown in Figure
-    <a href="#fig:chart-publish">82</a>. In the next screen, select
+    <a href="#fig:chart-publish">83</a>. In the next screen, select
     Embed and press the Publish button. See [Chapter 10: Embed on the
     Web](embed.html) to learn what to do with the iframe code.
 
 <img src="images/07-chart/chart-publish.png" alt="Select Publish Chart to embed an interactive chart on another web page." width="150" />
 <p class="caption">
-Figure 82: Select Publish Chart to embed an interactive chart on another
+Figure 83: Select Publish Chart to embed an interactive chart on another
 web page.
 </p>
 
@@ -4543,7 +4662,7 @@ applied to all data points from that series.
 
 <img src="images/07-chart/chart-error-bar.png" alt="Google Sheets is very limited when it comes to setting error bars." width="150" />
 <p class="caption">
-Figure 83: Google Sheets is very limited when it comes to setting error
+Figure 84: Google Sheets is very limited when it comes to setting error
 bars.
 </p>
 
@@ -4558,13 +4677,13 @@ A split column (or bar) chart is best to compare categories in separate
 clusters. For example, imagine you wish to emphasize calorie counts for
 selected foods offered at two different restaurants, Starbucks and
 McDonalds. Format the restaurant data in vertical columns in your Google
-Sheet, as shown in Figure <a href="#fig:bar-split-data">84</a>. Since
+Sheet, as shown in Figure <a href="#fig:bar-split-data">85</a>. Since
 food items are unique to each restaurant, only enter calorie data in the
 appropriate column, and leave other cells blank. Now you can easily
 create a split bar (or column) chart that displays the restaurant data
 in different clusters, as shown in Figure
-<a href="#fig:bar-split">85</a>. Unlike the grouped column chart
-previously shown in Figure <a href="#fig:column-grouped">74</a>, here
+<a href="#fig:bar-split">86</a>. Unlike the grouped column chart
+previously shown in Figure <a href="#fig:column-grouped">75</a>, here
 the bars are separated from each other, because we do not wish to draw
 comparisons between food items that are unique to each restaurant. Also,
 our chart displays horizontal bars (not columns) because our some data
@@ -4572,13 +4691,13 @@ labels are long.
 
 <img src="images/07-chart/bar-split-data.png" alt="To create a split bar (or column) chart, format each data series vertically, and leave cells blank where appropriate." width="550" />
 <p class="caption">
-Figure 84: To create a split bar (or column) chart, format each data
+Figure 85: To create a split bar (or column) chart, format each data
 series vertically, and leave cells blank where appropriate.
 </p>
 
 <img src="images/07-chart/bar-split.png" alt="Split bar chart: Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [Starbucks and McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126)."  />
 <p class="caption">
-Figure 85: Split bar chart: Explore the [full-screen interactive
+Figure 86: Split bar chart: Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
 Data from [Starbucks and
 McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126).
@@ -4597,22 +4716,22 @@ Stacked column (or bar) charts are best to compare subcategories, or
 parts of a whole. For example, if you wish to compare the percentage of
 overweight residents across nations, format each weight-level data
 series in vertical columns in your Google Sheet, as shown in Figure
-<a href="#fig:column-stacked-data">86</a>. Now you can easily create a
+<a href="#fig:column-stacked-data">87</a>. Now you can easily create a
 stacked column (or bar) chart that displays comparisons of weight-level
 subcategories across nations, as shown in Figure
-<a href="#fig:column-stacked">87</a>. Often it’s better to use a stacked
+<a href="#fig:column-stacked">88</a>. Often it’s better to use a stacked
 chart instead of multiple pie charts, because people can see differences
 more precisely in rectangular stacks than in circular pie slices.
 
 <img src="images/07-chart/column-stacked-data.png" alt="To create a stacked column (or bar) chart, format each data series vertically in Google Sheets." width="450" />
 <p class="caption">
-Figure 86: To create a stacked column (or bar) chart, format each data
+Figure 87: To create a stacked column (or bar) chart, format each data
 series vertically in Google Sheets.
 </p>
 
 <img src="images/07-chart/column-stacked.png" alt="Stacked column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive). Data from [WHO and CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691)."  />
 <p class="caption">
-Figure 87: Stacked column chart: Explore the [interactive
+Figure 88: Stacked column chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive).
 Data from [WHO and
 CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691).
@@ -4631,11 +4750,11 @@ category in red), click the kebab menu in the top-right corner of the
 chart, then go to *Edit Chart &gt; Customize &gt; Series*. Then choose
 the appropriate series from the dropdown menu, and set its color in the
 dropdown menu, as shown in Figure
-<a href="#fig:column-stacked-edit-series">88</a>.
+<a href="#fig:column-stacked-edit-series">89</a>.
 
 <img src="images/07-chart/column-stacked-edit-series.png" alt="To edit a column color, select *Edit Chart - Customize - Series*." width="500" />
 <p class="caption">
-Figure 88: To edit a column color, select *Edit Chart - Customize -
+Figure 89: To edit a column color, select *Edit Chart - Customize -
 Series*.
 </p>
 
@@ -4657,22 +4776,22 @@ point, whether numerical or categorical, into one of the non-overlapping
 buckets. For example, imagine that you wish to track the number of
 customers each hour in a local coffee shop. Format the raw customer data
 series in a vertical column in your Google Sheet, as shown in Figure
-<a href="#fig:histogram-data">89</a>. Now you can easily create a
+<a href="#fig:histogram-data">90</a>. Now you can easily create a
 histogram column chart that displays the number of customers per hour,
-as shown in Figure <a href="#fig:histogram">90</a>, which resembles the
+as shown in Figure <a href="#fig:histogram">91</a>, which resembles the
 “popular times” format for businesses in Google Maps. This coffee shop
 experiences a morning rush and an afternoon rush, but the middle of the
 day and late evenings are relatively quiet.
 
 <img src="images/07-chart/histogram-data.png" alt="To create a histogram, format the raw data series vertically in Google Sheets." width="250" />
 <p class="caption">
-Figure 89: To create a histogram, format the raw data series vertically
+Figure 90: To create a histogram, format the raw data series vertically
 in Google Sheets.
 </p>
 
 <img src="images/07-chart/histogram.png" alt="Histogram: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive). Fictitious data on coffee shop customers."  />
 <p class="caption">
-Figure 90: Histogram: Explore the [interactive
+Figure 91: Histogram: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive).
 Fictitious data on coffee shop customers.
 </p>
@@ -4713,21 +4832,21 @@ with this type of chart for reasons explained further below. For
 example, if you wish to show the number of different fruits sold by a
 store in one day, as a proportion of total fruit sold, then format the
 labels and values in vertical columns in your Google Sheet, as shown in
-Figure <a href="#fig:pie-data">91</a>. Values can be expressed as either
+Figure <a href="#fig:pie-data">92</a>. Values can be expressed as either
 raw numbers or percentages. Now you can easily create a pie chart that
 displays these values as colored slices of a circle, as shown in Figure
-<a href="#fig:pie">92</a>. Viewers can see that bananas made up slightly
+<a href="#fig:pie">93</a>. Viewers can see that bananas made up slightly
 over half of the fruit sold, followed by apples and oranges.
 
 <img src="images/07-chart/pie-data.png" alt="To create a pie chart, format the data values vertically in Google Sheets." width="300" />
 <p class="caption">
-Figure 91: To create a pie chart, format the data values vertically in
+Figure 92: To create a pie chart, format the data values vertically in
 Google Sheets.
 </p>
 
 <img src="images/07-chart/pie.png" alt="Pie chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive). Data is fictitious."  />
 <p class="caption">
-Figure 92: Pie chart: Explore the [interactive
+Figure 93: Pie chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive).
 Data is fictitious.
 </p>
@@ -4765,21 +4884,21 @@ century. In your Google Sheet, organize the time units (such as years)
 into the first column, since these will appear on the horizontal X-axis.
 Also, place each data series (such as beef, pork, chicken) alongside the
 vertical time-unit column, and each series will become its own line, as
-shown in Figure <a href="#fig:line-data">93</a>. Now you can easily
+shown in Figure <a href="#fig:line-data">94</a>. Now you can easily
 create a line chart that emphasizes each data series changed over time,
-as shown in Figure <a href="#fig:line">94</a>. In the US, the amount of
+as shown in Figure <a href="#fig:line">95</a>. In the US, the amount of
 chicken per capita steadily rose and surpassed pork and beef around
 2000.
 
 <img src="images/07-chart/line-data.png" alt="To create a line chart, format the time units and each data series in vertical columns." width="300" />
 <p class="caption">
-Figure 93: To create a line chart, format the time units and each data
+Figure 94: To create a line chart, format the time units and each data
 series in vertical columns.
 </p>
 
 <img src="images/07-chart/line.png" alt="Line chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive). Data from [US Department of Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing)."  />
 <p class="caption">
-Figure 94: Line chart: Explore the [interactive
+Figure 95: Line chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive).
 Data from [US Department of
 Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing).
@@ -4809,16 +4928,16 @@ capita over time. Stacked line charts show both aspects of your data
 simultaneously.
 
 To create a stacked area chart, organize the data in the same way as you
-did for the line chart in Figure <a href="#fig:line-data">93</a>. Now
+did for the line chart in Figure <a href="#fig:line-data">94</a>. Now
 you can easily create a stacked line chart that displays the
 availability of each meat—and their combined total—over time, as shown
-in Figure <a href="#fig:stacked-area">95</a>. Overall, we can see that
+in Figure <a href="#fig:stacked-area">96</a>. Overall, we can see that
 total available meat per capita increased after the 1930s Depression,
 and chicken steadily became a larger portion of the total after 1970.
 
 <img src="images/07-chart/stacked-area.png" alt="Stacked area chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive). Data from [US Department of Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing)."  />
 <p class="caption">
-Figure 95: Stacked area chart: Explore the [interactive
+Figure 96: Stacked area chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive).
 Data from [US Department of
 Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing).
@@ -4903,13 +5022,13 @@ above. Place units of time (such as months-years) in the first column,
 and numerical data values (such as the unemployment rate) in the second
 column. Now you’re ready to create an interactive line chart with
 annotations, as shown in Figure
-<a href="#fig:datawrapper-annotated">96</a>. Since 2000, the
+<a href="#fig:datawrapper-annotated">97</a>. Since 2000, the
 unemployment rate has peaked three times, but the tallest peak occured
 during the 2020 economic crisis during the Covid pandemic.
 
 <img src="images/07-chart/datawrapper-annotated.png" alt="Line chart with annotation: Explore the [interactive version](https://datawrapper.dwcdn.net/vHuob/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972)."  />
 <p class="caption">
-Figure 96: Line chart with annotation: Explore the [interactive
+Figure 97: Line chart with annotation: Explore the [interactive
 version](https://datawrapper.dwcdn.net/vHuob/1/). Data from [US Federal
 Reserve Open
 Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972).
@@ -4931,7 +5050,7 @@ tutorial:
 
 3.  In the *Upload Data* screen, click *Import Google Spreadsheet* and
     paste the link to the data in the shared Google Sheet above, as
-    shown in Figure <a href="#fig:datawrapper-annotated-upload">97</a>,
+    shown in Figure <a href="#fig:datawrapper-annotated-upload">98</a>,
     then click *Proceed*. To upload a Google Sheet, the Share setting
     must be changed from *Private*, the default setting, to *Anyone with
     the link can view* at minimum. Also, if you update cells in your
@@ -4942,7 +5061,7 @@ tutorial:
 
 <img src="images/07-chart/datawrapper-annotated-upload.png" alt="To upload data from a shared Google Sheet, click the button and paste the link." width="550" />
 <p class="caption">
-Figure 97: To upload data from a shared Google Sheet, click the button
+Figure 98: To upload data from a shared Google Sheet, click the button
 and paste the link.
 </p>
 
@@ -4978,7 +5097,7 @@ does not need to be transposed, since it’s organized correctly.
     section, and click the button to add one to the chart. Type “Great
     Recession” into the text field of your first annotation, and move
     your cursor to place it around the unemployment peak in 2009, as
-    shown in Figure <a href="#fig:datawrapper-annotated-text">98</a>.
+    shown in Figure <a href="#fig:datawrapper-annotated-text">99</a>.
     This helps readers to place the [Great
     Recession](https://en.wikipedia.org/wiki/Great_Recession_in_the_United_States)
     in historical context. Click to add another text annotation, type
@@ -4991,14 +5110,14 @@ does not need to be transposed, since it’s organized correctly.
 
 <img src="images/07-chart/datawrapper-annotated-text.png" alt="Add text annotations by typing a label and positioning it on the chart."  />
 <p class="caption">
-Figure 98: Add text annotations by typing a label and positioning it on
+Figure 99: Add text annotations by typing a label and positioning it on
 the chart.
 </p>
 
 1.  Scroll down further in the *Annotate* tab to the *Highlight value
     ranges* section, and click the button to add one to the chart. Click
     inside the chart to “draw” a bar from December 2007 to June 2009, as
-    shown in Figure <a href="#fig:datawrapper-annotated-range">99</a>.
+    shown in Figure <a href="#fig:datawrapper-annotated-range">100</a>.
     This period represents the official beginning and ending of the US
     Great Recession in the eyes of economists, although unemployment
     continued to grow for the population at large. When you finish
@@ -5014,7 +5133,7 @@ the chart.
 range highlight by”drawing" a rectangular bar on the chart." width=“600”
 /&gt;
 <p class="caption">
-Figure 99: Add a range highlight by “drawing” a rectangular bar on the
+Figure 100: Add a range highlight by “drawing” a rectangular bar on the
 chart.
 </p>
 
@@ -5044,24 +5163,24 @@ above illustrated how the overall US unemployment rate changed over
 time. But if we wish to look at differences in gender and race/ethnicity
 for a specific point in time, a range chart will highlight any gaps.
 Organize the data for a range chart into rows and columns, as shown in
-Figure <a href="#fig:datawrapper-range-data">100</a>. The column headers
+Figure <a href="#fig:datawrapper-range-data">101</a>. The column headers
 contain data labels you wish to highlight, such *Men* and *Women*. The
 first column contains your categories, such as racial/ethnic groups,
 followed by the numerical values under each header. Now you can easily
 create an interactive range chart as shown in Figure
-<a href="#fig:datawrapper-range">101</a>. The employment gender gap is
+<a href="#fig:datawrapper-range">102</a>. The employment gender gap is
 visible in all three racial/ethnic groups, but the gap was widest
 between Hispanic men and women in May 2020.
 
 <img src="images/07-chart/datawrapper-range-data.png" alt="Organize your range chart data labels into column headers, with categories and values in each row." width="300" />
 <p class="caption">
-Figure 100: Organize your range chart data labels into column headers,
+Figure 101: Organize your range chart data labels into column headers,
 with categories and values in each row.
 </p>
 
 <img src="images/07-chart/datawrapper-range.png" alt="Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/v8D2z/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0)."  />
 <p class="caption">
-Figure 101: Range chart: Explore the [interactive
+Figure 102: Range chart: Explore the [interactive
 version](https://datawrapper.dwcdn.net/v8D2z/1/). Data from [US Federal
 Reserve Open
 Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
@@ -5107,11 +5226,11 @@ abbreviated. So if you get lost, see more details and images above.
     numbers at both ends of each range. Second, push the slider to
     *Label first range*, which places the word *Men* and *Women* above
     the first range, as shown in Figure
-    <a href="#fig:datawrapper-range-labels">102</a>.
+    <a href="#fig:datawrapper-range-labels">103</a>.
 
 <img src="images/07-chart/datawrapper-range-labels.png" alt="Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range."  />
 <p class="caption">
-Figure 102: Modify the labels settings to show values at both ends of
+Figure 103: Modify the labels settings to show values at both ends of
 each range, and to place your data labels on your first range.
 </p>
 
@@ -5119,11 +5238,11 @@ each range, and to place your data labels on your first range.
     to improve the colors. Select the *Range end* drop-down menu to
     select a better color, such as red. Also, change the *Range color*
     setting to *gradient* to emphasize the range, as shown in Figure
-    <a href="#fig:datawrapper-range-appearance">103</a>.
+    <a href="#fig:datawrapper-range-appearance">104</a>.
 
 <img src="images/07-chart/datawrapper-range-appearance.png" alt="Modify the appearance settings to improve the color and add a gradient."  />
 <p class="caption">
-Figure 103: Modify the appearance settings to improve the color and add
+Figure 104: Modify the appearance settings to improve the color and add
 a gradient.
 </p>
 
@@ -5180,12 +5299,12 @@ A scatter chart is best to show the relationship between two sets of
 data as XY coordinates on a grid. Imagine you wish to compare life
 expectancy and fertility data for different nations. Organize your data
 in three columns, as shown in Figure
-<a href="#fig:scatter-data">104</a>. The first column contains the
+<a href="#fig:scatter-data">105</a>. The first column contains the
 *Country* labels, and the second column, *Life Expectancy*, will appear
 on the horizontal x-axis, while the third column, *Fertility*, will
 appear on the vertical y-axis. Now you can easily create a scatter chart
 that displays a relationship between these datasets, as shown in Figure
-<a href="#fig:scatter">105</a>. One way to summarize the chart is that
+<a href="#fig:scatter">106</a>. One way to summarize the chart is that
 nations with lower fertility rates (or fewer births per woman) tend to
 have high life expectancy rates. But another way to phrase it is that
 nations with higher life expectancy at birth have lower fertility.
@@ -5195,13 +5314,13 @@ females create fewer children.
 
 <img src="images/07-chart/scatter-data.png" alt="To create a scatter chart in Datawrapper, format data in three columns: labels, x-values, and y-values." width="350" />
 <p class="caption">
-Figure 104: To create a scatter chart in Datawrapper, format data in
+Figure 105: To create a scatter chart in Datawrapper, format data in
 three columns: labels, x-values, and y-values.
 </p>
 
 <img src="images/07-chart/scatter.png" alt="Scatter chart: Explore the [interactive version](https://datawrapper.dwcdn.net/8OQz7/1/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/)."  />
 <p class="caption">
-Figure 105: Scatter chart: Explore the [interactive
+Figure 106: Scatter chart: Explore the [interactive
 version](https://datawrapper.dwcdn.net/8OQz7/1/). Data from the [World
 Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/).
 </p>
@@ -5241,29 +5360,29 @@ tooltips to properly display your data:
     *return* twice on your keyboard, then type `Fertility:` and click on
     the blue column with the same name to add it, so that
     `{{ Fertility }}` appears right after it, as shown in Figure
-    <a href="#fig:scatter-tooltip-editor">106</a>. Press *Save* to close
+    <a href="#fig:scatter-tooltip-editor">107</a>. Press *Save* to close
     the tooltip editor window.
 
 <img src="images/07-chart/scatter-tooltip-editor.png" alt="In the tooltip editor window, type and click column headers to customize the display."  />
 <p class="caption">
-Figure 106: In the tooltip editor window, type and click column headers
+Figure 107: In the tooltip editor window, type and click column headers
 to customize the display.
 </p>
 
 1.  Back in the *Visualize* screen, when you hover your cursor over a
     point, the tooltip will properly display its data according to your
     editor settings above, as shown in Figure Figure
-    <a href="#fig:scatter-tooltip">107</a>.
+    <a href="#fig:scatter-tooltip">108</a>.
 
 <img src="images/07-chart/scatter-tooltip.png" alt="Hover over a data point to inspect the edited tooltip display." width="400" />
 <p class="caption">
-Figure 107: Hover over a data point to inspect the edited tooltip
+Figure 108: Hover over a data point to inspect the edited tooltip
 display.
 </p>
 
 1.  Finish the annotations to add your title and data source, then
     proceed to publish and embed your chart, as described in [Chapter
-    10: Embed on Your Web](embed.html).
+    10: Embed on the Web](embed.html).
 
 ### Bubble Charts
 
@@ -5274,21 +5393,21 @@ this concept by creating a bubble chart that adds two more datasets:
 population (shown by the size of each point, or bubble) and region of
 the world (shown by the color of each bubble). We’ll use similar World
 Bank data as before, with two additional columns, as shown in Figure
-<a href="#fig:bubble-data">108</a>. Note that we’re using numeric data
+<a href="#fig:bubble-data">109</a>. Note that we’re using numeric data
 (population) for bubble size, but categorical data (regions) for color.
 Now you can easily create a bubble chart that displays a relationship
 between these four datasets, as shown in Figure
-<a href="#fig:bubble">109</a>.
+<a href="#fig:bubble">110</a>.
 
 <img src="images/07-chart/bubble-data.png" alt="To create a bubble chart in Datawrapper, organize the data into five columns: labels, x-axis, y-axis, bubble size, bubble color." width="500" />
 <p class="caption">
-Figure 108: To create a bubble chart in Datawrapper, organize the data
+Figure 109: To create a bubble chart in Datawrapper, organize the data
 into five columns: labels, x-axis, y-axis, bubble size, bubble color.
 </p>
 
 <img src="images/07-chart/bubble.png" alt="Bubble chart: Explore the [interactive version](https://datawrapper.dwcdn.net/ZX9QR/2/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg)."  />
 <p class="caption">
-Figure 109: Bubble chart: Explore the [interactive
+Figure 110: Bubble chart: Explore the [interactive
 version](https://datawrapper.dwcdn.net/ZX9QR/2/). Data from the [World
 Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg).
 </p>
@@ -5311,12 +5430,12 @@ tooltips, bubble sizes, and colors to display your data:
     *Customize tooltip HTML* window, type in the fields and click on the
     blue column names to customize your tooltips to display country,
     life expectancy, fertility, and population, as shown in Figure
-    <a href="#fig:bubble-tooltip-editor">110</a>. Press *Save* to close
+    <a href="#fig:bubble-tooltip-editor">111</a>. Press *Save* to close
     the tooltip editor window.
 
 <img src="images/07-chart/bubble-tooltip-editor.png" alt="In the tooltip editor window, type and click column headers to customize the display."  />
 <p class="caption">
-Figure 110: In the tooltip editor window, type and click column headers
+Figure 111: In the tooltip editor window, type and click column headers
 to customize the display.
 </p>
 
@@ -5325,11 +5444,11 @@ to customize the display.
     colors* button to assign a unique color to each. Then scroll down to
     *Size*, check the box to change size to *variable*, select column
     for *Population*, and increase the max size slider, as shown in
-    Figure <a href="#fig:bubble-color-size">111</a>. Click *Proceed*.
+    Figure <a href="#fig:bubble-color-size">112</a>. Click *Proceed*.
 
 <img src="images/07-chart/bubble-color-size.png" alt="In the *Visualize* screen, modify the bubble colors and set size to variable." width="350" />
 <p class="caption">
-Figure 111: In the *Visualize* screen, modify the bubble colors and set
+Figure 112: In the *Visualize* screen, modify the bubble colors and set
 size to variable.
 </p>
 
@@ -5398,7 +5517,7 @@ Organize your data in three columns, the same way as the [Datawrapper
 scatter chart tutorial](scatter-datawrapper.html): the first column for
 data labels, the second column for the x-axis, and the third column for
 the y-axis. Then you can create an interactive scatter chart as shown in
-Figure <a href="#fig:tableau-scatter">112</a>, which illustrates a
+Figure <a href="#fig:tableau-scatter">113</a>, which illustrates a
 strong relationship between household income and test scores (above or
 below the national average for 6th grade math and English) in
 Connecticut public school districts. To learn more about the data and
@@ -5415,7 +5534,7 @@ repo](https://github.com/trendct-data/stanford-cepa).
 
 <img src="images/07-chart/tableau-scatter.png" alt="Scatter chart in Tableau Public: Explore the [interactive version](https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1). Data by [CT Mirror/TrendCT and Stanford CEPA](https://github.com/trendct-data/stanford-cepa)."  />
 <p class="caption">
-Figure 112: Scatter chart in Tableau Public: Explore the [interactive
+Figure 113: Scatter chart in Tableau Public: Explore the [interactive
 version](https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1).
 Data by [CT Mirror/TrendCT and Stanford
 CEPA](https://github.com/trendct-data/stanford-cepa).
@@ -5447,14 +5566,14 @@ Public, follow this tutorial.
     *Sheets*, you will see two tables, `data` and `notes`.
 
 4.  Drag the `data` sheet into *Drag tables here* area, as shown in
-    Figure <a href="#fig:tableau-connect">113</a>. You will see the
+    Figure <a href="#fig:tableau-connect">114</a>. You will see the
     preview of the table under the drag-and-drop area. You have
     successfully connected one data source to Tableau Public, and you
     are ready to build your first chart.
 
 <img src="images/07-chart/tableau-connect-annotated.png" alt="Drag `data` sheet into *Drag tables here* area."  />
 <p class="caption">
-Figure 113: Drag `data` sheet into *Drag tables here* area.
+Figure 114: Drag `data` sheet into *Drag tables here* area.
 </p>
 
 #### Create Scatter Chart in the Worksheet
@@ -5470,7 +5589,7 @@ or numeric labels) or green (for continuous values, mostly numbers).
 
 1.  In your worksheet, drag the *Grade Levels* field into the *Rows*
     field above the charting area, which for now is just empty space.
-    See Figure <a href="#fig:tableau-scatter-dragging">114</a> for this
+    See Figure <a href="#fig:tableau-scatter-dragging">115</a> for this
     dragging step and the following two steps. Tableau will apply a
     summation function to it, and you will see `SUM(Grade Levels)`
     appear in the *Rows* row, and a blue bar in the charting area. It
@@ -5496,7 +5615,7 @@ or numeric labels) or green (for continuous values, mostly numbers).
 
 <img src="images/07-chart/tableau-scatter-dragging-annotated.png" alt="Drag data fields to the right locations in Tableau Public."  />
 <p class="caption">
-Figure 114: Drag data fields to the right locations in Tableau Public.
+Figure 115: Drag data fields to the right locations in Tableau Public.
 </p>
 
 #### Add Title and Caption, and Publish
@@ -5509,11 +5628,11 @@ so inside a *Caption*, a text block that accompanies your Tableau chart.
 In the menu, go to *Worksheet &gt; Show Caption*. Double-click the
 Caption block that appears, and edit the text. As a result, your final
 worksheet will look like shown in Figure
-<a href="#fig:tableau-scatter-final">115</a>.
+<a href="#fig:tableau-scatter-final">116</a>.
 
 <img src="images/07-chart/tableau-scatter-final-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 115: This scatter chart is ready to be published.
+Figure 116: This scatter chart is ready to be published.
 </p>
 
 Tip: In the dropdown above the *Columns* shelf, change *Standard* to
@@ -5544,7 +5663,7 @@ horizontal space.
 
 <img src="images/07-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 116: This scatter chart is ready to be published.
+Figure 117: This scatter chart is ready to be published.
 </p>
 
 Tip: Your entire portfolio of Tableau Public visualizations is online at
@@ -5571,7 +5690,7 @@ them with too much information at once.
 In this tutorial, we will build an interactive filtered line chart with
 Tableau Public, to visualize how internet access has changed in
 different nations over time. Organize the data in three columns, as
-shown in Figure <a href="#fig:tableau-filtered-data">117</a>. The first
+shown in Figure <a href="#fig:tableau-filtered-data">118</a>. The first
 column, *Country Name*, are the data labels that become the colored
 lines. The second column, *Year*, will appear on the horizontal x-axis.
 The third column, *Percent Internet Users*, are numeric values that
@@ -5579,11 +5698,11 @@ appear on the vertical y-axis. Now you can create a filtered line chart
 with checkboxes, to show only selected lines on startup to avoid
 overwhelming users, while allowing them to toggle on other lines, and
 hover over each one for more details, as shown in Figure
-<a href="#fig:tableau-filtered">118</a>.
+<a href="#fig:tableau-filtered">119</a>.
 
 <img src="images/07-chart/tableau-filtered-data.png" alt="In a filtered line chart, organize the data in three columns, data labels, year, and numeric values." width="350" />
 <p class="caption">
-Figure 117: In a filtered line chart, organize the data in three
+Figure 118: In a filtered line chart, organize the data in three
 columns, data labels, year, and numeric values.
 </p>
 
@@ -5591,7 +5710,7 @@ columns, data labels, year, and numeric values.
 
 <img src="images/07-chart/tableau-filtered.png" alt="Filtered Line chart: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1). Data from [World Bank](https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793)."  />
 <p class="caption">
-Figure 118: Filtered Line chart: Explore the [interactive
+Figure 119: Filtered Line chart: Explore the [interactive
 version](https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1).
 Data from [World
 Bank](https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793).
@@ -5652,7 +5771,7 @@ ready to begin building your interactive chart.
     *OK*.
 5.  In the *Filters* card, click the dropdown arrow of the **Country
     Name** symbol, then scroll down and select Show Filter, as shown in
-    Figure <a href="#fig:tableau-filtered-show-filter">119</a>.
+    Figure <a href="#fig:tableau-filtered-show-filter">120</a>.
 6.  You will see a list of options with all checkboxes to appear on the
     right side of the chart. Click *(All)* to add/remove all options,
     and select a few countries to see how the interactive filtering
@@ -5670,7 +5789,7 @@ ready to begin building your interactive chart.
 
 <img src="images/07-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220" />
 <p class="caption">
-Figure 119: After you drag Country Name to the Filters card, make sure
+Figure 120: After you drag Country Name to the Filters card, make sure
 the Filter is displayed.
 </p>
 
@@ -5691,7 +5810,7 @@ the Filter is displayed.
     and see that the empty space on the edges has disappeared.
 
 4.  Once your filtered line chart looks like the one shown in Figure
-    <a href="#fig:tableau-filtered-ready">120</a>, you are ready to
+    <a href="#fig:tableau-filtered-ready">121</a>, you are ready to
     publish. Go to *File &gt; Save to Tableau Public As…*, and log into
     your account, or create one if you haven’t yet done so. Follow the
     prompts to publish your chart on the public web, or see the previous
@@ -5700,7 +5819,7 @@ the Filter is displayed.
 
 <img src="images/07-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
 <p class="caption">
-Figure 120: This workbook is ready to be published.
+Figure 121: This workbook is ready to be published.
 </p>
 
 See the [Embed Tableau Public on Your Website](embed-tableau.html)
@@ -5769,8 +5888,8 @@ map your data.
 <td>Best to show specific locations, such as addresses with geocoded coordinates, with colors for different categories. <br>Easy tool: <a href="mymaps.html">Google My Maps tutorial</a><br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
 </tr>
 <tr class="even">
-<td>Polygon map <br> <img src="images/08-map/map-polygon.png" /></td>
-<td>Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. Also known as choropleth map. <br>Easy tool: n/a <br>Power tools: <a href="map-tableau.html">Tableau Public</a> or <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
+<td>Polygon or Choropleth map <br> <img src="images/08-map/map-polygon.png" /></td>
+<td>Best to show regions (such as nations or neighborhoods), with colors or shading to represent data values. <br>Easy tool: <a href="map-datawrapper.html">Datawrapper</a> <br>Power tools: <a href="map-tableau.html">Tableau Public</a> or <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> and other <a href="leaflet.html">Leaflet templates</a></td>
 </tr>
 <tr class="odd">
 <td>Polyline map <br> <img src="images/08-map/map-polyline.png" /></td>
@@ -5793,16 +5912,21 @@ map your data.
 
 TODO ABOVE:
 
--   UPDATE table to match chapter contents, and reorganize to feature
-    easier tools at top.
--   Keep Google My Maps point map tool; perhaps mention BatchGeo again?
-    Datawrapper symbol map?
+-   UPDATE table text and images to match chapter contents, and
+    reorganize to feature easier tools at top.
+-   DECIDE on consistent language for Colored Polygon and/or Choropleth
+    map
+-   DECIDE if Socrata point map really needs to be featured here
 -   Confirm removing Storymap “easy tools” because neither allow you to
     export data you enter: [Knight Lab’s
     StoryMap](https://storymap.knightlab.com/), [ESRI Story
-    Maps](https://storymaps.arcgis.com/en/)
+    Maps](https://storymaps.arcgis.com/en/) OR mention (but do not
+    recommend) Storymap.js as an easy tool, but cannot easily migrate
+    data out, then Leaflet Storymaps with GS as a power tool
+-   mention HistoryPin.org as another storytelling type of map?
 -   Add tab-view map for historical change template?
 -   Add synchronized side-by-side map template?
+-   Remind readers to see GitHub chapter before using code templates
 
 Map Design Principles
 ---------------------
@@ -5832,14 +5956,14 @@ printed materials) and color.
 
 ### Understand the Vocabulary
 
-Take a look at Figure <a href="#fig:map-principles-map">121</a> to get
+Take a look at Figure <a href="#fig:map-principles-map">122</a> to get
 familiar with main basic elements of an interactive map. Similar to a
 chart, a good maps should have a title and a description that gives a
 bit of context about what the map is showing.
 
 <img src="images/08-map/map-principles-map.png" alt="Map elements."  />
 <p class="caption">
-Figure 121: Map elements.
+Figure 122: Map elements.
 </p>
 
 The data in the map is presented as layers. A base layer is often
@@ -5863,31 +5987,35 @@ with information that appear when you click or hover over map elements.
 Interactive web maps often have zoom controls (`+` and `-` buttons) to
 allow users to inspect data from various “distances”.
 
-Normalize Your Map Data
------------------------
+### Normalize Your Map Data
 
 TODO: cross-ref back to Normalize data section in Compare chapter, then
 build on it here
 
+TODO: The rest of this map design section is really about choropleth
+maps, so consider labeling it this way. Also, incorporate more design
+guidelines from
+<a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>
+
 Choropleth maps are best when they represent relative values (such as
 percentages or per capita rates), not absolute values (such as the raw
 number of people). Consider two maps shown in Figure
-<a href="#fig:normalize-map-data">122</a>. They both are about Covid-19
+<a href="#fig:normalize-map-data">123</a>. They both are about Covid-19
 cases in the US states (excluding Alaska and Hawaii) as of June 26,
-2020. Figure <a href="#fig:normalize-map-data">122</a>a shows total
+2020. Figure <a href="#fig:normalize-map-data">123</a>a shows total
 number of recorded cases per state, and Figure
-<a href="#fig:normalize-map-data">122</a>b shows Covid-19 cases adjusted
+<a href="#fig:normalize-map-data">123</a>b shows Covid-19 cases adjusted
 by the state’s population. Darker colors represent higher values. Do you
 notice any differences in spatial patterns?
 
 <img src="images/14-transform/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
 <p class="caption">
-Figure 122: Choropleth maps work best with normalized values.
+Figure 123: Choropleth maps work best with normalized values.
 </p>
 
 Both maps show Covid-19 data collected by the New York Times and
 published [on GitHub](https://github.com/nytimes/covid-19-data). In the
-map in Figure <a href="#fig:normalize-map-data">122</a>b, we normalized
+map in Figure <a href="#fig:normalize-map-data">123</a>b, we normalized
 (divided) values by population in each state, according to the 2018 US
 Census American Community Survey, the most recent data available on the
 day of writing. We didn’t add legends and other important cartographic
@@ -5896,14 +6024,14 @@ In both cases, we used Jenks natural breaks for classification.
 
 What are the worst-hit states according to the map showing total
 Covid-19 counts (shown in Figure
-<a href="#fig:normalize-map-data">122</a>a)? If you are familiar with
+<a href="#fig:normalize-map-data">123</a>a)? If you are familiar with
 the US geography, you can quickly tell that these are New York, New
 Jersey, Massachusetts, Florida, Illinois, Texas, and California. But
 five of these happen to be some of the most populous states in the US,
 so it makes sense that they will also have higher Covid-19 cases.
 
 Now, how about the map in Figure
-<a href="#fig:normalize-map-data">122</a>b? You can see that New York
+<a href="#fig:normalize-map-data">123</a>b? You can see that New York
 and its neighbors, including New Jersey and Massachusetts, have by far
 the highest rates per capita (per person), which we saw in the first
 map. But you can also see that in fact California, Texas, and Florida
@@ -5920,11 +6048,11 @@ palettes.
 
 Color palettes can be grouped into sequential, diverging, and
 qualitative. The examples are shown in Figure
-<a href="#fig:map-principles-color-schemes">123</a>.
+<a href="#fig:map-principles-color-schemes">124</a>.
 
 <img src="images/08-map/map-principles-color-schemes.png" alt="Examples of sequential, diverging, and qualitative color schemes from [ColorBrewer](https://colorbrewer2.org/)."  />
 <p class="caption">
-Figure 123: Examples of sequential, diverging, and qualitative color
+Figure 124: Examples of sequential, diverging, and qualitative color
 schemes from [ColorBrewer](https://colorbrewer2.org/).
 </p>
 
@@ -5961,16 +6089,16 @@ choropleth map. While the nature of certain datasets will make the
 choice of a color palette obvious, most of the time you will have to
 actively choose *how* to display your data.
 
-In Figure <a href="#fig:map-principles-classification">124</a>a, we
+In Figure <a href="#fig:map-principles-classification">125</a>a, we
 presented the same dataset using three different color palettes. The map
-in Figure <a href="#fig:map-principles-classification">124</a>a
+in Figure <a href="#fig:map-principles-classification">125</a>a
 represents per capita income for the contiguous US states using a
 sequential color scheme consisting of five shades of blue. The darker
 the color, the higher the income. You can quickly see that states in the
 north-east, such as Connecticut, Massachusetts, New Jersey, and Maryland
 have the highest per capita income.
 
-In Figure <a href="#fig:map-principles-classification">124</a>b, we used
+In Figure <a href="#fig:map-principles-classification">125</a>b, we used
 a divergent color scheme to show whether states have higher or lower per
 capita incomes than the United States as a whole. We subtracted the US
 per capita income value of $33,831 from each state’s value. This new
@@ -5983,11 +6111,11 @@ story about the north-south divide.
 You can also split the 48 states into three groups of 16 based on their
 per capita income, and group them in three thirds, as “low”, “middle”,
 and “top” third. This is what we did in the map shown in Figure
-<a href="#fig:map-principles-classification">124</a>c.
+<a href="#fig:map-principles-classification">125</a>c.
 
 <img src="images/08-map/map-principles-classification.png" alt="Representing per capita income in US states using three different classifications."  />
 <p class="caption">
-Figure 124: Representing per capita income in US states using three
+Figure 125: Representing per capita income in US states using three
 different classifications.
 </p>
 
@@ -5996,11 +6124,11 @@ different classifications.
 One of the most useful color picking tools for meaningful choropleth
 maps is [ColorBrewer](https://colorbrewer2.org/), created by Cynthia
 Brewer and Mark Harrower. You can see ColorBrewer’s interface in Figure
-<a href="#fig:map-principles-colorbrewer">125</a>.
+<a href="#fig:map-principles-colorbrewer">126</a>.
 
 <img src="images/08-map/map-principles-colorbrewer-annotated.png" alt="ColorBrewer interface."  />
 <p class="caption">
-Figure 125: ColorBrewer interface.
+Figure 126: ColorBrewer interface.
 </p>
 
 ColorBrewer can generate color palettes for a specified number of
@@ -6036,34 +6164,34 @@ functions within Google Drive, and so allows you to invite other users
 with Google accounts to work on the map.
 
 In this section, we will look at building a point map of airports in
-Nigeria, as is shown in Figure <a href="#fig:mymaps-final">126</a>. We
+Nigeria, as is shown in Figure <a href="#fig:mymaps-final">127</a>. We
 will create a map, change a baselayer, import point data, style points,
 and share the map.
 
 <img src="images/08-map/mymaps-final.png" alt="A map of airports in Nigeria built using Google My Maps."  />
 <p class="caption">
-Figure 126: A map of airports in Nigeria built using Google My Maps.
+Figure 127: A map of airports in Nigeria built using Google My Maps.
 </p>
 
 ### Create a New Map in My Maps
 
 Navigate to [Google My Maps](https://www.google.com/mymaps/). In the
 upper-right corner, click `+ Create a New Map` button, as shown in
-Figure <a href="#fig:mymaps-create-new">127</a>.
+Figure <a href="#fig:mymaps-create-new">128</a>.
 
 <img src="images/08-map/mymaps-create-new.png" alt="A map of airports in Nigeria built using Google My Maps." width="300" />
 <p class="caption">
-Figure 127: A map of airports in Nigeria built using Google My Maps.
+Figure 128: A map of airports in Nigeria built using Google My Maps.
 </p>
 
 You will see a typical Google Maps with no data. Click on the current
 title (`Untitled map`), and add appropriate title and description in the
 modal window that appeared (see Figure
-<a href="#fig:mymaps-edit-title">128</a> for inspiration).
+<a href="#fig:mymaps-edit-title">129</a> for inspiration).
 
 <img src="images/08-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
 <p class="caption">
-Figure 128: Add title and description to your map.
+Figure 129: Add title and description to your map.
 </p>
 
 Before we add any points, let’s change the basemap to something less
@@ -6081,21 +6209,21 @@ Under *Untitled layer* item, click *Import* button, and drag-and-drop
 the CSV file. Once the data file is uploaded, My Maps will ask which
 columns contain location data. In our case, these are *LATITUDE* and
 *LONGITUDE* columns, as shown in Figure
-<a href="#fig:mymaps-lat-lon">129</a>.
+<a href="#fig:mymaps-lat-lon">130</a>.
 
 <img src="images/08-map/mymaps-lat-lon-annotated.png" alt="Check LATITUDE and LONGITUDE as your location columns." width="300" />
 <p class="caption">
-Figure 129: Check LATITUDE and LONGITUDE as your location columns.
+Figure 130: Check LATITUDE and LONGITUDE as your location columns.
 </p>
 
 Once the two boxes are checked, click *Continue*. Another window will
 pop up, asking which column to use to annotate points. Choose *City*, as
-shown in Figure <a href="#fig:mymaps-column-title">130</a>, and then
+shown in Figure <a href="#fig:mymaps-column-title">131</a>, and then
 *Finish*.
 
 <img src="images/08-map/mymaps-column-title-annotated.png" alt="Choose City as the title for your markers." width="300" />
 <p class="caption">
-Figure 130: Choose City as the title for your markers.
+Figure 131: Choose City as the title for your markers.
 </p>
 
 It will take a few moments for My Maps to create a new layer, which will
@@ -6108,11 +6236,11 @@ the right. Change “All items” text to “Airports”, choose orange color,
 and click on *More icons* to find an airport symbol (we recommend using
 Filter to search for “airport”, or simply scroll down to Transportation
 section). The marker in the layers menu will change to an orange
-airplane, as shown in Figure <a href="#fig:mymaps-color">131</a>.
+airplane, as shown in Figure <a href="#fig:mymaps-color">132</a>.
 
 <img src="images/08-map/mymaps-color-annotated.png" alt="In My Maps, you can change marker colors and icons." width="300" />
 <p class="caption">
-Figure 131: In My Maps, you can change marker colors and icons.
+Figure 132: In My Maps, you can change marker colors and icons.
 </p>
 
 Click on the layer name, which by default is set to the name of imported
@@ -6131,24 +6259,24 @@ editing studio.
 ### Share Your Google Map
 
 If you are happy with the result, click *Share*, and click *Change to
-anyone with the link* (see Figure <a href="#fig:mymaps-share">132</a>),
+anyone with the link* (see Figure <a href="#fig:mymaps-share">133</a>),
 just as you would with any other Google Drive document.
 
 <img src="images/08-map/mymaps-share.png" alt="Make sure anyone with the link can view your map before you share it." width="400" />
 <p class="caption">
-Figure 132: Make sure anyone with the link can view your map before you
+Figure 133: Make sure anyone with the link can view your map before you
 share it.
 </p>
 
 You can now generate a code snippet to embed the map as an iframe. From
 the main kebab menu to the right of the map title, choose *Embed on my
-site* (Figure <a href="#fig:mymaps-embed">133</a>). You can use now use
+site* (Figure <a href="#fig:mymaps-embed">134</a>). You can use now use
 this iframe code to embed your map to your Wordpress, Squarespace, or
 any other website.
 
 <img src="images/08-map/mymaps-embed-annotated.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
 <p class="caption">
-Figure 133: My Maps can generate an iframe code to include the map on
+Figure 134: My Maps can generate an iframe code to include the map on
 your own website.
 </p>
 
@@ -6166,8 +6294,8 @@ layers. Unfortunately, Google My Maps has no comprehensive
 documentation, so you have to explore the studio yourself if you want to
 create more complex projects.
 
-Choropleth Map with Datawrapper
--------------------------------
+Polygon Choropleth Map with Datawrapper
+---------------------------------------
 
 TODO: Review steps due to recent Datawrapper updates: see their new
 Academy pages on Choropleth interpolation (ranges) and colors
@@ -6177,7 +6305,7 @@ you create stylish and interactive point and polygon maps. In this
 section, we will create a choropleth map of average home values in US
 states in 2019 according to [Zillow
 data](https://www.zillow.com/research/data/), as shown in Figure
-<a href="#fig:datawrapper-map-final">134</a>.
+<a href="#fig:datawrapper-map-final">135</a>.
 
 We calculated average 2019 prices for 50 US states and DC, and put them
 in a spreadsheet, which [you can
@@ -6189,7 +6317,7 @@ displaying absolute values or counts in choropleth maps.
 
 <img src="images/08-map/datawrapper-map-final.png" alt="This choropleth map is created in Datawrapper"  />
 <p class="caption">
-Figure 134: This choropleth map is created in Datawrapper
+Figure 135: This choropleth map is created in Datawrapper
 </p>
 
 ### Create a New Choropleth Map
@@ -6197,12 +6325,12 @@ Figure 134: This choropleth map is created in Datawrapper
 Sign in to your [Datawrapper account](https://app.datawrapper.de/signin)
 and click *New Map* in the header. Datawrapper will offer a choice of a
 *Choropleth*, *Symbol*, and *Locator* maps, as shown in Figure
-<a href="#fig:datawrapper-map-choose">135</a>. Go ahead and choose
+<a href="#fig:datawrapper-map-choose">136</a>. Go ahead and choose
 *choropleth*.
 
 <img src="images/08-map/datawrapper-map-choose-annotated.png" alt="Sign in to Datawrapper, click *New Map*, and choose *Choropleth*."  />
 <p class="caption">
-Figure 135: Sign in to Datawrapper, click *New Map*, and choose
+Figure 136: Sign in to Datawrapper, click *New Map*, and choose
 *Choropleth*.
 </p>
 
@@ -6216,12 +6344,12 @@ upload your own custom geographies as a TopoJSON or GeoJSON file, and
 you will learn more about that in the [Convert to GeoJSON section of
 Chapter 14](convert-geojson.html). Because we are mapping average home
 prices by US state, choose *United States &gt; States*, as shown in
-Figure <a href="#fig:datawrapper-map-us-states">136</a>, and hit *Next*
+Figure <a href="#fig:datawrapper-map-us-states">137</a>, and hit *Next*
 to go to step 2.
 
 <img src="images/08-map/datawrapper-map-us-states-annotated.png" alt="To map home prices by US state, choose appropriate boundaries."  />
 <p class="caption">
-Figure 136: To map home prices by US state, choose appropriate
+Figure 137: To map home prices by US state, choose appropriate
 boundaries.
 </p>
 
@@ -6239,6 +6367,10 @@ order to perform merging. Since the dataset that we prepared contains
 both columns (titled *State* and *StateAbbr*), you can confidently press
 the *Start import* button.
 
+TODO: convert this CSV file into a Google Sheet with data and notes
+tabs, which requires users to look at the data (even briefly) before
+downloading it
+
 In the following window, you can either copy/paste values from the
 spreadsheet, or upload a CSV file. We recommend uploading a file, so
 click the link and choose the file
@@ -6246,11 +6378,11 @@ click the link and choose the file
 populated, and Datawrapper will ask for help identifying the relevant
 column with geographical names. Make sure your *Matched as ISO-Codes*
 tooltip is blue above the *StateAbbr* column, scroll down and click
-*Next*, as shown in Figure <a href="#fig:datawrapper-map-match">137</a>.
+*Next*, as shown in Figure <a href="#fig:datawrapper-map-match">138</a>.
 
 <img src="images/08-map/datawrapper-map-match.png" alt="Tell Datawrapper which column contains geography names (ISO-Codes of states)." width="350" />
 <p class="caption">
-Figure 137: Tell Datawrapper which column contains geography names
+Figure 138: Tell Datawrapper which column contains geography names
 (ISO-Codes of states).
 </p>
 
@@ -6258,28 +6390,86 @@ In a similar fashion, you will then be asked to identify a column that
 contains *values* to be mapped. Make sure it is *HomeValue2019* that is
 *Matched As Values*.
 
-### Style and publish your map
+### Select the color range
+
+TODO: Update and expand this section to match recent changes to
+Datawrapper
+
+-   Color palette: explain difference and best cases for using
+    sequential, diverging, categorical colors, and refer back to
+    ColorBrewer section above.
+-   Color type: steps vs continuous
+-   Interpolation (see below)
+-   see also Data Academy choropleth map design page
 
 When finished uploading data, go to step 3 to begin visualizing. Start
 with the *Refine* tab and choose a diverging color palette, from reds to
 blues. Make sure your “middle” color value corresponds to the state with
 the median home price by choosing *min/median/max* value from the Stops
 dropdown, as shown in Figure
-<a href="#fig:datawrapper-map-color">138</a>.
+<a href="#fig:datawrapper-map-color">139</a>.
 
 <img src="images/08-map/datawrapper-map-color.png" alt="Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value." width="350" />
 <p class="caption">
-Figure 138: Choose red/blues divergent color scheme, and make sure to
+Figure 139: Choose red/blues divergent color scheme, and make sure to
 match median with the neutral (middle) value.
 </p>
+
+In the *Visualize* screen, next to *Select palette*, click the *wrench
+symbol* to open up the color settings, as shown in FIG TODO.
+
+INSERT wide screenshot here
+
+Below the color palette, experiment with the two *Types* of color
+ranges, as shown in FIG TODO. Click *Steps* to display values in the
+same range with the same color, like a staircase of steps at different
+heights. Now click *Continuous* to assign each value a color on the
+gradient, like a ramp that gradually goes up. Notice how the map menu
+and coloring changes according to type. For now, we’ll use the default
+*Continuous* setting.
+
+datawrapper-color-type.png
+
+Experiment with the *Interpolation* menu, which refers to the method of
+assigning values along the color range you selected above.
+
+TODO: consider using a simple dataset or histogram to illustrate the
+concepts below, similar to this Data Academy post
+<a href="https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales" class="uri">https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales</a>
+
+-   *Linear* means that the values are placed in a straight line, from
+    lowest to highest. This method is best when the data are evenly
+    distributed, because the colors draw attention to the outliers at
+    the low and high ends.
+-   *Quantiles* means that the values are divided into equal-count
+    groups. More specifically, *quartiles*, *quintiles*, and *deciles*
+    means dividing the values into four, five, or ten groups, where each
+    group has an equal count. This method is best when the data are not
+    evenly distributed, because the colors draw more attention to the
+    diversity of groups inside the range, not just those at the ends.
+-   *Rounded values* are similar to quantiles, but decimals in the color
+    range are replaced with nicer-looking rounded numbers.
+-   *Natural breaks (Jenks)* offers a compromise between linear (which
+    emphasizes the extreme ends of the range) and quantiles (which
+    emphasizes diversity inside the range).
+-   *Custom* allows you to manually place stops where you wish in the
+    color range.
+
+Notice how the menu options change depending on whether you select the
+*Type* to be *Steps* or *Continuous*, as shown in FIG TODO
+
+BLEND or SIDE-BY-SIDE: datawrapper-continuous-interpolation.png and
+datawrapper-steps-interpolation.png
+
+### Style and publish your map
 
 When finished with colors, scroll down to **Tooltips** section and click
 *Customize tooltips* button. In a popup window, set Title to the state
 name and Body to the average home value, as shown in Figure
-<a href="#fig:datawrapper-map-tooltip">139</a>. The easiest way to do
+<a href="#fig:datawrapper-map-tooltip">140</a>. The easiest way to do
 this is to click on column names in the upper-right corner of the popup
 window, where all available names are listed, which is circled in Figure
-<a href="#fig:datawrapper-map-tooltip">139</a>. Note that references to
+<a href="#fig:datawrapper-map-tooltip">140</a>. Note that references to
 variables are put in double curly brackets (`{{ ColumnNameGoesHere }}`).
 Make sure your dollar symbol (`$`) in outside of the curly brackets.
 Click *Save*, and hover over the map to make sure your tooltip displays
@@ -6287,7 +6477,7 @@ the state name and the average home price.
 
 <img src="images/08-map/datawrapper-map-tooltip-annotated.png" alt="To reference values from the spreadsheet, add column names in double curly brackets." width="450" />
 <p class="caption">
-Figure 139: To reference values from the spreadsheet, add column names
+Figure 140: To reference values from the spreadsheet, add column names
 in double curly brackets.
 </p>
 
@@ -6298,6 +6488,10 @@ sources and methods adds credibility to your work.
 
 In the final, fourth step, you can publish the chart and copy the iframe
 code that Datawrapper generated for you.
+
+Learn more about [choropleth map design in this excellent series of
+posts by the Datawrapper
+Academy](https://academy.datawrapper.de/category/93-maps).
 
 In the following section, we will create a point map inside Socrata data
 platform.
@@ -6324,11 +6518,11 @@ In this section, we will build an interactive point map of hospitals in
 Texas using [General Hospital
 Information](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data)
 dataset by Medicare, which you can see in Figure
-<a href="#fig:socrata-final">140</a>.
+<a href="#fig:socrata-final">141</a>.
 
 <img src="images/08-map/socrata-final.png" alt="In this tutorial, we will build a point map of hospitals in Texas using Socrata."  />
 <p class="caption">
-Figure 140: In this tutorial, we will build a point map of hospitals in
+Figure 141: In this tutorial, we will build a point map of hospitals in
 Texas using Socrata.
 </p>
 
@@ -6362,13 +6556,13 @@ Navigate to the [Hospital General
 Dataset](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data),
 and in the menu on the right-hand side choose *Visualize &gt; Launch New
 Visualization*, as shown in Figure
-<a href="#fig:socrata-launch-new-viz">141</a>. This will open up a
+<a href="#fig:socrata-launch-new-viz">142</a>. This will open up a
 *Configure Visualization* studio where you can create the map.
 
 <img src="images/08-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize >
 Launch New Visualization." width=“300” /&gt;
 <p class="caption">
-Figure 141: Go to Visualize &gt; Launch New Visualization.
+Figure 142: Go to Visualize &gt; Launch New Visualization.
 </p>
 
 In the top menu, click *Map* (globe icon between a scatter chart icon
@@ -6386,24 +6580,24 @@ Let’s first select only hospitals that are located in the southern state
 of Texas. To do so, go to *Filters &gt; Add filter*. The dropdown menu
 lists all columns (or fields) of the dataset, where we should choose
 *State*. In the newly appeared State dropdown, choose TX (for Texas) as
-shown in Figure <a href="#fig:socrata-filter">142</a>, and scroll down
+shown in Figure <a href="#fig:socrata-filter">143</a>, and scroll down
 and click Apply. Socrata should zoom in on the map and center on Texas.
 Close *Filters* window to free screen space.
 
 <img src="images/08-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
 <p class="caption">
-Figure 142: Select Texas as the only value for State field.
+Figure 143: Select Texas as the only value for State field.
 </p>
 
 Let’s now **disaggregate** the map so that we can see individual
 hospitals instead of clusters. Go to *Map Settings &gt; Cluster*, and
 bring the *Stop Clustering at Zoom Level* slider to 1, as shown in
-Figure <a href="#fig:socrata-uncluster">143</a>. You will see the map
+Figure <a href="#fig:socrata-uncluster">144</a>. You will see the map
 now shows individual points.
 
 <img src="images/08-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
 <p class="caption">
-Figure 143: To show individual points instead of clusters, set Stop
+Figure 144: To show individual points instead of clusters, set Stop
 Clustering at Zoom Level to 1.
 </p>
 
@@ -6423,11 +6617,11 @@ Value* option to classify categorical points. The dataset contains
 multiple variables that can be effectively visualized, such as *Hospital
 Type*, *Emergency Services* (a yes/no category), *Mortality national
 comparison* and others. Let’s stick with *Hospital Type*, as is
-illustrated in Figure <a href="#fig:socrata-style">144</a>.
+illustrated in Figure <a href="#fig:socrata-style">145</a>.
 
 <img src="images/08-map/socrata-style-annotated.png" alt="Let's display different types of hospitals in different colors." width="300" />
 <p class="caption">
-Figure 144: Let’s display different types of hospitals in different
+Figure 145: Let’s display different types of hospitals in different
 colors.
 </p>
 
@@ -6443,11 +6637,11 @@ order of categories in the legend.
 To change what is shown in tooltips when you hover or click on points,
 go to **Flyout Details**, and set Flyout Title to *Facility Name*,
 adding city and phone number as additional flyout values, as is shown in
-Figure <a href="#fig:socrata-flyout">145</a>.
+Figure <a href="#fig:socrata-flyout">146</a>.
 
 <img src="images/08-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
 <p class="caption">
-Figure 145: To edit tooltip information, use Flyout Details menu item.
+Figure 146: To edit tooltip information, use Flyout Details menu item.
 </p>
 
 At this point you should have a fully-functional interactive map showing
@@ -6462,19 +6656,19 @@ still a draft, and you can go ahead and *Publish…* it.
 
 Now you can embed the map on your website as an iframe. To do so, click
 the *Share* button in the upper-right side of your map (see Figure
-<a href="#fig:socrata-share">146</a>), and copy the generated code from
+<a href="#fig:socrata-share">147</a>), and copy the generated code from
 *Embed Code* text area (Figure
-<a href="#fig:socrata-share-embed">147</a>). Learn more in [Chapter 10:
-Embed on Your Web](embed.html).
+<a href="#fig:socrata-share-embed">148</a>). Learn more in [Chapter 10:
+Embed on the Web](embed.html).
 
 <img src="images/08-map/socrata-share-annotated.png" alt="Click *Share* button to bring up *Share and Embed* window." width="400" />
 <p class="caption">
-Figure 146: Click *Share* button to bring up *Share and Embed* window.
+Figure 147: Click *Share* button to bring up *Share and Embed* window.
 </p>
 
 <img src="images/08-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website."  />
 <p class="caption">
-Figure 147: Copy iframe code to embed this map in another website.
+Figure 148: Copy iframe code to embed this map in another website.
 </p>
 
 ### Limitations of Socrata
@@ -6496,8 +6690,8 @@ coding skills that are beyond the scope of this book. Visit the
 [official documentation](https://dev.socrata.com/) to learn more about
 Socrata API.
 
-Polygon Map with Tableau Public
--------------------------------
+Polygon Choropleth Map with Tableau Public
+------------------------------------------
 
 TODO: revise to make polygon/choropleth map vocab more consistent in
 this chapter; also emphasize how Tableau is not ideal for point maps
@@ -6510,7 +6704,7 @@ create point and polygon maps.
 
 In this tutorial, we will create a choropleth map of military spending
 per country as percentage of gross dometic product as shown in Figure
-<a href="#fig:tableau-polygon-final">148</a>. Remember that choropleth
+<a href="#fig:tableau-polygon-final">149</a>. Remember that choropleth
 maps work best when they show relative, not absolute numbers. Displaying
 total spending per country is a bad idea, as bigger countries tend to
 have larger populations and as a result larger values for a lot of
@@ -6520,7 +6714,7 @@ measures, including military spending.
 
 <img src="images/08-map/tableau-polygon-final.png" alt="Filled Polygon (Choropleth) map: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from TODO."  />
 <p class="caption">
-Figure 148: Filled Polygon (Choropleth) map: Explore the [interactive
+Figure 149: Filled Polygon (Choropleth) map: Explore the [interactive
 version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1).
 Data from TODO.
 </p>
@@ -6548,12 +6742,12 @@ the dataset contents. It contains four columns: Country Name, which
 includes countries and territories defined by the World Bank, the
 three-digit Country Code, Indicator Name (same for all rows), and
 percent value, as shown in Figure
-<a href="#fig:tableau-polygon-connect">149</a>. Notice that some values
+<a href="#fig:tableau-polygon-connect">150</a>. Notice that some values
 are set to *null* (not available).
 
 <img src="images/08-map/tableau-polygon-connect-annotated.png" alt="When finished inspecting the connected file, go to Sheet 1."  />
 <p class="caption">
-Figure 149: When finished inspecting the connected file, go to Sheet 1.
+Figure 150: When finished inspecting the connected file, go to Sheet 1.
 </p>
 
 In the variables list on the left, notice how Tableau generated
@@ -6561,7 +6755,7 @@ In the variables list on the left, notice how Tableau generated
 codes (by the way, you only need one or the other, not both).
 
 Drag and drop Longitude to **Columns**, and *Latitude* to **Rows**, as
-shown in Figure <a href="#fig:tableau-polygon-drag">150</a>. You should
+shown in Figure <a href="#fig:tableau-polygon-drag">151</a>. You should
 see that the chart area shows an empty map of the world (if not,
 double-check that Latitude is indeed in Rows, not Columns). In Marks
 box, change *Automatic* to *Map*, and drag *Country Name* variable to
@@ -6570,7 +6764,7 @@ turned blue.
 
 <img src="images/08-map/tableau-polygon-drag-annotated.png" alt="Drag and drop variables to the right places."  />
 <p class="caption">
-Figure 150: Drag and drop variables to the right places.
+Figure 151: Drag and drop variables to the right places.
 </p>
 
 We want colors to represent military spending values, so drag *Value*
@@ -6584,33 +6778,33 @@ remove countries with *null* values from the map, drag *Values* to the
 leave everything unchanged. This will leave the whole range of values,
 and exclude *null* values (see the checkbox in the lower-right corner of
 the Filter window in Figure
-<a href="#fig:tableau-polygon-filter">151</a>).
+<a href="#fig:tableau-polygon-filter">152</a>).
 
 <img src="images/08-map/tableau-polygon-filter-annotated.png" alt="Filter values to remove countries with no data from display." width="400" />
 <p class="caption">
-Figure 151: Filter values to remove countries with no data from display.
+Figure 152: Filter values to remove countries with no data from display.
 </p>
 
 You can change the color scheme by clicking the Color box of the Marks
 card, and then *Edit colors*. Change the palette to *Reds*, and make it
 stepped rather than continuous, as shown in Figure
-<a href="#fig:tableau-polygon-color">152</a>.
+<a href="#fig:tableau-polygon-color">153</a>.
 
 <img src="images/08-map/tableau-polygon-color.png" alt="Change the color scheme to Reds with 5 steps." width="400" />
 <p class="caption">
-Figure 152: Change the color scheme to Reds with 5 steps.
+Figure 153: Change the color scheme to Reds with 5 steps.
 </p>
 
 You may notice the tooltip calls values *Value* when hovering over
 countries. Click the Tooltip box of the Marks card to change text to
 *Military spending*, and add a percentage sign after the value itself,
-as shown in Figure <a href="#fig:tableau-polygon-tooltip">153</a>. Make
+as shown in Figure <a href="#fig:tableau-polygon-tooltip">154</a>. Make
 sure not to change values between `<` and `>`, as these are references
 to variables.
 
 <img src="images/08-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
-Figure 153: Change tooltip text to make it more user-friendly.
+Figure 154: Change tooltip text to make it more user-friendly.
 </p>
 
 And finally, let’s add a proper title to the map. Double-click the
@@ -6698,7 +6892,7 @@ bottom of a long list. Finally, you’ll also learn how to insert
 row, and automatically place them inside your interactive table.
 Sparklines blend the best qualities of tables and charts by making it
 easier for readers to visually scan for patterns while skimming down the
-rows and columns of your data table. Later in [Chapter 10: Embed On Your
+rows and columns of your data table. Later in [Chapter 10: Embed on the
 Web](embed.html), you’ll learn how to integrate your interactive table
 into your website.
 
@@ -6715,9 +6909,9 @@ learned about [chart design in Chapter 7](chart-design.html) and [map
 design in Chapter 8](map-design.html). Jonathan Schwabish, an economist
 who specializes in creating policy-relevant data visualizations, offers
 his advice in recent publications about creating tables that communicate
-well with multiple audiences.[17]. Here’s a summary of several of his
+well with multiple audiences.[18]. Here’s a summary of several of his
 key points, which also appear in Figure
-<a href="#fig:table-design">154</a>.
+<a href="#fig:table-design">155</a>.
 
 1.  Make column headers stand out above the data.
 2.  Use light shading to separate rows or columns.
@@ -6727,12 +6921,12 @@ key points, which also appear in Figure
 
 <img src="images/09-table/table-design.png" alt="A sample table that illustrates selected design principles." width="600" />
 <p class="caption">
-Figure 154: A sample table that illustrates selected design principles.
+Figure 155: A sample table that illustrates selected design principles.
 </p>
 
 In addition, Schwabish and others recommend using color to highlight key
 items or outliers in your data, a topic we’ll discuss later in [Chapter
-16: Tell Your Data Story](story.html).
+16: Tell and Show Your Data Story](story.html).
 
 Overall, the core principles of table design reflect similar concepts we
 previously discussed in chart and map design. Organize your presentation
@@ -6764,17 +6958,17 @@ the interactive table online.
 You’ll also learn how to create sparklines, or tiny line charts that
 quickly summarize data trends. This chart type was refined by Edward
 Tufte, a Yale professor and data visualization pioneer, who described
-sparklines as “datawords… intense, simple, word-sized graphics.”[18]
+sparklines as “datawords… intense, simple, word-sized graphics.”[19]
 While Tufte envisioned sparklines on a static sheet of paper or PDF
 document, you’ll create them inside an interactive table, as shown in
-Figure <a href="#fig:datawrapper-table">155</a>. Readers can search by
+Figure <a href="#fig:datawrapper-table">156</a>. Readers can search by
 keyword, sort columns in ascending or descending order, and scroll
 through pages of sparklines to quickly identify data trends that would
 be difficult to spot in a traditional numbers-only table.
 
 <img src="images/09-table/datawrapper-table.png" alt="Table with sparklines. Explore the [interactive version](https://datawrapper.dwcdn.net/0HK4f/2/)."  />
 <p class="caption">
-Figure 155: Table with sparklines. Explore the [interactive
+Figure 156: Table with sparklines. Explore the [interactive
 version](https://datawrapper.dwcdn.net/0HK4f/2/).
 </p>
 
@@ -6855,11 +7049,11 @@ GitHub](https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons).
 1.  In the *Visualize* screen, under *Customize columns*, select the
     third line named *Nation*. Then scroll down and push the slider to
     *Replace country codes with flags*, as shown in Figure
-    <a href="#fig:datawrapper-flag">156</a>.
+    <a href="#fig:datawrapper-flag">157</a>.
 
 <img src="images/09-table/datawrapper-flag.png" alt="Customize the *Nation* column and push slider to replace codes with flags."  />
 <p class="caption">
-Figure 156: Customize the *Nation* column and push slider to replace
+Figure 157: Customize the *Nation* column and push slider to replace
 codes with flags.
 </p>
 
@@ -6878,11 +7072,11 @@ codes with flags.
     based on categories*. In the drop-down menu, select the column
     *Continent*, and click on the *Background: customize colors* button.
     Select each continent and assign them different colors, as shown in
-    Figure <a href="#fig:datawrapper-colors">157</a>.
+    Figure <a href="#fig:datawrapper-colors">158</a>.
 
 <img src="images/09-table/datawrapper-colors.png" alt="Customize the *Continent* column and push slider to color cells based on categories." width="600" />
 <p class="caption">
-Figure 157: Customize the *Continent* column and push slider to color
+Figure 158: Customize the *Continent* column and push slider to color
 cells based on categories.
 </p>
 
@@ -6897,12 +7091,12 @@ cells based on categories.
     properties for *column E: Life Expectancy 1960*. On the left side,
     use the drop-down menu to change its properties from *auto (text)*
     to *Number*, as shown in Figure
-    <a href="#fig:datawrapper-edit-column">158</a>. Then click *Proceed*
+    <a href="#fig:datawrapper-edit-column">159</a>. Then click *Proceed*
     to return to the *Visualize* window.
 
 <img src="images/09-table/datawrapper-edit-column.png" alt="Go back to *Check & Describe* to change the properties of column E from textual to numerical data."  />
 <p class="caption">
-Figure 158: Go back to *Check & Describe* to change the properties of
+Figure 159: Go back to *Check & Describe* to change the properties of
 column E from textual to numerical data.
 </p>
 
@@ -6912,10 +7106,10 @@ column E from textual to numerical data.
     scroll down and shift-click on the next-to-last column. Then scroll
     down the page and click the *Show selected columns as tiny chart*
     button, as shown in Figure
-    <a href="#fig:datawrapper-tiny-chart">159</a>. These steps will
+    <a href="#fig:datawrapper-tiny-chart">160</a>. These steps will
     create the sparklines in the column, renamed *Life expectancy
     1960–2018*, as shown in Figure
-    <a href="#fig:datawrapper-bar-chart">160</a>.
+    <a href="#fig:datawrapper-bar-chart">161</a>.
 
 Tip: By design, we initially named this column *Life expectancy 1960*,
 because when we selected several columns to create sparklines, the tool
@@ -6923,7 +7117,7 @@ added *–2018* to the end of the new column name.
 
 <img src="images/09-table/datawrapper-tiny-chart.png" alt="Shift-click to select all columns from *Life expectancy 1960--2018* down to *2018*, then click on *Show selected columns as tiny chart*." width="300" />
 <p class="caption">
-Figure 159: Shift-click to select all columns from *Life expectancy
+Figure 160: Shift-click to select all columns from *Life expectancy
 1960–2018* down to *2018*, then click on *Show selected columns as tiny
 chart*.
 </p>
@@ -6932,11 +7126,11 @@ chart*.
     the *Difference* column in the table. In the *Visualize* screen
     under *Customize columns*, select *Difference*. Then scroll down and
     push the slider to select *Show as bar chart*, as shown in Figure
-    <a href="#fig:datawrapper-bar-chart">160</a>.
+    <a href="#fig:datawrapper-bar-chart">161</a>.
 
 <img src="images/09-table/datawrapper-bar-chart.png" alt="Select the *Difference* column and *Show as bar chart*."  />
 <p class="caption">
-Figure 160: Select the *Difference* column and *Show as bar chart*.
+Figure 161: Select the *Difference* column and *Show as bar chart*.
 </p>
 
 1.  In the *Visualize* screen, click the *Annotate* tab to add a title,
@@ -6944,10 +7138,10 @@ Figure 160: Select the *Difference* column and *Show as bar chart*.
 
 2.  Click on *Publish & Embed* to share the link to your [interactive
     table](https://datawrapper.dwcdn.net/0HK4f/2/), as previously shown
-    in Figure <a href="#fig:datawrapper-table">155</a>. Click the blue
+    in Figure <a href="#fig:datawrapper-table">156</a>. Click the blue
     *Publish chart* button to obtain the embed code to place your
     visualization on the web, which you’ll learn about in [Chapter 10:
-    Embed On Your Web](embed.html).
+    Embed on the Web](embed.html).
 
 To learn more, we highly recommend the [Datawrapper Academy support
 pages](https://academy.datawrapper.de/), the extensive [gallery of
@@ -6964,10 +7158,19 @@ with your stories.
 
 <!--chapter:end:09-table.Rmd-->
 
-Embed On Your Web
-=================
+Embed On the Web
+================
 
-TODO: Reorganize and rewrite chapter
+TODO: Reorganize and rewrite chapter; change all datawrapper iframe refs
+from specific (/\#) to general (/)
+<a href="https://datawrapper.dwcdn.net" class="uri">https://datawrapper.dwcdn.net</a>
+
+TODO: What if you don’t yet have a website? Previously, I taught people
+to start with GitHub index.html, but that’s too complex. Also
+WordPress.com does not work for iframes. Consider other user-friendly
+platforms: SquareSpace, etc? Or even something weird but quick, like
+Blocks? Or even W3Schools Tryit for iframe? Or is there some type of
+Google Drive thingy?
 
 After you create a chart or map, how do display it inside your website
 as an *interactive* visualization? Our goal is not a static picture, but
@@ -7653,11 +7856,11 @@ section:
 
 Your goal is to create your own version of this simple interactive map,
 with your edits, as shown in Figure
-<a href="#fig:leaflet-simple">161</a>.
+<a href="#fig:leaflet-simple">162</a>.
 
 <img src="images/11-github/leaflet-simple.png" alt="Create your own version of this [simple interactive Leaflet map](https://handsondataviz.github.io/leaflet-map-simple/)."  />
 <p class="caption">
-Figure 161: Create your own version of this [simple interactive Leaflet
+Figure 162: Create your own version of this [simple interactive Leaflet
 map](https://handsondataviz.github.io/leaflet-map-simple/).
 </p>
 
@@ -7676,21 +7879,21 @@ wisest choice for a username, if `BrownieChef` is also available.
 
 2.  Click the green *Use this template* button to make your own copy of
     our repo, as shown in Figure
-    <a href="#fig:leaflet-simple-template">162</a>.
+    <a href="#fig:leaflet-simple-template">163</a>.
 
 <img src="images/11-github/leaflet-simple-template.png" alt="Click *Use this template* to make your own copy."  />
 <p class="caption">
-Figure 162: Click *Use this template* to make your own copy.
+Figure 163: Click *Use this template* to make your own copy.
 </p>
 
 1.  On the next screen, your account will appear as the owner. Name your
     copy of the repo `leaflet-map-simple`, the same as ours, as shown in
-    Figure <a href="#fig:leaflet-simple-name">163</a>. Click the green
+    Figure <a href="#fig:leaflet-simple-name">164</a>. Click the green
     *Create repository from template* button.
 
 <img src="images/11-github/leaflet-simple-name.png" alt="Name your copied repo `leaflet-map-simple`." width="600" />
 <p class="caption">
-Figure 163: Name your copied repo `leaflet-map-simple`.
+Figure 164: Name your copied repo `leaflet-map-simple`.
 </p>
 
 Note: We set up our repo using GitHub’s template feature to make it
@@ -7719,11 +7922,11 @@ your GitHub account, and it contains only three files:
     the map code.
 
 1.  Click on the `index.html` file to view the code, as shown in Figure
-    <a href="#fig:leaflet-simple-index">164</a>.
+    <a href="#fig:leaflet-simple-index">165</a>.
 
 <img src="images/11-github/leaflet-simple-index.png" alt="Click the index.html file to view the code." width="200" />
 <p class="caption">
-Figure 164: Click the index.html file to view the code.
+Figure 165: Click the index.html file to view the code.
 </p>
 
 If this is the first time you’re looking at computer code, it may feel
@@ -7739,11 +7942,11 @@ few lines further below.
 
 1.  To edit the code, click on the the pencil symbol in the upper-right
     corner, as shown in Figure
-    <a href="#fig:leaflet-simple-edit">165</a>.
+    <a href="#fig:leaflet-simple-edit">166</a>.
 
 <img src="images/11-github/leaflet-simple-edit.png" alt="Click the pencil button to edit the code."  />
 <p class="caption">
-Figure 165: Click the pencil button to edit the code.
+Figure 166: Click the pencil button to edit the code.
 </p>
 
 Let’s start by making one simple change to prove to everyone that you’re
@@ -7757,11 +7960,11 @@ HTML division tag block around lines 21-23.
 
 2.  To save your edit, scroll to the bottom of the page and click the
     green *Commit Changes* button, as shown in Figure
-    <a href="#fig:leaflet-simple-commit">166</a>.
+    <a href="#fig:leaflet-simple-commit">167</a>.
 
 <img src="images/11-github/leaflet-simple-commit.png" alt="Click the green *Commit Changes* button to save your edits." width="450" />
 <p class="caption">
-Figure 166: Click the green *Commit Changes* button to save your edits.
+Figure 167: Click the green *Commit Changes* button to save your edits.
 </p>
 
 In the language of coders, we “commit” our changes in the same way that
@@ -7788,25 +7991,25 @@ host it online.
 
 1.  To access GitHub Pages, scroll to the top of your repo page and
     click the *Settings* button as shown in Figure
-    <a href="#fig:leaflet-simple-settings">167</a>.
+    <a href="#fig:leaflet-simple-settings">168</a>.
 
 <img src="images/11-github/leaflet-simple-settings.png" alt="Click the *Settings* button to access GitHub Pages and publish your work on the web."  />
 <p class="caption">
-Figure 167: Click the *Settings* button to access GitHub Pages and
+Figure 168: Click the *Settings* button to access GitHub Pages and
 publish your work on the web.
 </p>
 
 1.  In the Settings screen, scroll way down to the GitHub Pages area. In
     the drop-down menu, change *Source* from *None* to *Master*, keep
     the default */(root)* option in the middle, and press *Save* as
-    shown in Figure <a href="#fig:leaflet-github-pages">168</a>. This
+    shown in Figure <a href="#fig:leaflet-github-pages">169</a>. This
     step tells GitHub to publish a live version of your map on the
     public web, where anyone can access it in their browser, if they
     have the web address.
 
 <img src="images/11-github/leaflet-github-pages.png" alt="In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Master*." width="500" />
 <p class="caption">
-Figure 168: In *Settings*, go to *GitHub Pages*, and switch the source
+Figure 169: In *Settings*, go to *GitHub Pages*, and switch the source
 from *None* to *Master*.
 </p>
 
@@ -7820,11 +8023,11 @@ and screenshots. See more at
 1.  Scroll back down to *Settings &gt; GitHub Pages* to see the web
     address where your live map has been published online, and
     right-click it to open in a new browser tab, as shown in Figure
-    <a href="#fig:leaflet-github-pages-link">169</a>.
+    <a href="#fig:leaflet-github-pages-link">170</a>.
 
 <img src="images/11-github/leaflet-github-pages-link.png" alt="In *Settings* for *GitHub Pages*, right-click your published map link to open in a new tab." width="600" />
 <p class="caption">
-Figure 169: In *Settings* for *GitHub Pages*, right-click your published
+Figure 170: In *Settings* for *GitHub Pages*, right-click your published
 map link to open in a new tab.
 </p>
 
@@ -7872,22 +8075,22 @@ live map, instead of *our* live map.
 
 2.  Go back to your first browser tab with your GitHub repo, and click
     on the repo title to return to its home page, as shown in Figure
-    <a href="#fig:leaflet-click-title">170</a>.
+    <a href="#fig:leaflet-click-title">171</a>.
 
 <img src="images/11-github/leaflet-click-title.png" alt="On your first browser tab, click the repo title." width="450" />
 <p class="caption">
-Figure 170: On your first browser tab, click the repo title.
+Figure 171: On your first browser tab, click the repo title.
 </p>
 
 1.  On your repo page, click to open the `README.md` file, and click the
     pencil again to edit it, as shown in Figure
-    <a href="#fig:leaflet-paste-link">171</a>. Paste your live web link
+    <a href="#fig:leaflet-paste-link">172</a>. Paste your live web link
     under the label *(replace with link to your site)* and scroll down
     to commit the change.
 
 <img src="images/11-github/leaflet-paste-link.png" alt="Open and edit the `README` file to paste the link to your live map." width="600" />
 <p class="caption">
-Figure 171: Open and edit the `README` file to paste the link to your
+Figure 172: Open and edit the `README` file to paste the link to your
 live map.
 </p>
 
@@ -7999,14 +8202,14 @@ summarized in these three steps:
 -   Upload the existing code repo files to your brand-new repo
 
 1.  Click on the *Code &gt; Download Zip* drop-down menu button on any
-    repo, as shown in Figure <a href="#fig:repo-code-download">172</a>.
+    repo, as shown in Figure <a href="#fig:repo-code-download">173</a>.
     Your browser will download a zipped compressed folder with the
     contents of the repo to your local computer, and it may ask you
     where you wish to save it. Decide on a location and click OK.
 
 <img src="images/11-github/repo-code-download.png" alt="Click *Code* and select *Download Zip* to create a compressed folder of a repo on your computer." width="350" />
 <p class="caption">
-Figure 172: Click *Code* and select *Download Zip* to create a
+Figure 173: Click *Code* and select *Download Zip* to create a
 compressed folder of a repo on your computer.
 </p>
 
@@ -8022,11 +8225,11 @@ compressed folder of a repo on your computer.
 2.  Go back to your GitHub account in your web browser, click on the
     plus (+) symbol in the upper-right corner of your account, and
     select *New repository*, as shown in Figure
-    <a href="#fig:repo-create-new">173</a>.
+    <a href="#fig:repo-create-new">174</a>.
 
 <img src="images/11-github/repo-create-new.png" alt="Click the plus (+) symbol in upper-right corner to create a new repo." width="300" />
 <p class="caption">
-Figure 173: Click the plus (+) symbol in upper-right corner to create a
+Figure 174: Click the plus (+) symbol in upper-right corner to create a
 new repo.
 </p>
 
@@ -8041,11 +8244,11 @@ the next steps.
 Also, select *Add a license* that matches the code you plan to upload,
 which in this case is *MIT License*. Other fields are optional. Click
 the green *Create Repository* button at the bottom when done, as shown
-in Figure <a href="#fig:repo-create-options">174</a>.
+in Figure <a href="#fig:repo-create-options">175</a>.
 
 <img src="images/11-github/repo-create-options.png" alt="Name your new repo *practice*, check the box to *Initialize this repo with a README*, and *Add a license* (select *MIT*) to match any code you plan to upload." width="400" />
 <p class="caption">
-Figure 174: Name your new repo *practice*, check the box to *Initialize
+Figure 175: Name your new repo *practice*, check the box to *Initialize
 this repo with a README*, and *Add a license* (select *MIT*) to match
 any code you plan to upload.
 </p>
@@ -8055,24 +8258,24 @@ Your new repo will have a web address similar to
 
 1.  On your new repo home page, click the *Add File &gt; Upload Files*
     drop-down menu button, near the middle of the screen, as shown in
-    Figure <a href="#fig:repo-upload-files">175</a>.
+    Figure <a href="#fig:repo-upload-files">176</a>.
 
 <img src="images/11-github/repo-upload-files.png" alt="Click the *Upload Files* button." width="350" />
 <p class="caption">
-Figure 175: Click the *Upload Files* button.
+Figure 176: Click the *Upload Files* button.
 </p>
 
 1.  Inside the repo folder that you previously downloaded and unzipped
     on your local computer, drag-and-drop the `index.html` file to the
     upload screen of your GitHub repo in your browser, as shown in
-    Figure <a href="#fig:repo-drag-index">176</a>. Do not upload
+    Figure <a href="#fig:repo-drag-index">177</a>. Do not upload
     `LICENSE` or `README.md` because your new repo already contains
     those two files. Scroll down to click the green *Commit Changes*
     button.
 
 <img src="images/11-github/repo-drag-index-annotated.png" alt="Drag-and-drop the `index.html` file to the upload screen."  />
 <p class="caption">
-Figure 176: Drag-and-drop the `index.html` file to the upload screen.
+Figure 177: Drag-and-drop the `index.html` file to the upload screen.
 </p>
 
 When the upload is complete, your repo should contain three files, now
@@ -8091,13 +8294,13 @@ chapter.
     In the repo screen of your browser, click the top-right *Settings*
     button, scroll all the way down to the *Danger Zone*, and click
     *Delete this repository*, as shown in Figure
-    <a href="#fig:repo-delete">177</a>. GitHub will ask you to type in
+    <a href="#fig:repo-delete">178</a>. GitHub will ask you to type in
     your username and repo name to ensure that you really want to delete
     the repo, to prove you are not a drunken brownie chef.
 
 <img src="images/11-github/repo-delete.png" alt="After clicking the Delete Repository button, GitHub will ask you to type your username and repo name to confirm." width="600" />
 <p class="caption">
-Figure 177: After clicking the Delete Repository button, GitHub will ask
+Figure 178: After clicking the Delete Repository button, GitHub will ask
 you to type your username and repo name to confirm.
 </p>
 
@@ -8144,13 +8347,13 @@ push your commits back up to GitHub.
     Host a Simple Leaflet Map Template](copy-leaflet.html) section of
     this chapter. Click the *Code &gt; Open with GitHub Desktop*
     drop-down menu button near the middle of your screen, as shown in
-    Figure <a href="#fig:desktop-open">178</a>. The next screen will
+    Figure <a href="#fig:desktop-open">179</a>. The next screen will
     show a link to the GitHub Desktop web page, and you should download
     and install the application.
 
 <img src="images/11-github/desktop-open.png" alt="In your GitHub repo on the web, click *Code* to *Open with GitHub Desktop* to download and install GitHub Desktop." width="350" />
 <p class="caption">
-Figure 178: In your GitHub repo on the web, click *Code* to *Open with
+Figure 179: In your GitHub repo on the web, click *Code* to *Open with
 GitHub Desktop* to download and install GitHub Desktop.
 </p>
 
@@ -8158,25 +8361,25 @@ GitHub Desktop* to download and install GitHub Desktop.
     connect it to the GitHub web account you previously created in this
     chapter. On the welcome screen, click the blue *Sign in to
     GitHub.com* button, as shown in Figure
-    <a href="#fig:desktop-signin">179</a>, and login with your GitHub
+    <a href="#fig:desktop-signin">180</a>, and login with your GitHub
     username and password. On the next screen, GitHub will ask you to
     click the green *Authorize desktop* button to confirm that you wish
     to connect to your account.
 
 <img src="images/11-github/desktop-signin.png" alt="Click the blue *Sign in to GitHub.com* button to link GitHub Desktop to your GitHub account." width="500" />
 <p class="caption">
-Figure 179: Click the blue *Sign in to GitHub.com* button to link GitHub
+Figure 180: Click the blue *Sign in to GitHub.com* button to link GitHub
 Desktop to your GitHub account.
 </p>
 
 1.  In the next setup screen, GitHub Desktop asks you to configure Git,
     the underlying software that runs GitHub. Confirm that it displays
     your username and click *Continue*, as shown in Figure
-    <a href="#fig:desktop-configure">180</a>.
+    <a href="#fig:desktop-configure">181</a>.
 
 <img src="images/11-github/desktop-configure.png" alt="Click the *Continue* button to authorize GitHub Desktop to send commits to your GitHub account." width="500" />
 <p class="caption">
-Figure 180: Click the *Continue* button to authorize GitHub Desktop to
+Figure 181: Click the *Continue* button to authorize GitHub Desktop to
 send commits to your GitHub account.
 </p>
 
@@ -8184,24 +8387,24 @@ send commits to your GitHub account.
     *Your Repositories* on the right side to select your
     `leaflet-map-sample`, and further below click the blue button to
     *Clone* it to your local computer, as shown in Figure
-    <a href="#fig:desktop-start">181</a>.
+    <a href="#fig:desktop-start">182</a>.
 
 <img src="images/11-github/desktop-start-annotated.png" alt="Select your *leaflet-map-simple* repo and click the *Clone* button to copy it to your local computer."  />
 <p class="caption">
-Figure 181: Select your *leaflet-map-simple* repo and click the *Clone*
+Figure 182: Select your *leaflet-map-simple* repo and click the *Clone*
 button to copy it to your local computer.
 </p>
 
 1.  When you clone a repo, GitHub Desktop asks you to select the Local
     Path, meaning the location where you wish to store a copy of your
     GitHub repo on your local computer, as shown in Figure
-    <a href="#fig:desktop-clone-path">182</a>. Before you click the
+    <a href="#fig:desktop-clone-path">183</a>. Before you click the
     *Clone* button, remember the path to this location, since you’ll
     need to find it later.
 
 <img src="images/11-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click *Clone*." width="500" />
 <p class="caption">
-Figure 182: Select the Local Path where your repo will be stored on your
+Figure 183: Select the Local Path where your repo will be stored on your
 computer, then click *Clone*.
 </p>
 
@@ -8209,23 +8412,23 @@ computer, then click *Clone*.
     use this fork?” Select the default entry “To contribute to the
     parent project,” which means you plan to send your edits back to
     your GitHub web account, and click *Continue*, as shown in Figure
-    <a href="#fig:desktop-fork">183</a>.
+    <a href="#fig:desktop-fork">184</a>.
 
 <img src="images/11-github/desktop-fork.png" alt="If asked how you plan to use this fork, select the default *To contribute to the parent project* and click *Continue*." width="500" />
 <p class="caption">
-Figure 183: If asked how you plan to use this fork, select the default
+Figure 184: If asked how you plan to use this fork, select the default
 *To contribute to the parent project* and click *Continue*.
 </p>
 
 1.  Now you have copies of your GitHub repo in two places—in your GitHub
     web account and on your local computer—as shown in Figure
-    <a href="#fig:desktop-finder">184</a>. Your screen may look
+    <a href="#fig:desktop-finder">185</a>. Your screen may look
     different, depending on whether you use Windows or Mac, and the
     Local Path you selected to store your files.
 
 <img src="images/11-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different." width="500" />
 <p class="caption">
-Figure 184: Now you have two copies of your repo: in your GitHub online
+Figure 185: Now you have two copies of your repo: in your GitHub online
 account (on the left) and on your local computer (on the right, as shown
 in the Mac Finder). Windows screens will look different.
 </p>
@@ -8234,37 +8437,37 @@ in the Mac Finder). Windows screens will look different.
     install the Atom Editor application](https://atom.io). Then go to
     your GitHub Desktop screen, confirm that the Current Repository is
     `leaflet-map-simple`, and click the *Open in Atom* button as shown
-    in Figure <a href="#fig:desktop-atom">185</a>.
+    in Figure <a href="#fig:desktop-atom">186</a>.
 
 <img src="images/11-github/desktop-atom-annotated.png" alt="In GitHub Desktop, confirm the Current Repo and click the *Open in Atom* button to edit the code."  />
 <p class="caption">
-Figure 185: In GitHub Desktop, confirm the Current Repo and click the
+Figure 186: In GitHub Desktop, confirm the Current Repo and click the
 *Open in Atom* button to edit the code.
 </p>
 
 1.  Since Atom Editor is integrated with GitHub Desktop, it opens up
     your entire repo as a “project,” where you can click files in the
     left window to open as new tabs to view and edit code, as shown in
-    Figure <a href="#fig:atom-project">186</a>. Open your `index.html`
+    Figure <a href="#fig:atom-project">187</a>. Open your `index.html`
     file and edit the title of your map, around line 22, then save your
     work.
 
 <img src="images/11-github/atom-project-annotated.png" alt="Atom Editor opens your repo as a *project*, where you can click files to view code. Edit your map title."  />
 <p class="caption">
-Figure 186: Atom Editor opens your repo as a *project*, where you can
+Figure 187: Atom Editor opens your repo as a *project*, where you can
 click files to view code. Edit your map title.
 </p>
 
 1.  After saving your code edit, it’s a good habit to clean up your Atom
     Editor workspace. Right-click on the current Project and select
     *Remove Project Folder* in the menu, as shown in Figure
-    <a href="#fig:atom-remove-project">187</a>. Next time you open up
+    <a href="#fig:atom-remove-project">188</a>. Next time you open up
     Atom Editor, you can right-click to *Add Project Folder*, and choose
     any GitHub repo that you have copied to your local computer.
 
 <img src="images/11-github/atom-remove-project-annotated.png" alt="To clean up your Atom Editor workspace, right-click to *Remove Project Folder*."  />
 <p class="caption">
-Figure 187: To clean up your Atom Editor workspace, right-click to
+Figure 188: To clean up your Atom Editor workspace, right-click to
 *Remove Project Folder*.
 </p>
 
@@ -8273,11 +8476,11 @@ Figure 187: To clean up your Atom Editor workspace, right-click to
     location where you saved the repo on your local computer, and
     right-click the `index.html` file, select Open With, and choose your
     preferred web browser, as shown in Figure
-    <a href="#fig:finder-open-with">188</a>.
+    <a href="#fig:finder-open-with">189</a>.
 
 <img src="images/11-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
 <p class="caption">
-Figure 188: Right-click the index.html file on your local computer and
+Figure 189: Right-click the index.html file on your local computer and
 open with a browser to check your edits.
 </p>
 
@@ -8302,11 +8505,11 @@ Desktop.
     track of your work.) Second, click the blue *Push origin* button to
     transfer those edits to the parent copy of your repo on your GitHub
     web account. Both steps are shown in Figure
-    <a href="#fig:desktop-commit-push">189</a>.
+    <a href="#fig:desktop-commit-push">190</a>.
 
 <img src="images/11-github/desktop-commit-push-annotated.png" alt="In this two-step process, click *Commit to Master*, then click *Push origin* to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://handsondataviz.org/images/11-github/desktop-commit-push.gif)."  />
 <p class="caption">
-Figure 189: In this two-step process, click *Commit to Master*, then
+Figure 190: In this two-step process, click *Commit to Master*, then
 click *Push origin* to save and copy your edits from your local computer
 to your GitHub web account, as shown in this [animated
 GIF](https://handsondataviz.org/images/11-github/desktop-commit-push.gif).
@@ -8352,11 +8555,11 @@ his commits back to GitHub as well. Both of us see the commits that each
 other made, line-by-line in green and red (showing additions and
 deletions), by selecting the GitHub repo *Code* tab and clicking on one
 of our commits, as shown in Figure
-<a href="#fig:compare-commits">190</a>.
+<a href="#fig:compare-commits">191</a>.
 
 <img src="images/11-github/compare-commits.png" alt="Drag-and-drop the file to the upload screen."  />
 <p class="caption">
-Figure 190: Drag-and-drop the file to the upload screen.
+Figure 191: Drag-and-drop the file to the upload screen.
 </p>
 
 Although GitHub does not operate like Google Documents, which displays
@@ -8500,11 +8703,11 @@ labels are long, use horizontal bars instead of vertical columns. Always
 start the x-axis (for a horizontal bar chart) or y-axis (for a vertical
 column chart) at zero. This interactive Chart.js code template pulls the
 data from a CSV file, as shown in Figure
-<a href="#fig:chartjs-demo-bar">191</a>.
+<a href="#fig:chartjs-demo-bar">192</a>.
 
 <img src="images/12-chartcode/chartjs-demo-bar.png" alt="Bar chart with Chart.js: explore the [interactive version](https://handsondataviz.github.io/chartjs-bar/index.html)."  />
 <p class="caption">
-Figure 191: Bar chart with Chart.js: explore the [interactive
+Figure 192: Bar chart with Chart.js: explore the [interactive
 version](https://handsondataviz.github.io/chartjs-bar/index.html).
 </p>
 
@@ -8514,7 +8717,7 @@ template:
 1.  Go to [our GitHub repo for Chart.js
     template](https://github.com/HandsOnDataViz/chartjs-templates) that
     contains the code for the chart in Figure
-    <a href="#fig:chartjs-demo-bar">191</a>, log into your GitHub
+    <a href="#fig:chartjs-demo-bar">192</a>, log into your GitHub
     account, and click *Use this template* to create a copy that you can
     edit, as described in [Chapter 11: Edit and Host Code with
     GitHub](github.html).
@@ -8581,13 +8784,13 @@ Error Bars with Chart.js
 
 If your data comes with uncertainty (margins of error), we recommend you
 show it in your visualizations. The bar chart template shown in Figure
-<a href="#fig:chartjs-demo-error-bars">192</a> shows median and mean
+<a href="#fig:chartjs-demo-error-bars">193</a> shows median and mean
 (average) income for different-sized geographies: the US state of
 Colorado, Boulder County, Boulder city, and a census tract in the city.
 
 <img src="images/12-chartcode/chartjs-demo-error-bars.png" alt="Interactive bar chart with error bars in Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-error-bars/index.html)."  />
 <p class="caption">
-Figure 192: Interactive bar chart with error bars in Chart.js. Explore
+Figure 193: Interactive bar chart with error bars in Chart.js. Explore
 the [interactive
 version](https://handsondataviz.github.io/chartjs-error-bars/index.html).
 </p>
@@ -8598,7 +8801,7 @@ from a CSV file, using our Chart.js template:
 1.  Go to [our GitHub repo for this Chart.js
     template](https://github.com/HandsOnDataViz/chartjs-error-bars) that
     contains the code for the chart in Figure
-    <a href="#fig:chartjs-demo-error-bars">192</a>, log into your GitHub
+    <a href="#fig:chartjs-demo-error-bars">193</a>, log into your GitHub
     account, and click *Use this template* to create a copy that you can
     edit, as described in [Chapter 11: Edit and Host Code with
     GitHub](github.html).
@@ -8672,14 +8875,14 @@ Line charts are often used to show temporal data, or change of values
 over time. The x-axis represents time intervals, and the y-axis
 represents observed values. Note that unlike column or bar charts,
 y-axes of line charts do not have to start at zero. The line chart in
-Figure <a href="#fig:chartjs-demo-line">193</a> shows the number of
+Figure <a href="#fig:chartjs-demo-line">194</a> shows the number of
 students in select school districts in Connecticut from 2012-2013 to
 2018-19 academic years. Each line has a distinct color, and the legend
 helps establish the color-district relations.
 
 <img src="images/12-chartcode/chartjs-demo-line.png" alt="Interactive line chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-line/)."  />
 <p class="caption">
-Figure 193: Interactive line chart with Chart.js. Explore the
+Figure 194: Interactive line chart with Chart.js. Explore the
 [interactive version](https://handsondataviz.github.io/chartjs-line/).
 </p>
 
@@ -8689,7 +8892,7 @@ file, you can:
 1.  Go to [our GitHub repo for the Chart.js
     template](https://github.com/HandsOnDataViz/chartjs-line) that
     contains the code of the line chart shown in Figure
-    <a href="#fig:chartjs-demo-line">193</a>, log into your GitHub
+    <a href="#fig:chartjs-demo-line">194</a>, log into your GitHub
     account, and click *Use this template* to create a copy that you can
     edit, as described in [Chapter 11: Edit and Host Code with
     GitHub](github.html).
@@ -8742,7 +8945,7 @@ Annotated Line Chart with Highcharts
 Although annotations are common elements of various type charts, they
 are especially important in line charts. Annotations help give historic
 context to the lines, explain sudden dips or raises in values. Figure
-<a href="#fig:highcharts-demo-annotated-line">194</a> shows change in
+<a href="#fig:highcharts-demo-annotated-line">195</a> shows change in
 air passenger traffic for Australia and Canada between 1970 and 2018
 (according to the World Bank). You can notice that both countries
 experienced a dip in 2009, the year after the 2008 financial crisis as
@@ -8750,7 +8953,7 @@ suggested by the annotation.
 
 <img src="images/12-chartcode/highcharts-demo-annotated-line.png" alt="Interactive annotated chart with Highcharts. Explore the [interactive version](https://handsondataviz.github.io/highcharts-line-annotated/)."  />
 <p class="caption">
-Figure 194: Interactive annotated chart with Highcharts. Explore the
+Figure 195: Interactive annotated chart with Highcharts. Explore the
 [interactive
 version](https://handsondataviz.github.io/highcharts-line-annotated/).
 </p>
@@ -8761,7 +8964,7 @@ loaded from a CSV file, you can:
 1.  Go to [our GitHub
     repo](https://github.com/HandsOnDataViz/highcharts-line-annotated)
     that contains code for the chart shown in Figure
-    <a href="#fig:highcharts-demo-annotated-line">194</a>, log into your
+    <a href="#fig:highcharts-demo-annotated-line">195</a>, log into your
     GitHub account, and click *Use this template* to create a copy that
     you can edit, as described in [Chapter 11: Edit and Host Code with
     GitHub](github.html).
@@ -8810,14 +9013,14 @@ Scatter Chart with Chart.js
 
 Scatter charts (also *scatterplots*) are used to display data of 2 or
 more dimensions. The scatter chart in Figure
-<a href="#fig:chartjs-demo-scatter">195</a> shows the relationship
+<a href="#fig:chartjs-demo-scatter">196</a> shows the relationship
 between household income and test performance for school districts in
 Connecticut. Using x- and y-axes to show two dimensions, it is easy to
 see that test performance improves as household income goes up.
 
 <img src="images/12-chartcode/chartjs-demo-scatter.png" alt="Interactive scatter chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-scatter/)."  />
 <p class="caption">
-Figure 195: Interactive scatter chart with Chart.js. Explore the
+Figure 196: Interactive scatter chart with Chart.js. Explore the
 [interactive
 version](https://handsondataviz.github.io/chartjs-scatter/).
 </p>
@@ -8828,7 +9031,7 @@ CSV file, you can:
 1.  Go to [our GitHub
     repo](https://github.com/HandsOnDataViz/chartjs-scatter) that
     contains the code for the chart shown in Figure
-    <a href="#fig:chartjs-demo-scatter">195</a>, log into your GitHub
+    <a href="#fig:chartjs-demo-scatter">196</a>, log into your GitHub
     account, and click *Use this template* to create a copy that you can
     edit, as described in [Chapter 11: Edit and Host Code with
     GitHub](github.html).
@@ -8895,7 +9098,7 @@ Bubble charts are similar to [scatter plots](chartjs-scatter-csv.html),
 but it adds one more dimension: the size of each point (marker) also
 represents a value.
 
-The bubble chart in Figure <a href="#fig:chartjs-demo-bubble">196</a>
+The bubble chart in Figure <a href="#fig:chartjs-demo-bubble">197</a>
 shows how median household income (x-axis) and test performance (y-axis)
 in 6 school districts in Connecticut are related. The size of data point
 corresponds to the number of students enrolled in the school district:
@@ -8903,7 +9106,7 @@ bigger circles represent larger school districts.
 
 <img src="images/12-chartcode/chartjs-demo-bubble.png" alt="Interactive bubble chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-bubble/)."  />
 <p class="caption">
-Figure 196: Interactive bubble chart with Chart.js. Explore the
+Figure 197: Interactive bubble chart with Chart.js. Explore the
 [interactive version](https://handsondataviz.github.io/chartjs-bubble/).
 </p>
 
@@ -9118,8 +9321,8 @@ It gives you more control over choosing colors, icons, and images, and
 also the option to display a data table of point markers. To customize
 your interactive map, you enter data into a Google Sheet template, which
 you link directly to your copy of the Leaflet code repository, as shown
-in Figure <a href="#fig:lmwgs-map">197</a> and Figure
-<a href="#fig:lmwgs-sheet">198</a>.
+in Figure <a href="#fig:lmwgs-map">198</a> and Figure
+<a href="#fig:lmwgs-sheet">199</a>.
 
 TODO: Create and insert a new version of the demo, featuring ECGreenway
 route thru CT, points with photos, and pop density of towns to highlight
@@ -9127,13 +9330,13 @@ how this bike route connects cities.
 
 <img src="images/13-leaflet/lmwgs-map.png" alt="Explore a [live demonstration of Leaflet Maps with Google Sheets](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/)."  />
 <p class="caption">
-Figure 197: Explore a [live demonstration of Leaflet Maps with Google
+Figure 198: Explore a [live demonstration of Leaflet Maps with Google
 Sheets](https://handsondataviz.github.io/leaflet-maps-with-google-sheets/).
 </p>
 
 <img src="images/13-leaflet/lmwgs-sheet.png" alt="Explore the [live Google Sheet template](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g) that feeds data into the Leaflet map above."  />
 <p class="caption">
-Figure 198: Explore the [live Google Sheet
+Figure 199: Explore the [live Google Sheet
 template](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g)
 that feeds data into the Leaflet map above.
 </p>
@@ -9208,13 +9411,13 @@ of the appendix.
     button and scroll way down to the GitHub Pages area. In the
     drop-down menu, change *Source* from *None* to *Master*, keep the
     default */(root)* setting, and press *Save* as shown in Figure
-    <a href="#fig:leaflet-github-pages2">199</a>. This step tells GitHub
+    <a href="#fig:leaflet-github-pages2">200</a>. This step tells GitHub
     to publish a live version of your map on the public web, where
     anyone can access it in their browser, if they have the web address.
 
 <img src="images/13-leaflet/leaflet-github-pages2.png" alt="In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Master*." width="500" />
 <p class="caption">
-Figure 199: In *Settings*, go to *GitHub Pages*, and switch the source
+Figure 200: In *Settings*, go to *GitHub Pages*, and switch the source
 from *None* to *Master*.
 </p>
 
@@ -9266,11 +9469,11 @@ TODO: Insert image here
     (which usually ends in `...XYZ/edit#gid=0`). Do *NOT* copy the
     *Published to the web* address (which usually ends in
     `...XYZ/pubhtml`), as shown in Figure
-    <a href="#fig:sheets-publish">200</a>.
+    <a href="#fig:sheets-publish">201</a>.
 
 <img src="images/13-leaflet/sheets-publish-annotated.png" alt="Copy the Google Sheet address at the top of the browser, NOT the *Publish to the web* address." width="500" />
 <p class="caption">
-Figure 200: Copy the Google Sheet address at the top of the browser, NOT
+Figure 201: Copy the Google Sheet address at the top of the browser, NOT
 the *Publish to the web* address.
 </p>
 
@@ -9284,13 +9487,13 @@ GitHub, so that content from your Sheet will appear in your map.
 
 2.  Paste *your* Google Sheet address or URL (which usually ends in
     `...XYZ/edit#gid=0`) to replace the existing URL, as shown in Figure
-    <a href="#fig:google-doc-url">201</a>. Be careful *NOT* to erase the
+    <a href="#fig:google-doc-url">202</a>. Be careful *NOT* to erase the
     single quotation marks or the semicolon at the end. See separate
     instructions about the Google API key further below.
 
 <img src="images/13-leaflet/google-doc-url-annotated.png" alt="Paste in *your* Google Sheet URL to replace *our* URL."  />
 <p class="caption">
-Figure 201: Paste in *your* Google Sheet URL to replace *our* URL.
+Figure 202: Paste in *your* Google Sheet URL to replace *our* URL.
 </p>
 
 <!-- TODO: Update image when new code is done -->
@@ -9366,14 +9569,14 @@ results of those three columns into Location, Latitude, and Longitude.
 
 Optional: You can display a table of viewable markers at the bottom of
 your map, as shown in Figure
-<a href="#fig:leaflet-map-with-table">202</a>. In the *Options* tab, set
+<a href="#fig:leaflet-map-with-table">203</a>. In the *Options* tab, set
 *Display Table* (cell B30) to *On*. You can also adjust the *Table
 Height*, and modify the display of *Table Columns* by entering the
 column headers, separated with commas.
 
 <img src="images/13-leaflet/leaflet-map-with-table.png" alt="One option is to display a table of viewable markers at the bottom of your map." width="500" />
 <p class="caption">
-Figure 202: One option is to display a table of viewable markers at the
+Figure 203: One option is to display a table of viewable markers at the
 bottom of your map.
 </p>
 
@@ -9476,7 +9679,7 @@ due to an interruption to Google services, as described in Step H.
 
 To move your map data from Google Sheets to CSV format, go to each tab
 and select *File &gt; Download As* into CSV format, as shown in Figure
-<a href="#fig:sheets-download-csv">203</a>, using these file names:
+<a href="#fig:sheets-download-csv">204</a>, using these file names:
 **TODO: should we warn to keep the first letter upper-case?**
 
 -   Options.csv
@@ -9494,7 +9697,7 @@ request is working
 
 <img src="images/13-leaflet/sheets-download-csv.png" alt="One way to finalize your map is to download each Google Sheets tab as a CSV file." width="350" />
 <p class="caption">
-Figure 203: One way to finalize your map is to download each Google
+Figure 204: One way to finalize your map is to download each Google
 Sheets tab as a CSV file.
 </p>
 
@@ -9829,92 +10032,92 @@ Before you begin:
     your country and agree to its terms of service.
 
 2.  Click on *Create a Project* on the opening screen, as shown in
-    Figure <a href="#fig:google-api-create">204</a>. Or alternatively,
+    Figure <a href="#fig:google-api-create">205</a>. Or alternatively,
     go to the upper-left drop-down menu to *Select a project &gt; New
     project*.
 
 <img src="images/13-leaflet/google-api-create.png" alt="Select *Create a Project* or use the menu to select a new project." width="600" />
 <p class="caption">
-Figure 204: Select *Create a Project* or use the menu to select a new
+Figure 205: Select *Create a Project* or use the menu to select a new
 project.
 </p>
 
 1.  In the next screen, give your new project a meaningful short name to
     remind you of its purpose, such as `handsondataviz`. You do not need
     to create an organization or parent folder. Then click *Create*, as
-    shown in Figure <a href="#fig:google-api-name">205</a>.
+    shown in Figure <a href="#fig:google-api-name">206</a>.
 
 <img src="images/13-leaflet/google-api-name.png" alt="Give your project a meaningful short name." width="450" />
 <p class="caption">
-Figure 205: Give your project a meaningful short name.
+Figure 206: Give your project a meaningful short name.
 </p>
 
 1.  In the next screen, press the *+ Enable APIs and Services* at the
     top of the menu, as shown in Figure
-    <a href="#fig:google-api-enable">206</a>. Make sure that your new
+    <a href="#fig:google-api-enable">207</a>. Make sure that your new
     project name appears near the top.
 
 <img src="images/13-leaflet/google-api-enable.png" alt="Press the *+ Enable APIs and Services* button."  />
 <p class="caption">
-Figure 206: Press the *+ Enable APIs and Services* button.
+Figure 207: Press the *+ Enable APIs and Services* button.
 </p>
 
 1.  In the next screen, enter *Google Sheets* into the search bar, and
     select this result, as shown in Figure
-    <a href="#fig:google-api-search">207</a>.
+    <a href="#fig:google-api-search">208</a>.
 
 <img src="images/13-leaflet/google-api-search.png" alt="Search for *Google Sheets* and select this result."  />
 <p class="caption">
-Figure 207: Search for *Google Sheets* and select this result.
+Figure 208: Search for *Google Sheets* and select this result.
 </p>
 
 1.  In the next screen, select the *Enable* button to turn on the Google
     Sheets API for your project, as shown in Figure
-    <a href="#fig:google-api-select">208</a>.
+    <a href="#fig:google-api-select">209</a>.
 
 <img src="images/13-leaflet/google-api-select.png" alt="Select the *Enable* button for Google Sheets API." width="350" />
 <p class="caption">
-Figure 208: Select the *Enable* button for Google Sheets API.
+Figure 209: Select the *Enable* button for Google Sheets API.
 </p>
 
 1.  In the left sidebar menu, click *Credentials*, then click *+ Create
     Credentials* and select *API key*, as shown in Figure
-    <a href="#fig:google-api-credentials">209</a>.
+    <a href="#fig:google-api-credentials">210</a>.
 
 <img src="images/13-leaflet/google-api-credentials.png" alt="Select *Credentials - Create Credentials - API key*."  />
 <p class="caption">
-Figure 209: Select *Credentials - Create Credentials - API key*.
+Figure 210: Select *Credentials - Create Credentials - API key*.
 </p>
 
 1.  In the next screen, the console will generate your API key. Copy it,
     then press *Restrict key*, as shown in Figure
-    <a href="#fig:google-api-key">210</a>.
+    <a href="#fig:google-api-key">211</a>.
 
 <img src="images/13-leaflet/google-api-key-annotated.png" alt="Copy your API key and press *Restrict key*." width="500" />
 <p class="caption">
-Figure 210: Copy your API key and press *Restrict key*.
+Figure 211: Copy your API key and press *Restrict key*.
 </p>
 
 1.  In the new window, under *API restrictions*, choose the *Restrict
     key* radio button. In the dropdown that appears, choose *Google
     Sheets API*, then click *Save*, as shown in Figure
-    <a href="#fig:google-api-restrict">211</a>.
+    <a href="#fig:google-api-restrict">212</a>.
 
 <img src="images/13-leaflet/google-api-restrict.png" alt="Choose *API restrictions - Restrict key - Google Sheets API*" width="600" />
 <p class="caption">
-Figure 211: Choose *API restrictions - Restrict key - Google Sheets API*
+Figure 212: Choose *API restrictions - Restrict key - Google Sheets API*
 </p>
 
 1.  In your Leaflet map code on your GitHub repo, open the
     `google-doc-url.js` file, click the pencil symbol to edit it, and
     paste in *your* Google Sheets API key to replace *our* key, as shown
-    in Figure <a href="#fig:google-api-paste">212</a>. Be careful not to
+    in Figure <a href="#fig:google-api-paste">213</a>. Be careful not to
     erase the single-quote marks or the semicolon. Scroll down to
     *Commit* your changes.
 
 <img src="images/13-leaflet/google-api-paste-annotated.png" alt="Paste in *your* Google Sheets API key to replace *our* key."  />
 <p class="caption">
-Figure 212: Paste in *your* Google Sheets API key to replace *our* key.
+Figure 213: Paste in *your* Google Sheets API key to replace *our* key.
 </p>
 
 You might receive a notification from GitHub stating that you have an
@@ -9930,7 +10133,7 @@ Leaflet map templates.
 Leaflet Maps with CSV Data
 --------------------------
 
-Figure <a href="#fig:leaflet-map-csv">213</a> shows a simple point map
+Figure <a href="#fig:leaflet-map-csv">214</a> shows a simple point map
 of some colleges and universities in Connecticut. But instead of
 individually creating markers in JavaScript using Leaflet’s `L.marker()`
 function, the point data is stored in a local CSV file (`data.csv`) that
@@ -9940,7 +10143,7 @@ are generated “on the fly”.
 
 <img src="images/13-leaflet/leaflet-map-csv.png" alt="Explore a [live demonstration of Leaflet point map with CSV data](https://handsondataviz.github.io/leaflet-map-csv/)."  />
 <p class="caption">
-Figure 213: Explore a [live demonstration of Leaflet point map with CSV
+Figure 214: Explore a [live demonstration of Leaflet point map with CSV
 data](https://handsondataviz.github.io/leaflet-map-csv/).
 </p>
 
@@ -9996,7 +10199,7 @@ Leaflet Maps with Open Data API
 -------------------------------
 
 Leaflet maps can pull and display data from various open data
-repositories using APIs. Figure <a href="#fig:leaflet-open-data">214</a>
+repositories using APIs. Figure <a href="#fig:leaflet-open-data">215</a>
 shows an interactive map of North Dakota counties, colored by population
 density, with hospitals and EMS stations locations. Hospital information
 is pulled directly from [Medicare.org Socrata
@@ -10008,7 +10211,7 @@ ArcGIS server.
 
 <img src="images/13-leaflet/leaflet-open-data.png" alt="Explore a [live demonstration of Leaflet Heatmap](https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html)."  />
 <p class="caption">
-Figure 214: Explore a [live demonstration of Leaflet
+Figure 215: Explore a [live demonstration of Leaflet
 Heatmap](https://handsondataviz.github.io/leaflet-maps-open-data-apis/index.html).
 </p>
 
@@ -10022,7 +10225,7 @@ To adapt this template for your own project:
 1.  Visit the [GitHub
     repository](https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis)
     that contains the code for the map in Figure
-    <a href="#fig:leaflet-open-data">214</a>, and press the *Use this
+    <a href="#fig:leaflet-open-data">215</a>, and press the *Use this
     template* button to copy the repo to your own GitHub account.
 2.  All data is pulled form the code inside the `<script>` tag of
     `index.html`. To pull data from Socrata or another JSON/GeoJSON
@@ -10113,7 +10316,7 @@ Leaflet Heatmap with CSV Point Data
 Heatmaps turn individual points into hotspots or clusters, allowing
 viewers to explore spatial distributions of events, such as areas of
 high and low population density, or high-crime areas. Figure
-<a href="#fig:leaflet-heatmap">215</a> shows an interactive heatmap of
+<a href="#fig:leaflet-heatmap">216</a> shows an interactive heatmap of
 bike theft locations in London between January and July 2020. The
 underlying data are coordinate locations for each reported bike theft,
 which [`Leaflet.heat`](https://github.com/Leaflet/Leaflet.heat) plugin
@@ -10123,7 +10326,7 @@ in, areas are re-calculated into more distinct clusters.
 
 <img src="images/13-leaflet/leaflet-heatmap.png" alt="Explore a [live demonstration of Leaflet Heatmap](https://handsondataviz.github.io/leaflet-heatmap/)."  />
 <p class="caption">
-Figure 215: Explore a [live demonstration of Leaflet
+Figure 216: Explore a [live demonstration of Leaflet
 Heatmap](https://handsondataviz.github.io/leaflet-heatmap/).
 </p>
 
@@ -10171,7 +10374,7 @@ you have few points, try increasing the value of `radius` property of
 Leaflet Searchable Map with CSV Points
 --------------------------------------
 
-Figure <a href="#fig:searchable-map">216</a> shows a powerful Leaflet
+Figure <a href="#fig:searchable-map">217</a> shows a powerful Leaflet
 template of a searchable and filterable point map developed by [Derek
 Eder](https://derekeder.com/) from DataMade. This map allows you to show
 points of interest, filter them by using *Search by name* functionality,
@@ -10180,7 +10383,7 @@ and show them as a list instead of points on a map. In addition, the
 
 <img src="images/13-leaflet/searchable-map.png" alt="Explore a [live demonstration of Searchable Map template](https://searchable-map-template-csv.netlify.app/)."  />
 <p class="caption">
-Figure 216: Explore a [live demonstration of Searchable Map
+Figure 217: Explore a [live demonstration of Searchable Map
 template](https://searchable-map-template-csv.netlify.app/).
 </p>
 
@@ -10431,26 +10634,26 @@ other indicators, such as mortality and patient experience.
 
 Now, imagine you are given a task to create a choropleth map of total
 hospitals by US state. Instead of showing individual hospitals as points
-(as in Figuere <a href="#fig:pivot-address">217</a>a ), you want darker
+(as in Figuere <a href="#fig:pivot-address">218</a>a ), you want darker
 shades of blue to represent states with more hospitals (as in Figure
-<a href="#fig:pivot-address">217</a>b).
+<a href="#fig:pivot-address">218</a>b).
 
 or choropleth, maps instead of point maps.
 
 <img src="images/14-transform/pivot-address-annotated.png" alt="You can count addresses by state (or other area) to produce polygon,"  />
 <p class="caption">
-Figure 217: You can count addresses by state (or other area) to produce
+Figure 218: You can count addresses by state (or other area) to produce
 polygon,
 </p>
 
 First, save the database to your local machine by going to *Export &gt;
 Download &gt; CSV* of Socrata interface. Figure
-<a href="#fig:pivot-address-export">218</a> shows where you can find the
+<a href="#fig:pivot-address-export">219</a> shows where you can find the
 Export button.
 
 <img src="images/14-transform/pivot-address-export.png" alt="In Socrata, you can export the entire dataset as a CSV."  />
 <p class="caption">
-Figure 218: In Socrata, you can export the entire dataset as a CSV.
+Figure 219: In Socrata, you can export the entire dataset as a CSV.
 </p>
 
 Next, open the file in your favorite spreadsheet tool. If you use Google
@@ -10464,7 +10667,7 @@ missing values—and choose *Summarize by: COUNTA*. Voila!
 
 <img src="images/14-transform/pivot-address-sheet.png" alt="Use pivot tables in any spreadsheet software to count addresses per area (such as state, county, of zip code)."  />
 <p class="caption">
-Figure 219: Use pivot tables in any spreadsheet software to count
+Figure 220: Use pivot tables in any spreadsheet software to count
 addresses per area (such as state, county, of zip code).
 </p>
 
@@ -10499,8 +10702,8 @@ address, and guest reviews are the attributes, which bring value to your
 location data.
 
 Second, geospatial data can be *raster* or *vector*, as illustrated in
-Figure <a href="#fig:geospatial-raster-vector">220</a>. Raster data, as
-shown in Figure <a href="#fig:geospatial-raster-vector">220</a>a, is a
+Figure <a href="#fig:geospatial-raster-vector">221</a>. Raster data, as
+shown in Figure <a href="#fig:geospatial-raster-vector">221</a>a, is a
 grid of cells (“pixels”) of a certain size (for example, 1 meter by 1
 meter). For example, satellite images of the Earth that you see on
 Google Maps are raster geospatial data. Each pixel contains the color of
@@ -10512,12 +10715,12 @@ built by volunteers tracing outlines of objects from satellite images.
 
 <img src="images/14-transform/geospatial-raster-vector-annotated.png" alt="Geospatial data can be raster or vector."  />
 <p class="caption">
-Figure 220: Geospatial data can be raster or vector.
+Figure 221: Geospatial data can be raster or vector.
 </p>
 
 In this book, we will focus on vector data, which is based on features,
 which can be points, lines, and polygons, as shown in Figure
-<a href="#fig:geospatial-raster-vector">220</a>b. Vector data can be
+<a href="#fig:geospatial-raster-vector">221</a>b. Vector data can be
 much more precise than raster data, because point coordinates can be
 expressed with precise decimals. In addition, vector data can contain as
 much extra *attribute* information about each object as desired, whereas
@@ -10564,11 +10767,11 @@ GIS software installed.
 
 Also, your GitHub repository will automatically display any GeoJSON
 files in a map view, like is shown in Figure
-<a href="#fig:geojson-github">221</a>.
+<a href="#fig:geojson-github">222</a>.
 
 <img src="images/14-transform/geojson-github.png" alt="GitHub can show previews of GeoJSON files stored in repositories."  />
 <p class="caption">
-Figure 221: GitHub can show previews of GeoJSON files stored in
+Figure 222: GitHub can show previews of GeoJSON files stored in
 repositories.
 </p>
 
@@ -10666,7 +10869,7 @@ parks](data/hartford-parks.kml) in KML format. If GeoJson.io was able to
 recognize and import the file, you will see a green popup message in the
 upper-left corner saying how many features (in case of Hartford parks,
 only polygons) were imported. Figure
-<a href="#fig:geojson-io-import">222</a> shows us that 62 features were
+<a href="#fig:geojson-io-import">223</a> shows us that 62 features were
 imported from the sample Hartford parks file. You can see that the
 polygons appeared on top of the Mapbox world layer.
 
@@ -10676,7 +10879,7 @@ tool, such as Mapshaper or QGIS, to convert your file to GeoJSON.
 
 <img src="images/14-transform/geojson-io-import.png" alt="GeoJson.io successfully imported Hartford parks KML file."  />
 <p class="caption">
-Figure 222: GeoJson.io successfully imported Hartford parks KML file.
+Figure 223: GeoJson.io successfully imported Hartford parks KML file.
 </p>
 
 You can now save your file to GeoJSON. Go to *Save &gt; GeoJSON* to
@@ -10689,12 +10892,12 @@ GeoJson.io can transform a spreadsheet with *latitude* (or *lat*) and
 Each row in the spreadsheet becomes its own point, and all columns other
 than *lat* and *lon* become *attributes* (or *properties*) of point
 features. An example of such spreadsheet is shown in Figure
-<a href="#fig:geojson-io-csv-data">223</a>. You can [download
+<a href="#fig:geojson-io-csv-data">224</a>. You can [download
 it](data/hartford-and-suburbs.csv) for the exercise.
 
 <img src="images/14-transform/geojson-io-csv-data.png" alt="A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features."  />
 <p class="caption">
-Figure 223: A spreadsheet with lat/lon columns can be transformed into a
+Figure 224: A spreadsheet with lat/lon columns can be transformed into a
 GeoJSON with point features.
 </p>
 
@@ -10742,11 +10945,11 @@ GeoJSON file and add markers, lines, and polygons to it.
 2.  In the upper-right corner of the map, use the Search tool to find
     the area you’re interested in mapping. For this exercise, we will
     use tennis courts at Trinity College, Hartford, as shown in Figure
-    <a href="#fig:geojson-io-draw">224</a>.
+    <a href="#fig:geojson-io-draw">225</a>.
 
 <img src="images/14-transform/geojson-io-draw.png" alt="Use drawing tools to create points, lines, and polygons in GeoJson.io."  />
 <p class="caption">
-Figure 224: Use drawing tools to create points, lines, and polygons in
+Figure 225: Use drawing tools to create points, lines, and polygons in
 GeoJson.io.
 </p>
 
@@ -10835,7 +11038,7 @@ or create a `.zip` archive.
     or delete them.
 2.  To export, go to *Export* in the upper-right corner, and select a
     desired file format. The choice of export formats is shown in Figure
-    <a href="#fig:mapshaper-export">225</a>. As of July 2020, these are
+    <a href="#fig:mapshaper-export">226</a>. As of July 2020, these are
     Shapefile, GeoJSON, TopoJSON (similar to GeoJSON, but with
     topographical data), JSON records, CSV, or SVG (Scalable Vector
     Graphics, for web and print). If you export more than one layer at a
@@ -10844,7 +11047,7 @@ or create a `.zip` archive.
 
 <img src="images/14-transform/mapshaper-export.png" alt="You can use Mapshaper to quickly convert between geospatial file formats."  />
 <p class="caption">
-Figure 225: You can use Mapshaper to quickly convert between geospatial
+Figure 226: You can use Mapshaper to quickly convert between geospatial
 file formats.
 </p>
 
@@ -10854,7 +11057,7 @@ Tip: Mapshaper doesn’t work with KML or KMZ files, but you can use
 #### Edit data for specific polygons
 
 You can edit attribute data of individual polygons (and also points and
-lines) in Mapshaper. Figure <a href="#fig:mapshaper-edit">226</a> shows
+lines) in Mapshaper. Figure <a href="#fig:mapshaper-edit">227</a> shows
 you how.
 
 1.  Import the file whose polygon attributes you want to edit.
@@ -10867,7 +11070,7 @@ you how.
 
 <img src="images/14-transform/mapshaper-edit.png" alt="Use *edit attributes* tool (under Cursor tool) to edit attributes of polygons, lines, and points."  />
 <p class="caption">
-Figure 226: Use *edit attributes* tool (under Cursor tool) to edit
+Figure 227: Use *edit attributes* tool (under Cursor tool) to edit
 attributes of polygons, lines, and points.
 </p>
 
@@ -10879,15 +11082,15 @@ boundaries are heavy, and may slow down your web maps.
 
 Consider two maps of the contiguous US states (also known as *the lower
 48*, the term Ilya learned in 2018 while travelling in Alaska), shown in
-Figure <a href="#fig:mapshaper-simplify-demo">227</a>. The map in Figure
-<a href="#fig:mapshaper-simplify-demo">227</a>a is more detailed and is
+Figure <a href="#fig:mapshaper-simplify-demo">228</a>. The map in Figure
+<a href="#fig:mapshaper-simplify-demo">228</a>a is more detailed and is
 about 230 kilobytes, but the map in Figure
-<a href="#fig:mapshaper-simplify-demo">227</a>b is only 37 kilobytes, 6
+<a href="#fig:mapshaper-simplify-demo">228</a>b is only 37 kilobytes, 6
 times smaller!
 
 <img src="images/14-transform/mapshaper-simplify-demo-annotated.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
 <p class="caption">
-Figure 227: Consider simplifying geometries with Mapshaper to make your
+Figure 228: Consider simplifying geometries with Mapshaper to make your
 web maps faster.
 </p>
 
@@ -10900,7 +11103,7 @@ To simplify map boundaries in Mapshaper, follow the steps below.
     methods. We recommend checking *prevent shape removal*, and leaving
     the default *Visvalingam / weighted area*. Click *Apply*.
 3.  You will see a slider with `100%` appear on top (Figure
-    <a href="#fig:mapshaper-simplify">228</a>), replacing the layer
+    <a href="#fig:mapshaper-simplify">229</a>), replacing the layer
     selection dropdown. Move the slider to the right and see the map
     simplify its shape as you go. Stop when you think the map looks
     appropriate (when the shapes are still recognizable).
@@ -10910,7 +11113,7 @@ To simplify map boundaries in Mapshaper, follow the steps below.
 
 <img src="images/14-transform/mapshaper-simplify.png" alt="Use Simplify & Repair tools in Mapshaper."  />
 <p class="caption">
-Figure 228: Use Simplify & Repair tools in Mapshaper.
+Figure 229: Use Simplify & Repair tools in Mapshaper.
 </p>
 
 Tip: You may find the US shape a bit unusual and vertically “shrunk”. In
@@ -10924,11 +11127,11 @@ which allows you to type commands for common map editing tasks. One of
 such tasks is to create an outline map by removing the internal
 boundaries. For example, you can dissolve state boundaries of the US map
 in the previous exercise to get the outline of the country, like is
-shown in Figure <a href="#fig:mapshaper-dissolve">229</a>.
+shown in Figure <a href="#fig:mapshaper-dissolve">230</a>.
 
 <img src="images/14-transform/mapshaper-dissolve.png" alt="Mapshaper lets you dissolve boundaries to create an outline shape."  />
 <p class="caption">
-Figure 229: Mapshaper lets you dissolve boundaries to create an outline
+Figure 230: Mapshaper lets you dissolve boundaries to create an outline
 shape.
 </p>
 
@@ -10976,12 +11179,12 @@ Mapshaper allows you to do just that using one simple `-clip` command.
     -clip hartfordcounty-outline -filter-slivers
 
 1.  Your Mapshaper state should look like pictured in Figure
-    <a href="#fig:mapshaper-clip">230</a>. You can now save the file on
+    <a href="#fig:mapshaper-clip">231</a>. You can now save the file on
     your computer using the *Export* button.
 
 <img src="images/14-transform/mapshaper-clip.png" alt="When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature iteslf."  />
 <p class="caption">
-Figure 230: When clipping, make sure your active layer is the one being
+Figure 231: When clipping, make sure your active layer is the one being
 clipped (with many features), not the clipping feature iteslf.
 </p>
 
@@ -11041,13 +11244,13 @@ attribute of the map file, and `town` column of the CSV file.
     performed successfully, or if Mapshaper encountered any errors.
 2.  Use the *Cursor &gt; inspect attributes* tool to make sure you see
     CSV columns as fields of your polygons, like is shown in Figure
-    <a href="#fig:mapshaper-join">231</a>.
+    <a href="#fig:mapshaper-join">232</a>.
 3.  You can now save the file to your computer by clicking the *Export*
     button.
 
 <img src="images/14-transform/mapshaper-join.png" alt="Mapshaper lets you join spatial and CSV files using common keys (for example, town names)."  />
 <p class="caption">
-Figure 231: Mapshaper lets you join spatial and CSV files using common
+Figure 232: Mapshaper lets you join spatial and CSV files using common
 keys (for example, town names).
 </p>
 
@@ -11089,7 +11292,7 @@ state, in our case).
 
 1.  Use the *Cursor &gt; inspect attributes* tool to make sure polygons
     obtained a new field with the recorded count of points, like is
-    shown in Figure <a href="#fig:mapshaper-count-points">232</a>.
+    shown in Figure <a href="#fig:mapshaper-count-points">233</a>.
 
 2.  Save the new file using *Export* button and choosing the desired
     output format. In the section below, we will talk about what happens
@@ -11097,7 +11300,7 @@ state, in our case).
 
 <img src="images/14-transform/mapshaper-count-points.png" alt="Mapshaper's -join can count points in polygons."  />
 <p class="caption">
-Figure 232: Mapshaper’s -join can count points in polygons.
+Figure 233: Mapshaper’s -join can count points in polygons.
 </p>
 
 #### More about joins
@@ -11170,13 +11373,13 @@ town boundaries, let’s extract a list of towns from it.
     two columns with the same values.
 5.  Pick a few towns, for example *West Hartford* and *Bloomfield*, and
     assign “Bloomfield-West Hartford” to their *merged* column, like is
-    shown in Figure <a href="#fig:mapshaper-merge-csv">233</a>. You may
+    shown in Figure <a href="#fig:mapshaper-merge-csv">234</a>. You may
     stop right here and move to the next step, or keep assigning
     district names to a few other neighboring towns.
 
 <img src="images/14-transform/mapshaper-merge-csv.png" alt="Create a two-column crosswalk of towns and which districts they should be merged to." width="250px" />
 <p class="caption">
-Figure 233: Create a two-column crosswalk of towns and which districts
+Figure 234: Create a two-column crosswalk of towns and which districts
 they should be merged to.
 </p>
 
@@ -11203,12 +11406,12 @@ CSV file.
 In our example, only Bloomfield and West Hartford are dissolved into a
 combined “Bloomfield-West Hartford” regional health district (with the
 shared boundary between towns becoming grayed out), and all of the other
-polygons remain the same. Figure <a href="#fig:mapshaper-merge">234</a>
+polygons remain the same. Figure <a href="#fig:mapshaper-merge">235</a>
 shows the final result.
 
 <img src="images/14-transform/mapshaper-merge.png" alt="Merge polygons based on a predefined crosswalk."  />
 <p class="caption">
-Figure 234: Merge polygons based on a predefined crosswalk.
+Figure 235: Merge polygons based on a predefined crosswalk.
 </p>
 
 You can inspect attribute data of polygons using *Cursor &gt; inspect
@@ -11264,20 +11467,20 @@ Google Earth).
     Open* and choose your KMZ file.
 3.  Right-click (or control-click) on the KMZ layer under Places menu,
     and select *Save Place As…*, like is shown in Figure
-    <a href="#fig:kmz-earth">235</a>.
+    <a href="#fig:kmz-earth">236</a>.
 
 <img src="images/14-transform/kmz-earth.png" alt="In Google Earth Pro, right-click the KMZ layer and choose *Save Place As*." width="400px" />
 <p class="caption">
-Figure 235: In Google Earth Pro, right-click the KMZ layer and choose
+Figure 236: In Google Earth Pro, right-click the KMZ layer and choose
 *Save Place As*.
 </p>
 
 1.  In the dropdown menu of *Save file…* window, choose KML format, like
-    is shown in Figure <a href="#fig:kmz-save-as">236</a>.
+    is shown in Figure <a href="#fig:kmz-save-as">237</a>.
 
 <img src="images/14-transform/kmz-save-as.png" alt="Save as KML, not KMZ." width="350px" />
 <p class="caption">
-Figure 236: Save as KML, not KMZ.
+Figure 237: Save as KML, not KMZ.
 </p>
 
 Alternatively, you can use any zip-utility to extract a KML file from
@@ -11299,87 +11502,75 @@ reader.
 
 <!--chapter:end:14-transform.Rmd-->
 
-Detect Lies and Reduce Bias
-===========================
+Detect Lies and Reduce Data Bias
+================================
 
-TODO: Revise chapter
+The goal of data visualization is to encode information into images that
+capture true and insightful stories. But we’ve warned you to watch out
+for people who lie with charts and maps. In fact, in the
+[Introduction](introduction.html) we intentionally manipulated
+visualizations about income inequality to demonstrate how the same data
+can be rearranged to paint very different pictures of reality. Does that
+mean all data visualizations are right? Definitely not. On closer
+examination, we declared that one of the two charts about US income
+inequality to be *misleading* because it intentionally used an
+inappropriate scale to hide the truth. But we also confided that the two
+world maps were *equally truthful*, even though the US appeared in a
+darker color (signaling a higher level of inequality) than the other.
 
-In the introduction, we lied to you… intentionally… by showing you
-visualizations that portrayed reality is very different ways.
+How can two different visualizations be equally right? Our response may
+conflict with those who prefer to call their work *data science*, a
+label that suggests an objective world with only one right answer.
+Instead, we argue that data visualization is best understood as
+*interpretative skill* that still depends on evidence, but more than one
+portrayal of reality may be valid. As you recall, our field has only a
+few definitive rules about how *not* to visualize data, which we
+introduced in [Chapter 7 on chart design](chart-design.html) and
+[Chapter 8 on map design](map-design.html). Rather than a binary world,
+we argue that visualizations fall into three categories.
 
-In this chapter, you’ll improve your lie detector skills in the realm of
-dataviz, and also work to reduce more subtle biases in your own dataviz.
+First, visualizations may be *wrong* because they violate one of these
+firm rules \[TODO ADD: or they clearly misstate the evidence\]. For
+example, if a bar or column chart begins at a number other than zero, we
+say it’s *wrong* because those types of charts represent values through
+*length* or *height*, which readers cannot determine if the baseline has
+been truncated. Also, if the slices of a pie chart adds up to more than
+100 percent, we declare it to be *wrong* because that violates the
+fundamental design rules.
 
-While we like to believe data visualizations simply “tell the truth,”
-when you dig further into this topic, you realize that there are
-multiple ways to represent reality.
+Second, visualizations may be *misleading* if they technically follow
+the design rules, yet unreasonably hide or twist the appearance of
+relevant data. We acknowledge that the word “unreasonably” can be
+subject to debate here. But the category is essential to point out how
+charts and map can follow the rules, yet misdirect readers, and you’ll
+see many examples in this chapter.
 
-People can mislead with charts and maps, but we can also create very
-different pictures of the truth….
+Third, visualizations may be *truthful* if they follow the design rules
+and provide insightful interpretations of the data. This is our goal,
+but we acknowledge that there’s a wide spectrum within this category.
+Sometimes when looking at two valid interpretations, we say that one is
+*better* than the other because it illuminates meaningful patterns that
+we did not yet recognize in the data. Or perhaps one is better because
+it portrays these patterns more beautifully than other visualizations.
 
-You may be surprised to learn that there’s not one *right* way to create
-a chart or a map. In the field of data visualization, we have only a few
-hard rules about how *not* to design, such as \[REFER to chart and map
-design sections\]. Even some of those “rules” are disputed.
-
-In general, data visualization is guided by a general dictum to make
-“honest and useful decisions” (cite Datawrapper); Alberto Cairo adds
-that visualizations should be
-“truthful…functional….beautiful…insightful….”
-
-That leaves a lot of room for interpretation… some of which is
-intentionally misleading, and some of it is thoughtlessly
-misinformed….unintentional…. but nevertheless sways how people view our
-visualizations…
-
-In this chapter, you will learn how visualizations display the biases of
-the people and the software that create them.
-
-While we cannot stop bias entirely, we can teach you to detect it in
-charts and maps made by other people, as well as those that you make, to
-improve your interpretation…
-
-The best way to improve your lie detector skills is to learn various
-ways to intentionally manipulate data visualizations, to better
-understand how people might be lying to you. Since our book features
-hands-on tutorials, in the sections below we’ll walk you through the
-steps of creating *biased* charts and maps, so that you’ll know how to
-make *better* ones.
-
-As the saying goes, it takes a thief to catch a thief: learn *how to
-lie* to avoid being fooled by other people’s misleading charts and maps,
-and also so that you *tell the truth* in your own visualizations.
-
-Since our book features hands-on lessons, in each section you’ll learn
-how to create *biased* visualizations, so that you’ll know how to make
-*better* ones. Just like it takes a thief to catch a thief… you need to
-learn how to lie in order to be more truthful in your visualizations…
-
-These tutorials on “how to lie” were inspired by several sources….
-
--   Darrell Huff, How to Lie with Statistics (W. W. Norton & Company,
-    1954),
-    <a href="http://books.google.com/books?isbn=0393070875" class="uri">http://books.google.com/books?isbn=0393070875</a>
--   Mark S. Monmonier, How to Lie with Maps, 2nd ed. (University of
-    Chicago Press, 1996),
-    <a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a>
--   Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February
-    9, 2017,
-    <a href="http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/" class="uri">http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/</a>
--   Alberto Cairo 2016
--   Alberto Cairo 2019
-
-Avoid Bad Visualizations
-------------------------
-
-TODO: can this be reduced to 1-2 paragraphs with refs to chart and map
-design sections, rather than its own section? Some visualizations are so
-poorly designed, with obvious errors, that we *can* declare these to be
-*wrong*. Whether intentional or otherwise, no room for interpretation
-here… We warned you about some of these mistakes in the chart design and
-map design sections of this book. - Examples: pie charts that add up to
-more than 100% - hiding data by removing it from the chart (showing only
-high values, and omitting years with lower ones)
+In this chapter, you’ll learn to sort out differences between the three
+categories. The best way to improve your lie detector skills is through
+hands-on tutorials in the art of data deception, to better understand
+[how to lie with charts](how-to-lie-with-charts.html) and [how to lie
+with maps](how-to-lie-with-maps.html). As the saying goes, it takes a
+thief to catch a thief. Learning *how to lie* not only make it harder
+for people to mislead you, but also educates you more deeply about the
+ethical decisions we make when designing visualizations that *tell the
+truth*, while recognizing there’s more than one path to that
+destination. Also, just like we can be wrong, misleading, or truthful
+with our data, the same concepts apply to language, as we’ll discuss in
+a similar section on [how to lie with
+words](how-to-lie-with-words.html). Finally, we’ll reflect on ways to
+[recognize and reduce data bias](data-bias.html), such as privileged
+majority bias that has historically favored Whites, men, and other
+groups, as well as other types. While we may not be able to stop bias
+entirely, in this chapter you’ll learn ways to identify it and
+strategies for reducing it our own visualizations.[20]
 
 How to Lie with Charts
 ----------------------
@@ -11434,30 +11625,40 @@ the reader’s eye.
     two columns, and go to *Insert &gt; Chart*, as you learned when we
     introduced [charts with Google Sheets in Chapter
     7](chart-google.html). The tool should recognize your data and
-    automatically produce a column chart, as shown in FIG TODO. In this
-    default view, with the zero baseline for the vertical axis, the
-    difference between $21.5 versus $21.7 trillion looks relatively
-    small to the reader.
+    automatically produce a column chart, as shown in the left side of
+    Figure <a href="#fig:gdp-baseline-merged">238</a>. In this default
+    view, with the zero baseline for the vertical axis, the difference
+    between $21.5 versus $21.7 trillion looks relatively small to the
+    reader.
 
-4.  *Lie by reducing the vertical axis.* Click on the three-dot kebab
-    menu to open the *Chart editor* and select the *Customize* tab.
-    Scroll down to the vertical axis settings, and change the minimum to
-    21500 and the maximum to 21800, as shown on the right side of FIG
-    TODO. Although the data remains the same, those small differences
-    now appear much larger in our eyes because you’ve manipulated the
-    vertical scale. Only people who read charts closely will notice this
-    trick. The political candidate who’s campaigning on rising economic
-    growth will thank you!
+4.  *Reduce the vertical axis.* Click on the three-dot kebab menu to
+    open the *Chart editor* and select the *Customize* tab. Scroll down
+    to the vertical axis settings, and change the minimum to 21500 and
+    the maximum to 21800, as shown in the right side of Figure
+    <a href="#fig:gdp-baseline-merged">238</a>. Although the data
+    remains the same, those small differences now appear much larger in
+    our eyes because you’ve manipulated the vertical scale. Only people
+    who read charts closely will notice this trick. The political
+    candidate who’s campaigning on rising economic growth will thank
+    you!
 
-FIG TODO MERGE
+<img src="images/15-detect/gdp-baseline-merged.png" alt="The default GDP line chart on the left, and the reduced-axis chart on the right." width="750" />
+<p class="caption">
+Figure 238: The default GDP line chart on the left, and the reduced-axis
+chart on the right.
+</p>
 
-However, you’ve also violated one of the [cardinal rules about chart
-design in Chapter 7](chart-design.html): bar and column charts *must*
-start at the zero baseline, because they represent value using *length*.
-Therefore, in the eyes of data visualization experts, your misleading
-chart is wrong, and the default chart with the zero baseline is a better
-representation of the truth. But let’s move on to a different example
-where the rules are not as clear.
+TODO: Placed images above side-by-side to allow for easier comparison.
+Rethink if “zero baseline” and “truncated baseline” are best titles.
+
+However, your chart is clearly *wrong* because you’ve violated one of
+the [cardinal rules about chart design in Chapter 7](chart-design.html).
+Column (and bar) charts *must* start at the zero baseline, because they
+represent value using *height* (and *length*). Readers cannot determine
+if a column is twice as high as another column unless both begin at the
+zero baseline. By contrast, the default chart with the zero baseline is
+truthful. But let’s move on to a different example where the rules are
+not as clear.
 
 In the second half of this tutorial, we’ll examine data about climate
 change, one of the most pressing issues we face on our planet, yet
@@ -11471,7 +11672,7 @@ Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and
 this warming has already begun to cause glacial melt and rising sea
 levels. Your task is to create *misleading* line charts that *diminish*
 the appearance of rising global temperature change in the reader’s
-eye.[19]
+eye.[21]
 
 1.  Open the [global temperature change 1880-2019 data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0),
@@ -11492,7 +11693,7 @@ eye.[19]
     data compiled by other scientists at the [Climatic Research
     Unit](http://www.cru.uea.ac.uk/) and the [National Oceanic and
     Atmospheric
-    Adminstration](https://www.ncdc.noaa.gov/cag/global/time-series)
+    Administration](https://www.ncdc.noaa.gov/cag/global/time-series)
     (NOAA).
 
 3.  Create a Google Sheets line chart in the *data* tab by selecting the
@@ -11502,205 +11703,401 @@ eye.[19]
     representation of the truth. Click on the three-dot kebab menu to
     open the *Chart editor* and select the *Customize* tab. Add a better
     title and vertical axis label, using the notes to clarify the source
-    and how temperature change is measured, as shown in FIG TODO
+    and how temperature change is measured, as shown in Figure
+    <a href="#fig:temperature-default">239</a>.
 
-temperature-default.png
-<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&amp;format=interactive" class="uri">https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&amp;format=interactive</a>
+<img src="images/15-detect/temperature-default.png" alt="Default line chart of global temperature change. Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&format=interactive)."  />
+<p class="caption">
+Figure 239: Default line chart of global temperature change. Explore the
+[interactive
+version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&format=interactive).
+</p>
 
-Now let’s use three methods to create *misleading* charts:
+Now let’s create three more charts using the same data but different
+methods, and discuss why they are *not wrong* from a technical
+perspective, but nevertheless *very misleading*.
 
-1.  *Lie by lengthening the vertical axis.* We’ll use the same method as
-    shown in the first half of this tutorial, but in the opposite
-    direction. In the Google Sheets chart editor, customize the vertical
-    axis by changing the minimum value to negative 5 and the maximum to
-    positive 5, as shown in FIG TODO. By increasing the length of the
-    vertical scale, you flattened our perception of the rising line, and
-    cancelled our climate emergency…but not really.
+### Lengthen the vertical axis to flatten the line
 
-temperature-axis-annotated.png
+We’ll use the same method as shown in the first half of this tutorial,
+but in the opposite direction. In the Google Sheets chart editor,
+customize the vertical axis by changing the minimum value to negative 5
+and the maximum to positive 5, as shown in Figure
+<a href="#fig:temperature-axis-annotated">240</a>. By increasing the
+length of the vertical scale, you flattened our perception of the rising
+line, and cancelled our climate emergency…but not really.
 
-1.  *Lie by stretching the chart to change its aspect ratio.* In your
-    Google Sheet, click the chart and drag the sides to make it very
-    short and wide, as shown in FIG TODO. Image measurements as listed
-    in width by height, and we calculate the aspect ratio as width
-    divided by height. Since the default chart is 600 x 370 pixels, its
-    aspect ratio is about 1.6 to 1. But the stretched-out chart is 1090
-    x 191 pixels, and its ratio is about 5.7 to 1. By increasing the
-    aspect ratio, you have flattened our perception of the rising line,
-    and cancelled our climate crisis once again…but not really.
+<img src="images/15-detect/temperature-axis-annotated.png" alt="Misleading chart with a lengthened vertical axis."  />
+<p class="caption">
+Figure 240: Misleading chart with a lengthened vertical axis.
+</p>
 
-temperature-aspect-annotated.png
+What makes this flattened line chart *misleading* rather than *wrong*?
+In the first half of the tutorial, when you reduced the vertical axis of
+the US GDP chart, you violated the zero-baseline rule, because column
+and bar charts *must* begin at zero since they require readers to judge
+*height* and *length*, as described in the [chart design section of
+Chapter 7](chart-design.html). But you may be surprised to learn that
+the zero-baseline rule does *not* apply to line charts. Visualization
+expert Albert Cairo reminds us that line charts represent values in the
+*position* and *angle* of the line. Readers interpret the meaning of
+line charts by their shape, rather than their height, so the baseline is
+irrelevant. Therefore, flattening the line chart for temperature change
+may mislead readers, but it’s technically not wrong, as long as it is
+labelled correctly.[22]
 
-1.  *Lie by adding more data and a dual vertical axis* Let’s add more
-    data to make your chart even more misleading! In the Google Sheet,
-    go to the tab named *temp+GDP*, where you will see temperature
-    change plus a new column: US Gross Domestic Product (GDP) in
-    billions of dollars from 1929 to 2019, downloaded from the [US
-    Federal Reserve](https://fred.stlouisfed.org/series/GDPA). (We
-    deleted temperature rows prior to 1929 to make them match with
-    available GDP data.) Select all three columns and *Insert &gt;
-    Chart* to produce a default line chart with two data series:
-    temperature (in blue) and US GDP (in red).
+TODO: While the text asks “wrong or misleading?” the chart and caption
+are clearly labeled “misleading” to avoid confusion among readers who
+just skim the text. Maybe rephrase the question: What makes this chart
+
+### Widen the chart to warp its aspect ratio
+
+In your Google Sheet, click the chart and drag the sides to make it very
+short and wide, as shown in Figure
+<a href="#fig:temperature-aspect-annotated">241</a>. Image measurements
+as listed in width by height, and we calculate the aspect ratio as width
+divided by height. Since the default chart is 600 x 370 pixels, its
+aspect ratio is about 1.6 to 1. But the stretched-out chart is 1090 x
+191 pixels, and its ratio is about 5.7 to 1. By increasing the aspect
+ratio, you have flattened our perception of the rising line, and
+cancelled our climate crisis once again…but not really.
+
+<img src="images/15-detect/temperature-aspect-annotated.png" alt="Misleading chart with a stretched aspect ratio."  />
+<p class="caption">
+Figure 241: Misleading chart with a stretched aspect ratio.
+</p>
+
+What makes this warped line chart *misleading* rather than *wrong*? Once
+again, since changing the aspect ratio of a line chart does not violate
+a clearly-defined rule of data visualization, it’s not technically
+wrong, as long as it’s accurately labeled. But it’s definitely
+misleading. This is a case of designer preference. Alberto Cairo prefers
+to set the aspect ratio to be similar to the rate of change shown in the
+line chart….\[TODO describe and cite passage about this… but it’s not a
+clearly-defined rule, as publications often require visualizations to
+fit into specific spaces….\]
+
+### Add more data and a dual vertical axis
+
+Let’s add more data to make your chart even more misleading! In the
+Google Sheet, go to the tab named *temp+GDP*, where you will see
+temperature change plus a new column: US Gross Domestic Product (GDP) in
+billions of dollars from 1929 to 2019, downloaded from the [US Federal
+Reserve](https://fred.stlouisfed.org/series/GDPA). We deleted
+temperature rows prior to 1929 to make them match with available GDP
+data.
+
+1.  Select all three columns and *Insert &gt; Chart* to produce a
+    default line chart with two data series: temperature (in blue) and
+    US GDP (in red).
 
 2.  In the *Chart editor*, select *Customize* and scroll down to
     *Series*. Change the drop-down menu from *Apply to all series* to
     *US GDP*. Just below that in the *Format* area, change the *Axis*
     menu from *Left axis* to *Right Axis*, which creates another
     vertical axis on the right side of the chart, connected only to the
-    US GDP data, as shown in FIG TODO
+    US GDP data, as shown in Figure
+    <a href="#fig:temperature-gdp-axis-setup">242</a>.
 
-temperature-gdp-axis-setup.png
+<img src="images/15-detect/temperature-gdp-axis-setup.png" alt="Add another vertical axis to the right side of the chart."  />
+<p class="caption">
+Figure 242: Add another vertical axis to the right side of the chart.
+</p>
 
 1.  In the *Chart editor &gt; Customize* tab, scroll down and you will
     now see separate controls for *Vertical Axis* (the left side, for
-    temperature change only), and a brand-new menu for *Right Axis* (for
-    US GDP only), as shown in FIG TODO
+    temperature change only), and a brand-new menu for the *Right Axis*
+    (for US GDP only), as shown in Figure
+    <a href="#fig:temperature-right-axis">243</a>.
 
-temperature-right-axis.png
+<img src="images/15-detect/temperature-right-axis.png" alt="Brand-new menu for the right axis." width="250" />
+<p class="caption">
+Figure 243: Brand-new menu for the right axis.
+</p>
 
-1.  Finish your misleading chart by adjusting *Vertical Axis* for
-    temperature change, but with even more exaggeration than you did in
-    step 5 above. This time, change the minimum value to 0 (to match the
+1.  Finish your chart by adjusting *Vertical Axis* for temperature
+    change, but with even more exaggeration than you did in step 5
+    above. This time, change the minimum value to 0 (to match the
     right-axis baseline for US GDP) and the maximum to 10, to flatten
     the temperature line even further. Add a title, source, and labels
-    to make it look more authoritative, as shown in FIG TODO. By
-    lowering our perception of the temperature line in comparison to the
-    steadily rising GDP line, you’ve misled us into ignoring the
-    consequences of climate change while we enjoy a long-term economic
-    boom! Furthermore, the GDP data is *not* adjusted for inflation, so
-    you’ve double-misled us by comparing 1929 dollars to 2019 dollars.
-    Finally, since you accepted the default colors assigned by Google
-    Sheets, the climate data is displayed in a “cool” blue, which sends
-    our brain the opposite message of rising temperatures and glacial
-    melt. So we’ll count this as a triple! TODO: Decide whether to break
+    to make it look more authoritative, as shown in Figure
+    <a href="#fig:temperature-gdp-final-annotated">244</a>. By lowering
+    our perception of the temperature line in comparison to the steadily
+    rising GDP line, you’ve misled us into ignoring the consequences of
+    climate change while we enjoy a long-term economic boom!
+    Furthermore, the GDP data is *not* adjusted for inflation, so you’ve
+    double-misled us by comparing 1929 dollars to 2019 dollars. Finally,
+    since you accepted the default colors assigned by Google Sheets, the
+    climate data is displayed in a “cool” blue, which sends our brain
+    the opposite message of rising temperatures and glacial melt. So
+    we’ll count this as a triple! TODO: Decide whether to break
     non-comparable data and color into separate paragraphs.
 
-temperature-gdp-final-annotated.png
+<img src="images/15-detect/temperature-gdp-final-annotated.png" alt="Misleading dual-axis chart of US GDP and global temperature change."  />
+<p class="caption">
+Figure 244: Misleading dual-axis chart of US GDP and global temperature
+change.
+</p>
 
-TODO: There are many other ways to lie with charts…. for example, lie
-with 3D and perspective (see Cairo 2019 p58)…
+Is this dual axis chart *misleading* rather than *wrong*? Once again,
+since it does not violate a clearly-defined visualization design rule,
+the chart is not wrong, but very misleading. In fact, many visualization
+experts strongly discourage using dual-axis charts because they confuse
+most readers and create mischief. Even though both axes began at zero,
+the left-side temperature scale has a top level of 10 degrees Celsius,
+which is not reasonable given the context of the data. \[TODO: ADD THIS?
+Perhaps a better way to plot global temperature change and US GDP over
+time would be a scatter or bubble chart, which are designed to compare
+two or more variables. TODO: Should we show a scatter of this here?\]
+Furthermore, a better chart would compare appropriate data, such as real
+GDP that has been adjusted into constant dollars.
 
-Now you’ve created three *misleading* charts. But are any of them
-*wrong*? Do they violate any rules of data visualization? If you’re the
-type of person who prefers to clearly divide things into *good* versus
-*bad*, our answer may disappoint you. Alberto Cairo warns us that \[TODO
-insert quote here about visualization is more of an art than a science…
-all visualizations are simply models of reality, not the truth… we can
-only make better representations of the truth…\].
+To sum up, in this tutorial you created four charts about global
+temperature change. None of them were technically wrong, but only the
+default chart was truthful, while the other three charts were
+unreasonably manipulated to mislead readers by hiding relevant patterns
+in the data. Although we never accept automatically accept the default
+chart generated by a visualization tool, in this case it was the best
+representation of the truth among the four candidates.
 
-In the first half of the tutorial with the US GDP column chart, you
-clearly violated the zero-baseline rule when you started the vertical
-axis at a number other than zero. Column (and bar) charts *must* begin
-at zero, because they use *height* (and *length*) to represent value, as
-we described in the [chart design section of Chapter
-7](chart-design.html). Readers cannot determine if a column is twice as
-high as another column unless both begin at the zero baseline.
-
-But the zero-baseline rule does *not* apply to line charts, Cairo
-reminds us, because those represent the *position* and *angle* of the
-line. Readers determine the meaning of line charts by their shape,
-rather than their height, so the baseline is irrelevant. This means that
-the flattened line chart for temperature change you created in step 5
-may mislead readers, but it’s not wrong, as long as you labeled it
-correctly for readers who inspect these details.[20]
-
-What about the warped aspect ratio you applied to the temperature chart
-in step 6? While it’s certainly designed to mislead readers, Cairo
-acknowledges that it is not *wrong* because it does not violate a
-clearly-defined rule of data visualization. Cairo prefers to set the
-aspect ratio to be similar to the rate of change shown in the line
-chart….\[TODO describe and cite passage about this… and there’s no set
-rule….\]
-
-What about the dual-axis chart you created in step 7 to compare global
-temperature change versus US GDP? We agree with many visualization
-experts who discourage using dual-axis charts because they confuse most
-readers and create mischief. Even though both axes began at zero, the
-left-side temperature scale has a top level of 10 degrees Celsius, which
-is not reasonable given the context of the data. A *scatter or bubble
-chart*, which is designed to compare two or more variables, would be a
-better way to plot global temperature change and US GDP over time.
-\[TODO: Should we show this chart here?\] Furthermore, a better chart
-would compare appropriate data, such as real GDP that has been adjusted
-into constant dollars.
-
-TODO:FINISH IDEA: So if none of the temperature change charts are
-technically *wrong*, are any of them *right*? Or in Cairo’s definition,
-which chart offers the most truthful representation of global
-temperature change? … interestingly, the Google Sheet default chart you
-created in step 3 meets most of our criteria: \[check aspect ratio\]. In
-any case, never accept the defaults automatically….
-
-Now that you’ve learned about how to lie with charts, you’ll build on
-these skills in the next section about lying with maps.
+TODO: FINISH There are many other ways to lie with charts…. for example,
+lie with 3D and perspective (see Cairo 2019 p58)… Now that you’ve
+learned about how to lie with charts, you’ll build on these skills in
+the next section about lying with maps.
 
 How to Lie with Maps
 --------------------
 
--   TODO: reorganize exercise into more distinctive parts and sample
-    data
+One of the best ways to learn how to detect lies is to intentionally
+manipulate a map, and tell two (or more) opposing stories with the same
+data. You’ll learn what to watch out for when viewing other people’s
+maps, and think more carefully about the ethical issues when you design
+your own. We’ll focus our attention on choropleth maps that use shading
+or color to represent values in geographic areas, because they are a
+topic of considerable mischief. This exercise was inspired by geographer
+Mark Monmonier’s classic book by the same name, *How to Lie with Maps*,
+originally published in 1991, now in its third edition.[23]
 
-Before we leap into lying, let’s make sure we avoid common mistakes when
-making maps, especially choropleth maps that use shading or color to
-represent values in geographic areas. The most common mistake is to use
-raw counts rather than rates or percentages… You need to normalize the
-data, as we describe in chapter…. .forgetting this will simply show pop
-density; Cairo 2019 p132)
+Before we get started, review the [map design principles in Chapter
+8](map-design.html) to avoid common mistakes when designing colored
+polygon (or choropleth) maps. For example, in most cases you want to
+avoid mapping absolute numbers (such as the total number of people in a
+group), and instead show relative data (such as the percentage of people
+in a group). Mapping absolute numbers of voters would simply show you
+where most people live, rather than how rates vary across geographic
+areas, which is usually what map makers wish to emphasize. Also, this
+section assumes that you’re already familiar with the steps for creating
+a [Colored Polygon or Choropleth map with Datawrapper in Chapter
+8](map-datawrapper.html).
 
-One of the best ways to learn how to detect bias in data visualization
-is to intentionally manipulate a map, and tell two (or more) opposing
-stories with the same data. You’ll learn what to watch out for when
-viewing other people’s maps, and think more carefully about the ethical
-issues when you design your own. This exercise was inspired by Mark S.
-Monmonier, *How to Lie with Maps, 2nd ed.* (University of Chicago Press,
-1996),
-<a href="http://books.google.com/books?isbn=0226534219" class="uri">http://books.google.com/books?isbn=0226534219</a>
+Let’s return to the two maps in the [Introduction](introduction.html) of
+this book, which presented two different interpretations of world income
+inequality. In particular, the first map colored the US in medium blue
+which suggested its level of inequality was similar to other nations,
+while the second map made the US stand out in dark blue at the highest
+tier of inequality. We argued that both were *truthful* interpretations.
+You’ll understand the concepts more clearly by follow this hands-on
+tutorial to recreate both maps, plus one more. First, let’s examine the
+data and upload it to Datawrapper to start making our choropleth maps.
 
--   Lie (or mislead?) with ranges
--   lie with color choices
+1.  Open the [world income top 1 percent data in Google
+    Sheets](https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565),
+    and go to *File &gt; Save As* to create a copy that you can edit in
+    your own Google Drive.
 
-Other ways to lie with maps (which may be too hard to display here?) -
-Lie with map area - Lie with projection (or discuss as related to map
-area?)
+2.  Examine the data and read the notes. Overall, this data offers one
+    way to make international comparisons about income distribution by
+    showing “how big a slice of the pie” is held by the richest 1
+    percent in each nation. Each row lists a nation and its three-letter
+    code, along with the percent share of pre-tax national income held
+    by the top 1 percent of the population, and the most recent year
+    when this data was collected by the World Inequality Database. For
+    example, in Brazil, the top 1 percent of the population held 28.3
+    percent of the nation’s income in 2015, while in the United States,
+    the top 1 percent held 20.5 percent in 2018. To be clear, there are
+    other ways to compare the distribution of income or wealth across
+    nations, but this is one of the better datasets available that
+    capture this concept using one easy-to-understand variable.
 
-which map is right? Both maps make valid interpretations of the data,
-but generate very different impressions. You may be surprised to learn
-that mapmakers have few universal guidelines when selecting ranges or
-colors, other than a general dictum to make “honest and useful”
-decisions. Different mapmakers could choose to divide the legend into
-three, or four, or five ranges, and all would be correct. Furthermore,
-they could choose to divide ranges into equal intervals (such as
-quartiles or quintiles) or intervals that vary according to patterns in
-the data (such as standard deviations from the mean).
+3.  Since we cannot directly import this Google Sheet into our
+    Datawrapper mapping tool, go to *File &gt; Download* to export the
+    first tab in *CSV format* to your computer.
 
-Cairo advises: make multiple histogram charts, with different numbers of
-buckets & bucket sizes – TODO: rewrite Map chapter to include this
-advise and insert histogram exercise there
+4.  Open the [Datawrapper visualization tool](https://datawrapper.de) in
+    your browser and upload your CSV map data. Select *New Map*, select
+    *Choropleth map*, and select *World*, then *Proceed*. In the *Add
+    your data* screen, scroll down below the table and select the
+    *Import your dataset* button, then the *Start Import* button, then
+    *click here to upload a CSV file*, and upload the CSV file you
+    created in the step above. Click to confirm that the first column is
+    *Matched as ISO code*, click *Continue*, then click to confirm that
+    the *Percent Share* column is *Matched as Values*, then click *Go*
+    and *Proceed* to visualize your map.
 
-First, scroll through this data on Median Household Income for
-Hartford-area towns, 2011-15, from American Community Survey 5-year
-estimates. Or right-click to [open this Google Sheet in a new
-tab](https://docs.google.com/spreadsheets/d/13bFHsXJtADIkUCGgjpO76RjrV0OAu62hzK-J3bXEVsk/edit#gid=556312122).
+5.  In the *Visualize* screen, in the *Colors* section of the *Refine*
+    tab *Select palette*, click the *wrench symbol* to open up the color
+    settings, as shown in Figure
+    <a href="#fig:map-color-settings">245</a>. Let’s skip past the
+    light-green-to-blue color palette, which you can modify later, and
+    let’s focus on settings for color ranges.
 
-<iframe src="https://docs.google.com/spreadsheets/d/13bFHsXJtADIkUCGgjpO76RjrV0OAu62hzK-J3bXEVsk/pubhtml?gid=556312122&amp;single=true&amp;widget=true&amp;headers=false">
-</iframe>
+<img src="images/15-detect/map-color-settings.png" alt="Click the *wrench symbol* to open the color settings." width="350" />
+<p class="caption">
+Figure 245: Click the *wrench symbol* to open the color settings.
+</p>
 
-Next, explore two different polygon maps of the same data. Use the
-drop-down menu to compare “Extreme Differences” versus “Uniform
-Equality”
+### Modify the map color ranges
 
-<iframe src="https://handsondataviz.github.io/leaflet-how-to-lie-with-maps/" width="90%" height="500">
-</iframe>
+While we never automatically accept the default visualization, it’s a
+good place to begin. The default map displays a *continuous* type of
+range, with a *linear* interpolation of data values. This means that the
+map places all of the values in a straight line, from the minimum of 5%
+to the maximum of 31%, and assigns each value to a color along the
+gradient, as shown in Figure
+<a href="#fig:map-continuous-linear">246</a>. Notice that the US (20.5%)
+blends in with a medium blue color, just above the midpoint in this
+range.
 
-Why are these two maps portray the same data so differently? To see the
-answer, look at the data ranges. . ..
+<img src="images/15-detect/map-continuous-linear.png" alt="Income inequality map with continuous range and linear interpolation. Explore the [interactive version](https://datawrapper.dwcdn.net/aetEM/)."  />
+<p class="caption">
+Figure 246: Income inequality map with continuous range and linear
+interpolation. Explore the [interactive
+version](https://datawrapper.dwcdn.net/aetEM/).
+</p>
 
-\*\* TO DO \*\*
+Create a second map with the same data but different settings. Change
+the *Type* setting to *steps*, and adjust to *3* steps, using *Natural
+breaks (Jenks)* interpolation, as shown in Figure
+<a href="#fig:map-3steps-naturalbreaks">247</a>. This means that the map
+now places all of the values in three ascending groups. Natural breaks
+offers a compromise between using colors to highlight the outliers
+versus diversity inside the range. Notice that the US (still 20.5%) now
+stands out in a dark blue color at the top third of this range (19% or
+above).
 
-Create your own version…
+<img src="images/15-detect/map-3steps-naturalbreaks.png" alt="Income inequality map with 3 steps and natural breaks interpolation. Explore the [interactive version](https://datawrapper.dwcdn.net/VSfdZ/)."  />
+<p class="caption">
+Figure 247: Income inequality map with 3 steps and natural breaks
+interpolation. Explore the [interactive
+version](https://datawrapper.dwcdn.net/VSfdZ/).
+</p>
 
-TODO: Add section on how interactive maps such as Google Maps change
-borders and data depending on the internet address of the user
+The first map portrays US income inequality to be similar to most
+nations, while the second map places the US at the higher end of the
+color scale. Which map is misleading? Which one is truthful? If you
+prefer clear and definitive rules in map design, this answer may
+frustrate you. Although the two maps generate very different impressions
+in our eyes, both maps offer reasonable and truthful interpretations of
+the data.
+
+To understand what’s happening behind the scenes with your choropleth
+map, visualization expert Alberto Cairo recommends creating a histogram
+to better understand the data distribution. \[Cite Cairo; add that he
+recommends multiple histograms with different bucket sizes?\] Go back to
+the original Google Sheet \[link again?\] and create a [histogram, as we
+described in chapter 7](chart-histogram.html) to view the frequency of
+nations when sorted into “buckets” by percent share, as shown in Figure
+<a href="#fig:map-data-histogram">248</a>. This is not a normal
+distribution curve, because a handful of nations are outliers around the
+30 percent mark. In the first map, which used continuous type and linear
+interpolation, the US appears closer to the midpoint of the range and
+blended in with a medium blue. In the second map, which used 3 steps and
+natural breaks, the US appears in the top range was stood out with a
+dark blue. Since both maps are consistently labeled…(more?), there is no
+definitive answer that makes one map more correct than the other.
+\[TODO: check wording\]
+
+<img src="images/15-detect/map-data-histogram.png" alt="Histogram of income inequality map data."  />
+<p class="caption">
+Figure 248: Histogram of income inequality map data.
+</p>
+
+So how *should* you make decisions when designing choropleth maps? Can
+you simply place the cutoffs anywhere you choose? Absolutely not.
+Mapmakers offer guidelines about ways to make *better* visualizations.
+For example, Datawrapper Academy recommends finding “a compromise
+between honesty and usefulness” when designing maps \[TODO cite
+<a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>\].
+“Useful” means that it’s acceptable to use design choices to communicate
+different interpretations of the data. For example, a linear
+interpolation is best for emphasizing the extreme lows and highs, while
+quantiles are best for identifying geographic patterns in the middle
+ranges. “Honesty” means telling the truth, and not intentionally
+creating misleading impressions of the data. For example, increasing the
+number of steps in your color range will increase the level of contrast
+in the map, but it can also mistakenly give the impression that light-
+and dark-colored regions are very different, while their numbers may
+vary only slightly. In general, Datawrapper recommends choosing ranges
+to make sure readers “see all the differences in the data,” rather than
+hiding them out of sight.\[TODO cite
+<a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>\]
+They also recommend using a continuous color range to show nuances in
+the data, unless your data story has a compelling reason to display
+discrete color steps \[TODO add “such as…example” and cite
+<a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>\].
+Finally, Datawrapper Academy strongly warns against using the manual
+custom settings to manipulate a map’s appearance to fit a preconceived
+point of view.\[Cite
+<a href="https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool" class="uri">https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool</a>\].
+Show readers the story and tell the truth.
+
+TODO: map-colorbrewer.png, map-import-colors.png
+
+\[TODO: Where to insert this?\] Based on these general guidelines, some
+may argue that the first map is *better* because it displays a
+continuous color range, but that does *not* make the second map wrong
+nor misleading.
+
+### Modify the map area
+
+Another way that choropleth maps mislead readers is because larger
+regions draw too much attention and divert the focus from *population
+size* to *geographic area*. In the United States, this problem arises
+during every national election. Typical maps of US electoral votes
+exaggerate the influence of rural states with larger geographic areas
+(such as enormous Wyoming, with about 590,000 people), and diminish the
+influence of urban states with small areas (such as tiny Rhode Island,
+with over 1,000,000 people).
+
+TODO: DECIDE whether to include US electoral vote map, with standard
+projection vs cartogram side-by-side?
+
+This problem is related to the larger issue of map projection bias. Some
+projections create the appearance of larger sizes for nations in the
+North hemisphere than those in the South hemisphere. \[TODO give
+examples and illustrate difference…\]
+
+One solution to this problem is to replace standard map outlines with
+*cartograms* OR *population squares*, which \[TODO: add precise
+definitions of the two\]. One drawback is that both alternatives require
+readers to be familiar with the general geographic outline of the region
+shown, since the visualizations do not match standard maps.
+
+To create a population square map in Datawrapper:
+
+1.  Create a new map and go to *Select your map* …. or if you saved
+    world inequality maps in your Datawrapper account, go to My Charts,
+    select and duplicate one of them, and edit it.
+
+2.  Under type of map to create, type “hexagons” to see all of the
+    cartograms available (including US States) or type “squares” to see
+    all of those available (including World population squares). Select
+    your preferred map and data, and proceed to visualize in the same
+    way as above, as shown in Figure
+    <a href="#fig:map-world-pop-square">249</a>.
+
+<img src="images/15-detect/map-world-pop-square.png" alt="World population square map with income inequality data. Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/)."  />
+<p class="caption">
+Figure 249: World population square map with income inequality data.
+Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/).
+</p>
+
+TODO: mention other types of map bias? Interactive maps such as Google
+Maps change borders and data depending on the internet address of the
+user (eg China). Also map color bias….
+
+Now that you have a clearer idea of how to lie with charts and maps,
+let’s look at the related problem of lying about data using words.
 
 How to Lie with Words
 ---------------------
@@ -11717,13 +12114,10 @@ worse than a 95 percent survival rate, even they’re mathematically
 identical. Furthermore, augmenting the rate with raw numbers (such as 20
 deaths out of 400 patients) raises the impression of risk even higher,
 because we begin to imagine real people’s lives, not abstract
-percentages.[21]
+percentages.[24]
 
-Poorly-worded percentages: Percent Change versus Percentage Point
-Difference
-
-Different Types of Data Bias
-----------------------------
+Recognize and Reduce Data Bias
+------------------------------
 
 Bias occurs when we unfairly favor one view over another. Different
 types of bias….(we already mentioned statistical biases in the Compare
@@ -11734,14 +12128,26 @@ evaluating the evidence. While some forms of bias are clearer to
 recognize, such as racial or gender bias,….Some biases are baked into
 human cognition and hard to avoid in data viz, unless you call it out
 
--   Pattern Bias: tendency to see patterns in random data. Avoid it by
-    remind readers that data is noisy and use statistical tests to
-    determine likelihood of results due to change, covered in many books
-    on statistical analysis.
--   Confirmation Bias: accept claims that fit our preconceived
-    notions…(see dataviz experiments in Cario book, Thaler?). Avoid it
-    by looking at data with open eyes, and search out competing
-    interpretations
+-   Privileged majority biases… such as whiteness bias, male bias,
+    heterosexual bias….
+-   Example: Map with “empty” land ignoring indigenous people
+    <a href="https://twitter.com/indigenia/status/1308406887231246337?s=12" class="uri">https://twitter.com/indigenia/status/1308406887231246337?s=12</a>
+-   sidenote: that wasn’t how the original map creator designed or
+    labeled the map, but others interpreted it this way
+-   how to address: clarify map biases….
+-   See also John Schwabish, avoid whiteness bias…
+    <a href="https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff" class="uri">https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff</a>
+-   Reduce by calling out white superiority or privilege, and changing
+    how we design….
+
+Think also about the simple act of mapping data for the “United States”:
+How does your data and map represent the District of Columbia, where X
+people live but is not counted as a state? Similarly, how does it
+represent Puerto Rico….? Or other US territories in the Pacific, such
+as….? If you’re trying to create a map of all US data, seek to include
+people rather than ignoring their existence. If it’s hard to include
+non-contiguous areas in your US map, find better basemaps. If you don’t
+have data, mention this in the notes and/or text
 
 We also refer to biases that are baked into the software that humans
 create. - Algorithm or machine learning bias: human-written code, or
@@ -11750,15 +12156,18 @@ humans, can lead to biased results, especially in facial recognition
 across racial groups, or discrimination in home lending. examples:
 <a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>;
 <a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a>
+- Reduce by calling it out, and not simply equating “digital” as
+“authoritative”…
 
-Reducing Racial Bias in Visualizations
---------------------------------------
+-   Confirmation Bias: accept claims that fit our preconceived
+    notions…(see dataviz experiments in Cario book, Thaler?). Avoid it
+    by looking at data with open eyes, and search out competing
+    interpretations
 
--   Example: Map with “empty” land ignoring indigenous people
-    <a href="https://twitter.com/indigenia/status/1308406887231246337?s=12" class="uri">https://twitter.com/indigenia/status/1308406887231246337?s=12</a>
--   sidenote: that wasn’t how the original map creator designed or
-    labeled the map, but others interpreted it this way
--   how to address: clarify map biases….
+-   Pattern Bias: tendency to see patterns in random data. Avoid it by
+    remind readers that data is noisy and use statistical tests to
+    determine likelihood of results due to change, covered in many books
+    on statistical analysis.
 
 ### Summary
 
@@ -11766,14 +12175,16 @@ TODO
 
 <!--chapter:end:15-detect.Rmd-->
 
-Tell Your Data Story
-====================
+Tell and Show Your Data Story
+=============================
 
 TODO: Write this chapter: Tell the story about your data, including its
 most meaningful insights and limitations Write compelling titles,
 labels, and sentences to accompany your visualization. Call attention to
 the most meaningful insights in your chart, and explain any data
 limitations.
+
+TODO; Start with old saying about “show, don’t just tell…”
 
 TODO: Return to the “Sketch Your Data Story” exercise from the
 introduction….These three simple steps will help you start sketching out
@@ -11792,8 +12203,8 @@ sequence, and begin to define the three essential stages of your data
 story: the beginning, middle, and end. Start to imagine these sheets of
 paper as preliminary slides for your presentation desk, or paragraphs
 and pictures for your written report or website. We’ll come back to this
-exercise near the end of the book in [Chapter 16: Telling Your Data
-Story](story.html)
+exercise near the end of the book in [Chapter 16: Tell and Show Your
+Data Story](story.html)
 
 Write down what your eyes see in your visualization….. and tell us what
 it matters….. Despite what you may have been told, tables and charts and
@@ -11899,11 +12310,11 @@ that appears after the period, such as `data.csv` or `map.geojson`. The
 Mac computer operating system hides these by default, so you need to
 turn them on by going to Finder &gt; Preferences &gt; Advanced, and
 check the box to *Show all filename extensions*, as shown in Figure
-<a href="#fig:mac-file-extensions2">237</a>.
+<a href="#fig:mac-file-extensions2">250</a>.
 
 <img src="images/03-spreadsheet/mac-file-extensions.png" alt="On a Mac, go to *Finder* then *Preferences* then *Advanced* and check the box to *Show all filename extensions*."  />
 <p class="caption">
-Figure 237: On a Mac, go to *Finder* then *Preferences* then *Advanced*
+Figure 250: On a Mac, go to *Finder* then *Preferences* then *Advanced*
 and check the box to *Show all filename extensions*.
 </p>
 
@@ -12128,6 +12539,10 @@ Cairo, Alberto. *How Charts Lie: Getting Smarter About Visual
 Information*. W. W. Norton & Company, 2019.
 <https://www.google.com/books/edition/How_Charts_Lie_Getting_Smarter_about_Vis/qP2KDwAAQBAJ>.
 
+———. *The Truthful Art: Data, Charts, and Maps for Communication*.
+Pearson Education, 2016.
+<https://www.google.com/books/edition/The_Truthful_Art/8dKKCwAAQBAJ>.
+
 D’Ignazio, Catherine, and Lauren F. Klein. *Data Feminism*. MIT Press,
 2020. <https://data-feminism.mitpress.mit.edu/>.
 
@@ -12153,10 +12568,17 @@ You’re Not Using Facebook.” *Washington Post*, January 28, 2020.
 *Washington Post*, June 21, 2019.
 <https://www.washingtonpost.com/technology/2019/06/21/google-chrome-has-become-surveillance-software-its-time-switch/>.
 
+Huff, Darrell. *How to Lie with Statistics*. W. W. Norton & Company,
+1954. <http://books.google.com/books?isbn=0393070875>.
+
 Menasce Horowitz, Julia, Ruth Igielnik, and Rakesh Kochhar. “Trends in
 U.S. Income and Wealth Inequality.” Pew Research Center’s Social &
 Demographic Trends Project, January 9, 2020.
 <https://www.pewsocialtrends.org/2020/01/09/trends-in-income-and-wealth-inequality/>.
+
+Monmonier, Mark. *How to Lie with Maps, Third Edition*. University of
+Chicago Press, 2018.
+<https://www.google.com/books/edition/How_to_Lie_with_Maps_Third_Edition/MwdRDwAAQBAJ>.
 
 Mullen, Lincoln. “How to Make Prudent Choices About Your Tools.”
 ProfHacker, August 14, 2013.
@@ -12199,10 +12621,14 @@ to Statistics on Historical Trends in Income Inequality.” Center on
 Budget and Policy Priorities, January 13, 2020.
 <https://www.cbpp.org/research/poverty-and-inequality/a-guide-to-statistics-on-historical-trends-in-income-inequality>.
 
+Tufte, Edward R. *Envisioning Information*. Cheshire, CT: Graphics
+Press, 1990.
+<https://www.google.com/books/edition/Envisioning_Information/_EZiAAAAMAAJ>.
+
 Tufte, Edward R. *Beautiful Evidence*. Graphics Press, 2006.
 <http://books.google.com/books?isbn=0961392177>.
 
-Watters, Audrey. “"The Audrey Test": Or, What Should Every Techie Know
+Watters, Audrey. “’The Audrey Test’: Or, What Should Every Techie Know
 About Education?” Hack Education, March 17, 2012.
 <http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education>.
 
@@ -12215,12 +12641,20 @@ World Inequality Database. “Income Inequality, USA, 1913-2019,” 2020.
 ———. “Top 1% National Income Share,” 2020.
 <https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country>.
 
+Yau, Nathan. “How to Spot Visualization Lies.” FlowingData, February 9,
+2017.
+<http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/>.
+
 Zuboff, Shoshana. *The Age of Surveillance Capitalism: The Fight for a
 Human Future at the New Frontier of Power*. PublicAffairs, 2019.
 <https://www.google.com/books/edition/The_Age_of_Surveillance_Capitalism/lRqrDQAAQBAJ>.
 
-[1] TODO: For example, Alberto Cairo defines charts as the broader
-category….
+[1] Note that other data visualization books may use these terms
+differently. For example, all visualizations are defined as “charts” in
+Alberto Cairo, *How Charts Lie: Getting Smarter About Visual
+Information* (W. W. Norton & Company, 2019),
+<https://www.google.com/books/edition/How_Charts_Lie_Getting_Smarter_about_Vis/qP2KDwAAQBAJ>,
+p. 23.
 
 [2] World Inequality Database, “Income Inequality, USA, 1913-2019,”
 2020,
@@ -12252,8 +12686,8 @@ Tools,” Source, December 8, 2016,
 Lincoln Mullen, “How to Make Prudent Choices About Your Tools,”
 ProfHacker, August 14, 2013,
 <https://lincolnmullen.com/blog/how-to-make-prudent-choices-about-your-tools/>.
-See also criteria of educational tools by Audrey Watters, “"The Audrey
-Test": Or, What Should Every Techie Know About Education?” Hack
+See also criteria for educational tools by Audrey Watters, “’The Audrey
+Test’: Or, What Should Every Techie Know About Education?” Hack
 Education, March 17, 2012,
 <http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education>
 
@@ -12293,16 +12727,17 @@ Charting in Excel & Google Sheets,” Chartable: A Blog by Datawrapper,
 accessed August 28, 2020,
 <https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html>
 
-[15] Alberto Cairo, *How Charts Lie: Getting Smarter About Visual
-Information* (W. W. Norton & Company, 2019),
-<https://www.google.com/books/edition/How_Charts_Lie_Getting_Smarter_about_Vis/qP2KDwAAQBAJ>,
-p. 61.
+[15] Edward R Tufte, *Envisioning Information* (Cheshire, CT: Graphics
+Press, 1990), 67,
+<https://www.google.com/books/edition/Envisioning_Information/_EZiAAAAMAAJ>.
 
-[16] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
+[16] Cairo, *How Charts Lie*, p. 61.
+
+[17] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
 Visualisation,” Chartable: A Blog by Datawrapper, July 31, 2018,
 <https://blog.datawrapper.de/colorguide/>
 
-[17] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
+[18] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
 Tables’,” Twitter, August 3, 2020,
 <https://twitter.com/jschwabish/status/1290323581881266177>; Jonathan A.
 Schwabish, “Ten Guidelines for Better Tables,” *Journal of Benefit-Cost
@@ -12312,20 +12747,35 @@ Visualizations: A Guide for Scholars, Researchers, and Wonks* (Columbia
 University Press, 2021),
 <https://cup.columbia.edu/book/better-data-visualizations/9780231193115>
 
-[18] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
+[19] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
 <http://books.google.com/books?isbn=0961392177>, pp. 46-63.
 
-[19] The inspiration for this specific tutorial came from a high school
+[20] The “how to lie” tutorials were inspired by several excellent works
+in data visualization: Alberto Cairo, *The Truthful Art: Data, Charts,
+and Maps for Communication* (Pearson Education, 2016),
+<https://www.google.com/books/edition/The_Truthful_Art/8dKKCwAAQBAJ>;
+Cairo, *How Charts Lie*; Darrell Huff, *How to Lie with Statistics* (W.
+W. Norton & Company, 1954),
+<http://books.google.com/books?isbn=0393070875>; Mark Monmonier, *How to
+Lie with Maps, Third Edition* (University of Chicago Press, 2018),
+<https://www.google.com/books/edition/How_to_Lie_with_Maps_Third_Edition/MwdRDwAAQBAJ>;
+Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9,
+2017,
+<http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/>;
+NASA JPL, “Educator Guide: Graphing Global Temperature Trends,” 2017,
+<https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>
+
+[21] The inspiration for this specific tutorial came from a high school
 classroom activity created by the NASA Jet Propulsion Laboratory (JPL),
 as well as visualization expert Alberto Cairo’s analysis of charts by
-climate change deniers. NASA JPL, “Educator Guide: Graphing Global
-Temperature Trends,” 2017,
-<https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>;
-Cairo, *How Charts Lie*, pp. 65-67, 135-141.
+climate change deniers. NASA JPL; Cairo, *How Charts Lie*, pp. 65-67,
+135-141.
 
-[20] Cairo, p. 61.
+[22] Cairo, p. 61.
 
-[21] David Spiegelhalter, *The Art of Statistics: Learning from Data*
+[23] Monmonier, *How to Lie with Maps, Third Edition*.
+
+[24] David Spiegelhalter, *The Art of Statistics: Learning from Data*
 (Penguin UK, 2019),
 <https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ>,
 pp. 22-5

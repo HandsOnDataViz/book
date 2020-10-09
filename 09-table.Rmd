@@ -26,7 +26,7 @@ Let's begin with some principles of good table design, similar to how we learned
 knitr::include_graphics("images/09-table/table-design.png")
 ```
 
-In addition, Schwabish and others recommend using color to highlight key items or outliers in your data, a topic we'll discuss later in [Chapter 16: Tell Your Data Story](story.html).
+In addition, Schwabish and others recommend using color to highlight key items or outliers in your data, a topic we'll discuss later in [Chapter 16: Tell and Show Your Data Story](story.html).
 
 Overall, the core principles of table design reflect similar concepts we previously discussed in chart and map design. Organize your presentation of the data with the readers' eyes in mind, to focus their attention on the most important elements of the story, so that they "take away" the most meaningful interpretation of the information. Do the visualization work for them, so that you don't have to rely on them to draw the same mental connections in their own minds. Remove any clutter or unnecessary repetition that stands in the way of these goals.
 

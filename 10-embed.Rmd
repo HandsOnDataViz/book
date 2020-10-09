@@ -2,6 +2,7 @@
 TODO: Reorganize and rewrite chapter; change all datawrapper iframe refs from specific (/#) to general (/)
 https://datawrapper.dwcdn.net   
 
+TODO: What if you don't yet have a website? Previously, I taught people to start with GitHub index.html, but that's too complex. Also WordPress.com does not work for iframes. Consider other user-friendly platforms: SquareSpace, etc? Or even something weird but quick, like Blocks? Or even W3Schools Tryit for iframe? Or is there some type of Google Drive thingy?
 
 After you create a chart or map, how do display it inside your website as an *interactive* visualization? Our goal is not a static picture, but a live chart or map that users can explore. This is an important question for beginners, since data visualizations are not valuable unless you can control where and how your work appears. This chapter walks you through the key steps.
 

@@ -11,47 +11,30 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 | --- | --- |
 | Point map<br> ![](images/08-map/map-point.png) | Best to show specific locations (such as addresses or geocoordinates) with colored icons for different categories, plus text and images in popup windows. <br>Easy tool: [Google My Maps tutorial](mymaps.html)<br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Custom icon point map<br> ![](images/08-map/map-custom-icon.png) | Best to show specific locations with custom icons (such as thumbnail photos), plus text and images in popup windows. <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
-| Symbol point map<br> ![](images/placeholder.jpg) | Best to show specific locations (such as cities), with variable-sized circles to represent data values (such as population growth).<br>Easy tool: [Symbol Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
-| Choropleth colored polygon map <br> ![](images/08-map/map-polygon.png) | Best to show geographic regions (such as neighborhoods or nations) with colored polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
-| Heat point map <br> ![](images/08-map/map-heat.png) | Best to show clusters of points as hotspots to emphasize high frequency. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
+| Symbol point map<br> ![](images/placeholder.jpg) | Best to show specific locations (such as cities), with variable-sized shapes to represent data values (such as population growth).<br>Easy tool: [Symbol Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
+| Choropleth colored polygon map <br> ![](images/08-map/map-polygon.png) | Best to show geographic patterns across regions (such as neighborhoods or nations) by coloring polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
+| Heat point map <br> ![](images/08-map/map-heat.png) | Best to show clusters of points as colored hotspots to emphasize high frequency. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
 | Story map <br> ![](images/08-map/map-storymap.png) | Best to show a point-by-point guided tour, with a scrolling narrative to display images, audio, and video. <br> Power tool: [Ch 13: Leaflet Storymaps with Google Sheets tutorial](leaflet-storymaps-with-google-sheets.html) |
 | Polyline map <br> ![](images/08-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy Tool: [Google My Maps tutorial](mymaps.html) <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html)|
 | Combination point-polyline-polygon map <br> ![](images/08-map/map-point-polygon-polyline.png) | Best to show any combination of points, polylines, or polygons, with custom icons for categories, and colored regions to represent data values. <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Searchable point map<br> ![](images/08-map/map-searchable.png) | Best to show specific locations for users to search by name or proximity, or filter by category, with optional list view.<br> Power Tool: [Ch 13: Leaflet Searchable Point Map code template](leaflet-searchable-map.html) |
 | Current map from open-data repository<br> ![](images/08-map/map-open-data.png) | Best to show the most current information pulled directly from an open-data repository such as Socrata and others. <br>Easy tool: [Current map with Socrata open data tutorial](map-socrata.html)<br>Power tool: [Ch 13: Leaflet Maps with Open Data API code template](leaflet-maps-open-data-apis.html) |
 
-TODO ABOVE:
-
-- Decide whether to show Storymap "easy tools" because neither allow you to export data you enter: [Knight Lab's StoryMap](https://storymap.knightlab.com/), [ESRI Story Maps](https://storymaps.arcgis.com/en/) OR mention (but do not recommend) Storymap.js as an easy tool, but cannot easily migrate data out, then Leaflet Storymaps with GS as a power tool; also mention HistoryPin.org as a different type of historical storytelling map?
-
+TODO: Decide whether to mention (but not recommend)[Knight Lab's StoryMap](https://storymap.knightlab.com/) and [ESRI Story Maps](https://storymaps.arcgis.com/en/) because users cannot easily migrate data out
 
 ## Map Design Principles {- #map-design}
 
-Most of the data collected today comes with some sort of geospatial component.
-People's home and places of business have addresses associated with them, such as `1012 Broad St, Hartford, CT`.
-When we track our runs or bike journeys on Strava, they come with latitude and longitude components.
-National statistical agencies across the world collect data about regions and territories,
-such as average income or population counts, making it possible to compare countries
-and other geographical entities.
+Much of the data collected today includes a spatial component that can be mapped. When you look up an address on a city street, or take a photo of a tree in a rural forest, both can be geocoded into latitude and longitude coordinates, such as `42.76, -72.69`, and placed as *points* on a map. When we walk, bike, drive, or ride mass transit, our route can be recorded as strings of geocoordinates  and shown as *lines* on a map. When we draw lines to designate the geographic borders of neighborhoods or nations, we can display those *polygons* on a map, and also color them to represent different values, such as population or income.  
 
-However, just because data *can* be mapped does not mean it *should* be mapped.
-Before you decide to create a map, ask yourself: Does location really matter to your story?
-If precise values are more important to your story than spatial patterns,
-consider using a simple table to show values. Most people are familiar with the table,
-and can easily retrieve information from it as long as you arrange it logically (for example,
-alphabetically or sorted by value).
-If you want to show change over time for various geographies, consider using a line chart
-instead. Sometimes even a simple bar chart can be a much better alternative to a map.
+However, just because data *can* be mapped does not always mean it *should* be mapped.
+Before creating a map, stop and ask yourself: *Does location really matter to your story?* Even when your data includes geographic information, sometimes a chart tells your story better than a map. For example, you can clearly show differences between geographic areas in a bar chart, or trace how they rise and fall on different rates over time with a line chart, or compare two variables for each area in a scatter chart. Sometimes a simple table, or even text alone, communicates your point more effectively to your audience. Since creating a well-designed map requires time and energy, make sure it actually enhances your data story.
 
-An effective map should show interesting geospatial patterns and
-should be easy to read in both black-and-white (as is often the case with printed materials)
-and color.
+As you learned in the previous chapter about charts, data visualization is not a science, but comes with a set of principles and best practices that serve as a foundation for creating true and meaningful maps. In this section, we'll identify a few rules about map design, but you may be surprised to learn that some rules are less rigid than others, and can be "broken" when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let's start by establishing a common vocabulary about maps.
 
-### Understand the Vocabulary {-}
+### Deconstruct a Map {-}
 
 Take a look at Figure \@ref(fig:map-principles-map) to get familiar with main
-basic elements of an interactive map. Similar to a chart, a good maps should have a title and a description that
-gives a bit of context about what the map is showing.
+basic elements of maps, especially interactive ones featured in this book. Similar to a chart, good maps should include a title and brief description to provide context about what the map is showing.
 
 (ref:map-principles-map) Map elements.
 
@@ -59,44 +42,90 @@ gives a bit of context about what the map is showing.
 knitr::include_graphics("images/08-map/map-principles-map.png")
 ```
 
-TODO: flip order to points.... layers
+Map data is presented in layers. The top layer can be generally described as any combination of point, polyline, or polygon data. *Points* represent latitude and longitude coordinates, which may be illustrated by location markers. *Polylines* are connected strings of points, and we place the "poly-" prefix before "lines" to remind us that they may contain multiple branches, not just straight segments. *Polygons* represent areas defined by lines, such as building footprints or national boundaries. On interactive maps, any of these top-layer elements may display a hidden *tooltip* (when you hover the cursor over them) or a *popup* (when you click on them) that reveals additional information about its properties. Below these top data layers is the *basemap* layer, usually displayed as a seamless grid of tiles that cover the globe. Typically a basemap displays either satellite imagery (also known as raster tiles) or pictorial displays of streets and buildings (also known as vector tiles). Interactive maps often include zoom controls (`+` and `-` buttons) that allow you to view data from various "distances," which change the display of the tile layer.
+The *legend* identifies the meaning of shapes or colors on the map. Maps may include a *north arrow* or *scale* to orient readers to direction and relative distance. Good maps also add the data sources, clarifying notes, and credits to the individuals or organizations that created them.
 
-The data in the map is presented as layers. A base layer is often satellite imagery of the earth
-or vector representations of buildings and streets (also known as vector tiles).
-A base layer provides the foundation of the map. The data displayed on the maps
-can be generally described as points (such as marker locations of nearby restaurants),
-polylines (connected points, such as roads or trails), and polygons (polylines
-where the final point is connected with the initial one). Polygons represent areas,
-such as building footprints or country boundaries.
+TODO: Ilya - please change Figure 8.1 to display a polyline with multiple branches, and add a scale bar so that no one complains that we left it out. Also, since we discuss different types of basemap layers in the text above, do you wish to add a *layer toggle* button?
+
+We spell out these definitions to help newer mapmakers to learn some general rules and to avoid making common mistakes. Many of the our guidelines about map design are inspired by excellent resources such as Datawrapper Academy posts about symbol maps and [choropleth maps](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps)
+
+### Avoid Confusing Point and Polygon Data {-}
+
+Before you can place data on a map, understand its format and what it represents. A common mistake to avoid is to attempt to place point data on a map that's designed to show polygon data. One reason this is confusing is because the rule does not apply in the reverse, meaning it's acceptable to place polygon data on a point-style map. A second reason it's confusing is because there's sometimes a workaround solution to the point-to-polygon problem.
+
+The first example shows data for *specific locations*, such as street addresses or any place that can be [geocoded](geocode.html) into latitude and longitude coordinates, as described in chapter 3. An additional column displays values for each location, such as numbers or text, which we'll represent with the letters X-Y-Z, like this:
+
+```
+| Address           | Value |
+| 2800 E Observatory Rd, Los Angeles, CA  | X |
+| Balboa Park, San Diego, CA | Y |
+| Haight and Ashbury Street, San Francisco, CA | Z |
+```
+
+The first table shows *point* data (because each location can be geocoded to a specific point) which is best displayed in any of the point-style maps. For example, a *point map* shows each location as a clickable marker, or a *symbol point map* displays locations with variable-sized shapes to represent data values, or a *heat point map* shows clusters of locations as hotspots of high frequency, as shown in FIG TODO. Normally you cannot represent point data in a polygon map (but read about a workaround further below).
+
+TODO: Insert three abstract maps: point map, symbol point map, heat point map.
+
+The second example shows data for *geographic areas*, such as census tracts, cities, nations, or any place with a border outline. Similarly, an additional column displays values for each area, such as numbers or text, which we'll represent with the letters X-Y-Z, like this:
+
+```
+| Area  | Value |
+| Los Angeles County, CA | X |
+| San Francisco County, CA | Y |
+| San Diego County, CA | Z |
+```
+
+The second table shows *polygon* data (because each county has a geographic boundary), which you can place in *either a point or polygon map*, but you probably will prefer the latter. To display the data in a point map, you need to geocode each county to obtain the latitude and longitude of its center point, and insert those coordinates into any of the point-style maps IN FIG TODO ABOVE. Or to display the data in a choropleth map, you need access to the geographic outlines of each county, and represent each value as colored polygon, as shown in FIG TODO:
+
+TODO: Insert a choropleth map of California counties. All are grey except for three different shades of blue to represent X-Y-Z.
+
+But there's also a workaround to transform point data into polygon data. Imagine a third table of addresses for each hospital in California, including a column for the county where it is located, and the number of beds in each hospital. Here's some imaginary data:
+
+```
+| Address | County | Beds |
+| 555 Uptown Avenue, LA, CA  | Los Angeles | 500 |
+| 75 Central Avenue, LA, CA | Los Angeles | 1000 |
+| 200 Downtown Avenue, LA, CA | Los Angeles | 500 |
+...
+```
+
+Imagine that your goal is to create polygon data with the total number of hospital beds for each county. Although each address is point data, you can [pivot the data as you learned in chapter 3](pivot.html) to show the sum of hospital beds in each county, as shown in the imaginary results below. See a more detailed example in the [Pivot Points into Polygon Data section of Chapter 14: Transform Your Map Data](pivot-point-to-polygon.html)
+
+```
+| County | Beds |
+| Los Angeles | 2000 |
+...
+```
+
+### Avoid Two Variables on One Map {-}
+Newcomers to data visualization sometimes are so proud of placing one variable on a map that they figure two variables must be twice as good. But this usually is not true. In general, we recommend against placing two variables on the same map---such as a symbol point map on top of a choropleth map---because it's very difficult for most readers to see the pattern in your data story. For example, FIG TODO shows what happens when if you try to map one variable (XXX, shown in the point symbol layer) on top of another variable (YYY, shown in the choropleth layer) for all US States.
+
+FIG TODO:
+
+Consider two alternative strategies:
+
+1) Create a scatter chart to compare variables X and Y. This works best if the relationship between X and Y is more important to your data story than any geographic patterns.
+
+2) Create a choropleth map for variable X, and a scatter chart to show the relationship between X and Y. If the scatterchart relationship is strong, explain in text how the map of Y would be similar.
+
+3) Create two maps, one for each variable, and place them next to one another, or allow readers to toggle between them, with text to explain comparison.
+
+### Choose Smaller Geographies for Choropleth Maps {-}
+Choropleth maps are best for showing geographic patterns across regions by coloring polygons to represent data values. Therefore, we generally recommend selecting *smaller* geographies to display more *granular* patterns, since larger geographies are more likely to show (or hide) patterns by aggregating data. Geographers refer to this concept as the [modifiable aerial unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem), which essentially means that the way you slice up your data affects how you analyze it in your map.
+
+For example, compare the two choropleth maps of typical home values for different regions in the United States in January 2020 according to [Zillow research data](https://www.zillow.com/research/data/). Zillow defines typical values as a smoothed, seasonally adjusted measure of all single-family residences, condos, and coops in the 35th to 65th percentile range, similar to the median value at the 50th percentile, with some additional lower- and higher-value homes. Both choropleth maps use the same scale. The key difference is geographic units: the first map shows home values by state (a larger unit), while the second map shows home values by county (a smaller unit). TODO: describe what the maps show... for example, the state-level map emphasizes differences between the lower home values in the Midwest and South versus Hawaii and California. But the county-level map shows more variation within states, such as higher- and lower-value regions of [choose highly visible state].
+
+TODO: Insert two maps, probably top and bottom?
 
 
+Which map is best? The answer depends partly on your data story. If you wish to emphasize state-to-state differences, choose the first map because it tells that story more clearly. Or if your interpretation focuses on variation-within-states, choose the second map, which makes those differences stand out. Both maps are truthful representations of the data. If in doubt, we recommend choosing the smaller geographies in the county-level data, because it's possible to see *both* types of patterns if you look closely (TODO: CHECK). But don't let this become a rigid rule, because it can become a slippery slope. If you had access to individual-level home sales across the US, that map would be *too detailed* to see any patterns. Sometimes larger-level geography tells a simple story more clearly.
 
+## Normalize Choropleth Map Data {-}
 
-The legend provides the mapping between shapes and colors and the values they represent.
-For example, you may wish to use blue markers to represent restaurants, and
-orange markers to represent bars, and legend will be the right place to explain that difference.
+We introduced the concept of [normalizing data in Chapter 6: Make Meaningful Comparisons](normalize.html). Normalization means adjusting data that was collected using different scales into a common scale, in order to make more appropriate comparisons. For example, it makes little sense to compare the total number of Covid cases between nations with very different populations, such as XXX and YYY (TODO: fill in examples). A better strategy is to normalize the data by comparing cases per capita (such as A per 100,000 in XXX versus B per 100,000 in YYY) to adjust for prior differences in population.
 
-Interactive maps often "hide" data inside popups or tooltips – boxes with information
-that appear when you click or hover over map elements.
-
-Interactive web maps often have zoom controls (`+` and `-` buttons) to allow
-users to inspect data from various "distances".
-
-TODO ADD RULES HERE
-TODO: emphasize what format is your data in? What can you place on a map?
-a) think about what types of data you can place on a map: points, polygons, polylines (to include multi-part lines, or line-strings?)
-COMMON MISTAKE: location data (such as an address EXAMPLE or its geocoded latitude and longitude coordinates EXAMPLE) belongs on point maps (or symbol maps, or heat maps for clusters of points, or story maps for tours...)
-- regional data belongs on choropleth maps (which are colored polygons to match geographic outlines...)
-
-### Normalize Your Map Data {-}
-
-TODO: cross-ref back to Normalize data section in Compare chapter, then build on it here
-
-TODO: The rest of this map design section is really about choropleth maps, so consider labeling it this way. Also, incorporate more design guidelines from https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps
-
-Choropleth maps are best when they represent relative values (such as percentages or per capita rates), not absolute values (such as the raw number of people).
-Consider two maps shown in Figure \@ref(fig:normalize-map-data). They both are
-about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of
+In the same way, choropleth maps work best when they display relative values (such as percentages or per capita rates) rather than absolute values (such as the raw number of people). If you ignore normalization when creating a choropleth map and display raw numbers, you'll essentially recreate a population map, which doesn't tell us anything new. For example, compare two maps shown in Figure \@ref(fig:normalize-map-data). They both are
+about Covid-19 cases in the continental US as of
 June 26, 2020. Figure \@ref(fig:normalize-map-data)a shows total number of recorded cases per state,
 and Figure \@ref(fig:normalize-map-data)b shows Covid-19 cases adjusted by the state's population.
 Darker colors represent higher values. Do you notice any differences in spatial patterns?
@@ -109,10 +138,11 @@ knitr::include_graphics("images/14-transform/normalize-map-data-annotated.png")
 
 Both maps show Covid-19 data collected by the New York Times and published
 [on GitHub](https://github.com/nytimes/covid-19-data).
-In the map in Figure \@ref(fig:normalize-map-data)b, we normalized (divided) values by population in each state,
+In the map in Figure \@ref(fig:normalize-map-data)b, we normalized values by dividing the total number of cases by the population in each state,
 according to the 2018 US Census American Community Survey,
-the most recent data available on the day of writing. We didn't
-add legends and other important cartographic elements so that you can
+the most recent data available on the day of writing. TODO: SHOW VERY SIMPLE table of normalization for two states mentioned below, such as Texas and New York.
+
+We did not add legends and other important cartographic elements so that you can
 better focus on interpreting spatial patterns. In both cases,
 we used Jenks natural breaks for classification.
 
@@ -132,11 +162,33 @@ than the map on the left had suggested. So the map with per-capita values is a
 much better illustration to the story about New York being the *first* epicenter of the Covid-19
 crisis in the United States.
 
+TODO: update map data and interpret two examples (TX and NY) using absolute data (total cases) versus normalized data (cases per capita)
 
-### Color Palettes: Sequential, Diverging, and Qualitative {-}
+## Choropleth Design with ColorBrewer {-}
 
-If you build a choropleth map, the choice of colors is very important
-as color is the main way to represent values. So let's talk about color palettes.
+When you build a choropleth map, a great deal depends on your choice of color to represent data values, so it's important to learn key principles. Effective maps honestly display insightful geographic patterns that are clearly visible to readers. Furthermore, the best choropleth maps are readable whether they are printed in black-and-white on paper or displayed in color on a computer, and can be interpreted correctly by readers with different types of color-blindness.
+
+To illustrate key concepts about colors in choropleth map design, let's explore a wonderful tool called [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and
+Mark Harrower. See the interface in Figure \@ref(fig:map-principles-colorbrewer). Do *not* attempt to upload your data into this tool, since that's not its purpose. Instead, think of ColorBrewer as a design assistant that recommends color choices that work best with your map data. In this section we'll focus on selecting the number of data classes and type of color scheme, in order to find recommended colors and export their codes.
+
+(ref:map-principles-colorbrewer) The ColorBrewer interface: data classes, type of color scheme, and exportable color codes.
+
+```{r map-principles-colorbrewer, fig.cap="(ref:map-principles-colorbrewer)"}
+knitr::include_graphics("images/08-map/map-principles-colorbrewer-annotated.png")
+```
+
+TODO: BEGIN HERE and decide whether to begin with classes (or use default) and jump to nature of data....
+
+
+### Choropleth Palettes: Sequential, Divergent, and Qualitative {-}
+
+ColorBrewer can generate color palettes for a specified number of classes - between three
+and nine for sequential, three and eleven for diverging, and three and twelve for qualitative, which we'll discuss further below.
+You can also choose palettes that are colorblind-safe and print-friendly.
+
+ColorBrewer generates hexadecimal codes that translate into colors. For example #fffff means TODO. Also can produce RBYG and other formats TODO. You can re-type these codes into other map tools recommended in this book, or click the Export button to copy and paste this information.
+
+
 
 Color palettes can be grouped into sequential, diverging, and qualitative.
 The examples are shown in Figure \@ref(fig:map-principles-color-schemes).
@@ -147,12 +199,14 @@ The examples are shown in Figure \@ref(fig:map-principles-color-schemes).
 knitr::include_graphics("images/08-map/map-principles-color-schemes.png")
 ```
 
+Rule: Choose the most appropriate palette type for your data.
+
 Sequential palettes are used to represent continuous numeric values, in other words, anything that can be placed
 on a scale. For example, average income, population counts, percent unemployed, etc.
 Usually such palettes are single-hue (for example, different shades of blue), and
 typically darker colors represent higher values (but not always).
 
-Note: See [Normalize Data to Create Meaningful Choropleth Maps](normalize.html) section to see an example of sequential palette use, and learn why representing normalized instead of absolute values may be a better idea.
+
 
 Diverging palettes also represent continuous values.
 Unlike sequential palettes, however, diverging colors represent "direction" from some reference value,
@@ -160,7 +214,7 @@ such as below or above zero, or below or above the average value.
 Diverging palettes typically have two distinct hues for "positive" and "negative" values,
 with a neutral color in the middle.
 
-Qualitative palettes typically consist of distinct hues that represent distinct classes.
+TODO: Replace with a better non-sequential example: Qualitative palettes typically consist of distinct hues that represent distinct classes.
 For example, the US Department of State issues travel advisory to foreign destinations
 ranging from "exercise normal precautions" to "do not travel" relying on a series of qualitative
 and quantitative measures, such as the likelihood of terror attacks, political and criminal situation, etc.
@@ -196,21 +250,20 @@ Figure \@ref(fig:map-principles-classification)c.
 knitr::include_graphics("images/08-map/map-principles-classification.png")
 ```
 
-### ColorBrewer {-}
+### Choropleth Ranges and Stops (best wording?) {-}
 
-One of the most useful color picking tools for meaningful choropleth
-maps is [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and
-Mark Harrower. You can see ColorBrewer's interface in Figure \@ref(fig:map-principles-colorbrewer).
+TODO: decide whether to discuss stops first (since it appears in colorbrewer) and skip range types to the end (because it does not appear here)
 
-(ref:map-principles-colorbrewer) ColorBrewer interface.
+TODO: briefly describe concept of stops and interpolation and cross-ref readers to Datawrapper section to explore
 
-```{r map-principles-colorbrewer, fig.cap="(ref:map-principles-colorbrewer)"}
-knitr::include_graphics("images/08-map/map-principles-colorbrewer-annotated.png")
-```
+Choropleth map ranges typically are two types: clearly-defined steps (like a staircase) or continous gradients (like a ramp). Both illustrate ranges
 
-ColorBrewer can generate color palettes for a specified number of classes - between three
-and nine for sequential, three and elevel for diverging, and three and twelve for qualitative.
-You can also choose palettes that are colorblind safe and print friendly.
+ColorBrewer helps mapmakers create clearly-defined steps.... but some tools allow continous...
+
+Recommendation: if the option exists, use continuous, unless you specifically want map to signal areas above or below a threshold....
+
+Briefly explain concept of stops (or classes....)
+
 
 Remember that more colors (or "buckets") does not equal better maps.
 People are quite bad at distinguishing hues, and an excessive number of
@@ -222,11 +275,21 @@ Fewer colors create a *coarse* map with differences in colored ranges becoming m
 More colors create a more *granular* map, but differences in
 colored ranges become less visible.
 
+So how *should* you make decisions when designing choropleth maps? Can you simply place the cutoffs anywhere you choose? Absolutely not. Mapmakers offer guidelines about ways to make *better* visualizations. For example, Datawrapper Academy recommends finding "a compromise between honesty and usefulness" when designing maps [TODO cite https://academy.datawrapper.de/article/117-color-palette-for-your-map]. "Useful" means that it's acceptable to use design choices to communicate different interpretations of the data. For example, a linear interpolation is best for emphasizing the extreme lows and highs, while quantiles are best for identifying geographic patterns in the middle ranges. "Honesty" means telling the truth, and not intentionally creating misleading impressions of the data. For example, increasing the number of steps in your color range will increase the level of contrast in the map, but it can also mistakenly give the impression that light- and dark-colored regions are very different, while their numbers may vary only slightly. In general, Datawrapper recommends choosing ranges to make sure readers "see all the differences in the data," rather than hiding them out of sight.[TODO cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps] They also recommend using a continuous color range to show nuances in the data, unless your data story has a compelling reason to display discrete color steps [TODO add "such as...example" and cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps]. Finally, Datawrapper Academy strongly warns against using the manual custom settings to manipulate a map's appearance to fit a preconceived point of view.[Cite https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool]. Show readers the story and tell the truth.
+
+
+
 At this point, you should have some understanding of how maps work.
 So let's move to the first practical exercise of creating a point map
 with Google My Maps.
 
+
+
+
+
 ## Point Map with Google My Maps {- #mymaps}
+
+TODO: Explain how Google My Maps is different from Google Maps....
 
 [My Maps](https://www.google.com/maps/about/mymaps/) is Google's service
 that allows users to create custom maps using Google Maps platform.
@@ -324,7 +387,7 @@ to the right of the markers.
 
 Click *Preview* to see how the map looks like outside of the My Maps editing studio.
 
-### Share Your Google Map {-}
+### Share Your Google My Map {-}
 
 If you are happy with the result, click *Share*, and click *Change to anyone with the link*
 (see Figure \@ref(fig:mymaps-share)),
@@ -510,22 +573,27 @@ Datawrapper generated for you.
 
 Learn more about [choropleth map design in this excellent series of posts by the Datawrapper Academy](https://academy.datawrapper.de/category/93-maps).
 
-In the following section, we will create a point map inside Socrata data platform.
-
-
-
+Now that you've learned how to create a choropleth map using one tool, Datawrapper, let's compare the process using a different tool, Tableau Public.
 
 
 ## Choropleth Map with Tableau Public {- #map-tableau}
 
-TODO: revise to make polygon/choropleth map vocab more consistent in this chapter; also emphasize how Tableau is not ideal for point maps because you cannot geocode addresses
+TODO: revise to make polygon/choropleth map vocab more consistent in this chapter;
+
+
+
+TODO: Revise visual instructions to create choropleth map; drag a geo dimension (such as country name) directly into sheet to make map appear; then
+
+WARNING: Tableau Public sometimes hides important items *behind* the "Show Me" panel. For example, the color palette menu....
 
 In the previous chapter, we looked at using Tableau Public to build
-[scatterplots](#scatter-chart-tableau) and [filtered line charts](#filtered-line-chart-tableau).
+[scattercharts](scatter-tableau.html) and [filtered line charts](filtered-line-tableau.html).
 Tableau can also be used to create point and polygon maps.
 
+
+
 In this tutorial, we will create a choropleth map of military spending per country
-as percentage of gross dometic product as shown in Figure \@ref(fig:tableau-polygon-final).
+as percentage of gross domestic product as shown in Figure \@ref(fig:tableau-polygon-final).
 Remember that choropleth maps work best when
 they show relative, not absolute numbers.
 Displaying total spending per country is a bad idea, as bigger countries tend
@@ -540,17 +608,31 @@ including military spending.
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/08-map/tableau-polygon-final.png")
 ```
 
+ADD limitations of Tableau Public maps: work best when you enter places or regions that the software already recognizes by name or three-letter code
+
+it's much easier if Tableau recognizes the geography and names (show list -- )
 To create maps in Tableau, you do not always need geospatial files. Tableau can recognize
 of a lot of locations, including boundaries for countries and territories, counties within countries,
 states, US zip codes, airport codes, city locations, and some others. A simple spreadsheet that references
 these locations can suffice. In this tutorial, we will rely on Tableau to automatically recognize country
-names. If you require custom boundaries or points (such as town names in your local language),
+names.
+
+not ideal for point maps because you cannot geocode new street addresses, such as "1600 Pennsylvania Avenue, Washington DC" (TODO: Check)
+
+Good for point symbol maps
+
+Good for choropleth maps if the tool recognizes geographic names, but less ability to modify color ranges than Datawrapper....
+
+If you require custom boundaries or points (such as town names in your local language),
 take a look at [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
 article from the official Tableau documentation.
 
-Before we begin, [download the 2018 data](data/military-spending-2018.csv) that we obtained from the World Bank.
 
 ### Create a Choropleth Map in Tableau {-}
+
+TODO: TODO: fix data because it currently includes several international regions, which are not nations; place inside Google Sheet; change "value" to "MilitaryPctGDP"
+
+Before we begin, [download the 2018 data](data/military-spending-2018.csv) that we obtained from the World Bank.
 
 Launch Tableau. In **Connect** section on start up, choose *Text file*, and select `military-spending-2018.csv`.
 From Data Source tab, inspect the dataset contents. It contains four columns: Country Name, which includes
@@ -622,11 +704,17 @@ And finally, let's add a proper title to the map. Double-click the default *Shee
 to bring up the *Edit Title* window, and change the name of your chart to a more meaningful
 *Military Spending as % of GDP (2018)*.
 
-### Publish Your Tableau Map {-}
+### Create Dashboard and Publish Your Map {-}
+
+TODO: make dashboard; change color range menu to floating, place on top of map, add title and sources...
 
 Once you are ready to publish and share the map, go to *File > Save to Tableau Public*.
 In the pop-up window, log in to your account if requested. Give it a title, such
 as *Military Spending*, and click Save.
+
+Now that you understand how to create maps using *static* data from a spreadsheet, let's explore how to create a map using the most current data available from an open-data repository.
+
+
 
 ## Current Map with Socrata Open Data {- #map-socrata}
 TODO: revise to emphasize how the map continuously pulls the most current information directly from the open-data repository; in this case, happens to be filtered point map of hospitals in Texas.... TODO: replace with a better example of frequently-updated "live" data?

@@ -26,23 +26,15 @@ Table: (\#tab:chart-types) Basic Chart Types and Tutorials
 | Bubble chart <br> ![](images/07-chart/chart-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color.<br>Easy tool: [Scatter and Bubble Chart in Datawrapper tutorial](scatter-bubble-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Sparklines<br> ![](images/07-chart/chart-sparklines.png) | Best to compare data trends with tiny line or bar charts, aligned in a table column.<br>Easy tool: [Ch 9: Interactive Table with Sparklines in Datawrapper tutorial](table-datawrapper.html) |
 
-TODO above:
-- REDO range chart example?
-- DECIDE on power tools in cases noted above?
-- If showing gaps between data matters most to your story, then choose a chart type that emphasizes the gaps, such as range chart.
-- WHERE to insert: Do you really need a chart? ...Even if your data contains geographical information, sometimes a chart tells your story better than a map.
+TODO above: improve and standardize chart images, especially range chart
 
 ## Chart Design Principles {- #chart-design}
 
-Although not a science, data visualization comes with a set of rules, principles, and best practices
-that create a basis for clear and eloquent charts. Some of those rules are less rigid than others,
-but prior to "breaking" them, it is important to establish why they are important.
+There are *so* many different types of charts. However, just because data *can* be made into a chart does not necessarily mean that it *should* be turned into one. Before creating a chart, stop and ask: *Does a visualized data pattern really matter to your story?* Sometimes a simple table, or even text alone, can communicate the idea more effectively to your audience. Since creating a well-designed chart requires time and effort, make sure it enhances your data story.
 
-Before you begin, ask yourself: Do I really need a chart to tell this data story?
-Or would a table or text alone do a better job? Making a good chart takes time and effort,
-so make sure it enhances your story.
+Although not a science, data visualization comes with a set of principles and best practices that serve as a foundation for creating truthful and eloquent charts. In this section, we'll identify some important rules about chart design. But you may be surprised to learn that some rules are less rigid than others, and can be "broken" when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let's start by establishing a common vocabulary about charts.
 
-### Deconstructing a Chart {-}
+### Deconstruct a Chart {-}
 
 Let's take a look at Figure \@ref(fig:design-principles-chart-components).
 It shows basic chart components that are shared among most chart types.
@@ -93,8 +85,7 @@ is visible without any user interaction.
 
 ### Some Rules are More Important than Others {-}
 
-Although the vast majority of rules in data visualization are open to interpretation,
-there are some that are hard to bend.
+Although the vast majority of rules in data visualization are open to interpretation, as long as you honestly interpret the data, here are two rules that cannot be bent: zero-baselines for bar and column charts, and 100-percent baselines for pie charts.
 
 #### Bar and Column Charts Must Begin at Zero {-}
 

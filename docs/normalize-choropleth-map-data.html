@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Normalize Choropleth Map Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Normalize Choropleth Map Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="map-design.html"/>
-<link rel="next" href="choropleth-design-with-colorbrewer.html"/>
+<link rel="next" href="design-choropleth-maps-with-colorbrewer.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -225,7 +225,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
+<li class="chapter" data-level="" data-path="design-choropleth-maps-with-colorbrewer.html"><a href="design-choropleth-maps-with-colorbrewer.html"><i class="fa fa-check"></i>Design Choropleth Maps with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -337,41 +337,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="normalize-choropleth-map-data" class="section level2 unnumbered" number="">
 <h2>Normalize Choropleth Map Data</h2>
 <p>We introduced the concept of <a href="normalize.html">normalizing data in Chapter 6: Make Meaningful Comparisons</a>. Normalization means adjusting data that was collected using different scales into a common scale, in order to make more appropriate comparisons. For example, it makes little sense to compare the total number of Covid cases between nations with very different populations, such as XXX and YYY (TODO: fill in examples). A better strategy is to normalize the data by comparing cases per capita (such as A per 100,000 in XXX versus B per 100,000 in YYY) to adjust for prior differences in population.</p>
-<p>In the same way, choropleth maps work best when they display relative values (such as percentages or per capita rates) rather than absolute values (such as the raw number of people). If you ignore normalization when creating a choropleth map and display raw numbers, you’ll essentially recreate a population map, which doesn’t tell us anything new. For example, compare two maps shown in Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.2</a>. They both are
-about Covid-19 cases in the continental US as of
-June 26, 2020. Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.2</a>a shows total number of recorded cases per state,
-and Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.2</a>b shows Covid-19 cases adjusted by the state’s population.
-Darker colors represent higher values. Do you notice any differences in spatial patterns?</p>
+<p>In the same way, choropleth maps work best when they display relative values (such as percentages or per capita rates) rather than absolute values (such as the raw number of people). If you ignore normalization when creating a choropleth map and display raw numbers, you’ll essentially recreate a population map, which doesn’t tell us anything new. For example, compare two maps shown in Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.4</a>. They both are about Covid-19 cases in the continental US as of June 26, 2020. Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.4</a>a shows total number of recorded cases per state, and Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.4</a>b shows Covid-19 cases adjusted by the state’s population. Darker colors represent higher values. Do you notice any differences in spatial patterns?</p>
 
 <div class="figure"><span id="fig:normalize-map-data"></span>
 <img src="images/14-transform/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
 <p class="caption">
-Figure 8.2: Choropleth maps work best with normalized values.
+Figure 8.4: Choropleth maps work best with normalized values.
 </p>
 </div>
-<p>Both maps show Covid-19 data collected by the New York Times and published
-<a href="https://github.com/nytimes/covid-19-data">on GitHub</a>.
-In the map in Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.2</a>b, we normalized values by dividing the total number of cases by the population in each state,
-according to the 2018 US Census American Community Survey,
-the most recent data available on the day of writing. TODO: SHOW VERY SIMPLE table of normalization for two states mentioned below, such as Texas and New York.</p>
-<p>We did not add legends and other important cartographic elements so that you can
+<p>Both maps show Covid-19 data collected by the New York Times and published <a href="https://github.com/nytimes/covid-19-data">on GitHub</a>. In the map in Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.4</a>b, we normalized values by dividing the total number of cases by the population in each state, according to the 2018 US Census American Community Survey, the most recent data available on the day of writing. We did not add legends and other important cartographic elements so that you can
 better focus on interpreting spatial patterns. In both cases,
 we used Jenks natural breaks for classification.</p>
-<p>What are the worst-hit states according to the map showing total Covid-19 counts
-(shown in Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.2</a>a)?
-If you are familiar with the US geography, you can quickly tell that these are
-New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California.
-But five of these happen to be some of the most populous states in the US,
+<p>What are the worst-hit states according to the map showing total Covid-19 counts (shown in Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.4</a>a)? If you are familiar with the US geography, you can quickly tell that these are New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California. But five of these happen to be some of the most populous states in the US,
 so it makes sense that they will also have higher Covid-19 cases.</p>
-<p>Now, how about the map in Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.2</a>b?
-You can see that New York and its neighbors,
-including New Jersey and Massachusetts, have by far the highest rates per capita
-(per person), which we saw in the first map. But you can also see
-that in fact California, Texas, and Florida were impacted to a lesser extent
-than the map on the left had suggested. So the map with per-capita values is a
-much better illustration to the story about New York being the <em>first</em> epicenter of the Covid-19
-crisis in the United States.</p>
-<p>TODO: update map data and interpret two examples (TX and NY) using absolute data (total cases) versus normalized data (cases per capita)</p>
+<p>Now, how about the map in Figure <a href="normalize-choropleth-map-data.html#fig:normalize-map-data">8.4</a>b? You can see that New York and its neighbors, including New Jersey and Massachusetts, have by far the highest rates per capita (per person), which we saw in the first map. But you can also see that in fact California, Texas, and Florida were impacted to a lesser extent than the map on the left had suggested. So the map with per-capita values is a much better illustration to the story about New York being the <em>first</em> epicenter of the Covid-19 crisis in the United States.</p>
+<p>TODO: Include a very simple normalization calculation to demonstrate absolute data versus normalized data (Cases / Population = Cases Per Capita) for two states, such as Texas and New York. Decide whether to show data at a specific moment (May 1 2020 near peak for NYC) or most up-to-date figure at this writing (which will show higher case rates elsewhere). Either way, clearly label the date in the caption.</p>
 </div>
             </section>
 
@@ -379,7 +359,7 @@ crisis in the United States.</p>
         </div>
       </div>
 <a href="map-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="choropleth-design-with-colorbrewer.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="design-choropleth-maps-with-colorbrewer.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

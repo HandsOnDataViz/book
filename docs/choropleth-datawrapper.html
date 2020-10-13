@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Choropleth Map with Datawrapper | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Choropleth Map with Datawrapper | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
@@ -225,7 +225,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
+<li class="chapter" data-level="" data-path="design-choropleth-maps-with-colorbrewer.html"><a href="design-choropleth-maps-with-colorbrewer.html"><i class="fa fa-check"></i>Design Choropleth Maps with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -341,7 +341,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 stylish and interactive point and polygon maps.
 In this section, we will create a choropleth map of average home values in US states
 in 2019 according to <a href="https://www.zillow.com/research/data/">Zillow data</a>,
-as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-final">8.14</a>.</p>
+as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-final">8.16</a>.</p>
 <p>We calculated average 2019 prices for 50 US states and DC, and put them in a spreadsheet, which
 <a href="data/us-states-home-values-zillow-2019.csv">you can download</a> for this tutorial.</p>
 <p>TODO: Move this here? Note: See <a href="normalize.html">Normalize Data to Create Meaningful Choropleth Maps</a> section to learn why you should avoid displaying absolute values or counts in choropleth maps.</p>
@@ -350,20 +350,20 @@ as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-fina
 <iframe src="https://datawrapper.dwcdn.net/uX2Yx/2/" width="672" height="513px">
 </iframe>
 <p class="caption">
-Figure 8.14: This choropleth map is created in Datawrapper
+Figure 8.16: This choropleth map is created in Datawrapper
 </p>
 </div>
 <div id="create-a-new-choropleth-map" class="section level3 unnumbered" number="">
 <h3>Create a New Choropleth Map</h3>
 <p>Sign in to your <a href="https://app.datawrapper.de/signin">Datawrapper account</a>
 and click <em>New Map</em> in the header. Datawrapper will offer a choice of
-a <em>Choropleth</em>, <em>Symbol</em>, and <em>Locator</em> maps, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-choose">8.15</a>.
+a <em>Choropleth</em>, <em>Symbol</em>, and <em>Locator</em> maps, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-choose">8.17</a>.
 Go ahead and choose <em>choropleth</em>.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-choose"></span>
 <img src="images/08-map/datawrapper-map-choose-annotated.png" alt="Sign in to Datawrapper, click New Map, and choose Choropleth."  />
 <p class="caption">
-Figure 8.15: Sign in to Datawrapper, click <em>New Map</em>, and choose <em>Choropleth</em>.
+Figure 8.17: Sign in to Datawrapper, click <em>New Map</em>, and choose <em>Choropleth</em>.
 </p>
 </div>
 <p>Datawrapper splits the process of creating a map into four steps.
@@ -374,12 +374,12 @@ and zip code and census tract areas for the United States. But you are not limit
 to the boundaries that Datawrapper already has. You can also upload your own custom geographies
 as a TopoJSON or GeoJSON file, and you will learn more about that in the <a href="convert-geojson.html">Convert to GeoJSON section of Chapter 14</a>.
 Because we are mapping average home prices by US state, choose <em>United States &gt; States</em>,
-as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-us-states">8.16</a>, and hit <em>Next</em> to go to step 2.</p>
+as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-us-states">8.18</a>, and hit <em>Next</em> to go to step 2.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-us-states"></span>
 <img src="images/08-map/datawrapper-map-us-states-annotated.png" alt="To map home prices by US state, choose appropriate boundaries."  />
 <p class="caption">
-Figure 8.16: To map home prices by US state, choose appropriate boundaries.
+Figure 8.18: To map home prices by US state, choose appropriate boundaries.
 </p>
 </div>
 <p>In the second step, you can attach data to the chosen boundaries.
@@ -398,12 +398,12 @@ or upload a CSV file. We recommend uploading a file, so click the link and choos
 <code>us-states-home-values-zillow-2019.csv</code>. The table will then get populated,
 and Datawrapper will ask for help identifying the relevant column with geographical names.
 Make sure your <em>Matched as ISO-Codes</em> tooltip is blue above the <em>StateAbbr</em> column,
-scroll down and click <em>Next</em>, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-match">8.17</a>.</p>
+scroll down and click <em>Next</em>, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-match">8.19</a>.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-match"></span>
 <img src="images/08-map/datawrapper-map-match.png" alt="Tell Datawrapper which column contains geography names (ISO-Codes of states)." width="350" />
 <p class="caption">
-Figure 8.17: Tell Datawrapper which column contains geography names (ISO-Codes of states).
+Figure 8.19: Tell Datawrapper which column contains geography names (ISO-Codes of states).
 </p>
 </div>
 <p>In a similar fashion, you will then be asked to identify a column that contains <em>values</em> to be mapped. Make sure it is <em>HomeValue2019</em> that is <em>Matched As Values</em>.</p>
@@ -420,12 +420,12 @@ Figure 8.17: Tell Datawrapper which column contains geography names (ISO-Codes o
 <p>When finished uploading data, go to step 3 to begin visualizing. Start with the <em>Refine</em> tab and choose
 a diverging color palette, from reds to blues. Make sure your “middle” color value
 corresponds to the state with the median home price by choosing <em>min/median/max</em> value
-from the Stops dropdown, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-color">8.18</a>.</p>
+from the Stops dropdown, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-color">8.20</a>.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-color"></span>
 <img src="images/08-map/datawrapper-map-color.png" alt="Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value." width="350" />
 <p class="caption">
-Figure 8.18: Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value.
+Figure 8.20: Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value.
 </p>
 </div>
 <p>In the <em>Visualize</em> screen, next to <em>Select palette</em>, click the <em>wrench symbol</em> to open up the color settings, as shown in FIG TODO.</p>
@@ -448,15 +448,15 @@ Figure 8.18: Choose red/blues divergent color scheme, and make sure to match med
 <h3>Style and publish your map</h3>
 <p>When finished with colors, scroll down to <strong>Tooltips</strong> section and
 click <em>Customize tooltips</em> button. In a popup window, set Title to the state name
-and Body to the average home value, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-tooltip">8.19</a>.
-The easiest way to do this is to click on column names in the upper-right corner of the popup window, where all available names are listed, which is circled in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-tooltip">8.19</a>. Note that references to variables are put in double curly brackets (<code>{{ ColumnNameGoesHere }}</code>).
+and Body to the average home value, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-tooltip">8.21</a>.
+The easiest way to do this is to click on column names in the upper-right corner of the popup window, where all available names are listed, which is circled in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-tooltip">8.21</a>. Note that references to variables are put in double curly brackets (<code>{{ ColumnNameGoesHere }}</code>).
 Make sure your dollar symbol (<code>$</code>) in outside of the curly brackets. Click <em>Save</em>,
 and hover over the map to make sure your tooltip displays the state name and the average home price.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-tooltip"></span>
 <img src="images/08-map/datawrapper-map-tooltip-annotated.png" alt="To reference values from the spreadsheet, add column names in double curly brackets." width="450" />
 <p class="caption">
-Figure 8.19: To reference values from the spreadsheet, add column names in double curly brackets.
+Figure 8.21: To reference values from the spreadsheet, add column names in double curly brackets.
 </p>
 </div>
 <p>You can now move to the <em>Annotate</em> tab and set values for the map’s title and description,

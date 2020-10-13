@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -351,7 +353,7 @@ Figure 15.1: The default GDP line chart on the left, and the reduced-axis chart 
 </div>
 <p>TODO: Placed images above side-by-side to allow for easier comparison. Rethink if “zero baseline” and “truncated baseline” are best titles.</p>
 <p>However, your chart is clearly <em>wrong</em> because you’ve violated one of the <a href="chart-design.html">cardinal rules about chart design in Chapter 7</a>. Column (and bar) charts <em>must</em> start at the zero baseline, because they represent value using <em>height</em> (and <em>length</em>). Readers cannot determine if a column is twice as high as another column unless both begin at the zero baseline. By contrast, the default chart with the zero baseline is truthful. But let’s move on to a different example where the rules are not as clear.</p>
-<p>In the second half of this tutorial, we’ll examine data about climate change, one of the most pressing issues we face on our planet, yet deniers continue to resist the new reality, and some of them twist the facts.[TODO: Cite Cairo examples]. In this tutorial, we’ll examine global temperature data from 1880 to the present, <a href="https://climate.nasa.gov/vital-signs/global-temperature/">downloaded from the NASA, the US National Aeronautics and Space Administration</a>. It shows that the mean global temperature has risen about 1 degree Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and this warming has already begun to cause glacial melt and rising sea levels. Your task is to create <em>misleading</em> line charts that <em>diminish</em> the appearance of rising global temperature change in the reader’s eye.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a></p>
+<p>In the second half of this tutorial, we’ll examine data about climate change, one of the most pressing issues we face on our planet, yet deniers continue to resist the new reality, and some of them twist the facts.[TODO: Cite Cairo examples]. In this tutorial, we’ll examine global temperature data from 1880 to the present, <a href="https://climate.nasa.gov/vital-signs/global-temperature/">downloaded from the NASA, the US National Aeronautics and Space Administration</a>. It shows that the mean global temperature has risen about 1 degree Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and this warming has already begun to cause glacial melt and rising sea levels. Your task is to create <em>misleading</em> line charts that <em>diminish</em> the appearance of rising global temperature change in the reader’s eye.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a></p>
 <ol style="list-style-type: decimal">
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0">global temperature change 1880-2019 data in Google Sheets</a>, and go to <em>File &gt; Save As</em> to create a copy that you can edit in your own Google Drive.</p></li>
 <li><p>Examine the data and read the notes. Temperature change refers to the mean global land-ocean surface temperature in degrees Celsius, estimated from many samples around the earth, relative to the temperature in 1951-1980, about 14°C (or 57°F). In other words, the 0.98 value for 2019 means that global temperatures were about 1°C above normal that year. Scientists define the 1951-80 period as “normal” based on standards from NASA and the US National Weather Service, and also because it’s a familiar reference for many of today’s adults who grew up during those decades. While there’s other ways to measure temperature change, this data from NASA’s Goddard Institute for Space Studies (NASA/GISS) is generally consistent with data compiled by other scientists at the <a href="http://www.cru.uea.ac.uk/">Climatic Research Unit</a> and the <a href="https://www.ncdc.noaa.gov/cag/global/time-series">National Oceanic and Atmospheric Administration</a> (NOAA).</p></li>
@@ -376,7 +378,7 @@ Figure 15.2: Default line chart of global temperature change. Explore the <a hre
 Figure 15.3: Misleading chart with a lengthened vertical axis.
 </p>
 </div>
-<p>What makes this flattened line chart <em>misleading</em> rather than <em>wrong</em>? In the first half of the tutorial, when you reduced the vertical axis of the US GDP chart, you violated the zero-baseline rule, because column and bar charts <em>must</em> begin at zero since they require readers to judge <em>height</em> and <em>length</em>, as described in the <a href="chart-design.html">chart design section of Chapter 7</a>. But you may be surprised to learn that the zero-baseline rule does <em>not</em> apply to line charts. Visualization expert Albert Cairo reminds us that line charts represent values in the <em>position</em> and <em>angle</em> of the line. Readers interpret the meaning of line charts by their shape, rather than their height, so the baseline is irrelevant. Therefore, flattening the line chart for temperature change may mislead readers, but it’s technically not wrong, as long as it is labelled correctly.<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a></p>
+<p>What makes this flattened line chart <em>misleading</em> rather than <em>wrong</em>? In the first half of the tutorial, when you reduced the vertical axis of the US GDP chart, you violated the zero-baseline rule, because column and bar charts <em>must</em> begin at zero since they require readers to judge <em>height</em> and <em>length</em>, as described in the <a href="chart-design.html">chart design section of Chapter 7</a>. But you may be surprised to learn that the zero-baseline rule does <em>not</em> apply to line charts. Visualization expert Albert Cairo reminds us that line charts represent values in the <em>position</em> and <em>angle</em> of the line. Readers interpret the meaning of line charts by their shape, rather than their height, so the baseline is irrelevant. Therefore, flattening the line chart for temperature change may mislead readers, but it’s technically not wrong, as long as it is labelled correctly.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></p>
 <p>TODO: While the text asks “wrong or misleading?” the chart and caption are clearly labeled “misleading” to avoid confusion among readers who just skim the text. Maybe rephrase the question: What makes this chart</p>
 </div>
 <div id="widen-the-chart-to-warp-its-aspect-ratio" class="section level3 unnumbered" number="">
@@ -433,9 +435,9 @@ Now that you’ve learned about how to lie with charts, you’ll build on these 
 </div>
 <div class="footnotes">
 <hr />
-<ol start="21">
-<li id="fn21"><p>The inspiration for this specific tutorial came from a high school classroom activity created by the NASA Jet Propulsion Laboratory (JPL), as well as visualization expert Alberto Cairo’s analysis of charts by climate change deniers. <span class="citation">NASA JPL</span>; <span class="citation">Cairo, <em>How Charts Lie</em></span>, pp. 65-67, 135-141.<a href="how-to-lie-with-charts.html#fnref21" class="footnote-back">↩︎</a></p></li>
-<li id="fn22"><p><span class="citation">Cairo</span>, p. 61.<a href="how-to-lie-with-charts.html#fnref22" class="footnote-back">↩︎</a></p></li>
+<ol start="23">
+<li id="fn23"><p>The inspiration for this specific tutorial came from a high school classroom activity created by the NASA Jet Propulsion Laboratory (JPL), as well as visualization expert Alberto Cairo’s analysis of charts by climate change deniers. <span class="citation">NASA JPL</span>; <span class="citation">Cairo, <em>How Charts Lie</em></span>, pp. 65-67, 135-141.<a href="how-to-lie-with-charts.html#fnref23" class="footnote-back">↩︎</a></p></li>
+<li id="fn24"><p><span class="citation">Cairo</span>, p. 61.<a href="how-to-lie-with-charts.html#fnref24" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

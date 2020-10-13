@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -358,44 +360,44 @@ Figure 12.2: Interactive bar chart with error bars in Chart.js. Explore the <a h
 <ol start="3" style="list-style-type: decimal">
 <li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
 </ol>
-<div class="sourceCode" id="cb18"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb18-1"><a href="chartjs-error-bars.html#cb18-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Household Income for Select US Geographies, 2018&#39;</span><span class="op">;</span></span>
-<span id="cb18-2"><a href="chartjs-error-bars.html#cb18-2"></a></span>
-<span id="cb18-3"><a href="chartjs-error-bars.html#cb18-3"></a><span class="co">// `false` for vertical (column) chart, `true` for horizontal bar</span></span>
-<span id="cb18-4"><a href="chartjs-error-bars.html#cb18-4"></a><span class="kw">var</span> HORIZONTAL <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb18-5"><a href="chartjs-error-bars.html#cb18-5"></a></span>
-<span id="cb18-6"><a href="chartjs-error-bars.html#cb18-6"></a><span class="co">// `false` for individual bars, `true` for stacked bars</span></span>
-<span id="cb18-7"><a href="chartjs-error-bars.html#cb18-7"></a><span class="kw">var</span> STACKED <span class="op">=</span> <span class="kw">false</span><span class="op">;</span>  </span>
-<span id="cb18-8"><a href="chartjs-error-bars.html#cb18-8"></a></span>
-<span id="cb18-9"><a href="chartjs-error-bars.html#cb18-9"></a><span class="co">// Which column defines &quot;bucket&quot; names?</span></span>
-<span id="cb18-10"><a href="chartjs-error-bars.html#cb18-10"></a><span class="kw">var</span> LABELS <span class="op">=</span> <span class="st">&#39;geo&#39;</span><span class="op">;</span></span>
-<span id="cb18-11"><a href="chartjs-error-bars.html#cb18-11"></a></span>
-<span id="cb18-12"><a href="chartjs-error-bars.html#cb18-12"></a><span class="co">// For each column representing a series, define its name and color</span></span>
-<span id="cb18-13"><a href="chartjs-error-bars.html#cb18-13"></a><span class="kw">var</span> SERIES <span class="op">=</span> [</span>
-<span id="cb18-14"><a href="chartjs-error-bars.html#cb18-14"></a>  {</span>
-<span id="cb18-15"><a href="chartjs-error-bars.html#cb18-15"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;median&#39;</span><span class="op">,</span></span>
-<span id="cb18-16"><a href="chartjs-error-bars.html#cb18-16"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Median Income&#39;</span><span class="op">,</span></span>
-<span id="cb18-17"><a href="chartjs-error-bars.html#cb18-17"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;grey&#39;</span><span class="op">,</span></span>
-<span id="cb18-18"><a href="chartjs-error-bars.html#cb18-18"></a>    <span class="dt">errorColumn</span><span class="op">:</span> <span class="st">&#39;median_moe&#39;</span></span>
-<span id="cb18-19"><a href="chartjs-error-bars.html#cb18-19"></a>  }<span class="op">,</span></span>
-<span id="cb18-20"><a href="chartjs-error-bars.html#cb18-20"></a>  {</span>
-<span id="cb18-21"><a href="chartjs-error-bars.html#cb18-21"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;mean&#39;</span><span class="op">,</span></span>
-<span id="cb18-22"><a href="chartjs-error-bars.html#cb18-22"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Mean Income&#39;</span><span class="op">,</span></span>
-<span id="cb18-23"><a href="chartjs-error-bars.html#cb18-23"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;#cc9999&#39;</span><span class="op">,</span></span>
-<span id="cb18-24"><a href="chartjs-error-bars.html#cb18-24"></a>    <span class="dt">errorColumn</span><span class="op">:</span> <span class="st">&#39;mean_moe&#39;</span></span>
-<span id="cb18-25"><a href="chartjs-error-bars.html#cb18-25"></a>  }</span>
-<span id="cb18-26"><a href="chartjs-error-bars.html#cb18-26"></a>]<span class="op">;</span></span>
-<span id="cb18-27"><a href="chartjs-error-bars.html#cb18-27"></a></span>
-<span id="cb18-28"><a href="chartjs-error-bars.html#cb18-28"></a><span class="co">// x-axis label and label in tooltip</span></span>
-<span id="cb18-29"><a href="chartjs-error-bars.html#cb18-29"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Geography&#39;</span><span class="op">;</span></span>
-<span id="cb18-30"><a href="chartjs-error-bars.html#cb18-30"></a></span>
-<span id="cb18-31"><a href="chartjs-error-bars.html#cb18-31"></a><span class="co">// y-axis label and label in tooltip</span></span>
-<span id="cb18-32"><a href="chartjs-error-bars.html#cb18-32"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;US Dollars&#39;</span><span class="op">;</span></span>
-<span id="cb18-33"><a href="chartjs-error-bars.html#cb18-33"></a></span>
-<span id="cb18-34"><a href="chartjs-error-bars.html#cb18-34"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
-<span id="cb18-35"><a href="chartjs-error-bars.html#cb18-35"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb18-36"><a href="chartjs-error-bars.html#cb18-36"></a></span>
-<span id="cb18-37"><a href="chartjs-error-bars.html#cb18-37"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
-<span id="cb18-38"><a href="chartjs-error-bars.html#cb18-38"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb22-1"><a href="chartjs-error-bars.html#cb22-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Household Income for Select US Geographies, 2018&#39;</span><span class="op">;</span></span>
+<span id="cb22-2"><a href="chartjs-error-bars.html#cb22-2"></a></span>
+<span id="cb22-3"><a href="chartjs-error-bars.html#cb22-3"></a><span class="co">// `false` for vertical (column) chart, `true` for horizontal bar</span></span>
+<span id="cb22-4"><a href="chartjs-error-bars.html#cb22-4"></a><span class="kw">var</span> HORIZONTAL <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb22-5"><a href="chartjs-error-bars.html#cb22-5"></a></span>
+<span id="cb22-6"><a href="chartjs-error-bars.html#cb22-6"></a><span class="co">// `false` for individual bars, `true` for stacked bars</span></span>
+<span id="cb22-7"><a href="chartjs-error-bars.html#cb22-7"></a><span class="kw">var</span> STACKED <span class="op">=</span> <span class="kw">false</span><span class="op">;</span>  </span>
+<span id="cb22-8"><a href="chartjs-error-bars.html#cb22-8"></a></span>
+<span id="cb22-9"><a href="chartjs-error-bars.html#cb22-9"></a><span class="co">// Which column defines &quot;bucket&quot; names?</span></span>
+<span id="cb22-10"><a href="chartjs-error-bars.html#cb22-10"></a><span class="kw">var</span> LABELS <span class="op">=</span> <span class="st">&#39;geo&#39;</span><span class="op">;</span></span>
+<span id="cb22-11"><a href="chartjs-error-bars.html#cb22-11"></a></span>
+<span id="cb22-12"><a href="chartjs-error-bars.html#cb22-12"></a><span class="co">// For each column representing a series, define its name and color</span></span>
+<span id="cb22-13"><a href="chartjs-error-bars.html#cb22-13"></a><span class="kw">var</span> SERIES <span class="op">=</span> [</span>
+<span id="cb22-14"><a href="chartjs-error-bars.html#cb22-14"></a>  {</span>
+<span id="cb22-15"><a href="chartjs-error-bars.html#cb22-15"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;median&#39;</span><span class="op">,</span></span>
+<span id="cb22-16"><a href="chartjs-error-bars.html#cb22-16"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Median Income&#39;</span><span class="op">,</span></span>
+<span id="cb22-17"><a href="chartjs-error-bars.html#cb22-17"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;grey&#39;</span><span class="op">,</span></span>
+<span id="cb22-18"><a href="chartjs-error-bars.html#cb22-18"></a>    <span class="dt">errorColumn</span><span class="op">:</span> <span class="st">&#39;median_moe&#39;</span></span>
+<span id="cb22-19"><a href="chartjs-error-bars.html#cb22-19"></a>  }<span class="op">,</span></span>
+<span id="cb22-20"><a href="chartjs-error-bars.html#cb22-20"></a>  {</span>
+<span id="cb22-21"><a href="chartjs-error-bars.html#cb22-21"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;mean&#39;</span><span class="op">,</span></span>
+<span id="cb22-22"><a href="chartjs-error-bars.html#cb22-22"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Mean Income&#39;</span><span class="op">,</span></span>
+<span id="cb22-23"><a href="chartjs-error-bars.html#cb22-23"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;#cc9999&#39;</span><span class="op">,</span></span>
+<span id="cb22-24"><a href="chartjs-error-bars.html#cb22-24"></a>    <span class="dt">errorColumn</span><span class="op">:</span> <span class="st">&#39;mean_moe&#39;</span></span>
+<span id="cb22-25"><a href="chartjs-error-bars.html#cb22-25"></a>  }</span>
+<span id="cb22-26"><a href="chartjs-error-bars.html#cb22-26"></a>]<span class="op">;</span></span>
+<span id="cb22-27"><a href="chartjs-error-bars.html#cb22-27"></a></span>
+<span id="cb22-28"><a href="chartjs-error-bars.html#cb22-28"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb22-29"><a href="chartjs-error-bars.html#cb22-29"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Geography&#39;</span><span class="op">;</span></span>
+<span id="cb22-30"><a href="chartjs-error-bars.html#cb22-30"></a></span>
+<span id="cb22-31"><a href="chartjs-error-bars.html#cb22-31"></a><span class="co">// y-axis label and label in tooltip</span></span>
+<span id="cb22-32"><a href="chartjs-error-bars.html#cb22-32"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;US Dollars&#39;</span><span class="op">;</span></span>
+<span id="cb22-33"><a href="chartjs-error-bars.html#cb22-33"></a></span>
+<span id="cb22-34"><a href="chartjs-error-bars.html#cb22-34"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
+<span id="cb22-35"><a href="chartjs-error-bars.html#cb22-35"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb22-36"><a href="chartjs-error-bars.html#cb22-36"></a></span>
+<span id="cb22-37"><a href="chartjs-error-bars.html#cb22-37"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb22-38"><a href="chartjs-error-bars.html#cb22-38"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
 <p>For more customization, see <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a>.</p>
 </div>
             </section>

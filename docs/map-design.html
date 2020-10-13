@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="map.html"/>
-<link rel="next" href="mymaps.html"/>
+<link rel="next" href="normalize-choropleth-map-data.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -334,28 +336,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="map-design" class="section level2 unnumbered" number="">
 <h2>Map Design Principles</h2>
-<p>Most of the data collected today comes with some sort of geospatial component.
-People’s home and places of business have addresses associated with them, such as <code>1012 Broad St, Hartford, CT</code>.
-When we track our runs or bike journeys on Strava, they come with latitude and longitude components.
-National statistical agencies across the world collect data about regions and territories,
-such as average income or population counts, making it possible to compare countries
-and other geographical entities.</p>
-<p>However, just because data <em>can</em> be mapped does not mean it <em>should</em> be mapped.
-Before you decide to create a map, ask yourself: Does location really matter to your story?
-If precise values are more important to your story than spatial patterns,
-consider using a simple table to show values. Most people are familiar with the table,
-and can easily retrieve information from it as long as you arrange it logically (for example,
-alphabetically or sorted by value).
-If you want to show change over time for various geographies, consider using a line chart
-instead. Sometimes even a simple bar chart can be a much better alternative to a map.</p>
-<p>An effective map should show interesting geospatial patterns and
-should be easy to read in both black-and-white (as is often the case with printed materials)
-and color.</p>
-<div id="understand-the-vocabulary" class="section level3 unnumbered" number="">
-<h3>Understand the Vocabulary</h3>
+<p>Much of the data collected today includes a spatial component that can be mapped. When you look up an address on a city street, or take a photo of a tree in a rural forest, both can be geocoded into latitude and longitude coordinates, such as <code>42.76, -72.69</code>, and placed as <em>points</em> on a map. When we walk, bike, drive, or ride mass transit, our route can be recorded as strings of geocoordinates and shown as <em>lines</em> on a map. When we draw lines to designate the geographic borders of neighborhoods or nations, we can display those <em>polygons</em> on a map, and also color them to represent different values, such as population or income.</p>
+<p>However, just because data <em>can</em> be mapped does not always mean it <em>should</em> be mapped.
+Before creating a map, stop and ask yourself: <em>Does location really matter to your story?</em> Even when your data includes geographic information, sometimes a chart tells your story better than a map. For example, you can clearly show differences between geographic areas in a bar chart, or trace how they rise and fall on different rates over time with a line chart, or compare two variables for each area in a scatter chart. Sometimes a simple table, or even text alone, communicates your point more effectively to your audience. Since creating a well-designed map requires time and energy, make sure it actually enhances your data story.</p>
+<p>As you learned in the previous chapter about charts, data visualization is not a science, but comes with a set of principles and best practices that serve as a foundation for creating true and meaningful maps. In this section, we’ll identify a few rules about map design, but you may be surprised to learn that some rules are less rigid than others, and can be “broken” when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let’s start by establishing a common vocabulary about maps.</p>
+<div id="deconstruct-a-map" class="section level3 unnumbered" number="">
+<h3>Deconstruct a Map</h3>
 <p>Take a look at Figure <a href="map-design.html#fig:map-principles-map">8.1</a> to get familiar with main
-basic elements of an interactive map. Similar to a chart, a good maps should have a title and a description that
-gives a bit of context about what the map is showing.</p>
+basic elements of maps, especially interactive ones featured in this book. Similar to a chart, good maps should include a title and brief description to provide context about what the map is showing.</p>
 
 <div class="figure"><span id="fig:map-principles-map"></span>
 <img src="images/08-map/map-principles-map.png" alt="Map elements."  />
@@ -363,149 +351,56 @@ gives a bit of context about what the map is showing.</p>
 Figure 8.1: Map elements.
 </p>
 </div>
-<p>TODO: flip order to points…. layers</p>
-<p>The data in the map is presented as layers. A base layer is often satellite imagery of the earth
-or vector representations of buildings and streets (also known as vector tiles).
-A base layer provides the foundation of the map. The data displayed on the maps
-can be generally described as points (such as marker locations of nearby restaurants),
-polylines (connected points, such as roads or trails), and polygons (polylines
-where the final point is connected with the initial one). Polygons represent areas,
-such as building footprints or country boundaries.</p>
-<p>The legend provides the mapping between shapes and colors and the values they represent.
-For example, you may wish to use blue markers to represent restaurants, and
-orange markers to represent bars, and legend will be the right place to explain that difference.</p>
-<p>Interactive maps often “hide” data inside popups or tooltips – boxes with information
-that appear when you click or hover over map elements.</p>
-<p>Interactive web maps often have zoom controls (<code>+</code> and <code>-</code> buttons) to allow
-users to inspect data from various “distances”.</p>
-<p>TODO ADD RULES HERE
-TODO: emphasize what format is your data in? What can you place on a map?
-a) think about what types of data you can place on a map: points, polygons, polylines (to include multi-part lines, or line-strings?)
-COMMON MISTAKE: location data (such as an address EXAMPLE or its geocoded latitude and longitude coordinates EXAMPLE) belongs on point maps (or symbol maps, or heat maps for clusters of points, or story maps for tours…)
-- regional data belongs on choropleth maps (which are colored polygons to match geographic outlines…)</p>
+<p>Map data is presented in layers. The top layer can be generally described as any combination of point, polyline, or polygon data. <em>Points</em> represent latitude and longitude coordinates, which may be illustrated by location markers. <em>Polylines</em> are connected strings of points, and we place the “poly-” prefix before “lines” to remind us that they may contain multiple branches, not just straight segments. <em>Polygons</em> represent areas defined by lines, such as building footprints or national boundaries. On interactive maps, any of these top-layer elements may display a hidden <em>tooltip</em> (when you hover the cursor over them) or a <em>popup</em> (when you click on them) that reveals additional information about its properties. Below these top data layers is the <em>basemap</em> layer, usually displayed as a seamless grid of tiles that cover the globe. Typically a basemap displays either satellite imagery (also known as raster tiles) or pictorial displays of streets and buildings (also known as vector tiles). Interactive maps often include zoom controls (<code>+</code> and <code>-</code> buttons) that allow you to view data from various “distances,” which change the display of the tile layer.
+The <em>legend</em> identifies the meaning of shapes or colors on the map. Maps may include a <em>north arrow</em> or <em>scale</em> to orient readers to direction and relative distance. Good maps also add the data sources, clarifying notes, and credits to the individuals or organizations that created them.</p>
+<p>TODO: Ilya - please change Figure 8.1 to display a polyline with multiple branches, and add a scale bar so that no one complains that we left it out. Also, since we discuss different types of basemap layers in the text above, do you wish to add a <em>layer toggle</em> button?</p>
+<p>We spell out these definitions to help newer mapmakers to learn some general rules and to avoid making common mistakes. Many of the our guidelines about map design are inspired by excellent resources such as Datawrapper Academy posts about symbol maps and <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps">choropleth maps</a></p>
 </div>
-<div id="normalize-your-map-data" class="section level3 unnumbered" number="">
-<h3>Normalize Your Map Data</h3>
-<p>TODO: cross-ref back to Normalize data section in Compare chapter, then build on it here</p>
-<p>TODO: The rest of this map design section is really about choropleth maps, so consider labeling it this way. Also, incorporate more design guidelines from <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a></p>
-<p>Choropleth maps are best when they represent relative values (such as percentages or per capita rates), not absolute values (such as the raw number of people).
-Consider two maps shown in Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>. They both are
-about Covid-19 cases in the US states (excluding Alaska and Hawaii) as of
-June 26, 2020. Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>a shows total number of recorded cases per state,
-and Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>b shows Covid-19 cases adjusted by the state’s population.
-Darker colors represent higher values. Do you notice any differences in spatial patterns?</p>
-
-<div class="figure"><span id="fig:normalize-map-data"></span>
-<img src="images/14-transform/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
-<p class="caption">
-Figure 8.2: Choropleth maps work best with normalized values.
-</p>
+<div id="avoid-confusing-point-and-polygon-data" class="section level3 unnumbered" number="">
+<h3>Avoid Confusing Point and Polygon Data</h3>
+<p>Before you can place data on a map, understand its format and what it represents. A common mistake to avoid is to attempt to place point data on a map that’s designed to show polygon data. One reason this is confusing is because the rule does not apply in the reverse, meaning it’s acceptable to place polygon data on a point-style map. A second reason it’s confusing is because there’s sometimes a workaround solution to the point-to-polygon problem.</p>
+<p>The first example shows data for <em>specific locations</em>, such as street addresses or any place that can be <a href="geocode.html">geocoded</a> into latitude and longitude coordinates, as described in chapter 3. An additional column displays values for each location, such as numbers or text, which we’ll represent with the letters X-Y-Z, like this:</p>
+<pre><code>| Address           | Value |
+| 2800 E Observatory Rd, Los Angeles, CA  | X |
+| Balboa Park, San Diego, CA | Y |
+| Haight and Ashbury Street, San Francisco, CA | Z |</code></pre>
+<p>The first table shows <em>point</em> data (because each location can be geocoded to a specific point) which is best displayed in any of the point-style maps. For example, a <em>point map</em> shows each location as a clickable marker, or a <em>symbol point map</em> displays locations with variable-sized shapes to represent data values, or a <em>heat point map</em> shows clusters of locations as hotspots of high frequency, as shown in FIG TODO. Normally you cannot represent point data in a polygon map (but read about a workaround further below).</p>
+<p>TODO: Insert three abstract maps: point map, symbol point map, heat point map.</p>
+<p>The second example shows data for <em>geographic areas</em>, such as census tracts, cities, nations, or any place with a border outline. Similarly, an additional column displays values for each area, such as numbers or text, which we’ll represent with the letters X-Y-Z, like this:</p>
+<pre><code>| Area  | Value |
+| Los Angeles County, CA | X |
+| San Francisco County, CA | Y |
+| San Diego County, CA | Z |</code></pre>
+<p>The second table shows <em>polygon</em> data (because each county has a geographic boundary), which you can place in <em>either a point or polygon map</em>, but you probably will prefer the latter. To display the data in a point map, you need to geocode each county to obtain the latitude and longitude of its center point, and insert those coordinates into any of the point-style maps IN FIG TODO ABOVE. Or to display the data in a choropleth map, you need access to the geographic outlines of each county, and represent each value as colored polygon, as shown in FIG TODO:</p>
+<p>TODO: Insert a choropleth map of California counties. All are grey except for three different shades of blue to represent X-Y-Z.</p>
+<p>But there’s also a workaround to transform point data into polygon data. Imagine a third table of addresses for each hospital in California, including a column for the county where it is located, and the number of beds in each hospital. Here’s some imaginary data:</p>
+<pre><code>| Address | County | Beds |
+| 555 Uptown Avenue, LA, CA  | Los Angeles | 500 |
+| 75 Central Avenue, LA, CA | Los Angeles | 1000 |
+| 200 Downtown Avenue, LA, CA | Los Angeles | 500 |
+...</code></pre>
+<p>Imagine that your goal is to create polygon data with the total number of hospital beds for each county. Although each address is point data, you can <a href="pivot.html">pivot the data as you learned in chapter 3</a> to show the sum of hospital beds in each county, as shown in the imaginary results below. See a more detailed example in the <a href="pivot-point-to-polygon.html">Pivot Points into Polygon Data section of Chapter 14: Transform Your Map Data</a></p>
+<pre><code>| County | Beds |
+| Los Angeles | 2000 |
+...</code></pre>
 </div>
-<p>Both maps show Covid-19 data collected by the New York Times and published
-<a href="https://github.com/nytimes/covid-19-data">on GitHub</a>.
-In the map in Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>b, we normalized (divided) values by population in each state,
-according to the 2018 US Census American Community Survey,
-the most recent data available on the day of writing. We didn’t
-add legends and other important cartographic elements so that you can
-better focus on interpreting spatial patterns. In both cases,
-we used Jenks natural breaks for classification.</p>
-<p>What are the worst-hit states according to the map showing total Covid-19 counts
-(shown in Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>a)?
-If you are familiar with the US geography, you can quickly tell that these are
-New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California.
-But five of these happen to be some of the most populous states in the US,
-so it makes sense that they will also have higher Covid-19 cases.</p>
-<p>Now, how about the map in Figure <a href="map-design.html#fig:normalize-map-data">8.2</a>b?
-You can see that New York and its neighbors,
-including New Jersey and Massachusetts, have by far the highest rates per capita
-(per person), which we saw in the first map. But you can also see
-that in fact California, Texas, and Florida were impacted to a lesser extent
-than the map on the left had suggested. So the map with per-capita values is a
-much better illustration to the story about New York being the <em>first</em> epicenter of the Covid-19
-crisis in the United States.</p>
+<div id="avoid-two-variables-on-one-map" class="section level3 unnumbered" number="">
+<h3>Avoid Two Variables on One Map</h3>
+<p>Newcomers to data visualization sometimes are so proud of placing one variable on a map that they figure two variables must be twice as good. But this usually is not true. In general, we recommend against placing two variables on the same map—such as a symbol point map on top of a choropleth map—because it’s very difficult for most readers to see the pattern in your data story. For example, FIG TODO shows what happens when if you try to map one variable (XXX, shown in the point symbol layer) on top of another variable (YYY, shown in the choropleth layer) for all US States.</p>
+<p>FIG TODO:</p>
+<p>Consider two alternative strategies:</p>
+<ol style="list-style-type: decimal">
+<li><p>Create a scatter chart to compare variables X and Y. This works best if the relationship between X and Y is more important to your data story than any geographic patterns.</p></li>
+<li><p>Create a choropleth map for variable X, and a scatter chart to show the relationship between X and Y. If the scatterchart relationship is strong, explain in text how the map of Y would be similar.</p></li>
+<li><p>Create two maps, one for each variable, and place them next to one another, or allow readers to toggle between them, with text to explain comparison.</p></li>
+</ol>
 </div>
-<div id="color-palettes-sequential-diverging-and-qualitative" class="section level3 unnumbered" number="">
-<h3>Color Palettes: Sequential, Diverging, and Qualitative</h3>
-<p>If you build a choropleth map, the choice of colors is very important
-as color is the main way to represent values. So let’s talk about color palettes.</p>
-<p>Color palettes can be grouped into sequential, diverging, and qualitative.
-The examples are shown in Figure <a href="map-design.html#fig:map-principles-color-schemes">8.3</a>.</p>
-
-<div class="figure"><span id="fig:map-principles-color-schemes"></span>
-<img src="images/08-map/map-principles-color-schemes.png" alt="Examples of sequential, diverging, and qualitative color schemes from ColorBrewer."  />
-<p class="caption">
-Figure 8.3: Examples of sequential, diverging, and qualitative color schemes from <a href="https://colorbrewer2.org/">ColorBrewer</a>.
-</p>
-</div>
-<p>Sequential palettes are used to represent continuous numeric values, in other words, anything that can be placed
-on a scale. For example, average income, population counts, percent unemployed, etc.
-Usually such palettes are single-hue (for example, different shades of blue), and
-typically darker colors represent higher values (but not always).</p>
-<p>Note: See <a href="normalize.html">Normalize Data to Create Meaningful Choropleth Maps</a> section to see an example of sequential palette use, and learn why representing normalized instead of absolute values may be a better idea.</p>
-<p>Diverging palettes also represent continuous values.
-Unlike sequential palettes, however, diverging colors represent “direction” from some reference value,
-such as below or above zero, or below or above the average value.
-Diverging palettes typically have two distinct hues for “positive” and “negative” values,
-with a neutral color in the middle.</p>
-<p>Qualitative palettes typically consist of distinct hues that represent distinct classes.
-For example, the US Department of State issues travel advisory to foreign destinations
-ranging from “exercise normal precautions” to “do not travel” relying on a series of qualitative
-and quantitative measures, such as the likelihood of terror attacks, political and criminal situation, etc.
-But classes can also be derived from numerical values, as is the case with the World Bank’s classification
-of countries by income. The organization groups countries and territories into “low”, “lower-middle”,
-“higher-middle”, and “high” income categories based on gross national income per capita.</p>
-<p>It is important you choose an appropriate classification for your choropleth map.
-While the nature of certain datasets will make the choice of a color palette obvious,
-most of the time you will have to actively choose <em>how</em> to display your data.</p>
-<p>In Figure <a href="map-design.html#fig:map-principles-classification">8.4</a>a, we presented the same dataset using three
-different color palettes. The map in Figure <a href="map-design.html#fig:map-principles-classification">8.4</a>a
-represents per capita income for the contiguous US states using a sequential color scheme
-consisting of five shades of blue. The darker the color, the higher the income. You can quickly
-see that states in the north-east, such as Connecticut, Massachusetts, New Jersey,
-and Maryland have the highest per capita income.</p>
-<p>In Figure <a href="map-design.html#fig:map-principles-classification">8.4</a>b, we used a divergent color scheme to show
-whether states have higher or lower per capita incomes than the United States as a whole.
-We subtracted the US per capita income value of $33,831 from each state’s value. This new relative measure
-is positive for states with higher per capita income, and negative for the states whose per capita income
-is lower than in the US. In the map, sub-zero values are painted in orange, and above-zero values are
-in purple. Such color palette could be appropriate for a story about the north-south divide.</p>
-<p>You can also split the 48 states into three groups of 16 based on their per capita income, and group them in three
-thirds, as “low”, “middle”, and “top” third. This is what we did in the map shown in
-Figure <a href="map-design.html#fig:map-principles-classification">8.4</a>c.</p>
-
-<div class="figure"><span id="fig:map-principles-classification"></span>
-<img src="images/08-map/map-principles-classification.png" alt="Representing per capita income in US states using three different classifications."  />
-<p class="caption">
-Figure 8.4: Representing per capita income in US states using three different classifications.
-</p>
-</div>
-</div>
-<div id="colorbrewer" class="section level3 unnumbered" number="">
-<h3>ColorBrewer</h3>
-<p>One of the most useful color picking tools for meaningful choropleth
-maps is <a href="https://colorbrewer2.org/">ColorBrewer</a>, created by Cynthia Brewer and
-Mark Harrower. You can see ColorBrewer’s interface in Figure <a href="map-design.html#fig:map-principles-colorbrewer">8.5</a>.</p>
-
-<div class="figure"><span id="fig:map-principles-colorbrewer"></span>
-<img src="images/08-map/map-principles-colorbrewer-annotated.png" alt="ColorBrewer interface."  />
-<p class="caption">
-Figure 8.5: ColorBrewer interface.
-</p>
-</div>
-<p>ColorBrewer can generate color palettes for a specified number of classes - between three
-and nine for sequential, three and elevel for diverging, and three and twelve for qualitative.
-You can also choose palettes that are colorblind safe and print friendly.</p>
-<p>Remember that more colors (or “buckets”) does not equal better maps.
-People are quite bad at distinguishing hues, and an excessive number of
-buckets will make it harder for reader to compare map values with the legend.
-If you build a sequential color palette, we recommend you start with <em>five</em> buckets,
-then try four and six and decide what is appropriate for your data <em>and</em> your story.</p>
-<p>Fewer colors create a <em>coarse</em> map with differences in colored ranges becoming more visible.
-More colors create a more <em>granular</em> map, but differences in
-colored ranges become less visible.</p>
-<p>At this point, you should have some understanding of how maps work.
-So let’s move to the first practical exercise of creating a point map
-with Google My Maps.</p>
+<div id="choose-smaller-geographies-for-choropleth-maps" class="section level3 unnumbered" number="">
+<h3>Choose Smaller Geographies for Choropleth Maps</h3>
+<p>Choropleth maps are best for showing geographic patterns across regions by coloring polygons to represent data values. Therefore, we generally recommend selecting <em>smaller</em> geographies to display more <em>granular</em> patterns, since larger geographies are more likely to show (or hide) patterns by aggregating data. Geographers refer to this concept as the <a href="https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem">modifiable aerial unit problem</a>, which essentially means that the way you slice up your data affects how you analyze it in your map.</p>
+<p>For example, compare the two choropleth maps of typical home values for different regions in the United States in January 2020 according to <a href="https://www.zillow.com/research/data/">Zillow research data</a>. Zillow defines typical values as a smoothed, seasonally adjusted measure of all single-family residences, condos, and coops in the 35th to 65th percentile range, similar to the median value at the 50th percentile, with some additional lower- and higher-value homes. Both choropleth maps use the same scale. The key difference is geographic units: the first map shows home values by state (a larger unit), while the second map shows home values by county (a smaller unit). TODO: describe what the maps show… for example, the state-level map emphasizes differences between the lower home values in the Midwest and South versus Hawaii and California. But the county-level map shows more variation within states, such as higher- and lower-value regions of [choose highly visible state].</p>
+<p>TODO: Insert two maps, probably top and bottom?</p>
+<p>Which map is best? The answer depends partly on your data story. If you wish to emphasize state-to-state differences, choose the first map because it tells that story more clearly. Or if your interpretation focuses on variation-within-states, choose the second map, which makes those differences stand out. Both maps are truthful representations of the data. If in doubt, we recommend choosing the smaller geographies in the county-level data, because it’s possible to see <em>both</em> types of patterns if you look closely (TODO: CHECK). But don’t let this become a rigid rule, because it can become a slippery slope. If you had access to individual-level home sales across the US, that map would be <em>too detailed</em> to see any patterns. Sometimes larger-level geography tells a simple story more clearly.</p>
 </div>
 </div>
             </section>
@@ -514,7 +409,7 @@ with Google My Maps.</p>
         </div>
       </div>
 <a href="map.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="mymaps.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="normalize-choropleth-map-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

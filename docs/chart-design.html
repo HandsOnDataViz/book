@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -334,14 +336,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chart-design" class="section level2 unnumbered" number="">
 <h2>Chart Design Principles</h2>
-<p>Although not a science, data visualization comes with a set of rules, principles, and best practices
-that create a basis for clear and eloquent charts. Some of those rules are less rigid than others,
-but prior to “breaking” them, it is important to establish why they are important.</p>
-<p>Before you begin, ask yourself: Do I really need a chart to tell this data story?
-Or would a table or text alone do a better job? Making a good chart takes time and effort,
-so make sure it enhances your story.</p>
-<div id="deconstructing-a-chart" class="section level3 unnumbered" number="">
-<h3>Deconstructing a Chart</h3>
+<p>There are <em>so</em> many different types of charts. However, just because data <em>can</em> be made into a chart does not necessarily mean that it <em>should</em> be turned into one. Before creating a chart, stop and ask: <em>Does a visualized data pattern really matter to your story?</em> Sometimes a simple table, or even text alone, can communicate the idea more effectively to your audience. Since creating a well-designed chart requires time and effort, make sure it enhances your data story.</p>
+<p>Although not a science, data visualization comes with a set of principles and best practices that serve as a foundation for creating truthful and eloquent charts. In this section, we’ll identify some important rules about chart design. But you may be surprised to learn that some rules are less rigid than others, and can be “broken” when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let’s start by establishing a common vocabulary about charts.</p>
+<div id="deconstruct-a-chart" class="section level3 unnumbered" number="">
+<h3>Deconstruct a Chart</h3>
 <p>Let’s take a look at Figure <a href="chart-design.html#fig:design-principles-chart-components">7.1</a>.
 It shows basic chart components that are shared among most chart types.</p>
 
@@ -382,8 +380,7 @@ is visible without any user interaction.</p>
 </div>
 <div id="some-rules-are-more-important-than-others" class="section level3 unnumbered" number="">
 <h3>Some Rules are More Important than Others</h3>
-<p>Although the vast majority of rules in data visualization are open to interpretation,
-there are some that are hard to bend.</p>
+<p>Although the vast majority of rules in data visualization are open to interpretation, as long as you honestly interpret the data, here are two rules that cannot be bent: zero-baselines for bar and column charts, and 100-percent baselines for pie charts.</p>
 <div id="bar-and-column-charts-must-begin-at-zero" class="section level4 unnumbered" number="">
 <h4>Bar and Column Charts Must Begin at Zero</h4>
 <p>Bar and column charts use <em>length</em> and <em>height</em> to represent value, therefore their value axis <em>must start at the zero baseline</em>. This ensures that a bar twice the length of another bar represents twice its value. Figure <a href="chart-design.html#fig:design-principles-start-at-zero">7.2</a> contrasts a good and a bad example. The same rule applies to area charts, which display filled-in area underneath the line to represent value. Starting the baseline at a number other than zero is a trick commonly used to exaggerate differences in opinion polls and election results, as we describe later in <a href="detect.html">Chapter 15: Detect Lies and Reduce Data Bias</a></p>
@@ -394,7 +391,7 @@ there are some that are hard to bend.</p>
 Figure 7.2: Start your bar chart at zero.
 </p>
 </div>
-<p>But the zero-baseline rule does not apply to line charts, which represent values through the <em>position</em> and <em>angle</em> of the line, not its height. Visualization expert Alberto Cairo demonstrates that starting a line chart at a number other than zero does not necessarily distort its encoded information because we rely on its shape, not its height, to determine its meaning.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
+<p>But the zero-baseline rule does not apply to line charts, which represent values through the <em>position</em> and <em>angle</em> of the line, not its height. Visualization expert Alberto Cairo demonstrates that starting a line chart at a number other than zero does not necessarily distort its encoded information because we rely on its shape, not its height, to determine its meaning.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p>
 <p>TODO: Confirm revision with Ilya; Add visual here of line chart baseline at zero versus higher number to illustrate the argument?</p>
 </div>
 <div id="pie-charts-represent-100" class="section level4 unnumbered" number="">
@@ -496,7 +493,7 @@ Consider using commas as thousands separators for readability (<code>1,000,000</
 <div id="be-careful-with-the-colors" class="section level4 unnumbered" number="">
 <h4>Be careful with the colors</h4>
 <p>The use of color is a complex topic, and there are plenty
-of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” blog post for Datawrapper.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> But some principles are fairly universal. First, do not use colors just for the sake of it, most charts are fine being monochromatic. Second, remember that colors come with some meaning attached, which can vary among cultures. In the world of business, red is conventionally used to represent loss, and it would be unwise to use this color to show profit. Make sure you avoid random colors.</p>
+of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” blog post for Datawrapper.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> But some principles are fairly universal. First, do not use colors just for the sake of it, most charts are fine being monochromatic. Second, remember that colors come with some meaning attached, which can vary among cultures. In the world of business, red is conventionally used to represent loss, and it would be unwise to use this color to show profit. Make sure you avoid random colors.</p>
 <p>Whatever colors you end up choosing, they need to be distinguishable (otherwise what is the point?). Do not use colors that are too similar in hue (for example, various shades of green––leave them for choropleth maps). Certain color combinations are hard to interpret for color-blind people, like green/red or yellow/blue, so be very careful with those. Figure <a href="chart-design.html#fig:design-principles-color">7.8</a> shows some good and bad examples of color use.</p>
 
 <div class="figure"><span id="fig:design-principles-color"></span>
@@ -519,9 +516,9 @@ Figure 7.9: Make sure important things catch the eye first.
 </div>
 <div class="footnotes">
 <hr />
-<ol start="16">
-<li id="fn16"><p><span class="citation">Cairo, <em>How Charts Lie</em></span>, p. 61.<a href="chart-design.html#fnref16" class="footnote-back">↩︎</a></p></li>
-<li id="fn17"><p><span class="citation">Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation,” Chartable: A Blog by Datawrapper, July 31, 2018, <a href="https://blog.datawrapper.de/colorguide/" role="doc-biblioref">https://blog.datawrapper.de/colorguide/</a></span><a href="chart-design.html#fnref17" class="footnote-back">↩︎</a></p></li>
+<ol start="17">
+<li id="fn17"><p><span class="citation">Cairo, <em>How Charts Lie</em></span>, p. 61.<a href="chart-design.html#fnref17" class="footnote-back">↩︎</a></p></li>
+<li id="fn18"><p><span class="citation">Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation,” Chartable: A Blog by Datawrapper, July 31, 2018, <a href="https://blog.datawrapper.de/colorguide/" role="doc-biblioref">https://blog.datawrapper.de/colorguide/</a></span><a href="chart-design.html#fnref18" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

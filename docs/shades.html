@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -339,7 +341,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Following the same train of thought above, let’s supplement this claim with a visualization to evaluate its persuasiveness. While we could create a table or a chart, those would not be the most effective ways to quickly display information for over 120 nations in our dataset. Since this is spatial data, let’s transform it into an interactive map to help us identify any geographic patterns and to encourage readers to explore income levels around the globe, as shown in Figure <a href="shades.html#fig:world-income-map1">1.3</a>.</p>
 
 <div class="figure"><span id="fig:world-income-map1"></span>
-<iframe src="https://datawrapper.dwcdn.net/NLMLg/1/" width="672" height="400px">
+<iframe src="https://datawrapper.dwcdn.net/NLMLg/1/" width="672" height="405px">
 </iframe>
 <p class="caption">
 Figure 1.3: Explore the <a href="https://datawrapper.dwcdn.net/NLMLg/1/">interactive map</a> of world income inequality, measured by the share of national income held by the top 1 percent of the population, based on the most recent data available. Source: <a href="https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country">World Inequality Database 2020</a>.
@@ -349,7 +351,7 @@ Figure 1.3: Explore the <a href="https://datawrapper.dwcdn.net/NLMLg/1/">interac
 <p>Now let’s introduce the alternative map in Figure <a href="shades.html#fig:world-income-map2">1.4</a>, which contains the same data as shown in Figure <a href="shades.html#fig:world-income-map1">1.3</a>, but is displayed in a different format. Which map should you believe?</p>
 
 <div class="figure"><span id="fig:world-income-map2"></span>
-<iframe src="https://datawrapper.dwcdn.net/o5f9Q/" width="672" height="400px">
+<iframe src="https://datawrapper.dwcdn.net/o5f9Q/" width="672" height="405px">
 </iframe>
 <p class="caption">
 Figure 1.4: Explore an <a href="https://datawrapper.dwcdn.net/o5f9Q/">alternative version of the interactive map</a> of world income inequality, using the same data as the map above.

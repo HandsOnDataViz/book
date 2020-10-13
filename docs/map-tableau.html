@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -334,12 +336,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="map-tableau" class="section level2 unnumbered" number="">
 <h2>Choropleth Map with Tableau Public</h2>
-<p>TODO: revise to make polygon/choropleth map vocab more consistent in this chapter; also emphasize how Tableau is not ideal for point maps because you cannot geocode addresses</p>
+<p>TODO: revise to make polygon/choropleth map vocab more consistent in this chapter;</p>
+<p>TODO: Revise visual instructions to create choropleth map; drag a geo dimension (such as country name) directly into sheet to make map appear; then</p>
+<p>WARNING: Tableau Public sometimes hides important items <em>behind</em> the “Show Me” panel. For example, the color palette menu….</p>
 <p>In the previous chapter, we looked at using Tableau Public to build
-<a href="#scatter-chart-tableau">scatterplots</a> and <a href="#filtered-line-chart-tableau">filtered line charts</a>.
+<a href="scatter-tableau.html">scattercharts</a> and <a href="filtered-line-tableau.html">filtered line charts</a>.
 Tableau can also be used to create point and polygon maps.</p>
 <p>In this tutorial, we will create a choropleth map of military spending per country
-as percentage of gross dometic product as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-final">8.20</a>.
+as percentage of gross domestic product as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-final">8.20</a>.
 Remember that choropleth maps work best when
 they show relative, not absolute numbers.
 Displaying total spending per country is a bad idea, as bigger countries tend
@@ -354,16 +358,23 @@ including military spending.</p>
 Figure 8.20: Filled Polygon (Choropleth) map: Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1">interactive version</a>. Data from TODO.
 </p>
 </div>
-<p>To create maps in Tableau, you do not always need geospatial files. Tableau can recognize
+<p>ADD limitations of Tableau Public maps: work best when you enter places or regions that the software already recognizes by name or three-letter code</p>
+<p>it’s much easier if Tableau recognizes the geography and names (show list – )
+To create maps in Tableau, you do not always need geospatial files. Tableau can recognize
 of a lot of locations, including boundaries for countries and territories, counties within countries,
 states, US zip codes, airport codes, city locations, and some others. A simple spreadsheet that references
 these locations can suffice. In this tutorial, we will rely on Tableau to automatically recognize country
-names. If you require custom boundaries or points (such as town names in your local language),
+names.</p>
+<p>not ideal for point maps because you cannot geocode new street addresses, such as “1600 Pennsylvania Avenue, Washington DC” (TODO: Check)</p>
+<p>Good for point symbol maps</p>
+<p>Good for choropleth maps if the tool recognizes geographic names, but less ability to modify color ranges than Datawrapper….</p>
+<p>If you require custom boundaries or points (such as town names in your local language),
 take a look at <a href="https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm">Create Tableau Maps from Spatial Files</a>
 article from the official Tableau documentation.</p>
-<p>Before we begin, <a href="data/military-spending-2018.csv">download the 2018 data</a> that we obtained from the World Bank.</p>
 <div id="create-a-choropleth-map-in-tableau" class="section level3 unnumbered" number="">
 <h3>Create a Choropleth Map in Tableau</h3>
+<p>TODO: TODO: fix data because it currently includes several international regions, which are not nations; place inside Google Sheet; change “value” to “MilitaryPctGDP”</p>
+<p>Before we begin, <a href="data/military-spending-2018.csv">download the 2018 data</a> that we obtained from the World Bank.</p>
 <p>Launch Tableau. In <strong>Connect</strong> section on start up, choose <em>Text file</em>, and select <code>military-spending-2018.csv</code>.
 From Data Source tab, inspect the dataset contents. It contains four columns: Country Name, which includes
 countries and territories defined by the World Bank, the three-digit Country Code,
@@ -432,11 +443,13 @@ Figure 8.25: Change tooltip text to make it more user-friendly.
 to bring up the <em>Edit Title</em> window, and change the name of your chart to a more meaningful
 <em>Military Spending as % of GDP (2018)</em>.</p>
 </div>
-<div id="publish-your-tableau-map" class="section level3 unnumbered" number="">
-<h3>Publish Your Tableau Map</h3>
+<div id="create-dashboard-and-publish-your-map" class="section level3 unnumbered" number="">
+<h3>Create Dashboard and Publish Your Map</h3>
+<p>TODO: make dashboard; change color range menu to floating, place on top of map, add title and sources…</p>
 <p>Once you are ready to publish and share the map, go to <em>File &gt; Save to Tableau Public</em>.
 In the pop-up window, log in to your account if requested. Give it a title, such
 as <em>Military Spending</em>, and click Save.</p>
+<p>Now that you understand how to create maps using <em>static</em> data from a spreadsheet, let’s explore how to create a map using the most current data available from an open-data repository.</p>
 </div>
 </div>
             </section>

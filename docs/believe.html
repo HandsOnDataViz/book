@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -345,24 +347,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <caption><span id="tab:us-income">Table 1.1: </span> Average US Adult Income, 1970-2019</caption>
 <thead>
 <tr class="header">
-<th align="right">Year</th>
-<th align="right">Top 10 Percent</th>
-<th align="right">Middle 40 Percent</th>
-<th align="right">Bottom 50 Percent</th>
+<th>US Income Tier</th>
+<th>1970</th>
+<th>2019</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">1970</td>
-<td align="right">$136,308</td>
-<td align="right">$44,353</td>
-<td align="right">$16,515</td>
+<td>Top 10 Percent</td>
+<td>$136,308</td>
+<td>$352,815</td>
 </tr>
 <tr class="even">
-<td align="right">2019</td>
-<td align="right">$352,815</td>
-<td align="right">$76,462</td>
-<td align="right">$19,117</td>
+<td>Middle 40 Percent</td>
+<td>$44,353</td>
+<td>$76,462</td>
+</tr>
+<tr class="odd">
+<td>Bottom 50 Percent</td>
+<td>$16,515</td>
+<td>$19,177</td>
 </tr>
 </tbody>
 </table>

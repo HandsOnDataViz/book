@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -337,7 +339,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In <a href="map.html">Chapter 8: Map Your Data</a>, we described several easy-to-learn drag-and-drop tools, such as <a href="mymaps.html">Google My Maps</a> and <a href="symbolmap-datawrapper.html">Datawrapper</a>. In this chapter, we offer more advanced map tutorials using our open-source code templates, which you can copy and modify with skills you learned in <a href="github.html">Chapter 11: Edit and Host Code with GitHub</a>. We built all of the templates in this chapter with <a href="https://leafletjs.com">Leaflet</a>, a powerful open-source code library for creating interactive maps on desktop or mobile devices.</p>
 <p>No coding skills are required to use our first two easy-to-use templates because they pull your map data from a linked Google Sheet. The first template, <a href="leaflet-maps-with-google-sheets">Leaflet Maps with Google Sheets</a>, is a general-purpose tool that can display points, polygons, or polylines, using your choice of colors, icons, and images, based on data uploaded into your linked Google Sheet and GitHub repository. It also includes the option to display a table of point markers next to your map. The second template, <a href="leaflet-storymaps-with-google-sheets">Leaflet Storymaps with Google Sheets</a>, displays your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to display paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet and GitHub repo. If you wish to add some of these extra features, look back at Chapter 3 to <a href="geocode.html">geocode addresses with a Google Sheets Add-on</a>, or jump ahead to <a href="transform.html">Chapter 14: Transform Your Map Data</a> to learn how to create and edit polygons and polylines <a href="geojsonio.html">with the GeoJson.io tool</a>, edit or join data with polygons <a href="mapshaper.html">using the MapShaper tool</a>, or georectify a scanned map to use as a background overlay <a href="mapwarper.html">with the MapWarper tool</a>.</p>
 <!-- TODO: ask Amelia if it's okay to leave this out of the chapter intro: Also, if you create your own copy of either template above and invite people to visit your map, learn how to [Get Your Own Free Google Sheets API Key](google-sheets-api-key.html) to insert into the code, so that our key is not overused. -->
-<p>Our remaining Leaflet templates are designed to help users develop their map coding skills. Even if you have no prior coding experience, but can follow instructions and are <em>code-curious</em> about how things work on your computer, start with the <a href="leaflet-maps-with-csv.html">Leaflet Maps with CSV Data tutorial</a>, which walks you through the steps of creating a point map that pulls data from a CSV file, a <a href="spreadsheet.html">generic spreadsheet format we discussed in Chapter 3</a>. Then move on to the <a href="leaflet-maps-with-api.html">Leaflet Maps with Open Data API tutorial</a>, to learn how to code using an application program interface to pull information directly from <a href="opendata.html">open data repositories as we described in Chapter 4</a>. In both of these templates, you’ll learn how Leaflet maps are written using three coding languages:</p>
+<p>Our remaining Leaflet templates are designed to help users develop their map coding skills. Even if you have no prior coding experience, but can follow instructions and are <em>code-curious</em> about how things work on your computer, start with the <a href="leaflet-maps-with-csv.html">Leaflet Maps with CSV Data tutorial</a>, which walks you through the steps of creating a point map that pulls data from a CSV file, a <a href="spreadsheet.html">generic spreadsheet format we discussed in Chapter 3</a>. Then move on to the <a href="leaflet-maps-with-api.html">Leaflet Maps with Open Data API tutorial</a>, to learn how to code using an application programming interface to pull information directly from <a href="opendata.html">open data repositories as we described in Chapter 4</a>. In both of these templates, you’ll learn how Leaflet maps are written using three coding languages:</p>
 <ul>
 <li>HTML: to structure content on the web page, typically in a file named <code>index.html</code>.</li>
 <li>CSS or Cascading Style Sheet: to shape how content appears on the page, either inside <code>index.html</code> or in a separate file such as <code>style.css</code>.</li>
@@ -379,7 +381,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="even">
 <td>Leaflet Maps with Open Data APIs<br> <img src="images/13-leaflet/leaflet-open-data.png" /></td>
-<td>Learn how to code your own Leaflet map with an application program interface (API) that continuously pulls the most current information directly from an open-data repository, such as Socrata and others.<br>Template with tutorial: <a href="leaflet-maps-open-data-apis.html">Leaflet Maps with Open Data APIs template</a></td>
+<td>Learn how to code your own Leaflet map with an application programming interface (API) that continuously pulls the most current information directly from an open-data repository, such as Socrata and others.<br>Template with tutorial: <a href="leaflet-maps-open-data-apis.html">Leaflet Maps with Open Data APIs template</a></td>
 </tr>
 </tbody>
 </table>

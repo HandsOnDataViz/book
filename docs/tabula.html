@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -342,12 +344,12 @@ You can use download buttons on the left-hand side, or scroll down to the <em>Do
 and double-click the icon. If you work on a Mac, you may see a warning that states,
 “Tabula is an app downloaded from the internet. Are you sure you want to open it?” If so, click <em>Open</em>. Or you may have to go to <em>System Preferences &gt; Security &amp; Privacy &gt; General tab</em>, and
 click the <em>Open Anyway</em> button in the lower half of the window to open the app the first time.</p>
-<p>When you start up Tabula, the default system browser will open, as shown in Figure <a href="tabula.html#fig:tabula-welcome">5.9</a>. Tabula runs on your local computer, not the internet. The URL in the browser will be something like <code>http://127.0.0.1:8080/</code>. The first portion is the localhost or hostname for your computer, and <code>8080</code> refers to the port number. If you see a different port number, that’s fine, and just means that the initial number is already in use by some other program on your computer. If for any reason you decide to use a different browser, just copy-and-paste the URL.</p>
+<p>When you start up Tabula, the default system browser will open, as shown in Figure <a href="tabula.html#fig:tabula-welcome">5.7</a>. Tabula runs on your local computer, not the internet. The URL in the browser will be something like <code>http://127.0.0.1:8080/</code>. The first portion is the localhost or hostname for your computer, and <code>8080</code> refers to the port number. If you see a different port number, that’s fine, and just means that the initial number is already in use by some other program on your computer. If for any reason you decide to use a different browser, just copy-and-paste the URL.</p>
 
 <div class="figure"><span id="fig:tabula-welcome"></span>
 <img src="images/05-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
-Figure 5.9: Tabula welcome page.
+Figure 5.7: Tabula welcome page.
 </p>
 </div>
 <p>Now let’s upload a sample text-based PDF and detect any tables we wish to extract. In the beginning of the Covid-19 pandemic, the Department of Public Health in Connecticut
@@ -358,13 +360,13 @@ from May 31, 2020, or provide your own.</p>
 <li>Select the PDF you want to extract data from by clicking the blue <em>Browse…</em> button.</li>
 <li>Click <em>Import</em>. Tabula will begin analyzing the file.</li>
 <li>As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly clean, with only four buttons in the header.</li>
-<li>Click the <em>Autodetect Tables</em> button to let Tabula look for relevant data. The tool highlights each table it detects in red, as shown in Figure <a href="tabula.html#fig:tabula-autodetect">5.10</a>.</li>
+<li>Click the <em>Autodetect Tables</em> button to let Tabula look for relevant data. The tool highlights each table it detects in red, as shown in Figure <a href="tabula.html#fig:tabula-autodetect">5.8</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:tabula-autodetect"></span>
 <img src="images/05-clean/tabula-autodetect.png" alt="Click Autodetect Tables, which Tabula will highlight in red."  />
 <p class="caption">
-Figure 5.10: Click <em>Autodetect Tables</em>, which Tabula will highlight in red.
+Figure 5.8: Click <em>Autodetect Tables</em>, which Tabula will highlight in red.
 </p>
 </div>
 <p>Now let’s manually adjust our selected tables and export the data.</p>

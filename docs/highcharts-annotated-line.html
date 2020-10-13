@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -360,22 +362,22 @@ Figure 12.4: Interactive annotated chart with Highcharts. Explore the <a href="h
 <ol start="3" style="list-style-type: decimal">
 <li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
 </ol>
-<div class="sourceCode" id="cb22"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb22-1"><a href="highcharts-annotated-line.html#cb22-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Air Transport, Passengers Carried (1970–2018)&#39;</span><span class="op">;</span></span>
-<span id="cb22-2"><a href="highcharts-annotated-line.html#cb22-2"></a></span>
-<span id="cb22-3"><a href="highcharts-annotated-line.html#cb22-3"></a><span class="co">// Caption underneath the chart</span></span>
-<span id="cb22-4"><a href="highcharts-annotated-line.html#cb22-4"></a><span class="kw">var</span> CAPTION <span class="op">=</span> <span class="st">&#39;Source: The World Bank&#39;</span><span class="op">;</span></span>
-<span id="cb22-5"><a href="highcharts-annotated-line.html#cb22-5"></a></span>
-<span id="cb22-6"><a href="highcharts-annotated-line.html#cb22-6"></a><span class="co">// x-axis label and label in tooltip</span></span>
-<span id="cb22-7"><a href="highcharts-annotated-line.html#cb22-7"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Year&#39;</span><span class="op">;</span></span>
-<span id="cb22-8"><a href="highcharts-annotated-line.html#cb22-8"></a></span>
-<span id="cb22-9"><a href="highcharts-annotated-line.html#cb22-9"></a><span class="co">// y-axis label and label in tooltip</span></span>
-<span id="cb22-10"><a href="highcharts-annotated-line.html#cb22-10"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Passengers&#39;</span><span class="op">;</span></span>
-<span id="cb22-11"><a href="highcharts-annotated-line.html#cb22-11"></a></span>
-<span id="cb22-12"><a href="highcharts-annotated-line.html#cb22-12"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
-<span id="cb22-13"><a href="highcharts-annotated-line.html#cb22-13"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb22-14"><a href="highcharts-annotated-line.html#cb22-14"></a></span>
-<span id="cb22-15"><a href="highcharts-annotated-line.html#cb22-15"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
-<span id="cb22-16"><a href="highcharts-annotated-line.html#cb22-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb26-1"><a href="highcharts-annotated-line.html#cb26-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Air Transport, Passengers Carried (1970–2018)&#39;</span><span class="op">;</span></span>
+<span id="cb26-2"><a href="highcharts-annotated-line.html#cb26-2"></a></span>
+<span id="cb26-3"><a href="highcharts-annotated-line.html#cb26-3"></a><span class="co">// Caption underneath the chart</span></span>
+<span id="cb26-4"><a href="highcharts-annotated-line.html#cb26-4"></a><span class="kw">var</span> CAPTION <span class="op">=</span> <span class="st">&#39;Source: The World Bank&#39;</span><span class="op">;</span></span>
+<span id="cb26-5"><a href="highcharts-annotated-line.html#cb26-5"></a></span>
+<span id="cb26-6"><a href="highcharts-annotated-line.html#cb26-6"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb26-7"><a href="highcharts-annotated-line.html#cb26-7"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Year&#39;</span><span class="op">;</span></span>
+<span id="cb26-8"><a href="highcharts-annotated-line.html#cb26-8"></a></span>
+<span id="cb26-9"><a href="highcharts-annotated-line.html#cb26-9"></a><span class="co">// y-axis label and label in tooltip</span></span>
+<span id="cb26-10"><a href="highcharts-annotated-line.html#cb26-10"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Passengers&#39;</span><span class="op">;</span></span>
+<span id="cb26-11"><a href="highcharts-annotated-line.html#cb26-11"></a></span>
+<span id="cb26-12"><a href="highcharts-annotated-line.html#cb26-12"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
+<span id="cb26-13"><a href="highcharts-annotated-line.html#cb26-13"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb26-14"><a href="highcharts-annotated-line.html#cb26-14"></a></span>
+<span id="cb26-15"><a href="highcharts-annotated-line.html#cb26-15"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb26-16"><a href="highcharts-annotated-line.html#cb26-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
 <p>For additional customization, see <a href="https://api.highcharts.com/highcharts/">Highcharts API reference</a>.</p>
 </div>
             </section>

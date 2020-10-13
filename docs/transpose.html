@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -334,36 +336,78 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="transpose" class="section level2 unnumbered" number="">
 <h2>Transpose Rows and Columns</h2>
-<p>Sometimes you download good data, but your visualization tool requires you to transpose, or swap the rows and the columns, in order to create the chart or map you desire. This problem often comes up when working with longitudinal or historical data. For example, you often find the data organized with years placed horizontally as column headers, as shown in Figure <a href="transpose.html#fig:sheets-years-row">5.3</a>.</p>
-
-<div class="figure"><span id="fig:sheets-years-row"></span>
-<img src="images/05-clean/sheets-years-row.png" alt="We often find data with years placed in horizontal column headers." width="400" />
-<p class="caption">
-Figure 5.3: We often find data with years placed in horizontal column headers.
-</p>
-</div>
-<p>But if you wish to create a line chart, which you’ll learn in <a href="chart.html">Chapter 7: Chart Your Data</a>, you need to transpose the data above, so that the years run down the first vertical column, as shown in Figure <a href="transpose.html#fig:sheets-years-column">5.4</a>.</p>
-
-<div class="figure"><span id="fig:sheets-years-column"></span>
-<img src="images/05-clean/sheets-years-column.png" alt="But we need to transpose the data to place years in the first vertical column." width="300" />
-<p class="caption">
-Figure 5.4: But we need to transpose the data to place years in the first vertical column.
-</p>
-</div>
-<p>Let’s transpose rows and columns in our sample data:</p>
+<p>Sometimes you download good data, but your visualization tool requires you to transpose, or swap the rows and the columns, in order to create the chart or map you desire. This problem often arises when working with time-series or historical data, because tables and charts approach them in opposite directions. When designing a table, the proper method is to place dates horizontally as column headers, so that we read them from left-to-right, like this:<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></p>
+<table>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>2000</th>
+<th>2010</th>
+<th>2020</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Series1</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td>Series2</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>But when designing a line chart in Google Sheets and similar tools, which you’ll learn in <a href="chart.html">Chapter 7: Chart Your Data</a>, we need to transpose the data so that dates run vertically down the first column, in order for the software to read them as labels for a data series, like this:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Year</th>
+<th>Series1</th>
+<th>Series2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2000</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td>2010</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="odd">
+<td>2020</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>Learn how to transpose rows and columns in our sample data:</p>
 <ol style="list-style-type: decimal">
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1s7MwJMY_vNkvNNJDAl0HJMO6fzxCNj4eMA5fBZ1pZgU/edit#gid=0">Transpose sample data file in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
 <li><p>Select all of the rows and columns you wish to transpose, and go to <em>Edit &gt; Copy</em>.</p></li>
-<li><p>Scroll further down the spreadsheet and click on a cell, or open a new spreadsheet tab, and go to <em>Edit &gt; Paste Special &gt; Paste Transposed</em>, as shown in Figure <a href="transpose.html#fig:sheets-transpose">5.5</a>.</p></li>
+<li><p>Scroll further down the spreadsheet and click on a cell, or open a new spreadsheet tab, and go to <em>Edit &gt; Paste Special &gt; Paste Transposed</em>, as shown in Figure <a href="transpose.html#fig:sheets-transpose">5.3</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-transpose"></span>
 <img src="images/05-clean/sheets-transpose.png" alt="Go to Edit - Paste Special - Paste Transposed to swap rows and columns." width="450" />
 <p class="caption">
-Figure 5.5: Go to <em>Edit - Paste Special - Paste Transposed</em> to swap rows and columns.
+Figure 5.3: Go to <em>Edit - Paste Special - Paste Transposed</em> to swap rows and columns.
 </p>
 </div>
 <p>Now that you know how to clean up data by transposing rows and columns, in the next section you’ll learn how to split data into separate columns.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="14">
+<li id="fn14"><p><span class="citation">Stephen Few, <em>Show Me the Numbers: Designing Tables and Graphs to Enlighten</em>, Second edition (Burlingame, CA: Analytics Press, 2012)</span>, p. 166<a href="transpose.html#fnref14" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -365,15 +367,15 @@ make sure you are logged in, and click <em>Use this template</em> button to make
 <li>Depending on your data density, you might want to tweak <em>radius</em> and <em>blur</em> parameters
 inside the <code>&lt;script&gt;</code> tag of <code>index.html</code>:</li>
 </ol>
-<div class="sourceCode" id="cb33"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33-1"><a href="leaflet-heatmap.html#cb33-1"></a><span class="kw">var</span> heat <span class="op">=</span> L<span class="op">.</span><span class="fu">heatLayer</span>(data<span class="op">,</span> {</span>
-<span id="cb33-2"><a href="leaflet-heatmap.html#cb33-2"></a>  <span class="dt">radius</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
-<span id="cb33-3"><a href="leaflet-heatmap.html#cb33-3"></a>  <span class="dt">blur</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
-<span id="cb33-4"><a href="leaflet-heatmap.html#cb33-4"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb37-1"><a href="leaflet-heatmap.html#cb37-1"></a><span class="kw">var</span> heat <span class="op">=</span> L<span class="op">.</span><span class="fu">heatLayer</span>(data<span class="op">,</span> {</span>
+<span id="cb37-2"><a href="leaflet-heatmap.html#cb37-2"></a>  <span class="dt">radius</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
+<span id="cb37-3"><a href="leaflet-heatmap.html#cb37-3"></a>  <span class="dt">blur</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
+<span id="cb37-4"><a href="leaflet-heatmap.html#cb37-4"></a>})</span></code></pre></div>
 <p>Edit the following chunk of code to set your map’s default position and zoom level:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb34-1"><a href="leaflet-heatmap.html#cb34-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
-<span id="cb34-2"><a href="leaflet-heatmap.html#cb34-2"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">51.5</span><span class="op">,</span> <span class="fl">-0.1</span>]<span class="op">,</span> <span class="co">// Initial map center</span></span>
-<span id="cb34-3"><a href="leaflet-heatmap.html#cb34-3"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="co">// Initial zoom level</span></span>
-<span id="cb34-4"><a href="leaflet-heatmap.html#cb34-4"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb38-1"><a href="leaflet-heatmap.html#cb38-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
+<span id="cb38-2"><a href="leaflet-heatmap.html#cb38-2"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">51.5</span><span class="op">,</span> <span class="fl">-0.1</span>]<span class="op">,</span> <span class="co">// Initial map center</span></span>
+<span id="cb38-3"><a href="leaflet-heatmap.html#cb38-3"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="co">// Initial zoom level</span></span>
+<span id="cb38-4"><a href="leaflet-heatmap.html#cb38-4"></a>})</span></code></pre></div>
 <p>If for some reason you cannot see clusters, make sure your point data is represented
 in <code>latitude,longitude</code> order, not the other way around. If you have few points,
 try increasing the value of <code>radius</code> property of <code>L.heatLayer</code>.</p>

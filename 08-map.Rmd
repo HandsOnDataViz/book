@@ -20,7 +20,7 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 | Searchable point map<br> ![](images/08-map/map-searchable.png) | Best to show specific locations for users to search by name or proximity, or filter by category, with optional list view.<br> Power Tool: [Ch 13: Leaflet Searchable Point Map code template](leaflet-searchable-map.html) |
 | Current map from open-data repository<br> ![](images/08-map/map-open-data.png) | Best to show the most current information pulled directly from an open-data repository such as Socrata and others. <br>Easy tool: [Current map with Socrata open data tutorial](map-socrata.html)<br>Power tool: [Ch 13: Leaflet Maps with Open Data API code template](leaflet-maps-open-data-apis.html) |
 
-TODO: Decide whether to mention (but not recommend)[Knight Lab's StoryMap](https://storymap.knightlab.com/) and [ESRI Story Maps](https://storymaps.arcgis.com/en/) because users cannot easily migrate data out
+TODO above: Improve and standardize map images; Decide whether to mention (but not recommend)[Knight Lab's StoryMap](https://storymap.knightlab.com/) and [ESRI Story Maps](https://storymaps.arcgis.com/en/) because users cannot easily migrate data out
 
 ## Map Design Principles {- #map-design}
 
@@ -166,10 +166,10 @@ TODO: update map data and interpret two examples (TX and NY) using absolute data
 
 ## Choropleth Design with ColorBrewer {-}
 
-When you build a choropleth map, a great deal depends on your choice of color to represent data values, so it's important to learn key principles. Effective maps honestly display insightful geographic patterns that are clearly visible to readers. Furthermore, the best choropleth maps are readable whether they are printed in black-and-white on paper or displayed in color on a computer, and can be interpreted correctly by readers with different types of color-blindness.
+When you build a choropleth map, a great deal depends on your choice of color to represent data values, so it's important to learn key principles. Effective maps honestly display insightful geographic patterns that are clearly visible to readers. Furthermore, the best choropleth maps are readable whether they are printed in black-and-white on paper or displayed in color on a computer, and can be interpreted correctly by color-blind readers.
 
 To illustrate key concepts about colors in choropleth map design, let's explore a wonderful tool called [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and
-Mark Harrower. See the interface in Figure \@ref(fig:map-principles-colorbrewer). Do *not* attempt to upload your data into this tool, since that's not its purpose. Instead, think of ColorBrewer as a design assistant that recommends color choices that work best with your map data. In this section we'll focus on selecting the number of data classes and type of color scheme, in order to find recommended colors and export their codes.
+Mark Harrower. See the interface in Figure \@ref(fig:map-principles-colorbrewer). Do *not* attempt to upload your data into this tool, since that's not its purpose. Instead, think of ColorBrewer as a design assistant that recommends color choices that work best with your map data. In this section we'll focus on selecting color palettes and exporting recommended color codes into your preferred chart tool.
 
 (ref:map-principles-colorbrewer) The ColorBrewer interface: data classes, type of color scheme, and exportable color codes.
 
@@ -177,18 +177,10 @@ Mark Harrower. See the interface in Figure \@ref(fig:map-principles-colorbrewer)
 knitr::include_graphics("images/08-map/map-principles-colorbrewer-annotated.png")
 ```
 
-TODO: BEGIN HERE and decide whether to begin with classes (or use default) and jump to nature of data....
-
-
 ### Choropleth Palettes: Sequential, Divergent, and Qualitative {-}
+TODO: Confirm organization of this section and rewrite... emphasize "rules" when appropriate
 
-ColorBrewer can generate color palettes for a specified number of classes - between three
-and nine for sequential, three and eleven for diverging, and three and twelve for qualitative, which we'll discuss further below.
-You can also choose palettes that are colorblind-safe and print-friendly.
-
-ColorBrewer generates hexadecimal codes that translate into colors. For example #fffff means TODO. Also can produce RBYG and other formats TODO. You can re-type these codes into other map tools recommended in this book, or click the Export button to copy and paste this information.
-
-
+When you open [ColorBrewer](https://colorbrewer2.org/), the top row asks you to select the number of data classes in your choropleth map, which means the number of steps in your color range. This design tool can recommend distinct colors for up to twelve data classes. But for now, use the default setting of 3, and we'll return to this topic later when we discuss steps versus continuous ranges.
 
 Color palettes can be grouped into sequential, diverging, and qualitative.
 The examples are shown in Figure \@ref(fig:map-principles-color-schemes).
@@ -199,14 +191,12 @@ The examples are shown in Figure \@ref(fig:map-principles-color-schemes).
 knitr::include_graphics("images/08-map/map-principles-color-schemes.png")
 ```
 
-Rule: Choose the most appropriate palette type for your data.
+Rule: Choose the most appropriate palette type for your data.(?)
 
 Sequential palettes are used to represent continuous numeric values, in other words, anything that can be placed
 on a scale. For example, average income, population counts, percent unemployed, etc.
 Usually such palettes are single-hue (for example, different shades of blue), and
 typically darker colors represent higher values (but not always).
-
-
 
 Diverging palettes also represent continuous values.
 Unlike sequential palettes, however, diverging colors represent "direction" from some reference value,
@@ -250,9 +240,11 @@ Figure \@ref(fig:map-principles-classification)c.
 knitr::include_graphics("images/08-map/map-principles-classification.png")
 ```
 
+REWRITE: ColorBrewer generates hexadecimal codes that translate into colors. For example #fffff means TODO. Also can produce RBYG and other formats TODO. You can re-type these codes into other map tools recommended in this book, or click the Export button to copy and paste this information.
+
 ### Choropleth Ranges and Stops (best wording?) {-}
 
-TODO: decide whether to discuss stops first (since it appears in colorbrewer) and skip range types to the end (because it does not appear here)
+TODO: ORGANIZE this section with the one above; a problem is that ColorBrewer assumes steps, rather than continuous ranges; decide whether to discuss stops first (since it appears in colorbrewer) and skip range types to the end (because it does not appear here)
 
 TODO: briefly describe concept of stops and interpolation and cross-ref readers to Datawrapper section to explore
 
@@ -277,14 +269,9 @@ colored ranges become less visible.
 
 So how *should* you make decisions when designing choropleth maps? Can you simply place the cutoffs anywhere you choose? Absolutely not. Mapmakers offer guidelines about ways to make *better* visualizations. For example, Datawrapper Academy recommends finding "a compromise between honesty and usefulness" when designing maps [TODO cite https://academy.datawrapper.de/article/117-color-palette-for-your-map]. "Useful" means that it's acceptable to use design choices to communicate different interpretations of the data. For example, a linear interpolation is best for emphasizing the extreme lows and highs, while quantiles are best for identifying geographic patterns in the middle ranges. "Honesty" means telling the truth, and not intentionally creating misleading impressions of the data. For example, increasing the number of steps in your color range will increase the level of contrast in the map, but it can also mistakenly give the impression that light- and dark-colored regions are very different, while their numbers may vary only slightly. In general, Datawrapper recommends choosing ranges to make sure readers "see all the differences in the data," rather than hiding them out of sight.[TODO cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps] They also recommend using a continuous color range to show nuances in the data, unless your data story has a compelling reason to display discrete color steps [TODO add "such as...example" and cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps]. Finally, Datawrapper Academy strongly warns against using the manual custom settings to manipulate a map's appearance to fit a preconceived point of view.[Cite https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool]. Show readers the story and tell the truth.
 
-
-
 At this point, you should have some understanding of how maps work.
 So let's move to the first practical exercise of creating a point map
 with Google My Maps.
-
-
-
 
 
 ## Point Map with Google My Maps {- #mymaps}

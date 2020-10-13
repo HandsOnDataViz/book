@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-09" />
+<meta name="date" content="2020-10-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -224,6 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="choropleth-design-with-colorbrewer.html"><a href="choropleth-design-with-colorbrewer.html"><i class="fa fa-check"></i>Choropleth Design with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -363,22 +365,22 @@ Figure 12.3: Interactive line chart with Chart.js. Explore the <a href="https://
 <ol start="3" style="list-style-type: decimal">
 <li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
 </ol>
-<div class="sourceCode" id="cb20"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb20-1"><a href="chartjs-line.html#cb20-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Hartford School District is No Longer Largest in Connecticut&#39;</span><span class="op">;</span></span>
-<span id="cb20-2"><a href="chartjs-line.html#cb20-2"></a></span>
-<span id="cb20-3"><a href="chartjs-line.html#cb20-3"></a><span class="co">// x-axis label and label in tooltip</span></span>
-<span id="cb20-4"><a href="chartjs-line.html#cb20-4"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Academic Year&#39;</span><span class="op">;</span></span>
-<span id="cb20-5"><a href="chartjs-line.html#cb20-5"></a></span>
-<span id="cb20-6"><a href="chartjs-line.html#cb20-6"></a><span class="co">// y-axis label and label in tooltip</span></span>
-<span id="cb20-7"><a href="chartjs-line.html#cb20-7"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Number of Students&#39;</span><span class="op">;</span></span>
-<span id="cb20-8"><a href="chartjs-line.html#cb20-8"></a></span>
-<span id="cb20-9"><a href="chartjs-line.html#cb20-9"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
-<span id="cb20-10"><a href="chartjs-line.html#cb20-10"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb20-11"><a href="chartjs-line.html#cb20-11"></a></span>
-<span id="cb20-12"><a href="chartjs-line.html#cb20-12"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
-<span id="cb20-13"><a href="chartjs-line.html#cb20-13"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb20-14"><a href="chartjs-line.html#cb20-14"></a></span>
-<span id="cb20-15"><a href="chartjs-line.html#cb20-15"></a> <span class="co">// `true` to show the legend, `false` to hide</span></span>
-<span id="cb20-16"><a href="chartjs-line.html#cb20-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb24-1"><a href="chartjs-line.html#cb24-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Hartford School District is No Longer Largest in Connecticut&#39;</span><span class="op">;</span></span>
+<span id="cb24-2"><a href="chartjs-line.html#cb24-2"></a></span>
+<span id="cb24-3"><a href="chartjs-line.html#cb24-3"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb24-4"><a href="chartjs-line.html#cb24-4"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Academic Year&#39;</span><span class="op">;</span></span>
+<span id="cb24-5"><a href="chartjs-line.html#cb24-5"></a></span>
+<span id="cb24-6"><a href="chartjs-line.html#cb24-6"></a><span class="co">// y-axis label and label in tooltip</span></span>
+<span id="cb24-7"><a href="chartjs-line.html#cb24-7"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Number of Students&#39;</span><span class="op">;</span></span>
+<span id="cb24-8"><a href="chartjs-line.html#cb24-8"></a></span>
+<span id="cb24-9"><a href="chartjs-line.html#cb24-9"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
+<span id="cb24-10"><a href="chartjs-line.html#cb24-10"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb24-11"><a href="chartjs-line.html#cb24-11"></a></span>
+<span id="cb24-12"><a href="chartjs-line.html#cb24-12"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
+<span id="cb24-13"><a href="chartjs-line.html#cb24-13"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb24-14"><a href="chartjs-line.html#cb24-14"></a></span>
+<span id="cb24-15"><a href="chartjs-line.html#cb24-15"></a> <span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb24-16"><a href="chartjs-line.html#cb24-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
 <p>For more customization, see <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a>.</p>
 </div>
             </section>

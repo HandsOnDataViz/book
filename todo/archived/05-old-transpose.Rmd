@@ -1,0 +1,15 @@
+For example, the proper way to design a table is to place the dates or years horizontally as column headers, as shown in Figure \@ref(fig:sheets-years-row).^[@fewShowMeNumbers2012, p. 166]
+
+(ref:sheets-years-row) The proper way to design a time-series table is to place dates as horizontal column headers.
+
+```{r sheets-years-row, out.width=400, fig.cap="(ref:sheets-years-row)"}
+knitr::include_graphics("images/05-clean/sheets-years-row.png")
+```
+
+But if you wish to create a line chart, which you'll learn in [Chapter 7: Chart Your Data](chart.html), you need to transpose the data above, so that the years run down the first vertical column, as shown in Figure \@ref(fig:sheets-years-column).
+
+(ref:sheets-years-column) To build a chart, transpose the data to place years in the first vertical column.
+
+```{r sheets-years-column, out.width=300, fig.cap="(ref:sheets-years-column)"}
+knitr::include_graphics("images/05-clean/sheets-years-column.png")
+```

@@ -425,6 +425,23 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.
 
 Create your own version using our [Line Chart in Google Sheets template](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/). The steps are similar to those in prior Google Sheets chart tutorials in this chapter. Go to *File > Make a Copy* to create a version you can edit in your Google Drive. Select the data, and choose *Insert > Chart*. If Google Sheets does not correctly guess that you wish to create a line chart, in the Chart editor, Setup tab, select *Line chart* from the Chart type dropdown list.
 
+Sidebar: Tables and charts approach time-series data in opposite directions. When designing a table, the proper method is to place dates horizontally as column headers, so that we read them from left-to-right, like this:^[@fewShowMeNumbers2012, p. 166]
+
+| Year    | 2000 | 2010 | 2020 |
+|---------|------|------|------|
+| Series1 | ...  | ...  | ...  |
+| Series2 | ...  | ...  | ...  |
+
+But when designing a line chart in Google Sheets and several other tools, we organize the spreadsheet by placing the dates vertically down the first column, so that the tool reads them as labels for a data series, like this:
+
+| Year | Series1 | Series2 |
+|------|---------|---------|
+| 2000 | ...     | ...     |
+| 2010 | ...     | ...     |
+| 2020 | ...     | ...     |
+
+To convert data from tables to charts, learn how to [transpose rows and columns in Chapter 5: Clean Up Messy Data](transpose.html).
+
 ### Stacked Area Charts {-}
 Area charts resemble line charts with filled space underneath. The most useful type is a stacked area chart, which is best for combining two concepts from above: showing parts of the whole (like a pie chart) and continuous data over time (like a line chart). For example, the line chart above shows how the availability of three different meats changed over time. However, if you also wish to show how the total availability of these combined meats went up or down over time, it's hard to see this in a line chart. Instead, use a stacked line chart to visualize the availability of each meat *and* the total combined availability per capita over time. Stacked line charts show both aspects of your data simultaneously.
 

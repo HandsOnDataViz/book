@@ -11,6 +11,8 @@ knitr::include_graphics("images/05-clean/clean-up-messy-data.png")
 
 In this chapter you'll learn about different tools, in order to help you make decisions about which one to use to clean up your data efficiently. First, we'll start with basic cleanup methods using spreadsheets, such as [find and replace with a blank](find-and-replace.html), [tranpose rows and columns of data](transpose.html), [split data into separate columns](split-data.html), and [combine columns into one](combine-data.html). While we feature Google Sheets in our examples, the same principles (and in most cases the same formulas) can be use in Microsoft Excel, LibreOffice Calc, Mac's Numbers, or other spreadsheet packages. Next, you will learn how to [extract table data from text-based PDF documents with Tabula](tabula.html), a free tool used by data journalists and researchers worldwide to analyze spending data, health reports, and all sorts of other datasets that get trapped in PDFs. Finally, we will [introduce OpenRefine, a powerful and versatile tool to clean up the messiest spreadsheets](open-refine.html), such as those containing dozens of different spellings of the same name.
 
+TODO below: Add Google Sheets Smart Cleanup feature when available in late October https://gsuiteupdates.googleblog.com/2020/09/smart-cleanup-suggestions-google-sheets.html
+
 ## Find and Replace with Blank {- #find-and-replace}
 
 One of the simplest and most powerful cleanup tools inside your spreadsheet is the *Find and Replace* command. You can also use it to bulk-change different spellings of the same name, such as shortening a country's name (from *Republic of India* to *India*), or expanding a name (from *US* to *United States*), or translating names (from *Italy* to *Italia*). Also, you can use find and replace with a blank entry to remove units of measurement that sometimes reside in the same cells as the numbers (such as changing *321 kg* to *321*).
@@ -52,23 +54,22 @@ knitr::include_graphics("images/05-clean/sheets-find-replace-annotated.png")
 ```
 
 ## Transpose Rows and Columns {- #transpose}
-Sometimes you download good data, but your visualization tool requires you to transpose, or swap the rows and the columns, in order to create the chart or map you desire. This problem often comes up when working with longitudinal or historical data. For example, you often find the data organized with years placed horizontally as column headers, as shown in Figure \@ref(fig:sheets-years-row).
+Sometimes you download good data, but your visualization tool requires you to transpose, or swap the rows and the columns, in order to create the chart or map you desire. This problem often arises when working with time-series or historical data, because tables and charts approach them in opposite directions. When designing a table, the proper method is to place dates horizontally as column headers, so that we read them from left-to-right, like this:^[@fewShowMeNumbers2012, p. 166]
 
-(ref:sheets-years-row) We often find data with years placed in horizontal column headers.
+| Year    | 2000 | 2010 | 2020 |
+|---------|------|------|------|
+| Series1 | ...  | ...  | ...  |
+| Series2 | ...  | ...  | ...  |
 
-```{r sheets-years-row, out.width=400, fig.cap="(ref:sheets-years-row)"}
-knitr::include_graphics("images/05-clean/sheets-years-row.png")
-```
+But when designing a line chart in Google Sheets and similar tools, which you'll learn in [Chapter 7: Chart Your Data](chart.html), we need to transpose the data so that dates run vertically down the first column, in order for the software to read them as labels for a data series, like this:
 
-But if you wish to create a line chart, which you'll learn in [Chapter 7: Chart Your Data](chart.html), you need to transpose the data above, so that the years run down the first vertical column, as shown in Figure \@ref(fig:sheets-years-column).
+| Year | Series1 | Series2 |
+|------|---------|---------|
+| 2000 | ...     | ...     |
+| 2010 | ...     | ...     |
+| 2020 | ...     | ...     |
 
-(ref:sheets-years-column) But we need to transpose the data to place years in the first vertical column.
-
-```{r sheets-years-column, out.width=300, fig.cap="(ref:sheets-years-column)"}
-knitr::include_graphics("images/05-clean/sheets-years-column.png")
-```
-
-Let's transpose rows and columns in our sample data:
+Learn how to transpose rows and columns in our sample data:
 
 1. Open the [Transpose sample data file in Google Sheets](https://docs.google.com/spreadsheets/d/1s7MwJMY_vNkvNNJDAl0HJMO6fzxCNj4eMA5fBZ1pZgU/edit#gid=0), sign in with your account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-13" />
+<meta name="date" content="2020-10-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="map.html"/>
-<link rel="next" href="normalize-choropleth-map-data.html"/>
+<link rel="next" href="design-choropleth-colors-intervals.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -224,8 +224,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8" data-path="map.html"><a href="map.html"><i class="fa fa-check"></i><b>8</b> Map Your Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
+<li class="chapter" data-level="" data-path="design-choropleth-colors-intervals.html"><a href="design-choropleth-colors-intervals.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="design-choropleth-maps-with-colorbrewer.html"><a href="design-choropleth-maps-with-colorbrewer.html"><i class="fa fa-check"></i>Design Choropleth Maps with ColorBrewer</a></li>
 <li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
@@ -338,8 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="map-design" class="section level2 unnumbered" number="">
 <h2>Map Design Principles</h2>
 <p>Much of the data collected today includes a spatial component that can be mapped. When you look up an address on a city street, or take a photo of a tree in a rural forest, both can be geocoded into latitude and longitude coordinates, such as <code>42.76, -72.69</code>, and placed as <em>points</em> on a map. When we walk, bike, drive, or ride mass transit, our route can be recorded as strings of geocoordinates and shown as <em>lines</em> on a map. When we draw lines to designate the geographic borders of neighborhoods or nations, we can display those <em>polygons</em> on a map, and also color them to represent different values, such as population or income.</p>
-<p>However, just because data <em>can</em> be mapped does not always mean it <em>should</em> be mapped.
-Before creating a map, stop and ask yourself: <em>Does location really matter to your story?</em> Even when your data includes geographic information, sometimes a chart tells your story better than a map. For example, you can clearly show differences between geographic areas in a bar chart, or trace how they rise and fall on different rates over time with a line chart, or compare two variables for each area in a scatter chart. Sometimes a simple table, or even text alone, communicates your point more effectively to your audience. Since creating a well-designed map requires time and energy, make sure it actually enhances your data story.</p>
+<p>However, just because data <em>can</em> be mapped does not always mean it <em>should</em> be mapped. Before creating a map, stop and ask yourself: <em>Does location really matter to your story?</em> Even when your data includes geographic information, sometimes a chart tells your story better than a map. For example, you can clearly show differences between geographic areas in a bar chart, or trace how they rise and fall on different rates over time with a line chart, or compare two variables for each area in a scatter chart. Sometimes a simple table, or even text alone, communicates your point more effectively to your audience. Since creating a well-designed map requires time and energy, make sure it actually enhances your data story.</p>
 <p>As you learned in the previous chapter about charts, data visualization is not a science, but comes with a set of principles and best practices that serve as a foundation for creating true and meaningful maps. In this section, we’ll identify a few rules about map design, but you may be surprised to learn that some rules are less rigid than others, and can be “broken” when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let’s start by establishing a common vocabulary about maps.</p>
 <div id="deconstruct-a-map" class="section level3 unnumbered" number="">
 <h3>Deconstruct a Map</h3>
@@ -391,18 +390,13 @@ The <em>legend</em> identifies the meaning of shapes or colors on the map. Maps 
 <p>Newcomers to data visualization sometimes are so proud of placing one variable on a map that they figure two variables must be twice as good. But this usually is not true. In general, we recommend against placing two variables on the same map, because it’s very difficult for most readers to recognize patterns that help them to grasp your data story. For example, look at what happens when you try to place one variable (using a symbol point map) on top of another variable (using a choropleth map), as shown with imaginary data in Figure <a href="map-design.html#fig:map-two-variables">8.2</a>. It’s difficult to recognize patterns when a symbol point map is placed on a choropleth map.</p>
 
 <div class="figure"><span id="fig:map-two-variables"></span>
-<img src="images/08-map/map-two-variables.png" alt="Avoid placing a symbol point map on top of a choropleth map, because it’s hard to see the relationship between two variables."  />
+<img src="images/08-map/map-two-variables.png" alt="Avoid placing a symbol point map on top of a choropleth map, because it’s hard to see the relationship between two variables." width="400" />
 <p class="caption">
 Figure 8.2: Avoid placing a symbol point map on top of a choropleth map, because it’s hard to see the relationship between two variables.
 </p>
 </div>
-<p>Consider alternative ways to visualize the relationship between two variables.</p>
-<ol style="list-style-type: decimal">
-<li><p>Create a scatter chart to compare variables X and Y. This works best if the relationship between X and Y is more important to your data story than any geographic patterns.</p></li>
-<li><p>Create a choropleth map for variable X, and a scatter chart to show the relationship between X and Y. If the scatterchart relationship is strong, explain in text how the map of Y would be similar.</p></li>
-<li><p>Create two maps, one for each variable, and place them next to one another, or allow readers to toggle between them, with text to explain comparison.</p></li>
-</ol>
-<p>TODO: decide if the main illustration works here, and also if supplemental images are needed, perhaps as “bad viz” and “better viz” examples</p>
+<p>Consider alternative ways to visualize the relationship between two variables. Rather than a map, you could create a scatter chart to show any relationship between variables X and Y. This type of chart works best if the relationship between variables is more important to your data story than any geographic patterns. Or, if geographic patterns matter for one of the variables, you could pair a choropleth map of that variable next to a scatterchart of both variables. Finally, you could create two choropleth maps, one for each variable, and place them side-by-side with text to explain their similarities or differences.</p>
+<p>TODO: decide if the figure works above; also decide if supplemental images are needed, perhaps as “bad viz” and “better viz” examples</p>
 </div>
 <div id="usually-choose-smaller-geographies-for-choropleth-maps" class="section level3 unnumbered" number="">
 <h3>Usually Choose Smaller Geographies for Choropleth Maps</h3>
@@ -425,7 +419,7 @@ Figure 8.3: Zillow typical home values in August 2020 shown at the state level (
         </div>
       </div>
 <a href="map.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="normalize-choropleth-map-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="design-choropleth-colors-intervals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

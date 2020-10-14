@@ -7,7 +7,7 @@ Learn about different types of maps you can create in this book in Table \@ref(t
 
 TODO: Improve and standardize map images
 
-Table: (\#tab:map-types) Basic Map Types and Tutorials
+Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 
 | Map | Best use and tutorials in this book |
 | --- | --- |
@@ -25,8 +25,7 @@ Table: (\#tab:map-types) Basic Map Types and Tutorials
 
 Much of the data collected today includes a spatial component that can be mapped. When you look up an address on a city street, or take a photo of a tree in a rural forest, both can be geocoded into latitude and longitude coordinates, such as `42.76, -72.69`, and placed as *points* on a map. When we walk, bike, drive, or ride mass transit, our route can be recorded as strings of geocoordinates  and shown as *lines* on a map. When we draw lines to designate the geographic borders of neighborhoods or nations, we can display those *polygons* on a map, and also color them to represent different values, such as population or income.  
 
-However, just because data *can* be mapped does not always mean it *should* be mapped.
-Before creating a map, stop and ask yourself: *Does location really matter to your story?* Even when your data includes geographic information, sometimes a chart tells your story better than a map. For example, you can clearly show differences between geographic areas in a bar chart, or trace how they rise and fall on different rates over time with a line chart, or compare two variables for each area in a scatter chart. Sometimes a simple table, or even text alone, communicates your point more effectively to your audience. Since creating a well-designed map requires time and energy, make sure it actually enhances your data story.
+However, just because data *can* be mapped does not always mean it *should* be mapped. Before creating a map, stop and ask yourself: *Does location really matter to your story?* Even when your data includes geographic information, sometimes a chart tells your story better than a map. For example, you can clearly show differences between geographic areas in a bar chart, or trace how they rise and fall on different rates over time with a line chart, or compare two variables for each area in a scatter chart. Sometimes a simple table, or even text alone, communicates your point more effectively to your audience. Since creating a well-designed map requires time and energy, make sure it actually enhances your data story.
 
 As you learned in the previous chapter about charts, data visualization is not a science, but comes with a set of principles and best practices that serve as a foundation for creating true and meaningful maps. In this section, we'll identify a few rules about map design, but you may be surprised to learn that some rules are less rigid than others, and can be "broken" when necessary to emphasize a point, as long as you are honestly interpreting the data. To begin to understand the difference, let's start by establishing a common vocabulary about maps.
 
@@ -81,19 +80,13 @@ Newcomers to data visualization sometimes are so proud of placing one variable o
 
 (ref:map-two-variables) Avoid placing a symbol point map on top of a choropleth map, because it's hard to see the relationship between two variables.
 
-```{r map-two-variables, fig.cap="(ref:map-two-variables)"}
+```{r map-two-variables, out.width=400, fig.cap="(ref:map-two-variables)"}
 knitr::include_graphics("images/08-map/map-two-variables.png")
 ```
 
-Consider alternative ways to visualize the relationship between two variables.
+Consider alternative ways to visualize the relationship between two variables. Rather than a map, you could create a scatter chart to show any relationship between variables X and Y. This type of chart works best if the relationship between variables is more important to your data story than any geographic patterns. Or, if geographic patterns matter for one of the variables, you could pair a choropleth map of that variable next to a scatterchart of both variables. Finally, you could create two choropleth maps, one for each variable, and place them side-by-side with text to explain their similarities or differences.
 
-1) Create a scatter chart to compare variables X and Y. This works best if the relationship between X and Y is more important to your data story than any geographic patterns.
-
-2) Create a choropleth map for variable X, and a scatter chart to show the relationship between X and Y. If the scatterchart relationship is strong, explain in text how the map of Y would be similar.
-
-3) Create two maps, one for each variable, and place them next to one another, or allow readers to toggle between them, with text to explain comparison.
-
-TODO: decide if the main illustration works here, and also if supplemental images are needed, perhaps as "bad viz" and "better viz" examples
+TODO: decide if the figure works above; also decide if supplemental images are needed, perhaps as "bad viz" and "better viz" examples
 
 ### Usually Choose Smaller Geographies for Choropleth Maps {-}
 Choropleth maps are best for showing geographic patterns across regions by coloring polygons to represent data values. Therefore, we generally recommend selecting *smaller* geographies to display more *granular* patterns, since larger geographies display aggregated data that may hide what's happening at lower levels. Geographers refer to this concept as the [modifiable aerial unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem), which means that the way you slice up your data affects how we analyze its appearance on the map. Stacking together lots of small slices reveals more detail than one big slice.
@@ -110,30 +103,7 @@ Which map is best? Since both are truthful depictions of the data, the answer de
 
 TODO Above: add "New York City" and "Boston" labels to the county-level map. Decide if we should add state-level outlines and state names to county-level map. Do we wish to add a third map that's too detailed to illustrate the Goldilocks effect?
 
-## Normalize Choropleth Map Data {-}
-
-We introduced the concept of [normalizing data in Chapter 6: Make Meaningful Comparisons](normalize.html). Normalization means adjusting data that was collected using different scales into a common scale, in order to make more appropriate comparisons. For example, it makes little sense to compare the total number of Covid cases between nations with very different populations, such as XXX and YYY (TODO: fill in examples). A better strategy is to normalize the data by comparing cases per capita (such as A per 100,000 in XXX versus B per 100,000 in YYY) to adjust for prior differences in population.
-
-In the same way, choropleth maps work best when they display relative values (such as percentages or per capita rates) rather than absolute values (such as the raw number of people). If you ignore normalization when creating a choropleth map and display raw numbers, you'll essentially recreate a population map, which doesn't tell us anything new. For example, compare two maps shown in Figure \@ref(fig:normalize-map-data). They both are about Covid-19 cases in the continental US as of June 26, 2020. Figure \@ref(fig:normalize-map-data)a shows total number of recorded cases per state, and Figure \@ref(fig:normalize-map-data)b shows Covid-19 cases adjusted by the state's population. Darker colors represent higher values. Do you notice any differences in spatial patterns?
-
-(ref:normalize-map-data) Choropleth maps work best with normalized values.
-
-```{r normalize-map-data, fig.cap="(ref:normalize-map-data)"}
-knitr::include_graphics("images/14-transform/normalize-map-data-annotated.png")
-```
-
-Both maps show Covid-19 data collected by the New York Times and published [on GitHub](https://github.com/nytimes/covid-19-data). In the map in Figure \@ref(fig:normalize-map-data)b, we normalized values by dividing the total number of cases by the population in each state, according to the 2018 US Census American Community Survey, the most recent data available on the day of writing. We did not add legends and other important cartographic elements so that you can
-better focus on interpreting spatial patterns. In both cases,
-we used Jenks natural breaks for classification.
-
-What are the worst-hit states according to the map showing total Covid-19 counts (shown in Figure \@ref(fig:normalize-map-data)a)? If you are familiar with the US geography, you can quickly tell that these are New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California. But five of these happen to be some of the most populous states in the US,
-so it makes sense that they will also have higher Covid-19 cases.
-
-Now, how about the map in Figure \@ref(fig:normalize-map-data)b? You can see that New York and its neighbors, including New Jersey and Massachusetts, have by far the highest rates per capita (per person), which we saw in the first map. But you can also see that in fact California, Texas, and Florida were impacted to a lesser extent than the map on the left had suggested. So the map with per-capita values is a much better illustration to the story about New York being the *first* epicenter of the Covid-19 crisis in the United States.
-
-TODO: Include a very simple normalization calculation to demonstrate absolute data versus normalized data (Cases / Population = Cases Per Capita) for two states, such as Texas and New York. Decide whether to show data at a specific moment (May 1 2020 near peak for NYC) or most up-to-date figure at this writing (which will show higher case rates elsewhere). Either way, clearly label the date in the caption.
-
-## Design Choropleth Maps with ColorBrewer {-}
+## Design Choropleth Colors & Intervals {-}
 
 When you build a choropleth map, your choices about how to represent data with colors will determine its overall appearance, so it's important to learn key principles. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by color-blind readers.
 
@@ -147,7 +117,7 @@ knitr::include_graphics("images/08-map/map-colorbrewer-annotated.png")
 
 In this section, we'll focus on two important decisions you'll need to make when designing choropleth maps: choosing the type of color palette (sequential, divergent, or qualitative) and the intervals to group together similar-colored data points.
 
-When you open [ColorBrewer](https://colorbrewer2.org/), the top row asks you to select the number of data classes in your choropleth map, which means the number of intervals or steps in your color range menu. This design tool can recommend distinct colors for up to twelve data classes, depending on the type of scheme you select. But for now, use the default setting of 3, and we'll return to this topic later when we discuss intervals in more detail further below.
+When you open [ColorBrewer](https://colorbrewer2.org/), the top row asks you to select the number of data classes in your choropleth map, which means the number of intervals or steps in your color range. This design tool can recommend distinct colors for up to twelve data classes, depending on the type of scheme you select. But for now, use the default setting of 3, and we'll return to this topic later when we discuss intervals in more detail further below.
 
 ### Choose Choropleth Palettes to Match Your Data {-}
 One of the most important decisions you'll make when designing a choropleth map is to select the type of palette. You're not simply choosing a color, but the *arrangement of colors* to help readers correctly interpret your information. The rule is straightforward: choose an appropriate color palette that matches your data format, and the story you wish to tell.
@@ -164,7 +134,7 @@ knitr::include_graphics("images/08-map/map-principles-color-schemes.png")
 
 *Diverging palettes* work best to show numbers above and below a standard level (such as zero, the average, or median value). They typically have two distinct hues to represent positive and negative directions, with darker colors at the extremes, and a neutral color in the middle. Examples include income above or below the median level, rainfall above or below seasonal average, or percentage of voters above or below the norm.
 
-*Qualitative palettes* work best to show categorical data, rather than numeric scales. They typically feature unique colors that stand apart from one another to emphasize differences. Examples include race or ethnicity (Asian, Black, Latino, White) or types of land use (commercial, industrial, residential, open space). They also can represent categories that may appear to be sequential (such as green, yellow, and red on a stoplight or warning system), but are still qualitative because they need to be assigned these specific colors to be correctly interpreted.
+*Qualitative palettes* work best to show categorical data, rather than numeric scales. They typically feature unique colors that stand apart from one another to emphasize differences. Examples include different types of land use (residential, commercial, open space, water). They also can represent categories such as a warning system that resembles a stoplight (green, yellow, and red), as these specific colors must be manually assigned to be correctly interpreted.
 
 Choose an appropriate palette that matches your data format and story you wish to tell. For example, we began with the same data on income per capita in the contiguous US states in 2018, but modified it demonstrate the interpretive strengths of each palette, as shown in Figure \@ref(fig:map-principles-classification).
 
@@ -182,40 +152,74 @@ TODO: Decide if we should keep or remove the third map, since it's not an ideal 
 knitr::include_graphics("images/08-map/map-principles-classification.png")
 ```
 
-After you select data classes and a color palette, ColorBrewer displays alphanumeric codes that web browsers translate into colors. You can choose to copy or export hexadecimal codes (`#ffffff` is white), RGB codes (`255,255,255` is white), or CMYK codes (`0,0,0,0` is white), and paste or import them into your preferred map tool, if allowed.
+After you select data classes and a color palette, ColorBrewer displays alphanumeric codes that web browsers translate into colors. You can select hexadecimal codes (`#ffffff` is white), RGB codes (`255,255,255` is white), or CMYK codes (`0,0,0,0` is white), and copy or export them into your preferred map tool, if it allows color palettes to be imported.
 
-### Choose Intervals to Group Your Choropleth Map Data {-}
+### Choose Color Intervals to Group Choropleth Map Data {-}
 
-TODO::: STILL WRITING HERE...... and the intervals to group together similar-colored data points.
+Another important design choice for choropleth maps is the color intervals, which determine how you group and display data by using similar colors. Since your ability to set intervals varies across different mapping tools, this section will explain broad concepts, and specific map tutorials will demonstrate how to apply them.
 
-TODO: ORGANIZE this section with the one above; a problem is that ColorBrewer assumes steps, rather than continuous ranges; decide whether to discuss stops first (since it appears in colorbrewer) and skip range types to the end (because it does not appear here)
+Some mapping tools allow you to choose two different *types of color intervals* to show movement up or down a data scale, as shown in Figure \@ref(fig:interval-types). *Steps* are clearly-marked color dividers, like a staircase, while *continuous* is a gradual change in hue, like a ramp.
 
-TODO: briefly describe concept of stops and interpolation and cross-ref readers to Datawrapper section to explore
+(ref:interval-types) Two types of color intervals: steps and continuous.
 
-Choropleth map ranges typically are two types: clearly-defined steps (like a staircase) or continous gradients (like a ramp). Both illustrate ranges
+```{r interval-types, out.width=300, fig.cap="(ref:interval-types)"}
+knitr::include_graphics("images/08-map/interval-types.png")
+```
 
-ColorBrewer helps mapmakers create clearly-defined steps.... but some tools allow continous...
+If both options exist, which one is best? There is no clear map design rule about this. On one hand, some recommend using continuous intervals to show greater geographical diversity, except when it's important to your data story to display a threshold, where steps make sense to show areas above or below a certain line. On the other hand, some point out that people are quite bad at distinguishing different hues on a continuous scale, so recommend using clearly-defined steps to help readers match colors to data values in your legend. Therefore, our general advice is to make design choices that are both honest and insightful: tell the truth about the data and also draw our attention to what matters about this interpretation.[TODO: is this sufficient or should we add examples or cite different designers here? Cite Datawrapper Academy on "honesty and usefulness" https://academy.datawrapper.de/article/117-color-palette-for-your-map]
 
-Recommendation: if the option exists, use continuous, unless you specifically want map to signal areas above or below a threshold....
+Some mapping tools also allow you to choose how to *interpolate* your data, meaning the method for grouping numbers to represent similar colors on your map. This may involve a two-part decision about step dividers and numerical methods.
 
-Briefly explain concept of stops (or classes....)
+First, if you choose *steps*, how many dividers should you use to slice up your data? Once again, there is no clear rule. Fewer steps creates a *coarse* map that highlights broad differences, while more steps creates a *granular* map that emphasizes geographic diversity between areas. But adding more steps also makes differences less visible. Remember that simply adding more colors does not necessarily make a better map. We recommend experimenting with [ColorBrewer](https://colorbrewer2.org) to raise or lower the *Number of data classes* (also known as steps or dividers) for different types of color palettes, to visualize the consequences of your possible design choices, as shown in Figure \@ref(fig:colorbrewer-steps). Make decisions with the best interests of your readers in mind, to represent your data in honest and insightful ways.
 
+(ref:colorbrewer-steps) Experiment with ColorBrewer data classes (or steps) and color palettes.
 
-Remember that more colors (or "buckets") does not equal better maps.
-People are quite bad at distinguishing hues, and an excessive number of
-buckets will make it harder for reader to compare map values with the legend.
-If you build a sequential color palette, we recommend you start with *five* buckets,
-then try four and six and decide what is appropriate for your data *and* your story.
+```{r colorbrewer-steps, out.width=400, fig.cap="(ref:colorbrewer-steps)"}
+knitr::include_graphics("images/08-map/colorbrewer-steps.png")
+```
 
-Fewer colors create a *coarse* map with differences in colored ranges becoming more visible.
-More colors create a more *granular* map, but differences in
-colored ranges become less visible.
+Second, whether you choose steps or continuous, which *interpolation* method is the best way to group your data into similar colors on your scale? Map tools may display the options in different ways, as seen in Figure \@ref(fig:intervals-datawrapper-tableau), and they also may vary depending on whether you selected steps or continuous colors.
 
-So how *should* you make decisions when designing choropleth maps? Can you simply place the cutoffs anywhere you choose? Absolutely not. Mapmakers offer guidelines about ways to make *better* visualizations. For example, Datawrapper Academy recommends finding "a compromise between honesty and usefulness" when designing maps [TODO cite https://academy.datawrapper.de/article/117-color-palette-for-your-map]. "Useful" means that it's acceptable to use design choices to communicate different interpretations of the data. For example, a linear interpolation is best for emphasizing the extreme lows and highs, while quantiles are best for identifying geographic patterns in the middle ranges. "Honesty" means telling the truth, and not intentionally creating misleading impressions of the data. For example, increasing the number of steps in your color range will increase the level of contrast in the map, but it can also mistakenly give the impression that light- and dark-colored regions are very different, while their numbers may vary only slightly. In general, Datawrapper recommends choosing ranges to make sure readers "see all the differences in the data," rather than hiding them out of sight.[TODO cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps] They also recommend using a continuous color range to show nuances in the data, unless your data story has a compelling reason to display discrete color steps [TODO add "such as...example" and cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps]. Finally, Datawrapper Academy strongly warns against using the manual custom settings to manipulate a map's appearance to fit a preconceived point of view.[Cite https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool]. Show readers the story and tell the truth.
+(ref:intervals-datawrapper-tableau) Interpolation options in two map tools: Datawrapper (left) and Tableau Public (right).
 
-At this point, you should have some understanding of how maps work.
-So let's move to the first practical exercise of creating a point map
-with Google My Maps.
+```{r intervals-datawrapper-tableau, fig.cap="(ref:intervals-datawrapper-tableau)"}
+knitr::include_graphics("images/08-map/intervals-datawrapper-tableau.png")
+```
+
+- *Linear* means that the values are placed in a straight line, from lowest to highest. This method works best when the data are evenly distributed, because the colors draw attention to the outliers at the low and high ends of the scale.
+- *Quantiles* means that the values are divided into groups of an equal number. More specifically, *quartiles*, *quintiles*, and *deciles* mean dividing the values into four, five, or ten groups of equal quantity. This method works best when the data are not evenly distributed, because it uses colors to draw more attention to the diversity of groups inside the scale, not just the low and high ends.
+- *Rounded values* are similar to quantiles, but decimals in the scale are replaced with rounded numbers that look nicer to readers' eyes.
+- *Natural breaks (Jenks)* offers a compromise between linear (which emphasizes the extreme ends) and quantiles (which emphasize internal diversity).
+- *Custom* allows you to manually place dividers wherever you wish along the color scale. We generally recommend to *not* use custom settings because they are more likely to create a misleading map, as you'll learn in [Chapter 15: Detect Lies and Reduce Data Bias](detect.html).
+
+TODO: CONFIRM definitions above; add max/mid/min as an option? decide if these definitions are sufficient, or consider adding small maps to visually contrast the differences, as shown in https://academy.datawrapper.de/article/117-color-palette-for-your-map; cite this source
+
+Which interpolation method is best? While there are no rigid rules, some methods above work better for different types of data stories. If you wish to emphasize the lows and highs in your data, choose linear because it uses color to draw attention to the extreme ends of the scale. Or if you wish to emphasize geographic diversity in your data, consider quantiles (or any of its cousins) because they use color to differentiate the middle portions of the scale. Or if you're not sure what your data looks like, [create a histogram like you learned in Chapter 7: Chart Your Data](chart-google.html) to visualize it and help make wise map design choices. [TODO: demonstrate a histogram with map data here? https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales]
+
+In any case, be very aware of how color palettes and interpolation dramatically shape the appearance of choropleth maps and how the data appears in readers' eyes. Always create maps show us the story and tell the truth.  [TODO: ADD THIS? In general, Datawrapper recommends choosing ranges to make sure readers "see all the differences in the data," rather than hiding them out of sight.... cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps]
+
+## Normalize Choropleth Map Data {-}
+
+We introduced the concept of [normalizing data in Chapter 6: Make Meaningful Comparisons](normalize.html). Normalization means adjusting data that was collected using different scales into a common scale, in order to make more appropriate comparisons. For example, it makes little sense to compare the total number of Covid cases between nations with very different populations, such as XXX and YYY (TODO: fill in examples). A better strategy is to normalize the data by comparing cases per capita (such as A per 100,000 in XXX versus B per 100,000 in YYY) to adjust for prior differences in population.
+
+In the same way, choropleth maps work best when they display relative values (such as percentages or per capita rates) rather than absolute values (such as the raw number of people). If you ignore normalization when creating a choropleth map and display raw numbers, you'll essentially recreate a population map, which doesn't tell us anything new. For example, compare two maps shown in Figure \@ref(fig:normalize-map-data). They both are about Covid-19 cases in the continental US as of June 26, 2020. Figure \@ref(fig:normalize-map-data)a shows total number of recorded cases per state, and Figure \@ref(fig:normalize-map-data)b shows Covid-19 cases adjusted by the state's population. Darker colors represent higher values. Do you notice any differences in spatial patterns?
+
+(ref:normalize-map-data) Choropleth maps work best with normalized values.
+
+```{r normalize-map-data, fig.cap="(ref:normalize-map-data)"}
+knitr::include_graphics("images/14-transform/normalize-map-data-annotated.png")
+```
+
+Both maps show Covid-19 data collected by the New York Times and published [on GitHub](https://github.com/nytimes/covid-19-data). In the map in Figure \@ref(fig:normalize-map-data)b, we normalized values by dividing the total number of cases by the population in each state, according to the 2018 US Census American Community Survey, the most recent data available on the day of writing. We did not add legends and other important cartographic elements so that you can better focus on interpreting spatial patterns. In both cases, we used Jenks natural breaks for classification.
+
+What are the worst-hit states according to the map showing total Covid-19 counts (shown in Figure \@ref(fig:normalize-map-data)a)? If you are familiar with the US geography, you can quickly tell that these are New York, New Jersey, Massachusetts, Florida, Illinois, Texas, and California. But five of these happen to be some of the most populous states in the US,
+so it makes sense that they will also have higher Covid-19 cases.
+
+Now, how about the map in Figure \@ref(fig:normalize-map-data)b? You can see that New York and its neighbors, including New Jersey and Massachusetts, have by far the highest rates per capita (per person), which we saw in the first map. But you can also see that in fact California, Texas, and Florida were impacted to a lesser extent than the map on the left had suggested. So the map with per-capita values is a much better illustration to the story about New York being the *first* epicenter of the Covid-19 crisis in the United States.
+
+TODO: Include a very simple normalization calculation to demonstrate absolute data versus normalized data (Cases / Population = Cases Per Capita) for two states, such as Texas and New York. Decide whether to show data at a specific moment (May 1 2020 near peak for NYC) or most up-to-date figure at this writing (which will show higher case rates elsewhere). Either way, clearly label the date in the caption.
+
+At this point, you should have a better idea of key principles in map design, and what makes them work (or not) when communicating data images to our eyes. In the next section, we'll begin our first hands-on tutorial with creating a point map. Later in the chapter we'll return to exercises in creating choropleth maps.  
 
 ## Point Map with BatchGeo {- #batchgeo}
 TODO...

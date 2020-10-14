@@ -207,7 +207,7 @@ In the same way, choropleth maps work best when they display relative values (su
 (ref:normalize-map-data) Choropleth maps work best with normalized values.
 
 ```{r normalize-map-data, fig.cap="(ref:normalize-map-data)"}
-knitr::include_graphics("images/14-transform/normalize-map-data-annotated.png")
+knitr::include_graphics("images/08-map/normalize-map-data-annotated.png")
 ```
 
 Both maps show Covid-19 data collected by the New York Times and published [on GitHub](https://github.com/nytimes/covid-19-data). In the map in Figure \@ref(fig:normalize-map-data)b, we normalized values by dividing the total number of cases by the population in each state, according to the 2018 US Census American Community Survey, the most recent data available on the day of writing. We did not add legends and other important cartographic elements so that you can better focus on interpreting spatial patterns. In both cases, we used Jenks natural breaks for classification.
@@ -222,9 +222,61 @@ TODO: Include a very simple normalization calculation to demonstrate absolute da
 At this point, you should have a better idea of key principles in map design, and what makes them work (or not) when communicating data images to our eyes. In the next section, we'll begin our first hands-on tutorial with creating a point map. Later in the chapter we'll return to exercises in creating choropleth maps.  
 
 ## Point Map with BatchGeo {- #batchgeo}
-TODO...
-See also
-https://blog.batchgeo.com/5-steps-to-become-a-batchgeo-power-user/
+Although BatchGeo is not the most powerful mapping tool available, its easy-to-learn interface stands out as one of the fastest ways to create an interactive point map. With the free version, organize up to 250 rows of data in a spreadsheet template, copy and paste them into the platform. BatchGeo will geocode your data and display map markers with colored categories on a Google Map base layer, which can be clicked to show linked titles, text, and small photos (which must be hosted online elsewhere) categories, descriptions, and links (including images hosted elsewhere online). Since the free version does *not* include an account login, enter your email to receive a link to the finished map, like the sample shown in Figure \@ref(fig:batchgeo-map).
+
+(ref:batchgeo-map) Point map of museums and parks with BatchGeo: Explore the [interactive version](https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c).
+
+```{r batchgeo-map, fig.cap="(ref:batchgeo-map)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c", height="550px") else knitr::include_graphics("images/08-map/batchgeo-map.png")
+```
+
+To create your own point map with BatchGeo, follow this quick tutorial.
+
+1. Open this [BatchGeo data template in Google Sheets](https://docs.google.com/spreadsheets/d/1IA0J4Z9C0_zsvgcunD2kHtR__sdQqUPzNHNjqCLYBRQ/edit#gid=312385679), log into your Google account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
+
+2. You can delete and enter your own data into the template, as shown in Figure \@ref(fig:batchgeo-template). Not every address field is required, but adding more will improve the accuracy of the geocoder. Several columns are optional and can be deleted (such as URL, Image URL, Image Source). If you enter a URL, its active link will appear in the Name field. Also, you can enter an Image URL if a photo is hosted elsewhere online, with an ideal size of 200x200 pixels.
+
+(ref:batchgeo-template) Enter your data into the template, then select all and copy it.
+
+```{r batchgeo-template, fig.cap="(ref:batchgeo-template)"}
+knitr::include_graphics("images/08-map/batchgeo-template.png")
+```
+
+3. Select and copy your data from the template, open the [BatchGeo](https://batchgeo.com) site, click the large field, and paste in your data, as shown in Figure \@ref(fig:batchgeo-paste).
+
+(ref:batchgeo-paste) Click the large field and paste in your data from the template.
+
+```{r batchgeo-paste, fig.cap="(ref:batchgeo-paste)"}
+knitr::include_graphics("images/08-map/batchgeo-paste.png")
+```
+
+4. Click the *Validate and Set Options* button to inspect or adjust how BatchGeo will upload your data fields and preview a pop-up window, as shown in Figure \@ref(fig:batchgeo-validate). Click the *Advanced* button to see additional options. Then click the *Map* button.
+
+(ref:batchgeo-validate) Click the *Validate* button to inspect and preview your data and advanced options.
+
+```{r batchgeo-validate, out.width=500, fig.cap="(ref:batchgeo-validate)"}
+knitr::include_graphics("images/08-map/batchgeo-validate.png")
+```
+
+5. In the *Map* window, enter a title and set other options, as shown in Figure \@ref(fig:batchgeo-save). Insert your email address to receive a link to your online map. Click *Save Map*.
+
+(ref:batchgeo-save) Be sure to enter your email address to receive a link to your online map.
+
+```{r batchgeo-save, out.width=500, fig.cap="(ref:batchgeo-save)"}
+knitr::include_graphics("images/08-map/batchgeo-save.png")
+```
+
+6. Check your email for a message from BatchGeo with a link to your live map, and another link to make edits, as shown in Figure \@ref(fig:batchgeo-email). The email also will include a code to [embed your live map on the web, which you'll learn about in Chapter 10](embed.html).
+
+(ref:batchgeo-email) Save the BatchGeo email with links and an embed code for your map.
+
+```{r batchgeo-email, out.width=500, fig.cap="(ref:batchgeo-email)"}
+knitr::include_graphics("images/08-map/batchgeo-email-annotated.png")
+```
+
+Overall, BatchGeo is a free and easy-to-learn point map tool, but one with several limitations. You can only create maps with 250 points or less, and only a few options to customize their appearance, unless you upgrade to the paid version. Also, while the tool geocodes your location data, it does not show you the latitude and longitude coordinates, but see the [Geocode section of Chapter 3 for a Google Sheets add-on](geocode.html) that will show you the geocoordinates. See more info on the [BatchGeo support page](http://support.batchgeo.com) and also their [post about power-user tips](https://blog.batchgeo.com/5-steps-to-become-a-batchgeo-power-user/).
+
+Now that you've learned about one tool to create point maps, let's compare it with a second tool, Google My Maps, which includes some additional features.
 
 ## Point Map with Google My Maps {- #mymaps}
 
@@ -364,7 +416,7 @@ Unfortunately, Google My Maps has no comprehensive documentation,
 so you have to explore the studio yourself if you want to create
 more complex projects.
 
-## Symbol Map with Datawrapper {- #symbolmap-datawrapper}
+## Symbol Point Map with Datawrapper {- #symbolmap-datawrapper}
 TODO: in progress https://academy.datawrapper.de/article/114-how-to-create-a-symbol-map-in-datawrapper
 
 ## Choropleth Map with Datawrapper {- #choropleth-datawrapper}
@@ -511,6 +563,8 @@ In the final, fourth step, you can publish the chart and copy the iframe code th
 Datawrapper generated for you.
 
 Learn more about [choropleth map design in this excellent series of posts by the Datawrapper Academy](https://academy.datawrapper.de/category/93-maps).
+
+For US election maps: https://blog.datawrapper.de/how-to-visualize-the-us-election-2020-with-datawrapper/
 
 Now that you've learned how to create a choropleth map using one tool, Datawrapper, let's compare the process using a different tool, Tableau Public.
 

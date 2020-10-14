@@ -228,7 +228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
 <li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="map-socrata.html"><a href="map-socrata.html"><i class="fa fa-check"></i>Current Map with Socrata Open Data</a></li>
@@ -346,36 +346,36 @@ it limits your styling options.</p>
 within Google Drive, and so allows you to invite
 other users with Google accounts to work on the map.</p>
 <p>In this section, we will look at building a point map of airports in Nigeria, as is shown
-in Figure <a href="mymaps.html#fig:mymaps-final">8.11</a>. We will
+in Figure <a href="mymaps.html#fig:mymaps-final">8.17</a>. We will
 create a map, change a baselayer, import point data, style points, and share the map.</p>
 
 <div class="figure"><span id="fig:mymaps-final"></span>
 <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1v1ZNrpfBtq_p4wTRyj2hIKBtTnkmhnMF" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 8.11: A map of airports in Nigeria built using Google My Maps.
+Figure 8.17: A map of airports in Nigeria built using Google My Maps.
 </p>
 </div>
 <div id="create-a-new-map-in-my-maps" class="section level3 unnumbered" number="">
 <h3>Create a New Map in My Maps</h3>
 <p>Navigate to <a href="https://www.google.com/mymaps/">Google My Maps</a>.
 In the upper-right corner, click <code>+ Create a New Map</code> button,
-as shown in Figure <a href="mymaps.html#fig:mymaps-create-new">8.12</a>.</p>
+as shown in Figure <a href="mymaps.html#fig:mymaps-create-new">8.18</a>.</p>
 
 <div class="figure"><span id="fig:mymaps-create-new"></span>
 <img src="images/08-map/mymaps-create-new.png" alt="A map of airports in Nigeria built using Google My Maps." width="300" />
 <p class="caption">
-Figure 8.12: A map of airports in Nigeria built using Google My Maps.
+Figure 8.18: A map of airports in Nigeria built using Google My Maps.
 </p>
 </div>
 <p>You will see a typical Google Maps with no data. Click on the current title (<code>Untitled map</code>),
 and add appropriate title and description in the modal window that appeared
-(see Figure <a href="mymaps.html#fig:mymaps-edit-title">8.13</a> for inspiration).</p>
+(see Figure <a href="mymaps.html#fig:mymaps-edit-title">8.19</a> for inspiration).</p>
 
 <div class="figure"><span id="fig:mymaps-edit-title"></span>
 <img src="images/08-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
 <p class="caption">
-Figure 8.13: Add title and description to your map.
+Figure 8.19: Add title and description to your map.
 </p>
 </div>
 <p>Before we add any points, let’s change the basemap to something less boring.
@@ -386,22 +386,22 @@ a dataset of Nigerian airports that we got <a href="https://datacatalog.worldban
 as a Shapefile and then converted to a CSV.</p>
 <p>Under <em>Untitled layer</em> item, click <em>Import</em> button, and drag-and-drop the CSV file.
 Once the data file is uploaded, My Maps will ask which columns contain location data.
-In our case, these are <em>LATITUDE</em> and <em>LONGITUDE</em> columns, as shown in Figure <a href="mymaps.html#fig:mymaps-lat-lon">8.14</a>.</p>
+In our case, these are <em>LATITUDE</em> and <em>LONGITUDE</em> columns, as shown in Figure <a href="mymaps.html#fig:mymaps-lat-lon">8.20</a>.</p>
 
 <div class="figure"><span id="fig:mymaps-lat-lon"></span>
 <img src="images/08-map/mymaps-lat-lon-annotated.png" alt="Check LATITUDE and LONGITUDE as your location columns." width="300" />
 <p class="caption">
-Figure 8.14: Check LATITUDE and LONGITUDE as your location columns.
+Figure 8.20: Check LATITUDE and LONGITUDE as your location columns.
 </p>
 </div>
 <p>Once the two boxes are checked, click <em>Continue</em>. Another window will pop up, asking
-which column to use to annotate points. Choose <em>City</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-column-title">8.15</a>,
+which column to use to annotate points. Choose <em>City</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-column-title">8.21</a>,
 and then <em>Finish</em>.</p>
 
 <div class="figure"><span id="fig:mymaps-column-title"></span>
 <img src="images/08-map/mymaps-column-title-annotated.png" alt="Choose City as the title for your markers." width="300" />
 <p class="caption">
-Figure 8.15: Choose City as the title for your markers.
+Figure 8.21: Choose City as the title for your markers.
 </p>
 </div>
 <p>It will take a few moments for My Maps to create a new layer, which
@@ -413,12 +413,12 @@ on the right. Change “All items” text to “Airports”,
 choose orange color, and click on <em>More icons</em> to find an airport symbol
 (we recommend using Filter to search for “airport”, or simply scroll down to Transportation section).
 The marker in the layers menu will change to an orange airplane,
-as shown in Figure <a href="mymaps.html#fig:mymaps-color">8.16</a>.</p>
+as shown in Figure <a href="mymaps.html#fig:mymaps-color">8.22</a>.</p>
 
 <div class="figure"><span id="fig:mymaps-color"></span>
 <img src="images/08-map/mymaps-color-annotated.png" alt="In My Maps, you can change marker colors and icons." width="300" />
 <p class="caption">
-Figure 8.16: In My Maps, you can change marker colors and icons.
+Figure 8.22: In My Maps, you can change marker colors and icons.
 </p>
 </div>
 <p>Click on the layer name, which by default is set to the name of imported file (<code>nigeria-airports.csv</code>),
@@ -431,24 +431,24 @@ to the right of the markers.</p>
 <div id="share-your-google-my-map" class="section level3 unnumbered" number="">
 <h3>Share Your Google My Map</h3>
 <p>If you are happy with the result, click <em>Share</em>, and click <em>Change to anyone with the link</em>
-(see Figure <a href="mymaps.html#fig:mymaps-share">8.17</a>),
+(see Figure <a href="mymaps.html#fig:mymaps-share">8.23</a>),
 just as you would with any other Google Drive document.</p>
 
 <div class="figure"><span id="fig:mymaps-share"></span>
 <img src="images/08-map/mymaps-share.png" alt="Make sure anyone with the link can view your map before you share it." width="400" />
 <p class="caption">
-Figure 8.17: Make sure anyone with the link can view your map before you share it.
+Figure 8.23: Make sure anyone with the link can view your map before you share it.
 </p>
 </div>
 <p>You can now generate a code snippet to embed the map as an iframe.
-From the main kebab menu to the right of the map title, choose <em>Embed on my site</em> (Figure <a href="mymaps.html#fig:mymaps-embed">8.18</a>).
+From the main kebab menu to the right of the map title, choose <em>Embed on my site</em> (Figure <a href="mymaps.html#fig:mymaps-embed">8.24</a>).
 You can use now use this iframe code to embed your map to
 your Wordpress, Squarespace, or any other website.</p>
 
 <div class="figure"><span id="fig:mymaps-embed"></span>
 <img src="images/08-map/mymaps-embed-annotated.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
 <p class="caption">
-Figure 8.18: My Maps can generate an iframe code to include the map on your own website.
+Figure 8.24: My Maps can generate an iframe code to include the map on your own website.
 </p>
 </div>
 </div>

@@ -10,11 +10,13 @@ Whenever someone explains something by showing you data, the correct response is
 
 Imagine the topic is traffic safety, and comparisons across US states. What kind of data would you find most meaningful? (Cairo uses this example, and we can cite and simplify, or create parallel version with other data)
 
-1. Total traffic deaths by state (show bar chart of 5 most deadly): Good start, but these absolute numbers (aka raw numbers) ignore the fact that states have different populations. Far more people live in CA and TX than VT and WY. Simply comparing total deaths does not take into account the different denominators...
+https://www.iihs.org/topics/fatality-statistics/detail/state-by-state
 
-2. Traffic deaths per capita by state (show bar chart of 5 most deadly): Better, because it shows a relative number, rather than an absolute. Show how we arrived at this by dividing the total traffic deaths by total population. Since those numbers are small, we multiply them by 100,000 (or other figure) to express them per capita. Out of 100,000 people residents in the state, about X die in highway deaths. But is the most meaningful way to compare states? In large cities with public transit, fewer people drive. In rural areas, people who drive often spend more time in the
+1. Total traffic deaths by state (show table of 5 most deadly): Good start, but these absolute numbers (aka raw numbers) ignore the fact that states have different populations. Far more people live in CA and TX than VT and WY. Simply comparing total deaths does not take into account the different denominators...
 
-3. Traffic deaths per capita per mile-hours driven (show bar chart of 5 most deadly): Explain how we arrived...
+2. Traffic deaths per capita by state (show table of 5 most deadly): Better, because it shows a relative number, rather than an absolute. Show how we arrived at this by dividing the total traffic deaths by total population. Since those numbers are small, we multiply them by 100,000 (or other figure) to express them per capita. Out of 100,000 people residents in the state, about X die in highway deaths. But is the most meaningful way to compare states? In large cities with public transit, fewer people drive. In rural areas, people who drive often spend more time in the
+
+3. Traffic deaths per capita per mile-hours driven (show table of 5 most deadly): Explain how we arrived...
 
 Cairo argues that when we make more appropriate data comparisons, we get closer to the truth....
 

@@ -228,7 +228,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
 <li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
-<li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Map with Datawrapper</a></li>
+<li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="map-tableau.html"><a href="map-tableau.html"><i class="fa fa-check"></i>Choropleth Map with Tableau Public</a></li>
 <li class="chapter" data-level="" data-path="map-socrata.html"><a href="map-socrata.html"><i class="fa fa-check"></i>Current Map with Socrata Open Data</a></li>
@@ -344,7 +344,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a href="scatter-tableau.html">scattercharts</a> and <a href="filtered-line-tableau.html">filtered line charts</a>.
 Tableau can also be used to create point and polygon maps.</p>
 <p>In this tutorial, we will create a choropleth map of military spending per country
-as percentage of gross domestic product as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-final">8.25</a>.
+as percentage of gross domestic product as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-final">8.31</a>.
 Remember that choropleth maps work best when
 they show relative, not absolute numbers.
 Displaying total spending per country is a bad idea, as bigger countries tend
@@ -356,7 +356,7 @@ including military spending.</p>
 <iframe src="https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 8.25: Filled Polygon (Choropleth) map: Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1">interactive version</a>. Data from TODO.
+Figure 8.31: Filled Polygon (Choropleth) map: Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1">interactive version</a>. Data from TODO.
 </p>
 </div>
 <p>ADD limitations of Tableau Public maps: work best when you enter places or regions that the software already recognizes by name or three-letter code</p>
@@ -379,19 +379,19 @@ article from the official Tableau documentation.</p>
 <p>Launch Tableau. In <strong>Connect</strong> section on start up, choose <em>Text file</em>, and select <code>military-spending-2018.csv</code>.
 From Data Source tab, inspect the dataset contents. It contains four columns: Country Name, which includes
 countries and territories defined by the World Bank, the three-digit Country Code,
-Indicator Name (same for all rows), and percent value, as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-connect">8.26</a>.
+Indicator Name (same for all rows), and percent value, as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-connect">8.32</a>.
 Notice that some values are set to <em>null</em> (not available).</p>
 
 <div class="figure"><span id="fig:tableau-polygon-connect"></span>
 <img src="images/08-map/tableau-polygon-connect-annotated.png" alt="When finished inspecting the connected file, go to Sheet 1."  />
 <p class="caption">
-Figure 8.26: When finished inspecting the connected file, go to Sheet 1.
+Figure 8.32: When finished inspecting the connected file, go to Sheet 1.
 </p>
 </div>
 <p>In the variables list on the left, notice how Tableau generated <em>Latitude</em> and <em>Longitude</em>
 fields based on country names and country codes (by the way, you only need one or the other, not both).</p>
 <p>Drag and drop Longitude to <strong>Columns</strong>, and <em>Latitude</em> to <strong>Rows</strong>,
-as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-drag">8.27</a>.
+as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-drag">8.33</a>.
 You should see that the chart area shows an empty map of the world
 (if not, double-check that Latitude is indeed in Rows, not Columns).
 In Marks box, change <em>Automatic</em> to <em>Map</em>, and drag <em>Country Name</em> variable
@@ -400,7 +400,7 @@ to the <strong>Size</strong> box of the Marks card. You will see that country ou
 <div class="figure"><span id="fig:tableau-polygon-drag"></span>
 <img src="images/08-map/tableau-polygon-drag-annotated.png" alt="Drag and drop variables to the right places."  />
 <p class="caption">
-Figure 8.27: Drag and drop variables to the right places.
+Figure 8.33: Drag and drop variables to the right places.
 </p>
 </div>
 <p>We want colors to represent military spending values, so drag <em>Value</em> variable to
@@ -410,34 +410,34 @@ painted with the lightest color, which is misleading. To remove countries with <
 from the map, drag <em>Values</em> to the <em>Filters</em> card. A popup window will ask you how
 you want to filter, just leave everything unchanged. This will leave the whole range of values,
 and exclude <em>null</em> values (see the checkbox in the lower-right corner of the Filter window
-in Figure <a href="map-tableau.html#fig:tableau-polygon-filter">8.28</a>).</p>
+in Figure <a href="map-tableau.html#fig:tableau-polygon-filter">8.34</a>).</p>
 
 <div class="figure"><span id="fig:tableau-polygon-filter"></span>
 <img src="images/08-map/tableau-polygon-filter-annotated.png" alt="Filter values to remove countries with no data from display." width="400" />
 <p class="caption">
-Figure 8.28: Filter values to remove countries with no data from display.
+Figure 8.34: Filter values to remove countries with no data from display.
 </p>
 </div>
 <p>You can change the color scheme by clicking the Color box of the Marks card, and
 then <em>Edit colors</em>. Change the palette to <em>Reds</em>, and make it stepped rather than continuous,
-as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-color">8.29</a>.</p>
+as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-color">8.35</a>.</p>
 
 <div class="figure"><span id="fig:tableau-polygon-color"></span>
 <img src="images/08-map/tableau-polygon-color.png" alt="Change the color scheme to Reds with 5 steps." width="400" />
 <p class="caption">
-Figure 8.29: Change the color scheme to Reds with 5 steps.
+Figure 8.35: Change the color scheme to Reds with 5 steps.
 </p>
 </div>
 <p>You may notice the tooltip calls values <em>Value</em> when hovering over countries.
 Click the Tooltip box of the Marks card to change text to <em>Military spending</em>,
-and add a percentage sign after the value itself, as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-tooltip">8.30</a>.
+and add a percentage sign after the value itself, as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-tooltip">8.36</a>.
 Make sure not to change values between
 <code>&lt;</code> and <code>&gt;</code>, as these are references to variables.</p>
 
 <div class="figure"><span id="fig:tableau-polygon-tooltip"></span>
 <img src="images/08-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
-Figure 8.30: Change tooltip text to make it more user-friendly.
+Figure 8.36: Change tooltip text to make it more user-friendly.
 </p>
 </div>
 <p>And finally, let’s add a proper title to the map. Double-click the default <em>Sheet 1</em> name

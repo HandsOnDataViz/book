@@ -593,108 +593,60 @@ Now that you've learned how to create a choropleth map using one tool, Datawrapp
 
 ## Choropleth Map with Tableau Public {- #map-tableau}
 
-TODO: revise to make polygon/choropleth map vocab more consistent in this chapter;
+We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building [scattercharts](scatter-tableau.html) and [filtered line charts](filtered-line-tableau.html) in Chapter 7. Now let's use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. Tableau Public also can create point maps for geographic names it already recognizes, but it's not ideal the tool cannot geocode new street addresses, such as "1600 Pennsylvania Avenue, Washington DC" (TODO: confirm this.) If you require custom boundaries or points (such as town names in your local language),
+take a look at [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
+article from the official Tableau documentation.
 
-
-
-TODO: Revise visual instructions to create choropleth map; drag a geo dimension (such as country name) directly into sheet to make map appear; then
-
-WARNING: Tableau Public sometimes hides important items *behind* the "Show Me" panel. For example, the color palette menu....
-
-In the previous chapter, we looked at using Tableau Public to build
-[scattercharts](scatter-tableau.html) and [filtered line charts](filtered-line-tableau.html).
-Tableau can also be used to create point and polygon maps.
-
-
-
-In this tutorial, we will create a choropleth map of military spending per country
-as percentage of gross domestic product as shown in Figure \@ref(fig:tableau-polygon-final).
-Remember that choropleth maps work best when
-they show relative, not absolute numbers.
-Displaying total spending per country is a bad idea, as bigger countries tend
-to have larger populations and as a result larger values for a lot of measures,
-including military spending.
+In this section, we will create a choropleth map of military spending per country as a percentage of their gross domestic product (GDP), as shown in Figure \@ref(fig:tableau-polygon-final). Remember that choropleth maps work best when we [normalize the data](normalize-choropleth.html) to show relative, rather than absolute, numbers. Creating a map of total military spending per country would not be very meaningful, as larger nations tend to have larger economies, so we'll base our map on the percentage of their economy that is spent on the military.
 
 <!-- TODO: reminder that this Tableau visualization is stored in Ilya's account at https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1 -->
 
-(ref:tableau-polygon-final) Filled Polygon (Choropleth) map: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from TODO.
+(ref:tableau-polygon-final) Choropleth map of military spending with Tableau Public. Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from the World Bank.
 
 ```{r tableau-polygon-final, fig.cap="(ref:tableau-polygon-final)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/08-map/tableau-polygon-final.png")
 ```
 
-ADD limitations of Tableau Public maps: work best when you enter places or regions that the software already recognizes by name or three-letter code
+To create your own choropleth map with Tableau Public, follow this tutorial.
 
-it's much easier if Tableau recognizes the geography and names (show list -- )
-To create maps in Tableau, you do not always need geospatial files. Tableau can recognize
-of a lot of locations, including boundaries for countries and territories, counties within countries,
-states, US zip codes, airport codes, city locations, and some others. A simple spreadsheet that references
-these locations can suffice. In this tutorial, we will rely on Tableau to automatically recognize country
-names.
+1. Open the [Military Spending by Nation as Percent of GDP data in Google Sheets](https://docs.google.com/spreadsheets/d/1tr9VrqKnO5tf55_YUCk441bFsZSI4zgMzW5ow3-wioo/edit#gid=490588019), which we downloaded from the [World Bank](https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS?view=chart). Examine the data and the notes.
 
-not ideal for point maps because you cannot geocode new street addresses, such as "1600 Pennsylvania Avenue, Washington DC" (TODO: Check)
+Good maps often require [cleaning up messy data as described in Chapter 5](clean.html). In our spreadsheet we removed rows for nations that did not report any data. Tableau Public recognizes many different types of geographic names (such as cities and nations), so we will rely on the tool to deal with any spelling issues and properly place all of them on the map.
 
-Good for point symbol maps
+2. Go to *File > Download* in CSV format (comma-separated values) to save the data to your local computer.
 
-Good for choropleth maps if the tool recognizes geographic names, but less ability to modify color ranges than Datawrapper....
+3. Download, install, and launch the [free Tableau Public desktop application](https://public.tableau.com/en-us/s/download), available for Mac or Windows. It will require you to enter an email address.
 
-If you require custom boundaries or points (such as town names in your local language),
-take a look at [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
-article from the official Tableau documentation.
+4. In the *Connect* screen, select *Text file*, and upload the military spending CSV data file you downloaded above.
 
+5. In the *Data Source* screen, inspect the dataset, which contains three columns: Country, Most Year Year of the data, and Military Spending as Percent of GDP. Notice that a small globe appears at the top of the Country column, which shows that Tableau Public successfully recognized it as geographic data, rather than string or text data. If that globe was not there, you can select its menus to set its proper geographic role, as shown in Figure \@ref(fig:tableau-data-geographic).
 
-### Create a Choropleth Map in Tableau {-}
+(ref:tableau-data-geographic) Confirm that Tableau Public recognizes your geographic place names.
 
-TODO: TODO: fix data because it currently includes several international regions, which are not nations; place inside Google Sheet; change "value" to "MilitaryPctGDP"
-
-Before we begin, [download the 2018 data](data/military-spending-2018.csv) that we obtained from the World Bank.
-
-Launch Tableau. In **Connect** section on start up, choose *Text file*, and select `military-spending-2018.csv`.
-From Data Source tab, inspect the dataset contents. It contains four columns: Country Name, which includes
-countries and territories defined by the World Bank, the three-digit Country Code,
-Indicator Name (same for all rows), and percent value, as shown in Figure \@ref(fig:tableau-polygon-connect).
-Notice that some values are set to *null* (not available).
-
-(ref:tableau-polygon-connect) When finished inspecting the connected file, go to Sheet 1.
-
-```{r tableau-polygon-connect, fig.cap="(ref:tableau-polygon-connect)"}
-knitr::include_graphics("images/08-map/tableau-polygon-connect-annotated.png")
+```{r tableau-data-geographic, outwidth=400, fig.cap="(ref:tableau-data-geographic)"}
+knitr::include_graphics("images/08-map/tableau-data-geographic.png")
 ```
 
-In the variables list on the left, notice how Tableau generated *Latitude* and *Longitude*
-fields based on country names and country codes (by the way, you only need one or the other, not both).
+6. In the bottom-left corner, click the orange *Sheet 1* button to go to the Worksheet to create your map, as shown in Figure \@ref(fig:tableau-go-to-worksheet).
 
-Drag and drop Longitude to **Columns**, and *Latitude* to **Rows**,
-as shown in Figure \@ref(fig:tableau-polygon-drag).
-You should see that the chart area shows an empty map of the world
-(if not, double-check that Latitude is indeed in Rows, not Columns).
-In Marks box, change *Automatic* to *Map*, and drag *Country Name* variable
-to the **Size** box of the Marks card. You will see that country outlines turned blue.
+(ref:tableau-go-to-worksheet) Click the orange button to go to the worksheet to create your map.
 
-(ref:tableau-polygon-drag) Drag and drop variables to the right places.
-
-```{r tableau-polygon-drag, fig.cap="(ref:tableau-polygon-drag)"}
-knitr::include_graphics("images/08-map/tableau-polygon-drag-annotated.png")
+```{r tableau-go-to-worksheet, out.width=400, fig.cap="(ref:tableau-go-to-worksheet)"}
+knitr::include_graphics("images/08-map/tableau-go-to-worksheet.png")
 ```
 
-We want colors to represent military spending values, so drag *Value* variable to
-the **Color** box of the Marks card. You should now see a proper choropleth map.
+7. In the *Worksheet*, create your choropleth map using a two-step process, as shown in Figure \@ref(fig:tableau-drag). First, drag-and-drop the *Country* geographic data into the middle of the worksheet to create the map, which will temporarily appear as a point symbol map. Second, drag-and-drop the *Military Pct GDP* data values into the *Color* box of the *Marks* area to transform it into a choropleth map.
 
-Places like Greenland and Libya do not have available values, but they are still
-painted with the lightest color, which is misleading. To remove countries with *null* values
-from the map, drag *Values* to the *Filters* card. A popup window will ask you how
-you want to filter, just leave everything unchanged. This will leave the whole range of values,
-and exclude *null* values (see the checkbox in the lower-right corner of the Filter window
-in Figure \@ref(fig:tableau-polygon-filter)).
+(ref:tableau-drag) Drag and drop *Country* to the center of the sheet, then *Military Pct GDP* to the *Color* box in the *Marks* area.
 
-(ref:tableau-polygon-filter) Filter values to remove countries with no data from display.
-
-```{r tableau-polygon-filter, out.width=400, fig.cap="(ref:tableau-polygon-filter)"}
-knitr::include_graphics("images/08-map/tableau-polygon-filter-annotated.png")
+```{r tableau-drag, fig.cap="(ref:tableau-drag)"}
+knitr::include_graphics("images/08-map/tableau-drag-annotated.png")
 ```
 
-You can change the color scheme by clicking the Color box of the Marks card, and
-then *Edit colors*. Change the palette to *Reds*, and make it stepped rather than continuous,
+8. Tableau Public hides your map legend menu behind the *Show Me* menu, so click the menu to shrink it and display your legend.
+
+9. You can change the color palette by clicking the Color box of the Marks card, and
+then *Edit colors*. Change the palette to *Reds*, and change it from continuous to steps,
 as shown in Figure \@ref(fig:tableau-polygon-color).
 
 (ref:tableau-polygon-color) Change the color scheme to Reds with 5 steps.
@@ -703,7 +655,7 @@ as shown in Figure \@ref(fig:tableau-polygon-color).
 knitr::include_graphics("images/08-map/tableau-polygon-color.png")
 ```
 
-You may notice the tooltip calls values *Value* when hovering over countries.
+10. You may notice the tooltip calls values *Value* when hovering over countries.
 Click the Tooltip box of the Marks card to change text to *Military spending*,
 and add a percentage sign after the value itself, as shown in Figure \@ref(fig:tableau-polygon-tooltip).
 Make sure not to change values between
@@ -715,21 +667,17 @@ Make sure not to change values between
 knitr::include_graphics("images/08-map/tableau-polygon-tooltip.png")
 ```
 
-And finally, let's add a proper title to the map. Double-click the default *Sheet 1* name
+11. Add a proper title to the map. Double-click the default *Sheet 1* name
 to bring up the *Edit Title* window, and change the name of your chart to a more meaningful
-*Military Spending as % of GDP (2018)*.
+*Military Spending as % of GDP (most recent year)*.
 
-### Create Dashboard and Publish Your Map {-}
+12. TODO: Improve these instructions.... Create Dashboard and Publish Your Map... change color range menu to floating, place on top of map, add title and sources...
 
-TODO: make dashboard; change color range menu to floating, place on top of map, add title and sources...
-
-Once you are ready to publish and share the map, go to *File > Save to Tableau Public*.
+13. Once you are ready to publish and share the map, go to *File > Save to Tableau Public*.
 In the pop-up window, log in to your account if requested. Give it a title, such
 as *Military Spending*, and click Save.
 
 Now that you understand how to create maps using *static* data from a spreadsheet, let's explore how to create a map using the most current data available from an open-data repository.
-
-
 
 ## Current Map with Socrata Open Data {- #map-socrata}
 TODO: revise to emphasize how the map continuously pulls the most current information directly from the open-data repository; in this case, happens to be filtered point map of hospitals in Texas.... TODO: replace with a better example of frequently-updated "live" data?

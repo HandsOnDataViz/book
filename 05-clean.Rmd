@@ -257,12 +257,17 @@ We chose to only include assistance to South Korea and North Korea for the years
 Let's use OpenRefine to clean up this messy data. Download [OpenRefine](https://openrefine.org/download.html) for Windows, Mac, or Linux. Just like Tabula, it runs in your browser and no
 data leaves your local machine, which is great for confidentiality.
 
-If you work on a Mac, the downloaded file will be a .dmg file. You will likely encounter
-a security message that will prevent OpenRefine from launching because Apple cannot identify the developer. Go to *System Preferences > Security and Privacy > General tab*, and
-click the *Open Anyway* button in the lower half of the window. If prompted with another window, click *Open*.
-
 If you use Windows, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
 open in your default browser.
+
+If you work on a Mac, the downloaded file will be a .dmg file to be installed. But you will likely see a security warning that prevents OpenRefine from launching because Apple cannot identify the developer for this open-source project. To resolve the problem, go to *System Preferences > Security and Privacy > General tab*, and
+click the *Open Anyway* button in the lower half of the window, as shown in Figure \@ref(fig:openrefine-mac-alert-annotated). If prompted with another window, click *Open*.
+
+(ref:openrefine-mac-alert-annotated) If your Mac displays a warning about launching Open Refine (on left), go to *System Preferences - Security and Privacy - General tab* and click *Open Anyways* (on right).
+
+```{r openrefine-mac-alert-annotated, fig.cap="(ref:openrefine-mac-alert-annotated)"}
+knitr::include_graphics("images/05-clean/openrefine-mac-alert-annotated.png")
+```
 
 Once launched, you should see OpenRefine in your browser with `127.0.0.1:3333` address (localhost, port 3333), as shown in Figure \@ref(fig:openrefine-welcome).
 

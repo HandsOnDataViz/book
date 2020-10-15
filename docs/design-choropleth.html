@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-14" />
+<meta name="date" content="2020-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="map-design.html"/>
-<link rel="next" href="normalize-choropleth-map-data.html"/>
+<link rel="next" href="normalize-choropleth.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -225,7 +225,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
-<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
 <li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
@@ -414,7 +414,8 @@ Figure 8.9: Interpolation options in two map tools: Datawrapper (left) and Table
 </ul>
 <p>TODO: CONFIRM definitions above; add max/mid/min as an option? decide if these definitions are sufficient, or consider adding small maps to visually contrast the differences, as shown in <a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>; cite this source</p>
 <p>Which interpolation method is best? While there are no rigid rules, some methods above work better for different types of data stories. If you wish to emphasize the lows and highs in your data, choose linear because it uses color to draw attention to the extreme ends of the scale. Or if you wish to emphasize geographic diversity in your data, consider quantiles (or any of its cousins) because they use color to differentiate the middle portions of the scale. Or if you’re not sure what your data looks like, <a href="chart-google.html">create a histogram like you learned in Chapter 7: Chart Your Data</a> to visualize it and help make wise map design choices. [TODO: demonstrate a histogram with map data here? <a href="https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales" class="uri">https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales</a>]</p>
-<p>In any case, be very aware of how color palettes and interpolation dramatically shape the appearance of choropleth maps and how the data appears in readers’ eyes. Always create maps show us the story and tell the truth. [TODO: ADD THIS? In general, Datawrapper recommends choosing ranges to make sure readers “see all the differences in the data,” rather than hiding them out of sight…. cite <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>]</p>
+<p>In any case, be very aware of how color palettes and interpolation dramatically shape the appearance of choropleth maps and how the data appears in readers’ eyes. Always create maps show us the story and tell the truth. [TODO: ADD THIS? In general, Datawrapper recommends choosing ranges to make sure readers “see all the differences in the data,” rather than hiding them out of sight…. cite <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>]
+TODO ALSO: Review all of the recommendations in the Datawrapper Academy post above and decide ones to include as rules versus recommendations vs neither. For example: “use the same intervals… 0, 25, 50 instead of 0, 15, 50…” runs counter to other advice we give about interpolation.</p>
 </div>
 </div>
             </section>
@@ -423,7 +424,7 @@ Figure 8.9: Interpolation options in two map tools: Datawrapper (left) and Table
         </div>
       </div>
 <a href="map-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="normalize-choropleth-map-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="normalize-choropleth.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -475,6 +476,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

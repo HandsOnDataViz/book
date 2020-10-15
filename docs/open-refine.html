@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-14" />
+<meta name="date" content="2020-10-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -225,7 +225,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
-<li class="chapter" data-level="" data-path="normalize-choropleth-map-data.html"><a href="normalize-choropleth-map-data.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
+<li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
 <li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
@@ -353,17 +353,23 @@ We chose to only include assistance to South Korea and North Korea for the years
 <h3>Set up OpenRefine</h3>
 <p>Let’s use OpenRefine to clean up this messy data. Download <a href="https://openrefine.org/download.html">OpenRefine</a> for Windows, Mac, or Linux. Just like Tabula, it runs in your browser and no
 data leaves your local machine, which is great for confidentiality.</p>
-<p>If you work on a Mac, the downloaded file will be a .dmg file. You will likely encounter
-a security message that will prevent OpenRefine from launching because Apple cannot identify the developer. Go to <em>System Preferences &gt; Security and Privacy &gt; General tab</em>, and
-click the <em>Open Anyway</em> button in the lower half of the window. If prompted with another window, click <em>Open</em>.</p>
 <p>If you use Windows, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
 open in your default browser.</p>
-<p>Once launched, you should see OpenRefine in your browser with <code>127.0.0.1:3333</code> address (localhost, port 3333), as shown in Figure <a href="open-refine.html#fig:openrefine-welcome">5.10</a>.</p>
+<p>If you work on a Mac, the downloaded file will be a .dmg file to be installed. But you will likely see a security warning that prevents OpenRefine from launching because Apple cannot identify the developer for this open-source project. To resolve the problem, go to <em>System Preferences &gt; Security and Privacy &gt; General tab</em>, and
+click the <em>Open Anyway</em> button in the lower half of the window, as shown in Figure <a href="open-refine.html#fig:openrefine-mac-alert-annotated">5.10</a>. If prompted with another window, click <em>Open</em>.</p>
+
+<div class="figure"><span id="fig:openrefine-mac-alert-annotated"></span>
+<img src="images/05-clean/openrefine-mac-alert-annotated.png" alt="If your Mac displays a warning about launching Open Refine (on left), go to System Preferences - Security and Privacy - General tab and click Open Anyways (on right)."  />
+<p class="caption">
+Figure 5.10: If your Mac displays a warning about launching Open Refine (on left), go to <em>System Preferences - Security and Privacy - General tab</em> and click <em>Open Anyways</em> (on right).
+</p>
+</div>
+<p>Once launched, you should see OpenRefine in your browser with <code>127.0.0.1:3333</code> address (localhost, port 3333), as shown in Figure <a href="open-refine.html#fig:openrefine-welcome">5.11</a>.</p>
 
 <div class="figure"><span id="fig:openrefine-welcome"></span>
 <img src="images/05-clean/openrefine-welcome-annotated.png" alt="OpenRefine starting page."  />
 <p class="caption">
-Figure 5.10: OpenRefine starting page.
+Figure 5.11: OpenRefine starting page.
 </p>
 </div>
 </div>
@@ -377,14 +383,14 @@ Figure 5.10: OpenRefine starting page.
 In our case, parsing means the way the data is split into columns.
 Make sure OpenRefine assigned values to the right columns,
 or change setting in <em>Parse data as</em> block at the bottom of the page until it starts looking meaningful,
-like shown in Figure <a href="open-refine.html#fig:openrefine-parse">5.11</a>.</li>
+like shown in Figure <a href="open-refine.html#fig:openrefine-parse">5.12</a>.</li>
 <li>Hit <em>Create Project</em> in the upper-right corner.</li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-parse"></span>
 <img src="images/05-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
-Figure 5.11: OpenRefine parsing options.
+Figure 5.12: OpenRefine parsing options.
 </p>
 </div>
 <p>Now when you’ve successfully read the data into a new project, let’s start
@@ -417,13 +423,13 @@ cells turning green (successfully converting to numeric).
 Now we need to remove spaces and an <code>a</code> character at the end of one number.
 Fix those manually by hovering over cells, and clicking the <code>edit</code> button
 (in the new popup window, make sure to change <em>Data type</em> to <em>number</em>, and hit <em>Apply</em>,
-like in Figure <a href="open-refine.html#fig:openrefine-manual-edit">5.12</a>).</li>
+like in Figure <a href="open-refine.html#fig:openrefine-manual-edit">5.13</a>).</li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-manual-edit"></span>
 <img src="images/05-clean/openrefine-manual-edit-annotated.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
 <p class="caption">
-Figure 5.12: Manually remove spaces and extra characters, and change data type to number.
+Figure 5.13: Manually remove spaces and extra characters, and change data type to number.
 </p>
 </div>
 <p>At this point, all funding amounts should be clean numbers, right-aligned and colored in green.
@@ -443,7 +449,7 @@ that should have just two distinct values, North Korea and South Korea!</p>
 <ol style="list-style-type: decimal">
 <li>To begin standardizing spellings, click on the arrow-down button of Country column header,
 and choose <em>Edit cells</em> &gt; <em>Cluster and edit</em>. You will see a window like the one shown in Figure
-<a href="open-refine.html#fig:openrefine-cluster">5.13</a>.</li>
+<a href="open-refine.html#fig:openrefine-cluster">5.14</a>.</li>
 <li>You will have a choice of two clustering methods, <em>key collision</em> or <em>nearest neighbor</em>. Key collision
 clustering is a much faster technique that is appropriate for larger datasets, but it is less flexible.
 Nearest neighbor is a more computationally expensive approach and will be slow on larger datasets,
@@ -452,7 +458,7 @@ which you can read about <a href="https://github.com/OpenRefine/OpenRefine/wiki/
 For the purpose of this exercise, let’s leave the default <em>key collision</em> method with <em>fingerprint</em> function.</li>
 <li>OpenRefine will calculate a list of clusters. <em>Values in Cluster</em> column contains grouped spellings
 that OpenRefine considers the same. If you agree with a grouping, check the <em>Merge?</em> box, and assign
-the “true” value to the <em>New Cell Value</em> input box (see first cluster in Figure <a href="open-refine.html#fig:openrefine-cluster">5.13</a>).
+the “true” value to the <em>New Cell Value</em> input box (see first cluster in Figure <a href="open-refine.html#fig:openrefine-cluster">5.14</a>).
 In our example, this would be either <code>North Korea</code> or <code>South Korea</code>.</li>
 <li>You can go through all groupings, or stop after one or two and click <em>Merge Selected &amp; Re-Cluster</em> button.
 The clusters you chose to merge will be merged, and grouping will be re-calculated
@@ -464,7 +470,7 @@ how they produce clusters of different sizes and accuracy.</p>
 <div class="figure"><span id="fig:openrefine-cluster"></span>
 <img src="images/05-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
 <p class="caption">
-Figure 5.13: Cluster similar text values.
+Figure 5.14: Cluster similar text values.
 </p>
 </div>
 </div>
@@ -550,6 +556,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

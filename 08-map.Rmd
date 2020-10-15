@@ -197,8 +197,9 @@ TODO: CONFIRM definitions above; add max/mid/min as an option? decide if these d
 Which interpolation method is best? While there are no rigid rules, some methods above work better for different types of data stories. If you wish to emphasize the lows and highs in your data, choose linear because it uses color to draw attention to the extreme ends of the scale. Or if you wish to emphasize geographic diversity in your data, consider quantiles (or any of its cousins) because they use color to differentiate the middle portions of the scale. Or if you're not sure what your data looks like, [create a histogram like you learned in Chapter 7: Chart Your Data](chart-google.html) to visualize it and help make wise map design choices. [TODO: demonstrate a histogram with map data here? https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales]
 
 In any case, be very aware of how color palettes and interpolation dramatically shape the appearance of choropleth maps and how the data appears in readers' eyes. Always create maps show us the story and tell the truth.  [TODO: ADD THIS? In general, Datawrapper recommends choosing ranges to make sure readers "see all the differences in the data," rather than hiding them out of sight.... cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps]
+TODO ALSO: Review all of the recommendations in the Datawrapper Academy post above and decide ones to include as rules versus recommendations vs neither. For example: "use the same intervals... 0, 25, 50 instead of 0, 15, 50..." runs counter to other advice we give about interpolation.
 
-## Normalize Choropleth Map Data {-}
+## Normalize Choropleth Map Data {- #normalize-choropleth}
 
 We introduced the concept of [normalizing data in Chapter 6: Make Meaningful Comparisons](normalize.html). Normalization means adjusting data that was collected using different scales into a common scale, in order to make more appropriate comparisons. For example, it makes little sense to compare the total number of Covid cases between nations with very different populations, such as XXX and YYY (TODO: fill in examples). A better strategy is to normalize the data by comparing cases per capita (such as A per 100,000 in XXX versus B per 100,000 in YYY) to adjust for prior differences in population.
 
@@ -419,7 +420,7 @@ more complex projects.
 ## Symbol Point Map with Datawrapper {- #symbolmap-datawrapper}
 We first introduced you to the free and easy-to-learn [Datawrapper tool in Chapter 7: Chart Your Data](chart-datawrapper.html). It's also offers powerful features to create different types of maps, with professional-looking design elements. With Datawrapper you can start to work right away in your browser, with no account required unless you wish to save and share your work online.
 
-In this section, you'll learn how to create a symbol point map, which displays specific locations (such as cities) using variable-sized shapes (such as circles) or colors to represent their data values (such as population growth). See the example in Figure \@ref(fig:datawrapper-symbolmap). Remember that we use *point* data to create symbol maps, but *polygon* data to create choropleth maps, and you'll learn how to design those  with Datawrapper in the subsequent section. Later in the book, we'll explain [how to embed your interactive Datawrapper maps on the web in Chapter 10](embed.html).
+In this section, you'll learn how to create a symbol point map, which displays specific locations using variable-sized shapes or colors to represent their data values. Our sample symbol map displays about 300 major US cities as point locations with two variables: the 2019 estimated population (using circle size) and the percent change in population since 2010 (using circle color), as shown in Figure \@ref(fig:datawrapper-symbolmap). Remember that we use *point* data to create symbol maps, but *polygon* data to create choropleth maps, and you'll learn how to design those  with Datawrapper in the subsequent section. Later in the book, we'll explain [how to embed your interactive Datawrapper maps on the web in Chapter 10](embed.html).
 
 (ref:datawrapper-symbolmap) Symbol point map of US city population growth with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/V0V9Y).
 
@@ -427,9 +428,11 @@ In this section, you'll learn how to create a symbol point map, which displays s
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/V0V9Y", height="550px") else knitr::include_graphics("images/08-map/datawrapper-symbolmap.png")
 ```
 
-To create your own symbol point map, follow this tutorial.
+Datawrapper splits the process of creating a map into four steps: select map, add data, visualize, then publish and embed. To create your own symbol point map, follow this tutorial.
 
-1. Open and examine the [US Cities Population Change 2010-2019 data in Google Sheets](https://docs.google.com/spreadsheets/d/1XOhNtvYWaebP4izr0PDJfToRIbl2vki_1JNMYTKCCn0/edit#gid=1709919231). We downloaded [city population data from the US Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-cities-and-towns.html), and [cleaned it up using methods in Chapter 5](clean.html) to focus on about 300 cities with more than 100,000 residents in either 2010 or 2019. In the spreadsheet we created a new column to combine *City* and *State* to serve as a *Place Name* that Datawrapper can geocode into a latitude-longitude coordinate. Learn more about [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names). Also, we created a new column named *Percent Change*, which we calculated this way: `(2019 - 2010) / 2010 * 100`. Read the notes to see how some cities were newly incorporated or merged during this decade, which skews their population change data. Also, we collected population on 5 major cities in Puerto Rico, a US territory, but they do not appear in the map for reasons explained in step 4.
+1. Open the [US Cities Population Change 2010-2019 data in Google Sheets](https://docs.google.com/spreadsheets/d/1XOhNtvYWaebP4izr0PDJfToRIbl2vki_1JNMYTKCCn0/edit#gid=1709919231). Read the notes to understand its origin and some data issues. We downloaded [city population data for 2010-2019 from the US Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-cities-and-towns.html). But during this time period, some cities were newly incorporated or merged with outlying areas, which skews their population data over time. Also, we collected data for 5 major cities in Puerto Rico, a US territory, but they do not appear in the Datawrapper map for reasons explained in step 4.
+
+Good maps often require [cleaning up messy data as described in Chapter 5](clean.html). In our spreadsheet we narrowed the original list down to about 300 cities with more than 100,000 residents in either 2010 or 2019. Also, since we're relying on Datawrapper to correctly identify *place names*, we combined *city* and *state* into one column to improve geocoding accuracy. Learn more about [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names). Also, we created a new column named *Percent Change*, which we calculated this way: `(2019 - 2010) / 2010 * 100`.
 
 2. Go to *File > Download* in CSV format to save the data to your local computer.
 
@@ -485,153 +488,108 @@ Now that you've created a symbol point map with Datawrapper, in the next section
 
 ## Choropleth Map with Datawrapper {- #choropleth-datawrapper}
 
-TODO: Review steps due to recent Datawrapper updates: see their new Academy pages on Choropleth interpolation (ranges) and colors
+Now that you've learned how to use [Datawrapper to create charts](chart-datawrapper.html) and [symbol maps](datawrapper-symbolmap.html), now let's design a choropleth map. These maps are best to show patterns across geographic areas by coloring polygons to represent data values. Datawrapper offers a wide collection of common geographical boundaries, including world regions, states and provinces, and also hexagons (cartograms), counties, congressional districts, and census tracts for the United States.
 
-In addition to creating wonderful interactive charts, Datawrapper lets you create
-stylish and interactive point and polygon maps.
-In this section, we will create a choropleth map of average home values in US states
-in 2019 according to [Zillow data](https://www.zillow.com/research/data/),
-as shown in Figure \@ref(fig:datawrapper-map-final).
+In this section, you'll create a choropleth map of typical home values for US states in August 2020 according to the [Zillow Home Value Index](https://www.zillow.com/research/data/), as shown in Figure \@ref(fig:datawrapper-map-final). The index reflects typical home values (meaning those in the 35th to 65th percentile range, around the median) for single-family residences, condos, and co-ops, and it is smoothed and seasonally adjusted.
 
-We calculated average 2019 prices for 50 US states and DC, and put them in a spreadsheet, which
-[you can download](data/us-states-home-values-zillow-2019.csv) for this tutorial.
-
-TODO: Move this here? Note: See [Normalize Data to Create Meaningful Choropleth Maps](normalize.html) section to learn why you should avoid displaying absolute values or counts in choropleth maps.
-
-(ref:datawrapper-map-final) This choropleth map is created in Datawrapper
+(ref:datawrapper-map-final) Choropleth map of 2020 home values in US states with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/kSYrw/).
 
 ```{r datawrapper-map-final, fig.cap="(ref:datawrapper-map-final)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/uX2Yx/2/", height="513px") else knitr::include_graphics("images/08-map/datawrapper-map-final.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/kSYrw/", height="530px") else knitr::include_graphics("images/08-map/datawrapper-map-final.png")
 ```
 
-### Create a New Choropleth Map {-}
+Datawrapper splits the process of creating a map into four steps: select map, add data, visualize, then publish and embed. To create your own choropleth map, follow this tutorial.
 
-Sign in to your [Datawrapper account](https://app.datawrapper.de/signin)
-and click *New Map* in the header. Datawrapper will offer a choice of
-a *Choropleth*, *Symbol*, and *Locator* maps, as shown in Figure \@ref(fig:datawrapper-map-choose).
-Go ahead and choose *choropleth*.
+1. Open the [Home Value Index data in Google Sheets](https://docs.google.com/spreadsheets/d/1Rdaf_buH629NmO1BL_x7PMrD0wpuAeAaw0PMIkYqu1U/edit#gid=283507276), which we downloaded from the [Zillow research site](https://www.zillow.com/research/data/). Read the notes to understand its origin and some data issues. For example, Washington DC was included in the data, but it does not yet appear in the Datawrapper map of US states, because the District of Columbia is not a state.
 
-(ref:datawrapper-map-choose) Sign in to Datawrapper, click *New Map*, and choose *Choropleth*.
+Good maps often require [cleaning up messy data as described in Chapter 5](clean.html). In our spreadsheet we removed all of the columns except two, August 2019 and August 2020, and we also inserted a *Percent Change* column, which we calculated this way: `(2020 - 2019) / 2019 * 100`. Also, we're fortunate that Datawrapper easily recognizes US state names and abbreviations. If you're mapping other types of geographic areas, learn more about [international ISO codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) and [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names).
 
-```{r datawrapper-map-choose, fig.cap="(ref:datawrapper-map-choose)"}
+2. Go to *File > Download* in CSV format to save the data to your local computer.
+
+3. Open [Datawrapper](https://datawrapper.de), click the *New Map* button, and select *Choropleth map* as shown in Figure \@ref(fig:datawrapper-map-choose). No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.
+
+(ref:datawrapper-map-choose) In Datawrapper, click *New Map*, and choose *Choropleth*.
+
+```{r datawrapper-map-choose, out.width=500, fig.cap="(ref:datawrapper-map-choose)"}
 knitr::include_graphics("images/08-map/datawrapper-map-choose-annotated.png")
 ```
 
-Datawrapper splits the process of creating a map into four steps.
-In step one, you need to choose your map boundaries. Datawrapper has a
-wide collection of most common geographical boundaries, including
-states and counties and municipalities for most countries in the world,
-and zip code and census tract areas for the United States. But you are not limited
-to the boundaries that Datawrapper already has. You can also upload your own custom geographies
-as a TopoJSON or GeoJSON file, and you will learn more about that in the [Convert to GeoJSON section of Chapter 14](convert-geojson.html).
-Because we are mapping average home prices by US state, choose *United States > States*,
-as shown in Figure \@ref(fig:datawrapper-map-us-states), and hit *Next* to go to step 2.
+4. In the *Select your map* screen, choose your geographic boundaries, and in this case choose *USA > States*,
+as shown in Figure \@ref(fig:datawrapper-map-us-states), then click *Proceed*. Since Washington, DC is not a state, it does not appear in this map of US States.
 
-(ref:datawrapper-map-us-states) To map home prices by US state, choose appropriate boundaries.
+(ref:datawrapper-map-us-states) Choose *USA - States* for your map outline.
 
-```{r datawrapper-map-us-states, fig.cap="(ref:datawrapper-map-us-states)"}
+```{r datawrapper-map-us-states, out.width=500, fig.cap="(ref:datawrapper-map-us-states)"}
 knitr::include_graphics("images/08-map/datawrapper-map-us-states-annotated.png")
 ```
 
-In the second step, you can attach data to the chosen boundaries.
-You can set values manually in the interactive table that Datawrapper offers.
-This is fine for several values, but is too time-consuming for all 50 values
-(District of Columbia is not a US state, so is not present in the boundaries).
-Instead, click *Import your dataset* button under the table.
+Hint: If Datawrapper does not list your preferred map outline, you can upload your own custom geography data in GeoJSON or TopoJSON format, which you will learn more about in the [Convert to GeoJSON section of Chapter 14](convert-geojson.html).
 
-Datawrapper will warn you that you need either *Names* (full state names, such as `Connecticut`),
-or *ISO-Codes* (the standardized two-letter codes for the state, such as `CT` for Connecticut)
-columns in order to perform merging.
-Since the dataset that we prepared contains both columns (titled *State* and *StateAbbr*),
-you can confidently press the *Start import* button.
+5. In the *Add your data* screen, you can manually enter data for each area, which would be fine for just a few, but not for 50 states. Instead, scroll down and click the *Import your dataset* button, as shown in Figure \@ref(fig:datawrapper-import-dataset). Datawrapper will explain that your data must include either *Names* (such as `California`) or *ISO-Codes* (standardized two-letter codes for states, such as `CA`, or three-letter codes for nations, such as `USA`). Since we prepared our data this way, click *Start Import*.
 
-TODO: convert this CSV file into a Google Sheet with data and notes tabs, which requires users to look at the data (even briefly) before downloading it
+(ref:datawrapper-import-dataset) Scroll down below the *add data* table to import your dataset.
 
-In the following window, you can either copy/paste values from the spreadsheet,
-or upload a CSV file. We recommend uploading a file, so click the link and choose the file
-`us-states-home-values-zillow-2019.csv`. The table will then get populated,
-and Datawrapper will ask for help identifying the relevant column with geographical names.
-Make sure your *Matched as ISO-Codes* tooltip is blue above the *StateAbbr* column,
-scroll down and click *Next*, as shown in Figure \@ref(fig:datawrapper-map-match).
+```{r datawrapper-import-dataset, out.width=300, fig.cap="(ref:datawrapper-import-dataset)"}
+knitr::include_graphics("images/08-map/datawrapper-import-dataset.png")
+```
 
-(ref:datawrapper-map-match) Tell Datawrapper which column contains geography names (ISO-Codes of states).
+6. On the *Import your dataset* screen, instead of pasting your data, we recommend that you click to *upload a CSV file* and select the file you downloaded in step 2.
 
-```{r datawrapper-map-match, out.width=350, fig.cap="(ref:datawrapper-map-match)"}
+7. In the *Match your columns* screen, click the column that matches up with ISO codes, as shown in Figure \@ref(fig:datawrapper-map-match). You may need to scroll down a bit to click the *Next* button, then *Continue*.
+
+(ref:datawrapper-map-match) Select the data column that contains matching ISO codes.
+
+```{r datawrapper-map-match, out.width=500, fig.cap="(ref:datawrapper-map-match)"}
 knitr::include_graphics("images/08-map/datawrapper-map-match.png")
 ```
 
-In a similar fashion, you will then be asked to identify a column that contains *values* to be mapped. Make sure it is *HomeValue2019* that is *Matched As Values*.
+8. In a similar way on the next screen, click the column of data values that you initially want to map, and click *Matched as values*. For this tutorial, select *Aug2020 Home Values*, then scroll down to click *Next*, then *Go*, then *Proceed*. You'll be able to map other data values in a later step.
 
-### Select the color range {-}
+9. In the *Visualize* screen, under the *Refine* tab, click the *wrench symbol* next to the color palette to review the *default* map settings, as shown in Figure \@ref(fig:datawrapper-map-default). Never automatically accept the default map, but it's a good place to start and explore how factors shape its appearance.
 
-TODO: Update and expand this section to match recent changes to Datawrapper
+(ref:datawrapper-map-default) Under the *Refine* tab, click the *wrench symbol* to see the default map settings.
 
-- Color palette: explain difference and best cases for using sequential, diverging, categorical colors, and refer back to ColorBrewer section above.
-- Color type: steps vs continuous
-- Interpolation (see below)
-- see also Data Academy choropleth map design page
-
-When finished uploading data, go to step 3 to begin visualizing. Start with the *Refine* tab and choose
-a diverging color palette, from reds to blues. Make sure your "middle" color value
-corresponds to the state with the median home price by choosing *min/median/max* value
-from the Stops dropdown, as shown in Figure \@ref(fig:datawrapper-map-color).
-
-(ref:datawrapper-map-color) Choose red/blues divergent color scheme, and make sure to match median with the neutral (middle) value.
-
-```{r datawrapper-map-color, out.width=350, fig.cap="(ref:datawrapper-map-color)"}
-knitr::include_graphics("images/08-map/datawrapper-map-color.png")
+```{r datawrapper-map-default, out.width=500, fig.cap="(ref:datawrapper-map-default)"}
+knitr::include_graphics("images/08-map/datawrapper-map-default.png")
 ```
 
-In the *Visualize* screen, next to *Select palette*, click the *wrench symbol* to open up the color settings, as shown in FIG TODO.
+Let's review key concepts we first introduced in the [Design Choropleth Colors & Intervals section](design-choropleth.html) of this chapter. The default map shows a *continuous* green-to-blue color palette, with *linear* interpolation, which means the home values are distributed in a straight line up the scale. These colors and intervals work better for a data story that emphasizes the low and high extremes.
 
-INSERT wide screenshot here
+10. In the *Refine* tab, experiment with different types of interpolation to change how values are assigned to colors. For example, change from *linear* to *quartiles*, which groups the data into four groups of equal size, as shown in Figure \@ref(fig:datawrapper-map-quartiles). This map works better for a data story that emphasizes geographic diversity, since we see more contrast between states in the middle range.
 
-Below the color palette, experiment with the two *Types* of color ranges, as shown in FIG TODO. Click *Steps* to display values in the same range with the same color, like a staircase of steps at different heights. Now click *Continuous* to assign each value a color on the gradient, like a ramp that gradually goes up. Notice how the map menu and coloring changes according to type. For now, we'll use the default *Continuous* setting.
+(ref:datawrapper-map-quartiles) Under the *Refine* tab, change the interpolation from *linear* to *quartiles* and see how the map changes.
 
-datawrapper-color-type.png
-
-Experiment with the *Interpolation* menu, which refers to the method of assigning values along the color range you selected above.
-
-TODO: consider using a simple dataset or histogram to illustrate the concepts below, similar to this Data Academy post https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales
-
-- *Linear* means that the values are placed in a straight line, from lowest to highest. This method is best when the data are evenly distributed, because the colors draw attention to the outliers at the low and high ends.
-- *Quantiles* means that the values are divided into equal-count groups. More specifically, *quartiles*, *quintiles*, and *deciles* means dividing the values into four, five, or ten groups, where each group has an equal count. This method is best when the data are not evenly distributed, because the colors draw more attention to the diversity of groups inside the range, not just those at the ends.
-- *Rounded values* are similar to quantiles, but decimals in the color range are replaced with nicer-looking rounded numbers.
-- *Natural breaks (Jenks)* offers a compromise between linear (which emphasizes the extreme ends of the range) and quantiles (which emphasizes diversity inside the range).
-- *Custom* allows you to manually place stops where you wish in the color range.
-
-Notice how the menu options change depending on whether you select the *Type* to be *Steps* or *Continuous*, as shown in FIG TODO
-
-BLEND or SIDE-BY-SIDE: datawrapper-continuous-interpolation.png and datawrapper-steps-interpolation.png
-
-### Style and publish your map {-}
-
-When finished with colors, scroll down to **Tooltips** section and
-click *Customize tooltips* button. In a popup window, set Title to the state name
-and Body to the average home value, as shown in Figure \@ref(fig:datawrapper-map-tooltip).
-The easiest way to do this is to click on column names in the upper-right corner of the popup window, where all available names are listed, which is circled in Figure \@ref(fig:datawrapper-map-tooltip). Note that references to variables are put in double curly brackets (`{{ ColumnNameGoesHere }}`).
-Make sure your dollar symbol (`$`) in outside of the curly brackets. Click *Save*,
-and hover over the map to make sure your tooltip displays the state name and the average home price.
-
-(ref:datawrapper-map-tooltip) To reference values from the spreadsheet, add column names in double curly brackets.
-
-```{r datawrapper-map-tooltip, out.width=450, fig.cap="(ref:datawrapper-map-tooltip)"}
-knitr::include_graphics("images/08-map/datawrapper-map-tooltip-annotated.png")
+```{r datawrapper-map-quartiles, out.width=400, fig.cap="(ref:datawrapper-map-quartiles)"}
+knitr::include_graphics("images/08-map/datawrapper-map-quartiles.png")
 ```
 
-You can now move to the *Annotate* tab and set values for the map's title and description,
-which is the line just below the title. Make sure you reference *Zillow Data* as data source.
-Being transparent about your sources and methods adds credibility to your work.
+11. Experiment with other colors, intervals, and data columns. Change the palette from *sequential* to *diverging* colors, which display a neutral color in the middle range and two dark colors at the extremes. Change from a *continuous* gradient to *steps*, and choose different numbers of dividers. Change the data column to *Pct Change 2019-20* to [normalize the choropleth map data](normalize-choropleth.html) as discussed earlier in this chapter, since home values are so different across the country. For example, see the map of percent change in home value from 2019 to 2020, with a diverging red-to-blue palette, 5 steps, and rounded values in Figure \@ref(fig:datawrapper-map-percentchange).
 
-In the final, fourth step, you can publish the chart and copy the iframe code that
-Datawrapper generated for you.
+(ref:datawrapper-map-percentchange) Experiment with other colors, intervals, and data columns to find true and meaningful stories.
+
+```{r datawrapper-map-percentchange, out.width=650, fig.cap="(ref:datawrapper-map-percentchange)"}
+knitr::include_graphics("images/08-map/datawrapper-map-percentchange.png")
+```
+
+Which data columns, colors, and intervals make the best map? There's no easy answer, since there's more than one way to make a true and meaningful map. But keep two principles in mind. First, make sure that you honestly show the data, rather than hide or disguise it. Second, reflect on what kind of data story you believe is important to tell, since design choices emphasize different interpretations of the data. Review our guidance in the [Design Choropleth Colors & Intervals section](design-choropleth.html).
+
+Let's move on to finalize the labels and styling of the map before we publish and share it with others.
+
+12. Under the *Refine* tab, customize the legend format. For example, to convert long numbers (such as 107762) into abbreviated dollars ($108k), we selected *custom format* and inserted the code `($ 0 a)`.
+
+13. Under the *Annotate* tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure \@ref(fig:datawrapper-map-tooltip). Learn more about [customizing tooltips from Datawrapper Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
+
+(ref:datawrapper-map-tooltip) To edit tooltips, click the blue column names or use drop-down menus to format the codes.
+
+```{r datawrapper-map-tooltip, out.width=500, fig.cap="(ref:datawrapper-map-tooltip)"}
+knitr::include_graphics("images/08-map/datawrapper-map-tooltip.png")
+```
+
+14. Finally, proceed to the *Publish and Embed* screen to obtain an online link for your map, an iframe code that you will learn how to use in [Chapter 10: Embed on the Web](embed.html), and a static PNG image you can download.
 
 Learn more about [choropleth map design in this excellent series of posts by the Datawrapper Academy](https://academy.datawrapper.de/category/93-maps).
 
-For US election maps: https://blog.datawrapper.de/how-to-visualize-the-us-election-2020-with-datawrapper/
-
 Now that you've learned how to create a choropleth map using one tool, Datawrapper, let's compare the process using a different tool, Tableau Public.
-
 
 ## Choropleth Map with Tableau Public {- #map-tableau}
 

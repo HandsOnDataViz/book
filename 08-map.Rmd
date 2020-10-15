@@ -12,7 +12,7 @@ Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 | Map | Best use and tutorials in this book |
 | --- | --- |
 | Point map with custom icons<br> ![](images/08-map/map-point.png) | Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: [BatchGeo tutorial](batchgeo.html) or [Google My Maps tutorial](mymaps.html)<br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
-| Symbol point map<br> ![](images/placeholder.jpg) | Best to show specific locations (such as cities), with variable-sized shapes to represent data values (such as population growth).<br>Easy tool: [Symbol Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
+| Symbol point map<br> ![](images/08-map/map-symbol.png) | Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth).<br>Easy tool: [Symbol Point Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
 | Choropleth (colored polygon) map <br> ![](images/08-map/map-polygon.png) | Best to show geographic patterns across regions (such as neighborhoods or nations) by coloring polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Heat point map <br> ![](images/08-map/map-heat.png) | Best to show clusters of points as colored hotspots to emphasize high frequency. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
 | Story map <br> ![](images/08-map/map-storymap.png) | Best to show a point-by-point guided tour, with a scrolling narrative to display images, audio, and video. <br> Power tool: [Ch 13: Leaflet Storymaps with Google Sheets tutorial](leaflet-storymaps-with-google-sheets.html) |
@@ -103,7 +103,7 @@ Which map is best? Since both are truthful depictions of the data, the answer de
 
 TODO Above: add "New York City" and "Boston" labels to the county-level map. Decide if we should add state-level outlines and state names to county-level map. Do we wish to add a third map that's too detailed to illustrate the Goldilocks effect?
 
-## Design Choropleth Colors & Intervals {-}
+## Design Choropleth Colors & Intervals {- #design-choropleth}
 
 When you build a choropleth map, your choices about how to represent data with colors will determine its overall appearance, so it's important to learn key principles. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by color-blind readers.
 
@@ -280,7 +280,7 @@ Now that you've learned about one tool to create point maps, let's compare it wi
 
 ## Point Map with Google My Maps {- #mymaps}
 
-TODO: Explain how Google My Maps is different from Google Maps....
+TODO BELOW: Explain how Google My Maps is different from Google Maps; mention at the top there are more options than points; DECIDE if this sample data about Nigerian airports is the best fit, since it's great to have international examples but unsure if Shapefile-to-CSV transormation makes sense here, as new users probably need to tool to geocode their data.
 
 [My Maps](https://www.google.com/maps/about/mymaps/) is Google's service
 that allows users to create custom maps using Google Maps platform.
@@ -417,7 +417,71 @@ so you have to explore the studio yourself if you want to create
 more complex projects.
 
 ## Symbol Point Map with Datawrapper {- #symbolmap-datawrapper}
-TODO: in progress https://academy.datawrapper.de/article/114-how-to-create-a-symbol-map-in-datawrapper
+We first introduced you to the free and easy-to-learn [Datawrapper tool in Chapter 7: Chart Your Data](chart-datawrapper.html). It's also offers powerful features to create different types of maps, with professional-looking design elements. With Datawrapper you can start to work right away in your browser, with no account required unless you wish to save and share your work online.
+
+In this section, you'll learn how to create a symbol point map, which displays specific locations (such as cities) using variable-sized shapes (such as circles) or colors to represent their data values (such as population growth). See the example in Figure \@ref(fig:datawrapper-symbolmap). Remember that we use *point* data to create symbol maps, but *polygon* data to create choropleth maps, and you'll learn how to design those  with Datawrapper in the subsequent section. Later in the book, we'll explain [how to embed your interactive Datawrapper maps on the web in Chapter 10](embed.html).
+
+(ref:datawrapper-symbolmap) Symbol point map of US city population growth with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/V0V9Y).
+
+```{r datawrapper-symbolmap, fig.cap="(ref:datawrapper-symbolmap)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/V0V9Y", height="550px") else knitr::include_graphics("images/08-map/datawrapper-symbolmap.png")
+```
+
+To create your own symbol point map, follow this tutorial.
+
+1. Open and examine the [US Cities Population Change 2010-2019 data in Google Sheets](https://docs.google.com/spreadsheets/d/1XOhNtvYWaebP4izr0PDJfToRIbl2vki_1JNMYTKCCn0/edit#gid=1709919231). We downloaded [city population data from the US Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-cities-and-towns.html), and [cleaned it up using methods in Chapter 5](clean.html) to focus on about 300 cities with more than 100,000 residents in either 2010 or 2019. In the spreadsheet we created a new column to combine *City* and *State* to serve as a *Place Name* that Datawrapper can geocode into a latitude-longitude coordinate. Learn more about [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names). Also, we created a new column named *Percent Change*, which we calculated this way: `(2019 - 2010) / 2010 * 100`. Read the notes to see how some cities were newly incorporated or merged during this decade, which skews their population change data. Also, we collected population on 5 major cities in Puerto Rico, a US territory, but they do not appear in the map for reasons explained in step 4.
+
+2. Go to *File > Download* in CSV format to save the data to your local computer.
+
+3. Open [Datawrapper](https://datawrapper.de), click the *New Map* button, and select *Symbol map* as shown in Figure \@ref(fig:datawrapper-symbolmap-start).
+
+(ref:datawrapper-symbolmap-start) Start to create a symbol map in Datawrapper.
+
+```{r datawrapper-symbolmap-start, out.width=600, fig.cap="(ref:datawrapper-symbolmap-start)"}
+knitr::include_graphics("images/08-map/datawrapper-symbolmap-start.png")
+```
+
+4. In the *Select your map* screen, enter *USA* and search for options. Note that we selected *USA > *States* as our best current option, because *USA > States and Territories* does not yet correctly display geocoded locations for Puerto Rico, a US territory. Proceed to the next screen.
+
+5. In the *Add your data* screen, click the *Import your dataset* button. In the next window, click the *Addresses and Place Names* button because our data is organized this way. In the *Import* window, click to *Upload a CSV file*, and select the file you downloaded above.
+
+6. In the *Match your columns* screen, select the *City-State* column to be *Matched as Address*, then scroll down to click the *Next* button, as shown in Figure \@ref(fig:datawrapper-symbolmap-match). In the next screen click *Go*, then see your geocoded data displayed on a map in the following screen.
+
+(ref:datawrapper-symbolmap-match) Select the *City-State* column to be matched as the *Address*.
+
+```{r datawrapper-symbolmap-match, out.width=400, fig.cap="(ref:datawrapper-symbolmap-match)"}
+knitr::include_graphics("images/08-map/datawrapper-symbolmap-match.png")
+```
+
+7. Click the *Visualize* button to *Refine* your map. Our goal is to display two variables: 2019 population as the circle size, and percent change as the circle color. Under *Symbol shape and size*, select the *circle* symbol, to be sized by *Pop Estimate 2019*, with a maximum symbol size of 25 pixels. Under *Symbol colors*, select the *Percent Change 2010-2019* column, as shown in Figure \@ref(fig:datawrapper-symbolmap-refine).
+
+(ref:datawrapper-symbolmap-refine) Refine your map by selecting data to display symbol shapes, sizes, and colors.
+
+```{r datawrapper-symbolmap-refine, fig.cap="(ref:datawrapper-symbolmap-refine)"}
+knitr::include_graphics("images/08-map/datawrapper-symbolmap-refine.png")
+```
+
+8. If you wish to customize the color palette and intervals to match our example, click the *wrench symbol* next to the palette. Click the *Import colors* button and paste in five hexadecimal codes from ColorBrewer, as described in the [Choropleth Design section](design-choropleth.html). The first code is dark pink, followed by a 4-class sequential green: `#d01c8b,#bae4b3,#74c476,#31a354,#006d2c`. See Figure \@ref(fig:datawrapper-symbolmap-colors).
+
+(ref:datawrapper-symbolmap-colors) Create a new color palette by importing five hexadecimal color codes from ColorBrewer.
+
+```{r datawrapper-symbolmap-colors, out.width=600, fig.cap="(ref:datawrapper-symbolmap-colors)"}
+knitr::include_graphics("images/08-map/datawrapper-symbolmap-colors.png")
+```
+
+9. To continue customizing intervals to match our example, set the steps to *5* and *Custom*. Manually type in custom intervals for below 0% (bright pink), 0 to 5% (light green), and so forth up the scale. Click the *More options* button, and under *Legend*, change *Labels* to *custom*, and click each label to edit the text that appears on the map menu, as shown in Figure \@ref(fig:datawrapper-symbolmap-intervals). Learn more about these options in the [Datawrapper Academy post on customizing your symbol map](https://academy.datawrapper.de/article/120-customizing-your-symbol-map).
+
+(ref:datawrapper-symbolmap-intervals) Customize the interval ranges and edit the legend.
+
+```{r datawrapper-symbolmap-intervals, out.width=500, fig.cap="(ref:datawrapper-symbolmap-intervals)"}
+knitr::include_graphics("images/08-map/datawrapper-symbolmap-intervals.png")
+```
+
+10. Click the *Annotate* tab to insert a title, source notes, credits, and [customize the tooltips as described by Datawrapper Academy](https://academy.datawrapper.de/article/237-i-want-to-change-how-my-data-appears-in-tooltips#change-the-number-format). Proceed to the *Publish & Embed* screen to share your map online.
+
+For assistance and additional options, see the [Datawrapper Academy support pages on symbol maps](https://academy.datawrapper.de/category/278-symbol-maps).
+
+Now that you've created a symbol point map with Datawrapper, in the next section we'll build our skills with this tool to create a choropleth map.
 
 ## Choropleth Map with Datawrapper {- #choropleth-datawrapper}
 

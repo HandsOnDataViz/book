@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-15" />
+<meta name="date" content="2020-10-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -337,7 +337,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartjs-bubble" class="section level2 unnumbered" number="">
 <h2>Bubble Chart with Chart.js</h2>
-<p>Bubble charts are similar to <a href="chartjs-scatter-csv.html">scatter plots</a>, but it adds one more dimension: the size of each point (marker) also represents a value.</p>
+<p>Bubble charts are similar to <a href="chartjs-scatter-csv.html">scatter plots</a>, but it adds one more variable (also known as dimension): the size of each point (marker) also represents a value.</p>
 <p>The bubble chart in Figure <a href="chartjs-bubble.html#fig:chartjs-demo-bubble">12.6</a> shows how median household income (x-axis) and test performance (y-axis) in 6 school districts in Connecticut are related. The size of data point corresponds to the number of students enrolled in the school district: bigger circles represent larger school districts.</p>
 
 <div class="figure"><span id="fig:chartjs-demo-bubble"></span>
@@ -349,7 +349,7 @@ Figure 12.6: Interactive bubble chart with Chart.js. Explore the <a href="https:
 </div>
 <p>To create your own bubble chart with Chart.js, with data loaded from a CSV file, you can:</p>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-bubble">our GitHub repo for this template</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 11: Edit and Host Code with GitHub</a>.</p></li>
+<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-bubble">our GitHub repo for this template</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit.</p></li>
 <li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. The first two columns should contain x- and y-values respectively. The third column should contain bubble names that will appear on mouse hover. The final, fourth column, represents the size of your bubble.</p></li>
 </ol>
 <pre><code>| income | grades | district      | enrollment |
@@ -385,23 +385,12 @@ Figure 12.6: Interactive bubble chart with Chart.js. Explore the <a href="https:
 <span id="cb26-24"><a href="chartjs-bubble.html#cb26-24"></a></span>
 <span id="cb26-25"><a href="chartjs-bubble.html#cb26-25"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// `true` to show the grid, `false` to hide</span></span></code></pre></div>
 <p>Tip: To display smaller data points that may be hidden behind larger neighbors, use semi-transparent circles with RGBA color codes. The first three characters represent red, green, and blue, while the <code>a</code> stands for <code>alpha</code> and represents the level of transparency on a scale from 0.0 (full transparent) to 1.0 (fully opaque). For example, <code>rgba(160, 0, 0, 0.5)</code> creates a red color that is semi-transparent. Learn more by playing with <a href="https://www.w3schools.com/css/css_colors_rgb.asp">RGBA color values at W3Schools</a>.</p>
-<div id="going-beyond-three-dimensions" class="section level4 unnumbered" number="">
-<h4>Going beyond three dimensions</h4>
-<p>To show more than three dimensions in bubble charts, one can:</p>
-<ul>
-<li><strong>color</strong> each data point differently to show fourth dimension, eg use shades of red and green to show 5-year trend in test performance;</li>
-<li>use different <strong>icons or glyphs</strong> to display fifth dimension, eg circles for male students and squares for female students.</li>
-</ul>
-<p>Remember not to overwhelm the viewer and communicate only the data that are necessary to prove or illustrate your idea.</p>
-</div>
+<p>If you have more than three variables that you would like to show in your bubble chart, you can use <em>color</em> and <em>glyphs</em> (instead of simple dots) to represent two extra dimentions. For example, you may want to use the blue color to only show school districts in Fairfield County (generally a richer part of CT) and gray color to represent all other districts. You may want to use circles, squares, and triangles to represent results for males, females, and non-binary students. We won’t be showing you how to achieve this, but we can assure you that it can be done in 5-10 extra lines of code.</p>
+<p>Chart.js is pretty limitless when it comes to customization, but remember not to overwhelm the viewer and communicate only the data that are necessary to prove or illustrate your idea.</p>
 <div id="summary12" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
-<p>In this chapter, we introduced Chart.js and Highcharts templates for basic chart types.
-You can use them as a base to kickstart your interactive visualization. Both
-Chart.js and Highcharts have many more customizations than we suggested in code snippets.
-Look at the additional documentation</p>
-<p>In the next chapter, we will introduce Leaflet.js map templates that you can as easily
-copy from GitHub to develop your own.</p>
+<p>In this chapter, we introduced Chart.js and Highcharts templates that can be used to construct rich and interactive charts that you can host in your own GitHub account, and embed them anywhere on the web. You can use these templates as a base to kickstart your interactive visualizations. You can refer to <a href="https://www.chartjs.org/samples/latest/">Chart.js Samples</a> and <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a> for more information on Chart.js customization and troubleshooting. <a href="https://www.highcharts.com/demo">Highcharts Demos</a> gallery shows plenty of charts along with the code that you can copy, and <a href="https://api.highcharts.com/highcharts/">Highcharts API Reference</a> lists all features available to refine your visualizations. Just remember that you need to <a href="https://shop.highsoft.com/">obtain a license</a> to use Highcharts in commercial projects.</p>
+<p>In the next chapter, we will introduce Leaflet.js map templates that were designed in a similar fashion to the chart templates we have just looked at. Leaflet is a leading open-source JavaScript library for web mapping, and will let you create stunning interactive maps that live in your GitHub account and can be shared across the web.</p>
 
 </div>
 </div>

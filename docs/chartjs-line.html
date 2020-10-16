@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-15" />
+<meta name="date" content="2020-10-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -353,9 +353,10 @@ Figure 12.3: Interactive line chart with Chart.js. Explore the <a href="https://
 </div>
 <p>To create your own line chart with Chart.js, with data loaded from a CSV file, you can:</p>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-line">our GitHub repo for the Chart.js template</a> that contains the code of the line chart shown in Figure <a href="chartjs-line.html#fig:chartjs-demo-line">12.3</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 11: Edit and Host Code with GitHub</a>.</p></li>
-<li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish, but do not overload your chart with lines as humans can distinguish a limited number of colors.</p></li>
+<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-line">our GitHub repo for the Chart.js template</a> that contains the code of the line chart shown in Figure <a href="chartjs-line.html#fig:chartjs-demo-line">12.3</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit.</p></li>
+<li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series).</p></li>
 </ol>
+<p>Warning: You can add as many data series columns as you wish, but do not overload your chart with lines as humans can distinguish a limited number of colors.</p>
 <pre><code>| year    | Hartford | New Haven | Bridgeport | Stamford | Waterbury |
 | 2013-14 | 21820    | 21420     | 20929      | 15927    | 18706     |
 | 2014-15 | 21953    | 21711     | 21244      | 16085    | 18878     |
@@ -382,7 +383,7 @@ Figure 12.3: Interactive line chart with Chart.js. Explore the <a href="https://
 <span id="cb20-14"><a href="chartjs-line.html#cb20-14"></a></span>
 <span id="cb20-15"><a href="chartjs-line.html#cb20-15"></a> <span class="co">// `true` to show the legend, `false` to hide</span></span>
 <span id="cb20-16"><a href="chartjs-line.html#cb20-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
-<p>For more customization, see <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a>.</p>
+<p>Remember to look at the official <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a> if you want to add more features. If something isn’t working as desired, visit <a href="https://stackoverflow.com/search?q=chartjs">StackOverflow</a> to see if anyone had already solved your problem.</p>
 </div>
             </section>
 

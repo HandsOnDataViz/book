@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-15" />
+<meta name="date" content="2020-10-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -351,9 +351,10 @@ a dip in 2009, the year after the 2008 financial crisis as suggested by the anno
 Figure 12.4: Interactive annotated chart with Highcharts. Explore the <a href="https://handsondataviz.github.io/highcharts-line-annotated/">interactive version</a>.
 </p>
 </div>
-<p>To create your own annotated line chart with Highcharts, with data loaded from a CSV file, you can:</p>
+<p>Unfortunately, Chart.js is not great at showing annotations. This is why we are switching to Highcharts for this particular example. But don’t worry – you will see that the process is hardly different from the previous Chart.js examples.</p>
+<p>To create your own annotated line chart with Highcharts, with data loaded from a CSV file, do the following:</p>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://github.com/HandsOnDataViz/highcharts-line-annotated">our GitHub repo</a> that contains code for the chart shown in Figure <a href="highcharts-annotated-line.html#fig:highcharts-demo-annotated-line">12.4</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 11: Edit and Host Code with GitHub</a>.</p></li>
+<li><p>Go to <a href="https://github.com/HandsOnDataViz/highcharts-line-annotated">our GitHub repo</a> that contains code for the chart shown in Figure <a href="highcharts-annotated-line.html#fig:highcharts-demo-annotated-line">12.4</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit.</p></li>
 <li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least three columns (labels, one data series, and notes). You can add as many data series columns as you wish, but you can only have one annotation (final column) per row.</p></li>
 </ol>
 <pre><code>| Year | Canada   | Australia | Note                  |
@@ -379,7 +380,7 @@ Figure 12.4: Interactive annotated chart with Highcharts. Explore the <a href="h
 <span id="cb22-14"><a href="highcharts-annotated-line.html#cb22-14"></a></span>
 <span id="cb22-15"><a href="highcharts-annotated-line.html#cb22-15"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
 <span id="cb22-16"><a href="highcharts-annotated-line.html#cb22-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
-<p>For additional customization, see <a href="https://api.highcharts.com/highcharts/">Highcharts API reference</a>.</p>
+<p>If you wish to further customize your chart, use the <a href="https://api.highcharts.com/highcharts/">Highcharts API reference</a> that lists all available features.</p>
 </div>
             </section>
 

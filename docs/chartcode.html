@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-15" />
+<meta name="date" content="2020-10-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -337,8 +337,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartcode" class="section level1" number="12">
 <h1><span class="header-section-number">Chapter 12</span> Chart.js and Highcharts Templates</h1>
-<p>We recommend that you start creating interactive charts with easy drag-and-drop tools we described in <a href="chart.html">Chapter 7: Chart Your Data</a>, such as <a href="chart-google.html">Google Sheets</a>, <a href="chart-tableau-public.html">Datawrapper</a> and <a href="chart-tableau-public.html">Tableau Public</a>. But when you’re ready to explore more powerful tools, this chapter features Chart.js and Highcharts code templates, which offer many benefits for more advanced users. By copying and modifying our templates, you can customize the appearance and interactivity of your visualizations, upload your data in CSV format, and freely publish it with your code on GitHub Pages or any server you choose, without relying on a drag-and-drop tool platform to continue its service into the future. But in order to work with our templates, you first need to learn how to <a href="github.html">edit and host code with GitHub in Chapter 11</a>.</p>
-<p>Most of the templates we feature are designed with <a href="https://www.chartjs.org/">Chart.js</a>, an open-source code library that is freely distributed under an MIT license, which anyone can use and modify. This means that the code library is extensible by other users, who have created <a href="https://github.com/chartjs/awesome">awesome Chart.js resources</a>, such as additional chart types and plugins that provide more features. Also, we include some templates designed with <a href="https://highcharts.com">Highcharts</a> to expand the range of chart types and features not fully covered by Chart.js. Although Highcharts code is open-source, its licensing terms differ. <a href="https://www.highcharts.com/products/highcharts/#non-commercial">Highcharts is free for non-commerical use</a>, such as a personal, school, or non-profit organization website. But if you create charts for commercial or governmental use, you’ll need to purchase a <a href="https://shop.highsoft.com/">Highcharts license</a>. In either case, we designed our Chart.js and Highcharts code templates to make them easier for beginners to understand. See the various types of charts and follow the links to the templates and tutorials in Table <a href="chartcode.html#tab:chart-templates">12.1</a>.</p>
+<p>In <a href="chart.html">Chapter 7: Chart Your Data</a>, we looked at powerful drag-and-drop tools,
+such as <a href="chart-google.html">Google Sheets</a>, <a href="chart-tableau-public.html">Datawrapper</a>
+and <a href="chart-tableau-public.html">Tableau Public</a> to build interactive charts.</p>
+<p>In this chapter, we will look into creating interactive charts using two popular
+JavaScript libraries, <a href="https://www.chartjs.org/">Chart.js</a> and <a href="https://www.highcharts.com/">Highcharts</a>.
+Since we don’t expect our readers to be proficient in JavaScript or any
+other programming language, we designed templates that you can copy
+to your own GitHub account, substitute data files, and publish them to the web
+without writing a single line of code. But for those of you who are code-curious,
+we will show how the JavaScript code in these templates can be customized.</p>
+<p>Now, why would anyone prefer JavaScript to easy-to-use Datawrapper or Tableau, you may wonder?
+Well, a few reasons. Although JavaScript code may seem overwhelming and intimidating at first,
+it allows for greater customization in terms of colors, padding, interactivity, and data handling
+than most third-party tools can offer. In addition, you can never be sure that third-party
+apps will remain free, or at least have a free tier, forever, whereas open-source tools
+are here to stay free of charge.</p>
+<p>Note: Althouhg both libraries are open-source, Highcharts comes <a href="https://www.highcharts.com/products/highcharts/#non-commercia">with a stricter license</a>
+which allows it to be used for free for non-commercial projects only, such as personal, school, or non-profit organization website. Keeping that in mind, we primarily focused on Chart.js, which is distributed under MIT license that lets you use the library for commercial projects as well.</p>
+<p>Table <a href="chartcode.html#tab:chart-templates">12.1</a> lists all types of charts that we will look at in this chapter.
+Note, however, that both libraries come with many more default chart types that you can explore
+in <a href="https://www.chartjs.org/samples/latest/">Chart.js Samples</a> and <a href="https://www.highcharts.com/demo">Highcharts Demos</a>.</p>
 <table>
 <caption><span id="tab:chart-templates">Table 12.1: </span> Chart Code Templates and Tutorials</caption>
 <colgroup>
@@ -378,19 +397,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p>For additional chart types, see <a href="https://www.chartjs.org/samples/latest/">Chart.js samples</a> and <a href="https://www.highcharts.com/demo">Highcharts Demos</a>.</p>
-<p>These code templates vary from simple to complex, but all of them rely on four basic pillars:</p>
-<ul>
-<li>HTML: language to structure content on the web (example: index.html)</li>
-<li>CSS, or Cascading Style Sheet: to shape how content appears on the web (example: style.css)</li>
-<li>JavaScript: code to create the chart and interactivity (example: script.js)</li>
-<li>CSV: data that powers the visualization that is expressed in comma-separated format (example: data.csv)</li>
-</ul>
-<p>Also, these templates refer to other code elements:</p>
-<ul>
-<li>library: link to online instructions to complete routine tasks (example: Chart.js)</li>
-<li>data: content to appear in chart, typically in CSV format (example: data.csv)</li>
-</ul>
 </div>
             </section>
 

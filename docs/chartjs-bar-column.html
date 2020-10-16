@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-15" />
+<meta name="date" content="2020-10-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -337,7 +337,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartjs-bar-column" class="section level2 unnumbered" number="">
 <h2>Bar or Column Chart with Chart.js</h2>
-<p>Bar or column charts are best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. Always start the x-axis (for a horizontal bar chart) or y-axis (for a vertical column chart) at zero. This interactive Chart.js code template pulls the data from a CSV file, as shown in Figure <a href="chartjs-bar-column.html#fig:chartjs-demo-bar">12.1</a>.</p>
+<p>In this section, we will show you how to create bar or column charts using a Chart.js. To do so, we will be using a Chart.js come template that pulls ata from a CSV file, as shown in Figure <a href="chartjs-bar-column.html#fig:chartjs-demo-bar">12.1</a>. This column chart shows how many students in five school districts in Connecticut were English-language learners in 2018-2019 academic year.</p>
 
 <div class="figure"><span id="fig:chartjs-demo-bar"></span>
 <iframe src="https://handsondataviz.github.io/chartjs-bar/index.html" width="672" height="500px">
@@ -348,8 +348,18 @@ Figure 12.1: Bar chart with Chart.js: explore the <a href="https://handsondatavi
 </div>
 <p>To create your own bar or column chart with CSV data using our Chart.js template:</p>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-templates">our GitHub repo for Chart.js template</a> that contains the code for the chart in Figure <a href="chartjs-bar-column.html#fig:chartjs-demo-bar">12.1</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 11: Edit and Host Code with GitHub</a>.</p></li>
-<li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish.</p></li>
+<li>Go to <a href="https://github.com/HandsOnDataViz/chartjs-bar">our GitHub repo</a> that contains the code for the chart in Figure <a href="chartjs-bar-column.html#fig:chartjs-demo-bar">12.1</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit.</li>
+</ol>
+<p>Note: If you don’t remember how to use GitHub, we recommend you revisit <a href="github.html">Chapter 11: Edit and Host Code with GitHub</a>.</p>
+<p>The repo contains three files that are directly related to the chart:</p>
+<ul>
+<li><code>index.html</code> contains HTML (markdown) and CSS (stylesheets) that tell the browser how to style the document that contains the chart, and what libraries to load,</li>
+<li><code>script.js</code> contains the JavaScript code that reads data from the CSV file and constructs the interactive chart, and</li>
+<li><code>data.csv</code> is the comma-separated file that keeps all the data in the chart, and can be edited in a text editor, or Google Sheets/Excel etc.</li>
+</ul>
+<p>The two remaining files are a <code>README.md</code> that describes the contents of the repo, and <code>bar.png</code> that is just an image that you can see in the README. All other GitHub templates in this chapter will be similarly structured.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Prepare your data in CSV format and upload into a <code>data.csv</code> file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish.</li>
 </ol>
 <pre><code>| district  | nonlearner | learner |
 | Hartford  | 15656      | 4111    |
@@ -393,7 +403,7 @@ Figure 12.1: Bar chart with Chart.js: explore the <a href="https://handsondatavi
 <span id="cb16-34"><a href="chartjs-bar-column.html#cb16-34"></a></span>
 <span id="cb16-35"><a href="chartjs-bar-column.html#cb16-35"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
 <span id="cb16-36"><a href="chartjs-bar-column.html#cb16-36"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
-<p>For more customization, see <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a>.</p>
+<p>These basic variables should be enough to get you started. It is natural that you will want to move the legend, edit the appearance of the tooltip, or change the colors of the grid lines. We recommend you look at the official <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a> to get help with that.</p>
 </div>
             </section>
 

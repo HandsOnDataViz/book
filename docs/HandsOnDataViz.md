@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 15 Oct 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 16 Oct 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -4558,6 +4558,10 @@ values, not bright colors or secondary components like the axes lines.
 <p class="caption">
 Figure 7.9: Make sure important things catch the eye first.
 </p>
+
+TODO: Compare our rules and recommendations to different dataviz style
+guides, such as Urban Institute, and cite them
+<a href="http://urbaninstitute.github.io/graphics-styleguide/" class="uri">http://urbaninstitute.github.io/graphics-styleguide/</a>
 
 Google Sheets Charts
 --------------------
@@ -9448,40 +9452,44 @@ more customized charts and maps in the next two chapters.
 12 Chart.js and Highcharts Templates
 ====================================
 
-We recommend that you start creating interactive charts with easy
-drag-and-drop tools we described in [Chapter 7: Chart Your
-Data](chart.html), such as [Google Sheets](chart-google.html),
+In [Chapter 7: Chart Your Data](chart.html), we looked at powerful
+drag-and-drop tools, such as [Google Sheets](chart-google.html),
 [Datawrapper](chart-tableau-public.html) and [Tableau
-Public](chart-tableau-public.html). But when you’re ready to explore
-more powerful tools, this chapter features Chart.js and Highcharts code
-templates, which offer many benefits for more advanced users. By copying
-and modifying our templates, you can customize the appearance and
-interactivity of your visualizations, upload your data in CSV format,
-and freely publish it with your code on GitHub Pages or any server you
-choose, without relying on a drag-and-drop tool platform to continue its
-service into the future. But in order to work with our templates, you
-first need to learn how to [edit and host code with GitHub in Chapter
-11](github.html).
+Public](chart-tableau-public.html) to build interactive charts.
 
-Most of the templates we feature are designed with
-[Chart.js](https://www.chartjs.org/), an open-source code library that
-is freely distributed under an MIT license, which anyone can use and
-modify. This means that the code library is extensible by other users,
-who have created [awesome Chart.js
-resources](https://github.com/chartjs/awesome), such as additional chart
-types and plugins that provide more features. Also, we include some
-templates designed with [Highcharts](https://highcharts.com) to expand
-the range of chart types and features not fully covered by Chart.js.
-Although Highcharts code is open-source, its licensing terms differ.
-[Highcharts is free for non-commerical
-use](https://www.highcharts.com/products/highcharts/#non-commercial),
-such as a personal, school, or non-profit organization website. But if
-you create charts for commercial or governmental use, you’ll need to
-purchase a [Highcharts license](https://shop.highsoft.com/). In either
-case, we designed our Chart.js and Highcharts code templates to make
-them easier for beginners to understand. See the various types of charts
-and follow the links to the templates and tutorials in Table
-<a href="#tab:chart-templates">12.1</a>.
+In this chapter, we will look into creating interactive charts using two
+popular JavaScript libraries, [Chart.js](https://www.chartjs.org/) and
+[Highcharts](https://www.highcharts.com/). Since we don’t expect our
+readers to be proficient in JavaScript or any other programming
+language, we designed templates that you can copy to your own GitHub
+account, substitute data files, and publish them to the web without
+writing a single line of code. But for those of you who are
+code-curious, we will show how the JavaScript code in these templates
+can be customized.
+
+Now, why would anyone prefer JavaScript to easy-to-use Datawrapper or
+Tableau, you may wonder? Well, a few reasons. Although JavaScript code
+may seem overwhelming and intimidating at first, it allows for greater
+customization in terms of colors, padding, interactivity, and data
+handling than most third-party tools can offer. In addition, you can
+never be sure that third-party apps will remain free, or at least have a
+free tier, forever, whereas open-source tools are here to stay free of
+charge.
+
+Note: Althouhg both libraries are open-source, Highcharts comes [with a
+stricter
+license](https://www.highcharts.com/products/highcharts/#non-commercia)
+which allows it to be used for free for non-commercial projects only,
+such as personal, school, or non-profit organization website. Keeping
+that in mind, we primarily focused on Chart.js, which is distributed
+under MIT license that lets you use the library for commercial projects
+as well.
+
+Table <a href="#tab:chart-templates">12.1</a> lists all types of charts
+that we will look at in this chapter. Note, however, that both libraries
+come with many more default chart types that you can explore in
+[Chart.js Samples](https://www.chartjs.org/samples/latest/) and
+[Highcharts Demos](https://www.highcharts.com/demo).
 
 <table>
 <caption>Table 12.1: Chart Code Templates and Tutorials</caption>
@@ -9523,37 +9531,15 @@ and follow the links to the templates and tutorials in Table
 </tbody>
 </table>
 
-For additional chart types, see [Chart.js
-samples](https://www.chartjs.org/samples/latest/) and [Highcharts
-Demos](https://www.highcharts.com/demo).
-
-These code templates vary from simple to complex, but all of them rely
-on four basic pillars:
-
--   HTML: language to structure content on the web (example: index.html)
--   CSS, or Cascading Style Sheet: to shape how content appears on the
-    web (example: style.css)
--   JavaScript: code to create the chart and interactivity (example:
-    script.js)
--   CSV: data that powers the visualization that is expressed in
-    comma-separated format (example: data.csv)
-
-Also, these templates refer to other code elements:
-
--   library: link to online instructions to complete routine tasks
-    (example: Chart.js)
--   data: content to appear in chart, typically in CSV format (example:
-    data.csv)
-
 Bar or Column Chart with Chart.js
 ---------------------------------
 
-Bar or column charts are best to compare categories side-by-side. If
-labels are long, use horizontal bars instead of vertical columns. Always
-start the x-axis (for a horizontal bar chart) or y-axis (for a vertical
-column chart) at zero. This interactive Chart.js code template pulls the
-data from a CSV file, as shown in Figure
-<a href="#fig:chartjs-demo-bar">12.1</a>.
+In this section, we will show you how to create bar or column charts
+using a Chart.js. To do so, we will be using a Chart.js come template
+that pulls ata from a CSV file, as shown in Figure
+<a href="#fig:chartjs-demo-bar">12.1</a>. This column chart shows how
+many students in five school districts in Connecticut were
+English-language learners in 2018-2019 academic year.
 
 <img src="images/12-chartcode/chartjs-demo-bar.png" alt="Bar chart with Chart.js: explore the [interactive version](https://handsondataviz.github.io/chartjs-bar/index.html)."  />
 <p class="caption">
@@ -9564,15 +9550,33 @@ version](https://handsondataviz.github.io/chartjs-bar/index.html).
 To create your own bar or column chart with CSV data using our Chart.js
 template:
 
-1.  Go to [our GitHub repo for Chart.js
-    template](https://github.com/HandsOnDataViz/chartjs-templates) that
-    contains the code for the chart in Figure
+1.  Go to [our GitHub
+    repo](https://github.com/HandsOnDataViz/chartjs-bar) that contains
+    the code for the chart in Figure
     <a href="#fig:chartjs-demo-bar">12.1</a>, log into your GitHub
     account, and click *Use this template* to create a copy that you can
-    edit, as described in [Chapter 11: Edit and Host Code with
-    GitHub](github.html).
+    edit.
 
-2.  Prepare your data in CSV format and upload into a `data.csv` file.
+Note: If you don’t remember how to use GitHub, we recommend you revisit
+[Chapter 11: Edit and Host Code with GitHub](github.html).
+
+The repo contains three files that are directly related to the chart:
+
+-   `index.html` contains HTML (markdown) and CSS (stylesheets) that
+    tell the browser how to style the document that contains the chart,
+    and what libraries to load,
+-   `script.js` contains the JavaScript code that reads data from the
+    CSV file and constructs the interactive chart, and
+-   `data.csv` is the comma-separated file that keeps all the data in
+    the chart, and can be edited in a text editor, or Google
+    Sheets/Excel etc.
+
+The two remaining files are a `README.md` that describes the contents of
+the repo, and `bar.png` that is just an image that you can see in the
+README. All other GitHub templates in this chapter will be similarly
+structured.
+
+1.  Prepare your data in CSV format and upload into a `data.csv` file.
     Place labels that will appear along the axis in the first column,
     and each data series in its own column. Your CSV must contain at
     least two columns (labels and one data series). You can add as many
@@ -9626,17 +9630,22 @@ template:
     // `true` to show the legend, `false` to hide
     var SHOW_LEGEND = true;
 
-For more customization, see [Chart.js
-documentation](https://www.chartjs.org/docs/latest/).
+These basic variables should be enough to get you started. It is natural
+that you will want to move the legend, edit the appearance of the
+tooltip, or change the colors of the grid lines. We recommend you look
+at the official [Chart.js
+documentation](https://www.chartjs.org/docs/latest/) to get help with
+that.
 
 Error Bars with Chart.js
 ------------------------
 
 If your data comes with uncertainty (margins of error), we recommend you
-show it in your visualizations. The bar chart template shown in Figure
-<a href="#fig:chartjs-demo-error-bars">12.2</a> shows median and mean
-(average) income for different-sized geographies: the US state of
-Colorado, Boulder County, Boulder city, and a census tract in the city.
+show it in your visualizations with the use of error bars. The bar chart
+template shown in Figure <a href="#fig:chartjs-demo-error-bars">12.2</a>
+shows median and mean (average) income for different-sized geographies:
+the US state of Colorado, Boulder County, Boulder city, and a census
+tract in the city.
 
 <img src="images/12-chartcode/chartjs-demo-error-bars.png" alt="Interactive bar chart with error bars in Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-error-bars/index.html)."  />
 <p class="caption">
@@ -9646,15 +9655,14 @@ version](https://handsondataviz.github.io/chartjs-error-bars/index.html).
 </p>
 
 To create your own bar or column chart with error bars, with data loaded
-from a CSV file, using our Chart.js template:
+from a CSV file, using our Chart.js template follow the steps below:
 
 1.  Go to [our GitHub repo for this Chart.js
     template](https://github.com/HandsOnDataViz/chartjs-error-bars) that
     contains the code for the chart in Figure
     <a href="#fig:chartjs-demo-error-bars">12.2</a>, log into your
     GitHub account, and click *Use this template* to create a copy that
-    you can edit, as described in [Chapter 11: Edit and Host Code with
-    GitHub](github.html).
+    you can edit.
 
 2.  Prepare your data in CSV format and upload into a `data.csv` file.
     Place labels that will appear along the axis in the first column,
@@ -9744,17 +9752,16 @@ file, you can:
     contains the code of the line chart shown in Figure
     <a href="#fig:chartjs-demo-line">12.3</a>, log into your GitHub
     account, and click *Use this template* to create a copy that you can
-    edit, as described in [Chapter 11: Edit and Host Code with
-    GitHub](github.html).
+    edit.
 
 2.  Prepare your data in CSV format and upload into a `data.csv` file.
     Place labels that will appear along the axis in the first column,
     and each data series in its own column. Your CSV must contain at
-    least two columns (labels and one data series). You can add as many
-    data series columns as you wish, but do not overload your chart with
-    lines as humans can distinguish a limited number of colors.
+    least two columns (labels and one data series).
 
-<!-- -->
+Warning: You can add as many data series columns as you wish, but do not
+overload your chart with lines as humans can distinguish a limited
+number of colors.
 
     | year    | Hartford | New Haven | Bridgeport | Stamford | Waterbury |
     | 2013-14 | 21820    | 21420     | 20929      | 15927    | 18706     |
@@ -9786,8 +9793,11 @@ file, you can:
      // `true` to show the legend, `false` to hide
     var SHOW_LEGEND = true;
 
-For more customization, see [Chart.js
-documentation](https://www.chartjs.org/docs/latest/).
+Remember to look at the official [Chart.js
+documentation](https://www.chartjs.org/docs/latest/) if you want to add
+more features. If something isn’t working as desired, visit
+[StackOverflow](https://stackoverflow.com/search?q=chartjs) to see if
+anyone had already solved your problem.
 
 Annotated Line Chart with Highcharts
 ------------------------------------
@@ -9808,16 +9818,20 @@ Figure 12.4: Interactive annotated chart with Highcharts. Explore the
 version](https://handsondataviz.github.io/highcharts-line-annotated/).
 </p>
 
+Unfortunately, Chart.js is not great at showing annotations. This is why
+we are switching to Highcharts for this particular example. But don’t
+worry – you will see that the process is hardly different from the
+previous Chart.js examples.
+
 To create your own annotated line chart with Highcharts, with data
-loaded from a CSV file, you can:
+loaded from a CSV file, do the following:
 
 1.  Go to [our GitHub
     repo](https://github.com/HandsOnDataViz/highcharts-line-annotated)
     that contains code for the chart shown in Figure
     <a href="#fig:highcharts-demo-annotated-line">12.4</a>, log into
     your GitHub account, and click *Use this template* to create a copy
-    that you can edit, as described in [Chapter 11: Edit and Host Code
-    with GitHub](github.html).
+    that you can edit.
 
 2.  Prepare your data in CSV format and upload into a `data.csv` file.
     Place labels that will appear along the axis in the first column,
@@ -9855,18 +9869,21 @@ loaded from a CSV file, you can:
     // `true` to show the legend, `false` to hide
     var SHOW_LEGEND = true;
 
-For additional customization, see [Highcharts API
-reference](https://api.highcharts.com/highcharts/).
+If you wish to further customize your chart, use the [Highcharts API
+reference](https://api.highcharts.com/highcharts/) that lists all
+available features.
 
 Scatter Chart with Chart.js
 ---------------------------
 
-Scatter charts (also *scatterplots*) are used to display data of 2 or
-more dimensions. The scatter chart in Figure
-<a href="#fig:chartjs-demo-scatter">12.5</a> shows the relationship
-between household income and test performance for school districts in
-Connecticut. Using x- and y-axes to show two dimensions, it is easy to
-see that test performance improves as household income goes up.
+Now when you’ve seen Highcharts in action, let’s get back to Chart.js
+and see how to build an interactive scatter chart. Remember that scatter
+charts (also *scatterplots*) are used to display data of 2 or more
+dimensions. Figure <a href="#fig:chartjs-demo-scatter">12.5</a> shows
+the relationship between household income and test performance for
+school districts in Connecticut. Using x- and y-axes to show two
+dimensions, it is easy to see that test performance improves as
+household income goes up.
 
 <img src="images/12-chartcode/chartjs-demo-scatter.png" alt="Interactive scatter chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-scatter/)."  />
 <p class="caption">
@@ -9883,8 +9900,7 @@ CSV file, you can:
     contains the code for the chart shown in Figure
     <a href="#fig:chartjs-demo-scatter">12.5</a>, log into your GitHub
     account, and click *Use this template* to create a copy that you can
-    edit, as described in [Chapter 11: Edit and Host Code with
-    GitHub](github.html).
+    edit.
 
 2.  Prepare your data in CSV format and upload into a `data.csv` file.
     The first two columns should contain x- and y-values respectively,
@@ -9923,30 +9939,25 @@ CSV file, you can:
 
     var SHOW_GRID = true; // `true` to show the grid, `false` to hide
 
-For more customization, see [Chart.js
-documentation](https://www.chartjs.org/docs/latest/).
+A similarly good-looking interactive chart [can be constructed in
+Highcharts](https://www.highcharts.com/demo/scatter), although it is up
+to you to undertake that challenge. In the meanwhile, remember to refer
+to the official [Chart.js
+documentation](https://www.chartjs.org/docs/latest/) if you want to
+further tweak your chart.
 
-#### Going beyond two dimensions
-
-To show more than two dimensions in scatter charts, one can:
-
--   **color** each data point differently to show third dimension, eg
-    use shades of red and green to show 5-year trend in test
-    performance;
--   **resize** each data point to display fourth dimension, eg number of
-    students in each school district;
--   use different **icons or glyphs** to display fifth dimension, eg
-    circles for male students and squares for female students.
-
-Remember not to overwhelm the viewer and communicate only the data that
-are necessary to prove or illustrate your idea.
+You may want to show an additional third variable, such as enrollment in
+each school district, in the same scatter chart. You can do so by
+resizing each dot so that larger school districts are marked with a
+larger circle, and smaller districts are shown using a smaller dot. Such
+use of size will result in a *bubble chart*, which we will look at next.
 
 Bubble Chart with Chart.js
 --------------------------
 
 Bubble charts are similar to [scatter plots](chartjs-scatter-csv.html),
-but it adds one more dimension: the size of each point (marker) also
-represents a value.
+but it adds one more variable (also known as dimension): the size of
+each point (marker) also represents a value.
 
 The bubble chart in Figure <a href="#fig:chartjs-demo-bubble">12.6</a>
 shows how median household income (x-axis) and test performance (y-axis)
@@ -9966,8 +9977,7 @@ CSV file, you can:
 1.  Go to [our GitHub repo for this
     template](https://github.com/HandsOnDataViz/chartjs-bubble), log
     into your GitHub account, and click *Use this template* to create a
-    copy that you can edit, as described in [Chapter 11: Edit and Host
-    Code with GitHub](github.html).
+    copy that you can edit.
 
 2.  Prepare your data in CSV format and upload into a `data.csv` file.
     The first two columns should contain x- and y-values respectively.
@@ -10022,29 +10032,42 @@ for `alpha` and represents the level of transparency on a scale from 0.0
 Learn more by playing with [RGBA color values at
 W3Schools](https://www.w3schools.com/css/css_colors_rgb.asp).
 
-#### Going beyond three dimensions
+If you have more than three variables that you would like to show in
+your bubble chart, you can use *color* and *glyphs* (instead of simple
+dots) to represent two extra dimentions. For example, you may want to
+use the blue color to only show school districts in Fairfield County
+(generally a richer part of CT) and gray color to represent all other
+districts. You may want to use circles, squares, and triangles to
+represent results for males, females, and non-binary students. We won’t
+be showing you how to achieve this, but we can assure you that it can be
+done in 5-10 extra lines of code.
 
-To show more than three dimensions in bubble charts, one can:
-
--   **color** each data point differently to show fourth dimension, eg
-    use shades of red and green to show 5-year trend in test
-    performance;
--   use different **icons or glyphs** to display fifth dimension, eg
-    circles for male students and squares for female students.
-
-Remember not to overwhelm the viewer and communicate only the data that
+Chart.js is pretty limitless when it comes to customization, but
+remember not to overwhelm the viewer and communicate only the data that
 are necessary to prove or illustrate your idea.
 
 ### Summary
 
-In this chapter, we introduced Chart.js and Highcharts templates for
-basic chart types. You can use them as a base to kickstart your
-interactive visualization. Both Chart.js and Highcharts have many more
-customizations than we suggested in code snippets. Look at the
-additional documentation
+In this chapter, we introduced Chart.js and Highcharts templates that
+can be used to construct rich and interactive charts that you can host
+in your own GitHub account, and embed them anywhere on the web. You can
+use these templates as a base to kickstart your interactive
+visualizations. You can refer to [Chart.js
+Samples](https://www.chartjs.org/samples/latest/) and [Chart.js
+documentation](https://www.chartjs.org/docs/latest/) for more
+information on Chart.js customization and troubleshooting. [Highcharts
+Demos](https://www.highcharts.com/demo) gallery shows plenty of charts
+along with the code that you can copy, and [Highcharts API
+Reference](https://api.highcharts.com/highcharts/) lists all features
+available to refine your visualizations. Just remember that you need to
+[obtain a license](https://shop.highsoft.com/) to use Highcharts in
+commercial projects.
 
-In the next chapter, we will introduce Leaflet.js map templates that you
-can as easily copy from GitHub to develop your own.
+In the next chapter, we will introduce Leaflet.js map templates that
+were designed in a similar fashion to the chart templates we have just
+looked at. Leaflet is a leading open-source JavaScript library for web
+mapping, and will let you create stunning interactive maps that live in
+your GitHub account and can be shared across the web.
 
 <!--chapter:end:12-chartcode.Rmd-->
 
@@ -12993,7 +13016,7 @@ human cognition and hard to avoid in data viz, unless you call it out
 -   sidenote: that wasn’t how the original map creator designed or
     labeled the map, but others interpreted it this way
 -   how to address: clarify map biases….
--   See also John Schwabish, avoid whiteness bias…
+-   See also John Schwabish and Alice Feng, avoid whiteness bias…
     <a href="https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff" class="uri">https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff</a>
 -   Reduce by calling out white superiority or privilege, and changing
     how we design….

@@ -211,6 +211,8 @@ Figure \@ref(fig:design-principles-decluttered). Notice how your eyes are drawn 
 knitr::include_graphics("images/07-chart/design-principles-decluttered.png")
 ```
 
+TODO: Compare our rules and recommendations to different dataviz style guides, such as Urban Institute, and cite them http://urbaninstitute.github.io/graphics-styleguide/
+
 ## Google Sheets Charts {- #chart-google}
 In this section, you'll learn about the pros and cons of creating interactive charts in [Google Sheets](https://sheets.google.com), the powerful [spreadsheet tool we introduced in Chapter 3](spreadsheet.html). Google Sheets has many advantages for newcomers to data visualization. First, Google Sheets allows you to clean, analyze, share, and publish charts, all in the same platform. One tool does it all, which makes it easier to organize your work by keeping it all together in one place. Second, Google Sheets is familiar and easy to learn to many users, so it will help you to *quickly* create good-looking interactive charts. See all of the [types of charts you can create with Google Sheets](https://support.google.com/docs/answer/190718). Although some people export charts as static images in *JPG* or *PNG* format, this chapter focuses on creating interactive charts that display more info about your data when you hover over them in your browser. Later, you'll learn [how to embed an interactive chart on your website in Chapter 10](embed.html).
 

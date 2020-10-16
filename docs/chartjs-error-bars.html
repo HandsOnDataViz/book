@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-15" />
+<meta name="date" content="2020-10-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -337,8 +337,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="chartjs-error-bars" class="section level2 unnumbered" number="">
 <h2>Error Bars with Chart.js</h2>
-<p>If your data comes with uncertainty (margins of error), we recommend you
-show it in your visualizations. The bar chart template shown in Figure <a href="chartjs-error-bars.html#fig:chartjs-demo-error-bars">12.2</a>
+<p>If your data comes with uncertainty (margins of error), we recommend you show it in your visualizations with the use of error bars. The bar chart template shown in Figure <a href="chartjs-error-bars.html#fig:chartjs-demo-error-bars">12.2</a>
 shows median and mean (average) income for different-sized geographies: the US state of Colorado, Boulder County, Boulder city, and a census tract in the city.</p>
 
 <div class="figure"><span id="fig:chartjs-demo-error-bars"></span>
@@ -348,9 +347,9 @@ shows median and mean (average) income for different-sized geographies: the US s
 Figure 12.2: Interactive bar chart with error bars in Chart.js. Explore the <a href="https://handsondataviz.github.io/chartjs-error-bars/index.html">interactive version</a>.
 </p>
 </div>
-<p>To create your own bar or column chart with error bars, with data loaded from a CSV file, using our Chart.js template:</p>
+<p>To create your own bar or column chart with error bars, with data loaded from a CSV file, using our Chart.js template follow the steps below:</p>
 <ol style="list-style-type: decimal">
-<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-error-bars">our GitHub repo for this Chart.js template</a> that contains the code for the chart in Figure <a href="chartjs-error-bars.html#fig:chartjs-demo-error-bars">12.2</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit, as described in <a href="github.html">Chapter 11: Edit and Host Code with GitHub</a>.</p></li>
+<li><p>Go to <a href="https://github.com/HandsOnDataViz/chartjs-error-bars">our GitHub repo for this Chart.js template</a> that contains the code for the chart in Figure <a href="chartjs-error-bars.html#fig:chartjs-demo-error-bars">12.2</a>, log into your GitHub account, and click <em>Use this template</em> to create a copy that you can edit.</p></li>
 <li><p>Prepare your data in CSV format and upload into a <code>data.csv</code> file. Place labels that will appear along the axis in the first column, and each data series in its own column (accompanied by a column with uncertainty values). Your CSV must contain at least three columns (labels and one data series with associated uncertainty values). You can add as many data series columns as you wish.</p></li>
 </ol>
 <pre><code>| geo            | median | median_moe | mean   | mean_moe |

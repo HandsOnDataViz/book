@@ -337,9 +337,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="map-tableau" class="section level2 unnumbered" number="">
 <h2>Choropleth Map with Tableau Public</h2>
-<p>We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building <a href="scatter-tableau.html">scattercharts</a> and <a href="filtered-line-tableau.html">filtered line charts</a> in Chapter 7. Now let’s use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. Tableau Public also can create point maps for geographic names it already recognizes, but it’s not ideal the tool cannot geocode new street addresses, such as “1600 Pennsylvania Avenue, Washington DC” (TODO: confirm this.) If you require custom boundaries or points (such as town names in your local language),
-take a look at <a href="https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm">Create Tableau Maps from Spatial Files</a>
-article from the official Tableau documentation.</p>
+<p>We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building <a href="scatter-tableau.html">scattercharts</a> and <a href="filtered-line-tableau.html">filtered line charts</a> in Chapter 7. Now let’s use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. Tableau Public can create many different types of map for geographical place names or ISO codes it already recognizes, such as nations, states, counties, and airports. But Tableau Public cannot geocode street addresses by itself, so you’ll need to obtain their latitude and longitude with another tool, such as those described in the <a href="geocode.html">geocode section of Chapter 3</a>. Furthermore, if you want to upload customized map boundaries, learn how to <a href="https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm">Create Tableau Maps from Spatial Files</a>
+on the support page.</p>
 <p>In this section, we will create a choropleth map of military spending per country as a percentage of their gross domestic product (GDP), as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-final">8.40</a>. Remember that choropleth maps work best when we <a href="normalize-choropleth.html">normalize the data</a> to show relative, rather than absolute, numbers. Creating a map of total military spending per country would not be very meaningful, as larger nations tend to have larger economies, so we’ll base our map on the percentage of their economy that is spent on the military.</p>
 <!-- TODO: reminder that this Tableau visualization is stored in Ilya's account at https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1 -->
 
@@ -350,6 +349,7 @@ article from the official Tableau documentation.</p>
 Figure 8.40: Choropleth map of military spending with Tableau Public. Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1">interactive version</a>. Data from the World Bank.
 </p>
 </div>
+<p>TODO above: update the demo map to match our current data and instructions (without filters?), after we make decisions about how to address interpolation in the note at the bottom of this section.</p>
 <p>To create your own choropleth map with Tableau Public, follow this tutorial.</p>
 <ol style="list-style-type: decimal">
 <li>Open the <a href="https://docs.google.com/spreadsheets/d/1tr9VrqKnO5tf55_YUCk441bFsZSI4zgMzW5ow3-wioo/edit#gid=490588019">Military Spending by Nation as Percent of GDP data in Google Sheets</a>, which we downloaded from the <a href="https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS?view=chart">World Bank</a>. Examine the data and the notes.</li>
@@ -363,7 +363,7 @@ Figure 8.40: Choropleth map of military spending with Tableau Public. Explore th
 </ol>
 
 <div class="figure"><span id="fig:tableau-data-geographic"></span>
-<img src="images/08-map/tableau-data-geographic.png" alt="Confirm that Tableau Public recognizes your geographic place names."  />
+<img src="images/08-map/tableau-data-geographic.png" alt="Confirm that Tableau Public recognizes your geographic place names." width="400" />
 <p class="caption">
 Figure 8.41: Confirm that Tableau Public recognizes your geographic place names.
 </p>
@@ -425,6 +425,20 @@ In the pop-up window, log in to your account if requested. Give it a title, such
 as <em>Military Spending</em>, and click Save.</p></li>
 </ol>
 <p>Now that you understand how to create maps using <em>static</em> data from a spreadsheet, let’s explore how to create a map using the most current data available from an open-data repository.</p>
+<p>TODO above to DISCUSS: We might have a mismatch between the data and the tool here. If you do a quick histogram of the military data, most values are clustered around the median, but there’s a few really high-spending outliers. This makes it difficult for novices to map in Tableau Public, because the default interpolation is <em>linear</em>, and the outliers dominate the appearance of the map. It’s not clear to me how to change this to <em>quartiles</em> or <em>natural breaks</em>, as we do in Datawrapper. Perhaps there are some ideas here: <a href="https://help.tableau.com/current/pro/desktop/en-us/maps_howto_choropleth.htm" class="uri">https://help.tableau.com/current/pro/desktop/en-us/maps_howto_choropleth.htm</a> OR one of these Tableau books by Ryan Sleeper <a href="https://learning.oreilly.com/search/?query=author%3A%22Ryan%20Sleeper" class="uri">https://learning.oreilly.com/search/?query=author%3A%22Ryan%20Sleeper</a> (but I don’t see anything right away that’s relevant) OR another idea is to reconsider the filter instructions below, which I removed because our sample dataset no longer has null values.</p>
+<p>Places like Greenland and Libya do not have available values, but they are still
+painted with the lightest color, which is misleading. To remove countries with <em>null</em> values
+from the map, drag <em>Values</em> to the <em>Filters</em> card. A popup window will ask you how
+you want to filter, just leave everything unchanged. This will leave the whole range of values,
+and exclude <em>null</em> values (see the checkbox in the lower-right corner of the Filter window
+in Figure <a href="map-tableau.html#fig:tableau-polygon-filter">8.46</a>).</p>
+
+<div class="figure"><span id="fig:tableau-polygon-filter"></span>
+<img src="images/08-map/tableau-polygon-filter-annotated.png" alt="Filter values to remove countries with no data from display." width="400" />
+<p class="caption">
+Figure 8.46: Filter values to remove countries with no data from display.
+</p>
+</div>
 </div>
             </section>
 
@@ -484,20 +498,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

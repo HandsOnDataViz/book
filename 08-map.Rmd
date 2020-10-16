@@ -13,7 +13,7 @@ Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 | --- | --- |
 | Point map with custom icons<br> ![](images/08-map/map-point.png) | Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: [BatchGeo tutorial](batchgeo.html) or [Google My Maps tutorial](mymaps.html)<br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Symbol point map<br> ![](images/08-map/map-symbol.png) | Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth).<br>Easy tool: [Symbol Point Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
-| Choropleth (colored polygon) map <br> ![](images/08-map/map-polygon.png) | Best to show geographic patterns across regions (such as neighborhoods or nations) by coloring polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
+| Choropleth (colored polygon) map <br> ![](images/08-map/map-choropleth.png) | Best to show patterns across geographic areas (such as neighborhoods or nations) by coloring polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Heat point map <br> ![](images/08-map/map-heat.png) | Best to show clusters of points as colored hotspots to emphasize high frequency. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
 | Story map <br> ![](images/08-map/map-storymap.png) | Best to show a point-by-point guided tour, with a scrolling narrative to display images, audio, and video. <br> Power tool: [Ch 13: Leaflet Storymaps with Google Sheets tutorial](leaflet-storymaps-with-google-sheets.html) |
 | Polyline map <br> ![](images/08-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy Tool: [Google My Maps tutorial](mymaps.html) <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html)|
@@ -53,12 +53,12 @@ What type of data do you see listed below: points or polygons?
 
 1. 36.48, -118.56 (latitude and longitude for Joshua Tree National Park, CA)
 2. 2800 E Observatory Rd, Los Angeles, CA
-3. Haight and Ashbury Street, San Francisco, CA      
-4. Balboa Park, San Diego, CA                       
+3. Haight and Ashbury Street, San Francisco, CA
+4. Balboa Park, San Diego, CA
 5. Census tract 4087, Alameda County, CA
-6. City of Los Angeles, CA       
-7. San Diego County, CA  
-8. State of California     
+6. City of Los Angeles, CA
+7. San Diego County, CA
+8. State of California
 
 In most cases, numbers 1-4 represent *point* data because each normally refers to a *specific location* that can be displayed as a marker on a map. These usually work best in point-data maps, such as:
 
@@ -529,9 +529,11 @@ Hint: If Datawrapper does not list your preferred map outline, you can upload yo
 
 (ref:datawrapper-import-dataset) Scroll down below the *add data* table to import your dataset.
 
-```{r datawrapper-import-dataset, out.width=300, fig.cap="(ref:datawrapper-import-dataset)"}
+```{r datawrapper-import-dataset, out.width=200, fig.cap="(ref:datawrapper-import-dataset)"}
 knitr::include_graphics("images/08-map/datawrapper-import-dataset.png")
 ```
+
+TODO: Decide if it's important to include an image of this import button, since I believe it's hidden far below the table that most users see.
 
 6. On the *Import your dataset* screen, instead of pasting your data, we recommend that you click to *upload a CSV file* and select the file you downloaded in step 2.
 
@@ -549,7 +551,7 @@ knitr::include_graphics("images/08-map/datawrapper-map-match.png")
 
 (ref:datawrapper-map-default) Under the *Refine* tab, click the *wrench symbol* to see the default map settings.
 
-```{r datawrapper-map-default, out.width=500, fig.cap="(ref:datawrapper-map-default)"}
+```{r datawrapper-map-default, out.width=600, fig.cap="(ref:datawrapper-map-default)"}
 knitr::include_graphics("images/08-map/datawrapper-map-default.png")
 ```
 
@@ -575,13 +577,13 @@ Which data columns, colors, and intervals make the best map? There's no easy ans
 
 Let's move on to finalize the labels and styling of the map before we publish and share it with others.
 
-12. Under the *Refine* tab, customize the legend format. For example, to convert long numbers (such as 107762) into abbreviated dollars ($108k), we selected *custom format* and inserted the code `($ 0 a)`.
+12. Under the *Refine* tab, customize the legend format. For example, to convert long numbers (such as 107762) into abbreviated dollars ($ 108 k), we selected *custom format* and inserted the code `($ 0 a)`.
 
 13. Under the *Annotate* tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure \@ref(fig:datawrapper-map-tooltip). Learn more about [customizing tooltips from Datawrapper Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
 
 (ref:datawrapper-map-tooltip) To edit tooltips, click the blue column names or use drop-down menus to format the codes.
 
-```{r datawrapper-map-tooltip, out.width=500, fig.cap="(ref:datawrapper-map-tooltip)"}
+```{r datawrapper-map-tooltip, out.width=600, fig.cap="(ref:datawrapper-map-tooltip)"}
 knitr::include_graphics("images/08-map/datawrapper-map-tooltip.png")
 ```
 
@@ -593,9 +595,8 @@ Now that you've learned how to create a choropleth map using one tool, Datawrapp
 
 ## Choropleth Map with Tableau Public {- #map-tableau}
 
-We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building [scattercharts](scatter-tableau.html) and [filtered line charts](filtered-line-tableau.html) in Chapter 7. Now let's use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. Tableau Public also can create point maps for geographic names it already recognizes, but it's not ideal the tool cannot geocode new street addresses, such as "1600 Pennsylvania Avenue, Washington DC" (TODO: confirm this.) If you require custom boundaries or points (such as town names in your local language),
-take a look at [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
-article from the official Tableau documentation.
+We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building [scattercharts](scatter-tableau.html) and [filtered line charts](filtered-line-tableau.html) in Chapter 7. Now let's use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. Tableau Public can create many different types of map for geographical place names or ISO codes it already recognizes, such as nations, states, counties, and airports. But Tableau Public cannot geocode street addresses by itself, so you'll need to obtain their latitude and longitude with another tool, such as those described in the [geocode section of Chapter 3](geocode.html). Furthermore, if you want to upload customized map boundaries, learn how to [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
+on the support page.
 
 In this section, we will create a choropleth map of military spending per country as a percentage of their gross domestic product (GDP), as shown in Figure \@ref(fig:tableau-polygon-final). Remember that choropleth maps work best when we [normalize the data](normalize-choropleth.html) to show relative, rather than absolute, numbers. Creating a map of total military spending per country would not be very meaningful, as larger nations tend to have larger economies, so we'll base our map on the percentage of their economy that is spent on the military.
 
@@ -606,6 +607,8 @@ In this section, we will create a choropleth map of military spending per countr
 ```{r tableau-polygon-final, fig.cap="(ref:tableau-polygon-final)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/08-map/tableau-polygon-final.png")
 ```
+
+TODO above: update the demo map to match our current data and instructions (without filters?), after we make decisions about how to address interpolation in the note at the bottom of this section.
 
 To create your own choropleth map with Tableau Public, follow this tutorial.
 
@@ -623,7 +626,7 @@ Good maps often require [cleaning up messy data as described in Chapter 5](clean
 
 (ref:tableau-data-geographic) Confirm that Tableau Public recognizes your geographic place names.
 
-```{r tableau-data-geographic, outwidth=400, fig.cap="(ref:tableau-data-geographic)"}
+```{r tableau-data-geographic, out.width=400, fig.cap="(ref:tableau-data-geographic)"}
 knitr::include_graphics("images/08-map/tableau-data-geographic.png")
 ```
 
@@ -678,6 +681,22 @@ In the pop-up window, log in to your account if requested. Give it a title, such
 as *Military Spending*, and click Save.
 
 Now that you understand how to create maps using *static* data from a spreadsheet, let's explore how to create a map using the most current data available from an open-data repository.
+
+
+TODO above to DISCUSS: We might have a mismatch between the data and the tool here. If you do a quick histogram of the military data, most values are clustered around the median, but there's a few really high-spending outliers. This makes it difficult for novices to map in Tableau Public, because the default interpolation is *linear*, and the outliers dominate the appearance of the map. It's not clear to me how to change this to *quartiles* or *natural breaks*, as we do in Datawrapper. Perhaps there are some ideas here: https://help.tableau.com/current/pro/desktop/en-us/maps_howto_choropleth.htm   OR one of these Tableau books by Ryan Sleeper https://learning.oreilly.com/search/?query=author%3A%22Ryan%20Sleeper (but I don't see anything right away that's relevant)  OR another idea is to reconsider the filter instructions below, which I removed because our sample dataset no longer has null values.
+
+Places like Greenland and Libya do not have available values, but they are still
+painted with the lightest color, which is misleading. To remove countries with *null* values
+from the map, drag *Values* to the *Filters* card. A popup window will ask you how
+you want to filter, just leave everything unchanged. This will leave the whole range of values,
+and exclude *null* values (see the checkbox in the lower-right corner of the Filter window
+in Figure \@ref(fig:tableau-polygon-filter)).
+
+(ref:tableau-polygon-filter) Filter values to remove countries with no data from display.
+
+```{r tableau-polygon-filter, out.width=400, fig.cap="(ref:tableau-polygon-filter)"}
+knitr::include_graphics("images/08-map/tableau-polygon-filter-annotated.png")
+```
 
 ## Current Map with Socrata Open Data {- #map-socrata}
 TODO: revise to emphasize how the map continuously pulls the most current information directly from the open-data repository; in this case, happens to be filtered point map of hospitals in Texas.... TODO: replace with a better example of frequently-updated "live" data?

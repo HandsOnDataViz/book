@@ -103,7 +103,7 @@ In most cases, use the smallest unit of data you can obtain to allow you to prod
 
 But there are other cases when using a larger unit of data makes more sense than a smaller unit. For example, US presidential elections are determined by state-level electoral votes (except for Maine and Nebraska?). So if you wish to emphasize patterns in electoral votes, compare data for larger geographic units
 
-## Avoid Selection Bias {- #selection-bias}
+## Beware of Biased Data {- #selection-bias}
 TODO: Decide whether to keep section title as-is or broaden to "Beware of Biased Comparisons"
 
 Everyone should avoid cherry-picking data, which means selecting only the evidence that arrives at a pre-determined conclusion.
@@ -114,6 +114,10 @@ Sometimes bias arises due to a combination of human behavior and poor numerical 
 But sometimes we compare different groups of data without realizing that that they are inappropriate comparisons; they seem like random samples, but due to underlying processes they are not random. Selection bias: comparing samples as if they were truly representative of the broader population, but in fact are not: common to mistakenly compare student academic performance in different types of schools, such as public versus private, or traditional public versus charter school, without recognizing how pools of applicants may differ.... how to address: carefully examine the underlying selection processes, and make appropriate comparisons between groups, and clarify problems in text that accompanies visualization
 
 Also be aware of algorithmic biases that we sometimes build into our software...Cairo's example about IP data thru VPN converted to geographic center of US, near Kansas...
+
+We also refer to biases that are baked into the software that humans create.
+- Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html; https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/
+- Reduce by calling it out, and not simply equating "digital" as "authoritative"...
 
 ## Correlation, Causation, and Confounding Variables {- #correlation}
 Be cautious...

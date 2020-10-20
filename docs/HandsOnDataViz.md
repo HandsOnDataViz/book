@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 19 Oct 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 20 Oct 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -4859,55 +4859,78 @@ Series*.
 
 ### Histograms
 
-TODO: Rewrite this section on histograms to use data that is not
-automatically sorted into buckets (such as my coffee shop customer data
-by hour). Find other food-related data that is not already sorted, such
-as average daily calorie consumption across nations:
-<a href="https://en.wikipedia.org/wiki/List_of_countries_by_food_energy_intake" class="uri">https://en.wikipedia.org/wiki/List_of_countries_by_food_energy_intake</a>.
-Use default Google histogram (rather than column chart). Walk thru steps
-to modify bucket sizes in Chart Editor &gt; Histogram &gt; Show item
-dividers
+A histogram is a specific type of bar or column chart that shows
+distribution of values in a dataset. Figure
+<a href="#fig:histogram">7.26</a> shows a histogram of average daily
+calorie consumption in 174 countries in 2006–2008 based on [UN’s Food
+and Agriculture Organization](http://www.fao.org/) data.
 
-A histogram is a specific type of bar or column chart that is best for
-showing the distribution of raw data, with the number of values in each
-bucket (or bin). To build a histogram, you need to assign each data
-point, whether numerical or categorical, into one of the non-overlapping
-buckets. For example, imagine that you wish to track the number of
-customers each hour in a local coffee shop. Format the raw customer data
-series in a vertical column in your Google Sheet, as shown in Figure
-<a href="#fig:histogram-data">7.26</a>. Now you can easily create a
-histogram column chart that displays the number of customers per hour,
-as shown in Figure <a href="#fig:histogram">7.27</a>, which resembles
-the “popular times” format for businesses in Google Maps. This coffee
-shop experiences a morning rush and an afternoon rush, but the middle of
-the day and late evenings are relatively quiet.
-
-<img src="images/07-chart/histogram-data.png" alt="To create a histogram, format the raw data series vertically in Google Sheets." width="250" />
+<img src="images/07-chart/histogram.png" alt="Histogram: Explore the full-screen [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive)."  />
 <p class="caption">
-Figure 7.26: To create a histogram, format the raw data series
-vertically in Google Sheets.
+Figure 7.26: Histogram: Explore the full-screen [interactive
+version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive).
 </p>
 
-<img src="images/07-chart/histogram.png" alt="Histogram: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive). Fictitious data on coffee shop customers."  />
+Histograms are used to represent distributions, not individual values.
+Figure <a href="#fig:histogram">7.26</a> shows to peaks, one of
+2,100–2,300 calories and the second one at 2,700-3,100 calories (two
+consecutive buckets). We can also see that daily calorie consumption in
+five countries does not exceed 1,900, and exceeds 3,700 calories in
+three countires. Histograms by themselves, without annotations don’t
+tell us what those countries are.
+
+Note: You can view and copy the [Google Sheet with the calorie
+consumption
+data](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452).
+You can use *Sort sheet A-&gt;Z* function to see that five countries
+with lowest per-capita calorie consumption are Eritrea (1,590), Burundi
+(1,680), Comoros (1,840), Haiti (1,850), and Zambia (1,880). The three
+highest are Greece (3,710), USA (3,750), and Austria (3,800). Note that
+the dataset is over a decade old and things may be different today.
+
+Histograms use *buckets* or *bins*, which are predefined ranges of
+values, and count how many data points (usually rows in your dataset)
+fall within each interval. Each interval’s count is represented by a
+bar. Intervals should not overlap, and we recommend you make them all
+equal size. Consider making your ranges “pretty”, that is, using whole
+numbers such as multiples of 5 (5, 10, 15, 20) or 100 (1500, 1600, 1700,
+1800) for breakpoints, but only if that makes sense for your data
+distribution.
+
+Now, let’s look at how to create the histogram in Figure
+<a href="#fig:histogram">7.26</a> in Google Sheets. Our dataset contains
+two columns (*Country* and *Average Daily Calorie Consumption*) and 174
+records, as shown in Figure <a href="#fig:histogram-data">7.27</a>. But
+in reality you only need one column that lists all values to build a
+histogram.
+
+<img src="images/07-chart/histogram-data.png" alt="To create a histogram, you only need one column with numeric values." width="250" />
 <p class="caption">
-Figure 7.27: Histogram: Explore the [interactive
-version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=509234663&format=interactive).
-Fictitious data on coffee shop customers.
+Figure 7.27: To create a histogram, you only need one column with
+numeric values.
 </p>
 
-Create your own version using our [Histogram Chart in Google Sheets
-template](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo)
-with coffee shop customer data. Google Sheets considers histograms to be
-regular column charts, so in the Chart Editor window, choose *Chart Type
-&gt; Column chart* and follow the rest of the directions in the Bar and
-Column Chart tutorial above. Alternatively, you could choose to sort
-customers into larger bins, such as time of day (morning, afternoon,
-evening), as shown in the second tab of the template.
+Select a column with values, and go to *Insert &gt; Chart*. Google
+Sheets will likely automatically choose *Histogram chart* as the *Chart
+type* in Chart editor, but if not, use the dropdown and set it manually
+(you will find *Histogram* under the *Other* category). While some
+readers know what histograms represent, it may be useful to add a y-axis
+label (eg *Number of countries*) and a subtitle (eg *Each bar represents
+number of countries per calorie range*). You can add both from the
+*Customize* tab in the Chart editor.
 
-Tip: We set a custom number format to display *8 AM* and other times as
-desired in the *Hour* column. In Google Sheets, select a column, then go
-to *Format &gt; Number &gt; More Formats &gt; Custom Number Formats* to
-define your preferred format.
+To further assist the reader in interpreting the histogram, you can
+break down the column into individual items (in our case, countries),
+which will appear as blocks with white boundaries. You can do that, and
+manually set the range of each bucket in the Chart editor (*Customize
+&gt; Histogram &gt; Show item dividers* and *Customize &gt; Histogram
+&gt; Bucket size*). Larger intervals will contain more datapoints and
+will also appear wider in the chart as fewer larger intervals are needed
+to cover the entire range. Smaller intervals will contain fewer
+datapoints each, and will appear narrower.
+
+Unfortunately, currently there is no way to get rid of decimal points in
+the x-axis labels, even though all breakpoint may be integers.
 
 - Pie, Line, and Area Charts
 ----------------------------

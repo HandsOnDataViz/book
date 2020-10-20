@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-16" />
+<meta name="date" content="2020-10-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -204,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
 <li class="chapter" data-level="" data-path="averages-percentages.html"><a href="averages-percentages.html"><i class="fa fa-check"></i>Clarify Averages and Percentages</a></li>
 <li class="chapter" data-level="" data-path="smaller-larger-units.html"><a href="smaller-larger-units.html"><i class="fa fa-check"></i>Comparing Smaller versus Larger Units</a></li>
-<li class="chapter" data-level="" data-path="selection-bias.html"><a href="selection-bias.html"><i class="fa fa-check"></i>Avoid Selection Bias</a></li>
+<li class="chapter" data-level="" data-path="selection-bias.html"><a href="selection-bias.html"><i class="fa fa-check"></i>Beware of Biased Data</a></li>
 <li class="chapter" data-level="" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i>Correlation, Causation, and Confounding Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>7</b> Chart Your Data</a>
@@ -286,8 +286,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
-<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Recognize and Reduce Data Bias</a></li>
+<li class="chapter" data-level="" data-path="map-area-and-projection-bias.html"><a href="map-area-and-projection-bias.html"><i class="fa fa-check"></i>Map Area and Projection Bias</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell and Show Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -351,17 +351,17 @@ output:
     ...
     citation_package: none
     pandoc_args: [ &quot;--csl&quot;, &quot;chicago-fullnote-bibliography.csl&quot; ]</code></pre>
-<p>Here’s a text-only note, with no Zotero citation.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a></p>
-<p>To create a note with citations only, separate Zotero/BibTeX citation keys with semi-colons:<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a></p>
-<p>Since notes also may include text and punctuation in Markdown syntax, always insert a caret symbol prior to the brackets to demarcate a note:<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a></p>
+<p>Here’s a text-only note, with no Zotero citation.<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a></p>
+<p>To create a note with citations only, separate Zotero/BibTeX citation keys with semi-colons:<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a></p>
+<p>Since notes also may include text and punctuation in Markdown syntax, always insert a caret symbol prior to the brackets to demarcate a note:<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a></p>
 <p>Note that the <code>chicago-fullnote-bibliography.csl</code> format automatically shortens the note after it its first reference.</p>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="28">
-<li id="fn28"><p>This is a note, with no bibliographic reference.<a href="notes.html#fnref28" class="footnote-back">↩︎</a></p></li>
-<li id="fn29"><p><span class="citation">Huff, <em>How to Lie with Statistics</em></span>; <span class="citation">Mark S. Monmonier, <em>How to Lie with Maps</em>, 2nd ed. (University of Chicago Press, 1996), <a href="http://books.google.com/books?isbn=0226534219" role="doc-biblioref">http://books.google.com/books?isbn=0226534219</a></span><a href="notes.html#fnref29" class="footnote-back">↩︎</a></p></li>
-<li id="fn30"><p>Compare how “lying” is justified by <span class="citation">Huff, <em>How to Lie with Statistics</em></span>, pp. 10-11 and <span class="citation">Monmonier, <em>How to Lie with Maps</em></span>, pp. 11-12.<a href="notes.html#fnref30" class="footnote-back">↩︎</a></p></li>
+<ol start="33">
+<li id="fn33"><p>This is a note, with no bibliographic reference.<a href="notes.html#fnref33" class="footnote-back">↩︎</a></p></li>
+<li id="fn34"><p><span class="citation">Huff, <em>How to Lie with Statistics</em></span>; <span class="citation">Mark S. Monmonier, <em>How to Lie with Maps</em>, 2nd ed. (University of Chicago Press, 1996), <a href="http://books.google.com/books?isbn=0226534219" role="doc-biblioref">http://books.google.com/books?isbn=0226534219</a></span><a href="notes.html#fnref34" class="footnote-back">↩︎</a></p></li>
+<li id="fn35"><p>Compare how “lying” is justified by <span class="citation">Huff, <em>How to Lie with Statistics</em></span>, pp. 10-11 and <span class="citation">Monmonier, <em>How to Lie with Maps</em></span>, pp. 11-12.<a href="notes.html#fnref35" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

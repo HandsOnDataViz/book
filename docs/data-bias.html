@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-16" />
+<meta name="date" content="2020-10-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="how-to-lie-with-words.html"/>
-<link rel="next" href="story.html"/>
+<link rel="prev" href="how-to-lie-with-maps.html"/>
+<link rel="next" href="map-area-and-projection-bias.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -204,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
 <li class="chapter" data-level="" data-path="averages-percentages.html"><a href="averages-percentages.html"><i class="fa fa-check"></i>Clarify Averages and Percentages</a></li>
 <li class="chapter" data-level="" data-path="smaller-larger-units.html"><a href="smaller-larger-units.html"><i class="fa fa-check"></i>Comparing Smaller versus Larger Units</a></li>
-<li class="chapter" data-level="" data-path="selection-bias.html"><a href="selection-bias.html"><i class="fa fa-check"></i>Avoid Selection Bias</a></li>
+<li class="chapter" data-level="" data-path="selection-bias.html"><a href="selection-bias.html"><i class="fa fa-check"></i>Beware of Biased Data</a></li>
 <li class="chapter" data-level="" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i>Correlation, Causation, and Confounding Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>7</b> Chart Your Data</a>
@@ -286,8 +286,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
-<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Recognize and Reduce Data Bias</a></li>
+<li class="chapter" data-level="" data-path="map-area-and-projection-bias.html"><a href="map-area-and-projection-bias.html"><i class="fa fa-check"></i>Map Area and Projection Bias</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell and Show Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -337,39 +337,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data-bias" class="section level2 unnumbered" number="">
 <h2>Recognize and Reduce Data Bias</h2>
-<p>Bias occurs when we unfairly favor one view over another. Different types of bias….(we already mentioned statistical biases in the Compare Appropriate Data chapter…)</p>
-<p>We use the term to refer to biased people who prejudge something before evaluating the evidence. While some forms of bias are clearer to recognize, such as racial or gender bias,….Some biases are baked into human cognition and hard to avoid in data viz, unless you call it out</p>
-<ul>
-<li>Privileged majority biases… such as whiteness bias, male bias, heterosexual bias….</li>
-<li>Example: Map with “empty” land ignoring indigenous people <a href="https://twitter.com/indigenia/status/1308406887231246337?s=12" class="uri">https://twitter.com/indigenia/status/1308406887231246337?s=12</a></li>
-<li>sidenote: that wasn’t how the original map creator designed or labeled the map, but others interpreted it this way</li>
-<li>how to address: clarify map biases….</li>
-<li>See also John Schwabish and Alice Feng, avoid whiteness bias…
-<a href="https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff" class="uri">https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff</a></li>
-<li>Reduce by calling out white superiority or privilege, and changing how we design….</li>
-</ul>
-<p>Think also about the simple act of mapping data for the “United States”: How does your data and map represent the District of Columbia, where X people live but is not counted as a state? Similarly, how does it represent Puerto Rico….? Or other US territories in the Pacific, such as….? If you’re trying to create a map of all US data, seek to include people rather than ignoring their existence. If it’s hard to include non-contiguous areas in your US map, find better basemaps. If you don’t have data, mention this in the notes and/or text</p>
-<p>We also refer to biases that are baked into the software that humans create.
-- Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: <a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>; <a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a>
-- Reduce by calling it out, and not simply equating “digital” as “authoritative”…</p>
-<ul>
-<li><p>Confirmation Bias: accept claims that fit our preconceived notions…(see dataviz experiments in Cario book, Thaler?). Avoid it by looking at data with open eyes, and search out competing interpretations</p></li>
-<li><p>Pattern Bias: tendency to see patterns in random data. Avoid it by remind readers that data is noisy and use statistical tests to determine likelihood of results due to change, covered in many books on statistical analysis.</p></li>
-</ul>
-<div id="summary15" class="section level3 unnumbered" number="">
-<h3>Summary</h3>
-<p>TODO</p>
+<p>We define bias as unfairly favoring one view over another. When working with data and designing visualizations, it’s important to be aware of different types of bias, so that you can recognize them as potential factors that may influence your perception, and reduce their presence in your own work. The first step toward reducing bias is to correctly identify various types, since at first glance they may appear hidden away, until we learn to call them out.</p>
+<p>In <a href="comparisons.html">Chapter 6: Make Clear Comparisons</a>, we warned you to watch out biased data sampling that may yield inaccurate results. For example, <em>selection bias</em> happens when samples may appear to be random, but are not due to underlying processes, such as students in two different schools, but one requires an application process, even one that uses a lottery. Also beware of <em>algorithmic bias</em> that is built into our software, ranging from simple examples (such as web visitor IP addresses being converted into the nation’s geographic center) and more dangerous ones (TODO EXAMPLE from Ch6). Address both types of biases by exercising cautious about the data you choose to analyze, make only meaningful comparisons, and describe issues in the visualization notes and companion text to call out possible biases.</p>
+<p>When you analyze and visualize data, look out for additional biases that many cognitive psychologists believe are built into human behavior, both in ourselves and our audiences. <em>Confirmation bias</em> refers to the tendency to accept only claims that fit our preconceived notions of how the world works. [TODO: refer to a dataviz experiment by Thaler?] Counter it by actively searching for and considering alternative interpretations, and look at contradictory findings with open eyes. <em>Pattern bias</em> is another human tendency to see meaningful relationships in data, even when the numbers are random. [TODO: refer to another dataviz experiment by Thaler?] Avoid this type of bias by continually reminding yourself (and your readers) that data is noisy, and our brains are wired to see patterns even when none exist. Refer to books on statistical data analysis for appropriate tests to determine whether patterns that <em>appear</em> to jump out to your eye can be confirmed, and whether their odds of existing are greater than chance. [TODO: check wording]</p>
+<p>Just as people can lie with charts and maps, let’s not forget our long history of misleading audiences (and ourselves) with the word choices we make when describing data. <em>Framing bias</em> refers to negative or positive labels or conceptual categories that affect how we interpret information. For example, British statistician David Spiegelhalter notes that US hospitals tend to report <em>mortality rates</em>, while UK hospitals report <em>survival</em> rates. When weighing the risks of a surgical procedure for member of your family, a 5 percent mortality rate seems worse than a 95 percent survival rate, even though they’re identical. Furthermore, Spiegelhalter observes that when we supplement rates with raw numbers, it further increases our impression of risks. For example, if we told you a surgical procedure had a 5 percent mortality rate <em>and</em> that 20 out of 400 patients died, it seems worse because we begin to imagine real people’s lives, not abstract percentages.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a> The best way to counter framing bias is to be aware of its potential effect on our minds and to call it out, as we’ve attempted to do here.</p>
+<p><em>Intergroup bias</em> refers to multiple ways that people privilege or discriminate by social categories, such as race, gender, class, sexuality, etc. In the wake of the Black Lives Matter movement, greater attention has been called to ways that intergroup bias pervades data visualization, and ways to counter its impact. Jonathan Schwabish and Alice Feng describe how they applied a racial equity lens to revise the <a href="http://urbaninstitute.github.io/graphics-styleguide/">Urban Institute’s Data Visualization Style Guide</a> with a racial equity lens.<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> Some recommendations are straightforward and relatively simple to implement. For example, they recommend ordering group labels to focus on the data story, rather than listing “White” and “Men” at the top by default. Also, we should proactively acknowledge missing groups in our data by calling attention to those often omitted, such as non-binary and transgender people in US federal datasets. Furthermore, when choosing color palettes to represent people in charts and maps, avoid stereotypical colors (such as blue for men and pink for women), and on a more subtle level, avoid color-grouping Black, Latino, and Asian people as the polar opposites of White people.</p>
+<p>Other proposals by Schwabish and Feng are likely to generate more discussion and debate. For example, they recommend to stop placing disaggregated racial and ethnic data on the same chart, because it encourages a “deficit-based perspective” that judges lower-performing groups by the standards of higher-performing ones. Instead, they suggest plotting data about racial and ethnic groups on separate but adjacent charts, each with its own reference to state or national averages for comparison, as shown in Figure <a href="data-bias.html#fig:schwabish-placeholder">15.14</a>. The idea is interesting, but the example about Covid-19 pandemic data raises more questions about whose interests are served by revising how data is visualized On one hand, if predominantly White audiences perceive racial disparities in Covid data to be caused by <em>group behavior</em>, then it makes sense to stop feeding racist stereotypes and no longer compare different groups in the same chart. On the other hand, if these racial disparities are caused in part by <em>structural obstacles</em> to quality jobs, housing, and health care, then do separate charts make it harder to identify and challenge the roots of systemic racism? Schwabish and Feng raise important issues for deeper reflection. Yet once again, data visualization is not always driven by clearly-defined design rules. Instead, our mission is to find <em>better</em> ways to tell true and meaningful data stories, while working to identify and reduce bias all around us.</p>
 
+<div class="figure"><span id="fig:schwabish-placeholder"></span>
+<img src="images/15-detect/schwabish-placeholder.png" alt="Schwabish and Feng recommend to stop placing racial and ethnic data on the same chart (left), and replace it with separate but adjacent charts with state or national averages as a comparison point (right)." width="700" />
+<p class="caption">
+Figure 15.14: Schwabish and Feng recommend to stop placing racial and ethnic data on the same chart (left), and replace it with separate but adjacent charts with state or national averages as a comparison point (right).
+</p>
 </div>
+<p>TODO above: DECIDE if description and critique of Schwabish and Feng is clear, interesting, and feasible with or without image (which probably would need to be redone and simplified).</p>
+<p>Now that we’ve introduced various types of bias to consider when working with data visualization in general, in the next section we’ll focus on two additional types of bias that are specific to mapping.</p>
 </div>
-<!-- </div> -->
+<div class="footnotes">
+<hr />
+<ol start="30">
+<li id="fn30"><p><span class="citation">David Spiegelhalter, <em>The Art of Statistics: Learning from Data</em> (Penguin UK, 2019), <a href="https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ</a></span>, pp. 22-5<a href="data-bias.html#fnref30" class="footnote-back">↩︎</a></p></li>
+<li id="fn31"><p><span class="citation">Jonathan Schwabish and Alice Feng, “Applying Racial Equity Awareness in Data Visualization,” preprint (Open Science Framework, August 27, 2020), <a href="https://doi.org/10.31219/osf.io/x8tbw" role="doc-biblioref">https://doi.org/10.31219/osf.io/x8tbw</a></span>. See also this web post summary of the paper, <span class="citation">Jonathan Schwabish and Alice Feng, “Applying Racial Equity Awareness in Data Visualization,” Medium, accessed October 16, 2020, <a href="https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff" role="doc-biblioref">https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff</a></span>. <span class="citation">Urban Institute, “Urban Institute Data Visualization Style Guide,” 2020, <a href="http://urbaninstitute.github.io/graphics-styleguide/" role="doc-biblioref">http://urbaninstitute.github.io/graphics-styleguide/</a></span><a href="data-bias.html#fnref31" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="how-to-lie-with-words.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="story.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="how-to-lie-with-maps.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="map-area-and-projection-bias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

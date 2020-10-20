@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-16" />
+<meta name="date" content="2020-10-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="how-to-lie-with-charts.html"/>
-<link rel="next" href="how-to-lie-with-words.html"/>
+<link rel="next" href="data-bias.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -204,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
 <li class="chapter" data-level="" data-path="averages-percentages.html"><a href="averages-percentages.html"><i class="fa fa-check"></i>Clarify Averages and Percentages</a></li>
 <li class="chapter" data-level="" data-path="smaller-larger-units.html"><a href="smaller-larger-units.html"><i class="fa fa-check"></i>Comparing Smaller versus Larger Units</a></li>
-<li class="chapter" data-level="" data-path="selection-bias.html"><a href="selection-bias.html"><i class="fa fa-check"></i>Avoid Selection Bias</a></li>
+<li class="chapter" data-level="" data-path="selection-bias.html"><a href="selection-bias.html"><i class="fa fa-check"></i>Beware of Biased Data</a></li>
 <li class="chapter" data-level="" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i>Correlation, Causation, and Confounding Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>7</b> Chart Your Data</a>
@@ -286,8 +286,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-to-lie-with-charts.html"><a href="how-to-lie-with-charts.html"><i class="fa fa-check"></i>How to Lie with Charts</a></li>
 <li class="chapter" data-level="" data-path="how-to-lie-with-maps.html"><a href="how-to-lie-with-maps.html"><i class="fa fa-check"></i>How to Lie with Maps</a></li>
-<li class="chapter" data-level="" data-path="how-to-lie-with-words.html"><a href="how-to-lie-with-words.html"><i class="fa fa-check"></i>How to Lie with Words</a></li>
 <li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Recognize and Reduce Data Bias</a></li>
+<li class="chapter" data-level="" data-path="map-area-and-projection-bias.html"><a href="map-area-and-projection-bias.html"><i class="fa fa-check"></i>Map Area and Projection Bias</a></li>
 </ul></li>
 <li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell and Show Your Data Story</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -337,83 +337,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="how-to-lie-with-maps" class="section level2 unnumbered" number="">
 <h2>How to Lie with Maps</h2>
-<p>One of the best ways to learn how to detect lies is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own. We’ll focus our attention on choropleth maps that use shading or color to represent values in geographic areas, because they are a topic of considerable mischief. This exercise was inspired by geographer Mark Monmonier’s classic book by the same name, <em>How to Lie with Maps</em>, originally published in 1991, now in its third edition.<span class="citation"><a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a></span></p>
-<p>Before we get started, review the <a href="map-design.html">map design principles in Chapter 8</a> to avoid common mistakes when designing colored polygon (or choropleth) maps. For example, in most cases you want to avoid mapping absolute numbers (such as the total number of people in a group), and instead show relative data (such as the percentage of people in a group). Mapping absolute numbers of voters would simply show you where most people live, rather than how rates vary across geographic areas, which is usually what map makers wish to emphasize. Also, this section assumes that you’re already familiar with the steps for creating a <a href="chloropleth-datawrapper.html">Choropleth map with Datawrapper in Chapter 8</a>.</p>
+<p>One of the best ways to learn how to detect lies is to intentionally manipulate a map, and tell two (or more) opposing stories with the same data. You’ll learn what to watch out for when viewing other people’s maps, and think more carefully about the ethical issues when you design your own. We’ll focus our attention on choropleth maps that use shading or color to represent values in geographic areas, because they are a topic of considerable mischief. This exercise was inspired by geographer Mark Monmonier’s classic book by the same name, <em>How to Lie with Maps</em>, originally published in 1991, now in its third edition.<span class="citation"><a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a></span></p>
+<p>Before we get started, review the <a href="map-design.html">map design principles in Chapter 8</a> to avoid common mistakes when designing colored polygon (or choropleth) maps. For example, in most cases you want to avoid mapping absolute numbers (such as the total number of people in a group), and instead show relative data (such as the percentage of people in a group). Mapping absolute numbers of voters would simply show you where most people live, rather than how rates vary across geographic areas, which is usually what map makers wish to emphasize. Also, this section assumes that you’re already familiar with the steps for creating a <a href="choropleth-datawrapper.html">Choropleth map with Datawrapper in Chapter 8</a>.</p>
 <p>Let’s return to the two maps in the <a href="introduction.html">Introduction</a> of this book, which presented two different interpretations of world income inequality. In particular, the first map colored the US in medium blue which suggested its level of inequality was similar to other nations, while the second map made the US stand out in dark blue at the highest tier of inequality. We argued that both were <em>truthful</em> interpretations. You’ll understand the concepts more clearly by follow this hands-on tutorial to recreate both maps, plus one more. First, let’s examine the data and upload it to Datawrapper to start making our choropleth maps.</p>
 <ol style="list-style-type: decimal">
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565">world income top 1 percent data in Google Sheets</a>, and go to <em>File &gt; Save As</em> to create a copy that you can edit in your own Google Drive.</p></li>
 <li><p>Examine the data and read the notes. Overall, this data offers one way to make international comparisons about income distribution by showing “how big a slice of the pie” is held by the richest 1 percent in each nation. Each row lists a nation and its three-letter code, along with the percent share of pre-tax national income held by the top 1 percent of the population, and the most recent year when this data was collected by the World Inequality Database. For example, in Brazil, the top 1 percent of the population held 28.3 percent of the nation’s income in 2015, while in the United States, the top 1 percent held 20.5 percent in 2018. To be clear, there are other ways to compare the distribution of income or wealth across nations, but this is one of the better datasets available that capture this concept using one easy-to-understand variable.</p></li>
 <li><p>Since we cannot directly import this Google Sheet into our Datawrapper mapping tool, go to <em>File &gt; Download</em> to export the first tab in <em>CSV format</em> to your computer.</p></li>
 <li><p>Open the <a href="https://datawrapper.de">Datawrapper visualization tool</a> in your browser and upload your CSV map data. Select <em>New Map</em>, select <em>Choropleth map</em>, and select <em>World</em>, then <em>Proceed</em>. In the <em>Add your data</em> screen, scroll down below the table and select the <em>Import your dataset</em> button, then the <em>Start Import</em> button, then <em>click here to upload a CSV file</em>, and upload the CSV file you created in the step above. Click to confirm that the first column is <em>Matched as ISO code</em>, click <em>Continue</em>, then click to confirm that the <em>Percent Share</em> column is <em>Matched as Values</em>, then click <em>Go</em> and <em>Proceed</em> to visualize your map.</p></li>
-<li><p>In the <em>Visualize</em> screen, in the <em>Colors</em> section of the <em>Refine</em> tab <em>Select palette</em>, click the <em>wrench symbol</em> to open up the color settings, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-color-settings">15.8</a>. Let’s skip past the light-green-to-blue color palette, which you can modify later, and let’s focus on settings for color ranges.</p></li>
+<li><p>In the <em>Visualize</em> screen, in the <em>Colors</em> section of the <em>Refine</em> tab <em>Select palette</em>, click the <em>wrench symbol</em> to open up the color settings, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-color-settings">15.10</a>. Let’s skip past the light-green-to-blue color palette, which you can modify later, and let’s focus on settings for color ranges.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:map-color-settings"></span>
 <img src="images/15-detect/map-color-settings.png" alt="Click the wrench symbol to open the color settings." width="350" />
 <p class="caption">
-Figure 15.8: Click the <em>wrench symbol</em> to open the color settings.
+Figure 15.10: Click the <em>wrench symbol</em> to open the color settings.
 </p>
 </div>
 <div id="modify-the-map-color-ranges" class="section level3 unnumbered" number="">
 <h3>Modify the map color ranges</h3>
-<p>While we never automatically accept the default visualization, it’s a good place to begin. The default map displays a <em>continuous</em> type of range, with a <em>linear</em> interpolation of data values. This means that the map places all of the values in a straight line, from the minimum of 5% to the maximum of 31%, and assigns each value to a color along the gradient, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-continuous-linear">15.9</a>. Notice that the US (20.5%) blends in with a medium blue color, just above the midpoint in this range.</p>
+<p>While we never automatically accept the default visualization, it’s a good place to begin. The default map displays a <em>continuous</em> type of range, with a <em>linear</em> interpolation of data values. This means that the map places all of the values in a straight line, from the minimum of 5% to the maximum of 31%, and assigns each value to a color along the gradient, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-continuous-linear">15.11</a>. Notice that the US (20.5%) blends in with a medium blue color, just above the midpoint in this range.</p>
 
 <div class="figure"><span id="fig:map-continuous-linear"></span>
 <iframe src="https://datawrapper.dwcdn.net/aetEM/" width="672" height="450px">
 </iframe>
 <p class="caption">
-Figure 15.9: Income inequality map with continuous range and linear interpolation. Explore the <a href="https://datawrapper.dwcdn.net/aetEM/">interactive version</a>.
+Figure 15.11: Income inequality map with continuous range and linear interpolation. Explore the <a href="https://datawrapper.dwcdn.net/aetEM/">interactive version</a>.
 </p>
 </div>
-<p>Create a second map with the same data but different settings. Change the <em>Type</em> setting to <em>steps</em>, and adjust to <em>3</em> steps, using <em>Natural breaks (Jenks)</em> interpolation, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-3steps-naturalbreaks">15.10</a>. This means that the map now places all of the values in three ascending groups. Natural breaks offers a compromise between using colors to highlight the outliers versus diversity inside the range. Notice that the US (still 20.5%) now stands out in a dark blue color at the top third of this range (19% or above).</p>
+<p>Create a second map with the same data but different settings. Change the <em>Type</em> setting to <em>steps</em>, and adjust to <em>3</em> steps, using <em>Natural breaks (Jenks)</em> interpolation, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-3steps-naturalbreaks">15.12</a>. This means that the map now places all of the values in three ascending groups. Natural breaks offers a compromise between using colors to highlight the outliers versus diversity inside the range. Notice that the US (still 20.5%) now stands out in a dark blue color at the top third of this range (19% or above).</p>
 
 <div class="figure"><span id="fig:map-3steps-naturalbreaks"></span>
 <iframe src="https://datawrapper.dwcdn.net/VSfdZ/" width="672" height="450px">
 </iframe>
 <p class="caption">
-Figure 15.10: Income inequality map with 3 steps and natural breaks interpolation. Explore the <a href="https://datawrapper.dwcdn.net/VSfdZ/">interactive version</a>.
+Figure 15.12: Income inequality map with 3 steps and natural breaks interpolation. Explore the <a href="https://datawrapper.dwcdn.net/VSfdZ/">interactive version</a>.
 </p>
 </div>
-<p>The first map portrays US income inequality to be similar to most nations, while the second map places the US at the higher end of the color scale. Which map is misleading? Which one is truthful? If you prefer clear and definitive rules in map design, this answer may frustrate you. Although the two maps generate very different impressions in our eyes, both maps offer reasonable and truthful interpretations of the data.</p>
-<p>To understand what’s happening behind the scenes with your choropleth map, visualization expert Alberto Cairo recommends creating a histogram to better understand the data distribution. [Cite Cairo; add that he recommends multiple histograms with different bucket sizes?] Go back to the original Google Sheet [link again?] and create a <a href="chart-histogram.html">histogram, as we described in chapter 7</a> to view the frequency of nations when sorted into “buckets” by percent share, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-data-histogram">15.11</a>. This is not a normal distribution curve, because a handful of nations are outliers around the 30 percent mark. In the first map, which used continuous type and linear interpolation, the US appears closer to the midpoint of the range and blended in with a medium blue. In the second map, which used 3 steps and natural breaks, the US appears in the top range was stood out with a dark blue. Since both maps are consistently labeled…(more?), there is no definitive answer that makes one map more correct than the other. [TODO: check wording]</p>
+<p>The first map portrays US income inequality to be similar to most nations, while the second map places the US at the higher end of the color scale. Which map is misleading? Which one is truthful? If you prefer clear and definitive rules in map design, this answer may frustrate you. Although the two maps generate very different impressions in our eyes, both maps present accurate data that is clearly labeled, based on reasonable and truthful interpretations of the data.</p>
+<p>To understand what’s happening behind the scenes with your choropleth map, visualization expert Alberto Cairo recommends creating a histogram to better understand the data distribution. Go back to the <a href="https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565">data in the Google Sheet</a> and create a <a href="chart-histogram.html">histogram, as we described in chapter 7</a> to view the frequency of nations when sorted by percent share into “buckets”, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-data-histogram">15.13</a>. While most nations are clumped around the median, this is not a normal distribution curve, because a handful are outliers near the 30 percent mark. In the first map, which used continuous type and linear interpolation, the US appeared closer to the median and blended in with a medium blue. By contrast, the second map used 3 steps and natural breaks, which meant that the US appeared in the top range and stood out in dark blue.</p>
 
 <div class="figure"><span id="fig:map-data-histogram"></span>
 <img src="images/15-detect/map-data-histogram.png" alt="Histogram of income inequality map data."  />
 <p class="caption">
-Figure 15.11: Histogram of income inequality map data.
+Figure 15.13: Histogram of income inequality map data.
 </p>
 </div>
-<p>TODO: REWRITE AFTER UPDATING CH 8 CHOROPLETH MAP DESIGN: So how <em>should</em> you make decisions when designing choropleth maps? Can you simply place the cutoffs anywhere you choose? Absolutely not. Mapmakers offer guidelines about ways to make <em>better</em> visualizations. For example, Datawrapper Academy recommends finding “a compromise between honesty and usefulness” when designing maps [TODO cite <a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>]. “Useful” means that it’s acceptable to use design choices to communicate different interpretations of the data. For example, a linear interpolation is best for emphasizing the extreme lows and highs, while quantiles are best for identifying geographic patterns in the middle ranges. “Honesty” means telling the truth, and not intentionally creating misleading impressions of the data. For example, increasing the number of steps in your color range will increase the level of contrast in the map, but it can also mistakenly give the impression that light- and dark-colored regions are very different, while their numbers may vary only slightly. In general, Datawrapper recommends choosing ranges to make sure readers “see all the differences in the data,” rather than hiding them out of sight.[TODO cite <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>] They also recommend using a continuous color range to show nuances in the data, unless your data story has a compelling reason to display discrete color steps [TODO add “such as…example” and cite <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>]. Finally, Datawrapper Academy strongly warns against using the manual custom settings to manipulate a map’s appearance to fit a preconceived point of view.[Cite <a href="https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool" class="uri">https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool</a>]. Show readers the story and tell the truth.</p>
-<p>TODO: map-colorbrewer.png, map-import-colors.png</p>
-<p>[TODO: Where to insert this?] Based on these general guidelines, some may argue that the first map is <em>better</em> because it displays a continuous color range, but that does <em>not</em> make the second map wrong nor misleading.</p>
-</div>
-<div id="modify-the-map-area" class="section level3 unnumbered" number="">
-<h3>Modify the map area</h3>
-<p>Another way that choropleth maps mislead readers is because larger regions draw too much attention and divert the focus from <em>population size</em> to <em>geographic area</em>. In the United States, this problem arises during every national election. Typical maps of US electoral votes exaggerate the influence of rural states with larger geographic areas (such as enormous Wyoming, with about 590,000 people), and diminish the influence of urban states with small areas (such as tiny Rhode Island, with over 1,000,000 people).</p>
-<p>TODO: DECIDE whether to include US electoral vote map, with standard projection vs cartogram side-by-side?</p>
-<p>This problem is related to the larger issue of map projection bias. Some projections create the appearance of larger sizes for nations in the North hemisphere than those in the South hemisphere. [TODO give examples and illustrate difference…]</p>
-<p>One solution to this problem is to replace standard map outlines with <em>cartograms</em> OR <em>population squares</em>, which [TODO: add precise definitions of the two]. One drawback is that both alternatives require readers to be familiar with the general geographic outline of the region shown, since the visualizations do not match standard maps.</p>
-<p>To create a population square map in Datawrapper:</p>
-<ol style="list-style-type: decimal">
-<li><p>Create a new map and go to <em>Select your map</em> …. or if you saved world inequality maps in your Datawrapper account, go to My Charts, select and duplicate one of them, and edit it.</p></li>
-<li><p>Under type of map to create, type “hexagons” to see all of the cartograms available (including US States) or type “squares” to see all of those available (including World population squares). Select your preferred map and data, and proceed to visualize in the same way as above, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-world-pop-square">15.12</a>.</p></li>
-</ol>
-
-<div class="figure"><span id="fig:map-world-pop-square"></span>
-<iframe src="https://datawrapper.dwcdn.net/YfNDe/" width="672" height="600px">
-</iframe>
-<p class="caption">
-Figure 15.12: World population square map with income inequality data. Explore the <a href="https://datawrapper.dwcdn.net/YfNDe/">interactive version</a>.
-</p>
-</div>
-<p>TODO: mention other types of map bias? Interactive maps such as Google Maps change borders and data depending on the internet address of the user (eg China). Also map color bias….</p>
-<p>Now that you have a clearer idea of how to lie with charts and maps, let’s look at the related problem of lying about data using words.</p>
+<p>So how <em>should</em> we make decisions when designing choropleth maps? Similar to the chart section, there are few universal rules, but some recommendations. Always look for <em>better</em> ways to use map color ranges to show true and meaningful differences in the data, rather than hiding them out of sight. Datawrapper Academy recommends finding “a compromise between honesty and usefulness” when creating choropleth maps. In other words, tell the truth when displaying evidence <em>and</em> use design choices to emphasize an interpretation that calls our attention to what’s most important in the data story. For example, a <em>linear</em> interpolation works best to emphasize extreme lows and highs, while <em>quantiles</em> or other non-linear groupings reveal more geographic diversity in the middle ranges. Furthermore, some recommend using a <em>continuous</em> color palette to show nuances in the data, unless your data story has a compelling reason to display discrete <em>steps</em> to emphasize regions above or below certain thresholds. If you choose steps, increasing the <em>number of steps</em> will display more contrast in your map, but <em>too many steps</em> can give the mistaken impression that light- and dark-colored regions are very different, when in fact their numbers may vary only slightly. Whatever you decide, avoid the temptation to manually adjust a map’s settings in ways that manipulate its appearance to fit a preconceived point of view. In sum, show us a story and tell the truth. You may need to create several maps with different settings to decide which one is the best compromise.<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a>.</p>
+<p>[TODO: Insert this as a final statement somewhere about the two US inequality maps – or not? Based on these general guidelines, some may argue that the first map is <em>better</em> because it displays a continuous color range, but that does <em>not</em> make the second map wrong nor misleading.]</p>
+<p>Now that you have a clearer idea of how to lie with charts and maps, let’s examine a related topic: recognizing and reducing data bias.</p>
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="25">
-<li id="fn25"><p>Monmonier, <em>How to Lie with Maps, Third Edition</em>.<a href="how-to-lie-with-maps.html#fnref25" class="footnote-back">↩︎</a></p></li>
+<ol start="28">
+<li id="fn28"><p>Monmonier, <em>How to Lie with Maps, Third Edition</em>.<a href="how-to-lie-with-maps.html#fnref28" class="footnote-back">↩︎</a></p></li>
+<li id="fn29"><p>TODO cite <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>; <a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>; <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>; <a href="https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool" class="uri">https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool</a><a href="how-to-lie-with-maps.html#fnref29" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -422,7 +401,7 @@ Figure 15.12: World population square map with income inequality data. Explore t
         </div>
       </div>
 <a href="how-to-lie-with-charts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="how-to-lie-with-words.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-bias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

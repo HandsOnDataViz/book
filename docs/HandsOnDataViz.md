@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 16 Oct 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 19 Oct 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -4117,8 +4117,8 @@ determined by state-level electoral votes (except for Maine and
 Nebraska?). So if you wish to emphasize patterns in electoral votes,
 compare data for larger geographic units
 
-Avoid Selection Bias
---------------------
+Beware of Biased Data
+---------------------
 
 TODO: Decide whether to keep section title as-is or broaden to “Beware
 of Biased Comparisons”
@@ -4146,6 +4146,16 @@ that accompanies visualization
 Also be aware of algorithmic biases that we sometimes build into our
 software…Cairo’s example about IP data thru VPN converted to geographic
 center of US, near Kansas…
+
+We also refer to biases that are baked into the software that humans
+create. - Algorithm or machine learning bias: human-written code, or
+machine-learning that follows inductive reasoning standards set up by
+humans, can lead to biased results, especially in facial recognition
+across racial groups, or discrimination in home lending. examples:
+<a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>;
+<a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a>
+- Reduce by calling it out, and not simply equating “digital” as
+“authoritative”…
 
 Correlation, Causation, and Confounding Variables
 -------------------------------------------------
@@ -12392,8 +12402,8 @@ for people who lie with charts and maps. In fact, in the
 visualizations about income inequality to demonstrate how the same data
 can be rearranged to paint very different pictures of reality. Does that
 mean all data visualizations are right? Definitely not. On closer
-examination, we declared that one of the two charts about US income
-inequality to be *misleading* because it intentionally used an
+examination, we declared that the second of the two charts about US
+income inequality was *misleading* because it intentionally used an
 inappropriate scale to hide the truth. But we also confided that the two
 world maps were *equally truthful*, even though the US appeared in a
 darker color (signaling a higher level of inequality) than the other.
@@ -12409,48 +12419,52 @@ introduced in [Chapter 7 on chart design](chart-design.html) and
 [Chapter 8 on map design](map-design.html). Rather than a binary world,
 we argue that visualizations fall into three categories.
 
-First, visualizations may be *wrong* because they violate one of these
-firm rules \[TODO ADD: or they clearly misstate the evidence\]. For
-example, if a bar or column chart begins at a number other than zero, we
-say it’s *wrong* because those types of charts represent values through
-*length* or *height*, which readers cannot determine if the baseline has
-been truncated. Also, if the slices of a pie chart adds up to more than
-100 percent, we declare it to be *wrong* because that violates the
-fundamental design rules.
+First, visualizations are *wrong* if they misstate the evidence or
+violate one of these rigid design rules. For examples of the latter, if
+a bar or column chart begins at a number other than zero, it’s wrong
+because those types of charts represent values through *length* or
+*height*, which readers cannot determine if the baseline has been
+truncated. Similarly, if the slices of a pie chart adds up to more than
+100 percent, it’s wrong because readers cannot accurately interpret the
+chart, which also incorrectly presents data.
 
-Second, visualizations may be *misleading* if they technically follow
-the design rules, yet unreasonably hide or twist the appearance of
-relevant data. We acknowledge that the word “unreasonably” can be
-subject to debate here. But the category is essential to point out how
-charts and map can follow the rules, yet misdirect readers, and you’ll
-see many examples in this chapter.
+Second, visualizations are *misleading* if they technically follow the
+design rules, but unreasonably hide or twist the appearance of relevant
+data. We acknowledge that the word “unreasonably” can be subject to
+debate here, but we’ll review several examples in this chapter, such as
+using inappropriate scales or warping the aspect ratio. Inserting this
+category between *wrong* and *truthful* underscores how charts and maps
+can accurately display data and adhere to design rules, yet misdirect us
+from the truth, just as a magician knows how to misdirect their audience
+while performing sleight of hand tricks.
 
-Third, visualizations may be *truthful* if they follow the design rules
-and provide insightful interpretations of the data. This is our goal,
-but we acknowledge that there’s a wide spectrum within this category.
-Sometimes when looking at two valid interpretations, we say that one is
-*better* than the other because it illuminates meaningful patterns that
-we did not yet recognize in the data. Or perhaps one is better because
-it portrays these patterns more beautifully than other visualizations.
+Third, visualizations are *truthful* if they show accurate data and
+follow the design rules. Still, there’s a wide spectrum of quality
+within this category. When looking at two visualizations that are
+equally valid, sometimes we day that one is *better* than the other
+because it illuminates a meaningful data pattern that we did not yet
+recognize. Or we may say that one is better because it portrays these
+patterns more beautifully, or with less ink on the page and greater
+simplicity, than the other. In any case, let’s agree that we’re aiming
+for truthful visualizations, with a preference for the better side of
+the quality spectrum.
 
 In this chapter, you’ll learn to sort out differences between the three
-categories. The best way to improve your lie detector skills is through
-hands-on tutorials in the art of data deception, to better understand
-[how to lie with charts](how-to-lie-with-charts.html) and [how to lie
-with maps](how-to-lie-with-maps.html). As the saying goes, it takes a
-thief to catch a thief. Learning *how to lie* not only make it harder
-for people to mislead you, but also educates you more deeply about the
+categories: wrong, misleading, and truthful. The best way to improve
+your lie detector skills is through hands-on tutorials in the art of
+data deception, to better understand [how to lie with
+charts](how-to-lie-with-charts.html) and [how to lie with
+maps](how-to-lie-with-maps.html). As the saying goes, it takes a thief
+to catch a thief. Learning *how to lie* not only make it harder for
+people to mislead you, but also educates you more deeply about the
 ethical decisions we make when designing visualizations that *tell the
 truth*, while recognizing there’s more than one path to that
-destination. Also, just like we can be wrong, misleading, or truthful
-with our data, the same concepts apply to language, as we’ll discuss in
-a similar section on [how to lie with
-words](how-to-lie-with-words.html). Finally, we’ll reflect on ways to
-[recognize and reduce data bias](data-bias.html), such as privileged
-majority bias that has historically favored Whites, men, and other
-groups, as well as other types. While we may not be able to stop bias
-entirely, in this chapter you’ll learn ways to identify it and
-strategies for reducing it our own visualizations.[22]
+destination. Finally, we’ll discuss how to [recognize and reduce other
+types of data bias](data-bias.html), such as framing bias, intergroup
+bias, and map area bias, including how we define the United States.
+While we may not be able to stop bias entirely, in this chapter you’ll
+learn how to identify it in the works by other people, and strategies to
+reduce its presence in our own visualizations.[22]
 
 How to Lie with Charts
 ----------------------
@@ -12626,10 +12640,6 @@ irrelevant. Therefore, flattening the line chart for temperature change
 may mislead readers, but it’s technically not wrong, as long as it is
 labelled correctly.[24]
 
-TODO: While the text asks “wrong or misleading?” the chart and caption
-are clearly labeled “misleading” to avoid confusion among readers who
-just skim the text. Maybe rephrase the question: What makes this chart
-
 ### Widen the chart to warp its aspect ratio
 
 In your Google Sheet, click the chart and drag the sides to make it very
@@ -12651,11 +12661,61 @@ What makes this warped line chart *misleading* rather than *wrong*? Once
 again, since changing the aspect ratio of a line chart does not violate
 a clearly-defined rule of data visualization, it’s not technically
 wrong, as long as it’s accurately labeled. But it’s definitely
-misleading. This is a case of designer preference. Alberto Cairo prefers
-to set the aspect ratio to be similar to the rate of change shown in the
-line chart….\[TODO describe and cite passage about this… but it’s not a
-clearly-defined rule, as publications often require visualizations to
-fit into specific spaces….\]
+misleading. Visualization expert Alberto Cairo states that ideally, we
+should design charts with aspect ratios that “neither exaggerates nor
+minimizes change.” What specifically does he suggest? Cairo recommends
+(but does *not* propose a universal rule) that the percent change
+expressed in a chart should roughly match its aspect ratio. For example,
+if a chart represents a 33 percent increase, which is the same as 33/100
+or 1/3, he recommends an aspect ratio of 3:1 (because the fraction is
+flipped by placing width before height), or in other words, a chart that
+is three times taller than its width.[25] Therefore, if we apply Cairo’s
+recommendation to our climate change chart, the difference from 0° to
+1°C represents a 100% increase, which suggests an ideal chart with a 1:1
+aspect ratio, or just as tall as it is wide, as shown in Figure
+<a href="#fig:temperature-aspect-cairo">15.5</a>.
+
+<img src="images/15-detect/temperature-aspect-cairo-annotated.png" alt="Cairo's recommendation for percent change (100%) to match chart aspect ratio (1:1)."  />
+<p class="caption">
+Figure 15.5: Cairo’s recommendation for percent change (100%) to match
+chart aspect ratio (1:1).
+</p>
+
+However, Cairo clearly states that his aspect ratio recommendation
+“isn’t a universal rule of chart design” and there are several cases
+when you should ignore it and use your own judgment. For example,
+instead of *global temperature change*, which increased from 0° to 1°C,
+imagine that our chart displayed the *global temperature*, which
+increased from about 13° to 14°C (or about 55° to 57°F). When we express
+the temperature in absolute numbers, it doesn’t *feel* very significant,
+even though a 1°C change in average temperature can have dramatic global
+consequences. Using this different scale, the chart would represent only
+an 8 percent increase, or about 1/12, which under Cairo’s recommendation
+translates into a 12:1 aspect ratio, or twelve times wider than it is
+tall, as shown in Figure
+<a href="#fig:temperature2-aspect-cairo">15.6</a>.
+
+<img src="images/15-detect/temperature2-aspect-cairo-annotated.png" alt="If we apply Cairo's recommendation to a chart of *global temperature* (not temperature change), where percent change (8% or 1/12) matches its aspect ratio (12:1), the result is misleading."  />
+<p class="caption">
+Figure 15.6: If we apply Cairo’s recommendation to a chart of *global
+temperature* (not temperature change), where percent change (8% or 1/12)
+matches its aspect ratio (12:1), the result is misleading.
+</p>
+
+Even Cairo points out that this significant temperature increase looks
+“deceptively small” if you follow his aspect ratio recommendation using
+this scale, so he advises against it.[26] Furthermore, if you convert
+the scale from Celsius to Fahrenheit, the calculation changes once
+again, which doesn’t make any sense. Where does all of this leave us? If
+you feel confused, that’s because there’s no universal rule with aspect
+ratio. What should you do? First, never automatically accept the default
+chart. Second, explore how different aspect ratios affect its
+appearance. Finally, use your best judgement with aspect ratio to tell
+true and meaningful data stories, because there is no single rule that
+fits all cases.
+
+TODO: Need feedback on whether the 2nd and 3rd charts and text make
+sense here
 
 ### Add more data and a dual vertical axis
 
@@ -12663,9 +12723,9 @@ Let’s add more data to make your chart even more misleading! In the
 Google Sheet, go to the tab named *temp+GDP*, where you will see
 temperature change plus a new column: US Gross Domestic Product (GDP) in
 billions of dollars from 1929 to 2019, downloaded from the [US Federal
-Reserve](https://fred.stlouisfed.org/series/GDPA). We deleted
-temperature rows prior to 1929 to make them match with available GDP
-data.
+Reserve](https://fred.stlouisfed.org/series/GDPA). To simplify this
+example, we deleted pre-1929 temperature data to match it up more neatly
+with available GDP data.
 
 1.  Select all three columns and *Insert &gt; Chart* to produce a
     default line chart with two data series: temperature (in blue) and
@@ -12677,22 +12737,22 @@ data.
     menu from *Left axis* to *Right Axis*, which creates another
     vertical axis on the right side of the chart, connected only to the
     US GDP data, as shown in Figure
-    <a href="#fig:temperature-gdp-axis-setup">15.5</a>.
+    <a href="#fig:temperature-gdp-axis-setup">15.7</a>.
 
 <img src="images/15-detect/temperature-gdp-axis-setup.png" alt="Add another vertical axis to the right side of the chart."  />
 <p class="caption">
-Figure 15.5: Add another vertical axis to the right side of the chart.
+Figure 15.7: Add another vertical axis to the right side of the chart.
 </p>
 
 1.  In the *Chart editor &gt; Customize* tab, scroll down and you will
     now see separate controls for *Vertical Axis* (the left side, for
     temperature change only), and a brand-new menu for the *Right Axis*
     (for US GDP only), as shown in Figure
-    <a href="#fig:temperature-right-axis">15.6</a>.
+    <a href="#fig:temperature-right-axis">15.8</a>.
 
 <img src="images/15-detect/temperature-right-axis.png" alt="Brand-new menu for the right axis." width="250" />
 <p class="caption">
-Figure 15.6: Brand-new menu for the right axis.
+Figure 15.8: Brand-new menu for the right axis.
 </p>
 
 1.  Finish your chart by adjusting *Vertical Axis* for temperature
@@ -12701,7 +12761,7 @@ Figure 15.6: Brand-new menu for the right axis.
     right-axis baseline for US GDP) and the maximum to 10, to flatten
     the temperature line even further. Add a title, source, and labels
     to make it look more authoritative, as shown in Figure
-    <a href="#fig:temperature-gdp-final-annotated">15.7</a>. By lowering
+    <a href="#fig:temperature-gdp-final-annotated">15.9</a>. By lowering
     our perception of the temperature line in comparison to the steadily
     rising GDP line, you’ve misled us into ignoring the consequences of
     climate change while we enjoy a long-term economic boom!
@@ -12710,40 +12770,53 @@ Figure 15.6: Brand-new menu for the right axis.
     since you accepted the default colors assigned by Google Sheets, the
     climate data is displayed in a “cool” blue, which sends our brain
     the opposite message of rising temperatures and glacial melt. So
-    we’ll count this as a triple! TODO: Decide whether to break
-    non-comparable data and color into separate paragraphs.
+    we’ll count this as a triple! \[TODO: Decide whether to break
+    non-comparable data and color into separate paragraphs.\]
 
 <img src="images/15-detect/temperature-gdp-final-annotated.png" alt="Misleading dual-axis chart of US GDP and global temperature change."  />
 <p class="caption">
-Figure 15.7: Misleading dual-axis chart of US GDP and global temperature
+Figure 15.9: Misleading dual-axis chart of US GDP and global temperature
 change.
 </p>
 
-Is this dual axis chart *misleading* rather than *wrong*? Once again,
-since it does not violate a clearly-defined visualization design rule,
-the chart is not wrong, but very misleading. In fact, many visualization
-experts strongly discourage using dual-axis charts because they confuse
-most readers and create mischief. Even though both axes began at zero,
-the left-side temperature scale has a top level of 10 degrees Celsius,
-which is not reasonable given the context of the data. \[TODO: ADD THIS?
-Perhaps a better way to plot global temperature change and US GDP over
-time would be a scatter or bubble chart, which are designed to compare
-two or more variables. TODO: Should we show a scatter of this here?\]
-Furthermore, a better chart would compare appropriate data, such as real
-GDP that has been adjusted into constant dollars.
+What makes this dual axis chart *misleading* rather than *wrong*? Once
+again, since it does not violate a clearly-defined visualization design
+rule, the chart is not wrong, but very misleading. In fact, many
+visualization experts strongly discourage using dual-axis charts because
+they confuse most readers and create mischief. Even though both axes
+began at zero, the left-side temperature scale has a top level of 10
+degrees Celsius, which is not reasonable given the context of the data.
+
+What’s a better alternative if you wish to visualize the relationship
+between global temperature and US GDP over time? Consider a [scatter
+chart, which we introduced in chapter
+7](scatter-bubble-datawrapper.html), because it works best to show the
+relationship between two variables by representing them as XY
+coordinates. Furthermore, make a more meaningful comparison by plotting
+global temperature change versus US real GDP that has been adjusted into
+constant dollars.
+
+\[TODO: if we like this idea, insert a scatter chart here as described
+above….\]
 
 To sum up, in this tutorial you created four charts about global
-temperature change. None of them were technically wrong, but only the
-default chart was truthful, while the other three charts were
-unreasonably manipulated to mislead readers by hiding relevant patterns
-in the data. Although we never accept automatically accept the default
-chart generated by a visualization tool, in this case it was the best
-representation of the truth among the four candidates.
+temperature change. None of them were technically wrong, only some were
+truthful, while many were unreasonably manipulated to mislead readers by
+hiding or disguising important patterns in the data. Furthermore, there
+are additional ways to deceive that we did not examine here, such as
+building 3D charts and tilting the reader’s perspective below the
+baseline.[27]
 
-TODO: FINISH There are many other ways to lie with charts…. for example,
-lie with 3D and perspective (see Cairo 2019 p58)… Now that you’ve
-learned about how to lie with charts, you’ll build on these skills in
-the next section about lying with maps.
+You may feel strange that data visualization lacks clearly-defined
+design rules for many cases, like we are accustomed to reading in our
+math, science, or grammar textbooks. Instead, remember that the
+important visualization rule is a *three-step process*: never
+automatically accept the default, explore how different designs affect
+the appearance of your interpretation, and use your best judgement to
+tell true and meaningful data stories.
+
+Now that you’ve learned about how to lie with charts, in the next
+section you’ll build on these skills to lie with maps.
 
 How to Lie with Maps
 --------------------
@@ -12756,7 +12829,7 @@ your own. We’ll focus our attention on choropleth maps that use shading
 or color to represent values in geographic areas, because they are a
 topic of considerable mischief. This exercise was inspired by geographer
 Mark Monmonier’s classic book by the same name, *How to Lie with Maps*,
-originally published in 1991, now in its third edition.[25]
+originally published in 1991, now in its third edition.[28]
 
 Before we get started, review the [map design principles in Chapter
 8](map-design.html) to avoid common mistakes when designing colored
@@ -12768,7 +12841,7 @@ where most people live, rather than how rates vary across geographic
 areas, which is usually what map makers wish to emphasize. Also, this
 section assumes that you’re already familiar with the steps for creating
 a [Choropleth map with Datawrapper in Chapter
-8](chloropleth-datawrapper.html).
+8](choropleth-datawrapper.html).
 
 Let’s return to the two maps in the [Introduction](introduction.html) of
 this book, which presented two different interpretations of world income
@@ -12817,13 +12890,13 @@ data and upload it to Datawrapper to start making our choropleth maps.
 5.  In the *Visualize* screen, in the *Colors* section of the *Refine*
     tab *Select palette*, click the *wrench symbol* to open up the color
     settings, as shown in Figure
-    <a href="#fig:map-color-settings">15.8</a>. Let’s skip past the
+    <a href="#fig:map-color-settings">15.10</a>. Let’s skip past the
     light-green-to-blue color palette, which you can modify later, and
     let’s focus on settings for color ranges.
 
 <img src="images/15-detect/map-color-settings.png" alt="Click the *wrench symbol* to open the color settings." width="350" />
 <p class="caption">
-Figure 15.8: Click the *wrench symbol* to open the color settings.
+Figure 15.10: Click the *wrench symbol* to open the color settings.
 </p>
 
 ### Modify the map color ranges
@@ -12834,13 +12907,13 @@ range, with a *linear* interpolation of data values. This means that the
 map places all of the values in a straight line, from the minimum of 5%
 to the maximum of 31%, and assigns each value to a color along the
 gradient, as shown in Figure
-<a href="#fig:map-continuous-linear">15.9</a>. Notice that the US
+<a href="#fig:map-continuous-linear">15.11</a>. Notice that the US
 (20.5%) blends in with a medium blue color, just above the midpoint in
 this range.
 
 <img src="images/15-detect/map-continuous-linear.png" alt="Income inequality map with continuous range and linear interpolation. Explore the [interactive version](https://datawrapper.dwcdn.net/aetEM/)."  />
 <p class="caption">
-Figure 15.9: Income inequality map with continuous range and linear
+Figure 15.11: Income inequality map with continuous range and linear
 interpolation. Explore the [interactive
 version](https://datawrapper.dwcdn.net/aetEM/).
 </p>
@@ -12848,7 +12921,7 @@ version](https://datawrapper.dwcdn.net/aetEM/).
 Create a second map with the same data but different settings. Change
 the *Type* setting to *steps*, and adjust to *3* steps, using *Natural
 breaks (Jenks)* interpolation, as shown in Figure
-<a href="#fig:map-3steps-naturalbreaks">15.10</a>. This means that the
+<a href="#fig:map-3steps-naturalbreaks">15.12</a>. This means that the
 map now places all of the values in three ascending groups. Natural
 breaks offers a compromise between using colors to highlight the
 outliers versus diversity inside the range. Notice that the US (still
@@ -12857,7 +12930,7 @@ range (19% or above).
 
 <img src="images/15-detect/map-3steps-naturalbreaks.png" alt="Income inequality map with 3 steps and natural breaks interpolation. Explore the [interactive version](https://datawrapper.dwcdn.net/VSfdZ/)."  />
 <p class="caption">
-Figure 15.10: Income inequality map with 3 steps and natural breaks
+Figure 15.12: Income inequality map with 3 steps and natural breaks
 interpolation. Explore the [interactive
 version](https://datawrapper.dwcdn.net/VSfdZ/).
 </p>
@@ -12867,188 +12940,291 @@ nations, while the second map places the US at the higher end of the
 color scale. Which map is misleading? Which one is truthful? If you
 prefer clear and definitive rules in map design, this answer may
 frustrate you. Although the two maps generate very different impressions
-in our eyes, both maps offer reasonable and truthful interpretations of
-the data.
+in our eyes, both maps present accurate data that is clearly labeled,
+based on reasonable and truthful interpretations of the data.
 
 To understand what’s happening behind the scenes with your choropleth
 map, visualization expert Alberto Cairo recommends creating a histogram
-to better understand the data distribution. \[Cite Cairo; add that he
-recommends multiple histograms with different bucket sizes?\] Go back to
-the original Google Sheet \[link again?\] and create a [histogram, as we
-described in chapter 7](chart-histogram.html) to view the frequency of
-nations when sorted into “buckets” by percent share, as shown in Figure
-<a href="#fig:map-data-histogram">15.11</a>. This is not a normal
-distribution curve, because a handful of nations are outliers around the
-30 percent mark. In the first map, which used continuous type and linear
-interpolation, the US appears closer to the midpoint of the range and
-blended in with a medium blue. In the second map, which used 3 steps and
-natural breaks, the US appears in the top range was stood out with a
-dark blue. Since both maps are consistently labeled…(more?), there is no
-definitive answer that makes one map more correct than the other.
-\[TODO: check wording\]
+to better understand the data distribution. Go back to the [data in the
+Google
+Sheet](https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565)
+and create a [histogram, as we described in chapter
+7](chart-histogram.html) to view the frequency of nations when sorted by
+percent share into “buckets”, as shown in Figure
+<a href="#fig:map-data-histogram">15.13</a>. While most nations are
+clumped around the median, this is not a normal distribution curve,
+because a handful are outliers near the 30 percent mark. In the first
+map, which used continuous type and linear interpolation, the US
+appeared closer to the median and blended in with a medium blue. By
+contrast, the second map used 3 steps and natural breaks, which meant
+that the US appeared in the top range and stood out in dark blue.
 
 <img src="images/15-detect/map-data-histogram.png" alt="Histogram of income inequality map data."  />
 <p class="caption">
-Figure 15.11: Histogram of income inequality map data.
+Figure 15.13: Histogram of income inequality map data.
 </p>
 
-TODO: REWRITE AFTER UPDATING CH 8 CHOROPLETH MAP DESIGN: So how *should*
-you make decisions when designing choropleth maps? Can you simply place
-the cutoffs anywhere you choose? Absolutely not. Mapmakers offer
-guidelines about ways to make *better* visualizations. For example,
-Datawrapper Academy recommends finding “a compromise between honesty and
-usefulness” when designing maps \[TODO cite
-<a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>\].
-“Useful” means that it’s acceptable to use design choices to communicate
-different interpretations of the data. For example, a linear
-interpolation is best for emphasizing the extreme lows and highs, while
-quantiles are best for identifying geographic patterns in the middle
-ranges. “Honesty” means telling the truth, and not intentionally
-creating misleading impressions of the data. For example, increasing the
-number of steps in your color range will increase the level of contrast
-in the map, but it can also mistakenly give the impression that light-
-and dark-colored regions are very different, while their numbers may
-vary only slightly. In general, Datawrapper recommends choosing ranges
-to make sure readers “see all the differences in the data,” rather than
-hiding them out of sight.\[TODO cite
-<a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>\]
-They also recommend using a continuous color range to show nuances in
-the data, unless your data story has a compelling reason to display
-discrete color steps \[TODO add “such as…example” and cite
-<a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>\].
-Finally, Datawrapper Academy strongly warns against using the manual
-custom settings to manipulate a map’s appearance to fit a preconceived
-point of view.\[Cite
-<a href="https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool" class="uri">https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool</a>\].
-Show readers the story and tell the truth.
+So how *should* we make decisions when designing choropleth maps?
+Similar to the chart section, there are few universal rules, but some
+recommendations. Always look for *better* ways to use map color ranges
+to show true and meaningful differences in the data, rather than hiding
+them out of sight. Datawrapper Academy recommends finding “a compromise
+between honesty and usefulness” when creating choropleth maps. In other
+words, tell the truth when displaying evidence *and* use design choices
+to emphasize an interpretation that calls our attention to what’s most
+important in the data story. For example, a *linear* interpolation works
+best to emphasize extreme lows and highs, while *quantiles* or other
+non-linear groupings reveal more geographic diversity in the middle
+ranges. Furthermore, some recommend using a *continuous* color palette
+to show nuances in the data, unless your data story has a compelling
+reason to display discrete *steps* to emphasize regions above or below
+certain thresholds. If you choose steps, increasing the *number of
+steps* will display more contrast in your map, but *too many steps* can
+give the mistaken impression that light- and dark-colored regions are
+very different, when in fact their numbers may vary only slightly.
+Whatever you decide, avoid the temptation to manually adjust a map’s
+settings in ways that manipulate its appearance to fit a preconceived
+point of view. In sum, show us a story and tell the truth. You may need
+to create several maps with different settings to decide which one is
+the best compromise.[29].
 
-TODO: map-colorbrewer.png, map-import-colors.png
-
-\[TODO: Where to insert this?\] Based on these general guidelines, some
-may argue that the first map is *better* because it displays a
-continuous color range, but that does *not* make the second map wrong
-nor misleading.
-
-### Modify the map area
-
-Another way that choropleth maps mislead readers is because larger
-regions draw too much attention and divert the focus from *population
-size* to *geographic area*. In the United States, this problem arises
-during every national election. Typical maps of US electoral votes
-exaggerate the influence of rural states with larger geographic areas
-(such as enormous Wyoming, with about 590,000 people), and diminish the
-influence of urban states with small areas (such as tiny Rhode Island,
-with over 1,000,000 people).
-
-TODO: DECIDE whether to include US electoral vote map, with standard
-projection vs cartogram side-by-side?
-
-This problem is related to the larger issue of map projection bias. Some
-projections create the appearance of larger sizes for nations in the
-North hemisphere than those in the South hemisphere. \[TODO give
-examples and illustrate difference…\]
-
-One solution to this problem is to replace standard map outlines with
-*cartograms* OR *population squares*, which \[TODO: add precise
-definitions of the two\]. One drawback is that both alternatives require
-readers to be familiar with the general geographic outline of the region
-shown, since the visualizations do not match standard maps.
-
-To create a population square map in Datawrapper:
-
-1.  Create a new map and go to *Select your map* …. or if you saved
-    world inequality maps in your Datawrapper account, go to My Charts,
-    select and duplicate one of them, and edit it.
-
-2.  Under type of map to create, type “hexagons” to see all of the
-    cartograms available (including US States) or type “squares” to see
-    all of those available (including World population squares). Select
-    your preferred map and data, and proceed to visualize in the same
-    way as above, as shown in Figure
-    <a href="#fig:map-world-pop-square">15.12</a>.
-
-<img src="images/15-detect/map-world-pop-square.png" alt="World population square map with income inequality data. Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/)."  />
-<p class="caption">
-Figure 15.12: World population square map with income inequality data.
-Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/).
-</p>
-
-TODO: mention other types of map bias? Interactive maps such as Google
-Maps change borders and data depending on the internet address of the
-user (eg China). Also map color bias….
+\[TODO: Insert this as a final statement somewhere about the two US
+inequality maps – or not? Based on these general guidelines, some may
+argue that the first map is *better* because it displays a continuous
+color range, but that does *not* make the second map wrong nor
+misleading.\]
 
 Now that you have a clearer idea of how to lie with charts and maps,
-let’s look at the related problem of lying about data using words.
-
-How to Lie with Words
----------------------
-
-Now that we’ve focused on charts and maps, think more carefully about
-the words we choose when designing our visualizations…
-
-Framing Bias: Watch for negative versus positive framing and how it
-affects readers. For example, British statistician David Spiegelhalter
-notes that US hospitals report *mortality rates*, while UK hospitals
-report *survival* rates. When considering the risks of a surgical
-procedure for member of your family, a 5 percent mortality rate sounds
-worse than a 95 percent survival rate, even they’re mathematically
-identical. Furthermore, augmenting the rate with raw numbers (such as 20
-deaths out of 400 patients) raises the impression of risk even higher,
-because we begin to imagine real people’s lives, not abstract
-percentages.[26]
+let’s examine a related topic: recognizing and reducing data bias.
 
 Recognize and Reduce Data Bias
 ------------------------------
 
-Bias occurs when we unfairly favor one view over another. Different
-types of bias….(we already mentioned statistical biases in the Compare
-Appropriate Data chapter…)
+We define bias as unfairly favoring one view over another. When working
+with data and designing visualizations, it’s important to be aware of
+different types of bias, so that you can recognize them as potential
+factors that may influence your perception, and reduce their presence in
+your own work. The first step toward reducing bias is to correctly
+identify various types, since at first glance they may appear hidden
+away, until we learn to call them out.
 
-We use the term to refer to biased people who prejudge something before
-evaluating the evidence. While some forms of bias are clearer to
-recognize, such as racial or gender bias,….Some biases are baked into
-human cognition and hard to avoid in data viz, unless you call it out
+In [Chapter 6: Make Clear Comparisons](comparisons.html), we warned you
+to watch out biased data sampling that may yield inaccurate results. For
+example, *selection bias* happens when samples may appear to be random,
+but are not due to underlying processes, such as students in two
+different schools, but one requires an application process, even one
+that uses a lottery. Also beware of *algorithmic bias* that is built
+into our software, ranging from simple examples (such as web visitor IP
+addresses being converted into the nation’s geographic center) and more
+dangerous ones (TODO EXAMPLE from Ch6). Address both types of biases by
+exercising cautious about the data you choose to analyze, make only
+meaningful comparisons, and describe issues in the visualization notes
+and companion text to call out possible biases.
 
--   Privileged majority biases… such as whiteness bias, male bias,
-    heterosexual bias….
--   Example: Map with “empty” land ignoring indigenous people
-    <a href="https://twitter.com/indigenia/status/1308406887231246337?s=12" class="uri">https://twitter.com/indigenia/status/1308406887231246337?s=12</a>
--   sidenote: that wasn’t how the original map creator designed or
-    labeled the map, but others interpreted it this way
--   how to address: clarify map biases….
--   See also John Schwabish and Alice Feng, avoid whiteness bias…
-    <a href="https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff" class="uri">https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff</a>
--   Reduce by calling out white superiority or privilege, and changing
-    how we design….
+When you analyze and visualize data, look out for additional biases that
+many cognitive psychologists believe are built into human behavior, both
+in ourselves and our audiences. *Confirmation bias* refers to the
+tendency to accept only claims that fit our preconceived notions of how
+the world works. \[TODO: refer to a dataviz experiment by Thaler?\]
+Counter it by actively searching for and considering alternative
+interpretations, and look at contradictory findings with open eyes.
+*Pattern bias* is another human tendency to see meaningful relationships
+in data, even when the numbers are random. \[TODO: refer to another
+dataviz experiment by Thaler?\] Avoid this type of bias by continually
+reminding yourself (and your readers) that data is noisy, and our brains
+are wired to see patterns even when none exist. Refer to books on
+statistical data analysis for appropriate tests to determine whether
+patterns that *appear* to jump out to your eye can be confirmed, and
+whether their odds of existing are greater than chance. \[TODO: check
+wording\]
 
-Think also about the simple act of mapping data for the “United States”:
-How does your data and map represent the District of Columbia, where X
-people live but is not counted as a state? Similarly, how does it
-represent Puerto Rico….? Or other US territories in the Pacific, such
-as….? If you’re trying to create a map of all US data, seek to include
-people rather than ignoring their existence. If it’s hard to include
-non-contiguous areas in your US map, find better basemaps. If you don’t
-have data, mention this in the notes and/or text
+Just as people can lie with charts and maps, let’s not forget our long
+history of misleading audiences (and ourselves) with the word choices we
+make when describing data. *Framing bias* refers to negative or positive
+labels or conceptual categories that affect how we interpret
+information. For example, British statistician David Spiegelhalter notes
+that US hospitals tend to report *mortality rates*, while UK hospitals
+report *survival* rates. When weighing the risks of a surgical procedure
+for member of your family, a 5 percent mortality rate seems worse than a
+95 percent survival rate, even though they’re identical. Furthermore,
+Spiegelhalter observes that when we supplement rates with raw numbers,
+it further increases our impression of risks. For example, if we told
+you a surgical procedure had a 5 percent mortality rate *and* that 20
+out of 400 patients died, it seems worse because we begin to imagine
+real people’s lives, not abstract percentages.[30] The best way to
+counter framing bias is to be aware of its potential effect on our minds
+and to call it out, as we’ve attempted to do here.
 
-We also refer to biases that are baked into the software that humans
-create. - Algorithm or machine learning bias: human-written code, or
-machine-learning that follows inductive reasoning standards set up by
-humans, can lead to biased results, especially in facial recognition
-across racial groups, or discrimination in home lending. examples:
-<a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>;
-<a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a>
-- Reduce by calling it out, and not simply equating “digital” as
-“authoritative”…
+*Intergroup bias* refers to multiple ways that people privilege or
+discriminate by social categories, such as race, gender, class,
+sexuality, etc. In the wake of the Black Lives Matter movement, greater
+attention has been called to ways that intergroup bias pervades data
+visualization, and ways to counter its impact. Jonathan Schwabish and
+Alice Feng describe how they applied a racial equity lens to revise the
+[Urban Institute’s Data Visualization Style
+Guide](http://urbaninstitute.github.io/graphics-styleguide/) with a
+racial equity lens.[31] Some recommendations are straightforward and
+relatively simple to implement. For example, they recommend ordering
+group labels to focus on the data story, rather than listing “White” and
+“Men” at the top by default. Also, we should proactively acknowledge
+missing groups in our data by calling attention to those often omitted,
+such as non-binary and transgender people in US federal datasets.
+Furthermore, when choosing color palettes to represent people in charts
+and maps, avoid stereotypical colors (such as blue for men and pink for
+women), and on a more subtle level, avoid color-grouping Black, Latino,
+and Asian people as the polar opposites of White people.
 
--   Confirmation Bias: accept claims that fit our preconceived
-    notions…(see dataviz experiments in Cario book, Thaler?). Avoid it
-    by looking at data with open eyes, and search out competing
-    interpretations
+Other proposals by Schwabish and Feng are likely to generate more
+discussion and debate. For example, they recommend to stop placing
+disaggregated racial and ethnic data on the same chart, because it
+encourages a “deficit-based perspective” that judges lower-performing
+groups by the standards of higher-performing ones. Instead, they suggest
+plotting data about racial and ethnic groups on separate but adjacent
+charts, each with its own reference to state or national averages for
+comparison, as shown in Figure
+<a href="#fig:schwabish-placeholder">15.14</a>. The idea is interesting,
+but the example about Covid-19 pandemic data raises more questions about
+whose interests are served by revising how data is visualized On one
+hand, if predominantly White audiences perceive racial disparities in
+Covid data to be caused by *group behavior*, then it makes sense to stop
+feeding racist stereotypes and no longer compare different groups in the
+same chart. On the other hand, if these racial disparities are caused in
+part by *structural obstacles* to quality jobs, housing, and health
+care, then do separate charts make it harder to identify and challenge
+the roots of systemic racism? Schwabish and Feng raise important issues
+for deeper reflection. Yet once again, data visualization is not always
+driven by clearly-defined design rules. Instead, our mission is to find
+*better* ways to tell true and meaningful data stories, while working to
+identify and reduce bias all around us.
 
--   Pattern Bias: tendency to see patterns in random data. Avoid it by
-    remind readers that data is noisy and use statistical tests to
-    determine likelihood of results due to change, covered in many books
-    on statistical analysis.
+<img src="images/15-detect/schwabish-placeholder.png" alt="Schwabish and Feng recommend to stop placing racial and ethnic data on the same chart (left), and replace it with separate but adjacent charts with state or national averages as a comparison point (right)." width="700" />
+<p class="caption">
+Figure 15.14: Schwabish and Feng recommend to stop placing racial and
+ethnic data on the same chart (left), and replace it with separate but
+adjacent charts with state or national averages as a comparison point
+(right).
+</p>
+
+TODO above: DECIDE if description and critique of Schwabish and Feng is
+clear, interesting, and feasible with or without image (which probably
+would need to be redone and simplified).
+
+Now that we’ve introduced various types of bias to consider when working
+with data visualization in general, in the next section we’ll focus on
+two additional types of bias that are specific to mapping.
+
+Map Area and Projection Bias
+----------------------------
+
+Two additional types of bias that are specific to spatial visualizations
+are *map area bias* and *projection bias*, and beware of both types when
+creating choropleth maps, as described earlier in this chapter. Map area
+bias refers to the tendency for our eyes to focus primarily on larger
+regions on a map, and less on smaller ones. This bias diverts our
+attention to *geographic area* rather than *population size*, which is
+usually the more relevant common denominator in choropleth maps. A
+classic example arises every four years during US presidential
+elections. Conventional maps of US electoral votes exaggerate the
+influence of rural states with larger geographic areas (such as spacious
+Wyoming with less than 600,000 people), and diminish the influence of
+urban states with small areas (such as tiny Rhode Island with over
+1,000,000 people). Although Wyoming covers 80 times more area than Rhode
+Island, it currently has only 3 electoral votes, while Rhode Island has
+4. Yet many people cannot make this distinction while looking at a
+conventional electoral map, because our eyes tend to focus on states
+with larger geographic areas.
+
+A related problem is *projection bias*. In order to portray a
+three-dimensional globe on a flat surface, geographers have developed
+different projection systems, and some of these, such as Mercator maps,
+inflate the size of nations located further away from the equator, which
+mistakenly gives the appearance that many North American countries (such
+as the United States and Russia) are more important than those in
+Central Africa. \[TODO: check wording and describe how the ubiquitous
+Google Maps WGS84 standard compares, which I believe is still a
+pseudo-Mercator system:
+<a href="https://en.wikipedia.org/wiki/Web_Mercator_projection" class="uri">https://en.wikipedia.org/wiki/Web_Mercator_projection</a>\].
+For an interactive visual depiction of this issue, see
+<a href="http://googlemapsmania.blogspot.com/2020/09/how-map-projections-lie.html" class="uri">http://googlemapsmania.blogspot.com/2020/09/how-map-projections-lie.html</a>
+
+Note: Also beware of *contested territory bias* in several popular
+digital map tile services. For example, Google Maps displays different
+borders and map data depending on the internet address of the user. If
+you look at location X from a computer in China, it will show AAA, but
+if you look at the same location from a computer in Taiwan, it will
+display BBB. \[TODO: Find this cite and complete the example\]
+
+One solution to both the map area and projection bias problem is to
+replace conventional map outlines with *cartograms* (sometimes called
+*population square* or *hexagon* maps). Cartograms display geographic
+regions by relative population size, rather than total area, and also do
+not rely on a projection system. One drawback is that cartograms require
+readers to recognize abstract shapes in place of familiar boundaries,
+since these population-based visualizations do not align perfectly with
+conventional geography-based maps, as shown in Figure
+<a href="#fig:cartogram-placeholder">15.15</a>.
+
+<img src="images/15-detect/cartogram-placeholder.png" alt="PLACEHOLDER: Conventional US map (left) versus cartogram (right) of US 2016 electoral vote."  />
+<p class="caption">
+Figure 15.15: PLACEHOLDER: Conventional US map (left) versus cartogram
+(right) of US 2016 electoral vote.
+</p>
+
+TODO: Update maps above using 2020 election data in November? Use
+cartogram/hexagon from Datawrapper on right. TODO above: determine if
+cartograms and pop squares are interchangeable terms, or if they have
+different definitions.
+
+In the [How to Lie with Maps section of this
+chapter](how-to-lie-with-maps.html), we created choropleth maps of world
+inequality data in Datawrapper. To convert one from a conventional world
+map to a population square map, follow this tutorial:
+
+1.  To modify an existing world inequality map that you may have saved
+    in your Datawrapper account, go to *My Charts*, select and
+    right-click on the map to make a duplicate, and edit it. Or follow
+    the steps in the previous section to create a new map.
+
+2.  Go to the *Select your map* screen, and type “squares” to see all of
+    those available types (including World population squares).
+    Similarly, type “hexagons” to see all of the cartograms available
+    (including US States). Select your preferred map, and proceed to
+    visualize the data in the same way as other Datawrapper choropleth
+    maps, as shown in Figure
+    <a href="#fig:map-world-pop-square">15.16</a>.
+
+<img src="images/15-detect/map-world-pop-square.png" alt="World population square map with income inequality data. Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/)."  />
+<p class="caption">
+Figure 15.16: World population square map with income inequality data.
+Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/).
+</p>
+
+### The US States bias
+
+When working with data about the United States, consider the additional
+*framing bias* and *intergroup bias* that frequently causes
+visualizations to omit over 4 million US citizens. Does your data
+include the District of Columbia, which is not counted as a state, and
+whose 700,000 residents (more than Wyoming), a majority of whom are
+African-American, have no voting representation in the US Congress?
+Similarly, how does your data represent Puerto Rico, a US territory with
+over 3 million residents who are US citizens, mostly Spanish-speaking,
+but have no voting representation in Congress and no electoral votes?
+How about other US territories such as the US Virgin Islands, Guam, the
+Northern Mariana Islands, and American Samoa?
+
+Furthermore, what happens when you create a map of the United States? If
+your data does include residents of District of Columbia, Puerto Rico,
+or other US territories, what happens when you try to map it? Do these
+people become visible—or vanish? Most likely the answer depends on the
+default settings of your mapping tool, and the geographic outlines it
+uploads when you select “United States.” If the default setting includes
+only the 50 US states—even when you have data on DC or US
+territories—those 4 million US citizens will disappear from the map. And
+if you cannot easily find a way to map their data, call out the US
+States bias by describing the omission in the map notes and companion
+text. Whenever possible, include people of “the United States” rather
+than ignoring their existence. Tell true and meaningful stories.
 
 ### Summary
 
@@ -13498,6 +13674,14 @@ Schwabish, Jonathan A. “Ten Guidelines for Better Tables.” *Journal of
 Benefit-Cost Analysis* 11, no. 2: 151–78. Accessed August 25, 2020.
 <https://doi.org/10.1017/bca.2020.11>.
 
+Schwabish, Jonathan, and Alice Feng. “Applying Racial Equity Awareness
+in Data Visualization.” Preprint. Open Science Framework, August 27,
+2020. <https://doi.org/10.31219/osf.io/x8tbw>.
+
+———. “Applying Racial Equity Awareness in Data Visualization.” Medium.
+Accessed October 16, 2020.
+<https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff>.
+
 Spiegelhalter, David. *The Art of Statistics: Learning from Data*.
 Penguin UK, 2019.
 <https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ>.
@@ -13513,6 +13697,9 @@ Press, 1990.
 
 Tufte, Edward R. *Beautiful Evidence*. Graphics Press, 2006.
 <http://books.google.com/books?isbn=0961392177>.
+
+Urban Institute. “Urban Institute Data Visualization Style Guide,” 2020.
+<http://urbaninstitute.github.io/graphics-styleguide/>.
 
 Watters, Audrey. “’The Audrey Test’: Or, What Should Every Techie Know
 About Education?” Hack Education, March 17, 2012.
@@ -13665,9 +13852,31 @@ climate change deniers. NASA JPL; Cairo, *How Charts Lie*, pp. 65-67,
 
 [24] Cairo, p. 61.
 
-[25] Monmonier, *How to Lie with Maps, Third Edition*.
+[25] Cairo, p. 69.
 
-[26] David Spiegelhalter, *The Art of Statistics: Learning from Data*
+[26] Cairo, p. 70.
+
+[27] Cairo, p. 58.
+
+[28] Monmonier, *How to Lie with Maps, Third Edition*.
+
+[29] TODO cite
+<a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>;
+<a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>;
+<a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>;
+<a href="https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool" class="uri">https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool</a>
+
+[30] David Spiegelhalter, *The Art of Statistics: Learning from Data*
 (Penguin UK, 2019),
 <https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ>,
 pp. 22-5
+
+[31] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
+Awareness in Data Visualization,” preprint (Open Science Framework,
+August 27, 2020), <https://doi.org/10.31219/osf.io/x8tbw>. See also this
+web post summary of the paper, Jonathan Schwabish and Alice Feng,
+“Applying Racial Equity Awareness in Data Visualization,” Medium,
+accessed October 16, 2020,
+<https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff>.
+Urban Institute, “Urban Institute Data Visualization Style Guide,” 2020,
+<http://urbaninstitute.github.io/graphics-styleguide/>

@@ -1,12 +1,14 @@
 # Make Meaningful Comparisons {#comparisons}
 
-TODO: Write this chapter; also considered titles "Compare Meaningful Data" or "Compare Appropriate Data."
+Now that you've [reflected on your data story](choose.html), [found and questioned your data](find.html), and [cleaned up any messy parts](clean.html), this chapter focuses on the key question to ask while analyzing your evidence: "Compared to what?" That's how statistician Edward Tufte defined the "heart of quantitative reasoning."^[@tufteEnvisioningInformation1990, p. 67]. We search for insightful findings in our data by judging their significance against each other, to identify those that truly stand out. Also, sometimes we need to adjust our scales to ensure that we're weighing data fairly, or as the saying goes, comparing apples to apples, not apples to oranges. Before you communicate your findings in any format---text, tables, charts, or maps---make sure that you've made a meaningful comparison. Without this, your work may become meaningless.
 
-"At the heart of quantitative reasoning is a single question: Compared to what?"[@tufteEnvisioningInformation1990, p. 67]
+This book does not intend to cover statistical data analysis, as many other fine textbooks already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers common-sense strategies to making meaningful comparisons as you analyze your data, in order to help you make more insightful visualizations. You will learn [why and how to normalize your data](normalize.html), clarify wording about [averages and percentages](averages-percentages.html), when to use [smaller versus larger units](units.html), and to watch out for [biased comparisons](biased-comparisons.html).
 
-Now that you've found data and cleaned it up, this chapter focuses on making meaningful data comparisons prior to communicating results in any format: text, tables, charts, or maps. Although this book does not claim to cover statistical data analysis (as many textbooks are already devoted to this topic), we do offer several common-sense guidelines to help make sure you're presenting appropriate data in your visualizations...
 
-Whenever someone explains something by showing you data, the correct response is to ask "compared to what?" (Cairo cites Tufte). In order to make meaningful data comparisons, you need to avoid common problems with making meaningless ones.
+## Normalize Your Data {- #normalize}
+
+At first glance, "normalizing" or "adjusting" your data may sound like your fudging the numbers, or bending the truth. But we often cannot get closer to the truth without adjusting data to make more meaningful comparisons. Normalization is defined as adjust data collected using different scales into a common scale, in order to make more meaningful comparisons. Here are common ways to normalize:
+
 
 Imagine the topic is traffic safety, and comparisons across US states. What kind of data would you find most meaningful? (Cairo uses this example, and we can cite and simplify, or create parallel version with other data)
 
@@ -22,9 +24,9 @@ Cairo argues that when we make more appropriate data comparisons, we get closer 
 
 After finding and cleaning your data, you often need to "normalize" or "adjust" your data before making meaningful claims in text, tables, charts, or maps...
 
-## Normalize Your Data {- #normalize}
 
-At first glance, "normalizing" or "adjusting" your data may sound like your fudging the numbers, or bending the truth. But we often cannot get closer to the truth without adjusting data to make more meaningful comparisons. Normalization is defined as adjust data collected using different scales into a common scale, in order to make more meaningful comparisons. Here are common ways to normalize:
+
+
 
 - Adjust Absolute into Relative Numbers: as you saw above, raw numbers can be less meaningful than percentages or per capita...
 
@@ -96,15 +98,14 @@ Briefly explain average, mean, median, and percentiles
 
 Also explain "percent change" with "percentage point difference" ... explain the difference between the two with clear examples.
 
-## Comparing Smaller versus Larger Units {- #smaller-larger-units}
+## Using Smaller versus Larger Units {- #units}
 Beware of comparisons between smaller versus larger groups of data. Example from Cairo: voting data about entire US states will vary from voting data for smaller geographic units within those states, such as counties, cities, or neighborhood-level voting precincts, for at least two reasons. First, voting patterns vary across smaller geographic units... Second, not all residents vote....  
 
 In most cases, use the smallest unit of data you can obtain to allow you to produce more granular visualizations. While you cannot obtain data about how each individual voted, you can obtain data at the precinct, city, or county level inside each state.
 
 But there are other cases when using a larger unit of data makes more sense than a smaller unit. For example, US presidential elections are determined by state-level electoral votes (except for Maine and Nebraska?). So if you wish to emphasize patterns in electoral votes, compare data for larger geographic units
 
-## Beware of Biased Data {- #selection-bias}
-TODO: Decide whether to keep section title as-is or broaden to "Beware of Biased Comparisons"
+## Beware of Biased Comparisons {- #biased-comparisons}
 
 Everyone should avoid cherry-picking data, which means selecting only the evidence that arrives at a pre-determined conclusion.
 
@@ -119,7 +120,10 @@ We also refer to biases that are baked into the software that humans create.
 - Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html; https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/
 - Reduce by calling it out, and not simply equating "digital" as "authoritative"...
 
-## Correlation, Causation, and Confounding Variables {- #correlation}
+
+### Summary {- #summary6}
+
+Correlation, Causation, and Confounding Variables {- #correlation}
 Be cautious...
 
 - do not let association drift into causation...
@@ -129,5 +133,3 @@ Be cautious...
 TODO: choose illustrative examples for above
 
 See books on data analysis to understand the logic and use of statistical tests
-
-### Summary {- #summary6}

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Question Your Data | Hands-On Data Visualization</title>
+  <title>Using Smaller versus Larger Units | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Question Your Data | Hands-On Data Visualization" />
+  <meta property="og:title" content="Using Smaller versus Larger Units | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Question Your Data | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Using Smaller versus Larger Units | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="bad-data.html"/>
-<link rel="next" href="clean.html"/>
+<link rel="prev" href="averages-percentages.html"/>
+<link rel="next" href="biased-comparisons.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -334,36 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="question" class="section level2 unnumbered" number="">
-<h2>Question Your Data</h2>
-<p>Now that you’ve found, sourced, and inspected some files, the next step is to <em>question your data</em> by looking more deeply than what appears at its surface level. Read the <em>metadata</em>, which are the notes that describe the data and its sources. Examine the contents to reflect on what is explicitly stated—or unstated—to better understand its origin, context, and limitations. You cannot program a computer to do this step for you, as it requires critical-thinking skills to see beyond the characters and numbers appearing on your screen.</p>
-<p>One place to start is to ask: <em>What do the data labels really mean?</em> and to consider these potential issues:</p>
-<!-- TODO: Manually mark up as Variable List: -->
-<p><em>What are full definitions for abbreviated column headers?</em></p>
-<p>Spreadsheets often contain abbreviated column headers, such as <em>Elevation</em> or <em>Income</em>. Sometimes the original software limited the number of characters that could be entered, or the people who created the header names preferred to keep them short. But was <em>Elevation</em> entered in meters or feet? An abbreviated data label does not answer that key question, so you’ll need to check the source notes, or if that’s not available, compare elevation data for a specific point in the dataset to a known source that includes the measurement unit. Similarly, if you’re working with US Census data, does the <em>Income</em> abbreviation refer to per person, per family, or per household? Also, does the value reflect the <em>median</em> (the mid-point in a range of numbers) or the <em>mean</em> (the average, calculated by adding up the sum and dividing by the number of values). Check definitions in the source notes.</p>
-<p><em>How exactly was the data collected?</em></p>
-<p>For example, was <em>Elevation</em> for a specific location measured by a GPS unit on the ground? Or was the location geocoded on a digital map that contains elevation data? In most cases the two methods will yield different results, and whether that matters depends on the degree of precision required in your work. Similarly, when the US Census reports data from its annual American Community Survey (ACS) estimates for <em>Income</em> and other variables, these are drawn from small samples of respondents for lower levels of geography, such as a census tract with roughly 4,000 residents, which can generate very high margins of error. For example, it’s <a href="data/ct-tract-income-moe-acs2018.xlsx">not uncommon to see ACS estimates</a> for a census tract with a mean family income of $50,000—but also with a $25,000 margin of error—which tells you that the actual value is somewhere between $25,000 and $75,000. As a result, some ACS estimates for small geographic units are effectively meaningless. Check how data was recorded, and note any reported margins of error, in the source notes. See also <a href="chart.html">how to create error bars in Chapter 7: Chart Your Data</a>.</p>
-<p>TODO: Merge in potential reporting bias: on surveys, people may over-report positive behavior, or under-report attitudes deemed negative by broader society.</p>
-<p><em>To what extent is the data socially constructed?</em></p>
-<p>What do the data labels reveal or hide about how people defined categories in different social and political contexts, which differ across place and time? For example, we designed an <a href="https://ontheline.github.io/otl-racial-change/index-caption.html#10/41.7900/-72.6000/1900/100">interactive historical map of racial change</a> for Hartford County, Connecticut using over 100 years of US Census data. But Census categories for race and ethnicity changed dramatically during those decades because people in power redefined these contested terms and moved who belonged in which group.</p>
-<p>Into the 1930s, the US Census separated “Native White” and “Foreign-born White” in its official reports, then combined and generally reported these as “White” in later decades. Also, the Census classified “Mexican” as “Other races” in 1930, then moved this group back to “White” in 1940, then began to report “Puerto Rican or Spanish surname” data in 1960, followed by “Hispanic or Latino” in later decades, as an ethnic category that was distinct from race. The Census finally replaced “Negro” with “Black” in 1980, and in 2000 allowed people to select more than one racial category, such as both “White” and “Black,” unlike prior decades when these terms were mutually exclusive and people could choose only one. As a result, historical changes in the social construction of race and ethnicity influenced how we designed our map to display “White” or “White alone” over time, with additional census categories relevant to each decade shown in the pop-up window, with our explanation of our decisions in the caption and source notes. There is no single definitive way to visualize socially-constructed data when definitions change across decades. But when you make choices about data, describe your thought process in the notes.
-<!-- TODO: End variable list --></p>
-<!-- TODO: Read and insert Margo Anderson's American Census 2nd edition 2015 here as background -->
-<p>Here’s a paradox about working with data: some of these deep questions may not be fully answerable if the data was collected by someone other than yourself, especially if that person came from a distant place, or time period, or a different position in a social hierarchy. But even if you cannot fully answer these questions, don’t let that stop you from asking good questions about the origins, context, and underlying meaning of your data. Only by clarifying what we know—and what we don’t know—can we begin to recognize the limitations of the data. When you create visualizations, your job is also to <em>acknowledge the limitations of the data</em> by making thoughtful decisions about its design, and how you describe what it does—and does not—tell us. We’ll return to these topics when discussing <a href="chart-design.html">chart design in Chapter 7</a> as well as <a href="story.html">telling and showing your data story in Chapter 16</a>.</p>
-<div id="summary4" class="section level3 unnumbered" number="">
-<h3>Summary</h3>
-<p>This chapter reviewed two broad questions that everyone should ask during the early stages of their visualization project: <em>Where can I find data?</em> and <em>What do I really know about it?</em> We broke down both questions into more specific parts to develop your knowledge and skills in guiding questions for your search, engaging with debates over public and private data, masking and aggregating sensitive data, navigating open data repositories, sourcing data origins, recognizing bad data, and questioning your data more deeply than its surface level. Remember these lessons as you leap into the next few chapters on cleaning data and creating interactive charts and maps.</p>
-
+<div id="units" class="section level2 unnumbered" number="">
+<h2>Using Smaller versus Larger Units</h2>
+<p>Beware of comparisons between smaller versus larger groups of data. Example from Cairo: voting data about entire US states will vary from voting data for smaller geographic units within those states, such as counties, cities, or neighborhood-level voting precincts, for at least two reasons. First, voting patterns vary across smaller geographic units… Second, not all residents vote….</p>
+<p>In most cases, use the smallest unit of data you can obtain to allow you to produce more granular visualizations. While you cannot obtain data about how each individual voted, you can obtain data at the precinct, city, or county level inside each state.</p>
+<p>But there are other cases when using a larger unit of data makes more sense than a smaller unit. For example, US presidential elections are determined by state-level electoral votes (except for Maine and Nebraska?). So if you wish to emphasize patterns in electoral votes, compare data for larger geographic units</p>
 </div>
-</div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="bad-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="clean.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="averages-percentages.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="biased-comparisons.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -402,7 +385,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/04-find.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/06-comparisons.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

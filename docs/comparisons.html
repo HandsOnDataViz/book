@@ -203,9 +203,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
 <li class="chapter" data-level="" data-path="averages-percentages.html"><a href="averages-percentages.html"><i class="fa fa-check"></i>Clarify Averages and Percentages</a></li>
-<li class="chapter" data-level="" data-path="smaller-larger-units.html"><a href="smaller-larger-units.html"><i class="fa fa-check"></i>Comparing Smaller versus Larger Units</a></li>
-<li class="chapter" data-level="" data-path="selection-bias.html"><a href="selection-bias.html"><i class="fa fa-check"></i>Beware of Biased Data</a></li>
-<li class="chapter" data-level="" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i>Correlation, Causation, and Confounding Variables</a></li>
+<li class="chapter" data-level="" data-path="units.html"><a href="units.html"><i class="fa fa-check"></i>Using Smaller versus Larger Units</a></li>
+<li class="chapter" data-level="" data-path="biased-comparisons.html"><a href="biased-comparisons.html"><i class="fa fa-check"></i>Beware of Biased Comparisons</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>7</b> Chart Your Data</a>
 <ul>
@@ -337,24 +336,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="comparisons" class="section level1" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Make Meaningful Comparisons</h1>
-<p>TODO: Write this chapter; also considered titles “Compare Meaningful Data” or “Compare Appropriate Data.”</p>
-<p>“At the heart of quantitative reasoning is a single question: Compared to what?”<span class="citation"><a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></span></p>
-<p>Now that you’ve found data and cleaned it up, this chapter focuses on making meaningful data comparisons prior to communicating results in any format: text, tables, charts, or maps. Although this book does not claim to cover statistical data analysis (as many textbooks are already devoted to this topic), we do offer several common-sense guidelines to help make sure you’re presenting appropriate data in your visualizations…</p>
-<p>Whenever someone explains something by showing you data, the correct response is to ask “compared to what?” (Cairo cites Tufte). In order to make meaningful data comparisons, you need to avoid common problems with making meaningless ones.</p>
-<p>Imagine the topic is traffic safety, and comparisons across US states. What kind of data would you find most meaningful? (Cairo uses this example, and we can cite and simplify, or create parallel version with other data)</p>
-<p><a href="https://www.iihs.org/topics/fatality-statistics/detail/state-by-state" class="uri">https://www.iihs.org/topics/fatality-statistics/detail/state-by-state</a></p>
-<ol style="list-style-type: decimal">
-<li><p>Total traffic deaths by state (show table of 5 most deadly): Good start, but these absolute numbers (aka raw numbers) ignore the fact that states have different populations. Far more people live in CA and TX than VT and WY. Simply comparing total deaths does not take into account the different denominators…</p></li>
-<li><p>Traffic deaths per capita by state (show table of 5 most deadly): Better, because it shows a relative number, rather than an absolute. Show how we arrived at this by dividing the total traffic deaths by total population. Since those numbers are small, we multiply them by 100,000 (or other figure) to express them per capita. Out of 100,000 people residents in the state, about X die in highway deaths. But is the most meaningful way to compare states? In large cities with public transit, fewer people drive. In rural areas, people who drive often spend more time in the</p></li>
-<li><p>Traffic deaths per capita per mile-hours driven (show table of 5 most deadly): Explain how we arrived…</p></li>
-</ol>
-<p>Cairo argues that when we make more appropriate data comparisons, we get closer to the truth….</p>
-<p>After finding and cleaning your data, you often need to “normalize” or “adjust” your data before making meaningful claims in text, tables, charts, or maps…</p>
+<p>Now that you’ve <a href="choose.html">reflected on your data story</a>, <a href="find.html">found and questioned your data</a>, and <a href="clean.html">cleaned up any messy parts</a>, this chapter focuses on the key question to ask while analyzing your evidence: “Compared to what?” That’s how statistician Edward Tufte defined the “heart of quantitative reasoning.”<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a>. We search for insightful findings in our data by judging their significance against each other, to identify those that truly stand out. Also, sometimes we need to adjust our scales to ensure that we’re weighing data fairly, or as the saying goes, comparing apples to apples, not apples to oranges. Before you communicate your findings in any format—text, tables, charts, or maps—make sure that you’ve made a meaningful comparison. Without this, your work may become meaningless.</p>
+<p>This book does not intend to cover statistical data analysis, as many other fine textbooks already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers common-sense strategies to making meaningful comparisons as you analyze your data, in order to help you make more insightful visualizations. You will learn <a href="normalize.html">why and how to normalize your data</a>, clarify wording about <a href="averages-percentages.html">averages and percentages</a>, when to use <a href="units.html">smaller versus larger units</a>, and to watch out for <a href="biased-comparisons.html">biased comparisons</a>.</p>
 </div>
 <div class="footnotes">
 <hr />
 <ol start="16">
-<li id="fn16"><p>Edward R Tufte, <em>Envisioning Information</em> (Cheshire, CT: Graphics Press, 1990), 67, <a href="https://www.google.com/books/edition/Envisioning_Information/_EZiAAAAMAAJ" role="doc-biblioref">https://www.google.com/books/edition/Envisioning_Information/_EZiAAAAMAAJ</a>.<a href="comparisons.html#fnref16" class="footnote-back">↩︎</a></p></li>
+<li id="fn16"><p><span class="citation">Edward R Tufte, <em>Envisioning Information</em> (Cheshire, CT: Graphics Press, 1990), <a href="https://www.google.com/books/edition/Envisioning_Information/_EZiAAAAMAAJ" role="doc-biblioref">https://www.google.com/books/edition/Envisioning_Information/_EZiAAAAMAAJ</a></span>, p. 67<a href="comparisons.html#fnref16" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

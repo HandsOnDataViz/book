@@ -203,9 +203,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
 <li class="chapter" data-level="" data-path="averages-percentages.html"><a href="averages-percentages.html"><i class="fa fa-check"></i>Clarify Averages and Percentages</a></li>
-<li class="chapter" data-level="" data-path="smaller-larger-units.html"><a href="smaller-larger-units.html"><i class="fa fa-check"></i>Comparing Smaller versus Larger Units</a></li>
-<li class="chapter" data-level="" data-path="selection-bias.html"><a href="selection-bias.html"><i class="fa fa-check"></i>Beware of Biased Data</a></li>
-<li class="chapter" data-level="" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i>Correlation, Causation, and Confounding Variables</a></li>
+<li class="chapter" data-level="" data-path="units.html"><a href="units.html"><i class="fa fa-check"></i>Using Smaller versus Larger Units</a></li>
+<li class="chapter" data-level="" data-path="biased-comparisons.html"><a href="biased-comparisons.html"><i class="fa fa-check"></i>Beware of Biased Comparisons</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>7</b> Chart Your Data</a>
 <ul>
@@ -338,6 +337,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="normalize" class="section level2 unnumbered" number="">
 <h2>Normalize Your Data</h2>
 <p>At first glance, “normalizing” or “adjusting” your data may sound like your fudging the numbers, or bending the truth. But we often cannot get closer to the truth without adjusting data to make more meaningful comparisons. Normalization is defined as adjust data collected using different scales into a common scale, in order to make more meaningful comparisons. Here are common ways to normalize:</p>
+<p>Imagine the topic is traffic safety, and comparisons across US states. What kind of data would you find most meaningful? (Cairo uses this example, and we can cite and simplify, or create parallel version with other data)</p>
+<p><a href="https://www.iihs.org/topics/fatality-statistics/detail/state-by-state" class="uri">https://www.iihs.org/topics/fatality-statistics/detail/state-by-state</a></p>
+<ol style="list-style-type: decimal">
+<li><p>Total traffic deaths by state (show table of 5 most deadly): Good start, but these absolute numbers (aka raw numbers) ignore the fact that states have different populations. Far more people live in CA and TX than VT and WY. Simply comparing total deaths does not take into account the different denominators…</p></li>
+<li><p>Traffic deaths per capita by state (show table of 5 most deadly): Better, because it shows a relative number, rather than an absolute. Show how we arrived at this by dividing the total traffic deaths by total population. Since those numbers are small, we multiply them by 100,000 (or other figure) to express them per capita. Out of 100,000 people residents in the state, about X die in highway deaths. But is the most meaningful way to compare states? In large cities with public transit, fewer people drive. In rural areas, people who drive often spend more time in the</p></li>
+<li><p>Traffic deaths per capita per mile-hours driven (show table of 5 most deadly): Explain how we arrived…</p></li>
+</ol>
+<p>Cairo argues that when we make more appropriate data comparisons, we get closer to the truth….</p>
+<p>After finding and cleaning your data, you often need to “normalize” or “adjust” your data before making meaningful claims in text, tables, charts, or maps…</p>
 <ul>
 <li><p>Adjust Absolute into Relative Numbers: as you saw above, raw numbers can be less meaningful than percentages or per capita…</p></li>
 <li><p>Adjust for Change over Time: We cannot compare median household income in 1960 versus 2019 without adjustment, because dollars had different levels of purchasing power over time, due to price inflation and related factors. If you need to make economic comparisons over time, look for data that has already been converted into “constant dollars,” such as median household income “in 2019 dollars.” Economists often refer to this difference as “nominal” data (un-adjusted) versus “real” data (adjusted). See example about real wages over time, which adjusts the dollar figures for each year into constant dollars, consumer price index… <a href="https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing" class="uri">https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing</a>

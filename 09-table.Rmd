@@ -28,9 +28,24 @@ knitr::include_graphics("images/09-table/table-design.png")
 
 In addition, Schwabish and others recommend using color to highlight key items or outliers in your data, a topic we'll discuss later in [Chapter 16: Tell and Show Your Data Story](story.html).
 
+When creating cross-tabulations to illustrate data correlations and possible causal relationships, statistician Joel Best offers two more design recommendations.^[@bestMoreDamnedLies2004, pp. 31-35.]
+
+6. Place the independent variable (the suspected cause) at the top in the column headers, and the dependent variable (the possible effect) on the side for each row.
+7. Calculate percentages from the raw numbers in a downward direction, so that each value of the independent variable (the suspected cause) totals 100 percent.
+
+Let's apply these design principles by constructing two tables that calculate percentages: the wrong way versus the right way. The first table calculates percentages in the wrong direction---horizontally---which confuses us about whether X is correlated with Y. But the second table calculates percentages in the correct direction---vertically---which shows how X is correlated with Y, and may signal a causal relationship, as shown in Figure \@ref(fig:table-direction-placeholder)
+
+(ref:table-direction-placeholder) TODO: Create side-by-side 'bad' and 'better' tables, with real data and superimposed arrows to show the direction of calculation, to improve on this placeholder from Best 2014 p. 32.
+
+```{r table-direction-placeholder, fig.cap="(ref:table-direction-placeholder)"}
+knitr::include_graphics("images/09-table/table-direction-placeholder.png")
+```
+
+TODO above: Find better data to replace his imaginary data below and rewrite text to match. 
+
 Overall, the core principles of table design reflect similar concepts we previously discussed in chart and map design. Organize your presentation of the data with the readers' eyes in mind, to focus their attention on the most important elements of the story, so that they "take away" the most meaningful interpretation of the information. Do the visualization work for them, so that you don't have to rely on them to draw the same mental connections in their own minds. Remove any clutter or unnecessary repetition that stands in the way of these goals.
 
-Now that you understand key principles of table design, see how several of them are built directly into the Datawrapper tool featured in the next section.
+Now that you understand several key principles of table design, see how some (but not all) are built directly into the Datawrapper tool featured in the next section.
 
 ## Datawrapper Table with Sparklines {- #table-datawrapper}
 

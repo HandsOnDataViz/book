@@ -2,7 +2,7 @@
 
 Now that you've [reflected on your data story](choose.html), [found and questioned your data](find.html), and [cleaned up any messy parts](clean.html), this chapter focuses on the key question to ask while analyzing your evidence: "Compared to what?" That's how statistician Edward Tufte defined the "heart of quantitative reasoning."^[@tufteEnvisioningInformation1990, p. 67]. We search for insightful findings in our data by judging their significance against each other, to identify those that truly stand out. Also, sometimes we need to adjust our scales to ensure that we're weighing data fairly, or as the saying goes, comparing apples to apples, not apples to oranges. Before you communicate your findings in any format---text, tables, charts, or maps---make sure that you've made a meaningful comparison. Without this, your work may become meaningless.
 
-This book does not intend to cover statistical data analysis, as many other fine textbooks already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers common-sense strategies to making meaningful comparisons as you analyze your data, in order to help you make more insightful visualizations. You will learn [why and how to normalize your data](normalize.html), clarify wording about [averages and percentages](averages-percentages.html), when to use [smaller versus larger units](units.html), and to watch out for [biased comparisons](biased-comparisons.html).
+This book does not intend to cover statistical data analysis, as many other fine textbooks already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers common-sense strategies to making meaningful comparisons as you analyze your data, in order to help you make more insightful visualizations. You will learn [to normalize your data](normalize.html), [write precisely about common terms](write-precisely.html) such as averages and percentages, understand when to use [smaller versus larger units](units.html), and watch out for [biased comparisons](biased-comparisons.html).
 
 
 ## Normalize Your Data {- #normalize}
@@ -88,15 +88,39 @@ with map making. In the following section, we will talk about geographical data 
 will introduce different geospatial file formats to ensure you are
 ready to create, use, and share map data.
 
-## Clarify Averages and Percentages {- #averages-percentages}
+## Write Precisely About Common Terms {- #write-precisely}
 
-Sometimes we make poor comparisons because we communicate poorly about common terms, such as averages and percentages
+Sometimes we make poor comparisons because we fail to clarify our meaning of commonly-used words that can have different definitions. Three troublesome words are *average*, *percent*, and *causes*. We use them loosely in everyday conversation, but they require more precision when working with data.
 
-Briefly explain average, mean, median, and percentiles
+Imagine a series of numbers: 1, 2, 3, 4, 5. When calculating the *average*, by hand or [with a built-in spreadsheet formula as described in chapter 3](calculate.html), we add up the sum and divide by the count of numbers. A more precise term is the *mean*, which in this case equals 3. A different term is the *median*, which refers to the number in the middle of the ordered series, also known as the *50th percentile*, which in this case is also 3.
 
-- use resistant statistics (median and percentile) vs non-resistant ones that fluctuate with outliers (average mean and standard deviation). To update old joke, when a billionaire walks into a room, everyone becomes a millionaire, on average. But the median income barely changes.
+When working with data, the terms *median* and *percentile* are more useful terms when making comparisons because they resist the influence of *outliers* at the extreme ends of the series. For example, imagine the same umbers as above, but replace the 5 with 100 to serve as an outlier. Suddenly the mean jumps up to 22, but the median remains the same at 3, as shown in Figure \@ref(fig:mean-vs-median). There's an old joke that when a billionaire walks into a room, everyone becomes a millionaire---on average---but the median remains the same. Since we ordinary people don't actually become richer by the presence of the billionaire outlier among us, the median is a better term to make meaningful comparisons about the overall distribution of the data.
 
-Also explain "percent change" with "percentage point difference" ... explain the difference between the two with clear examples.
+(ref:mean-vs-median) The *median* is a more useful comparative term than *average* or *mean* because it resists the influence of outliers.
+
+```{r mean-vs-median, fig.cap="(ref:mean-vs-median)"}
+knitr::include_graphics("images/06-comparisons/mean-vs-median.png ")
+```
+
+*Percent* is another common term that becomes more useful for comparisons when we use it more precisely. Nearly everyone understands how *percentage* refers to a *ratio*, such as [the 1960s commercial](https://en.wikipedia.org/wiki/Trident_gum) that curiously claimed how 4 out of 5 dentists (or 80 percent) recommend sugarless gum for their patients who chew gum. Even if we never saw the survey data, nor understood how the fifth dentist resisted such intense peer pressure, we intuitively grasp the concept of percentage.
+
+But troubles sometimes arise when using the word to compare numbers, and here's where more precision helps. One term is *percent change* (or percent increase or decrease), which works best when comparing old versus new value. For example, if 4 dentists recommended sugarless gum in 1960, but peer pressure finally prevailed and 5 dentists recommend it in 2020, we calculate the percent change as `(New value - Old value) / Old value`, or `(5-4)/4 = 1/4 = 0.25 = 25%`.
+
+A different term is *percentage points*, which works best when comparing old versus new percentages. For example, if 80 percent of dentists recommended sugarless gum in 1960, but 100 percent recommended it in 2020, we can compare the two figures by calculating the difference as `New percentage - Old percentage = 100 - 80 = 20 percentage points`.
+
+As a result, there are two accurate ways to compare these figures. The number of dentists who recommended sugarless gum increased 25 percent. Also, the percentage of dentists who recommended it increased 20 percentage points.
+
+TODO above: Ilya let me know if the text and examples are clear. Also, should we add another paragraph to explain how these terms are commonly confused, sometimes to mislead people? Here's [one example](https://sciencing.com/difference-between-percent-percentage-point-8409115.html): "Why This Can Be Tricky...For instance, when President George W. Bush proposed partially privatizing Social Security in 2004, some commentators said that only '2 percent' of the average American's Social Security taxes would be funneled into private accounts. That was a misleading statement, said another commentator, John Allen Paulos on ABC News. He looked at the numbers and said the writers meant that the average person's income taxes directed toward Social Security would drop from 6.2 to 4.2 percent, which is a change of 2 percentage points. The actual percent change, he said, was 32 percent."
+
+TODO:
+Correlation, Causation, and Confounding Variables {- #correlation}
+Be cautious...
+
+- do not let association drift into causation...
+
+- identify and isolate confounding variables that may influence relationships within your data...
+
+TODO: choose illustrative examples for above
 
 ## Using Smaller versus Larger Units {- #units}
 Beware of comparisons between smaller versus larger groups of data. Example from Cairo: voting data about entire US states will vary from voting data for smaller geographic units within those states, such as counties, cities, or neighborhood-level voting precincts, for at least two reasons. First, voting patterns vary across smaller geographic units... Second, not all residents vote....  
@@ -123,13 +147,6 @@ We also refer to biases that are baked into the software that humans create.
 
 ### Summary {- #summary6}
 
-Correlation, Causation, and Confounding Variables {- #correlation}
-Be cautious...
 
-- do not let association drift into causation...
-
-- identify and isolate confounding variables that may influence relationships within your data...
-
-TODO: choose illustrative examples for above
 
 See books on data analysis to understand the logic and use of statistical tests

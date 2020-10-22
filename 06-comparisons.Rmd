@@ -1,34 +1,99 @@
 # Make Meaningful Comparisons {#comparisons}
 
-Now that you've [reflected on your data story](choose.html), [found and questioned your data](find.html), and [cleaned up any messy parts](clean.html), this chapter focuses on the key question to ask while analyzing your evidence: "Compared to what?" That's how statistician Edward Tufte defined the "heart of quantitative reasoning."^[@tufteEnvisioningInformation1990, p. 67]. We search for insightful findings in our data by judging their significance against each other, to identify those that truly stand out. Also, sometimes we need to adjust our scales to ensure that we're weighing data fairly, or as the saying goes, comparing apples to apples, not apples to oranges. Before you communicate your findings in any format---text, tables, charts, or maps---make sure that you've made a meaningful comparison. Without this, your work may become meaningless.
+Now that you've [reflected on your data story](choose.html), [found and questioned your data](find.html), and [cleaned up any messy parts](clean.html), this chapter focuses on the key question to ask while analyzing your evidence: "Compared to what?" That's how statistician Edward Tufte defined the "heart of quantitative reasoning."^[@tufteEnvisioningInformation1990, p. 67]. We search for insightful findings in our data by judging their significance against each other, to identify those that truly stand out. Sometimes we need to adjust our scales to ensure that we're weighing data fairly, or as the saying goes, comparing apples to apples, not apples to oranges. Before you communicate your findings in any format---text, tables, charts, or maps---be sure that you're making meaningful comparisons, because without this, your work may become meaningless.
 
-This book does not intend to cover statistical data analysis, as many other fine textbooks already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers common-sense strategies to making meaningful comparisons as you analyze your data, in order to help you make more insightful visualizations. You will learn [to normalize your data](normalize.html), [write precisely about common terms](write-precisely.html) such as averages and percentages, understand when to use [smaller versus larger units](units.html), and watch out for [biased comparisons](biased-comparisons.html).
+This book does not intend to cover statistical data analysis, since many excellent resources already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers several common-sense strategies to make meaningful comparisons while you analyze your data, in order to help you design true and insightful visualizations that tell your story. You will learn to [use comparison words more precisely](comparison-words.html), why and how [to normalize your data](normalize.html), and watch out for [biased comparisons](biased-comparisons.html).
+
+## Use Comparison Words More Precisely {- #comparison-words}
+
+Sometimes we make poor comparisons because we fail to clarify our meaning of commonly-used words that can have different definitions. Three troublesome words are *average*, *percent*, and *causes*. We use them loosely in everyday conversation, but they require more precision when working with data.
+
+Imagine a series of numbers: 1, 2, 3, 4, 5. When calculating the *average*, by hand or [with a built-in spreadsheet formula as described in chapter 3](calculate.html), we add up the sum and divide by the count of numbers. A more precise term is the *mean*, which in this case equals 3. A different term is the *median*, which refers to the number in the middle of the ordered series, also known as the *50th percentile*, which in this case is also 3.
+
+When working with data, the terms *median* and *percentile* are more useful terms when making comparisons because they resist the influence of *outliers* at the extreme ends of the series. For example, imagine the same umbers as above, but replace the 5 with 100 to serve as an outlier. Suddenly the mean jumps up to 22, but the median remains the same at 3, as shown in Figure \@ref(fig:mean-vs-median). There's an old joke that when a billionaire walks into a room, everyone becomes a millionaire---on average---but the median remains the same. Since we ordinary people don't actually become richer by the presence of the billionaire outlier among us, the median is a better term to make meaningful comparisons about the overall distribution of the data.
+
+(ref:mean-vs-median) The *median* is a more useful comparative term than *average* or *mean* because it resists the influence of outliers.
+
+```{r mean-vs-median, fig.cap="(ref:mean-vs-median)"}
+knitr::include_graphics("images/06-comparisons/mean-vs-median.png")
+```
+
+*Percent* is another common term that becomes more useful for comparisons when we use it more precisely. Nearly everyone understands how *percentage* refers to a *ratio*, such as [the 1960s commercial](https://en.wikipedia.org/wiki/Trident_gum) that curiously claimed how 4 out of 5 dentists (or 80 percent) recommend sugarless gum for their patients who chew gum. Even if we never saw the survey data, nor understood how the fifth dentist resisted such intense peer pressure, we intuitively grasp the concept of percentage.
+
+But troubles sometimes arise when using the word to compare numbers, and here's where more precision helps. One term is *percent change* (or percent increase or decrease), which works best when comparing old versus new value. For example, if 4 dentists recommended sugarless gum in 1960, but peer pressure finally prevailed and 5 dentists recommend it in 2020, we calculate the percent change as `(New value - Old value) / Old value`, or `(5-4)/4 = 1/4 = 0.25 = 25%`.
+
+A different term is *percentage points*, which works best when comparing old versus new percentages. For example, if 80 percent of dentists recommended sugarless gum in 1960, but 100 percent recommended it in 2020, we can compare the two figures by calculating the difference as `New percentage - Old percentage = 100 - 80 = 20 percentage points`.
+
+As a result, there are two accurate ways to compare these figures. The number of dentists who recommended sugarless gum increased 25 percent. Also, the percentage of dentists who recommended it increased 20 percentage points.
+
+TODO above: Ilya let me know if the text and examples are clear. Also, should we add another paragraph to explain how these terms are commonly confused, sometimes to mislead people? Here's [one example](https://sciencing.com/difference-between-percent-percentage-point-8409115.html): "Why This Can Be Tricky...For instance, when President George W. Bush proposed partially privatizing Social Security in 2004, some commentators said that only '2 percent' of the average American's Social Security taxes would be funneled into private accounts. That was a misleading statement, said another commentator, John Allen Paulos on ABC News. He looked at the numbers and said the writers meant that the average person's income taxes directed toward Social Security would drop from 6.2 to 4.2 percent, which is a change of 2 percentage points. The actual percent change, he said, was 32 percent."
+
+TODO:
+*Cause and effect* is loosely-defined phrase in everyday language that requires more precise wording when working with data. There are lots of ways that we slip into using *causal* language without being conscious of what it means.... examples.... leads to.... turns out..... results in.... 
+
+ to say that one thing *causes* another to happen....
+Correlation, Causation, and Confounding Variables{- #correlation}
+Be cautious...
+
+- do not let association drift into causation...
+
+- identify and isolate confounding variables that may influence relationships within your data...
+
+TODO: choose illustrative examples for above
 
 ## Normalize Your Data {- #normalize}
-TODO: Rewrite this section
 
-At first glance, "normalizing" or "adjusting" your data may sound like your fudging the numbers, or bending the truth. But we often cannot get closer to the truth without adjusting data to make more meaningful comparisons. Normalization is defined as adjust data collected using different scales into a common scale, in order to make more meaningful comparisons. Here are common ways to normalize:
+When we discover raw data, often it does not make sense to compare it until we *normalize* it. This means to adjust data that has been collected using different scales into a common scale, in order to make meaningful comparisons. Often we normalize *absolute numbers* into *relative numbers*, or in other words, convert *raw data* into *rates* to compare them more easily. Even if you've never heard the term, perhaps you already *normalize* data without realizing it.
 
+Here's an example about motor vehicle safety that was inspired by visualization expert Alberto Cairo, with [updated 2018 data](https://www.iihs.org/topics/fatality-statistics/detail/state-by-state) from the Insurance Institute for Highway Safety (IIHS) and the US Department of Transportation.^[@cairoTruthfulArtData2016, pp. 71-74.] Over 36,000 people died in motor vehicle crashes in 2018, including car and truck drivers and occupants, motorcyclists, pedestrians, and bicyclists. Although only a small fraction of this data appears in the tables below, you can [view all of the data in Google Sheets format](https://docs.google.com/spreadsheets/d/1N7_pHdmXdE3Y4ECnnDyBTSXkklv-u1hLULSO-YaotpA/edit#gid=0), and save an editable copy to your Google Drive, to follow along in this exercise.
 
-Imagine the topic is traffic safety, and comparisons across US states. What kind of data would you find most meaningful? (Cairo uses this example, and we can cite and simplify, or create parallel version with other data)
+Let's start with what appears to be a simple question, and see where our search for more meaningful comparisons takes us.
 
-https://www.iihs.org/topics/fatality-statistics/detail/state-by-state
+1. *Which US states had the lowest number of motor vehicle crash deaths?* When we sort the data by the numbers of deaths, the District of Columbia rises to the top of the list with only 31 deaths, as shown in Table \@ref(tab:deaths), and *appears* to have been the safest state (even though Washington DC is not recognized as a state).
 
-1. Total traffic deaths by state (show table of 5 most deadly): Good start, but these absolute numbers (aka raw numbers) ignore the fact that states have different populations. Far more people live in CA and TX than VT and WY. Simply comparing total deaths does not take into account the different denominators...
+Table: (\#tab:left-deaths) US States with lowest number of motor vehicle crash deaths, 2018
 
-2. Traffic deaths per capita by state (show table of 5 most deadly): Better, because it shows a relative number, rather than an absolute. Show how we arrived at this by dividing the total traffic deaths by total population. Since those numbers are small, we multiply them by 100,000 (or other figure) to express them per capita. Out of 100,000 people residents in the state, about X die in highway deaths. But is the most meaningful way to compare states? In large cities with public transit, fewer people drive. In rural areas, people who drive often spend more time in the
+| State                | Deaths |
+|----------------------|--------|
+| District of Columbia | 31     |
+| Rhode Island         | 59     |
+| Vermont              | 68     |
+| Alaska               | 80     |
+| North Dakota         | 105    |
 
-3. Traffic deaths per capita per mile-hours driven (show table of 5 most deadly): Explain how we arrived...
+But wait---this isn't a fair comparison. Take another look at the top five states and you'll may notice that all of them have smaller populations than larger ones such as California and Texas, which appear at the very bottom of the full dataset. To paint a more accurate picture, let's rephrase the question to adjust for population differences.
 
-Cairo argues that when we make more appropriate data comparisons, we get closer to the truth....
+2. *Which US states had the lowest number of motor vehicle crash deaths when adjusted for population?* Now let's *normalize* the death data by taking into account the total population of each state. In our spreadsheet, we calculate it as `Deaths / Population * 100,000`. While it's also accurate to divide deaths by population to find a *per capita* rate, those very small decimals would be difficult for most people to compare, so we multiply by 100,000 to present the results more clearly. When we sort the data, Washington DC rises to the top of the list, with only 4.4 motor vehicle crash deaths per 100,000 residents, as shown in Table \@ref(tab:deaths-population) and *appears* to have been the safest once again.
 
-After finding and cleaning your data, you often need to "normalize" or "adjust" your data before making meaningful claims in text, tables, charts, or maps...
+Table: (\#tab:deaths-population) US States with lowest number of motor vehicle crash deaths per population, 2018
 
+| State                | Deaths | Population | Deaths per 100,000 population |
+|----------------------|--------|------------|-------------------------------|
+| District of Columbia | 31     | 702455     | 4.4                           |
+| New York             | 943    | 19542209   | 4.8                           |
+| Massachusetts        | 360    | 6902149    | 5.2                           |
+| Rhode Island         | 59     | 1057315    | 5.6                           |
+| New Jersey           | 564    | 8908520    | 6.3                           |
 
+But wait---this still isn't a fair comparison. Look at the top five states again and you'll notice that all of them are located along the Northeastern US corridor, which has a high concentration of public transit, such as trains and subways. If people in urban areas like New York and Boston are less likely to drive motor vehicles, or take shorter trips than people in rural states where homes are more distantly spread out, that also could affect our data. Let's strive for a better comparison and rephrase the question again, this time to adjust for differences in mileage, not population.
 
+3. *Which US states had the lowest number of motor vehicle crash deaths when adjusted for total miles traveled?* Once again, we *normalize* the death data by adjusting it to account for a different factor: the estimated total number of miles driven (in millions) by people in all cars, trucks, and motorcycles that traveled in each state, including both in-state and out-of-state drivers, in 2018. In our spreadsheet, we calculate it as `Deaths / Vehicle Miles * 100`, with the multiplier to present the results more clearly. This time Massachusetts rises to the top of the list, with only 0.54 motor vehicle crash deaths per 100 million miles traveled, as shown in as shown in Table \@ref(tab:deaths-miles). Also, note that the District of Columbia has fallen out of the top 5, while Minnesota now appears on the list.
 
+Table: (\#tab:deaths-miles) US States with lowest number of motor vehicle crash deaths per miles traveled, 2018
 
-- Adjust Absolute into Relative Numbers: as you saw above, raw numbers can be less meaningful than percentages or per capita...
+| State         | Deaths | Vehicle miles traveled (millions) | Deaths per 100 million vehicle miles traveled |
+|---------------|--------|-----------------------------------|-----------------------------------------------|
+| Massachusetts | 360    | 66772                             | 0.54                                          |
+| Minnesota     | 381    | 60438                             | 0.63                                          |
+| New Jersey    | 564    | 77539                             | 0.73                                          |
+| Rhode Island  | 59     | 8009                              | 0.74                                          |
+| New York      | 943    | 123510                            | 0.76                                          |
+
+TODO above: Ilya please confirm how "vehicle miles traveled" is calculated by the US DOT. I presume it is simply miles per vehicle, rather than miles per vehicle per number of occupants. Also, please confirm that this estimate is based on miles traveled in the state, not necessarily by vehicles registered in the state.
+
+Have we finally found the *safest* state as judged by motor vehicle crash deaths? Not necessarily. While we normalized the raw data relative to the population and amount of driving, the IIHS reminds us that several other factors may influence these numbers, such as vehicle types, average speed, traffic laws, weather, and so forth. But as Alberto Cairo reminds us, every time we refine our model to make a more meaningful comparison, our interpretation becomes a closer representation of the truth.^[@cairoTruthfulArtData2016, p. 71]  TODO: Look for a closing quote by Cairo on this point.
+
+As we demonstrated above, the most common way to normalize data is to adjust *absolute numbers* into *relative numbers*, such as percentage or per capita rates. When working with historical or economic data, you may also need to *adjust for change over time*. For example, it's not fair to directly compare median household income in 1970 versus 2020, because $10,000 US dollars had far more purchasing power a half-century ago than it does today, due to cost of living and related factors. To make financial comparisons over time, look for data that has been converted into *constant dollars*. Economists refer to this difference as *nominal data* (not adjusted) versus *real data* (adjusted). Also, economic data is often *seasonally adjusted* to enable better comparisons across sectors that vary during the year, such as summer-time farming and tourism versus winter-time holiday shopping.
 
 - Adjust for Change over Time: We cannot compare median household income in 1960 versus 2019 without adjustment, because dollars had different levels of purchasing power over time, due to price inflation and related factors. If you need to make economic comparisons over time, look for data that has already been converted into "constant dollars," such as median household income "in 2019 dollars." Economists often refer to this difference as "nominal" data (un-adjusted) versus "real" data (adjusted). See example about real wages over time, which adjusts the dollar figures for each year into constant dollars, consumer price index... https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing
 It's also common for economic data to have "seasonal adjustments" because...[TODO move relevant sentences from Detect Bias chapter to here, and cross-ref back]
@@ -37,8 +102,34 @@ It's also common for economic data to have "seasonal adjustments" because...[TOD
 
 See books on statistical data analysis for more advanced techniques, such as comparing data through z-scores
 
-- TODO: Explain how map designers face several issues with normalization... cross-ref to Normalize Map Data in Map chapter
-- Adjust for Geographic Area?
+
+
+
+Adjust for Geographic Area ?when working with spatial data, be mindful about comparing smaller versus larger units of geography.
+
+Beware of comparisons between smaller versus larger groups of data. Example from Cairo: voting data about entire US states will vary from voting data for smaller geographic units within those states, such as counties, cities, or neighborhood-level voting precincts, for at least two reasons. First, voting patterns vary across smaller geographic units... Second, not all residents vote....  
+
+In most cases, use the smallest unit of data you can obtain to allow you to produce more granular visualizations. While you cannot obtain data about how each individual voted, you can obtain data at the precinct, city, or county level inside each state.
+
+But there are other cases when using a larger unit of data makes more sense than a smaller unit. For example, US presidential elections are determined by state-level electoral votes (except for Maine and Nebraska?). So if you wish to emphasize patterns in electoral votes, compare data for larger geographic units
+
+map designers face several issues with normalization... cross-ref to Normalize Map Data in Map chapter
+
+
+
+
+Finally, there are many times when you do *not* need to normalize your data....
+
+
+
+Unlike counts, most *measured* variables do not need normalization because
+they belong to a scale. For example, median age (the age of the "middle"
+person in a population, when sorted from youngest to oldest) can be directly compared
+among populations. We know that humans live anywhere between 0 and 120 years or so,
+and we wouldn't expect median ages to be vastly different from one country to another (maybe twice,
+but not tenfold). Median incomes, if measured in the same currency, also belong to the same scale
+and can be compared directly.
+
 
 TODO: DECIDE if any of this prior text should be integrated into above
 
@@ -55,13 +146,7 @@ who were willing to work, nine were unable to find a job. To derive a percentage
 divide the number of unemployed people by labor force size (adult
 population who are willing and able to work), and multiply by 100.
 
-Unlike counts, most *measured* variables do not need normalization because
-they belong to a scale. For example, median age (the age of the "middle"
-person in a population, when sorted from youngest to oldest) can be directly compared
-among populations. We know that humans live anywhere between 0 and 120 years or so,
-and we wouldn't expect median ages to be vastly different from one country to another (maybe twice,
-but not tenfold). Median incomes, if measured in the same currency, also belong to the same scale
-and can be compared directly.
+
 
 How not to normalize values: Absolute values are very important for context. Saying that "20% of blond men living in
 in town X won the lottery" may sound like a catchy headline, but in reality
@@ -88,49 +173,9 @@ with map making. In the following section, we will talk about geographical data 
 will introduce different geospatial file formats to ensure you are
 ready to create, use, and share map data.
 
-## Write Precisely About Common Terms {- #write-precisely}
 
-Sometimes we make poor comparisons because we fail to clarify our meaning of commonly-used words that can have different definitions. Three troublesome words are *average*, *percent*, and *causes*. We use them loosely in everyday conversation, but they require more precision when working with data.
 
-Imagine a series of numbers: 1, 2, 3, 4, 5. When calculating the *average*, by hand or [with a built-in spreadsheet formula as described in chapter 3](calculate.html), we add up the sum and divide by the count of numbers. A more precise term is the *mean*, which in this case equals 3. A different term is the *median*, which refers to the number in the middle of the ordered series, also known as the *50th percentile*, which in this case is also 3.
 
-When working with data, the terms *median* and *percentile* are more useful terms when making comparisons because they resist the influence of *outliers* at the extreme ends of the series. For example, imagine the same umbers as above, but replace the 5 with 100 to serve as an outlier. Suddenly the mean jumps up to 22, but the median remains the same at 3, as shown in Figure \@ref(fig:mean-vs-median). There's an old joke that when a billionaire walks into a room, everyone becomes a millionaire---on average---but the median remains the same. Since we ordinary people don't actually become richer by the presence of the billionaire outlier among us, the median is a better term to make meaningful comparisons about the overall distribution of the data.
-
-(ref:mean-vs-median) The *median* is a more useful comparative term than *average* or *mean* because it resists the influence of outliers.
-
-```{r mean-vs-median, fig.cap="(ref:mean-vs-median)"}
-knitr::include_graphics("images/06-comparisons/mean-vs-median.png")
-```
-
-*Percent* is another common term that becomes more useful for comparisons when we use it more precisely. Nearly everyone understands how *percentage* refers to a *ratio*, such as [the 1960s commercial](https://en.wikipedia.org/wiki/Trident_gum) that curiously claimed how 4 out of 5 dentists (or 80 percent) recommend sugarless gum for their patients who chew gum. Even if we never saw the survey data, nor understood how the fifth dentist resisted such intense peer pressure, we intuitively grasp the concept of percentage.
-
-But troubles sometimes arise when using the word to compare numbers, and here's where more precision helps. One term is *percent change* (or percent increase or decrease), which works best when comparing old versus new value. For example, if 4 dentists recommended sugarless gum in 1960, but peer pressure finally prevailed and 5 dentists recommend it in 2020, we calculate the percent change as `(New value - Old value) / Old value`, or `(5-4)/4 = 1/4 = 0.25 = 25%`.
-
-A different term is *percentage points*, which works best when comparing old versus new percentages. For example, if 80 percent of dentists recommended sugarless gum in 1960, but 100 percent recommended it in 2020, we can compare the two figures by calculating the difference as `New percentage - Old percentage = 100 - 80 = 20 percentage points`.
-
-As a result, there are two accurate ways to compare these figures. The number of dentists who recommended sugarless gum increased 25 percent. Also, the percentage of dentists who recommended it increased 20 percentage points.
-
-TODO above: Ilya let me know if the text and examples are clear. Also, should we add another paragraph to explain how these terms are commonly confused, sometimes to mislead people? Here's [one example](https://sciencing.com/difference-between-percent-percentage-point-8409115.html): "Why This Can Be Tricky...For instance, when President George W. Bush proposed partially privatizing Social Security in 2004, some commentators said that only '2 percent' of the average American's Social Security taxes would be funneled into private accounts. That was a misleading statement, said another commentator, John Allen Paulos on ABC News. He looked at the numbers and said the writers meant that the average person's income taxes directed toward Social Security would drop from 6.2 to 4.2 percent, which is a change of 2 percentage points. The actual percent change, he said, was 32 percent."
-
-TODO:
-Correlation, Causation, and Confounding Variables {- #correlation}
-Be cautious...
-
-- do not let association drift into causation...
-
-- identify and isolate confounding variables that may influence relationships within your data...
-
-TODO: choose illustrative examples for above
-
-## Using Smaller versus Larger Units {- #units}
-
-TODO: Rewrite this section
-
-Beware of comparisons between smaller versus larger groups of data. Example from Cairo: voting data about entire US states will vary from voting data for smaller geographic units within those states, such as counties, cities, or neighborhood-level voting precincts, for at least two reasons. First, voting patterns vary across smaller geographic units... Second, not all residents vote....  
-
-In most cases, use the smallest unit of data you can obtain to allow you to produce more granular visualizations. While you cannot obtain data about how each individual voted, you can obtain data at the precinct, city, or county level inside each state.
-
-But there are other cases when using a larger unit of data makes more sense than a smaller unit. For example, US presidential elections are determined by state-level electoral votes (except for Maine and Nebraska?). So if you wish to emphasize patterns in electoral votes, compare data for larger geographic units
 
 ## Beware of Biased Comparisons {- #biased-comparisons}
 TODO: Rewrite this section

@@ -2,9 +2,10 @@
 
 Now that you've [reflected on your data story](choose.html), [found and questioned your data](find.html), and [cleaned up any messy parts](clean.html), this chapter focuses on the key question to ask while analyzing your evidence: "Compared to what?" That's how statistician Edward Tufte defined the "heart of quantitative reasoning."^[@tufteEnvisioningInformation1990, p. 67]. We search for insightful findings in our data by judging their significance against each other, to identify those that truly stand out. Sometimes we need to adjust our scales to ensure that we're weighing data fairly, or as the saying goes, comparing apples to apples, not apples to oranges. Before you communicate your findings in any format---text, tables, charts, or maps---be sure that you're making meaningful comparisons, because without this, your work may become meaningless.
 
-This book does not intend to cover statistical data analysis, since many excellent resources already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers several common-sense strategies to make meaningful comparisons while you analyze your data, in order to help you design true and insightful visualizations that tell your story. You will learn to [use comparison words more precisely](comparison-words.html), why and how [to normalize your data](normalize.html), and watch out for [biased comparisons](biased-comparisons.html).
+This book does not intend to cover statistical data analysis, since many excellent resources already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers several common-sense strategies to make meaningful comparisons while you analyze your data, in order to help you design true and insightful visualizations that tell your story. You will learn to [precisely use comparison words](comparison-words.html), why and how [to normalize your data](normalize.html), and watch out for [biased comparisons](biased-comparisons.html).
 
-## Use Comparison Words More Precisely {- #comparison-words}
+## Precisely Use Comparison Words {- #comparison-words}
+TODO: Consider alternative section name: "Precisely Describe Comparisons" or "Describe Comparisons with Precision" or "Use Comparison Words Precisely"
 
 Sometimes we make poor comparisons because we fail to clarify our meaning of commonly-used words that can have different definitions. Three troublesome words are *average*, *percent*, and *causes*. We use them loosely in everyday conversation, but they require more precision when working with data.
 
@@ -18,28 +19,19 @@ When working with data, the terms *median* and *percentile* are more useful term
 knitr::include_graphics("images/06-comparisons/mean-vs-median.png")
 ```
 
-*Percent* is another common term that becomes more useful for comparisons when we use it more precisely. Nearly everyone understands how *percentage* refers to a *ratio*, such as [the 1960s commercial](https://en.wikipedia.org/wiki/Trident_gum) that curiously claimed how 4 out of 5 dentists (or 80 percent) recommend sugarless gum for their patients who chew gum. Even if we never saw the survey data, nor understood how the fifth dentist resisted such intense peer pressure, we intuitively grasp the concept of percentage.
+*Percent* is another common term that becomes more useful for comparisons when we use it more precisely. Nearly everyone understands how *percentage* refers to a *ratio*, such as [the 1960s commercial](https://en.wikipedia.org/wiki/Trident_gum) that curiously claimed how 4 out of 5 dentists (or 80 percent) recommend sugarless gum for their patients who chew gum. Even if we never saw the survey data, nor understood how the fifth dentist resisted such intense peer pressure, we intuitively grasp the concept of percentage. [TODO: Discuss if anyone gets my gum reference here, or if it just shows my age!]
 
-But troubles sometimes arise when using the word to compare numbers, and here's where more precision helps. One term is *percent change* (or percent increase or decrease), which works best when comparing old versus new value. For example, if 4 dentists recommended sugarless gum in 1960, but peer pressure finally prevailed and 5 dentists recommend it in 2020, we calculate the percent change as `(New value - Old value) / Old value`, or `(5-4)/4 = 1/4 = 0.25 = 25%`.
+But troubles sometimes arise when using the word to compare numbers, and here's where more precision helps. One term is *percent change* (or percent increase or decrease), which works best when comparing *old versus new values*. For example, if 4 dentists recommended sugarless gum in 1960, but peer pressure finally prevailed and 5 dentists recommend it in 2020, we calculate the percent change as `(New value - Old value) / Old value`, or `(5-4)/4 = 1/4 = 0.25 = 25%`.
 
-A different term is *percentage points*, which works best when comparing old versus new percentages. For example, if 80 percent of dentists recommended sugarless gum in 1960, but 100 percent recommended it in 2020, we can compare the two figures by calculating the difference as `New percentage - Old percentage = 100 - 80 = 20 percentage points`.
+A different term is *percentage points*, which works best when comparing *old versus new percentages*. For example, if 80 percent of dentists recommended sugarless gum in 1960, but 100 percent recommended it in 2020, we can compare the two figures by calculating the difference as `New percentage - Old percentage = 100% - 80%  = a difference of 20 percentage points`.
 
-As a result, there are two accurate ways to compare these figures. The number of dentists who recommended sugarless gum increased 25 percent. Also, the percentage of dentists who recommended it increased 20 percentage points.
+When we use each term accurately, there are two correct ways to compare these figures. One way is to state that "The number of dentists who recommended sugarless gum increased 25 percent over time." Another way is to state that "The percentage of dentists who recommended sugarless gum increased 20 percentage points over time." Both statements are accurate.
 
-TODO above: Ilya let me know if the text and examples are clear. Also, should we add another paragraph to explain how these terms are commonly confused, sometimes to mislead people? Here's [one example](https://sciencing.com/difference-between-percent-percentage-point-8409115.html): "Why This Can Be Tricky...For instance, when President George W. Bush proposed partially privatizing Social Security in 2004, some commentators said that only '2 percent' of the average American's Social Security taxes would be funneled into private accounts. That was a misleading statement, said another commentator, John Allen Paulos on ABC News. He looked at the numbers and said the writers meant that the average person's income taxes directed toward Social Security would drop from 6.2 to 4.2 percent, which is a change of 2 percentage points. The actual percent change, he said, was 32 percent."
+Avoid loosely using the word "percent" without being precise about its meaning, since you're likely to confuse people, or worse, mislead them about the facts. Imagine a politician who proposes to raise the sales tax on products and services you purchase from 5 to 6 percent. If that politician says, "it's only a 1 percent increase," they're wrong. Instead, there are two truthful ways describe this change. One way is to state that tax "will increase 20 percent" because `(6-5)/5 = 0.20`. Another way is to state that the tax "will increase by 1 percentage point" because `6% - 5% = a difference of 1 percentage point`. See why the politician preferred to say it their way, rather than the correct way? Don't let anyone fool you with percentages, and make sure you use these terms precisely in your own work to avoid misleading others.
 
-TODO:
-*Cause and effect* is loosely-defined phrase in everyday language that requires more precise wording when working with data. There are lots of ways that we slip into using *causal* language without being conscious of what it means.... examples.... leads to.... turns out..... results in.... 
+TODO above: Decide if the text and examples are clear. I like the sugarless gum example, but can replace it if it's too obscure, or if the change from 4 to 5 out of 5 isn't useful. Also, I simplified the politician's example from reading this real-life example, but I think the hypothetical increase from 5% to 6% is clearer: "Why This Can Be Tricky...For instance, when President George W. Bush proposed partially privatizing Social Security in 2004, some commentators said that only '2 percent' of the average American's Social Security taxes would be funneled into private accounts. That was a misleading statement, said another commentator, John Allen Paulos on ABC News. He looked at the numbers and said the writers meant that the average person's income taxes directed toward Social Security would drop from 6.2 to 4.2 percent, which is a change of 2 percentage points. The actual percent change, he said, was 32 percent." https://sciencing.com/difference-between-percent-percentage-point-8409115.html
 
- to say that one thing *causes* another to happen....
-Correlation, Causation, and Confounding Variables{- #correlation}
-Be cautious...
-
-- do not let association drift into causation...
-
-- identify and isolate confounding variables that may influence relationships within your data...
-
-TODO: choose illustrative examples for above
+A final recommendation about using more precise language is to be cautious with words that suggest a *cause-and-effect relationship* in your data. In everyday conversation, there are many ways that we loosely imply that a causal relationship, where an action directly results in a reaction. For example, when we say one thing "leads to" another, or "promotes" growth, or "sparks" change, those words suggest causality. While that's fine in daily conversation, we need to choose our words more carefully when discussing data, using these three concepts. The first step is to describe any *correlation* between two variables, which means to show how they are associated or related interdependently. But as the saying goes, correlation is not causation. Second, in order to show causation, we need to prove both correlation and offer a *persuasive theory* for how one factor (sometimes called the independent variable) creates a change in another factor (called the dependent variable). Third, we need to identify and isolate any *confounding variables* that we have not considered that may also influence the cause-and-effect relationship. While the details are beyond the scope of this book, be mindful of the concepts---and choose your words carefully---when working with data.
 
 ## Normalize Your Data {- #normalize}
 
@@ -93,89 +85,11 @@ TODO above: Ilya please confirm how "vehicle miles traveled" is calculated by th
 
 Have we finally found the *safest* state as judged by motor vehicle crash deaths? Not necessarily. While we normalized the raw data relative to the population and amount of driving, the IIHS reminds us that several other factors may influence these numbers, such as vehicle types, average speed, traffic laws, weather, and so forth. But as Alberto Cairo reminds us, every time we refine our model to make a more meaningful comparison, our interpretation becomes a closer representation of the truth.^[@cairoTruthfulArtData2016, p. 71]  TODO: Look for a closing quote by Cairo on this point.
 
-As we demonstrated above, the most common way to normalize data is to adjust *absolute numbers* into *relative numbers*, such as percentage or per capita rates. When working with historical or economic data, you may also need to *adjust for change over time*. For example, it's not fair to directly compare median household income in 1970 versus 2020, because $10,000 US dollars had far more purchasing power a half-century ago than it does today, due to cost of living and related factors. To make financial comparisons over time, look for data that has been converted into *constant dollars*. Economists refer to this difference as *nominal data* (not adjusted) versus *real data* (adjusted). Also, economic data is often *seasonally adjusted* to enable better comparisons across sectors that vary during the year, such as summer-time farming and tourism versus winter-time holiday shopping.
+As we demonstrated above, the most common way to normalize data is to adjust *absolute numbers* into *relative numbers*, such as percentages or per capita rates. But there are many other ways to normalize data, so make sure you're familiar with different methods when you [find and question your data, as described in chapter 4](find.html). When working with historical data (also called time-series or longitudinal data), you may need to *adjust for change over time*. For example, it's not fair to directly compare median household income in 1970 versus 2020, because $10,000 US dollars had far more purchasing power a half-century ago than it does today, due to cost of living and related factors. Similarly, economists distinguish between *nominal data* (unadjusted) versus *real data* (adjusted over time), typically by converting figures into "constant dollars" for a particular year that allow better comparisons by accounting for purchasing power.^[@WhatRealWages2018] Also, economic data is often *seasonally adjusted* to improve comparisons for data that regularly varies across the year, such as employment or revenue during the summer tourism season versus the winter holiday shopping season. Another normalization method is to create an *index* to measure how values have risen or fallen in relation to a given reference point over time. Furthermore, statisticians often normalize data collected using different scales by calculating its *standard score*, also known as its *z-score*, to make better comparisons. While these methods are beyond the scope of this book, it's important to be familiar the broader concept: everyone agrees that it's better to compare apples to apples, rather than apples to oranges.
 
-- Adjust for Change over Time: We cannot compare median household income in 1960 versus 2019 without adjustment, because dollars had different levels of purchasing power over time, due to price inflation and related factors. If you need to make economic comparisons over time, look for data that has already been converted into "constant dollars," such as median household income "in 2019 dollars." Economists often refer to this difference as "nominal" data (un-adjusted) versus "real" data (adjusted). See example about real wages over time, which adjusts the dollar figures for each year into constant dollars, consumer price index... https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing
-It's also common for economic data to have "seasonal adjustments" because...[TODO move relevant sentences from Detect Bias chapter to here, and cross-ref back]
+Finally, you do *not* always need to normalize your data, because sometimes its format already does this for you. Unlike *counts* or raw numbers, most *measured variables* do not need normalization because they already appear on a common scale. One example of a measured variable is *median age*, the age of the "middle" person in a population, when sorted from youngest to oldest. Since we know that humans live anywhere between 0 and 120 years or so, we can directly compare the median age among different populations. Similarly, another measured variable is *median income*, if measured in the same currency, because this offers a common scale that allows direct comparisons across different populations.
 
-- Adjust by Creating an Index... explain
-
-See books on statistical data analysis for more advanced techniques, such as comparing data through z-scores
-
-
-
-
-Adjust for Geographic Area ?when working with spatial data, be mindful about comparing smaller versus larger units of geography.
-
-Beware of comparisons between smaller versus larger groups of data. Example from Cairo: voting data about entire US states will vary from voting data for smaller geographic units within those states, such as counties, cities, or neighborhood-level voting precincts, for at least two reasons. First, voting patterns vary across smaller geographic units... Second, not all residents vote....  
-
-In most cases, use the smallest unit of data you can obtain to allow you to produce more granular visualizations. While you cannot obtain data about how each individual voted, you can obtain data at the precinct, city, or county level inside each state.
-
-But there are other cases when using a larger unit of data makes more sense than a smaller unit. For example, US presidential elections are determined by state-level electoral votes (except for Maine and Nebraska?). So if you wish to emphasize patterns in electoral votes, compare data for larger geographic units
-
-map designers face several issues with normalization... cross-ref to Normalize Map Data in Map chapter
-
-
-
-
-Finally, there are many times when you do *not* need to normalize your data....
-
-
-
-Unlike counts, most *measured* variables do not need normalization because
-they belong to a scale. For example, median age (the age of the "middle"
-person in a population, when sorted from youngest to oldest) can be directly compared
-among populations. We know that humans live anywhere between 0 and 120 years or so,
-and we wouldn't expect median ages to be vastly different from one country to another (maybe twice,
-but not tenfold). Median incomes, if measured in the same currency, also belong to the same scale
-and can be compared directly.
-
-
-TODO: DECIDE if any of this prior text should be integrated into above
-
-Different ways to normalize data: You can normalize data in many ways, and there is not necessarily one
-acceptable way of doing it.
-
-One of the most common ways of normalization is deriving "per capita", or "per person" values.
-If values are small, such as rare disease cases or lottery winners, they can be presented as "per 1,000" or "per 100,000" people.
-Divide your quantity by population in that area to derive per capita values.
-
-Choropleth maps work well with percentages. The good news is, humans like percentages too.
-It is quite natural for us to understand that a 9% unemployment rate means that of 100 people
-who were willing to work, nine were unable to find a job. To derive a percentage for unemployment,
-divide the number of unemployed people by labor force size (adult
-population who are willing and able to work), and multiply by 100.
-
-
-
-How not to normalize values: Absolute values are very important for context. Saying that "20% of blond men living in
-in town X won the lottery" may sound like a catchy headline, but in reality
-the town has 450 residents, of those 200 are men, and of those only 5 have light hair color.
-One of those five (and here comes the 20%) was lucky to win the lottery, so technically
-the headline didn't lie.
-
-This is, of course, an extreme and comic example, but exaggerations in this spirit are not uncommon.
-If you want readers to trust you, make sure you are open about total counts when reporting
-normalized values (such as percentages or per capita values).
-
-Absolute values are important for another reason: behind numbers there are often people,
-and smaller, normalized values may hide the scale of the problem.
-Saying that "the unemployment rate is only 5%" is valid, but the 5%
-of, say, Indian labor force (around 522 million) is about 26 million, which is
-pretty much the total population of Australia.
-
-Exercise your best judgement when you normalize values. Make sure you don't
-blow numbers out of proportion by normalizing values in smaller populations.
-But also don't hide large counts behind smaller percentages for larger populations.
-
-At this point, you should have enough geocoding and spreadsheet skills to aid you
-with map making. In the following section, we will talk about geographical data in general and
-will introduce different geospatial file formats to ensure you are
-ready to create, use, and share map data.
-
-
-
-
+Now that you have a better sense of why, when, and how to normalize data, the next section will warn you to watch out for biased comparisons in data sampling methods.
 
 ## Beware of Biased Comparisons {- #biased-comparisons}
 TODO: Rewrite this section

@@ -504,6 +504,8 @@ Datawrapper splits the process of creating a map into four steps: select map, ad
 
 Good maps often require [cleaning up messy data as described in Chapter 5](clean.html). In our spreadsheet we removed all of the columns except two, August 2019 and August 2020, and we also inserted a *Percent Change* column, which we calculated this way: `(2020 - 2019) / 2019 * 100`. Also, we're fortunate that Datawrapper easily recognizes US state names and abbreviations. If you're mapping other types of geographic areas, learn more about [international ISO codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) and [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names).
 
+TODO: DECIDE whether to keep basemap or change to one of the others that now reflect DC. DECIDE whether to mention other types of codes recognized by Datawrapper, which vary with map type, such as FIPS and ANSI.
+
 2. Go to *File > Download* in CSV format to save the data to your local computer.
 
 3. Open [Datawrapper](https://datawrapper.de), click the *New Map* button, and select *Choropleth map* as shown in Figure \@ref(fig:datawrapper-map-choose). No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.
@@ -533,7 +535,7 @@ Hint: If Datawrapper does not list your preferred map outline, you can upload yo
 knitr::include_graphics("images/08-map/datawrapper-import-dataset.png")
 ```
 
-TODO: Decide if it's important to include an image of this import button, since I believe it's hidden far below the table that most users see.
+TODO: Decide whether to include screenshot of names/codes drop-down menu, which is helpful because it shows how Datawrapper labels each geography, and one could copy and paste this into a spreadsheet and use VLookup. Decide if it's important to include an image of this import button, since I believe it's hidden far below the table that most users see.
 
 6. On the *Import your dataset* screen, instead of pasting your data, we recommend that you click to *upload a CSV file* and select the file you downloaded in step 2.
 

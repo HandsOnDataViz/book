@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-20" />
+<meta name="date" content="2020-10-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -202,7 +202,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6" data-path="comparisons.html"><a href="comparisons.html"><i class="fa fa-check"></i><b>6</b> Make Meaningful Comparisons</a>
 <ul>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
-<li class="chapter" data-level="" data-path="averages-percentages.html"><a href="averages-percentages.html"><i class="fa fa-check"></i>Clarify Averages and Percentages</a></li>
+<li class="chapter" data-level="" data-path="write-precisely.html"><a href="write-precisely.html"><i class="fa fa-check"></i>Write Precisely About Common Terms</a></li>
 <li class="chapter" data-level="" data-path="units.html"><a href="units.html"><i class="fa fa-check"></i>Using Smaller versus Larger Units</a></li>
 <li class="chapter" data-level="" data-path="biased-comparisons.html"><a href="biased-comparisons.html"><i class="fa fa-check"></i>Beware of Biased Comparisons</a></li>
 </ul></li>
@@ -336,7 +336,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="design-choropleth" class="section level2 unnumbered" number="">
 <h2>Design Choropleth Colors &amp; Intervals</h2>
-<p>When you build a choropleth map, your choices about how to represent data with colors will determine its overall appearance, so it’s important to learn key principles. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by color-blind readers.</p>
+<p>When you build a choropleth map, your choices about how to represent data with colors will determine its overall appearance, so it’s important to learn key principles. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by people with colorblindness. For an excellent overview of visualization colors in general, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
 <p>To illustrate key concepts about colors in choropleth map design, let’s explore a wonderful tool called <a href="https://colorbrewer2.org/">ColorBrewer</a>, created by Cynthia Brewer and Mark Harrower. See the interface in Figure <a href="design-choropleth.html#fig:map-colorbrewer">8.4</a>. Since ColorBrewer is a design assistant, do not expect to upload your data into it to create a map. Instead, ColorBrewer will recommend color palettes that work best with our map data and the type of story we wish to tell, and allow us to export those color codes into our preferred mapping tool.</p>
 
 <div class="figure"><span id="fig:map-colorbrewer"></span>
@@ -416,6 +416,12 @@ Figure 8.9: Interpolation options in two map tools: Datawrapper (left) and Table
 <p>In any case, be very aware of how color palettes and interpolation dramatically shape the appearance of choropleth maps and how the data appears in readers’ eyes. Always create maps show us the story and tell the truth. [TODO: ADD THIS? In general, Datawrapper recommends choosing ranges to make sure readers “see all the differences in the data,” rather than hiding them out of sight…. cite <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>]
 TODO ALSO: Review all of the recommendations in the Datawrapper Academy post above and decide ones to include as rules versus recommendations vs neither. For example: “use the same intervals… 0, 25, 50 instead of 0, 15, 50…” runs counter to other advice we give about interpolation.</p>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="20">
+<li id="fn20"><p><span class="citation">Rost, “Your Friendly Guide to Colors in Data Visualisation.”</span>; <span class="citation">Rost, “How to Pick More Beautiful Colors for Your Data Visualizations.”</span><a href="design-choropleth.html#fnref20" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

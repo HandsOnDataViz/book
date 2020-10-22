@@ -4,8 +4,8 @@ Now that you've [reflected on your data story](choose.html), [found and question
 
 This book does not intend to cover statistical data analysis, as many other fine textbooks already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers common-sense strategies to making meaningful comparisons as you analyze your data, in order to help you make more insightful visualizations. You will learn [to normalize your data](normalize.html), [write precisely about common terms](write-precisely.html) such as averages and percentages, understand when to use [smaller versus larger units](units.html), and watch out for [biased comparisons](biased-comparisons.html).
 
-
 ## Normalize Your Data {- #normalize}
+TODO: Rewrite this section
 
 At first glance, "normalizing" or "adjusting" your data may sound like your fudging the numbers, or bending the truth. But we often cannot get closer to the truth without adjusting data to make more meaningful comparisons. Normalization is defined as adjust data collected using different scales into a common scale, in order to make more meaningful comparisons. Here are common ways to normalize:
 
@@ -99,7 +99,7 @@ When working with data, the terms *median* and *percentile* are more useful term
 (ref:mean-vs-median) The *median* is a more useful comparative term than *average* or *mean* because it resists the influence of outliers.
 
 ```{r mean-vs-median, fig.cap="(ref:mean-vs-median)"}
-knitr::include_graphics("images/06-comparisons/mean-vs-median.png ")
+knitr::include_graphics("images/06-comparisons/mean-vs-median.png")
 ```
 
 *Percent* is another common term that becomes more useful for comparisons when we use it more precisely. Nearly everyone understands how *percentage* refers to a *ratio*, such as [the 1960s commercial](https://en.wikipedia.org/wiki/Trident_gum) that curiously claimed how 4 out of 5 dentists (or 80 percent) recommend sugarless gum for their patients who chew gum. Even if we never saw the survey data, nor understood how the fifth dentist resisted such intense peer pressure, we intuitively grasp the concept of percentage.
@@ -123,6 +123,9 @@ Be cautious...
 TODO: choose illustrative examples for above
 
 ## Using Smaller versus Larger Units {- #units}
+
+TODO: Rewrite this section
+
 Beware of comparisons between smaller versus larger groups of data. Example from Cairo: voting data about entire US states will vary from voting data for smaller geographic units within those states, such as counties, cities, or neighborhood-level voting precincts, for at least two reasons. First, voting patterns vary across smaller geographic units... Second, not all residents vote....  
 
 In most cases, use the smallest unit of data you can obtain to allow you to produce more granular visualizations. While you cannot obtain data about how each individual voted, you can obtain data at the precinct, city, or county level inside each state.
@@ -130,6 +133,7 @@ In most cases, use the smallest unit of data you can obtain to allow you to prod
 But there are other cases when using a larger unit of data makes more sense than a smaller unit. For example, US presidential elections are determined by state-level electoral votes (except for Maine and Nebraska?). So if you wish to emphasize patterns in electoral votes, compare data for larger geographic units
 
 ## Beware of Biased Comparisons {- #biased-comparisons}
+TODO: Rewrite this section
 
 Everyone should avoid cherry-picking data, which means selecting only the evidence that arrives at a pre-determined conclusion.
 

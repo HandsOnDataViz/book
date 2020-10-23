@@ -107,15 +107,15 @@ Now let's publish your edited map to the public web to see how it looks in a web
  knitr::include_graphics("images/11-github/leaflet-simple-settings.png")
 ```
 
-10. In the Settings screen, scroll way down to the GitHub Pages area. In the drop-down menu, change *Source* from *None* to *Master*, keep the default */(root)* option in the middle, and press *Save* as shown in Figure \@ref(fig:leaflet-github-pages). This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
+10. In the Settings screen, scroll way down to the GitHub Pages area. In the drop-down menu, change *Source* from *None* to *Main*, keep the default */(root)* option in the middle, and press *Save* as shown in Figure \@ref(fig:leaflet-github-pages-main). This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
 
-(ref:leaflet-github-pages) In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Master*.
+(ref:leaflet-github-pages-main) In *Settings*, go to *GitHub Pages*, and switch the source from *None* to *Main*.
 
-```{r leaflet-github-pages, out.width=500, fig.cap="(ref:leaflet-github-pages)"}
-knitr::include_graphics("images/11-github/leaflet-github-pages.png")
+```{r leaflet-github-pages-main, out.width=300, fig.cap="(ref:leaflet-github-pages-main)"}
+knitr::include_graphics("images/11-github/leaflet-github-pages-main.png")
 ```
 
-Note: **TODO:** GitHub recently announced it plans to change the default branch from *Master* to *Main* to eliminate its master-slave metaphor. GitHub recommends waiting until later in 2020 for their system to support this change. When that happens, we need to update repos, text, and screenshots. See more at https://github.com/github/renaming
+Tip: In response to the Black Lives Matter movement in 2020, [GitHub renamed its default branch](https://github.com/github/renaming) from *master* to *main* to eliminate its master-slave metaphor.
 
 11. Scroll back down to *Settings > GitHub Pages* to see the web address where your live map has been published online, and right-click it to open in a new browser tab, as shown in Figure \@ref(fig:leaflet-github-pages-link).
 
@@ -223,7 +223,7 @@ So how do you make a second fork of a GitHub repo, if there's no *Use this templ
  knitr::include_graphics("images/11-github/repo-code-download.png")
 ```
 
-2. Navigate to the location on your computer where you saved the folder. Its file name should end with `.zip`, which means you need to double-click to "unzip" or de-compress the folder. After you unzip it, a new folder will appear named in this format, `REPOSITORY-BRANCH`, which refers to the repository name (such as `leaflet-map-simple`) and the branch name (such as `master` or `main`), and it will contain the repo files. One of those files is named `index.html`, which you'll use in a few steps below.
+2. Navigate to the location on your computer where you saved the folder. Its file name should end with `.zip`, which means you need to double-click to "unzip" or de-compress the folder. After you unzip it, a new folder will appear named in this format, `REPOSITORY-BRANCH`, which refers to the repository name (such as `leaflet-map-simple`) and the branch name (such as `main`), and it will contain the repo files. One of those files is named `index.html`, which you'll use in a few steps below.
 
 3. Go back to your GitHub account in your web browser, click on the plus (+) symbol in the upper-right corner of your account, and select *New repository*, as shown in Figure \@ref(fig:repo-create-new).
 
@@ -376,13 +376,15 @@ Note: Since your browser is displaying only the *local computer* version of your
 
 Now let's transfer your edits from your local computer to your GitHub web account, which you previously connected when you set up GitHub Desktop.
 
-11. Go to GitHub Desktop, confirm that your Current Repo is `leaflet-map-simple`, and you will see your code edits summarized on the screen. In this two-step process, first click the blue *Commit to Master* button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue *Push origin* button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure \@ref(fig:desktop-commit-push).
+11. Go to GitHub Desktop, confirm that your Current Repo is `leaflet-map-simple`, and you will see your code edits summarized on the screen. In this two-step process, first click the blue *Commit* button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue *Push origin* button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure \@ref(fig:desktop-commit-push).
 
-(ref:desktop-commit-push) In this two-step process, click *Commit to Master*, then click *Push origin* to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://handsondataviz.org/images/11-github/desktop-commit-push.gif).
+(ref:desktop-commit-push) In this two-step process, click *Commit*, then click *Push origin* to save and copy your edits from your local computer to your GitHub web account, as shown in this [animated GIF](https://handsondataviz.org/images/11-github/desktop-commit-push.gif).
 
 ```{r desktop-commit-push, fig.cap="(ref:desktop-commit-push)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/11-github/desktop-commit-push.gif", height = "500px") else knitr::include_graphics("images/11-github/desktop-commit-push-annotated.png")
 ```
+
+TODO above: update the annotated image and GIF to show commit to main, not master.
 
 Congratulations! You've successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format `https://USERNAME.github.io/REPOSITORY`, substituting your GitHub username and repo name.
 

@@ -66,15 +66,13 @@ If any problems arise, see the [Fix Common Mistakes](fix.html) section of the ap
 
 `https://github.com/USERNAME/leaflet-maps-with-google-sheets`
 
-4. In your new copy of the code repo, click the upper-right *Settings* button and scroll way down to the GitHub Pages area. In the drop-down menu, change *Source* from *None* to *Main*, keep the default */(root)* setting, and press *Save* as shown in Figure \@ref(fig:leaflet-github-pages-main). This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
+4. In your new copy of the code repo, click the upper-right *Settings* button and scroll way down to the GitHub Pages area. In the drop-down menu, change *Source* from *None* to *Main*, keep the default */(root)* setting, and press *Save* as shown in Figure \@ref(fig:leaflet-github-pages-main2). This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
 
-(ref:leaflet-github-pages-main) In *Settings*, go to *GitHub Pages*, switch the source from *None* to *Main*, and *Save*.
+(ref:leaflet-github-pages-main2) In *Settings*, go to *GitHub Pages*, switch the source from *None* to *Main*, and *Save*.
 
-```{r leaflet-github-pages-main, out.width=300, fig.cap="(ref:leaflet-github-pages-main)"}
+```{r leaflet-github-pages-main2, out.width=300, fig.cap="(ref:leaflet-github-pages-main2)"}
 knitr::include_graphics("images/13-leaflet/leaflet-github-pages-main.png")
 ```
-
-Note: **TODO:** GitHub recently announced it plans to change the default branch from *Master* to *Main* to eliminate its master-slave metaphor. GitHub recommends waiting until later in 2020 for their system to support this change. When that happens, we need to update repos, text, and screenshots. See more at https://github.com/github/renaming
 
 5. Scroll down to GitHub Pages section again, and copy the link to your published web site, which will appear in this format:
 
@@ -290,7 +288,7 @@ https://github.com/USERNAME/leaflet-storymaps-with-google-sheets
 
 Reminder: You can only fork a GitHub repo **one time**. If needed, see how to make a second copy in the [Create a New Repo in GitHub](create-repo.html) chapter in this book.
 
-4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Master, and Save. This publishes your code to a live map on a public website that you control.
+4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Main, and Save. This publishes your code to a live map on a public website that you control.
 
 5) Scroll down to GitHub Pages section again, and copy the link to your published web site, which will follow this format:
 ```

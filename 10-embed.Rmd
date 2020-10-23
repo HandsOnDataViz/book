@@ -54,7 +54,7 @@ GitHub <http://github.com> is a versatile tool that can be used to create simple
 
 `https://github.com/YOUR-USERNAME/YOUR-REPO-NAME`
 
-5) In your GitHub repo, click on Settings, scroll down to GitHub Pages, select Master branch as your source, then Save. This publishes the code from your repo to the public web.
+5) In your GitHub repo, click on Settings, scroll down to GitHub Pages, select Main branch as your source, then Save. This publishes the code from your repo to the public web.
 
 Hint: Do NOT select Theme Chooser for this exercise. It will create additional files that will interfere with displaying an iframe in your README.md file.
 
@@ -176,7 +176,7 @@ TODO: Convert to code-chunk iframe: https://docs.google.com/spreadsheets/d/1YgBW
 
 `https://github.com/YOUR-USERNAME/YOUR-REPO-NAME`
 
-5) In your GitHub repo, click on Settings tab, scroll down to *GitHub Pages*, select **master branch** as your Source, then Save. This publishes the code from your repo to the public web.
+5) In your GitHub repo, click on Settings tab, scroll down to *GitHub Pages*, select **main branch** as your Source, then Save. This publishes the code from your repo to the public web.
 
 6) When the Settings page refreshes, scroll back down to GitHub Pages to see the new link to your published website, which will appear in this format:
 

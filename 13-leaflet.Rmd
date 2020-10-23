@@ -10,14 +10,14 @@ Table: (\#tab:map-templates) Map Code Templates, Best Uses, and Tutorials
 | Map Templates | Best use and tutorials in this book |
 | --- | --- |
 | Leaflet Maps with Google Sheets<br> ![](images/13-leaflet/leaflet-maps-with-google-sheets.png) | Best to show interactive points, polygons, or polylines, using your choice of colors, styles, and icons, based on data loaded into your linked Google Sheet (or CSV file) and GitHub repository. Includes option to display a table of point map markers next to your map.  <br>Template with tutorial: [Leaflet Maps with Google Sheets](leaflet-maps-with-google-sheets.html) |
-| Leaflet Storymaps with Google Sheets<br> ![](images/13-leaflet/leaflet-storymaps-with-google-sheets.png) | Best to display your map as a scrolling narrative of chapters to guide readers through a storyline, with the option to include paragraphs of text, images, audio or video clips, and historical map backgrounds loaded into your linked Google Sheet (or CSV) and GitHub repo. <br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
+| Leaflet Storymaps with Google Sheets<br> ![](images/13-leaflet/leaflet-storymaps-with-google-sheets.png) | Best to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds loaded into your linked Google Sheet (or CSV file) and GitHub repository.<br>Template with tutorial: [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html) |
 | Leaflet Point Map with CSV Data<br> ![](images/13-leaflet/leaflet-maps-with-csv.png) | Learn how to code your own Leaflet point map that pulls data from a CSV file in your GitHub repo.<br>Template with tutorial: [Leaflet Maps with CSV Data](leaflet-maps-with-csv.html)  |
 | Leaflet Heatmap Points with CSV Data <br> ![](images/13-leaflet/leaflet-heatmap.png) | Best to show clusters of points as hotspots to emphasize high frequency.<br>Template with tutorial: [Leaflet Heatmap](leaflet-heatmap.html) |
 | Leaflet Searchable Point Map with CSV Data<br> ![](images/13-leaflet/searchable-map.png) | Best to show multiple locations for users to search by name or proximity, or filter by category, with optional list view. Developed by [Derek Eder](https://derekeder.com/) from DataMade.<br>Template with tutorial: [Leaflet Searchable Map with CSV](leaflet-searchable-map.html) |
 | Leaflet Maps with Open Data APIs<br> ![](images/13-leaflet/leaflet-open-data.png) | Learn how to code your own Leaflet map with an application programming interface (API) that continuously pulls the most current information directly from an open-data repository, such as Socrata and others.<br>Template with tutorial: [Leaflet Maps with Open Data APIs template](leaflet-maps-open-data-apis.html) |
 
 ## Leaflet Maps with Google Sheets {- #leaflet-maps-with-google-sheets}
-Sometimes you need to create a map that cannot be made easily with drag-and-drop tools, because you need to customize its appearance or show some combination of point, polygon, or polyline data. One solution is to make a copy of our Leaflet Maps with Google Sheets template, as shown in Figure \@ref(fig:lmwgs-map). This introductory-level template allows you to choose custom point icons and choropleth color palettes, and to display different combinations of map data layers. It's a simpler code template for newer users because you enter your map data and modify settings in a linked Google Sheet, as shown in Figure \@ref(fig:lmwgs-sheet), and upload images or geographic data into a template code folder in your GitHub repository.
+Sometimes you need to create a map that cannot be made easily with drag-and-drop tools, because you need to customize its appearance or show some combination of point, polygon, or polyline data. One solution is to build your map based on our Leaflet Maps with Google Sheets code template, which allows you to display custom point icons, pick any choropleth color palettes, and stack different combinations of map data layers, as shown in Figure \@ref(fig:lmwgs-map). If you've explored prior chapters in this book, this template is a good template for newer users, because you enter your map data and settings in a linked Google Sheet, as shown in Figure \@ref(fig:lmwgs-sheet), and upload images or geographic files into a folder in your GitHub repository. In addition, all of the data you enter can easily be exported and migrated to other platforms, which matters because mapping technologies continually evolve, as we discussed in the [how to choose tools section in Chapter 2](choose.html). Finally, the Leaflet Maps template is built on flexible open-source software that's written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.
 
 TODO: Create and insert a new version of the demo, featuring ECGreenway route thru CT or East Coast, points with photos, and pop density of towns to highlight how this bike route connects cities.
 
@@ -27,7 +27,7 @@ TODO: Create and insert a new version of the demo, featuring ECGreenway route th
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-maps-with-google-sheets/", height = "500px") else knitr::include_graphics("images/13-leaflet/lmwgs-map.png")
 ```
 
-(ref:lmwgs-sheet) View the [online Google Sheet template](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g) that feeds data into the Leaflet map above.
+(ref:lmwgs-sheet) View the [online Google Sheet template](https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g) that feeds data into the Leaflet Maps demo above.
 
 ```{r lmwgs-sheet, fig.cap="(ref:lmwgs-sheet)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;headers=false", height = "500px") else knitr::include_graphics("images/13-leaflet/lmwgs-sheet.png")
@@ -256,39 +256,48 @@ As an alternative to step G, if you wish to continue to store your map data in y
 If problems arise, see the [Fix Common Mistakes](fix.html) section of the appendix.
 
 ## Leaflet Storymaps with Google Sheets {- #leaflet-storymaps-with-google-sheets}
-TODO: Add intro text; mention (but not recommend)[Knight Lab's StoryMap](https://storymap.knightlab.com/) and [ESRI Story Maps](https://storymaps.arcgis.com/en/) because users cannot easily migrate data out
+The Leaflet Storymaps code template is designed to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds, as shown in Figure \@ref(fig:storymap-demo). You enter all of your map data into a linked Google Sheet (or CSV file) or upload it into a GitHub repository, as shown in Figure \@ref(fig:storymap-sheet). Although some other story map tools are easier to start using right away, such as the [Knight Lab StoryMap](https://storymap.knightlab.com/) and [ESRI Story Maps](https://storymaps.arcgis.com/en/), we do not recommend them because both lack *data portability*, meaning that you can't easily export any information you enter. By contrast, all of the information you add to the Leaflet Storymaps linked Google Sheet and GitHub repo can easily be exported and migrated to other platforms, which matters because digital technologies continually evolve, as we described when discussing [how to choose tools wisely in Chapter 2](choose.html). In addition, the Leaflet Storymaps template offers more features to customize how you display your data, including and scanned background map layers, a topic you'll learn about in the [Mapwarper section of Chapter 14](mapwarper.html). Finally, this Leaflet template is built on flexible open-source software that's written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.
 
-Try it:
-Explore the map or right-click to [view full-screen map in a new tab](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/)
-<iframe src="https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/" width="90%" height=500></iframe>
+TODO: Create and insert a new version of the template demo
 
-The map pulls the point data and settings from a linked Google Sheet, which you can explore below or right-click to [view full-screen Sheet in a new tab](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/)
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSqxGs67j80rAPDZdQaS5jI0avn1qs2y5N8fOaeHUGvyrnIwBmWomlfAuujtvPrxtF-5FBZxi_KdTUm/pubhtml?widget=true&amp;headers=false" width="90%" height=500></iframe>
+(ref:storymap-demo) Explore the [interactive Leaflet Storymaps with Google Sheets](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/).
 
-#### Features {-}
-- Show map points, text, images, and links with scrolling narrative
-- Free and open-source code template, built on Leaflet and linked to Google Sheets
-- Fork the code and host your live map on the web for free with GitHub Pages
-- Geocode location data with US Census or Google, using script inside the Google Sheet
-- Easy-to-modify data and map options in Google Sheet tabs or uploaded CSV files
-- Responsive design resizes your maps to display inside most mobile devices
+```{r storymap-demo, fig.cap="(ref:storymap-demo)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/", height = "500px") else knitr::include_graphics("images/13-leaflet/storymap-demo.png")
+```
 
-#### Create Your Own {-}
-- A) Fork (copy) the code template and publish your version with GitHub Pages
-- B) File > Make a Copy of Google Sheet template, Share, and File > Publish
-- C) Paste your Google Sheet URL in two places in your GitHub repo
-- C2) NEW: Create a free Google Sheets API key to paste into the code
-- D) Modify your map settings in the Options tab and test your live map
-- E) Geocode locations in the Points tab
+(ref:lmwgs-sheet) View the [online Google Sheet template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/) that feeds data into the Leaflet Storymaps demo above.
+
+```{r lmwgs-sheet, fig.cap="(ref:lmwgs-sheet)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSqxGs67j80rAPDZdQaS5jI0avn1qs2y5N8fOaeHUGvyrnIwBmWomlfAuujtvPrxtF-5FBZxi_KdTUm/pubhtml?widget=true&amp;headers=false", height = "500px") else knitr::include_graphics("images/13-leaflet/storymap-sheet.png")
+```
+
+### Tutorial Outline {-}
+Before beginning this tutorial, you must have a [Google Drive account](http://drive.google.com), and know how to [File > Make a Copy in Google Sheets](copy.html), as described in Chapter 3. Also, you must have a [GitHub account](http://github.com), and know how to [Edit and Host Code with GitHub](github.html), as described in Chapter 11. We have omitted many screenshots below that illustrate steps we previously covered, so if you get lost, go back to that chapter.
+
+In the first part of the tutorial, you will create and publish your copies of our GitHub and Google Sheets templates:
+
+- A) Copy the GitHub template and publish your version with GitHub Pages.
+- B) File > Make a Copy of Google Sheet template, Share, and Publish.
+- C) Paste your Google Sheet browser address in two places in your GitHub repo.
+- D) Update your Google Sheet *Options* tab info and refresh your live map.
+
+In the second part, you will learn how to geocode and customize point data in the linked Google Sheet, upload images and other map data to your GitHub repo, and add scanned background map layers if desired.
+
+- E) Geocode locations and customize new markers in the Points tab.  RENAME
+- F) RENAME*****
+
+In the third part, you have two options to finalize your map before widely sharing it online:
+
+- G) Save each Google Sheets tab as a CSV file and upload to GitHub.
+- OR
+- H) Get your own Google Sheets API Key to insert into the code.
 
 To solve problems, see the [Fix Common Mistakes](fix.html) section of the appendix.
 
+**START AGAIN HERE**
+
 #### A) Fork (copy) the code template and publish your version with GitHub Pages {-}
-
-**Before you begin**, this tutorial assumes that you:
-
-- have a [free Google Drive account](http://drive.google.com), and learned the [File > Make a Copy in Google Sheets](copy.html) tutorial in this book
-- have a [free GitHub account](http://github.com), and understand concepts from the [Edit and Host Code with GitHub](github.html) chapter in this book
 
 1) Right-click to open this GitHub code template in a new tab: https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets
 

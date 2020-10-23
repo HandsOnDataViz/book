@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 20 Oct 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 22 Oct 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -2601,7 +2601,23 @@ areas, such as neighborhood-level block groups, census tracts, cities,
 and states, by aggregating individual records into data tables, and
 suppressing small-numbered cells to protect people’s privacy. Librarians
 can help us understand organization’s guidelines on when and how they
-make data available at different levels
+make data available at different levels.
+
+TODO: DECIDE whether to add an example about why, in general, smaller
+units of data are better than larger ones. Example from Cairo: voting
+data about entire US states will vary from voting data for smaller
+geographic units within those states, such as counties, cities, or
+neighborhood-level voting precincts, for at least two reasons. First,
+voting patterns vary across smaller geographic units… Second, not all
+residents vote…. In most cases, use the smallest unit of data you can
+obtain to allow you to produce more granular interpretations. While you
+cannot obtain data about how each individual voted, you can obtain data
+at the precinct, city, or county level inside each state. However, there
+are some cases when using a larger unit makes more sense than a smaller
+unit. For example, US presidential elections are determined by
+state-level electoral votes (except for Maine and Nebraska?). So if you
+wish to emphasize patterns in electoral votes, compare data for larger
+geographic units…
 
 *Have prior publications drawn on similar data, and if so, how can we
 trace their sources?*
@@ -3935,244 +3951,501 @@ and embed them in your website.
 6 Make Meaningful Comparisons
 =============================
 
-TODO: Write this chapter; also considered titles “Compare Meaningful
-Data” or “Compare Appropriate Data.”
+Now that you’ve [refined your data story](choose.html), [improved your
+spreadsheet skills](spreadsheet.html), [found and questioned your
+data](find.html), and [cleaned up any messy parts](clean.html), this
+chapter focuses on the key question to ask while analyzing your
+evidence: “Compared to what?” That’s how statistician Edward Tufte
+defined the “heart of quantitative reasoning.”[16]. We search for
+insightful findings in our data by judging their significance against
+each other, to identify those that truly stand out. Sometimes we need to
+adjust our scales to ensure that we’re weighing data fairly, or as the
+saying goes, comparing apples to apples, not apples to oranges. Before
+you communicate your findings in any format—text, tables, charts, or
+maps—be sure that you’re making meaningful comparisons, because without
+this, your work may become meaningless.
 
-“At the heart of quantitative reasoning is a single question: Compared
-to what?”[16]
+This book does not intend to cover statistical data analysis, since many
+excellent resources already address this expansive field of
+study.\[TODO: cite open-access resources\]. Instead, this chapter offers
+several common-sense strategies to make meaningful comparisons while you
+analyze your data, in order to help you design true and insightful
+visualizations that tell your story. You will learn to [precisely use
+comparison words](comparison-words.html), why and how [to normalize your
+data](normalize.html), and advice on watching out for [biased
+comparisons](biased-comparisons.html).
 
-Now that you’ve found data and cleaned it up, this chapter focuses on
-making meaningful data comparisons prior to communicating results in any
-format: text, tables, charts, or maps. Although this book does not claim
-to cover statistical data analysis (as many textbooks are already
-devoted to this topic), we do offer several common-sense guidelines to
-help make sure you’re presenting appropriate data in your
-visualizations…
+Precisely Use Comparison Words
+------------------------------
 
-Whenever someone explains something by showing you data, the correct
-response is to ask “compared to what?” (Cairo cites Tufte). In order to
-make meaningful data comparisons, you need to avoid common problems with
-making meaningless ones.
+TODO: Consider alternative section name: “Precisely Describe
+Comparisons” or “Describe Comparisons with Precision” or “Use Comparison
+Words Precisely”
 
-Imagine the topic is traffic safety, and comparisons across US states.
-What kind of data would you find most meaningful? (Cairo uses this
-example, and we can cite and simplify, or create parallel version with
-other data)
+Sometimes we make poor comparisons because we fail to clarify our
+meaning of commonly-used words that can have different definitions.
+Three troublesome words are *average*, *percent*, and *causes*. We use
+them loosely in everyday conversation, but they require more precision
+when working with data.
 
-<a href="https://www.iihs.org/topics/fatality-statistics/detail/state-by-state" class="uri">https://www.iihs.org/topics/fatality-statistics/detail/state-by-state</a>
+Imagine a series of numbers: 1, 2, 3, 4, 5. When calculating the
+*average*, by hand or [with a built-in spreadsheet formula as described
+in chapter 3](calculate.html), we add up the sum and divide by the count
+of numbers. A more precise term is the *mean*, which in this case equals
+3. A different term is the *median*, which refers to the number in the
+middle of the ordered series, also known as the *50th percentile*, which
+in this case is also 3.
 
-1.  Total traffic deaths by state (show table of 5 most deadly): Good
-    start, but these absolute numbers (aka raw numbers) ignore the fact
-    that states have different populations. Far more people live in CA
-    and TX than VT and WY. Simply comparing total deaths does not take
-    into account the different denominators…
+When working with data, the terms *median* and *percentile* are more
+useful terms when making comparisons because they resist the influence
+of *outliers* at the extreme ends of the series. For example, imagine
+the same umbers as above, but replace the 5 with 100 to serve as an
+outlier. Suddenly the mean jumps up to 22, but the median remains the
+same at 3, as shown in Figure <a href="#fig:mean-vs-median">6.1</a>.
+There’s an old joke that when a billionaire walks into a room, everyone
+becomes a millionaire—on average—but the median remains the same. Since
+we ordinary people don’t actually become richer by the presence of the
+billionaire outlier among us, the median is a better term to make
+meaningful comparisons about the overall distribution of the data.
 
-2.  Traffic deaths per capita by state (show table of 5 most deadly):
-    Better, because it shows a relative number, rather than an absolute.
-    Show how we arrived at this by dividing the total traffic deaths by
-    total population. Since those numbers are small, we multiply them by
-    100,000 (or other figure) to express them per capita. Out of 100,000
-    people residents in the state, about X die in highway deaths. But is
-    the most meaningful way to compare states? In large cities with
-    public transit, fewer people drive. In rural areas, people who drive
-    often spend more time in the
+<img src="images/06-comparisons/mean-vs-median.png" alt="The *median* is a more useful comparative term than *average* or *mean* because it resists the influence of outliers." width="350" />
+<p class="caption">
+Figure 6.1: The *median* is a more useful comparative term than
+*average* or *mean* because it resists the influence of outliers.
+</p>
 
-3.  Traffic deaths per capita per mile-hours driven (show table of 5
-    most deadly): Explain how we arrived…
+*Percent* is another common term that becomes more useful for
+comparisons when we use it more precisely. Nearly everyone understands
+how *percentage* refers to a *ratio*, such as [the 1960s
+commercial](https://en.wikipedia.org/wiki/Trident_gum) that curiously
+claimed how 4 out of 5 dentists (or 80 percent) recommend sugarless gum
+for their patients who chew gum. Even if we never saw the survey data,
+nor understood how the fifth dentist resisted such intense peer
+pressure, we intuitively grasp the concept of percentage. \[TODO:
+Discuss if anyone gets my gum reference here, or if it just shows my
+age!\]
 
-Cairo argues that when we make more appropriate data comparisons, we get
-closer to the truth….
+But troubles sometimes arise when using the word to compare numbers, and
+here’s where more precision helps. One term is *percent change* (or
+percent increase or decrease), which works best when comparing *old
+versus new values*. For example, if 4 dentists recommended sugarless gum
+in 1960, but peer pressure finally prevailed and 5 dentists recommend it
+in 2020, we calculate the percent change as
+`(New value - Old value) / Old value`, or `(5-4)/4 = 1/4 = 0.25 = 25%`.
 
-After finding and cleaning your data, you often need to “normalize” or
-“adjust” your data before making meaningful claims in text, tables,
-charts, or maps…
+A different term is *percentage points*, which works best when comparing
+*old versus new percentages*. For example, if 80 percent of dentists
+recommended sugarless gum in 1960, but 100 percent recommended it in
+2020, we can compare the two figures by calculating the difference as
+`New percentage - Old percentage = 100% - 80%  = a difference of 20 percentage points`.
+
+When we use each term accurately, there are two correct ways to compare
+these figures. One way is to state that “The number of dentists who
+recommended sugarless gum increased 25 percent over time.” Another way
+is to state that “The percentage of dentists who recommended sugarless
+gum increased 20 percentage points over time.” Both statements are
+accurate.
+
+Avoid loosely using the word “percent” without being precise about its
+meaning, since you’re likely to confuse people, or worse, mislead them
+about the facts. Imagine a politician who proposes to raise the sales
+tax on products and services you purchase from 5 to 6 percent. If that
+politician says, “it’s only a 1 percent increase,” they’re wrong.
+Instead, there are two truthful ways describe this change. One way is to
+state that tax “will increase 20 percent” because `(6-5)/5 = 0.20`.
+Another way is to state that the tax “will increase by 1 percentage
+point” because `6% - 5% = a difference of 1 percentage point`. See why
+the politician preferred to say it their way, rather than the correct
+way? Don’t let anyone fool you with percentages, and make sure you use
+these terms precisely in your own work to avoid misleading others.
+
+TODO above: Decide if the text and examples are clear. I like the
+sugarless gum example, but can replace it if it’s too obscure, or if the
+change from 4 to 5 out of 5 isn’t useful. Also, I simplified the
+politician’s example from reading this real-life example, but I think
+the hypothetical increase from 5% to 6% is clearer: “Why This Can Be
+Tricky…For instance, when President George W. Bush proposed partially
+privatizing Social Security in 2004, some commentators said that only ‘2
+percent’ of the average American’s Social Security taxes would be
+funneled into private accounts. That was a misleading statement, said
+another commentator, John Allen Paulos on ABC News. He looked at the
+numbers and said the writers meant that the average person’s income
+taxes directed toward Social Security would drop from 6.2 to 4.2
+percent, which is a change of 2 percentage points. The actual percent
+change, he said, was 32 percent.”
+<a href="https://sciencing.com/difference-between-percent-percentage-point-8409115.html" class="uri">https://sciencing.com/difference-between-percent-percentage-point-8409115.html</a>
+
+A final recommendation about using more precise language is to be
+cautious with words that suggest a *cause-and-effect relationship* in
+your data. In everyday conversation, there are many ways that we loosely
+imply that a causal relationship, where an action directly results in a
+reaction. For example, when we say one thing “leads to” another, or
+“promotes” growth, or “sparks” change, those words suggest causality.
+While that’s fine in daily conversation, we need to choose our words
+more carefully when discussing data, using these three concepts. The
+first step is to describe any *correlation* between two variables, which
+means to show how they are associated or related interdependently. But
+as the saying goes, correlation is not causation. Second, in order to
+show causation, we need to prove both correlation and offer a
+*persuasive theory* for how one factor (sometimes called the independent
+variable) creates a change in another factor (called the dependent
+variable). Third, we need to identify and isolate any *confounding
+variables* that we have not considered that may also influence the
+cause-and-effect relationship. While the details are beyond the scope of
+this book, be mindful of the concepts—and choose your words
+carefully—when working with data.
+
+Now that you have a clearer understanding of how to use key words to
+describe data relationships more precisely, in the next section you’ll
+build on this knowledge and adjust data to create more meaningful
+comparisons.
 
 Normalize Your Data
 -------------------
 
-At first glance, “normalizing” or “adjusting” your data may sound like
-your fudging the numbers, or bending the truth. But we often cannot get
-closer to the truth without adjusting data to make more meaningful
-comparisons. Normalization is defined as adjust data collected using
-different scales into a common scale, in order to make more meaningful
-comparisons. Here are common ways to normalize:
+When we find raw data, often it does not make sense to compare it until
+we *normalize* it. This means to adjust data that has been collected
+using different scales into a common scale, in order to make meaningful
+comparisons. Often we normalize *absolute numbers* into *relative
+numbers*, or in other words, convert *raw data* into *rates* to compare
+them more easily. Even if you’ve never heard the term, perhaps you
+already *normalize* data without realizing it.
 
--   Adjust Absolute into Relative Numbers: as you saw above, raw numbers
-    can be less meaningful than percentages or per capita…
+Here’s an example about motor vehicle safety that was inspired by
+visualization expert Alberto Cairo, with [updated 2018
+data](https://www.iihs.org/topics/fatality-statistics/detail/state-by-state)
+from the Insurance Institute for Highway Safety (IIHS) and the US
+Department of Transportation.[17] Over 36,000 people died in motor
+vehicle crashes in 2018, including car and truck drivers and occupants,
+motorcyclists, pedestrians, and bicyclists. Although only a small
+fraction of this data appears in the tables below, you can [view all of
+the data in Google Sheets
+format](https://docs.google.com/spreadsheets/d/1N7_pHdmXdE3Y4ECnnDyBTSXkklv-u1hLULSO-YaotpA/edit#gid=0),
+and save an editable copy to your Google Drive, to follow along in this
+exercise.
 
--   Adjust for Change over Time: We cannot compare median household
-    income in 1960 versus 2019 without adjustment, because dollars had
-    different levels of purchasing power over time, due to price
-    inflation and related factors. If you need to make economic
-    comparisons over time, look for data that has already been converted
-    into “constant dollars,” such as median household income “in 2019
-    dollars.” Economists often refer to this difference as “nominal”
-    data (un-adjusted) versus “real” data (adjusted). See example about
-    real wages over time, which adjusts the dollar figures for each year
-    into constant dollars, consumer price index…
-    <a href="https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing" class="uri">https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing</a>
-    It’s also common for economic data to have “seasonal adjustments”
-    because…\[TODO move relevant sentences from Detect Bias chapter to
-    here, and cross-ref back\]
+Let’s start with what appears to be a simple question, and see where our
+search for more meaningful comparisons takes us.
 
--   Adjust by Creating an Index… explain
+1.  *Which US states had the lowest number of motor vehicle crash
+    deaths?* When we sort the data by the numbers of deaths, the
+    District of Columbia rises to the top of the list with only 31
+    deaths, as shown in Table <a href="#tab:deaths">6.1</a>, and
+    *appears* to have been the safest state (even though Washington DC
+    is not recognized as a state).
 
-See books on statistical data analysis for more advanced techniques,
-such as comparing data through z-scores
+<table>
+<caption>Table 6.1: US States with lowest number of motor vehicle crash deaths, 2018</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: right;">Deaths</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">District of Columbia</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rhode Island</td>
+<td style="text-align: right;">59</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Vermont</td>
+<td style="text-align: right;">68</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Alaska</td>
+<td style="text-align: right;">80</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">North Dakota</td>
+<td style="text-align: right;">105</td>
+</tr>
+</tbody>
+</table>
 
--   TODO: Explain how map designers face several issues with
-    normalization… cross-ref to Normalize Map Data in Map chapter
--   Adjust for Geographic Area?
+But wait—this isn’t a fair comparison. Take another look at the top five
+states and you’ll may notice that all of them have smaller populations
+than larger ones such as California and Texas, which appear at the very
+bottom of the full dataset. To paint a more accurate picture, let’s
+rephrase the question to adjust for population differences.
 
-TODO: DECIDE if any of this prior text should be integrated into above
+1.  *Which US states had the lowest number of motor vehicle crash deaths
+    when adjusted for population?* Now let’s *normalize* the death data
+    by taking into account the total population of each state. In our
+    spreadsheet, we calculate it as `Deaths / Population * 100,000`.
+    While it’s also accurate to divide deaths by population to find a
+    *per capita* rate, those very small decimals would be difficult for
+    most people to compare, so we multiply by 100,000 to present the
+    results more clearly. When we sort the data, Washington DC rises to
+    the top of the list, with only 4.4 motor vehicle crash deaths per
+    100,000 residents, as shown in Table
+    <a href="#tab:deaths-population">6.2</a> and *appears* to have been
+    the safest once again.
 
-Different ways to normalize data: You can normalize data in many ways,
-and there is not necessarily one acceptable way of doing it.
+<table>
+<caption>Table 6.2: US States with lowest number of motor vehicle crash deaths per population, 2018</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: right;">Deaths</th>
+<th style="text-align: right;">Population</th>
+<th style="text-align: right;">Deaths per 100,000 population</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">District of Columbia</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">702,455</td>
+<td style="text-align: right;">4.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">New York</td>
+<td style="text-align: right;">943</td>
+<td style="text-align: right;">19,542,209</td>
+<td style="text-align: right;">4.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Massachusetts</td>
+<td style="text-align: right;">360</td>
+<td style="text-align: right;">6,902,149</td>
+<td style="text-align: right;">5.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rhode Island</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">1,057,315</td>
+<td style="text-align: right;">5.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">New Jersey</td>
+<td style="text-align: right;">564</td>
+<td style="text-align: right;">8,908,520</td>
+<td style="text-align: right;">6.3</td>
+</tr>
+</tbody>
+</table>
 
-One of the most common ways of normalization is deriving “per capita”,
-or “per person” values. If values are small, such as rare disease cases
-or lottery winners, they can be presented as “per 1,000” or “per
-100,000” people. Divide your quantity by population in that area to
-derive per capita values.
+But wait—this still isn’t a fair comparison. Look at the top five states
+again and you’ll notice that all of them are located along the
+Northeastern US corridor, which has a high concentration of public
+transit, such as trains and subways. If people in urban areas like New
+York and Boston are less likely to drive motor vehicles, or take shorter
+trips than people in rural states where homes are more distantly spread
+out, that also could affect our data. Let’s strive for a better
+comparison and rephrase the question again, this time to adjust for
+differences in mileage, not population.
 
-Choropleth maps work well with percentages. The good news is, humans
-like percentages too. It is quite natural for us to understand that a 9%
-unemployment rate means that of 100 people who were willing to work,
-nine were unable to find a job. To derive a percentage for unemployment,
-divide the number of unemployed people by labor force size (adult
-population who are willing and able to work), and multiply by 100.
+1.  *Which US states had the lowest number of motor vehicle crash deaths
+    when adjusted for total miles traveled?* Once again, we *normalize*
+    the death data by adjusting it to account for a different factor:
+    the estimated total number of miles driven (in millions) by people
+    in all cars, trucks, and motorcycles that traveled in each state,
+    including both in-state and out-of-state drivers, in 2018. In our
+    spreadsheet, we calculate it as `Deaths / Vehicle Miles * 100`, with
+    the multiplier to present the results more clearly. This time
+    Massachusetts rises to the top of the list, with only 0.54 motor
+    vehicle crash deaths per 100 million miles traveled, as shown in as
+    shown in Table <a href="#tab:deaths-miles">6.3</a>. Also, note that
+    the District of Columbia has fallen out of the top 5, while
+    Minnesota now appears on the list.
 
-Unlike counts, most *measured* variables do not need normalization
-because they belong to a scale. For example, median age (the age of the
-“middle” person in a population, when sorted from youngest to oldest)
-can be directly compared among populations. We know that humans live
-anywhere between 0 and 120 years or so, and we wouldn’t expect median
-ages to be vastly different from one country to another (maybe twice,
-but not tenfold). Median incomes, if measured in the same currency, also
-belong to the same scale and can be compared directly.
+<table>
+<caption>Table 6.3: US States with lowest number of motor vehicle crash deaths per miles traveled, 2018</caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: right;">Deaths</th>
+<th style="text-align: right;">Vehicle miles traveled (millions)</th>
+<th style="text-align: right;">Deaths per 100 million vehicle miles traveled</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Massachusetts</td>
+<td style="text-align: right;">360</td>
+<td style="text-align: right;">66,772</td>
+<td style="text-align: right;">0.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Minnesota</td>
+<td style="text-align: right;">381</td>
+<td style="text-align: right;">60,438</td>
+<td style="text-align: right;">0.63</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">New Jersey</td>
+<td style="text-align: right;">564</td>
+<td style="text-align: right;">77,539</td>
+<td style="text-align: right;">0.73</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rhode Island</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">8,009</td>
+<td style="text-align: right;">0.74</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">New York</td>
+<td style="text-align: right;">943</td>
+<td style="text-align: right;">123,510</td>
+<td style="text-align: right;">0.76</td>
+</tr>
+</tbody>
+</table>
 
-How not to normalize values: Absolute values are very important for
-context. Saying that “20% of blond men living in in town X won the
-lottery” may sound like a catchy headline, but in reality the town has
-450 residents, of those 200 are men, and of those only 5 have light hair
-color. One of those five (and here comes the 20%) was lucky to win the
-lottery, so technically the headline didn’t lie.
+TODO above: Ilya please confirm how “vehicle miles traveled” is
+calculated by the US DOT. I presume it is simply miles per vehicle,
+rather than miles per vehicle per number of occupants. Also, please
+confirm that this estimate is based on miles traveled in the state, not
+necessarily by vehicles registered in the state.
 
-This is, of course, an extreme and comic example, but exaggerations in
-this spirit are not uncommon. If you want readers to trust you, make
-sure you are open about total counts when reporting normalized values
-(such as percentages or per capita values).
+Have we finally found the *safest* state as judged by motor vehicle
+crash deaths? Not necessarily. While we normalized the raw data relative
+to the population and amount of driving, the IIHS reminds us that
+several other factors may influence these numbers, such as vehicle
+types, average speed, traffic laws, weather, and so forth. But as
+Alberto Cairo reminds us, every time we refine our model to make a more
+meaningful comparison, our interpretation becomes a closer
+representation of the truth.[18] TODO: Look for a closing quote by Cairo
+on this point.
 
-Absolute values are important for another reason: behind numbers there
-are often people, and smaller, normalized values may hide the scale of
-the problem. Saying that “the unemployment rate is only 5%” is valid,
-but the 5% of, say, Indian labor force (around 522 million) is about 26
-million, which is pretty much the total population of Australia.
+As we demonstrated above, the most common way to normalize data is to
+adjust *absolute numbers* into *relative numbers*, such as percentages
+or per capita rates. But there are many other ways to normalize data, so
+make sure you’re familiar with different methods when you [find and
+question your data, as described in chapter 4](find.html). When working
+with historical data (also called time-series or longitudinal data), you
+may need to *adjust for change over time*. For example, it’s not fair to
+directly compare median household income in 1970 versus 2020, because
+$10,000 US dollars had far more purchasing power a half-century ago than
+it does today, due to cost of living and related factors. Similarly,
+economists distinguish between *nominal data* (unadjusted) versus *real
+data* (adjusted over time), typically by converting figures into
+“constant dollars” for a particular year that allow better comparisons
+by accounting for purchasing power.[19] Also, economic data is often
+*seasonally adjusted* to improve comparisons for data that regularly
+varies across the year, such as employment or revenue during the summer
+tourism season versus the winter holiday shopping season. Another
+normalization method is to create an *index* to measure how values have
+risen or fallen in relation to a given reference point over time.
+Furthermore, statisticians often normalize data collected using
+different scales by calculating its *standard score*, also known as its
+*z-score*, to make better comparisons. While these methods are beyond
+the scope of this book, it’s important to be familiar the broader
+concept: everyone agrees that it’s better to compare apples to apples,
+rather than apples to oranges.
 
-Exercise your best judgement when you normalize values. Make sure you
-don’t blow numbers out of proportion by normalizing values in smaller
-populations. But also don’t hide large counts behind smaller percentages
-for larger populations.
+Finally, you do *not* always need to normalize your data, because
+sometimes its format already does this for you. Unlike *counts* or raw
+numbers, most *measured variables* do not need normalization because
+they already appear on a common scale. One example of a measured
+variable is *median age*, the age of the “middle” person in a
+population, when sorted from youngest to oldest. Since we know that
+humans live anywhere between 0 and 120 years or so, we can directly
+compare the median age among different populations. Similarly, another
+measured variable is *median income*, if measured in the same currency,
+because this offers a common scale that allows direct comparisons across
+different populations.
 
-At this point, you should have enough geocoding and spreadsheet skills
-to aid you with map making. In the following section, we will talk about
-geographical data in general and will introduce different geospatial
-file formats to ensure you are ready to create, use, and share map data.
+Now that you have a better sense of why, when, and how to normalize
+data, the next section will warn you to watch out for biased comparisons
+in data sampling methods.
 
-Clarify Averages and Percentages
---------------------------------
+Beware of Biased Comparisons
+----------------------------
 
-Sometimes we make poor comparisons because we communicate poorly about
-common terms, such as averages and percentages
+Everyone knows not to *cherry-pick* your data, which means to select
+only the evidence that supports a pre-determined conclusion, while
+ignoring the remainder. When we make a commitment to tell true and
+meaningful data stories, we agree to keep an open mind, examine all of
+the relevant evidence, and weigh the merits of competing
+interpretations. If you agree to these principles, then also watch out
+for biased data comparisons, especially sampling procedures that may
+appear legitimate on the surface, but actually contain less-visible
+factors that skew the evidence. While we may believe we’re operating
+with open minds, we can overlook partially-hidden processes that
+effectively cherry-pick our evidence without our knowledge.
 
-Briefly explain average, mean, median, and percentiles
+*Selection bias* happens when we believe two data samples are
+comparable, but some behind-the-scene process has shaped the composition
+of the data in ways that skew our analysis. The problem frequently
+arises when attempting to evaluate the effectiveness of a program or
+treatment on two groups of people: participants and non-participants.
+While we may believe the two groups are random samples, that’s often not
+true in the real world. For example, a poorly-designed evaluation of a
+weight-loss program might collect data on participants who signed up for
+a particular program, then attempt to compare their progress to a group
+of non-participants who did not sign up. But these two groups are not
+directly comparable due to selection bias. Since participants took the
+initiative to sign up for a weight-loss program, they most likely have
+higher motivation to improve their diet and exercise more often than the
+non-participants. We often fool ourselves into believing two
+similar-sounding groups are directly comparable, but overlook how
+selection bias secretly shapes the composition of each group, which
+results in a meaningless comparison.
 
--   use resistant statistics (median and percentile) vs non-resistant
-    ones that fluctuate with outliers (average mean and standard
-    deviation). To update old joke, when a billionaire walks into a
-    room, everyone becomes a millionaire, on average. But the median
-    income barely changes.
+How can we reduce selection bias in our data? As you learned in [Chapter
+4, question your data](question.html) by looking below the surface level
+to fully comprehend how terms have been defined, and how data was
+collected and recorded. If you obtain data on two groups of people, such
+as weight-loss program participants and non-participants, don’t assume
+that you can automatically compare them, especially if you don’t have a
+deep understanding of the selection process. By contrast, well-designed
+program evaluations will randomly assign eager participants into
+sub-groups to reduce selection bias. For example, to understand the
+effectiveness of a specific weight-loss program (let’s call it program
+A), we should invite all participants into a large group and *randomly
+divide* them into two sub-groups: half who participant in program A, and
+the other half who participate in a different weight-loss activity
+(let’s call it program B). Since both halves were randomly assigned from
+the same large group, we can be more confident that they are directly
+comparable, because there is no reason to suspect any difference in
+motivation or other hard-to-see factors that may influence their
+progress. Of course, there are many more research design details that
+are beyond the scope of this book, such as ensuring that sample sizes
+are sufficiently large, and comparing participants in programs A and B
+before, during, and after the weight-loss activity. But the logic of
+avoiding selection bias is simple: the best way to compare two
+sub-groups is to randomly divide them from one larger group.
 
-Also explain “percent change” with “percentage point difference” …
-explain the difference between the two with clear examples.
+Bias warnings appear in several chapters of this book, because we
+continually need to be aware of different types that negatively
+influence our work at various stages of the data visualization process.
+Later in [Chapter 15 you’ll learn how to recognize and reduce other
+types of data bias](data-bias.html), such as framing bias, algorithmic
+bias, intergroup bias, and map area bias.
 
-Comparing Smaller versus Larger Units
--------------------------------------
-
-Beware of comparisons between smaller versus larger groups of data.
-Example from Cairo: voting data about entire US states will vary from
-voting data for smaller geographic units within those states, such as
-counties, cities, or neighborhood-level voting precincts, for at least
-two reasons. First, voting patterns vary across smaller geographic
-units… Second, not all residents vote….
-
-In most cases, use the smallest unit of data you can obtain to allow you
-to produce more granular visualizations. While you cannot obtain data
-about how each individual voted, you can obtain data at the precinct,
-city, or county level inside each state.
-
-But there are other cases when using a larger unit of data makes more
-sense than a smaller unit. For example, US presidential elections are
-determined by state-level electoral votes (except for Maine and
-Nebraska?). So if you wish to emphasize patterns in electoral votes,
-compare data for larger geographic units
-
-Beware of Biased Data
----------------------
-
-TODO: Decide whether to keep section title as-is or broaden to “Beware
-of Biased Comparisons”
-
-Everyone should avoid cherry-picking data, which means selecting only
-the evidence that arrives at a pre-determined conclusion.
-
-Also avoid statistically biased processes, such as sampling methods that
-regularly yields inaccurate results…. example of opinion data about
-socially inappropriate topics… Sometimes bias arises due to a
-combination of human behavior and poor numerical reasoning.
-
-But sometimes we compare different groups of data without realizing that
-that they are inappropriate comparisons; they seem like random samples,
-but due to underlying processes they are not random. Selection bias:
-comparing samples as if they were truly representative of the broader
-population, but in fact are not: common to mistakenly compare student
-academic performance in different types of schools, such as public
-versus private, or traditional public versus charter school, without
-recognizing how pools of applicants may differ…. how to address:
-carefully examine the underlying selection processes, and make
-appropriate comparisons between groups, and clarify problems in text
-that accompanies visualization
-
-Also be aware of algorithmic biases that we sometimes build into our
-software…Cairo’s example about IP data thru VPN converted to geographic
-center of US, near Kansas…
-
-We also refer to biases that are baked into the software that humans
-create. - Algorithm or machine learning bias: human-written code, or
-machine-learning that follows inductive reasoning standards set up by
-humans, can lead to biased results, especially in facial recognition
-across racial groups, or discrimination in home lending. examples:
-<a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>;
-<a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a>
-- Reduce by calling it out, and not simply equating “digital” as
-“authoritative”…
-
-Correlation, Causation, and Confounding Variables
--------------------------------------------------
-
-Be cautious…
-
--   do not let association drift into causation…
-
--   identify and isolate confounding variables that may influence
-    relationships within your data…
-
-TODO: choose illustrative examples for above
-
-See books on data analysis to understand the logic and use of
-statistical tests
+TODO above: DISCUSS if an abstract diagram of two or more groups and
+selection bias would help to reinforce the concept here. When teaching
+my undergraduates about educational research, many of them do not
+intuitively grasp this concept, or have difficulty recognizing or
+applying it in new contexts. In some classes, after giving a
+mini-lecture, I ask them to stop and draw pictures of selection bias,
+and try to explain their diagrams to each other. Some get it and some
+don’t. Since it’s so important for making meaningful comparisons,
+perhaps we can insert a helpful diagram here?
 
 ### Summary
+
+Although we do not claim to teach you statistical data analysis in this
+book, in this chapter we discussed several common-sense strategies to
+make meaningful comparisons while analyzing your data. You learned how
+to use words more precisely for comparing data, why and how to normalize
+data, and advice on watching out for biased comparisons. In prior
+chapters you built up your skills on refining your data story, working
+with spreadsheets, finding and questioning data, and cleaning up messy
+data. Now you can combine all of this knowledge and begin to create
+interactive charts and maps in the next few chapters.
 
 <!--chapter:end:06-comparisons.Rmd-->
 
@@ -4415,7 +4688,7 @@ represent values through the *position* and *angle* of the line, not its
 height. Visualization expert Alberto Cairo demonstrates that starting a
 line chart at a number other than zero does not necessarily distort its
 encoded information because we rely on its shape, not its height, to
-determine its meaning.[17]
+determine its meaning.[20]
 
 TODO: Confirm revision with Ilya; Add visual here of line chart baseline
 at zero versus higher number to illustrate the argument?
@@ -4533,26 +4806,34 @@ scale. Do not overload your scales. Keep your typography simple, and use
 using commas as thousands separators for readability (`1,000,000` is
 much easier to read than `1000000`).
 
-#### Be careful with the colors
+#### Be careful with colors
 
 The use of color is a complex topic, and there are plenty of books and
 research devoted to it. For an excellent overview, see Lisa Charlotte
 Rost’s “[A Friendly Guide to Colors in Data
-Visualization](https://blog.datawrapper.de/colorguide/)” blog post for
-Datawrapper.[18] But some principles are fairly universal. First, do not
-use colors just for the sake of it, most charts are fine being
-monochromatic. Second, remember that colors come with some meaning
-attached, which can vary among cultures. In the world of business, red
-is conventionally used to represent loss, and it would be unwise to use
-this color to show profit. Make sure you avoid random colors.
+Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
+Pick More Beautiful Colors for Your Data
+Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
+both on the Datawrapper blog.[21] But some principles are fairly
+universal. First, do not use colors just for the sake of it, most charts
+are fine being monochromatic. Second, remember that colors come with
+some meaning attached, which can vary among cultures. In the world of
+business, red is conventionally used to represent loss, and it would be
+unwise to use this color to show profit. Make sure you avoid random
+colors.
+
+TODO: Ilya please review both of Rost’s blog posts above. Decide if
+there are any additional key principles we should briefly mention below.
+Also, decide if we should apply any of her principles to our own color
+choices for sample charts and maps in this book.
 
 Whatever colors you end up choosing, they need to be distinguishable
 (otherwise what is the point?). Do not use colors that are too similar
 in hue (for example, various shades of green––leave them for choropleth
-maps). Certain color combinations are hard to interpret for color-blind
-people, like green/red or yellow/blue, so be very careful with those.
-Figure <a href="#fig:design-principles-color">7.8</a> shows some good
-and bad examples of color use.
+maps). Certain color combinations are hard to interpret for people with
+colorblindness, like green/red or yellow/blue, so be very careful with
+those. Figure <a href="#fig:design-principles-color">7.8</a> shows some
+good and bad examples of color use.
 
 <img src="images/07-chart/design-principles-color.png" alt="Don't use colors just for the sake of it."  />
 <p class="caption">
@@ -5038,7 +5319,7 @@ from the Chart type dropdown list.
 Sidebar: Tables and charts approach time-series data in opposite
 directions. When designing a table, the proper method is to place dates
 horizontally as column headers, so that we read them from left-to-right,
-like this:[19]
+like this:[22]
 
 <table>
 <thead>
@@ -6384,7 +6665,13 @@ important to learn key principles. Good choropleth maps make true and
 insightful geographic patterns clearly visible to readers, whether they
 are printed in black-and-white on paper or displayed in color on a
 computer screen. Furthermore, the best choropleth maps are designed to
-be interpreted correctly by color-blind readers.
+be interpreted correctly by people with colorblindness. For an excellent
+overview of visualization colors in general, see Lisa Charlotte Rost’s
+“[A Friendly Guide to Colors in Data
+Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
+Pick More Beautiful Colors for Your Data
+Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
+both on the Datawrapper blog.[23]
 
 To illustrate key concepts about colors in choropleth map design, let’s
 explore a wonderful tool called
@@ -7154,6 +7441,11 @@ codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) and
 [place name geocoding at the Datawrapper
 Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names).
 
+TODO: DECIDE whether to keep basemap or change to one of the others that
+now reflect DC. DECIDE whether to mention other types of codes
+recognized by Datawrapper, which vary with map type, such as FIPS and
+ANSI.
+
 1.  Go to *File &gt; Download* in CSV format to save the data to your
     local computer.
 
@@ -7199,7 +7491,10 @@ Figure 8.34: Scroll down below the *add data* table to import your
 dataset.
 </p>
 
-TODO: Decide if it’s important to include an image of this import
+TODO: Decide whether to include screenshot of names/codes drop-down
+menu, which is helpful because it shows how Datawrapper labels each
+geography, and one could copy and paste this into a spreadsheet and use
+VLookup. Decide if it’s important to include an image of this import
 button, since I believe it’s hidden far below the table that most users
 see.
 
@@ -7795,7 +8090,7 @@ learned about [chart design in Chapter 7](chart-design.html) and [map
 design in Chapter 8](map-design.html). Jonathan Schwabish, an economist
 who specializes in creating policy-relevant data visualizations, offers
 his advice in recent publications about creating tables that communicate
-well with multiple audiences.[20]. Here’s a summary of several of his
+well with multiple audiences.[24]. Here’s a summary of several of his
 key points, which also appear in Figure
 <a href="#fig:table-design">9.1</a>.
 
@@ -7814,6 +8109,35 @@ In addition, Schwabish and others recommend using color to highlight key
 items or outliers in your data, a topic we’ll discuss later in [Chapter
 16: Tell and Show Your Data Story](story.html).
 
+When creating cross-tabulations to illustrate data correlations and
+possible causal relationships, statistician Joel Best offers two more
+design recommendations.[25]
+
+1.  Place the independent variable (the suspected cause) at the top in
+    the column headers, and the dependent variable (the possible effect)
+    on the side for each row.
+2.  Calculate percentages from the raw numbers in a downward direction,
+    so that each value of the independent variable (the suspected cause)
+    totals 100 percent.
+
+Let’s apply these design principles by constructing two tables that
+calculate percentages: the wrong way versus the right way. The first
+table calculates percentages in the wrong direction—horizontally—which
+confuses us about whether X is correlated with Y. But the second table
+calculates percentages in the correct direction—vertically—which shows
+how X is correlated with Y, and may signal a causal relationship, as
+shown in Figure <a href="#fig:table-direction-placeholder">9.2</a>
+
+<img src="images/09-table/table-direction-placeholder.png" alt="TODO: Create side-by-side 'bad' and 'better' tables, with real data and superimposed arrows to show the direction of calculation, to improve on this placeholder from Best 2014 p. 32."  />
+<p class="caption">
+Figure 9.2: TODO: Create side-by-side ‘bad’ and ‘better’ tables, with
+real data and superimposed arrows to show the direction of calculation,
+to improve on this placeholder from Best 2014 p. 32.
+</p>
+
+TODO above: Find better data to replace his imaginary data below and
+rewrite text to match.
+
 Overall, the core principles of table design reflect similar concepts we
 previously discussed in chart and map design. Organize your presentation
 of the data with the readers’ eyes in mind, to focus their attention on
@@ -7823,9 +8147,9 @@ work for them, so that you don’t have to rely on them to draw the same
 mental connections in their own minds. Remove any clutter or unnecessary
 repetition that stands in the way of these goals.
 
-Now that you understand key principles of table design, see how several
-of them are built directly into the Datawrapper tool featured in the
-next section.
+Now that you understand several key principles of table design, see how
+some (but not all) are built directly into the Datawrapper tool featured
+in the next section.
 
 Datawrapper Table with Sparklines
 ---------------------------------
@@ -7844,17 +8168,17 @@ the interactive table online.
 You’ll also learn how to create sparklines, or tiny line charts that
 quickly summarize data trends. This chart type was refined by Edward
 Tufte, a Yale professor and data visualization pioneer, who described
-sparklines as “datawords… intense, simple, word-sized graphics.”[21]
+sparklines as “datawords… intense, simple, word-sized graphics.”[26]
 While Tufte envisioned sparklines on a static sheet of paper or PDF
 document, you’ll create them inside an interactive table, as shown in
-Figure <a href="#fig:datawrapper-table">9.2</a>. Readers can search by
+Figure <a href="#fig:datawrapper-table">9.3</a>. Readers can search by
 keyword, sort columns in ascending or descending order, and scroll
 through pages of sparklines to quickly identify data trends that would
 be difficult to spot in a traditional numbers-only table.
 
 <img src="images/09-table/datawrapper-table.png" alt="Table with sparklines. Explore the [interactive version](https://datawrapper.dwcdn.net/0HK4f/2/)."  />
 <p class="caption">
-Figure 9.2: Table with sparklines. Explore the [interactive
+Figure 9.3: Table with sparklines. Explore the [interactive
 version](https://datawrapper.dwcdn.net/0HK4f/2/).
 </p>
 
@@ -7935,11 +8259,11 @@ GitHub](https://github.com/datawrapper/datawrapper/wiki/Country-flag-icons).
 1.  In the *Visualize* screen, under *Customize columns*, select the
     third line named *Nation*. Then scroll down and push the slider to
     *Replace country codes with flags*, as shown in Figure
-    <a href="#fig:datawrapper-flag">9.3</a>.
+    <a href="#fig:datawrapper-flag">9.4</a>.
 
 <img src="images/09-table/datawrapper-flag.png" alt="Customize the *Nation* column and push slider to replace codes with flags."  />
 <p class="caption">
-Figure 9.3: Customize the *Nation* column and push slider to replace
+Figure 9.4: Customize the *Nation* column and push slider to replace
 codes with flags.
 </p>
 
@@ -7958,11 +8282,11 @@ codes with flags.
     based on categories*. In the drop-down menu, select the column
     *Continent*, and click on the *Background: customize colors* button.
     Select each continent and assign them different colors, as shown in
-    Figure <a href="#fig:datawrapper-colors">9.4</a>.
+    Figure <a href="#fig:datawrapper-colors">9.5</a>.
 
 <img src="images/09-table/datawrapper-colors.png" alt="Customize the *Continent* column and push slider to color cells based on categories." width="600" />
 <p class="caption">
-Figure 9.4: Customize the *Continent* column and push slider to color
+Figure 9.5: Customize the *Continent* column and push slider to color
 cells based on categories.
 </p>
 
@@ -7977,12 +8301,12 @@ cells based on categories.
     properties for *column E: Life Expectancy 1960*. On the left side,
     use the drop-down menu to change its properties from *auto (text)*
     to *Number*, as shown in Figure
-    <a href="#fig:datawrapper-edit-column">9.5</a>. Then click *Proceed*
+    <a href="#fig:datawrapper-edit-column">9.6</a>. Then click *Proceed*
     to return to the *Visualize* window.
 
 <img src="images/09-table/datawrapper-edit-column.png" alt="Go back to *Check & Describe* to change the properties of column E from textual to numerical data."  />
 <p class="caption">
-Figure 9.5: Go back to *Check & Describe* to change the properties of
+Figure 9.6: Go back to *Check & Describe* to change the properties of
 column E from textual to numerical data.
 </p>
 
@@ -7992,10 +8316,10 @@ column E from textual to numerical data.
     scroll down and shift-click on the next-to-last column. Then scroll
     down the page and click the *Show selected columns as tiny chart*
     button, as shown in Figure
-    <a href="#fig:datawrapper-tiny-chart">9.6</a>. These steps will
+    <a href="#fig:datawrapper-tiny-chart">9.7</a>. These steps will
     create the sparklines in the column, renamed *Life expectancy
     1960–2018*, as shown in Figure
-    <a href="#fig:datawrapper-bar-chart">9.7</a>.
+    <a href="#fig:datawrapper-bar-chart">9.8</a>.
 
 Tip: By design, we initially named this column *Life expectancy 1960*,
 because when we selected several columns to create sparklines, the tool
@@ -8003,7 +8327,7 @@ added *–2018* to the end of the new column name.
 
 <img src="images/09-table/datawrapper-tiny-chart.png" alt="Shift-click to select all columns from *Life expectancy 1960--2018* down to *2018*, then click on *Show selected columns as tiny chart*." width="300" />
 <p class="caption">
-Figure 9.6: Shift-click to select all columns from *Life expectancy
+Figure 9.7: Shift-click to select all columns from *Life expectancy
 1960–2018* down to *2018*, then click on *Show selected columns as tiny
 chart*.
 </p>
@@ -8012,11 +8336,11 @@ chart*.
     the *Difference* column in the table. In the *Visualize* screen
     under *Customize columns*, select *Difference*. Then scroll down and
     push the slider to select *Show as bar chart*, as shown in Figure
-    <a href="#fig:datawrapper-bar-chart">9.7</a>.
+    <a href="#fig:datawrapper-bar-chart">9.8</a>.
 
 <img src="images/09-table/datawrapper-bar-chart.png" alt="Select the *Difference* column and *Show as bar chart*."  />
 <p class="caption">
-Figure 9.7: Select the *Difference* column and *Show as bar chart*.
+Figure 9.8: Select the *Difference* column and *Show as bar chart*.
 </p>
 
 1.  In the *Visualize* screen, click the *Annotate* tab to add a title,
@@ -8024,7 +8348,7 @@ Figure 9.7: Select the *Difference* column and *Show as bar chart*.
 
 2.  Click on *Publish & Embed* to share the link to your [interactive
     table](https://datawrapper.dwcdn.net/0HK4f/2/), as previously shown
-    in Figure <a href="#fig:datawrapper-table">9.2</a>. Click the blue
+    in Figure <a href="#fig:datawrapper-table">9.3</a>. Click the blue
     *Publish chart* button to obtain the embed code to place your
     visualization on the web, which you’ll learn about in [Chapter 10:
     Embed on the Web](embed.html).
@@ -12487,7 +12811,7 @@ types of data bias](data-bias.html), such as framing bias, intergroup
 bias, and map area bias, including how we define the United States.
 While we may not be able to stop bias entirely, in this chapter you’ll
 learn how to identify it in the works by other people, and strategies to
-reduce its presence in our own visualizations.[22]
+reduce its presence in our own visualizations.[27]
 
 How to Lie with Charts
 ----------------------
@@ -12517,7 +12841,7 @@ open-data repository](https://fred.stlouisfed.org/series/GDP), which is
 measured in billions of dollars and published quarterly, with seasonal
 adjustments to allow for better comparisons across industries that vary
 during the year, such as summer-time farming and tourism versus
-Christmas-time gift shopping. Your task is create a *misleading* column
+winter-time holiday shopping. Your task is create a *misleading* column
 chart that *exaggerates* small differences to make them appear larger in
 the reader’s eye.
 
@@ -12589,7 +12913,7 @@ Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and
 this warming has already begun to cause glacial melt and rising sea
 levels. Your task is to create *misleading* line charts that *diminish*
 the appearance of rising global temperature change in the reader’s
-eye.[23]
+eye.[28]
 
 1.  Open the [global temperature change 1880-2019 data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0),
@@ -12661,7 +12985,7 @@ expert Albert Cairo reminds us that line charts represent values in the
 line charts by their shape, rather than their height, so the baseline is
 irrelevant. Therefore, flattening the line chart for temperature change
 may mislead readers, but it’s technically not wrong, as long as it is
-labelled correctly.[24]
+labelled correctly.[29]
 
 ### Widen the chart to warp its aspect ratio
 
@@ -12692,7 +13016,7 @@ expressed in a chart should roughly match its aspect ratio. For example,
 if a chart represents a 33 percent increase, which is the same as 33/100
 or 1/3, he recommends an aspect ratio of 3:1 (because the fraction is
 flipped by placing width before height), or in other words, a chart that
-is three times taller than its width.[25] Therefore, if we apply Cairo’s
+is three times taller than its width.[30] Therefore, if we apply Cairo’s
 recommendation to our climate change chart, the difference from 0° to
 1°C represents a 100% increase, which suggests an ideal chart with a 1:1
 aspect ratio, or just as tall as it is wide, as shown in Figure
@@ -12727,7 +13051,7 @@ matches its aspect ratio (12:1), the result is misleading.
 
 Even Cairo points out that this significant temperature increase looks
 “deceptively small” if you follow his aspect ratio recommendation using
-this scale, so he advises against it.[26] Furthermore, if you convert
+this scale, so he advises against it.[31] Furthermore, if you convert
 the scale from Celsius to Fahrenheit, the calculation changes once
 again, which doesn’t make any sense. Where does all of this leave us? If
 you feel confused, that’s because there’s no universal rule with aspect
@@ -12828,7 +13152,7 @@ truthful, while many were unreasonably manipulated to mislead readers by
 hiding or disguising important patterns in the data. Furthermore, there
 are additional ways to deceive that we did not examine here, such as
 building 3D charts and tilting the reader’s perspective below the
-baseline.[27]
+baseline.[32]
 
 You may feel strange that data visualization lacks clearly-defined
 design rules for many cases, like we are accustomed to reading in our
@@ -12852,7 +13176,7 @@ your own. We’ll focus our attention on choropleth maps that use shading
 or color to represent values in geographic areas, because they are a
 topic of considerable mischief. This exercise was inspired by geographer
 Mark Monmonier’s classic book by the same name, *How to Lie with Maps*,
-originally published in 1991, now in its third edition.[28]
+originally published in 1991, now in its third edition.[33]
 
 Before we get started, review the [map design principles in Chapter
 8](map-design.html) to avoid common mistakes when designing colored
@@ -13009,7 +13333,7 @@ Whatever you decide, avoid the temptation to manually adjust a map’s
 settings in ways that manipulate its appearance to fit a preconceived
 point of view. In sum, show us a story and tell the truth. You may need
 to create several maps with different settings to decide which one is
-the best compromise.[29].
+the best compromise.[34].
 
 \[TODO: Insert this as a final statement somewhere about the two US
 inequality maps – or not? Based on these general guidelines, some may
@@ -13074,9 +13398,21 @@ Spiegelhalter observes that when we supplement rates with raw numbers,
 it further increases our impression of risks. For example, if we told
 you a surgical procedure had a 5 percent mortality rate *and* that 20
 out of 400 patients died, it seems worse because we begin to imagine
-real people’s lives, not abstract percentages.[30] The best way to
+real people’s lives, not abstract percentages.[35] The best way to
 counter framing bias is to be aware of its potential effect on our minds
 and to call it out, as we’ve attempted to do here.
+
+TODO INSERT AND EXPAND HERE? Also beware of *algorithmic bias* that
+people have built into our computer systems, which repeatedly favor some
+groups or outcomes over others, and often reinforce privileges held by
+dominant White, wealthy, masculine culture…. As we write this, several
+examples of algorithmic bias and machine-learning bias have appeared in
+the news. facial recognition across racial groups, or discrimination in
+home lending. examples:
+<a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>;
+<a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a>
+Reduce bias by calling it out. Do not equate “digital” with
+“authoritative.” Cite more comprehensive books on this topic.
 
 *Intergroup bias* refers to multiple ways that people privilege or
 discriminate by social categories, such as race, gender, class,
@@ -13086,7 +13422,7 @@ visualization, and ways to counter its impact. Jonathan Schwabish and
 Alice Feng describe how they applied a racial equity lens to revise the
 [Urban Institute’s Data Visualization Style
 Guide](http://urbaninstitute.github.io/graphics-styleguide/) with a
-racial equity lens.[31] Some recommendations are straightforward and
+racial equity lens.[36] Some recommendations are straightforward and
 relatively simple to implement. For example, they recommend ordering
 group labels to focus on the data story, rather than listing “White” and
 “Men” at the top by default. Also, we should proactively acknowledge
@@ -13248,6 +13584,10 @@ if you cannot easily find a way to map their data, call out the US
 States bias by describing the omission in the map notes and companion
 text. Whenever possible, include people of “the United States” rather
 than ignoring their existence. Tell true and meaningful stories.
+
+TODO: Datawrapper kindly responded to our request for USA » States and
+Territories map codes and USA » States and Territories (hexagons), so
+update text and add example to show this.
 
 ### Summary
 
@@ -13617,6 +13957,10 @@ References
 
 <!--chapter:end:21-references.Rmd-->
 
+Best, Joel. *More Damned Lies and Statistics: How Numbers Confuse Public
+Issues*. Berkeley, CA: University of California Press, 2004.
+<https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC>.
+
 Cairo, Alberto. *How Charts Lie: Getting Smarter About Visual
 Information*. W. W. Norton & Company, 2019.
 <https://www.google.com/books/edition/How_Charts_Lie_Getting_Smarter_about_Vis/qP2KDwAAQBAJ>.
@@ -13672,9 +14016,13 @@ ProfHacker, August 14, 2013.
 NASA JPL. “Educator Guide: Graphing Global Temperature Trends,” 2017.
 <https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>.
 
-Rost, Lisa Charlotte. “How to Prepare Your Data for Analysis and
-Charting in Excel & Google Sheets.” Chartable: A Blog by Datawrapper.
-Accessed August 28, 2020.
+Rost, Lisa Charlotte. “How to Pick More Beautiful Colors for Your Data
+Visualizations.” Chartable. Accessed October 21, 2020.
+<https://blog.datawrapper.de/beautifulcolors/index.html>.
+
+———. “How to Prepare Your Data for Analysis and Charting in Excel &
+Google Sheets.” Chartable: A Blog by Datawrapper. Accessed August 28,
+2020.
 <https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html>.
 
 ———. “What I Learned Recreating One Chart Using 24 Tools.” Source,
@@ -13727,6 +14075,10 @@ Urban Institute. “Urban Institute Data Visualization Style Guide,” 2020.
 Watters, Audrey. “’The Audrey Test’: Or, What Should Every Techie Know
 About Education?” Hack Education, March 17, 2012.
 <http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education>.
+
+“What’s Real About Wages?” Federal Reserve Bank of St. Louis. The FRED
+Blog, February 8, 2018.
+<https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing/>.
 
 World Inequality Database. “Income Inequality, USA, 1913-2019,” 2020.
 <https://wid.world/share/#0/countrytimeseries/aptinc_p50p90_z;aptinc_p90p100_z;aptinc_p0p50_z/US/2015/kk/k/x/yearly/a/false/0/400000/curve/false>.
@@ -13828,18 +14180,36 @@ accessed August 28, 2020,
 <https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html>
 
 [16] Edward R Tufte, *Envisioning Information* (Cheshire, CT: Graphics
-Press, 1990), 67,
-<https://www.google.com/books/edition/Envisioning_Information/_EZiAAAAMAAJ>.
+Press, 1990),
+<https://www.google.com/books/edition/Envisioning_Information/_EZiAAAAMAAJ>,
+p. 67
 
-[17] Cairo, *How Charts Lie*, p. 61.
+[17] Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for
+Communication* (Pearson Education, 2016),
+<https://www.google.com/books/edition/The_Truthful_Art/8dKKCwAAQBAJ>,
+pp. 71-74.
 
-[18] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
+[18] Cairo, p. 71
+
+[19] “What’s Real About Wages?” Federal Reserve Bank of St. Louis, The
+FRED Blog, February 8, 2018,
+<https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing/>
+
+[20] Cairo, *How Charts Lie*, 2019, p. 61.
+
+[21] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
 Visualisation,” Chartable: A Blog by Datawrapper, July 31, 2018,
-<https://blog.datawrapper.de/colorguide/>
+<https://blog.datawrapper.de/colorguide/>; Lisa Charlotte Rost, “How to
+Pick More Beautiful Colors for Your Data Visualizations,” Chartable,
+accessed October 21, 2020,
+<https://blog.datawrapper.de/beautifulcolors/index.html>
 
-[19] Few, *Show Me the Numbers*, p. 166
+[22] Few, *Show Me the Numbers*, p. 166
 
-[20] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
+[23] Rost, “Your Friendly Guide to Colors in Data Visualisation.”; Rost,
+“How to Pick More Beautiful Colors for Your Data Visualizations.”
+
+[24] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
 Tables’,” Twitter, August 3, 2020,
 <https://twitter.com/jschwabish/status/1290323581881266177>; Jonathan A.
 Schwabish, “Ten Guidelines for Better Tables,” *Journal of Benefit-Cost
@@ -13849,15 +14219,18 @@ Visualizations: A Guide for Scholars, Researchers, and Wonks* (Columbia
 University Press, 2021),
 <https://cup.columbia.edu/book/better-data-visualizations/9780231193115>
 
-[21] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
+[25] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
+Public Issues* (Berkeley, CA: University of California Press, 2004),
+<https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC>,
+pp. 31-35.
+
+[26] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
 <http://books.google.com/books?isbn=0961392177>, pp. 46-63.
 
-[22] The “how to lie” tutorials were inspired by several excellent works
-in data visualization: Alberto Cairo, *The Truthful Art: Data, Charts,
-and Maps for Communication* (Pearson Education, 2016),
-<https://www.google.com/books/edition/The_Truthful_Art/8dKKCwAAQBAJ>;
-Cairo, *How Charts Lie*; Darrell Huff, *How to Lie with Statistics* (W.
-W. Norton & Company, 1954),
+[27] The “how to lie” tutorials were inspired by several excellent works
+in data visualization: Cairo, *The Truthful Art*, 2016; Cairo, *How
+Charts Lie*, 2019; Darrell Huff, *How to Lie with Statistics* (W. W.
+Norton & Company, 1954),
 <http://books.google.com/books?isbn=0393070875>; Mark Monmonier, *How to
 Lie with Maps, Third Edition* (University of Chicago Press, 2018),
 <https://www.google.com/books/edition/How_to_Lie_with_Maps_Third_Edition/MwdRDwAAQBAJ>;
@@ -13867,34 +14240,34 @@ Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9,
 NASA JPL, “Educator Guide: Graphing Global Temperature Trends,” 2017,
 <https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>
 
-[23] The inspiration for this specific tutorial came from a high school
+[28] The inspiration for this specific tutorial came from a high school
 classroom activity created by the NASA Jet Propulsion Laboratory (JPL),
 as well as visualization expert Alberto Cairo’s analysis of charts by
-climate change deniers. NASA JPL; Cairo, *How Charts Lie*, pp. 65-67,
-135-141.
+climate change deniers. NASA JPL; Cairo, *How Charts Lie*, 2019,
+pp. 65-67, 135-141.
 
-[24] Cairo, p. 61.
+[29] Cairo, p. 61.
 
-[25] Cairo, p. 69.
+[30] Cairo, p. 69.
 
-[26] Cairo, p. 70.
+[31] Cairo, p. 70.
 
-[27] Cairo, p. 58.
+[32] Cairo, p. 58.
 
-[28] Monmonier, *How to Lie with Maps, Third Edition*.
+[33] Monmonier, *How to Lie with Maps, Third Edition*.
 
-[29] TODO cite
+[34] TODO cite
 <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>;
 <a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>;
 <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>;
 <a href="https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool" class="uri">https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool</a>
 
-[30] David Spiegelhalter, *The Art of Statistics: Learning from Data*
+[35] David Spiegelhalter, *The Art of Statistics: Learning from Data*
 (Penguin UK, 2019),
 <https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ>,
 pp. 22-5
 
-[31] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
+[36] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
 Awareness in Data Visualization,” preprint (Open Science Framework,
 August 27, 2020), <https://doi.org/10.31219/osf.io/x8tbw>. See also this
 web post summary of the paper, Jonathan Schwabish and Alice Feng,

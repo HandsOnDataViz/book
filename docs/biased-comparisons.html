@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-21" />
+<meta name="date" content="2020-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="units.html"/>
+<link rel="prev" href="normalize.html"/>
 <link rel="next" href="chart.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -201,9 +201,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="comparisons.html"><a href="comparisons.html"><i class="fa fa-check"></i><b>6</b> Make Meaningful Comparisons</a>
 <ul>
+<li class="chapter" data-level="" data-path="comparison-words.html"><a href="comparison-words.html"><i class="fa fa-check"></i>Precisely Use Comparison Words</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
-<li class="chapter" data-level="" data-path="write-precisely.html"><a href="write-precisely.html"><i class="fa fa-check"></i>Write Precisely About Common Terms</a></li>
-<li class="chapter" data-level="" data-path="units.html"><a href="units.html"><i class="fa fa-check"></i>Using Smaller versus Larger Units</a></li>
 <li class="chapter" data-level="" data-path="biased-comparisons.html"><a href="biased-comparisons.html"><i class="fa fa-check"></i>Beware of Biased Comparisons</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>7</b> Chart Your Data</a>
@@ -336,18 +335,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="biased-comparisons" class="section level2 unnumbered" number="">
 <h2>Beware of Biased Comparisons</h2>
-<p>TODO: Rewrite this section</p>
-<p>Everyone should avoid cherry-picking data, which means selecting only the evidence that arrives at a pre-determined conclusion.</p>
-<p>Also avoid statistically biased processes, such as sampling methods that regularly yields inaccurate results…. example of opinion data about socially inappropriate topics…
-Sometimes bias arises due to a combination of human behavior and poor numerical reasoning.</p>
-<p>But sometimes we compare different groups of data without realizing that that they are inappropriate comparisons; they seem like random samples, but due to underlying processes they are not random. Selection bias: comparing samples as if they were truly representative of the broader population, but in fact are not: common to mistakenly compare student academic performance in different types of schools, such as public versus private, or traditional public versus charter school, without recognizing how pools of applicants may differ…. how to address: carefully examine the underlying selection processes, and make appropriate comparisons between groups, and clarify problems in text that accompanies visualization</p>
-<p>Also be aware of algorithmic biases that we sometimes build into our software…Cairo’s example about IP data thru VPN converted to geographic center of US, near Kansas…</p>
-<p>We also refer to biases that are baked into the software that humans create.
-- Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: <a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>; <a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a>
-- Reduce by calling it out, and not simply equating “digital” as “authoritative”…</p>
+<p>Everyone knows not to <em>cherry-pick</em> your data, which means to select only the evidence that supports a pre-determined conclusion, while ignoring the remainder. When we make a commitment to tell true and meaningful data stories, we agree to keep an open mind, examine all of the relevant evidence, and weigh the merits of competing interpretations. If you agree to these principles, then also watch out for biased data comparisons, especially sampling procedures that may appear legitimate on the surface, but actually contain less-visible factors that skew the evidence. While we may believe we’re operating with open minds, we can overlook partially-hidden processes that effectively cherry-pick our evidence without our knowledge.</p>
+<p><em>Selection bias</em> happens when we believe two data samples are comparable, but some behind-the-scene process has shaped the composition of the data in ways that skew our analysis. The problem frequently arises when attempting to evaluate the effectiveness of a program or treatment on two groups of people: participants and non-participants. While we may believe the two groups are random samples, that’s often not true in the real world. For example, a poorly-designed evaluation of a weight-loss program might collect data on participants who signed up for a particular program, then attempt to compare their progress to a group of non-participants who did not sign up. But these two groups are not directly comparable due to selection bias. Since participants took the initiative to sign up for a weight-loss program, they most likely have higher motivation to improve their diet and exercise more often than the non-participants. We often fool ourselves into believing two similar-sounding groups are directly comparable, but overlook how selection bias secretly shapes the composition of each group, which results in a meaningless comparison.</p>
+<p>How can we reduce selection bias in our data? As you learned in <a href="question.html">Chapter 4, question your data</a> by looking below the surface level to fully comprehend how terms have been defined, and how data was collected and recorded. If you obtain data on two groups of people, such as weight-loss program participants and non-participants, don’t assume that you can automatically compare them, especially if you don’t have a deep understanding of the selection process. By contrast, well-designed program evaluations will randomly assign eager participants into sub-groups to reduce selection bias. For example, to understand the effectiveness of a specific weight-loss program (let’s call it program A), we should invite all participants into a large group and <em>randomly divide</em> them into two sub-groups: half who participant in program A, and the other half who participate in a different weight-loss activity (let’s call it program B). Since both halves were randomly assigned from the same large group, we can be more confident that they are directly comparable, because there is no reason to suspect any difference in motivation or other hard-to-see factors that may influence their progress. Of course, there are many more research design details that are beyond the scope of this book, such as ensuring that sample sizes are sufficiently large, and comparing participants in programs A and B before, during, and after the weight-loss activity. But the logic of avoiding selection bias is simple: the best way to compare two sub-groups is to randomly divide them from one larger group.</p>
+<p>Bias warnings appear in several chapters of this book, because we continually need to be aware of different types that negatively influence our work at various stages of the data visualization process. Later in <a href="data-bias.html">Chapter 15 you’ll learn how to recognize and reduce other types of data bias</a>, such as framing bias, algorithmic bias, intergroup bias, and map area bias.</p>
+<p>TODO above: DISCUSS if an abstract diagram of two or more groups and selection bias would help to reinforce the concept here. When teaching my undergraduates about educational research, many of them do not intuitively grasp this concept, or have difficulty recognizing or applying it in new contexts. In some classes, after giving a mini-lecture, I ask them to stop and draw pictures of selection bias, and try to explain their diagrams to each other. Some get it and some don’t. Since it’s so important for making meaningful comparisons, perhaps we can insert a helpful diagram here?</p>
 <div id="summary6" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
-<p>See books on data analysis to understand the logic and use of statistical tests</p>
+<p>Although we do not claim to teach you statistical data analysis in this book, in this chapter we discussed several common-sense strategies to make meaningful comparisons while analyzing your data. You learned how to use words more precisely for comparing data, why and how to normalize data, and advice on watching out for biased comparisons. In prior chapters you built up your skills on refining your data story, working with spreadsheets, finding and questioning data, and cleaning up messy data. Now you can combine all of this knowledge and begin to create interactive charts and maps in the next few chapters.</p>
 
 </div>
 </div>
@@ -357,7 +352,7 @@ Sometimes bias arises due to a combination of human behavior and poor numerical 
           </div>
         </div>
       </div>
-<a href="units.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="normalize.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="chart.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

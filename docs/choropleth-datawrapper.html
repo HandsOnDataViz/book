@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-21" />
+<meta name="date" content="2020-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -201,9 +201,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="comparisons.html"><a href="comparisons.html"><i class="fa fa-check"></i><b>6</b> Make Meaningful Comparisons</a>
 <ul>
+<li class="chapter" data-level="" data-path="comparison-words.html"><a href="comparison-words.html"><i class="fa fa-check"></i>Precisely Use Comparison Words</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
-<li class="chapter" data-level="" data-path="write-precisely.html"><a href="write-precisely.html"><i class="fa fa-check"></i>Write Precisely About Common Terms</a></li>
-<li class="chapter" data-level="" data-path="units.html"><a href="units.html"><i class="fa fa-check"></i>Using Smaller versus Larger Units</a></li>
 <li class="chapter" data-level="" data-path="biased-comparisons.html"><a href="biased-comparisons.html"><i class="fa fa-check"></i>Beware of Biased Comparisons</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>7</b> Chart Your Data</a>
@@ -351,6 +350,7 @@ Figure 8.31: Choropleth map of 2020 home values in US states with Datawrapper. E
 <li>Open the <a href="https://docs.google.com/spreadsheets/d/1Rdaf_buH629NmO1BL_x7PMrD0wpuAeAaw0PMIkYqu1U/edit#gid=283507276">Home Value Index data in Google Sheets</a>, which we downloaded from the <a href="https://www.zillow.com/research/data/">Zillow research site</a>. Read the notes to understand its origin and some data issues. For example, Washington DC was included in the data, but it does not yet appear in the Datawrapper map of US states, because the District of Columbia is not a state.</li>
 </ol>
 <p>Good maps often require <a href="clean.html">cleaning up messy data as described in Chapter 5</a>. In our spreadsheet we removed all of the columns except two, August 2019 and August 2020, and we also inserted a <em>Percent Change</em> column, which we calculated this way: <code>(2020 - 2019) / 2019 * 100</code>. Also, we’re fortunate that Datawrapper easily recognizes US state names and abbreviations. If you’re mapping other types of geographic areas, learn more about <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">international ISO codes</a> and <a href="https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names">place name geocoding at the Datawrapper Academy</a>.</p>
+<p>TODO: DECIDE whether to keep basemap or change to one of the others that now reflect DC. DECIDE whether to mention other types of codes recognized by Datawrapper, which vary with map type, such as FIPS and ANSI.</p>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Go to <em>File &gt; Download</em> in CSV format to save the data to your local computer.</p></li>
 <li><p>Open <a href="https://datawrapper.de">Datawrapper</a>, click the <em>New Map</em> button, and select <em>Choropleth map</em> as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-choose">8.32</a>. No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.</p></li>
@@ -384,7 +384,7 @@ Figure 8.33: Choose <em>USA - States</em> for your map outline.
 Figure 8.34: Scroll down below the <em>add data</em> table to import your dataset.
 </p>
 </div>
-<p>TODO: Decide if it’s important to include an image of this import button, since I believe it’s hidden far below the table that most users see.</p>
+<p>TODO: Decide whether to include screenshot of names/codes drop-down menu, which is helpful because it shows how Datawrapper labels each geography, and one could copy and paste this into a spreadsheet and use VLookup. Decide if it’s important to include an image of this import button, since I believe it’s hidden far below the table that most users see.</p>
 <ol start="6" style="list-style-type: decimal">
 <li><p>On the <em>Import your dataset</em> screen, instead of pasting your data, we recommend that you click to <em>upload a CSV file</em> and select the file you downloaded in step 2.</p></li>
 <li><p>In the <em>Match your columns</em> screen, click the column that matches up with ISO codes, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-match">8.35</a>. You may need to scroll down a bit to click the <em>Next</em> button, then <em>Continue</em>.</p></li>

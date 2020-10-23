@@ -1,8 +1,7 @@
 # Make Meaningful Comparisons {#comparisons}
+Now that you've [refined your data story](choose.html), [improved your spreadsheet skills](spreadsheet.html), [found and questioned your data](find.html), and [cleaned up any messy parts](clean.html), this chapter focuses on the key question to ask while analyzing your evidence: "Compared to what?" That's how statistician Edward Tufte defined the "heart of quantitative reasoning."^[@tufteEnvisioningInformation1990, p. 67]. We search for insightful findings in our data by judging their significance against each other, to identify those that truly stand out. Sometimes we need to adjust our scales to ensure that we're weighing data fairly, or as the saying goes, comparing apples to apples, not apples to oranges. Before you communicate your findings in any format---text, tables, charts, or maps---be sure that you're making meaningful comparisons, because without this, your work may become meaningless.
 
-Now that you've [reflected on your data story](choose.html), [found and questioned your data](find.html), and [cleaned up any messy parts](clean.html), this chapter focuses on the key question to ask while analyzing your evidence: "Compared to what?" That's how statistician Edward Tufte defined the "heart of quantitative reasoning."^[@tufteEnvisioningInformation1990, p. 67]. We search for insightful findings in our data by judging their significance against each other, to identify those that truly stand out. Sometimes we need to adjust our scales to ensure that we're weighing data fairly, or as the saying goes, comparing apples to apples, not apples to oranges. Before you communicate your findings in any format---text, tables, charts, or maps---be sure that you're making meaningful comparisons, because without this, your work may become meaningless.
-
-This book does not intend to cover statistical data analysis, since many excellent resources already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers several common-sense strategies to make meaningful comparisons while you analyze your data, in order to help you design true and insightful visualizations that tell your story. You will learn to [precisely use comparison words](comparison-words.html), why and how [to normalize your data](normalize.html), and watch out for [biased comparisons](biased-comparisons.html).
+This book does not intend to cover statistical data analysis, since many excellent resources already address this expansive field of study.[TODO: cite open-access resources]. Instead, this chapter offers several common-sense strategies to make meaningful comparisons while you analyze your data, in order to help you design true and insightful visualizations that tell your story. You will learn to [precisely use comparison words](comparison-words.html), why and how [to normalize your data](normalize.html), and advice on watching out for [biased comparisons](biased-comparisons.html).
 
 ## Precisely Use Comparison Words {- #comparison-words}
 TODO: Consider alternative section name: "Precisely Describe Comparisons" or "Describe Comparisons with Precision" or "Use Comparison Words Precisely"
@@ -15,7 +14,7 @@ When working with data, the terms *median* and *percentile* are more useful term
 
 (ref:mean-vs-median) The *median* is a more useful comparative term than *average* or *mean* because it resists the influence of outliers.
 
-```{r mean-vs-median, fig.cap="(ref:mean-vs-median)"}
+```{r mean-vs-median, out.width=350, fig.cap="(ref:mean-vs-median)"}
 knitr::include_graphics("images/06-comparisons/mean-vs-median.png")
 ```
 
@@ -33,9 +32,10 @@ TODO above: Decide if the text and examples are clear. I like the sugarless gum 
 
 A final recommendation about using more precise language is to be cautious with words that suggest a *cause-and-effect relationship* in your data. In everyday conversation, there are many ways that we loosely imply that a causal relationship, where an action directly results in a reaction. For example, when we say one thing "leads to" another, or "promotes" growth, or "sparks" change, those words suggest causality. While that's fine in daily conversation, we need to choose our words more carefully when discussing data, using these three concepts. The first step is to describe any *correlation* between two variables, which means to show how they are associated or related interdependently. But as the saying goes, correlation is not causation. Second, in order to show causation, we need to prove both correlation and offer a *persuasive theory* for how one factor (sometimes called the independent variable) creates a change in another factor (called the dependent variable). Third, we need to identify and isolate any *confounding variables* that we have not considered that may also influence the cause-and-effect relationship. While the details are beyond the scope of this book, be mindful of the concepts---and choose your words carefully---when working with data.
 
-## Normalize Your Data {- #normalize}
+Now that you have a clearer understanding of how to use key words to describe data relationships more precisely, in the next section you'll build on this knowledge and adjust data to create more meaningful comparisons.
 
-When we discover raw data, often it does not make sense to compare it until we *normalize* it. This means to adjust data that has been collected using different scales into a common scale, in order to make meaningful comparisons. Often we normalize *absolute numbers* into *relative numbers*, or in other words, convert *raw data* into *rates* to compare them more easily. Even if you've never heard the term, perhaps you already *normalize* data without realizing it.
+## Normalize Your Data {- #normalize}
+When we find raw data, often it does not make sense to compare it until we *normalize* it. This means to adjust data that has been collected using different scales into a common scale, in order to make meaningful comparisons. Often we normalize *absolute numbers* into *relative numbers*, or in other words, convert *raw data* into *rates* to compare them more easily. Even if you've never heard the term, perhaps you already *normalize* data without realizing it.
 
 Here's an example about motor vehicle safety that was inspired by visualization expert Alberto Cairo, with [updated 2018 data](https://www.iihs.org/topics/fatality-statistics/detail/state-by-state) from the Insurance Institute for Highway Safety (IIHS) and the US Department of Transportation.^[@cairoTruthfulArtData2016, pp. 71-74.] Over 36,000 people died in motor vehicle crashes in 2018, including car and truck drivers and occupants, motorcyclists, pedestrians, and bicyclists. Although only a small fraction of this data appears in the tables below, you can [view all of the data in Google Sheets format](https://docs.google.com/spreadsheets/d/1N7_pHdmXdE3Y4ECnnDyBTSXkklv-u1hLULSO-YaotpA/edit#gid=0), and save an editable copy to your Google Drive, to follow along in this exercise.
 
@@ -43,15 +43,15 @@ Let's start with what appears to be a simple question, and see where our search 
 
 1. *Which US states had the lowest number of motor vehicle crash deaths?* When we sort the data by the numbers of deaths, the District of Columbia rises to the top of the list with only 31 deaths, as shown in Table \@ref(tab:deaths), and *appears* to have been the safest state (even though Washington DC is not recognized as a state).
 
-Table: (\#tab:left-deaths) US States with lowest number of motor vehicle crash deaths, 2018
+Table: (\#tab:deaths) US States with lowest number of motor vehicle crash deaths, 2018
 
-| State                | Deaths |
-|----------------------|--------|
-| District of Columbia | 31     |
-| Rhode Island         | 59     |
-| Vermont              | 68     |
-| Alaska               | 80     |
-| North Dakota         | 105    |
+| State | Deaths |
+|:----|--:|
+| District of Columbia | 31  |
+| Rhode Island         | 59  |
+| Vermont              | 68  |
+| Alaska               | 80  |
+| North Dakota         | 105 |
 
 But wait---this isn't a fair comparison. Take another look at the top five states and you'll may notice that all of them have smaller populations than larger ones such as California and Texas, which appear at the very bottom of the full dataset. To paint a more accurate picture, let's rephrase the question to adjust for population differences.
 
@@ -59,13 +59,13 @@ But wait---this isn't a fair comparison. Take another look at the top five state
 
 Table: (\#tab:deaths-population) US States with lowest number of motor vehicle crash deaths per population, 2018
 
-| State                | Deaths | Population | Deaths per 100,000 population |
-|----------------------|--------|------------|-------------------------------|
-| District of Columbia | 31     | 702455     | 4.4                           |
-| New York             | 943    | 19542209   | 4.8                           |
-| Massachusetts        | 360    | 6902149    | 5.2                           |
-| Rhode Island         | 59     | 1057315    | 5.6                           |
-| New Jersey           | 564    | 8908520    | 6.3                           |
+| State | Deaths | Population | Deaths per 100,000 population |
+|:---|---:|---:|---:|
+| District of Columbia | 31  | 702,455    | 4.4 |
+| New York             | 943 | 19,542,209 | 4.8 |
+| Massachusetts        | 360 | 6,902,149  | 5.2 |
+| Rhode Island         | 59  | 1,057,315  | 5.6 |
+| New Jersey           | 564 | 8,908,520  | 6.3 |
 
 But wait---this still isn't a fair comparison. Look at the top five states again and you'll notice that all of them are located along the Northeastern US corridor, which has a high concentration of public transit, such as trains and subways. If people in urban areas like New York and Boston are less likely to drive motor vehicles, or take shorter trips than people in rural states where homes are more distantly spread out, that also could affect our data. Let's strive for a better comparison and rephrase the question again, this time to adjust for differences in mileage, not population.
 
@@ -73,13 +73,13 @@ But wait---this still isn't a fair comparison. Look at the top five states again
 
 Table: (\#tab:deaths-miles) US States with lowest number of motor vehicle crash deaths per miles traveled, 2018
 
-| State         | Deaths | Vehicle miles traveled (millions) | Deaths per 100 million vehicle miles traveled |
-|---------------|--------|-----------------------------------|-----------------------------------------------|
-| Massachusetts | 360    | 66772                             | 0.54                                          |
-| Minnesota     | 381    | 60438                             | 0.63                                          |
-| New Jersey    | 564    | 77539                             | 0.73                                          |
-| Rhode Island  | 59     | 8009                              | 0.74                                          |
-| New York      | 943    | 123510                            | 0.76                                          |
+| State | Deaths | Vehicle miles traveled (millions) | Deaths per 100 million vehicle miles traveled |
+|:---|---:|---:|---:|
+| Massachusetts | 360 | 66,772  | 0.54 |
+| Minnesota     | 381 | 60,438  | 0.63 |
+| New Jersey    | 564 | 77,539  | 0.73 |
+| Rhode Island  | 59  | 8,009   | 0.74 |
+| New York      | 943 | 123,510 | 0.76 |
 
 TODO above: Ilya please confirm how "vehicle miles traveled" is calculated by the US DOT. I presume it is simply miles per vehicle, rather than miles per vehicle per number of occupants. Also, please confirm that this estimate is based on miles traveled in the state, not necessarily by vehicles registered in the state.
 
@@ -92,24 +92,16 @@ Finally, you do *not* always need to normalize your data, because sometimes its 
 Now that you have a better sense of why, when, and how to normalize data, the next section will warn you to watch out for biased comparisons in data sampling methods.
 
 ## Beware of Biased Comparisons {- #biased-comparisons}
-TODO: Rewrite this section
+Everyone knows not to *cherry-pick* your data, which means to select only the evidence that supports a pre-determined conclusion, while ignoring the remainder. When we make a commitment to tell true and meaningful data stories, we agree to keep an open mind, examine all of the relevant evidence, and weigh the merits of competing interpretations. If you agree to these principles, then also watch out for biased data comparisons, especially sampling procedures that may appear legitimate on the surface, but actually contain less-visible factors that skew the evidence. While we may believe we're operating with open minds, we can overlook partially-hidden processes that effectively cherry-pick our evidence without our knowledge.
 
-Everyone should avoid cherry-picking data, which means selecting only the evidence that arrives at a pre-determined conclusion.
+*Selection bias* happens when we believe two data samples are comparable, but some behind-the-scene process has shaped the composition of the data in ways that skew our analysis. The problem frequently arises when attempting to evaluate the effectiveness of a program or treatment on two groups of people: participants and non-participants. While we may believe the two groups are random samples, that's often not true in the real world. For example, a poorly-designed evaluation of a weight-loss program might collect data on participants who signed up for a particular program, then attempt to compare their progress to a group of non-participants who did not sign up. But these two groups are not directly comparable due to selection bias. Since participants took the initiative to sign up for a weight-loss program, they most likely have higher motivation to improve their diet and exercise more often than the non-participants. We often fool ourselves into believing two similar-sounding groups are directly comparable, but overlook how selection bias secretly shapes the composition of each group, which results in a meaningless comparison.
 
-Also avoid statistically biased processes, such as sampling methods that regularly yields inaccurate results.... example of opinion data about socially inappropriate topics...
-Sometimes bias arises due to a combination of human behavior and poor numerical reasoning.
+How can we reduce selection bias in our data? As you learned in [Chapter 4, question your data](question.html) by looking below the surface level to fully comprehend how terms have been defined, and how data was collected and recorded. If you obtain data on two groups of people, such as weight-loss program participants and non-participants, don't assume that you can automatically compare them, especially if you don't have a deep understanding of the selection process. By contrast, well-designed program evaluations will randomly assign eager participants into sub-groups to reduce selection bias. For example, to understand the effectiveness of a specific weight-loss program (let's call it program A), we should invite all participants into a large group and *randomly divide* them into two sub-groups: half who participant in program A, and the other half who participate in a different weight-loss activity (let's call it program B). Since both halves were randomly assigned from the same large group, we can be more confident that they are directly comparable, because there is no reason to suspect any difference in motivation or other hard-to-see factors that may influence their progress. Of course, there are many more research design details that are beyond the scope of this book, such as ensuring that sample sizes are sufficiently large, and comparing participants in programs A and B before, during, and after the weight-loss activity. But the logic of avoiding selection bias is simple: the best way to compare two sub-groups is to randomly divide them from one larger group.
 
-But sometimes we compare different groups of data without realizing that that they are inappropriate comparisons; they seem like random samples, but due to underlying processes they are not random. Selection bias: comparing samples as if they were truly representative of the broader population, but in fact are not: common to mistakenly compare student academic performance in different types of schools, such as public versus private, or traditional public versus charter school, without recognizing how pools of applicants may differ.... how to address: carefully examine the underlying selection processes, and make appropriate comparisons between groups, and clarify problems in text that accompanies visualization
+Bias warnings appear in several chapters of this book, because we continually need to be aware of different types that negatively influence our work at various stages of the data visualization process. Later in [Chapter 15 you'll learn how to recognize and reduce other types of data bias](data-bias.html), such as framing bias, algorithmic bias, intergroup bias, and map area bias.
 
-Also be aware of algorithmic biases that we sometimes build into our software...Cairo's example about IP data thru VPN converted to geographic center of US, near Kansas...
-
-We also refer to biases that are baked into the software that humans create.
-- Algorithm or machine learning bias: human-written code, or machine-learning that follows inductive reasoning standards set up by humans, can lead to biased results, especially in facial recognition across racial groups, or discrimination in home lending. examples: https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html; https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/
-- Reduce by calling it out, and not simply equating "digital" as "authoritative"...
-
+TODO above: DISCUSS if an abstract diagram of two or more groups and selection bias would help to reinforce the concept here. When teaching my undergraduates about educational research, many of them do not intuitively grasp this concept, or have difficulty recognizing or applying it in new contexts. In some classes, after giving a mini-lecture, I ask them to stop and draw pictures of selection bias, and try to explain their diagrams to each other. Some get it and some don't. Since it's so important for making meaningful comparisons, perhaps we can insert a helpful diagram here?
 
 ### Summary {- #summary6}
 
-
-
-See books on data analysis to understand the logic and use of statistical tests
+Although we do not claim to teach you statistical data analysis in this book, in this chapter we discussed several common-sense strategies to make meaningful comparisons while analyzing your data. You learned how to use words more precisely for comparing data, why and how to normalize data, and advice on watching out for biased comparisons. In prior chapters you built up your skills on refining your data story, working with spreadsheets, finding and questioning data, and cleaning up messy data. Now you can combine all of this knowledge and begin to create interactive charts and maps in the next few chapters.

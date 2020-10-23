@@ -25,15 +25,15 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-21" />
+<meta name="date" content="2020-10-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="comparisons.html"/>
-<link rel="next" href="write-precisely.html"/>
+<link rel="prev" href="comparison-words.html"/>
+<link rel="next" href="biased-comparisons.html"/>
 <script src="libs/header-attrs-2.4/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -201,9 +201,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="comparisons.html"><a href="comparisons.html"><i class="fa fa-check"></i><b>6</b> Make Meaningful Comparisons</a>
 <ul>
+<li class="chapter" data-level="" data-path="comparison-words.html"><a href="comparison-words.html"><i class="fa fa-check"></i>Precisely Use Comparison Words</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
-<li class="chapter" data-level="" data-path="write-precisely.html"><a href="write-precisely.html"><i class="fa fa-check"></i>Write Precisely About Common Terms</a></li>
-<li class="chapter" data-level="" data-path="units.html"><a href="units.html"><i class="fa fa-check"></i>Using Smaller versus Larger Units</a></li>
 <li class="chapter" data-level="" data-path="biased-comparisons.html"><a href="biased-comparisons.html"><i class="fa fa-check"></i>Beware of Biased Comparisons</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="chart.html"><a href="chart.html"><i class="fa fa-check"></i><b>7</b> Chart Your Data</a>
@@ -336,74 +335,164 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="normalize" class="section level2 unnumbered" number="">
 <h2>Normalize Your Data</h2>
-<p>TODO: Rewrite this section</p>
-<p>At first glance, “normalizing” or “adjusting” your data may sound like your fudging the numbers, or bending the truth. But we often cannot get closer to the truth without adjusting data to make more meaningful comparisons. Normalization is defined as adjust data collected using different scales into a common scale, in order to make more meaningful comparisons. Here are common ways to normalize:</p>
-<p>Imagine the topic is traffic safety, and comparisons across US states. What kind of data would you find most meaningful? (Cairo uses this example, and we can cite and simplify, or create parallel version with other data)</p>
-<p><a href="https://www.iihs.org/topics/fatality-statistics/detail/state-by-state" class="uri">https://www.iihs.org/topics/fatality-statistics/detail/state-by-state</a></p>
+<p>When we find raw data, often it does not make sense to compare it until we <em>normalize</em> it. This means to adjust data that has been collected using different scales into a common scale, in order to make meaningful comparisons. Often we normalize <em>absolute numbers</em> into <em>relative numbers</em>, or in other words, convert <em>raw data</em> into <em>rates</em> to compare them more easily. Even if you’ve never heard the term, perhaps you already <em>normalize</em> data without realizing it.</p>
+<p>Here’s an example about motor vehicle safety that was inspired by visualization expert Alberto Cairo, with <a href="https://www.iihs.org/topics/fatality-statistics/detail/state-by-state">updated 2018 data</a> from the Insurance Institute for Highway Safety (IIHS) and the US Department of Transportation.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> Over 36,000 people died in motor vehicle crashes in 2018, including car and truck drivers and occupants, motorcyclists, pedestrians, and bicyclists. Although only a small fraction of this data appears in the tables below, you can <a href="https://docs.google.com/spreadsheets/d/1N7_pHdmXdE3Y4ECnnDyBTSXkklv-u1hLULSO-YaotpA/edit#gid=0">view all of the data in Google Sheets format</a>, and save an editable copy to your Google Drive, to follow along in this exercise.</p>
+<p>Let’s start with what appears to be a simple question, and see where our search for more meaningful comparisons takes us.</p>
 <ol style="list-style-type: decimal">
-<li><p>Total traffic deaths by state (show table of 5 most deadly): Good start, but these absolute numbers (aka raw numbers) ignore the fact that states have different populations. Far more people live in CA and TX than VT and WY. Simply comparing total deaths does not take into account the different denominators…</p></li>
-<li><p>Traffic deaths per capita by state (show table of 5 most deadly): Better, because it shows a relative number, rather than an absolute. Show how we arrived at this by dividing the total traffic deaths by total population. Since those numbers are small, we multiply them by 100,000 (or other figure) to express them per capita. Out of 100,000 people residents in the state, about X die in highway deaths. But is the most meaningful way to compare states? In large cities with public transit, fewer people drive. In rural areas, people who drive often spend more time in the</p></li>
-<li><p>Traffic deaths per capita per mile-hours driven (show table of 5 most deadly): Explain how we arrived…</p></li>
+<li><em>Which US states had the lowest number of motor vehicle crash deaths?</em> When we sort the data by the numbers of deaths, the District of Columbia rises to the top of the list with only 31 deaths, as shown in Table <a href="normalize.html#tab:deaths">6.1</a>, and <em>appears</em> to have been the safest state (even though Washington DC is not recognized as a state).</li>
 </ol>
-<p>Cairo argues that when we make more appropriate data comparisons, we get closer to the truth….</p>
-<p>After finding and cleaning your data, you often need to “normalize” or “adjust” your data before making meaningful claims in text, tables, charts, or maps…</p>
-<ul>
-<li><p>Adjust Absolute into Relative Numbers: as you saw above, raw numbers can be less meaningful than percentages or per capita…</p></li>
-<li><p>Adjust for Change over Time: We cannot compare median household income in 1960 versus 2019 without adjustment, because dollars had different levels of purchasing power over time, due to price inflation and related factors. If you need to make economic comparisons over time, look for data that has already been converted into “constant dollars,” such as median household income “in 2019 dollars.” Economists often refer to this difference as “nominal” data (un-adjusted) versus “real” data (adjusted). See example about real wages over time, which adjusts the dollar figures for each year into constant dollars, consumer price index… <a href="https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing" class="uri">https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing</a>
-It’s also common for economic data to have “seasonal adjustments” because…[TODO move relevant sentences from Detect Bias chapter to here, and cross-ref back]</p></li>
-<li><p>Adjust by Creating an Index… explain</p></li>
-</ul>
-<p>See books on statistical data analysis for more advanced techniques, such as comparing data through z-scores</p>
-<ul>
-<li>TODO: Explain how map designers face several issues with normalization… cross-ref to Normalize Map Data in Map chapter</li>
-<li>Adjust for Geographic Area?</li>
-</ul>
-<p>TODO: DECIDE if any of this prior text should be integrated into above</p>
-<p>Different ways to normalize data: You can normalize data in many ways, and there is not necessarily one
-acceptable way of doing it.</p>
-<p>One of the most common ways of normalization is deriving “per capita”, or “per person” values.
-If values are small, such as rare disease cases or lottery winners, they can be presented as “per 1,000” or “per 100,000” people.
-Divide your quantity by population in that area to derive per capita values.</p>
-<p>Choropleth maps work well with percentages. The good news is, humans like percentages too.
-It is quite natural for us to understand that a 9% unemployment rate means that of 100 people
-who were willing to work, nine were unable to find a job. To derive a percentage for unemployment,
-divide the number of unemployed people by labor force size (adult
-population who are willing and able to work), and multiply by 100.</p>
-<p>Unlike counts, most <em>measured</em> variables do not need normalization because
-they belong to a scale. For example, median age (the age of the “middle”
-person in a population, when sorted from youngest to oldest) can be directly compared
-among populations. We know that humans live anywhere between 0 and 120 years or so,
-and we wouldn’t expect median ages to be vastly different from one country to another (maybe twice,
-but not tenfold). Median incomes, if measured in the same currency, also belong to the same scale
-and can be compared directly.</p>
-<p>How not to normalize values: Absolute values are very important for context. Saying that “20% of blond men living in
-in town X won the lottery” may sound like a catchy headline, but in reality
-the town has 450 residents, of those 200 are men, and of those only 5 have light hair color.
-One of those five (and here comes the 20%) was lucky to win the lottery, so technically
-the headline didn’t lie.</p>
-<p>This is, of course, an extreme and comic example, but exaggerations in this spirit are not uncommon.
-If you want readers to trust you, make sure you are open about total counts when reporting
-normalized values (such as percentages or per capita values).</p>
-<p>Absolute values are important for another reason: behind numbers there are often people,
-and smaller, normalized values may hide the scale of the problem.
-Saying that “the unemployment rate is only 5%” is valid, but the 5%
-of, say, Indian labor force (around 522 million) is about 26 million, which is
-pretty much the total population of Australia.</p>
-<p>Exercise your best judgement when you normalize values. Make sure you don’t
-blow numbers out of proportion by normalizing values in smaller populations.
-But also don’t hide large counts behind smaller percentages for larger populations.</p>
-<p>At this point, you should have enough geocoding and spreadsheet skills to aid you
-with map making. In the following section, we will talk about geographical data in general and
-will introduce different geospatial file formats to ensure you are
-ready to create, use, and share map data.</p>
+<table>
+<caption><span id="tab:deaths">Table 6.1: </span> US States with lowest number of motor vehicle crash deaths, 2018</caption>
+<thead>
+<tr class="header">
+<th align="left">State</th>
+<th align="right">Deaths</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">District of Columbia</td>
+<td align="right">31</td>
+</tr>
+<tr class="even">
+<td align="left">Rhode Island</td>
+<td align="right">59</td>
+</tr>
+<tr class="odd">
+<td align="left">Vermont</td>
+<td align="right">68</td>
+</tr>
+<tr class="even">
+<td align="left">Alaska</td>
+<td align="right">80</td>
+</tr>
+<tr class="odd">
+<td align="left">North Dakota</td>
+<td align="right">105</td>
+</tr>
+</tbody>
+</table>
+<p>But wait—this isn’t a fair comparison. Take another look at the top five states and you’ll may notice that all of them have smaller populations than larger ones such as California and Texas, which appear at the very bottom of the full dataset. To paint a more accurate picture, let’s rephrase the question to adjust for population differences.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><em>Which US states had the lowest number of motor vehicle crash deaths when adjusted for population?</em> Now let’s <em>normalize</em> the death data by taking into account the total population of each state. In our spreadsheet, we calculate it as <code>Deaths / Population * 100,000</code>. While it’s also accurate to divide deaths by population to find a <em>per capita</em> rate, those very small decimals would be difficult for most people to compare, so we multiply by 100,000 to present the results more clearly. When we sort the data, Washington DC rises to the top of the list, with only 4.4 motor vehicle crash deaths per 100,000 residents, as shown in Table <a href="normalize.html#tab:deaths-population">6.2</a> and <em>appears</em> to have been the safest once again.</li>
+</ol>
+<table>
+<caption><span id="tab:deaths-population">Table 6.2: </span> US States with lowest number of motor vehicle crash deaths per population, 2018</caption>
+<thead>
+<tr class="header">
+<th align="left">State</th>
+<th align="right">Deaths</th>
+<th align="right">Population</th>
+<th align="right">Deaths per 100,000 population</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">District of Columbia</td>
+<td align="right">31</td>
+<td align="right">702,455</td>
+<td align="right">4.4</td>
+</tr>
+<tr class="even">
+<td align="left">New York</td>
+<td align="right">943</td>
+<td align="right">19,542,209</td>
+<td align="right">4.8</td>
+</tr>
+<tr class="odd">
+<td align="left">Massachusetts</td>
+<td align="right">360</td>
+<td align="right">6,902,149</td>
+<td align="right">5.2</td>
+</tr>
+<tr class="even">
+<td align="left">Rhode Island</td>
+<td align="right">59</td>
+<td align="right">1,057,315</td>
+<td align="right">5.6</td>
+</tr>
+<tr class="odd">
+<td align="left">New Jersey</td>
+<td align="right">564</td>
+<td align="right">8,908,520</td>
+<td align="right">6.3</td>
+</tr>
+</tbody>
+</table>
+<p>But wait—this still isn’t a fair comparison. Look at the top five states again and you’ll notice that all of them are located along the Northeastern US corridor, which has a high concentration of public transit, such as trains and subways. If people in urban areas like New York and Boston are less likely to drive motor vehicles, or take shorter trips than people in rural states where homes are more distantly spread out, that also could affect our data. Let’s strive for a better comparison and rephrase the question again, this time to adjust for differences in mileage, not population.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><em>Which US states had the lowest number of motor vehicle crash deaths when adjusted for total miles traveled?</em> Once again, we <em>normalize</em> the death data by adjusting it to account for a different factor: the estimated total number of miles driven (in millions) by people in all cars, trucks, and motorcycles that traveled in each state, including both in-state and out-of-state drivers, in 2018. In our spreadsheet, we calculate it as <code>Deaths / Vehicle Miles * 100</code>, with the multiplier to present the results more clearly. This time Massachusetts rises to the top of the list, with only 0.54 motor vehicle crash deaths per 100 million miles traveled, as shown in as shown in Table <a href="normalize.html#tab:deaths-miles">6.3</a>. Also, note that the District of Columbia has fallen out of the top 5, while Minnesota now appears on the list.</li>
+</ol>
+<table>
+<caption><span id="tab:deaths-miles">Table 6.3: </span> US States with lowest number of motor vehicle crash deaths per miles traveled, 2018</caption>
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">State</th>
+<th align="right">Deaths</th>
+<th align="right">Vehicle miles traveled (millions)</th>
+<th align="right">Deaths per 100 million vehicle miles traveled</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Massachusetts</td>
+<td align="right">360</td>
+<td align="right">66,772</td>
+<td align="right">0.54</td>
+</tr>
+<tr class="even">
+<td align="left">Minnesota</td>
+<td align="right">381</td>
+<td align="right">60,438</td>
+<td align="right">0.63</td>
+</tr>
+<tr class="odd">
+<td align="left">New Jersey</td>
+<td align="right">564</td>
+<td align="right">77,539</td>
+<td align="right">0.73</td>
+</tr>
+<tr class="even">
+<td align="left">Rhode Island</td>
+<td align="right">59</td>
+<td align="right">8,009</td>
+<td align="right">0.74</td>
+</tr>
+<tr class="odd">
+<td align="left">New York</td>
+<td align="right">943</td>
+<td align="right">123,510</td>
+<td align="right">0.76</td>
+</tr>
+</tbody>
+</table>
+<p>TODO above: Ilya please confirm how “vehicle miles traveled” is calculated by the US DOT. I presume it is simply miles per vehicle, rather than miles per vehicle per number of occupants. Also, please confirm that this estimate is based on miles traveled in the state, not necessarily by vehicles registered in the state.</p>
+<p>Have we finally found the <em>safest</em> state as judged by motor vehicle crash deaths? Not necessarily. While we normalized the raw data relative to the population and amount of driving, the IIHS reminds us that several other factors may influence these numbers, such as vehicle types, average speed, traffic laws, weather, and so forth. But as Alberto Cairo reminds us, every time we refine our model to make a more meaningful comparison, our interpretation becomes a closer representation of the truth.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> TODO: Look for a closing quote by Cairo on this point.</p>
+<p>As we demonstrated above, the most common way to normalize data is to adjust <em>absolute numbers</em> into <em>relative numbers</em>, such as percentages or per capita rates. But there are many other ways to normalize data, so make sure you’re familiar with different methods when you <a href="find.html">find and question your data, as described in chapter 4</a>. When working with historical data (also called time-series or longitudinal data), you may need to <em>adjust for change over time</em>. For example, it’s not fair to directly compare median household income in 1970 versus 2020, because $10,000 US dollars had far more purchasing power a half-century ago than it does today, due to cost of living and related factors. Similarly, economists distinguish between <em>nominal data</em> (unadjusted) versus <em>real data</em> (adjusted over time), typically by converting figures into “constant dollars” for a particular year that allow better comparisons by accounting for purchasing power.<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> Also, economic data is often <em>seasonally adjusted</em> to improve comparisons for data that regularly varies across the year, such as employment or revenue during the summer tourism season versus the winter holiday shopping season. Another normalization method is to create an <em>index</em> to measure how values have risen or fallen in relation to a given reference point over time. Furthermore, statisticians often normalize data collected using different scales by calculating its <em>standard score</em>, also known as its <em>z-score</em>, to make better comparisons. While these methods are beyond the scope of this book, it’s important to be familiar the broader concept: everyone agrees that it’s better to compare apples to apples, rather than apples to oranges.</p>
+<p>Finally, you do <em>not</em> always need to normalize your data, because sometimes its format already does this for you. Unlike <em>counts</em> or raw numbers, most <em>measured variables</em> do not need normalization because they already appear on a common scale. One example of a measured variable is <em>median age</em>, the age of the “middle” person in a population, when sorted from youngest to oldest. Since we know that humans live anywhere between 0 and 120 years or so, we can directly compare the median age among different populations. Similarly, another measured variable is <em>median income</em>, if measured in the same currency, because this offers a common scale that allows direct comparisons across different populations.</p>
+<p>Now that you have a better sense of why, when, and how to normalize data, the next section will warn you to watch out for biased comparisons in data sampling methods.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="17">
+<li id="fn17"><p><span class="citation">Alberto Cairo, <em>The Truthful Art: Data, Charts, and Maps for Communication</em> (Pearson Education, 2016), <a href="https://www.google.com/books/edition/The_Truthful_Art/8dKKCwAAQBAJ" role="doc-biblioref">https://www.google.com/books/edition/The_Truthful_Art/8dKKCwAAQBAJ</a></span>, pp. 71-74.<a href="normalize.html#fnref17" class="footnote-back">↩︎</a></p></li>
+<li id="fn18"><p><span class="citation">Cairo</span>, p. 71<a href="normalize.html#fnref18" class="footnote-back">↩︎</a></p></li>
+<li id="fn19"><p><span class="citation">“What’s Real About Wages?” Federal Reserve Bank of St. Louis, The FRED Blog, February 8, 2018, <a href="https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing/" role="doc-biblioref">https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing/</a></span><a href="normalize.html#fnref19" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="comparisons.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="write-precisely.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="comparison-words.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="biased-comparisons.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

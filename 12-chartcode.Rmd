@@ -19,14 +19,14 @@ than most third-party tools can offer. In addition, you can never be sure that t
 apps will remain free, or at least have a free tier, forever, whereas open-source tools
 are here to stay free of charge.
 
-Note: Althouhg both libraries are open-source, Highcharts comes [with a stricter license](https://www.highcharts.com/products/highcharts/#non-commercia)
+Note: Although both libraries are open-source, Highcharts comes [with a stricter license](https://www.highcharts.com/products/highcharts/#non-commercia)
 which allows it to be used for free for non-commercial projects only, such as personal, school, or non-profit organization website. Keeping that in mind, we primarily focused on Chart.js, which is distributed under MIT license that lets you use the library for commercial projects as well.
 
 Table \@ref(tab:chart-templates) lists all types of charts that we will look at in this chapter.
 Note, however, that both libraries come with many more default chart types that you can explore
 in [Chart.js Samples](https://www.chartjs.org/samples/latest/) and [Highcharts Demos](https://www.highcharts.com/demo).
 
-Table: (\#tab:chart-templates) Chart Code Templates and Tutorials
+Table: (\#tab:chart-templates) Chart Code Templates, Best Uses, and Tutorials
 
 | Chart | Best use and tutorials in this book |
 | --- | --- |
@@ -59,9 +59,9 @@ The repo contains three files that are directly related to the chart:
 * `index.html` contains HTML (markdown) and CSS (stylesheets) that tell the browser how to style the document that contains the chart, and what libraries to load,
 * `script.js` contains the JavaScript code that reads data from the CSV file and constructs the interactive chart, and
 *  `data.csv` is the comma-separated file that keeps all the data in the chart, and can be edited in a text editor, or Google Sheets/Excel etc.
-  
+
 The two remaining files are a `README.md` that describes the contents of the repo, and `bar.png` that is just an image that you can see in the README. All other GitHub templates in this chapter will be similarly structured.
-  
+
 2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series). You can add as many data series columns as you wish.
 
 ```

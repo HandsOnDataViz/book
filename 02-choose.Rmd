@@ -123,7 +123,7 @@ Table: (\#tab:tools) Recommended Tools and Uses, with Chapter References
 | GitHub Desktop & Atom code editor |  |  |  |  |  |  | [Ch11](github-desktop-atom.html) |  |
 | GeoJson.io edit  & draw geodata |  |  |  |  |  |  |  | [Ch14](geojsonio.html) |
 | Mapshaper  edit & join geodata |  |  |  |  |  |  |  | [Ch14](mapshaper.html) |
-| MapWarper  georectify images |  |  |  |  |  |  |  | [Ch14](mapwarper.html) |
+| MapWarper  georeference images |  |  |  |  |  |  |  | [Ch14](mapwarper.html) |
 
 In addition to the tools featured in Table \@ref(tab:tools), you'll find several other useful tools mentioned in the text, including [ColorBrewer to select map colors](map-design.html), the [Geocoding by SmartMonkey add-on for Google Sheets](geocode.html), [US Census Geocoder for bulk addresses and census geography][bulk-geocode.html], and the [Socrata open-repository chart and map tools](filtered-point-map-socrata.html). Also, consider enhancing your web security by installing the free [Privacy Badger browser extension from the Electronic Frontier Foundation](https://privacybadger.org/) to view and exercise some control over who's tracking you, and also review the [EFF's Surveillance Self-Defense Guide](https://ssd.eff.org/).
 

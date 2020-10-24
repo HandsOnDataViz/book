@@ -17,7 +17,7 @@ and attribute components, and how GeoJSON is different from Shapefiles and other
 With our tutorials, you will learn how to convert or draw your own layer of map polygons or polylines on top of satellite imagery
 using [the GeoJson.io tool](geojsonio.html), and also how to edit geospatial data and join it with spreadsheet data using [the Mapshaper tool](mapshaper.html).
 Both are powerful, web-based open-source geodata tools that for common tasks can substitute for more complex geographic information system tools, such as ArcGIS, a Windows-only de-facto industry standard in geospatial software, or QGIS, a free and open-source alternative available for Mac, Linux, and Windows.
-Finally, you'll also learn how to georectify a digitized map to display as a background overlay using [the MapWarper tool](mapwarper.html).
+Finally, you'll also learn how to georeference a high-quality static image of a map, and transform it into interactive map tiles that you can display on top of a zoomable Leaflet map, using [the MapWarper tool](mapwarper.html).
 
 By the end of this chapter, you should feel much more confident navigating the
 overwhelming world of geospatial data.
@@ -758,12 +758,15 @@ There are many more commands within Mapshaper that are worth exploring if you ar
 features using JavaScript expressions, assigning colors to polygons based on values, and many more. Explore the [Wiki](https://github.com/mbloch/mapshaper/wiki/Command-Reference) of Mapshaper project on GitHub for more commands and examples.
 
 
-## Georectify with MapWarper {- #mapwarper}
-TODO: write this section about using [MapWarper](http://mapwarper.net), a tool created and hosted by Tim Waters, to upload and georectify a scanned map. This means to properly position a scanned map based on standard coordinates, so that you can place it as an overlay on an interactive map, such as [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html).
+## Georeference with MapWarper {- #mapwarper}
+TODO: write this section about using [MapWarper](http://mapwarper.net), a tool created and hosted by Tim Waters, to upload and georeference a scanned map. This means to properly position a scanned map based on standard coordinates, so that you can place it as an overlay on an interactive map, such as [Leaflet Storymaps with Google Sheets](leaflet-storymaps-with-google-sheets.html).
 
 Anyone can upload and georectify a map on the developer's public site at http://mapwarper.net, and also see how it's used by organizations such as the New York Public Library at http://maps.nypl.org.
 
 Warning: MapWarper is a wonderful open-source tool and platform, but service may be interrupted. As of July 2020, the site warns: "Ran out of disk space. Maps older than 2 years will need re-warping to work. Downtime will happen again."
+
+MODIFY TEXT FROM CH 13:
+To add a historical map overlay, it first must be *georeferenced* (also called georectified), which means to digitally align the static map image with a more precise present-day interactive map. If you have a high-quality static image of a historical map, use the [Mapwarper tool](mapwarper.html) as described in Chapter 14 to align several known points with those on a present-day interactive map. Mapwarper transforms the static map image into interactive map tiles, and publicly hosts them online with a link in Google/OpenStreetMap format, similar to `https://mapwarper.net/maps/tile/14781/{z}/{x}/{y}.png`. Or you can search for historical maps that have already been georeferenced and transformed into tiles, or contribute to crowdsourcing efforts to align maps, on platforms such as [Mapwarper](https://mapwarper.net), the [New York Public Library Mapwarper](http://maps.nypl.org/warper/), and the [David Rumsey Map Collection](https://www.davidrumsey.com/view/georeferencer). [TODO: confirm how Rumsey links work] Although map tile links are *not* viewable in a normal browser, they can be displayed by the Leaflet Storymaps code by entering them into these columns in the *Chapters* tab of your Google Sheet template:
 
 
 ## Convert Compressed KMZ to KML {- #convert-kmz}

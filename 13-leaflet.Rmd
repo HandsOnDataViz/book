@@ -294,7 +294,7 @@ In the first part of the tutorial, you will create and publish your copies of ou
 In the second part, you will learn how to geocode and customize point data in the linked Google Sheet, upload images and other map data to your GitHub repo, and add scanned background map layers if desired.
 
 - E) Add text, media, markers, and geocode locations in the Google Sheet *Chapters* tab.
-- F) Optional: Add links for scanned map or GeoJSON boundary overlays.
+- F) Optional: Add georeferenced map images or GeoJSON overlays to story chapters.
 
 In the third part, you have two options to finalize your map before widely sharing it online:
 
@@ -430,11 +430,19 @@ Tip: You can display multiple images for one location by creating a series of ro
 
 Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
 
-#### F) Optional: Add links for scanned map or GeoJSON boundary overlays {-}
+#### F) Optional: Add georeferenced map overlays or GeoJSON geodata to story chapters {-}
+The code template allows you to enrich your story by placing two different types of layers on top of the background map: georeferenced map images (such as a historical map) and GeoJSON geodata (such as a pathway, boundary lines, or a color-coded choropleth map). You can add both types of layers to specific chapters or the entire story. Also, you can adjust the transparency level to reveal or hide the present-day background map. To prepare both types of layers, you will need to jump ahead to [Chapter 14: Transform Your Map Data](transform.html), but here we'll explain the steps to insert them in your storymap template.
 
-TODO **START AGAIN HERE**
+To add a historical map overlay, it first must be *georeferenced* (also called georectified), which means to digitally align the static map image with a more precise present-day interactive map. If you have a high-quality static image of a historical map, use the [Mapwarper tool](mapwarper.html) as described in Chapter 14 to align several known points with those on a present-day interactive map. Mapwarper transforms the static map image into interactive map tiles, and publicly hosts them online with a link in Google/OpenStreetMap format, similar to `https://mapwarper.net/maps/tile/14781/{z}/{x}/{y}.png`. Or you can search for historical maps that have already been georeferenced and transformed into tiles, or contribute to crowdsourcing efforts to align maps, on platforms such as [Mapwarper](https://mapwarper.net), the [New York Public Library Mapwarper](http://maps.nypl.org/warper/), and the [David Rumsey Map Collection](https://www.davidrumsey.com/view/georeferencer). [TODO: confirm how Rumsey links work] Although map tile links are *not* viewable in a normal browser, they can be displayed by the Leaflet Storymaps code by entering them into these columns in the *Chapters* tab of your Google Sheet template:
 
-Overlay GeoJSONs
+- Overlay: Enter a map tile link in Google/OpenStreetMap format, similar to the sample above. Use secure https (ending with `s`) when available.
+- Overlay Transparency: Enter a number from 0 (transparent) to 1 (opaque). The default is 0.7.
+
+INSERT IMAGE
+
+
+
+GeoJSON Data (technically not overlays?)
 
 I added two columns, GeoJSON Overlay with the URL to the GeoJSON, and GeoJSON Feature Properties, which is CSS that defines style of features.
 List the styles separated by semicolon, and no quotation marks required. Eg

@@ -131,7 +131,7 @@ Our next task is to link your published Google Sheet to your Leaflet code in Git
 knitr::include_graphics("images/13-leaflet/leaflet-readme-link-bottom.png")
 ```
 
-4. Feel free to remove any other content on the README page that you do not wish to keep.
+Feel free to remove any other content on the README page that you do not wish to keep.
 
 #### D) Update your Google Sheet *Options* tab info and refresh your live map {-}
 
@@ -146,22 +146,33 @@ Now that your published Google Sheet is linked to your live map, go to the *Opti
 Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
 
 #### E) Geocode locations and customize new markers in the Points tab {-}
-In the *Points* tab of your Google Sheet, you'll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do *not* delete or rename the column headers, since the Leaflet code looks for these specific names.
+Now we can start to add new content to your map. In the *Points* tab of your Google Sheet, you'll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do *not* delete or rename the column headers, since the Leaflet code looks for these specific names.
 
 - Group: Create any labels to categorize groups of markers in your legend.
 - Marker Icon: Insert any standard icon name such as `school` or `bus` that appears [Font Awesome Icons](http://fontawesome.io/icons), or leave blank for no icon inside the marker. To create your own custom icon, see further below.
-- Marker Color: Insert any standard color name such as `blue` or `darkblue`, or insert a web color code such as `#775307` or `rgba(200,100,0,0.5)`. See options at [W3Schools Color Names](https://www.w3schools.com/colors/colors_names.asp).
+- Marker Color: Insert any standard web color name such as `blue` or `darkblue`, or insert a web color code such as `#775307` or `rgba(200,100,0,0.5)`. See options at [W3Schools Color Names](https://www.w3schools.com/colors/colors_names.asp).
 - Icon Color: Set the color of the icon inside the marker. The default is `white`, which looks good inside darker-colored markers.
 - Custom Size: Leave blank, unless you are creating your own custom icon further below.
 
 The next set of columns include items that appear when users click on point markers:
 - Name: Add a title to display in the marker pop-up window.
-- Image: Insert link to an external image link, or upload a small image to the *media* folder in your GitHub repo and add its pathname, such as `media/trinity-college.jpg`.
-- Description: Add text to appear in the marker pop-up window. You may include HTML web links in this format: `<a href="url">link text</a>`. If a map link should open in a new browser tab, set the *target* attribute to `_blank`. Learn about HTML syntax at [W3Schools](https://www.w3schools.com/html/html_links.asp).
+- Description: Add text to appear in the marker pop-up window. You may insert HTML tags to add line breaks (such as `<br>`), or to open external links in a new tab, such as `<a href='https://www.w3schools.com/' target='_blank'>Visit W3Schools</a>`. Learn about HTML syntax at [W3Schools](https://www.w3schools.com/html/html_links.asp).
+- Image: You have two options to display images. You can insert an external link to an image hosted by an online service (such as Flickr), as long as it begins with `https` (secure) and ends with either `.jpg` or `.png`. Or you can upload an image into the `media` subfolder in your GitHub repo, as shown in Figure \@ref(fig:leaflet-media-upload), and enter the pathname in the Google Sheet in this format: `media/image.jpg` or `...png`.
 
-TODO above: update the code demo to include a sample image in the media file, and edit text above to match
+(ref:leaflet-media-upload) In GitHub, click to open the `media` folder and *Add file - Upload files*.
 
-The next three columns---Location, Latitude, and Longitude---help to place your marker on the map. Although the Leaflet code only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on](geocode.html) that we introduced in Chapter 3 to convert addresses to x- and y-coordinates in a separate tab of your Google Sheet, and paste the results of those three columns into Location, Latitude, and Longitude.
+```{r leaflet-media-upload, fig.cap="(ref:leaflet-media-upload)"}
+knitr::include_graphics("images/13-leaflet/leaflet-media-upload.png")
+```
+Warning: Media file pathnames are case-sensitive, and we recommend using *all lowercase characters*, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you *reduce the size* of any images to 600x400 pixels or less prior to uploading, to make sure your map operates smoothly.
+
+- Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on](geocode.html) that we introduced in Chapter 3 to *create a separate tab in your Google Sheet* where you can insert your Location data, as shown in Figure \@ref(fig:geocode-details2), and paste the results into your Latitude and Longitude columns.
+
+(ref:geocode-details2) Use the *Geocoding* tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude.
+
+```{r geocode-details2, fig.cap="(ref:geocode-details2)"}
+ knitr::include_graphics("images/13-leaflet/geocode-details.png")
+```
 
 Optional table of viewable markers: To display an interactive table at the bottom of your map, as shown in Figure \@ref(fig:leaflet-map-with-table). In the *Options* tab, set *Display Table* (cell B30) to *On*. You can also adjust the *Table Height*, and modify the display of *Table Columns* by entering the column headers, separated with commas.
 
@@ -171,9 +182,7 @@ Optional table of viewable markers: To display an interactive table at the botto
 knitr::include_graphics("images/13-leaflet/leaflet-map-with-table.png")
 ```
 
-Optional custom markers: To create your own custom marker, such as a thumbnail photo icon, use any image editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in PNG format and choose a filename using all lower-case characters with no spaces. Upload the image to the *media* folder in your GitHub repo. In the Marker Icon column, set the pathname in this format: `media/custom-trinity-64.png`. In the Custom Size column, set the dimensions to `64x64` or similar, such as `40x40` if desired.
-
-TODO above: update the code demo to include a thumbnail photo icon in the media file, and edit text above to match.
+Optional custom markers: To create your own custom marker, such as a thumbnail photo icon, use any image editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in PNG format and choose a filename using all lower-case characters with no spaces. Upload the image to the *media* folder in your GitHub repo as described above. In the Marker Icon column, enter the file pathname in this format: `media/image-thumbnail.png`. In the Custom Size column, set the dimensions to `64x64` or similar, such as `40x40` if desired.
 
 Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
 
@@ -203,12 +212,12 @@ After you've prepared your GeoJSON data, name the files using all lower-case cha
 To display polylines:
 
 - In the *Options* tab, make sure *Polyline Legend Position* (cell B36) is visible by selecting *topleft* or a similar position.
-- In the *Polylines* tab, enter the GeoJSON URL pathname to the file you uploaded to your GitHub repo, such as `geodata/polylines-bike-lanes.geojson`. Then insert a Display Name, Description, and Color.
+- In the *Polylines* tab, enter the GeoJSON URL pathname to the file you uploaded to your GitHub repo, such as `geodata/lines.geojson`. Then insert a Display Name, Description, and Color.
 
 To display polygons:
 
 - In the *Polygons* tab, make sure *Polygon Legend Position* (cell B4) is visible by selecting *topleft* or a similar position.
-- Also, in *Polygon GeoJSON URL* (cell B6) enter the pathname to the file you uploaded to your GitHub repo, such as `geodata/polygons-town-population.geojson`.
+- Also, in *Polygon GeoJSON URL* (cell B6) enter the pathname to the file you uploaded to your GitHub repo, such as `geodata/map.geojson`.
 - Also, you can change the *Polygon Legend Title* (cell B3) and add an optional *Polygon Legend Icon* (cell B5).
 - Also, edit the *Polygon Data* and *Color Settings* sections to modify the labels and ranges to align with the properties of your GeoJSON file. In the *Property Range Color Palette*, you can automatically select a color scheme from the ColorBrewer tool we described in the [Map Design section of Chapter 8](map-design.html), or manually insert colors of your choice in the cell below.
 - Read the *Hints* column in the *Polygons* sheet for tips on how to enter data.
@@ -258,7 +267,7 @@ If problems arise, see the [Fix Common Mistakes](fix.html) section of the append
 ## Leaflet Storymaps with Google Sheets {- #leaflet-storymaps-with-google-sheets}
 The Leaflet Storymaps code template is designed to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds, as shown in Figure \@ref(fig:storymap-demo). You enter all of your map data into a linked Google Sheet (or CSV file) or upload it into a GitHub repository, as shown in Figure \@ref(fig:storymap-sheet). Although some other story map tools are easier to start using right away, such as the [Knight Lab StoryMap](https://storymap.knightlab.com/) and [ESRI Story Maps](https://storymaps.arcgis.com/en/), we do not recommend them because both lack *data portability*, meaning that you can't easily export any information you enter. By contrast, all of the information you add to the Leaflet Storymaps linked Google Sheet and GitHub repo can easily be exported and migrated to other platforms, which matters because digital technologies continually evolve, as we described when discussing [how to choose tools wisely in Chapter 2](choose.html). In addition, the Leaflet Storymaps template offers more features to customize how you display your data, including and scanned background map layers, a topic you'll learn about in the [Mapwarper section of Chapter 14](mapwarper.html). Finally, this Leaflet template is built on flexible open-source software that's written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.
 
-TODO: Create and insert a new version of the template demo
+TODO: Create and insert a new version of the template and demonstrate all features (all media, tricks such as leaving blank chapters and locations to display multiple images of one location, etc.). Also include links to featured examples? https://jhsgh.github.io/storymap/
 
 (ref:storymap-demo) Explore the [interactive Leaflet Storymaps with Google Sheets](https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/).
 
@@ -284,8 +293,8 @@ In the first part of the tutorial, you will create and publish your copies of ou
 
 In the second part, you will learn how to geocode and customize point data in the linked Google Sheet, upload images and other map data to your GitHub repo, and add scanned background map layers if desired.
 
-- E) Geocode locations and customize new markers in the Points tab.  RENAME
-- F) RENAME*****
+- E) Add text, media, markers, and geocode locations in the Google Sheet *Chapters* tab.
+- F) Optional: Add links for scanned map or GeoJSON boundary overlays.
 
 In the third part, you have two options to finalize your map before widely sharing it online:
 
@@ -293,116 +302,137 @@ In the third part, you have two options to finalize your map before widely shari
 - OR
 - H) Get your own Google Sheets API Key to insert into the code.
 
-To solve problems, see the [Fix Common Mistakes](fix.html) section of the appendix.
+If any problems arise, see the [Fix Common Mistakes](fix.html) section of the appendix.
 
-**START AGAIN HERE**
+TODO DISCUSS with Amelia: Steps A-B-C-D are nearly identical to those in the prior section, but the links and screenshots are different. I'm fine with repeating this material because it might confuse some readers if we told them to "go do ABCD above but use different links." OK with you?
 
-#### A) Fork (copy) the code template and publish your version with GitHub Pages {-}
+#### A) Copy the GitHub template and publish your version with GitHub Pages {-}
 
-1) Right-click to open this GitHub code template in a new tab: https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets
+1. Right-click to open this GitHub code template in a new tab: https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets
 
-2) In the upper-right corner of the code template, sign in to your free GitHub account
+2. In the upper-right corner of the code template, sign in to your free GitHub account.
 
-3) In the upper-right corner, click Fork to copy the template (also called a code repository, or repo) into your own account.
-The web address (URL) of the new copy in your account will follow this format:
-```
-https://github.com/USERNAME/leaflet-storymaps-with-google-sheets
-```
+3. In the upper-right corner, click the green *Use this template* button to make a copy of the repository in your GitHub account. On the next screen, name your repo `leaflet-storymaps-with-google-sheets` or choose a different meaningful name in all lower-case. Click the *Create repository from template* button. Your copy of the repo will follow this format:
 
-Reminder: You can only fork a GitHub repo **one time**. If needed, see how to make a second copy in the [Create a New Repo in GitHub](create-repo.html) chapter in this book.
+`https://github.com/USERNAME/leaflet-storymaps-with-google-sheets`
 
-4) In your new copy of the code repo, click on Settings, scroll down to the GitHub Pages area, select Main, and Save. This publishes your code to a live map on a public website that you control.
+4. In your new copy of the code repo, click the upper-right *Settings* button and scroll way down to the GitHub Pages area. In the drop-down menu, change *Source* from *None* to *Main*, keep the default */(root)* setting, and press *Save* as shown in Figure \@ref(fig:leaflet-github-pages-main3). This step tells GitHub to publish a live version of your map on the public web, where anyone can access it in their browser, if they have the web address.
 
-5) Scroll down to GitHub Pages section again, and copy the link to your published web site, which will follow this format:
-```
-https://USERNAME.github.io/leaflet-storymaps-with-google-sheets
+(ref:leaflet-github-pages-main3) In *Settings*, go to *GitHub Pages*, switch the source from *None* to *Main*, and *Save*.
+
+```{r leaflet-github-pages-main3, out.width=300, fig.cap="(ref:leaflet-github-pages-main3)"}
+knitr::include_graphics("images/13-leaflet/leaflet-github-pages-main.png")
 ```
 
-6) Scroll up to the top, and click on your repo name to go back to its main page.
+5. Scroll down to GitHub Pages section again, and copy the link to your published web site, which will appear in this format:
 
-7) At the top level of your repo main page, click on README.md, and click the pencil icon to edit this file, written in easy-to-read Markdown code.
+`https://USERNAME.github.io/leaflet-maps-with-google-sheets`
 
-8) Delete the link to the current live site, and paste in the link to YOUR site. Scroll down and Commit to save your edits.
+6. Scroll up to the top, and click on your repo name to go back to its main page.
 
-9) On your repo main page, right-click the link to your live map to open in a new tab. **Be patient** during busy periods on GitHub, when your website may take up to 1 minute to appear the first time.
+7. At the top level of your repo main page, click on README.md, and click the pencil icon to edit this file.
 
-#### B) File > Make a Copy of Google Sheet template, Share, and File > Publish {-}
+8. Delete the link to the *our* live site, as shown in Figure \@ref(fig:storymap-readme-link-top), and paste in the link to *your* published site. Scroll down to *Commit* your changes.
 
-1) Right-click to open this Google Sheets template in a new tab: https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/
+(ref:storymap-readme-link-top) Edit your README file to replace the link to *our* site with the link to *your* site.
 
-2) Sign into your Google account
+```{r storymap-readme-link-top, fig.cap="(ref:storymap-readme-link-top)"}
+knitr::include_graphics("images/13-leaflet/storymap-readme-link-top.png")
+```
 
-3) File > Make a Copy of the Google Sheet template to your Google Drive
+9. On your repo main page, right-click the link to open your live map in a new tab. *Be patient* during busy periods on GitHub, when your website may take up to 1 minute to appear for the first time.
 
-4) Click the blue Share button, click Advanced, click to change Private to Anyone with the link > Can View the Sheet. This will make your public data easier to view in your map.
+#### B) File > Make a Copy of Google Sheet template, Share, and Publish {-}
 
-5) File > Publish the Link to your Google Sheet to the public web, so the Leaflet map code can read it.
+1. Open this [Google Sheets template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk3SlNlQ6MjlRFM/) in a new tab.
 
-![Screenshot: File > Publish the link to your Google Sheet](images/13-leaflet/lmwgs-file-publish.png)
+2. Sign into your Google account, and select *File > Make a Copy* to save your own version of this Google Sheet on your Google Drive.
 
-6) At the top of your browser, copy your Google Sheet web address or URL (which usually ends in `...XYZ/edit#gid=0`). Do NOT copy the published URL (which usually ends in `...XYZ/pubhtml`).
+3. Click the blue *Share* button, and click *Change to anyone with the link*, then click *Done*. This publicly shares your map data, which is required to make this template work.
 
-![Screenshot: Copy the Google Sheet URL, not the Publish URL](images/13-leaflet/lmwgs-copy-sheet-url-not-pub-url.png)
+4. Go to *File > Publish to the Web*, and click the green *Publish* button to publish the entire document, so that the Leaflet code can read it. Then click the upper-right *X* symbol to close this window.
 
-#### C) Paste your Google Sheet URL in two places in your GitHub repo {-}
+5. At the top of your browser, copy your Google Sheet address or URL (which usually ends in `...XYZ/edit#gid=0`). Do *NOT* copy the *Published to the web* address (which usually ends in `...XYZ/pubhtml`), as shown in Figure \@ref(fig:sheets-publish2).
 
-1) First, connect your Google Sheet directly to your Leaflet Map code. In your Github code repo, click to open this file: `google-doc-url.js`
+(ref:sheets-publish2) Copy the Google Sheet address at the top of the browser, NOT the *Publish to the web* address.
 
-2) Click the pencil symbol to edit the file.
+```{r sheets-publish2, out.width=500, fig.cap="(ref:sheets-publish2)"}
+ knitr::include_graphics("images/13-leaflet/sheets-publish-annotated.png")
+```
 
-3) Paste your Google Sheet URL into the code to replace the current URL. Do not delete the single-quotation marks or semicolon.
+#### C) Paste your Google Sheet browser address in two places in your GitHub repo {-}
+Our next task is to link your published Google Sheet to your Leaflet code in GitHub, so that it can pull your data from the Sheet to display on the map.
 
-4) Scroll to bottom of page and press Commit to save your changes. Now the Leaflet Map code can locate your published Google Sheet.
+1. At the top of your GitHub repo, click to open the file named `google-doc-url.js`, and click the pencil symbol to edit it.
 
-5) Next, let's paste your Google Sheet URL in a second place to keep track of it. Go to the README.md file in your GitHub repo, click to open and edit, and paste your Google Sheet web address to replace the existing link near the top. Commit to save your changes.
+2. Paste *your* Google Sheet address or URL (which usually ends in `...XYZ/edit#gid=0`) to replace *our* existing URL, as shown in Figure \@ref(fig:google-doc-url2). Be careful *NOT* to erase the single quotation marks or the semicolon at the end. Scroll down to *Commit* your changes. See separate instructions about the Google API key further below.
 
+(ref:google-doc-url2) Paste in *your* Google Sheet URL to replace *our* URL.
 
-#### D) Modify your map settings in the Options tab and test your live map {-}
+```{r google-doc-url2, fig.cap="(ref:google-doc-url2)"}
+ knitr::include_graphics("images/13-leaflet/google-doc-url.png")
+```
 
-In the top-level of your GitHub repo, test the new links to your map and your Google Sheet to make sure they work and point to your versions.
+3. Also, let's paste your Google Sheet URL in second place to help you keep track of it. In your GitHub repo, click the README.md file to open it, click the pencil symbol to edit it, and paste *your* Google Sheet URL to replace *our* existing URL, as shown in Figure \@ref(fig:storymap-readme-link-bottom). Scroll down to *Commit* your changes.
 
-** TO DO - redo GIF **
+(ref:storymap-readme-link-bottom) Edit your README file to replace the link to *our* site with the link to *your* site.
 
-In your linked Google Sheet, go to the Options Tab and modify these items:
+```{r storymap-readme-link-bottom, fig.cap="(ref:storymap-readme-link-bottom)"}
+knitr::include_graphics("images/13-leaflet/storymap-readme-link-bottom.png")
+```
 
-1) Map Title -- insert your own title
+Feel free to remove any other content on the README page that you do not wish to keep.
 
-2) Map Subtitle -- insert your own version
+#### D) Update your Google Sheet *Options* tab info and refresh your live map {-}
 
-3) Author Name -- insert your own name, or first name, or initials (will be public)
+Now that your published Google Sheet is linked to your live map, go to the *Options* tab to update any of these items:
 
-4) Author Email or Website -- insert your own (will be public), or delete the current name to make it blank
+- Storymap Title
+- Storymap Subtitle -- with code for downward arrow: `<br><small>Scroll down <i class='fa fa-chevron-down'></i></small>`
+- Author Name
+- Author Email or Website
+- Author GitHub Repo Link
 
-Open the link to your live map in a new browser tab and refresh to see your changes.
+Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
 
-#### E) Geocode locations and customize new markers in the Points tab {-}
+#### E) Add text, media, markers, and geocode locations in the Chapters tab. {-}
+Now we can start to add new content to your map. In the *Chapters* tab of your Google Sheet, you'll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do *not* delete or rename the column headers, since the Leaflet code looks for these specific names.
 
-In your new map, our next goal is to add and modify the appearance of a new set of point markers, based on new addresses that you will enter and geocode.
+- Chapter: The title appearing at the top of each section in the scrolling narrative.
 
-In the Points tab of your Google Sheet:
+- Media Link: You have several options to display either an image, audio, or video in each chapter. For images, you can insert an external link to an online service (such as Flickr), as long as it begins with `https` (secure) and ends with either `.jpg` or `.png`. You can also insert a Youtube video link. Or you can upload an image file into the `media` subfolder in your GitHub repo, as shown in Figure \@ref(fig:storymap-media-upload), and enter the pathname in the Google Sheet in this format: `media/your-file-name.jpg` or `...png`. Similarly, you can upload an audio file in `.mp3` (recommended) or `.ogg` or `.wav` format.
 
-1) Do NOT delete or rename any column headers. However, you have the option to add new column headers to display in your map table.
+(ref:storymap-media-upload) In GitHub, click to open the `media` folder and *Add file - Upload files*.
 
-2) Geocode your new data inside your Google Sheet by dragging your cursor to select 6 columns of data: Location - Latitude - Longitude - Found - Quality - Source
+```{r storymap-media-upload, fig.cap="(ref:storymap-media-upload)"}
+knitr::include_graphics("images/13-leaflet/storymap-media-upload.png")
+```
 
-3) In the Geocoder menu that appears in this Google Sheet template, select one of the geocoding services. If one service cannot locate your data, try the other. Always inspect the accuracy of the Found column.
+Warning: Media file pathnames are case-sensitive, and we recommend using *all lowercase characters*, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you *reduce the size* of any images to 600x400 pixels or less prior to uploading, to make sure your storymap scrolls quickly.
 
-Open the link to your live map in a new browser tab and refresh to see your changes. If your new markers appear correctly, then delete the existing rows that came with this template.
+Tip: You can display multiple images for one location by creating a series of rows, but only list the *Chapter* and *Location* information in the first row of the series, and leave it blank for the others.
 
-#### TODO {-}
-Add documentation for new features added in 2020
+- Media Credit: To display text about the origin of the media, such as "Source:...".
+- Media Credit Link: Add a direct link to the source info in the Media Credit text above.
+- Description: Designed to display about a paragraph or less of text for the Chapter. You may insert HTML tags to add line breaks (such as `<br>`), or to open external links in a new tab, such as `<a href='https://www.w3schools.com/' target='_blank'>Visit W3Schools</a>`. Learn about HTML syntax at [W3Schools](https://www.w3schools.com/html/html_links.asp).
 
-Add links to your text in the Google Sheet
+- Zoom: Set a low number to see continents, or a high number for city streets, typically on a scale from 1 to 18.
+- Marker: Select either `Numbered` (the default) or `Plain` or `Hidden`. The latter works best when assigning several chapters to one location (to avoid stacking markers on top of each other) or when zooming out for a broader view (without highlighting one specific location).
+- Marker Color: Insert any standard web color name such as `blue` or `darkblue`, or insert a web color code such as `#775307` or `rgba(200,100,0,0.5)`. See options at [W3Schools Color Names](https://www.w3schools.com/colors/colors_names.asp).
 
-Add line breaks to your text in the Google Sheet
+- Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on](geocode.html) that we introduced in Chapter 3 to *create a separate tab in your Google Sheet* where you can insert your Location data, as shown in Figure \@ref(fig:geocode-details3), and paste the results into your Latitude and Longitude columns.
 
-TODO to code: Add Scroll Down text and symbol after the subtitle
+(ref:geocode-details3) Use the *Geocoding* tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude.
 
-Markers
+```{r geocode-details3, fig.cap="(ref:geocode-details3)"}
+ knitr::include_graphics("images/13-leaflet/geocode-details.png")
+```
 
-I added a new column to the Chapter tab called “Marker”. It has a dropdown with currently three options: Numerated (defaults to that, even if empty value), Plain (with no number), and No marker. The latter is what you want.
-It can be potentially extended to colours, types of markers, etc.
-https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L121-L131
+Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
+
+#### F) Optional: Add links for scanned map or GeoJSON boundary overlays {-}
+
+TODO **START AGAIN HERE**
 
 Overlay GeoJSONs
 
@@ -416,12 +446,6 @@ color: feature.properties.COLOR || props.color || 'silver’,
 Will first attempt to extract the color from the COLOR property of each geoJson feature (useful for choropleth). If not found, it tries the GeoJSON Feature Properties “color”. If that is not set, it uses silver.
 https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L288-L316
 
-Data in local CSV files
-
-If googleDocURL variable does not exist (eg you delete the file) or is an empty string, it reads two spreadsheets: Options.csv and Chapters.csv from the /csv folder.
-Otherwise, it reads from the google sheet.
-https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35
-When data is read from a .CSV, it links that in the attribution (https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396)
 
 Modify your Style Sheet
 
@@ -434,6 +458,17 @@ To add a horizontal line, you need to be a bit creative (see screenshot attached
 `<span style="display:block;width:100%;height:1px;background-color: silver; margin: 20px 0;"></span>`
 
 When you copy-paste this snippet, the straight quotation marks do not turn into curly marks, otherwise it won’t work.
+
+
+
+
+Data in local CSV files
+
+If googleDocURL variable does not exist (eg you delete the file) or is an empty string, it reads two spreadsheets: Options.csv and Chapters.csv from the /csv folder.
+Otherwise, it reads from the google sheet.
+https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L13-L35
+When data is read from a .CSV, it links that in the attribution (https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets/blob/master/scripts/storymap.js#L393-L396)
+
 
 
 Learn more:

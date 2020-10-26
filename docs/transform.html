@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-23" />
+<meta name="date" content="2020-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
-<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About Open-Access Web Edition</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction: Why Data Visualization?</a>
 <ul>
@@ -276,10 +276,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="geojson.html"><a href="geojson.html"><i class="fa fa-check"></i>GeoJSON and Geospatial Data</a></li>
+<li class="chapter" data-level="" data-path="find-geojson.html"><a href="find-geojson.html"><i class="fa fa-check"></i>Find GeoJSON Boundary Files</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Data Bias</a>
@@ -337,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="transform" class="section level1" number="14">
 <h1><span class="header-section-number">Chapter 14</span> Transform Your Map Data</h1>
-<p>TODO: clean up intro</p>
+<p>TODO: clean up intro to raise major concepts about different types of data you can place on an interactive map. Then refer to the first two sections to transform points only (bulk geocode and pivot points to polygons), before broadening to GeoJSON and other geospatial data formats, and editor tools, and finally how MapWarper transforms raster data.</p>
 <p>All maps, including interactive web maps, are made up of different layers.
 These are background basemaps, colored or shaded polygons (also known as <em>choropleth</em> layers), lines,
 and point data that are often represented as markers.</p>
@@ -347,10 +348,10 @@ to create layers (files) that you can use in your favorite mapping tools.</p>
 introduce various file formats (most notably GeoJSON) and talk about geospatial data in general.
 You will learn that map data can be raster and vector, that geospatial data consists of location
 and attribute components, and how GeoJSON is different from Shapefiles and other geographical data formats.</p>
-<p>With our tutorials, you will learn how to convert or draw your own layer of map polygons or polylines on top of satellite imagery
+<p>With our tutorials, you will learn how to <a href="find-geojson.html">find geographic boundaries in GeoJSON format</a>, convert or draw your own layer of map polygons or polylines on top of satellite imagery
 using <a href="geojsonio.html">the GeoJson.io tool</a>, and also how to edit geospatial data and join it with spreadsheet data using <a href="mapshaper.html">the Mapshaper tool</a>.
 Both are powerful, web-based open-source geodata tools that for common tasks can substitute for more complex geographic information system tools, such as ArcGIS, a Windows-only de-facto industry standard in geospatial software, or QGIS, a free and open-source alternative available for Mac, Linux, and Windows.
-Finally, you’ll also learn how to georectify a digitized map to display as a background overlay using <a href="mapwarper.html">the MapWarper tool</a>.</p>
+Finally, you’ll also learn how to georeference a high-quality static image of a map, and transform it into interactive map tiles that you can display on top of a zoomable Leaflet map, using <a href="mapwarper.html">the MapWarper tool</a>.</p>
 <p>By the end of this chapter, you should feel much more confident navigating the
 overwhelming world of geospatial data.</p>
 </div>

@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-23" />
+<meta name="date" content="2020-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="convert-geojson.html"/>
+<link rel="prev" href="find-geojson.html"/>
 <link rel="next" href="mapshaper.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
-<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About Open-Access Web Edition</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction: Why Data Visualization?</a>
 <ul>
@@ -276,10 +276,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="geojson.html"><a href="geojson.html"><i class="fa fa-check"></i>GeoJSON and Geospatial Data</a></li>
+<li class="chapter" data-level="" data-path="find-geojson.html"><a href="find-geojson.html"><i class="fa fa-check"></i>Find GeoJSON Boundary Files</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Data Bias</a>
@@ -357,7 +358,7 @@ If you don’t have a geospatial file, download <a href="data/hartford-parks.kml
 in KML format. If GeoJson.io was able to recognize and import the file,
 you will see a green popup message in the upper-left corner saying how many
 features (in case of Hartford parks, only polygons) were imported.
-Figure <a href="geojsonio.html#fig:geojson-io-import">14.6</a> shows us that 62 features were imported from
+Figure <a href="geojsonio.html#fig:geojson-io-import">14.7</a> shows us that 62 features were imported from
 the sample Hartford parks file. You can see that the polygons appeared
 on top of the Mapbox world layer.</p>
 <p>Note: If GeoJson.io couldn’t import your file, you will see a red
@@ -367,7 +368,7 @@ tool, such as Mapshaper or QGIS, to convert your file to GeoJSON.</p>
 <div class="figure"><span id="fig:geojson-io-import"></span>
 <img src="images/14-transform/geojson-io-import.png" alt="GeoJson.io successfully imported Hartford parks KML file."  />
 <p class="caption">
-Figure 14.6: GeoJson.io successfully imported Hartford parks KML file.
+Figure 14.7: GeoJson.io successfully imported Hartford parks KML file.
 </p>
 </div>
 <p>You can now save your file to GeoJSON. Go to <em>Save &gt; GeoJSON</em> to download
@@ -379,13 +380,13 @@ a converted GeoJSON file to your computer.</p>
 columns into a GeoJSON file of point features. Each row in the spreadsheet
 becomes its own point, and all columns other than <em>lat</em> and <em>lon</em>
 become <em>attributes</em> (or <em>properties</em>) of point features. An example of
-such spreadsheet is shown in Figure <a href="geojsonio.html#fig:geojson-io-csv-data">14.7</a>. You
+such spreadsheet is shown in Figure <a href="geojsonio.html#fig:geojson-io-csv-data">14.8</a>. You
 can <a href="data/hartford-and-suburbs.csv">download it</a> for the exercise.</p>
 
 <div class="figure"><span id="fig:geojson-io-csv-data"></span>
 <img src="images/14-transform/geojson-io-csv-data.png" alt="A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features."  />
 <p class="caption">
-Figure 14.7: A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features.
+Figure 14.8: A spreadsheet with lat/lon columns can be transformed into a GeoJSON with point features.
 </p>
 </div>
 <ol style="list-style-type: decimal">
@@ -418,7 +419,7 @@ You can also log into GeoJson.io with your GitHub account and save directly to y
 <iframe src="images/14-transform/dataviz-geojsonio-640.gif" width="672" height="466px">
 </iframe>
 <p class="caption">
-Figure 14.8: A spreadsheet with coordinates columns can be transformed into a GeoJSON with point features.
+Figure 14.9: A spreadsheet with coordinates columns can be transformed into a GeoJSON with point features.
 </p>
 </div>
 </div>
@@ -434,13 +435,13 @@ to it.</p>
 to Satellite.</li>
 <li>In the upper-right corner of the map, use the Search tool to find the area you’re interested in mapping.
 For this exercise, we will use tennis courts at Trinity College, Hartford, as shown in
-Figure <a href="geojsonio.html#fig:geojson-io-draw">14.9</a>.</li>
+Figure <a href="geojsonio.html#fig:geojson-io-draw">14.10</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:geojson-io-draw"></span>
 <img src="images/14-transform/geojson-io-draw.png" alt="Use drawing tools to create points, lines, and polygons in GeoJson.io."  />
 <p class="caption">
-Figure 14.9: Use drawing tools to create points, lines, and polygons in GeoJson.io.
+Figure 14.10: Use drawing tools to create points, lines, and polygons in GeoJson.io.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -477,7 +478,7 @@ to convert and modify geospatial files.</p>
           </div>
         </div>
       </div>
-<a href="convert-geojson.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="find-geojson.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="mapshaper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

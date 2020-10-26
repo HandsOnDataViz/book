@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-23" />
+<meta name="date" content="2020-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
-<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About Open-Access Web Edition</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction: Why Data Visualization?</a>
 <ul>
@@ -276,10 +276,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="geojson.html"><a href="geojson.html"><i class="fa fa-check"></i>GeoJSON and Geospatial Data</a></li>
+<li class="chapter" data-level="" data-path="find-geojson.html"><a href="find-geojson.html"><i class="fa fa-check"></i>Find GeoJSON Boundary Files</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Data Bias</a>
@@ -338,8 +339,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="google-sheets-api-key" class="section level2 unnumbered" number="">
 <h2>Get Your Google Sheets API Key</h2>
 <p>After you’ve created your own version of <a href="leaflet-maps-with-google-sheets.html">Leaflet Maps with Google Sheets</a> or <a href="leaflet-storymaps-with-google-sheets.html">Leaflet Storymaps with Google Sheets</a>, there are two ways to finalize your map, as described above: either save your Google Sheet tabs in CSV format, or get your own Google Sheets API key and paste it into your Leaflet code on GitHub. You’ll learn about the latter method in this section.</p>
-<p>Google requires a API (application programming interface) key to allow your computer code to read data from your Google Sheets, beginning with version 4 in September 2020. (If you created your own Leaflet Maps or Storymaps with Google Sheets using our template prior to September 2020, and you want to continue to pull data from your Google Sheet, you’ll need to update your code to make sure it keeps working <strong>TODO: explain pull request</strong>.) Google requires this API key to <a href="https://developers.google.com/sheets/api/limits">maintain reasonable limits</a> on use of its services. For Google Sheets, the limit is 500 requests per 100 seconds per project, and 100 requests per 100 seconds per user. There is no daily usage limit.</p>
-<p>You can get your own API key for free by following the steps below. Overall, you will create and name your Google Cloud project, enable the Google Sheets API to allow a computer to read data from your Google Sheet, copy your new API key, and paste it into the Leaflet code in place of our key.</p>
+<p>Beginning in January 2021, Google Sheets version 4 requires a API (application programming interface) key to allow code to read your data, in order to <a href="https://developers.google.com/sheets/api/limits">maintain reasonable limits</a> on use of its services. For Google Sheets, the limit is 500 requests per 100 seconds per project, and 100 requests per 100 seconds per user. There is no daily usage limit.</p>
+<p>You can get your own free Google Sheets API key by following the steps below. Overall, you will create and name your Google Cloud project, enable the Google Sheets API to allow a computer to read data from your Google Sheet, copy your new API key, and paste it into the Leaflet code in place of our key.</p>
 <p>Before you begin:</p>
 <ul>
 <li>You need a personal Google account, <em>not</em> a Google Suite account issued by your school or business.</li>
@@ -348,96 +349,97 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <ol style="list-style-type: decimal">
 <li><p>Go to the Google Developers Console at <a href="https://console.developers.google.com/" class="uri">https://console.developers.google.com/</a> and log in to your Google account. Google may ask you to identify your country and agree to its terms of service.</p></li>
-<li><p>Click on <em>Create a Project</em> on the opening screen, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-create">13.8</a>. Or alternatively, go to the upper-left drop-down menu to <em>Select a project &gt; New project</em>.</p></li>
+<li><p>Click on <em>Create a Project</em> on the opening screen, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-create">13.26</a>. Or alternatively, go to the upper-left drop-down menu to <em>Select a project &gt; New project</em>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:google-api-create"></span>
 <img src="images/13-leaflet/google-api-create.png" alt="Select Create a Project or use the menu to select a new project." width="600" />
 <p class="caption">
-Figure 13.8: Select <em>Create a Project</em> or use the menu to select a new project.
+Figure 13.26: Select <em>Create a Project</em> or use the menu to select a new project.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>In the next screen, give your new project a meaningful short name to remind you of its purpose, such as <code>handsondataviz</code>. You do not need to create an organization or parent folder. Then click <em>Create</em>, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-name">13.9</a>.</li>
+<li>In the next screen, give your new project a meaningful short name to remind you of its purpose, such as <code>handsondataviz</code>. You do not need to create an organization or parent folder. Then click <em>Create</em>, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-name">13.27</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:google-api-name"></span>
 <img src="images/13-leaflet/google-api-name.png" alt="Give your project a meaningful short name." width="450" />
 <p class="caption">
-Figure 13.9: Give your project a meaningful short name.
+Figure 13.27: Give your project a meaningful short name.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>In the next screen, press the <em>+ Enable APIs and Services</em> at the top of the menu, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-enable">13.10</a>. Make sure that your new project name appears near the top.</li>
+<li>In the next screen, press the <em>+ Enable APIs and Services</em> at the top of the menu, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-enable">13.28</a>. Make sure that your new project name appears near the top.</li>
 </ol>
 
 <div class="figure"><span id="fig:google-api-enable"></span>
-<img src="images/13-leaflet/google-api-enable.png" alt="Press the + Enable APIs and Services button."  />
+<img src="images/13-leaflet/google-api-enable.png" alt="Press the + Enable APIs and Services button." width="500" />
 <p class="caption">
-Figure 13.10: Press the <em>+ Enable APIs and Services</em> button.
+Figure 13.28: Press the <em>+ Enable APIs and Services</em> button.
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>In the next screen, enter <em>Google Sheets</em> into the search bar, and select this result, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-search">13.11</a>.</li>
+<li>In the next screen, enter <em>Google Sheets</em> into the search bar, and select this result, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-search">13.29</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:google-api-search"></span>
-<img src="images/13-leaflet/google-api-search.png" alt="Search for Google Sheets and select this result."  />
+<img src="images/13-leaflet/google-api-search.png" alt="Search for Google Sheets and select this result." width="500" />
 <p class="caption">
-Figure 13.11: Search for <em>Google Sheets</em> and select this result.
+Figure 13.29: Search for <em>Google Sheets</em> and select this result.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>In the next screen, select the <em>Enable</em> button to turn on the Google Sheets API for your project, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-select">13.12</a>.</li>
+<li>In the next screen, select the <em>Enable</em> button to turn on the Google Sheets API for your project, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-select">13.30</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:google-api-select"></span>
 <img src="images/13-leaflet/google-api-select.png" alt="Select the Enable button for Google Sheets API." width="350" />
 <p class="caption">
-Figure 13.12: Select the <em>Enable</em> button for Google Sheets API.
+Figure 13.30: Select the <em>Enable</em> button for Google Sheets API.
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
-<li>In the left sidebar menu, click <em>Credentials</em>, then click <em>+ Create Credentials</em> and select <em>API key</em>, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-credentials">13.13</a>.</li>
+<li>In the left sidebar menu, click <em>Credentials</em>, then click <em>+ Create Credentials</em> and select <em>API key</em>, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-credentials">13.31</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:google-api-credentials"></span>
 <img src="images/13-leaflet/google-api-credentials.png" alt="Select Credentials - Create Credentials - API key."  />
 <p class="caption">
-Figure 13.13: Select <em>Credentials - Create Credentials - API key</em>.
+Figure 13.31: Select <em>Credentials - Create Credentials - API key</em>.
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>In the next screen, the console will generate your API key. Copy it, then press <em>Restrict key</em>, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-key">13.14</a>.</li>
+<li>In the next screen, the console will generate your API key. Copy it, then press <em>Restrict key</em>, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-key">13.32</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:google-api-key"></span>
 <img src="images/13-leaflet/google-api-key-annotated.png" alt="Copy your API key and press Restrict key." width="500" />
 <p class="caption">
-Figure 13.14: Copy your API key and press <em>Restrict key</em>.
+Figure 13.32: Copy your API key and press <em>Restrict key</em>.
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>In the new window, under <em>API restrictions</em>, choose the <em>Restrict key</em> radio button. In the dropdown that appears, choose <em>Google Sheets API</em>, then click <em>Save</em>, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-restrict">13.15</a>.</li>
+<li>In the new window, under <em>API restrictions</em>, choose the <em>Restrict key</em> radio button. In the dropdown that appears, choose <em>Google Sheets API</em>, then click <em>Save</em>, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-restrict">13.33</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:google-api-restrict"></span>
 <img src="images/13-leaflet/google-api-restrict.png" alt="Choose API restrictions - Restrict key - Google Sheets API" width="600" />
 <p class="caption">
-Figure 13.15: Choose <em>API restrictions - Restrict key - Google Sheets API</em>
+Figure 13.33: Choose <em>API restrictions - Restrict key - Google Sheets API</em>
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>In your Leaflet map code on your GitHub repo, open the <code>google-doc-url.js</code> file, click the pencil symbol to edit it, and paste in <em>your</em> Google Sheets API key to replace <em>our</em> key, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-paste">13.16</a>. Be careful not to erase the single-quote marks or the semicolon. Scroll down to <em>Commit</em> your changes.</li>
+<li>In your Leaflet map code on your GitHub repo, open the <code>google-doc-url.js</code> file, click the pencil symbol to edit it, and paste in <em>your</em> Google Sheets API key to replace <em>our</em> key, as shown in Figure <a href="google-sheets-api-key.html#fig:google-api-paste">13.34</a>. Be careful not to erase the single-quote marks or the semicolon. Scroll down to <em>Commit</em> your changes.</li>
 </ol>
 
 <div class="figure"><span id="fig:google-api-paste"></span>
 <img src="images/13-leaflet/google-api-paste-annotated.png" alt="Paste in your Google Sheets API key to replace our key."  />
 <p class="caption">
-Figure 13.16: Paste in <em>your</em> Google Sheets API key to replace <em>our</em> key.
+Figure 13.34: Paste in <em>your</em> Google Sheets API key to replace <em>our</em> key.
 </p>
 </div>
 <p>You might receive a notification from GitHub stating that you have an exposed API key, but don’t worry. This key can only be used with Google Sheets, you received it for free, and you did not attach any billing information to it, so Google cannot charge you for its use.</p>
+<p>TODO above: Test our instructions on a new Google account to fix what reviewer Erica H. described here: I did notice when you get to Step 7, they ask you what kind of credentials you’ll need, where you’ll be calling the API from, and the kind of data you will be accessing. <a href="images/13-leaflet/google-api-add-credentials">See screenshots attached</a>. You might want to add a note about this in your book chapter in case folks don’t know what to select if they are taken to this step automatically. I ended up clicking refresh accidentally and then I saw the + Create Credentials&gt;API key dropdown menu as shown in your chapter instructions and I was able to generate my Google API key without entering those credential specifications</p>
 <p>Now that you’ve learned how to create a Google Sheets API key to use with Leaflet Maps with Google Sheets or Leaflet Storymaps with Google Sheets, in the next sections you’ll learn more about other types of Leaflet map templates.</p>
 </div>
             </section>

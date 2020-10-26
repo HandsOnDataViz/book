@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Convert to GeoJSON format | Hands-On Data Visualization</title>
+  <title>GeoJSON and Geospatial Data | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Convert to GeoJSON format | Hands-On Data Visualization" />
+  <meta property="og:title" content="GeoJSON and Geospatial Data | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Convert to GeoJSON format | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="GeoJSON and Geospatial Data | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-23" />
+<meta name="date" content="2020-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="pivot-point-to-polygon.html"/>
-<link rel="next" href="geojsonio.html"/>
+<link rel="next" href="find-geojson.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
-<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About Open-Access Web Edition</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction: Why Data Visualization?</a>
 <ul>
@@ -276,10 +276,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="geojson.html"><a href="geojson.html"><i class="fa fa-check"></i>GeoJSON and Geospatial Data</a></li>
+<li class="chapter" data-level="" data-path="find-geojson.html"><a href="find-geojson.html"><i class="fa fa-check"></i>Find GeoJSON Boundary Files</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Data Bias</a>
@@ -335,14 +336,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="convert-geojson" class="section level2 unnumbered" number="">
-<h2>Convert to GeoJSON format</h2>
+<div id="geojson" class="section level2 unnumbered" number="">
+<h2>GeoJSON and Geospatial Data</h2>
 <p>Geospatial data comes in an overwhelming number of file formats.
 We will tell you about a few most common ones so that you have
 a general idea of what tools you can use to work with them.
 But before we do that, let’s talk about the basics of geospatial (map) data.</p>
-<div id="about-geospatial-data" class="section level4 unnumbered" number="">
-<h4>About geospatial data</h4>
 <p>The first thing to know about geospatial data is that it
 consists of two components, <em>location</em> and <em>attribute</em>.
 When you use Google Maps to search for a restaurant, you get a red
@@ -352,8 +351,8 @@ are your location component.
 The name of the restaurant, its human-friendly address, and guest reviews
 are the attributes, which bring value to your location data.</p>
 <p>Second, geospatial data can be <em>raster</em> or <em>vector</em>,
-as illustrated in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">14.4</a>.
-Raster data, as shown in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">14.4</a>a, is a grid of cells (“pixels”) of a certain size
+as illustrated in Figure <a href="geojson.html#fig:geospatial-raster-vector">14.4</a>.
+Raster data, as shown in Figure <a href="geojson.html#fig:geospatial-raster-vector">14.4</a>a, is a grid of cells (“pixels”) of a certain size
 (for example, 1 meter by 1 meter). For example, satellite images
 of the Earth that you see on Google Maps are raster geospatial data.
 Each pixel contains the color of Earth that satellite cameras
@@ -362,6 +361,7 @@ data (images) to create outlines of buildings, lakes, roads,
 and other objects. These outlines become vector data. For example, most of
 <a href="https://www.openstreetmap.org">OpenStreetMap</a> was built
 by volunteers tracing outlines of objects from satellite images.</p>
+<p>TODO: Use this opportunity to briefly show OSM editor and make a pitch for people to volunteer for this crowdsourced map of the world…</p>
 
 <div class="figure"><span id="fig:geospatial-raster-vector"></span>
 <img src="images/14-transform/geospatial-raster-vector-annotated.png" alt="Geospatial data can be raster or vector."  />
@@ -370,7 +370,7 @@ Figure 14.4: Geospatial data can be raster or vector.
 </p>
 </div>
 <p>In this book, we will focus on vector data, which is based on features, which can be
-points, lines, and polygons, as shown in Figure <a href="convert-geojson.html#fig:geospatial-raster-vector">14.4</a>b. Vector data can be
+points, lines, and polygons, as shown in Figure <a href="geojson.html#fig:geospatial-raster-vector">14.4</a>b. Vector data can be
 much more precise than raster data, because point coordinates
 can be expressed with precise decimals. In addition, vector
 data can contain as much extra <em>attribute</em> information about each object as desired,
@@ -379,8 +379,7 @@ whether it is the surface color (as is the case with satellite imagery), tempera
 Moreover, vector map files tend to be smaller in size than raster ones, which is important if you
 share files on the web.</p>
 <p>Let’s take a look at some of the most common vector file formats.</p>
-</div>
-<div id="geojson" class="section level4 unnumbered" number="">
+<div id="geojson-1" class="section level4 unnumbered" number="">
 <h4>GeoJSON</h4>
 <p><a href="https://geojson.org">GeoJSON</a> is a newer, popular open format for map data
 that comes in <code>.geojson</code> or <code>.json</code> files.
@@ -408,7 +407,7 @@ and shared in GeoJSON, you ensure you can use it on the web with nearly any mapp
 You can also be confident that other people will be able to use and extract data
 from the file without bulky and often expensive GIS software installed.</p>
 <p>Also, your GitHub repository will automatically display any GeoJSON files in a map view,
-like is shown in Figure <a href="convert-geojson.html#fig:geojson-github">14.5</a>.</p>
+like is shown in Figure <a href="geojson.html#fig:geojson-github">14.5</a>.</p>
 
 <div class="figure"><span id="fig:geojson-github"></span>
 <img src="images/14-transform/geojson-github.png" alt="GitHub can show previews of GeoJSON files stored in repositories."  />
@@ -479,7 +478,7 @@ and in other ways manipulate GeoJSON files.</p>
         </div>
       </div>
 <a href="pivot-point-to-polygon.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="geojsonio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="find-geojson.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

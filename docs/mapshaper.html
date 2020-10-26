@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-23" />
+<meta name="date" content="2020-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
-<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About Open-Access Web Edition</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction: Why Data Visualization?</a>
 <ul>
@@ -276,10 +276,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="geojson.html"><a href="geojson.html"><i class="fa fa-check"></i>GeoJSON and Geospatial Data</a></li>
+<li class="chapter" data-level="" data-path="find-geojson.html"><a href="find-geojson.html"><i class="fa fa-check"></i>Find GeoJSON Boundary Files</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Data Bias</a>
@@ -370,7 +371,7 @@ and drop them all together to the import area, or create a <code>.zip</code> arc
 of the browser window. There, you can see how many features each layer has, toggle their visibility,
 or delete them.</li>
 <li>To export, go to <em>Export</em> in the upper-right corner, and select a desired file format.
-The choice of export formats is shown in Figure <a href="mapshaper.html#fig:mapshaper-export">14.10</a>.
+The choice of export formats is shown in Figure <a href="mapshaper.html#fig:mapshaper-export">14.11</a>.
 As of July 2020, these are Shapefile, GeoJSON,
 TopoJSON (similar to GeoJSON, but with topographical data), JSON records, CSV,
 or SVG (Scalable Vector Graphics, for web and print). If you export more than one layer at a time,
@@ -381,7 +382,7 @@ all exported layers.</li>
 <div class="figure"><span id="fig:mapshaper-export"></span>
 <img src="images/14-transform/mapshaper-export.png" alt="You can use Mapshaper to quickly convert between geospatial file formats."  />
 <p class="caption">
-Figure 14.10: You can use Mapshaper to quickly convert between geospatial file formats.
+Figure 14.11: You can use Mapshaper to quickly convert between geospatial file formats.
 </p>
 </div>
 <p>Tip: Mapshaper doesn’t work with KML or KMZ files, but you can use <a href="#geojson.html">GeoJson.io</a> to convert these.</p>
@@ -389,7 +390,7 @@ Figure 14.10: You can use Mapshaper to quickly convert between geospatial file f
 <div id="edit-data-for-specific-polygons" class="section level4 unnumbered" number="">
 <h4>Edit data for specific polygons</h4>
 <p>You can edit attribute data of individual polygons (and also points and lines) in Mapshaper.
-Figure <a href="mapshaper.html#fig:mapshaper-edit">14.11</a> shows you how.</p>
+Figure <a href="mapshaper.html#fig:mapshaper-edit">14.12</a> shows you how.</p>
 <ol style="list-style-type: decimal">
 <li>Import the file whose polygon attributes you want to edit.</li>
 <li>Under the cursor tool, select <em>edit attributes</em>.</li>
@@ -403,7 +404,7 @@ choosing the desired file format.</li>
 <div class="figure"><span id="fig:mapshaper-edit"></span>
 <img src="images/14-transform/mapshaper-edit.png" alt="Use edit attributes tool (under Cursor tool) to edit attributes of polygons, lines, and points."  />
 <p class="caption">
-Figure 14.11: Use <em>edit attributes</em> tool (under Cursor tool) to edit attributes of polygons, lines, and points.
+Figure 14.12: Use <em>edit attributes</em> tool (under Cursor tool) to edit attributes of polygons, lines, and points.
 </p>
 </div>
 </div>
@@ -413,14 +414,14 @@ Figure 14.11: Use <em>edit attributes</em> tool (under Cursor tool) to edit attr
 data visualization projects where zoomed-out geographies are shown.
 Detailed boundaries are heavy, and may slow down your web maps.</p>
 <p>Consider two maps of the contiguous US states (also known as <em>the lower 48</em>,
-the term Ilya learned in 2018 while travelling in Alaska), shown in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.12</a>.
-The map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.12</a>a is more detailed and is about 230 kilobytes, but the map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.12</a>b
+the term Ilya learned in 2018 while travelling in Alaska), shown in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.13</a>.
+The map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.13</a>a is more detailed and is about 230 kilobytes, but the map in Figure <a href="mapshaper.html#fig:mapshaper-simplify-demo">14.13</a>b
 is only 37 kilobytes, 6 times smaller!</p>
 
 <div class="figure"><span id="fig:mapshaper-simplify-demo"></span>
 <img src="images/14-transform/mapshaper-simplify-demo-annotated.png" alt="Consider simplifying geometries with Mapshaper to make your web maps faster."  />
 <p class="caption">
-Figure 14.12: Consider simplifying geometries with Mapshaper to make your web maps faster.
+Figure 14.13: Consider simplifying geometries with Mapshaper to make your web maps faster.
 </p>
 </div>
 <p>To simplify map boundaries in Mapshaper, follow the steps below.</p>
@@ -429,7 +430,7 @@ Figure 14.12: Consider simplifying geometries with Mapshaper to make your web ma
 <li>Click the <em>Simplify</em> button in the upper-right corner. The Simplification menu will appear,
 where you can choose one of three methods. We recommend checking <em>prevent shape removal</em>, and leaving
 the default <em>Visvalingam / weighted area</em>. Click <em>Apply</em>.</li>
-<li>You will see a slider with <code>100%</code> appear on top (Figure <a href="mapshaper.html#fig:mapshaper-simplify">14.13</a>), replacing the layer selection dropdown.
+<li>You will see a slider with <code>100%</code> appear on top (Figure <a href="mapshaper.html#fig:mapshaper-simplify">14.14</a>), replacing the layer selection dropdown.
 Move the slider to the right and see the map simplify its shape as you go. Stop when you think
 the map looks appropriate (when the shapes are still recognizable).</li>
 <li>Mapshaper may suggest to repair line intersections in the upper-left corner. Click <em>Repair</em>.</li>
@@ -439,7 +440,7 @@ the map looks appropriate (when the shapes are still recognizable).</li>
 <div class="figure"><span id="fig:mapshaper-simplify"></span>
 <img src="images/14-transform/mapshaper-simplify.png" alt="Use Simplify &amp; Repair tools in Mapshaper."  />
 <p class="caption">
-Figure 14.13: Use Simplify &amp; Repair tools in Mapshaper.
+Figure 14.14: Use Simplify &amp; Repair tools in Mapshaper.
 </p>
 </div>
 <p>Tip: You may find the US shape a bit unusual and vertically “shrunk”.
@@ -451,16 +452,16 @@ which is more common.</p>
 <p>Mapshaper’s most powerful tools are available through the <em>Console</em>, which allows you to type commands for common map editing tasks.
 One of such tasks is to create an outline map by removing the internal boundaries. For example, you can dissolve
 state boundaries of the US map in the previous exercise to get the outline of the country, like is shown in
-Figure <a href="mapshaper.html#fig:mapshaper-dissolve">14.14</a>.</p>
+Figure <a href="mapshaper.html#fig:mapshaper-dissolve">14.15</a>.</p>
 
 <div class="figure"><span id="fig:mapshaper-dissolve"></span>
 <img src="images/14-transform/mapshaper-dissolve.png" alt="Mapshaper lets you dissolve boundaries to create an outline shape."  />
 <p class="caption">
-Figure 14.14: Mapshaper lets you dissolve boundaries to create an outline shape.
+Figure 14.15: Mapshaper lets you dissolve boundaries to create an outline shape.
 </p>
 </div>
 <p>Click the Console button, which opens a window to type in commands. Enter the command below, then press return (Enter).</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb40-1"><a href="mapshaper.html#cb40-1"></a>-dissolve</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb38-1"><a href="mapshaper.html#cb38-1"></a>-dissolve</span></code></pre></div>
 <p>You will see that internal boundaries became lighter color, and that’s Mapshaper’s way of saying they no longer exist.
 You can now export your outline shape.</p>
 </div>
@@ -483,13 +484,13 @@ If that is the case, use the <code>-filter-slivers</code> command to remove them
 </ol>
 <pre><code>-clip hartfordcounty-outline -filter-slivers</code></pre>
 <ol start="5" style="list-style-type: decimal">
-<li>Your Mapshaper state should look like pictured in Figure <a href="mapshaper.html#fig:mapshaper-clip">14.15</a>. You can now save the file on your computer using the <em>Export</em> button.</li>
+<li>Your Mapshaper state should look like pictured in Figure <a href="mapshaper.html#fig:mapshaper-clip">14.16</a>. You can now save the file on your computer using the <em>Export</em> button.</li>
 </ol>
 
 <div class="figure"><span id="fig:mapshaper-clip"></span>
 <img src="images/14-transform/mapshaper-clip.png" alt="When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature iteslf."  />
 <p class="caption">
-Figure 14.15: When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature iteslf.
+Figure 14.16: When clipping, make sure your active layer is the one being clipped (with many features), not the clipping feature iteslf.
 </p>
 </div>
 </div>
@@ -527,14 +528,14 @@ In case with our sample files, these would be town names which are stored in <co
 of the CSV file.</p>
 <ol start="5" style="list-style-type: decimal">
 <li>You will see a message in the console notifying you if join was performed successfully, or if Mapshaper encountered any errors.</li>
-<li>Use the <em>Cursor &gt; inspect attributes</em> tool to make sure you see CSV columns as fields of your polygons, like is shown in Figure <a href="mapshaper.html#fig:mapshaper-join">14.16</a>.</li>
+<li>Use the <em>Cursor &gt; inspect attributes</em> tool to make sure you see CSV columns as fields of your polygons, like is shown in Figure <a href="mapshaper.html#fig:mapshaper-join">14.17</a>.</li>
 <li>You can now save the file to your computer by clicking the <em>Export</em> button.</li>
 </ol>
 
 <div class="figure"><span id="fig:mapshaper-join"></span>
 <img src="images/14-transform/mapshaper-join.png" alt="Mapshaper lets you join spatial and CSV files using common keys (for example, town names)."  />
 <p class="caption">
-Figure 14.16: Mapshaper lets you join spatial and CSV files using common keys (for example, town names).
+Figure 14.17: Mapshaper lets you join spatial and CSV files using common keys (for example, town names).
 </p>
 </div>
 <p>Tip: To avoid confusion, it may be useful to re-name your CSV column that contains key values to match the key attribute name of your map.
@@ -558,7 +559,7 @@ The <code>fields=</code> part tells Mapshaper to not copy any fields from the po
 per state, in our case).</p>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Use the <em>Cursor &gt; inspect attributes</em> tool to make sure polygons obtained a new field with the recorded count of points,
-like is shown in Figure <a href="mapshaper.html#fig:mapshaper-count-points">14.17</a>.</p></li>
+like is shown in Figure <a href="mapshaper.html#fig:mapshaper-count-points">14.18</a>.</p></li>
 <li><p>Save the new file using <em>Export</em> button and choosing the desired output format. In the section below,
 we will talk about what happens to objects that don’t join.</p></li>
 </ol>
@@ -566,7 +567,7 @@ we will talk about what happens to objects that don’t join.</p></li>
 <div class="figure"><span id="fig:mapshaper-count-points"></span>
 <img src="images/14-transform/mapshaper-count-points.png" alt="Mapshaper’s -join can count points in polygons."  />
 <p class="caption">
-Figure 14.17: Mapshaper’s -join can count points in polygons.
+Figure 14.18: Mapshaper’s -join can count points in polygons.
 </p>
 </div>
 </div>
@@ -613,14 +614,14 @@ file with a *name&amp; column that lists 169 towns.</li>
 <li>Create a second column titled <em>merged</em> and copy-paste values from the first, <em>name</em> column.
 At this point your spreadsheet contains two columns with the same values.</li>
 <li>Pick a few towns, for example <em>West Hartford</em> and <em>Bloomfield</em>, and assign “Bloomfield-West Hartford”
-to their <em>merged</em> column, like is shown in Figure <a href="mapshaper.html#fig:mapshaper-merge-csv">14.18</a>. You may stop right here and move to the next step, or keep assigning district names
+to their <em>merged</em> column, like is shown in Figure <a href="mapshaper.html#fig:mapshaper-merge-csv">14.19</a>. You may stop right here and move to the next step, or keep assigning district names
 to a few other neighboring towns.</li>
 </ol>
 
 <div class="figure"><span id="fig:mapshaper-merge-csv"></span>
 <img src="images/14-transform/mapshaper-merge-csv.png" alt="Create a two-column crosswalk of towns and which districts they should be merged to." width="250px" />
 <p class="caption">
-Figure 14.18: Create a two-column crosswalk of towns and which districts they should be merged to.
+Figure 14.19: Create a two-column crosswalk of towns and which districts they should be merged to.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
@@ -635,12 +636,12 @@ select <em>ct-towns</em> to get back to your map.</li>
 <p>to dissolve polygons of towns according to the <em>merged</em> column of the CSV file.</p>
 <p>In our example, only Bloomfield and West Hartford are dissolved into a combined
 “Bloomfield-West Hartford” regional health district (with the shared boundary between towns becoming grayed out),
-and all of the other polygons remain the same. Figure <a href="mapshaper.html#fig:mapshaper-merge">14.19</a> shows the final result.</p>
+and all of the other polygons remain the same. Figure <a href="mapshaper.html#fig:mapshaper-merge">14.20</a> shows the final result.</p>
 
 <div class="figure"><span id="fig:mapshaper-merge"></span>
 <img src="images/14-transform/mapshaper-merge.png" alt="Merge polygons based on a predefined crosswalk."  />
 <p class="caption">
-Figure 14.19: Merge polygons based on a predefined crosswalk.
+Figure 14.20: Merge polygons based on a predefined crosswalk.
 </p>
 </div>
 <p>You can inspect attribute data of polygons using <em>Cursor &gt; inspect attributes</em> tool, and save the resulting file

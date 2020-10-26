@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-23" />
+<meta name="date" content="2020-10-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -151,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="authors.html"><a href="authors.html"><i class="fa fa-check"></i>Authors &amp; Acknowledgements</a></li>
 <li class="chapter" data-level="" data-path="audience-outline.html"><a href="audience-outline.html"><i class="fa fa-check"></i>Audience and Outline</a></li>
 <li class="chapter" data-level="" data-path="computer.html"><a href="computer.html"><i class="fa fa-check"></i>Follow Along on a Computer</a></li>
-<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About this Open-Access Book</a></li>
+<li class="chapter" data-level="" data-path="open-access.html"><a href="open-access.html"><i class="fa fa-check"></i>About Open-Access Web Edition</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction: Why Data Visualization?</a>
 <ul>
@@ -276,10 +276,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="bulk-geocode.html"><a href="bulk-geocode.html"><i class="fa fa-check"></i>Bulk Geocode with US Census</a></li>
 <li class="chapter" data-level="" data-path="pivot-point-to-polygon.html"><a href="pivot-point-to-polygon.html"><i class="fa fa-check"></i>Pivot Points into Polygon Data</a></li>
-<li class="chapter" data-level="" data-path="convert-geojson.html"><a href="convert-geojson.html"><i class="fa fa-check"></i>Convert to GeoJSON format</a></li>
+<li class="chapter" data-level="" data-path="geojson.html"><a href="geojson.html"><i class="fa fa-check"></i>GeoJSON and Geospatial Data</a></li>
+<li class="chapter" data-level="" data-path="find-geojson.html"><a href="find-geojson.html"><i class="fa fa-check"></i>Find GeoJSON Boundary Files</a></li>
 <li class="chapter" data-level="" data-path="geojsonio.html"><a href="geojsonio.html"><i class="fa fa-check"></i>Draw and Edit with GeoJson.io</a></li>
 <li class="chapter" data-level="" data-path="mapshaper.html"><a href="mapshaper.html"><i class="fa fa-check"></i>Edit and Join with Mapshaper</a></li>
-<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georectify with MapWarper</a></li>
+<li class="chapter" data-level="" data-path="mapwarper.html"><a href="mapwarper.html"><i class="fa fa-check"></i>Georeference with MapWarper</a></li>
 <li class="chapter" data-level="" data-path="convert-kmz.html"><a href="convert-kmz.html"><i class="fa fa-check"></i>Convert Compressed KMZ to KML</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="detect.html"><a href="detect.html"><i class="fa fa-check"></i><b>15</b> Detect Lies and Reduce Data Bias</a>
@@ -337,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="leaflet-maps-with-google-sheets" class="section level2 unnumbered" number="">
 <h2>Leaflet Maps with Google Sheets</h2>
-<p>Sometimes you need to create a map that cannot be made easily with drag-and-drop tools, because you need to customize its appearance or show some combination of point, polygon, or polyline data. One solution is to make a copy of our Leaflet Maps with Google Sheets template, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:lmwgs-map">13.1</a>. This introductory-level template allows you to choose custom point icons and choropleth color palettes, and to display different combinations of map data layers. It’s a simpler code template for newer users because you enter your map data and modify settings in a linked Google Sheet, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:lmwgs-sheet">13.2</a>, and upload images or geographic data into a template code folder in your GitHub repository.</p>
+<p>Sometimes you need to create a map that cannot be made easily with drag-and-drop tools, because you need to customize its appearance or show some combination of point, polygon, or polyline data. One solution is to build your map based on our Leaflet Maps with Google Sheets code template, which allows you to display custom point icons, pick any choropleth color palettes, and stack different combinations of map data layers, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:lmwgs-map">13.1</a>. If you’ve explored prior chapters in this book, this template is a good template for newer users, because you enter your map data and settings in a linked Google Sheet, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:lmwgs-sheet">13.2</a>, and upload images or geographic files into a folder in your GitHub repository. In addition, all of the data you enter can easily be exported and migrated to other platforms, which matters because mapping technologies continually evolve, as we discussed in the <a href="choose.html">how to choose tools section in Chapter 2</a>. Finally, the Leaflet Maps template is built on flexible open-source software that’s written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.</p>
 <p>TODO: Create and insert a new version of the demo, featuring ECGreenway route thru CT or East Coast, points with photos, and pop density of towns to highlight how this bike route connects cities.</p>
 
 <div class="figure"><span id="fig:lmwgs-map"></span>
@@ -352,12 +353,12 @@ Figure 13.1: Explore the <a href="https://handsondataviz.github.io/leaflet-maps-
 <iframe src="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g/pubhtml?widget=true&amp;amp;headers=false" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 13.2: View the <a href="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g">online Google Sheet template</a> that feeds data into the Leaflet map above.
+Figure 13.2: View the <a href="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g">online Google Sheet template</a> that feeds data into the Leaflet Maps demo above.
 </p>
 </div>
 <div id="tutorial-outline" class="section level3 unnumbered" number="">
 <h3>Tutorial Outline</h3>
-<p>Before beginning this tutorial, you must have a <a href="http://drive.google.com">Google Drive account</a>, and know how to <a href="copy.html">File &gt; Make a Copy in Google Sheets</a>, as described in Chapter 3. Also, you must have a <a href="http://github.com">GitHub account</a>, and know how to <a href="github.html">Edit and Host Code with GitHub</a>, as described in Chapter 11.</p>
+<p>Before beginning this tutorial, you must have a <a href="http://drive.google.com">Google Drive account</a>, and know how to <a href="copy.html">File &gt; Make a Copy in Google Sheets</a>, as described in Chapter 3. Also, you must have a <a href="http://github.com">GitHub account</a>, and know how to <a href="github.html">Edit and Host Code with GitHub</a>, as described in Chapter 11. We have omitted many screenshots below that illustrate steps we previously covered, so if you get lost, go back to that chapter.</p>
 <p>In the first part of the tutorial, you will create and publish your copies of our GitHub and Google Sheets templates:</p>
 <ul>
 <li><ol style="list-style-type: upper-alpha">
@@ -396,7 +397,7 @@ Figure 13.2: View the <a href="https://docs.google.com/spreadsheets/d/1ZxvU8eGyu
 <div id="a-copy-the-github-template-and-publish-your-version-with-github-pages" class="section level4 unnumbered" number="">
 <h4>A) Copy the GitHub template and publish your version with GitHub Pages</h4>
 <ol style="list-style-type: decimal">
-<li><p>Right-click to open this GitHub code template in a new tab: <a href="https://github.com/handsondataviz/leaflet-maps-with-google-sheets" class="uri">https://github.com/handsondataviz/leaflet-maps-with-google-sheets</a></p></li>
+<li><p>Open the <a href="https://github.com/handsondataviz/leaflet-maps-with-google-sheets">GitHub code template</a> in a new tab.</p></li>
 <li><p>In the upper-right corner of the code template, sign in to your free GitHub account.</p></li>
 <li><p>In the upper-right corner, click the green <em>Use this template</em> button to make a copy of the repository in your GitHub account. On the next screen, name your repo <code>leaflet-maps-with-google-sheets</code> or choose a different meaningful name in all lower-case. Click the <em>Create repository from template</em> button. Your copy of the repo will follow this format:</p></li>
 </ol>
@@ -418,9 +419,15 @@ Figure 13.3: In <em>Settings</em>, go to <em>GitHub Pages</em>, switch the sourc
 <ol start="6" style="list-style-type: decimal">
 <li><p>Scroll up to the top, and click on your repo name to go back to its main page.</p></li>
 <li><p>At the top level of your repo main page, click on README.md, and click the pencil icon to edit this file.</p></li>
-<li><p>Delete the link to the <em>our</em> live site, and paste in the link to <em>your</em> published site. Scroll down and <em>Commit</em> to save your edits.</p></li>
+<li><p>Delete the link to the <em>our</em> live site, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-readme-link-top">13.4</a>, and paste in the link to <em>your</em> published site. Scroll down to <em>Commit</em> your changes.</p></li>
 </ol>
-<p>TODO: Insert image here</p>
+
+<div class="figure"><span id="fig:leaflet-readme-link-top"></span>
+<img src="images/13-leaflet/leaflet-readme-link-top.png" alt="Edit your README file to replace the link to our site with the link to your site."  />
+<p class="caption">
+Figure 13.4: Edit your README file to replace the link to <em>our</em> site with the link to <em>your</em> site.
+</p>
+</div>
 <ol start="9" style="list-style-type: decimal">
 <li>On your repo main page, right-click the link to open your live map in a new tab. <em>Be patient</em> during busy periods on GitHub, when your website may take up to 1 minute to appear for the first time.</li>
 </ol>
@@ -428,44 +435,49 @@ Figure 13.3: In <em>Settings</em>, go to <em>GitHub Pages</em>, switch the sourc
 <div id="b-file-make-a-copy-of-google-sheet-template-share-and-publish" class="section level4 unnumbered" number="">
 <h4>B) File &gt; Make a Copy of Google Sheet template, Share, and Publish</h4>
 <ol style="list-style-type: decimal">
-<li><p>Open this <a href="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g">Google Sheets template</a> in a new tab.</p></li>
+<li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1ZxvU8eGyuN9M8GxTU9acKVJv70iC3px_m3EVFsOHN9g">Google Sheets template</a> in a new tab.</p></li>
 <li><p>Sign into your Google account, and select <em>File &gt; Make a Copy</em> to save your own version of this Google Sheet on your Google Drive.</p></li>
-<li><p>Click the blue Share button, and click <em>Change to anyone with the link</em>, then click <em>Done</em>. This publicly shares your map data, which is required to make this template work.</p></li>
+<li><p>Click the blue <em>Share</em> button, and click <em>Change to anyone with the link</em>, then click <em>Done</em>. This publicly shares your map data, which is required to make this template work.</p></li>
 <li><p>Go to <em>File &gt; Publish to the Web</em>, and click the green <em>Publish</em> button to publish the entire document, so that the Leaflet code can read it. Then click the upper-right <em>X</em> symbol to close this window.</p></li>
-<li><p>At the top of your browser, copy your Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>). Do <em>NOT</em> copy the <em>Published to the web</em> address (which usually ends in <code>...XYZ/pubhtml</code>), as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-publish">13.4</a>.</p></li>
+<li><p>At the top of your browser, copy your Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>). Do <em>NOT</em> copy the <em>Published to the web</em> address (which usually ends in <code>...XYZ/pubhtml</code>), as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-publish">13.5</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-publish"></span>
 <img src="images/13-leaflet/sheets-publish-annotated.png" alt="Copy the Google Sheet address at the top of the browser, NOT the Publish to the web address." width="500" />
 <p class="caption">
-Figure 13.4: Copy the Google Sheet address at the top of the browser, NOT the <em>Publish to the web</em> address.
+Figure 13.5: Copy the Google Sheet address at the top of the browser, NOT the <em>Publish to the web</em> address.
 </p>
 </div>
 </div>
 <div id="c-paste-your-google-sheet-browser-address-in-two-places-in-your-github-repo" class="section level4 unnumbered" number="">
 <h4>C) Paste your Google Sheet browser address in two places in your GitHub repo</h4>
-<p>Our next task is to link your Google Sheet to your Leaflet code in GitHub, so that content from your Sheet will appear in your map.</p>
+<p>Our next task is to link your published Google Sheet to your Leaflet code in GitHub, so that it can pull your data from the Sheet to display on the map.</p>
 <ol style="list-style-type: decimal">
 <li><p>At the top of your GitHub repo, click to open the file named <code>google-doc-url.js</code>, and click the pencil symbol to edit it.</p></li>
-<li><p>Paste <em>your</em> Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>) to replace the existing URL, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:google-doc-url">13.5</a>. Be careful <em>NOT</em> to erase the single quotation marks or the semicolon at the end. See separate instructions about the Google API key further below.</p></li>
+<li><p>Paste <em>your</em> Google Sheet address or URL (which usually ends in <code>...XYZ/edit#gid=0</code>) to replace <em>our</em> existing URL, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:google-doc-url">13.6</a>. Be careful <em>NOT</em> to erase the single quotation marks or the semicolon at the end. Scroll down to <em>Commit</em> your changes. See separate instructions about the Google API key further below.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:google-doc-url"></span>
-<img src="images/13-leaflet/google-doc-url-annotated.png" alt="Paste in your Google Sheet URL to replace our URL."  />
+<img src="images/13-leaflet/google-doc-url.png" alt="Paste in your Google Sheet URL to replace our URL."  />
 <p class="caption">
-Figure 13.5: Paste in <em>your</em> Google Sheet URL to replace <em>our</em> URL.
+Figure 13.6: Paste in <em>your</em> Google Sheet URL to replace <em>our</em> URL.
 </p>
 </div>
-<!-- TODO: Update image when new code is done -->
 <ol start="3" style="list-style-type: decimal">
-<li><p>Scroll to bottom of page and press <em>Commit</em> to save your changes. Now your published Google Sheet is linked to your published Leaflet map code.</p></li>
-<li><p>Also, let’s paste your Google Sheets browser address in a second place to keep track of it. In your GitHub repo, click to open the README.md file, click the pencil symbol to edit it, and paste <em>your</em> Google Sheet browser address to replace the existing address. Scroll down and commit to save your changes.</p></li>
+<li>Also, let’s paste your Google Sheet URL in second place to help you keep track of it. In your GitHub repo, click the README.md file to open it, click the pencil symbol to edit it, and paste <em>your</em> Google Sheet URL to replace <em>our</em> existing URL, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-readme-link-bottom">13.7</a>. Scroll down to <em>Commit</em> your changes.</li>
 </ol>
-<p>TODO: Insert image here</p>
+
+<div class="figure"><span id="fig:leaflet-readme-link-bottom"></span>
+<img src="images/13-leaflet/leaflet-readme-link-bottom.png" alt="Edit your README file to replace the link to our site with the link to your site."  />
+<p class="caption">
+Figure 13.7: Edit your README file to replace the link to <em>our</em> site with the link to <em>your</em> site.
+</p>
+</div>
+<p>Feel free to remove any other content on the README page that you do not wish to keep.</p>
 </div>
 <div id="d-update-your-google-sheet-options-tab-info-and-refresh-your-live-map" class="section level4 unnumbered" number="">
 <h4>D) Update your Google Sheet <em>Options</em> tab info and refresh your live map</h4>
-<p>Now that your published Google Sheet is linked to your live map, go to the <em>Options</em> tab and update any of these items:</p>
+<p>Now that your published Google Sheet is linked to your live map, go to the <em>Options</em> tab to update any of these items:</p>
 <ul>
 <li>Map Title</li>
 <li>Map Subtitle</li>
@@ -477,28 +489,48 @@ Figure 13.5: Paste in <em>your</em> Google Sheet URL to replace <em>our</em> URL
 </div>
 <div id="e-geocode-locations-and-customize-new-markers-in-the-points-tab" class="section level4 unnumbered" number="">
 <h4>E) Geocode locations and customize new markers in the Points tab</h4>
-<p>In the <em>Points</em> tab of your Google Sheet, you’ll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do <em>not</em> delete or rename the column headers, since the Leaflet code looks for these specific names.</p>
+<p>Now we can start to add new content to your map. In the <em>Points</em> tab of your Google Sheet, you’ll see column headers to organize and display interactive markers on your map. Replace the demonstration data with your own, but do <em>not</em> delete or rename the column headers, since the Leaflet code looks for these specific names.</p>
 <ul>
 <li>Group: Create any labels to categorize groups of markers in your legend.</li>
-<li>Marker Icon: Search <a href="http://fontawesome.io/icons">Font Awesome Icons</a> and insert any standard icon name such as <code>school</code> or <code>bus</code>, or leave blank for no icon inside the marker. To create your own custom icon, see further below.</li>
-<li>Marker Color: Search <a href="https://www.w3schools.com/colors/colors_names.asp">W3Schools Color Names</a> and insert any standard name such as <code>blue</code> or <code>darkblue</code>. Or insert a web color code such as <code>#775307</code> or <code>rgba(200,100,0,0.5)</code>.</li>
+<li>Marker Icon: Insert any standard icon name such as <code>school</code> or <code>bus</code> that appears <a href="http://fontawesome.io/icons">Font Awesome Icons</a>, or leave blank for no icon inside the marker. To create your own custom icon, see further below.</li>
+<li>Marker Color: Insert any standard web color name such as <code>blue</code> or <code>darkblue</code>, or insert a web color code such as <code>#775307</code> or <code>rgba(200,100,0,0.5)</code>. See options at <a href="https://www.w3schools.com/colors/colors_names.asp">W3Schools Color Names</a>.</li>
 <li>Icon Color: Set the color of the icon inside the marker. The default is <code>white</code>, which looks good inside darker-colored markers.</li>
 <li>Custom Size: Leave blank, unless you are creating your own custom icon further below.</li>
 </ul>
-<p>The next set of columns include items that appear when users click on point markers:
-- Name: Add a title to display in the marker pop-up window.
-- Image: Insert link to an external image link, or upload a small image to the <em>media</em> folder in your GitHub repo and add its pathname, such as <code>media/trinity-college.jpg</code>. TODO: add this to GSheet after code update
-- Description: Add text to appear in the marker pop-up window. You may include HTML web links in this format: <code>&lt;a href="url"&gt;link text&lt;/a&gt;</code>. If a map link should open in a new browser tab, set the <em>target</em> attribute to <code>_blank</code>. Learn about HTML syntax at <a href="https://www.w3schools.com/html/html_links.asp">W3Schools</a>.</p>
-<p>The next three columns—Location, Latitude, and Longitude—help to place your marker on the map. Although the Leaflet code only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on</a> that we introduced in Chapter 3 to convert addresses to x- and y-coordinates in a separate tab of your Google Sheet, and paste the results of those three columns into Location, Latitude, and Longitude.</p>
-<p>Optional: You can display a table of viewable markers at the bottom of your map, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-with-table">13.6</a>. In the <em>Options</em> tab, set <em>Display Table</em> (cell B30) to <em>On</em>. You can also adjust the <em>Table Height</em>, and modify the display of <em>Table Columns</em> by entering the column headers, separated with commas.</p>
+<p>The next set of columns include items that appear when users click on point markers:</p>
+<ul>
+<li>Name: Add a title to display in the marker pop-up window.</li>
+<li>Description: Add text to appear in the marker pop-up window. You may insert HTML tags to add line breaks (such as <code>&lt;br&gt;</code>), or to open external links in a new tab, such as <code>&lt;a href='https://www.w3schools.com/' target='_blank'&gt;Visit W3Schools&lt;/a&gt;</code>. Learn about HTML syntax at <a href="https://www.w3schools.com/html/html_links.asp">W3Schools</a>.</li>
+<li>Image: You have two options to display images. You can insert an external link to an image hosted by an online service (such as Flickr), as long as it begins with <code>https</code> (secure) and ends with either <code>.jpg</code> or <code>.png</code>. Or you can upload an image into the <code>media</code> subfolder in your GitHub repo, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-media-upload">13.8</a>, and enter the pathname in the Google Sheet in this format: <code>media/image.jpg</code> or <code>...png</code>.</li>
+</ul>
 
-<div class="figure"><span id="fig:leaflet-map-with-table"></span>
-<img src="images/13-leaflet/leaflet-map-with-table.png" alt="One option is to display a table of viewable markers at the bottom of your map." width="500" />
+<div class="figure"><span id="fig:leaflet-media-upload"></span>
+<img src="images/13-leaflet/leaflet-media-upload.png" alt="In GitHub, click to open the media folder and Add file - Upload files." width="400" />
 <p class="caption">
-Figure 13.6: One option is to display a table of viewable markers at the bottom of your map.
+Figure 13.8: In GitHub, click to open the <code>media</code> folder and <em>Add file - Upload files</em>.
 </p>
 </div>
-<p>Optional: You can create your own custom marker, such as the Trinity College Bantam mascot in the demo. Use an image editing tool to create a square image, 64 x 64 pixels or smaller, with a transparent background. Save it in PNG format with a filename using all lower-case letters with no spaces. Upload the image to the <em>markers</em> folder in your GitHub repo. In the Marker Icon column, set the pathname in this format: <code>markers/custom-trinity-64.png</code>. In the Custom Size column, set to <code>64x64</code> or similar.</p>
+<p>Warning: Media file pathnames are case-sensitive, and we recommend using <em>all lowercase characters</em>, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you <em>reduce the size</em> of any images to 600x400 pixels or less prior to uploading, to make sure your map operates smoothly.</p>
+<ul>
+<li>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on</a> that we introduced in Chapter 3 to <em>create a separate tab in your Google Sheet</em> where you can insert your Location data, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:geocode-details2">13.9</a>, and paste the results into your Latitude and Longitude columns.</li>
+</ul>
+
+<div class="figure"><span id="fig:geocode-details2"></span>
+<img src="images/13-leaflet/geocode-details.png" alt="Use the Geocoding tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude."  />
+<p class="caption">
+Figure 13.9: Use the <em>Geocoding</em> tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude.
+</p>
+</div>
+<p>Optional table of viewable markers: To display an interactive table at the bottom of your map, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-with-table">13.10</a>. In the <em>Options</em> tab, set <em>Display Table</em> (cell B30) to <em>On</em>. You can also adjust the <em>Table Height</em>, and modify the display of <em>Table Columns</em> by entering the column headers, separated with commas.</p>
+
+<div class="figure"><span id="fig:leaflet-map-with-table"></span>
+<img src="images/13-leaflet/leaflet-map-with-table.png" alt="Optional: display interactive table of viewable markers at the bottom of your map." width="500" />
+<p class="caption">
+Figure 13.10: Optional: display interactive table of viewable markers at the bottom of your map.
+</p>
+</div>
+<p>TODO above: redo the screenshot after updating the map demo</p>
+<p>Optional custom markers: To create your own custom marker, such as a thumbnail photo icon, use any image editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in PNG format and choose a filename using all lower-case characters with no spaces. Upload the image to the <em>media</em> folder in your GitHub repo as described above. In the Marker Icon column, enter the file pathname in this format: <code>media/image-thumbnail.png</code>. In the Custom Size column, set the dimensions to <code>64x64</code> or similar, such as <code>40x40</code> if desired.</p>
 <p>Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>
 </div>
 <div id="f-remove-or-display-point-polygon-or-polylines-data-and-legends" class="section level4 unnumbered" number="">
@@ -520,55 +552,70 @@ Figure 13.6: One option is to display a table of viewable markers at the bottom 
 <li>Also in the <em>Polygons</em> tab, set <em>Polygon GeoJSON URL</em> (cell B6) to remove that data from your map.</li>
 <li>In the next tab <em>Polygons1</em>, use the tab drop-down menu to select <em>Delete</em> to remove the entire sheet.</li>
 </ul>
-<p>You’ve already learned how to add more markers in the <em>Points</em> tab as described above. But if you wish to add new polygon or polyline data, you’ll need to prepare those files in GeoJSON format using either the <a href="geojsonio.html">GeoJson.io tool tutorial</a> or the <a href="mapshaper.html">MapShaper tool tutorial</a> in Chapter 14.</p>
-<p>After you’ve prepared your GeoJSON data, name the files using all lower-case characters and no spaces, and upload them into the <code>geometry</code> subfolder of your GitHub repo. Then update these settings in your linked Google Sheet:</p>
+<p>You’ve already learned how to add more markers in the <em>Points</em> tab as described above. But if you wish to add new polygon or polyline data, you’ll need to prepare those files in GeoJSON format using either the <a href="geojsonio.html">GeoJson.io tool tutorial</a> or the <a href="mapshaper.html">MapShaper tool tutorial</a> as described in Chapter 14.</p>
+<p>After you’ve prepared your GeoJSON data, name the files using all lower-case characters and no spaces, and upload them into the <code>geojson</code> subfolder of your GitHub repo. Then update these settings in your linked Google Sheet:</p>
 <p>To display polylines:</p>
 <ul>
 <li>In the <em>Options</em> tab, make sure <em>Polyline Legend Position</em> (cell B36) is visible by selecting <em>topleft</em> or a similar position.</li>
-<li>In the <em>Polylines</em> tab, enter the GeoJSON URL pathname to the file you uploaded to your GitHub repo, such as <code>geometry/polylines-bike-lanes.geojson</code>. Then insert a Display Name, Description, and Color.</li>
+<li>In the <em>Polylines</em> tab, enter the GeoJSON URL pathname to the file you uploaded to your GitHub repo, such as <code>geodata/lines.geojson</code>. Then insert a Display Name, Description, and Color.</li>
 </ul>
 <p>To display polygons:</p>
 <ul>
 <li>In the <em>Polygons</em> tab, make sure <em>Polygon Legend Position</em> (cell B4) is visible by selecting <em>topleft</em> or a similar position.</li>
-<li>Also, in <em>Polygon GeoJSON URL</em> (cell B6) enter the pathname to the file you uploaded to your GitHub repo, such as <code>geometry/polygons-town-population.geojson</code>.</li>
+<li>Also, in <em>Polygon GeoJSON URL</em> (cell B6) enter the pathname to the file you uploaded to your GitHub repo, such as <code>geodata/map.geojson</code>.</li>
 <li>Also, you can change the <em>Polygon Legend Title</em> (cell B3) and add an optional <em>Polygon Legend Icon</em> (cell B5).</li>
 <li>Also, edit the <em>Polygon Data</em> and <em>Color Settings</em> sections to modify the labels and ranges to align with the properties of your GeoJSON file. In the <em>Property Range Color Palette</em>, you can automatically select a color scheme from the ColorBrewer tool we described in the <a href="map-design.html">Map Design section of Chapter 8</a>, or manually insert colors of your choice in the cell below.</li>
 <li>Read the <em>Hints</em> column in the <em>Polygons</em> sheet for tips on how to enter data.</li>
 <li>If you wish to display multiple polygon layers, use the <em>Polygons</em> tab drop-down menu to <em>Duplicate</em> the sheet, and name additional sheets in this format: <em>Polygons1</em>, <em>Polygons2</em>, etc.</li>
 </ul>
+<p>TODO: after updating the map code, modify the text to match the demo file names</p>
 </div>
 <div id="finalize-your-map" class="section level4 unnumbered" number="">
 <h4>Finalize Your Map</h4>
 <p>Now you’re ready to finalize your map. If you wish to share your map link with the public, read the options below and choose either step G <em>OR</em> step H.</p>
+<p>Warning: We reserve the right to change <em>our</em> Google Sheets API key at any time, especially if other people overuse or abuse it. This means that you <em>must</em> finalize your map using either step G or H below before sharing it publicly, because it will <em>stop working</em> if we change our key.</p>
 </div>
 <div id="g-save-each-google-sheets-tab-as-a-csv-file-and-upload-to-github" class="section level4 unnumbered" number="">
 <h4>G) Save each Google Sheets tab as a CSV file and upload to GitHub</h4>
-<p>If you have finished entering most of your data into your Google Sheets, save each tab as a CSV file and upload them to a <code>csv</code> subfolder in GitHub. The Leaflet map code first looks to see if any data exists in this GitHub subfolder, and if so it will pull the map information directly from your CSV files, rather than your Google Sheets. If you wish to change your map, you can make small edits to your CSV files in GitHub, or you can make larger edits in your original Google Sheets, and re-upload them as CSV files to GitHub.</p>
-<p>Moving your data from Google Sheets to CSV format is the <em>best</em> long-term preservation strategy, because it keeps your map and data together in the same GitHub folder, and removes the risk that your map will break due to an interruption to Google services, as described in Step H.</p>
-<p>To move your map data from Google Sheets to CSV format, go to each tab and select <em>File &gt; Download</em> into CSV format, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-download-csv">13.7</a>.</p>
-<p>Shorten each file name as shown. The names must be exact, but they are <em>not</em> case-sensitive:</p>
+<p>If you have finished entering most of your data into your Google Sheets, downloading them into separate CSV files and uploading those into your GitHub repo is the <em>best</em> long-term preservation strategy. This approach keeps your map and data together in the same GitHub repo, and removes the risk that your map will break due to an interruption to Google services. Plus, you can still edit your map data. If this approach makes sense, follow these steps:</p>
+<ol style="list-style-type: decimal">
+<li>In your Google Sheets, go to each tab and select <em>File &gt; Download</em> into CSV format, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:sheets-download-csv">13.11</a>, to create a separate file for each tab.</li>
+</ol>
+
+<div class="figure"><span id="fig:sheets-download-csv"></span>
+<img src="images/13-leaflet/sheets-download-csv.png" alt="Download each Google Sheets tab as a separate CSV file." width="350" />
+<p class="caption">
+Figure 13.11: Download each Google Sheets tab as a separate CSV file.
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>Shorten each file name as shown. The names must be exact, but they are <em>not</em> case-sensitive. Only the first file below is required, and others are optional, depending on your data.</li>
+</ol>
 <ul>
 <li>Options.csv</li>
 <li>Points.csv</li>
 <li>Polylines.csv</li>
-<li>Polygons.csv (if needed, also use: Polygons1.csv, Polygons2.csv, etc.)</li>
-<li>Notes.csv (or .txt)—This file is optional but highly recommended to keep any notes with your data.</li>
+<li>Polygons.csv (If additional files, name them: Polygons1.csv, Polygons2.csv, etc.)</li>
+<li>Notes.csv (or .txt) Recommended to keep any notes with your data, but not required.</li>
 </ul>
-<p>Upload all of these CSV files into the main level (or root level) of your GitHub repository. The Leaflet code looks here first for the data, and when it locates them, will pull the data directly from the CSV files into your map, skipping over the Google Sheets. TODO: Confirm this code request is working</p>
+<ol start="3" style="list-style-type: decimal">
+<li>In your GitHub repo, click the <code>csv</code> subfolder to open it, select <em>Add file &gt; Upload files</em>, and upload all of the CSV files above into this subfolder, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-upload-csv">13.12</a>. The Leaflet template code checks here first for data, and if it finds CSV files with the names above, it will pull the map data directly from them, instead of your Google Sheets. <em>Remember</em> that from this point forward, any edits in your Google Sheet will <em>no longer appear automatically</em> in your map.</li>
+</ol>
 
-<div class="figure"><span id="fig:sheets-download-csv"></span>
-<img src="images/13-leaflet/sheets-download-csv.png" alt="One way to finalize your map is to download each Google Sheets tab as a CSV file." width="350" />
+<div class="figure"><span id="fig:leaflet-upload-csv"></span>
+<img src="images/13-leaflet/leaflet-upload-csv.png" alt="Upload your map data files into the csv subfolder in GitHub." width="400" />
 <p class="caption">
-Figure 13.7: One way to finalize your map is to download each Google Sheets tab as a CSV file.
+Figure 13.12: Upload your map data files into the <em>csv</em> subfolder in GitHub.
 </p>
 </div>
+<ol start="4" style="list-style-type: decimal">
+<li>If you wish to edit your map after uploading your CSV files, you have two options. You can make small edits directly to your CSV files by opening them in the GitHub web interface. Or you can make larger edits in the Google Sheet, and repeating the steps above to download them in CSV format and upload them to replace your existing files on GitHub.</li>
+</ol>
 </div>
 <div id="h-get-your-own-google-sheets-api-key-to-insert-into-the-code" class="section level4 unnumbered" number="">
 <h4>H) Get your own Google Sheets API Key to insert into the code</h4>
-<p>If you wish to keep using your Google Sheets to store your data, go to the chapter section named <a href="google-sheets-api-key.html">Get Your Own Google Sheets API Key</a>, and insert it into the Leaflet map code as described, to avoid overusing our key. Google Sheets requires an API key to maintain reasonable <a href="https://developers.google.com/sheets/api/limits">usage limits</a> on its service. You can get a free Google Sheets API key if you have a personal Google account, but <em>not</em> a Google Suite account provided by your school or business. TODO: confirm this detail</p>
-<p>Warning: We reserve the right to change <em>our</em> Google Sheets API key at any time, especially if other people overuse or abuse it. This means that you <em>must</em> finalize your map using either step J or K above, since it will stop working if we change our key.</p>
+<p>As an alternative to step G, if you wish to continue to store your map data in your Google Sheets that is published online, go to the section of this chapter titled <a href="google-sheets-api-key.html">Get Your Own Google Sheets API Key</a>, and insert it into the Leaflet map code as described, to avoid overusing our key. Google Sheets requires an API key to maintain reasonable <a href="https://developers.google.com/sheets/api/limits">usage limits</a> on its service. You can get a free Google Sheets API key if you have a personal Google account, but <em>not</em> a Google Suite account provided by your school or business. TODO: confirm this detail</p>
 <p>If problems arise, see the <a href="fix.html">Fix Common Mistakes</a> section of the appendix.</p>
-<p><strong>TODO: Start again here</strong></p>
 </div>
 </div>
 </div>

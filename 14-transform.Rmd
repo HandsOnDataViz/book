@@ -1,6 +1,5 @@
 # Transform Your Map Data {#transform}
-
-TODO: clean up intro
+TODO: clean up intro to raise major concepts about different types of data you can place on an interactive map. Then refer to the first two sections to transform points only (bulk geocode and pivot points to polygons), before broadening to GeoJSON and other geospatial data formats, and editor tools, and finally how MapWarper transforms raster data.
 
 All maps, including interactive web maps, are made up of different layers.
 These are background basemaps, colored or shaded polygons (also known as *choropleth* layers), lines,
@@ -14,7 +13,7 @@ introduce various file formats (most notably GeoJSON) and talk about geospatial 
 You will learn that map data can be raster and vector, that geospatial data consists of location
 and attribute components, and how GeoJSON is different from Shapefiles and other geographical data formats.
 
-With our tutorials, you will learn how to convert or draw your own layer of map polygons or polylines on top of satellite imagery
+With our tutorials, you will learn how to [find geographic boundaries in GeoJSON format](find-geojson.html), convert or draw your own layer of map polygons or polylines on top of satellite imagery
 using [the GeoJson.io tool](geojsonio.html), and also how to edit geospatial data and join it with spreadsheet data using [the Mapshaper tool](mapshaper.html).
 Both are powerful, web-based open-source geodata tools that for common tasks can substitute for more complex geographic information system tools, such as ArcGIS, a Windows-only de-facto industry standard in geospatial software, or QGIS, a free and open-source alternative available for Mac, Linux, and Windows.
 Finally, you'll also learn how to georeference a high-quality static image of a map, and transform it into interactive map tiles that you can display on top of a zoomable Leaflet map, using [the MapWarper tool](mapwarper.html).
@@ -126,14 +125,12 @@ We will introduce both tools in the next few sections.
 But before we do that, let's talk about geographical data in general, introduce different geospatial file formats to ensure you are
 ready to create, use, and share map data.
 
-## Convert to GeoJSON format {- #convert-geojson}
+## GeoJSON and Geospatial Data {- #geojson}
 
 Geospatial data comes in an overwhelming number of file formats.
 We will tell you about a few most common ones so that you have
 a general idea of what tools you can use to work with them.
 But before we do that, let's talk about the basics of geospatial (map) data.
-
-#### About geospatial data {-}
 
 The first thing to know about geospatial data is that it
 consists of two components, *location* and *attribute*.
@@ -155,6 +152,8 @@ data (images) to create outlines of buildings, lakes, roads,
 and other objects. These outlines become vector data. For example, most of
 [OpenStreetMap](https://www.openstreetmap.org) was built
 by volunteers tracing outlines of objects from satellite images.
+
+TODO: Use this opportunity to briefly show OSM editor and make a pitch for people to volunteer for this crowdsourced map of the world...
 
 (ref:geospatial-raster-vector) Geospatial data can be raster or vector.
 
@@ -271,6 +270,17 @@ Remember that GeoJSON is one of the best, most universal formats for your *vecto
 and we strongly recommend to store and share your map data in GeoJSON.
 In the next section, we will look at free online tools to create, convert, join, crop,
 and in other ways manipulate GeoJSON files.
+
+## Find GeoJSON files {- #find-geojson}
+You may be searching for geographic boundary files in GeoJSON format to create a customized map, such as a [choropleth map in Datawrapper](choropleth-datawrapper.html), which allows you to upload GeoJSON files, as described in Chapter 8, or when using a [Leaflet map code code template as described in Chapter 13](leaflet.html). Since GeoJSON is an open data standard, you may [find them in the open data repositories](opendata.html) listed in Chapter 4.
+
+Another way to find and download GeoJSON files is [Gimme Geodata](http://hanshack.com/geotools/), a clever tool developed by Hans Hack, which provides quick access to multiple layers of [OpenStreetMap](https:openstreetmap.org) boundary files. When you open the tool, search for a location and click a specific point on the map. The tool displays the names and outlines of different geographic boundaries around that point that have been uploaded into OpenStreetMap, which you can select and download in GeoJSON format. For example, when you search and click on Toronto Centre, the tool displays several neighborhood-level boundaries, the Old Toronto city boundary, the present-day Toronto city boundary, and regional and provincial boundaries, as shown in Figure \@ref(fig:gimme-geodata). Read more details about each layer to evaluate its accuracy, then select any to download in GeoJSON format. The tool also includes an editor (the scissors symbol) to remove water areas, such as Lake Ontario, from the boundary file. When using any type of data that you downloaded from OpenStreetMap, be sure to credit the source in your final product like this: `© OpenStreetMap contributors`.
+
+(ref:gimme-geodata) Use the Gimme Geodata tool to select a point and download surrounding geographic boundaries from Open Street Map.
+
+```{r gimme-geodata, fig.cap="(ref:gimme-geodata)"}
+knitr::include_graphics("images/14-transform/gimme-geodata.png")
+```
 
 ## Draw and Edit with GeoJson.io {- #geojsonio}
 

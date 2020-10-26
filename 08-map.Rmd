@@ -525,7 +525,7 @@ as shown in Figure \@ref(fig:datawrapper-map-us-states), then click *Proceed*. S
 knitr::include_graphics("images/08-map/datawrapper-map-us-states-annotated.png")
 ```
 
-Hint: If Datawrapper does not list your preferred map outline, you can upload your own custom geography data in GeoJSON or TopoJSON format, which you will learn more about in the [Convert to GeoJSON section of Chapter 14](convert-geojson.html).
+Hint: If Datawrapper does not list your preferred map outline, you can upload your own custom geography data in GeoJSON or TopoJSON format, which you will learn more about in the [GeoJSON and geospatial data formats section of Chapter 14](geojson.html).
 
 5. In the *Add your data* screen, you can manually enter data for each area, which would be fine for just a few, but not for 50 states. Instead, scroll down and click the *Import your dataset* button, as shown in Figure \@ref(fig:datawrapper-import-dataset). Datawrapper will explain that your data must include either *Names* (such as `California`) or *ISO-Codes* (standardized two-letter codes for states, such as `CA`, or three-letter codes for nations, such as `USA`). Since we prepared our data this way, click *Start Import*.
 

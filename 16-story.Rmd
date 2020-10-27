@@ -1,41 +1,58 @@
 # Tell and Show Your Data Story {#story}
-TODO: Write this chapter: Tell the story about your data, including its most meaningful insights and limitations
-Write compelling titles, labels, and sentences to accompany your visualization. Call attention to the most meaningful insights in your chart, and explain any data limitations.
+TODO: Write concluding chapter!
 
-TODO; Start with old saying about "show, don't just tell..."
+In this concluding chapter, we'll pull together the knowledge and skills you've developed while reading this book, with final recommendations for sharing true and meaningful data stories. We'll emphasize *storytelling*....
 
-TODO: Return to the "Sketch Your Data Story" exercise from the introduction....These three simple steps will help you start sketching out your data story. To be sure, there's much more work to be done, such as finding, cleaning, and visualizing data, which we'll cover in the chapters to come. But transferring ideas from your brain onto paper is the big first step, because making your thoughts visible enables you to act on them more easily. Scribbling words and sketching pictures not only helps *you* to see your thoughts more clearly, but it also allows you to share what's been inside your head more concretely with friends and colleagues. After reflecting on your sheets of paper and listening to feedback, you can cross out not-so-good ideas, replace them with better ones, and add new sheets of paper with more ideas. Finally, you can spread out the sheets on a table, move them around to reorder the sequence, and begin to define the three essential stages of your data story: the beginning, middle, and end. Start to imagine these sheets of paper as preliminary slides for your presentation desk, or paragraphs and pictures for your written report or website. We'll come back to this exercise near the end of the book in [Chapter 16: Tell and Show Your Data Story](story.html)
+We titled this chapter "Tell and Show" rather reversing it because order matters when communicating data stories. Make a habit to first tell your audience what you found and why it's significant, then show them the visual evidence to support your argument. Don't make the mistake of showing your audience a bunch of data pictures and leaving it up to them to guess what it all means.
 
+Many writers believe in the old saying "show, don't tell," by letting readers experience the story through actions and feelings of characters, rather than a summary description by the author. While that's great advice for fiction writing and advanced non-fiction, our recommendation is very different. Tell your audience what you found in the data, show them the supporting evidence, and then tell them why this insight matters.
+
+Don't show your audience pictures of your data and leave it to them to guess its meaning.
+
+This chapter draws inspiration from Cole Nussbaumer Knaflic, *Storytelling with Data: A Data Visualization Guide for Business Professionals* (Wiley, 2015), http://www.storytellingwithdata.com/book/; Also Alberto Cairo 2019
+
+
+
+
+## Tell and Show the Story {- #tell-and-show}
+
+Let's return to the [Sketch Your Data Story exercise from Chapter 2](sketch.html). We encouraged you to scribble words and sketch pictures on sheets of paper to lay out at least four elements of your story: 1) identify the *problem* that motivates your project, 2) restate it in the form of a *question*, 3) describe how you plan to *find* your data, 4) dream up at least one *visualization* you might create. Spread out these sheets of paper on a table, move them around to reorder the sequence, and begin to define the sequence of your story. Imagine them as preliminary slides for your presentation desk, or paragraphs and pictures for your written report or website.
+
+
+
+
+- Verbalize What Visualization Tells You (Cairo 2019, p89)
 Write down what your eyes see in your visualization..... and tell us what it matters.....  Despite what you may have been told, tables and charts and maps alone do not tell a story. You need to interpret what the viewers see....
 
 Who's your audience?
 
 What's your storytelling format?
-
 - Many visualization books and workshops assume that you will hand a sheet of paper to people sitting around a board room, or a static PDF document sent via email.... Those formats are fine, but do not reflect the wider range of ways to communicate with people
 - a "data walk" to engage community stakeholders https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf
 - presentation slides with live web connection for interactivity (or video screencast)
 - website with textual narrative and interactive visualizations
 
-This chapter draws inspiration from Cole Nussbaumer Knaflic, *Storytelling with Data: A Data Visualization Guide for Business Professionals* (Wiley, 2015), http://www.storytellingwithdata.com/book/
 
-Also Alberto Cairo 2019
-
-- Beginning, Middle, and End
 - Draw Attention to Meaning -- see Change your data to be more flexible with colors and highlights https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips
+Write compelling titles, labels, and sentences to accompany your visualization.
+using color to highlight key items or outliers in your data
+
 - Integrate Story with Your Data
 - Decide on Best Mix of Text and Visualization -- text, table, chart, map
-- Try Different Visualizations and Test Them -- Cairo 2016, p125, 145
-- Verbalize What Visualization Tells You (Cairo 2019, p89)
-- Write Clearly about What You Visualize
+
+
+
 - Acknowledge Limitations of the Data  -- Disclose Uncertainty (cite Cairo), visualize it in bar/column and line charts
-- Credit Data Sources and Collaborators
+- Credit Sources and Disclose Uncertainty... to build credibility for your work
 
 Credit sources and collaborators on dataviz products and readme files
 
 Under US law, you cannot copyright data, such as the raw information in the rows and columns of a spreadsheet. But you can copy, but representations of data can be protected by copyright. ... explain...  In the spirit of openness, we encourage you to share your data visualizations under a Creative Commons license... explain... in fact, this book is copyrighted, and the source text is publicly available under a Creative Commons TODO: TYPE license...
 
-using color to highlight key items or outliers in your data
+
+
+Tell the story about your data, including its most meaningful insights and limitations
+ Call attention to the most meaningful insights in your chart, and explain any data limitations.
 
 ### Summary {- #summary16}
 TODO

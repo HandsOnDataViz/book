@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-26" />
+<meta name="date" content="2020-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -290,7 +290,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Recognize and Reduce Data Bias</a></li>
 <li class="chapter" data-level="" data-path="map-area-and-projection-bias.html"><a href="map-area-and-projection-bias.html"><i class="fa fa-check"></i>Map Area and Projection Bias</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell and Show Your Data Story</a></li>
+<li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell and Show Your Data Story</a>
+<ul>
+<li class="chapter" data-level="" data-path="tell-and-show.html"><a href="tell-and-show.html"><i class="fa fa-check"></i>Tell and Show the Story</a></li>
+</ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="fix.html"><a href="fix.html"><i class="fa fa-check"></i><b>A</b> Fix Common Mistakes</a></li>
 <li class="chapter" data-level="B" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i><b>B</b> Find Connecticut Data</a></li>
@@ -338,11 +341,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="leaflet-storymaps-with-google-sheets" class="section level2 unnumbered" number="">
 <h2>Leaflet Storymaps with Google Sheets</h2>
-<p>The Leaflet Storymaps code template is designed to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-demo">13.13</a>. You enter all of your map data into a linked Google Sheet (or CSV file) or upload it into a GitHub repository, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-sheet">13.14</a>. Although some other story map tools are easier to start using right away, such as the <a href="https://storymap.knightlab.com/">Knight Lab StoryMap</a> and <a href="https://storymaps.arcgis.com/en/">ESRI Story Maps</a>, we do not recommend them because both lack <em>data portability</em>, meaning that you can’t easily export any information you enter. By contrast, all of the information you add to the Leaflet Storymaps linked Google Sheet and GitHub repo can easily be exported and migrated to other platforms, which matters because digital technologies continually evolve, as we described when discussing <a href="choose.html">how to choose tools wisely in Chapter 2</a>. In addition, the Leaflet Storymaps template offers more features to customize how you display your data, including and scanned background map layers, a topic you’ll learn about in the <a href="mapwarper.html">Mapwarper section of Chapter 14</a>. Finally, this Leaflet template is built on flexible open-source software that’s written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.</p>
+<p>The Leaflet Storymaps code template is designed to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-demo">13.13</a>. You enter all of your map data into a linked Google Sheet (or CSV file) or upload it into a GitHub repository, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:storymap-sheet">13.14</a>. Although some other story map tools are easier to start using right away, such as the <a href="https://storymap.knightlab.com/">Knight Lab StoryMap</a> and <a href="https://storymaps.arcgis.com/en/">ESRI Story Maps</a>, we do not recommend them because both lack <em>data portability</em>, meaning that you can’t easily export any information you enter. By contrast, all of the information you add to the Leaflet Storymaps linked Google Sheet and GitHub repo can easily be exported and migrated to other platforms as visualization technology continues to evolve in the future, as we described when discussing <a href="choose.html">how to choose tools wisely in Chapter 2</a>. In addition, the Leaflet Storymaps template allows you to customize the appearance of your data, and to add more layers, such as historical maps and geographic boundaries, which you’ll learn how to prepare in <a href="transform.html">Chapter 14: Transform Your Map Data</a>. Furthermore, the storymap design is responsive, so that it appears top-and-bottom on small screens and side-by-side on larger ones. Finally, the Leaflet template is built on flexible open-source software that’s written primarily in JavaScript, a very common coding language for the web, so you can customize it further if you have skills or support from a developer.</p>
 <p>TODO BELOW: Create and insert a new version of the template and demonstrate all features (all media, tricks such as leaving blank chapters and locations to display multiple images of one location, etc.). TODO DISCUSS with Ilya - option to control responsive appearance?: <a href="https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets/issues/75" class="uri">https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets/issues/75</a></p>
 
 <div class="figure"><span id="fig:storymap-demo"></span>
-<iframe src="https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/" width="672" height="600px">
+<iframe src="images/13-leaflet/storymap-demo.gif" width="672" height="475px">
 </iframe>
 <p class="caption">
 Figure 13.13: Explore the <a href="https://handsondataviz.github.io/leaflet-storymaps-with-google-sheets/">interactive Leaflet Storymaps with Google Sheets</a>.

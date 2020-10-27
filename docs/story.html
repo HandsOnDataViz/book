@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-26" />
+<meta name="date" content="2020-10-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="map-area-and-projection-bias.html"/>
-<link rel="next" href="fix.html"/>
+<link rel="next" href="tell-and-show.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -290,7 +290,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="data-bias.html"><a href="data-bias.html"><i class="fa fa-check"></i>Recognize and Reduce Data Bias</a></li>
 <li class="chapter" data-level="" data-path="map-area-and-projection-bias.html"><a href="map-area-and-projection-bias.html"><i class="fa fa-check"></i>Map Area and Projection Bias</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell and Show Your Data Story</a></li>
+<li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell and Show Your Data Story</a>
+<ul>
+<li class="chapter" data-level="" data-path="tell-and-show.html"><a href="tell-and-show.html"><i class="fa fa-check"></i>Tell and Show the Story</a></li>
+</ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="fix.html"><a href="fix.html"><i class="fa fa-check"></i><b>A</b> Fix Common Mistakes</a></li>
 <li class="chapter" data-level="B" data-path="ct.html"><a href="ct.html"><i class="fa fa-check"></i><b>B</b> Find Connecticut Data</a></li>
@@ -338,51 +341,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="story" class="section level1" number="16">
 <h1><span class="header-section-number">Chapter 16</span> Tell and Show Your Data Story</h1>
-<p>TODO: Write this chapter: Tell the story about your data, including its most meaningful insights and limitations
-Write compelling titles, labels, and sentences to accompany your visualization. Call attention to the most meaningful insights in your chart, and explain any data limitations.</p>
-<p>TODO; Start with old saying about “show, don’t just tell…”</p>
-<p>TODO: Return to the “Sketch Your Data Story” exercise from the introduction….These three simple steps will help you start sketching out your data story. To be sure, there’s much more work to be done, such as finding, cleaning, and visualizing data, which we’ll cover in the chapters to come. But transferring ideas from your brain onto paper is the big first step, because making your thoughts visible enables you to act on them more easily. Scribbling words and sketching pictures not only helps <em>you</em> to see your thoughts more clearly, but it also allows you to share what’s been inside your head more concretely with friends and colleagues. After reflecting on your sheets of paper and listening to feedback, you can cross out not-so-good ideas, replace them with better ones, and add new sheets of paper with more ideas. Finally, you can spread out the sheets on a table, move them around to reorder the sequence, and begin to define the three essential stages of your data story: the beginning, middle, and end. Start to imagine these sheets of paper as preliminary slides for your presentation desk, or paragraphs and pictures for your written report or website. We’ll come back to this exercise near the end of the book in <a href="story.html">Chapter 16: Tell and Show Your Data Story</a></p>
-<p>Write down what your eyes see in your visualization….. and tell us what it matters….. Despite what you may have been told, tables and charts and maps alone do not tell a story. You need to interpret what the viewers see….</p>
-<p>Who’s your audience?</p>
-<p>What’s your storytelling format?</p>
-<ul>
-<li>Many visualization books and workshops assume that you will hand a sheet of paper to people sitting around a board room, or a static PDF document sent via email…. Those formats are fine, but do not reflect the wider range of ways to communicate with people</li>
-<li>a “data walk” to engage community stakeholders <a href="https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf" class="uri">https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf</a></li>
-<li>presentation slides with live web connection for interactivity (or video screencast)</li>
-<li>website with textual narrative and interactive visualizations</li>
-</ul>
-<p>This chapter draws inspiration from Cole Nussbaumer Knaflic, <em>Storytelling with Data: A Data Visualization Guide for Business Professionals</em> (Wiley, 2015), <a href="http://www.storytellingwithdata.com/book/" class="uri">http://www.storytellingwithdata.com/book/</a></p>
-<p>Also Alberto Cairo 2019</p>
-<ul>
-<li>Beginning, Middle, and End</li>
-<li>Draw Attention to Meaning – see Change your data to be more flexible with colors and highlights <a href="https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips" class="uri">https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips</a></li>
-<li>Integrate Story with Your Data</li>
-<li>Decide on Best Mix of Text and Visualization – text, table, chart, map</li>
-<li>Try Different Visualizations and Test Them – Cairo 2016, p125, 145</li>
-<li>Verbalize What Visualization Tells You (Cairo 2019, p89)</li>
-<li>Write Clearly about What You Visualize</li>
-<li>Acknowledge Limitations of the Data – Disclose Uncertainty (cite Cairo), visualize it in bar/column and line charts</li>
-<li>Credit Data Sources and Collaborators</li>
-</ul>
-<p>Credit sources and collaborators on dataviz products and readme files</p>
-<p>Under US law, you cannot copyright data, such as the raw information in the rows and columns of a spreadsheet. But you can copy, but representations of data can be protected by copyright. … explain… In the spirit of openness, we encourage you to share your data visualizations under a Creative Commons license… explain… in fact, this book is copyrighted, and the source text is publicly available under a Creative Commons TODO: TYPE license…</p>
-<p>using color to highlight key items or outliers in your data</p>
-<div id="summary16" class="section level3 unnumbered" number="">
-<h3>Summary</h3>
-<p>TODO</p>
-
+<p>TODO: Write concluding chapter!</p>
+<p>In this concluding chapter, we’ll pull together the knowledge and skills you’ve developed while reading this book, with final recommendations for sharing true and meaningful data stories. We’ll emphasize <em>storytelling</em>….</p>
+<p>We titled this chapter “Tell and Show” rather reversing it because order matters when communicating data stories. Make a habit to first tell your audience what you found and why it’s significant, then show them the visual evidence to support your argument. Don’t make the mistake of showing your audience a bunch of data pictures and leaving it up to them to guess what it all means.</p>
+<p>Many writers believe in the old saying “show, don’t tell,” by letting readers experience the story through actions and feelings of characters, rather than a summary description by the author. While that’s great advice for fiction writing and advanced non-fiction, our recommendation is very different. Tell your audience what you found in the data, show them the supporting evidence, and then tell them why this insight matters.</p>
+<p>Don’t show your audience pictures of your data and leave it to them to guess its meaning.</p>
+<p>This chapter draws inspiration from Cole Nussbaumer Knaflic, <em>Storytelling with Data: A Data Visualization Guide for Business Professionals</em> (Wiley, 2015), <a href="http://www.storytellingwithdata.com/book/" class="uri">http://www.storytellingwithdata.com/book/</a>; Also Alberto Cairo 2019</p>
 </div>
-</div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
 <a href="map-area-and-projection-bias.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="fix.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tell-and-show.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

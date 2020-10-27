@@ -32,6 +32,8 @@ TODO above: Decide if the text and examples are clear. I like the sugarless gum 
 
 A final recommendation about using more precise language is to be cautious with words that suggest a *cause-and-effect relationship* in your data. In everyday conversation, there are many ways that we loosely imply that a causal relationship, where an action directly results in a reaction. For example, when we say one thing "leads to" another, or "promotes" growth, or "sparks" change, those words suggest causality. While that's fine in daily conversation, we need to choose our words more carefully when discussing data, using these three concepts. The first step is to describe any *correlation* between two variables, which means to show how they are associated or related interdependently. But as the saying goes, correlation is not causation. Second, in order to show causation, we need to prove both correlation and offer a *persuasive theory* for how one factor (sometimes called the independent variable) creates a change in another factor (called the dependent variable). Third, we need to identify and isolate any *confounding variables* that we have not considered that may also influence the cause-and-effect relationship. While the details are beyond the scope of this book, be mindful of the concepts---and choose your words carefully---when working with data.
 
+See also [table design recommendations for showing data correlations and possible causal relationships](table-design.html) in Chapter 9: Table Your Data.
+
 Now that you have a clearer understanding of how to use key words to describe data relationships more precisely, in the next section you'll build on this knowledge and adjust data to create more meaningful comparisons.
 
 ## Normalize Your Data {- #normalize}

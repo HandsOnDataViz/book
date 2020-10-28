@@ -480,6 +480,7 @@ TODO DISCUSS with Ilya whether to mention additional customizations that are pos
 - insert Google Analytics tracking ID -- see how to get one.... and insert in Options tab of Google Sheets
 - to insert a horizontal divider line in Description, copy and paste this text to your Google Sheets template: `<span style='display:block;width:100%;height:1px;background-color: silver; margin: 20px 0;'></span>` (is this necessary here? ...and make sure that the single-quote marks are not changed into curly apostrophes).
 - to adjust title size and font: in GitHub, go to css/styles.css file, scroll down to (specify lines?), and adjust font-size values...
+- About the responsive design: On larger screens, the scrolling narrative and map appear side-by-side. On smaller screens where the width is less than 768 pixels, it automatically switches to a top-and-bottom display.
 
 #### Finalize Your Story Map {-}
 Now you're ready to finalize your map. If you wish to share your map link with the public, read the options below and choose either step G *OR* step H.

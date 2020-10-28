@@ -1,58 +1,85 @@
 # Tell and Show Your Data Story {#story}
-TODO: Write concluding chapter!
+TODO: rewrite section intro after finishing the full chapter draft
 
 In this concluding chapter, we'll pull together the knowledge and skills you've developed while reading this book, with final recommendations for sharing true and meaningful data stories. We'll emphasize *storytelling*....
 
 We titled this chapter "Tell and Show" rather reversing it because order matters when communicating data stories. Make a habit to first tell your audience what you found and why it's significant, then show them the visual evidence to support your argument. Don't make the mistake of showing your audience a bunch of data pictures and leaving it up to them to guess what it all means.
 
-Many writers believe in the old saying "show, don't tell," by letting readers experience the story through actions and feelings of characters, rather than a summary description by the author. While that's great advice for fiction writing and advanced non-fiction, our recommendation is very different. Tell your audience what you found in the data, show them the supporting evidence, and then tell them why this insight matters.
+Many writers believe in the old saying "show, don't tell," by letting readers experience the story through actions and feelings of characters, rather than a summary description by the author. While that's great advice for fiction writing and advanced non-fiction, our recommendation is very different. Tell your audience what you found in the data, show them the supporting evidence, and then tell them why this insight matters. Don't show your audience pictures of your data and leave it to them to guess its meaning. Shift your mode from *exploring data* to *expository writing about data*.
 
-Don't show your audience pictures of your data and leave it to them to guess its meaning.
+This chapter draws inspiration from books by Cole Nussbaumer Knaflic and her [Storytelling with Data](http://www.storytellingwithdata.com) blog, as well as works by Alberto Cairo.^[@knaflicStorytellingDataData2015; @knaflicStorytellingDataLet2019; @cairoTruthfulArtData2016; @cairoHowChartsLie2019]
 
-This chapter draws inspiration from Cole Nussbaumer Knaflic, *Storytelling with Data: A Data Visualization Guide for Business Professionals* (Wiley, 2015), http://www.storytellingwithdata.com/book/; Also Alberto Cairo 2019
+## Build a Narrative on a Storyboard {- #storyboard}
 
+Let's return to the [Sketch Your Data Story exercise from Chapter 2](sketch.html). We encouraged you to scribble words and sketch pictures on sheets of paper to lay out at least four initial elements of your story:
 
+- Identify the *problem* that motivates your project.
+- Reframe the problem into a researchable *question*.
+- Describe your plan to *find* data to answer the question.
+- Dream up one or more *visualizations* you might create using imaginary data.
 
+It's perfectly normal to update the sheets you created at the beginning of your project to reflect changes in your thinking. For example, you may have refined your research question, found new sources during your search, and of course, turned your imagined visualizations into actual tables, charts, or maps with real data.
 
-## Tell and Show the Story {- #tell-and-show}
+Spread out these sheets like a *storyboard* to define the sequence of your narrative. Imagine them as preliminary slides for your presentation desk, or paragraphs and pictures for your written report or web page, for how you plan to explain the process to your audience. Or if you prefer digital over paper, another option is to convert blocks of text and images from your sheets into a [Google Slides presentation](https://www.google.com/slides/about/) or a [draft Google Document](https://www.google.com/docs/about/), or your preferred tools for telling the data story.
 
-Let's return to the [Sketch Your Data Story exercise from Chapter 2](sketch.html). We encouraged you to scribble words and sketch pictures on sheets of paper to lay out at least four elements of your story: 1) identify the *problem* that motivates your project, 2) restate it in the form of a *question*, 3) describe how you plan to *find* your data, 4) dream up at least one *visualization* you might create. Spread out these sheets of paper on a table, move them around to reorder the sequence, and begin to define the sequence of your story. Imagine them as preliminary slides for your presentation desk, or paragraphs and pictures for your written report or website.
+Now let's add richer content to your storyboard about what you actually discovered after you found, analyzed, and visualized your data. Select only your most meaningful tables, charts, or maps. Print them out on separate sheets of paper, or download static images or capture screenshots [TODO: explain how] to place them in your draft slides or document. Leave room for you to write text at the top and bottom of each table, chart, or map in order to tell your data story:
 
+- At the top of each key visualization, *verbalize* what your eyes see as its most important message.
 
+Write a one-sentence summary of the most insightful finding for each visualization. Two sentences is also acceptable, but one sentence is better, so if the first version becomes too wordy, rewrite it to focus on the core idea and throw out unnecessary text. Despite the old saying that a picture is worth a thousand words, data visualizations do *not* speak for themselves. Your job is to interpret their meaning for your audience. One of the best ways to translate charts or maps into words is to describe exactly what captures your eye as the designer, and communicate this to your reader, who is seeing it for the first time and relying on your guidance. [TODO: Here is where an example would be helpful---see note further below about continuing the reader survey example.] In every case, you need to decide on the ideal mix of words and images.
 
+- At the bottom of each visualization, tell us *why it matters*, and build up to how audiences should rethink or react.
 
-- Verbalize What Visualization Tells You (Cairo 2019, p89)
-Write down what your eyes see in your visualization..... and tell us what it matters.....  Despite what you may have been told, tables and charts and maps alone do not tell a story. You need to interpret what the viewers see....
+A good way to discuss the significance of your data story is to focus on how this new information *changes us*. When you discovered interesting patterns in your data visualization, how did it make you feel about the problem you (or your organization) were trying to solve? How did your answers to the research question make you think about the issue in a new or different way? Overall, does your data story inspire you or others to take action in some way? Once again, think about these questions from the perspective of your audience, and find words that capture how the data story should change our mindset, alter our habits, or influence our next steps. [TODO: see my note below about how example of reader survey to improve book might be helpful here]
 
-Who's your audience?
+Insert all of these new sheets (or slides, or blocks of text and images) to your storyboard. Order them in a way that will make sense *to your audience*, who most likely will be seeing all of this content for the first time. While there is no one way to tell a story, consider our advice to avoid making rookie mistakes. First, tell us the problem and question *before* you offer an answer, because our brains expect to receive them in that order. Second, summarize each insight *before* you show us the evidence, because your audience relies on you, the storyteller, to guide us on a journey through the data and what aspects deserve our attention. Describe the forest, not every tree, but point out a few special trees as examples for what makes different parts of the forest stand out.
 
-What's your storytelling format?
-- Many visualization books and workshops assume that you will hand a sheet of paper to people sitting around a board room, or a static PDF document sent via email.... Those formats are fine, but do not reflect the wider range of ways to communicate with people
-- a "data walk" to engage community stakeholders https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf
-- presentation slides with live web connection for interactivity (or video screencast)
-- website with textual narrative and interactive visualizations
+TODO: DISCUSS whether it makes sense to illustrate the new storyboard steps by continuing the example from previous chapters about our reader survey, and show some key findings & visualizations of what we learned. When teaching the edX course in Spring 2017, I made this [quick and crappy map of the 735 survey respondents at that time](https://handsondataviz.github.io/lmwgs-dataviz-2017-spring/). We could improve the map design and use the 3000+ survey respondents, and more important, look for any interesting patterns or relationships between reader experience and education to show in a chart. Not sure if there's anything profound to show here, but perhaps some readers would benefit from viewing an example storyboard that includes simple content for this full sequence: problem-question-find-verbalize-visualize-why
 
+## Draw Attention to Meaning {- #draw-attention}
+TODO: write this short section
 
-- Draw Attention to Meaning -- see Change your data to be more flexible with colors and highlights https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips
 Write compelling titles, labels, and sentences to accompany your visualization.
 using color to highlight key items or outliers in your data
 
-- Integrate Story with Your Data
-- Decide on Best Mix of Text and Visualization -- text, table, chart, map
+see Change your data to be more flexible with colors and highlights https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips
 
+## Credit Sources and Disclose Uncertainty {- #sources-uncertainty}
+TODO: Write this short section
 
+Build credibility for your work in several ways:
 
+- Tell true data stories. Do not hide or obscure meaningful evidence. Your job is to interpret the meaning of your data visualizations, and caution us against misinterpreting or reading too much into them.
+- Credit sources and collaborators on dataviz products and readme files
 - Acknowledge Limitations of the Data  -- Disclose Uncertainty (cite Cairo), visualize it in bar/column and line charts
-- Credit Sources and Disclose Uncertainty... to build credibility for your work
 
-Credit sources and collaborators on dataviz products and readme files
+## Decide On Your Data Story Format {- #story-format}
+TODO write this short section
 
-Under US law, you cannot copyright data, such as the raw information in the rows and columns of a spreadsheet. But you can copy, but representations of data can be protected by copyright. ... explain...  In the spirit of openness, we encourage you to share your data visualizations under a Creative Commons license... explain... in fact, this book is copyrighted, and the source text is publicly available under a Creative Commons TODO: TYPE license...
+- Many visualization books and workshops assume that you will hand a sheet of paper to people sitting around a board room, or a static PDF document sent via email.... Those formats are fine, but do not reflect the wider range of ways to communicate with people:
 
+- presentation slides with live web connection for interactivity
+- website with textual narrative and interactive visualizations
+- a video that combines narration (live action or voiceover) with screencasts of your interactive visualizations
+- a "data walk" to engage community stakeholders https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf
 
+Each of these storytelling formats requires you to customize your content to fit. Details are beyond the scope of this book. But consider a few key differences.
 
-Tell the story about your data, including its most meaningful insights and limitations
- Call attention to the most meaningful insights in your chart, and explain any data limitations.
+When presenting your data story as a slide deck:
+
+- If you're using interactive visualizations on the web, consider using presentation tools that display slides in your web browser, in order to seamless go back and forth between your slides and interactive web content. For example, you can create a screenshot of an interactive visualization [TODO: link how] and insert that static image in a Google Slide, with a link to the interactive version online.
+
+TODO: insert abstract side-by-side image of a Google Slide with an interactive visualization, plus animated GIF for web edition
+
+- Another reason to share your presentation slides online is to invite your audience to explore your claims and interactive visualizations in more detail, and to reach audiences beyond those who attended your event. Just before you deliver your presentation at a live event, share your slides online, and create a short link [TODO: to bit.ly in chap 3], and if you wish, also share it on your preferred social media platform. In your presentation title slide, add the shortlink and/or your social media link, and remind audiences that they can view all of the details again at their convenience. For your last presentation slide, insert a duplicate of the title slide to show them the link again.
+
+- With presentation slides, consider ways to *tell* and *show* us the data story by repeating key elements in sequence. For example, imagine this three-slide sequence about your key data findings the middle of your presentation. In the first slide, summarize the key insight at the top. In the second slide, keep this short summary at the top and show us the visualization evidence below it. In the third slide, continue to show the visualization evidence, but replace the summary text at the top with a statement about why this matters and what action your audience should take. In other words, repeat key elements across slides to build continuity between text and images, rather than separating them.
+
+TODO: insert abstract sequence of three slides: summary at top, summary with viz, significance with viz
+
+In the middle of your presentation, imagine or example, on one slide, you can summarize the key insight in text at the top.
 
 ### Summary {- #summary16}
 TODO
+Tell the story about your data, including its most meaningful insights and limitations
+ Call attention to the most meaningful insights in your chart, and explain any data limitations.

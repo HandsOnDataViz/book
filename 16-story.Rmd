@@ -36,13 +36,40 @@ Insert all of these new sheets (or slides, or blocks of text and images) to your
 
 TODO: DISCUSS whether it makes sense to illustrate the new storyboard steps by continuing the example from previous chapters about our reader survey, and show some key findings & visualizations of what we learned. When teaching the edX course in Spring 2017, I made this [quick and crappy map of the 735 survey respondents at that time](https://handsondataviz.github.io/lmwgs-dataviz-2017-spring/). We could improve the map design and use the 3000+ survey respondents, and more important, look for any interesting patterns or relationships between reader experience and education to show in a chart. Not sure if there's anything profound to show here, but perhaps some readers would benefit from viewing an example storyboard that includes simple content for this full sequence: problem-question-find-verbalize-visualize-why
 
+
+
 ## Draw Attention to Meaning {- #draw-attention}
-TODO: write this short section
+When finalizing your visualizations, add finishing touches to draw attention to the most meaningful aspects of the data. In addition to writing text to accompany your charts and maps, you can also add annotations and use colors *inside* some types of visualizations to point out what's most significant in your data story. Let's demonstrate how to use these features to transform your visualization in Datawrapper, a tool we first introduced in [Chapter 7: Chart Your Data](chart.html). This example was inspired by the [Datawrapper Academy site](https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips).
+
+One of the environmental challenges we face today is the ever-growing production of plastics. While these inexpensive and lightweight materials offer many quality-of-life benefits, we often deposit them in mismanaged waste streams that cause them to enter our rivers and oceans. To understand the growth of plastics, we consulted [Our World In Data](https://ourworldindata.org/plastic-pollution), and you can view the [annual global production data from 1950-2015 in Google Sheets format](https://docs.google.com/spreadsheets/d/1H3OwmiLQy5DugT-iArhuqHryzcWJi1kLocpGp7v-1VM/edit#gid=339613035).
+
+First, let's upload the data in a single-column format to Datawrapper, which by default, transforms this time-series data into a line chart, as shown in FIG TODO. This default chart type and title offers a true and accurate description, but does not yet highlight
+
+default line chart
+https://datawrapper.dwcdn.net/5y13d/
+
+plastic-line-chart.png
+
+But the big insight is that about 59 percent of the all plastics ever manufactured were made since 2000 (only the last 15 years of this chart). Show calculations. 
+
+split the data into two columns: pre- and post-2000,
+
+change type to stacked area chart
+https://datawrapper.dwcdn.net/1TyyZ/
+
+plastic-refine.png
+
+plastic-annotation.png -- hide regular title
+
+
+
+
 
 Write compelling titles, labels, and sentences to accompany your visualization.
 using color to highlight key items or outliers in your data
 
 see Change your data to be more flexible with colors and highlights https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips
+
 
 ## Credit Sources and Disclose Uncertainty {- #sources-uncertainty}
 TODO: Write this short section
@@ -52,6 +79,9 @@ Build credibility for your work in several ways:
 - Tell true data stories. Do not hide or obscure meaningful evidence. Your job is to interpret the meaning of your data visualizations, and caution us against misinterpreting or reading too much into them.
 - Credit sources and collaborators on dataviz products and readme files
 - Acknowledge Limitations of the Data  -- Disclose Uncertainty (cite Cairo), visualize it in bar/column and line charts
+
+Also use multi-column data to show dashed lines
+
 
 ## Decide On Your Data Story Format {- #story-format}
 TODO write this short section
@@ -65,7 +95,9 @@ TODO write this short section
 
 Each of these storytelling formats requires you to customize your content to fit. Details are beyond the scope of this book. But consider a few key differences.
 
-When presenting your data story as a slide deck:
+SIDEBAR: When presenting your data story as a slide deck:
+
+Here's some recommendations we're raising because presentation tools are still a relatively new format, and many people are still figuring out how best to tell a story that combines text and images, along with the opportunity to share interactive content on the web.
 
 - If you're using interactive visualizations on the web, consider using presentation tools that display slides in your web browser, in order to seamless go back and forth between your slides and interactive web content. For example, you can create a screenshot of an interactive visualization [TODO: link how] and insert that static image in a Google Slide, with a link to the interactive version online.
 

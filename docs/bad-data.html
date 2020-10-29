@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-28" />
+<meta name="date" content="2020-10-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -292,9 +292,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell and Show Your Data Story</a>
 <ul>
-<li class="chapter" data-level="" data-path="storyboard.html"><a href="storyboard.html"><i class="fa fa-check"></i>Build Narrative on a Storyboard</a></li>
+<li class="chapter" data-level="" data-path="storyboard.html"><a href="storyboard.html"><i class="fa fa-check"></i>Build a Narrative on a Storyboard</a></li>
 <li class="chapter" data-level="" data-path="draw-attention.html"><a href="draw-attention.html"><i class="fa fa-check"></i>Draw Attention to Meaning</a></li>
-<li class="chapter" data-level="" data-path="sources-uncertainty.html"><a href="sources-uncertainty.html"><i class="fa fa-check"></i>Credit Sources and Disclose Uncertainty</a></li>
+<li class="chapter" data-level="" data-path="sources-uncertainty.html"><a href="sources-uncertainty.html"><i class="fa fa-check"></i>Acknowledge Sources and Uncertainty</a></li>
 <li class="chapter" data-level="" data-path="story-format.html"><a href="story-format.html"><i class="fa fa-check"></i>Decide On Your Data Story Format</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -355,9 +355,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Another way to review the quality of data entry in any column in a spreadsheet is to create <a href="sort.html">a filter</a> or a <a href="pivot.html">pivot table</a> as described in Chapter 3. This allows you to quickly inspect the range of values that appear in that column, and whether they match what you expected to find.</p>
 <p>TODO: Add a histogram to the list above and refer to the appropriate chart chapter?</p>
+<p>Also beware of bad data due to poor <a href="geocode.html">geocoding</a>, when locations have been translated into latitude and longitude coordinates that cannot be trusted. For example, visualization expert Alberto Cairo describes how data <em>appeared</em> to show that Kansas residents viewed more online pornography than other US states. But on closer examination, the internet protocol (IP) addresses of many viewers could not be accurately geocoded, perhaps because they sought to maintain their privacy by using virtual private networks (VPN) to disguise their location. As a result, the geocoding tool automatically placed large numbers of users in the geographic center of the contiguous US, which happens to be in Kansas.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> Similarly, when global data is poorly geocoded, the population booms on imaginary “<a href="https://en.wikipedia.org/wiki/Null_Island">Null Island</a>,” which is actually a weather buoy located in the Atlantic Ocean at the intersection of the prime meridian and the equator, where the latitude and longitude coordinates are 0,0. For these reasons, carefully inspect geocoded data for errors caused by tools that mistakenly place results in the exact center of your geography, as shown in Figure <a href="bad-data.html#fig:bad-geocoding">4.2</a>.</p>
+
+<div class="figure"><span id="fig:bad-geocoding"></span>
+<img src="images/04-find/bad-geocoding-annotated.png" alt="Beware of bad geocoding that automatically places data in the geographic center of the contiguous United States (northern Kansas), or on imaginary Null Island (coordinates 0,0)." width="600" />
+<p class="caption">
+Figure 4.2: Beware of bad geocoding that automatically places data in the geographic center of the contiguous United States (northern Kansas), or on imaginary Null Island (coordinates 0,0).
+</p>
+</div>
+<p>TODO above: Ilya please create our own artwork to replace the placeholder above, which I quickly made with Wikipedia images in Photoshop.</p>
 <p>What should you do when you discover bad data in your project? Sometimes small issues are relatively straightforward and do not call into question the integrity of the entire dataset. Sometimes you can fix these using methods we describe in <a href="clean.html">Chapter 5: Clean Up Messy Data</a>. But larger issues can be more problematic. Follow the source of your data stream to try to identify where the issue began. If you cannot find and fix the issue on your own, contact the data provider to ask for their input, since they should have a strong interest in improving the quality of the data. If they cannot resolve an important data issue, then you need to pause and think carefully. In this case, is it wiser to continue working with problematic data and add a cautionary note to readers, or should you stop using the dataset entirely and call attention to its underlying problem? These are not easy decisions, and you should ask for opinions from colleagues. In any case, never ignore the warning signs of bad data.</p>
 <p>Finally, you can help to prevent bad data from occurring by following key steps we’ve outlined above. Give meaningful names to your data files, and add source notes in a separate tab about when and where you obtained it, along with any definitions or details about what it claims to measure and how it was recorded. Explain what any blanks or null values mean, and avoid replacing those with zeroes or other symbols. Always watch out for formatting issues when entering data or running calculations in spreadsheets.</p>
 <p>In the next section, you’ll learn more questions to help you understand your data at a deeper level.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="14">
+<li id="fn14"><p><span class="citation">Cairo, <em>How Charts Lie</em>, 2019</span>, pp. 99-102<a href="bad-data.html#fnref14" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

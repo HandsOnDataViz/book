@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-28" />
+<meta name="date" content="2020-10-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -292,9 +292,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="16" data-path="story.html"><a href="story.html"><i class="fa fa-check"></i><b>16</b> Tell and Show Your Data Story</a>
 <ul>
-<li class="chapter" data-level="" data-path="storyboard.html"><a href="storyboard.html"><i class="fa fa-check"></i>Build Narrative on a Storyboard</a></li>
+<li class="chapter" data-level="" data-path="storyboard.html"><a href="storyboard.html"><i class="fa fa-check"></i>Build a Narrative on a Storyboard</a></li>
 <li class="chapter" data-level="" data-path="draw-attention.html"><a href="draw-attention.html"><i class="fa fa-check"></i>Draw Attention to Meaning</a></li>
-<li class="chapter" data-level="" data-path="sources-uncertainty.html"><a href="sources-uncertainty.html"><i class="fa fa-check"></i>Credit Sources and Disclose Uncertainty</a></li>
+<li class="chapter" data-level="" data-path="sources-uncertainty.html"><a href="sources-uncertainty.html"><i class="fa fa-check"></i>Acknowledge Sources and Uncertainty</a></li>
 <li class="chapter" data-level="" data-path="story-format.html"><a href="story-format.html"><i class="fa fa-check"></i>Decide On Your Data Story Format</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
@@ -344,10 +344,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="draw-attention" class="section level2 unnumbered" number="">
 <h2>Draw Attention to Meaning</h2>
-<p>TODO: write this short section</p>
-<p>Write compelling titles, labels, and sentences to accompany your visualization.
-using color to highlight key items or outliers in your data</p>
-<p>see Change your data to be more flexible with colors and highlights <a href="https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips" class="uri">https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips</a></p>
+<p>When finalizing your visualizations, add finishing touches to draw attention to the most meaningful aspects of the data. In addition to writing text to accompany your charts and maps, you can also add annotations and use colors <em>inside</em> some types of visualizations to point out what’s most significant in your data story. Let’s demonstrate how to use these features to transform your visualization in Datawrapper, a tool we first introduced in <a href="chart.html">Chapter 7: Chart Your Data</a>. This example was inspired by the <a href="https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips">Datawrapper Academy site</a>.</p>
+<p>One of the environmental challenges we face today is the ever-growing production of plastics. While these inexpensive and lightweight materials offer many quality-of-life benefits, we often deposit them in mismanaged waste streams that cause them to enter our rivers and oceans. To understand the growth of plastics, we consulted <a href="https://ourworldindata.org/plastic-pollution">Our World In Data</a>, and you can view the <a href="https://docs.google.com/spreadsheets/d/1H3OwmiLQy5DugT-iArhuqHryzcWJi1kLocpGp7v-1VM/edit#gid=339613035">annual global production data from 1950-2015 in Google Sheets format</a>.</p>
+<p>First, let’s upload the data in a single-column format to Datawrapper. By default, the tool transforms this time-series data into a line chart, as shown in Figure <a href="draw-attention.html#fig:plastic-line-chart">16.3</a>, which shows how global plastic production has increased over time.</p>
+<pre><code>| year | plastics |
+| 1950 |        2 |
+| 1951 |        2 |
+...</code></pre>
+
+<div class="figure"><span id="fig:plastic-line-chart"></span>
+<iframe src="https://datawrapper.dwcdn.net/5y13d/" width="672" height="475px">
+</iframe>
+<p class="caption">
+Figure 16.3: The default GDP line chart on the left, and the reduced-axis chart on the right.
+</p>
+</div>
+<p>But Figure <a href="draw-attention.html#fig:plastic-line-chart">16.3</a> does not yet focus on the bigger story. Our 60 percent of all of the plastics ever manufactured in the world have been made since 2000, or the last 15 years of this chart, according to our analysis of the data. Let’s highlight this broader point by editing the chart in four ways, building on skills you learned in prior chapters. First, divide the data into two columns, <em>before 2000</em> and <em>since 2000</em>, which allows you to apply different colors to each data series. Insert the same data for year 2000 in both columns to make the new chart look continuous. Second, change the chart type from the default <em>line chart</em> to an <em>area chart</em> to fill the space under the curve to draw attention to the total amount of plastics manufactured in global history. Third, in the <em>Refine</em> tab, since you do <em>not</em> want a stacked area chart, uncheck the <em>stack areas</em> box. Assign a dark blue color to draw more attention to the post-2000 data series, and a gray color to diminish the appearance of the pre-2000 data series, as shown in Figure <a href="draw-attention.html#fig:plastic-line-chart">16.3</a>. Finally, hide the old title and replace it by adding annotations inside the area chart, using colored text, to emphasize the new interpretation. Overall, redesigning your chart helps you to communicate a more meaningful data story that global plastic production is increasing <em>and</em> that our world has manufactured more than half of our historical total in just the past 15 years.</p>
+<pre><code>| year | before 2000 | since 2000 |
+| 1999 |         202 |            |
+| 2000 |         213 |        213 |
+| 2001 |             |        218 |
+...</code></pre>
+
+<div class="figure"><span id="fig:plastic-refine"></span>
+<img src="images/16-story/plastic-refine.png" alt="Explore the interactive version of the new area chart, which uses color and annotations to draw attention to post-2000 global plastic production."  />
+<p class="caption">
+Figure 16.4: Explore the <a href="https://datawrapper.dwcdn.net/1TyyZ/">interactive version of the new area chart</a>, which uses color and annotations to draw attention to post-2000 global plastic production.
+</p>
+</div>
+<p>Now that you have a clearer idea about why and how to draw your audience’s attention to the most meaningful aspects of your data story, we’ll build on those skills in the next section on acknowledging sources and ambiguous data.</p>
 </div>
             </section>
 

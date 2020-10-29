@@ -18,66 +18,82 @@ Let's return to the [Sketch Your Data Story exercise from Chapter 2](sketch.html
 - Describe your plan to *find* data to answer the question.
 - Dream up one or more *visualizations* you might create using imaginary data.
 
-It's perfectly normal to update the sheets you created at the beginning of your project to reflect changes in your thinking. For example, you may have refined your research question, found new sources during your search, and of course, turned your imagined visualizations into actual tables, charts, or maps with real data.
+Spread out these sheets like a *storyboard* to define the sequence of your narrative, as shown in Figure \@ref(fig:data-story-panel2). Imagine them as preliminary slides for your presentation desk, or paragraphs and pictures for your written report or web page, for how you plan to explain the process to your audience. Or if you prefer digital over paper, another option is to convert blocks of text and images from your sheets into a [Google Slides presentation](https://www.google.com/slides/about/) or a [draft Google Document](https://www.google.com/docs/about/), or your preferred tools for telling the data story. Of course, it's perfectly normal to update the sheets you created at the beginning of your project to reflect changes in your thinking. For example, you may have refined your research question, found new sources during your search, and of course, turned your imagined visualizations into actual tables, charts, or maps with real data.
 
-Spread out these sheets like a *storyboard* to define the sequence of your narrative. Imagine them as preliminary slides for your presentation desk, or paragraphs and pictures for your written report or web page, for how you plan to explain the process to your audience. Or if you prefer digital over paper, another option is to convert blocks of text and images from your sheets into a [Google Slides presentation](https://www.google.com/slides/about/) or a [draft Google Document](https://www.google.com/docs/about/), or your preferred tools for telling the data story.
+(ref:data-story-panel2) Sketch out your story idea on four pages: problem, question, find data, visualize.
 
-Now let's add richer content to your storyboard about what you actually discovered after you found, analyzed, and visualized your data. Select only your most meaningful tables, charts, or maps. Print them out on separate sheets of paper, or download static images or capture screenshots [TODO: explain how] to place them in your draft slides or document. Leave room for you to write text at the top and bottom of each table, chart, or map in order to tell your data story:
+```{r data-story-panel2, out.width=750, fig.cap="(ref:data-story-panel2)"}
+ knitr::include_graphics("images/02-choose/data-story-panel.png")
+ ```
+
+Now let's enrich your storyboard by adding more content about what you actually discovered after searching, cleaning, analyzing, and visualizing your data. Select only your most meaningful tables, charts, or maps. Print them out on separate sheets of paper, or download static images or capture screenshots [TODO: link to how-to screenshot in chapter 10 embed] to place them in your draft slides or document. Leave room for you to write text at the top and bottom of each table, chart, or map in order to tell your data story. Here are the next two steps:
 
 - At the top of each key visualization, *verbalize* what your eyes see as its most important message.
 
-Write a one-sentence summary of the most insightful finding for each visualization. Two sentences is also acceptable, but one sentence is better, so if the first version becomes too wordy, rewrite it to focus on the core idea and throw out unnecessary text. Despite the old saying that a picture is worth a thousand words, data visualizations do *not* speak for themselves. Your job is to interpret their meaning for your audience. One of the best ways to translate charts or maps into words is to describe exactly what captures your eye as the designer, and communicate this to your reader, who is seeing it for the first time and relying on your guidance. [TODO: Here is where an example would be helpful---see note further below about continuing the reader survey example.] In every case, you need to decide on the ideal mix of words and images.
+Write a one-sentence summary of the most insightful finding for each visualization. Two sentences is also acceptable, but one sentence is better, so if the first version becomes too wordy, rewrite it to focus on the core idea and throw out unnecessary text. Despite the old saying that a picture is worth a thousand words, data visualizations do *not* speak for themselves. Your job is to interpret their meaning for your audience. One of the best ways to translate charts or maps into words is to describe exactly what captures your eye as the designer, and communicate this to your reader, who is seeing it for the first time and relying on your guidance. In every case, you need to decide on the ideal mix of words and images.
 
 - At the bottom of each visualization, tell us *why it matters*, and build up to how audiences should rethink or react.
 
-A good way to discuss the significance of your data story is to focus on how this new information *changes us*. When you discovered interesting patterns in your data visualization, how did it make you feel about the problem you (or your organization) were trying to solve? How did your answers to the research question make you think about the issue in a new or different way? Overall, does your data story inspire you or others to take action in some way? Once again, think about these questions from the perspective of your audience, and find words that capture how the data story should change our mindset, alter our habits, or influence our next steps. [TODO: see my note below about how example of reader survey to improve book might be helpful here]
+A good way to discuss the significance of your data story is to focus on how this new information *changes us*. When you discovered interesting patterns in your data visualization, how did it make you feel about the problem you (or your organization) were trying to solve? How did your answers to the research question make you think about the issue in a new or different way? Overall, does your data story inspire you or others to take action in some way? Once again, think about these questions from the perspective of your audience, and find words that capture how the data story should change our mindset, alter our habits, or influence our next steps.
+
+For example, we started our own data storyboard in chapter 2 to define our problem statement: *To learn more about readers’ backgrounds in order to write a better data visualization book that meets their needs.* [TODO: Revise earlier text to match?] We collected data from over 3,000 readers of an earlier draft of this book who responded to our [online survey](https://forms.gle/yn5QwTzfQkYcppQn9) and agreed that we would [publicly share the survey results](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo), as we discussed in [chapter 3](spreadsheets.html). We [cleaned up the data as described in chapter 5](clean.html) because some responses were partially empty or contained locations that could not be accurately geocoded. Then we looked for [meaningful comparisons as described in chapter 6](comparisons.html) and visualized our most interesting results in two ways. We created a [scatter chart as described in chapter 7](chart.html) and also a [point map as described in chapter 8](map.html). For this chapter, we followed our own advice above by writing short summaries at the top of each visualization, and explaining why it matters at the bottom.
+
+What did we learn? First, over 70 percent of readers who responded live outside of North America. Most notably, 35 percent reside in Asia, 20 percent in Europe, 6 percent each in Africa and South America, and 3 percent in Oceania, as shown in the left side of Figure \@ref(fig:survey-combined-annotated). Our first draft of the book mostly included examples from Hartford, Connecticut, where we both worked. While we knew that our book had a global audience, we were surprised to see how many readers---among those who responded to the survey---live outside of the United States. In order to be more inclusive and expand our international audience, we have revised the book to add more sample charts and maps from other regions where readers live. [TODO: we need to work more on this!] Second, we learned that readers who responded to our survey have relatively high levels of education, but limited data visualization experience. In particular, 89 percent reported completing the equivalent of a college degree (16 or more years of schooling), but rated themselves at the lower end of the experiential scale, as shown in the right side of Figure \@ref(fig:survey-combined-annotated). [TODO: ILYA please clarify if 89% are higher ed AND lower scale of experience, or if those are separate.] In our earlier draft of the book, our primary audience were college undergraduates, and we were uncertain about the reading and background levels of other readers. Based on the survey responses, we revised the manuscript to add deeper concepts about data visualization, because we believe most of our readers can grasp them, yet we continue to write at an introductory level that assumes no prior knowledge beyond a secondary school or early college education. Now we can add these new sheets to our storyboard.
+
+(ref:survey-combined-annotated) Verbalize meaningful insights at the top of each visualization, and tell why it matters at the bottom, then insert them into your storyboard.
+
+```{r survey-combined-annotated, out.width=750, fig.cap="(ref:survey-combined-annotated)"}
+knitr::include_graphics("images/16-story/survey-combined-annotated.png")
+```
 
 Insert all of these new sheets (or slides, or blocks of text and images) to your storyboard. Order them in a way that will make sense *to your audience*, who most likely will be seeing all of this content for the first time. While there is no one way to tell a story, consider our advice to avoid making rookie mistakes. First, tell us the problem and question *before* you offer an answer, because our brains expect to receive them in that order. Second, summarize each insight *before* you show us the evidence, because your audience relies on you, the storyteller, to guide us on a journey through the data and what aspects deserve our attention. Describe the forest, not every tree, but point out a few special trees as examples for what makes different parts of the forest stand out.
-
-TODO: DISCUSS whether it makes sense to illustrate the new storyboard steps by continuing the example from previous chapters about our reader survey, and show some key findings & visualizations of what we learned. When teaching the edX course in Spring 2017, I made this [quick and crappy map of the 735 survey respondents at that time](https://handsondataviz.github.io/lmwgs-dataviz-2017-spring/). We could improve the map design and use the 3000+ survey respondents, and more important, look for any interesting patterns or relationships between reader experience and education to show in a chart. Not sure if there's anything profound to show here, but perhaps some readers would benefit from viewing an example storyboard that includes simple content for this full sequence: problem-question-find-verbalize-visualize-why
-
-
 
 ## Draw Attention to Meaning {- #draw-attention}
 When finalizing your visualizations, add finishing touches to draw attention to the most meaningful aspects of the data. In addition to writing text to accompany your charts and maps, you can also add annotations and use colors *inside* some types of visualizations to point out what's most significant in your data story. Let's demonstrate how to use these features to transform your visualization in Datawrapper, a tool we first introduced in [Chapter 7: Chart Your Data](chart.html). This example was inspired by the [Datawrapper Academy site](https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips).
 
 One of the environmental challenges we face today is the ever-growing production of plastics. While these inexpensive and lightweight materials offer many quality-of-life benefits, we often deposit them in mismanaged waste streams that cause them to enter our rivers and oceans. To understand the growth of plastics, we consulted [Our World In Data](https://ourworldindata.org/plastic-pollution), and you can view the [annual global production data from 1950-2015 in Google Sheets format](https://docs.google.com/spreadsheets/d/1H3OwmiLQy5DugT-iArhuqHryzcWJi1kLocpGp7v-1VM/edit#gid=339613035).
 
-First, let's upload the data in a single-column format to Datawrapper, which by default, transforms this time-series data into a line chart, as shown in FIG TODO. This default chart type and title offers a true and accurate description, but does not yet highlight
+First, let's upload the data in a single-column format to Datawrapper. By default, the tool transforms this time-series data into a line chart, as shown in Figure \@ref(fig:plastic-line-chart), which shows how global plastic production has increased over time.
 
-default line chart
-https://datawrapper.dwcdn.net/5y13d/
+```
+| year | plastics |
+| 1950 |        2 |
+| 1951 |        2 |
+...
+```
 
-plastic-line-chart.png
+(ref:plastic-line-chart) The default GDP line chart on the left, and the reduced-axis chart on the right.
 
-But the big insight is that about 59 percent of the all plastics ever manufactured were made since 2000 (only the last 15 years of this chart). Show calculations. 
+```{r plastic-line-chart, fig.cap="(ref:plastic-line-chart)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/5y13d/", height = "475px") else knitr::include_graphics("images/16-story/plastic-line-chart.png")
+```
 
-split the data into two columns: pre- and post-2000,
+But Figure \@ref(fig:plastic-line-chart) does not yet focus on the bigger story. Our 60 percent of all of the plastics ever manufactured in the world have been made since 2000, or the last 15 years of this chart, according to our analysis of the data.  Let's highlight this broader point by editing the chart in four ways, building on skills you learned in prior chapters. First, divide the data into two columns, *before 2000* and *since 2000*, which allows you to apply different colors to each data series. Insert the same data for year 2000 in both columns to make the new chart look continuous. Second, change the chart type from the default *line chart* to an *area chart* to fill the space under the curve to draw attention to the total amount of plastics manufactured in global history. Third, in the *Refine* tab, since you do *not* want a stacked area chart, uncheck the *stack areas* box. Assign a dark blue color to draw more attention to the post-2000 data series, and a gray color to diminish the appearance of the pre-2000 data series, as shown in Figure \@ref(fig:plastic-line-chart). Finally, hide the old title and replace it by adding annotations inside the area chart, using colored text, to emphasize the new interpretation. Overall, redesigning your chart helps you to communicate a more meaningful data story that global plastic production is increasing *and* that our world has manufactured more than half of our historical total in just the past 15 years.
 
-change type to stacked area chart
-https://datawrapper.dwcdn.net/1TyyZ/
+```
+| year | before 2000 | since 2000 |
+| 1999 |         202 |            |
+| 2000 |         213 |        213 |
+| 2001 |             |        218 |
+...
+```
 
-plastic-refine.png
+(ref:plastic-refine) Explore the [interactive version of the new area chart](https://datawrapper.dwcdn.net/1TyyZ/), which uses color and annotations to draw attention to post-2000 global plastic production.
 
-plastic-annotation.png -- hide regular title
+```{r plastic-refine, fig.cap="(ref:plastic-refine)"}
+knitr::include_graphics("images/16-story/plastic-refine.png")
+```
 
+Now that you have a clearer idea about why and how to draw your audience's attention to the most meaningful aspects of your data story, we'll build on those skills in the next section on acknowledging sources and ambiguous data.
 
-
-
-
-Write compelling titles, labels, and sentences to accompany your visualization.
-using color to highlight key items or outliers in your data
-
-see Change your data to be more flexible with colors and highlights https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips
-
-
-## Credit Sources and Disclose Uncertainty {- #sources-uncertainty}
+## Acknowledge Sources and Uncertainty {- #sources-uncertainty}
 TODO: Write this short section
 
 Build credibility for your work in several ways:
 
 - Tell true data stories. Do not hide or obscure meaningful evidence. Your job is to interpret the meaning of your data visualizations, and caution us against misinterpreting or reading too much into them.
 - Credit sources and collaborators on dataviz products and readme files
+- Show stages of your work... upload raw data, cleaned data, show calculations in CSV or similar files... Write clear descriptions of key decisions you made when analyzing the data, and include those too... GitHub repo
 - Acknowledge Limitations of the Data  -- Disclose Uncertainty (cite Cairo), visualize it in bar/column and line charts
 
 Also use multi-column data to show dashed lines

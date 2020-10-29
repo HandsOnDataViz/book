@@ -4,6 +4,8 @@ https://datawrapper.dwcdn.net
 
 TODO: What if you don't yet have a website? Previously, I taught people to start with GitHub index.html, but that's too complex. Also WordPress.com does not work for iframes. Consider other user-friendly platforms: SquareSpace, etc? Or even something weird but quick, like Blocks? Or even W3Schools Tryit for iframe? Or is there some type of Google Drive thingy?
 
+TODO: insert how-to capture static screenshot instructions for different computers in this chapter, because it needs to go somewhere... also mention how to capture animated GIFs?
+
 After you create a chart or map, how do display it inside your website as an *interactive* visualization? Our goal is not a static picture, but a live chart or map that users can explore. This is an important question for beginners, since data visualizations are not valuable unless you can control where and how your work appears. This chapter walks you through the key steps.
 
 First, you need to own a website that supports iframe codes (which we'll explain below). If you do not have a website that supports this, then follow this quick tutorial to [Create a simple web page with GitHub Pages](github-pages.html). Even if you already have a website, still do this tutorial, because it introduces a tool used many times in this book.

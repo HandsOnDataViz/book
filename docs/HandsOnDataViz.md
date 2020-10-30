@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 26 Oct 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 29 Oct 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -557,8 +557,8 @@ Lies and Reduce Data Bias](detect.html), you’ll learn how to lie with
 charts and maps in order to do a better job of telling the truth.
 Finally, [Chapter 16: Tell and Show Your Data Story](story.html)
 emphasizes how the goal of data visualization is not simply to make
-pictures about numbers, but to craft a narrative that convinces readers
-how and why your interpretation matters.
+pictures about numbers, but to craft a truthful narrative that convinces
+readers how and why your interpretation matters.
 
 ### Summary
 
@@ -3151,6 +3151,37 @@ match what you expected to find.
 TODO: Add a histogram to the list above and refer to the appropriate
 chart chapter?
 
+Also beware of bad data due to poor [geocoding](geocode.html), when
+locations have been translated into latitude and longitude coordinates
+that cannot be trusted. For example, visualization expert Alberto Cairo
+describes how data *appeared* to show that Kansas residents viewed more
+online pornography than other US states. But on closer examination, the
+internet protocol (IP) addresses of many viewers could not be accurately
+geocoded, perhaps because they sought to maintain their privacy by using
+virtual private networks (VPN) to disguise their location. As a result,
+the geocoding tool automatically placed large numbers of users in the
+geographic center of the contiguous US, which happens to be in
+Kansas.[14] Similarly, when global data is poorly geocoded, the
+population booms on imaginary “[Null
+Island](https://en.wikipedia.org/wiki/Null_Island),” which is actually a
+weather buoy located in the Atlantic Ocean at the intersection of the
+prime meridian and the equator, where the latitude and longitude
+coordinates are 0,0. For these reasons, carefully inspect geocoded data
+for errors caused by tools that mistakenly place results in the exact
+center of your geography, as shown in Figure
+<a href="#fig:bad-geocoding">4.2</a>.
+
+<img src="images/04-find/bad-geocoding-annotated.png" alt="Beware of bad geocoding that automatically places data in the geographic center of the contiguous United States (northern Kansas), or on imaginary Null Island (coordinates 0,0)." width="600" />
+<p class="caption">
+Figure 4.2: Beware of bad geocoding that automatically places data in
+the geographic center of the contiguous United States (northern Kansas),
+or on imaginary Null Island (coordinates 0,0).
+</p>
+
+TODO above: Ilya please create our own artwork to replace the
+placeholder above, which I quickly made with Wikipedia images in
+Photoshop.
+
 What should you do when you discover bad data in your project? Sometimes
 small issues are relatively straightforward and do not call into
 question the integrity of the entire dataset. Sometimes you can fix
@@ -3410,7 +3441,7 @@ the chart or map you desire. This problem often arises when working with
 time-series or historical data, because tables and charts approach them
 in opposite directions. When designing a table, the proper method is to
 place dates horizontally as column headers, so that we read them from
-left-to-right, like this:[14]
+left-to-right, like this:[15]
 
 <table>
 <thead>
@@ -3645,7 +3676,7 @@ Chapter 8](map.html)
 Note: Lisa Charlotte Rost from Datawrapper has written a brilliant [blog
 post](https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/)
 about cleaning and preparing your spreadsheet data for analysis and
-visualization, which we recommend for further reading.[15]
+visualization, which we recommend for further reading.[16]
 
 Spreadsheets are great tools to find and replace data, split data into
 separate columns, or combine data into one column. But what if your data
@@ -3976,7 +4007,7 @@ spreadsheet skills](spreadsheet.html), [found and questioned your
 data](find.html), and [cleaned up any messy parts](clean.html), this
 chapter focuses on the key question to ask while analyzing your
 evidence: “Compared to what?” That’s how statistician Edward Tufte
-defined the “heart of quantitative reasoning.”[16]. We search for
+defined the “heart of quantitative reasoning.”[17]. We search for
 insightful findings in our data by judging their significance against
 each other, to identify those that truly stand out. Sometimes we need to
 adjust our scales to ensure that we’re weighing data fairly, or as the
@@ -4115,6 +4146,10 @@ cause-and-effect relationship. While the details are beyond the scope of
 this book, be mindful of the concepts—and choose your words
 carefully—when working with data.
 
+See also [table design recommendations for showing data correlations and
+possible causal relationships](table-design.html) in Chapter 9: Table
+Your Data.
+
 Now that you have a clearer understanding of how to use key words to
 describe data relationships more precisely, in the next section you’ll
 build on this knowledge and adjust data to create more meaningful
@@ -4135,7 +4170,7 @@ Here’s an example about motor vehicle safety that was inspired by
 visualization expert Alberto Cairo, with [updated 2018
 data](https://www.iihs.org/topics/fatality-statistics/detail/state-by-state)
 from the Insurance Institute for Highway Safety (IIHS) and the US
-Department of Transportation.[17] Over 36,000 people died in motor
+Department of Transportation.[18] Over 36,000 people died in motor
 vehicle crashes in 2018, including car and truck drivers and occupants,
 motorcyclists, pedestrians, and bicyclists. Although only a small
 fraction of this data appears in the tables below, you can [view all of
@@ -4336,7 +4371,7 @@ several other factors may influence these numbers, such as vehicle
 types, average speed, traffic laws, weather, and so forth. But as
 Alberto Cairo reminds us, every time we refine our model to make a more
 meaningful comparison, our interpretation becomes a closer
-representation of the truth.[18] TODO: Look for a closing quote by Cairo
+representation of the truth.[19] TODO: Look for a closing quote by Cairo
 on this point.
 
 As we demonstrated above, the most common way to normalize data is to
@@ -4352,7 +4387,7 @@ it does today, due to cost of living and related factors. Similarly,
 economists distinguish between *nominal data* (unadjusted) versus *real
 data* (adjusted over time), typically by converting figures into
 “constant dollars” for a particular year that allow better comparisons
-by accounting for purchasing power.[19] Also, economic data is often
+by accounting for purchasing power.[20] Also, economic data is often
 *seasonally adjusted* to improve comparisons for data that regularly
 varies across the year, such as employment or revenue during the summer
 tourism season versus the winter holiday shopping season. Another
@@ -4708,7 +4743,7 @@ represent values through the *position* and *angle* of the line, not its
 height. Visualization expert Alberto Cairo demonstrates that starting a
 line chart at a number other than zero does not necessarily distort its
 encoded information because we rely on its shape, not its height, to
-determine its meaning.[20]
+determine its meaning.[21]
 
 TODO: Confirm revision with Ilya; Add visual here of line chart baseline
 at zero versus higher number to illustrate the argument?
@@ -4834,7 +4869,7 @@ Rost’s “[A Friendly Guide to Colors in Data
 Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
 Pick More Beautiful Colors for Your Data
 Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
-both on the Datawrapper blog.[21] But some principles are fairly
+both on the Datawrapper blog.[22] But some principles are fairly
 universal. First, do not use colors just for the sake of it, most charts
 are fine being monochromatic. Second, remember that colors come with
 some meaning attached, which can vary among cultures. In the world of
@@ -5339,7 +5374,7 @@ from the Chart type dropdown list.
 Sidebar: Tables and charts approach time-series data in opposite
 directions. When designing a table, the proper method is to place dates
 horizontally as column headers, so that we read them from left-to-right,
-like this:[22]
+like this:[23]
 
 <table>
 <thead>
@@ -6691,7 +6726,7 @@ overview of visualization colors in general, see Lisa Charlotte Rost’s
 Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
 Pick More Beautiful Colors for Your Data
 Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
-both on the Datawrapper blog.[23]
+both on the Datawrapper blog.[24]
 
 To illustrate key concepts about colors in choropleth map design, let’s
 explore a wonderful tool called
@@ -8110,7 +8145,7 @@ learned about [chart design in Chapter 7](chart-design.html) and [map
 design in Chapter 8](map-design.html). Jonathan Schwabish, an economist
 who specializes in creating policy-relevant data visualizations, offers
 his advice in recent publications about creating tables that communicate
-well with multiple audiences.[24]. Here’s a summary of several of his
+well with multiple audiences.[25]. Here’s a summary of several of his
 key points, which also appear in Figure
 <a href="#fig:table-design">9.1</a>.
 
@@ -8131,7 +8166,7 @@ items or outliers in your data, a topic we’ll discuss later in [Chapter
 
 When creating cross-tabulations to illustrate data correlations and
 possible causal relationships, statistician Joel Best offers two more
-design recommendations.[25]
+design recommendations.[26]
 
 1.  Place the independent variable (the suspected cause) at the top in
     the column headers, and the dependent variable (the possible effect)
@@ -8188,7 +8223,7 @@ the interactive table online.
 You’ll also learn how to create sparklines, or tiny line charts that
 quickly summarize data trends. This chart type was refined by Edward
 Tufte, a Yale professor and data visualization pioneer, who described
-sparklines as “datawords… intense, simple, word-sized graphics.”[26]
+sparklines as “datawords… intense, simple, word-sized graphics.”[27]
 While Tufte envisioned sparklines on a static sheet of paper or PDF
 document, you’ll create them inside an interactive table, as shown in
 Figure <a href="#fig:datawrapper-table">9.3</a>. Readers can search by
@@ -8401,6 +8436,10 @@ WordPress.com does not work for iframes. Consider other user-friendly
 platforms: SquareSpace, etc? Or even something weird but quick, like
 Blocks? Or even W3Schools Tryit for iframe? Or is there some type of
 Google Drive thingy?
+
+TODO: insert how-to capture static screenshot instructions for different
+computers in this chapter, because it needs to go somewhere… also
+mention how to capture animated GIFs?
 
 After you create a chart or map, how do display it inside your website
 as an *interactive* visualization? Our goal is not a static picture, but
@@ -10572,14 +10611,15 @@ explored prior chapters in this book, this template is a good template
 for newer users, because you enter your map data and settings in a
 linked Google Sheet, as shown in Figure
 <a href="#fig:lmwgs-sheet">13.2</a>, and upload images or geographic
-files into a folder in your GitHub repository. In addition, all of the
-data you enter can easily be exported and migrated to other platforms,
-which matters because mapping technologies continually evolve, as we
-discussed in the [how to choose tools section in Chapter
-2](choose.html). Finally, the Leaflet Maps template is built on flexible
-open-source software that’s written primarily in JavaScript, a very
-common coding language for the web, so you can customize it further if
-you have skills or support from a developer.
+files into a folder in your GitHub repository. All of the data you enter
+can easily be exported and migrated to other platforms as visualization
+technology continues to evolve in the future, as we discussed in the
+[how to choose tools section in Chapter 2](choose.html). Furthermore,
+the map design is responsive, meaning it automatically resizes to look
+good on small or large screens. Finally, the Leaflet Maps template is
+built on flexible open-source software that’s written primarily in
+JavaScript, a very common coding language for the web, so you can
+customize it further if you have skills or support from a developer.
 
 TODO: Create and insert a new version of the demo, featuring ECGreenway
 route thru CT or East Coast, points with photos, and pop density of
@@ -11048,16 +11088,19 @@ and [ESRI Story Maps](https://storymaps.arcgis.com/en/), we do not
 recommend them because both lack *data portability*, meaning that you
 can’t easily export any information you enter. By contrast, all of the
 information you add to the Leaflet Storymaps linked Google Sheet and
-GitHub repo can easily be exported and migrated to other platforms,
-which matters because digital technologies continually evolve, as we
+GitHub repo can easily be exported and migrated to other platforms as
+visualization technology continues to evolve in the future, as we
 described when discussing [how to choose tools wisely in Chapter
-2](choose.html). In addition, the Leaflet Storymaps template offers more
-features to customize how you display your data, including and scanned
-background map layers, a topic you’ll learn about in the [Mapwarper
-section of Chapter 14](mapwarper.html). Finally, this Leaflet template
-is built on flexible open-source software that’s written primarily in
-JavaScript, a very common coding language for the web, so you can
-customize it further if you have skills or support from a developer.
+2](choose.html). In addition, the Leaflet Storymaps template allows you
+to customize the appearance of your data, and to add more layers, such
+as historical maps and geographic boundaries, which you’ll learn how to
+prepare in [Chapter 14: Transform Your Map Data](transform.html).
+Furthermore, the storymap design is responsive, so that it appears
+top-and-bottom on small screens and side-by-side on larger ones.
+Finally, the Leaflet template is built on flexible open-source software
+that’s written primarily in JavaScript, a very common coding language
+for the web, so you can customize it further if you have skills or
+support from a developer.
 
 TODO BELOW: Create and insert a new version of the template and
 demonstrate all features (all media, tricks such as leaving blank
@@ -11475,6 +11518,10 @@ with Google Sheets?)
     are not changed into curly apostrophes).
 -   to adjust title size and font: in GitHub, go to css/styles.css file,
     scroll down to (specify lines?), and adjust font-size values…
+-   About the responsive design: On larger screens, the scrolling
+    narrative and map appear side-by-side. On smaller screens where the
+    width is less than 768 pixels, it automatically switches to a
+    top-and-bottom display.
 
 #### Finalize Your Story Map
 
@@ -13201,7 +13248,7 @@ types of data bias](data-bias.html), such as framing bias, intergroup
 bias, and map area bias, including how we define the United States.
 While we may not be able to stop bias entirely, in this chapter you’ll
 learn how to identify it in the works by other people, and strategies to
-reduce its presence in our own visualizations.[27]
+reduce its presence in our own visualizations.[28]
 
 How to Lie with Charts
 ----------------------
@@ -13303,7 +13350,7 @@ Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and
 this warming has already begun to cause glacial melt and rising sea
 levels. Your task is to create *misleading* line charts that *diminish*
 the appearance of rising global temperature change in the reader’s
-eye.[28]
+eye.[29]
 
 1.  Open the [global temperature change 1880-2019 data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0),
@@ -13375,7 +13422,7 @@ expert Albert Cairo reminds us that line charts represent values in the
 line charts by their shape, rather than their height, so the baseline is
 irrelevant. Therefore, flattening the line chart for temperature change
 may mislead readers, but it’s technically not wrong, as long as it is
-labelled correctly.[29]
+labelled correctly.[30]
 
 ### Widen the chart to warp its aspect ratio
 
@@ -13406,7 +13453,7 @@ expressed in a chart should roughly match its aspect ratio. For example,
 if a chart represents a 33 percent increase, which is the same as 33/100
 or 1/3, he recommends an aspect ratio of 3:1 (because the fraction is
 flipped by placing width before height), or in other words, a chart that
-is three times taller than its width.[30] Therefore, if we apply Cairo’s
+is three times taller than its width.[31] Therefore, if we apply Cairo’s
 recommendation to our climate change chart, the difference from 0° to
 1°C represents a 100% increase, which suggests an ideal chart with a 1:1
 aspect ratio, or just as tall as it is wide, as shown in Figure
@@ -13441,7 +13488,7 @@ matches its aspect ratio (12:1), the result is misleading.
 
 Even Cairo points out that this significant temperature increase looks
 “deceptively small” if you follow his aspect ratio recommendation using
-this scale, so he advises against it.[31] Furthermore, if you convert
+this scale, so he advises against it.[32] Furthermore, if you convert
 the scale from Celsius to Fahrenheit, the calculation changes once
 again, which doesn’t make any sense. Where does all of this leave us? If
 you feel confused, that’s because there’s no universal rule with aspect
@@ -13542,7 +13589,7 @@ truthful, while many were unreasonably manipulated to mislead readers by
 hiding or disguising important patterns in the data. Furthermore, there
 are additional ways to deceive that we did not examine here, such as
 building 3D charts and tilting the reader’s perspective below the
-baseline.[32]
+baseline.[33]
 
 You may feel strange that data visualization lacks clearly-defined
 design rules for many cases, like we are accustomed to reading in our
@@ -13566,7 +13613,7 @@ your own. We’ll focus our attention on choropleth maps that use shading
 or color to represent values in geographic areas, because they are a
 topic of considerable mischief. This exercise was inspired by geographer
 Mark Monmonier’s classic book by the same name, *How to Lie with Maps*,
-originally published in 1991, now in its third edition.[33]
+originally published in 1991, now in its third edition.[34]
 
 Before we get started, review the [map design principles in Chapter
 8](map-design.html) to avoid common mistakes when designing colored
@@ -13723,7 +13770,7 @@ Whatever you decide, avoid the temptation to manually adjust a map’s
 settings in ways that manipulate its appearance to fit a preconceived
 point of view. In sum, show us a story and tell the truth. You may need
 to create several maps with different settings to decide which one is
-the best compromise.[34].
+the best compromise.[35].
 
 \[TODO: Insert this as a final statement somewhere about the two US
 inequality maps – or not? Based on these general guidelines, some may
@@ -13788,7 +13835,7 @@ Spiegelhalter observes that when we supplement rates with raw numbers,
 it further increases our impression of risks. For example, if we told
 you a surgical procedure had a 5 percent mortality rate *and* that 20
 out of 400 patients died, it seems worse because we begin to imagine
-real people’s lives, not abstract percentages.[35] The best way to
+real people’s lives, not abstract percentages.[36] The best way to
 counter framing bias is to be aware of its potential effect on our minds
 and to call it out, as we’ve attempted to do here.
 
@@ -13812,7 +13859,7 @@ visualization, and ways to counter its impact. Jonathan Schwabish and
 Alice Feng describe how they applied a racial equity lens to revise the
 [Urban Institute’s Data Visualization Style
 Guide](http://urbaninstitute.github.io/graphics-styleguide/) with a
-racial equity lens.[36] Some recommendations are straightforward and
+racial equity lens.[37] Some recommendations are straightforward and
 relatively simple to implement. For example, they recommend ordering
 group labels to focus on the data story, rather than listing “White” and
 “Men” at the top by default. Also, we should proactively acknowledge
@@ -13988,85 +14035,378 @@ TODO
 16 Tell and Show Your Data Story
 ================================
 
-TODO: Write this chapter: Tell the story about your data, including its
-most meaningful insights and limitations Write compelling titles,
-labels, and sentences to accompany your visualization. Call attention to
-the most meaningful insights in your chart, and explain any data
-limitations.
+In this concluding chapter, we’ll draw on knowledge and skills you’ve
+developed while reading this book and offer some final recommendations
+for creating true and meaningful data stories. Here we emphasize
+*storytelling*. The goal of data visualization is not simply to make
+pictures about numbers, but also to craft a truthful narrative that
+convinces readers how and why your interpretation matters.
 
-TODO; Start with old saying about “show, don’t just tell…”
+Writers have an old saying—“show, don’t tell”—which means to let readers
+experience a story through the actions and feelings of its characters,
+rather than narration by the author. But we take a different stance, as
+shown in our chapter title: “tell and show” your data story. Make a
+regular habit of these three steps: tell your audience what you found
+that’s interesting in the data, show them the visual evidence to support
+your argument, and remind us why it matters. In three words:
+tell—show—why. Whatever you do, avoid the bad habit of showing lots of
+pictures and leaving it up to the audience to guess what it all means.
+Because we rely on you, the storyteller, to guide us on a journey
+through the data and what aspects deserve our attention. Describe the
+forest, not every tree, but point out a few special trees as examples to
+help us understand how different parts of the forest stand out.
 
-TODO: Return to the “Sketch Your Data Story” exercise from the
-introduction….These three simple steps will help you start sketching out
-your data story. To be sure, there’s much more work to be done, such as
-finding, cleaning, and visualizing data, which we’ll cover in the
-chapters to come. But transferring ideas from your brain onto paper is
-the big first step, because making your thoughts visible enables you to
-act on them more easily. Scribbling words and sketching pictures not
-only helps *you* to see your thoughts more clearly, but it also allows
-you to share what’s been inside your head more concretely with friends
-and colleagues. After reflecting on your sheets of paper and listening
-to feedback, you can cross out not-so-good ideas, replace them with
-better ones, and add new sheets of paper with more ideas. Finally, you
-can spread out the sheets on a table, move them around to reorder the
-sequence, and begin to define the three essential stages of your data
-story: the beginning, middle, and end. Start to imagine these sheets of
-paper as preliminary slides for your presentation desk, or paragraphs
-and pictures for your written report or website. We’ll come back to this
-exercise near the end of the book in [Chapter 16: Tell and Show Your
-Data Story](story.html)
+In this chapter, you’ll learn how to [build visualizations into the
+narrative of the storyboard](storyboard.html) that we started at the
+beginning of the book. Also, you will try out ways to [draw attention to
+what’s most meaningful](draw-attention.html) in your data through text
+and color, as well as how to [acknowledge sources and
+uncertainty](sources-uncertainty.html). Finally, we’ll discuss decisions
+you will need to make about the [format of your data
+story](story-format.html), with our continual emphasis on sharing
+interactive visualizations rather than static images. Our inspiration
+for this chapter is drawn from excellent books by visualization experts
+Cole Nussbaumer Knaflic and Alberto Cairo.[38]
 
-Write down what your eyes see in your visualization….. and tell us what
-it matters….. Despite what you may have been told, tables and charts and
-maps alone do not tell a story. You need to interpret what the viewers
-see….
+Build a Narrative on a Storyboard
+---------------------------------
 
-Who’s your audience?
+TODO: Or alternative section title “Build Data into Your Storyboard”
 
-What’s your storytelling format?
+Let’s return to the [Sketch Your Data Story exercise from Chapter
+2](sketch.html). We encouraged you to scribble words and sketch pictures
+on sheets of paper to lay out at least four initial elements of your
+story:
 
--   Many visualization books and workshops assume that you will hand a
-    sheet of paper to people sitting around a board room, or a static
-    PDF document sent via email…. Those formats are fine, but do not
-    reflect the wider range of ways to communicate with people
--   a “data walk” to engage community stakeholders
-    <a href="https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf" class="uri">https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf</a>
--   presentation slides with live web connection for interactivity (or
-    video screencast)
--   website with textual narrative and interactive visualizations
+-   Identify the *problem* that motivates your project.
+-   Reframe the problem into a researchable *question*.
+-   Describe your plan to *find* data to answer the question.
+-   Dream up one or more *visualizations* you might create using
+    imaginary data.
 
-This chapter draws inspiration from Cole Nussbaumer Knaflic,
-*Storytelling with Data: A Data Visualization Guide for Business
-Professionals* (Wiley, 2015),
-<a href="http://www.storytellingwithdata.com/book/" class="uri">http://www.storytellingwithdata.com/book/</a>
+Spread out these sheets like a *storyboard* to define the sequence of
+your narrative, as shown in Figure
+<a href="#fig:data-story-panel2">16.1</a>. Imagine them as preliminary
+slides for your presentation desk, or paragraphs and pictures for your
+written report or web page, for how you plan to explain the process to
+your audience. Or if you prefer digital over paper, another option is to
+convert blocks of text and images from your sheets into a [Google Slides
+presentation](https://www.google.com/slides/about/) or a [draft Google
+Document](https://www.google.com/docs/about/), or your preferred tools
+for telling the data story. Of course, it’s perfectly normal to update
+the sheets you created at the beginning of your project to reflect
+changes in your thinking. For example, you may have refined your
+research question, found new sources during your search, and of course,
+turned your imagined visualizations into actual tables, charts, or maps
+with real data.
 
-Also Alberto Cairo 2019
+<img src="images/02-choose/data-story-panel.png" alt="Sketch out your story idea on four pages: problem, question, find data, visualize." width="750" />
+<p class="caption">
+Figure 16.1: Sketch out your story idea on four pages: problem,
+question, find data, visualize.
+</p>
 
--   Beginning, Middle, and End
--   Draw Attention to Meaning – see Change your data to be more flexible
-    with colors and highlights
-    <a href="https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips" class="uri">https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips</a>
--   Integrate Story with Your Data
--   Decide on Best Mix of Text and Visualization – text, table, chart,
-    map
--   Try Different Visualizations and Test Them – Cairo 2016, p125, 145
--   Verbalize What Visualization Tells You (Cairo 2019, p89)
--   Write Clearly about What You Visualize
--   Acknowledge Limitations of the Data – Disclose Uncertainty (cite
-    Cairo), visualize it in bar/column and line charts
--   Credit Data Sources and Collaborators
+Now let’s enrich your storyboard by adding more content about what you
+actually discovered after searching, cleaning, analyzing, and
+visualizing your data. Select only your most meaningful tables, charts,
+or maps. Print them out on separate sheets of paper, or download static
+images or capture screenshots \[TODO: link to how-to screenshot in
+chapter 10 embed\] to place them in your draft slides or document. Leave
+room for you to write text at the top and bottom of each table, chart,
+or map in order to tell your data story. Here are the next two steps:
 
-Credit sources and collaborators on dataviz products and readme files
+-   At the top of each key visualization, *summarize* the most important
+    message the data reveals.
 
-Under US law, you cannot copyright data, such as the raw information in
-the rows and columns of a spreadsheet. But you can copy, but
-representations of data can be protected by copyright. … explain… In the
-spirit of openness, we encourage you to share your data visualizations
-under a Creative Commons license… explain… in fact, this book is
-copyrighted, and the source text is publicly available under a Creative
-Commons TODO: TYPE license…
+Verbalize what your eyes see as the most insightful finding for your
+most important visualizations.
 
-using color to highlight key items or outliers in your data
+Write a one-sentence summary of the most insightful finding for each
+visualization. Verbalize how it appears in your eyes, like our guide to
+the data forest. Two sentences are acceptable, but one succinct sentence
+is better. If your prose becomes too wordy, try writing the first
+sentence in “headline” style and the second as a more descriptive
+follow-up. Despite the old saying that a picture is worth a thousand
+words, data visualizations do *not* speak for themselves. Your job is to
+interpret their meaning for your audience. One of the best ways to
+translate charts or maps into words is to describe exactly what captures
+your eye as the designer, and communicate this to your reader, who is
+seeing it for the first time and relying on your guidance. In every
+case, you need to decide on the ideal mix of words and images.
+
+-   At the bottom of each visualization, tell us *why it matters*, and
+    build up to how audiences should rethink or react.
+
+A good way to discuss the significance of your data story is to focus on
+how this new information *changes us*. When you discovered interesting
+patterns in your data visualization, how did it make you feel about the
+problem you (or your organization) were trying to solve? How did your
+answers to the research question make you think about the issue in a new
+or different way? Overall, does your data story inspire you or others to
+take action in some way? Once again, think about these questions from
+the perspective of your audience, and find words that capture how the
+data story should change our mindset, alter our habits, or influence our
+next steps.
+
+For example, we started our own data storyboard in chapter 2 to define
+our problem statement: *To learn more about readers’ backgrounds in
+order to write a better data visualization book that meets their needs.*
+\[TODO: Revise earlier chapter text to match?\] We collected data from
+over 3,000 readers of an earlier draft of this book who responded to our
+[online survey](https://forms.gle/yn5QwTzfQkYcppQn9) and agreed that we
+would [publicly share the survey
+results](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo),
+as we discussed in [chapter 3](spreadsheets.html). We [cleaned up the
+data as described in chapter 5](clean.html) because some responses were
+partially empty or contained locations that could not be accurately
+geocoded. Then we looked for [meaningful comparisons as described in
+chapter 6](comparisons.html) and visualized our most interesting results
+in two ways. We created a [scatter chart as described in chapter
+7](chart.html) and also a [point map as described in chapter
+8](map.html). For this chapter, we followed our own advice above by
+writing short summaries at the top of each visualization, and explaining
+why it matters at the bottom.
+
+What did we discover in our survey? First, over 70 percent of readers
+who responded live outside of North America. Most notably, 35 percent
+reside in Asia, 20 percent in Europe, 6 percent each in Africa and South
+America, and 3 percent in Oceania, as shown in the left side of Figure
+<a href="#fig:survey-combined-annotated">16.2</a>. Our first draft of
+the book mostly included examples from Hartford, Connecticut, where we
+both worked. While we knew that our book had a global audience, we were
+surprised to see how many readers—among those who responded to the
+survey—live outside of the United States. In order to be more inclusive
+and expand our international audience, we have revised the book to add
+more sample charts and maps from other regions where readers live.
+\[TODO: we need to work more on this!\] Second, we learned that readers
+who responded to our survey have relatively high levels of education,
+but limited data visualization experience. In particular, 89 percent
+reported completing the equivalent of a college degree (16 or more years
+of schooling), but rated themselves at the lower end of the experiential
+scale, as shown in the right side of Figure
+<a href="#fig:survey-combined-annotated">16.2</a>. In our earlier draft
+of the book, our primary audience were college undergraduates, and we
+were uncertain about the reading and background levels of other readers.
+Based on the survey responses, we revised the manuscript to add deeper
+concepts about data visualization, because we believe most of our
+readers can grasp them, yet we continue to write at an introductory
+level that assumes no prior knowledge beyond a secondary school or early
+college education. Now we can add these new sheets to our storyboard.
+
+<img src="images/16-story/survey-combined-annotated.png" alt="Verbalize meaningful insights at the top of each visualization, and tell why it matters at the bottom, then insert them into your storyboard." width="750" />
+<p class="caption">
+Figure 16.2: Verbalize meaningful insights at the top of each
+visualization, and tell why it matters at the bottom, then insert them
+into your storyboard.
+</p>
+
+Insert your new data visualization sheets (or slides, or blocks of text
+and images) into your storyboard. As you complete your work, your layout
+might look something like this:
+
+-   problem statement
+-   research question
+-   how you found data
+-   tell 1st data insight—show evidence—why it matters
+-   tell 2nd data insight—show evidence—why it matters
+-   …and so forth toward your summary conclusion
+
+But it’s your job to organize your data story in the way that makes
+sense *to your audience*, who most likely will be viewing all of this
+content for the first time. While there is no one way to tell a story,
+consider this advice to avoid making rookie mistakes. First, tell us the
+problem and question *before* you offer an answer, because our brains
+expect to hear them in that order. Second, summarize each insight
+*before* you show us the supporting evidence, because once again,
+reversing the normal sequence makes it harder for us to follow your
+argument. Finally, make sure that your research question and key
+insights are *aligned* with one another, since your audience will be
+confused if you ask one question, but answer a different one. It’s
+perfectly normal to tweak or fully revise the wording of your research
+question after you’ve dug deep into the data, because sometimes you
+don’t really know what you’re looking for until you’ve discovered it.
+
+Now you should have a clearer sense of how a storyboard helps you to
+bring together narrative and data. In the next section, you’ll learn how
+to refine your visualizations by using text and color to draw attention
+to what is most important.
+
+TODO above: Ilya please update map data and clarify chart interpretation
+as discussed in
+<a href="https://github.com/HandsOnDataViz/survey-results/issues/1" class="uri">https://github.com/HandsOnDataViz/survey-results/issues/1</a>
+
+Draw Attention to Meaning
+-------------------------
+
+When finalizing your visualizations, add finishing touches to draw
+attention to the most meaningful aspects of the data. In addition to
+writing text to accompany your charts and maps, you can also add
+annotations and use colors *inside* some types of visualizations to
+point out what’s most significant in your data story. Let’s demonstrate
+how to use these features to transform your visualization in
+Datawrapper, a tool we first introduced in [Chapter 7: Chart Your
+Data](chart.html). This example was inspired by the [Datawrapper Academy
+site](https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips).
+
+One of the environmental challenges we face today is the ever-growing
+production of plastics. While these inexpensive and lightweight
+materials offer many quality-of-life benefits, we often deposit them in
+mismanaged waste streams that cause them to enter our rivers and oceans.
+To understand the growth of plastics, we consulted [Our World In
+Data](https://ourworldindata.org/plastic-pollution), and you can view
+the [annual global production data from 1950-2015 in Google Sheets
+format](https://docs.google.com/spreadsheets/d/1H3OwmiLQy5DugT-iArhuqHryzcWJi1kLocpGp7v-1VM/edit#gid=339613035).
+
+First, let’s upload the data in a single-column format to Datawrapper.
+By default, the tool transforms this time-series data into a line chart,
+as shown in Figure <a href="#fig:plastic-line-chart">16.3</a>, which
+shows how global plastic production has increased over time.
+
+    | year | plastics |
+    | 1950 |        2 |
+    | 1951 |        2 |
+    ...
+
+<img src="images/16-story/plastic-line-chart.png" alt="The default GDP line chart on the left, and the reduced-axis chart on the right."  />
+<p class="caption">
+Figure 16.3: The default GDP line chart on the left, and the
+reduced-axis chart on the right.
+</p>
+
+But Figure <a href="#fig:plastic-line-chart">16.3</a> does not yet focus
+on the bigger story. Our 60 percent of all of the plastics ever
+manufactured in the world have been made since 2000, or the last 15
+years of this chart, according to our analysis of the data. Let’s
+highlight this broader point by editing the chart in four ways, building
+on skills you learned in prior chapters. First, divide the data into two
+columns, *before 2000* and *since 2000*, which allows you to apply
+different colors to each data series. Insert the same data for year 2000
+in both columns to make the new chart look continuous. Second, change
+the chart type from the default *line chart* to an *area chart* to fill
+the space under the curve to draw attention to the total amount of
+plastics manufactured in global history. Third, in the *Refine* tab,
+since you do *not* want a stacked area chart, uncheck the *stack areas*
+box. Assign a dark blue color to draw more attention to the post-2000
+data series, and a gray color to diminish the appearance of the pre-2000
+data series, as shown in Figure
+<a href="#fig:plastic-line-chart">16.3</a>. Finally, hide the old title
+and replace it by adding annotations inside the area chart, using
+colored text, to emphasize the new interpretation. Overall, redesigning
+your chart helps you to communicate a more meaningful data story that
+global plastic production is increasing *and* that our world has
+manufactured more than half of our historical total in just the past 15
+years.
+
+    | year | before 2000 | since 2000 |
+    | 1999 |         202 |            |
+    | 2000 |         213 |        213 |
+    | 2001 |             |        218 |
+    ...
+
+<img src="images/16-story/plastic-refine.png" alt="Explore the [interactive version of the new area chart](https://datawrapper.dwcdn.net/1TyyZ/), which uses color and annotations to draw attention to post-2000 global plastic production."  />
+<p class="caption">
+Figure 16.4: Explore the [interactive version of the new area
+chart](https://datawrapper.dwcdn.net/1TyyZ/), which uses color and
+annotations to draw attention to post-2000 global plastic production.
+</p>
+
+Now that you have a clearer idea about why and how to draw your
+audience’s attention to the most meaningful aspects of your data story,
+we’ll build on those skills in the next section on acknowledging sources
+and ambiguous data.
+
+Acknowledge Sources & Uncertainty
+---------------------------------
+
+Since our goal is to tell data stories that are meaningful and true,
+build credibility into your work, which you can do in several ways:
+
+First, always represent data truthfully. Do not hide or obscure relevant
+evidence, and avoid visualization methods that might mislead your
+audience, as we discussed in [Chapter 15 on detecting lies and reducing
+bias](detect.html). We place our trust in you to fairly interpret the
+meaning of the data, and to warn us against misinterpreting to reading
+too much into it.
+
+Second, [credit and source your data origins](source.html), as we
+described in [Chapter 4: Find and Question Your Data](find.html). Some
+of the visualization tools and templates featured in this book make it
+easy to display links to online sources, so use that feature whenever
+feasible. When it’s not, then write these important details into the
+text that accompanies your tables, charts, and maps. Also, let audiences
+know who created the visualization, and credit collaborators and other
+people who assisted in your work.
+
+Third, save and show your data work at different stages of the process.
+Save notes and copies of the data as you download, clean, or transform
+it, and document the important decisions you make along the way. One
+simple method is to save different versions of your data in [separate
+spreadsheet tabs, as shown in Chapter 3](spreadsheet.html). For more
+complex projects, consider sharing your data and documenting your
+methods in a [public GitHub repository, as shown in chapter
+11](github.html). If someone questions your work—or if you need to
+replicate it with updated dataset—you’ll be grateful to have notes that
+allow you to trace it backwards.
+
+Finally, acknowledge the limitations of your data and disclose any
+uncertainty. Your work becomes more credible when you admit what you do
+*not* know or consider alternative interpretations. Some of our
+recommended [chart tools in chapter 7](chart.html) and [chart code
+templates in chapter 12](chartcode.html) allow you to insert error bars
+to show the confidence level in the data, so use those when appropriate.
+Furthermore, the two-column method shown in the prior section also works
+to visually distinguish between observed versus project data with solid
+versus dashed lines, as shown in the Google Sheets chart editor in
+Figure <a href="#fig:observed-vs-projected">16.5</a>.
+
+<img src="images/16-story/observed-vs-projected.png" alt="Split one data column into two columns to contrast observed data (solid line) versus projected data (dashed line)."  />
+<p class="caption">
+Figure 16.5: Split one data column into two columns to contrast observed
+data (solid line) versus projected data (dashed line).
+</p>
+
+Now that we’ve reviewed ways to build credibility in your work, let’s
+move on to decisions you’ll need to make about telling your data story
+in different formats.
+
+Decide On Your Data Story Format
+--------------------------------
+
+Most data visualization books and workshops presume that you will
+deliver your final product on a sheet of paper to people sitting around
+a board room, or perhaps in a PDF document sent via email or posted
+online. Those *static* formats are fine, but do not fully reflect the
+wide range of ways to share your story with broader audiences in the
+digital age. Moreover, as we write these words during the Covid-19
+pandemic, when sitting around an indoor table is not an option, we need
+to find more creative formats to communicate our data stories.
+
+Given that our book has emphasized the benefits of creating interactive
+visualizations, which invites audiences to engage with your data by
+floating their cursor over the charts and maps, we also encourage you to
+consider more interactive formats for your stories, such as:
+
+-   website that combines textual narrative and interactive
+    visualizations
+-   online presentation slides that link to live visualizations
+-   video that combines live or voiceover narration with interactive
+    visualization screencast
+-   a [data
+    walk](https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf)
+    where community stakeholders move around and discuss connections to
+    the story
+
+Of course, different storytelling methods require you to tailor content
+to fit the format. Furthermore, not every format requires interactive
+visualizations, nor are they always the most appropriate choice. While
+the details are beyond the scope of this book, we encourage you not to
+fall into traditional mindsets and to think differently about ways to
+tell true and meaningful data stories.
+
+TODO: DISCUSS whether this chapter ending is appropriate, or if it makes
+sense to offer more recommendations about ways to design data stories
+for each of these four non-traditional formats. If so, I saved my notes
+in the archive folder…
 
 ### Summary
 
@@ -14390,6 +14730,13 @@ You’re Not Using Facebook.” *Washington Post*, January 28, 2020.
 Huff, Darrell. *How to Lie with Statistics*. W. W. Norton & Company,
 1954. <http://books.google.com/books?isbn=0393070875>.
 
+Knaflic, Cole Nussbaumer. *Storytelling with Data: A Data Visualization
+Guide for Business Professionals*. 1 edition. Hoboken, New Jersey:
+Wiley, 2015.
+
+———. *Storytelling with Data: Let’s Practice!* John Wiley & Sons, 2019.
+<https://www.google.com/books/edition/Storytelling_with_Data/aGatDwAAQBAJ>.
+
 Menasce Horowitz, Julia, Ruth Igielnik, and Rakesh Kochhar. “Trends in
 U.S. Income and Wealth Inequality.” Pew Research Center’s Social &
 Demographic Trends Project, January 9, 2020.
@@ -14560,46 +14907,48 @@ Stalks You — Even When You’re Not Using Facebook,” *Washington Post*,
 January 28, 2020,
 <https://www.washingtonpost.com/technology/2020/01/28/off-facebook-activity-page/>
 
-[14] Stephen Few, *Show Me the Numbers: Designing Tables and Graphs to
+[14] Cairo, *How Charts Lie*, 2019, pp. 99-102
+
+[15] Stephen Few, *Show Me the Numbers: Designing Tables and Graphs to
 Enlighten*, Second edition (Burlingame, CA: Analytics Press, 2012),
 p. 166
 
-[15] Lisa Charlotte Rost, “How to Prepare Your Data for Analysis and
+[16] Lisa Charlotte Rost, “How to Prepare Your Data for Analysis and
 Charting in Excel & Google Sheets,” Chartable: A Blog by Datawrapper,
 accessed August 28, 2020,
 <https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html>
 
-[16] Edward R Tufte, *Envisioning Information* (Cheshire, CT: Graphics
+[17] Edward R Tufte, *Envisioning Information* (Cheshire, CT: Graphics
 Press, 1990),
 <https://www.google.com/books/edition/Envisioning_Information/_EZiAAAAMAAJ>,
 p. 67
 
-[17] Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for
+[18] Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for
 Communication* (Pearson Education, 2016),
 <https://www.google.com/books/edition/The_Truthful_Art/8dKKCwAAQBAJ>,
 pp. 71-74.
 
-[18] Cairo, p. 71
+[19] Cairo, p. 71
 
-[19] “What’s Real About Wages?” Federal Reserve Bank of St. Louis, The
+[20] “What’s Real About Wages?” Federal Reserve Bank of St. Louis, The
 FRED Blog, February 8, 2018,
 <https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing/>
 
-[20] Cairo, *How Charts Lie*, 2019, p. 61.
+[21] Cairo, *How Charts Lie*, 2019, p. 61.
 
-[21] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
+[22] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
 Visualisation,” Chartable: A Blog by Datawrapper, July 31, 2018,
 <https://blog.datawrapper.de/colorguide/>; Lisa Charlotte Rost, “How to
 Pick More Beautiful Colors for Your Data Visualizations,” Chartable,
 accessed October 21, 2020,
 <https://blog.datawrapper.de/beautifulcolors/index.html>
 
-[22] Few, *Show Me the Numbers*, p. 166
+[23] Few, *Show Me the Numbers*, p. 166
 
-[23] Rost, “Your Friendly Guide to Colors in Data Visualisation.”; Rost,
+[24] Rost, “Your Friendly Guide to Colors in Data Visualisation.”; Rost,
 “How to Pick More Beautiful Colors for Your Data Visualizations.”
 
-[24] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
+[25] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
 Tables’,” Twitter, August 3, 2020,
 <https://twitter.com/jschwabish/status/1290323581881266177>; Jonathan A.
 Schwabish, “Ten Guidelines for Better Tables,” *Journal of Benefit-Cost
@@ -14609,15 +14958,15 @@ Visualizations: A Guide for Scholars, Researchers, and Wonks* (Columbia
 University Press, 2021),
 <https://cup.columbia.edu/book/better-data-visualizations/9780231193115>
 
-[25] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
+[26] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
 Public Issues* (Berkeley, CA: University of California Press, 2004),
 <https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC>,
 pp. 31-35.
 
-[26] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
+[27] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
 <http://books.google.com/books?isbn=0961392177>, pp. 46-63.
 
-[27] The “how to lie” tutorials were inspired by several excellent works
+[28] The “how to lie” tutorials were inspired by several excellent works
 in data visualization: Cairo, *The Truthful Art*, 2016; Cairo, *How
 Charts Lie*, 2019; Darrell Huff, *How to Lie with Statistics* (W. W.
 Norton & Company, 1954),
@@ -14630,34 +14979,34 @@ Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9,
 NASA JPL, “Educator Guide: Graphing Global Temperature Trends,” 2017,
 <https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>
 
-[28] The inspiration for this specific tutorial came from a high school
+[29] The inspiration for this specific tutorial came from a high school
 classroom activity created by the NASA Jet Propulsion Laboratory (JPL),
 as well as visualization expert Alberto Cairo’s analysis of charts by
 climate change deniers. NASA JPL; Cairo, *How Charts Lie*, 2019,
 pp. 65-67, 135-141.
 
-[29] Cairo, p. 61.
+[30] Cairo, p. 61.
 
-[30] Cairo, p. 69.
+[31] Cairo, p. 69.
 
-[31] Cairo, p. 70.
+[32] Cairo, p. 70.
 
-[32] Cairo, p. 58.
+[33] Cairo, p. 58.
 
-[33] Monmonier, *How to Lie with Maps, Third Edition*.
+[34] Monmonier, *How to Lie with Maps, Third Edition*.
 
-[34] TODO cite
+[35] TODO cite
 <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>;
 <a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>;
 <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>;
 <a href="https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool" class="uri">https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool</a>
 
-[35] David Spiegelhalter, *The Art of Statistics: Learning from Data*
+[36] David Spiegelhalter, *The Art of Statistics: Learning from Data*
 (Penguin UK, 2019),
 <https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ>,
 pp. 22-5
 
-[36] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
+[37] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
 Awareness in Data Visualization,” preprint (Open Science Framework,
 August 27, 2020), <https://doi.org/10.31219/osf.io/x8tbw>. See also this
 web post summary of the paper, Jonathan Schwabish and Alice Feng,
@@ -14666,3 +15015,10 @@ accessed October 16, 2020,
 <https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff>.
 Urban Institute, “Urban Institute Data Visualization Style Guide,” 2020,
 <http://urbaninstitute.github.io/graphics-styleguide/>
+
+[38] Cole Nussbaumer Knaflic, *Storytelling with Data: A Data
+Visualization Guide for Business Professionals*, 1 edition (Hoboken, New
+Jersey: Wiley, 2015); Cole Nussbaumer Knaflic, *Storytelling with Data:
+Let’s Practice!* (John Wiley & Sons, 2019),
+<https://www.google.com/books/edition/Storytelling_with_Data/aGatDwAAQBAJ>;
+Cairo, *The Truthful Art*, 2016; Cairo, *How Charts Lie*, 2019

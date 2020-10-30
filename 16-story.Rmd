@@ -1,15 +1,12 @@
 # Tell and Show Your Data Story {#story}
-TODO: rewrite section intro after finishing the full chapter draft
+In this concluding chapter, we'll draw on knowledge and skills you've developed while reading this book and offer some final recommendations for creating true and meaningful data stories. Here we emphasize *storytelling*. The goal of data visualization is not simply to make pictures about numbers, but also to craft a truthful narrative that convinces readers how and why your interpretation matters.
 
-In this concluding chapter, we'll pull together the knowledge and skills you've developed while reading this book, with final recommendations for sharing true and meaningful data stories. We'll emphasize *storytelling*....
+Writers have an old saying---"show, don't tell"---which means to let readers experience a story through the actions and feelings of its characters, rather than narration by the author. But we take a different stance, as shown in our chapter title: "tell and show" your data story. Make a regular habit of these three steps: tell your audience what you found that's interesting in the data, show them the visual evidence to support your argument, and remind us why it matters. In three words: tell---show---why. Whatever you do, avoid the bad habit of showing lots of pictures and leaving it up to the audience to guess what it all means. Because we rely on you, the storyteller, to guide us on a journey through the data and what aspects deserve our attention. Describe the forest, not every tree, but point out a few special trees as examples to help us understand how different parts of the forest stand out.
 
-We titled this chapter "Tell and Show" rather reversing it because order matters when communicating data stories. Make a habit to first tell your audience what you found and why it's significant, then show them the visual evidence to support your argument. Don't make the mistake of showing your audience a bunch of data pictures and leaving it up to them to guess what it all means.
-
-Many writers believe in the old saying "show, don't tell," by letting readers experience the story through actions and feelings of characters, rather than a summary description by the author. While that's great advice for fiction writing and advanced non-fiction, our recommendation is very different. Tell your audience what you found in the data, show them the supporting evidence, and then tell them why this insight matters. Don't show your audience pictures of your data and leave it to them to guess its meaning. Shift your mode from *exploring data* to *expository writing about data*.
-
-This chapter draws inspiration from books by Cole Nussbaumer Knaflic and her [Storytelling with Data](http://www.storytellingwithdata.com) blog, as well as works by Alberto Cairo.^[@knaflicStorytellingDataData2015; @knaflicStorytellingDataLet2019; @cairoTruthfulArtData2016; @cairoHowChartsLie2019]
+In this chapter, you'll learn how to [build visualizations into the narrative of the storyboard](storyboard.html) that we started at the beginning of the book. Also, you will try out ways to [draw attention to what's most meaningful](draw-attention.html) in your data through text and color, as well as how to [acknowledge sources and uncertainty](sources-uncertainty.html). Finally, we'll discuss decisions you will need to make about the [format of your data story](story-format.html), with our continual emphasis on sharing interactive visualizations rather than static images. Our inspiration for this chapter is drawn from excellent books by visualization experts Cole Nussbaumer Knaflic and Alberto Cairo.^[@knaflicStorytellingDataData2015; @knaflicStorytellingDataLet2019; @cairoTruthfulArtData2016; @cairoHowChartsLie2019]
 
 ## Build a Narrative on a Storyboard {- #storyboard}
+TODO: Or alternative section title "Build Data into Your Storyboard"
 
 Let's return to the [Sketch Your Data Story exercise from Chapter 2](sketch.html). We encouraged you to scribble words and sketch pictures on sheets of paper to lay out at least four initial elements of your story:
 
@@ -28,17 +25,19 @@ Spread out these sheets like a *storyboard* to define the sequence of your narra
 
 Now let's enrich your storyboard by adding more content about what you actually discovered after searching, cleaning, analyzing, and visualizing your data. Select only your most meaningful tables, charts, or maps. Print them out on separate sheets of paper, or download static images or capture screenshots [TODO: link to how-to screenshot in chapter 10 embed] to place them in your draft slides or document. Leave room for you to write text at the top and bottom of each table, chart, or map in order to tell your data story. Here are the next two steps:
 
-- At the top of each key visualization, *verbalize* what your eyes see as its most important message.
+- At the top of each key visualization, *summarize* the most important message the data reveals.
 
-Write a one-sentence summary of the most insightful finding for each visualization. Two sentences is also acceptable, but one sentence is better, so if the first version becomes too wordy, rewrite it to focus on the core idea and throw out unnecessary text. Despite the old saying that a picture is worth a thousand words, data visualizations do *not* speak for themselves. Your job is to interpret their meaning for your audience. One of the best ways to translate charts or maps into words is to describe exactly what captures your eye as the designer, and communicate this to your reader, who is seeing it for the first time and relying on your guidance. In every case, you need to decide on the ideal mix of words and images.
+Verbalize what your eyes see as the most insightful finding for your most important visualizations.
+
+Write a one-sentence summary of the most insightful finding for each visualization. Verbalize how it appears in your eyes, like our guide to the data forest. Two sentences are acceptable, but one succinct sentence is better. If your prose becomes too wordy, try writing the first sentence in "headline" style and the second as a more descriptive follow-up. Despite the old saying that a picture is worth a thousand words, data visualizations do *not* speak for themselves. Your job is to interpret their meaning for your audience. One of the best ways to translate charts or maps into words is to describe exactly what captures your eye as the designer, and communicate this to your reader, who is seeing it for the first time and relying on your guidance. In every case, you need to decide on the ideal mix of words and images.
 
 - At the bottom of each visualization, tell us *why it matters*, and build up to how audiences should rethink or react.
 
 A good way to discuss the significance of your data story is to focus on how this new information *changes us*. When you discovered interesting patterns in your data visualization, how did it make you feel about the problem you (or your organization) were trying to solve? How did your answers to the research question make you think about the issue in a new or different way? Overall, does your data story inspire you or others to take action in some way? Once again, think about these questions from the perspective of your audience, and find words that capture how the data story should change our mindset, alter our habits, or influence our next steps.
 
-For example, we started our own data storyboard in chapter 2 to define our problem statement: *To learn more about readers’ backgrounds in order to write a better data visualization book that meets their needs.* [TODO: Revise earlier text to match?] We collected data from over 3,000 readers of an earlier draft of this book who responded to our [online survey](https://forms.gle/yn5QwTzfQkYcppQn9) and agreed that we would [publicly share the survey results](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo), as we discussed in [chapter 3](spreadsheets.html). We [cleaned up the data as described in chapter 5](clean.html) because some responses were partially empty or contained locations that could not be accurately geocoded. Then we looked for [meaningful comparisons as described in chapter 6](comparisons.html) and visualized our most interesting results in two ways. We created a [scatter chart as described in chapter 7](chart.html) and also a [point map as described in chapter 8](map.html). For this chapter, we followed our own advice above by writing short summaries at the top of each visualization, and explaining why it matters at the bottom.
+For example, we started our own data storyboard in chapter 2 to define our problem statement: *To learn more about readers’ backgrounds in order to write a better data visualization book that meets their needs.* [TODO: Revise earlier chapter text to match?] We collected data from over 3,000 readers of an earlier draft of this book who responded to our [online survey](https://forms.gle/yn5QwTzfQkYcppQn9) and agreed that we would [publicly share the survey results](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo), as we discussed in [chapter 3](spreadsheets.html). We [cleaned up the data as described in chapter 5](clean.html) because some responses were partially empty or contained locations that could not be accurately geocoded. Then we looked for [meaningful comparisons as described in chapter 6](comparisons.html) and visualized our most interesting results in two ways. We created a [scatter chart as described in chapter 7](chart.html) and also a [point map as described in chapter 8](map.html). For this chapter, we followed our own advice above by writing short summaries at the top of each visualization, and explaining why it matters at the bottom.
 
-What did we learn? First, over 70 percent of readers who responded live outside of North America. Most notably, 35 percent reside in Asia, 20 percent in Europe, 6 percent each in Africa and South America, and 3 percent in Oceania, as shown in the left side of Figure \@ref(fig:survey-combined-annotated). Our first draft of the book mostly included examples from Hartford, Connecticut, where we both worked. While we knew that our book had a global audience, we were surprised to see how many readers---among those who responded to the survey---live outside of the United States. In order to be more inclusive and expand our international audience, we have revised the book to add more sample charts and maps from other regions where readers live. [TODO: we need to work more on this!] Second, we learned that readers who responded to our survey have relatively high levels of education, but limited data visualization experience. In particular, 89 percent reported completing the equivalent of a college degree (16 or more years of schooling), but rated themselves at the lower end of the experiential scale, as shown in the right side of Figure \@ref(fig:survey-combined-annotated). [TODO: ILYA please clarify if 89% are higher ed AND lower scale of experience, or if those are separate.] In our earlier draft of the book, our primary audience were college undergraduates, and we were uncertain about the reading and background levels of other readers. Based on the survey responses, we revised the manuscript to add deeper concepts about data visualization, because we believe most of our readers can grasp them, yet we continue to write at an introductory level that assumes no prior knowledge beyond a secondary school or early college education. Now we can add these new sheets to our storyboard.
+What did we discover in our survey? First, over 70 percent of readers who responded live outside of North America. Most notably, 35 percent reside in Asia, 20 percent in Europe, 6 percent each in Africa and South America, and 3 percent in Oceania, as shown in the left side of Figure \@ref(fig:survey-combined-annotated). Our first draft of the book mostly included examples from Hartford, Connecticut, where we both worked. While we knew that our book had a global audience, we were surprised to see how many readers---among those who responded to the survey---live outside of the United States. In order to be more inclusive and expand our international audience, we have revised the book to add more sample charts and maps from other regions where readers live. [TODO: we need to work more on this!] Second, we learned that readers who responded to our survey have relatively high levels of education, but limited data visualization experience. In particular, 89 percent reported completing the equivalent of a college degree (16 or more years of schooling), but rated themselves at the lower end of the experiential scale, as shown in the right side of Figure \@ref(fig:survey-combined-annotated). In our earlier draft of the book, our primary audience were college undergraduates, and we were uncertain about the reading and background levels of other readers. Based on the survey responses, we revised the manuscript to add deeper concepts about data visualization, because we believe most of our readers can grasp them, yet we continue to write at an introductory level that assumes no prior knowledge beyond a secondary school or early college education. Now we can add these new sheets to our storyboard.
 
 (ref:survey-combined-annotated) Verbalize meaningful insights at the top of each visualization, and tell why it matters at the bottom, then insert them into your storyboard.
 
@@ -46,7 +45,20 @@ What did we learn? First, over 70 percent of readers who responded live outside 
 knitr::include_graphics("images/16-story/survey-combined-annotated.png")
 ```
 
-Insert all of these new sheets (or slides, or blocks of text and images) to your storyboard. Order them in a way that will make sense *to your audience*, who most likely will be seeing all of this content for the first time. While there is no one way to tell a story, consider our advice to avoid making rookie mistakes. First, tell us the problem and question *before* you offer an answer, because our brains expect to receive them in that order. Second, summarize each insight *before* you show us the evidence, because your audience relies on you, the storyteller, to guide us on a journey through the data and what aspects deserve our attention. Describe the forest, not every tree, but point out a few special trees as examples for what makes different parts of the forest stand out.
+Insert your new data visualization sheets (or slides, or blocks of text and images) into your storyboard. As you complete your work, your layout might look something like this:
+
+- problem statement
+- research question
+- how you found data
+- tell 1st data insight---show evidence---why it matters
+- tell 2nd data insight---show evidence---why it matters
+- ...and so forth toward your summary conclusion
+
+But it's your job to organize your data story in the way that makes sense *to your audience*, who most likely will be viewing all of this content for the first time. While there is no one way to tell a story, consider this advice to avoid making rookie mistakes. First, tell us the problem and question *before* you offer an answer, because our brains expect to hear them in that order. Second, summarize each insight *before* you show us the supporting evidence, because once again, reversing the normal sequence makes it harder for us to follow your argument. Finally, make sure that your research question and key insights are *aligned* with one another, since your audience will be confused if you ask one question, but answer a different one. It's perfectly normal to tweak or fully revise the wording of your research question after you've dug deep into the data, because sometimes you don't really know what you're looking for until you've discovered it.
+
+Now you should have a clearer sense of how a storyboard helps you to bring together narrative and data. In the next section, you'll learn how to refine your visualizations by using text and color to draw attention to what is most important.
+
+TODO above: Ilya please update map data and clarify chart interpretation as discussed in https://github.com/HandsOnDataViz/survey-results/issues/1
 
 ## Draw Attention to Meaning {- #draw-attention}
 When finalizing your visualizations, add finishing touches to draw attention to the most meaningful aspects of the data. In addition to writing text to accompany your charts and maps, you can also add annotations and use colors *inside* some types of visualizations to point out what's most significant in your data story. Let's demonstrate how to use these features to transform your visualization in Datawrapper, a tool we first introduced in [Chapter 7: Chart Your Data](chart.html). This example was inspired by the [Datawrapper Academy site](https://academy.datawrapper.de/article/256-a-collection-of-datawrapper-pro-tips).
@@ -86,48 +98,38 @@ knitr::include_graphics("images/16-story/plastic-refine.png")
 
 Now that you have a clearer idea about why and how to draw your audience's attention to the most meaningful aspects of your data story, we'll build on those skills in the next section on acknowledging sources and ambiguous data.
 
-## Acknowledge Sources and Uncertainty {- #sources-uncertainty}
-TODO: Write this short section
+## Acknowledge Sources & Uncertainty {- #sources-uncertainty}
+Since our goal is to tell data stories that are meaningful and true, build credibility into your work, which you can do in several ways:
 
-Build credibility for your work in several ways:
+First, always represent data truthfully. Do not hide or obscure relevant evidence, and avoid visualization methods that might mislead your audience, as we discussed in [Chapter 15 on detecting lies and reducing bias](detect.html). We place our trust in you to fairly interpret the meaning of the data, and to warn us against misinterpreting to reading too much into it.
 
-- Tell true data stories. Do not hide or obscure meaningful evidence. Your job is to interpret the meaning of your data visualizations, and caution us against misinterpreting or reading too much into them.
-- Credit sources and collaborators on dataviz products and readme files
-- Show stages of your work... upload raw data, cleaned data, show calculations in CSV or similar files... Write clear descriptions of key decisions you made when analyzing the data, and include those too... GitHub repo
-- Acknowledge Limitations of the Data  -- Disclose Uncertainty (cite Cairo), visualize it in bar/column and line charts
+Second, [credit and source your data origins](source.html), as we described in [Chapter 4: Find and Question Your Data](find.html). Some of the visualization tools and templates featured in this book make it easy to display links to online sources, so use that feature whenever feasible. When it's not, then write these important details into the text that accompanies your tables, charts, and maps. Also, let audiences know who created the visualization, and credit collaborators and other people who assisted in your work.
 
-Also use multi-column data to show dashed lines
+Third, save and show your data work at different stages of the process. Save notes and copies of the data as you download, clean, or transform it, and document the important decisions you make along the way. One simple method is to save different versions of your data in [separate spreadsheet tabs, as shown in Chapter 3](spreadsheet.html). For more complex projects, consider sharing your data and documenting your methods in a [public GitHub repository, as shown in chapter 11](github.html). If someone questions your work---or if you need to replicate it with updated dataset---you'll be grateful to have notes that allow you to trace it backwards.
 
+Finally, acknowledge the limitations of your data and disclose any uncertainty. Your work becomes more credible when you admit what you do *not* know or consider alternative interpretations. Some of our recommended [chart tools in chapter 7](chart.html) and [chart code templates in chapter 12](chartcode.html) allow you to insert error bars to show the confidence level in the data, so use those when appropriate. Furthermore, the two-column method shown in the prior section also works to visually distinguish between observed versus project data with solid versus dashed lines, as shown in the Google Sheets chart editor in Figure \@ref(fig:observed-vs-projected).
+
+(ref:observed-vs-projected) Split one data column into two columns to contrast observed data (solid line) versus projected data (dashed line).
+
+```{r observed-vs-projected, fig.cap="(ref:observed-vs-projected)"}
+knitr::include_graphics("images/16-story/observed-vs-projected.png")
+```
+
+Now that we've reviewed ways to build credibility in your work, let's move on to decisions you'll need to make about telling your data story in different formats.
 
 ## Decide On Your Data Story Format {- #story-format}
-TODO write this short section
+Most data visualization books and workshops presume that you will deliver your final product on a sheet of paper to people sitting around a board room, or perhaps in a PDF document sent via email or posted online. Those *static* formats are fine, but do not fully reflect the wide range of ways to share your story with broader audiences in the digital age. Moreover, as we write these words during the Covid-19 pandemic, when sitting around an indoor table is not an option, we need to find more creative formats to communicate our data stories.
 
-- Many visualization books and workshops assume that you will hand a sheet of paper to people sitting around a board room, or a static PDF document sent via email.... Those formats are fine, but do not reflect the wider range of ways to communicate with people:
+Given that our book has emphasized the benefits of creating interactive visualizations, which invites audiences to engage with your data by floating their cursor over the charts and maps, we also encourage you to consider more interactive formats for your stories, such as:
 
-- presentation slides with live web connection for interactivity
-- website with textual narrative and interactive visualizations
-- a video that combines narration (live action or voiceover) with screencasts of your interactive visualizations
-- a "data walk" to engage community stakeholders https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf
+- website that combines textual narrative and interactive visualizations
+- online presentation slides that link to live visualizations
+- video that combines live or voiceover narration with interactive visualization screencast
+- a [data walk](https://www.urban.org/sites/default/files/publication/72906/2000510-data-walks-an-innovative-way-to-share-data-with-communities.pdf) where community stakeholders move around and discuss connections to the story
 
-Each of these storytelling formats requires you to customize your content to fit. Details are beyond the scope of this book. But consider a few key differences.
+Of course, different storytelling methods require you to tailor content to fit the format. Furthermore, not every format requires interactive visualizations, nor are they always the most appropriate choice. While the details are beyond the scope of this book, we encourage you not to fall into traditional mindsets and to think differently about ways to tell true and meaningful data stories.
 
-SIDEBAR: When presenting your data story as a slide deck:
-
-Here's some recommendations we're raising because presentation tools are still a relatively new format, and many people are still figuring out how best to tell a story that combines text and images, along with the opportunity to share interactive content on the web.
-
-- If you're using interactive visualizations on the web, consider using presentation tools that display slides in your web browser, in order to seamless go back and forth between your slides and interactive web content. For example, you can create a screenshot of an interactive visualization [TODO: link how] and insert that static image in a Google Slide, with a link to the interactive version online.
-
-TODO: insert abstract side-by-side image of a Google Slide with an interactive visualization, plus animated GIF for web edition
-
-- Another reason to share your presentation slides online is to invite your audience to explore your claims and interactive visualizations in more detail, and to reach audiences beyond those who attended your event. Just before you deliver your presentation at a live event, share your slides online, and create a short link [TODO: to bit.ly in chap 3], and if you wish, also share it on your preferred social media platform. In your presentation title slide, add the shortlink and/or your social media link, and remind audiences that they can view all of the details again at their convenience. For your last presentation slide, insert a duplicate of the title slide to show them the link again.
-
-- With presentation slides, consider ways to *tell* and *show* us the data story by repeating key elements in sequence. For example, imagine this three-slide sequence about your key data findings the middle of your presentation. In the first slide, summarize the key insight at the top. In the second slide, keep this short summary at the top and show us the visualization evidence below it. In the third slide, continue to show the visualization evidence, but replace the summary text at the top with a statement about why this matters and what action your audience should take. In other words, repeat key elements across slides to build continuity between text and images, rather than separating them.
-
-TODO: insert abstract sequence of three slides: summary at top, summary with viz, significance with viz
-
-In the middle of your presentation, imagine or example, on one slide, you can summarize the key insight in text at the top.
+TODO: DISCUSS whether this chapter ending is appropriate, or if it makes sense to offer more recommendations about ways to design data stories for each of these four non-traditional formats. If so, I saved my notes in the archive folder...
 
 ### Summary {- #summary16}
 TODO
-Tell the story about your data, including its most meaningful insights and limitations
- Call attention to the most meaningful insights in your chart, and explain any data limitations.

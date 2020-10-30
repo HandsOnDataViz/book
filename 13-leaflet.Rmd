@@ -285,7 +285,13 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("images/13-lea
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vSqxGs67j80rAPDZdQaS5jI0avn1qs2y5N8fOaeHUGvyrnIwBmWomlfAuujtvPrxtF-5FBZxi_KdTUm/pubhtml?widget=true&amp;headers=false", height = "500px") else knitr::include_graphics("images/13-leaflet/storymap-sheet.png")
 ```
 
-TODO: DECIDE if we should add links to gallery of examples, such as: https://jhsgh.github.io/storymap/ and https://www.mappingtheuppermissouri.com/ and https://ericayhayes.github.io/leaflet-storymaps-with-google-sheets/
+TODO: DECIDE if we should create gallery of examples with thumbnail images or links:
+
+- https://jhsgh.github.io/storymap/ 
+- https://www.mappingtheuppermissouri.com/
+- https://kensingtonremembers.org
+- https://www.weneedtotalkabouttheborder.eu
+- https://www.laurentgontier.com/Storymap_Normandie/
 
 ### Tutorial Outline {-}
 Before beginning this tutorial, you must have a [Google Drive account](http://drive.google.com), and know how to [File > Make a Copy in Google Sheets](copy.html), as described in Chapter 3. Also, you must have a [GitHub account](http://github.com), and know how to [Edit and Host Code with GitHub](github.html), as described in Chapter 11. We have omitted many screenshots below that illustrate steps we previously covered, so if you get lost, go back to that chapter.

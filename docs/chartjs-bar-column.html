@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-29" />
+<meta name="date" content="2020-10-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -240,12 +240,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>10</b> Embed On the Web</a>
 <ul>
-<li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
-<li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
-<li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an Iframe</a></li>
-<li class="chapter" data-level="" data-path="iframe-github.html"><a href="iframe-github.html"><i class="fa fa-check"></i>Embed an Iframe in GitHub Pages</a></li>
-<li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
-<li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
+<li class="chapter" data-level="" data-path="static.html"><a href="static.html"><i class="fa fa-check"></i>Static Image vs Interactive iframe</a></li>
+<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code</a></li>
+<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code to Website</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> Edit and Host Code with GitHub</a>
 <ul>
@@ -374,42 +371,42 @@ Figure 12.1: Bar chart with Chart.js: explore the <a href="https://handsondatavi
 <ol start="3" style="list-style-type: decimal">
 <li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
 </ol>
-<div class="sourceCode" id="cb16"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb16-1"><a href="chartjs-bar-column.html#cb16-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;English Learners by Select School Districts in CT, 2018-19&#39;</span><span class="op">;</span></span>
-<span id="cb16-2"><a href="chartjs-bar-column.html#cb16-2"></a></span>
-<span id="cb16-3"><a href="chartjs-bar-column.html#cb16-3"></a><span class="co">// `false` for vertical column chart, `true` for horizontal bar chart</span></span>
-<span id="cb16-4"><a href="chartjs-bar-column.html#cb16-4"></a><span class="kw">var</span> HORIZONTAL <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb16-5"><a href="chartjs-bar-column.html#cb16-5"></a></span>
-<span id="cb16-6"><a href="chartjs-bar-column.html#cb16-6"></a><span class="co">// `false` for individual bars, `true` for stacked bars</span></span>
-<span id="cb16-7"><a href="chartjs-bar-column.html#cb16-7"></a><span class="kw">var</span> STACKED <span class="op">=</span> <span class="kw">false</span><span class="op">;</span>  </span>
-<span id="cb16-8"><a href="chartjs-bar-column.html#cb16-8"></a></span>
-<span id="cb16-9"><a href="chartjs-bar-column.html#cb16-9"></a><span class="co">// Which column defines &#39;bucket&#39; names?</span></span>
-<span id="cb16-10"><a href="chartjs-bar-column.html#cb16-10"></a><span class="kw">var</span> LABELS <span class="op">=</span> <span class="st">&#39;district&#39;</span><span class="op">;</span>  </span>
-<span id="cb16-11"><a href="chartjs-bar-column.html#cb16-11"></a></span>
-<span id="cb16-12"><a href="chartjs-bar-column.html#cb16-12"></a><span class="co">// For each column representing a data series, define its name and color</span></span>
-<span id="cb16-13"><a href="chartjs-bar-column.html#cb16-13"></a><span class="kw">var</span> SERIES <span class="op">=</span> [  </span>
-<span id="cb16-14"><a href="chartjs-bar-column.html#cb16-14"></a>  {</span>
-<span id="cb16-15"><a href="chartjs-bar-column.html#cb16-15"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;nonlearner&#39;</span><span class="op">,</span></span>
-<span id="cb16-16"><a href="chartjs-bar-column.html#cb16-16"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Non-Learners&#39;</span><span class="op">,</span></span>
-<span id="cb16-17"><a href="chartjs-bar-column.html#cb16-17"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;grey&#39;</span></span>
-<span id="cb16-18"><a href="chartjs-bar-column.html#cb16-18"></a>  }<span class="op">,</span></span>
-<span id="cb16-19"><a href="chartjs-bar-column.html#cb16-19"></a>  {</span>
-<span id="cb16-20"><a href="chartjs-bar-column.html#cb16-20"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;learner&#39;</span><span class="op">,</span></span>
-<span id="cb16-21"><a href="chartjs-bar-column.html#cb16-21"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Learners&#39;</span><span class="op">,</span></span>
-<span id="cb16-22"><a href="chartjs-bar-column.html#cb16-22"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;blue&#39;</span></span>
-<span id="cb16-23"><a href="chartjs-bar-column.html#cb16-23"></a>  }</span>
-<span id="cb16-24"><a href="chartjs-bar-column.html#cb16-24"></a>]<span class="op">;</span></span>
-<span id="cb16-25"><a href="chartjs-bar-column.html#cb16-25"></a></span>
-<span id="cb16-26"><a href="chartjs-bar-column.html#cb16-26"></a><span class="co">// x-axis label and label in tooltip</span></span>
-<span id="cb16-27"><a href="chartjs-bar-column.html#cb16-27"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;School Districts&#39;</span><span class="op">;</span></span>
-<span id="cb16-28"><a href="chartjs-bar-column.html#cb16-28"></a></span>
-<span id="cb16-29"><a href="chartjs-bar-column.html#cb16-29"></a><span class="co">// y-axis label, label in tooltip</span></span>
-<span id="cb16-30"><a href="chartjs-bar-column.html#cb16-30"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Number of Enrolled Students&#39;</span><span class="op">;</span></span>
-<span id="cb16-31"><a href="chartjs-bar-column.html#cb16-31"></a></span>
-<span id="cb16-32"><a href="chartjs-bar-column.html#cb16-32"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
-<span id="cb16-33"><a href="chartjs-bar-column.html#cb16-33"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb16-34"><a href="chartjs-bar-column.html#cb16-34"></a></span>
-<span id="cb16-35"><a href="chartjs-bar-column.html#cb16-35"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
-<span id="cb16-36"><a href="chartjs-bar-column.html#cb16-36"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb17-1"><a href="chartjs-bar-column.html#cb17-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;English Learners by Select School Districts in CT, 2018-19&#39;</span><span class="op">;</span></span>
+<span id="cb17-2"><a href="chartjs-bar-column.html#cb17-2"></a></span>
+<span id="cb17-3"><a href="chartjs-bar-column.html#cb17-3"></a><span class="co">// `false` for vertical column chart, `true` for horizontal bar chart</span></span>
+<span id="cb17-4"><a href="chartjs-bar-column.html#cb17-4"></a><span class="kw">var</span> HORIZONTAL <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb17-5"><a href="chartjs-bar-column.html#cb17-5"></a></span>
+<span id="cb17-6"><a href="chartjs-bar-column.html#cb17-6"></a><span class="co">// `false` for individual bars, `true` for stacked bars</span></span>
+<span id="cb17-7"><a href="chartjs-bar-column.html#cb17-7"></a><span class="kw">var</span> STACKED <span class="op">=</span> <span class="kw">false</span><span class="op">;</span>  </span>
+<span id="cb17-8"><a href="chartjs-bar-column.html#cb17-8"></a></span>
+<span id="cb17-9"><a href="chartjs-bar-column.html#cb17-9"></a><span class="co">// Which column defines &#39;bucket&#39; names?</span></span>
+<span id="cb17-10"><a href="chartjs-bar-column.html#cb17-10"></a><span class="kw">var</span> LABELS <span class="op">=</span> <span class="st">&#39;district&#39;</span><span class="op">;</span>  </span>
+<span id="cb17-11"><a href="chartjs-bar-column.html#cb17-11"></a></span>
+<span id="cb17-12"><a href="chartjs-bar-column.html#cb17-12"></a><span class="co">// For each column representing a data series, define its name and color</span></span>
+<span id="cb17-13"><a href="chartjs-bar-column.html#cb17-13"></a><span class="kw">var</span> SERIES <span class="op">=</span> [  </span>
+<span id="cb17-14"><a href="chartjs-bar-column.html#cb17-14"></a>  {</span>
+<span id="cb17-15"><a href="chartjs-bar-column.html#cb17-15"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;nonlearner&#39;</span><span class="op">,</span></span>
+<span id="cb17-16"><a href="chartjs-bar-column.html#cb17-16"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Non-Learners&#39;</span><span class="op">,</span></span>
+<span id="cb17-17"><a href="chartjs-bar-column.html#cb17-17"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;grey&#39;</span></span>
+<span id="cb17-18"><a href="chartjs-bar-column.html#cb17-18"></a>  }<span class="op">,</span></span>
+<span id="cb17-19"><a href="chartjs-bar-column.html#cb17-19"></a>  {</span>
+<span id="cb17-20"><a href="chartjs-bar-column.html#cb17-20"></a>    <span class="dt">column</span><span class="op">:</span> <span class="st">&#39;learner&#39;</span><span class="op">,</span></span>
+<span id="cb17-21"><a href="chartjs-bar-column.html#cb17-21"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;Learners&#39;</span><span class="op">,</span></span>
+<span id="cb17-22"><a href="chartjs-bar-column.html#cb17-22"></a>    <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;blue&#39;</span></span>
+<span id="cb17-23"><a href="chartjs-bar-column.html#cb17-23"></a>  }</span>
+<span id="cb17-24"><a href="chartjs-bar-column.html#cb17-24"></a>]<span class="op">;</span></span>
+<span id="cb17-25"><a href="chartjs-bar-column.html#cb17-25"></a></span>
+<span id="cb17-26"><a href="chartjs-bar-column.html#cb17-26"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb17-27"><a href="chartjs-bar-column.html#cb17-27"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;School Districts&#39;</span><span class="op">;</span></span>
+<span id="cb17-28"><a href="chartjs-bar-column.html#cb17-28"></a></span>
+<span id="cb17-29"><a href="chartjs-bar-column.html#cb17-29"></a><span class="co">// y-axis label, label in tooltip</span></span>
+<span id="cb17-30"><a href="chartjs-bar-column.html#cb17-30"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Number of Enrolled Students&#39;</span><span class="op">;</span></span>
+<span id="cb17-31"><a href="chartjs-bar-column.html#cb17-31"></a></span>
+<span id="cb17-32"><a href="chartjs-bar-column.html#cb17-32"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
+<span id="cb17-33"><a href="chartjs-bar-column.html#cb17-33"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb17-34"><a href="chartjs-bar-column.html#cb17-34"></a></span>
+<span id="cb17-35"><a href="chartjs-bar-column.html#cb17-35"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb17-36"><a href="chartjs-bar-column.html#cb17-36"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
 <p>These basic variables should be enough to get you started. It is natural that you will want to move the legend, edit the appearance of the tooltip, or change the colors of the grid lines. We recommend you look at the official <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a> to get help with that.</p>
 </div>
             </section>

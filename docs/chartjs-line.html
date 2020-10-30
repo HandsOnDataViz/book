@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-29" />
+<meta name="date" content="2020-10-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -240,12 +240,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>10</b> Embed On the Web</a>
 <ul>
-<li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
-<li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
-<li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an Iframe</a></li>
-<li class="chapter" data-level="" data-path="iframe-github.html"><a href="iframe-github.html"><i class="fa fa-check"></i>Embed an Iframe in GitHub Pages</a></li>
-<li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
-<li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
+<li class="chapter" data-level="" data-path="static.html"><a href="static.html"><i class="fa fa-check"></i>Static Image vs Interactive iframe</a></li>
+<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code</a></li>
+<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code to Website</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> Edit and Host Code with GitHub</a>
 <ul>
@@ -374,22 +371,22 @@ Figure 12.3: Interactive line chart with Chart.js. Explore the <a href="https://
 <ol start="3" style="list-style-type: decimal">
 <li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
 </ol>
-<div class="sourceCode" id="cb20"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb20-1"><a href="chartjs-line.html#cb20-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Hartford School District is No Longer Largest in Connecticut&#39;</span><span class="op">;</span></span>
-<span id="cb20-2"><a href="chartjs-line.html#cb20-2"></a></span>
-<span id="cb20-3"><a href="chartjs-line.html#cb20-3"></a><span class="co">// x-axis label and label in tooltip</span></span>
-<span id="cb20-4"><a href="chartjs-line.html#cb20-4"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Academic Year&#39;</span><span class="op">;</span></span>
-<span id="cb20-5"><a href="chartjs-line.html#cb20-5"></a></span>
-<span id="cb20-6"><a href="chartjs-line.html#cb20-6"></a><span class="co">// y-axis label and label in tooltip</span></span>
-<span id="cb20-7"><a href="chartjs-line.html#cb20-7"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Number of Students&#39;</span><span class="op">;</span></span>
-<span id="cb20-8"><a href="chartjs-line.html#cb20-8"></a></span>
-<span id="cb20-9"><a href="chartjs-line.html#cb20-9"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
-<span id="cb20-10"><a href="chartjs-line.html#cb20-10"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb20-11"><a href="chartjs-line.html#cb20-11"></a></span>
-<span id="cb20-12"><a href="chartjs-line.html#cb20-12"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
-<span id="cb20-13"><a href="chartjs-line.html#cb20-13"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb20-14"><a href="chartjs-line.html#cb20-14"></a></span>
-<span id="cb20-15"><a href="chartjs-line.html#cb20-15"></a> <span class="co">// `true` to show the legend, `false` to hide</span></span>
-<span id="cb20-16"><a href="chartjs-line.html#cb20-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb21-1"><a href="chartjs-line.html#cb21-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Hartford School District is No Longer Largest in Connecticut&#39;</span><span class="op">;</span></span>
+<span id="cb21-2"><a href="chartjs-line.html#cb21-2"></a></span>
+<span id="cb21-3"><a href="chartjs-line.html#cb21-3"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb21-4"><a href="chartjs-line.html#cb21-4"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Academic Year&#39;</span><span class="op">;</span></span>
+<span id="cb21-5"><a href="chartjs-line.html#cb21-5"></a></span>
+<span id="cb21-6"><a href="chartjs-line.html#cb21-6"></a><span class="co">// y-axis label and label in tooltip</span></span>
+<span id="cb21-7"><a href="chartjs-line.html#cb21-7"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Number of Students&#39;</span><span class="op">;</span></span>
+<span id="cb21-8"><a href="chartjs-line.html#cb21-8"></a></span>
+<span id="cb21-9"><a href="chartjs-line.html#cb21-9"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
+<span id="cb21-10"><a href="chartjs-line.html#cb21-10"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb21-11"><a href="chartjs-line.html#cb21-11"></a></span>
+<span id="cb21-12"><a href="chartjs-line.html#cb21-12"></a><span class="co">// `true` to show the grid, `false` to hide</span></span>
+<span id="cb21-13"><a href="chartjs-line.html#cb21-13"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb21-14"><a href="chartjs-line.html#cb21-14"></a></span>
+<span id="cb21-15"><a href="chartjs-line.html#cb21-15"></a> <span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb21-16"><a href="chartjs-line.html#cb21-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
 <p>Remember to look at the official <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a> if you want to add more features. If something isn’t working as desired, visit <a href="https://stackoverflow.com/search?q=chartjs">StackOverflow</a> to see if anyone had already solved your problem.</p>
 </div>
             </section>

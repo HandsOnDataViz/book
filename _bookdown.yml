@@ -8,24 +8,24 @@ language:
 chapter_name: "Chapter "
 
 # comment-out below when building HTML book, un-comment for PDF and full-length Markdown
-# rmd_files: [
-#   "index.Rmd",
-#   "01-introduction.Rmd",
-#   "02-choose.Rmd",
-#   "03-spreadsheet.Rmd",
-#   "04-find.Rmd",
-#   "05-clean.Rmd",
-#   "06-comparisons.Rmd",
-#   "07-chart.Rmd",
-#   "08-map.Rmd",
-#   "09-table.Rmd",
-#   "10-embed.Rmd",
-#   "11-github.Rmd",
-#   "12-chartcode.Rmd",
-#   "13-leaflet.Rmd",
-#   "14-transform.Rmd",
-#   "15-detect.Rmd",
-#   "16-story.Rmd",
-#   "17-fix.Rmd",
-#   "21-references.Rmd"
-# ]
+rmd_files: [
+  "index.Rmd",
+  "01-introduction.Rmd",
+  "02-choose.Rmd",
+  "03-spreadsheet.Rmd",
+  "04-find.Rmd",
+  "05-clean.Rmd",
+  "06-comparisons.Rmd",
+  "07-chart.Rmd",
+  "08-map.Rmd",
+  "09-table.Rmd",
+  "10-embed.Rmd",
+  "11-github.Rmd",
+  "12-chartcode.Rmd",
+  "13-leaflet.Rmd",
+  "14-transform.Rmd",
+  "15-detect.Rmd",
+  "16-story.Rmd",
+  "17-fix.Rmd",
+  "21-references.Rmd"
+]

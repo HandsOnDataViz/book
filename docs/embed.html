@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-29" />
+<meta name="date" content="2020-10-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="table-datawrapper.html"/>
-<link rel="next" href="github-pages.html"/>
+<link rel="next" href="static.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -240,12 +240,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="10" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>10</b> Embed On the Web</a>
 <ul>
-<li class="chapter" data-level="" data-path="github-pages.html"><a href="github-pages.html"><i class="fa fa-check"></i>Create a Simple Web Page with GitHub Pages</a></li>
-<li class="chapter" data-level="" data-path="iframe-google-sheets.html"><a href="iframe-google-sheets.html"><i class="fa fa-check"></i>Copy an iframe code from a Google Sheets interactive chart</a></li>
-<li class="chapter" data-level="" data-path="link-to-iframe.html"><a href="link-to-iframe.html"><i class="fa fa-check"></i>Convert a Weblink into an Iframe</a></li>
-<li class="chapter" data-level="" data-path="iframe-github.html"><a href="iframe-github.html"><i class="fa fa-check"></i>Embed an Iframe in GitHub Pages</a></li>
-<li class="chapter" data-level="" data-path="iframe-wordpress.html"><a href="iframe-wordpress.html"><i class="fa fa-check"></i>Embed an Iframe on WordPress.org</a></li>
-<li class="chapter" data-level="" data-path="iframe-tableau.html"><a href="iframe-tableau.html"><i class="fa fa-check"></i>Embed Tableau Public on your Website</a></li>
+<li class="chapter" data-level="" data-path="static.html"><a href="static.html"><i class="fa fa-check"></i>Static Image vs Interactive iframe</a></li>
+<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code</a></li>
+<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code to Website</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> Edit and Host Code with GitHub</a>
 <ul>
@@ -344,19 +341,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="embed" class="section level1" number="10">
 <h1><span class="header-section-number">Chapter 10</span> Embed On the Web</h1>
-<p>TODO: Reorganize and rewrite chapter; change all datawrapper iframe refs from specific (/#) to general (/)
-<a href="https://datawrapper.dwcdn.net" class="uri">https://datawrapper.dwcdn.net</a></p>
-<p>TODO: What if you don’t yet have a website? Previously, I taught people to start with GitHub index.html, but that’s too complex. Also WordPress.com does not work for iframes. Consider other user-friendly platforms: SquareSpace, etc? Or even something weird but quick, like Blocks? Or even W3Schools Tryit for iframe? Or is there some type of Google Drive thingy?</p>
-<p>TODO: insert how-to capture static screenshot instructions for different computers in this chapter, because it needs to go somewhere… also mention how to capture animated GIFs?</p>
-<p>After you create a chart or map, how do display it inside your website as an <em>interactive</em> visualization? Our goal is not a static picture, but a live chart or map that users can explore. This is an important question for beginners, since data visualizations are not valuable unless you can control where and how your work appears. This chapter walks you through the key steps.</p>
-<p>First, you need to own a website that supports iframe codes (which we’ll explain below). If you do not have a website that supports this, then follow this quick tutorial to <a href="github-pages.html">Create a simple web page with GitHub Pages</a>. Even if you already have a website, still do this tutorial, because it introduces a tool used many times in this book.</p>
-<p>Second, you need to copy or create an iframe code from your chart or map. An iframe is one line of HTML code with instructions on how to display a web page from a specific address (called a URL). A simple iframe looks like this:</p>
-<p><code>&lt;iframe src="https://handsondataviz.org/embed/index.html"&gt;&lt;/iframe&gt;</code></p>
-<p>No coding skills are necessary. See these easy-to-follow examples:</p>
-<p>-<a href="iframe-google-sheets.html">Copy iframe from a Google Sheets chart</a>
--<a href="link-to-iframe.html">Convert a link into an iframe</a></p>
-<p>Finally, you need to paste (or embed) the iframe code inside your website. Like a picture frame, an iframe allows you to display one web page (your data visualization) inside another web page (your personal website). But unlike a picture frame, where the image is static, an iframe makes content interactive, so visitors can explore the chart or map on your site, even though it may actually be hosted on an entirely different website. Go to this third tutorial, which combines the two steps above, called <a href="iframe-github.html">Embed Iframe in GitHub Pages</a>.</p>
-<p>See more tutorials in this chapter to copy iframes from other visualization tools (such as <a href="iframe-tableau.html">Tableau Public</a> and embed them in other common websites (such as <a href="iframe-wordpress.html">WordPress</a>, etc.) ** TO DO: add more tutorials and links **</p>
+<p>So far you’ve learned how to create <a href="chart.html">charts in chapter 7</a> and <a href="map.html">maps in chapter 8</a>. Our book emphasizes the benefits of designing <em>interactive</em> visualizations that engage broad audiences on the internet by inviting them to interact with your data, investigate new patterns, download files if desired, and easily share your work on social media. In this chapter, you’ll learn about a computer code tag called an <em>iframe</em>. Like a picture frame, an iframe displays one web page (such as your interactive data visualization) inside a second web page that you control (such as your personal or organizational web site), and makes the content appear seamlessly so that audiences can still interact with it. Several of the visualization tools you’ve learned so far, such as Google Sheets, Datawrapper, and Tableau Public, generate an <em>embed code</em> that contains an iframe to the online chart or map you’ve created on their platform. We will demonstrate how to <a href="embed-code.html">get the embed code</a> from your visualization tool site, and <a href="paste-code.html">paste the code into a second website</a> to seamlessly display your interactive content. No coding skills are required in this introductory book, but it certainly helps to be <em>code-curious</em>.</p>
+<p>TODO: Discuss whether we should add an abstract diagram of an iframe inside a web page, like a picture frame on a wall, to visually reinforce this concept for new users here</p>
 </div>
             </section>
 
@@ -364,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="table-datawrapper.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="github-pages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="static.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

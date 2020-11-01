@@ -53,6 +53,8 @@ Avoid typing blank spaces after column headers---or any spreadsheet entries---si
 
 ![Screenshot: Curly quotes versus straight quotes](images/17-fix/curly-vs-straight-quotes.png)
 
+Hint: Either single-quote (`'`) marks (also called an apostrophe) or double-quote (`"`) marks are acceptable in your iframe code, but be consistent and avoid accidentally pasting in curly-quotes.
+
 
 
 TODO: Test one way to fix GitHub errors by going into the commits and going back to a previous version of the code. Is this possible in the web version?

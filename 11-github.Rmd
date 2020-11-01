@@ -11,7 +11,7 @@ When you create a brand-new repo, GitHub invites you to [Choose a License](https
 
 To be clear, the GitHub platform is also owned by a large company (Microsoft purchased it in 2018), and when using it to share or host code, you're also dependent on its tools and terms. But the magic of code templates is that you can migrate and host your work anywhere on the web. You could move to a competing repository-hosting service such as [GitLab](http://gitlab.com), or purchase your own domain name and server space through one of many web hosting services. Or you can choose a hybrid option, such as hosting your code on GitHub and choosing its custom domain option, to display it under a domain name that you've purchased, just like the web version of this book is hosted on GitHub under our domain name, https://HandsOnDataViz.org. If we choose to move the code away from GitHub, we have the option to repoint our domain to a different web host.
 
-In the next section of this chapter, we will introduce basic steps to [copy, edit, and host a simple Leaflet map code template on GitHub](copy-leaflet.html). Later you'll learn how to [create a new GitHub repo and upload code files](create-repo.html).
+In the next section of this chapter, we will introduce basic steps to [copy, edit, and host a simple Leaflet map code template on GitHub](copy-leaflet.html). When you publish any chart or map code template by hosting it on GitHub Pages, you can easily [transform its online link into an iframe](gh-pages-link-to-iframe.html) that you can [embed on a secondary website, which we discussed in Chapter 10](embed.html). Later you'll learn how to [create a new GitHub repo and upload code files](create-repo.html).
 
 This chapter introduces GitHub using its web browser interface, which works best for beginners. Later you'll learn about intermediate-level tools, such as [GitHub Desktop and Atom Editor](github-desktop-atom.html), to work more efficiently with code repos on your personal computer.
 
@@ -203,7 +203,28 @@ Warning: Be careful when editing your code. Accidentally removing or adding extr
 
 Congratulations! If this is the first time that you've edited computer code and hosted it online, you can now call yourself a "coder". The process is similar to following and modifying a cookbook recipe, just like you also can call yourself a "chef" after baking your first batch of brownies! Although no one is likely to hire you as a full-time paid coder (or chef) at this early stage, you now understand several of the basic skills needed to copy, edit, and host code online, and you're ready to dive into the more advanced versions, such as [Chart.js and Highcharts templates in Chapter 12](chartcode.html) and [Leaflet map templates in Chapter 13](leaflet.html).
 
-The next section describes how to enhance your GitHub skills by creating new repos and uploading your files. These are essential steps to create a second copy of a code template or to work with more advanced templates in the next two chapters.
+## Convert GitHub Pages Link to iframe {- #gh-pages-link-to-iframe}
+In [Chapter 10: Embed on the Web](embed.html), we discussed the benefits of displaying interactive content from a primary site and making it appear seamlessly in a secondary site. You also learned how to convert very long Datawrapper and Tableau Public embed codes into shorter iframe tags when needed, so that you can embed them more easily on a secondary website.
+
+The same concept applies to GitHub Pages. When you publish a code template for a chart or map (or any content) on GitHub Pages, it generates an online link that you can convert into an iframe tag, using the same principles as above, to embed it on a secondary website. Follow these steps:
+
+1. For any GitHub repository you have published online, go to its *Settings* page and scroll down to copy its GitHub Pages web address, which will appear in this general format:
+
+`https://USERNAME.github.io/REPOSITORY`
+
+2. Convert it into an iframe by enclosing the link inside quotation marks as the source, and adding both start and end tags, in this general format:
+
+`<iframe src="https://USERNAME.github.io/RESPOSITORY"></iframe>`
+
+3. If desired, improve the iframe appearance on the secondary site by adding any of these optional attributes, such as `width` or `height` (measured in pixels by default, or percentages), or `seamless` or `frameborder="0"` or `scrolling="no"`, in this general format:
+
+`<iframe src="https://USERNAME.github.io/RESPOSITORY" width="100%" height="400" seamless frameborder="0" scrolling="no"></iframe>`
+
+Hint: Either single-quote (`'`) marks (also called an apostrophe) or double-quote (`"`) marks are acceptable in your iframe code, but be consistent and avoid accidentally pasting in curly-quotes.
+
+Now you are ready to [paste your iframe into your preferred website](paste-code.html), using methods described in Chapter 10, to display your interactive chart or map template from published repository using GitHub Pages.
+
+Now you should have a better sense of how to edit and host code repositories on GitHub. The next section describes how to enhance your GitHub skills by creating new repos and uploading your files. These are essential steps to create a second copy of a code template or to work with more advanced templates in the next two chapters.
 
 ## Create a New Repo and Upload Files on GitHub {- #create-repo}
 Now that you've made a copy of our GitHub template, the next step is to learn how to create a brand-new repo and upload files. These skills will be helpful for several scenarios. First, if you have to fork a repo, which GitHub allows you to do only one time, this method will allow you to create additional copies. Second, you'll need to upload some of your own files when creating data visualizations using [Chart.js and Highcharts templates in Chapter 12](chartcode.html) and [Leaflet map templates in Chapter 13](leaflet.html). Once again, we'll demonstrate how to do all of these steps in GitHub's beginner-level browser interface, but see the next section on [GitHub Desktop](github-desktop-atom.html) for an intermediate-level interface that's more efficient for working with code templates.

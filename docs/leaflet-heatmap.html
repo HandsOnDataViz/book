@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-30" />
+<meta name="date" content="2020-11-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -241,12 +241,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>10</b> Embed On the Web</a>
 <ul>
 <li class="chapter" data-level="" data-path="static.html"><a href="static.html"><i class="fa fa-check"></i>Static Image vs Interactive iframe</a></li>
-<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code</a></li>
-<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code to Website</a></li>
+<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code or iframe Tag</a></li>
+<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code or iframe to Website</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> Edit and Host Code with GitHub</a>
 <ul>
 <li class="chapter" data-level="" data-path="copy-leaflet.html"><a href="copy-leaflet.html"><i class="fa fa-check"></i>Copy, Edit, and Host a Simple Leaflet Map Template</a></li>
+<li class="chapter" data-level="" data-path="gh-pages-link-to-iframe.html"><a href="gh-pages-link-to-iframe.html"><i class="fa fa-check"></i>Convert GitHub Pages Link to iframe</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
@@ -372,15 +373,15 @@ make sure you are logged in, and click <em>Use this template</em> button to make
 <li>Depending on your data density, you might want to tweak <em>radius</em> and <em>blur</em> parameters
 inside the <code>&lt;script&gt;</code> tag of <code>index.html</code>:</li>
 </ol>
-<div class="sourceCode" id="cb32"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb32-1"><a href="leaflet-heatmap.html#cb32-1"></a><span class="kw">var</span> heat <span class="op">=</span> L<span class="op">.</span><span class="fu">heatLayer</span>(data<span class="op">,</span> {</span>
-<span id="cb32-2"><a href="leaflet-heatmap.html#cb32-2"></a>  <span class="dt">radius</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
-<span id="cb32-3"><a href="leaflet-heatmap.html#cb32-3"></a>  <span class="dt">blur</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
-<span id="cb32-4"><a href="leaflet-heatmap.html#cb32-4"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb29-1"><a href="leaflet-heatmap.html#cb29-1"></a><span class="kw">var</span> heat <span class="op">=</span> L<span class="op">.</span><span class="fu">heatLayer</span>(data<span class="op">,</span> {</span>
+<span id="cb29-2"><a href="leaflet-heatmap.html#cb29-2"></a>  <span class="dt">radius</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
+<span id="cb29-3"><a href="leaflet-heatmap.html#cb29-3"></a>  <span class="dt">blur</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
+<span id="cb29-4"><a href="leaflet-heatmap.html#cb29-4"></a>})</span></code></pre></div>
 <p>Edit the following chunk of code to set your map’s default position and zoom level:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33-1"><a href="leaflet-heatmap.html#cb33-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
-<span id="cb33-2"><a href="leaflet-heatmap.html#cb33-2"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">51.5</span><span class="op">,</span> <span class="fl">-0.1</span>]<span class="op">,</span> <span class="co">// Initial map center</span></span>
-<span id="cb33-3"><a href="leaflet-heatmap.html#cb33-3"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="co">// Initial zoom level</span></span>
-<span id="cb33-4"><a href="leaflet-heatmap.html#cb33-4"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb30-1"><a href="leaflet-heatmap.html#cb30-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
+<span id="cb30-2"><a href="leaflet-heatmap.html#cb30-2"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">51.5</span><span class="op">,</span> <span class="fl">-0.1</span>]<span class="op">,</span> <span class="co">// Initial map center</span></span>
+<span id="cb30-3"><a href="leaflet-heatmap.html#cb30-3"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="co">// Initial zoom level</span></span>
+<span id="cb30-4"><a href="leaflet-heatmap.html#cb30-4"></a>})</span></code></pre></div>
 <p>If for some reason you cannot see clusters, make sure your point data is represented
 in <code>latitude,longitude</code> order, not the other way around. If you have few points,
 try increasing the value of <code>radius</code> property of <code>L.heatLayer</code>.</p>

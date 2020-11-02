@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Get the Embed Code | Hands-On Data Visualization</title>
+  <title>Get the Embed Code or iframe Tag | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Get the Embed Code | Hands-On Data Visualization" />
+  <meta property="og:title" content="Get the Embed Code or iframe Tag | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Get the Embed Code | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Get the Embed Code or iframe Tag | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-30" />
+<meta name="date" content="2020-11-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -241,12 +241,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>10</b> Embed On the Web</a>
 <ul>
 <li class="chapter" data-level="" data-path="static.html"><a href="static.html"><i class="fa fa-check"></i>Static Image vs Interactive iframe</a></li>
-<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code</a></li>
-<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code to Website</a></li>
+<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code or iframe Tag</a></li>
+<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code or iframe to Website</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> Edit and Host Code with GitHub</a>
 <ul>
 <li class="chapter" data-level="" data-path="copy-leaflet.html"><a href="copy-leaflet.html"><i class="fa fa-check"></i>Copy, Edit, and Host a Simple Leaflet Map Template</a></li>
+<li class="chapter" data-level="" data-path="gh-pages-link-to-iframe.html"><a href="gh-pages-link-to-iframe.html"><i class="fa fa-check"></i>Convert GitHub Pages Link to iframe</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
@@ -340,157 +341,181 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="embed-code" class="section level2 unnumbered" number="">
-<h2>Get the Embed Code</h2>
-<p>In this section, you’ll learn how to copy the embed code that is generated by various visualization platforms featured in this book, such as Datawrapper, Google Sheets, Tableau Public, and others [TODO add more]. These embed codes contain the iframe tag with instructions to display your interactive chart or map on a secondary site. We’ll also demonstrate how to create an iframe for <a href="github.html">code templates you host on your GitHub Pages site</a>, a topic you’ll learn about in Chapter 11. After you’ve copied your embed code, jump to the next section to learn how to paste it properly in different types of websites.</p>
-<div id="from-datawrapper" class="section level3 unnumbered" number="">
-<h3>from Datawrapper</h3>
-<p>TODO: Make this first because it’s easiest!</p>
-<p>Add tip to change datawrapper iframe refs from specific (/#) to general (/)</p>
-<p>Now jump to the <a href="paste-code.html">paste code to website section</a> to see how to properly embed it into your preferred web platform.</p>
+<h2>Get the Embed Code or iframe Tag</h2>
+<p>In this section, you’ll learn how to copy the embed code or iframe tag that is automatically generated when you publish a chart or map on different visualization platforms featured in this book. Remember that embed codes contain the essential iframe tag, along with other bits of code to display the chart or map from the primary site and make it appear seamlessly on the secondary site.</p>
+<p>We’ll break this down into three steps for each visualization platform. First, we will demonstrate how to copy your embed code or iframe tag from Google Sheets, Datawrapper, Tableau Public, and other platforms listed below. [TODO: add others like BatchGeo or rewrite that sentence?] Second, we’ll show you how to <em>practice paste</em> the embed code or iframe tag into the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>, as shown in Figure <a href="embed-code.html#fig:w3schools-tryit-iframe">10.2</a>, to help you understand what’s happening behind-the-scenes and to modify the code if needed. Third, we’ll point you to the next section to learn how to properly paste the embed code in your preferred website, such as WordPress [and others TODO].</p>
+
+<div class="figure"><span id="fig:w3schools-tryit-iframe"></span>
+<img src="images/10-embed/w3schools-tryit-iframe.png" alt="For each embed code below, you will practice paste it in place of the selected text of the W3Schools TryIt iframe page to see how it works." width="750" />
+<p class="caption">
+Figure 10.2: For each embed code below, you will <em>practice paste</em> it in place of the selected text of the W3Schools TryIt iframe page to see how it works.
+</p>
 </div>
 <div id="from-google-sheets" class="section level3 unnumbered" number="">
 <h3>from Google Sheets</h3>
-<p>TODO: Update these old instructions to publish chart and get interactive embed code</p>
 <ol style="list-style-type: decimal">
-<li><p>Create a Google Sheets chart, which requires a free Google Drive account. Learn more in the <a href="chart-google.html">Google Sheets Charts tutorial</a> in this book.</p></li>
-<li><p>Click the drop-down menu in the upper-right corner of the interactive chart and select Publish chart. Click OK on next screen.</p></li>
+<li>After you create a <a href="chart-google.html">Google Sheets chart in Chapter 7</a>, click the 3-dot kebab menu in the upper-right corner of the chart to publish it, as shown in Figure <a href="embed-code.html#fig:google-sheets-publish">10.3</a>.</li>
 </ol>
-<div class="figure">
-<img src="images/10-embed/google-sheets-chart-menu-publish.png" alt="" />
-<p class="caption">Screenshot: Drop-down menu to publish a Google Sheets chart</p>
+
+<div class="figure"><span id="fig:google-sheets-publish"></span>
+<img src="images/10-embed/google-sheets-publish.png" alt="In your chart, click the three-dot kebab menu to publish it." width="150" />
+<p class="caption">
+Figure 10.3: In your chart, click the three-dot kebab menu to publish it.
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>In the next screen, select the <em>Embed</em> tab and <em>Interactive</em> chart, and click the <em>Publish</em> button to share it online. Select and copy the embed code, as shown in Figure <a href="embed-code.html#fig:google-sheets-embed-code">10.4</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:google-sheets-embed-code"></span>
+<img src="images/10-embed/google-sheets-embed-code.png" alt="Click Embed and Interactive and Publish, then select and copy the embed code." width="500" />
+<p class="caption">
+Figure 10.4: Click <em>Embed</em> and <em>Interactive</em> and <em>Publish</em>, then select and copy the embed code.
+</p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>Select the Embed tab, select the Interactive version, and click the blue Publish button. If you make changes to the chart, they will continue to be published to the web automatically, unless you click the Stop button or checkbox at the bottom.</li>
+<li>To better understand how the embed code works, open the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>. Select the current iframe tag, paste in your embed code to replace it, and press the green <em>Run</em> button. The result should be similar to Figure <a href="embed-code.html#fig:google-sheets-tryit">10.5</a>, but instead will display your embed code and interactive visualization.</li>
 </ol>
-<div class="figure">
-<img src="images/10-embed/google-sheets-publish.png" alt="" />
-<p class="caption">Screenshot: Publish to the web for a Google Sheets chart</p>
+
+<div class="figure"><span id="fig:google-sheets-tryit"></span>
+<img src="images/10-embed/google-sheets-tryit.png" alt="Paste your Google Sheets embed code to place of the current iframe tag in the TryIt page and click Run." width="750" />
+<p class="caption">
+Figure 10.5: Paste your Google Sheets embed code to place of the current iframe tag in the TryIt page and click <em>Run</em>.
+</p>
 </div>
+<p>At first glance, the Google Sheets embed code may appear long, but it’s actually a straightforward iframe tag with a long source link. Look closely and you’ll see iframe settings such as <code>width</code> and <code>height</code> (measured here in pixels), and <code>seamless</code> and <code>frameborder='0'</code> and <code>scrolling='no'</code> to improve its appearance.</p>
 <ol start="4" style="list-style-type: decimal">
-<li>Copy the iframe embed code.</li>
+<li>Now jump to the <a href="paste-code.html">paste code to website section</a> of this chapter to learn how to properly insert your embed code into your preferred platform.</li>
 </ol>
-<div class="figure">
-<img src="images/10-embed/google-sheets-publish-copy-iframe.png" alt="" />
-<p class="caption">Screenshot: Copy the iframe code from a Google Sheets chart</p>
 </div>
-<p>No coding skills are necessary, but it helps to be code-curious. This iframe is a line of HTML code that contains these instructions:</p>
-<ul>
-<li>iframe tags to mark the beginning and end</li>
-<li>width and height: to display your chart in a second site, in pixels</li>
-<li>seamless frameborder: “0” means no border will appear around the chart in the second site</li>
-<li>scrolling: “no” means the chart will not include its own web scrolling feature</li>
-<li>src: the web address (or URL) of the visualization to be displayed in the second site</li>
-</ul>
-<p>Now jump to the <a href="paste-code.html">paste code to website section</a> to see how to properly embed it into your preferred web platform.</p>
+<div id="from-datawrapper" class="section level3 unnumbered" number="">
+<h3>from Datawrapper</h3>
+<ol style="list-style-type: decimal">
+<li>After you create a <a href="chart-datawrapper.html">Datawrapper chart in Chapter 7</a> or <a href="map.html">map in Chapter 8</a> or <a href="table.html">interactive table in Chapter 9</a>, proceed to the final screen and click the <em>Publish</em> button, as shown in Figure <a href="embed-code.html#fig:datawrapper-publish">10.6</a>. This publishes the interactive version of your chart or map online. Further down on the same screen you can also export a static image, if desired.</li>
+</ol>
+
+<div class="figure"><span id="fig:datawrapper-publish"></span>
+<img src="images/10-embed/datawrapper-publish.png" alt="Proceed to the final screen and click the Publish button." width="300" />
+<p class="caption">
+Figure 10.6: Proceed to the final screen and click the <em>Publish</em> button.
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>On the next screen, click <em>copy</em> to get the Datawrapper embed code, as shown in Figure <a href="embed-code.html#fig:datawrapper-embed-code">10.7</a>. The default <em>responsive iframe</em> version of the embed code contains additional instructions to improve its appearance on both small and large device screens.</li>
+</ol>
+
+<div class="figure"><span id="fig:datawrapper-embed-code"></span>
+<img src="images/10-embed/datawrapper-embed-code.png" alt="Copy the responsive iframe version of the Datawrapper embed code." width="300" />
+<p class="caption">
+Figure 10.7: Copy the responsive iframe version of the Datawrapper embed code.
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>To better understand how the embed code works, open the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>. Select the current iframe tag, paste in your embed code to replace it, and press the green <em>Run</em> button. The result should be similar to Figure <a href="embed-code.html#fig:datawrapper-tryit">10.8</a>, but instead will display your embed code and interactive visualization.</li>
+</ol>
+
+<div class="figure"><span id="fig:datawrapper-tryit"></span>
+<img src="images/10-embed/datawrapper-tryit.png" alt="Paste your Datawrapper embed code in place of the current iframe tag in the TryIt page and click Run." width="750" />
+<p class="caption">
+Figure 10.8: Paste your Datawrapper embed code in place of the current iframe tag in the TryIt page and click <em>Run</em>.
+</p>
+</div>
+<p>The Datawrapper embed code is <em>long</em>, but if you look closely, the first half contains a relatively straightforward iframe tag that includes familiar-looking attributes such <code>src</code>,<code>scrolling</code>, and <code>frameborder</code>, and <code>width</code> and <code>height</code> inside a style tag. The second half of the embed code contains JavaScript instructions to make the iframe appear responsive depending on the size of the device screen.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Always try to paste the <em>full embed code</em> in your desired web platform. Jump to the <a href="paste-code.html">paste code to website section</a> of this chapter to learn how to properly insert your embed code into common websites.</p></li>
+<li><p>But if it doesn’t work, go back to step 3 and experiment. Try to edit the embed code down to a <em>simple iframe</em>, and run it again to see how it looks, as shown in Figure <a href="embed-code.html#fig:datawrapper-tryit-simple">10.9</a>. Sometimes a simple iframe works better on your website than a complex embed code.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:datawrapper-tryit-simple"></span>
+<img src="images/10-embed/datawrapper-tryit-simple.png" alt="If a complex embed code does not work in your website, go back and try to edit it down into a simple iframe." width="750" />
+<p class="caption">
+Figure 10.9: If a complex embed code does not work in your website, go back and try to edit it down into a simple iframe.
+</p>
+</div>
+<p>Tip: The Datawrapper iframe tag source follows this general format: <code>https://datawrapper.dwcdn.net/abcdef/1/</code>, where the <code>1</code> refers to the first version of the chart or map you published. If you make edits and re-publish it a second time, the number will increase to <code>2</code> and so forth. Before you paste an embed code or iframe in the next section, you can instruct Datawrapper to always publish your <em>most current version</em> of your visualization by removing the final number and forward slash in the iframe, so that it follows this new format: <code>https://datawrapper.dwcdn.net/abcdef/</code>.</p>
 </div>
 <div id="from-tableau-public" class="section level3 unnumbered" number="">
 <h3>from Tableau Public</h3>
-<p>TODO: Update these old (but popular!) instructions and DECIDE if we still are going to recommend two different methods, or can we just do one?</p>
-<p>Tableau Public supports two embedding methods, and your choice depends on your type of website.</p>
-<ul>
-<li><ol style="list-style-type: upper-alpha">
-<li>Embed code: if you can paste directly into an HTML web page</li>
-</ol></li>
-<li><ol start="2" style="list-style-type: upper-alpha">
-<li>Convert Link to iframe: to paste into WordPress.org, Wix, SquareSpace, Weebly, and many other web platforms</li>
-</ol></li>
-</ul>
-<p>Try it:</p>
-<p>Both methods produce an embedded visualization like the one below. Float your cursor over points to view data details.</p>
-<p>TODO: convert to code-chunk iframe: <a href="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a>?:showVizHome=no&amp;:embed=true</p>
-<div id="a-embed-code-method-for-html-web-pages" class="section level4 unnumbered" number="">
-<h4>A) Embed code method for HTML web pages</h4>
 <ol style="list-style-type: decimal">
-<li><p>Use this method if you can paste HTML and JavaScript code directly into a website with HTML pages.</p></li>
-<li><p>Go to the public web page of any Tableau Public visualization, such as this sample: <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a></p></li>
-<li><p>Before you begin the embed process, click the upper-right Edit Details button to make any final modifications to the title or toolbar settings.</p></li>
-<li><p>Click the bottom-right Share button, click inside the <strong>Embed Code</strong> field, and copy its contents. A typical embed code is a long string of HTML and JavaScript instructions to display the visualization.</p></li>
+<li>After you create a <a href="chart-tableau.html">Tableau Public chart in Chapter 7</a> or <a href="map-tableau.html">map in Chapter 8</a>, publish your worksheet, dashboard, or story online by selecting <em>File &gt; Save to Tableau Public</em> in the desktop application menu, as shown in Figure <a href="embed-code.html#fig:tableau-public-publish">10.10</a>.</li>
 </ol>
-<div class="figure">
-<img src="images/10-embed/tableau-edit-share.png" alt="" />
-<p class="caption">Screenshot: Edit and Share buttons in Tableau Public web page</p>
+
+<div class="figure"><span id="fig:tableau-public-publish"></span>
+<img src="images/10-embed/tableau-public-publish.png" alt="In the Tableau Public desktop application, select File–Save to Tableau Public to publish to the online server." width="428" />
+<p class="caption">
+Figure 10.10: In the Tableau Public desktop application, select <em>File–Save to Tableau Public</em> to publish to the online server.
+</p>
 </div>
+<p>Also, you can log into the <a href="https://public.tableau.com">Tableau Public server</a> to view all of the visualizations you have published online under your username account profile.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>In your online Tableau Public account profile page, click to <em>View</em> the details of any of your published visualizations, as shown in Figure <a href="embed-code.html#fig:tableau-public-view">10.11</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:tableau-public-view"></span>
+<img src="images/10-embed/tableau-public-view.png" alt="In your Tableau Public online profile page, click to View the details of a published visualization." width="289" />
+<p class="caption">
+Figure 10.11: In your Tableau Public online profile page, click to <em>View</em> the details of a published visualization.
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>When viewing details for a published visualization in your Tableau Public online account, scroll down and click on the <em>Share</em> symbol in the lower-right corner. Select and copy its embed code, as shown in Figure <a href="embed-code.html#fig:tableau-public-embed-code">10.12</a>.</li>
+</ol>
+
+<div class="figure"><span id="fig:tableau-public-embed-code"></span>
+<img src="images/10-embed/tableau-public-embed-code-annotated.png" alt="Scroll down in the online published visualization details, click the Share button, and copy the embed code." width="469" />
+<p class="caption">
+Figure 10.12: Scroll down in the online published visualization details, click the <em>Share</em> button, and copy the embed code.
+</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>To better understand how the embed code works, open the <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools TryIt iframe page</a>. Select the current iframe tag, paste in your embed code to replace it, and press the green <em>Run</em> button. The result should be similar to Figure <a href="embed-code.html#fig:tableau-public-tryit">10.13</a>, but instead will display your embed code and interactive visualization.</li>
+</ol>
+
+<div class="figure"><span id="fig:tableau-public-tryit"></span>
+<img src="images/10-embed/tableau-public-tryit.png" alt="Paste your Tableau public embed code in place of the current iframe tag in the TryIt page and click Run." width="750" />
+<p class="caption">
+Figure 10.13: Paste your Tableau public embed code in place of the current iframe tag in the TryIt page and click <em>Run</em>.
+</p>
+</div>
+<p>The Tableau Public embed code is <em>very long</em> and does not fit in one image. Even we don’t fully understand what’s happening in this complex batch of code.</p>
 <ol start="5" style="list-style-type: decimal">
-<li>Open an HTML page on your website and paste the embed code in the body section. Below is an example of a sample Tableau Public embed code pasted between the body tags of a simple HTML page.</li>
+<li><p>Always try to paste the <em>full embed code</em> in your desired web platform. Jump to the <a href="paste-code.html">paste code to website section</a> of this chapter to learn how to properly insert on different common websites.</p></li>
+<li><p>But if it doesn’t work, go back to step 3 and 4 and experiment. For example, you can copy the Tableau Public link to your visualization, <em>instead</em> of the embed code, try to convert it into a simple iframe tag, and run it again to see how it looks.</p></li>
 </ol>
-<p>TODO: find a way to replace this triple backtic code snippet, since it may throw errors into Markdown output.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="embed-code.html#cb11-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
-<span id="cb11-2"><a href="embed-code.html#cb11-2"></a><span class="kw">&lt;html&gt;</span></span>
-<span id="cb11-3"><a href="embed-code.html#cb11-3"></a><span class="kw">&lt;head&gt;</span></span>
-<span id="cb11-4"><a href="embed-code.html#cb11-4"></a>  <span class="kw">&lt;title&gt;</span>sample web page<span class="kw">&lt;/title&gt;</span></span>
-<span id="cb11-5"><a href="embed-code.html#cb11-5"></a>  <span class="kw">&lt;meta</span><span class="ot"> name=</span><span class="st">&quot;viewport&quot;</span><span class="ot"> content=</span><span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb11-6"><a href="embed-code.html#cb11-6"></a>  <span class="kw">&lt;meta</span><span class="ot"> charset=</span><span class="st">&quot;utf-8&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb11-7"><a href="embed-code.html#cb11-7"></a><span class="kw">&lt;/head&gt;</span></span>
-<span id="cb11-8"><a href="embed-code.html#cb11-8"></a><span class="kw">&lt;body&gt;</span></span>
-<span id="cb11-9"><a href="embed-code.html#cb11-9"></a>  <span class="kw">&lt;div</span><span class="ot"> class=</span><span class="st">&#39;tableauPlaceholder&#39;</span><span class="ot"> id=</span><span class="st">&#39;viz1489158014225&#39;</span><span class="ot"> style=</span><span class="st">&#39;position: relative&#39;</span><span class="kw">&gt;&lt;noscript&gt;&lt;a</span><span class="ot"> href=</span><span class="st">&#39;https:</span><span class="dv">&amp;#47;&amp;#47;</span><span class="st">handsondataviz.org</span><span class="dv">&amp;#47;</span><span class="st">chart</span><span class="dv">&amp;#47;</span><span class="st">scatter-chart-tableau</span><span class="dv">&amp;#47;</span><span class="st">&#39;</span><span class="kw">&gt;&lt;img</span><span class="ot"> alt=</span><span class="st">&#39;CT School Districts by Income and Grade Level Equivalents, 2009-13 &#39;</span><span class="ot"> src=</span><span class="st">&#39;https:</span><span class="dv">&amp;#47;&amp;#47;</span><span class="st">public.tableau.com</span><span class="dv">&amp;#47;</span><span class="st">static</span><span class="dv">&amp;#47;</span><span class="st">images</span><span class="dv">&amp;#47;</span><span class="st">CT</span><span class="dv">&amp;#47;</span><span class="st">CTSchoolDistrictsbyIncomeandGradeLevels2009-13</span><span class="dv">&amp;#47;</span><span class="st">Sheet1</span><span class="dv">&amp;#47;</span><span class="st">1_rss.png&#39;</span><span class="ot"> style=</span><span class="st">&#39;border: none&#39;</span> <span class="kw">/&gt;&lt;/a&gt;&lt;/noscript&gt;&lt;object</span><span class="ot"> class=</span><span class="st">&#39;tableauViz&#39;</span><span class="ot">  style=</span><span class="st">&#39;display:none;&#39;</span><span class="kw">&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;host_url&#39;</span><span class="ot"> value=</span><span class="st">&#39;https%3A%2F%2Fpublic.tableau.com%2F&#39;</span> <span class="kw">/&gt;</span> <span class="kw">&lt;param</span><span class="ot"> name=</span><span class="st">&#39;site_root&#39;</span><span class="ot"> value=</span><span class="st">&#39;&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;name&#39;</span><span class="ot"> value=</span><span class="st">&#39;CTSchoolDistrictsbyIncomeandGradeLevels2009-13</span><span class="dv">&amp;#47;</span><span class="st">Sheet1&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;tabs&#39;</span><span class="ot"> value=</span><span class="st">&#39;no&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;toolbar&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;static_image&#39;</span><span class="ot"> value=</span><span class="st">&#39;https:</span><span class="dv">&amp;#47;&amp;#47;</span><span class="st">public.tableau.com</span><span class="dv">&amp;#47;</span><span class="st">static</span><span class="dv">&amp;#47;</span><span class="st">images</span><span class="dv">&amp;#47;</span><span class="st">CT</span><span class="dv">&amp;#47;</span><span class="st">CTSchoolDistrictsbyIncomeandGradeLevels2009-13</span><span class="dv">&amp;#47;</span><span class="st">Sheet1</span><span class="dv">&amp;#47;</span><span class="st">1.png&#39;</span> <span class="kw">/&gt;</span> <span class="kw">&lt;param</span><span class="ot"> name=</span><span class="st">&#39;animate_transition&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_static_image&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_spinner&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_overlay&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;param</span><span class="ot"> name=</span><span class="st">&#39;display_count&#39;</span><span class="ot"> value=</span><span class="st">&#39;yes&#39;</span> <span class="kw">/&gt;&lt;/object&gt;&lt;/div&gt;</span>                <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&#39;text/javascript&#39;</span><span class="kw">&gt;</span>                    <span class="kw">var</span> divElement <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&#39;viz1489158014225&#39;</span>)<span class="op">;</span>                    <span class="kw">var</span> vizElement <span class="op">=</span> divElement<span class="op">.</span><span class="fu">getElementsByTagName</span>(<span class="st">&#39;object&#39;</span>)[<span class="dv">0</span>]<span class="op">;</span>                    vizElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">width</span><span class="op">=</span><span class="st">&#39;100%&#39;</span><span class="op">;</span>vizElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">height</span><span class="op">=</span>(divElement<span class="op">.</span><span class="at">offsetWidth</span><span class="op">*</span><span class="fl">0.75</span>)<span class="op">+</span><span class="st">&#39;px&#39;</span><span class="op">;</span>                    <span class="kw">var</span> scriptElement <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">&#39;script&#39;</span>)<span class="op">;</span>                    scriptElement<span class="op">.</span><span class="at">src</span> <span class="op">=</span> <span class="st">&#39;https://public.tableau.com/javascripts/api/viz_v1.js&#39;</span><span class="op">;</span>                    vizElement<span class="op">.</span><span class="at">parentNode</span><span class="op">.</span><span class="fu">insertBefore</span>(scriptElement<span class="op">,</span> vizElement)<span class="op">;</span>                <span class="kw">&lt;/script&gt;</span></span>
-<span id="cb11-10"><a href="embed-code.html#cb11-10"></a><span class="kw">&lt;/body&gt;</span></span>
-<span id="cb11-11"><a href="embed-code.html#cb11-11"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
-</div>
-<div id="b-convert-link-to-iframe-method" class="section level4 unnumbered" number="">
-<h4>B) Convert Link to iframe method</h4>
-<ol style="list-style-type: decimal">
-<li><p>Use this method if you need to paste an iframe into common web authoring platforms (such as WordPress.org, Squarespace, Wix, Weebly, etc.), since these platforms typically do not support HTML and JavaScript code pasted directly into content.</p></li>
-<li><p>Go to the public web page of any Tableau Public visualization, such as this sample: <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a></p></li>
-<li><p>Before you begin the embed process, click the upper-right Edit Details button to make any final modifications to the title or toolbar settings.</p></li>
-<li><p>Click the bottom-right Share button, click inside the <strong>Link</strong> field (NOT the Embed Code field), and copy its contents.</p></li>
-</ol>
-<div class="figure">
-<img src="images/10-embed/tableau-edit-share.png" alt="" />
-<p class="caption">Screenshot: Edit and Share buttons in Tableau Public web page</p>
-</div>
-<ol start="5" style="list-style-type: decimal">
-<li>A typical link will look similar to this example (scroll to right to see all):</li>
-</ol>
-<p><code>https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:embed=y&amp;:display_count=yes</code></p>
+<p>Here’s some hints from the <a href="https://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes">Tableau Public support page</a> when trying to create iframes from links like this example:</p>
+<p><code>https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:language=en&amp;:display_count=y&amp;:origin=viz_share_link</code></p>
 <ol start="6" style="list-style-type: decimal">
-<li>We need to edit the link to convert it into an iframe format. First, delete any code that appears after the question mark, to make it look like this (scroll to right to see all):</li>
+<li>Paste the link into the W3Schools TryIt page, and delete all of the code that appears <em>after</em> the question mark (<code>?</code>), so that it looks like this:</li>
 </ol>
 <p><code>https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?</code></p>
 <ol start="7" style="list-style-type: decimal">
-<li>Add this snippet of code to the end, to replace what you deleted above:</li>
+<li>At the end, attach this code snippet to replace what you deleted above:</li>
 </ol>
 <p><code>:showVizHome=no&amp;:embed=true</code></p>
 <ol start="8" style="list-style-type: decimal">
-<li>Now your edited link should look similar to this (scroll to right to see all):</li>
+<li>Now your edited link should look like this:</li>
 </ol>
 <p><code>https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true</code></p>
 <ol start="9" style="list-style-type: decimal">
-<li>Enclose the link inside an iframe source tag <code>src=</code> with quotes, to make it look similar to this (scroll to right to see all):</li>
+<li>Enclose your edit link inside an iframe source tag <code>src=</code> with quotes, to make it look similar to this:</li>
 </ol>
 <p><code>src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true"</code></p>
 <ol start="10" style="list-style-type: decimal">
-<li>Add iframe tags for <code>width</code> and <code>height</code> in percentages or pixels (default), to make it look similar to this (scroll to right to see all):</li>
+<li>Add iframe start and end tags, and also attributes for <code>width</code>, <code>height</code>, <code>seamless</code>, <code>frameborder="0"</code>, and <code>scrolling="no"</code>, to make it look similar to this:</li>
 </ol>
-<p><code>src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500"</code></p>
-<p>Hint: Insert 90% width, rather than 100, to help readers easily scroll down your web page</p>
+<p><code>&lt;iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500" seamless frameborder="0" scrolling="no"&gt;&lt;/iframe&gt;</code></p>
+<p>Hint: Insert <code>width="90%"</code>, rather than 100%, to help readers to scroll more easily down your web page with a margin.</p>
 <ol start="11" style="list-style-type: decimal">
-<li>Add iframe tags at the beginning and end, to make it look similar to this (scroll to right to see all):</li>
+<li>Press <em>Run</em> to see how it looks, as shown in Figure <a href="embed-code.html#fig:tableau-public-tryit-simple">10.14</a>. Sometimes a simple iframe works better on your website than a complex embed code.</li>
 </ol>
-<p><code>&lt;iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500"&gt;&lt;/iframe&gt;</code></p>
-<p>Exceptions to the last step above. As described in the <a href="embed.html#iframe-wordpress">Embed iframe on WordPress</a> chapter in this book, in a self-hosted WordPress.org site, with the iframe plugin, insert iframe brackets rather than HTML tags to make a shortcode like this (scroll to right to see all):</p>
-<p><code>[iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&amp;:embed=true" width="90%" height="500"]</code></p>
-<p>Learn more:
-Embedding Tableau Public Views in iframe, Tableau Support page <a href="http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes" class="uri">http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes</a></p>
-<p>Now jump to the <a href="paste-code.html">paste code to website section</a> to see how to properly embed it into your preferred web platform.</p>
+
+<div class="figure"><span id="fig:tableau-public-tryit-simple"></span>
+<img src="images/10-embed/tableau-public-tryit-simple.png" alt="If a complex embed code does not work in your website, go back and copy the link to the visualization, and try to convert it into a simple iframe." width="750" />
+<p class="caption">
+Figure 10.14: If a complex embed code does not work in your website, go back and copy the link to the visualization, and try to convert it into a simple iframe.
+</p>
 </div>
-</div>
-<div id="from-github-pages" class="section level3 unnumbered" number="">
-<h3>from GitHub Pages</h3>
-<p>TODO: Update these older instructions</p>
-<p>If you published your visualization from a code template (such as Leaflet or Chart.js) with GitHub Pages, follow these easy steps:</p>
-<ol style="list-style-type: decimal">
-<li>Copy the URL of your published visualization on GitHub, which will be in this format:</li>
-</ol>
-<div class="sourceCode" id="cb12"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb12-1"><a href="embed-code.html#cb12-1"></a>https://USERNAME.github.io/REPOSITORY</span></code></pre></div>
-<ol start="2" style="list-style-type: decimal">
-<li>Add <code>iframe</code> tags to the beginning and end, insert <code>src=</code> and enclose the URL inside quotation marks, like this:</li>
-</ol>
-<p><code>&lt;iframe src="https://USERNAME.github.io/RESPOSITORY"&gt;&lt;/iframe&gt;</code></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Optional: Insert preferred width and height (in pixels by default, or percentages), like this:</li>
-</ol>
-<p><code>&lt;iframe src="https://USERNAME.github.io/RESPOSITORY" width="90%" height="400"&gt;&lt;/iframe&gt;</code></p>
-<p>Now jump to the <a href="paste-code.html">paste code to website section</a> to see how to properly embed it into your preferred web platform.</p>
+<p>Now that you have a better sense of how to copy embed codes, and edit them down to simple iframes if needed, in the next section you’ll learn how to paste them into common websites such as WordPress.</p>
 </div>
 </div>
             </section>

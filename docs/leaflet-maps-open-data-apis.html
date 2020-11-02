@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-30" />
+<meta name="date" content="2020-11-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -241,12 +241,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>10</b> Embed On the Web</a>
 <ul>
 <li class="chapter" data-level="" data-path="static.html"><a href="static.html"><i class="fa fa-check"></i>Static Image vs Interactive iframe</a></li>
-<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code</a></li>
-<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code to Website</a></li>
+<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code or iframe Tag</a></li>
+<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code or iframe to Website</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> Edit and Host Code with GitHub</a>
 <ul>
 <li class="chapter" data-level="" data-path="copy-leaflet.html"><a href="copy-leaflet.html"><i class="fa fa-check"></i>Copy, Edit, and Host a Simple Leaflet Map Template</a></li>
+<li class="chapter" data-level="" data-path="gh-pages-link-to-iframe.html"><a href="gh-pages-link-to-iframe.html"><i class="fa fa-check"></i>Convert GitHub Pages Link to iframe</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
@@ -366,61 +367,61 @@ and press the <em>Use this template</em> button to copy the repo to your own Git
 data from Socrata or another JSON/GeoJSON endpoint, modify the following code snippet
 with the appropriate URL and icon:</li>
 </ol>
-<div class="sourceCode" id="cb34"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb34-1"><a href="leaflet-maps-open-data-apis.html#cb34-1"></a><span class="co">/*</span></span>
-<span id="cb34-2"><a href="leaflet-maps-open-data-apis.html#cb34-2"></a><span class="co">  From Medicare&#39;s Socrata database, add general hospitals in North Dakota</span></span>
-<span id="cb34-3"><a href="leaflet-maps-open-data-apis.html#cb34-3"></a><span class="co">  using simple filtering on the `state` column, and a GeoJSON endpoint.</span></span>
-<span id="cb34-4"><a href="leaflet-maps-open-data-apis.html#cb34-4"></a><span class="co">  Each point is a custom .png icon with a tooltip containing hospital&#39;s name,</span></span>
-<span id="cb34-5"><a href="leaflet-maps-open-data-apis.html#cb34-5"></a><span class="co">  city, and zipcode.</span></span>
-<span id="cb34-6"><a href="leaflet-maps-open-data-apis.html#cb34-6"></a><span class="co">*/</span></span>
-<span id="cb34-7"><a href="leaflet-maps-open-data-apis.html#cb34-7"></a>$<span class="op">.</span><span class="fu">getJSON</span>(<span class="st">&quot;https://data.medicare.gov/resource/xubh-q36u.geojson?state=ND&quot;</span><span class="op">,</span></span>
-<span id="cb34-8"><a href="leaflet-maps-open-data-apis.html#cb34-8"></a></span>
-<span id="cb34-9"><a href="leaflet-maps-open-data-apis.html#cb34-9"></a>  <span class="kw">function</span>(data) {</span>
-<span id="cb34-10"><a href="leaflet-maps-open-data-apis.html#cb34-10"></a></span>
-<span id="cb34-11"><a href="leaflet-maps-open-data-apis.html#cb34-11"></a>    <span class="kw">var</span> hospitals <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJson</span>(data<span class="op">,</span> {</span>
-<span id="cb34-12"><a href="leaflet-maps-open-data-apis.html#cb34-12"></a>      <span class="dt">pointToLayer</span><span class="op">:</span> <span class="kw">function</span>(feature<span class="op">,</span> latlng) {</span>
-<span id="cb34-13"><a href="leaflet-maps-open-data-apis.html#cb34-13"></a>        <span class="cf">return</span> L<span class="op">.</span><span class="fu">marker</span>(latlng<span class="op">,</span> {</span>
-<span id="cb34-14"><a href="leaflet-maps-open-data-apis.html#cb34-14"></a>          <span class="dt">icon</span><span class="op">:</span> L<span class="op">.</span><span class="fu">icon</span>({</span>
-<span id="cb34-15"><a href="leaflet-maps-open-data-apis.html#cb34-15"></a>            <span class="dt">iconUrl</span><span class="op">:</span> <span class="st">&#39;images/hospital.png&#39;</span><span class="op">,</span></span>
-<span id="cb34-16"><a href="leaflet-maps-open-data-apis.html#cb34-16"></a>            <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">24</span><span class="op">,</span> <span class="dv">24</span>]<span class="op">,</span></span>
-<span id="cb34-17"><a href="leaflet-maps-open-data-apis.html#cb34-17"></a>            <span class="dt">iconAnchor</span><span class="op">:</span> [<span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]<span class="op">,</span></span>
-<span id="cb34-18"><a href="leaflet-maps-open-data-apis.html#cb34-18"></a>            <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.5</span></span>
-<span id="cb34-19"><a href="leaflet-maps-open-data-apis.html#cb34-19"></a>          })</span>
-<span id="cb34-20"><a href="leaflet-maps-open-data-apis.html#cb34-20"></a>        })<span class="op">.</span><span class="fu">bindTooltip</span>(</span>
-<span id="cb34-21"><a href="leaflet-maps-open-data-apis.html#cb34-21"></a>          feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">hospital_name</span></span>
-<span id="cb34-22"><a href="leaflet-maps-open-data-apis.html#cb34-22"></a>            <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">city</span></span>
-<span id="cb34-23"><a href="leaflet-maps-open-data-apis.html#cb34-23"></a>            <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">zip_code</span></span>
-<span id="cb34-24"><a href="leaflet-maps-open-data-apis.html#cb34-24"></a>        )</span>
-<span id="cb34-25"><a href="leaflet-maps-open-data-apis.html#cb34-25"></a>      }</span>
-<span id="cb34-26"><a href="leaflet-maps-open-data-apis.html#cb34-26"></a>    })<span class="op">.</span><span class="fu">addTo</span>(map)</span>
-<span id="cb34-27"><a href="leaflet-maps-open-data-apis.html#cb34-27"></a></span>
-<span id="cb34-28"><a href="leaflet-maps-open-data-apis.html#cb34-28"></a>  }</span>
-<span id="cb34-29"><a href="leaflet-maps-open-data-apis.html#cb34-29"></a></span>
-<span id="cb34-30"><a href="leaflet-maps-open-data-apis.html#cb34-30"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb31-1"><a href="leaflet-maps-open-data-apis.html#cb31-1"></a><span class="co">/*</span></span>
+<span id="cb31-2"><a href="leaflet-maps-open-data-apis.html#cb31-2"></a><span class="co">  From Medicare&#39;s Socrata database, add general hospitals in North Dakota</span></span>
+<span id="cb31-3"><a href="leaflet-maps-open-data-apis.html#cb31-3"></a><span class="co">  using simple filtering on the `state` column, and a GeoJSON endpoint.</span></span>
+<span id="cb31-4"><a href="leaflet-maps-open-data-apis.html#cb31-4"></a><span class="co">  Each point is a custom .png icon with a tooltip containing hospital&#39;s name,</span></span>
+<span id="cb31-5"><a href="leaflet-maps-open-data-apis.html#cb31-5"></a><span class="co">  city, and zipcode.</span></span>
+<span id="cb31-6"><a href="leaflet-maps-open-data-apis.html#cb31-6"></a><span class="co">*/</span></span>
+<span id="cb31-7"><a href="leaflet-maps-open-data-apis.html#cb31-7"></a>$<span class="op">.</span><span class="fu">getJSON</span>(<span class="st">&quot;https://data.medicare.gov/resource/xubh-q36u.geojson?state=ND&quot;</span><span class="op">,</span></span>
+<span id="cb31-8"><a href="leaflet-maps-open-data-apis.html#cb31-8"></a></span>
+<span id="cb31-9"><a href="leaflet-maps-open-data-apis.html#cb31-9"></a>  <span class="kw">function</span>(data) {</span>
+<span id="cb31-10"><a href="leaflet-maps-open-data-apis.html#cb31-10"></a></span>
+<span id="cb31-11"><a href="leaflet-maps-open-data-apis.html#cb31-11"></a>    <span class="kw">var</span> hospitals <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJson</span>(data<span class="op">,</span> {</span>
+<span id="cb31-12"><a href="leaflet-maps-open-data-apis.html#cb31-12"></a>      <span class="dt">pointToLayer</span><span class="op">:</span> <span class="kw">function</span>(feature<span class="op">,</span> latlng) {</span>
+<span id="cb31-13"><a href="leaflet-maps-open-data-apis.html#cb31-13"></a>        <span class="cf">return</span> L<span class="op">.</span><span class="fu">marker</span>(latlng<span class="op">,</span> {</span>
+<span id="cb31-14"><a href="leaflet-maps-open-data-apis.html#cb31-14"></a>          <span class="dt">icon</span><span class="op">:</span> L<span class="op">.</span><span class="fu">icon</span>({</span>
+<span id="cb31-15"><a href="leaflet-maps-open-data-apis.html#cb31-15"></a>            <span class="dt">iconUrl</span><span class="op">:</span> <span class="st">&#39;images/hospital.png&#39;</span><span class="op">,</span></span>
+<span id="cb31-16"><a href="leaflet-maps-open-data-apis.html#cb31-16"></a>            <span class="dt">iconSize</span><span class="op">:</span> [<span class="dv">24</span><span class="op">,</span> <span class="dv">24</span>]<span class="op">,</span></span>
+<span id="cb31-17"><a href="leaflet-maps-open-data-apis.html#cb31-17"></a>            <span class="dt">iconAnchor</span><span class="op">:</span> [<span class="dv">12</span><span class="op">,</span> <span class="dv">12</span>]<span class="op">,</span></span>
+<span id="cb31-18"><a href="leaflet-maps-open-data-apis.html#cb31-18"></a>            <span class="dt">opacity</span><span class="op">:</span> <span class="fl">0.5</span></span>
+<span id="cb31-19"><a href="leaflet-maps-open-data-apis.html#cb31-19"></a>          })</span>
+<span id="cb31-20"><a href="leaflet-maps-open-data-apis.html#cb31-20"></a>        })<span class="op">.</span><span class="fu">bindTooltip</span>(</span>
+<span id="cb31-21"><a href="leaflet-maps-open-data-apis.html#cb31-21"></a>          feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">hospital_name</span></span>
+<span id="cb31-22"><a href="leaflet-maps-open-data-apis.html#cb31-22"></a>            <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">city</span></span>
+<span id="cb31-23"><a href="leaflet-maps-open-data-apis.html#cb31-23"></a>            <span class="op">+</span> <span class="st">&#39;&lt;br&gt;&#39;</span> <span class="op">+</span> feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">zip_code</span></span>
+<span id="cb31-24"><a href="leaflet-maps-open-data-apis.html#cb31-24"></a>        )</span>
+<span id="cb31-25"><a href="leaflet-maps-open-data-apis.html#cb31-25"></a>      }</span>
+<span id="cb31-26"><a href="leaflet-maps-open-data-apis.html#cb31-26"></a>    })<span class="op">.</span><span class="fu">addTo</span>(map)</span>
+<span id="cb31-27"><a href="leaflet-maps-open-data-apis.html#cb31-27"></a></span>
+<span id="cb31-28"><a href="leaflet-maps-open-data-apis.html#cb31-28"></a>  }</span>
+<span id="cb31-29"><a href="leaflet-maps-open-data-apis.html#cb31-29"></a></span>
+<span id="cb31-30"><a href="leaflet-maps-open-data-apis.html#cb31-30"></a>)</span></code></pre></div>
 <p>The following code snippet uses <code>esri-leaflet</code> plugin to pull polygon data
 from an ArcGIS server, and creates a choropleth layer based on population density
 (stored in <code>POP10_SQMI</code> variable of each feature, or polygon).</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb35-1"><a href="leaflet-maps-open-data-apis.html#cb35-1"></a><span class="kw">var</span> counties <span class="op">=</span> L<span class="op">.</span><span class="at">esri</span><span class="op">.</span><span class="fu">featureLayer</span>({</span>
-<span id="cb35-2"><a href="leaflet-maps-open-data-apis.html#cb35-2"></a>  <span class="dt">url</span><span class="op">:</span><span class="st">&#39;https://ndgishub.nd.gov/arcgis/rest/services/All_GovtBoundaries/MapServer/20&#39;</span><span class="op">,</span></span>
-<span id="cb35-3"><a href="leaflet-maps-open-data-apis.html#cb35-3"></a>  <span class="dt">style</span><span class="op">:</span> <span class="kw">function</span>(feature) {</span>
-<span id="cb35-4"><a href="leaflet-maps-open-data-apis.html#cb35-4"></a>    <span class="cf">return</span> {</span>
-<span id="cb35-5"><a href="leaflet-maps-open-data-apis.html#cb35-5"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
-<span id="cb35-6"><a href="leaflet-maps-open-data-apis.html#cb35-6"></a>      <span class="dt">weight</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
-<span id="cb35-7"><a href="leaflet-maps-open-data-apis.html#cb35-7"></a>      <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;silver&#39;</span><span class="op">,</span></span>
-<span id="cb35-8"><a href="leaflet-maps-open-data-apis.html#cb35-8"></a>      <span class="dt">fillColor</span><span class="op">:</span> getDensityColor(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">POP10_SQMI</span>)</span>
-<span id="cb35-9"><a href="leaflet-maps-open-data-apis.html#cb35-9"></a>    }</span>
-<span id="cb35-10"><a href="leaflet-maps-open-data-apis.html#cb35-10"></a>  }</span>
-<span id="cb35-11"><a href="leaflet-maps-open-data-apis.html#cb35-11"></a>})<span class="op">.</span><span class="fu">addTo</span>(map)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb32-1"><a href="leaflet-maps-open-data-apis.html#cb32-1"></a><span class="kw">var</span> counties <span class="op">=</span> L<span class="op">.</span><span class="at">esri</span><span class="op">.</span><span class="fu">featureLayer</span>({</span>
+<span id="cb32-2"><a href="leaflet-maps-open-data-apis.html#cb32-2"></a>  <span class="dt">url</span><span class="op">:</span><span class="st">&#39;https://ndgishub.nd.gov/arcgis/rest/services/All_GovtBoundaries/MapServer/20&#39;</span><span class="op">,</span></span>
+<span id="cb32-3"><a href="leaflet-maps-open-data-apis.html#cb32-3"></a>  <span class="dt">style</span><span class="op">:</span> <span class="kw">function</span>(feature) {</span>
+<span id="cb32-4"><a href="leaflet-maps-open-data-apis.html#cb32-4"></a>    <span class="cf">return</span> {</span>
+<span id="cb32-5"><a href="leaflet-maps-open-data-apis.html#cb32-5"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
+<span id="cb32-6"><a href="leaflet-maps-open-data-apis.html#cb32-6"></a>      <span class="dt">weight</span><span class="op">:</span> <span class="fl">0.5</span><span class="op">,</span></span>
+<span id="cb32-7"><a href="leaflet-maps-open-data-apis.html#cb32-7"></a>      <span class="dt">color</span><span class="op">:</span> <span class="st">&#39;silver&#39;</span><span class="op">,</span></span>
+<span id="cb32-8"><a href="leaflet-maps-open-data-apis.html#cb32-8"></a>      <span class="dt">fillColor</span><span class="op">:</span> getDensityColor(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">POP10_SQMI</span>)</span>
+<span id="cb32-9"><a href="leaflet-maps-open-data-apis.html#cb32-9"></a>    }</span>
+<span id="cb32-10"><a href="leaflet-maps-open-data-apis.html#cb32-10"></a>  }</span>
+<span id="cb32-11"><a href="leaflet-maps-open-data-apis.html#cb32-11"></a>})<span class="op">.</span><span class="fu">addTo</span>(map)</span></code></pre></div>
 <p>Here, the <code>getDensityColor()</code> function returns a color for a given value
 based on pre-defined thresholds. In case of the North Dakota example,
 population density of over 100 people per square mile is assigned the darkest shade of red,
 while the density of 5 and under is shown with the lightest.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb36-1"><a href="leaflet-maps-open-data-apis.html#cb36-1"></a><span class="kw">var</span> getDensityColor <span class="op">=</span> <span class="kw">function</span>(d) {</span>
-<span id="cb36-2"><a href="leaflet-maps-open-data-apis.html#cb36-2"></a>  <span class="cf">return</span> d <span class="op">&gt;</span> <span class="dv">100</span>  <span class="op">?</span> <span class="st">&#39;#7a0177&#39;</span> <span class="op">:</span></span>
-<span id="cb36-3"><a href="leaflet-maps-open-data-apis.html#cb36-3"></a>          d <span class="op">&gt;</span> <span class="dv">50</span>  <span class="op">?</span> <span class="st">&#39;#c51b8a&#39;</span> <span class="op">:</span></span>
-<span id="cb36-4"><a href="leaflet-maps-open-data-apis.html#cb36-4"></a>          d <span class="op">&gt;</span> <span class="dv">20</span>  <span class="op">?</span> <span class="st">&#39;#f768a1&#39;</span> <span class="op">:</span></span>
-<span id="cb36-5"><a href="leaflet-maps-open-data-apis.html#cb36-5"></a>          d <span class="op">&gt;</span> <span class="dv">5</span>   <span class="op">?</span> <span class="st">&#39;#fbb4b9&#39;</span> <span class="op">:</span></span>
-<span id="cb36-6"><a href="leaflet-maps-open-data-apis.html#cb36-6"></a>                    <span class="st">&#39;#feebe2&#39;</span></span>
-<span id="cb36-7"><a href="leaflet-maps-open-data-apis.html#cb36-7"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33-1"><a href="leaflet-maps-open-data-apis.html#cb33-1"></a><span class="kw">var</span> getDensityColor <span class="op">=</span> <span class="kw">function</span>(d) {</span>
+<span id="cb33-2"><a href="leaflet-maps-open-data-apis.html#cb33-2"></a>  <span class="cf">return</span> d <span class="op">&gt;</span> <span class="dv">100</span>  <span class="op">?</span> <span class="st">&#39;#7a0177&#39;</span> <span class="op">:</span></span>
+<span id="cb33-3"><a href="leaflet-maps-open-data-apis.html#cb33-3"></a>          d <span class="op">&gt;</span> <span class="dv">50</span>  <span class="op">?</span> <span class="st">&#39;#c51b8a&#39;</span> <span class="op">:</span></span>
+<span id="cb33-4"><a href="leaflet-maps-open-data-apis.html#cb33-4"></a>          d <span class="op">&gt;</span> <span class="dv">20</span>  <span class="op">?</span> <span class="st">&#39;#f768a1&#39;</span> <span class="op">:</span></span>
+<span id="cb33-5"><a href="leaflet-maps-open-data-apis.html#cb33-5"></a>          d <span class="op">&gt;</span> <span class="dv">5</span>   <span class="op">?</span> <span class="st">&#39;#fbb4b9&#39;</span> <span class="op">:</span></span>
+<span id="cb33-6"><a href="leaflet-maps-open-data-apis.html#cb33-6"></a>                    <span class="st">&#39;#feebe2&#39;</span></span>
+<span id="cb33-7"><a href="leaflet-maps-open-data-apis.html#cb33-7"></a>}</span></code></pre></div>
 <p>While it is convenient to pull data directly from the source databases,
 remember that those resources are out of your control (unless you administer them, of course).
 Data changes often come unannounced. For example, if the dataset owner decides

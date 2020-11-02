@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-30" />
+<meta name="date" content="2020-11-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -241,12 +241,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>10</b> Embed On the Web</a>
 <ul>
 <li class="chapter" data-level="" data-path="static.html"><a href="static.html"><i class="fa fa-check"></i>Static Image vs Interactive iframe</a></li>
-<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code</a></li>
-<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code to Website</a></li>
+<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code or iframe Tag</a></li>
+<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code or iframe to Website</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> Edit and Host Code with GitHub</a>
 <ul>
 <li class="chapter" data-level="" data-path="copy-leaflet.html"><a href="copy-leaflet.html"><i class="fa fa-check"></i>Copy, Edit, and Host a Simple Leaflet Map Template</a></li>
+<li class="chapter" data-level="" data-path="gh-pages-link-to-iframe.html"><a href="gh-pages-link-to-iframe.html"><i class="fa fa-check"></i>Convert GitHub Pages Link to iframe</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
@@ -368,22 +369,22 @@ Figure 12.4: Interactive annotated chart with Highcharts. Explore the <a href="h
 <ol start="3" style="list-style-type: decimal">
 <li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
 </ol>
-<div class="sourceCode" id="cb23"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb23-1"><a href="highcharts-annotated-line.html#cb23-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Air Transport, Passengers Carried (1970–2018)&#39;</span><span class="op">;</span></span>
-<span id="cb23-2"><a href="highcharts-annotated-line.html#cb23-2"></a></span>
-<span id="cb23-3"><a href="highcharts-annotated-line.html#cb23-3"></a><span class="co">// Caption underneath the chart</span></span>
-<span id="cb23-4"><a href="highcharts-annotated-line.html#cb23-4"></a><span class="kw">var</span> CAPTION <span class="op">=</span> <span class="st">&#39;Source: The World Bank&#39;</span><span class="op">;</span></span>
-<span id="cb23-5"><a href="highcharts-annotated-line.html#cb23-5"></a></span>
-<span id="cb23-6"><a href="highcharts-annotated-line.html#cb23-6"></a><span class="co">// x-axis label and label in tooltip</span></span>
-<span id="cb23-7"><a href="highcharts-annotated-line.html#cb23-7"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Year&#39;</span><span class="op">;</span></span>
-<span id="cb23-8"><a href="highcharts-annotated-line.html#cb23-8"></a></span>
-<span id="cb23-9"><a href="highcharts-annotated-line.html#cb23-9"></a><span class="co">// y-axis label and label in tooltip</span></span>
-<span id="cb23-10"><a href="highcharts-annotated-line.html#cb23-10"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Passengers&#39;</span><span class="op">;</span></span>
-<span id="cb23-11"><a href="highcharts-annotated-line.html#cb23-11"></a></span>
-<span id="cb23-12"><a href="highcharts-annotated-line.html#cb23-12"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
-<span id="cb23-13"><a href="highcharts-annotated-line.html#cb23-13"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb23-14"><a href="highcharts-annotated-line.html#cb23-14"></a></span>
-<span id="cb23-15"><a href="highcharts-annotated-line.html#cb23-15"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
-<span id="cb23-16"><a href="highcharts-annotated-line.html#cb23-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb20-1"><a href="highcharts-annotated-line.html#cb20-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Air Transport, Passengers Carried (1970–2018)&#39;</span><span class="op">;</span></span>
+<span id="cb20-2"><a href="highcharts-annotated-line.html#cb20-2"></a></span>
+<span id="cb20-3"><a href="highcharts-annotated-line.html#cb20-3"></a><span class="co">// Caption underneath the chart</span></span>
+<span id="cb20-4"><a href="highcharts-annotated-line.html#cb20-4"></a><span class="kw">var</span> CAPTION <span class="op">=</span> <span class="st">&#39;Source: The World Bank&#39;</span><span class="op">;</span></span>
+<span id="cb20-5"><a href="highcharts-annotated-line.html#cb20-5"></a></span>
+<span id="cb20-6"><a href="highcharts-annotated-line.html#cb20-6"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb20-7"><a href="highcharts-annotated-line.html#cb20-7"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Year&#39;</span><span class="op">;</span></span>
+<span id="cb20-8"><a href="highcharts-annotated-line.html#cb20-8"></a></span>
+<span id="cb20-9"><a href="highcharts-annotated-line.html#cb20-9"></a><span class="co">// y-axis label and label in tooltip</span></span>
+<span id="cb20-10"><a href="highcharts-annotated-line.html#cb20-10"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Passengers&#39;</span><span class="op">;</span></span>
+<span id="cb20-11"><a href="highcharts-annotated-line.html#cb20-11"></a></span>
+<span id="cb20-12"><a href="highcharts-annotated-line.html#cb20-12"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
+<span id="cb20-13"><a href="highcharts-annotated-line.html#cb20-13"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb20-14"><a href="highcharts-annotated-line.html#cb20-14"></a></span>
+<span id="cb20-15"><a href="highcharts-annotated-line.html#cb20-15"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb20-16"><a href="highcharts-annotated-line.html#cb20-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
 <p>If you wish to further customize your chart, use the <a href="https://api.highcharts.com/highcharts/">Highcharts API reference</a> that lists all available features.</p>
 </div>
             </section>

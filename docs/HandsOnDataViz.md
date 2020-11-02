@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 29 Oct 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 01 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -8426,576 +8426,503 @@ with your stories.
 10 Embed On the Web
 ===================
 
-TODO: Reorganize and rewrite chapter; change all datawrapper iframe refs
-from specific (/\#) to general (/)
-<a href="https://datawrapper.dwcdn.net" class="uri">https://datawrapper.dwcdn.net</a>
+So far you’ve learned how to create [charts in chapter 7](chart.html)
+and [maps in chapter 8](map.html). Our book emphasizes the benefits of
+designing *interactive* visualizations that engage broad audiences on
+the internet by inviting them to interact with your data, investigate
+new patterns, download files if desired, and easily share your work on
+social media. In this chapter, you’ll learn about a computer code tag
+called an *iframe*. Like a picture frame, an iframe displays one web
+page (such as your interactive data visualization) inside a second web
+page that you control (such as your personal or organizational web
+site), and makes the content appear seamlessly so that audiences can
+still interact with it. Several of the visualization tools you’ve
+learned so far, such as Google Sheets, Datawrapper, and Tableau Public,
+generate an *embed code* that contains an iframe to the online chart or
+map you’ve created on their platform. We will demonstrate how to [get
+the embed code or link](embed-code.html) from your visualization tool
+site, and [paste the code into a second website](paste-code.html) to
+seamlessly display your interactive content. No coding skills are
+required in this introductory book, but it certainly helps to be
+*code-curious*.
 
-TODO: What if you don’t yet have a website? Previously, I taught people
-to start with GitHub index.html, but that’s too complex. Also
-WordPress.com does not work for iframes. Consider other user-friendly
-platforms: SquareSpace, etc? Or even something weird but quick, like
-Blocks? Or even W3Schools Tryit for iframe? Or is there some type of
-Google Drive thingy?
+TODO: Discuss whether we should add an abstract diagram of an iframe
+inside a web page, like a picture frame on a wall, to visually reinforce
+this concept for new users here
 
-TODO: insert how-to capture static screenshot instructions for different
-computers in this chapter, because it needs to go somewhere… also
-mention how to capture animated GIFs?
+Static Image vs Interactive iframe
+----------------------------------
 
-After you create a chart or map, how do display it inside your website
-as an *interactive* visualization? Our goal is not a static picture, but
-a live chart or map that users can explore. This is an important
-question for beginners, since data visualizations are not valuable
-unless you can control where and how your work appears. This chapter
-walks you through the key steps.
+First, let’s clarify the difference between *static* versus
+*interactive* visualizations. A static picture of a chart or map is a
+frozen image. Many visualization tools allow you to download static
+images of your charts or maps in .JPG or .PNG or .PDF format. Static
+images are useful when that’s all that you want to insert in a document,
+a presentation slide, or even a web page. Another option is to paste a
+static image, and add a link [or custom shortlink](share.html) with the
+web address to an interactive chart or map, and invite audiences to
+explore it online.
 
-First, you need to own a website that supports iframe codes (which we’ll
-explain below). If you do not have a website that supports this, then
-follow this quick tutorial to [Create a simple web page with GitHub
-Pages](github-pages.html). Even if you already have a website, still do
-this tutorial, because it introduces a tool used many times in this
-book.
+Also, you capture a static image of any web page on your computer by
+taking a [screenshot](https://en.wikipedia.org/wiki/Screenshot) with
+these built-in commands:
 
-Second, you need to copy or create an iframe code from your chart or
-map. An iframe is one line of HTML code with instructions on how to
-display a web page from a specific address (called a URL). A simple
-iframe looks like this:
+-   Chromebook: Press key combination *Ctrl + Shift + F5* for
+    rectangular select tool.
+-   Macintosh: Press key combination *Shift + Command + 4* then
+    click-and-drag the cross-hair capture tool.
+-   Windows: Press key combination *Windows key + Shift + S* to call up
+    the *Snip & Sketch* tool.
 
-`<iframe src="https://handsondataviz.org/embed/index.html"></iframe>`
+An animated GIF file is a series of static images that captures motion
+on the screen. You can insert an animated GIF on a web page to
+illustrate a short sequence of steps while using an interactive
+visualization, but audiences cannot interact with it, other than to play
+the animated loop over again. Paid software tools such as
+[Snagit](https://www.techsmith.com/screen-capture.html) allow you to
+create screenshots including drop-down menus and cursors, animated GIFs,
+and more.
 
-No coding skills are necessary. See these easy-to-follow examples:
+By contrast, *interactive* visualizations allow audiences to directly
+engage with your data story through their web browsers. Visitors usually
+can float their cursor over a chart to view tooltips or underlying
+information, or zoom into a map and pan around, or search terms or sort
+columns in an interactive table. Interactive visualizations are usually
+hosted online, such as a chart or map tool platform, and are primarily
+designed to be viewed online, though in some cases it’s possible for you
+to download and interact with them on your local computer.
 
-\-[Copy iframe from a Google Sheets chart](iframe-google-sheets.html)
--[Convert a link into an iframe](link-to-iframe.html)
+Now let’s turn to the central question: how can we make an interactive
+visualization, which resides on its online host (the primary site),
+appear seamlessly on a different website that we control (the secondary
+site)?. While it’s possible to insert a link on our secondary site to
+the charts or maps on the primary site, that’s inconvenient for our
+audiences because it requires them to click away from the web page they
+were reading. A better solution is to insert an embed code that usually
+contains an [iframe tag](https://www.w3schools.com/tags/tag_iframe.asp),
+written in Hypertext Markup Language (HTML), the code that displays
+content inside our web browsers. While you don’t need any coding
+experience, you’ll benefit in the long run by learning how to recognize
+the core features of an embed code and how it works.
 
-Finally, you need to paste (or embed) the iframe code inside your
-website. Like a picture frame, an iframe allows you to display one web
-page (your data visualization) inside another web page (your personal
-website). But unlike a picture frame, where the image is static, an
-iframe makes content interactive, so visitors can explore the chart or
-map on your site, even though it may actually be hosted on an entirely
-different website. Go to this third tutorial, which combines the two
-steps above, called [Embed Iframe in GitHub Pages](iframe-github.html).
+In its simplest form, an iframe instructs the secondary site to display
+a web page address from the primary site, known as the source, as if it
+were a seamless picture frame on the wall of a room. The sample iframe
+code below begins with a start tag `<iframe ... >`, which contains the
+source `src='https://...'` with either single- or double-quotes around
+the primary site URL, then concludes with an end tag `</iframe>`. This
+sample iframe refers to an interactive US income inequality chart on the
+Datawrapper platform, which first appeared in the
+[Introduction](introduction.html) to this book, as shown in Figure
+<a href="#fig:iframe-sample">10.1</a>.
 
-See more tutorials in this chapter to copy iframes from other
-visualization tools (such as [Tableau Public](iframe-tableau.html) and
-embed them in other common websites (such as
-[WordPress](iframe-wordpress.html), etc.) \*\* TO DO: add more tutorials
-and links \*\*
+`<iframe src='https://https://datawrapper.dwcdn.net/LtRbj/'></iframe>`
 
-Create a Simple Web Page with GitHub Pages
-------------------------------------------
+<img src="images/10-embed/iframe-sample.png" alt="Depending on the format of your book, if a static chart appears above, but you can also [view the interactive version](https://datawrapper.dwcdn.net/LtRbj/)."  />
+<p class="caption">
+Figure 10.1: Depending on the format of your book, if a static chart
+appears above, but you can also [view the interactive
+version](https://datawrapper.dwcdn.net/LtRbj/).
+</p>
 
-Question: After you create an interactive chart or map, how do you embed
-the live version in a website that you control?
+Sometimes embed codes or their iframe tags are *much longer* than the
+simple example above. For example, an iframe tag might include other
+attributes, such as `width` or `height`, measured in pixels (`px`) or a
+percentage of its dimensions on the secondary site. Also, you may see
+other iframe tag elements, such as `seamless` or `frameborder="0"` or
+`scrolling="no"`, which create a seamless appearance between the iframe
+content and its surroundings. Finally, you may see *really long* embed
+codes that contain a dozen or more lines of code that even we don’t
+fully understand. That’s okay, because all of these are optional add-ons
+to improve the appearance of the iframe in the secondary site. The most
+essential ingredient of an embed code is the iframe and its three core
+parts: the iframe start tag, source web address, and end tag. When in
+doubt, look for those key ingredients.
 
-The full answer requires three steps:
+Now that you have a clearer definition of an interactive visualization,
+embed codes, and iframe tags, in the next section we’ll learn how to
+copy the embed code from different visualization platforms.
 
--   1.  Create a web page that supports iframe codes
+TODO above: confirm the screenshot commands for non-Mac platforms and if
+they are the simplest versions, and if older Windows commands are still
+needed
 
--   1.  Copy or create an iframe code from your visualization
-
--   1.  Embed (or paste) the iframe code into your web page
-
-This tutorial focuses on the **first step**. If you don’t already have
-your own website, or if you are not sure whether your site supports
-iframe codes, then follow the steps below. We will create a simple web
-page with a free and friendly tool called GitHub
-<a href="http://github.com" class="uri">http://github.com</a>, and host
-it on the public web with the built-in GitHub Pages feature. For **steps
-2 and 3**, see the [Copy iframe from Google
-Sheets](iframe-google-sheets.html) tutorial and the [Embed iframe in
-GitHub Pages](iframe-github.html) tutorial in this chapter.
-
-Tool review: GitHub
-<a href="http://github.com" class="uri">http://github.com</a> is a
-versatile tool that can be used to create simple web pages.
-
--   Pros:
-    -   Free and easy-to-learn tool to edit and host simple pages on the
-        public web.
-    -   All steps below can be completed in your web browser.
--   Cons:
-    -   All work on GitHub is public by default. Private repositories
-        (folders) require payment.
-    -   New users sometimes confuse the links for code repositories
-        versus published web pages.
-
-[Video](https://youtube.be/AFdogZFyN0c)
-
-1.  Sign up for free GitHub account, then sign in, at
-    <a href="http://github.com" class="uri">http://github.com</a>.
-
-2.  Create a new repository (also called a “project” or similar to a
-    “folder”).
-
-3.  Name your repository (or “repo”), and select Initialize with a
-    README file. Optional steps: add a description and select a license.
-
-4.  Scroll down and click the green button to Create your repo, which
-    will appear in a new browser tab, with this URL format:
-
-`https://github.com/YOUR-USERNAME/YOUR-REPO-NAME`
-
-1.  In your GitHub repo, click on Settings, scroll down to GitHub Pages,
-    select Main branch as your source, then Save. This publishes the
-    code from your repo to the public web.
-
-Hint: Do NOT select Theme Chooser for this exercise. It will create
-additional files that will interfere with displaying an iframe in your
-README.md file.
-
-1.  When the Settings page refreshes, scroll back down to GitHub Pages
-    to see the new link to your published website, which will appear in
-    this format:
-
-`https://YOUR-USERNAME.github.io/YOUR-REPO-NAME`
-
-1.  Right-click and Copy the link to your published web site.
-
-2.  At the top of the page, click on the repo name to return to the main
-    level.
-
-3.  Click the README.md file to open it in your browser, and click the
-    pencil symbol to edit it.
-
-4.  Inside your README.md file, paste the link to your published web
-    site, and type any text you wish to appear. The .md extension refers
-    to Markdown, an easy-to-read computer language that GitHub Pages can
-    process.
-
-5.  Scroll down and click the green Commit button to save your edits.
-
-6.  When your GitHub repo page refreshes, click on the new link to go to
-    your published web site. **BE PATIENT!** Your new site may not
-    appear instantly. Refresh the browser every 10 seconds. You may need
-    to wait up to 1 minute for a new site to appear the first time, but
-    later changes will be much faster.
-
-Remember that GitHub Pages is designed to create simple web pages and
-sites. See other web publishing tools mentioned in this chapter to
-create more sophisticated web sites.
-
-Copy an iframe code from a Google Sheets interactive chart
-----------------------------------------------------------
-
-Question: After you create an interactive chart or map, how do you embed
-the live version in a website that you control?
-
-The full answer requires three steps:
-
-1.  Create a web page that supports iframe codes
-2.  Copy the iframe code from your visualization
-3.  Embed (or paste) the iframe code into your web page
-
-This tutorial focuses on the **second step**, and shows how to publish a
-Google Sheets interactive chart, and copy its iframe code. Details may
-differ for other visualization tools, but the general iframe concept
-will be similar to most cases. For **steps 1 and 3**, see the [Create a
-Simple Web Page with GitHub Pages](github-pages.html) tutorial and the
-[Embed iframe in GitHub Pages](iframe-github.html) tutorial in this
-chapter.
-
-#### Tutorial
-
-1.  Create a Google Sheets chart, which requires a free Google Drive
-    account. Learn more in the [Google Sheets Charts
-    tutorial](chart-google.html) in this book.
-
-2.  Click the drop-down menu in the upper-right corner of the
-    interactive chart and select Publish chart. Click OK on next screen.
-
-![Screenshot: Drop-down menu to publish a Google Sheets
-chart](images/10-embed/google-sheets-chart-menu-publish.png)
-
-1.  Select the Embed tab, select the Interactive version, and click the
-    blue Publish button. If you make changes to the chart, they will
-    continue to be published to the web automatically, unless you click
-    the Stop button or checkbox at the bottom.
-
-![Screenshot: Publish to the web for a Google Sheets
-chart](images/10-embed/google-sheets-publish.png)
-
-1.  Copy the iframe embed code.
-
-![Screenshot: Copy the iframe code from a Google Sheets
-chart](images/10-embed/google-sheets-publish-copy-iframe.png)
-
-No coding skills are necessary, but it helps to be code-curious. This
-iframe is a line of HTML code that contains these instructions:
-
--   iframe tags to mark the beginning and end
--   width and height: to display your chart in a second site, in pixels
--   seamless frameborder: “0” means no border will appear around the
-    chart in the second site
--   scrolling: “no” means the chart will not include its own web
-    scrolling feature
--   src: the web address (or URL) of the visualization to be displayed
-    in the second site
-
-See the next tutorial in this chapter, [Embed iframe in GitHub
-Pages](iframe-github.html), to learn how to paste the iframe into a
-simple web page. Or see related tutorials in this chapter to embed an
-iframe in other common web sites.
-
-Convert a Weblink into an Iframe
+Get the Embed Code or iframe Tag
 --------------------------------
 
-After you publish your data visualization to the web, how do you convert
-its weblink (or URL) into an iframe, to embed in your personal website?
-
-The answer depends: did you publish your visualization as a code
-template on GitHub Pages? Or did you publish it using a drop-and-drag
-tool such as Google Sheets or Tableau Public?
-
-#### Published with a code template on GitHub Pages
-
-If you published your visualization from a code template (such as
-Leaflet or Chart.js) with GitHub Pages, follow these easy steps:
-
-1.  Copy the URL of your published visualization on GitHub, which will
-    be in this format:
-
-<!-- -->
-
-    https://USERNAME.github.io/REPOSITORY
-
-1.  Add `iframe` tags to the beginning and end, insert `src=` and
-    enclose the URL inside quotation marks, like this:
-
-`<iframe src="https://USERNAME.github.io/RESPOSITORY"></iframe>`
-
-1.  Optional: Insert preferred width and height (in pixels by default,
-    or percentages), like this:
-
-`<iframe src="https://USERNAME.github.io/RESPOSITORY" width="90%" height="400"></iframe>`
-
-1.  Go to the appropriate tutorial to embed your iframe in your personal
-    website:
-
--   [Embed an iframe in GitHub Pages](iframe-github.html)
--   [Embed an iframe in WordPress.org](iframe-wordpress.html)
-
-#### Published with Google Sheets or Tableau Public
-
-Or, if you published your visualization using a drop-and-drag tool, see
-these tutorials:
-
--   [Copy an iframe code from a Google Sheets interactive
-    chart](iframe-google-sheets.html)
--   [Embed Tableau Public on your Website](iframe-tableau.html)
-
-Embed an Iframe in GitHub Pages
--------------------------------
-
-Question: After you create an interactive chart or map, how do you embed
-the live version in a website that you control?
-
-Here’s the full three-step answer that combines lessons from the [Embed
-on the Web chapter introduction](embed.html) and the two previous
-tutorials:
-
-1.  First, create a web page that supports iframe embed codes. If you
-    don’t know what that means or don’t yet have a personal website, go
-    back to the previous tutorial, [Create a Simple Web Page with GitHub
-    Pages](github-pages.html), or see the video and step-by-step
-    instructions below.
-
-2.  Second, copy or create an iframe code from your data visualization.
-    Go back to the previous tutorial, [Copy an iframe code from a Google
-    Sheets interactive chart](iframe-google-sheets.html), or see the
-    video and step-by-step instructions below.
-
-3.  Third, embed (or paste) the iframe code into your website. The video
-    and instructions below show how to paste an iframe from a Google
-    Sheets interactive chart into a simple web page with GitHub Pages.
-
-Try it:
-
-The goal is to embed the iframe code from a Google Sheets interactive
-chart, which resides on a Google web server, into your GitHub Pages web
-site. The result will be similar to the one below:
-
-TODO: Convert to code-chunk iframe:
-<a href="https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/pubchart?oid=200651442&amp;format=interactive" class="uri">https://docs.google.com/spreadsheets/d/1YgBWYm9nTGlCuyqSwU3SDb7xk-SMSPgjfYq5iLqL0nQ/pubchart?oid=200651442&amp;format=interactive</a>
-
-\[Video\](<a href="https://youtube.be/enjhlnqaXOE" class="uri">https://youtube.be/enjhlnqaXOE</a>\]
-
-1.  Sign up for free GitHub account, then sign in, at
-    <a href="https://github.com" class="uri">https://github.com</a>.
-
-2.  Create a **new repository** (think of it as a folder that contains
-    your project).
-
-3.  Name your repository (or “repo”), and select *Initialize this
-    repository with a README*. Optional steps: add a description and
-    select a license.
-
-4.  Scroll down and click the green button to Create your repo, which
-    will appear in a new browser tab, with this URL format:
-
-`https://github.com/YOUR-USERNAME/YOUR-REPO-NAME`
-
-1.  In your GitHub repo, click on Settings tab, scroll down to *GitHub
-    Pages*, select **main branch** as your Source, then Save. This
-    publishes the code from your repo to the public web.
-
-2.  When the Settings page refreshes, scroll back down to GitHub Pages
-    to see the new link to your published website, which will appear in
-    this format:
-
-`https://YOUR-USERNAME.github.io/YOUR-REPO-NAME`
-
-1.  Right-click and Copy this link to your published web site.
-
-2.  At the top of the page, click on the repo name to return to the main
-    level.
-
-3.  Click the README.md file to open it in your browser, and click the
-    pencil symbol in the upper right corner to edit it.
-
-4.  Inside your README.md file, paste the link to your published web
-    site, and type any text you wish to appear. The .md extension refers
-    to Markdown, an easy-to-read markup language that GitHub Pages can
-    process and display as HTML.
-
-5.  Go to a data visualization you have created, such as a Google Sheets
-    chart, select Publish &gt; Embed, and copy the iframe code. This
-    line of HTML code displays the interactive visualization website
-    inside your personal website.
-
-6.  Scroll down and click Commit to save your edits.
-
-7.  When your GitHub repo page refreshes, click on the new link to go to
-    your published web site. **BE PATIENT!** Your new site may not
-    appear instantly. Refresh the browser every 10 seconds. You may need
-    to wait for a few minutes for a new site to appear the first time,
-    but later changes will be much faster.
-
-Important:
-
--   A published README.md file will display an HTML iframe code, unless
-    you add other HTML files (such as index.html) to your repository.
-
-Remember that GitHub Pages is designed to create simple web pages and
-sites. See other web publishing tools mentioned in this chapter to
-create more sophisticated web sites.
-
-Embed an Iframe on WordPress.org
---------------------------------
-
-TODO:
-
--   rewrite this tutorial to merge the two versions (top and bottom)
--   then update all links and check all `code` tags
-
-To embed one web page (the data visualization) inside a second web page
-(the organization’s website), we use a simple HTML code known as
-**iframe**. (Read more about the
-<a href="http://www.w3schools.com/tags/tag_iframe.asp">iframe</a><a href="http://www.w3schools.com/tags/tag_iframe.asp">tag
-at W3Schools</a>.)
-
-The **general iframe concept** works across many data visualization
-tools and many websites: - Copy the embed code or URL from your dataviz
-website - Paste (and modify) the code as an iframe in your destination
-website
-
-To embed your dataviz in a self-hosted Wordpress.org site, the \[iframe
-plugin\]
-(<a href="http://wordpress.org/plugins/iframe/" class="uri">http://wordpress.org/plugins/iframe/</a>)
-must be installed and activated. This plugin allows authors to embed
-iframe codes inside posts/pages, in a modified “shortcode” format
-surrounded by square brackets. Without the plugin, self-hosted
-WordPress.org sites will usually “strip out” iframe codes for all users
-except the site administrator. **I have already installed and
-activated** the iframe plugin on my site, and the Dashboard view looks
-like this:
-
-![](images/10-embed/WordPressOrg-iframe-plugin-activate.jpg)
-
-Note that most WordPress.com sites do NOT support an iframe embed code.
-
-But details vary, so read and experiment with the examples that follow.
-
-1.  To embed the iframe in a WordPress.org site, the iframe plugin must
-    be installed, as explained in the [Embed with iframe on
-    WordPress.org](iframe-wordpress.html) chapter. **TO DO** fix
-    self-reference
-
-2.  Log into your Wordpress.org site and create a new post. In the
-    editor window, switch from the Visual to the Text tab, which allows
-    users to modify the code behind your post. Paste the iframe code
-    from your interactive dataviz.
-
-![](images/10-embed/WordPressOrg-text-tab-paste-iframe.png)
-
-1.  Initially, the code you pasted includes HTML iframe tags at the
-    front `<iframe...` and the end `...></iframe>`, which looks like
-    this:
-
-`<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>`
-
-1.  Modify the front end of the iframe code by replacing the less-than
-    symbol ( &lt; ) with a square opening bracket ( \[ ). Modify the
-    back end by erasing the greater-than symbol ( &gt; ) and the end tag
-    ( </iframe> ). Replace the back end with a square closing bracket (
-    \] ).
-
-![](images/10-embed/WordPressOrg-replace-with-bracket.png)
-
-Your modified code should look like this:
-
-`[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"]`
-
-1.  Click Preview or Publish/View Post to see how it appears on the web.
-
-2.  If desired, continue to modify the iframe code to improve the
-    display of your dataviz on your website. For example, the initial
-    code was 600 pixels wide (width=“600”). To display the dataviz
-    across the full width of your website, change this part of the code
-    to 100% (width=“100%”).
-
-The goal is to embed an interactive chart inside your website, so that
-users can explore the data. This tutorial displays a *very basic chart*
-to simplify the process, and the end result will appear like the one
-below. Try it.
-
-TODO: Convert to code-chunk iframe:
-<a href="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive" class="uri">https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive</a>
-
-Embed Tableau Public on your Website
-------------------------------------
-
-Question: After learning [how to create an interactive data
-visualization with Tableau Public](tableau-public.html) in this book,
-how do I embed it on my website?
-
-Answer: Tableau Public supports two embedding methods, and your choice
-depends on your type of website.
-
--   1.  Embed code: if you can paste directly into an HTML web page
-
--   1.  Convert Link to iframe: to paste into WordPress.org, Wix,
-        SquareSpace, Weebly, and many other web platforms
-
-Try it:
-
-Both methods produce an embedded visualization like the one below. Float
-your cursor over points to view data details.
-
-TODO: convert to code-chunk iframe:
-<a href="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a>?:showVizHome=no&:embed=true
-
-#### A) Embed code method for HTML web pages
-
-1.  Use this method if you can paste HTML and JavaScript code directly
-    into a website with HTML pages.
-
-2.  Go to the public web page of any Tableau Public visualization, such
-    as this sample:
-    <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a>
-
-3.  Before you begin the embed process, click the upper-right Edit
-    Details button to make any final modifications to the title or
-    toolbar settings.
-
-4.  Click the bottom-right Share button, click inside the **Embed Code**
-    field, and copy its contents. A typical embed code is a long string
-    of HTML and JavaScript instructions to display the visualization.
-
-![Screenshot: Edit and Share buttons in Tableau Public web
-page](images/10-embed/tableau-edit-share.png)
-
-1.  Open an HTML page on your website and paste the embed code in the
-    body section. Below is an example of a sample Tableau Public embed
-    code pasted between the body tags of a simple HTML page.
-
-TODO: find a way to replace this triple backtic code snippet, since it
-may throw errors into Markdown output.
-
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>sample web page</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta charset="utf-8">
-    </head>
-    <body>
-      <div class='tableauPlaceholder' id='viz1489158014225' style='position: relative'><noscript><a href='https:&#47;&#47;handsondataviz.org&#47;chart&#47;scatter-chart-tableau&#47;'><img alt='CT School Districts by Income and Grade Level Equivalents, 2009-13 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CT&#47;CTSchoolDistrictsbyIncomeandGradeLevels2009-13&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='CTSchoolDistrictsbyIncomeandGradeLevels2009-13&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CT&#47;CTSchoolDistrictsbyIncomeandGradeLevels2009-13&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1489158014225');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </body>
-    </html>
-
-#### B) Convert Link to iframe method
-
-1.  Use this method if you need to paste an iframe into common web
-    authoring platforms (such as WordPress.org, Squarespace, Wix,
-    Weebly, etc.), since these platforms typically do not support HTML
-    and JavaScript code pasted directly into content.
-
-2.  Go to the public web page of any Tableau Public visualization, such
-    as this sample:
-    <a href="https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1" class="uri">https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1</a>
-
-3.  Before you begin the embed process, click the upper-right Edit
-    Details button to make any final modifications to the title or
-    toolbar settings.
-
-4.  Click the bottom-right Share button, click inside the **Link** field
-    (NOT the Embed Code field), and copy its contents.
-
-![Screenshot: Edit and Share buttons in Tableau Public web
-page](images/10-embed/tableau-edit-share.png)
-
-1.  A typical link will look similar to this example (scroll to right to
-    see all):
-
-`https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:embed=y&:display_count=yes`
-
-1.  We need to edit the link to convert it into an iframe format. First,
-    delete any code that appears after the question mark, to make it
-    look like this (scroll to right to see all):
+In this section, you’ll learn how to copy the embed code or iframe tag
+that is automatically generated when you publish a chart or map on
+different visualization platforms featured in this book. Remember that
+embed codes contain the essential iframe tag, along with other bits of
+code to display the chart or map from the primary site and make it
+appear seamlessly on the secondary site.
+
+We’ll break this down into three steps for each visualization platform.
+First, we will demonstrate how to copy your embed code or iframe tag
+from Google Sheets, Datawrapper, Tableau Public, and other platforms
+listed below. \[TODO: add others like BatchGeo or rewrite that
+sentence?\] Second, we’ll show you how to *practice paste* the embed
+code or iframe tag into the [W3Schools TryIt iframe
+page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe),
+as shown in Figure <a href="#fig:w3schools-tryit-iframe">10.2</a>, to
+help you understand what’s happening behind-the-scenes and to modify the
+code if needed. Third, we’ll point you to the next section to learn how
+to properly paste the embed code in your preferred website, such as
+WordPress \[and others TODO\].
+
+<img src="images/10-embed/w3schools-tryit-iframe.png" alt="For each embed code below, you will *practice paste* it in place of the selected text of the W3Schools TryIt iframe page to see how it works." width="750" />
+<p class="caption">
+Figure 10.2: For each embed code below, you will *practice paste* it in
+place of the selected text of the W3Schools TryIt iframe page to see how
+it works.
+</p>
+
+### from Google Sheets
+
+1.  After you create a [Google Sheets chart in Chapter
+    7](chart-google.html), click the 3-dot kebab menu in the upper-right
+    corner of the chart to publish it, as shown in Figure
+    <a href="#fig:google-sheets-publish">10.3</a>.
+
+<img src="images/10-embed/google-sheets-publish.png" alt="In your chart, click the three-dot kebab menu to publish it." width="150" />
+<p class="caption">
+Figure 10.3: In your chart, click the three-dot kebab menu to publish
+it.
+</p>
+
+1.  In the next screen, select the *Embed* tab and *Interactive* chart,
+    and click the *Publish* button to share it online. Select and copy
+    the embed code, as shown in Figure
+    <a href="#fig:google-sheets-embed-code">10.4</a>.
+
+<img src="images/10-embed/google-sheets-embed-code.png" alt="Click *Embed* and *Interactive* and *Publish*, then select and copy the embed code." width="500" />
+<p class="caption">
+Figure 10.4: Click *Embed* and *Interactive* and *Publish*, then select
+and copy the embed code.
+</p>
+
+1.  To better understand how the embed code works, open the [W3Schools
+    TryIt iframe
+    page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe).
+    Select the current iframe tag, paste in your embed code to replace
+    it, and press the green *Run* button. The result should be similar
+    to Figure <a href="#fig:google-sheets-tryit">10.5</a>, but instead
+    will display your embed code and interactive visualization.
+
+<img src="images/10-embed/google-sheets-tryit.png" alt="Paste your Google Sheets embed code to place of the current iframe tag in the TryIt page and click *Run*." width="750" />
+<p class="caption">
+Figure 10.5: Paste your Google Sheets embed code to place of the current
+iframe tag in the TryIt page and click *Run*.
+</p>
+
+At first glance, the Google Sheets embed code may appear long, but it’s
+actually a straightforward iframe tag with a long source link. Look
+closely and you’ll see iframe settings such as `width` and `height`
+(measured here in pixels), and `seamless` and `frameborder='0'` and
+`scrolling='no'` to improve its appearance.
+
+1.  Now jump to the [paste code to website section](paste-code.html) of
+    this chapter to learn how to properly insert your embed code into
+    your preferred platform.
+
+### from Datawrapper
+
+1.  After you create a [Datawrapper chart in Chapter
+    7](chart-datawrapper.html) or [map in Chapter 8](map.html) or
+    [interactive table in Chapter 9](table.html), proceed to the final
+    screen and click the *Publish* button, as shown in Figure
+    <a href="#fig:datawrapper-publish">10.6</a>. This publishes the
+    interactive version of your chart or map online. Further down on the
+    same screen you can also export a static image, if desired.
+
+<img src="images/10-embed/datawrapper-publish.png" alt="Proceed to the final screen and click the *Publish* button." width="300" />
+<p class="caption">
+Figure 10.6: Proceed to the final screen and click the *Publish* button.
+</p>
+
+1.  On the next screen, click *copy* to get the Datawrapper embed code,
+    as shown in Figure <a href="#fig:datawrapper-embed-code">10.7</a>.
+    The default *responsive iframe* version of the embed code contains
+    additional instructions to improve its appearance on both small and
+    large device screens.
+
+<img src="images/10-embed/datawrapper-embed-code.png" alt="Copy the responsive iframe version of the Datawrapper embed code." width="300" />
+<p class="caption">
+Figure 10.7: Copy the responsive iframe version of the Datawrapper embed
+code.
+</p>
+
+1.  To better understand how the embed code works, open the [W3Schools
+    TryIt iframe
+    page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe).
+    Select the current iframe tag, paste in your embed code to replace
+    it, and press the green *Run* button. The result should be similar
+    to Figure <a href="#fig:datawrapper-tryit">10.8</a>, but instead
+    will display your embed code and interactive visualization.
+
+<img src="images/10-embed/datawrapper-tryit.png" alt="Paste your Datawrapper embed code in place of the current iframe tag in the TryIt page and click *Run*." width="750" />
+<p class="caption">
+Figure 10.8: Paste your Datawrapper embed code in place of the current
+iframe tag in the TryIt page and click *Run*.
+</p>
+
+The Datawrapper embed code is *long*, but if you look closely, the first
+half contains a relatively straightforward iframe tag that includes
+familiar-looking attributes such `src`,`scrolling`, and `frameborder`,
+and `width` and `height` inside a style tag. The second half of the
+embed code contains JavaScript instructions to make the iframe appear
+responsive depending on the size of the device screen.
+
+1.  Always try to paste the *full embed code* in your desired web
+    platform. Jump to the [paste code to website
+    section](paste-code.html) of this chapter to learn how to properly
+    insert your embed code into common websites.
+
+2.  But if it doesn’t work, go back to step 3 and experiment. Try to
+    edit the embed code down to a *simple iframe*, and run it again to
+    see how it looks, as shown in Figure
+    <a href="#fig:datawrapper-tryit-simple">10.9</a>. Sometimes a simple
+    iframe works better on your website than a complex embed code.
+
+<img src="images/10-embed/datawrapper-tryit-simple.png" alt="If a complex embed code does not work in your website, go back and try to edit it down into a simple iframe." width="750" />
+<p class="caption">
+Figure 10.9: If a complex embed code does not work in your website, go
+back and try to edit it down into a simple iframe.
+</p>
+
+Tip: The Datawrapper iframe tag source follows this general format:
+`https://datawrapper.dwcdn.net/abcdef/1/`, where the `1` refers to the
+first version of the chart or map you published. If you make edits and
+re-publish it a second time, the number will increase to `2` and so
+forth. Before you paste an embed code or iframe in the next section, you
+can instruct Datawrapper to always publish your *most current version*
+of your visualization by removing the final number and forward slash in
+the iframe, so that it follows this new format:
+`https://datawrapper.dwcdn.net/abcdef/`.
+
+### from Tableau Public
+
+1.  After you create a [Tableau Public chart in Chapter
+    7](chart-tableau.html) or [map in Chapter 8](map-tableau.html),
+    publish your worksheet, dashboard, or story online by selecting
+    *File &gt; Save to Tableau Public* in the desktop application menu,
+    as shown in Figure <a href="#fig:tableau-public-publish">10.10</a>.
+
+<img src="images/10-embed/tableau-public-publish.png" alt="In the Tableau Public desktop application, select *File--Save to Tableau Public* to publish to the online server." width="428" />
+<p class="caption">
+Figure 10.10: In the Tableau Public desktop application, select
+*File–Save to Tableau Public* to publish to the online server.
+</p>
+
+Also, you can log into the [Tableau Public
+server](https://public.tableau.com) to view all of the visualizations
+you have published online under your username account profile.
+
+1.  In your online Tableau Public account profile page, click to *View*
+    the details of any of your published visualizations, as shown in
+    Figure <a href="#fig:tableau-public-view">10.11</a>.
+
+<img src="images/10-embed/tableau-public-view.png" alt="In your Tableau Public online profile page, click to *View* the details of a published visualization." width="289" />
+<p class="caption">
+Figure 10.11: In your Tableau Public online profile page, click to
+*View* the details of a published visualization.
+</p>
+
+1.  When viewing details for a published visualization in your Tableau
+    Public online account, scroll down and click on the *Share* symbol
+    in the lower-right corner. Select and copy its embed code, as shown
+    in Figure <a href="#fig:tableau-public-embed-code">10.12</a>.
+
+<img src="images/10-embed/tableau-public-embed-code-annotated.png" alt="Scroll down in the online published visualization details, click the *Share* button, and copy the embed code." width="469" />
+<p class="caption">
+Figure 10.12: Scroll down in the online published visualization details,
+click the *Share* button, and copy the embed code.
+</p>
+
+1.  To better understand how the embed code works, open the [W3Schools
+    TryIt iframe
+    page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe).
+    Select the current iframe tag, paste in your embed code to replace
+    it, and press the green *Run* button. The result should be similar
+    to Figure <a href="#fig:tableau-public-tryit">10.13</a>, but instead
+    will display your embed code and interactive visualization.
+
+<img src="images/10-embed/tableau-public-tryit.png" alt="Paste your Tableau public embed code in place of the current iframe tag in the TryIt page and click *Run*." width="750" />
+<p class="caption">
+Figure 10.13: Paste your Tableau public embed code in place of the
+current iframe tag in the TryIt page and click *Run*.
+</p>
+
+The Tableau Public embed code is *very long* and does not fit in one
+image. Even we don’t fully understand what’s happening in this complex
+batch of code.
+
+1.  Always try to paste the *full embed code* in your desired web
+    platform. Jump to the [paste code to website
+    section](paste-code.html) of this chapter to learn how to properly
+    insert on different common websites.
+
+2.  But if it doesn’t work, go back to step 3 and 4 and experiment. For
+    example, you can copy the Tableau Public link to your visualization,
+    *instead* of the embed code, try to convert it into a simple iframe
+    tag, and run it again to see how it looks.
+
+Here’s some hints from the [Tableau Public support
+page](https://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes)
+when trying to create iframes from links like this example:
+
+`https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:language=en&:display_count=y&:origin=viz_share_link`
+
+1.  Paste the link into the W3Schools TryIt page, and delete all of the
+    code that appears *after* the question mark (`?`), so that it looks
+    like this:
 
 `https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?`
 
-1.  Add this snippet of code to the end, to replace what you deleted
+1.  At the end, attach this code snippet to replace what you deleted
     above:
 
 `:showVizHome=no&:embed=true`
 
-1.  Now your edited link should look similar to this (scroll to right to
-    see all):
+1.  Now your edited link should look like this:
 
 `https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true`
 
-1.  Enclose the link inside an iframe source tag `src=` with quotes, to
-    make it look similar to this (scroll to right to see all):
+1.  Enclose your edit link inside an iframe source tag `src=` with
+    quotes, to make it look similar to this:
 
 `src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true"`
 
-1.  Add iframe tags for `width` and `height` in percentages or pixels
-    (default), to make it look similar to this (scroll to right to see
-    all):
+1.  Add iframe start and end tags, and also attributes for `width`,
+    `height`, `seamless`, `frameborder="0"`, and `scrolling="no"`, to
+    make it look similar to this:
 
-`src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"`
+`<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500" seamless frameborder="0" scrolling="no"></iframe>`
 
-Hint: Insert 90% width, rather than 100, to help readers easily scroll
-down your web page
+Hint: Insert `width="90%"`, rather than 100%, to help readers to scroll
+more easily down your web page with a margin.
 
-1.  Add iframe tags at the beginning and end, to make it look similar to
-    this (scroll to right to see all):
+1.  Press *Run* to see how it looks, as shown in Figure
+    <a href="#fig:tableau-public-tryit-simple">10.14</a>. Sometimes a
+    simple iframe works better on your website than a complex embed
+    code.
 
-`<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"></iframe>`
+<img src="images/10-embed/tableau-public-tryit-simple.png" alt="If a complex embed code does not work in your website, go back and copy the link to the visualization, and try to convert it into a simple iframe." width="750" />
+<p class="caption">
+Figure 10.14: If a complex embed code does not work in your website, go
+back and copy the link to the visualization, and try to convert it into
+a simple iframe.
+</p>
 
-Exceptions to the last step above. As described in the [Embed iframe on
-WordPress](embed.html#iframe-wordpress) chapter in this book, in a
-self-hosted WordPress.org site, with the iframe plugin, insert iframe
-brackets rather than HTML tags to make a shortcode like this (scroll to
-right to see all):
+Now that you have a better sense of how to copy embed codes, and edit
+them down to simple iframes if needed, in the next section you’ll learn
+how to paste them into common websites such as WordPress.
 
-`[iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500"]`
+Paste Code or iframe to Website
+-------------------------------
 
-Learn more: Embedding Tableau Public Views in iframe, Tableau Support
-page
-<a href="http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes" class="uri">http://kb.tableau.com/articles/howto/embedding-tableau-public-views-in-iframes</a>
+In the prior section, you copied the embed code (or created an iframe)
+for your interactive visualization that is hosted online by the primary
+site. In this section, we’ll demonstrate ways to properly paste the
+embed code or iframe to seamlessly display your interactive chart or map
+in the secondary site.
+
+### to WordPress.com sites
+
+If you own *free* or personal or premium
+[WordPress.com](https://wordpress.com) site, with a web address in the
+format `anyone.wordpress.com`, you *cannot* insert an embed code that
+contains an iframe or Javascript due to security concerns, as described
+on their [support
+page](https://wordpress.com/support/troubleshooting-embed-links-and-shortcodes/).
+This means that if wish to show data visualizations created from this
+book on a WordPress.com site, you have two options. First, with your
+free or personal or premium plan, you can still insert a *static image*
+of a chart or map and a link to its interactive site, but that’s clearly
+not ideal. Second, WordPress.com suggests that you can [update to their
+paid Business or eCommerce
+plan](https://wordpress.com/support/plan-features/), which supports
+embed codes that contain iframes or Javascript, following instructions
+similar to the self-hosted WordPress sites below.
+
+### to Self-hosted WordPress sites
+
+Make sure you [understand the
+difference](https://wordpress.com/support/com-vs-org/) between a
+WordPress.com site above versus a self-hosted WordPress site. The latter
+is sometimes called WordPress.org site because anyone can freely
+download the software from that address and *host it on their own
+webserver*, or more commonly, have access to a self-hosted WordPress
+server through their school or work, or by renting space on a vendor’s
+webserver. But the web address of a self-hosted WordPress site does
+*not* necessarily need to end in `.org`. It also could be `.com` or
+`.edu` or any other ending, so don’t let that confuse you.
+
+There are several ways to insert an embed code or iframe in a
+self-hosted WordPress site, but your success may depend on your WP
+version, your access level, and the complexity of the code.
+
+For the first method, assume that you’re using WordPress 5.0 or above
+with the newer block editor, and you have editor or administrator access
+to your site. TODO: Check whether less-than-admin privileges strips out
+iframe codes, as it used to before WP 5.0
+
+In your block editor, select a *custom HTML* block, and directly insert
+the embed code or the iframe, as shown in Figure
+<a href="#fig:wordpress-custom-html">10.15</a>.
+
+<img src="images/10-embed/wordpress-custom-html.png" alt="Paste an embed code or iframe into a custom HTML block." width="700" />
+<p class="caption">
+Figure 10.15: Paste an embed code or iframe into a custom HTML block.
+</p>
+
+For the second method, assume that you’re using WordPress with either
+the classic or block editor, and that you have administrator access to
+the site.
+
+1.  Install and activate the [iframe
+    plugin](http://wordpress.org/plugins/iframe/), as shown in Figure
+    <a href="#fig:wordpress-iframe-plugin">10.16</a>. This plugin allows
+    authors to embed iframe codes in a modified “shortcode” format
+    surrounded by square brackets. Without the plugin, self-hosted
+    WordPress.org sites will usually “strip out” iframe codes for all
+    users except the site administrator. TODO: update this image
+
+<img src="images/10-embed/wordpress-iframe-plugin.jpg" alt="Install and activate the *iframe plugin* on a self-hosted WP site." width="300" />
+<p class="caption">
+Figure 10.16: Install and activate the *iframe plugin* on a self-hosted
+WP site.
+</p>
+
+1.  In the WordPress editor, click to the *text* tab to view the code,
+    and paste the embed code or iframe, as shown in Figure
+    <a href="#fig:wordpress-text-paste-iframe">10.17</a>. Initially, the
+    code you pasted includes iframe tags at the start (`<iframe...`) and
+    the end ()`...></iframe>`).
+
+<img src="images/10-embed/wordpress-text-paste-iframe.png" alt="Install and activate the *iframe plugin* on a self-hosted WP site." width="700" />
+<p class="caption">
+Figure 10.17: Install and activate the *iframe plugin* on a self-hosted
+WP site.
+</p>
+
+1.  Modify the start tag by replacing the less-than symbol (`<`) with a
+    square opening bracket (`[`). Modify the back end by erasing the
+    greater-than symbol (`>`) and the entire end tag (`</iframe>`), and
+    replace both of them with one square closing bracket (`]`), as shown
+    in Figure <a href="#fig:wordpress-insert-brackets">10.18</a>.
+
+<img src="images/10-embed/wordpress-insert-brackets.png" alt="Modify the front and back end with square brackets." width="700" />
+<p class="caption">
+Figure 10.18: Modify the front and back end with square brackets.
+</p>
+
+TODO ABOVE: check method with more complex embed codes, check with
+non-admin privileges, and update images
+
+### to SquareSpace, Wix, or Weebly Sites
+
+TODO
 
 ### Summary
 
@@ -9078,8 +9005,12 @@ repoint our domain to a different web host.
 
 In the next section of this chapter, we will introduce basic steps to
 [copy, edit, and host a simple Leaflet map code template on
-GitHub](copy-leaflet.html). Later you’ll learn how to [create a new
-GitHub repo and upload code files](create-repo.html).
+GitHub](copy-leaflet.html). When you publish any chart or map code
+template by hosting it on GitHub Pages, you can easily [transform its
+online link into an iframe](gh-pages-link-to-iframe.html) that you can
+[embed on a secondary website, which we discussed in Chapter
+10](embed.html). Later you’ll learn how to [create a new GitHub repo and
+upload code files](create-repo.html).
 
 This chapter introduces GitHub using its web browser interface, which
 works best for beginners. Later you’ll learn about intermediate-level
@@ -9433,10 +9364,55 @@ ready to dive into the more advanced versions, such as [Chart.js and
 Highcharts templates in Chapter 12](chartcode.html) and [Leaflet map
 templates in Chapter 13](leaflet.html).
 
-The next section describes how to enhance your GitHub skills by creating
-new repos and uploading your files. These are essential steps to create
-a second copy of a code template or to work with more advanced templates
-in the next two chapters.
+Convert GitHub Pages Link to iframe
+-----------------------------------
+
+In [Chapter 10: Embed on the Web](embed.html), we discussed the benefits
+of displaying interactive content from a primary site and making it
+appear seamlessly in a secondary site. You also learned how to convert
+very long Datawrapper and Tableau Public embed codes into shorter iframe
+tags when needed, so that you can embed them more easily on a secondary
+website.
+
+The same concept applies to GitHub Pages. When you publish a code
+template for a chart or map (or any content) on GitHub Pages, it
+generates an online link that you can convert into an iframe tag, using
+the same principles as above, to embed it on a secondary website. Follow
+these steps:
+
+1.  For any GitHub repository you have published online, go to its
+    *Settings* page and scroll down to copy its GitHub Pages web
+    address, which will appear in this general format:
+
+`https://USERNAME.github.io/REPOSITORY`
+
+1.  Convert it into an iframe by enclosing the link inside quotation
+    marks as the source, and adding both start and end tags, in this
+    general format:
+
+`<iframe src="https://USERNAME.github.io/RESPOSITORY"></iframe>`
+
+1.  If desired, improve the iframe appearance on the secondary site by
+    adding any of these optional attributes, such as `width` or `height`
+    (measured in pixels by default, or percentages), or `seamless` or
+    `frameborder="0"` or `scrolling="no"`, in this general format:
+
+`<iframe src="https://USERNAME.github.io/RESPOSITORY" width="100%" height="400" seamless frameborder="0" scrolling="no"></iframe>`
+
+Hint: Either single-quote (`'`) marks (also called an apostrophe) or
+double-quote (`"`) marks are acceptable in your iframe code, but be
+consistent and avoid accidentally pasting in curly-quotes.
+
+Now you are ready to [paste your iframe into your preferred
+website](paste-code.html), using methods described in Chapter 10, to
+display your interactive chart or map template from published repository
+using GitHub Pages.
+
+Now you should have a better sense of how to edit and host code
+repositories on GitHub. The next section describes how to enhance your
+GitHub skills by creating new repos and uploading your files. These are
+essential steps to create a second copy of a code template or to work
+with more advanced templates in the next two chapters.
 
 Create a New Repo and Upload Files on GitHub
 --------------------------------------------
@@ -11122,12 +11098,14 @@ template](https://docs.google.com/spreadsheets/d/1AO6XHL_0JafWZF4KEejkdDNqfuZWUk
 that feeds data into the Leaflet Storymaps demo above.
 </p>
 
-TODO: DECIDE if we should add links to gallery of examples, such as:
-<a href="https://jhsgh.github.io/storymap/" class="uri">https://jhsgh.github.io/storymap/</a>
-and
-<a href="https://www.mappingtheuppermissouri.com/" class="uri">https://www.mappingtheuppermissouri.com/</a>
-and
-<a href="https://ericayhayes.github.io/leaflet-storymaps-with-google-sheets/" class="uri">https://ericayhayes.github.io/leaflet-storymaps-with-google-sheets/</a>
+TODO: DECIDE if we should create gallery of examples with thumbnail
+images or links:
+
+-   <a href="https://jhsgh.github.io/storymap/" class="uri">https://jhsgh.github.io/storymap/</a>
+-   <a href="https://www.mappingtheuppermissouri.com/" class="uri">https://www.mappingtheuppermissouri.com/</a>
+-   <a href="https://kensingtonremembers.org" class="uri">https://kensingtonremembers.org</a>
+-   <a href="https://www.weneedtotalkabouttheborder.eu" class="uri">https://www.weneedtotalkabouttheborder.eu</a>
+-   <a href="https://www.laurentgontier.com/Storymap_Normandie/" class="uri">https://www.laurentgontier.com/Storymap_Normandie/</a>
 
 ### Tutorial Outline
 
@@ -14109,11 +14087,11 @@ question, find data, visualize.
 Now let’s enrich your storyboard by adding more content about what you
 actually discovered after searching, cleaning, analyzing, and
 visualizing your data. Select only your most meaningful tables, charts,
-or maps. Print them out on separate sheets of paper, or download static
-images or capture screenshots \[TODO: link to how-to screenshot in
-chapter 10 embed\] to place them in your draft slides or document. Leave
-room for you to write text at the top and bottom of each table, chart,
-or map in order to tell your data story. Here are the next two steps:
+or maps. Print them out on separate sheets of paper, or download [static
+images or capture screenshots](static.html) to place them in your draft
+slides or document. Leave room for you to write text at the top and
+bottom of each table, chart, or map in order to tell your data story.
+Here are the next two steps:
 
 -   At the top of each key visualization, *summarize* the most important
     message the data reveals.
@@ -14192,6 +14170,9 @@ concepts about data visualization, because we believe most of our
 readers can grasp them, yet we continue to write at an introductory
 level that assumes no prior knowledge beyond a secondary school or early
 college education. Now we can add these new sheets to our storyboard.
+
+TODO: Update text and data above, and images below, using
+<a href="https://github.com/HandsOnDataViz/survey-results" class="uri">https://github.com/HandsOnDataViz/survey-results</a>
 
 <img src="images/16-story/survey-combined-annotated.png" alt="Verbalize meaningful insights at the top of each visualization, and tell why it matters at the bottom, then insert them into your storyboard." width="750" />
 <p class="caption">
@@ -14510,6 +14491,10 @@ headers lacking a blank character.
 
 ![Screenshot: Curly quotes versus straight
 quotes](images/17-fix/curly-vs-straight-quotes.png)
+
+Hint: Either single-quote (`'`) marks (also called an apostrophe) or
+double-quote (`"`) marks are acceptable in your iframe code, but be
+consistent and avoid accidentally pasting in curly-quotes.
 
 TODO: Test one way to fix GitHub errors by going into the commits and
 going back to a previous version of the code. Is this possible in the

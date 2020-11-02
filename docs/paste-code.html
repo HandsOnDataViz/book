@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Paste Code to Website | Hands-On Data Visualization</title>
+  <title>Paste Code or iframe to Website | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Paste Code to Website | Hands-On Data Visualization" />
+  <meta property="og:title" content="Paste Code or iframe to Website | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Paste Code to Website | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Paste Code or iframe to Website | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-10-30" />
+<meta name="date" content="2020-11-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -241,12 +241,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="10" data-path="embed.html"><a href="embed.html"><i class="fa fa-check"></i><b>10</b> Embed On the Web</a>
 <ul>
 <li class="chapter" data-level="" data-path="static.html"><a href="static.html"><i class="fa fa-check"></i>Static Image vs Interactive iframe</a></li>
-<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code</a></li>
-<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code to Website</a></li>
+<li class="chapter" data-level="" data-path="embed-code.html"><a href="embed-code.html"><i class="fa fa-check"></i>Get the Embed Code or iframe Tag</a></li>
+<li class="chapter" data-level="" data-path="paste-code.html"><a href="paste-code.html"><i class="fa fa-check"></i>Paste Code or iframe to Website</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> Edit and Host Code with GitHub</a>
 <ul>
 <li class="chapter" data-level="" data-path="copy-leaflet.html"><a href="copy-leaflet.html"><i class="fa fa-check"></i>Copy, Edit, and Host a Simple Leaflet Map Template</a></li>
+<li class="chapter" data-level="" data-path="gh-pages-link-to-iframe.html"><a href="gh-pages-link-to-iframe.html"><i class="fa fa-check"></i>Convert GitHub Pages Link to iframe</a></li>
 <li class="chapter" data-level="" data-path="create-repo.html"><a href="create-repo.html"><i class="fa fa-check"></i>Create a New Repo and Upload Files on GitHub</a></li>
 <li class="chapter" data-level="" data-path="github-desktop-atom.html"><a href="github-desktop-atom.html"><i class="fa fa-check"></i>GitHub Desktop and Atom Editor to Code Efficiently</a></li>
 </ul></li>
@@ -340,40 +341,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <div id="paste-code" class="section level2 unnumbered" number="">
-<h2>Paste Code to Website</h2>
-<p>In the prior section, you copied the embed code (or created an iframe) for your interactive visualization that is hosted online by the primary site. In this section, we’ll demonstrate ways to properly paste the embed code (and sometimes modify it) to seamlessly display your interactive chart or map in the secondary site. You must have administrative (or at least editing control) over this secondary site to insert an embed code or iframe.</p>
-<div id="to-practice-html-site" class="section level3 unnumbered" number="">
-<h3>to Practice HTML Site</h3>
-<p>What if you don’t currently have your own website? Anyone can paste an embed code into this <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe">W3Schools HTML Try It iframe practice page</a> and press the <em>Run</em> button to see how it works. While it’s less common today for people to directly edit their websites in HTML, it’s the quickest way to see how it works. Also, you can copy and paste the HTML code into sites that accept it, such as GitHub Pages….</p>
-<p>TODO: insert more details and screenshot</p>
+<h2>Paste Code or iframe to Website</h2>
+<p>In the prior section, you copied the embed code (or created an iframe) for your interactive visualization that is hosted online by the primary site. In this section, we’ll demonstrate ways to properly paste the embed code or iframe to seamlessly display your interactive chart or map in the secondary site.</p>
+<div id="to-wordpress.com-sites" class="section level3 unnumbered" number="">
+<h3>to WordPress.com sites</h3>
+<p>If you own <em>free</em> or personal or premium <a href="https://wordpress.com">WordPress.com</a> site, with a web address in the format <code>anyone.wordpress.com</code>, you <em>cannot</em> insert an embed code that contains an iframe or Javascript due to security concerns, as described on their <a href="https://wordpress.com/support/troubleshooting-embed-links-and-shortcodes/">support page</a>. This means that if wish to show data visualizations created from this book on a WordPress.com site, you have two options. First, with your free or personal or premium plan, you can still insert a <em>static image</em> of a chart or map and a link to its interactive site, but that’s clearly not ideal. Second, WordPress.com suggests that you can <a href="https://wordpress.com/support/plan-features/">update to their paid Business or eCommerce plan</a>, which supports embed codes that contain iframes or Javascript, following instructions similar to the self-hosted WordPress sites below.</p>
 </div>
-<div id="to-wordpress-site" class="section level3 unnumbered" number="">
-<h3>to WordPress Site</h3>
-<p>TODO: Update these older instructions and clarify WordPress.com versus self-hosted WordPress sites at the top.</p>
-<p>To embed your dataviz in a self-hosted Wordpress.org site, the <a href="http://wordpress.org/plugins/iframe/">iframe plugin</a> must be installed and activated. This plugin allows authors to embed iframe codes inside posts/pages, in a modified “shortcode” format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually “strip out” iframe codes for all users except the site administrator. <strong>I have already installed and activated</strong> the iframe plugin on my site, and the Dashboard view looks like this:</p>
-<p><img src="images/10-embed/WordPressOrg-iframe-plugin-activate.jpg" /></p>
-<p>Note that most WordPress.com sites do NOT support an iframe embed code. But details vary, so read and experiment with the examples that follow.</p>
-<ol start="5" style="list-style-type: decimal">
-<li><p>To embed the iframe in a WordPress.org site, the iframe plugin must be installed, as explained in the <a href="iframe-wordpress.html">Embed with iframe on WordPress.org</a> chapter. <strong>TO DO</strong> fix self-reference</p></li>
-<li><p>Log into your Wordpress.org site and create a new post. In the editor window, switch from the Visual to the Text tab, which allows users to modify the code behind your post. Paste the iframe code from your interactive dataviz.</p></li>
+<div id="to-self-hosted-wordpress-sites" class="section level3 unnumbered" number="">
+<h3>to Self-hosted WordPress sites</h3>
+<p>Make sure you <a href="https://wordpress.com/support/com-vs-org/">understand the difference</a> between a WordPress.com site above versus a self-hosted WordPress site. The latter is sometimes called WordPress.org site because anyone can freely download the software from that address and <em>host it on their own webserver</em>, or more commonly, have access to a self-hosted WordPress server through their school or work, or by renting space on a vendor’s webserver. But the web address of a self-hosted WordPress site does <em>not</em> necessarily need to end in <code>.org</code>. It also could be <code>.com</code> or <code>.edu</code> or any other ending, so don’t let that confuse you.</p>
+<p>There are several ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code.</p>
+<p>For the first method, assume that you’re using WordPress 5.0 or above with the newer block editor, and you have editor or administrator access to your site. TODO: Check whether less-than-admin privileges strips out iframe codes, as it used to before WP 5.0</p>
+<p>In your block editor, select a <em>custom HTML</em> block, and directly insert the embed code or the iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-custom-html">10.15</a>.</p>
+
+<div class="figure"><span id="fig:wordpress-custom-html"></span>
+<img src="images/10-embed/wordpress-custom-html.png" alt="Paste an embed code or iframe into a custom HTML block." width="700" />
+<p class="caption">
+Figure 10.15: Paste an embed code or iframe into a custom HTML block.
+</p>
+</div>
+<p>For the second method, assume that you’re using WordPress with either the classic or block editor, and that you have administrator access to the site.</p>
+<ol style="list-style-type: decimal">
+<li>Install and activate the <a href="http://wordpress.org/plugins/iframe/">iframe plugin</a>, as shown in Figure <a href="paste-code.html#fig:wordpress-iframe-plugin">10.16</a>. This plugin allows authors to embed iframe codes in a modified “shortcode” format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually “strip out” iframe codes for all users except the site administrator. TODO: update this image</li>
 </ol>
-<p><img src="images/10-embed/WordPressOrg-text-tab-paste-iframe.png" /></p>
-<ol start="7" style="list-style-type: decimal">
-<li>Initially, the code you pasted includes HTML iframe tags at the front <code>&lt;iframe...</code> and the end <code>...&gt;&lt;/iframe&gt;</code>, which looks like this:</li>
+
+<div class="figure"><span id="fig:wordpress-iframe-plugin"></span>
+<img src="images/10-embed/wordpress-iframe-plugin.jpg" alt="Install and activate the iframe plugin on a self-hosted WP site." width="300" />
+<p class="caption">
+Figure 10.16: Install and activate the <em>iframe plugin</em> on a self-hosted WP site.
+</p>
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li>In the WordPress editor, click to the <em>text</em> tab to view the code, and paste the embed code or iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-text-paste-iframe">10.17</a>. Initially, the code you pasted includes iframe tags at the start (<code>&lt;iframe...</code>) and the end ()<code>...&gt;&lt;/iframe&gt;</code>).</li>
 </ol>
-<p><code>&lt;iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;amp;format=interactive"&gt;&lt;/iframe&gt;</code></p>
-<ol start="8" style="list-style-type: decimal">
-<li>Modify the front end of the iframe code by replacing the less-than symbol ( &lt; ) with a square opening bracket ( [ ). Modify the back end by erasing the greater-than symbol ( &gt; ) and the end tag ( </iframe> ). Replace the back end with a square closing bracket ( ] ).</li>
+
+<div class="figure"><span id="fig:wordpress-text-paste-iframe"></span>
+<img src="images/10-embed/wordpress-text-paste-iframe.png" alt="Install and activate the iframe plugin on a self-hosted WP site." width="700" />
+<p class="caption">
+Figure 10.17: Install and activate the <em>iframe plugin</em> on a self-hosted WP site.
+</p>
+</div>
+<ol start="3" style="list-style-type: decimal">
+<li>Modify the start tag by replacing the less-than symbol (<code>&lt;</code>) with a square opening bracket (<code>[</code>). Modify the back end by erasing the greater-than symbol (<code>&gt;</code>) and the entire end tag (<code>&lt;/iframe&gt;</code>), and replace both of them with one square closing bracket (<code>]</code>), as shown in Figure <a href="paste-code.html#fig:wordpress-insert-brackets">10.18</a>.</li>
 </ol>
-<p><img src="images/10-embed/WordPressOrg-replace-with-bracket.png" /></p>
-<p>Your modified code should look like this:</p>
-<p><code>[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;amp;format=interactive"]</code></p>
-<ol start="9" style="list-style-type: decimal">
-<li><p>Click Preview or Publish/View Post to see how it appears on the web.</p></li>
-<li><p>If desired, continue to modify the iframe code to improve the display of your dataviz on your website. For example, the initial code was 600 pixels wide (width=“600”). To display the dataviz across the full width of your website, change this part of the code to 100% (width=“100%”).</p></li>
-</ol>
-<p>The goal is to embed an interactive chart inside your website, so that users can explore the data. This tutorial displays a <em>very basic chart</em> to simplify the process, and the end result will appear like the one below. Try it.</p>
-<p>TODO: Convert to code-chunk iframe: <a href="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive" class="uri">https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive</a></p>
+
+<div class="figure"><span id="fig:wordpress-insert-brackets"></span>
+<img src="images/10-embed/wordpress-insert-brackets.png" alt="Modify the front and back end with square brackets." width="700" />
+<p class="caption">
+Figure 10.18: Modify the front and back end with square brackets.
+</p>
+</div>
+<p>TODO ABOVE: check method with more complex embed codes, check with non-admin privileges, and update images</p>
 </div>
 <div id="to-squarespace-wix-or-weebly-sites" class="section level3 unnumbered" number="">
 <h3>to SquareSpace, Wix, or Weebly Sites</h3>

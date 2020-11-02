@@ -50,7 +50,7 @@ We'll break this down into three steps for each visualization platform. First, w
 
 (ref:google-sheets-publish) In your chart, click the three-dot kebab menu to publish it.
 
-```{r google-sheets-publish, out.width=250, fig.cap="(ref:google-sheets-publish)"}
+```{r google-sheets-publish, out.width=150, fig.cap="(ref:google-sheets-publish)"}
  knitr::include_graphics("images/10-embed/google-sheets-publish.png")
 ```
 
@@ -79,7 +79,7 @@ At first glance, the Google Sheets embed code may appear long, but it's actually
 
 (ref:datawrapper-publish) Proceed to the final screen and click the *Publish* button.
 
-```{r datawrapper-publish, out.width=400, fig.cap="(ref:datawrapper-publish)"}
+```{r datawrapper-publish, out.width=300, fig.cap="(ref:datawrapper-publish)"}
  knitr::include_graphics("images/10-embed/datawrapper-publish.png")
 ```
 
@@ -87,7 +87,7 @@ At first glance, the Google Sheets embed code may appear long, but it's actually
 
 (ref:datawrapper-embed-code) Copy the responsive iframe version of the Datawrapper embed code.
 
-```{r datawrapper-embed-code, out.width=500, fig.cap="(ref:datawrapper-embed-code)"}
+```{r datawrapper-embed-code, out.width=300, fig.cap="(ref:datawrapper-embed-code)"}
  knitr::include_graphics("images/10-embed/datawrapper-embed-code.png")
 ```
 
@@ -126,7 +126,7 @@ Also, you can log into the [Tableau Public server](https://public.tableau.com) t
 
 2. In your online Tableau Public account profile page, click to *View* the details of any of your published visualizations, as shown in Figure \@ref(fig:tableau-public-view).
 
-(ref:tableau-public-publish) In your Tableau Public online profile page, click to *View* the details of a published visualization.
+(ref:tableau-public-view) In your Tableau Public online profile page, click to *View* the details of a published visualization.
 
 ```{r tableau-public-view, out.width=289, fig.cap="(ref:tableau-public-view)"}
  knitr::include_graphics("images/10-embed/tableau-public-view.png")
@@ -178,7 +178,7 @@ Here's some hints from the [Tableau Public support page](https://kb.tableau.com/
 
 `<iframe src="https://public.tableau.com/views/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1?:showVizHome=no&:embed=true" width="90%" height="500" seamless frameborder="0" scrolling="no"></iframe>`
 
-Hint: Insert 90% width, rather than 100%, to help readers easily scroll down your web page
+Hint: Insert `width="90%"`, rather than 100%, to help readers to scroll more easily down your web page with a margin.
 
 11. Press *Run* to see how it looks, as shown in Figure \@ref(fig:tableau-public-tryit-simple). Sometimes a simple iframe works better on your website than a complex embed code.
 
@@ -188,50 +188,59 @@ Hint: Insert 90% width, rather than 100%, to help readers easily scroll down you
  knitr::include_graphics("images/10-embed/tableau-public-tryit-simple.png")
 ```
 
+Now that you have a better sense of how to copy embed codes, and edit them down to simple iframes if needed, in the next section you'll learn how to paste them into common websites such as WordPress.
+
 ## Paste Code or iframe to Website {- #paste-code}
-In the prior section, you copied the embed code (or created an iframe) for your interactive visualization that is hosted online by the primary site. In this section, we'll demonstrate ways to properly paste the embed code (and sometimes modify it) to seamlessly display your interactive chart or map in the secondary site. You must have administrative (or at least editing control) over this secondary site to insert an embed code or iframe.
+In the prior section, you copied the embed code (or created an iframe) for your interactive visualization that is hosted online by the primary site. In this section, we'll demonstrate ways to properly paste the embed code or iframe to seamlessly display your interactive chart or map in the secondary site.
 
+### to WordPress.com sites {-}
+If you own *free* or personal or premium [WordPress.com](https://wordpress.com) site, with a web address in the format `anyone.wordpress.com`, you *cannot* insert an embed code that contains an iframe or Javascript due to security concerns, as described on their [support page](https://wordpress.com/support/troubleshooting-embed-links-and-shortcodes/). This means that if wish to show data visualizations created from this book on a WordPress.com site, you have two options. First, with your free or personal or premium plan, you can still insert a *static image* of a chart or map and a link to its interactive site, but that's clearly not ideal. Second, WordPress.com suggests that you can [update to their paid Business or eCommerce plan](https://wordpress.com/support/plan-features/), which supports embed codes that contain iframes or Javascript, following instructions similar to the self-hosted WordPress sites below.
 
-### to WordPress Site {-}
-TODO: Update these older instructions and clarify WordPress.com versus self-hosted WordPress sites at the top.
+### to Self-hosted WordPress sites {-}
+Make sure you [understand the difference](https://wordpress.com/support/com-vs-org/) between a WordPress.com site above versus a self-hosted WordPress site. The latter is sometimes called WordPress.org site because anyone can freely download the software from that address and *host it on their own webserver*, or more commonly, have access to a self-hosted WordPress server through their school or work, or by renting space on a vendor's webserver. But the web address of a self-hosted WordPress site does *not* necessarily need to end in `.org`. It also could be `.com` or `.edu` or any other ending, so don't let that confuse you.
 
-To embed your dataviz in a self-hosted Wordpress.org site, the [iframe plugin](http://wordpress.org/plugins/iframe/) must be installed and activated. This plugin allows authors to embed iframe codes inside posts/pages, in a modified "shortcode" format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually "strip out" iframe codes for all users except the site administrator. **I have already installed and activated** the iframe plugin on my site, and the Dashboard view looks like this:
+There are several ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code.
 
-![](images/10-embed/WordPressOrg-iframe-plugin-activate.jpg)
+For the first method, assume that you're using WordPress 5.0 or above with the newer block editor, and you have editor or administrator access to your site. TODO: Check whether less-than-admin privileges strips out iframe codes, as it used to before WP 5.0
 
-Note that most WordPress.com sites do NOT support an iframe embed code. But details vary, so read and experiment with the examples that follow.
+In your block editor, select a *custom HTML* block, and directly insert the embed code or the iframe, as shown in Figure \@ref(fig:wordpress-custom-html).  
 
-5) To embed the iframe in a WordPress.org site, the iframe plugin must be installed, as explained in the [Embed with iframe on WordPress.org](iframe-wordpress.html) chapter. **TO DO** fix self-reference
+(ref:wordpress-custom-html) Paste an embed code or iframe into a custom HTML block.
 
-6) Log into your Wordpress.org site and create a new post. In the editor window, switch from the Visual to the Text tab, which allows users to modify the code behind your post. Paste the iframe code from your interactive dataviz.
+```{r wordpress-custom-html, out.width=700, fig.cap="(ref:wordpress-custom-html)"}
+ knitr::include_graphics("images/10-embed/wordpress-custom-html.png")
+```
 
-![](images/10-embed/WordPressOrg-text-tab-paste-iframe.png)
+For the second method, assume that you're using WordPress with either the classic or block editor, and that you have administrator access to the site.
 
-7) Initially, the code you pasted includes HTML iframe tags at the front `<iframe...` and the end `...></iframe>`, which looks like this:
+1. Install and activate the [iframe plugin](http://wordpress.org/plugins/iframe/), as shown in Figure \@ref(fig:wordpress-iframe-plugin). This plugin allows authors to embed iframe codes in a modified "shortcode" format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually "strip out" iframe codes for all users except the site administrator. TODO: update this image
 
-`<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"></iframe>`
+(ref:wordpress-iframe-plugin) Install and activate the *iframe plugin* on a self-hosted WP site.
 
-8) Modify the front end of the iframe code by replacing the less-than symbol ( < ) with a square opening bracket ( [ ). Modify the back end by erasing the greater-than symbol ( > ) and the end tag ( </iframe> ). Replace the back end with a square closing bracket ( ] ).
+```{r wordpress-iframe-plugin, out.width=300, fig.cap="(ref:wordpress-iframe-plugin)"}
+ knitr::include_graphics("images/10-embed/wordpress-iframe-plugin.jpg")
+```
 
-![](images/10-embed/WordPressOrg-replace-with-bracket.png)
+2. In the WordPress editor, click to the *text* tab to view the code, and paste the embed code or iframe, as shown in Figure \@ref(fig:wordpress-text-paste-iframe). Initially, the code you pasted includes iframe tags at the start (`<iframe...`) and the end ()`...></iframe>`).
 
-Your modified code should look like this:
+(ref:wordpress-text-paste-iframe) Install and activate the *iframe plugin* on a self-hosted WP site.
 
-`[iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive"]`
+```{r wordpress-text-paste-iframe, out.width=700, fig.cap="(ref:wordpress-text-paste-iframe)"}
+ knitr::include_graphics("images/10-embed/wordpress-text-paste-iframe.png")
+```
 
-9) Click Preview or Publish/View Post to see how it appears on the web.
+3. Modify the start tag by replacing the less-than symbol (`<`) with a square opening bracket (`[`). Modify the back end by erasing the greater-than symbol (`>`) and the entire end tag (`</iframe>`), and replace both of them with one square closing bracket (`]`), as shown in Figure \@ref(fig:wordpress-insert-brackets).
 
-10) If desired, continue to modify the iframe code to improve the display of your dataviz on your website. For example, the initial code was 600 pixels wide (width="600"). To display the dataviz across the full width of your website, change this part of the code to 100% (width="100%").
+(ref:wordpress-insert-brackets) Modify the front and back end with square brackets.
 
-The goal is to embed an interactive chart inside your website, so that users can explore the data. This tutorial displays a *very basic chart* to simplify the process, and the end result will appear like the one below. Try it.
+```{r wordpress-insert-brackets, out.width=700, fig.cap="(ref:wordpress-insert-brackets)"}
+ knitr::include_graphics("images/10-embed/wordpress-insert-brackets.png")
+```
 
-TODO: Convert to code-chunk iframe: https://docs.google.com/spreadsheets/d/1fwnl5hvkkwz-YDZrogyGnx274BqmozGlIeXyjJ2TKmE/pubchart?oid=462316012&amp;format=interactive
-
+TODO ABOVE: check method with more complex embed codes, check with non-admin privileges, and update images
 
 ### to SquareSpace, Wix, or Weebly Sites {-}
 TODO
-
-
 
 ### Summary {- #summary10}
 TODO

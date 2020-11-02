@@ -111,7 +111,7 @@ The Datawrapper embed code is *long*, but if you look closely, the first half co
  knitr::include_graphics("images/10-embed/datawrapper-tryit-simple.png")
 ```
 
-Tip: The Datawrapper iframe tag source follows this general format: `https://datawrapper.dwcdn.net/abcdef/1/`, where the `1` refers to the first version of the chart or map you published. If you make edits and re-publish it a second time, the number will increase to `2` and so forth. Before you paste an embed code or iframe in the next section, you can instruct Datawrapper to always publish your *most current version* of your visualization by removing the final number and forward slash in the iframe, so that it follows this new format: `https://datawrapper.dwcdn.net/abcdef/`.
+Hint: The Datawrapper iframe tag source follows this general format: `https://datawrapper.dwcdn.net/abcdef/1/`, where the `1` refers to the first version of the chart or map you published. If you make edits and re-publish your visualization, Datawrapper will increase the last digit (to `2` and so forth), and *automatically redirect* older links to the *current version*, which keeps your work up-to-date for your audience.
 
 ### from Tableau Public {-}
 1. After you create a [Tableau Public chart in Chapter 7](chart-tableau.html) or [map in Chapter 8](map-tableau.html), publish your worksheet, dashboard, or story online by selecting *File > Save to Tableau Public* in the desktop application menu, as shown in Figure \@ref(fig:tableau-public-publish).

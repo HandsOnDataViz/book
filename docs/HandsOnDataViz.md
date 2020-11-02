@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 01 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 02 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -8690,15 +8690,12 @@ Figure 10.9: If a complex embed code does not work in your website, go
 back and try to edit it down into a simple iframe.
 </p>
 
-Tip: The Datawrapper iframe tag source follows this general format:
+Hint: The Datawrapper iframe tag source follows this general format:
 `https://datawrapper.dwcdn.net/abcdef/1/`, where the `1` refers to the
 first version of the chart or map you published. If you make edits and
-re-publish it a second time, the number will increase to `2` and so
-forth. Before you paste an embed code or iframe in the next section, you
-can instruct Datawrapper to always publish your *most current version*
-of your visualization by removing the final number and forward slash in
-the iframe, so that it follows this new format:
-`https://datawrapper.dwcdn.net/abcdef/`.
+re-publish your visualization, Datawrapper will increase the last digit
+(to `2` and so forth), and *automatically redirect* older links to the
+*current version*, which keeps your work up-to-date for your audience.
 
 ### from Tableau Public
 
@@ -14084,14 +14081,14 @@ Figure 16.1: Sketch out your story idea on four pages: problem,
 question, find data, visualize.
 </p>
 
-Now let’s enrich your storyboard by adding more content about what you
-actually discovered after searching, cleaning, analyzing, and
-visualizing your data. Select only your most meaningful tables, charts,
-or maps. Print them out on separate sheets of paper, or download [static
-images or capture screenshots](static.html) to place them in your draft
-slides or document. Leave room for you to write text at the top and
-bottom of each table, chart, or map in order to tell your data story.
-Here are the next two steps:
+Let’s enrich your storyboard by adding content about what you discovered
+while searching, cleaning, analyzing, and visualizing your data. Select
+only your most meaningful tables, charts, or maps. Print them out on
+separate sheets of paper, or download [static images or capture
+screenshots](static.html) to place them in your draft slides or
+document. Leave room for you to write text at the top and bottom of each
+table, chart, or map in order to tell your data story. Here are the next
+two steps:
 
 -   At the top of each key visualization, *summarize* the most important
     message the data reveals.
@@ -14160,8 +14157,9 @@ more sample charts and maps from other regions where readers live.
 who responded to our survey have relatively high levels of education,
 but limited data visualization experience. In particular, 89 percent
 reported completing the equivalent of a college degree (16 or more years
-of schooling), but rated themselves at the lower end of the experiential
-scale, as shown in the right side of Figure
+of schooling), and 64% of these rated themselves as data visualization
+beginners (either 1 or 2 on the 5-point experiential scale), as shown in
+the right side of Figure
 <a href="#fig:survey-combined-annotated">16.2</a>. In our earlier draft
 of the book, our primary audience were college undergraduates, and we
 were uncertain about the reading and background levels of other readers.
@@ -14170,9 +14168,6 @@ concepts about data visualization, because we believe most of our
 readers can grasp them, yet we continue to write at an introductory
 level that assumes no prior knowledge beyond a secondary school or early
 college education. Now we can add these new sheets to our storyboard.
-
-TODO: Update text and data above, and images below, using
-<a href="https://github.com/HandsOnDataViz/survey-results" class="uri">https://github.com/HandsOnDataViz/survey-results</a>
 
 <img src="images/16-story/survey-combined-annotated.png" alt="Verbalize meaningful insights at the top of each visualization, and tell why it matters at the bottom, then insert them into your storyboard." width="750" />
 <p class="caption">
@@ -14211,10 +14206,6 @@ Now you should have a clearer sense of how a storyboard helps you to
 bring together narrative and data. In the next section, you’ll learn how
 to refine your visualizations by using text and color to draw attention
 to what is most important.
-
-TODO above: Ilya please update map data and clarify chart interpretation
-as discussed in
-<a href="https://github.com/HandsOnDataViz/survey-results/issues/1" class="uri">https://github.com/HandsOnDataViz/survey-results/issues/1</a>
 
 Draw Attention to Meaning
 -------------------------

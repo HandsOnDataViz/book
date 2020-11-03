@@ -134,6 +134,7 @@ fig:choropleth-use-smaller-geos
 fig:map-colorbrewer
 fig:map-principles-color-schemes
 fig:map-principles-classification
+fig:colorbrewer-export
 fig:interval-types
 fig:colorbrewer-steps
 fig:intervals-datawrapper-tableau
@@ -292,7 +293,6 @@ fig:geojson-github
 fig:gimme-geodata
 fig:geojson-io-import
 fig:geojson-io-csv-data
-fig:geojsonio-gif
 fig:geojson-io-draw
 fig:mapshaper-export
 fig:mapshaper-edit
@@ -328,14 +328,6 @@ fig:plastic-line-chart
 fig:plastic-refine
 fig:observed-vs-projected
 fig:mac-file-extensions2
-fig:tiger
-fig:screenshot-tall
-fig:sample-map
-fig:sheets-option-drag
-fig:video-sample
-fig:video-sample2
-tab:left-table
-tab:right-table
 introduction
 choose
 spreadsheet
@@ -353,6 +345,3 @@ transform
 detect
 story
 fix
-ct
-peer
-bookdown

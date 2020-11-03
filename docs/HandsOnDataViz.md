@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 02 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 03 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -375,7 +375,7 @@ Now let’s insert Figure <a href="#fig:us-income-chart2">1.2</a>, which
 contains the same data as Figure
 <a href="#fig:us-income-chart1">1.1</a>, but presented in a different
 format. Which chart should you believe? Remember, we warned you to watch
-out people using data visualizations to tell lies.
+out for people who use data visualizations to tell lies.
 
 <img src="images/01-introduction/us-income-chart2.png" alt="Explore the [alternative version of the interactive line chart](https://datawrapper.dwcdn.net/JsxEp/) of US adult income inequality over time, using the same data as the first version."  />
 <p class="caption">
@@ -592,7 +592,8 @@ recommended data visualization tools](recommended-tools.html), plus one
 extra to help you get organized: [a password
 manager](password-manager.html). All of these tools are free to use, and
 the book introduces them gradually, from easy-to-learn beginner tools to
-more advanced and powerful ones.
+more advanced power tools that grant you more control over where your
+work is hosted and how it looks.
 
 Start Sketching Your Data Story
 -------------------------------
@@ -4624,6 +4625,10 @@ weight).
 </tbody>
 </table>
 
+See also the [DataViz Catalogue site](https://datavizcatalogue.com) by
+Severino Ribecca for a more extensive collection of chart types and use
+cases.
+
 TODO above: improve and standardize chart images, especially range chart
 
 Chart Design Principles
@@ -5662,19 +5667,21 @@ chart.
 </p>
 
 1.  Click *Proceed* or advance to the *Publish & Embed* screen to share
-    your chart with others. If you are logged into your free Datawrapper
-    account, click the blue *Publish chart* button to generate the code
-    to embed the interactive chart on your website, and read more in
-    [Chapter 10: Embed on the Web](embed.html). Also, click the *add
-    your chart to River* if you wish to share your work more widely by
-    allowing other Datawrapper users to adapt and reuse your chart.
-    Finally, scroll all the way down and click the *Download PNG* button
-    to export a static image of your chart. Additional exporting and
-    publishing options require a paid Datawrapper account.
+    your work with others. If you logged into your free Datawrapper
+    account, your work is automatically saved online in the *My Charts*
+    menu in the top-right corner of the screen. Also, you can click the
+    blue *Publish* button to generate the code to embed your interactive
+    chart on your website, as you’ll learn about in [Chapter 10: Embed
+    on the Web](embed.html). In addition, you can *add your chart to
+    River* if you wish to share your work more widely by allowing other
+    Datawrapper users to adapt and reuse your chart. Furthermore, scroll
+    all the way down and click the *Download PNG* button to export a
+    static image of your chart. Additional exporting and publishing
+    options require a paid Datawrapper account. Or, if you prefer not to
+    create an account, you can enter your email to receive the embed
+    code.
 
-Congratulations on creating your first interactive Datawrapper chart. If
-you logged into your free Datawrapper account, all of your charts are
-stored in the *My Charts* menu in the top-right corner of the screen.
+Congratulations on creating your first interactive Datawrapper chart.
 Now let’s use Datawrapper to create a new type of chart, called a range
 chart.
 
@@ -5775,8 +5782,8 @@ rows, change the chart size for different devices, and check visibility
 for colorblind readers.
 
 1.  After modifying your visualization, proceed to the *Publish and
-    Embed* screen, and follow the prompts or refer to the more detailed
-    tutorial above.
+    Embed* screen, and follow the prompts to share your work, or refer
+    to the more detailed tutorial above.
 
 Now that you’ve completed a range chart, let’s create another new chart
 type, scatter and bubble charts, which are relatively easy to design in
@@ -5905,8 +5912,9 @@ display.
 </p>
 
 1.  Finish the annotations to add your title and data source, then
-    proceed to publish and embed your chart, as described in [Chapter
-    10: Embed on the Web](embed.html).
+    proceed to publish and embed your chart by following the prompts or
+    reading the more detailed Datawrapper tutorial above. Learn about
+    your next steps in [Chapter 10: Embed on the Web](embed.html).
 
 ### Bubble Charts
 
@@ -5978,7 +5986,9 @@ size to variable.
 
 1.  Test your visualization tooltips. Then finish the annotations to add
     your title and data source, and proceed to publish and embed your
-    chart, as described in [Chapter 10: Embed on the Web](embed.html).
+    chart, by following the prompts or reading the more detailed
+    Datawrapper tutorial above. See your next steps in [Chapter 10:
+    Embed on the Web](embed.html).
 
 For more information about creating scatter and bubble charts, see the
 [Datawrapper Academy support site](https://academy.datawrapper.de/).
@@ -6445,7 +6455,7 @@ TODO: Improve and standardize map images
 </tr>
 <tr class="even">
 <td>Heat point map <br> <img src="images/08-map/map-heat.png" /></td>
-<td>Best to show clusters of points as colored hotspots to emphasize high frequency. <br>Power tool: <a href="leaflet-heatmap.html">Ch 13: Leaflet Heatmap code template</a></td>
+<td>Best to show clusters of points as colored hotspots to emphasize high frequency or density of cases. <br>Power tool: <a href="leaflet-heatmap.html">Ch 13: Leaflet Heatmap code template</a></td>
 </tr>
 <tr class="odd">
 <td>Story map <br> <img src="images/08-map/map-storymap.png" /></td>
@@ -6578,7 +6588,7 @@ map. These usually work best in point-data maps, such as:
 -   a *symbol point map* to shows locations with variable-sized images
     to represent data (such as circles for population size)
 -   a *heat point map* to show clusters of locations as hotspots of high
-    frequency
+    frequency or density
 -   a *story map* to show a point-by-point guided tour with a scrolling
     narrative
 
@@ -6731,7 +6741,7 @@ both on the Datawrapper blog.[24]
 To illustrate key concepts about colors in choropleth map design, let’s
 explore a wonderful tool called
 [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and
-Mark Harrower. See the interface in Figure
+Mark Harrower.[25] See the interface in Figure
 <a href="#fig:map-colorbrewer">8.4</a>. Since ColorBrewer is a design
 assistant, do not expect to upload your data into it to create a map.
 Instead, ColorBrewer will recommend color palettes that work best with
@@ -6838,9 +6848,16 @@ different classifications.
 After you select data classes and a color palette, ColorBrewer displays
 alphanumeric codes that web browsers translate into colors. You can
 select hexadecimal codes (`#ffffff` is white), RGB codes (`255,255,255`
-is white), or CMYK codes (`0,0,0,0` is white), and copy or export them
-into your preferred map tool, if it allows color palettes to be
-imported.
+is white), or CMYK codes (`0,0,0,0` is white), and export them in
+different formats, as shown in Figure
+<a href="#fig:colorbrewer-export">8.7</a>, if your preferred map tool
+allows you to import color palettes.
+
+<img src="images/08-map/colorbrewer-export.png" alt="Click open the *Export* tab to display your color palette codes in various formats." width="435" />
+<p class="caption">
+Figure 8.7: Click open the *Export* tab to display your color palette
+codes in various formats.
+</p>
 
 ### Choose Color Intervals to Group Choropleth Map Data
 
@@ -6852,13 +6869,13 @@ specific map tutorials will demonstrate how to apply them.
 
 Some mapping tools allow you to choose two different *types of color
 intervals* to show movement up or down a data scale, as shown in Figure
-<a href="#fig:interval-types">8.7</a>. *Steps* are clearly-marked color
+<a href="#fig:interval-types">8.8</a>. *Steps* are clearly-marked color
 dividers, like a staircase, while *continuous* is a gradual change in
 hue, like a ramp.
 
 <img src="images/08-map/interval-types.png" alt="Two types of color intervals: steps and continuous." width="300" />
 <p class="caption">
-Figure 8.7: Two types of color intervals: steps and continuous.
+Figure 8.8: Two types of color intervals: steps and continuous.
 </p>
 
 If both options exist, which one is best? There is no clear map design
@@ -6891,26 +6908,26 @@ recommend experimenting with [ColorBrewer](https://colorbrewer2.org) to
 raise or lower the *Number of data classes* (also known as steps or
 dividers) for different types of color palettes, to visualize the
 consequences of your possible design choices, as shown in Figure
-<a href="#fig:colorbrewer-steps">8.8</a>. Make decisions with the best
+<a href="#fig:colorbrewer-steps">8.9</a>. Make decisions with the best
 interests of your readers in mind, to represent your data in honest and
 insightful ways.
 
 <img src="images/08-map/colorbrewer-steps.png" alt="Experiment with ColorBrewer data classes (or steps) and color palettes." width="400" />
 <p class="caption">
-Figure 8.8: Experiment with ColorBrewer data classes (or steps) and
+Figure 8.9: Experiment with ColorBrewer data classes (or steps) and
 color palettes.
 </p>
 
 Second, whether you choose steps or continuous, which *interpolation*
 method is the best way to group your data into similar colors on your
 scale? Map tools may display the options in different ways, as seen in
-Figure <a href="#fig:intervals-datawrapper-tableau">8.9</a>, and they
+Figure <a href="#fig:intervals-datawrapper-tableau">8.10</a>, and they
 also may vary depending on whether you selected steps or continuous
 colors.
 
 <img src="images/08-map/intervals-datawrapper-tableau.png" alt="Interpolation options in two map tools: Datawrapper (left) and Tableau Public (right)."  />
 <p class="caption">
-Figure 8.9: Interpolation options in two map tools: Datawrapper (left)
+Figure 8.10: Interpolation options in two map tools: Datawrapper (left)
 and Tableau Public (right).
 </p>
 
@@ -6986,22 +7003,22 @@ values (such as the raw number of people). If you ignore normalization
 when creating a choropleth map and display raw numbers, you’ll
 essentially recreate a population map, which doesn’t tell us anything
 new. For example, compare two maps shown in Figure
-<a href="#fig:normalize-map-data">8.10</a>. They both are about Covid-19
+<a href="#fig:normalize-map-data">8.11</a>. They both are about Covid-19
 cases in the continental US as of June 26, 2020. Figure
-<a href="#fig:normalize-map-data">8.10</a>a shows total number of
+<a href="#fig:normalize-map-data">8.11</a>a shows total number of
 recorded cases per state, and Figure
-<a href="#fig:normalize-map-data">8.10</a>b shows Covid-19 cases
+<a href="#fig:normalize-map-data">8.11</a>b shows Covid-19 cases
 adjusted by the state’s population. Darker colors represent higher
 values. Do you notice any differences in spatial patterns?
 
 <img src="images/08-map/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
 <p class="caption">
-Figure 8.10: Choropleth maps work best with normalized values.
+Figure 8.11: Choropleth maps work best with normalized values.
 </p>
 
 Both maps show Covid-19 data collected by the New York Times and
 published [on GitHub](https://github.com/nytimes/covid-19-data). In the
-map in Figure <a href="#fig:normalize-map-data">8.10</a>b, we normalized
+map in Figure <a href="#fig:normalize-map-data">8.11</a>b, we normalized
 values by dividing the total number of cases by the population in each
 state, according to the 2018 US Census American Community Survey, the
 most recent data available on the day of writing. We did not add legends
@@ -7011,14 +7028,14 @@ breaks for classification.
 
 What are the worst-hit states according to the map showing total
 Covid-19 counts (shown in Figure
-<a href="#fig:normalize-map-data">8.10</a>a)? If you are familiar with
+<a href="#fig:normalize-map-data">8.11</a>a)? If you are familiar with
 the US geography, you can quickly tell that these are New York, New
 Jersey, Massachusetts, Florida, Illinois, Texas, and California. But
 five of these happen to be some of the most populous states in the US,
 so it makes sense that they will also have higher Covid-19 cases.
 
 Now, how about the map in Figure
-<a href="#fig:normalize-map-data">8.10</a>b? You can see that New York
+<a href="#fig:normalize-map-data">8.11</a>b? You can see that New York
 and its neighbors, including New Jersey and Massachusetts, have by far
 the highest rates per capita (per person), which we saw in the first
 map. But you can also see that in fact California, Texas, and Florida
@@ -7053,11 +7070,11 @@ show linked titles, text, and small photos (which must be hosted online
 elsewhere) categories, descriptions, and links (including images hosted
 elsewhere online). Since the free version does *not* include an account
 login, enter your email to receive a link to the finished map, like the
-sample shown in Figure <a href="#fig:batchgeo-map">8.11</a>.
+sample shown in Figure <a href="#fig:batchgeo-map">8.12</a>.
 
 <img src="images/08-map/batchgeo-map.png" alt="Point map of museums and parks with BatchGeo: Explore the [interactive version](https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c)."  />
 <p class="caption">
-Figure 8.11: Point map of museums and parks with BatchGeo: Explore the
+Figure 8.12: Point map of museums and parks with BatchGeo: Explore the
 [interactive
 version](https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c).
 </p>
@@ -7070,7 +7087,7 @@ To create your own point map with BatchGeo, follow this quick tutorial.
     create a version you can edit in your Google Drive.
 
 2.  You can delete and enter your own data into the template, as shown
-    in Figure <a href="#fig:batchgeo-template">8.12</a>. Not every
+    in Figure <a href="#fig:batchgeo-template">8.13</a>. Not every
     address field is required, but adding more will improve the accuracy
     of the geocoder. Several columns are optional and can be deleted
     (such as URL, Image URL, Image Source). If you enter a URL, its
@@ -7080,52 +7097,54 @@ To create your own point map with BatchGeo, follow this quick tutorial.
 
 <img src="images/08-map/batchgeo-template.png" alt="Enter your data into the template, then select all and copy it."  />
 <p class="caption">
-Figure 8.12: Enter your data into the template, then select all and copy
+Figure 8.13: Enter your data into the template, then select all and copy
 it.
 </p>
 
 1.  Select and copy your data from the template, open the
     [BatchGeo](https://batchgeo.com) site, click the large field, and
     paste in your data, as shown in Figure
-    <a href="#fig:batchgeo-paste">8.13</a>.
+    <a href="#fig:batchgeo-paste">8.14</a>.
 
 <img src="images/08-map/batchgeo-paste.png" alt="Click the large field and paste in your data from the template."  />
 <p class="caption">
-Figure 8.13: Click the large field and paste in your data from the
+Figure 8.14: Click the large field and paste in your data from the
 template.
 </p>
 
 1.  Click the *Validate and Set Options* button to inspect or adjust how
     BatchGeo will upload your data fields and preview a pop-up window,
-    as shown in Figure <a href="#fig:batchgeo-validate">8.14</a>. Click
-    the *Advanced* button to see additional options. Then click the
-    *Map* button.
+    as shown in Figure <a href="#fig:batchgeo-validate">8.15</a>. Click
+    the *Advanced* button to see additional options to change the
+    basemap layer or point symbols. Then click the *Make Map* button.
 
 <img src="images/08-map/batchgeo-validate.png" alt="Click the *Validate* button to inspect and preview your data and advanced options." width="500" />
 <p class="caption">
-Figure 8.14: Click the *Validate* button to inspect and preview your
+Figure 8.15: Click the *Validate* button to inspect and preview your
 data and advanced options.
 </p>
 
-1.  In the *Map* window, enter a title and set other options, as shown
-    in Figure <a href="#fig:batchgeo-save">8.15</a>. Insert your email
-    address to receive a link to your online map. Click *Save Map*.
+1.  In the *Map* window, click the *Save and Continue* button to enter a
+    title and set other options, such making your map *public* or
+    *unlisted*, as well as customizing the layout, as shown in Figure
+    <a href="#fig:batchgeo-save">8.16</a>. Insert your email address to
+    receive a link to your online map. Click *Save Map*.
 
 <img src="images/08-map/batchgeo-save.png" alt="Be sure to enter your email address to receive a link to your online map." width="500" />
 <p class="caption">
-Figure 8.15: Be sure to enter your email address to receive a link to
+Figure 8.16: Be sure to enter your email address to receive a link to
 your online map.
 </p>
 
 1.  Check your email for a message from BatchGeo with a link to your
     live map, and another link to make edits, as shown in Figure
-    <a href="#fig:batchgeo-email">8.16</a>. The email also will include
+    <a href="#fig:batchgeo-email">8.17</a>. The email also will include
     a code to [embed your live map on the web, which you’ll learn about
     in Chapter 10](embed.html).
 
 <img src="images/08-map/batchgeo-email-annotated.png" alt="Save the BatchGeo email with links and an embed code for your map." width="500" />
 <p class="caption">
-Figure 8.16: Save the BatchGeo email with links and an embed code for
+Figure 8.17: Save the BatchGeo email with links and an embed code for
 your map.
 </p>
 
@@ -7151,7 +7170,7 @@ TODO BELOW: Explain how Google My Maps is different from Google Maps;
 mention at the top there are more options than points; DECIDE if this
 sample data about Nigerian airports is the best fit, since it’s great to
 have international examples but unsure if Shapefile-to-CSV transormation
-makes sense here, as new users probably need to tool to geocode their
+makes sense here, as new users probably need the tool to geocode their
 data.
 
 [My Maps](https://www.google.com/maps/about/mymaps/) is Google’s service
@@ -7164,34 +7183,34 @@ functions within Google Drive, and so allows you to invite other users
 with Google accounts to work on the map.
 
 In this section, we will look at building a point map of airports in
-Nigeria, as is shown in Figure <a href="#fig:mymaps-final">8.17</a>. We
+Nigeria, as is shown in Figure <a href="#fig:mymaps-final">8.18</a>. We
 will create a map, change a baselayer, import point data, style points,
 and share the map.
 
 <img src="images/08-map/mymaps-final.png" alt="A map of airports in Nigeria built using Google My Maps."  />
 <p class="caption">
-Figure 8.17: A map of airports in Nigeria built using Google My Maps.
+Figure 8.18: A map of airports in Nigeria built using Google My Maps.
 </p>
 
 ### Create a New Map in My Maps
 
 Navigate to [Google My Maps](https://www.google.com/mymaps/). In the
 upper-right corner, click `+ Create a New Map` button, as shown in
-Figure <a href="#fig:mymaps-create-new">8.18</a>.
+Figure <a href="#fig:mymaps-create-new">8.19</a>.
 
 <img src="images/08-map/mymaps-create-new.png" alt="A map of airports in Nigeria built using Google My Maps." width="300" />
 <p class="caption">
-Figure 8.18: A map of airports in Nigeria built using Google My Maps.
+Figure 8.19: A map of airports in Nigeria built using Google My Maps.
 </p>
 
 You will see a typical Google Maps with no data. Click on the current
 title (`Untitled map`), and add appropriate title and description in the
 modal window that appeared (see Figure
-<a href="#fig:mymaps-edit-title">8.19</a> for inspiration).
+<a href="#fig:mymaps-edit-title">8.20</a> for inspiration).
 
 <img src="images/08-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
 <p class="caption">
-Figure 8.19: Add title and description to your map.
+Figure 8.20: Add title and description to your map.
 </p>
 
 Before we add any points, let’s change the basemap to something less
@@ -7209,21 +7228,21 @@ Under *Untitled layer* item, click *Import* button, and drag-and-drop
 the CSV file. Once the data file is uploaded, My Maps will ask which
 columns contain location data. In our case, these are *LATITUDE* and
 *LONGITUDE* columns, as shown in Figure
-<a href="#fig:mymaps-lat-lon">8.20</a>.
+<a href="#fig:mymaps-lat-lon">8.21</a>.
 
 <img src="images/08-map/mymaps-lat-lon-annotated.png" alt="Check LATITUDE and LONGITUDE as your location columns." width="300" />
 <p class="caption">
-Figure 8.20: Check LATITUDE and LONGITUDE as your location columns.
+Figure 8.21: Check LATITUDE and LONGITUDE as your location columns.
 </p>
 
 Once the two boxes are checked, click *Continue*. Another window will
 pop up, asking which column to use to annotate points. Choose *City*, as
-shown in Figure <a href="#fig:mymaps-column-title">8.21</a>, and then
+shown in Figure <a href="#fig:mymaps-column-title">8.22</a>, and then
 *Finish*.
 
 <img src="images/08-map/mymaps-column-title-annotated.png" alt="Choose City as the title for your markers." width="300" />
 <p class="caption">
-Figure 8.21: Choose City as the title for your markers.
+Figure 8.22: Choose City as the title for your markers.
 </p>
 
 It will take a few moments for My Maps to create a new layer, which will
@@ -7236,47 +7255,49 @@ the right. Change “All items” text to “Airports”, choose orange color,
 and click on *More icons* to find an airport symbol (we recommend using
 Filter to search for “airport”, or simply scroll down to Transportation
 section). The marker in the layers menu will change to an orange
-airplane, as shown in Figure <a href="#fig:mymaps-color">8.22</a>.
+airplane, as shown in Figure <a href="#fig:mymaps-color">8.23</a>.
 
 <img src="images/08-map/mymaps-color-annotated.png" alt="In My Maps, you can change marker colors and icons." width="300" />
 <p class="caption">
-Figure 8.22: In My Maps, you can change marker colors and icons.
+Figure 8.23: In My Maps, you can change marker colors and icons.
 </p>
 
 Click on the layer name, which by default is set to the name of imported
 file (`nigeria-airports.csv`), and change it to *Nigerian Airports*.
 Alternatively open a kebab menu to the right of the layer name, and
-choose *Rename this layer*.
+choose *Rename this layer*, and then click *Save*.
 
 You can accompany each marker with a label. Click *Uniform style* under
 the layer, and choose *Alt\_name* in the *Set labels* dropdown menu. You
-will see alternative airport names, such as *BENIN*, displayed to the
-right of the markers.
+will see alternative airport names, such as *BENIN*, displayed beneath
+the markers.
 
 Click *Preview* to see how the map looks like outside of the My Maps
-editing studio.
+editing studio. Additionally, you can add photos, directions, lines,
+etc., and display or hide columns by checking or unchecking them when
+clicking on a map point.
 
 ### Share Your Google My Map
 
 If you are happy with the result, click *Share*, and click *Change to
-anyone with the link* (see Figure <a href="#fig:mymaps-share">8.23</a>),
+anyone with the link* (see Figure <a href="#fig:mymaps-share">8.24</a>),
 just as you would with any other Google Drive document.
 
 <img src="images/08-map/mymaps-share.png" alt="Make sure anyone with the link can view your map before you share it." width="400" />
 <p class="caption">
-Figure 8.23: Make sure anyone with the link can view your map before you
+Figure 8.24: Make sure anyone with the link can view your map before you
 share it.
 </p>
 
 You can now generate a code snippet to embed the map as an iframe. From
 the main kebab menu to the right of the map title, choose *Embed on my
-site* (Figure <a href="#fig:mymaps-embed">8.24</a>). You can use now use
+site* (Figure <a href="#fig:mymaps-embed">8.25</a>). You can use now use
 this iframe code to embed your map to your Wordpress, Squarespace, or
 any other website.
 
 <img src="images/08-map/mymaps-embed-annotated.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
 <p class="caption">
-Figure 8.24: My Maps can generate an iframe code to include the map on
+Figure 8.25: My Maps can generate an iframe code to include the map on
 your own website.
 </p>
 
@@ -7310,7 +7331,7 @@ represent their data values. Our sample symbol map displays about 300
 major US cities as point locations with two variables: the 2019
 estimated population (using circle size) and the percent change in
 population since 2010 (using circle color), as shown in Figure
-<a href="#fig:datawrapper-symbolmap">8.25</a>. Remember that we use
+<a href="#fig:datawrapper-symbolmap">8.26</a>. Remember that we use
 *point* data to create symbol maps, but *polygon* data to create
 choropleth maps, and you’ll learn how to design those with Datawrapper
 in the subsequent section. Later in the book, we’ll explain [how to
@@ -7319,7 +7340,7 @@ embed your interactive Datawrapper maps on the web in Chapter
 
 <img src="images/08-map/datawrapper-symbolmap.png" alt="Symbol point map of US city population growth with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/V0V9Y)."  />
 <p class="caption">
-Figure 8.25: Symbol point map of US city population growth with
+Figure 8.26: Symbol point map of US city population growth with
 Datawrapper. Explore the [interactive
 version](https://datawrapper.dwcdn.net/V0V9Y).
 </p>
@@ -7350,16 +7371,17 @@ Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-usi
 Also, we created a new column named *Percent Change*, which we
 calculated this way: `(2019 - 2010) / 2010 * 100`.
 
-1.  Go to *File &gt; Download* in CSV format to save the data to your
-    local computer.
+1.  In the Google Sheet, go to *File &gt; Download* and select the
+    Comma-Separated Values (CSV) format to save the data to your local
+    computer.
 
-2.  Open [Datawrapper](https://datawrapper.de), click the *New Map*
-    button, and select *Symbol map* as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-start">8.26</a>.
+2.  Open [Datawrapper](https://datawrapper.de), click on *Start
+    Creating*, then the *New Map* button, and select *Symbol map* as
+    shown in Figure <a href="#fig:datawrapper-symbolmap-start">8.27</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-start.png" alt="Start to create a symbol map in Datawrapper." width="600" />
 <p class="caption">
-Figure 8.26: Start to create a symbol map in Datawrapper.
+Figure 8.27: Start to create a symbol map in Datawrapper.
 </p>
 
 1.  In the *Select your map* screen, enter *USA* and search for options.
@@ -7377,13 +7399,13 @@ Figure 8.26: Start to create a symbol map in Datawrapper.
 3.  In the *Match your columns* screen, select the *City-State* column
     to be *Matched as Address*, then scroll down to click the *Next*
     button, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-match">8.27</a>. In the next
+    <a href="#fig:datawrapper-symbolmap-match">8.28</a>. In the next
     screen click *Go*, then see your geocoded data displayed on a map in
     the following screen.
 
 <img src="images/08-map/datawrapper-symbolmap-match.png" alt="Select the *City-State* column to be matched as the *Address*." width="400" />
 <p class="caption">
-Figure 8.27: Select the *City-State* column to be matched as the
+Figure 8.28: Select the *City-State* column to be matched as the
 *Address*.
 </p>
 
@@ -7393,11 +7415,11 @@ Figure 8.27: Select the *City-State* column to be matched as the
     select the *circle* symbol, to be sized by *Pop Estimate 2019*, with
     a maximum symbol size of 25 pixels. Under *Symbol colors*, select
     the *Percent Change 2010-2019* column, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-refine">8.28</a>.
+    <a href="#fig:datawrapper-symbolmap-refine">8.29</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-refine.png" alt="Refine your map by selecting data to display symbol shapes, sizes, and colors."  />
 <p class="caption">
-Figure 8.28: Refine your map by selecting data to display symbol shapes,
+Figure 8.29: Refine your map by selecting data to display symbol shapes,
 sizes, and colors.
 </p>
 
@@ -7408,11 +7430,11 @@ sizes, and colors.
     section](design-choropleth.html). The first code is dark pink,
     followed by a 4-class sequential green:
     `#d01c8b,#bae4b3,#74c476,#31a354,#006d2c`. See Figure
-    <a href="#fig:datawrapper-symbolmap-colors">8.29</a>.
+    <a href="#fig:datawrapper-symbolmap-colors">8.30</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-colors.png" alt="Create a new color palette by importing five hexadecimal color codes from ColorBrewer." width="600" />
 <p class="caption">
-Figure 8.29: Create a new color palette by importing five hexadecimal
+Figure 8.30: Create a new color palette by importing five hexadecimal
 color codes from ColorBrewer.
 </p>
 
@@ -7422,20 +7444,34 @@ color codes from ColorBrewer.
     scale. Click the *More options* button, and under *Legend*, change
     *Labels* to *custom*, and click each label to edit the text that
     appears on the map menu, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-intervals">8.30</a>. Learn more
+    <a href="#fig:datawrapper-symbolmap-intervals">8.31</a>. Learn more
     about these options in the [Datawrapper Academy post on customizing
     your symbol
     map](https://academy.datawrapper.de/article/120-customizing-your-symbol-map).
 
 <img src="images/08-map/datawrapper-symbolmap-intervals.png" alt="Customize the interval ranges and edit the legend." width="500" />
 <p class="caption">
-Figure 8.30: Customize the interval ranges and edit the legend.
+Figure 8.31: Customize the interval ranges and edit the legend.
 </p>
 
-1.  Click the *Annotate* tab to insert a title, source notes, credits,
-    and [customize the tooltips as described by Datawrapper
+1.  Under the *Visualize* screen, click the *Annotate* tab to insert a
+    title, source notes, credits, and [customize the tooltips as
+    described by Datawrapper
     Academy](https://academy.datawrapper.de/article/237-i-want-to-change-how-my-data-appears-in-tooltips#change-the-number-format).
-    Proceed to the *Publish & Embed* screen to share your map online.
+
+2.  Click *Proceed* or advance to the *Publish & Embed* screen to share
+    your work with others. If you logged into your free Datawrapper
+    account, your work is automatically saved online in the *My Charts*
+    menu in the top-right corner of the screen. Also, you can click the
+    blue *Publish* button to generate the code to embed your interactive
+    map on your website, as you’ll learn about in [Chapter 10: Embed on
+    the Web](embed.html). In addition, you can *add your chart to River*
+    if you wish to share your work more widely by allowing other
+    Datawrapper users to adapt and reuse it. Furthermore, scroll all the
+    way down and click the *Download PNG* button to export a static
+    image of your map. Additional exporting and publishing options
+    require a paid Datawrapper account. Or, if you prefer not to create
+    an account, you can enter your email to receive the embed code.
 
 For assistance and additional options, see the [Datawrapper Academy
 support pages on symbol
@@ -7460,14 +7496,14 @@ districts, and census tracts for the United States.
 In this section, you’ll create a choropleth map of typical home values
 for US states in August 2020 according to the [Zillow Home Value
 Index](https://www.zillow.com/research/data/), as shown in Figure
-<a href="#fig:datawrapper-map-final">8.31</a>. The index reflects
+<a href="#fig:datawrapper-map-final">8.32</a>. The index reflects
 typical home values (meaning those in the 35th to 65th percentile range,
 around the median) for single-family residences, condos, and co-ops, and
 it is smoothed and seasonally adjusted.
 
 <img src="images/08-map/datawrapper-map-final.png" alt="Choropleth map of 2020 home values in US states with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/kSYrw/)."  />
 <p class="caption">
-Figure 8.31: Choropleth map of 2020 home values in US states with
+Figure 8.32: Choropleth map of 2020 home values in US states with
 Datawrapper. Explore the [interactive
 version](https://datawrapper.dwcdn.net/kSYrw/).
 </p>
@@ -7501,29 +7537,31 @@ now reflect DC. DECIDE whether to mention other types of codes
 recognized by Datawrapper, which vary with map type, such as FIPS and
 ANSI.
 
-1.  Go to *File &gt; Download* in CSV format to save the data to your
-    local computer.
+1.  In the Google Sheet, go to *File &gt; Download* and select the
+    Comma-Separated Values (CSV) format to save the data to your local
+    computer.
 
-2.  Open [Datawrapper](https://datawrapper.de), click the *New Map*
-    button, and select *Choropleth map* as shown in Figure
-    <a href="#fig:datawrapper-map-choose">8.32</a>. No login is required
+2.  Open [Datawrapper](https://datawrapper.de), click on *Start
+    Creating*, then click the *New Map* button, and select *Choropleth
+    map* as shown in Figure
+    <a href="#fig:datawrapper-map-choose">8.33</a>. No login is required
     to create a map, but you should sign up for a free account in order
     to save your work and publish your map online.
 
 <img src="images/08-map/datawrapper-map-choose-annotated.png" alt="In Datawrapper, click *New Map*, and choose *Choropleth*." width="500" />
 <p class="caption">
-Figure 8.32: In Datawrapper, click *New Map*, and choose *Choropleth*.
+Figure 8.33: In Datawrapper, click *New Map*, and choose *Choropleth*.
 </p>
 
 1.  In the *Select your map* screen, choose your geographic boundaries,
     and in this case choose *USA &gt; States*, as shown in Figure
-    <a href="#fig:datawrapper-map-us-states">8.33</a>, then click
+    <a href="#fig:datawrapper-map-us-states">8.34</a>, then click
     *Proceed*. Since Washington, DC is not a state, it does not appear
     in this map of US States.
 
 <img src="images/08-map/datawrapper-map-us-states-annotated.png" alt="Choose *USA - States* for your map outline." width="500" />
 <p class="caption">
-Figure 8.33: Choose *USA - States* for your map outline.
+Figure 8.34: Choose *USA - States* for your map outline.
 </p>
 
 Hint: If Datawrapper does not list your preferred map outline, you can
@@ -7534,7 +7572,7 @@ formats section of Chapter 14](geojson.html).
 1.  In the *Add your data* screen, you can manually enter data for each
     area, which would be fine for just a few, but not for 50 states.
     Instead, scroll down and click the *Import your dataset* button, as
-    shown in Figure <a href="#fig:datawrapper-import-dataset">8.34</a>.
+    shown in Figure <a href="#fig:datawrapper-import-dataset">8.35</a>.
     Datawrapper will explain that your data must include either *Names*
     (such as `California`) or *ISO-Codes* (standardized two-letter codes
     for states, such as `CA`, or three-letter codes for nations, such as
@@ -7542,7 +7580,7 @@ formats section of Chapter 14](geojson.html).
 
 <img src="images/08-map/datawrapper-import-dataset.png" alt="Scroll down below the *add data* table to import your dataset." width="200" />
 <p class="caption">
-Figure 8.34: Scroll down below the *add data* table to import your
+Figure 8.35: Scroll down below the *add data* table to import your
 dataset.
 </p>
 
@@ -7559,12 +7597,12 @@ see.
 
 2.  In the *Match your columns* screen, click the column that matches up
     with ISO codes, as shown in Figure
-    <a href="#fig:datawrapper-map-match">8.35</a>. You may need to
+    <a href="#fig:datawrapper-map-match">8.36</a>. You may need to
     scroll down a bit to click the *Next* button, then *Continue*.
 
 <img src="images/08-map/datawrapper-map-match.png" alt="Select the data column that contains matching ISO codes." width="500" />
 <p class="caption">
-Figure 8.35: Select the data column that contains matching ISO codes.
+Figure 8.36: Select the data column that contains matching ISO codes.
 </p>
 
 1.  In a similar way on the next screen, click the column of data values
@@ -7573,16 +7611,18 @@ Figure 8.35: Select the data column that contains matching ISO codes.
     click *Next*, then *Go*, then *Proceed*. You’ll be able to map other
     data values in a later step.
 
-2.  In the *Visualize* screen, under the *Refine* tab, click the *wrench
+TODO Above: Reviewer wants screenshot of Aug2020 Home Values column.
+
+1.  In the *Visualize* screen, under the *Refine* tab, click the *wrench
     symbol* next to the color palette to review the *default* map
     settings, as shown in Figure
-    <a href="#fig:datawrapper-map-default">8.36</a>. Never automatically
+    <a href="#fig:datawrapper-map-default">8.37</a>. Never automatically
     accept the default map, but it’s a good place to start and explore
     how factors shape its appearance.
 
 <img src="images/08-map/datawrapper-map-default.png" alt="Under the *Refine* tab, click the *wrench symbol* to see the default map settings." width="600" />
 <p class="caption">
-Figure 8.36: Under the *Refine* tab, click the *wrench symbol* to see
+Figure 8.37: Under the *Refine* tab, click the *wrench symbol* to see
 the default map settings.
 </p>
 
@@ -7597,13 +7637,13 @@ data story that emphasizes the low and high extremes.
     interpolation to change how values are assigned to colors. For
     example, change from *linear* to *quartiles*, which groups the data
     into four groups of equal size, as shown in Figure
-    <a href="#fig:datawrapper-map-quartiles">8.37</a>. This map works
+    <a href="#fig:datawrapper-map-quartiles">8.38</a>. This map works
     better for a data story that emphasizes geographic diversity, since
     we see more contrast between states in the middle range.
 
 <img src="images/08-map/datawrapper-map-quartiles.png" alt="Under the *Refine* tab, change the interpolation from *linear* to *quartiles* and see how the map changes." width="400" />
 <p class="caption">
-Figure 8.37: Under the *Refine* tab, change the interpolation from
+Figure 8.38: Under the *Refine* tab, change the interpolation from
 *linear* to *quartiles* and see how the map changes.
 </p>
 
@@ -7618,11 +7658,11 @@ Figure 8.37: Under the *Refine* tab, change the interpolation from
     example, see the map of percent change in home value from 2019 to
     2020, with a diverging red-to-blue palette, 5 steps, and rounded
     values in Figure
-    <a href="#fig:datawrapper-map-percentchange">8.38</a>.
+    <a href="#fig:datawrapper-map-percentchange">8.39</a>.
 
 <img src="images/08-map/datawrapper-map-percentchange.png" alt="Experiment with other colors, intervals, and data columns to find true and meaningful stories." width="650" />
 <p class="caption">
-Figure 8.38: Experiment with other colors, intervals, and data columns
+Figure 8.39: Experiment with other colors, intervals, and data columns
 to find true and meaningful stories.
 </p>
 
@@ -7642,27 +7682,34 @@ publish and share it with others.
     convert long numbers (such as 107762) into abbreviated dollars ($
     108 k), we selected *custom format* and inserted the code `($ 0 a)`.
 
-2.  Under the *Annotate* tab, add a title, description, and source
+TODO above: Reviewer wants screenshot of where to enter codes in legend
+format
+
+1.  Under the *Annotate* tab, add a title, description, and source
     credits, to add credibility to your work. You can also add map
     labels and customize tooltips that will display when readers hover
     their cursor over different states. The easiest way to edit tooltips
     is to click on blue column names, or format them using their
     drop-down menus, to make the proper codes appear in double curly
     brackets, as shown in Figure
-    <a href="#fig:datawrapper-map-tooltip">8.39</a>. Learn more about
+    <a href="#fig:datawrapper-map-tooltip">8.40</a>. Learn more about
     [customizing tooltips from Datawrapper
     Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
 
 <img src="images/08-map/datawrapper-map-tooltip.png" alt="To edit tooltips, click the blue column names or use drop-down menus to format the codes." width="600" />
 <p class="caption">
-Figure 8.39: To edit tooltips, click the blue column names or use
+Figure 8.40: To edit tooltips, click the blue column names or use
 drop-down menus to format the codes.
 </p>
 
-1.  Finally, proceed to the *Publish and Embed* screen to obtain an
-    online link for your map, an iframe code that you will learn how to
-    use in [Chapter 10: Embed on the Web](embed.html), and a static PNG
-    image you can download.
+TODO above: Reviewer wants example of how to customize tooltips and add
+labels (annotations?) here
+
+1.  Finally, click *Proceed* or advance to the *Publish & Embed* screen
+    to share your work with others. Follow the prompts, or the more
+    detailed Datawrapper tutorial above, to obtain an embed code to your
+    interactive map, and learn more about your next steps in [Chapter
+    10: Embed on the Web](embed.html).
 
 Learn more about [choropleth map design in this excellent series of
 posts by the Datawrapper
@@ -7693,7 +7740,7 @@ on the support page.
 
 In this section, we will create a choropleth map of military spending
 per country as a percentage of their gross domestic product (GDP), as
-shown in Figure <a href="#fig:tableau-polygon-final">8.40</a>. Remember
+shown in Figure <a href="#fig:tableau-polygon-final">8.41</a>. Remember
 that choropleth maps work best when we [normalize the
 data](normalize-choropleth.html) to show relative, rather than absolute,
 numbers. Creating a map of total military spending per country would not
@@ -7705,7 +7752,7 @@ the military.
 
 <img src="images/08-map/tableau-polygon-final.png" alt="Choropleth map of military spending with Tableau Public. Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from the World Bank."  />
 <p class="caption">
-Figure 8.40: Choropleth map of military spending with Tableau Public.
+Figure 8.41: Choropleth map of military spending with Tableau Public.
 Explore the [interactive
 version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1).
 Data from the World Bank.
@@ -7732,15 +7779,19 @@ geographic names (such as cities and nations), so we will rely on the
 tool to deal with any spelling issues and properly place all of them on
 the map.
 
-1.  Go to *File &gt; Download* in CSV format (comma-separated values) to
-    save the data to your local computer.
+1.  In the Google Sheet, go to *File &gt; Download* and select
+    Comma-Separated Values (CSV) format to save the data to your local
+    computer.
 
 2.  Download, install, and launch the [free Tableau Public desktop
     application](https://public.tableau.com/en-us/s/download), available
-    for Mac or Windows. It will require you to enter an email address.
+    for Mac or Windows. You will need to enter an email address to
+    download the application.
 
-3.  In the *Connect* screen, select *Text file*, and upload the military
-    spending CSV data file you downloaded above.
+3.  When you open the Tableau Public application, the *Connect* screen
+    will display file formats you can upload on the left-side menu.
+    Click on the *Text file* format and upload the military spending CSV
+    data file you downloaded above.
 
 4.  In the *Data Source* screen, inspect the dataset, which contains
     three columns: Country, Most Year Year of the data, and Military
@@ -7749,26 +7800,26 @@ the map.
     successfully recognized it as geographic data, rather than string or
     text data. If that globe was not there, you can select its menus to
     set its proper geographic role, as shown in Figure
-    <a href="#fig:tableau-data-geographic">8.41</a>.
+    <a href="#fig:tableau-data-geographic">8.42</a>.
 
 <img src="images/08-map/tableau-data-geographic.png" alt="Confirm that Tableau Public recognizes your geographic place names." width="400" />
 <p class="caption">
-Figure 8.41: Confirm that Tableau Public recognizes your geographic
+Figure 8.42: Confirm that Tableau Public recognizes your geographic
 place names.
 </p>
 
 1.  In the bottom-left corner, click the orange *Sheet 1* button to go
     to the Worksheet to create your map, as shown in Figure
-    <a href="#fig:tableau-go-to-worksheet">8.42</a>.
+    <a href="#fig:tableau-go-to-worksheet">8.43</a>.
 
 <img src="images/08-map/tableau-go-to-worksheet.png" alt="Click the orange button to go to the worksheet to create your map." width="400" />
 <p class="caption">
-Figure 8.42: Click the orange button to go to the worksheet to create
+Figure 8.43: Click the orange button to go to the worksheet to create
 your map.
 </p>
 
 1.  In the *Worksheet*, create your choropleth map using a two-step
-    process, as shown in Figure <a href="#fig:tableau-drag">8.43</a>.
+    process, as shown in Figure <a href="#fig:tableau-drag">8.44</a>.
     First, drag-and-drop the *Country* geographic data into the middle
     of the worksheet to create the map, which will temporarily appear as
     a point symbol map. Second, drag-and-drop the *Military Pct GDP*
@@ -7777,7 +7828,7 @@ your map.
 
 <img src="images/08-map/tableau-drag-annotated.png" alt="Drag and drop *Country* to the center of the sheet, then *Military Pct GDP* to the *Color* box in the *Marks* area."  />
 <p class="caption">
-Figure 8.43: Drag and drop *Country* to the center of the sheet, then
+Figure 8.44: Drag and drop *Country* to the center of the sheet, then
 *Military Pct GDP* to the *Color* box in the *Marks* area.
 </p>
 
@@ -7787,24 +7838,24 @@ Figure 8.43: Drag and drop *Country* to the center of the sheet, then
 2.  You can change the color palette by clicking the Color box of the
     Marks card, and then *Edit colors*. Change the palette to *Reds*,
     and change it from continuous to steps, as shown in Figure
-    <a href="#fig:tableau-polygon-color">8.44</a>.
+    <a href="#fig:tableau-polygon-color">8.45</a>.
 
 <img src="images/08-map/tableau-polygon-color.png" alt="Change the color scheme to Reds with 5 steps." width="400" />
 <p class="caption">
-Figure 8.44: Change the color scheme to Reds with 5 steps.
+Figure 8.45: Change the color scheme to Reds with 5 steps.
 </p>
 
 1.  You may notice the tooltip calls values *Value* when hovering over
     countries. Click the Tooltip box of the Marks card to change text to
     *Military spending*, and add a percentage sign after the value
     itself, as shown in Figure
-    <a href="#fig:tableau-polygon-tooltip">8.45</a>. Make sure not to
+    <a href="#fig:tableau-polygon-tooltip">8.46</a>. Make sure not to
     change values between `<` and `>`, as these are references to
     variables.
 
 <img src="images/08-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
-Figure 8.45: Change tooltip text to make it more user-friendly.
+Figure 8.46: Change tooltip text to make it more user-friendly.
 </p>
 
 1.  Add a proper title to the map. Double-click the default *Sheet 1*
@@ -7838,7 +7889,8 @@ OR one of these Tableau books by Ryan Sleeper
 <a href="https://learning.oreilly.com/search/?query=author%3A%22Ryan%20Sleeper" class="uri">https://learning.oreilly.com/search/?query=author%3A%22Ryan%20Sleeper</a>
 (but I don’t see anything right away that’s relevant) OR another idea is
 to reconsider the filter instructions below, which I removed because our
-sample dataset no longer has null values.
+sample dataset no longer has null values. TODO: after we discuss, see
+reviewers’ comments to address in editorial notes
 
 Places like Greenland and Libya do not have available values, but they
 are still painted with the lightest color, which is misleading. To
@@ -7847,11 +7899,11 @@ remove countries with *null* values from the map, drag *Values* to the
 leave everything unchanged. This will leave the whole range of values,
 and exclude *null* values (see the checkbox in the lower-right corner of
 the Filter window in Figure
-<a href="#fig:tableau-polygon-filter">8.46</a>).
+<a href="#fig:tableau-polygon-filter">8.47</a>).
 
 <img src="images/08-map/tableau-polygon-filter-annotated.png" alt="Filter values to remove countries with no data from display." width="400" />
 <p class="caption">
-Figure 8.46: Filter values to remove countries with no data from
+Figure 8.47: Filter values to remove countries with no data from
 display.
 </p>
 
@@ -7882,11 +7934,11 @@ In this section, we will build an interactive point map of hospitals in
 Texas using [General Hospital
 Information](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data)
 dataset by Medicare, which you can see in Figure
-<a href="#fig:socrata-final">8.47</a>.
+<a href="#fig:socrata-final">8.48</a>.
 
 <img src="images/08-map/socrata-final.png" alt="In this tutorial, we will build a point map of hospitals in Texas using Socrata."  />
 <p class="caption">
-Figure 8.47: In this tutorial, we will build a point map of hospitals in
+Figure 8.48: In this tutorial, we will build a point map of hospitals in
 Texas using Socrata.
 </p>
 
@@ -7908,8 +7960,8 @@ logged in. You won’t be able to save or share it, however.
 
 Once you have an account, log in using your credentials. Navigate to
 your profile by clicking your username in the upper-right corner and
-make sure you **Accept Terms and Conditions**, otherwise you won’t be
-able to save your draft map.
+make sure you *Accept Terms and Conditions*, otherwise you won’t be able
+to save your draft map.
 
 This username and password are only valid for Data.Medicare.gov, not
 other websites that use Socrata.
@@ -7920,13 +7972,13 @@ Navigate to the [Hospital General
 Dataset](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data),
 and in the menu on the right-hand side choose *Visualize &gt; Launch New
 Visualization*, as shown in Figure
-<a href="#fig:socrata-launch-new-viz">8.48</a>. This will open up a
+<a href="#fig:socrata-launch-new-viz">8.49</a>. This will open up a
 *Configure Visualization* studio where you can create the map.
 
 <img src="images/08-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize >
 Launch New Visualization." width=“300” /&gt;
 <p class="caption">
-Figure 8.48: Go to Visualize &gt; Launch New Visualization.
+Figure 8.49: Go to Visualize &gt; Launch New Visualization.
 </p>
 
 In the top menu, click *Map* (globe icon between a scatter chart icon
@@ -7944,24 +7996,24 @@ Let’s first select only hospitals that are located in the southern state
 of Texas. To do so, go to *Filters &gt; Add filter*. The dropdown menu
 lists all columns (or fields) of the dataset, where we should choose
 *State*. In the newly appeared State dropdown, choose TX (for Texas) as
-shown in Figure <a href="#fig:socrata-filter">8.49</a>, and scroll down
+shown in Figure <a href="#fig:socrata-filter">8.50</a>, and scroll down
 and click Apply. Socrata should zoom in on the map and center on Texas.
 Close *Filters* window to free screen space.
 
 <img src="images/08-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
 <p class="caption">
-Figure 8.49: Select Texas as the only value for State field.
+Figure 8.50: Select Texas as the only value for State field.
 </p>
 
-Let’s now **disaggregate** the map so that we can see individual
-hospitals instead of clusters. Go to *Map Settings &gt; Cluster*, and
-bring the *Stop Clustering at Zoom Level* slider to 1, as shown in
-Figure <a href="#fig:socrata-uncluster">8.50</a>. You will see the map
-now shows individual points.
+Let’s now *disaggregate* the map so that we can see individual hospitals
+instead of clusters. Go to *Map Settings &gt; Cluster*, and bring the
+*Stop Clustering at Zoom Level* slider to 1, as shown in Figure
+<a href="#fig:socrata-uncluster">8.51</a>. You will see the map now
+shows individual points.
 
 <img src="images/08-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
 <p class="caption">
-Figure 8.50: To show individual points instead of clusters, set Stop
+Figure 8.51: To show individual points instead of clusters, set Stop
 Clustering at Zoom Level to 1.
 </p>
 
@@ -7972,20 +8024,20 @@ data table below visualization* box. Under *Map Controls*, uncheck *Show
 Search Bar* and *Show Locate Button* to get rid of unnecessary elements.
 Feel free to experiment with other settings as well.
 
-Now, let’s return back to **Map Layers** menu and choose our *Hospitals
-General Information* point layer. You can notice that in *Data
-Selection* accordion menu, *Resize Points by Value* is grayed out. That
-is because the dataset doesn’t contain columns with continuous variables
-that can be transformed to point sizes. Instead, we can use *Style by
-Value* option to classify categorical points. The dataset contains
-multiple variables that can be effectively visualized, such as *Hospital
-Type*, *Emergency Services* (a yes/no category), *Mortality national
-comparison* and others. Let’s stick with *Hospital Type*, as is
-illustrated in Figure <a href="#fig:socrata-style">8.51</a>.
+Now, let’s return back to the *Map Layers* menu and choose our
+*Hospitals General Information* point layer. You can notice that in
+*Data Selection* accordion menu, *Resize Points by Value* is grayed out.
+That is because the dataset doesn’t contain columns with continuous
+variables that can be transformed to point sizes. Instead, we can use
+*Style by Value* option to classify categorical points. The dataset
+contains multiple variables that can be effectively visualized, such as
+*Hospital Type*, *Emergency Services* (a yes/no category), *Mortality
+national comparison* and others. Let’s stick with *Hospital Type*, as is
+illustrated in Figure <a href="#fig:socrata-style">8.52</a>.
 
 <img src="images/08-map/socrata-style-annotated.png" alt="Let's display different types of hospitals in different colors." width="300" />
 <p class="caption">
-Figure 8.51: Let’s display different types of hospitals in different
+Figure 8.52: Let’s display different types of hospitals in different
 colors.
 </p>
 
@@ -8001,11 +8053,11 @@ order of categories in the legend.
 To change what is shown in tooltips when you hover or click on points,
 go to **Flyout Details**, and set Flyout Title to *Facility Name*,
 adding city and phone number as additional flyout values, as is shown in
-Figure <a href="#fig:socrata-flyout">8.52</a>.
+Figure <a href="#fig:socrata-flyout">8.53</a>.
 
 <img src="images/08-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
 <p class="caption">
-Figure 8.52: To edit tooltip information, use Flyout Details menu item.
+Figure 8.53: To edit tooltip information, use Flyout Details menu item.
 </p>
 
 At this point you should have a fully-functional interactive map showing
@@ -8020,19 +8072,19 @@ still a draft, and you can go ahead and *Publish…* it.
 
 Now you can embed the map on your website as an iframe. To do so, click
 the *Share* button in the upper-right side of your map (see Figure
-<a href="#fig:socrata-share">8.53</a>), and copy the generated code from
+<a href="#fig:socrata-share">8.54</a>), and copy the generated code from
 *Embed Code* text area (Figure
-<a href="#fig:socrata-share-embed">8.54</a>). Learn more in [Chapter 10:
+<a href="#fig:socrata-share-embed">8.55</a>). Learn more in [Chapter 10:
 Embed on the Web](embed.html).
 
 <img src="images/08-map/socrata-share-annotated.png" alt="Click *Share* button to bring up *Share and Embed* window." width="400" />
 <p class="caption">
-Figure 8.53: Click *Share* button to bring up *Share and Embed* window.
+Figure 8.54: Click *Share* button to bring up *Share and Embed* window.
 </p>
 
 <img src="images/08-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website."  />
 <p class="caption">
-Figure 8.54: Copy iframe code to embed this map in another website.
+Figure 8.55: Copy iframe code to embed this map in another website.
 </p>
 
 ### Limitations of Socrata
@@ -8127,7 +8179,7 @@ bottom of a long list. Finally, you’ll also learn how to insert
 *sparklines*, or tiny charts that visually summarize data trends in each
 row, and automatically place them inside your interactive table.
 Sparklines blend the best qualities of tables and charts by making it
-easier for readers to visually scan for patterns while skimming down the
+easier for readers to visually scan for trends while skimming down the
 rows and columns of your data table. Later in [Chapter 10: Embed on the
 Web](embed.html), you’ll learn how to integrate your interactive table
 into your website.
@@ -8145,7 +8197,7 @@ learned about [chart design in Chapter 7](chart-design.html) and [map
 design in Chapter 8](map-design.html). Jonathan Schwabish, an economist
 who specializes in creating policy-relevant data visualizations, offers
 his advice in recent publications about creating tables that communicate
-well with multiple audiences.[25]. Here’s a summary of several of his
+well with multiple audiences.[26]. Here’s a summary of several of his
 key points, which also appear in Figure
 <a href="#fig:table-design">9.1</a>.
 
@@ -8166,7 +8218,7 @@ items or outliers in your data, a topic we’ll discuss later in [Chapter
 
 When creating cross-tabulations to illustrate data correlations and
 possible causal relationships, statistician Joel Best offers two more
-design recommendations.[26]
+design recommendations.[27]
 
 1.  Place the independent variable (the suspected cause) at the top in
     the column headers, and the dependent variable (the possible effect)
@@ -8223,13 +8275,17 @@ the interactive table online.
 You’ll also learn how to create sparklines, or tiny line charts that
 quickly summarize data trends. This chart type was refined by Edward
 Tufte, a Yale professor and data visualization pioneer, who described
-sparklines as “datawords… intense, simple, word-sized graphics.”[27]
+sparklines as “datawords… intense, simple, word-sized graphics.”[28]
 While Tufte envisioned sparklines on a static sheet of paper or PDF
 document, you’ll create them inside an interactive table, as shown in
 Figure <a href="#fig:datawrapper-table">9.3</a>. Readers can search by
 keyword, sort columns in ascending or descending order, and scroll
 through pages of sparklines to quickly identify data trends that would
 be difficult to spot in a traditional numbers-only table.
+
+TODO below: change intensity of continent coloring, change sparkline and
+difference bar coloring to avoid confusion with a specific continent,
+and redo screenshots
 
 <img src="images/09-table/datawrapper-table.png" alt="Table with sparklines. Explore the [interactive version](https://datawrapper.dwcdn.net/0HK4f/2/)."  />
 <p class="caption">
@@ -8283,16 +8339,18 @@ calculates the difference between the earliest and the most recent year
 of data available, in most cases from 1960 to 2018). See the Notes tab
 in the Google Sheet for more details.
 
-1.  Go to [Datawrapper](https://datawrapper.de) and select *New Table*.
-    You are not required to sign in, but if you wish to save your work,
-    we recommend that you create a free account.
+1.  Go to [Datawrapper](https://datawrapper.de), click on *Start
+    Creating*, and select *New Table* in the top navigation. You are not
+    required to sign in, but if you wish to save your work, we recommend
+    that you create a free account.
 
-2.  In the *Upload Data* screen, select that you wish to import your
-    data from a Google Spreadsheet. Paste in the web address of our
-    cleaned-up Google Sheet and click *Proceed.*
+2.  In the first *Upload Data* tab, select *Import Google Spreadsheet*,
+    paste in the web address of our cleaned-up Google Sheet, and click
+    *Proceed.* Your Google Sheet must be *shared* so that others can
+    view it.
 
-3.  Inspect the data in the *Check and Describe* screen. Make sure that
-    the *First row as label* box is checked, then click *Proceed*.
+3.  Inspect the data in the *Check and Describe* tab. Make sure that the
+    *First row as label* box is checked, then click *Proceed*.
 
 4.  In the *Visualize* screen, under *Customize Table*, check two
     additional boxes: *Make Searchable* (so that users can search for
@@ -8372,8 +8430,8 @@ column E from textual to numerical data.
     down the page and click the *Show selected columns as tiny chart*
     button, as shown in Figure
     <a href="#fig:datawrapper-tiny-chart">9.7</a>. These steps will
-    create the sparklines in the column, renamed *Life expectancy
-    1960–2018*, as shown in Figure
+    create the sparklines in the column and automatically rename it to
+    *Life expectancy 1960–2018*, as shown in Figure
     <a href="#fig:datawrapper-bar-chart">9.8</a>.
 
 Tip: By design, we initially named this column *Life expectancy 1960*,
@@ -8403,10 +8461,19 @@ Figure 9.8: Select the *Difference* column and *Show as bar chart*.
 
 2.  Click on *Publish & Embed* to share the link to your [interactive
     table](https://datawrapper.dwcdn.net/0HK4f/2/), as previously shown
-    in Figure <a href="#fig:datawrapper-table">9.3</a>. Click the blue
-    *Publish chart* button to obtain the embed code to place your
-    visualization on the web, which you’ll learn about in [Chapter 10:
-    Embed on the Web](embed.html).
+    in Figure <a href="#fig:datawrapper-table">9.3</a>. If you logged
+    into your free Datawrapper account, your work is automatically saved
+    online in the *My Charts* menu in the top-right corner of the
+    screen. Also, you can click the blue *Publish* button to generate
+    the code to embed your interactive chart on your website, as you’ll
+    learn about in [Chapter 10: Embed on the Web](embed.html). In
+    addition, you can *add your chart to River* if you wish to share
+    your work more widely by allowing other Datawrapper users to adapt
+    and reuse your chart. Furthermore, scroll all the way down and click
+    the *Download PNG* button to export a static image of your chart.
+    Additional exporting and publishing options require a paid
+    Datawrapper account. Or, if you prefer not to create an account, you
+    can enter your email to receive the embed code.
 
 To learn more, we highly recommend the [Datawrapper Academy support
 pages](https://academy.datawrapper.de/), the extensive [gallery of
@@ -10554,7 +10621,7 @@ Mistakes](fix.html) in the appendix.
 </tr>
 <tr class="even">
 <td>Leaflet Heatmap Points with CSV Data <br> <img src="images/13-leaflet/leaflet-heatmap.png" /></td>
-<td>Best to show clusters of points as hotspots to emphasize high frequency.<br>Template with tutorial: <a href="leaflet-heatmap.html">Leaflet Heatmap</a></td>
+<td>Best to show clusters of points as colored hotspots to emphasize high frequency or density of cases.<br>Template with tutorial: <a href="leaflet-heatmap.html">Leaflet Heatmap</a></td>
 </tr>
 <tr class="odd">
 <td>Leaflet Searchable Point Map with CSV Data<br> <img src="images/13-leaflet/searchable-map.png" /></td>
@@ -11074,6 +11141,9 @@ Finally, the Leaflet template is built on flexible open-source software
 that’s written primarily in JavaScript, a very common coding language
 for the web, so you can customize it further if you have skills or
 support from a developer.
+
+TODO above: DECIDE how to address other storymap tools, with more
+details in editing notes
 
 TODO BELOW: Create and insert a new version of the template and
 demonstrate all features (all media, tricks such as leaving blank
@@ -11804,7 +11874,7 @@ Leaflet Heatmap Points with CSV Data
 
 Heatmaps turn individual points into hotspots or clusters, allowing
 viewers to explore spatial distributions of events, such as areas of
-high and low population density, or high-crime areas. Figure
+high and low population density or incidents of crime. Figure
 <a href="#fig:leaflet-heatmap">13.36</a> shows an interactive heatmap of
 bike theft locations in London between January and July 2020. The
 underlying data are coordinate locations for each reported bike theft,
@@ -13200,7 +13270,7 @@ while performing sleight of hand tricks.
 Third, visualizations are *truthful* if they show accurate data and
 follow the design rules. Still, there’s a wide spectrum of quality
 within this category. When looking at two visualizations that are
-equally valid, sometimes we day that one is *better* than the other
+equally valid, sometimes we say that one is *better* than the other
 because it illuminates a meaningful data pattern that we did not yet
 recognize. Or we may say that one is better because it portrays these
 patterns more beautifully, or with less ink on the page and greater
@@ -13223,7 +13293,7 @@ types of data bias](data-bias.html), such as framing bias, intergroup
 bias, and map area bias, including how we define the United States.
 While we may not be able to stop bias entirely, in this chapter you’ll
 learn how to identify it in the works by other people, and strategies to
-reduce its presence in our own visualizations.[28]
+reduce its presence in our own visualizations.[29]
 
 How to Lie with Charts
 ----------------------
@@ -13325,7 +13395,7 @@ Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and
 this warming has already begun to cause glacial melt and rising sea
 levels. Your task is to create *misleading* line charts that *diminish*
 the appearance of rising global temperature change in the reader’s
-eye.[29]
+eye.[30]
 
 1.  Open the [global temperature change 1880-2019 data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0),
@@ -13397,7 +13467,7 @@ expert Albert Cairo reminds us that line charts represent values in the
 line charts by their shape, rather than their height, so the baseline is
 irrelevant. Therefore, flattening the line chart for temperature change
 may mislead readers, but it’s technically not wrong, as long as it is
-labelled correctly.[30]
+labelled correctly.[31]
 
 ### Widen the chart to warp its aspect ratio
 
@@ -13428,7 +13498,7 @@ expressed in a chart should roughly match its aspect ratio. For example,
 if a chart represents a 33 percent increase, which is the same as 33/100
 or 1/3, he recommends an aspect ratio of 3:1 (because the fraction is
 flipped by placing width before height), or in other words, a chart that
-is three times taller than its width.[31] Therefore, if we apply Cairo’s
+is three times taller than its width.[32] Therefore, if we apply Cairo’s
 recommendation to our climate change chart, the difference from 0° to
 1°C represents a 100% increase, which suggests an ideal chart with a 1:1
 aspect ratio, or just as tall as it is wide, as shown in Figure
@@ -13463,7 +13533,7 @@ matches its aspect ratio (12:1), the result is misleading.
 
 Even Cairo points out that this significant temperature increase looks
 “deceptively small” if you follow his aspect ratio recommendation using
-this scale, so he advises against it.[32] Furthermore, if you convert
+this scale, so he advises against it.[33] Furthermore, if you convert
 the scale from Celsius to Fahrenheit, the calculation changes once
 again, which doesn’t make any sense. Where does all of this leave us? If
 you feel confused, that’s because there’s no universal rule with aspect
@@ -13564,7 +13634,7 @@ truthful, while many were unreasonably manipulated to mislead readers by
 hiding or disguising important patterns in the data. Furthermore, there
 are additional ways to deceive that we did not examine here, such as
 building 3D charts and tilting the reader’s perspective below the
-baseline.[33]
+baseline.[34]
 
 You may feel strange that data visualization lacks clearly-defined
 design rules for many cases, like we are accustomed to reading in our
@@ -13588,7 +13658,7 @@ your own. We’ll focus our attention on choropleth maps that use shading
 or color to represent values in geographic areas, because they are a
 topic of considerable mischief. This exercise was inspired by geographer
 Mark Monmonier’s classic book by the same name, *How to Lie with Maps*,
-originally published in 1991, now in its third edition.[34]
+originally published in 1991, now in its third edition.[35]
 
 Before we get started, review the [map design principles in Chapter
 8](map-design.html) to avoid common mistakes when designing colored
@@ -13745,7 +13815,7 @@ Whatever you decide, avoid the temptation to manually adjust a map’s
 settings in ways that manipulate its appearance to fit a preconceived
 point of view. In sum, show us a story and tell the truth. You may need
 to create several maps with different settings to decide which one is
-the best compromise.[35].
+the best compromise.[36].
 
 \[TODO: Insert this as a final statement somewhere about the two US
 inequality maps – or not? Based on these general guidelines, some may
@@ -13810,7 +13880,7 @@ Spiegelhalter observes that when we supplement rates with raw numbers,
 it further increases our impression of risks. For example, if we told
 you a surgical procedure had a 5 percent mortality rate *and* that 20
 out of 400 patients died, it seems worse because we begin to imagine
-real people’s lives, not abstract percentages.[36] The best way to
+real people’s lives, not abstract percentages.[37] The best way to
 counter framing bias is to be aware of its potential effect on our minds
 and to call it out, as we’ve attempted to do here.
 
@@ -13834,7 +13904,7 @@ visualization, and ways to counter its impact. Jonathan Schwabish and
 Alice Feng describe how they applied a racial equity lens to revise the
 [Urban Institute’s Data Visualization Style
 Guide](http://urbaninstitute.github.io/graphics-styleguide/) with a
-racial equity lens.[37] Some recommendations are straightforward and
+racial equity lens.[38] Some recommendations are straightforward and
 relatively simple to implement. For example, they recommend ordering
 group labels to focus on the data story, rather than listing “White” and
 “Men” at the top by default. Also, we should proactively acknowledge
@@ -14041,7 +14111,7 @@ you will need to make about the [format of your data
 story](story-format.html), with our continual emphasis on sharing
 interactive visualizations rather than static images. Our inspiration
 for this chapter is drawn from excellent books by visualization experts
-Cole Nussbaumer Knaflic and Alberto Cairo.[38]
+Cole Nussbaumer Knaflic and Alberto Cairo.[39]
 
 Build a Narrative on a Storyboard
 ---------------------------------
@@ -14667,6 +14737,10 @@ Best, Joel. *More Damned Lies and Statistics: How Numbers Confuse Public
 Issues*. Berkeley, CA: University of California Press, 2004.
 <https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC>.
 
+Brewer, Cynthia A. *Designing Better Maps: A Guide for GIS Users*. Esri
+Press, 2016.
+<https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ>.
+
 Cairo, Alberto. *How Charts Lie: Getting Smarter About Visual
 Information*. W. W. Norton & Company, 2019.
 <https://www.google.com/books/edition/How_Charts_Lie_Getting_Smarter_about_Vis/qP2KDwAAQBAJ>.
@@ -14924,7 +14998,11 @@ accessed October 21, 2020,
 [24] Rost, “Your Friendly Guide to Colors in Data Visualisation.”; Rost,
 “How to Pick More Beautiful Colors for Your Data Visualizations.”
 
-[25] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
+[25] See also Cynthia A. Brewer, *Designing Better Maps: A Guide for GIS
+Users* (Esri Press, 2016),
+<https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ>
+
+[26] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
 Tables’,” Twitter, August 3, 2020,
 <https://twitter.com/jschwabish/status/1290323581881266177>; Jonathan A.
 Schwabish, “Ten Guidelines for Better Tables,” *Journal of Benefit-Cost
@@ -14934,15 +15012,15 @@ Visualizations: A Guide for Scholars, Researchers, and Wonks* (Columbia
 University Press, 2021),
 <https://cup.columbia.edu/book/better-data-visualizations/9780231193115>
 
-[26] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
+[27] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
 Public Issues* (Berkeley, CA: University of California Press, 2004),
 <https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC>,
 pp. 31-35.
 
-[27] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
+[28] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
 <http://books.google.com/books?isbn=0961392177>, pp. 46-63.
 
-[28] The “how to lie” tutorials were inspired by several excellent works
+[29] The “how to lie” tutorials were inspired by several excellent works
 in data visualization: Cairo, *The Truthful Art*, 2016; Cairo, *How
 Charts Lie*, 2019; Darrell Huff, *How to Lie with Statistics* (W. W.
 Norton & Company, 1954),
@@ -14955,34 +15033,34 @@ Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9,
 NASA JPL, “Educator Guide: Graphing Global Temperature Trends,” 2017,
 <https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>
 
-[29] The inspiration for this specific tutorial came from a high school
+[30] The inspiration for this specific tutorial came from a high school
 classroom activity created by the NASA Jet Propulsion Laboratory (JPL),
 as well as visualization expert Alberto Cairo’s analysis of charts by
 climate change deniers. NASA JPL; Cairo, *How Charts Lie*, 2019,
 pp. 65-67, 135-141.
 
-[30] Cairo, p. 61.
+[31] Cairo, p. 61.
 
-[31] Cairo, p. 69.
+[32] Cairo, p. 69.
 
-[32] Cairo, p. 70.
+[33] Cairo, p. 70.
 
-[33] Cairo, p. 58.
+[34] Cairo, p. 58.
 
-[34] Monmonier, *How to Lie with Maps, Third Edition*.
+[35] Monmonier, *How to Lie with Maps, Third Edition*.
 
-[35] TODO cite
+[36] TODO cite
 <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>;
 <a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>;
 <a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>;
 <a href="https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool" class="uri">https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool</a>
 
-[36] David Spiegelhalter, *The Art of Statistics: Learning from Data*
+[37] David Spiegelhalter, *The Art of Statistics: Learning from Data*
 (Penguin UK, 2019),
 <https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ>,
 pp. 22-5
 
-[37] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
+[38] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
 Awareness in Data Visualization,” preprint (Open Science Framework,
 August 27, 2020), <https://doi.org/10.31219/osf.io/x8tbw>. See also this
 web post summary of the paper, Jonathan Schwabish and Alice Feng,
@@ -14992,7 +15070,7 @@ accessed October 16, 2020,
 Urban Institute, “Urban Institute Data Visualization Style Guide,” 2020,
 <http://urbaninstitute.github.io/graphics-styleguide/>
 
-[38] Cole Nussbaumer Knaflic, *Storytelling with Data: A Data
+[39] Cole Nussbaumer Knaflic, *Storytelling with Data: A Data
 Visualization Guide for Business Professionals*, 1 edition (Hoboken, New
 Jersey: Wiley, 2015); Cole Nussbaumer Knaflic, *Storytelling with Data:
 Let’s Practice!* (John Wiley & Sons, 2019),

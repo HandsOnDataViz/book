@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-02" />
+<meta name="date" content="2020-11-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -343,7 +343,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="design-choropleth" class="section level2 unnumbered" number="">
 <h2>Design Choropleth Colors &amp; Intervals</h2>
 <p>When you build a choropleth map, your choices about how to represent data with colors will determine its overall appearance, so it’s important to learn key principles. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by people with colorblindness. For an excellent overview of visualization colors in general, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></p>
-<p>To illustrate key concepts about colors in choropleth map design, let’s explore a wonderful tool called <a href="https://colorbrewer2.org/">ColorBrewer</a>, created by Cynthia Brewer and Mark Harrower. See the interface in Figure <a href="design-choropleth.html#fig:map-colorbrewer">8.4</a>. Since ColorBrewer is a design assistant, do not expect to upload your data into it to create a map. Instead, ColorBrewer will recommend color palettes that work best with our map data and the type of story we wish to tell, and allow us to export those color codes into our preferred mapping tool.</p>
+<p>To illustrate key concepts about colors in choropleth map design, let’s explore a wonderful tool called <a href="https://colorbrewer2.org/">ColorBrewer</a>, created by Cynthia Brewer and Mark Harrower.<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a> See the interface in Figure <a href="design-choropleth.html#fig:map-colorbrewer">8.4</a>. Since ColorBrewer is a design assistant, do not expect to upload your data into it to create a map. Instead, ColorBrewer will recommend color palettes that work best with our map data and the type of story we wish to tell, and allow us to export those color codes into our preferred mapping tool.</p>
 
 <div class="figure"><span id="fig:map-colorbrewer"></span>
 <img src="images/08-map/map-colorbrewer-annotated.png" alt="The ColorBrewer interface: data classes, type of color scheme, and recommended color codes."  />
@@ -379,35 +379,42 @@ Figure 8.5: Sequential, diverging, and qualitative color palettes from <a href="
 Figure 8.6: Representing per capita income in US states using three different classifications.
 </p>
 </div>
-<p>After you select data classes and a color palette, ColorBrewer displays alphanumeric codes that web browsers translate into colors. You can select hexadecimal codes (<code>#ffffff</code> is white), RGB codes (<code>255,255,255</code> is white), or CMYK codes (<code>0,0,0,0</code> is white), and copy or export them into your preferred map tool, if it allows color palettes to be imported.</p>
+<p>After you select data classes and a color palette, ColorBrewer displays alphanumeric codes that web browsers translate into colors. You can select hexadecimal codes (<code>#ffffff</code> is white), RGB codes (<code>255,255,255</code> is white), or CMYK codes (<code>0,0,0,0</code> is white), and export them in different formats, as shown in Figure <a href="design-choropleth.html#fig:colorbrewer-export">8.7</a>, if your preferred map tool allows you to import color palettes.</p>
+
+<div class="figure"><span id="fig:colorbrewer-export"></span>
+<img src="images/08-map/colorbrewer-export.png" alt="Click open the Export tab to display your color palette codes in various formats." width="435" />
+<p class="caption">
+Figure 8.7: Click open the <em>Export</em> tab to display your color palette codes in various formats.
+</p>
+</div>
 </div>
 <div id="choose-color-intervals-to-group-choropleth-map-data" class="section level3 unnumbered" number="">
 <h3>Choose Color Intervals to Group Choropleth Map Data</h3>
 <p>Another important design choice for choropleth maps is the color intervals, which determine how you group and display data by using similar colors. Since your ability to set intervals varies across different mapping tools, this section will explain broad concepts, and specific map tutorials will demonstrate how to apply them.</p>
-<p>Some mapping tools allow you to choose two different <em>types of color intervals</em> to show movement up or down a data scale, as shown in Figure <a href="design-choropleth.html#fig:interval-types">8.7</a>. <em>Steps</em> are clearly-marked color dividers, like a staircase, while <em>continuous</em> is a gradual change in hue, like a ramp.</p>
+<p>Some mapping tools allow you to choose two different <em>types of color intervals</em> to show movement up or down a data scale, as shown in Figure <a href="design-choropleth.html#fig:interval-types">8.8</a>. <em>Steps</em> are clearly-marked color dividers, like a staircase, while <em>continuous</em> is a gradual change in hue, like a ramp.</p>
 
 <div class="figure"><span id="fig:interval-types"></span>
 <img src="images/08-map/interval-types.png" alt="Two types of color intervals: steps and continuous." width="300" />
 <p class="caption">
-Figure 8.7: Two types of color intervals: steps and continuous.
+Figure 8.8: Two types of color intervals: steps and continuous.
 </p>
 </div>
 <p>If both options exist, which one is best? There is no clear map design rule about this. On one hand, some recommend using continuous intervals to show greater geographical diversity, except when it’s important to your data story to display a threshold, where steps make sense to show areas above or below a certain line. On the other hand, some point out that people are quite bad at distinguishing different hues on a continuous scale, so recommend using clearly-defined steps to help readers match colors to data values in your legend. Therefore, our general advice is to make design choices that are both honest and insightful: tell the truth about the data and also draw our attention to what matters about this interpretation.[TODO: is this sufficient or should we add examples or cite different designers here? Cite Datawrapper Academy on “honesty and usefulness” <a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>]</p>
 <p>Some mapping tools also allow you to choose how to <em>interpolate</em> your data, meaning the method for grouping numbers to represent similar colors on your map. This may involve a two-part decision about step dividers and numerical methods.</p>
-<p>First, if you choose <em>steps</em>, how many dividers should you use to slice up your data? Once again, there is no clear rule. Fewer steps creates a <em>coarse</em> map that highlights broad differences, while more steps creates a <em>granular</em> map that emphasizes geographic diversity between areas. But adding more steps also makes differences less visible. Remember that simply adding more colors does not necessarily make a better map. We recommend experimenting with <a href="https://colorbrewer2.org">ColorBrewer</a> to raise or lower the <em>Number of data classes</em> (also known as steps or dividers) for different types of color palettes, to visualize the consequences of your possible design choices, as shown in Figure <a href="design-choropleth.html#fig:colorbrewer-steps">8.8</a>. Make decisions with the best interests of your readers in mind, to represent your data in honest and insightful ways.</p>
+<p>First, if you choose <em>steps</em>, how many dividers should you use to slice up your data? Once again, there is no clear rule. Fewer steps creates a <em>coarse</em> map that highlights broad differences, while more steps creates a <em>granular</em> map that emphasizes geographic diversity between areas. But adding more steps also makes differences less visible. Remember that simply adding more colors does not necessarily make a better map. We recommend experimenting with <a href="https://colorbrewer2.org">ColorBrewer</a> to raise or lower the <em>Number of data classes</em> (also known as steps or dividers) for different types of color palettes, to visualize the consequences of your possible design choices, as shown in Figure <a href="design-choropleth.html#fig:colorbrewer-steps">8.9</a>. Make decisions with the best interests of your readers in mind, to represent your data in honest and insightful ways.</p>
 
 <div class="figure"><span id="fig:colorbrewer-steps"></span>
 <img src="images/08-map/colorbrewer-steps.png" alt="Experiment with ColorBrewer data classes (or steps) and color palettes." width="400" />
 <p class="caption">
-Figure 8.8: Experiment with ColorBrewer data classes (or steps) and color palettes.
+Figure 8.9: Experiment with ColorBrewer data classes (or steps) and color palettes.
 </p>
 </div>
-<p>Second, whether you choose steps or continuous, which <em>interpolation</em> method is the best way to group your data into similar colors on your scale? Map tools may display the options in different ways, as seen in Figure <a href="design-choropleth.html#fig:intervals-datawrapper-tableau">8.9</a>, and they also may vary depending on whether you selected steps or continuous colors.</p>
+<p>Second, whether you choose steps or continuous, which <em>interpolation</em> method is the best way to group your data into similar colors on your scale? Map tools may display the options in different ways, as seen in Figure <a href="design-choropleth.html#fig:intervals-datawrapper-tableau">8.10</a>, and they also may vary depending on whether you selected steps or continuous colors.</p>
 
 <div class="figure"><span id="fig:intervals-datawrapper-tableau"></span>
 <img src="images/08-map/intervals-datawrapper-tableau.png" alt="Interpolation options in two map tools: Datawrapper (left) and Tableau Public (right)."  />
 <p class="caption">
-Figure 8.9: Interpolation options in two map tools: Datawrapper (left) and Tableau Public (right).
+Figure 8.10: Interpolation options in two map tools: Datawrapper (left) and Tableau Public (right).
 </p>
 </div>
 <ul>
@@ -427,6 +434,7 @@ TODO ALSO: Review all of the recommendations in the Datawrapper Academy post abo
 <hr />
 <ol start="24">
 <li id="fn24"><p><span class="citation">Rost, “Your Friendly Guide to Colors in Data Visualisation.”</span>; <span class="citation">Rost, “How to Pick More Beautiful Colors for Your Data Visualizations.”</span><a href="design-choropleth.html#fnref24" class="footnote-back">↩︎</a></p></li>
+<li id="fn25"><p>See also <span class="citation">Cynthia A. Brewer, <em>Designing Better Maps: A Guide for GIS Users</em> (Esri Press, 2016), <a href="https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ" role="doc-biblioref">https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ</a></span><a href="design-choropleth.html#fnref25" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

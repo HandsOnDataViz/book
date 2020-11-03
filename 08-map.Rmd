@@ -633,11 +633,11 @@ To create your own choropleth map with Tableau Public, follow this tutorial.
 
 Good maps often require [cleaning up messy data as described in Chapter 5](clean.html). In our spreadsheet we removed rows for nations that did not report any data. Tableau Public recognizes many different types of geographic names (such as cities and nations), so we will rely on the tool to deal with any spelling issues and properly place all of them on the map.
 
-2. Go to *File > Download* in CSV format (comma-separated values) to save the data to your local computer.
+2. In the Google Sheet, go to *File > Download* and select Comma-Separated Values (CSV) format to save the data to your local computer.
 
-3. Download, install, and launch the [free Tableau Public desktop application](https://public.tableau.com/en-us/s/download), available for Mac or Windows. It will require you to enter an email address.
+3. Download, install, and launch the [free Tableau Public desktop application](https://public.tableau.com/en-us/s/download), available for Mac or Windows. You will need to enter an email address to download the application.
 
-4. In the *Connect* screen, select *Text file*, and upload the military spending CSV data file you downloaded above.
+4. When you open the Tableau Public application, the *Connect* screen will display file formats you can upload on the left-side menu. Click on the *Text file* format and upload the military spending CSV data file you downloaded above.
 
 5. In the *Data Source* screen, inspect the dataset, which contains three columns: Country, Most Year Year of the data, and Military Spending as Percent of GDP. Notice that a small globe appears at the top of the Country column, which shows that Tableau Public successfully recognized it as geographic data, rather than string or text data. If that globe was not there, you can select its menus to set its proper geographic role, as shown in Figure \@ref(fig:tableau-data-geographic).
 
@@ -700,7 +700,7 @@ as *Military Spending*, and click Save.
 Now that you understand how to create maps using *static* data from a spreadsheet, let's explore how to create a map using the most current data available from an open-data repository.
 
 
-TODO above to DISCUSS: We might have a mismatch between the data and the tool here. If you do a quick histogram of the military data, most values are clustered around the median, but there's a few really high-spending outliers. This makes it difficult for novices to map in Tableau Public, because the default interpolation is *linear*, and the outliers dominate the appearance of the map. It's not clear to me how to change this to *quartiles* or *natural breaks*, as we do in Datawrapper. Perhaps there are some ideas here: https://help.tableau.com/current/pro/desktop/en-us/maps_howto_choropleth.htm   OR one of these Tableau books by Ryan Sleeper https://learning.oreilly.com/search/?query=author%3A%22Ryan%20Sleeper (but I don't see anything right away that's relevant)  OR another idea is to reconsider the filter instructions below, which I removed because our sample dataset no longer has null values.
+TODO above to DISCUSS: We might have a mismatch between the data and the tool here. If you do a quick histogram of the military data, most values are clustered around the median, but there's a few really high-spending outliers. This makes it difficult for novices to map in Tableau Public, because the default interpolation is *linear*, and the outliers dominate the appearance of the map. It's not clear to me how to change this to *quartiles* or *natural breaks*, as we do in Datawrapper. Perhaps there are some ideas here: https://help.tableau.com/current/pro/desktop/en-us/maps_howto_choropleth.htm   OR one of these Tableau books by Ryan Sleeper https://learning.oreilly.com/search/?query=author%3A%22Ryan%20Sleeper (but I don't see anything right away that's relevant)  OR another idea is to reconsider the filter instructions below, which I removed because our sample dataset no longer has null values. TODO: after we discuss, see reviewers' comments to address in editorial notes
 
 Places like Greenland and Libya do not have available values, but they are still
 painted with the lightest color, which is misleading. To remove countries with *null* values
@@ -754,7 +754,7 @@ Note: You can still practice creating a map in Socrata without being logged in.
 You won't be able to save or share it, however.
 
 Once you have an account, log in using your credentials. Navigate to your profile
-by clicking your username in the upper-right corner and make sure you **Accept Terms and Conditions**,
+by clicking your username in the upper-right corner and make sure you *Accept Terms and Conditions*,
 otherwise you won't be able to save your draft map.
 
 This username and password are only valid for Data.Medicare.gov, not other websites
@@ -791,7 +791,7 @@ and click Apply. Socrata should zoom in on the map and center on Texas. Close *F
 knitr::include_graphics("images/08-map/socrata-filter-annotated.png")
 ```
 
-Let's now **disaggregate** the map so that we can see individual hospitals instead of clusters.
+Let's now *disaggregate* the map so that we can see individual hospitals instead of clusters.
 Go to *Map Settings > Cluster*, and bring the *Stop Clustering at Zoom Level* slider to 1,
 as shown in Figure \@ref(fig:socrata-uncluster).
 You will see the map now shows individual points.
@@ -807,7 +807,7 @@ In *General*, set Title to *Texas Hospitals*, and hide data table below the map 
 *Show data table below visualization* box. Under *Map Controls*, uncheck *Show Search Bar* and *Show Locate Button*
 to get rid of unnecessary elements. Feel free to experiment with other settings as well.
 
-Now, let's return back to **Map Layers** menu and choose our *Hospitals General Information*
+Now, let's return back to the *Map Layers* menu and choose our *Hospitals General Information*
 point layer. You can notice that in *Data Selection* accordion menu, *Resize Points by Value*
 is grayed out. That is because the dataset doesn't contain columns with continuous variables
 that can be transformed to point sizes. Instead, we can use *Style by Value* option to

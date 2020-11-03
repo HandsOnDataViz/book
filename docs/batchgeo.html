@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-02" />
+<meta name="date" content="2020-11-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -342,65 +342,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="batchgeo" class="section level2 unnumbered" number="">
 <h2>Point Map with BatchGeo</h2>
-<p>Although BatchGeo is not the most powerful mapping tool available, its easy-to-learn interface stands out as one of the fastest ways to create an interactive point map. With the free version, organize up to 250 rows of data in a spreadsheet template, copy and paste them into the platform. BatchGeo will geocode your data and display map markers with colored categories on a Google Map base layer, which can be clicked to show linked titles, text, and small photos (which must be hosted online elsewhere) categories, descriptions, and links (including images hosted elsewhere online). Since the free version does <em>not</em> include an account login, enter your email to receive a link to the finished map, like the sample shown in Figure <a href="batchgeo.html#fig:batchgeo-map">8.11</a>.</p>
+<p>Although BatchGeo is not the most powerful mapping tool available, its easy-to-learn interface stands out as one of the fastest ways to create an interactive point map. With the free version, organize up to 250 rows of data in a spreadsheet template, copy and paste them into the platform. BatchGeo will geocode your data and display map markers with colored categories on a Google Map base layer, which can be clicked to show linked titles, text, and small photos (which must be hosted online elsewhere) categories, descriptions, and links (including images hosted elsewhere online). Since the free version does <em>not</em> include an account login, enter your email to receive a link to the finished map, like the sample shown in Figure <a href="batchgeo.html#fig:batchgeo-map">8.12</a>.</p>
 
 <div class="figure"><span id="fig:batchgeo-map"></span>
 <iframe src="https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c" width="672" height="550px">
 </iframe>
 <p class="caption">
-Figure 8.11: Point map of museums and parks with BatchGeo: Explore the <a href="https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c">interactive version</a>.
+Figure 8.12: Point map of museums and parks with BatchGeo: Explore the <a href="https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c">interactive version</a>.
 </p>
 </div>
 <p>To create your own point map with BatchGeo, follow this quick tutorial.</p>
 <ol style="list-style-type: decimal">
 <li><p>Open this <a href="https://docs.google.com/spreadsheets/d/1IA0J4Z9C0_zsvgcunD2kHtR__sdQqUPzNHNjqCLYBRQ/edit#gid=312385679">BatchGeo data template in Google Sheets</a>, log into your Google account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
-<li><p>You can delete and enter your own data into the template, as shown in Figure <a href="batchgeo.html#fig:batchgeo-template">8.12</a>. Not every address field is required, but adding more will improve the accuracy of the geocoder. Several columns are optional and can be deleted (such as URL, Image URL, Image Source). If you enter a URL, its active link will appear in the Name field. Also, you can enter an Image URL if a photo is hosted elsewhere online, with an ideal size of 200x200 pixels.</p></li>
+<li><p>You can delete and enter your own data into the template, as shown in Figure <a href="batchgeo.html#fig:batchgeo-template">8.13</a>. Not every address field is required, but adding more will improve the accuracy of the geocoder. Several columns are optional and can be deleted (such as URL, Image URL, Image Source). If you enter a URL, its active link will appear in the Name field. Also, you can enter an Image URL if a photo is hosted elsewhere online, with an ideal size of 200x200 pixels.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:batchgeo-template"></span>
 <img src="images/08-map/batchgeo-template.png" alt="Enter your data into the template, then select all and copy it."  />
 <p class="caption">
-Figure 8.12: Enter your data into the template, then select all and copy it.
+Figure 8.13: Enter your data into the template, then select all and copy it.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>Select and copy your data from the template, open the <a href="https://batchgeo.com">BatchGeo</a> site, click the large field, and paste in your data, as shown in Figure <a href="batchgeo.html#fig:batchgeo-paste">8.13</a>.</li>
+<li>Select and copy your data from the template, open the <a href="https://batchgeo.com">BatchGeo</a> site, click the large field, and paste in your data, as shown in Figure <a href="batchgeo.html#fig:batchgeo-paste">8.14</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:batchgeo-paste"></span>
 <img src="images/08-map/batchgeo-paste.png" alt="Click the large field and paste in your data from the template."  />
 <p class="caption">
-Figure 8.13: Click the large field and paste in your data from the template.
+Figure 8.14: Click the large field and paste in your data from the template.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>Click the <em>Validate and Set Options</em> button to inspect or adjust how BatchGeo will upload your data fields and preview a pop-up window, as shown in Figure <a href="batchgeo.html#fig:batchgeo-validate">8.14</a>. Click the <em>Advanced</em> button to see additional options. Then click the <em>Map</em> button.</li>
+<li>Click the <em>Validate and Set Options</em> button to inspect or adjust how BatchGeo will upload your data fields and preview a pop-up window, as shown in Figure <a href="batchgeo.html#fig:batchgeo-validate">8.15</a>. Click the <em>Advanced</em> button to see additional options to change the basemap layer or point symbols. Then click the <em>Make Map</em> button.</li>
 </ol>
 
 <div class="figure"><span id="fig:batchgeo-validate"></span>
 <img src="images/08-map/batchgeo-validate.png" alt="Click the Validate button to inspect and preview your data and advanced options." width="500" />
 <p class="caption">
-Figure 8.14: Click the <em>Validate</em> button to inspect and preview your data and advanced options.
+Figure 8.15: Click the <em>Validate</em> button to inspect and preview your data and advanced options.
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>In the <em>Map</em> window, enter a title and set other options, as shown in Figure <a href="batchgeo.html#fig:batchgeo-save">8.15</a>. Insert your email address to receive a link to your online map. Click <em>Save Map</em>.</li>
+<li>In the <em>Map</em> window, click the <em>Save and Continue</em> button to enter a title and set other options, such making your map <em>public</em> or <em>unlisted</em>, as well as customizing the layout, as shown in Figure <a href="batchgeo.html#fig:batchgeo-save">8.16</a>. Insert your email address to receive a link to your online map. Click <em>Save Map</em>.</li>
 </ol>
 
 <div class="figure"><span id="fig:batchgeo-save"></span>
 <img src="images/08-map/batchgeo-save.png" alt="Be sure to enter your email address to receive a link to your online map." width="500" />
 <p class="caption">
-Figure 8.15: Be sure to enter your email address to receive a link to your online map.
+Figure 8.16: Be sure to enter your email address to receive a link to your online map.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>Check your email for a message from BatchGeo with a link to your live map, and another link to make edits, as shown in Figure <a href="batchgeo.html#fig:batchgeo-email">8.16</a>. The email also will include a code to <a href="embed.html">embed your live map on the web, which you’ll learn about in Chapter 10</a>.</li>
+<li>Check your email for a message from BatchGeo with a link to your live map, and another link to make edits, as shown in Figure <a href="batchgeo.html#fig:batchgeo-email">8.17</a>. The email also will include a code to <a href="embed.html">embed your live map on the web, which you’ll learn about in Chapter 10</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:batchgeo-email"></span>
 <img src="images/08-map/batchgeo-email-annotated.png" alt="Save the BatchGeo email with links and an embed code for your map." width="500" />
 <p class="caption">
-Figure 8.16: Save the BatchGeo email with links and an embed code for your map.
+Figure 8.17: Save the BatchGeo email with links and an embed code for your map.
 </p>
 </div>
 <p>Overall, BatchGeo is a free and easy-to-learn point map tool, but one with several limitations. You can only create maps with 250 points or less, and only a few options to customize their appearance, unless you upgrade to the paid version. Also, while the tool geocodes your location data, it does not show you the latitude and longitude coordinates, but see the <a href="geocode.html">Geocode section of Chapter 3 for a Google Sheets add-on</a> that will show you the geocoordinates. See more info on the <a href="http://support.batchgeo.com">BatchGeo support page</a> and also their <a href="https://blog.batchgeo.com/5-steps-to-become-a-batchgeo-power-user/">post about power-user tips</a>.</p>

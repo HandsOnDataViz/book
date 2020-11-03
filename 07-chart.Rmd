@@ -26,6 +26,8 @@ Table: (\#tab:chart-types) Basic Chart Types, Best Uses, and Tutorials
 | Bubble chart <br> ![](images/07-chart/chart-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color.<br>Easy tool: [Scatter and Bubble Chart in Datawrapper tutorial](scatter-bubble-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Sparklines<br> ![](images/07-chart/chart-sparklines.png) | Best to compare data trends with tiny line or bar charts, aligned in a table column.<br>Easy tool: [Ch 9: Interactive Table with Sparklines in Datawrapper tutorial](table-datawrapper.html) |
 
+See also the [DataViz Catalogue site](https://datavizcatalogue.com) by Severino Ribecca for a more extensive collection of chart types and use cases.
+
 TODO above: improve and standardize chart images, especially range chart
 
 ## Chart Design Principles {- #chart-design}
@@ -528,9 +530,9 @@ knitr::include_graphics("images/07-chart/datawrapper-annotated-text.png")
 knitr::include_graphics("images/07-chart/datawrapper-annotated-range.png")
 ```
 
-9. Click *Proceed* or advance to the *Publish & Embed* screen to share your chart with others. If you are logged into your free Datawrapper account, click the blue *Publish chart* button to generate the code to embed the interactive chart on your website, and read more in [Chapter 10: Embed on the Web](embed.html). Also, click the *add your chart to River* if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse your chart. Finally, scroll all the way down and click the *Download PNG* button to export a static image of your chart. Additional exporting and publishing options require a paid Datawrapper account.
+9. Click *Proceed* or advance to the *Publish & Embed* screen to share your work with others. If you logged into your free Datawrapper account, your work is automatically saved online in the *My Charts* menu in the top-right corner of the screen. Also, you can click the blue *Publish* button to generate the code to embed your interactive chart on your website, as you'll learn about in [Chapter 10: Embed on the Web](embed.html). In addition, you can *add your chart to River* if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse your chart. Furthermore, scroll all the way down and click the *Download PNG* button to export a static image of your chart. Additional exporting and publishing options require a paid Datawrapper account. Or, if you prefer not to create an account, you can enter your email to receive the embed code.
 
-Congratulations on creating your first interactive Datawrapper chart. If you logged into your free Datawrapper account, all of your charts are stored in the *My Charts* menu in the top-right corner of the screen. Now let's use Datawrapper to create a new type of chart, called a range chart.
+Congratulations on creating your first interactive Datawrapper chart. Now let's use Datawrapper to create a new type of chart, called a range chart.
 
 ## - Range Charts {- #range-datawrapper}
 
@@ -580,7 +582,7 @@ knitr::include_graphics("images/07-chart/datawrapper-range-appearance.png")
 
 Tip: The *Refine* tab also includes options to resort or group data rows, change the chart size for different devices, and check visibility for colorblind readers.
 
-9. After modifying your visualization, proceed to the *Publish and Embed* screen, and follow the prompts or refer to the more detailed tutorial above.
+9. After modifying your visualization, proceed to the *Publish and Embed* screen, and follow the prompts to share your work, or refer to the more detailed tutorial above.
 
 Now that you've completed a range chart, let's create another new chart type, scatter and bubble charts, which are relatively easy to design in Datawrapper.
 
@@ -636,7 +638,7 @@ knitr::include_graphics("images/07-chart/scatter-tooltip-editor.png")
 knitr::include_graphics("images/07-chart/scatter-tooltip.png")
 ```
 
-8. Finish the annotations to add your title and data source, then proceed to publish and embed your chart, as described in [Chapter 10: Embed on the Web](embed.html).
+8. Finish the annotations to add your title and data source, then proceed to publish and embed your chart by following the prompts or reading the more detailed Datawrapper tutorial above. Learn about your next steps in [Chapter 10: Embed on the Web](embed.html).
 
 ### Bubble Charts {-}
 In your scatter chart above, you learned how to visualize the relationship between two datasets: life expectancy (the X-axis coordinate) and fertility (the Y-axis coordinate). Now let's expand on this concept by creating a bubble chart that adds two more datasets: population (shown by the size of each point, or bubble) and region of the world (shown by the color of each bubble). We'll use similar World Bank data as before, with two additional columns, as shown in Figure \@ref(fig:bubble-data). Note that we're using numeric data (population) for bubble size, but categorical data (regions) for color. Now you can easily create a bubble chart that displays a relationship between these four datasets, as shown in Figure \@ref(fig:bubble).
@@ -677,7 +679,7 @@ knitr::include_graphics("images/07-chart/bubble-tooltip-editor.png")
 knitr::include_graphics("images/07-chart/bubble-color-size.png")
 ```
 
-6. Test your visualization tooltips. Then finish the annotations to add your title and data source, and proceed to publish and embed your chart, as described in [Chapter 10: Embed on the Web](embed.html).
+6. Test your visualization tooltips. Then finish the annotations to add your title and data source, and proceed to publish and embed your chart, by following the prompts or reading the more detailed Datawrapper tutorial above. See your next steps in [Chapter 10: Embed on the Web](embed.html).
 
 For more information about creating scatter and bubble charts, see the [Datawrapper Academy support site](https://academy.datawrapper.de/).
 

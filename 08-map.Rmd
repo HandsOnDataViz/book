@@ -14,7 +14,7 @@ Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 | Point map with custom icons<br> ![](images/08-map/map-point.png) | Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: [BatchGeo tutorial](batchgeo.html) or [Google My Maps tutorial](mymaps.html)<br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Symbol point map<br> ![](images/08-map/map-symbol.png) | Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth).<br>Easy tool: [Symbol Point Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
 | Choropleth (colored polygon) map <br> ![](images/08-map/map-choropleth.png) | Best to show patterns across geographic areas (such as neighborhoods or nations) by coloring polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
-| Heat point map <br> ![](images/08-map/map-heat.png) | Best to show clusters of points as colored hotspots to emphasize high frequency. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
+| Heat point map <br> ![](images/08-map/map-heat.png) | Best to show clusters of points as colored hotspots to emphasize high frequency or density of cases. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
 | Story map <br> ![](images/08-map/map-storymap.png) | Best to show a point-by-point guided tour, with a scrolling narrative to display text, images, audio, video, and scanned map backgrounds. <br> Power tool: [Ch 13: Leaflet Storymaps with Google Sheets tutorial](leaflet-storymaps-with-google-sheets.html) |
 | Polyline map <br> ![](images/08-map/map-polyline.png) | Best to show routes (such as trails or transit), with colors for different categories. <br>Easy Tool: [Google My Maps tutorial](mymaps.html) <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html)|
 | Customized point-polyline-polygon map <br> ![](images/08-map/map-point-polygon-polyline.png) | Best to show any combination of points, polylines, or polygons, with customized icons for categories, and colored regions to represent data values. <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
@@ -64,7 +64,7 @@ In most cases, numbers 1-4 represent *point* data because each normally refers t
 
 - a *point map* to show locations with colored or custom icons
 - a *symbol point map* to shows locations with variable-sized images to represent data (such as circles for population size)
-- a *heat point map* to show clusters of locations as hotspots of high frequency
+- a *heat point map* to show clusters of locations as hotspots of high frequency or density
 - a *story map* to show a point-by-point guided tour with a scrolling narrative
 
 In most cases, numbers 5-8 represent *polygon* data because each normally refers to a *geographic boundary* that can be displayed as a shape on a map. These usually work best in *choropleth* maps, which show spatial patterns across regions by coloring polygons to represent data values.
@@ -107,7 +107,7 @@ TODO Above: add "New York City" and "Boston" labels to the county-level map. Dec
 
 When you build a choropleth map, your choices about how to represent data with colors will determine its overall appearance, so it's important to learn key principles. Good choropleth maps make true and insightful geographic patterns clearly visible to readers, whether they are printed in black-and-white on paper or displayed in color on a computer screen. Furthermore, the best choropleth maps are designed to be interpreted correctly by people with colorblindness. For an excellent overview of visualization colors in general, see Lisa Charlotte Rost's "[A Friendly Guide to Colors in Data Visualization](https://blog.datawrapper.de/colorguide/)" and "[How to Pick More Beautiful Colors for Your Data Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html)," both on the Datawrapper blog.^[@rostYourFriendlyGuide2018; @rostHowPickMore2020]
 
-To illustrate key concepts about colors in choropleth map design, let's explore a wonderful tool called [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and Mark Harrower. See the interface in Figure \@ref(fig:map-colorbrewer). Since ColorBrewer is a design assistant, do not expect to upload your data into it to create a map. Instead, ColorBrewer will recommend color palettes that work best with our map data and the type of story we wish to tell, and allow us to export those color codes into our preferred mapping tool.
+To illustrate key concepts about colors in choropleth map design, let's explore a wonderful tool called [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and Mark Harrower.^[See also @brewerDesigningBetterMaps2016] See the interface in Figure \@ref(fig:map-colorbrewer). Since ColorBrewer is a design assistant, do not expect to upload your data into it to create a map. Instead, ColorBrewer will recommend color palettes that work best with our map data and the type of story we wish to tell, and allow us to export those color codes into our preferred mapping tool.
 
 (ref:map-colorbrewer) The ColorBrewer interface: data classes, type of color scheme, and recommended color codes.
 
@@ -152,7 +152,13 @@ TODO: Decide if we should keep or remove the third map, since it's not an ideal 
 knitr::include_graphics("images/08-map/map-principles-classification.png")
 ```
 
-After you select data classes and a color palette, ColorBrewer displays alphanumeric codes that web browsers translate into colors. You can select hexadecimal codes (`#ffffff` is white), RGB codes (`255,255,255` is white), or CMYK codes (`0,0,0,0` is white), and copy or export them into your preferred map tool, if it allows color palettes to be imported.
+After you select data classes and a color palette, ColorBrewer displays alphanumeric codes that web browsers translate into colors. You can select hexadecimal codes (`#ffffff` is white), RGB codes (`255,255,255` is white), or CMYK codes (`0,0,0,0` is white), and export them in different formats, as shown in Figure \@ref(fig:colorbrewer-export), if your preferred map tool allows you to import color palettes.
+
+(ref:colorbrewer-export) Click open the *Export* tab to display your color palette codes in various formats.
+
+```{r colorbrewer-export, out.width=435, fig.cap="(ref:colorbrewer-export)"}
+knitr::include_graphics("images/08-map/colorbrewer-export.png")
+```
 
 ### Choose Color Intervals to Group Choropleth Map Data {-}
 
@@ -251,7 +257,7 @@ knitr::include_graphics("images/08-map/batchgeo-template.png")
 knitr::include_graphics("images/08-map/batchgeo-paste.png")
 ```
 
-4. Click the *Validate and Set Options* button to inspect or adjust how BatchGeo will upload your data fields and preview a pop-up window, as shown in Figure \@ref(fig:batchgeo-validate). Click the *Advanced* button to see additional options. Then click the *Map* button.
+4. Click the *Validate and Set Options* button to inspect or adjust how BatchGeo will upload your data fields and preview a pop-up window, as shown in Figure \@ref(fig:batchgeo-validate). Click the *Advanced* button to see additional options to change the basemap layer or point symbols. Then click the *Make Map* button.
 
 (ref:batchgeo-validate) Click the *Validate* button to inspect and preview your data and advanced options.
 
@@ -259,7 +265,7 @@ knitr::include_graphics("images/08-map/batchgeo-paste.png")
 knitr::include_graphics("images/08-map/batchgeo-validate.png")
 ```
 
-5. In the *Map* window, enter a title and set other options, as shown in Figure \@ref(fig:batchgeo-save). Insert your email address to receive a link to your online map. Click *Save Map*.
+5. In the *Map* window, click the *Save and Continue* button to enter a title and set other options, such making your map *public* or *unlisted*, as well as customizing the layout, as shown in Figure \@ref(fig:batchgeo-save). Insert your email address to receive a link to your online map. Click *Save Map*.
 
 (ref:batchgeo-save) Be sure to enter your email address to receive a link to your online map.
 
@@ -281,7 +287,7 @@ Now that you've learned about one tool to create point maps, let's compare it wi
 
 ## Point Map with Google My Maps {- #mymaps}
 
-TODO BELOW: Explain how Google My Maps is different from Google Maps; mention at the top there are more options than points; DECIDE if this sample data about Nigerian airports is the best fit, since it's great to have international examples but unsure if Shapefile-to-CSV transormation makes sense here, as new users probably need to tool to geocode their data.
+TODO BELOW: Explain how Google My Maps is different from Google Maps; mention at the top there are more options than points; DECIDE if this sample data about Nigerian airports is the best fit, since it's great to have international examples but unsure if Shapefile-to-CSV transormation makes sense here, as new users probably need the tool to geocode their data.
 
 [My Maps](https://www.google.com/maps/about/mymaps/) is Google's service
 that allows users to create custom maps using Google Maps platform.
@@ -371,13 +377,13 @@ knitr::include_graphics("images/08-map/mymaps-color-annotated.png")
 ```
 
 Click on the layer name, which by default is set to the name of imported file (`nigeria-airports.csv`),
-and change it to *Nigerian Airports*. Alternatively open a kebab menu to the right of the layer name, and choose *Rename this layer*.
+and change it to *Nigerian Airports*. Alternatively open a kebab menu to the right of the layer name, and choose *Rename this layer*, and then click *Save*.
 
 You can accompany each marker with a label. Click *Uniform style* under the layer, and choose *Alt_name*
 in the *Set labels* dropdown menu. You will see alternative airport names, such as *BENIN*, displayed
-to the right of the markers.
+beneath the markers.
 
-Click *Preview* to see how the map looks like outside of the My Maps editing studio.
+Click *Preview* to see how the map looks like outside of the My Maps editing studio. Additionally, you can add photos, directions, lines, etc., and display or hide columns by checking or unchecking them when clicking on a map point.
 
 ### Share Your Google My Map {-}
 
@@ -434,9 +440,9 @@ Datawrapper splits the process of creating a map into four steps: select map, ad
 
 Good maps often require [cleaning up messy data as described in Chapter 5](clean.html). In our spreadsheet we narrowed the original list down to about 300 cities with more than 100,000 residents in either 2010 or 2019. Also, since we're relying on Datawrapper to correctly identify *place names*, we combined *city* and *state* into one column to improve geocoding accuracy. Learn more about [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names). Also, we created a new column named *Percent Change*, which we calculated this way: `(2019 - 2010) / 2010 * 100`.
 
-2. Go to *File > Download* in CSV format to save the data to your local computer.
+2. In the Google Sheet, go to *File > Download* and select the Comma-Separated Values (CSV) format to save the data to your local computer.
 
-3. Open [Datawrapper](https://datawrapper.de), click the *New Map* button, and select *Symbol map* as shown in Figure \@ref(fig:datawrapper-symbolmap-start).
+3. Open [Datawrapper](https://datawrapper.de), click on *Start Creating*, then the *New Map* button, and select *Symbol map* as shown in Figure \@ref(fig:datawrapper-symbolmap-start).
 
 (ref:datawrapper-symbolmap-start) Start to create a symbol map in Datawrapper.
 
@@ -480,7 +486,9 @@ knitr::include_graphics("images/08-map/datawrapper-symbolmap-colors.png")
 knitr::include_graphics("images/08-map/datawrapper-symbolmap-intervals.png")
 ```
 
-10. Click the *Annotate* tab to insert a title, source notes, credits, and [customize the tooltips as described by Datawrapper Academy](https://academy.datawrapper.de/article/237-i-want-to-change-how-my-data-appears-in-tooltips#change-the-number-format). Proceed to the *Publish & Embed* screen to share your map online.
+10. Under the *Visualize* screen, click the *Annotate* tab to insert a title, source notes, credits, and [customize the tooltips as described by Datawrapper Academy](https://academy.datawrapper.de/article/237-i-want-to-change-how-my-data-appears-in-tooltips#change-the-number-format).
+
+11. Click *Proceed* or advance to the *Publish & Embed* screen to share your work with others. If you logged into your free Datawrapper account, your work is automatically saved online in the *My Charts* menu in the top-right corner of the screen. Also, you can click the blue *Publish* button to generate the code to embed your interactive map on your website, as you'll learn about in [Chapter 10: Embed on the Web](embed.html). In addition, you can *add your chart to River* if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse it. Furthermore, scroll all the way down and click the *Download PNG* button to export a static image of your map. Additional exporting and publishing options require a paid Datawrapper account. Or, if you prefer not to create an account, you can enter your email to receive the embed code.
 
 For assistance and additional options, see the [Datawrapper Academy support pages on symbol maps](https://academy.datawrapper.de/category/278-symbol-maps).
 
@@ -506,9 +514,9 @@ Good maps often require [cleaning up messy data as described in Chapter 5](clean
 
 TODO: DECIDE whether to keep basemap or change to one of the others that now reflect DC. DECIDE whether to mention other types of codes recognized by Datawrapper, which vary with map type, such as FIPS and ANSI.
 
-2. Go to *File > Download* in CSV format to save the data to your local computer.
+2. In the Google Sheet, go to *File > Download* and select the Comma-Separated Values (CSV) format to save the data to your local computer.
 
-3. Open [Datawrapper](https://datawrapper.de), click the *New Map* button, and select *Choropleth map* as shown in Figure \@ref(fig:datawrapper-map-choose). No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.
+3. Open [Datawrapper](https://datawrapper.de), click on *Start Creating*, then click the *New Map* button, and select *Choropleth map* as shown in Figure \@ref(fig:datawrapper-map-choose). No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.
 
 (ref:datawrapper-map-choose) In Datawrapper, click *New Map*, and choose *Choropleth*.
 
@@ -549,6 +557,8 @@ knitr::include_graphics("images/08-map/datawrapper-map-match.png")
 
 8. In a similar way on the next screen, click the column of data values that you initially want to map, and click *Matched as values*. For this tutorial, select *Aug2020 Home Values*, then scroll down to click *Next*, then *Go*, then *Proceed*. You'll be able to map other data values in a later step.
 
+TODO Above: Reviewer wants screenshot of Aug2020 Home Values column.
+
 9. In the *Visualize* screen, under the *Refine* tab, click the *wrench symbol* next to the color palette to review the *default* map settings, as shown in Figure \@ref(fig:datawrapper-map-default). Never automatically accept the default map, but it's a good place to start and explore how factors shape its appearance.
 
 (ref:datawrapper-map-default) Under the *Refine* tab, click the *wrench symbol* to see the default map settings.
@@ -581,6 +591,8 @@ Let's move on to finalize the labels and styling of the map before we publish an
 
 12. Under the *Refine* tab, customize the legend format. For example, to convert long numbers (such as 107762) into abbreviated dollars ($ 108 k), we selected *custom format* and inserted the code `($ 0 a)`.
 
+TODO above: Reviewer wants screenshot of where to enter codes in legend format
+
 13. Under the *Annotate* tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure \@ref(fig:datawrapper-map-tooltip). Learn more about [customizing tooltips from Datawrapper Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
 
 (ref:datawrapper-map-tooltip) To edit tooltips, click the blue column names or use drop-down menus to format the codes.
@@ -589,7 +601,10 @@ Let's move on to finalize the labels and styling of the map before we publish an
 knitr::include_graphics("images/08-map/datawrapper-map-tooltip.png")
 ```
 
-14. Finally, proceed to the *Publish and Embed* screen to obtain an online link for your map, an iframe code that you will learn how to use in [Chapter 10: Embed on the Web](embed.html), and a static PNG image you can download.
+TODO above: Reviewer wants example of how to customize tooltips and add labels (annotations?) here
+
+
+14. Finally, click *Proceed* or advance to the *Publish & Embed* screen to share your work with others. Follow the prompts, or the more detailed Datawrapper tutorial above, to obtain an embed code to your interactive map, and learn more about your next steps in [Chapter 10: Embed on the Web](embed.html).
 
 Learn more about [choropleth map design in this excellent series of posts by the Datawrapper Academy](https://academy.datawrapper.de/category/93-maps).
 

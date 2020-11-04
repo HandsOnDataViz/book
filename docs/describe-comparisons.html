@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Precisely Use Comparison Words | Hands-On Data Visualization</title>
+  <title>Precisely Describe Comparisons | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Precisely Use Comparison Words | Hands-On Data Visualization" />
+  <meta property="og:title" content="Precisely Describe Comparisons | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Precisely Use Comparison Words | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Precisely Describe Comparisons | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-03" />
+<meta name="date" content="2020-11-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -203,7 +203,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="6" data-path="comparisons.html"><a href="comparisons.html"><i class="fa fa-check"></i><b>6</b> Make Meaningful Comparisons</a>
 <ul>
-<li class="chapter" data-level="" data-path="comparison-words.html"><a href="comparison-words.html"><i class="fa fa-check"></i>Precisely Use Comparison Words</a></li>
+<li class="chapter" data-level="" data-path="describe-comparisons.html"><a href="describe-comparisons.html"><i class="fa fa-check"></i>Precisely Describe Comparisons</a></li>
 <li class="chapter" data-level="" data-path="normalize.html"><a href="normalize.html"><i class="fa fa-check"></i>Normalize Your Data</a></li>
 <li class="chapter" data-level="" data-path="biased-comparisons.html"><a href="biased-comparisons.html"><i class="fa fa-check"></i>Beware of Biased Comparisons</a></li>
 </ul></li>
@@ -340,12 +340,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="comparison-words" class="section level2 unnumbered" number="">
-<h2>Precisely Use Comparison Words</h2>
-<p>TODO: Consider alternative section name: “Precisely Describe Comparisons” or “Describe Comparisons with Precision” or “Use Comparison Words Precisely”</p>
+<div id="describe-comparisons" class="section level2 unnumbered" number="">
+<h2>Precisely Describe Comparisons</h2>
 <p>Sometimes we make poor comparisons because we fail to clarify our meaning of commonly-used words that can have different definitions. Three troublesome words are <em>average</em>, <em>percent</em>, and <em>causes</em>. We use them loosely in everyday conversation, but they require more precision when working with data.</p>
 <p>Imagine a series of numbers: 1, 2, 3, 4, 5. When calculating the <em>average</em>, by hand or <a href="calculate.html">with a built-in spreadsheet formula as described in chapter 3</a>, we add up the sum and divide by the count of numbers. A more precise term is the <em>mean</em>, which in this case equals 3. A different term is the <em>median</em>, which refers to the number in the middle of the ordered series, also known as the <em>50th percentile</em>, which in this case is also 3.</p>
-<p>When working with data, the terms <em>median</em> and <em>percentile</em> are more useful terms when making comparisons because they resist the influence of <em>outliers</em> at the extreme ends of the series. For example, imagine the same umbers as above, but replace the 5 with 100 to serve as an outlier. Suddenly the mean jumps up to 22, but the median remains the same at 3, as shown in Figure <a href="comparison-words.html#fig:mean-vs-median">6.1</a>. There’s an old joke that when a billionaire walks into a room, everyone becomes a millionaire—on average—but the median remains the same. Since we ordinary people don’t actually become richer by the presence of the billionaire outlier among us, the median is a better term to make meaningful comparisons about the overall distribution of the data.</p>
+<p>When working with data, the terms <em>median</em> and <em>percentile</em> are more useful terms when making comparisons because they resist the influence of <em>outliers</em> at the extreme ends of the series. For example, imagine the same numbers as above, but replace the 5 with 100 to serve as an outlier. Suddenly the mean jumps up to 22, but the median remains the same at 3, as shown in Figure <a href="describe-comparisons.html#fig:mean-vs-median">6.1</a>. There’s an old joke that when a billionaire walks into a room, everyone becomes a millionaire—on average—but the median remains the same. Since we ordinary people don’t actually become richer by the presence of the billionaire outlier among us, the median is a better term to make meaningful comparisons about the overall distribution of the data.</p>
 
 <div class="figure"><span id="fig:mean-vs-median"></span>
 <img src="images/06-comparisons/mean-vs-median.png" alt="The median is a more useful comparative term than average or mean because it resists the influence of outliers." width="350" />
@@ -353,15 +352,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Figure 6.1: The <em>median</em> is a more useful comparative term than <em>average</em> or <em>mean</em> because it resists the influence of outliers.
 </p>
 </div>
-<p><em>Percent</em> is another common term that becomes more useful for comparisons when we use it more precisely. Nearly everyone understands how <em>percentage</em> refers to a <em>ratio</em>, such as <a href="https://en.wikipedia.org/wiki/Trident_gum">the 1960s commercial</a> that curiously claimed how 4 out of 5 dentists (or 80 percent) recommend sugarless gum for their patients who chew gum. Even if we never saw the survey data, nor understood how the fifth dentist resisted such intense peer pressure, we intuitively grasp the concept of percentage. [TODO: Discuss if anyone gets my gum reference here, or if it just shows my age!]</p>
-<p>But troubles sometimes arise when using the word to compare numbers, and here’s where more precision helps. One term is <em>percent change</em> (or percent increase or decrease), which works best when comparing <em>old versus new values</em>. For example, if 4 dentists recommended sugarless gum in 1960, but peer pressure finally prevailed and 5 dentists recommend it in 2020, we calculate the percent change as <code>(New value - Old value) / Old value</code>, or <code>(5-4)/4 = 1/4 = 0.25 = 25%</code>.</p>
+<p><em>Percent</em> is another common term that becomes more useful for comparisons when we use it more precisely. Nearly everyone understands how <em>percentage</em> refers to a <em>ratio</em>, such as <a href="https://en.wikipedia.org/wiki/Trident_gum">the old 1970s commercial</a> that curiously claimed how 4 out of 5 dentists (or 80 percent) recommend sugarless gum for their patients who chew gum.<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> Even if we never saw the survey data, nor understood how the fifth dentist resisted such intense peer pressure, we intuitively grasp the concept of percentage.</p>
+<p>But troubles can arise when using that word to compare numbers, and here’s where we need to carefully choose our words. One term is <em>percent change</em> (or percent increase or decrease), which works best when comparing <em>old versus new values</em>. For example, if 4 dentists recommended sugarless gum in 1960, but peer pressure finally prevailed and 5 dentists recommend it in 2020, we calculate the percent change as <code>(New value - Old value) / Old value</code>, or <code>(5-4)/4 = 1/4 = 0.25 = 25%</code>.</p>
 <p>A different term is <em>percentage points</em>, which works best when comparing <em>old versus new percentages</em>. For example, if 80 percent of dentists recommended sugarless gum in 1960, but 100 percent recommended it in 2020, we can compare the two figures by calculating the difference as <code>New percentage - Old percentage = 100% - 80%  = a difference of 20 percentage points</code>.</p>
 <p>When we use each term accurately, there are two correct ways to compare these figures. One way is to state that “The number of dentists who recommended sugarless gum increased 25 percent over time.” Another way is to state that “The percentage of dentists who recommended sugarless gum increased 20 percentage points over time.” Both statements are accurate.</p>
 <p>Avoid loosely using the word “percent” without being precise about its meaning, since you’re likely to confuse people, or worse, mislead them about the facts. Imagine a politician who proposes to raise the sales tax on products and services you purchase from 5 to 6 percent. If that politician says, “it’s only a 1 percent increase,” they’re wrong. Instead, there are two truthful ways describe this change. One way is to state that tax “will increase 20 percent” because <code>(6-5)/5 = 0.20</code>. Another way is to state that the tax “will increase by 1 percentage point” because <code>6% - 5% = a difference of 1 percentage point</code>. See why the politician preferred to say it their way, rather than the correct way? Don’t let anyone fool you with percentages, and make sure you use these terms precisely in your own work to avoid misleading others.</p>
-<p>TODO above: Decide if the text and examples are clear. I like the sugarless gum example, but can replace it if it’s too obscure, or if the change from 4 to 5 out of 5 isn’t useful. Also, I simplified the politician’s example from reading this real-life example, but I think the hypothetical increase from 5% to 6% is clearer: “Why This Can Be Tricky…For instance, when President George W. Bush proposed partially privatizing Social Security in 2004, some commentators said that only ‘2 percent’ of the average American’s Social Security taxes would be funneled into private accounts. That was a misleading statement, said another commentator, John Allen Paulos on ABC News. He looked at the numbers and said the writers meant that the average person’s income taxes directed toward Social Security would drop from 6.2 to 4.2 percent, which is a change of 2 percentage points. The actual percent change, he said, was 32 percent.” <a href="https://sciencing.com/difference-between-percent-percentage-point-8409115.html" class="uri">https://sciencing.com/difference-between-percent-percentage-point-8409115.html</a></p>
-<p>A final recommendation about using more precise language is to be cautious with words that suggest a <em>cause-and-effect relationship</em> in your data. In everyday conversation, there are many ways that we loosely imply that a causal relationship, where an action directly results in a reaction. For example, when we say one thing “leads to” another, or “promotes” growth, or “sparks” change, those words suggest causality. While that’s fine in daily conversation, we need to choose our words more carefully when discussing data, using these three concepts. The first step is to describe any <em>correlation</em> between two variables, which means to show how they are associated or related interdependently. But as the saying goes, correlation is not causation. Second, in order to show causation, we need to prove both correlation and offer a <em>persuasive theory</em> for how one factor (sometimes called the independent variable) creates a change in another factor (called the dependent variable). Third, we need to identify and isolate any <em>confounding variables</em> that we have not considered that may also influence the cause-and-effect relationship. While the details are beyond the scope of this book, be mindful of the concepts—and choose your words carefully—when working with data.</p>
+<p>A final recommendation about using more precise language is to be cautious with words that suggest a <em>cause-and-effect relationship</em> in your data. In everyday conversation, there are many ways that we loosely imply that a causal relationship, where an action directly results in a reaction. For example, when we say one thing “leads to” another, or “promotes” growth, or “sparks” change, those words suggest causality. While that’s fine in daily conversation, we need to choose our words more carefully when discussing data, using three concepts. The first step is to describe any <em>correlation</em> between two variables, which means to show how they are associated or related interdependently. But statisticians always warn us that <a href="https://en.wikipedia.org/wiki/Correlation_does_not_imply_causation">correlation does not imply causation</a>. The fact that two things are related does not necessarily mean that one causes the other to happen. In order to show causation, we must take the second step of proving both correlation and demonstrating a <em>persuasive theory</em> for how one factor (sometimes called the independent variable) creates a change in another factor (called the dependent variable). Third, we need to identify and isolate any <em>confounding variables</em> that we have not considered that may also influence the cause-and-effect relationship. While the details are beyond the scope of this book, be mindful of the concepts—and choose your words carefully—when working with data.</p>
 <p>See also <a href="table-design.html">table design recommendations for showing data correlations and possible causal relationships</a> in Chapter 9: Table Your Data.</p>
 <p>Now that you have a clearer understanding of how to use key words to describe data relationships more precisely, in the next section you’ll build on this knowledge and adjust data to create more meaningful comparisons.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="19">
+<li id="fn19"><p><span class="citation">Andrew Adam Newman, “Selling Gum with Health Claims,” <em>The New York Times: Business</em>, July 27, 2009, <a href="https://www.nytimes.com/2009/07/28/business/media/28adco.html" role="doc-biblioref">https://www.nytimes.com/2009/07/28/business/media/28adco.html</a></span><a href="describe-comparisons.html#fnref19" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

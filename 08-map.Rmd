@@ -40,13 +40,11 @@ basic elements of maps, especially interactive ones featured in this book. Simil
 knitr::include_graphics("images/08-map/map-principles-map.png")
 ```
 
-Map data is presented in layers. The top layer generally consists of a combination of *points*, *lines* (we call them *polylines*), and *polygons*. Points represent places, usually expressed as a pair of coordinates (latitude and longitude), which may be illustrated by location markers. For example, points can represent locations of restaurants, schools, or cities in zoomed-out (small-scale) maps. Polylines are connected strings of points, and we place the “poly-” prefix before “lines” to remind us that they may contain multiple branches, not just straight segments. Polylines may represent roads, rivers, or administrative boundaries. Polygons represent closed areas defined by lines, such as building footprints, parks, or country outlines.
-
-Note: This point/polyline/polygon terminology applies to so-called vector maps that are popular on the web, and as a result relevant to this book. We briefly discuss the difference between vector and raster maps in [GeoJSON and Geospatial Data](https://handsondataviz.org/geojson.html) section of Chapter 14.
+Map data is presented in layers. The top layer generally consists of a combination of *points*, *lines* (we call them *polylines*), and *polygons*. Points represent places, usually expressed as a pair of coordinates (latitude and longitude), which may be illustrated by location markers. For example, points can represent locations of restaurants, schools, or cities in zoomed-out (small-scale) maps. Polylines are connected strings of points, and we place the “poly-” prefix before “lines” to remind us that they may contain multiple branches, such as rivers, roads, or transportation networks. Polygons represent closed areas defined by lines, such as building footprints, census tracts, or state or national boundaries. These terms about points, polylines, and polygons refer to so-called *vector* interactive maps on the internet, like the ones you'll create in this chapter. Learn more about how these differ from *raster* map images in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter 14.
 
 On interactive maps, any of these top-layer elements may display a hidden *tooltip* (when you hover the cursor over them) or a *popup* (when you click on them) that reveals additional information about its properties. Below these top data layers is the *basemap* layer, usually displayed as a seamless grid of tiles that cover the globe. Typically a basemap displays either satellite imagery (also known as raster tiles) or pictorial displays of streets and buildings (also known as vector tiles). Interactive maps often include zoom controls (`+` and `-` buttons) that allow you to view data from various "distances," which change the display of the tile layer. The *legend* identifies the meaning of shapes or colors on the map. Maps may include a *north arrow* or *scale* to orient readers to direction and relative distance. Good maps also add the data sources, clarifying notes, and credits to the individuals or organizations that created them.
 
-We spell out these definitions to help newer mapmakers to learn some general rules and to avoid making common mistakes. Many of the our guidelines about map design are inspired by excellent resources such as Datawrapper Academy posts about symbol maps and [choropleth maps](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps)
+We spell out these definitions to help newer mapmakers to learn some general rules and to avoid making common mistakes. Many of the our guidelines about map design are inspired by excellent resources such as Datawrapper Academy posts about [symbol maps](https://academy.datawrapper.de/category/278-symbol-maps) and [choropleth maps](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps)
 
 ### Clarify Point versus Polygon Data {-}
 
@@ -72,13 +70,11 @@ In most cases, numbers 1-4 represent *point* data because each normally refers t
 
 In most cases, numbers 5-8 represent *polygon* data because each normally refers to a *geographic boundary* that can be displayed as a shape on a map. These usually work best in *choropleth* maps, which show spatial patterns across regions by coloring polygons to represent data values.
 
-TODO DISCUSS: Do we need to include small abstract map type images here to reinforce the concept? Or are the maps images in Table 8.1 above sufficient?
-
 These point-versus-polygon rules apply *most* of the time, but not always, and exceptions can be made depending on your data story. First, it is *possible*, but not common, to represent all items 1-8 as *point* data, and display them on any of the point-style maps above. For example, to tell a data story about population growth for California cities, it would make sense to create a symbol point map with different-sized circles to represent data for each city. To do this, your map tool would need to find the center-point of the City of Los Angeles polygon boundary in order to place its population circle on a specific point on the map. A second way the point-versus-polygon rule gets blurry is because some places we normally consider to be map points *also* have polygon-shaped borders. For example, if you enter "Balboa Park" into Google Maps, it will display the result as a map marker, which suggests it is point data. But Balboa Park also has a geographic boundary that covers 1.8 square miles (4.8 square kilometers). If you told a data story about how much land in San Diego was devoted to public space, it would make sense to create a choropleth map that displays Balboa Park as a polygon rather than a point. Third, it's also possible to transform points into polygon data with [pivot tables, a topic we introduced in Chapter 3](pivot.html). For example, to tell a data story about the number of hospital beds each California county, you could obtain point-level data about beds in each hospital, then pivot them to sum up the total number of beds in each county, and display these polygon-level results in a choropleth map. See a more detailed example in the [Pivot Points into Polygon Data section of Chapter 14: Transform Your Map Data](pivot-point-to-polygon.html)
 
 In summary, clarify if your spatial data should represent points or polygons, since those two categories are sometimes confused. If you envision them as points, then create a point-style map; or if polygons, then create a choropleth map. Those are the most common methods used by mapmakers, but there are plenty of exceptions, depending on your data story.
 
-### Avoid Two Variables on One Map {-}
+### Generally Map One Variable, Not Two {-}
 Newcomers to data visualization sometimes are so proud of placing one variable on a map that they figure two variables must be twice as good. But this usually is not true. In general, we recommend against placing two variables on the same map, because it's very difficult for most readers to recognize patterns that help them to grasp your data story. For example, look at what happens when you try to place one variable (using a symbol point map) on top of another variable (using a choropleth map), as shown with imaginary data in Figure \@ref(fig:map-two-variables). It's difficult to recognize patterns when a symbol point map is placed on a choropleth map.
 
 (ref:map-two-variables) Avoid placing a symbol point map on top of a choropleth map, because it's hard to see the relationship between two variables.
@@ -91,20 +87,18 @@ Consider alternative ways to visualize the relationship between two variables. R
 
 TODO: decide if the figure works above; also decide if supplemental images are needed, perhaps as "bad viz" and "better viz" examples
 
-### Usually Choose Smaller Geographies for Choropleth Maps {-}
+### Generally Choose Smaller Geographies for Choropleth Maps {-}
 Choropleth maps are best for showing geographic patterns across regions by coloring polygons to represent data values. Therefore, we generally recommend selecting *smaller* geographies to display more *granular* patterns, since larger geographies display aggregated data that may hide what's happening at lower levels. Geographers refer to this concept as the [modifiable aerial unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem), which means that the way you slice up your data affects how we analyze its appearance on the map. Stacking together lots of small slices reveals more detail than one big slice.
 
-For example, compare the two choropleth maps of typical home values in the Northeastern United States in according to [Zillow research data](https://www.zillow.com/research/data/) for August 2020. Zillow defines typical values as a smoothed, seasonally adjusted measure of all single-family residences, condos, and coops in the 35th to 65th percentile range, similar to the median value at the 50th percentile, with some additional lower- and higher-value homes. Both choropleth maps use the same scale. The key difference is the size of the geographic units: the first map shows home values at the larger state level, while the second map shows home values at the smaller county level, as shown in Figure \@ref(fig:choropleth-use-smaller-geos).
+For example, compare the two choropleth maps of typical home values in the Northeastern United States in according to [Zillow research data](https://www.zillow.com/research/data/) for September 2020. Zillow defines typical values as a smoothed, seasonally adjusted measure of all single-family residences, condos, and coops in the 35th to 65th percentile range, similar to the median value at the 50th percentile, with some additional lower- and higher-value homes. Both choropleth maps use the same scale. The key difference is the size of the geographic units: the first map shows home values at the larger state level, while the second map shows home values at the smaller county level, as shown in Figure \@ref(fig:zillow-northeast).
 
-(ref:choropleth-use-smaller-geos) Zillow typical home values in September 2020 shown at the state level (left) and county level (right).
+(ref:zillow-northeast) Zillow typical home values in September 2020 shown at the larger state level (left) versus the smaller county level (right).
 
-```{r choropleth-use-smaller-geos, fig.cap="(ref:choropleth-use-smaller-geos)"}
+```{r zillow-northeast, out.width=500, fig.cap="(ref:zillow-northeast)"}
 knitr::include_graphics("images/08-map/zillow-northeast.png")
 ```
 
-Which map is best? Since both are truthful depictions of the data, the answer depends on the story you wish to tell. If you want to emphasize state-to-state differences, choose the first map because it clearly highlights how typical Massachusetts home prices are higher than those in surrounding Northeastern states. Or if you want to emphasize variation inside states, choose the second map, which demonstrates higher price levels in the New York City and Boston metropolitan regions, in comparison to more rural counties in those two states. If you're unsure, it's usually better to map smaller geographies, because it's possible to see both state-level and within-state variations at the same time, if the design includes appropriate labels and geographic outlines. But don't turn *smaller is better* into a rigid rule, since it doesn't work as you move further down the scale. For example, if we created a third map to display every individual home sale in the Northeastern US, it would be *too detailed* to see meaningful patterns. Sometimes larger-level geography tells a simple story more clearly.
-
-TODO ~~Above: add "New York City" and "Boston" labels to the county-level map. Decide if we should add state-level outlines and state names to county-level map. Do we wish to add a third map that's too detailed to illustrate the Goldilocks effect? -- zillow only goes down to zipcode level with a lot of missing data so won't be effective ~~
+Which map is best? Since both are truthful depictions of the data, the answer depends on the story you wish to tell. If you want to emphasize state-to-state differences, choose the first map because it clearly highlights how typical Massachusetts home prices are higher than those in surrounding Northeastern states. Or if you want to emphasize variation inside states, choose the second map, which demonstrates higher price levels in the New York City and Boston metropolitan regions, in comparison to more rural counties in those two states. If you're unsure, it's usually better to map smaller geographies, because it's possible to see both state-level and within-state variations at the same time, if the design includes appropriate labels and geographic outlines. But don't turn *smaller is better* into a rigid rule, since it doesn't work as you move further down the scale. For example, if we created a third map to display every individual home sale in the Northeastern US, it would be *too detailed* to see meaningful patterns. Look for just the right level of geography to clearly tell your data story.
 
 ## Design Choropleth Colors & Intervals {- #design-choropleth}
 
@@ -175,7 +169,7 @@ Some mapping tools allow you to choose two different *types of color intervals* 
 knitr::include_graphics("images/08-map/interval-types.png")
 ```
 
-If both options exist, which one is best? There is no clear map design rule about this. On one hand, some recommend using continuous intervals to show greater geographical diversity, except when it's important to your data story to display a threshold, where steps make sense to show areas above or below a certain line. On the other hand, some point out that people are quite bad at distinguishing different hues on a continuous scale, so recommend using clearly-defined steps to help readers match colors to data values in your legend. Therefore, our general advice is to make design choices that are both honest and insightful: tell the truth about the data and also draw our attention to what matters about this interpretation.[TODO: is this sufficient or should we add examples or cite different designers here? Cite Datawrapper Academy on "honesty and usefulness" https://academy.datawrapper.de/article/117-color-palette-for-your-map]
+If both options exist, which one is best? There is no clear map design rule about this. On one hand, some recommend using [continuous intervals to show greater geographical diversity](https://academy.datawrapper.de/article/117-color-palette-for-your-map), except when it's important to your data story to display a threshold, where steps make sense to show areas above or below a certain line. On the other hand, some point out that people are quite bad at distinguishing different hues on a continuous scale, so recommend using clearly-defined steps to help readers match colors to data values in your legend. Therefore, our general advice is to make design choices that are both honest and insightful: tell the truth about the data and also draw our attention to what matters about this interpretation.
 
 Some mapping tools also allow you to choose how to *interpolate* your data, meaning the method for grouping numbers to represent similar colors on your map. This may involve a two-part decision about step dividers and numerical methods.
 
@@ -198,21 +192,21 @@ knitr::include_graphics("images/08-map/intervals-datawrapper-tableau.png")
 - *Linear* means that the values are placed in a straight line, from lowest to highest. This method works best when the data are evenly distributed, otherwise the colors draw too much attention to the outliers at the low and high ends of the scale. If your goal is to emphasize the outliers, however, then linear color scale may do the trick.
 - *Quantiles* means that the values are divided into groups of an equal number. More specifically, *quartiles*, *quintiles*, and *deciles* mean dividing the values into four, five, or ten groups of equal quantity. This method works best when the data are not evenly distributed, because it uses colors to draw more attention to the diversity of groups inside the scale, not just the low and high ends.
 - *Rounded values* are similar to quantiles, but decimals in the scale are replaced with rounded numbers that look nicer to readers' eyes, such as multiples of 5s or 10s.
-- *Natural breaks (Jenks)* groups close values together while maximizing the "distance" between different groups. It  offers a compromise between linear (which emphasizes the extreme ends) and quantiles (which emphasize internal diversity).
+- *Natural breaks (Jenks)* groups close values together while maximizing differences between other groups. It offers a compromise between linear (which emphasizes the extreme ends) and quantiles (which emphasize internal diversity).
 - *Custom* allows you to manually place dividers wherever you wish along the color scale. We generally recommend to *not* use custom settings because they are more likely to create a misleading map, as you'll learn in [Chapter 15: Detect Lies and Reduce Data Bias](detect.html).
 
-TODO: CONFIRM definitions above; add max/mid/min as an option? decide if these definitions are sufficient, or consider adding small maps to visually contrast the differences, as shown in https://academy.datawrapper.de/article/117-color-palette-for-your-map; cite this source
+TODO: DECIDE on adding small maps to visually contrast the differences, as shown in https://academy.datawrapper.de/article/117-color-palette-for-your-map; and also https://theconversation.com/next-slide-please-data-visualisation-expert-on-whats-wrong-with-the-uk-governments-coronavirus-charts-149329
 
 Which interpolation method is best? While there are no rigid rules, some methods above work better for different types of data stories. If you wish to emphasize the lows and highs in your data, choose linear because it uses color to draw attention to the extreme ends of the scale. Or if you wish to emphasize geographic diversity in your data, consider quantiles (or any of its cousins) because they use color to differentiate the middle portions of the scale. Or if you're not sure what your data looks like, [create a histogram like you learned in Chapter 7: Chart Your Data](chart-google.html) to visualize it and help make wise map design choices. [TODO: demonstrate a histogram with map data here? https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales]
 
 In any case, be very aware of how color palettes and interpolation dramatically shape the appearance of choropleth maps and how the data appears in readers' eyes. Always create maps show us the story and tell the truth.  [TODO: ADD THIS? In general, Datawrapper recommends choosing ranges to make sure readers "see all the differences in the data," rather than hiding them out of sight.... cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps]
 TODO ALSO: Review all of the recommendations in the Datawrapper Academy post above and decide ones to include as rules versus recommendations vs neither. For example: "use the same intervals... 0, 25, 50 instead of 0, 15, 50..." runs counter to other advice we give about interpolation.
 
+TODO: Brainstorm about way to visualize interpolation with sample data
+
 ## Normalize Choropleth Map Data {- #normalize-choropleth}
 
 We introduced the concept of [normalizing data in Chapter 6: Make Meaningful Comparisons](normalize.html). Normalization means adjusting data that was collected using different scales into a common scale, in order to make more appropriate comparisons. For example, it makes little sense to compare the total number of Covid cases between nations with very different populations, such as 9.61 million cases in the United States (estimated population 328.2 million) and 0.49 million cases in Belgium (estimated population 11.5 million) as of November 6, 2020. A better strategy is to normalize the data by comparing cases per capita (such as 2,928 cases per 100,000 in the United States versus 4,260 per 100,000 in Belgium) to adjust for prior differences in population.
-
-TODO: Update numbers above
 
 In the same way, choropleth maps work best when they display relative values (such as percentages or per capita rates) rather than absolute values (such as the raw number of people). If you ignore normalization when creating a choropleth map and display raw numbers, you'll essentially recreate a population map, which doesn't tell us anything new. For example, compare two maps shown in Figure \@ref(fig:normalize-map-data). They both are about Covid-19 cases in the continental US as of June 26, 2020. Figure \@ref(fig:normalize-map-data)a shows total number of recorded cases per state, and Figure \@ref(fig:normalize-map-data)b shows Covid-19 cases adjusted by the state's population. Darker colors represent higher values. Do you notice any differences in spatial patterns?
 
@@ -389,7 +383,7 @@ Click *Preview* to see how the map looks like outside of the My Maps editing stu
 
 ### Share Your Google My Map {-}
 
-If you are happy with the result, click *Share* button underneath the map's title and description. In the modal window, make sure *Enable link sharing* is activated (see Figure \@ref(fig:mymaps-share)), and copy the generated link. You can share with link with anyone, with or without a Google account, and they will be able to see your map.
+If you are happy with the result, click *Share* button underneath the map's title and description. In the modal window, make sure *Enable link sharing* is activated, as shown in Figure \@ref(fig:mymaps-share), and copy the generated link. You can share with link with anyone, with or without a Google account, and they will be able to see your map.
 
 (ref:mymaps-share) Make sure anyone with the link can view your map before you share it.
 
@@ -397,7 +391,7 @@ If you are happy with the result, click *Share* button underneath the map's titl
 knitr::include_graphics("images/08-map/mymaps-share.png")
 ```
 
-If you want to embed the map as an iframe, from the main kebab menu to the right of the map title, choose *Embed on my site* (Figure \@ref(fig:mymaps-embed)). This will generate an HTML code snippet that you can copy to your website.
+If you want to embed the map as an iframe, from the main kebab menu to the right of the map title, choose *Embed on my site*, as shown in Figure \@ref(fig:mymaps-embed). This will generate an HTML embed code that you can copy to your website, as described in [Chapter 10: Embed on the Web](embed.html).
 
 (ref:mymaps-embed) My Maps can generate an iframe code to include the map on your own website.
 
@@ -636,7 +630,7 @@ Good maps often require [cleaning up messy data as described in Chapter 5](clean
 
 3. Launch Tableau Public. When you first open it, you will see the *Connect* menu on the left-hand side that displays file formats you can upload. Choose the *Text file* format and upload the healthcare spending CSV data file you've just downloaded in the previous step.
 
-Note: Tableau lets you access data directly from Google Sheets that live in your Drive using *Connect > To a Server* option. So instead of downloading a CSV file in step 2, you could have made a copy of the sheet, and connected to it directly. 
+Note: Tableau lets you access data directly from Google Sheets that live in your Drive using *Connect > To a Server* option. So instead of downloading a CSV file in step 2, you could have made a copy of the sheet, and connected to it directly.
 
 4. In the *Data Source* screen, inspect the dataset, which contains three columns: Country Name, Country Code, and Health Spending As % of GDP. Notice that a small globe appears at the top of the Country Name and Country Code columns, which shows that Tableau Public successfully recognized these as geographic data, rather than string or text data. Sometimes Tableau does not recognize location data automatically, so you need to manually change the data type. To do so, click the data type icon (e.g. globe or a green `#` for numeric values), and then choose *Geographic Role > Country/Region* as shown in Figure \@ref(fig:tableau-data-geographic).
 
@@ -718,26 +712,6 @@ Warning: Tableau may not be the best tool to create choropleth maps where you wa
 
 Now that you know that Tableau can be used not just for charts, but for maps as well, let's see how to use Socrata's visualization capabilities to build a map that always uses the most current data available.
 
-~~12. TODO: Improve these instructions.... Create Dashboard and Publish Your Map... change color range menu to floating, place on top of map, add title and sources...~~
-
-<!--
-TODO above to DISCUSS: We might have a mismatch between the data and the tool here. If you do a quick histogram of the military data, most values are clustered around the median, but there's a few really high-spending outliers. This makes it difficult for novices to map in Tableau Public, because the default interpolation is *linear*, and the outliers dominate the appearance of the map. It's not clear to me how to change this to *quartiles* or *natural breaks*, as we do in Datawrapper. Perhaps there are some ideas here: https://help.tableau.com/current/pro/desktop/en-us/maps_howto_choropleth.htm   OR one of these Tableau books by Ryan Sleeper https://learning.oreilly.com/search/?query=author%3A%22Ryan%20Sleeper (but I don't see anything right away that's relevant)  OR another idea is to reconsider the filter instructions below, which I removed because our sample dataset no longer has null values. TODO: after we discuss, see reviewers' comments to address in editorial notes
-
-Places like Greenland and Libya do not have available values, but they are still
-painted with the lightest color, which is misleading. To remove countries with *null* values
-from the map, drag *Values* to the *Filters* card. A popup window will ask you how
-you want to filter, just leave everything unchanged. This will leave the whole range of values,
-and exclude *null* values (see the checkbox in the lower-right corner of the Filter window
-in Figure \@ref(fig:tableau-polygon-filter)).
-
-(ref:tableau-polygon-filter) Filter values to remove countries with no data from display.
-
-```{r tableau-polygon-filter, out.width=400, fig.cap="(ref:tableau-polygon-filter)"}
-knitr::include_graphics("images/08-map/tableau-polygon-filter-annotated.png")
-```
-
--->
-
 ## Current Map with Socrata Open Data {- #map-socrata}
 TODO: revise to emphasize how the map continuously pulls the most current information directly from the open-data repository; in this case, happens to be filtered point map of hospitals in Texas.... TODO: replace with a better example of frequently-updated "live" data?
 
@@ -792,7 +766,7 @@ and in the menu on the right-hand side choose *Visualize > Launch New Visualizat
 knitr::include_graphics("images/08-map/socrata-launch-new-viz-annotated.png")
 ```
 
-In the top menu, click *Map* (globe icon between a scatter chart icon and a calendar). You will see an updated layout of the studio, with the map in the middle, and *Map Layers* and *Map Settings* items in the side menu on the left, as shown in Figure \@ref(fig:socrata-configigure).
+In the top menu, click *Map* (globe icon between a scatter chart icon and a calendar). You will see an updated layout of the studio, with the map in the middle, and *Map Layers* and *Map Settings* items in the side menu on the left, as shown in Figure \@ref(fig:socrata-configure).
 
 (ref:socrata-configure) Your studio should look similar to this once you choose Map as the visualization type.
 

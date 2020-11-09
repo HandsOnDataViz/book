@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-04" />
+<meta name="date" content="2020-11-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -364,31 +364,31 @@ Figure 12.6: Interactive bubble chart with Chart.js. Explore the <a href="https:
 <ol start="3" style="list-style-type: decimal">
 <li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
 </ol>
-<div class="sourceCode" id="cb24"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb24-1"><a href="chartjs-bubble.html#cb24-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Income, Test Scores, and Enrollment in Select </span><span class="sc">\</span></span>
-<span id="cb24-2"><a href="chartjs-bubble.html#cb24-2"></a><span class="st">  Connecticut School Districts, 2009-13&#39;</span><span class="op">;</span></span>
-<span id="cb24-3"><a href="chartjs-bubble.html#cb24-3"></a></span>
-<span id="cb24-4"><a href="chartjs-bubble.html#cb24-4"></a><span class="kw">var</span> POINT_X <span class="op">=</span> <span class="st">&#39;income&#39;</span><span class="op">;</span> <span class="co">// column name for x values in data.csv</span></span>
-<span id="cb24-5"><a href="chartjs-bubble.html#cb24-5"></a><span class="kw">var</span> POINT_X_PREFIX <span class="op">=</span> <span class="st">&#39;$&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;$&#39;</span></span>
-<span id="cb24-6"><a href="chartjs-bubble.html#cb24-6"></a><span class="kw">var</span> POINT_X_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39;%&#39;</span></span>
-<span id="cb24-7"><a href="chartjs-bubble.html#cb24-7"></a></span>
-<span id="cb24-8"><a href="chartjs-bubble.html#cb24-8"></a><span class="kw">var</span> POINT_Y <span class="op">=</span> <span class="st">&#39;grades&#39;</span><span class="op">;</span> <span class="co">// column name for y values in data.csv</span></span>
-<span id="cb24-9"><a href="chartjs-bubble.html#cb24-9"></a><span class="kw">var</span> POINT_Y_PREFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;USD &#39;</span></span>
-<span id="cb24-10"><a href="chartjs-bubble.html#cb24-10"></a><span class="kw">var</span> POINT_Y_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39; kg&#39;</span></span>
-<span id="cb24-11"><a href="chartjs-bubble.html#cb24-11"></a></span>
-<span id="cb24-12"><a href="chartjs-bubble.html#cb24-12"></a><span class="kw">var</span> POINT_R <span class="op">=</span> <span class="st">&#39;enrollment&#39;</span><span class="op">;</span> <span class="co">// column name for radius in data.csv</span></span>
-<span id="cb24-13"><a href="chartjs-bubble.html#cb24-13"></a><span class="kw">var</span> POINT_R_DESCRIPTION <span class="op">=</span> <span class="st">&#39;Enrollment&#39;</span><span class="op">;</span> <span class="co">// description of radius value</span></span>
-<span id="cb24-14"><a href="chartjs-bubble.html#cb24-14"></a><span class="kw">var</span> POINT_R_PREFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// prefix for radius values, eg &#39;USD &#39;</span></span>
-<span id="cb24-15"><a href="chartjs-bubble.html#cb24-15"></a><span class="kw">var</span> POINT_R_POSTFIX <span class="op">=</span> <span class="st">&#39; students&#39;</span><span class="op">;</span> <span class="co">// postfix for radius values, eg &#39; kg&#39;</span></span>
-<span id="cb24-16"><a href="chartjs-bubble.html#cb24-16"></a><span class="kw">var</span> R_DENOMINATOR <span class="op">=</span> <span class="dv">800</span><span class="op">;</span>  <span class="co">// use this to scale the dot sizes, or set to 1</span></span>
-<span id="cb24-17"><a href="chartjs-bubble.html#cb24-17"></a>                          <span class="co">// if your dataset contains precise radius values</span></span>
-<span id="cb24-18"><a href="chartjs-bubble.html#cb24-18"></a></span>
-<span id="cb24-19"><a href="chartjs-bubble.html#cb24-19"></a><span class="kw">var</span> POINT_NAME <span class="op">=</span> <span class="st">&#39;district&#39;</span><span class="op">;</span> <span class="co">// point names that appear in tooltip</span></span>
-<span id="cb24-20"><a href="chartjs-bubble.html#cb24-20"></a><span class="kw">var</span> POINT_COLOR <span class="op">=</span> <span class="st">&#39;rgba(0,0,255,0.7)&#39;</span><span class="op">;</span> <span class="co">// eg `black` or `rgba(10,100,44,0.8)`</span></span>
-<span id="cb24-21"><a href="chartjs-bubble.html#cb24-21"></a></span>
-<span id="cb24-22"><a href="chartjs-bubble.html#cb24-22"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Median Household Income, USD&#39;</span><span class="op">;</span> <span class="co">// x-axis label, label in tooltip</span></span>
-<span id="cb24-23"><a href="chartjs-bubble.html#cb24-23"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Grade, Relative to Average&#39;</span><span class="op">;</span> <span class="co">// y-axis label, label in tooltip</span></span>
-<span id="cb24-24"><a href="chartjs-bubble.html#cb24-24"></a></span>
-<span id="cb24-25"><a href="chartjs-bubble.html#cb24-25"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// `true` to show the grid, `false` to hide</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb25-1"><a href="chartjs-bubble.html#cb25-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Income, Test Scores, and Enrollment in Select </span><span class="sc">\</span></span>
+<span id="cb25-2"><a href="chartjs-bubble.html#cb25-2"></a><span class="st">  Connecticut School Districts, 2009-13&#39;</span><span class="op">;</span></span>
+<span id="cb25-3"><a href="chartjs-bubble.html#cb25-3"></a></span>
+<span id="cb25-4"><a href="chartjs-bubble.html#cb25-4"></a><span class="kw">var</span> POINT_X <span class="op">=</span> <span class="st">&#39;income&#39;</span><span class="op">;</span> <span class="co">// column name for x values in data.csv</span></span>
+<span id="cb25-5"><a href="chartjs-bubble.html#cb25-5"></a><span class="kw">var</span> POINT_X_PREFIX <span class="op">=</span> <span class="st">&#39;$&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;$&#39;</span></span>
+<span id="cb25-6"><a href="chartjs-bubble.html#cb25-6"></a><span class="kw">var</span> POINT_X_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39;%&#39;</span></span>
+<span id="cb25-7"><a href="chartjs-bubble.html#cb25-7"></a></span>
+<span id="cb25-8"><a href="chartjs-bubble.html#cb25-8"></a><span class="kw">var</span> POINT_Y <span class="op">=</span> <span class="st">&#39;grades&#39;</span><span class="op">;</span> <span class="co">// column name for y values in data.csv</span></span>
+<span id="cb25-9"><a href="chartjs-bubble.html#cb25-9"></a><span class="kw">var</span> POINT_Y_PREFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;USD &#39;</span></span>
+<span id="cb25-10"><a href="chartjs-bubble.html#cb25-10"></a><span class="kw">var</span> POINT_Y_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39; kg&#39;</span></span>
+<span id="cb25-11"><a href="chartjs-bubble.html#cb25-11"></a></span>
+<span id="cb25-12"><a href="chartjs-bubble.html#cb25-12"></a><span class="kw">var</span> POINT_R <span class="op">=</span> <span class="st">&#39;enrollment&#39;</span><span class="op">;</span> <span class="co">// column name for radius in data.csv</span></span>
+<span id="cb25-13"><a href="chartjs-bubble.html#cb25-13"></a><span class="kw">var</span> POINT_R_DESCRIPTION <span class="op">=</span> <span class="st">&#39;Enrollment&#39;</span><span class="op">;</span> <span class="co">// description of radius value</span></span>
+<span id="cb25-14"><a href="chartjs-bubble.html#cb25-14"></a><span class="kw">var</span> POINT_R_PREFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// prefix for radius values, eg &#39;USD &#39;</span></span>
+<span id="cb25-15"><a href="chartjs-bubble.html#cb25-15"></a><span class="kw">var</span> POINT_R_POSTFIX <span class="op">=</span> <span class="st">&#39; students&#39;</span><span class="op">;</span> <span class="co">// postfix for radius values, eg &#39; kg&#39;</span></span>
+<span id="cb25-16"><a href="chartjs-bubble.html#cb25-16"></a><span class="kw">var</span> R_DENOMINATOR <span class="op">=</span> <span class="dv">800</span><span class="op">;</span>  <span class="co">// use this to scale the dot sizes, or set to 1</span></span>
+<span id="cb25-17"><a href="chartjs-bubble.html#cb25-17"></a>                          <span class="co">// if your dataset contains precise radius values</span></span>
+<span id="cb25-18"><a href="chartjs-bubble.html#cb25-18"></a></span>
+<span id="cb25-19"><a href="chartjs-bubble.html#cb25-19"></a><span class="kw">var</span> POINT_NAME <span class="op">=</span> <span class="st">&#39;district&#39;</span><span class="op">;</span> <span class="co">// point names that appear in tooltip</span></span>
+<span id="cb25-20"><a href="chartjs-bubble.html#cb25-20"></a><span class="kw">var</span> POINT_COLOR <span class="op">=</span> <span class="st">&#39;rgba(0,0,255,0.7)&#39;</span><span class="op">;</span> <span class="co">// eg `black` or `rgba(10,100,44,0.8)`</span></span>
+<span id="cb25-21"><a href="chartjs-bubble.html#cb25-21"></a></span>
+<span id="cb25-22"><a href="chartjs-bubble.html#cb25-22"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Median Household Income, USD&#39;</span><span class="op">;</span> <span class="co">// x-axis label, label in tooltip</span></span>
+<span id="cb25-23"><a href="chartjs-bubble.html#cb25-23"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Grade, Relative to Average&#39;</span><span class="op">;</span> <span class="co">// y-axis label, label in tooltip</span></span>
+<span id="cb25-24"><a href="chartjs-bubble.html#cb25-24"></a></span>
+<span id="cb25-25"><a href="chartjs-bubble.html#cb25-25"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// `true` to show the grid, `false` to hide</span></span></code></pre></div>
 <p>Tip: To display smaller data points that may be hidden behind larger neighbors, use semi-transparent circles with RGBA color codes. The first three characters represent red, green, and blue, while the <code>a</code> stands for <code>alpha</code> and represents the level of transparency on a scale from 0.0 (full transparent) to 1.0 (fully opaque). For example, <code>rgba(160, 0, 0, 0.5)</code> creates a red color that is semi-transparent. Learn more by playing with <a href="https://www.w3schools.com/css/css_colors_rgb.asp">RGBA color values at W3Schools</a>.</p>
 <p>If you have more than three variables that you would like to show in your bubble chart, you can use <em>color</em> and <em>glyphs</em> (instead of simple dots) to represent two extra dimentions. For example, you may want to use the blue color to only show school districts in Fairfield County (generally a richer part of CT) and gray color to represent all other districts. You may want to use circles, squares, and triangles to represent results for males, females, and non-binary students. We won’t be showing you how to achieve this, but we can assure you that it can be done in 5-10 extra lines of code.</p>
 <p>Chart.js is pretty limitless when it comes to customization, but remember not to overwhelm the viewer and communicate only the data that are necessary to prove or illustrate your idea.</p>

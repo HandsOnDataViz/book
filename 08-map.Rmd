@@ -40,8 +40,11 @@ basic elements of maps, especially interactive ones featured in this book. Simil
 knitr::include_graphics("images/08-map/map-principles-map.png")
 ```
 
-Map data is presented in layers. The top layer can be generally described as any combination of point, polyline, or polygon data. *Points* represent latitude and longitude coordinates, which may be illustrated by location markers. *Polylines* are connected strings of points, and we place the "poly-" prefix before "lines" to remind us that they may contain multiple branches, not just straight segments. *Polygons* represent areas defined by lines, such as building footprints or national boundaries. On interactive maps, any of these top-layer elements may display a hidden *tooltip* (when you hover the cursor over them) or a *popup* (when you click on them) that reveals additional information about its properties. Below these top data layers is the *basemap* layer, usually displayed as a seamless grid of tiles that cover the globe. Typically a basemap displays either satellite imagery (also known as raster tiles) or pictorial displays of streets and buildings (also known as vector tiles). Interactive maps often include zoom controls (`+` and `-` buttons) that allow you to view data from various "distances," which change the display of the tile layer.
-The *legend* identifies the meaning of shapes or colors on the map. Maps may include a *north arrow* or *scale* to orient readers to direction and relative distance. Good maps also add the data sources, clarifying notes, and credits to the individuals or organizations that created them.
+Map data is presented in layers. The top layer generally consists of a combination of *points*, *lines* (we call them *polylines*), and *polygons*. Points represent places, usually expressed as a pair of coordinates (latitude and longitude), which may be illustrated by location markers. For example, points can represent locations of restaurants, schools, or cities in zoomed-out (small-scale) maps. Polylines are connected strings of points, and we place the “poly-” prefix before “lines” to remind us that they may contain multiple branches, not just straight segments. Polylines may represent roads, rivers, or administrative boundaries. Polygons represent closed areas defined by lines, such as building footprints, parks, or country outlines.
+
+Note: This point/polyline/polygon terminology applies to so-called vector maps that are popular on the web, and as a result relevant to this book. We briefly discuss the difference between vector and raster maps in [GeoJSON and Geospatial Data](https://handsondataviz.org/geojson.html) section of Chapter 14.
+
+On interactive maps, any of these top-layer elements may display a hidden *tooltip* (when you hover the cursor over them) or a *popup* (when you click on them) that reveals additional information about its properties. Below these top data layers is the *basemap* layer, usually displayed as a seamless grid of tiles that cover the globe. Typically a basemap displays either satellite imagery (also known as raster tiles) or pictorial displays of streets and buildings (also known as vector tiles). Interactive maps often include zoom controls (`+` and `-` buttons) that allow you to view data from various "distances," which change the display of the tile layer. The *legend* identifies the meaning of shapes or colors on the map. Maps may include a *north arrow* or *scale* to orient readers to direction and relative distance. Good maps also add the data sources, clarifying notes, and credits to the individuals or organizations that created them.
 
 We spell out these definitions to help newer mapmakers to learn some general rules and to avoid making common mistakes. Many of the our guidelines about map design are inspired by excellent resources such as Datawrapper Academy posts about symbol maps and [choropleth maps](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps)
 
@@ -93,15 +96,15 @@ Choropleth maps are best for showing geographic patterns across regions by color
 
 For example, compare the two choropleth maps of typical home values in the Northeastern United States in according to [Zillow research data](https://www.zillow.com/research/data/) for August 2020. Zillow defines typical values as a smoothed, seasonally adjusted measure of all single-family residences, condos, and coops in the 35th to 65th percentile range, similar to the median value at the 50th percentile, with some additional lower- and higher-value homes. Both choropleth maps use the same scale. The key difference is the size of the geographic units: the first map shows home values at the larger state level, while the second map shows home values at the smaller county level, as shown in Figure \@ref(fig:choropleth-use-smaller-geos).
 
-(ref:choropleth-use-smaller-geos) Zillow typical home values in August 2020 shown at the state level (left) and county level (right).
+(ref:choropleth-use-smaller-geos) Zillow typical home values in September 2020 shown at the state level (left) and county level (right).
 
 ```{r choropleth-use-smaller-geos, fig.cap="(ref:choropleth-use-smaller-geos)"}
-knitr::include_graphics("images/08-map/choropleth-use-smaller-geos.png")
+knitr::include_graphics("images/08-map/zillow-northeast.png")
 ```
 
 Which map is best? Since both are truthful depictions of the data, the answer depends on the story you wish to tell. If you want to emphasize state-to-state differences, choose the first map because it clearly highlights how typical Massachusetts home prices are higher than those in surrounding Northeastern states. Or if you want to emphasize variation inside states, choose the second map, which demonstrates higher price levels in the New York City and Boston metropolitan regions, in comparison to more rural counties in those two states. If you're unsure, it's usually better to map smaller geographies, because it's possible to see both state-level and within-state variations at the same time, if the design includes appropriate labels and geographic outlines. But don't turn *smaller is better* into a rigid rule, since it doesn't work as you move further down the scale. For example, if we created a third map to display every individual home sale in the Northeastern US, it would be *too detailed* to see meaningful patterns. Sometimes larger-level geography tells a simple story more clearly.
 
-TODO Above: add "New York City" and "Boston" labels to the county-level map. Decide if we should add state-level outlines and state names to county-level map. Do we wish to add a third map that's too detailed to illustrate the Goldilocks effect?
+TODO ~~Above: add "New York City" and "Boston" labels to the county-level map. Decide if we should add state-level outlines and state names to county-level map. Do we wish to add a third map that's too detailed to illustrate the Goldilocks effect? -- zillow only goes down to zipcode level with a lot of missing data so won't be effective ~~
 
 ## Design Choropleth Colors & Intervals {- #design-choropleth}
 
@@ -192,10 +195,10 @@ Second, whether you choose steps or continuous, which *interpolation* method is 
 knitr::include_graphics("images/08-map/intervals-datawrapper-tableau.png")
 ```
 
-- *Linear* means that the values are placed in a straight line, from lowest to highest. This method works best when the data are evenly distributed, because the colors draw attention to the outliers at the low and high ends of the scale.
+- *Linear* means that the values are placed in a straight line, from lowest to highest. This method works best when the data are evenly distributed, otherwise the colors draw too much attention to the outliers at the low and high ends of the scale. If your goal is to emphasize the outliers, however, then linear color scale may do the trick.
 - *Quantiles* means that the values are divided into groups of an equal number. More specifically, *quartiles*, *quintiles*, and *deciles* mean dividing the values into four, five, or ten groups of equal quantity. This method works best when the data are not evenly distributed, because it uses colors to draw more attention to the diversity of groups inside the scale, not just the low and high ends.
-- *Rounded values* are similar to quantiles, but decimals in the scale are replaced with rounded numbers that look nicer to readers' eyes.
-- *Natural breaks (Jenks)* offers a compromise between linear (which emphasizes the extreme ends) and quantiles (which emphasize internal diversity).
+- *Rounded values* are similar to quantiles, but decimals in the scale are replaced with rounded numbers that look nicer to readers' eyes, such as multiples of 5s or 10s.
+- *Natural breaks (Jenks)* groups close values together while maximizing the "distance" between different groups. It  offers a compromise between linear (which emphasizes the extreme ends) and quantiles (which emphasize internal diversity).
 - *Custom* allows you to manually place dividers wherever you wish along the color scale. We generally recommend to *not* use custom settings because they are more likely to create a misleading map, as you'll learn in [Chapter 15: Detect Lies and Reduce Data Bias](detect.html).
 
 TODO: CONFIRM definitions above; add max/mid/min as an option? decide if these definitions are sufficient, or consider adding small maps to visually contrast the differences, as shown in https://academy.datawrapper.de/article/117-color-palette-for-your-map; cite this source
@@ -207,7 +210,9 @@ TODO ALSO: Review all of the recommendations in the Datawrapper Academy post abo
 
 ## Normalize Choropleth Map Data {- #normalize-choropleth}
 
-We introduced the concept of [normalizing data in Chapter 6: Make Meaningful Comparisons](normalize.html). Normalization means adjusting data that was collected using different scales into a common scale, in order to make more appropriate comparisons. For example, it makes little sense to compare the total number of Covid cases between nations with very different populations, such as XXX and YYY (TODO: fill in examples). A better strategy is to normalize the data by comparing cases per capita (such as A per 100,000 in XXX versus B per 100,000 in YYY) to adjust for prior differences in population.
+We introduced the concept of [normalizing data in Chapter 6: Make Meaningful Comparisons](normalize.html). Normalization means adjusting data that was collected using different scales into a common scale, in order to make more appropriate comparisons. For example, it makes little sense to compare the total number of Covid cases between nations with very different populations, such as 9.61 million cases in the United States (estimated population 328.2 million) and 0.49 million cases in Belgium (estimated population 11.5 million) as of November 6, 2020. A better strategy is to normalize the data by comparing cases per capita (such as 2,928 cases per 100,000 in the United States versus 4,260 per 100,000 in Belgium) to adjust for prior differences in population.
+
+TODO: Update numbers above
 
 In the same way, choropleth maps work best when they display relative values (such as percentages or per capita rates) rather than absolute values (such as the raw number of people). If you ignore normalization when creating a choropleth map and display raw numbers, you'll essentially recreate a population map, which doesn't tell us anything new. For example, compare two maps shown in Figure \@ref(fig:normalize-map-data). They both are about Covid-19 cases in the continental US as of June 26, 2020. Figure \@ref(fig:normalize-map-data)a shows total number of recorded cases per state, and Figure \@ref(fig:normalize-map-data)b shows Covid-19 cases adjusted by the state's population. Darker colors represent higher values. Do you notice any differences in spatial patterns?
 
@@ -287,16 +292,13 @@ Now that you've learned about one tool to create point maps, let's compare it wi
 
 ## Point Map with Google My Maps {- #mymaps}
 
-TODO BELOW: Explain how Google My Maps is different from Google Maps; mention at the top there are more options than points; DECIDE if this sample data about Nigerian airports is the best fit, since it's great to have international examples but unsure if Shapefile-to-CSV transormation makes sense here, as new users probably need the tool to geocode their data.
+TODO BELOW: ~~Explain how Google My Maps is different from Google Maps~~; mention at the top there are more options than points; DECIDE if this sample data about Nigerian airports is the best fit, since it's great to have international examples but unsure if Shapefile-to-CSV transormation makes sense here, as new users probably need the tool to geocode their data.
 
 [My Maps](https://www.google.com/maps/about/mymaps/) is Google's service
-that allows users to create custom maps using Google Maps platform.
-It is perhaps the fastest ways of building point and basic polygon maps, although
-it limits your styling options.
+that allows users to create custom maps on top of Google Maps. The maps that you create will stay in your Google account and will not in any way interfere with the Google Maps product that you and others use to look up directions or find nearby restaurants. You may choose to share your map either through embedding it on your website or providing a direct link to your colleagues or friends.
 
-My Maps is most powerful when it comes to collaboration. The platform functions
-within Google Drive, and so allows you to invite
-other users with Google accounts to work on the map.
+Google My Maps is one of the simplest ways to build basic point, line, and polygon maps, although
+it limits your styling options. My Maps is most powerful when it comes to collaboration, and you can invite anyone with a Google account to jointly work on the map.
 
 In this section, we will look at building a point map of airports in Nigeria, as is shown
 in Figure \@ref(fig:mymaps-final). We will
@@ -311,7 +313,7 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.g
 ### Create a New Map in My Maps {-}
 
 Navigate to [Google My Maps](https://www.google.com/mymaps/).
-In the upper-right corner, click `+ Create a New Map` button,
+In the upper-left corner, click `+ Create a New Map` button,
 as shown in Figure \@ref(fig:mymaps-create-new).
 
 (ref:mymaps-create-new) A map of airports in Nigeria built using Google My Maps.
@@ -387,9 +389,7 @@ Click *Preview* to see how the map looks like outside of the My Maps editing stu
 
 ### Share Your Google My Map {-}
 
-If you are happy with the result, click *Share*, and click *Change to anyone with the link*
-(see Figure \@ref(fig:mymaps-share)),
-just as you would with any other Google Drive document.
+If you are happy with the result, click *Share* button underneath the map's title and description. In the modal window, make sure *Enable link sharing* is activated (see Figure \@ref(fig:mymaps-share)), and copy the generated link. You can share with link with anyone, with or without a Google account, and they will be able to see your map.
 
 (ref:mymaps-share) Make sure anyone with the link can view your map before you share it.
 
@@ -397,10 +397,7 @@ just as you would with any other Google Drive document.
 knitr::include_graphics("images/08-map/mymaps-share.png")
 ```
 
-You can now generate a code snippet to embed the map as an iframe.
-From the main kebab menu to the right of the map title, choose *Embed on my site* (Figure \@ref(fig:mymaps-embed)).
-You can use now use this iframe code to embed your map to
-your Wordpress, Squarespace, or any other website.
+If you want to embed the map as an iframe, from the main kebab menu to the right of the map title, choose *Embed on my site* (Figure \@ref(fig:mymaps-embed)). This will generate an HTML code snippet that you can copy to your website.
 
 (ref:mymaps-embed) My Maps can generate an iframe code to include the map on your own website.
 
@@ -615,71 +612,69 @@ Now that you've learned how to create a choropleth map using one tool, Datawrapp
 We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building [scattercharts](scatter-tableau.html) and [filtered line charts](filtered-line-tableau.html) in Chapter 7. Now let's use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. Tableau Public can create many different types of map for geographical place names or ISO codes it already recognizes, such as nations, states, counties, and airports. But Tableau Public cannot geocode street addresses by itself, so you'll need to obtain their latitude and longitude with another tool, such as those described in the [geocode section of Chapter 3](geocode.html). Furthermore, if you want to upload customized map boundaries, learn how to [Create Tableau Maps from Spatial Files](https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm)
 on the support page.
 
-In this section, we will create a choropleth map of military spending per country as a percentage of their gross domestic product (GDP), as shown in Figure \@ref(fig:tableau-polygon-final). Remember that choropleth maps work best when we [normalize the data](normalize-choropleth.html) to show relative, rather than absolute, numbers. Creating a map of total military spending per country would not be very meaningful, as larger nations tend to have larger economies, so we'll base our map on the percentage of their economy that is spent on the military.
+In this section, we will create a choropleth map of healthcare spending per country as a percentage of their gross domestic product (GDP), as shown in Figure \@ref(fig:tableau-polygon-final). Remember that choropleth maps work best when we [normalize the data](normalize-choropleth.html) to show relative, rather than absolute, numbers. Creating a map of total health spending per country would not be very meaningful, as larger nations tend to have larger economies, so we'll base our map on the percentage of their economy that is spent on healthcare.
+
+Before we start, you should obtain and install the [free Tableau Public desktop application](https://public.tableau.com/en-us/s/download) if you don't have it yet. It is available for Mac or Windows. You will need to enter an email address to download the application.
 
 <!-- TODO: reminder that this Tableau visualization is stored in Ilya's account at https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1 -->
 
-(ref:tableau-polygon-final) Choropleth map of military spending with Tableau Public. Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from the World Bank.
+(ref:tableau-polygon-final) Choropleth map of healthcare spending with Tableau Public. Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from the World Bank.
 
 ```{r tableau-polygon-final, fig.cap="(ref:tableau-polygon-final)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://public.tableau.com/views/MilitarySpending_15965362101320/Sheet1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/08-map/tableau-polygon-final.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://public.tableau.com/views/2017HealthcareSpendingbyCountryasofGDP/Dashboard1?:showVizHome=no&:embed=true", height="500px") else knitr::include_graphics("images/08-map/tableau-polygon-final.png")
 ```
 
-TODO above: update the demo map to match our current data and instructions (without filters?), after we make decisions about how to address interpolation in the note at the bottom of this section.
+~~TODO above: update the demo map to match our current data and instructions (without filters?), after we make decisions about how to address interpolation in the note at the bottom of this section.~~
 
-To create your own choropleth map with Tableau Public, follow this tutorial.
+Let's look at the steps involved to create a choropleth from Figure \@ref(fig:tableau-polygon-final) in detail.
 
-1. Open the [Military Spending by Nation as Percent of GDP data in Google Sheets](https://docs.google.com/spreadsheets/d/1tr9VrqKnO5tf55_YUCk441bFsZSI4zgMzW5ow3-wioo/edit#gid=490588019), which we downloaded from the [World Bank](https://data.worldbank.org/indicator/MS.MIL.XPND.GD.ZS?view=chart). Examine the data and the notes.
+1. Open the [Healthcare Spending by Nation as Percent of GDP data in Google Sheets](https://docs.google.com/spreadsheets/d/1tr9VrqKnO5tf55_YUCk441bFsZSI4zgMzW5ow3-wioo/edit#gid=490588019), which we downloaded from the [World Bank](https://databank.worldbank.org/source/world-development-indicators). Examine the data and the notes.
 
 Good maps often require [cleaning up messy data as described in Chapter 5](clean.html). In our spreadsheet we removed rows for nations that did not report any data. Tableau Public recognizes many different types of geographic names (such as cities and nations), so we will rely on the tool to deal with any spelling issues and properly place all of them on the map.
 
 2. In the Google Sheet, go to *File > Download* and select Comma-Separated Values (CSV) format to save the data to your local computer.
 
-3. Download, install, and launch the [free Tableau Public desktop application](https://public.tableau.com/en-us/s/download), available for Mac or Windows. You will need to enter an email address to download the application.
+3. Launch Tableau Public. When you first open it, you will see the *Connect* menu on the left-hand side that displays file formats you can upload. Choose the *Text file* format and upload the healthcare spending CSV data file you've just downloaded in the previous step.
 
-4. When you open the Tableau Public application, the *Connect* screen will display file formats you can upload on the left-side menu. Click on the *Text file* format and upload the military spending CSV data file you downloaded above.
+Note: Tableau lets you access data directly from Google Sheets that live in your Drive using *Connect > To a Server* option. So instead of downloading a CSV file in step 2, you could have made a copy of the sheet, and connected to it directly. 
 
-5. In the *Data Source* screen, inspect the dataset, which contains three columns: Country, Most Year Year of the data, and Military Spending as Percent of GDP. Notice that a small globe appears at the top of the Country column, which shows that Tableau Public successfully recognized it as geographic data, rather than string or text data. If that globe was not there, you can select its menus to set its proper geographic role, as shown in Figure \@ref(fig:tableau-data-geographic).
+4. In the *Data Source* screen, inspect the dataset, which contains three columns: Country Name, Country Code, and Health Spending As % of GDP. Notice that a small globe appears at the top of the Country Name and Country Code columns, which shows that Tableau Public successfully recognized these as geographic data, rather than string or text data. Sometimes Tableau does not recognize location data automatically, so you need to manually change the data type. To do so, click the data type icon (e.g. globe or a green `#` for numeric values), and then choose *Geographic Role > Country/Region* as shown in Figure \@ref(fig:tableau-data-geographic).
 
-(ref:tableau-data-geographic) Confirm that Tableau Public recognizes your geographic place names.
+(ref:tableau-data-geographic) Make sure Tableau Public knows that the Country Name column contains geographic data.
 
 ```{r tableau-data-geographic, out.width=400, fig.cap="(ref:tableau-data-geographic)"}
 knitr::include_graphics("images/08-map/tableau-data-geographic.png")
 ```
 
-6. In the bottom-left corner, click the orange *Sheet 1* button to go to the Worksheet to create your map, as shown in Figure \@ref(fig:tableau-go-to-worksheet).
+5. In the bottom-left corner, click the orange *Sheet 1* button to create a worksheet with your first visualization, as shown in Figure \@ref(fig:tableau-go-to-worksheet).
 
-(ref:tableau-go-to-worksheet) Click the orange button to go to the worksheet to create your map.
+(ref:tableau-go-to-worksheet) Click the orange button to go sheet 1 where you can create your map.
 
 ```{r tableau-go-to-worksheet, out.width=400, fig.cap="(ref:tableau-go-to-worksheet)"}
 knitr::include_graphics("images/08-map/tableau-go-to-worksheet.png")
 ```
 
-7. In the *Worksheet*, create your choropleth map using a two-step process, as shown in Figure \@ref(fig:tableau-drag). First, drag-and-drop the *Country* geographic data into the middle of the worksheet to create the map, which will temporarily appear as a point symbol map. Second, drag-and-drop the *Military Pct GDP* data values into the *Color* box of the *Marks* area to transform it into a choropleth map.
+6. In *Sheet 1*, create your choropleth map using a two-step process, as shown in Figure \@ref(fig:tableau-drag). First, drag-and-drop the *Country Name* field into the middle of the worksheet (alternatively to the Detail box of the Marks card) to create the map. The default view is the symbol map, which we need to replace with a polygon map. To add colored polygons, drag-and-drop the *Health Spending As % of GDP* field into the *Color* box of the *Marks* card to transform it into a choropleth map.
 
-(ref:tableau-drag) Drag and drop *Country* to the center of the sheet, then *Military Pct GDP* to the *Color* box in the *Marks* area.
+(ref:tableau-drag) Drag and drop *Country Name* to the center of the sheet, then *Health Spending As % of GDP* to the *Color* box in the *Marks* card.
 
 ```{r tableau-drag, fig.cap="(ref:tableau-drag)"}
 knitr::include_graphics("images/08-map/tableau-drag-annotated.png")
 ```
 
-8. Tableau Public hides your map legend menu behind the *Show Me* menu, so click the menu to shrink it and display your legend.
+7. Tableau Public may hide the map legend behind the *Show Me* menu in the upper-right corner, so click the menu to shrink it and display your legend.
 
-9. You can change the color palette by clicking the Color box of the Marks card, and
-then *Edit colors*. Change the palette to *Reds*, and change it from continuous to steps,
+8. You can change the color palette by clicking the Color box of the Marks card, and
+then *Edit colors*. Change the palette to *Green*, and change it from continuous to steps,
 as shown in Figure \@ref(fig:tableau-polygon-color).
 
-(ref:tableau-polygon-color) Change the color scheme to Reds with 5 steps.
+(ref:tableau-polygon-color) Change the color scheme to Green with 5 steps.
 
 ```{r tableau-polygon-color, out.width=400, fig.cap="(ref:tableau-polygon-color)"}
 knitr::include_graphics("images/08-map/tableau-polygon-color.png")
 ```
 
-10. You may notice the tooltip calls values *Value* when hovering over countries.
-Click the Tooltip box of the Marks card to change text to *Military spending*,
-and add a percentage sign after the value itself, as shown in Figure \@ref(fig:tableau-polygon-tooltip).
-Make sure not to change values between
-`<` and `>`, as these are references to variables.
+9. When you hover over countries, you will notice a tooltip that tells you the name of the country and gives you the percent value. It is generally well-formatted as our initial data table had proper column headers. But we can make the toolitp even better. Click the Tooltip box of the Marks card, change the first instance of `Country Name` to just `Country` (do not change the grayed-out text inside `<` and `>` as these are variable names), and add a `%` sign at the end of the second row, as shown in Figure \@ref(fig:tableau-polygon-tooltip).
 
 (ref:tableau-polygon-tooltip) Change tooltip text to make it more user-friendly.
 
@@ -687,19 +682,45 @@ Make sure not to change values between
 knitr::include_graphics("images/08-map/tableau-polygon-tooltip.png")
 ```
 
-11. Add a proper title to the map. Double-click the default *Sheet 1* name
-to bring up the *Edit Title* window, and change the name of your chart to a more meaningful
-*Military Spending as % of GDP (most recent year)*.
+10. Let's make our map title more meaningful. Double-click the default *Sheet 1* name just above the map
+to bring up the *Edit Title* window, and change the name of your chart to
+*2017 Healthcare Spending by Country as % of GDP*.
 
-12. TODO: Improve these instructions.... Create Dashboard and Publish Your Map... change color range menu to floating, place on top of map, add title and sources...
+11. At this point the data is loaded and should be displayed correctly, so we are going to create the final layout that include map's title and credits, the legend, and is appropriate for sharing. At the bottom-left of the program, create a *New Dashboard*, as shown in Figure \@ref(fig:tableau-dashboard-create). Dashboards in Tableau are layouts that can contain visualizations from multiple sheets, as well as text boxes, images, and other elements, creating rich exploratory interfaces. In this tutorial, we will stick to just a single sheet that contains our choropleth map.
 
-13. Once you are ready to publish and share the map, go to *File > Save to Tableau Public*.
-In the pop-up window, log in to your account if requested. Give it a title, such
-as *Military Spending*, and click Save.
+(ref:tableau-dashboard-create) Before you publish the map, create a new dashboard to finalize your layout.
 
-Now that you understand how to create maps using *static* data from a spreadsheet, let's explore how to create a map using the most current data available from an open-data repository.
+```{r tableau-dashboard-create, out.width=400, fig.cap="(ref:tableau-dashboard-create)"}
+knitr::include_graphics("images/08-map/tableau-dashboard-create-annotated.png")
+```
 
+12. In your Dashboard 1 tab, change the size of the dashboard to Automatic so that the map is responsive and occupies 100% of the width on all devices. Drag and drop Sheet 1 to the *Drop sheets here* area, as shown in Figure \@ref(fig:tableau-dashboard). This will copy the map, the title, and the legend from Sheet 1.
 
+(ref:tableau-dashboard) To create a responsive dashboard, change the Size to Automatic.
+
+```{r tableau-dashboard, out.width=400, fig.cap="(ref:tableau-dashboard)"}
+knitr::include_graphics("images/08-map/tableau-dashboard-annotated.png")
+```
+
+13. Right-click the upper part of the map legend, and select *Floating*, as shown in Figure \@ref(fig:tableau-dashboard-legend). Now you are able to place your legend directly on top of the map to save space. Drag and drop it to one of the map's corners.
+
+(ref:tableau-dashboard-legend) To place the legend on top of the map, make sure it is floating.
+
+```{r tableau-dashboard-legend, out.width=400, fig.cap="(ref:tableau-dashboard-legend)"}
+knitr::include_graphics("images/08-map/tableau-dashboard-legend.png")
+```
+
+14. Finally, let's add a text block with data source underneath the map. From the Objects menu in the left-hand side, drag and drop *Text* to the lower half of the map. In the *Edit Text* window that appears, type *Data by the World Bank, 2017*, and click OK. Initially the text area will occupy half the height of the screen, so resize it like you would resize any window on your computer.
+
+And we're done! Make sure you position your map's center and zoom level as you want it to be visible by others. In this case, the best would be to have a world view as we are showing data for most countries, although you may want to zoom in to a specific continent. Once you are ready to publish and share the map, go to *File > Save to Tableau Public*. In the pop-up window, log in to your account if requested. Give it a title, such as Healthcare Spending, and click Save. See how to embed the map as an iframe in [Chapter 10](embed-code.html).
+
+Warning: Tableau may not be the best tool to create choropleth maps where you want to have full control of color breaks. By default, Tableau uses a linear color scheme that, as we've learned earlier in the chapter, is prone to favoring outliers. And there is no straightforward way to change the classification scheme to Jenks breaks or quantiles. If you are not happy with the way linear scale represents your data, see [this tutorial](https://help.tableau.com/current/pro/desktop/en-us/maps_howto_choropleth.htm) for some tips and tricks.
+
+Now that you know that Tableau can be used not just for charts, but for maps as well, let's see how to use Socrata's visualization capabilities to build a map that always uses the most current data available.
+
+~~12. TODO: Improve these instructions.... Create Dashboard and Publish Your Map... change color range menu to floating, place on top of map, add title and sources...~~
+
+<!--
 TODO above to DISCUSS: We might have a mismatch between the data and the tool here. If you do a quick histogram of the military data, most values are clustered around the median, but there's a few really high-spending outliers. This makes it difficult for novices to map in Tableau Public, because the default interpolation is *linear*, and the outliers dominate the appearance of the map. It's not clear to me how to change this to *quartiles* or *natural breaks*, as we do in Datawrapper. Perhaps there are some ideas here: https://help.tableau.com/current/pro/desktop/en-us/maps_howto_choropleth.htm   OR one of these Tableau books by Ryan Sleeper https://learning.oreilly.com/search/?query=author%3A%22Ryan%20Sleeper (but I don't see anything right away that's relevant)  OR another idea is to reconsider the filter instructions below, which I removed because our sample dataset no longer has null values. TODO: after we discuss, see reviewers' comments to address in editorial notes
 
 Places like Greenland and Libya do not have available values, but they are still
@@ -714,6 +735,8 @@ in Figure \@ref(fig:tableau-polygon-filter)).
 ```{r tableau-polygon-filter, out.width=400, fig.cap="(ref:tableau-polygon-filter)"}
 knitr::include_graphics("images/08-map/tableau-polygon-filter-annotated.png")
 ```
+
+-->
 
 ## Current Map with Socrata Open Data {- #map-socrata}
 TODO: revise to emphasize how the map continuously pulls the most current information directly from the open-data repository; in this case, happens to be filtered point map of hospitals in Texas.... TODO: replace with a better example of frequently-updated "live" data?
@@ -748,14 +771,12 @@ a geocoded column that contains latitude and longitude values.
 
 Navigate to [Data.Medicare.gov](https://data.medicare.gov/) click *Sign In* button
 in the upper-right corner. Scroll down to *Sign Up* link. Follow the instructions,
-including setting up two-step authentication, to create a free account.
+including setting up two-step authentication (2FA), to create a free account.
 
-Note: You can still practice creating a map in Socrata without being logged in.
-You won't be able to save or share it, however.
+Note: You can still practice creating maps in Socrata without being logged in.
+You won't be able to save or share your work, however.
 
-Once you have an account, log in using your credentials. Navigate to your profile
-by clicking your username in the upper-right corner and make sure you *Accept Terms and Conditions*,
-otherwise you won't be able to save your draft map.
+Once you have an account, log in using your credentials (you may find [this tutorial](https://support.socrata.com/hc/en-us/articles/360016843234-Two-Factor-Authentication) about logging-in with 2FA useful). Navigate to your profile by clicking your username in the upper-right corner and make sure you *Accept Terms and Conditions*, otherwise you won't be able to save your draft map.
 
 This username and password are only valid for Data.Medicare.gov, not other websites
 that use Socrata.
@@ -763,8 +784,7 @@ that use Socrata.
 ### Create Your First Socrata Point Map {-}
 
 Navigate to the [Hospital General Dataset](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data),
-and in the menu on the right-hand side choose *Visualize > Launch New Visualization*, as shown in Figure \@ref(fig:socrata-launch-new-viz). This will open up
-a *Configure Visualization* studio where you can create the map.
+and in the menu on the right-hand side choose *Visualize > Launch New Visualization*, as shown in Figure \@ref(fig:socrata-launch-new-viz). This will open up a *Configure Visualization* studio where you can create the map.
 
 (ref:socrata-launch-new-viz) Go to Visualize > Launch New Visualization.
 
@@ -772,9 +792,13 @@ a *Configure Visualization* studio where you can create the map.
 knitr::include_graphics("images/08-map/socrata-launch-new-viz-annotated.png")
 ```
 
-In the top menu, click *Map* (globe icon between a scatter chart icon and a calendar). You will
-see an updated layout of the studio, with the map in the middle, and *Map Layers* and *Map Settings*
-items in the side menu on the left.
+In the top menu, click *Map* (globe icon between a scatter chart icon and a calendar). You will see an updated layout of the studio, with the map in the middle, and *Map Layers* and *Map Settings* items in the side menu on the left, as shown in Figure \@ref(fig:socrata-configigure).
+
+(ref:socrata-configure) Your studio should look similar to this once you choose Map as the visualization type.
+
+```{r socrata-configure, out.width=500, fig.cap="(ref:socrata-configure)"}
+knitr::include_graphics("images/08-map/socrata-configure-annotated.png")
+```
 
 Socrata was able to determine which column contains geospatial value, and automatically
 set Geo Column value to *Location* in the *Layer List* menu. By default, points are clustered (grouped together),
@@ -792,7 +816,7 @@ knitr::include_graphics("images/08-map/socrata-filter-annotated.png")
 ```
 
 Let's now *disaggregate* the map so that we can see individual hospitals instead of clusters.
-Go to *Map Settings > Cluster*, and bring the *Stop Clustering at Zoom Level* slider to 1,
+Go to *Map Settings > Clusters*, and bring the *Stop Clustering at Zoom Level* slider to 1,
 as shown in Figure \@ref(fig:socrata-uncluster).
 You will see the map now shows individual points.
 

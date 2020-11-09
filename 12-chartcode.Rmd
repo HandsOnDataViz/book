@@ -70,7 +70,16 @@ The two remaining files are a `README.md` that describes the contents of the rep
 | New Haven | 17730      | 3534    |
 ```
 
-3. In `script.js`, customize the values of variables shown in the code snippet below:
+3. In `script.js`, customize the values of variables. Since you may not be familiar with JavaScript, let's take a look at the code snippet that describes a single variable in the file:
+
+```javascript
+// `false` for vertical column chart, `true` for horizontal bar chart
+var HORIZONTAL = false;
+```
+
+The first line starts with `//` and is a comment to help you understand what the variable in the next line is responsible for. It does not affect the code. As you can see, if the variable HORIZONTAL is set to `false`, the chart would have vertical bars (also known as columns). If set to `true`, the chart will contain horizontal bars. The second line contains the variable declaration itself. The equal sign (`=`) assigns the value that you see on the right (*false*) to the variable (`var`) called `HORIZONTAL` to the left. This line ends with the semicolon (`;`).
+
+Below are some of the variables available for you to customize in `script.js`:
 
 ```javascript
 var TITLE = 'English Learners by Select School Districts in CT, 2018-19';

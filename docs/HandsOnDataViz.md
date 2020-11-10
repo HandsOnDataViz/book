@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 09 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 10 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -8328,14 +8328,10 @@ keyword, sort columns in ascending or descending order, and scroll
 through pages of sparklines to quickly identify data trends that would
 be difficult to spot in a traditional numbers-only table.
 
-TODO below: change intensity of continent coloring, change sparkline and
-difference bar coloring to avoid confusion with a specific continent,
-and redo screenshots
-
-<img src="images/09-table/datawrapper-table.png" alt="Table with sparklines. Explore the [interactive version](https://datawrapper.dwcdn.net/0HK4f/2/)."  />
+<img src="images/09-table/datawrapper-table.png" alt="Table with sparklines. Explore the [interactive version](https://datawrapper.dwcdn.net/0HK4f/)."  />
 <p class="caption">
 Figure 9.3: Table with sparklines. Explore the [interactive
-version](https://datawrapper.dwcdn.net/0HK4f/2/).
+version](https://datawrapper.dwcdn.net/0HK4f/).
 </p>
 
 In this tutorial, you’ll create an interactive table with sparklines to
@@ -8448,6 +8444,12 @@ Figure 9.5: Customize the *Continent* column and push slider to color
 cells based on categories.
 </p>
 
+Tip: To choose colors for the six continents, we used the [ColorBrewer
+design tool as described in Chapter 8](design-choropleth.html), and
+selected a 6-class qualitative scheme. Although this tool is designed
+primarily for choropleth maps, you can also use it to choose table and
+chart colors.
+
 1.  Now let’s prepare our data to add sparklines, or tiny line charts,
     to visually represent change in the *Life expectancy 1960* column,
     which we intentionally left blank for this step. Before you begin,
@@ -8494,7 +8496,9 @@ chart*.
     the *Difference* column in the table. In the *Visualize* screen
     under *Customize columns*, select *Difference*. Then scroll down and
     push the slider to select *Show as bar chart*, as shown in Figure
-    <a href="#fig:datawrapper-bar-chart">9.8</a>.
+    <a href="#fig:datawrapper-bar-chart">9.8</a>. Also, select a
+    different bar color, such as black, to distinguish it from the
+    continent colors.
 
 <img src="images/09-table/datawrapper-bar-chart.png" alt="Select the *Difference* column and *Show as bar chart*."  />
 <p class="caption">

@@ -53,12 +53,10 @@ In this section, you'll learn how to create an interactive table with [Datawrapp
 
 You'll also learn how to create sparklines, or tiny line charts that quickly summarize data trends. This chart type was refined by Edward Tufte, a Yale professor and data visualization pioneer, who described sparklines as "datawords... intense, simple, word-sized graphics."^[@tufteBeautifulEvidence2006, pp. 46-63.] While Tufte envisioned sparklines on a static sheet of paper or PDF document, you'll create them inside an interactive table, as shown in Figure \@ref(fig:datawrapper-table). Readers can search by keyword, sort columns in ascending or descending order, and scroll through pages of sparklines to quickly identify data trends that would be difficult to spot in a traditional numbers-only table.
 
-TODO below: change intensity of continent coloring, change sparkline and difference bar coloring to avoid confusion with a specific continent, and redo screenshots
-
-(ref:datawrapper-table) Table with sparklines. Explore the [interactive version](https://datawrapper.dwcdn.net/0HK4f/2/).
+(ref:datawrapper-table) Table with sparklines. Explore the [interactive version](https://datawrapper.dwcdn.net/0HK4f/).
 
 ```{r datawrapper-table, fig.cap="(ref:datawrapper-table)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/0HK4f/2/", height = "1007px") else
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/0HK4f/", height = "1007px") else
 knitr::include_graphics("images/09-table/datawrapper-table.png")
 ```
 
@@ -102,6 +100,8 @@ knitr::include_graphics("images/09-table/datawrapper-flag.png")
 knitr::include_graphics("images/09-table/datawrapper-colors.png")
 ```
 
+Tip: To choose colors for the six continents, we used the [ColorBrewer design tool as described in Chapter 8](design-choropleth.html), and selected a 6-class qualitative scheme. Although this tool is designed primarily for choropleth maps, you can also use it to choose table and chart colors.
+
 10. Now let's prepare our data to add sparklines, or tiny line charts, to visually represent change in the *Life expectancy 1960* column, which we intentionally left blank for this step. Before you begin, you must change this column from textual data (represented by the A symbol in the *Customize columns* window) to numerical data (represented by the # symbol). At the top of the screen, click on the *2. Check and Describe* arrow to go back a step. (Datawrapper will save your work.) Now click on the table header to edit the properties for *column E: Life Expectancy 1960*. On the left side, use the drop-down menu to change its properties from *auto (text)* to *Number*, as shown in Figure \@ref(fig:datawrapper-edit-column). Then click *Proceed* to return to the *Visualize* window.
 
 (ref:datawrapper-edit-column) Go back to *Check & Describe* to change the properties of column E from textual to numerical data.
@@ -120,7 +120,7 @@ Tip: By design, we initially named this column *Life expectancy 1960*, because w
 knitr::include_graphics("images/09-table/datawrapper-tiny-chart.png")
 ```
 
-12. Let's add one more visual element: a bar chart to visually represent the *Difference* column in the table. In the *Visualize* screen under *Customize columns*, select *Difference*. Then scroll down and push the slider to select *Show as bar chart*, as shown in Figure \@ref(fig:datawrapper-bar-chart).
+12. Let's add one more visual element: a bar chart to visually represent the *Difference* column in the table. In the *Visualize* screen under *Customize columns*, select *Difference*. Then scroll down and push the slider to select *Show as bar chart*, as shown in Figure \@ref(fig:datawrapper-bar-chart). Also, select a different bar color, such as black, to distinguish it from the continent colors.
 
 (ref:datawrapper-bar-chart) Select the *Difference* column and *Show as bar chart*.
 
@@ -130,7 +130,7 @@ knitr::include_graphics("images/09-table/datawrapper-bar-chart.png")
 
 13. In the *Visualize* screen, click the *Annotate* tab to add a title, data source, and byline.
 
-14. Click on *Publish & Embed* to share the link to your [interactive table](https://datawrapper.dwcdn.net/0HK4f/2/), as previously shown in Figure \@ref(fig:datawrapper-table). If you logged into your free Datawrapper account, your work is automatically saved online in the *My Charts* menu in the top-right corner of the screen. Also, you can click the blue *Publish* button to generate the code to embed your interactive chart on your website, as you'll learn about in [Chapter 10: Embed on the Web](embed.html). In addition, you can *add your chart to River* if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse your chart. Furthermore, scroll all the way down and click the *Download PNG* button to export a static image of your chart. Additional exporting and publishing options require a paid Datawrapper account. Or, if you prefer not to create an account, you can enter your email to receive the embed code. 
+14. Click on *Publish & Embed* to share the link to your [interactive table](https://datawrapper.dwcdn.net/0HK4f/2/), as previously shown in Figure \@ref(fig:datawrapper-table). If you logged into your free Datawrapper account, your work is automatically saved online in the *My Charts* menu in the top-right corner of the screen. Also, you can click the blue *Publish* button to generate the code to embed your interactive chart on your website, as you'll learn about in [Chapter 10: Embed on the Web](embed.html). In addition, you can *add your chart to River* if you wish to share your work more widely by allowing other Datawrapper users to adapt and reuse your chart. Furthermore, scroll all the way down and click the *Download PNG* button to export a static image of your chart. Additional exporting and publishing options require a paid Datawrapper account. Or, if you prefer not to create an account, you can enter your email to receive the embed code.
 
 
 To learn more, we highly recommend the [Datawrapper Academy support pages](https://academy.datawrapper.de/), the extensive [gallery of examples](https://www.datawrapper.de/tables/), and well-designed [training materials](https://www.datawrapper.de/training-materials/).

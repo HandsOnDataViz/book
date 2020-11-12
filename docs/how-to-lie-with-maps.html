@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-10" />
+<meta name="date" content="2020-11-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -350,42 +350,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Examine the data and read the notes. Overall, this data offers one way to make international comparisons about income distribution by showing “how big a slice of the pie” is held by the richest 1 percent in each nation. Each row lists a nation and its three-letter code, along with the percent share of pre-tax national income held by the top 1 percent of the population, and the most recent year when this data was collected by the World Inequality Database. For example, in Brazil, the top 1 percent of the population held 28.3 percent of the nation’s income in 2015, while in the United States, the top 1 percent held 20.5 percent in 2018. To be clear, there are other ways to compare the distribution of income or wealth across nations, but this is one of the better datasets available that capture this concept using one easy-to-understand variable.</p></li>
 <li><p>Since we cannot directly import this Google Sheet into our Datawrapper mapping tool, go to <em>File &gt; Download</em> to export the first tab in <em>CSV format</em> to your computer.</p></li>
 <li><p>Open the <a href="https://datawrapper.de">Datawrapper visualization tool</a> in your browser and upload your CSV map data. Select <em>New Map</em>, select <em>Choropleth map</em>, and select <em>World</em>, then <em>Proceed</em>. In the <em>Add your data</em> screen, scroll down below the table and select the <em>Import your dataset</em> button, then the <em>Start Import</em> button, then <em>click here to upload a CSV file</em>, and upload the CSV file you created in the step above. Click to confirm that the first column is <em>Matched as ISO code</em>, click <em>Continue</em>, then click to confirm that the <em>Percent Share</em> column is <em>Matched as Values</em>, then click <em>Go</em> and <em>Proceed</em> to visualize your map.</p></li>
-<li><p>In the <em>Visualize</em> screen, in the <em>Colors</em> section of the <em>Refine</em> tab <em>Select palette</em>, click the <em>wrench symbol</em> to open up the color settings, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-color-settings">15.10</a>. Let’s skip past the light-green-to-blue color palette, which you can modify later, and let’s focus on settings for color ranges.</p></li>
+<li><p>In the <em>Visualize</em> screen, in the <em>Colors</em> section of the <em>Refine</em> tab <em>Select palette</em>, click the <em>wrench symbol</em> to open up the color settings, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-color-settings">15.11</a>. Let’s skip past the light-green-to-blue color palette, which you can modify later, and let’s focus on settings for color ranges.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:map-color-settings"></span>
 <img src="images/15-detect/map-color-settings.png" alt="Click the wrench symbol to open the color settings." width="350" />
 <p class="caption">
-Figure 15.10: Click the <em>wrench symbol</em> to open the color settings.
+Figure 15.11: Click the <em>wrench symbol</em> to open the color settings.
 </p>
 </div>
 <div id="modify-the-map-color-ranges" class="section level3 unnumbered" number="">
 <h3>Modify the map color ranges</h3>
-<p>While we never automatically accept the default visualization, it’s a good place to begin. The default map displays a <em>continuous</em> type of range, with a <em>linear</em> interpolation of data values. This means that the map places all of the values in a straight line, from the minimum of 5% to the maximum of 31%, and assigns each value to a color along the gradient, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-continuous-linear">15.11</a>. Notice that the US (20.5%) blends in with a medium blue color, just above the midpoint in this range.</p>
+<p>While we never automatically accept the default visualization, it’s a good place to begin. The default map displays a <em>continuous</em> type of range, with a <em>linear</em> interpolation of data values. This means that the map places all of the values in a straight line, from the minimum of 5% to the maximum of 31%, and assigns each value to a color along the gradient, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-continuous-linear">15.12</a>. Notice that the US (20.5%) blends in with a medium blue color, just above the midpoint in this range.</p>
 
 <div class="figure"><span id="fig:map-continuous-linear"></span>
 <iframe src="https://datawrapper.dwcdn.net/aetEM/" width="672" height="450px">
 </iframe>
 <p class="caption">
-Figure 15.11: Income inequality map with continuous range and linear interpolation. Explore the <a href="https://datawrapper.dwcdn.net/aetEM/">interactive version</a>.
+Figure 15.12: Income inequality map with continuous range and linear interpolation. Explore the <a href="https://datawrapper.dwcdn.net/aetEM/">interactive version</a>.
 </p>
 </div>
-<p>Create a second map with the same data but different settings. Change the <em>Type</em> setting to <em>steps</em>, and adjust to <em>3</em> steps, using <em>Natural breaks (Jenks)</em> interpolation, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-3steps-naturalbreaks">15.12</a>. This means that the map now places all of the values in three ascending groups. Natural breaks offers a compromise between using colors to highlight the outliers versus diversity inside the range. Notice that the US (still 20.5%) now stands out in a dark blue color at the top third of this range (19% or above).</p>
+<p>Create a second map with the same data but different settings. Change the <em>Type</em> setting to <em>steps</em>, and adjust to <em>3</em> steps, using <em>Natural breaks (Jenks)</em> interpolation, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-3steps-naturalbreaks">15.13</a>. This means that the map now places all of the values in three ascending groups. Natural breaks offers a compromise between using colors to highlight the outliers versus diversity inside the range. Notice that the US (still 20.5%) now stands out in a dark blue color at the top third of this range (19% or above).</p>
 
 <div class="figure"><span id="fig:map-3steps-naturalbreaks"></span>
 <iframe src="https://datawrapper.dwcdn.net/VSfdZ/" width="672" height="450px">
 </iframe>
 <p class="caption">
-Figure 15.12: Income inequality map with 3 steps and natural breaks interpolation. Explore the <a href="https://datawrapper.dwcdn.net/VSfdZ/">interactive version</a>.
+Figure 15.13: Income inequality map with 3 steps and natural breaks interpolation. Explore the <a href="https://datawrapper.dwcdn.net/VSfdZ/">interactive version</a>.
 </p>
 </div>
 <p>The first map portrays US income inequality to be similar to most nations, while the second map places the US at the higher end of the color scale. Which map is misleading? Which one is truthful? If you prefer clear and definitive rules in map design, this answer may frustrate you. Although the two maps generate very different impressions in our eyes, both maps present accurate data that is clearly labeled, based on reasonable and truthful interpretations of the data.</p>
-<p>To understand what’s happening behind the scenes with your choropleth map, visualization expert Alberto Cairo recommends creating a histogram to better understand the data distribution. Go back to the <a href="https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565">data in the Google Sheet</a> and create a <a href="chart-histogram.html">histogram, as we described in chapter 7</a> to view the frequency of nations when sorted by percent share into “buckets”, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-data-histogram">15.13</a>. While most nations are clumped around the median, this is not a normal distribution curve, because a handful are outliers near the 30 percent mark. In the first map, which used continuous type and linear interpolation, the US appeared closer to the median and blended in with a medium blue. By contrast, the second map used 3 steps and natural breaks, which meant that the US appeared in the top range and stood out in dark blue.</p>
+<p>To understand what’s happening behind the scenes with your choropleth map, visualization expert Alberto Cairo recommends creating a histogram to better understand the data distribution. Go back to the <a href="https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565">data in the Google Sheet</a> and create a <a href="chart-histogram.html">histogram, as we described in chapter 7</a> to view the frequency of nations when sorted by percent share into “buckets”, as shown in Figure <a href="how-to-lie-with-maps.html#fig:map-data-histogram">15.14</a>. While most nations are clumped around the median, this is not a normal distribution curve, because a handful are outliers near the 30 percent mark. In the first map, which used continuous type and linear interpolation, the US appeared closer to the median and blended in with a medium blue. By contrast, the second map used 3 steps and natural breaks, which meant that the US appeared in the top range and stood out in dark blue.</p>
 
 <div class="figure"><span id="fig:map-data-histogram"></span>
 <img src="images/15-detect/map-data-histogram.png" alt="Histogram of income inequality map data."  />
 <p class="caption">
-Figure 15.13: Histogram of income inequality map data.
+Figure 15.14: Histogram of income inequality map data.
 </p>
 </div>
 <p>So how <em>should</em> we make decisions when designing choropleth maps? Similar to the chart section, there are few universal rules, but some recommendations. Always look for <em>better</em> ways to use map color ranges to show true and meaningful differences in the data, rather than hiding them out of sight. Datawrapper Academy recommends finding “a compromise between honesty and usefulness” when creating choropleth maps. In other words, tell the truth when displaying evidence <em>and</em> use design choices to emphasize an interpretation that calls our attention to what’s most important in the data story. For example, a <em>linear</em> interpolation works best to emphasize extreme lows and highs, while <em>quantiles</em> or other non-linear groupings reveal more geographic diversity in the middle ranges. Furthermore, some recommend using a <em>continuous</em> color palette to show nuances in the data, unless your data story has a compelling reason to display discrete <em>steps</em> to emphasize regions above or below certain thresholds. If you choose steps, increasing the <em>number of steps</em> will display more contrast in your map, but <em>too many steps</em> can give the mistaken impression that light- and dark-colored regions are very different, when in fact their numbers may vary only slightly. Whatever you decide, avoid the temptation to manually adjust a map’s settings in ways that manipulate its appearance to fit a preconceived point of view. In sum, show us a story and tell the truth. You may need to create several maps with different settings to decide which one is the best compromise.<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a>.</p>

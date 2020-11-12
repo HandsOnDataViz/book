@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 10 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 12 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -4062,48 +4062,54 @@ Figure 6.1: The *median* is a more useful comparative term than
 *average* or *mean* because it resists the influence of outliers.
 </p>
 
-*Percent* is another common term that becomes more useful for
-comparisons when we use it more precisely. Nearly everyone understands
-how *percentage* refers to a *ratio*, such as [the old 1970s
-commercial](https://en.wikipedia.org/wiki/Trident_gum) that curiously
-claimed how 4 out of 5 dentists (or 80 percent) recommend sugarless gum
-for their patients who chew gum.[19] Even if we never saw the survey
-data, nor understood how the fifth dentist resisted such intense peer
-pressure, we intuitively grasp the concept of percentage.
+*Percentage* is another common term, which nearly everyone intuitively
+grasps as a *ratio*. For example, an [old 1970s commercial for Trident
+gum](https://en.wikipedia.org/wiki/Trident_gum) claimed that “4 out of 5
+dentists surveyed recommend sugarless gum for their patients who chew
+gum.”[19] Even if you’re too young to remember that slogan, or are
+curious about how this survey was actually conducted, or are puzzled
+over how the fifth dentist resisted such intense peer pressure, we all
+understand how 4 out of 5 dentists is equivalent to `4/5 = 0.8 = 80%`.
 
-But troubles can arise when using that word to compare numbers, and
-here’s where we need to carefully choose our words. One term is *percent
-change* (or percent increase or decrease), which works best when
-comparing *old versus new values*. For example, if 4 dentists
-recommended sugarless gum in 1960, but peer pressure finally prevailed
-and 5 dentists recommend it in 2020, we calculate the percent change as
-`(New value - Old value) / Old value`, or `(5-4)/4 = 1/4 = 0.25 = 25%`.
+But confusion arises sometimes when people hastily compare percentages,
+so we need to carefully choose our words. One term is *percent change*
+(or percent increase or decrease), which works best when comparing *old
+versus new values*. Percent change is calculated by the difference
+between new and old values, divided by the absolute value of the old
+value, or `(New value - Old value) / |Old value|`. For example, if 4
+dentists recommended sugarless gum in 1960, but peer pressure finally
+prevailed and 5 dentists recommend it in 2020, we calculate the percent
+change as `(5-4)/4 = 1/4 = 0.25 = 25%`.
 
 A different term is *percentage points*, which works best when comparing
-*old versus new percentages*. For example, if 80 percent of dentists
-recommended sugarless gum in 1960, but 100 percent recommended it in
-2020, we can compare the two figures by calculating the difference as
+*old versus new percentages* by calculating their difference. For
+example, if 80 percent of dentists recommended sugarless gum in 1960,
+but 100 percent recommended it in 2020, we could compare the two figures
+by calculating the difference as
 `New percentage - Old percentage = 100% - 80%  = a difference of 20 percentage points`.
 
-When we use each term accurately, there are two correct ways to compare
+When we precisely use each term, there are two correct ways to compare
 these figures. One way is to state that “The number of dentists who
 recommended sugarless gum increased 25 percent over time.” Another way
 is to state that “The percentage of dentists who recommended sugarless
 gum increased 20 percentage points over time.” Both statements are
-accurate.
+accurate. Even if someone confuses the two terms, there’s not a big gap
+between a “25 percent change” and a “20 percent point increase” in this
+particular example.
 
-Avoid loosely using the word “percent” without being precise about its
-meaning, since you’re likely to confuse people, or worse, mislead them
-about the facts. Imagine a politician who proposes to raise the sales
-tax on products and services you purchase from 5 to 6 percent. If that
-politician says, “it’s only a 1 percent increase,” they’re wrong.
-Instead, there are two truthful ways describe this change. One way is to
-state that tax “will increase 20 percent” because `(6-5)/5 = 0.20`.
-Another way is to state that the tax “will increase by 1 percentage
-point” because `6% - 5% = a difference of 1 percentage point`. See why
-the politician preferred to say it their way, rather than the correct
-way? Don’t let anyone fool you with percentages, and make sure you use
-these terms precisely in your own work to avoid misleading others.
+But consider a different example where someone intentionally misleads
+you with imprecise wording about percentages. Imagine a politician who
+proposes to raise the sales tax on products and services you purchase
+from 5 to 6 percent. If that politician says, “it’s only a 1 percent
+increase,” they’re wrong. Instead, there are two truthful ways describe
+this change. One way is to state that the tax “will increase 20 percent”
+because `(6-5)/5 = 0.20`. Another way is to state that the tax “will
+increase by 1 percentage point” because
+`6% - 5% = a difference of 1 percentage point`. See why the politician
+preferred to say it in their misleading way, rather than either of the
+two correct ways? Don’t let anyone fool you by describing how
+percentages change with very loose wording, and be precise about its
+meaning in your own work to avoid confusing other people.
 
 A final recommendation about using more precise language is to be
 cautious with words that suggest a *cause-and-effect relationship* in
@@ -13366,53 +13372,55 @@ How to Lie with Charts
 
 In this section, you’ll learn how to avoid being fooled by misleading
 charts, and also how to make your own charts more honest, by
-intentionally manipulating the same data to tell opposing stories. In
-the first half, you will *exaggerate* small differences in a column
-chart to make them seem larger. In the second, half, you will *diminish*
-the rate of growth in a line chart to make it appear more gradual.
-Together, these tutorials will teach you to watch out for key details
-when reading other people’s charts, such as the vertical axis and aspect
-ratio. Paradoxically, by demonstrating *how to lie*, our goal is to
-teach you to *tell the truth* and to think more carefully about the
-ethics of designing your data stories.
+intentionally manipulating the same data to tell opposing stories. First
+you will *exaggerate* small differences in a column chart to make them
+seem larger. Second you will *diminish* the rate of growth in a line
+chart to make it appear more gradual. Together, these tutorials will
+teach you to watch out for key details when reading other people’s
+charts, such as the vertical axis and aspect ratio. Paradoxically, by
+demonstrating *how to lie*, our goal is to teach you to *tell the truth*
+and to think more carefully about the ethics of designing your data
+stories.
 
-In the first half of this tutorial, we’ll examine data about the
-economy, a topic that’s often twisted by politicians to portray it more
-favorably for their perspective. The Gross Domestic Product (GDP)
-measures the market value of the final goods and services produced in a
-nation, which many economists consider to be the primary indicator of
-economic health. (Interestingly, not everyone agrees because GDP does
-not count unpaid household labor such as caring for one’s children, nor
-does it consider the distribution of wealth across a nation’s
-population.) We downloaded US GDP data from the [US Federal Reserve
-open-data repository](https://fred.stlouisfed.org/series/GDP), which is
-measured in billions of dollars and published quarterly, with seasonal
+### Exaggerate Change in Charts
+
+First we’ll examine data about the economy, a topic that’s often twisted
+by politicians to portray it more favorably for their perspective. The
+Gross Domestic Product (GDP) measures the market value of the final
+goods and services produced in a nation, which many economists consider
+to be the primary indicator of economic health. (Interestingly, not
+everyone agrees because GDP does not count unpaid household labor such
+as caring for one’s children, nor does it consider the distribution of
+wealth across a nation’s population.) We downloaded US GDP data from the
+[US Federal Reserve open-data
+repository](https://fred.stlouisfed.org/series/GDP), which is measured
+in billions of dollars and published quarterly, with seasonal
 adjustments to allow for better comparisons across industries that vary
 during the year, such as summer-time farming and tourism versus
-winter-time holiday shopping. Your task is create a *misleading* column
+winter-time holiday shopping. Your task is create a deceptive column
 chart that *exaggerates* small differences to make them appear larger in
 the reader’s eye.
 
 1.  Open the [US GDP mid-2019 data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1teB2Pw2lNpFjE_GCNmeqVNURSid36IMrWUROpPZMScA/edit#gid=0),
-    and go to *File &gt; Save As* to create a copy that you can edit in
-    your own Google Drive. We’ll create charts in Google Sheets, but you
-    can also download the data to use in a different chart tool if you
-    prefer.
+    and go to *File &gt; Make a Copy* to create a copy that you can edit
+    in your own Google Drive. We’ll create charts in Google Sheets, but
+    you can also download the data to use in a different chart tool if
+    you prefer.
 
 2.  Examine the data and read the notes. To simplify this example, we
     show only two figures: the US GDP for the 2nd quarter (April-June)
     and the 3rd quarter (July-September) in 2019. The 2nd quarter was
     about $21.5 trillion, and the third quarter was slightly higher at
-    $21.7 trillion. TODO: DECIDE whether to add this: If we calculated
-    the percent change, or (21747 - 21540)/21540 = 0.0096 = 0.96%,
-    that’s a growth rate of just under 1 percent.
+    $21.7 trillion. In other words, the quarterly GDP rose by just under
+    one percent, which we calculated this way:
+    `(21747 - 21540)/21540 = 0.0096 = 0.96%`.
 
 3.  Create a Google Sheets column chart in the same sheet using the
     *default* settings, although we never automatically accept them as
-    the best representation of the truth. In the *data* tab, select the
-    two columns, and go to *Insert &gt; Chart*, as you learned when we
-    introduced [charts with Google Sheets in Chapter
+    the best representation of the truth. In the *data* sheet, select
+    the two columns, and go to *Insert &gt; Chart*, as you learned when
+    we introduced [charts with Google Sheets in Chapter
     7](chart-google.html). The tool should recognize your data and
     automatically produce a column chart, as shown in the left side of
     Figure <a href="#fig:gdp-baseline-merged">15.1</a>. In this default
@@ -13420,41 +13428,41 @@ the reader’s eye.
     between $21.5 versus $21.7 trillion looks relatively small to the
     reader.
 
-4.  *Reduce the vertical axis.* Click on the three-dot kebab menu to
-    open the *Chart editor* and select the *Customize* tab. Scroll down
-    to the vertical axis settings, and change the minimum to 21500 and
-    the maximum to 21800, as shown in the right side of Figure
+4.  *Truncate the vertical axis to exaggerate differences.* Instead of a
+    zero baseline, let’s manipulate the scale to make the 1 percent
+    change in GDP look larger. Click on the three-dot kebab menu to open
+    the *Chart editor* and select the *Customize* tab. Scroll down to
+    the vertical axis settings, and reduce the scale by changing the
+    minimum from 0 (the zero baseline) to 21500, and also change the
+    maximum to 21800, as shown in the right side of Figure
     <a href="#fig:gdp-baseline-merged">15.1</a>. Although the data
-    remains the same, those small differences now appear much larger in
-    our eyes because you’ve manipulated the vertical scale. Only people
-    who read charts closely will notice this trick. The political
-    candidate who’s campaigning on rising economic growth will thank
-    you!
+    remains the same, the small difference between the two columns in
+    the chart now appears much larger in our eyes. Only people who read
+    charts closely will notice this trick. The political candidate who’s
+    campaigning on rising economic growth will thank you!
 
-<img src="images/15-detect/gdp-baseline-merged.png" alt="The default GDP line chart on the left, and the reduced-axis chart on the right." width="750" />
+<img src="images/15-detect/gdp-baseline-merged-annotated.png" alt="The Zero baseline GDP line chart (left), and the Truncated baseline line chart, with the Chart editor (right)." width="750" />
 <p class="caption">
-Figure 15.1: The default GDP line chart on the left, and the
-reduced-axis chart on the right.
+Figure 15.1: The Zero baseline GDP line chart (left), and the Truncated
+baseline line chart, with the Chart editor (right).
 </p>
 
-TODO: Placed images above side-by-side to allow for easier comparison.
-Rethink if “zero baseline” and “truncated baseline” are best titles.
+As you can see, the truncated baseline chart is *wrong* because you’ve
+violated one of the [cardinal rules about chart design in Chapter
+7](chart-design.html). Column (and bar) charts *must* start at the zero
+baseline, because they represent value using *height* (and *length*).
+Readers cannot determine if a column is twice as high as another column
+unless both begin at the zero baseline. By contrast, the default chart
+with the zero baseline is truthful. But let’s move on to a different
+example where the rules are not as clear.
 
-However, your chart is clearly *wrong* because you’ve violated one of
-the [cardinal rules about chart design in Chapter 7](chart-design.html).
-Column (and bar) charts *must* start at the zero baseline, because they
-represent value using *height* (and *length*). Readers cannot determine
-if a column is twice as high as another column unless both begin at the
-zero baseline. By contrast, the default chart with the zero baseline is
-truthful. But let’s move on to a different example where the rules are
-not as clear.
+### Diminish Change in Charts
 
-In the second half of this tutorial, we’ll examine data about climate
-change, one of the most pressing issues we face on our planet, yet
-deniers continue to resist the new reality, and some of them twist the
-facts.\[TODO: Cite Cairo examples\]. In this tutorial, we’ll examine
-global temperature data from 1880 to the present, [downloaded from the
-NASA, the US National Aeronautics and Space
+Next we’ll examine data about climate change, one of the most pressing
+issues we face on our planet, yet deniers continue to resist the new
+reality, and some of them twist the facts. In this tutorial, we’ll
+examine global temperature data from 1880 to the present, [downloaded
+from the NASA, the US National Aeronautics and Space
 Administration](https://climate.nasa.gov/vital-signs/global-temperature/).
 It shows that the mean global temperature has risen about 1 degree
 Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and
@@ -13465,8 +13473,8 @@ eye.[32]
 
 1.  Open the [global temperature change 1880-2019 data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0),
-    and go to *File &gt; Save As* to create a copy that you can edit in
-    your own Google Drive.
+    and go to *File &gt; Make a Copy* to create a version you can edit
+    in your own Google Drive.
 
 2.  Examine the data and read the notes. Temperature change refers to
     the mean global land-ocean surface temperature in degrees Celsius,
@@ -13485,14 +13493,14 @@ eye.[32]
     Administration](https://www.ncdc.noaa.gov/cag/global/time-series)
     (NOAA).
 
-3.  Create a Google Sheets line chart in the *data* tab by selecting the
-    two columns in the *data* tab, then *Insert &gt; Chart*. The tool
-    should recognize your time-series data and produce a *default* line
-    chart, though we never automatically accept it as the best
-    representation of the truth. Click on the three-dot kebab menu to
-    open the *Chart editor* and select the *Customize* tab. Add a better
-    title and vertical axis label, using the notes to clarify the source
-    and how temperature change is measured, as shown in Figure
+3.  Create a Google Sheets line chart by selecting the two columns in
+    the *data* sheet, then *Insert &gt; Chart*. The tool should
+    recognize your time-series data and produce a *default* line chart,
+    though we never automatically accept it as the best representation
+    of the truth. Click on the three-dot kebab menu to open the *Chart
+    editor* and select the *Customize* tab. Add a better title and
+    vertical axis label, using the notes to clarify the source and how
+    temperature change is measured, as shown in Figure
     <a href="#fig:temperature-default">15.2</a>.
 
 <img src="images/15-detect/temperature-default.png" alt="Default line chart of global temperature change. Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRBJy0vWBN1z49hE8c7vxF_ZiTNKF5RjQ2vpJ-aVfsdNpNYgcMu1cH2zAh90v713vcMmrs6kVlSgQkV/pubchart?oid=557710802&format=interactive)."  />
@@ -13506,12 +13514,13 @@ Now let’s create three more charts using the same data but different
 methods, and discuss why they are *not wrong* from a technical
 perspective, but nevertheless *very misleading*.
 
-### Lengthen the vertical axis to flatten the line
+#### Lengthen the vertical axis to flatten the line
 
-We’ll use the same method as shown in the first half of this tutorial,
-but in the opposite direction. In the Google Sheets chart editor,
-customize the vertical axis by changing the minimum value to negative 5
-and the maximum to positive 5, as shown in Figure
+We’ll use the same method as shown in the [Exaggerate Change in Charts
+section](how-to-lie-with-charts.html) above, but in the opposite
+direction. In the Google Sheets chart editor, customize the vertical
+axis by changing the minimum value to negative 5 and the maximum to
+positive 5, as shown in Figure
 <a href="#fig:temperature-axis-annotated">15.3</a>. By increasing the
 length of the vertical scale, you flattened our perception of the rising
 line, and cancelled our climate emergency…but not really.
@@ -13535,7 +13544,7 @@ irrelevant. Therefore, flattening the line chart for temperature change
 may mislead readers, but it’s technically not wrong, as long as it is
 labelled correctly.[33]
 
-### Widen the chart to warp its aspect ratio
+#### Widen the chart to warp its aspect ratio
 
 In your Google Sheet, click the chart and drag the sides to make it very
 short and wide, as shown in Figure
@@ -13556,68 +13565,83 @@ What makes this warped line chart *misleading* rather than *wrong*? Once
 again, since changing the aspect ratio of a line chart does not violate
 a clearly-defined rule of data visualization, it’s not technically
 wrong, as long as it’s accurately labeled. But it’s definitely
-misleading. Visualization expert Alberto Cairo states that ideally, we
-should design charts with aspect ratios that “neither exaggerates nor
-minimizes change.” What specifically does he suggest? Cairo recommends
-(but does *not* propose a universal rule) that the percent change
-expressed in a chart should roughly match its aspect ratio. For example,
-if a chart represents a 33 percent increase, which is the same as 33/100
-or 1/3, he recommends an aspect ratio of 3:1 (because the fraction is
-flipped by placing width before height), or in other words, a chart that
-is three times taller than its width.[34] Therefore, if we apply Cairo’s
-recommendation to our climate change chart, the difference from 0° to
-1°C represents a 100% increase, which suggests an ideal chart with a 1:1
-aspect ratio, or just as tall as it is wide, as shown in Figure
-<a href="#fig:temperature-aspect-cairo">15.5</a>.
+misleading. Cairo states that we should design charts with an aspect
+ratio that “neither exaggerates nor minimizes change.” What specifically
+does he suggest? Cairo recommends, yet clearly states this “isn’t a
+universal rule of chart design,” that the percent change expressed in a
+chart should roughly match its aspect ratio. For example, if a chart
+represents a 33 percent increase, which is the same as 33/100 or 1/3, he
+recommends an aspect ratio of 3:1 (because the fraction is flipped by
+placing width before height), or in other words, a line chart that is
+three times wider than its height.[34]
 
-<img src="images/15-detect/temperature-aspect-cairo-annotated.png" alt="Cairo's recommendation for percent change (100%) to match chart aspect ratio (1:1)."  />
+But Cairo does *not* propose his aspect ratio recommendation as a
+universal rule because he recognizes how it fails with very small or
+very large values. For example, if we apply Cairo’s recommendation to
+our global temperature change chart, the difference between the lowest
+and highest values (-0.5° to 1°C) represents a 300% increase. In this
+case, we calculate the percent change using the lowest value of -0.5°C,
+rather than the initial value of 0°C, because dividing by zero is not
+defined, so `(1°C- -0.5°C) / |-0.5°C| = 3 = 300%`). Following Cairo’s
+general recommendation, a 300% increase suggests a 1:3 aspect ratio, or
+a line chart three times taller than its width, as shown in Figure
+<a href="#fig:temperature-aspect-cairo">15.5</a>. While this very tall
+chart is technically correct, it’s *misleading* because it *exaggerates
+change*, which is contrary to Cairo’s main message. The aspect ratio
+recommendation becomes ridiculous when we divide by numbers that are
+very close to zero.
+
+&lt;img src=“images/15-detect/temperature-aspect-cairo-annotated.png”
+alt=“Following Cairo’s”recommendation" for a 300% increase results in a
+1:3 aspect ratio that exaggerates change." /&gt;
 <p class="caption">
-Figure 15.5: Cairo’s recommendation for percent change (100%) to match
-chart aspect ratio (1:1).
+Figure 15.5: Following Cairo’s “recommendation” for a 300% increase
+results in a 1:3 aspect ratio that exaggerates change.
 </p>
 
-However, Cairo clearly states that his aspect ratio recommendation
-“isn’t a universal rule of chart design” and there are several cases
-when you should ignore it and use your own judgment. For example,
-instead of *global temperature change*, which increased from 0° to 1°C,
-imagine that our chart displayed the *global temperature*, which
-increased from about 13° to 14°C (or about 55° to 57°F). When we express
-the temperature in absolute numbers, it doesn’t *feel* very significant,
-even though a 1°C change in average temperature can have dramatic global
-consequences. Using this different scale, the chart would represent only
-an 8 percent increase, or about 1/12, which under Cairo’s recommendation
-translates into a 12:1 aspect ratio, or twelve times wider than it is
-tall, as shown in Figure
-<a href="#fig:temperature2-aspect-cairo">15.6</a>.
+Cairo acknowledges that his aspect ratio recommendation also can result
+in *misleading* charts in the opposite way that *diminish change*. For
+example, instead of *global temperature change*, which increased from 0°
+to 1°C, imagine a chart that displays *global temperature*, which
+increased from about 13° to 14°C (or about 55° to 57°F) over time. Even
+though a 1°C difference in average global temperature may not *feel*
+very significant to our bodies, it has dramatic consequences for the
+Earth. We can calculate the percent change as:
+`(14°C - 13°C) / 13°C = 0.08 = 8% percent increase`, or about 1/12. This
+translates into a 12:1 aspect ratio, or a line chart that is twelve
+times wider than it is tall, as shown in Figure
+<a href="#fig:temperature2-aspect-cairo">15.6</a>. Cairo warns that this
+significant global temperature increase looks “deceptively small,” so he
+cautious against using his aspect ratio recommendation in all cases.[35]
 
-<img src="images/15-detect/temperature2-aspect-cairo-annotated.png" alt="If we apply Cairo's recommendation to a chart of *global temperature* (not temperature change), where percent change (8% or 1/12) matches its aspect ratio (12:1), the result is misleading."  />
+&lt;img src=“images/15-detect/temperature2-aspect-cairo-annotated.png”
+alt=“Following Cairo’s”recommendation" for an 8% increase results in a
+12:1 aspect ratio that diminishes change." /&gt;
 <p class="caption">
-Figure 15.6: If we apply Cairo’s recommendation to a chart of *global
-temperature* (not temperature change), where percent change (8% or 1/12)
-matches its aspect ratio (12:1), the result is misleading.
+Figure 15.6: Following Cairo’s “recommendation” for an 8% increase
+results in a 12:1 aspect ratio that diminishes change.
 </p>
 
-Even Cairo points out that this significant temperature increase looks
-“deceptively small” if you follow his aspect ratio recommendation using
-this scale, so he advises against it.[35] Furthermore, if you convert
-the scale from Celsius to Fahrenheit, the calculation changes once
-again, which doesn’t make any sense. Where does all of this leave us? If
-you feel confused, that’s because there’s no universal rule with aspect
-ratio. What should you do? First, never automatically accept the default
-chart. Second, explore how different aspect ratios affect its
-appearance. Finally, use your best judgement with aspect ratio to tell
-true and meaningful data stories, because there is no single rule that
-fits all cases.
+Where does all of this leave us? If you feel confused, that’s because
+data visualization has *no universal rule about aspect ratios*. What
+should you do? First, never automatically accept the default chart.
+Second, explore how different aspect ratios affect its appearance.
+Finally, even Cairo argues that you should use own judgment and ignore
+his recommendation in several cases, because there is no single rule
+about aspect ratio that fits all circumstances.
 
-TODO: Need feedback on whether the 2nd and 3rd charts and text make
-sense here
+#### Add more data and a dual vertical axis
 
-### Add more data and a dual vertical axis
-
-Let’s add more data to make your chart even more misleading! In the
-Google Sheet, go to the tab named *temp+GDP*, where you will see
-temperature change plus a new column: US Gross Domestic Product (GDP) in
-billions of dollars from 1929 to 2019, downloaded from the [US Federal
+Another common way to mislead is to add more data, specifically a second
+data series that corresponds to a second vertical axis on the right side
+of a line chart. While it’s technically possible to construct a
+dual-axis chart, we strongly advise against them because they can easily
+be manipulated to mislead readers. Let’s illustrate how with an example
+that combines two prior datasets—global temperature change and US Gross
+Domestic Product—in one dual-axis chart. In the Google Sheet, go to the
+*temp+GDP* sheet, where you will see temperature change plus a new
+column: US Gross Domestic Product (GDP) in billions of dollars from 1929
+to 2019, downloaded from the [US Federal
 Reserve](https://fred.stlouisfed.org/series/GDPA). To simplify this
 example, we deleted pre-1929 temperature data to match it up more neatly
 with available GDP data.
@@ -13656,17 +13680,7 @@ Figure 15.8: Brand-new menu for the right axis.
     right-axis baseline for US GDP) and the maximum to 10, to flatten
     the temperature line even further. Add a title, source, and labels
     to make it look more authoritative, as shown in Figure
-    <a href="#fig:temperature-gdp-final-annotated">15.9</a>. By lowering
-    our perception of the temperature line in comparison to the steadily
-    rising GDP line, you’ve misled us into ignoring the consequences of
-    climate change while we enjoy a long-term economic boom!
-    Furthermore, the GDP data is *not* adjusted for inflation, so you’ve
-    double-misled us by comparing 1929 dollars to 2019 dollars. Finally,
-    since you accepted the default colors assigned by Google Sheets, the
-    climate data is displayed in a “cool” blue, which sends our brain
-    the opposite message of rising temperatures and glacial melt. So
-    we’ll count this as a triple! \[TODO: Decide whether to break
-    non-comparable data and color into separate paragraphs.\]
+    <a href="#fig:temperature-gdp-final-annotated">15.9</a>.
 
 <img src="images/15-detect/temperature-gdp-final-annotated.png" alt="Misleading dual-axis chart of US GDP and global temperature change."  />
 <p class="caption">
@@ -13676,33 +13690,62 @@ change.
 
 What makes this dual axis chart *misleading* rather than *wrong*? Once
 again, since it does not violate a clearly-defined visualization design
-rule, the chart is not wrong, but very misleading. In fact, many
-visualization experts strongly discourage using dual-axis charts because
-they confuse most readers and create mischief. Even though both axes
-began at zero, the left-side temperature scale has a top level of 10
-degrees Celsius, which is not reasonable given the context of the data.
+rule, the chart is not wrong. But many visualization experts strongly
+advise against dual-axis charts because they confuse most readers, do
+not clearly show relationships between two variables, and sometimes lead
+to mischief. Although both axes begin at zero in Figure
+<a href="#fig:temperature-gdp-final-annotated">15.9</a>, the left-side
+temperature scale has a top level of 10°C, which is unreasonable since
+the temperature line rises only 1°C. Therefore, by lowering our
+perception of the temperature line in comparison to the steadily rising
+GDP line, you’ve misled us into ignoring the consequences of climate
+change while we enjoy a long-term economic boom! Two additional issues
+also make this chart problematic. Since the GDP data is *not* adjusted
+for inflation, its misleads us by comparing 1929 dollars to 2019
+dollars, a topic we warned about in [Chapter 6: Make Meaningful
+Comparisons](comparisons.html). Furthermore, by accepting default colors
+assigned by Google Sheets, the climate data is displayed in a “cool”
+blue, which sends our brain the opposite message of rising temperatures
+and glacial melt. To sum it up, this chart misleads in three ways: an
+unreasonable vertical axis, non-comparable data, and color choice.
 
-What’s a better alternative if you wish to visualize the relationship
-between global temperature and US GDP over time? Consider a [scatter
-chart, which we introduced in chapter
-7](scatter-bubble-datawrapper.html), because it works best to show the
-relationship between two variables by representing them as XY
-coordinates. Furthermore, make a more meaningful comparison by plotting
-global temperature change versus US real GDP that has been adjusted into
-constant dollars.
+What’s a better alternative to a dual-axis line chart? The best way to
+visualize the relationship between two variables, such as global
+temperature and GDP, is to create a [scatter chart, as we introduced in
+chapter 7](scatter-bubble-datawrapper.html). Also, we can make a more
+meaningful comparison by plotting [US Real
+GDP](https://fred.stlouisfed.org/series/GDPCA), which has been adjusted
+into constant 2012 dollars, and entered alongside global temperature
+change [in this Google
+Sheet](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=374640985).
+We copied the data to create a [scatter chart in
+Datawrapper](scatter-bubble-datawrapper.html), following the steps we
+outlined in Chapter 7. As you can see in Figure
+<a href="#fig:real-gdp-temperature-scatter">15.10</a>, the growth of the
+US economy is strongly associated with rising global temperature change
+from 1929 to the present. Furthermore, it’s harder to mislead readers
+with a scatter chart because the axes are designed to display the full
+range of data, and our reading of the strength of the relationship is
+not tied to the aspect ratio.
 
-\[TODO: if we like this idea, insert a scatter chart here as described
-above….\]
+<img src="images/15-detect/real-gdp-temperature-scatter.png" alt="Scatter chart of relationship between real US GDP and global temperature change from 1929 to 2019. Explore the [interactive version](https://datawrapper.dwcdn.net/2Nhs9/)."  />
+<p class="caption">
+Figure 15.10: Scatter chart of relationship between real US GDP and
+global temperature change from 1929 to 2019. Explore the [interactive
+version](https://datawrapper.dwcdn.net/2Nhs9/).
+</p>
 
-To sum up, in this tutorial you created four charts about global
+To sum up, in this tutorial we created several charts about global
 temperature change. None of them were technically wrong, only some were
-truthful, while many were unreasonably manipulated to mislead readers by
-hiding or disguising important patterns in the data. Furthermore, there
-are additional ways to deceive that we did not examine here, such as
-building 3D charts and tilting the reader’s perspective below the
-baseline.[36]
+truthful, but most were unreasonably manipulated to fool readers by
+hiding or disguising important patterns in the data. We demonstrated
+several ways that charts can be designed to deceive readers, but did not
+exhaust all of the options. For example, see additional readings on ways
+to create three-dimensional charts and to tilt the reader’s perspective
+below the baseline, which causes readers to misjudge the relative height
+of column or line charts.[36]
 
-You may feel strange that data visualization lacks clearly-defined
+You may feel frustrated that data visualization lacks clearly-defined
 design rules for many cases, like we are accustomed to reading in our
 math, science, or grammar textbooks. Instead, remember that the
 important visualization rule is a *three-step process*: never
@@ -13785,13 +13828,13 @@ data and upload it to Datawrapper to start making our choropleth maps.
 5.  In the *Visualize* screen, in the *Colors* section of the *Refine*
     tab *Select palette*, click the *wrench symbol* to open up the color
     settings, as shown in Figure
-    <a href="#fig:map-color-settings">15.10</a>. Let’s skip past the
+    <a href="#fig:map-color-settings">15.11</a>. Let’s skip past the
     light-green-to-blue color palette, which you can modify later, and
     let’s focus on settings for color ranges.
 
 <img src="images/15-detect/map-color-settings.png" alt="Click the *wrench symbol* to open the color settings." width="350" />
 <p class="caption">
-Figure 15.10: Click the *wrench symbol* to open the color settings.
+Figure 15.11: Click the *wrench symbol* to open the color settings.
 </p>
 
 ### Modify the map color ranges
@@ -13802,13 +13845,13 @@ range, with a *linear* interpolation of data values. This means that the
 map places all of the values in a straight line, from the minimum of 5%
 to the maximum of 31%, and assigns each value to a color along the
 gradient, as shown in Figure
-<a href="#fig:map-continuous-linear">15.11</a>. Notice that the US
+<a href="#fig:map-continuous-linear">15.12</a>. Notice that the US
 (20.5%) blends in with a medium blue color, just above the midpoint in
 this range.
 
 <img src="images/15-detect/map-continuous-linear.png" alt="Income inequality map with continuous range and linear interpolation. Explore the [interactive version](https://datawrapper.dwcdn.net/aetEM/)."  />
 <p class="caption">
-Figure 15.11: Income inequality map with continuous range and linear
+Figure 15.12: Income inequality map with continuous range and linear
 interpolation. Explore the [interactive
 version](https://datawrapper.dwcdn.net/aetEM/).
 </p>
@@ -13816,7 +13859,7 @@ version](https://datawrapper.dwcdn.net/aetEM/).
 Create a second map with the same data but different settings. Change
 the *Type* setting to *steps*, and adjust to *3* steps, using *Natural
 breaks (Jenks)* interpolation, as shown in Figure
-<a href="#fig:map-3steps-naturalbreaks">15.12</a>. This means that the
+<a href="#fig:map-3steps-naturalbreaks">15.13</a>. This means that the
 map now places all of the values in three ascending groups. Natural
 breaks offers a compromise between using colors to highlight the
 outliers versus diversity inside the range. Notice that the US (still
@@ -13825,7 +13868,7 @@ range (19% or above).
 
 <img src="images/15-detect/map-3steps-naturalbreaks.png" alt="Income inequality map with 3 steps and natural breaks interpolation. Explore the [interactive version](https://datawrapper.dwcdn.net/VSfdZ/)."  />
 <p class="caption">
-Figure 15.12: Income inequality map with 3 steps and natural breaks
+Figure 15.13: Income inequality map with 3 steps and natural breaks
 interpolation. Explore the [interactive
 version](https://datawrapper.dwcdn.net/VSfdZ/).
 </p>
@@ -13846,7 +13889,7 @@ Sheet](https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2
 and create a [histogram, as we described in chapter
 7](chart-histogram.html) to view the frequency of nations when sorted by
 percent share into “buckets”, as shown in Figure
-<a href="#fig:map-data-histogram">15.13</a>. While most nations are
+<a href="#fig:map-data-histogram">15.14</a>. While most nations are
 clumped around the median, this is not a normal distribution curve,
 because a handful are outliers near the 30 percent mark. In the first
 map, which used continuous type and linear interpolation, the US
@@ -13856,7 +13899,7 @@ that the US appeared in the top range and stood out in dark blue.
 
 <img src="images/15-detect/map-data-histogram.png" alt="Histogram of income inequality map data."  />
 <p class="caption">
-Figure 15.13: Histogram of income inequality map data.
+Figure 15.14: Histogram of income inequality map data.
 </p>
 
 So how *should* we make decisions when designing choropleth maps?
@@ -13989,7 +14032,7 @@ groups by the standards of higher-performing ones. Instead, they suggest
 plotting data about racial and ethnic groups on separate but adjacent
 charts, each with its own reference to state or national averages for
 comparison, as shown in Figure
-<a href="#fig:schwabish-placeholder">15.14</a>. The idea is interesting,
+<a href="#fig:schwabish-placeholder">15.15</a>. The idea is interesting,
 but the example about Covid-19 pandemic data raises more questions about
 whose interests are served by revising how data is visualized On one
 hand, if predominantly White audiences perceive racial disparities in
@@ -14006,7 +14049,7 @@ identify and reduce bias all around us.
 
 <img src="images/15-detect/schwabish-placeholder.png" alt="Schwabish and Feng recommend to stop placing racial and ethnic data on the same chart (left), and replace it with separate but adjacent charts with state or national averages as a comparison point (right)." width="700" />
 <p class="caption">
-Figure 15.14: Schwabish and Feng recommend to stop placing racial and
+Figure 15.15: Schwabish and Feng recommend to stop placing racial and
 ethnic data on the same chart (left), and replace it with separate but
 adjacent charts with state or national averages as a comparison point
 (right).
@@ -14069,11 +14112,11 @@ not rely on a projection system. One drawback is that cartograms require
 readers to recognize abstract shapes in place of familiar boundaries,
 since these population-based visualizations do not align perfectly with
 conventional geography-based maps, as shown in Figure
-<a href="#fig:cartogram-placeholder">15.15</a>.
+<a href="#fig:cartogram-placeholder">15.16</a>.
 
 <img src="images/15-detect/cartogram-placeholder.png" alt="PLACEHOLDER: Conventional US map (left) versus cartogram (right) of US 2016 electoral vote."  />
 <p class="caption">
-Figure 15.15: PLACEHOLDER: Conventional US map (left) versus cartogram
+Figure 15.16: PLACEHOLDER: Conventional US map (left) versus cartogram
 (right) of US 2016 electoral vote.
 </p>
 
@@ -14098,11 +14141,11 @@ map to a population square map, follow this tutorial:
     (including US States). Select your preferred map, and proceed to
     visualize the data in the same way as other Datawrapper choropleth
     maps, as shown in Figure
-    <a href="#fig:map-world-pop-square">15.16</a>.
+    <a href="#fig:map-world-pop-square">15.17</a>.
 
 <img src="images/15-detect/map-world-pop-square.png" alt="World population square map with income inequality data. Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/)."  />
 <p class="caption">
-Figure 15.16: World population square map with income inequality data.
+Figure 15.17: World population square map with income inequality data.
 Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/).
 </p>
 
@@ -15122,9 +15165,9 @@ Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9,
 NASA JPL, “Educator Guide: Graphing Global Temperature Trends,” 2017,
 <https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>
 
-[32] The inspiration for this specific tutorial came from a high school
-classroom activity created by the NASA Jet Propulsion Laboratory (JPL),
-as well as visualization expert Alberto Cairo’s analysis of charts by
+[32] The tutorial on misleading climate change data was inspired by a
+high school classroom activity created by the NASA Jet Propulsion
+Laboratory (JPL), as well as Alberto Cairo’s analysis of charts by
 climate change deniers. NASA JPL; Cairo, *How Charts Lie*, 2019,
 pp. 65-67, 135-141.
 

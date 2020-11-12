@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-10" />
+<meta name="date" content="2020-11-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -345,26 +345,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Two additional types of bias that are specific to spatial visualizations are <em>map area bias</em> and <em>projection bias</em>, and beware of both types when creating choropleth maps, as described earlier in this chapter. Map area bias refers to the tendency for our eyes to focus primarily on larger regions on a map, and less on smaller ones. This bias diverts our attention to <em>geographic area</em> rather than <em>population size</em>, which is usually the more relevant common denominator in choropleth maps. A classic example arises every four years during US presidential elections. Conventional maps of US electoral votes exaggerate the influence of rural states with larger geographic areas (such as spacious Wyoming with less than 600,000 people), and diminish the influence of urban states with small areas (such as tiny Rhode Island with over 1,000,000 people). Although Wyoming covers 80 times more area than Rhode Island, it currently has only 3 electoral votes, while Rhode Island has 4. Yet many people cannot make this distinction while looking at a conventional electoral map, because our eyes tend to focus on states with larger geographic areas.</p>
 <p>A related problem is <em>projection bias</em>. In order to portray a three-dimensional globe on a flat surface, geographers have developed different projection systems, and some of these, such as Mercator maps, inflate the size of nations located further away from the equator, which mistakenly gives the appearance that many North American countries (such as the United States and Russia) are more important than those in Central Africa. [TODO: check wording and describe how the ubiquitous Google Maps WGS84 standard compares, which I believe is still a pseudo-Mercator system: <a href="https://en.wikipedia.org/wiki/Web_Mercator_projection" class="uri">https://en.wikipedia.org/wiki/Web_Mercator_projection</a>]. For an interactive visual depiction of this issue, see <a href="http://googlemapsmania.blogspot.com/2020/09/how-map-projections-lie.html" class="uri">http://googlemapsmania.blogspot.com/2020/09/how-map-projections-lie.html</a></p>
 <p>Note: Also beware of <em>contested territory bias</em> in several popular digital map tile services. For example, Google Maps displays different borders and map data depending on the internet address of the user. If you look at location X from a computer in China, it will show AAA, but if you look at the same location from a computer in Taiwan, it will display BBB. [TODO: Find this cite and complete the example]</p>
-<p>One solution to both the map area and projection bias problem is to replace conventional map outlines with <em>cartograms</em> (sometimes called <em>population square</em> or <em>hexagon</em> maps). Cartograms display geographic regions by relative population size, rather than total area, and also do not rely on a projection system. One drawback is that cartograms require readers to recognize abstract shapes in place of familiar boundaries, since these population-based visualizations do not align perfectly with conventional geography-based maps, as shown in Figure <a href="map-area-and-projection-bias.html#fig:cartogram-placeholder">15.15</a>.</p>
+<p>One solution to both the map area and projection bias problem is to replace conventional map outlines with <em>cartograms</em> (sometimes called <em>population square</em> or <em>hexagon</em> maps). Cartograms display geographic regions by relative population size, rather than total area, and also do not rely on a projection system. One drawback is that cartograms require readers to recognize abstract shapes in place of familiar boundaries, since these population-based visualizations do not align perfectly with conventional geography-based maps, as shown in Figure <a href="map-area-and-projection-bias.html#fig:cartogram-placeholder">15.16</a>.</p>
 
 <div class="figure"><span id="fig:cartogram-placeholder"></span>
 <img src="images/15-detect/cartogram-placeholder.png" alt="PLACEHOLDER: Conventional US map (left) versus cartogram (right) of US 2016 electoral vote."  />
 <p class="caption">
-Figure 15.15: PLACEHOLDER: Conventional US map (left) versus cartogram (right) of US 2016 electoral vote.
+Figure 15.16: PLACEHOLDER: Conventional US map (left) versus cartogram (right) of US 2016 electoral vote.
 </p>
 </div>
 <p>TODO: Update maps above using 2020 election data in November? Use cartogram/hexagon from Datawrapper on right. TODO above: determine if cartograms and pop squares are interchangeable terms, or if they have different definitions.</p>
 <p>In the <a href="how-to-lie-with-maps.html">How to Lie with Maps section of this chapter</a>, we created choropleth maps of world inequality data in Datawrapper. To convert one from a conventional world map to a population square map, follow this tutorial:</p>
 <ol style="list-style-type: decimal">
 <li><p>To modify an existing world inequality map that you may have saved in your Datawrapper account, go to <em>My Charts</em>, select and right-click on the map to make a duplicate, and edit it. Or follow the steps in the previous section to create a new map.</p></li>
-<li><p>Go to the <em>Select your map</em> screen, and type “squares” to see all of those available types (including World population squares). Similarly, type “hexagons” to see all of the cartograms available (including US States). Select your preferred map, and proceed to visualize the data in the same way as other Datawrapper choropleth maps, as shown in Figure <a href="map-area-and-projection-bias.html#fig:map-world-pop-square">15.16</a>.</p></li>
+<li><p>Go to the <em>Select your map</em> screen, and type “squares” to see all of those available types (including World population squares). Similarly, type “hexagons” to see all of the cartograms available (including US States). Select your preferred map, and proceed to visualize the data in the same way as other Datawrapper choropleth maps, as shown in Figure <a href="map-area-and-projection-bias.html#fig:map-world-pop-square">15.17</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:map-world-pop-square"></span>
 <iframe src="https://datawrapper.dwcdn.net/YfNDe/" width="672" height="600px">
 </iframe>
 <p class="caption">
-Figure 15.16: World population square map with income inequality data. Explore the <a href="https://datawrapper.dwcdn.net/YfNDe/">interactive version</a>.
+Figure 15.17: World population square map with income inequality data. Explore the <a href="https://datawrapper.dwcdn.net/YfNDe/">interactive version</a>.
 </p>
 </div>
 <div id="the-us-states-bias" class="section level3 unnumbered" number="">

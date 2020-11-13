@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 12 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 13 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -2981,8 +2981,11 @@ dig deeper:
     for US and international data.
 -   [Global Open Data Index](https://index.okfn.org/dataset/), by the
     Open Knowledge Foundation.
--   [Google Public Data](https://www.google.com/publicdata/directory).
 -   [Google Dataset Search](https://datasetsearch.research.google.com/).
+-   [Harvard Dataverse](https://dataverse.harvard.edu), open to all
+    researchers from any discipline.
+-   [Humanitarian Data Exchange](https://data.humdata.org), by the
+    United Nations Office for the Coordination of Humanitarian Affairs.
 -   [IPUMS](https://www.ipums.org), Integrated Public Use Microdata
     Series, the world’s largest individual-level population database,
     with microdata samples from US and international census records and
@@ -4063,13 +4066,14 @@ Figure 6.1: The *median* is a more useful comparative term than
 </p>
 
 *Percentage* is another common term, which nearly everyone intuitively
-grasps as a *ratio*. For example, an [old 1970s commercial for Trident
-gum](https://en.wikipedia.org/wiki/Trident_gum) claimed that “4 out of 5
-dentists surveyed recommend sugarless gum for their patients who chew
-gum.”[19] Even if you’re too young to remember that slogan, or are
-curious about how this survey was actually conducted, or are puzzled
-over how the fifth dentist resisted such intense peer pressure, we all
-understand how 4 out of 5 dentists is equivalent to `4/5 = 0.8 = 80%`.
+grasps as a *ratio* of parts per hundred. For example, an [old 1970s
+commercial for Trident gum](https://en.wikipedia.org/wiki/Trident_gum)
+claimed that “4 out of 5 dentists surveyed recommend sugarless gum for
+their patients who chew gum.”[19] Even if you’re too young to remember
+that slogan, or wonder how that survey was actually conducted, or are
+puzzling over how the fifth dentist resisted such intense peer pressure,
+we all understand that 4 out of 5 dentists is equivalent to
+`4/5 = 0.8 = 80%`.
 
 But confusion arises sometimes when people hastily compare percentages,
 so we need to carefully choose our words. One term is *percent change*
@@ -4111,6 +4115,10 @@ two correct ways? Don’t let anyone fool you by describing how
 percentages change with very loose wording, and be precise about its
 meaning in your own work to avoid confusing other people.
 
+TODO above: DECIDE whether to mention that some sources refer to these
+concepts as absolute versus relative change
+<a href="https://dataschool.com/misrepresenting-data/relative-vs-absolute-change/" class="uri">https://dataschool.com/misrepresenting-data/relative-vs-absolute-change/</a>
+
 A final recommendation about using more precise language is to be
 cautious with words that suggest a *cause-and-effect relationship* in
 your data. In everyday conversation, there are many ways that we loosely
@@ -4150,10 +4158,9 @@ When we work with data expressed in *counts*, such as 3,133 motor
 vehicle crash deaths in Florida in 2018, it usually makes no sense to
 compare these numbers until we *normalize* them. This means to adjust
 data that has been collected using different scales into a common
-reference scale. Often we normalize *absolute numbers* into *relative
-numbers*, which in other words means converting *raw data* into *rates*,
-in order to make more meaningful comparisons. Even if you’ve never heard
-the term, perhaps you’re already normalizing data without realizing it.
+reference scale, or in other words to convert *raw data* into *rates* to
+make more meaningful comparisons. Even if you’ve never heard the term,
+perhaps you’re already normalizing data without realizing it.
 
 Here’s an example about motor vehicle safety that was inspired by
 visualization expert Alberto Cairo, with [updated 2018
@@ -4358,12 +4365,12 @@ create a *perfect* model,” Cairo reminds us. “But we can certainly come
 up with a *good enough* one.”[21]
 
 As we demonstrated above, the most common way to normalize data is to
-adjust *absolute numbers* into *relative numbers*, such as percentages
-or per capita rates. But there are many other ways to normalize data, so
-make sure you’re familiar with different methods when you [find and
-question your data, as described in chapter 4](find.html). When working
-with historical data (also called time-series or longitudinal data), you
-may need to *adjust for change over time*. For example, it’s not fair to
+adjust raw counts into relative rates, such as percentages or per
+capita. But there are many other ways to normalize data, so make sure
+you’re familiar with different methods when you [find and question your
+data, as described in chapter 4](find.html). When working with
+historical data (also called time-series or longitudinal data), you may
+need to *adjust for change over time*. For example, it’s not fair to
 directly compare median household income in 1970 versus 2020, because
 $10,000 US dollars had far more purchasing power a half-century ago than
 it does today, due to inflation and related factors. Similarly,
@@ -4477,8 +4484,9 @@ Bias warnings appear in several chapters of this book, because we
 continually need to be aware of different types that negatively
 influence our work at various stages of the data visualization process.
 Later in [Chapter 15 you’ll learn how to recognize and reduce other
-types of data bias](data-bias.html), such as framing bias, algorithmic
-bias, intergroup bias, and map area bias.
+types of biases](data-bias.html) when working with data, such as
+cognitive biases, algorithmic biases, intergroup biases, and map area
+biases.
 
 ### Summary
 
@@ -4568,12 +4576,12 @@ weight).
 <td>Best to compare sub-categories, or parts of a whole. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
-<td>Histogram<br> <img src="images/07-chart/chart-histogram.png" /></td>
-<td>Best to show distribution of raw data, with number of values in each bucket. If labels are long, use horizontal bars instead of vertical columns..<br>Easy tools: <a href="bar-column-google.html">Bar and Column Charts in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
-</tr>
-<tr class="odd">
 <td>Error bars in bar or column chart<br> <img src="images/07-chart/chart-error-column.png" /></td>
 <td>Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: TODO DECIDE <br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
+</tr>
+<tr class="odd">
+<td>Histogram<br> <img src="images/07-chart/chart-histogram.png" /></td>
+<td>Best to show distribution of raw data, with number of values in each bucket.<br>Easy tools: <a href="histogram-google.html">Histogram Chart in Google Sheets tutorial</a><br>Power tool: <a href="chartcode.html">Ch 12: Chart.js and Highcharts templates</a></td>
 </tr>
 <tr class="even">
 <td>Pie chart<br> <img src="images/07-chart/chart-pie.png" /></td>
@@ -4760,7 +4768,7 @@ results into a pie chart.
 ### Chart Aesthetics
 
 Remember that you create a chart to help the reader understand the
-story, not to confuse them. Decide if you want to show absolute numbers,
+story, not to confuse them. Decide if you want to show raw counts,
 percentages, or percent changes, and do the math for your readers.
 
 #### Avoid chart junk
@@ -4949,12 +4957,12 @@ Before you begin, be sure to review the [pros and cons of designing
 charts with Google Sheets in the prior section](chart-google.html). In
 this section, you’ll learn how to create bar and column charts, the most
 common visualization methods to compare values across categories. We’ll
-focus on why and how to create four different types: grouped, split,
-stacked, and histograms. For all of these, we blend the instructions for
-bar and column charts because they’re essentially the same, though
-oriented in different directions. If your data contains long labels,
-create a horizontal bar chart, instead of a vertical column chart, to
-give them more space for readability.
+focus on why and how to create three different types: grouped, split,
+and stacked. For all of these, we blend the instructions for bar and
+column charts because they’re essentially the same, though oriented in
+different directions. If your data contains long labels, create a
+horizontal bar chart, instead of a vertical column chart, to give them
+more space for readability.
 
 ### Grouped Bar and Column Charts
 
@@ -5187,13 +5195,20 @@ Figure 7.25: To edit a column color, select *Edit Chart - Customize -
 Series*.
 </p>
 
-### Histograms
+- Histogram
+-----------
 
-A histogram is a specific type of bar or column chart that shows
-distribution of values in a dataset. Figure
+A histogram chart is best for showing the distribution of raw data, with
+the number of values displayed in each bucket. Although a histogram may
+look similar to a column chart, the two are different. Since histograms
+show *continuous* data, you can adjust the bucket ranges to explore
+frequency patterns. For example, you can shift histogram buckets from
+0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. But column (and bar) charts show
+*categorical* data (such as the number of apples, bananas, etc.) so
+their ranges cannot be adjusted. Figure
 <a href="#fig:histogram">7.26</a> shows a histogram of average daily
-calorie consumption in 174 countries in 2006–2008 based on [UN’s Food
-and Agriculture Organization](http://www.fao.org/) data.
+calorie consumption in 174 countries in 2006–2008 based on data from the
+[United Nations Food and Agriculture Organization](http://www.fao.org/).
 
 <img src="images/07-chart/histogram.png" alt="Histogram: Explore the full-screen [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive)."  />
 <p class="caption">
@@ -5201,12 +5216,12 @@ Figure 7.26: Histogram: Explore the full-screen [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive).
 </p>
 
-Histograms are used to represent distributions, not individual values.
-Figure <a href="#fig:histogram">7.26</a> shows to peaks, one of
+Histograms are designed to represent distributions, not individual
+values. Figure <a href="#fig:histogram">7.26</a> shows two peaks, one of
 2,100–2,300 calories and the second one at 2,700-3,100 calories (two
 consecutive buckets). We can also see that daily calorie consumption in
 five countries does not exceed 1,900, and exceeds 3,700 calories in
-three countires. Histograms by themselves, without annotations don’t
+three countries. Histograms by themselves, without annotations, don’t
 tell us what those countries are.
 
 Note: You can view and copy the [Google Sheet with the calorie
@@ -5260,7 +5275,11 @@ to cover the entire range. Smaller intervals will contain fewer
 datapoints each, and will appear narrower.
 
 Unfortunately, currently there is no way to get rid of decimal points in
-the x-axis labels, even though all breakpoint may be integers.
+the x-axis labels in a Google Sheets histogram, even though all
+breakpoints may be integers.
+
+TODO: DISCUSS with AMELIA and ILYA the organization of the Histogram
+section and its sample data. See Meeting Notes
 
 - Pie, Line, and Area Charts
 ----------------------------
@@ -6959,10 +6978,9 @@ it uses color to draw attention to the extreme ends of the scale. Or if
 you wish to emphasize geographic diversity in your data, consider
 quantiles (or any of its cousins) because they use color to
 differentiate the middle portions of the scale. Or if you’re not sure
-what your data looks like, [create a histogram like you learned in
-Chapter 7: Chart Your Data](chart-google.html) to visualize it and help
-make wise map design choices. \[TODO: demonstrate a histogram with map
-data here?
+what your data looks like, [create a histogram as you learned in Chapter
+7](histogram-google.html) to visualize it and help make wise map design
+choices. \[TODO: demonstrate a histogram with map data here?
 <a href="https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales" class="uri">https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales</a>\]
 
 In any case, be very aware of how color palettes and interpolation
@@ -6995,11 +7013,10 @@ better strategy is to normalize the data by comparing cases per capita
 100,000 in Belgium) to adjust for prior differences in population.
 
 In the same way, choropleth maps work best when they display relative
-values (such as percentages or per capita rates) rather than absolute
-values (such as the raw number of people). If you ignore normalization
-when creating a choropleth map and display raw numbers, you’ll
-essentially recreate a population map, which doesn’t tell us anything
-new. For example, compare two maps shown in Figure
+values (such as percentages or per capita rates) rather than raw counts.
+If you ignore normalization when creating a choropleth map and display
+raw numbers, you’ll essentially recreate a population map, which doesn’t
+tell us anything new. For example, compare two maps shown in Figure
 <a href="#fig:normalize-map-data">8.11</a>. They both are about Covid-19
 cases in the continental US as of June 26, 2020. Figure
 <a href="#fig:normalize-map-data">8.11</a>a shows total number of
@@ -7041,12 +7058,12 @@ So the map with per-capita values is a much better illustration to the
 story about New York being the *first* epicenter of the Covid-19 crisis
 in the United States.
 
-TODO: Include a very simple normalization calculation to demonstrate
-absolute data versus normalized data (Cases / Population = Cases Per
-Capita) for two states, such as Texas and New York. Decide whether to
-show data at a specific moment (May 1 2020 near peak for NYC) or most
-up-to-date figure at this writing (which will show higher case rates
-elsewhere). Either way, clearly label the date in the caption.
+TODO: Include a very simple normalization calculation to demonstrate raw
+counts versus normalized data (Cases / Population = Cases Per Capita)
+for two states, such as Texas and New York. Decide whether to show data
+at a specific moment (May 1 2020 near peak for NYC) or most up-to-date
+figure at this writing (which will show higher case rates elsewhere).
+Either way, clearly label the date in the caption.
 
 At this point, you should have a better idea of key principles in map
 design, and what makes them work (or not) when communicating data images
@@ -13770,16 +13787,14 @@ Mark Monmonier’s classic book by the same name, *How to Lie with Maps*,
 originally published in 1991, now in its third edition.[37]
 
 Before we get started, review the [map design principles in Chapter
-8](map-design.html) to avoid common mistakes when designing colored
-polygon (or choropleth) maps. For example, in most cases you want to
-avoid mapping absolute numbers (such as the total number of people in a
-group), and instead show relative data (such as the percentage of people
-in a group). Mapping absolute numbers of voters would simply show you
-where most people live, rather than how rates vary across geographic
-areas, which is usually what map makers wish to emphasize. Also, this
-section assumes that you’re already familiar with the steps for creating
-a [Choropleth map with Datawrapper in Chapter
-8](choropleth-datawrapper.html).
+8](map-design.html) to avoid common mistakes when designing choropleth
+maps. For example, in most cases you should avoid mapping raw counts
+(such as the total number of people with a disease) and instead show
+relative rates (such as the percentage of people with a disease),
+because a raw count map would generally show that most people live in
+urban rather than rural areas. Also, this section assumes that you’re
+already familiar with the steps for creating a [Choropleth map with
+Datawrapper in Chapter 8](choropleth-datawrapper.html).
 
 Let’s return to the two maps in the [Introduction](introduction.html) of
 this book, which presented two different interpretations of world income
@@ -13787,14 +13802,14 @@ inequality. In particular, the first map colored the US in medium blue
 which suggested its level of inequality was similar to other nations,
 while the second map made the US stand out in dark blue at the highest
 tier of inequality. We argued that both were *truthful* interpretations.
-You’ll understand the concepts more clearly by follow this hands-on
+You’ll understand the concepts more clearly by following this hands-on
 tutorial to recreate both maps, plus one more. First, let’s examine the
 data and upload it to Datawrapper to start making our choropleth maps.
 
 1.  Open the [world income top 1 percent data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565),
-    and go to *File &gt; Save As* to create a copy that you can edit in
-    your own Google Drive.
+    and go to *File &gt; Make a Copy* to create a version that you can
+    edit in your own Google Drive.
 
 2.  Examine the data and read the notes. Overall, this data offers one
     way to make international comparisons about income distribution by
@@ -13887,8 +13902,8 @@ to better understand the data distribution. Go back to the [data in the
 Google
 Sheet](https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565)
 and create a [histogram, as we described in chapter
-7](chart-histogram.html) to view the frequency of nations when sorted by
-percent share into “buckets”, as shown in Figure
+7](histogram-google.html) to view the frequency of nations when sorted
+by percent share into “buckets”, as shown in Figure
 <a href="#fig:map-data-histogram">15.14</a>. While most nations are
 clumped around the median, this is not a normal distribution curve,
 because a handful are outliers near the 30 percent mark. In the first
@@ -13897,40 +13912,36 @@ appeared closer to the median and blended in with a medium blue. By
 contrast, the second map used 3 steps and natural breaks, which meant
 that the US appeared in the top range and stood out in dark blue.
 
-<img src="images/15-detect/map-data-histogram.png" alt="Histogram of income inequality map data."  />
+<img src="images/15-detect/map-data-histogram-annotated.png" alt="Histogram of income inequality map data."  />
 <p class="caption">
 Figure 15.14: Histogram of income inequality map data.
 </p>
 
 So how *should* we make decisions when designing choropleth maps?
-Similar to the chart section, there are few universal rules, but some
-recommendations. Always look for *better* ways to use map color ranges
-to show true and meaningful differences in the data, rather than hiding
-them out of sight. Datawrapper Academy recommends finding “a compromise
-between honesty and usefulness” when creating choropleth maps. In other
-words, tell the truth when displaying evidence *and* use design choices
-to emphasize an interpretation that calls our attention to what’s most
-important in the data story. For example, a *linear* interpolation works
-best to emphasize extreme lows and highs, while *quantiles* or other
-non-linear groupings reveal more geographic diversity in the middle
-ranges. Furthermore, some recommend using a *continuous* color palette
-to show nuances in the data, unless your data story has a compelling
-reason to display discrete *steps* to emphasize regions above or below
-certain thresholds. If you choose steps, increasing the *number of
-steps* will display more contrast in your map, but *too many steps* can
-give the mistaken impression that light- and dark-colored regions are
-very different, when in fact their numbers may vary only slightly.
-Whatever you decide, avoid the temptation to manually adjust a map’s
-settings in ways that manipulate its appearance to fit a preconceived
-point of view. In sum, show us a story and tell the truth. You may need
-to create several maps with different settings to decide which one is
-the best compromise.[38].
-
-\[TODO: Insert this as a final statement somewhere about the two US
-inequality maps – or not? Based on these general guidelines, some may
-argue that the first map is *better* because it displays a continuous
-color range, but that does *not* make the second map wrong nor
-misleading.\]
+Similar to the chart section, there are few universal rules, but several
+wise recommendations. First and foremost, always look for *better* ways
+to use map color ranges to show true and meaningful differences in the
+data, rather than hiding them out of sight. [Datawrapper Academy
+recommends](https://academy.datawrapper.de/article/117-color-palette-for-your-map)
+finding “a compromise between honesty and usefulness” when creating
+choropleth maps. In other words, tell the truth when displaying evidence
+*and* use design choices to emphasize an interpretation that calls our
+attention to what’s most important in the data story. For example, a
+*linear* interpolation works best to emphasize extreme lows and highs,
+while *quantiles* or other non-linear groupings reveal more geographic
+diversity in the middle ranges. [Datawrapper Academy also
+recommends](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps)
+using a *continuous* color palette to show nuances in the data, unless
+your data story has a compelling reason to display discrete *steps* to
+emphasize regions above or below certain thresholds. If you choose
+steps, increasing the *number of steps* will display more contrast in
+your map, but *too many steps* can give the mistaken impression that
+light- and dark-colored regions are very different, when in fact their
+numbers may vary only slightly. Whatever you decide, avoid the
+temptation to manually adjust a map’s settings in ways that manipulate
+its appearance to fit a preconceived point of view. In sum, show us a
+story and tell the truth. You may need to create several maps with
+different settings to decide which one is the best compromise.
 
 Now that you have a clearer idea of how to lie with charts and maps,
 let’s examine a related topic: recognizing and reducing data bias.
@@ -13943,38 +13954,49 @@ with data and designing visualizations, it’s important to be aware of
 different types of bias, so that you can recognize them as potential
 factors that may influence your perception, and reduce their presence in
 your own work. The first step toward reducing bias is to correctly
-identify various types, since at first glance they may appear hidden
-away, until we learn to call them out.
+identify various types, which at first glance may appear hidden, so that
+we can call them out. In this section we’ll discuss four categories of
+bias that anyone who works with data needs to recognize: sampling
+biases, cognitive biases, algorithmic biases, and intergroup biases. In
+a later section we’ll address other types of biases that are highly
+relevant to anyone working with map data.
 
-In [Chapter 6: Make Clear Comparisons](comparisons.html), we warned you
-to watch out biased data sampling that may yield inaccurate results. For
-example, *selection bias* happens when samples may appear to be random,
-but are not due to underlying processes, such as students in two
-different schools, but one requires an application process, even one
-that uses a lottery. Also beware of *algorithmic bias* that is built
-into our software, ranging from simple examples (such as web visitor IP
-addresses being converted into the nation’s geographic center) and more
-dangerous ones (TODO EXAMPLE from Ch6). Address both types of biases by
-exercising cautious about the data you choose to analyze, make only
-meaningful comparisons, and describe issues in the visualization notes
-and companion text to call out possible biases.
+We previously warned you about *sampling biases* in [Chapter 6: Make
+Meaningful Comparisons](comparisons.html). This category covers data
+collection procedures that seem legitimate on the surface, but include
+partially-hidden processes that skew the evidence and yield inaccurate
+results. One example is *selection bias*, which means that the sample
+selected for your study differs systematically from the larger
+population. “What you see depends on where you look,” cautions
+professors Carol Bergstrom and Jevin West, authors of a book with an
+unforgettable title, *Calling Bullshit*.[38] One obvious example is to
+attempting to find the average person’s height by measuring people who
+happen to be leaving a gymnasium after basketball practice. More subtle
+forms involve *participation bias*, such as survey methods that do not
+yield responses that are representative of the broader population. We
+also cautioned about *self-selection bias* in program evaluation data,
+where participants who apply or volunteer must be analyzed carefully to
+avoid comparisons with non-participants. Always [question your data, as
+described in chapter 4](question.html), before you attempt to make
+meaningful comparisons. If you suspect that sampling issue may have
+snuck into the data collection process, either do not use the data, or
+clearly describe your concerns in your visualization notes and companion
+text to call out potential biases.
 
-When you analyze and visualize data, look out for additional biases that
-many cognitive psychologists believe are built into human behavior, both
-in ourselves and our audiences. *Confirmation bias* refers to the
-tendency to accept only claims that fit our preconceived notions of how
-the world works. \[TODO: refer to a dataviz experiment by Thaler?\]
-Counter it by actively searching for and considering alternative
-interpretations, and look at contradictory findings with open eyes.
-*Pattern bias* is another human tendency to see meaningful relationships
-in data, even when the numbers are random. \[TODO: refer to another
-dataviz experiment by Thaler?\] Avoid this type of bias by continually
-reminding yourself (and your readers) that data is noisy, and our brains
-are wired to see patterns even when none exist. Refer to books on
-statistical data analysis for appropriate tests to determine whether
-patterns that *appear* to jump out to your eye can be confirmed, and
-whether their odds of existing are greater than chance. \[TODO: check
-wording\]
+*Cognitive biases* refer to a category of human behaviors that skew how
+we interpret data. *Confirmation bias* is one example, which refers to
+the tendency to accept only claims that fit our preconceived notions of
+how the world works. *Pattern bias* is another example, where people
+tend to see meaningful relationships in data, even when numbers were
+randomly selected. Counter these biases by actively searching for
+alternative interpretations and considering contradictory findings with
+open eyes. Remind remind readers (and yourself) that data is noisy, and
+our brains are wired to see patterns even when none exist. See
+additional resources on statistical analysis mentioned in [chapter
+6](comparisons.html) to learn about appropriate tests to determine
+whether patterns exist in your data at odds greater than chance.
+
+TODO: FINISH REWRITE with transition….
 
 Just as people can lie with charts and maps, let’s not forget our long
 history of misleading audiences (and ourselves) with the word choices we
@@ -13985,21 +14007,25 @@ that US hospitals tend to report *mortality rates*, while UK hospitals
 report *survival* rates. When weighing the risks of a surgical procedure
 for member of your family, a 5 percent mortality rate seems worse than a
 95 percent survival rate, even though they’re identical. Furthermore,
-Spiegelhalter observes that when we supplement rates with raw numbers,
-it further increases our impression of risks. For example, if we told
-you a surgical procedure had a 5 percent mortality rate *and* that 20
-out of 400 patients died, it seems worse because we begin to imagine
-real people’s lives, not abstract percentages.[39] The best way to
-counter framing bias is to be aware of its potential effect on our minds
-and to call it out, as we’ve attempted to do here.
+Spiegelhalter observes that when we supplement rates with raw counts, it
+further increases our impression of risks. For example, if we told you a
+surgical procedure had a 5 percent mortality rate *and* that 20 out of
+400 patients died, it seems worse because we begin to imagine real
+people’s lives, not abstract percentages.[39] The best way to counter
+framing bias is to be aware of its potential effect on our minds and to
+call it out, as we’ve attempted to do here.
 
-TODO INSERT AND EXPAND HERE? Also beware of *algorithmic bias* that
-people have built into our computer systems, which repeatedly favor some
-groups or outcomes over others, and often reinforce privileges held by
-dominant White, wealthy, masculine culture…. As we write this, several
-examples of algorithmic bias and machine-learning bias have appeared in
-the news. facial recognition across racial groups, or discrimination in
-home lending. examples:
+TODO: FINISH REWRITE…. Also beware of *algorithmic bias* that is built
+into our software, ranging from simple examples (such as web visitor IP
+addresses being converted into the nation’s geographic center) and more
+dangerous ones (TODO EXAMPLE from Ch6)…. TODO INSERT AND EXPAND HERE?
+Also beware of *algorithmic bias* that people have built into our
+computer systems, which repeatedly favor some groups or outcomes over
+others, and often reinforce privileges held by dominant White, wealthy,
+masculine culture…. As we write this, several examples of algorithmic
+bias and machine-learning bias have appeared in the news. facial
+recognition across racial groups, or discrimination in home lending.
+examples:
 <a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>;
 <a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a>
 Reduce bias by calling it out. Do not equate “digital” with
@@ -14842,6 +14868,10 @@ References
 
 <!--chapter:end:21-references.Rmd-->
 
+Bergstrom, Carl T., and Jevin D. West. *Calling Bullshit: The Art of
+Skepticism in a Data-Driven World*. Random House, 2020.
+<https://www.google.com/books/edition/Calling_Bullshit/Plu9DwAAQBAJ>.
+
 Best, Joel. *More Damned Lies and Statistics: How Numbers Confuse Public
 Issues*. Berkeley, CA: University of California Press, 2004.
 <https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC>.
@@ -15181,11 +15211,10 @@ pp. 65-67, 135-141.
 
 [37] Monmonier, *How to Lie with Maps, Third Edition*.
 
-[38] TODO cite
-<a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>;
-<a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>;
-<a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>;
-<a href="https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool" class="uri">https://academy.datawrapper.de/article/132-how-to-use-the-color-palette-tool</a>
+[38] Carl T. Bergstrom and Jevin D. West, *Calling Bullshit: The Art of
+Skepticism in a Data-Driven World* (Random House, 2020),
+<https://www.google.com/books/edition/Calling_Bullshit/Plu9DwAAQBAJ>,
+pp. 79, 104-133
 
 [39] David Spiegelhalter, *The Art of Statistics: Learning from Data*
 (Penguin UK, 2019),

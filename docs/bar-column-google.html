@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-12" />
+<meta name="date" content="2020-11-13" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="chart-google.html"/>
-<link rel="next" href="pie-line-area-google.html"/>
+<link rel="next" href="histogram-google.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -212,6 +212,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google.html"><a href="chart-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>- Bar and Column Charts</a></li>
+<li class="chapter" data-level="" data-path="histogram-google.html"><a href="histogram-google.html"><i class="fa fa-check"></i>- Histogram</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>- Pie, Line, and Area Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
 <li class="chapter" data-level="" data-path="annotated-datawrapper.html"><a href="annotated-datawrapper.html"><i class="fa fa-check"></i>- Annotated Charts</a></li>
@@ -342,7 +343,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="bar-column-google" class="section level2 unnumbered" number="">
 <h2>- Bar and Column Charts</h2>
-<p>Before you begin, be sure to review the <a href="chart-google.html">pros and cons of designing charts with Google Sheets in the prior section</a>. In this section, you’ll learn how to create bar and column charts, the most common visualization methods to compare values across categories. We’ll focus on why and how to create four different types: grouped, split, stacked, and histograms. For all of these, we blend the instructions for bar and column charts because they’re essentially the same, though oriented in different directions. If your data contains long labels, create a horizontal bar chart, instead of a vertical column chart, to give them more space for readability.</p>
+<p>Before you begin, be sure to review the <a href="chart-google.html">pros and cons of designing charts with Google Sheets in the prior section</a>. In this section, you’ll learn how to create bar and column charts, the most common visualization methods to compare values across categories. We’ll focus on why and how to create three different types: grouped, split, and stacked. For all of these, we blend the instructions for bar and column charts because they’re essentially the same, though oriented in different directions. If your data contains long labels, create a horizontal bar chart, instead of a vertical column chart, to give them more space for readability.</p>
 <div id="grouped-bar-and-column-charts" class="section level3 unnumbered" number="">
 <h3>Grouped Bar and Column Charts</h3>
 <p>A grouped bar or column chart is best to compare categories side-by-side. For example, if you wish to emphasize gender differences in obesity across age brackets, then format the male and female data series together in vertical columns in your Google Sheet, as shown in Figure <a href="bar-column-google.html#fig:column-grouped-data">7.10</a>. Now you can easily create a grouped column chart to displays these data series side-by-side, as shown in Figure <a href="bar-column-google.html#fig:column-grouped">7.11</a>.</p>
@@ -505,34 +506,6 @@ Figure 7.25: To edit a column color, select <em>Edit Chart - Customize - Series<
 </p>
 </div>
 </div>
-<div id="histograms" class="section level3 unnumbered" number="">
-<h3>Histograms</h3>
-<p>A histogram is a specific type of bar or column chart that shows distribution of values in a dataset. Figure <a href="bar-column-google.html#fig:histogram">7.26</a> shows a histogram of average daily calorie consumption in 174 countries in 2006–2008 based on <a href="http://www.fao.org/">UN’s Food and Agriculture Organization</a> data.</p>
-
-<div class="figure"><span id="fig:histogram"></span>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;format=interactive" width="672" height="400px">
-</iframe>
-<p class="caption">
-Figure 7.26: Histogram: Explore the full-screen <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&amp;format=interactive">interactive version</a>.
-</p>
-</div>
-<p>Histograms are used to represent distributions, not individual values. Figure <a href="bar-column-google.html#fig:histogram">7.26</a> shows to peaks, one of 2,100–2,300 calories and the second one at 2,700-3,100 calories (two consecutive buckets). We can also see that daily calorie consumption in five countries does not exceed 1,900, and exceeds 3,700 calories in three countires. Histograms by themselves, without annotations don’t tell us what those countries are.</p>
-<p>Note: You can view and copy the <a href="https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452">Google Sheet with the calorie consumption data</a>. You can use <em>Sort sheet A-&gt;Z</em> function to see that five countries with lowest per-capita calorie consumption are Eritrea (1,590), Burundi (1,680), Comoros (1,840), Haiti (1,850), and Zambia (1,880). The three highest are Greece (3,710), USA (3,750), and Austria (3,800). Note that the dataset is over a decade old and things may be different today.</p>
-<p>Histograms use <em>buckets</em> or <em>bins</em>, which are predefined ranges of values, and count how many data points (usually rows in your dataset) fall within each interval. Each interval’s count is represented by a bar. Intervals should not overlap, and we recommend you make them all equal size. Consider making your ranges “pretty”, that is, using whole numbers such as multiples of 5 (5, 10, 15, 20) or 100 (1500, 1600, 1700, 1800) for breakpoints, but only if that makes sense for your data distribution.</p>
-<p>Now, let’s look at how to create the histogram in Figure <a href="bar-column-google.html#fig:histogram">7.26</a> in Google Sheets. Our dataset contains two columns (<em>Country</em> and <em>Average Daily Calorie Consumption</em>) and 174 records,
-as shown in Figure <a href="bar-column-google.html#fig:histogram-data">7.27</a>. But in reality you only need one column that lists all values to build a histogram.</p>
-
-<div class="figure"><span id="fig:histogram-data"></span>
-<img src="images/07-chart/histogram-data.png" alt="To create a histogram, you only need one column with numeric values." width="250" />
-<p class="caption">
-Figure 7.27: To create a histogram, you only need one column with numeric values.
-</p>
-</div>
-<p>Select a column with values, and go to <em>Insert &gt; Chart</em>. Google Sheets will likely automatically choose <em>Histogram chart</em> as the <em>Chart type</em> in Chart editor, but if not, use the dropdown and set it manually (you will find <em>Histogram</em> under the <em>Other</em> category). While some readers know what histograms represent,
-it may be useful to add a y-axis label (eg <em>Number of countries</em>) and a subtitle (eg <em>Each bar represents number of countries per calorie range</em>). You can add both from the <em>Customize</em> tab in the Chart editor.</p>
-<p>To further assist the reader in interpreting the histogram, you can break down the column into individual items (in our case, countries), which will appear as blocks with white boundaries. You can do that, and manually set the range of each bucket in the Chart editor (<em>Customize &gt; Histogram &gt; Show item dividers</em> and <em>Customize &gt; Histogram &gt; Bucket size</em>). Larger intervals will contain more datapoints and will also appear wider in the chart as fewer larger intervals are needed to cover the entire range. Smaller intervals will contain fewer datapoints each, and will appear narrower.</p>
-<p>Unfortunately, currently there is no way to get rid of decimal points in the x-axis labels, even though all breakpoint may be integers.</p>
-</div>
 </div>
             </section>
 
@@ -540,7 +513,7 @@ it may be useful to add a y-axis label (eg <em>Number of countries</em>) and a s
         </div>
       </div>
 <a href="chart-google.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="pie-line-area-google.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="histogram-google.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

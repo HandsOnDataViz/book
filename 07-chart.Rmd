@@ -14,8 +14,8 @@ Table: (\#tab:chart-types) Basic Chart Types, Best Uses, and Tutorials
 | Grouped bar or column chart<br> ![](images/07-chart/chart-grouped-column.png) | Best to compare categories side-by-side. If labels are long, use horizontal bars instead of vertical columns. <br>Easy tools: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Split bar or column chart<br> ![](images/07-chart/chart-split-column.png) | Best to compare categories in separate clusters.  If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Stacked bar or column chart<br> ![](images/07-chart/chart-stacked-column.png) | Best to compare sub-categories, or parts of a whole.  If labels are long, use horizontal bars instead of vertical columns.<br>Easy tools: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
-| Histogram<br> ![](images/07-chart/chart-histogram.png) | Best to show distribution of raw data, with number of values in each bucket. If labels are long, use horizontal bars instead of vertical columns..<br>Easy tools: [Bar and Column Charts in Google Sheets tutorial](bar-column-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Error bars in bar or column chart<br> ![](images/07-chart/chart-error-column.png) | Best to show margin of error bars when comparing categories side-by-side. If labels are long, use horizontal bars instead of vertical columns.<br>Easy tool: TODO DECIDE <br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html)  |
+| Histogram<br> ![](images/07-chart/chart-histogram.png) | Best to show distribution of raw data, with number of values in each bucket.<br>Easy tools: [Histogram Chart in Google Sheets tutorial](histogram-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Pie chart<br> ![](images/07-chart/chart-pie.png) | Best to show parts of a whole, but hard to estimate size of slices.<br>Easy tools: [Pie Chart in Google Sheets tutorial](pie-line-area-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Line chart<br> ![](images/07-chart/chart-line.png) | Best to show continuous data, such as change over time.<br>Easy tools: [Line Chart in Google Sheets tutorial](pie-line-area-google.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Annotated line chart<br> ![](images/07-chart/chart-annotated.png) | Best to add notes or highlight data inside a chart, such as historical context in a line chart.<br>Easy tools: [Annotated Chart in Datawrapper tutorial](annotated-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
@@ -119,7 +119,7 @@ forget about putting the results into a pie chart.
 ### Chart Aesthetics {-}
 
 Remember that you create a chart to help the reader understand the story, not to confuse them.
-Decide if you want to show absolute numbers, percentages, or percent changes,
+Decide if you want to show raw counts, percentages, or percent changes,
 and do the math for your readers.
 
 #### Avoid chart junk {-}
@@ -225,7 +225,7 @@ But Google Sheets also has limitations. First, there is no easy way to cite or l
 In the next two sections, we'll review the most appropriate cases to use [bar and column charts](bar-column-google.html), followed by [pie, line, and area charts](pie-line-area-google.html). Each section features hands-on examples and step-by-step instructions with sample datasets to help you learn.
 
 ## - Bar and Column Charts {- #bar-column-google}
-Before you begin, be sure to review the [pros and cons of designing charts with Google Sheets in the prior section](chart-google.html). In this section, you'll learn how to create bar and column charts, the most common visualization methods to compare values across categories. We'll focus on why and how to create four different types: grouped, split, stacked, and histograms. For all of these, we blend the instructions for bar and column charts because they're essentially the same, though oriented in different directions. If your data contains long labels, create a horizontal bar chart, instead of a vertical column chart, to give them more space for readability.
+Before you begin, be sure to review the [pros and cons of designing charts with Google Sheets in the prior section](chart-google.html). In this section, you'll learn how to create bar and column charts, the most common visualization methods to compare values across categories. We'll focus on why and how to create three different types: grouped, split, and stacked. For all of these, we blend the instructions for bar and column charts because they're essentially the same, though oriented in different directions. If your data contains long labels, create a horizontal bar chart, instead of a vertical column chart, to give them more space for readability.
 
 ### Grouped Bar and Column Charts {-}
 A grouped bar or column chart is best to compare categories side-by-side. For example, if you wish to emphasize gender differences in obesity across age brackets, then format the male and female data series together in vertical columns in your Google Sheet, as shown in Figure \@ref(fig:column-grouped-data). Now you can easily create a grouped column chart to displays these data series side-by-side, as shown in Figure \@ref(fig:column-grouped).  
@@ -368,9 +368,9 @@ To change the color of a data series (for example, to show Overweight category i
  knitr::include_graphics("images/07-chart/column-stacked-edit-series.png")
 ```
 
-### Histograms {-}
+## - Histogram {- #histogram-google}
 
-A histogram is a specific type of bar or column chart that shows distribution of values in a dataset. Figure \@ref(fig:histogram) shows a histogram of average daily calorie consumption in 174 countries in 2006–2008 based on [UN's Food and Agriculture Organization](http://www.fao.org/) data.
+A histogram chart is best for showing the distribution of raw data, with the number of values displayed in each bucket. Although a histogram may look similar to a column chart, the two are different. Since histograms show *continuous* data, you can adjust the bucket ranges to explore frequency patterns. For example, you can shift histogram buckets from 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. But column (and bar) charts show *categorical* data (such as the number of apples, bananas, etc.) so their ranges cannot be adjusted. Figure \@ref(fig:histogram) shows a histogram of average daily calorie consumption in 174 countries in 2006–2008 based on data from the [United Nations Food and Agriculture Organization](http://www.fao.org/).
 
 (ref:histogram) Histogram: Explore the full-screen [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive).
 
@@ -378,7 +378,7 @@ A histogram is a specific type of bar or column chart that shows distribution of
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive") else knitr::include_graphics("images/07-chart/histogram.png")
 ```
 
-Histograms are used to represent distributions, not individual values. Figure \@ref(fig:histogram) shows to peaks, one of 2,100–2,300 calories and the second one at 2,700-3,100 calories (two consecutive buckets). We can also see that daily calorie consumption in five countries does not exceed 1,900, and exceeds 3,700 calories in three countires. Histograms by themselves, without annotations don't tell us what those countries are.
+Histograms are designed to represent distributions, not individual values. Figure \@ref(fig:histogram) shows two peaks, one of 2,100–2,300 calories and the second one at 2,700-3,100 calories (two consecutive buckets). We can also see that daily calorie consumption in five countries does not exceed 1,900, and exceeds 3,700 calories in three countries. Histograms by themselves, without annotations, don't tell us what those countries are.
 
 Note: You can view and copy the [Google Sheet with the calorie consumption data](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452). You can use *Sort sheet A->Z* function to see that five countries with lowest per-capita calorie consumption are Eritrea (1,590), Burundi (1,680), Comoros (1,840), Haiti (1,850), and Zambia (1,880). The three highest are Greece (3,710), USA (3,750), and Austria (3,800). Note that the dataset is over a decade old and things may be different today.
 
@@ -398,7 +398,9 @@ it may be useful to add a y-axis label (eg *Number of countries*) and a subtitle
 
 To further assist the reader in interpreting the histogram, you can break down the column into individual items (in our case, countries), which will appear as blocks with white boundaries. You can do that, and manually set the range of each bucket in the Chart editor (*Customize > Histogram > Show item dividers* and *Customize > Histogram > Bucket size*). Larger intervals will contain more datapoints and will also appear wider in the chart as fewer larger intervals are needed to cover the entire range. Smaller intervals will contain fewer datapoints each, and will appear narrower.
 
-Unfortunately, currently there is no way to get rid of decimal points in the x-axis labels, even though all breakpoint may be integers.
+Unfortunately, currently there is no way to get rid of decimal points in the x-axis labels in a Google Sheets histogram, even though all breakpoints may be integers.
+
+TODO: DISCUSS with AMELIA and ILYA the organization of the Histogram section and its sample data. See Meeting Notes
 
 ## - Pie, Line, and Area Charts {- #pie-line-area-google}
 Before starting this section, be sure to review the [pros and cons of designing charts with Google Sheets](chart-google.html), as well as [beginner-level step-by-step instructions for creating bar and column charts](bar-column-google.html), in the previous sections of this chapter. In this section, you'll learn why and how to use Google Sheets to build three more types of interactive visualizations: pie charts (to show parts of a whole), line charts (to show change over time), and stacked area charts (to combine showing parts of a whole, with change over time). If Google Sheets or these chart types do not meet your needs, refer back to Table \@ref(tab:chart-types) for other tools and tutorials.

@@ -182,19 +182,15 @@ When your data search produces some results, another key step is to open the fil
 - Dates such as January 1st 1900, 1904, or 1970: These are default timestamps in Excel spreadsheets and Unix operating systems, which may indicate the actual date was blank or overwritten.
 - Dates similar to `43891`: When you type `March 1` during the year 2020 into Microsoft Excel, it automatically displays as `1-Mar`, but is saved using Excel's internal date system as `43891`. If someone converts this column from date to text format, you'll see Excel's 5-digit number, not the dates you're expecting.
 
-Another way to review the quality of data entry in any column in a spreadsheet is to create [a filter](sort.html) or a [pivot table](pivot.html) as described in Chapter 3. This allows you to quickly inspect the range of values that appear in that column, and whether they match what you expected to find.
-
-TODO: Add a histogram to the list above and refer to the appropriate chart chapter?
+Other ways to review the quality of data entry in any spreadsheet column are to [sort](sort.html) or [pivot](pivot.html) the data as described in Chapter 3, or to create a [histogram](histogram-google.html) as you will learn in Chapter 7. These methods enable you to quickly inspect the range of values that appear in a column and to help you identify bad data.
 
 Also beware of bad data due to poor [geocoding](geocode.html), when locations have been translated into latitude and longitude coordinates that cannot be trusted. For example, visualization expert Alberto Cairo describes how data *appeared* to show that Kansas residents viewed more online pornography than other US states. But on closer examination, the internet protocol (IP) addresses of many viewers could not be accurately geocoded, perhaps because they sought to maintain their privacy by using virtual private networks (VPN) to disguise their location. As a result, the geocoding tool automatically placed large numbers of users in the geographic center of the contiguous US, which happens to be in Kansas.^[@cairoHowChartsLie2019, pp. 99-102] Similarly, when global data is poorly geocoded, the population booms on imaginary "[Null Island](https://en.wikipedia.org/wiki/Null_Island)," which is actually a weather buoy located in the Atlantic Ocean at the intersection of the prime meridian and the equator, where the latitude and longitude coordinates are 0,0. For these reasons, carefully inspect geocoded data for errors caused by tools that mistakenly place results in the exact center of your geography, as shown in Figure \@ref(fig:bad-geocoding).
 
-(ref:bad-geocoding) Beware of bad geocoding that automatically places data in the geographic center of the contiguous United States (northern Kansas), or on imaginary Null Island (coordinates 0,0).
+(ref:bad-geocoding) Beware of bad geocoding that automatically places data in the geographic center of the contiguous United States (in northern Kansas), or on imaginary Null Island in the Atlantic Ocean (the location of coordinates 0,0).
 
 ```{r bad-geocoding, out.width=600, fig.cap="(ref:bad-geocoding)"}
- knitr::include_graphics("images/04-find/bad-geocoding-annotated.png")
+ knitr::include_graphics("images/04-find/bad-geocoding.png")
 ```
-
-TODO above: Ilya please create our own artwork to replace the placeholder above, which I quickly made with Wikipedia images in Photoshop.
 
 What should you do when you discover bad data in your project? Sometimes small issues are relatively straightforward and do not call into question the integrity of the entire dataset. Sometimes you can fix these using methods we describe in [Chapter 5: Clean Up Messy Data](clean.html). But larger issues can be more problematic. Follow the source of your data stream to try to identify where the issue began. If you cannot find and fix the issue on your own, contact the data provider to ask for their input, since they should have a strong interest in improving the quality of the data. If they cannot resolve an important data issue, then you need to pause and think carefully. In this case, is it wiser to continue working with problematic data and add a cautionary note to readers, or should you stop using the dataset entirely and call attention to its underlying problem? These are not easy decisions, and you should ask for opinions from colleagues. In any case, never ignore the warning signs of bad data.
 

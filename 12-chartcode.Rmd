@@ -19,12 +19,11 @@ than most third-party tools can offer. In addition, you can never be sure that t
 apps will remain free, or at least have a free tier, forever, whereas open-source tools
 are here to stay free of charge.
 
-Note: Although both libraries are open-source, Highcharts comes [with a stricter license](https://www.highcharts.com/products/highcharts/#non-commercia)
-which allows it to be used for free for non-commercial projects only, such as personal, school, or non-profit organization website. Keeping that in mind, we primarily focused on Chart.js, which is distributed under MIT license that lets you use the library for commercial projects as well.
+Note: Although both libraries are open-source, Highcharts comes [with a stricter license](https://www.highcharts.com/products/highcharts/#non-commercial) which allows it to be used for free for non-commercial projects only, such as personal, school, or non-profit organization website. Keeping that in mind, we primarily focused on Chart.js, which is distributed under MIT license that lets you use the library for commercial projects as well.
 
 Table \@ref(tab:chart-templates) lists all types of charts that we will look at in this chapter.
-Note, however, that both libraries come with many more default chart types that you can explore
-in [Chart.js Samples](https://www.chartjs.org/samples/latest/) and [Highcharts Demos](https://www.highcharts.com/demo).
+Both libraries include many more default chart types that you can explore
+in [Chart.js Samples](https://www.chartjs.org/samples/latest/) and [Highcharts Demos](https://www.highcharts.com/demo). However, we strongly advise against using some chart types, such as three-dimensional ones, for reasons we discussed in the [Chart Design Principles section of Chapter 7](chart-design).
 
 Table: (\#tab:chart-templates) Chart Code Templates, Best Uses, and Tutorials
 

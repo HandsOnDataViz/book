@@ -368,7 +368,7 @@ To change the color of a data series (for example, to show Overweight category i
  knitr::include_graphics("images/07-chart/column-stacked-edit-series.png")
 ```
 
-## - Histogram {- #histogram-google}
+## - Histograms {- #histogram-google}
 
 A histogram chart is best for showing the distribution of raw data, with the number of values displayed in each bucket. Although a histogram may look similar to a column chart, the two are different. Since histograms show *continuous* data, you can adjust the bucket ranges to explore frequency patterns. For example, you can shift histogram buckets from 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. But column (and bar) charts show *categorical* data (such as the number of apples, bananas, etc.) so their ranges cannot be adjusted. Figure \@ref(fig:histogram) shows a histogram of average daily calorie consumption in 174 countries in 2006–2008 based on data from the [United Nations Food and Agriculture Organization](http://www.fao.org/).
 

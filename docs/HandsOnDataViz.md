@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 13 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 16 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -3146,14 +3146,12 @@ Watch out for spreadsheets containing these “bad data” warning signs:
     converts this column from date to text format, you’ll see Excel’s
     5-digit number, not the dates you’re expecting.
 
-Another way to review the quality of data entry in any column in a
-spreadsheet is to create [a filter](sort.html) or a [pivot
-table](pivot.html) as described in Chapter 3. This allows you to quickly
-inspect the range of values that appear in that column, and whether they
-match what you expected to find.
-
-TODO: Add a histogram to the list above and refer to the appropriate
-chart chapter?
+Other ways to review the quality of data entry in any spreadsheet column
+are to [sort](sort.html) or [pivot](pivot.html) the data as described in
+Chapter 3, or to create a [histogram](histogram-google.html) as you will
+learn in Chapter 7. These methods enable you to quickly inspect the
+range of values that appear in a column and to help you identify bad
+data.
 
 Also beware of bad data due to poor [geocoding](geocode.html), when
 locations have been translated into latitude and longitude coordinates
@@ -3175,16 +3173,13 @@ for errors caused by tools that mistakenly place results in the exact
 center of your geography, as shown in Figure
 <a href="#fig:bad-geocoding">4.2</a>.
 
-<img src="images/04-find/bad-geocoding-annotated.png" alt="Beware of bad geocoding that automatically places data in the geographic center of the contiguous United States (northern Kansas), or on imaginary Null Island (coordinates 0,0)." width="600" />
+<img src="images/04-find/bad-geocoding.png" alt="Beware of bad geocoding that automatically places data in the geographic center of the contiguous United States (in northern Kansas), or on imaginary Null Island in the Atlantic Ocean (the location of coordinates 0,0)." width="600" />
 <p class="caption">
 Figure 4.2: Beware of bad geocoding that automatically places data in
-the geographic center of the contiguous United States (northern Kansas),
-or on imaginary Null Island (coordinates 0,0).
+the geographic center of the contiguous United States (in northern
+Kansas), or on imaginary Null Island in the Atlantic Ocean (the location
+of coordinates 0,0).
 </p>
-
-TODO above: Ilya please create our own artwork to replace the
-placeholder above, which I quickly made with Wikipedia images in
-Photoshop.
 
 What should you do when you discover bad data in your project? Sometimes
 small issues are relatively straightforward and do not call into
@@ -5195,8 +5190,8 @@ Figure 7.25: To edit a column color, select *Edit Chart - Customize -
 Series*.
 </p>
 
-- Histogram
------------
+- Histograms
+------------
 
 A histogram chart is best for showing the distribution of raw data, with
 the number of values displayed in each bucket. Although a histogram may
@@ -6492,14 +6487,11 @@ Map Design Principles
 ---------------------
 
 Much of the data collected today includes a spatial component that can
-be mapped. When you look up an address on a city street, or take a photo
-of a tree in a rural forest, both can be geocoded into latitude and
-longitude coordinates, such as `42.76, -72.69`, and placed as *points*
-on a map. When we walk, bike, drive, or ride mass transit, our route can
-be recorded as strings of geocoordinates and shown as *lines* on a map.
-When we draw lines to designate the geographic borders of neighborhoods
-or nations, we can display those *polygons* on a map, and also color
-them to represent different values, such as population or income.
+be mapped. Whether you look up a city address or take a photo of a tree
+in the forest, both can be geocoded as points on a map. We also can draw
+lines and shapes to illustrate geographical boundaries of neighborhoods
+or nations, and color them to represent different values, such as
+population and income.
 
 However, just because data *can* be mapped does not always mean it
 *should* be mapped. Before creating a map, stop and ask yourself: *Does
@@ -6524,55 +6516,57 @@ let’s start by establishing a common vocabulary about maps.
 
 ### Deconstruct a Map
 
-Take a look at Figure <a href="#fig:map-principles-map">8.1</a> to get
-familiar with main basic elements of maps, especially interactive ones
-featured in this book. Similar to a chart, good maps should include a
-title and brief description to provide context about what the map is
-showing.
+Our book features how to create *interactive* maps, also called *tiled
+web maps* or *slippy maps* because you can zoom into and pan around to
+explore map data layers on top of a seamless set of basemap tiles. They
+usually include zoom controls (`+` and `-` buttons) to view data from
+various “distances,” which change the display of the basemap tiles.
+Basemaps that display pictorial images of streets and buildings are
+known as *vector* tiles, while those that display satellite imagery are
+known as *raster* tiles, and we’ll explain the difference below. Take a
+look at Figure <a href="#fig:map-principles-map">8.1</a> to learn about
+basic elements in the maps you’ll create in this chapter.
+
+The top layer of interactive maps generally consists of a combination of
+*points*, *polylines*, and *polygons*. Points show specific places, such
+as the street address of a home or business, sometimes with a location
+marker. Each point represents a pair of latitude and longitude
+coordinates. For example, `40.69, -74.04` marks the location of the
+Statue of Liberty in New York City. Polylines are connected strings of
+points, such as roads or transportation networks, and we place the
+“poly-” prefix before “lines” to remind us that they may contain
+multiple branches. Polygons represent closed areas defined by lines,
+such as building footprints, census tracts, or state or national
+boundaries. Since all points, polylines, and polygons consist of
+latitude and longitude coordinates, they are called vector data. You can
+zoom up very close to vector data or vector basemaps without diminishing
+their visual quality. By contrast, our ability to zoom into raster data
+or rasterbasemaps is limited by the resolution of the original image,
+which gets fuzzier as we get closer. You’ll learn more about these terms
+in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter
+14.
 
 <img src="images/08-map/map-principles-map.png" alt="Map elements."  />
 <p class="caption">
 Figure 8.1: Map elements.
 </p>
 
-Map data is presented in layers. The top layer generally consists of a
-combination of *points*, *lines* (we call them *polylines*), and
-*polygons*. Points represent places, usually expressed as a pair of
-coordinates (latitude and longitude), which may be illustrated by
-location markers. For example, points can represent locations of
-restaurants, schools, or cities in zoomed-out (small-scale) maps.
-Polylines are connected strings of points, and we place the “poly-”
-prefix before “lines” to remind us that they may contain multiple
-branches, such as rivers, roads, or transportation networks. Polygons
-represent closed areas defined by lines, such as building footprints,
-census tracts, or state or national boundaries. These terms about
-points, polylines, and polygons refer to so-called *vector* interactive
-maps on the internet, like the ones you’ll create in this chapter. Learn
-more about how these differ from *raster* map images in the [GeoJSON and
-Geospatial Data](geojson.html) section of Chapter 14.
-
-On interactive maps, any of these top-layer elements may display a
+On interactive maps, any of these top-layer data elements may display a
 hidden *tooltip* (when you hover the cursor over them) or a *popup*
 (when you click on them) that reveals additional information about its
-properties. Below these top data layers is the *basemap* layer, usually
-displayed as a seamless grid of tiles that cover the globe. Typically a
-basemap displays either satellite imagery (also known as raster tiles)
-or pictorial displays of streets and buildings (also known as vector
-tiles). Interactive maps often include zoom controls (`+` and `-`
-buttons) that allow you to view data from various “distances,” which
-change the display of the tile layer. The *legend* identifies the
-meaning of shapes or colors on the map. Maps may include a *north arrow*
-or *scale* to orient readers to direction and relative distance. Good
-maps also add the data sources, clarifying notes, and credits to the
-individuals or organizations that created them.
+properties. Like a traditional static map, the *legend* identifies the
+meaning of symbols, shapes, and colors. Maps also may include a *north
+arrow* or *scale* to orient readers to direction and relative distance.
+Similar to a chart, good maps should include a title and brief
+description to provide context about what it shows, along with its data
+sources, clarifying notes, and credit to the individuals or
+organizations that helped to create them.
 
-We spell out these definitions to help newer mapmakers to learn some
-general rules and to avoid making common mistakes. Many of the our
-guidelines about map design are inspired by excellent resources such as
-Datawrapper Academy posts about [symbol
-maps](https://academy.datawrapper.de/category/278-symbol-maps) and
-[choropleth
-maps](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps)
+TODO: ILYA please review the text above, which I revised again to
+address reviewers’ comments. Should we create a pair of vector and
+raster map images, side-by-side, with “regular” vs “zoomed in” views to
+show differences, similar to
+<a href="https://en.wikipedia.org/wiki/Vector_graphics" class="uri">https://en.wikipedia.org/wiki/Vector_graphics</a>?
 
 ### Clarify Point versus Polygon Data
 
@@ -6804,8 +6798,8 @@ who voted in the prior election. Sequential palettes can be single-hue
 yellow-orange-red). Darker colors *usually* represent higher values, but
 not always.
 
-*Diverging palettes* work best to show numbers above and below a
-standard level (such as zero, the average, or median value). They
+*Diverging palettes* work best to show numeric values above and below a
+standard level (such as zero, the average, or the median). They
 typically have two distinct hues to represent positive and negative
 directions, with darker colors at the extremes, and a neutral color in
 the middle. Examples include income above or below the median level,
@@ -6815,44 +6809,29 @@ or below the norm.
 *Qualitative palettes* work best to show categorical data, rather than
 numeric scales. They typically feature unique colors that stand apart
 from one another to emphasize differences. Examples include different
-types of land use (residential, commercial, open space, water). They
-also can represent categories such as a warning system that resembles a
-stoplight (green, yellow, and red), as these specific colors must be
-manually assigned to be correctly interpreted.
+types of land use (residential, commercial, open space, water) or
+categories such as a stoplight-colored warning system (green, yellow,
+and red).
 
-Choose an appropriate palette that matches your data format and story
-you wish to tell. For example, we began with the same data on income per
-capita in the contiguous US states in 2018, but modified it demonstrate
-the interpretive strengths of each palette, as shown in Figure
-<a href="#fig:map-principles-classification">8.6</a>.
-
-The first map shows a *sequential* color scheme with five shades of blue
-to illustrate the low-to-high range of income levels. This map works
-best for a data story that emphasizes the highest income levels, shown
-by the darker blue colors along the Northeastern coast from Maryland to
-Massachusetts.
-
-The second map shows a *diverging* color scheme to illustrate income
-levels at the low and high extremes. We modified the data by subtracting
-the average US per capita income value of $33,381 from each state’s
-value. This new relative measure is dark orange for states far below the
-average, and dark purple for states far above it, while a neutral color
-represents the middle. This map works best for a data story that
+To illustrate the difference between *sequential* and *diverging*
+numeric values, compare the two maps that display the same data on
+income per capita in the contiguous US states in 2018 in Figure
+<a href="#fig:map-principles-classification">8.6</a>. The sequential
+color palette shows five shades of blue to represent the low-to-high
+range of income levels, and it works best for a data story that
+emphasizes the highest income levels, shown by the darker blue colors
+along the Northeastern coast from Maryland to Massachusetts. By
+contrast, the diverging color palette shows dark orange for
+below-average states, dark purple for above-average states, and a
+neutral color in the middle, and it works best for a data story that
 emphasizes an economic division between lower-income Southern states
 versus higher-income East Coast and West Coast states.
 
-The third map shows a *qualitative* color scheme that divides the 48
-contiguous states into 3 equal groups based on their per capita incomes,
-and paints them in the colors of a stoplight (red, yellow, and green) to
-represent low, middle, and top thirds.
-
-TODO: Decide if we should keep or remove the third map, since it’s not
-an ideal representation of qualitative data.
-
-<img src="images/08-map/map-principles-classification.png" alt="Representing per capita income in US states using three different classifications." width="500" />
+<img src="images/08-map/map-principles-classification.png" alt="Sequential versus diverging color palettes to illustrate per capita income in US dollars in the contiguous states, from American Community Survey, 2018." width="750" />
 <p class="caption">
-Figure 8.6: Representing per capita income in US states using three
-different classifications.
+Figure 8.6: Sequential versus diverging color palettes to illustrate per
+capita income in US dollars in the contiguous states, from American
+Community Survey, 2018.
 </p>
 
 After you select data classes and a color palette, ColorBrewer displays
@@ -6889,8 +6868,11 @@ Figure 8.8: Two types of color intervals: steps and continuous.
 </p>
 
 If both options exist, which one is best? There is no clear map design
-rule about this. On one hand, some recommend using [continuous intervals
-to show greater geographical
+rule about this, but we can gain some wisdom from some excellent
+[Datawrapper Academy posts about choropleth map
+design](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps).
+On one hand, some recommend using [continuous intervals to show greater
+geographical
 diversity](https://academy.datawrapper.de/article/117-color-palette-for-your-map),
 except when it’s important to your data story to display a threshold,
 where steps make sense to show areas above or below a certain line. On
@@ -6965,8 +6947,10 @@ and Tableau Public (right).
     you’ll learn in [Chapter 15: Detect Lies and Reduce Data
     Bias](detect.html).
 
-TODO: DECIDE on adding small maps to visually contrast the differences,
-as shown in
+TODO: ILYA let’s discuss ways to visualize different interpolation
+methods by combining mini-histograms of sample data with mini-maps to
+visually contrast different data and approaches, building on these
+resources:
 <a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>;
 and also
 <a href="https://theconversation.com/next-slide-please-data-visualisation-expert-on-whats-wrong-with-the-uk-governments-coronavirus-charts-149329" class="uri">https://theconversation.com/next-slide-please-data-visualisation-expert-on-whats-wrong-with-the-uk-governments-coronavirus-charts-149329</a>
@@ -6994,8 +6978,6 @@ TODO ALSO: Review all of the recommendations in the Datawrapper Academy
 post above and decide ones to include as rules versus recommendations vs
 neither. For example: “use the same intervals… 0, 25, 50 instead of 0,
 15, 50…” runs counter to other advice we give about interpolation.
-
-TODO: Brainstorm about way to visualize interpolation with sample data
 
 Normalize Choropleth Map Data
 -----------------------------
@@ -7605,12 +7587,11 @@ Figure 8.35: Scroll down below the *add data* table to import your
 dataset.
 </p>
 
-TODO: Decide whether to include screenshot of names/codes drop-down
-menu, which is helpful because it shows how Datawrapper labels each
-geography, and one could copy and paste this into a spreadsheet and use
-VLookup. Decide if it’s important to include an image of this import
-button, since I believe it’s hidden far below the table that most users
-see.
+TODO: Add screenshot of names/codes drop-down menu, which is helpful
+because it shows how Datawrapper labels each geography, and one could
+copy and paste this into a spreadsheet and use VLookup. Also include
+image of this import button, since it’s hidden far below the table that
+most users see.
 
 1.  On the *Import your dataset* screen, instead of pasting your data,
     we recommend that you click to *upload a CSV file* and select the
@@ -7632,7 +7613,8 @@ Figure 8.36: Select the data column that contains matching ISO codes.
     click *Next*, then *Go*, then *Proceed*. You’ll be able to map other
     data values in a later step.
 
-TODO Above: Reviewer wants screenshot of Aug2020 Home Values column.
+TODO Above: Add screenshot of Aug2020 Home Values column, as reviewer
+requested.
 
 1.  In the *Visualize* screen, under the *Refine* tab, click the *wrench
     symbol* next to the color palette to review the *default* map
@@ -7703,8 +7685,8 @@ publish and share it with others.
     convert long numbers (such as 107762) into abbreviated dollars ($
     108 k), we selected *custom format* and inserted the code `($ 0 a)`.
 
-TODO above: Reviewer wants screenshot of where to enter codes in legend
-format
+TODO above: Add screenshot of where to enter codes in legend format, as
+reviewer requested.
 
 1.  Under the *Annotate* tab, add a title, description, and source
     credits, to add credibility to your work. You can also add map
@@ -7723,8 +7705,8 @@ Figure 8.40: To edit tooltips, click the blue column names or use
 drop-down menus to format the codes.
 </p>
 
-TODO above: Reviewer wants example of how to customize tooltips and add
-labels (annotations?) here
+TODO above: ADD example of how to customize tooltips and add
+annotations, as reviewer requested here.
 
 1.  Finally, click *Proceed* or advance to the *Publish & Embed* screen
     to share your work with others. Follow the prompts, or the more
@@ -8585,9 +8567,9 @@ seamlessly display your interactive content. No coding skills are
 required in this introductory book, but it certainly helps to be
 *code-curious*.
 
-TODO: Discuss whether we should add an abstract diagram of an iframe
-inside a web page, like a picture frame on a wall, to visually reinforce
-this concept for new users here
+TODO: ILYA Discuss whether we should add an abstract diagram of an
+iframe inside a web page, like a picture frame on a wall, to visually
+reinforce this concept for new users here
 
 Static Image vs Interactive iframe
 ----------------------------------
@@ -10012,7 +9994,7 @@ charge.
 
 Note: Although both libraries are open-source, Highcharts comes [with a
 stricter
-license](https://www.highcharts.com/products/highcharts/#non-commercia)
+license](https://www.highcharts.com/products/highcharts/#non-commercial)
 which allows it to be used for free for non-commercial projects only,
 such as personal, school, or non-profit organization website. Keeping
 that in mind, we primarily focused on Chart.js, which is distributed
@@ -10020,10 +10002,13 @@ under MIT license that lets you use the library for commercial projects
 as well.
 
 Table <a href="#tab:chart-templates">12.1</a> lists all types of charts
-that we will look at in this chapter. Note, however, that both libraries
-come with many more default chart types that you can explore in
-[Chart.js Samples](https://www.chartjs.org/samples/latest/) and
-[Highcharts Demos](https://www.highcharts.com/demo).
+that we will look at in this chapter. Both libraries include many more
+default chart types that you can explore in [Chart.js
+Samples](https://www.chartjs.org/samples/latest/) and [Highcharts
+Demos](https://www.highcharts.com/demo). However, we strongly advise
+against using some chart types, such as three-dimensional ones, for
+reasons we discussed in the [Chart Design Principles section of Chapter
+7](chart-design).
 
 <table>
 <caption>Table 12.1: Chart Code Templates, Best Uses, and Tutorials</caption>
@@ -11917,12 +11902,12 @@ these instructions:
     the code for this template. Make sure you are logged in, and press
     *Use this template button* to create a copy of this repository in
     your own GitHub account.
-2.  Put your point data data inside `data.csv`. The only relevant
-    columns that will be read by the template are *Latitude*,
-    *Longitude*, and *Title*. The first two determine the location of
-    the marker, and the last one is displayed in a popup. The order of
-    columns does not matter. There can be other columns in the dataset,
-    but they will be ignored.
+2.  Put your point data inside `data.csv`. The only relevant columns
+    that will be read by the template are *Latitude*, *Longitude*, and
+    *Title*. The first two determine the location of the marker, and the
+    last one is displayed in a popup. The order of columns does not
+    matter. There can be other columns in the dataset, but they will be
+    ignored.
 
 Your data can look like the following:
 
@@ -13649,11 +13634,11 @@ about aspect ratio that fits all circumstances.
 
 #### Add more data and a dual vertical axis
 
-Another common way to mislead is to add more data, specifically a second
-data series that corresponds to a second vertical axis on the right side
-of a line chart. While it’s technically possible to construct a
-dual-axis chart, we strongly advise against them because they can easily
-be manipulated to mislead readers. Let’s illustrate how with an example
+Another common way to mislead is to add more data, such as a second data
+series that corresponds to a second vertical axis on the right side of a
+line chart. While it’s technically possible to construct a dual-axis
+chart, we strongly advise against them because they can easily be
+manipulated to mislead readers. Let’s illustrate how with an example
 that combines two prior datasets—global temperature change and US Gross
 Domestic Product—in one dual-axis chart. In the Google Sheet, go to the
 *temp+GDP* sheet, where you will see temperature change plus a new
@@ -13726,24 +13711,25 @@ blue, which sends our brain the opposite message of rising temperatures
 and glacial melt. To sum it up, this chart misleads in three ways: an
 unreasonable vertical axis, non-comparable data, and color choice.
 
-What’s a better alternative to a dual-axis line chart? The best way to
-visualize the relationship between two variables, such as global
-temperature and GDP, is to create a [scatter chart, as we introduced in
-chapter 7](scatter-bubble-datawrapper.html). Also, we can make a more
-meaningful comparison by plotting [US Real
+What’s a better alternative to a dual-axis line chart? If your goal is
+to visualize the relationship between two variables—global temperature
+and US GDP—then display them in a [scatter chart, as we introduced in
+chapter 7](scatter-bubble-datawrapper.html). We can make a more
+meaningful comparison by plotting [real US
 GDP](https://fred.stlouisfed.org/series/GDPCA), which has been adjusted
 into constant 2012 dollars, and entered alongside global temperature
 change [in this Google
 Sheet](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=374640985).
-We copied the data to create a [scatter chart in
-Datawrapper](scatter-bubble-datawrapper.html), following the steps we
-outlined in Chapter 7. As you can see in Figure
-<a href="#fig:real-gdp-temperature-scatter">15.10</a>, the growth of the
-US economy is strongly associated with rising global temperature change
-from 1929 to the present. Furthermore, it’s harder to mislead readers
-with a scatter chart because the axes are designed to display the full
-range of data, and our reading of the strength of the relationship is
-not tied to the aspect ratio.
+While a scatter chart does not show time in the same way as a line
+chart, float your cursor over points to see years in the [interactive
+version of the Datawrapper scatter
+chart](https://datawrapper.dwcdn.net/2Nhs9/) as shown in Figure
+<a href="#fig:real-gdp-temperature-scatter">15.10</a>. Overall, the
+growth of the US economy is strongly associated with rising global
+temperature change from 1929 to the present. Furthermore, it’s harder to
+mislead readers with a scatter chart because the axes are designed to
+display the full range of data, and our reading of the strength of the
+relationship is not tied to the aspect ratio.
 
 <img src="images/15-detect/real-gdp-temperature-scatter.png" alt="Scatter chart of relationship between real US GDP and global temperature change from 1929 to 2019. Explore the [interactive version](https://datawrapper.dwcdn.net/2Nhs9/)."  />
 <p class="caption">

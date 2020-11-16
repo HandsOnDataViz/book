@@ -638,7 +638,7 @@ You can adapt this template to create your own point map by following these inst
 
 1. Visit the [GitHub repo](https://github.com/HandsOnDataViz/leaflet-map-csv) that stores the code for this template. Make sure you are logged in, and
 press *Use this template button* to create a copy of this repository in your own GitHub account.
-2. Put your point data data inside `data.csv`. The only relevant columns that will be read by the template are *Latitude*, *Longitude*, and *Title*.
+2. Put your point data inside `data.csv`. The only relevant columns that will be read by the template are *Latitude*, *Longitude*, and *Title*.
 The first two determine the location of the marker, and the last one is displayed in a popup. The order of columns does not matter. There can be other columns in the dataset,
 but they will be ignored.
 

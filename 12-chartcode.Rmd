@@ -38,7 +38,7 @@ Table: (\#tab:chart-templates) Chart Code Templates, Best Uses, and Tutorials
 
 
 ## Bar or Column Chart with Chart.js {- #chartjs-bar-column}
-In this section, we will show you how to create bar or column charts using a Chart.js. To do so, we will be using a Chart.js come template that pulls ata from a CSV file, as shown in Figure \@ref(fig:chartjs-demo-bar). This column chart shows how many students in five school districts in Connecticut were English-language learners in 2018-2019 academic year.
+In this section, we will show you how to create bar or column charts using a Chart.js. To do so, we will be using a Chart.js come template that pulls data from a CSV file, as shown in Figure \@ref(fig:chartjs-demo-bar). This column chart shows how many students in five school districts in Connecticut were English-language learners in 2018-2019 academic year.
 
 (ref:chartjs-demo-bar) Bar chart with Chart.js: explore the [interactive version](https://handsondataviz.github.io/chartjs-bar/index.html).
 
@@ -196,7 +196,7 @@ For more customization, see [Chart.js documentation](https://www.chartjs.org/doc
 
 Line charts are often used to show temporal data, or change of values over time.
 The x-axis represents time intervals, and the y-axis represents observed values.
-Note that unlike column or bar charts, y-axes of line charts do not have to start at zero.
+Note that unlike column or bar charts, y-axes of line charts do not have to start at zero because we rely on the position and slope of the line to interpret its meaning.
 The line chart in Figure \@ref(fig:chartjs-demo-line) shows the number of students
 in select school districts in Connecticut from 2012-2013 to 2018-19 academic years.
 Each line has a distinct color, and the legend helps establish the color-district relations.
@@ -213,7 +213,7 @@ To create your own line chart with Chart.js, with data loaded from a CSV file, y
 
 2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series).
 
-Warning: You can add as many data series columns as you wish, but do not overload your chart with lines as humans can distinguish a limited number of colors.
+Warning: You can add as many data series columns as you wish, but do not overload your chart with too many lines as humans can distinguish only a limited number of colors. 
 
 ```
 | year    | Hartford | New Haven | Bridgeport | Stamford | Waterbury |

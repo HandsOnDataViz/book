@@ -19,7 +19,7 @@ than most third-party tools can offer. In addition, you can never be sure that t
 apps will remain free, or at least have a free tier, forever, whereas open-source tools
 are here to stay free of charge.
 
-Note: Although both libraries are open-source, Highcharts comes [with a stricter license](https://www.highcharts.com/products/highcharts/#non-commercial) which allows it to be used for free for non-commercial projects only, such as personal, school, or non-profit organization website. Keeping that in mind, we primarily focused on Chart.js, which is distributed under MIT license that lets you use the library for commercial projects as well.
+Note: Although both libraries are open-source, Highcharts comes [with a stricter license](https://www.highcharts.com/products/highcharts/#non-commercial) which allows it to be used for free for non-commercial projects only, such as personal, school, or non-profit organization website. Keeping that in mind, we primarily focus on Chart.js, which is distributed under MIT license that lets you use the library for commercial projects as well.
 
 Table \@ref(tab:chart-templates) lists all types of charts that we will look at in this chapter.
 Both libraries include many more default chart types that you can explore
@@ -213,7 +213,7 @@ To create your own line chart with Chart.js, with data loaded from a CSV file, y
 
 2. Prepare your data in CSV format and upload into a `data.csv` file. Place labels that will appear along the axis in the first column, and each data series in its own column. Your CSV must contain at least two columns (labels and one data series).
 
-Warning: You can add as many data series columns as you wish, but do not overload your chart with too many lines as humans can distinguish only a limited number of colors. 
+Tip: You can add as many data series columns as you wish, but choose a reasonable number of lines, since humans can distinguish only a limited number of colors. If you need to display multiple lines, consider using only one color to highlight the most significant line in your data story, and color others in gray, as you will learn in the [Draw Attention to Meaning section of Chapter 16](draw-attention.html).
 
 ```
 | year    | Hartford | New Haven | Bridgeport | Stamford | Waterbury |

@@ -201,7 +201,7 @@ Third, stay away from pure saturated colors and instead choose their "earthier" 
 
 Once you have chosen the color palette for your visualization, ask yourself:
 
-1. Is there a conflict of meaning between colors and the phenomenon they represent? Am I using red to represent profit or green to represent death rate? This question is complex as color carry different associations for different social groups and cultures, but try to exercise your best sensitivity.
+1. Is there a conflict of meaning between colors and the phenomenon they represent? Am I using red to represent profit or green to represent death rate? This question is complex as colors carry different associations for different social groups and cultures, but try to exercise your best sensitivity.
 2. Can people with color blindness interpret your chart? Palettes that contain reds and greens, or yellows and blues can be challenging. Consider using [Color Oracle](http://www.colororacle.org/) or another simulator to make sure your visualization is accessible.
 3. Will the colors be distinguishable in black-and-white? Even if you don't expect viewers printing your chart, they may. You can use Color Oracle or another simulator to check that your colors have different brightness levels and look distinguishable in grayscale. Figure \@ref(fig:design-principles-color) shows some good and bad examples of color use.
 

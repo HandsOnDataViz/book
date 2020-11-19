@@ -122,8 +122,6 @@ Hint: The Datawrapper iframe tag source follows this general format: `https://da
  knitr::include_graphics("images/10-embed/tableau-public-publish.png")
 ```
 
-Also, you can log into the [Tableau Public server](https://public.tableau.com) to view all of the visualizations you have published online under your username account profile.
-
 2. In your online Tableau Public account profile page, click to *View* the details of any of your published visualizations, as shown in Figure \@ref(fig:tableau-public-view).
 
 (ref:tableau-public-view) In your Tableau Public online profile page, click to *View* the details of a published visualization.
@@ -131,6 +129,8 @@ Also, you can log into the [Tableau Public server](https://public.tableau.com) t
 ```{r tableau-public-view, out.width=289, fig.cap="(ref:tableau-public-view)"}
  knitr::include_graphics("images/10-embed/tableau-public-view.png")
 ```
+
+Tip: All of your published visualizations appear under your username account profile on the [Tableau Public server](https://public.tableau.com). If you don't recall your username, search the Tableau Public server for your first and last name that you entered when creating your online account.
 
 3. When viewing details for a published visualization in your Tableau Public online account, scroll down and click on the *Share* symbol in the lower-right corner. Select and copy its embed code, as shown in Figure \@ref(fig:tableau-public-embed-code).
 

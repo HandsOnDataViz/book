@@ -28,7 +28,7 @@ Deciding which spreadsheet tools to use is not a simple choice. Sometimes our de
 
 In this book, we primarily use Google Sheets for most of our examples. All of the data we distribute through this book is public. Also, we wanted a spreadsheet tool designed for collaboration, so that we can share links to data files with readers like you, so that you can view our original version, and either make a copy to edit in your own Google Drive, or download in a different format to use in LibreOffice or Excel. Most of the spreadsheet methods we teach look the same across all spreadsheet tools, and we point out exceptions when relevant.
 
-### Sidebar: Common data formats {- #formats}
+### Sidebar: Common data formats {-}
 Spreadsheet tools organize data in different formats. When you download spreadsheet data to your computer, you typically see its filename, followed by a period and a 3- or 4-character abbreviated extension, which represents the data format, as shown in Figure \@ref(fig:data-formats). The most common data formats we use in this book are:
 
 - `.csv` means Comma Separated Values, a generic format for a single sheet of simple data, which saves no formulas nor styling.

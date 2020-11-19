@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 16 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 19 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -961,8 +961,6 @@ may only require you to use only a small number of these, or perhaps
 even just one tool. But it’s important to be aware of the different
 types of tools, because you may not realize how they can help you if
 don’t know that they exist.
-
-<!-- TODO: See table data in Google Sheet format: https://docs.google.com/spreadsheets/d/1HHKRw_Og38lCK9eKAvQTF_6GHdrSE5YU1ioStPsvxII/edit#gid=0 -->
 
 <table>
 <caption>Table 2.1: Recommended Tools and Uses, with Chapter References</caption>
@@ -2519,8 +2517,6 @@ working alongside talented librarians, journalists, and researchers.
 Collectively, they taught us a set of guiding questions that outline a
 more thoughtful process about *how to search* for data:
 
-<!-- TODO: Manually markup as Variable List: -->
-
 *What exactly is the question you’re seeking to answer with data?*
 
 Literally write it down—in the form of a question, punctuated with a
@@ -2678,7 +2674,6 @@ examine these power systems, collect data to counter their effects, and
 make everyone’s labor in this process more visible.[9] If no one has
 collected the data you’re looking for, perhaps you can make valuable
 steps to publicly recognize the issue and contribute to positive change.
-<!-- TODO: End variable list -->
 
 Hunting for data involves much more than googling keywords. Deepen your
 search by reflecting on the types of questions that librarians,
@@ -3224,8 +3219,6 @@ characters and numbers appearing on your screen.
 One place to start is to ask: *What do the data labels really mean?* and
 to consider these potential issues:
 
-<!-- TODO: Manually mark up as Variable List: -->
-
 *What are full definitions for abbreviated column headers?*
 
 Spreadsheets often contain abbreviated column headers, such as
@@ -3262,10 +3255,6 @@ are effectively meaningless. Check how data was recorded, and note any
 reported margins of error, in the source notes. See also [how to create
 error bars in Chapter 7: Chart Your Data](chart.html).
 
-TODO: Merge in potential reporting bias: on surveys, people may
-over-report positive behavior, or under-report attitudes deemed negative
-by broader society.
-
 *To what extent is the data socially constructed?*
 
 What do the data labels reveal or hide about how people defined
@@ -3295,7 +3284,7 @@ each decade shown in the pop-up window, with our explanation of our
 decisions in the caption and source notes. There is no single definitive
 way to visualize socially-constructed data when definitions change
 across decades. But when you make choices about data, describe your
-thought process in the notes. <!-- TODO: End variable list -->
+thought process in the notes.
 
 <!-- TODO: Read and insert Margo Anderson's American Census 2nd edition 2015 here as background -->
 
@@ -4072,7 +4061,7 @@ we all understand that 4 out of 5 dentists is equivalent to
 
 But confusion arises sometimes when people hastily compare percentages,
 so we need to carefully choose our words. One term is *percent change*
-(or percent increase or decrease), which works best when comparing *old
+(also called relative change), which works best when comparing *old
 versus new values*. Percent change is calculated by the difference
 between new and old values, divided by the absolute value of the old
 value, or `(New value - Old value) / |Old value|`. For example, if 4
@@ -4080,12 +4069,12 @@ dentists recommended sugarless gum in 1960, but peer pressure finally
 prevailed and 5 dentists recommend it in 2020, we calculate the percent
 change as `(5-4)/4 = 1/4 = 0.25 = 25%`.
 
-A different term is *percentage points*, which works best when comparing
-*old versus new percentages* by calculating their difference. For
-example, if 80 percent of dentists recommended sugarless gum in 1960,
-but 100 percent recommended it in 2020, we could compare the two figures
-by calculating the difference as
-`New percentage - Old percentage = 100% - 80%  = a difference of 20 percentage points`.
+Another term is *percentage point difference*, which works best when
+comparing *old versus new percentages* and is calculated by subtracting
+one from the other. For example, if 80 percent of dentists recommended
+sugarless gum in 1960, but 100 percent recommended it in 2020, we could
+compare the two figures by calculating the difference as
+`New percentage - Old percentage = 100% - 80%  = 20 percentage point difference`.
 
 When we precisely use each term, there are two correct ways to compare
 these figures. One way is to state that “The number of dentists who
@@ -4104,15 +4093,11 @@ increase,” they’re wrong. Instead, there are two truthful ways describe
 this change. One way is to state that the tax “will increase 20 percent”
 because `(6-5)/5 = 0.20`. Another way is to state that the tax “will
 increase by 1 percentage point” because
-`6% - 5% = a difference of 1 percentage point`. See why the politician
+`6% - 5% = 1 percentage point difference`. See why the politician
 preferred to say it in their misleading way, rather than either of the
 two correct ways? Don’t let anyone fool you by describing how
 percentages change with very loose wording, and be precise about its
 meaning in your own work to avoid confusing other people.
-
-TODO above: DECIDE whether to mention that some sources refer to these
-concepts as absolute versus relative change
-<a href="https://dataschool.com/misrepresenting-data/relative-vs-absolute-change/" class="uri">https://dataschool.com/misrepresenting-data/relative-vs-absolute-change/</a>
 
 A final recommendation about using more precise language is to be
 cautious with words that suggest a *cause-and-effect relationship* in
@@ -4735,15 +4720,20 @@ Data Bias](detect.html)
 Figure 7.2: Start your bar chart at zero.
 </p>
 
-But the zero-baseline rule does not apply to line charts, which
-represent values through the *position* and *angle* of the line, not its
-height. Visualization expert Alberto Cairo demonstrates that starting a
-line chart at a number other than zero does not necessarily distort its
-encoded information because we rely on its shape, not its height, to
-determine its meaning.[23]
+But the zero-baseline rule does *not* apply to line charts.
+Visualization expert Alberto Cairo points out that line charts represent
+values through the *position* and *angle* of the line, rather than its
+height or length. Starting a line chart at a number other than zero does
+*not* necessarily distort its encoded information because our eyes rely
+on its shape to determine its meaning, rather than its proximity to the
+baseline.[23] In fact, if you mistakenly force a line chart to begin at
+the zero baseline, you may inadvertently produce a misleading chart, as
+you will learn in the [How to Lie with Charts section of Chapter
+15](how-to-lie-with-charts.html).
 
-TODO: Confirm revision with Ilya; Add visual here of line chart baseline
-at zero versus higher number to illustrate the argument?
+TODO: Discuss with Ilya about adding a simpler chart comparison to
+demonstrate Cairo’s primary argument, not the secondary argument about
+misleading charts
 
 #### Pie Charts Represent 100%
 
@@ -4860,39 +4850,55 @@ much easier to read than `1000000`).
 
 #### Be careful with colors
 
-The use of color is a complex topic, and there are plenty of books and
-research devoted to it. For an excellent overview, see Lisa Charlotte
-Rost’s “[A Friendly Guide to Colors in Data
-Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
-Pick More Beautiful Colors for Your Data
-Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
-both on the Datawrapper blog.[24] But some principles are fairly
-universal. First, do not use colors just for the sake of it, most charts
-are fine being monochromatic. Second, remember that colors come with
-some meaning attached, which can vary among cultures. In the world of
-business, red is conventionally used to represent loss, and it would be
-unwise to use this color to show profit. Make sure you avoid random
-colors.
+In this section, we would like to briefly introduce three important
+rules about colors. First, remember that in most cases monochromatic
+(single-hue) charts suffice, and there may be no need to introduce the
+extra dimension of color at all.
 
-TODO: Ilya please review both of Rost’s blog posts above. Decide if
-there are any additional key principles we should briefly mention below.
-Also, decide if we should apply any of her principles to our own color
-choices for sample charts and maps in this book.
+Second, refer to the color wheel and standard [harmony
+rules](https://en.wikipedia.org/wiki/Harmony_color) when choosing your
+palette. Consider the rule of complementary colors—–opposites in the
+color wheel—–to find color pairs, such as blue and orange or yellow and
+purple. Analogous colors, or neighbors in the color wheel, make good
+palettes, such as orange, red, and pink.
 
-Whatever colors you end up choosing, they need to be distinguishable
-(otherwise what is the point?). Do not use colors that are too similar
-in hue (for example, various shades of green––leave them for choropleth
-maps). Certain color combinations are hard to interpret for people with
-colorblindness, like green/red or yellow/blue, so be very careful with
-those. Figure <a href="#fig:design-principles-color">7.8</a> shows some
-good and bad examples of color use.
+Third, stay away from pure saturated colors and instead choose their
+“earthier” versions, such as olive green instead of bright green, or
+navy instead of neon blue.
+
+Once you have chosen the color palette for your visualization, ask
+yourself:
+
+1.  Is there a conflict of meaning between colors and the phenomenon
+    they represent? Am I using red to represent profit or green to
+    represent death rate? This question is complex as colors carry
+    different associations for different social groups and cultures, but
+    try to exercise your best sensitivity.
+2.  Can people with color blindness interpret your chart? Palettes that
+    contain reds and greens, or yellows and blues can be challenging.
+    Consider using [Color Oracle](http://www.colororacle.org/) or
+    another simulator to make sure your visualization is accessible.
+3.  Will the colors be distinguishable in black-and-white? Even if you
+    don’t expect viewers printing your chart, they may. You can use
+    Color Oracle or another simulator to check that your colors have
+    different brightness levels and look distinguishable in grayscale.
+    Figure <a href="#fig:design-principles-color">7.8</a> shows some
+    good and bad examples of color use.
 
 <img src="images/07-chart/design-principles-color.png" alt="Don't use colors just for the sake of it."  />
 <p class="caption">
 Figure 7.8: Don’t use colors just for the sake of it.
 </p>
 
-If you follow the advice, you should end up with a de-cluttered chart as
+The use of color is a complex topic, and there are plenty of books and
+research devoted to it. For an excellent overview, see Lisa Charlotte
+Rost’s “[A Friendly Guide to Colors in Data
+Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
+Pick More Beautiful Colors for Your Data
+Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
+both on the Datawrapper blog.[24]
+
+If you follow our advice, you should end up with a de-cluttered chart as
 shown in Figure <a href="#fig:design-principles-decluttered">7.9</a>.
 Notice how your eyes are drawn to the bars and their corresponding
 values, not bright colors or secondary components like the axes lines.
@@ -6446,7 +6452,7 @@ TODO: Improve and standardize map images
 <tbody>
 <tr class="odd">
 <td>Point map with custom icons<br> <img src="images/08-map/map-point.png" /></td>
-<td>Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: <a href="batchgeo.html">BatchGeo tutorial</a> or <a href="mymaps.html">Google My Maps tutorial</a><br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Ch 13: Leaflet Maps with Google Sheets tutorial</a></td>
+<td>Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: <a href="batchgeo.html">BatchGeo tutorial</a> or <a href="mymaps.html">Google My Maps tutorial</a>. <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Ch 13: Leaflet Maps with Google Sheets tutorial</a></td>
 </tr>
 <tr class="even">
 <td>Symbol point map<br> <img src="images/08-map/map-symbol.png" /></td>
@@ -6519,13 +6525,13 @@ let’s start by establishing a common vocabulary about maps.
 Our book features how to create *interactive* maps, also called *tiled
 web maps* or *slippy maps* because you can zoom into and pan around to
 explore map data layers on top of a seamless set of basemap tiles. They
-usually include zoom controls (`+` and `-` buttons) to view data from
-various “distances,” which change the display of the basemap tiles.
-Basemaps that display pictorial images of streets and buildings are
-known as *vector* tiles, while those that display satellite imagery are
-known as *raster* tiles, and we’ll explain the difference below. Take a
-look at Figure <a href="#fig:map-principles-map">8.1</a> to learn about
-basic elements in the maps you’ll create in this chapter.
+usually include *zoom controls* (`+` and `-` buttons) to view data at
+various levels that change the display of the basemap tiles. Basemaps
+that display pictorial images of streets and buildings are known as
+*vector* tiles, while those that display satellite imagery are known as
+*raster* tiles, and we’ll explain the difference below. Take a look at
+Figure <a href="#fig:map-principles-map">8.1</a> to learn about basic
+elements in the maps you’ll create in this chapter.
 
 The top layer of interactive maps generally consists of a combination of
 *points*, *polylines*, and *polygons*. Points show specific places, such
@@ -6546,9 +6552,9 @@ which gets fuzzier as we get closer. You’ll learn more about these terms
 in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter
 14.
 
-<img src="images/08-map/map-principles-map.png" alt="Map elements."  />
+<img src="images/08-map/map-principles-map.png" alt="Key elements of an interactive map."  />
 <p class="caption">
-Figure 8.1: Map elements.
+Figure 8.1: Key elements of an interactive map.
 </p>
 
 On interactive maps, any of these top-layer data elements may display a
@@ -6592,50 +6598,37 @@ What type of data do you see listed below: points or polygons?
 7.  San Diego County, CA
 8.  State of California
 
-In most cases, numbers 1-4 represent *point* data because each normally
-refers to a *specific location* that can be displayed as a marker on a
-map. These usually work best in point-data maps, such as:
+In most cases, numbers 1-4 represent *point* data because they usually
+refer to a *specific locations* that can be displayed as point markers
+on a map. By contrast, numbers 5-8 generally represent *polygon* data
+because they usually refer to *geographic boundaries* that can be
+displayed as closed shapes on a map.
 
--   a *point map* to show locations with colored or custom icons
--   a *symbol point map* to shows locations with variable-sized images
-    to represent data (such as circles for population size)
--   a *heat point map* to show clusters of locations as hotspots of high
-    frequency or density
--   a *story map* to show a point-by-point guided tour with a scrolling
-    narrative
-
-In most cases, numbers 5-8 represent *polygon* data because each
-normally refers to a *geographic boundary* that can be displayed as a
-shape on a map. These usually work best in *choropleth* maps, which show
-spatial patterns across regions by coloring polygons to represent data
-values.
-
-These point-versus-polygon rules apply *most* of the time, but not
-always, and exceptions can be made depending on your data story. First,
-it is *possible*, but not common, to represent all items 1-8 as *point*
-data, and display them on any of the point-style maps above. For
-example, to tell a data story about population growth for California
-cities, it would make sense to create a symbol point map with
+This point-versus-polygon distinction applies *most* of the time, but
+not always, with exceptions depending on your data story. First, it is
+possible, but not common, to represent all items 1-8 as *point* data on
+a map. For example, to tell a data story about population growth for
+California cities, it would make sense to create a symbol point map with
 different-sized circles to represent data for each city. To do this,
 your map tool would need to find the center-point of the City of Los
 Angeles polygon boundary in order to place its population circle on a
-specific point on the map. A second way the point-versus-polygon rule
-gets blurry is because some places we normally consider to be map points
-*also* have polygon-shaped borders. For example, if you enter “Balboa
-Park” into Google Maps, it will display the result as a map marker,
-which suggests it is point data. But Balboa Park also has a geographic
-boundary that covers 1.8 square miles (4.8 square kilometers). If you
-told a data story about how much land in San Diego was devoted to public
-space, it would make sense to create a choropleth map that displays
-Balboa Park as a polygon rather than a point. Third, it’s also possible
-to transform points into polygon data with [pivot tables, a topic we
-introduced in Chapter 3](pivot.html). For example, to tell a data story
-about the number of hospital beds each California county, you could
-obtain point-level data about beds in each hospital, then pivot them to
-sum up the total number of beds in each county, and display these
-polygon-level results in a choropleth map. See a more detailed example
-in the [Pivot Points into Polygon Data section of Chapter 14: Transform
-Your Map Data](pivot-point-to-polygon.html)
+specific point on the map. A second way the point-versus-polygon
+distinction gets blurry is because some places we normally consider to
+be specific points *also* have polygon-shaped borders. For example, if
+you enter “Balboa Park, San Diego CA” into Google Maps, it will display
+the result as a map marker, which suggests it is point data. But Balboa
+Park also has a geographic boundary that covers 1.8 square miles (4.8
+square kilometers). If you told a data story about how much land in San
+Diego was devoted to public space, it would make sense to create a
+choropleth map that displays Balboa Park as a polygon rather than a
+point. Third, it’s also possible to transform points into polygon data
+with [pivot tables, a topic we introduced in Chapter 3](pivot.html). For
+example, to tell a data story about the number of hospital beds in each
+California county, you could obtain point-level data about beds in each
+hospital, then pivot them to sum up the total number of beds in each
+county, and display these polygon-level results in a choropleth map. See
+a more detailed example in the [Pivot Points into Polygon Data section
+of Chapter 14: Transform Your Map Data](pivot-point-to-polygon.html)
 
 In summary, clarify if your spatial data should represent points or
 polygons, since those two categories are sometimes confused. If you
@@ -6644,7 +6637,7 @@ then create a choropleth map. Those are the most common methods used by
 mapmakers, but there are plenty of exceptions, depending on your data
 story.
 
-### Generally Map One Variable, Not Two
+### Map One Variable, Not Two
 
 Newcomers to data visualization sometimes are so proud of placing one
 variable on a map that they figure two variables must be twice as good.
@@ -6673,10 +6666,11 @@ variable next to a scatterchart of both variables. Finally, you could
 create two choropleth maps, one for each variable, and place them
 side-by-side with text to explain their similarities or differences.
 
-TODO: decide if the figure works above; also decide if supplemental
-images are needed, perhaps as “bad viz” and “better viz” examples
+TODO: ILYA let’s discuss if the figure works above; also decide if
+supplemental images are needed, perhaps as “bad viz” and “better viz”
+examples
 
-### Generally Choose Smaller Geographies for Choropleth Maps
+### Choose Smaller Geographies for Choropleth Maps
 
 Choropleth maps are best for showing geographic patterns across regions
 by coloring polygons to represent data values. Therefore, we generally
@@ -7110,9 +7104,11 @@ template.
 
 1.  Click the *Validate and Set Options* button to inspect or adjust how
     BatchGeo will upload your data fields and preview a pop-up window,
-    as shown in Figure <a href="#fig:batchgeo-validate">8.15</a>. Click
-    the *Advanced* button to see additional options to change the
-    basemap layer or point symbols. Then click the *Make Map* button.
+    as shown in Figure <a href="#fig:batchgeo-validate">8.15</a>. Here
+    you can change the default *Region* from *United States* to other
+    areas of the world. Also, click the *Advanced* button to see more
+    options to change the basemap layer or point symbols. Then click the
+    *Make Map* button.
 
 <img src="images/08-map/batchgeo-validate.png" alt="Click the *Validate* button to inspect and preview your data and advanced options." width="500" />
 <p class="caption">
@@ -7166,7 +7162,7 @@ TODO BELOW: <s>Explain how Google My Maps is different from Google
 Maps</s>; mention at the top there are more options than points; DECIDE
 if this sample data about Nigerian airports is the best fit, since it’s
 great to have international examples but unsure if Shapefile-to-CSV
-transormation makes sense here, as new users probably need the tool to
+transformation makes sense here, as new users probably need the tool to
 geocode their data.
 
 [My Maps](https://www.google.com/maps/about/mymaps/) is Google’s service
@@ -7756,19 +7752,13 @@ desktop application](https://public.tableau.com/en-us/s/download) if you
 don’t have it yet. It is available for Mac or Windows. You will need to
 enter an email address to download the application.
 
-<!-- TODO: reminder that this Tableau visualization is stored in Ilya's account at https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1 -->
-
-<img src="images/08-map/tableau-polygon-final.png" alt="Choropleth map of healthcare spending with Tableau Public. Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1). Data from the World Bank."  />
+<img src="images/08-map/tableau-polygon-final.png" alt="Choropleth map of healthcare spending with Tableau Public. Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1). Data from the World Bank."  />
 <p class="caption">
 Figure 8.41: Choropleth map of healthcare spending with Tableau Public.
 Explore the [interactive
-version](https://public.tableau.com/profile/ilya7257#!/vizhome/MilitarySpending_15965362101320/Sheet1).
+version](https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1).
 Data from the World Bank.
 </p>
-
-<s>TODO above: update the demo map to match our current data and
-instructions (without filters?), after we make decisions about how to
-address interpolation in the note at the bottom of this section.</s>
 
 Let’s look at the steps involved to create a choropleth from Figure
 <a href="#fig:tableau-polygon-final">8.41</a> in detail.
@@ -7931,18 +7921,21 @@ to have a world view as we are showing data for most countries, although
 you may want to zoom in to a specific continent. Once you are ready to
 publish and share the map, go to *File &gt; Save to Tableau Public*. In
 the pop-up window, log in to your account if requested. Give it a title,
-such as Healthcare Spending, and click Save. See how to embed the map as
-an iframe in [Chapter 10](embed-code.html).
+such as Healthcare Spending, and click Save. See how to [embed the map
+as an iframe in Chapter 10](embed-code.html).
 
 Warning: Tableau may not be the best tool to create choropleth maps
 where you want to have full control of color breaks. By default, Tableau
 uses a linear color scheme that, as we’ve learned earlier in the
-chapter, is prone to favoring outliers. And there is no straightforward
-way to change the classification scheme to Jenks breaks or quantiles. If
-you are not happy with the way linear scale represents your data, see
-[this
-tutorial](https://help.tableau.com/current/pro/desktop/en-us/maps_howto_choropleth.htm)
-for some tips and tricks.
+chapter, is prone to highlighting outliers, and there is no
+straightforward way to change the intervals to non-linear methods such
+as quantiles. If you are not happy with the way the linear scale
+represents your data, you can either [filter your data to remove
+outliers from the
+map](https://help.tableau.com/current/pro/desktop/en-us/filtering.htm),
+or see [Andy Kriebel’s VizWiz tutorial to use table calculations to
+group items into
+quantiles](https://www.vizwiz.com/2018/07/rankpercentile.html).
 
 Now that you know that Tableau can be used not just for charts, but for
 maps as well, let’s see how to use Socrata’s visualization capabilities
@@ -8832,10 +8825,6 @@ Figure 10.10: In the Tableau Public desktop application, select
 *File–Save to Tableau Public* to publish to the online server.
 </p>
 
-Also, you can log into the [Tableau Public
-server](https://public.tableau.com) to view all of the visualizations
-you have published online under your username account profile.
-
 1.  In your online Tableau Public account profile page, click to *View*
     the details of any of your published visualizations, as shown in
     Figure <a href="#fig:tableau-public-view">10.11</a>.
@@ -8845,6 +8834,12 @@ you have published online under your username account profile.
 Figure 10.11: In your Tableau Public online profile page, click to
 *View* the details of a published visualization.
 </p>
+
+Tip: All of your published visualizations appear under your username
+account profile on the [Tableau Public
+server](https://public.tableau.com). If you don’t recall your username,
+search the Tableau Public server for your first and last name that you
+entered when creating your online account.
 
 1.  When viewing details for a published visualization in your Tableau
     Public online account, scroll down and click on the *Share* symbol
@@ -9997,9 +9992,9 @@ stricter
 license](https://www.highcharts.com/products/highcharts/#non-commercial)
 which allows it to be used for free for non-commercial projects only,
 such as personal, school, or non-profit organization website. Keeping
-that in mind, we primarily focused on Chart.js, which is distributed
-under MIT license that lets you use the library for commercial projects
-as well.
+that in mind, we primarily focus on Chart.js, which is distributed under
+MIT license that lets you use the library for commercial projects as
+well.
 
 Table <a href="#tab:chart-templates">12.1</a> lists all types of charts
 that we will look at in this chapter. Both libraries include many more
@@ -10055,7 +10050,7 @@ Bar or Column Chart with Chart.js
 
 In this section, we will show you how to create bar or column charts
 using a Chart.js. To do so, we will be using a Chart.js come template
-that pulls ata from a CSV file, as shown in Figure
+that pulls data from a CSV file, as shown in Figure
 <a href="#fig:chartjs-demo-bar">12.1</a>. This column chart shows how
 many students in five school districts in Connecticut were
 English-language learners in 2018-2019 academic year.
@@ -10268,11 +10263,12 @@ Line Chart with Chart.js
 Line charts are often used to show temporal data, or change of values
 over time. The x-axis represents time intervals, and the y-axis
 represents observed values. Note that unlike column or bar charts,
-y-axes of line charts do not have to start at zero. The line chart in
-Figure <a href="#fig:chartjs-demo-line">12.3</a> shows the number of
-students in select school districts in Connecticut from 2012-2013 to
-2018-19 academic years. Each line has a distinct color, and the legend
-helps establish the color-district relations.
+y-axes of line charts do not have to start at zero because we rely on
+the position and slope of the line to interpret its meaning. The line
+chart in Figure <a href="#fig:chartjs-demo-line">12.3</a> shows the
+number of students in select school districts in Connecticut from
+2012-2013 to 2018-19 academic years. Each line has a distinct color, and
+the legend helps establish the color-district relations.
 
 <img src="images/12-chartcode/chartjs-demo-line.png" alt="Interactive line chart with Chart.js. Explore the [interactive version](https://handsondataviz.github.io/chartjs-line/)."  />
 <p class="caption">
@@ -10295,9 +10291,12 @@ file, you can:
     and each data series in its own column. Your CSV must contain at
     least two columns (labels and one data series).
 
-Warning: You can add as many data series columns as you wish, but do not
-overload your chart with lines as humans can distinguish a limited
-number of colors.
+Tip: You can add as many data series columns as you wish, but choose a
+reasonable number of lines, since humans can distinguish only a limited
+number of colors. If you need to display multiple lines, consider using
+only one color to highlight the most significant line in your data
+story, and color others in gray, as you will learn in the [Draw
+Attention to Meaning section of Chapter 16](draw-attention.html).
 
     | year    | Hartford | New Haven | Bridgeport | Stamford | Waterbury |
     | 2013-14 | 21820    | 21420     | 20929      | 15927    | 18706     |
@@ -13300,11 +13299,15 @@ reader.
 
 The goal of data visualization is to encode information into images that
 capture true and insightful stories. But we’ve warned you to watch out
-for people who lie with charts and maps. In fact, in the
-[Introduction](introduction.html) we intentionally manipulated
-visualizations about income inequality to demonstrate how the same data
-can be rearranged to paint very different pictures of reality. Does that
-mean all data visualizations are right? Definitely not. On closer
+for people who lie with visualizations. Looking back at income
+inequality examples in the [Introduction](introduction.html) to this
+book, we intentionally manipulated charts in Figure
+<a href="#fig:us-income-chart1">1.1</a> and Figure
+<a href="#fig:us-income-chart2">1.2</a>, and maps in Figure
+<a href="#fig:world-income-map1">1.3</a> and Figure
+<a href="#fig:world-income-map2">1.4</a>, to demonstrate how the same
+data can be rearranged to paint very different pictures of reality. Does
+that mean all data visualizations are right? Definitely not. On closer
 examination, we declared that the second of the two charts about US
 income inequality was *misleading* because it intentionally used an
 inappropriate scale to hide the truth. But we also confided that the two
@@ -13783,14 +13786,16 @@ already familiar with the steps for creating a [Choropleth map with
 Datawrapper in Chapter 8](choropleth-datawrapper.html).
 
 Let’s return to the two maps in the [Introduction](introduction.html) of
-this book, which presented two different interpretations of world income
-inequality. In particular, the first map colored the US in medium blue
+this book, where we presented two different interpretations of world
+income inequality. In particular, Figure
+<a href="#fig:world-income-map1">1.3</a> colored the US in medium blue
 which suggested its level of inequality was similar to other nations,
-while the second map made the US stand out in dark blue at the highest
-tier of inequality. We argued that both were *truthful* interpretations.
-You’ll understand the concepts more clearly by following this hands-on
-tutorial to recreate both maps, plus one more. First, let’s examine the
-data and upload it to Datawrapper to start making our choropleth maps.
+while Figure <a href="#fig:world-income-map2">1.4</a> made the US stand
+out in dark blue at the highest tier of inequality. We argued that both
+were *truthful* interpretations. You’ll understand the concepts more
+clearly by following this hands-on tutorial to recreate both maps, plus
+one more. First, let’s examine the data and upload it to Datawrapper to
+start making our choropleth maps.
 
 1.  Open the [world income top 1 percent data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1IomO4pyGziTZnQrlSnlO11zqgdohwwTm2olR2-tGPfI/edit#gid=1463939565),
@@ -13806,16 +13811,20 @@ data and upload it to Datawrapper to start making our choropleth maps.
     when this data was collected by the World Inequality Database. For
     example, in Brazil, the top 1 percent of the population held 28.3
     percent of the nation’s income in 2015, while in the United States,
-    the top 1 percent held 20.5 percent in 2018. To be clear, there are
-    other ways to compare the distribution of income or wealth across
-    nations, but this is one of the better datasets available that
-    capture this concept using one easy-to-understand variable.
+    the top 1 percent held 20.5 percent in 2018.
 
-3.  Since we cannot directly import this Google Sheet into our
+Note: To be clear, social scientists have developed many other ways to
+compare the distribution of income or wealth across nations, and this
+topic is beyond the scope of this book. In this tutorial we capture this
+complex concept using one easy-to-understand variable: percent share of
+pre-tax national income held by the top 1 percent of the population in
+each nation.
+
+1.  Since we cannot directly import this Google Sheet into our
     Datawrapper mapping tool, go to *File &gt; Download* to export the
     first tab in *CSV format* to your computer.
 
-4.  Open the [Datawrapper visualization tool](https://datawrapper.de) in
+2.  Open the [Datawrapper visualization tool](https://datawrapper.de) in
     your browser and upload your CSV map data. Select *New Map*, select
     *Choropleth map*, and select *World*, then *Proceed*. In the *Add
     your data* screen, scroll down below the table and select the
@@ -13826,7 +13835,7 @@ data and upload it to Datawrapper to start making our choropleth maps.
     the *Percent Share* column is *Matched as Values*, then click *Go*
     and *Proceed* to visualize your map.
 
-5.  In the *Visualize* screen, in the *Colors* section of the *Refine*
+3.  In the *Visualize* screen, in the *Colors* section of the *Refine*
     tab *Select palette*, click the *wrench symbol* to open up the color
     settings, as shown in Figure
     <a href="#fig:map-color-settings">15.11</a>. Let’s skip past the

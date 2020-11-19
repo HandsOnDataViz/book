@@ -260,8 +260,7 @@ data leaves your local machine, which is great for confidentiality.
 If you use Windows, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
 open in your default browser.
 
-If you work on a Mac, the downloaded file will be a .dmg file to be installed. But you will likely see a security warning that prevents OpenRefine from launching because Apple cannot identify the developer for this open-source project. To resolve the problem, go to *System Preferences > Security and Privacy > General tab*, and
-click the *Open Anyway* button in the lower half of the window, as shown in Figure \@ref(fig:openrefine-mac-alert-annotated). If prompted with another window, click *Open*.
+If you work on a Mac, the downloaded file will be a .dmg file to be installed. But you will likely see a security warning that prevents OpenRefine from launching because Apple cannot identify the developer for this open-source project. To resolve the problem, go to *System Preferences > Security and Privacy > General tab*, and click the *Open Anyway* button in the lower half of the window, as shown in Figure \@ref(fig:openrefine-mac-alert-annotated). If prompted with another window, click *Open*.
 
 (ref:openrefine-mac-alert-annotated) If your Mac displays a warning about launching Open Refine (on left), go to *System Preferences - Security and Privacy - General tab* and click *Open Anyways* (on right).
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -212,7 +212,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google.html"><a href="chart-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>- Bar and Column Charts</a></li>
-<li class="chapter" data-level="" data-path="histogram-google.html"><a href="histogram-google.html"><i class="fa fa-check"></i>- Histogram</a></li>
+<li class="chapter" data-level="" data-path="histogram-google.html"><a href="histogram-google.html"><i class="fa fa-check"></i>- Histograms</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>- Pie, Line, and Area Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
 <li class="chapter" data-level="" data-path="annotated-datawrapper.html"><a href="annotated-datawrapper.html"><i class="fa fa-check"></i>- Annotated Charts</a></li>
@@ -457,7 +457,7 @@ Figure 8.49: To place the legend on top of the map, make sure it is floating.
 <li>Finally, let’s add a text block with data source underneath the map. From the Objects menu in the left-hand side, drag and drop <em>Text</em> to the lower half of the map. In the <em>Edit Text</em> window that appears, type <em>Data by the World Bank, 2017</em>, and click OK. Initially the text area will occupy half the height of the screen, so resize it like you would resize any window on your computer.</li>
 </ol>
 <p>And we’re done! Make sure you position your map’s center and zoom level as you want it to be visible by others. In this case, the best would be to have a world view as we are showing data for most countries, although you may want to zoom in to a specific continent. Once you are ready to publish and share the map, go to <em>File &gt; Save to Tableau Public</em>. In the pop-up window, log in to your account if requested. Give it a title, such as Healthcare Spending, and click Save. See how to embed the map as an iframe in <a href="embed-code.html">Chapter 10</a>.</p>
-<p>Warning: Tableau may not be the best tool to create choropleth maps where you want to have full control of color breaks. By default, Tableau uses a linear color scheme that, as we’ve learned earlier in the chapter, is prone to favoring outliers. And there is no straightforward way to change the classification scheme to Jenks breaks or quantiles. If you are not happy with the way linear scale represents your data, see <a href="https://help.tableau.com/current/pro/desktop/en-us/maps_howto_choropleth.htm">this tutorial</a> for some tips and tricks.</p>
+<p>Warning: Tableau may not be the best tool to create choropleth maps where you want to have full control of color breaks. By default, Tableau uses a linear color scheme that, as we’ve learned earlier in the chapter, is prone to highlighting outliers. And there is no straightforward way to change the classification scheme to Jenks breaks or quantiles. If you are not happy with the way the linear scale represents your data, you can either <a href="https://help.tableau.com/current/pro/desktop/en-us/filtering.htm">filter your data to remove outliers from the map</a>, or see <a href="https://www.vizwiz.com/2018/07/rankpercentile.html">Andy Kriebel’s VizWiz tutorial to use table calculations to group items into quantiles</a>.</p>
 <p>Now that you know that Tableau can be used not just for charts, but for maps as well, let’s see how to use Socrata’s visualization capabilities to build a map that always uses the most current data available.</p>
 </div>
             </section>

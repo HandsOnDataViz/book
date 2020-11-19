@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-16" />
+<meta name="date" content="2020-11-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -212,7 +212,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="chart-design.html"><a href="chart-design.html"><i class="fa fa-check"></i>Chart Design Principles</a></li>
 <li class="chapter" data-level="" data-path="chart-google.html"><a href="chart-google.html"><i class="fa fa-check"></i>Google Sheets Charts</a></li>
 <li class="chapter" data-level="" data-path="bar-column-google.html"><a href="bar-column-google.html"><i class="fa fa-check"></i>- Bar and Column Charts</a></li>
-<li class="chapter" data-level="" data-path="histogram-google.html"><a href="histogram-google.html"><i class="fa fa-check"></i>- Histogram</a></li>
+<li class="chapter" data-level="" data-path="histogram-google.html"><a href="histogram-google.html"><i class="fa fa-check"></i>- Histograms</a></li>
 <li class="chapter" data-level="" data-path="pie-line-area-google.html"><a href="pie-line-area-google.html"><i class="fa fa-check"></i>- Pie, Line, and Area Charts</a></li>
 <li class="chapter" data-level="" data-path="chart-datawrapper.html"><a href="chart-datawrapper.html"><i class="fa fa-check"></i>Datawrapper Charts</a></li>
 <li class="chapter" data-level="" data-path="annotated-datawrapper.html"><a href="annotated-datawrapper.html"><i class="fa fa-check"></i>- Annotated Charts</a></li>
@@ -398,8 +398,8 @@ is visible without any user interaction.</p>
 Figure 7.2: Start your bar chart at zero.
 </p>
 </div>
-<p>But the zero-baseline rule does not apply to line charts, which represent values through the <em>position</em> and <em>angle</em> of the line, not its height. Visualization expert Alberto Cairo demonstrates that starting a line chart at a number other than zero does not necessarily distort its encoded information because we rely on its shape, not its height, to determine its meaning.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a></p>
-<p>TODO: Confirm revision with Ilya; Add visual here of line chart baseline at zero versus higher number to illustrate the argument?</p>
+<p>But the zero-baseline rule does <em>not</em> apply to line charts. Visualization expert Alberto Cairo points out that line charts represent values through the <em>position</em> and <em>angle</em> of the line, rather than its height or length. Starting a line chart at a number other than zero does <em>not</em> necessarily distort its encoded information because our eyes rely on its shape to determine its meaning, rather than its proximity to the baseline.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> In fact, if you mistakenly force a line chart to begin at the zero baseline, you may inadvertently produce a misleading chart, as you will learn in the <a href="how-to-lie-with-charts.html">How to Lie with Charts section of Chapter 15</a>.</p>
+<p>TODO: Discuss with Ilya about adding a simpler chart comparison to demonstrate Cairo’s primary argument, not the secondary argument about misleading charts</p>
 </div>
 <div id="pie-charts-represent-100" class="section level4 unnumbered" number="">
 <h4>Pie Charts Represent 100%</h4>
@@ -499,10 +499,15 @@ Consider using commas as thousands separators for readability (<code>1,000,000</
 </div>
 <div id="be-careful-with-colors" class="section level4 unnumbered" number="">
 <h4>Be careful with colors</h4>
-<p>The use of color is a complex topic, and there are plenty
-of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> But some principles are fairly universal. First, do not use colors just for the sake of it, most charts are fine being monochromatic. Second, remember that colors come with some meaning attached, which can vary among cultures. In the world of business, red is conventionally used to represent loss, and it would be unwise to use this color to show profit. Make sure you avoid random colors.</p>
-<p>TODO: Ilya please review both of Rost’s blog posts above. Decide if there are any additional key principles we should briefly mention below. Also, decide if we should apply any of her principles to our own color choices for sample charts and maps in this book.</p>
-<p>Whatever colors you end up choosing, they need to be distinguishable (otherwise what is the point?). Do not use colors that are too similar in hue (for example, various shades of green––leave them for choropleth maps). Certain color combinations are hard to interpret for people with colorblindness, like green/red or yellow/blue, so be very careful with those. Figure <a href="chart-design.html#fig:design-principles-color">7.8</a> shows some good and bad examples of color use.</p>
+<p>In this section, we would like to briefly introduce three important rules about colors. First, remember that in most cases monochromatic (single-hue) charts suffice, and there may be no need to introduce the extra dimension of color at all.</p>
+<p>Second, refer to the color wheel and standard <a href="https://en.wikipedia.org/wiki/Harmony_color">harmony rules</a> when choosing your palette. Consider the rule of complementary colors—–opposites in the color wheel—–to find color pairs, such as blue and orange or yellow and purple. Analogous colors, or neighbors in the color wheel, make good palettes, such as orange, red, and pink.</p>
+<p>Third, stay away from pure saturated colors and instead choose their “earthier” versions, such as olive green instead of bright green, or navy instead of neon blue.</p>
+<p>Once you have chosen the color palette for your visualization, ask yourself:</p>
+<ol style="list-style-type: decimal">
+<li>Is there a conflict of meaning between colors and the phenomenon they represent? Am I using red to represent profit or green to represent death rate? This question is complex as color carry different associations for different social groups and cultures, but try to exercise your best sensitivity.</li>
+<li>Can people with color blindness interpret your chart? Palettes that contain reds and greens, or yellows and blues can be challenging. Consider using <a href="http://www.colororacle.org/">Color Oracle</a> or another simulator to make sure your visualization is accessible.</li>
+<li>Will the colors be distinguishable in black-and-white? Even if you don’t expect viewers printing your chart, they may. You can use Color Oracle or another simulator to check that your colors have different brightness levels and look distinguishable in grayscale. Figure <a href="chart-design.html#fig:design-principles-color">7.8</a> shows some good and bad examples of color use.</li>
+</ol>
 
 <div class="figure"><span id="fig:design-principles-color"></span>
 <img src="images/07-chart/design-principles-color.png" alt="Don’t use colors just for the sake of it."  />
@@ -510,7 +515,8 @@ of books and research devoted to it. For an excellent overview, see Lisa Charlot
 Figure 7.8: Don’t use colors just for the sake of it.
 </p>
 </div>
-<p>If you follow the advice, you should end up with a de-cluttered chart as shown in
+<p>The use of color is a complex topic, and there are plenty of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></p>
+<p>If you follow our advice, you should end up with a de-cluttered chart as shown in
 Figure <a href="chart-design.html#fig:design-principles-decluttered">7.9</a>. Notice how your eyes are drawn to the bars and their corresponding values, not bright colors or secondary components like the axes lines.</p>
 
 <div class="figure"><span id="fig:design-principles-decluttered"></span>

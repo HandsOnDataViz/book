@@ -187,28 +187,20 @@ But what if you need to geocode a dozen or a hundred addresses? To geocode multi
 
 1. Sign into your Google Drive account, go to the [Geocoding by SmartMonkey Add-on page](https://gsuite.google.com/marketplace/app/geocoding_by_smartmonkey/1033231575312), and click the blue button to install it in your Google Sheets. The Add-on will ask for your permission before installing, and if you agree, press *Continue*. In the next window, choose your Google Drive account, and if you agree with the terms, click *Allow* to complete the installation. Google will email you to confirm that you have installed this third-party app with access to your account. You can always [review permissions and revoke access](https://myaccount.google.com/permissions) in the future, if desired.
 
-2. Go to your [Google Drive](https://drive.google.com) and create a new Google Sheet. Select the *Add-ons* menu to see the new *Geocoding by SmartMonkey* options, and select *Create Template*. The Add-on will create a new tab, named *Geocoding*, and automatically insert three sample addresses, as shown in Figure \@ref(fig:geocoding-create-template).
+2. Go to your [Google Drive](https://drive.google.com) and create a new Google Sheet. Select the *Add-ons* menu to see the new *Geocoding by SmartMonkey* options, and select *Geocode Details* menu. The Add-on will create a new sheet with sample data and display results for three new columns: *Latitude*, *Longitude*, and *Address found*, as shown in Figure \@ref(fig:geocode-details). Always review the quality of geocoded results by comparing the *Address found* column to the original *Address* entered.
 
-(ref:geocoding-create-template) In the Google Sheets *Add-On* menu, select *Geocoding by SmartMonkey -- Create Template*.
-
-```{r geocoding-create-template, fig.cap="(ref:geocoding-create-template)"}
-knitr::include_graphics("images/03-spreadsheet/geocoding-create-template.png")
-```
-
-3. Select the *Geocoding by SmartMonkey > Geocode Details* menu. The Add-on will create another spreadsheet tab, called *Geocoding Details*, and display the results from Google services for three new columns---latitude, longitude, and address found---as shown in Figure \@ref(fig:geocode-details). Always review the quality of geocoded results by comparing the *Address found* column to the original *Address* entered.
-
-(ref:geocode-details) Select *Geocode Details* to view latitude, longitude, and address found for each entry.
+(ref:geocode-details) Select *Add-ons--Geocoding by SmartMonkey--Geocode Details* to display sample data with results for three new columns: *Latitude*, *Longitude*, and *Address found*.
 
 ```{r geocode-details, fig.cap="(ref:geocode-details)"}
  knitr::include_graphics("images/03-spreadsheet/geocode-details.png")
 ```
 
-When you paste your own address data into the spreadsheet to geocode it, follow these guidelines:
+3. Paste your own address data to replace the sample data in the sheet, and geocode it as you did in the step above. Follow these guidelines to improve the quality of your results:
 
-- Each cell requires a full address. If your original data splits street, city, state, and zip code into different columns, see how to [Combine Data into One Column in Chapter 5: Clean Up Messy Data](combine-data.html).
-- The address should follow the format of the national postal service of the country where it is located. Separate terms with spaces.
 - Do not skip any rows in the *Address* column.
+- Insert the full address using the format of the national postal service of the country where it is located. Separate terms with spaces.
 - You can leave the *Country* column blank, but its default value is the United States. To specify other nations, use their [top-level Internet domain code](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains), such as `es` for Spain.
+- If your original data splits street, city, state, and zip code into different columns, see how to [Combine Data into One Column in Chapter 5: Clean Up Messy Data](combine-data.html).
 - Give the tool time to work. For example, if you enter 50 addresses, expect to wait at least 15 seconds for your geocoded results.
 - Always inspect the quality of your results, and never assume that geocoding services from any provider are accurate.
 

@@ -169,9 +169,9 @@ knitr::include_graphics("images/13-leaflet/leaflet-media-upload.png")
 ```
 Warning: Media file pathnames are case-sensitive, and we recommend using *all lowercase characters*, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you *reduce the size* of any images to 600x400 pixels or less prior to uploading, to make sure your map operates smoothly.
 
-- Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on](geocode.html) that we introduced in Chapter 3 to *create a separate tab in your Google Sheet* where you can insert your Location data, as shown in Figure \@ref(fig:geocode-details2), and paste the results into your Latitude and Longitude columns.
+- Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on from Chapter 3](geocode.html) and select *Add-ons > Geocoding by SmartMonkey > Geocode Details* to create a new sheet with sample data and display results for three new columns: *Latitude*, *Longitude*, and *Address found*, as shown in Figure \@ref(fig:geocode-details2). Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your *Points* sheet.
 
-(ref:geocode-details2) Use the *Geocoding* tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude.
+(ref:geocode-details2) Select *Add-ons--Geocoding by SmartMonkey--Geocode Details* to display sample data with results for three new columns: *Latitude*, *Longitude*, and *Address found*.
 
 ```{r geocode-details2, fig.cap="(ref:geocode-details2)"}
  knitr::include_graphics("images/13-leaflet/geocode-details.png")
@@ -187,6 +187,8 @@ knitr::include_graphics("images/13-leaflet/leaflet-map-with-table.png")
 TODO above: redo the screenshot after updating the map demo
 
 Optional custom markers: To create your own custom marker, such as a thumbnail photo icon, use any image editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in PNG format and choose a filename using all lower-case characters with no spaces. Upload the image to the *media* folder in your GitHub repo as described above. In the Marker Icon column, enter the file pathname in this format: `media/image-thumbnail.png`. In the Custom Size column, set the dimensions to `64x64` or similar, such as `40x40` if desired.
+
+TODO: Add screenshot of the sample custom marker here, once we finalize the new template
 
 Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the [Fix Common Problems](fix.html) section of the appendix.
 
@@ -318,8 +320,6 @@ In the third part, you have two options to finalize your story map before widely
 
 If any problems arise, see the [Fix Common Mistakes](fix.html) section of the appendix.
 
-TODO DISCUSS with Amelia: Steps A-B-C-D are nearly identical to those in the prior section, but the links and screenshots are different. I'm fine with repeating this material because it might confuse some readers if we told them to "go do ABCD above but use different links." OK with you?
-
 #### A) Copy the GitHub template and publish your version with GitHub Pages {-}
 
 1. Open the [GitHub code template](https://github.com/handsondataviz/leaflet-storymaps-with-google-sheets) in a new tab.
@@ -434,11 +434,11 @@ Tip: You can display multiple images for one location by creating a series of ro
 - Marker: Select either `Numbered` (the default) or `Plain` or `Hidden`. The latter works best when assigning several chapters to one location (to avoid stacking markers on top of each other) or when zooming out for a broader view (without highlighting one specific location).
 - Marker Color: Insert any standard web color name such as `blue` or `darkblue`, or insert a web color code such as `#775307` or `rgba(200,100,0,0.5)`. See options at [W3Schools Color Names](https://www.w3schools.com/colors/colors_names.asp).
 
-- Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on](geocode.html) that we introduced in Chapter 3 to *create a separate tab in your Google Sheet* where you can insert your Location data, as shown in Figure \@ref(fig:geocode-details3), and paste the results into your Latitude and Longitude columns.
+- Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it's wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the [Geocoding by SmartMonkey Add-on from Chapter 3](geocode.html) and select *Add-ons > Geocoding by SmartMonkey > Geocode Details* to create a new sheet with sample data and display results for three new columns: *Latitude*, *Longitude*, and *Address found*, as shown in Figure \@ref(fig:geocode-details2). Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your *Points* sheet.
 
-(ref:geocode-details3) Use the *Geocoding* tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude.
+(ref:geocode-details2) Select *Add-ons--Geocoding by SmartMonkey--Geocode Details* to display sample data with results for three new columns: *Latitude*, *Longitude*, and *Address found*.
 
-```{r geocode-details3, fig.cap="(ref:geocode-details3)"}
+```{r geocode-details2, fig.cap="(ref:geocode-details2)"}
  knitr::include_graphics("images/13-leaflet/geocode-details.png")
 ```
 
@@ -764,7 +764,7 @@ This template will work with data in [csv](csv.html) and [geojson](geojson.html)
   - `/js/searchable_map_lib.js` - logic for custom filters starts around line 265
 
 ### Step 3: Publish your map {-}
-1. Before you publish, you'll need to get a [free Google Maps API key](https://developers.google.com/maps/documentation/javascript/get-api-key). Replace the API key on this line of `index.html` with yours: `<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=[YOUR KEY HERE]"></script>`
+1. Before you publish, you'll need to get a [free Google Maps API key](https://developers.google.com/maps/documentation/javascript/get-api-key), which is similar but different from the [Get Your Google Sheets API Key section in this chapter](google-sheets-api-key.html). Replace the Google Maps API key on this line of `index.html` with yours: `<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=[YOUR KEY HERE]"></script>`
 2. Upload this map and all the supporting files and folders to your site. This map requires no back-end code, so any host will work, such as [GitHub Pages as described in Chapter 11](github.html), or [Netlify](http://netlify.com), or your own web server.
 
 ## Leaflet Maps with Open Data APIs {- #leaflet-maps-open-data-apis}

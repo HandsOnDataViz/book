@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-19" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -408,7 +408,6 @@ Figure 13.14: View the <a href="https://docs.google.com/spreadsheets/d/1AO6XHL_0
 </ol></li>
 </ul>
 <p>If any problems arise, see the <a href="fix.html">Fix Common Mistakes</a> section of the appendix.</p>
-<p>TODO DISCUSS with Amelia: Steps A-B-C-D are nearly identical to those in the prior section, but the links and screenshots are different. I’m fine with repeating this material because it might confuse some readers if we told them to “go do ABCD above but use different links.” OK with you?</p>
 <div id="a-copy-the-github-template-and-publish-your-version-with-github-pages-1" class="section level4 unnumbered" number="">
 <h4>A) Copy the GitHub template and publish your version with GitHub Pages</h4>
 <ol style="list-style-type: decimal">
@@ -525,13 +524,13 @@ Figure 13.20: In GitHub, click to open the <code>media</code> folder and <em>Add
 <li><p>Zoom: Set a low number to see continents, or a high number for city streets, typically on a scale from 1 to 18.</p></li>
 <li><p>Marker: Select either <code>Numbered</code> (the default) or <code>Plain</code> or <code>Hidden</code>. The latter works best when assigning several chapters to one location (to avoid stacking markers on top of each other) or when zooming out for a broader view (without highlighting one specific location).</p></li>
 <li><p>Marker Color: Insert any standard web color name such as <code>blue</code> or <code>darkblue</code>, or insert a web color code such as <code>#775307</code> or <code>rgba(200,100,0,0.5)</code>. See options at <a href="https://www.w3schools.com/colors/colors_names.asp">W3Schools Color Names</a>.</p></li>
-<li><p>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on</a> that we introduced in Chapter 3 to <em>create a separate tab in your Google Sheet</em> where you can insert your Location data, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:geocode-details3">13.21</a>, and paste the results into your Latitude and Longitude columns.</p></li>
+<li><p>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on from Chapter 3</a> and select <em>Add-ons &gt; Geocoding by SmartMonkey &gt; Geocode Details</em> to create a new sheet with sample data and display results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>, as shown in Figure <a href="leaflet-storymaps-with-google-sheets.html#fig:geocode-details3">13.21</a>. Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your <em>Points</em> sheet.</p></li>
 </ul>
 
 <div class="figure"><span id="fig:geocode-details3"></span>
-<img src="images/13-leaflet/geocode-details.png" alt="Use the Geocoding tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude."  />
+<img src="images/13-leaflet/geocode-details.png" alt="Select Add-ons–Geocoding by SmartMonkey–Geocode Details to display sample data with results for three new columns: Latitude, Longitude, and Address found."  />
 <p class="caption">
-Figure 13.21: Use the <em>Geocoding</em> tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude.
+Figure 13.21: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</em> to display sample data with results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>.
 </p>
 </div>
 <p>Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>

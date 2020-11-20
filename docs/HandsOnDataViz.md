@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 19 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 20 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -1740,46 +1740,36 @@ Marketplace](https://gsuite.google.com/marketplace).
 
 2.  Go to your [Google Drive](https://drive.google.com) and create a new
     Google Sheet. Select the *Add-ons* menu to see the new *Geocoding by
-    SmartMonkey* options, and select *Create Template*. The Add-on will
-    create a new tab, named *Geocoding*, and automatically insert three
-    sample addresses, as shown in Figure
-    <a href="#fig:geocoding-create-template">3.15</a>.
+    SmartMonkey* options, and select *Geocode Details* menu. The Add-on
+    will create a new sheet with sample data and display results for
+    three new columns: *Latitude*, *Longitude*, and *Address found*, as
+    shown in Figure <a href="#fig:geocode-details">3.15</a>. Always
+    review the quality of geocoded results by comparing the *Address
+    found* column to the original *Address* entered.
 
-<img src="images/03-spreadsheet/geocoding-create-template.png" alt="In the Google Sheets *Add-On* menu, select *Geocoding by SmartMonkey -- Create Template*."  />
+<img src="images/03-spreadsheet/geocode-details.png" alt="Select *Add-ons--Geocoding by SmartMonkey--Geocode Details* to display sample data with results for three new columns: *Latitude*, *Longitude*, and *Address found*."  />
 <p class="caption">
-Figure 3.15: In the Google Sheets *Add-On* menu, select *Geocoding by
-SmartMonkey – Create Template*.
+Figure 3.15: Select *Add-ons–Geocoding by SmartMonkey–Geocode Details*
+to display sample data with results for three new columns: *Latitude*,
+*Longitude*, and *Address found*.
 </p>
 
-1.  Select the *Geocoding by SmartMonkey &gt; Geocode Details* menu. The
-    Add-on will create another spreadsheet tab, called *Geocoding
-    Details*, and display the results from Google services for three new
-    columns—latitude, longitude, and address found—as shown in Figure
-    <a href="#fig:geocode-details">3.16</a>. Always review the quality
-    of geocoded results by comparing the *Address found* column to the
-    original *Address* entered.
+1.  Paste your own address data to replace the sample data in the sheet,
+    and geocode it as you did in the step above. Follow these guidelines
+    to improve the quality of your results:
 
-<img src="images/03-spreadsheet/geocode-details.png" alt="Select *Geocode Details* to view latitude, longitude, and address found for each entry."  />
-<p class="caption">
-Figure 3.16: Select *Geocode Details* to view latitude, longitude, and
-address found for each entry.
-</p>
-
-When you paste your own address data into the spreadsheet to geocode it,
-follow these guidelines:
-
--   Each cell requires a full address. If your original data splits
-    street, city, state, and zip code into different columns, see how to
-    [Combine Data into One Column in Chapter 5: Clean Up Messy
-    Data](combine-data.html).
--   The address should follow the format of the national postal service
-    of the country where it is located. Separate terms with spaces.
 -   Do not skip any rows in the *Address* column.
+-   Insert the full address using the format of the national postal
+    service of the country where it is located. Separate terms with
+    spaces.
 -   You can leave the *Country* column blank, but its default value is
     the United States. To specify other nations, use their [top-level
     Internet domain
     code](https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains),
     such as `es` for Spain.
+-   If your original data splits street, city, state, and zip code into
+    different columns, see how to [Combine Data into One Column in
+    Chapter 5: Clean Up Messy Data](combine-data.html).
 -   Give the tool time to work. For example, if you enter 50 addresses,
     expect to wait at least 15 seconds for your geocoded results.
 -   Always inspect the quality of your results, and never assume that
@@ -1808,24 +1798,24 @@ Sheet.
 
 Inside your Google Drive account, one tool that’s often overlooked is
 Google Forms, which is partially hidden under *New &gt; More &gt; Google
-Forms*, as shown in Figure <a href="#fig:forms-new">3.17</a>.
+Forms*, as shown in Figure <a href="#fig:forms-new">3.16</a>.
 
 <img src="images/03-spreadsheet/forms-new.png" alt="The Google Forms tool is partially hidden in the Google Drive *New - More* menu." width="500" />
 <p class="caption">
-Figure 3.17: The Google Forms tool is partially hidden in the Google
+Figure 3.16: The Google Forms tool is partially hidden in the Google
 Drive *New - More* menu.
 </p>
 
 The Google Forms *Questions* tab allows you to design questions with
 different types of responses: short- and paragraph-length answers,
 multiple choice, checkboxes, file uploads, etc., as shown in Figure
-<a href="#fig:forms-questions">3.18</a>. Furthermore, Google Forms
+<a href="#fig:forms-questions">3.17</a>. Furthermore, Google Forms
 attempts to interpret questions you enter in order to predictively
 assign them to a type.
 
 <img src="images/03-spreadsheet/forms-questions.png" alt="The Google Forms *Questions* tab allows you to designate different types of responses." width="700" />
 <p class="caption">
-Figure 3.18: The Google Forms *Questions* tab allows you to designate
+Figure 3.17: The Google Forms *Questions* tab allows you to designate
 different types of responses.
 </p>
 
@@ -1834,7 +1824,7 @@ headers in the linked spreadsheet you’ll create further below. If a
 question needs more explanation or examples, click the three-dot kebob
 menu in the bottom-right corner to *Show &gt; Description*, which opens
 a text box where you can type in more details, as shown in Figure
-<a href="#fig:forms-description">3.19</a>. Also, you can *Show &gt;
+<a href="#fig:forms-description">3.18</a>. Also, you can *Show &gt;
 Response validation*, which requires users to follow a particular
 format, such as an email address or phone number. Furthermore, you can
 select the *Required* field to require users to respond to a question
@@ -1843,30 +1833,30 @@ page](https://support.google.com/a/users/answer/9991170).
 
 <img src="images/03-spreadsheet/forms-description.png" alt="Click the three-dot kebab menu to *Show - Description* to add details for any question." width="700" />
 <p class="caption">
-Figure 3.19: Click the three-dot kebab menu to *Show - Description* to
+Figure 3.18: Click the three-dot kebab menu to *Show - Description* to
 add details for any question.
 </p>
 
 To preview how your online will appear to recipients, click the *Eyeball
 symbol* near the top of the page, as shown in Figure
-<a href="#fig:forms-preview">3.20</a>. When your form is complete, click
+<a href="#fig:forms-preview">3.19</a>. When your form is complete, click
 the *Send* button to distribute it via email, a link, or to embed the
 live form as an iframe on a web page. Learn more about the latter option
 in [Chapter 10: Embed on the Web](embed.html).
 
 <img src="images/03-spreadsheet/forms-preview.png" alt="Click the *Eyeball symbol* to preview your form." width="350" />
 <p class="caption">
-Figure 3.20: Click the *Eyeball symbol* to preview your form.
+Figure 3.19: Click the *Eyeball symbol* to preview your form.
 </p>
 
 The Google Forms *Responses* tab will show individual results you
 receive, and also includes a powerful button to open the data in a
 linked Google Sheet, as shown in Figure
-<a href="#fig:forms-responses">3.21</a>.
+<a href="#fig:forms-responses">3.20</a>.
 
 <img src="images/03-spreadsheet/forms-responses.png" alt="The Google Forms *Responses* tab includes a button to open results in a linked Google Sheet." width="500" />
 <p class="caption">
-Figure 3.21: The Google Forms *Responses* tab includes a button to open
+Figure 3.20: The Google Forms *Responses* tab includes a button to open
 results in a linked Google Sheet.
 </p>
 
@@ -1899,14 +1889,14 @@ described at the top of the chapter.
 
 3.  Before sorting, click the upper-left corner of the sheet to select
     all cells, as shown in Figure
-    <a href="#fig:sheets-select-all">3.22</a>. When the entire sheet
+    <a href="#fig:sheets-select-all">3.21</a>. When the entire sheet
     becomes light blue, and all of the alphabetical column and numerical
     row headers become dark grey, this confirms you’ve selected all
     cells.
 
 <img src="images/03-spreadsheet/sheets-select-all.png" alt="Click the upper-left corner to select all cells before sorting." width="400" />
 <p class="caption">
-Figure 3.22: Click the upper-left corner to select all cells before
+Figure 3.21: Click the upper-left corner to select all cells before
 sorting.
 </p>
 
@@ -1918,13 +1908,13 @@ and make it meaningless. Always select all cells before sorting!
     sort options. In the next screen, check the *Data has header row*
     box to view the column headers in your data. Let’s sort the
     *Experience with data visualization* column in ascending order (from
-    A-Z), as shown in Figure <a href="#fig:sheets-sort-range">3.23</a>,
+    A-Z), as shown in Figure <a href="#fig:sheets-sort-range">3.22</a>,
     to display the minimum at the top, the maximum at the bottom, and
     the range in between.
 
 <img src="images/03-spreadsheet/sheets-sort-range.png" alt="Go to *Data - Sort Range*, check the header row box, and sort by *Experience with dataviz* in ascending order." width="400" />
 <p class="caption">
-Figure 3.23: Go to *Data - Sort Range*, check the header row box, and
+Figure 3.22: Go to *Data - Sort Range*, check the header row box, and
 sort by *Experience with dataviz* in ascending order.
 </p>
 
@@ -1934,14 +1924,14 @@ rated themselves as beginners (level 1) with data visualization.
 Tip: When working with large spreadsheets, you can “freeze” the first
 row so that column headers will still appear as you scroll downward. In
 Google Sheets, go to *View &gt; Freeze* and select 1 row, as shown in
-Figure <a href="#fig:sheets-view-freeze">3.24</a>. You can also freeze
+Figure <a href="#fig:sheets-view-freeze">3.23</a>. You can also freeze
 one or more columns to continuously display when scrolling sideways.
 LibreOffice has a same option to *View &gt; Freeze Rows and Columns*,
 but Excel has a different option called *Window &gt; Split*.
 
 <img src="images/03-spreadsheet/sheets-view-freeze.png" alt="In Google Sheets, go to *View - Freeze* to select the number of rows to continuously display when scrolling downward." width="500" />
 <p class="caption">
-Figure 3.24: In Google Sheets, go to *View - Freeze* to select the
+Figure 3.23: In Google Sheets, go to *View - Freeze* to select the
 number of rows to continuously display when scrolling downward.
 </p>
 
@@ -1951,12 +1941,12 @@ number of rows to continuously display when scrolling downward.
     see options to display or hide rows of data. For example, look under
     *Filter by values*, then click the “Clear” button to undo all
     options, then click only *educator* to display only rows with that
-    response, as shown in Figure <a href="#fig:sheets-filter">3.25</a>.
+    response, as shown in Figure <a href="#fig:sheets-filter">3.24</a>.
     Click “OK”.
 
 <img src="images/03-spreadsheet/sheets-filter.png" alt="Go to *Data - Create a Filter*, click the downward arrow in the *Occupation* column, select only *educator*." width="300" />
 <p class="caption">
-Figure 3.25: Go to *Data - Create a Filter*, click the downward arrow in
+Figure 3.24: Go to *Data - Create a Filter*, click the downward arrow in
 the *Occupation* column, select only *educator*.
 </p>
 
@@ -1991,11 +1981,11 @@ the reader survey sample dataset we described at the top of the chapter.
 3.  Add a blank row immediately below the header to make space for our
     calculations. Right-click on row number 1 and select *Insert 1
     below* to add a new row, as shown in Figure
-    <a href="#fig:sheets-insert-row">3.26</a>.
+    <a href="#fig:sheets-insert-row">3.25</a>.
 
 <img src="images/03-spreadsheet/sheets-insert-row.png" alt="Right-click on row number 1 and select *Insert 1 below*." width="200" />
 <p class="caption">
-Figure 3.26: Right-click on row number 1 and select *Insert 1 below*.
+Figure 3.25: Right-click on row number 1 and select *Insert 1 below*.
 </p>
 
 1.  Let’s calculate the average level of reader experience with data
@@ -2005,11 +1995,11 @@ Figure 3.26: Right-click on row number 1 and select *Insert 1 below*.
     context, and you can select one that displays the average for
     current values in the column, such as `=AVERAGE(E3:E2894)`, then
     press *Return* or *Enter* on your keyboard, as shown in Figure
-    <a href="#fig:sheets-average">3.27</a>.
+    <a href="#fig:sheets-average">3.26</a>.
 
 <img src="images/03-spreadsheet/sheets-average.png" alt="Type `=` to start a formula and select the suggestion for average, or type it directly in with the correct range." width="300" />
 <p class="caption">
-Figure 3.27: Type `=` to start a formula and select the suggestion for
+Figure 3.26: Type `=` to start a formula and select the suggestion for
 average, or type it directly in with the correct range.
 </p>
 
@@ -2033,7 +2023,7 @@ but it does *not* work with LibreOffice or Excel.
     references. Click in cell E2, and then press and hold down on the
     blue dot in the bottom-right corner of that cell, which transforms
     your cursor into a crosshair symbol. Drag your cursor to cell F2 and
-    let go, and show in Figure <a href="#fig:sheets-drag-calc">3.28</a>.
+    let go, and show in Figure <a href="#fig:sheets-drag-calc">3.27</a>.
     The formula will be automatically pasted and updated for the new
     column to `=AVERAGE(F3:F2894)` or `AVERAGE(F3:F)`, depending on
     which way you entered it above. Once again, since this is a live
@@ -2042,7 +2032,7 @@ but it does *not* work with LibreOffice or Excel.
 
 <img src="images/03-spreadsheet/sheets-drag-calc.png" alt="Click on the blue bottom-right dot in cell E2, then hold-and-drag your crosshair cursor in cell F2, and let go to automatically paste and update the formula."  />
 <p class="caption">
-Figure 3.28: Click on the blue bottom-right dot in cell E2, then
+Figure 3.27: Click on the blue bottom-right dot in cell E2, then
 hold-and-drag your crosshair cursor in cell F2, and let go to
 automatically paste and update the formula.
 </p>
@@ -2060,11 +2050,11 @@ automatically paste and update the formula.
     or type in the Google Sheets syntax `=COUNTIF(G3:G,"=educator")`
     that runs the calculation on the entire column without naming a
     specific endpoint, as shown in Figure
-    <a href="#fig:sheets-countif">3.29</a>.
+    <a href="#fig:sheets-countif">3.28</a>.
 
 <img src="images/03-spreadsheet/sheets-countif.png" alt="Select or enter a formula that counts responses if the entry is *educator*." width="250" />
 <p class="caption">
-Figure 3.29: Select or enter a formula that counts responses if the
+Figure 3.28: Select or enter a formula that counts responses if the
 entry is *educator*.
 </p>
 
@@ -2116,23 +2106,23 @@ by two categories: occupation and experience level.
 
 3.  Go to *Data &gt; Pivot Table*, and on the next screen, select
     *Create* in a new sheet, as shown in Figure
-    <a href="#fig:sheets-pivot-create">3.30</a>. The new sheet will
+    <a href="#fig:sheets-pivot-create">3.29</a>. The new sheet will
     include a Pivot Table tab at the bottom.
 
 <img src="images/03-spreadsheet/sheets-pivot-create.png" alt="Go to *Data - Pivot Table*, and create in a new sheet." width="450" />
 <p class="caption">
-Figure 3.30: Go to *Data - Pivot Table*, and create in a new sheet.
+Figure 3.29: Go to *Data - Pivot Table*, and create in a new sheet.
 </p>
 
 1.  In the *Pivot table editor* screen, you can regroup data from the
     first sheet by adding rows, columns, and values. First, click the
     Rows *Add* button and select *Occupation*, which displays the unique
     entries in that column, as shown in Figure
-    <a href="#fig:sheets-pivot-rows">3.31</a>.
+    <a href="#fig:sheets-pivot-rows">3.30</a>.
 
 <img src="images/03-spreadsheet/sheets-pivot-rows.png" alt="In the *Pivot table editor*, click the Rows *Add* button and select *Occupation*." width="600" />
 <p class="caption">
-Figure 3.31: In the *Pivot table editor*, click the Rows *Add* button
+Figure 3.30: In the *Pivot table editor*, click the Rows *Add* button
 and select *Occupation*.
 </p>
 
@@ -2140,11 +2130,11 @@ and select *Occupation*.
     Values *Add* button and select *Occupation* again. Google Sheets
     will automatically summarize the values by *COUNTA*, meaning it
     displays the frequency of each textual response, as shown in Figure
-    <a href="#fig:sheets-pivot-values">3.32</a>.
+    <a href="#fig:sheets-pivot-values">3.31</a>.
 
 <img src="images/03-spreadsheet/sheets-pivot-values.png" alt="In the *Pivot table editor*, click the Values *Add* button and select *Occupation*." width="600" />
 <p class="caption">
-Figure 3.32: In the *Pivot table editor*, click the Values *Add* button
+Figure 3.31: In the *Pivot table editor*, click the Values *Add* button
 and select *Occupation*.
 </p>
 
@@ -2156,11 +2146,11 @@ survey.
 1.  Furthermore, you can create a more advanced pivot cross-tabulation
     of occupation and experience among reader responses. Click on the
     *Columns* button to add *Experience with data visualization*, as
-    shown in Figure <a href="#fig:sheets-pivot-columns">3.33</a>.
+    shown in Figure <a href="#fig:sheets-pivot-columns">3.32</a>.
 
 <img src="images/03-spreadsheet/sheets-pivot-columns.png" alt="In the *Pivot table editor*, click the Columns *Add* button and select *Experience with data visualization*."  />
 <p class="caption">
-Figure 3.33: In the *Pivot table editor*, click the Columns *Add* button
+Figure 3.32: In the *Pivot table editor*, click the Columns *Add* button
 and select *Experience with data visualization*.
 </p>
 
@@ -2172,7 +2162,7 @@ readers who listed 20 or more years.
 
 Deciding how to add *Values* in the *Pivot table editor* can be
 challenging, because there are multiple options to summarize the data,
-as shown in Figure <a href="#fig:sheets-pivot-summarize">3.34</a>.
+as shown in Figure <a href="#fig:sheets-pivot-summarize">3.33</a>.
 Google Sheets will offer its automated guess based on the context, but
 you may need to manually select the best option to represent your data
 as desired. Three of the most common options to summarize values are:
@@ -2190,7 +2180,7 @@ percentages of the row, of the column, or of the grand total.
 
 <img src="images/03-spreadsheet/sheets-pivot-summarize.png" alt="In the *Pivot table editor*, see multiple options to summarize *Values*." width="250" />
 <p class="caption">
-Figure 3.34: In the *Pivot table editor*, see multiple options to
+Figure 3.33: In the *Pivot table editor*, see multiple options to
 summarize *Values*.
 </p>
 
@@ -2223,7 +2213,7 @@ two different spreadsheets, this automated method will save you lots of
 time.
 
 Here’s a scenario that illustrates why and how to use the VLOOKUP
-function. Figure <a href="#fig:vlookup-setup">3.35</a> shows two
+function. Figure <a href="#fig:vlookup-setup">3.34</a> shows two
 different sheets with sample data about food banks that help feed hungry
 people in different parts of the US, drawn from [Feeding America: Find
 Your Local Food
@@ -2240,7 +2230,7 @@ to match and paste data is essential.
 
 <img src="images/03-spreadsheet/vlookup-setup.png" alt="Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet." width="750" />
 <p class="caption">
-Figure 3.35: Your goal is to create one mailing list that matches
+Figure 3.34: Your goal is to create one mailing list that matches
 individual names and organizations on the left sheet with their
 addresses on the right sheet.
 </p>
@@ -2262,13 +2252,13 @@ the name of the other sheet.
     our destination for the mailing list we will create. Go to the
     *addresses* sheet, copy the column headers for *street - city -
     state - zip*, and paste them into cells C1 through F1 on the *names*
-    sheet, as shown in Figure <a href="#fig:vlookup-headers">3.36</a>.
+    sheet, as shown in Figure <a href="#fig:vlookup-headers">3.35</a>.
     This creates new column headers where our lookup results will be
     automatically pasted.
 
 <img src="images/03-spreadsheet/vlookup-headers.png" alt="Paste the last four column headers from the *addresses* sheet into the *names* sheet." width="500" />
 <p class="caption">
-Figure 3.36: Paste the last four column headers from the *addresses*
+Figure 3.35: Paste the last four column headers from the *addresses*
 sheet into the *names* sheet.
 </p>
 
@@ -2297,14 +2287,14 @@ Here’s what each part means:
     option is to click on the *VLOOKUP Vertical lookup* grey box that
     Google Sheets suggests, and click on the relevant cells, columns,
     and sheets for the formula to be automatically entered for you, as
-    shown in Figure <a href="#fig:vlookup-solution">3.37</a>. What’s new
+    shown in Figure <a href="#fig:vlookup-solution">3.36</a>. What’s new
     here is that this formula in the *names* sheet refers to a range of
     columns A to E in the *addresses* sheet. Press *Return* or *Enter*
     on your keyboard.
 
 <img src="images/03-spreadsheet/vlookup-solution.png" alt="The VLOOKUP formula in cell C2 of the *names* sheet (top) searches for matches across columns A to E in the *addresses* sheet (bottom)." width="700" />
 <p class="caption">
-Figure 3.37: The VLOOKUP formula in cell C2 of the *names* sheet (top)
+Figure 3.36: The VLOOKUP formula in cell C2 of the *names* sheet (top)
 searches for matches across columns A to E in the *addresses* sheet
 (bottom).
 </p>
@@ -2326,22 +2316,22 @@ Let’s break down each part of the formula you entered in cell C2 of the
     in the bottom-right corner of cell C2, and drag your crosshair
     cursor across columns D to F and let go, which will automatically
     paste and update the formula for the city, state, and zip columns,
-    as shown in Figure <a href="#fig:vlookup-drag">3.38</a>.
+    as shown in Figure <a href="#fig:vlookup-drag">3.37</a>.
 
 <img src="images/03-spreadsheet/vlookup-drag.png" alt="Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
-Figure 3.38: Click on cell C2, then hold-and-drag the bottom-right blue
+Figure 3.37: Click on cell C2, then hold-and-drag the bottom-right blue
 dot across columns D to F, which automatically pastes and updates the
 formula.
 </p>
 
 1.  Finally, use the same hold-and-drag method to paste and update the
     formula downward to fill in all rows, as shown in Figure
-    <a href="#fig:vlookup-final">3.39</a>.
+    <a href="#fig:vlookup-final">3.38</a>.
 
 <img src="images/03-spreadsheet/vlookup-final.png" alt="Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
-Figure 3.39: Click on cell F2, then hold-and-drag the bottom-right blue
+Figure 3.38: Click on cell F2, then hold-and-drag the bottom-right blue
 dot down to row 11, which automatically pastes and updates the formula.
 </p>
 
@@ -2371,7 +2361,7 @@ the records are stored in rows and columns in a single table. For
 example, if you kept a single spreadsheet of US food bank staff, every
 row would list an individual person, organization, and addresses, just
 like the mailing list we created in Figure
-<a href="#fig:vlookup-final">3.39</a> in the prior section on VLOOKUP.
+<a href="#fig:vlookup-final">3.38</a> in the prior section on VLOOKUP.
 
 But keeping all of your data in a single spreadsheet can raise problems.
 For example, it contains lots of duplicated entries. For people who all
@@ -2389,7 +2379,7 @@ Instead of a single spreadsheet, consider using a relational database,
 which organizes information into separate sheets (also known as tables),
 but continually maintains the relevant connections between them. Look
 back at the two-sheet problem we presented in Figure
-<a href="#fig:vlookup-setup">3.35</a> at the beginning of the VLOOKUP
+<a href="#fig:vlookup-setup">3.34</a> at the beginning of the VLOOKUP
 section. The first sheet lists individual people at each food bank, the
 second sheet lists the address for each food bank, and the two sheets
 share a column named *organization* that shows how they are related.
@@ -2415,13 +2405,13 @@ sheet, named *people* and *food banks*. To transform this into a
 relational database, we used Airtable settings to link the
 *organization* column in the *people* sheet to the *food banks* sheet,
 where the addresses are stored, as shown in Figure
-<a href="#fig:airtable-link">3.40</a>. In our editable version, we
+<a href="#fig:airtable-link">3.39</a>. In our editable version, we
 double-clicked on the column name, then selected *Link to another
 record* in the drop-down menu, to connect it to another tab.
 
 <img src="images/03-spreadsheet/airtable-link.png" alt="In this Airtable sample, we linked the *organization* column in the *people* sheet to the *food banks* sheet." width="500" />
 <p class="caption">
-Figure 3.40: In this Airtable sample, we linked the *organization*
+Figure 3.39: In this Airtable sample, we linked the *organization*
 column in the *people* sheet to the *food banks* sheet.
 </p>
 
@@ -2429,7 +2419,7 @@ In our Airtable sample, click on a linked row to expand it and view
 related data. For example, if you click and expand on the first row the
 *people* sheet, their organization’s full address appears from the *food
 banks* sheet, as shown in Figure
-<a href="#fig:airtable-expand">3.41</a>. In our editable version, if we
+<a href="#fig:airtable-expand">3.40</a>. In our editable version, if we
 update the address for one organization in the *food banks* sheet, it’s
 automatically changed for all employees linked to that organization in
 the *people* sheet. In addition, Airtable allows you to sort, filter,
@@ -2440,7 +2430,7 @@ page](https://support.airtable.com).
 
 <img src="images/03-spreadsheet/airtable-expand.png" alt="In this [Airtable demo](https://airtable.com/shrOlb4XT11Xy2LP2), click on a row in one sheet to expand and view its linked data in another sheet." width="600" />
 <p class="caption">
-Figure 3.41: In this [Airtable
+Figure 3.40: In this [Airtable
 demo](https://airtable.com/shrOlb4XT11Xy2LP2), click on a row in one
 sheet to expand and view its linked data in another sheet.
 </p>
@@ -10993,16 +10983,20 @@ uploading, to make sure your map operates smoothly.
     the map. Although the code template only requires Latitude and
     Longitude, it’s wise to paste an address or place name into the
     Location column as a reminder to correspond with the numerical
-    coordinates. Use the [Geocoding by SmartMonkey Add-on](geocode.html)
-    that we introduced in Chapter 3 to *create a separate tab in your
-    Google Sheet* where you can insert your Location data, as shown in
-    Figure <a href="#fig:geocode-details2">13.9</a>, and paste the
-    results into your Latitude and Longitude columns.
+    coordinates. Use the [Geocoding by SmartMonkey Add-on from Chapter
+    3](geocode.html) and select *Add-ons &gt; Geocoding by
+    SmartMonkey &gt; Geocode Details* to create a new sheet with sample
+    data and display results for three new columns: *Latitude*,
+    *Longitude*, and *Address found*, as shown in Figure
+    <a href="#fig:geocode-details2">13.9</a>. Paste in your own address
+    data and repeat the step above to geocode it, then copy and paste
+    the results into your *Points* sheet.
 
-<img src="images/13-leaflet/geocode-details.png" alt="Use the *Geocoding* tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude."  />
+<img src="images/13-leaflet/geocode-details.png" alt="Select *Add-ons--Geocoding by SmartMonkey--Geocode Details* to display sample data with results for three new columns: *Latitude*, *Longitude*, and *Address found*."  />
 <p class="caption">
-Figure 13.9: Use the *Geocoding* tool in a separate Google Sheets tab to
-convert Location data into Latitude and Longitude.
+Figure 13.9: Select *Add-ons–Geocoding by SmartMonkey–Geocode Details*
+to display sample data with results for three new columns: *Latitude*,
+*Longitude*, and *Address found*.
 </p>
 
 Optional table of viewable markers: To display an interactive table at
@@ -11028,6 +11022,9 @@ using all lower-case characters with no spaces. Upload the image to the
 Icon column, enter the file pathname in this format:
 `media/image-thumbnail.png`. In the Custom Size column, set the
 dimensions to `64x64` or similar, such as `40x40` if desired.
+
+TODO: Add screenshot of the sample custom marker here, once we finalize
+the new template
 
 Open the browser tab that displays your live map and refresh the page to
 see your changes. If your changes do not appear within a few seconds,
@@ -11294,11 +11291,6 @@ before widely sharing it online:
 If any problems arise, see the [Fix Common Mistakes](fix.html) section
 of the appendix.
 
-TODO DISCUSS with Amelia: Steps A-B-C-D are nearly identical to those in
-the prior section, but the links and screenshots are different. I’m fine
-with repeating this material because it might confuse some readers if we
-told them to “go do ABCD above but use different links.” OK with you?
-
 #### A) Copy the GitHub template and publish your version with GitHub Pages
 
 1.  Open the [GitHub code
@@ -11508,16 +11500,20 @@ in the first row of the series, and leave it blank for the others.
     the map. Although the code template only requires Latitude and
     Longitude, it’s wise to paste an address or place name into the
     Location column as a reminder to correspond with the numerical
-    coordinates. Use the [Geocoding by SmartMonkey Add-on](geocode.html)
-    that we introduced in Chapter 3 to *create a separate tab in your
-    Google Sheet* where you can insert your Location data, as shown in
-    Figure <a href="#fig:geocode-details3">13.21</a>, and paste the
-    results into your Latitude and Longitude columns.
+    coordinates. Use the [Geocoding by SmartMonkey Add-on from Chapter
+    3](geocode.html) and select *Add-ons &gt; Geocoding by
+    SmartMonkey &gt; Geocode Details* to create a new sheet with sample
+    data and display results for three new columns: *Latitude*,
+    *Longitude*, and *Address found*, as shown in Figure
+    <a href="#fig:geocode-details3">13.21</a>. Paste in your own address
+    data and repeat the step above to geocode it, then copy and paste
+    the results into your *Points* sheet.
 
-<img src="images/13-leaflet/geocode-details.png" alt="Use the *Geocoding* tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude."  />
+<img src="images/13-leaflet/geocode-details.png" alt="Select *Add-ons--Geocoding by SmartMonkey--Geocode Details* to display sample data with results for three new columns: *Latitude*, *Longitude*, and *Address found*."  />
 <p class="caption">
-Figure 13.21: Use the *Geocoding* tool in a separate Google Sheets tab
-to convert Location data into Latitude and Longitude.
+Figure 13.21: Select *Add-ons–Geocoding by SmartMonkey–Geocode Details*
+to display sample data with results for three new columns: *Latitude*,
+*Longitude*, and *Address found*.
 </p>
 
 Open the browser tab that displays your live map and refresh the page to
@@ -12074,8 +12070,10 @@ in chapter 3.
 ### Step 3: Publish your map
 
 1.  Before you publish, you’ll need to get a [free Google Maps API
-    key](https://developers.google.com/maps/documentation/javascript/get-api-key).
-    Replace the API key on this line of `index.html` with yours:
+    key](https://developers.google.com/maps/documentation/javascript/get-api-key),
+    which is similar but different from the [Get Your Google Sheets API
+    Key section in this chapter](google-sheets-api-key.html). Replace
+    the Google Maps API key on this line of `index.html` with yours:
     `<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&key=[YOUR KEY HERE]"></script>`
 2.  Upload this map and all the supporting files and folders to your
     site. This map requires no back-end code, so any host will work,

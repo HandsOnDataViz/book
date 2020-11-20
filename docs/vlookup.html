@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-19" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -344,12 +344,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="vlookup" class="section level2 unnumbered" number="">
 <h2>Match Columns with VLOOKUP</h2>
 <p>Spreadsheet tools also allow you to “look up” data in one sheet and automatically find and paste matching data from another sheet. This section introduces the VLOOKUP function, where the “V” stands for “vertical,” meaning matches across columns, which is the most common way to look up data. You’ll learn how to write a function in one sheet that looks for matching cells in select columns in a second sheet, and pastes the relevant data into a new column in the first sheet. If you’ve ever faced the tedious task of manually looking up and matching data between two different spreadsheets, this automated method will save you lots of time.</p>
-<p>Here’s a scenario that illustrates why and how to use the VLOOKUP function. Figure <a href="vlookup.html#fig:vlookup-setup">3.35</a> shows two different sheets with sample data about food banks that help feed hungry people in different parts of the US, drawn from <a href="https://www.feedingamerica.org/find-your-local-foodbank">Feeding America: Find Your Local Food Bank</a>. The first sheet lists individual people at each food bank, the second sheet lists the address for each food bank, and the two share a common column named <em>organization</em>. Your goal is to produce one sheet that serves as a mailing list, where each row contains one individual’s name, organization, and full mailing address. Since we’re using a small data sample to simplify this tutorial, it may be tempting to manually copy and paste in the data. But imagine an actual case that includes over 200 US food banks and many more individuals, where using an automated method to match and paste data is essential.</p>
+<p>Here’s a scenario that illustrates why and how to use the VLOOKUP function. Figure <a href="vlookup.html#fig:vlookup-setup">3.34</a> shows two different sheets with sample data about food banks that help feed hungry people in different parts of the US, drawn from <a href="https://www.feedingamerica.org/find-your-local-foodbank">Feeding America: Find Your Local Food Bank</a>. The first sheet lists individual people at each food bank, the second sheet lists the address for each food bank, and the two share a common column named <em>organization</em>. Your goal is to produce one sheet that serves as a mailing list, where each row contains one individual’s name, organization, and full mailing address. Since we’re using a small data sample to simplify this tutorial, it may be tempting to manually copy and paste in the data. But imagine an actual case that includes over 200 US food banks and many more individuals, where using an automated method to match and paste data is essential.</p>
 
 <div class="figure"><span id="fig:vlookup-setup"></span>
 <img src="images/03-spreadsheet/vlookup-setup.png" alt="Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet." width="750" />
 <p class="caption">
-Figure 3.35: Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet.
+Figure 3.34: Your goal is to create one mailing list that matches individual names and organizations on the left sheet with their addresses on the right sheet.
 </p>
 </div>
 <ol style="list-style-type: decimal">
@@ -357,13 +357,13 @@ Figure 3.35: Your goal is to create one mailing list that matches individual nam
 </ol>
 <p>We simplified this two-sheet problem by placing both tables in the same Google Sheet. Click on the first tab, called <em>names</em>, and the second tab, called <em>addresses</em>. In the future, if you need to move two separate Google Sheets into the same file, go to the tab of one sheet, right-click the tab to <em>Copy to &gt; Existing spreadsheet</em>, and select the name of the other sheet.</p>
 <ol start="2" style="list-style-type: decimal">
-<li>In your editable copy of the Google Sheet, the <em>names</em> tab will be our destination for the mailing list we will create. Go to the <em>addresses</em> sheet, copy the column headers for <em>street - city - state - zip</em>, and paste them into cells C1 through F1 on the <em>names</em> sheet, as shown in Figure <a href="vlookup.html#fig:vlookup-headers">3.36</a>. This creates new column headers where our lookup results will be automatically pasted.</li>
+<li>In your editable copy of the Google Sheet, the <em>names</em> tab will be our destination for the mailing list we will create. Go to the <em>addresses</em> sheet, copy the column headers for <em>street - city - state - zip</em>, and paste them into cells C1 through F1 on the <em>names</em> sheet, as shown in Figure <a href="vlookup.html#fig:vlookup-headers">3.35</a>. This creates new column headers where our lookup results will be automatically pasted.</li>
 </ol>
 
 <div class="figure"><span id="fig:vlookup-headers"></span>
 <img src="images/03-spreadsheet/vlookup-headers.png" alt="Paste the last four column headers from the addresses sheet into the names sheet." width="500" />
 <p class="caption">
-Figure 3.36: Paste the last four column headers from the <em>addresses</em> sheet into the <em>names</em> sheet.
+Figure 3.35: Paste the last four column headers from the <em>addresses</em> sheet into the <em>names</em> sheet.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -378,13 +378,13 @@ Figure 3.36: Paste the last four column headers from the <em>addresses</em> shee
 <li>[is_sorted] = Enter <code>false</code> to find exact matches only, which makes sense in this case. Otherwise, enter <code>true</code> if the first column of the 2nd sheet range is sorted and you will accept the closest match, even if not an exact one.</li>
 </ul>
 <ol start="4" style="list-style-type: decimal">
-<li>One option is to directly type this formula into cell C2, using comma separators: <code>=VLOOKUP(B2,'addresses'!A:E,2,false)</code>. Another option is to click on the <em>VLOOKUP Vertical lookup</em> grey box that Google Sheets suggests, and click on the relevant cells, columns, and sheets for the formula to be automatically entered for you, as shown in Figure <a href="vlookup.html#fig:vlookup-solution">3.37</a>. What’s new here is that this formula in the <em>names</em> sheet refers to a range of columns A to E in the <em>addresses</em> sheet. Press <em>Return</em> or <em>Enter</em> on your keyboard.</li>
+<li>One option is to directly type this formula into cell C2, using comma separators: <code>=VLOOKUP(B2,'addresses'!A:E,2,false)</code>. Another option is to click on the <em>VLOOKUP Vertical lookup</em> grey box that Google Sheets suggests, and click on the relevant cells, columns, and sheets for the formula to be automatically entered for you, as shown in Figure <a href="vlookup.html#fig:vlookup-solution">3.36</a>. What’s new here is that this formula in the <em>names</em> sheet refers to a range of columns A to E in the <em>addresses</em> sheet. Press <em>Return</em> or <em>Enter</em> on your keyboard.</li>
 </ol>
 
 <div class="figure"><span id="fig:vlookup-solution"></span>
 <img src="images/03-spreadsheet/vlookup-solution.png" alt="The VLOOKUP formula in cell C2 of the names sheet (top) searches for matches across columns A to E in the addresses sheet (bottom)." width="700" />
 <p class="caption">
-Figure 3.37: The VLOOKUP formula in cell C2 of the <em>names</em> sheet (top) searches for matches across columns A to E in the <em>addresses</em> sheet (bottom).
+Figure 3.36: The VLOOKUP formula in cell C2 of the <em>names</em> sheet (top) searches for matches across columns A to E in the <em>addresses</em> sheet (bottom).
 </p>
 </div>
 <p>Let’s break down each part of the formula you entered in cell C2 of the <em>names</em> sheet:</p>
@@ -395,23 +395,23 @@ Figure 3.37: The VLOOKUP formula in cell C2 of the <em>names</em> sheet (top) se
 <li><code>false</code> = Find exact matches only.</li>
 </ul>
 <ol start="5" style="list-style-type: decimal">
-<li>After you enter the full VLOOKUP formula, it will display the exact match for the first organization, the Central Texas Food Bank, whose address is 6500 Metropolis Dr. Click and hold down on the blue dot in the bottom-right corner of cell C2, and drag your crosshair cursor across columns D to F and let go, which will automatically paste and update the formula for the city, state, and zip columns, as shown in Figure <a href="vlookup.html#fig:vlookup-drag">3.38</a>.</li>
+<li>After you enter the full VLOOKUP formula, it will display the exact match for the first organization, the Central Texas Food Bank, whose address is 6500 Metropolis Dr. Click and hold down on the blue dot in the bottom-right corner of cell C2, and drag your crosshair cursor across columns D to F and let go, which will automatically paste and update the formula for the city, state, and zip columns, as shown in Figure <a href="vlookup.html#fig:vlookup-drag">3.37</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:vlookup-drag"></span>
 <img src="images/03-spreadsheet/vlookup-drag.png" alt="Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
-Figure 3.38: Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula.
+Figure 3.37: Click on cell C2, then hold-and-drag the bottom-right blue dot across columns D to F, which automatically pastes and updates the formula.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>Finally, use the same hold-and-drag method to paste and update the formula downward to fill in all rows, as shown in Figure <a href="vlookup.html#fig:vlookup-final">3.39</a>.</li>
+<li>Finally, use the same hold-and-drag method to paste and update the formula downward to fill in all rows, as shown in Figure <a href="vlookup.html#fig:vlookup-final">3.38</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:vlookup-final"></span>
 <img src="images/03-spreadsheet/vlookup-final.png" alt="Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula." width="500" />
 <p class="caption">
-Figure 3.39: Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula.
+Figure 3.38: Click on cell F2, then hold-and-drag the bottom-right blue dot down to row 11, which automatically pastes and updates the formula.
 </p>
 </div>
 <p>Warning: If you save this spreadsheet in CSV format, your calculated results will appear in the CSV sheet, but any formulas you created to produce those results will disappear. Always keep track of your original spreadsheet to remind yourself how you constructed formulas.</p>

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-19" />
+<meta name="date" content="2020-11-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -517,13 +517,13 @@ Figure 13.8: In GitHub, click to open the <code>media</code> folder and <em>Add 
 </div>
 <p>Warning: Media file pathnames are case-sensitive, and we recommend using <em>all lowercase characters</em>, including the suffix ending. Also, since the code template automatically resizes images to fit, we recommend that you <em>reduce the size</em> of any images to 600x400 pixels or less prior to uploading, to make sure your map operates smoothly.</p>
 <ul>
-<li>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on</a> that we introduced in Chapter 3 to <em>create a separate tab in your Google Sheet</em> where you can insert your Location data, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:geocode-details2">13.9</a>, and paste the results into your Latitude and Longitude columns.</li>
+<li>Location, Latitude, Longitude: These place your markers at points on the map. Although the code template only requires Latitude and Longitude, it’s wise to paste an address or place name into the Location column as a reminder to correspond with the numerical coordinates. Use the <a href="geocode.html">Geocoding by SmartMonkey Add-on from Chapter 3</a> and select <em>Add-ons &gt; Geocoding by SmartMonkey &gt; Geocode Details</em> to create a new sheet with sample data and display results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:geocode-details2">13.9</a>. Paste in your own address data and repeat the step above to geocode it, then copy and paste the results into your <em>Points</em> sheet.</li>
 </ul>
 
 <div class="figure"><span id="fig:geocode-details2"></span>
-<img src="images/13-leaflet/geocode-details.png" alt="Use the Geocoding tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude."  />
+<img src="images/13-leaflet/geocode-details.png" alt="Select Add-ons–Geocoding by SmartMonkey–Geocode Details to display sample data with results for three new columns: Latitude, Longitude, and Address found."  />
 <p class="caption">
-Figure 13.9: Use the <em>Geocoding</em> tool in a separate Google Sheets tab to convert Location data into Latitude and Longitude.
+Figure 13.9: Select <em>Add-ons–Geocoding by SmartMonkey–Geocode Details</em> to display sample data with results for three new columns: <em>Latitude</em>, <em>Longitude</em>, and <em>Address found</em>.
 </p>
 </div>
 <p>Optional table of viewable markers: To display an interactive table at the bottom of your map, as shown in Figure <a href="leaflet-maps-with-google-sheets.html#fig:leaflet-map-with-table">13.10</a>. In the <em>Options</em> tab, set <em>Display Table</em> (cell B30) to <em>On</em>. You can also adjust the <em>Table Height</em>, and modify the display of <em>Table Columns</em> by entering the column headers, separated with commas.</p>
@@ -536,6 +536,7 @@ Figure 13.10: Optional: display interactive table of viewable markers at the bot
 </div>
 <p>TODO above: redo the screenshot after updating the map demo</p>
 <p>Optional custom markers: To create your own custom marker, such as a thumbnail photo icon, use any image editing tool to reduce a photo to a square of 64 x 64 pixels. Save it in PNG format and choose a filename using all lower-case characters with no spaces. Upload the image to the <em>media</em> folder in your GitHub repo as described above. In the Marker Icon column, enter the file pathname in this format: <code>media/image-thumbnail.png</code>. In the Custom Size column, set the dimensions to <code>64x64</code> or similar, such as <code>40x40</code> if desired.</p>
+<p>TODO: Add screenshot of the sample custom marker here, once we finalize the new template</p>
 <p>Open the browser tab that displays your live map and refresh the page to see your changes. If your changes do not appear within a few seconds, see the <a href="fix.html">Fix Common Problems</a> section of the appendix.</p>
 </div>
 <div id="f-remove-or-display-point-polygon-or-polylines-data-and-legends" class="section level4 unnumbered" number="">

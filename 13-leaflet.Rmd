@@ -430,7 +430,7 @@ Tip: You can display multiple images for one location by creating a series of ro
 - Media Credit Link: Add a direct link to the source info in the Media Credit text above.
 - Description: Designed to display about a paragraph or less of text for the Chapter. You may insert HTML tags to add line breaks (such as `<br>`), or to open external links in a new tab, such as `<a href='https://www.w3schools.com/' target='_blank'>Visit W3Schools</a>`. Learn about HTML syntax at [W3Schools](https://www.w3schools.com/html/html_links.asp).
 
-- Zoom: Set a low number to see continents, or a high number for city streets, typically on a scale from 1 to 18.
+- Zoom: Leaflet's default zoom levels are between 0 (world view) to 18 (individual buildings), and most free basemap tiles, such as those provided by Stamen or CartoDB are available for each level in this range. There exist more detailed basemaps that allow you to use higher values. Experiment with zoom levels to get the best view for your story, and remember that given the same zoom level, larger screens will show larger areas compared to smaller screens, such as smartphones.
 - Marker: Select either `Numbered` (the default) or `Plain` or `Hidden`. The latter works best when assigning several chapters to one location (to avoid stacking markers on top of each other) or when zooming out for a broader view (without highlighting one specific location).
 - Marker Color: Insert any standard web color name such as `blue` or `darkblue`, or insert a web color code such as `#775307` or `rgba(200,100,0,0.5)`. See options at [W3Schools Color Names](https://www.w3schools.com/colors/colors_names.asp).
 

@@ -5,13 +5,13 @@ In this chapter, we will examine [principles of map design](map-design.html) and
 
 Learn about different types of maps you can create in this book in Table \@ref(tab:map-types). Decisions about map types are based on two main factors: the format of your data, and the kind of story you wish to tell. For example, point maps work best to show specific locations with colored markers to represent categories (such as hospitals), while choropleth maps are best suited to display relative values for regions (such as birth rates across US states). After selecting your map type, follow our tool recommendations and step-by-step tutorials. This chapter features *Easy Tools* with drag-and-drop menus, such as [Google My Maps](mymaps.html), [Datawrapper](symbolmap-datawrapper.html), and [Tableau Public](map-tableau.html). But the table also points you to *Power Tools* that give you more control to customize and host your visualizations, such as [Leaflet code templates in Chapter 13](leaflet.html). These advanced tools require prior knowledge on how to [edit and host code templates with GitHub in Chapter 11](github.html).
 
-TODO: Improve and standardize map images
+TODO below: Improve and standardize map images; Rethink wording of "point map with custom icons"? and description?
 
 Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 
 | Map | Best use and tutorials in this book |
 | --- | --- |
-| Point map with custom icons<br> ![](images/08-map/map-point.png) | Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: [BatchGeo tutorial](batchgeo.html) or [Google My Maps tutorial](mymaps.html). <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
+| Point map with custom icons<br> ![](images/08-map/map-point.png) | Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: [Google My Maps tutorial](mymaps.html). <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Symbol point map<br> ![](images/08-map/map-symbol.png) | Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth).<br>Easy tool: [Symbol Point Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
 | Choropleth (colored polygon) map <br> ![](images/08-map/map-choropleth.png) | Best to show patterns across geographic areas (such as neighborhoods or nations) by coloring polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Heat point map <br> ![](images/08-map/map-heat.png) | Best to show clusters of points as colored hotspots to emphasize high frequency or density of cases. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
@@ -65,17 +65,17 @@ This point-versus-polygon distinction applies *most* of the time, but not always
 In summary, clarify if your spatial data should represent points or polygons, since those two categories are sometimes confused. If you envision them as points, then create a point-style map; or if polygons, then create a choropleth map. Those are the most common methods used by mapmakers, but there are plenty of exceptions, depending on your data story.
 
 ### Map One Variable, Not Two {-}
-Newcomers to data visualization sometimes are so proud of placing one variable on a map that they figure two variables must be twice as good. But this usually is not true. Imagine you want to show and compare income and education of eight counties in your state. You choose to create a choropleth layer to show income, where darker blue areas represent areas with higher income (as illustrated in Figure \@ref(fig:map-two-variables)(a)). You are happy because you can spot the pattern of high-income counties in the north-west corner of the state. Then you decide to create a symbol point layer showing what percent of population have a university degree, as illustrated in Figure \@ref(fig:map-two-variables)(b). You use circle sizes to represent percentages (larger circles = higher share of people with a university degree), and you choose orange color because it contrasts well with the choropleth blue. Then you decide to place one layer on top of the other, as shown in Figure \@ref(fig:map-two-variables)(c). And this is where your map becomes overloaded.
+Newcomers to data visualization sometimes are so proud of placing one variable on a map that they figure two variables must be twice as good. But this usually is not true. Here is the thought process that leads to this mistaken conclusion. Imagine you want to compare the relationship between income and education in eight counties of your state. First, you choose create a choropleth map of income, where darker blue areas represent areas with higher levels in the northwest corner, as shown in Figure \@ref(fig:map-two-variables)(a). Second, you decide to create a symbol point map, where larger circle sizes represents a higher share of the population with a university degree, as shown in Figure \@ref(fig:map-two-variables)(b). Both of those maps are fine, but they still do not highlight the relationship between income and education.
 
-In general, we recommend against displaying two variables using two different symbologies on the same map, because it's very difficult for most readers to recognize patterns that help them to grasp your data story.
+A common mistake is to place the symbol point layer on top of the choropleth map layer, as shown in Figure \@ref(fig:map-two-variables)(c). And this is where your map becomes overloaded. We generally recommend against displaying two variables with different symbologies on the same map, because it overloads the visualization and makes it very difficult for most readers to recognize patterns that help them to grasp your data story.
 
-(ref:map-two-variables) Avoid placing a symbol point map on top of a choropleth map, because it's hard to see the relationship between two variables.
+(ref:map-two-variables) To compare two variables, such as income and education, avoid placing a symbol point map on top of a choropleth map. Instead, create a scatter chart, and consider pairing it with a choropleth map of one variable.
 
-```{r map-two-variables, out.width=400, fig.cap="(ref:map-two-variables)"}
+```{r map-two-variables, out.width=750, fig.cap="(ref:map-two-variables)"}
 knitr::include_graphics("images/08-map/map-two-variables.png")
 ```
 
-Consider alternative ways to visualize the relationship between two variables. Rather than a map, you could create a scatter chart to show any relationship between variables X and Y, as illustrated in (d) of Figure \@ref(fig:map-two-variables). This type of chart works best if the relationship between variables is more important to your data story than any geographic patterns. Or, if geographic patterns matter for one of the variables, you could pair a choropleth map of that variable next to a scatterchart of both variables. Finally, you could create two maps, one for each variable such as those shown in (a) and (b) of Figure \@ref(fig:map-two-variables), and place them side-by-side with text to explain their similarities or differences.
+Instead, if the relationship between two variables is the most important aspect of your data story, create a scatter chart as shown in Figure \@ref(fig:map-two-variables)(d). Or if geographic patterns matter for one of the variables, you could pair a choropleth map of that variable next to a scatter chart of both variables, by combining Figure \@ref(fig:map-two-variables)(a and d). Overall, remember that just because data *can* be mapped does not always mean it *should* be mapped. Pause to reflect on whether or not location matters, because sometimes a chart tells your data story better than a map.
 
 ### Choose Smaller Geographies for Choropleth Maps {-}
 Choropleth maps are best for showing geographic patterns across regions by coloring polygons to represent data values. Therefore, we generally recommend selecting *smaller* geographies to display more *granular* patterns, since larger geographies display aggregated data that may hide what's happening at lower levels. Geographers refer to this concept as the [modifiable aerial unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem), which means that the way you slice up your data affects how we analyze its appearance on the map. Stacking together lots of small slices reveals more detail than one big slice.
@@ -207,63 +207,6 @@ TODO: Include a very simple normalization calculation to demonstrate raw counts 
 
 At this point, you should have a better idea of key principles in map design, and what makes them work (or not) when communicating data images to our eyes. In the next section, we'll begin our first hands-on tutorial with creating a point map. Later in the chapter we'll return to exercises in creating choropleth maps.  
 
-## Point Map with BatchGeo {- #batchgeo}
-Although BatchGeo is not the most powerful mapping tool available, its easy-to-learn interface stands out as one of the fastest ways to create an interactive point map. With the free version, organize up to 250 rows of data in a spreadsheet template, copy and paste them into the platform. BatchGeo will geocode your data and display map markers with colored categories on a Google Map base layer, which can be clicked to show linked titles, text, and small photos (which must be hosted online elsewhere) categories, descriptions, and links (including images hosted elsewhere online). Since the free version does *not* include an account login, enter your email to receive a link to the finished map, like the sample shown in Figure \@ref(fig:batchgeo-map).
-
-(ref:batchgeo-map) Point map of museums and parks with BatchGeo: Explore the [interactive version](https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c).
-
-```{r batchgeo-map, fig.cap="(ref:batchgeo-map)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c", height="550px") else knitr::include_graphics("images/08-map/batchgeo-map.png")
-```
-
-To create your own point map with BatchGeo, follow this quick tutorial.
-
-1. Open this [BatchGeo data template in Google Sheets](https://docs.google.com/spreadsheets/d/1IA0J4Z9C0_zsvgcunD2kHtR__sdQqUPzNHNjqCLYBRQ/edit#gid=312385679), log into your Google account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
-
-2. You can delete and enter your own data into the template, as shown in Figure \@ref(fig:batchgeo-template). Not every address field is required, but adding more will improve the accuracy of the geocoder. Several columns are optional and can be deleted (such as URL, Image URL, Image Source). If you enter a URL, its active link will appear in the Name field. Also, you can enter an Image URL if a photo is hosted elsewhere online, with an ideal size of 200x200 pixels.
-
-(ref:batchgeo-template) Enter your data into the template, then select all and copy it.
-
-```{r batchgeo-template, fig.cap="(ref:batchgeo-template)"}
-knitr::include_graphics("images/08-map/batchgeo-template.png")
-```
-
-3. Select and copy your data from the template, open the [BatchGeo](https://batchgeo.com) site, click the large field, and paste in your data, as shown in Figure \@ref(fig:batchgeo-paste).
-
-(ref:batchgeo-paste) Click the large field and paste in your data from the template.
-
-```{r batchgeo-paste, fig.cap="(ref:batchgeo-paste)"}
-knitr::include_graphics("images/08-map/batchgeo-paste.png")
-```
-
-4. Click the *Validate and Set Options* button to inspect or adjust how BatchGeo will upload your data fields and preview a pop-up window, as shown in Figure \@ref(fig:batchgeo-validate). Here you can change the default *Region* from *United States* to other areas of the world. Also, click the *Advanced* button to see more options to change the basemap layer or point symbols. Then click the *Make Map* button.
-
-(ref:batchgeo-validate) Click the *Validate* button to inspect and preview your data and advanced options.
-
-```{r batchgeo-validate, out.width=500, fig.cap="(ref:batchgeo-validate)"}
-knitr::include_graphics("images/08-map/batchgeo-validate.png")
-```
-
-5. In the *Map* window, click the *Save and Continue* button to enter a title and set other options, such making your map *public* or *unlisted*, as well as customizing the layout, as shown in Figure \@ref(fig:batchgeo-save). Insert your email address to receive a link to your online map. Click *Save Map*.
-
-(ref:batchgeo-save) Be sure to enter your email address to receive a link to your online map.
-
-```{r batchgeo-save, out.width=500, fig.cap="(ref:batchgeo-save)"}
-knitr::include_graphics("images/08-map/batchgeo-save.png")
-```
-
-6. Check your email for a message from BatchGeo with a link to your live map, and another link to make edits, as shown in Figure \@ref(fig:batchgeo-email). The email also will include a code to [embed your live map on the web, which you'll learn about in Chapter 10](embed.html).
-
-(ref:batchgeo-email) Save the BatchGeo email with links and an embed code for your map.
-
-```{r batchgeo-email, out.width=500, fig.cap="(ref:batchgeo-email)"}
-knitr::include_graphics("images/08-map/batchgeo-email-annotated.png")
-```
-
-Overall, BatchGeo is a free and easy-to-learn point map tool, but one with several limitations. You can only create maps with 250 points or less, and only a few options to customize their appearance, unless you upgrade to the paid version. Also, while the tool geocodes your location data, it does not show you the latitude and longitude coordinates, but see the [Geocode section of Chapter 3 for a Google Sheets add-on](geocode.html) that will show you the geocoordinates. See more info on the [BatchGeo support page](http://support.batchgeo.com) and also their [post about power-user tips](https://blog.batchgeo.com/5-steps-to-become-a-batchgeo-power-user/).
-
-Now that you've learned about one tool to create point maps, let's compare it with a second tool, Google My Maps, which includes some additional features.
-
 ## Point Map with Google My Maps {- #mymaps}
 
 [My Maps](https://www.google.com/maps/about/mymaps/) is Google's service that allows users to create custom maps on top of Google Maps. The maps that you create will stay in your Google account and will not in any way interfere with the Google Maps product that you and others use to look up directions or find nearby restaurants. You may choose to share your map either through embedding it on your website or providing a direct link to your colleagues or friends.
@@ -273,6 +216,8 @@ it limits your styling options. My Maps is most powerful when it comes to collab
 
 In this section, we will look at building a point map of visitor attractions in North America, as is shown in Figure \@ref(fig:mymaps-final). We will create a new map, import point data, style markers, change the baselayer, and look at options to share the map.
 
+TODO below: add the interactive link to the caption
+
 (ref:mymaps-final) A map of visitor attractions in North America built with Google My Maps.
 
 ```{r mymaps-final, fig.cap="(ref:mymaps-final)"}
@@ -280,6 +225,11 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.g
 ```
 
 Below are the steps you can take to create the same map.
+
+TODO: Rewrite this step to show data in Google Sheets, not CSV.... See if images can be uploaded... Review file contents... Redo step numbering and make File > Download (CSV format) part of this first step, and review continuity with step 3 below -- Open this [data template in Google Sheets](https://docs.google.com/spreadsheets/d/1IA0J4Z9C0_zsvgcunD2kHtR__sdQqUPzNHNjqCLYBRQ/edit#gid=312385679), log into your Google account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
+
+We prepared a dataset with six locations (using Wikipedia to look things up), which you can [download](data/north-american-visitor-attractions.csv) for the exercise. If you inspect the CSV file in your favorite text editor, you will see that it contains three national parks and three museums. Each point comes with a `Name`, its `State` and `Country`, and museums also have an `Address` and `City` specified. The `URL` is provided for all six locations.
+
 
 1. Navigate to [Google My Maps](https://www.google.com/mymaps/). In the upper-left corner, click `+ Create a New Map` button, as shown in Figure \@ref(fig:mymaps-create-new). This will create an empty map with familiar Google Maps style.
 
@@ -297,9 +247,7 @@ knitr::include_graphics("images/08-map/mymaps-create-new.png")
 knitr::include_graphics("images/08-map/mymaps-edit-title.png")
 ```
 
-3. Now, let's perform the most important step of point adding data. We prepared a dataset with six locations (using Wikipedia to look things up), which you can [download](data/north-american-visitor-attractions.csv) for the exercise. If you inspect the CSV file in your favorite text editor, you will see that it contains three national parks and three museums. Each point comes with a `Name`, its `State` and `Country`, and museums also have an `Address` and `City` specified. The `URL` is provided for all six locations.
-
-Under *Untitled layer* item, click *Import* button, and drag-and-drop the CSV file to the Upload area. Note that you can also connect a dataset from your Google Drive, but we won't be doing it here. Once the data file is uploaded, My Maps will ask which columns contain location data that it can use to position the markers. In our case, these are Address, City, State, Postalcode, and Country, as well as Name, as shown in Figure \@ref(fig:mymaps-lat-lon). It is important we select Name because our national parks have no address data, and if names their names are not provided, Google will place the markers in the middle of the state instead.
+3. Now, let's perform the most important step of point adding data. Under *Untitled layer* item, click *Import* button, and drag-and-drop the CSV file to the Upload area. Note that you can also connect a dataset from your Google Drive, but we won't be doing it here. Once the data file is uploaded, My Maps will ask which columns contain location data that it can use to position the markers. In our case, these are Address, City, State, Postalcode, and Country, as well as Name, as shown in Figure \@ref(fig:mymaps-lat-lon). It is important we select Name because our national parks have no address data, and if names their names are not provided, Google will place the markers in the middle of the state instead.
 
 (ref:mymaps-lat-lon) Make sure all columns with relevant location data are checked.
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,7 +227,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -353,43 +352,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Make sure you <a href="https://wordpress.com/support/com-vs-org/">understand the difference</a> between a WordPress.com site above versus a self-hosted WordPress site. The latter is sometimes called WordPress.org site because anyone can freely download the software from that address and <em>host it on their own webserver</em>, or more commonly, have access to a self-hosted WordPress server through their school or work, or by renting space on a vendor’s webserver. But the web address of a self-hosted WordPress site does <em>not</em> necessarily need to end in <code>.org</code>. It also could be <code>.com</code> or <code>.edu</code> or any other ending, so don’t let that confuse you.</p>
 <p>There are several ways to insert an embed code or iframe in a self-hosted WordPress site, but your success may depend on your WP version, your access level, and the complexity of the code.</p>
 <p>For the first method, assume that you’re using WordPress 5.0 or above with the newer block editor, and you have editor or administrator access to your site. TODO: Check whether less-than-admin privileges strips out iframe codes, as it used to before WP 5.0</p>
-<p>In your block editor, select a <em>custom HTML</em> block, and directly insert the embed code or the iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-custom-html">10.15</a>.</p>
+<p>In your block editor, select a <em>custom HTML</em> block, and directly insert the embed code or the iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-custom-html">10.16</a>.</p>
 
 <div class="figure"><span id="fig:wordpress-custom-html"></span>
 <img src="images/10-embed/wordpress-custom-html.png" alt="Paste an embed code or iframe into a custom HTML block." width="700" />
 <p class="caption">
-Figure 10.15: Paste an embed code or iframe into a custom HTML block.
+Figure 10.16: Paste an embed code or iframe into a custom HTML block.
 </p>
 </div>
 <p>For the second method, assume that you’re using WordPress with either the classic or block editor, and that you have administrator access to the site.</p>
 <ol style="list-style-type: decimal">
-<li>Install and activate the <a href="http://wordpress.org/plugins/iframe/">iframe plugin</a>, as shown in Figure <a href="paste-code.html#fig:wordpress-iframe-plugin">10.16</a>. This plugin allows authors to embed iframe codes in a modified “shortcode” format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually “strip out” iframe codes for all users except the site administrator. TODO: update this image</li>
+<li>Install and activate the <a href="http://wordpress.org/plugins/iframe/">iframe plugin</a>, as shown in Figure <a href="paste-code.html#fig:wordpress-iframe-plugin">10.17</a>. This plugin allows authors to embed iframe codes in a modified “shortcode” format surrounded by square brackets. Without the plugin, self-hosted WordPress.org sites will usually “strip out” iframe codes for all users except the site administrator. TODO: update this image</li>
 </ol>
 
 <div class="figure"><span id="fig:wordpress-iframe-plugin"></span>
 <img src="images/10-embed/wordpress-iframe-plugin.jpg" alt="Install and activate the iframe plugin on a self-hosted WP site." width="300" />
 <p class="caption">
-Figure 10.16: Install and activate the <em>iframe plugin</em> on a self-hosted WP site.
+Figure 10.17: Install and activate the <em>iframe plugin</em> on a self-hosted WP site.
 </p>
 </div>
 <ol start="2" style="list-style-type: decimal">
-<li>In the WordPress editor, click to the <em>text</em> tab to view the code, and paste the embed code or iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-text-paste-iframe">10.17</a>. Initially, the code you pasted includes iframe tags at the start (<code>&lt;iframe...</code>) and the end ()<code>...&gt;&lt;/iframe&gt;</code>).</li>
+<li>In the WordPress editor, click to the <em>text</em> tab to view the code, and paste the embed code or iframe, as shown in Figure <a href="paste-code.html#fig:wordpress-text-paste-iframe">10.18</a>. Initially, the code you pasted includes iframe tags at the start (<code>&lt;iframe...</code>) and the end ()<code>...&gt;&lt;/iframe&gt;</code>).</li>
 </ol>
 
 <div class="figure"><span id="fig:wordpress-text-paste-iframe"></span>
 <img src="images/10-embed/wordpress-text-paste-iframe.png" alt="Install and activate the iframe plugin on a self-hosted WP site." width="700" />
 <p class="caption">
-Figure 10.17: Install and activate the <em>iframe plugin</em> on a self-hosted WP site.
+Figure 10.18: Install and activate the <em>iframe plugin</em> on a self-hosted WP site.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
-<li>Modify the start tag by replacing the less-than symbol (<code>&lt;</code>) with a square opening bracket (<code>[</code>). Modify the back end by erasing the greater-than symbol (<code>&gt;</code>) and the entire end tag (<code>&lt;/iframe&gt;</code>), and replace both of them with one square closing bracket (<code>]</code>), as shown in Figure <a href="paste-code.html#fig:wordpress-insert-brackets">10.18</a>.</li>
+<li>Modify the start tag by replacing the less-than symbol (<code>&lt;</code>) with a square opening bracket (<code>[</code>). Modify the back end by erasing the greater-than symbol (<code>&gt;</code>) and the entire end tag (<code>&lt;/iframe&gt;</code>), and replace both of them with one square closing bracket (<code>]</code>), as shown in Figure <a href="paste-code.html#fig:wordpress-insert-brackets">10.19</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:wordpress-insert-brackets"></span>
 <img src="images/10-embed/wordpress-insert-brackets.png" alt="Modify the front and back end with square brackets." width="700" />
 <p class="caption">
-Figure 10.18: Modify the front and back end with square brackets.
+Figure 10.19: Modify the front and back end with square brackets.
 </p>
 </div>
 <p>TODO ABOVE: check method with more complex embed codes, check with non-admin privileges, and update images</p>

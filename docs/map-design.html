@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,7 +227,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -380,16 +379,16 @@ Figure 8.1: Key elements of an interactive map.
 </div>
 <div id="map-one-variable-not-two" class="section level3 unnumbered" number="">
 <h3>Map One Variable, Not Two</h3>
-<p>Newcomers to data visualization sometimes are so proud of placing one variable on a map that they figure two variables must be twice as good. But this usually is not true. In general, we recommend against placing two variables on the same map, because it’s very difficult for most readers to recognize patterns that help them to grasp your data story. For example, look at what happens when you try to place one variable (using a symbol point map) on top of another variable (using a choropleth map), as shown with imaginary data in Figure <a href="map-design.html#fig:map-two-variables">8.2</a>. It’s difficult to recognize patterns when a symbol point map is placed on a choropleth map.</p>
+<p>Newcomers to data visualization sometimes are so proud of placing one variable on a map that they figure two variables must be twice as good. But this usually is not true. Here is the thought process that leads to this mistaken conclusion. Imagine you want to compare the relationship between income and education in eight counties of your state. First, you choose create a choropleth map of income, where darker blue areas represent areas with higher levels in the northwest corner, as shown in Figure <a href="map-design.html#fig:map-two-variables">8.2</a>(a). Second, you decide to create a symbol point map, where larger circle sizes represents a higher share of the population with a university degree, as shown in Figure <a href="map-design.html#fig:map-two-variables">8.2</a>(b). Both of those maps are fine, but they still do not highlight the relationship between income and education.</p>
+<p>A common mistake is to place the symbol point layer on top of the choropleth map layer, as shown in Figure <a href="map-design.html#fig:map-two-variables">8.2</a>(c). And this is where your map becomes overloaded. We generally recommend against displaying two variables with different symbologies on the same map, because it overloads the visualization and makes it very difficult for most readers to recognize patterns that help them to grasp your data story.</p>
 
 <div class="figure"><span id="fig:map-two-variables"></span>
-<img src="images/08-map/map-two-variables.png" alt="Avoid placing a symbol point map on top of a choropleth map, because it’s hard to see the relationship between two variables." width="400" />
+<img src="images/08-map/map-two-variables.png" alt="To compare two variables, such as income and education, avoid placing a symbol point map on top of a choropleth map. Instead, create a scatter chart, and consider pairing it with a choropleth map of one variable." width="450" />
 <p class="caption">
-Figure 8.2: Avoid placing a symbol point map on top of a choropleth map, because it’s hard to see the relationship between two variables.
+Figure 8.2: To compare two variables, such as income and education, avoid placing a symbol point map on top of a choropleth map. Instead, create a scatter chart, and consider pairing it with a choropleth map of one variable.
 </p>
 </div>
-<p>Consider alternative ways to visualize the relationship between two variables. Rather than a map, you could create a scatter chart to show any relationship between variables X and Y. This type of chart works best if the relationship between variables is more important to your data story than any geographic patterns. Or, if geographic patterns matter for one of the variables, you could pair a choropleth map of that variable next to a scatterchart of both variables. Finally, you could create two choropleth maps, one for each variable, and place them side-by-side with text to explain their similarities or differences.</p>
-<p>TODO: ILYA let’s discuss if the figure works above; also decide if supplemental images are needed, perhaps as “bad viz” and “better viz” examples</p>
+<p>Instead, if the relationship between two variables is the most important aspect of your data story, create a scatter chart as shown in Figure <a href="map-design.html#fig:map-two-variables">8.2</a>(d). Or if geographic patterns matter for one of the variables, you could pair a choropleth map of that variable next to a scatter chart of both variables, by combining Figure <a href="map-design.html#fig:map-two-variables">8.2</a>(a and d). Overall, remember that just because data <em>can</em> be mapped does not always mean it <em>should</em> be mapped. Pause to reflect on whether or not location matters, because sometimes a chart tells your data story better than a map.</p>
 </div>
 <div id="choose-smaller-geographies-for-choropleth-maps" class="section level3 unnumbered" number="">
 <h3>Choose Smaller Geographies for Choropleth Maps</h3>

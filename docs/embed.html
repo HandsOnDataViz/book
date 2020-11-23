@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,7 +227,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -343,8 +342,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="embed" class="section level1" number="10">
 <h1><span class="header-section-number">Chapter 10</span> Embed On the Web</h1>
-<p>So far you’ve learned how to create <a href="chart.html">charts in chapter 7</a> and <a href="map.html">maps in chapter 8</a>. Our book emphasizes the benefits of designing <em>interactive</em> visualizations that engage broad audiences on the internet by inviting them to interact with your data, investigate new patterns, download files if desired, and easily share your work on social media. In this chapter, you’ll learn about a computer code tag called an <em>iframe</em>. Like a picture frame, an iframe displays one web page (such as your interactive data visualization) inside a second web page that you control (such as your personal or organizational web site), and makes the content appear seamlessly so that audiences can still interact with it. Several of the visualization tools you’ve learned so far, such as Google Sheets, Datawrapper, and Tableau Public, generate an <em>embed code</em> that contains an iframe to the online chart or map you’ve created on their platform. We will demonstrate how to <a href="embed-code.html">get the embed code or link</a> from your visualization tool site, and <a href="paste-code.html">paste the code into a second website</a> to seamlessly display your interactive content. No coding skills are required in this introductory book, but it certainly helps to be <em>code-curious</em>.</p>
-<p>TODO: ILYA Discuss whether we should add an abstract diagram of an iframe inside a web page, like a picture frame on a wall, to visually reinforce this concept for new users here</p>
+<p>So far you’ve learned how to create <a href="chart.html">charts in chapter 7</a>, <a href="map.html">maps in chapter 8</a>, and <a href="table.html">tables in chapter 9</a>. Our book emphasizes the benefits of designing <em>interactive</em> visualizations that engage broad audiences on the internet by inviting them to interact with your data, investigate new patterns, download files if desired, and easily share your work on social media. In this chapter, you’ll learn about a computer code tag called an <em>iframe</em>. Like a picture frame, an iframe displays a live web page (such as your interactive data visualization) inside a second web page that you control (such as your personal or organizational web site), as shown in Figure <a href="embed.html#fig:iframe-illustration">10.1</a>. When done correctly, the iframe makes your data visualization appear seamlessly on your web page, so that audiences can explore the content without needing to know that it’s coming from a different host. Several of the visualization tools you’ve learned so far, such as Google Sheets, Datawrapper, and Tableau Public, generate an <em>embed code</em> that contains an iframe to the online chart or map you’ve created on their platform. We will demonstrate how to <a href="embed-code.html">get the embed code or link</a> from your visualization tool site, and <a href="paste-code.html">paste the code into a second website</a> to seamlessly display your interactive content. No coding skills are required in this introductory book, but it certainly helps to be <em>code-curious</em>.</p>
+
+<div class="figure"><span id="fig:iframe-illustration"></span>
+<img src="images/10-embed/iframe-illustration.png" alt="You can use an iframe to embed other web pages in your web page" width="600" />
+<p class="caption">
+Figure 10.1: You can use an iframe to embed other web pages in your web page
+</p>
+</div>
 </div>
             </section>
 

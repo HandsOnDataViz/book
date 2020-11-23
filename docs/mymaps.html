@@ -25,14 +25,14 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="batchgeo.html"/>
+<link rel="prev" href="normalize-choropleth.html"/>
 <link rel="next" href="symbolmap-datawrapper.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -227,7 +227,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -343,134 +342,121 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="mymaps" class="section level2 unnumbered" number="">
 <h2>Point Map with Google My Maps</h2>
-<p>TODO BELOW: <del>Explain how Google My Maps is different from Google Maps</del>; mention at the top there are more options than points; DECIDE if this sample data about Nigerian airports is the best fit, since it’s great to have international examples but unsure if Shapefile-to-CSV transformation makes sense here, as new users probably need the tool to geocode their data.</p>
-<p><a href="https://www.google.com/maps/about/mymaps/">My Maps</a> is Google’s service
-that allows users to create custom maps on top of Google Maps. The maps that you create will stay in your Google account and will not in any way interfere with the Google Maps product that you and others use to look up directions or find nearby restaurants. You may choose to share your map either through embedding it on your website or providing a direct link to your colleagues or friends.</p>
+<p><a href="https://www.google.com/maps/about/mymaps/">My Maps</a> is Google’s service that allows users to create custom maps on top of Google Maps. The maps that you create will stay in your Google account and will not in any way interfere with the Google Maps product that you and others use to look up directions or find nearby restaurants. You may choose to share your map either through embedding it on your website or providing a direct link to your colleagues or friends.</p>
 <p>Google My Maps is one of the simplest ways to build basic point, line, and polygon maps, although
 it limits your styling options. My Maps is most powerful when it comes to collaboration, and you can invite anyone with a Google account to jointly work on the map.</p>
-<p>In this section, we will look at building a point map of airports in Nigeria, as is shown
-in Figure <a href="mymaps.html#fig:mymaps-final">8.18</a>. We will
-create a map, change a baselayer, import point data, style points, and share the map.</p>
+<p>In this section, we will look at building a point map of visitor attractions in North America, as is shown in Figure <a href="mymaps.html#fig:mymaps-final">8.12</a>. We will create a new map, import point data, style markers, change the baselayer, and look at options to share the map.</p>
+<p>TODO below: add the interactive link to the caption</p>
 
 <div class="figure"><span id="fig:mymaps-final"></span>
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1v1ZNrpfBtq_p4wTRyj2hIKBtTnkmhnMF" width="672" height="500px">
+<iframe src="https://www.google.com/maps/d/u/3/embed?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 8.18: A map of airports in Nigeria built using Google My Maps.
+Figure 8.12: A map of visitor attractions in North America built with Google My Maps.
 </p>
 </div>
-<div id="create-a-new-map-in-my-maps" class="section level3 unnumbered" number="">
-<h3>Create a New Map in My Maps</h3>
-<p>Navigate to <a href="https://www.google.com/mymaps/">Google My Maps</a>.
-In the upper-left corner, click <code>+ Create a New Map</code> button,
-as shown in Figure <a href="mymaps.html#fig:mymaps-create-new">8.19</a>.</p>
+<p>Below are the steps you can take to create the same map.</p>
+<p>TODO: Rewrite this step to show data in Google Sheets, not CSV…. See if images can be uploaded… Review file contents… Redo step numbering and make File &gt; Download (CSV format) part of this first step, and review continuity with step 3 below – Open this <a href="https://docs.google.com/spreadsheets/d/1IA0J4Z9C0_zsvgcunD2kHtR__sdQqUPzNHNjqCLYBRQ/edit#gid=312385679">data template in Google Sheets</a>, log into your Google account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p>
+<p>We prepared a dataset with six locations (using Wikipedia to look things up), which you can <a href="data/north-american-visitor-attractions.csv">download</a> for the exercise. If you inspect the CSV file in your favorite text editor, you will see that it contains three national parks and three museums. Each point comes with a <code>Name</code>, its <code>State</code> and <code>Country</code>, and museums also have an <code>Address</code> and <code>City</code> specified. The <code>URL</code> is provided for all six locations.</p>
+<ol style="list-style-type: decimal">
+<li>Navigate to <a href="https://www.google.com/mymaps/">Google My Maps</a>. In the upper-left corner, click `+ Create a New Map` button, as shown in Figure <a href="mymaps.html#fig:mymaps-create-new">8.13</a>. This will create an empty map with familiar Google Maps style.</li>
+</ol>
 
 <div class="figure"><span id="fig:mymaps-create-new"></span>
-<img src="images/08-map/mymaps-create-new.png" alt="A map of airports in Nigeria built using Google My Maps." width="300" />
+<img src="images/08-map/mymaps-create-new.png" alt="Navigate to https://www.google.com/mymaps/ and create a new map." width="300" />
 <p class="caption">
-Figure 8.19: A map of airports in Nigeria built using Google My Maps.
+Figure 8.13: Navigate to <a href="https://www.google.com/mymaps/" class="uri">https://www.google.com/mymaps/</a> and create a new map.
 </p>
 </div>
-<p>You will see a typical Google Maps with no data. Click on the current title (<code>Untitled map</code>),
-and add appropriate title and description in the modal window that appeared
-(see Figure <a href="mymaps.html#fig:mymaps-edit-title">8.20</a> for inspiration).</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Give your map a relevant title and desription by clicking the current title (<code>Untitled map</code>). This will bring up a modal window where you can make changes, as shown in Figure <a href="mymaps.html#fig:mymaps-edit-title">8.14</a>.</li>
+</ol>
 
 <div class="figure"><span id="fig:mymaps-edit-title"></span>
 <img src="images/08-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
 <p class="caption">
-Figure 8.20: Add title and description to your map.
+Figure 8.14: Add title and description to your map.
 </p>
 </div>
-<p>Before we add any points, let’s change the basemap to something less boring.
-At the bottom of the control window, open <em>Base map</em> dropdown, and pick one of nine available
-basemaps. For this tutorial, we chose <em>Dark Landmass</em>.</p>
-<p>Let’s now proceed to the most important step—adding data. You can <a href="data/nigeria-airports.csv">download</a>
-a dataset of Nigerian airports that we got <a href="https://datacatalog.worldbank.org/dataset/nigeria-airports">from the World Bank</a>
-as a Shapefile and then converted to a CSV.</p>
-<p>Under <em>Untitled layer</em> item, click <em>Import</em> button, and drag-and-drop the CSV file.
-Once the data file is uploaded, My Maps will ask which columns contain location data.
-In our case, these are <em>LATITUDE</em> and <em>LONGITUDE</em> columns, as shown in Figure <a href="mymaps.html#fig:mymaps-lat-lon">8.21</a>.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Now, let’s perform the most important step of point adding data. Under <em>Untitled layer</em> item, click <em>Import</em> button, and drag-and-drop the CSV file to the Upload area. Note that you can also connect a dataset from your Google Drive, but we won’t be doing it here. Once the data file is uploaded, My Maps will ask which columns contain location data that it can use to position the markers. In our case, these are Address, City, State, Postalcode, and Country, as well as Name, as shown in Figure <a href="mymaps.html#fig:mymaps-lat-lon">8.15</a>. It is important we select Name because our national parks have no address data, and if names their names are not provided, Google will place the markers in the middle of the state instead.</li>
+</ol>
 
 <div class="figure"><span id="fig:mymaps-lat-lon"></span>
-<img src="images/08-map/mymaps-lat-lon-annotated.png" alt="Check LATITUDE and LONGITUDE as your location columns." width="300" />
+<img src="images/08-map/mymaps-lat-lon.png" alt="Make sure all columns with relevant location data are checked." width="300" />
 <p class="caption">
-Figure 8.21: Check LATITUDE and LONGITUDE as your location columns.
+Figure 8.15: Make sure all columns with relevant location data are checked.
 </p>
 </div>
-<p>Once the two boxes are checked, click <em>Continue</em>. Another window will pop up, asking
-which column to use to annotate points. Choose <em>City</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-column-title">8.22</a>,
-and then <em>Finish</em>.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Once the boxes are checked, click <em>Continue</em>. Another window will pop up, asking
+which column to use to annotate points. Choose <em>Name</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-column-title">8.16</a>,
+and then <em>Finish</em>.</li>
+</ol>
 
 <div class="figure"><span id="fig:mymaps-column-title"></span>
-<img src="images/08-map/mymaps-column-title-annotated.png" alt="Choose City as the title for your markers." width="300" />
+<img src="images/08-map/mymaps-column-title.png" alt="Choose Name column to serve as titles for your markers." width="300" />
 <p class="caption">
-Figure 8.22: Choose City as the title for your markers.
+Figure 8.16: Choose Name column to serve as titles for your markers.
 </p>
 </div>
-<p>It will take a few moments for My Maps to create a new layer, which
-will be added to the layer menu as <em>nigeria-airports.csv</em>.
-Once the layer is created, My Maps will center the map to fit the points.</p>
-<p>Let’s replace the original blue markers to orange airport symbols.
-In layers menu, hover over <em>All items</em> and click the paint bucket symbol
-on the right. Change “All items” text to “Airports”,
-choose orange color, and click on <em>More icons</em> to find an airport symbol
-(we recommend using Filter to search for “airport”, or simply scroll down to Transportation section).
-The marker in the layers menu will change to an orange airplane,
-as shown in Figure <a href="mymaps.html#fig:mymaps-color">8.23</a>.</p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Google Maps will perform geocoding automatically (that is, will translate your location columns into latitude/longitude coordinates). It will take a few moments for My Maps to create a new layer, which
+will be added to the layer menu as <em>north-american-visitor-attractions.csv</em> (if you used the downloaded file).
+Once the layer is created, My Maps will center the map to fit the points. Click on the layer name, which by default is set to the name of imported file, and change it to <em>Attractions</em> (alternatively, open a kebab menu to the right of the layer name, and click <em>Rename this layer</em>).</p></li>
+<li><p>By default, each location will be assigned a blue marker that we can style individually, and all markers will be visible in the menu under the relevant layer. Since our locations are parks
+and museums, which are fairly distinct groups (and happen to have this distinction recorded in the <code>Group</code> column), let’s assign green park icons to all parks, and orange museum icons to the museums. To do so, click <em>Individual styles</em>, and in the <em>Group places by</em> dropdown, change the value to <em>Style data by column: Group</em>, as show in Figure <a href="mymaps.html#fig:mymaps-group-places">8.17</a>. This will divide all markers into two groups, and assign distinct icons to these two groups.</p></li>
+</ol>
+
+<div class="figure"><span id="fig:mymaps-group-places"></span>
+<img src="images/08-map/mymaps-group-places-annotated.png" alt="Group places by Group column instead of individual styles." width="300" />
+<p class="caption">
+Figure 8.17: Group places by Group column instead of individual styles.
+</p>
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>Now we can set custom icons to both groups. Click the bucket icon to the right of the group to assign a new color, and a new icon (you may need to browse the <em>More icons</em> window to find the relevant ones). Figure <a href="mymaps.html#fig:mymaps-color">8.18</a> shows how the marker customization window looks like.</li>
+</ol>
 
 <div class="figure"><span id="fig:mymaps-color"></span>
-<img src="images/08-map/mymaps-color-annotated.png" alt="In My Maps, you can change marker colors and icons." width="300" />
+<img src="images/08-map/mymaps-color.png" alt="In My Maps, you can change marker colors and icons." width="300" />
 <p class="caption">
-Figure 8.23: In My Maps, you can change marker colors and icons.
+Figure 8.18: In My Maps, you can change marker colors and icons.
 </p>
 </div>
-<p>Click on the layer name, which by default is set to the name of imported file (<code>nigeria-airports.csv</code>),
-and change it to <em>Nigerian Airports</em>. Alternatively open a kebab menu to the right of the layer name, and choose <em>Rename this layer</em>, and then click <em>Save</em>.</p>
-<p>You can accompany each marker with a label. Click <em>Uniform style</em> under the layer, and choose <em>Alt_name</em>
-in the <em>Set labels</em> dropdown menu. You will see alternative airport names, such as <em>BENIN</em>, displayed
-beneath the markers.</p>
-<p>Click <em>Preview</em> to see how the map looks like outside of the My Maps editing studio. Additionally, you can add photos, directions, lines, etc., and display or hide columns by checking or unchecking them when clicking on a map point.</p>
-</div>
-<div id="share-your-google-my-map" class="section level3 unnumbered" number="">
-<h3>Share Your Google My Map</h3>
-<p>If you are happy with the result, click <em>Share</em> button underneath the map’s title and description. In the modal window, make sure <em>Enable link sharing</em> is activated, as shown in Figure <a href="mymaps.html#fig:mymaps-share">8.24</a>, and copy the generated link. You can share with link with anyone, with or without a Google account, and they will be able to see your map.</p>
+<ol start="8" style="list-style-type: decimal">
+<li><p>You may notice that green and orange icons look not as prominent due to yellow and orange roads and highways, and green forest areas of the basemap. To fix this, let’s change the basemap to a darker blue version. At the bottom of the control window, open <em>Base map</em> dropdown, and pick <em>Dark Landmass</em>. Now, your map should look great!</p></li>
+<li><p>Click <em>Preview</em> to see how the map looks like outside of the My Maps editing studio. Go back to the studio, and if you are happy with the result, click <em>Share</em> button underneath the map’s title and description. In the modal window, make sure <em>Enable link sharing</em> is activated, as shown in Figure <a href="mymaps.html#fig:mymaps-share">8.19</a>, and copy the generated link. You can share with link with anyone, with or without a Google account, and they will be able to see your map.</p></li>
+</ol>
 
 <div class="figure"><span id="fig:mymaps-share"></span>
 <img src="images/08-map/mymaps-share.png" alt="Make sure anyone with the link can view your map before you share it." width="400" />
 <p class="caption">
-Figure 8.24: Make sure anyone with the link can view your map before you share it.
+Figure 8.19: Make sure anyone with the link can view your map before you share it.
 </p>
 </div>
-<p>If you want to embed the map as an iframe, from the main kebab menu to the right of the map title, choose <em>Embed on my site</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-embed">8.25</a>. This will generate an HTML embed code that you can copy to your website, as described in <a href="embed.html">Chapter 10: Embed on the Web</a>.</p>
+<p>If you want to embed the map as an iframe, from the main kebab menu to the right of the map title, choose <em>Embed on my site</em>, as shown in Figure <a href="mymaps.html#fig:mymaps-embed">8.20</a>. This will generate an HTML embed code that you can copy to your website, as described in <a href="embed.html">Chapter 10: Embed on the Web</a>.</p>
 
 <div class="figure"><span id="fig:mymaps-embed"></span>
-<img src="images/08-map/mymaps-embed-annotated.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
+<img src="images/08-map/mymaps-embed.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
 <p class="caption">
-Figure 8.25: My Maps can generate an iframe code to include the map on your own website.
+Figure 8.20: My Maps can generate an iframe code to include the map on your own website.
 </p>
 </div>
-</div>
-<div id="going-beyond-points" class="section level3 unnumbered" number="">
-<h3>Going Beyond Points</h3>
-<p>Google My Maps has more powerful features for map making.
-Instead of uploading datasets with latitude/longitude pairs,
-you can use simple addresses (and My Maps will take care of geocoding),
-or add markers by clicking on the map using <em>Add marker</em> feature.
-You can classify points based on a property, and use different colors
-to represent them.</p>
-<p>You are not limited to just point maps. You can also draw your own shapes, including
+<p>Google My Maps has more powerful features for map making, and you
+are not limited to just point maps. You can also draw your own shapes, including
 lines and polygons. You can add data to multiple layers.
 Unfortunately, Google My Maps has no comprehensive documentation,
 so you have to explore the studio yourself if you want to create
 more complex projects.</p>
-</div>
+<p>In the next section, we will look at creating and sharing symbol point maps with Datawrapper.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="batchgeo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="normalize-choropleth.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="symbolmap-datawrapper.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

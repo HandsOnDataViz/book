@@ -71,7 +71,7 @@ A common mistake is to place the symbol point layer on top of the choropleth map
 
 (ref:map-two-variables) To compare two variables, such as income and education, avoid placing a symbol point map on top of a choropleth map. Instead, create a scatter chart, and consider pairing it with a choropleth map of one variable.
 
-```{r map-two-variables, out.width=750, fig.cap="(ref:map-two-variables)"}
+```{r map-two-variables, out.width=450, fig.cap="(ref:map-two-variables)"}
 knitr::include_graphics("images/08-map/map-two-variables.png")
 ```
 

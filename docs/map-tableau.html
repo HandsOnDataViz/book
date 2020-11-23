@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,7 +227,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -345,17 +344,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Choropleth Map with Tableau Public</h2>
 <p>We first introduced you to the free Tableau Public desktop application (for Mac or Windows) when building <a href="scatter-tableau.html">scattercharts</a> and <a href="filtered-line-tableau.html">filtered line charts</a> in Chapter 7. Now let’s use the same tool to create an interactive choropleth map, and compare the process with the Datawrapper tool we learned in the prior section. Tableau Public can create many different types of map for geographical place names or ISO codes it already recognizes, such as nations, states, counties, and airports. But Tableau Public cannot geocode street addresses by itself, so you’ll need to obtain their latitude and longitude with another tool, such as those described in the <a href="geocode.html">geocode section of Chapter 3</a>. Furthermore, if you want to upload customized map boundaries, learn how to <a href="https://help.tableau.com/current/pro/desktop/en-us/maps_shapefiles.htm">Create Tableau Maps from Spatial Files</a>
 on the support page.</p>
-<p>In this section, we will create a choropleth map of healthcare spending per country as a percentage of their gross domestic product (GDP), as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-final">8.41</a>. Remember that choropleth maps work best when we <a href="normalize-choropleth.html">normalize the data</a> to show relative, rather than absolute, numbers. Creating a map of total health spending per country would not be very meaningful, as larger nations tend to have larger economies, so we’ll base our map on the percentage of their economy that is spent on healthcare.</p>
+<p>In this section, we will create a choropleth map of healthcare spending per country as a percentage of their gross domestic product (GDP), as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-final">8.36</a>. Remember that choropleth maps work best when we <a href="normalize-choropleth.html">normalize the data</a> to show relative, rather than absolute, numbers. Creating a map of total health spending per country would not be very meaningful, as larger nations tend to have larger economies, so we’ll base our map on the percentage of their economy that is spent on healthcare.</p>
 <p>Before we start, you should obtain and install the <a href="https://public.tableau.com/en-us/s/download">free Tableau Public desktop application</a> if you don’t have it yet. It is available for Mac or Windows. You will need to enter an email address to download the application.</p>
 
 <div class="figure"><span id="fig:tableau-polygon-final"></span>
 <iframe src="https://public.tableau.com/views/2017HealthcareSpendingbyCountryasofGDP/Dashboard1?:showVizHome=no&amp;:embed=true" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 8.41: Choropleth map of healthcare spending with Tableau Public. Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1">interactive version</a>. Data from the World Bank.
+Figure 8.36: Choropleth map of healthcare spending with Tableau Public. Explore the <a href="https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1">interactive version</a>. Data from the World Bank.
 </p>
 </div>
-<p>Let’s look at the steps involved to create a choropleth from Figure <a href="map-tableau.html#fig:tableau-polygon-final">8.41</a> in detail.</p>
+<p>Let’s look at the steps involved to create a choropleth from Figure <a href="map-tableau.html#fig:tableau-polygon-final">8.36</a> in detail.</p>
 <ol style="list-style-type: decimal">
 <li>Open the <a href="https://docs.google.com/spreadsheets/d/1tr9VrqKnO5tf55_YUCk441bFsZSI4zgMzW5ow3-wioo/edit#gid=490588019">Healthcare Spending by Nation as Percent of GDP data in Google Sheets</a>, which we downloaded from the <a href="https://databank.worldbank.org/source/world-development-indicators">World Bank</a>. Examine the data and the notes.</li>
 </ol>
@@ -366,89 +365,89 @@ Figure 8.41: Choropleth map of healthcare spending with Tableau Public. Explore 
 </ol>
 <p>Note: Tableau lets you access data directly from Google Sheets that live in your Drive using <em>Connect &gt; To a Server</em> option. So instead of downloading a CSV file in step 2, you could have made a copy of the sheet, and connected to it directly.</p>
 <ol start="4" style="list-style-type: decimal">
-<li>In the <em>Data Source</em> screen, inspect the dataset, which contains three columns: Country Name, Country Code, and Health Spending As % of GDP. Notice that a small globe appears at the top of the Country Name and Country Code columns, which shows that Tableau Public successfully recognized these as geographic data, rather than string or text data. Sometimes Tableau does not recognize location data automatically, so you need to manually change the data type. To do so, click the data type icon (e.g. globe or a green <code>#</code> for numeric values), and then choose <em>Geographic Role &gt; Country/Region</em> as shown in Figure <a href="map-tableau.html#fig:tableau-data-geographic">8.42</a>.</li>
+<li>In the <em>Data Source</em> screen, inspect the dataset, which contains three columns: Country Name, Country Code, and Health Spending As % of GDP. Notice that a small globe appears at the top of the Country Name and Country Code columns, which shows that Tableau Public successfully recognized these as geographic data, rather than string or text data. Sometimes Tableau does not recognize location data automatically, so you need to manually change the data type. To do so, click the data type icon (e.g. globe or a green <code>#</code> for numeric values), and then choose <em>Geographic Role &gt; Country/Region</em> as shown in Figure <a href="map-tableau.html#fig:tableau-data-geographic">8.37</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-data-geographic"></span>
 <img src="images/08-map/tableau-data-geographic.png" alt="Make sure Tableau Public knows that the Country Name column contains geographic data." width="400" />
 <p class="caption">
-Figure 8.42: Make sure Tableau Public knows that the Country Name column contains geographic data.
+Figure 8.37: Make sure Tableau Public knows that the Country Name column contains geographic data.
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>In the bottom-left corner, click the orange <em>Sheet 1</em> button to create a worksheet with your first visualization, as shown in Figure <a href="map-tableau.html#fig:tableau-go-to-worksheet">8.43</a>.</li>
+<li>In the bottom-left corner, click the orange <em>Sheet 1</em> button to create a worksheet with your first visualization, as shown in Figure <a href="map-tableau.html#fig:tableau-go-to-worksheet">8.38</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-go-to-worksheet"></span>
 <img src="images/08-map/tableau-go-to-worksheet.png" alt="Click the orange button to go sheet 1 where you can create your map." width="400" />
 <p class="caption">
-Figure 8.43: Click the orange button to go sheet 1 where you can create your map.
+Figure 8.38: Click the orange button to go sheet 1 where you can create your map.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
-<li>In <em>Sheet 1</em>, create your choropleth map using a two-step process, as shown in Figure <a href="map-tableau.html#fig:tableau-drag">8.44</a>. First, drag-and-drop the <em>Country Name</em> field into the middle of the worksheet (alternatively to the Detail box of the Marks card) to create the map. The default view is the symbol map, which we need to replace with a polygon map. To add colored polygons, drag-and-drop the <em>Health Spending As % of GDP</em> field into the <em>Color</em> box of the <em>Marks</em> card to transform it into a choropleth map.</li>
+<li>In <em>Sheet 1</em>, create your choropleth map using a two-step process, as shown in Figure <a href="map-tableau.html#fig:tableau-drag">8.39</a>. First, drag-and-drop the <em>Country Name</em> field into the middle of the worksheet (alternatively to the Detail box of the Marks card) to create the map. The default view is the symbol map, which we need to replace with a polygon map. To add colored polygons, drag-and-drop the <em>Health Spending As % of GDP</em> field into the <em>Color</em> box of the <em>Marks</em> card to transform it into a choropleth map.</li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-drag"></span>
 <img src="images/08-map/tableau-drag-annotated.png" alt="Drag and drop Country Name to the center of the sheet, then Health Spending As % of GDP to the Color box in the Marks card."  />
 <p class="caption">
-Figure 8.44: Drag and drop <em>Country Name</em> to the center of the sheet, then <em>Health Spending As % of GDP</em> to the <em>Color</em> box in the <em>Marks</em> card.
+Figure 8.39: Drag and drop <em>Country Name</em> to the center of the sheet, then <em>Health Spending As % of GDP</em> to the <em>Color</em> box in the <em>Marks</em> card.
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
 <li><p>Tableau Public may hide the map legend behind the <em>Show Me</em> menu in the upper-right corner, so click the menu to shrink it and display your legend.</p></li>
 <li><p>You can change the color palette by clicking the Color box of the Marks card, and
 then <em>Edit colors</em>. Change the palette to <em>Green</em>, and change it from continuous to steps,
-as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-color">8.45</a>.</p></li>
+as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-color">8.40</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-polygon-color"></span>
 <img src="images/08-map/tableau-polygon-color.png" alt="Change the color scheme to Green with 5 steps." width="400" />
 <p class="caption">
-Figure 8.45: Change the color scheme to Green with 5 steps.
+Figure 8.40: Change the color scheme to Green with 5 steps.
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>When you hover over countries, you will notice a tooltip that tells you the name of the country and gives you the percent value. It is generally well-formatted as our initial data table had proper column headers. But we can make the toolitp even better. Click the Tooltip box of the Marks card, change the first instance of <code>Country Name</code> to just <code>Country</code> (do not change the grayed-out text inside <code>&lt;</code> and <code>&gt;</code> as these are variable names), and add a <code>%</code> sign at the end of the second row, as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-tooltip">8.46</a>.</li>
+<li>When you hover over countries, you will notice a tooltip that tells you the name of the country and gives you the percent value. It is generally well-formatted as our initial data table had proper column headers. But we can make the toolitp even better. Click the Tooltip box of the Marks card, change the first instance of <code>Country Name</code> to just <code>Country</code> (do not change the grayed-out text inside <code>&lt;</code> and <code>&gt;</code> as these are variable names), and add a <code>%</code> sign at the end of the second row, as shown in Figure <a href="map-tableau.html#fig:tableau-polygon-tooltip">8.41</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-polygon-tooltip"></span>
 <img src="images/08-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
-Figure 8.46: Change tooltip text to make it more user-friendly.
+Figure 8.41: Change tooltip text to make it more user-friendly.
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
 <li><p>Let’s make our map title more meaningful. Double-click the default <em>Sheet 1</em> name just above the map
 to bring up the <em>Edit Title</em> window, and change the name of your chart to
 <em>2017 Healthcare Spending by Country as % of GDP</em>.</p></li>
-<li><p>At this point the data is loaded and should be displayed correctly, so we are going to create the final layout that include map’s title and credits, the legend, and is appropriate for sharing. At the bottom-left of the program, create a <em>New Dashboard</em>, as shown in Figure <a href="map-tableau.html#fig:tableau-dashboard-create">8.47</a>. Dashboards in Tableau are layouts that can contain visualizations from multiple sheets, as well as text boxes, images, and other elements, creating rich exploratory interfaces. In this tutorial, we will stick to just a single sheet that contains our choropleth map.</p></li>
+<li><p>At this point the data is loaded and should be displayed correctly, so we are going to create the final layout that include map’s title and credits, the legend, and is appropriate for sharing. At the bottom-left of the program, create a <em>New Dashboard</em>, as shown in Figure <a href="map-tableau.html#fig:tableau-dashboard-create">8.42</a>. Dashboards in Tableau are layouts that can contain visualizations from multiple sheets, as well as text boxes, images, and other elements, creating rich exploratory interfaces. In this tutorial, we will stick to just a single sheet that contains our choropleth map.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-dashboard-create"></span>
 <img src="images/08-map/tableau-dashboard-create-annotated.png" alt="Before you publish the map, create a new dashboard to finalize your layout." width="400" />
 <p class="caption">
-Figure 8.47: Before you publish the map, create a new dashboard to finalize your layout.
+Figure 8.42: Before you publish the map, create a new dashboard to finalize your layout.
 </p>
 </div>
 <ol start="12" style="list-style-type: decimal">
-<li>In your Dashboard 1 tab, change the size of the dashboard to Automatic so that the map is responsive and occupies 100% of the width on all devices. Drag and drop Sheet 1 to the <em>Drop sheets here</em> area, as shown in Figure <a href="map-tableau.html#fig:tableau-dashboard">8.48</a>. This will copy the map, the title, and the legend from Sheet 1.</li>
+<li>In your Dashboard 1 tab, change the size of the dashboard to Automatic so that the map is responsive and occupies 100% of the width on all devices. Drag and drop Sheet 1 to the <em>Drop sheets here</em> area, as shown in Figure <a href="map-tableau.html#fig:tableau-dashboard">8.43</a>. This will copy the map, the title, and the legend from Sheet 1.</li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-dashboard"></span>
 <img src="images/08-map/tableau-dashboard-annotated.png" alt="To create a responsive dashboard, change the Size to Automatic." width="400" />
 <p class="caption">
-Figure 8.48: To create a responsive dashboard, change the Size to Automatic.
+Figure 8.43: To create a responsive dashboard, change the Size to Automatic.
 </p>
 </div>
 <ol start="13" style="list-style-type: decimal">
-<li>Right-click the upper part of the map legend, and select <em>Floating</em>, as shown in Figure <a href="map-tableau.html#fig:tableau-dashboard-legend">8.49</a>. Now you are able to place your legend directly on top of the map to save space. Drag and drop it to one of the map’s corners.</li>
+<li>Right-click the upper part of the map legend, and select <em>Floating</em>, as shown in Figure <a href="map-tableau.html#fig:tableau-dashboard-legend">8.44</a>. Now you are able to place your legend directly on top of the map to save space. Drag and drop it to one of the map’s corners.</li>
 </ol>
 
 <div class="figure"><span id="fig:tableau-dashboard-legend"></span>
 <img src="images/08-map/tableau-dashboard-legend.png" alt="To place the legend on top of the map, make sure it is floating." width="400" />
 <p class="caption">
-Figure 8.49: To place the legend on top of the map, make sure it is floating.
+Figure 8.44: To place the legend on top of the map, make sure it is floating.
 </p>
 </div>
 <ol start="14" style="list-style-type: decimal">

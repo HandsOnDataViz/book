@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,7 +227,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -353,14 +352,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>An animated GIF file is a series of static images that captures motion on the screen. You can insert an animated GIF on a web page to illustrate a short sequence of steps while using an interactive visualization, but audiences cannot interact with it, other than to play the animated loop over again. Paid software tools such as <a href="https://www.techsmith.com/screen-capture.html">Snagit</a> allow you to create screenshots including drop-down menus and cursors, animated GIFs, and more.</p>
 <p>By contrast, <em>interactive</em> visualizations allow audiences to directly engage with your data story through their web browsers. Visitors usually can float their cursor over a chart to view tooltips or underlying information, or zoom into a map and pan around, or search terms or sort columns in an interactive table. Interactive visualizations are usually hosted online, such as a chart or map tool platform, and are primarily designed to be viewed online, though in some cases it’s possible for you to download and interact with them on your local computer.</p>
 <p>Now let’s turn to the central question: how can we make an interactive visualization, which resides on its online host (the primary site), appear seamlessly on a different website that we control (the secondary site)?. While it’s possible to insert a link on our secondary site to the charts or maps on the primary site, that’s inconvenient for our audiences because it requires them to click away from the web page they were reading. A better solution is to insert an embed code that usually contains an <a href="https://www.w3schools.com/tags/tag_iframe.asp">iframe tag</a>, written in Hypertext Markup Language (HTML), the code that displays content inside our web browsers. While you don’t need any coding experience, you’ll benefit in the long run by learning how to recognize the core features of an embed code and how it works.</p>
-<p>In its simplest form, an iframe instructs the secondary site to display a web page address from the primary site, known as the source, as if it were a seamless picture frame on the wall of a room. The sample iframe code below begins with a start tag <code>&lt;iframe ... &gt;</code>, which contains the source <code>src='https://...'</code> with either single- or double-quotes around the primary site URL, then concludes with an end tag <code>&lt;/iframe&gt;</code>. This sample iframe refers to an interactive US income inequality chart on the Datawrapper platform, which first appeared in the <a href="introduction.html">Introduction</a> to this book, as shown in Figure <a href="static.html#fig:iframe-sample">10.1</a>.</p>
+<p>In its simplest form, an iframe instructs the secondary site to display a web page address from the primary site, known as the source, as if it were a seamless picture frame on the wall of a room. The sample iframe code below begins with a start tag <code>&lt;iframe ... &gt;</code>, which contains the source <code>src='https://...'</code> with either single- or double-quotes around the primary site URL, then concludes with an end tag <code>&lt;/iframe&gt;</code>. This sample iframe refers to an interactive US income inequality chart on the Datawrapper platform, which first appeared in the <a href="introduction.html">Introduction</a> to this book, as shown in Figure <a href="static.html#fig:iframe-sample">10.2</a>.</p>
 <p><code>&lt;iframe src='https://https://datawrapper.dwcdn.net/LtRbj/'&gt;&lt;/iframe&gt;</code></p>
 
 <div class="figure"><span id="fig:iframe-sample"></span>
 <iframe src="https://datawrapper.dwcdn.net/LtRbj/" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure 10.1: Depending on the format of your book, if a static chart appears above, but you can also <a href="https://datawrapper.dwcdn.net/LtRbj/">view the interactive version</a>.
+Figure 10.2: Depending on the format of your book, if a static chart appears above, but you can also <a href="https://datawrapper.dwcdn.net/LtRbj/">view the interactive version</a>.
 </p>
 </div>
 <p>Sometimes embed codes or their iframe tags are <em>much longer</em> than the simple example above. For example, an iframe tag might include other attributes, such as <code>width</code> or <code>height</code>, measured in pixels (<code>px</code>) or a percentage of its dimensions on the secondary site. Also, you may see other iframe tag elements, such as <code>seamless</code> or <code>frameborder="0"</code> or <code>scrolling="no"</code>, which create a seamless appearance between the iframe content and its surroundings. Finally, you may see <em>really long</em> embed codes that contain a dozen or more lines of code that even we don’t fully understand. That’s okay, because all of these are optional add-ons to improve the appearance of the iframe in the secondary site. The most essential ingredient of an embed code is the iframe and its three core parts: the iframe start tag, source web address, and end tag. When in doubt, look for those key ingredients.</p>

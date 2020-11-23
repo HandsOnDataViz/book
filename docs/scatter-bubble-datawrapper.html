@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,7 +227,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -349,12 +348,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In this section, you’ll learn why and how to create a scatter chart and a bubble chart in Datawrapper. Be sure to read about the <a href="chart-datawrapper.html">pros and cons of designing charts with Datawrapper in the prior section</a>.</p>
 <div id="scatter-charts" class="section level3 unnumbered" number="">
 <h3>Scatter Charts</h3>
-<p>A scatter chart is best to show the relationship between two sets of data as XY coordinates on a grid. Imagine you wish to compare life expectancy and fertility data for different nations. Organize your data in three columns, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:scatter-data">7.41</a>. The first column contains the <em>Country</em> labels, and the second column, <em>Life Expectancy</em>, will appear on the horizontal x-axis, while the third column, <em>Fertility</em>, will appear on the vertical y-axis. Now you can easily create a scatter chart that displays a relationship between these datasets, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:scatter">7.42</a>. One way to summarize the chart is that nations with lower fertility rates (or fewer births per woman) tend to have high life expectancy rates. But another way to phrase it is that nations with higher life expectancy at birth have lower fertility. Remember that correlation is not causation, so you cannot use this chart to argue that fewer births produce longer lives, or that longer-living females create fewer children.</p>
+<p>A scatter chart is best to show the relationship between two sets of data as XY coordinates on a grid. Imagine you wish to compare life expectancy and fertility data for different nations. Organize your data in three columns, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:scatter-data">7.43</a>. The first column contains the <em>Country</em> labels, and the second column, <em>Life Expectancy</em>, will appear on the horizontal x-axis, while the third column, <em>Fertility</em>, will appear on the vertical y-axis. Now you can easily create a scatter chart that displays a relationship between these datasets, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:scatter">7.44</a>. One way to summarize the chart is that nations with lower fertility rates (or fewer births per woman) tend to have high life expectancy rates. But another way to phrase it is that nations with higher life expectancy at birth have lower fertility. Remember that correlation is not causation, so you cannot use this chart to argue that fewer births produce longer lives, or that longer-living females create fewer children.</p>
 
 <div class="figure"><span id="fig:scatter-data"></span>
 <img src="images/07-chart/scatter-data.png" alt="To create a scatter chart in Datawrapper, format data in three columns: labels, x-values, and y-values." width="350" />
 <p class="caption">
-Figure 7.41: To create a scatter chart in Datawrapper, format data in three columns: labels, x-values, and y-values.
+Figure 7.43: To create a scatter chart in Datawrapper, format data in three columns: labels, x-values, and y-values.
 </p>
 </div>
 
@@ -362,7 +361,7 @@ Figure 7.41: To create a scatter chart in Datawrapper, format data in three colu
 <iframe src="https://datawrapper.dwcdn.net/8OQz7/1/" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure 7.42: Scatter chart: Explore the <a href="https://datawrapper.dwcdn.net/8OQz7/1/">interactive version</a>. Data from the <a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/">World Bank</a>.
+Figure 7.44: Scatter chart: Explore the <a href="https://datawrapper.dwcdn.net/8OQz7/1/">interactive version</a>. Data from the <a href="https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/">World Bank</a>.
 </p>
 </div>
 <p>Create your own interactive scatter chart in Datawrapper, and edit the tooltips to properly display your data:</p>
@@ -372,23 +371,23 @@ Figure 7.42: Scatter chart: Explore the <a href="https://datawrapper.dwcdn.net/8
 <li><p>In the Datawrapper <em>Upload Data</em> screen, either copy and paste the link to the data tab of the Google Sheet above, or copy and directly paste in the data. Click <em>Proceed</em>.</p></li>
 <li><p>In the <em>Check and Describe</em> screen, inspect your data and make sure that the <em>Life Expectancy</em> and <em>Fertility</em> columns are blue, which indicates numeric data. Click <em>Proceed</em>.</p></li>
 <li><p>In the <em>Visualize</em> screen, under the <em>Chart type</em> tab, select <em>Scatter Plot</em>. Float your cursor over the scatter chart that appears in the right-hand window, and you’ll notice that we still need to edit the tooltips to properly display data for each point.</p></li>
-<li><p>In the <em>Visualize</em> screen, under the <em>Annotate</em> tab, scroll down to <em>Customize tooltip</em>, and click <em>edit tooltip template</em>. In the <em>Customize tooltip HTML</em> window, click inside the <em>Title</em> field and click on the blue column name <em>Country</em> to add it there. The <em>Title</em> field now appears as <code>{{ Country }}</code>, which means that the proper country name will appear in the tooltip when you hover over each point. In addition, click inside the <em>Body</em> field, type <code>Life expectancy:</code>, then click the blue column with the same name to add it, so that <code>{{ Life_expectancy }}</code> appears after it. Press <em>return</em> twice on your keyboard, then type <code>Fertility:</code> and click on the blue column with the same name to add it, so that <code>{{ Fertility }}</code> appears right after it, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:scatter-tooltip-editor">7.43</a>. Press <em>Save</em> to close the tooltip editor window.</p></li>
+<li><p>In the <em>Visualize</em> screen, under the <em>Annotate</em> tab, scroll down to <em>Customize tooltip</em>, and click <em>edit tooltip template</em>. In the <em>Customize tooltip HTML</em> window, click inside the <em>Title</em> field and click on the blue column name <em>Country</em> to add it there. The <em>Title</em> field now appears as <code>{{ Country }}</code>, which means that the proper country name will appear in the tooltip when you hover over each point. In addition, click inside the <em>Body</em> field, type <code>Life expectancy:</code>, then click the blue column with the same name to add it, so that <code>{{ Life_expectancy }}</code> appears after it. Press <em>return</em> twice on your keyboard, then type <code>Fertility:</code> and click on the blue column with the same name to add it, so that <code>{{ Fertility }}</code> appears right after it, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:scatter-tooltip-editor">7.45</a>. Press <em>Save</em> to close the tooltip editor window.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:scatter-tooltip-editor"></span>
 <img src="images/07-chart/scatter-tooltip-editor.png" alt="In the tooltip editor window, type and click column headers to customize the display."  />
 <p class="caption">
-Figure 7.43: In the tooltip editor window, type and click column headers to customize the display.
+Figure 7.45: In the tooltip editor window, type and click column headers to customize the display.
 </p>
 </div>
 <ol start="7" style="list-style-type: decimal">
-<li>Back in the <em>Visualize</em> screen, when you hover your cursor over a point, the tooltip will properly display its data according to your editor settings above, as shown in Figure Figure <a href="scatter-bubble-datawrapper.html#fig:scatter-tooltip">7.44</a>.</li>
+<li>Back in the <em>Visualize</em> screen, when you hover your cursor over a point, the tooltip will properly display its data according to your editor settings above, as shown in Figure Figure <a href="scatter-bubble-datawrapper.html#fig:scatter-tooltip">7.46</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:scatter-tooltip"></span>
 <img src="images/07-chart/scatter-tooltip.png" alt="Hover over a data point to inspect the edited tooltip display." width="400" />
 <p class="caption">
-Figure 7.44: Hover over a data point to inspect the edited tooltip display.
+Figure 7.46: Hover over a data point to inspect the edited tooltip display.
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
@@ -397,12 +396,12 @@ Figure 7.44: Hover over a data point to inspect the edited tooltip display.
 </div>
 <div id="bubble-charts" class="section level3 unnumbered" number="">
 <h3>Bubble Charts</h3>
-<p>In your scatter chart above, you learned how to visualize the relationship between two datasets: life expectancy (the X-axis coordinate) and fertility (the Y-axis coordinate). Now let’s expand on this concept by creating a bubble chart that adds two more datasets: population (shown by the size of each point, or bubble) and region of the world (shown by the color of each bubble). We’ll use similar World Bank data as before, with two additional columns, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:bubble-data">7.45</a>. Note that we’re using numeric data (population) for bubble size, but categorical data (regions) for color. Now you can easily create a bubble chart that displays a relationship between these four datasets, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:bubble">7.46</a>.</p>
+<p>In your scatter chart above, you learned how to visualize the relationship between two datasets: life expectancy (the X-axis coordinate) and fertility (the Y-axis coordinate). Now let’s expand on this concept by creating a bubble chart that adds two more datasets: population (shown by the size of each point, or bubble) and region of the world (shown by the color of each bubble). We’ll use similar World Bank data as before, with two additional columns, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:bubble-data">7.47</a>. Note that we’re using numeric data (population) for bubble size, but categorical data (regions) for color. Now you can easily create a bubble chart that displays a relationship between these four datasets, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:bubble">7.48</a>.</p>
 
 <div class="figure"><span id="fig:bubble-data"></span>
 <img src="images/07-chart/bubble-data.png" alt="To create a bubble chart in Datawrapper, organize the data into five columns: labels, x-axis, y-axis, bubble size, bubble color." width="500" />
 <p class="caption">
-Figure 7.45: To create a bubble chart in Datawrapper, organize the data into five columns: labels, x-axis, y-axis, bubble size, bubble color.
+Figure 7.47: To create a bubble chart in Datawrapper, organize the data into five columns: labels, x-axis, y-axis, bubble size, bubble color.
 </p>
 </div>
 
@@ -410,7 +409,7 @@ Figure 7.45: To create a bubble chart in Datawrapper, organize the data into fiv
 <iframe src="https://datawrapper.dwcdn.net/ZX9QR/2/" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure 7.46: Bubble chart: Explore the <a href="https://datawrapper.dwcdn.net/ZX9QR/2/">interactive version</a>. Data from the <a href="https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg">World Bank</a>.
+Figure 7.48: Bubble chart: Explore the <a href="https://datawrapper.dwcdn.net/ZX9QR/2/">interactive version</a>. Data from the <a href="https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg">World Bank</a>.
 </p>
 </div>
 <p>Create your own interactive bubble chart in Datawrapper, and edit the tooltips, bubble sizes, and colors to display your data:</p>
@@ -418,23 +417,23 @@ Figure 7.46: Bubble chart: Explore the <a href="https://datawrapper.dwcdn.net/ZX
 <li><p>Open our <a href="https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg/edit#gid=0">Scatter Chart sample data in Google Sheets</a>, or use your own data in a similar format.</p></li>
 <li><p>Open <a href="https://datawrapper.de">Datawrapper</a> and click to start a new chart.</p></li>
 <li><p>Follow steps 3-5 above to upload, check, and visualize the data as a <em>Scatter Plot</em> chart type.</p></li>
-<li><p>In the <em>Visualize</em> screen, under the <em>Annotate</em> tab, scroll down to <em>Customize tooltip</em>, and click <em>edit tooltip template</em>. In the <em>Customize tooltip HTML</em> window, type in the fields and click on the blue column names to customize your tooltips to display country, life expectancy, fertility, and population, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:bubble-tooltip-editor">7.47</a>. Press <em>Save</em> to close the tooltip editor window.</p></li>
+<li><p>In the <em>Visualize</em> screen, under the <em>Annotate</em> tab, scroll down to <em>Customize tooltip</em>, and click <em>edit tooltip template</em>. In the <em>Customize tooltip HTML</em> window, type in the fields and click on the blue column names to customize your tooltips to display country, life expectancy, fertility, and population, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:bubble-tooltip-editor">7.49</a>. Press <em>Save</em> to close the tooltip editor window.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:bubble-tooltip-editor"></span>
 <img src="images/07-chart/bubble-tooltip-editor.png" alt="In the tooltip editor window, type and click column headers to customize the display."  />
 <p class="caption">
-Figure 7.47: In the tooltip editor window, type and click column headers to customize the display.
+Figure 7.49: In the tooltip editor window, type and click column headers to customize the display.
 </p>
 </div>
 <ol start="5" style="list-style-type: decimal">
-<li>Back in the <em>Visualize</em> screen, under the <em>Refine</em> tab, scroll down to <em>Color</em>, select column for <em>Region</em>, and click the <em>customize colors</em> button to assign a unique color to each. Then scroll down to <em>Size</em>, check the box to change size to <em>variable</em>, select column for <em>Population</em>, and increase the max size slider, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:bubble-color-size">7.48</a>. Click <em>Proceed</em>.</li>
+<li>Back in the <em>Visualize</em> screen, under the <em>Refine</em> tab, scroll down to <em>Color</em>, select column for <em>Region</em>, and click the <em>customize colors</em> button to assign a unique color to each. Then scroll down to <em>Size</em>, check the box to change size to <em>variable</em>, select column for <em>Population</em>, and increase the max size slider, as shown in Figure <a href="scatter-bubble-datawrapper.html#fig:bubble-color-size">7.50</a>. Click <em>Proceed</em>.</li>
 </ol>
 
 <div class="figure"><span id="fig:bubble-color-size"></span>
 <img src="images/07-chart/bubble-color-size.png" alt="In the Visualize screen, modify the bubble colors and set size to variable." width="350" />
 <p class="caption">
-Figure 7.48: In the <em>Visualize</em> screen, modify the bubble colors and set size to variable.
+Figure 7.50: In the <em>Visualize</em> screen, modify the bubble colors and set size to variable.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">

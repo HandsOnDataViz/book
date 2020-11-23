@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,7 +227,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -343,12 +342,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="range-datawrapper" class="section level2 unnumbered" number="">
 <h2>- Range Charts</h2>
-<p>A range chart (also known as a specific type of dot chart) is best to show gaps between data points, such as inequalities. The line chart above illustrated how the overall US unemployment rate changed over time. But if we wish to look at differences in gender and race/ethnicity for a specific point in time, a range chart will highlight any gaps. Organize the data for a range chart into rows and columns, as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range-data">7.37</a>. The column headers contain data labels you wish to highlight, such <em>Men</em> and <em>Women</em>. The first column contains your categories, such as racial/ethnic groups, followed by the numerical values under each header. Now you can easily create an interactive range chart as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range">7.38</a>. The employment gender gap is visible in all three racial/ethnic groups, but the gap was widest between Hispanic men and women in May 2020.</p>
+<p>A range chart (also known as a specific type of dot chart) is best to show gaps between data points, such as inequalities. The line chart above illustrated how the overall US unemployment rate changed over time. But if we wish to look at differences in gender and race/ethnicity for a specific point in time, a range chart will highlight any gaps. Organize the data for a range chart into rows and columns, as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range-data">7.39</a>. The column headers contain data labels you wish to highlight, such <em>Men</em> and <em>Women</em>. The first column contains your categories, such as racial/ethnic groups, followed by the numerical values under each header. Now you can easily create an interactive range chart as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range">7.40</a>. The employment gender gap is visible in all three racial/ethnic groups, but the gap was widest between Hispanic men and women in May 2020.</p>
 
 <div class="figure"><span id="fig:datawrapper-range-data"></span>
 <img src="images/07-chart/datawrapper-range-data.png" alt="Organize your range chart data labels into column headers, with categories and values in each row." width="300" />
 <p class="caption">
-Figure 7.37: Organize your range chart data labels into column headers, with categories and values in each row.
+Figure 7.39: Organize your range chart data labels into column headers, with categories and values in each row.
 </p>
 </div>
 
@@ -356,7 +355,7 @@ Figure 7.37: Organize your range chart data labels into column headers, with cat
 <iframe src="https://datawrapper.dwcdn.net/v8D2z/1/" width="672" height="400px">
 </iframe>
 <p class="caption">
-Figure 7.38: Range chart: Explore the <a href="https://datawrapper.dwcdn.net/v8D2z/1/">interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0">US Federal Reserve Open Data</a>.
+Figure 7.40: Range chart: Explore the <a href="https://datawrapper.dwcdn.net/v8D2z/1/">interactive version</a>. Data from <a href="https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0">US Federal Reserve Open Data</a>.
 </p>
 </div>
 <p>To create your own range chart with our sample data, follow this tutorial. Since we assume that you’re already familiar with Datawrapper from the previous tutorial on annotated line charts, these steps are abbreviated. So if you get lost, see more details and images above.</p>
@@ -367,23 +366,23 @@ Figure 7.38: Range chart: Explore the <a href="https://datawrapper.dwcdn.net/v8D
 <li><p>In the <em>Check and Describe</em> screen, inspect your data, then click <em>Proceed</em>.</p></li>
 <li><p>In the <em>Visualize</em> screen, Datawrapper will attempt to guess the chart type you desire, based on the data format, but you will need to select <em>Range Plot</em>.</p></li>
 <li><p>Click the <em>Annotate</em> tab near the top-left of the <em>Visualize</em> screen to add a meaningful title, data source, and byline credits.</p></li>
-<li><p>Click the <em>Refine</em> tab of the <em>Visualize</em> screen to modify the range chart appearance. You have several options, but here’s the most important ones in this case. First, in the <em>Labels</em> section, change the visibility of the values from <em>start</em> to <em>both</em>, which places numbers at both ends of each range. Second, push the slider to <em>Label first range</em>, which places the word <em>Men</em> and <em>Women</em> above the first range, as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range-labels">7.39</a>.</p></li>
+<li><p>Click the <em>Refine</em> tab of the <em>Visualize</em> screen to modify the range chart appearance. You have several options, but here’s the most important ones in this case. First, in the <em>Labels</em> section, change the visibility of the values from <em>start</em> to <em>both</em>, which places numbers at both ends of each range. Second, push the slider to <em>Label first range</em>, which places the word <em>Men</em> and <em>Women</em> above the first range, as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range-labels">7.41</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-range-labels"></span>
 <img src="images/07-chart/datawrapper-range-labels.png" alt="Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range."  />
 <p class="caption">
-Figure 7.39: Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range.
+Figure 7.41: Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range.
 </p>
 </div>
 <ol start="8" style="list-style-type: decimal">
-<li>Still in the <em>Refine</em> tab, scroll down to the <em>Appearance</em> section to improve the colors. Select the <em>Range end</em> drop-down menu to select a better color, such as red. Also, change the <em>Range color</em> setting to <em>gradient</em> to emphasize the range, as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range-appearance">7.40</a>.</li>
+<li>Still in the <em>Refine</em> tab, scroll down to the <em>Appearance</em> section to improve the colors. Select the <em>Range end</em> drop-down menu to select a better color, such as red. Also, change the <em>Range color</em> setting to <em>gradient</em> to emphasize the range, as shown in Figure <a href="range-datawrapper.html#fig:datawrapper-range-appearance">7.42</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-range-appearance"></span>
 <img src="images/07-chart/datawrapper-range-appearance.png" alt="Modify the appearance settings to improve the color and add a gradient."  />
 <p class="caption">
-Figure 7.40: Modify the appearance settings to improve the color and add a gradient.
+Figure 7.42: Modify the appearance settings to improve the color and add a gradient.
 </p>
 </div>
 <p>Tip: The <em>Refine</em> tab also includes options to resort or group data rows, change the chart size for different devices, and check visibility for colorblind readers.</p>

@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 20 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 23 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -1078,7 +1078,7 @@ don’t know that they exist.
 <td></td>
 </tr>
 <tr class="even">
-<td>Google My Maps point map maker</td>
+<td>Google My Maps simple map maker</td>
 <td></td>
 <td></td>
 <td></td>
@@ -4710,20 +4710,43 @@ Data Bias](detect.html)
 Figure 7.2: Start your bar chart at zero.
 </p>
 
-But the zero-baseline rule does *not* apply to line charts.
-Visualization expert Alberto Cairo points out that line charts represent
-values through the *position* and *angle* of the line, rather than its
-height or length. Starting a line chart at a number other than zero does
-*not* necessarily distort its encoded information because our eyes rely
-on its shape to determine its meaning, rather than its proximity to the
-baseline.[23] In fact, if you mistakenly force a line chart to begin at
-the zero baseline, you may inadvertently produce a misleading chart, as
-you will learn in the [How to Lie with Charts section of Chapter
-15](how-to-lie-with-charts.html).
+But the zero-baseline rule does *not* apply to line charts. According to
+visualization expert Alberto Cairo, line charts represent values through
+the *position* and *angle* of the line, rather than its height or
+length. Starting a line chart at a number other than zero does *not*
+necessarily distort its encoded information because our eyes rely on its
+shape to determine its meaning, rather than its proximity to the
+baseline.[23] For example, compare both the right and left sides of
+Figure <a href="#fig:design-principles-baseline-comparison">7.3</a>,
+where both are correct.
 
-TODO: Discuss with Ilya about adding a simpler chart comparison to
-demonstrate Cairo’s primary argument, not the secondary argument about
-misleading charts
+<img src="images/07-chart/design-principles-baseline-comparison.png" alt="Since line charts do *not* require a zero baseline, both sides are correct."  />
+<p class="caption">
+Figure 7.3: Since line charts do *not* require a zero baseline, both
+sides are correct.
+</p>
+
+Furthermore, while forcing a line chart to begin at the zero baseline is
+acceptable, it may not produce the best visualization for your data
+story. In Figure
+<a href="#fig:design-principles-baseline-modified">7.4</a>, the left
+side shows a line chart that starts the vertical axis at zero, but as a
+result the line appears very flat at the top of the chart and hides
+changes in values. The right side shows a line chart where the vertical
+axis was reduced to match the range of values, which results in a
+clearer depiction of change. Both sides are technically correct, and in
+this case, the right side is a better fit for the data story. Still, you
+need to be cautious, because as you’ll learn in the [How to Lie with
+Charts section of Chapter 15](how-to-lie-with-charts.html), people can
+mislead us by modifying the vertical axis, and there is no uniform rule
+about where it belongs on a line chart.
+
+<img src="images/07-chart/design-principles-baseline-modified.png" alt="While the line chart with the zero baseline is acceptable, the line chart with a modified baseline more clearly tells a data story about change."  />
+<p class="caption">
+Figure 7.4: While the line chart with the zero baseline is acceptable,
+the line chart with a modified baseline more clearly tells a data story
+about change.
+</p>
 
 #### Pie Charts Represent 100%
 
@@ -4752,7 +4775,7 @@ Start with a white background and add elements as you see appropriate.
 You should be able to justify each element you add. To do so, ask
 yourself: Does this element improve the chart, or can I drop it without
 decreasing readability? This way you won’t end up with so-called “chart
-junk” as shown in Figure <a href="#fig:design-principles-junk">7.3</a>,
+junk” as shown in Figure <a href="#fig:design-principles-junk">7.5</a>,
 which includes 3D perspectives, shadows, and unnecessary elements. They
 might have looked cool in early versions of Microsoft Office, but let’s
 stay away from them today. Chart junk distracts the viewer and reduces
@@ -4761,7 +4784,7 @@ doesn’t add credibility to you as a storyteller.
 
 <img src="images/07-chart/design-principles-junk.png" alt="Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements."  />
 <p class="caption">
-Figure 7.3: Chart junk distracts the viewer, so stay away from shadows,
+Figure 7.5: Chart junk distracts the viewer, so stay away from shadows,
 3D perspectives, unnecessary colors and other fancy elements.
 </p>
 
@@ -4782,22 +4805,22 @@ scatterplot with varying shapes and/or colors.
 Remember that pie charts only show part-to-whole relationship, so all
 slices need to add up to 100%. Generally, the fewer slices—the better.
 Arrange slices from largest to smallest, clockwise, and put the largest
-slice at 12 o’clock. Figure <a href="#fig:design-principles-pie">7.4</a>
+slice at 12 o’clock. Figure <a href="#fig:design-principles-pie">7.6</a>
 illustrates that.
 
 <img src="images/07-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o'clock."  />
 <p class="caption">
-Figure 7.4: Sort slices in pie charts from largest to smallest, and
+Figure 7.6: Sort slices in pie charts from largest to smallest, and
 start at 12 o’clock.
 </p>
 
 If your pie chart has more than five slices, consider showing your data
 in a bar chart, either stacked or split, like Figure
-<a href="#fig:design-principles-pie-to-bar">7.5</a> shows.
+<a href="#fig:design-principles-pie-to-bar">7.7</a> shows.
 
 <img src="images/07-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
 <p class="caption">
-Figure 7.5: Consider using bar charts instead of pies.
+Figure 7.7: Consider using bar charts instead of pies.
 </p>
 
 #### Don’t make people turn their heads to read labels
@@ -4805,19 +4828,19 @@ Figure 7.5: Consider using bar charts instead of pies.
 When your column chart has long x-axis labels that have to be rotated
 (often 90 degrees) to fit, consider turning the chart 90 degrees so that
 it becomes a horizontal bar chart. Take a look at Figure
-<a href="#fig:design-principles-turn-bar">7.6</a> to see how much easier
+<a href="#fig:design-principles-turn-bar">7.8</a> to see how much easier
 it is to read horizontally-oriented labels.
 
 <img src="images/07-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 7.6: For long labels, use horizontal bar charts.
+Figure 7.8: For long labels, use horizontal bar charts.
 </p>
 
 #### Arrange elements logically
 
 If your bar chart shows different categories, consider ordering them,
 like is shown in Figure
-<a href="#fig:design-principles-order-categories">7.7</a>. You might
+<a href="#fig:design-principles-order-categories">7.9</a>. You might
 want to sort them alphabetically, which can be useful if you want the
 reader to be able to quickly look up an item, such as their town.
 Ordering categories by value is another common technique that makes
@@ -4826,7 +4849,7 @@ a particular time, they have to be ordered sequentially, of course.
 
 <img src="images/07-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 7.7: For long labels, use horizontal bar charts.
+Figure 7.9: For long labels, use horizontal bar charts.
 </p>
 
 #### Do not overload your chart
@@ -4872,12 +4895,12 @@ yourself:
     don’t expect viewers printing your chart, they may. You can use
     Color Oracle or another simulator to check that your colors have
     different brightness levels and look distinguishable in grayscale.
-    Figure <a href="#fig:design-principles-color">7.8</a> shows some
+    Figure <a href="#fig:design-principles-color">7.10</a> shows some
     good and bad examples of color use.
 
 <img src="images/07-chart/design-principles-color.png" alt="Don't use colors just for the sake of it."  />
 <p class="caption">
-Figure 7.8: Don’t use colors just for the sake of it.
+Figure 7.10: Don’t use colors just for the sake of it.
 </p>
 
 The use of color is a complex topic, and there are plenty of books and
@@ -4889,13 +4912,13 @@ Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
 both on the Datawrapper blog.[24]
 
 If you follow our advice, you should end up with a de-cluttered chart as
-shown in Figure <a href="#fig:design-principles-decluttered">7.9</a>.
+shown in Figure <a href="#fig:design-principles-decluttered">7.11</a>.
 Notice how your eyes are drawn to the bars and their corresponding
 values, not bright colors or secondary components like the axes lines.
 
 <img src="images/07-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
 <p class="caption">
-Figure 7.9: Make sure important things catch the eye first.
+Figure 7.11: Make sure important things catch the eye first.
 </p>
 
 TODO: Compare our rules and recommendations to different dataviz style
@@ -4961,19 +4984,19 @@ A grouped bar or column chart is best to compare categories
 side-by-side. For example, if you wish to emphasize gender differences
 in obesity across age brackets, then format the male and female data
 series together in vertical columns in your Google Sheet, as shown in
-Figure <a href="#fig:column-grouped-data">7.10</a>. Now you can easily
+Figure <a href="#fig:column-grouped-data">7.12</a>. Now you can easily
 create a grouped column chart to displays these data series
-side-by-side, as shown in Figure <a href="#fig:column-grouped">7.11</a>.
+side-by-side, as shown in Figure <a href="#fig:column-grouped">7.13</a>.
 
 <img src="images/07-chart/column-grouped-data.png" alt="To create a grouped bar or column chart, format each data series vertically in Google Sheets." width="400" />
 <p class="caption">
-Figure 7.10: To create a grouped bar or column chart, format each data
+Figure 7.12: To create a grouped bar or column chart, format each data
 series vertically in Google Sheets.
 </p>
 
 <img src="images/07-chart/column-grouped.png" alt="Grouped Column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf)."  />
 <p class="caption">
-Figure 7.11: Grouped Column chart: Explore the [interactive
+Figure 7.13: Grouped Column chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
 Data from
 [StateOfObesity.org](http://stateofobesity.org/files/stateofobesity2016.pdf).
@@ -4987,93 +5010,93 @@ template and follow these steps.
     with US obesity data by gender and age. Sign in to your account, and
     go to *File &gt; Make a Copy* to save a version you can edit to your
     own Google Drive, as shown in Figure
-    <a href="#fig:file-make-copy2">7.12</a>.
+    <a href="#fig:file-make-copy2">7.14</a>.
 
 <img src="images/07-chart/file-make-copy2.png" alt="Make your own copy of the Google Sheet template." width="250px" />
 <p class="caption">
-Figure 7.12: Make your own copy of the Google Sheet template.
+Figure 7.14: Make your own copy of the Google Sheet template.
 </p>
 
 1.  To remove the current chart from your copy of the spreadsheet, float
     your cursor to the top-right corner of the chart to make the 3-dot
     kebab menu appear, and select *Delete*, as shown in Figure
-    <a href="#fig:delete-chart">7.13</a>.
+    <a href="#fig:delete-chart">7.15</a>.
 
 <img src="images/07-chart/delete-chart.png" alt="Float cursor in top-right corner of the chart to make the 3-dot kebab menu appear, and select Delete." width="180px" />
 <p class="caption">
-Figure 7.13: Float cursor in top-right corner of the chart to make the
+Figure 7.15: Float cursor in top-right corner of the chart to make the
 3-dot kebab menu appear, and select Delete.
 </p>
 
 Note: Another name for the 3-dot menu symbol is the “kebab menu” because
 it resembles Middle Eastern food cooked on a skewer, in contrast to the
 three-line “hamburger menu” on many mobile devices, as shown in Figure
-<a href="#fig:menu-hamburger-kebab">7.14</a>. Software developers must
+<a href="#fig:menu-hamburger-kebab">7.16</a>. Software developers must
 be hungry.
 
 <img src="images/07-chart/menu-hamburger-kebab.png" alt="Distinguish between the hamburger verus kebab menu icons."  />
 <p class="caption">
-Figure 7.14: Distinguish between the hamburger verus kebab menu icons.
+Figure 7.16: Distinguish between the hamburger verus kebab menu icons.
 </p>
 
 1.  Format your data to make each column a data series (such as male and
     female), as shown in Figure
-    <a href="#fig:column-grouped-data">7.10</a>, which means it will
+    <a href="#fig:column-grouped-data">7.12</a>, which means it will
     display as a separate color in the chart. Feel free to add more than
     two columns.
 
 2.  Use your cursor to select only the data you wish to chart, then go
     to the *Insert* menu and select *Chart*, as shown in Figure
-    <a href="#fig:column-grouped-insert">7.15</a>.
+    <a href="#fig:column-grouped-insert">7.17</a>.
 
 <img src="images/07-chart/column-grouped-insert.png" alt="Select your data and Insert the Chart." width="250px" />
 <p class="caption">
-Figure 7.15: Select your data and Insert the Chart.
+Figure 7.17: Select your data and Insert the Chart.
 </p>
 
 1.  In the Chart Editor, change the default selection to *Column chart*,
     with *Stacking none*, to display Grouped Columns, as shown in Figure
-    <a href="#fig:column-grouped-editor">7.16</a>. Or select *Horizontal
+    <a href="#fig:column-grouped-editor">7.18</a>. Or select *Horizontal
     bar chart* if you have longer labels.
 
 <img src="images/07-chart/column-grouped-editor.png" alt="Change the default to Column chart, with Stacking none." width="250px" />
 <p class="caption">
-Figure 7.16: Change the default to Column chart, with Stacking none.
+Figure 7.18: Change the default to Column chart, with Stacking none.
 </p>
 
 1.  To customize title, labels, and more, in the Chart Editor select
     *Customize*, as shown in Figure
-    <a href="#fig:chart-editor-customize">7.17</a>. Also, you can select
+    <a href="#fig:chart-editor-customize">7.19</a>. Also, you can select
     the chart and axis titles to edit them.
 
 <img src="images/07-chart/chart-editor-customize.png" alt="Select Customize to edit title, labels, and more." width="250px" />
 <p class="caption">
-Figure 7.17: Select Customize to edit title, labels, and more.
+Figure 7.19: Select Customize to edit title, labels, and more.
 </p>
 
 1.  To make your data public, go to the upper-right corner of your sheet
     to click the Share button, and in the next screen, click the words
     “Change to anyone with the link,” as shown in Figure
-    <a href="#fig:share-button-sheet">7.18</a>. This means your sheet is
+    <a href="#fig:share-button-sheet">7.20</a>. This means your sheet is
     no longer Restricted to only you, but can be viewed by anyone with
     the link. See additional options.
 
 <img src="images/07-chart/share-button-sheet-annotated.png" alt="Click the Share button and then click *Change to anyone with the link* to make your data public." width="350px" />
 <p class="caption">
-Figure 7.18: Click the Share button and then click *Change to anyone
+Figure 7.20: Click the Share button and then click *Change to anyone
 with the link* to make your data public.
 </p>
 
 1.  To embed an interactive version of your chart in another web page,
     click the kebab menu in the upper-right corner of your chart, and
     select Publish Chart, as shown in Figure
-    <a href="#fig:chart-publish">7.19</a>. In the next screen, select
+    <a href="#fig:chart-publish">7.21</a>. In the next screen, select
     Embed and press the Publish button. See [Chapter 10: Embed on the
     Web](embed.html) to learn what to do with the iframe code.
 
 <img src="images/07-chart/chart-publish.png" alt="Select Publish Chart to embed an interactive chart on another web page." width="150" />
 <p class="caption">
-Figure 7.19: Select Publish Chart to embed an interactive chart on
+Figure 7.21: Select Publish Chart to embed an interactive chart on
 another web page.
 </p>
 
@@ -5089,7 +5112,7 @@ applied to all data points from that series.
 
 <img src="images/07-chart/chart-error-bar.png" alt="Google Sheets is very limited when it comes to setting error bars." width="150" />
 <p class="caption">
-Figure 7.20: Google Sheets is very limited when it comes to setting
+Figure 7.22: Google Sheets is very limited when it comes to setting
 error bars.
 </p>
 
@@ -5104,13 +5127,13 @@ A split column (or bar) chart is best to compare categories in separate
 clusters. For example, imagine you wish to emphasize calorie counts for
 selected foods offered at two different restaurants, Starbucks and
 McDonalds. Format the restaurant data in vertical columns in your Google
-Sheet, as shown in Figure <a href="#fig:bar-split-data">7.21</a>. Since
+Sheet, as shown in Figure <a href="#fig:bar-split-data">7.23</a>. Since
 food items are unique to each restaurant, only enter calorie data in the
 appropriate column, and leave other cells blank. Now you can easily
 create a split bar (or column) chart that displays the restaurant data
 in different clusters, as shown in Figure
-<a href="#fig:bar-split">7.22</a>. Unlike the grouped column chart
-previously shown in Figure <a href="#fig:column-grouped">7.11</a>, here
+<a href="#fig:bar-split">7.24</a>. Unlike the grouped column chart
+previously shown in Figure <a href="#fig:column-grouped">7.13</a>, here
 the bars are separated from each other, because we do not wish to draw
 comparisons between food items that are unique to each restaurant. Also,
 our chart displays horizontal bars (not columns) because our some data
@@ -5118,13 +5141,13 @@ labels are long.
 
 <img src="images/07-chart/bar-split-data.png" alt="To create a split bar (or column) chart, format each data series vertically, and leave cells blank where appropriate." width="550" />
 <p class="caption">
-Figure 7.21: To create a split bar (or column) chart, format each data
+Figure 7.23: To create a split bar (or column) chart, format each data
 series vertically, and leave cells blank where appropriate.
 </p>
 
 <img src="images/07-chart/bar-split.png" alt="Split bar chart: Explore the [full-screen interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive). Data from [Starbucks and McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126)."  />
 <p class="caption">
-Figure 7.22: Split bar chart: Explore the [full-screen interactive
+Figure 7.24: Split bar chart: Explore the [full-screen interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkvNNrgYCpNtsaCRxn7g5o4UR8OJXSxBWvUK531t5vYubt39gecV9yLIfic89DCeJnGNvpRttFfKzn/pubchart?oid=787918829&format=interactive).
 Data from [Starbucks and
 McDonalds](https://docs.google.com/spreadsheets/d/1LGUYaVLoRcOiB8KcXb3Rn7LRj0exnUQYOy58LrkGPAk/edit#gid=956322126).
@@ -5143,23 +5166,23 @@ Stacked column (or bar) charts are best to compare subcategories, or
 parts of a whole. For example, if you wish to compare the percentage of
 overweight residents across nations, format each weight-level data
 series in vertical columns in your Google Sheet, as shown in Figure
-<a href="#fig:column-stacked-data">7.23</a>. Now you can easily create a
+<a href="#fig:column-stacked-data">7.25</a>. Now you can easily create a
 stacked column (or bar) chart that displays comparisons of weight-level
 subcategories across nations, as shown in Figure
-<a href="#fig:column-stacked">7.24</a>. Often it’s better to use a
+<a href="#fig:column-stacked">7.26</a>. Often it’s better to use a
 stacked chart instead of multiple pie charts, because people can see
 differences more precisely in rectangular stacks than in circular pie
 slices.
 
 <img src="images/07-chart/column-stacked-data.png" alt="To create a stacked column (or bar) chart, format each data series vertically in Google Sheets." width="450" />
 <p class="caption">
-Figure 7.23: To create a stacked column (or bar) chart, format each data
+Figure 7.25: To create a stacked column (or bar) chart, format each data
 series vertically in Google Sheets.
 </p>
 
 <img src="images/07-chart/column-stacked.png" alt="Stacked column chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive). Data from [WHO and CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691)."  />
 <p class="caption">
-Figure 7.24: Stacked column chart: Explore the [interactive
+Figure 7.26: Stacked column chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSZrCP99EDqmpYc3VxFF5-Fpryh7KOU3GZ39Gl33OmDw4ecWKXxjrfzHDeQKfandKiUwvDkyF6kwK6L/pubchart?oid=307057605&format=interactive).
 Data from [WHO and
 CDC](https://docs.google.com/spreadsheets/d/1WS11EK33JCmvCRzSDh9UpP6R7Z2sHglF7ve5iJL6eZk/edit#gid=735710691).
@@ -5178,11 +5201,11 @@ category in red), click the kebab menu in the top-right corner of the
 chart, then go to *Edit Chart &gt; Customize &gt; Series*. Then choose
 the appropriate series from the dropdown menu, and set its color in the
 dropdown menu, as shown in Figure
-<a href="#fig:column-stacked-edit-series">7.25</a>.
+<a href="#fig:column-stacked-edit-series">7.27</a>.
 
 <img src="images/07-chart/column-stacked-edit-series.png" alt="To edit a column color, select *Edit Chart - Customize - Series*." width="500" />
 <p class="caption">
-Figure 7.25: To edit a column color, select *Edit Chart - Customize -
+Figure 7.27: To edit a column color, select *Edit Chart - Customize -
 Series*.
 </p>
 
@@ -5197,18 +5220,18 @@ frequency patterns. For example, you can shift histogram buckets from
 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. But column (and bar) charts show
 *categorical* data (such as the number of apples, bananas, etc.) so
 their ranges cannot be adjusted. Figure
-<a href="#fig:histogram">7.26</a> shows a histogram of average daily
+<a href="#fig:histogram">7.28</a> shows a histogram of average daily
 calorie consumption in 174 countries in 2006–2008 based on data from the
 [United Nations Food and Agriculture Organization](http://www.fao.org/).
 
 <img src="images/07-chart/histogram.png" alt="Histogram: Explore the full-screen [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive)."  />
 <p class="caption">
-Figure 7.26: Histogram: Explore the full-screen [interactive
+Figure 7.28: Histogram: Explore the full-screen [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive).
 </p>
 
 Histograms are designed to represent distributions, not individual
-values. Figure <a href="#fig:histogram">7.26</a> shows two peaks, one of
+values. Figure <a href="#fig:histogram">7.28</a> shows two peaks, one of
 2,100–2,300 calories and the second one at 2,700-3,100 calories (two
 consecutive buckets). We can also see that daily calorie consumption in
 five countries does not exceed 1,900, and exceeds 3,700 calories in
@@ -5234,15 +5257,15 @@ numbers such as multiples of 5 (5, 10, 15, 20) or 100 (1500, 1600, 1700,
 distribution.
 
 Now, let’s look at how to create the histogram in Figure
-<a href="#fig:histogram">7.26</a> in Google Sheets. Our dataset contains
+<a href="#fig:histogram">7.28</a> in Google Sheets. Our dataset contains
 two columns (*Country* and *Average Daily Calorie Consumption*) and 174
-records, as shown in Figure <a href="#fig:histogram-data">7.27</a>. But
+records, as shown in Figure <a href="#fig:histogram-data">7.29</a>. But
 in reality you only need one column that lists all values to build a
 histogram.
 
 <img src="images/07-chart/histogram-data.png" alt="To create a histogram, you only need one column with numeric values." width="250" />
 <p class="caption">
-Figure 7.27: To create a histogram, you only need one column with
+Figure 7.29: To create a histogram, you only need one column with
 numeric values.
 </p>
 
@@ -5294,21 +5317,21 @@ with this type of chart for reasons explained further below. For
 example, if you wish to show the number of different fruits sold by a
 store in one day, as a proportion of total fruit sold, then format the
 labels and values in vertical columns in your Google Sheet, as shown in
-Figure <a href="#fig:pie-data">7.28</a>. Values can be expressed as
+Figure <a href="#fig:pie-data">7.30</a>. Values can be expressed as
 either raw numbers or percentages. Now you can easily create a pie chart
 that displays these values as colored slices of a circle, as shown in
-Figure <a href="#fig:pie">7.29</a>. Viewers can see that bananas made up
+Figure <a href="#fig:pie">7.31</a>. Viewers can see that bananas made up
 slightly over half of the fruit sold, followed by apples and oranges.
 
 <img src="images/07-chart/pie-data.png" alt="To create a pie chart, format the data values vertically in Google Sheets." width="300" />
 <p class="caption">
-Figure 7.28: To create a pie chart, format the data values vertically in
+Figure 7.30: To create a pie chart, format the data values vertically in
 Google Sheets.
 </p>
 
 <img src="images/07-chart/pie.png" alt="Pie chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive). Data is fictitious."  />
 <p class="caption">
-Figure 7.29: Pie chart: Explore the [interactive
+Figure 7.31: Pie chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vQai8YWkqMOHsiwWXpe1jyhBKy5wW6zcMaEIklkF-598h1QaVBrRR0F9JVrsX2Zo5ihXWP-HlnY-KlE/pubchart?oid=760990456&format=interactive).
 Data is fictitious.
 </p>
@@ -5346,21 +5369,21 @@ century. In your Google Sheet, organize the time units (such as years)
 into the first column, since these will appear on the horizontal X-axis.
 Also, place each data series (such as beef, pork, chicken) alongside the
 vertical time-unit column, and each series will become its own line, as
-shown in Figure <a href="#fig:line-data">7.30</a>. Now you can easily
+shown in Figure <a href="#fig:line-data">7.32</a>. Now you can easily
 create a line chart that emphasizes each data series changed over time,
-as shown in Figure <a href="#fig:line">7.31</a>. In the US, the amount
+as shown in Figure <a href="#fig:line">7.33</a>. In the US, the amount
 of chicken per capita steadily rose and surpassed pork and beef around
 2000.
 
 <img src="images/07-chart/line-data.png" alt="To create a line chart, format the time units and each data series in vertical columns." width="300" />
 <p class="caption">
-Figure 7.30: To create a line chart, format the time units and each data
+Figure 7.32: To create a line chart, format the time units and each data
 series in vertical columns.
 </p>
 
 <img src="images/07-chart/line.png" alt="Line chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive). Data from [US Department of Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing)."  />
 <p class="caption">
-Figure 7.31: Line chart: Explore the [interactive
+Figure 7.33: Line chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vS38EC_34L8gKK9NStS8S322BzvBRbnRNpu9KXQ4oHHpaDmVMBAhEu4SXtCC6CD2yv_V6brX8s386Nf/pubchart?oid=2073830845&format=interactive).
 Data from [US Department of
 Agriculture](https://docs.google.com/spreadsheets/d/1wkWxxZ2-N5hqkcp7in8bxwdEcT1-XMnt1A8qUXxUSjw/edit?usp=sharing).
@@ -5455,16 +5478,16 @@ capita over time. Stacked line charts show both aspects of your data
 simultaneously.
 
 To create a stacked area chart, organize the data in the same way as you
-did for the line chart in Figure <a href="#fig:line-data">7.30</a>. Now
+did for the line chart in Figure <a href="#fig:line-data">7.32</a>. Now
 you can easily create a stacked line chart that displays the
 availability of each meat—and their combined total—over time, as shown
-in Figure <a href="#fig:stacked-area">7.32</a>. Overall, we can see that
+in Figure <a href="#fig:stacked-area">7.34</a>. Overall, we can see that
 total available meat per capita increased after the 1930s Depression,
 and chicken steadily became a larger portion of the total after 1970.
 
 <img src="images/07-chart/stacked-area.png" alt="Stacked area chart: Explore the [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive). Data from [US Department of Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing)."  />
 <p class="caption">
-Figure 7.32: Stacked area chart: Explore the [interactive
+Figure 7.34: Stacked area chart: Explore the [interactive
 version](https://docs.google.com/spreadsheets/d/e/2PACX-1vSotrM_zZDo0MT--JgXwA3nBQudzIwmt8TGwmZxvUxNUzPrfBgqso5glLn05ObJxdTTmKoT_fQWQMx-/pubchart?oid=1976471326&format=interactive).
 Data from [US Department of
 Agriculture](https://docs.google.com/spreadsheets/d/16QR4prVUoztW6bFVyj_q0n8GjNWqkcW6sgAkIyHQIJc/edit?usp=sharing).
@@ -5549,13 +5572,13 @@ above. Place units of time (such as months-years) in the first column,
 and numerical data values (such as the unemployment rate) in the second
 column. Now you’re ready to create an interactive line chart with
 annotations, as shown in Figure
-<a href="#fig:datawrapper-annotated">7.33</a>. Since 2000, the
+<a href="#fig:datawrapper-annotated">7.35</a>. Since 2000, the
 unemployment rate has peaked three times, but the tallest peak occured
 during the 2020 economic crisis during the Covid pandemic.
 
 <img src="images/07-chart/datawrapper-annotated.png" alt="Line chart with annotation: Explore the [interactive version](https://datawrapper.dwcdn.net/vHuob/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972)."  />
 <p class="caption">
-Figure 7.33: Line chart with annotation: Explore the [interactive
+Figure 7.35: Line chart with annotation: Explore the [interactive
 version](https://datawrapper.dwcdn.net/vHuob/1/). Data from [US Federal
 Reserve Open
 Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972).
@@ -5578,7 +5601,7 @@ tutorial:
 3.  In the *Upload Data* screen, click *Import Google Spreadsheet* and
     paste the link to the data in the shared Google Sheet above, as
     shown in Figure
-    <a href="#fig:datawrapper-annotated-upload">7.34</a>, then click
+    <a href="#fig:datawrapper-annotated-upload">7.36</a>, then click
     *Proceed*. To upload a Google Sheet, the Share setting must be
     changed from *Private*, the default setting, to *Anyone with the
     link can view* at minimum. Also, if you update cells in your Google
@@ -5589,7 +5612,7 @@ tutorial:
 
 <img src="images/07-chart/datawrapper-annotated-upload.png" alt="To upload data from a shared Google Sheet, click the button and paste the link." width="550" />
 <p class="caption">
-Figure 7.34: To upload data from a shared Google Sheet, click the button
+Figure 7.36: To upload data from a shared Google Sheet, click the button
 and paste the link.
 </p>
 
@@ -5625,7 +5648,7 @@ does not need to be transposed, since it’s organized correctly.
     section, and click the button to add one to the chart. Type “Great
     Recession” into the text field of your first annotation, and move
     your cursor to place it around the unemployment peak in 2009, as
-    shown in Figure <a href="#fig:datawrapper-annotated-text">7.35</a>.
+    shown in Figure <a href="#fig:datawrapper-annotated-text">7.37</a>.
     This helps readers to place the [Great
     Recession](https://en.wikipedia.org/wiki/Great_Recession_in_the_United_States)
     in historical context. Click to add another text annotation, type
@@ -5638,14 +5661,14 @@ does not need to be transposed, since it’s organized correctly.
 
 <img src="images/07-chart/datawrapper-annotated-text.png" alt="Add text annotations by typing a label and positioning it on the chart."  />
 <p class="caption">
-Figure 7.35: Add text annotations by typing a label and positioning it
+Figure 7.37: Add text annotations by typing a label and positioning it
 on the chart.
 </p>
 
 1.  Scroll down further in the *Annotate* tab to the *Highlight value
     ranges* section, and click the button to add one to the chart. Click
     inside the chart to “draw” a bar from December 2007 to June 2009, as
-    shown in Figure <a href="#fig:datawrapper-annotated-range">7.36</a>.
+    shown in Figure <a href="#fig:datawrapper-annotated-range">7.38</a>.
     This period represents the official beginning and ending of the US
     Great Recession in the eyes of economists, although unemployment
     continued to grow for the population at large. When you finish
@@ -5661,7 +5684,7 @@ on the chart.
 range highlight by”drawing" a rectangular bar on the chart." width=“600”
 /&gt;
 <p class="caption">
-Figure 7.36: Add a range highlight by “drawing” a rectangular bar on the
+Figure 7.38: Add a range highlight by “drawing” a rectangular bar on the
 chart.
 </p>
 
@@ -5693,24 +5716,24 @@ above illustrated how the overall US unemployment rate changed over
 time. But if we wish to look at differences in gender and race/ethnicity
 for a specific point in time, a range chart will highlight any gaps.
 Organize the data for a range chart into rows and columns, as shown in
-Figure <a href="#fig:datawrapper-range-data">7.37</a>. The column
+Figure <a href="#fig:datawrapper-range-data">7.39</a>. The column
 headers contain data labels you wish to highlight, such *Men* and
 *Women*. The first column contains your categories, such as
 racial/ethnic groups, followed by the numerical values under each
 header. Now you can easily create an interactive range chart as shown in
-Figure <a href="#fig:datawrapper-range">7.38</a>. The employment gender
+Figure <a href="#fig:datawrapper-range">7.40</a>. The employment gender
 gap is visible in all three racial/ethnic groups, but the gap was widest
 between Hispanic men and women in May 2020.
 
 <img src="images/07-chart/datawrapper-range-data.png" alt="Organize your range chart data labels into column headers, with categories and values in each row." width="300" />
 <p class="caption">
-Figure 7.37: Organize your range chart data labels into column headers,
+Figure 7.39: Organize your range chart data labels into column headers,
 with categories and values in each row.
 </p>
 
 <img src="images/07-chart/datawrapper-range.png" alt="Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/v8D2z/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0)."  />
 <p class="caption">
-Figure 7.38: Range chart: Explore the [interactive
+Figure 7.40: Range chart: Explore the [interactive
 version](https://datawrapper.dwcdn.net/v8D2z/1/). Data from [US Federal
 Reserve Open
 Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
@@ -5756,11 +5779,11 @@ abbreviated. So if you get lost, see more details and images above.
     numbers at both ends of each range. Second, push the slider to
     *Label first range*, which places the word *Men* and *Women* above
     the first range, as shown in Figure
-    <a href="#fig:datawrapper-range-labels">7.39</a>.
+    <a href="#fig:datawrapper-range-labels">7.41</a>.
 
 <img src="images/07-chart/datawrapper-range-labels.png" alt="Modify the labels settings to show values at both ends of each range, and to place your data labels on your first range."  />
 <p class="caption">
-Figure 7.39: Modify the labels settings to show values at both ends of
+Figure 7.41: Modify the labels settings to show values at both ends of
 each range, and to place your data labels on your first range.
 </p>
 
@@ -5768,11 +5791,11 @@ each range, and to place your data labels on your first range.
     to improve the colors. Select the *Range end* drop-down menu to
     select a better color, such as red. Also, change the *Range color*
     setting to *gradient* to emphasize the range, as shown in Figure
-    <a href="#fig:datawrapper-range-appearance">7.40</a>.
+    <a href="#fig:datawrapper-range-appearance">7.42</a>.
 
 <img src="images/07-chart/datawrapper-range-appearance.png" alt="Modify the appearance settings to improve the color and add a gradient."  />
 <p class="caption">
-Figure 7.40: Modify the appearance settings to improve the color and add
+Figure 7.42: Modify the appearance settings to improve the color and add
 a gradient.
 </p>
 
@@ -5829,12 +5852,12 @@ A scatter chart is best to show the relationship between two sets of
 data as XY coordinates on a grid. Imagine you wish to compare life
 expectancy and fertility data for different nations. Organize your data
 in three columns, as shown in Figure
-<a href="#fig:scatter-data">7.41</a>. The first column contains the
+<a href="#fig:scatter-data">7.43</a>. The first column contains the
 *Country* labels, and the second column, *Life Expectancy*, will appear
 on the horizontal x-axis, while the third column, *Fertility*, will
 appear on the vertical y-axis. Now you can easily create a scatter chart
 that displays a relationship between these datasets, as shown in Figure
-<a href="#fig:scatter">7.42</a>. One way to summarize the chart is that
+<a href="#fig:scatter">7.44</a>. One way to summarize the chart is that
 nations with lower fertility rates (or fewer births per woman) tend to
 have high life expectancy rates. But another way to phrase it is that
 nations with higher life expectancy at birth have lower fertility.
@@ -5844,13 +5867,13 @@ females create fewer children.
 
 <img src="images/07-chart/scatter-data.png" alt="To create a scatter chart in Datawrapper, format data in three columns: labels, x-values, and y-values." width="350" />
 <p class="caption">
-Figure 7.41: To create a scatter chart in Datawrapper, format data in
+Figure 7.43: To create a scatter chart in Datawrapper, format data in
 three columns: labels, x-values, and y-values.
 </p>
 
 <img src="images/07-chart/scatter.png" alt="Scatter chart: Explore the [interactive version](https://datawrapper.dwcdn.net/8OQz7/1/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/)."  />
 <p class="caption">
-Figure 7.42: Scatter chart: Explore the [interactive
+Figure 7.44: Scatter chart: Explore the [interactive
 version](https://datawrapper.dwcdn.net/8OQz7/1/). Data from the [World
 Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/).
 </p>
@@ -5890,23 +5913,23 @@ tooltips to properly display your data:
     *return* twice on your keyboard, then type `Fertility:` and click on
     the blue column with the same name to add it, so that
     `{{ Fertility }}` appears right after it, as shown in Figure
-    <a href="#fig:scatter-tooltip-editor">7.43</a>. Press *Save* to
+    <a href="#fig:scatter-tooltip-editor">7.45</a>. Press *Save* to
     close the tooltip editor window.
 
 <img src="images/07-chart/scatter-tooltip-editor.png" alt="In the tooltip editor window, type and click column headers to customize the display."  />
 <p class="caption">
-Figure 7.43: In the tooltip editor window, type and click column headers
+Figure 7.45: In the tooltip editor window, type and click column headers
 to customize the display.
 </p>
 
 1.  Back in the *Visualize* screen, when you hover your cursor over a
     point, the tooltip will properly display its data according to your
     editor settings above, as shown in Figure Figure
-    <a href="#fig:scatter-tooltip">7.44</a>.
+    <a href="#fig:scatter-tooltip">7.46</a>.
 
 <img src="images/07-chart/scatter-tooltip.png" alt="Hover over a data point to inspect the edited tooltip display." width="400" />
 <p class="caption">
-Figure 7.44: Hover over a data point to inspect the edited tooltip
+Figure 7.46: Hover over a data point to inspect the edited tooltip
 display.
 </p>
 
@@ -5924,21 +5947,21 @@ this concept by creating a bubble chart that adds two more datasets:
 population (shown by the size of each point, or bubble) and region of
 the world (shown by the color of each bubble). We’ll use similar World
 Bank data as before, with two additional columns, as shown in Figure
-<a href="#fig:bubble-data">7.45</a>. Note that we’re using numeric data
+<a href="#fig:bubble-data">7.47</a>. Note that we’re using numeric data
 (population) for bubble size, but categorical data (regions) for color.
 Now you can easily create a bubble chart that displays a relationship
 between these four datasets, as shown in Figure
-<a href="#fig:bubble">7.46</a>.
+<a href="#fig:bubble">7.48</a>.
 
 <img src="images/07-chart/bubble-data.png" alt="To create a bubble chart in Datawrapper, organize the data into five columns: labels, x-axis, y-axis, bubble size, bubble color." width="500" />
 <p class="caption">
-Figure 7.45: To create a bubble chart in Datawrapper, organize the data
+Figure 7.47: To create a bubble chart in Datawrapper, organize the data
 into five columns: labels, x-axis, y-axis, bubble size, bubble color.
 </p>
 
 <img src="images/07-chart/bubble.png" alt="Bubble chart: Explore the [interactive version](https://datawrapper.dwcdn.net/ZX9QR/2/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg)."  />
 <p class="caption">
-Figure 7.46: Bubble chart: Explore the [interactive
+Figure 7.48: Bubble chart: Explore the [interactive
 version](https://datawrapper.dwcdn.net/ZX9QR/2/). Data from the [World
 Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg).
 </p>
@@ -5961,12 +5984,12 @@ tooltips, bubble sizes, and colors to display your data:
     *Customize tooltip HTML* window, type in the fields and click on the
     blue column names to customize your tooltips to display country,
     life expectancy, fertility, and population, as shown in Figure
-    <a href="#fig:bubble-tooltip-editor">7.47</a>. Press *Save* to close
+    <a href="#fig:bubble-tooltip-editor">7.49</a>. Press *Save* to close
     the tooltip editor window.
 
 <img src="images/07-chart/bubble-tooltip-editor.png" alt="In the tooltip editor window, type and click column headers to customize the display."  />
 <p class="caption">
-Figure 7.47: In the tooltip editor window, type and click column headers
+Figure 7.49: In the tooltip editor window, type and click column headers
 to customize the display.
 </p>
 
@@ -5975,11 +5998,11 @@ to customize the display.
     colors* button to assign a unique color to each. Then scroll down to
     *Size*, check the box to change size to *variable*, select column
     for *Population*, and increase the max size slider, as shown in
-    Figure <a href="#fig:bubble-color-size">7.48</a>. Click *Proceed*.
+    Figure <a href="#fig:bubble-color-size">7.50</a>. Click *Proceed*.
 
 <img src="images/07-chart/bubble-color-size.png" alt="In the *Visualize* screen, modify the bubble colors and set size to variable." width="350" />
 <p class="caption">
-Figure 7.48: In the *Visualize* screen, modify the bubble colors and set
+Figure 7.50: In the *Visualize* screen, modify the bubble colors and set
 size to variable.
 </p>
 
@@ -6050,7 +6073,7 @@ Organize your data in three columns, the same way as the [Datawrapper
 scatter chart tutorial](scatter-datawrapper.html): the first column for
 data labels, the second column for the x-axis, and the third column for
 the y-axis. Then you can create an interactive scatter chart as shown in
-Figure <a href="#fig:tableau-scatter">7.49</a>, which illustrates a
+Figure <a href="#fig:tableau-scatter">7.51</a>, which illustrates a
 strong relationship between household income and test scores (above or
 below the national average for 6th grade math and English) in
 Connecticut public school districts. To learn more about the data and
@@ -6067,7 +6090,7 @@ repo](https://github.com/trendct-data/stanford-cepa).
 
 <img src="images/07-chart/tableau-scatter.png" alt="Scatter chart in Tableau Public: Explore the [interactive version](https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1). Data by [CT Mirror/TrendCT and Stanford CEPA](https://github.com/trendct-data/stanford-cepa)."  />
 <p class="caption">
-Figure 7.49: Scatter chart in Tableau Public: Explore the [interactive
+Figure 7.51: Scatter chart in Tableau Public: Explore the [interactive
 version](https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1).
 Data by [CT Mirror/TrendCT and Stanford
 CEPA](https://github.com/trendct-data/stanford-cepa).
@@ -6099,14 +6122,14 @@ Public, follow this tutorial.
     *Sheets*, you will see two tables, `data` and `notes`.
 
 4.  Drag the `data` sheet into *Drag tables here* area, as shown in
-    Figure <a href="#fig:tableau-connect">7.50</a>. You will see the
+    Figure <a href="#fig:tableau-connect">7.52</a>. You will see the
     preview of the table under the drag-and-drop area. You have
     successfully connected one data source to Tableau Public, and you
     are ready to build your first chart.
 
 <img src="images/07-chart/tableau-connect-annotated.png" alt="Drag `data` sheet into *Drag tables here* area."  />
 <p class="caption">
-Figure 7.50: Drag `data` sheet into *Drag tables here* area.
+Figure 7.52: Drag `data` sheet into *Drag tables here* area.
 </p>
 
 #### Create Scatter Chart in the Worksheet
@@ -6122,7 +6145,7 @@ or numeric labels) or green (for continuous values, mostly numbers).
 
 1.  In your worksheet, drag the *Grade Levels* field into the *Rows*
     field above the charting area, which for now is just empty space.
-    See Figure <a href="#fig:tableau-scatter-dragging">7.51</a> for this
+    See Figure <a href="#fig:tableau-scatter-dragging">7.53</a> for this
     dragging step and the following two steps. Tableau will apply a
     summation function to it, and you will see `SUM(Grade Levels)`
     appear in the *Rows* row, and a blue bar in the charting area. It
@@ -6148,7 +6171,7 @@ or numeric labels) or green (for continuous values, mostly numbers).
 
 <img src="images/07-chart/tableau-scatter-dragging-annotated.png" alt="Drag data fields to the right locations in Tableau Public."  />
 <p class="caption">
-Figure 7.51: Drag data fields to the right locations in Tableau Public.
+Figure 7.53: Drag data fields to the right locations in Tableau Public.
 </p>
 
 #### Add Title and Caption, and Publish
@@ -6161,11 +6184,11 @@ so inside a *Caption*, a text block that accompanies your Tableau chart.
 In the menu, go to *Worksheet &gt; Show Caption*. Double-click the
 Caption block that appears, and edit the text. As a result, your final
 worksheet will look like shown in Figure
-<a href="#fig:tableau-scatter-final">7.52</a>.
+<a href="#fig:tableau-scatter-final">7.54</a>.
 
 <img src="images/07-chart/tableau-scatter-final-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 7.52: This scatter chart is ready to be published.
+Figure 7.54: This scatter chart is ready to be published.
 </p>
 
 Tip: In the dropdown above the *Columns* shelf, change *Standard* to
@@ -6196,7 +6219,7 @@ horizontal space.
 
 <img src="images/07-chart/tableau-toolbar-settings-annotated.png" alt="This scatter chart is ready to be published."  />
 <p class="caption">
-Figure 7.53: This scatter chart is ready to be published.
+Figure 7.55: This scatter chart is ready to be published.
 </p>
 
 Tip: Your entire portfolio of Tableau Public visualizations is online at
@@ -6223,7 +6246,7 @@ them with too much information at once.
 In this tutorial, we will build an interactive filtered line chart with
 Tableau Public, to visualize how internet access has changed in
 different nations over time. Organize the data in three columns, as
-shown in Figure <a href="#fig:tableau-filtered-data">7.54</a>. The first
+shown in Figure <a href="#fig:tableau-filtered-data">7.56</a>. The first
 column, *Country Name*, are the data labels that become the colored
 lines. The second column, *Year*, will appear on the horizontal x-axis.
 The third column, *Percent Internet Users*, are numeric values that
@@ -6231,11 +6254,11 @@ appear on the vertical y-axis. Now you can create a filtered line chart
 with checkboxes, to show only selected lines on startup to avoid
 overwhelming users, while allowing them to toggle on other lines, and
 hover over each one for more details, as shown in Figure
-<a href="#fig:tableau-filtered">7.55</a>.
+<a href="#fig:tableau-filtered">7.57</a>.
 
 <img src="images/07-chart/tableau-filtered-data.png" alt="In a filtered line chart, organize the data in three columns, data labels, year, and numeric values." width="350" />
 <p class="caption">
-Figure 7.54: In a filtered line chart, organize the data in three
+Figure 7.56: In a filtered line chart, organize the data in three
 columns, data labels, year, and numeric values.
 </p>
 
@@ -6243,7 +6266,7 @@ columns, data labels, year, and numeric values.
 
 <img src="images/07-chart/tableau-filtered.png" alt="Filtered Line chart: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1). Data from [World Bank](https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793)."  />
 <p class="caption">
-Figure 7.55: Filtered Line chart: Explore the [interactive
+Figure 7.57: Filtered Line chart: Explore the [interactive
 version](https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1).
 Data from [World
 Bank](https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793).
@@ -6304,7 +6327,7 @@ ready to begin building your interactive chart.
     *OK*.
 5.  In the *Filters* card, click the dropdown arrow of the **Country
     Name** symbol, then scroll down and select Show Filter, as shown in
-    Figure <a href="#fig:tableau-filtered-show-filter">7.56</a>.
+    Figure <a href="#fig:tableau-filtered-show-filter">7.58</a>.
 6.  You will see a list of options with all checkboxes to appear on the
     right side of the chart. Click *(All)* to add/remove all options,
     and select a few countries to see how the interactive filtering
@@ -6322,7 +6345,7 @@ ready to begin building your interactive chart.
 
 <img src="images/07-chart/tableau-filtered-show-filter.png" alt="After you drag Country Name to the Filters card, make sure the Filter is displayed." width="220" />
 <p class="caption">
-Figure 7.56: After you drag Country Name to the Filters card, make sure
+Figure 7.58: After you drag Country Name to the Filters card, make sure
 the Filter is displayed.
 </p>
 
@@ -6343,7 +6366,7 @@ the Filter is displayed.
     and see that the empty space on the edges has disappeared.
 
 4.  Once your filtered line chart looks like the one shown in Figure
-    <a href="#fig:tableau-filtered-ready">7.57</a>, you are ready to
+    <a href="#fig:tableau-filtered-ready">7.59</a>, you are ready to
     publish. Go to *File &gt; Save to Tableau Public As…*, and log into
     your account, or create one if you haven’t yet done so. Follow the
     prompts to publish your chart on the public web, or see the previous
@@ -6352,7 +6375,7 @@ the Filter is displayed.
 
 <img src="images/07-chart/tableau-filtered-ready.png" alt="This workbook is ready to be published."  />
 <p class="caption">
-Figure 7.57: This workbook is ready to be published.
+Figure 7.59: This workbook is ready to be published.
 </p>
 
 See the [Embed Tableau Public on Your Website](embed-tableau.html)
@@ -6425,7 +6448,8 @@ visualizations, such as [Leaflet code templates in Chapter
 to [edit and host code templates with GitHub in Chapter
 11](github.html).
 
-TODO: Improve and standardize map images
+TODO below: Improve and standardize map images; Rethink wording of
+“point map with custom icons”? and description?
 
 <table>
 <caption>Table 8.1: Basic Map Types, Best Uses, and Tutorials</caption>
@@ -6442,7 +6466,7 @@ TODO: Improve and standardize map images
 <tbody>
 <tr class="odd">
 <td>Point map with custom icons<br> <img src="images/08-map/map-point.png" /></td>
-<td>Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: <a href="batchgeo.html">BatchGeo tutorial</a> or <a href="mymaps.html">Google My Maps tutorial</a>. <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Ch 13: Leaflet Maps with Google Sheets tutorial</a></td>
+<td>Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: <a href="mymaps.html">Google My Maps tutorial</a>. <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Ch 13: Leaflet Maps with Google Sheets tutorial</a></td>
 </tr>
 <tr class="even">
 <td>Symbol point map<br> <img src="images/08-map/map-symbol.png" /></td>
@@ -6631,34 +6655,43 @@ story.
 
 Newcomers to data visualization sometimes are so proud of placing one
 variable on a map that they figure two variables must be twice as good.
-But this usually is not true. In general, we recommend against placing
-two variables on the same map, because it’s very difficult for most
-readers to recognize patterns that help them to grasp your data story.
-For example, look at what happens when you try to place one variable
-(using a symbol point map) on top of another variable (using a
-choropleth map), as shown with imaginary data in Figure
-<a href="#fig:map-two-variables">8.2</a>. It’s difficult to recognize
-patterns when a symbol point map is placed on a choropleth map.
+But this usually is not true. Here is the thought process that leads to
+this mistaken conclusion. Imagine you want to compare the relationship
+between income and education in eight counties of your state. First, you
+choose create a choropleth map of income, where darker blue areas
+represent areas with higher levels in the northwest corner, as shown in
+Figure <a href="#fig:map-two-variables">8.2</a>(a). Second, you decide
+to create a symbol point map, where larger circle sizes represents a
+higher share of the population with a university degree, as shown in
+Figure <a href="#fig:map-two-variables">8.2</a>(b). Both of those maps
+are fine, but they still do not highlight the relationship between
+income and education.
 
-<img src="images/08-map/map-two-variables.png" alt="Avoid placing a symbol point map on top of a choropleth map, because it's hard to see the relationship between two variables." width="400" />
+A common mistake is to place the symbol point layer on top of the
+choropleth map layer, as shown in Figure
+<a href="#fig:map-two-variables">8.2</a>(c). And this is where your map
+becomes overloaded. We generally recommend against displaying two
+variables with different symbologies on the same map, because it
+overloads the visualization and makes it very difficult for most readers
+to recognize patterns that help them to grasp your data story.
+
+<img src="images/08-map/map-two-variables.png" alt="To compare two variables, such as income and education, avoid placing a symbol point map on top of a choropleth map. Instead, create a scatter chart, and consider pairing it with a choropleth map of one variable." width="450" />
 <p class="caption">
-Figure 8.2: Avoid placing a symbol point map on top of a choropleth map,
-because it’s hard to see the relationship between two variables.
+Figure 8.2: To compare two variables, such as income and education,
+avoid placing a symbol point map on top of a choropleth map. Instead,
+create a scatter chart, and consider pairing it with a choropleth map of
+one variable.
 </p>
 
-Consider alternative ways to visualize the relationship between two
-variables. Rather than a map, you could create a scatter chart to show
-any relationship between variables X and Y. This type of chart works
-best if the relationship between variables is more important to your
-data story than any geographic patterns. Or, if geographic patterns
+Instead, if the relationship between two variables is the most important
+aspect of your data story, create a scatter chart as shown in Figure
+<a href="#fig:map-two-variables">8.2</a>(d). Or if geographic patterns
 matter for one of the variables, you could pair a choropleth map of that
-variable next to a scatterchart of both variables. Finally, you could
-create two choropleth maps, one for each variable, and place them
-side-by-side with text to explain their similarities or differences.
-
-TODO: ILYA let’s discuss if the figure works above; also decide if
-supplemental images are needed, perhaps as “bad viz” and “better viz”
-examples
+variable next to a scatter chart of both variables, by combining Figure
+<a href="#fig:map-two-variables">8.2</a>(a and d). Overall, remember
+that just because data *can* be mapped does not always mean it *should*
+be mapped. Pause to reflect on whether or not location matters, because
+sometimes a chart tells your data story better than a map.
 
 ### Choose Smaller Geographies for Choropleth Maps
 
@@ -7037,123 +7070,8 @@ to our eyes. In the next section, we’ll begin our first hands-on
 tutorial with creating a point map. Later in the chapter we’ll return to
 exercises in creating choropleth maps.
 
-Point Map with BatchGeo
------------------------
-
-Although BatchGeo is not the most powerful mapping tool available, its
-easy-to-learn interface stands out as one of the fastest ways to create
-an interactive point map. With the free version, organize up to 250 rows
-of data in a spreadsheet template, copy and paste them into the
-platform. BatchGeo will geocode your data and display map markers with
-colored categories on a Google Map base layer, which can be clicked to
-show linked titles, text, and small photos (which must be hosted online
-elsewhere) categories, descriptions, and links (including images hosted
-elsewhere online). Since the free version does *not* include an account
-login, enter your email to receive a link to the finished map, like the
-sample shown in Figure <a href="#fig:batchgeo-map">8.12</a>.
-
-<img src="images/08-map/batchgeo-map.png" alt="Point map of museums and parks with BatchGeo: Explore the [interactive version](https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c)."  />
-<p class="caption">
-Figure 8.12: Point map of museums and parks with BatchGeo: Explore the
-[interactive
-version](https://batchgeo.com/map/a36a85afb293fd0a7160997f0ff83e0c).
-</p>
-
-To create your own point map with BatchGeo, follow this quick tutorial.
-
-1.  Open this [BatchGeo data template in Google
-    Sheets](https://docs.google.com/spreadsheets/d/1IA0J4Z9C0_zsvgcunD2kHtR__sdQqUPzNHNjqCLYBRQ/edit#gid=312385679),
-    log into your Google account, and go to *File &gt; Make a Copy* to
-    create a version you can edit in your Google Drive.
-
-2.  You can delete and enter your own data into the template, as shown
-    in Figure <a href="#fig:batchgeo-template">8.13</a>. Not every
-    address field is required, but adding more will improve the accuracy
-    of the geocoder. Several columns are optional and can be deleted
-    (such as URL, Image URL, Image Source). If you enter a URL, its
-    active link will appear in the Name field. Also, you can enter an
-    Image URL if a photo is hosted elsewhere online, with an ideal size
-    of 200x200 pixels.
-
-<img src="images/08-map/batchgeo-template.png" alt="Enter your data into the template, then select all and copy it."  />
-<p class="caption">
-Figure 8.13: Enter your data into the template, then select all and copy
-it.
-</p>
-
-1.  Select and copy your data from the template, open the
-    [BatchGeo](https://batchgeo.com) site, click the large field, and
-    paste in your data, as shown in Figure
-    <a href="#fig:batchgeo-paste">8.14</a>.
-
-<img src="images/08-map/batchgeo-paste.png" alt="Click the large field and paste in your data from the template."  />
-<p class="caption">
-Figure 8.14: Click the large field and paste in your data from the
-template.
-</p>
-
-1.  Click the *Validate and Set Options* button to inspect or adjust how
-    BatchGeo will upload your data fields and preview a pop-up window,
-    as shown in Figure <a href="#fig:batchgeo-validate">8.15</a>. Here
-    you can change the default *Region* from *United States* to other
-    areas of the world. Also, click the *Advanced* button to see more
-    options to change the basemap layer or point symbols. Then click the
-    *Make Map* button.
-
-<img src="images/08-map/batchgeo-validate.png" alt="Click the *Validate* button to inspect and preview your data and advanced options." width="500" />
-<p class="caption">
-Figure 8.15: Click the *Validate* button to inspect and preview your
-data and advanced options.
-</p>
-
-1.  In the *Map* window, click the *Save and Continue* button to enter a
-    title and set other options, such making your map *public* or
-    *unlisted*, as well as customizing the layout, as shown in Figure
-    <a href="#fig:batchgeo-save">8.16</a>. Insert your email address to
-    receive a link to your online map. Click *Save Map*.
-
-<img src="images/08-map/batchgeo-save.png" alt="Be sure to enter your email address to receive a link to your online map." width="500" />
-<p class="caption">
-Figure 8.16: Be sure to enter your email address to receive a link to
-your online map.
-</p>
-
-1.  Check your email for a message from BatchGeo with a link to your
-    live map, and another link to make edits, as shown in Figure
-    <a href="#fig:batchgeo-email">8.17</a>. The email also will include
-    a code to [embed your live map on the web, which you’ll learn about
-    in Chapter 10](embed.html).
-
-<img src="images/08-map/batchgeo-email-annotated.png" alt="Save the BatchGeo email with links and an embed code for your map." width="500" />
-<p class="caption">
-Figure 8.17: Save the BatchGeo email with links and an embed code for
-your map.
-</p>
-
-Overall, BatchGeo is a free and easy-to-learn point map tool, but one
-with several limitations. You can only create maps with 250 points or
-less, and only a few options to customize their appearance, unless you
-upgrade to the paid version. Also, while the tool geocodes your location
-data, it does not show you the latitude and longitude coordinates, but
-see the [Geocode section of Chapter 3 for a Google Sheets
-add-on](geocode.html) that will show you the geocoordinates. See more
-info on the [BatchGeo support page](http://support.batchgeo.com) and
-also their [post about power-user
-tips](https://blog.batchgeo.com/5-steps-to-become-a-batchgeo-power-user/).
-
-Now that you’ve learned about one tool to create point maps, let’s
-compare it with a second tool, Google My Maps, which includes some
-additional features.
-
 Point Map with Google My Maps
 -----------------------------
-
-TODO BELOW: <s>Explain how Google My Maps is different from Google
-Maps</s>; mention at the top there are more options than points; DECIDE
-if this sample data about Nigerian airports is the best fit, since it’s
-great to have international examples but unsure if Shapefile-to-CSV
-transformation makes sense here, as new users probably need the tool to
-geocode their data.
 
 [My Maps](https://www.google.com/maps/about/mymaps/) is Google’s service
 that allows users to create custom maps on top of Google Maps. The maps
@@ -7168,141 +7086,171 @@ and polygon maps, although it limits your styling options. My Maps is
 most powerful when it comes to collaboration, and you can invite anyone
 with a Google account to jointly work on the map.
 
-In this section, we will look at building a point map of airports in
-Nigeria, as is shown in Figure <a href="#fig:mymaps-final">8.18</a>. We
-will create a map, change a baselayer, import point data, style points,
-and share the map.
+In this section, we will look at building a point map of visitor
+attractions in North America, as is shown in Figure
+<a href="#fig:mymaps-final">8.12</a>. We will create a new map, import
+point data, style markers, change the baselayer, and look at options to
+share the map.
 
-<img src="images/08-map/mymaps-final.png" alt="A map of airports in Nigeria built using Google My Maps."  />
+TODO below: add the interactive link to the caption
+
+<img src="images/08-map/mymaps-final.png" alt="A map of visitor attractions in North America built with Google My Maps."  />
 <p class="caption">
-Figure 8.18: A map of airports in Nigeria built using Google My Maps.
+Figure 8.12: A map of visitor attractions in North America built with
+Google My Maps.
 </p>
 
-### Create a New Map in My Maps
+Below are the steps you can take to create the same map.
 
-Navigate to [Google My Maps](https://www.google.com/mymaps/). In the
-upper-left corner, click `+ Create a New Map` button, as shown in Figure
-<a href="#fig:mymaps-create-new">8.19</a>.
+TODO: Rewrite this step to show data in Google Sheets, not CSV…. See if
+images can be uploaded… Review file contents… Redo step numbering and
+make File &gt; Download (CSV format) part of this first step, and review
+continuity with step 3 below – Open this [data template in Google
+Sheets](https://docs.google.com/spreadsheets/d/1IA0J4Z9C0_zsvgcunD2kHtR__sdQqUPzNHNjqCLYBRQ/edit#gid=312385679),
+log into your Google account, and go to *File &gt; Make a Copy* to
+create a version you can edit in your Google Drive.
 
-<img src="images/08-map/mymaps-create-new.png" alt="A map of airports in Nigeria built using Google My Maps." width="300" />
+We prepared a dataset with six locations (using Wikipedia to look things
+up), which you can
+[download](data/north-american-visitor-attractions.csv) for the
+exercise. If you inspect the CSV file in your favorite text editor, you
+will see that it contains three national parks and three museums. Each
+point comes with a `Name`, its `State` and `Country`, and museums also
+have an `Address` and `City` specified. The `URL` is provided for all
+six locations.
+
+1.  Navigate to [Google My Maps](https://www.google.com/mymaps/). In the
+    upper-left corner, click \`+ Create a New Map\` button, as shown in
+    Figure <a href="#fig:mymaps-create-new">8.13</a>. This will create
+    an empty map with familiar Google Maps style.
+
+<img src="images/08-map/mymaps-create-new.png" alt="Navigate to https://www.google.com/mymaps/ and create a new map." width="300" />
 <p class="caption">
-Figure 8.19: A map of airports in Nigeria built using Google My Maps.
+Figure 8.13: Navigate to
+<a href="https://www.google.com/mymaps/" class="uri">https://www.google.com/mymaps/</a>
+and create a new map.
 </p>
 
-You will see a typical Google Maps with no data. Click on the current
-title (`Untitled map`), and add appropriate title and description in the
-modal window that appeared (see Figure
-<a href="#fig:mymaps-edit-title">8.20</a> for inspiration).
+1.  Give your map a relevant title and desription by clicking the
+    current title (`Untitled map`). This will bring up a modal window
+    where you can make changes, as shown in Figure
+    <a href="#fig:mymaps-edit-title">8.14</a>.
 
 <img src="images/08-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
 <p class="caption">
-Figure 8.20: Add title and description to your map.
+Figure 8.14: Add title and description to your map.
 </p>
 
-Before we add any points, let’s change the basemap to something less
-boring. At the bottom of the control window, open *Base map* dropdown,
-and pick one of nine available basemaps. For this tutorial, we chose
-*Dark Landmass*.
+1.  Now, let’s perform the most important step of point adding data.
+    Under *Untitled layer* item, click *Import* button, and
+    drag-and-drop the CSV file to the Upload area. Note that you can
+    also connect a dataset from your Google Drive, but we won’t be doing
+    it here. Once the data file is uploaded, My Maps will ask which
+    columns contain location data that it can use to position the
+    markers. In our case, these are Address, City, State, Postalcode,
+    and Country, as well as Name, as shown in Figure
+    <a href="#fig:mymaps-lat-lon">8.15</a>. It is important we select
+    Name because our national parks have no address data, and if names
+    their names are not provided, Google will place the markers in the
+    middle of the state instead.
 
-Let’s now proceed to the most important step—adding data. You can
-[download](data/nigeria-airports.csv) a dataset of Nigerian airports
-that we got [from the World
-Bank](https://datacatalog.worldbank.org/dataset/nigeria-airports) as a
-Shapefile and then converted to a CSV.
-
-Under *Untitled layer* item, click *Import* button, and drag-and-drop
-the CSV file. Once the data file is uploaded, My Maps will ask which
-columns contain location data. In our case, these are *LATITUDE* and
-*LONGITUDE* columns, as shown in Figure
-<a href="#fig:mymaps-lat-lon">8.21</a>.
-
-<img src="images/08-map/mymaps-lat-lon-annotated.png" alt="Check LATITUDE and LONGITUDE as your location columns." width="300" />
+<img src="images/08-map/mymaps-lat-lon.png" alt="Make sure all columns with relevant location data are checked." width="300" />
 <p class="caption">
-Figure 8.21: Check LATITUDE and LONGITUDE as your location columns.
+Figure 8.15: Make sure all columns with relevant location data are
+checked.
 </p>
 
-Once the two boxes are checked, click *Continue*. Another window will
-pop up, asking which column to use to annotate points. Choose *City*, as
-shown in Figure <a href="#fig:mymaps-column-title">8.22</a>, and then
-*Finish*.
+1.  Once the boxes are checked, click *Continue*. Another window will
+    pop up, asking which column to use to annotate points. Choose
+    *Name*, as shown in Figure
+    <a href="#fig:mymaps-column-title">8.16</a>, and then *Finish*.
 
-<img src="images/08-map/mymaps-column-title-annotated.png" alt="Choose City as the title for your markers." width="300" />
+<img src="images/08-map/mymaps-column-title.png" alt="Choose Name column to serve as titles for your markers." width="300" />
 <p class="caption">
-Figure 8.22: Choose City as the title for your markers.
+Figure 8.16: Choose Name column to serve as titles for your markers.
 </p>
 
-It will take a few moments for My Maps to create a new layer, which will
-be added to the layer menu as *nigeria-airports.csv*. Once the layer is
-created, My Maps will center the map to fit the points.
+1.  Google Maps will perform geocoding automatically (that is, will
+    translate your location columns into latitude/longitude
+    coordinates). It will take a few moments for My Maps to create a new
+    layer, which will be added to the layer menu as
+    *north-american-visitor-attractions.csv* (if you used the downloaded
+    file). Once the layer is created, My Maps will center the map to fit
+    the points. Click on the layer name, which by default is set to the
+    name of imported file, and change it to *Attractions*
+    (alternatively, open a kebab menu to the right of the layer name,
+    and click *Rename this layer*).
 
-Let’s replace the original blue markers to orange airport symbols. In
-layers menu, hover over *All items* and click the paint bucket symbol on
-the right. Change “All items” text to “Airports”, choose orange color,
-and click on *More icons* to find an airport symbol (we recommend using
-Filter to search for “airport”, or simply scroll down to Transportation
-section). The marker in the layers menu will change to an orange
-airplane, as shown in Figure <a href="#fig:mymaps-color">8.23</a>.
+2.  By default, each location will be assigned a blue marker that we can
+    style individually, and all markers will be visible in the menu
+    under the relevant layer. Since our locations are parks and museums,
+    which are fairly distinct groups (and happen to have this
+    distinction recorded in the `Group` column), let’s assign green park
+    icons to all parks, and orange museum icons to the museums. To do
+    so, click *Individual styles*, and in the *Group places by*
+    dropdown, change the value to *Style data by column: Group*, as show
+    in Figure <a href="#fig:mymaps-group-places">8.17</a>. This will
+    divide all markers into two groups, and assign distinct icons to
+    these two groups.
 
-<img src="images/08-map/mymaps-color-annotated.png" alt="In My Maps, you can change marker colors and icons." width="300" />
+<img src="images/08-map/mymaps-group-places-annotated.png" alt="Group places by Group column instead of individual styles." width="300" />
 <p class="caption">
-Figure 8.23: In My Maps, you can change marker colors and icons.
+Figure 8.17: Group places by Group column instead of individual styles.
 </p>
 
-Click on the layer name, which by default is set to the name of imported
-file (`nigeria-airports.csv`), and change it to *Nigerian Airports*.
-Alternatively open a kebab menu to the right of the layer name, and
-choose *Rename this layer*, and then click *Save*.
+1.  Now we can set custom icons to both groups. Click the bucket icon to
+    the right of the group to assign a new color, and a new icon (you
+    may need to browse the *More icons* window to find the relevant
+    ones). Figure <a href="#fig:mymaps-color">8.18</a> shows how the
+    marker customization window looks like.
 
-You can accompany each marker with a label. Click *Uniform style* under
-the layer, and choose *Alt\_name* in the *Set labels* dropdown menu. You
-will see alternative airport names, such as *BENIN*, displayed beneath
-the markers.
+<img src="images/08-map/mymaps-color.png" alt="In My Maps, you can change marker colors and icons." width="300" />
+<p class="caption">
+Figure 8.18: In My Maps, you can change marker colors and icons.
+</p>
 
-Click *Preview* to see how the map looks like outside of the My Maps
-editing studio. Additionally, you can add photos, directions, lines,
-etc., and display or hide columns by checking or unchecking them when
-clicking on a map point.
+1.  You may notice that green and orange icons look not as prominent due
+    to yellow and orange roads and highways, and green forest areas of
+    the basemap. To fix this, let’s change the basemap to a darker blue
+    version. At the bottom of the control window, open *Base map*
+    dropdown, and pick *Dark Landmass*. Now, your map should look great!
 
-### Share Your Google My Map
-
-If you are happy with the result, click *Share* button underneath the
-map’s title and description. In the modal window, make sure *Enable link
-sharing* is activated, as shown in Figure
-<a href="#fig:mymaps-share">8.24</a>, and copy the generated link. You
-can share with link with anyone, with or without a Google account, and
-they will be able to see your map.
+2.  Click *Preview* to see how the map looks like outside of the My Maps
+    editing studio. Go back to the studio, and if you are happy with the
+    result, click *Share* button underneath the map’s title and
+    description. In the modal window, make sure *Enable link sharing* is
+    activated, as shown in Figure <a href="#fig:mymaps-share">8.19</a>,
+    and copy the generated link. You can share with link with anyone,
+    with or without a Google account, and they will be able to see your
+    map.
 
 <img src="images/08-map/mymaps-share.png" alt="Make sure anyone with the link can view your map before you share it." width="400" />
 <p class="caption">
-Figure 8.24: Make sure anyone with the link can view your map before you
+Figure 8.19: Make sure anyone with the link can view your map before you
 share it.
 </p>
 
 If you want to embed the map as an iframe, from the main kebab menu to
 the right of the map title, choose *Embed on my site*, as shown in
-Figure <a href="#fig:mymaps-embed">8.25</a>. This will generate an HTML
+Figure <a href="#fig:mymaps-embed">8.20</a>. This will generate an HTML
 embed code that you can copy to your website, as described in [Chapter
 10: Embed on the Web](embed.html).
 
-<img src="images/08-map/mymaps-embed-annotated.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
+<img src="images/08-map/mymaps-embed.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
 <p class="caption">
-Figure 8.25: My Maps can generate an iframe code to include the map on
+Figure 8.20: My Maps can generate an iframe code to include the map on
 your own website.
 </p>
 
-### Going Beyond Points
+Google My Maps has more powerful features for map making, and you are
+not limited to just point maps. You can also draw your own shapes,
+including lines and polygons. You can add data to multiple layers.
+Unfortunately, Google My Maps has no comprehensive documentation, so you
+have to explore the studio yourself if you want to create more complex
+projects.
 
-Google My Maps has more powerful features for map making. Instead of
-uploading datasets with latitude/longitude pairs, you can use simple
-addresses (and My Maps will take care of geocoding), or add markers by
-clicking on the map using *Add marker* feature. You can classify points
-based on a property, and use different colors to represent them.
-
-You are not limited to just point maps. You can also draw your own
-shapes, including lines and polygons. You can add data to multiple
-layers. Unfortunately, Google My Maps has no comprehensive
-documentation, so you have to explore the studio yourself if you want to
-create more complex projects.
+In the next section, we will look at creating and sharing symbol point
+maps with Datawrapper.
 
 Symbol Point Map with Datawrapper
 ---------------------------------
@@ -7320,7 +7268,7 @@ represent their data values. Our sample symbol map displays about 300
 major US cities as point locations with two variables: the 2019
 estimated population (using circle size) and the percent change in
 population since 2010 (using circle color), as shown in Figure
-<a href="#fig:datawrapper-symbolmap">8.26</a>. Remember that we use
+<a href="#fig:datawrapper-symbolmap">8.21</a>. Remember that we use
 *point* data to create symbol maps, but *polygon* data to create
 choropleth maps, and you’ll learn how to design those with Datawrapper
 in the subsequent section. Later in the book, we’ll explain [how to
@@ -7329,7 +7277,7 @@ embed your interactive Datawrapper maps on the web in Chapter
 
 <img src="images/08-map/datawrapper-symbolmap.png" alt="Symbol point map of US city population growth with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/V0V9Y)."  />
 <p class="caption">
-Figure 8.26: Symbol point map of US city population growth with
+Figure 8.21: Symbol point map of US city population growth with
 Datawrapper. Explore the [interactive
 version](https://datawrapper.dwcdn.net/V0V9Y).
 </p>
@@ -7366,11 +7314,11 @@ calculated this way: `(2019 - 2010) / 2010 * 100`.
 
 2.  Open [Datawrapper](https://datawrapper.de), click on *Start
     Creating*, then the *New Map* button, and select *Symbol map* as
-    shown in Figure <a href="#fig:datawrapper-symbolmap-start">8.27</a>.
+    shown in Figure <a href="#fig:datawrapper-symbolmap-start">8.22</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-start.png" alt="Start to create a symbol map in Datawrapper." width="600" />
 <p class="caption">
-Figure 8.27: Start to create a symbol map in Datawrapper.
+Figure 8.22: Start to create a symbol map in Datawrapper.
 </p>
 
 1.  In the *Select your map* screen, enter *USA* and search for options.
@@ -7388,13 +7336,13 @@ Figure 8.27: Start to create a symbol map in Datawrapper.
 3.  In the *Match your columns* screen, select the *City-State* column
     to be *Matched as Address*, then scroll down to click the *Next*
     button, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-match">8.28</a>. In the next
+    <a href="#fig:datawrapper-symbolmap-match">8.23</a>. In the next
     screen click *Go*, then see your geocoded data displayed on a map in
     the following screen.
 
 <img src="images/08-map/datawrapper-symbolmap-match.png" alt="Select the *City-State* column to be matched as the *Address*." width="400" />
 <p class="caption">
-Figure 8.28: Select the *City-State* column to be matched as the
+Figure 8.23: Select the *City-State* column to be matched as the
 *Address*.
 </p>
 
@@ -7404,11 +7352,11 @@ Figure 8.28: Select the *City-State* column to be matched as the
     select the *circle* symbol, to be sized by *Pop Estimate 2019*, with
     a maximum symbol size of 25 pixels. Under *Symbol colors*, select
     the *Percent Change 2010-2019* column, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-refine">8.29</a>.
+    <a href="#fig:datawrapper-symbolmap-refine">8.24</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-refine.png" alt="Refine your map by selecting data to display symbol shapes, sizes, and colors."  />
 <p class="caption">
-Figure 8.29: Refine your map by selecting data to display symbol shapes,
+Figure 8.24: Refine your map by selecting data to display symbol shapes,
 sizes, and colors.
 </p>
 
@@ -7419,11 +7367,11 @@ sizes, and colors.
     section](design-choropleth.html). The first code is dark pink,
     followed by a 4-class sequential green:
     `#d01c8b,#bae4b3,#74c476,#31a354,#006d2c`. See Figure
-    <a href="#fig:datawrapper-symbolmap-colors">8.30</a>.
+    <a href="#fig:datawrapper-symbolmap-colors">8.25</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-colors.png" alt="Create a new color palette by importing five hexadecimal color codes from ColorBrewer." width="600" />
 <p class="caption">
-Figure 8.30: Create a new color palette by importing five hexadecimal
+Figure 8.25: Create a new color palette by importing five hexadecimal
 color codes from ColorBrewer.
 </p>
 
@@ -7433,14 +7381,14 @@ color codes from ColorBrewer.
     scale. Click the *More options* button, and under *Legend*, change
     *Labels* to *custom*, and click each label to edit the text that
     appears on the map menu, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-intervals">8.31</a>. Learn more
+    <a href="#fig:datawrapper-symbolmap-intervals">8.26</a>. Learn more
     about these options in the [Datawrapper Academy post on customizing
     your symbol
     map](https://academy.datawrapper.de/article/120-customizing-your-symbol-map).
 
 <img src="images/08-map/datawrapper-symbolmap-intervals.png" alt="Customize the interval ranges and edit the legend." width="500" />
 <p class="caption">
-Figure 8.31: Customize the interval ranges and edit the legend.
+Figure 8.26: Customize the interval ranges and edit the legend.
 </p>
 
 1.  Under the *Visualize* screen, click the *Annotate* tab to insert a
@@ -7485,14 +7433,14 @@ districts, and census tracts for the United States.
 In this section, you’ll create a choropleth map of typical home values
 for US states in August 2020 according to the [Zillow Home Value
 Index](https://www.zillow.com/research/data/), as shown in Figure
-<a href="#fig:datawrapper-map-final">8.32</a>. The index reflects
+<a href="#fig:datawrapper-map-final">8.27</a>. The index reflects
 typical home values (meaning those in the 35th to 65th percentile range,
 around the median) for single-family residences, condos, and co-ops, and
 it is smoothed and seasonally adjusted.
 
 <img src="images/08-map/datawrapper-map-final.png" alt="Choropleth map of 2020 home values in US states with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/kSYrw/)."  />
 <p class="caption">
-Figure 8.32: Choropleth map of 2020 home values in US states with
+Figure 8.27: Choropleth map of 2020 home values in US states with
 Datawrapper. Explore the [interactive
 version](https://datawrapper.dwcdn.net/kSYrw/).
 </p>
@@ -7533,24 +7481,24 @@ ANSI.
 2.  Open [Datawrapper](https://datawrapper.de), click on *Start
     Creating*, then click the *New Map* button, and select *Choropleth
     map* as shown in Figure
-    <a href="#fig:datawrapper-map-choose">8.33</a>. No login is required
+    <a href="#fig:datawrapper-map-choose">8.28</a>. No login is required
     to create a map, but you should sign up for a free account in order
     to save your work and publish your map online.
 
 <img src="images/08-map/datawrapper-map-choose-annotated.png" alt="In Datawrapper, click *New Map*, and choose *Choropleth*." width="500" />
 <p class="caption">
-Figure 8.33: In Datawrapper, click *New Map*, and choose *Choropleth*.
+Figure 8.28: In Datawrapper, click *New Map*, and choose *Choropleth*.
 </p>
 
 1.  In the *Select your map* screen, choose your geographic boundaries,
     and in this case choose *USA &gt; States*, as shown in Figure
-    <a href="#fig:datawrapper-map-us-states">8.34</a>, then click
+    <a href="#fig:datawrapper-map-us-states">8.29</a>, then click
     *Proceed*. Since Washington, DC is not a state, it does not appear
     in this map of US States.
 
 <img src="images/08-map/datawrapper-map-us-states-annotated.png" alt="Choose *USA - States* for your map outline." width="500" />
 <p class="caption">
-Figure 8.34: Choose *USA - States* for your map outline.
+Figure 8.29: Choose *USA - States* for your map outline.
 </p>
 
 Hint: If Datawrapper does not list your preferred map outline, you can
@@ -7561,7 +7509,7 @@ formats section of Chapter 14](geojson.html).
 1.  In the *Add your data* screen, you can manually enter data for each
     area, which would be fine for just a few, but not for 50 states.
     Instead, scroll down and click the *Import your dataset* button, as
-    shown in Figure <a href="#fig:datawrapper-import-dataset">8.35</a>.
+    shown in Figure <a href="#fig:datawrapper-import-dataset">8.30</a>.
     Datawrapper will explain that your data must include either *Names*
     (such as `California`) or *ISO-Codes* (standardized two-letter codes
     for states, such as `CA`, or three-letter codes for nations, such as
@@ -7569,7 +7517,7 @@ formats section of Chapter 14](geojson.html).
 
 <img src="images/08-map/datawrapper-import-dataset.png" alt="Scroll down below the *add data* table to import your dataset." width="200" />
 <p class="caption">
-Figure 8.35: Scroll down below the *add data* table to import your
+Figure 8.30: Scroll down below the *add data* table to import your
 dataset.
 </p>
 
@@ -7585,12 +7533,12 @@ most users see.
 
 2.  In the *Match your columns* screen, click the column that matches up
     with ISO codes, as shown in Figure
-    <a href="#fig:datawrapper-map-match">8.36</a>. You may need to
+    <a href="#fig:datawrapper-map-match">8.31</a>. You may need to
     scroll down a bit to click the *Next* button, then *Continue*.
 
 <img src="images/08-map/datawrapper-map-match.png" alt="Select the data column that contains matching ISO codes." width="500" />
 <p class="caption">
-Figure 8.36: Select the data column that contains matching ISO codes.
+Figure 8.31: Select the data column that contains matching ISO codes.
 </p>
 
 1.  In a similar way on the next screen, click the column of data values
@@ -7605,13 +7553,13 @@ requested.
 1.  In the *Visualize* screen, under the *Refine* tab, click the *wrench
     symbol* next to the color palette to review the *default* map
     settings, as shown in Figure
-    <a href="#fig:datawrapper-map-default">8.37</a>. Never automatically
+    <a href="#fig:datawrapper-map-default">8.32</a>. Never automatically
     accept the default map, but it’s a good place to start and explore
     how factors shape its appearance.
 
 <img src="images/08-map/datawrapper-map-default.png" alt="Under the *Refine* tab, click the *wrench symbol* to see the default map settings." width="600" />
 <p class="caption">
-Figure 8.37: Under the *Refine* tab, click the *wrench symbol* to see
+Figure 8.32: Under the *Refine* tab, click the *wrench symbol* to see
 the default map settings.
 </p>
 
@@ -7626,13 +7574,13 @@ data story that emphasizes the low and high extremes.
     interpolation to change how values are assigned to colors. For
     example, change from *linear* to *quartiles*, which groups the data
     into four groups of equal size, as shown in Figure
-    <a href="#fig:datawrapper-map-quartiles">8.38</a>. This map works
+    <a href="#fig:datawrapper-map-quartiles">8.33</a>. This map works
     better for a data story that emphasizes geographic diversity, since
     we see more contrast between states in the middle range.
 
 <img src="images/08-map/datawrapper-map-quartiles.png" alt="Under the *Refine* tab, change the interpolation from *linear* to *quartiles* and see how the map changes." width="400" />
 <p class="caption">
-Figure 8.38: Under the *Refine* tab, change the interpolation from
+Figure 8.33: Under the *Refine* tab, change the interpolation from
 *linear* to *quartiles* and see how the map changes.
 </p>
 
@@ -7647,11 +7595,11 @@ Figure 8.38: Under the *Refine* tab, change the interpolation from
     example, see the map of percent change in home value from 2019 to
     2020, with a diverging red-to-blue palette, 5 steps, and rounded
     values in Figure
-    <a href="#fig:datawrapper-map-percentchange">8.39</a>.
+    <a href="#fig:datawrapper-map-percentchange">8.34</a>.
 
 <img src="images/08-map/datawrapper-map-percentchange.png" alt="Experiment with other colors, intervals, and data columns to find true and meaningful stories." width="650" />
 <p class="caption">
-Figure 8.39: Experiment with other colors, intervals, and data columns
+Figure 8.34: Experiment with other colors, intervals, and data columns
 to find true and meaningful stories.
 </p>
 
@@ -7681,13 +7629,13 @@ reviewer requested.
     is to click on blue column names, or format them using their
     drop-down menus, to make the proper codes appear in double curly
     brackets, as shown in Figure
-    <a href="#fig:datawrapper-map-tooltip">8.40</a>. Learn more about
+    <a href="#fig:datawrapper-map-tooltip">8.35</a>. Learn more about
     [customizing tooltips from Datawrapper
     Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
 
 <img src="images/08-map/datawrapper-map-tooltip.png" alt="To edit tooltips, click the blue column names or use drop-down menus to format the codes." width="600" />
 <p class="caption">
-Figure 8.40: To edit tooltips, click the blue column names or use
+Figure 8.35: To edit tooltips, click the blue column names or use
 drop-down menus to format the codes.
 </p>
 
@@ -7729,7 +7677,7 @@ on the support page.
 
 In this section, we will create a choropleth map of healthcare spending
 per country as a percentage of their gross domestic product (GDP), as
-shown in Figure <a href="#fig:tableau-polygon-final">8.41</a>. Remember
+shown in Figure <a href="#fig:tableau-polygon-final">8.36</a>. Remember
 that choropleth maps work best when we [normalize the
 data](normalize-choropleth.html) to show relative, rather than absolute,
 numbers. Creating a map of total health spending per country would not
@@ -7744,14 +7692,14 @@ enter an email address to download the application.
 
 <img src="images/08-map/tableau-polygon-final.png" alt="Choropleth map of healthcare spending with Tableau Public. Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1). Data from the World Bank."  />
 <p class="caption">
-Figure 8.41: Choropleth map of healthcare spending with Tableau Public.
+Figure 8.36: Choropleth map of healthcare spending with Tableau Public.
 Explore the [interactive
 version](https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1).
 Data from the World Bank.
 </p>
 
 Let’s look at the steps involved to create a choropleth from Figure
-<a href="#fig:tableau-polygon-final">8.41</a> in detail.
+<a href="#fig:tableau-polygon-final">8.36</a> in detail.
 
 1.  Open the [Healthcare Spending by Nation as Percent of GDP data in
     Google
@@ -7790,26 +7738,26 @@ sheet, and connected to it directly.
     automatically, so you need to manually change the data type. To do
     so, click the data type icon (e.g. globe or a green `#` for numeric
     values), and then choose *Geographic Role &gt; Country/Region* as
-    shown in Figure <a href="#fig:tableau-data-geographic">8.42</a>.
+    shown in Figure <a href="#fig:tableau-data-geographic">8.37</a>.
 
 <img src="images/08-map/tableau-data-geographic.png" alt="Make sure Tableau Public knows that the Country Name column contains geographic data." width="400" />
 <p class="caption">
-Figure 8.42: Make sure Tableau Public knows that the Country Name column
+Figure 8.37: Make sure Tableau Public knows that the Country Name column
 contains geographic data.
 </p>
 
 1.  In the bottom-left corner, click the orange *Sheet 1* button to
     create a worksheet with your first visualization, as shown in Figure
-    <a href="#fig:tableau-go-to-worksheet">8.43</a>.
+    <a href="#fig:tableau-go-to-worksheet">8.38</a>.
 
 <img src="images/08-map/tableau-go-to-worksheet.png" alt="Click the orange button to go sheet 1 where you can create your map." width="400" />
 <p class="caption">
-Figure 8.43: Click the orange button to go sheet 1 where you can create
+Figure 8.38: Click the orange button to go sheet 1 where you can create
 your map.
 </p>
 
 1.  In *Sheet 1*, create your choropleth map using a two-step process,
-    as shown in Figure <a href="#fig:tableau-drag">8.44</a>. First,
+    as shown in Figure <a href="#fig:tableau-drag">8.39</a>. First,
     drag-and-drop the *Country Name* field into the middle of the
     worksheet (alternatively to the Detail box of the Marks card) to
     create the map. The default view is the symbol map, which we need to
@@ -7819,7 +7767,7 @@ your map.
 
 <img src="images/08-map/tableau-drag-annotated.png" alt="Drag and drop *Country Name* to the center of the sheet, then *Health Spending As % of GDP* to the *Color* box in the *Marks* card."  />
 <p class="caption">
-Figure 8.44: Drag and drop *Country Name* to the center of the sheet,
+Figure 8.39: Drag and drop *Country Name* to the center of the sheet,
 then *Health Spending As % of GDP* to the *Color* box in the *Marks*
 card.
 </p>
@@ -7831,11 +7779,11 @@ card.
 2.  You can change the color palette by clicking the Color box of the
     Marks card, and then *Edit colors*. Change the palette to *Green*,
     and change it from continuous to steps, as shown in Figure
-    <a href="#fig:tableau-polygon-color">8.45</a>.
+    <a href="#fig:tableau-polygon-color">8.40</a>.
 
 <img src="images/08-map/tableau-polygon-color.png" alt="Change the color scheme to Green with 5 steps." width="400" />
 <p class="caption">
-Figure 8.45: Change the color scheme to Green with 5 steps.
+Figure 8.40: Change the color scheme to Green with 5 steps.
 </p>
 
 1.  When you hover over countries, you will notice a tooltip that tells
@@ -7846,11 +7794,11 @@ Figure 8.45: Change the color scheme to Green with 5 steps.
     to just `Country` (do not change the grayed-out text inside `<` and
     `>` as these are variable names), and add a `%` sign at the end of
     the second row, as shown in Figure
-    <a href="#fig:tableau-polygon-tooltip">8.46</a>.
+    <a href="#fig:tableau-polygon-tooltip">8.41</a>.
 
 <img src="images/08-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
-Figure 8.46: Change tooltip text to make it more user-friendly.
+Figure 8.41: Change tooltip text to make it more user-friendly.
 </p>
 
 1.  Let’s make our map title more meaningful. Double-click the default
@@ -7862,7 +7810,7 @@ Figure 8.46: Change tooltip text to make it more user-friendly.
     so we are going to create the final layout that include map’s title
     and credits, the legend, and is appropriate for sharing. At the
     bottom-left of the program, create a *New Dashboard*, as shown in
-    Figure <a href="#fig:tableau-dashboard-create">8.47</a>. Dashboards
+    Figure <a href="#fig:tableau-dashboard-create">8.42</a>. Dashboards
     in Tableau are layouts that can contain visualizations from multiple
     sheets, as well as text boxes, images, and other elements, creating
     rich exploratory interfaces. In this tutorial, we will stick to just
@@ -7870,7 +7818,7 @@ Figure 8.46: Change tooltip text to make it more user-friendly.
 
 <img src="images/08-map/tableau-dashboard-create-annotated.png" alt="Before you publish the map, create a new dashboard to finalize your layout." width="400" />
 <p class="caption">
-Figure 8.47: Before you publish the map, create a new dashboard to
+Figure 8.42: Before you publish the map, create a new dashboard to
 finalize your layout.
 </p>
 
@@ -7878,23 +7826,23 @@ finalize your layout.
     Automatic so that the map is responsive and occupies 100% of the
     width on all devices. Drag and drop Sheet 1 to the *Drop sheets
     here* area, as shown in Figure
-    <a href="#fig:tableau-dashboard">8.48</a>. This will copy the map,
+    <a href="#fig:tableau-dashboard">8.43</a>. This will copy the map,
     the title, and the legend from Sheet 1.
 
 <img src="images/08-map/tableau-dashboard-annotated.png" alt="To create a responsive dashboard, change the Size to Automatic." width="400" />
 <p class="caption">
-Figure 8.48: To create a responsive dashboard, change the Size to
+Figure 8.43: To create a responsive dashboard, change the Size to
 Automatic.
 </p>
 
 1.  Right-click the upper part of the map legend, and select *Floating*,
-    as shown in Figure <a href="#fig:tableau-dashboard-legend">8.49</a>.
+    as shown in Figure <a href="#fig:tableau-dashboard-legend">8.44</a>.
     Now you are able to place your legend directly on top of the map to
     save space. Drag and drop it to one of the map’s corners.
 
 <img src="images/08-map/tableau-dashboard-legend.png" alt="To place the legend on top of the map, make sure it is floating." width="400" />
 <p class="caption">
-Figure 8.49: To place the legend on top of the map, make sure it is
+Figure 8.44: To place the legend on top of the map, make sure it is
 floating.
 </p>
 
@@ -7958,11 +7906,11 @@ In this section, we will build an interactive point map of hospitals in
 Texas using [General Hospital
 Information](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data)
 dataset by Medicare, which you can see in Figure
-<a href="#fig:socrata-final">8.50</a>.
+<a href="#fig:socrata-final">8.45</a>.
 
 <img src="images/08-map/socrata-final.png" alt="In this tutorial, we will build a point map of hospitals in Texas using Socrata."  />
 <p class="caption">
-Figure 8.50: In this tutorial, we will build a point map of hospitals in
+Figure 8.45: In this tutorial, we will build a point map of hospitals in
 Texas using Socrata.
 </p>
 
@@ -7998,24 +7946,24 @@ Navigate to the [Hospital General
 Dataset](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data),
 and in the menu on the right-hand side choose *Visualize &gt; Launch New
 Visualization*, as shown in Figure
-<a href="#fig:socrata-launch-new-viz">8.51</a>. This will open up a
+<a href="#fig:socrata-launch-new-viz">8.46</a>. This will open up a
 *Configure Visualization* studio where you can create the map.
 
 <img src="images/08-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize >
 Launch New Visualization." width=“300” /&gt;
 <p class="caption">
-Figure 8.51: Go to Visualize &gt; Launch New Visualization.
+Figure 8.46: Go to Visualize &gt; Launch New Visualization.
 </p>
 
 In the top menu, click *Map* (globe icon between a scatter chart icon
 and a calendar). You will see an updated layout of the studio, with the
 map in the middle, and *Map Layers* and *Map Settings* items in the side
 menu on the left, as shown in Figure
-<a href="#fig:socrata-configure">8.52</a>.
+<a href="#fig:socrata-configure">8.47</a>.
 
 <img src="images/08-map/socrata-configure-annotated.png" alt="Your studio should look similar to this once you choose Map as the visualization type." width="500" />
 <p class="caption">
-Figure 8.52: Your studio should look similar to this once you choose Map
+Figure 8.47: Your studio should look similar to this once you choose Map
 as the visualization type.
 </p>
 
@@ -8029,24 +7977,24 @@ Let’s first select only hospitals that are located in the southern state
 of Texas. To do so, go to *Filters &gt; Add filter*. The dropdown menu
 lists all columns (or fields) of the dataset, where we should choose
 *State*. In the newly appeared State dropdown, choose TX (for Texas) as
-shown in Figure <a href="#fig:socrata-filter">8.53</a>, and scroll down
+shown in Figure <a href="#fig:socrata-filter">8.48</a>, and scroll down
 and click Apply. Socrata should zoom in on the map and center on Texas.
 Close *Filters* window to free screen space.
 
 <img src="images/08-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
 <p class="caption">
-Figure 8.53: Select Texas as the only value for State field.
+Figure 8.48: Select Texas as the only value for State field.
 </p>
 
 Let’s now *disaggregate* the map so that we can see individual hospitals
 instead of clusters. Go to *Map Settings &gt; Clusters*, and bring the
 *Stop Clustering at Zoom Level* slider to 1, as shown in Figure
-<a href="#fig:socrata-uncluster">8.54</a>. You will see the map now
+<a href="#fig:socrata-uncluster">8.49</a>. You will see the map now
 shows individual points.
 
 <img src="images/08-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
 <p class="caption">
-Figure 8.54: To show individual points instead of clusters, set Stop
+Figure 8.49: To show individual points instead of clusters, set Stop
 Clustering at Zoom Level to 1.
 </p>
 
@@ -8066,11 +8014,11 @@ variables that can be transformed to point sizes. Instead, we can use
 contains multiple variables that can be effectively visualized, such as
 *Hospital Type*, *Emergency Services* (a yes/no category), *Mortality
 national comparison* and others. Let’s stick with *Hospital Type*, as is
-illustrated in Figure <a href="#fig:socrata-style">8.55</a>.
+illustrated in Figure <a href="#fig:socrata-style">8.50</a>.
 
 <img src="images/08-map/socrata-style-annotated.png" alt="Let's display different types of hospitals in different colors." width="300" />
 <p class="caption">
-Figure 8.55: Let’s display different types of hospitals in different
+Figure 8.50: Let’s display different types of hospitals in different
 colors.
 </p>
 
@@ -8086,11 +8034,11 @@ order of categories in the legend.
 To change what is shown in tooltips when you hover or click on points,
 go to **Flyout Details**, and set Flyout Title to *Facility Name*,
 adding city and phone number as additional flyout values, as is shown in
-Figure <a href="#fig:socrata-flyout">8.56</a>.
+Figure <a href="#fig:socrata-flyout">8.51</a>.
 
 <img src="images/08-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
 <p class="caption">
-Figure 8.56: To edit tooltip information, use Flyout Details menu item.
+Figure 8.51: To edit tooltip information, use Flyout Details menu item.
 </p>
 
 At this point you should have a fully-functional interactive map showing
@@ -8105,19 +8053,19 @@ still a draft, and you can go ahead and *Publish…* it.
 
 Now you can embed the map on your website as an iframe. To do so, click
 the *Share* button in the upper-right side of your map (see Figure
-<a href="#fig:socrata-share">8.57</a>), and copy the generated code from
+<a href="#fig:socrata-share">8.52</a>), and copy the generated code from
 *Embed Code* text area (Figure
-<a href="#fig:socrata-share-embed">8.58</a>). Learn more in [Chapter 10:
+<a href="#fig:socrata-share-embed">8.53</a>). Learn more in [Chapter 10:
 Embed on the Web](embed.html).
 
 <img src="images/08-map/socrata-share-annotated.png" alt="Click *Share* button to bring up *Share and Embed* window." width="400" />
 <p class="caption">
-Figure 8.57: Click *Share* button to bring up *Share and Embed* window.
+Figure 8.52: Click *Share* button to bring up *Share and Embed* window.
 </p>
 
 <img src="images/08-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website."  />
 <p class="caption">
-Figure 8.58: Copy iframe code to embed this map in another website.
+Figure 8.53: Copy iframe code to embed this map in another website.
 </p>
 
 ### Limitations of Socrata
@@ -8530,29 +8478,34 @@ with your stories.
 10 Embed On the Web
 ===================
 
-So far you’ve learned how to create [charts in chapter 7](chart.html)
-and [maps in chapter 8](map.html). Our book emphasizes the benefits of
-designing *interactive* visualizations that engage broad audiences on
-the internet by inviting them to interact with your data, investigate
-new patterns, download files if desired, and easily share your work on
-social media. In this chapter, you’ll learn about a computer code tag
-called an *iframe*. Like a picture frame, an iframe displays one web
-page (such as your interactive data visualization) inside a second web
-page that you control (such as your personal or organizational web
-site), and makes the content appear seamlessly so that audiences can
-still interact with it. Several of the visualization tools you’ve
-learned so far, such as Google Sheets, Datawrapper, and Tableau Public,
-generate an *embed code* that contains an iframe to the online chart or
-map you’ve created on their platform. We will demonstrate how to [get
-the embed code or link](embed-code.html) from your visualization tool
-site, and [paste the code into a second website](paste-code.html) to
-seamlessly display your interactive content. No coding skills are
-required in this introductory book, but it certainly helps to be
-*code-curious*.
+So far you’ve learned how to create [charts in chapter 7](chart.html),
+[maps in chapter 8](map.html), and [tables in chapter 9](table.html).
+Our book emphasizes the benefits of designing *interactive*
+visualizations that engage broad audiences on the internet by inviting
+them to interact with your data, investigate new patterns, download
+files if desired, and easily share your work on social media. In this
+chapter, you’ll learn about a computer code tag called an *iframe*. Like
+a picture frame, an iframe displays a live web page (such as your
+interactive data visualization) inside a second web page that you
+control (such as your personal or organizational web site), as shown in
+Figure <a href="#fig:iframe-illustration">10.1</a>. When done correctly,
+the iframe makes your data visualization appear seamlessly on your web
+page, so that audiences can explore the content without needing to know
+that it’s coming from a different host. Several of the visualization
+tools you’ve learned so far, such as Google Sheets, Datawrapper, and
+Tableau Public, generate an *embed code* that contains an iframe to the
+online chart or map you’ve created on their platform. We will
+demonstrate how to [get the embed code or link](embed-code.html) from
+your visualization tool site, and [paste the code into a second
+website](paste-code.html) to seamlessly display your interactive
+content. No coding skills are required in this introductory book, but it
+certainly helps to be *code-curious*.
 
-TODO: ILYA Discuss whether we should add an abstract diagram of an
-iframe inside a web page, like a picture frame on a wall, to visually
-reinforce this concept for new users here
+<img src="images/10-embed/iframe-illustration.png" alt="You can use an iframe to embed other web pages in your web page" width="600" />
+<p class="caption">
+Figure 10.1: You can use an iframe to embed other web pages in your web
+page
+</p>
 
 Static Image vs Interactive iframe
 ----------------------------------
@@ -8618,13 +8571,13 @@ the primary site URL, then concludes with an end tag `</iframe>`. This
 sample iframe refers to an interactive US income inequality chart on the
 Datawrapper platform, which first appeared in the
 [Introduction](introduction.html) to this book, as shown in Figure
-<a href="#fig:iframe-sample">10.1</a>.
+<a href="#fig:iframe-sample">10.2</a>.
 
 `<iframe src='https://https://datawrapper.dwcdn.net/LtRbj/'></iframe>`
 
 <img src="images/10-embed/iframe-sample.png" alt="Depending on the format of your book, if a static chart appears above, but you can also [view the interactive version](https://datawrapper.dwcdn.net/LtRbj/)."  />
 <p class="caption">
-Figure 10.1: Depending on the format of your book, if a static chart
+Figure 10.2: Depending on the format of your book, if a static chart
 appears above, but you can also [view the interactive
 version](https://datawrapper.dwcdn.net/LtRbj/).
 </p>
@@ -8664,11 +8617,10 @@ appear seamlessly on the secondary site.
 We’ll break this down into three steps for each visualization platform.
 First, we will demonstrate how to copy your embed code or iframe tag
 from Google Sheets, Datawrapper, Tableau Public, and other platforms
-listed below. \[TODO: add others like BatchGeo or rewrite that
-sentence?\] Second, we’ll show you how to *practice paste* the embed
+listed below. Second, we’ll show you how to *practice paste* the embed
 code or iframe tag into the [W3Schools TryIt iframe
 page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe),
-as shown in Figure <a href="#fig:w3schools-tryit-iframe">10.2</a>, to
+as shown in Figure <a href="#fig:w3schools-tryit-iframe">10.3</a>, to
 help you understand what’s happening behind-the-scenes and to modify the
 code if needed. Third, we’ll point you to the next section to learn how
 to properly paste the embed code in your preferred website, such as
@@ -8676,7 +8628,7 @@ WordPress \[and others TODO\].
 
 <img src="images/10-embed/w3schools-tryit-iframe.png" alt="For each embed code below, you will *practice paste* it in place of the selected text of the W3Schools TryIt iframe page to see how it works." width="750" />
 <p class="caption">
-Figure 10.2: For each embed code below, you will *practice paste* it in
+Figure 10.3: For each embed code below, you will *practice paste* it in
 place of the selected text of the W3Schools TryIt iframe page to see how
 it works.
 </p>
@@ -8686,22 +8638,22 @@ it works.
 1.  After you create a [Google Sheets chart in Chapter
     7](chart-google.html), click the 3-dot kebab menu in the upper-right
     corner of the chart to publish it, as shown in Figure
-    <a href="#fig:google-sheets-publish">10.3</a>.
+    <a href="#fig:google-sheets-publish">10.4</a>.
 
 <img src="images/10-embed/google-sheets-publish.png" alt="In your chart, click the three-dot kebab menu to publish it." width="150" />
 <p class="caption">
-Figure 10.3: In your chart, click the three-dot kebab menu to publish
+Figure 10.4: In your chart, click the three-dot kebab menu to publish
 it.
 </p>
 
 1.  In the next screen, select the *Embed* tab and *Interactive* chart,
     and click the *Publish* button to share it online. Select and copy
     the embed code, as shown in Figure
-    <a href="#fig:google-sheets-embed-code">10.4</a>.
+    <a href="#fig:google-sheets-embed-code">10.5</a>.
 
 <img src="images/10-embed/google-sheets-embed-code.png" alt="Click *Embed* and *Interactive* and *Publish*, then select and copy the embed code." width="500" />
 <p class="caption">
-Figure 10.4: Click *Embed* and *Interactive* and *Publish*, then select
+Figure 10.5: Click *Embed* and *Interactive* and *Publish*, then select
 and copy the embed code.
 </p>
 
@@ -8710,12 +8662,12 @@ and copy the embed code.
     page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe).
     Select the current iframe tag, paste in your embed code to replace
     it, and press the green *Run* button. The result should be similar
-    to Figure <a href="#fig:google-sheets-tryit">10.5</a>, but instead
+    to Figure <a href="#fig:google-sheets-tryit">10.6</a>, but instead
     will display your embed code and interactive visualization.
 
 <img src="images/10-embed/google-sheets-tryit.png" alt="Paste your Google Sheets embed code to place of the current iframe tag in the TryIt page and click *Run*." width="750" />
 <p class="caption">
-Figure 10.5: Paste your Google Sheets embed code to place of the current
+Figure 10.6: Paste your Google Sheets embed code to place of the current
 iframe tag in the TryIt page and click *Run*.
 </p>
 
@@ -8735,24 +8687,24 @@ closely and you’ll see iframe settings such as `width` and `height`
     7](chart-datawrapper.html) or [map in Chapter 8](map.html) or
     [interactive table in Chapter 9](table.html), proceed to the final
     screen and click the *Publish* button, as shown in Figure
-    <a href="#fig:datawrapper-publish">10.6</a>. This publishes the
+    <a href="#fig:datawrapper-publish">10.7</a>. This publishes the
     interactive version of your chart or map online. Further down on the
     same screen you can also export a static image, if desired.
 
 <img src="images/10-embed/datawrapper-publish.png" alt="Proceed to the final screen and click the *Publish* button." width="300" />
 <p class="caption">
-Figure 10.6: Proceed to the final screen and click the *Publish* button.
+Figure 10.7: Proceed to the final screen and click the *Publish* button.
 </p>
 
 1.  On the next screen, click *copy* to get the Datawrapper embed code,
-    as shown in Figure <a href="#fig:datawrapper-embed-code">10.7</a>.
+    as shown in Figure <a href="#fig:datawrapper-embed-code">10.8</a>.
     The default *responsive iframe* version of the embed code contains
     additional instructions to improve its appearance on both small and
     large device screens.
 
 <img src="images/10-embed/datawrapper-embed-code.png" alt="Copy the responsive iframe version of the Datawrapper embed code." width="300" />
 <p class="caption">
-Figure 10.7: Copy the responsive iframe version of the Datawrapper embed
+Figure 10.8: Copy the responsive iframe version of the Datawrapper embed
 code.
 </p>
 
@@ -8761,12 +8713,12 @@ code.
     page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe).
     Select the current iframe tag, paste in your embed code to replace
     it, and press the green *Run* button. The result should be similar
-    to Figure <a href="#fig:datawrapper-tryit">10.8</a>, but instead
+    to Figure <a href="#fig:datawrapper-tryit">10.9</a>, but instead
     will display your embed code and interactive visualization.
 
 <img src="images/10-embed/datawrapper-tryit.png" alt="Paste your Datawrapper embed code in place of the current iframe tag in the TryIt page and click *Run*." width="750" />
 <p class="caption">
-Figure 10.8: Paste your Datawrapper embed code in place of the current
+Figure 10.9: Paste your Datawrapper embed code in place of the current
 iframe tag in the TryIt page and click *Run*.
 </p>
 
@@ -8785,12 +8737,13 @@ responsive depending on the size of the device screen.
 2.  But if it doesn’t work, go back to step 3 and experiment. Try to
     edit the embed code down to a *simple iframe*, and run it again to
     see how it looks, as shown in Figure
-    <a href="#fig:datawrapper-tryit-simple">10.9</a>. Sometimes a simple
-    iframe works better on your website than a complex embed code.
+    <a href="#fig:datawrapper-tryit-simple">10.10</a>. Sometimes a
+    simple iframe works better on your website than a complex embed
+    code.
 
 <img src="images/10-embed/datawrapper-tryit-simple.png" alt="If a complex embed code does not work in your website, go back and try to edit it down into a simple iframe." width="750" />
 <p class="caption">
-Figure 10.9: If a complex embed code does not work in your website, go
+Figure 10.10: If a complex embed code does not work in your website, go
 back and try to edit it down into a simple iframe.
 </p>
 
@@ -8807,21 +8760,21 @@ re-publish your visualization, Datawrapper will increase the last digit
     7](chart-tableau.html) or [map in Chapter 8](map-tableau.html),
     publish your worksheet, dashboard, or story online by selecting
     *File &gt; Save to Tableau Public* in the desktop application menu,
-    as shown in Figure <a href="#fig:tableau-public-publish">10.10</a>.
+    as shown in Figure <a href="#fig:tableau-public-publish">10.11</a>.
 
 <img src="images/10-embed/tableau-public-publish.png" alt="In the Tableau Public desktop application, select *File--Save to Tableau Public* to publish to the online server." width="428" />
 <p class="caption">
-Figure 10.10: In the Tableau Public desktop application, select
+Figure 10.11: In the Tableau Public desktop application, select
 *File–Save to Tableau Public* to publish to the online server.
 </p>
 
 1.  In your online Tableau Public account profile page, click to *View*
     the details of any of your published visualizations, as shown in
-    Figure <a href="#fig:tableau-public-view">10.11</a>.
+    Figure <a href="#fig:tableau-public-view">10.12</a>.
 
 <img src="images/10-embed/tableau-public-view.png" alt="In your Tableau Public online profile page, click to *View* the details of a published visualization." width="289" />
 <p class="caption">
-Figure 10.11: In your Tableau Public online profile page, click to
+Figure 10.12: In your Tableau Public online profile page, click to
 *View* the details of a published visualization.
 </p>
 
@@ -8834,11 +8787,11 @@ entered when creating your online account.
 1.  When viewing details for a published visualization in your Tableau
     Public online account, scroll down and click on the *Share* symbol
     in the lower-right corner. Select and copy its embed code, as shown
-    in Figure <a href="#fig:tableau-public-embed-code">10.12</a>.
+    in Figure <a href="#fig:tableau-public-embed-code">10.13</a>.
 
 <img src="images/10-embed/tableau-public-embed-code-annotated.png" alt="Scroll down in the online published visualization details, click the *Share* button, and copy the embed code." width="469" />
 <p class="caption">
-Figure 10.12: Scroll down in the online published visualization details,
+Figure 10.13: Scroll down in the online published visualization details,
 click the *Share* button, and copy the embed code.
 </p>
 
@@ -8847,12 +8800,12 @@ click the *Share* button, and copy the embed code.
     page](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe).
     Select the current iframe tag, paste in your embed code to replace
     it, and press the green *Run* button. The result should be similar
-    to Figure <a href="#fig:tableau-public-tryit">10.13</a>, but instead
+    to Figure <a href="#fig:tableau-public-tryit">10.14</a>, but instead
     will display your embed code and interactive visualization.
 
 <img src="images/10-embed/tableau-public-tryit.png" alt="Paste your Tableau public embed code in place of the current iframe tag in the TryIt page and click *Run*." width="750" />
 <p class="caption">
-Figure 10.13: Paste your Tableau public embed code in place of the
+Figure 10.14: Paste your Tableau public embed code in place of the
 current iframe tag in the TryIt page and click *Run*.
 </p>
 
@@ -8906,13 +8859,13 @@ Hint: Insert `width="90%"`, rather than 100%, to help readers to scroll
 more easily down your web page with a margin.
 
 1.  Press *Run* to see how it looks, as shown in Figure
-    <a href="#fig:tableau-public-tryit-simple">10.14</a>. Sometimes a
+    <a href="#fig:tableau-public-tryit-simple">10.15</a>. Sometimes a
     simple iframe works better on your website than a complex embed
     code.
 
 <img src="images/10-embed/tableau-public-tryit-simple.png" alt="If a complex embed code does not work in your website, go back and copy the link to the visualization, and try to convert it into a simple iframe." width="750" />
 <p class="caption">
-Figure 10.14: If a complex embed code does not work in your website, go
+Figure 10.15: If a complex embed code does not work in your website, go
 back and copy the link to the visualization, and try to convert it into
 a simple iframe.
 </p>
@@ -8972,11 +8925,11 @@ iframe codes, as it used to before WP 5.0
 
 In your block editor, select a *custom HTML* block, and directly insert
 the embed code or the iframe, as shown in Figure
-<a href="#fig:wordpress-custom-html">10.15</a>.
+<a href="#fig:wordpress-custom-html">10.16</a>.
 
 <img src="images/10-embed/wordpress-custom-html.png" alt="Paste an embed code or iframe into a custom HTML block." width="700" />
 <p class="caption">
-Figure 10.15: Paste an embed code or iframe into a custom HTML block.
+Figure 10.16: Paste an embed code or iframe into a custom HTML block.
 </p>
 
 For the second method, assume that you’re using WordPress with either
@@ -8985,7 +8938,7 @@ the site.
 
 1.  Install and activate the [iframe
     plugin](http://wordpress.org/plugins/iframe/), as shown in Figure
-    <a href="#fig:wordpress-iframe-plugin">10.16</a>. This plugin allows
+    <a href="#fig:wordpress-iframe-plugin">10.17</a>. This plugin allows
     authors to embed iframe codes in a modified “shortcode” format
     surrounded by square brackets. Without the plugin, self-hosted
     WordPress.org sites will usually “strip out” iframe codes for all
@@ -8993,19 +8946,19 @@ the site.
 
 <img src="images/10-embed/wordpress-iframe-plugin.jpg" alt="Install and activate the *iframe plugin* on a self-hosted WP site." width="300" />
 <p class="caption">
-Figure 10.16: Install and activate the *iframe plugin* on a self-hosted
+Figure 10.17: Install and activate the *iframe plugin* on a self-hosted
 WP site.
 </p>
 
 1.  In the WordPress editor, click to the *text* tab to view the code,
     and paste the embed code or iframe, as shown in Figure
-    <a href="#fig:wordpress-text-paste-iframe">10.17</a>. Initially, the
+    <a href="#fig:wordpress-text-paste-iframe">10.18</a>. Initially, the
     code you pasted includes iframe tags at the start (`<iframe...`) and
     the end ()`...></iframe>`).
 
 <img src="images/10-embed/wordpress-text-paste-iframe.png" alt="Install and activate the *iframe plugin* on a self-hosted WP site." width="700" />
 <p class="caption">
-Figure 10.17: Install and activate the *iframe plugin* on a self-hosted
+Figure 10.18: Install and activate the *iframe plugin* on a self-hosted
 WP site.
 </p>
 
@@ -9013,11 +8966,11 @@ WP site.
     square opening bracket (`[`). Modify the back end by erasing the
     greater-than symbol (`>`) and the entire end tag (`</iframe>`), and
     replace both of them with one square closing bracket (`]`), as shown
-    in Figure <a href="#fig:wordpress-insert-brackets">10.18</a>.
+    in Figure <a href="#fig:wordpress-insert-brackets">10.19</a>.
 
 <img src="images/10-embed/wordpress-insert-brackets.png" alt="Modify the front and back end with square brackets." width="700" />
 <p class="caption">
-Figure 10.18: Modify the front and back end with square brackets.
+Figure 10.19: Modify the front and back end with square brackets.
 </p>
 
 TODO ABOVE: check method with more complex embed codes, check with
@@ -10600,9 +10553,8 @@ your GitHub account and can be shared across the web.
 ========================
 
 In [Chapter 8: Map Your Data](map.html), we described several
-easy-to-learn drag-and-drop tools, such as [BatchGeo](batchgeo.html),
-[Google My Maps](mymaps.html) and
-[Datawrapper](symbolmap-datawrapper.html). In this chapter, we offer
+easy-to-learn drag-and-drop tools, such as Google My Maps\](mymaps.html)
+and [Datawrapper](symbolmap-datawrapper.html). In this chapter, we offer
 more advanced map tutorials using our open-source code templates, which
 you can copy and modify, using skills you learned in [Chapter 11: Edit
 and Host Code with GitHub](github.html). We built all of the templates
@@ -11482,8 +11434,14 @@ in the first row of the series, and leave it blank for the others.
     Learn about HTML syntax at
     [W3Schools](https://www.w3schools.com/html/html_links.asp).
 
--   Zoom: Set a low number to see continents, or a high number for city
-    streets, typically on a scale from 1 to 18.
+-   Zoom: Leaflet’s default zoom levels are between 0 (world view) to 18
+    (individual buildings), and most free basemap tiles, such as those
+    provided by Stamen or CartoDB are available for each level in this
+    range. There exist more detailed basemaps that allow you to use
+    higher values. Experiment with zoom levels to get the best view for
+    your story, and remember that given the same zoom level, larger
+    screens will show larger areas compared to smaller screens, such as
+    smartphones.
 
 -   Marker: Select either `Numbered` (the default) or `Plain` or
     `Hidden`. The latter works best when assigning several chapters to

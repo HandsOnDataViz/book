@@ -99,9 +99,22 @@ Bar and column charts use *length* and *height* to represent value, therefore th
 knitr::include_graphics("images/07-chart/design-principles-start-at-zero.png")
 ```
 
-But the zero-baseline rule does *not* apply to line charts. Visualization expert Alberto Cairo points out that line charts represent values through the *position* and *angle* of the line, rather than its height or length. Starting a line chart at a number other than zero does *not* necessarily distort its encoded information because our eyes rely on its shape to determine its meaning, rather than its proximity to the baseline.^[@cairoHowChartsLie2019, p. 61.] In fact, if you mistakenly force a line chart to begin at the zero baseline, you may inadvertently produce a misleading chart, as you will learn in the [How to Lie with Charts section of Chapter 15](how-to-lie-with-charts.html).
+But the zero-baseline rule does *not* apply to line charts. According to visualization expert Alberto Cairo, line charts represent values through the *position* and *angle* of the line, rather than its height or length. Starting a line chart at a number other than zero does *not* necessarily distort its encoded information because our eyes rely on its shape to determine its meaning, rather than its proximity to the baseline.^[@cairoHowChartsLie2019, p. 61.] For example, compare both the right and left sides of Figure \@ref(fig:design-principles-baseline-comparison), where both are correct.
 
-TODO: Discuss with Ilya about adding a simpler chart comparison to demonstrate Cairo's primary argument, not the secondary argument about misleading charts
+(ref:design-principles-baseline-comparison) Since line charts do *not* require a zero baseline, both sides are correct.
+
+```{r design-principles-baseline-comparison, fig.cap="(ref:design-principles-baseline-comparison)"}
+knitr::include_graphics("images/07-chart/design-principles-baseline-comparison.png")
+```
+
+Furthermore, while forcing a line chart to begin at the zero baseline is acceptable, it may not produce the best visualization for your data story. In Figure \@ref(fig:design-principles-baseline-modified), the left side shows a line chart that starts the vertical axis at zero, but as a result the line appears very flat at the top of the chart and hides changes in values. The right side shows a line chart where the vertical axis was reduced to match the range of values, which results in a clearer depiction of change. Both sides are technically correct, and in this case, the right side is a better fit for the data story. Still, you need to be cautious, because as you'll learn in the [How to Lie with Charts section of Chapter 15](how-to-lie-with-charts.html), people can mislead us by modifying the vertical axis, and there is no uniform rule about where it belongs on a line chart.
+
+(ref:design-principles-baseline-modified) While the line chart with the zero baseline is acceptable, the line chart with a modified baseline more clearly tells a data story about change.
+
+```{r design-principles-baseline-modified, fig.cap="(ref:design-principles-baseline-modified)"}
+knitr::include_graphics("images/07-chart/design-principles-baseline-modified.png")
+```
+
 
 #### Pie Charts Represent 100% {-}
 Pie charts is one of the most contentious issues in data visualization.

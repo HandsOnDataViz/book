@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-11-20" />
+<meta name="date" content="2020-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -227,7 +227,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="map-design.html"><a href="map-design.html"><i class="fa fa-check"></i>Map Design Principles</a></li>
 <li class="chapter" data-level="" data-path="design-choropleth.html"><a href="design-choropleth.html"><i class="fa fa-check"></i>Design Choropleth Colors &amp; Intervals</a></li>
 <li class="chapter" data-level="" data-path="normalize-choropleth.html"><a href="normalize-choropleth.html"><i class="fa fa-check"></i>Normalize Choropleth Map Data</a></li>
-<li class="chapter" data-level="" data-path="batchgeo.html"><a href="batchgeo.html"><i class="fa fa-check"></i>Point Map with BatchGeo</a></li>
 <li class="chapter" data-level="" data-path="mymaps.html"><a href="mymaps.html"><i class="fa fa-check"></i>Point Map with Google My Maps</a></li>
 <li class="chapter" data-level="" data-path="symbolmap-datawrapper.html"><a href="symbolmap-datawrapper.html"><i class="fa fa-check"></i>Symbol Point Map with Datawrapper</a></li>
 <li class="chapter" data-level="" data-path="choropleth-datawrapper.html"><a href="choropleth-datawrapper.html"><i class="fa fa-check"></i>Choropleth Map with Datawrapper</a></li>
@@ -398,8 +397,22 @@ is visible without any user interaction.</p>
 Figure 7.2: Start your bar chart at zero.
 </p>
 </div>
-<p>But the zero-baseline rule does <em>not</em> apply to line charts. Visualization expert Alberto Cairo points out that line charts represent values through the <em>position</em> and <em>angle</em> of the line, rather than its height or length. Starting a line chart at a number other than zero does <em>not</em> necessarily distort its encoded information because our eyes rely on its shape to determine its meaning, rather than its proximity to the baseline.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> In fact, if you mistakenly force a line chart to begin at the zero baseline, you may inadvertently produce a misleading chart, as you will learn in the <a href="how-to-lie-with-charts.html">How to Lie with Charts section of Chapter 15</a>.</p>
-<p>TODO: Discuss with Ilya about adding a simpler chart comparison to demonstrate Cairo’s primary argument, not the secondary argument about misleading charts</p>
+<p>But the zero-baseline rule does <em>not</em> apply to line charts. According to visualization expert Alberto Cairo, line charts represent values through the <em>position</em> and <em>angle</em> of the line, rather than its height or length. Starting a line chart at a number other than zero does <em>not</em> necessarily distort its encoded information because our eyes rely on its shape to determine its meaning, rather than its proximity to the baseline.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> For example, compare both the right and left sides of Figure <a href="chart-design.html#fig:design-principles-baseline-comparison">7.3</a>, where both are correct.</p>
+
+<div class="figure"><span id="fig:design-principles-baseline-comparison"></span>
+<img src="images/07-chart/design-principles-baseline-comparison.png" alt="Since line charts do not require a zero baseline, both sides are correct."  />
+<p class="caption">
+Figure 7.3: Since line charts do <em>not</em> require a zero baseline, both sides are correct.
+</p>
+</div>
+<p>Furthermore, while forcing a line chart to begin at the zero baseline is acceptable, it may not produce the best visualization for your data story. In Figure <a href="chart-design.html#fig:design-principles-baseline-modified">7.4</a>, the left side shows a line chart that starts the vertical axis at zero, but as a result the line appears very flat at the top of the chart and hides changes in values. The right side shows a line chart where the vertical axis was reduced to match the range of values, which results in a clearer depiction of change. Both sides are technically correct, and in this case, the right side is a better fit for the data story. Still, you need to be cautious, because as you’ll learn in the <a href="how-to-lie-with-charts.html">How to Lie with Charts section of Chapter 15</a>, people can mislead us by modifying the vertical axis, and there is no uniform rule about where it belongs on a line chart.</p>
+
+<div class="figure"><span id="fig:design-principles-baseline-modified"></span>
+<img src="images/07-chart/design-principles-baseline-modified.png" alt="While the line chart with the zero baseline is acceptable, the line chart with a modified baseline more clearly tells a data story about change."  />
+<p class="caption">
+Figure 7.4: While the line chart with the zero baseline is acceptable, the line chart with a modified baseline more clearly tells a data story about change.
+</p>
+</div>
 </div>
 <div id="pie-charts-represent-100" class="section level4 unnumbered" number="">
 <h4>Pie Charts Represent 100%</h4>
@@ -426,7 +439,7 @@ and do the math for your readers.</p>
 You should be able to justify each element you add. To do so, ask yourself:
 Does this element improve the chart, or can I drop it without decreasing readability?
 This way you won’t end up with so-called “chart junk” as shown
-in Figure <a href="chart-design.html#fig:design-principles-junk">7.3</a>, which includes 3D perspectives,
+in Figure <a href="chart-design.html#fig:design-principles-junk">7.5</a>, which includes 3D perspectives,
 shadows, and unnecessary elements. They might have looked cool in
 early versions of Microsoft Office, but let’s stay away from them today.
 Chart junk distracts the viewer and reduces chart readability and comprehension.
@@ -435,7 +448,7 @@ It also looks unprofessional and doesn’t add credibility to you as a storytell
 <div class="figure"><span id="fig:design-principles-junk"></span>
 <img src="images/07-chart/design-principles-junk.png" alt="Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements."  />
 <p class="caption">
-Figure 7.3: Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements.
+Figure 7.5: Chart junk distracts the viewer, so stay away from shadows, 3D perspectives, unnecessary colors and other fancy elements.
 </p>
 </div>
 <p>Do not use shadows or thick outlines with bar charts, because the reader might think
@@ -452,42 +465,42 @@ with varying shapes and/or colors.</p>
 <h4>Beware of pie charts</h4>
 <p>Remember that pie charts only show part-to-whole relationship, so all slices need to add up to 100%. Generally, the fewer slices—the better. Arrange slices from largest
 to smallest, clockwise, and put the largest slice at 12 o’clock.
-Figure <a href="chart-design.html#fig:design-principles-pie">7.4</a> illustrates that.</p>
+Figure <a href="chart-design.html#fig:design-principles-pie">7.6</a> illustrates that.</p>
 
 <div class="figure"><span id="fig:design-principles-pie"></span>
 <img src="images/07-chart/design-principles-pie.png" alt="Sort slices in pie charts from largest to smallest, and start at 12 o’clock."  />
 <p class="caption">
-Figure 7.4: Sort slices in pie charts from largest to smallest, and start at 12 o’clock.
+Figure 7.6: Sort slices in pie charts from largest to smallest, and start at 12 o’clock.
 </p>
 </div>
-<p>If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or split, like Figure <a href="chart-design.html#fig:design-principles-pie-to-bar">7.5</a> shows.</p>
+<p>If your pie chart has more than five slices, consider showing your data in a bar chart, either stacked or split, like Figure <a href="chart-design.html#fig:design-principles-pie-to-bar">7.7</a> shows.</p>
 
 <div class="figure"><span id="fig:design-principles-pie-to-bar"></span>
 <img src="images/07-chart/design-principles-pie-to-bar.png" alt="Consider using bar charts instead of pies."  />
 <p class="caption">
-Figure 7.5: Consider using bar charts instead of pies.
+Figure 7.7: Consider using bar charts instead of pies.
 </p>
 </div>
 </div>
 <div id="dont-make-people-turn-their-heads-to-read-labels" class="section level4 unnumbered" number="">
 <h4>Don’t make people turn their heads to read labels</h4>
-<p>When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit, consider turning the chart 90 degrees so that it becomes a horizontal bar chart. Take a look at Figure <a href="chart-design.html#fig:design-principles-turn-bar">7.6</a> to see how much easier it is to read horizontally-oriented labels.</p>
+<p>When your column chart has long x-axis labels that have to be rotated (often 90 degrees) to fit, consider turning the chart 90 degrees so that it becomes a horizontal bar chart. Take a look at Figure <a href="chart-design.html#fig:design-principles-turn-bar">7.8</a> to see how much easier it is to read horizontally-oriented labels.</p>
 
 <div class="figure"><span id="fig:design-principles-turn-bar"></span>
 <img src="images/07-chart/design-principles-turn-bar.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 7.6: For long labels, use horizontal bar charts.
+Figure 7.8: For long labels, use horizontal bar charts.
 </p>
 </div>
 </div>
 <div id="arrange-elements-logically" class="section level4 unnumbered" number="">
 <h4>Arrange elements logically</h4>
-<p>If your bar chart shows different categories, consider ordering them, like is shown in Figure <a href="chart-design.html#fig:design-principles-order-categories">7.7</a>. You might want to sort them alphabetically, which can be useful if you want the reader to be able to quickly look up an item, such as their town. Ordering categories by value is another common technique that makes comparisons possible. If your columns represent a value of something at a particular time, they have to be ordered sequentially, of course.</p>
+<p>If your bar chart shows different categories, consider ordering them, like is shown in Figure <a href="chart-design.html#fig:design-principles-order-categories">7.9</a>. You might want to sort them alphabetically, which can be useful if you want the reader to be able to quickly look up an item, such as their town. Ordering categories by value is another common technique that makes comparisons possible. If your columns represent a value of something at a particular time, they have to be ordered sequentially, of course.</p>
 
 <div class="figure"><span id="fig:design-principles-order-categories"></span>
 <img src="images/07-chart/design-principles-order-categories.png" alt="For long labels, use horizontal bar charts."  />
 <p class="caption">
-Figure 7.7: For long labels, use horizontal bar charts.
+Figure 7.9: For long labels, use horizontal bar charts.
 </p>
 </div>
 </div>
@@ -506,23 +519,23 @@ Consider using commas as thousands separators for readability (<code>1,000,000</
 <ol style="list-style-type: decimal">
 <li>Is there a conflict of meaning between colors and the phenomenon they represent? Am I using red to represent profit or green to represent death rate? This question is complex as colors carry different associations for different social groups and cultures, but try to exercise your best sensitivity.</li>
 <li>Can people with color blindness interpret your chart? Palettes that contain reds and greens, or yellows and blues can be challenging. Consider using <a href="http://www.colororacle.org/">Color Oracle</a> or another simulator to make sure your visualization is accessible.</li>
-<li>Will the colors be distinguishable in black-and-white? Even if you don’t expect viewers printing your chart, they may. You can use Color Oracle or another simulator to check that your colors have different brightness levels and look distinguishable in grayscale. Figure <a href="chart-design.html#fig:design-principles-color">7.8</a> shows some good and bad examples of color use.</li>
+<li>Will the colors be distinguishable in black-and-white? Even if you don’t expect viewers printing your chart, they may. You can use Color Oracle or another simulator to check that your colors have different brightness levels and look distinguishable in grayscale. Figure <a href="chart-design.html#fig:design-principles-color">7.10</a> shows some good and bad examples of color use.</li>
 </ol>
 
 <div class="figure"><span id="fig:design-principles-color"></span>
 <img src="images/07-chart/design-principles-color.png" alt="Don’t use colors just for the sake of it."  />
 <p class="caption">
-Figure 7.8: Don’t use colors just for the sake of it.
+Figure 7.10: Don’t use colors just for the sake of it.
 </p>
 </div>
 <p>The use of color is a complex topic, and there are plenty of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></p>
 <p>If you follow our advice, you should end up with a de-cluttered chart as shown in
-Figure <a href="chart-design.html#fig:design-principles-decluttered">7.9</a>. Notice how your eyes are drawn to the bars and their corresponding values, not bright colors or secondary components like the axes lines.</p>
+Figure <a href="chart-design.html#fig:design-principles-decluttered">7.11</a>. Notice how your eyes are drawn to the bars and their corresponding values, not bright colors or secondary components like the axes lines.</p>
 
 <div class="figure"><span id="fig:design-principles-decluttered"></span>
 <img src="images/07-chart/design-principles-decluttered.png" alt="Make sure important things catch the eye first."  />
 <p class="caption">
-Figure 7.9: Make sure important things catch the eye first.
+Figure 7.11: Make sure important things catch the eye first.
 </p>
 </div>
 <p>TODO: Compare our rules and recommendations to different dataviz style guides, such as Urban Institute, and cite them <a href="http://urbaninstitute.github.io/graphics-styleguide/" class="uri">http://urbaninstitute.github.io/graphics-styleguide/</a></p>

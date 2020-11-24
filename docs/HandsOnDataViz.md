@@ -13761,15 +13761,15 @@ What’s a better alternative to a dual-axis line chart? If your goal is
 to visualize the relationship between two variables—global temperature
 and US GDP—then display them in a [scatter chart, as we introduced in
 chapter 7](scatter-bubble-datawrapper.html). We can make a more
-meaningful comparison by plotting [real US
+meaningful comparison by plotting [US real
 GDP](https://fred.stlouisfed.org/series/GDPCA), which has been adjusted
 into constant 2012 dollars, and entered alongside global temperature
 change [in this Google
 Sheet](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=374640985).
-While a scatter chart does not show time in the same way as a line
-chart, float your cursor over points to see years in the [interactive
-version of the Datawrapper scatter
-chart](https://datawrapper.dwcdn.net/2Nhs9/) as shown in Figure
+We created a *connected scatter chart* that displays a line through all
+of the points to represent time, by following this [Datawrapper Academy
+tutorial](https://academy.datawrapper.de/article/260-how-to-connect-scatterplot-dots-with-lines),
+as shown in Figure
 <a href="#fig:real-gdp-temperature-scatter">15.10</a>. Overall, the
 growth of the US economy is strongly associated with rising global
 temperature change from 1929 to the present. Furthermore, it’s harder to
@@ -13777,11 +13777,11 @@ mislead readers with a scatter chart because the axes are designed to
 display the full range of data, and our reading of the strength of the
 relationship is not tied to the aspect ratio.
 
-<img src="images/15-detect/real-gdp-temperature-scatter.png" alt="Scatter chart of relationship between real US GDP and global temperature change from 1929 to 2019. Explore the [interactive version](https://datawrapper.dwcdn.net/2Nhs9/)."  />
+<img src="images/15-detect/real-gdp-temperature-scatter.png" alt="Connected scatter chart of relationship between US real GDP and global temperature change from 1929 to 2019. Explore the [interactive version](https://datawrapper.dwcdn.net/Zleaq/)."  />
 <p class="caption">
-Figure 15.10: Scatter chart of relationship between real US GDP and
-global temperature change from 1929 to 2019. Explore the [interactive
-version](https://datawrapper.dwcdn.net/2Nhs9/).
+Figure 15.10: Connected scatter chart of relationship between US real
+GDP and global temperature change from 1929 to 2019. Explore the
+[interactive version](https://datawrapper.dwcdn.net/Zleaq/).
 </p>
 
 To sum up, in this tutorial we created several charts about global

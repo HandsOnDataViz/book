@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 23 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 24 Nov 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
@@ -6448,8 +6448,7 @@ visualizations, such as [Leaflet code templates in Chapter
 to [edit and host code templates with GitHub in Chapter
 11](github.html).
 
-TODO below: Improve and standardize map images; Rethink wording of
-“point map with custom icons”? and description?
+TODO below: Improve and standardize map images
 
 <table>
 <caption>Table 8.1: Basic Map Types, Best Uses, and Tutorials</caption>
@@ -6466,7 +6465,7 @@ TODO below: Improve and standardize map images; Rethink wording of
 <tbody>
 <tr class="odd">
 <td>Point map with custom icons<br> <img src="images/08-map/map-point.png" /></td>
-<td>Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: <a href="mymaps.html">Google My Maps tutorial</a>. <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Ch 13: Leaflet Maps with Google Sheets tutorial</a></td>
+<td>Best to show specific locations (such as addresses) with customized colored markers for categories, plus text and images in popup windows. <br>Easy tool: <a href="mymaps.html">Google My Maps tutorial</a>. <br>Power tool: <a href="leaflet-maps-with-google-sheets.html">Ch 13: Leaflet Maps with Google Sheets tutorial</a></td>
 </tr>
 <tr class="even">
 <td>Symbol point map<br> <img src="images/08-map/map-symbol.png" /></td>
@@ -6561,7 +6560,7 @@ boundaries. Since all points, polylines, and polygons consist of
 latitude and longitude coordinates, they are called vector data. You can
 zoom up very close to vector data or vector basemaps without diminishing
 their visual quality. By contrast, our ability to zoom into raster data
-or rasterbasemaps is limited by the resolution of the original image,
+or raster basemaps is limited by the resolution of the original image,
 which gets fuzzier as we get closer. You’ll learn more about these terms
 in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter
 14.
@@ -6598,7 +6597,7 @@ consistent one, which makes it difficult or impossible to place on a
 map. If the answer is yes, then proceed to the second question: *Can the
 data be mapped as points or polygons?* These are the two most likely
 cases (which are sometimes confused), in contrast to the less-common
-third option, *polylines*, which represent paths and routes.
+third option, polylines, which represent paths and routes.
 
 What type of data do you see listed below: points or polygons?
 
@@ -7073,56 +7072,46 @@ exercises in creating choropleth maps.
 Point Map with Google My Maps
 -----------------------------
 
-[My Maps](https://www.google.com/maps/about/mymaps/) is Google’s service
-that allows users to create custom maps on top of Google Maps. The maps
-that you create will stay in your Google account and will not in any way
-interfere with the Google Maps product that you and others use to look
-up directions or find nearby restaurants. You may choose to share your
-map either through embedding it on your website or providing a direct
-link to your colleagues or friends.
+Most people are already familiar with [Google
+Maps](https://www.google.com/maps/), the web mapping service that allows
+users to look up locations and directions around the world. In this
+section you’ll learn about [Google My
+Maps](https://www.google.com/maps/about/mymaps/), a related tool that
+allows you to display groups of points on top of the Google Maps
+platform, which users can click on to reveal more data, including
+photos, websites, or directions. You can customize the colors and icons
+for your point markers, and all of the map layer content you create will
+reside in your [Google Drive](https://drive.google.com), where you can
+edit and collaborate with others. Although Google My Maps has limited
+features, it’s an easy-to-learn tool to build a basic interactive point
+map, along with simple polylines and polygons if desired. Finally, you
+can share a public link to your map or embed it on your website, a step
+that you’ll learn more about in [Chapter 10: Embed on the
+Web](embed.html).
 
-Google My Maps is one of the simplest ways to build basic point, line,
-and polygon maps, although it limits your styling options. My Maps is
-most powerful when it comes to collaboration, and you can invite anyone
-with a Google account to jointly work on the map.
+In this section, we will construct a sample point map of museums and
+parks in North America, with two different groups of styled markers, as
+shown in Figure <a href="#fig:mymaps-final">8.12</a>. Follow the steps
+below to create your own version.
 
-In this section, we will look at building a point map of visitor
-attractions in North America, as is shown in Figure
-<a href="#fig:mymaps-final">8.12</a>. We will create a new map, import
-point data, style markers, change the baselayer, and look at options to
-share the map.
-
-TODO below: add the interactive link to the caption
-
-<img src="images/08-map/mymaps-final.png" alt="A map of visitor attractions in North America built with Google My Maps."  />
+<img src="images/08-map/mymaps-final.png" alt="Point map of parks and museums created with Google My Maps. Explore the [interactive version](https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&usp=sharing)."  />
 <p class="caption">
-Figure 8.12: A map of visitor attractions in North America built with
-Google My Maps.
+Figure 8.12: Point map of parks and museums created with Google My Maps.
+Explore the [interactive
+version](https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&usp=sharing).
 </p>
 
-Below are the steps you can take to create the same map.
+1.  Open the [Parks and Museums data in Google
+    Sheets](https://docs.google.com/spreadsheets/d/11nSoyGUxDJiBe5VZflDnaaqgWMdWyIUNnjNLMlGOPLk/edit#gid=312385679),
+    which contains six popular locations in North America. Each row
+    includes a *Group*, *Name*, *Address*, and *URL*. Log into your
+    Google account and go to *File &gt; Make a Copy* to create a version
+    you can edit in your Google Drive.
 
-TODO: Rewrite this step to show data in Google Sheets, not CSV…. See if
-images can be uploaded… Review file contents… Redo step numbering and
-make File &gt; Download (CSV format) part of this first step, and review
-continuity with step 3 below – Open this [data template in Google
-Sheets](https://docs.google.com/spreadsheets/d/1IA0J4Z9C0_zsvgcunD2kHtR__sdQqUPzNHNjqCLYBRQ/edit#gid=312385679),
-log into your Google account, and go to *File &gt; Make a Copy* to
-create a version you can edit in your Google Drive.
-
-We prepared a dataset with six locations (using Wikipedia to look things
-up), which you can
-[download](data/north-american-visitor-attractions.csv) for the
-exercise. If you inspect the CSV file in your favorite text editor, you
-will see that it contains three national parks and three museums. Each
-point comes with a `Name`, its `State` and `Country`, and museums also
-have an `Address` and `City` specified. The `URL` is provided for all
-six locations.
-
-1.  Navigate to [Google My Maps](https://www.google.com/mymaps/). In the
-    upper-left corner, click \`+ Create a New Map\` button, as shown in
-    Figure <a href="#fig:mymaps-create-new">8.13</a>. This will create
-    an empty map with familiar Google Maps style.
+2.  Navigate to [Google My Maps](https://www.google.com/mymaps/). In the
+    upper-left corner, click the *+ Create a New Map* button, as shown
+    in Figure <a href="#fig:mymaps-create-new">8.13</a>. This will
+    create an empty map with familiar Google Maps style.
 
 <img src="images/08-map/mymaps-create-new.png" alt="Navigate to https://www.google.com/mymaps/ and create a new map." width="300" />
 <p class="caption">
@@ -7131,126 +7120,222 @@ Figure 8.13: Navigate to
 and create a new map.
 </p>
 
-1.  Give your map a relevant title and desription by clicking the
-    current title (`Untitled map`). This will bring up a modal window
-    where you can make changes, as shown in Figure
-    <a href="#fig:mymaps-edit-title">8.14</a>.
+1.  Add a relevant title and description by clicking its current title,
+    *Untitled map*, and typing in the new information, as shown in
+    Figure <a href="#fig:mymaps-edit-title">8.14</a>.
 
 <img src="images/08-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
 <p class="caption">
 Figure 8.14: Add title and description to your map.
 </p>
 
-1.  Now, let’s perform the most important step of point adding data.
-    Under *Untitled layer* item, click *Import* button, and
-    drag-and-drop the CSV file to the Upload area. Note that you can
-    also connect a dataset from your Google Drive, but we won’t be doing
-    it here. Once the data file is uploaded, My Maps will ask which
-    columns contain location data that it can use to position the
-    markers. In our case, these are Address, City, State, Postalcode,
-    and Country, as well as Name, as shown in Figure
-    <a href="#fig:mymaps-lat-lon">8.15</a>. It is important we select
-    Name because our national parks have no address data, and if names
-    their names are not provided, Google will place the markers in the
-    middle of the state instead.
+1.  To add data to your map, click the *Import* button under the
+    *Untitled layer* item, as shown in Figure
+    <a href="#fig:mymaps-import">8.15</a>.
 
-<img src="images/08-map/mymaps-lat-lon.png" alt="Make sure all columns with relevant location data are checked." width="300" />
+<img src="images/08-map/mymaps-import.png" alt="Click the *Import* button to add a data layer to your map." width="300" />
 <p class="caption">
-Figure 8.15: Make sure all columns with relevant location data are
-checked.
+Figure 8.15: Click the *Import* button to add a data layer to your map.
 </p>
 
-1.  Once the boxes are checked, click *Continue*. Another window will
-    pop up, asking which column to use to annotate points. Choose
-    *Name*, as shown in Figure
-    <a href="#fig:mymaps-column-title">8.16</a>, and then *Finish*.
+1.  In the *Choose a file to import* screen, there are several ways to
+    upload data. Choose *Google Drive*, since our sample data is already
+    in that format, and select the *Recent* button to locate the
+    *Museums and Parks* file you saved to your Google Drive, as shown in
+    Figure <a href="#fig:mymaps-import-gdrive">8.16</a>. Press *Select*.
 
-<img src="images/08-map/mymaps-column-title.png" alt="Choose Name column to serve as titles for your markers." width="300" />
+<img src="images/08-map/mymaps-import-gdrive.png" alt="After you choose to import your data through *Google Drive*, select the *Recent* button to find the file." width="750" />
 <p class="caption">
-Figure 8.16: Choose Name column to serve as titles for your markers.
+Figure 8.16: After you choose to import your data through *Google
+Drive*, select the *Recent* button to find the file.
 </p>
 
-1.  Google Maps will perform geocoding automatically (that is, will
-    translate your location columns into latitude/longitude
-    coordinates). It will take a few moments for My Maps to create a new
-    layer, which will be added to the layer menu as
-    *north-american-visitor-attractions.csv* (if you used the downloaded
-    file). Once the layer is created, My Maps will center the map to fit
-    the points. Click on the layer name, which by default is set to the
-    name of imported file, and change it to *Attractions*
-    (alternatively, open a kebab menu to the right of the layer name,
-    and click *Rename this layer*).
+1.  In the *Choose columns to position your placemarks* screen, select
+    the *Address* column to place your point data on the map, as shown
+    in Figure <a href="#fig:mymaps-placemarks">8.17</a>. Press
+    *Continue*.
 
-2.  By default, each location will be assigned a blue marker that we can
-    style individually, and all markers will be visible in the menu
-    under the relevant layer. Since our locations are parks and museums,
-    which are fairly distinct groups (and happen to have this
-    distinction recorded in the `Group` column), let’s assign green park
-    icons to all parks, and orange museum icons to the museums. To do
-    so, click *Individual styles*, and in the *Group places by*
+<img src="images/08-map/mymaps-placemarks.png" alt="Select *Address* to place your data on the map." width="350" />
+<p class="caption">
+Figure 8.17: Select *Address* to place your data on the map.
+</p>
+
+Hint: You can select multiple boxes if your address is split across
+several columns, such as *Address*, *City*, *State*, *Zipcode*. Also, if
+your point data is already geocoded, you can upload latitude and
+longitude pairs, such as `41.76, -72.69`.
+
+1.  In the *Choose a column to title your markers* window, select the
+    *Name* column to title your point markers, as shown in Figure
+    <a href="#fig:mymaps-marker-titles">8.18</a>. Then click *Finish*.
+
+<img src="images/08-map/mymaps-marker-titles.png" alt="Select the *Name* column to title your point markers." width="350" />
+<p class="caption">
+Figure 8.18: Select the *Name* column to title your point markers.
+</p>
+
+Google My Maps will automatically [geocode your address data as we
+discussed in chapter 3](geocode.html), display them using its default
+blue markers, and center the map to fit all of the points.
+
+1.  Click the three-dot kebab menu next to the *Museums and Parks…*
+    layer to *Rename* and shorten its name, since the full name of the
+    file is imported by default, as shown in Figure
+    <a href="#fig:mymaps-rename-layer">8.19</a>.
+
+<img src="images/08-map/mymaps-rename-layer.png" alt="Click the 3-dot kebab menu next to the layer to shorten its name." width="300" />
+<p class="caption">
+Figure 8.19: Click the 3-dot kebab menu next to the layer to shorten its
+name.
+</p>
+
+1.  Since our map contains two groups—museums and parks—let’s create a
+    custom color marker for each group to replace the default blue
+    markers. Click on *Individual styles*, and in the *Group places by*
     dropdown, change the value to *Style data by column: Group*, as show
-    in Figure <a href="#fig:mymaps-group-places">8.17</a>. This will
-    divide all markers into two groups, and assign distinct icons to
-    these two groups.
+    in Figure <a href="#fig:mymaps-group-places">8.20</a>. This option
+    is available because we intentionally created the *Group* column for
+    museums and parks when setting up the sample data. Close this window
+    by clicking the upper-right *X* symbol.
 
-<img src="images/08-map/mymaps-group-places-annotated.png" alt="Group places by Group column instead of individual styles." width="300" />
+<img src="images/08-map/mymaps-group-places.png" alt="Change *Individual styles* to *Group places by: Group*." width="300" />
 <p class="caption">
-Figure 8.17: Group places by Group column instead of individual styles.
+Figure 8.20: Change *Individual styles* to *Group places by: Group*.
 </p>
 
-1.  Now we can set custom icons to both groups. Click the bucket icon to
-    the right of the group to assign a new color, and a new icon (you
-    may need to browse the *More icons* window to find the relevant
-    ones). Figure <a href="#fig:mymaps-color">8.18</a> shows how the
-    marker customization window looks like.
+1.  Under *Styled by group*, float your cursor over the *Museum* label
+    to reveal the bucket styling symbol, and click it, as shown in
+    Figure <a href="#fig:mymaps-customize-marker">8.21</a>.
 
-<img src="images/08-map/mymaps-color.png" alt="In My Maps, you can change marker colors and icons." width="300" />
+<img src="images/08-map/mymaps-customize-marker.png" alt="Float your cursor over a label to reveal the bucket styling symbol." width="295" />
 <p class="caption">
-Figure 8.18: In My Maps, you can change marker colors and icons.
+Figure 8.21: Float your cursor over a label to reveal the bucket styling
+symbol.
 </p>
 
-1.  You may notice that green and orange icons look not as prominent due
-    to yellow and orange roads and highways, and green forest areas of
-    the basemap. To fix this, let’s change the basemap to a darker blue
-    version. At the bottom of the control window, open *Base map*
-    dropdown, and pick *Dark Landmass*. Now, your map should look great!
+1.  Assign a new color for *Museums*, and click *More icons* to find a
+    more appropriate point marker symbol, as shown in Figure
+    <a href="#fig:mymaps-colors-icons">8.22</a>.
 
-2.  Click *Preview* to see how the map looks like outside of the My Maps
-    editing studio. Go back to the studio, and if you are happy with the
-    result, click *Share* button underneath the map’s title and
-    description. In the modal window, make sure *Enable link sharing* is
-    activated, as shown in Figure <a href="#fig:mymaps-share">8.19</a>,
-    and copy the generated link. You can share with link with anyone,
-    with or without a Google account, and they will be able to see your
-    map.
-
-<img src="images/08-map/mymaps-share.png" alt="Make sure anyone with the link can view your map before you share it." width="400" />
+<img src="images/08-map/mymaps-colors-icons.png" alt="Select point marker colors and icons." width="295" />
 <p class="caption">
-Figure 8.19: Make sure anyone with the link can view your map before you
-share it.
+Figure 8.22: Select point marker colors and icons.
 </p>
 
-If you want to embed the map as an iframe, from the main kebab menu to
-the right of the map title, choose *Embed on my site*, as shown in
-Figure <a href="#fig:mymaps-embed">8.20</a>. This will generate an HTML
-embed code that you can copy to your website, as described in [Chapter
-10: Embed on the Web](embed.html).
+1.  In the *Choose an icon* screen, use the upper-right *Filter* to
+    search for icon types by name, such as “Museum” as shown in Figure
+    <a href="#fig:mymaps-choose-icon">8.23</a>. Repeat this process for
+    *Parks*.
 
-<img src="images/08-map/mymaps-embed.png" alt="My Maps can generate an iframe code to include the map on your own website." width="300" />
+<img src="images/08-map/mymaps-choose-icon.png" alt="Search by filter in the *Choose an icon* screen." width="750" />
 <p class="caption">
-Figure 8.20: My Maps can generate an iframe code to include the map on
-your own website.
+Figure 8.23: Search by filter in the *Choose an icon* screen.
 </p>
 
-Google My Maps has more powerful features for map making, and you are
-not limited to just point maps. You can also draw your own shapes,
-including lines and polygons. You can add data to multiple layers.
-Unfortunately, Google My Maps has no comprehensive documentation, so you
-have to explore the studio yourself if you want to create more complex
-projects.
+1.  In the *Choose an icon* screen, you can click the lower-left *Custom
+    icon* button to upload an image, which will be transformed into a
+    thumbnail image icon, as shown in Figure
+    <a href="#fig:mymaps-custom-icon">8.24</a>. This custom icon was
+    created from a [Wikimedia image of the Washington
+    Monument](https://commons.wikimedia.org/wiki/File:Washington_Monument_Panorama.jpg).
 
-In the next section, we will look at creating and sharing symbol point
-maps with Datawrapper.
+<img src="images/08-map/mymaps-custom-icon.png" alt="Upload a photo to create a custom thumbnail icon image." width="180" />
+<p class="caption">
+Figure 8.24: Upload a photo to create a custom thumbnail icon image.
+</p>
+
+1.  Click on any map marker to edit its data, insert a photo to appear
+    in its pop-up window, or add Google Map directions, as shown in
+    Figure <a href="#fig:mymaps-edit-point">8.25</a>. This photo came
+    from a [Wikimedia image of the Metropolitan Museum of
+    Art](https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_entrance_NYC.JPG).
+    However, you must add photos or directions manually, since these
+    links cannot be pre-loaded into the data spreadsheet.
+
+<img src="images/08-map/mymaps-edit-point.png" alt="Click any map marker to edit its data, add a photo, or directions." width="345" />
+<p class="caption">
+Figure 8.25: Click any map marker to edit its data, add a photo, or
+directions.
+</p>
+
+1.  You can change the style of the basemap to one of nine different
+    versions offered by Google, as shown in the drop-down menu in Figure
+    <a href="#fig:mymaps-style-basemap">8.26</a>. Choose high-contrast
+    colors for marker icons and basemap backgrounds.
+
+<img src="images/08-map/mymaps-style-basemap.png" alt="Change the style of the Google basemap." width="300" />
+<p class="caption">
+Figure 8.26: Change the style of the Google basemap.
+</p>
+
+1.  At the top of the map, see buttons to manually add more point
+    markers, draw a line, add directions, or measure distance, as shown
+    in Figure <a href="#fig:mymaps-draw-line">8.27</a>. However, Google
+    My Maps has limited support for polylines and polygons, and you
+    cannot easily create a choropleth map with colored boundaries that
+    represent data values.
+
+<img src="images/08-map/mymaps-draw-line.png" alt="Manually add more point markers, lines, and directions, or measure distance." width="235" />
+<p class="caption">
+Figure 8.27: Manually add more point markers, lines, and directions, or
+measure distance.
+</p>
+
+1.  Click *Preview* to see how you map will appear to other people. When
+    you finish editing your map, click the *Share* button underneath the
+    map’s title and description, and in the next screen, make sure
+    *Enable link sharing* is activated, as shown in Figure
+    <a href="#fig:mymaps-share">8.28</a>, and copy the generated link.
+    You can share with link with anyone, with or without a Google
+    account. You also have the option to make your map publicly appear
+    in web search results, if desired.
+
+<img src="images/08-map/mymaps-share.png" alt="Before sharing your map, make sure anyone with the link can view it." width="400" />
+<p class="caption">
+Figure 8.28: Before sharing your map, make sure anyone with the link can
+view it.
+</p>
+
+1.  If you wish to embed your map as an iframe on a web page, click the
+    3-button kebab menu to the right of the map title and select *Embed
+    on my site*, as shown in Figure
+    <a href="#fig:mymaps-embed">8.29</a>. This will generate an HTML
+    embed code, which we will explain in [Chapter 10: Embed on the
+    Web](embed.html).
+
+<img src="images/08-map/mymaps-embed.png" alt="Select *Embed on my site* to copy the HTML iframe code." width="315" />
+<p class="caption">
+Figure 8.29: Select *Embed on my site* to copy the HTML iframe code.
+</p>
+
+1.  If you wish to edit your map in the future, here are two ways to
+    access it when logged into your Google account. One way is to [open
+    the Google My Maps platform](https://www.google.com/mymaps/) to view
+    all of your maps. A second way is to go to your [Google
+    Drive](https://drive.google.com) and search for your Google My Maps
+    by keyword. When you create a Google My Map from data in a Google
+    Sheet, we recommend that you keep the My Map and Sheet files
+    together in the same folder in your Google Drive, as shown in Figure
+    <a href="#fig:mymaps-gdrive">8.30</a>, to help you make edits more
+    easily in the future.
+
+<img src="images/08-map/mymaps-gdrive.png" alt="Keep your Google My Maps and Sheets files together in a Google Drive folder." width="500" />
+<p class="caption">
+Figure 8.30: Keep your Google My Maps and Sheets files together in a
+Google Drive folder.
+</p>
+
+Google My Maps is a good first tool to learn for making interactive
+maps, especially point maps with custom icons. You can design maps with
+multiple layers of points, polylines, and basic polygons, if desired.
+But the overall map design and features are limited to what the Google
+My Maps platform offers. Learn more at the [Google My Maps support
+page](https://support.google.com/mymaps).
+
+In the next section, we will explore a more powerful tool called
+Datawrapper to create symbol point maps, where each the size of each
+circle (or other shapes) represents the data value for that specific
+point.
 
 Symbol Point Map with Datawrapper
 ---------------------------------
@@ -7268,7 +7353,7 @@ represent their data values. Our sample symbol map displays about 300
 major US cities as point locations with two variables: the 2019
 estimated population (using circle size) and the percent change in
 population since 2010 (using circle color), as shown in Figure
-<a href="#fig:datawrapper-symbolmap">8.21</a>. Remember that we use
+<a href="#fig:datawrapper-symbolmap">8.31</a>. Remember that we use
 *point* data to create symbol maps, but *polygon* data to create
 choropleth maps, and you’ll learn how to design those with Datawrapper
 in the subsequent section. Later in the book, we’ll explain [how to
@@ -7277,7 +7362,7 @@ embed your interactive Datawrapper maps on the web in Chapter
 
 <img src="images/08-map/datawrapper-symbolmap.png" alt="Symbol point map of US city population growth with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/V0V9Y)."  />
 <p class="caption">
-Figure 8.21: Symbol point map of US city population growth with
+Figure 8.31: Symbol point map of US city population growth with
 Datawrapper. Explore the [interactive
 version](https://datawrapper.dwcdn.net/V0V9Y).
 </p>
@@ -7297,6 +7382,8 @@ symbol point map, follow this tutorial.
     US territory, but they do not appear in the Datawrapper map for
     reasons explained in step 4.
 
+TODO: Fix Puerto Rico with newer Datawrapper map
+
 Good maps often require [cleaning up messy data as described in Chapter
 5](clean.html). In our spreadsheet we narrowed the original list down to
 about 300 cities with more than 100,000 residents in either 2010 or
@@ -7314,11 +7401,11 @@ calculated this way: `(2019 - 2010) / 2010 * 100`.
 
 2.  Open [Datawrapper](https://datawrapper.de), click on *Start
     Creating*, then the *New Map* button, and select *Symbol map* as
-    shown in Figure <a href="#fig:datawrapper-symbolmap-start">8.22</a>.
+    shown in Figure <a href="#fig:datawrapper-symbolmap-start">8.32</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-start.png" alt="Start to create a symbol map in Datawrapper." width="600" />
 <p class="caption">
-Figure 8.22: Start to create a symbol map in Datawrapper.
+Figure 8.32: Start to create a symbol map in Datawrapper.
 </p>
 
 1.  In the *Select your map* screen, enter *USA* and search for options.
@@ -7336,13 +7423,13 @@ Figure 8.22: Start to create a symbol map in Datawrapper.
 3.  In the *Match your columns* screen, select the *City-State* column
     to be *Matched as Address*, then scroll down to click the *Next*
     button, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-match">8.23</a>. In the next
+    <a href="#fig:datawrapper-symbolmap-match">8.33</a>. In the next
     screen click *Go*, then see your geocoded data displayed on a map in
     the following screen.
 
 <img src="images/08-map/datawrapper-symbolmap-match.png" alt="Select the *City-State* column to be matched as the *Address*." width="400" />
 <p class="caption">
-Figure 8.23: Select the *City-State* column to be matched as the
+Figure 8.33: Select the *City-State* column to be matched as the
 *Address*.
 </p>
 
@@ -7352,11 +7439,11 @@ Figure 8.23: Select the *City-State* column to be matched as the
     select the *circle* symbol, to be sized by *Pop Estimate 2019*, with
     a maximum symbol size of 25 pixels. Under *Symbol colors*, select
     the *Percent Change 2010-2019* column, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-refine">8.24</a>.
+    <a href="#fig:datawrapper-symbolmap-refine">8.34</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-refine.png" alt="Refine your map by selecting data to display symbol shapes, sizes, and colors."  />
 <p class="caption">
-Figure 8.24: Refine your map by selecting data to display symbol shapes,
+Figure 8.34: Refine your map by selecting data to display symbol shapes,
 sizes, and colors.
 </p>
 
@@ -7367,11 +7454,11 @@ sizes, and colors.
     section](design-choropleth.html). The first code is dark pink,
     followed by a 4-class sequential green:
     `#d01c8b,#bae4b3,#74c476,#31a354,#006d2c`. See Figure
-    <a href="#fig:datawrapper-symbolmap-colors">8.25</a>.
+    <a href="#fig:datawrapper-symbolmap-colors">8.35</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-colors.png" alt="Create a new color palette by importing five hexadecimal color codes from ColorBrewer." width="600" />
 <p class="caption">
-Figure 8.25: Create a new color palette by importing five hexadecimal
+Figure 8.35: Create a new color palette by importing five hexadecimal
 color codes from ColorBrewer.
 </p>
 
@@ -7381,14 +7468,14 @@ color codes from ColorBrewer.
     scale. Click the *More options* button, and under *Legend*, change
     *Labels* to *custom*, and click each label to edit the text that
     appears on the map menu, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-intervals">8.26</a>. Learn more
+    <a href="#fig:datawrapper-symbolmap-intervals">8.36</a>. Learn more
     about these options in the [Datawrapper Academy post on customizing
     your symbol
     map](https://academy.datawrapper.de/article/120-customizing-your-symbol-map).
 
 <img src="images/08-map/datawrapper-symbolmap-intervals.png" alt="Customize the interval ranges and edit the legend." width="500" />
 <p class="caption">
-Figure 8.26: Customize the interval ranges and edit the legend.
+Figure 8.36: Customize the interval ranges and edit the legend.
 </p>
 
 1.  Under the *Visualize* screen, click the *Annotate* tab to insert a
@@ -7433,14 +7520,14 @@ districts, and census tracts for the United States.
 In this section, you’ll create a choropleth map of typical home values
 for US states in August 2020 according to the [Zillow Home Value
 Index](https://www.zillow.com/research/data/), as shown in Figure
-<a href="#fig:datawrapper-map-final">8.27</a>. The index reflects
+<a href="#fig:datawrapper-map-final">8.37</a>. The index reflects
 typical home values (meaning those in the 35th to 65th percentile range,
 around the median) for single-family residences, condos, and co-ops, and
 it is smoothed and seasonally adjusted.
 
 <img src="images/08-map/datawrapper-map-final.png" alt="Choropleth map of 2020 home values in US states with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/kSYrw/)."  />
 <p class="caption">
-Figure 8.27: Choropleth map of 2020 home values in US states with
+Figure 8.37: Choropleth map of 2020 home values in US states with
 Datawrapper. Explore the [interactive
 version](https://datawrapper.dwcdn.net/kSYrw/).
 </p>
@@ -7481,24 +7568,24 @@ ANSI.
 2.  Open [Datawrapper](https://datawrapper.de), click on *Start
     Creating*, then click the *New Map* button, and select *Choropleth
     map* as shown in Figure
-    <a href="#fig:datawrapper-map-choose">8.28</a>. No login is required
+    <a href="#fig:datawrapper-map-choose">8.38</a>. No login is required
     to create a map, but you should sign up for a free account in order
     to save your work and publish your map online.
 
 <img src="images/08-map/datawrapper-map-choose-annotated.png" alt="In Datawrapper, click *New Map*, and choose *Choropleth*." width="500" />
 <p class="caption">
-Figure 8.28: In Datawrapper, click *New Map*, and choose *Choropleth*.
+Figure 8.38: In Datawrapper, click *New Map*, and choose *Choropleth*.
 </p>
 
 1.  In the *Select your map* screen, choose your geographic boundaries,
     and in this case choose *USA &gt; States*, as shown in Figure
-    <a href="#fig:datawrapper-map-us-states">8.29</a>, then click
+    <a href="#fig:datawrapper-map-us-states">8.39</a>, then click
     *Proceed*. Since Washington, DC is not a state, it does not appear
     in this map of US States.
 
 <img src="images/08-map/datawrapper-map-us-states-annotated.png" alt="Choose *USA - States* for your map outline." width="500" />
 <p class="caption">
-Figure 8.29: Choose *USA - States* for your map outline.
+Figure 8.39: Choose *USA - States* for your map outline.
 </p>
 
 Hint: If Datawrapper does not list your preferred map outline, you can
@@ -7509,7 +7596,7 @@ formats section of Chapter 14](geojson.html).
 1.  In the *Add your data* screen, you can manually enter data for each
     area, which would be fine for just a few, but not for 50 states.
     Instead, scroll down and click the *Import your dataset* button, as
-    shown in Figure <a href="#fig:datawrapper-import-dataset">8.30</a>.
+    shown in Figure <a href="#fig:datawrapper-import-dataset">8.40</a>.
     Datawrapper will explain that your data must include either *Names*
     (such as `California`) or *ISO-Codes* (standardized two-letter codes
     for states, such as `CA`, or three-letter codes for nations, such as
@@ -7517,7 +7604,7 @@ formats section of Chapter 14](geojson.html).
 
 <img src="images/08-map/datawrapper-import-dataset.png" alt="Scroll down below the *add data* table to import your dataset." width="200" />
 <p class="caption">
-Figure 8.30: Scroll down below the *add data* table to import your
+Figure 8.40: Scroll down below the *add data* table to import your
 dataset.
 </p>
 
@@ -7533,12 +7620,12 @@ most users see.
 
 2.  In the *Match your columns* screen, click the column that matches up
     with ISO codes, as shown in Figure
-    <a href="#fig:datawrapper-map-match">8.31</a>. You may need to
+    <a href="#fig:datawrapper-map-match">8.41</a>. You may need to
     scroll down a bit to click the *Next* button, then *Continue*.
 
 <img src="images/08-map/datawrapper-map-match.png" alt="Select the data column that contains matching ISO codes." width="500" />
 <p class="caption">
-Figure 8.31: Select the data column that contains matching ISO codes.
+Figure 8.41: Select the data column that contains matching ISO codes.
 </p>
 
 1.  In a similar way on the next screen, click the column of data values
@@ -7553,13 +7640,13 @@ requested.
 1.  In the *Visualize* screen, under the *Refine* tab, click the *wrench
     symbol* next to the color palette to review the *default* map
     settings, as shown in Figure
-    <a href="#fig:datawrapper-map-default">8.32</a>. Never automatically
+    <a href="#fig:datawrapper-map-default">8.42</a>. Never automatically
     accept the default map, but it’s a good place to start and explore
     how factors shape its appearance.
 
 <img src="images/08-map/datawrapper-map-default.png" alt="Under the *Refine* tab, click the *wrench symbol* to see the default map settings." width="600" />
 <p class="caption">
-Figure 8.32: Under the *Refine* tab, click the *wrench symbol* to see
+Figure 8.42: Under the *Refine* tab, click the *wrench symbol* to see
 the default map settings.
 </p>
 
@@ -7574,13 +7661,13 @@ data story that emphasizes the low and high extremes.
     interpolation to change how values are assigned to colors. For
     example, change from *linear* to *quartiles*, which groups the data
     into four groups of equal size, as shown in Figure
-    <a href="#fig:datawrapper-map-quartiles">8.33</a>. This map works
+    <a href="#fig:datawrapper-map-quartiles">8.43</a>. This map works
     better for a data story that emphasizes geographic diversity, since
     we see more contrast between states in the middle range.
 
 <img src="images/08-map/datawrapper-map-quartiles.png" alt="Under the *Refine* tab, change the interpolation from *linear* to *quartiles* and see how the map changes." width="400" />
 <p class="caption">
-Figure 8.33: Under the *Refine* tab, change the interpolation from
+Figure 8.43: Under the *Refine* tab, change the interpolation from
 *linear* to *quartiles* and see how the map changes.
 </p>
 
@@ -7595,11 +7682,11 @@ Figure 8.33: Under the *Refine* tab, change the interpolation from
     example, see the map of percent change in home value from 2019 to
     2020, with a diverging red-to-blue palette, 5 steps, and rounded
     values in Figure
-    <a href="#fig:datawrapper-map-percentchange">8.34</a>.
+    <a href="#fig:datawrapper-map-percentchange">8.44</a>.
 
 <img src="images/08-map/datawrapper-map-percentchange.png" alt="Experiment with other colors, intervals, and data columns to find true and meaningful stories." width="650" />
 <p class="caption">
-Figure 8.34: Experiment with other colors, intervals, and data columns
+Figure 8.44: Experiment with other colors, intervals, and data columns
 to find true and meaningful stories.
 </p>
 
@@ -7629,13 +7716,13 @@ reviewer requested.
     is to click on blue column names, or format them using their
     drop-down menus, to make the proper codes appear in double curly
     brackets, as shown in Figure
-    <a href="#fig:datawrapper-map-tooltip">8.35</a>. Learn more about
+    <a href="#fig:datawrapper-map-tooltip">8.45</a>. Learn more about
     [customizing tooltips from Datawrapper
     Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
 
 <img src="images/08-map/datawrapper-map-tooltip.png" alt="To edit tooltips, click the blue column names or use drop-down menus to format the codes." width="600" />
 <p class="caption">
-Figure 8.35: To edit tooltips, click the blue column names or use
+Figure 8.45: To edit tooltips, click the blue column names or use
 drop-down menus to format the codes.
 </p>
 
@@ -7677,7 +7764,7 @@ on the support page.
 
 In this section, we will create a choropleth map of healthcare spending
 per country as a percentage of their gross domestic product (GDP), as
-shown in Figure <a href="#fig:tableau-polygon-final">8.36</a>. Remember
+shown in Figure <a href="#fig:tableau-polygon-final">8.46</a>. Remember
 that choropleth maps work best when we [normalize the
 data](normalize-choropleth.html) to show relative, rather than absolute,
 numbers. Creating a map of total health spending per country would not
@@ -7692,14 +7779,14 @@ enter an email address to download the application.
 
 <img src="images/08-map/tableau-polygon-final.png" alt="Choropleth map of healthcare spending with Tableau Public. Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1). Data from the World Bank."  />
 <p class="caption">
-Figure 8.36: Choropleth map of healthcare spending with Tableau Public.
+Figure 8.46: Choropleth map of healthcare spending with Tableau Public.
 Explore the [interactive
 version](https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1).
 Data from the World Bank.
 </p>
 
 Let’s look at the steps involved to create a choropleth from Figure
-<a href="#fig:tableau-polygon-final">8.36</a> in detail.
+<a href="#fig:tableau-polygon-final">8.46</a> in detail.
 
 1.  Open the [Healthcare Spending by Nation as Percent of GDP data in
     Google
@@ -7738,26 +7825,26 @@ sheet, and connected to it directly.
     automatically, so you need to manually change the data type. To do
     so, click the data type icon (e.g. globe or a green `#` for numeric
     values), and then choose *Geographic Role &gt; Country/Region* as
-    shown in Figure <a href="#fig:tableau-data-geographic">8.37</a>.
+    shown in Figure <a href="#fig:tableau-data-geographic">8.47</a>.
 
 <img src="images/08-map/tableau-data-geographic.png" alt="Make sure Tableau Public knows that the Country Name column contains geographic data." width="400" />
 <p class="caption">
-Figure 8.37: Make sure Tableau Public knows that the Country Name column
+Figure 8.47: Make sure Tableau Public knows that the Country Name column
 contains geographic data.
 </p>
 
 1.  In the bottom-left corner, click the orange *Sheet 1* button to
     create a worksheet with your first visualization, as shown in Figure
-    <a href="#fig:tableau-go-to-worksheet">8.38</a>.
+    <a href="#fig:tableau-go-to-worksheet">8.48</a>.
 
 <img src="images/08-map/tableau-go-to-worksheet.png" alt="Click the orange button to go sheet 1 where you can create your map." width="400" />
 <p class="caption">
-Figure 8.38: Click the orange button to go sheet 1 where you can create
+Figure 8.48: Click the orange button to go sheet 1 where you can create
 your map.
 </p>
 
 1.  In *Sheet 1*, create your choropleth map using a two-step process,
-    as shown in Figure <a href="#fig:tableau-drag">8.39</a>. First,
+    as shown in Figure <a href="#fig:tableau-drag">8.49</a>. First,
     drag-and-drop the *Country Name* field into the middle of the
     worksheet (alternatively to the Detail box of the Marks card) to
     create the map. The default view is the symbol map, which we need to
@@ -7767,7 +7854,7 @@ your map.
 
 <img src="images/08-map/tableau-drag-annotated.png" alt="Drag and drop *Country Name* to the center of the sheet, then *Health Spending As % of GDP* to the *Color* box in the *Marks* card."  />
 <p class="caption">
-Figure 8.39: Drag and drop *Country Name* to the center of the sheet,
+Figure 8.49: Drag and drop *Country Name* to the center of the sheet,
 then *Health Spending As % of GDP* to the *Color* box in the *Marks*
 card.
 </p>
@@ -7779,11 +7866,11 @@ card.
 2.  You can change the color palette by clicking the Color box of the
     Marks card, and then *Edit colors*. Change the palette to *Green*,
     and change it from continuous to steps, as shown in Figure
-    <a href="#fig:tableau-polygon-color">8.40</a>.
+    <a href="#fig:tableau-polygon-color">8.50</a>.
 
 <img src="images/08-map/tableau-polygon-color.png" alt="Change the color scheme to Green with 5 steps." width="400" />
 <p class="caption">
-Figure 8.40: Change the color scheme to Green with 5 steps.
+Figure 8.50: Change the color scheme to Green with 5 steps.
 </p>
 
 1.  When you hover over countries, you will notice a tooltip that tells
@@ -7794,11 +7881,11 @@ Figure 8.40: Change the color scheme to Green with 5 steps.
     to just `Country` (do not change the grayed-out text inside `<` and
     `>` as these are variable names), and add a `%` sign at the end of
     the second row, as shown in Figure
-    <a href="#fig:tableau-polygon-tooltip">8.41</a>.
+    <a href="#fig:tableau-polygon-tooltip">8.51</a>.
 
 <img src="images/08-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
-Figure 8.41: Change tooltip text to make it more user-friendly.
+Figure 8.51: Change tooltip text to make it more user-friendly.
 </p>
 
 1.  Let’s make our map title more meaningful. Double-click the default
@@ -7810,7 +7897,7 @@ Figure 8.41: Change tooltip text to make it more user-friendly.
     so we are going to create the final layout that include map’s title
     and credits, the legend, and is appropriate for sharing. At the
     bottom-left of the program, create a *New Dashboard*, as shown in
-    Figure <a href="#fig:tableau-dashboard-create">8.42</a>. Dashboards
+    Figure <a href="#fig:tableau-dashboard-create">8.52</a>. Dashboards
     in Tableau are layouts that can contain visualizations from multiple
     sheets, as well as text boxes, images, and other elements, creating
     rich exploratory interfaces. In this tutorial, we will stick to just
@@ -7818,7 +7905,7 @@ Figure 8.41: Change tooltip text to make it more user-friendly.
 
 <img src="images/08-map/tableau-dashboard-create-annotated.png" alt="Before you publish the map, create a new dashboard to finalize your layout." width="400" />
 <p class="caption">
-Figure 8.42: Before you publish the map, create a new dashboard to
+Figure 8.52: Before you publish the map, create a new dashboard to
 finalize your layout.
 </p>
 
@@ -7826,23 +7913,23 @@ finalize your layout.
     Automatic so that the map is responsive and occupies 100% of the
     width on all devices. Drag and drop Sheet 1 to the *Drop sheets
     here* area, as shown in Figure
-    <a href="#fig:tableau-dashboard">8.43</a>. This will copy the map,
+    <a href="#fig:tableau-dashboard">8.53</a>. This will copy the map,
     the title, and the legend from Sheet 1.
 
 <img src="images/08-map/tableau-dashboard-annotated.png" alt="To create a responsive dashboard, change the Size to Automatic." width="400" />
 <p class="caption">
-Figure 8.43: To create a responsive dashboard, change the Size to
+Figure 8.53: To create a responsive dashboard, change the Size to
 Automatic.
 </p>
 
 1.  Right-click the upper part of the map legend, and select *Floating*,
-    as shown in Figure <a href="#fig:tableau-dashboard-legend">8.44</a>.
+    as shown in Figure <a href="#fig:tableau-dashboard-legend">8.54</a>.
     Now you are able to place your legend directly on top of the map to
     save space. Drag and drop it to one of the map’s corners.
 
 <img src="images/08-map/tableau-dashboard-legend.png" alt="To place the legend on top of the map, make sure it is floating." width="400" />
 <p class="caption">
-Figure 8.44: To place the legend on top of the map, make sure it is
+Figure 8.54: To place the legend on top of the map, make sure it is
 floating.
 </p>
 
@@ -7906,11 +7993,11 @@ In this section, we will build an interactive point map of hospitals in
 Texas using [General Hospital
 Information](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data)
 dataset by Medicare, which you can see in Figure
-<a href="#fig:socrata-final">8.45</a>.
+<a href="#fig:socrata-final">8.55</a>.
 
 <img src="images/08-map/socrata-final.png" alt="In this tutorial, we will build a point map of hospitals in Texas using Socrata."  />
 <p class="caption">
-Figure 8.45: In this tutorial, we will build a point map of hospitals in
+Figure 8.55: In this tutorial, we will build a point map of hospitals in
 Texas using Socrata.
 </p>
 
@@ -7946,24 +8033,24 @@ Navigate to the [Hospital General
 Dataset](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data),
 and in the menu on the right-hand side choose *Visualize &gt; Launch New
 Visualization*, as shown in Figure
-<a href="#fig:socrata-launch-new-viz">8.46</a>. This will open up a
+<a href="#fig:socrata-launch-new-viz">8.56</a>. This will open up a
 *Configure Visualization* studio where you can create the map.
 
 <img src="images/08-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize >
 Launch New Visualization." width=“300” /&gt;
 <p class="caption">
-Figure 8.46: Go to Visualize &gt; Launch New Visualization.
+Figure 8.56: Go to Visualize &gt; Launch New Visualization.
 </p>
 
 In the top menu, click *Map* (globe icon between a scatter chart icon
 and a calendar). You will see an updated layout of the studio, with the
 map in the middle, and *Map Layers* and *Map Settings* items in the side
 menu on the left, as shown in Figure
-<a href="#fig:socrata-configure">8.47</a>.
+<a href="#fig:socrata-configure">8.57</a>.
 
 <img src="images/08-map/socrata-configure-annotated.png" alt="Your studio should look similar to this once you choose Map as the visualization type." width="500" />
 <p class="caption">
-Figure 8.47: Your studio should look similar to this once you choose Map
+Figure 8.57: Your studio should look similar to this once you choose Map
 as the visualization type.
 </p>
 
@@ -7977,24 +8064,24 @@ Let’s first select only hospitals that are located in the southern state
 of Texas. To do so, go to *Filters &gt; Add filter*. The dropdown menu
 lists all columns (or fields) of the dataset, where we should choose
 *State*. In the newly appeared State dropdown, choose TX (for Texas) as
-shown in Figure <a href="#fig:socrata-filter">8.48</a>, and scroll down
+shown in Figure <a href="#fig:socrata-filter">8.58</a>, and scroll down
 and click Apply. Socrata should zoom in on the map and center on Texas.
 Close *Filters* window to free screen space.
 
 <img src="images/08-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
 <p class="caption">
-Figure 8.48: Select Texas as the only value for State field.
+Figure 8.58: Select Texas as the only value for State field.
 </p>
 
 Let’s now *disaggregate* the map so that we can see individual hospitals
 instead of clusters. Go to *Map Settings &gt; Clusters*, and bring the
 *Stop Clustering at Zoom Level* slider to 1, as shown in Figure
-<a href="#fig:socrata-uncluster">8.49</a>. You will see the map now
+<a href="#fig:socrata-uncluster">8.59</a>. You will see the map now
 shows individual points.
 
 <img src="images/08-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
 <p class="caption">
-Figure 8.49: To show individual points instead of clusters, set Stop
+Figure 8.59: To show individual points instead of clusters, set Stop
 Clustering at Zoom Level to 1.
 </p>
 
@@ -8014,11 +8101,11 @@ variables that can be transformed to point sizes. Instead, we can use
 contains multiple variables that can be effectively visualized, such as
 *Hospital Type*, *Emergency Services* (a yes/no category), *Mortality
 national comparison* and others. Let’s stick with *Hospital Type*, as is
-illustrated in Figure <a href="#fig:socrata-style">8.50</a>.
+illustrated in Figure <a href="#fig:socrata-style">8.60</a>.
 
 <img src="images/08-map/socrata-style-annotated.png" alt="Let's display different types of hospitals in different colors." width="300" />
 <p class="caption">
-Figure 8.50: Let’s display different types of hospitals in different
+Figure 8.60: Let’s display different types of hospitals in different
 colors.
 </p>
 
@@ -8034,11 +8121,11 @@ order of categories in the legend.
 To change what is shown in tooltips when you hover or click on points,
 go to **Flyout Details**, and set Flyout Title to *Facility Name*,
 adding city and phone number as additional flyout values, as is shown in
-Figure <a href="#fig:socrata-flyout">8.51</a>.
+Figure <a href="#fig:socrata-flyout">8.61</a>.
 
 <img src="images/08-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
 <p class="caption">
-Figure 8.51: To edit tooltip information, use Flyout Details menu item.
+Figure 8.61: To edit tooltip information, use Flyout Details menu item.
 </p>
 
 At this point you should have a fully-functional interactive map showing
@@ -8053,19 +8140,19 @@ still a draft, and you can go ahead and *Publish…* it.
 
 Now you can embed the map on your website as an iframe. To do so, click
 the *Share* button in the upper-right side of your map (see Figure
-<a href="#fig:socrata-share">8.52</a>), and copy the generated code from
+<a href="#fig:socrata-share">8.62</a>), and copy the generated code from
 *Embed Code* text area (Figure
-<a href="#fig:socrata-share-embed">8.53</a>). Learn more in [Chapter 10:
+<a href="#fig:socrata-share-embed">8.63</a>). Learn more in [Chapter 10:
 Embed on the Web](embed.html).
 
 <img src="images/08-map/socrata-share-annotated.png" alt="Click *Share* button to bring up *Share and Embed* window." width="400" />
 <p class="caption">
-Figure 8.52: Click *Share* button to bring up *Share and Embed* window.
+Figure 8.62: Click *Share* button to bring up *Share and Embed* window.
 </p>
 
 <img src="images/08-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website."  />
 <p class="caption">
-Figure 8.53: Copy iframe code to embed this map in another website.
+Figure 8.63: Copy iframe code to embed this map in another website.
 </p>
 
 ### Limitations of Socrata

@@ -5,13 +5,13 @@ In this chapter, we will examine [principles of map design](map-design.html) and
 
 Learn about different types of maps you can create in this book in Table \@ref(tab:map-types). Decisions about map types are based on two main factors: the format of your data, and the kind of story you wish to tell. For example, point maps work best to show specific locations with colored markers to represent categories (such as hospitals), while choropleth maps are best suited to display relative values for regions (such as birth rates across US states). After selecting your map type, follow our tool recommendations and step-by-step tutorials. This chapter features *Easy Tools* with drag-and-drop menus, such as [Google My Maps](mymaps.html), [Datawrapper](symbolmap-datawrapper.html), and [Tableau Public](map-tableau.html). But the table also points you to *Power Tools* that give you more control to customize and host your visualizations, such as [Leaflet code templates in Chapter 13](leaflet.html). These advanced tools require prior knowledge on how to [edit and host code templates with GitHub in Chapter 11](github.html).
 
-TODO below: Improve and standardize map images; Rethink wording of "point map with custom icons"? and description?
+TODO below: Improve and standardize map images
 
 Table: (\#tab:map-types) Basic Map Types, Best Uses, and Tutorials
 
 | Map | Best use and tutorials in this book |
 | --- | --- |
-| Point map with custom icons<br> ![](images/08-map/map-point.png) | Best to show specific locations (such as addresses or geocoordinates) with colored markers for categories, or custom icons, plus text and images in popup windows. <br>Easy tool: [Google My Maps tutorial](mymaps.html). <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
+| Point map with custom icons<br> ![](images/08-map/map-point.png) | Best to show specific locations (such as addresses) with customized colored markers for categories, plus text and images in popup windows. <br>Easy tool: [Google My Maps tutorial](mymaps.html). <br>Power tool: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Symbol point map<br> ![](images/08-map/map-symbol.png) | Best to show specific locations (such as cities), with variable-sized shapes or colors to represent data values (such as population growth).<br>Easy tool: [Symbol Point Map with Datawrapper tutorial](symbolmap-datawrapper.html) |
 | Choropleth (colored polygon) map <br> ![](images/08-map/map-choropleth.png) | Best to show patterns across geographic areas (such as neighborhoods or nations) by coloring polygons to represent data values. <br>Easy tool: [Choropleth map with Datawrapper tutorial](choropleth-datawrapper.html) or [Choropleth map with Tableau Public tutorial](map-tableau.html) <br>Power tools: [Ch 13: Leaflet Maps with Google Sheets tutorial](leaflet-maps-with-google-sheets.html) |
 | Heat point map <br> ![](images/08-map/map-heat.png) | Best to show clusters of points as colored hotspots to emphasize high frequency or density of cases. <br>Power tool: [Ch 13: Leaflet Heatmap code template](leaflet-heatmap.html) |
@@ -31,7 +31,7 @@ As you learned in the previous chapter about charts, data visualization is not a
 ### Deconstruct a Map {-}
 Our book features how to create *interactive* maps, also called *tiled web maps* or *slippy maps* because you can zoom into and pan around to explore map data layers on top of a seamless set of basemap tiles. They usually include *zoom controls* (`+` and `-` buttons) to view data at various levels that change the display of the basemap tiles. Basemaps that display pictorial images of streets and buildings are known as *vector* tiles, while those that display satellite imagery are known as *raster* tiles, and we'll explain the difference below. Take a look at Figure \@ref(fig:map-principles-map) to learn about basic elements in the maps you'll create in this chapter.
 
-The top layer of interactive maps generally consists of a combination of *points*, *polylines*, and *polygons*. Points show specific places, such as the street address of a home or business, sometimes with a location marker. Each point represents a pair of latitude and longitude coordinates. For example, `40.69, -74.04` marks the location of the Statue of Liberty in New York City. Polylines are connected strings of points, such as roads or transportation networks, and we place the “poly-” prefix before “lines” to remind us that they may contain multiple branches. Polygons represent closed areas defined by lines, such as building footprints, census tracts, or state or national boundaries. Since all points, polylines, and polygons consist of latitude and longitude coordinates, they are called vector data. You can zoom up very close to vector data or vector basemaps without diminishing their visual quality. By contrast, our ability to zoom into raster data or rasterbasemaps is limited by the resolution of the original image, which gets fuzzier as we get closer. You'll learn more about these terms in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter 14.
+The top layer of interactive maps generally consists of a combination of *points*, *polylines*, and *polygons*. Points show specific places, such as the street address of a home or business, sometimes with a location marker. Each point represents a pair of latitude and longitude coordinates. For example, `40.69, -74.04` marks the location of the Statue of Liberty in New York City. Polylines are connected strings of points, such as roads or transportation networks, and we place the “poly-” prefix before “lines” to remind us that they may contain multiple branches. Polygons represent closed areas defined by lines, such as building footprints, census tracts, or state or national boundaries. Since all points, polylines, and polygons consist of latitude and longitude coordinates, they are called vector data. You can zoom up very close to vector data or vector basemaps without diminishing their visual quality. By contrast, our ability to zoom into raster data or raster basemaps is limited by the resolution of the original image, which gets fuzzier as we get closer. You'll learn more about these terms in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter 14.
 
 (ref:map-principles-map) Key elements of an interactive map.
 
@@ -45,7 +45,7 @@ TODO: ILYA please review the text above, which I revised again to address review
 
 ### Clarify Point versus Polygon Data {-}
 
-Before you start to create a map, make sure you understand your data format and what it represents. Avoid mistakes commonly made by novices by pausing to ask these questions. First, *Can your data be mapped?* Sometimes the information we collect has no geographic component, or no consistent one, which makes it difficult or impossible to place on a map. If the answer is yes, then proceed to the second question: *Can the data be mapped as points or polygons?* These are the two most likely cases (which are sometimes confused), in contrast to the less-common third option, *polylines*, which represent paths and routes.
+Before you start to create a map, make sure you understand your data format and what it represents. Avoid mistakes commonly made by novices by pausing to ask these questions. First, *Can your data be mapped?* Sometimes the information we collect has no geographic component, or no consistent one, which makes it difficult or impossible to place on a map. If the answer is yes, then proceed to the second question: *Can the data be mapped as points or polygons?* These are the two most likely cases (which are sometimes confused), in contrast to the less-common third option, polylines, which represent paths and routes.
 
 What type of data do you see listed below: points or polygons?
 
@@ -209,29 +209,19 @@ At this point, you should have a better idea of key principles in map design, an
 
 ## Point Map with Google My Maps {- #mymaps}
 
-[My Maps](https://www.google.com/maps/about/mymaps/) is Google's service that allows users to create custom maps on top of Google Maps. The maps that you create will stay in your Google account and will not in any way interfere with the Google Maps product that you and others use to look up directions or find nearby restaurants. You may choose to share your map either through embedding it on your website or providing a direct link to your colleagues or friends.
+Most people are already familiar with [Google Maps](https://www.google.com/maps/), the web mapping service that allows users to look up locations and directions around the world. In this section you'll learn about [Google My Maps](https://www.google.com/maps/about/mymaps/), a related tool that allows you to display groups of points on top of the Google Maps platform, which users can click on to reveal more data, including photos, websites, or directions. You can customize the colors and icons for your point markers, and all of the map layer content you create will reside in your [Google Drive](https://drive.google.com), where you can edit and collaborate with others. Although Google My Maps has limited features, it's an easy-to-learn tool to build a basic interactive point map, along with simple polylines and polygons if desired. Finally, you can share a public link to your map or embed it on your website, a step that you'll learn more about in [Chapter 10: Embed on the Web](embed.html).
 
-Google My Maps is one of the simplest ways to build basic point, line, and polygon maps, although
-it limits your styling options. My Maps is most powerful when it comes to collaboration, and you can invite anyone with a Google account to jointly work on the map.
+In this section, we will construct a sample point map of museums and parks in North America, with two different groups of styled markers, as shown in Figure \@ref(fig:mymaps-final). Follow the steps below to create your own version.
 
-In this section, we will look at building a point map of visitor attractions in North America, as is shown in Figure \@ref(fig:mymaps-final). We will create a new map, import point data, style markers, change the baselayer, and look at options to share the map.
-
-TODO below: add the interactive link to the caption
-
-(ref:mymaps-final) A map of visitor attractions in North America built with Google My Maps.
+(ref:mymaps-final) Point map of parks and museums created with Google My Maps. Explore the [interactive version](https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&usp=sharing).
 
 ```{r mymaps-final, fig.cap="(ref:mymaps-final)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://www.google.com/maps/d/u/3/embed?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr", height="500px") else knitr::include_graphics("images/08-map/mymaps-final.png")
 ```
 
-Below are the steps you can take to create the same map.
+1. Open the [Parks and Museums data in Google Sheets](https://docs.google.com/spreadsheets/d/11nSoyGUxDJiBe5VZflDnaaqgWMdWyIUNnjNLMlGOPLk/edit#gid=312385679), which contains six popular locations in North America. Each row includes a *Group*, *Name*, *Address*, and *URL*. Log into your Google account and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
 
-TODO: Rewrite this step to show data in Google Sheets, not CSV.... See if images can be uploaded... Review file contents... Redo step numbering and make File > Download (CSV format) part of this first step, and review continuity with step 3 below -- Open this [data template in Google Sheets](https://docs.google.com/spreadsheets/d/1IA0J4Z9C0_zsvgcunD2kHtR__sdQqUPzNHNjqCLYBRQ/edit#gid=312385679), log into your Google account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
-
-We prepared a dataset with six locations (using Wikipedia to look things up), which you can [download](data/north-american-visitor-attractions.csv) for the exercise. If you inspect the CSV file in your favorite text editor, you will see that it contains three national parks and three museums. Each point comes with a `Name`, its `State` and `Country`, and museums also have an `Address` and `City` specified. The `URL` is provided for all six locations.
-
-
-1. Navigate to [Google My Maps](https://www.google.com/mymaps/). In the upper-left corner, click `+ Create a New Map` button, as shown in Figure \@ref(fig:mymaps-create-new). This will create an empty map with familiar Google Maps style.
+2. Navigate to [Google My Maps](https://www.google.com/mymaps/). In the upper-left corner, click the *+ Create a New Map* button, as shown in Figure \@ref(fig:mymaps-create-new). This will create an empty map with familiar Google Maps style.
 
 (ref:mymaps-create-new) Navigate to https://www.google.com/mymaps/ and create a new map.
 
@@ -239,7 +229,7 @@ We prepared a dataset with six locations (using Wikipedia to look things up), wh
 knitr::include_graphics("images/08-map/mymaps-create-new.png")
 ```
 
-2. Give your map a relevant title and desription by clicking the current title (`Untitled map`). This will bring up a modal window where you can make changes, as shown in Figure \@ref(fig:mymaps-edit-title).
+3. Add a relevant title and description by clicking its current title, *Untitled map*, and typing in the new information, as shown in Figure \@ref(fig:mymaps-edit-title).
 
 (ref:mymaps-edit-title) Add title and description to your map.
 
@@ -247,72 +237,141 @@ knitr::include_graphics("images/08-map/mymaps-create-new.png")
 knitr::include_graphics("images/08-map/mymaps-edit-title.png")
 ```
 
-3. Now, let's perform the most important step of point adding data. Under *Untitled layer* item, click *Import* button, and drag-and-drop the CSV file to the Upload area. Note that you can also connect a dataset from your Google Drive, but we won't be doing it here. Once the data file is uploaded, My Maps will ask which columns contain location data that it can use to position the markers. In our case, these are Address, City, State, Postalcode, and Country, as well as Name, as shown in Figure \@ref(fig:mymaps-lat-lon). It is important we select Name because our national parks have no address data, and if names their names are not provided, Google will place the markers in the middle of the state instead.
+4. To add data to your map, click the *Import* button under the *Untitled layer* item, as shown in Figure \@ref(fig:mymaps-import).
 
-(ref:mymaps-lat-lon) Make sure all columns with relevant location data are checked.
+(ref:mymaps-import) Click the *Import* button to add a data layer to your map.
 
-```{r mymaps-lat-lon, out.width=300, fig.cap="(ref:mymaps-lat-lon)"}
-knitr::include_graphics("images/08-map/mymaps-lat-lon.png")
+```{r mymaps-import, out.width=300, fig.cap="(ref:mymaps-import)"}
+knitr::include_graphics("images/08-map/mymaps-import.png")
 ```
 
-4. Once the boxes are checked, click *Continue*. Another window will pop up, asking
-which column to use to annotate points. Choose *Name*, as shown in Figure \@ref(fig:mymaps-column-title),
-and then *Finish*.
+5. In the *Choose a file to import* screen, there are several ways to upload data. Choose *Google Drive*, since our sample data is already in that format, and select the *Recent* button to locate the *Museums and Parks* file you saved to your Google Drive, as shown in Figure \@ref(fig:mymaps-import-gdrive). Press *Select*.
 
-(ref:mymaps-column-title) Choose Name column to serve as titles for your markers.
+(ref:mymaps-import-gdrive) After you choose to import your data through *Google Drive*, select the *Recent* button to find the file.
 
-```{r mymaps-column-title, out.width=300, fig.cap="(ref:mymaps-column-title)"}
-knitr::include_graphics("images/08-map/mymaps-column-title.png")
+```{r mymaps-import-gdrive, out.width=750, fig.cap="(ref:mymaps-import-gdrive)"}
+knitr::include_graphics("images/08-map/mymaps-import-gdrive.png")
 ```
 
-5. Google Maps will perform geocoding automatically (that is, will translate your location columns into latitude/longitude coordinates). It will take a few moments for My Maps to create a new layer, which
-will be added to the layer menu as *north-american-visitor-attractions.csv* (if you used the downloaded file).
-Once the layer is created, My Maps will center the map to fit the points. Click on the layer name, which by default is set to the name of imported file, and change it to *Attractions* (alternatively, open a kebab menu to the right of the layer name, and click *Rename this layer*).
+6. In the *Choose columns to position your placemarks* screen, select the *Address* column to place your point data on the map, as shown in Figure \@ref(fig:mymaps-placemarks). Press *Continue*.
 
-6. By default, each location will be assigned a blue marker that we can style individually, and all markers will be visible in the menu under the relevant layer. Since our locations are parks
-and museums, which are fairly distinct groups (and happen to have this distinction recorded in the `Group` column), let's assign green park icons to all parks, and orange museum icons to the museums. To do so, click *Individual styles*, and in the *Group places by* dropdown, change the value to *Style data by column: Group*, as show in Figure \@ref(fig:mymaps-group-places). This will divide all markers into two groups, and assign distinct icons to these two groups.
+(ref:mymaps-placemarks) Select *Address* to place your data on the map.
 
-(ref:mymaps-group-places) Group places by Group column instead of individual styles.
+```{r mymaps-placemarks, out.width=350, fig.cap="(ref:mymaps-placemarks)"}
+knitr::include_graphics("images/08-map/mymaps-placemarks.png")
+```
+
+Hint: You can select multiple boxes if your address is split across several columns, such as *Address*, *City*, *State*, *Zipcode*. Also, if your point data is already geocoded, you can upload latitude and longitude pairs, such as `41.76, -72.69`.
+
+7. In the *Choose a column to title your markers* window, select the *Name* column to title your point markers, as shown in Figure \@ref(fig:mymaps-marker-titles). Then click *Finish*.
+
+(ref:mymaps-marker-titles) Select the *Name* column to title your point markers.
+
+```{r mymaps-marker-titles, out.width=350, fig.cap="(ref:mymaps-marker-titles)"}
+knitr::include_graphics("images/08-map/mymaps-marker-titles.png")
+```
+
+Google My Maps will automatically [geocode your address data as we discussed in chapter 3](geocode.html), display them using its default blue markers, and center the map to fit all of the points.
+
+8. Click the three-dot kebab menu next to the *Museums and Parks...* layer to *Rename* and shorten its name, since the full name of the file is imported by default, as shown in Figure \@ref(fig:mymaps-rename-layer).
+
+(ref:mymaps-rename-layer) Click the 3-dot kebab menu next to the layer to shorten its name.
+
+```{r mymaps-rename-layer, out.width=300, fig.cap="(ref:mymaps-rename-layer)"}
+knitr::include_graphics("images/08-map/mymaps-rename-layer.png")
+```
+
+9. Since our map contains two groups---museums and parks---let's create a custom color marker for each group to replace the default blue markers. Click on *Individual styles*, and in the *Group places by* dropdown, change the value to *Style data by column: Group*, as show in Figure \@ref(fig:mymaps-group-places). This option is available because we intentionally created the *Group* column for museums and parks when setting up the sample data. Close this window by clicking the upper-right *X* symbol.
+
+(ref:mymaps-group-places) Change *Individual styles* to *Group places by: Group*.
 
 ```{r mymaps-group-places, out.width=300, fig.cap="(ref:mymaps-group-places)"}
-knitr::include_graphics("images/08-map/mymaps-group-places-annotated.png")
+knitr::include_graphics("images/08-map/mymaps-group-places.png")
 ```
 
-7. Now we can set custom icons to both groups. Click the bucket icon to the right of the group to assign a new color, and a new icon (you may need to browse the *More icons* window to find the relevant ones). Figure \@ref(fig:mymaps-color) shows how the marker customization window looks like.
+10. Under *Styled by group*, float your cursor over the *Museum* label to reveal the bucket styling symbol, and click it, as shown in Figure \@ref(fig:mymaps-customize-marker).
 
-(ref:mymaps-color) In My Maps, you can change marker colors and icons.
+(ref:mymaps-customize-marker) Float your cursor over a label to reveal the bucket styling symbol.
 
-```{r mymaps-color, out.width=300, fig.cap="(ref:mymaps-color)"}
-knitr::include_graphics("images/08-map/mymaps-color.png")
+```{r mymaps-customize-marker, out.width=295, fig.cap="(ref:mymaps-customize-marker)"}
+knitr::include_graphics("images/08-map/mymaps-customize-marker.png")
 ```
 
-8. You may notice that green and orange icons look not as prominent due to yellow and orange roads and highways, and green forest areas of the basemap. To fix this, let's change the basemap to a darker blue version. At the bottom of the control window, open *Base map* dropdown, and pick *Dark Landmass*. Now, your map should look great!
+11. Assign a new color for *Museums*, and click *More icons* to find a more appropriate point marker symbol, as shown in Figure \@ref(fig:mymaps-colors-icons).
 
+(ref:mymaps-colors-icons) Select point marker colors and icons.
 
-9. Click *Preview* to see how the map looks like outside of the My Maps editing studio. Go back to the studio, and if you are happy with the result, click *Share* button underneath the map's title and description. In the modal window, make sure *Enable link sharing* is activated, as shown in Figure \@ref(fig:mymaps-share), and copy the generated link. You can share with link with anyone, with or without a Google account, and they will be able to see your map.
+```{r mymaps-colors-icons, out.width=295, fig.cap="(ref:mymaps-colors-icons)"}
+knitr::include_graphics("images/08-map/mymaps-colors-icons.png")
+```
 
-(ref:mymaps-share) Make sure anyone with the link can view your map before you share it.
+12. In the *Choose an icon* screen, use the upper-right *Filter* to search for icon types by name, such as "Museum" as shown in Figure \@ref(fig:mymaps-choose-icon). Repeat this process for *Parks*.
+
+(ref:mymaps-choose-icon) Search by filter in the *Choose an icon* screen.
+
+```{r mymaps-choose-icon, out.width=750, fig.cap="(ref:mymaps-choose-icon)"}
+knitr::include_graphics("images/08-map/mymaps-choose-icon.png")
+```
+
+13. In the *Choose an icon* screen, you can click the lower-left *Custom icon* button to upload an image, which will be transformed into a thumbnail image icon, as shown in Figure \@ref(fig:mymaps-custom-icon). This custom icon was created from a [Wikimedia image of the Washington Monument](https://commons.wikimedia.org/wiki/File:Washington_Monument_Panorama.jpg).
+
+(ref:mymaps-custom-icon) Upload a photo to create a custom thumbnail icon image.
+
+```{r mymaps-custom-icon, out.width=180, fig.cap="(ref:mymaps-custom-icon)"}
+knitr::include_graphics("images/08-map/mymaps-custom-icon.png")
+```
+
+14. Click on any map marker to edit its data, insert a photo to appear in its pop-up window, or add Google Map directions, as shown in Figure \@ref(fig:mymaps-edit-point). This photo came from a [Wikimedia image of the Metropolitan Museum of Art](https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_entrance_NYC.JPG). However, you must add photos or directions manually, since these links cannot be pre-loaded into the data spreadsheet.
+
+(ref:mymaps-edit-point) Click any map marker to edit its data, add a photo, or directions.
+
+```{r mymaps-edit-point, out.width=345, fig.cap="(ref:mymaps-edit-point)"}
+knitr::include_graphics("images/08-map/mymaps-edit-point.png")
+```
+
+15. You can change the style of the basemap to one of nine different versions offered by Google, as shown in the drop-down menu in Figure \@ref(fig:mymaps-style-basemap). Choose high-contrast colors for marker icons and basemap backgrounds.
+
+(ref:mymaps-style-basemap) Change the style of the Google basemap.
+
+```{r mymaps-style-basemap, out.width=300, fig.cap="(ref:mymaps-style-basemap)"}
+knitr::include_graphics("images/08-map/mymaps-style-basemap.png")
+```
+
+16. At the top of the map, see buttons to manually add more point markers, draw a line, add directions, or measure distance, as shown in Figure \@ref(fig:mymaps-draw-line). However, Google My Maps has limited support for polylines and polygons, and you cannot easily create a choropleth map with colored boundaries that represent data values.
+
+(ref:mymaps-draw-line) Manually add more point markers, lines, and directions, or measure distance.
+
+```{r mymaps-draw-line, out.width=235, fig.cap="(ref:mymaps-draw-line)"}
+knitr::include_graphics("images/08-map/mymaps-draw-line.png")
+```
+
+17. Click *Preview* to see how you map will appear to other people. When you finish editing your map, click the *Share* button underneath the map's title and description, and in the next screen, make sure *Enable link sharing* is activated, as shown in Figure \@ref(fig:mymaps-share), and copy the generated link. You can share with link with anyone, with or without a Google account. You also have the option to make your map publicly appear in web search results, if desired.
+
+(ref:mymaps-share) Before sharing your map, make sure anyone with the link can view it.
 
 ```{r mymaps-share, out.width=400, fig.cap="(ref:mymaps-share)"}
 knitr::include_graphics("images/08-map/mymaps-share.png")
 ```
 
-If you want to embed the map as an iframe, from the main kebab menu to the right of the map title, choose *Embed on my site*, as shown in Figure \@ref(fig:mymaps-embed). This will generate an HTML embed code that you can copy to your website, as described in [Chapter 10: Embed on the Web](embed.html).
+18. If you wish to embed your map as an iframe on a web page, click the 3-button kebab menu to the right of the map title and select *Embed on my site*, as shown in Figure \@ref(fig:mymaps-embed). This will generate an HTML embed code, which we will explain in [Chapter 10: Embed on the Web](embed.html).
 
-(ref:mymaps-embed) My Maps can generate an iframe code to include the map on your own website.
+(ref:mymaps-embed) Select *Embed on my site* to copy the HTML iframe code.
 
-```{r mymaps-embed, out.width=300, fig.cap="(ref:mymaps-embed)"}
+```{r mymaps-embed, out.width=315, fig.cap="(ref:mymaps-embed)"}
 knitr::include_graphics("images/08-map/mymaps-embed.png")
 ```
 
-Google My Maps has more powerful features for map making, and you
-are not limited to just point maps. You can also draw your own shapes, including
-lines and polygons. You can add data to multiple layers.
-Unfortunately, Google My Maps has no comprehensive documentation,
-so you have to explore the studio yourself if you want to create
-more complex projects.
+19. If you wish to edit your map in the future, here are two ways to access it when logged into your Google account. One way is to [open the Google My Maps platform](https://www.google.com/mymaps/) to view all of your maps. A second way is to go to your [Google Drive](https://drive.google.com) and search for your Google My Maps by keyword. When you create a Google My Map from data in a Google Sheet, we recommend that you keep the My Map and Sheet files together in the same folder in your Google Drive, as shown in Figure \@ref(fig:mymaps-gdrive), to help you make edits more easily in the future.
 
-In the next section, we will look at creating and sharing symbol point maps with Datawrapper.
+(ref:mymaps-gdrive) Keep your Google My Maps and Sheets files together in a Google Drive folder.
+
+```{r mymaps-gdrive, out.width=500, fig.cap="(ref:mymaps-gdrive)"}
+knitr::include_graphics("images/08-map/mymaps-gdrive.png")
+```
+
+Google My Maps is a good first tool to learn for making interactive maps, especially point maps with custom icons. You can design maps with multiple layers of points, polylines, and basic polygons, if desired. But the overall map design and features are limited to what the Google My Maps platform offers. Learn more at the [Google My Maps support page](https://support.google.com/mymaps).
+
+In the next section, we will explore a more powerful tool called Datawrapper to create symbol point maps, where each the size of each circle (or other shapes) represents the data value for that specific point.
 
 ## Symbol Point Map with Datawrapper {- #symbolmap-datawrapper}
 We first introduced you to the free and easy-to-learn [Datawrapper tool in Chapter 7: Chart Your Data](chart-datawrapper.html). It's also offers powerful features to create different types of maps, with professional-looking design elements. With Datawrapper you can start to work right away in your browser, with no account required unless you wish to save and share your work online.
@@ -328,6 +387,8 @@ if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://dataw
 Datawrapper splits the process of creating a map into four steps: select map, add data, visualize, then publish and embed. To create your own symbol point map, follow this tutorial.
 
 1. Open the [US Cities Population Change 2010-2019 data in Google Sheets](https://docs.google.com/spreadsheets/d/1XOhNtvYWaebP4izr0PDJfToRIbl2vki_1JNMYTKCCn0/edit#gid=1709919231). Read the notes to understand its origin and some data issues. We downloaded [city population data for 2010-2019 from the US Census](https://www.census.gov/data/tables/time-series/demo/popest/2010s-total-cities-and-towns.html). But during this time period, some cities were newly incorporated or merged with outlying areas, which skews their population data over time. Also, we collected data for 5 major cities in Puerto Rico, a US territory, but they do not appear in the Datawrapper map for reasons explained in step 4.
+
+TODO: Fix Puerto Rico with newer Datawrapper map
 
 Good maps often require [cleaning up messy data as described in Chapter 5](clean.html). In our spreadsheet we narrowed the original list down to about 300 cities with more than 100,000 residents in either 2010 or 2019. Also, since we're relying on Datawrapper to correctly identify *place names*, we combined *city* and *state* into one column to improve geocoding accuracy. Learn more about [place name geocoding at the Datawrapper Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names). Also, we created a new column named *Percent Change*, which we calculated this way: `(2019 - 2010) / 2010 * 100`.
 

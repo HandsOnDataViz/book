@@ -62,13 +62,7 @@ options(knitr.graphics.auto_pdf = TRUE)
 
 **This BOOK-IN-PROGRESS was last updated on: `r format (Sys.Date(), '%d %b %Y')`**.
 
-Read the open-access web edition at https://HandsOnDataViz.org. This book is under contract with O'Reilly Media, Inc., which will sell print and ebook versions in April 2021.
-
-Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You'll also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required.
-
-Send corrections for this book-in-progress to [handsondataviz@gmail.com](mailto:handsondataviz@gmail.com), or open an issue or submit a pull request on our [GitHub repository](https://github.com/handsondataviz/book). If you submit a GitHub pull request, in your commit message, please add the sentence “I assign the copyright of this contribution to authors Jack Dougherty and Ilya Ilyankou" to give us the option to publish it, with credit to you.
-
-View open-source code for the book text and code templates at https://github.com/handsondataviz.
+Read the open-access web edition at https://HandsOnDataViz.org, and access the open-source code templates at https://github.com/handsondataviz. This book is under contract with O'Reilly Media, Inc., which will sell print and ebook versions in Spring 2021.
 
 <div style="text-align:center">
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
@@ -80,12 +74,27 @@ by <a href="https://handsondataviz.org/authors">Jack Dougherty and Ilya Ilyankou
 and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.
 You may freely share this content for non-commercial purposes, with a source credit to <a href="http://HandsOnDataViz.org">http://HandsOnDataViz.org</a>.
 
+Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You'll also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, educators, community activists, non-profit organizations, small business owners, local governments, journalists, researchers, or anyone who wants to tell their story and show the data. No coding experience is required.
+
+## Audience and Overview {- #audience-overview}
+We designed this introductory guide to be broadly accessible for newcomers, and to offer an educational resource for advanced users who teach or guide others in the field of data visualization. It began as a textbook for an introductory course for college students and their community partners in Hartford, Connecticut, who collaborated to create interactive charts and maps to tell their organization's data story on the web in 2016. A year later, readership expanded when over five thousand students around the globe enrolled in a free online edX course, based on an earlier draft of this book.^[@doughertyToughQuestionsAsk2017] Guided by feedback from readers and other educators, we significantly overhauled the structure, deepened the conceptual material, and added more tutorials with enhanced visuals.
+
+TODO: who this book is for... spreadsheets to code... if you   not just one tool, but several tools, all of them free and easy-to-learn, along with our guidance on how to choose tools....
+
+Learn by following the step-by-step tutorials on a laptop or desktop computer with an internet connection. We recommend any computer running either the Macintosh or Windows operating system, with a modern web browser such as Chrome, Firefox, Safari, or Edge. Another good option is a Chromebook or Linux computer, which allows you to complete *most* of the tutorials in this book, and we'll point out any limitations in specific chapters. While it may be possible to complete some tutorials on a tablet or smartphone device, we do not recommend it because you cannot follow all of the steps.
+
+If you're working on a laptop, consider buying or borrowing an external mouse that plugs into your computer. We've met several people who find it much easier to click, hover, and scroll with an external mouse than a laptop's built-in trackpad. If you're new to working with computers--or teaching newer users with this book---consider starting with [basic computer and mouse tutorial skills from the Goodwill Community Foundation](https://edu.gcfglobal.org/en/subjects/basic-skills/). Also, if you're reading a digital version of this book on a laptop, consider connecting a second computer monitor, or working with a tablet or second computer alongside you. This allows you to read the book in one screen and build data visualizations in the other screen.
+
+TODO: what this book will not cover...
+
+TODO: Chapter outline...
+
 ## Authors & Acknowledgements {- #authors}
 <!-- Images below are 200x200 at 300 resolution -->
 
 | Authors      | About Us     |
 | ------------ | ------------ |
-| ![](images/0-preface/dougherty-jack.jpg) | [Jack Dougherty](http://jackdougherty.org) is Professor of Educational Studies at Trinity College in Hartford, Connecticut, where he and his students partner with community organizations to help tell their data stories on the web. Follow him on [Twitter](https://twitter.com/doughertyjack) and [on GitHub](https://github/com/jackdougherty). |
+| ![](images/0-preface/dougherty-jack.jpg) | Jack Dougherty is Professor of Educational Studies at Trinity College in Hartford, Connecticut. He teaches a data visualization course where students partner with community organizations to help them tell their stories online with interactive charts and maps. Trained as a historian, Jack learned data visualization to share evidence more widely about cities, suburbs, and schools over time for his *[On The Line](https://ontheline.trincoll.edu)* book. Visit [his website](https://jackdougherty.org) or follow him on [Twitter](https://twitter.com/doughertyjack). |
 | ![](images/0-preface/ilyankou-ilya.jpg) | [Ilya Ilyankou](https://www.linkedin.com/in/ilya-ilyankou-a64675ab) is a Civic Technologist at Connecticut Data Collaborative. He has completed a double major in Computer Science and Studio Arts in the Class of 2018 at Trinity College. Visit [his website](http://ilyankou.com) or follow him [on GitHub](https://github.com/ilyankou). |   
 
 ### Acknowledgements {-}
@@ -94,35 +103,3 @@ We originally launched an earlier draft of this book under a different title, *D
 Thanks to many individuals and organizations who helped us to learn many of the skills that we teach in this book, especially Alvin Chang and Andrew Ba Tran, who previously were data journalists at *The Connecticut Mirror*; and Michael Howser, Steve Batt, and their colleagues at the University of Connecticut Libraries Map and Geographic Information Center (MAGIC). Also, many people inspired us to be *code-curious* at The Humanities and Technology Camp (THATCamp) events, sponsored by the Roy Rosenzweig Center for History and New Media at George Mason University, and engaged us with civic technology for the public good at Transparency Camp events sponsored by the Sunlight Foundation. We also appreciate Scott Gaul for inviting us to share our work-in-progress at Hartford data workshops and discussions, sponsored by the Hartford Foundation for Public Giving.
 
 We thank everyone at O'Reilly Media who worked with us to bring you this book, especially our outstanding developmental editor, Amelia Blevins, and other members of the team: Nick Adams, Jonathan Hassel, Andy Kwan, Katie Tozer,... We also thank O'Reilly's support for technical reviewers whose valuable feedback helped us to improve the manuscript, including Carl Allchin, Derek Eder, Erica Hayes, etc...., and additional readers, including Gared Bard, Nick Klagge....
-
-## Audience and Outline {- #audience-outline}
-TODO: Intended audience
-
-TODO: Chapter outline
-
-TODO: what this book will not cover...
-
-## Follow Along on a Computer {- #computer}
-TODO: Decide about renaming to "Follow Tutorials On A Computer"
-
-To follow the steps in this book, we recommend either a desktop or laptop computer, running either the Mac or Windows or Linux operating system, with an internet connection and a modern web browser such as Chrome, Firefox, Safari, or Edge. Another good option is a Chromebook laptop, which enables you to complete *most* of the steps in this book, and we'll point out any limitations in specific chapters. While it's possible to use a tablet or smartphone device, we do not recommend it because you cannot follow all of the steps, and you'll also get frustrated with the small screen and perhaps throw your device (or this book) across the room, and possibly injure someone (and we will not be held responsible!)
-
-If you're working on a laptop, consider buying or borrowing an external mouse that can plug into your machine. We've met several people who found it much easier to click, hover, and scroll with a mouse rather than a laptop's built-in trackpad.
-
-If you're new to working with computers---or teaching new users with this book---consider starting with [mouse exercises](http://www.pbclibrary.org/mousing/mousercise.htm). All of the tools in this book assume that users already know how to click tiny buttons, hover over links, and scroll web pages, but rarely are these skills taught, and everyone needs to learn them at some point in our lives.
-
-<!-- TODO: I added the tips above because these are huge yet surmountable obstacles for many people I've worked with, especially older generations and incarcerated people. But I'm uncertain about the link to the mouse exercises. Perhaps I should tweet at public library staff and instructors to find better beginning resources? -->
-
-
-#### Trademarks {-}
-TODO: Discuss with editor if this is necessary, and if so, whether to place in the frontmatter?
-
-Any use of a trademarked name without a trademark symbol is for readability purposes only. We have no intention of infringing on the trademark.
-
-- GitHub and the GitHub logo are registered trademarks of GitHub, Inc.
-- Google and the Google logo are registered trademarks of Google Inc.
-- WordPress is a registered trademark of the WordPress Foundation
-- TODO: Add others...
-
-#### Disclaimer {-}
-The information is this book is provided without warranty. The authors and publisher have neither liability nor responsibility to any person or entity related to any loss or damages arising from the information contained in this book.

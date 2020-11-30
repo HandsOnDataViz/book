@@ -1,5 +1,12 @@
 ## About Open-Access Web Edition {- #open-access}
-This open-access web edition of the book is free to read online at <http://HandsOnDataViz.org>. Reading online is the ideal way to explore the interactive charts and maps that are featured here, and also to click on internal cross-references or external links to additional sources. Any modern web browser will display the book, but readers may prefer larger screens (laptops or desktops) over smaller screens (such as smartphones or tablets). In your web browser, try these toolbar features near the top of the page:
+This open-access web edition of the book is freely available to read at https://HandsOnDataViz.org, and you can access our open-source code templates at https://github.com/handsondataviz. To suggest any corrections or updates for the book, you can open an issue or submit a pull request on our GitHub repository at https://github.com/handsondataviz/book.
+
+
+
+
+
+
+Reading online is the ideal way to explore the interactive charts and maps that are featured here, and also to click on internal cross-references or external links to additional sources. Any modern web browser will display the book, but readers may prefer larger screens (laptops or desktops) over smaller screens (such as smartphones or tablets). In your web browser, try these toolbar features near the top of the page:
 
 - Menu
 - Search
@@ -26,14 +33,13 @@ Float your cursor over any section header to reveal a hashtag anchor symbol: `#`
 
 ![Screenshot: Share section links](images/0-preface/section-links.png)
 
-#### Use a second monitor {-}
-If you have a small screen, consider connecting a second monitor, or work next to a second computer or tablet. This allows you to view tutorials in one screen and build visualizations in the other screen.
-
-![Image: Laptop with second monitor, and with tablet](images/0-preface/laptop-and-monitor-and-tablet.jpg)
-
 #### Refresh browser {-}
 To view the most up-to-date content in your web browser, do a "hard refresh" to [bypass any saved content in your browser cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
 
-- Ctrl + F5 (most Windows-Linux browsers)
+- Ctrl + F5 (most Windows or Linux browsers)
+- Shift + Ctrl + R (Chromebook)
 - Command + Shift + R (Chrome or Firefox for Mac)
-- Shift + Reload button toolbar (Safari for Mac)
+- Option + Command + R (Safari for Mac)
+
+#### Disclaimer {-}
+The information is this book is provided without warranty. The authors and publisher have neither liability nor responsibility to any person or entity related to any loss or damages arising from the information contained in this book.

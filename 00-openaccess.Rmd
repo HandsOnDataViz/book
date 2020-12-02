@@ -1,22 +1,18 @@
 ## About Open-Access Web Edition {- #open-access}
-This open-access web edition of the book is freely available to read at https://HandsOnDataViz.org, and you can access our open-source code templates at https://github.com/handsondataviz. To suggest any corrections or updates for the book, you can open an issue or submit a pull request on our GitHub repository at https://github.com/handsondataviz/book.
+This open-access web edition of the book is freely available to read at https://HandsOnDataViz.org. You can access our open-source code templates on our GitHub organizational account at https://github.com/handsondataviz. To suggest any corrections or updates for the book, you can open an issue or submit a pull request on our book's GitHub repository at https://github.com/handsondataviz/book. See the [appendix](bookdown.html) to learn how we built this open-access book with free-to-use, open-source tools, primarily [Bookdown](https://bookdown.org), [GitHub](http://github.com), and [Zotero](http://zotero.org).
 
-
-
-
-
-
-Reading online is the ideal way to explore the interactive charts and maps that are featured here, and also to click on internal cross-references or external links to additional sources. Any modern web browser will display the book, but readers may prefer larger screens (laptops or desktops) over smaller screens (such as smartphones or tablets). In your web browser, try these toolbar features near the top of the page:
+Reading this book on the web is the ideal way to explore our interactive charts and maps, and also to click on internal cross-references or external links to additional sources. In your web browser, also try these toolbar features near the top of the page:
 
 - Menu
 - Search
 - Font to adjust text size and display
 - View source code on GitHub
+- Download the PDF version
 - Shortcuts (arrow keys to navigate; `s` to toggle sidebar; `f` to toggle search)
 - Social Media
 - Share
 
-![Screenshot: How to read](images/0-preface/how-to-read.png)
+![Screenshot: toolbar features](images/0-preface/toolbar-features.png)
 
 #### Open links in new tabs {-}
 Keep your place when reading online and moving between pages.  
@@ -29,7 +25,7 @@ Keep your place when reading online and moving between pages.
 ![Screenshot: Open link in new tab (on Mac)](images/0-preface/contextual-menu.png)
 
 #### Share section links {-}
-Float your cursor over any section header to reveal a hashtag anchor symbol: `#`. Click the symbol to view the link to this section in your browser bar, and copy it to share with others.
+Float your cursor over any section header to reveal a hashtag anchor symbol: `#`. Click the symbol to view the section link in your browser bar, and copy it to share with others.
 
 ![Screenshot: Share section links](images/0-preface/section-links.png)
 
@@ -43,3 +39,14 @@ To view the most up-to-date content in your web browser, do a "hard refresh" to 
 
 #### Disclaimer {-}
 The information is this book is provided without warranty. The authors and publisher have neither liability nor responsibility to any person or entity related to any loss or damages arising from the information contained in this book.
+
+#### Copyright with Creative Commons {-}
+<div style="text-align:center">
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" />
+</a></div>
+<div style="text-align:left">
+<strong>Hands-On Data Visualization</strong> is copyrighted
+by <a href="https://handsondataviz.org/authors">Jack Dougherty and Ilya Ilyankou</a>
+and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.
+You may freely share this content for non-commercial purposes, with a source credit to <a href="http://HandsOnDataViz.org">http://HandsOnDataViz.org</a>.

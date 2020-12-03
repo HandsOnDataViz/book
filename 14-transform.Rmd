@@ -125,17 +125,12 @@ We will introduce both tools in the next few sections.
 But before we do that, let's talk about geographical data in general, introduce different geospatial file formats to ensure you are
 ready to create, use, and share map data.
 
-## GeoJSON and Geospatial Data {- #geojson}
+## Geospatial Data and GeoJSON {- #geojson}
 
-Geospatial data comes in an overwhelming number of file formats.
-We will tell you about a few most common ones so that you have
-a general idea of what tools you can use to work with them.
-But before we do that, let's talk about the basics of geospatial data.
+Geospatial data comes in an overwhelming number of file formats. We will tell you about some of the most common ones, especially the GeoJSON format featured in this book, so that you have a general idea of the different varieties and what tools you can use to work with them and convert them into easy-to-edit formats. But before we do that, let's talk about the basics of geospatial data.
 
-The first thing to know about geospatial data is that it
-consists of two components, *location* and *attribute*.
-When you use Google Maps to search for a restaurant, you see a red
-marker on the screen that points to its location in latitude and longitude coordinates, such as `41.7620891, -72.6856295`. Attributes include additional information such as the restaurant name, its human-friendly street address, and guest review comments. All of these attributes add value to your location data.
+The first thing to know about geospatial data is that it consists of two components, *location* and *attribute*.
+When you use Google Maps to search for a restaurant, you see a red marker on the screen that points to its location in latitude and longitude coordinates, such as `41.7620891, -72.6856295`. Attributes include additional information such as the restaurant name, its human-friendly street address, and guest review comments. All of these attributes add value to your location data.
 
 Second, geospatial data can be *raster* or *vector*, a concept we previously introduced in the [Map Design Principles section of Chapter 8](map-design.html). In digital maps, raster data often appears as satellite and aerial images, and the quality depends on the resolution of the camera that captured them. If a satellite camera has a 1-meter resolution, its images display the different colors it captured as a grid of cells, which measure one meter on each side. Each of these cells appears as a color-coded pixel on our computer screens. If you zoom in too close to a raster image, it may appear fuzzy or pixelated due to the resolution limitations of the original image, as shown in Figure \@ref(fig:geospatial-raster-vector).
 
@@ -147,7 +142,7 @@ By contrast, vector data often appears in digital maps as pictorial images of bu
 knitr::include_graphics("images/14-transform/geospatial-raster-vector.png")
 ```
 
-Since we focus on vector data in the rest of this chapter, let's take a look at some of the most common vector file formats.
+Since we focus on vector data in the rest of this chapter, let's take a look at some of the most common vector file formats, starting with the one we feature in this book: GeoJSON.
 
 #### GeoJSON {-}
 [GeoJSON](https://geojson.org) is a newer, popular open format for map data

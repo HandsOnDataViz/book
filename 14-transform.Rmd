@@ -130,48 +130,24 @@ ready to create, use, and share map data.
 Geospatial data comes in an overwhelming number of file formats.
 We will tell you about a few most common ones so that you have
 a general idea of what tools you can use to work with them.
-But before we do that, let's talk about the basics of geospatial (map) data.
+But before we do that, let's talk about the basics of geospatial data.
 
 The first thing to know about geospatial data is that it
 consists of two components, *location* and *attribute*.
-When you use Google Maps to search for a restaurant, you get a red
-marker on the screen that points to the latitude and longitude
-of the physical location of the restaurant in the real world. These latitude and longitude (two numbers)
-are your location component.
-The name of the restaurant, its human-friendly address, and guest reviews
-are the attributes, which bring value to your location data.
+When you use Google Maps to search for a restaurant, you see a red
+marker on the screen that points to its location in latitude and longitude coordinates, such as `41.7620891, -72.6856295`. Attributes include additional information such as the restaurant name, its human-friendly street address, and guest review comments. All of these attributes add value to your location data.
 
-Second, geospatial data can be *raster* or *vector*,
-as illustrated in Figure \@ref(fig:geospatial-raster-vector).
-Raster data, as shown in Figure \@ref(fig:geospatial-raster-vector)a, is a grid of cells ("pixels") of a certain size
-(for example, 1 meter by 1 meter). For example, satellite images
-of the Earth that you see on Google Maps are raster geospatial data.
-Each pixel contains the color of Earth that satellite cameras
-were able to capture. People and algorithms can then use raster
-data (images) to create outlines of buildings, lakes, roads,
-and other objects. These outlines become vector data. For example, most of
-[OpenStreetMap](https://www.openstreetmap.org) was built
-by volunteers tracing outlines of objects from satellite images.
+Second, geospatial data can be *raster* or *vector*, a concept we previously introduced in the [Map Design Principles section of Chapter 8](map-design.html). In digital maps, raster data often appears as satellite and aerial images, and the quality depends on the resolution of the camera that captured them. If a satellite camera has a 1-meter resolution, its images display the different colors it captured as a grid of cells, which measure one meter on each side. Each of these cells appears as a color-coded pixel on our computer screens. If you zoom in too close to a raster image, it may appear fuzzy or pixelated due to the resolution limitations of the original image, as shown in Figure \@ref(fig:geospatial-raster-vector).
 
-TODO: Use this opportunity to briefly show OSM editor and make a pitch for people to volunteer for this crowdsourced map of the world...
+By contrast, vector data often appears in digital maps as pictorial images of buildings, rivers, and regions. Vector maps are created when humans or algorithms draw points, polylines, and polygons from raster satellite or aerial images. For example, much of [OpenStreetMap](https://www.openstreetmap.org) has been built by volunteers who trace outlines of objects from satellite images, and anyone can sign up to help expand it this crowdsourced map of the world. When you zoom in, vector maps look less fuzzy than raster maps because every point and line is represented by latitude and longitude coordinates, which can be expressed with precise decimals. In addition, while raster data is generally limited to one value per cell (such as its color or temperature), vector data can contain multiple attributes about each object (such as its name, street address, and comments). Moreover, vector map files tend to be smaller in size than raster ones, which is important when we create and upload maps to share and display online.
 
-(ref:geospatial-raster-vector) Geospatial data can be raster or vector.
+(ref:geospatial-raster-vector) Geospatial data can be a raster grid of cells (on the left) or a vector collection of points, polylines, and polygons (on the right).
 
 ```{r geospatial-raster-vector, fig.cap="(ref:geospatial-raster-vector)"}
-knitr::include_graphics("images/14-transform/geospatial-raster-vector-annotated.png")
+knitr::include_graphics("images/14-transform/geospatial-raster-vector.png")
 ```
 
-In this book, we will focus on vector data, which is based on features, which can be
-points, lines, and polygons, as shown in Figure \@ref(fig:geospatial-raster-vector)b. Vector data can be
-much more precise than raster data, because point coordinates
-can be expressed with precise decimals. In addition, vector
-data can contain as much extra *attribute* information about each object as desired,
-whereas raster data is generally limited to 1 value per cell,
-whether it is the surface color (as is the case with satellite imagery), temperature, or altitude.
-Moreover, vector map files tend to be smaller in size than raster ones, which is important if you
-share files on the web.
-
-Let's take a look at some of the most common vector file formats.
+Since we focus on vector data in the rest of this chapter, let's take a look at some of the most common vector file formats.
 
 #### GeoJSON {-}
 [GeoJSON](https://geojson.org) is a newer, popular open format for map data

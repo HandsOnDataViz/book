@@ -1,6 +1,8 @@
 ## About Open-Access Web Edition {- #open-access}
 This open-access web edition of the book is freely available to read at https://HandsOnDataViz.org. You can access our open-source code templates on our GitHub organizational account at https://github.com/handsondataviz. To suggest any corrections or updates for the book, you can open an issue or submit a pull request on our book's GitHub repository at https://github.com/handsondataviz/book. See the [appendix](bookdown.html) to learn how we built this open-access book with free-to-use, open-source tools, primarily [Bookdown](https://bookdown.org), [GitHub](http://github.com), and [Zotero](http://zotero.org).
 
+TODO: Add deeper explanation about why open access matters, and our positive experiences with it. 
+
 Reading this book on the web is the ideal way to explore our interactive charts and maps, and also to click on internal cross-references or external links to additional sources. In your web browser, also try these toolbar features near the top of the page:
 
 - Menu
@@ -29,17 +31,6 @@ Float your cursor over any section header to reveal a hashtag anchor symbol: `#`
 
 ![Screenshot: Share section links](images/0-preface/section-links.png)
 
-#### Refresh browser {-}
-To view the most up-to-date content in your web browser, do a "hard refresh" to [bypass any saved content in your browser cache](https://en.wikipedia.org/wiki/Wikipedia:Bypass_your_cache).
-
-- Ctrl + F5 (most Windows or Linux browsers)
-- Shift + Ctrl + R (Chromebook)
-- Command + Shift + R (Chrome or Firefox for Mac)
-- Option + Command + R (Safari for Mac)
-
-#### Disclaimer {-}
-The information is this book is provided without warranty. The authors and publisher have neither liability nor responsibility to any person or entity related to any loss or damages arising from the information contained in this book.
-
 #### Copyright with Creative Commons {-}
 <div style="text-align:center">
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
@@ -50,3 +41,6 @@ The information is this book is provided without warranty. The authors and publi
 by <a href="https://handsondataviz.org/authors">Jack Dougherty and Ilya Ilyankou</a>
 and distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons BY-NC-ND 4.0 International License</a>.
 You may freely share this content for non-commercial purposes, with a source credit to <a href="http://HandsOnDataViz.org">http://HandsOnDataViz.org</a>.
+
+#### Disclaimer {-}
+The information is this book is provided without warranty. The authors and publisher have neither liability nor responsibility to any person or entity related to any loss or damages arising from the information contained in this book.

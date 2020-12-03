@@ -72,13 +72,13 @@ First, let's upload the data in a single-column format to Datawrapper. By defaul
 ...
 ```
 
-(ref:plastic-line-chart) The default GDP line chart on the left, and the reduced-axis chart on the right.
+(ref:plastic-line-chart) The default line chart for historical plastic production in Datawrapper.
 
 ```{r plastic-line-chart, fig.cap="(ref:plastic-line-chart)"}
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/5y13d/", height = "475px") else knitr::include_graphics("images/16-story/plastic-line-chart.png")
 ```
 
-But Figure \@ref(fig:plastic-line-chart) does not yet focus on the bigger story. Our 60 percent of all of the plastics ever manufactured in the world have been made since 2000, or the last 15 years of this chart, according to our analysis of the data.  Let's highlight this broader point by editing the chart in four ways, building on skills you learned in prior chapters. First, divide the data into two columns, *before 2000* and *since 2000*, which allows you to apply different colors to each data series. Insert the same data for year 2000 in both columns to make the new chart look continuous. Second, change the chart type from the default *line chart* to an *area chart* to fill the space under the curve to draw attention to the total amount of plastics manufactured in global history. Third, in the *Refine* tab, since you do *not* want a stacked area chart, uncheck the *stack areas* box. Assign a dark blue color to draw more attention to the post-2000 data series, and a gray color to diminish the appearance of the pre-2000 data series, as shown in Figure \@ref(fig:plastic-line-chart). Finally, hide the old title and replace it by adding annotations inside the area chart, using colored text, to emphasize the new interpretation. Overall, redesigning your chart helps you to communicate a more meaningful data story that global plastic production is increasing *and* that our world has manufactured more than half of our historical total in just the past 15 years.
+But Figure \@ref(fig:plastic-line-chart) does not yet focus on the bigger story. Our 60 percent of all of the plastics ever manufactured in the world have been made since 2000, or the last 15 years of this chart, according to our analysis of the data. Let's highlight this broader point by editing the chart and building on skills you learned in prior chapters. First, divide the data into two columns, *before 2000* and *since 2000*, which allows you to apply different colors to each data series. Insert the same data for year 2000 in both columns to make the new chart look continuous. Second, change the chart type from the default *line chart* to an *area chart* to fill the space under the curve to draw attention to the total amount of plastics manufactured in global history. Third, in the *Refine* tab, since you do *not* want a stacked area chart, uncheck the *stack areas* box. Assign a dark blue color to draw more attention to the post-2000 data series, and a gray color to diminish the appearance of the pre-2000 data series, as shown in Figure \@ref(fig:plastic-refine).
 
 ```
 | year | before 2000 | since 2000 |
@@ -88,10 +88,18 @@ But Figure \@ref(fig:plastic-line-chart) does not yet focus on the bigger story.
 ...
 ```
 
-(ref:plastic-refine) Explore the [interactive version of the new area chart](https://datawrapper.dwcdn.net/1TyyZ/), which uses color and annotations to draw attention to post-2000 global plastic production.
+(ref:plastic-refine) After dividing the data into two columns and switching to an area chart, uncheck the *stacked areas* box in the *Refine* tab.
 
 ```{r plastic-refine, fig.cap="(ref:plastic-refine)"}
 knitr::include_graphics("images/16-story/plastic-refine.png")
+```
+
+Finally, hide the old title and replace it by adding annotations as you learned in the [Annotated Charts with Datawrapper section of Chapter 7](annotated-datawrapper.html). Place annotations inside the area chart, using colored text, to emphasize the new interpretation and place it where readers will look, as shown in Figure \@ref(fig:plastic-area-chart). Overall, redesigning your chart helps you to communicate a more meaningful data story that global plastic production is increasing *and* that our world has manufactured more than half of our historical total in just the past 15 years.
+
+(ref:plastic-area-chart) Explore the [interactive version of the new area chart](https://datawrapper.dwcdn.net/1TyyZ/), which uses color and annotations to draw attention to post-2000 global plastic production.
+
+```{r plastic-area-chart, fig.cap="(ref:plastic-area-chart)"}
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/1TyyZ/", height = "475px") else knitr::include_graphics("images/16-story/plastic-area-chart.png")
 ```
 
 Now that you have a clearer idea about why and how to draw your audience's attention to the most meaningful aspects of your data story, we'll build on those skills in the next section on acknowledging sources and ambiguous data.

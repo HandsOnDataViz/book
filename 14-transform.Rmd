@@ -138,7 +138,7 @@ By contrast, vector data often appears in digital maps as pictorial images of bu
 
 (ref:geospatial-raster-vector) Geospatial data can be a raster grid of cells (on the left) or a vector collection of points, polylines, and polygons (on the right).
 
-```{r geospatial-raster-vector, fig.cap="(ref:geospatial-raster-vector)"}
+```{r geospatial-raster-vector, out.width=750, fig.cap="(ref:geospatial-raster-vector)"}
 knitr::include_graphics("images/14-transform/geospatial-raster-vector.png")
 ```
 

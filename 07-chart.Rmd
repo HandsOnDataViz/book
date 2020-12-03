@@ -506,17 +506,17 @@ Now you're ready to use Datawrapper to create new types of charts that step beyo
 ## - Annotated Charts {- #annotated-datawrapper}
 An annotated chart is best to highlight specific data or add contextual notes inside the visualization. Well-designed annotations can help answer the "so what?" question by briefly noting the significance of data in the chart, with greater detail in the sentences or paragraphs that follow. Be cautious with annotations, because it's important to avoid adding unnecessary "chart junk," as described in [Chart Design Principles section of this chapter](chart-design.html).
 
-You can add annotations to any chart created with Datawrapper, and we'll illustrate how with a line chart about US unemployment data from 2000-2020, since adding a bit of historical context often helps readers to better understand data stories about change over time. To create a line chart in Datawrapper, organize your data the same way you did in the [Google Sheets line chart tutorial](pie-line-area-google.html) above. Place units of time (such as months-years) in the first column, and numerical data values (such as the unemployment rate) in the second column. Now you're ready to create an interactive line chart with annotations, as shown in Figure \@ref(fig:datawrapper-annotated). Since 2000, the unemployment rate has peaked three times, but the tallest peak occured during the 2020 economic crisis during the Covid pandemic.
+You can add annotations to any chart created with Datawrapper, and we'll illustrate how with a line chart about US unemployment data from 2000-2020, since adding a bit of historical context often helps readers to better understand data stories about change over time. To create a line chart in Datawrapper, organize your data the same way you did in the [Google Sheets line chart tutorial](pie-line-area-google.html) above. Place units of time (such as months-years) in the first column, and numerical data values (such as the unemployment rate) in the second column. Now you're ready to create an interactive line chart with annotations, as shown in Figure \@ref(fig:datawrapper-annotated). Since 2000, the unemployment rate has peaked three times, but the tallest peak occurred during the 2020 economic crisis sparked by the Covid pandemic.
 
-(ref:datawrapper-annotated) Line chart with annotation: Explore the [interactive version](https://datawrapper.dwcdn.net/vHuob/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972).
+(ref:datawrapper-annotated) Line chart with annotation: Explore the [interactive version](https://datawrapper.dwcdn.net/vHuob/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972).
 
 ```{r datawrapper-annotated, fig.cap="(ref:datawrapper-annotated)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/vHuob/1/") else knitr::include_graphics("images/07-chart/datawrapper-annotated.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/vHuob/") else knitr::include_graphics("images/07-chart/datawrapper-annotated.png")
 ```
 
 Create your own annotated line chart in Datawrapper by following this tutorial:
 
-1. Open the [US Unemployment Seasonally Adjusted 2000-2020 sample data in Google Sheets](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972) and go to *File > Make a Copy* to create your own version in your Google Drive. Or download the [sample data in Excel format](data/us-unemployment-adj-2000-2020.xlsx) to your computer.
+1. Open the [US Unemployment Seasonally Adjusted 2000-2020 sample data in Google Sheets](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972) and go to *File > Make a Copy* to create your own version in your Google Drive. Or go to *File > Download* to export a CSV or Excel version to your computer.
 
 2. Open [Datawrapper](https://www.datawrapper.de) in your browser and click *Start Creating*. We recommend that you create a free account to better manage your visualizations, but it's not required.
 
@@ -536,15 +536,15 @@ Tip: If needed, at the bottom of the *Check and Describe* screen there is a butt
 
 6. Click the *Annotate* tab near the top-left of the *Visualize* screen. Type in a meaningful title, such as "US Unemployment Rate, Seasonally Adjusted, 2000-2020." Also, add a data source, such as "US Federal Reserve Open Data", and a link to the source, such as the [shared Google Sheet](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972) or the [Federal Reserve Open Data web page](https://fred.stlouisfed.org/series/UNRATE). Finally, in the byline line, add your name or organization to credit the people who created this chart. You'll see all of these details and links appear automatically at the bottom of your chart, to add credibility to your work.
 
-7. Scroll down further in the *Annotate* tab to the *Text annotations* section, and click the button to add one to the chart. Type "Great Recession" into the text field of your first annotation, and move your cursor to place it around the unemployment peak in 2009, as shown in Figure \@ref(fig:datawrapper-annotated-text). This helps readers to place the [Great Recession](https://en.wikipedia.org/wiki/Great_Recession_in_the_United_States) in historical context. Click to add another text annotation, type "Covid Pandemic" into the text field, and place it around the second unemployment peak in early 2000 for comparison. You can fine-tune the positioning of a label by typing its year-month code into the x-axis coordinate text field, or its unemployment rate into the y-axis text field. To change the appearance or delete an annotation, click its downward arrow symbol for options.
+7. Scroll down further in the *Annotate* tab to the *Text annotations* section, and click the button to add one. Draw a pink rectangle to place your annotation on the chart, where unemployment rose sharply from 2008 to 2010, and type "Great Recession" into the text field, as shown in Figure \@ref(fig:datawrapper-annotated-text). This helps readers to place the [Great Recession](https://en.wikipedia.org/wiki/Great_Recession_in_the_United_States) in historical context. Click the button a second time to add another text annotation, place it around the second unemployment peak in 2020, and type "Covid Pandemic" into the text field to offer readers a comparison. You can fine-tune the style and position of annotations with additional options further down on the screen.
 
-(ref:datawrapper-annotated-text) Add text annotations by typing a label and positioning it on the chart.
+(ref:datawrapper-annotated-text) Add text annotations by drawing a pink rectangle and typing in the text.
 
 ```{r datawrapper-annotated-text, fig.cap="(ref:datawrapper-annotated-text)"}
 knitr::include_graphics("images/07-chart/datawrapper-annotated-text.png")
 ```
 
-8. Scroll down further in the *Annotate* tab to the *Highlight value ranges* section, and click the button to add one to the chart. Click inside the chart to "draw" a bar from December 2007 to June 2009, as shown in Figure \@ref(fig:datawrapper-annotated-range). This period represents the official beginning and ending of the US Great Recession in the eyes of economists, although unemployment continued to grow for the population at large. When you finish "drawing" on the chart, the red bar will become light gray. Once again, you can fine-tune the positioning of a highlighted range by typing its year-month codes into the date fields, and change its appearance or delete it by clicking the downward arrow symbol for more options. To highlight other official recession periods, draw two more ranges: March--November 2001 and February--August 2020 (the most current data as we write this).
+8. Scroll down further in the *Annotate* tab to the *Highlight range* section, and click the button to add one to the chart. Click inside the chart to draw a pink lines from December 2007 to June 2009, which will highlight that portion of the chart in gray, as shown in Figure \@ref(fig:datawrapper-annotated-range). This period represents the official beginning and ending of the US Great Recession in the eyes of economists, although unemployment continued to grow for the population at large. To highlight other official recession periods, draw two more ranges: March--November 2001 and February--October 2020 (the most current data as we write this). Once again, you can fine-tune the style and positioning of a highlighted range with additional options further down the screen.
 
 (ref:datawrapper-annotated-range) Add a range highlight by "drawing" a rectangular bar on the chart.
 
@@ -566,10 +566,10 @@ A range chart (also known as a specific type of dot chart) is best to show gaps 
 knitr::include_graphics("images/07-chart/datawrapper-range-data.png")
 ```
 
-(ref:datawrapper-range) Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/v8D2z/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
+(ref:datawrapper-range) Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/v8D2z/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
 
 ```{r datawrapper-range, fig.cap="(ref:datawrapper-range)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/v8D2z/1/") else knitr::include_graphics("images/07-chart/datawrapper-range.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/v8D2z/") else knitr::include_graphics("images/07-chart/datawrapper-range.png")
 ```
 
 To create your own range chart with our sample data, follow this tutorial. Since we assume that you're already familiar with Datawrapper from the previous tutorial on annotated line charts, these steps are abbreviated. So if you get lost, see more details and images above.
@@ -626,10 +626,10 @@ A scatter chart is best to show the relationship between two sets of data as XY 
 knitr::include_graphics("images/07-chart/scatter-data.png")
 ```
 
-(ref:scatter) Scatter chart: Explore the [interactive version](https://datawrapper.dwcdn.net/8OQz7/1/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/).
+(ref:scatter) Scatter chart: Explore the [interactive version](https://datawrapper.dwcdn.net/8OQz7/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/).
 
 ```{r scatter, fig.cap="(ref:scatter)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/8OQz7/1/") else knitr::include_graphics("images/07-chart/scatter.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/8OQz7/") else knitr::include_graphics("images/07-chart/scatter.png")
 ```
 
 Create your own interactive scatter chart in Datawrapper, and edit the tooltips to properly display your data:
@@ -644,7 +644,7 @@ Create your own interactive scatter chart in Datawrapper, and edit the tooltips 
 
 5. In the *Visualize* screen, under the *Chart type* tab, select *Scatter Plot*. Float your cursor over the scatter chart that appears in the right-hand window, and you'll notice that we still need to edit the tooltips to properly display data for each point.
 
-6. In the *Visualize* screen, under the *Annotate* tab, scroll down to *Customize tooltip*, and click *edit tooltip template*. In the *Customize tooltip HTML* window, click inside the *Title* field and click on the blue column name *Country* to add it there. The *Title* field now appears as `{{ Country }}`, which means that the proper country name will appear in the tooltip when you hover over each point. In addition, click inside the *Body* field, type `Life expectancy: `, then click the blue column with the same name to add it, so that `{{ Life_expectancy }}` appears after it. Press *return* twice on your keyboard, then type `Fertility: ` and click on the blue column with the same name to add it, so that `{{ Fertility }}` appears right after it, as shown in Figure \@ref(fig:scatter-tooltip-editor). Press *Save* to close the tooltip editor window.
+6. In the *Visualize* screen, under the *Annotate* tab, scroll down to the *Customize tooltip* section, select *Show tooltips*, and click the *Customize tooltips* button to open its window. Click inside the first field, which represents the tooltip *Title*, then click further down on the blue *Country* button to add `{{ Country }}` there. This means that the proper country name will appear in the tooltip title when you hover over each point. In addition, click inside the second field, which represents the tooltip *Body*, type `Life expectancy: `, then click the blue button with the same name to add it, so that `{{ Life_expectancy }}` appears after it. Press *return* twice on your keyboard, then type `Fertility: ` and click on the blue button with the same name to add it, so that `{{ Fertility }}` appears right after it, as shown in Figure \@ref(fig:scatter-tooltip-editor). Press *Save* to close the tooltip editor window.
 
 (ref:scatter-tooltip-editor) In the tooltip editor window, type and click column headers to customize the display.
 
@@ -652,7 +652,7 @@ Create your own interactive scatter chart in Datawrapper, and edit the tooltips 
 knitr::include_graphics("images/07-chart/scatter-tooltip-editor.png")
 ```
 
-7. Back in the *Visualize* screen, when you hover your cursor over a point, the tooltip will properly display its data according to your editor settings above, as shown in Figure Figure \@ref(fig:scatter-tooltip).
+7. Back in the *Visualize* screen, when you hover your cursor over a point, the tooltip will properly display its data according to your editor settings above, as shown in Figure \@ref(fig:scatter-tooltip).
 
 (ref:scatter-tooltip) Hover over a data point to inspect the edited tooltip display.
 
@@ -671,10 +671,10 @@ In your scatter chart above, you learned how to visualize the relationship betwe
 knitr::include_graphics("images/07-chart/bubble-data.png")
 ```
 
-(ref:bubble) Bubble chart: Explore the [interactive version](https://datawrapper.dwcdn.net/ZX9QR/2/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg).
+(ref:bubble) Bubble chart: Explore the [interactive version](https://datawrapper.dwcdn.net/ZX9QR/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg).
 
 ```{r bubble, fig.cap="(ref:bubble)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/ZX9QR/2/") else knitr::include_graphics("images/07-chart/bubble.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://datawrapper.dwcdn.net/ZX9QR/") else knitr::include_graphics("images/07-chart/bubble.png")
 ```
 
 Create your own interactive bubble chart in Datawrapper, and edit the tooltips, bubble sizes, and colors to display your data:

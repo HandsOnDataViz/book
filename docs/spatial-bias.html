@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>GitHub Desktop and Atom Editor to Code Efficiently | Hands-On Data Visualization</title>
+  <title>Recognize and Reduce Spatial Bias | Hands-On Data Visualization</title>
   <meta name="description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="GitHub Desktop and Atom Editor to Code Efficiently | Hands-On Data Visualization" />
+  <meta property="og:title" content="Recognize and Reduce Spatial Bias | Hands-On Data Visualization" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="http://handsondataviz.github.io/" />
   <meta property="og:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="handsondataviz/book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="GitHub Desktop and Atom Editor to Code Efficiently | Hands-On Data Visualization" />
+  <meta name="twitter:title" content="Recognize and Reduce Spatial Bias | Hands-On Data Visualization" />
   <meta name="twitter:site" content="@handsondataviz" />
   <meta name="twitter:description" content="Tell your story and show it with data, using free and easy-to-learn tools on the web. This introductory book teaches you how to design interactive charts and customized maps for your website, beginning with easy drag-and-drop tools, such as Google Sheets, Datawrapper, and Tableau Public. You will also gradually learn how to edit open-source code templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along with the step-by-step tutorials, real-world examples, and online resources. This book is ideal for students, non-profit organizations, small business owners, local governments, journalists, academics, or anyone who wants to tell their story and show the data. No coding experience is required." />
   <meta name="twitter:image" content="http://handsondataviz.github.io/images/cover-400wide.jpg" />
@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="create-repo.html"/>
-<link rel="next" href="chartcode.html"/>
+<link rel="prev" href="data-bias.html"/>
+<link rel="next" href="story.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -339,162 +339,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="github-desktop-atom" class="section level2 unnumbered" number="">
-<h2>GitHub Desktop and Atom Editor to Code Efficiently</h2>
-<p>Editing your code through the GitHub web interface is a good way to start, especially if you only need to make a few edits or upload a couple of files to your repo. But the web interface will feel very slow if you edit or upload multiple files in your repo. To speed up your work, we recommend that you download two free tools—<a href="https://desktop.github.com">GitHub Desktop</a> and <a href="https://atom.io">Atom Text Editor</a>—which run on Mac or Windows computers. When you connect your GitHub web account to GitHub Desktop, it allows you to “pull” the most recent version of the code to your local computer’s hard drive, make and test your edits, and “push” your commits back to your GitHub web account. Atom Text Editor, which is also created by the makers of GitHub, allows you to view and edit code repos on your local computer more easily than the GitHub web interface. While there are many text editors for coders, Atom is designed to work well with GitHub Desktop.</p>
-<p>Tip: Currently, neither GitHub Desktop nor Atom Editor are supported for Chromebooks, but <a href="https://chrome.google.com/webstore">Google’s Web Store</a> offers several text editors, such as Text and Caret, which offer some of the functionality described below.</p>
-<p>Let’s use GitHub Desktop to pull a copy of your <code>leaflet-map-simple</code> template to your local computer, make some edits in Atom Editor, and push your commits back up to GitHub.</p>
+<div id="spatial-bias" class="section level2 unnumbered" number="">
+<h2>Recognize and Reduce Spatial Bias</h2>
+<p>In addition to recognizing and reducing data biases in general, we also need to watch out for spatial biases that negatively influence how we create and interpret maps. In this section, we’ll identify four types of spatial biases: map area, projection, disputed territory, and exclusion. We’ll also suggest specific ways to try to counter these biases when creating visualizations.</p>
+<p><em>Map area bias</em> refers to the tendency for our eyes to focus primarily on larger regions on a map, and less on smaller ones. A classic example arises every four years with choropleth maps of US presidential elections, which draw our attention to the geographic area of US states, rather than their population size or number of electoral votes. Conventional maps exaggerate the political influence of rural states with larger geographic areas (such as spacious Wyoming with less than 600,000 people), and diminish the role of urban states with small areas (such as tiny Rhode Island with over 1,000,000 people). Although Wyoming covers 80 times more area than Rhode Island, it casts only 3 electoral votes in US presidential races, while Rhode Island has 4 electoral votes. But when looking at conventional maps, most readers cannot easily make this distinction because our eyes are drawn to states with larger geographic areas, not population.</p>
+<p><em>Projection bias</em> is a related issue about how maps portray geographic areas. Over time, mapmakers have developed different projection systems to display a three-dimensional globe on a two-dimensional surface. Mercator, one of the most common projection systems, inflates the size of many European and North American countries, and diminishes the relative size (and importance) of Central African and Central American countries that lie closer to the equator. See the <a href="https://engaging-data.com/country-sizes-mercator/">Engaging Data site</a> and <a href="http://googlemapsmania.blogspot.com/2020/09/how-map-projections-lie.html">How Map Projections Lie by Maps Mania</a> for interactive visualizations about Mercator projection map bias and comparisons to other systems. As Google maps and similar online services grew in popularity over the past fifteen years, their default projection system, known as <a href="https://en.wikipedia.org/wiki/Web_Mercator_projection">Web Mercator</a>, became ubiquitous on the web, further cementing distorted geography in our minds. (In 2018, Google Maps allowed desktop users who zoomed out to enable its 3D Globe view, instead of Web Mercator, but this is not the default setting and must be switched on.)</p>
+<p>One way to address both map area and projection bias in national or global maps is to replace conventional map outlines with <em>cartograms</em>, which are also called hexagon maps or population squares on some platforms. Typically, cartograms display geographic regions by relative population size, rather than total land area, and do not rely on a projection system. One advantage is that cartograms can focus our attention more evenly on the most relevant aspect of our data story, such as electoral votes in as shown in Figure <a href="spatial-bias.html#fig:cartogram-placeholder">15.17</a>. But one drawback is that cartograms require readers to recognize abstract shapes in place of familiar boundaries, since these population-based visualizations do not align perfectly with conventional Mercator geography-based land maps. See also [Lisa Charlotte Rost’s post in Datawrapper Academy on <a href="https://blog.datawrapper.de/how-to-visualize-the-us-election-2020-with-datawrapper/">how to visualize US elections results</a>.</p>
+<p>TODO BELOW: ILYA please create two different US 2020 electoral vote choropleth maps in Datawrapper, using USA &gt; States and Territories (to include DC) and USA &gt; Electoral College hexagons. Also, use an image editor tool to create a third image of both maps side-by-side. Let’s wait to confirm after Electoral College votes on Dec 14th.</p>
+
+<div class="figure"><span id="fig:cartogram-placeholder"></span>
+<img src="images/15-detect/cartogram-placeholder.png" alt="The US 2020 Presidential electoral vote displayed in a traditional US map (left) versus a cartogram (right)."  />
+<p class="caption">
+Figure 15.17: The US 2020 Presidential electoral vote displayed in a traditional US map (left) versus a cartogram (right).
+</p>
+</div>
+<p>In the <a href="how-to-lie-with-maps.html">How to Lie with Maps section of this chapter</a>, we created choropleth maps of world inequality data in Datawrapper. To convert one from a conventional world map to a population square map, follow this tutorial:</p>
 <ol style="list-style-type: decimal">
-<li>Go to the GitHub web repo you wish to copy to your local computer. In your browser, navigate to <code>https://github.com/USERNAME/leaflet-map-simple</code>, using your GitHub username, to access the repo you created in the <a href="copy-leaflet.html">Copy, Edit, and Host a Simple Leaflet Map Template</a> section of this chapter. Click the <em>Code &gt; Open with GitHub Desktop</em> drop-down menu button near the middle of your screen, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-open">11.18</a>. The next screen will show a link to the GitHub Desktop web page, and you should download and install the application.</li>
+<li><p>To modify an existing world inequality map that you may have saved in your Datawrapper account, go to <em>My Charts</em>, select and right-click on the map to make a duplicate, and edit it. Or follow the steps in the previous section to create a new map.</p></li>
+<li><p>Go to the <em>Select your map</em> screen, and type “squares” to see all of those available types (including World population squares). Similarly, type “hexagons” to see all of the cartograms available (including US States). Select your preferred map, and proceed to visualize the data in the same way as other Datawrapper choropleth maps, as shown in Figure <a href="spatial-bias.html#fig:map-world-pop-square">15.18</a>.</p></li>
 </ol>
 
-<div class="figure"><span id="fig:desktop-open"></span>
-<img src="images/11-github/desktop-open.png" alt="In your GitHub repo on the web, click Code to Open with GitHub Desktop to download and install GitHub Desktop." width="350" />
-<p class="caption">
-Figure 11.18: In your GitHub repo on the web, click <em>Code</em> to <em>Open with GitHub Desktop</em> to download and install GitHub Desktop.
-</p>
-</div>
-<ol start="2" style="list-style-type: decimal">
-<li>When you open GitHub Desktop for the first time, you’ll need to connect it to the GitHub web account you previously created in this chapter. On the welcome screen, click the blue <em>Sign in to GitHub.com</em> button, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-signin">11.19</a>, and login with your GitHub username and password. On the next screen, GitHub will ask you to click the green <em>Authorize desktop</em> button to confirm that you wish to connect to your account.</li>
-</ol>
-
-<div class="figure"><span id="fig:desktop-signin"></span>
-<img src="images/11-github/desktop-signin.png" alt="Click the blue Sign in to GitHub.com button to link GitHub Desktop to your GitHub account." width="500" />
-<p class="caption">
-Figure 11.19: Click the blue <em>Sign in to GitHub.com</em> button to link GitHub Desktop to your GitHub account.
-</p>
-</div>
-<ol start="3" style="list-style-type: decimal">
-<li>In the next setup screen, GitHub Desktop asks you to configure Git, the underlying software that runs GitHub. Confirm that it displays your username and click <em>Continue</em>, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-configure">11.20</a>.</li>
-</ol>
-
-<div class="figure"><span id="fig:desktop-configure"></span>
-<img src="images/11-github/desktop-configure.png" alt="Click the Continue button to authorize GitHub Desktop to send commits to your GitHub account." width="500" />
-<p class="caption">
-Figure 11.20: Click the <em>Continue</em> button to authorize GitHub Desktop to send commits to your GitHub account.
-</p>
-</div>
-<ol start="4" style="list-style-type: decimal">
-<li>On the “Let’s Get Started” with GitHub Desktop screen, click on <em>Your Repositories</em> on the right side to select your <code>leaflet-map-sample</code>, and further below click the blue button to <em>Clone</em> it to your local computer, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-start">11.21</a>.</li>
-</ol>
-
-<div class="figure"><span id="fig:desktop-start"></span>
-<img src="images/11-github/desktop-start-annotated.png" alt="Select your leaflet-map-simple repo and click the Clone button to copy it to your local computer."  />
-<p class="caption">
-Figure 11.21: Select your <em>leaflet-map-simple</em> repo and click the <em>Clone</em> button to copy it to your local computer.
-</p>
-</div>
-<ol start="5" style="list-style-type: decimal">
-<li>When you clone a repo, GitHub Desktop asks you to select the Local Path, meaning the location where you wish to store a copy of your GitHub repo on your local computer, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-clone-path">11.22</a>. Before you click the <em>Clone</em> button, remember the path to this location, since you’ll need to find it later.</li>
-</ol>
-
-<div class="figure"><span id="fig:desktop-clone-path"></span>
-<img src="images/11-github/desktop-clone-path.png" alt="Select the Local Path where your repo will be stored on your computer, then click Clone." width="500" />
-<p class="caption">
-Figure 11.22: Select the Local Path where your repo will be stored on your computer, then click <em>Clone</em>.
-</p>
-</div>
-<ol start="6" style="list-style-type: decimal">
-<li>On the next screen, GitHub Desktop may ask, “How are you planning to use this fork?” Select the default entry “To contribute to the parent project,” which means you plan to send your edits back to your GitHub web account, and click <em>Continue</em>, as shown in Figure <a href="github-desktop-atom.html#fig:desktop-fork">11.23</a>.</li>
-</ol>
-
-<div class="figure"><span id="fig:desktop-fork"></span>
-<img src="images/11-github/desktop-fork.png" alt="If asked how you plan to use this fork, select the default To contribute to the parent project and click Continue." width="500" />
-<p class="caption">
-Figure 11.23: If asked how you plan to use this fork, select the default <em>To contribute to the parent project</em> and click <em>Continue</em>.
-</p>
-</div>
-<ol start="7" style="list-style-type: decimal">
-<li>Now you have copies of your GitHub repo in two places—in your GitHub web account and on your local computer—as shown in Figure <a href="github-desktop-atom.html#fig:desktop-finder">11.24</a>. Your screen may look different, depending on whether you use Windows or Mac, and the Local Path you selected to store your files.</li>
-</ol>
-
-<div class="figure"><span id="fig:desktop-finder"></span>
-<img src="images/11-github/desktop-finder.png" alt="Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different." width="500" />
-<p class="caption">
-Figure 11.24: Now you have two copies of your repo: in your GitHub online account (on the left) and on your local computer (on the right, as shown in the Mac Finder). Windows screens will look different.
-</p>
-</div>
-<ol start="8" style="list-style-type: decimal">
-<li>Before we can edit the code in your local computer, <a href="https://atom.io">download and install the Atom Editor application</a>. Then go to your GitHub Desktop screen, confirm that the Current Repository is <code>leaflet-map-simple</code>, and click the <em>Open in Atom</em> button as shown in Figure <a href="github-desktop-atom.html#fig:desktop-atom">11.25</a>.</li>
-</ol>
-
-<div class="figure"><span id="fig:desktop-atom"></span>
-<img src="images/11-github/desktop-atom-annotated.png" alt="In GitHub Desktop, confirm the Current Repo and click the Open in Atom button to edit the code."  />
-<p class="caption">
-Figure 11.25: In GitHub Desktop, confirm the Current Repo and click the <em>Open in Atom</em> button to edit the code.
-</p>
-</div>
-<ol start="9" style="list-style-type: decimal">
-<li>Since Atom Editor is integrated with GitHub Desktop, it opens up your entire repo as a “project,” where you can click files in the left window to open as new tabs to view and edit code, as shown in Figure <a href="github-desktop-atom.html#fig:atom-project">11.26</a>. Open your <code>index.html</code> file and edit the title of your map, around line 22, then save your work.</li>
-</ol>
-
-<div class="figure"><span id="fig:atom-project"></span>
-<img src="images/11-github/atom-project-annotated.png" alt="Atom Editor opens your repo as a project, where you can click files to view code. Edit your map title."  />
-<p class="caption">
-Figure 11.26: Atom Editor opens your repo as a <em>project</em>, where you can click files to view code. Edit your map title.
-</p>
-</div>
-<ol start="10" style="list-style-type: decimal">
-<li>After saving your code edit, it’s a good habit to clean up your Atom Editor workspace. Right-click on the current Project and select <em>Remove Project Folder</em> in the menu, as shown in Figure <a href="github-desktop-atom.html#fig:atom-remove-project">11.27</a>. Next time you open up Atom Editor, you can right-click to <em>Add Project Folder</em>, and choose any GitHub repo that you have copied to your local computer.</li>
-</ol>
-
-<div class="figure"><span id="fig:atom-remove-project"></span>
-<img src="images/11-github/atom-remove-project-annotated.png" alt="To clean up your Atom Editor workspace, right-click to Remove Project Folder."  />
-<p class="caption">
-Figure 11.27: To clean up your Atom Editor workspace, right-click to <em>Remove Project Folder</em>.
-</p>
-</div>
-<ol start="11" style="list-style-type: decimal">
-<li>Now that you’ve edited the code for your map on your local computer, let’s test how it looks before uploading it to GitHub. Go to the location where you saved the repo on your local computer, and right-click the <code>index.html</code> file, select Open With, and choose your preferred web browser, as shown in Figure <a href="github-desktop-atom.html#fig:finder-open-with">11.28</a>.</li>
-</ol>
-
-<div class="figure"><span id="fig:finder-open-with"></span>
-<img src="images/11-github/finder-open-with.png" alt="Right-click the index.html file on your local computer and open with a browser to check your edits."  />
-<p class="caption">
-Figure 11.28: Right-click the index.html file on your local computer and open with a browser to check your edits.
-</p>
-</div>
-<p>Note: Since your browser is displaying only the <em>local computer</em> version of your code, the web address will begin with <code>file:///...</code> rather than <code>https://...</code>, as appears in your GitHub Pages online map. Also, if your code depends on online elements, those features may not function when viewing it locally. But for this simple Leaflet map template, your updated map title should appear, allowing you to check its appearance before pushing your edits to the web.</p>
-<p>Now let’s transfer your edits from your local computer to your GitHub web account, which you previously connected when you set up GitHub Desktop.</p>
-<ol start="11" style="list-style-type: decimal">
-<li>Go to GitHub Desktop, confirm that your Current Repo is <code>leaflet-map-simple</code>, and you will see your code edits summarized on the screen. In this two-step process, first click the blue <em>Commit</em> button at the bottom of the page to save your edits to your local copy of your repo. (If you edit multiple files, GitHub Desktop will ask you write a summary of your edit, to help you keep track of your work.) Second, click the blue <em>Push origin</em> button to transfer those edits to the parent copy of your repo on your GitHub web account. Both steps are shown in Figure <a href="github-desktop-atom.html#fig:desktop-commit-push">11.29</a>.</li>
-</ol>
-
-<div class="figure"><span id="fig:desktop-commit-push"></span>
-<iframe src="images/11-github/desktop-commit-push.gif" width="672" height="500px">
+<div class="figure"><span id="fig:map-world-pop-square"></span>
+<iframe src="https://datawrapper.dwcdn.net/YfNDe/" width="672" height="600px">
 </iframe>
 <p class="caption">
-Figure 11.29: In this two-step process, click <em>Commit</em>, then click <em>Push origin</em> to save and copy your edits from your local computer to your GitHub web account, as shown in this <a href="https://handsondataviz.org/images/11-github/desktop-commit-push.gif">animated GIF</a>.
+Figure 15.18: World population square map with income inequality data. Explore the <a href="https://datawrapper.dwcdn.net/YfNDe/">interactive version</a>.
 </p>
 </div>
-<p>TODO above: update the annotated image and GIF to show commit to main, not master.</p>
-<p>Congratulations! You’ve successfully navigated a round-trip journey of code, from your GitHub account to your local computer, and back again to GitHub. Since you previously used the GitHub Pages settings to create an online version of your code, go see if your edited map title now appears on the public web. The web address you set up earlier follows this format <code>https://USERNAME.github.io/REPOSITORY</code>, substituting your GitHub username and repo name.</p>
-<p>While you could have made the tiny code edit above in the GitHub web interface, hopefully you’ve begun to see many advantages of using GitHub Desktop and Atom Editor to edit code and push commits from your local computer. First, you can make more complex code modifications with Atom Editor, which includes search, find-and-replace, and other features to work more efficiently. Second, when you copy the repo to your local computer, you can quickly drag-and-drop multiple files and subfolders for complex visualizations, such as data, geography, and images. Third, depending on the type of code, you may be able to test how it works locally with your browser, before uploading your commits to the public web.</p>
-<p>Tip: Atom Editor has many built-in features that recognize and help you edit code, plus the option to install more <a href="https://atom.io/packages">packages</a> in the Preferences menu. One helpful built-in tool is <em>Edit &gt; Toggle Comments</em>, which automatically detects the coding language and converts the selected text from executable code to non-executed code comments. Another built-in tool is <em>Edit &gt; Lines &gt; Auto Indent</em>, which automatically cleans up selected text or an entire page of code for easier reading.</p>
-<p>GitHub also offers a powerful platform for collaborative projects, such as <em>Hands-On Data Visualization</em>. As co-authors, we composed the text of these book chapters and all of the sample code templates on GitHub. Jack started each day by “pulling” the most recent version of the book from our shared GitHub account to his local computer using GitHub Desktop, where he worked on sections and “pushed” his commits (aka edits) back to GitHub. At the same time, Ilya “pulled” the latest version and “pushed” his commits back to GitHub as well. Both of us see the commits that each other made, line-by-line in green and red (showing additions and deletions), by selecting the GitHub repo <em>Code</em> tab and clicking on one of our commits, as shown in Figure <a href="github-desktop-atom.html#fig:compare-commits">11.30</a>.</p>
+<p><em>Disputed territory bias</em> refers to how web map providers sometimes display different views of the world, depending on the location where you access them. For example, Russia sparked a geopolitical dispute when it forcibly seized the Crimea Peninsula away from Ukraine in 2014. Since Google desired to continue making profits in Russia, it created two versions of the Crimean border on its Google Maps platform. When viewed from a Russian IP address, Google Maps shows a solid-line border to signify that the territory is controlled by Russia. When viewed from anywhere else in the world, Google Maps shows a dotted-line border that represents a disputed territory. Although Google claims to “remain neutral on geopolitical disputes,” according to the <em>Washington Post</em>, the corporation clearly took a side by displaying a solid border for Russian viewers.<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a> Google and several other web map providers have taken similar actions regarding the contested border between India and Pakistan, the waterway between Iran and Saudi Arabia, and the sea between Japan and South Korea.</p>
+<p>While ordinary people can recognize disputed territory bias in Google Maps and other proprietary services, it’s difficult for us to directly challenge their decisions or pressure them to revise their basemaps. But we can draw on other strategies to reduce these biases. For example, contributors to OpenStreetMap, the crowd-sourced global map, have <a href="https://wiki.openstreetmap.org/wiki/Proposed_features/Mapping_disputed_boundaries">actively discussed different approaches</a> to <a href="https://wiki.openstreetmap.org/wiki/Disputed_territories">recognize disputed territories on their platform</a>. Furthermore, we can use data visualization tool to draw different boundaries on top of proprietary map layers. As one example, the <a href="https://native-land.ca">Native Land map</a>, created by a non-profit organization based in Canada, displays outlines of territories and languages of indigenous people on present-day maps, to publicly remind us of colonialist policies and forcible displacement. One way to challenge the monolithic Google Maps platform is to create and publicize alternatives.</p>
+<p><em>Map exclusion bias</em> refers to ways that we fail to represent people or land through the act of omission. Sometimes these actions are taken by Google and other proprietary map providers, and sometimes we make them through our everyday decisions while creating maps. Take a close look at maps you recently made and ask yourself if they truly represent what their titles claim to show. For example, if you’ve created a U.S. map with state-level data, how did you address the District of Columbia? The nation’s capital is not counted as a state, nor does it have a voting representative in the U.S. Congress. But D.C. has over 700,000 residents (more than Wyoming or Vermont), and the Twenty-Third Amendment to the US Constitution grants it electoral votes as if it were a state (though it can never have more than the least populous state). Similarly, how did your U.S. maps represent Puerto Rico, a territory with over 3 million residents who are U.S. citizens, but have no vote in Congress or for the Presidency? What about other U.S. territories whose residents are also U.S. citizens, such as American Samoa, Guam, the Northern Mariana Islands, and the US Virgin Islands? When data exists for these places, do your maps make them visible—or do they vanish? If the latter, then you need to consider if your act of omission is also a type of intergroup bias, given that the majority of residents in D.C. and these territories are Black, Latino, and Pacific Islanders.</p>
+<p>To be clear, some data visualization tools make it very difficult to include people and places who have traditionally been excluded from our maps. But sometimes the problem lies within us, or the default settings of our tools and our decisions about whether to try to change them. Take another look at your favorite map tool and closely examine the geographic outlines that appear when you choose to map data for the “United States.” If you feed in data that includes D.C. and U.S. territories—but the map only displays the 50 recognized states—then this omission will erase the existence of 4 million U.S. citizens from your map. Look beyond the default settings to determine if your tool offers more inclusive options. For example, Datawrapper recently improved how its <em>USA &gt; States and Territories</em> map options display both symbol point and choropleth map data, as seen in Figure <a href="spatial-bias.html#fig:usa-states-territories">15.19</a>. For other regions that do not yet appear in Datawrapper’s options, you can create and upload your own map boundary file in <a href="geojson.html">GeoJSON format, as described in Chapter 14</a>. Or, if your tool forces you to omit part of your data story, then call out this bias by describing its absence in the map notes or the companion text. Our mission in data visualization is to tell true and meaningful stories, so include people and places that belong on the map, rather than ignoring their existence.</p>
 
-<div class="figure"><span id="fig:compare-commits"></span>
-<img src="images/11-github/compare-commits.png" alt="Drag-and-drop the file to the upload screen."  />
+<div class="figure"><span id="fig:usa-states-territories"></span>
+<img src="images/15-detect/usa-states-territories-combined.png" alt="Datawrapper recently improved how it displays D.C. and non-contiguous places in its USA - States and Territories option for both symbol and choropleth maps." width="750" />
 <p class="caption">
-Figure 11.30: Drag-and-drop the file to the upload screen.
+Figure 15.19: Datawrapper recently improved how it displays D.C. and non-contiguous places in its <em>USA - States and Territories</em> option for both symbol and choropleth maps.
 </p>
 </div>
-<p>Although GitHub does not operate like Google Documents, which displays live edits, the platform has several advantages when working collaboratively with code. First, since GitHub tracks every commit we make, it allows us to go back and restore a very specific past version of the code if needed. Second, when GitHub repos are public, anyone can view your code and submit an “issue” to notify the owner about an idea or problem, or send a “pull request” of suggested code edits, which the owner can accept or reject. Third, GitHub allows collaborators to create different “branches” of a repo in order to make edits, and then “merge” the branches back together if desired. Occasionally, if two or more coders attempt to push incompatible commits to the same repo, GitHub will warn about a “Merge Conflict,” and ask you to resolve these conflicts in order to preserve everyone’s work.</p>
-<p>Many coders prefer to work on GitHub using its Command Line Interface (CLI), which means memorizing and typing specific commands directly into the Terminal application on Mac or Windows, but this is beyond the scope of this introductory book.</p>
-<div id="summary11" class="section level3 unnumbered" number="">
+<div id="summary15" class="section level3 unnumbered" number="">
 <h3>Summary</h3>
-<p>If this is the first time you’ve forked, edited, and hosted live code on the public web, welcome to the coding family! We hope you agree that GitHub is a powerful platform for engaging in this work and sharing with others. While beginners will appreciate the web interface, you’ll find that the GitHub Desktop and Atom Editor tools makes it much easier to work with <a href="chartcode.html">Chart.js and Highcharts code templates in Chapter 12</a> and the <a href="leaflet.html">Leaflet map code templates in Chapter 13</a>. Let’s build on your brand-new coding skills to create more customized charts and maps in the next two chapters.</p>
+<p>TODO</p>
 
 </div>
 </div>
 <!-- </div> -->
+<div class="footnotes">
+<hr />
+<ol start="44">
+<li id="fn44"><p><span class="citation">Greg Bensinger, “Google Redraws the Borders on Maps Depending on Who’s Looking,” <em>Washington Post</em>, February 14, 2020, <a href="https://www.washingtonpost.com/technology/2020/02/14/google-maps-political-borders/" role="doc-biblioref">https://www.washingtonpost.com/technology/2020/02/14/google-maps-political-borders/</a></span><a href="spatial-bias.html#fnref44" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="create-repo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="chartcode.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-bias.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="story.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -533,7 +435,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/handsondataviz/book/blob/master/11-github.Rmd",
+"link": "https://github.com/handsondataviz/book/blob/master/15-detect.Rmd",
 "text": null
 },
 "download": ["HandsOnDataViz.pdf"],

@@ -167,11 +167,11 @@ Now that you know how to upload and convert an existing dataset, in the next sec
 ## Geocode Addresses in Google Sheets {- #geocode}
 In this section, you'll learn how to geocode data by installing a free Google Sheets add-on tool. This allows you to geocode addresses directly inside your spreadsheet, which will be very useful when using [Leaflet map code templates in Chapter 13](leaflet.html).
 
-Geocoding means converting addresses or location names into geographic coordinates (or x- and y-coordinates) that can be plotted on a map, as shown in Figure \@ref(fig:transform-data). For example, the Statue of Liberty in the New York City area is located at *40.69, -74.04*. The first number is the latitude and the second is the longitude. Since the equator is 0 degrees latitude, positive latitude is the northern hemisphere, and negative latitude is in the southern hemisphere. Similarly, the prime meridian is 0 degrees longitude, which passes through Greenwich, England. So positive longitude is east of the meridian, and negative longitude is west, until you reach the opposite side of the globe, roughly near the International Date Line in the Pacific Ocean.
+Geocoding means converting addresses or location names into geographic coordinates (or x- and y-coordinates) that can be plotted on a map, as shown in Figure \@ref(fig:geocode-data). For example, the Statue of Liberty in the New York City area is located at *40.69, -74.04*. The first number is the latitude and the second is the longitude. Since the equator is 0 degrees latitude, positive latitude is the northern hemisphere, and negative latitude is in the southern hemisphere. Similarly, the prime meridian is 0 degrees longitude, which passes through Greenwich, England. So positive longitude is east of the meridian, and negative longitude is west, until you reach the opposite side of the globe, roughly near the International Date Line in the Pacific Ocean.
 
-(ref:transform-data) To map addresses, you first need to geocode them.
+(ref:geocode-data) To map addresses, you first need to geocode them.
 
-```{r transform-data, fig.cap="(ref:transform-data)"}
+```{r geocode-data, fig.cap="(ref:geocode-data)"}
 knitr::include_graphics("images/03-spreadsheet/geocode-data.png")
 ```
 
@@ -211,11 +211,11 @@ Now that you know how to use a Google Sheets Add-on to geocode addresses, in the
 ## Collect Data with Google Forms {- #forms}
 At the top of this chapter, we invited you and other readers of this book to fill out a [quick online survey](https://forms.gle/yn5QwTzfQkYcppQn9), which [publicly shares all of the responses in a sample dataset](https://docs.google.com/spreadsheets/d/1egX_akJccnCSzdk1aaDdtrEGe5HcaTrlOW-Yf6mJ3Uo), so that we can learn more about people like you, and to continue to make revisions to match your expectations. In this section, you'll learn how to create your own online form and link the results to a live Google Sheet.
 
-Inside your Google Drive account, one tool that's often overlooked is Google Forms, which is partially hidden under *New > More > Google Forms*, as shown in Figure \@ref(fig:forms-new).
+Inside your Google Drive account, click on the *New* button and select *Google Forms*, as shown in Figure \@ref(fig:forms-new).
 
-(ref:forms-new) The Google Forms tool is partially hidden in the Google Drive *New - More* menu.
+(ref:forms-new) Click the *New* button to select *Google Forms*.
 
-```{r forms-new, out.width=500, fig.cap="(ref:forms-new)"}
+```{r forms-new, out.width=300, fig.cap="(ref:forms-new)"}
  knitr::include_graphics("images/03-spreadsheet/forms-new.png")
 ```
 

@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-12-08" />
+<meta name="date" content="2020-12-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -353,13 +353,13 @@ This may be especially useful for “live” data that is continuously updated b
 such as fires, crimes, and property data.</p>
 <p>In this section, we will build an interactive point map of hospitals in Texas
 using <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">General Hospital Information</a> dataset by Medicare,
-which you can see in Figure <a href="map-socrata.html#fig:socrata-final">8.58</a>.</p>
+which you can see in Figure <a href="map-socrata.html#fig:socrata-final">8.59</a>.</p>
 
 <div class="figure"><span id="fig:socrata-final"></span>
 <iframe src="https://data.medicare.gov/dataset/Texas-Hospitals/cvhn-bsmn/embed?width=100%25&amp;height=500" width="672" height="500px">
 </iframe>
 <p class="caption">
-Figure 8.58: In this tutorial, we will build a point map of hospitals in Texas using Socrata.
+Figure 8.59: In this tutorial, we will build a point map of hospitals in Texas using Socrata.
 </p>
 </div>
 <p>Generally, in order to create a map in Socrata, you need to be a registered user,
@@ -380,20 +380,20 @@ that use Socrata.</p>
 <div id="create-your-first-socrata-point-map" class="section level3 unnumbered" number="">
 <h3>Create Your First Socrata Point Map</h3>
 <p>Navigate to the <a href="https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data">Hospital General Dataset</a>,
-and in the menu on the right-hand side choose <em>Visualize &gt; Launch New Visualization</em>, as shown in Figure <a href="map-socrata.html#fig:socrata-launch-new-viz">8.59</a>. This will open up a <em>Configure Visualization</em> studio where you can create the map.</p>
+and in the menu on the right-hand side choose <em>Visualize &gt; Launch New Visualization</em>, as shown in Figure <a href="map-socrata.html#fig:socrata-launch-new-viz">8.60</a>. This will open up a <em>Configure Visualization</em> studio where you can create the map.</p>
 
 <div class="figure"><span id="fig:socrata-launch-new-viz"></span>
 <img src="images/08-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize &gt; Launch New Visualization." width="300" />
 <p class="caption">
-Figure 8.59: Go to Visualize &gt; Launch New Visualization.
+Figure 8.60: Go to Visualize &gt; Launch New Visualization.
 </p>
 </div>
-<p>In the top menu, click <em>Map</em> (globe icon between a scatter chart icon and a calendar). You will see an updated layout of the studio, with the map in the middle, and <em>Map Layers</em> and <em>Map Settings</em> items in the side menu on the left, as shown in Figure <a href="map-socrata.html#fig:socrata-configure">8.60</a>.</p>
+<p>In the top menu, click <em>Map</em> (globe icon between a scatter chart icon and a calendar). You will see an updated layout of the studio, with the map in the middle, and <em>Map Layers</em> and <em>Map Settings</em> items in the side menu on the left, as shown in Figure <a href="map-socrata.html#fig:socrata-configure">8.61</a>.</p>
 
 <div class="figure"><span id="fig:socrata-configure"></span>
 <img src="images/08-map/socrata-configure-annotated.png" alt="Your studio should look similar to this once you choose Map as the visualization type." width="500" />
 <p class="caption">
-Figure 8.60: Your studio should look similar to this once you choose Map as the visualization type.
+Figure 8.61: Your studio should look similar to this once you choose Map as the visualization type.
 </p>
 </div>
 <p>Socrata was able to determine which column contains geospatial value, and automatically
@@ -401,24 +401,24 @@ set Geo Column value to <em>Location</em> in the <em>Layer List</em> menu. By de
 so instead of seeing individual hospital locations, you see bubbles with numbers (such as <code>12</code> in Alaska).</p>
 <p>Let’s first select only hospitals that are located in the southern state of Texas.
 To do so, go to <em>Filters &gt; Add filter</em>. The dropdown menu lists all columns (or fields) of the dataset,
-where we should choose <em>State</em>. In the newly appeared State dropdown, choose TX (for Texas) as shown in Figure <a href="map-socrata.html#fig:socrata-filter">8.61</a>, and scroll down
+where we should choose <em>State</em>. In the newly appeared State dropdown, choose TX (for Texas) as shown in Figure <a href="map-socrata.html#fig:socrata-filter">8.62</a>, and scroll down
 and click Apply. Socrata should zoom in on the map and center on Texas. Close <em>Filters</em> window to free screen space.</p>
 
 <div class="figure"><span id="fig:socrata-filter"></span>
 <img src="images/08-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
 <p class="caption">
-Figure 8.61: Select Texas as the only value for State field.
+Figure 8.62: Select Texas as the only value for State field.
 </p>
 </div>
 <p>Let’s now <em>disaggregate</em> the map so that we can see individual hospitals instead of clusters.
 Go to <em>Map Settings &gt; Clusters</em>, and bring the <em>Stop Clustering at Zoom Level</em> slider to 1,
-as shown in Figure <a href="map-socrata.html#fig:socrata-uncluster">8.62</a>.
+as shown in Figure <a href="map-socrata.html#fig:socrata-uncluster">8.63</a>.
 You will see the map now shows individual points.</p>
 
 <div class="figure"><span id="fig:socrata-uncluster"></span>
 <img src="images/08-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
 <p class="caption">
-Figure 8.62: To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1.
+Figure 8.63: To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1.
 </p>
 </div>
 <p>In the same accordion menu, change <em>Basemap &gt; Type</em> to <em>Dark</em> to bring the map a fashionable 2020 look.
@@ -431,12 +431,12 @@ is grayed out. That is because the dataset doesn’t contain columns with contin
 that can be transformed to point sizes. Instead, we can use <em>Style by Value</em> option to
 classify categorical points. The dataset contains multiple variables that can be effectively visualized,
 such as <em>Hospital Type</em>, <em>Emergency Services</em> (a yes/no category), <em>Mortality national comparison</em> and others.
-Let’s stick with <em>Hospital Type</em>, as is illustrated in Figure <a href="map-socrata.html#fig:socrata-style">8.63</a>.</p>
+Let’s stick with <em>Hospital Type</em>, as is illustrated in Figure <a href="map-socrata.html#fig:socrata-style">8.64</a>.</p>
 
 <div class="figure"><span id="fig:socrata-style"></span>
 <img src="images/08-map/socrata-style-annotated.png" alt="Let’s display different types of hospitals in different colors." width="300" />
 <p class="caption">
-Figure 8.63: Let’s display different types of hospitals in different colors.
+Figure 8.64: Let’s display different types of hospitals in different colors.
 </p>
 </div>
 <p>If you look at the bottom-right corner of the map, you should notice a minimized <em>Legend</em> control.
@@ -447,12 +447,12 @@ item to set individual colors, as well as change the order of categories in the 
 <p>To change what is shown in tooltips when you hover or click on points,
 go to <strong>Flyout Details</strong>, and set Flyout Title to <em>Facility Name</em>,
 adding city and phone number as additional flyout values, as is shown in Figure
-<a href="map-socrata.html#fig:socrata-flyout">8.64</a>.</p>
+<a href="map-socrata.html#fig:socrata-flyout">8.65</a>.</p>
 
 <div class="figure"><span id="fig:socrata-flyout"></span>
 <img src="images/08-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
 <p class="caption">
-Figure 8.64: To edit tooltip information, use Flyout Details menu item.
+Figure 8.65: To edit tooltip information, use Flyout Details menu item.
 </p>
 </div>
 <p>At this point you should have a fully-functional interactive map
@@ -463,21 +463,21 @@ Before you can share it, you need to save it as a draft, and publish.</p>
 <p>In the lower-right corner, click <em>Save Draft</em> button. Give your map a name,
 and hit <em>Save</em>. The gray ribbon at the top will tell you it is still a draft,
 and you can go ahead and <em>Publish…</em> it.</p>
-<p>Now you can embed the map on your website as an iframe. To do so, click the <em>Share</em> button in the upper-right side of your map (see Figure <a href="map-socrata.html#fig:socrata-share">8.65</a>),
-and copy the generated code from <em>Embed Code</em> text area (Figure <a href="map-socrata.html#fig:socrata-share-embed">8.66</a>).
+<p>Now you can embed the map on your website as an iframe. To do so, click the <em>Share</em> button in the upper-right side of your map (see Figure <a href="map-socrata.html#fig:socrata-share">8.66</a>),
+and copy the generated code from <em>Embed Code</em> text area (Figure <a href="map-socrata.html#fig:socrata-share-embed">8.67</a>).
 Learn more in <a href="embed.html">Chapter 10: Embed on the Web</a>.</p>
 
 <div class="figure"><span id="fig:socrata-share"></span>
 <img src="images/08-map/socrata-share-annotated.png" alt="Click Share button to bring up Share and Embed window." width="400" />
 <p class="caption">
-Figure 8.65: Click <em>Share</em> button to bring up <em>Share and Embed</em> window.
+Figure 8.66: Click <em>Share</em> button to bring up <em>Share and Embed</em> window.
 </p>
 </div>
 
 <div class="figure"><span id="fig:socrata-share-embed"></span>
 <img src="images/08-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website."  />
 <p class="caption">
-Figure 8.66: Copy iframe code to embed this map in another website.
+Figure 8.67: Copy iframe code to embed this map in another website.
 </p>
 </div>
 </div>

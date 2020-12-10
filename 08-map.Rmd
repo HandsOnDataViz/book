@@ -151,17 +151,17 @@ Some mapping tools allow you to choose between two different *types of color int
 
 (ref:intervals-type-combined) Steps versus continuous color intervals in Datawrapper (left) and Tableau Public (right).
 
-```{r intervals-type-combined, out.width=300, fig.cap="(ref:intervals-type-combined)"}
+```{r intervals-type-combined, out.width=500, fig.cap="(ref:intervals-type-combined)"}
 knitr::include_graphics("images/08-map/intervals-type-combined.png")
 ```
 
-If both options exist, which type of color interval is best: steps or continuous? There is no uniform map design rule about this, but consider these factors. On one hand, steps work best for data stories that show areas below or above a specific line or threshold, such as zones that will flood if the sea level rises by one meter. Also, since human eyes are not always good at distinguishing between hues, steps can help readers to quickly match colors from your map legend to your data. On the other hand, continuous works best for data stories that draw attention to subtle differences between neighboring areas, such as the wide range of values on an income scale. To learn more about your options, read this Datawrapper Academy article on [what to consider when creating choropleth maps](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps). Overall, we advise you to make design choices that are both honest and insightful: tell the truth about the data and also draw attention to what matters in your data story.
+If both options exist, which type of color interval is best: steps or continuous? There is no uniform map design rule about this, but consider these factors. On one hand, steps work best for data stories that show areas below or above a specific line or threshold, such as zones that will flood if the sea level rises by one meter. Also, since human eyes are not always good at distinguishing between hues, steps can help readers to quickly match colors from your map legend to your data. On the other hand, continuous works best for data stories that draw attention to subtle differences between neighboring areas, such as the wide range of values on an income scale. Read this Datawrapper Academy article on [what to consider when creating choropleth maps](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps). Overall, we advise you to make design choices that are both honest and insightful: tell the truth about the data and also draw attention to what matters in your data story.
 
 If you choose *steps*, how many dividers should you use to slice up your data? Once again, there is no uniform rule, but reflect on these options and outcomes. Fewer steps creates a *coarse* map that highlights broad differences, while more steps creates a *granular* map that emphasizes geographic diversity between areas. However,  simply adding more steps does not necessarily make a better map, because differences between steps become less visible to the human eye. Since the [ColorBrewer](https://colorbrewer2.org) design assistant was created specifically for steps (and does not show continuous options), we recommend experimenting by raising or lowering the *Number of data classes* (also known as steps) to visualize the appearance of different design choices, as shown in Figure \@ref(fig:colorbrewer-steps). Make decisions with the best interests of your readers in mind, to represent your data in honest and insightful ways.
 
 (ref:colorbrewer-steps) If you choose steps, experiment with ColorBrewer data classes and color palettes.
 
-```{r colorbrewer-steps, out.width=400, fig.cap="(ref:colorbrewer-steps)"}
+```{r colorbrewer-steps, out.width=300, fig.cap="(ref:colorbrewer-steps)"}
 knitr::include_graphics("images/08-map/colorbrewer-steps.png")
 ```
 
@@ -169,34 +169,31 @@ Some choropleth mapping tools also allow you to choose how to *interpolate* your
 
 (ref:interpolation-datawrapper-combined) Interpolation options for steps (left) and continuous (right) in Datawrapper.
 
-```{r interpolation-datawrapper-combined, fig.cap="(ref:interpolation-datawrapper-combined)"}
+```{r interpolation-datawrapper-combined, out.width=650, fig.cap="(ref:interpolation-datawrapper-combined)"}
 knitr::include_graphics("images/08-map/interpolation-datawrapper-combined.png")
 ```
 
-Before choosing how to interpolate, create a [histogram chart as described in chapter 7](histogram-google.html) to gain a deeper understanding of how your data is distributed. Does it look evenly distributed with roughly similar counts around the median? Or does it look skewed to one side due to several outliers? Compare the simplified examples in FIG TODO, since this may influence your decision, as described below.
+Before choosing how to interpolate, create a [histogram chart in Google Sheets described in chapter 7](histogram-google.html) to gain a deeper understanding of how your data is distributed. Is your histogram evenly distributed with a symmetrical shape around the mean? Or is it skewed to one side, with one tail of outliers that is longer than the other? Compare the simplified histograms in Figure \@ref(fig:interpolation-histograms), which may influence your decision about how to interpolate, as described below.
 
-FIG TODO: Compare histograms here
+(ref:interpolation-histograms) Histogram of evenly-distributed data (on right) versus skewed data with a longer tail to one side (on left).
 
-In this introductory book, we will simplify common interpolation options in three basic categories:
+```{r interpolation-histograms, out.width=500, fig.cap="(ref:interpolation-histograms)"}
+knitr::include_graphics("images/08-map/interpolation-histograms.png")
+```
 
-- *Linear* places your data values in a straight line, which works best when a histogram shows that your data are evenly distributed.
+In this introductory book, we can simplify the most common interpolation options in three basic categories:
 
-, from lowest to highest. This works best when a histogram shows your data are evenly distributed. Use this method if your data story needs to emphasize the low and high extremes, which will stand out with lighter and darker colors.
+- *Linear* places your data values in a straight line, from lowest to highest. This method works best when the data are evenly distributed, or if you wish to draw attention to the low and high extremes in your data, which will stand out in light and dark colors.
 
-This method works best when the data are evenly distributed, and also when you want to draw attention to the low and high extremes, with light and dark colors.
+- *Quantiles* divide your data values into groups of an equal number. More specifically, *quartiles*, *quintiles*, and *deciles* divide the values into four, five, or ten groups of equal quantity. This method works best when the data are skewed to one side, because the regrouping allows you to draw attention to diversity inside the data, rather than the extremes. *Rounded values* are similar to quantiles, but the decimals are replaced with rounded numbers that look nicer to readers' eyes.
 
-- *Quantiles* and its cousins divide your data values into groups of an equal number. More specifically, *quartiles*, *quintiles*, and *deciles* mean dividing the values into four, five, or ten groups of equal quantity. This method works best when the data are not evenly distributed, and also when you wish to draw attention to internal diversity of the data, not the low or high ends. *Rounded values* are similar to quantiles, but decimals are replaced with rounded numbers that look nicer to readers' eyes, such as multiples of 5s or 10s.
+- *Natural breaks (Jenks)* offers a compromise between linear and quantile methods. It groups data values that are close together, but maximizes differences with other groups. This method may work best with skewed data where you wish to draw attention to both internal diversity and extremes.
 
-- *Natural breaks (Jenks)* offers a compromise between linear and quantile methods. It groups values that are close together, yet maximizes differences between other groups. This method may work best if you wish to show both extremes... It offers a compromise between linear (which emphasizes the extreme ends) and quantiles (which emphasize internal diversity).
+Which interpolation method is best? There are no uniform design rules, except that we advise *against* using *Custom* settings to manually place color intervals wherever you wish, since they are more likely to create misleading maps, as you'll learn in [Chapter 15: Detect Lies and Reduce Data Bias](detect.html). Our best advice is to experiment with different interpolation methods, especially when working with skewed data, to better understand how these options shape the appearance of your choropleth maps and the data stories you tell with them.
 
+Overall, [Datawrapper Academy recommends](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps) that you make color intervals choices to help readers "see all the differences in the data" by fully utilizing all of the colors in your range. In other words, if your map displays only the lightest and darkest colors, you're not sufficiently using the middle portion of your color range to highlight geographic patterns and diversity within your data. To do this, you'll need to explore beyond the default map settings and test which options do the best job of telling an honest and insightful data story.
 
-
-Which interpolation method is best? While there are no rigid rules, some methods above work better for different types of data stories. If you wish to emphasize the lows and highs in your data, choose linear because it uses color to draw attention to the extreme ends of the scale. Or if you wish to emphasize geographic diversity in your data, consider quantiles (or any of its cousins) because they use color to differentiate the middle portions of the scale.
-
-We do *not* recommend *Custom* settings that manually place dividers wherever you wish, because this method is more likely to create a misleading map, as you'll learn in [Chapter 15: Detect Lies and Reduce Data Bias](detect.html). Read more...https://academy.datawrapper.de/article/117-color-palette-for-your-map
-
-In any case, be very aware of how color palettes and interpolation dramatically shape the appearance of choropleth maps and how the data appears in readers' eyes. Always create maps show us the story and tell the truth.  [TODO: ADD THIS? In general, Datawrapper recommends choosing ranges to make sure readers "see all the differences in the data," rather than hiding them out of sight.... cite https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps]
-TODO ALSO: Review all of the recommendations in the Datawrapper Academy post above and decide ones to include as rules versus recommendations vs neither. For example: "use the same intervals... 0, 25, 50 instead of 0, 15, 50..." runs counter to other advice we give about interpolation.
+Designing true and meaningful choropleth maps is challenging work. You will improve your skills the same way we did, by reading widely, looking at different maps, and testing various ways to visualize your data. Become more aware of how your decisions about color intervals can dramatically alter how the data appears to readers. Most important, create maps that tell truthful and insightful data stories.
 
 ## Normalize Choropleth Map Data {- #normalize-choropleth}
 

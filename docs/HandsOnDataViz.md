@@ -6,35 +6,14 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 24 Nov 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 09 Dec 2020**.
 
 Read the open-access web edition at
-<a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>.
-This book is under contract with O’Reilly Media, Inc., which will sell
-print and ebook versions in April 2021.
-
-Tell your story and show it with data, using free and easy-to-learn
-tools on the web. This introductory book teaches you how to design
-interactive charts and customized maps for your website, beginning with
-easy drag-and-drop tools, such as Google Sheets, Datawrapper, and
-Tableau Public. You’ll also gradually learn how to edit open-source code
-templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along
-with the step-by-step tutorials, real-world examples, and online
-resources. This book is ideal for students, non-profit organizations,
-small business owners, local governments, journalists, academics, or
-anyone who wants to tell their story and show the data. No coding
-experience is required.
-
-Send corrections for this book-in-progress to
-<handsondataviz@gmail.com>, or open an issue or submit a pull request on
-our [GitHub repository](https://github.com/handsondataviz/book). If you
-submit a GitHub pull request, in your commit message, please add the
-sentence “I assign the copyright of this contribution to authors Jack
-Dougherty and Ilya Ilyankou” to give us the option to publish it, with
-credit to you.
-
-View open-source code for the book text and code templates at
+<a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
+and access the open-source code templates at
 <a href="https://github.com/handsondataviz" class="uri">https://github.com/handsondataviz</a>.
+This book is under contract with O’Reilly Media, Inc., which will
+publish print and ebook versions for sale in Spring 2021.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
 <img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" />
@@ -50,10 +29,57 @@ Commons BY-NC-ND 4.0 International License</a>. You may freely share
 this content for non-commercial purposes, with a source credit to
 <a href="http://HandsOnDataViz.org">http://HandsOnDataViz.org</a>.
 
+Tell your story and show it with data, using free and easy-to-learn
+tools on the web. This introductory book teaches you how to design
+interactive charts and customized maps for your website, beginning with
+easy drag-and-drop tools, such as Google Sheets, Datawrapper, and
+Tableau Public. You’ll also gradually learn how to edit open-source code
+templates like Chart.js, Highcharts, and Leaflet on GitHub. Follow along
+with the step-by-step tutorials, real-world examples, and online
+resources. This book is ideal for students, educators, community
+activists, non-profit organizations, small business owners, local
+governments, journalists, researchers, or anyone who wants to tell their
+story and show the data. No coding experience is required.
+
+Audience and Overview
+---------------------
+
+We designed this introductory guide to be broadly accessible for
+newcomers, and to offer an educational resource for advanced users who
+teach or guide others in the field of data visualization….
+
+TODO: who this book is for… spreadsheets to code… if you not just one
+tool, but several tools, all of them free and easy-to-learn, along with
+our guidance on how to choose tools….
+
+TODO: what this book will not cover…
+
+Learn by following the step-by-step tutorials on a laptop or desktop
+computer with an internet connection. We recommend any computer running
+either the Macintosh or Windows operating system, with a modern web
+browser such as Chrome, Firefox, Safari, or Edge. Another good option is
+a Chromebook or Linux computer, which allows you to complete *most* of
+the tutorials in this book, and we’ll point out any limitations in
+specific chapters. While it may be possible to complete some tutorials
+on a tablet or smartphone device, we do not recommend it because you
+cannot follow all of the steps.
+
+If you’re working on a laptop, consider buying or borrowing an external
+mouse that plugs into your computer. We’ve met several people who find
+it much easier to click, hover, and scroll with an external mouse than a
+laptop’s built-in trackpad. If you’re new to working with computers–or
+teaching newer users with this book—consider starting with [basic
+computer and mouse tutorial skills from the Goodwill Community
+Foundation](https://edu.gcfglobal.org/en/subjects/basic-skills/). Also,
+if you’re reading a digital version of this book on a laptop, consider
+connecting a second computer monitor, or working with a tablet or second
+computer alongside you. This allows you to read the book in one screen
+and build data visualizations in the other screen.
+
+TODO: Chapter outline…
+
 Authors & Acknowledgements
 --------------------------
-
-<!-- Images below are 200x200 at 300 resolution -->
 
 <table>
 <colgroup>
@@ -68,124 +94,64 @@ Authors & Acknowledgements
 </thead>
 <tbody>
 <tr class="odd">
-<td><img src="images/0-preface/dougherty-jack.jpg" /></td>
-<td><a href="http://jackdougherty.org">Jack Dougherty</a> is Professor of Educational Studies at Trinity College in Hartford, Connecticut, where he and his students partner with community organizations to help tell their data stories on the web. Follow him on <a href="https://twitter.com/doughertyjack">Twitter</a> and <a href="https://github/com/jackdougherty">on GitHub</a>.</td>
+<td><img src="images/0-preface/dougherty-jack-200.jpg" /></td>
+<td>Jack Dougherty is Professor of Educational Studies at Trinity College in Hartford, Connecticut. He teaches a data visualization course where students partner with community organizations to help them tell their stories online with interactive charts and maps. Trained as a historian, Jack learned data visualization to share evidence more widely about cities, suburbs, and schools over time for his <em><a href="https://ontheline.trincoll.edu">On The Line</a></em> book. Visit <a href="https://jackdougherty.org">his website</a> or follow him on <a href="https://twitter.com/doughertyjack">Twitter</a>.</td>
 </tr>
 <tr class="even">
-<td><img src="images/0-preface/ilyankou-ilya.jpg" /></td>
-<td><a href="https://www.linkedin.com/in/ilya-ilyankou-a64675ab">Ilya Ilyankou</a> is a Civic Technologist at Connecticut Data Collaborative. He has completed a double major in Computer Science and Studio Arts in the Class of 2018 at Trinity College. Visit <a href="http://ilyankou.com">his website</a> or follow him <a href="https://github.com/ilyankou">on GitHub</a>.</td>
+<td><img src="images/0-preface/ilyankou-ilya-200.jpg" /></td>
+<td>Ilya Ilyankou is a Civic Technologist at the Connecticut Data Collaborative, where he creates web-based tools to explain and explore public data. At Trinity College he completed his bachelor’s degree with a double major in Computer Science and Studio Arts, and is currently pursuing a master’s degree in Geographical Information Systems (GIS) at the University of Leeds (UK). Ilya also heads <a href="https://picturedigits.com">Picturedigits</a>, a design and technology lab that assists clients in analyzing and visualizing data. Visit his <a href="http://ilyankou.com">his website</a> or follow him on <a href="https://twitter.com/ilyankou">Twitter</a> or on <a href="https://github.com/ilyankou">GitHub</a>.</td>
 </tr>
 </tbody>
 </table>
 
 ### Acknowledgements
 
-We originally launched an earlier draft of this book under a different
-title, *Data Visualization For All*, to accompany a [free online edX
+In 2016 we launched an earlier draft of this book under a different
+title, *Data Visualization For All*, as part of an introductory course
+for Trinity College students and their community partners in Hartford,
+Connecticut to tell their organization’s data stories through
+interactive charts and maps. Veronica X. Armendariz (Trinity Class of
+2016) served as an outstanding teaching assistant and provided initial
+tutorials. The draft expanded in 2017 when we launched a [free online
+Trinity edX
 course](https://www.edx.org/course/data-visualization-for-all) by the
-same name, sponsored by Trinity College. Co-instructors Stacy Lam
-(Trinity Class of 2019) and David Tatem (Instructional Technologist)
-contributed valuable ideas and energy as we created content for that
-course in Spring 2017, which to date has enrolled over 23,000 students,
-though [only a fraction actually complete the 6-week
+same name, with our wonderful co-instructors Stacy Lam (Trinity Class of
+2019) and David Tatem (Instructional Technologist), who contributed rich
+ideas and countless hours. To date over 23,000 students have started the
+edX course, though [only a small fraction actually complete the six-week
 curriculum](https://jackdougherty.org/2017/11/21/tough-questions-to-ask-about-trinity-edx/).
 Thanks also to the Trinity Information Technology staff and friends who
-produced the edX course videos: Angie Wolf, Sean Donnelly, Ron Perkins,
-Samuel Oyebefun, Phil Duffy, and Christopher Brown. Also, Veronica X.
-Armendariz (Trinity Class of 2016) made valuable contributions to the
-early version of the book while serving as a teaching assistant for the
-[Data Visualization internship
-seminar](http://commons.trincoll.edu/dataviz/) that brought together
-Trinity undergraduates and Hartford community partners. Funding for
-students who worked on the earlier draft was generously provided by the
-[Office of Community
-Learning](https://cher.trincoll.edu/community-learning/) and
-[Information Technology Services](https://www.trincoll.edu/LITC/its/) at
-Trinity College.
+produced edX course videos: Angie Wolf, Sean Donnelly, Ron Perkins,
+Samuel Oyebefun, Phil Duffy, and Christopher Brown. Funding for students
+who worked on the earlier draft was generously provided by the Office of
+Community Learning and Information Technology Services at Trinity
+College.
 
-Thanks to many individuals and organizations who helped us to learn many
+We thank many individuals and organizations who helped us to learn many
 of the skills that we teach in this book, especially Alvin Chang and
 Andrew Ba Tran, who previously were data journalists at *The Connecticut
 Mirror*; and Michael Howser, Steve Batt, and their colleagues at the
 University of Connecticut Libraries Map and Geographic Information
-Center (MAGIC). Also, many people inspired us to be *code-curious* at
-The Humanities and Technology Camp (THATCamp) events, sponsored by the
-Roy Rosenzweig Center for History and New Media at George Mason
-University, and engaged us with civic technology for the public good at
-Transparency Camp events sponsored by the Sunlight Foundation. We also
-appreciate Scott Gaul for inviting us to share our work-in-progress at
-Hartford data workshops and discussions, sponsored by the Hartford
-Foundation for Public Giving.
+Center (MAGIC). Also, thanks to everyone who inspired us to be
+*code-curious* at The Humanities and Technology Camp (THATCamp) events,
+sponsored by the Roy Rosenzweig Center for History and New Media at
+George Mason University, and engaged us with civic technology for the
+public good at Transparency Camp events sponsored by the Sunlight
+Foundation. We also appreciated opportunities to share our
+work-in-progress at data workshops hosted by Scott Gaul and Doug
+Shipman, formerly at the Hartford Foundation for Public Giving, and
+Michelle Riordan-Nold at the Connecticut Data Collaborative.
 
-We thank everyone at O’Reilly Media who worked with us to bring you this
-book, especially our outstanding developmental editor, Amelia Blevins,
-and other members of the team: Nick Adams, Jonathan Hassel, Andy Kwan,
-Katie Tozer,… We also thank O’Reilly’s support for technical reviewers
-whose valuable feedback helped us to improve the manuscript, including
-Carl Allchin, Derek Eder, Erica Hayes, etc…., and additional readers,
-including Gared Bard, Nick Klagge….
-
-Audience and Outline
---------------------
-
-TODO: Intended audience
-
-TODO: Chapter outline
-
-TODO: what this book will not cover…
-
-Follow Along on a Computer
---------------------------
-
-TODO: Decide about renaming to “Follow Tutorials On A Computer”
-
-To follow the steps in this book, we recommend either a desktop or
-laptop computer, running either the Mac or Windows or Linux operating
-system, with an internet connection and a modern web browser such as
-Chrome, Firefox, Safari, or Edge. Another good option is a Chromebook
-laptop, which enables you to complete *most* of the steps in this book,
-and we’ll point out any limitations in specific chapters. While it’s
-possible to use a tablet or smartphone device, we do not recommend it
-because you cannot follow all of the steps, and you’ll also get
-frustrated with the small screen and perhaps throw your device (or this
-book) across the room, and possibly injure someone (and we will not be
-held responsible!)
-
-If you’re working on a laptop, consider buying or borrowing an external
-mouse that can plug into your machine. We’ve met several people who
-found it much easier to click, hover, and scroll with a mouse rather
-than a laptop’s built-in trackpad.
-
-If you’re new to working with computers—or teaching new users with this
-book—consider starting with [mouse
-exercises](http://www.pbclibrary.org/mousing/mousercise.htm). All of the
-tools in this book assume that users already know how to click tiny
-buttons, hover over links, and scroll web pages, but rarely are these
-skills taught, and everyone needs to learn them at some point in our
-lives.
-
-<!-- TODO: I added the tips above because these are huge yet surmountable obstacles for many people I've worked with, especially older generations and incarcerated people. But I'm uncertain about the link to the mouse exercises. Perhaps I should tweet at public library staff and instructors to find better beginning resources? -->
-
-#### Trademarks
-
-TODO: Discuss with editor if this is necessary, and if so, whether to
-place in the frontmatter?
-
-Any use of a trademarked name without a trademark symbol is for
-readability purposes only. We have no intention of infringing on the
-trademark.
-
--   GitHub and the GitHub logo are registered trademarks of GitHub, Inc.
--   Google and the Google logo are registered trademarks of Google Inc.
--   WordPress is a registered trademark of the WordPress Foundation
--   TODO: Add others…
-
-#### Disclaimer
-
-The information is this book is provided without warranty. The authors
-and publisher have neither liability nor responsibility to any person or
-entity related to any loss or damages arising from the information
-contained in this book.
+Guided by feedback from readers, educators, and our editors, we rewrote
+the entire draft in 2020 to reorganize the structure, deepen the
+concepts, and enhance the tutorials. We thank everyone at O’Reilly Media
+who worked with us to bring you this finish produced, especially our
+outstanding developmental editor, Amelia Blevins, and other members of
+her team: Nick Adams, Jonathan Hassel, Andy Kwan, and Katie Tozer. We
+also appreciate O’Reilly’s support for three technical reviewers who
+provided excellent feedback on the manuscript: Carl Allchin, Derek Eder,
+and Erica Hayes. Thanks also to readers whose comments helped us to
+improve the text: Gared Bard and Nick Klagge.
 
 <!--chapter:end:index.Rmd-->
 
@@ -436,10 +402,10 @@ us identify any geographic patterns and to encourage readers to explore
 income levels around the globe, as shown in Figure
 <a href="#fig:world-income-map1">1.3</a>.
 
-<img src="images/01-introduction/world-income-map1.png" alt="Explore the [interactive map](https://datawrapper.dwcdn.net/NLMLg/1/) of world income inequality, measured by the share of national income held by the top 1 percent of the population, based on the most recent data available. Source: [World Inequality Database 2020](https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country)."  />
+<img src="images/01-introduction/world-income-map1.png" alt="Explore the [interactive map](https://datawrapper.dwcdn.net/NLMLg/) of world income inequality, measured by the share of national income held by the top 1 percent of the population, based on the most recent data available. Source: [World Inequality Database 2020](https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country)."  />
 <p class="caption">
 Figure 1.3: Explore the [interactive
-map](https://datawrapper.dwcdn.net/NLMLg/1/) of world income inequality,
+map](https://datawrapper.dwcdn.net/NLMLg/) of world income inequality,
 measured by the share of national income held by the top 1 percent of
 the population, based on the most recent data available. Source: [World
 Inequality Database
@@ -4385,40 +4351,60 @@ ignoring the remainder. When we make a commitment to tell true and
 meaningful data stories, we agree to keep an open mind, examine all of
 the relevant evidence, and weigh the merits of competing
 interpretations. If you agree to these principles, then also watch out
-for biased data comparisons, especially sampling procedures that may
-appear legitimate on the surface, but actually contain less-visible
-factors that skew the evidence. While we may believe we’re operating
-with open minds, we can overlook partially-hidden processes that
-effectively cherry-pick our evidence without our knowledge.
+for biased data comparisons, especially *sampling biases*, which refers
+to data collection procedures that may appear legitimate on the surface,
+but actually include partially-hidden factors that skew the results.
+While we may believe we’re operating with open minds, we might overlook
+methods that effectively cherry-pick our evidence without our knowledge.
 
-*Selection bias* happens when we believe we have chosen our data sample
-fairly, but some behind-the-scenes process influences its composition
-and skews our analysis. For example, if you conduct surveys by email
-with US adults, your sample will not be representative of senior
-citizens aged 65 or older, who are less likely to own a computer or
-smartphone, according to the [Pew Research
-Center](https://www.pewresearch.org/internet/fact-sheet/mobile/). Also
-beware of *participation bias*, sometimes called non-response bias. If
-your survey has a low response rate, it is likely that those who choose
-to respond possess certain qualities that make them less representative
-of the general population.
+One type to avoid is *selection bias*, which means that the sample
+chosen for your study differs systematically from the larger population.
+“What you see depends on where you look,” cautions professors Carol
+Bergstrom and Jevin West, authors of a book with an unforgettable title,
+*Calling Bullshit*.[23] If you randomly measured the height of people
+who happened to be leaving the gym after basketball practice, your
+artificially taller results would be due to selection bias, as shown in
+Figure <a href="#fig:selection-bias">6.2</a>.
 
-In particular, *self-selection bias* often arises when attempting to
-evaluate the effectiveness of a particular program or treatment where
-people applied or volunteered to participate, as shown in Figure
-<a href="#fig:self-selection-bias">6.2</a>. Imagine that your job is to
-determine if a weight-loss program actually works, which requires a
-deeper understanding of how data samples were chosen. Avoid the mistake
-of comparing the progress of non-participants (group A) versus
-participants who signed up for this program (group B), because those two
-groups were *not* randomly chosen. Participants differ because they took
-the initiative to join a weight-loss program, and most likely have
-higher motivation to improve their diet and exercise more often than
-non-participants. Self-selection bias secretly shapes the composition of
-both groups, which results in a meaningless comparison. We often fool
-ourselves and overlook how this voluntary participation skews our
-understanding of program effectiveness, whether the topic is weight-loss
-clinics, counseling programs, or public and private school choice.
+<img src="images/06-comparisons/selection-bias.png" alt="If you randomly measured the height of people who happened to be leaving the gym after basketball practice, your artificially taller results would be due to selection bias." width="500" />
+<p class="caption">
+Figure 6.2: If you randomly measured the height of people who happened
+to be leaving the gym after basketball practice, your artificially
+taller results would be due to selection bias.
+</p>
+
+A second type to avoid is *non-response bias*. If you send a survey to a
+broad population, but not everyone responds, you need to be aware that
+those who chose to participate may possess certain qualities that make
+them less representative of the whole population. For example, US Census
+researchers discovered that the non-response rate for lower-income
+people was significantly higher than usual for the 2020 Current
+Population Survey supplement, which they determined by comparing
+individual survey results to prior years. Since richer people were more
+likely to respond, this artificially raised the reported median income
+level, which researchers needed to correct.[24] See also the [US Census
+Bureau Hard to Count 2020 map](https://www.censushardtocountmaps2020.us)
+that visualizes self-response rates by states, counties, and tracts. If
+you conduct a survey that does not correct for non-response bias, you
+may have biased results.
+
+A third type to avoid is *self-selection bias*, which often arises when
+attempting to evaluate the effectiveness of a particular program or
+treatment where people applied or volunteered to participate, as shown
+in Figure <a href="#fig:self-selection-bias">6.3</a>. If your job is to
+judge whether a weight-loss program actually works, this requires a deep
+understanding of how data samples were chosen, because self-selection
+bias can secretly shape the composition of both groups and result in a
+meaningless comparison. For example, you would be mistaken to compare
+the progress of non-participants (group A) versus participants who
+signed up for this program (group B), because those two groups were
+*not* randomly chosen. Participants differ because they took the
+initiative to join a weight-loss program, and most likely have higher
+motivation to improve their diet and exercise more often than
+non-participants. It’s surprising how often we fool ourselves and forget
+to consider how voluntary participation skews program effectiveness,
+whether the subject is weight-loss clinics, social services, or school
+choice programs.
 
 How can we reduce self-selection bias in program evaluation data? As you
 learned in [Chapter 4, it’s important to question your
@@ -4429,7 +4415,7 @@ self-selection bias by *randomly dividing* all volunteer participants
 (group B) into two sub-groups: half will be assigned to participate in
 one weight-loss program (group C) and the other half will be assigned to
 a different weight-loss program (group D), as shown in Figure
-<a href="#fig:self-selection-bias">6.2</a>. Since sub-groups C and D
+<a href="#fig:self-selection-bias">6.3</a>. Since sub-groups C and D
 were selected by chance from the same larger group of volunteers, we can
 be more confident when comparing their progress because there is no
 reason to suspect any difference in motivation or other hard-to-see
@@ -4444,7 +4430,7 @@ characteristics.
 
 <img src="images/06-comparisons/self-selection-bias.png" alt="Do not compare program non-participants (A) versus those who apply or volunteer to participate (B). Instead, randomly split all participants into two sub-groups (C and D) to compare program effectiveness." width="700" />
 <p class="caption">
-Figure 6.2: Do not compare program non-participants (A) versus those who
+Figure 6.3: Do not compare program non-participants (A) versus those who
 apply or volunteer to participate (B). Instead, randomly split all
 participants into two sub-groups (C and D) to compare program
 effectiveness.
@@ -4455,7 +4441,7 @@ continually need to be aware of different types that negatively
 influence our work at various stages of the data visualization process.
 Later in [Chapter 15 you’ll learn how to recognize and reduce other
 types of biases](data-bias.html) when working with data, such as
-cognitive biases, algorithmic biases, intergroup biases, and map area
+cognitive biases, algorithmic biases, intergroup biases, and mapping
 biases.
 
 ### Summary
@@ -4592,9 +4578,8 @@ weight).
 </tbody>
 </table>
 
-See also the [DataViz Catalogue site](https://datavizcatalogue.com) by
-Severino Ribecca for a more extensive collection of chart types and use
-cases.
+For a more extensive collection of chart types and use cases, see the
+[Financial Times Visual Vocabulary](https://ft.com/vocabulary).
 
 TODO above: improve and standardize chart images, especially range chart
 
@@ -4716,7 +4701,7 @@ the *position* and *angle* of the line, rather than its height or
 length. Starting a line chart at a number other than zero does *not*
 necessarily distort its encoded information because our eyes rely on its
 shape to determine its meaning, rather than its proximity to the
-baseline.[23] For example, compare both the right and left sides of
+baseline.[25] For example, compare both the right and left sides of
 Figure <a href="#fig:design-principles-baseline-comparison">7.3</a>,
 where both are correct.
 
@@ -4909,7 +4894,7 @@ Rost’s “[A Friendly Guide to Colors in Data
 Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
 Pick More Beautiful Colors for Your Data
 Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
-both on the Datawrapper blog.[24]
+both on the Datawrapper blog.[26]
 
 If you follow our advice, you should end up with a de-cluttered chart as
 shown in Figure <a href="#fig:design-principles-decluttered">7.11</a>.
@@ -5401,7 +5386,7 @@ from the Chart type dropdown list.
 Sidebar: Tables and charts approach time-series data in opposite
 directions. When designing a table, the proper method is to place dates
 horizontally as column headers, so that we read them from left-to-right,
-like this:[25]
+like this:[27]
 
 <table>
 <thead>
@@ -5573,13 +5558,13 @@ and numerical data values (such as the unemployment rate) in the second
 column. Now you’re ready to create an interactive line chart with
 annotations, as shown in Figure
 <a href="#fig:datawrapper-annotated">7.35</a>. Since 2000, the
-unemployment rate has peaked three times, but the tallest peak occured
-during the 2020 economic crisis during the Covid pandemic.
+unemployment rate has peaked three times, but the tallest peak occurred
+during the 2020 economic crisis sparked by the Covid pandemic.
 
-<img src="images/07-chart/datawrapper-annotated.png" alt="Line chart with annotation: Explore the [interactive version](https://datawrapper.dwcdn.net/vHuob/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972)."  />
+<img src="images/07-chart/datawrapper-annotated.png" alt="Line chart with annotation: Explore the [interactive version](https://datawrapper.dwcdn.net/vHuob/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972)."  />
 <p class="caption">
 Figure 7.35: Line chart with annotation: Explore the [interactive
-version](https://datawrapper.dwcdn.net/vHuob/1/). Data from [US Federal
+version](https://datawrapper.dwcdn.net/vHuob/). Data from [US Federal
 Reserve Open
 Data](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972).
 </p>
@@ -5591,8 +5576,8 @@ tutorial:
     in Google
     Sheets](https://docs.google.com/spreadsheets/d/1mjUu4OfMjWfFP-miPiObi6vXzJUIMi1TSuoaT61FU6U/edit#gid=821851972)
     and go to *File &gt; Make a Copy* to create your own version in your
-    Google Drive. Or download the [sample data in Excel
-    format](data/us-unemployment-adj-2000-2020.xlsx) to your computer.
+    Google Drive. Or go to *File &gt; Download* to export a CSV or Excel
+    version to your computer.
 
 2.  Open [Datawrapper](https://www.datawrapper.de) in your browser and
     click *Start Creating*. We recommend that you create a free account
@@ -5645,40 +5630,37 @@ does not need to be transposed, since it’s organized correctly.
     your work.
 
 3.  Scroll down further in the *Annotate* tab to the *Text annotations*
-    section, and click the button to add one to the chart. Type “Great
-    Recession” into the text field of your first annotation, and move
-    your cursor to place it around the unemployment peak in 2009, as
-    shown in Figure <a href="#fig:datawrapper-annotated-text">7.37</a>.
-    This helps readers to place the [Great
+    section, and click the button to add one. Draw a pink rectangle to
+    place your annotation on the chart, where unemployment rose sharply
+    from 2008 to 2010, and type “Great Recession” into the text field,
+    as shown in Figure
+    <a href="#fig:datawrapper-annotated-text">7.37</a>. This helps
+    readers to place the [Great
     Recession](https://en.wikipedia.org/wiki/Great_Recession_in_the_United_States)
-    in historical context. Click to add another text annotation, type
-    “Covid Pandemic” into the text field, and place it around the second
-    unemployment peak in early 2000 for comparison. You can fine-tune
-    the positioning of a label by typing its year-month code into the
-    x-axis coordinate text field, or its unemployment rate into the
-    y-axis text field. To change the appearance or delete an annotation,
-    click its downward arrow symbol for options.
+    in historical context. Click the button a second time to add another
+    text annotation, place it around the second unemployment peak in
+    2020, and type “Covid Pandemic” into the text field to offer readers
+    a comparison. You can fine-tune the style and position of
+    annotations with additional options further down on the screen.
 
-<img src="images/07-chart/datawrapper-annotated-text.png" alt="Add text annotations by typing a label and positioning it on the chart."  />
+<img src="images/07-chart/datawrapper-annotated-text.png" alt="Add text annotations by drawing a pink rectangle and typing in the text."  />
 <p class="caption">
-Figure 7.37: Add text annotations by typing a label and positioning it
-on the chart.
+Figure 7.37: Add text annotations by drawing a pink rectangle and typing
+in the text.
 </p>
 
-1.  Scroll down further in the *Annotate* tab to the *Highlight value
-    ranges* section, and click the button to add one to the chart. Click
-    inside the chart to “draw” a bar from December 2007 to June 2009, as
-    shown in Figure <a href="#fig:datawrapper-annotated-range">7.38</a>.
-    This period represents the official beginning and ending of the US
-    Great Recession in the eyes of economists, although unemployment
-    continued to grow for the population at large. When you finish
-    “drawing” on the chart, the red bar will become light gray. Once
-    again, you can fine-tune the positioning of a highlighted range by
-    typing its year-month codes into the date fields, and change its
-    appearance or delete it by clicking the downward arrow symbol for
-    more options. To highlight other official recession periods, draw
-    two more ranges: March–November 2001 and February–August 2020 (the
-    most current data as we write this).
+1.  Scroll down further in the *Annotate* tab to the *Highlight range*
+    section, and click the button to add one to the chart. Click inside
+    the chart to draw a pink lines from December 2007 to June 2009,
+    which will highlight that portion of the chart in gray, as shown in
+    Figure <a href="#fig:datawrapper-annotated-range">7.38</a>. This
+    period represents the official beginning and ending of the US Great
+    Recession in the eyes of economists, although unemployment continued
+    to grow for the population at large. To highlight other official
+    recession periods, draw two more ranges: March–November 2001 and
+    February–October 2020 (the most current data as we write this). Once
+    again, you can fine-tune the style and positioning of a highlighted
+    range with additional options further down the screen.
 
 &lt;img src=“images/07-chart/datawrapper-annotated-range.png” alt=“Add a
 range highlight by”drawing" a rectangular bar on the chart." width=“600”
@@ -5731,10 +5713,10 @@ Figure 7.39: Organize your range chart data labels into column headers,
 with categories and values in each row.
 </p>
 
-<img src="images/07-chart/datawrapper-range.png" alt="Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/v8D2z/1/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0)."  />
+<img src="images/07-chart/datawrapper-range.png" alt="Range chart: Explore the [interactive version](https://datawrapper.dwcdn.net/v8D2z/). Data from [US Federal Reserve Open Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0)."  />
 <p class="caption">
 Figure 7.40: Range chart: Explore the [interactive
-version](https://datawrapper.dwcdn.net/v8D2z/1/). Data from [US Federal
+version](https://datawrapper.dwcdn.net/v8D2z/). Data from [US Federal
 Reserve Open
 Data](https://docs.google.com/spreadsheets/d/1qAfMHBegOz1-ZlN9UurZ_wsesmLGYlu_ch7M3Anwdsg/edit#gid=0).
 </p>
@@ -5871,10 +5853,10 @@ Figure 7.43: To create a scatter chart in Datawrapper, format data in
 three columns: labels, x-values, and y-values.
 </p>
 
-<img src="images/07-chart/scatter.png" alt="Scatter chart: Explore the [interactive version](https://datawrapper.dwcdn.net/8OQz7/1/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/)."  />
+<img src="images/07-chart/scatter.png" alt="Scatter chart: Explore the [interactive version](https://datawrapper.dwcdn.net/8OQz7/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/)."  />
 <p class="caption">
 Figure 7.44: Scatter chart: Explore the [interactive
-version](https://datawrapper.dwcdn.net/8OQz7/1/). Data from the [World
+version](https://datawrapper.dwcdn.net/8OQz7/). Data from the [World
 Bank](https://docs.google.com/spreadsheets/d/1LJCj3RaVgaQsAZriV_JDQhBrIBSvnH_N1LBCkZK1bqs/).
 </p>
 
@@ -5902,16 +5884,17 @@ tooltips to properly display your data:
     need to edit the tooltips to properly display data for each point.
 
 6.  In the *Visualize* screen, under the *Annotate* tab, scroll down to
-    *Customize tooltip*, and click *edit tooltip template*. In the
-    *Customize tooltip HTML* window, click inside the *Title* field and
-    click on the blue column name *Country* to add it there. The *Title*
-    field now appears as `{{ Country }}`, which means that the proper
-    country name will appear in the tooltip when you hover over each
-    point. In addition, click inside the *Body* field, type
-    `Life expectancy:`, then click the blue column with the same name to
+    the *Customize tooltip* section, select *Show tooltips*, and click
+    the *Customize tooltips* button to open its window. Click inside the
+    first field, which represents the tooltip *Title*, then click
+    further down on the blue *Country* button to add `{{ Country }}`
+    there. This means that the proper country name will appear in the
+    tooltip title when you hover over each point. In addition, click
+    inside the second field, which represents the tooltip *Body*, type
+    `Life expectancy:`, then click the blue button with the same name to
     add it, so that `{{ Life_expectancy }}` appears after it. Press
     *return* twice on your keyboard, then type `Fertility:` and click on
-    the blue column with the same name to add it, so that
+    the blue button with the same name to add it, so that
     `{{ Fertility }}` appears right after it, as shown in Figure
     <a href="#fig:scatter-tooltip-editor">7.45</a>. Press *Save* to
     close the tooltip editor window.
@@ -5924,7 +5907,7 @@ to customize the display.
 
 1.  Back in the *Visualize* screen, when you hover your cursor over a
     point, the tooltip will properly display its data according to your
-    editor settings above, as shown in Figure Figure
+    editor settings above, as shown in Figure
     <a href="#fig:scatter-tooltip">7.46</a>.
 
 <img src="images/07-chart/scatter-tooltip.png" alt="Hover over a data point to inspect the edited tooltip display." width="400" />
@@ -5959,10 +5942,10 @@ Figure 7.47: To create a bubble chart in Datawrapper, organize the data
 into five columns: labels, x-axis, y-axis, bubble size, bubble color.
 </p>
 
-<img src="images/07-chart/bubble.png" alt="Bubble chart: Explore the [interactive version](https://datawrapper.dwcdn.net/ZX9QR/2/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg)."  />
+<img src="images/07-chart/bubble.png" alt="Bubble chart: Explore the [interactive version](https://datawrapper.dwcdn.net/ZX9QR/). Data from the [World Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg)."  />
 <p class="caption">
 Figure 7.48: Bubble chart: Explore the [interactive
-version](https://datawrapper.dwcdn.net/ZX9QR/2/). Data from the [World
+version](https://datawrapper.dwcdn.net/ZX9QR/). Data from the [World
 Bank](https://docs.google.com/spreadsheets/d/1yiZ975_uXOTOd0OCAdrR_s-bQFs7za3dar69IXPo6Xg).
 </p>
 
@@ -6536,56 +6519,59 @@ let’s start by establishing a common vocabulary about maps.
 ### Deconstruct a Map
 
 Our book features how to create *interactive* maps, also called *tiled
-web maps* or *slippy maps* because you can zoom into and pan around to
-explore map data layers on top of a seamless set of basemap tiles. They
-usually include *zoom controls* (`+` and `-` buttons) to view data at
-various levels that change the display of the basemap tiles. Basemaps
-that display pictorial images of streets and buildings are known as
-*vector* tiles, while those that display satellite imagery are known as
-*raster* tiles, and we’ll explain the difference below. Take a look at
-Figure <a href="#fig:map-principles-map">8.1</a> to learn about basic
-elements in the maps you’ll create in this chapter.
+web maps* or *slippy maps*, because users can zoom into and pan around
+to explore map data layers on top of a seamless set of basemap tiles.
+Basemaps that display aerial photo imagery are known as *raster* tiles,
+while those that display pictorial images of streets and buildings are
+known as *vector* tiles. Raster map data is limited by the resolution of
+the original image, which gets fuzzier as we get closer. By contrast,
+you can zoom in very close to vector map data without diminishing its
+visual quality, as shown in Figure
+<a href="#fig:raster-vs-vector-zoom">8.1</a>. You’ll learn more about
+these concepts in the [GeoJSON and Geospatial Data](geojson.html)
+section of Chapter 14.
 
-The top layer of interactive maps generally consists of a combination of
-*points*, *polylines*, and *polygons*. Points show specific places, such
-as the street address of a home or business, sometimes with a location
-marker. Each point represents a pair of latitude and longitude
-coordinates. For example, `40.69, -74.04` marks the location of the
-Statue of Liberty in New York City. Polylines are connected strings of
-points, such as roads or transportation networks, and we place the
-“poly-” prefix before “lines” to remind us that they may contain
-multiple branches. Polygons represent closed areas defined by lines,
-such as building footprints, census tracts, or state or national
-boundaries. Since all points, polylines, and polygons consist of
-latitude and longitude coordinates, they are called vector data. You can
-zoom up very close to vector data or vector basemaps without diminishing
-their visual quality. By contrast, our ability to zoom into raster data
-or raster basemaps is limited by the resolution of the original image,
-which gets fuzzier as we get closer. You’ll learn more about these terms
-in the [GeoJSON and Geospatial Data](geojson.html) section of Chapter
-14.
+<img src="images/08-map/raster-vs-vector-zoom.png" alt="Raster map data from Esri World Imagery (on the left), and vector map data from OpenStreetMap (on the right), both showing co-author Ilyankou's childhood neighborhood in Mogilev, Belarus. Zooming into raster map data makes it fuzzier, while vector map data retains its sharpness." width="750" />
+<p class="caption">
+Figure 8.1: Raster map data from Esri World Imagery (on the left), and
+vector map data from OpenStreetMap (on the right), both showing
+co-author Ilyankou’s childhood neighborhood in Mogilev, Belarus. Zooming
+into raster map data makes it fuzzier, while vector map data retains its
+sharpness.
+</p>
+
+Look at Figure <a href="#fig:map-principles-map">8.2</a> to learn about
+basic elements in the interactive maps you’ll create in this chapter.
+The top layer usually display some combination of *points*, *polylines*,
+and *polygons*. Points show specific places, such as the street address
+of a home or business, sometimes with a location marker, and each point
+is represented by a pair of latitude and longitude coordinates. For
+example, `40.69, -74.04` marks the location of the Statue of Liberty in
+New York City. Polylines are connected strings of points, such as roads
+or transportation networks, and we place the “poly-” prefix before
+“lines” to remind us that they may contain multiple branches. Polygons
+are collections of lines that create a closed shape, such as building
+footprints, census tracts, or state or national boundaries. Since
+points, polylines, and polygons fundamentally consist of latitude and
+longitude coordinates, all of them are vector data.
 
 <img src="images/08-map/map-principles-map.png" alt="Key elements of an interactive map."  />
 <p class="caption">
-Figure 8.1: Key elements of an interactive map.
+Figure 8.2: Key elements of an interactive map.
 </p>
 
-On interactive maps, any of these top-layer data elements may display a
-hidden *tooltip* (when you hover the cursor over them) or a *popup*
-(when you click on them) that reveals additional information about its
-properties. Like a traditional static map, the *legend* identifies the
-meaning of symbols, shapes, and colors. Maps also may include a *north
-arrow* or *scale* to orient readers to direction and relative distance.
-Similar to a chart, good maps should include a title and brief
-description to provide context about what it shows, along with its data
-sources, clarifying notes, and credit to the individuals or
+Interactive maps usually include *zoom controls* (`+` and `-` buttons)
+to change the display of the basemap tiles and give the appearance of
+viewing the surface from different distances. Top-layer map data may
+display a hidden *tooltip* (when you hover the cursor over them) or a
+*popup* (when you click on them) that reveals additional information
+about its properties. Like a traditional static map, the *legend*
+identifies the meaning of symbols, shapes, and colors. Maps also may
+include a *north arrow* or *scale* to orient readers to direction and
+relative distance. Similar to a chart, good maps should include a title
+and brief description to provide context about what it shows, along with
+its data sources, clarifying notes, and credit to the individuals or
 organizations that helped to create them.
-
-TODO: ILYA please review the text above, which I revised again to
-address reviewers’ comments. Should we create a pair of vector and
-raster map images, side-by-side, with “regular” vs “zoomed in” views to
-show differences, similar to
-<a href="https://en.wikipedia.org/wiki/Vector_graphics" class="uri">https://en.wikipedia.org/wiki/Vector_graphics</a>?
 
 ### Clarify Point versus Polygon Data
 
@@ -6659,16 +6645,16 @@ this mistaken conclusion. Imagine you want to compare the relationship
 between income and education in eight counties of your state. First, you
 choose create a choropleth map of income, where darker blue areas
 represent areas with higher levels in the northwest corner, as shown in
-Figure <a href="#fig:map-two-variables">8.2</a>(a). Second, you decide
+Figure <a href="#fig:map-two-variables">8.3</a>(a). Second, you decide
 to create a symbol point map, where larger circle sizes represents a
 higher share of the population with a university degree, as shown in
-Figure <a href="#fig:map-two-variables">8.2</a>(b). Both of those maps
+Figure <a href="#fig:map-two-variables">8.3</a>(b). Both of those maps
 are fine, but they still do not highlight the relationship between
 income and education.
 
 A common mistake is to place the symbol point layer on top of the
 choropleth map layer, as shown in Figure
-<a href="#fig:map-two-variables">8.2</a>(c). And this is where your map
+<a href="#fig:map-two-variables">8.3</a>(c). And this is where your map
 becomes overloaded. We generally recommend against displaying two
 variables with different symbologies on the same map, because it
 overloads the visualization and makes it very difficult for most readers
@@ -6676,7 +6662,7 @@ to recognize patterns that help them to grasp your data story.
 
 <img src="images/08-map/map-two-variables.png" alt="To compare two variables, such as income and education, avoid placing a symbol point map on top of a choropleth map. Instead, create a scatter chart, and consider pairing it with a choropleth map of one variable." width="450" />
 <p class="caption">
-Figure 8.2: To compare two variables, such as income and education,
+Figure 8.3: To compare two variables, such as income and education,
 avoid placing a symbol point map on top of a choropleth map. Instead,
 create a scatter chart, and consider pairing it with a choropleth map of
 one variable.
@@ -6684,10 +6670,10 @@ one variable.
 
 Instead, if the relationship between two variables is the most important
 aspect of your data story, create a scatter chart as shown in Figure
-<a href="#fig:map-two-variables">8.2</a>(d). Or if geographic patterns
+<a href="#fig:map-two-variables">8.3</a>(d). Or if geographic patterns
 matter for one of the variables, you could pair a choropleth map of that
 variable next to a scatter chart of both variables, by combining Figure
-<a href="#fig:map-two-variables">8.2</a>(a and d). Overall, remember
+<a href="#fig:map-two-variables">8.3</a>(a and d). Overall, remember
 that just because data *can* be mapped does not always mean it *should*
 be mapped. Pause to reflect on whether or not location matters, because
 sometimes a chart tells your data story better than a map.
@@ -6715,11 +6701,11 @@ with some additional lower- and higher-value homes. Both choropleth maps
 use the same scale. The key difference is the size of the geographic
 units: the first map shows home values at the larger state level, while
 the second map shows home values at the smaller county level, as shown
-in Figure <a href="#fig:zillow-northeast">8.3</a>.
+in Figure <a href="#fig:zillow-northeast">8.4</a>.
 
 <img src="images/08-map/zillow-northeast.png" alt="Zillow typical home values in September 2020 shown at the larger state level (left) versus the smaller county level (right)." width="500" />
 <p class="caption">
-Figure 8.3: Zillow typical home values in September 2020 shown at the
+Figure 8.4: Zillow typical home values in September 2020 shown at the
 larger state level (left) versus the smaller county level (right).
 </p>
 
@@ -6756,36 +6742,38 @@ overview of visualization colors in general, see Lisa Charlotte Rost’s
 Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
 Pick More Beautiful Colors for Your Data
 Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
-both on the Datawrapper blog.[26]
+both on the Datawrapper blog.[28]
 
-To illustrate key concepts about colors in choropleth map design, let’s
-explore a wonderful tool called
+To illustrate key concepts about colors in choropleth maps, let’s
+explore a wonderful design assistant called
 [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and
-Mark Harrower.[27] See the interface in Figure
-<a href="#fig:map-colorbrewer">8.4</a>. Since ColorBrewer is a design
-assistant, do not expect to upload your data into it to create a map.
-Instead, ColorBrewer will recommend color palettes that work best with
-our map data and the type of story we wish to tell, and allow us to
-export those color codes into our preferred mapping tool.
+Mark Harrower.[29] Since ColorBrewer is a design assistant, you do *not*
+upload your map data directly into it. Instead, you select the type of
+data you wish to display in your choropleth map, and ColorBrewer will
+recommend color palettes that work best with your data story. Then you
+can export those color codes into your preferred choropleth mapping
+tool, as shown in the [Datawrapper](choropleth-datawrapper.html) and
+[Tableau Public](map-tableau.html) tutorials below. See the ColorBrewer
+interface in Figure <a href="#fig:map-colorbrewer">8.5</a>.
 
-<img src="images/08-map/map-colorbrewer-annotated.png" alt="The ColorBrewer interface: data classes, type of color scheme, and recommended color codes."  />
+<img src="images/08-map/map-colorbrewer-annotated.png" alt="The ColorBrewer design assistant interface: data classes, type of color scheme, and recommended color codes."  />
 <p class="caption">
-Figure 8.4: The ColorBrewer interface: data classes, type of color
-scheme, and recommended color codes.
+Figure 8.5: The ColorBrewer design assistant interface: data classes,
+type of color scheme, and recommended color codes.
 </p>
 
-In this section, we’ll focus on two important decisions you’ll need to
-make when designing choropleth maps: choosing the type of color palette
-(sequential, divergent, or qualitative) and the intervals to group
-together similar-colored data points.
+In this section, we’ll focus on two important decisions that ColorBrewer
+can assist you with when designing choropleth maps: choosing the type of
+color palette (sequential, divergent, or qualitative) and the intervals
+to group together similar-colored data points.
 
 When you open [ColorBrewer](https://colorbrewer2.org/), the top row asks
-you to select the number of data classes in your choropleth map, which
-means the number of intervals or steps in your color range. This design
-tool can recommend distinct colors for up to twelve data classes,
-depending on the type of scheme you select. But for now, use the default
-setting of 3, and we’ll return to this topic later when we discuss
-intervals in more detail further below.
+you to select the number of data classes (also known as intervals or
+steps) in the color range of your choropleth map. ColorBrewer can
+recommend distinct colors for up to twelve data classes, depending on
+the type of scheme you select. But for now, use the default setting of
+3, and we’ll return to this topic later when we discuss intervals in
+more detail further below.
 
 ### Choose Choropleth Palettes to Match Your Data
 
@@ -6798,11 +6786,11 @@ the story you wish to tell.
 
 ColorBrewer groups palettes into three types—sequential, diverging, and
 qualitative—as shown in Figure
-<a href="#fig:map-principles-color-schemes">8.5</a>.
+<a href="#fig:map-principles-color-schemes">8.6</a>.
 
 <img src="images/08-map/map-principles-color-schemes.png" alt="Sequential, diverging, and qualitative color palettes from [ColorBrewer](https://colorbrewer2.org/)."  />
 <p class="caption">
-Figure 8.5: Sequential, diverging, and qualitative color palettes from
+Figure 8.6: Sequential, diverging, and qualitative color palettes from
 [ColorBrewer](https://colorbrewer2.org/).
 </p>
 
@@ -6832,7 +6820,7 @@ and red).
 To illustrate the difference between *sequential* and *diverging*
 numeric values, compare the two maps that display the same data on
 income per capita in the contiguous US states in 2018 in Figure
-<a href="#fig:map-principles-classification">8.6</a>. The sequential
+<a href="#fig:map-principles-classification">8.7</a>. The sequential
 color palette shows five shades of blue to represent the low-to-high
 range of income levels, and it works best for a data story that
 emphasizes the highest income levels, shown by the darker blue colors
@@ -6845,7 +6833,7 @@ versus higher-income East Coast and West Coast states.
 
 <img src="images/08-map/map-principles-classification.png" alt="Sequential versus diverging color palettes to illustrate per capita income in US dollars in the contiguous states, from American Community Survey, 2018." width="750" />
 <p class="caption">
-Figure 8.6: Sequential versus diverging color palettes to illustrate per
+Figure 8.7: Sequential versus diverging color palettes to illustrate per
 capita income in US dollars in the contiguous states, from American
 Community Survey, 2018.
 </p>
@@ -6855,145 +6843,159 @@ alphanumeric codes that web browsers translate into colors. You can
 select hexadecimal codes (`#ffffff` is white), RGB codes (`255,255,255`
 is white), or CMYK codes (`0,0,0,0` is white), and export them in
 different formats, as shown in Figure
-<a href="#fig:colorbrewer-export">8.7</a>, if your preferred map tool
+<a href="#fig:colorbrewer-export">8.8</a>, if your preferred map tool
 allows you to import color palettes.
 
 <img src="images/08-map/colorbrewer-export.png" alt="Click open the *Export* tab to display your color palette codes in various formats." width="435" />
 <p class="caption">
-Figure 8.7: Click open the *Export* tab to display your color palette
+Figure 8.8: Click open the *Export* tab to display your color palette
 codes in various formats.
 </p>
 
 ### Choose Color Intervals to Group Choropleth Map Data
 
-Another important design choice for choropleth maps is the color
-intervals, which determine how you group and display data by using
-similar colors. Since your ability to set intervals varies across
-different mapping tools, this section will explain broad concepts, and
-specific map tutorials will demonstrate how to apply them.
+Another important design choice is color intervals, which determine how
+you group and display data on your choropleth map. This is a powerful
+set of decisions that dramatically shapes how your map appears in
+readers’ eyes, and the message conveyed by your data story. You will
+need to consider several options in this multi-step decision-making
+process, and although there are few uniform design rules, we will offer
+guidance and recommendations. Since options for selecting intervals vary
+across different mapping tools, we will explain broad concepts in this
+section, with occasional screenshots from Datawrapper and Tableau
+Public, but will save the details for those specific tutorials later in
+the chapter.
 
-Some mapping tools allow you to choose two different *types of color
-intervals* to show movement up or down a data scale, as shown in Figure
-<a href="#fig:interval-types">8.8</a>. *Steps* are clearly-marked color
-dividers, like a staircase, while *continuous* is a gradual change in
-hue, like a ramp.
+Some mapping tools allow you to choose between two different *types of
+color intervals* to show movement up or down a data scale, as shown in
+Figure <a href="#fig:intervals-type-combined">8.9</a>. *Steps* are
+clearly-marked color dividers, like a staircase, while *continuous* is a
+gradual change in hue, like a ramp. Both go upward, but take you there
+in different ways.
 
-<img src="images/08-map/interval-types.png" alt="Two types of color intervals: steps and continuous." width="300" />
+<img src="images/08-map/intervals-type-combined.png" alt="Steps versus continuous color intervals in Datawrapper (left) and Tableau Public (right)." width="500" />
 <p class="caption">
-Figure 8.8: Two types of color intervals: steps and continuous.
+Figure 8.9: Steps versus continuous color intervals in Datawrapper
+(left) and Tableau Public (right).
 </p>
 
-If both options exist, which one is best? There is no clear map design
-rule about this, but we can gain some wisdom from some excellent
-[Datawrapper Academy posts about choropleth map
-design](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps).
-On one hand, some recommend using [continuous intervals to show greater
-geographical
-diversity](https://academy.datawrapper.de/article/117-color-palette-for-your-map),
-except when it’s important to your data story to display a threshold,
-where steps make sense to show areas above or below a certain line. On
-the other hand, some point out that people are quite bad at
-distinguishing different hues on a continuous scale, so recommend using
-clearly-defined steps to help readers match colors to data values in
-your legend. Therefore, our general advice is to make design choices
-that are both honest and insightful: tell the truth about the data and
-also draw our attention to what matters about this interpretation.
+If both options exist, which type of color interval is best: steps or
+continuous? There is no uniform map design rule about this, but consider
+these factors. On one hand, steps work best for data stories that show
+areas below or above a specific line or threshold, such as zones that
+will flood if the sea level rises by one meter. Also, since human eyes
+are not always good at distinguishing between hues, steps can help
+readers to quickly match colors from your map legend to your data. On
+the other hand, continuous works best for data stories that draw
+attention to subtle differences between neighboring areas, such as the
+wide range of values on an income scale. Read this Datawrapper Academy
+article on [what to consider when creating choropleth
+maps](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps).
+Overall, we advise you to make design choices that are both honest and
+insightful: tell the truth about the data and also draw attention to
+what matters in your data story.
 
-Some mapping tools also allow you to choose how to *interpolate* your
-data, meaning the method for grouping numbers to represent similar
-colors on your map. This may involve a two-part decision about step
-dividers and numerical methods.
-
-First, if you choose *steps*, how many dividers should you use to slice
-up your data? Once again, there is no clear rule. Fewer steps creates a
-*coarse* map that highlights broad differences, while more steps creates
-a *granular* map that emphasizes geographic diversity between areas. But
-adding more steps also makes differences less visible. Remember that
-simply adding more colors does not necessarily make a better map. We
-recommend experimenting with [ColorBrewer](https://colorbrewer2.org) to
-raise or lower the *Number of data classes* (also known as steps or
-dividers) for different types of color palettes, to visualize the
-consequences of your possible design choices, as shown in Figure
-<a href="#fig:colorbrewer-steps">8.9</a>. Make decisions with the best
+If you choose *steps*, how many dividers should you use to slice up your
+data? Once again, there is no uniform rule, but reflect on these options
+and outcomes. Fewer steps creates a *coarse* map that highlights broad
+differences, while more steps creates a *granular* map that emphasizes
+geographic diversity between areas. However, simply adding more steps
+does not necessarily make a better map, because differences between
+steps become less visible to the human eye. Since the
+[ColorBrewer](https://colorbrewer2.org) design assistant was created
+specifically for steps (and does not show continuous options), we
+recommend experimenting by raising or lowering the *Number of data
+classes* (also known as steps) to visualize the appearance of different
+design choices, as shown in Figure
+<a href="#fig:colorbrewer-steps">8.10</a>. Make decisions with the best
 interests of your readers in mind, to represent your data in honest and
 insightful ways.
 
-<img src="images/08-map/colorbrewer-steps.png" alt="Experiment with ColorBrewer data classes (or steps) and color palettes." width="400" />
+<img src="images/08-map/colorbrewer-steps.png" alt="If you choose steps, experiment with ColorBrewer data classes and color palettes." width="300" />
 <p class="caption">
-Figure 8.9: Experiment with ColorBrewer data classes (or steps) and
-color palettes.
+Figure 8.10: If you choose steps, experiment with ColorBrewer data
+classes and color palettes.
 </p>
 
-Second, whether you choose steps or continuous, which *interpolation*
-method is the best way to group your data into similar colors on your
-scale? Map tools may display the options in different ways, as seen in
-Figure <a href="#fig:intervals-datawrapper-tableau">8.10</a>, and they
-also may vary depending on whether you selected steps or continuous
-colors.
+Some choropleth mapping tools also allow you to choose how to
+*interpolate* your data, meaning the mathematical method for grouping
+numbers to represent similar colors on your map. For example,
+Datawrapper displays two different sets of drop-down menus for
+interpolation options, depending on whether you chose steps or
+continuous, as shown in Figure
+<a href="#fig:interpolation-datawrapper-combined">8.11</a>.
 
-<img src="images/08-map/intervals-datawrapper-tableau.png" alt="Interpolation options in two map tools: Datawrapper (left) and Tableau Public (right)."  />
+<img src="images/08-map/interpolation-datawrapper-combined.png" alt="Interpolation options for steps (left) and continuous (right) in Datawrapper." width="650" />
 <p class="caption">
-Figure 8.10: Interpolation options in two map tools: Datawrapper (left)
-and Tableau Public (right).
+Figure 8.11: Interpolation options for steps (left) and continuous
+(right) in Datawrapper.
 </p>
 
--   *Linear* means that the values are placed in a straight line, from
-    lowest to highest. This method works best when the data are evenly
-    distributed, otherwise the colors draw too much attention to the
-    outliers at the low and high ends of the scale. If your goal is to
-    emphasize the outliers, however, then linear color scale may do the
-    trick.
--   *Quantiles* means that the values are divided into groups of an
-    equal number. More specifically, *quartiles*, *quintiles*, and
-    *deciles* mean dividing the values into four, five, or ten groups of
-    equal quantity. This method works best when the data are not evenly
-    distributed, because it uses colors to draw more attention to the
-    diversity of groups inside the scale, not just the low and high
-    ends.
--   *Rounded values* are similar to quantiles, but decimals in the scale
-    are replaced with rounded numbers that look nicer to readers’ eyes,
-    such as multiples of 5s or 10s.
--   *Natural breaks (Jenks)* groups close values together while
-    maximizing differences between other groups. It offers a compromise
-    between linear (which emphasizes the extreme ends) and quantiles
-    (which emphasize internal diversity).
--   *Custom* allows you to manually place dividers wherever you wish
-    along the color scale. We generally recommend to *not* use custom
-    settings because they are more likely to create a misleading map, as
-    you’ll learn in [Chapter 15: Detect Lies and Reduce Data
-    Bias](detect.html).
+Before choosing how to interpolate, create a [histogram chart in Google
+Sheets described in chapter 7](histogram-google.html) to gain a deeper
+understanding of how your data is distributed. Is your histogram evenly
+distributed with a symmetrical shape around the mean? Or is it skewed to
+one side, with one tail of outliers that is longer than the other?
+Compare the simplified histograms in Figure
+<a href="#fig:interpolation-histograms">8.12</a>, which may influence
+your decision about how to interpolate, as described below.
 
-TODO: ILYA let’s discuss ways to visualize different interpolation
-methods by combining mini-histograms of sample data with mini-maps to
-visually contrast different data and approaches, building on these
-resources:
-<a href="https://academy.datawrapper.de/article/117-color-palette-for-your-map" class="uri">https://academy.datawrapper.de/article/117-color-palette-for-your-map</a>;
-and also
-<a href="https://theconversation.com/next-slide-please-data-visualisation-expert-on-whats-wrong-with-the-uk-governments-coronavirus-charts-149329" class="uri">https://theconversation.com/next-slide-please-data-visualisation-expert-on-whats-wrong-with-the-uk-governments-coronavirus-charts-149329</a>
+<img src="images/08-map/interpolation-histograms.png" alt="Histogram of evenly-distributed data (on right) versus skewed data with a longer tail to one side (on left)." width="500" />
+<p class="caption">
+Figure 8.12: Histogram of evenly-distributed data (on right) versus
+skewed data with a longer tail to one side (on left).
+</p>
 
-Which interpolation method is best? While there are no rigid rules, some
-methods above work better for different types of data stories. If you
-wish to emphasize the lows and highs in your data, choose linear because
-it uses color to draw attention to the extreme ends of the scale. Or if
-you wish to emphasize geographic diversity in your data, consider
-quantiles (or any of its cousins) because they use color to
-differentiate the middle portions of the scale. Or if you’re not sure
-what your data looks like, [create a histogram as you learned in Chapter
-7](histogram-google.html) to visualize it and help make wise map design
-choices. \[TODO: demonstrate a histogram with map data here?
-<a href="https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales" class="uri">https://academy.datawrapper.de/article/294-how-to-customize-stepped-color-scales</a>\]
+In this introductory book, we can simplify the most common interpolation
+options in three basic categories:
 
-In any case, be very aware of how color palettes and interpolation
-dramatically shape the appearance of choropleth maps and how the data
-appears in readers’ eyes. Always create maps show us the story and tell
-the truth. \[TODO: ADD THIS? In general, Datawrapper recommends choosing
-ranges to make sure readers “see all the differences in the data,”
-rather than hiding them out of sight…. cite
-<a href="https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps" class="uri">https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps</a>\]
-TODO ALSO: Review all of the recommendations in the Datawrapper Academy
-post above and decide ones to include as rules versus recommendations vs
-neither. For example: “use the same intervals… 0, 25, 50 instead of 0,
-15, 50…” runs counter to other advice we give about interpolation.
+-   *Linear* places your data values in a straight line, from lowest to
+    highest. This method works best when the data are evenly
+    distributed, or if you wish to draw attention to the low and high
+    extremes in your data, which will stand out in light and dark
+    colors.
+
+-   *Quantiles* divide your data values into groups of an equal number.
+    More specifically, *quartiles*, *quintiles*, and *deciles* divide
+    the values into four, five, or ten groups of equal quantity. This
+    method works best when the data are skewed to one side, because the
+    regrouping allows you to draw attention to diversity inside the
+    data, rather than the extremes. *Rounded values* are similar to
+    quantiles, but the decimals are replaced with rounded numbers that
+    look nicer to readers’ eyes.
+
+-   *Natural breaks (Jenks)* offers a compromise between linear and
+    quantile methods. It groups data values that are close together, but
+    maximizes differences with other groups. This method may work best
+    with skewed data where you wish to draw attention to both internal
+    diversity and extremes.
+
+Which interpolation method is best? There are no uniform design rules,
+except that we advise *against* using *Custom* settings to manually
+place color intervals wherever you wish, since they are more likely to
+create misleading maps, as you’ll learn in [Chapter 15: Detect Lies and
+Reduce Data Bias](detect.html). Our best advice is to experiment with
+different interpolation methods, especially when working with skewed
+data, to better understand how these options shape the appearance of
+your choropleth maps and the data stories you tell with them.
+
+Overall, [Datawrapper Academy
+recommends](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps)
+that you make color intervals choices to help readers “see all the
+differences in the data” by fully utilizing all of the colors in your
+range. In other words, if your map displays only the lightest and
+darkest colors, you’re not sufficiently using the middle portion of your
+color range to highlight geographic patterns and diversity within your
+data. To do this, you’ll need to explore beyond the default map settings
+and test which options do the best job of telling an honest and
+insightful data story.
+
+Designing true and meaningful choropleth maps is challenging work. You
+will improve your skills the same way we did, by reading widely, looking
+at different maps, and testing various ways to visualize your data.
+Become more aware of how your decisions about color intervals can
+dramatically alter how the data appears to readers. Most important,
+create maps that tell truthful and insightful data stories.
 
 Normalize Choropleth Map Data
 -----------------------------
@@ -7015,22 +7017,22 @@ values (such as percentages or per capita rates) rather than raw counts.
 If you ignore normalization when creating a choropleth map and display
 raw numbers, you’ll essentially recreate a population map, which doesn’t
 tell us anything new. For example, compare two maps shown in Figure
-<a href="#fig:normalize-map-data">8.11</a>. They both are about Covid-19
+<a href="#fig:normalize-map-data">8.13</a>. They both are about Covid-19
 cases in the continental US as of June 26, 2020. Figure
-<a href="#fig:normalize-map-data">8.11</a>a shows total number of
+<a href="#fig:normalize-map-data">8.13</a>a shows total number of
 recorded cases per state, and Figure
-<a href="#fig:normalize-map-data">8.11</a>b shows Covid-19 cases
+<a href="#fig:normalize-map-data">8.13</a>b shows Covid-19 cases
 adjusted by the state’s population. Darker colors represent higher
 values. Do you notice any differences in spatial patterns?
 
 <img src="images/08-map/normalize-map-data-annotated.png" alt="Choropleth maps work best with normalized values."  />
 <p class="caption">
-Figure 8.11: Choropleth maps work best with normalized values.
+Figure 8.13: Choropleth maps work best with normalized values.
 </p>
 
 Both maps show Covid-19 data collected by the New York Times and
 published [on GitHub](https://github.com/nytimes/covid-19-data). In the
-map in Figure <a href="#fig:normalize-map-data">8.11</a>b, we normalized
+map in Figure <a href="#fig:normalize-map-data">8.13</a>b, we normalized
 values by dividing the total number of cases by the population in each
 state, according to the 2018 US Census American Community Survey, the
 most recent data available on the day of writing. We did not add legends
@@ -7040,14 +7042,14 @@ breaks for classification.
 
 What are the worst-hit states according to the map showing total
 Covid-19 counts (shown in Figure
-<a href="#fig:normalize-map-data">8.11</a>a)? If you are familiar with
+<a href="#fig:normalize-map-data">8.13</a>a)? If you are familiar with
 the US geography, you can quickly tell that these are New York, New
 Jersey, Massachusetts, Florida, Illinois, Texas, and California. But
 five of these happen to be some of the most populous states in the US,
 so it makes sense that they will also have higher Covid-19 cases.
 
 Now, how about the map in Figure
-<a href="#fig:normalize-map-data">8.11</a>b? You can see that New York
+<a href="#fig:normalize-map-data">8.13</a>b? You can see that New York
 and its neighbors, including New Jersey and Massachusetts, have by far
 the highest rates per capita (per person), which we saw in the first
 map. But you can also see that in fact California, Texas, and Florida
@@ -7091,12 +7093,12 @@ Web](embed.html).
 
 In this section, we will construct a sample point map of museums and
 parks in North America, with two different groups of styled markers, as
-shown in Figure <a href="#fig:mymaps-final">8.12</a>. Follow the steps
+shown in Figure <a href="#fig:mymaps-final">8.14</a>. Follow the steps
 below to create your own version.
 
 <img src="images/08-map/mymaps-final.png" alt="Point map of parks and museums created with Google My Maps. Explore the [interactive version](https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&usp=sharing)."  />
 <p class="caption">
-Figure 8.12: Point map of parks and museums created with Google My Maps.
+Figure 8.14: Point map of parks and museums created with Google My Maps.
 Explore the [interactive
 version](https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99ZabyOZABr&usp=sharing).
 </p>
@@ -7110,54 +7112,54 @@ version](https://www.google.com/maps/d/u/1/edit?mid=1W6VujVZzB1Y1D1tktLVhO99Zaby
 
 2.  Navigate to [Google My Maps](https://www.google.com/mymaps/). In the
     upper-left corner, click the *+ Create a New Map* button, as shown
-    in Figure <a href="#fig:mymaps-create-new">8.13</a>. This will
+    in Figure <a href="#fig:mymaps-create-new">8.15</a>. This will
     create an empty map with familiar Google Maps style.
 
 <img src="images/08-map/mymaps-create-new.png" alt="Navigate to https://www.google.com/mymaps/ and create a new map." width="300" />
 <p class="caption">
-Figure 8.13: Navigate to
+Figure 8.15: Navigate to
 <a href="https://www.google.com/mymaps/" class="uri">https://www.google.com/mymaps/</a>
 and create a new map.
 </p>
 
 1.  Add a relevant title and description by clicking its current title,
     *Untitled map*, and typing in the new information, as shown in
-    Figure <a href="#fig:mymaps-edit-title">8.14</a>.
+    Figure <a href="#fig:mymaps-edit-title">8.16</a>.
 
 <img src="images/08-map/mymaps-edit-title.png" alt="Add title and description to your map." width="300" />
 <p class="caption">
-Figure 8.14: Add title and description to your map.
+Figure 8.16: Add title and description to your map.
 </p>
 
 1.  To add data to your map, click the *Import* button under the
     *Untitled layer* item, as shown in Figure
-    <a href="#fig:mymaps-import">8.15</a>.
+    <a href="#fig:mymaps-import">8.17</a>.
 
 <img src="images/08-map/mymaps-import.png" alt="Click the *Import* button to add a data layer to your map." width="300" />
 <p class="caption">
-Figure 8.15: Click the *Import* button to add a data layer to your map.
+Figure 8.17: Click the *Import* button to add a data layer to your map.
 </p>
 
 1.  In the *Choose a file to import* screen, there are several ways to
     upload data. Choose *Google Drive*, since our sample data is already
     in that format, and select the *Recent* button to locate the
     *Museums and Parks* file you saved to your Google Drive, as shown in
-    Figure <a href="#fig:mymaps-import-gdrive">8.16</a>. Press *Select*.
+    Figure <a href="#fig:mymaps-import-gdrive">8.18</a>. Press *Select*.
 
 <img src="images/08-map/mymaps-import-gdrive.png" alt="After you choose to import your data through *Google Drive*, select the *Recent* button to find the file." width="750" />
 <p class="caption">
-Figure 8.16: After you choose to import your data through *Google
+Figure 8.18: After you choose to import your data through *Google
 Drive*, select the *Recent* button to find the file.
 </p>
 
 1.  In the *Choose columns to position your placemarks* screen, select
     the *Address* column to place your point data on the map, as shown
-    in Figure <a href="#fig:mymaps-placemarks">8.17</a>. Press
+    in Figure <a href="#fig:mymaps-placemarks">8.19</a>. Press
     *Continue*.
 
 <img src="images/08-map/mymaps-placemarks.png" alt="Select *Address* to place your data on the map." width="350" />
 <p class="caption">
-Figure 8.17: Select *Address* to place your data on the map.
+Figure 8.19: Select *Address* to place your data on the map.
 </p>
 
 Hint: You can select multiple boxes if your address is split across
@@ -7167,11 +7169,11 @@ longitude pairs, such as `41.76, -72.69`.
 
 1.  In the *Choose a column to title your markers* window, select the
     *Name* column to title your point markers, as shown in Figure
-    <a href="#fig:mymaps-marker-titles">8.18</a>. Then click *Finish*.
+    <a href="#fig:mymaps-marker-titles">8.20</a>. Then click *Finish*.
 
 <img src="images/08-map/mymaps-marker-titles.png" alt="Select the *Name* column to title your point markers." width="350" />
 <p class="caption">
-Figure 8.18: Select the *Name* column to title your point markers.
+Figure 8.20: Select the *Name* column to title your point markers.
 </p>
 
 Google My Maps will automatically [geocode your address data as we
@@ -7181,11 +7183,11 @@ blue markers, and center the map to fit all of the points.
 1.  Click the three-dot kebab menu next to the *Museums and Parks…*
     layer to *Rename* and shorten its name, since the full name of the
     file is imported by default, as shown in Figure
-    <a href="#fig:mymaps-rename-layer">8.19</a>.
+    <a href="#fig:mymaps-rename-layer">8.21</a>.
 
 <img src="images/08-map/mymaps-rename-layer.png" alt="Click the 3-dot kebab menu next to the layer to shorten its name." width="300" />
 <p class="caption">
-Figure 8.19: Click the 3-dot kebab menu next to the layer to shorten its
+Figure 8.21: Click the 3-dot kebab menu next to the layer to shorten its
 name.
 </p>
 
@@ -7193,60 +7195,60 @@ name.
     custom color marker for each group to replace the default blue
     markers. Click on *Individual styles*, and in the *Group places by*
     dropdown, change the value to *Style data by column: Group*, as show
-    in Figure <a href="#fig:mymaps-group-places">8.20</a>. This option
+    in Figure <a href="#fig:mymaps-group-places">8.22</a>. This option
     is available because we intentionally created the *Group* column for
     museums and parks when setting up the sample data. Close this window
     by clicking the upper-right *X* symbol.
 
 <img src="images/08-map/mymaps-group-places.png" alt="Change *Individual styles* to *Group places by: Group*." width="300" />
 <p class="caption">
-Figure 8.20: Change *Individual styles* to *Group places by: Group*.
+Figure 8.22: Change *Individual styles* to *Group places by: Group*.
 </p>
 
 1.  Under *Styled by group*, float your cursor over the *Museum* label
     to reveal the bucket styling symbol, and click it, as shown in
-    Figure <a href="#fig:mymaps-customize-marker">8.21</a>.
+    Figure <a href="#fig:mymaps-customize-marker">8.23</a>.
 
 <img src="images/08-map/mymaps-customize-marker.png" alt="Float your cursor over a label to reveal the bucket styling symbol." width="295" />
 <p class="caption">
-Figure 8.21: Float your cursor over a label to reveal the bucket styling
+Figure 8.23: Float your cursor over a label to reveal the bucket styling
 symbol.
 </p>
 
 1.  Assign a new color for *Museums*, and click *More icons* to find a
     more appropriate point marker symbol, as shown in Figure
-    <a href="#fig:mymaps-colors-icons">8.22</a>.
+    <a href="#fig:mymaps-colors-icons">8.24</a>.
 
 <img src="images/08-map/mymaps-colors-icons.png" alt="Select point marker colors and icons." width="295" />
 <p class="caption">
-Figure 8.22: Select point marker colors and icons.
+Figure 8.24: Select point marker colors and icons.
 </p>
 
 1.  In the *Choose an icon* screen, use the upper-right *Filter* to
     search for icon types by name, such as “Museum” as shown in Figure
-    <a href="#fig:mymaps-choose-icon">8.23</a>. Repeat this process for
+    <a href="#fig:mymaps-choose-icon">8.25</a>. Repeat this process for
     *Parks*.
 
 <img src="images/08-map/mymaps-choose-icon.png" alt="Search by filter in the *Choose an icon* screen." width="750" />
 <p class="caption">
-Figure 8.23: Search by filter in the *Choose an icon* screen.
+Figure 8.25: Search by filter in the *Choose an icon* screen.
 </p>
 
 1.  In the *Choose an icon* screen, you can click the lower-left *Custom
     icon* button to upload an image, which will be transformed into a
     thumbnail image icon, as shown in Figure
-    <a href="#fig:mymaps-custom-icon">8.24</a>. This custom icon was
+    <a href="#fig:mymaps-custom-icon">8.26</a>. This custom icon was
     created from a [Wikimedia image of the Washington
     Monument](https://commons.wikimedia.org/wiki/File:Washington_Monument_Panorama.jpg).
 
 <img src="images/08-map/mymaps-custom-icon.png" alt="Upload a photo to create a custom thumbnail icon image." width="180" />
 <p class="caption">
-Figure 8.24: Upload a photo to create a custom thumbnail icon image.
+Figure 8.26: Upload a photo to create a custom thumbnail icon image.
 </p>
 
 1.  Click on any map marker to edit its data, insert a photo to appear
     in its pop-up window, or add Google Map directions, as shown in
-    Figure <a href="#fig:mymaps-edit-point">8.25</a>. This photo came
+    Figure <a href="#fig:mymaps-edit-point">8.27</a>. This photo came
     from a [Wikimedia image of the Metropolitan Museum of
     Art](https://commons.wikimedia.org/wiki/File:Metropolitan_Museum_of_Art_entrance_NYC.JPG).
     However, you must add photos or directions manually, since these
@@ -7254,30 +7256,30 @@ Figure 8.24: Upload a photo to create a custom thumbnail icon image.
 
 <img src="images/08-map/mymaps-edit-point.png" alt="Click any map marker to edit its data, add a photo, or directions." width="345" />
 <p class="caption">
-Figure 8.25: Click any map marker to edit its data, add a photo, or
+Figure 8.27: Click any map marker to edit its data, add a photo, or
 directions.
 </p>
 
 1.  You can change the style of the basemap to one of nine different
     versions offered by Google, as shown in the drop-down menu in Figure
-    <a href="#fig:mymaps-style-basemap">8.26</a>. Choose high-contrast
+    <a href="#fig:mymaps-style-basemap">8.28</a>. Choose high-contrast
     colors for marker icons and basemap backgrounds.
 
 <img src="images/08-map/mymaps-style-basemap.png" alt="Change the style of the Google basemap." width="300" />
 <p class="caption">
-Figure 8.26: Change the style of the Google basemap.
+Figure 8.28: Change the style of the Google basemap.
 </p>
 
 1.  At the top of the map, see buttons to manually add more point
     markers, draw a line, add directions, or measure distance, as shown
-    in Figure <a href="#fig:mymaps-draw-line">8.27</a>. However, Google
+    in Figure <a href="#fig:mymaps-draw-line">8.29</a>. However, Google
     My Maps has limited support for polylines and polygons, and you
     cannot easily create a choropleth map with colored boundaries that
     represent data values.
 
 <img src="images/08-map/mymaps-draw-line.png" alt="Manually add more point markers, lines, and directions, or measure distance." width="235" />
 <p class="caption">
-Figure 8.27: Manually add more point markers, lines, and directions, or
+Figure 8.29: Manually add more point markers, lines, and directions, or
 measure distance.
 </p>
 
@@ -7285,27 +7287,27 @@ measure distance.
     you finish editing your map, click the *Share* button underneath the
     map’s title and description, and in the next screen, make sure
     *Enable link sharing* is activated, as shown in Figure
-    <a href="#fig:mymaps-share">8.28</a>, and copy the generated link.
+    <a href="#fig:mymaps-share">8.30</a>, and copy the generated link.
     You can share with link with anyone, with or without a Google
     account. You also have the option to make your map publicly appear
     in web search results, if desired.
 
 <img src="images/08-map/mymaps-share.png" alt="Before sharing your map, make sure anyone with the link can view it." width="400" />
 <p class="caption">
-Figure 8.28: Before sharing your map, make sure anyone with the link can
+Figure 8.30: Before sharing your map, make sure anyone with the link can
 view it.
 </p>
 
 1.  If you wish to embed your map as an iframe on a web page, click the
     3-button kebab menu to the right of the map title and select *Embed
     on my site*, as shown in Figure
-    <a href="#fig:mymaps-embed">8.29</a>. This will generate an HTML
+    <a href="#fig:mymaps-embed">8.31</a>. This will generate an HTML
     embed code, which we will explain in [Chapter 10: Embed on the
     Web](embed.html).
 
 <img src="images/08-map/mymaps-embed.png" alt="Select *Embed on my site* to copy the HTML iframe code." width="315" />
 <p class="caption">
-Figure 8.29: Select *Embed on my site* to copy the HTML iframe code.
+Figure 8.31: Select *Embed on my site* to copy the HTML iframe code.
 </p>
 
 1.  If you wish to edit your map in the future, here are two ways to
@@ -7316,12 +7318,12 @@ Figure 8.29: Select *Embed on my site* to copy the HTML iframe code.
     by keyword. When you create a Google My Map from data in a Google
     Sheet, we recommend that you keep the My Map and Sheet files
     together in the same folder in your Google Drive, as shown in Figure
-    <a href="#fig:mymaps-gdrive">8.30</a>, to help you make edits more
+    <a href="#fig:mymaps-gdrive">8.32</a>, to help you make edits more
     easily in the future.
 
 <img src="images/08-map/mymaps-gdrive.png" alt="Keep your Google My Maps and Sheets files together in a Google Drive folder." width="500" />
 <p class="caption">
-Figure 8.30: Keep your Google My Maps and Sheets files together in a
+Figure 8.32: Keep your Google My Maps and Sheets files together in a
 Google Drive folder.
 </p>
 
@@ -7353,7 +7355,7 @@ represent their data values. Our sample symbol map displays about 300
 major US cities as point locations with two variables: the 2019
 estimated population (using circle size) and the percent change in
 population since 2010 (using circle color), as shown in Figure
-<a href="#fig:datawrapper-symbolmap">8.31</a>. Remember that we use
+<a href="#fig:datawrapper-symbolmap">8.33</a>. Remember that we use
 *point* data to create symbol maps, but *polygon* data to create
 choropleth maps, and you’ll learn how to design those with Datawrapper
 in the subsequent section. Later in the book, we’ll explain [how to
@@ -7362,7 +7364,7 @@ embed your interactive Datawrapper maps on the web in Chapter
 
 <img src="images/08-map/datawrapper-symbolmap.png" alt="Symbol point map of US city population growth with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/V0V9Y)."  />
 <p class="caption">
-Figure 8.31: Symbol point map of US city population growth with
+Figure 8.33: Symbol point map of US city population growth with
 Datawrapper. Explore the [interactive
 version](https://datawrapper.dwcdn.net/V0V9Y).
 </p>
@@ -7382,7 +7384,8 @@ symbol point map, follow this tutorial.
     US territory, but they do not appear in the Datawrapper map for
     reasons explained in step 4.
 
-TODO: Fix Puerto Rico with newer Datawrapper map
+TODO: asked Datawrapper to fix Puerto Rico geocoding issue with their
+USA &gt; States and Territories map
 
 Good maps often require [cleaning up messy data as described in Chapter
 5](clean.html). In our spreadsheet we narrowed the original list down to
@@ -7401,11 +7404,11 @@ calculated this way: `(2019 - 2010) / 2010 * 100`.
 
 2.  Open [Datawrapper](https://datawrapper.de), click on *Start
     Creating*, then the *New Map* button, and select *Symbol map* as
-    shown in Figure <a href="#fig:datawrapper-symbolmap-start">8.32</a>.
+    shown in Figure <a href="#fig:datawrapper-symbolmap-start">8.34</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-start.png" alt="Start to create a symbol map in Datawrapper." width="600" />
 <p class="caption">
-Figure 8.32: Start to create a symbol map in Datawrapper.
+Figure 8.34: Start to create a symbol map in Datawrapper.
 </p>
 
 1.  In the *Select your map* screen, enter *USA* and search for options.
@@ -7423,13 +7426,13 @@ Figure 8.32: Start to create a symbol map in Datawrapper.
 3.  In the *Match your columns* screen, select the *City-State* column
     to be *Matched as Address*, then scroll down to click the *Next*
     button, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-match">8.33</a>. In the next
+    <a href="#fig:datawrapper-symbolmap-match">8.35</a>. In the next
     screen click *Go*, then see your geocoded data displayed on a map in
     the following screen.
 
 <img src="images/08-map/datawrapper-symbolmap-match.png" alt="Select the *City-State* column to be matched as the *Address*." width="400" />
 <p class="caption">
-Figure 8.33: Select the *City-State* column to be matched as the
+Figure 8.35: Select the *City-State* column to be matched as the
 *Address*.
 </p>
 
@@ -7439,11 +7442,11 @@ Figure 8.33: Select the *City-State* column to be matched as the
     select the *circle* symbol, to be sized by *Pop Estimate 2019*, with
     a maximum symbol size of 25 pixels. Under *Symbol colors*, select
     the *Percent Change 2010-2019* column, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-refine">8.34</a>.
+    <a href="#fig:datawrapper-symbolmap-refine">8.36</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-refine.png" alt="Refine your map by selecting data to display symbol shapes, sizes, and colors."  />
 <p class="caption">
-Figure 8.34: Refine your map by selecting data to display symbol shapes,
+Figure 8.36: Refine your map by selecting data to display symbol shapes,
 sizes, and colors.
 </p>
 
@@ -7454,11 +7457,11 @@ sizes, and colors.
     section](design-choropleth.html). The first code is dark pink,
     followed by a 4-class sequential green:
     `#d01c8b,#bae4b3,#74c476,#31a354,#006d2c`. See Figure
-    <a href="#fig:datawrapper-symbolmap-colors">8.35</a>.
+    <a href="#fig:datawrapper-symbolmap-colors">8.37</a>.
 
 <img src="images/08-map/datawrapper-symbolmap-colors.png" alt="Create a new color palette by importing five hexadecimal color codes from ColorBrewer." width="600" />
 <p class="caption">
-Figure 8.35: Create a new color palette by importing five hexadecimal
+Figure 8.37: Create a new color palette by importing five hexadecimal
 color codes from ColorBrewer.
 </p>
 
@@ -7468,14 +7471,14 @@ color codes from ColorBrewer.
     scale. Click the *More options* button, and under *Legend*, change
     *Labels* to *custom*, and click each label to edit the text that
     appears on the map menu, as shown in Figure
-    <a href="#fig:datawrapper-symbolmap-intervals">8.36</a>. Learn more
+    <a href="#fig:datawrapper-symbolmap-intervals">8.38</a>. Learn more
     about these options in the [Datawrapper Academy post on customizing
     your symbol
     map](https://academy.datawrapper.de/article/120-customizing-your-symbol-map).
 
 <img src="images/08-map/datawrapper-symbolmap-intervals.png" alt="Customize the interval ranges and edit the legend." width="500" />
 <p class="caption">
-Figure 8.36: Customize the interval ranges and edit the legend.
+Figure 8.38: Customize the interval ranges and edit the legend.
 </p>
 
 1.  Under the *Visualize* screen, click the *Annotate* tab to insert a
@@ -7520,14 +7523,14 @@ districts, and census tracts for the United States.
 In this section, you’ll create a choropleth map of typical home values
 for US states in August 2020 according to the [Zillow Home Value
 Index](https://www.zillow.com/research/data/), as shown in Figure
-<a href="#fig:datawrapper-map-final">8.37</a>. The index reflects
+<a href="#fig:datawrapper-map-final">8.39</a>. The index reflects
 typical home values (meaning those in the 35th to 65th percentile range,
 around the median) for single-family residences, condos, and co-ops, and
 it is smoothed and seasonally adjusted.
 
 <img src="images/08-map/datawrapper-map-final.png" alt="Choropleth map of 2020 home values in US states with Datawrapper. Explore the [interactive version](https://datawrapper.dwcdn.net/kSYrw/)."  />
 <p class="caption">
-Figure 8.37: Choropleth map of 2020 home values in US states with
+Figure 8.39: Choropleth map of 2020 home values in US states with
 Datawrapper. Explore the [interactive
 version](https://datawrapper.dwcdn.net/kSYrw/).
 </p>
@@ -7540,26 +7543,14 @@ choropleth map, follow this tutorial.
     Sheets](https://docs.google.com/spreadsheets/d/1Rdaf_buH629NmO1BL_x7PMrD0wpuAeAaw0PMIkYqu1U/edit#gid=283507276),
     which we downloaded from the [Zillow research
     site](https://www.zillow.com/research/data/). Read the notes to
-    understand its origin and some data issues. For example, Washington
-    DC was included in the data, but it does not yet appear in the
-    Datawrapper map of US states, because the District of Columbia is
-    not a state.
+    understand its origin and definitions.
 
 Good maps often require [cleaning up messy data as described in Chapter
 5](clean.html). In our spreadsheet we removed all of the columns except
 two, August 2019 and August 2020, and we also inserted a *Percent
 Change* column, which we calculated this way:
 `(2020 - 2019) / 2019 * 100`. Also, we’re fortunate that Datawrapper
-easily recognizes US state names and abbreviations. If you’re mapping
-other types of geographic areas, learn more about [international ISO
-codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) and
-[place name geocoding at the Datawrapper
-Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names).
-
-TODO: DECIDE whether to keep basemap or change to one of the others that
-now reflect DC. DECIDE whether to mention other types of codes
-recognized by Datawrapper, which vary with map type, such as FIPS and
-ANSI.
+easily recognizes US state names and abbreviations.
 
 1.  In the Google Sheet, go to *File &gt; Download* and select the
     Comma-Separated Values (CSV) format to save the data to your local
@@ -7568,85 +7559,113 @@ ANSI.
 2.  Open [Datawrapper](https://datawrapper.de), click on *Start
     Creating*, then click the *New Map* button, and select *Choropleth
     map* as shown in Figure
-    <a href="#fig:datawrapper-map-choose">8.38</a>. No login is required
+    <a href="#fig:datawrapper-map-choose">8.40</a>. No login is required
     to create a map, but you should sign up for a free account in order
     to save your work and publish your map online.
 
 <img src="images/08-map/datawrapper-map-choose-annotated.png" alt="In Datawrapper, click *New Map*, and choose *Choropleth*." width="500" />
 <p class="caption">
-Figure 8.38: In Datawrapper, click *New Map*, and choose *Choropleth*.
+Figure 8.40: In Datawrapper, click *New Map*, and choose *Choropleth*.
 </p>
 
-1.  In the *Select your map* screen, choose your geographic boundaries,
-    and in this case choose *USA &gt; States*, as shown in Figure
-    <a href="#fig:datawrapper-map-us-states">8.39</a>, then click
-    *Proceed*. Since Washington, DC is not a state, it does not appear
-    in this map of US States.
+1.  In the *Select your map* screen, choose your geographic boundaries.
+    In this case, search and select *USA &gt; States and Territories* in
+    order to include data for Washington DC, which is not a state, as
+    shown in Figure
+    <a href="#fig:datawrapper-map-us-states-territories">8.41</a>, then
+    click *Proceed*.
 
-<img src="images/08-map/datawrapper-map-us-states-annotated.png" alt="Choose *USA - States* for your map outline." width="500" />
+<img src="images/08-map/datawrapper-map-us-states-territories.png" alt="Choose *USA - States and Territories* for your map outline." width="500" />
 <p class="caption">
-Figure 8.39: Choose *USA - States* for your map outline.
+Figure 8.41: Choose *USA - States and Territories* for your map outline.
 </p>
 
 Hint: If Datawrapper does not list your preferred map outline, you can
 upload your own custom geography data in GeoJSON or TopoJSON format,
-which you will learn more about in the [GeoJSON and geospatial data
-formats section of Chapter 14](geojson.html).
+which you will learn more about in the [GeoJSON data section of Chapter
+14](geojson.html).
 
 1.  In the *Add your data* screen, you can manually enter data for each
     area, which would be fine for just a few, but not for 50 states.
     Instead, scroll down and click the *Import your dataset* button, as
-    shown in Figure <a href="#fig:datawrapper-import-dataset">8.40</a>.
-    Datawrapper will explain that your data must include either *Names*
-    (such as `California`) or *ISO-Codes* (standardized two-letter codes
-    for states, such as `CA`, or three-letter codes for nations, such as
-    `USA`). Since we prepared our data this way, click *Start Import*.
+    shown in Figure <a href="#fig:datawrapper-import-dataset">8.42</a>.
 
 <img src="images/08-map/datawrapper-import-dataset.png" alt="Scroll down below the *add data* table to import your dataset." width="200" />
 <p class="caption">
-Figure 8.40: Scroll down below the *add data* table to import your
+Figure 8.42: Scroll down below the *add data* table to import your
 dataset.
 </p>
 
-TODO: Add screenshot of names/codes drop-down menu, which is helpful
-because it shows how Datawrapper labels each geography, and one could
-copy and paste this into a spreadsheet and use VLookup. Also include
-image of this import button, since it’s hidden far below the table that
-most users see.
+Datawrapper will explain that when uploading data to the *USA &gt;
+States and Territories map*, your data must include one of these
+columns:
 
-1.  On the *Import your dataset* screen, instead of pasting your data,
-    we recommend that you click to *upload a CSV file* and select the
-    file you downloaded in step 2.
+-   Names, such as `California`.
+-   FIPS-Codes, the Federal Information Processing Series numeric codes
+    for US states and smaller geographies, where California is `06`.
+-   ANSI-Codes, the American National Standards Institute alphabetical
+    or numeric codes for US states and smaller geographies, where
+    California is `CA`. Learn more from the [US Census Bureau about ANSI
+    and FIPS
+    codes](https://www.census.gov/library/reference/code-lists/ansi.html).
 
-2.  In the *Match your columns* screen, click the column that matches up
-    with ISO codes, as shown in Figure
-    <a href="#fig:datawrapper-map-match">8.41</a>. You may need to
-    scroll down a bit to click the *Next* button, then *Continue*.
+Codes vary by the type of map. For example, a world map may accept
+country names (which vary in spelling) or [ISO three-letter
+codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). To
+view all of the codes for your selected geography, go back one screen in
+Datawrapper and select the Geo-code drop-down menu, as shown in Figure
+<a href="#fig:datawrapper-import-codes">8.43</a>. If necessary, you
+could copy and paste names and their code equivalents into your
+spreadsheet to prepare your data. Learn more about [place name geocoding
+at the Datawrapper
+Academy](https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names).
 
-<img src="images/08-map/datawrapper-map-match.png" alt="Select the data column that contains matching ISO codes." width="500" />
+<img src="images/08-map/datawrapper-import-codes.png" alt="To view all codes for your selected map, go back one screen to the *Geo-Code* drop-down menu." width="250" />
 <p class="caption">
-Figure 8.41: Select the data column that contains matching ISO codes.
+Figure 8.43: To view all codes for your selected map, go back one screen
+to the *Geo-Code* drop-down menu.
 </p>
 
-1.  In a similar way on the next screen, click the column of data values
-    that you initially want to map, and click *Matched as values*. For
+1.  Since our data includes columns for both Names and ANSI-Codes, go
+    ahead and click *Start Import*.
+
+2.  On the *Import your dataset* screen, rather than paste your data, we
+    recommend that you click to *upload a CSV file* and select the file
+    you downloaded in step 2.
+
+3.  In the *Match your columns* screen, click the column that matches up
+    with ANSI codes, as shown in Figure
+    <a href="#fig:datawrapper-map-match">8.44</a>. You may need to
+    scroll down a bit to click the *Next* button, then *Continue*.
+
+<img src="images/08-map/datawrapper-map-match.png" alt="Select the data column that contains matching ANSI codes." width="500" />
+<p class="caption">
+Figure 8.44: Select the data column that contains matching ANSI codes.
+</p>
+
+1.  Proceed to the next screen, select the column of data values that
+    you initially wish to map, and click *Matched as values*, as shown
+    in Figure <a href="#fig:datawrapper-map-match-values">8.45</a>. For
     this tutorial, select *Aug2020 Home Values*, then scroll down to
     click *Next*, then *Go*, then *Proceed*. You’ll be able to map other
     data values in a later step.
 
-TODO Above: Add screenshot of Aug2020 Home Values column, as reviewer
-requested.
+<img src="images/08-map/datawrapper-map-match-values.png" alt="Select the data column that contains the values that you wish to map." width="500" />
+<p class="caption">
+Figure 8.45: Select the data column that contains the values that you
+wish to map.
+</p>
 
 1.  In the *Visualize* screen, under the *Refine* tab, click the *wrench
     symbol* next to the color palette to review the *default* map
     settings, as shown in Figure
-    <a href="#fig:datawrapper-map-default">8.42</a>. Never automatically
+    <a href="#fig:datawrapper-map-default">8.46</a>. Never automatically
     accept the default map, but it’s a good place to start and explore
     how factors shape its appearance.
 
 <img src="images/08-map/datawrapper-map-default.png" alt="Under the *Refine* tab, click the *wrench symbol* to see the default map settings." width="600" />
 <p class="caption">
-Figure 8.42: Under the *Refine* tab, click the *wrench symbol* to see
+Figure 8.46: Under the *Refine* tab, click the *wrench symbol* to see
 the default map settings.
 </p>
 
@@ -7661,13 +7680,13 @@ data story that emphasizes the low and high extremes.
     interpolation to change how values are assigned to colors. For
     example, change from *linear* to *quartiles*, which groups the data
     into four groups of equal size, as shown in Figure
-    <a href="#fig:datawrapper-map-quartiles">8.43</a>. This map works
+    <a href="#fig:datawrapper-map-quartiles">8.47</a>. This map works
     better for a data story that emphasizes geographic diversity, since
     we see more contrast between states in the middle range.
 
 <img src="images/08-map/datawrapper-map-quartiles.png" alt="Under the *Refine* tab, change the interpolation from *linear* to *quartiles* and see how the map changes." width="400" />
 <p class="caption">
-Figure 8.43: Under the *Refine* tab, change the interpolation from
+Figure 8.47: Under the *Refine* tab, change the interpolation from
 *linear* to *quartiles* and see how the map changes.
 </p>
 
@@ -7682,11 +7701,11 @@ Figure 8.43: Under the *Refine* tab, change the interpolation from
     example, see the map of percent change in home value from 2019 to
     2020, with a diverging red-to-blue palette, 5 steps, and rounded
     values in Figure
-    <a href="#fig:datawrapper-map-percentchange">8.44</a>.
+    <a href="#fig:datawrapper-map-percentchange">8.48</a>.
 
 <img src="images/08-map/datawrapper-map-percentchange.png" alt="Experiment with other colors, intervals, and data columns to find true and meaningful stories." width="650" />
 <p class="caption">
-Figure 8.44: Experiment with other colors, intervals, and data columns
+Figure 8.48: Experiment with other colors, intervals, and data columns
 to find true and meaningful stories.
 </p>
 
@@ -7716,13 +7735,13 @@ reviewer requested.
     is to click on blue column names, or format them using their
     drop-down menus, to make the proper codes appear in double curly
     brackets, as shown in Figure
-    <a href="#fig:datawrapper-map-tooltip">8.45</a>. Learn more about
+    <a href="#fig:datawrapper-map-tooltip">8.49</a>. Learn more about
     [customizing tooltips from Datawrapper
     Academy](https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps).
 
 <img src="images/08-map/datawrapper-map-tooltip.png" alt="To edit tooltips, click the blue column names or use drop-down menus to format the codes." width="600" />
 <p class="caption">
-Figure 8.45: To edit tooltips, click the blue column names or use
+Figure 8.49: To edit tooltips, click the blue column names or use
 drop-down menus to format the codes.
 </p>
 
@@ -7764,7 +7783,7 @@ on the support page.
 
 In this section, we will create a choropleth map of healthcare spending
 per country as a percentage of their gross domestic product (GDP), as
-shown in Figure <a href="#fig:tableau-polygon-final">8.46</a>. Remember
+shown in Figure <a href="#fig:tableau-polygon-final">8.50</a>. Remember
 that choropleth maps work best when we [normalize the
 data](normalize-choropleth.html) to show relative, rather than absolute,
 numbers. Creating a map of total health spending per country would not
@@ -7779,14 +7798,14 @@ enter an email address to download the application.
 
 <img src="images/08-map/tableau-polygon-final.png" alt="Choropleth map of healthcare spending with Tableau Public. Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1). Data from the World Bank."  />
 <p class="caption">
-Figure 8.46: Choropleth map of healthcare spending with Tableau Public.
+Figure 8.50: Choropleth map of healthcare spending with Tableau Public.
 Explore the [interactive
 version](https://public.tableau.com/profile/ilya7257#!/vizhome/2017HealthcareSpendingbyCountryasofGDP/Dashboard1).
 Data from the World Bank.
 </p>
 
 Let’s look at the steps involved to create a choropleth from Figure
-<a href="#fig:tableau-polygon-final">8.46</a> in detail.
+<a href="#fig:tableau-polygon-final">8.50</a> in detail.
 
 1.  Open the [Healthcare Spending by Nation as Percent of GDP data in
     Google
@@ -7825,26 +7844,26 @@ sheet, and connected to it directly.
     automatically, so you need to manually change the data type. To do
     so, click the data type icon (e.g. globe or a green `#` for numeric
     values), and then choose *Geographic Role &gt; Country/Region* as
-    shown in Figure <a href="#fig:tableau-data-geographic">8.47</a>.
+    shown in Figure <a href="#fig:tableau-data-geographic">8.51</a>.
 
 <img src="images/08-map/tableau-data-geographic.png" alt="Make sure Tableau Public knows that the Country Name column contains geographic data." width="400" />
 <p class="caption">
-Figure 8.47: Make sure Tableau Public knows that the Country Name column
+Figure 8.51: Make sure Tableau Public knows that the Country Name column
 contains geographic data.
 </p>
 
 1.  In the bottom-left corner, click the orange *Sheet 1* button to
     create a worksheet with your first visualization, as shown in Figure
-    <a href="#fig:tableau-go-to-worksheet">8.48</a>.
+    <a href="#fig:tableau-go-to-worksheet">8.52</a>.
 
 <img src="images/08-map/tableau-go-to-worksheet.png" alt="Click the orange button to go sheet 1 where you can create your map." width="400" />
 <p class="caption">
-Figure 8.48: Click the orange button to go sheet 1 where you can create
+Figure 8.52: Click the orange button to go sheet 1 where you can create
 your map.
 </p>
 
 1.  In *Sheet 1*, create your choropleth map using a two-step process,
-    as shown in Figure <a href="#fig:tableau-drag">8.49</a>. First,
+    as shown in Figure <a href="#fig:tableau-drag">8.53</a>. First,
     drag-and-drop the *Country Name* field into the middle of the
     worksheet (alternatively to the Detail box of the Marks card) to
     create the map. The default view is the symbol map, which we need to
@@ -7854,7 +7873,7 @@ your map.
 
 <img src="images/08-map/tableau-drag-annotated.png" alt="Drag and drop *Country Name* to the center of the sheet, then *Health Spending As % of GDP* to the *Color* box in the *Marks* card."  />
 <p class="caption">
-Figure 8.49: Drag and drop *Country Name* to the center of the sheet,
+Figure 8.53: Drag and drop *Country Name* to the center of the sheet,
 then *Health Spending As % of GDP* to the *Color* box in the *Marks*
 card.
 </p>
@@ -7866,11 +7885,11 @@ card.
 2.  You can change the color palette by clicking the Color box of the
     Marks card, and then *Edit colors*. Change the palette to *Green*,
     and change it from continuous to steps, as shown in Figure
-    <a href="#fig:tableau-polygon-color">8.50</a>.
+    <a href="#fig:tableau-polygon-color">8.54</a>.
 
 <img src="images/08-map/tableau-polygon-color.png" alt="Change the color scheme to Green with 5 steps." width="400" />
 <p class="caption">
-Figure 8.50: Change the color scheme to Green with 5 steps.
+Figure 8.54: Change the color scheme to Green with 5 steps.
 </p>
 
 1.  When you hover over countries, you will notice a tooltip that tells
@@ -7881,11 +7900,11 @@ Figure 8.50: Change the color scheme to Green with 5 steps.
     to just `Country` (do not change the grayed-out text inside `<` and
     `>` as these are variable names), and add a `%` sign at the end of
     the second row, as shown in Figure
-    <a href="#fig:tableau-polygon-tooltip">8.51</a>.
+    <a href="#fig:tableau-polygon-tooltip">8.55</a>.
 
 <img src="images/08-map/tableau-polygon-tooltip.png" alt="Change tooltip text to make it more user-friendly." width="400" />
 <p class="caption">
-Figure 8.51: Change tooltip text to make it more user-friendly.
+Figure 8.55: Change tooltip text to make it more user-friendly.
 </p>
 
 1.  Let’s make our map title more meaningful. Double-click the default
@@ -7897,7 +7916,7 @@ Figure 8.51: Change tooltip text to make it more user-friendly.
     so we are going to create the final layout that include map’s title
     and credits, the legend, and is appropriate for sharing. At the
     bottom-left of the program, create a *New Dashboard*, as shown in
-    Figure <a href="#fig:tableau-dashboard-create">8.52</a>. Dashboards
+    Figure <a href="#fig:tableau-dashboard-create">8.56</a>. Dashboards
     in Tableau are layouts that can contain visualizations from multiple
     sheets, as well as text boxes, images, and other elements, creating
     rich exploratory interfaces. In this tutorial, we will stick to just
@@ -7905,7 +7924,7 @@ Figure 8.51: Change tooltip text to make it more user-friendly.
 
 <img src="images/08-map/tableau-dashboard-create-annotated.png" alt="Before you publish the map, create a new dashboard to finalize your layout." width="400" />
 <p class="caption">
-Figure 8.52: Before you publish the map, create a new dashboard to
+Figure 8.56: Before you publish the map, create a new dashboard to
 finalize your layout.
 </p>
 
@@ -7913,23 +7932,23 @@ finalize your layout.
     Automatic so that the map is responsive and occupies 100% of the
     width on all devices. Drag and drop Sheet 1 to the *Drop sheets
     here* area, as shown in Figure
-    <a href="#fig:tableau-dashboard">8.53</a>. This will copy the map,
+    <a href="#fig:tableau-dashboard">8.57</a>. This will copy the map,
     the title, and the legend from Sheet 1.
 
 <img src="images/08-map/tableau-dashboard-annotated.png" alt="To create a responsive dashboard, change the Size to Automatic." width="400" />
 <p class="caption">
-Figure 8.53: To create a responsive dashboard, change the Size to
+Figure 8.57: To create a responsive dashboard, change the Size to
 Automatic.
 </p>
 
 1.  Right-click the upper part of the map legend, and select *Floating*,
-    as shown in Figure <a href="#fig:tableau-dashboard-legend">8.54</a>.
+    as shown in Figure <a href="#fig:tableau-dashboard-legend">8.58</a>.
     Now you are able to place your legend directly on top of the map to
     save space. Drag and drop it to one of the map’s corners.
 
 <img src="images/08-map/tableau-dashboard-legend.png" alt="To place the legend on top of the map, make sure it is floating." width="400" />
 <p class="caption">
-Figure 8.54: To place the legend on top of the map, make sure it is
+Figure 8.58: To place the legend on top of the map, make sure it is
 floating.
 </p>
 
@@ -7993,11 +8012,11 @@ In this section, we will build an interactive point map of hospitals in
 Texas using [General Hospital
 Information](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data)
 dataset by Medicare, which you can see in Figure
-<a href="#fig:socrata-final">8.55</a>.
+<a href="#fig:socrata-final">8.59</a>.
 
 <img src="images/08-map/socrata-final.png" alt="In this tutorial, we will build a point map of hospitals in Texas using Socrata."  />
 <p class="caption">
-Figure 8.55: In this tutorial, we will build a point map of hospitals in
+Figure 8.59: In this tutorial, we will build a point map of hospitals in
 Texas using Socrata.
 </p>
 
@@ -8033,24 +8052,24 @@ Navigate to the [Hospital General
 Dataset](https://data.medicare.gov/Hospital-Compare/Hospital-General-Information/xubh-q36u/data),
 and in the menu on the right-hand side choose *Visualize &gt; Launch New
 Visualization*, as shown in Figure
-<a href="#fig:socrata-launch-new-viz">8.56</a>. This will open up a
+<a href="#fig:socrata-launch-new-viz">8.60</a>. This will open up a
 *Configure Visualization* studio where you can create the map.
 
 <img src="images/08-map/socrata-launch-new-viz-annotated.png" alt="Go to Visualize >
 Launch New Visualization." width=“300” /&gt;
 <p class="caption">
-Figure 8.56: Go to Visualize &gt; Launch New Visualization.
+Figure 8.60: Go to Visualize &gt; Launch New Visualization.
 </p>
 
 In the top menu, click *Map* (globe icon between a scatter chart icon
 and a calendar). You will see an updated layout of the studio, with the
 map in the middle, and *Map Layers* and *Map Settings* items in the side
 menu on the left, as shown in Figure
-<a href="#fig:socrata-configure">8.57</a>.
+<a href="#fig:socrata-configure">8.61</a>.
 
 <img src="images/08-map/socrata-configure-annotated.png" alt="Your studio should look similar to this once you choose Map as the visualization type." width="500" />
 <p class="caption">
-Figure 8.57: Your studio should look similar to this once you choose Map
+Figure 8.61: Your studio should look similar to this once you choose Map
 as the visualization type.
 </p>
 
@@ -8064,24 +8083,24 @@ Let’s first select only hospitals that are located in the southern state
 of Texas. To do so, go to *Filters &gt; Add filter*. The dropdown menu
 lists all columns (or fields) of the dataset, where we should choose
 *State*. In the newly appeared State dropdown, choose TX (for Texas) as
-shown in Figure <a href="#fig:socrata-filter">8.58</a>, and scroll down
+shown in Figure <a href="#fig:socrata-filter">8.62</a>, and scroll down
 and click Apply. Socrata should zoom in on the map and center on Texas.
 Close *Filters* window to free screen space.
 
 <img src="images/08-map/socrata-filter-annotated.png" alt="Select Texas as the only value for State field." width="300" />
 <p class="caption">
-Figure 8.58: Select Texas as the only value for State field.
+Figure 8.62: Select Texas as the only value for State field.
 </p>
 
 Let’s now *disaggregate* the map so that we can see individual hospitals
 instead of clusters. Go to *Map Settings &gt; Clusters*, and bring the
 *Stop Clustering at Zoom Level* slider to 1, as shown in Figure
-<a href="#fig:socrata-uncluster">8.59</a>. You will see the map now
+<a href="#fig:socrata-uncluster">8.63</a>. You will see the map now
 shows individual points.
 
 <img src="images/08-map/socrata-uncluster-annotated.png" alt="To show individual points instead of clusters, set Stop Clustering at Zoom Level to 1." width="300" />
 <p class="caption">
-Figure 8.59: To show individual points instead of clusters, set Stop
+Figure 8.63: To show individual points instead of clusters, set Stop
 Clustering at Zoom Level to 1.
 </p>
 
@@ -8101,11 +8120,11 @@ variables that can be transformed to point sizes. Instead, we can use
 contains multiple variables that can be effectively visualized, such as
 *Hospital Type*, *Emergency Services* (a yes/no category), *Mortality
 national comparison* and others. Let’s stick with *Hospital Type*, as is
-illustrated in Figure <a href="#fig:socrata-style">8.60</a>.
+illustrated in Figure <a href="#fig:socrata-style">8.64</a>.
 
 <img src="images/08-map/socrata-style-annotated.png" alt="Let's display different types of hospitals in different colors." width="300" />
 <p class="caption">
-Figure 8.60: Let’s display different types of hospitals in different
+Figure 8.64: Let’s display different types of hospitals in different
 colors.
 </p>
 
@@ -8121,11 +8140,11 @@ order of categories in the legend.
 To change what is shown in tooltips when you hover or click on points,
 go to **Flyout Details**, and set Flyout Title to *Facility Name*,
 adding city and phone number as additional flyout values, as is shown in
-Figure <a href="#fig:socrata-flyout">8.61</a>.
+Figure <a href="#fig:socrata-flyout">8.65</a>.
 
 <img src="images/08-map/socrata-flyout.png" alt="To edit tooltip information, use Flyout Details menu item." width="300" />
 <p class="caption">
-Figure 8.61: To edit tooltip information, use Flyout Details menu item.
+Figure 8.65: To edit tooltip information, use Flyout Details menu item.
 </p>
 
 At this point you should have a fully-functional interactive map showing
@@ -8140,19 +8159,19 @@ still a draft, and you can go ahead and *Publish…* it.
 
 Now you can embed the map on your website as an iframe. To do so, click
 the *Share* button in the upper-right side of your map (see Figure
-<a href="#fig:socrata-share">8.62</a>), and copy the generated code from
+<a href="#fig:socrata-share">8.66</a>), and copy the generated code from
 *Embed Code* text area (Figure
-<a href="#fig:socrata-share-embed">8.63</a>). Learn more in [Chapter 10:
+<a href="#fig:socrata-share-embed">8.67</a>). Learn more in [Chapter 10:
 Embed on the Web](embed.html).
 
 <img src="images/08-map/socrata-share-annotated.png" alt="Click *Share* button to bring up *Share and Embed* window." width="400" />
 <p class="caption">
-Figure 8.62: Click *Share* button to bring up *Share and Embed* window.
+Figure 8.66: Click *Share* button to bring up *Share and Embed* window.
 </p>
 
 <img src="images/08-map/socrata-share-embed.png" alt="Copy iframe code to embed this map in another website."  />
 <p class="caption">
-Figure 8.63: Copy iframe code to embed this map in another website.
+Figure 8.67: Copy iframe code to embed this map in another website.
 </p>
 
 ### Limitations of Socrata
@@ -8265,7 +8284,7 @@ learned about [chart design in Chapter 7](chart-design.html) and [map
 design in Chapter 8](map-design.html). Jonathan Schwabish, an economist
 who specializes in creating policy-relevant data visualizations, offers
 his advice in recent publications about creating tables that communicate
-well with multiple audiences.[28]. Here’s a summary of several of his
+well with multiple audiences.[30]. Here’s a summary of several of his
 key points, which also appear in Figure
 <a href="#fig:table-design">9.1</a>.
 
@@ -8286,7 +8305,7 @@ items or outliers in your data, a topic we’ll discuss later in [Chapter
 
 When creating cross-tabulations to illustrate data correlations and
 possible causal relationships, statistician Joel Best offers two more
-design recommendations.[29]
+design recommendations.[31]
 
 1.  Place the independent variable (the suspected cause) at the top in
     the column headers, and the dependent variable (the possible effect)
@@ -8343,7 +8362,7 @@ the interactive table online.
 You’ll also learn how to create sparklines, or tiny line charts that
 quickly summarize data trends. This chart type was refined by Edward
 Tufte, a Yale professor and data visualization pioneer, who described
-sparklines as “datawords… intense, simple, word-sized graphics.”[30]
+sparklines as “datawords… intense, simple, word-sized graphics.”[32]
 While Tufte envisioned sparklines on a static sheet of paper or PDF
 document, you’ll create them inside an interactive table, as shown in
 Figure <a href="#fig:datawrapper-table">9.3</a>. Readers can search by
@@ -8611,12 +8630,12 @@ Also, you capture a static image of any web page on your computer by
 taking a [screenshot](https://en.wikipedia.org/wiki/Screenshot) with
 these built-in commands:
 
--   Chromebook: Press key combination *Ctrl + Shift + F5* for
-    rectangular select tool.
--   Macintosh: Press key combination *Shift + Command + 4* then
-    click-and-drag the cross-hair capture tool.
--   Windows: Press key combination *Windows key + Shift + S* to call up
-    the *Snip & Sketch* tool.
+-   Chromebook: *Shift + Ctrl + F5* (the *show windows* button), then
+    click-and-drag the cross-hair cursor.
+-   Macintosh: *Shift + Command + 4*, then click-and-drag the cross-hair
+    cursor to capture screenshot.
+-   Windows: *Windows logo key + Shift + S* to call up the *Snip &
+    Sketch* tool.
 
 An animated GIF file is a series of static images that captures motion
 on the screen. You can insert an animated GIF on a web page to
@@ -12459,55 +12478,64 @@ that, let’s talk about geographical data in general, introduce different
 geospatial file formats to ensure you are ready to create, use, and
 share map data.
 
-GeoJSON and Geospatial Data
+Geospatial Data and GeoJSON
 ---------------------------
 
 Geospatial data comes in an overwhelming number of file formats. We will
-tell you about a few most common ones so that you have a general idea of
-what tools you can use to work with them. But before we do that, let’s
-talk about the basics of geospatial (map) data.
+tell you about some of the most common ones, especially the GeoJSON
+format featured in this book, so that you have a general idea of the
+different varieties and what tools you can use to work with them and
+convert them into easy-to-edit formats. But before we do that, let’s
+talk about the basics of geospatial data.
 
 The first thing to know about geospatial data is that it consists of two
 components, *location* and *attribute*. When you use Google Maps to
-search for a restaurant, you get a red marker on the screen that points
-to the latitude and longitude of the physical location of the restaurant
-in the real world. These latitude and longitude (two numbers) are your
-location component. The name of the restaurant, its human-friendly
-address, and guest reviews are the attributes, which bring value to your
+search for a restaurant, you see a red marker on the screen that points
+to its location in latitude and longitude coordinates, such as
+`41.7620891, -72.6856295`. Attributes include additional information
+such as the restaurant name, its human-friendly street address, and
+guest review comments. All of these attributes add value to your
 location data.
 
-Second, geospatial data can be *raster* or *vector*, as illustrated in
-Figure <a href="#fig:geospatial-raster-vector">14.4</a>. Raster data, as
-shown in Figure <a href="#fig:geospatial-raster-vector">14.4</a>a, is a
-grid of cells (“pixels”) of a certain size (for example, 1 meter by 1
-meter). For example, satellite images of the Earth that you see on
-Google Maps are raster geospatial data. Each pixel contains the color of
-Earth that satellite cameras were able to capture. People and algorithms
-can then use raster data (images) to create outlines of buildings,
-lakes, roads, and other objects. These outlines become vector data. For
-example, most of [OpenStreetMap](https://www.openstreetmap.org) was
-built by volunteers tracing outlines of objects from satellite images.
+Second, geospatial data can be *raster* or *vector*, a concept we
+previously introduced in the [Map Design Principles section of Chapter
+8](map-design.html). In digital maps, raster data often appears as
+satellite and aerial images, and the quality depends on the resolution
+of the camera that captured them. If a satellite camera has a 1-meter
+resolution, its images display the different colors it captured as a
+grid of cells, which measure one meter on each side. Each of these cells
+appears as a color-coded pixel on our computer screens. If you zoom in
+too close to a raster image, it may appear fuzzy or pixelated due to the
+resolution limitations of the original image, as shown in Figure
+<a href="#fig:geospatial-raster-vector">14.4</a>.
 
-TODO: Use this opportunity to briefly show OSM editor and make a pitch
-for people to volunteer for this crowdsourced map of the world…
+By contrast, vector data often appears in digital maps as pictorial
+images of buildings, rivers, and regions. Vector maps are created when
+humans or algorithms draw points, polylines, and polygons from raster
+satellite or aerial images. For example, much of
+[OpenStreetMap](https://www.openstreetmap.org) has been built by
+volunteers who trace outlines of objects from satellite images, and
+anyone can sign up to help expand it this crowdsourced map of the world.
+When you zoom in, vector maps look less fuzzy than raster maps because
+every point and line is represented by latitude and longitude
+coordinates, which can be expressed with precise decimals. In addition,
+while raster data is generally limited to one value per cell (such as
+its color or temperature), vector data can contain multiple attributes
+about each object (such as its name, street address, and comments).
+Moreover, vector map files tend to be smaller in size than raster ones,
+which is important when we create and upload maps to share and display
+online.
 
-<img src="images/14-transform/geospatial-raster-vector-annotated.png" alt="Geospatial data can be raster or vector."  />
+<img src="images/14-transform/geospatial-raster-vector.png" alt="Geospatial data can be a raster grid of cells (on the left) or a vector collection of points, polylines, and polygons (on the right)." width="750" />
 <p class="caption">
-Figure 14.4: Geospatial data can be raster or vector.
+Figure 14.4: Geospatial data can be a raster grid of cells (on the left)
+or a vector collection of points, polylines, and polygons (on the
+right).
 </p>
 
-In this book, we will focus on vector data, which is based on features,
-which can be points, lines, and polygons, as shown in Figure
-<a href="#fig:geospatial-raster-vector">14.4</a>b. Vector data can be
-much more precise than raster data, because point coordinates can be
-expressed with precise decimals. In addition, vector data can contain as
-much extra *attribute* information about each object as desired, whereas
-raster data is generally limited to 1 value per cell, whether it is the
-surface color (as is the case with satellite imagery), temperature, or
-altitude. Moreover, vector map files tend to be smaller in size than
-raster ones, which is important if you share files on the web.
-
-Let’s take a look at some of the most common vector file formats.
+Since we focus on vector data in the rest of this chapter, let’s take a
+look at some of the most common vector file formats, starting with the
+one we feature in this book: GeoJSON.
 
 #### GeoJSON
 
@@ -13408,12 +13436,13 @@ to catch a thief. Learning *how to lie* not only make it harder for
 people to mislead you, but also educates you more deeply about the
 ethical decisions we make when designing visualizations that *tell the
 truth*, while recognizing there’s more than one path to that
-destination. Finally, we’ll discuss how to [recognize and reduce other
-types of data bias](data-bias.html), such as framing bias, intergroup
-bias, and map area bias, including how we define the United States.
+destination. Finally, we’ll discuss how to [recognize and reduce four
+general categories of data bias](data-bias.html)—sampling, cognitive,
+algorithmic, and intergroup—as well as [spatial
+biases](spatial-bias.html) that more specific to working with maps.
 While we may not be able to stop bias entirely, in this chapter you’ll
 learn how to identify it in the works by other people, and strategies to
-reduce its presence in our own visualizations.[31]
+reduce its presence in our own visualizations.[33]
 
 How to Lie with Charts
 ----------------------
@@ -13517,7 +13546,7 @@ Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and
 this warming has already begun to cause glacial melt and rising sea
 levels. Your task is to create *misleading* line charts that *diminish*
 the appearance of rising global temperature change in the reader’s
-eye.[32]
+eye.[34]
 
 1.  Open the [global temperature change 1880-2019 data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0),
@@ -13590,7 +13619,7 @@ expert Albert Cairo reminds us that line charts represent values in the
 line charts by their shape, rather than their height, so the baseline is
 irrelevant. Therefore, flattening the line chart for temperature change
 may mislead readers, but it’s technically not wrong, as long as it is
-labelled correctly.[33]
+labelled correctly.[35]
 
 #### Widen the chart to warp its aspect ratio
 
@@ -13621,7 +13650,7 @@ chart should roughly match its aspect ratio. For example, if a chart
 represents a 33 percent increase, which is the same as 33/100 or 1/3, he
 recommends an aspect ratio of 3:1 (because the fraction is flipped by
 placing width before height), or in other words, a line chart that is
-three times wider than its height.[34]
+three times wider than its height.[36]
 
 But Cairo does *not* propose his aspect ratio recommendation as a
 universal rule because he recognizes how it fails with very small or
@@ -13660,7 +13689,7 @@ translates into a 12:1 aspect ratio, or a line chart that is twelve
 times wider than it is tall, as shown in Figure
 <a href="#fig:temperature2-aspect-cairo">15.6</a>. Cairo warns that this
 significant global temperature increase looks “deceptively small,” so he
-cautious against using his aspect ratio recommendation in all cases.[35]
+cautious against using his aspect ratio recommendation in all cases.[37]
 
 &lt;img src=“images/15-detect/temperature2-aspect-cairo-annotated.png”
 alt=“Following Cairo’s”recommendation" for an 8% increase results in a
@@ -13792,7 +13821,7 @@ several ways that charts can be designed to deceive readers, but did not
 exhaust all of the options. For example, see additional readings on ways
 to create three-dimensional charts and to tilt the reader’s perspective
 below the baseline, which causes readers to misjudge the relative height
-of column or line charts.[36]
+of column or line charts.[38]
 
 You may feel frustrated that data visualization lacks clearly-defined
 design rules for many cases, like we are accustomed to reading in our
@@ -13816,7 +13845,7 @@ your own. We’ll focus our attention on choropleth maps that use shading
 or color to represent values in geographic areas, because they are a
 topic of considerable mischief. This exercise was inspired by geographer
 Mark Monmonier’s classic book by the same name, *How to Lie with Maps*,
-originally published in 1991, now in its third edition.[37]
+originally published in 1991, now in its third edition.[39]
 
 Before we get started, review the [map design principles in Chapter
 8](map-design.html) to avoid common mistakes when designing choropleth
@@ -13999,22 +14028,21 @@ biases, cognitive biases, algorithmic biases, and intergroup biases. In
 a later section we’ll address other types of biases that are highly
 relevant to anyone working with map data.
 
-We previously warned you about *sampling biases* in [Chapter 6: Make
-Meaningful Comparisons](comparisons.html). This category covers data
-collection procedures that seem legitimate on the surface, but include
-partially-hidden processes that skew the evidence and yield inaccurate
-results. One example is *selection bias*, which means that the sample
-selected for your study differs systematically from the larger
-population. “What you see depends on where you look,” cautions
-professors Carol Bergstrom and Jevin West, authors of a book with an
-unforgettable title, *Calling Bullshit*.[38] One obvious example is to
-attempting to find the average person’s height by measuring people who
-happen to be leaving a gymnasium after basketball practice. More subtle
-forms involve *participation bias*, such as survey methods that do not
-yield responses that are representative of the broader population. We
-also cautioned about *self-selection bias* in program evaluation data,
-where participants who apply or volunteer must be analyzed carefully to
-avoid comparisons with non-participants. Always [question your data, as
+*Sampling biases* occur when we believe our data has been selected
+fairly, but some behind-the-scenes process influences its composition
+and skews the results. We previously warned you about several types in
+the [Beware of Biased Comparisons section of Chapter
+6](biased-comparisons.html). One type to avoid is *selection bias*,
+which means that the sample selected for your study differs
+systematically from the larger population, such as when you randomly
+measure the height of people who happen to be leaving the gym after
+basketball practice. A second type to avoid is *non-response bias*,
+which happens when certain subgroups of a population as less likely to
+respond to a survey, and leads to less representative results. We also
+cautioned you about a third type, *self-selection bias*, where
+participants who apply or volunteer for a program must be evaluated
+carefully to avoid comparisons with people with non-participants, who
+may not share the same motivations. Always [question your data, as
 described in chapter 4](question.html), before you attempt to make
 meaningful comparisons. If you suspect that sampling issue may have
 snuck into the data collection process, either do not use the data, or
@@ -14022,172 +14050,194 @@ clearly describe your concerns in your visualization notes and companion
 text to call out potential biases.
 
 *Cognitive biases* refer to a category of human behaviors that skew how
-we interpret data. *Confirmation bias* is one example, which refers to
+we interpret data. One example is *confirmation bias*, which refers to
 the tendency to accept only claims that fit our preconceived notions of
-how the world works. *Pattern bias* is another example, where people
-tend to see meaningful relationships in data, even when numbers were
-randomly selected. Counter these biases by actively searching for
-alternative interpretations and considering contradictory findings with
-open eyes. Remind remind readers (and yourself) that data is noisy, and
-our brains are wired to see patterns even when none exist. See
-additional resources on statistical analysis mentioned in [chapter
-6](comparisons.html) to learn about appropriate tests to determine
-whether patterns exist in your data at odds greater than chance.
+how the world works. Counter this by actively searching for alternative
+interpretations and considering contradictory findings with open eyes. A
+second example is *pattern bias*, which describes how people tend to see
+meaningful relationships in data, even when numbers were randomly
+selected. Fight against this by reminding readers (and yourself) that
+data is noisy, and our brains are wired to see patterns, even where none
+exist. See additional resources on statistical analysis mentioned in
+[chapter 6](comparisons.html) to learn about appropriate tests to
+determine whether apparent patterns in your data exist at odds greater
+than chance. A third example is *framing bias*, which refers to negative
+or positive labels or conceptual categories that affect how we interpret
+information. On the power of labels, British statistician David
+Spiegelhalter notes that US hospitals tend to report *mortality rates*,
+while UK hospitals report *survival* rates. When weighing the risks of a
+surgical procedure for member of your family, a 5 percent mortality rate
+seems worse than a 95 percent survival rate, even though they’re
+identical. Furthermore, Spiegelhalter observes that when we supplement
+rates with raw counts, it further increases our impression of risks. For
+example, if we told you a surgical procedure had a 5 percent mortality
+rate *and* that 20 out of 400 patients died, it seems worse because we
+begin to imagine real people’s lives, not just abstract percentages.[40]
+Counter framing bias by being aware of its potential effect on our minds
+and calling it out.
 
-TODO: FINISH REWRITE with transition….
+*Algorithmic biases* occur when computer systems routinely favor certain
+outcomes over others, often by reinforcing privileges held by dominant
+social groups. Several cases have recently gained public attention. For
+example, algorithms have contributed to racial bias in the US court
+system. The Northpointe software company (now called Equivant) developed
+an algorithm to predict the risk of recidivism among defendants, which
+judges used when deciding on prison sentences or probation. But
+ProPublica investigative journalists found that the algorithm wrongly
+predicted Black defendants to be repeat offenders at almost twice the
+rate as White defendants, even when controlling for the types of prior
+crimes they committed.[41] Algorithms also have added to gender bias in
+the financial services industry. When Apple and Goldman Sachs partnered
+to offer a new type of credit card, several customers noticed that the
+software formula to evaluate applications sometimes offered men 10 to 20
+times the amount of credit as women, even if they were married, owned
+the same assets, and had similar prior credit scores.[42] In both cases,
+companies denied the charges of algorithmic bias but refused to reveal
+the decision-making process within their software formulas, which they
+argued were proprietary. As a result, we need to be vigilant about the
+misuse of data.
 
-Just as people can lie with charts and maps, let’s not forget our long
-history of misleading audiences (and ourselves) with the word choices we
-make when describing data. *Framing bias* refers to negative or positive
-labels or conceptual categories that affect how we interpret
-information. For example, British statistician David Spiegelhalter notes
-that US hospitals tend to report *mortality rates*, while UK hospitals
-report *survival* rates. When weighing the risks of a surgical procedure
-for member of your family, a 5 percent mortality rate seems worse than a
-95 percent survival rate, even though they’re identical. Furthermore,
-Spiegelhalter observes that when we supplement rates with raw counts, it
-further increases our impression of risks. For example, if we told you a
-surgical procedure had a 5 percent mortality rate *and* that 20 out of
-400 patients died, it seems worse because we begin to imagine real
-people’s lives, not abstract percentages.[39] The best way to counter
-framing bias is to be aware of its potential effect on our minds and to
-call it out, as we’ve attempted to do here.
+*Intergroup biases* refers to multiple ways that people privilege or
+discriminate by social categories, such as race, gender, class, and
+sexuality. Clearly, intergroup biases have a long history that predate
+the digital era. But in the wake of the Black Lives Matter movement,
+some authors have called attention to ways that intergroup bias pervades
+the field of data visualization, and have advocated for ways to counter
+its impact. For example, Jonathan Schwabish and Alice Feng describe how
+they applied a racial equity lens to revise the [Urban Institute’s Data
+Visualization Style
+Guide](http://urbaninstitute.github.io/graphics-styleguide/).[43] For
+example, Schwabish and Feng recommend ordering group labels to focus on
+the data story, rather than listing “White” and “Men” at the top by
+default. They also call on us to proactively acknowledge missing groups
+in our data by calling attention to those often omitted, such as
+non-binary and transgender people in US federal datasets, rather than
+ignoring their absence. Furthermore, when choosing color palettes to
+represent people in charts and maps, the authors remind us to avoid
+stereotypical colors and to avoid color-grouping Black, Latino, and
+Asian people as polar opposites of White people.
 
-TODO: FINISH REWRITE…. Also beware of *algorithmic bias* that is built
-into our software, ranging from simple examples (such as web visitor IP
-addresses being converted into the nation’s geographic center) and more
-dangerous ones (TODO EXAMPLE from Ch6)…. TODO INSERT AND EXPAND HERE?
-Also beware of *algorithmic bias* that people have built into our
-computer systems, which repeatedly favor some groups or outcomes over
-others, and often reinforce privileges held by dominant White, wealthy,
-masculine culture…. As we write this, several examples of algorithmic
-bias and machine-learning bias have appeared in the news. facial
-recognition across racial groups, or discrimination in home lending.
-examples:
-<a href="https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html" class="uri">https://www.nytimes.com/2019/08/20/upshot/housing-discrimination-algorithms-hud.html</a>;
-<a href="https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/" class="uri">https://www.brookings.edu/blog/techtank/2020/04/16/why-a-proposed-hud-rule-could-worsen-algorithm-driven-housing-discrimination/</a>
-Reduce bias by calling it out. Do not equate “digital” with
-“authoritative.” Cite more comprehensive books on this topic.
+Schwabish and Feng offer several excellent recommendations to improve
+racial equity in data visualization, but some of their proposals are
+likely to generate more discussion and debate. For example, they
+recommend to stop placing disaggregated racial and ethnic data on the
+same chart, because it encourages a “deficit-based perspective” that
+judges lower-performing groups by the standards of higher-performing
+ones, as shown in Figure <a href="#fig:schwabish-feng1">15.15</a>.
+Instead, Schwabish and Feng suggest plotting racial data in separate but
+adjacent charts, each with its own reference to state or national
+averages for comparison, as shown in Figure
+<a href="#fig:schwabish-feng2">15.16</a>. Their [example using Covid-19
+pandemic
+data](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)
+is interesting, but also raises more questions about whose interests are
+served by revising data visualizations in this way. On one hand, if
+dominant groups use racial disparities in the data to *blame the
+victim*, then it makes sense to stop feeding racist stereotypes of group
+behavior and cease comparing different groups on the same chart. On the
+other hand, if these racial disparities are caused by *structural
+obstacles* to quality jobs, housing, and health care, then do separate
+charts make it harder to identify and challenge the roots of systemic
+racism? While Schwabish and Feng raise important issues that deserve our
+attention, we believe that data visualization is not always driven by a
+fixed set of design rules. Rather, while we work to identify and reduce
+biases, we always need to examine the broader context that surrounds our
+visualizations, and continually search for better ways to tell true and
+meaningful data stories.
 
-*Intergroup bias* refers to multiple ways that people privilege or
-discriminate by social categories, such as race, gender, class,
-sexuality, etc. In the wake of the Black Lives Matter movement, greater
-attention has been called to ways that intergroup bias pervades data
-visualization, and ways to counter its impact. Jonathan Schwabish and
-Alice Feng describe how they applied a racial equity lens to revise the
-[Urban Institute’s Data Visualization Style
-Guide](http://urbaninstitute.github.io/graphics-styleguide/) with a
-racial equity lens.[40] Some recommendations are straightforward and
-relatively simple to implement. For example, they recommend ordering
-group labels to focus on the data story, rather than listing “White” and
-“Men” at the top by default. Also, we should proactively acknowledge
-missing groups in our data by calling attention to those often omitted,
-such as non-binary and transgender people in US federal datasets.
-Furthermore, when choosing color palettes to represent people in charts
-and maps, avoid stereotypical colors (such as blue for men and pink for
-women), and on a more subtle level, avoid color-grouping Black, Latino,
-and Asian people as the polar opposites of White people.
-
-Other proposals by Schwabish and Feng are likely to generate more
-discussion and debate. For example, they recommend to stop placing
-disaggregated racial and ethnic data on the same chart, because it
-encourages a “deficit-based perspective” that judges lower-performing
-groups by the standards of higher-performing ones. Instead, they suggest
-plotting data about racial and ethnic groups on separate but adjacent
-charts, each with its own reference to state or national averages for
-comparison, as shown in Figure
-<a href="#fig:schwabish-placeholder">15.15</a>. The idea is interesting,
-but the example about Covid-19 pandemic data raises more questions about
-whose interests are served by revising how data is visualized On one
-hand, if predominantly White audiences perceive racial disparities in
-Covid data to be caused by *group behavior*, then it makes sense to stop
-feeding racist stereotypes and no longer compare different groups in the
-same chart. On the other hand, if these racial disparities are caused in
-part by *structural obstacles* to quality jobs, housing, and health
-care, then do separate charts make it harder to identify and challenge
-the roots of systemic racism? Schwabish and Feng raise important issues
-for deeper reflection. Yet once again, data visualization is not always
-driven by clearly-defined design rules. Instead, our mission is to find
-*better* ways to tell true and meaningful data stories, while working to
-identify and reduce bias all around us.
-
-<img src="images/15-detect/schwabish-placeholder.png" alt="Schwabish and Feng recommend to stop placing racial and ethnic data on the same chart (left), and replace it with separate but adjacent charts with state or national averages as a comparison point (right)." width="700" />
+<img src="images/15-detect/schwabish-feng1.png" alt="To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. (Image by Schwabish and Feng)." width="500" />
 <p class="caption">
-Figure 15.15: Schwabish and Feng recommend to stop placing racial and
-ethnic data on the same chart (left), and replace it with separate but
-adjacent charts with state or national averages as a comparison point
-(right).
+Figure 15.15: To avoid a deficit-based perspective, Schwabish and Feng
+argue against combining racial and ethnic data on the same chart. (Image
+by Schwabish and Feng).
 </p>
 
-TODO above: DECIDE if description and critique of Schwabish and Feng is
-clear, interesting, and feasible with or without image (which probably
-would need to be redone and simplified).
-
-Now that we’ve introduced various types of bias to consider when working
-with data visualization in general, in the next section we’ll focus on
-two additional types of bias that are specific to mapping.
-
-Map Area and Projection Bias
-----------------------------
-
-Two additional types of bias that are specific to spatial visualizations
-are *map area bias* and *projection bias*, and beware of both types when
-creating choropleth maps, as described earlier in this chapter. Map area
-bias refers to the tendency for our eyes to focus primarily on larger
-regions on a map, and less on smaller ones. This bias diverts our
-attention to *geographic area* rather than *population size*, which is
-usually the more relevant common denominator in choropleth maps. A
-classic example arises every four years during US presidential
-elections. Conventional maps of US electoral votes exaggerate the
-influence of rural states with larger geographic areas (such as spacious
-Wyoming with less than 600,000 people), and diminish the influence of
-urban states with small areas (such as tiny Rhode Island with over
-1,000,000 people). Although Wyoming covers 80 times more area than Rhode
-Island, it currently has only 3 electoral votes, while Rhode Island has
-4. Yet many people cannot make this distinction while looking at a
-conventional electoral map, because our eyes tend to focus on states
-with larger geographic areas.
-
-A related problem is *projection bias*. In order to portray a
-three-dimensional globe on a flat surface, geographers have developed
-different projection systems, and some of these, such as Mercator maps,
-inflate the size of nations located further away from the equator, which
-mistakenly gives the appearance that many North American countries (such
-as the United States and Russia) are more important than those in
-Central Africa. \[TODO: check wording and describe how the ubiquitous
-Google Maps WGS84 standard compares, which I believe is still a
-pseudo-Mercator system:
-<a href="https://en.wikipedia.org/wiki/Web_Mercator_projection" class="uri">https://en.wikipedia.org/wiki/Web_Mercator_projection</a>\].
-For an interactive visual depiction of this issue, see
-<a href="http://googlemapsmania.blogspot.com/2020/09/how-map-projections-lie.html" class="uri">http://googlemapsmania.blogspot.com/2020/09/how-map-projections-lie.html</a>
-
-Note: Also beware of *contested territory bias* in several popular
-digital map tile services. For example, Google Maps displays different
-borders and map data depending on the internet address of the user. If
-you look at location X from a computer in China, it will show AAA, but
-if you look at the same location from a computer in Taiwan, it will
-display BBB. \[TODO: Find this cite and complete the example\]
-
-One solution to both the map area and projection bias problem is to
-replace conventional map outlines with *cartograms* (sometimes called
-*population square* or *hexagon* maps). Cartograms display geographic
-regions by relative population size, rather than total area, and also do
-not rely on a projection system. One drawback is that cartograms require
-readers to recognize abstract shapes in place of familiar boundaries,
-since these population-based visualizations do not align perfectly with
-conventional geography-based maps, as shown in Figure
-<a href="#fig:cartogram-placeholder">15.16</a>.
-
-<img src="images/15-detect/cartogram-placeholder.png" alt="PLACEHOLDER: Conventional US map (left) versus cartogram (right) of US 2016 electoral vote."  />
+<img src="images/15-detect/schwabish-feng2.png" alt="Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. (Image by Schwabish and Feng). But do separate charts make it harder to identify and challenge systemic racism?" width="500" />
 <p class="caption">
-Figure 15.16: PLACEHOLDER: Conventional US map (left) versus cartogram
-(right) of US 2016 electoral vote.
+Figure 15.16: Instead, Schwabish and Feng recommend placing racial and
+ethnic data in separate charts, with state or national averages as a
+comparison point. (Image by Schwabish and Feng). But do separate charts
+make it harder to identify and challenge systemic racism?
 </p>
 
-TODO: Update maps above using 2020 election data in November? Use
-cartogram/hexagon from Datawrapper on right. TODO above: determine if
-cartograms and pop squares are interchangeable terms, or if they have
-different definitions.
+Everyone who creates visualizations should strive to recognize and
+reduce these general categories of data bias: sampling, cognitive,
+algorithmic, and intergroup. In the next section, we’ll focus on
+different types of spatial bias that are particular to working with map
+data.
+
+Recognize and Reduce Spatial Bias
+---------------------------------
+
+In addition to recognizing and reducing data biases in general, we also
+need to watch out for spatial biases that negatively influence how we
+create and interpret maps. In this section, we’ll identify four types of
+spatial biases: map area, projection, disputed territory, and exclusion.
+We’ll also suggest specific ways to try to counter these biases when
+creating visualizations.
+
+*Map area bias* refers to the tendency for our eyes to focus primarily
+on larger regions on a map, and less on smaller ones. A classic example
+arises every four years with choropleth maps of US presidential
+elections, which draw our attention to the geographic area of US states,
+rather than their population size or number of electoral votes.
+Conventional maps exaggerate the political influence of rural states
+with larger geographic areas (such as spacious Wyoming with less than
+600,000 people), and diminish the role of urban states with small areas
+(such as tiny Rhode Island with over 1,000,000 people). Although Wyoming
+covers 80 times more area than Rhode Island, it casts only 3 electoral
+votes in US presidential races, while Rhode Island has 4 electoral
+votes. But when looking at conventional maps, most readers cannot easily
+make this distinction because our eyes are drawn to states with larger
+geographic areas, not population.
+
+*Projection bias* is a related issue about how maps portray geographic
+areas. Over time, mapmakers have developed different projection systems
+to display a three-dimensional globe on a two-dimensional surface.
+Mercator, one of the most common projection systems, inflates the size
+of many European and North American countries, and diminishes the
+relative size (and importance) of Central African and Central American
+countries that lie closer to the equator. See the [Engaging Data
+site](https://engaging-data.com/country-sizes-mercator/) and [How Map
+Projections Lie by Maps
+Mania](http://googlemapsmania.blogspot.com/2020/09/how-map-projections-lie.html)
+for interactive visualizations about Mercator projection map bias and
+comparisons to other systems. As Google maps and similar online services
+grew in popularity over the past fifteen years, their default projection
+system, known as [Web
+Mercator](https://en.wikipedia.org/wiki/Web_Mercator_projection), became
+ubiquitous on the web, further cementing distorted geography in our
+minds. (In 2018, Google Maps allowed desktop users who zoomed out to
+enable its 3D Globe view, instead of Web Mercator, but this is not the
+default setting and must be switched on.)
+
+One way to address both map area and projection bias in national or
+global maps is to replace conventional map outlines with *cartograms*,
+which are also called hexagon maps or population squares on some
+platforms. Typically, cartograms display geographic regions by relative
+population size, rather than total land area, and do not rely on a
+projection system. One advantage is that cartograms can focus our
+attention more evenly on the most relevant aspect of our data story,
+such as electoral votes in as shown in Figure
+<a href="#fig:cartogram-placeholder">15.17</a>. But one drawback is that
+cartograms require readers to recognize abstract shapes in place of
+familiar boundaries, since these population-based visualizations do not
+align perfectly with conventional Mercator geography-based land maps.
+See also \[Lisa Charlotte Rost’s post in Datawrapper Academy on [how to
+visualize US elections
+results](https://blog.datawrapper.de/how-to-visualize-the-us-election-2020-with-datawrapper/).
+
+TODO BELOW: ILYA please create two different US 2020 electoral vote
+choropleth maps in Datawrapper, using USA &gt; States and Territories
+(to include DC) and USA &gt; Electoral College hexagons. Also, use an
+image editor tool to create a third image of both maps side-by-side.
+Let’s wait to confirm after Electoral College votes on Dec 14th.
+
+<img src="images/15-detect/cartogram-placeholder.png" alt="The US 2020 Presidential electoral vote displayed in a traditional US map (left) versus a cartogram (right)."  />
+<p class="caption">
+Figure 15.17: The US 2020 Presidential electoral vote displayed in a
+traditional US map (left) versus a cartogram (right).
+</p>
 
 In the [How to Lie with Maps section of this
 chapter](how-to-lie-with-maps.html), we created choropleth maps of world
@@ -14205,44 +14255,98 @@ map to a population square map, follow this tutorial:
     (including US States). Select your preferred map, and proceed to
     visualize the data in the same way as other Datawrapper choropleth
     maps, as shown in Figure
-    <a href="#fig:map-world-pop-square">15.17</a>.
+    <a href="#fig:map-world-pop-square">15.18</a>.
 
 <img src="images/15-detect/map-world-pop-square.png" alt="World population square map with income inequality data. Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/)."  />
 <p class="caption">
-Figure 15.17: World population square map with income inequality data.
+Figure 15.18: World population square map with income inequality data.
 Explore the [interactive version](https://datawrapper.dwcdn.net/YfNDe/).
 </p>
 
-### The US States bias
+*Disputed territory bias* refers to how web map providers sometimes
+display different views of the world, depending on the location where
+you access them. For example, Russia sparked a geopolitical dispute when
+it forcibly seized the Crimea Peninsula away from Ukraine in 2014. Since
+Google desired to continue making profits in Russia, it created two
+versions of the Crimean border on its Google Maps platform. When viewed
+from a Russian IP address, Google Maps shows a solid-line border to
+signify that the territory is controlled by Russia. When viewed from
+anywhere else in the world, Google Maps shows a dotted-line border that
+represents a disputed territory. Although Google claims to “remain
+neutral on geopolitical disputes,” according to the *Washington Post*,
+the corporation clearly took a side by displaying a solid border for
+Russian viewers.[44] Google and several other web map providers have
+taken similar actions regarding the contested border between India and
+Pakistan, the waterway between Iran and Saudi Arabia, and the sea
+between Japan and South Korea.
 
-When working with data about the United States, consider the additional
-*framing bias* and *intergroup bias* that frequently causes
-visualizations to omit over 4 million US citizens. Does your data
-include the District of Columbia, which is not counted as a state, and
-whose 700,000 residents (more than Wyoming), a majority of whom are
-African-American, have no voting representation in the US Congress?
-Similarly, how does your data represent Puerto Rico, a US territory with
-over 3 million residents who are US citizens, mostly Spanish-speaking,
-but have no voting representation in Congress and no electoral votes?
-How about other US territories such as the US Virgin Islands, Guam, the
-Northern Mariana Islands, and American Samoa?
+While ordinary people can recognize disputed territory bias in Google
+Maps and other proprietary services, it’s difficult for us to directly
+challenge their decisions or pressure them to revise their basemaps. But
+we can draw on other strategies to reduce these biases. For example,
+contributors to OpenStreetMap, the crowd-sourced global map, have
+[actively discussed different
+approaches](https://wiki.openstreetmap.org/wiki/Proposed_features/Mapping_disputed_boundaries)
+to [recognize disputed territories on their
+platform](https://wiki.openstreetmap.org/wiki/Disputed_territories).
+Furthermore, we can use data visualization tool to draw different
+boundaries on top of proprietary map layers. As one example, the [Native
+Land map](https://native-land.ca), created by a non-profit organization
+based in Canada, displays outlines of territories and languages of
+indigenous people on present-day maps, to publicly remind us of
+colonialist policies and forcible displacement. One way to challenge the
+monolithic Google Maps platform is to create and publicize alternatives.
 
-Furthermore, what happens when you create a map of the United States? If
-your data does include residents of District of Columbia, Puerto Rico,
-or other US territories, what happens when you try to map it? Do these
-people become visible—or vanish? Most likely the answer depends on the
-default settings of your mapping tool, and the geographic outlines it
-uploads when you select “United States.” If the default setting includes
-only the 50 US states—even when you have data on DC or US
-territories—those 4 million US citizens will disappear from the map. And
-if you cannot easily find a way to map their data, call out the US
-States bias by describing the omission in the map notes and companion
-text. Whenever possible, include people of “the United States” rather
-than ignoring their existence. Tell true and meaningful stories.
+*Map exclusion bias* refers to ways that we fail to represent people or
+land through the act of omission. Sometimes these actions are taken by
+Google and other proprietary map providers, and sometimes we make them
+through our everyday decisions while creating maps. Take a close look at
+maps you recently made and ask yourself if they truly represent what
+their titles claim to show. For example, if you’ve created a U.S. map
+with state-level data, how did you address the District of Columbia? The
+nation’s capital is not counted as a state, nor does it have a voting
+representative in the U.S. Congress. But D.C. has over 700,000 residents
+(more than Wyoming or Vermont), and the Twenty-Third Amendment to the US
+Constitution grants it electoral votes as if it were a state (though it
+can never have more than the least populous state). Similarly, how did
+your U.S. maps represent Puerto Rico, a territory with over 3 million
+residents who are U.S. citizens, but have no vote in Congress or for the
+Presidency? What about other U.S. territories whose residents are also
+U.S. citizens, such as American Samoa, Guam, the Northern Mariana
+Islands, and the US Virgin Islands? When data exists for these places,
+do your maps make them visible—or do they vanish? If the latter, then
+you need to consider if your act of omission is also a type of
+intergroup bias, given that the majority of residents in D.C. and these
+territories are Black, Latino, and Pacific Islanders.
 
-TODO: Datawrapper kindly responded to our request for USA » States and
-Territories map codes and USA » States and Territories (hexagons), so
-update text and add example to show this.
+To be clear, some data visualization tools make it very difficult to
+include people and places who have traditionally been excluded from our
+maps. But sometimes the problem lies within us, or the default settings
+of our tools and our decisions about whether to try to change them. Take
+another look at your favorite map tool and closely examine the
+geographic outlines that appear when you choose to map data for the
+“United States.” If you feed in data that includes D.C. and U.S.
+territories—but the map only displays the 50 recognized states—then this
+omission will erase the existence of 4 million U.S. citizens from your
+map. Look beyond the default settings to determine if your tool offers
+more inclusive options. For example, Datawrapper recently improved how
+its *USA &gt; States and Territories* map options display both symbol
+point and choropleth map data, as seen in Figure
+<a href="#fig:usa-states-territories">15.19</a>. For other regions that
+do not yet appear in Datawrapper’s options, you can create and upload
+your own map boundary file in [GeoJSON format, as described in Chapter
+14](geojson.html). Or, if your tool forces you to omit part of your data
+story, then call out this bias by describing its absence in the map
+notes or the companion text. Our mission in data visualization is to
+tell true and meaningful stories, so include people and places that
+belong on the map, rather than ignoring their existence.
+
+<img src="images/15-detect/usa-states-territories-combined.png" alt="Datawrapper recently improved how it displays D.C. and non-contiguous places in its *USA - States and Territories* option for both symbol and choropleth maps." width="750" />
+<p class="caption">
+Figure 15.19: Datawrapper recently improved how it displays D.C. and
+non-contiguous places in its *USA - States and Territories* option for
+both symbol and choropleth maps.
+</p>
 
 ### Summary
 
@@ -14284,7 +14388,7 @@ you will need to make about the [format of your data
 story](story-format.html), with our continual emphasis on sharing
 interactive visualizations rather than static images. Our inspiration
 for this chapter is drawn from excellent books by visualization experts
-Cole Nussbaumer Knaflic and Alberto Cairo.[41]
+Cole Nussbaumer Knaflic and Alberto Cairo.[45]
 
 Build a Narrative on a Storyboard
 ---------------------------------
@@ -14482,35 +14586,28 @@ shows how global plastic production has increased over time.
     | 1951 |        2 |
     ...
 
-<img src="images/16-story/plastic-line-chart.png" alt="The default GDP line chart on the left, and the reduced-axis chart on the right."  />
+<img src="images/16-story/plastic-line-chart.png" alt="The default line chart for historical plastic production in Datawrapper."  />
 <p class="caption">
-Figure 16.3: The default GDP line chart on the left, and the
-reduced-axis chart on the right.
+Figure 16.3: The default line chart for historical plastic production in
+Datawrapper.
 </p>
 
 But Figure <a href="#fig:plastic-line-chart">16.3</a> does not yet focus
 on the bigger story. Our 60 percent of all of the plastics ever
 manufactured in the world have been made since 2000, or the last 15
 years of this chart, according to our analysis of the data. Let’s
-highlight this broader point by editing the chart in four ways, building
-on skills you learned in prior chapters. First, divide the data into two
-columns, *before 2000* and *since 2000*, which allows you to apply
-different colors to each data series. Insert the same data for year 2000
-in both columns to make the new chart look continuous. Second, change
-the chart type from the default *line chart* to an *area chart* to fill
-the space under the curve to draw attention to the total amount of
-plastics manufactured in global history. Third, in the *Refine* tab,
-since you do *not* want a stacked area chart, uncheck the *stack areas*
-box. Assign a dark blue color to draw more attention to the post-2000
-data series, and a gray color to diminish the appearance of the pre-2000
-data series, as shown in Figure
-<a href="#fig:plastic-line-chart">16.3</a>. Finally, hide the old title
-and replace it by adding annotations inside the area chart, using
-colored text, to emphasize the new interpretation. Overall, redesigning
-your chart helps you to communicate a more meaningful data story that
-global plastic production is increasing *and* that our world has
-manufactured more than half of our historical total in just the past 15
-years.
+highlight this broader point by editing the chart and building on skills
+you learned in prior chapters. First, divide the data into two columns,
+*before 2000* and *since 2000*, which allows you to apply different
+colors to each data series. Insert the same data for year 2000 in both
+columns to make the new chart look continuous. Second, change the chart
+type from the default *line chart* to an *area chart* to fill the space
+under the curve to draw attention to the total amount of plastics
+manufactured in global history. Third, in the *Refine* tab, since you do
+*not* want a stacked area chart, uncheck the *stack areas* box. Assign a
+dark blue color to draw more attention to the post-2000 data series, and
+a gray color to diminish the appearance of the pre-2000 data series, as
+shown in Figure <a href="#fig:plastic-refine">16.4</a>.
 
     | year | before 2000 | since 2000 |
     | 1999 |         202 |            |
@@ -14518,9 +14615,25 @@ years.
     | 2001 |             |        218 |
     ...
 
-<img src="images/16-story/plastic-refine.png" alt="Explore the [interactive version of the new area chart](https://datawrapper.dwcdn.net/1TyyZ/), which uses color and annotations to draw attention to post-2000 global plastic production."  />
+<img src="images/16-story/plastic-refine.png" alt="After dividing the data into two columns and switching to an area chart, uncheck the *stacked areas* box in the *Refine* tab."  />
 <p class="caption">
-Figure 16.4: Explore the [interactive version of the new area
+Figure 16.4: After dividing the data into two columns and switching to
+an area chart, uncheck the *stacked areas* box in the *Refine* tab.
+</p>
+
+Finally, hide the old title and replace it by adding annotations as you
+learned in the [Annotated Charts with Datawrapper section of Chapter
+7](annotated-datawrapper.html). Place annotations inside the area chart,
+using colored text, to emphasize the new interpretation and place it
+where readers will look, as shown in Figure
+<a href="#fig:plastic-area-chart">16.5</a>. Overall, redesigning your
+chart helps you to communicate a more meaningful data story that global
+plastic production is increasing *and* that our world has manufactured
+more than half of our historical total in just the past 15 years.
+
+<img src="images/16-story/plastic-area-chart.png" alt="Explore the [interactive version of the new area chart](https://datawrapper.dwcdn.net/1TyyZ/), which uses color and annotations to draw attention to post-2000 global plastic production."  />
+<p class="caption">
+Figure 16.5: Explore the [interactive version of the new area
 chart](https://datawrapper.dwcdn.net/1TyyZ/), which uses color and
 annotations to draw attention to post-2000 global plastic production.
 </p>
@@ -14572,11 +14685,11 @@ to show the confidence level in the data, so use those when appropriate.
 Furthermore, the two-column method shown in the prior section also works
 to visually distinguish between observed versus project data with solid
 versus dashed lines, as shown in the Google Sheets chart editor in
-Figure <a href="#fig:observed-vs-projected">16.5</a>.
+Figure <a href="#fig:observed-vs-projected">16.6</a>.
 
 <img src="images/16-story/observed-vs-projected.png" alt="Split one data column into two columns to contrast observed data (solid line) versus projected data (dashed line)."  />
 <p class="caption">
-Figure 16.5: Split one data column into two columns to contrast observed
+Figure 16.6: Split one data column into two columns to contrast observed
 data (solid line) versus projected data (dashed line).
 </p>
 
@@ -14791,10 +14904,13 @@ the same location.
     and re-download the entire web page from the server, using one of
     these key combinations:
 
-    -   Ctrl + F5 (most browsers for Windows or Linux)
-    -   Command + Shift + R (Chrome or Firefox for Mac)
-    -   Shift + Reload button toolbar (Safari for Mac)
-    -   Ctrl + Shift + Backspace (on Chromebook)
+-   Ctrl + F5 (most Windows or Linux browsers)
+
+-   Shift + Ctrl + R (Chromebook)
+
+-   Command + Shift + R (Chrome or Firefox for Mac)
+
+-   Option + Command + R (Safari for Mac)
 
 -   Test the link to your published web page in a different browser. If
     you normally use Chrome, try Firefox.
@@ -14906,6 +15022,14 @@ References
 
 <!--chapter:end:21-references.Rmd-->
 
+Angwin, Julia, Jeff Larson, Surya Mattu, and Lauren Kirchner. “Machine
+Bias.” ProPublica, May 23, 2016.
+<https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing?token=pnmZCKup_9SO_Q1DvGQOooKLHsrJG0Fr>.
+
+Bensinger, Greg. “Google Redraws the Borders on Maps Depending on Who’s
+Looking.” *Washington Post*, February 14, 2020.
+<https://www.washingtonpost.com/technology/2020/02/14/google-maps-political-borders/>.
+
 Bergstrom, Carl T., and Jevin D. West. *Calling Bullshit: The Art of
 Skepticism in a Data-Driven World*. Random House, 2020.
 <https://www.google.com/books/edition/Calling_Bullshit/Plu9DwAAQBAJ>.
@@ -15001,6 +15125,11 @@ December 8, 2016.
 Blog by Datawrapper, July 31, 2018.
 <https://blog.datawrapper.de/colorguide/>.
 
+Rothbaum, Jonathan, and Adam Bee. “Coronavirus Infects Surveys, Too:
+Nonresponse Bias During the Pandemic in the CPS ASEC.” US Census Bureau.
+Accessed December 8, 2020.
+<https://www.census.gov/library/working-papers/2020/demo/SEHSD-WP2020-10.html>.
+
 Schwabish, Jon. “Thread Summarizing ’Ten Guidelines for Better Tables’.”
 Twitter, August 3, 2020.
 <https://twitter.com/jschwabish/status/1290323581881266177>.
@@ -15042,6 +15171,11 @@ Tufte, Edward R. *Beautiful Evidence*. Graphics Press, 2006.
 
 Urban Institute. “Urban Institute Data Visualization Style Guide,” 2020.
 <http://urbaninstitute.github.io/graphics-styleguide/>.
+
+Vigdor, Neil. “Apple Card Investigated After Gender Discrimination
+Complaints (Published 2019).” *The New York Times: Business*, November
+10, 2019.
+<https://www.nytimes.com/2019/11/10/business/Apple-credit-card-investigation.html>.
 
 Watters, Audrey. “’The Audrey Test’: Or, What Should Every Techie Know
 About Education?” Hack Education, March 17, 2012.
@@ -15088,37 +15222,37 @@ Thomas Piketty, Emmanuel Saez, and their colleagues, who have
 constructed US historical income data based not only on self-reported
 surveys, but also large samples of tax returns submitted to the Internal
 Revenue Service. See WID methods at World Inequality Database,
-“Methodology,” WID - World Inequality Database, 2020,
+“Methodology” (WID - World Inequality Database, 2020),
 <https://wid.world/methodology/>. See overview of methodological
 approaches in Chad Stone et al., “A Guide to Statistics on Historical
-Trends in Income Inequality,” Center on Budget and Policy Priorities,
-January 13, 2020,
+Trends in Income Inequality” (Center on Budget and Policy Priorities,
+January 13, 2020),
 <https://www.cbpp.org/research/poverty-and-inequality/a-guide-to-statistics-on-historical-trends-in-income-inequality>.
 See comparable findings on US income inequality by the Pew Charitable
 Trust in Julia Menasce Horowitz, Ruth Igielnik, and Rakesh Kochhar,
-“Trends in U.S. Income and Wealth Inequality,” Pew Research Center’s
-Social & Demographic Trends Project, January 9, 2020,
+“Trends in U.S. Income and Wealth Inequality” (Pew Research Center’s
+Social & Demographic Trends Project, January 9, 2020),
 <https://www.pewsocialtrends.org/2020/01/09/trends-in-income-and-wealth-inequality/>
 
 [4] World Inequality Database, “Top 1% National Income Share,” 2020,
 <https://wid.world/world/#sptinc_p99p100_z/US;FR;DE;CN;ZA;GB;WO/last/eu/k/p/yearly/s/false/5.070499999999999/30/curve/false/country>.
 
 [5] Lisa Charlotte Rost, “What I Learned Recreating One Chart Using 24
-Tools,” Source, December 8, 2016,
+Tools” (Source, December 8, 2016),
 <https://source.opennews.org/en-US/articles/what-i-learned-recreating-one-chart-using-24-tools/>;
-Lincoln Mullen, “How to Make Prudent Choices About Your Tools,”
-ProfHacker, August 14, 2013,
+Lincoln Mullen, “How to Make Prudent Choices About Your Tools”
+(ProfHacker, August 14, 2013),
 <https://lincolnmullen.com/blog/how-to-make-prudent-choices-about-your-tools/>.
 See also criteria for educational tools by Audrey Watters, “’The Audrey
-Test’: Or, What Should Every Techie Know About Education?” Hack
-Education, March 17, 2012,
+Test’: Or, What Should Every Techie Know About Education?” (Hack
+Education, March 17, 2012),
 <http://hackeducation.com/2012/03/17/what-every-techie-should-know-about-education>
 
 [6] Catherine D’Ignazio and Lauren F. Klein, *Data Feminism* (MIT Press,
 2020), <https://data-feminism.mitpress.mit.edu/>.
 
-[7] “Drilling into the DEA’s Pain Pill Database,” Washington Post, July
-16, 2019,
+[7] “Drilling into the DEA’s Pain Pill Database” (Washington Post, July
+16, 2019),
 <https://www.washingtonpost.com/graphics/2019/investigations/dea-pain-pill-database/>
 
 [8] Jack Dougherty et al., “School Choice in Suburbia: Test Scores,
@@ -15152,7 +15286,7 @@ Enlighten*, Second edition (Burlingame, CA: Analytics Press, 2012),
 p. 166
 
 [16] Lisa Charlotte Rost, “How to Prepare Your Data for Analysis and
-Charting in Excel & Google Sheets,” Chartable: A Blog by Datawrapper,
+Charting in Excel & Google Sheets” (Chartable: A Blog by Datawrapper),
 accessed August 28, 2020,
 <https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html>
 
@@ -15180,30 +15314,40 @@ pp. 71-74.
 
 [21] Cairo, p. 95
 
-[22] “What’s Real About Wages?” Federal Reserve Bank of St. Louis, The
-FRED Blog, February 8, 2018,
+[22] “What’s Real About Wages?” Federal Reserve Bank of St. Louis (The
+FRED Blog, February 8, 2018),
 <https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing/>
 
-[23] Cairo, *How Charts Lie*, 2019, p. 61.
+[23] Carl T. Bergstrom and Jevin D. West, *Calling Bullshit: The Art of
+Skepticism in a Data-Driven World* (Random House, 2020),
+<https://www.google.com/books/edition/Calling_Bullshit/Plu9DwAAQBAJ>,
+pp. 79, 104-133
 
-[24] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
-Visualisation,” Chartable: A Blog by Datawrapper, July 31, 2018,
+[24] Jonathan Rothbaum and Adam Bee, “Coronavirus Infects Surveys, Too:
+Nonresponse Bias During the Pandemic in the CPS ASEC” (US Census
+Bureau), accessed December 8, 2020,
+<https://www.census.gov/library/working-papers/2020/demo/SEHSD-WP2020-10.html>
+
+[25] Cairo, *How Charts Lie*, 2019, p. 61.
+
+[26] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
+Visualisation” (Chartable: A Blog by Datawrapper, July 31, 2018),
 <https://blog.datawrapper.de/colorguide/>; Lisa Charlotte Rost, “How to
-Pick More Beautiful Colors for Your Data Visualizations,” Chartable,
+Pick More Beautiful Colors for Your Data Visualizations” (Chartable),
 accessed October 21, 2020,
 <https://blog.datawrapper.de/beautifulcolors/index.html>
 
-[25] Few, *Show Me the Numbers*, p. 166
+[27] Few, *Show Me the Numbers*, p. 166
 
-[26] Rost, “Your Friendly Guide to Colors in Data Visualisation.”; Rost,
+[28] Rost, “Your Friendly Guide to Colors in Data Visualisation.”; Rost,
 “How to Pick More Beautiful Colors for Your Data Visualizations.”
 
-[27] See also Cynthia A. Brewer, *Designing Better Maps: A Guide for GIS
+[29] See also Cynthia A. Brewer, *Designing Better Maps: A Guide for GIS
 Users* (Esri Press, 2016),
 <https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ>
 
-[28] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
-Tables’,” Twitter, August 3, 2020,
+[30] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
+Tables’” (Twitter, August 3, 2020),
 <https://twitter.com/jschwabish/status/1290323581881266177>; Jonathan A.
 Schwabish, “Ten Guidelines for Better Tables,” *Journal of Benefit-Cost
 Analysis* 11, no. 2: 151–78, accessed August 25, 2020,
@@ -15212,64 +15356,71 @@ Visualizations: A Guide for Scholars, Researchers, and Wonks* (Columbia
 University Press, 2021),
 <https://cup.columbia.edu/book/better-data-visualizations/9780231193115>
 
-[29] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
+[31] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
 Public Issues* (Berkeley, CA: University of California Press, 2004),
 <https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC>,
 pp. 31-35.
 
-[30] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
+[32] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
 <http://books.google.com/books?isbn=0961392177>, pp. 46-63.
 
-[31] The “how to lie” tutorials were inspired by several excellent works
+[33] The “how to lie” tutorials were inspired by several excellent works
 in data visualization: Cairo, *The Truthful Art*, 2016; Cairo, *How
 Charts Lie*, 2019; Darrell Huff, *How to Lie with Statistics* (W. W.
 Norton & Company, 1954),
 <http://books.google.com/books?isbn=0393070875>; Mark Monmonier, *How to
 Lie with Maps, Third Edition* (University of Chicago Press, 2018),
 <https://www.google.com/books/edition/How_to_Lie_with_Maps_Third_Edition/MwdRDwAAQBAJ>;
-Nathan Yau, “How to Spot Visualization Lies,” FlowingData, February 9,
-2017,
+Nathan Yau, “How to Spot Visualization Lies” (FlowingData, February 9,
+2017),
 <http://flowingdata.com/2017/02/09/how-to-spot-visualization-lies/>;
 NASA JPL, “Educator Guide: Graphing Global Temperature Trends,” 2017,
 <https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>
 
-[32] The tutorial on misleading climate change data was inspired by a
+[34] The tutorial on misleading climate change data was inspired by a
 high school classroom activity created by the NASA Jet Propulsion
 Laboratory (JPL), as well as Alberto Cairo’s analysis of charts by
 climate change deniers. NASA JPL; Cairo, *How Charts Lie*, 2019,
 pp. 65-67, 135-141.
 
-[33] Cairo, p. 61.
+[35] Cairo, p. 61.
 
-[34] Cairo, p. 69.
+[36] Cairo, p. 69.
 
-[35] Cairo, p. 70.
+[37] Cairo, p. 70.
 
-[36] Cairo, p. 58.
+[38] Cairo, p. 58.
 
-[37] Monmonier, *How to Lie with Maps, Third Edition*.
+[39] Monmonier, *How to Lie with Maps, Third Edition*.
 
-[38] Carl T. Bergstrom and Jevin D. West, *Calling Bullshit: The Art of
-Skepticism in a Data-Driven World* (Random House, 2020),
-<https://www.google.com/books/edition/Calling_Bullshit/Plu9DwAAQBAJ>,
-pp. 79, 104-133
-
-[39] David Spiegelhalter, *The Art of Statistics: Learning from Data*
+[40] David Spiegelhalter, *The Art of Statistics: Learning from Data*
 (Penguin UK, 2019),
 <https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ>,
 pp. 22-5
 
-[40] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
+[41] Julia Angwin et al., “Machine Bias” (ProPublica, May 23, 2016),
+<https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing?token=pnmZCKup_9SO_Q1DvGQOooKLHsrJG0Fr>
+
+[42] Neil Vigdor, “Apple Card Investigated After Gender Discrimination
+Complaints (Published 2019),” *The New York Times: Business*, November
+10, 2019,
+<https://www.nytimes.com/2019/11/10/business/Apple-credit-card-investigation.html>
+
+[43] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
 Awareness in Data Visualization,” preprint (Open Science Framework,
 August 27, 2020), <https://doi.org/10.31219/osf.io/x8tbw>. See also this
 web post summary of the paper, Jonathan Schwabish and Alice Feng,
-“Applying Racial Equity Awareness in Data Visualization,” Medium,
+“Applying Racial Equity Awareness in Data Visualization” (Medium),
 accessed October 16, 2020,
-<https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff>.
-Urban Institute, “Urban Institute Data Visualization Style Guide,” 2020,
-<http://urbaninstitute.github.io/graphics-styleguide/>
+<https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff>,
+and Urban Institute, “Urban Institute Data Visualization Style Guide,”
+2020, <http://urbaninstitute.github.io/graphics-styleguide/>
 
-[41] Cole Nussbaumer Knaflic, *Storytelling with Data: A Data
+[44] Greg Bensinger, “Google Redraws the Borders on Maps Depending on
+Who’s Looking,” *Washington Post*, February 14, 2020,
+<https://www.washingtonpost.com/technology/2020/02/14/google-maps-political-borders/>
+
+[45] Cole Nussbaumer Knaflic, *Storytelling with Data: A Data
 Visualization Guide for Business Professionals*, 1 edition (Hoboken, New
 Jersey: Wiley, 2015); Cole Nussbaumer Knaflic, *Storytelling with Data:
 Let’s Practice!* (John Wiley & Sons, 2019),

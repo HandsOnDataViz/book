@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-12-09" />
+<meta name="date" content="2020-12-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -342,13 +342,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="choropleth-datawrapper" class="section level2 unnumbered" number="">
 <h2>Choropleth Map with Datawrapper</h2>
 <p>Now that you’ve learned how to use <a href="chart-datawrapper.html">Datawrapper to create charts</a> and <a href="datawrapper-symbolmap.html">symbol maps</a>, now let’s design a choropleth map. These maps are best to show patterns across geographic areas by coloring polygons to represent data values. Datawrapper offers a wide collection of common geographical boundaries, including world regions, states and provinces, and also hexagons (cartograms), counties, congressional districts, and census tracts for the United States.</p>
-<p>In this section, you’ll create a choropleth map of typical home values for US states in August 2020 according to the <a href="https://www.zillow.com/research/data/">Zillow Home Value Index</a>, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-final">8.39</a>. The index reflects typical home values (meaning those in the 35th to 65th percentile range, around the median) for single-family residences, condos, and co-ops, and it is smoothed and seasonally adjusted.</p>
+<p>In this section, you’ll create a choropleth map of typical home values for US states in August 2020 according to the <a href="https://www.zillow.com/research/data/">Zillow Home Value Index</a>, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-final">8.40</a>. The index reflects typical home values (meaning those in the 35th to 65th percentile range, around the median) for single-family residences, condos, and co-ops, and it is smoothed and seasonally adjusted.</p>
 
 <div class="figure"><span id="fig:datawrapper-map-final"></span>
 <iframe src="https://datawrapper.dwcdn.net/kSYrw/" width="672" height="530px">
 </iframe>
 <p class="caption">
-Figure 8.39: Choropleth map of 2020 home values in US states with Datawrapper. Explore the <a href="https://datawrapper.dwcdn.net/kSYrw/">interactive version</a>.
+Figure 8.40: Choropleth map of 2020 home values in US states with Datawrapper. Explore the <a href="https://datawrapper.dwcdn.net/kSYrw/">interactive version</a>.
 </p>
 </div>
 <p>Datawrapper splits the process of creating a map into four steps: select map, add data, visualize, then publish and embed. To create your own choropleth map, follow this tutorial.</p>
@@ -358,34 +358,34 @@ Figure 8.39: Choropleth map of 2020 home values in US states with Datawrapper. E
 <p>Good maps often require <a href="clean.html">cleaning up messy data as described in Chapter 5</a>. In our spreadsheet we removed all of the columns except two, August 2019 and August 2020, and we also inserted a <em>Percent Change</em> column, which we calculated this way: <code>(2020 - 2019) / 2019 * 100</code>. Also, we’re fortunate that Datawrapper easily recognizes US state names and abbreviations.</p>
 <ol start="2" style="list-style-type: decimal">
 <li><p>In the Google Sheet, go to <em>File &gt; Download</em> and select the Comma-Separated Values (CSV) format to save the data to your local computer.</p></li>
-<li><p>Open <a href="https://datawrapper.de">Datawrapper</a>, click on <em>Start Creating</em>, then click the <em>New Map</em> button, and select <em>Choropleth map</em> as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-choose">8.40</a>. No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.</p></li>
+<li><p>Open <a href="https://datawrapper.de">Datawrapper</a>, click on <em>Start Creating</em>, then click the <em>New Map</em> button, and select <em>Choropleth map</em> as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-choose">8.41</a>. No login is required to create a map, but you should sign up for a free account in order to save your work and publish your map online.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-map-choose"></span>
 <img src="images/08-map/datawrapper-map-choose-annotated.png" alt="In Datawrapper, click New Map, and choose Choropleth." width="500" />
 <p class="caption">
-Figure 8.40: In Datawrapper, click <em>New Map</em>, and choose <em>Choropleth</em>.
+Figure 8.41: In Datawrapper, click <em>New Map</em>, and choose <em>Choropleth</em>.
 </p>
 </div>
 <ol start="4" style="list-style-type: decimal">
-<li>In the <em>Select your map</em> screen, choose your geographic boundaries. In this case, search and select <em>USA &gt; States and Territories</em> in order to include data for Washington DC, which is not a state, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-us-states-territories">8.41</a>, then click <em>Proceed</em>.</li>
+<li>In the <em>Select your map</em> screen, choose your geographic boundaries. In this case, search and select <em>USA &gt; States and Territories</em> in order to include data for Washington DC, which is not a state, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-us-states-territories">8.42</a>, then click <em>Proceed</em>.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-map-us-states-territories"></span>
 <img src="images/08-map/datawrapper-map-us-states-territories.png" alt="Choose USA - States and Territories for your map outline." width="500" />
 <p class="caption">
-Figure 8.41: Choose <em>USA - States and Territories</em> for your map outline.
+Figure 8.42: Choose <em>USA - States and Territories</em> for your map outline.
 </p>
 </div>
 <p>Hint: If Datawrapper does not list your preferred map outline, you can upload your own custom geography data in GeoJSON or TopoJSON format, which you will learn more about in the <a href="geojson.html">GeoJSON data section of Chapter 14</a>.</p>
 <ol start="5" style="list-style-type: decimal">
-<li>In the <em>Add your data</em> screen, you can manually enter data for each area, which would be fine for just a few, but not for 50 states. Instead, scroll down and click the <em>Import your dataset</em> button, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-import-dataset">8.42</a>.</li>
+<li>In the <em>Add your data</em> screen, you can manually enter data for each area, which would be fine for just a few, but not for 50 states. Instead, scroll down and click the <em>Import your dataset</em> button, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-import-dataset">8.43</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-import-dataset"></span>
 <img src="images/08-map/datawrapper-import-dataset.png" alt="Scroll down below the add data table to import your dataset." width="200" />
 <p class="caption">
-Figure 8.42: Scroll down below the <em>add data</em> table to import your dataset.
+Figure 8.43: Scroll down below the <em>add data</em> table to import your dataset.
 </p>
 </div>
 <p>Datawrapper will explain that when uploading data to the <em>USA &gt; States and Territories map</em>, your data must include one of these columns:</p>
@@ -394,65 +394,65 @@ Figure 8.42: Scroll down below the <em>add data</em> table to import your datase
 <li>FIPS-Codes, the Federal Information Processing Series numeric codes for US states and smaller geographies, where California is <code>06</code>.</li>
 <li>ANSI-Codes, the American National Standards Institute alphabetical or numeric codes for US states and smaller geographies, where California is <code>CA</code>. Learn more from the <a href="https://www.census.gov/library/reference/code-lists/ansi.html">US Census Bureau about ANSI and FIPS codes</a>.</li>
 </ul>
-<p>Codes vary by the type of map. For example, a world map may accept country names (which vary in spelling) or <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">ISO three-letter codes</a>. To view all of the codes for your selected geography, go back one screen in Datawrapper and select the Geo-code drop-down menu, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-import-codes">8.43</a>. If necessary, you could copy and paste names and their code equivalents into your spreadsheet to prepare your data. Learn more about <a href="https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names">place name geocoding at the Datawrapper Academy</a>.</p>
+<p>Codes vary by the type of map. For example, a world map may accept country names (which vary in spelling) or <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">ISO three-letter codes</a>. To view all of the codes for your selected geography, go back one screen in Datawrapper and select the Geo-code drop-down menu, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-import-codes">8.44</a>. If necessary, you could copy and paste names and their code equivalents into your spreadsheet to prepare your data. Learn more about <a href="https://academy.datawrapper.de/article/193-symbol-location-accuracy-using-addresses-place-names">place name geocoding at the Datawrapper Academy</a>.</p>
 
 <div class="figure"><span id="fig:datawrapper-import-codes"></span>
 <img src="images/08-map/datawrapper-import-codes.png" alt="To view all codes for your selected map, go back one screen to the Geo-Code drop-down menu." width="250" />
 <p class="caption">
-Figure 8.43: To view all codes for your selected map, go back one screen to the <em>Geo-Code</em> drop-down menu.
+Figure 8.44: To view all codes for your selected map, go back one screen to the <em>Geo-Code</em> drop-down menu.
 </p>
 </div>
 <ol start="6" style="list-style-type: decimal">
 <li><p>Since our data includes columns for both Names and ANSI-Codes, go ahead and click <em>Start Import</em>.</p></li>
 <li><p>On the <em>Import your dataset</em> screen, rather than paste your data, we recommend that you click to <em>upload a CSV file</em> and select the file you downloaded in step 2.</p></li>
-<li><p>In the <em>Match your columns</em> screen, click the column that matches up with ANSI codes, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-match">8.44</a>. You may need to scroll down a bit to click the <em>Next</em> button, then <em>Continue</em>.</p></li>
+<li><p>In the <em>Match your columns</em> screen, click the column that matches up with ANSI codes, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-match">8.45</a>. You may need to scroll down a bit to click the <em>Next</em> button, then <em>Continue</em>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-map-match"></span>
 <img src="images/08-map/datawrapper-map-match.png" alt="Select the data column that contains matching ANSI codes." width="500" />
 <p class="caption">
-Figure 8.44: Select the data column that contains matching ANSI codes.
+Figure 8.45: Select the data column that contains matching ANSI codes.
 </p>
 </div>
 <ol start="9" style="list-style-type: decimal">
-<li>Proceed to the next screen, select the column of data values that you initially wish to map, and click <em>Matched as values</em>, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-match-values">8.45</a>. For this tutorial, select <em>Aug2020 Home Values</em>, then scroll down to click <em>Next</em>, then <em>Go</em>, then <em>Proceed</em>. You’ll be able to map other data values in a later step.</li>
+<li>Proceed to the next screen, select the column of data values that you initially wish to map, and click <em>Matched as values</em>, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-match-values">8.46</a>. For this tutorial, select <em>Aug2020 Home Values</em>, then scroll down to click <em>Next</em>, then <em>Go</em>, then <em>Proceed</em>. You’ll be able to map other data values in a later step.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-map-match-values"></span>
 <img src="images/08-map/datawrapper-map-match-values.png" alt="Select the data column that contains the values that you wish to map." width="500" />
 <p class="caption">
-Figure 8.45: Select the data column that contains the values that you wish to map.
+Figure 8.46: Select the data column that contains the values that you wish to map.
 </p>
 </div>
 <ol start="10" style="list-style-type: decimal">
-<li>In the <em>Visualize</em> screen, under the <em>Refine</em> tab, click the <em>wrench symbol</em> next to the color palette to review the <em>default</em> map settings, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-default">8.46</a>. Never automatically accept the default map, but it’s a good place to start and explore how factors shape its appearance.</li>
+<li>In the <em>Visualize</em> screen, under the <em>Refine</em> tab, click the <em>wrench symbol</em> next to the color palette to review the <em>default</em> map settings, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-default">8.47</a>. Never automatically accept the default map, but it’s a good place to start and explore how factors shape its appearance.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-map-default"></span>
 <img src="images/08-map/datawrapper-map-default.png" alt="Under the Refine tab, click the wrench symbol to see the default map settings." width="600" />
 <p class="caption">
-Figure 8.46: Under the <em>Refine</em> tab, click the <em>wrench symbol</em> to see the default map settings.
+Figure 8.47: Under the <em>Refine</em> tab, click the <em>wrench symbol</em> to see the default map settings.
 </p>
 </div>
 <p>Let’s review key concepts we first introduced in the <a href="design-choropleth.html">Design Choropleth Colors &amp; Intervals section</a> of this chapter. The default map shows a <em>continuous</em> green-to-blue color palette, with <em>linear</em> interpolation, which means the home values are distributed in a straight line up the scale. These colors and intervals work better for a data story that emphasizes the low and high extremes.</p>
 <ol start="11" style="list-style-type: decimal">
-<li>In the <em>Refine</em> tab, experiment with different types of interpolation to change how values are assigned to colors. For example, change from <em>linear</em> to <em>quartiles</em>, which groups the data into four groups of equal size, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-quartiles">8.47</a>. This map works better for a data story that emphasizes geographic diversity, since we see more contrast between states in the middle range.</li>
+<li>In the <em>Refine</em> tab, experiment with different types of interpolation to change how values are assigned to colors. For example, change from <em>linear</em> to <em>quartiles</em>, which groups the data into four groups of equal size, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-quartiles">8.48</a>. This map works better for a data story that emphasizes geographic diversity, since we see more contrast between states in the middle range.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-map-quartiles"></span>
 <img src="images/08-map/datawrapper-map-quartiles.png" alt="Under the Refine tab, change the interpolation from linear to quartiles and see how the map changes." width="400" />
 <p class="caption">
-Figure 8.47: Under the <em>Refine</em> tab, change the interpolation from <em>linear</em> to <em>quartiles</em> and see how the map changes.
+Figure 8.48: Under the <em>Refine</em> tab, change the interpolation from <em>linear</em> to <em>quartiles</em> and see how the map changes.
 </p>
 </div>
 <ol start="12" style="list-style-type: decimal">
-<li>Experiment with other colors, intervals, and data columns. Change the palette from <em>sequential</em> to <em>diverging</em> colors, which display a neutral color in the middle range and two dark colors at the extremes. Change from a <em>continuous</em> gradient to <em>steps</em>, and choose different numbers of dividers. Change the data column to <em>Pct Change 2019-20</em> to <a href="normalize-choropleth.html">normalize the choropleth map data</a> as discussed earlier in this chapter, since home values are so different across the country. For example, see the map of percent change in home value from 2019 to 2020, with a diverging red-to-blue palette, 5 steps, and rounded values in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-percentchange">8.48</a>.</li>
+<li>Experiment with other colors, intervals, and data columns. Change the palette from <em>sequential</em> to <em>diverging</em> colors, which display a neutral color in the middle range and two dark colors at the extremes. Change from a <em>continuous</em> gradient to <em>steps</em>, and choose different numbers of dividers. Change the data column to <em>Pct Change 2019-20</em> to <a href="normalize-choropleth.html">normalize the choropleth map data</a> as discussed earlier in this chapter, since home values are so different across the country. For example, see the map of percent change in home value from 2019 to 2020, with a diverging red-to-blue palette, 5 steps, and rounded values in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-percentchange">8.49</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-map-percentchange"></span>
 <img src="images/08-map/datawrapper-map-percentchange.png" alt="Experiment with other colors, intervals, and data columns to find true and meaningful stories." width="650" />
 <p class="caption">
-Figure 8.48: Experiment with other colors, intervals, and data columns to find true and meaningful stories.
+Figure 8.49: Experiment with other colors, intervals, and data columns to find true and meaningful stories.
 </p>
 </div>
 <p>Which data columns, colors, and intervals make the best map? There’s no easy answer, since there’s more than one way to make a true and meaningful map. But keep two principles in mind. First, make sure that you honestly show the data, rather than hide or disguise it. Second, reflect on what kind of data story you believe is important to tell, since design choices emphasize different interpretations of the data. Review our guidance in the <a href="design-choropleth.html">Design Choropleth Colors &amp; Intervals section</a>.</p>
@@ -462,13 +462,13 @@ Figure 8.48: Experiment with other colors, intervals, and data columns to find t
 </ol>
 <p>TODO above: Add screenshot of where to enter codes in legend format, as reviewer requested.</p>
 <ol start="14" style="list-style-type: decimal">
-<li>Under the <em>Annotate</em> tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-tooltip">8.49</a>. Learn more about <a href="https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps">customizing tooltips from Datawrapper Academy</a>.</li>
+<li>Under the <em>Annotate</em> tab, add a title, description, and source credits, to add credibility to your work. You can also add map labels and customize tooltips that will display when readers hover their cursor over different states. The easiest way to edit tooltips is to click on blue column names, or format them using their drop-down menus, to make the proper codes appear in double curly brackets, as shown in Figure <a href="choropleth-datawrapper.html#fig:datawrapper-map-tooltip">8.50</a>. Learn more about <a href="https://academy.datawrapper.de/article/116-how-to-create-useful-tooltips-for-your-maps">customizing tooltips from Datawrapper Academy</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:datawrapper-map-tooltip"></span>
 <img src="images/08-map/datawrapper-map-tooltip.png" alt="To edit tooltips, click the blue column names or use drop-down menus to format the codes." width="600" />
 <p class="caption">
-Figure 8.49: To edit tooltips, click the blue column names or use drop-down menus to format the codes.
+Figure 8.50: To edit tooltips, click the blue column names or use drop-down menus to format the codes.
 </p>
 </div>
 <p>TODO above: ADD example of how to customize tooltips and add annotations, as reviewer requested here.</p>

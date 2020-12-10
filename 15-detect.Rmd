@@ -235,6 +235,8 @@ TODO BELOW: ILYA please create two different US 2020 electoral vote choropleth m
  knitr::include_graphics("images/15-detect/cartogram-placeholder.png")
 ```
 
+Note: Currently, Datawrapper offers two different versions of the USA Electoral College map, and only the second version allows users to split up electoral votes by district in Maine and Nebraska. The second version is named *USA > Electoral College* is a cartogram, although the word "hexagon" does not yet appear in its file name.
+
 In the [How to Lie with Maps section of this chapter](how-to-lie-with-maps.html), we created choropleth maps of world inequality data in Datawrapper. To convert one from a conventional world map to a population square map, follow this tutorial:
 
 1. To modify an existing world inequality map that you may have saved in your Datawrapper account, go to *My Charts*, select and right-click on the map to make a duplicate, and edit it. Or follow the steps in the previous section to create a new map.

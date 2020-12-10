@@ -191,7 +191,13 @@ In this introductory book, we can simplify the most common interpolation options
 
 Which interpolation method is best? There are no uniform design rules, except that we advise *against* using *Custom* settings to manually place color intervals wherever you wish, since they are more likely to create misleading maps, as you'll learn in [Chapter 15: Detect Lies and Reduce Data Bias](detect.html). Our best advice is to experiment with different interpolation methods, especially when working with skewed data, to better understand how these options shape the appearance of your choropleth maps and the data stories you tell with them.
 
-Overall, [Datawrapper Academy recommends](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps) that you make color intervals choices to help readers "see all the differences in the data" by fully utilizing all of the colors in your range. In other words, if your map displays only the lightest and darkest colors, you're not sufficiently using the middle portion of your color range to highlight geographic patterns and diversity within your data. To do this, you'll need to explore beyond the default map settings and test which options do the best job of telling an honest and insightful data story.
+Overall, [Datawrapper Academy recommends](https://academy.datawrapper.de/article/134-what-to-consider-when-creating-choropleth-maps) that you make color intervals choices to help readers "see all the differences in the data" by fully utilizing all of the colors in your range, as shown in Figure \@ref(fig:intervals-datawrapper-montage). In other words, if your map displays only the lightest and darkest colors, you're not sufficiently using the middle portion of your color range to highlight geographic patterns and diversity within your data. To do this, you'll need to explore beyond the default map settings and test which options do the best job of telling an honest and insightful data story.
+
+(ref:intervals-datawrapper-montage) Use the full color range to show all of the differences in the data. (Image by Datawrapper Academy.)
+
+```{r intervals-datawrapper-montage, out.width=500, fig.cap="(ref:intervals-datawrapper-montage)"}
+knitr::include_graphics("images/08-map/intervals-datawrapper-montage.png")
+```
 
 Designing true and meaningful choropleth maps is challenging work. You will improve your skills the same way we did, by reading widely, looking at different maps, and testing various ways to visualize your data. Become more aware of how your decisions about color intervals can dramatically alter how the data appears to readers. Most important, create maps that tell truthful and insightful data stories.
 

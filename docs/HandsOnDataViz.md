@@ -13372,7 +13372,7 @@ reader.
 
 <!--chapter:end:14-transform.Rmd-->
 
-15 Detect Lies and Reduce Data Bias
+15 Detect Lies and Reduce Bias
 ===================================
 
 The goal of data visualization is to encode information into images that

@@ -26,9 +26,9 @@ Table: (\#tab:chart-types) Basic Chart Types, Best Uses, and Tutorials
 | Bubble chart <br> ![](images/07-chart/chart-bubble.png) | Best to show the relationship between three or four sets of data, with XY coordinates, bubble size, and color.<br>Easy tool: [Scatter and Bubble Chart in Datawrapper tutorial](scatter-bubble-datawrapper.html)<br>Power tool: [Ch 12: Chart.js and Highcharts templates](chartcode.html) |
 | Sparklines<br> ![](images/07-chart/chart-sparklines.png) | Best to compare data trends with tiny line or bar charts, aligned in a table column.<br>Easy tool: [Ch 9: Interactive Table with Sparklines in Datawrapper tutorial](table-datawrapper.html) |
 
-For a more extensive collection of chart types and use cases, see the [Financial Times Visual Vocabulary](https://ft.com/vocabulary).
+Note: For a more extensive collection of chart types and use cases, see the [Financial Times Visual Vocabulary](https://ft.com/vocabulary).
 
-TODO above: improve and standardize chart images, especially range chart
+TODO above: improve and standardize chart images, improve colors, aspect ratio;  redo range chart
 
 ## Chart Design Principles {- #chart-design}
 
@@ -91,7 +91,7 @@ Although the vast majority of rules in data visualization are open to interpreta
 
 #### Bar and Column Charts Must Begin at Zero {-}
 
-Bar and column charts use *length* and *height* to represent value, therefore their value axis *must start at the zero baseline*. This ensures that a bar twice the length of another bar represents twice its value. Figure \@ref(fig:design-principles-start-at-zero) contrasts a good and a bad example. The same rule applies to area charts, which display filled-in area underneath the line to represent value. Starting the baseline at a number other than zero is a trick commonly used to exaggerate differences in opinion polls and election results, as we describe later in [Chapter 15: Detect Lies and Reduce Data Bias](detect.html)
+Bar and column charts use *length* and *height* to represent value, therefore their value axis *must start at the zero baseline*. This ensures that a bar twice the length of another bar represents twice its value. Figure \@ref(fig:design-principles-start-at-zero) contrasts a good and a bad example. The same rule applies to area charts, which display filled-in area underneath the line to represent value. Starting the baseline at a number other than zero is a trick commonly used to exaggerate differences in opinion polls and election results, as we describe later in [Chapter 15: Detect Lies and Reduce Bias](detect.html)
 
 (ref:design-principles-start-at-zero) Start your bar chart at zero.
 

@@ -49,26 +49,6 @@ Social Explorer (https://www.socialexplorer.com/) is a popular tool to view and 
 
 TODO: create tutorial on how to cleanly download census data from Social Explorer and Census.gov to join with geography, especially census tract numbers
 
-Census areas are geographic divisions in this *general format*:
-
-- State
-- County
-- County subdivisions (equivalent to Connecticut towns and cities)
-- Census tracts (designated areas, roughly 2,500 to 8,000 people)
-- Block groups (sub-unit of tract, roughly 600 to 3,000 people)
-- Census blocks (sub-unit of block group, but not always a city block)
-
-ADD individual data from Census Manuscript available 70+ years later -- link to national archives
-
-The interactive map below illustrates hierarchical relations among geographical census entities for the Hartford region, from state to census block level.
-
-TODO: convert all to code-chunk iframes
-https://github.com/HandsOnDataViz/census-divisions-hartford
-
-<iframe src="https://handsondataviz.github.io/census-divisions-hartford/index.html" height="400" width="100%" frameborder="0"></iframe>
-
-Learn more: Explore the standard hierarchy of US Census geographic entities and definitions (https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf)
-
 See also [Bulk Geocode with the US Census Geocoder](bulk-geocode.html) and find GeoIDs (such as the census tract) for each address.
 
 ### National Center for Education Statistics {-}

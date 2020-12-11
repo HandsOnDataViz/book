@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="smart-cleanup.html"><a href="smart-cleanup.html"><i class="fa fa-check"></i>Smart Cleanup with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
@@ -371,15 +372,15 @@ make sure you are logged in, and click <em>Use this template</em> button to make
 <li>Depending on your data density, you might want to tweak <em>radius</em> and <em>blur</em> parameters
 inside the <code>&lt;script&gt;</code> tag of <code>index.html</code>:</li>
 </ol>
-<div class="sourceCode" id="cb30"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb30-1"><a href="leaflet-heatmap.html#cb30-1"></a><span class="kw">var</span> heat <span class="op">=</span> L<span class="op">.</span><span class="fu">heatLayer</span>(data<span class="op">,</span> {</span>
-<span id="cb30-2"><a href="leaflet-heatmap.html#cb30-2"></a>  <span class="dt">radius</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
-<span id="cb30-3"><a href="leaflet-heatmap.html#cb30-3"></a>  <span class="dt">blur</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
-<span id="cb30-4"><a href="leaflet-heatmap.html#cb30-4"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb32-1"><a href="leaflet-heatmap.html#cb32-1"></a><span class="kw">var</span> heat <span class="op">=</span> L<span class="op">.</span><span class="fu">heatLayer</span>(data<span class="op">,</span> {</span>
+<span id="cb32-2"><a href="leaflet-heatmap.html#cb32-2"></a>  <span class="dt">radius</span><span class="op">:</span> <span class="dv">25</span><span class="op">,</span></span>
+<span id="cb32-3"><a href="leaflet-heatmap.html#cb32-3"></a>  <span class="dt">blur</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
+<span id="cb32-4"><a href="leaflet-heatmap.html#cb32-4"></a>})</span></code></pre></div>
 <p>Edit the following chunk of code to set your map’s default position and zoom level:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb31-1"><a href="leaflet-heatmap.html#cb31-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
-<span id="cb31-2"><a href="leaflet-heatmap.html#cb31-2"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">51.5</span><span class="op">,</span> <span class="fl">-0.1</span>]<span class="op">,</span> <span class="co">// Initial map center</span></span>
-<span id="cb31-3"><a href="leaflet-heatmap.html#cb31-3"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="co">// Initial zoom level</span></span>
-<span id="cb31-4"><a href="leaflet-heatmap.html#cb31-4"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33-1"><a href="leaflet-heatmap.html#cb33-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">&#39;map&#39;</span><span class="op">,</span> {</span>
+<span id="cb33-2"><a href="leaflet-heatmap.html#cb33-2"></a>  <span class="dt">center</span><span class="op">:</span> [<span class="fl">51.5</span><span class="op">,</span> <span class="fl">-0.1</span>]<span class="op">,</span> <span class="co">// Initial map center</span></span>
+<span id="cb33-3"><a href="leaflet-heatmap.html#cb33-3"></a>  <span class="dt">zoom</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="co">// Initial zoom level</span></span>
+<span id="cb33-4"><a href="leaflet-heatmap.html#cb33-4"></a>})</span></code></pre></div>
 <p>If for some reason you cannot see clusters, make sure your point data is represented
 in <code>latitude,longitude</code> order, not the other way around. If you have few points,
 try increasing the value of <code>radius</code> property of <code>L.heatLayer</code>.</p>

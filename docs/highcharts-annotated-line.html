@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="smart-cleanup.html"><a href="smart-cleanup.html"><i class="fa fa-check"></i>Smart Cleanup with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
@@ -368,22 +369,22 @@ Figure 12.4: Interactive annotated chart with Highcharts. Explore the <a href="h
 <ol start="3" style="list-style-type: decimal">
 <li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
 </ol>
-<div class="sourceCode" id="cb21"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb21-1"><a href="highcharts-annotated-line.html#cb21-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Air Transport, Passengers Carried (1970–2018)&#39;</span><span class="op">;</span></span>
-<span id="cb21-2"><a href="highcharts-annotated-line.html#cb21-2"></a></span>
-<span id="cb21-3"><a href="highcharts-annotated-line.html#cb21-3"></a><span class="co">// Caption underneath the chart</span></span>
-<span id="cb21-4"><a href="highcharts-annotated-line.html#cb21-4"></a><span class="kw">var</span> CAPTION <span class="op">=</span> <span class="st">&#39;Source: The World Bank&#39;</span><span class="op">;</span></span>
-<span id="cb21-5"><a href="highcharts-annotated-line.html#cb21-5"></a></span>
-<span id="cb21-6"><a href="highcharts-annotated-line.html#cb21-6"></a><span class="co">// x-axis label and label in tooltip</span></span>
-<span id="cb21-7"><a href="highcharts-annotated-line.html#cb21-7"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Year&#39;</span><span class="op">;</span></span>
-<span id="cb21-8"><a href="highcharts-annotated-line.html#cb21-8"></a></span>
-<span id="cb21-9"><a href="highcharts-annotated-line.html#cb21-9"></a><span class="co">// y-axis label and label in tooltip</span></span>
-<span id="cb21-10"><a href="highcharts-annotated-line.html#cb21-10"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Passengers&#39;</span><span class="op">;</span></span>
-<span id="cb21-11"><a href="highcharts-annotated-line.html#cb21-11"></a></span>
-<span id="cb21-12"><a href="highcharts-annotated-line.html#cb21-12"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
-<span id="cb21-13"><a href="highcharts-annotated-line.html#cb21-13"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb21-14"><a href="highcharts-annotated-line.html#cb21-14"></a></span>
-<span id="cb21-15"><a href="highcharts-annotated-line.html#cb21-15"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
-<span id="cb21-16"><a href="highcharts-annotated-line.html#cb21-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb23-1"><a href="highcharts-annotated-line.html#cb23-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Air Transport, Passengers Carried (1970–2018)&#39;</span><span class="op">;</span></span>
+<span id="cb23-2"><a href="highcharts-annotated-line.html#cb23-2"></a></span>
+<span id="cb23-3"><a href="highcharts-annotated-line.html#cb23-3"></a><span class="co">// Caption underneath the chart</span></span>
+<span id="cb23-4"><a href="highcharts-annotated-line.html#cb23-4"></a><span class="kw">var</span> CAPTION <span class="op">=</span> <span class="st">&#39;Source: The World Bank&#39;</span><span class="op">;</span></span>
+<span id="cb23-5"><a href="highcharts-annotated-line.html#cb23-5"></a></span>
+<span id="cb23-6"><a href="highcharts-annotated-line.html#cb23-6"></a><span class="co">// x-axis label and label in tooltip</span></span>
+<span id="cb23-7"><a href="highcharts-annotated-line.html#cb23-7"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Year&#39;</span><span class="op">;</span></span>
+<span id="cb23-8"><a href="highcharts-annotated-line.html#cb23-8"></a></span>
+<span id="cb23-9"><a href="highcharts-annotated-line.html#cb23-9"></a><span class="co">// y-axis label and label in tooltip</span></span>
+<span id="cb23-10"><a href="highcharts-annotated-line.html#cb23-10"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Passengers&#39;</span><span class="op">;</span></span>
+<span id="cb23-11"><a href="highcharts-annotated-line.html#cb23-11"></a></span>
+<span id="cb23-12"><a href="highcharts-annotated-line.html#cb23-12"></a><span class="co">// Should y-axis start from 0? `true` or `false`</span></span>
+<span id="cb23-13"><a href="highcharts-annotated-line.html#cb23-13"></a><span class="kw">var</span> BEGIN_AT_ZERO <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb23-14"><a href="highcharts-annotated-line.html#cb23-14"></a></span>
+<span id="cb23-15"><a href="highcharts-annotated-line.html#cb23-15"></a><span class="co">// `true` to show the legend, `false` to hide</span></span>
+<span id="cb23-16"><a href="highcharts-annotated-line.html#cb23-16"></a><span class="kw">var</span> SHOW_LEGEND <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span></code></pre></div>
 <p>If you wish to further customize your chart, use the <a href="https://api.highcharts.com/highcharts/">Highcharts API reference</a> that lists all available features.</p>
 </div>
             </section>

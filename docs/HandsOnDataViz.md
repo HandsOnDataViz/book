@@ -6,7 +6,7 @@ Preface
 ![Book cover: Read about the [hoatzin “reptile
 bird”](https://en.wikipedia.org/wiki/Hoatzin)](images/0-preface/cover-400wide.jpg)
 
-**This BOOK-IN-PROGRESS was last updated on: 10 Dec 2020**.
+**This BOOK-IN-PROGRESS was last updated on: 11 Dec 2020**.
 
 Read the open-access web edition at
 <a href="https://HandsOnDataViz.org" class="uri">https://HandsOnDataViz.org</a>,
@@ -44,15 +44,46 @@ story and show the data. No coding experience is required.
 Audience and Overview
 ---------------------
 
-We designed this introductory guide to be broadly accessible for
-newcomers, and to offer an educational resource for advanced users who
-teach or guide others in the field of data visualization….
+As educators, we designed this book to be accessible for new learners,
+to introduce key concepts in data visualization and reinforce them with
+hands-on examples. We assume no prior knowledge other than a basic
+familiarity with computers and some vague memories of secondary school
+mathematics. Based on feedback we’ve received from an earlier draft,
+many readers across the globe have taught themselves with this book, and
+others educators are already using it as a textbook to teach their
+students.
 
-TODO: who this book is for… spreadsheets to code… if you not just one
-tool, but several tools, all of them free and easy-to-learn, along with
-our guidance on how to choose tools….
+Our subtitle, “Interactive Storytelling from Spreadsheets to Code,”
+reflects how the scope of the book progresses from strengthening basic
+skills to editing open-source code templates, while continually
+maintaining our focus on telling true and meaningful data stories. We
+explain both the *why* and the *how* of visualization, and encourage
+critical thinking about how data is socially constructed, and whose
+interests are served or ignored.
 
-TODO: what this book will not cover…
+Unlike many computer books that focus on selling you a specific software
+application, this book introduces you to over twenty different
+visualization tools, all of them free and easy-to-learn. We also offer
+guiding principles on how to make wise choices among digital tools as
+they continue to evolve in the future. By working through the sample
+datasets and tutorials, readers will create more than a dozen different
+interactive charts, maps, and tables, and share these data stories with
+other readers on the public web.
+
+Although our introductory book is comprehensive, we do not address
+certain advanced topics. For example, while we discuss ways to make
+meaningful data comparisons, we do not delve into the field of
+statistical data analysis. Also, we focus primarily on software tools
+with a friendly graphical user interface, rather than those that require
+you to memorize and enter command-line instructions, such as the
+powerful [R statistics packages](https://www.r-project.org). Finally,
+while we teach readers how to modify HTML-CSS-JavaScript code templates
+with the Leaflet, Chart.js, and Highcharts libraries, we do not explore
+more advanced visualization code libraries such as
+[D3](https://d3js.org). Nevertheless, we believe that nearly everyone
+who reads this book will discover something new and valuable.
+
+### Advice for Hands-On Learning
 
 Learn by following the step-by-step tutorials on a laptop or desktop
 computer with an internet connection. We recommend any computer running
@@ -76,7 +107,9 @@ connecting a second computer monitor, or working with a tablet or second
 computer alongside you. This allows you to read the book in one screen
 and build data visualizations in the other screen.
 
-TODO: Chapter outline…
+### Chapter Outline
+
+TODO
 
 Authors & Acknowledgements
 --------------------------
@@ -498,7 +531,7 @@ drag-and-drop tools, and find out which types work best with different
 data stories. We’ll start with [Chapter 7: Chart Your Data](chart.html),
 [Chapter 8: Map Your Data](map.html), and [Chapter 9: Table Your
 Data](table.html) and develop your understanding of the interpretive
-style that each one emphasizes. In [Chapter 9: Embed on the
+style that each one emphasizes. In [Chapter 10: Embed on the
 Web](embed.html), you’ll learn how to insert all of these interactive
 visualizations on common web platforms, to invite readers to explore
 your data and share your work more widely.
@@ -519,12 +552,12 @@ break your code, which is also a great way to learn how it works.
 In part four, we’ll wrap up all of the visualization skills you’ve
 developed by returning to the central theme of this introduction:
 telling true and meaningful stories with data. In [Chapter 15: Detect
-Lies and Reduce Data Bias](detect.html), you’ll learn how to lie with
-charts and maps in order to do a better job of telling the truth.
-Finally, [Chapter 16: Tell and Show Your Data Story](story.html)
-emphasizes how the goal of data visualization is not simply to make
-pictures about numbers, but to craft a truthful narrative that convinces
-readers how and why your interpretation matters.
+Lies and Reduce Bias](detect.html), you’ll learn how to lie with charts
+and maps in order to do a better job of telling the truth. Finally,
+[Chapter 16: Tell and Show Your Data Story](story.html) emphasizes how
+the goal of data visualization is not simply to make pictures about
+numbers, but to craft a truthful narrative that convinces readers how
+and why your interpretation matters.
 
 ### Summary
 
@@ -1139,10 +1172,9 @@ Of course, we recognize that digital tools are continually changing and
 evolving. As time goes by, we expect that some tools will no longer be
 available, and we also anticipate discovering newer ones that do a
 better job in telling our data stories. If you’d like to recommend a
-tool that’s not currently on our list, email us at
-<handsondataviz@gmail.com> or tweet us at
-[handsondataviz](https://twitter.com/handsondataviz), and tell us how it
-rates on the ten factors that guide our selection process above.
+tool that’s not currently on our list, [contact the
+authors](authors.html) and tell us how it rates on the ten factors that
+guide our selection process above.
 
 Use a Password Manager
 ----------------------
@@ -1651,7 +1683,7 @@ map code templates in Chapter 13](leaflet.html).
 
 Geocoding means converting addresses or location names into geographic
 coordinates (or x- and y-coordinates) that can be plotted on a map, as
-shown in Figure <a href="#fig:transform-data">3.13</a>. For example, the
+shown in Figure <a href="#fig:geocode-data">3.13</a>. For example, the
 Statue of Liberty in the New York City area is located at *40.69,
 -74.04*. The first number is the latitude and the second is the
 longitude. Since the equator is 0 degrees latitude, positive latitude is
@@ -1762,14 +1794,12 @@ revisions to match your expectations. In this section, you’ll learn how
 to create your own online form and link the results to a live Google
 Sheet.
 
-Inside your Google Drive account, one tool that’s often overlooked is
-Google Forms, which is partially hidden under *New &gt; More &gt; Google
-Forms*, as shown in Figure <a href="#fig:forms-new">3.16</a>.
+Inside your Google Drive account, click on the *New* button and select
+*Google Forms*, as shown in Figure <a href="#fig:forms-new">3.16</a>.
 
-<img src="images/03-spreadsheet/forms-new.png" alt="The Google Forms tool is partially hidden in the Google Drive *New - More* menu." width="500" />
+<img src="images/03-spreadsheet/forms-new.png" alt="Click the *New* button to select *Google Forms*." width="150" />
 <p class="caption">
-Figure 3.16: The Google Forms tool is partially hidden in the Google
-Drive *New - More* menu.
+Figure 3.16: Click the *New* button to select *Google Forms*.
 </p>
 
 The Google Forms *Questions* tab allows you to design questions with
@@ -2541,52 +2571,49 @@ tools to focus your search in that particular area.
 
 *What level(s) of data are available?*
 
-Is information disaggregated by individual cases or aggregated into
-larger groups? Librarians can help us to decipher how and why different
-organizations publish data in different formats. For example, US Census
-seeks to collect data every ten years about each person residing in the
-nation, but under the law, this individual-level data is confidential
-and not released to the public for 72 years. You can look up individual
-census data for 1940 and earlier decades at the [US National
+Is information disaggregated into individual cases or aggregated into
+larger groups? Smaller units of data allow you to make more granular
+interpretations, while larger units can help you to identify broader
+patterns. Librarians can help us to decipher how and why organizations
+publish data at different levels. For example, the US Census collects
+data every ten years about each person residing in the nation. Under
+law, individual-level data about each person is confidential for 72
+years, then released to the public. Currently, you can search for
+specific individuals in the 1940 Census and earlier decades at the [US
+National
 Archives](https://www.archives.gov/research/genealogy/census/about) and
-other websites. But the US Census publishes current data for larger
-areas, such as neighborhood-level block groups, census tracts, cities,
-and states, by aggregating individual records into data tables, and
-suppressing small-numbered cells to protect people’s privacy. Librarians
-can help us understand organization’s guidelines on when and how they
-make data available at different levels.
+other websites, as shown in Figure
+<a href="#fig:census-1940-excerpt">4.1</a>.
 
-TODO: DECIDE whether to add an example about why, in general, smaller
-units of data are better than larger ones. Example from Cairo: voting
-data about entire US states will vary from voting data for smaller
-geographic units within those states, such as counties, cities, or
-neighborhood-level voting precincts, for at least two reasons. First,
-voting patterns vary across smaller geographic units… Second, not all
-residents vote…. In most cases, use the smallest unit of data you can
-obtain to allow you to produce more granular interpretations. While you
-cannot obtain data about how each individual voted, you can obtain data
-at the precinct, city, or county level inside each state. However, there
-are some cases when using a larger unit makes more sense than a smaller
-unit. For example, US presidential elections are determined by
-state-level electoral votes (except for Maine and Nebraska?). So if you
-wish to emphasize patterns in electoral votes, compare data for larger
-geographic units…
+<img src="images/04-find/census-1940-excerpt.png" alt="Excerpt of individual-level 1940 US Census data for co-author Dougherty's father's family." width="350" />
+<p class="caption">
+Figure 4.1: Excerpt of individual-level 1940 US Census data for
+co-author Dougherty’s father’s family.
+</p>
 
-TODO: DECIDE whether to add this interactive map (currently in CT
-web-only chapter) to illustrate hierarchical relations among
-geographical census entities for the Hartford region, from state to
-census block level.
-<a href="https://github.com/HandsOnDataViz/census-divisions-hartford" class="uri">https://github.com/HandsOnDataViz/census-divisions-hartford</a>
-
-ALSO DECIDE if this list is necessary or whether we could incorporate
-into the map legend
+Meanwhile, the US Census publishes data for current years by aggregating
+individual records into larger geographic areas to protect people’s
+privacy. Using the [Standard Hierarchy of US Census Geographic
+Entities](https://www2.census.gov/geo/pdfs/reference/geodiagram.pdf), we
+created a simplified map in Figure
+<a href="#fig:census-divisions-hartford">4.2</a> to show the
+relationships between some of the most common geographic areas for
+Hartford, Connecticut:
 
 -   State
 -   County
 -   County subdivisions (equivalent to Connecticut towns and cities)
 -   Census tracts (designated areas, roughly 2,500 to 8,000 people)
--   Block groups (sub-unit of tract, roughly 600 to 3,000 people)
--   Census blocks (sub-unit of block group, but not always a city block)
+-   Block groups (sub-unit of tracts, roughly 600 to 3,000 people)
+-   Census blocks (sub-unit of block groups, but not always a city
+    block)
+
+<img src="images/04-find/census-divisions-hartford.png" alt="Common US census geographies around Hartford, Connecticut, 2019. Explore the [interactive map](https://handsondataviz.github.io/census-divisions-hartford/)."  />
+<p class="caption">
+Figure 4.2: Common US census geographies around Hartford, Connecticut,
+2019. Explore the [interactive
+map](https://handsondataviz.github.io/census-divisions-hartford/).
+</p>
 
 *Have prior publications drawn on similar data, and if so, how can we
 trace their sources?*
@@ -3014,7 +3041,7 @@ a separate tab inside the spreadsheet, which works for multi-tab
 spreadsheet tools such as Google Sheets, LibreOffice, and Excel. Add a
 new tab named *notes* that describes the origins of the data, a longer
 description for any abbreviated labels, and when it was last updated, as
-shown in Figure <a href="#fig:sheets-with-tabs">4.1</a>. Add your own
+shown in Figure <a href="#fig:sheets-with-tabs">4.3</a>. Add your own
 name and give credit to collaborators who worked with you. If you need
 to create a CSV file from this data, give it a parallel name to your
 multi-tabbed spreadsheet file so that you can easily find your original
@@ -3022,7 +3049,7 @@ source notes again in the future.
 
 <img src="images/04-find/sheets-with-tabs.png" alt="Create separate spreadsheet tabs for data, notes, and backup." width="600" />
 <p class="caption">
-Figure 4.1: Create separate spreadsheet tabs for data, notes, and
+Figure 4.3: Create separate spreadsheet tabs for data, notes, and
 backup.
 </p>
 
@@ -3030,7 +3057,7 @@ A third step is to make a backup of the original data before cleaning or
 editing it. For a simple one-sheet file in a multi-tab spreadsheet tool,
 right-click on the tab containing the data to make a duplicate copy in
 another tab, also shown in Figure
-<a href="#fig:sheets-with-tabs">4.1</a>. Clearly label the new tab as a
+<a href="#fig:sheets-with-tabs">4.3</a>. Clearly label the new tab as a
 backup and leave it alone! For CSV files or more complex spreadsheets,
 create a separate backup file. To be clear, these simple backup strategy
 only helps you from making non-fixable edits to your original data. Make
@@ -3122,11 +3149,11 @@ prime meridian and the equator, where the latitude and longitude
 coordinates are 0,0. For these reasons, carefully inspect geocoded data
 for errors caused by tools that mistakenly place results in the exact
 center of your geography, as shown in Figure
-<a href="#fig:bad-geocoding">4.2</a>.
+<a href="#fig:bad-geocoding">4.4</a>.
 
 <img src="images/04-find/bad-geocoding.png" alt="Beware of bad geocoding that automatically places data in the geographic center of the contiguous United States (in northern Kansas), or on imaginary Null Island in the Atlantic Ocean (the location of coordinates 0,0)." width="600" />
 <p class="caption">
-Figure 4.2: Beware of bad geocoding that automatically places data in
+Figure 4.4: Beware of bad geocoding that automatically places data in
 the geographic center of the contiguous United States (in northern
 Kansas), or on imaginary Null Island in the Atlantic Ocean (the location
 of coordinates 0,0).
@@ -3217,32 +3244,30 @@ What do the data labels reveal or hide about how people defined
 categories in different social and political contexts, which differ
 across place and time? For example, we designed an [interactive
 historical map of racial
-change](https://ontheline.github.io/otl-racial-change/index-caption.html#10/41.7900/-72.6000/1900/100)
+change](https://ontheline.github.io/otl-racial-change/index-caption.html)
 for Hartford County, Connecticut using over 100 years of US Census data.
-But Census categories for race and ethnicity changed dramatically during
+But Census categories for race and ethnicity shifted dramatically during
 those decades because people in power redefined these contested terms
-and moved who belonged in which group.
+and reassigned people to different groups.[15] Into the 1930s, US Census
+officials separated “Native White” and “Foreign-born White” in reports,
+then combined and generally reported these as “White” in later decades.
+Also, Census officials classified “Mexican” as “Other races” in 1930,
+then moved this group back to “White” in 1940, then reported “Puerto
+Rican or Spanish surname” data in 1960, followed by “Hispanic or Latino”
+as an ethnic category distinct from race in later decades. Finally, the
+Census replaced “Negro” with “Black” in 1980, and finally dropped
+mutually-exclusive racial categories in 2000, so that people could
+choose more than one. As a result, these historical changes in the
+social construction of race and ethnicity influenced how we designed our
+map to display “White” or “White alone” over time, with additional
+census categories relevant to each decade shown in the pop-up window,
+with our explanation about these decisions in the caption and source
+notes. There is no single definitive way to visualize
+socially-constructed data when definitions change across decades. But
+when you make choices about data, describe your thought process in the
+notes or companion text.
 
-Into the 1930s, the US Census separated “Native White” and “Foreign-born
-White” in its official reports, then combined and generally reported
-these as “White” in later decades. Also, the Census classified “Mexican”
-as “Other races” in 1930, then moved this group back to “White” in 1940,
-then began to report “Puerto Rican or Spanish surname” data in 1960,
-followed by “Hispanic or Latino” in later decades, as an ethnic category
-that was distinct from race. The Census finally replaced “Negro” with
-“Black” in 1980, and in 2000 allowed people to select more than one
-racial category, such as both “White” and “Black,” unlike prior decades
-when these terms were mutually exclusive and people could choose only
-one. As a result, historical changes in the social construction of race
-and ethnicity influenced how we designed our map to display “White” or
-“White alone” over time, with additional census categories relevant to
-each decade shown in the pop-up window, with our explanation of our
-decisions in the caption and source notes. There is no single definitive
-way to visualize socially-constructed data when definitions change
-across decades. But when you make choices about data, describe your
-thought process in the notes.
-
-<!-- TODO: Read and insert Margo Anderson's American Census 2nd edition 2015 here as background -->
+*What aspects of the data remain unclear or uncertain?*
 
 Here’s a paradox about working with data: some of these deep questions
 may not be fully answerable if the data was collected by someone other
@@ -3250,13 +3275,13 @@ than yourself, especially if that person came from a distant place, or
 time period, or a different position in a social hierarchy. But even if
 you cannot fully answer these questions, don’t let that stop you from
 asking good questions about the origins, context, and underlying meaning
-of your data. Only by clarifying what we know—and what we don’t know—can
-we begin to recognize the limitations of the data. When you create
-visualizations, your job is also to *acknowledge the limitations of the
-data* by making thoughtful decisions about its design, and how you
-describe what it does—and does not—tell us. We’ll return to these topics
-when discussing [chart design in Chapter 7](chart-design.html) as well
-as [telling and showing your data story in Chapter 16](story.html).
+of your data. Our job is to tell true and meaningful stories with data,
+but that process begins by clarifying what we know—and what we don’t
+know—about the information we’ve gathered. Sometimes we can visually
+depict its limitations through error bars, as you’ll learn in the [chart
+design in Chapter 7](chart-design.html), and sometimes we need to
+[acknowledge uncertainty in our data stories, as we’ll discuss in
+Chapter 16](sources-uncertainty.html).
 
 ### Summary
 
@@ -3269,7 +3294,8 @@ and private data, masking and aggregating sensitive data, navigating
 open data repositories, sourcing data origins, recognizing bad data, and
 questioning your data more deeply than its surface level. Remember these
 lessons as you leap into the next few chapters on cleaning data and
-creating interactive charts and maps.
+creating interactive charts and maps. We’ll come back to related issues
+on this topic in [Chapter 15: Detect Lies and Reduce Bias](detect.html).
 
 <!--chapter:end:04-find.Rmd-->
 
@@ -3284,19 +3310,21 @@ spellings of the same name, and other unexpected things. See Figure
 surprised if you find yourself spending more time cleaning up data than
 you do analyzing and visualizing it.
 
-<img src="images/05-clean/clean-up-messy-data.png" alt="More often than not, raw data looks messy."  />
+<img src="images/05-clean/clean-up-messy-data.png" alt="More often than not, raw data looks messy." width="500" />
 <p class="caption">
 Figure 5.1: More often than not, raw data looks messy.
 </p>
 
 In this chapter you’ll learn about different tools, in order to help you
 make decisions about which one to use to clean up your data efficiently.
-First, we’ll start with basic cleanup methods using spreadsheets, such
-as [find and replace with a blank](find-and-replace.html), [tranpose
-rows and columns of data](transpose.html), [split data into separate
+First, we’ll start with basic cleanup methods using Google Sheets, such
+as its [Smart Cleanup feature](smart-cleanup.html) to fix inconsistent
+data and remove duplicates, [find and replace with a
+blank](find-and-replace.html), [tranpose rows and columns of
+data](transpose.html), [split data into separate
 columns](split-data.html), and [combine columns into
 one](combine-data.html). While we feature Google Sheets in our examples,
-the same principles (and in most cases the same formulas) can be use in
+many of these principles (and in some cases the same formulas) apply to
 Microsoft Excel, LibreOffice Calc, Mac’s Numbers, or other spreadsheet
 packages. Next, you will learn how to [extract table data from
 text-based PDF documents with Tabula](tabula.html), a free tool used by
@@ -3306,14 +3334,57 @@ PDFs. Finally, we will [introduce OpenRefine, a powerful and versatile
 tool to clean up the messiest spreadsheets](open-refine.html), such as
 those containing dozens of different spellings of the same name.
 
-TODO below: Add Google Sheets Smart Cleanup feature when available in
-late October
-<a href="https://gsuiteupdates.googleblog.com/2020/09/smart-cleanup-suggestions-google-sheets.html" class="uri">https://gsuiteupdates.googleblog.com/2020/09/smart-cleanup-suggestions-google-sheets.html</a>
+Smart Cleanup with Google Sheets
+--------------------------------
+
+One of the newest reasons to work with your data in Google Sheets is to
+utilize their Smart Cleanup feature, which helps to identify and suggest
+corrections for inaccurate data. The tool opens a sidebar menu that
+spots potential problems, and you decide whether or not to accept its
+suggestion.
+
+Learn what types of issues Smart Cleanup catches, and which ones it
+misses, using our sample data on the ten most populated nations in the
+world, which contains some problems that we intentionally added.
+
+1.  Open the [Smart Cleanup sample data file in Google
+    Sheets](https://docs.google.com/spreadsheets/d/1N06Xv87K9A-veKyQ2FPlT68fzbsN9q6lWv8hAb36K_E/edit#gid=0),
+    sign in with your account, and go to *File &gt; Make a Copy* to
+    create a version you can edit in your Google Drive.
+
+2.  Go to *Data &gt; Cleanup suggestions* and view items that appear in
+    the sidebar, as shown in Figure
+    <a href="#fig:sheets-cleanup-suggestions">5.2</a>.
+
+<img src="images/05-clean/sheets-cleanup-suggestions.png" alt="Go to *Data - Cleanup Suggestions* to review potential errors." width="650" />
+<p class="caption">
+Figure 5.2: Go to *Data - Cleanup Suggestions* to review potential
+errors.
+</p>
+
+The Smart Cleanup feature successfully caught a duplicate entry (row
+12), and whitespaces in cells A4 and A5. Click the green *Remove* and
+*Trim all* buttons to confirm that Google Sheets should clean them up.
+
+But can you spot these other errors that Smart Cleanup missed?
+
+-   In cell A10, *Russsia* is misspelled with an extra *s*.
+-   In cell C6, Pakistan’s share of the world population appears in
+    decimal form, not percentage.
+-   In cell D4, the US date appears in MM/DD/YYYY format, not like the
+    other entries.
+
+The Google Sheets Smart Cleanup feature is a good place to start. But if
+your data is really messy, you may need to turn to more sophisticated
+tools described later in this chapter, such as [Open
+Refine](open-refine.html). In the next section you’ll learn another
+clean-up method that works in any spreadsheet: find and replace with a
+blank entry.
 
 Find and Replace with Blank
 ---------------------------
 
-One of the simplest and most powerful cleanup tools inside your
+One of the simplest and most powerful cleanup tools inside every
 spreadsheet is the *Find and Replace* command. You can also use it to
 bulk-change different spellings of the same name, such as shortening a
 country’s name (from *Republic of India* to *India*), or expanding a
@@ -3346,34 +3417,42 @@ unwanted “town” label after each place name.
     Sheets](https://docs.google.com/spreadsheets/d/1kJI0xFedPUQBRfT9CEMAfIsggOmJv4wz_AdenraFDP4/edit#gid=1055822816),
     sign in with your account, and go to *File &gt; Make a Copy* to
     create a version you can edit in your Google Drive.
+
 2.  Select the column you want to modify by clicking its header. If you
     don’t select a column, you will be searching and replacing in the
     entire spreadsheet.
+
 3.  In the *Edit* menu, choose *Find and replace*. You will see the
     window like is shown in Figure
-    <a href="#fig:sheets-find-replace">5.2</a>.
+    <a href="#fig:sheets-find-replace">5.3</a>.
+
 4.  In the *Find* field, type `town`, and be sure to *insert a blank
     space* before the word. If you do not insert a space, you will
     accidentally remove *town* from places such as *Newtown*. Also,
     you’ll accidentally create trailing spaces, or whitespace at the end
     of a line without any other characters following it, which can cause
     troubles in the future.
+
 5.  Leave the *Replace with* field blank. Do not insert a space. Just
     leave it empty.
+
 6.  The *Search* field should be set to the range you selected in step
     2, or *All sheets* if you didn’t select anything.
+
 7.  You have the option to *match case*. If checked, `town` and `Town`
     and `tOwN` will be treated differently. For our purpose, you can
     leave *match case* unchecked.
+
 8.  Press the *Replace all* button. Since this sample file contains 169
     towns, the window will state that 169 instances of “town” have been
     replaced.
+
 9.  Inspect the resulting sheet. Make sure that places that include
     *town* in their name, such as *Newtown*, remained untouched.
 
-<img src="images/05-clean/sheets-find-replace-annotated.png" alt="Find and Replace window in Google Sheets."  />
+<img src="images/05-clean/sheets-find-replace-annotated.png" alt="Find and Replace window in Google Sheets." width="500" />
 <p class="caption">
-Figure 5.2: Find and Replace window in Google Sheets.
+Figure 5.3: Find and Replace window in Google Sheets.
 </p>
 
 Transpose Rows and Columns
@@ -3385,32 +3464,12 @@ the chart or map you desire. This problem often arises when working with
 time-series or historical data, because tables and charts approach them
 in opposite directions. When designing a table, the proper method is to
 place dates horizontally as column headers, so that we read them from
-left-to-right, like this:[15]
+left-to-right, like this:[16]
 
-<table>
-<thead>
-<tr class="header">
-<th>Year</th>
-<th>2000</th>
-<th>2010</th>
-<th>2020</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Series1</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-</tr>
-<tr class="even">
-<td>Series2</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-</tr>
-</tbody>
-</table>
+    | Year    | 2000 | 2010 | 2020 |
+    |---------|------|------|------|
+    | Series1 |  333 |  444 |  555 |
+    | Series2 |  777 |  888 |  999 |
 
 But when designing a line chart in Google Sheets and similar tools,
 which you’ll learn in [Chapter 7: Chart Your Data](chart.html), we need
@@ -3418,32 +3477,11 @@ to transpose the data so that dates run vertically down the first
 column, in order for the software to read them as labels for a data
 series, like this:
 
-<table>
-<thead>
-<tr class="header">
-<th>Year</th>
-<th>Series1</th>
-<th>Series2</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2000</td>
-<td>…</td>
-<td>…</td>
-</tr>
-<tr class="even">
-<td>2010</td>
-<td>…</td>
-<td>…</td>
-</tr>
-<tr class="odd">
-<td>2020</td>
-<td>…</td>
-<td>…</td>
-</tr>
-</tbody>
-</table>
+    | Year | Series1 | Series2 |
+    |------|---------|---------|
+    | 2000 |     333 |     777 |
+    | 2010 |     444 |     888 |
+    | 2020 |     555 |     999 |
 
 Learn how to transpose rows and columns in our sample data:
 
@@ -3458,11 +3496,11 @@ Learn how to transpose rows and columns in our sample data:
 3.  Scroll further down the spreadsheet and click on a cell, or open a
     new spreadsheet tab, and go to *Edit &gt; Paste Special &gt; Paste
     Transposed*, as shown in Figure
-    <a href="#fig:sheets-transpose">5.3</a>.
+    <a href="#fig:sheets-transpose">5.4</a>.
 
 <img src="images/05-clean/sheets-transpose.png" alt="Go to *Edit - Paste Special - Paste Transposed* to swap rows and columns." width="450" />
 <p class="caption">
-Figure 5.3: Go to *Edit - Paste Special - Paste Transposed* to swap rows
+Figure 5.4: Go to *Edit - Paste Special - Paste Transposed* to swap rows
 and columns.
 </p>
 
@@ -3491,13 +3529,17 @@ coordinates, separated by commas, into separate columns.
     Sheets](https://docs.google.com/spreadsheets/d/1VmY9aS7I7UstXeI2xsJ-Ep2Q0CW8tnFHWTCga4EaJRk/edit#gid=1670822958),
     sign in with your account, and go to *File &gt; Make a Copy* to
     create a version you can edit in your Google Drive.
+
 2.  Select the data you wish to split, either the full column or just
     several rows. Note that you can only split data from one column at a
     time.
+
 3.  Make sure there is no data in the column to the right of the one
     you’re splitting, because all data there will be written over.
+
 4.  Go to *Data* and select *Split text to columns*, as in Figure
-    <a href="#fig:sheets-split">5.4</a>.
+    <a href="#fig:sheets-split">5.5</a>.
+
 5.  Google Sheets will automatically try to guess your separator. You
     will see that your coordinates are now split with the comma, and the
     Separator is set to *Detect automatically* in the dropdown. You can
@@ -3505,12 +3547,13 @@ coordinates, separated by commas, into separate columns.
     (`.`), a space character, or any other custom character (or even a
     sequence of characters, which we’ll discuss in Example 2 of this
     section).
+
 6.  You can rename the new columns into *Longitude* (first number) and
     *Latitude* (second number).
 
-<img src="images/05-clean/sheets-split-annotated.png" alt="Select *Data - Split text to columns* to automatically separate data." width="350" />
+<img src="images/05-clean/sheets-split.png" alt="Select *Data - Split text to columns* to automatically separate data." width="350" />
 <p class="caption">
-Figure 5.4: Select *Data - Split text to columns* to automatically
+Figure 5.5: Select *Data - Split text to columns* to automatically
 separate data.
 </p>
 
@@ -3534,27 +3577,31 @@ into four columns.
     Sheets](https://docs.google.com/spreadsheets/d/1XkWrHBCK5HedAWskkb5lligWoozBVXc6w7_FRuYebPI/edit#gid=0),
     sign in to your account, and go to *File &gt; Make a Copy* to save a
     version in your Google Drive that you can edit.
+
 2.  Select the column and go to *Data* &gt; *Split text to columns* to
     start splitting from left to right.
+
 3.  Google Sheets will automatically split your cell into two parts,
     `300 Summit St` and `Hartford CT--06106`, using comma as a
     separator. (If it didn’t, just select *Comma* from the dropdown menu
     that appeared).
+
 4.  Now select only the second column and perform *Split text to
     columns* again. Google Sheets will automatically separate the city
     from the state and zip code, because it automatically chose a space
     as the separator. (If it did not, choose *Space* from the dropdown
     menu).
+
 5.  Finally, select only the third column and perform *Split text to
     columns* again. Google Sheets won’t recognize the two dashes as a
     separator, so you need to manually select *Custom*, type those two
     dashes (`--`) in the *Custom separator* field, as shown in Figure
-    <a href="#fig:sheets-split-complex">5.5</a>, and press Enter. Now
+    <a href="#fig:sheets-split-complex">5.6</a>, and press Enter. Now
     you have successfully split the full address into four columns.
 
 <img src="images/05-clean/sheets-split-complex.png" alt="To split the last column, select a *Custom* separator and manually type in two dashes." width="550" />
 <p class="caption">
-Figure 5.5: To split the last column, select a *Custom* separator and
+Figure 5.6: To split the last column, select a *Custom* separator and
 manually type in two dashes.
 </p>
 
@@ -3597,17 +3644,20 @@ with some sample data.
     create a version you can edit in your Google Drive. The sheet
     contains addresses that are separated into four columns: street,
     city, state, and zip.
+
 2.  In column E, type a new header named *location*.
-3.  In cell E2, type in the following formula, which combines the four
-    items using ampersands, and separates them with quoted commas and
-    spaces, as shown in Figure <a href="#fig:sheets-combine">5.6</a>,
-    and press *Enter*. `=A2 & ", " & B2 & ", " & C2 & " " & D2`
+
+3.  In cell E2, type in `=A2 & ", " & B2 & ", " & C2 & " " & D2`. This
+    formula combines the four items using ampersands, and separates them
+    with quoted commas and spaces, as shown in Figure
+    <a href="#fig:sheets-combine">5.7</a>. Then press *Enter*.
+
 4.  Click cell E2 and drag the bottom-right corner cross-hair downward
     to fill in the rest of the column.
 
 <img src="images/05-clean/sheets-combine.png" alt="Use ampersands to combine items, and insert quoted spaces with commas as separators."  />
 <p class="caption">
-Figure 5.6: Use ampersands to combine items, and insert quoted spaces
+Figure 5.7: Use ampersands to combine items, and insert quoted spaces
 with commas as separators.
 </p>
 
@@ -3617,10 +3667,11 @@ we described in Chapter 3](geocode.html) to find the latitude and
 longitude coordinates, in order to [map your data as we’ll discuss in
 Chapter 8](map.html)
 
-Note: Lisa Charlotte Rost from Datawrapper has written a brilliant [blog
+For further reading, we recommend Lisa Charlotte Rost’s brilliant
+[Datawrapper blog
 post](https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/)
 about cleaning and preparing your spreadsheet data for analysis and
-visualization, which we recommend for further reading.[16]
+visualization.[17]
 
 Spreadsheets are great tools to find and replace data, split data into
 separate columns, or combine data into one column. But what if your data
@@ -3661,19 +3712,17 @@ may have to go to *System Preferences &gt; Security & Privacy &gt;
 General tab*, and click the *Open Anyway* button in the lower half of
 the window to open the app the first time.
 
-When you start up Tabula, the default system browser will open, as shown
-in Figure <a href="#fig:tabula-welcome">5.7</a>. Tabula runs on your
-local computer, not the internet. The URL in the browser will be
-something like `http://127.0.0.1:8080/`. The first portion is the
-localhost or hostname for your computer, and `8080` refers to the port
-number. If you see a different port number, that’s fine, and just means
-that the initial number is already in use by some other program on your
-computer. If for any reason you decide to use a different browser, just
-copy-and-paste the URL.
+When you start up Tabula, it opens your default browser as a localhost
+with a URL similar to `http://127.0.0.1/`, with or without an additional
+port number such as with `:8080`, as shown in Figure
+<a href="#fig:tabula-welcome">5.8</a>. Tabula runs on your local
+computer, not the internet. If your default browser (such as Safari or
+Edge) does not play nicely with Tabula, you can copy-and-paste the URL
+into a different browser (such as Firefox or Chrome).
 
 <img src="images/05-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
-Figure 5.7: Tabula welcome page.
+Figure 5.8: Tabula welcome page.
 </p>
 
 Now let’s upload a sample text-based PDF and detect any tables we wish
@@ -3685,17 +3734,20 @@ provide your own.
 
 1.  Select the PDF you want to extract data from by clicking the blue
     *Browse…* button.
+
 2.  Click *Import*. Tabula will begin analyzing the file.
+
 3.  As soon as Tabula finishes loading the PDF, you will see a PDF
     viewer with individual pages. The interface is fairly clean, with
     only four buttons in the header.
+
 4.  Click the *Autodetect Tables* button to let Tabula look for relevant
     data. The tool highlights each table it detects in red, as shown in
-    Figure <a href="#fig:tabula-autodetect">5.8</a>.
+    Figure <a href="#fig:tabula-autodetect">5.9</a>.
 
 <img src="images/05-clean/tabula-autodetect.png" alt="Click *Autodetect Tables*, which Tabula will highlight in red."  />
 <p class="caption">
-Figure 5.8: Click *Autodetect Tables*, which Tabula will highlight in
+Figure 5.9: Click *Autodetect Tables*, which Tabula will highlight in
 red.
 </p>
 
@@ -3703,43 +3755,55 @@ Now let’s manually adjust our selected tables and export the data.
 
 1.  Click *Preview & Export Extracted Data* green button to see how
     Tabula thinks the data should be exported.
+
 2.  If the preview tables don’t contain the data you want, try switching
     between *Stream* and *Lattice* extraction methods in the
     left-hand-side bar.
+
 3.  If the tables still don’t look right, or you with to remove some
     tables that Tabula auto-detected, hit *Revise selection* button.
     That will bring you back to the PDF viewer.
+
 4.  Now you can *Clear All Selections* and manually select tables of
     interest. Use drag-and-drop movements to select tables of interest
     (or parts of tables).
+
 5.  If you want to “copy” selection to some or all pages, you can use
     *Repeat this Selection* dropdown, which appears in the lower-right
     corner of your selections, to propagate changes. This is extremely
     useful if your PDF consists of many similarly-formatted pages.
+
 6.  Once you are happy with the result, you can export it. If you have
     only one table, we recommend using CSV as export format. If you have
     more than one table, consider switching export format in the
     drop-down menu to *zip of CSVs*.This way each table will be saved as
     an individual file, rather than all tables inside one CSV file.
 
-Once you exported your data, you can find it in the Downloads folder on
-your computer (or wherever you chose to save it), where it is ready to
-open with a spreadsheet tool to analyze and visualize.
+After you have exported your data to your computer, navigate to the file
+and open it with a spreadsheet tool to analyze and visualize.
 
-In the following section, we are going to look how to clean up messy
-datasets with OpenRefine.
+Now that you have extracted a table from a PDF document, the results may
+be messy. In the next section, we will clean up messy datasets with a
+very powerful tool called OpenRefine.
 
 Clean Data with OpenRefine
 --------------------------
 
-Look at the [sample US Foreign Aid
-dataset](https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503)
-shown in Figure <a href="#fig:openrefine-dataset">5.9</a>. Can you spot
-any problems with it?
+Open the [US Foreign Aid sample dataset in Google Sheets
+format](https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503)
+as shown in Figure <a href="#fig:openrefine-dataset">5.10</a>. Can you
+spot any problems with it? This data excerpt is from [US Overseas Loans
+and Grants (Greenbook)
+dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook),
+which shows US economic and military assistance to various countries. We
+chose to only include assistance to South Korea and North Korea for the
+years between 2000 and 2018. We added deliberate misspellings and
+formatting issues for demonstration purposes, but we did not alter
+values.
 
-<img src="images/05-clean/openrefine-dataset.png" alt="Can you spot any problems with this sample data?"  />
+<img src="images/05-clean/openrefine-dataset.png" alt="Can you spot any problems with this sample data?" width="600" />
 <p class="caption">
-Figure 5.9: Can you spot any problems with this sample data?
+Figure 5.10: Can you spot any problems with this sample data?
 </p>
 
 Notice how the *Country* column various spellings of North and South
@@ -3748,15 +3812,6 @@ Some amounts use commas to separate thousands, while some uses spaces.
 Some amounts start with a dollar sign, and some do not. Datasets like
 this can be an absolute nightmare to analyze. Luckily, OpenRefine
 provides powerful tools to clean up and standardize data.
-
-Note: This data excerpt is from [US Overseas Loans and Grants
-(Greenbook)
-dataset](https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook),
-which shows US economic and military assistance to various countries. We
-chose to only include assistance to South Korea and North Korea for the
-years between 2000 and 2018. We added deliberate misspellings and
-formatting issues for demonstration purposes, but we did not alter
-values.
 
 ### Set up OpenRefine
 
@@ -3774,23 +3829,26 @@ OpenRefine from launching because Apple cannot identify the developer
 for this open-source project. To resolve the problem, go to *System
 Preferences &gt; Security and Privacy &gt; General tab*, and click the
 *Open Anyway* button in the lower half of the window, as shown in Figure
-<a href="#fig:openrefine-mac-alert-annotated">5.10</a>. If prompted with
+<a href="#fig:openrefine-mac-alert-combined">5.11</a>. If prompted with
 another window, click *Open*.
 
-<img src="images/05-clean/openrefine-mac-alert-annotated.png" alt="If your Mac displays a warning about launching Open Refine (on left), go to *System Preferences - Security and Privacy - General tab* and click *Open Anyways* (on right)."  />
+<img src="images/05-clean/openrefine-mac-alert-combined.png" alt="If your Mac displays a warning about launching Open Refine (on left), go to *System Preferences - Security and Privacy - General tab* and click *Open Anyways* (on right)."  />
 <p class="caption">
-Figure 5.10: If your Mac displays a warning about launching Open Refine
+Figure 5.11: If your Mac displays a warning about launching Open Refine
 (on left), go to *System Preferences - Security and Privacy - General
 tab* and click *Open Anyways* (on right).
 </p>
 
-Once launched, you should see OpenRefine in your browser with
-`127.0.0.1:3333` address (localhost, port 3333), as shown in Figure
-<a href="#fig:openrefine-welcome">5.11</a>.
+When you start up OpenRefine, it will open your default browser with the
+localhost `127.0.0.1` address, with or without the port `:3333`, as
+shown in Figure <a href="#fig:openrefine-welcome">5.12</a>. If your
+regular browser (such as Safari) does not behave nicely with OpenRefine,
+copy and paste the localhost address into a different browser (such as
+Firefox or Chrome).
 
-<img src="images/05-clean/openrefine-welcome-annotated.png" alt="OpenRefine starting page."  />
+<img src="images/05-clean/openrefine-welcome.png" alt="OpenRefine starting page." width="500" />
 <p class="caption">
-Figure 5.11: OpenRefine starting page.
+Figure 5.12: OpenRefine starting page.
 </p>
 
 ### Load Data and Start a New Project
@@ -3801,21 +3859,25 @@ or a remote web address (such as a Google Sheet). OpenRefine also can
 extract data directly from SQL databases, but this is beyond the scope
 of this book.
 
-1.  Download the [sample messy data on US Foreign Aid in CSV
-    format](data/sample-messy-us-foreign-aid.csv) to your computer.
-2.  Under *Get data from: This computer*, click *Browse…* and select the
-    CSV file you downloaded above. Click *Next*.
+1.  Open the [US Foreign Aid sample dataset in Google
+    Sheets](https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503),
+    sign in with your account, and go to *File &gt; Download* to save a
+    version in comma-separated values (CSV) format to your computer.
+
+2.  In OpenRefine, under *Get data from: This computer*, click *Browse…*
+    and select the CSV file you downloaded above. Click *Next*.
+
 3.  Before you can start cleaning up data, OpenRefine allows you to make
     sure data is *parsed* properly. In our case, parsing means the way
     the data is split into columns. Make sure OpenRefine assigned values
     to the right columns, or change setting in *Parse data as* block at
-    the bottom of the page until it starts looking meaningful, like
-    shown in Figure <a href="#fig:openrefine-parse">5.12</a>.
-4.  Hit *Create Project* in the upper-right corner.
+    the bottom of the page until it starts looking meaningful, as shown
+    in Figure <a href="#fig:openrefine-parse">5.13</a>. Then press
+    *Create Project* in the upper-right corner.
 
 <img src="images/05-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
-Figure 5.12: OpenRefine parsing options.
+Figure 5.13: OpenRefine parsing options.
 </p>
 
 Now when you’ve successfully read the data into a new project, let’s
@@ -3828,45 +3890,67 @@ Once your project is created, you will see the first 10 rows of the
 dataset. You can change it to 5, 10, 25, or 50 by clicking the
 appropriate number in the header
 
-Each column header has its own menu (callable by clicking the arrow-down
-button). Left-aligned numbers in a column are likely represented as text
-(as is the case with FundingAmount column in our example), and they need
-to be transformed into numeric format.
+Each column header has its own menu, which you can select by clicking
+its arrow-down button. Left-aligned numbers in a column are likely
+represented as text, as is our case with the *FundingAmount* column, and
+they need to be transformed into numeric format.
 
-1.  To transform text into numbers, open the column menu, and go to
-    *Edit cells* &gt; *Common transforms* &gt; *To number*.
-2.  You will see that some numbers became green and right-aligned
-    (success!), but most did not change. That is because dollar sign
-    (`$`) and commas (`,`) confuse OpenRefine and prevent values to be
-    converted into numbers.
-3.  Let’s remove `$` and `,` from the FundingAmount column. In the
-    column menu, choose *Edit cells* &gt; *Transform*. In the Expression
-    window, type `value.replace(',', '')` and notice how commas
-    disappear in the preview window. When you confirm your formula
-    works, click *OK*.
-4.  Now, repeat the previous step, but instead of a comma, remove the
-    `$` character. (Your expression will become
-    `value.replace('$', '')`).
-5.  In steps 3 and 4, we replaced text (string) values with other string
-    values, making OpenRefine think this column is no longer numeric. As
-    a result, all values are once again left-aligned and in black.
-    Perform step 1 again to see that all but three cells turning green
-    (successfully converting to numeric). Now we need to remove spaces
-    and an `a` character at the end of one number. Fix those manually by
-    hovering over cells, and clicking the `edit` button (in the new
-    popup window, make sure to change *Data type* to *number*, and hit
-    *Apply*, like in Figure
-    <a href="#fig:openrefine-manual-edit">5.13</a>).
+1.  To transform text into numbers, select the *FundingAmount* column
+    menu, and go to *Edit cells &gt; Common transforms &gt; To number*,
+    as shown in Figure <a href="#fig:openrefine-edit-common">5.14</a>.
 
-<img src="images/05-clean/openrefine-manual-edit-annotated.png" alt="Manually remove spaces and extra characters, and change data type to number."  />
+<img src="images/05-clean/openrefine-edit-common.png" alt="In the *FundingAmount* column menu, select *Edit cells - Common transforms - To number*." width="450" />
 <p class="caption">
-Figure 5.13: Manually remove spaces and extra characters, and change
-data type to number.
+Figure 5.14: In the *FundingAmount* column menu, select *Edit cells -
+Common transforms - To number*.
+</p>
+
+You will see that *some* numbers became green and right-aligned, which
+signals partial success, but most did not change. That is because dollar
+sign (`$`) and commas (`,`) confuse OpenRefine and prevent values to be
+converted into numbers.
+
+1.  Let’s remove `$` and `,` from the *FundingAmount* column. In the
+    column menu, this time select *Edit cells &gt; Transform*, because
+    we need to manually enter the edit we wish to make. In the
+    Expression window, type `value.replace(',', '')` and notice how
+    commas disappear in the preview window, as shown in Figure
+    <a href="#fig:openrefine-edit-expression">5.15</a>. When you confirm
+    your formula has no syntax errors, click *OK*
+
+<img src="images/05-clean/openrefine-edit-expression.png" alt="Type the expression into the screen, preview the change, and confirm that there are no syntax errors."  />
+<p class="caption">
+Figure 5.15: Type the expression into the screen, preview the change,
+and confirm that there are no syntax errors.
+</p>
+
+1.  Now, repeat the previous step, but instead of a comma, remove the
+    `$` character by typing a different expression:
+    `value.replace('$', '')`), confirm the formula, and click *OK*.
+
+2.  In steps 2 and 3, we replaced text (or string) values with other
+    text values, making OpenRefine think this column is no longer
+    numeric. As a result, all values are once again left-aligned and in
+    black. Perform step 1 again. This time, nearly all of the cells will
+    have turned green, meaning they successfully converted to numeric.
+    But few non-numeric black cells remain.
+
+3.  To fix the remaining non-numeric black cells, we need to remove
+    spaces and an `a` character at the end of one number. Fix these
+    manually by hovering over a cell, click the *Edit* button, and in
+    the new popup window, change *Data type* to *number*, and press
+    *Apply*, as shown in Figure
+    <a href="#fig:openrefine-manual-edit">5.16</a>.
+
+<img src="images/05-clean/openrefine-manual-edit-combined.png" alt="Manually edit to remove spaces and extra characters, and change data type to number." width="550" />
+<p class="caption">
+Figure 5.16: Manually edit to remove spaces and extra characters, and
+change data type to number.
 </p>
 
 At this point, all funding amounts should be clean numbers,
 right-aligned and colored in green. We’re ready to move on to the
-Country column and fix different spellings of Koreas.
+*Country* column and fix different spellings of Koreas.
 
 ### Cluster Similar Spellings
 
@@ -3884,46 +3968,48 @@ column values. 26 choices for a column that should have just two
 distinct values, North Korea and South Korea!
 
 1.  To begin standardizing spellings, click on the arrow-down button of
-    Country column header, and choose *Edit cells* &gt; *Cluster and
+    the *Country* column header, and choose *Edit cells &gt; Cluster and
     edit*. You will see a window like the one shown in Figure
-    <a href="#fig:openrefine-cluster">5.14</a>.
-2.  You will have a choice of two clustering methods, *key collision* or
-    *nearest neighbor*. Key collision clustering is a much faster
-    technique that is appropriate for larger datasets, but it is less
-    flexible. Nearest neighbor is a more computationally expensive
-    approach and will be slow on larger datasets, but it allows for
-    greater fine-tuning and precision. Both methods can be powered by
-    different functions, which you can read about [on the project’s Wiki
-    page](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth).
-    For the purpose of this exercise, let’s leave the default *key
-    collision* method with *fingerprint* function.
-3.  OpenRefine will calculate a list of clusters. *Values in Cluster*
-    column contains grouped spellings that OpenRefine considers the
-    same. If you agree with a grouping, check the *Merge?* box, and
-    assign the “true” value to the *New Cell Value* input box (see first
-    cluster in Figure <a href="#fig:openrefine-cluster">5.14</a>). In
-    our example, this would be either `North Korea` or `South Korea`.
-4.  You can go through all groupings, or stop after one or two and click
-    *Merge Selected & Re-Cluster* button. The clusters you chose to
-    merge will be merged, and grouping will be re-calculated (don’t
-    worry, the window won’t go anywhere). Keep regrouping until you are
-    happy with the result.
+    <a href="#fig:openrefine-cluster">5.17</a>.
+
+<img src="images/05-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
+<p class="caption">
+Figure 5.17: Cluster similar text values.
+</p>
+
+You will have a choice of two clustering methods, *key collision* or
+*nearest neighbor*. Key collision clustering is a much faster technique
+that is appropriate for larger datasets, but it is less flexible.
+Nearest neighbor is a more computationally expensive approach and will
+be slow on larger datasets, but it allows for greater fine-tuning and
+precision. Both methods can be powered by different functions, which you
+can read about [on the project’s Wiki
+page](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth).
+For the purpose of this exercise, let’s leave the default *key
+collision* method with *fingerprint* function.
+
+OpenRefine will calculate a list of clusters. The *Values in Cluster*
+column contains grouped spellings that OpenRefine considers the same.
+
+1.  If you agree with a grouping, check the *Merge?* box, and assign the
+    *true* value to the *New Cell Value* input box, as shown in the
+    first cluster in Figure <a href="#fig:openrefine-cluster">5.17</a>.
+    In our example, this would be either `North Korea` or `South Korea`.
+
+2.  You can go through all groupings, or stop after one or two and click
+    the *Merge Selected & Re-Cluster* button. The clusters you selected
+    will be merged, and grouping will be re-calculated. (Don’t worry,
+    the window won’t go anywhere.) Keep regrouping until you are happy
+    with the result.
 
 Spend some time playing with *Keying function* parameters, and notice
 how they produce clusters of different sizes and accuracy.
 
-<img src="images/05-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
-<p class="caption">
-Figure 5.14: Cluster similar text values.
-</p>
-
-### Export
-
-Once you are done cleaning up and clustering data, save the clean
-dataset by clicking *Export* button in the upper-right corner of
-OpenRefine window. You can choose your format (we recommend CSV, or
-comma-separated value). Now you have a clean dataset that is ready to be
-processed and visualized.
+1.  After you are done cleaning up and clustering data, save the clean
+    dataset by clicking *Export* button in the upper-right corner of
+    OpenRefine window. You can choose your format (we recommend CSV, or
+    comma-separated value). Now you have a clean dataset that is ready
+    to be analyzed and visualized.
 
 ### Summary
 
@@ -3951,7 +4037,7 @@ spreadsheet skills](spreadsheet.html), [found and questioned your
 data](find.html), and [cleaned up any messy parts](clean.html), this
 chapter focuses on the key question to ask while analyzing your
 evidence: “Compared to what?” That’s how statistician Edward Tufte
-defined the “heart of quantitative reasoning.”[17]. We search for
+defined the “heart of quantitative reasoning.”[18]. We search for
 insightful findings in our data by judging their significance against
 each other, to identify those that truly stand out. Sometimes we need to
 adjust our scales to ensure that we’re weighing data fairly, or as the
@@ -3961,7 +4047,7 @@ maps—be sure that you’re making meaningful comparisons, because without
 this, your work may become meaningless.
 
 This book does not intend to cover statistical data analysis, since many
-excellent resources already address this expansive field of study.[18]
+excellent resources already address this expansive field of study.[19]
 Instead, this chapter offers several common-sense strategies to make
 meaningful comparisons while you analyze your data, in order to help you
 design true and insightful visualizations that tell your story. You will
@@ -4009,7 +4095,7 @@ Figure 6.1: The *median* is a more useful comparative term than
 grasps as a *ratio* of parts per hundred. For example, an [old 1970s
 commercial for Trident gum](https://en.wikipedia.org/wiki/Trident_gum)
 claimed that “4 out of 5 dentists surveyed recommend sugarless gum for
-their patients who chew gum.”[19] Even if you’re too young to remember
+their patients who chew gum.”[20] Even if you’re too young to remember
 that slogan, or wonder how that survey was actually conducted, or are
 puzzling over how the fifth dentist resisted such intense peer pressure,
 we all understand that 4 out of 5 dentists is equivalent to
@@ -4102,7 +4188,7 @@ Here’s an example about motor vehicle safety that was inspired by
 visualization expert Alberto Cairo, with [updated 2018
 data](https://www.iihs.org/topics/fatality-statistics/detail/state-by-state)
 from the Insurance Institute for Highway Safety (IIHS) and the US
-Department of Transportation.[20] Over 36,000 people died in motor
+Department of Transportation.[21] Over 36,000 people died in motor
 vehicle crashes in 2018, including car and truck drivers and occupants,
 motorcyclists, pedestrians, and bicyclists. Although only a small
 fraction of this data appears in the tables below, you can [view all of
@@ -4298,7 +4384,7 @@ Alberto Cairo reminds us, every time we refine our calculations to make
 a more meaningful comparison, our interpretation becomes a closer
 representation of the truth. “It’s unrealistic to pretend that we can
 create a *perfect* model,” Cairo reminds us. “But we can certainly come
-up with a *good enough* one.”[21]
+up with a *good enough* one.”[22]
 
 As we demonstrated above, the most common way to normalize data is to
 adjust raw counts into relative rates, such as percentages or per
@@ -4313,7 +4399,7 @@ it does today, due to inflation and related factors. Similarly,
 economists distinguish between *nominal data* (unadjusted) versus *real
 data* (adjusted over time), typically by converting figures into
 “constant dollars” for a particular year that allow better comparisons
-by accounting for purchasing power.[22] Also, economic data is often
+by accounting for purchasing power.[23] Also, economic data is often
 *seasonally adjusted* to improve comparisons for data that regularly
 varies across the year, such as employment or revenue during the summer
 tourism season versus the winter holiday shopping season. Another
@@ -4361,7 +4447,7 @@ One type to avoid is *selection bias*, which means that the sample
 chosen for your study differs systematically from the larger population.
 “What you see depends on where you look,” cautions professors Carol
 Bergstrom and Jevin West, authors of a book with an unforgettable title,
-*Calling Bullshit*.[23] If you randomly measured the height of people
+*Calling Bullshit*.[24] If you randomly measured the height of people
 who happened to be leaving the gym after basketball practice, your
 artificially taller results would be due to selection bias, as shown in
 Figure <a href="#fig:selection-bias">6.2</a>.
@@ -4382,7 +4468,7 @@ people was significantly higher than usual for the 2020 Current
 Population Survey supplement, which they determined by comparing
 individual survey results to prior years. Since richer people were more
 likely to respond, this artificially raised the reported median income
-level, which researchers needed to correct.[24] See also the [US Census
+level, which researchers needed to correct.[25] See also the [US Census
 Bureau Hard to Count 2020 map](https://www.censushardtocountmaps2020.us)
 that visualizes self-response rates by states, counties, and tracts. If
 you conduct a survey that does not correct for non-response bias, you
@@ -4578,10 +4664,11 @@ weight).
 </tbody>
 </table>
 
-For a more extensive collection of chart types and use cases, see the
-[Financial Times Visual Vocabulary](https://ft.com/vocabulary).
+Note: For a more extensive collection of chart types and use cases, see
+the [Financial Times Visual Vocabulary](https://ft.com/vocabulary).
 
-TODO above: improve and standardize chart images, especially range chart
+TODO above: improve and standardize chart images, improve colors, aspect
+ratio; redo range chart
 
 Chart Design Principles
 -----------------------
@@ -4688,7 +4775,7 @@ charts, which display filled-in area underneath the line to represent
 value. Starting the baseline at a number other than zero is a trick
 commonly used to exaggerate differences in opinion polls and election
 results, as we describe later in [Chapter 15: Detect Lies and Reduce
-Data Bias](detect.html)
+Bias](detect.html)
 
 <img src="images/07-chart/design-principles-start-at-zero.png" alt="Start your bar chart at zero."  />
 <p class="caption">
@@ -4701,7 +4788,7 @@ the *position* and *angle* of the line, rather than its height or
 length. Starting a line chart at a number other than zero does *not*
 necessarily distort its encoded information because our eyes rely on its
 shape to determine its meaning, rather than its proximity to the
-baseline.[25] For example, compare both the right and left sides of
+baseline.[26] For example, compare both the right and left sides of
 Figure <a href="#fig:design-principles-baseline-comparison">7.3</a>,
 where both are correct.
 
@@ -4894,7 +4981,7 @@ Rost’s “[A Friendly Guide to Colors in Data
 Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
 Pick More Beautiful Colors for Your Data
 Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
-both on the Datawrapper blog.[26]
+both on the Datawrapper blog.[27]
 
 If you follow our advice, you should end up with a de-cluttered chart as
 shown in Figure <a href="#fig:design-principles-decluttered">7.11</a>.
@@ -5386,7 +5473,7 @@ from the Chart type dropdown list.
 Sidebar: Tables and charts approach time-series data in opposite
 directions. When designing a table, the proper method is to place dates
 horizontally as column headers, so that we read them from left-to-right,
-like this:[27]
+like this:[28]
 
 <table>
 <thead>
@@ -6742,12 +6829,12 @@ overview of visualization colors in general, see Lisa Charlotte Rost’s
 Visualization](https://blog.datawrapper.de/colorguide/)” and “[How to
 Pick More Beautiful Colors for Your Data
 Visualizations](https://blog.datawrapper.de/beautifulcolors/index.html),”
-both on the Datawrapper blog.[28]
+both on the Datawrapper blog.[29]
 
 To illustrate key concepts about colors in choropleth maps, let’s
 explore a wonderful design assistant called
 [ColorBrewer](https://colorbrewer2.org/), created by Cynthia Brewer and
-Mark Harrower.[29] Since ColorBrewer is a design assistant, you do *not*
+Mark Harrower.[30] Since ColorBrewer is a design assistant, you do *not*
 upload your map data directly into it. Instead, you select the type of
 data you wish to display in your choropleth map, and ColorBrewer will
 recommend color palettes that work best with your data story. Then you
@@ -6974,7 +7061,7 @@ Which interpolation method is best? There are no uniform design rules,
 except that we advise *against* using *Custom* settings to manually
 place color intervals wherever you wish, since they are more likely to
 create misleading maps, as you’ll learn in [Chapter 15: Detect Lies and
-Reduce Data Bias](detect.html). Our best advice is to experiment with
+Reduce Bias](detect.html). Our best advice is to experiment with
 different interpolation methods, especially when working with skewed
 data, to better understand how these options shape the appearance of
 your choropleth maps and the data stories you tell with them.
@@ -8291,7 +8378,7 @@ learned about [chart design in Chapter 7](chart-design.html) and [map
 design in Chapter 8](map-design.html). Jonathan Schwabish, an economist
 who specializes in creating policy-relevant data visualizations, offers
 his advice in recent publications about creating tables that communicate
-well with multiple audiences.[30]. Here’s a summary of several of his
+well with multiple audiences.[31]. Here’s a summary of several of his
 key points, which also appear in Figure
 <a href="#fig:table-design">9.1</a>.
 
@@ -8312,7 +8399,7 @@ items or outliers in your data, a topic we’ll discuss later in [Chapter
 
 When creating cross-tabulations to illustrate data correlations and
 possible causal relationships, statistician Joel Best offers two more
-design recommendations.[31]
+design recommendations.[32]
 
 1.  Place the independent variable (the suspected cause) at the top in
     the column headers, and the dependent variable (the possible effect)
@@ -8369,7 +8456,7 @@ the interactive table online.
 You’ll also learn how to create sparklines, or tiny line charts that
 quickly summarize data trends. This chart type was refined by Edward
 Tufte, a Yale professor and data visualization pioneer, who described
-sparklines as “datawords… intense, simple, word-sized graphics.”[32]
+sparklines as “datawords… intense, simple, word-sized graphics.”[33]
 While Tufte envisioned sparklines on a static sheet of paper or PDF
 document, you’ll create them inside an interactive table, as shown in
 Figure <a href="#fig:datawrapper-table">9.3</a>. Readers can search by
@@ -10720,7 +10807,11 @@ which you’ll learn to create in [Chapter 14: Transform Your Map
 Data](transform.html). If you’re new to coding, creating Leaflet maps
 can be a great place to start and quickly see the results of what you’ve
 learned. To help solve problems that may arise, see how to [Fix Common
-Mistakes](fix.html) in the appendix.
+Mistakes](fix.html) in the appendix. Or to delve further into
+JavaScript, the language that Leaflet relies on, we strongly recommend
+Marijn Haverbeke’s *Eloquent JavaScript*, available both in print and as
+an [open-source online book](https://eloquentjavascript.net/) with an
+interactive coding sandbox to try out examples.[34]
 
 <table>
 <caption>Table 13.1: Map Code Templates, Best Uses, and Tutorials</caption>
@@ -13373,7 +13464,7 @@ reader.
 <!--chapter:end:14-transform.Rmd-->
 
 15 Detect Lies and Reduce Bias
-===================================
+==============================
 
 The goal of data visualization is to encode information into images that
 capture true and insightful stories. But we’ve warned you to watch out
@@ -13449,7 +13540,7 @@ algorithmic, and intergroup—as well as [spatial
 biases](spatial-bias.html) that more specific to working with maps.
 While we may not be able to stop bias entirely, in this chapter you’ll
 learn how to identify it in the works by other people, and strategies to
-reduce its presence in our own visualizations.[33]
+reduce its presence in our own visualizations.[35]
 
 How to Lie with Charts
 ----------------------
@@ -13553,7 +13644,7 @@ Celsius (or about 2 degrees Fahrenheit) during the past fifty years, and
 this warming has already begun to cause glacial melt and rising sea
 levels. Your task is to create *misleading* line charts that *diminish*
 the appearance of rising global temperature change in the reader’s
-eye.[34]
+eye.[36]
 
 1.  Open the [global temperature change 1880-2019 data in Google
     Sheets](https://docs.google.com/spreadsheets/d/1Npc7ozRjlsgRLLEV_B5zBvqyRqL6akE2qrEIGegHfGU/edit#gid=0),
@@ -13626,7 +13717,7 @@ expert Albert Cairo reminds us that line charts represent values in the
 line charts by their shape, rather than their height, so the baseline is
 irrelevant. Therefore, flattening the line chart for temperature change
 may mislead readers, but it’s technically not wrong, as long as it is
-labelled correctly.[35]
+labelled correctly.[37]
 
 #### Widen the chart to warp its aspect ratio
 
@@ -13657,7 +13748,7 @@ chart should roughly match its aspect ratio. For example, if a chart
 represents a 33 percent increase, which is the same as 33/100 or 1/3, he
 recommends an aspect ratio of 3:1 (because the fraction is flipped by
 placing width before height), or in other words, a line chart that is
-three times wider than its height.[36]
+three times wider than its height.[38]
 
 But Cairo does *not* propose his aspect ratio recommendation as a
 universal rule because he recognizes how it fails with very small or
@@ -13696,7 +13787,7 @@ translates into a 12:1 aspect ratio, or a line chart that is twelve
 times wider than it is tall, as shown in Figure
 <a href="#fig:temperature2-aspect-cairo">15.6</a>. Cairo warns that this
 significant global temperature increase looks “deceptively small,” so he
-cautious against using his aspect ratio recommendation in all cases.[37]
+cautious against using his aspect ratio recommendation in all cases.[39]
 
 &lt;img src=“images/15-detect/temperature2-aspect-cairo-annotated.png”
 alt=“Following Cairo’s”recommendation" for an 8% increase results in a
@@ -13828,7 +13919,7 @@ several ways that charts can be designed to deceive readers, but did not
 exhaust all of the options. For example, see additional readings on ways
 to create three-dimensional charts and to tilt the reader’s perspective
 below the baseline, which causes readers to misjudge the relative height
-of column or line charts.[38]
+of column or line charts.[40]
 
 You may feel frustrated that data visualization lacks clearly-defined
 design rules for many cases, like we are accustomed to reading in our
@@ -13852,7 +13943,7 @@ your own. We’ll focus our attention on choropleth maps that use shading
 or color to represent values in geographic areas, because they are a
 topic of considerable mischief. This exercise was inspired by geographer
 Mark Monmonier’s classic book by the same name, *How to Lie with Maps*,
-originally published in 1991, now in its third edition.[39]
+originally published in 1991, now in its third edition.[41]
 
 Before we get started, review the [map design principles in Chapter
 8](map-design.html) to avoid common mistakes when designing choropleth
@@ -14079,7 +14170,7 @@ identical. Furthermore, Spiegelhalter observes that when we supplement
 rates with raw counts, it further increases our impression of risks. For
 example, if we told you a surgical procedure had a 5 percent mortality
 rate *and* that 20 out of 400 patients died, it seems worse because we
-begin to imagine real people’s lives, not just abstract percentages.[40]
+begin to imagine real people’s lives, not just abstract percentages.[42]
 Counter framing bias by being aware of its potential effect on our minds
 and calling it out.
 
@@ -14093,12 +14184,12 @@ judges used when deciding on prison sentences or probation. But
 ProPublica investigative journalists found that the algorithm wrongly
 predicted Black defendants to be repeat offenders at almost twice the
 rate as White defendants, even when controlling for the types of prior
-crimes they committed.[41] Algorithms also have added to gender bias in
+crimes they committed.[43] Algorithms also have added to gender bias in
 the financial services industry. When Apple and Goldman Sachs partnered
 to offer a new type of credit card, several customers noticed that the
 software formula to evaluate applications sometimes offered men 10 to 20
 times the amount of credit as women, even if they were married, owned
-the same assets, and had similar prior credit scores.[42] In both cases,
+the same assets, and had similar prior credit scores.[44] In both cases,
 companies denied the charges of algorithmic bias but refused to reveal
 the decision-making process within their software formulas, which they
 argued were proprietary. As a result, we need to be vigilant about the
@@ -14113,7 +14204,7 @@ the field of data visualization, and have advocated for ways to counter
 its impact. For example, Jonathan Schwabish and Alice Feng describe how
 they applied a racial equity lens to revise the [Urban Institute’s Data
 Visualization Style
-Guide](http://urbaninstitute.github.io/graphics-styleguide/).[43] For
+Guide](http://urbaninstitute.github.io/graphics-styleguide/).[45] For
 example, Schwabish and Feng recommend ordering group labels to focus on
 the data story, rather than listing “White” and “Men” at the top by
 default. They also call on us to proactively acknowledge missing groups
@@ -14125,49 +14216,53 @@ stereotypical colors and to avoid color-grouping Black, Latino, and
 Asian people as polar opposites of White people.
 
 Schwabish and Feng offer several excellent recommendations to improve
-racial equity in data visualization, but some of their proposals are
-likely to generate more discussion and debate. For example, they
-recommend to stop placing disaggregated racial and ethnic data on the
-same chart, because it encourages a “deficit-based perspective” that
+racial equity in data visualization, though some of their more
+provocative proposals are likely to generate more discussion and debate.
+For example, they [contrast different ways to portray Covid-19 pandemic
+data](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)
+and recommend that we stop placing disaggregated racial and ethnic data
+on the same chart because it promotes a “deficit-based perspective” that
 judges lower-performing groups by the standards of higher-performing
 ones, as shown in Figure <a href="#fig:schwabish-feng1">15.15</a>.
-Instead, Schwabish and Feng suggest plotting racial data in separate but
-adjacent charts, each with its own reference to state or national
-averages for comparison, as shown in Figure
-<a href="#fig:schwabish-feng2">15.16</a>. Their [example using Covid-19
-pandemic
-data](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)
-is interesting, but also raises more questions about whose interests are
-served by revising data visualizations in this way. On one hand, if
-dominant groups use racial disparities in the data to *blame the
-victim*, then it makes sense to stop feeding racist stereotypes of group
-behavior and cease comparing different groups on the same chart. On the
-other hand, if these racial disparities are caused by *structural
-obstacles* to quality jobs, housing, and health care, then do separate
-charts make it harder to identify and challenge the roots of systemic
-racism? While Schwabish and Feng raise important issues that deserve our
-attention, we believe that data visualization is not always driven by a
-fixed set of design rules. Rather, while we work to identify and reduce
-biases, we always need to examine the broader context that surrounds our
-visualizations, and continually search for better ways to tell true and
-meaningful data stories.
+Instead, Schwabish and Feng suggest that we plot racial and ethnic data
+in separate but adjacent charts, each with its own reference to state or
+national averages and confidence intervals, as shown in Figure
+<a href="#fig:schwabish-feng2">15.16</a>.
 
-<img src="images/15-detect/schwabish-feng1.png" alt="To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. (Image by Schwabish and Feng)." width="500" />
+<img src="images/15-detect/schwabish-feng1.png" alt="To avoid a deficit-based perspective, Schwabish and Feng argue against combining racial and ethnic data on the same chart. Source: [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)." width="500" />
 <p class="caption">
 Figure 15.15: To avoid a deficit-based perspective, Schwabish and Feng
-argue against combining racial and ethnic data on the same chart. (Image
-by Schwabish and Feng).
+argue against combining racial and ethnic data on the same chart.
+Source:
+[Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff).
 </p>
 
-<img src="images/15-detect/schwabish-feng2.png" alt="Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. (Image by Schwabish and Feng). But do separate charts make it harder to identify and challenge systemic racism?" width="500" />
+<img src="images/15-detect/schwabish-feng2.png" alt="Instead, Schwabish and Feng recommend placing racial and ethnic data in separate charts, with state or national averages as a comparison point. Source: [Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff)." width="500" />
 <p class="caption">
 Figure 15.16: Instead, Schwabish and Feng recommend placing racial and
 ethnic data in separate charts, with state or national averages as a
-comparison point. (Image by Schwabish and Feng). But do separate charts
-make it harder to identify and challenge systemic racism?
+comparison point. Source:
+[Data@Urban](https://medium.com/@urban_institute/applying-racial-equity-awareness-in-data-visualization-bd359bf7a7ff).
 </p>
 
-Everyone who creates visualizations should strive to recognize and
+Comparing both sets of charts lead us to wonder about the broad
+question: whose interests are best served by data visualizations? On one
+hand, if dominant groups use racial disparities in charts to *blame the
+victim*, then it makes sense to stop feeding racist stereotypes of group
+behavior and cease comparing different groups on the same chart. On the
+other hand, if racial disparities are caused by *structural obstacles*
+to quality jobs, housing, and health care, then do separate six-panel
+visualizations make it harder for readers to recognize and challenge the
+roots of systemic racism? Schwabish and Feng raise an important
+perspective, but do not persuade us that separating racial and ethnic
+data necessarily promotes equity and justice. Nevertheless, we agree on
+the need to continually reflect on and reduce bias in data
+visualization, while also considering the broader context around how
+people in our unjust world interpret our charts and maps, to strengthen
+our continuing search for better ways to tell true and meaningful data
+stories.
+
+All of us who create data visualizations should strive to recognize and
 reduce these general categories of data bias: sampling, cognitive,
 algorithmic, and intergroup. In the next section, we’ll focus on
 different types of spatial bias that are particular to working with map
@@ -14288,7 +14383,7 @@ anywhere else in the world, Google Maps shows a dotted-line border that
 represents a disputed territory. Although Google claims to “remain
 neutral on geopolitical disputes,” according to the *Washington Post*,
 the corporation clearly took a side by displaying a solid border for
-Russian viewers.[44] Google and several other web map providers have
+Russian viewers.[46] Google and several other web map providers have
 taken similar actions regarding the contested border between India and
 Pakistan, the waterway between Iran and Saudi Arabia, and the sea
 between Japan and South Korea.
@@ -14401,7 +14496,7 @@ you will need to make about the [format of your data
 story](story-format.html), with our continual emphasis on sharing
 interactive visualizations rather than static images. Our inspiration
 for this chapter is drawn from excellent books by visualization experts
-Cole Nussbaumer Knaflic and Alberto Cairo.[45]
+Cole Nussbaumer Knaflic and Alberto Cairo.[47]
 
 Build a Narrative on a Storyboard
 ---------------------------------
@@ -14788,6 +14883,7 @@ thinking.
 
 TODO: Reorganize contents, perhaps using this outline?
 
+-   Problem with browser…. try a different browser!
 -   Problems with Mac computers
 -   Problems with data tables
 -   Problems with iframes (since this chapter appears before code
@@ -15035,6 +15131,10 @@ References
 
 <!--chapter:end:21-references.Rmd-->
 
+Anderson, Margo J. *The American Census: A Social History, Second
+Edition*. Yale University Press, 2015.
+<https://www.google.com/books/edition/The_American_Census/NzNOCgAAQBAJ>.
+
 Angwin, Julia, Jeff Larson, Surya Mattu, and Lauren Kirchner. “Machine
 Bias.” ProPublica, May 23, 2016.
 <https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing?token=pnmZCKup_9SO_Q1DvGQOooKLHsrJG0Fr>.
@@ -15090,6 +15190,9 @@ You’re Not Using Facebook.” *Washington Post*, January 28, 2020.
 ———. “Goodbye, Chrome: Google’s Web Browser Has Become Spy Software.”
 *Washington Post*, June 21, 2019.
 <https://www.washingtonpost.com/technology/2019/06/21/google-chrome-has-become-surveillance-software-its-time-switch/>.
+
+Haverbeke, Marijn. *Eloquent JavaScript: A Modern Introduction to
+Programming, 3rd Edition*, 2018. <https://eloquentjavascript.net/>.
 
 Huff, Darrell. *How to Lie with Statistics*. W. W. Norton & Company,
 1954. <http://books.google.com/books?isbn=0393070875>.
@@ -15294,21 +15397,25 @@ January 28, 2020,
 
 [14] Cairo, *How Charts Lie*, 2019, pp. 99-102
 
-[15] Stephen Few, *Show Me the Numbers: Designing Tables and Graphs to
+[15] For a deeper analysis, see Margo J. Anderson, *The American Census:
+A Social History, Second Edition* (Yale University Press, 2015),
+<https://www.google.com/books/edition/The_American_Census/NzNOCgAAQBAJ>
+
+[16] Stephen Few, *Show Me the Numbers: Designing Tables and Graphs to
 Enlighten*, Second edition (Burlingame, CA: Analytics Press, 2012),
 p. 166
 
-[16] Lisa Charlotte Rost, “How to Prepare Your Data for Analysis and
+[17] Lisa Charlotte Rost, “How to Prepare Your Data for Analysis and
 Charting in Excel & Google Sheets” (Chartable: A Blog by Datawrapper),
 accessed August 28, 2020,
 <https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html>
 
-[17] Edward R Tufte, *Envisioning Information* (Cheshire, CT: Graphics
+[18] Edward R Tufte, *Envisioning Information* (Cheshire, CT: Graphics
 Press, 1990),
 <https://www.google.com/books/edition/Envisioning_Information/_EZiAAAAMAAJ>,
 p. 67
 
-[18] For a reader-friendly introduction to statistical logic and its
+[19] For a reader-friendly introduction to statistical logic and its
 limits, see Charles Wheelan, *Naked Statistics: Stripping the Dread from
 the Data* (W. W. Norton & Company, 2013),
 <https://www.google.com/books/edition/Naked_Statistics_Stripping_the_Dread_fro/j5qYPqsBJb0C>;
@@ -15316,50 +15423,50 @@ David Spiegelhalter, *The Art of Statistics: How to Learn from Data*
 (Basic Books, 2019),
 <https://www.google.com/books/edition/The_Art_of_Statistics/04-FDwAAQBAJ>
 
-[19] Andrew Adam Newman, “Selling Gum with Health Claims,” *The New York
+[20] Andrew Adam Newman, “Selling Gum with Health Claims,” *The New York
 Times: Business*, July 27, 2009,
 <https://www.nytimes.com/2009/07/28/business/media/28adco.html>
 
-[20] Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for
+[21] Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for
 Communication* (Pearson Education, 2016),
 <https://www.google.com/books/edition/The_Truthful_Art/8dKKCwAAQBAJ>,
 pp. 71-74.
 
-[21] Cairo, p. 95
+[22] Cairo, p. 95
 
-[22] “What’s Real About Wages?” Federal Reserve Bank of St. Louis (The
+[23] “What’s Real About Wages?” Federal Reserve Bank of St. Louis (The
 FRED Blog, February 8, 2018),
 <https://fredblog.stlouisfed.org/2018/02/are-wages-increasing-or-decreasing/>
 
-[23] Carl T. Bergstrom and Jevin D. West, *Calling Bullshit: The Art of
+[24] Carl T. Bergstrom and Jevin D. West, *Calling Bullshit: The Art of
 Skepticism in a Data-Driven World* (Random House, 2020),
 <https://www.google.com/books/edition/Calling_Bullshit/Plu9DwAAQBAJ>,
 pp. 79, 104-133
 
-[24] Jonathan Rothbaum and Adam Bee, “Coronavirus Infects Surveys, Too:
+[25] Jonathan Rothbaum and Adam Bee, “Coronavirus Infects Surveys, Too:
 Nonresponse Bias During the Pandemic in the CPS ASEC” (US Census
 Bureau), accessed December 8, 2020,
 <https://www.census.gov/library/working-papers/2020/demo/SEHSD-WP2020-10.html>
 
-[25] Cairo, *How Charts Lie*, 2019, p. 61.
+[26] Cairo, *How Charts Lie*, 2019, p. 61.
 
-[26] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
+[27] Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data
 Visualisation” (Chartable: A Blog by Datawrapper, July 31, 2018),
 <https://blog.datawrapper.de/colorguide/>; Lisa Charlotte Rost, “How to
 Pick More Beautiful Colors for Your Data Visualizations” (Chartable),
 accessed October 21, 2020,
 <https://blog.datawrapper.de/beautifulcolors/index.html>
 
-[27] Few, *Show Me the Numbers*, p. 166
+[28] Few, *Show Me the Numbers*, p. 166
 
-[28] Rost, “Your Friendly Guide to Colors in Data Visualisation.”; Rost,
+[29] Rost, “Your Friendly Guide to Colors in Data Visualisation.”; Rost,
 “How to Pick More Beautiful Colors for Your Data Visualizations.”
 
-[29] See also Cynthia A. Brewer, *Designing Better Maps: A Guide for GIS
+[30] See also Cynthia A. Brewer, *Designing Better Maps: A Guide for GIS
 Users* (Esri Press, 2016),
 <https://www.google.com/books/edition/Designing_Better_Maps/gFErrgEACAAJ>
 
-[30] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
+[31] Jon Schwabish, “Thread Summarizing ’Ten Guidelines for Better
 Tables’” (Twitter, August 3, 2020),
 <https://twitter.com/jschwabish/status/1290323581881266177>; Jonathan A.
 Schwabish, “Ten Guidelines for Better Tables,” *Journal of Benefit-Cost
@@ -15369,15 +15476,18 @@ Visualizations: A Guide for Scholars, Researchers, and Wonks* (Columbia
 University Press, 2021),
 <https://cup.columbia.edu/book/better-data-visualizations/9780231193115>
 
-[31] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
+[32] Joel Best, *More Damned Lies and Statistics: How Numbers Confuse
 Public Issues* (Berkeley, CA: University of California Press, 2004),
 <https://www.google.com/books/edition/More_Damned_Lies_and_Statistics/SWBr7D6VavoC>,
 pp. 31-35.
 
-[32] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
+[33] Edward R. Tufte, *Beautiful Evidence* (Graphics Press, 2006),
 <http://books.google.com/books?isbn=0961392177>, pp. 46-63.
 
-[33] The “how to lie” tutorials were inspired by several excellent works
+[34] Marijn Haverbeke, *Eloquent JavaScript: A Modern Introduction to
+Programming, 3rd Edition*, 2018, <https://eloquentjavascript.net/>
+
+[35] The “how to lie” tutorials were inspired by several excellent works
 in data visualization: Cairo, *The Truthful Art*, 2016; Cairo, *How
 Charts Lie*, 2019; Darrell Huff, *How to Lie with Statistics* (W. W.
 Norton & Company, 1954),
@@ -15390,36 +15500,36 @@ Nathan Yau, “How to Spot Visualization Lies” (FlowingData, February 9,
 NASA JPL, “Educator Guide: Graphing Global Temperature Trends,” 2017,
 <https://www.jpl.nasa.gov/edu/teach/activity/graphing-global-temperature-trends/>
 
-[34] The tutorial on misleading climate change data was inspired by a
+[36] The tutorial on misleading climate change data was inspired by a
 high school classroom activity created by the NASA Jet Propulsion
 Laboratory (JPL), as well as Alberto Cairo’s analysis of charts by
 climate change deniers. NASA JPL; Cairo, *How Charts Lie*, 2019,
 pp. 65-67, 135-141.
 
-[35] Cairo, p. 61.
+[37] Cairo, p. 61.
 
-[36] Cairo, p. 69.
+[38] Cairo, p. 69.
 
-[37] Cairo, p. 70.
+[39] Cairo, p. 70.
 
-[38] Cairo, p. 58.
+[40] Cairo, p. 58.
 
-[39] Monmonier, *How to Lie with Maps, Third Edition*.
+[41] Monmonier, *How to Lie with Maps, Third Edition*.
 
-[40] David Spiegelhalter, *The Art of Statistics: Learning from Data*
+[42] David Spiegelhalter, *The Art of Statistics: Learning from Data*
 (Penguin UK, 2019),
 <https://www.google.com/books/edition/The_Art_of_Statistics/CiZeDwAAQBAJ>,
 pp. 22-5
 
-[41] Julia Angwin et al., “Machine Bias” (ProPublica, May 23, 2016),
+[43] Julia Angwin et al., “Machine Bias” (ProPublica, May 23, 2016),
 <https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing?token=pnmZCKup_9SO_Q1DvGQOooKLHsrJG0Fr>
 
-[42] Neil Vigdor, “Apple Card Investigated After Gender Discrimination
+[44] Neil Vigdor, “Apple Card Investigated After Gender Discrimination
 Complaints (Published 2019),” *The New York Times: Business*, November
 10, 2019,
 <https://www.nytimes.com/2019/11/10/business/Apple-credit-card-investigation.html>
 
-[43] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
+[45] Jonathan Schwabish and Alice Feng, “Applying Racial Equity
 Awareness in Data Visualization,” preprint (Open Science Framework,
 August 27, 2020), <https://doi.org/10.31219/osf.io/x8tbw>. See also this
 web post summary of the paper, Jonathan Schwabish and Alice Feng,
@@ -15429,11 +15539,11 @@ accessed October 16, 2020,
 and Urban Institute, “Urban Institute Data Visualization Style Guide,”
 2020, <http://urbaninstitute.github.io/graphics-styleguide/>
 
-[44] Greg Bensinger, “Google Redraws the Borders on Maps Depending on
+[46] Greg Bensinger, “Google Redraws the Borders on Maps Depending on
 Who’s Looking,” *Washington Post*, February 14, 2020,
 <https://www.washingtonpost.com/technology/2020/02/14/google-maps-political-borders/>
 
-[45] Cole Nussbaumer Knaflic, *Storytelling with Data: A Data
+[47] Cole Nussbaumer Knaflic, *Storytelling with Data: A Data
 Visualization Guide for Business Professionals*, 1 edition (Hoboken, New
 Jersey: Wiley, 2015); Cole Nussbaumer Knaflic, *Storytelling with Data:
 Let’s Practice!* (John Wiley & Sons, 2019),

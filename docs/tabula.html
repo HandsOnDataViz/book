@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="smart-cleanup.html"><a href="smart-cleanup.html"><i class="fa fa-check"></i>Smart Cleanup with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
@@ -349,12 +350,12 @@ You can use download buttons on the left-hand side, or scroll down to the <em>Do
 and double-click the icon. If you work on a Mac, you may see a warning that states,
 “Tabula is an app downloaded from the internet. Are you sure you want to open it?” If so, click <em>Open</em>. Or you may have to go to <em>System Preferences &gt; Security &amp; Privacy &gt; General tab</em>, and
 click the <em>Open Anyway</em> button in the lower half of the window to open the app the first time.</p>
-<p>When you start up Tabula, the default system browser will open, as shown in Figure <a href="tabula.html#fig:tabula-welcome">5.7</a>. Tabula runs on your local computer, not the internet. The URL in the browser will be something like <code>http://127.0.0.1:8080/</code>. The first portion is the localhost or hostname for your computer, and <code>8080</code> refers to the port number. If you see a different port number, that’s fine, and just means that the initial number is already in use by some other program on your computer. If for any reason you decide to use a different browser, just copy-and-paste the URL.</p>
+<p>When you start up Tabula, it opens your default browser as a localhost with a URL similar to <code>http://127.0.0.1/</code>, with or without an additional port number such as with <code>:8080</code>, as shown in Figure <a href="tabula.html#fig:tabula-welcome">5.8</a>. Tabula runs on your local computer, not the internet. If your default browser (such as Safari or Edge) does not play nicely with Tabula, you can copy-and-paste the URL into a different browser (such as Firefox or Chrome).</p>
 
 <div class="figure"><span id="fig:tabula-welcome"></span>
 <img src="images/05-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
-Figure 5.7: Tabula welcome page.
+Figure 5.8: Tabula welcome page.
 </p>
 </div>
 <p>Now let’s upload a sample text-based PDF and detect any tables we wish to extract. In the beginning of the Covid-19 pandemic, the Department of Public Health in Connecticut
@@ -362,34 +363,30 @@ issued data on cases and deaths only in PDF document format.
 For this demonstration, you can use <a href="data/ct-dph-covid-2020-05-31.pdf">our sample text-based PDF</a>
 from May 31, 2020, or provide your own.</p>
 <ol style="list-style-type: decimal">
-<li>Select the PDF you want to extract data from by clicking the blue <em>Browse…</em> button.</li>
-<li>Click <em>Import</em>. Tabula will begin analyzing the file.</li>
-<li>As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly clean, with only four buttons in the header.</li>
-<li>Click the <em>Autodetect Tables</em> button to let Tabula look for relevant data. The tool highlights each table it detects in red, as shown in Figure <a href="tabula.html#fig:tabula-autodetect">5.8</a>.</li>
+<li><p>Select the PDF you want to extract data from by clicking the blue <em>Browse…</em> button.</p></li>
+<li><p>Click <em>Import</em>. Tabula will begin analyzing the file.</p></li>
+<li><p>As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly clean, with only four buttons in the header.</p></li>
+<li><p>Click the <em>Autodetect Tables</em> button to let Tabula look for relevant data. The tool highlights each table it detects in red, as shown in Figure <a href="tabula.html#fig:tabula-autodetect">5.9</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tabula-autodetect"></span>
 <img src="images/05-clean/tabula-autodetect.png" alt="Click Autodetect Tables, which Tabula will highlight in red."  />
 <p class="caption">
-Figure 5.8: Click <em>Autodetect Tables</em>, which Tabula will highlight in red.
+Figure 5.9: Click <em>Autodetect Tables</em>, which Tabula will highlight in red.
 </p>
 </div>
 <p>Now let’s manually adjust our selected tables and export the data.</p>
 <ol start="5" style="list-style-type: decimal">
-<li>Click <em>Preview &amp; Export Extracted Data</em> green button to see how Tabula thinks the data should be exported.</li>
-<li>If the preview tables don’t contain the data you want, try switching between <em>Stream</em> and <em>Lattice</em> extraction methods in the left-hand-side bar.</li>
-<li>If the tables still don’t look right, or you with to remove some tables that Tabula auto-detected, hit <em>Revise selection</em> button.
-That will bring you back to the PDF viewer.</li>
-<li>Now you can <em>Clear All Selections</em> and manually select
-tables of interest. Use drag-and-drop movements to select tables of interest (or parts of tables).</li>
-<li>If you want to “copy” selection to some or all pages, you can use <em>Repeat this Selection</em> dropdown, which appears
-in the lower-right corner of your selections, to propagate changes. This is extremely useful if your PDF consists of
-many similarly-formatted pages.</li>
-<li>Once you are happy with the result, you can export it. If you have only one table, we recommend using CSV as export format.
-If you have more than one table, consider switching export format in the drop-down menu to <em>zip of CSVs</em>.This way each table will be saved as an individual file, rather than all tables inside one CSV file.</li>
+<li><p>Click <em>Preview &amp; Export Extracted Data</em> green button to see how Tabula thinks the data should be exported.</p></li>
+<li><p>If the preview tables don’t contain the data you want, try switching between <em>Stream</em> and <em>Lattice</em> extraction methods in the left-hand-side bar.</p></li>
+<li><p>If the tables still don’t look right, or you with to remove some tables that Tabula auto-detected, hit <em>Revise selection</em> button. That will bring you back to the PDF viewer.</p></li>
+<li><p>Now you can <em>Clear All Selections</em> and manually select
+tables of interest. Use drag-and-drop movements to select tables of interest (or parts of tables).</p></li>
+<li><p>If you want to “copy” selection to some or all pages, you can use <em>Repeat this Selection</em> dropdown, which appears in the lower-right corner of your selections, to propagate changes. This is extremely useful if your PDF consists of many similarly-formatted pages.</p></li>
+<li><p>Once you are happy with the result, you can export it. If you have only one table, we recommend using CSV as export format. If you have more than one table, consider switching export format in the drop-down menu to <em>zip of CSVs</em>.This way each table will be saved as an individual file, rather than all tables inside one CSV file.</p></li>
 </ol>
-<p>Once you exported your data, you can find it in the Downloads folder on your computer (or wherever you chose to save it), where it is ready to open with a spreadsheet tool to analyze and visualize.</p>
-<p>In the following section, we are going to look how to clean up messy datasets with OpenRefine.</p>
+<p>After you have exported your data to your computer, navigate to the file and open it with a spreadsheet tool to analyze and visualize.</p>
+<p>Now that you have extracted a table from a PDF document, the results may be messy. In the next section, we will clean up messy datasets with a very powerful tool called OpenRefine.</p>
 </div>
             </section>
 

@@ -215,7 +215,7 @@ Inside your Google Drive account, click on the *New* button and select *Google F
 
 (ref:forms-new) Click the *New* button to select *Google Forms*.
 
-```{r forms-new, out.width=300, fig.cap="(ref:forms-new)"}
+```{r forms-new, out.width=150, fig.cap="(ref:forms-new)"}
  knitr::include_graphics("images/03-spreadsheet/forms-new.png")
 ```
 

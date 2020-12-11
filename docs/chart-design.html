@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="smart-cleanup.html"><a href="smart-cleanup.html"><i class="fa fa-check"></i>Smart Cleanup with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
@@ -396,7 +397,7 @@ is visible without any user interaction.</p>
 Figure 7.2: Start your bar chart at zero.
 </p>
 </div>
-<p>But the zero-baseline rule does <em>not</em> apply to line charts. According to visualization expert Alberto Cairo, line charts represent values through the <em>position</em> and <em>angle</em> of the line, rather than its height or length. Starting a line chart at a number other than zero does <em>not</em> necessarily distort its encoded information because our eyes rely on its shape to determine its meaning, rather than its proximity to the baseline.<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a> For example, compare both the right and left sides of Figure <a href="chart-design.html#fig:design-principles-baseline-comparison">7.3</a>, where both are correct.</p>
+<p>But the zero-baseline rule does <em>not</em> apply to line charts. According to visualization expert Alberto Cairo, line charts represent values through the <em>position</em> and <em>angle</em> of the line, rather than its height or length. Starting a line chart at a number other than zero does <em>not</em> necessarily distort its encoded information because our eyes rely on its shape to determine its meaning, rather than its proximity to the baseline.<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> For example, compare both the right and left sides of Figure <a href="chart-design.html#fig:design-principles-baseline-comparison">7.3</a>, where both are correct.</p>
 
 <div class="figure"><span id="fig:design-principles-baseline-comparison"></span>
 <img src="images/07-chart/design-principles-baseline-comparison.png" alt="Since line charts do not require a zero baseline, both sides are correct."  />
@@ -527,7 +528,7 @@ Consider using commas as thousands separators for readability (<code>1,000,000</
 Figure 7.10: Don’t use colors just for the sake of it.
 </p>
 </div>
-<p>The use of color is a complex topic, and there are plenty of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a></p>
+<p>The use of color is a complex topic, and there are plenty of books and research devoted to it. For an excellent overview, see Lisa Charlotte Rost’s “<a href="https://blog.datawrapper.de/colorguide/">A Friendly Guide to Colors in Data Visualization</a>” and “<a href="https://blog.datawrapper.de/beautifulcolors/index.html">How to Pick More Beautiful Colors for Your Data Visualizations</a>,” both on the Datawrapper blog.<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a></p>
 <p>If you follow our advice, you should end up with a de-cluttered chart as shown in
 Figure <a href="chart-design.html#fig:design-principles-decluttered">7.11</a>. Notice how your eyes are drawn to the bars and their corresponding values, not bright colors or secondary components like the axes lines.</p>
 
@@ -543,9 +544,9 @@ Figure 7.11: Make sure important things catch the eye first.
 </div>
 <div class="footnotes">
 <hr />
-<ol start="25">
-<li id="fn25"><p><span class="citation">Cairo, <em>How Charts Lie</em>, 2019</span>, p. 61.<a href="chart-design.html#fnref25" class="footnote-back">↩︎</a></p></li>
-<li id="fn26"><p><span class="citation">Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation” (Chartable: A Blog by Datawrapper, July 31, 2018), <a href="https://blog.datawrapper.de/colorguide/" role="doc-biblioref">https://blog.datawrapper.de/colorguide/</a></span>; <span class="citation">Lisa Charlotte Rost, “How to Pick More Beautiful Colors for Your Data Visualizations” (Chartable), accessed October 21, 2020, <a href="https://blog.datawrapper.de/beautifulcolors/index.html" role="doc-biblioref">https://blog.datawrapper.de/beautifulcolors/index.html</a></span><a href="chart-design.html#fnref26" class="footnote-back">↩︎</a></p></li>
+<ol start="26">
+<li id="fn26"><p><span class="citation">Cairo, <em>How Charts Lie</em>, 2019</span>, p. 61.<a href="chart-design.html#fnref26" class="footnote-back">↩︎</a></p></li>
+<li id="fn27"><p><span class="citation">Lisa Charlotte Rost, “Your Friendly Guide to Colors in Data Visualisation” (Chartable: A Blog by Datawrapper, July 31, 2018), <a href="https://blog.datawrapper.de/colorguide/" role="doc-biblioref">https://blog.datawrapper.de/colorguide/</a></span>; <span class="citation">Lisa Charlotte Rost, “How to Pick More Beautiful Colors for Your Data Visualizations” (Chartable), accessed October 21, 2020, <a href="https://blog.datawrapper.de/beautifulcolors/index.html" role="doc-biblioref">https://blog.datawrapper.de/beautifulcolors/index.html</a></span><a href="chart-design.html#fnref27" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

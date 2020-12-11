@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="smart-cleanup.html"><a href="smart-cleanup.html"><i class="fa fa-check"></i>Smart Cleanup with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
@@ -352,23 +353,23 @@ coordinates become <em>Latitude</em> and <em>Longitude</em> columns, and your <e
 <h3>Example 1: Simple Splitting</h3>
 <p>Let’s begin with a simple example of splitting pairs of geographic coordinates, separated by commas, into separate columns.</p>
 <ol style="list-style-type: decimal">
-<li>Open the <a href="https://docs.google.com/spreadsheets/d/1VmY9aS7I7UstXeI2xsJ-Ep2Q0CW8tnFHWTCga4EaJRk/edit#gid=1670822958">Split Coordinate Pairs sample data in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</li>
-<li>Select the data you wish to split, either the full column or just several rows.
-Note that you can only split data from one column at a time.</li>
-<li>Make sure there is no data in the column to the right of the one you’re splitting, because
-all data there will be written over.</li>
-<li>Go to <em>Data</em> and select <em>Split text to columns</em>, as in Figure <a href="split-data.html#fig:sheets-split">5.4</a>.</li>
-<li>Google Sheets will automatically try to guess your separator. You will see that your coordinates
+<li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1VmY9aS7I7UstXeI2xsJ-Ep2Q0CW8tnFHWTCga4EaJRk/edit#gid=1670822958">Split Coordinate Pairs sample data in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
+<li><p>Select the data you wish to split, either the full column or just several rows.
+Note that you can only split data from one column at a time.</p></li>
+<li><p>Make sure there is no data in the column to the right of the one you’re splitting, because
+all data there will be written over.</p></li>
+<li><p>Go to <em>Data</em> and select <em>Split text to columns</em>, as in Figure <a href="split-data.html#fig:sheets-split">5.5</a>.</p></li>
+<li><p>Google Sheets will automatically try to guess your separator. You will see that your coordinates
 are now split with the comma, and the Separator is set to <em>Detect automatically</em> in the dropdown.
 You can manually change it to a comma (<code>,</code>), a semicolon (<code>;</code>), a period (<code>.</code>), a space character,
-or any other custom character (or even a sequence of characters, which we’ll discuss in Example 2 of this section).</li>
-<li>You can rename the new columns into <em>Longitude</em> (first number) and <em>Latitude</em> (second number).</li>
+or any other custom character (or even a sequence of characters, which we’ll discuss in Example 2 of this section).</p></li>
+<li><p>You can rename the new columns into <em>Longitude</em> (first number) and <em>Latitude</em> (second number).</p></li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-split"></span>
-<img src="images/05-clean/sheets-split-annotated.png" alt="Select Data - Split text to columns to automatically separate data." width="350" />
+<img src="images/05-clean/sheets-split.png" alt="Select Data - Split text to columns to automatically separate data." width="350" />
 <p class="caption">
-Figure 5.4: Select <em>Data - Split text to columns</em> to automatically separate data.
+Figure 5.5: Select <em>Data - Split text to columns</em> to automatically separate data.
 </p>
 </div>
 </div>
@@ -381,17 +382,17 @@ Figure 5.4: Select <em>Data - Split text to columns</em> to automatically separa
 | 1012 Broad St, Hartford CT--06106 |
 | 37 Alden St, Hartford CT--06114   |</code></pre>
 <ol style="list-style-type: decimal">
-<li>Open the <a href="https://docs.google.com/spreadsheets/d/1XkWrHBCK5HedAWskkb5lligWoozBVXc6w7_FRuYebPI/edit#gid=0">Split Complex Address sample file in Google Sheets</a>, sign in to your account, and go to <em>File &gt; Make a Copy</em> to save a version in your Google Drive that you can edit.</li>
-<li>Select the column and go to <em>Data</em> &gt; <em>Split text to columns</em> to start splitting from left to right.</li>
-<li>Google Sheets will automatically split your cell into two parts, <code>300 Summit St</code> and <code>Hartford CT--06106</code>, using comma as a separator. (If it didn’t, just select <em>Comma</em> from the dropdown menu that appeared).</li>
-<li>Now select only the second column and perform <em>Split text to columns</em> again. Google Sheets will automatically separate the city from the state and zip code, because it automatically chose a space as the separator. (If it did not, choose <em>Space</em> from the dropdown menu).</li>
-<li>Finally, select only the third column and perform <em>Split text to columns</em> again. Google Sheets won’t recognize the two dashes as a separator, so you need to manually select <em>Custom</em>, type those two dashes (<code>--</code>) in the <em>Custom separator</em> field, as shown in Figure <a href="split-data.html#fig:sheets-split-complex">5.5</a>, and press Enter. Now you have successfully split the full address into four columns.</li>
+<li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1XkWrHBCK5HedAWskkb5lligWoozBVXc6w7_FRuYebPI/edit#gid=0">Split Complex Address sample file in Google Sheets</a>, sign in to your account, and go to <em>File &gt; Make a Copy</em> to save a version in your Google Drive that you can edit.</p></li>
+<li><p>Select the column and go to <em>Data</em> &gt; <em>Split text to columns</em> to start splitting from left to right.</p></li>
+<li><p>Google Sheets will automatically split your cell into two parts, <code>300 Summit St</code> and <code>Hartford CT--06106</code>, using comma as a separator. (If it didn’t, just select <em>Comma</em> from the dropdown menu that appeared).</p></li>
+<li><p>Now select only the second column and perform <em>Split text to columns</em> again. Google Sheets will automatically separate the city from the state and zip code, because it automatically chose a space as the separator. (If it did not, choose <em>Space</em> from the dropdown menu).</p></li>
+<li><p>Finally, select only the third column and perform <em>Split text to columns</em> again. Google Sheets won’t recognize the two dashes as a separator, so you need to manually select <em>Custom</em>, type those two dashes (<code>--</code>) in the <em>Custom separator</em> field, as shown in Figure <a href="split-data.html#fig:sheets-split-complex">5.6</a>, and press Enter. Now you have successfully split the full address into four columns.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-split-complex"></span>
 <img src="images/05-clean/sheets-split-complex.png" alt="To split the last column, select a Custom separator and manually type in two dashes." width="550" />
 <p class="caption">
-Figure 5.5: To split the last column, select a <em>Custom</em> separator and manually type in two dashes.
+Figure 5.6: To split the last column, select a <em>Custom</em> separator and manually type in two dashes.
 </p>
 </div>
 <p>Tip: Google Sheets will treat zip codes as numbers and will delete leading zeros (so 06106 will become 6106). To fix that, select the column, and go to <em>Format &gt; Number &gt; Plain text</em>. Now you can manually re-add zeros. If your dataset is large, consider adding zeros using the formula introduced in the <a href="#combine-separate-columns">following section</a>.</p>

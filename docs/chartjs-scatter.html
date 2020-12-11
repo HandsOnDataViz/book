@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="smart-cleanup.html"><a href="smart-cleanup.html"><i class="fa fa-check"></i>Smart Cleanup with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
@@ -364,24 +365,24 @@ Figure 12.5: Interactive scatter chart with Chart.js. Explore the <a href="https
 <ol start="3" style="list-style-type: decimal">
 <li>In <code>script.js</code>, customize the values of variables shown in the code snippet below:</li>
 </ol>
-<div class="sourceCode" id="cb23"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb23-1"><a href="chartjs-scatter.html#cb23-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Income and Test Scores in Connecticut School Districts, 2009-13&#39;</span><span class="op">;</span></span>
-<span id="cb23-2"><a href="chartjs-scatter.html#cb23-2"></a></span>
-<span id="cb23-3"><a href="chartjs-scatter.html#cb23-3"></a><span class="kw">var</span> POINT_X <span class="op">=</span> <span class="st">&#39;income&#39;</span><span class="op">;</span> <span class="co">// column name for x values in data.csv</span></span>
-<span id="cb23-4"><a href="chartjs-scatter.html#cb23-4"></a><span class="kw">var</span> POINT_X_PREFIX <span class="op">=</span> <span class="st">&#39;$&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;$&#39;</span></span>
-<span id="cb23-5"><a href="chartjs-scatter.html#cb23-5"></a><span class="kw">var</span> POINT_X_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39;%&#39;</span></span>
-<span id="cb23-6"><a href="chartjs-scatter.html#cb23-6"></a></span>
-<span id="cb23-7"><a href="chartjs-scatter.html#cb23-7"></a><span class="kw">var</span> POINT_Y <span class="op">=</span> <span class="st">&#39;grades&#39;</span><span class="op">;</span> <span class="co">// column name for y values in data.csv</span></span>
-<span id="cb23-8"><a href="chartjs-scatter.html#cb23-8"></a><span class="kw">var</span> POINT_Y_PREFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;USD &#39;</span></span>
-<span id="cb23-9"><a href="chartjs-scatter.html#cb23-9"></a><span class="kw">var</span> POINT_Y_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39; kg&#39;</span></span>
-<span id="cb23-10"><a href="chartjs-scatter.html#cb23-10"></a></span>
-<span id="cb23-11"><a href="chartjs-scatter.html#cb23-11"></a><span class="kw">var</span> POINT_NAME <span class="op">=</span> <span class="st">&#39;district&#39;</span><span class="op">;</span> <span class="co">// point names that appear in tooltip</span></span>
-<span id="cb23-12"><a href="chartjs-scatter.html#cb23-12"></a><span class="kw">var</span> POINT_COLOR <span class="op">=</span> <span class="st">&#39;rgba(0,0,255,0.7)&#39;</span><span class="op">;</span> <span class="co">// eg `black` or `rgba(10,100,44,0.8)`</span></span>
-<span id="cb23-13"><a href="chartjs-scatter.html#cb23-13"></a><span class="kw">var</span> POINT_RADIUS <span class="op">=</span> <span class="dv">5</span><span class="op">;</span> <span class="co">// radius of each data point</span></span>
-<span id="cb23-14"><a href="chartjs-scatter.html#cb23-14"></a></span>
-<span id="cb23-15"><a href="chartjs-scatter.html#cb23-15"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Median Household Income, USD&#39;</span><span class="op">;</span> <span class="co">// x-axis label, label in tooltip</span></span>
-<span id="cb23-16"><a href="chartjs-scatter.html#cb23-16"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Grade, Relative to Average&#39;</span><span class="op">;</span> <span class="co">// y-axis label, label in tooltip</span></span>
-<span id="cb23-17"><a href="chartjs-scatter.html#cb23-17"></a></span>
-<span id="cb23-18"><a href="chartjs-scatter.html#cb23-18"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// `true` to show the grid, `false` to hide</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb25-1"><a href="chartjs-scatter.html#cb25-1"></a><span class="kw">var</span> TITLE <span class="op">=</span> <span class="st">&#39;Income and Test Scores in Connecticut School Districts, 2009-13&#39;</span><span class="op">;</span></span>
+<span id="cb25-2"><a href="chartjs-scatter.html#cb25-2"></a></span>
+<span id="cb25-3"><a href="chartjs-scatter.html#cb25-3"></a><span class="kw">var</span> POINT_X <span class="op">=</span> <span class="st">&#39;income&#39;</span><span class="op">;</span> <span class="co">// column name for x values in data.csv</span></span>
+<span id="cb25-4"><a href="chartjs-scatter.html#cb25-4"></a><span class="kw">var</span> POINT_X_PREFIX <span class="op">=</span> <span class="st">&#39;$&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;$&#39;</span></span>
+<span id="cb25-5"><a href="chartjs-scatter.html#cb25-5"></a><span class="kw">var</span> POINT_X_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39;%&#39;</span></span>
+<span id="cb25-6"><a href="chartjs-scatter.html#cb25-6"></a></span>
+<span id="cb25-7"><a href="chartjs-scatter.html#cb25-7"></a><span class="kw">var</span> POINT_Y <span class="op">=</span> <span class="st">&#39;grades&#39;</span><span class="op">;</span> <span class="co">// column name for y values in data.csv</span></span>
+<span id="cb25-8"><a href="chartjs-scatter.html#cb25-8"></a><span class="kw">var</span> POINT_Y_PREFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// prefix for x values, eg &#39;USD &#39;</span></span>
+<span id="cb25-9"><a href="chartjs-scatter.html#cb25-9"></a><span class="kw">var</span> POINT_Y_POSTFIX <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span> <span class="co">// postfix for x values, eg &#39; kg&#39;</span></span>
+<span id="cb25-10"><a href="chartjs-scatter.html#cb25-10"></a></span>
+<span id="cb25-11"><a href="chartjs-scatter.html#cb25-11"></a><span class="kw">var</span> POINT_NAME <span class="op">=</span> <span class="st">&#39;district&#39;</span><span class="op">;</span> <span class="co">// point names that appear in tooltip</span></span>
+<span id="cb25-12"><a href="chartjs-scatter.html#cb25-12"></a><span class="kw">var</span> POINT_COLOR <span class="op">=</span> <span class="st">&#39;rgba(0,0,255,0.7)&#39;</span><span class="op">;</span> <span class="co">// eg `black` or `rgba(10,100,44,0.8)`</span></span>
+<span id="cb25-13"><a href="chartjs-scatter.html#cb25-13"></a><span class="kw">var</span> POINT_RADIUS <span class="op">=</span> <span class="dv">5</span><span class="op">;</span> <span class="co">// radius of each data point</span></span>
+<span id="cb25-14"><a href="chartjs-scatter.html#cb25-14"></a></span>
+<span id="cb25-15"><a href="chartjs-scatter.html#cb25-15"></a><span class="kw">var</span> X_AXIS <span class="op">=</span> <span class="st">&#39;Median Household Income, USD&#39;</span><span class="op">;</span> <span class="co">// x-axis label, label in tooltip</span></span>
+<span id="cb25-16"><a href="chartjs-scatter.html#cb25-16"></a><span class="kw">var</span> Y_AXIS <span class="op">=</span> <span class="st">&#39;Grade, Relative to Average&#39;</span><span class="op">;</span> <span class="co">// y-axis label, label in tooltip</span></span>
+<span id="cb25-17"><a href="chartjs-scatter.html#cb25-17"></a></span>
+<span id="cb25-18"><a href="chartjs-scatter.html#cb25-18"></a><span class="kw">var</span> SHOW_GRID <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// `true` to show the grid, `false` to hide</span></span></code></pre></div>
 <p>A similarly good-looking interactive chart <a href="https://www.highcharts.com/demo/scatter">can be constructed in Highcharts</a>, although it is up to you to undertake that challenge. In the meanwhile, remember to refer to the official <a href="https://www.chartjs.org/docs/latest/">Chart.js documentation</a> if you want to further tweak your chart.</p>
 <p>You may want to show an additional third variable, such as enrollment in each school district, in the same scatter chart. You can do so by resizing each dot so that larger school districts are marked with a larger circle, and smaller districts are shown using a smaller dot. Such use of size will result in a <em>bubble chart</em>, which we will look at next.</p>
 </div>

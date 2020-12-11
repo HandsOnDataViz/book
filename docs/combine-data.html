@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="smart-cleanup.html"><a href="smart-cleanup.html"><i class="fa fa-check"></i>Smart Cleanup with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
@@ -352,29 +353,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Using any spreadsheet, you can write a simple formula to combine (or concatenate) terms
 using the ampersand (<code>&amp;</code>) symbol. Also, you can add separators into your formula, such as quoted space (<code>" "</code>), or spaces with commas (<code>", "</code>), or any combination of characters. Let’s try it with some sample data.</p>
 <ol style="list-style-type: decimal">
-<li>Open the <a href="https://docs.google.com/spreadsheets/d/1DGKYquQ0nKiBCE_KbQk24Zvjrxb0zKk8gC-FpObY7LM/edit#gid=0">Combine Separate Columns sample data in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive. The sheet contains addresses that are separated into four columns: street, city, state, and zip.</li>
-<li>In column E, type a new header named <em>location</em>.</li>
-<li>In cell E2, type in the following formula, which combines the four items using ampersands, and separates them with quoted commas and spaces, as shown in Figure <a href="combine-data.html#fig:sheets-combine">5.6</a>, and press <em>Enter</em>.
-<code>=A2 &amp; ", " &amp; B2 &amp; ", " &amp; C2 &amp; " " &amp; D2</code></li>
-<li>Click cell E2 and drag the bottom-right corner cross-hair downward to fill in the rest of the column.</li>
+<li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1DGKYquQ0nKiBCE_KbQk24Zvjrxb0zKk8gC-FpObY7LM/edit#gid=0">Combine Separate Columns sample data in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive. The sheet contains addresses that are separated into four columns: street, city, state, and zip.</p></li>
+<li><p>In column E, type a new header named <em>location</em>.</p></li>
+<li><p>In cell E2, type in <code>=A2 &amp; ", " &amp; B2 &amp; ", " &amp; C2 &amp; " " &amp; D2</code>. This formula combines the four items using ampersands, and separates them with quoted commas and spaces, as shown in Figure <a href="combine-data.html#fig:sheets-combine">5.7</a>. Then press <em>Enter</em>.</p></li>
+<li><p>Click cell E2 and drag the bottom-right corner cross-hair downward to fill in the rest of the column.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-combine"></span>
 <img src="images/05-clean/sheets-combine.png" alt="Use ampersands to combine items, and insert quoted spaces with commas as separators."  />
 <p class="caption">
-Figure 5.6: Use ampersands to combine items, and insert quoted spaces with commas as separators.
+Figure 5.7: Use ampersands to combine items, and insert quoted spaces with commas as separators.
 </p>
 </div>
 <p>Now that you have successfully combined the terms into one location column, you can use the <a href="geocode.html">Geocoding by SmartMonkey Google Sheets Add-on we described in Chapter 3</a> to find the latitude and longitude coordinates, in order to <a href="map.html">map your data as we’ll discuss in Chapter 8</a></p>
-<p>Note: Lisa Charlotte Rost from Datawrapper has written a brilliant <a href="https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/">blog post</a>
-about cleaning and preparing your spreadsheet data for analysis and visualization,
-which we recommend for further reading.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
+<p>For further reading, we recommend Lisa Charlotte Rost’s brilliant <a href="https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/">Datawrapper blog post</a>
+about cleaning and preparing your spreadsheet data for analysis and visualization.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p>
 <p>Spreadsheets are great tools to find and replace data, split data into separate columns, or combine data into one column. But what if your data table is trapped inside a PDF? In the next section, we will introduce Tabula and show you how to convert tables from text-based PDF documents into tables that you can analyze in spreadsheets.</p>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="16">
-<li id="fn16"><p><span class="citation">Lisa Charlotte Rost, “How to Prepare Your Data for Analysis and Charting in Excel &amp; Google Sheets” (Chartable: A Blog by Datawrapper), accessed August 28, 2020, <a href="https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html" role="doc-biblioref">https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html</a></span><a href="combine-data.html#fnref16" class="footnote-back">↩︎</a></p></li>
+<ol start="17">
+<li id="fn17"><p><span class="citation">Lisa Charlotte Rost, “How to Prepare Your Data for Analysis and Charting in Excel &amp; Google Sheets” (Chartable: A Blog by Datawrapper), accessed August 28, 2020, <a href="https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html" role="doc-biblioref">https://blog.datawrapper.de/prepare-and-clean-up-data-for-data-visualization/index.html</a></span><a href="combine-data.html#fnref17" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

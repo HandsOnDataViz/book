@@ -33,7 +33,7 @@
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
 <link rel="prev" href="question.html"/>
-<link rel="next" href="find-and-replace.html"/>
+<link rel="next" href="smart-cleanup.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="smart-cleanup.html"><a href="smart-cleanup.html"><i class="fa fa-check"></i>Smart Cleanup with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
@@ -345,13 +346,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 They will have missing values, dates in different formats, text in numeric-only columns, multiple items in the same columns, various spellings of the same name, and other unexpected things. See Figure <a href="clean.html#fig:clean-up-messy-data">5.1</a> for inspiration. Don’t be surprised if you find yourself spending more time cleaning up data than you do analyzing and visualizing it.</p>
 
 <div class="figure"><span id="fig:clean-up-messy-data"></span>
-<img src="images/05-clean/clean-up-messy-data.png" alt="More often than not, raw data looks messy."  />
+<img src="images/05-clean/clean-up-messy-data.png" alt="More often than not, raw data looks messy." width="500" />
 <p class="caption">
 Figure 5.1: More often than not, raw data looks messy.
 </p>
 </div>
-<p>In this chapter you’ll learn about different tools, in order to help you make decisions about which one to use to clean up your data efficiently. First, we’ll start with basic cleanup methods using spreadsheets, such as <a href="find-and-replace.html">find and replace with a blank</a>, <a href="transpose.html">tranpose rows and columns of data</a>, <a href="split-data.html">split data into separate columns</a>, and <a href="combine-data.html">combine columns into one</a>. While we feature Google Sheets in our examples, the same principles (and in most cases the same formulas) can be use in Microsoft Excel, LibreOffice Calc, Mac’s Numbers, or other spreadsheet packages. Next, you will learn how to <a href="tabula.html">extract table data from text-based PDF documents with Tabula</a>, a free tool used by data journalists and researchers worldwide to analyze spending data, health reports, and all sorts of other datasets that get trapped in PDFs. Finally, we will <a href="open-refine.html">introduce OpenRefine, a powerful and versatile tool to clean up the messiest spreadsheets</a>, such as those containing dozens of different spellings of the same name.</p>
-<p>TODO below: Add Google Sheets Smart Cleanup feature when available in late October <a href="https://gsuiteupdates.googleblog.com/2020/09/smart-cleanup-suggestions-google-sheets.html" class="uri">https://gsuiteupdates.googleblog.com/2020/09/smart-cleanup-suggestions-google-sheets.html</a></p>
+<p>In this chapter you’ll learn about different tools, in order to help you make decisions about which one to use to clean up your data efficiently. First, we’ll start with basic cleanup methods using Google Sheets, such as its <a href="smart-cleanup.html">Smart Cleanup feature</a> to fix inconsistent data and remove duplicates, <a href="find-and-replace.html">find and replace with a blank</a>, <a href="transpose.html">tranpose rows and columns of data</a>, <a href="split-data.html">split data into separate columns</a>, and <a href="combine-data.html">combine columns into one</a>. While we feature Google Sheets in our examples, many of these principles (and in some cases the same formulas) apply to Microsoft Excel, LibreOffice Calc, Mac’s Numbers, or other spreadsheet packages. Next, you will learn how to <a href="tabula.html">extract table data from text-based PDF documents with Tabula</a>, a free tool used by data journalists and researchers worldwide to analyze spending data, health reports, and all sorts of other datasets that get trapped in PDFs. Finally, we will <a href="open-refine.html">introduce OpenRefine, a powerful and versatile tool to clean up the messiest spreadsheets</a>, such as those containing dozens of different spellings of the same name.</p>
 </div>
             </section>
 
@@ -359,7 +359,7 @@ Figure 5.1: More often than not, raw data looks messy.
         </div>
       </div>
 <a href="question.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="find-and-replace.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="smart-cleanup.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

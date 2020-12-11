@@ -32,7 +32,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-<link rel="prev" href="clean.html"/>
+<link rel="prev" href="smart-cleanup.html"/>
 <link rel="next" href="transpose.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -193,6 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="5" data-path="clean.html"><a href="clean.html"><i class="fa fa-check"></i><b>5</b> Clean Up Messy Data</a>
 <ul>
+<li class="chapter" data-level="" data-path="smart-cleanup.html"><a href="smart-cleanup.html"><i class="fa fa-check"></i>Smart Cleanup with Google Sheets</a></li>
 <li class="chapter" data-level="" data-path="find-and-replace.html"><a href="find-and-replace.html"><i class="fa fa-check"></i>Find and Replace with Blank</a></li>
 <li class="chapter" data-level="" data-path="transpose.html"><a href="transpose.html"><i class="fa fa-check"></i>Transpose Rows and Columns</a></li>
 <li class="chapter" data-level="" data-path="split-data.html"><a href="split-data.html"><i class="fa fa-check"></i>Split Data into Separate Columns</a></li>
@@ -341,7 +342,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="find-and-replace" class="section level2 unnumbered" number="">
 <h2>Find and Replace with Blank</h2>
-<p>One of the simplest and most powerful cleanup tools inside your spreadsheet is the <em>Find and Replace</em> command. You can also use it to bulk-change different spellings of the same name, such as shortening a country’s name (from <em>Republic of India</em> to <em>India</em>), or expanding a name (from <em>US</em> to <em>United States</em>), or translating names (from <em>Italy</em> to <em>Italia</em>). Also, you can use find and replace with a blank entry to remove units of measurement that sometimes reside in the same cells as the numbers (such as changing <em>321 kg</em> to <em>321</em>).</p>
+<p>One of the simplest and most powerful cleanup tools inside every spreadsheet is the <em>Find and Replace</em> command. You can also use it to bulk-change different spellings of the same name, such as shortening a country’s name (from <em>Republic of India</em> to <em>India</em>), or expanding a name (from <em>US</em> to <em>United States</em>), or translating names (from <em>Italy</em> to <em>Italia</em>). Also, you can use find and replace with a blank entry to remove units of measurement that sometimes reside in the same cells as the numbers (such as changing <em>321 kg</em> to <em>321</em>).</p>
 <p>Let’s look at <em>Find and Replace</em> in practice. A common problem with US Census data is that geographic names contain unnecessary words. For example, when you download data on the population of Connecticut towns, the location column will contain the word “town” after every name:</p>
 <pre><code>Hartford town
 New Haven town
@@ -352,23 +353,23 @@ New Haven
 Stamford</code></pre>
 <p>Let’s use <em>Find and Replace</em> on a sample US Census file we downloaded with 169 Connecticut town names and their populations, to remove the unwanted “town” label after each place name.</p>
 <ol style="list-style-type: decimal">
-<li>Open the <a href="https://docs.google.com/spreadsheets/d/1kJI0xFedPUQBRfT9CEMAfIsggOmJv4wz_AdenraFDP4/edit#gid=1055822816">CT Town Geonames file in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</li>
-<li>Select the column you want to modify by clicking its header. If you don’t select a column,
-you will be searching and replacing in the entire spreadsheet.</li>
-<li>In the <em>Edit</em> menu, choose <em>Find and replace</em>. You will see the window like is shown in Figure <a href="find-and-replace.html#fig:sheets-find-replace">5.2</a>.</li>
-<li>In the <em>Find</em> field, type <code>town</code>, and be sure to <em>insert a blank space</em> before the word. If you do not insert a space, you will accidentally remove <em>town</em> from places such as <em>Newtown</em>. Also, you’ll accidentally create trailing spaces, or whitespace at the end of a line without any other characters following it, which can cause troubles in the future.</li>
-<li>Leave the <em>Replace with</em> field blank. Do not insert a space. Just leave it empty.</li>
-<li>The <em>Search</em> field should be set to the range you selected in step 2, or <em>All sheets</em> if you didn’t select anything.</li>
-<li>You have the option to <em>match case</em>. If checked, <code>town</code> and <code>Town</code> and <code>tOwN</code> will be treated differently. For our purpose, you can leave <em>match case</em> unchecked.</li>
-<li>Press the <em>Replace all</em> button. Since this sample file contains 169 towns, the window
-will state that 169 instances of “town” have been replaced.</li>
-<li>Inspect the resulting sheet. Make sure that places that include <em>town</em> in their name, such as <em>Newtown</em>, remained untouched.</li>
+<li><p>Open the <a href="https://docs.google.com/spreadsheets/d/1kJI0xFedPUQBRfT9CEMAfIsggOmJv4wz_AdenraFDP4/edit#gid=1055822816">CT Town Geonames file in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Make a Copy</em> to create a version you can edit in your Google Drive.</p></li>
+<li><p>Select the column you want to modify by clicking its header. If you don’t select a column,
+you will be searching and replacing in the entire spreadsheet.</p></li>
+<li><p>In the <em>Edit</em> menu, choose <em>Find and replace</em>. You will see the window like is shown in Figure <a href="find-and-replace.html#fig:sheets-find-replace">5.3</a>.</p></li>
+<li><p>In the <em>Find</em> field, type <code>town</code>, and be sure to <em>insert a blank space</em> before the word. If you do not insert a space, you will accidentally remove <em>town</em> from places such as <em>Newtown</em>. Also, you’ll accidentally create trailing spaces, or whitespace at the end of a line without any other characters following it, which can cause troubles in the future.</p></li>
+<li><p>Leave the <em>Replace with</em> field blank. Do not insert a space. Just leave it empty.</p></li>
+<li><p>The <em>Search</em> field should be set to the range you selected in step 2, or <em>All sheets</em> if you didn’t select anything.</p></li>
+<li><p>You have the option to <em>match case</em>. If checked, <code>town</code> and <code>Town</code> and <code>tOwN</code> will be treated differently. For our purpose, you can leave <em>match case</em> unchecked.</p></li>
+<li><p>Press the <em>Replace all</em> button. Since this sample file contains 169 towns, the window
+will state that 169 instances of “town” have been replaced.</p></li>
+<li><p>Inspect the resulting sheet. Make sure that places that include <em>town</em> in their name, such as <em>Newtown</em>, remained untouched.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:sheets-find-replace"></span>
-<img src="images/05-clean/sheets-find-replace-annotated.png" alt="Find and Replace window in Google Sheets."  />
+<img src="images/05-clean/sheets-find-replace-annotated.png" alt="Find and Replace window in Google Sheets." width="500" />
 <p class="caption">
-Figure 5.2: Find and Replace window in Google Sheets.
+Figure 5.3: Find and Replace window in Google Sheets.
 </p>
 </div>
 </div>
@@ -377,7 +378,7 @@ Figure 5.2: Find and Replace window in Google Sheets.
           </div>
         </div>
       </div>
-<a href="clean.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="smart-cleanup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="transpose.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

@@ -28,7 +28,7 @@ Table: (\#tab:chart-types) Basic Chart Types, Best Uses, and Tutorials
 
 Note: For a more extensive collection of chart types and use cases, see the [Financial Times Visual Vocabulary](https://ft.com/vocabulary).
 
-TODO above: improve and standardize chart images, improve colors, aspect ratio;  redo range chart
+TODO above: ILYA improve and standardize chart images, improve colors, aspect ratio;  redo range chart
 
 ## Chart Design Principles {- #chart-design}
 
@@ -235,8 +235,6 @@ Figure \@ref(fig:design-principles-decluttered). Notice how your eyes are drawn 
 knitr::include_graphics("images/07-chart/design-principles-decluttered.png")
 ```
 
-TODO: Compare our rules and recommendations to different dataviz style guides, such as Urban Institute, and cite them http://urbaninstitute.github.io/graphics-styleguide/
-
 ## Google Sheets Charts {- #chart-google}
 In this section, you'll learn about the pros and cons of creating interactive charts in [Google Sheets](https://sheets.google.com), the powerful [spreadsheet tool we introduced in Chapter 3](spreadsheet.html). Google Sheets has many advantages for newcomers to data visualization. First, Google Sheets allows you to clean, analyze, share, and publish charts, all in the same platform. One tool does it all, which makes it easier to organize your work by keeping it all together in one place. Second, Google Sheets is familiar and easy to learn to many users, so it will help you to *quickly* create good-looking interactive charts. See all of the [types of charts you can create with Google Sheets](https://support.google.com/docs/answer/190718). Although some people export charts as static images in *JPG* or *PNG* format, this chapter focuses on creating interactive charts that display more info about your data when you hover over them in your browser. Later, you'll learn [how to embed an interactive chart on your website in Chapter 10](embed.html).
 
@@ -390,7 +388,29 @@ To change the color of a data series (for example, to show Overweight category i
 
 ## - Histograms {- #histogram-google}
 
-A histogram chart is best for showing the distribution of raw data, with the number of values displayed in each bucket. Although a histogram may look similar to a column chart, the two are different. Since histograms show *continuous* data, you can adjust the bucket ranges to explore frequency patterns. For example, you can shift histogram buckets from 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. But column (and bar) charts show *categorical* data (such as the number of apples, bananas, etc.) so their ranges cannot be adjusted. Figure \@ref(fig:histogram) shows a histogram of average daily calorie consumption in 174 countries in 2006–2008 based on data from the [United Nations Food and Agriculture Organization](http://www.fao.org/).
+Histograms are best to show the distribution of raw data, by displaying the number of values that fall within defined ranges, often called *buckets* or *bins*. Creating a histogram can be a great way to better understand what your data looks like to inform your decision-making when designing more advanced visualizations, such as [choropleth maps, as you'll learn in Chapter 8](design-choropleth.html). Although histograms may look similar to column charts, the two are different. First, histograms show *continuous* data, and usually you can adjust the bucket ranges to explore frequency patterns. For example, you can shift histogram buckets from 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. By contrast, column charts show *categorical* data (such as the number of apples, bananas, carrots, etc.), so their ranges cannot be adjusted. Second, histograms do not usually show spaces between buckets because these are continuous values, while column charts show spaces to separate each category.
+
+In this section, you'll create two types of histograms in Google Sheets: quick histograms using the *Column stats* menu versus regular histograms using the *Chart* menu, and the advantages of each method. For both tutorials we'll use the same data on TODO DESCRIBE...JACK TO UPDATE after Ilya prepares data....for 174 countries in TODO: YEAR from the [United Nations Food and Agriculture Organization](http://www.fao.org/). Before you begin, open the TODO: CHECK NAME [Average Calorie Consumption by nation data in Google Sheets](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452), log in with your account, and go to *File > Make a Copy* to create a version you can edit in your Google Drive.
+
+### Quick Histograms with Google Sheets Column Stats {-}
+
+To create a quick histogram in Google Sheets, select any column, then go to *Data > Column stats*, and click the green *Distribution* button in the sidebar to view a histogram for that column, as shown in Figure \@ref(fig:histogram-quick). The advantage is that this method is very fast, and you can quickly create histograms for other columns in the same sheet using the arrows near the top of the sidebar (`< >`). However, you cannot manually adjust the bucket ranges or make other edits to these quick histograms, and you cannot embed them on the web as you can with regular charts in Google Sheets.
+
+(ref:histogram-quick) To create a quick histogram in a Google Sheet, select a column, then go to *Data - Column stats - Distribution*.
+
+```{r histogram-quick, out.width=500, fig.cap="(ref:histogram-quick)"}
+ knitr::include_graphics("images/07-chart/histogram-quick.png")
+```
+
+TODO: JACK to update interpretation.... Histograms are designed to represent distributions, not individual values. Figure \@ref(fig:histogram-quick) shows two peaks, one of 2,100–2,300 calories and the second one at 2,700-3,100 calories (two consecutive buckets). We can also see that daily calorie consumption in five countries does not exceed 1,900, and exceeds 3,700 calories in three countries. Histograms by themselves, without annotations, don't tell us what those countries are.
+
+TODO above: JACK to redo image using new data; create PDF version
+
+### Regular Histograms with Google Sheets Charts {-}
+
+TODO below: ILYA to prepare replacement histogram data and demo, and JACK to redo screenshots and text as needed
+
+Compare the quick histogram in Figure \@ref(fig:histogram-quick) with the regular histogram created with the Charts menu in Figure \@ref(fig:histogram). You'll notice that....TODO....DESCRIBE differences....
 
 (ref:histogram) Histogram: Explore the full-screen [interactive version](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive).
 
@@ -398,29 +418,25 @@ A histogram chart is best for showing the distribution of raw data, with the num
 if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://docs.google.com/spreadsheets/d/e/2PACX-1vRyg09UZgGWVHPk3oOKAZ-zlqtDF_RpvOLdAsM-k-ZW5NavcxAyHbErgr-7dt7U_AFSVZONSTZ9sVII/pubchart?oid=480820223&format=interactive") else knitr::include_graphics("images/07-chart/histogram.png")
 ```
 
-Histograms are designed to represent distributions, not individual values. Figure \@ref(fig:histogram) shows two peaks, one of 2,100–2,300 calories and the second one at 2,700-3,100 calories (two consecutive buckets). We can also see that daily calorie consumption in five countries does not exceed 1,900, and exceeds 3,700 calories in three countries. Histograms by themselves, without annotations, don't tell us what those countries are.
+1. To create a regular histogram in Google Sheets, select a column with values and go to *Insert > Chart*. If Google Sheets does not automatically select *Histogram chart* as the *Chart type* in Chart editor, use the dropdown and select it manually, near the bottom of the list in the *Other* category, as shown in Figure \@ref(fig:histogram-chart-type)
 
-Note: You can view and copy the [Google Sheet with the calorie consumption data](https://docs.google.com/spreadsheets/d/1V-r1bOWpvyCRhmJa0gRZ1TEchXvrr7UTZ97rKOU1WRo/edit#gid=1132930452). You can use *Sort sheet A->Z* function to see that five countries with lowest per-capita calorie consumption are Eritrea (1,590), Burundi (1,680), Comoros (1,840), Haiti (1,850), and Zambia (1,880). The three highest are Greece (3,710), USA (3,750), and Austria (3,800). Note that the dataset is over a decade old and things may be different today.
+(ref:histogram-chart-type) If not shown automatically, go to the Chart Editor sidebar and select *Setup - Chart type - Other - Histogram*.
 
-Histograms use *buckets* or *bins*, which are predefined ranges of values, and count how many data points (usually rows in your dataset) fall within each interval. Each interval's count is represented by a bar. Intervals should not overlap, and we recommend you make them all equal size. Consider making your ranges "pretty", that is, using whole numbers such as multiples of 5 (5, 10, 15, 20) or 100 (1500, 1600, 1700, 1800) for breakpoints, but only if that makes sense for your data distribution.
-
-Now, let's look at how to create the histogram in Figure \@ref(fig:histogram) in Google Sheets. Our dataset contains two columns (*Country* and *Average Daily Calorie Consumption*) and 174 records,
-as shown in Figure \@ref(fig:histogram-data). But in reality you only need one column that lists all values to build a histogram.
-
-(ref:histogram-data) To create a histogram, you only need one column with numeric values.
-
-```{r histogram-data, out.width=250, fig.cap="(ref:histogram-data)"}
- knitr::include_graphics("images/07-chart/histogram-data.png")
+```{r histogram-chart-type, out.width=300, fig.cap="(ref:histogram-chart-type)"}
+ knitr::include_graphics("images/07-chart/histogram-chart-type.png")
 ```
 
-Select a column with values, and go to *Insert > Chart*. Google Sheets will likely automatically choose *Histogram chart* as the *Chart type* in Chart editor, but if not, use the dropdown and set it manually (you will find *Histogram* under the *Other* category). While some readers know what histograms represent,
-it may be useful to add a y-axis label (eg *Number of countries*) and a subtitle (eg *Each bar represents number of countries per calorie range*). You can add both from the *Customize* tab in the Chart editor.
+2. You can manually set the range of each bucket and round the breakpoints to whole numbers (such as multiple of 1, 5, or 100), if this makes sense for the distribution of your data. In the Chart Editor, go to *Customize > Histogram > Bucket size*. Larger intervals will contain more data points and will appear wider, while smaller intervals will contain fewer points and appear narrower.
 
-To further assist the reader in interpreting the histogram, you can break down the column into individual items (in our case, countries), which will appear as blocks with white boundaries. You can do that, and manually set the range of each bucket in the Chart editor (*Customize > Histogram > Show item dividers* and *Customize > Histogram > Bucket size*). Larger intervals will contain more datapoints and will also appear wider in the chart as fewer larger intervals are needed to cover the entire range. Smaller intervals will contain fewer datapoints each, and will appear narrower.
+Note: Currently, Google Sheets does not allow users to remove decimal points in the x-axis label of a histogram, even when all of the breakpoints are integers.
 
-Unfortunately, currently there is no way to get rid of decimal points in the x-axis labels in a Google Sheets histogram, even though all breakpoints may be integers.
+3. Optionally, you can break down the column into individual items (in our case, countries), which will appear as blocks with white boundaries. To do this, go to *Customize > Histogram > Show item dividers*.
 
-TODO: DISCUSS with AMELIA and ILYA the organization of the Histogram section and its sample data. See Meeting Notes
+4. To further assist the reader in interpreting the histogram, add a vertical y-axis label (such as *Number of countries*) and a subtitle (such as *Each bar represents number of countries per calorie range*). You can add both from the *Customize* tab in the Chart editor.
+
+Since this histogram is created using the regular Charts feature, you can choose to *Publish* it and copy the embed code for the interactive version, as you'll learn in [Chapter 10: Embed on the Web](embed.html).
+
+Now that you've learned how to create histograms to show the distribution of raw data, in the next section we'll move on to other types of Google Sheets chart types, such as pie, line, and area charts.
 
 ## - Pie, Line, and Area Charts {- #pie-line-area-google}
 Before starting this section, be sure to review the [pros and cons of designing charts with Google Sheets](chart-google.html), as well as [beginner-level step-by-step instructions for creating bar and column charts](bar-column-google.html), in the previous sections of this chapter. In this section, you'll learn why and how to use Google Sheets to build three more types of interactive visualizations: pie charts (to show parts of a whole), line charts (to show change over time), and stacked area charts (to combine showing parts of a whole, with change over time). If Google Sheets or these chart types do not meet your needs, refer back to Table \@ref(tab:chart-types) for other tools and tutorials.

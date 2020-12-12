@@ -35,7 +35,7 @@ But can you spot these other errors that Smart Cleanup missed?
 - In cell C6, Pakistan's share of the world population appears in decimal form, not percentage.
 - In cell D4, the US date appears in MM/DD/YYYY format, not like the other entries.
 
-The Google Sheets Smart Cleanup feature is a good place to start. But if your data is really messy, you may need to turn to more sophisticated tools described later in this chapter, such as [Open Refine](open-refine.html). In the next section you'll learn another clean-up method that works in any spreadsheet: find and replace with a blank entry.
+The Google Sheets Smart Cleanup feature is a good place to start. But if your data is really messy, you may need to turn to more sophisticated tools described later in this chapter, such as [OpenRefine](open-refine.html). In the next section you'll learn another clean-up method that works in any spreadsheet: find and replace with a blank entry.
 
 ## Find and Replace with Blank {- #find-and-replace}
 
@@ -229,16 +229,20 @@ about cleaning and preparing your spreadsheet data for analysis and visualizatio
 Spreadsheets are great tools to find and replace data, split data into separate columns, or combine data into one column. But what if your data table is trapped inside a PDF? In the next section, we will introduce Tabula and show you how to convert tables from text-based PDF documents into tables that you can analyze in spreadsheets.
 
 ## Extract Tables from PDFs with Tabula {- #tabula}
-It sometimes happens that the dataset you are interested in is only available as a PDF document.
-Don't despair, you can *likely* use Tabula to extract tables and save them as CSV files. Keep in mind that PDFs generally come in two flavors: text-based and image-based. If you can use cursor to select and copy-paste text in your PDF, then it's text-based, which is great because you can process it with Tabula. But if you cannot select and copy-paste items inside a PDF, then it's image-based, meaning it was probably created as a scanned version of the original document. You need to use optical character recognition (OCR) software, such as Adobe Acrobat Pro or another OCR tool, to convert an image-based PDF into a text-based PDF. Furthermore, Tabula can only extract data from tables, not charts or other types of visualizations.
+It sometimes happens that the dataset you are interested in is only available as a PDF document. Don't despair, you can *likely* use Tabula to extract tables and save them as CSV files. Keep in mind that PDFs generally come in two flavors: text-based and image-based. If you can use cursor to select and copy-paste text in your PDF, then it's text-based, which is great because you can process it with Tabula. But if you cannot select and copy-paste items inside a PDF, then it's image-based, meaning it was probably created as a scanned version of the original document. You need to use optical character recognition (OCR) software, such as Adobe Acrobat Pro or another OCR tool, to convert an image-based PDF into a text-based PDF. Furthermore, Tabula can only extract data from tables, not charts or other types of visualizations.
 
 Tabula is a free tool that runs on Java in your browser, and is available for Mac, Windows, and Linux computers. It runs on your local machine and does not send your data to the cloud, so you can also use it for sensitive documents.
 
 To get started, [download the newest version of Tabula](https://tabula.technology/).
-You can use download buttons on the left-hand side, or scroll down to the *Download & Install Tabula* section to download a copy for your platform. Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive,
-and double-click the icon. If you work on a Mac, you may see a warning that states,
-"Tabula is an app downloaded from the internet. Are you sure you want to open it?" If so, click *Open*. Or you may have to go to *System Preferences > Security & Privacy > General tab*, and
-click the *Open Anyway* button in the lower half of the window to open the app the first time.
+You can use download buttons on the left-hand side, or scroll down to the *Download & Install Tabula* section to download a copy for your platform. Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive, and double-click the icon.
+
+On a Mac, you may see this warning when launching Tabula for the first time: "Tabula is an app downloaded from the internet. Are you sure you want to open it?" If so, click *Open*, as shown in Figure \@ref(fig:tabula-mac-alert).
+
+(ref:tabula-mac-alert) Mac users may need to confirm that they wish to open Tabula the first time.
+
+```{r tabula-mac-alert, out.width=350, fig.cap="(ref:tabula-mac-alert)"}
+ knitr::include_graphics("images/05-clean/tabula-mac-alert.png")
+```
 
 When you start up Tabula, it opens your default browser as a localhost with a URL similar to `http://127.0.0.1/`, with or without an additional port number such as with `:8080`, as shown in Figure \@ref(fig:tabula-welcome). Tabula runs on your local computer, not the internet. If your default browser (such as Safari or Edge) does not play nicely with Tabula, you can copy-and-paste the URL into a different browser (such as Firefox or Chrome).
 
@@ -304,20 +308,19 @@ Notice how the *Country* column various spellings of North and South Korea. Also
 Let's use OpenRefine to clean up this messy data. Download [OpenRefine](https://openrefine.org/download.html) for Windows, Mac, or Linux. Just like Tabula, it runs in your browser and no
 data leaves your local machine, which is great for confidentiality.
 
-If you use Windows, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
-open in your default browser.
+To launch OpenRefine in Windows, unzip the downloaded file, double-click the *.exe* file, and the tool should open in your default browser.
 
-If you work on a Mac, the downloaded file will be a .dmg file to be installed. But you will likely see a security warning that prevents OpenRefine from launching because Apple cannot identify the developer for this open-source project. To resolve the problem, go to *System Preferences > Security and Privacy > General tab*, and click the *Open Anyway* button in the lower half of the window, as shown in Figure \@ref(fig:openrefine-mac-alert-combined). If prompted with another window, click *Open*.
+To launch OpenRefine on a Mac, double-click the downloaded *.dmg* file to install it. You will likely see a security warning that prevents OpenRefine from automatically launching because Apple does not recognize the developer for this open-source project. To resolve the problem, go to *System Preferences > Security and Privacy > General tab*, and click the *Open Anyway* button in the lower half of the window, as shown in Figure \@ref(fig:openrefine-mac-alert-combined). If prompted with another window, click *Open*.
 
-(ref:openrefine-mac-alert-combined) If your Mac displays a warning about launching Open Refine (on left), go to *System Preferences - Security and Privacy - General tab* and click *Open Anyways* (on right).
+(ref:openrefine-mac-alert-combined) If your Mac displays a warning about launching OpenRefine (on left), go to *System Preferences - Security and Privacy - General tab* and click *Open Anyways* (on right).
 
 ```{r openrefine-mac-alert-combined, fig.cap="(ref:openrefine-mac-alert-combined)"}
 knitr::include_graphics("images/05-clean/openrefine-mac-alert-combined.png")
 ```
 
-When you start up OpenRefine, it will open your default browser with the localhost `127.0.0.1` address, with or without the port `:3333`, as shown in Figure \@ref(fig:openrefine-welcome). If your regular browser (such as Safari) does not behave nicely with OpenRefine, copy and paste the localhost address into a different browser (such as Firefox or Chrome).
+When you start up OpenRefine, it will open your default browser with the localhost `127.0.0.1` address, with or without the additional port number `:3333`, as shown in Figure \@ref(fig:openrefine-welcome). If your regular browser (such as Safari) does not behave nicely with OpenRefine, copy and paste the localhost address into a different browser (such as Firefox or Chrome).
 
-(ref:openrefine-welcome) OpenRefine starting page.
+(ref:openrefine-welcome) The OpenRefine welcome page.
 
 ```{r openrefine-welcome, out.width=500, fig.cap="(ref:openrefine-welcome)"}
 knitr::include_graphics("images/05-clean/openrefine-welcome.png")

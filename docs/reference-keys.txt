@@ -59,6 +59,7 @@ fig:sheets-transpose
 fig:sheets-split
 fig:sheets-split-complex
 fig:sheets-combine
+fig:tabula-mac-alert
 fig:tabula-welcome
 fig:tabula-autodetect
 fig:openrefine-dataset
@@ -103,8 +104,9 @@ fig:bar-split
 fig:column-stacked-data
 fig:column-stacked
 fig:column-stacked-edit-series
+fig:histogram-quick
 fig:histogram
-fig:histogram-data
+fig:histogram-chart-type
 fig:pie-data
 fig:pie
 fig:line-data
@@ -315,6 +317,7 @@ fig:geojson-github
 fig:gimme-geodata
 fig:geojson-io-import
 fig:geojson-io-csv-data
+fig:geojsonio-gif
 fig:geojson-io-draw
 fig:mapshaper-export
 fig:mapshaper-edit
@@ -354,6 +357,14 @@ fig:plastic-refine
 fig:plastic-area-chart
 fig:observed-vs-projected
 fig:mac-file-extensions2
+fig:tiger
+fig:screenshot-tall
+fig:sample-map
+fig:sheets-option-drag
+fig:video-sample
+fig:video-sample2
+tab:left-table
+tab:right-table
 introduction
 choose
 spreadsheet
@@ -371,3 +382,6 @@ transform
 detect
 story
 fix
+ct
+peer
+bookdown

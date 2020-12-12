@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-12-11" />
+<meta name="date" content="2020-12-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -342,20 +342,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="tabula" class="section level2 unnumbered" number="">
 <h2>Extract Tables from PDFs with Tabula</h2>
-<p>It sometimes happens that the dataset you are interested in is only available as a PDF document.
-Don’t despair, you can <em>likely</em> use Tabula to extract tables and save them as CSV files. Keep in mind that PDFs generally come in two flavors: text-based and image-based. If you can use cursor to select and copy-paste text in your PDF, then it’s text-based, which is great because you can process it with Tabula. But if you cannot select and copy-paste items inside a PDF, then it’s image-based, meaning it was probably created as a scanned version of the original document. You need to use optical character recognition (OCR) software, such as Adobe Acrobat Pro or another OCR tool, to convert an image-based PDF into a text-based PDF. Furthermore, Tabula can only extract data from tables, not charts or other types of visualizations.</p>
+<p>It sometimes happens that the dataset you are interested in is only available as a PDF document. Don’t despair, you can <em>likely</em> use Tabula to extract tables and save them as CSV files. Keep in mind that PDFs generally come in two flavors: text-based and image-based. If you can use cursor to select and copy-paste text in your PDF, then it’s text-based, which is great because you can process it with Tabula. But if you cannot select and copy-paste items inside a PDF, then it’s image-based, meaning it was probably created as a scanned version of the original document. You need to use optical character recognition (OCR) software, such as Adobe Acrobat Pro or another OCR tool, to convert an image-based PDF into a text-based PDF. Furthermore, Tabula can only extract data from tables, not charts or other types of visualizations.</p>
 <p>Tabula is a free tool that runs on Java in your browser, and is available for Mac, Windows, and Linux computers. It runs on your local machine and does not send your data to the cloud, so you can also use it for sensitive documents.</p>
 <p>To get started, <a href="https://tabula.technology/">download the newest version of Tabula</a>.
-You can use download buttons on the left-hand side, or scroll down to the <em>Download &amp; Install Tabula</em> section to download a copy for your platform. Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive,
-and double-click the icon. If you work on a Mac, you may see a warning that states,
-“Tabula is an app downloaded from the internet. Are you sure you want to open it?” If so, click <em>Open</em>. Or you may have to go to <em>System Preferences &gt; Security &amp; Privacy &gt; General tab</em>, and
-click the <em>Open Anyway</em> button in the lower half of the window to open the app the first time.</p>
-<p>When you start up Tabula, it opens your default browser as a localhost with a URL similar to <code>http://127.0.0.1/</code>, with or without an additional port number such as with <code>:8080</code>, as shown in Figure <a href="tabula.html#fig:tabula-welcome">5.8</a>. Tabula runs on your local computer, not the internet. If your default browser (such as Safari or Edge) does not play nicely with Tabula, you can copy-and-paste the URL into a different browser (such as Firefox or Chrome).</p>
+You can use download buttons on the left-hand side, or scroll down to the <em>Download &amp; Install Tabula</em> section to download a copy for your platform. Unlike most other programs, Tabula does not require installation. Just unzip the downloaded archive, and double-click the icon.</p>
+<p>On a Mac, you may see this warning when launching Tabula for the first time: “Tabula is an app downloaded from the internet. Are you sure you want to open it?” If so, click <em>Open</em>, as shown in Figure <a href="tabula.html#fig:tabula-mac-alert">5.8</a>.</p>
+
+<div class="figure"><span id="fig:tabula-mac-alert"></span>
+<img src="images/05-clean/tabula-mac-alert.png" alt="Mac users may need to confirm that they wish to open Tabula the first time." width="350" />
+<p class="caption">
+Figure 5.8: Mac users may need to confirm that they wish to open Tabula the first time.
+</p>
+</div>
+<p>When you start up Tabula, it opens your default browser as a localhost with a URL similar to <code>http://127.0.0.1/</code>, with or without an additional port number such as with <code>:8080</code>, as shown in Figure <a href="tabula.html#fig:tabula-welcome">5.9</a>. Tabula runs on your local computer, not the internet. If your default browser (such as Safari or Edge) does not play nicely with Tabula, you can copy-and-paste the URL into a different browser (such as Firefox or Chrome).</p>
 
 <div class="figure"><span id="fig:tabula-welcome"></span>
 <img src="images/05-clean/tabula-welcome.png" alt="Tabula welcome page."  />
 <p class="caption">
-Figure 5.8: Tabula welcome page.
+Figure 5.9: Tabula welcome page.
 </p>
 </div>
 <p>Now let’s upload a sample text-based PDF and detect any tables we wish to extract. In the beginning of the Covid-19 pandemic, the Department of Public Health in Connecticut
@@ -366,13 +370,13 @@ from May 31, 2020, or provide your own.</p>
 <li><p>Select the PDF you want to extract data from by clicking the blue <em>Browse…</em> button.</p></li>
 <li><p>Click <em>Import</em>. Tabula will begin analyzing the file.</p></li>
 <li><p>As soon as Tabula finishes loading the PDF, you will see a PDF viewer with individual pages. The interface is fairly clean, with only four buttons in the header.</p></li>
-<li><p>Click the <em>Autodetect Tables</em> button to let Tabula look for relevant data. The tool highlights each table it detects in red, as shown in Figure <a href="tabula.html#fig:tabula-autodetect">5.9</a>.</p></li>
+<li><p>Click the <em>Autodetect Tables</em> button to let Tabula look for relevant data. The tool highlights each table it detects in red, as shown in Figure <a href="tabula.html#fig:tabula-autodetect">5.10</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:tabula-autodetect"></span>
 <img src="images/05-clean/tabula-autodetect.png" alt="Click Autodetect Tables, which Tabula will highlight in red."  />
 <p class="caption">
-Figure 5.9: Click <em>Autodetect Tables</em>, which Tabula will highlight in red.
+Figure 5.10: Click <em>Autodetect Tables</em>, which Tabula will highlight in red.
 </p>
 </div>
 <p>Now let’s manually adjust our selected tables and export the data.</p>

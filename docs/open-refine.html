@@ -25,7 +25,7 @@
 <meta name="author" content="Ilya Ilyankou" />
 
 
-<meta name="date" content="2020-12-11" />
+<meta name="date" content="2020-12-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -342,13 +342,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="open-refine" class="section level2 unnumbered" number="">
 <h2>Clean Data with OpenRefine</h2>
-<p>Open the <a href="https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503">US Foreign Aid sample dataset in Google Sheets format</a> as shown in Figure <a href="open-refine.html#fig:openrefine-dataset">5.10</a>. Can you spot any problems with it? This data excerpt is from <a href="https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook">US Overseas Loans and Grants (Greenbook) dataset</a>, which shows US economic and military assistance to various countries.
+<p>Open the <a href="https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503">US Foreign Aid sample dataset in Google Sheets format</a> as shown in Figure <a href="open-refine.html#fig:openrefine-dataset">5.11</a>. Can you spot any problems with it? This data excerpt is from <a href="https://catalog.data.gov/dataset/u-s-overseas-loans-and-grants-greenbook">US Overseas Loans and Grants (Greenbook) dataset</a>, which shows US economic and military assistance to various countries.
 We chose to only include assistance to South Korea and North Korea for the years between 2000 and 2018. We added deliberate misspellings and formatting issues for demonstration purposes, but we did not alter values.</p>
 
 <div class="figure"><span id="fig:openrefine-dataset"></span>
 <img src="images/05-clean/openrefine-dataset.png" alt="Can you spot any problems with this sample data?" width="600" />
 <p class="caption">
-Figure 5.10: Can you spot any problems with this sample data?
+Figure 5.11: Can you spot any problems with this sample data?
 </p>
 </div>
 <p>Notice how the <em>Country</em> column various spellings of North and South Korea. Also note how the <em>FundingAmount</em> column is not standardized. Some amounts use commas to separate thousands, while some uses spaces. Some amounts start with a dollar sign, and some do not. Datasets like this can be an absolute nightmare to analyze. Luckily, OpenRefine provides powerful tools to clean up and standardize data.</p>
@@ -356,22 +356,21 @@ Figure 5.10: Can you spot any problems with this sample data?
 <h3>Set up OpenRefine</h3>
 <p>Let’s use OpenRefine to clean up this messy data. Download <a href="https://openrefine.org/download.html">OpenRefine</a> for Windows, Mac, or Linux. Just like Tabula, it runs in your browser and no
 data leaves your local machine, which is great for confidentiality.</p>
-<p>If you use Windows, unzip the downloaded file. Double-click the .exe file, and OpenRefine should
-open in your default browser.</p>
-<p>If you work on a Mac, the downloaded file will be a .dmg file to be installed. But you will likely see a security warning that prevents OpenRefine from launching because Apple cannot identify the developer for this open-source project. To resolve the problem, go to <em>System Preferences &gt; Security and Privacy &gt; General tab</em>, and click the <em>Open Anyway</em> button in the lower half of the window, as shown in Figure <a href="open-refine.html#fig:openrefine-mac-alert-combined">5.11</a>. If prompted with another window, click <em>Open</em>.</p>
+<p>To launch OpenRefine in Windows, unzip the downloaded file, double-click the <em>.exe</em> file, and the tool should open in your default browser.</p>
+<p>To launch OpenRefine on a Mac, double-click the downloaded <em>.dmg</em> file to install it. You will likely see a security warning that prevents OpenRefine from automatically launching because Apple does not recognize the developer for this open-source project. To resolve the problem, go to <em>System Preferences &gt; Security and Privacy &gt; General tab</em>, and click the <em>Open Anyway</em> button in the lower half of the window, as shown in Figure <a href="open-refine.html#fig:openrefine-mac-alert-combined">5.12</a>. If prompted with another window, click <em>Open</em>.</p>
 
 <div class="figure"><span id="fig:openrefine-mac-alert-combined"></span>
-<img src="images/05-clean/openrefine-mac-alert-combined.png" alt="If your Mac displays a warning about launching Open Refine (on left), go to System Preferences - Security and Privacy - General tab and click Open Anyways (on right)."  />
+<img src="images/05-clean/openrefine-mac-alert-combined.png" alt="If your Mac displays a warning about launching OpenRefine (on left), go to System Preferences - Security and Privacy - General tab and click Open Anyways (on right)."  />
 <p class="caption">
-Figure 5.11: If your Mac displays a warning about launching Open Refine (on left), go to <em>System Preferences - Security and Privacy - General tab</em> and click <em>Open Anyways</em> (on right).
+Figure 5.12: If your Mac displays a warning about launching OpenRefine (on left), go to <em>System Preferences - Security and Privacy - General tab</em> and click <em>Open Anyways</em> (on right).
 </p>
 </div>
-<p>When you start up OpenRefine, it will open your default browser with the localhost <code>127.0.0.1</code> address, with or without the port <code>:3333</code>, as shown in Figure <a href="open-refine.html#fig:openrefine-welcome">5.12</a>. If your regular browser (such as Safari) does not behave nicely with OpenRefine, copy and paste the localhost address into a different browser (such as Firefox or Chrome).</p>
+<p>When you start up OpenRefine, it will open your default browser with the localhost <code>127.0.0.1</code> address, with or without the additional port number <code>:3333</code>, as shown in Figure <a href="open-refine.html#fig:openrefine-welcome">5.13</a>. If your regular browser (such as Safari) does not behave nicely with OpenRefine, copy and paste the localhost address into a different browser (such as Firefox or Chrome).</p>
 
 <div class="figure"><span id="fig:openrefine-welcome"></span>
-<img src="images/05-clean/openrefine-welcome.png" alt="OpenRefine starting page." width="500" />
+<img src="images/05-clean/openrefine-welcome.png" alt="The OpenRefine welcome page." width="500" />
 <p class="caption">
-Figure 5.12: OpenRefine starting page.
+Figure 5.13: The OpenRefine welcome page.
 </p>
 </div>
 </div>
@@ -382,13 +381,13 @@ Figure 5.12: OpenRefine starting page.
 <li><p>Open the <a href="https://docs.google.com/spreadsheets/d/19BilYJxd0fgi7MTAa2y9NUF65Xqf2_y_dVr1jPbmWeg/edit#gid=1983762503">US Foreign Aid sample dataset in Google Sheets</a>, sign in with your account, and go to <em>File &gt; Download</em> to save a version in comma-separated values (CSV) format to your computer.</p></li>
 <li><p>In OpenRefine, under <em>Get data from: This computer</em>, click <em>Browse…</em> and select the CSV file you downloaded above. Click <em>Next</em>.</p></li>
 <li><p>Before you can start cleaning up data, OpenRefine allows you to make sure data is <em>parsed</em> properly.
-In our case, parsing means the way the data is split into columns. Make sure OpenRefine assigned values to the right columns, or change setting in <em>Parse data as</em> block at the bottom of the page until it starts looking meaningful, as shown in Figure <a href="open-refine.html#fig:openrefine-parse">5.13</a>. Then press <em>Create Project</em> in the upper-right corner.</p></li>
+In our case, parsing means the way the data is split into columns. Make sure OpenRefine assigned values to the right columns, or change setting in <em>Parse data as</em> block at the bottom of the page until it starts looking meaningful, as shown in Figure <a href="open-refine.html#fig:openrefine-parse">5.14</a>. Then press <em>Create Project</em> in the upper-right corner.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-parse"></span>
 <img src="images/05-clean/openrefine-parse.png" alt="OpenRefine parsing options."  />
 <p class="caption">
-Figure 5.13: OpenRefine parsing options.
+Figure 5.14: OpenRefine parsing options.
 </p>
 </div>
 <p>Now when you’ve successfully read the data into a new project, let’s start
@@ -402,25 +401,25 @@ You can change it to 5, 10, 25, or 50 by clicking the appropriate number in the 
 <p>Each column header has its own menu, which you can select by clicking its arrow-down button.
 Left-aligned numbers in a column are likely represented as text, as is our case with the <em>FundingAmount</em> column, and they need to be transformed into numeric format.</p>
 <ol style="list-style-type: decimal">
-<li>To transform text into numbers, select the <em>FundingAmount</em> column menu, and go to <em>Edit cells &gt; Common transforms &gt; To number</em>, as shown in Figure <a href="open-refine.html#fig:openrefine-edit-common">5.14</a>.</li>
+<li>To transform text into numbers, select the <em>FundingAmount</em> column menu, and go to <em>Edit cells &gt; Common transforms &gt; To number</em>, as shown in Figure <a href="open-refine.html#fig:openrefine-edit-common">5.15</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-edit-common"></span>
 <img src="images/05-clean/openrefine-edit-common.png" alt="In the FundingAmount column menu, select Edit cells - Common transforms - To number." width="450" />
 <p class="caption">
-Figure 5.14: In the <em>FundingAmount</em> column menu, select <em>Edit cells - Common transforms - To number</em>.
+Figure 5.15: In the <em>FundingAmount</em> column menu, select <em>Edit cells - Common transforms - To number</em>.
 </p>
 </div>
 <p>You will see that <em>some</em> numbers became green and right-aligned, which signals partial success, but most did not change. That is because dollar sign (<code>$</code>) and commas (<code>,</code>) confuse OpenRefine and prevent values to be converted into numbers.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Let’s remove <code>$</code> and <code>,</code> from the <em>FundingAmount</em> column. In the column menu, this time select <em>Edit cells &gt; Transform</em>, because we need to manually enter the edit we wish to make. In the Expression window, type <code>value.replace(',', '')</code> and notice how commas
-disappear in the preview window, as shown in Figure <a href="open-refine.html#fig:openrefine-edit-expression">5.15</a>. When you confirm your formula has no syntax errors, click <em>OK</em></li>
+disappear in the preview window, as shown in Figure <a href="open-refine.html#fig:openrefine-edit-expression">5.16</a>. When you confirm your formula has no syntax errors, click <em>OK</em></li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-edit-expression"></span>
 <img src="images/05-clean/openrefine-edit-expression.png" alt="Type the expression into the screen, preview the change, and confirm that there are no syntax errors."  />
 <p class="caption">
-Figure 5.15: Type the expression into the screen, preview the change, and confirm that there are no syntax errors.
+Figure 5.16: Type the expression into the screen, preview the change, and confirm that there are no syntax errors.
 </p>
 </div>
 <ol start="3" style="list-style-type: decimal">
@@ -428,13 +427,13 @@ Figure 5.15: Type the expression into the screen, preview the change, and confir
 <li><p>In steps 2 and 3, we replaced text (or string) values with other text values,
 making OpenRefine think this column is no longer numeric. As a result, all values
 are once again left-aligned and in black. Perform step 1 again. This time, nearly all of the cells will have turned green, meaning they successfully converted to numeric. But few non-numeric black cells remain.</p></li>
-<li><p>To fix the remaining non-numeric black cells, we need to remove spaces and an <code>a</code> character at the end of one number. Fix these manually by hovering over a cell, click the <em>Edit</em> button, and in the new popup window, change <em>Data type</em> to <em>number</em>, and press <em>Apply</em>, as shown in Figure <a href="open-refine.html#fig:openrefine-manual-edit">5.16</a>.</p></li>
+<li><p>To fix the remaining non-numeric black cells, we need to remove spaces and an <code>a</code> character at the end of one number. Fix these manually by hovering over a cell, click the <em>Edit</em> button, and in the new popup window, change <em>Data type</em> to <em>number</em>, and press <em>Apply</em>, as shown in Figure <a href="open-refine.html#fig:openrefine-manual-edit">5.17</a>.</p></li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-manual-edit"></span>
 <img src="images/05-clean/openrefine-manual-edit-combined.png" alt="Manually edit to remove spaces and extra characters, and change data type to number." width="550" />
 <p class="caption">
-Figure 5.16: Manually edit to remove spaces and extra characters, and change data type to number.
+Figure 5.17: Manually edit to remove spaces and extra characters, and change data type to number.
 </p>
 </div>
 <p>At this point, all funding amounts should be clean numbers, right-aligned and colored in green.
@@ -454,13 +453,13 @@ that should have just two distinct values, North Korea and South Korea!</p>
 <ol style="list-style-type: decimal">
 <li>To begin standardizing spellings, click on the arrow-down button of the <em>Country</em> column header,
 and choose <em>Edit cells &gt; Cluster and edit</em>. You will see a window like the one shown in Figure
-<a href="open-refine.html#fig:openrefine-cluster">5.17</a>.</li>
+<a href="open-refine.html#fig:openrefine-cluster">5.18</a>.</li>
 </ol>
 
 <div class="figure"><span id="fig:openrefine-cluster"></span>
 <img src="images/05-clean/openrefine-cluster-annotated.png" alt="Cluster similar text values."  />
 <p class="caption">
-Figure 5.17: Cluster similar text values.
+Figure 5.18: Cluster similar text values.
 </p>
 </div>
 <p>You will have a choice of two clustering methods, <em>key collision</em> or <em>nearest neighbor</em>. Key collision
@@ -471,7 +470,7 @@ which you can read about <a href="https://github.com/OpenRefine/OpenRefine/wiki/
 <p>OpenRefine will calculate a list of clusters. The <em>Values in Cluster</em> column contains grouped spellings
 that OpenRefine considers the same.</p>
 <ol start="2" style="list-style-type: decimal">
-<li><p>If you agree with a grouping, check the <em>Merge?</em> box, and assign the <em>true</em> value to the <em>New Cell Value</em> input box, as shown in the first cluster in Figure <a href="open-refine.html#fig:openrefine-cluster">5.17</a>. In our example, this would be either <code>North Korea</code> or <code>South Korea</code>.</p></li>
+<li><p>If you agree with a grouping, check the <em>Merge?</em> box, and assign the <em>true</em> value to the <em>New Cell Value</em> input box, as shown in the first cluster in Figure <a href="open-refine.html#fig:openrefine-cluster">5.18</a>. In our example, this would be either <code>North Korea</code> or <code>South Korea</code>.</p></li>
 <li><p>You can go through all groupings, or stop after one or two and click the <em>Merge Selected &amp; Re-Cluster</em> button. The clusters you selected will be merged, and grouping will be re-calculated.
 (Don’t worry, the window won’t go anywhere.) Keep regrouping until you are happy with the result.</p></li>
 </ol>

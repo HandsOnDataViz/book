@@ -40,7 +40,7 @@ Meanwhile, the US Census publishes data for current years by aggregating individ
 (ref:census-divisions-hartford) Common US census geographies around Hartford, Connecticut, 2019. Explore the [interactive map](https://handsondataviz.github.io/census-divisions-hartford/).
 
 ```{r census-divisions-hartford, fig.cap="(ref:census-divisions-hartford)"}
-if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/census-divisions-hartford/", height = "650px") else knitr::include_graphics("images/04-find/census-divisions-hartford.png")
+if(knitr::is_html_output(excludes="markdown")) knitr::include_url("https://handsondataviz.github.io/census-divisions-hartford/", height = "700px") else knitr::include_graphics("images/04-find/census-divisions-hartford.png")
 ```
 
 *Have prior publications drawn on similar data, and if so, how can we trace their sources?*

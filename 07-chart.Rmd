@@ -574,6 +574,8 @@ Congratulations on creating your first interactive Datawrapper chart. Now let's 
 
 ## - Range Charts {- #range-datawrapper}
 
+TODO below: ILYA to create new data and sample chart on gender pay gap with updated data, and JACK to update text and screenshots as needed
+
 A range chart (also known as a specific type of dot chart) is best to show gaps between data points, such as inequalities. The line chart above illustrated how the overall US unemployment rate changed over time. But if we wish to look at differences in gender and race/ethnicity for a specific point in time, a range chart will highlight any gaps. Organize the data for a range chart into rows and columns, as shown in Figure \@ref(fig:datawrapper-range-data). The column headers contain data labels you wish to highlight, such *Men* and *Women*. The first column contains your categories, such as racial/ethnic groups, followed by the numerical values under each header. Now you can easily create an interactive range chart as shown in Figure \@ref(fig:datawrapper-range). The employment gender gap is visible in all three racial/ethnic groups, but the gap was widest between Hispanic men and women in May 2020.
 
 (ref:datawrapper-range-data) Organize your range chart data labels into column headers, with categories and values in each row.
@@ -736,8 +738,6 @@ In the next section we'll keep things simple by starting with the basics of Tabl
 ## - Scatter Chart {- #scatter-tableau}
 Scatter charts are best to show the relationship between two datasets, placed on the x- and y-axis, to reveal possible correlations. With Tableau Public, you can create an interactive scatter chart, where you can hover your cursor over points to view more details about the data. Organize your data in three columns, the same way as the [Datawrapper scatter chart tutorial](scatter-datawrapper.html): the first column for data labels, the second column for the x-axis, and the third column for the y-axis. Then you can create an interactive scatter chart as shown in Figure \@ref(fig:tableau-scatter), which illustrates a strong relationship between household income and test scores (above or below the national average for 6th grade math and English) in Connecticut public school districts. To learn more about the data and related visualizations, see Sean Reardon et al. at the [Stanford Education Data Archive](http://purl.stanford.edu/db586ns4974), Motoko Rich et al. at [The New York Times](http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html), Andrew Ba Tran at [CT Mirror/TrendCT](https://web.archive.org/web/20190129101923/http://trendct.org/2016/05/06/wealth-and-grades-compare-connecticuts-school-districts/), and this [TrendCT GitHub repo](https://github.com/trendct-data/stanford-cepa).
 
-<!-- TODO: Reminder: this Tableau Public visualization is stored in Jack.Dougherty@trincoll.edu account -->
-
 (ref:tableau-scatter) Scatter chart in Tableau Public: Explore the [interactive version](https://public.tableau.com/profile/jackdougherty#!/vizhome/CTSchoolDistrictsbyIncomeandGradeLevels2009-13/Sheet1). Data by [CT Mirror/TrendCT and Stanford CEPA](https://github.com/trendct-data/stanford-cepa).
 
 ```{r tableau-scatter, fig.cap="(ref:tableau-scatter)"}
@@ -824,8 +824,6 @@ In this tutorial, we will build an interactive filtered line chart with Tableau 
 ```{r tableau-filtered-data, out.width=350, fig.cap="(ref:tableau-filtered-data)"}
 knitr::include_graphics("images/07-chart/tableau-filtered-data.png")
 ```
-
-<!-- TODO: Reminder that this Tableau Public chart is created in the ilya7257 account -->
 
 (ref:tableau-filtered) Filtered Line chart: Explore the [interactive version](https://public.tableau.com/profile/ilya7257#!/vizhome/InternetAccessbyCountry/Sheet1). Data from [World Bank](https://docs.google.com/spreadsheets/d/1nrfd8Cr-wpm5N9WGA2YO6d1XLuwk-VK8kCvDwoTdeWM/edit#gid=600173793).
 
